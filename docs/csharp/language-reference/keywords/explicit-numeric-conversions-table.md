@@ -1,0 +1,71 @@
+---
+title: "Tabela jawnych konwersji liczbowych (odwołanie w C#)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-csharp
+ms.topic: article
+helpviewer_keywords:
+- conversions [C#], explicit numeric
+- numeric conversions [C#], explicit
+- explicit numeric conversion [C#]
+- numeric data types [C#]
+- types [C#], explicit numeric conversions
+- type conversion [C#], explicit numeric
+ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
+caps.latest.revision: "14"
+author: BillWagner
+ms.author: wiwagn
+ms.openlocfilehash: e7a366328035b205b93a50ff6d212a06576ee801
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="explicit-numeric-conversions-table-c-reference"></a><span data-ttu-id="70124-102">Tabela jawnych konwersji liczbowych (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="70124-102">Explicit Numeric Conversions Table (C# Reference)</span></span>
+<span data-ttu-id="70124-103">Jawna konwersja liczbowa jest używana do konwertowania dowolnego typu liczbowego żadnego innego liczbowego typu, które nie są niejawna konwersja, korzystając z wyrażeniem rzutowania.</span><span class="sxs-lookup"><span data-stu-id="70124-103">Explicit numeric conversion is used to convert any numeric type to any other numeric type, for which there is no implicit conversion, by using a cast expression.</span></span> <span data-ttu-id="70124-104">W poniższej tabeli przedstawiono te konwersji.</span><span class="sxs-lookup"><span data-stu-id="70124-104">The following table shows these conversions.</span></span>  
+  
+ <span data-ttu-id="70124-105">Aby uzyskać więcej informacji na temat konwersji, zobacz [rzutowanie i konwersje typów](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span><span class="sxs-lookup"><span data-stu-id="70124-105">For more information about conversions, see [Casting and Type Conversions](../../../csharp/programming-guide/types/casting-and-type-conversions.md).</span></span>  
+  
+|<span data-ttu-id="70124-106">Z</span><span class="sxs-lookup"><span data-stu-id="70124-106">From</span></span>|<span data-ttu-id="70124-107">Do</span><span class="sxs-lookup"><span data-stu-id="70124-107">To</span></span>|  
+|----------|--------|  
+|[<span data-ttu-id="70124-108">sbyte —</span><span class="sxs-lookup"><span data-stu-id="70124-108">sbyte</span></span>](../../../csharp/language-reference/keywords/sbyte.md)|<span data-ttu-id="70124-109">`byte`, `ushort`, `uint`, `ulong`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-109">`byte`, `ushort`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-110">bajtów</span><span class="sxs-lookup"><span data-stu-id="70124-110">byte</span></span>](../../../csharp/language-reference/keywords/byte.md)|<span data-ttu-id="70124-111">`Sbyte`lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-111">`Sbyte` or `char`</span></span>|  
+|[<span data-ttu-id="70124-112">krótki</span><span class="sxs-lookup"><span data-stu-id="70124-112">short</span></span>](../../../csharp/language-reference/keywords/short.md)|<span data-ttu-id="70124-113">`sbyte`, `byte`, `ushort`, `uint`, `ulong`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-113">`sbyte`, `byte`, `ushort`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-114">ushort</span><span class="sxs-lookup"><span data-stu-id="70124-114">ushort</span></span>](../../../csharp/language-reference/keywords/ushort.md)|<span data-ttu-id="70124-115">`sbyte`, `byte`, `short`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-115">`sbyte`, `byte`, `short`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-116">int</span><span class="sxs-lookup"><span data-stu-id="70124-116">int</span></span>](../../../csharp/language-reference/keywords/int.md)|<span data-ttu-id="70124-117">`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-117">`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong`,or `char`</span></span>|  
+|[<span data-ttu-id="70124-118">uint</span><span class="sxs-lookup"><span data-stu-id="70124-118">uint</span></span>](../../../csharp/language-reference/keywords/uint.md)|<span data-ttu-id="70124-119">`sbyte`, `byte`, `short`, `ushort`, `int`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-119">`sbyte`, `byte`, `short`, `ushort`, `int`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-120">długa</span><span class="sxs-lookup"><span data-stu-id="70124-120">long</span></span>](../../../csharp/language-reference/keywords/long.md)|<span data-ttu-id="70124-121">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-121">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-122">ulong</span><span class="sxs-lookup"><span data-stu-id="70124-122">ulong</span></span>](../../../csharp/language-reference/keywords/ulong.md)|<span data-ttu-id="70124-123">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, lub`char`</span><span class="sxs-lookup"><span data-stu-id="70124-123">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, or `char`</span></span>|  
+|[<span data-ttu-id="70124-124">char</span><span class="sxs-lookup"><span data-stu-id="70124-124">char</span></span>](../../../csharp/language-reference/keywords/char.md)|<span data-ttu-id="70124-125">`sbyte`, `byte`, lub`short`</span><span class="sxs-lookup"><span data-stu-id="70124-125">`sbyte`, `byte`, or `short`</span></span>|  
+|[<span data-ttu-id="70124-126">float</span><span class="sxs-lookup"><span data-stu-id="70124-126">float</span></span>](../../../csharp/language-reference/keywords/float.md)|<span data-ttu-id="70124-127">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, lub`decimal`</span><span class="sxs-lookup"><span data-stu-id="70124-127">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`,or `decimal`</span></span>|  
+|[<span data-ttu-id="70124-128">podwójne</span><span class="sxs-lookup"><span data-stu-id="70124-128">double</span></span>](../../../csharp/language-reference/keywords/double.md)|<span data-ttu-id="70124-129">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub`decimal`</span><span class="sxs-lookup"><span data-stu-id="70124-129">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`,or `decimal`</span></span>|  
+|[<span data-ttu-id="70124-130">decimal</span><span class="sxs-lookup"><span data-stu-id="70124-130">decimal</span></span>](../../../csharp/language-reference/keywords/decimal.md)|<span data-ttu-id="70124-131">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, lub`double`</span><span class="sxs-lookup"><span data-stu-id="70124-131">`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float`, or `double`</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="70124-132">Uwagi</span><span class="sxs-lookup"><span data-stu-id="70124-132">Remarks</span></span>  
+  
+-   <span data-ttu-id="70124-133">Jawna konwersja liczbowa może spowodować utratę dokładności lub wynik przerzucane wyjątków.</span><span class="sxs-lookup"><span data-stu-id="70124-133">The explicit numeric conversion may cause loss of precision or result in throwing exceptions.</span></span>  
+  
+-   <span data-ttu-id="70124-134">Podczas konwertowania `decimal` wartości na typ całkowity, ta wartość jest zaokrąglana do zero do najbliższej wartości całkowitej.</span><span class="sxs-lookup"><span data-stu-id="70124-134">When you convert a `decimal` value to an integral type, this value is rounded towards zero to the nearest integral value.</span></span> <span data-ttu-id="70124-135">Jeśli wynikowej wartości całkowite jest spoza zakresu typu docelowego <xref:System.OverflowException> jest generowany.</span><span class="sxs-lookup"><span data-stu-id="70124-135">If the resulting integral value is outside the range of the destination type, an <xref:System.OverflowException> is thrown.</span></span>  
+  
+-   <span data-ttu-id="70124-136">Podczas konwersji z `double` lub `float` wartości na typ całkowity, wartość zostanie obcięta.</span><span class="sxs-lookup"><span data-stu-id="70124-136">When you convert from a `double` or `float` value to an integral type, the value is truncated.</span></span> <span data-ttu-id="70124-137">Jeśli całkowitą wartość wynikowa znajduje się poza zakresem wartości docelowej, wynik zależy od przepełnienie sprawdzanie kontekstu.</span><span class="sxs-lookup"><span data-stu-id="70124-137">If the resulting integral value is outside the range of the destination value, the result depends on the overflow checking context.</span></span> <span data-ttu-id="70124-138">W kontekście zaznaczone `OverflowException` jest zgłoszony w kontekście niezaznaczone, wynik jest wartością nieokreślonego typu docelowego.</span><span class="sxs-lookup"><span data-stu-id="70124-138">In a checked context, an `OverflowException` is thrown, while in an unchecked context, the result is an unspecified value of the destination type.</span></span>  
+  
+-   <span data-ttu-id="70124-139">Podczas konwertowania `double` do `float`, `double` wartość jest zaokrąglana do najbliższego `float` wartość.</span><span class="sxs-lookup"><span data-stu-id="70124-139">When you convert `double` to `float`, the `double` value is rounded to the nearest `float` value.</span></span> <span data-ttu-id="70124-140">Jeśli `double` wartość jest zbyt mała lub zbyt duży, aby zmieścić na typ docelowy zostanie zero lub nieskończoności.</span><span class="sxs-lookup"><span data-stu-id="70124-140">If the `double` value is too small or too large to fit into the destination type, the result will be zero or infinity.</span></span>  
+  
+-   <span data-ttu-id="70124-141">Podczas konwertowania `float` lub `double` do `decimal`, wartości źródłowej jest konwertowana na `decimal` reprezentacja i zaokrąglona do najbliższej liczby po przecinku 28, jeśli jest to wymagane.</span><span class="sxs-lookup"><span data-stu-id="70124-141">When you convert `float` or `double` to `decimal`, the source value is converted to `decimal` representation and rounded to the nearest number after the 28th decimal place if required.</span></span> <span data-ttu-id="70124-142">W zależności od wartości wartość źródła może wystąpić jeden z następujących wyników:</span><span class="sxs-lookup"><span data-stu-id="70124-142">Depending on the value of the source value, one of the following results may occur:</span></span>  
+  
+    -   <span data-ttu-id="70124-143">Jeśli wartość źródła jest za mały, aby mogły być reprezentowane jako `decimal`, wynik wynosi zero.</span><span class="sxs-lookup"><span data-stu-id="70124-143">If the source value is too small to be represented as a `decimal`, the result becomes zero.</span></span>  
+  
+    -   <span data-ttu-id="70124-144">Jeśli wartość źródła jest wartością typu NaN (nieliczbową), nieskończoności, lub zbyt duży, może być reprezentowana jako `decimal`, `OverflowException` jest generowany.</span><span class="sxs-lookup"><span data-stu-id="70124-144">If the source value is NaN (not a number), infinity, or too large to be represented as a `decimal`, an `OverflowException` is thrown.</span></span>  
+  
+-   <span data-ttu-id="70124-145">Podczas konwertowania `decimal` do `float` lub `double`, `decimal` wartość jest zaokrąglana do najbliższego `double` lub `float` wartość.</span><span class="sxs-lookup"><span data-stu-id="70124-145">When you convert `decimal` to `float` or `double`, the `decimal` value is rounded to the nearest `double` or `float` value.</span></span>  
+  
+ <span data-ttu-id="70124-146">Aby uzyskać więcej informacji na jawnej konwersji Zobacz Explicit w specyfikacji języka C#.</span><span class="sxs-lookup"><span data-stu-id="70124-146">For more information on explicit conversion, see Explicit in the C# Language Specification.</span></span> <span data-ttu-id="70124-147">Aby uzyskać więcej informacji na temat sposobu dostępu spec, zobacz [specyfikacji języka C#](../../../csharp/language-reference/language-specification/index.md).</span><span class="sxs-lookup"><span data-stu-id="70124-147">For more information on how to access the spec, see [C# Language Specification](../../../csharp/language-reference/language-specification/index.md).</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="70124-148">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="70124-148">See Also</span></span>  
+ [<span data-ttu-id="70124-149">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="70124-149">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="70124-150">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="70124-150">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="70124-151">Rzutowanie i konwersje typów</span><span class="sxs-lookup"><span data-stu-id="70124-151">Casting and Type Conversions</span></span>](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+ [<span data-ttu-id="70124-152">() — Operator</span><span class="sxs-lookup"><span data-stu-id="70124-152">() Operator</span></span>](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [<span data-ttu-id="70124-153">Tabela typów całkowitych</span><span class="sxs-lookup"><span data-stu-id="70124-153">Integral Types Table</span></span>](../../../csharp/language-reference/keywords/integral-types-table.md)  
+ [<span data-ttu-id="70124-154">Tabela typów wbudowanych</span><span class="sxs-lookup"><span data-stu-id="70124-154">Built-In Types Table</span></span>](../../../csharp/language-reference/keywords/built-in-types-table.md)  
+ [<span data-ttu-id="70124-155">Tabela niejawnych konwersji liczbowych</span><span class="sxs-lookup"><span data-stu-id="70124-155">Implicit Numeric Conversions Table</span></span>](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)

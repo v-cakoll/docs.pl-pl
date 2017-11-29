@@ -1,0 +1,724 @@
+---
+title: "Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-csharp
+ms.topic: article
+ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
+caps.latest.revision: "3"
+author: BillWagner
+ms.author: wiwagn
+ms.openlocfilehash: a917f88d3d6105f836dc67ef8a9ec92efc300d7a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="handling-reentrancy-in-async-apps-c"></a>Obsługa ponownego rozpoczęcia w aplikacjach asynchronicznych (C#)
+Po dołączeniu kodu asynchroniczne w aplikacji należy wziąć pod uwagę i prawdopodobnie zapobiec ponowne wejście, który odwołuje się do ponownego wprowadzania operację asynchroniczną, zanim została ukończona. Jeśli nie identyfikowania i obsługi możliwości ponownego rozpoczęcia, może spowodować nieoczekiwane wyniki.  
+  
+ **W tym temacie**  
+  
+-   [Rozpoznawanie Wielobieżność](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+-   [Obsługa ponownego rozpoczęcia](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+    -   [Wyłącz przycisk Start](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+    -   [Anuluj i ponownie uruchom operację](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+    -   [Uruchamianie wielu operacji i danych wyjściowych w kolejce](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+-   [Przeglądanie i uruchamianie przykładową aplikację](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+> [!NOTE]
+>  Aby uruchomić przykład, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
+  
+##  <a name="BKMK_RecognizingReentrancy"></a>Rozpoznawanie Wielobieżność  
+ W przykładzie w tym temacie, wybierz opcję użytkownicy **Start** przycisk, aby zainicjować asynchronicznego aplikację, która pobiera szereg witryn sieci Web, a następnie oblicza całkowita liczba bajtów, które zostaną pobrane. Synchroniczną wersję przykładu będzie odpowiadać taki sam sposób niezależnie od ile razy użytkownik wybierze przycisk, ponieważ po pierwszym uruchomieniu wątku interfejsu użytkownika ignoruje te zdarzenia, dopóki nie zakończy się aplikacja działa. W aplikacji asynchroniczne jednak wątku interfejsu użytkownika w dalszym ciągu odpowiada i może ponownie operację asynchroniczną, zanim została ukończona.  
+  
+ W poniższym przykładzie przedstawiono oczekiwanych danych wyjściowych, jeśli użytkownik wybierze **Start** przycisk tylko raz. Zostanie wyświetlona lista pobranych witryn sieci Web z rozmiar w bajtach, w każdej lokacji. Całkowita liczba bajtów pojawia się na końcu.  
+  
+```  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+4. msdn.microsoft.com/library/hh290140.aspx               117152  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+7. msdn.microsoft.com                                            42972  
+8. msdn.microsoft.com/library/ff730837.aspx               146159  
+  
+TOTAL bytes returned:  890591  
+```  
+  
+ Jednak jeśli użytkownik wybierze przycisk więcej niż raz, program obsługi zdarzeń jest wywoływany wielokrotnie i proces pobierania jest ponownie wprowadzić hasło zawsze. W związku z tym kilka operacji asynchronicznych są uruchomione w tym samym czasie, dane wyjściowe przeplata wyniki, a całkowita liczba bajtów jest myląca.  
+  
+```  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+4. msdn.microsoft.com/library/hh290140.aspx               117152  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+3. msdn.microsoft.com/en-us/library/jj155761.aspx                29019  
+7. msdn.microsoft.com                                            42972  
+4. msdn.microsoft.com/library/hh290140.aspx               117152  
+8. msdn.microsoft.com/library/ff730837.aspx               146159  
+  
+TOTAL bytes returned:  890591  
+  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+4. msdn.microsoft.com/library/hh290140.aspx               117152  
+7. msdn.microsoft.com                                            42972  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+8. msdn.microsoft.com/library/ff730837.aspx               146159  
+  
+TOTAL bytes returned:  890591  
+  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+7. msdn.microsoft.com                                            42972  
+8. msdn.microsoft.com/library/ff730837.aspx               146159  
+  
+TOTAL bytes returned:  890591  
+```  
+  
+ Możesz przejrzeć kod, który generuje dane wyjściowe w tym przewijając na końcu tego tematu. Możesz eksperymentować z kodem pobrać rozwiązanie na komputerze lokalnym, a następnie uruchamiając projekt WebsiteDownload lub przy użyciu kodu na końcu tego tematu, aby utworzyć własny projekt, aby uzyskać więcej informacji oraz instrukcje, zobacz [ Przeglądanie i uruchamianie aplikacji przykład](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645).  
+  
+##  <a name="BKMK_HandlingReentrancy"></a>Obsługa ponownego rozpoczęcia  
+ Wielobieżność na różne sposoby, w zależności od tego, co ma aplikację w celu może obsłużyć. W tym temacie przedstawiono następujące przykłady:  
+  
+-   [Wyłącz przycisk Start](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+     Wyłącz **Start** przycisk podczas operacji jest uruchomiona, dzięki czemu użytkownik nie może przerwać go.  
+  
+-   [Anuluj i ponownie uruchom operację](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+     Anuluj wszelkie operacje, który jest nadal uruchomiona, gdy użytkownik wybierze **Start** przycisk ponownie, a następnie kontynuuj let najbardziej ostatnio żądanej operacji.  
+  
+-   [Uruchamianie wielu operacji i danych wyjściowych w kolejce](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645)  
+  
+     Zezwalaj na wszystkie żądane operacje wykonywane asynchronicznie, ale koordynuje wyświetlania danych wyjściowych, aby jednocześnie i w kolejności zostaną wyświetlone wyniki z każdej operacji.  
+  
+###  <a name="BKMK_DisableTheStartButton"></a>Wyłącz przycisk Start  
+ Możesz zablokować **Start** przycisk uruchomionej operacji przez wyłączenie przycisku w górnej części `StartButton_Click` obsługi zdarzeń. Następnie można ponownie włączyć za pomocą przycisku `finally` blokować po zakończeniu operacji, dzięki czemu użytkownicy mogą ponownie uruchom aplikację.  
+  
+ Poniższy kod przedstawia te zmiany, które są oznaczone ikoną z gwiazdki. Zmiany można dodać do kodu na końcu tego tematu, lub możesz pobrać Zakończono aplikację z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Nazwa projektu jest DisableStartButton.  
+  
+```csharp  
+private async void StartButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // This line is commented out to make the results clearer in the output.  
+    //ResultsTextBox.Text = "";  
+  
+    // ***Disable the Start button until the downloads are complete.   
+    StartButton.IsEnabled = false;   
+  
+    try  
+    {  
+        await AccessTheWebAsync();  
+    }  
+    catch (Exception)  
+    {  
+        ResultsTextBox.Text += "\r\nDownloads failed.";  
+    }  
+    // ***Enable the Start button in case you want to run the program again.   
+    finally  
+    {  
+        StartButton.IsEnabled = true;  
+    }  
+}  
+```  
+  
+ W wyniku zmian, przycisk przestaje odpowiadać podczas `AccessTheWebAsync` pobierania witryny sieci Web, więc nie można ponownie wprowadzić hasło procesu.  
+  
+###  <a name="BKMK_CancelAndRestart"></a>Anuluj i ponownie uruchom operację  
+ Zamiast wyłączenie **Start** przycisku, można zachować aktywnego przycisku, ale, jeśli użytkownik wybierze ponownie, ten przycisk Anuluj operację, która jest już uruchomiona i kontynuowania operacji najbardziej ostatnio uruchomiono.  
+  
+ Aby uzyskać więcej informacji na temat anulowania, zobacz [Fine-Tuning Twoja aplikacja Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md).  
+  
+ Aby skonfigurować ten scenariusz, wprowadź następujące zmiany do podstawowego kodu, który znajduje się w [przeglądanie i uruchamianie aplikacji przykład](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645). Możesz również pobrać Zakończono aplikacji z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](http://go.microsoft.com/fwlink/?LinkId=266571). Nazwa tego projektu jest CancelAndRestart.  
+  
+1.  Deklarowanie <xref:System.Threading.CancellationTokenSource> zmiennej `cts`, który znajduje się w zakresie dla wszystkich metod.  
+  
+    ```csharp  
+    public partial class MainWindow : Window   // Or class MainPage  
+    {  
+        // *** Declare a System.Threading.CancellationTokenSource.  
+        CancellationTokenSource cts;  
+    ```  
+  
+2.  W `StartButton_Click`, określić, czy operacja jest już przetwarzane. Jeśli wartość `cts` jest wartość null, nie jest operacja już aktywne. Jeśli wartość nie jest pusta, zostaną anulowane operacja, która jest już uruchomiona.  
+  
+    ```csharp  
+    // *** If a download process is already underway, cancel it.  
+    if (cts != null)  
+    {  
+        cts.Cancel();  
+    }  
+    ```  
+  
+3.  Ustaw `cts` na inną wartość, która reprezentuje bieżący proces.  
+  
+    ```csharp  
+    // *** Now set cts to a new value that you can use to cancel the current process  
+    // if the button is chosen again.  
+    CancellationTokenSource newCTS = new CancellationTokenSource();  
+    cts = newCTS;  
+    ```  
+  
+4.  Na koniec `StartButton_Click`, bieżący proces zostanie zakończony, a więc ustaw wartość `cts` do wartości null.  
+  
+    ```csharp  
+    // *** When the process is complete, signal that another process can begin.  
+    if (cts == newCTS)  
+        cts = null;  
+    ```  
+  
+ Poniższy kod przedstawia wszystkie zmiany w `StartButton_Click`. Dodatki są oznaczone gwiazdki.  
+  
+```csharp  
+private async void StartButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // This line is commented out to make the results clearer in the output.  
+    //ResultsTextBox.Clear();  
+  
+    // *** If a download process is already underway, cancel it.  
+    if (cts != null)  
+    {  
+        cts.Cancel();  
+    }  
+  
+    // *** Now set cts to cancel the current process if the button is chosen again.  
+    CancellationTokenSource newCTS = new CancellationTokenSource();  
+    cts = newCTS;  
+  
+    try  
+    {  
+        // ***Send cts.Token to carry the message if there is a cancellation request.  
+        await AccessTheWebAsync(cts.Token);  
+  
+    }  
+    // *** Catch cancellations separately.  
+    catch (OperationCanceledException)  
+    {  
+        ResultsTextBox.Text += "\r\nDownloads canceled.\r\n";  
+    }  
+    catch (Exception)  
+    {  
+        ResultsTextBox.Text += "\r\nDownloads failed.\r\n";  
+    }  
+    // *** When the process is complete, signal that another process can proceed.  
+    if (cts == newCTS)  
+        cts = null;  
+}  
+```  
+  
+ W `AccessTheWebAsync`, wprowadź następujące zmiany.  
+  
+-   Dodawanie parametru do akceptowania token anulowania z `StartButton_Click`.  
+  
+-   Użyj <xref:System.Net.Http.HttpClient.GetAsync%2A> metodę, aby pobrać witryn sieci Web, ponieważ `GetAsync` akceptuje <xref:System.Threading.CancellationToken> argumentu.  
+  
+-   Przed wywołaniem `DisplayResults` do wyświetlenia wyników dla poszczególnych witryn pobrany, sprawdź `ct` Aby sprawdzić, czy bieżąca operacja nie została anulowana.  
+  
+ Poniższy kod przedstawia te zmiany, które są oznaczone ikoną z gwiazdki.  
+  
+```csharp  
+// *** Provide a parameter for the CancellationToken from StartButton_Click.  
+async Task AccessTheWebAsync(CancellationToken ct)  
+{  
+    // Declare an HttpClient object.  
+    HttpClient client = new HttpClient();  
+  
+    // Make a list of web addresses.  
+    List<string> urlList = SetUpURLList();  
+  
+    var total = 0;  
+    var position = 0;  
+  
+    foreach (var url in urlList)  
+    {  
+        // *** Use the HttpClient.GetAsync method because it accepts a   
+        // cancellation token.  
+        HttpResponseMessage response = await client.GetAsync(url, ct);  
+  
+        // *** Retrieve the website contents from the HttpResponseMessage.  
+        byte[] urlContents = await response.Content.ReadAsByteArrayAsync();  
+  
+        // *** Check for cancellations before displaying information about the   
+        // latest site.   
+        ct.ThrowIfCancellationRequested();  
+  
+        DisplayResults(url, urlContents, ++position);  
+  
+        // Update the total.  
+        total += urlContents.Length;  
+    }  
+  
+    // Display the total count for all of the websites.  
+    ResultsTextBox.Text +=  
+        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+}     
+```  
+  
+ Jeśli wybierzesz **Start** przycisk kilka razy uruchomiona ta aplikacja powinna generować wyniki podobne do następujących danych wyjściowych.  
+  
+```  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+4. msdn.microsoft.com/library/hh290140.aspx               122505  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+Download canceled.  
+  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+Download canceled.  
+  
+1. msdn.microsoft.com/library/hh191443.aspx                83732  
+2. msdn.microsoft.com/library/aa578028.aspx               205273  
+3. msdn.microsoft.com/library/jj155761.aspx                29019  
+4. msdn.microsoft.com/library/hh290140.aspx               117152  
+5. msdn.microsoft.com/library/hh524395.aspx                68959  
+6. msdn.microsoft.com/library/ms404677.aspx               197325  
+7. msdn.microsoft.com                                            42972  
+8. msdn.microsoft.com/library/ff730837.aspx               146159  
+  
+TOTAL bytes returned:  890591  
+```  
+  
+ Aby wyeliminować częściowej listy, usuń znaczniki komentarza pierwszego wiersza kodu w `StartButton_Click` do wyczyść pola tekstowego użytkownik uruchamia ponownie wykonać operację.  
+  
+###  <a name="BKMK_RunMultipleOperations"></a>Uruchamianie wielu operacji i danych wyjściowych w kolejce  
+ W tym przykładzie trzeci jest najbardziej skomplikowanych, że operacja asynchroniczna za każdym razem, użytkownik zdecyduje się na uruchomieniu aplikacji **Start** przycisk, a wszystkie operacje uruchomienia aż do ukończenia. Żądanych operacji pobierania witryny sieci Web z listy asynchronicznie, ale dane wyjściowe z działania są prezentowane sekwencyjnie. Oznacza to, że przeplatana rzeczywistego działania pobierania jako danych wyjściowych w [rozpoznawanie Wielobieżność](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) pokazuje, ale lista wyników dla każdej grupy są przedstawione oddzielnie.  
+  
+ Operacje udostępniania globalnym <xref:System.Threading.Tasks.Task>, `pendingWork`, która służy jako kontroler proces wyświetlania.  
+  
+ W tym przykładzie można uruchomić wklejając zmian w kodzie w [kompilowania aplikacji](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub można postępuj zgodnie z instrukcjami [pobieranie aplikacji](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do pobierania go, a następnie uruchom projekt QueueResults.  
+  
+ Następujące dane wyjściowe przedstawia wynik, jeśli użytkownik wybierze **Start** przycisk tylko raz. Etykieta litera, A, wskazuje, że wynik jest od momentu pierwszego **Start** przycisk zostanie wybrany. Numery wyświetlić kolejność adresów URL na liście elementów docelowych pobierania.  
+  
+```  
+#Starting group A.  
+#Task assigned for group A.  
+  
+A-1. msdn.microsoft.com/library/hh191443.aspx                87389  
+A-2. msdn.microsoft.com/library/aa578028.aspx               209858  
+A-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+A-4. msdn.microsoft.com/library/hh290140.aspx               119027  
+A-5. msdn.microsoft.com/library/hh524395.aspx                71260  
+A-6. msdn.microsoft.com/library/ms404677.aspx               199186  
+A-7. msdn.microsoft.com                                            53266  
+A-8. msdn.microsoft.com/library/ff730837.aspx               148020  
+  
+TOTAL bytes returned:  918876  
+  
+#Group A is complete.  
+```  
+  
+ Jeśli użytkownik zdecyduje się **Start** trzy razy przycisk, aplikacja generuje dane wyjściowe podobne następujące wiersze. Wiersze informacji rozpoczynających się od krzyżyk podpisać śledzenia (#) postęp aplikacji.  
+  
+```  
+#Starting group A.  
+#Task assigned for group A.  
+  
+A-1. msdn.microsoft.com/library/hh191443.aspx                87389  
+A-2. msdn.microsoft.com/library/aa578028.aspx               207089  
+A-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+A-4. msdn.microsoft.com/library/hh290140.aspx               119027  
+A-5. msdn.microsoft.com/library/hh524395.aspx                71259  
+A-6. msdn.microsoft.com/library/ms404677.aspx               199185  
+  
+#Starting group B.  
+#Task assigned for group B.  
+  
+A-7. msdn.microsoft.com                                            53266  
+  
+#Starting group C.  
+#Task assigned for group C.  
+  
+A-8. msdn.microsoft.com/library/ff730837.aspx               148010  
+  
+TOTAL bytes returned:  916095  
+  
+B-1. msdn.microsoft.com/library/hh191443.aspx                87389  
+B-2. msdn.microsoft.com/library/aa578028.aspx               207089  
+B-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+B-4. msdn.microsoft.com/library/hh290140.aspx               119027  
+B-5. msdn.microsoft.com/library/hh524395.aspx                71260  
+B-6. msdn.microsoft.com/library/ms404677.aspx               199186  
+  
+#Group A is complete.  
+  
+B-7. msdn.microsoft.com                                            53266  
+B-8. msdn.microsoft.com/library/ff730837.aspx               148010  
+  
+TOTAL bytes returned:  916097  
+  
+C-1. msdn.microsoft.com/library/hh191443.aspx                87389  
+C-2. msdn.microsoft.com/library/aa578028.aspx               207089  
+  
+#Group B is complete.  
+  
+C-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+C-4. msdn.microsoft.com/library/hh290140.aspx               119027  
+C-5. msdn.microsoft.com/library/hh524395.aspx                72765  
+C-6. msdn.microsoft.com/library/ms404677.aspx               199186  
+C-7. msdn.microsoft.com                                            56190  
+C-8. msdn.microsoft.com/library/ff730837.aspx               148010  
+  
+TOTAL bytes returned:  920526  
+  
+#Group C is complete.  
+```  
+  
+ Grupy B i C uruchomić przed zakończył grupy A, ale dane wyjściowe dla każdej grupy jest wyświetlany osobno. Wszystkie dane wyjściowe dla grupy A występuje jako pierwszy, a następnie wszystkie dane wyjściowe dla grupy B, a następnie wszystkie dane wyjściowe dla grupy C. Aplikacja zawsze wyświetla grup w kolejności i dla każdej grupy zawsze wyświetla informacje o poszczególnych witrynach sieci Web w kolejności adresy URL są wyświetlane na liście adresów URL.  
+  
+ Jednak nie można przewidzieć kolejność, w którym rzeczywistego wystąpienia pliki do pobrania. Po uruchomieniu wielu grup zadań pobierania, które generują one są wszystkie aktywne. Nie można zakładać, że a – 1 zostaną pobrane przed b-1 i nie można zakładać, że a – 1 zostaną pobrane przed A-2.  
+  
+#### <a name="global-definitions"></a>Definicje globalnej  
+ Przykładowy kod zawiera następujące dwa deklaracje globalne, które są widoczne na wszystkie metody.  
+  
+```csharp  
+public partial class MainWindow : Window  // Class MainPage in Windows Store app.  
+{  
+    // ***Declare the following variables where all methods can access them.   
+    private Task pendingWork = null;     
+    private char group = (char)('A' - 1);  
+```  
+  
+ `Task` Zmiennej `pendingWork`, nadzoruje proces wyświetlania i uniemożliwia dowolną grupę zakłócania pracy wyświetlania innej grupy. Zmienna znak `group`, dane wyjściowe z różnych grup, aby sprawdzić, czy wyniki są wyświetlane w oczekiwanej kolejności etykiet.  
+  
+#### <a name="the-click-event-handler"></a>Obsługi zdarzeń kliknięcia  
+ Program obsługi zdarzeń, `StartButton_Click`, rośnie litery grupy za każdym razem, użytkownik wybierze **Start** przycisku. Następnie wywołań obsługi `AccessTheWebAsync` się uruchomić operacji pobierania.  
+  
+```csharp  
+private async void StartButton_Click(object sender, RoutedEventArgs e)  
+{  
+    // ***Verify that each group's results are displayed together, and that  
+    // the groups display in order, by marking each group with a letter.  
+    group = (char)(group + 1);  
+    ResultsTextBox.Text += string.Format("\r\n\r\n#Starting group {0}.", group);  
+  
+    try  
+    {  
+        // *** Pass the group value to AccessTheWebAsync.  
+        char finishedGroup = await AccessTheWebAsync(group);  
+  
+        // The following line verifies a successful return from the download and  
+        // display procedures.   
+        ResultsTextBox.Text += string.Format("\r\n\r\n#Group {0} is complete.\r\n", finishedGroup);  
+    }  
+    catch (Exception)  
+    {  
+        ResultsTextBox.Text += "\r\nDownloads failed.";  
+    }  
+}  
+```  
+  
+#### <a name="the-accessthewebasync-method"></a>Metoda AccessTheWebAsync  
+ W tym przykładzie dzieli `AccessTheWebAsync` do dwóch metod. Pierwsza metoda `AccessTheWebAsync`, uruchamia wszystkie zadania pobierania grupy i konfiguruje `pendingWork` kontrolować proces wyświetlania. Metoda używa języka zapytanie zintegrowanym (LINQ query) i <xref:System.Linq.Enumerable.ToArray%2A> uruchomić wszystkie zadania pobierania w tym samym czasie.  
+  
+ `AccessTheWebAsync`następnie wywołuje `FinishOneGroupAsync` poczekać na ukończenie każdego pobrania i wyświetlenia jej długość.  
+  
+ `FinishOneGroupAsync`Zwraca klasę task, która jest przypisana do `pendingWork` w `AccessTheWebAsync`. Czy wartość zapobiega przerwania przez inną operację przed ukończeniem zadania.  
+  
+```csharp  
+private async Task<char> AccessTheWebAsync(char grp)  
+{  
+    HttpClient client = new HttpClient();  
+  
+    // Make a list of the web addresses to download.  
+    List<string> urlList = SetUpURLList();  
+  
+    // ***Kick off the downloads. The application of ToArray activates all the download tasks.  
+    Task<byte[]>[] getContentTasks = urlList.Select(url => client.GetByteArrayAsync(url)).ToArray();  
+  
+    // ***Call the method that awaits the downloads and displays the results.  
+    // Assign the Task that FinishOneGroupAsync returns to the gatekeeper task, pendingWork.  
+    pendingWork = FinishOneGroupAsync(urlList, getContentTasks, grp);  
+  
+    ResultsTextBox.Text += string.Format("\r\n#Task assigned for group {0}. Download tasks are active.\r\n", grp);  
+  
+    // ***This task is complete when a group has finished downloading and displaying.  
+    await pendingWork;  
+  
+    // You can do other work here or just return.  
+    return grp;  
+}  
+```  
+  
+#### <a name="the-finishonegroupasync-method"></a>Metoda FinishOneGroupAsync  
+ Ta metoda przełączanie po kolei zadania pobierania w grupie, oczekiwanie na każdym z nich, wyświetlanie długość pobrany witryny sieci Web i dodawanie długość do całkowitej.  
+  
+ Pierwsza instrukcja w `FinishOneGroupAsync` używa `pendingWork` aby upewnić się, że wprowadzanie metody zakłócał operacja, która jest już w procesie wyświetlania lub już jest oczekiwane. Jeśli takie działanie jest w toku, wprowadzając operacji oczekiwania kolei.  
+  
+```csharp  
+private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] contentTasks, char grp)  
+{  
+    // ***Wait for the previous group to finish displaying results.  
+    if (pendingWork != null) await pendingWork;  
+  
+    int total = 0;  
+  
+    // contentTasks is the array of Tasks that was created in AccessTheWebAsync.  
+    for (int i = 0; i < contentTasks.Length; i++)  
+    {  
+        // Await the download of a particular URL, and then display the URL and  
+        // its length.  
+        byte[] content = await contentTasks[i];  
+        DisplayResults(urls[i], content, i, grp);  
+        total += content.Length;  
+    }  
+  
+    // Display the total count for all of the websites.  
+    ResultsTextBox.Text +=  
+        string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+}  
+```  
+  
+ W tym przykładzie można uruchomić wklejając zmian w kodzie w [kompilowania aplikacji](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub można postępuj zgodnie z instrukcjami [pobieranie aplikacji](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do pobierania go, a następnie uruchom projekt QueueResults.  
+  
+#### <a name="points-of-interest"></a>Ważne  
+ Wiersze informacji rozpoczynające się znakiem numeru (#) w danych wyjściowych wyjaśnienie, jak działa w tym przykładzie.  
+  
+ Dane wyjściowe zawierają następujące wzorce.  
+  
+-   Grupy można uruchomić podczas poprzedniej grupy są wyświetlane dane wyjściowe, ale nie jest przerywana wyświetlanie wynik poprzedniego grupy.  
+  
+    ```  
+    #Starting group A.  
+    #Task assigned for group A. Download tasks are active.  
+  
+    A-1. msdn.microsoft.com/library/hh191443.aspx                87389  
+    A-2. msdn.microsoft.com/library/aa578028.aspx               207089  
+    A-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+    A-4. msdn.microsoft.com/library/hh290140.aspx               119037  
+    A-5. msdn.microsoft.com/library/hh524395.aspx                71260  
+  
+    #Starting group B.  
+    #Task assigned for group B. Download tasks are active.  
+  
+    A-6. msdn.microsoft.com/library/ms404677.aspx               199186  
+    A-7. msdn.microsoft.com                                            53078  
+    A-8. msdn.microsoft.com/library/ff730837.aspx               148010  
+  
+    TOTAL bytes returned:  915919  
+  
+    B-1. msdn.microsoft.com/library/hh191443.aspx                87388  
+    B-2. msdn.microsoft.com/library/aa578028.aspx               207089  
+    B-3. msdn.microsoft.com/library/jj155761.aspx                30870  
+  
+    #Group A is complete.  
+  
+    B-4. msdn.microsoft.com/library/hh290140.aspx               119027  
+    B-5. msdn.microsoft.com/library/hh524395.aspx                71260  
+    B-6. msdn.microsoft.com/library/ms404677.aspx               199186  
+    B-7. msdn.microsoft.com                                            53078  
+    B-8. msdn.microsoft.com/library/ff730837.aspx               148010  
+  
+    TOTAL bytes returned:  915908  
+    ```  
+  
+-   `pendingWork` Zadań ma wartość null na początku `FinishOneGroupAsync` tylko dla grupy A, które uruchamiane jako pierwsze. Grupy A jeszcze nie ukończone wyrażenie await, po osiągnięciu `FinishOneGroupAsync`. W związku z tym kontroli nie zwróciła do `AccessTheWebAsync`, a pierwsze przypisanie do `pendingWork` nie wystąpił.  
+  
+-   Następujące dwa wiersze zawsze występować razem w danych wyjściowych. Ten kod nie przerywa pracy między uruchamiania operacji grupy `StartButton_Click` i przypisywanie zadań dla grupy w celu `pendingWork`.  
+  
+    ```  
+    #Starting group B.  
+    #Task assigned for group B. Download tasks are active.  
+    ```  
+  
+     Po wprowadzeniu grupy `StartButton_Click`, operacja nie wykona wyrażenie await do czasu operacji wejścia `FinishOneGroupAsync`. W związku z tym żadnych innych operacji przejąć kontrolę podczas tego segmentu kodu.  
+  
+##  <a name="BKMD_SettingUpTheExample"></a>Przeglądanie i uruchamianie przykładową aplikację  
+ Aby lepiej zrozumieć przykładową aplikację, można go pobrać, kompilacji samodzielnie lub przejrzeć kod na końcu tego tematu bez stosowania aplikacji.  
+  
+> [!NOTE]
+>  Do uruchomienia w przykładzie jako aplikację pulpitu systemu Windows Presentation Foundation (WPF), musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
+  
+###  <a name="BKMK_DownloadingTheApp"></a>Pobieranie aplikacji  
+  
+1.  Pobierz skompresowany plik z [przykłady Async: ponownego rozpoczęcia w aplikacjach pulpitu .NET](http://go.microsoft.com/fwlink/?LinkId=266571).  
+  
+2.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
+  
+3.  Na pasku menu wybierz **pliku**, **Otwórz**, **projektu/rozwiązania**.  
+  
+4.  Przejdź do folderu, który przechowuje zdekompresowanych przykładowy kod, a następnie otwórz plik rozwiązania (sln).  
+  
+5.  W **Eksploratora rozwiązań**, otwórz menu skrótów projektu, który chcesz uruchomić, a następnie wybierz pozycję **Ustaw jako StartUpProject**.  
+  
+6.  Wybierz klawisze CTRL + F5, aby skompilować i uruchomić projekt.  
+  
+###  <a name="BKMK_BuildingTheApp"></a>Tworzenie aplikacji  
+ W poniższej sekcji przedstawiono kod służący do kompilacji w przykładzie jako aplikacji WPF.  
+  
+##### <a name="to-build-a-wpf-app"></a>Do utworzenia aplikacji WPF  
+  
+1.  Uruchom program Visual Studio.  
+  
+2.  Na pasku menu wybierz **pliku**, **nowy**, **projektu**.  
+  
+     **Nowy projekt** zostanie otwarte okno dialogowe.  
+  
+3.  W **zainstalowane szablony** okienku rozwiń **Visual C#**, a następnie rozwiń węzeł **Windows**.  
+  
+4.  Lista typów projektów, wybranie **aplikacji WPF**.  
+  
+5.  Nazwij projekt `WebsiteDownloadWPF`, a następnie wybierz pozycję **OK** przycisku.  
+  
+     Nowy projekt zostanie wyświetlony w **Eksploratora rozwiązań**.  
+  
+6.  Wybierz w Visual Studio Code edytorze **MainWindow.xaml** kartę.  
+  
+     Jeśli karta jest niewidoczna, otwórz menu skrótów MainWindow.xaml w **Eksploratora rozwiązań**, a następnie wybierz pozycję **kod widoku**.  
+  
+7.  W **XAML** widoku MainWindow.xaml, Zastąp kod następującym kodem.  
+  
+    ```csharp  
+    <Window x:Class="WebsiteDownloadWPF.MainWindow"  
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"  
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
+        xmlns:local="using:WebsiteDownloadWPF"  
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"  
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
+        mc:Ignorable="d">  
+  
+        <Grid Width="517" Height="360">  
+            <Button x:Name="StartButton" Content="Start" HorizontalAlignment="Left" Margin="-1,0,0,0" VerticalAlignment="Top" Click="StartButton_Click" Height="53" Background="#FFA89B9B" FontSize="36" Width="518"  />  
+            <TextBox x:Name="ResultsTextBox" HorizontalAlignment="Left" Margin="-1,53,0,-36" TextWrapping="Wrap" VerticalAlignment="Top" Height="343" FontSize="10" ScrollViewer.VerticalScrollBarVisibility="Visible" Width="518" FontFamily="Lucida Console" />  
+        </Grid>  
+    </Window>  
+    ```  
+  
+     Proste okna, który zawiera pole tekstowe i przycisk pojawia się w **projekt** widoku MainWindow.xaml.  
+  
+8.  Dodaj odwołanie do <xref:System.Net.Http>.  
+  
+9. W **Eksploratora rozwiązań**, otwórz menu skrótów dla MainWindow.xaml.cs, a następnie wybierz **kod widoku**.  
+  
+10. W MainWindow.xaml.cs Zastąp kod następującym kodem.  
+  
+    ```csharp  
+    using System;  
+    using System.Collections.Generic;  
+    using System.Linq;  
+    using System.Text;  
+    using System.Threading.Tasks;  
+    using System.Windows;  
+    using System.Windows.Controls;  
+    using System.Windows.Data;  
+    using System.Windows.Documents;  
+    using System.Windows.Input;  
+    using System.Windows.Media;  
+    using System.Windows.Media.Imaging;  
+    using System.Windows.Navigation;  
+    using System.Windows.Shapes;  
+  
+    // Add the following using directives, and add a reference for System.Net.Http.  
+    using System.Net.Http;  
+    using System.Threading;  
+  
+    namespace WebsiteDownloadWPF  
+    {  
+        public partial class MainWindow : Window  
+        {  
+            public MainWindow()  
+            {  
+                InitializeComponent();  
+            }  
+  
+            private async void StartButton_Click(object sender, RoutedEventArgs e)  
+            {  
+                // This line is commented out to make the results clearer in the output.  
+                //ResultsTextBox.Text = "";  
+  
+                try  
+                {  
+                    await AccessTheWebAsync();  
+                }  
+                catch (Exception)  
+                {  
+                    ResultsTextBox.Text += "\r\nDownloads failed.";  
+                }  
+            }  
+  
+            private async Task AccessTheWebAsync()  
+            {  
+                // Declare an HttpClient object.  
+                HttpClient client = new HttpClient();  
+  
+                // Make a list of web addresses.  
+                List<string> urlList = SetUpURLList();  
+  
+                var total = 0;  
+                var position = 0;  
+  
+                foreach (var url in urlList)  
+                {  
+                    // GetByteArrayAsync returns a task. At completion, the task  
+                    // produces a byte array.  
+                    byte[] urlContents = await client.GetByteArrayAsync(url);  
+  
+                    DisplayResults(url, urlContents, ++position);  
+  
+                    // Update the total.  
+                    total += urlContents.Length;  
+                }  
+  
+                // Display the total count for all of the websites.  
+                ResultsTextBox.Text +=  
+                    string.Format("\r\n\r\nTOTAL bytes returned:  {0}\r\n", total);  
+            }  
+  
+            private List<string> SetUpURLList()  
+            {  
+                List<string> urls = new List<string>   
+                {   
+                    "http://msdn.microsoft.com/library/hh191443.aspx",  
+                    "http://msdn.microsoft.com/library/aa578028.aspx",  
+                    "http://msdn.microsoft.com/library/jj155761.aspx",  
+                    "http://msdn.microsoft.com/library/hh290140.aspx",  
+                    "http://msdn.microsoft.com/library/hh524395.aspx",  
+                    "http://msdn.microsoft.com/library/ms404677.aspx",  
+                    "http://msdn.microsoft.com",  
+                    "http://msdn.microsoft.com/library/ff730837.aspx"  
+                };  
+                return urls;  
+            }  
+  
+            private void DisplayResults(string url, byte[] content, int pos)  
+            {  
+                // Display the length of each website. The string format is designed  
+                // to be used with a monospaced font, such as Lucida Console or   
+                // Global Monospace.  
+  
+                // Strip off the "http://".  
+                var displayURL = url.Replace("http://", "");  
+                // Display position in the URL list, the URL, and the number of bytes.  
+                ResultsTextBox.Text += string.Format("\n{0}. {1,-58} {2,8}", pos, displayURL, content.Length);  
+            }  
+        }  
+    }  
+    ```  
+  
+11. Wybierz klawiszy CTRL + F5, uruchom program, a następnie wybierz pozycję **Start** przycisk kilka razy.  
+  
+12. Wprowadź zmiany z [Wyłącz przycisk Start](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), [Anuluj i ponownie uruchom operację](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645), lub [uruchomić wiele operacji i kolejki danych wyjściowych](http://msdn.microsoft.com/library/5b54de66-6be3-459e-b869-65070b020645) do obsługi ponownego rozpoczęcia.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

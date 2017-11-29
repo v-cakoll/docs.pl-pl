@@ -1,0 +1,99 @@
+---
+title: "&lt;obejmują&gt; (C# przewodnik programowania w języku)"
+ms.date: 07/20/2015
+ms.prod: .net
+ms.technology: devlang-csharp
+ms.topic: article
+f1_keywords:
+- include
+- <include>
+helpviewer_keywords:
+- <include> C# XML tag
+- include C# XML tag
+ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
+caps.latest.revision: "19"
+author: BillWagner
+ms.author: wiwagn
+ms.openlocfilehash: f4df6a23b2fe33b2390aef86891aedc6b04e464d
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="ltincludegt-c-programming-guide"></a>&lt;obejmują&gt; (C# przewodnik programowania w języku)
+## <a name="syntax"></a>Składnia  
+  
+```xml  
+<include file='filename' path='tagpath[@name="id"]' />  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `filename`  
+ Nazwa pliku XML zawierającego w dokumentacji. Nazwa pliku może być kwalifikowany za pomocą ścieżki. Umieść `filename` w pojedynczym cudzysłowie ("").  
+  
+ `tagpath`  
+ Ścieżka tagów w `filename` prowadzi to do tagu `name`. Ścieżka do ujmij ją w pojedynczym cudzysłowie ("").  
+  
+ `name`  
+ Określenie nazwy w tagu poprzedzający komentarze; `name` będzie mieć `id`.  
+  
+ `id`  
+ Identyfikator znacznika poprzedzający komentarze. Umieść identyfikator w podwójny cudzysłów ("").  
+  
+## <a name="remarks"></a>Uwagi  
+ \<Obejmują > należy odwoływać się do komentarzy w innym pliku, które opisują typy i elementy członkowskie w kodzie źródłowym. Jest to alternatywa do wprowadzania komentarzy do dokumentacji bezpośrednio w pliku kodu źródłowego. Umieszczenie w dokumentacji w osobnym pliku, można zastosować do kontroli źródła do dokumentacji oddzielnie z kodu źródłowego. Jedna osoba może mieć wyewidencjonować pliku źródła kodu, a ktoś inny może mieć plik dokumentacji wyewidencjonowany.  
+  
+ \<Obejmują > tag używa składni XML XPath. Zapoznaj się z dokumentacją XPath o sposobach dostosowywania Twojej \<obejmują > Użyj.  
+  
+## <a name="example"></a>Przykład  
+ To jest przykład wiele plików. Pierwszy plik, który używa \<obejmują >, to wymienione poniżej:  
+  
+ [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+  
+ Drugi plik, xml_include_tag.doc, zawiera następujące komentarzy dokumentacji:  
+  
+```xml  
+<MyDocs>  
+  
+<MyMembers name="test">  
+<summary>  
+The summary for this type.  
+</summary>  
+</MyMembers>  
+  
+<MyMembers name="test2">  
+<summary>  
+The summary for this other type.  
+</summary>  
+</MyMembers>  
+  
+</MyDocs>  
+```  
+  
+## <a name="program-output"></a>Dane wyjściowe programu  
+ Następujące dane wyjściowe jest generowany, gdy kompilacji testowych i Test2 klas z następującego wiersza polecenia: `/doc:DocFileName.xml.` w programie Visual Studio, możesz określić opcję komentarzy dokumentu XML w okienku kompilacji w Projektancie projektu. Gdy widzi kompilatora C# \<obejmują > tag, przeszukiwane są przeznaczone do komentarzy dokumentacji w xml_include_tag.doc zamiast bieżącego pliku źródłowego. Kompilator generuje następnie DocFileName.xml i jest to plik, który jest używany przez dokumentacji narzędzia, takie jak [Sandcastle](https://github.com/EWSoftware/SHFB) wygenerowało końcowego dokumentacji.  
+  
+```xml  
+<?xml version="1.0"?>   
+<doc>   
+    <assembly>   
+        <name>xml_include_tag</name>   
+    </assembly>   
+    <members>   
+        <member name="T:Test">   
+            <summary>   
+The summary for this type.   
+</summary>   
+        </member>   
+        <member name="T:Test2">   
+            <summary>   
+The summary for this other type.   
+</summary>   
+        </member>   
+    </members>   
+</doc>   
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
+ [Zalecane tagi przeznaczone do komentarzy dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

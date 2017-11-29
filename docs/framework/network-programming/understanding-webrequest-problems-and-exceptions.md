@@ -1,0 +1,43 @@
+---
+title: "Opis WebRequest problemów i wyjątków"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: d29321297a880ca961805687e51c7bb63f70ffbf
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="understanding-webrequest-problems-and-exceptions"></a>Opis WebRequest problemów i wyjątków
+<xref:System.Net.WebRequest>i jej klas pochodnych (<xref:System.Net.HttpWebRequest>, <xref:System.Net.FtpWebRequest>, i <xref:System.Net.FileWebRequest>) zgłaszają wyjątki, która sygnalizuje nietypowe warunku. Czasami rozwiązanie tych problemów nie jest widoczne.  
+  
+## <a name="solutions"></a>Rozwiązania  
+ Sprawdź <xref:System.Net.WebException.Status%2A> właściwość <xref:System.Net.WebException> problemu. W poniższej tabeli przedstawiono kilka wartości stanu i niektóre możliwe rozwiązania.  
+  
+|Stan|Szczegóły|Rozwiązanie|  
+|------------|-------------|--------------|  
+|<xref:System.Net.WebExceptionStatus.SendFailure><br /><br /> —lub—<br /><br /> <xref:System.Net.WebExceptionStatus.ReceiveFailure>|Istnieje problem z podstawowej gniazda. Połączenie może zostać zresetowany.|Połącz się ponownie i ponownie prześlij żądanie.<br /><br /> Upewnij się, że zainstalowano najnowszy dodatek service pack.<br /><br /> Zwiększ wartość <xref:System.Net.ServicePointManager.MaxServicePointIdleTime%2A?displayProperty=nameWithType> właściwości.<br /><br /> Ustaw <xref:System.Net.HttpWebRequest.KeepAlive%2A?displayProperty=nameWithType> do `false`.<br /><br /> Zwiększ liczbę maksymalna liczba połączeń z <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> właściwości.<br /><br /> Sprawdź konfigurację serwera proxy.<br /><br /> Jeśli przy użyciu protokołu SSL, upewnij się, że proces serwera ma uprawnienia dostępu do magazynu certyfikatów.<br /><br /> Jeśli wysyłania dużej ilości danych, ustaw <xref:System.Net.HttpWebRequest.AllowWriteStreamBuffering%2A> do `false`.|  
+|<xref:System.Net.WebExceptionStatus.TrustFailure>|Nie można sprawdzić poprawności certyfikatu serwera.|Spróbuj otworzyć identyfikator URI przy użyciu programu Internet Explorer. Rozwiązywanie alertów zabezpieczeń wyświetlane przez programu Internet Explorer. Jeśli nie możesz rozwiązać alert zabezpieczeń, a następnie można utworzyć klasy zasady certyfikatów, która implementuje <xref:System.Net.ICertificatePolicy> zwracającą `true`i przekaż go do <xref:System.Net.ServicePointManager.CertificatePolicy%2A>.<br /><br /> Zapoznaj się [http://support.microsoft.com/?id=823177](http://go.microsoft.com/fwlink/?LinkID=179653).<br /><br /> Upewnij się, że certyfikat urzędu certyfikacji, który podpisał certyfikat serwera został dodany do listy zaufanych certyfikatu urzędu certyfikacji w programie Internet Explorer.<br /><br /> Upewnij się, czy nazwa hosta w adresie URL jest zgodna nazwa pospolita certyfikatu serwera.|  
+|<xref:System.Net.WebExceptionStatus.SecureChannelFailure>|Wystąpił błąd podczas transakcji protokołu SSL lub istnieje problem z certyfikatem.|.NET Framework w wersji 1.1 obsługuje tylko protokół SSL w wersji 3.0 lub nowszej. Jeśli serwer używa tylko protokołu TLS w wersji 1.0 lub SSL, wersja 2.0, wyjątku. Uaktualnij do platformy .NET Framework w wersji 2.0 i ustawić <xref:System.Net.ServicePointManager.SecurityProtocol%2A> odpowiadające serwera.<br /><br /> Certyfikat klienta został podpisany przez urząd certyfikacji, że serwer nie jest zaufany. Zainstaluj certyfikat urzędu certyfikacji na serwerze. Zobacz [http://support.microsoft.com/?id=332077](http://go.microsoft.com/fwlink/?LinkID=179654).<br /><br /> Upewnij się, że masz najnowszego dodatku service pack zainstalowany.|  
+|<xref:System.Net.WebExceptionStatus.ConnectFailure>|Nie udało się połączyć.|Zapory lub serwera proxy blokuje połączenia. Zmodyfikuj zapory lub serwera proxy, aby umożliwić połączenia.<br /><br /> Jawnie określić <xref:System.Net.WebProxy> w aplikacji klienckiej przez wywołanie metody <xref:System.Net.WebProxy> — Konstruktor (WebServiceProxyClass.Proxy = nowy obiekt WebProxy ([http://server:80](http://server/), true)).<br /><br /> Uruchom Filemon lub Regmon, aby upewnić się, że tożsamość procesu roboczego ma niezbędne uprawnienia dostępu do WSPWSP.dll, HKLM\System\CurrentControlSet\Services\DnsCache lub HKLM\System\CurrentControlSet\Services\WinSock2.|  
+|<xref:System.Net.WebExceptionStatus.NameResolutionFailure>|Usługi nazw domen nie można rozpoznać nazwy hosta.|Skonfigurowanie ustawień serwera proxy. Zobacz [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655).<br /><br /> Upewnij się, że żadnego zainstalowanego oprogramowania antywirusowego lub zapora nie blokuje połączenia.|  
+|<xref:System.Net.WebExceptionStatus.RequestCanceled>|<xref:System.Net.WebRequest.Abort%2A>został wywołany, lub błąd wystąpił.|Ten problem może być spowodowane przez duże obciążenie klienta lub serwera. Zmniejszenie obciążenia.<br /><br /> Zwiększ <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> ustawienie.<br /><br /> Zobacz [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) na modyfikowanie ustawień wydajności usługi sieci Web.|  
+|<xref:System.Net.WebExceptionStatus.ConnectionClosed>|Aplikacja podjął próbę zapisu do gniazda, które zostało już zamknięte.|Klient lub serwer jest przeciążony. Zmniejszenie obciążenia.<br /><br /> Zwiększ <xref:System.Net.ServicePointManager.DefaultConnectionLimit%2A> ustawienie.<br /><br /> Zobacz [http://support.microsoft.com/?id=821268](http://go.microsoft.com/fwlink/?LinkID=179656) na modyfikowanie ustawień wydajności usługi sieci Web.|  
+|<xref:System.Net.WebExceptionStatus.MessageLengthLimitExceeded>|Wartość (<xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>) w komunikacie Przekroczono długość.|Zwiększ wartość <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A> właściwości.|  
+|<xref:System.Net.WebExceptionStatus.ProxyNameResolutionFailure>|Usługi nazw domen nie można rozpoznać nazwy hosta serwera proxy.|Skonfigurowanie ustawień serwera proxy. Zobacz [http://support.microsoft.com/?id=318140](http://go.microsoft.com/fwlink/?LinkID=179655).<br /><br /> Wymuś <xref:System.Net.HttpWebRequest> do użycia żadnego serwera proxy przez ustawienie <xref:System.Net.HttpWebRequest.Proxy%2A> właściwości `null`.|  
+|<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|Odpowiedź z serwera nie jest prawidłowa odpowiedź HTTP. Ten problem występuje, gdy programu .NET Framework wykryje, że odpowiedź serwera nie jest zgodne z protokołu HTTP 1.1 RFC. Ten problem może wystąpić, gdy odpowiedź zawiera niepoprawne nagłówków lub nieprawidłowy nagłówek ograniczników. RFC 2616 definiuje protokołu HTTP 1.1 i prawidłowy format odpowiedzi z serwera. Aby uzyskać więcej informacji, zobacz [http://www.ietf.org](http://go.microsoft.com/fwlink/?LinkID=147388).|Pobierz śledzenia sieci transakcji i sprawdź, czy nagłówków odpowiedzi.<br /><br /> Jeśli aplikacja wymaga odpowiedzi serwera bez analizy (może to być problem z zabezpieczeniami), zestaw `useUnsafeHeaderParsing` do `true` w pliku konfiguracji. Zobacz [ \<httpWebRequest > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md).|  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Net.HttpWebRequest>  
+ <xref:System.Net.HttpWebResponse>  
+ <xref:System.Net.Dns>

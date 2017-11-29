@@ -1,0 +1,96 @@
+---
+title: "&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
+helpviewer_keywords:
+- remove element for <listeners> for <source>
+- <remove> element for <listeners> for <source>
+ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
+caps.latest.revision: "6"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 6170c02296859d9c47e5288f287a4371d7cb0c56
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="ltremovegt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Usuń&gt; elementu &lt;odbiorników&gt; dla &lt;źródła&gt;
+Usuwa odbiornik z `Listeners` kolekcji źródła śledzenia.  
+  
+ \<Konfiguracja >  
+\<System.Diagnostics >  
+\<źródeł >  
+\<źródło >  
+\<obiekty nasłuchujące >  
+\<Usuń >  
+  
+## <a name="syntax"></a>Składnia  
+  
+```xml  
+<remove name="listenerName" />  
+```  
+  
+## <a name="attributes-and-elements"></a>Atrybuty i elementy  
+ W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.  
+  
+### <a name="attributes"></a>Atrybuty  
+  
+|Atrybut|Opis|  
+|---------------|-----------------|  
+|`name`|Atrybut wymagany.<br /><br /> Nazwa odbiornika do usunięcia z `Listeners` kolekcji.|  
+  
+### <a name="child-elements"></a>Elementy podrzędne  
+ Brak.  
+  
+### <a name="parent-elements"></a>Elementy nadrzędne  
+  
+|Element|Opis|  
+|-------------|-----------------|  
+|`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
+|`system.diagnostics`|Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.|  
+|`sources`|Zawiera źródła śledzenia, które inicjują śledzenia wiadomości.|  
+|`source`|Określa źródło śledzenia, który inicjuje śledzenia wiadomości.|  
+|`listeners`|Określa nasłuchujących zbierania, przechowywania i kierowania wiadomości.|  
+  
+## <a name="remarks"></a>Uwagi  
+ `<remove>` Element usuwa określony odbiornik z `Listeners` kolekcji źródła śledzenia.  
+  
+ Można usunąć elementu z `Listeners` kolekcji źródła śledzenia programowo przez wywołanie metody <xref:System.Diagnostics.TraceListenerCollection.Remove%2A> metoda <xref:System.Diagnostics.TraceSource.Listeners%2A> właściwość <xref:System.Diagnostics.TraceSource> wystąpienia.  
+  
+ Ten element może być użyty w pliku konfiguracji komputera (Machine.config) i pliku konfiguracji aplikacji.  
+  
+## <a name="example"></a>Przykład  
+ Poniższy przykład przedstawia użycie `<remove>` element, aby można było używać `<add>` elementu do dodania odbiornika `console` do `Listeners` kolekcji źródła śledzenia `TraceSourceApp`.  
+  
+```xml  
+<configuration>  
+  <system.diagnostics>  
+    <sources>  
+      <source name="TraceSourceApp" switchName="sourceSwitch"   
+         switchType="System.Diagnostics.SourceSwitch" >  
+         <listeners>  
+           <remove name="Default"/>  
+           <add name="console"   
+             type="System.Diagnostics.ConsoleTraceListener" />  
+         </listeners>  
+      </source>  
+    </sources>  
+  </system.diagnostics>  
+</configuration>   
+```  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Diagnostics.TraceSource.Listeners%2A>  
+ <xref:System.Diagnostics.TraceSource>  
+ [Schemat ustawień debugowania i śledzenia](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
+ [\<Wyczyść >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)  
+ [Obiekty nasłuchujące śledzenia](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

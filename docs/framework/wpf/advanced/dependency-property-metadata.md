@@ -1,0 +1,110 @@
+---
+title: "Metadane zależności właściwości"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- APIs [WPF], metadata
+- dependency properties [WPF], metadata
+- metadata [WPF], for dependency properties
+- overriding metadata [WPF]
+ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
+caps.latest.revision: "24"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="dependency-property-metadata"></a>Metadane zależności właściwości
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Właściwości systemu obejmuje metadanych systemu, które wykraczają poza, które mogą być zgłoszony dotyczące właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można również przypisać unikatowo przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodana do innej klasy i może zostać przesłonięta w szczególności wszystkie klasy pochodne, które dziedziczą Właściwości zależności od definiującego klasy podstawowej.  
+  
+ 
+  
+<a name="prerequisites"></a>   
+## <a name="prerequisites"></a>Wymagania wstępne  
+ W tym temacie założono zrozumieć właściwości zależności z punktu widzenia użytkownika istniejących właściwości zależności na [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] klas i przeczytanie [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md). Aby można było wykonać przykłady w tym temacie, należy również zapoznać się [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i wiedzieć, jak napisać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+  
+<a name="dp_metadata_contents"></a>   
+## <a name="how-dependency-property-metadata-is-used"></a>Sposób użycia metadanych właściwości zależności  
+ Metadane właściwości zależności istnieje jako obiekt, który można wykonać zapytania do sprawdzenia właściwości właściwości zależności. Te metadane są dostępne często przez system właściwości podczas przetwarzania żadnych danej właściwości zależności. Obiekt metadanych dla właściwości zależności może zawierać następujące informacje:  
+  
+-   Wartość domyślna dla właściwości zależności, jeśli żadna inna wartość można określić dla właściwości zależności według wartości lokalnej, style, dziedziczenia, itp. Omówienie dokładnego jak domyślne wartości uczestniczyć w pierwszeństwo używaną przez system właściwości podczas przypisywania wartości dla właściwości zależności, zobacz [pierwszeństwo wartość właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md).  
+  
+-   Odwołania do implementacje wywołania zwrotnego, które mają wpływ na zachowania koercja lub zmiany powiadomienia na podstawie ciągu właściciel type. Należy pamiętać, że tych wywołań zwrotnych często są zdefiniowane z poziomu dostępu niepubliczne, uzyskiwanie rzeczywiste odwołań z metadanych zwykle nie jest możliwe odwołania nie znajdują się w ramach zakresu dozwolonych dostępu. Aby uzyskać więcej informacji na wartość właściwości zależności, zobacz [wywołania zwrotne właściwości zależności i sprawdzania poprawności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md).  
+  
+-   Jeśli w danej właściwości zależności jest traktowany jako właściwość poziomie struktury WPF, metadane mogą zawierać WPF zależności poziomie struktury właściwość właściwości, które raportuje informacje i stan usług, takich jak poziomie struktury WPF Układ aparatu, a właściwość logika dziedziczenia. Aby uzyskać więcej informacji na ten aspekt metadanych właściwości zależności, zobacz [metadanych właściwości Framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md).  
+  
+<a name="APIs"></a>   
+## <a name="metadata-apis"></a>Interfejsy API metadanych  
+ Typ, który zgłasza większość informacji metadanych używane przez system właściwości jest <xref:System.Windows.PropertyMetadata> klasy. Metadane wystąpień opcjonalnie są określane podczas właściwości zależności są rejestrowane w systemie właściwości i mogą być ponownie określone dla dodatkowe typy, które Dodawanie siebie jako właściciele lub zastępowanie metadanych, które dziedziczą z zależność klasy podstawowej Definicja właściwości. (W przypadku których rejestracji właściwość nie określa metadanych, domyślny <xref:System.Windows.PropertyMetadata> jest tworzony z wartościami domyślnymi dla tej klasy.) Zarejestrowany metadanych jest zwracana jako <xref:System.Windows.PropertyMetadata> podczas wywoływania różnych <xref:System.Windows.DependencyProperty.GetMetadata%2A> przeciążeń, które pobierać metadane z właściwości zależności na <xref:System.Windows.DependencyObject> wystąpienia.  
+  
+ <xref:System.Windows.PropertyMetadata> Klasy jest następnie pochodną do udostępnienia metadanych bardziej specyficzne dla architektury podziałów, takich jak klasy poziomie struktury WPF. <xref:System.Windows.UIPropertyMetadata>dodaje raportowania animacji i <xref:System.Windows.FrameworkPropertyMetadata> zawiera właściwości poziomie struktury WPF wymienionych w poprzedniej sekcji. W przypadku właściwości zależności są zarejestrowane, może być zarejestrowany z tych <xref:System.Windows.PropertyMetadata> klas pochodnych. Gdy metadanych się zbadana, podstawowym <xref:System.Windows.PropertyMetadata> typu potencjalnie mogą być rzutowane na klasy pochodnej, dzięki czemu można przejrzeć bardziej szczegółowe właściwości.  
+  
+> [!NOTE]
+>  Właściwości właściwości, które można określić w <xref:System.Windows.FrameworkPropertyMetadata> są czasami określane w tej dokumentacji jako "flag". Podczas tworzenia nowych wystąpień metadanych do użycia w zależności właściwości rejestracji lub zastępuje metadane, określ te wartości przy użyciu wyliczania flagwise <xref:System.Windows.FrameworkPropertyMetadataOptions> , a następnie podaj prawdopodobnie połączonych wartości wyliczenia do <xref:System.Windows.FrameworkPropertyMetadata> konstruktora. Jednak po utworzone, te właściwości opcji są widoczne w <xref:System.Windows.FrameworkPropertyMetadata> jako szereg właściwości logicznych zamiast tworzenia wartości wyliczenia. Operatory logiczne pozwalają sprawdzić każdego warunkowego, a nie konieczności dotyczą maski wartość wyliczenia flagwise, aby uzyskać informacje myślisz. Konstruktor korzysta z połączonych <xref:System.Windows.FrameworkPropertyMetadataOptions> aby zapewnić długość podpisu konstruktora uzasadnione, podczas gdy rzeczywisty metadanych skonstruowane przedstawia odrębny właściwości, aby zapytanie dotyczące metadanych bardziej intuicyjne.  
+  
+<a name="override_or_subclass"></a>   
+## <a name="when-to-override-metadata-when-to-derive-a-class"></a>Gdy na zastępowanie metadanych, gdy wyprowadzenia klasy  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Właściwości systemu przejęło możliwości zmiany niektórych właściwości właściwości zależności bez konieczności ich być całkowicie ponownie wdrożony. Jest to osiągane przez konstruowania inne wystąpienie metadanych właściwości dla właściwości zależności, które znajdują się na określony typ. Należy pamiętać, że najbardziej istniejącej właściwości zależności nie są właściwościami wirtualny tak mówiąc ściślej "ponownie"ich wdrożenie na klasy dziedziczone można wykonywać tylko przez przesłanianie istniejącego elementu członkowskiego.  
+  
+ Jeśli scenariusz chcesz włączyć dla właściwości zależności dla typu nie może być realizowane przez zmodyfikowanie właściwości istniejącej właściwości zależności, może następnie być niezbędne do tworzenia klasy pochodnej, a następnie, aby zadeklarować właściwość zależności niestandardowych w klasie pochodnej. Właściwości niestandardowe zależności działa tak samo właściwości zależności zdefiniowanych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Aby uzyskać więcej informacji o właściwościach niestandardowych zależności, zobacz [niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+ Pojedynczy parametr zauważalne właściwości zależności, która nie może zastąpić jest jej typ wartości. Jeśli są dziedziczenie właściwości zależności, która ma przybliżonej zachowanie wymagane, ale wymaga innego typu dla niego, należy zaimplementować właściwości niestandardowe zależności i może połączyć za pomocą konwersji typu lub inne właściwości Implementacja na klasę niestandardową. Ponadto nie można zamienić istniejącego <xref:System.Windows.ValidateValueCallback>, ponieważ to wywołanie zwrotne istnieje samo pole rejestracji, a nie w metadanych.  
+  
+<a name="scenarios"></a>   
+## <a name="scenarios-for-changing-existing-metadata"></a>Scenariusze dotyczące zmiana istniejących metadanych  
+ Jeśli pracujesz z metadanymi istniejącej właściwości zależności, co typowy scenariusz zmiany metadanych właściwości zależności jest zmienić domyślną wartość. Zmiana lub dodanie właściwości wywołania zwrotne — system jest bardziej zaawansowanym scenariuszu. Można to zrobić, jeśli implementacji klasy pochodnej ma inną współzależności między właściwości zależności. Jeden z warunków o modelu programowania, który obsługuje zarówno kod i deklaratywne użycia jest właściwości należy włączyć, ustawiany w dowolnej kolejności. W związku z tym wszystkie zależne właściwości należy ustawić just-in-time bez kontekstu i nie zależą od tego, wiedząc, że kolejność ustawienia takie jak może można znaleźć w konstruktorze. Aby uzyskać więcej informacji na ten aspekt właściwości systemu, zobacz [wywołania zwrotne właściwości zależności i sprawdzania poprawności](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md). Należy pamiętać, że wywołania zwrotne walidacji nie są częścią metadanych; są one częścią identyfikatora właściwości zależności. W związku z tym wywołania zwrotne walidacji nie może zostać zmienione przez zastępowanie metadanych.  
+  
+ W niektórych przypadkach można również zmienić opcje WPF właściwość framework poziom metadanych na istniejącej właściwości zależności. Te opcje komunikowania się niektórych warunków znane informacje o właściwościach poziomie struktury WPF do innych procesów poziomie struktury WPF, takich jak system układu.  Ustawianie opcji zwykle odbywa się tylko wtedy, gdy rejestrowanie nowych właściwości zależności, ale jest również można zmienić metadanych właściwości poziomie struktury WPF jako część <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> lub <xref:System.Windows.DependencyProperty.AddOwner%2A> wywołania. Określone wartości do użycia i uzyskać więcej informacji, zobacz [metadanych właściwości Framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md). Aby uzyskać więcej informacji dotyczących konfiguracji tych opcji dla właściwości zależności nowo zarejestrowanych, zobacz [właściwości zależności niestandardowe](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md).  
+  
+<a name="dp_override_metadata"></a>   
+### <a name="overriding-metadata"></a>Zastępowanie metadanych  
+ Zastępowanie metadanych służy głównie tak, aby mieć możliwość zmiany różne zachowania pochodnych metadanych, które są stosowane do właściwości zależności, ponieważ istnieje w typie. To omówiono bardziej szczegółowo w [metadanych](#dp_metadata_contents) sekcji. Aby uzyskać więcej informacji, w tym przykłady kodu, zobacz [zastąpienia metadane dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md).  
+  
+ Metadane właściwości mogą być dostarczane dla właściwości zależności podczas rejestracji połączenia (<xref:System.Windows.DependencyProperty.Register%2A>). Jednak w wielu przypadkach można udzielać metadanych określonego typu dla klasy dziedziczy właściwości zależności. Można to zrobić przez wywołanie metody <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> metody.  Na przykład z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], <xref:System.Windows.FrameworkElement> klasy jest typem, który najpierw rejestruje <xref:System.Windows.UIElement.Focusable%2A> właściwości zależności. Ale <xref:System.Windows.Controls.Control> klasy zastępuje metadane dla właściwości zależności zapewnić własnej wartości początkowej domyślne, zmieniając go z `false` do `true`, a w przeciwnym razie ponownie używa oryginalnej <xref:System.Windows.UIElement.Focusable%2A> implementacji.  
+  
+ Aby zastąpić metadanych, właściwości metadanych są scalane lub wymiany.  
+  
+-   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>scalania. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
+  
+-   Właściwość rzeczywiste zachowanie systemowe dla <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> jest zachowywana i dodawane do tabeli, z kolejność wykonywania przez system właściwości, że wywołania zwrotne najdalszych pochodnych klas są wywoływane najpierw implementacje wszystkich właścicieli metadanych w hierarchii.  
+  
+-   <xref:System.Windows.PropertyMetadata.DefaultValue%2A>zostanie zastąpiony. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.DefaultValue%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.DefaultValue%2A> pochodzi z najbliższym elemencie nadrzędnym on określony w metadanych.  
+  
+-   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>implementacje zostaną zastąpione. Po dodaniu nowego <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>, wywołanie zwrotne jest przechowywany w metadanych. Jeśli nie określisz <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> w zastąpienie wartości <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> jest podwyższany jako odwołanie z najbliższym elemencie nadrzędnym on określony w metadanych.  
+  
+-   Zachowanie systemu właściwość jest tylko <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> w bezpośrednim metadanych jest wywoływany. Nie odwołania do innych <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> implementacji w hierarchii są zachowywane.  
+  
+ To zachowanie jest implementowany przez <xref:System.Windows.PropertyMetadata.Merge%2A>i może zostać zastąpiona w klasach pochodnych metadanych.  
+  
+#### <a name="overriding-attached-property-metadata"></a>Zastępowanie metadanych dołączona właściwość  
+ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], dołączone właściwości są zaimplementowane jako właściwości zależności. Oznacza to również mają metadanych właściwości, można zastąpić, które poszczególne klasy. Określania zakresu zagadnienia dotyczące dołączona właściwość w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] są zazwyczaj który <xref:System.Windows.DependencyObject> może mieć właściwości dołączonej ustawiony na nich. W związku z tym wszelkie <xref:System.Windows.DependencyObject> klasy pochodnej można zmienić metadanych dla dowolnego dołączona właściwość, jak może być ustawiony na wystąpienie klasy. Można zastąpić wartości domyślne, wywołania zwrotne lub właściwości raportowania cech poziomie struktury WPF. Jeśli dołączona właściwość jest ustawiona na wystąpienie klasy, te zastąpienia metadanych właściwości, które obowiązują. Na przykład można zastąpić, wartością domyślną tak, aby wartość zastąpienia został zgłoszony jako wartość właściwości dołączonych na wystąpień klasy, zawsze, gdy właściwość nie jest w przeciwnym razie ustawiona.  
+  
+> [!NOTE]
+>  <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A> Właściwość nie jest ważna w przypadku dołączonych właściwości.  
+  
+<a name="dp_add_owner"></a>   
+### <a name="adding-a-class-as-an-owner-of-an-existing-dependency-property"></a>Dodawanie klasy jako właściciela istniejącej właściwości zależności  
+ Klasę można dodać się jako właściciela właściwości zależności, który został już zarejestrowany, za pomocą <xref:System.Windows.DependencyProperty.AddOwner%2A> metody. Dzięki temu klasę, aby użyć właściwości zależności, który pierwotnie został zarejestrowany dla innego typu. Dodawanie klasy nie jest zwykle klasy pochodnej typu, który najpierw zarejestrowany jako właściciela tej właściwości zależności. Efektywnie umożliwia klasy i jej klas pochodnych "dziedziczy" implementacja właściwości zależności, bez oryginalnej klasy właściciela i dodawanie klasy w tej samej hierarchii klas wartość true. Dodanie, dodawanie klasy (i wszystkich klas pochodnych również) można dostarczać metadanych specyficznych dla typu dla oryginalnego właściwości zależności.  
+  
+ A także dodawanie się jako właściciela za pośrednictwem metody narzędziowe właściwości systemu, dodawanie klasy powinny deklarować dodatkowe publiczne elementy członkowskie od siebie samego Aby ustawić właściwości zależności] pełnego uczestnika właściwości systemowi narażenia na kodzie i znaczników . Klasa, która dodaje istniejącej właściwości zależności ma tego samego obowiązki jak udostępnianie model obiektów dla danej właściwości zależności, tak jak w przypadku klasy definiującej nowej właściwości niestandardowej zależności. Najpierw taki element członkowski do udostępnienia jest pole identyfikatora właściwości zależności. To pole może mieć `public static readonly` pola typu <xref:System.Windows.DependencyProperty>, który jest przypisany do zwracanej wartości <xref:System.Windows.DependencyProperty.AddOwner%2A> wywołania. Drugi element członkowski, aby zdefiniować jest [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości "otoki". Otoka wygodniej znacznie do manipulowania z właściwości zależności w kodzie (uniknąć wywołań <xref:System.Windows.DependencyObject.SetValue%2A> każdego czasu i może wykonać tego wywołanie tylko raz w otoki, sam). Otoka zaimplementowano tak samo jak mogą być realizowane były rejestracji właściwości niestandardowe zależności. Aby uzyskać więcej informacji o implementacji właściwości zależności, zobacz [właściwości zależności niestandardowe](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) i [Dodaj typ właściciela dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md).  
+  
+#### <a name="addowner-and-attached-properties"></a>AddOwner i dołączone właściwości  
+ Możesz wywołać <xref:System.Windows.DependencyProperty.AddOwner%2A> dla właściwości zależności, który jest zdefiniowany jako dołączona właściwość przez klasę właściciela. Ogólnie rzecz biorąc Przyczyna w ten sposób jest ujawnia wcześniej dołączona właściwość jako właściwość zależności nie jest dołączony. Następnie uwidoczni <xref:System.Windows.DependencyProperty.AddOwner%2A> zwrócić wartość jako `public static readonly` pola do użycia jako identyfikatora właściwości zależności oraz zostaną zdefiniowane właściwości "otoki", dzięki czemu właściwość pojawia się w tabeli elementów członkowskich i obsługuje niedołączonych właściwości Użycie w klasie.  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Windows.PropertyMetadata>  
+ <xref:System.Windows.DependencyObject>  
+ <xref:System.Windows.DependencyProperty>  
+ <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
+ [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
+ [Metadane właściwości Framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)

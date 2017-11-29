@@ -1,0 +1,77 @@
+---
+title: "CreateAssemblyEnum — Funkcja"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: CreateAssemblyEnum
+api_location:
+- fusion.dll
+- clr.dll
+- mscorwks.dll
+api_type: DLLExport
+f1_keywords: CreateAssemblyEnum
+helpviewer_keywords: CreateAssemblyEnum function [.NET Framework fusion]
+ms.assetid: 3506df38-6cea-42f6-946e-4287863bcfb3
+topic_type: apiref
+caps.latest.revision: "11"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: c229496a79b146b5dcac3d06fa3efd9237e39d3a
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="createassemblyenum-function"></a>CreateAssemblyEnum — Funkcja
+Pobiera wskaźnik do [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) wystąpienie, które można wyliczyć obiektów w zestawie z określonym [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md).  
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+HRESULT CreateAssemblyEnum (  
+    [out] IAssemblyEnum  **pEnum,  
+    [in]  IUnknown       *pUnkReserved,  
+    [in]  IAssemblyName  *pName,  
+    [in]  DWORD          dwFlags,  
+    [in]  LPVOID         pvReserved  
+ );  
+```  
+  
+#### <a name="parameters"></a>Parametry  
+ `pEnum`  
+ [out] Wskaźnik do lokalizacji w pamięci, który zawiera żądanie `IAssemblyEnum` wskaźnika.  
+  
+ `pUnkReserved`  
+ [in] Zarezerwowane dla przyszłego rozszerzalności. `pUnkReserved`musi być odwołanie o wartości null.  
+  
+ `pName`  
+ [in] `IAssemblyName` Żądanego zestawu. Ta nazwa jest używana do filtrowania wyliczenia. Może być null wyliczyć wszystkich zestawów w globalnej pamięci podręcznej zestawów.  
+  
+ `dwFlags`  
+ [in] Flagi do modyfikowania zachowania modułu wyliczającego. Ten parametr zawiera dokładnie jeden bit z [asm_cache_flags —](../../../../docs/framework/unmanaged-api/fusion/asm-cache-flags-enumeration.md) wyliczenia.  
+  
+ `pvReserved`  
+ [in] Zarezerwowane dla przyszłego rozszerzalności. `pvReserved`musi być odwołanie o wartości null.  
+  
+## <a name="remarks"></a>Uwagi  
+ `dwFlags` Parametr zawiera dokładnie jeden bit z `ASM_CACHE_FLAGS` wyliczenia.  
+  
+## <a name="requirements"></a>Wymagania  
+ **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Nagłówek:** Fusion.h  
+  
+ **Biblioteka:** uwzględnione jako zasób w MsCorEE.dll  
+  
+ **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+  
+## <a name="see-also"></a>Zobacz też  
+ [IAssemblyEnum — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)  
+ [IAssemblyName — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
+ [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

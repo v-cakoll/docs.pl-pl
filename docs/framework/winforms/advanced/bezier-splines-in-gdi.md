@@ -1,0 +1,56 @@
+---
+title: "Poniż &#233; zier krzywe w GDI +"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- Bezier splines
+- splines [Windows Forms], Bezier
+- GDI+, Bezier splines
+ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 52cead578ad03052b5734c5b7a5b5a897dd48732
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="b233zier-splines-in-gdi"></a>Poniż &#233; zier krzywe w GDI +
+Krzywej Beziera jest określony przez cztery punkty krzywej: dwa punkty końcowe (p1 i p2) i punkty kontrolne dwóch (c1 i c2). Krzywej zaczyna się od p1 i kończy się na p2. Krzywej nie przechodzi przez punkty kontrolne, ale punktów kontrolnych pełnienie pól, ściąganie krzywej w niektórych kierunkach i mające wpływ na sposób załamania krzywej. Na poniższej ilustracji przedstawiono krzywej Beziera, wraz z jego punktów końcowych i punkty kontrolne.  
+  
+ ![Krzywe Beziera](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art11a.gif "Aboutgdip02_art11a")  
+  
+ Krzywej rozpoczyna się od p1 i przenosi kierunku c1 punktu kontroli. Stycznej wiersz na krzywą na p1 jest rysowane z p1 c1 wiersza. Stycznej wiersza na p2 punktu końcowego jest rysowane z c2 p2 wiersza.  
+  
+## <a name="drawing-bzier-splines"></a>Rysowanie krzywych Beziera  
+ Rysowanie krzywej Beziera, potrzebujesz wystąpienia <xref:System.Drawing.Graphics> klasy i <xref:System.Drawing.Pen>. Wystąpienie <xref:System.Drawing.Graphics> klasa udostępnia <xref:System.Drawing.Graphics.DrawBezier%2A> metody i <xref:System.Drawing.Pen> przechowuje atrybuty, takie jak szerokości i koloru linii służącej do renderowania krzywej. <xref:System.Drawing.Pen> Jest przekazywany jako jeden z argumentów <xref:System.Drawing.Graphics.DrawBezier%2A> metody. Pozostałe argumenty przekazane do <xref:System.Drawing.Graphics.DrawBezier%2A> metody są punkty końcowe i punkty kontrolne. Poniższy przykład rysuje krzywej Beziera, z punkt (0, 0), początkowy kontroli punktów (40, 20) i (80, 150) i końcowe (100, 10):  
+  
+ [!code-csharp[LinesCurvesAndShapes#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#71)]
+ [!code-vb[LinesCurvesAndShapes#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#71)]  
+  
+ Na poniższej ilustracji przedstawiono krzywej, punkty kontrolne i dwa wiersze stycznej.  
+  
+ ![Krzywe Beziera](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art12.gif "Aboutgdip02_art12")  
+  
+ Krzywe Beziera pierwotnie zostały opracowane przez Beziera Pierre dla projektu w branży motoryzacyjnych. Ponieważ okazały się użyteczne w wielu rodzajów CAD, a także są używane do definiowania konturów czcionki. Krzywe Beziera umożliwia uzyskanie szerokiej gamy kształtów, niektóre z nich są wyświetlane na poniższej ilustracji.  
+  
+ ![Ścieżki](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
+ <xref:System.Drawing.Pen?displayProperty=nameWithType>  
+ [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
+ [Konstruowanie i rysowanie krzywych](../../../../docs/framework/winforms/advanced/constructing-and-drawing-curves.md)  
+ [Porady: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Porady: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)

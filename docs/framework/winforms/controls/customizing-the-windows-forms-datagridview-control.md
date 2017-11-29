@@ -1,0 +1,68 @@
+---
+title: Dostosowywanie formantu DataGridView formularzy systemu Windows
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data grids [Windows Forms], customization
+- DataGridView control [Windows Forms], customization
+ms.assetid: 01ea5d4c-a736-4596-b0e9-a67a1b86e15f
+caps.latest.revision: "12"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7d1246a8052af19057f7aa9d6729e34203177f8e
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="customizing-the-windows-forms-datagridview-control"></a>Dostosowywanie formantu DataGridView formularzy systemu Windows
+`DataGridView` Kontrola zapewnia kilka właściwości, które można dostosować wygląd i zachowanie podstawowe (wyglądu i działania), jego komórek, wierszy i kolumn. Jeśli masz specjalnymi potrzebami, które wykraczają poza możliwości <xref:System.Windows.Forms.DataGridViewCellStyle> klasy, jednak można zaimplementować rysowanie formantu przez właściciela lub rozszerzyć jej możliwości, tworząc niestandardowe komórek, kolumn i wierszy.  
+  
+ Namalować komórek i wierszy samodzielnie, może obsługiwać różne `DataGridView` zdarzenia rysowania. Aby zmodyfikować istniejące funkcje lub udostępnia nowych funkcji, można utworzyć własne typy pochodzące z istniejącego `DataGridViewCell`, `DataGridViewColumn`, i `DataGridViewRow` typów. Można też podać nowe możliwości edytowania przez tworzenie typów pochodnych zawierających formantu użytkownika wybrać, gdy komórka jest w trybie edycji.  
+  
+## <a name="in-this-section"></a>W tej sekcji  
+ [Porady: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+ Opisuje sposób obsługi <xref:System.Windows.Forms.DataGridView.CellPainting> zdarzeń w celu rysowania komórek ręcznie.  
+  
+ [Porady: Dostosowywanie wyglądu wierszy w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+ Opisuje sposób obsługi <xref:System.Windows.Forms.DataGridView.RowPrePaint> i <xref:System.Windows.Forms.DataGridView.RowPostPaint> zdarzeń w celu rysowania wiersze z niestandardowych, gradientu tła i zawartością, która obejmuje wielu kolumn.  
+  
+ [Porady: dostosowywanie komórek i kolumn w oknach formantu DataGridView formularzy przez rozszerzanie ich zachowania i wyglądu](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)  
+ Opisuje sposób tworzenia niestandardowych typów pochodnych `DataGridViewCell` i `DataGridViewColumn` aby wyróżnić komórki, gdy wskaźnik myszy znajduje się na nich.  
+  
+ [Porady: wyłączanie przycisków w kolumnie przycisków w oknach formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/disable-buttons-in-a-button-column-in-the-datagrid.md)  
+ Opisuje sposób tworzenia niestandardowych typów pochodnych <xref:System.Windows.Forms.DataGridViewButtonCell> i <xref:System.Windows.Forms.DataGridViewButtonColumn> w celu wyświetlenia wyłączone przycisków w kolumnie przycisków.  
+  
+ [Porady: formanty hosta w formularzach systemu Windows komórek DataGridView](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)  
+ Opisuje sposób wdrożenia `IDataGridViewEditingControl` interfejsu i tworzyć niestandardowych typów pochodnych `DataGridViewCell` i `DataGridViewColumn` w celu wyświetlenia <xref:System.Windows.Forms.DateTimePicker> kontroli, gdy komórka jest w trybie edycji.  
+  
+## <a name="reference"></a>Tematy pomocy  
+ <xref:System.Windows.Forms.DataGridView>  
+ Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.  
+  
+ <xref:System.Windows.Forms.DataGridViewCell>  
+ Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewCell> klasy.  
+  
+ <xref:System.Windows.Forms.DataGridViewRow>  
+ Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewRow> klasy.  
+  
+ <xref:System.Windows.Forms.DataGridViewColumn>  
+ Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumn> klasy.  
+  
+ <xref:System.Windows.Forms.IDataGridViewEditingControl>  
+ Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.IDataGridViewEditingControl> interfejsu.  
+  
+## <a name="related-sections"></a>Sekcje pokrewne  
+ [Podstawowe formatowanie i style w oknach formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ Udostępnia tematach opisano sposób modyfikowania podstawowe wygląd formantu i formatowania wyświetlania danych komórki.  
+  
+## <a name="see-also"></a>Zobacz też  
+ [DataGridView — formant](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Typy kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

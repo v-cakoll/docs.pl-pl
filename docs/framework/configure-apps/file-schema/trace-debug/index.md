@@ -1,0 +1,64 @@
+---
+title: "Schemat ustawień śledzenia i debugowania"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracing [.NET Framework], trace and debug settings schema
+- configuration schema [.NET Framework], trace and debug settings
+- configuration settings [.NET Framework], tracing
+- schema configuration settings
+- configuration settings [.NET Framework], debugging
+- trace listeners, trace and debug settings schema
+- configuration sections [.NET Framework]
+- elements [.NET Framework], trace and debug settings
+ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
+caps.latest.revision: "14"
+author: mcleblanc
+ms.author: markl
+manager: markl
+ms.openlocfilehash: 97c96fbb1abf969d902159709ca0e738f475fab9
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="trace-and-debug-settings-schema"></a><span data-ttu-id="2fa07-102">Schemat ustawień śledzenia i debugowania</span><span class="sxs-lookup"><span data-stu-id="2fa07-102">Trace and Debug Settings Schema</span></span>
+<span data-ttu-id="2fa07-103">Ustawienia śledzenia i debugowania Określ obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-103">Trace and debug settings specify trace listeners that collect, store, and route messages, and the level where a trace switch is set.</span></span>  
+  
+ <span data-ttu-id="2fa07-104">W poniższej tabeli opisano funkcję każdy element Ustawienia śledzenia i debugowania.</span><span class="sxs-lookup"><span data-stu-id="2fa07-104">The following table describes the function of each trace and debug settings element.</span></span>  
+  
+|<span data-ttu-id="2fa07-105">Element</span><span class="sxs-lookup"><span data-stu-id="2fa07-105">Element</span></span>|<span data-ttu-id="2fa07-106">Opis</span><span class="sxs-lookup"><span data-stu-id="2fa07-106">Description</span></span>|  
+|-------------|-----------------|  
+|[<span data-ttu-id="2fa07-107">\<Dodaj ></span><span class="sxs-lookup"><span data-stu-id="2fa07-107">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|<span data-ttu-id="2fa07-108">Dodaje odbiornika do `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-108">Adds a listener to the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="2fa07-109">\<Dodaj ></span><span class="sxs-lookup"><span data-stu-id="2fa07-109">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|<span data-ttu-id="2fa07-110">Dodaje odbiornika do `Listeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="2fa07-110">Adds a listener to the `Listeners` collection.</span></span>|  
+|[<span data-ttu-id="2fa07-111">\<Dodaj ></span><span class="sxs-lookup"><span data-stu-id="2fa07-111">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-sharedlisteners.md)|<span data-ttu-id="2fa07-112">Dodaje odbiornika do `sharedListeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="2fa07-112">Adds a listener to the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="2fa07-113">\<Dodaj ></span><span class="sxs-lookup"><span data-stu-id="2fa07-113">\<add></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-switches.md)|<span data-ttu-id="2fa07-114">Określa poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-114">Specifies the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="2fa07-115">\<Assert ></span><span class="sxs-lookup"><span data-stu-id="2fa07-115">\<assert></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/assert-element.md)|<span data-ttu-id="2fa07-116">Określa, czy wyświetlać okno komunikatu po wywołaniu <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> metody; określa także nazwę pliku do zapisania komunikatów.</span><span class="sxs-lookup"><span data-stu-id="2fa07-116">Specifies whether to display a message box when you call the <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> method; also specifies the name of the file to write messages to.</span></span>|  
+|[<span data-ttu-id="2fa07-117">\<Wyczyść ></span><span class="sxs-lookup"><span data-stu-id="2fa07-117">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-source.md)|<span data-ttu-id="2fa07-118">Czyści `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-118">Clears the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="2fa07-119">\<Wyczyść ></span><span class="sxs-lookup"><span data-stu-id="2fa07-119">\<clear></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/clear-element-for-listeners-for-trace.md)|<span data-ttu-id="2fa07-120">Czyści `Listeners` kolekcji do śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-120">Clears the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="2fa07-121">\<Filtr ></span><span class="sxs-lookup"><span data-stu-id="2fa07-121">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|<span data-ttu-id="2fa07-122">Dodaje filtr do odbiornika w `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-122">Adds a filter to a listener in the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="2fa07-123">\<Filtr ></span><span class="sxs-lookup"><span data-stu-id="2fa07-123">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-trace.md)|<span data-ttu-id="2fa07-124">Dodaje filtr do odbiornika w `Listeners` kolekcji do śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-124">Adds a filter to a listener in the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="2fa07-125">\<Filtr ></span><span class="sxs-lookup"><span data-stu-id="2fa07-125">\<filter></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|<span data-ttu-id="2fa07-126">Dodaje filtr do odbiornika w `sharedListeners` kolekcji.</span><span class="sxs-lookup"><span data-stu-id="2fa07-126">Adds a filter to a listener in the `sharedListeners` collection.</span></span>|  
+|[<span data-ttu-id="2fa07-127">\<obiekty nasłuchujące ></span><span class="sxs-lookup"><span data-stu-id="2fa07-127">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|<span data-ttu-id="2fa07-128">Określa odbiorników dla `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-128">Specifies listeners for the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="2fa07-129">\<obiekty nasłuchujące ></span><span class="sxs-lookup"><span data-stu-id="2fa07-129">\<listeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|<span data-ttu-id="2fa07-130">Określa odbiorników dla `Listeners` kolekcji do śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-130">Specifies listeners for the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="2fa07-131">\<liczniki wydajności ></span><span class="sxs-lookup"><span data-stu-id="2fa07-131">\<performanceCounters></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/performancecounters-element.md)|<span data-ttu-id="2fa07-132">Określa rozmiar pamięci globalnej współużytkowane przez liczniki wydajności.</span><span class="sxs-lookup"><span data-stu-id="2fa07-132">Specifies the size of the global memory shared by performance counters.</span></span>|  
+|[<span data-ttu-id="2fa07-133">\<Usuń ></span><span class="sxs-lookup"><span data-stu-id="2fa07-133">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-trace.md)|<span data-ttu-id="2fa07-134">Usuwa odbiornik z `Listeners` kolekcji do śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-134">Removes a listener from the `Listeners` collection for trace.</span></span>|  
+|[<span data-ttu-id="2fa07-135">\<Usuń ></span><span class="sxs-lookup"><span data-stu-id="2fa07-135">\<remove></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/remove-element-for-listeners-for-source.md)|<span data-ttu-id="2fa07-136">Usuwa odbiornik z `Listeners` kolekcji źródła śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-136">Removes a listener from the `Listeners` collection for a trace source.</span></span>|  
+|[<span data-ttu-id="2fa07-137">\<sharedListeners ></span><span class="sxs-lookup"><span data-stu-id="2fa07-137">\<sharedListeners></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)|<span data-ttu-id="2fa07-138">Zawiera nasłuchujących może odwoływać się wszystkie źródła lub element śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-138">Contains listeners that any source or trace element can reference.</span></span>|  
+|[<span data-ttu-id="2fa07-139">\<źródeł ></span><span class="sxs-lookup"><span data-stu-id="2fa07-139">\<sources></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sources-element.md)|<span data-ttu-id="2fa07-140">Zawiera źródła śledzenia, które inicjują śledzenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="2fa07-140">Contains trace sources that initiate tracing messages.</span></span>|  
+|[<span data-ttu-id="2fa07-141">\<źródło ></span><span class="sxs-lookup"><span data-stu-id="2fa07-141">\<source></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|<span data-ttu-id="2fa07-142">Określa źródło śledzenia, który inicjuje śledzenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="2fa07-142">Specifies a trace source that initiates tracing messages.</span></span>|  
+|[<span data-ttu-id="2fa07-143">\<przełączniki ></span><span class="sxs-lookup"><span data-stu-id="2fa07-143">\<switches></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/switches-element.md)|<span data-ttu-id="2fa07-144">Zawiera przełączniki śledzenia i poziom, gdzie są ustawione przełączniki śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-144">Contains trace switches and the level where the trace switches are set.</span></span>|  
+|[<span data-ttu-id="2fa07-145">\<System.Diagnostics ></span><span class="sxs-lookup"><span data-stu-id="2fa07-145">\<system.diagnostics></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/system-diagnostics-element.md)|<span data-ttu-id="2fa07-146">Określa obiektów nasłuchujących śledzenia zbierania, przechowywania i kierowania wiadomości i poziom, gdy jest ustawiona przełącznik śledzenia.</span><span class="sxs-lookup"><span data-stu-id="2fa07-146">Specifies trace listeners that collect, store, and route messages and the level where a trace switch is set.</span></span>|  
+|[<span data-ttu-id="2fa07-147">\<śledzenia ></span><span class="sxs-lookup"><span data-stu-id="2fa07-147">\<trace></span></span>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|<span data-ttu-id="2fa07-148">Zawiera nasłuchujących zbierania, przechowywania i trasy śledzenia wiadomości.</span><span class="sxs-lookup"><span data-stu-id="2fa07-148">Contains listeners that collect, store, and route tracing messages.</span></span>|  
+  
+## <a name="see-also"></a><span data-ttu-id="2fa07-149">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2fa07-149">See Also</span></span>  
+ <xref:System.Diagnostics.Trace>  
+ <xref:System.Diagnostics.TraceSource>  
+ <xref:System.Diagnostics.Debug>  
+ [<span data-ttu-id="2fa07-150">Schemat pliku konfiguracji</span><span class="sxs-lookup"><span data-stu-id="2fa07-150">Configuration File Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/index.md)

@@ -1,0 +1,1 @@
+<span data-ttu-id="d7fe5-101">identyfikatory (ID)</span><span class="sxs-lookup"><span data-stu-id="d7fe5-101">identifiers (IDs)</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="18924-101">System operacyjny Windows 7</span><span class="sxs-lookup"><span data-stu-id="18924-101">Windows°7 operating system</span></span>

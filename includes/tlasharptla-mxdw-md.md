@@ -1,0 +1,1 @@
+<span data-ttu-id="10514-101">Moduł zapisywania dokumentów XPS firmy Microsoft</span><span class="sxs-lookup"><span data-stu-id="10514-101">Microsoft XPS Document Writer</span></span>

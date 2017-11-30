@@ -1,0 +1,1 @@
+<span data-ttu-id="78c7f-101">Identyfikator URI</span><span class="sxs-lookup"><span data-stu-id="78c7f-101">URI</span></span>

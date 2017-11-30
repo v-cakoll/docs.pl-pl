@@ -1,0 +1,1 @@
+<span data-ttu-id="a8094-101">Model COM</span><span class="sxs-lookup"><span data-stu-id="a8094-101">COM</span></span>

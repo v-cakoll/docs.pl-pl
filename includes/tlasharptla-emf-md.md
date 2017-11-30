@@ -1,0 +1,1 @@
+<span data-ttu-id="5bd22-101">Rozszerzony metaplik (EMF)</span><span class="sxs-lookup"><span data-stu-id="5bd22-101">Enhanced Metafile (EMF)</span></span>

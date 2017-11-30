@@ -1,0 +1,1 @@
+<span data-ttu-id="89f67-101">Projektant WPF</span><span class="sxs-lookup"><span data-stu-id="89f67-101">WPF Designer</span></span>

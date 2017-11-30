@@ -1,0 +1,1 @@
+<span data-ttu-id="775ee-101">biblioteka dołączana dynamicznie (DLL)</span><span class="sxs-lookup"><span data-stu-id="775ee-101">dynamic-link library (DLL)</span></span>

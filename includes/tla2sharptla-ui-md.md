@@ -1,0 +1,1 @@
+<span data-ttu-id="9fb96-101">Interfejs użytkownika</span><span class="sxs-lookup"><span data-stu-id="9fb96-101">UI</span></span>

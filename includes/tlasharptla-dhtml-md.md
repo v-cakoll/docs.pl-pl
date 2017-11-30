@@ -1,0 +1,1 @@
+<span data-ttu-id="b343a-101">Dynamic HTML (DHTML)</span><span class="sxs-lookup"><span data-stu-id="b343a-101">Dynamic HTML (DHTML)</span></span>

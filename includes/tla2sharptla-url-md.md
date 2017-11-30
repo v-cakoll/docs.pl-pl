@@ -1,0 +1,1 @@
+<span data-ttu-id="419ae-101">Adres URL</span><span class="sxs-lookup"><span data-stu-id="419ae-101">URL</span></span>

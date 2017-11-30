@@ -1,0 +1,1 @@
+<span data-ttu-id="3a9b3-101">Zapytanie o języku zintegrowanym (LINQ)</span><span class="sxs-lookup"><span data-stu-id="3a9b3-101">Language-Integrated Query (LINQ)</span></span>

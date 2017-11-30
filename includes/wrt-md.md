@@ -1,0 +1,1 @@
+<span data-ttu-id="1dd2f-101">Środowisko wykonawcze systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1dd2f-101">Windows Runtime</span></span>

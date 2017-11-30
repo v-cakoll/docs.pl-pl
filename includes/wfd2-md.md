@@ -1,0 +1,1 @@
+<span data-ttu-id="fd234-101">Projektant przepływu pracy</span><span class="sxs-lookup"><span data-stu-id="fd234-101">Workflow Designer</span></span>

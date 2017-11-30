@@ -1,0 +1,1 @@
+<span data-ttu-id="101a3-101">technologia pomocnicza</span><span class="sxs-lookup"><span data-stu-id="101a3-101">assistive technology</span></span>

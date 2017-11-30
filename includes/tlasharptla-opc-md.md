@@ -1,0 +1,1 @@
+<span data-ttu-id="32c21-101">Otwarte konwencje pakietów (OPC)</span><span class="sxs-lookup"><span data-stu-id="32c21-101">Open Packaging Conventions (OPC)</span></span>

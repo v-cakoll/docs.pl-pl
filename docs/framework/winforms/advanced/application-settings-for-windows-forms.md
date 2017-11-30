@@ -1,0 +1,55 @@
+---
+title: Ustawienia aplikacji dla formularzy systemu Windows
+ms.custom: 
+ms.date: 04/07/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-winforms
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ClientApplicationSettings
+helpviewer_keywords:
+- application settings [Windows Forms]
+- Windows Forms, application settings
+ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
+caps.latest.revision: "16"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/18/2017
+---
+# <a name="application-settings-for-windows-forms"></a>Ustawienia aplikacji dla formularzy systemu Windows
+Funkcja ustawień aplikacji formularzy systemu Windows można łatwo tworzyć, przechowywać i Obsługa niestandardowych aplikacji i preferencji użytkownika na komputerze klienckim. Ustawienia aplikacji można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak położenie paska narzędzi i ostatnio używane listy.  
+  
+## <a name="in-this-section"></a>W tej sekcji  
+ [Przegląd ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-overview.md)  
+ W tym artykule omówiono sposób tworzenia i przechowywania danych ustawienia w imieniu użytkowników i aplikacji.  
+  
+ [Architektura ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-architecture.md)  
+ Opisuje sposób działania funkcji ustawień aplikacji i Eksploruje zaawansowanych funkcji architektury, takie jak ustawienia grupowanych i ustawienia kluczy.  
+  
+ [Atrybuty ustawień aplikacji](~/docs/framework/winforms/advanced/application-settings-attributes.md)  
+ Wymieniono i opisano atrybuty, które można zastosować do klasy otoki ustawień aplikacji lub jej właściwości ustawień.  
+  
+ [Ustawienia aplikacji dotyczące kontrolek niestandardowych](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
+ W tym artykule omówiono, co należy zrobić, aby zapewnić możliwość utrzymania ustawienia aplikacji, podczas udostępniania w aplikacjach innych firm Kontrolki niestandardowe.  
+  
+ [Porady: Tworzenie ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ Demonstracja tworzenia nowego ustawienia aplikacji, które są zachowywane między sesjami aplikacji.  
+  
+ [Porady: Sprawdzanie poprawności ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ Pokazuje sprawdzania poprawności ustawień aplikacji, zanim zostają one zachowane.  
+  
+## <a name="related-topics"></a>Tematy pokrewne
+
+[Sekcja konfiguracji formularzy systemu Windows](../../../../docs/framework/configure-apps/file-schema/winforms/index.md)    
+Dokumenty ustawienia w celu włączenia wysokiej rozdzielczości obsługuje w aplikacji formularzy systemu Windows, począwszy od .NET Framework 4.7.
+
+## <a name="see-also"></a>Zobacz także  
+  
+[Formularze systemu Windows](../index.md)

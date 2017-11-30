@@ -1,0 +1,55 @@
+---
+title: "Funkcja ResetSecurity (niezarządzany wykaz interfejsów API)"
+description: "Funkcja ResetSecurity przypisuje token personifikacji bieżącego wątku."
+ms.date: 11/06/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: reference
+api_name: ResetSecurity
+api_location: WMINet_Utils.dll
+api_type: DLLExport
+f1_keywords: ResetSecurity
+helpviewer_keywords: ResetSecurity function [.NET WMI and performance counters]
+topic_type: Reference
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 2790012a429c6a0551d8321a80570f3f8be2142b
+ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/15/2017
+---
+# <a name="resetsecurity-function"></a>Funkcja ResetSecurity
+Przypisuje token personifikacji dostarczony do bieżącego wątku.   
+  
+[!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
+  
+## <a name="syntax"></a>Składnia  
+  
+```  
+HRESULT ResetSecurity (
+   [in] HANDLE token
+); 
+```  
+
+## <a name="parameters"></a>Parametry
+
+`token`  
+[in] Token personifikacji do skojarzenia z bieżącego wątku. Wartość może być `null`. 
+
+## <a name="return-value"></a>Wartość zwracana
+
+Jeśli funkcja zakończy się powodzeniem, jest zwracana wartość `S_OK` (0).
+
+Jeśli funkcja nie powiedzie się, wartość zwracana jest kodu zera błędu. Aby uzyskać rozszerzone informacje o błędzie, należy wywołać [GetErrorInfo](geterrorinfo.md) funkcji.
+  
+## <a name="requirements"></a>Wymagania  
+ **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
+  
+ **Nagłówek:** WMINet_Utils.idl  
+  
+ **Wersje programu .NET framework:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+  
+## <a name="see-also"></a>Zobacz także  
+[Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI](index.md)

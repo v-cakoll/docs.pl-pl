@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ea3814fe187fb721771b6ce09a5fa0ff95558852
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: cd5b8749ef2637dd1e9616257b5321ae7504dedd
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupu firmowych
 W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propozycje (RFP) na podstawie procesu zakupu z automatycznego najlepszym wyborem propozycji. Łączy <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i działań niestandardowych do tworzenia przepływu pracy, który reprezentuje procesu.  
@@ -180,6 +180,4 @@ W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propo
   
 -   **Wyświetl RFP**: Pokazuje zawartość RFP istniejących. Dostawcy mogą przesyłać propozycje ich (Jeśli zaproszenie lub nie została zakończona RFP)  
   
--   **Połącz jako**: użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnika **wyświetlić jako** pola kombi w siatce RFPs aktywne.  
-  
-## <a name="see-also"></a>Zobacz też
+-   **Połącz jako**: użytkownik ma dostęp RFP przy użyciu różnych tożsamości, wybierając odpowiednią uczestnika **wyświetlić jako** pola kombi w siatce RFPs aktywne.

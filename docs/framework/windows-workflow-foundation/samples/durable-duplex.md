@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5426272f574619f8d7cf163d13e9b37cb23bf31f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d8beae85b2cee8956efd160b8540e76f04dd7ee7
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="durable-duplex"></a>Niezawodna komunikacja dwukierunkowa
 W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu wiadomości programu exchange przy użyciu wiadomości działań w [!INCLUDE[wf](../../../../includes/wf-md.md)]. Exchange trwałe komunikat dupleksu jest dwukierunkowe wiadomości programu exchange, która ma miejsce w długim okresie czasu. Okres istnienia wymiany komunikatów może być dłuższy niż okres istnienia kanał komunikacyjny i okresem istnienia w pamięci wystąpień usługi.  
@@ -190,6 +190,4 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie trwałe dupleksu 
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\DurableDuplex`

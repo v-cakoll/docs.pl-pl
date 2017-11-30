@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b05608ca0704483f4318342a733ce363c0a66fc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 75f4a75a38b79e7b7ab18ac2ce3eff2a13aab15f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hello-world-custom-activity"></a>Witaj świecie niestandardowego działania
 W tym przykładzie pokazano kilka kluczowych funkcji [!INCLUDE[wf](../../../../includes/wf-md.md)], łącznie ze sposobem tworzenia prostych działań niestandardowych. Niektóre funkcje zostało to pokazane w tym przykładzie tworzenia działań niestandardowych w języku C# i za pomocą `in` i `out` argumentów (<xref:System.Activities.InArgument> i <xref:System.Activities.OutArgument>).  
@@ -59,6 +59,4 @@ W tym przykładzie pokazano kilka kluczowych funkcji [!INCLUDE[wf](../../../../i
   
 2.  Aby tworzyć rozwiązania, naciśnij kombinację klawiszy CTRL + SHIFT + B.  
   
-3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.  
-  
-## <a name="see-also"></a>Zobacz też
+3.  Aby uruchomić rozwiązanie, naciśnij klawisz F5.

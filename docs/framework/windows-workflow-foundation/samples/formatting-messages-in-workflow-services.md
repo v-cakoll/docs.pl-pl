@@ -12,11 +12,11 @@ caps.latest.revision: "5"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ddbe0c4e1b4af422925c42044136396e4036469e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: d2367f4fe4ebe576eb9a5e2f707eb043e5ee7ccb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="formatting-messages-in-workflow-services"></a>Formatowanie wiadomości w usług przepływu pracy
 W tym przykładzie pokazano sposób inny użytkownik, typy mogą być używane w działaniach obsługi komunikatów (WF usługi). Usługa próbki jest usługą zatwierdzenia proste wydatków i udostępnia trzy operacje. `ApproveExpense`pobiera typ kontraktu danych i przedstawia sposób użycia znanych typów. Zwraca operacji `true` lub `false` na podstawie ilości wydatków. `ApprovePO`pobiera typ elementu XmlSerializer i zwraca `true` lub `false` na podstawie ilości wydatków.`ApprovedVendor` pobiera typ kontraktu komunikatu i zwraca `true` lub `false` Jeśli dostawca znajduje się lista zatwierdzonych dostawców lub jeśli żądanie pochodzi z działu finansowego (dział finansowy może używać dowolnego dostawcy).  
@@ -38,6 +38,4 @@ W tym przykładzie pokazano sposób inny użytkownik, typy mogą być używane w
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Services\Formatter`

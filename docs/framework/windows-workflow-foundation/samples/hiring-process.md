@@ -12,11 +12,11 @@ caps.latest.revision: "13"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cc095f5db48fd7545deda5413620d5f41ed6b39a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 1f9f201e14abdcfb98c33e947428137eca3caeaf
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="hiring-process"></a>Zatrudniania procesu
 W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -242,6 +242,4 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
   
 1.  Usuń magazyn wystąpienia programu SQL Server, uruchamiając Cleanup.bat znajdujący się w folderze Program DbSetup.  
   
-2.  Usuń dysk twardy w formie kodu źródłowego.  
-  
-## <a name="see-also"></a>Zobacz też
+2.  Usuń dysk twardy w formie kodu źródłowego.

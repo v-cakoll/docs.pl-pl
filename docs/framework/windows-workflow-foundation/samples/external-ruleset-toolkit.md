@@ -12,11 +12,11 @@ caps.latest.revision: "7"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6e3ec30edc65fd136fff56b1469664a6ba3b44f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Toolkit zestaw reguł
 Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych scenariuszach można zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponowne tworzenie i wdrażanie zestawu przepływu pracy. W tym przykładzie pozwala na zarządzanie i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Dzięki temu uruchomionych wystąpień przepływu pracy automatycznie zastosować zmian zestaw reguł.  
@@ -143,6 +143,4 @@ Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częśc
 10. Teraz możesz uruchomić `RuleSetToolkitUsageSample` projektu, jak w przypadku innych aplikacji konsolowej przepływu pracy. Naciśnij klawisz F5 lub Ctrl + F5 w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] lub uruchom plik RuleSetToolkitUsageSample.exe bezpośrednio.  
   
     > [!NOTE]
-    >  Należy zamknąć narzędzie zestaw reguł, aby ponownie skompilować próbki użycia, ponieważ narzędzie ładuje zestaw próbki użycia.  
-  
-## <a name="see-also"></a>Zobacz też
+    >  Należy zamknąć narzędzie zestaw reguł, aby ponownie skompilować próbki użycia, ponieważ narzędzie ładuje zestaw próbki użycia.

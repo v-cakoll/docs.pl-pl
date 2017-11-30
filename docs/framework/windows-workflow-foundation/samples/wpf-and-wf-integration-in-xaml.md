@@ -12,11 +12,11 @@ caps.latest.revision: "12"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f2fc2399dc1c98ad8890034ca3a9915d4ce86162
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 11ffdca834ba267fdd10ecb968699615089c6170
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integracja programu WF w języku XAML i WPF
 Ten przykład przedstawia sposób tworzenia aplikacji, która używa [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] i [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji w jednym dokumencie XAML. W tym przykładzie użyto [!INCLUDE[wf](../../../../includes/wf-md.md)] i rozszerzalność języka XAML.  
@@ -52,6 +52,4 @@ Ten przykład przedstawia sposób tworzenia aplikacji, która używa [!INCLUDE[a
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\WPFWFIntegration`

@@ -1,0 +1,1 @@
+.NET Framework 2.0 z dodatkiem SP1

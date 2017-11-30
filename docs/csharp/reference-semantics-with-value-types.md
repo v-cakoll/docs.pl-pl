@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9eeaf201c1f5a58044db62e356199b609c4c035a
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
-ms.translationtype: HT
+ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="reference-semantics-with-value-types"></a>Semantykę odwołania z typami wartości
 
@@ -85,7 +85,7 @@ Pierwsze przypisanie w poprzednim kodzie tworzy kopię `Origin` stała i przypis
 Stosowanie `ref readonly` na wykorzystanie dużym natężeniu ruchu struktury mogą być wystarczające.
 Innym razem, można utworzyć niezmienialny struktury. Zawsze można następnie przekazać przez odwołanie tylko do odczytu. Czy rozwiązanie usuwa ataku kopiuje tego miejsce, gdy uzyskujesz dostęp do metody struktury używane jako `in` parametru.
 
-Możesz to zrobić, tworząc `readonly struct` typu. Możesz dodać `readonly` modyfikatora w deklaracji struktury. Kompilator wymusza, że wszystkie elementy członkowskie struktury są `readonly`; `struct` musi być niezmienialne.
+Możesz to zrobić, tworząc `readonly struct` typu. Możesz dodać `readonly` modyfikatora w deklaracji struktury. Kompilator wymusza, że wszystkie elementy członkowskie wystąpień struktury są `readonly`; `struct` musi być niezmienialne.
 
 Istnieją inne optymalizacje dla `readonly struct`. Można użyć `in` modyfikator w każdej lokalizacji gdzie `readonly struct` jest argumentem. Ponadto można zwrócić `readonly struct` jako `ref return` po zwróconego obiektu, którego okres istnienia wykracza poza zakres metoda zwraca obiekt.
 

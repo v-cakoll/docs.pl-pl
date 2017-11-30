@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 52c36870134006eafaaf64824969c5314459d2c0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b3b436d1f01e1ddb2f8f8058acfbbbdc7dcae12f
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="document-approval-process"></a>Proces zatwierdzania dokumentu
 Ten przykład przedstawia użycie wielu [!INCLUDE[wf](../../../../includes/wf-md.md)] i [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje razem. Razem wdrażają scenariusza proces zatwierdzania dokumentu. Aplikacja kliencka można przesyłać dokumenty do zatwierdzenia i zatwierdzić dokumenty. Aplikacja menedżera zatwierdzenia istnieje ułatwiających komunikację między klientami i do wymuszania reguł procesu zatwierdzania. Proces zatwierdzania jest przepływ pracy, który można wykonać kilka typów zatwierdzenia. Działania istnieje pobieranie jednego zatwierdzenia, zatwierdzenia kworum (procent zbiór osób zatwierdzających) i proces zatwierdzania złożonych, który składa się z kworum i jednego zatwierdzenia w sekwencji.  
@@ -155,6 +155,4 @@ Ten przykład przedstawia użycie wielu [!INCLUDE[wf](../../../../includes/wf-md
   
 ##### <a name="to-clean-up"></a>Aby wyczyścić  
   
-1.  Z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersz polecenia, przejdź do folderu DocumentApprovalProcess i uruchom Cleanup.cmd.  
-  
-## <a name="see-also"></a>Zobacz też
+1.  Z [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)] wiersz polecenia, przejdź do folderu DocumentApprovalProcess i uruchom Cleanup.cmd.

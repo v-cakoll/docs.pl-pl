@@ -12,11 +12,11 @@ caps.latest.revision: "10"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6691af16d41b4ae8c0bdca17f0a6b078cd72af16
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 87858af7c3d040a5eef9a12512e79217aa49cffb
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="visual-workflow-tracking"></a>Śledzenie Visual przepływu pracy
 W tym przykładzie pokazano sposób pisania przepływu pracy programu visual śledzenia aplikacji przy użyciu funkcji debugowania dostępnych za pośrednictwem [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)].  
@@ -34,7 +34,7 @@ W tym przykładzie pokazano sposób pisania przepływu pracy programu visual śl
   
 3.  Naciśnij klawisze CTRL + F5, aby uruchomić przykład. Plik Workflow.xaml zostaną wyświetlone w oknie projektanta rehosted przepływu pracy.  
   
-4.  Kliknij przycisk **pliku** menu i wybierz **uruchomienia przepływu pracy... **.  
+4.  Kliknij przycisk **pliku** menu i wybierz **uruchomienia przepływu pracy...** .  
   
 5.  Powiadomienie aktualnie wykonywanego działania zostanie wyróżniona, jak opisano wcześniej, a rekordy śledzenia są wyświetlane po prawej stronie okna aplikacji.  
   
@@ -47,6 +47,4 @@ W tym przykładzie pokazano sposób pisania przepływu pracy programu visual śl
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Application\VisualWorkflowTracking`

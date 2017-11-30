@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35df2d80-e6d2-4873-b2de-9b45b9e9e650
-ms.openlocfilehash: 360733d81f049cd4356ecc47a27f97c3ec3a402a
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 20ea7ef820dd295497ed996ce10e5a594d021f7e
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expressions"></a>Wyrażenia zapytań
 
@@ -93,7 +93,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
     <th>Opis</th>
   </tr>
   <tr>
-  <td>`contains`</td>
+  <td><code>contains</code></td>
 <td>Określa, czy wybrane elementy zawierają określony element.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
@@ -108,7 +108,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 
 
 <tr>
-  <td>`count`</td><td>Zwraca liczbę wybranych elementów.<br/><br/>
+  <td><code>count</code></td><td>Zwraca liczbę wybranych elementów.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -118,7 +118,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`last`</td><td>Wybiera ostatnim elementem wybranych do tej pory.<br/><br/>
+<td><code>last</code></td><td>Wybiera ostatnim elementem wybranych do tej pory.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -127,7 +127,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`lastOrDefault`</td><td>Wybiera ostatnim elementem wybranych do tej pory lub wartość domyślną, jeśli element nie zostanie znaleziony.<br/><br/>
+<td><code>lastOrDefault</code></td><td>Wybiera ostatnim elementem wybranych do tej pory lub wartość domyślną, jeśli element nie zostanie znaleziony.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -137,7 +137,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOne`</td><td>Wybiera element jednej, określonej wybrane do tej pory. Jeśli podano wiele elementów, jest zwracany wyjątek.<br/><br/>
+<td><code>exactlyOne</code></td><td>Wybiera element jednej, określonej wybrane do tej pory. Jeśli podano wiele elementów, jest zwracany wyjątek.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -148,7 +148,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exactlyOneOrDefault`</td><td>Wybiera element jednej, określonej wybranych do tej pory lub wartość domyślną, jeśli ten element nie zostanie znaleziony.<br/><br/>
+<td><code>exactlyOneOrDefault</code></td><td>Wybiera element jednej, określonej wybranych do tej pory lub wartość domyślną, jeśli ten element nie zostanie znaleziony.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -159,7 +159,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`headOrDefault`</td><td>Wybiera pierwszy element wybranych do tej pory lub wartość domyślną, jeśli sekwencja nie zawiera żadnych elementów.<br/><br/>
+<td><code>headOrDefault</code></td><td>Wybiera pierwszy element wybranych do tej pory lub wartość domyślną, jeśli sekwencja nie zawiera żadnych elementów.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -169,7 +169,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`select`</td><td>Każdy z elementów do tej pory wybrane projekty.<br/><br/>
+<td><code>select</code></td><td>Każdy z elementów do tej pory wybrane projekty.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -178,7 +178,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`where`</td><td>Wybiera elementy oparte na określony predykat.<br/><br/>
+<td><code>where</code></td><td>Wybiera elementy oparte na określony predykat.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -188,7 +188,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minBy`</td><td>Wybiera wartość dla każdego elementu wybrane do tej pory i zwraca wynikowy wartość minimalna.<br/><br/>
+<td><code>minBy</code></td><td>Wybiera wartość dla każdego elementu wybrane do tej pory i zwraca wynikowy wartość minimalna.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -197,7 +197,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxBy`</td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca maksymalną wartość wynikową.<br/><br/>
+<td><code>maxBy</code></td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca maksymalną wartość wynikową.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -206,7 +206,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupBy`</td><td>Grupuje elementy wybrane do tej pory zgodnie z określonym selektora kluczy.<br/><br/>
+<td><code>groupBy</code></td><td>Grupuje elementy wybrane do tej pory zgodnie z określonym selektora kluczy.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -216,7 +216,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortBy`</td><td>Sortuje elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania.<br/><br/>
+<td><code>sortBy</code></td><td>Sortuje elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -226,7 +226,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByDescending`</td><td>Sortuje elementy wybrane do tej pory w kolejności malejącej według danego klucza sortowania.<br/><br/>
+<td><code>sortByDescending</code></td><td>Sortuje elementy wybrane do tej pory w kolejności malejącej według danego klucza sortowania.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -236,7 +236,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenBy`</td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania. Ten operator może być używana tylko po `sortBy`, `sortByDescending`, `thenBy`, lub `thenByDescending`.<br/><br/>
+<td><code>thenBy</code></td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania. Ten operator może być używana tylko po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, lub <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -248,7 +248,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByDescending`</td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności malejącej według danego klucza sortowania. Ten operator może być używana tylko po `sortBy`, `sortByDescending`, `thenBy`, lub `thenByDescending`.<br/><br/>
+<td><code>thenByDescending</code></td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności malejącej według danego klucza sortowania. Ten operator może być używana tylko po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, lub <code>thenByDescending</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -260,7 +260,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupValBy`</td><td>Wybiera wartość dla każdego elementu wybrane do tej pory oraz grupuje elementy przy użyciu danego klucza.<br/><br/>
+<td><code>groupValBy</code></td><td>Wybiera wartość dla każdego elementu wybrane do tej pory oraz grupuje elementy przy użyciu danego klucza.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -270,7 +270,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`join`</td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca. W sprzężeniach wszystkie, czy wiersz jest podzielenie po `-&gt;` symbol, wcięcia musi być wcięta co najmniej o ile to słowo kluczowe `for`.<br/><br/>
+<td><code>join</code></td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca. W sprzężeniach wszystkie, czy wiersz jest podzielenie po <code>-&gt;</code> symbol, wcięcia musi być wcięta co najmniej o ile to słowo kluczowe <code>for</code>.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -281,7 +281,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`groupJoin`</td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy oraz grupuje wyniki. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca.<br/><br/>
+<td><code>groupJoin</code></td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy oraz grupuje wyniki. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -295,7 +295,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`leftOuterJoin`</td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy oraz grupuje wyniki. Jeśli każda grupa jest pusta, zamiast niego jest używana do grupy o wartości domyślnej pojedynczego. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca.<br/><br/>
+<td><code>leftOuterJoin</code></td><td>Są powiązane z dwóch zestawów, wybranych wartości oparta na zgodności kluczy oraz grupuje wyniki. Jeśli każda grupa jest pusta, zamiast niego jest używana do grupy o wartości domyślnej pojedynczego. Należy pamiętać, że kolejność kluczy wokół = Zaloguj się w wyrażeniu join jest znacząca.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -307,7 +307,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumByNullable`</td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca sumy tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
+<td><code>sumByNullable</code></td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca sumy tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -316,7 +316,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`minByNullable`</td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca minimum tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
+<td><code>minByNullable</code></td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca minimum tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -325,7 +325,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`maxByNullable`</td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca maksymalnie te wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
+<td><code>maxByNullable</code></td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca maksymalnie te wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -334,7 +334,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageByNullable`</td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca średnią z tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
+<td><code>averageByNullable</code></td><td>Wartość null dla każdego elementu wybrane do tej pory wybiera i zwraca średnią z tych wartości. Jeśli wartości null nie ma wartość jest ignorowana.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -343,7 +343,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`averageBy`</td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca średnią z tych wartości.<br/><br/>
+<td><code>averageBy</code></td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca średnią z tych wartości.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -352,7 +352,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`distinct`</td><td>Wybiera odrębne elementy z elementy wybrane do tej pory.<br/><br/>
+<td><code>distinct</code></td><td>Wybiera odrębne elementy z elementy wybrane do tej pory.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -363,7 +363,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`exists`</td><td>Określa, czy każdy element wybrany do tej pory spełnia warunek.<br/><br/>
+<td><code>exists</code></td><td>Określa, czy każdy element wybrany do tej pory spełnia warunek.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -376,7 +376,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`find`</td><td>Wybiera pierwszy wybranego elementu do tej pory spełniającego określony warunek.<br/><br/>
+<td><code>find</code></td><td>Wybiera pierwszy wybranego elementu do tej pory spełniającego określony warunek.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -385,7 +385,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`all`</td><td>Określa, czy wszystkie elementy wybrane do tej pory spełniają warunek.<br/><br/>
+<td><code>all</code></td><td>Określa, czy wszystkie elementy wybrane do tej pory spełniają warunek.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -394,7 +394,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`head`</td><td>Wybiera pierwszy element z wybranych do tej pory.<br/><br/>
+<td><code>head</code></td><td>Wybiera pierwszy element z wybranych do tej pory.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -403,7 +403,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`nth`</td><td>Wybiera element pod określonym indeksem między zaznaczonymi do tej pory.<br/><br/>
+<td><code>nth</code></td><td>Wybiera element pod określonym indeksem między zaznaczonymi do tej pory.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for numbers in data do
@@ -412,7 +412,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skip`</td><td>Pomija określoną liczbę elementów do tej pory wybrany, a następnie wybiera wszystkie pozostałe elementy.<br/><br/>
+<td><code>skip</code></td><td>Pomija określoną liczbę elementów do tej pory wybrany, a następnie wybiera wszystkie pozostałe elementy.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -421,7 +421,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`skipWhile`</td><td>Pomija elementy w sekwencji, tak długo, jak określony warunek jest spełniony, a następnie wybiera wszystkie pozostałe elementy.<br/><br/>
+<td><code>skipWhile</code></td><td>Pomija elementy w sekwencji, tak długo, jak określony warunek jest spełniony, a następnie wybiera wszystkie pozostałe elementy.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -431,7 +431,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sumBy`</td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca sumy tych wartości.<br/><br/>
+<td><code>sumBy</code></td><td>Wartość dla każdego elementu wybrane do tej pory wybiera i zwraca sumy tych wartości.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -440,7 +440,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`take`</td><td>Wybiera określoną liczbę elementów ciągłe z zaznaczonymi do tej pory.<br/><br/>
+<td><code>take</code></td><td>Wybiera określoną liczbę elementów ciągłe z zaznaczonymi do tej pory.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -450,7 +450,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`takeWhile`</td><td>Wybiera elementy z sekwencję tak długo, jak określony warunek jest spełniony, a następnie pomija pozostałe elementy.<br/><br/>
+<td><code>takeWhile</code></td><td>Wybiera elementy z sekwencję tak długo, jak określony warunek jest spełniony, a następnie pomija pozostałe elementy.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for number in data do
@@ -459,7 +459,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullable`</td><td>Sortuje elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania wartości null.<br/><br/>
+<td><code>sortByNullable</code></td><td>Sortuje elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania wartości null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -469,7 +469,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`sortByNullableDescending`</td><td>Sortuje elementy wybrane do tej pory w kolejności malejącej przy użyciu podanego klucza sortowania wartości null.<br/><br/>
+<td><code>sortByNullableDescending</code></td><td>Sortuje elementy wybrane do tej pory w kolejności malejącej przy użyciu podanego klucza sortowania wartości null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -479,7 +479,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullable`</td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania wartości null. Ten operator może być używana tylko natychmiast po `sortBy`, `sortByDescending`, `thenBy`, lub `thenByDescending`, lub ich warianty wartości null.<br/><br/>
+<td><code>thenByNullable</code></td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności rosnącej przy użyciu podanego klucza sortowania wartości null. Ten operator może być używana tylko natychmiast po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, lub <code>thenByDescending</code>, lub ich warianty wartości null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -490,7 +490,7 @@ let data = [ 1; 5; 7; 11; 18; 21]
 </code></pre>
 
 </td></tr><tr>
-<td>`thenByNullableDescending`</td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności malejącej przy użyciu podanego klucza sortowania wartości null. Ten operator może być używana tylko natychmiast po `sortBy`, `sortByDescending`, `thenBy`, lub `thenByDescending`, lub ich warianty wartości null.<br/><br/>
+<td><code>thenByNullableDescending</code></td><td>Wykonuje następne uporządkowanie elementy wybrane do tej pory w kolejności malejącej przy użyciu podanego klucza sortowania wartości null. Ten operator może być używana tylko natychmiast po <code>sortBy</code>, <code>sortByDescending</code>, <code>thenBy</code>, lub <code>thenByDescending</code>, lub ich warianty wartości null.<br/><br/>
 
 <pre><code class="lang-fsharp">query {
     for student in db.Student do
@@ -546,7 +546,7 @@ query {
 </code></pre>
 
 </td></tr><tr>
-<td>`EXISTS`
+<td><code>EXISTS</code>
 </br>
 
 <pre><code class="lang-sql">SELECT * FROM Student
@@ -680,7 +680,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`IN`zestaw określonych wartości<br/>
+<code>IN</code>zestaw określonych wartości<br/>
 
 <pre><code class="lang-sql">SELECT *
 FROM Student
@@ -703,7 +703,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`i `TOP`.<br/>
+<code>LIKE</code>i <code>TOP</code>.<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -721,7 +721,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`z wzorcem odpowiada zestaw.<br/>
+<code>LIKE</code>z wzorcem odpowiada zestaw.<br/>
 
 <pre><code class="lang-sql">-- '[abc]%' matches strings where the first character is
 -- 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -738,7 +738,7 @@ WHERE Student.Name LIKE '[abc]%'
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`zestaw wykluczeń wzorca.<br/>
+<code>LIKE</code>zestaw wykluczeń wzorca.<br/>
 
 <pre><code class="lang-sql">-- '[^abc]%' matches strings where the first character is
 -- not 'a', 'b', 'c', 'A', 'B', or 'C'
@@ -757,7 +757,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-`LIKE`na jednym polu, ale wybierz inne pole.<br/>
+<code>LIKE</code>na jednym polu, ale wybierz inne pole.<br/>
 
 <pre><code class="lang-sql">SELECT StudentID AS ID FROM Student
 WHERE Student.Name LIKE '[^abc]%'
@@ -772,7 +772,7 @@ WHERE Student.Name LIKE '[^abc]%'
 }
 </code></pre>
 
-</td></tr><tr><td>`LIKE`, z wyszukiwania podciągu.<br/>
+</td></tr><tr><td><code>LIKE</code>, z wyszukiwania podciągu.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Name like '%A%'
@@ -789,7 +789,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-Proste `JOIN` dwóch tabel.<br/>
+Proste <code>JOIN</code> dwóch tabel.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 JOIN CourseSelection
@@ -807,7 +807,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`LEFT JOIN`z dwóch tabel.<br/>
+</td></tr><tr><td><code>LEFT JOIN</code>z dwóch tabel.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 LEFT JOIN CourseSelection
@@ -826,7 +826,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`JOIN`z`COUNT`<br/>
+</td></tr><tr><td><code>JOIN</code>z<code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection
@@ -844,7 +844,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`DISTINCT`<br/>
+</td></tr><tr><td><code>DISTINCT</code><br/>
 
 <pre><code class="lang-sql">SELECT DISTINCT StudentID FROM CourseSelection
 </code></pre>
@@ -877,7 +877,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`BETWEEN`<br/>
+</td></tr><tr><td><code>BETWEEN</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age BETWEEN 10 AND 15
@@ -893,7 +893,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`<br/>
+</td></tr><tr><td><code>OR</code><br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -909,7 +909,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`OR`z kolejności<br/>
+</td></tr><tr><td><code>OR</code>z kolejności<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 WHERE Student.Age = 12 OR Student.Age = 13
@@ -927,7 +927,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`TOP`, `OR`i kolejność.<br/>
+</td></tr><tr><td><code>TOP</code>, <code>OR</code>i kolejność.<br/>
 
 <pre><code class="lang-sql">SELECT TOP 2 student.Name FROM Student
 WHERE Student.Age = 11 OR Student.Age = 12
@@ -949,7 +949,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td>`UNION`dwa zapytań.<br/>
+</td></tr><tr><td><code>UNION</code>dwa zapytań.<br/>
 
 <pre><code class="lang-sql">SELECT * FROM Student
 UNION
@@ -998,7 +998,7 @@ let query2 =
 query1.Intersect(query2)
 </code></pre>
 
-</td></tr><tr><td>`CASE`warunek.<br/>
+</td></tr><tr><td><code>CASE</code>warunek.<br/>
 
 <pre><code class="lang-sql">SELECT student.StudentID,
 CASE Student.Age

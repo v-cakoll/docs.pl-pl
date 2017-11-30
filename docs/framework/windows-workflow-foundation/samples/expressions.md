@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c988f41966f6e7bbd87fc4552de15b28117ecde5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 681b96d24288cc1a86c9c4525e31ed67f1a18331
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="expressions"></a>Wyrażenia
 W tym przykładzie pokazano, jak używać wyrażeń podstawowe w przepływie pracy. Składa się z przepływu pracy, który oblicza wynagrodzenie podstawowe statystyki dla dwóch pracowników fikcyjnej firmy. Dwie klasy `Employee` i `SalaryStats`, są zdefiniowane w Employee.cs i SalaryStats.cs. Te klasy są używane w przepływie pracy, który pokazuje, jak wykonywać proste operacje arytmetyczne i ciąg właściwości zmiennych typów złożonych.  
@@ -41,6 +41,4 @@ W tym przykładzie pokazano, jak używać wyrażeń podstawowe w przepływie pra
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Expressions`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Expressions`

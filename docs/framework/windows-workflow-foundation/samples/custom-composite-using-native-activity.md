@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 7af9562f38b68acc95c051e85d007ce9bd5a2c87
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 7e67febe1197a026b7bdcc6a4be27467c24da1c1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="custom-composite-using-native-activity"></a>Złożone niestandardowych za pomocą działania natywnego
 W tym przykładzie pokazano, jak napisać <xref:System.Activities.NativeActivity> która planuje innych <xref:System.Activities.Activity> obiekty do sterowania przepływem wykonywania przepływu pracy. W przykładzie użyto dwóch typowych przepływami sterowania sekwencji i While, aby zademonstrować, jak to zrobić.  
@@ -49,6 +49,4 @@ W tym przykładzie pokazano, jak napisać <xref:System.Activities.NativeActivity
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\Code-Bodied\CustomCompositeNativeActivity`

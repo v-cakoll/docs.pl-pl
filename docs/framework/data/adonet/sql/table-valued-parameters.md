@@ -16,11 +16,11 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 47009516d4118fec1a075a2dbccfa747f9a63131
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 47956848079e6094dc000d95ec4066f814a70e35
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="table-valued-parameters"></a>Parametry przechowywanymi w tabeli
 Parametry przechowywanymi w tabeli umożliwiają łatwe do organizowania wielu wierszy danych z aplikacji klienckiej [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] bez konieczności wiele rund lub specjalną logikę po stronie serwera do przetwarzania danych. Hermetyzuj wierszy danych w aplikacji klienckiej i wysyłania danych do serwera za pomocą jednego polecenia sparametryzowane, mogą używać parametrów przechowywanymi w tabeli. Przychodzące wiersze danych są przechowywane w zmiennej tabeli, która następnie może być obsługiwany przy użyciu [!INCLUDE[tsql](../../../../../includes/tsql-md.md)].  
@@ -96,7 +96,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 -   Za pomocą instrukcji ALTER TABLE nie można modyfikować projektu parametry przechowywanymi w tabeli.  
   
 ## <a name="configuring-a-sqlparameter-example"></a>Konfigurowanie przykład SqlParameter  
- <xref:System.Data.SqlClient>obsługuje wypełnianie przechowywanymi w tabeli parametrów z <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> lub System.Collections.Generic.IEnumerable\<<xref:Microsoft.SqlServer.Server.SqlDataRecord>> (<xref:System.Collections.Generic.IEnumerable%601>? qualifyHint = False & autoUpgrade = True) obiektów. Należy określić nazwę typu dla parametru przechowywanymi w tabeli, używając <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Musi być zgodna z nazwą zgodne z typem wcześniej utworzony na serwerze. Poniższy fragment kodu przedstawia sposób konfigurowania <xref:System.Data.SqlClient.SqlParameter> do wstawiania danych.  
+ <xref:System.Data.SqlClient>obsługuje wypełnianie przechowywanymi w tabeli parametrów z <xref:System.Data.DataTable>, <xref:System.Data.Common.DbDataReader> lub <xref:System.Collections.Generic.IEnumerable%601>  \  <xref:Microsoft.SqlServer.Server.SqlDataRecord> obiektów. Należy określić nazwę typu dla parametru przechowywanymi w tabeli, używając <xref:System.Data.SqlClient.SqlParameter.TypeName%2A> właściwość <xref:System.Data.SqlClient.SqlParameter>. `TypeName` Musi być zgodna z nazwą zgodne z typem wcześniej utworzony na serwerze. Poniższy fragment kodu przedstawia sposób konfigurowania <xref:System.Data.SqlClient.SqlParameter> do wstawiania danych.  
   
 ```csharp  
 // Configure the command and parameter.  

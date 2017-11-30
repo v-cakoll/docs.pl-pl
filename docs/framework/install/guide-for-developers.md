@@ -14,18 +14,21 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db8d543b07ede81c8b07e607bedd4ee2a01b0022
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
-ms.translationtype: HT
+ms.openlocfilehash: babcb6f09d44662b71774376d68b063f7a303284
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj program .NET Framework dla deweloperów
 
 .NET jest integralną częścią wiele aplikacji działających w systemie Windows i zawiera często używane funkcje uruchomić te aplikacje. Dla deweloperów .NET Framework zapewnia kompleksowe i spójny model programowania do tworzenia aplikacji, które wizualnie ogłuszania wrażenia użytkowników oraz bezproblemową i bezpieczną komunikację.  
 
-Ten artykuł zawiera łącza do instalacji programu .NET Framework 4.5, jego wersje punktu (4.5.1, 4.5.2), [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], jego punktu wersjach (4.6.1, 4.6.2), a .NET Framework 4.7 i wydanie punktu (4.7.1) na komputerze. Jeśli jesteś deweloperem umożliwia także linki do pobrania i wykonać ponowną dystrybucję programu .NET Framework z aplikacjami.
+Ten artykuł zawiera łącza do instalowania wszystkie wersje programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] na tym komputerze. Jeśli jesteś deweloperem umożliwia także linki do pobrania i wykonać ponowną dystrybucję programu .NET Framework z aplikacjami.
 
+> [!NOTE]
+> Ten temat jest przeznaczony dla deweloperów chcących albo zainstalować program .NET Framework w systemie własnych lub który chcesz zainstalować go z aplikacji. Aby użytkownicy zainteresowani Instalowanie programu .NET Framework, zobacz tematy, które omówiono w nim Instalowanie programu .NET Framework w określonych systemach operacyjnych, takich jak [Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016](on-windows-10.md).  
+  
 Należy pamiętać, że zainstalowanie nowej wersji programu .NET Framework nie zawsze zastępuje poprzednią wersję. Aby uzyskać więcej informacji na temat wersji programu .NET Framework oraz sposobu określania, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md) i [porady: ustalić, które .NET Framework są wersje Zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Wszystkie wersje programu .NET Framework wymienionych w poniższej tabeli są aktualizacje w miejscu programu .NET Framework 4. Innymi słowy Jeśli zainstalowana nowsza wersja, takich jak .NET Framework 4.6 nie najpierw masz zainstalować poprzednich wersjach, takich jak .NET Framework 4.5.2, 4.5 i 4.5.1. Podobnie jeśli zainstalować nowszą wersję, takich jak .NET Framework 4.6 nie najpierw masz odinstalowania poprzednich wersji, takich jak .NET Framework 4.5.2, 4.5 i 4.5.1. 
 
 Fakt, że nowszy .NET Framework 4.x są na miejscu aktualizacjami wcześniejszych wersji oznacza *nie* instalacja starszej wersji wymienionych w tabeli, jeśli jest już zainstalowana nowsza wersja. Na przykład: nie można zainstalować programu .NET Framework 4.6 w systemie Windows 10 listopada aktualizacji, ponieważ .NET Framework 4.6.1 jest preinstalowany na nim.    

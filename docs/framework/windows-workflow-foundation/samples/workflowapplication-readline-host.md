@@ -12,11 +12,11 @@ caps.latest.revision: "14"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: a65ca3d3d4a787132246312e28213e71defc94ec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Działanie obiektu WorkflowApplication ReadLine hosta
 Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić każdy przepływ pracy, przy użyciu dołączonej `ReadLine` działania (lub innych działań podoba Ci się pobierające dane z zakładek przywrócone ciągi). Dane wyjściowe z `WriteLine` działania lub jakikolwiek zapisywania <xref:System.Activities.Statements.WriteLine.TextWriter%2A> rozszerzenia jest kierowany do okna hosta. Gdy wystąpienie jest w stanie bezczynności, dostępne zakładki dla danego wystąpienia są wyświetlane w polu kombi. Zakładki, wybierając wprowadzanie za tekstem i naciskając przycisk zakładki Wznów kontynuować wykonywanie przepływu pracy. Można również anulować, przerwania lub przerywania wybrany przepływ pracy. Trwałości jest domyślnie — można zamknąć hosta i przywrócić go, a lista wystąpień jest wypełniana wystąpień w bazie danych. Jest używane śledzenie danych wyjściowych <xref:System.Activities.WorkflowApplication>— poziom zdarzenia do hosta z opcją, aby dodać szczegółowe śledzenie na poziomie działania.  
@@ -67,6 +67,4 @@ Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić ka
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`  
-  
-## <a name="see-also"></a>Zobacz też
+>  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Execution\ControllingWorkflowApplications`

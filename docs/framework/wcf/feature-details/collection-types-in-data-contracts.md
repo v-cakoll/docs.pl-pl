@@ -20,11 +20,11 @@ caps.latest.revision: "19"
 author: Erikre
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ca3bbb4b88bf4355d3c487196672636e6b77d419
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
-ms.translationtype: HT
+ms.openlocfilehash: 8591f1c7c3aa123acd17a9e3ab22cf950275f588
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 11/28/2017
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tych list można przedstawić przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może utrzymywać listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -165,7 +165,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
   
 ```xml  
 <CustomerList4>  
-    <customer>...</ customer>  
+    <customer>...</customer>  
     <customer>...</customer>  
     <customer>...</customer>  
     ...  
@@ -297,10 +297,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |Typu występującego w odwołaniu|Typ odwołania do interfejsu implementowanego przez|Przykład|Typ traktowane jako|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> lub<br /><br /> `MyType<T> : IDictionary`gdzie T =`int`|Zamknięte ogólny`IDictionary<object,object>`|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|<xref:System.Collections.Generic.IDictionary%602>, zamknięty|`MyType<T> : IDictionary\<string, bool>`gdzie T =`int`|Ogólny zamkniętego (na przykład `IDIctionary\<string,bool>`)|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, klucz lub wartość jest zamknięty, drugi jest otwarty i korzysta z jednego z parametrów typu|`MyType\<T,U,V> : IDictionary\<string,V>`gdzie T =`int`, U =`float`, V =`bool`<br /><br /> lub<br /><br /> `MyType<Z> : IDictionary\<Z,bool>`gdy Z =`string`|Ogólny zamkniętego (na przykład `IDictionary\<string,bool>`)|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, zarówno klucz i wartość są otwarte i każda używa jednego z parametrów typu|`MyType\<T,U,V> : IDictionary\<V,U>`gdzie T =`int`, U =`bool`, V =`string`|Ogólny zamkniętego (na przykład `IDictionary\<string,bool>`)|  
-|Otwarte ogólne (dwa parametry)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, Otwórz, używa zarówno ogólnych parametrów typu w kolejności ich występowania|`MyType\<K,V> : IDictionary\<K,V>`, K i V zarówno Otwórz|Otwarte ogólne (na przykład `IDictionary\<K,V>`)|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|<xref:System.Collections.Generic.IDictionary%602>, zamknięty|`MyType<T> : IDictionary<string, bool>`gdzie T =`int`|Ogólny zamkniętego (na przykład `IDIctionary<string,bool>`)|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, klucz lub wartość jest zamknięty, drugi jest otwarty i korzysta z jednego z parametrów typu|`MyType<T,U,V> : IDictionary<string,V>`gdzie T =`int`, U =`float`, V =`bool`<br /><br /> lub<br /><br /> `MyType<Z> : IDictionary<Z,bool>`gdy Z =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, zarówno klucz i wartość są otwarte i każda używa jednego z parametrów typu|`MyType<T,U,V> : IDictionary<V,U>`gdzie T =`int`, U =`bool`, V =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
+|Otwarte ogólne (dwa parametry)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, Otwórz, używa zarówno ogólnych parametrów typu w kolejności ich występowania|`MyType<K,V> : IDictionary<K,V>`, K i V zarówno Otwórz|Otwarte ogólne (na przykład `IDictionary<K,V>`)|  
   
  Jeśli typ implementuje zarówno <xref:System.Collections.IDictionary> i rodzajowy <xref:System.Collections.Generic.IDictionary%602>tylko ogólny <xref:System.Collections.Generic.IDictionary%602> jest uznawany za.  
   

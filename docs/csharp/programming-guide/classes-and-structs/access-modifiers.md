@@ -11,11 +11,11 @@ ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c29ee4b05d350f8dc5cf7595124c402aa5dc7a4e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: a567dea6418ff9cfc94c8180a88c872bcf4c96a4
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="access-modifiers-c-programming-guide"></a>Modyfikatory dostępu (Przewodnik programowania w języku C#)
 Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, który kontroluje, czy może być używany z innymi kodu z zestawu lub innych zestawów. Następujących modyfikatorów dostępu służy do określenia dostępności typu lub elementu członkowskiego przy deklarowaniu go:  
@@ -51,7 +51,7 @@ Wszystkie typy i elementy członkowskie typu ma poziomu ułatwień dostępu, kt�
  Można włączyć określonego innych zestawów dostępu do sieci wewnętrznej typów za pomocą InternalsVisibleToAttribute. Aby uzyskać więcej informacji, zobacz [przyjazne zestawy](http://msdn.microsoft.com/library/df0c70ea-2c2a-4bdc-9526-df951ad2d055).  
   
 ## <a name="class-and-struct-member-accessibility"></a>Klasy i dostępność elementu członkowskiego struktury  
- Elementy członkowskie klasy (w tym zagnieżdżonych klas i struktur) mogą być deklarowane z jednym z pięciu typów dostępu. Elementy członkowskie struktury nie można zadeklarować jako chroniony, ponieważ struktur nie obsługują dziedziczenia.  
+ Elementy członkowskie klasy (w tym zagnieżdżonych klas i struktur) mogą być deklarowane z jednym z sześciu typów dostępu. Elementy członkowskie struktury nie można zadeklarować jako chroniony, ponieważ struktur nie obsługują dziedziczenia.  
   
  Zwykle dostępność elementu członkowskiego nie jest większa niż ułatwień dostępu typu, który go zawiera. Jednak publicznego elementu członkowskiego klasy wewnętrzny może być dostępne spoza zestawu, jeśli element członkowski implementuje metody interfejsu lub zastępuje metody wirtualne zdefiniowane w publicznej klasy podstawowej.  
   

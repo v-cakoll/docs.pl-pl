@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: dbb77f57c7f3484930e1639da501ab828e1c2070
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+ms.openlocfilehash: 7a1cf9eea4c5d75c6bcb6d2f0d5f68a07e3158d0
+ms.sourcegitcommit: 39b65a49271e082add68cb737b48fdbe09d24718
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/30/2017
 ---
 # <a name="query-expression-basics"></a>Podstawowe informacje o wyrażeniach kwerend
 
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
   
  [!code-csharp[csrefQueryExpBasics#50](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_6.cs)]  
   
- Z drugiej strony, w poniższych dwóch przykładach pokazano zmiennych, które nie są zmiennymi zapytania, nawet za pośrednictwem każdej jest inicjowany z zapytania. Nie są one zmiennych zapytania, ponieważ zapisują wyników:  
+ Z drugiej strony w poniższych dwóch przykładach pokazano zmiennych, które nie są zmiennymi zapytania, mimo że każda jest inicjowany z zapytania. Nie są one zmiennych zapytania, ponieważ zapisują wyników:  
   
  [!code-csharp[csrefQueryExpBasics#51](../../../samples/snippets/csharp/concepts/linq/query-expression-basics_7.cs)]  
   

@@ -1,0 +1,64 @@
+---
+title: .NET framework 4.7, 4.6 i 4.5
+ms.date: 10/17/2017
+ms.prod: .net-framework
+ms.technology: dotnet-clr
+ms.topic: article
+ms.custom: updateeachrelease
+f1_keywords: f61f02f2-2f20-483d-8f56-a9c8f3a54986
+helpviewer_keywords:
+- .NET Framework, documentation
+- documentation, .NET Framework
+ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
+ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 10/18/2017
+---
+# <a name="net-framework-guide"></a><span data-ttu-id="7d157-102">.NET framework — przewodnik</span><span class="sxs-lookup"><span data-stu-id="7d157-102">.NET Framework Guide</span></span>
+
+> [!NOTE]
+> <span data-ttu-id="7d157-103">Ten zestaw zawartości .NET Framework zawiera informacje o wersji systemu .NET Framework 4.5, 4.5.1, 4.5.2 i 4.6, a także 4.6.1, 4.6.2, 4.7 i 4.7.1.</span><span class="sxs-lookup"><span data-stu-id="7d157-103">This .NET Framework content set includes information for .NET Framework versions 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, and 4.7.1.</span></span> <span data-ttu-id="7d157-104">Aby pobrać program .NET Framework, zobacz [Instalowanie programu .NET Framework](../../docs/framework/install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-104">To download the .NET Framework, see [Installing the .NET Framework](../../docs/framework/install/guide-for-developers.md).</span></span> <span data-ttu-id="7d157-105">Aby uzyskać listę nowych funkcji i zmian w .NET Framework 4.5 [!INCLUDE[net_v46](../../includes/net-v46-md.md)], ich wersje punktu oraz .NET Framework 4.7 i 4.7.1, zobacz [nowości w programie .NET Framework](../../docs/framework/whats-new/index.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-105">For a list of new features and changes in the NET Framework 4.5, the [!INCLUDE[net_v46](../../includes/net-v46-md.md)], their point releases, and the .NET Framework 4.7 and 4.7.1, see [What's New in the .NET Framework](../../docs/framework/whats-new/index.md).</span></span> <span data-ttu-id="7d157-106">Aby uzyskać listę obsługiwanych platform, zobacz [wymagania systemowe programu .NET Framework](../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-106">For a list of supported platforms, see [.NET Framework System Requirements](../../docs/framework/get-started/system-requirements.md).</span></span> 
+
+<span data-ttu-id="7d157-107">.NET Framework jest to platforma programistyczna do tworzenia aplikacji sieci web, systemu Windows, Windows Phone, Windows Server i Microsoft Azure.</span><span class="sxs-lookup"><span data-stu-id="7d157-107">The .NET Framework is a development platform for building apps for web, Windows, Windows Phone, Windows Server, and Microsoft Azure.</span></span> <span data-ttu-id="7d157-108">Zawiera środowisko uruchomieniowe języka wspólnego (CLR) i biblioteki klas .NET Framework, która zawiera wiele funkcji oraz pomocy technicznej dla wielu standardy branżowe.</span><span class="sxs-lookup"><span data-stu-id="7d157-108">It consists of the common language runtime (CLR) and the .NET Framework class library, which includes a broad range of functionality and support for many industry standards.</span></span>
+
+<span data-ttu-id="7d157-109">.NET Framework zapewnia wiele usług, w tym zarządzania pamięcią, typ i pamięci bezpieczeństwa, zabezpieczeń, sieci i wdrożenia aplikacji.</span><span class="sxs-lookup"><span data-stu-id="7d157-109">The .NET Framework provides many services, including memory management, type and memory safety, security, networking, and application deployment.</span></span> <span data-ttu-id="7d157-110">Udostępnia struktur danych łatwy w użyciu i interfejsów API niższego poziomu systemu operacyjnego jako abstract.</span><span class="sxs-lookup"><span data-stu-id="7d157-110">It provides easy-to-use data structures and APIs that abstract the lower-level Windows operating system.</span></span> <span data-ttu-id="7d157-111">Z programu .NET Framework, w tym C#, F # i Visual Basic, można użyć różnych języków programowania.</span><span class="sxs-lookup"><span data-stu-id="7d157-111">You can use a variety of programming languages with the .NET Framework, including C#, F#, and Visual Basic.</span></span>  
+
+<span data-ttu-id="7d157-112">Aby uzyskać ogólne wprowadzenie do programu .NET Framework dla użytkowników i deweloperów, zobacz [wprowadzenie](../../docs/framework/get-started/index.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-112">For a general introduction to the .NET Framework for both users and developers, see [Getting Started](../../docs/framework/get-started/index.md).</span></span> <span data-ttu-id="7d157-113">Aby obejrzeć wprowadzenie do architektury i najważniejsze funkcje programu .NET Framework, zobacz [omówienie](../../docs/framework/get-started/overview.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-113">For an introduction to the architecture and key features of the .NET Framework, see the [overview](../../docs/framework/get-started/overview.md).</span></span>  
+
+<span data-ttu-id="7d157-114">.NET Framework może służyć z Docker i [kontenery Windows](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).</span><span class="sxs-lookup"><span data-stu-id="7d157-114">The .NET Framework can be used with Docker and with [Windows Containers](https://msdn.microsoft.com/virtualization/windowscontainers/about/about_overview).</span></span> <span data-ttu-id="7d157-115">Zobacz [aplikacji wdrażanie .NET Framework z rozwiązaniem Docker z](./docker/index.md) więcej informacji na temat do uruchomienia aplikacji w kontenerach Docker.</span><span class="sxs-lookup"><span data-stu-id="7d157-115">See [Deploying .NET Framework applications with Docker](./docker/index.md) to learn how to run your applications in Docker containers.</span></span>
+
+## <a name="installation"></a><span data-ttu-id="7d157-116">Instalacja</span><span class="sxs-lookup"><span data-stu-id="7d157-116">Installation</span></span>
+
+<span data-ttu-id="7d157-117">.NET Framework jest dostarczany z systemu Windows, co umożliwia uruchamianie aplikacji .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-117">The .NET Framework comes with Windows, enabling you to run .NET Framework applications.</span></span> <span data-ttu-id="7d157-118">Nowsza wersja programu .NET Framework nie pochodzi z wersją systemu Windows może być konieczne.</span><span class="sxs-lookup"><span data-stu-id="7d157-118">You may need a later version of the .NET Framework than comes with your Windows version.</span></span> <span data-ttu-id="7d157-119">Aby uzyskać więcej informacji, zobacz [Zainstaluj program .NET Framework w systemie Windows](./install/index.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-119">For more information, see [Install the .NET Framework on Windows](./install/index.md).</span></span>
+
+<span data-ttu-id="7d157-120">Zobacz [naprawy programu .NET Framework](./install/repair.md) informacje na temat napraw instalację programu .NET Framework, jeśli występują błędy podczas instalowania programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-120">See [Repair the .NET Framework](./install/repair.md) to learn how to repair your .NET Framework installation if you are experiencing errors when installing the .NET Framework.</span></span>
+
+<span data-ttu-id="7d157-121">Aby uzyskać bardziej szczegółowe informacje dotyczące pobierania programu .NET Framework, zobacz [Zainstaluj program .NET Framework dla deweloperów](../../docs/framework/install/guide-for-developers.md).</span><span class="sxs-lookup"><span data-stu-id="7d157-121">For more detailed information on downloading the .NET Framework, see [Install the .NET Framework for developers](../../docs/framework/install/guide-for-developers.md).</span></span>  
+  
+## <a name="in-this-section"></a><span data-ttu-id="7d157-122">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="7d157-122">In This Section</span></span>
+
+[<span data-ttu-id="7d157-123">Nowości</span><span class="sxs-lookup"><span data-stu-id="7d157-123">What's New</span></span>](../../docs/framework/whats-new/index.md)  
+<span data-ttu-id="7d157-124">Opis najważniejszych nowych funkcji i zmian w najnowszych wersjach programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-124">Describes key new features and changes in the latest versions of the .NET Framework.</span></span> <span data-ttu-id="7d157-125">Zawiera listy nieaktualnych typów i elementów członkowskich, a także przewodnik migracji aplikacji z poprzedniej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-125">Includes lists of obsolete types and members, and provides a guide for migrating your applications from the previous version of the .NET Framework.</span></span>  
+  
+[<span data-ttu-id="7d157-126">Wprowadzenie</span><span class="sxs-lookup"><span data-stu-id="7d157-126">Getting Started</span></span>](../../docs/framework/get-started/index.md)  
+<span data-ttu-id="7d157-127">Wyczerpujące omówienie programu .NET Framework i łącza do dodatkowych zasobów.</span><span class="sxs-lookup"><span data-stu-id="7d157-127">Provides a comprehensive overview of the .NET Framework and links to additional resources.</span></span>  
+  
+<span data-ttu-id="7d157-128">[Przewodnik po migracji](../../docs/framework/migration-guide/index.md) </span><span class="sxs-lookup"><span data-stu-id="7d157-128">[Migration Guide](../../docs/framework/migration-guide/index.md) </span></span>  
+<span data-ttu-id="7d157-129">Zawiera zasoby oraz listę zmian, które należy wziąć pod uwagę w przypadku migrowania aplikacji do nowej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-129">Provides resources and a list of changes you need to consider  if you're migrating your application to a new version of the .NET Framework.</span></span>  
+  
+[<span data-ttu-id="7d157-130">Podręcznik programowania</span><span class="sxs-lookup"><span data-stu-id="7d157-130">Development Guide</span></span>](../../docs/framework/development-guide.md)  
+<span data-ttu-id="7d157-131">Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.</span><span class="sxs-lookup"><span data-stu-id="7d157-131">Provides a guide to all key technology areas and tasks for application development, including creating, configuring, debugging, securing, and deploying your application, and information about dynamic programming, interoperability, extensibility, memory management, and threading.</span></span>  
+  
+[<span data-ttu-id="7d157-132">Narzędzia</span><span class="sxs-lookup"><span data-stu-id="7d157-132">Tools</span></span>](../../docs/framework/tools/index.md)  
+<span data-ttu-id="7d157-133">Opis narzędzi, które pomagają tworzyć, konfigurować i wdrażać aplikacje przy użyciu technologii programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-133">Describes the tools that help you develop, configure, and deploy applications by using .NET Framework technologies.</span></span>  
+  
+<span data-ttu-id="7d157-134">[Biblioteka klas programu .NET framework](/dotnet/api/?view=netframework-4.7.1) </span><span class="sxs-lookup"><span data-stu-id="7d157-134">[.NET Framework Class Library](/dotnet/api/?view=netframework-4.7.1) </span></span>  
+<span data-ttu-id="7d157-135">Opis składni, przykłady kodu i powiązane informacje dotyczące każdej klasy dostępnej w przestrzeniach nazw programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-135">Supplies syntax, code examples, and related information for each class contained in the .NET Framework namespaces.</span></span>  
+  
+[<span data-ttu-id="7d157-136">Biblioteki dodatkowe klasy i interfejsy API</span><span class="sxs-lookup"><span data-stu-id="7d157-136">Additional Class Libraries and APIs</span></span>](../../docs/framework/additional-apis/index.md)  
+<span data-ttu-id="7d157-137">Zawiera dokumentacja dla klas zawartych w poza pasmem (OOB) wersjach, a także dla klas, które odnoszą się do określonych platform lub implementacji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="7d157-137">Provides documentation for classes contained in out-of-band (OOB) releases, as well as for classes that target specific platforms or implementations of the .NET Framework.</span></span>

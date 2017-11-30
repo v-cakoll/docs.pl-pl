@@ -1,0 +1,1 @@
+Rozszerzony metaplik (EMF)

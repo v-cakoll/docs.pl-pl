@@ -1,0 +1,1 @@
+System operacyjny Windows 7

@@ -1,0 +1,1 @@
+Windows XP z dodatkiem SP2

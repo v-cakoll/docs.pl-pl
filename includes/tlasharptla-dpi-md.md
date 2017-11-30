@@ -1,0 +1,1 @@
+punkty na cal (dpi)

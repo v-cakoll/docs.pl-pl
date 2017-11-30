@@ -1,0 +1,1 @@
+atrybuty .NET Framework

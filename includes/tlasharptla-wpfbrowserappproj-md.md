@@ -1,0 +1,1 @@
+Aplikacja przeglądarki XAML (WPF)

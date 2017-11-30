@@ -1,0 +1,1 @@
+Interfejs użytkownika (UI)

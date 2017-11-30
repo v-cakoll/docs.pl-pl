@@ -1,0 +1,1 @@
+Eksplorator plików

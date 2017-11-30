@@ -1,0 +1,1 @@
+Otwarte konwencje pakietów (OPC)

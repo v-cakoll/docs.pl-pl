@@ -1,0 +1,1 @@
+mapa bitowa (BMP)

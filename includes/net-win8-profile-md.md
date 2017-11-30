@@ -1,0 +1,1 @@
+Platforma .NET dla aplikacji do Sklepu Windows 8.x

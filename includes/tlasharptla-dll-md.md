@@ -1,0 +1,1 @@
+biblioteka dołączana dynamicznie (DLL)

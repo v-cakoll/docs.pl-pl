@@ -1,0 +1,1 @@
+graficzny interfejs użytkownika (GUI)

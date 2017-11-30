@@ -1,0 +1,1 @@
+Komputer typu tablet

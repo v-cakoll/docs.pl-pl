@@ -1,0 +1,1 @@
+Aby uzyskać więcej informacji, zobacz

@@ -1,0 +1,1 @@
+4.6, 4.5.2, aktualizacja do wersji 4.5.1 (listopad 2013)

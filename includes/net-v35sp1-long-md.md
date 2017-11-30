@@ -1,0 +1,1 @@
+.NET Framework 3.5 z dodatkiem Service Pack 1

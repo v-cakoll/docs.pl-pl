@@ -1,0 +1,1 @@
+4.6, 4.5.2, 4.5.1, 4.5, 4, 3.5 z dodatkiem SP1, 3.5, 3.0 z dodatkiem SP1, 3.0

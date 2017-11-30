@@ -1,0 +1,1 @@
+Automatyzacja interfejsu użytkownika

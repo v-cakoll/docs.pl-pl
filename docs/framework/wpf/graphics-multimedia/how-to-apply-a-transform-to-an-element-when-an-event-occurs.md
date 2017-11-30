@@ -1,0 +1,53 @@
+---
+title: "Jak zastosować przekształcenie do elementu kiedy wystąpi zdarzenie"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-wpf
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- csharp
+- vb
+helpviewer_keywords:
+- graphics [WPF], transformations as event responses
+- properties [WPF], LayoutTransform
+- transformations as event responses [WPF]
+- properties [WPF], RenderTransform
+- LayoutTransform property [WPF]
+ms.assetid: 71e4327e-ca57-444c-a3cf-09fb381491a0
+caps.latest.revision: "11"
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 58ef8c008eea4c10228ebb10ceadb5806dfbc0f4
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="how-to-apply-a-transform-to-an-element-when-an-event-occurs"></a>Jak zastosować przekształcenie do elementu kiedy wystąpi zdarzenie
+W tym przykładzie pokazano, jak zastosować <xref:System.Windows.Media.ScaleTransform> po wystąpieniu zdarzenia. Pojęcia, które przedstawiono w tym miejscu jest taki sam, służące do stosowania innych typów przekształcenia. Aby uzyskać więcej informacji na temat dostępnych typów przekształcenia, zobacz <xref:System.Windows.Media.Transform> klasy lub [przekształca omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md).  
+  
+ Transformacja można zastosować do elementu w jeden z tych dwóch sposobów:  
+  
+-   Jeśli chcesz *nie* mają transformacji mają wpływ na układ, należy użyć <xref:System.Windows.UIElement.RenderTransform%2A> właściwości elementu.  
+  
+-   Przekształcenie do mają wpływ na układ, należy użyć <xref:System.Windows.FrameworkElement.LayoutTransform%2A> właściwości elementu.  
+  
+ Następujący przykład dotyczy <xref:System.Windows.Media.ScaleTransform> do <xref:System.Windows.UIElement.RenderTransform%2A> właściwość przycisku. Gdy wskaźnik myszy przesuwa się nad przycisku <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> i <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> właściwości <xref:System.Windows.Media.ScaleTransform> ustawiono `2`, co powoduje, że przycisk, aby stać się zbyt duży. Gdy wskaźnik myszy przesunięty poza, <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> i <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> ustawiono `1`, co powoduje, że przycisk, aby wrócić do oryginalnego rozmiaru.  
+  
+## <a name="example"></a>Przykład  
+ [!code-xaml[ButtonTransform#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml#1)]  
+  
+ [!code-csharp[ButtonTransform#1cb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ButtonTransform/CSharp/ButtonTransformExample.xaml.cs#1cb)]
+ [!code-vb[ButtonTransform#1cb](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ButtonTransform/VisualBasic/ButtonTransformExample.xaml.vb#1cb)]  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Windows.Media.Transform>  
+ <xref:System.Windows.Media.ScaleTransform>  
+ [Przekształca — omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

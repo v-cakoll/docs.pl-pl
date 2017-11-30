@@ -1,0 +1,66 @@
+---
+title: "Porady: określanie, czy dwa obiekty są powiązane (Visual Basic)"
+ms.custom: 
+ms.date: 07/20/2015
+ms.prod: .net
+ms.reviewer: 
+ms.suite: 
+ms.technology: devlang-visual-basic
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inheritance [Visual Basic], Visual Basic objects
+- objects [Visual Basic], inheritance
+- object variables [Visual Basic], determining relation
+ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
+caps.latest.revision: "7"
+author: dotnet-bot
+ms.author: dotnetcontent
+ms.openlocfilehash: 7824742459fca355c0043ad8ed20a26330402c05
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>Porady: określanie, czy dwa obiekty są powiązane (Visual Basic)
+Możesz porównać dwa obiekty określenia relacji między klasami, z których są tworzone. <xref:System.Type.IsInstanceOfType%2A> Metody <xref:System.Type?displayProperty=nameWithType> klasy zwraca `True` czy określonej klasy dziedziczy z klasy, czy bieżący typ jest interfejsem obsługiwane przez określonej klasy.  
+  
+### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>Aby określić, jeśli jeden obiekt dziedziczy z klasy lub interfejsu innego obiektu.  
+  
+1.  W obiekcie uważasz, że może być typu podstawowego, wywołaj <xref:System.Object.GetType%2A> metody.  
+  
+2.  Na <xref:System.Type?displayProperty=nameWithType> obiektu zwróconego przez <xref:System.Object.GetType%2A>, wywołaj <xref:System.Type.IsInstanceOfType%2A> metody.  
+  
+3.  Na liście argumentów dla <xref:System.Type.IsInstanceOfType%2A>, określ uważasz, że obiekt może być typu pochodnego.  
+  
+     <xref:System.Type.IsInstanceOfType%2A>Zwraca `True` jeśli jego typ argumentu dziedziczy <xref:System.Type?displayProperty=nameWithType> typu obiektu.  
+  
+## <a name="example"></a>Przykład  
+ Poniższy przykład określa, czy jeden obiekt reprezentuje klasę pochodzącą od klasy innego obiektu.  
+  
+```  
+Public Class baseClass  
+End Class  
+Public Class derivedClass : Inherits baseClass  
+End Class  
+Public Class testTheseClasses  
+    Public Sub seeIfRelated()  
+        Dim baseObj As Object = New baseClass()  
+        Dim derivedObj As Object = New derivedClass()  
+        Dim related As Boolean  
+        related = baseObj.GetType().IsInstanceOfType(derivedObj)  
+        MsgBox(CStr(related))  
+    End Sub  
+End Class  
+```  
+  
+ Należy pamiętać, nieoczekiwany umieszczania zmiennych dwóch obiektów w wywołaniu <xref:System.Type.IsInstanceOfType%2A>. Domniemana typ podstawowy jest używany do generowania <xref:System.Type?displayProperty=nameWithType> klasy i właściwego typu pochodnego jest przekazywany jako argument <xref:System.Type.IsInstanceOfType%2A> metody.  
+  
+## <a name="see-also"></a>Zobacz też  
+ <xref:System.Object.GetType%2A>  
+ <xref:System.Type?displayProperty=nameWithType>  
+ <xref:System.Type.IsInstanceOfType%2A>  
+ [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
+ [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
+ [Porady: Określanie, czy dwa obiekty są identyczne](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

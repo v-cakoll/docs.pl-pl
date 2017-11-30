@@ -19,29 +19,29 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5061ce28c4a09f445267c99420bf1942d99076bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 00b0b5ee330a606ae7417185a804f3d37ab6664a
+ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 11/28/2017
 ---
-# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="a830d-102">ISymUnmanagedBinder — Interfejs</span><span class="sxs-lookup"><span data-stu-id="a830d-102">ISymUnmanagedBinder Interface</span></span>
-<span data-ttu-id="a830d-103">Reprezentuje integrator symbol dla kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="a830d-103">Represents a symbol binder for unmanaged code.</span></span>  
+# <a name="isymunmanagedbinder-interface"></a><span data-ttu-id="c4e04-102">ISymUnmanagedBinder — Interfejs</span><span class="sxs-lookup"><span data-stu-id="c4e04-102">ISymUnmanagedBinder Interface</span></span>
+<span data-ttu-id="c4e04-103">Reprezentuje integrator symbol dla kodu niezarządzanego.</span><span class="sxs-lookup"><span data-stu-id="c4e04-103">Represents a symbol binder for unmanaged code.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="a830d-104">Jest to zagrożenie, aby otworzyć plik programu (PDB) bazy danych z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="a830d-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="c4e04-104">Jest to zagrożenie, aby otworzyć plik programu (PDB) bazy danych z niezaufanego źródła.</span><span class="sxs-lookup"><span data-stu-id="c4e04-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a830d-105">Metody</span><span class="sxs-lookup"><span data-stu-id="a830d-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="c4e04-105">Metody</span><span class="sxs-lookup"><span data-stu-id="c4e04-105">Methods</span></span>  
   
-|<span data-ttu-id="a830d-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="a830d-106">Method</span></span>|<span data-ttu-id="a830d-107">Opis</span><span class="sxs-lookup"><span data-stu-id="a830d-107">Description</span></span>|  
+|<span data-ttu-id="c4e04-106">Metoda</span><span class="sxs-lookup"><span data-stu-id="c4e04-106">Method</span></span>|<span data-ttu-id="c4e04-107">Opis</span><span class="sxs-lookup"><span data-stu-id="c4e04-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a830d-108">GetReaderForFile — metoda</span><span class="sxs-lookup"><span data-stu-id="a830d-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="a830d-109">Podany interfejs metadanych i nazwę pliku, zwraca poprawny <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> Struktura, która będzie odczytywać symbole debugowania skojarzone z modułu.</span><span class="sxs-lookup"><span data-stu-id="a830d-109">Given a metadata interface and a file name, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> structure that will read the debugging symbols associated with the module.</span></span>|  
-|[<span data-ttu-id="a830d-110">GetReaderFromStream — metoda</span><span class="sxs-lookup"><span data-stu-id="a830d-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="a830d-111">Podany interfejs metadanych i strumienia, który zawiera magazyn symbol zwraca poprawny <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> Struktura, która będzie odczytywać debugowanie symboli z magazynu podanego symbolu.</span><span class="sxs-lookup"><span data-stu-id="a830d-111">Given a metadata interface and a stream that contains the symbol store, returns the correct <<!--zz xref:ISymUnmanagedReader --> `ISymUnmanagedReader`> structure that will read the debugging symbols from the given symbol store.</span></span>|  
+|[<span data-ttu-id="c4e04-108">GetReaderForFile — metoda</span><span class="sxs-lookup"><span data-stu-id="c4e04-108">GetReaderForFile Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)|<span data-ttu-id="c4e04-109">Podany interfejs metadanych i nazwę pliku, zwraca poprawny [ISymUnmanagedReader](isymunmanagedreader-interface.md) strukturę, która będzie odczytywać symbole debugowania skojarzone z modułu.</span><span class="sxs-lookup"><span data-stu-id="c4e04-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols associated with the module.</span></span>|  
+|[<span data-ttu-id="c4e04-110">GetReaderFromStream — metoda</span><span class="sxs-lookup"><span data-stu-id="c4e04-110">GetReaderFromStream Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderfromstream-method.md)|<span data-ttu-id="c4e04-111">Podany interfejs metadanych i strumienia, który zawiera magazyn symbol zwraca poprawny [ISymUnmanagedReader](isymunmanagedreader-interface.md) strukturę, która będzie odczytywać debugowanie symboli z magazynu podanego symbolu.</span><span class="sxs-lookup"><span data-stu-id="c4e04-111">Given a metadata interface and a stream that contains the symbol store, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) structure that will read the debugging symbols from the given symbol store.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a830d-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a830d-112">Requirements</span></span>  
- <span data-ttu-id="a830d-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a830d-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c4e04-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="c4e04-112">Requirements</span></span>  
+ <span data-ttu-id="c4e04-113">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="c4e04-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a830d-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a830d-114">See Also</span></span>  
- [<span data-ttu-id="a830d-115">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="a830d-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
- [<span data-ttu-id="a830d-116">ISymUnmanagedBinder2 — interfejs</span><span class="sxs-lookup"><span data-stu-id="a830d-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
- [<span data-ttu-id="a830d-117">ISymUnmanagedBinder3 — interfejs</span><span class="sxs-lookup"><span data-stu-id="a830d-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c4e04-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c4e04-114">See Also</span></span>  
+ [<span data-ttu-id="c4e04-115">Interfejsy magazynu symboli diagnostycznych</span><span class="sxs-lookup"><span data-stu-id="c4e04-115">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)  
+ [<span data-ttu-id="c4e04-116">ISymUnmanagedBinder2 — interfejs</span><span class="sxs-lookup"><span data-stu-id="c4e04-116">ISymUnmanagedBinder2 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-interface.md)  
+ [<span data-ttu-id="c4e04-117">ISymUnmanagedBinder3 — interfejs</span><span class="sxs-lookup"><span data-stu-id="c4e04-117">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

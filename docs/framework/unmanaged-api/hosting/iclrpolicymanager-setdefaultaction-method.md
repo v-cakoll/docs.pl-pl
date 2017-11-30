@@ -1,0 +1,85 @@
+---
+title: "ICLRPolicyManager::SetDefaultAction — Metoda"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: reference
+api_name: ICLRPolicyManager.SetDefaultAction
+api_location: mscoree.dll
+api_type: COM
+f1_keywords: ICLRPolicyManager::SetDefaultAction
+helpviewer_keywords:
+- SetDefaultAction method [.NET Framework hosting]
+- ICLRPolicyManager::SetDefaultAction method [.NET Framework hosting]
+ms.assetid: f9411e7a-27df-451f-9f6c-d643d6a7a7ce
+topic_type: apiref
+caps.latest.revision: "9"
+author: rpetrusha
+ms.author: ronpet
+manager: wpickett
+ms.openlocfilehash: ecc2e35433a1021e230b45adddf3bede055d3dfd
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="iclrpolicymanagersetdefaultaction-method"></a><span data-ttu-id="655e7-102">ICLRPolicyManager::SetDefaultAction — Metoda</span><span class="sxs-lookup"><span data-stu-id="655e7-102">ICLRPolicyManager::SetDefaultAction Method</span></span>
+<span data-ttu-id="655e7-103">Określa akcję zasad, które środowisko uruchomieniowe języka wspólnego (CLR) należy wykonać po wystąpieniu określonej operacji.</span><span class="sxs-lookup"><span data-stu-id="655e7-103">Specifies the policy action the common language runtime (CLR) should take when the specified operation occurs.</span></span>  
+  
+## <a name="syntax"></a><span data-ttu-id="655e7-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="655e7-104">Syntax</span></span>  
+  
+```  
+HRESULT SetDefaultAction (  
+    [in] EClrOperation operation,  
+    [in] EPolicyAction action  
+);  
+```  
+  
+#### <a name="parameters"></a><span data-ttu-id="655e7-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="655e7-105">Parameters</span></span>  
+ `operation`  
+ <span data-ttu-id="655e7-106">[in] Jeden z [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) wartości i wskazujący akcję dla CLR, które można dostosować zachowanie.</span><span class="sxs-lookup"><span data-stu-id="655e7-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the action for which CLR behavior should be customized.</span></span>  
+  
+ `action`  
+ <span data-ttu-id="655e7-107">[in] Jeden z [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) wartości i wskazujący akcję zasad CLR powinien wykonać, gdy `operation` występuje.</span><span class="sxs-lookup"><span data-stu-id="655e7-107">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the policy action the CLR should take when `operation` occurs.</span></span>  
+  
+## <a name="return-value"></a><span data-ttu-id="655e7-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="655e7-108">Return Value</span></span>  
+  
+|<span data-ttu-id="655e7-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="655e7-109">HRESULT</span></span>|<span data-ttu-id="655e7-110">Opis</span><span class="sxs-lookup"><span data-stu-id="655e7-110">Description</span></span>|  
+|-------------|-----------------|  
+|<span data-ttu-id="655e7-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="655e7-111">S_OK</span></span>|<span data-ttu-id="655e7-112">`SetDefaultAction`zwrócona pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="655e7-112">`SetDefaultAction` returned successfully.</span></span>|  
+|<span data-ttu-id="655e7-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="655e7-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="655e7-114">Środowisko CLR nie został załadowany do procesu lub CLR jest w stanie, w którym nie można uruchamiać kodu zarządzanego lub pomyślnie przetworzyć wywołania.</span><span class="sxs-lookup"><span data-stu-id="655e7-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="655e7-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="655e7-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="655e7-116">Upłynął limit czasu wywołania.</span><span class="sxs-lookup"><span data-stu-id="655e7-116">The call timed out.</span></span>|  
+|<span data-ttu-id="655e7-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="655e7-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="655e7-118">Obiekt wywołujący nie jest właścicielem blokady.</span><span class="sxs-lookup"><span data-stu-id="655e7-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="655e7-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="655e7-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="655e7-120">Zdarzenie zostało anulowane podczas zablokowanych wątku lub włókna oczekiwał na nim.</span><span class="sxs-lookup"><span data-stu-id="655e7-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="655e7-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="655e7-121">E_FAIL</span></span>|<span data-ttu-id="655e7-122">Wystąpił nieznany błąd krytyczny.</span><span class="sxs-lookup"><span data-stu-id="655e7-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="655e7-123">Po powrocie z metody E_FAIL CLR nie jest już możliwe w ramach procesu.</span><span class="sxs-lookup"><span data-stu-id="655e7-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="655e7-124">Kolejne wywołania metody hosting zwracać HOST_E_CLRNOTAVAILABLE.</span><span class="sxs-lookup"><span data-stu-id="655e7-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="655e7-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="655e7-125">E_INVALIDARG</span></span>|<span data-ttu-id="655e7-126">Nieprawidłowy `action` określono `operation`, lub podano nieprawidłową wartość dla `operation`.</span><span class="sxs-lookup"><span data-stu-id="655e7-126">An invalid `action` was specified for the `operation`, or an invalid value was supplied for `operation`.</span></span>|  
+  
+## <a name="remarks"></a><span data-ttu-id="655e7-127">Uwagi</span><span class="sxs-lookup"><span data-stu-id="655e7-127">Remarks</span></span>  
+ <span data-ttu-id="655e7-128">Nie wszystkie wartości działania zasad można określić jako zachowanie domyślne operacjach aparatu CLR.</span><span class="sxs-lookup"><span data-stu-id="655e7-128">Not all policy action values can be specified as the default behavior for CLR operations.</span></span> <span data-ttu-id="655e7-129">`SetDefaultAction`Zazwyczaj można tylko przekazać zachowanie.</span><span class="sxs-lookup"><span data-stu-id="655e7-129">`SetDefaultAction` can typically be used only to escalate behavior.</span></span> <span data-ttu-id="655e7-130">Na przykład host można określić, że wątek przerwań przekształcone niegrzeczny wątku przerwań, ale nie można określić odwrotnie.</span><span class="sxs-lookup"><span data-stu-id="655e7-130">For example, a host can specify that thread aborts be turned into rude thread aborts, but cannot specify the opposite.</span></span> <span data-ttu-id="655e7-131">W poniższej tabeli opisano poprawne `action` wartości dla każdego możliwe `operation` wartość.</span><span class="sxs-lookup"><span data-stu-id="655e7-131">The table below describes the valid `action` values for each possible `operation` value.</span></span>  
+  
+|<span data-ttu-id="655e7-132">Wartość`operation`</span><span class="sxs-lookup"><span data-stu-id="655e7-132">Value for `operation`</span></span>|<span data-ttu-id="655e7-133">Prawidłowe wartości`action`</span><span class="sxs-lookup"><span data-stu-id="655e7-133">Valid values for `action`</span></span>|  
+|---------------------------|-------------------------------|  
+|<span data-ttu-id="655e7-134">OPR_ThreadAbort</span><span class="sxs-lookup"><span data-stu-id="655e7-134">OPR_ThreadAbort</span></span>|<span data-ttu-id="655e7-135">-eAbortThread</span><span class="sxs-lookup"><span data-stu-id="655e7-135">-   eAbortThread</span></span><br /><span data-ttu-id="655e7-136">-eRudeAbortThread</span><span class="sxs-lookup"><span data-stu-id="655e7-136">-   eRudeAbortThread</span></span><br /><span data-ttu-id="655e7-137">-eUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-137">-   eUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-138">-eRudeUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-138">-   eRudeUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-139">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-139">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-140">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-140">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-141">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-141">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-142">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-142">-   eDisableRuntime</span></span>|  
+|<span data-ttu-id="655e7-143">OPR_ThreadRudeAbortInNonCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="655e7-143">OPR_ThreadRudeAbortInNonCriticalRegion</span></span><br /><br /> <span data-ttu-id="655e7-144">OPR_ThreadRudeAbortInCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="655e7-144">OPR_ThreadRudeAbortInCriticalRegion</span></span>|<span data-ttu-id="655e7-145">-eRudeAbortThread</span><span class="sxs-lookup"><span data-stu-id="655e7-145">-   eRudeAbortThread</span></span><br /><span data-ttu-id="655e7-146">-eUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-146">-   eUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-147">-eRudeUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-147">-   eRudeUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-148">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-148">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-149">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-149">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-150">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-150">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-151">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-151">-   eDisableRuntime</span></span>|  
+|<span data-ttu-id="655e7-152">OPR_AppDomainUnload</span><span class="sxs-lookup"><span data-stu-id="655e7-152">OPR_AppDomainUnload</span></span>|<span data-ttu-id="655e7-153">-eUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-153">-   eUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-154">-eRudeUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-154">-   eRudeUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-155">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-155">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-156">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-156">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-157">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-157">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-158">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-158">-   eDisableRuntime</span></span>|  
+|<span data-ttu-id="655e7-159">OPR_AppDomainRudeUnload</span><span class="sxs-lookup"><span data-stu-id="655e7-159">OPR_AppDomainRudeUnload</span></span>|<span data-ttu-id="655e7-160">-eRudeUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-160">-   eRudeUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-161">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-161">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-162">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-162">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-163">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-163">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-164">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-164">-   eDisableRuntime</span></span>|  
+|<span data-ttu-id="655e7-165">OPR_ProcessExit</span><span class="sxs-lookup"><span data-stu-id="655e7-165">OPR_ProcessExit</span></span>|<span data-ttu-id="655e7-166">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-166">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-167">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-167">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-168">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-168">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-169">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-169">-   eDisableRuntime</span></span>|  
+|<span data-ttu-id="655e7-170">OPR_FinalizerRun</span><span class="sxs-lookup"><span data-stu-id="655e7-170">OPR_FinalizerRun</span></span>|<span data-ttu-id="655e7-171">-eNoAction</span><span class="sxs-lookup"><span data-stu-id="655e7-171">-   eNoAction</span></span><br /><span data-ttu-id="655e7-172">-eAbortThread</span><span class="sxs-lookup"><span data-stu-id="655e7-172">-   eAbortThread</span></span><br /><span data-ttu-id="655e7-173">-eRudeAbortThread</span><span class="sxs-lookup"><span data-stu-id="655e7-173">-   eRudeAbortThread</span></span><br /><span data-ttu-id="655e7-174">-eUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-174">-   eUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-175">-eRudeUnloadAppDomain</span><span class="sxs-lookup"><span data-stu-id="655e7-175">-   eRudeUnloadAppDomain</span></span><br /><span data-ttu-id="655e7-176">-eExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-176">-   eExitProcess</span></span><br /><span data-ttu-id="655e7-177">-eFastExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-177">-   eFastExitProcess</span></span><br /><span data-ttu-id="655e7-178">-eRudeExitProcess</span><span class="sxs-lookup"><span data-stu-id="655e7-178">-   eRudeExitProcess</span></span><br /><span data-ttu-id="655e7-179">-eDisableRuntime</span><span class="sxs-lookup"><span data-stu-id="655e7-179">-   eDisableRuntime</span></span>|  
+  
+## <a name="requirements"></a><span data-ttu-id="655e7-180">Wymagania</span><span class="sxs-lookup"><span data-stu-id="655e7-180">Requirements</span></span>  
+ <span data-ttu-id="655e7-181">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="655e7-181">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+  
+ <span data-ttu-id="655e7-182">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="655e7-182">**Header:** MSCorEE.h</span></span>  
+  
+ <span data-ttu-id="655e7-183">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="655e7-183">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+  
+ <span data-ttu-id="655e7-184">**Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="655e7-184">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="655e7-185">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="655e7-185">See Also</span></span>  
+ [<span data-ttu-id="655e7-186">EClrOperation — wyliczenie</span><span class="sxs-lookup"><span data-stu-id="655e7-186">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
+ [<span data-ttu-id="655e7-187">EPolicyAction — wyliczenie</span><span class="sxs-lookup"><span data-stu-id="655e7-187">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
+ [<span data-ttu-id="655e7-188">ICLRPolicyManager — interfejs</span><span class="sxs-lookup"><span data-stu-id="655e7-188">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)

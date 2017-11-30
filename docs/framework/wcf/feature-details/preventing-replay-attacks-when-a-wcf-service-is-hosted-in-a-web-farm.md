@@ -1,0 +1,30 @@
+---
+title: "Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web"
+ms.custom: 
+ms.date: 03/30/2017
+ms.prod: .net-framework
+ms.reviewer: 
+ms.suite: 
+ms.technology: dotnet-clr
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
+caps.latest.revision: "4"
+author: Erikre
+ms.author: erikre
+manager: erikre
+ms.openlocfilehash: 4ecf37ffb87ddfdd483cebcac3f5892bab43dcd6
+ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.translationtype: MT
+ms.contentlocale: pl-PL
+ms.lasthandoff: 11/21/2017
+---
+# <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a><span data-ttu-id="ffc9a-102">Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web</span><span class="sxs-lookup"><span data-stu-id="ffc9a-102">Preventing Replay Attacks When a WCF Service is Hosted in a Web Farm</span></span>
+<span data-ttu-id="ffc9a-103">Gdy korzystanie z zabezpieczeń komunikatów usługi WCF zapobiega atakom metodą powtórzeń, tworząc NONCE poza komunikatu przychodzącego i sprawdzanie wewnętrznej `InMemoryNonceCache` czy wygenerowany identyfikator JEDNORAZOWY jest obecny.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-103">When using message security WCF prevents replay attacks by creating a NONCE out of the incoming message and checking the internal `InMemoryNonceCache` to see if the generated NONCE is present.</span></span> <span data-ttu-id="ffc9a-104">Jeśli tak jest, komunikat zostanie odrzucony jako powtarzania.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-104">If it is, the message is discarded as a replay.</span></span> <span data-ttu-id="ffc9a-105">Gdy usługa WCF jest obsługiwana w kolektywie serwerów sieci web, ponieważ `InMemoryNonceCache` nie jest udostępniana między węzłami w farmie sieci web, usługa jest narażony na ataki.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-105">When a WCF service is hosted in a web farm, since the `InMemoryNonceCache` is not shared across the nodes in the web farm, the service is vulnerable to replay attacks.</span></span>  <span data-ttu-id="ffc9a-106">Aby ograniczyć ten scenariusz WCF 4.5 udostępnia punkt rozszerzalności umożliwiający implementowanie własne współużytkowanej pamięci podręcznej identyfikator JEDNORAZOWY przez wyprowadzanie klasy z klasy abstrakcyjnej <xref:System.ServiceModel.Security.NonceCache>.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-106">To mitigate this scenario WCF 4.5 provides an extensibility point that allows you to implement your own shared NONCE cache by deriving a class from the abstract class <xref:System.ServiceModel.Security.NonceCache>.</span></span>  
+  
+## <a name="noncecache-implementation"></a><span data-ttu-id="ffc9a-107">Implementacja NonceCache</span><span class="sxs-lookup"><span data-stu-id="ffc9a-107">NonceCache Implementation</span></span>  
+ <span data-ttu-id="ffc9a-108">Aby wdrożyć własny współużytkowanej pamięci podręcznej identyfikator JEDNORAZOWY, klasa wyprowadzona z <xref:System.ServiceModel.Security.NonceCache> i zastąpić <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> i <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-108">To implement your own shared NONCE cache, derive a class from <xref:System.ServiceModel.Security.NonceCache> and override the <xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> and <xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> methods.</span></span> <span data-ttu-id="ffc9a-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A>sprawdza, czy określony identyfikator JEDNORAZOWY istnieje w pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-109"><xref:System.ServiceModel.Security.NonceCache.CheckNonce%2A> will check to see if the specified NONCE exists in the cache.</span></span> <span data-ttu-id="ffc9a-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A>spróbuje dodać identyfikatora JEDNORAZOWEGO do pamięci podręcznej.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-110"><xref:System.ServiceModel.Security.NonceCache.TryAddNonce%2A> will attempt to add a NONCE to the cache.</span></span> <span data-ttu-id="ffc9a-111">Po zaimplementowaniu tej klasy można dołączenie go instancji i przypisywania go do <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> po stronie klienta wykrywania powtarzania i <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> po stronie serwera wykrywania powtarzania.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-111">Once the class is implemented, you hook it up by instantiating an instance and assigning it to <xref:System.ServiceModel.Channels.LocalClientSecuritySettings.NonceCache%2A> for client-side replay detection and <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.NonceCache%2A> for server-side replay detection.</span></span> <span data-ttu-id="ffc9a-112">Nie ma żadnych poza okno obsługi konfiguracji tej funkcji.</span><span class="sxs-lookup"><span data-stu-id="ffc9a-112">There is no out of the box configuration support for this feature.</span></span>  
+  
+## <a name="see-also"></a><span data-ttu-id="ffc9a-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ffc9a-113">See Also</span></span>  
+ [<span data-ttu-id="ffc9a-114">Zabezpieczenia komunikatów</span><span class="sxs-lookup"><span data-stu-id="ffc9a-114">Message Security</span></span>](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
+ [<span data-ttu-id="ffc9a-115">Element SymmetricSecurityBindingElement</span><span class="sxs-lookup"><span data-stu-id="ffc9a-115">SymmetricSecurityBindingElement</span></span>](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

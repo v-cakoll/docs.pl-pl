@@ -1,0 +1,1 @@
+Automatyzacja interfejsu użytkownika w oprogramowaniu firmy Microsoft

@@ -1,0 +1,1 @@
+zarządzanie prawami dostępu w systemie Microsoft Windows (RM)

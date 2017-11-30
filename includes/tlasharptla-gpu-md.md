@@ -1,0 +1,1 @@
+procesor graficzny (GPU)

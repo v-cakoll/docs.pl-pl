@@ -1,0 +1,1 @@
+Graficzny interfejs urządzenia (GDI) systemu Microsoft Windows

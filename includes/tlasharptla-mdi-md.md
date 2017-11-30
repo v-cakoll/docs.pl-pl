@@ -1,0 +1,1 @@
+Interfejs dokumentu wielokrotnego (MDI)

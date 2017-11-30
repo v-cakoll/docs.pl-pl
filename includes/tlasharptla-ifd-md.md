@@ -1,0 +1,1 @@
+katalog pliku graficznego (IFD)

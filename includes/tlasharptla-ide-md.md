@@ -1,0 +1,1 @@
+Zintegrowane środowisko projektowe (IDE)

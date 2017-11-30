@@ -1,0 +1,1 @@
+środowisko uruchomieniowe języka wspólnego (CLR)

@@ -1,0 +1,1 @@
+<span data-ttu-id="17c61-101">Identyfikatory URI</span><span class="sxs-lookup"><span data-stu-id="17c61-101">Uniform resource identifiers (URIs)</span></span>

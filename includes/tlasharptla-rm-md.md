@@ -1,0 +1,1 @@
+<span data-ttu-id="2167e-101">zarządzanie prawami dostępu w systemie Microsoft Windows (RM)</span><span class="sxs-lookup"><span data-stu-id="2167e-101">Microsoft Windows Rights Management (RM)</span></span>

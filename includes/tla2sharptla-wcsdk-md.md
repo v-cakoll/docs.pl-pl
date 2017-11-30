@@ -1,0 +1,1 @@
+<span data-ttu-id="1e04e-101">Zestaw SDK systemu Windows</span><span class="sxs-lookup"><span data-stu-id="1e04e-101">Windows SDK</span></span>

@@ -1,0 +1,1 @@
+<span data-ttu-id="524a0-101">2-W</span><span class="sxs-lookup"><span data-stu-id="524a0-101">2-D</span></span>

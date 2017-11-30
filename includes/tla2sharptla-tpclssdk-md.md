@@ -1,0 +1,1 @@
+<span data-ttu-id="f4136-101">Tablet PC SDK 1.7</span><span class="sxs-lookup"><span data-stu-id="f4136-101">Tablet PC SDK 1.7</span></span>

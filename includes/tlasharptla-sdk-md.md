@@ -1,0 +1,1 @@
+<span data-ttu-id="0610b-101">zestaw SDK</span><span class="sxs-lookup"><span data-stu-id="0610b-101">software development kit (SDK)</span></span>

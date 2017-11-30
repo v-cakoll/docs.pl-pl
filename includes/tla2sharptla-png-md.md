@@ -1,0 +1,1 @@
+<span data-ttu-id="cf4ba-101">PNG</span><span class="sxs-lookup"><span data-stu-id="cf4ba-101">PNG</span></span>

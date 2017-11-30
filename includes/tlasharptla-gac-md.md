@@ -1,0 +1,1 @@
+<span data-ttu-id="8aac4-101">globalna pamięć podręczna zestawów (GAC)</span><span class="sxs-lookup"><span data-stu-id="8aac4-101">global assembly cache (GAC)</span></span>

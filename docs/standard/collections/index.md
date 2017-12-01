@@ -16,11 +16,11 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 106ab093a277645dd54e39686a7dd5fa5c0e029e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipulować jako kolekcja. Można użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzeni nazw, aby dodać, usuwanie i modyfikowanie poszczególne elementy lub zakres elementów w kolekcji.  
@@ -63,17 +63,16 @@ Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipul
 <a name="BKMK_Choosingacollection"></a>   
 ## <a name="choosing-a-collection"></a>Wybieranie kolekcji  
  Ogólnie rzecz biorąc należy używać kolekcji ogólnych. W poniższej tabeli opisano kilka typowych scenariuszy, kolekcji i klasy kolekcji, używanego w tych scenariuszach. Jeśli jesteś nowym użytkownikiem kolekcje ogólne, ta tabela pomoże kolekcji uniwersalnej, który najlepiej zadania.  
-<!-- todo: All code-formatted API refs in the table need to be changed into links -->  
-|Chcę...|Opcji kolekcji ogólnych|Opcji kolekcji inne niż ogólne|Opcji wątkowo lub modyfikować kolekcji|  
+|Chcę...|Opcje kolekcji ogólnych|Opcje inne niż ogólne kolekcji|Opcje obsługujące wielowątkowość lub modyfikować kolekcji|  
 |-|-|-|-|  
-|Zapisywania elementów jako pary klucz wartość do szybkiego wyszukiwania według klucza|<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>|<xref:System.Collections.Hashtable><br /><br /> (Kolekcję par klucz/wartość, które są organizowanie uwzględnieniem skrótu klucza).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602?displayProperty=nameWithType><br /><br /> `ImmutableDictionary(TKey, TValue) Class`|  
-|Dostęp do elementów według indeksu|<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>|<xref:System.Array?displayProperty=nameWithType><br /><br /> <xref:System.Collections.ArrayList?displayProperty=nameWithType>|`ImmutableList(T) Class`<br /><br /> `ImmutableArray Class`|  
-|Użyj elementów pierwszy — w pierwszej — ruch wychodzący (FIFO)|<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType>|<xref:System.Collections.Queue?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType><br /><br /> `ImmutableQueue(T) Class`|  
-|Użyj danych ostatniego w pierwszym poza LIFO|<xref:System.Collections.Generic.Stack%601?displayProperty=nameWithType>|<xref:System.Collections.Stack?displayProperty=nameWithType>|<xref:System.Collections.Concurrent.ConcurrentStack%601?displayProperty=nameWithType><br /><br /> `ImmutableStack(T) Class`|  
-|Dostęp do elementów po kolei|<xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType>|Brak rekomendacji|Brak rekomendacji|  
-|Otrzymuj powiadomienia, gdy są one usunąć lub dodać do kolekcji. (implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType>)|<xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType>|Brak rekomendacji|Brak rekomendacji|  
-|Posortowane kolekcji|<xref:System.Collections.Generic.SortedList%602?displayProperty=nameWithType>|<xref:System.Collections.SortedList?displayProperty=nameWithType>|`ImmutableSortedDictionary(TKey, TValue) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
-|A ustawiony dla funkcje matematyczne|<xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType><br /><br /> <xref:System.Collections.Generic.SortedSet%601?displayProperty=nameWithType>|Brak rekomendacji|`ImmutableHashSet(T) Class`<br /><br /> `ImmutableSortedSet(T) Class`|  
+|Zapisywania elementów jako pary klucz wartość do szybkiego wyszukiwania według klucza|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (Kolekcję par klucz/wartość, które są organizowanie uwzględnieniem skrótu klucza).|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
+|Dostęp do elementów według indeksu|<xref:System.Collections.Generic.List%601>|<xref:System.Array><br /><br /> <xref:System.Collections.ArrayList>|<xref:System.Collections.Immutable.ImmutableList%601><br /><br /> <xref:System.Collections.Immutable.ImmutableArray>|  
+|Użyj elementów pierwszy — w pierwszej — ruch wychodzący (FIFO)|<xref:System.Collections.Generic.Queue%601>|<xref:System.Collections.Queue>|<xref:System.Collections.Concurrent.ConcurrentQueue%601><br /><br /> <xref:System.Collections.Immutable.ImmutableQueue%601>|  
+|Użyj danych ostatniego w pierwszym poza LIFO|<xref:System.Collections.Generic.Stack%601>|<xref:System.Collections.Stack>|<xref:System.Collections.Concurrent.ConcurrentStack%601><br /><br /> <xref:System.Collections.Immutable.ImmutableStack%601>|  
+|Dostęp do elementów po kolei|<xref:System.Collections.Generic.LinkedList%601>|Brak rekomendacji|Brak rekomendacji|  
+|Otrzymuj powiadomienia, gdy są one usunąć lub dodać do kolekcji. (implementuje <xref:System.ComponentModel.INotifyPropertyChanged> i <xref:System.Collections.Specialized.INotifyCollectionChanged>)|<xref:System.Collections.ObjectModel.ObservableCollection%601>|Brak rekomendacji|Brak rekomendacji|  
+|Posortowane kolekcji|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
+|A ustawiony dla funkcje matematyczne|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|Brak rekomendacji|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
 <a name="BKMK_RelatedTopics"></a>   
 ## <a name="related-topics"></a>Tematy pokrewne  

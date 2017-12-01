@@ -4,15 +4,15 @@ description: "Dowiedz się, jak przywrócić narzędzia specyficzne dla projektu
 keywords: polecenia interfejsu wiersza polecenia przywracania DotNet, interfejsu wiersza polecenia, .NET Core
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/30/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 82a78dcb0cc85e2ba087b6df5ee029cbfb687358
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 887f562803226d99901a6ee13175c1a43956b0cd
+ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="dotnet-restore"></a>Przywracanie DotNet
 
@@ -53,6 +53,21 @@ Dla zależności, należy określić rozmieszczenia przywróconej pakietów podc
 Dla narzędzia specyficzne dla projektu `dotnet restore` najpierw przywraca pakietu, w którym narzędzie jest spakowane, a następnie przywrócić zależności narzędzia określone w pliku projektu.
 
 Zachowanie `dotnet restore` polecenia wpływ na niektóre ustawienia w *Nuget.Config* pliku, jeśli jest obecny. Na przykład ustawienie `globalPackagesFolder` w *NuGet.Config* umieszcza przywróconej pakietów NuGet w określonym folderze. Jest to alternatywa do określania `--packages` opcja `dotnet restore` polecenia. Aby uzyskać więcej informacji, zobacz [odwołanie do pliku NuGet.Config](/nuget/schema/nuget-config-file).
+
+## <a name="implicit-dotnet-restore"></a>Niejawne`dotnet restore`
+
+Począwszy od programu .NET Core 2.0, `dotnet restore` uruchomieniu niejawnie w razie potrzeby w przypadku wysyłania następujące polecenia:
+
+- [`dotnet new`](dotnet-new.md)
+- [`dotnet build`](dotnet-build.md)
+- [`dotnet run`](dotnet-run.md)
+- [`dotnet test`](dotnet-test.md)
+- [`dotnet publish`](dotnet-publish.md)
+- [`dotnet pack`](dotnet-pack.md)
+
+W większości przypadków, nie musisz jawnie użyć `dotnet restore` polecenia. 
+
+W niektórych przypadkach jest niewygodne dla `dotnet restore` do uruchomienia niejawnie. Na przykład zautomatyzowanych systemów, takich jak systemy, należy wywołać `dotnet restore` jawnie w celu kontrolowania, podczas przywracania występuje decydować użycie sieci. Aby zapobiec `dotnet restore` z niejawnie działa, możesz użyć `--no-restore` przełącznika z dowolnego z tych poleceń, aby wyłączyć niejawne przywracania.
 
 ## <a name="arguments"></a>Argumenty
 

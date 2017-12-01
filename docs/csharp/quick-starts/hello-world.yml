@@ -13,11 +13,11 @@ metadata:
 items:
 - durationInMinutes: 1
   content: "To szybki start zawiera C# interaktywnego, za pomocą przeglądarki do zapisywania C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg — lekcje zaczynające się przy użyciu programu \"Hello World\". Że wnioski uczy również podstaw programu w języku C#.\n"
-  ms.openlocfilehash: 2089af6dbf418c87dfd28e1a2a8cf2814b40df6c
-  ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+  ms.openlocfilehash: ce1791bd7949c89269b1051d15765f5efd273e7c
+  ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 11/22/2017
+  ms.lasthandoff: 12/01/2017
 - title: Uruchom pierwszy program C#
   durationInMinutes: 2
   content: "Uruchom poniższy kod w oknie interaktywnym. Aby to zrobić, wpisz następujący blok kodu w oknie interaktywnym, a następnie kliknij przycisk **Uruchom** przycisk:\n\n```csharp\nConsole.WriteLine(\"Hello World!\");\n```\n\nGratulacje! Uruchomiono pierwszy program C#. Jest to prosty program, który wyświetla komunikat \"Hello World!\". Używana przez nią <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody wydrukowanie tej wiadomości. `Console`to typ, który reprezentuje okna konsoli. `WriteLine`jest to metoda `Console` typu, który wyświetla wiersz tekstu do konsoli tekstu.\n\nUmożliwia przenoszenie na i Poznaj więcej. Pozostała część tego lekcji Eksploruje pracy z `string` typu, który reprezentuje tekst w języku C#. Podobnie jak `Console` typu `string` typ ma metody. `string` Metody pracy z tekstem. \n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
@@ -36,4 +36,4 @@ items:
 - title: "Żądanie ukończone"
   durationInMinutes: 3
   content: "Czy można korzystać z przypominać?\n\n```csharp\nstring message = \"You say goodbye, and I say hello\";\nConsole.WriteLine(message.StartsWith(\"You\"));\nConsole.WriteLine(message.StartsWith(\"goodbye\"));\n\nConsole.WriteLine(message.EndsWith(\"hello\"));\nConsole.WriteLine(message.EndsWith(\"goodbye\"));\n```\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- content: "Zakończono szybki start \"Hello C#\".\n\nMożna kontynuować te Szybki Start na środowiska deweloperskiego. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego. Po wykonaniu tego kontynuować [numery w języku C#](numbers-in-chsarp-local.md) w środowisku lokalnym.\n\nDowiedz się więcej o pracy z `string` wpisz [C# przewodnik programowania w języku](../programming-guide/index.md) temat [ciągów](../programming-guide/strings/index.md).\0"
+- content: "Zakończono szybki start \"Hello C#\".\n\nMożna kontynuować te Szybki Start na środowiska deweloperskiego. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego. Po wykonaniu tego kontynuować [numery w języku C#](numbers-in-csharp-local.md) w środowisku lokalnym.\n\nDowiedz się więcej o pracy z `string` wpisz [C# przewodnik programowania w języku](../programming-guide/index.md) temat [ciągów](../programming-guide/strings/index.md).\0"

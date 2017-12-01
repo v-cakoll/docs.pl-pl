@@ -15,11 +15,11 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b08bd7b78a8606f61c266da51f4079f0b5f4aac6
-ms.sourcegitcommit: d0f7646d67db5809cf43ff1d27b399a4020e8ee2
+ms.openlocfilehash: 7a7dfefc144d9b0b46aeca01c219b22aaa34df8f
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/25/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -50,8 +50,8 @@ Aby uzyskać informacje na cykl pomocy technicznej wersje programu .NET Framewor
 | Aktualizacja spadek twórców systemu Windows 10 | 32-bitowe i 64-bitowych | .NET framework 4.7.1 | |
 | Aktualizacja twórców systemu Windows 10 | 32-bitowe i 64-bitowych | .NET framework 4.7 | .NET framework 4.7.1 | 
 | Rocznicowa aktualizacja systemu Windows 10 | 32-bitowe i 64-bitowych | [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|.NET framework 4.7<br/><br/>.NET framework 4.7.1 |
-| Usługa Windows Update 10 listopada | 32-bitowe i 64-bitowych | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] | |
-| Windows 10 | 32-bitowe i 64-bitowych | [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] | [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
+| Usługa Windows Update 10 listopada | 32-bitowe i 64-bitowych | .NET Framework 4.6.1 | .NET Framework 4.6.2 |
+| Windows 10 | 32-bitowe i 64-bitowych | .NET Framework 4.6 | .NET Framework 4.6.1 <br/><br/> .NET Framework 4.6.2 |
 | [!INCLUDE[win81](../../../includes/win81-md.md)] | 32-bitowy, 64-bitowy i ARM | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] | [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1 |
 | [!INCLUDE[win8](../../../includes/win8-md.md)] | 32-bitowy, 64-bitowy i ARM | [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] | [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] |
 | Windows 7 z dodatkiem SP1|32-bitowe i 64-bitowych | -- | Program .NET Framework 4<br /><br /> [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]<br /><br /> [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]<br /><br /> [!INCLUDE[net_v452](../../../includes/net-v452-md.md)]<br /><br /> [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]<br /><br /> [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]<br /><br /> [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]<br /><br />.NET framework 4.7<br/><br/>.NET framework 4.7.1|

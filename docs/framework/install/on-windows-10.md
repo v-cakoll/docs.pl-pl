@@ -8,11 +8,11 @@ ms.date: 11/17/2017
 ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net-framework
-ms.openlocfilehash: d7f8dd4c6ee9f7eeda389a955f806a5765876ea7
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: ff4867c74b4477a0407126833f30941426d4a33a
+ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/01/2017
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016"></a>Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016
 
@@ -47,11 +47,11 @@ Można zainstalować [.NET Framework 4.7.1](https://www.microsoft.com/en-us/down
 
 Jeśli używasz systemu Windows 10 1507 lub 1511 i chcesz zainstalować program .NET Framework 4.7.1, należy najpierw uaktualnić do nowszej wersji systemu Windows 10.
 
-## <a name="net-framework-461"></a>.NET Framework 4.6.1
+## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981) jest najnowsza wersja obsługiwana wersja platformy .NET w systemie Windows 10 1507 i 1511.
+[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) jest najnowsza wersja obsługiwana wersja platformy .NET w systemie Windows 10 1507 i 1511.
 
-.NET Framework 4.6.1 obsługuje aplikacje dla programu .NET Framework 4.0 za pośrednictwem 4.6.1.
+.NET Framework 4.6.2 obsługuje aplikacje dla programu .NET Framework 4.0 za pośrednictwem 4.6.2.
 
 ## <a name="net-framework-35"></a>Program .NET Framework 3,5
 

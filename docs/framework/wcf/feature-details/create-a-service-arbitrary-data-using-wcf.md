@@ -10,21 +10,21 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9541c46d029aa9f4e27a459ffcb9f32a7718039b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="a43c5-102">Porady: Tworzenie usługi czy akceptuje dowolne dane za pomocą Model programowania interfejsu REST usługi WCF</span><span class="sxs-lookup"><span data-stu-id="a43c5-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
-<span data-ttu-id="a43c5-103">Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="a43c5-104">Dotyczy to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwana przez[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="a43c5-104">This is the case when a service operation must return data in a format not supported by[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="a43c5-105">W tym temacie omówiono przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, aby utworzyć usługę, która odbiera dowolne dane.</span><span class="sxs-lookup"><span data-stu-id="a43c5-105">This topic discusses using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST Programming Model to create a service that receives arbitrary data.</span></span>  
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a><span data-ttu-id="2c410-102">Porady: Tworzenie usługi czy akceptuje dowolne dane za pomocą Model programowania interfejsu REST usługi WCF</span><span class="sxs-lookup"><span data-stu-id="2c410-102">How to: Create a Service That Accepts Arbitrary Data using the WCF REST Programming Model</span></span>
+<span data-ttu-id="2c410-103">Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-103">Sometimes developers must have full control of how data is returned from a service operation.</span></span> <span data-ttu-id="2c410-104">Dotyczy to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwana przez[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span><span class="sxs-lookup"><span data-stu-id="2c410-104">This is the case when a service operation must return data in a format not supported by[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].</span></span> <span data-ttu-id="2c410-105">W tym temacie omówiono przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, aby utworzyć usługę, która odbiera dowolne dane.</span><span class="sxs-lookup"><span data-stu-id="2c410-105">This topic discusses using the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] REST Programming Model to create a service that receives arbitrary data.</span></span>  
   
-### <a name="to-implement-the-service-contract"></a><span data-ttu-id="a43c5-106">Aby zaimplementować kontrakt usługi</span><span class="sxs-lookup"><span data-stu-id="a43c5-106">To implement the service contract</span></span>  
+### <a name="to-implement-the-service-contract"></a><span data-ttu-id="2c410-106">Aby zaimplementować kontrakt usługi</span><span class="sxs-lookup"><span data-stu-id="2c410-106">To implement the service contract</span></span>  
   
-1.  <span data-ttu-id="a43c5-107">Definiowanie kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-107">Define the service contract.</span></span> <span data-ttu-id="a43c5-108">Operację, która odbiera dane dowolnego musi mieć parametr typu <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="a43c5-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="a43c5-109">Ponadto ten parametr musi być tylko parametr przekazywany w treści żądania.</span><span class="sxs-lookup"><span data-stu-id="a43c5-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="a43c5-110">Działanie opisane w tym przykładzie również przyjmuje parametr nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="a43c5-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="a43c5-111">Ten parametr jest przekazywany w ramach adresu URL żądania.</span><span class="sxs-lookup"><span data-stu-id="a43c5-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="a43c5-112">Można określić, że parametr jest przekazywany w adresie URL, określając <xref:System.UriTemplate> w <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="a43c5-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="a43c5-113">W tym przypadku identyfikator URI używany do wywołania tej metody kończy się "UploadFile/niektóre-nazwa_pliku".</span><span class="sxs-lookup"><span data-stu-id="a43c5-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="a43c5-114">Część szablon identyfikatora URI "{filename}" Określa, że parametr nazwy pliku dla operacji jest przekazywany w identyfikatorze URI używany do wywołania operacji.</span><span class="sxs-lookup"><span data-stu-id="a43c5-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
+1.  <span data-ttu-id="2c410-107">Definiowanie kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-107">Define the service contract.</span></span> <span data-ttu-id="2c410-108">Operację, która odbiera dane dowolnego musi mieć parametr typu <xref:System.IO.Stream>.</span><span class="sxs-lookup"><span data-stu-id="2c410-108">The operation that receives the arbitrary data must have a parameter of type <xref:System.IO.Stream>.</span></span> <span data-ttu-id="2c410-109">Ponadto ten parametr musi być tylko parametr przekazywany w treści żądania.</span><span class="sxs-lookup"><span data-stu-id="2c410-109">In addition, this parameter must be the only parameter passed in the body of the request.</span></span> <span data-ttu-id="2c410-110">Działanie opisane w tym przykładzie również przyjmuje parametr nazwy pliku.</span><span class="sxs-lookup"><span data-stu-id="2c410-110">The operation described in this example also takes a filename parameter.</span></span> <span data-ttu-id="2c410-111">Ten parametr jest przekazywany w ramach adresu URL żądania.</span><span class="sxs-lookup"><span data-stu-id="2c410-111">This parameter is passed within the URL of the request.</span></span> <span data-ttu-id="2c410-112">Można określić, że parametr jest przekazywany w adresie URL, określając <xref:System.UriTemplate> w <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span><span class="sxs-lookup"><span data-stu-id="2c410-112">You can specify that a parameter is passed within the URL by specifying a <xref:System.UriTemplate> in the <xref:System.ServiceModel.Web.WebInvokeAttribute>.</span></span> <span data-ttu-id="2c410-113">W tym przypadku identyfikator URI używany do wywołania tej metody kończy się "UploadFile/niektóre-nazwa_pliku".</span><span class="sxs-lookup"><span data-stu-id="2c410-113">In this case the URI used to call this method ends in "UploadFile/Some-Filename".</span></span> <span data-ttu-id="2c410-114">Część szablon identyfikatora URI "{filename}" Określa, że parametr nazwy pliku dla operacji jest przekazywany w identyfikatorze URI używany do wywołania operacji.</span><span class="sxs-lookup"><span data-stu-id="2c410-114">The "{filename}" portion of the URI template specifies that the filename parameter for the operation is passed within the URI used to call the operation.</span></span>  
   
     ```csharp  
      [ServiceContract]  
@@ -35,7 +35,7 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-2.  <span data-ttu-id="a43c5-115">Implementowanie kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-115">Implement the service contract.</span></span> <span data-ttu-id="a43c5-116">Kontrakt ma tylko jedną metodę `UploadFile` odbierająca pliku dowolne dane w strumieniu.</span><span class="sxs-lookup"><span data-stu-id="a43c5-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="a43c5-117">Operacja odczytuje strumienia liczby bajtów do odczytu, a następnie wyświetla nazwę pliku i liczba bajtów odczytanych.</span><span class="sxs-lookup"><span data-stu-id="a43c5-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
+2.  <span data-ttu-id="2c410-115">Implementowanie kontraktu usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-115">Implement the service contract.</span></span> <span data-ttu-id="2c410-116">Kontrakt ma tylko jedną metodę `UploadFile` odbierająca pliku dowolne dane w strumieniu.</span><span class="sxs-lookup"><span data-stu-id="2c410-116">The contract has only one method, `UploadFile` that receives a file of arbitrary data in a stream.</span></span> <span data-ttu-id="2c410-117">Operacja odczytuje strumienia liczby bajtów do odczytu, a następnie wyświetla nazwę pliku i liczba bajtów odczytanych.</span><span class="sxs-lookup"><span data-stu-id="2c410-117">The operation reads the stream counting the number of bytes read and then displays the filename and the number of bytes read.</span></span>  
   
     ```csharp  
     public class RawDataService : IReceiveData  
@@ -54,9 +54,9 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="a43c5-118">Do obsługi usługi</span><span class="sxs-lookup"><span data-stu-id="a43c5-118">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="2c410-118">Do obsługi usługi</span><span class="sxs-lookup"><span data-stu-id="2c410-118">To host the service</span></span>  
   
-1.  <span data-ttu-id="a43c5-119">Utwórz aplikację konsoli do obsługi usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-119">Create a console application to host the service.</span></span>  
+1.  <span data-ttu-id="2c410-119">Utwórz aplikację konsoli do obsługi usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-119">Create a console application to host the service.</span></span>  
   
     ```csharp  
     class Program  
@@ -67,47 +67,47 @@ ms.lasthandoff: 11/21/2017
     }  
     ```  
   
-2.  <span data-ttu-id="a43c5-120">Utwórz zmienną do przechowywania adres podstawowy usługi w ramach `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="a43c5-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
+2.  <span data-ttu-id="2c410-120">Utwórz zmienną do przechowywania adres podstawowy usługi w ramach `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="2c410-120">Create a variable to hold the base address for the service within the `Main` method.</span></span>  
   
     ```csharp  
     string baseAddress = "http://" + Environment.MachineName + ":8000/Service";  
     ```  
   
-3.  <span data-ttu-id="a43c5-121">Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, który określa klasę usługi i adres podstawowy.</span><span class="sxs-lookup"><span data-stu-id="a43c5-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
+3.  <span data-ttu-id="2c410-121">Utwórz <xref:System.ServiceModel.ServiceHost> wystąpienie usługi, który określa klasę usługi i adres podstawowy.</span><span class="sxs-lookup"><span data-stu-id="2c410-121">Create a <xref:System.ServiceModel.ServiceHost> instance for the service that specifies the service class and the base address.</span></span>  
   
     ```csharp  
     ServiceHost host = new ServiceHost(typeof(RawDataService), new Uri(baseAddress));  
     ```  
   
-4.  <span data-ttu-id="a43c5-122">Dodawanie punktu końcowego, który określa kontrakt <xref:System.ServiceModel.WebHttpBinding>, i <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="a43c5-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
+4.  <span data-ttu-id="2c410-122">Dodawanie punktu końcowego, który określa kontrakt <xref:System.ServiceModel.WebHttpBinding>, i <xref:System.ServiceModel.Description.WebHttpBehavior>.</span><span class="sxs-lookup"><span data-stu-id="2c410-122">Add an endpoint that specifies the contract, <xref:System.ServiceModel.WebHttpBinding>, and <xref:System.ServiceModel.Description.WebHttpBehavior>.</span></span>  
   
     ```csharp  
     host.AddServiceEndpoint(typeof(IReceiveData), new WebHttpBinding(), "").Behaviors.Add(new WebHttpBehavior());  
     ```  
   
-5.  <span data-ttu-id="a43c5-123">Otworzyć hosta usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-123">Open the service host.</span></span> <span data-ttu-id="a43c5-124">Usługa jest teraz gotowa do odbierania żądań.</span><span class="sxs-lookup"><span data-stu-id="a43c5-124">The service is now ready to receive requests.</span></span>  
+5.  <span data-ttu-id="2c410-123">Otworzyć hosta usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-123">Open the service host.</span></span> <span data-ttu-id="2c410-124">Usługa jest teraz gotowa do odbierania żądań.</span><span class="sxs-lookup"><span data-stu-id="2c410-124">The service is now ready to receive requests.</span></span>  
   
     ```csharp  
     host.Open();  
     Console.WriteLine("Host opened");  
     ```  
   
-### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="a43c5-125">Aby programowo wywołania tej usługi</span><span class="sxs-lookup"><span data-stu-id="a43c5-125">To call the service programmatically</span></span>  
+### <a name="to-call-the-service-programmatically"></a><span data-ttu-id="2c410-125">Aby programowo wywołania tej usługi</span><span class="sxs-lookup"><span data-stu-id="2c410-125">To call the service programmatically</span></span>  
   
-1.  <span data-ttu-id="a43c5-126">Utwórz <xref:System.Net.HttpWebRequest> o identyfikatorze URI używany do wywołania tej usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="a43c5-127">W tym kodzie adres podstawowy jest połączona z `"/UploadFile/Text"`.</span><span class="sxs-lookup"><span data-stu-id="a43c5-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="a43c5-128">`"UploadFile"` Część identyfikatora URI określa operacja do wywołania.</span><span class="sxs-lookup"><span data-stu-id="a43c5-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="a43c5-129">`"Test.txt"` Część identyfikatora URI określa parametr nazwy pliku do przekazania do `UploadFile` operacji.</span><span class="sxs-lookup"><span data-stu-id="a43c5-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="a43c5-130">Obie te elementy mapowania <xref:System.UriTemplate> dotyczą kontrakt operacji.</span><span class="sxs-lookup"><span data-stu-id="a43c5-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
+1.  <span data-ttu-id="2c410-126">Utwórz <xref:System.Net.HttpWebRequest> o identyfikatorze URI używany do wywołania tej usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-126">Create a <xref:System.Net.HttpWebRequest> with the URI used to call the service.</span></span> <span data-ttu-id="2c410-127">W tym kodzie adres podstawowy jest połączona z `"/UploadFile/Text"`.</span><span class="sxs-lookup"><span data-stu-id="2c410-127">In this code, the base address is combined with `"/UploadFile/Text"`.</span></span> <span data-ttu-id="2c410-128">`"UploadFile"` Część identyfikatora URI określa operacja do wywołania.</span><span class="sxs-lookup"><span data-stu-id="2c410-128">The `"UploadFile"` portion of the URI specifies the operation to call.</span></span> <span data-ttu-id="2c410-129">`"Test.txt"` Część identyfikatora URI określa parametr nazwy pliku do przekazania do `UploadFile` operacji.</span><span class="sxs-lookup"><span data-stu-id="2c410-129">The `"Test.txt"` portion of the URI specifies the filename parameter to pass to the `UploadFile` operation.</span></span> <span data-ttu-id="2c410-130">Obie te elementy mapowania <xref:System.UriTemplate> dotyczą kontrakt operacji.</span><span class="sxs-lookup"><span data-stu-id="2c410-130">Both of these items map to the <xref:System.UriTemplate> applied to the operation contract.</span></span>  
   
     ```csharp  
     HttpWebRequest req = (HttpWebRequest)HttpWebRequest.Create(baseAddress + "/UploadFile/Test.txt");  
     ```  
   
-2.  <span data-ttu-id="a43c5-131">Ustaw <xref:System.Net.HttpWebRequest.Method%2A> właściwość <xref:System.Net.HttpWebRequest> do `POST` i <xref:System.Net.HttpWebRequest.ContentType%2A> właściwości `"text/plain"`.</span><span class="sxs-lookup"><span data-stu-id="a43c5-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="a43c5-132">Informuje usługi, czy kod jest wysyłanie danych i, że dane są w postaci zwykłego tekstu.</span><span class="sxs-lookup"><span data-stu-id="a43c5-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
+2.  <span data-ttu-id="2c410-131">Ustaw <xref:System.Net.HttpWebRequest.Method%2A> właściwość <xref:System.Net.HttpWebRequest> do `POST` i <xref:System.Net.HttpWebRequest.ContentType%2A> właściwości `"text/plain"`.</span><span class="sxs-lookup"><span data-stu-id="2c410-131">Set the <xref:System.Net.HttpWebRequest.Method%2A> property of the <xref:System.Net.HttpWebRequest> to `POST` and the <xref:System.Net.HttpWebRequest.ContentType%2A> property to `"text/plain"`.</span></span> <span data-ttu-id="2c410-132">Informuje usługi, czy kod jest wysyłanie danych i, że dane są w postaci zwykłego tekstu.</span><span class="sxs-lookup"><span data-stu-id="2c410-132">This tells the service that the code is sending data and that data is in plain text.</span></span>  
   
     ```csharp  
     req.Method = "POST";  
     req.ContentType = "text/plain";  
     ```  
   
-3.  <span data-ttu-id="a43c5-133">Wywołanie <xref:System.Net.HttpWebRequest.GetRequestStream%2A> uzyskanie strumienia żądania tworzenia danych do wysyłania, zapisać danych do strumienia żądania i zamykać strumień.</span><span class="sxs-lookup"><span data-stu-id="a43c5-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
+3.  <span data-ttu-id="2c410-133">Wywołanie <xref:System.Net.HttpWebRequest.GetRequestStream%2A> uzyskanie strumienia żądania tworzenia danych do wysyłania, zapisać danych do strumienia żądania i zamykać strumień.</span><span class="sxs-lookup"><span data-stu-id="2c410-133">Call <xref:System.Net.HttpWebRequest.GetRequestStream%2A> to get the request stream, create the data to send, write that data to the request stream, and close the stream.</span></span>  
   
     ```csharp  
     Stream reqStream = req.GetRequestStream();  
@@ -120,21 +120,21 @@ ms.lasthandoff: 11/21/2017
     reqStream.Close();  
     ```  
   
-4.  <span data-ttu-id="a43c5-134">Pobrać odpowiedzi z usługi przez wywołanie metody <xref:System.Net.HttpWebRequest.GetResponse%2A> i wyświetlać dane odpowiedzi do konsoli.</span><span class="sxs-lookup"><span data-stu-id="a43c5-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
+4.  <span data-ttu-id="2c410-134">Pobrać odpowiedzi z usługi przez wywołanie metody <xref:System.Net.HttpWebRequest.GetResponse%2A> i wyświetlać dane odpowiedzi do konsoli.</span><span class="sxs-lookup"><span data-stu-id="2c410-134">Get the response from the service by calling <xref:System.Net.HttpWebRequest.GetResponse%2A> and display the response data to the console.</span></span>  
   
     ```csharp  
     HttpWebResponse resp = (HttpWebResponse)req.GetResponse();  
     Console.WriteLine("Client: Receive Response HTTP/{0} {1} {2}", resp.ProtocolVersion, (int)resp.StatusCode, resp.StatusDescription);  
     ```  
   
-5.  <span data-ttu-id="a43c5-135">Zamknij hosta usługi.</span><span class="sxs-lookup"><span data-stu-id="a43c5-135">Close the service host.</span></span>  
+5.  <span data-ttu-id="2c410-135">Zamknij hosta usługi.</span><span class="sxs-lookup"><span data-stu-id="2c410-135">Close the service host.</span></span>  
   
     ```csharp  
     host.Close();  
     ```  
   
-## <a name="example"></a><span data-ttu-id="a43c5-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="a43c5-136">Example</span></span>  
- <span data-ttu-id="a43c5-137">Poniżej znajduje się pełna lista kodu w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="a43c5-137">The following is a complete listing of the code for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="2c410-136">Przykład</span><span class="sxs-lookup"><span data-stu-id="2c410-136">Example</span></span>  
+ <span data-ttu-id="2c410-137">Poniżej znajduje się pełna lista kodu w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="2c410-137">The following is a complete listing of the code for this example.</span></span>  
   
 ```csharp  
 using System;  
@@ -199,11 +199,11 @@ namespace ReceiveRawData
 }  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="a43c5-138">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="a43c5-138">Compiling the Code</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2c410-138">Kompilowanie kodu</span><span class="sxs-lookup"><span data-stu-id="2c410-138">Compiling the Code</span></span>  
   
--   <span data-ttu-id="a43c5-139">Podczas kompilowania kodu odwołania System.ServiceModel.dll i System.ServiceModel.Web.dll</span><span class="sxs-lookup"><span data-stu-id="a43c5-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
+-   <span data-ttu-id="2c410-139">Podczas kompilowania kodu odwołania System.ServiceModel.dll i System.ServiceModel.Web.dll</span><span class="sxs-lookup"><span data-stu-id="2c410-139">When compiling the code reference System.ServiceModel.dll and System.ServiceModel.Web.dll</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a43c5-140">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a43c5-140">See Also</span></span>  
- [<span data-ttu-id="a43c5-141">Obiekt UriTemplate i UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="a43c5-141">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
- [<span data-ttu-id="a43c5-142">Model programowania protokołu HTTP sieci Web WCF</span><span class="sxs-lookup"><span data-stu-id="a43c5-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
- [<span data-ttu-id="a43c5-143">Omówienie modelu programowania protokołu HTTP sieci Web WCF</span><span class="sxs-lookup"><span data-stu-id="a43c5-143">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2c410-140">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2c410-140">See Also</span></span>  
+ [<span data-ttu-id="2c410-141">Obiekt UriTemplate i UriTemplateTable</span><span class="sxs-lookup"><span data-stu-id="2c410-141">UriTemplate and UriTemplateTable</span></span>](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
+ [<span data-ttu-id="2c410-142">Model programowania protokołu HTTP sieci Web WCF</span><span class="sxs-lookup"><span data-stu-id="2c410-142">WCF Web HTTP Programming Model</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [<span data-ttu-id="2c410-143">Omówienie modelu programowania protokołu HTTP sieci Web WCF</span><span class="sxs-lookup"><span data-stu-id="2c410-143">WCF Web HTTP Programming Model Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

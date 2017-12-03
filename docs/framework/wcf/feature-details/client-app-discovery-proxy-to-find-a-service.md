@@ -10,34 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 09c75ff3c19110a4ed97d8b95a4f63174cba0406
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc6b3a056aaa7aa6cb0a57c72b9591393ca0aff2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="ac21e-102">Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="ac21e-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
-<span data-ttu-id="ac21e-103">Ten temat dotyczy innych trzy tematy, który zawiera omówienie sposobu wdrażania serwera proxy odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="ac21e-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="ac21e-104">W poprzedniej części tematu [porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), zostanie zaimplementowana [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która rejestruje się przy użyciu serwera proxy odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="ac21e-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="ac21e-105">W tym temacie można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który używa serwera proxy odnajdywania można znaleźć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.</span><span class="sxs-lookup"><span data-stu-id="ac21e-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a><span data-ttu-id="96dfb-102">Instrukcje: Wdrażanie aplikacji klienta znajdującej usługę przy użyciu serwera proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="96dfb-102">How to: Implement a Client Application that Uses the Discovery Proxy to Find a Service</span></span>
+<span data-ttu-id="96dfb-103">Ten temat dotyczy innych trzy tematy, który zawiera omówienie sposobu wdrażania serwera proxy odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="96dfb-103">This topic is the third of three topics that discusses how to implement a discovery proxy.</span></span> <span data-ttu-id="96dfb-104">W poprzedniej części tematu [porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), zostanie zaimplementowana [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która rejestruje się przy użyciu serwera proxy odnajdywania.</span><span class="sxs-lookup"><span data-stu-id="96dfb-104">In the previous topic, [How to: Implement a Discoverable Service that Registers with the Discovery Proxy](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md), you implemented a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service that registers itself with the discovery proxy.</span></span> <span data-ttu-id="96dfb-105">W tym temacie można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, który używa serwera proxy odnajdywania można znaleźć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.</span><span class="sxs-lookup"><span data-stu-id="96dfb-105">In this topic you create a [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] client that uses the discovery proxy to find the [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] service.</span></span>  
   
-### <a name="implement-the-client"></a><span data-ttu-id="ac21e-106">Wdrożenia klienta</span><span class="sxs-lookup"><span data-stu-id="ac21e-106">Implement the client</span></span>  
+### <a name="implement-the-client"></a><span data-ttu-id="96dfb-106">Wdrożenia klienta</span><span class="sxs-lookup"><span data-stu-id="96dfb-106">Implement the client</span></span>  
   
-1.  <span data-ttu-id="ac21e-107">Dodaj nowy projekt aplikacji konsoli do `DiscoveryProxyExample` rozwiązanie o nazwie `Client`.</span><span class="sxs-lookup"><span data-stu-id="ac21e-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
+1.  <span data-ttu-id="96dfb-107">Dodaj nowy projekt aplikacji konsoli do `DiscoveryProxyExample` rozwiązanie o nazwie `Client`.</span><span class="sxs-lookup"><span data-stu-id="96dfb-107">Add a new console application project to the `DiscoveryProxyExample` solution called `Client`.</span></span>  
   
-2.  <span data-ttu-id="ac21e-108">Dodaj odwołania do następujących zestawów:</span><span class="sxs-lookup"><span data-stu-id="ac21e-108">Add references to the following assemblies:</span></span>  
+2.  <span data-ttu-id="96dfb-108">Dodaj odwołania do następujących zestawów:</span><span class="sxs-lookup"><span data-stu-id="96dfb-108">Add references to the following assemblies:</span></span>  
   
-    1.  <span data-ttu-id="ac21e-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ac21e-109">System.ServiceModel</span></span>  
+    1.  <span data-ttu-id="96dfb-109">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="96dfb-109">System.ServiceModel</span></span>  
   
-    2.  <span data-ttu-id="ac21e-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="ac21e-110">System.ServiceModel.Discovery</span></span>  
+    2.  <span data-ttu-id="96dfb-110">System.ServiceModel.Discovery</span><span class="sxs-lookup"><span data-stu-id="96dfb-110">System.ServiceModel.Discovery</span></span>  
   
-3.  <span data-ttu-id="ac21e-111">Dodaj GeneratedClient.cs znaleziono w dolnej części tego tematu, aby projekt.</span><span class="sxs-lookup"><span data-stu-id="ac21e-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
+3.  <span data-ttu-id="96dfb-111">Dodaj GeneratedClient.cs znaleziono w dolnej części tego tematu, aby projekt.</span><span class="sxs-lookup"><span data-stu-id="96dfb-111">Add the GeneratedClient.cs found at the bottom of this topic to the project.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="ac21e-112">Ten plik jest zwykle generowane przy użyciu narzędzia, takiego jak Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="ac21e-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="ac21e-113">Jest dostępny w tym temacie, aby uprościć zadanie.</span><span class="sxs-lookup"><span data-stu-id="ac21e-113">It is provided in this topic to simplify the task.</span></span>  
+    >  <span data-ttu-id="96dfb-112">Ten plik jest zwykle generowane przy użyciu narzędzia, takiego jak Svcutil.exe.</span><span class="sxs-lookup"><span data-stu-id="96dfb-112">This file is usually generated using a tool such as Svcutil.exe.</span></span> <span data-ttu-id="96dfb-113">Jest dostępny w tym temacie, aby uprościć zadanie.</span><span class="sxs-lookup"><span data-stu-id="96dfb-113">It is provided in this topic to simplify the task.</span></span>  
   
-4.  <span data-ttu-id="ac21e-114">Otwórz plik Program.cs i dodaj następującą metodę.</span><span class="sxs-lookup"><span data-stu-id="ac21e-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="ac21e-115">Ta metoda przyjmuje adresu punktu końcowego i używa go do zainicjowania klienta usługi (proxy).</span><span class="sxs-lookup"><span data-stu-id="ac21e-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
+4.  <span data-ttu-id="96dfb-114">Otwórz plik Program.cs i dodaj następującą metodę.</span><span class="sxs-lookup"><span data-stu-id="96dfb-114">Open the Program.cs file and add the following method.</span></span> <span data-ttu-id="96dfb-115">Ta metoda przyjmuje adresu punktu końcowego i używa go do zainicjowania klienta usługi (proxy).</span><span class="sxs-lookup"><span data-stu-id="96dfb-115">This method takes an endpoint address and uses it to initialize the service client (proxy).</span></span>  
   
     ```  
     static void InvokeCalculatorService(EndpointAddress endpointAddress)  
@@ -72,7 +72,7 @@ ms.lasthandoff: 11/21/2017
             }  
     ```  
   
-5.  <span data-ttu-id="ac21e-116">Dodaj następujący kod do `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="ac21e-116">Add the following code to the `Main` method.</span></span>  
+5.  <span data-ttu-id="96dfb-116">Dodaj następujący kod do `Main` metody.</span><span class="sxs-lookup"><span data-stu-id="96dfb-116">Add the following code to the `Main` method.</span></span>  
   
     ```  
     public static void Main()  
@@ -111,10 +111,10 @@ ms.lasthandoff: 11/21/2017
             }  
     ```  
   
- <span data-ttu-id="ac21e-117">Ukończono wdrażanie aplikacji klienta.</span><span class="sxs-lookup"><span data-stu-id="ac21e-117">You have completed implementing the client application.</span></span> <span data-ttu-id="ac21e-118">W dalszym ciągu na [porady: testowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="ac21e-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
+ <span data-ttu-id="96dfb-117">Ukończono wdrażanie aplikacji klienta.</span><span class="sxs-lookup"><span data-stu-id="96dfb-117">You have completed implementing the client application.</span></span> <span data-ttu-id="96dfb-118">W dalszym ciągu na [porady: testowanie serwera Proxy odnajdywania](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span><span class="sxs-lookup"><span data-stu-id="96dfb-118">Continue on to [How to: Test the Discovery Proxy](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ac21e-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="ac21e-119">Example</span></span>  
- <span data-ttu-id="ac21e-120">Jest to pełny kod dla tego tematu.</span><span class="sxs-lookup"><span data-stu-id="ac21e-120">This is the full code listing for this topic.</span></span>  
+## <a name="example"></a><span data-ttu-id="96dfb-119">Przykład</span><span class="sxs-lookup"><span data-stu-id="96dfb-119">Example</span></span>  
+ <span data-ttu-id="96dfb-120">Jest to pełny kod dla tego tematu.</span><span class="sxs-lookup"><span data-stu-id="96dfb-120">This is the full code listing for this topic.</span></span>  
   
 ```  
 // GeneratedClient.cs  
@@ -291,7 +291,7 @@ namespace Microsoft.Samples.Discovery
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="ac21e-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ac21e-121">See Also</span></span>  
- [<span data-ttu-id="ac21e-122">Omówienie odnajdywania WCF</span><span class="sxs-lookup"><span data-stu-id="ac21e-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [<span data-ttu-id="ac21e-123">Porady: Implementowanie serwera Proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="ac21e-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
- [<span data-ttu-id="ac21e-124">Porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="ac21e-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+## <a name="see-also"></a><span data-ttu-id="96dfb-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="96dfb-121">See Also</span></span>  
+ [<span data-ttu-id="96dfb-122">Omówienie odnajdywania WCF</span><span class="sxs-lookup"><span data-stu-id="96dfb-122">WCF Discovery Overview</span></span>](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
+ [<span data-ttu-id="96dfb-123">Porady: Implementowanie serwera Proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="96dfb-123">How to: Implement a Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)  
+ [<span data-ttu-id="96dfb-124">Porady: Implementowanie wykrywalnej usługi, który rejestruje przy użyciu serwera Proxy odnajdywania</span><span class="sxs-lookup"><span data-stu-id="96dfb-124">How to: Implement a Discoverable Service that Registers with the Discovery Proxy</span></span>](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

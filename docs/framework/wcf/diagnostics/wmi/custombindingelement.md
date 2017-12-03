@@ -10,19 +10,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6edf2e06b758f9f70d418977a68b2403cecc1f51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a1aeede613b3c10a1579a67b5807f55c6a241bb4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="custombindingelement"></a><span data-ttu-id="a5c93-102">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="a5c93-102">CustomBindingElement</span></span>
-<span data-ttu-id="a5c93-103">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="a5c93-103">CustomBindingElement</span></span>  
+# <a name="custombindingelement"></a><span data-ttu-id="28b03-102">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="28b03-102">CustomBindingElement</span></span>
+<span data-ttu-id="28b03-103">CustomBindingElement</span><span class="sxs-lookup"><span data-stu-id="28b03-103">CustomBindingElement</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a5c93-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="a5c93-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="28b03-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="28b03-104">Syntax</span></span>  
   
 ```  
 class CustomBindingElement : BindingElement  
@@ -31,24 +31,24 @@ class CustomBindingElement : BindingElement
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="a5c93-105">Metody</span><span class="sxs-lookup"><span data-stu-id="a5c93-105">Methods</span></span>  
- <span data-ttu-id="a5c93-106">Klasa CustomBindingElement nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="a5c93-106">The CustomBindingElement class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="28b03-105">Metody</span><span class="sxs-lookup"><span data-stu-id="28b03-105">Methods</span></span>  
+ <span data-ttu-id="28b03-106">Klasa CustomBindingElement nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="28b03-106">The CustomBindingElement class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="a5c93-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="a5c93-107">Properties</span></span>  
- <span data-ttu-id="a5c93-108">Klasa CustomBindingElement ma następującą właściwość:</span><span class="sxs-lookup"><span data-stu-id="a5c93-108">The CustomBindingElement class has the following property:</span></span>  
+## <a name="properties"></a><span data-ttu-id="28b03-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="28b03-107">Properties</span></span>  
+ <span data-ttu-id="28b03-108">Klasa CustomBindingElement ma następującą właściwość:</span><span class="sxs-lookup"><span data-stu-id="28b03-108">The CustomBindingElement class has the following property:</span></span>  
   
-### <a name="name"></a><span data-ttu-id="a5c93-109">Nazwa</span><span class="sxs-lookup"><span data-stu-id="a5c93-109">Name</span></span>  
- <span data-ttu-id="a5c93-110">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="a5c93-110">Data type: string</span></span>  
+### <a name="name"></a><span data-ttu-id="28b03-109">Nazwa</span><span class="sxs-lookup"><span data-stu-id="28b03-109">Name</span></span>  
+ <span data-ttu-id="28b03-110">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="28b03-110">Data type: string</span></span>  
   
- <span data-ttu-id="a5c93-111">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="a5c93-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="28b03-111">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="28b03-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="a5c93-112">Ciąg zawierający nazwę konfiguracji powiązania.</span><span class="sxs-lookup"><span data-stu-id="a5c93-112">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="a5c93-113">Ta wartość jest ciągiem zdefiniowane przez użytkownika pełniącym rolę ciągu identyfikacyjnego niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="a5c93-113">This value is a user-defined string that acts as the identification string for the custom binding.</span></span>  
+ <span data-ttu-id="28b03-112">Ciąg zawierający nazwę konfiguracji powiązania.</span><span class="sxs-lookup"><span data-stu-id="28b03-112">A string that contains the configuration name of the binding.</span></span> <span data-ttu-id="28b03-113">Ta wartość jest ciągiem zdefiniowane przez użytkownika pełniącym rolę ciągu identyfikacyjnego niestandardowego powiązania.</span><span class="sxs-lookup"><span data-stu-id="28b03-113">This value is a user-defined string that acts as the identification string for the custom binding.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a5c93-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="a5c93-114">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="28b03-114">Wymagania</span><span class="sxs-lookup"><span data-stu-id="28b03-114">Requirements</span></span>  
   
-|<span data-ttu-id="a5c93-115">MOF</span><span class="sxs-lookup"><span data-stu-id="a5c93-115">MOF</span></span>|<span data-ttu-id="a5c93-116">Zadeklarowany w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="a5c93-116">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="28b03-115">MOF</span><span class="sxs-lookup"><span data-stu-id="28b03-115">MOF</span></span>|<span data-ttu-id="28b03-116">Zadeklarowany w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="28b03-116">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="a5c93-117">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="a5c93-117">Namespace</span></span>|<span data-ttu-id="a5c93-118">Zdefiniowany w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="a5c93-118">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="28b03-117">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="28b03-117">Namespace</span></span>|<span data-ttu-id="28b03-118">Zdefiniowany w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="28b03-118">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="a5c93-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a5c93-119">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="28b03-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="28b03-119">See Also</span></span>  
  <xref:System.ServiceModel.Channels.CustomBinding>

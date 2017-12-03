@@ -10,34 +10,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04e1b881d9aab1c35195794394cddf5172288cc1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="message-logging"></a><span data-ttu-id="75ad4-102">Rejestrowanie komunikatów</span><span class="sxs-lookup"><span data-stu-id="75ad4-102">Message Logging</span></span>
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="75ad4-103">Umożliwia rejestrowanie wiadomości przychodzących i wychodzących do użytku w trybie offline.</span><span class="sxs-lookup"><span data-stu-id="75ad4-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="75ad4-104">Rejestrowanie komunikatów temu możesz zobaczyć, jakie wiadomość, a komunikat treści prawdopodobnie.</span><span class="sxs-lookup"><span data-stu-id="75ad4-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="75ad4-105">Ten typ rejestrowania jest szczególnie przydatna w tym, co argumenty zostały przekazane i sposób odbierania punkt końcowy był wyświetlany argumenty wyrażonej w postaci XML.</span><span class="sxs-lookup"><span data-stu-id="75ad4-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="75ad4-106">Ponadto rejestrowania komunikatu, ponieważ zostało przesłane umożliwia diagnozowanie źle sformułowane wiadomości, a także aby zobaczyć, jak odebrania wiadomości.</span><span class="sxs-lookup"><span data-stu-id="75ad4-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="75ad4-107">Można również sprawdzić zabezpieczeń tokeny używane części zaszyfrowana i podpisana i części pozostanie bez zmian.</span><span class="sxs-lookup"><span data-stu-id="75ad4-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
+# <a name="message-logging"></a><span data-ttu-id="a9468-102">Rejestrowanie komunikatów</span><span class="sxs-lookup"><span data-stu-id="a9468-102">Message Logging</span></span>
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]<span data-ttu-id="a9468-103">Umożliwia rejestrowanie wiadomości przychodzących i wychodzących do użytku w trybie offline.</span><span class="sxs-lookup"><span data-stu-id="a9468-103"> provides the capability to log incoming and outgoing messages for offline consumption.</span></span> <span data-ttu-id="a9468-104">Rejestrowanie komunikatów temu możesz zobaczyć, jakie wiadomość, a komunikat treści prawdopodobnie.</span><span class="sxs-lookup"><span data-stu-id="a9468-104">Message logging enables you to see what the message and message body looks like.</span></span> <span data-ttu-id="a9468-105">Ten typ rejestrowania jest szczególnie przydatna w tym, co argumenty zostały przekazane i sposób odbierania punkt końcowy był wyświetlany argumenty wyrażonej w postaci XML.</span><span class="sxs-lookup"><span data-stu-id="a9468-105">This type of logging is particularly helpful in letting you know what arguments were passed in and how the receiving endpoint saw the arguments expressed as XML.</span></span> <span data-ttu-id="a9468-106">Ponadto rejestrowania komunikatu, ponieważ zostało przesłane umożliwia diagnozowanie źle sformułowane wiadomości, a także aby zobaczyć, jak odebrania wiadomości.</span><span class="sxs-lookup"><span data-stu-id="a9468-106">In addition, logging the message as it was received allows you to diagnose malformed messages as well as to see how the message arrived.</span></span> <span data-ttu-id="a9468-107">Można również sprawdzić zabezpieczeń tokeny używane części zaszyfrowana i podpisana i części pozostanie bez zmian.</span><span class="sxs-lookup"><span data-stu-id="a9468-107">You can also examine the security tokens used, parts encrypted and signed, and parts left intact.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="75ad4-108">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="75ad4-108">In This Section</span></span>  
- [<span data-ttu-id="75ad4-109">Przegląd przepływu komunikatu</span><span class="sxs-lookup"><span data-stu-id="75ad4-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
+## <a name="in-this-section"></a><span data-ttu-id="a9468-108">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a9468-108">In This Section</span></span>  
+ [<span data-ttu-id="a9468-109">Przegląd przepływu komunikatu</span><span class="sxs-lookup"><span data-stu-id="a9468-109">Message Flow Overview</span></span>](../../../../docs/framework/wcf/diagnostics/message-flow-overview.md)  
   
- <span data-ttu-id="75ad4-110">W tym temacie opisano, jak komunikaty w dzienniku zdarzeń odpowiadają zdarzeń klienta i usługi.</span><span class="sxs-lookup"><span data-stu-id="75ad4-110">This topic describes how event log messages correspond to client and service events.</span></span>  
+ <span data-ttu-id="a9468-110">W tym temacie opisano, jak komunikaty w dzienniku zdarzeń odpowiadają zdarzeń klienta i usługi.</span><span class="sxs-lookup"><span data-stu-id="a9468-110">This topic describes how event log messages correspond to client and service events.</span></span>  
   
- [<span data-ttu-id="75ad4-111">Konfigurowanie rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="75ad4-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
+ [<span data-ttu-id="a9468-111">Konfigurowanie rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="a9468-111">Configuring Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md)  
   
- <span data-ttu-id="75ad4-112">W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.</span><span class="sxs-lookup"><span data-stu-id="75ad4-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
+ <span data-ttu-id="a9468-112">W tym temacie opisano, jak można skonfigurować rejestrowania komunikatów dla różnych scenariuszy.</span><span class="sxs-lookup"><span data-stu-id="a9468-112">This topic describes how you can configure message logging for different scenarios.</span></span>  
   
- [<span data-ttu-id="75ad4-113">Wyświetlanie dzienników komunikatów</span><span class="sxs-lookup"><span data-stu-id="75ad4-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
+ [<span data-ttu-id="a9468-113">Wyświetlanie dzienników komunikatów</span><span class="sxs-lookup"><span data-stu-id="a9468-113">Viewing Message Logs</span></span>](../../../../docs/framework/wcf/diagnostics/viewing-message-logs.md)  
   
- <span data-ttu-id="75ad4-114">W tym temacie opisano sposób wyświetlania dzienników komunikatów.</span><span class="sxs-lookup"><span data-stu-id="75ad4-114">This topic describes how you can view message logs.</span></span>  
+ <span data-ttu-id="a9468-114">W tym temacie opisano sposób wyświetlania dzienników komunikatów.</span><span class="sxs-lookup"><span data-stu-id="a9468-114">This topic describes how you can view message logs.</span></span>  
   
- [<span data-ttu-id="75ad4-115">Problemy z zabezpieczeniami dla rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="75ad4-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [<span data-ttu-id="a9468-115">Problemy z zabezpieczeniami dla rejestrowania komunikatów</span><span class="sxs-lookup"><span data-stu-id="a9468-115">Security Concerns for Message Logging</span></span>](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
- <span data-ttu-id="75ad4-116">W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.</span><span class="sxs-lookup"><span data-stu-id="75ad4-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
+ <span data-ttu-id="a9468-116">W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.</span><span class="sxs-lookup"><span data-stu-id="a9468-116">This topic describes how you can protect sensitive data from being exposed in message logs, as well as events generated by message logging.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="75ad4-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="75ad4-117">See Also</span></span>  
- [<span data-ttu-id="75ad4-118">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="75ad4-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9468-117">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a9468-117">See Also</span></span>  
+ [<span data-ttu-id="a9468-118">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="a9468-118">Administration and Diagnostics</span></span>](../../../../docs/framework/wcf/diagnostics/index.md)

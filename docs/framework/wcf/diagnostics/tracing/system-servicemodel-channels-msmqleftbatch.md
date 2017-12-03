@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 28b5a2f0-fbfc-477e-97d9-bea2c1bfbbbe
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 96ef32e9415fa314831073e032ff5da207ef37a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b76f34ebadf8a81947eb7798cebec36651c7ecca
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="systemservicemodelchannelsmsmqleftbatch"></a><span data-ttu-id="d1362-102">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="d1362-102">System.ServiceModel.Channels.MsmqLeftBatch</span></span>
-<span data-ttu-id="d1362-103">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="d1362-103">System.ServiceModel.Channels.MsmqLeftBatch</span></span>  
+# <a name="systemservicemodelchannelsmsmqleftbatch"></a><span data-ttu-id="b49ac-102">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="b49ac-102">System.ServiceModel.Channels.MsmqLeftBatch</span></span>
+<span data-ttu-id="b49ac-103">System.ServiceModel.Channels.MsmqLeftBatch</span><span class="sxs-lookup"><span data-stu-id="b49ac-103">System.ServiceModel.Channels.MsmqLeftBatch</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d1362-104">Opis</span><span class="sxs-lookup"><span data-stu-id="d1362-104">Description</span></span>  
- <span data-ttu-id="d1362-105">Po lewej stronie przetwarzanie wsadowe tryb usługi MSMQ.</span><span class="sxs-lookup"><span data-stu-id="d1362-105">MSMQ left batching mode.</span></span>  
+## <a name="description"></a><span data-ttu-id="b49ac-104">Opis</span><span class="sxs-lookup"><span data-stu-id="b49ac-104">Description</span></span>  
+ <span data-ttu-id="b49ac-105">Po lewej stronie przetwarzanie wsadowe tryb usługi MSMQ.</span><span class="sxs-lookup"><span data-stu-id="b49ac-105">MSMQ left batching mode.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1362-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d1362-106">See Also</span></span>  
- [<span data-ttu-id="d1362-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="d1362-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d1362-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="d1362-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d1362-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="d1362-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="b49ac-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b49ac-106">See Also</span></span>  
+ [<span data-ttu-id="b49ac-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="b49ac-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="b49ac-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="b49ac-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="b49ac-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="b49ac-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

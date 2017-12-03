@@ -10,29 +10,29 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 21fe9445-4fa4-4d67-b865-78cecf9b5b82
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 646dbf2ca80950ba02e9b8578a2a36dc092b239e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6c893c63868e8ba5dad4fbb29999945b9f4d2ed4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="3f6ae-102">3333 — OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="3f6ae-102">3333 - OutgoingMessageSecured</span></span>
-## <a name="properties"></a><span data-ttu-id="3f6ae-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="3f6ae-103">Properties</span></span>  
+# <a name="3333---outgoingmessagesecured"></a><span data-ttu-id="c2e4a-102">3333 — OutgoingMessageSecured</span><span class="sxs-lookup"><span data-stu-id="c2e4a-102">3333 - OutgoingMessageSecured</span></span>
+## <a name="properties"></a><span data-ttu-id="c2e4a-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="c2e4a-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="3f6ae-104">ID</span><span class="sxs-lookup"><span data-stu-id="3f6ae-104">ID</span></span>|<span data-ttu-id="3f6ae-105">3333</span><span class="sxs-lookup"><span data-stu-id="3f6ae-105">3333</span></span>|  
-|<span data-ttu-id="3f6ae-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="3f6ae-106">Keywords</span></span>|<span data-ttu-id="3f6ae-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="3f6ae-107">Security</span></span>|  
-|<span data-ttu-id="3f6ae-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="3f6ae-108">Level</span></span>|<span data-ttu-id="3f6ae-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="3f6ae-109">Verbose</span></span>|  
-|<span data-ttu-id="3f6ae-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="3f6ae-110">Channel</span></span>|<span data-ttu-id="3f6ae-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="3f6ae-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="c2e4a-104">ID</span><span class="sxs-lookup"><span data-stu-id="c2e4a-104">ID</span></span>|<span data-ttu-id="c2e4a-105">3333</span><span class="sxs-lookup"><span data-stu-id="c2e4a-105">3333</span></span>|  
+|<span data-ttu-id="c2e4a-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="c2e4a-106">Keywords</span></span>|<span data-ttu-id="c2e4a-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="c2e4a-107">Security</span></span>|  
+|<span data-ttu-id="c2e4a-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="c2e4a-108">Level</span></span>|<span data-ttu-id="c2e4a-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="c2e4a-109">Verbose</span></span>|  
+|<span data-ttu-id="c2e4a-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="c2e4a-110">Channel</span></span>|<span data-ttu-id="c2e4a-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="c2e4a-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="3f6ae-112">Opis</span><span class="sxs-lookup"><span data-stu-id="3f6ae-112">Description</span></span>  
- <span data-ttu-id="3f6ae-113">To zdarzenie jest emitowany, gdy komunikat wychodzący został zabezpieczony.</span><span class="sxs-lookup"><span data-stu-id="3f6ae-113">This event is emitted when the outgoing message has been secured.</span></span>  
+## <a name="description"></a><span data-ttu-id="c2e4a-112">Opis</span><span class="sxs-lookup"><span data-stu-id="c2e4a-112">Description</span></span>  
+ <span data-ttu-id="c2e4a-113">To zdarzenie jest emitowany, gdy komunikat wychodzący został zabezpieczony.</span><span class="sxs-lookup"><span data-stu-id="c2e4a-113">This event is emitted when the outgoing message has been secured.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="3f6ae-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="3f6ae-114">Message</span></span>  
- <span data-ttu-id="3f6ae-115">Komunikat wychodzący został zabezpieczony.</span><span class="sxs-lookup"><span data-stu-id="3f6ae-115">Outgoing message has been secured.</span></span>  
+## <a name="message"></a><span data-ttu-id="c2e4a-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="c2e4a-114">Message</span></span>  
+ <span data-ttu-id="c2e4a-115">Komunikat wychodzący został zabezpieczony.</span><span class="sxs-lookup"><span data-stu-id="c2e4a-115">Outgoing message has been secured.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="3f6ae-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="3f6ae-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="c2e4a-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="c2e4a-116">Details</span></span>

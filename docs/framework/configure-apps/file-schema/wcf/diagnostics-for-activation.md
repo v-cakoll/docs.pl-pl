@@ -10,22 +10,22 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 29f2e56dd18da9dc3ce3206f5c3c80f4a47a7ff0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1610c77125d2820e3adc06b3c37177058c85abdd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
-# <a name="ltdiagnosticsgt-for-activation"></a><span data-ttu-id="80214-102">&lt;diagnostics&gt; w Activation</span><span class="sxs-lookup"><span data-stu-id="80214-102">&lt;diagnostics&gt; for Activation</span></span>
-<span data-ttu-id="80214-103">Konfiguruje [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] funkcje diagnostyki przez odbiornik.</span><span class="sxs-lookup"><span data-stu-id="80214-103">Configures [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] listener's diagnostics functionalities.</span></span>  
+# <a name="ltdiagnosticsgt-for-activation"></a><span data-ttu-id="d4e4d-102">&lt;diagnostics&gt; w Activation</span><span class="sxs-lookup"><span data-stu-id="d4e4d-102">&lt;diagnostics&gt; for Activation</span></span>
+<span data-ttu-id="d4e4d-103">Konfiguruje [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] funkcje diagnostyki przez odbiornik.</span><span class="sxs-lookup"><span data-stu-id="d4e4d-103">Configures [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] listener's diagnostics functionalities.</span></span>  
   
- <span data-ttu-id="80214-104">\<system.serviceModel.activation ></span><span class="sxs-lookup"><span data-stu-id="80214-104">\<system.serviceModel.activation></span></span>  
-<span data-ttu-id="80214-105">\<Diagnostyka ></span><span class="sxs-lookup"><span data-stu-id="80214-105">\<diagnostics></span></span>  
+ <span data-ttu-id="d4e4d-104">\<system.serviceModel.activation ></span><span class="sxs-lookup"><span data-stu-id="d4e4d-104">\<system.serviceModel.activation></span></span>  
+<span data-ttu-id="d4e4d-105">\<Diagnostyka ></span><span class="sxs-lookup"><span data-stu-id="d4e4d-105">\<diagnostics></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="80214-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="80214-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d4e4d-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="d4e4d-106">Syntax</span></span>  
   
 ```xml  
 <configuration>  
@@ -35,26 +35,26 @@ ms.lasthandoff: 10/18/2017
 </configuration>  
 ```  
   
-## <a name="type"></a><span data-ttu-id="80214-107">Typ</span><span class="sxs-lookup"><span data-stu-id="80214-107">Type</span></span>  
+## <a name="type"></a><span data-ttu-id="d4e4d-107">Typ</span><span class="sxs-lookup"><span data-stu-id="d4e4d-107">Type</span></span>  
  `Type`  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="80214-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="80214-108">Attributes and Elements</span></span>  
- <span data-ttu-id="80214-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="80214-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="d4e4d-108">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="d4e4d-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="d4e4d-109">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="d4e4d-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="80214-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="80214-110">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="d4e4d-110">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="d4e4d-110">Attributes</span></span>  
   
-|<span data-ttu-id="80214-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="80214-111">Attribute</span></span>|<span data-ttu-id="80214-112">Opis</span><span class="sxs-lookup"><span data-stu-id="80214-112">Description</span></span>|  
+|<span data-ttu-id="d4e4d-111">Atrybut</span><span class="sxs-lookup"><span data-stu-id="d4e4d-111">Attribute</span></span>|<span data-ttu-id="d4e4d-112">Opis</span><span class="sxs-lookup"><span data-stu-id="d4e4d-112">Description</span></span>|  
 |---------------|-----------------|  
-|`performanceCountersEnabled`|<span data-ttu-id="80214-113">Wartość logiczna wskazująca, czy liczniki wydajności są włączone w celach diagnostycznych.</span><span class="sxs-lookup"><span data-stu-id="80214-113">A Boolean value that indicates whether performance counters are enabled for diagnostic purposes.</span></span>|  
+|`performanceCountersEnabled`|<span data-ttu-id="d4e4d-113">Wartość logiczna wskazująca, czy liczniki wydajności są włączone w celach diagnostycznych.</span><span class="sxs-lookup"><span data-stu-id="d4e4d-113">A Boolean value that indicates whether performance counters are enabled for diagnostic purposes.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="80214-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="80214-114">Child Elements</span></span>  
- <span data-ttu-id="80214-115">Brak.</span><span class="sxs-lookup"><span data-stu-id="80214-115">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="d4e4d-114">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="d4e4d-114">Child Elements</span></span>  
+ <span data-ttu-id="d4e4d-115">Brak.</span><span class="sxs-lookup"><span data-stu-id="d4e4d-115">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="80214-116">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="80214-116">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="d4e4d-116">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="d4e4d-116">Parent Elements</span></span>  
   
-|<span data-ttu-id="80214-117">Element</span><span class="sxs-lookup"><span data-stu-id="80214-117">Element</span></span>|<span data-ttu-id="80214-118">Opis</span><span class="sxs-lookup"><span data-stu-id="80214-118">Description</span></span>|  
+|<span data-ttu-id="d4e4d-117">Element</span><span class="sxs-lookup"><span data-stu-id="d4e4d-117">Element</span></span>|<span data-ttu-id="d4e4d-118">Opis</span><span class="sxs-lookup"><span data-stu-id="d4e4d-118">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="80214-119">\<system.serviceModel.activation ></span><span class="sxs-lookup"><span data-stu-id="80214-119">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="80214-120">Zawiera ustawienia konfiguracji dla procesu odbiornika SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="80214-120">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
+|[<span data-ttu-id="d4e4d-119">\<system.serviceModel.activation ></span><span class="sxs-lookup"><span data-stu-id="d4e4d-119">\<system.serviceModel.activation></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|<span data-ttu-id="d4e4d-120">Zawiera ustawienia konfiguracji dla procesu odbiornika SMSvcHost.exe.</span><span class="sxs-lookup"><span data-stu-id="d4e4d-120">Contains configuration settings for the listener process SMSvcHost.exe.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="80214-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="80214-121">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d4e4d-121">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d4e4d-121">See Also</span></span>  
  <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

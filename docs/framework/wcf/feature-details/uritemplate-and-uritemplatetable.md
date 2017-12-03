@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
 caps.latest.revision: "24"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7ef3f2a71280595d58291863a1852cc4c590008c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9d08fa0e0ec556779d246af5ec11fcbeb54dedc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
 Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate>i <xref:System.UriTemplateTable> stanowią podstawę aparat wysyłki na podstawie identyfikatora URI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Te klasy można również na ich własnych, dzięki czemu deweloperzy mógł korzystać z szablonów i mechanizmu mapowanie identyfikatora URI bez stosowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  

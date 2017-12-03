@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 caps.latest.revision: "53"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d516d20144b40aa52a5b11177c6794a6935ba989
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  

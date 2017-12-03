@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 99b3ee3e-aeb7-4e6f-8321-60fe6140eb67
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a0a3b9f77445e8629fb67d099c6d7944044897fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 54c1ffcef9946d2be174f92545cdba3181b0d8ee
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-workflow-service-that-calls-another-workflow-service"></a>Instrukcje: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy
 Czasami jest niezbędne dla usługi przepływu pracy można uzyskać informacji z innej usługi przepływu pracy.  W tym temacie przedstawiono sposób wywoływania jednej usługi przepływu pracy z innej. W tym temacie utworzymy dwie usługi przepływu pracy; jeden, który ma metodę, która odwraca ciągu wejściowego, a druga konwertujący ciągu wejściowego na wielkie litery, po wycofaniu ciąg, który używa pierwszej usługi.  

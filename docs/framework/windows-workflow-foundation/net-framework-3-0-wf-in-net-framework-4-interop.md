@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5dd122549c1977745f198a83484495e3fd960ebf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 51f11beb474758f16c6de0c47444e0467cac8bec
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Za pomocą działania WF programu .NET Framework 3.0 w programie .NET Framework 4 z działania Interop
 <xref:System.Activities.Statements.Interop> Działanie jest [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] działania (WF 4.5), który opakowuje [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] (WF 3.5) działania w ramach [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] przepływu pracy. Działanie WF 3 może być działanie jednego typu liść lub całe drzewo działań. Wykonanie (w tym anulowania i obsługa wyjątków) i trwałość [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] działanie występuje w kontekście [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] wystąpienia przepływu pracy, który jest wykonywany.  

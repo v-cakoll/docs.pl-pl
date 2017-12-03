@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 56528078895ea7c624afaf716e9a26eabe335d69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ba5c8a977513ebaae902e3c3d37f950003548474
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-nethttpbinding"></a>Używanie elementu NetHttpBinding
 <xref:System.ServiceModel.NetHttpBinding>jest przeznaczony do używania protokołu HTTP lub protokołu WebSocket usług powiązania i używa kodowanie binarne domyślnie. <xref:System.ServiceModel.NetHttpBinding>wykryje, czy jest używana z kontraktu "żądanie-odpowiedź" lub kontraktu dwukierunkowego i zmianę jego zachowania, aby dopasować — zostanie użyty HTTP dla kontraktów "żądanie-odpowiedź" i technologia WebSockets dla kontraktów dupleksowych. To zachowanie można przesłonić przy użyciu <!--zz <xref:System.ServiceModel.NetHttpBinding.WebSocketTransportUsage%2A> --> `WebSocketTransportUsage` ustawienia:  

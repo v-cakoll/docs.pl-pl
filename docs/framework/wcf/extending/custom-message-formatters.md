@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 01998d0ac732f63f6771c47bfc76a8207a5531f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 413adbc25e2f92ae2e989290685db6dfeaf58368
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-message-formatters"></a>Niestandardowe elementy formatujące komunikaty
 Zawartość komunikatu jest często w formacie XML, która zazwyczaj nie jest wygodne format dla aplikacji. Aplikacje manipulowania obiektami, pobierania i ustawiania ich właściwości. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa *kontraktu danych* przekonwertować <xref:System.ServiceModel.Channels.Message> obiektu do obiektu z łatwością obsłużyć przez aplikację. Te procesy są nazywane serializacji i deserializacji. Należy pamiętać, że tych samych warunków służą do opisywania serializacji i deserializacji wykonywane przez warstwę transportu do i z formatu przesyłania wiadomości, które jest procesem niepowiązanych.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cd064228f374cf99540e2a5467bbab6d25dd00f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2dd456401073d8c7f3c7bc9fbfbe5c11dbbd4e58
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="analytic-tracing-overview"></a>Omówienie śledzenia analitycznego
 Śledzenie analityczne w [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] jest wysoka wydajność i niski poziom szczegółowości śledzenia skonfigurowaną na górze zdarzenia śledzenia dla systemu Windows (ETW). ETW. działa na poziomie jądra można znacznie zmniejszyć koszty operacji śledzenia. Go efektywnego buforuje zdarzenia trybu jądra i użytkownika i umożliwia dynamiczne Włączanie rejestrowania bez konieczności ponownego uruchomienia usługi. Dane śledzenia są dostępne w dziennikach zdarzeń po nim ma zostały wyemitowane i odebranych.  

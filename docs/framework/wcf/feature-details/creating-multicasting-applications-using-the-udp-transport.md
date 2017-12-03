@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7485154a-6e85-4a67-a9d4-9008e741d4df
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3a743f7da4984c5b434de6cedb44bd4c9d9382cf
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3dde7dc8b051c4238203173bd009a8f71dd9c6c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-multicasting-applications-using-the-udp-transport"></a>Tworzenie aplikacji multiemisji za pomocą transportu UDP
 Aplikacje korzystające z multiemisji wysyłać mała do wielu odbiorców w tym samym czasie bez konieczności ustanawiania połączenia punkt-punkt. Nacisk takich aplikacji jest szybkość nad niezawodności. Innymi słowy ma większe znaczenie dla wysyłania aktualnych danych niż aby upewnij się, że faktycznie nieodebrania żadnych określonego komunikatu. Usługi WCF obsługuje teraz pisanie aplikacji multiemisji za pomocą <xref:System.ServiceModel.UdpBinding>. Ten transport jest przydatne w scenariuszach, w którym usługa musi wysyłać małych komunikatów do wielu klientów jednocześnie. Aplikacja giełdowych jest przykładem takiej usługi.  

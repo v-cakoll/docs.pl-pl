@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2aa633d2e89612549d1dbe6703e80f4a5e713bf0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
 Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie komunikatów. Transakcje, jednak operacje kosztowne i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów poprawy wydajności przesyłania wiadomości jest używana aplikacja odczytywać i przetwarzać wiele komunikatów w ramach jednej transakcji. Jest kompromis między wydajnością i odzyskiwanie: jak zwiększa liczbę komunikatów w partii, co powoduje ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesje. A *sesji* jest grupowanie powiązanych wiadomości, które są przetwarzane przez pojedynczą aplikacją i zatwierdzona jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy powiązane komunikaty, które muszą zostać przetworzone jednocześnie. Na przykład jest online zakupów witryna sieci Web. *Partie* są używane do przetwarzania wielu, niepowiązanych wiadomości w taki sposób, że zwiększa komunikatu przepływności. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sesje, zobacz [grupowania w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez pojedynczą aplikacją i zatwierdzone jako pojedyncza jednostka, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposób uruchamiania aplikacji.  

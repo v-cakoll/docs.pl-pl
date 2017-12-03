@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fc54065c-518e-4146-b24a-0fe00038bfa7
 caps.latest.revision: "41"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d7c74648a249ec833f2b0fc8b8f5eea9247dc364
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5d4a460adfb8076f5d2c0fe273511e6de80be4ec
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-demux"></a>Niestandardowe demultipleksowanie
 W przykładzie pokazano, jak nagłówki wiadomości usługi MSMQ mogą być mapowane do operacji innej usługi, aby [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi używające <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nie są ograniczone do przy użyciu jednej operacji usługi, jak pokazano w [usługi kolejkowania komunikatów Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md) i [Windows Communication Foundation, do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md) próbek.  

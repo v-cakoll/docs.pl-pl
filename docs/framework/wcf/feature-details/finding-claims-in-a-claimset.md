@@ -16,14 +16,14 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cc6a4d98529357aa58f55be2fc33d6b7a95a8999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ca3f296f46f2a1603f275a92b25ffb09c3025230
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="finding-claims-in-a-claimset"></a>Znajdowanie oświadczeń w zestawie oświadczeń
 Badanie zawartości <xref:System.IdentityModel.Claims.ClaimSet> dla określonych typów oświadczeń jest typowych zadań, używając autoryzacji na podstawie oświadczeń. Aby sprawdzić <xref:System.IdentityModel.Claims.ClaimSet> obecność konkretne oświadczenia, można użyć <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> metody. Ta metoda zapewnia lepszą wydajność niż Iterowanie bezpośrednio po <xref:System.IdentityModel.Claims.ClaimSet>. W poniższym przykładzie pokazano to użycie. Należy pamiętać, że `claimType` i `claimRight` parametry mogą być `null`. W takim przypadku parametry będą zgodne wszystkie typy oświadczeń i oświadczeń praw.  

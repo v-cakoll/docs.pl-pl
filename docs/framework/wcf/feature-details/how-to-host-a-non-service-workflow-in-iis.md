@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f362562c-767d-401b-8257-916616568fd4
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 892875fb8340220dc152f91ab2239257c7b96fb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Porady: hosta z systemem innym niż usługi przepływu pracy w programie IIS
 Przepływy pracy, które nie są usługi przepływu pracy może być obsługiwany w środowisku usług IIS / WAS. Jest to przydatne, gdy trzeba hosta przepływu pracy napisane przez innej osoby. Na przykład, jeśli rehost projektanta przepływów pracy, a użytkownicy mogą tworzyć własne przepływy pracy.  Hosting przepływy pracy-service w usługach IIS zapewnia obsługę funkcji, takich jak proces zamykania odtwarzania, bezczynności, monitorowanie kondycji procesu i aktywacji opartej na komunikat. Przepływ pracy usług hostowanych w usługach IIS zawiera <xref:System.ServiceModel.Activities.Receive> działań i są aktywowany, gdy wiadomość zostanie odebrana przez usługi IIS. Non-service przepływy pracy nie zawierają działania obsługi wiadomości i domyślnie nie można aktywować, wysyłając wiadomość.  Musi pochodzić z klasy <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> i zdefiniowanie kontraktu usługi, który zawiera operacje można utworzyć wystąpienia przepływu pracy. Ten temat przeprowadzi Cię przez proces tworzenia prostych przepływu pracy, definiowanie kontraktu usługi, klient może używać do aktywowania przepływu pracy i wyprowadzanie klasy z <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> który używa kontraktu usługi do nasłuchiwania przepływu pracy tworzenia żądań.  

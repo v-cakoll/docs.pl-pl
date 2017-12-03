@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9ff7a7e7cfd29ea6e5029219115b4bfff1c6895c
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: fcdd42700ad13eb8b81714cc97dafaa5bf45d2a2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Toolkit zestaw reguł
 Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych scenariuszach można zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponowne tworzenie i wdrażanie zestawu przepływu pracy. W tym przykładzie pozwala na zarządzanie i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Dzięki temu uruchomionych wystąpień przepływu pracy automatycznie zastosować zmian zestaw reguł.  

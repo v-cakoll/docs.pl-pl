@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 53d094e2-6901-4aa1-88b8-024b27ccf78b
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6b2f418298b5b937b5d4c7af2bd2def38c5827e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b57139fdf2a07f2d37bc337a041704eee174328e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-workflow-service-with-messaging-activities"></a>Porada: Tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów
 W tym temacie opisano sposób tworzenia usługi simple przepływu pracy przy użyciu działań komunikacji. Ten temat koncentruje się na weryfikowaniu Tworzenie usługi przepływu pracy, gdy usługa składa się wyłącznie z działań dotyczących komunikatów. W usłudze rzeczywistych przepływ pracy zawiera wiele innych działań. Usługa implementuje jednej operacji o nazwie Echo, która przyjmuje ciągiem i zwraca ciąg do obiektu wywołującego. Ten temat jest pierwszy z serii dwa tematy. Następnego tematu [jak: dostęp do usługi z przepływu pracy aplikacji](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md) omówiono sposób tworzenia aplikacji przepływu pracy, który można wywołać usługi utworzone w tym temacie.  

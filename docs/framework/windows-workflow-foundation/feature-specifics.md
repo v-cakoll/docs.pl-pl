@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1e7a223248b574e30c266c3c9ac66bf317f1d19f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation funkcji charakterystykę
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]Dodaje liczbę funkcji do systemu Windows Workflow Foundation. Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.  
@@ -188,7 +188,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Projektanta dokumentacji:  
   
-    -   [Schemat blokowy projektantów działań](/visualstudio/workflow-designer/flowchart-activity-designers)  
+    -   [Projektanci działań Flowchart](/visualstudio/workflow-designer/flowchart-activity-designers)  
   
 ### <a name="flowchart-scenarios"></a>Schemat blokowy scenariuszy  
  Schemat blokowy działania może służyć do zaimplementowania guessing gier. Gry guessing jest bardzo prosta: komputer wybiera liczbę losową i odtwarzacz ma odgadnąć ten numer. Gdy odtwarzacz przesyła każdy wynik, komputer pokazuje mu wskazówkę (tj. "try mniejszą liczbę"). Odtwarzacz znajdzie numer w mniej niż 7 prób, on odbiera specjalne Gratulacje z komputera. Gry może być realizowane za kombinację procedurach następujących działań:  
@@ -220,7 +220,7 @@ ms.lasthandoff: 10/18/2017
   
 -   Projektanta dokumentacji:  
   
-    -   [Projektant działań równoległych](/visualstudio/workflow-designer/parallel-activity-designer)  
+    -   [Parallel, projektant działań](/visualstudio/workflow-designer/parallel-activity-designer)  
   
     -   [Działania ParallelForEach\<T > Projektant działań](/visualstudio/workflow-designer/parallelforeach-t-activity-designer)  
   

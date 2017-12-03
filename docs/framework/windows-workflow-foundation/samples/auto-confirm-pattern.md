@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 668aec65-78d3-4636-9c7b-deed643a18f9
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: affc9d1638148971dd9c57969c75166facfd545c
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aaf4d72396438178d807f28ba8cb0ac5c5cb368e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="auto-confirm-pattern"></a>Potwierdź automatycznie wzorca
 W tym przykładzie składa się z trzech scenariuszy systemem pokazujący niestandardowego `AutoConfirmScope` działania. Pierwszy pokazano pomyślne wykonanie sekwencji działań compensable cztery gdzie drugie i trzecie są zagnieżdżone w `AutoConfirmScope`. Druga próba zawiera takiej samej kolejności z powodu wyjątku występujących po wykonaniu czwarty <xref:System.Activities.Statements.CompensableActivity>. Trzeci scenariusz zawiera takiej samej kolejności z powodu wyjątku występujące w obrębie `AutoConfirmScope` po drugim <xref:System.Activities.Statements.CompensableActivity> zakończeniu.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 23f903af1bfb63ac5d0b800656e7264d0f9d8b9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu programowania programy. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i innych działań może służyć do tworzenia programów przepływu pracy komputera stanu. Ten temat zawiera omówienie tworzenia przepływów pracy komputera stanu.  
@@ -111,7 +111,7 @@ Komputer stanu jest dobrze znanego modelu programowania programy. <xref:System.A
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
- [Obiekt StateMachine Projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer)  
- [Projektant działań stanu](/visualstudio/workflow-designer/state-activity-designer)  
- [Projektant działań stan końcowy](/visualstudio/workflow-designer/finalstate-activity-designer)  
- [Projektant działań przejścia](/visualstudio/workflow-designer/transition-activity-designer)
+ [StateMachine, projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer)  
+ [State, projektant działań](/visualstudio/workflow-designer/state-activity-designer)  
+ [FinalState, projektant działań](/visualstudio/workflow-designer/finalstate-activity-designer)  
+ [Transaction, projektant działań](/visualstudio/workflow-designer/transition-activity-designer)

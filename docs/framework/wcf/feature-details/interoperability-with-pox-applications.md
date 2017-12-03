@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6dbdd72dce196ea58550cff956a7b0e6fe0b1a73
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cf05e3327d7c99d333ab4be045e3f72e6f2a8a3f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="interoperability-with-pox-applications"></a>Współdziałanie z aplikacjami POX
 "Zwykły starego XML" (POX) aplikacji komunikacji przez wymianę raw komunikaty HTTP, które zawierają tylko dane aplikacji XML, który nie jest umieszczone wewnątrz koperty protokołu SOAP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]może zapewnić zarówno usług i klientów, którzy używają POX wiadomości. W usłudze [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] może służyć do wdrożenia usług, które udostępniają punktów końcowych do klientów, takich jak przeglądarki sieci Web i języki skryptów, które wysyłania i odbierania wiadomości POX. Na komputerze klienckim [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania może służyć do wdrożenia klientów, które komunikują się z usługami opartymi na POX.  

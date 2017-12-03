@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1dd63ca472ef5ee9211a8a9a1fd19d983694b43f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługa publikowania pomaga w postępu wczesne środowiska programowania dostarczonych przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego faktycznie wdrażanie aplikacji w środowisku produkcyjnym do celów testowych. Przed dokonaniem planu wdrożenia końcowego można użyć [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi publikowania, aby sprawdzić, czy Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa wykonuje poprawnie i jest gotowy do opublikowania. Można również wdrożyć Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi biblioteki do testowania różnych miejsc docelowych.  

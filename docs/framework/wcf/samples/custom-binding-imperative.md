@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed463a22d011af0428cb5c18f7ac8c75a6fca44c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 556f38ac6cbc3f4f279d238c592da2c72d84264f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-binding-imperative"></a>Powiązanie niestandardowe imperatywne
 Przykład pokazuje, jak napisać kod imperatywnych do definiowania i użyć niestandardowego powiązania bez użycia pliku konfiguracji lub [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wygenerowany klienta. W tym przykładzie łączy funkcje oferowane przez HTTP transport i kanał niezawodnej sesji, można utworzyć niezawodnej powiązanie oparte na protokole HTTP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator.  

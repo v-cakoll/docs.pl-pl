@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 07083d7a92f6b4de68cd1d618d57291f64bef0fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4409e0d603bf667ee041725dbe02b3e2f3a82e73
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="user-name-password-validator"></a>Moduł weryfikacji nazwy użytkownika i hasła
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego modułu weryfikacji UserNamePassword. Jest to przydatne w sytuacjach, gdy żaden z wbudowanych tryby UserNamePassword sprawdzania poprawności nie jest odpowiednią do wymagań aplikacji; na przykład gdy pary nazwa użytkownika i hasło są przechowywane w magazynie zewnętrznym, takie jak bazy danych. W tym przykładzie pokazano usługi, która ma niestandardowego modułu weryfikacji, który sprawdza, czy dwie pary określonej nazwy użytkownika i hasła. Klient używa parę nazwy użytkownika i hasła do uwierzytelnienia w usłudze.  

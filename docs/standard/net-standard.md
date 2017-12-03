@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: ccb44b94f1b3ce2fb369de368454679b25ed351f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f0968c2ecb22c4d199b7787b25e269a8df74fb25
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="net-standard"></a>.NET standard
 
@@ -80,7 +80,7 @@ Specyfikacja .NET Standard jest zestaw standardowych interfejsów API. Specyfika
 
 ### <a name="official-artifacts"></a>Oficjalna artefaktów
 
-Specyfikacja oficjalnego to zestaw plików .cs, które definiują interfejsów API, które są częścią standardowej. [Katalogu ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) w [repozytorium dotnet/standard](https://github.com/dotnet/corefx/tree/master/src) definiuje standardowych interfejsów API platformy .NET.
+Specyfikacja oficjalnego to zestaw plików .cs, które definiują interfejsów API, które są częścią standardowej. [Katalogu ref](https://github.com/dotnet/standard/tree/master/netstandard/ref) w [repozytorium dotnet/standard](https://github.com/dotnet/standard) definiuje standardowych interfejsów API platformy .NET.
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) metapackage ([źródła](https://github.com/dotnet/standard/blob/master/netstandard/pkg/NETStandard.Library.dependencies.props)) opisano zestaw bibliotek, które definiują (częściowo) co najmniej jeden wersje .NET Standard.
 

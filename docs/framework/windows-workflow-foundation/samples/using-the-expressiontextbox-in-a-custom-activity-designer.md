@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 41a5d5645f66f69fd267b75359d0c74952b7b4bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 85fe8dcbd0ef5e774ab81ed167ff937ec2e09d83
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>Przy użyciu ExpressionTextBox w Projektancie działań niestandardowych
 Ten przykład przedstawia sposób użycia <xref:System.Activities.Presentation.View.ExpressionTextBox> w Projektancie działania niestandardowego. To niestandardowe działanie `MultiAssign`, przypisuje dwóch wartości ciągu do dwóch zmiennych ciągu. Niektóre <xref:System.Activities.Presentation.View.ExpressionTextBox> powiązania kontrolki <xref:System.Activities.InArgument>s, a niektóre powiązać <xref:System.Activities.OutArgument>s.  
@@ -57,4 +57,4 @@ Ten przykład przedstawia sposób użycia <xref:System.Activities.Presentation.V
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Presentation.View.ExpressionTextBox>  
- [Tworzenie aplikacji za pomocą projektanta przepływów pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)
+ [Tworzenie aplikacji przy użyciu Projektanta przepływu pracy](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

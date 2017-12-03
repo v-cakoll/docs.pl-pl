@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e2852be-3601-45ae-b507-ccc465d45c60
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e21c6eb15e305584b86c35f8a3cb4a7e549b7cae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 18f6501d2c5a97f7f267321e9cf0b06737afa5bd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="context-exchange-correlation"></a>Korelacja wymiany kontekstu
 Kontekst korelacji jest oparta na mechanizm wymiany kontekstu opisanego w [Specyfikacja protokół wymiany kontekstu .NET](http://go.microsoft.com/fwlink/?LinkId=166059). Kontekst korelacji używa nagłówka kontekstu dobrze znanego lub plik cookie powiązać wiadomości na prawidłowe wystąpienie. Umożliwia korelacji kontekstu, na podstawie kontekstu wiązania takich jak <xref:System.ServiceModel.BasicHttpContextBinding>, <xref:System.ServiceModel.WSHttpContextBinding>, lub <xref:System.ServiceModel.NetTcpContextBinding> musi być używany w określony punkt końcowy do <xref:System.ServiceModel.Activities.WorkflowServiceHost>. W tym temacie wyjaśniono, jak używać kontekstu korelacji z działaniami obsługi komunikatów w usłudze przepływu pracy.  

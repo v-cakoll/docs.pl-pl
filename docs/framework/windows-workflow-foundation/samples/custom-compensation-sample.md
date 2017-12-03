@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 385920da-9284-44bf-9fe9-0d87c7478ec5
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 088e8e771d5fea60987e7ac53ebad0d3fef24b5d
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4ace7d38a456bb9d7f5dd59776b9ae5843b7b651
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-compensation-sample"></a>Przykładowe kompensacji niestandardowych
 Ten przykład przedstawia sposób użycia <xref:System.Activities.Statements.CompensableActivity> i jego kompensacji, aby zdefiniować kompensacji niestandardowej logiki. Scenariusz uformowana w tym przykładzie jest agencji wynajem ciężarówka.  

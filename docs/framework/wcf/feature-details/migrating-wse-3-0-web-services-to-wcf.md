@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ea8bbbcb6241e632075e8ebeb29bbdd3d681dae0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c97279b553a615feda1dd3a195ad033744d82983
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF
 Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmują lepszą wydajność i obsługę dodatkowych modułów transportu, scenariusze dodatkowe zabezpieczenia i WS-* specyfikacji. Usługi sieci Web, która jest migrowana z programu WSE 3.0 do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] może wystąpić do poprawy wydajności 200 – 400%. Aby uzyskać więcej informacji o transportu obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać listę scenariuszy obsługiwanych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Lista specyfikacji, które są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [przewodnik dotyczący współpracy protokołów usług sieci Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  

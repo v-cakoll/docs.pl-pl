@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e8a6ef8c-a195-495a-a15e-7d92bdf0b28c
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b7d9af0a76922bb9c4c1ef30c6377173a887e73b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 275e74d6a95971ceb33bf2a879b97de88c0ddbb0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="retrieve-metadata"></a>Pobieranie metadanych
 W tym przykładzie przedstawiono sposób wdrożenia klienta, który dynamicznie pobiera metadane z usługi, aby wybrać punkt końcowy, z którym do komunikacji. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Usługa została zmodyfikowana, aby ujawnić dwa punkty końcowe — punkt końcowy adres podstawowy, za pomocą `basicHttpBinding` powiązania i bezpieczny punkt końcowy pod adresem {*baseaddress*} / secure przy użyciu `wsHttpBinding` powiązania. Zamiast konfigurować klienta z adresy punktów końcowych i powiązania, klient pobiera dynamicznie metadanych dla usługi przy użyciu <xref:System.ServiceModel.Description.MetadataExchangeClient> klasy, a następnie importuje metadane jako <xref:System.ServiceModel.Description.ServiceEndpointCollection> przy użyciu <xref:System.ServiceModel.Description.WsdlImporter> klasy.  

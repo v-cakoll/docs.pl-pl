@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2f103570cf7d94a9ac6256f3db991c44767fa7c4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4aa9cacfaa966bbe37618406f4b1413dec433726
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="administration-and-diagnostics"></a>Administracja i diagnostyka
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera bogaty zestaw funkcji, które ułatwiają monitorowanie różnych etapach cyklu życia aplikacji. Na przykład można użyć konfiguracji do skonfigurowania usług i klientów na wdrożenie. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zawiera duży zbiór liczników wydajności, aby ocenić wydajność aplikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia również kontroli danych w czasie wykonywania za pośrednictwem usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI). Gdy aplikacja ulegnie awarii lub rozpoczyna się działający nieprawidłowo, umożliwia dziennika zdarzeń czy znaczących niczego pojawił się w temacie. Umożliwia także rejestrowanie komunikatów i śledzenie, aby zobaczyć, jakie zdarzenia są w toku end-to-end w aplikacji. Funkcje te pomagają zarówno deweloperów i specjalistów IT, aby rozwiązać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, gdy jest nie działa prawidłowo.  

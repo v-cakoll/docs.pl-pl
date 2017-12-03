@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 06b311f0ca8e9b0a298cd1d9a5e87ff96d13a787
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8a838b2dd2367bed3fb3ffa3248e67c23f7917d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-member-order"></a>Kolejność elementów członkowskich danych
 W niektórych aplikacjach warto wiedzieć, kolejność, są wysyłane dane z różnych elementów członkowskich danych lub oczekiwano do odebrania (na przykład kolejności, w którym dane są wyświetlane w serializacji XML). Czasami może być konieczna zmiana tej kolejności. W tym temacie wyjaśniono reguły porządkowania.  

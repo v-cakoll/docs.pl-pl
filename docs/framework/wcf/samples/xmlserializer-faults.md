@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 39a01bafb5ce07268b43c1f58a96be0813237891
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9330173461509bed7128f461a05a6a35b26f43f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="xmlserializer-faults"></a>Błędy klasy XmlSerializer
 <xref:System.Xml.Serialization.XmlSerializer> Błąd kontraktu przykładzie pokazano, jak do komunikowania się informacje o błędzie z usługi do klienta przy użyciu <xref:System.Xml.Serialization.XmlSerializer>. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), niektóre dodatkowy kod dodane do usługi, aby przekonwertować wyjątek wewnętrzny błąd. Klient próbuje wykonać dzielenie przez zero, aby wymusić warunek błędu usługi.  

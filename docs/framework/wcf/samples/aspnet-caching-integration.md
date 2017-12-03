@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a8830f1c19b7a91d6c22d3b5955624c7d8a86f5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23cdd79d72f7cb40758fafb63ee4d0f725cbfc1c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="aspnet-caching-integration"></a>Integracja buforowania platformy ASP.NET
 W tym przykładzie pokazano, jak korzystać z pamięci podręcznej danych wyjściowych programu ASP.NET z modelem programowania protokołu HTTP sieci WEB WCF. Zobacz [podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) próbkowania dla siebie wersji tego scenariusza, który opisano szczegółowo implementacji usługi. Ten temat koncentruje się na funkcji Integracja z pamięci podręcznej danych wyjściowych programu ASP.NET.  

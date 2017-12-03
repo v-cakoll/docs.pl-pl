@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9a6d35b2-0469-43c8-a0c9-63623e3d2733
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 48b49def3f8f009eeb4ffa0204e9c616b5acfec7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 82f47fb0b789e41c332ebae2cfeaeb350ff0fddd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discover-a-service-with-unique-listen-uri-mode-sample"></a>Odnajdywanie usługi działającej w trybie unikatowego identyfikatora URI nasłuchiwania — przykład
 W tym przykładzie pokazano, jak odnajdywanie usługi, która ma <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> ustawioną właściwość <xref:System.ServiceModel.Description.ListenUriMode.Unique>. Gdy <xref:System.ServiceModel.Channels.BindingContext.ListenUriMode%2A> właściwość jest ustawiona na <xref:System.ServiceModel.Description.ListenUriMode.Unique>, zapewniony ListenUri być unikatowy, ustawiając portu unikatowa lub ścieżka, które mają być unikatowe przez dołączenie identyfikatora GUID.  

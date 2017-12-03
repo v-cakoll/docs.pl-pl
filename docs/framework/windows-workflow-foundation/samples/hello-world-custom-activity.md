@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 72b1dd0a-9aad-47d5-95a9-a1024ee1d0a1
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 75f4a75a38b79e7b7ab18ac2ce3eff2a13aab15f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b717a5448a32eea3957e1e7e45c4dfc2f8801775
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hello-world-custom-activity"></a>Witaj świecie niestandardowego działania
 W tym przykładzie pokazano kilka kluczowych funkcji [!INCLUDE[wf](../../../../includes/wf-md.md)], łącznie ze sposobem tworzenia prostych działań niestandardowych. Niektóre funkcje zostało to pokazane w tym przykładzie tworzenia działań niestandardowych w języku C# i za pomocą `in` i `out` argumentów (<xref:System.Activities.InArgument> i <xref:System.Activities.OutArgument>).  

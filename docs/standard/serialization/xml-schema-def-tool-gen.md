@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0361f3e21b44eeabdbb8e2af5cccd1a59e588314
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3c1f0dd08e820e5433f05c8bc90d85c84eb05972
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>Porady: Użyj narzędzia definicji schematu XML do generowania klasy i dokumentach schematów XML.
 Narzędzie definicji schematu XML (Xsd.exe) służy do generowania schematu XML, która opisuje klasę lub do generowania klasy zdefiniowane przez schemat XML. Poniższe procedury pokazują, jak wykonywać te operacje.  

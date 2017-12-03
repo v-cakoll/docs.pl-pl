@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e0e6a0db5ee02f96582fe71414b620e1f78c40a1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 103a22a729029118b0770e2889c419074be6ad50
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="concurrency"></a>Współbieżność
 Przykład współbieżności demonstruje użycie <xref:System.ServiceModel.ServiceBehaviorAttribute> z <xref:System.ServiceModel.ConcurrencyMode> wyliczenia, która kontroluje, czy wystąpienie usługi przetwarza wiadomości sekwencyjnie lub jednocześnie. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie definiuje kontrakt nowe `ICalculatorConcurrency`, który dziedziczy z `ICalculator`, zapewniając dwa dodatkowe operacje dla sprawdzenie stanu usługi współbieżności. Zmieniając ustawienie współbieżności, można obserwować zmiany w zachowaniu przez uruchomienie klienta.  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d8ebe82f-98c8-4452-aed7-2c60a512b097
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 02dc1dfda28aae15889c0239f2913a8240869a76
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 43f39d5c78e59925ad73fe7277300848877f83f2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="dynamicactivity-creation"></a>Tworzenie DynamicActivity
 W tym przykładzie pokazano dwa różne sposoby tworzenia działania w czasie wykonywania za pomocą <xref:System.Activities.DynamicActivity> działania.  

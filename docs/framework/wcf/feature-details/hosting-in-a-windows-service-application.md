@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 07823da6a920a22e35932f32f9320499d9cc84a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1f411e0280a1f663e5e001e471eb836208083160
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Hostowanie w aplikacji usługi systemu Windows
 Usługi systemu Windows (wcześniej znane jako usługi systemu Windows NT) zapewniają proces modelu szczególnie nadaje się do aplikacji, musi istnieć w pliku wykonywalnym długotrwałe, które nie są wyświetlane wszystkie formularza interfejsu użytkownika. Okres istnienia procesu systemu Windows, usługi aplikacja jest zarządzana przez Menedżera sterowania usługami (SCM), dzięki czemu można uruchomić, zatrzymać i wstrzymywanie aplikacji usług systemu Windows. Można skonfigurować do automatycznego uruchamiania podczas uruchamiania komputera, dzięki czemu odpowiednie środowisko macierzyste dla aplikacji "zawsze włączone" proces usługi systemu Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Aplikacje usług systemu Windows, temacie [aplikacji usług systemu Windows](http://go.microsoft.com/fwlink/?LinkId=89450).  

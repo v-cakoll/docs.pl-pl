@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
 caps.latest.revision: "25"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cdf64dd7aca82fb0d0b3111832aca863a327270b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Porady: tworzenie Projektant działań niestandardowych
 Projektantów działań niestandardowych są zwykle implementowany ich działania skojarzone są zezwala na składanie z innymi działaniami projektantów, których można było porzucić na powierzchnię projektu z nimi. Ta funkcja wymaga, Projektant działań niestandardowych podania "strefy docelowej" rozmieszczenia dowolne działanie, a także sposób zarządzania wynikowy zbiór elementów na powierzchnię projektu. W tym temacie opisano, jak utworzyć projektanta działań niestandardowych, który zawiera strefy docelowej i jak utworzyć designer działania niestandardowego, który zapewnia, że funkcji edytowania potrzebne do zarządzania kolekcję elementów projektanta.  

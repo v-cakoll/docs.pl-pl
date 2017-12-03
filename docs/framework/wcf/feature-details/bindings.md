@@ -14,14 +14,14 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 83639133-89f7-43f0-b4ef-8d9e57c08d25
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 22b7b8f568b3350972ace128fdc3164c4f3ba179
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d6fd1bf29af743e5bfcd466ffdf7430c389635de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="windows-communcation-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]oddziela sposób zapisywania oprogramowania dla aplikacji z jak on komunikuje się z innym oprogramowaniem. Powiązania są używane do określania transportu, kodowanie i szczegóły protokołu wymagane dla klientów i usług komunikować się ze sobą. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa powiązania w celu wygenerowania danych przesyłanych w sieci podstawowej reprezentację punktu końcowego, dlatego większość szczegóły wiązania należy uzgodnić przez strony komunikujące się. Najprostszym sposobem osiągnąć ten cel jest dla klientów usługi można używać tego samego powiązanie punktu końcowego do zastosowań usługi. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak to zrobić, zobacz [przy użyciu powiązań, aby skonfigurować usługi systemu Windows Communication Foundation i klientów](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb).  

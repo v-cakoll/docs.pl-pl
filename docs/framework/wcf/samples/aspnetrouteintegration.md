@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0638ce0e-d053-47df-a447-688e447a03fb
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b54de1c495dee466475979db7e6ba8d8ff9cf55b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a942a26ad239233f13ee8791d1178fb47573e710
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="aspnetrouteintegration"></a>AspNetRouteIntegration
 W tym przykładzie pokazano, jak udostępniać [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kieruje usługi REST przy użyciu platformy ASP.NET. [Podstawowej usługi zasobów](../../../../docs/framework/wcf/samples/basic-resource-service.md) przykładowe pokazuje siebie wersję tego scenariusza i implementacji usługi szczegółowo omówiono. Ten temat koncentruje się na funkcji integracji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET routingu, zobacz <xref:System.Web.Routing>.  

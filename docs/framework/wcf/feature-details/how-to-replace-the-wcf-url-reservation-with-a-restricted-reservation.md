@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9dd631f08f9367576adf97f9139348bfce69a92f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8c25403f298444732f6787979add595bd877bb2c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>Instrukcje: Zastępowanie rezerwacji adresu URL programu WCF ograniczoną rezerwacją
 Rezerwację adresu URL, można ograniczyć, kto może odbierać komunikaty z adresem URL lub zestaw adresów URL. Zastrzeżenie składa się z szablonem adresu URL, listy kontroli dostępu (ACL) i zestaw flag. Szablon adresu URL definiuje adresów URL, które zastrzeżenie ma wpływ na. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]adres URL szablony są przetwarzane, zobacz [routingu żądań przychodzących](http://go.microsoft.com/fwlink/?LinkId=136764). Listy ACL Określa, jakie użytkownik lub grupa użytkowników może odbierać komunikaty z określonych adresów URL. Flagi informujące o powodzeniu rezerwacji Aby udzielić użytkownikowi lub grupie uprawnienia do nasłuchiwania na adresie URL bezpośrednio lub Aby delegować uprawnienia do nasłuchiwania na innym procesie.  
@@ -51,7 +51,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1.  Kliknij przycisk **Start**, wskaż polecenie **wszystkie programy**, kliknij przycisk **Akcesoria**, kliknij prawym przyciskiem myszy **wiersza polecenia** i kliknij przycisk **Uruchom jako Administrator** menu kontekstowego, który pojawia się. Kliknij przycisk **Kontynuuj** w oknie Kontrola konta użytkownika (UAC), które może poprosić o uprawnienia, aby kontynuować.  
   
-2.  Wpisz w **net localgroup "\<Nazwa grupy zabezpieczeń >" / comment: "\<opis grupy zabezpieczeń >" / add** w wierszu polecenia. Zastępowanie ** \<Nazwa grupy zabezpieczeń >** o nazwie grupy zabezpieczeń, aby utworzyć i ** \<opis grupy zabezpieczeń >** z odpowiedniego opis Grupa zabezpieczeń.  
+2.  Wpisz w **net localgroup "\<Nazwa grupy zabezpieczeń >" / comment: "\<opis grupy zabezpieczeń >" / add** w wierszu polecenia. Zastępowanie  **\<Nazwa grupy zabezpieczeń >** o nazwie grupy zabezpieczeń, aby utworzyć i  **\<opis grupy zabezpieczeń >** z odpowiedniego opis Grupa zabezpieczeń.  
   
 3.  Jeśli grupa zabezpieczeń został utworzony pomyślnie, zostanie wyświetlony następujący komunikat. **Polecenie zostało wykonane pomyślnie.**  
   
@@ -65,6 +65,6 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 1.  Kliknij przycisk **Start**, wskaż polecenie **wszystkie programy**, kliknij przycisk **Akcesoria**, kliknij prawym przyciskiem myszy **wiersza polecenia** i kliknij przycisk **Uruchom jako Administrator** menu kontekstowego, który pojawia się. Kliknij przycisk **Kontynuuj** w oknie Kontrola konta użytkownika (UAC), które może poprosić o uprawnienia, aby kontynuować.  
   
-2.  Wpisz w **netsh http Dodaj adres url urlacl = http: / / +: 80/Temporary_Listen_Addresses/użytkownik = "\<nazwa komputera >\\< nazwa grupy zabezpieczeń\> ** w wierszu polecenia. Zastępowanie ** \<nazwa komputera >** z nazwą komputera, na którym można utworzyć grupy i ** \<Nazwa grupy zabezpieczeń >** o nazwie utworzoną grupę zabezpieczeń wcześniej.  
+2.  Wpisz w **netsh http Dodaj adres url urlacl = http: / / +: 80/Temporary_Listen_Addresses/użytkownik = "\<nazwa komputera >\\< nazwa grupy zabezpieczeń\>**  w wierszu polecenia. Zastępowanie  **\<nazwa komputera >** z nazwą komputera, na którym można utworzyć grupy i  **\<Nazwa grupy zabezpieczeń >** o nazwie utworzoną grupę zabezpieczeń wcześniej.  
   
 3.  Jeśli rezerwacji została utworzona pomyślnie, zostanie wyświetlony następujący komunikat. **Pomyślnie dodano rezerwację adresu URL**.

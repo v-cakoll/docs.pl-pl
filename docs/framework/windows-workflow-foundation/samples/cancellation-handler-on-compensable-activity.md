@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: afd98bee-eccf-47e9-99c9-27cea84ce5ce
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64d594711a805f75e1d76e59579032b0dc73dc93
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 89a5350d61600124e3e5073d6788e4f9042cd70f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="cancellation-handler-on-compensable-activity"></a>Obsługa anulowania w działaniu Compensable
 W tym przykładzie przedstawiono użycie obsługi anulowania z <xref:System.Activities.Statements.CompensableActivity>.  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - WCF [WCF]
 ms.assetid: 149348a6-bf82-4ccc-9604-fa7cc88c0749
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7d0e4a33f83cc8bbd0b67a7f21d786ac9f646bd5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 184a5b8eeafd68907c76655cfed82634de106185
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Tworzenie zorientowanych na usługę aplikacji za pomocą usługi WCF
 Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WCF), czyli ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Umożliwia ona deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjne, zintegrowanie na różnych platformach, które współdziałają z dotychczasowych inwestycji.

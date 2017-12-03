@@ -14,14 +14,14 @@ helpviewer_keywords:
 - digital signatures [WCF]
 ms.assetid: 0868866d-40b4-4341-8e42-eee3b7f15b69
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 147f62a895983557267d0a18fdd1ea261ae6c855
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 88ff9f3536d001054b2a95503b94cdda93f7fafc
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="encryption-of-digital-signatures"></a>Szyfrowanie podpisów cyfrowych
 Domyślnie komunikat jest podpisane i zaszyfrowane i podpisu cyfrowego jest zaszyfrowany. Można to kontrolowane przez utworzenie niestandardowego powiązania z wystąpieniem <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> , a następnie ustawienie `MessageProtectionOrder` właściwości każdej klasy do <xref:System.ServiceModel.Security.MessageProtectionOrder> wartości wyliczenia. Wartość domyślna to <xref:System.ServiceModel.Security.MessageProtectionOrder.SignBeforeEncryptAndEncryptSignature>. Ten proces trwa dłużej niż zwykłe podpisywania i szyfrowania 10 do 40 procent. Wyłączenie szyfrowania podpisu, jednak osoba atakująca może mieć odgadnąć treści wiadomości. Jest to możliwe, ponieważ wartość skrótu zwykły tekst każdej części podpisanych wiadomości zawiera element podpisu. Mimo że treść komunikatu jest domyślnie szyfrowane, niezaszyfrowane podpis zawiera skrótu treści wiadomości. Jeśli komunikat jest mały, osoba atakująca może mieć możliwość wywnioskować zawartość. Szyfrowanie podpis ograniczyć lub eliminuje tej możliwości.  

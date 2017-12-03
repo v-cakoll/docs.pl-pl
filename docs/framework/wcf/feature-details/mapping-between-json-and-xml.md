@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8bcc8f178f76c536b189058210a586d0d37a1834
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9bf104af8c88413298412d3ec3a29cd934558e2d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="mapping-between-json-and-xml"></a>Mapowanie między formatami JSON i XML
 Czytniki i zapisywania utworzonego przez <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> dostarczać interfejs API XML nad zawartością JavaScript Object Notation (JSON). JSON koduje dane przy użyciu podzbiór literałów obiektu języka JavaScript. Czytniki i zapisywania utworzonego przez tej fabryki są również używane podczas zawartość JSON są wysyłane lub odbierane przez [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji przy użyciu <xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement> lub <xref:System.ServiceModel.WebHttpBinding>.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 24482f97f5869def79ce2a24d33b3f9345d1c7c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7a6aae3956bd7c24de7dd569fba26ec1f5b51169
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extensible-objects"></a>Obiekty rozszerzalne
 Wzorzec rozszerzonego obiektu jest używany, aby wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub aby dodać nowy stan do obiektu. Dołączony do jednego z obiekty rozszerzalne, dzięki rozszerzeniom zachowania w bardzo różnych etapach przetwarzania dostęp do stanu udostępnionego i dołączony do obiektu extensible wspólnej mogą uzyskiwać dostęp do funkcji.  

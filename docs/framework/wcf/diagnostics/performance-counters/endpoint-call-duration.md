@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1aebe748-ad05-4ade-819c-d480379ccfb9
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 60a83b0d856394512166bccd292e717dfd8a0f99
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b5e467c86a95316ddb88cc0d580fbde04ff2fc25
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="endpoint-call-duration"></a>Punkt końcowy: Czas trwania wywołania
 Średni czas trwania wywołań tego punktu końcowego.  Średni czas trwania jest obliczana oparte na równanie: (N1-N0)/(D1-D0).  

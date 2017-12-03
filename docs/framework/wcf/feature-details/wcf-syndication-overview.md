@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: af6d4c39-e5e8-4099-aee6-5261feff9107
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 629ec17ea01ec29480f15f5921d09e7497e9f8c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-syndication-overview"></a>Omówienie syndykacji WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia obsługę udostępnianie zespolonego źródła [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Syndykacja jest mechanizm integracji aplikacji, w którym serwer przedstawia niektóre dane aplikacji w formacie interoperacyjne znany jako źródło danych. Źródło danych to kolekcja danych aplikacji, która składa się z niektórych metadanych źródła danych na poziomie (tytuł, autora, adres URL i innych metadanych) i szereg elementów strumieniowego źródła danych. W źródle danych elementów strumieniowego źródła danych są zwykle czas uporządkowanych w odwrotnej kolejności. Element źródła składa się ze standardowego zestawu metadanych poziomie elementu (tytuł, adres URL, Data utworzenia, kategorii i innych metadanych elementu poziom) oraz dowolnej liczby dane specyficzne dla aplikacji. Dwa najczęściej używane typy zespolonego źródła danych są naprawdę proste Syndication (RSS) 2.0 i Atom 1.0, które są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  

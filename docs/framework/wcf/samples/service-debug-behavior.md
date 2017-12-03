@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04520eda9fe7ce2cd461e094fe2cec76d52ccc7d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb609857dbe3aaee0014e284d80af3b93ac395e5
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-debug-behavior"></a>Zachowanie debugowania usług
 W przykładzie pokazano, jak można skonfigurować ustawienia zachowanie debugowania usług. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), który implementuje `ICalculator` kontraktu usługi. W tym przykładzie jawnie definiuje zachowanie debugowania usług w pliku konfiguracji. Mogą również to robić imperatively w kodzie.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 82cc43f1-3c8f-4771-ac19-a75ac936e2c3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f778fead0e09be36ca2a829dde9cf906f4fcaa9f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bba400a4476ffd2589af1d5e7d3e0ca5661102f3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-discovery-sample"></a>Odnajdywanie przepływu pracy — przykład
 W przykładzie pokazano sposób stał się wykrywalny usługi przepływu pracy i tworzenia działania niestandardowego kodu, która wyszukuje określonej usługi.  

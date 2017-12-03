@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 49619f59-9819-484a-bcd8-5596308e8551
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f45d4ffc04b206db0dfefbdbbe683146e09c767f
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6ebc79fa582a32ccc252e6c22b9b223870da7e44
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="external-activity-validation"></a>Sprawdzanie poprawności działania zewnętrzne
 W tym przykładzie pokazano, jak dodać logikę weryfikacji wbudowane działania, których nie jesteś Autor. Logikę weryfikacji składa się z wymuszenie wszystkich <xref:System.Activities.Statements.If> przedstawia działań w przepływie pracy, musisz być ich <xref:System.Activities.Statements.If.Then%2A> zestaw właściwości lub ich <xref:System.Activities.Statements.If.Else%2A> zestawu właściwości. Ponadto logikę weryfikacji obejmuje sprawdzania wszystkie <xref:System.Activities.Statements.Pick> działania w przepływie pracy mają więcej niż jednej gałęzi i jeśli nie jest wielkość liter, generowany jest ostrzeżenie.  

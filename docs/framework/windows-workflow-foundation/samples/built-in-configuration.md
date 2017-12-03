@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 34e85c9b-088d-4347-816c-0f77cb73ef2f
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7dc11c19025393ffb1ce8e10cbfa637f38a867fd
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 054b1f57ff091b21ccb709ff8890c663f2d607fb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="built-in-configuration"></a>Wbudowane konfiguracji
 W przykładzie pokazano, używania i konfiguracji w magazynie wystąpień przepływu pracy SQL. W magazynie wystąpień przepływu pracy SQL jest implementacją SQL na podstawie wystąpienia magazynu. Umożliwia on do zapisywania i ładowania stanu z bazy danych programu SQL Server lub SQL Server Express i wystąpienia.  

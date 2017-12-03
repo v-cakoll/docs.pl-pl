@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 12b5c8db096c0261041c29385b0ebe2e1569078c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5a2a45f0b923c9f30bb8df1c59be54e00d844551
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-custom-flow-control-activities"></a>Tworzenie niestandardowego przepływu sterowania działań
 .Net Framework zawiera szereg działań przepływu sterowania, które działają podobnie abstrakcyjnej struktury programowania (takich jak <xref:System.Activities.Statements.Flowchart>) lub standardowy instrukcje programowania (takich jak <xref:System.Activities.Statements.If>). W tym temacie omówiono architekturę jednego z przykładowych projektów [ForEach Nieogólny](../../../docs/framework/windows-workflow-foundation/samples/non-generic-foreach.md).  

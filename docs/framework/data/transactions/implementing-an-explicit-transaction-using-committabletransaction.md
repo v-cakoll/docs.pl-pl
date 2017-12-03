@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f045356fa2de6543a3b24490cb7964640a8d802c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cc6f039ffbdeaef70e3bc4eb71aa5046105f4ee9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>Implementowanie jawnych transakcji przy użyciu obiekcie CommittableTransaction
 <xref:System.Transactions.CommittableTransaction> Klasa umożliwia jawne dla aplikacji, aby używać transakcji, a nie za pomocą <xref:System.Transactions.TransactionScope> klasy niejawnie. Jest to przydatne w przypadku aplikacji, które mają być używane przez wiele wywołań funkcji lub wielu wywołań wątku tej samej transakcji. W odróżnieniu od <xref:System.Transactions.TransactionScope> klasy, moduł zapisujący aplikacji musi w szczególności wywołać <xref:System.Transactions.CommittableTransaction.Commit%2A> i <xref:System.Transactions.Transaction.Rollback%2A> metody, aby zatwierdzić lub przerwać transakcji.  

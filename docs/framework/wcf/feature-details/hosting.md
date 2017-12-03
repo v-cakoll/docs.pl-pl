@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0820c7e5-0b50-4cde-80e7-74e346513002
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8b0e8aa1dfe2e7a737e88530a206739eef39b2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2cc98a6c6b0e8b552a7bf04d3fc1a97b41883677
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting"></a>Hosting
 Tematy w tej sekcji opisano, hostingu usług. Usługa może być obsługiwany przez Internet Information Services (IIS), usługa aktywacji procesów systemu Windows (WAS), Windows Server AppFabric, usługa systemu Windows lub aplikacji zarządzanej — ta opcja jest często określany jako *self hosting*.  

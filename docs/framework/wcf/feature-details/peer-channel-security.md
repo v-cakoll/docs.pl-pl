@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: afe4252a56802ff2796f947afa31a5871f29223e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edb53e6cd234a059ebd3e7ddff9aaa258ae6027b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-channel-security"></a>Zabezpieczenia kanału równorzędnego
 Kanał elementu równorzędnego umożliwia różnych typów aplikacji rozproszonej, które są zależne od wielopartyjnej wiadomości. Oto kilka przykładów skali Internet dystrybucji zawartości, której zaufane źródło dystrybucji zawartości (na przykład nośnik lub aktualizacji oprogramowania), grupą znajomych wymiany muzyka i zdjęcia lub zespołu współpracowników wspólnie edytowanie dokumentu. Każdy z tych scenariuszy wymaga modelu zabezpieczeń unikatowa. Model zabezpieczeń kanał elementu równorzędnego zaprojektowano w celu rozwiązania tych scenariuszy i oferuje model zabezpieczeń dźwięku dla indywidualnych potrzeb różne modele tożsamości, uwierzytelniania i autoryzacji.  

@@ -9,14 +9,14 @@ helpviewer_keywords:
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f583c0c7f2895b16ac0aea883dd98b4768179127
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ccf1c585a171f2842084c1fdce639e479ce5ca8d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="selective-serialization"></a>Selektywne serializacji
 Klasa często zawiera pola, które nie powinny być serializowane. Załóżmy na przykład, że identyfikator wątku w klasie są przechowywane w zmiennej członkowskiej. Podczas deserializacji jest klasa, wątek przechowywane identyfikator kiedy została wykonana serializacja klasy nie może być uruchomiony; Dlatego serializacji tej wartości nie ma sensu. Zmienne Członkowskie uniemożliwi serializowana oznaczając je za pomocą [NonSerialized](xref:System.NonSerializedAttribute) atrybutu w następujący sposób.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dc28086e0e4489df5594c4b1ce5ec16cea9b1e61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 46a532b45024321a6885fa3e45d172c054d18c1c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-a-data-contract-resolver"></a>Używanie mechanizmu rozpoznawania kontraktów danych
 Mechanizmu rozpoznawania kontraktów danych umożliwia konfigurowanie znane typy dynamicznie. Znane typy są wymagane w przypadku serializacji lub deserializacji typu nie jest oczekiwany przez kontraktu danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]znane typy, zobacz [znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md). Statycznie zwykle są określone znane typy. Oznacza to, czy trzeba znać wszystkie możliwe typy operacji może pojawić się podczas wykonania operacji. Brak scenariuszy, w których nie dotyczy ważne jest możliwość dynamicznie Określ znanych typów.  

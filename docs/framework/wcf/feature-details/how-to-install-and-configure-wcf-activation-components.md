@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 77dec85ee12250080fc487d120749892a148ef17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: ee57276efda7edcc464c300e2f1d100b6a7c9109
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>Instrukcje: Instalowanie i konfigurowanie składników aktywacji programu WCF
 W tym temacie opisano kroki wymagane do skonfigurowania Windows Process Activation Service (znanej także jako Usługa WAS) na [!INCLUDE[wv](../../../../includes/wv-md.md)] hosta [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] protokoły sieciowe usług, które nie komunikują się za pośrednictwem protokołu HTTP. W poniższych sekcjach opisano czynności dla tej konfiguracji:  

@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7434e0ea112a6641e356a1ec3da3a4bd6524bdda
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6333db92d010eab7765cfc62a9f64601d5b82d55
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-client-overview"></a>Przegląd klienta programu WCF
 W tej sekcji opisano, jakie aplikacje klienckie czy i jak konfigurowanie, tworzenie i używanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] klienta i zabezpieczania aplikacji klienckich.  

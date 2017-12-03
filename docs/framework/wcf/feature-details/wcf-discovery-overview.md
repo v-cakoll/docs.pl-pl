@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 84fad0e4-23b1-45b5-a2d4-c9cdf90bbb22
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1afd3d94ceb3389a7d87528371925120f3c92764
-ms.sourcegitcommit: e99dfadbca1992c187179b6a3b42bef44534ebb6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cb9fc13d7facf3bdc3f9da43297a47fd1cf4af65
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/01/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-discovery-overview"></a>Omówienie odnajdywania WCF
 Interfejsy API wykrywania zapewnienia ujednoliconego modelu programowania dynamiczne publikacji i odnajdywania usług sieci Web za pomocą protokołu WS-Discovery. Te interfejsy API umożliwiają usług do publikowania się i klientom znalezienie usług opublikowanych. Gdy usługa następuje wykrywalny, usługa ma możliwość wysyłać powiadomienia, a także nasłuchiwania i odpowiadać na żądania odnajdywania. Wykrywalny usług można wysyłać wiadomości powitania ogłaszamy przybyciu w sieci i komunikaty Bye poinformować ich wyjścia z sieci. Aby znaleźć usługi, klienci wysyłają `Probe` żądania, która zawiera określone kryteria, takie jak typ kontraktu usługi, słowa kluczowe i zakresem w sieci. Odbieranie usług `Probe` żądania i ustalić, czy odpowiadają one kryteriom. Usługa zgodna, odpowiadały wysyłając `ProbeMatch` wiadomość do klienta informacje niezbędne do kontaktu z usługą. Klienci mogą również wysyłać `Resolve` żądania, dzięki czemu można znaleźć usługi, które mogą zmienić swój adres punktu końcowego. Usługi pasującego odpowiadanie na `Resolve` żądań wysyłając `ResolveMatch` wiadomość do klienta.  

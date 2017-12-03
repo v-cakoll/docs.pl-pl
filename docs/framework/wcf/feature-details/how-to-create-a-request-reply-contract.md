@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 801d90da-3d45-4284-9c9f-56c8aadb4060
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ad32807227844e379dd44e63c61b3ff15d2a2ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 79ef7b899adfb068a03e41cf0f3aa29f34f27b88
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-request-reply-contract"></a>Instrukcje: Tworzenie kontraktu „żądanie-odpowiedź”
 Kontraktu "żądanie-odpowiedź" Określa metodę, która zwraca odpowiedź. Odpowiedź musi być wysyłane i skorelowane żądanie na mocy niniejszej Umowy. Nawet wtedy, gdy metoda nie zwraca żadnej odpowiedzi (`void` w języku C# lub `Sub` w języku Visual Basic), infrastruktury tworzy i wysyła komunikat pusty do obiektu wywołującego. Aby uniemożliwić wysyłanie komunikatu odpowiedzi pusty, należy użyć kontraktu jednokierunkowego dla tej operacji.  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a0e625beaf20f6445099d8fb15cb175d3d71a860
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bfe452b41c39598e237633490d09cd267fda04ec
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications"></a>Współdziałanie z aplikacjami COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usługi można zintegrować bezpośrednio do istniejącego kodu za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] krótkiej nazwy. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  

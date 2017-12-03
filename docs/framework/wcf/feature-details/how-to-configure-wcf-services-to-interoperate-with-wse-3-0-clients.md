@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 099fb059e375e0e76cffb5389191011d866b2d8c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5589ad8e4193416738da98676551bbf82c128a79
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>Instrukcje: Konfigurowanie usług WCF pod kątem współdziałania z klientami programu WSE 3.0
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usługi są zgodne poziom danych przesyłanych w sieci z 3.0 rozszerzenia usługi sieci Web dla klientów programu Microsoft .NET (WSE) podczas [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing.  

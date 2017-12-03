@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 caps.latest.revision: "35"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 765e531530342af5cf0fccfb759626341103114a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 407fa758c6564c3b7a5a8573acef1b6e181399d2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="default-message-contract"></a>Domyślny kontrakt komunikatów
 Domyślny kontrakt komunikatów w przykładzie pokazano usługi, gdy wiadomość niestandardowe zdefiniowane przez użytkownika jest przekazywany do i z operacji usługi. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej interfejs Kalkulator jako typu usługi. Zamiast poszczególnych usług operacji dodawania, odejmowania mnożenia i dzielenia używane w [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), w tym przykładzie przekazuje niestandardowy komunikat, który zawiera argumenty operacji i operatora i zwraca wynik operacji arytmetycznych.  

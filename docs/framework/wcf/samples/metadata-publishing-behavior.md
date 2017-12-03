@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
 caps.latest.revision: "23"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: fbccca0bb5db7fa12b5237d19b833e9fe11da0e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a92b41df3b2e9c556e61c08979290b12206f18aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="metadata-publishing-behavior"></a>Zachowanie publikowania metadanych
 Przykład zachowania publikowania metadanych pokazuje, jak do kontrolowania funkcji publikowania metadanych usługi. Aby zapobiec przypadkowe ujawnienie metadanych usługi potencjalnie poufnych, konfigurację domyślną dla [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług wyłącza Publikowanie metadanych. To zachowanie jest domyślnie bezpieczne, ale również zaimportować narzędzia (na przykład Svcutil.exe) oznacza, że metadane nie można użyć do generowania kodu klienta wymaganych do wywołania tej usługi, chyba że jawnie włączone jest zachowanie podczas publikowania metadanych usługi w konfiguracji.  

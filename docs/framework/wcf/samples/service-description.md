@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7034b5d6-d608-45f3-b57d-ec135f83ff24
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1d3251d960b00d34c08826957e0db9c30bd5aae3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 33147ef4f06a449f74ee683d04225bf31fbff8f9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-description"></a>Opis usługi
 Przykład opisu usługi pokazano, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania. Próbki jest oparta na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md), za pomocą operacji usługi dodatkowe zdefiniowane zwraca informacje opisowe dotyczące usługi. Zwracane informacje wymieniono adres podstawowy i punkty końcowe dla usługi. Udostępnia te informacje przy użyciu <xref:System.ServiceModel.OperationContext>, <xref:System.ServiceModel.ServiceHost>, i <xref:System.ServiceModel.Description.ServiceDescription> klasy.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
 caps.latest.revision: "45"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4ebc3c349e0eedcbe20f126f5252dadf8a6b8096
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb32d1c9c0c0922dae27b2933259df9470cceeba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>Omówienie modelu programowania usług HTTP w sieci Web przy użyciu programu WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Model programowania protokołu HTTP sieci WEB udostępnia podstawowe elementy wymagane do tworzenia usług HTTP w sieci WEB za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Usługi sieci WEB HTTP można uzyskać dostęp przez szeroki zakres możliwości klientów, w tym przeglądarki sieci Web i ma następujące wymagania:  

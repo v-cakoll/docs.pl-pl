@@ -13,14 +13,14 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d1c4488421f4162d70fc47f8dd4d04c9374f25fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, możesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  

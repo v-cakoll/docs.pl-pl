@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 15571ca2-bee2-47fb-ba10-fcbc09152ad0
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 77a7148a0fc96c4a043a06fbfac7b139c7720d4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cfac12fc0c5fbaabf612bbd8cc950f93a59a54c8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-message-flow-tracing"></a>Konfigurowanie śledzenia przepływu komunikatów
 Gdy [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] czynność śledzenia jest włączona, End-To-End identyfikatory aktywności są przypisane do logicznego działań w całym [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu. W [!INCLUDE[netfx_current_short](../../../../../includes/netfx-current-short-md.md)], jest teraz wyższą wersję wydajności tej funkcji, która działa z zdarzenia śledzenia dla systemu Windows (ETW) o nazwie śledzenia przepływu komunikatów. Po włączeniu End-To-End identyfikatory aktywności są pobierane z (lub przypisane do, jeśli puste) wiadomości przychodzących i są propagowane do wszystkich zdarzeń śledzenia, które są emitowane po wiadomość ma został odczytany przez kanał. Klientów można użyć tej funkcji odtworzenie po dekodowania przepływów wiadomości z dziennikami śledzenia z różnych usług.  

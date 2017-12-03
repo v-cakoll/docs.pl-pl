@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: extending channels [WCF]
 ms.assetid: 4238db74-2fb6-4dc8-a326-f58527230810
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 80b3734507de64ae4076b6ad12dbcfd9e0084f02
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3f9d14183092b70f0bbe1ce8894f10369aa46c31
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-the-channel-layer"></a>Rozszerzanie warstwy kanału
 Warstwie kanału jest odpowiedzialny za wymiana wiadomości między klientami i usługami. Rozszerzenia kanału można zaimplementować nowych funkcji protokołu, takiego jak zabezpieczenia czy funkcje transportu, takie jak wdrażanie nowego transportu sieciowego do przenoszenia wiadomości SOAP.  

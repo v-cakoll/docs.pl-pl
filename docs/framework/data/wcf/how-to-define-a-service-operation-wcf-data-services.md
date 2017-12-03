@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, service operations
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: feac51c92a7e963d440eefbae94a58b94f49797e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dcf4ffd46bbbca0e7e00cad7ae0b2a88f7bd986b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>Porady: Definiowanie operacji usługi (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ujawnia metody, które są zdefiniowane na serwerze jako operacji usługi. Operacje usługi Zezwalaj na dostęp za pomocą identyfikatora URI do metody, która jest zdefiniowana na serwerze usługi danych. Aby zdefiniować operacji usługi, należy zastosować [`WebGet]` lub `[WebInvoke]` atrybut do metody. Aby obsługiwać operatorów zapytań, musi zwracać operacji usługi <xref:System.Linq.IQueryable%601> wystąpienia. Operacje usługi może uzyskać dostępu do źródła danych za pośrednictwem <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> właściwość <xref:System.Data.Services.DataService%601>. Aby uzyskać więcej informacji, zobacz [operacji usługi](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md).  

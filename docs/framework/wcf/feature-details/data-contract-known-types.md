@@ -17,14 +17,14 @@ helpviewer_keywords:
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
 caps.latest.revision: "42"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7420b2c47356eee526c46e97d35e6d3cc474797e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cdb9e539d16b874ffd37b8e381757594561386e7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="data-contract-known-types"></a>Znane typy kontraktów danych
 <xref:System.Runtime.Serialization.KnownTypeAttribute> Klasa pozwala na określenie z wyprzedzeniem, typów, które powinny zostać uwzględnione w brany pod uwagę podczas deserializacji. Na przykład pracy, zobacz [znane typy](../../../../docs/framework/wcf/samples/known-types.md) przykład.  

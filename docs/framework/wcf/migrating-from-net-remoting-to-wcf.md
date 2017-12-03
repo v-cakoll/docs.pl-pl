@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 228a6faca43ed121de59ed35c5a186294b41d147
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migracji aplikacji, która używa .NET Remoting do używania usług Windows Communication Foundation (WCF). Porównuje podobne pojęcia między tymi produktami, a następnie opisano, jak wykonać kilka typowych scenariuszy komunikacji zdalnej programu WCF.  

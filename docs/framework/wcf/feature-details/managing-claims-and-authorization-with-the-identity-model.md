@@ -16,14 +16,14 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 caps.latest.revision: "20"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a5734065a82c6b45b837c9cb5a74ba6e46207fb7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b69c17b9fcb14bbd70b60c32965fb1163c22e765
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości
 Autoryzacja jest proces określania, które mają uprawnienia do zmiany, Wyświetl lub dostęp do zasobu komputera, w przeciwnym razie. Na przykład w firmie, tylko menedżerowie mogą dozwolony dostęp do plików pracownikom. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]obsługuje dwa mechanizmy do wykonywania przetwarzania autoryzacji. Pierwszy mechanizm umożliwia sterowanie autoryzacji przy użyciu istniejących typowych konstrukcji języka wspólnego (CLR). Drugim jest znany jako modelu opartego na oświadczeniach *modelu tożsamości*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa modelu tożsamości można utworzyć oświadczenia na podstawie wiadomości przychodzących. Obsługuje nowe typy oświadczeń autoryzacji niestandardowej schematów można rozszerzyć klasy modelu tożsamości. Ten temat zawiera omówienie główne pojęcia dotyczące programowania funkcji modelu tożsamości, a także listę najważniejszych klas, które korzysta z funkcji.  

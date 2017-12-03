@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1050d395-092e-44d3-b4ba-66be3b039ffb
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 185fa5e641a1834a7c5f7906b5e5cf84dacaa9f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bd4bf1a97a544730714c46c1ba6f7f102166da35
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="configuring-internet-information-services-70-for-windows-communication-foundation"></a>Konfigurowanie Internetowych usług informacyjnych 7.0 na potrzeby programu Windows Communication Foundation
 Internet informacji Services (IIS) 7.0 ma modularny projekt, który umożliwia selektywną instalację składników, które są wymagane. Ten projekt jest oparta na nową technologią componentization oparte na manifest w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Istnieje więcej niż 40 autonomiczny składników funkcji [!INCLUDE[iisver](../../../../includes/iisver-md.md)] instalowane niezależnie. Dzięki temu specjalistów IT łatwo dostosować instalacji zgodnie z wymaganiami. W tym temacie omówiono sposób konfigurowania [!INCLUDE[iisver](../../../../includes/iisver-md.md)] do użytku z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i określić, które składniki są wymagane.  

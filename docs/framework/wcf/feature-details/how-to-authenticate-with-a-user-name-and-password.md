@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 73ef3c3f4f4aeb9295cedbbf56635454869b3f4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31e05709465e429445a2ebdafae719c24d316c8e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
 W tym temacie przedstawiono sposób włączania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi do uwierzytelniania klienta z nazwę i hasło użytkownika domeny systemu Windows. Zakłada się, że masz pracy, usługa hostowania samoobsługowego WCF. Na przykład tworzenia podstawowych hostowania samoobsługowego WCF usługi, zobacz [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md). W tym temacie założono, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć Zobacz przykład konfigurowania podobne usługi przy użyciu pliku konfiguracji [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)  

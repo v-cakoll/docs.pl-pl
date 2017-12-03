@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c42341a9-43a1-462c-bffb-c5de004aa428
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: faf9e70cbe2c2a035874e5514ac04cf0f291661b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d42249f19b2d9acebf547be9e590813d6bbf7a33
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="expressions"></a>Wyrażenia
 A [!INCLUDE[wf](../../../includes/wf-md.md)] wyrażenie jest żadnych działań, które zwraca wynik. Wszystkie działania wyrażeń pośrednio pochodzi od <xref:System.Activities.Activity%601>, który zawiera <xref:System.Activities.OutArgument> właściwości o nazwie <xref:System.Activities.Activity%601.Result%2A> jako wartości zwracane działania. [!INCLUDE[wf1](../../../includes/wf1-md.md)]jest dostarczany z szeroką gamę działania wyrażeń z prostego, takich jak te <xref:System.Activities.Expressions.VariableValue%601> i <xref:System.Activities.Expressions.VariableReference%601>, które zapewniają dostęp do zmiennej w jednym przepływie pracy za pomocą operatora działań dla działań złożonych takich jak <xref:Microsoft.VisualBasic.Activities.VisualBasicReference%601> i <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> tej oferty dostęp do rozmaitych języka Visual Basic w celu utworzenia wyniku. Można tworzyć dodatkowe wyrażenie działania przez wynikających z <xref:System.Activities.CodeActivity%601> lub <xref:System.Activities.NativeActivity%601>.  

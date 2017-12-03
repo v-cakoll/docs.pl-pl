@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 caps.latest.revision: "29"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 719210e91fc98c7ceb0f6c51252cfcdfe2f1339c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  

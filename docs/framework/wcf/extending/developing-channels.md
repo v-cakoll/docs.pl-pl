@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: dd33f987ab28b42c16aa4798c59675225dcaf520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 231948af1a0bfe7840ffbde2ab162ceea33698ca
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="developing-channels"></a>Opracowywanie kanałów
 Aby opracować protokołu lub transportu kanału, który może być używany z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] warstwy aplikacji wymaga podjęcia kilku czynności. W tym temacie opisano te kroki i kieruje użytkownika do określonych tematów, aby uzyskać więcej informacji. Aby poznać model kanału i różne typy, które są wymienione w tym temacie, zobacz [Przegląd modelu kanału](../../../../docs/framework/wcf/extending/channel-model-overview.md). Przykładowy kanał transportu pełną, [transportu: UDP](../../../../docs/framework/wcf/samples/transport-udp.md).  

@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 91999180c6d1b828630b9fff6f2199cbeaf3501c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 92cc99a80c718811d0184a557efd38dd93fcc949
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="what39s-new-in-windows-workflow-foundation-in-net-45"></a>Jaki &#39; s nowe w programie Windows Workflow Foundation programu .NET 4.5
 [!INCLUDE[wf](../../../includes/wf-md.md)]w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, takich jak nowe działania, funkcje projektanta i modele programowania przepływu pracy. Wiele, ale nie wszystkich nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] są obsługiwane w Projektancie ponownie hostowanej przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)]nowe funkcje, które są obsługiwane, zobacz [obsługę nowych funkcji Workflow Foundation 4.5 w Projektancie przepływów pracy Rehosted](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md). Ten temat zawiera omówienie nowych funkcji przepływu pracy, wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7c2420c700d893e6c2c19b72beed0e605ffd4853
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a236a34dd20661d62d59a3712a1800ff1f9a11ad
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>Integrowanie składników transakcyjnych usług dla przedsiębiorstw
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia mechanizm automatycznego do integracji z usługami przedsiębiorstwa (zobacz [współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)). Może być jednak elastyczność tworzenia usług używających wewnętrznie składników transakcyjnych hostowanych w ramach usług dla przedsiębiorstw. Ponieważ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] funkcji transakcji jest oparty na <xref:System.Transactions> infrastruktury, proces Integrowanie usług dla przedsiębiorstw o [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest identyczna jak służący do określania współdziałanie <xref:System.Transactions> i Enterprise Usługi w sposób opisany w [współdziałanie z usługami przedsiębiorstwa i transakcje COM +](http://go.microsoft.com/fwlink/?LinkId=94949).  

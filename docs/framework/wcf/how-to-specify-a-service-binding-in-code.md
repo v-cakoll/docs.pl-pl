@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 64d33b268c736b3dba333b767bee7fedb487397b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: da2945f1c09d64f684524efaad69781db6121a3e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-a-service-binding-in-code"></a>Instrukcje: Określanie wiązań usługi w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w którym jest określone, że usługa musi używać <xref:System.ServiceModel.BasicHttpBinding> klasy.  

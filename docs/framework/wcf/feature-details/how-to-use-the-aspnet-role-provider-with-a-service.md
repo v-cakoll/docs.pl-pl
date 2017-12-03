@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: bdddbd39a528e6abd6a0268db310b6173849f19b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eb5adec17f834687038b729a475fbcc0e2311c01
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>Instrukcje: Używanie dostawcy ról ASP.NET razem z usługą
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Dostawcy roli (łącznie z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] dostawcy członkostwa) to funkcja, która umożliwia [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] deweloperom tworzenie witryn sieci Web, które umożliwiają użytkownikom tworzenie konta usługi z lokacją i przypisać role do autoryzacji do celów. W przypadku tej funkcji każdy użytkownik może założyć konto w witrynie i logowania wyłącznego dostępu do lokacji i jej usługi. Dzięki temu nie trzeba zabezpieczenia systemu Windows, który wymaga od użytkowników mają konta w domenie systemu Windows. Zamiast tego użytkownik wprowadza swoje poświadczenia (kombinacja nazwy i hasła użytkownika), można użyć lokacji i jej usługi.  

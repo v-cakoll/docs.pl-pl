@@ -14,14 +14,14 @@ helpviewer_keywords:
 - DataServiceContext class, about DataServiceContext class
 ms.assetid: 21075e50-8917-413e-a8ea-35a0f6e65aa5
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1e321200ce4b3582d154c5a188584c9e0b12c10d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteka klienta usługi danych WCF
 Wszelkie aplikacje mogą współdziałać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]— na podstawie danych usługi, jeśli może wysłać żądania HTTP i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych zwracanych usługi danych. Współdziałanie ten umożliwia dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usług z szerokim aplikacje korzystające z zakresu sieci Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zawiera biblioteki klienta, które oferują więcej możliwości programowania, gdy zostaną zużyte na [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła .NET Framework lub aplikacji opartych na technologii Silverlight.  

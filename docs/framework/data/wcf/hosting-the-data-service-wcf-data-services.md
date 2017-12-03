@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6a11e7e499f705f4aace791320057e04205db58c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7fa76c5672b4117c446aca145b7cf98dae7801d4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>Hosting usług danych (usługi danych WCF)
 Za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], można utworzyć usługi, która opisuje dane jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych. Ta usługa danych jest zdefiniowany jako klasa, która dziedziczy <xref:System.Data.Services.DataService%601>. Ta klasa udostępnia funkcje wymagane do przetwarzania komunikatów żądań, przeprowadzania aktualizacji w źródle danych oraz do generowania wiadomości odpowiedzi, co jest wymagane przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. Jednak usługa danych nie można powiązać i nasłuchiwania gniazda sieci dla przychodzących żądań HTTP. Dla tej funkcji wymagane usługi danych zależy od składnika hostingu.  

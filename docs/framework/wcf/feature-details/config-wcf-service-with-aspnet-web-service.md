@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ce9c0ca82803654b2268ff0440bbacec4cb0d0dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7ed4bf8e86e727505d48e85bb55a88452217c76b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>Instrukcje: Konfigurowanie usługi WCF na potrzeby współdziałania z klientami usługi ASP.NET w sieci Web
 Aby skonfigurować [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web, użyj <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> typu powiązanie dla punktu końcowego usługi.  

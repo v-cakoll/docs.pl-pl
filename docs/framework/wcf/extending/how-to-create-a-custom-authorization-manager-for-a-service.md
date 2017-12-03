@@ -16,14 +16,14 @@ helpviewer_keywords:
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7b8d934509940bf712ccb7463156c88540027407
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: cba64767aaac4092f3c6103f7417a9d707b9a380
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>Instrukcje: Tworzenie menedżera autoryzacji niestandardowej dla usługi
 Infrastruktura modelu tożsamości w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje model extensible autoryzacji opartej na oświadczeniach. Oświadczenia są wyodrębnione z tokenów i opcjonalnie przetwarzane przy użyciu zasad autoryzacji niestandardowej, a następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext>. Menedżer autoryzacji sprawdza oświadczeń z <xref:System.IdentityModel.Policy.AuthorizationContext> podejmowanie decyzji dotyczących autoryzacji.  

@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
 caps.latest.revision: "36"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0b06479f1a649e60e141e807db091e207636edef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4bef9fe4dee7090d9ce3a95d08677ee0db84385e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>Porady: Włącz trwałość SQL dla przepływów pracy i usług przepływu pracy
 W tym temacie opisano sposób konfigurowania funkcji magazynu wystąpienia przepływu pracy SQL do włączenia trwałości dla przepływów pracy i przepływ pracy usługi programowo i za pomocą pliku konfiguracji.  

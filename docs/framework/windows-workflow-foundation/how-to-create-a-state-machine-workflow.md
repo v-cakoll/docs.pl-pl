@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 797cdc425c0f3088aa2b75c0285ca6bea2dd425b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5b094fd88321ffcf8d3bb5cdefe870bd12524b4b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Porady: Tworzenie przepływu pracy automatu stanów
 Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. W tym temacie prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.StateMachine> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier.  
@@ -52,7 +52,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
   
 5.  Kliknij przycisk **utworzenia argumentu**.  
   
-6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję  **Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
+6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję ** Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
   
 7.  Kliknij przycisk **argumenty** w lewym dolnym rogu Projektant działań, aby zamknąć **argumenty** okienka.  
   
@@ -145,7 +145,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
 19. W zależności od tego, czy wynik jest poprawny, przepływu pracy należy przejść do **stan końcowy** lub z powrotem do **Wprowadź wynik** stanu do innego elementu try. Zarówno przejścia udostępnianie tego samego wyzwalacza czekać na dopasowanie użytkownika do odebrania przez **ReadInt** działania. Jest to udostępniony przejścia. Aby utworzyć przejście udostępniony, kliknij koło, która wskazuje początek **odgadnąć poprawne** przejścia i przeciągnij go do pożądanego stanu. W takim przypadku przejście jest przejście zwrotne, więc przeciągnij punkt początkowy **odgadnąć poprawne** przejście i upuść go z powrotem na dole **wprowadź odgadnąć** stanu. Po utworzeniu przejścia, wybierz je w Projektancie przepływów pracy i ustawić jej **DisplayName** właściwości **odgadnąć niepoprawne**.  
   
     > [!NOTE]
-    >  Udostępniony przejścia można również tworzyć od w Projektancie przejścia, klikając **Dodaj udostępnione przejście z wyzwalaczem** w dolnej części projektanta przejścia, a następnie wybierając stan docelowy z  **Dostępne stany do połączenia** listy rozwijanej.  
+    >  Udostępniony przejścia można również tworzyć od w Projektancie przejścia, klikając **Dodaj udostępnione przejście z wyzwalaczem** w dolnej części projektanta przejścia, a następnie wybierając stan docelowy z ** Dostępne stany do połączenia** listy rozwijanej.  
   
     > [!NOTE]
     >  Należy pamiętać, że jeśli <xref:System.Activities.Statements.Transition.Condition%2A> przejścia daje w wyniku `false` (lub wszystkie warunki przejście z wyzwalaczem udostępnionym obliczać `false`), nie nastąpi przejście i będzie wszystkich wyzwalaczy dla wszystkich przejścia ze stanu zaplanowane ponownie. W tym samouczku tej sytuacji niemożliwe ze względu na sposób warunki są skonfigurowane (mamy określonych akcji dla tego, czy wynik jest prawidłowy lub nieprawidłowy).  

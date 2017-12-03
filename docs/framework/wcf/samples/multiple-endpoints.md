@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: Multiple EndPoints
 ms.assetid: 8f0c2e1f-9aee-41c2-8301-c72b7f664412
 caps.latest.revision: "31"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b7e3a6da177c381bafe3adee16be36ceba50616
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6595184219ac87ef1d490308bcd927f57fa0a3ba
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="multiple-endpoints"></a>Wiele punktów końcowych
 Przykładowe wiele punktów końcowych przedstawiono, jak skonfigurować wiele punktów końcowych w usłudze oraz do komunikowania się z każdego punktu końcowego z klienta. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). Konfiguracja usługi została zmodyfikowana, aby zdefiniować dwa punkty końcowe, które obsługują `ICalculator` kontraktu, ale każdy na inny adres przy użyciu inne powiązanie. Konfiguracja klienta i kod został zmodyfikowany w celu komunikacji zarówno z punktów końcowych usługi.  

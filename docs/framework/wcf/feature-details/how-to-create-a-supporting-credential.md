@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 2c140b96fab0227a1563c8c1a511053d8d1ab944
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a460a3fdd48813801b18af5a896252134687816d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-supporting-credential"></a>Instrukcje: Tworzenie poświadczeń pomocniczych
 Istnieje możliwość schematu niestandardowego zabezpieczeń, która wymaga więcej niż jedno poświadczenie. Na przykład usługa może wymagać od klienta nie tylko nazwę użytkownika i hasło, ale również poświadczenia, który gwarantuje klienta znajduje się nad wiek 18. Drugi poświadczenie jest *Obsługa poświadczeń*. W tym temacie opisano sposób wykonania tych poświadczeń w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta.  

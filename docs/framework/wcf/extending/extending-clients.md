@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed401f3c132cf2dd223e98a7e622a30de511139f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="extending-clients"></a>Rozszerzanie klientów
 W aplikacji wywołującej jest odpowiedzialny za tłumaczenia wywołań metod w kodzie aplikacji w komunikatach wychodzących, wypychanie ich do podstawowej kanałów, tłumaczenia wyników do wartości zwracanych do edycji i parametrów w warstwy modelu usług Kod aplikacji, a następnie zwraca wyniki z powrotem do wywołującego. Rozszerzenia modelu usługi zmodyfikować, lub zaimplementuj wykonywania lub zachowanie komunikacji i funkcje dotyczące klienta lub dyspozytora funkcje, niestandardowe zachowania, wiadomości i przechwytywaniu parametru i innych funkcji rozszerzalności.  

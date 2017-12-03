@@ -17,17 +17,17 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7ee4d12659dd6da8c5290134c48d280692a496f4
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 35a40d6dfb6c66183afb0f3a2980a3b7863353fa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="keywords-visual-basic"></a>Słowa kluczowe (Visual Basic)
 W poniższych tabelach przedstawiono wszystkie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] słowa kluczowe języka.  
   
 ## <a name="reserved-keywords"></a>Zastrzeżone słowa kluczowe  
- Poniższe słowa kluczowe są *zastrzeżone*, co oznacza, że nie można używać ich jako nazwy elementów, takich jak zmienne lub procedury programowania. To ograniczenie można obejść, ograniczając nazwę w nawiasy kwadratowe (`[``]`). Aby uzyskać więcej informacji, zobacz "Nazwy znaki ucieczki" w [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+ Poniższe słowa kluczowe są *zastrzeżone*, co oznacza, że nie można używać ich jako nazwy elementów, takich jak zmienne lub procedury programowania. To ograniczenie można obejść, ograniczając nazwę w nawiasy kwadratowe (`[]`). Aby uzyskać więcej informacji, zobacz "Nazwy znaki ucieczki" w [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 > [!NOTE]
 >  Nie zaleca się użycie nazwy wyjścia, ponieważ go kodu trudny do odczytania i może prowadzić do powstawania błędów, które mogą być trudne do znalezienia.  

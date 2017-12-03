@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0b832127-b35b-468e-a45f-321381170cbc
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b1a54f1c1529879074d2d0e7172fd52c5386c8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
-ms.translationtype: HT
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8e0ce4a171e9bc57ef28aef1fe2761907acc73c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-identity-information-inside-a-workflow-service"></a>Dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy
-Aby uzyskać dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy, musisz zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. W <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage%2A> System.Activities.ExecutionProperties)?qualifyHint=False & autoUpgrade = True metody można uzyskać dostępu do <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> do dostępu do informacji o tożsamości. Ten temat przeprowadzi Cię przez wdrożenie tej właściwości wykonywania, a także działania niestandardowego, który będzie powierzchni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> działania w czasie wykonywania.  Działania niestandardowego zostaną zaimplementowane zachowania <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> będą wywoływane i będzie można pobrać informacji o tożsamości.  
+Aby uzyskać dostęp do informacji o tożsamości wewnątrz usługi przepływu pracy, musisz zaimplementować <xref:System.ServiceModel.Activities.IReceiveMessageCallback> interfejsu we właściwości niestandardowej wykonywania. W <xref:System.ServiceModel.Activities.IReceiveMessageCallback.OnReceiveMessage(System.ServiceModel.OperationContext,System.Activities.ExecutionProperties)> można uzyskać dostępu do metody <xref:System.ServiceModel.OperationContext.ServiceSecurityContext> do dostępu do informacji o tożsamości. Ten temat przeprowadzi Cię przez wdrożenie tej właściwości wykonywania, a także działania niestandardowego, który będzie powierzchni tę właściwość, aby <xref:System.ServiceModel.Activities.Receive> działania w czasie wykonywania.  Działania niestandardowego zostaną zaimplementowane zachowania <!--zz <xref:System.ServiceModel.Activities.Sequence>--> `System.ServiceModel.Activities.Sequence` działania, z wyjątkiem że w przypadku <xref:System.ServiceModel.Activities.Receive> znajduje się wewnątrz niej, <xref:System.ServiceModel.Activities.IReceiveMessageCallback> będą wywoływane i będzie można pobrać informacji o tożsamości.  
   
 ### <a name="implement-ireceivemessagecallback"></a>Implementowanie IReceiveMessageCallback  
   

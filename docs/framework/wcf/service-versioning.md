@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
 caps.latest.revision: "19"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 73b7fd7564fea065167978deaad21bb533dbef0c
-ms.sourcegitcommit: 425524461530f020f9747492b42f8cd72b011ae7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 679a6a30e72e18547a04007c58c82d5f121893d0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/25/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usług (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub do innych adresów problemy. Każda zmiana wprowadziła nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywania wersji [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  

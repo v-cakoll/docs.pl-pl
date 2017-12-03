@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 caps.latest.revision: "21"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 06127af9c373987c02b2e53ff57e6f50a7f5baa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Instrukcje: Ujawnianie kontraktu klientom sieci Web i SOAP
 Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia punkty końcowe tylko do klientów protokołu SOAP. W [porady: Tworzenie podstawowej usługi HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), punkt końcowy będą dostępne dla klientów z systemem innym niż SOAP. Może to być razy, jeśli chcesz udostępnić ten sam kontrakt obu kierunkach, jako punkt końcowy sieci Web, a punkt końcowy protokołu SOAP. W tym temacie przedstawiono przykład sposobu wykonania tego zadania.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dda20e79-8df3-438e-a281-69d779d978ec
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5ddea7bf69f697c5b9ecd9d41021bff2407522a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 98affacf611ad31c7c3f8a93ff5793279a42a128
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="implementing-a-discovery-proxy"></a>Implementowanie serwera proxy odnajdywania
 W tej sekcji opisano kroki wymagane do wdrożenia serwera proxy odnajdywania. Serwer proxy odnajdywania jest usługi autonomicznej, który zawiera repozytorium usług. Klienci mogą wykonywać kwerendę serwera proxy odnajdywania można znaleźć wykrywalny usługi Serwer proxy jest znane. Jak serwer proxy jest wypełniane przy użyciu usługi jest implementujący. Na przykład serwera proxy odnajdywania można połączyć się z istniejącą repozytorium usługi i stał się wykrywalny, administrator może użyć interfejsu API zarządzania, aby dodać wykrywalny usługi na serwerze proxy lub serwera proxy odnajdywania może używać funkcji anonsu do tych informacji Zaktualizuj swojej wewnętrznej pamięci podręcznej.  

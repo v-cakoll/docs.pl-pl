@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 97bf047f26b95cdd4ac4a40e6b2284ec170442bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 184c4a5c31969ee060f72d937ab02af733340ca4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="discovery-with-scopes-sample"></a>Przykład odnajdywania z zakresami
 Ten przykład przedstawia sposób użycia zakresów kategoryzację wykrywalny punktów końcowych, jak również sposób użycia <xref:System.ServiceModel.Discovery.DiscoveryClient> do wykonywania asynchronicznych wyszukiwania dla punktów końcowych. W usłudze w tym przykładzie pokazano, jak dostosować odnajdywania dla każdego punktu końcowego przez dodanie zachowanie odnajdowania punktu końcowego i użytkowania go, aby dodać zakres do punktu końcowego, a także kontrolowanie możliwość odnajdowania punktu końcowego. Na komputerze klienckim próbki przechodzi w jaki sposób klienci mogą tworzyć <xref:System.ServiceModel.Discovery.DiscoveryClient> i dostosowywanie wyszukiwania parametrów do dołączania zakresów przez dodawanie zakresów do <xref:System.ServiceModel.Discovery.FindCriteria>. Również w tym przykładzie pokazano, jak klienci mogą ograniczać odpowiedzi od dodania kryterium zakończenia.  

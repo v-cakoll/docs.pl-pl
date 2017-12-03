@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a57e8d4f03406f975d0788d3ad085985478d59e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dc295eac67f521e255a27f069ca15cca94dbe768
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Obsługa kolejek komunikatów programu Windows Communication Foundation
 W tym przykładzie pokazano, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości MSMQ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  

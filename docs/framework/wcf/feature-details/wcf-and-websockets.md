@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1e53b49e-022c-49c7-8984-4b21b53c05b3
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 726b23f0dc3f5953611010dca5260cc19c7adaaf
-ms.sourcegitcommit: 8d14e8c1b15009330c9880f8523686158924e1a4
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 225bff20f514a653382f01becf133659dec4c5f0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/14/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-and-websockets"></a>Program WCF i technologia WebSockets
 .NET Framework 4.5 wprowadzono obsługę protokołu WebSockets programu Windows Communication Foundation.  Obiekty Websocket jest efektywnego, oparta na standardach technologia, która umożliwia komunikację dwukierunkową za pośrednictwem standardowych portów HTTP 80 i 443. Użycie standardowych portów HTTP umożliwia Websocket do komunikacji w sieci Web za pośrednictwem pośredników.  Dwa nowe standardowe powiązania zostały dodane do obsługi komunikacji za pośrednictwem transportu protokołu WebSocket. <xref:System.ServiceModel.NetHttpBinding>i <xref:System.ServiceModel.NetHttpsBinding>. Można skonfigurować ustawienia specyficzne dla protokołu WebSockets na <xref:System.ServiceModel.Channels.HttpTransportBindingElement> po zalogowaniu się do <xref:System.ServiceModel.Channels.HttpTransportBindingElement.WebSocketSettings%2A> właściwości.

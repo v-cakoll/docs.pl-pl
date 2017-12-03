@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
 caps.latest.revision: "26"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5bf78f3b966b006d002771414551412ea0208e30
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 638ad75155bae30f3cd1d126d27e8e0542026ab0
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="sql-workflow-instance-store"></a>Magazyn wystąpienia przepływu pracy SQL
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] Jest dostarczany z SQL magazyn wystąpienia przepływu pracy, dzięki czemu przepływy pracy, aby zachować informacje o stanie dotyczące wystąpienia przepływu pracy w bazie danych programu SQL Server 2005 lub SQL Server 2008. Ta funkcja jest głównie zaimplementowana w formie <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> klasy, która pochodzi z klasy abstrakcyjnej <xref:System.Runtime.DurableInstancing.InstanceStore> klasy framework trwałości. Funkcja magazynu wystąpienia przepływu pracy SQL stanowi SQL dostawcy trwałości, który jest konkretną implementację trwałości interfejsu API używany przez hosta do wysyłania polecenia trwałości w magazynie.  

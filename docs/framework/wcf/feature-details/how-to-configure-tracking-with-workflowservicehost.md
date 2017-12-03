@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a237be3f6e4d59cbaa2d3c0144eaeb4369748ecd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 42b5621275b9d27983619d18990e3d8e22c4e9db
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>Porady: Konfigurowanie śledzenia przy użyciu klasy WorkflowServiceHost
 W tym temacie opisano sposób konfigurowania śledzenia dla [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] przepływu pracy hostowanych w <xref:System.ServiceModel.Activities.WorkflowServiceHost>. Jest on skonfigurowany za pomocą pliku Web.config, określając zachowanie usługi.  

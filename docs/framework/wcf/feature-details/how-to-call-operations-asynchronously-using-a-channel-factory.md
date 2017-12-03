@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c907ed4c5c8cc76899d4f785ef1abf5a2821274f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 8e0ef2dbd52e6628e7b784c50d2ce29306216772
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>Instrukcje: Asynchroniczne wywoływanie operacji za pomocą fabryki kanałów
 W tym temacie opisano, jak klienta można uzyskać dostępu do operacji usługi asynchronicznie przy użyciu <xref:System.ServiceModel.ChannelFactory%601>-aplikacji klienta. (Przy użyciu <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> obiekt do wywołania usługi można użyć sterowane zdarzeniami asynchroniczne wywołanie modelu. Aby uzyskać więcej informacji, zobacz [porady: wywołania operacji usługi asynchronicznie](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md). Aby uzyskać więcej informacji na temat oparty na zdarzeniach asynchroniczne wywołanie modelu, zobacz [programowanie wielowątkowości za pomocą wzorca asynchronicznego opartego na zdarzeniach](../../../../docs/standard/asynchronous-programming-patterns/multithreaded-programming-with-the-event-based-asynchronous-pattern.md).)  

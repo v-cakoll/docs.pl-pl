@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5b5e0e2b1b2aa6292d53f1688ef124d9add42b5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a5c7cb9d963e56c6a6e06421afdb14427440643c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="duplex-services"></a>Usługi dwukierunkowe
 Kontrakt usługi dwustronnej jest wymiany komunikatów w których oba punkty końcowe można wysyłać wiadomości do innych niezależnie. Usługi duplex, w związku z tym wiadomości można wysyłać do punktu końcowego klienta, zapewniając zdarzenia podobne zachowania. Komunikację dupleksową występuje, gdy klient nawiąże połączenie z usługą i zapewnia usługę, z kanałem, na którym usługa można wysłać wiadomości zwrotnie do klienta. Należy pamiętać, że zachowanie podobnych zdarzeń usługi dwukierunkowe działa tylko w ramach sesji.  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cd6ad4ed735cb94321adad8fd2e4cf396e2221fe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 787f47f6ca8f25e6df4cc74024febf494f18bf9d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Klienci są przewodowy poziom zgodny z sieci Web usług ulepszenia (WSE) 3.0 dla usług Microsoft .NET, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują protokół exchange (MEX) metadanych, dlatego jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, ustawienia zabezpieczeń nie są stosowane do wygenerowany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. W związku z tym należy określić ustawienia zabezpieczeń, które wymaga usługi WSE 3.0 po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest generowany przez klienta.  

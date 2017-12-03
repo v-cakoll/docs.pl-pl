@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 caps.latest.revision: "75"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 127629d34c66f5a46ab73e8ddd6dbcd095b87f0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f36d944814adaf4a90a04715c60f2fe732cb544a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]obsługuje ograniczonym podzbiorem funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  

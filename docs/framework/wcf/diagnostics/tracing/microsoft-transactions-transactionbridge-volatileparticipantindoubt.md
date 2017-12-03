@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3b497231326c640b93b96500df39732104e0f0c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 98ce61e4a46f8853e61e0ef44fdc78cf3e94431a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 Usługa protokołu WS-AT odebrała komunikat Prepared lub Replay od nierozpoznanego uczestnika nietrwałego. Zwrócono błąd do uczestnika, deklaruje, że dane wyjściowe transakcji są wątpliwe.  

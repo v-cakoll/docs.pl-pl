@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: f37259a971ab20cf68776ac9889615929996ad00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 117011d0ceecf04b6c73655873985dbd08768ab6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-service-run-time-behavior"></a>Określanie zachowania środowiska uruchomieniowego usługi
 Po zaprojektowaniu kontrakt usługi ([projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)) i realizowane umowy serwisowej ([Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)) można skonfigurować zachowanie operacji usługi czasu wykonywania. W tym temacie omówiono usługi dostarczane przez system i zachowania operacji i opisano, gdzie można znaleźć więcej informacji, aby utworzyć nowe zachowania. Podczas niektórych zachowań są stosowane jako atrybuty, wiele są stosowane przy użyciu pliku konfiguracji aplikacji lub programowo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfigurowanie aplikacji usługi, zobacz [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md).  

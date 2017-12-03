@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 3185761ef784051c7508c3684d46997521483f04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bfedfbd0177018de4affce67f16ee5f713f7d5de
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="best-practices-intermediaries"></a>Najlepsze praktyki: Elementy pośredniczące
 Należy uważać poprawnie obsłużyć błędy podczas wywoływania metody pośredników, aby upewnić się, że kanały po stronie usługi na pośrednik zostały prawidłowo zamknięte.  

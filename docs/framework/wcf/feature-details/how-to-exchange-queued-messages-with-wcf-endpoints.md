@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 4b52fe96bc88f09b807640dedcc54a8468dc26e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6c50d9c6740b0c680e349a71bf4b3bdece2b34f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>Instrukcje: Wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF
 Kolejki upewnij się, że niezawodna obsługa komunikatów może wystąpić między klientem a [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi, nawet jeśli usługa nie jest dostępna w tym czasie komunikacji. Poniższe procedury pokazują, jak zapewnić niezawodna komunikacja między klientem a usługą przy użyciu standardu w kolejce powiązania podczas implementowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  

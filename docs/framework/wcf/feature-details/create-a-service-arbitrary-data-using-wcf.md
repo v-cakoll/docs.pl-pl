@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9541c46d029aa9f4e27a459ffcb9f32a7718039b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a7f868f02f309401c60737af8a69434d175eee1d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>Porady: Tworzenie usługi czy akceptuje dowolne dane za pomocą Model programowania interfejsu REST usługi WCF
 Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwana przez[!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W tym temacie omówiono przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Model programowania interfejsu REST, aby utworzyć usługę, która odbiera dowolne dane.  

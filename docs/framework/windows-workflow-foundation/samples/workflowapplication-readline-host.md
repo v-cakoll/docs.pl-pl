@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f7b362be-cb42-40d7-b9ef-cfc4aed2455b
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 5efe784f434ff357120343061c1c4b9447cc8cd1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1ba33dff4be8ae3e75ee4d1873feeb4d5e5944b7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflowapplication-readline-host"></a>Działanie obiektu WorkflowApplication ReadLine hosta
 Ten przykład jest hostem ReadLine ogólnego. Można załadować i uruchomić każdy przepływ pracy, przy użyciu dołączonej `ReadLine` działania (lub innych działań podoba Ci się pobierające dane z zakładek przywrócone ciągi). Dane wyjściowe z `WriteLine` działania lub jakikolwiek zapisywania <xref:System.Activities.Statements.WriteLine.TextWriter%2A> rozszerzenia jest kierowany do okna hosta. Gdy wystąpienie jest w stanie bezczynności, dostępne zakładki dla danego wystąpienia są wyświetlane w polu kombi. Zakładki, wybierając wprowadzanie za tekstem i naciskając przycisk zakładki Wznów kontynuować wykonywanie przepływu pracy. Można również anulować, przerwania lub przerywania wybrany przepływ pracy. Trwałości jest domyślnie — można zamknąć hosta i przywrócić go, a lista wystąpień jest wypełniana wystąpień w bazie danych. Jest używane śledzenie danych wyjściowych <xref:System.Activities.WorkflowApplication>— poziom zdarzenia do hosta z opcją, aby dodać szczegółowe śledzenie na poziomie działania.  

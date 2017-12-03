@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: becc388a03d065b5763669929806c2f85e171ffc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f2789c6756d8e22dae9eb3189dfb616d162ad906
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, które zawierają dużą liczbę elementów. Na serwerze, przykładzie pokazano, jak opóźnienie tworzenia poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do bezpośrednio przed elementu są zapisywane do strumienia sieci.  

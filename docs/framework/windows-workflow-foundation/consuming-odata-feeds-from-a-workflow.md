@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b6479892b6b631b3196604353670b7f47f552441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c538ead434a7e5abe85f0d28ac7bf7edae98cbb8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Wykorzystywanie OData źródeł danych z przepływu pracy
 Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , umożliwia tworzenie usług korzystających z protokołu Open Data Protocol (OData) do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantyki representational stanu transfer (REST). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Wszelkie aplikacje mogą współdziałać z usługi OData na podstawie danych jeśli umożliwia wysyłanie żądania HTTP i przetworzyć źródła strumieniowego OData zwracanych usługi danych. Usługi danych WCF zawiera ponadto biblioteki klienta, które zapewniają bardziej rozbudowane środowisko programowania po używać źródła danych OData z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Ten temat zawiera omówienie używania OData podawania w przepływie pracy z użyciem biblioteki klienta i bez.  

@@ -10,14 +10,14 @@ ms.topic: article
 helpviewer_keywords: extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9916e30812e167e108a1ca9b958aa6d15fbd1f41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 60e8d01ad32e10f06191f7e0b38dcb648780ba29
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Dostosowywanie projektu przepływu pracy
 Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] znacznie zostały uproszczone w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Opracowywania i wdrażania są teraz zarówno łatwiejsze i bardziej elastyczne. Zmiany infrastrukturalne klucza jest, że nowy model programowania projektanta działania jest oparty na [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Daje to możliwość deklaratywnego definiowania projektantów działań oraz rehost [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w innych aplikacjach z porównawczych łatwe. Gdy rehosting, Edytor wyrażenia niestandardowego mogą być opracowane obsługę funkcji IntelliSense lub domeny uproszczony wyrażenia. Integracja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] stał się aby usprawnić przy użyciu usługi przepływu pracy. W celu zwiększenia projektowy czasu wykonywania w projektantach rehosted przepływu pracy można projektantów działań niestandardowych i drzewa elementu modelu.  

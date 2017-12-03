@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
 caps.latest.revision: "16"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a7fd853ed67b843888b899d0bd0528b293a7520f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5faeb409e6076fe934d1b8c88423a8a348f786ca
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku sposobem konfigurowania wielu usług w typowy sposób. Próbka przedstawiono również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy do użycia niestandardowego elementu ServiceHost w środowisku macierzystym Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS).  

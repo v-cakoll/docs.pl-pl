@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
 caps.latest.revision: "5"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e7d62d147bdc0177a28dbcc7d235f1c48dc51460
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: f220ffdf04102a110124e7331a53ae5ee70316a3
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="c-expressions"></a>Wyrażenia języka C#
 Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], C# wyrażenia są obsługiwane w [!INCLUDE[wf](../../../includes/wf-md.md)]. Nowych projektów C# przepływu pracy utworzone w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)] kierowanych [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Użyj C# wyrażeń i projekty Visual Basic przepływu pracy, użyj wyrażenia języka Visual Basic. Istniejące [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] projektów przepływu pracy, które używają wyrażeń języka Visual Basic można poddać migracji do [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] niezależnie od tego projektu języka i są obsługiwane. Ten temat zawiera omówienie wyrażeń C# w [!INCLUDE[wf1](../../../includes/wf1-md.md)].  

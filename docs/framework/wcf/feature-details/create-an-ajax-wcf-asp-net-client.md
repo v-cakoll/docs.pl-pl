@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 95012df8-2a66-420d-944a-8afab261013e
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a45a186b0d281976f3d6ad554d75742ba0f1cd50
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b136565730c1b3175abff8b057a69acc6609a44d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-an-ajax-enabled-wcf-service-and-an-aspnet-client-that-accesses-the-service"></a>Instrukcje: Tworzenie usługi WCF z włączoną obsługą technologii AJAX i klienta ASP.NET korzystającego z tej usługi
 W tym temacie przedstawiono sposób użycia programu Visual Studio 2008, można utworzyć z włączoną obsługą technologii AJAX [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi i kliencie programu ASP.NET, który uzyskuje dostęp do usługi. Kod dla usługi i dla klienta znajdują się w sekcji przykład po procedury ich tworzenia są opisane w sekcji procedur.  

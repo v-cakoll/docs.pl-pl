@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
 caps.latest.revision: "4"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1f6598b1aff20a8b3471ca1ccb59bb5c6576efdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 49deb2e209127f92a333195e9fcd0d1e1bece7d8
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>Uzyskiwanie dostępu do usługi z przeglądarki sieci Web (Szybki Start usługi danych WCF)
 W tym zadaniu rozpocznie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] z [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] i opcjonalnie Wyłącz źródła odczytu w przeglądarce sieci Web. Możesz zostanie następnie pobrać dokumentu definicji usługi a także uzyskiwać dostęp do danych usługi zasobów poprzez przesłanie żądania HTTP GET za pośrednictwem przeglądarki sieci Web do narażonych zasobów.  

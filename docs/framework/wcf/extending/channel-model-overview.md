@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: channel model [WCF]
 ms.assetid: 07a81e11-3911-4632-90d2-cca99825b5bd
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 19dfb8d6a75496cf193831c1d9e6e71ee6bb1a7a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="channel-model-overview"></a>Przegląd modelu kanału
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanału stos jest stos warstwy komunikacji z jednego lub więcej kanałów, które przetwarzania komunikatów. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowania stosu kanału do transportu źródłowego (na przykład TCP, HTTP, SMTP i inne rodzaje transportu). Kanały zapewniają niskiego poziomu model programowania do wysyłania i odbierania wiadomości. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model kanału. W tym temacie omówiono kształtów kanału, konstrukcji odbiornika kanałów podstawowa (w usłudze) i fabryki kanałów (na kliencie).  

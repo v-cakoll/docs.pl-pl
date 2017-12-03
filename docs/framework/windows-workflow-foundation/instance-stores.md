@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: c78e5ff1310951defdfaa38a9b63aacb9c27872b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: c794c6e20b479ea4686caba29704f8851d108432
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="instance-stores"></a>Wystąpienie magazynów
 Magazyn wystąpienia jest kontenerem logicznym wystąpień. Jest to miejsce, gdzie są przechowywane dane wystąpienia i metadanych. Magazyn wystąpienia nie oznacza dedykowanych dla magazynu fizycznego. Magazyn wystąpienia mogą zawierać informacje o stanie nietrwałe w pamięci lub trwałe informacji z bazy danych programu SQL Server. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z magazynu wystąpienia SQL przepływu pracy, czyli konkretną implementację magazynu wystąpienia, który umożliwia przepływy pracy, aby zachować dane wystąpienia i metadane do bazy danych programu SQL Server 2005 lub SQL Server 2008. Ponadto AppFabric w systemie Windows Server udostępnia konkretną implementację magazynu wystąpienia. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sklepu wystąpienia sieci szkieletowej dla systemu Windows Server, zapytań i dostawców kontroli](http://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409).  

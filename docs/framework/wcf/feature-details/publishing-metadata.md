@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: meatadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1e0cf48d429282c692557fd66bc6ef1295e6a531
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 275499a2373bfd1a1713d0b9c7291a117faa9671
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="publishing-metadata"></a>Publikowanie metadanych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]usługi Publikowanie metadanych przez publikowanie punkty końcowe metadanych. Publikowanie metadanych usługi udostępnia metadane za pomocą standardowych protokołów, takich jak żądania WS-MetadataExchange (MEX) i HTTP/GET. Punkty końcowe metadanych są podobne do innych punktów końcowych usługi, mają address, binding i kontrakt i będzie możliwe ich dodanie do hosta usługi przy użyciu konfiguracji lub imperatywnych kodu.  

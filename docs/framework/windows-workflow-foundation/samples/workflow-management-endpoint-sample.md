@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 3ac6e08f-c43d-4bb7-83c3-e3890a4dac03
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a6be74ba917a8684571a64394ec902cf51bc67bd
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 193620902d5bcc2b71f91a26518ab4b6560e6753
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-management-endpoint-sample"></a>Przepływ pracy zarządzania punktu końcowego próbki
 W tym przykładzie pokazano, jak punkt końcowy kontroli przepływu pracy może służyć do tworzenia i uruchamiania przepływów pracy, zarówno lokalnie, jak i zdalnie. Przykład pokazuje, jak hosta kontrolnego punktu końcowego i zapisu klientów, które wywołują kontrolnego punktu końcowego, aby utworzyć i uruchomić wystąpienia przepływu pracy. Przepływ pracy nie jest usługą.  

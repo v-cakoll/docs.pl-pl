@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 414f350b7fe70cae196ad056f96a158da8128dd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 2fe0ad62a55c6536b0054aa23ac556b896b02be4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="chunking-channel"></a>Kanał dzielący na fragmenty
 Podczas wysyłania dużych wiadomości przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], często jest to pożądane, aby ograniczyć ilość pamięci użytej do zbuforowania tych wiadomości. Możliwe rozwiązanie jest strumienia treści wiadomości (przy założeniu, że większość danych znajduje się w treści). Jednak niektóre protokoły wymagają buforowanie cały komunikat. Niezawodna obsługa komunikatów i zabezpieczeń są dwa takie przykłady. Innym rozwiązaniem możliwe jest do dzielenia dużych wiadomość na mniejsze wiadomości nazywanej fragmentów, wysłać jednym fragmencie tych fragmentów w czasie i Przywróć dużych komunikatów po stronie odbierającej. Sama aplikacja może wykonać tego podziału i cofnąć podziału lub można użyć niestandardowego kanału Aby wykonać to zadanie. Segmentu przykład kanału pokazuje, jak protokołu niestandardowego lub warstwowego kanału może służyć do podziału i cofnąć podziału dowolnie dużą wiadomości.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6fa68698c6c343b29ca39e66150753502cb8f673
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-a-bindingelement"></a>Tworzenie elementu BindingElement
 Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są miejsce gdzie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model aplikacji jest skojarzony z fabryk kanałów i odbiorników kanału. Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  

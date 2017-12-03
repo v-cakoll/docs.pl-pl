@@ -1,40 +1,38 @@
 ---
 title: 'Przewodnik F #'
-description: "Więcej informacji na temat języka F # programowania, języka open source dla platformy .NET, która zapewnia najwyższej jakości pomoc techniczną programowanie funkcjonalne."
+description: "Dowiedz się więcej o języku F #, funkcjonalny język programowania, który działa na platformie .NET."
 keywords: .NET, .NET core
 author: jackfoxy
 ms.author: phcart
-ms.date: 06/20/2016
+ms.date: 12/01/2016
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea27fb37-dad1-4bd4-a3cc-4f5c70767ae9
-ms.openlocfilehash: 4ddd77cef6cf70a63f1af81359d82eda27a01593
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45f5d2ca794ccea7a35cf6c0bf9d58a3e6500453
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="f-guide"></a>Przewodnik F #
 
-F # i platform typu open source język programowania dla platformy .NET, co zapewnia najwyższej jakości pomoc techniczną dla programowanie funkcjonalne, wraz z możliwością programowanie zorientowane obiektowo i konieczne jest.  Kompilator Visual F # i narzędzi są implementacji i narzędzi języka F # język programowania, przez co F # członkiem najwyższej jakości .NET firmy Microsoft.
+F # jest funkcjonalny język programowania, w którym jest uruchomiona na platformie .NET.  Oprócz obsługi funkcjonalności narzędzi programistycznych go ma również możliwości programowania obiektu.  Ta hybrydowa funkcjonalności programowanie zorientowane obiektowo możliwości sprawia, że F # pragmatyczne języka przy wykonywaniu zadań.
 
 ## <a name="if-youre-new-to-f"></a>Jeśli jesteś nowym użytkownikiem F # #
 
-Jeśli jesteś nowym użytkownikiem F #, rozpoczynać się od [samouczek programu F #](tour.md) , aby uzyskać przegląd języka.
-
-Zalecane jest również, czy można przejść przez [działa jako wartości pierwszej klasy](introduction-to-functional-programming/functions-as-first-class-values.md) <!--[Introduction to Functional Progamming](introduction-to-functional-programming/index.md)--> informacji funkcjonalności programowania pojęcia, które są niezbędne do pracy z F #.
-
-[Samouczki](tutorials/getting-started/index.md) mają także przewodniki krok po kroku dla różnych poziomów umiejętności i funkcji języka.
+Jeśli jesteś nowym użytkownikiem F #, rozpoczynać się od [samouczek programu F #](tour.md) Aby uzyskać przegląd języka i niektóre z jego pojęcia dotyczące programowania.  Jeśli używasz programu Visual Studio, szablon projektu samouczek zawiera tę samą zawartość.
 
 ## <a name="if-youre-experienced-with-f"></a>Jeśli masz doświadczenie w języku F # #
 
-Jeśli znasz nawigację F # można znaleźć wykorzystywany w [materiały referencyjne dotyczące języka](language-reference/index.md), który dokumentów każdego aspektu języka dokładnie, uzupełnione o wiele przykładów kodu.  Można również znaleźć wykorzystywany w [F # odwołanie do biblioteki podstawowej](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference).  Dokumentacja biblioteki podstawowej F # po pewnym czasie zostanie przesunięty w kierunku od MSDN i do tych dokumentów bieżącego.
+Jeśli musisz wiedzieć, jak obsługiwać F # lub chcesz dowiedzieć się więcej na temat konstrukcji języka, zobacz [materiały referencyjne dotyczące języka](language-reference/index.md).  Jest dokładną przewodnik wszystkie możliwości języka F #.
+
+Ponadto [F # odwołanie do biblioteki podstawowej](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference) jest doskonałą szkoleniowe dotyczące plikiem FSharp.Core, Podstawowa biblioteka, która jest częścią F #.
 
 ## <a name="the-f-software-foundation"></a>Foundation oprogramowania F #
 
-Mimo że Microsoft głównej deweloperów języka F # i Visual F # narzędzi, F # nie jest również obsługiwana przez niezależnych foundation, F # oprogramowania Foundation (FSSF).
+Mimo że Microsoft głównej deweloperów języka F # i jej narzędzi, F # nie jest również obsługiwana przez niezależnych foundation, F # oprogramowania Foundation (FSSF).
 
 Misji Foundation oprogramowania F # jest podwyższyć poziom, ochronę i poprawić język programowania, F # i obsługuje i ułatwić rozwój różnych i międzynarodową społeczność programistów F #.
 

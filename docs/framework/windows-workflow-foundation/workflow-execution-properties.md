@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d119d721964df7ea1c007eadd17a8db54f4f8cd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6136aca5af6a5da7d7ac468e07c81047352d9be2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="workflow-execution-properties"></a>Właściwości wykonania przepływu pracy
 Za pomocą lokalny magazyn wątków (TLS) środowisko CLR przechowuje kontekstu wykonywania dla każdego wątku. Ten kontekst wykonywania kontroluje wątku dobrze znane właściwości, takie jak tożsamości wątku, transakcja otoczenia, oraz uprawnienia bieżącego zestawu właściwości wątku zdefiniowane przez użytkownika, takie jak o nazwie gniazda.  

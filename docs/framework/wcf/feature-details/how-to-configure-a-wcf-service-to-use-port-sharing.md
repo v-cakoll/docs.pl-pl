@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: db9242d76c34be2968d713e4c0380db99d19f1bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: dca36dc957cf29d90848c02610a535667be5d134
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>Instrukcje: Konfigurowanie usługi Windows Communication Foundation na potrzeby współużytkowania portów
 Najłatwiejszym sposobem na korzystanie z portu net.tcp:// udostępniania w sieci [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji jest do udostępnienia usługi za pomocą <xref:System.ServiceModel.NetTcpBinding>.  

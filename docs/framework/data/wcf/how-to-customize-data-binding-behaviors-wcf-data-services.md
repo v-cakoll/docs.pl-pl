@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 40476b89-8941-4771-8d21-2fe430c85a9d
 caps.latest.revision: "2"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 1ee72c905ab6df222d256eeeeb2a59579e82923b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: b9aa93e5c0971d1af1f1962bfe4f61a0f56f66b9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-customize-data-binding-behaviors-wcf-data-services"></a>Porady: dostosowywanie zachowania (usługi danych WCF) powiązanie danych
 Z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], możesz podać logiki niestandardowej, która jest wywoływana przez <xref:System.Data.Services.Client.DataServiceCollection%601> po dodaniu lub usunięciu z kolekcji powiązanie lub po wykryciu zmiany właściwości obiektu. Tej niestandardowej logiki jest dostarczane jako metody, określany jako <xref:System.Func%602> delegatów, które zwracają wartość `false` kiedy domyślne zachowanie powinno się odbywać nadal po zakończeniu niestandardowej metody i `true` podczas kolejnych przetwarzanie zdarzenia powinna zostać zatrzymana.  

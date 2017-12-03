@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a801ce22-8699-483c-a392-7bb3834aae4f
 caps.latest.revision: "8"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 66966668bb91a857503a82449633f8dd1ae621b8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d9f153d212e1180e5de92a6299d2fbb2d6864c42
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="removing-the-view-state-the-designer-adds-to-an-xaml-file"></a>Dodaje usuwanie stanu widoku projektanta do pliku XAML
 Ten przykład przedstawia sposób tworzenia klasy pochodnej z <xref:System.Windows.Markup.XamlWriter> i usuwa wyświetlania stanu z pliku XAML. [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]zapisuje informacje do dokumentu XAML, znany jako stan widoku. Stan widoku odwołuje się do informacji, które jest wymagany w czasie projektowania, takie jak układ rozmieszczania, który nie jest wymagany w czasie wykonywania. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]Wstawia te informacje do dokumentu XAML jest edytowany. [!INCLUDE[wfd2](../../../../includes/wfd2-md.md)]zapisuje stan widoku w pliku XAML z `mc:Ignorable` atrybutu, dlatego te informacje nie został załadowany, gdy środowisko uruchomieniowe ładuje plik XAML. W tym przykładzie pokazano, jak utworzyć klasę, która usuwa informacje o stanie tego widoku podczas przetwarzania węzłów XAML.  

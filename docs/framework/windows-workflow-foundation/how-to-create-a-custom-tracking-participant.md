@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ef647068e6ec757de391015f4959335c29038cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 4818b43c447dbe279a67f372dc846b3b07ecd998
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Porady: Tworzenie niestandardowych śledzenia uczestnika
 Śledzenia przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowiska uruchomieniowego przepływu pracy emituje rekordy śledzenia, które opisują zdarzenia cyklu życia przepływu pracy, zdarzenia cyklu życia działania zakładki wznawianiu i błędów. Te rekordy śledzenia są używane przez uczestników śledzenia. [!INCLUDE[wf](../../../includes/wf-md.md)]obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. Ten samouczek krok opisuje sposób tworzenia niestandardowych śledzenia uczestnika i profilu śledzenia, który przechwytywania danych wyjściowych `WriteLine` działań, dzięki czemu mogą być wyświetlane dla użytkownika.  

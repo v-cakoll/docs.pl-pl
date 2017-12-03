@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 caps.latest.revision: "32"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0aac3a161b0482bad1a32f5223d2031402a632cc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 38d1f0f6bf9245048f21bbe1cb0aa6a0b8d768dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="firewall-instructions"></a>Instrukcje dotyczące zapory
 Należy włączyć kilka portów lub programów w zaporze, tak że [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki mogą działać. Wiele próbek komunikują się przy użyciu portów w zakresie 8000-8003 i portu 9000. Zapora jest włączona domyślnie i uniemożliwia dostęp do tych portów. Aby włączyć zapory próbek, wykonaj jedną z następujących procedur, w zależności od wymagań i środowisko zabezpieczeń:  

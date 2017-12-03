@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 04ab5e657ffae42e9e52a7f392070a7d6ecf680c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5ec203ecf1041955c140f3409c090db756e5c34d
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>Instrukcje: Konfigurowanie zachowania bezczynności za pomocą elementu WorkflowServiceHost
 Przepływy pracy Przejdź bezczynności, po napotkaniu zakładki, która musi zostać wznowiony przez niektóre bodźca zewnętrznych, np. gdy wystąpienie przepływu pracy oczekuje na być dostarczane za pomocą wiadomości <xref:System.ServiceModel.Activities.Receive> działania. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior>jest to zachowanie, który umożliwia określenie czasu między po wystąpieniu usługi przechodzi bezczynności i gdy wystąpienie jest utrwalona lub zwalnianie modułu. Zawiera dwie właściwości, które umożliwiają skonfigurowanie tych okresów. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>Określa przedział czasu między po bezczynności przechodzi wystąpienia usługi przepływu pracy i gdy wystąpienie usługi przepływu pracy jest trwały. <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>Określa przedział czasu między gdy przepływ pracy usługi wystąpienie przechodzi bezczynności i gdy wystąpienie usługi przepływu pracy jest zwolniony, gdzie zwolnienie oznacza przechowywanie wystąpienie w magazynie wystąpień i usunięcie go z pamięci. W tym temacie opisano sposób konfigurowania <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> w pliku konfiguracji.  

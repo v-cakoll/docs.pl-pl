@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d72afb0fa1c316b981a15ef1e124f21b5be0b09d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 6d464042411b2d06368bb596e6d8d1dc0976808e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie zamieszczono listę znanych problemów, które klienci mają uruchamiać do podczas opracowywania WCF klientów i usług. Jeśli problem, którego używasz do nie jest na liście, zaleca się Konfiguruj śledzenie dla usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić podgląd pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, który może być przeprowadzana w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na przeglądarka plików śledzenia, zobacz: [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  

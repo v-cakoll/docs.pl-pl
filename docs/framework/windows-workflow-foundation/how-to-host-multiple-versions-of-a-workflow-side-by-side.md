@@ -12,14 +12,14 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 713417131338dd683906eb2de56e615d4aa13c10
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0f6fa267e6400672328714f016a5823d8f1311aa
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>Porady: hostowanie wielu wersji przepływu pracy Side-by-Side
 `WorkflowIdentity`Umożliwia deweloperom aplikacji przepływu pracy skojarzyć nazwę i wersję z definicji przepływu pracy, a te informacje mają być skojarzone z wystąpieniem przepływu pracy utrwalonych. Informacje o tożsamości mogą posłużyć deweloperzy aplikacji przepływu pracy na potrzeby scenariuszy, takich jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i udostępnia inne funkcje, takie jak aktualizacja dynamiczna podstawy. Ten krok samouczka przedstawiono sposób użycia `WorkflowIdentity` do obsługi wielu wersji przepływu pracy w tym samym czasie.  

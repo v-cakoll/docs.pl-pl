@@ -14,14 +14,14 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 52c5dfd84a55e727e465e2bd6214462fd57c334f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3231e5b043dd0e65c09f25eed56341e660bf1f87
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
 Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowania i identyfikowania punktu końcowego. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model programowania przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, które wymiany wiadomości, a opcjonalny zestaw <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które opisują inne nagłówki SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zawierają dodatkowe i bardziej szczegółowych informacji o adresach do identyfikacji użytkownika lub interakcji z punktem końcowym usługi. Adres punktu końcowego jest reprezentowana w sieci jako usługi WS-Addressing odwołaniu do punktu końcowego (EPR).  

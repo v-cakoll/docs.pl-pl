@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
 caps.latest.revision: "39"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 92da011b6bd3fda342e827536b698c6ae6f4c6f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d1cc61b1b777de7149b8f12c0b2f6030b305a73c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]jest oparty na potrzeby współdziałania z usługami sieci Web, które obsługuje zestaw specyfikacji znany jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi współdziałanie najważniejsze wskazówki dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawiono trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Współdziałanie z organizacji standardów przejścia z Structured Information Standards (OASIS) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera jeden interoperacyjne powiązanie dostarczane przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Dla publikacji metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera dwa interoperacyjne powiązania dostarczane przez system: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje obsługujących powiązania interoperacyjne dostarczane przez system.  

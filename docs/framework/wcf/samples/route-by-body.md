@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 caps.latest.revision: "18"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: efbf38d562b120308abc6fc4514a9d17ef608b51
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 09e274bcbc1995dcd6b2c21e0114aa4a865f4129
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="route-by-body"></a>Trasa według treści
 W tym przykładzie pokazano, jak wdrożyć usługi, która akceptuje obiekty komunikatów z dowolną akcję SOAP. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. Usługa implementuje pojedynczy `Calculate` operacja, która akceptuje <xref:System.ServiceModel.Channels.Message> żądań parametrów i zwraca <xref:System.ServiceModel.Channels.Message> odpowiedzi.  

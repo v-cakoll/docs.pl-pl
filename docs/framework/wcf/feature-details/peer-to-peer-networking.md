@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e66a2f87d69ddba1676ed5e210859edfb5d8e41
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d3ef21d4ab431ea4e1e1ac0392b3f088a7053c80
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="peer-to-peer-networking"></a>Sieci równorzędne
 Kanał elementu równorzędnego jest technologią komunikacji (P2P) wielopartyjnej, peer-to-peer w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Umożliwia bezpieczne i skalowalne oparta na komunikatach P2P kanał komunikacji dla deweloperów aplikacji. Jednym z typowych przykładów wielopartyjnej aplikacji, które mogą korzystać z kanału równorzędnego jest współpracy aplikacji, na przykład rozmowy, w przypadku, gdy grupa osób rozmów ze sobą w sposób peer-to-peer, bez serwerów. Kanał elementu równorzędnego umożliwia P2P współpracy, dystrybucji zawartości, równoważenia obciążenia i rozproszonego przetwarzania w scenariuszach zarówno konsumenta, jak i enterprise.  

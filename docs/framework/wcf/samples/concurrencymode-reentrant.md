@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 17c3bf41f9db0458b91af808cbde56634ef1fca8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: bf852c67bec8abb2af3593d537010e5cc2718176
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="concurrencymode-reentrant"></a>Procedura wielobieżna ConcurrencyMode
 W przykładzie pokazano konieczność i zagadnień dotyczących używania pomocą właściwości ConcurrencyMode.Reentrant implementacji usługi. Pomocą właściwości ConcurrencyMode.Reentrant oznacza, że usługa (lub wywołania zwrotnego) przetwarza tylko jeden komunikat w danym momencie (odpowiednikiem `ConcurencyMode.Single`). W celu zapewnienia bezpieczeństwa wątków [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] blokad `InstanceContext` przetwarza komunikat, że nie inne komunikaty mogą być przetwarzane. W przypadku trybu współużytkowane `InstanceContext` jest odblokowany, tuż przed usługa wykonuje wywołanie wychodzące, umożliwiając kolejne wywołania (która może być współużytkowane, jak pokazano w przykładzie) można uzyskać blokady następnym pochodzi z usługą. Aby zademonstrować zachowanie, próbki pokazuje, jak klient i usługa może wysyłać wiadomości między sobą za pomocą kontraktu dwukierunkowego.  

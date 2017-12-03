@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5f940ba2-57ee-4c49-a779-957c5e7e71fa
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 33337f75032031ccfc81173f188f4ff7695ffd40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3967cd7002af8ff9aee4c4f25bd2422d2d0ea1ed
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serializing-in-json-with-message-level-programming"></a>Serializacja notacji JSON w przypadku programowania na poziomie komunikatu
 Usługi WCF obsługuje serializacji danych w formacie JSON. W tym temacie opisano, jak sprawdzić WCF do serializacji z typów, za pomocą <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>.  

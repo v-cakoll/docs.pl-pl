@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 caps.latest.revision: "28"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 537e86b4eb43864e9a27d5a8a485ea5cb752833d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 30fc31055563db75512639bf7fb3b9119be280e6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-duplex-contract"></a>Instrukcje: Tworzenie kontraktu dwukierunkowego
 W tym temacie przedstawiono podstawowe kroki, aby utworzyć metody, które używają kontraktu dwukierunkowego (dwukierunkowe). Kontrakt dupleksu umożliwia klienci i serwery komunikować się ze sobą niezależnie, aby albo mogą inicjować połączenia do drugiego. Kontrakt dupleksu jest jednym z trzech komunikat dostępne [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług. Inne dwóch komunikatów wzorce są jednokierunkowe i żądanie odpowiedź. Kontrakt dupleksowy składa się z dwóch jednokierunkowe kontraktów między klientem a serwerem i nie wymaga, aby zostać skorelowane wywołania metody. Użyj tego rodzaju kontraktu, jeśli usługa musi zapytań klienta, aby uzyskać więcej informacji, lub jawnie wywoływanie zdarzeń na kliencie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie aplikacji klienckich dla kontraktu dwukierunkowego, zobacz [porady: dostęp do usług z kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md). Dla przykładu pracy, zobacz [dupleksu](../../../../docs/framework/wcf/samples/duplex.md) próbki.  

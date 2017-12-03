@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 72956d1044ae6b99134665ef296b5d347673deab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3be1c85a87896c176d5e81d2938418194d28b93b
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializacja przepływów pracy i działań do i z XAML
 Oprócz kompilowany do typów, które znajdują się w zestawach definicji przepływu pracy może być Zserializowany w języku XAML. Te definicje serializacji można wykorzystać do edycji lub inspekcję, przekazany do system kompilacji dla kompilacji, i załadować wywołany. Ten temat zawiera omówienie serializacji definicji przepływu pracy oraz pracy z definicji przepływu pracy XAML.  

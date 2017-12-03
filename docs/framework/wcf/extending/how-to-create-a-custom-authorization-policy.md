@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 caps.latest.revision: "9"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 8a4a458d49e7ec3db3e80202e53e3a1f264d207b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0086dc0c82fefad3cb1e5a73ddd9ced909f05453
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>Instrukcje: Tworzenie niestandardowych zasad autoryzacji
 Infrastruktura modelu tożsamości w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje model autoryzacji na podstawie oświadczeń. Oświadczenia są wyodrębnione z tokenów, opcjonalnie przetworzone przez niestandardowych zasad autoryzacji i następnie są umieszczane w <xref:System.IdentityModel.Policy.AuthorizationContext> które następnie można zbadać podejmowanie decyzji dotyczących autoryzacji. Zasady niestandardowe mogą służyć do przekształcania oświadczeń z przychodzące tokeny oświadczeń oczekiwany przez aplikację. W ten sposób warstwy aplikacji mogą być wyłączone ze szczegółowe informacje o oświadczeniach różne obsługiwane przez token różne typy, które [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje. W tym temacie przedstawiono implementowania niestandardowych zasad autoryzacji oraz sposobu dodawania tej zasady do kolekcji zasad używanych przez usługę.  

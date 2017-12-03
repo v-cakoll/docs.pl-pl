@@ -17,14 +17,14 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7e6140e7d66ecdd905c0595cb813752d4e0a870d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: de7bfb7d926f9aa75ccfcfe8a550a0dbae4e12ef
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>Instrukcje: Personifikowanie klienta w usłudze
 Personifikowanie klienta na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi włącza usługę w celu wykonania zadań w imieniu klienta. Dla akcji może ulec dostępu formantu listy (ACL) sprawdza, takich jak dostęp do katalogów i plików na komputerze lub dostępu do bazy danych programu SQL Server, sprawdź listę kontroli dostępu jest konta użytkownika klienta. W tym temacie przedstawiono podstawowe czynności wymagane do włączenia klienta w domenie systemu Windows ustawić poziom personifikacji klienta. Na przykład pracy tego, zobacz [Personifikowanie klienta](../../../docs/framework/wcf/samples/impersonating-the-client.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Personifikacja klienta, zobacz [delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md).  

@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a6ffe482c8d04314b79ee5bb7029d2583c56c363
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: eac1a8b49ac9936455d11553ccc697897c088cb6
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="client-channel-level-programming"></a>Programowanie na poziomie kanału klienta
 W tym temacie opisano sposób zapisania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji klienckiej bez użycia <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> klasy i jego skojarzony obiekt modelu.  

@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
 caps.latest.revision: "15"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: e6fb08ab30a66d25d7150723e4329aabea9b6bb1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a6f6a1d205a0e8443d7dc81da53855a1b7920def
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="strongly-typed-extensions-sample"></a>Przykład rozszerzeń z silną kontrolą typów
 W przykładzie użyto <xref:System.ServiceModel.Syndication.SyndicationFeed> klasy na potrzeby przykładu. Jednak można wzorce zostało to pokazane w tym przykładzie wszystkie klasy zespolonego, które obsługuje rozszerzenie danych.  

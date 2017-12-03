@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
 caps.latest.revision: "30"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 0dbd9d28d56d8d473b9e92d977da409b74290224
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0b5817ded29836bcc6c998aaf293a7b2fd99170c
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>Grupowanie komunikatów z obsługą kolejek w ramach sesji
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zawiera sesję, który umożliwia grupowanie zestaw komunikatów powiązane ze sobą do przetworzenia przez aplikację odbierającą pojedynczego. Komunikaty, które są częścią sesji musi być częścią tej samej transakcji. Ponieważ wszystkie komunikaty są częścią tej samej transakcji, jeśli jeden komunikat nie można przetworzyć całej sesji została wycofana. Sesje mają podobne zachowania w odniesieniu do kolejki utraconych wiadomości i kolejki skażone. Czas wygaśnięcia (TTL) ustawiona w Zakolejkowane powiązanie skonfigurowane dla sesji jest stosowany do sesji jako całość. Jeśli tylko niektóre wiadomości w sesji są wysyłane przed wygaśnięciem czas TTL, całej sesji jest umieszczona w kolejce wiadomości utraconych. Podobnie gdy wiadomości w sesji nie mogą być wysyłane do aplikacji z kolejki aplikacji, całej sesji jest umieszczone w kolejce skażone (jeśli jest dostępna).  

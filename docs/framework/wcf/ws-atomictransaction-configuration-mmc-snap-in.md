@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 622a8b488a97041800d626566923095a770412f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 66e6114b5fca84188f69be8d16782d5fdc1588cb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Przystawka programu MMC do konfigurowania elementu WS-AtomicTransaction
 Przystawka programu MMC konfiguracji WS-AtomicTransaction służy do konfigurowania część ustawień protokołu WS-AtomicTransaction na komputerach lokalnych i zdalnych.  

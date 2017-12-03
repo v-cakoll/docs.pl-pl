@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ed6ce9b87a5e2d8945a57110c02cce8024439f14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami wymiany metadanych
 Po rozwinięciu niektóre nowe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, użytkownik może zadecydować chcesz mieć możliwość wywołania tych usług z skryptu lub aplikacji Visual Basic 6.0. Jedna z metod byłoby Generowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zestawu klienta zarejestrować zestawu w modelu COM, zainstalowania zestawu w pamięci podręcznej GAC i odwoływanie do typów COM w kodzie języka Visual Basic. Podczas dystrybucji aplikacji, konieczne będzie dystrybuować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również zestawu klienta. Użytkownik będzie miał do rejestrowania zestawów klienta WCF COM i umieszczenie go w pamięci GAC. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Współdziałanie z COM umożliwia także wywoływać tej samej usługi bez polegania na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zestawu klienta. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Moniker pozwala wywoływać żadnego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług z dowolnego języka zgodny z modelu COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) i tak dalej), określając punkt końcowy programu exchange (Mex) metadanych identyfikator URI, który używa moniker usługi Aby wyodrębnić informacje o typie dotyczących usługi. W tym temacie opisano sposób wywołania wprowadzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbkowania przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] krótkiej nazwy, która określa punkt końcowy Mex.  

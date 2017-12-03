@@ -9,14 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a76b666dde6674740790c161753570193912afd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: edc9e285faab064b8552263bd48e6d2ad43d5ec2
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="pick-activity"></a>Wybierz działanie
 <xref:System.Activities.Statements.Pick> Działania upraszcza modelowania zestawu wyzwalaczy zdarzeń oraz ich odpowiednich programów obsługi.  A <xref:System.Activities.Statements.Pick> działania zawiera kolekcję <xref:System.Activities.Statements.PickBranch> działań, gdzie każdy <xref:System.Activities.Statements.PickBranch> jest parowanie między <xref:System.Activities.Statements.PickBranch.Trigger%2A> działania i <xref:System.Activities.Statements.PickBranch.Action%2A> działania.  W czasie wykonywania Wyzwalacze dla wszystkie gałęzie są wykonywane równolegle.  Po zakończeniu jednego wyzwalacza, następnie wykonywane jest jego działanie, a wszystkie inne wyzwalacze zostały anulowane.  Zachowanie [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> działanie przypomina [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] <xref:System.Workflow.Activities.ListenActivity> działania.  

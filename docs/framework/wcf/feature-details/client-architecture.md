@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: acd2263fddf4b045cd7efc93ca85d1ed1b2e6dd0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: e749594d7a37b89d5dbf02013b2f667d923af7ed
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="client-architecture"></a>Architektura klienta
 Aplikacje używają [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obiekty klienta do wywołania operacji usługi. W tym temacie omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiekty klienta [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanały klienta i ich relacji z podstawową architekturę kanału. Aby uzyskać ogólne omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obiekty klienta, zobacz [Przegląd klienta programu WCF](../../../../docs/framework/wcf/wcf-client-overview.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]warstwie kanału zobacz [rozszerzanie warstwy kanału](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md).  

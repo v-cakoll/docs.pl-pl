@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
 caps.latest.revision: "17"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 204ea09a7a6c14188b85f23829fc3a9446aaadd9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 0220dffd07f41210051953130cf99ebbfd4f0173
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>Instrukcje: Określanie powiązania usługi w konfiguracji
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi podstawowe Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest skonfigurowana w pliku Web.config, w którym jest określone, że usługa używa <xref:System.ServiceModel.BasicHttpBinding> . Opis sposobu konfigurowania tej usługi przy użyciu kodu zamiast konfiguracji, zobacz [porady: Określanie powiązania usługi w kodzie](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md).  

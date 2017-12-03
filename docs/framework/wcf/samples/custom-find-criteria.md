@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 caps.latest.revision: "10"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d49661ff91477f2f53d180a10ae1c9b3b632461f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 31b599bc1086fcbfe8db527155d078299309a647
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="custom-find-criteria"></a>Niestandardowe kryteria znajdowania
 Przykładzie pokazano, jak utworzyć niestandardowy zakres dopasowania przy użyciu logiki i sposobu implementacji usługi odnajdywania niestandardowych. Klienci używają niestandardowy zakres funkcji dopasowywania uściślić i dalsze bazując funkcje Znajdź dostarczane przez system odnajdywania WCF. Scenariusz, które obejmuje ten przykład jest następujący:  

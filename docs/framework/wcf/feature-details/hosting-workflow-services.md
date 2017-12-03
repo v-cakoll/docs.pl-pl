@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: ad4e5af26291c210f4f46f20e5b9585e3e095ae7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 1bf0b63d3de750b5ec2aea41dcb6bb700385663a
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="hosting-workflow-services"></a>Hostowanie usług przepływu pracy
 Usługi przepływu pracy musi być hostowany na jej odpowiadanie na przychodzące wiadomości. Użyj usługi przepływu pracy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości w związku z tym infrastruktury i są hostowane w podobny sposób. Podobnie jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług przepływu pracy usługi może być hostowana w dowolnej aplikacji zarządzanych, w obszarze usługi Internet Information Services (IIS) lub w obszarze usługi aktywacji procesów systemu Windows (WAS). Ponadto usługi przepływu pracy mogą być hostowane w obszarze AppFabric w systemie Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz Windows Server AppFabric [dokumentacji systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193037), [funkcje hostingu AppFabric](http://go.microsoft.com/fwlink/?LinkId=196494), i [pojęcia Hosting AppFabric](http://go.microsoft.com/fwlink/?LinkId=196495). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]różne sposoby hosta [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług zobacz [Hosting usług](../../../../docs/framework/wcf/hosting-services.md).  

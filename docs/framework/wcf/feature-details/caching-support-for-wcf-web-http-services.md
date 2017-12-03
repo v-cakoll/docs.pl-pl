@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 caps.latest.revision: "11"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: b951c77e522180fa615a9b6853bfc195a3e5bcb2
-ms.sourcegitcommit: 5d0e069655439984862a835f400058b7e8bbadc6
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: a4dd96f444d6405022a0a812a55a92cec1052fbb
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/28/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Umożliwia korzystanie z deklaratywne mechanizm buforowania już dostępne w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można do pamięci podręcznej odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła do usługi, który jest skonfigurowany dla buforowania GET protokołu HTTP, ASP.NET odsyła odpowiedź buforowana i nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, przy następnym użytkownik wysyła HTTP GET, jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET buforowanie, zobacz [omówienie pamięci podręcznej programu ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  

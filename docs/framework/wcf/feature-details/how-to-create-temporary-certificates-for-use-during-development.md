@@ -13,14 +13,14 @@ helpviewer_keywords:
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
 caps.latest.revision: "14"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: a1b386906c1d493a23d8a58f3540758d3ae0d26e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 83f93d6bac0e16fe0b44ea5aba718ddb4dcf7c6e
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>Instrukcje: Tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania
 Podczas tworzenia bezpiecznego usługi lub klienta przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], jest często przekazać certyfikat X.509 mają być używane jako poświadczenie. Certyfikat jest zwykle częścią łańcucha certyfikatów przy użyciu głównego urzędu został znaleziony w magazynie zaufanych głównych urzędów certyfikacji komputera. Posiadanie łańcuch certyfikatów umożliwia określania zakresu zestawu certyfikatów, w których zwykle głównego urzędu certyfikacji jest od swojej organizacji lub jednostki biznesowej. Aby emulować to w czasie tworzenia, możesz utworzyć dwa certyfikaty by spełnić ich wymagań zabezpieczeń. Pierwsza to certyfikatu z podpisem własnym, który jest umieszczony w magazynie zaufanych głównych urzędów certyfikacji i drugiego certyfikatu jest tworzona na podstawie pierwszego i znajduje się w magazynie osobistym lokalizacji komputera lokalnego lub w magazynie osobistym Bieżąca lokalizacja użytkownika. W tym temacie przedstawiono kroki, aby utworzyć tych dwóch certyfikatów przy użyciu [narzędzie tworzenia certyfikatów (MakeCert.exe)](http://go.microsoft.com/fwlink/?LinkId=248185), które są dostarczane przez [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zestawu SDK.  

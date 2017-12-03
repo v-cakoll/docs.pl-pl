@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 69911b2baf0e184957158ac536fa2271524cb2ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server
 Hostowanie usług przepływu pracy w aplikacji sieci szkieletowej jest podobny do hostingu w środowisku usług IIS / WAS. Jedyna różnica polega na te narzędzia, które zapewnia AppFabric wdrażania, monitorowania i zarządzania usług przepływu pracy. W tym temacie korzysta z usługi przepływu pracy utworzone w [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Ten temat przeprowadzi Cię przez proces tworzenia usługi przepływu pracy. W tym temacie objaśnia sposób hosta usługi przepływu pracy przy użyciu aplikacji sieci szkieletowej. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric, zobacz [dokumentacją sieci szkieletowej systemu Windows Server aplikacji](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Przed wykonaniem poniższych instrukcji upewnij się, że masz systemu Windows Server AppFabric zainstalowane.  Aby zrobić to open zapasowej Internetowe usługi informacyjne (inetmgr.exe), kliknij nazwę serwera w **połączeń** wyświetlić, kliknij przycisk witryny, a następnie kliknij przycisk **domyślna witryna sieci Web**. W prawej części ekranu powinna być widoczna sekcja o nazwie **AppFabric**. Jeśli nie widzisz tej sekcji (będzie górnej części okienka po prawej stronie) nie masz AppFabric zainstalowane. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Instalowanie systemu Windows Server AppFabric zobacz [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  

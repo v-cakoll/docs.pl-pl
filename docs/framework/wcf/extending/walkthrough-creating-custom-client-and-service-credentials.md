@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
 caps.latest.revision: "13"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 6eae3a91856feff83e8e199cf552a987d99d5ba2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: aeea572bea367406b8391339748a76c8bd168a61
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>Wskazówki: Tworzenie niestandardowego klienta i poświadczeń usługi
 W tym temacie pokazano sposób użycia niestandardowych poświadczeń z kodu aplikacji oraz sposobu wdrażania niestandardowego klienta i poświadczeń usługi.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 caps.latest.revision: "22"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 7be16a899974f325231a4010ad74bc55ee56d2a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7df149ab75d2e3f1e9167f66ef8ec3c40b73c827
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>Określanie i obsługa błędów w kontraktach i usługach
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]aplikacje obsługują sytuacjach błędu przez mapowanie wyjątków zarządzanych obiektów na obiekty błędu protokołu SOAP i błędów SOAP do obiektów zarządzanych wyjątkach. Tematy w tej sekcji omówiono sposób projektowania umów do udostępnienia błąd warunków jako niestandardowych błędach SOAP, jak zwrócić takie błędy jako część implementacji usługi i jak klienci catch takie błędy.  

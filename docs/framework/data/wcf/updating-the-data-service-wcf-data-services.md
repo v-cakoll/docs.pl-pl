@@ -16,14 +16,14 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 caps.latest.revision: "6"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9c86e755d35a57090941551de43aedd07c8f1f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (usługi danych WCF)
 Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta użycie [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteki tłumaczy wpisy w źródle danych do wystąpienia klasy usługi danych klienta. Klasy usługi te dane są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany do jednostki, które raportu za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody włączyć klienta do śledzenia jednostek dodany i usunięty, a także zmiany wprowadzone do wartości właściwości lub relacje między wystąpieniami jednostki. Rejestrowane są wysyłane do usługi data jako opartego na interfejsie REST operacje podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  

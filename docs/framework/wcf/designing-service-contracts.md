@@ -14,14 +14,14 @@ dev_langs:
 helpviewer_keywords: service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
 caps.latest.revision: "34"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 92c48b625aeb3443a026e0d4ab06a8b7c1c2bf73
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3204e4c280c6c1acd50062fa44b46344926c3908
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="designing-service-contracts"></a>Projektowanie kontraktów usług
 W tym temacie opisano, jakie usługi kontraktów są, jak są zdefiniowane, jakie operacje są dostępne (i wpływem na podstawowym wymiany komunikatów), jakie typy danych są używane i inne problemy, które ułatwiają projektowanie operacje, które spełniają wymagania danego scenariusza.  

@@ -11,14 +11,14 @@ ms.topic: article
 helpviewer_keywords: netTcpBinding Element
 ms.assetid: 5c5104a7-8754-4335-8233-46a45322503e
 caps.latest.revision: "33"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 9928a845545c2328ed86d182ceb37381522d70ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 5e5cfaec2d77bd4455877f92da2e65f7080fa6dd
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="ltnettcpbindinggt"></a>&lt;netTcpBinding&gt;
 Określa bezpieczne, niezawodne i zoptymalizowane powiązanie odpowiednie dla komunikacji między komputerami. Domyślnie generuje środowiska uruchomieniowego stosu komunikacji z zabezpieczeniami systemu Windows dla komunikatów zabezpieczeń i uwierzytelniania, TCP dostarczanie komunikatów i kodowanie komunikatu binarnego.  

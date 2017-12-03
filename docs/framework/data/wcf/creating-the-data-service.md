@@ -13,14 +13,14 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 caps.latest.revision: "7"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: 37d32d938f49d0767594e0f141d5a463ad5fc95f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="creating-the-data-service"></a>Tworzenie usługi danych
 W ramach tego zadania spowoduje utworzenie usługa dane przykładowe z wykorzystaniem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do udostępnienia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, która jest oparta na bazie danych Northwind. Zadanie obejmuje następujące podstawowe czynności:  

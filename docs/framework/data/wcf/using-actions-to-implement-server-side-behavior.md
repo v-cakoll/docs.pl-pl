@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
 caps.latest.revision: "3"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: d5f3a949e8cade47876bb578725a130ef7dac934
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Za pomocą akcji do wykonania zachowanie po stronie serwera
 Akcji OData umożliwiają wdrożenie zachowanie, który działa na zasób, który został pobrany z usługi OData.  Na przykład należy wziąć pod uwagę film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać z film cyfrowy: wyewidencjonowania, szybkość/comment lub zaewidencjonowania. Są to wszystkie przykłady akcji, które mogą być wykonywane przez usługi danych WCF, która zarządza filmów cyfrowych. Działania są opisane w odpowiedzi OData, która zawiera zasób, w którym można wywołać akcję. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu usługi danych lub zasobu. Na przykład po filmu cyfrowego jest wyewidencjonowany go nie może zostać wyewidencjonowany przez innego użytkownika. Klienci mogą wywoływać akcję po prostu, określając adres URL. Na przykład http://MyServer/MovieService.svc/Movies (6) może zidentyfikować określonych film cyfrowy i http://MyServer/MovieService.svc/Movies (6) / Checkout powodowałoby wywołanie akcji w określonych filmu. Akcje umożliwiają można ujawnić modelu usługi bez narażania modelu danych. Kontynuowaniem service przykład movie, można zezwolić użytkownikowi na szybkości filmu, ale nie są bezpośrednio udostępniania danych klasyfikacji jako zasób. Można zaimplementować akcję szybkość pozwala użytkownikom sklasyfikować filmu, ale nie bezpośredni dostęp do danych klasyfikacji jako zasób.  

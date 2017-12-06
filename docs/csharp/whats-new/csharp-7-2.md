@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: a580a4a3a0a49e97ea8fb96699d1d978a9bc0a64
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-72"></a>Nowości w języku C# 7.2.
 
@@ -61,6 +61,6 @@ int binaryValue = 0b_0101_0101;
 
 ## `private protected`
 
-Ponadto nowe modyfikator dostępu złożone: `private protected` wskazuje, że element członkowski mogą być używane przez klasy pochodne, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp klas pochodnych lub klasy, które znajdują się w tym samym zestawie, `private protected` ogranicza dostęp do typów pochodnych zadeklarowany w tym samym zestawie.
+Ponadto nowe modyfikator dostępu złożone: `private protected` wskazuje, że element członkowski mogą być używane przez zawierające klasy lub klas pochodnych, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp klas pochodnych lub klasy, które znajdują się w tym samym zestawie, `private protected` ogranicza dostęp do typów pochodnych zadeklarowany w tym samym zestawie.
 
 Aby uzyskać więcej informacji, zobacz [modyfikatorów dostępu](../language-reference/keywords/access-modifiers.md) w language reference.

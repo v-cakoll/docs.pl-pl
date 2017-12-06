@@ -12,11 +12,11 @@ ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
 caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 69a3a575347a62b298c17af050cb925f7819b552
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 23a3299492c538963e9a5dceaadc81a44d386b19
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="await-c-reference"></a>await (odwołanie w C#)
 `await` Operator jest stosowany do zadania w można wstawić punktu zawieszenia podczas wykonywania metody do momentu ukończenia zadania Oczekiwano metody asynchronicznej. Zadanie reprezentuje pracy w toku.  
@@ -34,7 +34,7 @@ Zadania, które `await` zastosować operatora zazwyczaj zwracane przez wywołani
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](http://go.microsoft.com/fwlink/?LinkID=255191) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
+>  Aby uzyskać pełny przykład, zobacz [wskazówki: uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md). Możesz pobrać próbki z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) w witrynie firmy Microsoft. Przykładem jest w projekcie AsyncWalkthrough_HttpClient.  
   
 Jak pokazano w poprzednim przykładzie, jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task<TResult>`, następnie typ `await` wyrażenie jest `TResult`. Jeśli `await` jest stosowany do wyniku wywołania metody, która zwraca `Task`, następnie typ `await` wyrażenie jest `void`. Poniższy przykład przedstawia różnicy.  
   

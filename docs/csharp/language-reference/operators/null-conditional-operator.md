@@ -13,11 +13,11 @@ ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1a49d36b8580812c08e9ee080a9602d9fc2027ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c2372380d8162d3e7760bba4a43cdb1c568bf5b
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="-operator-c-reference"></a>?? Operator (odwołanie w C#)
 `??` Operator jest nazywany operatora łączenia wartości null.  Zwraca argument operacji z lewej strony, jeśli ma on wartość inną niż null; w przeciwnym razie zwraca argument operacji po prawej stronie.  
@@ -37,4 +37,4 @@ ms.lasthandoff: 11/21/2017
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Operatory C#](../../../csharp/language-reference/operators/index.md)  
  [Typy dopuszczające wartości zerowe](../../../csharp/programming-guide/nullable-types/index.md)  
- [Jakie dokładnie jest "Unosiło" oznacza?](http://go.microsoft.com/fwlink/?LinkID=112382)
+ [Jakie dokładnie jest "Unosiło" oznacza?](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)

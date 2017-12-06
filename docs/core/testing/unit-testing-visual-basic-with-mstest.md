@@ -7,25 +7,25 @@ ms.date: 09/01/2017
 ms.topic: article
 dev_langs: vb
 ms.prod: .net-core
-ms.openlocfilehash: b656ae4746691f2e72eaa666542e98d4abc91069
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b5078a78ea7dae3465680797531e0ff81b9b5845
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>Biblioteki języka Visual Basic .NET Core za pomocą testu dotnet i MStest testy jednostkowe
 
-Ten samouczek przedstawia interaktywna tworzenia przykładowe rozwiązanie krok po kroku, aby dowiedzieć się pojęcia testowania jednostek. Jeśli chcesz wykonać czynności opisane w samouczku za pomocą wbudowanych rozwiązania, [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-using-mstest/) przed rozpoczęciem. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek przedstawia interaktywna tworzenia przykładowe rozwiązanie krok po kroku, aby dowiedzieć się pojęcia testowania jednostek. Jeśli chcesz wykonać czynności opisane w samouczku za pomocą wbudowanych rozwiązania, [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/unit-testing-vb-mstest/) przed rozpoczęciem. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="creating-the-source-project"></a>Tworzenie projektu źródłowego
 
-Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *testowania — przy użyciu dotnet testu jednostkowego* do przechowywania rozwiązania.
+Umożliwia otwarcie okna powłoki. Utwórz katalog o nazwie *jednostki — testowanie vb-mstest* do przechowywania rozwiązania.
 Wewnątrz tego nowego katalogu Uruchom [ `dotnet new sln` ](../tools/dotnet-new.md) do tworzenia nowego rozwiązania. Takie rozwiązanie ułatwia zarządzanie biblioteki klas i jednostkowy projekt testowy.
 Utwórz katalog rozwiązania *PrimeService* katalogu. Masz dotychczasowych następującą strukturę katalogów i plików:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
 ```
 
@@ -50,21 +50,21 @@ Zmień katalog z powrotem do *jednostki — testowanie vb — przy użyciu stest
 Następnie należy utworzyć *PrimeService.Tests* katalogu. Następujące konspektu przedstawia strukturę katalogów:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
     /PrimeService.Tests
 ```
 
-Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new mstest -lang VB` ](../tools/dotnet-new.md). To polecenie tworzy projekt testowy używającą xUnit jako biblioteka testów. Wygenerowanego szablonu konfiguruje uruchamiający w *PrimeServiceTests.vbproj*:
+Wprowadź *PrimeService.Tests* katalogu bieżącego katalogu i Utwórz nowy projekt za pomocą [ `dotnet new mstest -lang VB` ](../tools/dotnet-new.md). To polecenie tworzy projekt testowy używającą MSTest jako biblioteka testów. Wygenerowanego szablonu konfiguruje uruchamiający w *PrimeServiceTests.vbproj*:
 
 ```xml
 <ItemGroup>
-<PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
-<PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
-<PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
+  <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
+  <PackageReference Include="MSTest.TestAdapter" Version="1.1.18" />
+  <PackageReference Include="MSTest.TestFramework" Version="1.1.18" />
 </ItemGroup>
 ```
 
@@ -74,13 +74,13 @@ Projekt testowy wymaga inne pakiety do tworzenia i uruchamiania testów jednostk
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
-Widoczny cały plik w [przykłady repozytorium](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) w witrynie GitHub.
+Widoczny cały plik w [przykłady repozytorium](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService.Tests.vbproj) w witrynie GitHub.
 
 Masz następujące układu ostatecznego rozwiązania:
 
 ```
-/unit-testing-vb-using-mstest
-    unit-testing-vb-using-mstest.sln
+/unit-testing-vb-mstest
+    unit-testing-vb-mstest.sln
     /PrimeService
         Source Files
         PrimeService.vbproj
@@ -89,7 +89,7 @@ Masz następujące układu ostatecznego rozwiązania:
         PrimeServiceTests.vbproj
 ```
 
-Wykonanie [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) w *jednostki — testowanie vb — przy użyciu mstest* katalogu. 
+Wykonanie [ `dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj` ](../tools/dotnet-sln.md) w *jednostki — testowanie vb-mstest* katalogu.
 
 ## <a name="creating-the-first-test"></a>Tworzenie pierwszego testu
 
@@ -114,7 +114,7 @@ Namespace PrimeService.Tests
 End Namespace
 ```
 
-`<TestClass>` Atrybut wskazuje klasę, która zawiera testy. `<TestMethod>` Atrybut oznacza metodę, która jest uruchamiana przez moduł uruchamiający. Z *jednostki — testowanie vb — przy użyciu mstest*, wykonać [ `dotnet test` ](../tools/dotnet-test.md) do tworzenia testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający xUnit zawiera punkt wejścia programu do uruchomienia testów. `dotnet test`Uruchamia uruchamiający przy użyciu jednostkowy projekt testowy, który został utworzony.
+`<TestClass>` Atrybut wskazuje klasę, która zawiera testy. `<TestMethod>` Atrybut oznacza metodę, która jest uruchamiana przez moduł uruchamiający. Z *jednostki — testowanie vb-mstest*, wykonać [ `dotnet test` ](../tools/dotnet-test.md) do tworzenia testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający MSTest zawiera punkt wejścia programu do uruchomienia testów. `dotnet test`Uruchamia uruchamiający przy użyciu jednostkowy projekt testowy, który został utworzony.
 
 Test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Należy ten test przez pisania kodu najprostsza w `PrimeService` klasy, która działa:
 
@@ -127,11 +127,11 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-W *jednostki — testowanie vb — przy użyciu mstest* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenia uruchamiane kompilacji dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu oba projekty, jest uruchamiana ta pojedynczy test. Przekazuje ono.
+W *jednostki — testowanie vb-mstest* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenia uruchamiane kompilacji dla `PrimeService` projektu i następnie `PrimeService.Tests` projektu. Po utworzeniu oba projekty, jest uruchamiana ta pojedynczy test. Przekazuje ono.
 
 ## <a name="adding-more-features"></a>Dodawanie więcej funkcji.
 
-Teraz, kiedy dokonano jeden test przekazać nadszedł czas na zapis więcej. Istnieje kilka innych przypadków proste dla liczb pierwszych: 0, -1. Możesz dodać tych przypadkach jako nowe testy z `<TestMethod>` atrybut, ale szybko staje się nużące. Istnieją inne atrybuty xUnit, które pozwalają na zapis zestaw testów podobne.  A `<DataTestMethod>` atrybut reprezentuje zestaw testów, wykonanie tego samego kodu, które mają różne argumenty wejściowe. Można użyć `<DataRow>` atrybutu, aby określić wartości dla tych danych wejściowych.
+Teraz, kiedy dokonano jeden test przekazać nadszedł czas na zapis więcej. Istnieje kilka innych przypadków proste dla liczb pierwszych: 0, -1. Możesz dodać tych przypadkach jako nowe testy z `<TestMethod>` atrybut, ale szybko staje się nużące. Istnieją inne atrybuty MSTest, które pozwalają na zapis zestaw testów podobne.  A `<DataTestMethod>` atrybut reprezentuje zestaw testów, wykonanie tego samego kodu, które mają różne argumenty wejściowe. Można użyć `<DataRow>` atrybutu, aby określić wartości dla tych danych wejściowych.
 
 Zamiast tworzyć nowe testy, należy zastosować te atrybuty można utworzyć jeden teorii. Teorii jest metodę, która sprawdza kilka wartości mniejszej niż dwa, czyli o najniższej liczbie pierwsze:
 
@@ -143,6 +143,6 @@ Uruchom `dotnet test`, i dwa pola spośród wymienionych testów kończyć się 
 if candidate < 2
 ```
 
-Nadal Iterowanie przez dodanie większej liczby testów, więcej teorii i więcej kodu w bibliotece głównego. Masz [Zakończono wersji testów](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i [zakończenia wdrożenia biblioteki](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-using-mstest/PrimeService/PrimeService.vb).
+Nadal Iterowanie przez dodanie większej liczby testów, więcej teorii i więcej kodu w bibliotece głównego. Masz [Zakończono wersji testów](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService.Tests/PrimeService_IsPrimeShould.vb) i [zakończenia wdrożenia biblioteki](https://github.com/dotnet/docs/blob/master/samples/core/getting-started/unit-testing-vb-mstest/PrimeService/PrimeService.vb).
 
 Został utworzony małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Zostały strukturę rozwiązania, aby dodać nowe pakiety i testów jest częścią Normalny przepływ pracy. Już skoncentrowany większość czasu i uwagi na temat rozwiązywania problemów celów aplikacji.

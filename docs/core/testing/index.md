@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 815ac74c-4bd9-4a94-a87c-78288b27c0e2
-ms.openlocfilehash: 666c06b236ad870c5c683749ab57d4488b4b8a39
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: 780c2655b6d6a660939fb79ea58bec463ec97aa9
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>Testowanie w .NET Core i .NET Standard jednostki
 
@@ -34,15 +34,18 @@ Podczas pisania testów jednostkowych, należy zachować ostrożność przypadko
 
 Dowiedz się więcej na temat testowania w projektach platformy .NET Core jednostek:
 
-Projektów testów jednostkowych dla .NET Core są obsługiwane w przypadku [C#](../../csharp/index.md), [F #](../../fsharp/index.md) i [Visual Basic](../../visual-basic/index.md). Można również wybrać [xUnit](http://xunit.github.io) i [MSTest](https://github.com/Microsoft/vstest-docs).
+Projektów testów jednostkowych dla .NET Core są obsługiwane w przypadku [C#](../../csharp/index.md), [F #](../../fsharp/index.md) i [Visual Basic](../../visual-basic/index.md). Można również wybrać [xUnit](http://xunit.github.io), [NUnit](http://nunit.org) i [MSTest](https://github.com/Microsoft/vstest-docs).
 
 Możesz przeczytać temat kombinacji w te wskazówki:
 
 * Tworzenie testów jednostkowych za pomocą [ *XUnit* i *C#* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-dotnet-test.md).
+* Tworzenie testów jednostkowych za pomocą [ *NUnit* i *C#* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-nunit.md).
 * Tworzenie testów jednostkowych za pomocą [ *MSTest* i *C#* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-with-mstest.md).
 * Tworzenie testów jednostkowych za pomocą [ *XUnit* i *F #* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-dotnet-test.md).
+* Tworzenie testów jednostkowych za pomocą [ *NUnit* i *F #* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-nunit.md).
 * Tworzenie testów jednostkowych za pomocą [ *MSTest* i *F #* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-fsharp-with-mstest.md).
 * Tworzenie testów jednostkowych za pomocą [ *XUnit* i *Visual Basic* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-dotnet-test.md).
+* Tworzenie testów jednostkowych za pomocą [ *NUnit* i *Visual Basic* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-nunit.md).
 * Tworzenie testów jednostkowych za pomocą [ *MSTest* i *Visual Basic* z poziomu interfejsu wiersza polecenia platformy .NET Core](unit-testing-visual-basic-with-mstest.md).
 
 Można wybrać w różnych językach dla bibliotek klas i urządzenia testowych bibliotek. Aby dowiedzieć się jak przez dopasowanie i mieszanie wskazówki wymienionych powyżej.

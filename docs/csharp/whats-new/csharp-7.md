@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: f98039404789e8886154e04c4b97a21741c4d885
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
+ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/06/2017
 ---
 # <a name="whats-new-in-c-7"></a>Nowości w języku C# 7
 
@@ -183,7 +183,7 @@ Zacznijmy od prostego scenariusza. Dodamy możliwości tego scenariusza, które 
 
 [!code-csharp[SumDieRolls](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#14_SumDieRolls "Sum die rolls")]
 
-Może szybko znaleźć, należy znaleźć przedstawia sumę struktury, gdzie część przedstawia wykonane przy użyciu struktury więcej niż jeden. Część sekwencji wejściowych może być wiele wyników zamiast jeden numer:
+Może szybko znaleźć konieczne Znajdź sumę przedstawia struktury, gdzie część przedstawia wykonane przy użyciu wielu selekcji (w liczbie mnogiej struktury jest selekcji). Część sekwencji wejściowych może być wiele wyników zamiast jeden numer:
 
 [!code-csharp[SumDieRollsWithGroups](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#15_SumDieRollsWithGroups "Sum die rolls with groups")]
 
@@ -215,9 +215,9 @@ Na koniec Dodajmy ostatnich jeden `case` dla nowego stylu struktury. Niektóre g
 > [!NOTE]
 > Dwa selekcji dwustronnych 10 percentyl może reprezentować co liczby z zakresu od 0 do 99. Jeden struktury ma boki etykietę `00`, `10`, `20`,... `90`. Inne struktury ma boki etykietą `0`, `1`, `2`,... `9`. Dodaj struktury dwóch wartości ze sobą i można uzyskać co liczby z zakresu od 0 do 99.
 
-Aby dodać tego rodzaju struktury do kolekcji, należy najpierw zdefiniować typu do reprezentowania struktury percentyl:
+Tego rodzaju struktury należy dodać do kolekcji, należy najpierw zdefiniować typu do reprezentowania selekcji percentylu. `TensDigit` Właściwość przechowuje wartości `0`, `10`, `20`, maksymalnie `90`:
 
-[!code-csharp[18_PercentileDie](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDie "Percentile Die type")]
+[!code-csharp[18_PercentileDice](../../../samples/snippets/csharp/new-in-7/patternmatch.cs#18_PercentileDice "Percentile Die type")]
 
 Następnie należy dodać `case` pasuje do wyrażenia nowego typu:
 

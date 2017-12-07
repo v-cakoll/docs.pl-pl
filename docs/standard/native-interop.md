@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: 9652986491f087b8fa175e2b4041063c71211178
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a4819c2174485411a83e1baa1a0da6c759ba04f8
+ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywnego
 
@@ -71,7 +71,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libSystem shared library and define the method corresponding to the native function.
         [DllImport("libSystem.dylib")]
         private static extern int getpid();
 
@@ -84,7 +84,7 @@ namespace PInvokeSamples {
 }
 ```
 
-Przypomina on w systemie Linux, oczywiście. Nazwa funkcji jest takie same, ponieważ `getpid(2)` jest [POSIX](https://en.wikipedia.org/wiki/POSIX) wywołanie systemowe.
+Jest również podobne w systemie Linux. Nazwa funkcji jest taki sam, ponieważ `getpid(2)` jest standardem [POSIX](https://en.wikipedia.org/wiki/POSIX) wywołanie systemowe.
 
 ```csharp
 using System;
@@ -93,7 +93,7 @@ using System.Runtime.InteropServices;
 namespace PInvokeSamples {
     public static class Program {
 
-        // Import the libc and define the method corresponding to the native function.
+        // Import the libc shared library and define the method corresponding to the native function.
         [DllImport("libc.so.6")]
         private static extern int getpid();
 

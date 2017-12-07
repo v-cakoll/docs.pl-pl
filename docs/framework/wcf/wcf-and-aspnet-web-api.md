@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b311dc5b328a09bd301cc1d012ca4d13cfb70f9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: 932db4ef12666d20ba497cc8f6d78b43c7670373
+ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/07/2017
 ---
 # <a name="wcf-and-aspnet-web-api"></a>Interfejs API sieci Web programu WCF i platformy ASP.NET
 Usługi WCF jest firmy Microsoft ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Umożliwia ona deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjne, zintegrowanie na różnych platformach, które współdziałają z dotychczasowych inwestycji. [ASP.NET Web API](http://www.asp.net/web-api) to platforma, która ułatwia tworzenie usług HTTP, które są używane przez szeroki wachlarz klientów, w tym przeglądarki i urządzenia przenośne. Interfejs API sieci Web ASP.NET jest idealną platformą do tworzenia RESTful aplikacji w programie .NET Framework. W tym temacie przedstawiono pewne wskazówki ułatwiające podjęcie technologii, które będzie najlepiej odpowiadać potrzebom użytkownika.  
@@ -29,7 +29,7 @@ Usługi WCF jest firmy Microsoft ujednolicony model programowania do tworzenia a
 |---------|---------------------|  
 |Umożliwia tworzenie usług, które obsługują wiele protokołów (HTTP, TCP, UDP i niestandardowych transportów) oraz pozwala na przełączanie się między nimi.|Tylko protokół HTTP. Najwyższej jakości modelu programowania protokołu HTTP. Bardziej odpowiednie dla dostępu z różnych przeglądarek, etc włączenie całego osiągnąć urządzeń przenośnych.|  
 |Umożliwia tworzenie usług, które obsługują wiele kodowań ten sam komunikat (tekst, MTOM i Binary) wpisz i pozwala na przełączanie się między nimi.|Umożliwia tworzenie interfejsów API sieci Web, która obsługuje wiele różnych typów nośników, w tym XML, JSON itp.|  
-|Obsługuje tworzenie usług za pomocą usługi WS-* zabezpieczenia komunikatów niezawodnej obsługi komunikatów, transakcje, takie jak standardów.|Używa protokołu podstawowego i formatuje np. HTTP, protokół WebSockets SSL, JQuery, JSON i XML. Nie jest obsługiwane dla protokołów wyższego poziomu, takich jak niezawodna obsługa komunikatów lub transakcji.|  
+|Obsługuje tworzenie usług za pomocą usługi WS-* zabezpieczenia komunikatów niezawodnej obsługi komunikatów, transakcje, takie jak standardów.|Używa protokołu podstawowego i formatuje np. HTTP, protokół WebSockets SSL, JSON i XML. Nie jest obsługiwane dla protokołów wyższego poziomu, takich jak niezawodna obsługa komunikatów lub transakcji.|  
 |Obsługuje żądanie-odpowiedź, jeden sposób i dupleks wzorce wymiany wiadomości.|HTTP jest żądanie/odpowiedź, ale dodatkowe wzorce mogą być obsługiwane za pośrednictwem [SignalR](https://github.com/SignalR/SignalR) i integracja protokołu WebSockets.|  
 |Usług WCF SOAP można przedstawić w języku WSDL umożliwiające automatyczne narzędzia do generowania proxy klienta, nawet w przypadku usług o schematach złożonych.|Brak na różne sposoby do opisu interfejsu API sieci Web — od automatycznie generowanej HTML strony Pomocy opisujące wstawki metadanych strukturalnych dla interfejsów API zintegrowane OData.|  
 |Jest dostarczany z programu .NET framework.|Dostarczany z programem .NET framework, ale jest open source i jest również dostępny poza pasmem jako niezależne pobierania.|  

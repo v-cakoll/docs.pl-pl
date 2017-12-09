@@ -71,7 +71,7 @@ ms.lasthandoff: 11/21/2017
  [<span data-ttu-id="55c8c-155">Porady: jawne Implementowanie elementów dwóch interfejsów</span><span class="sxs-lookup"><span data-stu-id="55c8c-155">How to: Explicitly Implement Members of Two Interfaces</span></span>](../../../csharp/programming-guide/interfaces/how-to-explicitly-implement-members-of-two-interfaces.md)  
  <span data-ttu-id="55c8c-156">Przykład sposobu jawne Implementowanie elementów interfejsów z dziedziczenia.</span><span class="sxs-lookup"><span data-stu-id="55c8c-156">Provides an example of how to explicitly implement members of interfaces with inheritance.</span></span>  
   
-##  <span data-ttu-id="55c8c-157"><a name="BKMK_RelatedSections"></a>Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="55c8c-157"><a name="BKMK_RelatedSections"></a> Related Sections</span></span>  
+##  <a name="BKMK_RelatedSections"></a><span data-ttu-id="55c8c-157">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="55c8c-157">Related Sections</span></span>  
   
 -   [<span data-ttu-id="55c8c-158">Właściwości interfejsu</span><span class="sxs-lookup"><span data-stu-id="55c8c-158">Interface Properties</span></span>](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   

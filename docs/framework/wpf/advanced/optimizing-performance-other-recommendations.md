@@ -29,7 +29,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="optimizing-performance-other-recommendations"></a><span data-ttu-id="bbab6-102">Optymalizacja wydajności: inne zalecenia</span><span class="sxs-lookup"><span data-stu-id="bbab6-102">Optimizing Performance: Other Recommendations</span></span>
-<span data-ttu-id="bbab6-103"><a name="introduction"></a>W tym temacie przedstawiono zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizacji wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) sekcji.</span><span class="sxs-lookup"><span data-stu-id="bbab6-103"><a name="introduction"></a> This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
+<a name="introduction"></a><span data-ttu-id="bbab6-103">W tym temacie przedstawiono zalecenia dotyczące wydajności, oprócz tych objętych tematy w [optymalizacji wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) sekcji.</span><span class="sxs-lookup"><span data-stu-id="bbab6-103">This topic provides performance recommendations in addition to the ones covered by the topics in the [Optimizing WPF Application Performance](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md) section.</span></span>  
   
  <span data-ttu-id="bbab6-104">Ten temat zawiera następujące sekcje:</span><span class="sxs-lookup"><span data-stu-id="bbab6-104">This topic contains the following sections:</span></span>  
   

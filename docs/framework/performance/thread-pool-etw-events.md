@@ -23,7 +23,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="thread-pool-etw-events"></a><span data-ttu-id="49289-102">Zdarzenia ETW puli wątków</span><span class="sxs-lookup"><span data-stu-id="49289-102">Thread Pool ETW Events</span></span>
-<span data-ttu-id="49289-103"><a name="top"></a>Te zdarzenia zbierać informacje o wątków We/Wy i proces roboczy.</span><span class="sxs-lookup"><span data-stu-id="49289-103"><a name="top"></a> These events collect information about worker and I/O threads.</span></span>  
+<a name="top"></a><span data-ttu-id="49289-103">Te zdarzenia zbierać informacje o wątków We/Wy i proces roboczy.</span><span class="sxs-lookup"><span data-stu-id="49289-103">These events collect information about worker and I/O threads.</span></span>  
   
  <span data-ttu-id="49289-104">Istnieją dwie grupy zdarzenia puli wątków:</span><span class="sxs-lookup"><span data-stu-id="49289-104">There are two groups of thread pool events:</span></span>  
   

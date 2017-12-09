@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "Numery w języku C#"
 metadata:
@@ -10,14 +11,14 @@ metadata:
   nextTutorialTitle: "Gałęzie i pętli w języku C#"
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "To szybki start zawiera informacje na temat typu liczbowego w języku C# interaktywnego, za pomocą przeglądarki do zapisywania C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg — lekcje przedstawiających operacji matematycznych w języku C# i cyfry. Że wnioski uczy również podstaw programu w języku C#.\n"
   ms.openlocfilehash: bc859589078d1e2d16145125a80e738837c1ebf9
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "To szybki start zawiera informacje na temat typu liczbowego w języku C# interaktywnego, za pomocą przeglądarki do zapisywania C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg — lekcje przedstawiających operacji matematycznych w języku C# i cyfry. Że wnioski uczy również podstaw programu w języku C#.\n"
 - title: "Eksploruj matematyczne liczba całkowita"
   durationInMinutes: 4
   content: "Uruchom poniższy kod w oknie interaktywnym. Aby to zrobić, wpisz następujący blok kodu w oknie interaktywnym, a następnie kliknij przycisk **Uruchom** przycisk:\n\n```csharp\nint a = 18;\nint b = 6;\nint c = a + b;\nConsole.WriteLine(c);\n```\n\nPo prostu przedstawiono jednej z operacji matematycznych podstawowych z liczbami całkowitymi. `int` Wpisz reprezentuje **całkowitą**, liczbą całkowitą liczbą dodatnią lub ujemną. Możesz użyć `+` symbol do dodania. Inne typowe operacji matematycznych liczb całkowitych obejmują:\n\n- `-`dla odejmowania\n- `*`dla mnożenia\n- `/`podziału\n\n> [!TIP]\n> W tym szybki start można rozpocząć eksplorowanie na własną, modyfikując kod, który został zapisany w oknie interaktywnym. To szybki start zawiera przykłady, których można spróbować w każdym kroku.\n\nRozpocznij od eksploracji tych różnych operacji. Zmodyfikuj trzeciego wiersza, aby spróbować każdej z tych operacji. Po każdej modyfikacji, kliknij przycisk **Uruchom** przycisku.\n\nOdejmowanie:\n\n```csharp\nint c = a - b;\n```\n\nMnożenia:\n\n```csharp\nint c = a * b;\n```\n\nDział: \n\n```csharp\nint c = a / b;\n```\n\nPoeksperymentuj przez wykonanie wielu operacji matematyce w tej samej linii, jeśli chcesz.\n\n> [!TIP]\n> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. **Kompilatora** znajdzie te błędy i raportuj je użytkownikowi. Jeśli dane wyjściowe zawiera komunikaty o błędach, należy dokładnie przejrzeć przykładowy kod i kod w oknie interaktywnym, aby zobaczyć rozwiązać problem.\n> Tym ćwiczeniu zostanie zapoznawania się struktury kodu C#.     \n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"

@@ -1,3 +1,4 @@
+### YamlMime:YamlDocument
 documentType: Tutorial
 title: "Kolekcje w języku C#"
 metadata:
@@ -8,14 +9,14 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-items:
-- durationInMinutes: 1
-  content: "To szybki start zawiera C# interaktywnego, za pomocą przeglądarki do pisania kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg lekcje, które tworzenia, modyfikacji i Eksploruj kolekcji i tablic.\n"
   ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
   ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
   ms.translationtype: MT
   ms.contentlocale: pl-PL
   ms.lasthandoff: 12/07/2017
+items:
+- durationInMinutes: 1
+  content: "To szybki start zawiera C# interaktywnego, za pomocą przeglądarki do pisania kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg lekcje, które tworzenia, modyfikacji i Eksploruj kolekcji i tablic.\n"
 - title: Tworzenie list
   durationInMinutes: 2
   content: "Uruchom poniższy kod w oknie interaktywnym. Aby to zrobić, wpisz następujący blok kodu w oknie interaktywnym (Zastąp \"<name>\" nazwą) i kliknij przycisk **Uruchom** przycisk:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nUtworzeniu tylko listę ciągów, dodać trzy nazwy do tej listy i wydrukowane nazwy WERSALIKÓW. Używasz pojęcia, które znasz już wcześniej Szybki Start pętli na liście.\n\nKod, aby wyświetlić nazwy sprawia, że użycie **ciągi interpolowane**.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.\n\nTa funkcja pozwala zachować eksploracji.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"

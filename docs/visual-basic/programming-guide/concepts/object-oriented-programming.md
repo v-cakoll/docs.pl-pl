@@ -278,7 +278,7 @@ Dim sampleObject = New SampleClass With
 
 - [<span data-ttu-id="cc1bb-215">Inicjatory obiektów: Typy nazwane i anonimowe</span><span class="sxs-lookup"><span data-stu-id="cc1bb-215">Object Initializers: Named and Anonymous Types</span></span>](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
-###  <span data-ttu-id="cc1bb-216"><a name="Static"></a>Udostępniony klas i członków</span><span class="sxs-lookup"><span data-stu-id="cc1bb-216"><a name="Static"></a> Shared Classes and Members</span></span>  
+###  <a name="Static"></a><span data-ttu-id="cc1bb-216">Udostępniony klas i członków</span><span class="sxs-lookup"><span data-stu-id="cc1bb-216">Shared Classes and Members</span></span>  
  <span data-ttu-id="cc1bb-217">Udostępnionego elementu członkowskiego klasy jest właściwość, procedura lub pola, które jest współużytkowana przez wszystkie wystąpienia klasy.</span><span class="sxs-lookup"><span data-stu-id="cc1bb-217">A shared member of the class is a property, procedure, or field that is shared by all instances of a class.</span></span>  
   
  <span data-ttu-id="cc1bb-218">Aby zdefiniować udostępnionego elementu członkowskiego:</span><span class="sxs-lookup"><span data-stu-id="cc1bb-218">To define a shared member:</span></span>  

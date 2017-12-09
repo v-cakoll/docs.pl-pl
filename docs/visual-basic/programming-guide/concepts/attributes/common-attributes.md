@@ -31,7 +31,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [<span data-ttu-id="b7eb9-108">Atrybuty Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b7eb9-108">Visual Basic Attributes</span></span>](#VB)  
   
-##  <span data-ttu-id="b7eb9-109"><a name="Global"></a>Atrybuty globalne</span><span class="sxs-lookup"><span data-stu-id="b7eb9-109"><a name="Global"></a> Global Attributes</span></span>  
+##  <a name="Global"></a><span data-ttu-id="b7eb9-109">Atrybuty globalne</span><span class="sxs-lookup"><span data-stu-id="b7eb9-109">Global Attributes</span></span>  
  <span data-ttu-id="b7eb9-110">Większość atrybutów są stosowane do określonego języka elementów, takich jak klasy lub metody; Jednak niektóre atrybuty są globalne — odnoszą się do całego zestawu lub modułu.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-110">Most attributes are applied to specific language elements such as classes or methods; however, some attributes are global—they apply to an entire assembly or module.</span></span> <span data-ttu-id="b7eb9-111">Na przykład <xref:System.Reflection.AssemblyVersionAttribute> atrybut może służyć do osadzanie informacji o wersji w zestawie, jak to:</span><span class="sxs-lookup"><span data-stu-id="b7eb9-111">For example, the <xref:System.Reflection.AssemblyVersionAttribute> attribute can be used to embed version information into an assembly, like this:</span></span>  
   
 ```vb  
@@ -83,7 +83,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|<span data-ttu-id="b7eb9-153">Określa niestandardowy atrybut, który określa konfigurację zestawu (na przykład detalicznych lub debugowanych) dla manifest zestawu.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-153">Defines a custom attribute that specifies an assembly configuration (such as retail or debug) for an assembly manifest.</span></span>|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|<span data-ttu-id="b7eb9-154">Definiuje alias domyślne przyjazną dla manifest zestawu</span><span class="sxs-lookup"><span data-stu-id="b7eb9-154">Defines a friendly default alias for an assembly manifest</span></span>|  
   
-##  <span data-ttu-id="b7eb9-155"><a name="Obsolete"></a>Atrybut przestarzałe</span><span class="sxs-lookup"><span data-stu-id="b7eb9-155"><a name="Obsolete"></a> Obsolete Attribute</span></span>  
+##  <a name="Obsolete"></a><span data-ttu-id="b7eb9-155">Atrybut przestarzałe</span><span class="sxs-lookup"><span data-stu-id="b7eb9-155">Obsolete Attribute</span></span>  
  <span data-ttu-id="b7eb9-156">`Obsolete` Atrybut oznacza jednostki programu, co nie jest zalecane używanie.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-156">The `Obsolete` attribute marks a program entity as one that is no longer recommended for use.</span></span> <span data-ttu-id="b7eb9-157">Każdym użyciu jednostki oznaczony jako przestarzały później spowoduje wygenerowanie ostrzeżenia lub błędu, w zależności od sposobu skonfigurowania atrybutu.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-157">Each use of an entity marked obsolete will subsequently generate a warning or an error, depending on how the attribute is configured.</span></span> <span data-ttu-id="b7eb9-158">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="b7eb9-158">For example:</span></span>  
   
 ```vb  
@@ -125,7 +125,7 @@ b.NewMethod()
   
  <span data-ttu-id="b7eb9-166">`Obsolete` Atrybut jest atrybutem jednorazowego użytku i mogą być stosowane do dowolnej jednostki, który umożliwia atrybutów.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-166">The `Obsolete` attribute is a single-use attribute and can be applied to any entity that allows attributes.</span></span> <span data-ttu-id="b7eb9-167">`Obsolete`alias jest <xref:System.ObsoleteAttribute>.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-167">`Obsolete` is an alias for <xref:System.ObsoleteAttribute>.</span></span>  
   
-##  <span data-ttu-id="b7eb9-168"><a name="Conditional"></a>Atrybut Conditional</span><span class="sxs-lookup"><span data-stu-id="b7eb9-168"><a name="Conditional"></a> Conditional Attribute</span></span>  
+##  <a name="Conditional"></a><span data-ttu-id="b7eb9-168">Atrybut Conditional</span><span class="sxs-lookup"><span data-stu-id="b7eb9-168">Conditional Attribute</span></span>  
  <span data-ttu-id="b7eb9-169">`Conditional` Atrybut powoduje, że wykonanie metody są zależne od identyfikatora przetwarzania wstępnego.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-169">The `Conditional` attribute makes the execution of a method dependent on a preprocessing identifier.</span></span> <span data-ttu-id="b7eb9-170">`Conditional` Atrybutu jest aliasem <xref:System.Diagnostics.ConditionalAttribute>, można zastosować do metody lub atrybut klasy.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-170">The `Conditional` attribute is an alias for <xref:System.Diagnostics.ConditionalAttribute>, and can be applied to a method or an attribute class.</span></span>  
   
  <span data-ttu-id="b7eb9-171">W tym przykładzie `Conditional` jest zastosowany do metody, aby włączyć lub wyłączyć wyświetlanie informacji diagnostycznych programów:</span><span class="sxs-lookup"><span data-stu-id="b7eb9-171">In this example, `Conditional` is applied to a method to enable or disable the display of program-specific diagnostic information:</span></span>  
@@ -218,7 +218,7 @@ Class SampleClass
 End Class  
 ```  
   
-##  <span data-ttu-id="b7eb9-186"><a name="CallerInfo"></a>Caller — atrybuty informacji</span><span class="sxs-lookup"><span data-stu-id="b7eb9-186"><a name="CallerInfo"></a> Caller Info Attributes</span></span>  
+##  <a name="CallerInfo"></a><span data-ttu-id="b7eb9-186">Caller — atrybuty informacji</span><span class="sxs-lookup"><span data-stu-id="b7eb9-186">Caller Info Attributes</span></span>  
  <span data-ttu-id="b7eb9-187">Przy użyciu atrybutów informacji o obiekcie wywołującym można uzyskać informacje o obiekcie wywołującym metodę.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-187">By using Caller Info attributes, you can obtain information about the caller to a method.</span></span> <span data-ttu-id="b7eb9-188">Możesz uzyskać ścieżka pliku kodu źródłowego, numer wiersza w kodzie źródłowym i nazwę elementu członkowskiego obiektu wywołującego.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-188">You can obtain the file path of the source code, the line number in the source code, and the member name of the caller.</span></span>  
   
  <span data-ttu-id="b7eb9-189">Aby uzyskać informacje o wywołującym — członek, należy użyć atrybutów, które są stosowane do parametrów opcjonalnych.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-189">To obtain member caller information, you use attributes that are applied to optional parameters.</span></span> <span data-ttu-id="b7eb9-190">Każdy parametr opcjonalny określenie wartości domyślnej.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-190">Each optional parameter specifies a default value.</span></span> <span data-ttu-id="b7eb9-191">Poniższa tabela zawiera listę atrybutów wywołującego informacje, które są zdefiniowane w <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> przestrzeni nazw:</span><span class="sxs-lookup"><span data-stu-id="b7eb9-191">The following table lists the Caller Info attributes that are defined in the <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> namespace:</span></span>  
@@ -231,7 +231,7 @@ End Class
   
  <span data-ttu-id="b7eb9-200">Aby uzyskać więcej informacji o atrybutach wywołującego informacji, zobacz [informacje o wywołującym (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span><span class="sxs-lookup"><span data-stu-id="b7eb9-200">For more information about the Caller Info attributes, see [Caller Information (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md).</span></span>  
   
-##  <span data-ttu-id="b7eb9-201"><a name="VB"></a>Atrybuty Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b7eb9-201"><a name="VB"></a> Visual Basic Attributes</span></span>  
+##  <a name="VB"></a><span data-ttu-id="b7eb9-201">Atrybuty Visual Basic</span><span class="sxs-lookup"><span data-stu-id="b7eb9-201">Visual Basic Attributes</span></span>  
  <span data-ttu-id="b7eb9-202">W poniższej tabeli przedstawiono atrybuty, które są specyficzne dla języka Visual Basic.</span><span class="sxs-lookup"><span data-stu-id="b7eb9-202">The following table lists the attributes that are specific to Visual Basic.</span></span>  
   
 |<span data-ttu-id="b7eb9-203">Atrybut</span><span class="sxs-lookup"><span data-stu-id="b7eb9-203">Attribute</span></span>|<span data-ttu-id="b7eb9-204">Cel</span><span class="sxs-lookup"><span data-stu-id="b7eb9-204">Purpose</span></span>|  

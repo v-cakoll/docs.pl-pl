@@ -27,7 +27,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 10/18/2017
 ---
 # <a name="fundamentals-of-garbage-collection"></a><span data-ttu-id="85a27-102">Podstawy dotyczące odzyskiwania pamięci</span><span class="sxs-lookup"><span data-stu-id="85a27-102">Fundamentals of Garbage Collection</span></span>
-<span data-ttu-id="85a27-103"><a name="top"></a>W środowisko uruchomieniowe języka wspólnego (CLR) moduł zbierający elementy bezużyteczne służy jako Menedżer pamięci automatycznego.</span><span class="sxs-lookup"><span data-stu-id="85a27-103"><a name="top"></a> In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="85a27-104">Zapewnia następujące korzyści:</span><span class="sxs-lookup"><span data-stu-id="85a27-104">It provides the following benefits:</span></span>  
+<a name="top"></a><span data-ttu-id="85a27-103">W środowisko uruchomieniowe języka wspólnego (CLR) moduł zbierający elementy bezużyteczne służy jako Menedżer pamięci automatycznego.</span><span class="sxs-lookup"><span data-stu-id="85a27-103">In the common language runtime (CLR), the garbage collector serves as an automatic memory manager.</span></span> <span data-ttu-id="85a27-104">Zapewnia następujące korzyści:</span><span class="sxs-lookup"><span data-stu-id="85a27-104">It provides the following benefits:</span></span>  
   
 -   <span data-ttu-id="85a27-105">Umożliwia projektowanie aplikacji bez konieczności zwolnić pamięć.</span><span class="sxs-lookup"><span data-stu-id="85a27-105">Enables you to develop your application without having to free memory.</span></span>  
   

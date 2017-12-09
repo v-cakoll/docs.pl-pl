@@ -251,7 +251,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  <span data-ttu-id="283ca-219">Aby uzyskać więcej informacji na temat Literały tablicy, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span><span class="sxs-lookup"><span data-stu-id="283ca-219">For more information about array literals, see [Arrays](../../../visual-basic/programming-guide/language-features/arrays/index.md).</span></span>  
   
-##  <span data-ttu-id="283ca-220"><a name="default"></a>Dane domyślne typy i wartości</span><span class="sxs-lookup"><span data-stu-id="283ca-220"><a name="default"></a> Default Data Types and Values</span></span>  
+##  <a name="default"></a><span data-ttu-id="283ca-220">Dane domyślne typy i wartości</span><span class="sxs-lookup"><span data-stu-id="283ca-220">Default Data Types and Values</span></span>  
  <span data-ttu-id="283ca-221">W poniższej tabeli przedstawiono wyniki określający typ danych oraz inicjator w różnych kombinacji `Dim` instrukcji.</span><span class="sxs-lookup"><span data-stu-id="283ca-221">The following table describes the results of various combinations of specifying the data type and initializer in a `Dim` statement.</span></span>  
   
 |<span data-ttu-id="283ca-222">Określony typ danych?</span><span class="sxs-lookup"><span data-stu-id="283ca-222">Data type specified?</span></span>|<span data-ttu-id="283ca-223">Inicjator określona?</span><span class="sxs-lookup"><span data-stu-id="283ca-223">Initializer specified?</span></span>|<span data-ttu-id="283ca-224">Przykład</span><span class="sxs-lookup"><span data-stu-id="283ca-224">Example</span></span>|<span data-ttu-id="283ca-225">Wynik</span><span class="sxs-lookup"><span data-stu-id="283ca-225">Result</span></span>|  

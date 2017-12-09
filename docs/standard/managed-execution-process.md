@@ -27,7 +27,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="managed-execution-process"></a><span data-ttu-id="af71b-102">Proces zarządzanego wykonania</span><span class="sxs-lookup"><span data-stu-id="af71b-102">Managed Execution Process</span></span>
-<span data-ttu-id="af71b-103"><a name="introduction"></a>Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:</span><span class="sxs-lookup"><span data-stu-id="af71b-103"><a name="introduction"></a> The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
+<a name="introduction"></a><span data-ttu-id="af71b-103">Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:</span><span class="sxs-lookup"><span data-stu-id="af71b-103">The managed execution process includes the following steps, which are discussed in detail later in this topic:</span></span>  
   
 1.  <span data-ttu-id="af71b-104">[Wybieranie kompilatora](#choosing_a_compiler).</span><span class="sxs-lookup"><span data-stu-id="af71b-104">[Choosing a compiler](#choosing_a_compiler).</span></span>  
   

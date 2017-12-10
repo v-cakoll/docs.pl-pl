@@ -12,11 +12,11 @@ ms.assetid: 704bb04b-ff23-471d-ab12-3cec1c2bca59
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: eb942047278fec7c6446190a98666532c2769c17
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: acf9e15aa03b177533f87417278842735c1d6318
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-visual-basic"></a>Wątkowość (Visual Basic)
 Wątkowość umożliwia programu Visual Basic do wykonania równoczesnych przetwarzania, aby zrobić więcej niż jedną operację naraz. Można na przykład użyć wątkowość do monitorowania danych wejściowych od użytkownika, wykonaj zadania w tle i obsługi jednoczesnych strumieni danych wejściowych.  
@@ -27,7 +27,7 @@ Wątkowość umożliwia programu Visual Basic do wykonania równoczesnych przetw
   
 -   .NET Framework <xref:System.Threading> sprawia, że przestrzeń nazw za pomocą wątków jest łatwiejsze.  
   
--   Wątki współużytkują zasoby aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą wątków i wątki](https://msdn.microsoft.com/library/e1dx6b2h).  
+-   Wątki współużytkują zasoby aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą wątków i wątki](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
  Domyślnie program Visual Basic ma jeden wątek. Jednak pomocnicze wątków można tworzyć i używane do wykonywania kodu równolegle z podstawowym wątku. Wątki te są często nazywane *wątków roboczych*.  
   
@@ -40,7 +40,7 @@ Wątkowość umożliwia programu Visual Basic do wykonania równoczesnych przetw
  Można zsynchronizować działania wiele wątków niektórych lub wszystkich tych klas, ale niektóre Obsługa wątkowości jest obsługiwany przez język Visual Basic. Na przykład [SyncLock — instrukcja](../../../../visual-basic/language-reference/statements/synclock-statement.md) udostępnia funkcje synchronizacji przy użyciu niejawnego <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], znacznie upraszcza programowanie wielowątkowe z <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [równoległe LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania opartego na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](https://msdn.microsoft.com/library/dd460693).  
+>  Począwszy od [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], znacznie upraszcza programowanie wielowątkowe z <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [równoległe LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania opartego na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
@@ -53,4 +53,4 @@ Wątkowość umożliwia programu Visual Basic do wykonania równoczesnych przetw
 |[Czasomierze wątków (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-timers.md)|Opisuje sposób uruchamiania procedur w oddzielnych wątkach w ustalonych odstępach czasu.|  
 |[Wątku puli (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/thread-pooling.md)|Opisuje sposób korzystanie z puli wątków roboczych, które są zarządzane przez system.|  
 |[Porady: Korzystanie z puli wątków (Visual Basic)](../../../../visual-basic/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Pokazuje zsynchronizowane używanie wielu wątków w puli wątków.|  
-|[Wątkowość](https://msdn.microsoft.com/library/3e8s7xdd)|Opisuje sposób wdrożenia wątkowość w programie .NET Framework.|
+|[Wątkowość](../../../../../docs/standard/threading/index.md)|Opisuje sposób wdrożenia wątkowość w programie .NET Framework.|

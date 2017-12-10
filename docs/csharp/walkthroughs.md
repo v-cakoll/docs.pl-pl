@@ -12,11 +12,11 @@ ms.assetid: 2d07b972-ef69-4676-9aef-e1784728e1ff
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cba6852f129e0c62a7ece97f18b6f67c423c608c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 92aef08636b7bba3a61367f8a707c82c75f8d3d3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="c-walkthroughs"></a>C# — wskazówki
 Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy, dzięki czemu ich najlepiej zacząć poznawania produktu lub obszarze określonej funkcji.  
@@ -37,19 +37,19 @@ Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy, dzięki
  [Tworzenie obiektów dynamicznych i posługiwanie (C# i Visual Basic)](../csharp/programming-guide/types/walkthrough-creating-and-using-dynamic-objects.md)  
  Przedstawia sposób tworzenia niestandardowego obiektu, który dynamicznie udostępnia zawartość pliku tekstowego oraz sposobu tworzenia projektu, który używa `IronPython` biblioteki.  
    
- [Tworzenie formantu złożonego za pomocą Visual C#](https://msdn.microsoft.com/library/a6h7e207.aspx)  
+ [Tworzenie formantu złożonego za pomocą Visual C#](../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
  Pokazano tworzenie prostego formantu złożonego i rozszerzanie jej funkcji przez dziedziczenie.  
   
- [Tworzenie formantu formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio](https://msdn.microsoft.com/library/35ea88wb.aspx)  
+ [Tworzenie formantu formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio](../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
  Ilustruje sposób tworzenia niestandardowych projektanta dla kontrolek niestandardowych.  
   
- [Dziedziczenie z formantu formularzy systemu Windows w języku Visual C#](https://msdn.microsoft.com/library/5h0k2e6x.aspx)  
+ [Dziedziczenie z formantu formularzy systemu Windows w języku Visual C#](../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
  Pokazano tworzenie formantu uproszczony przycisk dziedziczone. Ten przycisk dziedziczy funkcji standardowe przycisku formularzy systemu Windows i udostępnia niestandardowych elementu członkowskiego.  
   
- [Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](https://msdn.microsoft.com/library/5ytx0z24.aspx)  
+ [Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  Opisuje sposób debugowania zachowania czasu projektowania formantu niestandardowego.
 
- [Znaczniki wykonywania typowych zadań przy użyciu inteligentnych w systemie Windows formantów formularzy](https://msdn.microsoft.com/library/xhz359sc.aspx)  
+ [Znaczniki wykonywania typowych zadań przy użyciu inteligentnych w systemie Windows formantów formularzy](../../docs/framework/winforms/controls/performing-common-tasks-using-smart-tags-on-wf-controls.md)  
  Przedstawia niektóre z często wykonywanych zadań, takich jak dodawanie lub usuwanie karty na `TabControl`, dokowanie formantu do elementu nadrzędnego, a zmiana orientacji `SplitContainer` formantu.  
   
  [Pisanie zapytań w języku C# (LINQ)](../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)  

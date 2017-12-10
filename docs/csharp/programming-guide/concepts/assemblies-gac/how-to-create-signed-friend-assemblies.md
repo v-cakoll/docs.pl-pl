@@ -11,11 +11,11 @@ ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 79f5ff0615a572db162906c698c47196c6f045da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d3d9d4c549654341c0739cc8132d953623482d62
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>Porady: tworzenie oznaczonych przyjaznych zestawów (C#)
 Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -103,5 +103,5 @@ Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o si
  [Porady: tworzenie nieoznaczonych przyjaznych zestawów (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/ KeyFile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [SN.exe (narzędzie silnych nazw)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Tworzenie i używanie zestawów o silnej nazwie](https://msdn.microsoft.com/library/xwb8f617)  
+ [Tworzenie i używanie zestawów o silnej nazwie](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Przewodnik programowania w języku C#](../../../../csharp/programming-guide/index.md)

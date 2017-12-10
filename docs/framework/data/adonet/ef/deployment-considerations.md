@@ -13,18 +13,18 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 03c64c9a300a92a86dfac1ed92c67be248e53219
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Zagadnienia dotyczące wdrażania (Entity Framework)
 Ten temat zawiera informacje na temat wdrażania aplikacji, które używają programu Entity Framework ADO.NET dla dostępu do danych. Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
   
  Entity Framework zapewnia zestaw narzędzi, które integrują się z i ułatwiają tworzenie w programie Visual Studio. Aby uzyskać więcej informacji, zobacz [narzędzi modelu danych jednostki ADO.NET](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527). W tym temacie nie opisano sposobu używania określonych technologii do wdrażania aplikacji na podstawie programu Entity Framework.  
   
- Program Visual Studio udostępnia urządzenia do rozpowszechniania i wdrażanie aplikacji, takich jak wdrażanie technologii ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji i składników](https://msdn.microsoft.com/library/wtzawcsz) w dokumentacji programu Visual Studio.  
+ Program Visual Studio udostępnia urządzenia do rozpowszechniania i wdrażanie aplikacji, takich jak wdrażanie technologii ClickOnce. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji i składników](/visualstudio/deployment/deploying-applications-services-and-components) w dokumentacji programu Visual Studio.  
   
  Poniższe zagadnienia do rozważenia podczas wdrażania aplikacji korzystającej z programu Entity Framework:  
   

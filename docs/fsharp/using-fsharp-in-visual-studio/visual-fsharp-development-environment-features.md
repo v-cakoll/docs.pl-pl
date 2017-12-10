@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 809e9a34-b271-4c87-8356-2426b44f4721
-ms.openlocfilehash: bcba1e5d1cae1c610525c51bdbdd54088359e79a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 05727bf11eccfd64f823dd280b1a19210815ca5a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="visual-f-development-environment-features"></a>Funkcje środowiska deweloperskiego Visual F #
 
@@ -50,7 +50,7 @@ W poniższej tabeli przedstawiono obsługiwane i nie są obsługiwane w F # funk
 |Zabezpieczenia (poziomy zaufania zmian)|Nie||
 
 ## <a name="code-and-text-editor-features"></a>Kod i funkcje edycji tekstu
-Poniższe funkcje programu Visual Studiocode i edytory tekstów, są obsługiwane w F #. Aby uzyskać ogólne informacje dotyczące edytowania kodu w programie Visual Studio i funkcje edytora tekstu, zobacz [pisanie kodu w edytorze kodu i tekstu](https://msdn.microsoft.com/library/efc4xwkb.aspx).
+Poniższe funkcje programu Visual Studiocode i edytory tekstów, są obsługiwane w F #. Aby uzyskać ogólne informacje dotyczące edytowania kodu w programie Visual Studio i funkcje edytora tekstu, zobacz [pisanie kodu w edytorze kodu i tekstu](/visualstudio/ide/writing-code-in-the-code-and-text-editor).
 
 |Funkcja|Opis|Obsługiwane w F #?|
 |-------|-----------|----------------|
@@ -58,18 +58,18 @@ Poniższe funkcje programu Visual Studiocode i edytory tekstów, są obsługiwan
 |Automatycznie Formatuj|Formatuje kodu przy użyciu standardowych wcięcia i styl.|Nie|
 |Zakładki|Umożliwia zapisanie miejsca w edytorze.|Tak|
 |Zmień wcięcie|Zwiększa wcięcie lub unindents zaznaczonych wierszach.|Tak|
-|[Znajdowanie i zastępowanie tekstu](https://msdn.microsoft.com/library/139eef4h.aspx)|Umożliwia wyszukiwanie w pliku, projekt lub rozwiązanie i potencjalnie zmiany tekstu.|Tak|
+|[Znajdowanie i zastępowanie tekstu](/visualstudio/ide/finding-and-replacing-text)|Umożliwia wyszukiwanie w pliku, projekt lub rozwiązanie i potencjalnie zmiany tekstu.|Tak|
 |Przejdź do definicji interfejsu API programu .NET Framework|Gdy kursor znajduje się na interfejs API programu .NET Framework, zawiera kod generowany na podstawie .NET Framework — metadane.|Nie|
 |Przejdź do definicji dla interfejsu API zdefiniowany przez użytkownika|Gdy kursor znajduje się w jednostce program, który zostanie zdefiniowany przesuwa kursor do lokalizacji w kodzie, w których jest zdefiniowana jednostka.|Tak|
 |Przejdź do wiersza|Umożliwia przejście do określonego wiersza w pliku, numer wiersza.|Tak|
 |Pasków nawigacji u góry pliku|Umożliwia przejście do lokalizacji w kodzie, na przykład nazwę funkcji.|Tak|
-|Obramowanie. Zobacz [zwijania](https://msdn.microsoft.com/library/td6a5x4s.aspx).|Umożliwia zwijanie sekcji swój kod, aby utworzyć widok mniejszych.|Tak|
+|Obramowanie. Zobacz [zwijania](/visualstudio/ide/outlining).|Umożliwia zwijanie sekcji swój kod, aby utworzyć widok mniejszych.|Tak|
 |Tabify — formatowanie|Konwertuje spacje na znaki tabulacji.|Tak|
 |Kolorowanie typów|Pokazuje zdefiniowane nazwy typów w kolorze specjalnych.|Tak|
 |Szybkie wyszukiwanie. Zobacz Szybkie szukanie, znajdowanie i zamienianie okna.|Umożliwia wyszukiwanie w pliku lub projektu.|Tak|
 
 ## <a name="intellisense-features"></a>Funkcje IntelliSense
-W poniższej tabeli przedstawiono funkcje IntelliSense obsługiwane i nie są obsługiwane w F #. Aby uzyskać ogólne informacje o funkcji IntelliSense, zobacz [za pomocą funkcji IntelliSense](https://msdn.microsoft.com/library/hcw1s69b.aspx).
+W poniższej tabeli przedstawiono funkcje IntelliSense obsługiwane i nie są obsługiwane w F #. Aby uzyskać ogólne informacje o funkcji IntelliSense, zobacz [za pomocą funkcji IntelliSense](/visualstudio/ide/using-intellisense).
 
 |Funkcja|Opis|Obsługiwane w F #?|
 |-------|-----------|----------------|
@@ -108,10 +108,10 @@ Poniższa tabela zawiera podsumowanie obsługi F # w narzędziach Visual Studio.
 |Hierarchia wywołań|Wyświetla strukturze zagnieżdżonych funkcji wywołuje w kodzie.|Nie|
 |Metryki kodów|Zbiera informacje o kodzie, takich jak liczby wierszy.|Nie|
 |Widok klas|Zapewnia widok na podstawie typu kodu w projekcie.|Nie|
-|[Okno listy błędów](https://msdn.microsoft.com/library/33df3b7a.aspx)|Przedstawia listę błędów w kodzie.|Tak|
+|[Okno listy błędów](/visualstudio/ide/reference/error-list-window)|Przedstawia listę błędów w kodzie.|Tak|
 |[Interakcyjne F #](../tutorials/fsharp-interactive/index.md)|Umożliwia wpisz (lub skopiuj i Wklej) F # kodu i uruchom go natychmiast, niezależnie od tworzenia projektu. Okno narzędzia F # Interactive jest odczytu, Evaluate, drukowania pętli (REPL).|Tak|
 |Przeglądarka obiektów|Umożliwia wyświetlanie typów w zestawie.|Typy F # znajdujące się w skompilowane zestawy nie są dokładnie tak, jak je tworzyć. Reprezentacja skompilowana typów F # można przeglądać, ale nie można wyświetlić typy, jak pojawiają się one od F #.|
-|[Okno danych wyjściowych](https://msdn.microsoft.com/library/3hk6fby3.aspx)|Wyświetla dane wyjściowe kompilacji.|Tak|
+|[Okno Dane wyjściowe](/visualstudio/ide/reference/output-window)|Wyświetla dane wyjściowe kompilacji.|Tak|
 |Analiza wydajności|Udostępnia narzędzia do pomiaru wydajności kodu.|Tak|
 |Okno Właściwości|Wyświetla i umożliwia edytowanie właściwości obiektu w środowisku programistycznym, który ma fokus.|Tak|
 |[W Eksploratorze serwera](https://msdn.microsoft.com/library/x603htbk.aspx)|Udostępnia metody interakcji z szerokiej gamy zasobów serwera.|Tak|

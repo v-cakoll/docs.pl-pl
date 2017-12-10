@@ -14,11 +14,11 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 87c87852024412b7a7ed55a2c429842ce75a13a8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 6a64eaba75128a3844847fbf803c86c2d700db72
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
 Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji. Większość oprogramowania współczesnych obejmuje obiekty COM. Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -55,7 +55,7 @@ Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych sk
  Zawiera opis używania istniejących obiektów COM jako podstawa dla nowych obiektów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Współdziałanie z kodem niezarządzanym](https://msdn.microsoft.com/library/sd10k43k)  
+ [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
  Opisuje współdziałanie usług świadczonych przez środowisko uruchomieniowe języka wspólnego.  
   
  [Udostępnianie składników modelu COM aplikacji .NET Framework](http://msdn.microsoft.com/library/e78b14f1-e487-43cd-9c6d-1a07483f1730)  
@@ -64,5 +64,5 @@ Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych sk
  [Udostępnianie składników .NET Framework modelowi COM](http://msdn.microsoft.com/library/e42a65f7-1e61-411f-b09a-aca1bbce24c6)  
  Zawiera opis przygotowania i stosowania typy zarządzane z modelu COM.  
   
- [Stosowanie atrybutów międzyoperacyjności](https://msdn.microsoft.com/library/d4w8x20h)  
+ [Stosowanie atrybutów międzyoperacyjności](../../../../docs/framework/interop/applying-interop-attributes.md)  
  Obejmuje atrybutów używanych podczas pracy z kodem niezarządzanym.

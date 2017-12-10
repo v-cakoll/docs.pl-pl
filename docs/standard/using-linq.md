@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 1478b5dc5844cef0abfea44eba88a12801d32bd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ae0fb23c3edb6488fd0c281b1b94548e1cb2d3bd
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (zapytania zintegrowane Language)
 
@@ -80,7 +80,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Pisanie kodu ręcznie przechodzenia dokument XML, aby wykonać to zadanie będzie znacznie trudniejsze.
 
-Interakcja z XML nie jest jedyną operacją, której można zrobić za pomocą dostawcy LINQ. [LINQ do SQL](https://msdn.microsoft.com/library/bb386976.aspx) jest dość bez systemu operacyjnego kości obiektów relacyjnych mapowania (ORM) dla bazy danych MSSQL. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) Biblioteka zapewnia wydajne przechodzenie dokumentu JSON za pomocą LINQ. Ponadto, jeśli nie ma bibliotekę, która obsługuje, co jest potrzebne, można również [zapisać własnego dostawcę LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
+Interakcja z XML nie jest jedyną operacją, której można zrobić za pomocą dostawcy LINQ. [LINQ do SQL](../../docs/framework/data/adonet/sql/linq/index.md) jest dość bez systemu operacyjnego kości obiektów relacyjnych mapowania (ORM) dla bazy danych MSSQL. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) Biblioteka zapewnia wydajne przechodzenie dokumentu JSON za pomocą LINQ. Ponadto, jeśli nie ma bibliotekę, która obsługuje, co jest potrzebne, można również [zapisać własnego dostawcę LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Dlaczego warto używać składni zapytania?
 
@@ -254,7 +254,7 @@ W postaci diagramu:
 
 ![PLINQ diagram](./media/using-linq/plinq-diagram.png)
 
-Działania równoległego zadania procesora, które można łatwo wyrazić za pomocą LINQ (innymi słowy, są czystych funkcji i nie skutków po stronie) jest doskonałym kandydatem do PLINQ. Dla zadania, które _czy_ ma skutków ubocznych, należy rozważyć użycie [Biblioteka zadań równoległych](https://msdn.microsoft.com/library/dd460717.aspx).
+Działania równoległego zadania procesora, które można łatwo wyrazić za pomocą LINQ (innymi słowy, są czystych funkcji i nie skutków po stronie) jest doskonałym kandydatem do PLINQ. Dla zadania, które _czy_ ma skutków ubocznych, należy rozważyć użycie [Biblioteka zadań równoległych](./parallel-programming/task-parallel-library-tpl.md).
 
 ## <a name="further-resources"></a>Dodatkowe zasoby:
 

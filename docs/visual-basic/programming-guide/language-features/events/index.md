@@ -14,11 +14,11 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c85936d366f377b3da45b4e342c3373aae959984
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 10213597fa65c44a56b30c37e2e6f4e732d96954
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="events-visual-basic"></a>Zdarzenia (Visual Basic)
 Gdy może wizualizacji [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projektu jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są zdarzeniami — oznacza przepływ wykonania zależy od zewnętrznego wystąpienia o nazwie *zdarzenia*.  
@@ -113,5 +113,5 @@ Gdy może wizualizacji [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projektu jako
 |[Porady: deklarowanie zdarzeń niestandardowych w celu zachowywania pamięci](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|Pokazuje sposób definiowania niestandardowych zdarzeń, który korzysta z pamięci tylko wtedy, gdy zdarzenie jest obsługiwane.|  
 |[Rozwiązywanie problemów z odziedziczonymi programami obsługi zdarzeń w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|Wyświetla listę typowych problemów, które wynikają z obsługi zdarzeń w składników odziedziczonych.|  
 |[Zdarzenia](../../../../standard/events/index.md)|Zawiera omówienie modelu zdarzeń w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)].|  
-|[Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](https://msdn.microsoft.com/library/dacysss4.aspx)|Opisuje sposób pracy z zdarzenia związane z obiektami formularzy systemu Windows.|  
+|[Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)|Opisuje sposób pracy z zdarzenia związane z obiektami formularzy systemu Windows.|  
 |[Obiekty delegowane](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Zawiera omówienie delegatów w języku Visual Basic.|

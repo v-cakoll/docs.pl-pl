@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 307af0767d57612d8996f75c2f8814a83f20baf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Wskazówki: tworzenie odbiorników logu niestandardowego (C# i Visual Basic)
 W tym przewodniku pokazano, jak utworzyć odbiornik dziennik niestandardowy i skonfigurować go do nasłuchiwania na dane wyjściowe `My.Application.Log` obiektu.  
@@ -41,7 +41,7 @@ W tym przewodniku pokazano, jak utworzyć odbiornik dziennik niestandardowy i sk
   
  Aby upewnić się, że `My.Application.Log` używa odbiornika z dziennika, należy silnie nazwę zestawu zawierającego odbiornika z dziennika.  
   
- Następna procedura zawiera kilku prostych czynności tworzenia zestawu o silnej nazwie odbiornika dziennika. Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](https://msdn.microsoft.com/library/xwb8f617).  
+ Następna procedura zawiera kilku prostych czynności tworzenia zestawu o silnej nazwie odbiornika dziennika. Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Silnej nazwy zestawu odbiornika dziennika  
   

@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a148aa9b7dad357aeaa6f88ec11098418005719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plików i katalogów.  
@@ -46,7 +46,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 -   **Wyszukiwanie**. Można zbadać i modyfikować z pozycją w strumieniu.  
   
- Aby uzyskać więcej informacji, zobacz [strumieni redagowanie](https://msdn.microsoft.com/library/e4y2dch9).  
+ Aby uzyskać więcej informacji, zobacz [strumieni redagowanie](../../../../../docs/standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Typy strumieni  
  W [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], strumień jest reprezentowana przez <xref:System.IO.Stream> klasy, która stanowi klasa abstrakcyjna, dla wszystkich innych strumieni. Nie można bezpośrednio utworzyć wystąpienia <xref:System.IO.Stream> klasy, ale muszą używać jednej z klas implementuje.  
@@ -65,13 +65,13 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 |Do|Zobacz|
 |---|---|   
-|Odczyt i zapis do pliku danych|[Porady: Odczyt i zapis do pliku danych nowo utworzony](https://msdn.microsoft.com/library/36b93480.aspx)|  
-|Odczytaj tekst z pliku|[Porady: Odczyt tekstu z pliku](https://msdn.microsoft.com/library/db5x7c0d.aspx)|  
-|Zapisywanie tekstu do pliku|[Porady: zapisywanie tekstu do pliku](https://msdn.microsoft.com/library/6ka1wd3w.aspx)|  
-|Odczytywanie znaków z ciągu|[Porady: odczytywanie znaków z ciągu](https://msdn.microsoft.com/library/9yyz8a6c.aspx)|  
-|Zapisywanie do ciągu znaków|[Porady: zapisywanie znaków ciągu](https://msdn.microsoft.com/library/z4kzt0dd.aspx)|  
-|Szyfrowanie danych|[Szyfrowanie danych](https://msdn.microsoft.com/library/as0w18af.aspx)|  
-|Odszyfrowywanie danych|[Odszyfrowywanie danych](https://msdn.microsoft.com/library/te15te69.aspx)|  
+|Odczyt i zapis do pliku danych|[Porady: Odczyt i zapis do pliku danych nowo utworzony](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Odczytaj tekst z pliku|[Porady: Odczyt tekstu z pliku](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
+|Zapisywanie tekstu do pliku|[Porady: zapisywanie tekstu do pliku](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
+|Odczytywanie znaków z ciągu|[Porady: odczytywanie znaków z ciągu](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
+|Zapisywanie do ciągu znaków|[Porady: zapisywanie znaków ciągu](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
+|Szyfrowanie danych|[Szyfrowanie danych](../../../../../docs/standard/security/encrypting-data.md)|  
+|Odszyfrowywanie danych|[Odszyfrowywanie danych](../../../../../docs/standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Dostęp do plików i atrybuty  
  Można kontrolować sposób tworzenia plików, otwarty i udostępnione <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, i <xref:System.IO.FileShare> wyliczenia, zawierające flagi używane przez konstruktorów <xref:System.IO.FileStream> klasy. Na przykład, gdy można otworzyć lub utworzyć nowy <xref:System.IO.FileStream>, <xref:System.IO.FileMode> wyliczenie umożliwia określenie, czy plik jest otwarty dołączania, czy zostanie utworzony nowy plik, jeśli określony plik nie istnieje, czy plik jest zastępowany i tak dalej.  
@@ -82,7 +82,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 |Do|Zobacz|  
 |---|---|
-|Otwórz i dołączać tekstu do pliku dziennika|[Porady: otwieranie i Dołącz do pliku dziennika](https://msdn.microsoft.com/library/3zc0w663.aspx)|  
+|Otwórz i dołączać tekstu do pliku dziennika|[Porady: otwieranie i Dołącz do pliku dziennika](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Określić atrybutów pliku|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Uprawnienia do pliku  
@@ -95,19 +95,19 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 |Do|Zobacz|
 |---|---|  
-|Tworzenie izolowanego magazynu|[Porady: uzyskiwanie magazynów dla izolowanego magazynu](https://msdn.microsoft.com/library/k48a6h13.aspx)|  
-|Wyliczanie izolowanych magazynów|[Porady: wykazywanie magazynów dla izolowanego magazynu](https://msdn.microsoft.com/library/c3dy613a.aspx)|  
-|Usuwanie izolowanego magazynu|[Porady: Usuń magazyny w izolowanym magazynie](https://msdn.microsoft.com/library/5w71t104.aspx)|  
-|Utwórz plik lub katalog w izolowanym magazynie|[Porady: tworzenie plików i katalogów w izolowanym magazynie](https://msdn.microsoft.com/library/6h2ws3ft.aspx)|  
-|Znajdź plik w izolowanym magazynie|[Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie](https://msdn.microsoft.com/library/zd5e2z84.aspx)|  
-|Odczytywanie i zapisywanie do pliku w magazynie insolated|[Porady: Odczyt i zapis w plikach w izolowanym magazynie](https://msdn.microsoft.com/library/xf96a1wz.aspx)|  
-|Usuń plik lub katalog w izolowanym magazynie|[Porady: usuwanie plików i katalogów w izolowanym magazynie](https://msdn.microsoft.com/library/kx3852wf.aspx)|  
+|Tworzenie izolowanego magazynu|[Porady: uzyskiwanie magazynów dla izolowanego magazynu](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Wyliczanie izolowanych magazynów|[Porady: wykazywanie magazynów dla izolowanego magazynu](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Usuwanie izolowanego magazynu|[Porady: Usuń magazyny w izolowanym magazynie](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Utwórz plik lub katalog w izolowanym magazynie|[Porady: tworzenie plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Znajdź plik w izolowanym magazynie|[Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Odczytywanie i zapisywanie do pliku w magazynie insolated|[Porady: Odczyt i zapis w plikach w izolowanym magazynie](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Usuń plik lub katalog w izolowanym magazynie|[Porady: usuwanie plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Zdarzenia pliku  
  <xref:System.IO.FileSystemWatcher> Składnik umożliwia oczekiwał na zmiany plików i katalogów w systemie lub na dowolnym komputerze, do których masz dostęp do sieci. Na przykład jeśli plik został zmodyfikowany, możesz powiadomi użytkownika czy miała miejsce zmiana. Podczas wprowadzania zmian, co najmniej jednego zdarzenia wywoływane, przechowywane w buforze i przekazać do <xref:System.IO.FileSystemWatcher> składnika do przetwarzania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie strumieni](https://msdn.microsoft.com/library/e4y2dch9)  
+ [Tworzenie strumieni](../../../../../docs/standard/io/composing-streams.md)  
  [We/Wy plików i strumieni](https://msdn.microsoft.com/library/k3352a4t)  
  [Asynchroniczne We/Wy pliku](https://msdn.microsoft.com/library/kztecsys)  
  [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

@@ -12,11 +12,11 @@ ms.assetid: 8b202505-608b-4223-bbd9-2ace3d73e6cd
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c5c2824b3af8753dbb90577fe47cf63d2dc793ff
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 158da956015e022c20550171ebe867e7c975c03a
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="net-framework-reference-information-visual-basic"></a>.NET Informacje dotyczące Framework (Visual Basic)
 Ten temat zawiera linki do informacji na temat sposobu pracy z [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas.  
@@ -25,13 +25,13 @@ Ten temat zawiera linki do informacji na temat sposobu pracy z [!INCLUDE[dnprdns
  [Wprowadzenie](../../framework/get-started/index.md)  
  Wyczerpujące omówienie programu .NET Framework i łącza do dodatkowych zasobów.  
   
- [Przegląd biblioteki klas](https://msdn.microsoft.com/library/hfa3fa08)  
+ [Omówienie biblioteki klas](../../../docs/standard/class-library-overview.md)  
  Wprowadza klasy, interfejsy i typy wartości, które pomagają przyspieszenia i zoptymalizować proces rozwoju i zapewnienia dostępu do funkcji systemu.  
   
- [Podręcznik programowania](https://msdn.microsoft.com/library/hh156542)  
+ [Podręcznik programowania](../../../docs/framework/development-guide.md)  
  Zawiera przewodnik do wszystkich zadań i obszarów technologii klucza przy projektowaniu aplikacji, w tym tworzenie, konfigurowanie debugowania, zabezpieczanie i wdrażanie aplikacji. Ten temat zawiera również informacje o dynamicznej programowania, współdziałanie rozszerzalności, zarządzanie pamięcią i wątków.  
   
- [Narzędzia](https://msdn.microsoft.com/library/d9kh6s92)  
+ [Narzędzia](../../../docs/framework/tools/index.md)  
  W tym artykule opisano narzędzia, które umożliwia tworzenie, konfigurowanie i wdrażanie aplikacji przy użyciu technologii .NET Framework.  
   
  [.NET framework — przykłady](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)  

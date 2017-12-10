@@ -20,11 +20,11 @@ ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8ebedd6f8173e3c349240d24ddaf16e4841f67a4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 975a86e33eb5744f94cd58efb227bf52eb07c1e8
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="partial-methods-visual-basic"></a>Metody częściowe (Visual Basic)
 Metody częściowe umożliwiają deweloperom Wstawianie niestandardowej logiki do kodu. Zazwyczaj kod jest częścią klasy wygenerowany przez projektanta. Metody częściowe są zdefiniowane w klasie częściowej utworzonego przez generator kodu, a często są one używane do o tym, że element został zmieniony. Umożliwiają one developer do określania zachowania niestandardowego w odpowiedzi na zmianę.  
@@ -83,5 +83,5 @@ End Sub
  [Sub — procedury](./sub-procedures.md)  
  [Parametry opcjonalne](./optional-parameters.md)  
  [Częściowe](../../../../visual-basic/language-reference/modifiers/partial.md)  
- [Generowanie kodu w składniku LINQ to SQL](https://msdn.microsoft.com/library/bb399400)  
- [Dodawanie logiki biznesowej przy użyciu metody częściowe](https://msdn.microsoft.com/library/bb546176)
+ [Generowanie kodu w składniku LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
+ [Dodawanie logiki biznesowej przy użyciu metody częściowe](../../../../../docs/framework/data/adonet/sql/linq/adding-business-logic-by-using-partial-methods.md)

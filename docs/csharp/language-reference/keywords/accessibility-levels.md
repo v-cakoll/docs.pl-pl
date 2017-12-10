@@ -1,6 +1,6 @@
 ---
 title: "Poziomy ułatwień dostępu (odwołanie w C#)"
-ms.date: 07/20/2015
+ms.date: 12/06/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.topic: article
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 77124554d7a0b38414e154e024aceddbfffcfbd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
+
 Używać modyfikatorów dostępu [publicznego](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), lub [prywatnej](../../../csharp/language-reference/keywords/private.md), aby określić jedną z następujących zadeklarowana poziomy ułatwień dostępu dla członków.  
   
 |Zadeklarowane ułatwień dostępu|Znaczenie|  
@@ -27,7 +27,7 @@ Używać modyfikatorów dostępu [publicznego](../../../csharp/language-referenc
 |`internal`|Dostęp jest ograniczony do bieżącego zestawu.|  
 |`protected internal`|Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.|  
 |`private`|Dostęp jest ograniczony do typu zawierającego.|  
-|`private protected`|Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie.|  
+|`private protected`|Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie. Dostępne od C# 7.2. |  
   
  Modyfikator dostępu tylko jeden jest dozwolone dla elementu członkowskiego lub typu, z wyjątkiem, korzystając z `protected internal` lub `private protected` kombinacji.  
   

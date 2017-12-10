@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 691b65280b958edcf8e856ee6df793e0b7b05184
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
 Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyli w kodzie użyto odwoływanie się do niego.  
@@ -71,7 +71,7 @@ Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyl
  `xyz$wv`  
   
 > [!CAUTION]
->  Nazwy elementów, począwszy od znaku podkreślenia (`_`) czy nie jest częścią [niezależność od języka i elementy niezależne od języka](https://msdn.microsoft.com/library/12a7a7h3) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie można użyć składnika, który definiuje takich nazw. Jednak podkreślenia w inne położenie w nazwie elementu jest zgodne ze specyfikacją CLS.  
+>  Nazwy elementów, począwszy od znaku podkreślenia (`_`) czy nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../../../docs/standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie można użyć składnika, który definiuje takich nazw. Jednak podkreślenia w inne położenie w nazwie elementu jest zgodne ze specyfikacją CLS.  
   
 ### <a name="name-length-guidelines"></a>Wskazówki dotyczące długość nazwy  
  Jak to w praktyce Twoja nazwa powinna być możliwie krótki podczas nadal jednoznacznie identyfikujący rodzaj elementu. To poprawia czytelność kodu i zmniejsza rozmiar linii długość i pliku źródłowego.  

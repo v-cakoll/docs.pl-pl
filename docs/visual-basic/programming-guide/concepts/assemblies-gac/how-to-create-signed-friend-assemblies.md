@@ -12,11 +12,11 @@ ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f87f816992bdfa9ed347c35ba651c59187551772
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9e549eeb67c41b3172dd5a5885d59aa6069716a0
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>Porady: tworzenie oznaczonych przyjaznych zestawów (Visual Basic)
 Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o silnych nazwach. Oba zestawy muszą silnej nazwy. Mimo że oba zestawy w tym przykładzie używają tych samych kluczy, można użyć różnych kluczy dla dwóch zestawów.  
@@ -100,5 +100,5 @@ Ten przykład przedstawia sposób użycia przyjaznych zestawów z zestawów o si
  [Porady: tworzenie nieoznaczonych przyjaznych zestawów (Visual Basic)](../../../../visual-basic/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)  
  [/ KeyFile](../../../../visual-basic/reference/command-line-compiler/keyfile.md)  
  [SN.exe (narzędzie silnych nazw)](https://msdn.microsoft.com/library/k5b5tt23)  
- [Tworzenie i używanie zestawów o silnej nazwie](https://msdn.microsoft.com/library/xwb8f617)  
+ [Tworzenie i używanie zestawów o silnej nazwie](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
  [Koncepcje programowania](../../../../visual-basic/programming-guide/concepts/index.md)

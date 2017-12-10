@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 809f0eaddf298b0d6a57e217c2bcf5450675c3e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: dd4062905b38f4dff99c03c9bb3849ac3b552e5d
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tour-of-net"></a>Samouczek platformy .NET
 
@@ -124,7 +124,7 @@ Aby dowiedzieć się więcej i zobaczyć niektóre przykłady, zobacz [LINQ (zap
 
 Każdy system operacyjny, obejmuje interfejs programowania aplikacji (API), który udostępnia usług systemowych. .NET udostępnia kilka metod wywoływania tych interfejsów API.
 
-Główne sposobów natywnego współdziałanie odbywa się za pośrednictwem "wywołanie platformy" lub P/Invoke skrócie, który jest obsługiwany na platformach systemu Linux i Windows. Tylko do systemu Windows w sposób możliwie natywnego współdziałanie nazywa się "Usługa międzyoperacyjna modelu COM," który jest używany do pracy z [składniki COM](https://msdn.microsoft.com/library/bwa2bx93.aspx) w kodzie zarządzanym. Jest oparty na szczycie infrastruktury P/Invoke, ale działa w niewielkim stopniu różne sposoby.
+Główne sposobów natywnego współdziałanie odbywa się za pośrednictwem "wywołanie platformy" lub P/Invoke skrócie, który jest obsługiwany na platformach systemu Linux i Windows. Tylko do systemu Windows w sposób możliwie natywnego współdziałanie nazywa się "Usługa międzyoperacyjna modelu COM," który jest używany do pracy z [składniki COM](/cpp/atl/introduction-to-com) w kodzie zarządzanym. Jest oparty na szczycie infrastruktury P/Invoke, ale działa w niewielkim stopniu różne sposoby.
 
 Większość jego Mono (i w związku z tym w Xamarin) współdziałanie obsługę języka Java i Objective-C są wbudowane podobnie, oznacza to, używają tych samych zasad.
 

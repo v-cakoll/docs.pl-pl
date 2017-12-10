@@ -11,11 +11,11 @@ ms.assetid: 236d157d-37c0-4ee8-89fc-721e6c596325
 caps.latest.revision: "4"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 633fe784b98bf67086581b82fb4b00cff28d5f5a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 661208662c022b2a3b9c5daae6b0425e46ea6501
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="threading-c"></a>Wątkowość (C#)
 Wątkowość Włącza program C# do wykonania równoczesnych przetwarzania, aby zrobić więcej niż jedną operację naraz. Można na przykład użyć wątkowość do monitorowania danych wejściowych od użytkownika, wykonaj zadania w tle i obsługi jednoczesnych strumieni danych wejściowych.  
@@ -26,7 +26,7 @@ Wątkowość Włącza program C# do wykonania równoczesnych przetwarzania, aby 
   
 -   .NET Framework <xref:System.Threading> sprawia, że przestrzeń nazw za pomocą wątków jest łatwiejsze.  
   
--   Wątki współużytkują zasoby aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą wątków i wątki](https://msdn.microsoft.com/library/e1dx6b2h).  
+-   Wątki współużytkują zasoby aplikacji. Aby uzyskać więcej informacji, zobacz [za pomocą wątków i wątki](../../../../../docs/standard/threading/using-threads-and-threading.md).  
   
  Domyślnie program C# ma jeden wątek. Jednak pomocnicze wątków można tworzyć i używane do wykonywania kodu równolegle z podstawowym wątku. Wątki te są często nazywane *wątków roboczych*.  
   
@@ -39,7 +39,7 @@ Wątkowość Włącza program C# do wykonania równoczesnych przetwarzania, aby 
  Można zsynchronizować działania wiele wątków niektórych lub wszystkich tych klas, ale niektóre Obsługa wątkowości jest obsługiwany przez język C#. Na przykład [instrukcji "Lock"](../../../../csharp/language-reference/keywords/lock-statement.md) udostępnia funkcje synchronizacji przy użyciu niejawnego <xref:System.Threading.Monitor>.  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], znacznie upraszcza programowanie wielowątkowe z <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [równoległe LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania opartego na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](https://msdn.microsoft.com/library/dd460693).  
+>  Począwszy od [!INCLUDE[net_v40_long](~/includes/net-v40-long-md.md)], znacznie upraszcza programowanie wielowątkowe z <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> klas, [równoległe LINQ (PLINQ)](https://msdn.microsoft.com/library/dd460688), nowej kolekcji współbieżnych klas w <xref:System.Collections.Concurrent?displayProperty=nameWithType> przestrzeń nazw, a nowy model programowania opartego na koncepcji zadania, a nie wątków. Aby uzyskać więcej informacji, zobacz [programowania równoległego](../../../../../docs/standard/parallel-programming/index.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
@@ -52,4 +52,4 @@ Wątkowość Włącza program C# do wykonania równoczesnych przetwarzania, aby 
 |[Czasomierze wątków (C#)](../../../../csharp/programming-guide/concepts/threading/thread-timers.md)|Opisuje sposób uruchamiania procedur w oddzielnych wątkach w ustalonych odstępach czasu.|  
 |[Wątku puli (C#)](../../../../csharp/programming-guide/concepts/threading/thread-pooling.md)|Opisuje sposób korzystanie z puli wątków roboczych, które są zarządzane przez system.|  
 |[Porady: Korzystanie z puli wątków (C#)](../../../../csharp/programming-guide/concepts/threading/how-to-use-a-thread-pool.md)|Pokazuje zsynchronizowane używanie wielu wątków w puli wątków.|  
-|[Wątkowość](https://msdn.microsoft.com/library/3e8s7xdd)|Opisuje sposób wdrożenia wątkowość w programie .NET Framework.|
+|[Wątkowość](../../../../../docs/standard/threading/index.md)|Opisuje sposób wdrożenia wątkowość w programie .NET Framework.|

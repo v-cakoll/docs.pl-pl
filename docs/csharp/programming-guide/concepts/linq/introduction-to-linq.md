@@ -11,11 +11,11 @@ ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
 caps.latest.revision: "3"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6fd14840cfffb1a59949251b26c168aada336de9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc654dd020d3a20b028cd6545b00de84193174ac
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-c"></a>Wprowadzenie do LINQ (C#)
 Zapytanie języku zintegrowanym (LINQ) jest innowacje wprowadzone w programie .NET Framework w wersji 3.5 który zawiera odstęp między world obiektów i world danych.  
@@ -33,7 +33,7 @@ Zapytanie języku zintegrowanym (LINQ) jest innowacje wprowadzone w programie .N
 ## <a name="next-steps"></a>Następne kroki  
  Aby uzyskać więcej informacji na temat LINQ, Rozpocznij od staje się poznać niektóre podstawowe założenia w sekcji wprowadzenie [wprowadzenie do LINQ w C#](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md), a następnie zapoznaj się z dokumentacją w technologii LINQ, w której jesteś zainteresowany:  
   
--   Bazy danych programu SQL Server: [LINQ do SQL](https://msdn.microsoft.com/library/bb386976)  
+-   Bazy danych programu SQL Server: [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
 -   Dokumenty XML: [LINQ do XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   

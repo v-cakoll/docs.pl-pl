@@ -13,11 +13,11 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 53205ca9fd304d1dd1c76c5d6952d78634c5b231
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -777,7 +777,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 ### <a name="native-image-generator-ngen-pdbs"></a>Pliki PDB (NGEN) Generator obrazu natywnego
  Śledzenie zdarzeń między komputerami umożliwia klientom profilu programu na komputerze A i wygląd profilowania danych z mapowaniem wiersz źródła na maszynie B. przy użyciu poprzednich wersji programu .NET Framework, użytkownik może skopiować wszystkie moduły i obrazów macierzystych z PROFILOWANEGO Maszyna do maszyny analizy, która zawiera PDB IL można utworzyć mapowania źródła do macierzystego. Podczas tego procesu może działać również w przypadku, gdy pliki są stosunkowo mały, takie jak w przypadku aplikacji telefonicznej, pliki mogą być bardzo duże w systemach komputerów i wymaga długiego czasu, aby skopiować.
 
- PDB Ngen NGen umożliwia tworzenie pliku PDB, który zawiera mapowania IL-native bez zależności pliku IL PDB. W naszym scenariuszu śledzenie zdarzeń między komputerami są wystarczające jest kopiowanie obrazu macierzystego PDB, wygenerowanego przez komputer A do B maszyny i użyj [debugowania interfejsu API dostępu](https://msdn.microsoft.com/library/ee8x173s.aspx) odczytać mapowania źródła do IL IL PDB i natywnego obraz w pliku PDB IL do macierzystego mapowania. Łączenie oba mapowania udostępnia mapowanie źródła do macierzystego. Ponieważ obraz macierzysty PDB jest znacznie mniejszy niż wszystkie moduły i obrazów natywnych, proces kopiowania z komputera, A na komputerze B przebiega szybciej.
+ PDB Ngen NGen umożliwia tworzenie pliku PDB, który zawiera mapowania IL-native bez zależności pliku IL PDB. W naszym scenariuszu śledzenie zdarzeń między komputerami są wystarczające jest kopiowanie obrazu macierzystego PDB, wygenerowanego przez komputer A do B maszyny i użyj [debugowania interfejsu API dostępu](/visualstudio/debugger/debug-interface-access/debug-interface-access-sdk-reference) odczytać mapowania źródła do IL IL PDB i natywnego obraz w pliku PDB IL do macierzystego mapowania. Łączenie oba mapowania udostępnia mapowanie źródła do macierzystego. Ponieważ obraz macierzysty PDB jest znacznie mniejszy niż wszystkie moduły i obrazów natywnych, proces kopiowania z komputera, A na komputerze B przebiega szybciej.
 
 <a name="v46"></a> 
 ## <a name="whats-new-in-net-2015"></a>Co to jest nowa w programie .NET 2015

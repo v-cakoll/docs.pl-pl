@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
-ms.openlocfilehash: a4819c2174485411a83e1baa1a0da6c759ba04f8
-ms.sourcegitcommit: 5126483ef09c487296801bbac368dd8a55a6b709
+ms.openlocfilehash: c6e8b378c093ffd58678e331f0ad02fb27991ecf
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywnego
 
@@ -263,7 +263,7 @@ Oba powyższe przykłady są zależne od parametrów, a w obu przypadkach parame
 
 **Kierowanie** jest procesem przekształcania typów, gdy konieczne jest przekraczają granicę zarządzanego do natywnego i na odwrót.
 
-Kierowanie przyczyna jest wymagane jest, ponieważ różnią się typami w kodzie zarządzane i niezarządzane. W kodzie zarządzanym, na przykład masz `String`, podczas gdy w świecie niezarządzane ciągi może być Unicode ("szeroka"), z systemem innym niż Unicode, zerem, ASCII, itp. Domyślnie podsystem P/Invoke spróbuje wykonać czynność prawej na zachowanie domyślne, które można wyświetlić na podstawie [MSDN](https://msdn.microsoft.com/library/zah6xy75.aspx). Jednak w tych sytuacjach konieczne dodatkowe formantu zostanie zastosowana `MarshalAs` atrybutu, aby określić, co to jest oczekiwany typ po stronie niezarządzane. Na przykład aby ciąg, który zostanie wysłany jako ciągu ANSI zerem, można go jak następująco:
+Kierowanie przyczyna jest wymagane jest, ponieważ różnią się typami w kodzie zarządzane i niezarządzane. W kodzie zarządzanym, na przykład masz `String`, podczas gdy w świecie niezarządzane ciągi może być Unicode ("szeroka"), z systemem innym niż Unicode, zerem, ASCII, itp. Domyślnie podsystem P/Invoke spróbuje wykonać czynność prawej na zachowanie domyślne, które można wyświetlić na podstawie [MSDN](../../docs/framework/interop/default-marshaling-behavior.md). Jednak w tych sytuacjach konieczne dodatkowe formantu zostanie zastosowana `MarshalAs` atrybutu, aby określić, co to jest oczekiwany typ po stronie niezarządzane. Na przykład aby ciąg, który zostanie wysłany jako ciągu ANSI zerem, można go jak następująco:
 
 ```csharp
 [DllImport("somenativelibrary.dll")]

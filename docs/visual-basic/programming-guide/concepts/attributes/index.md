@@ -12,11 +12,11 @@ ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f1d5399da42b224908fa9c23893eec5d424dd685
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: efdfa297099fb5538e7b92514c8440c2722f3fe1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="attributes-overview-visual-basic"></a>Atrybuty — Przegląd (Visual Basic)
 Atrybuty udostępnia zaawansowane metody kojarzenia metadanych lub deklaratywne informacji z kodu (zestawy, typy metod, właściwości i tak dalej). Po atrybutu jest skojarzony z jednostką program, ten atrybut można tworzyć zapytania w czasie wykonywania przy użyciu techniki o nazwie *odbicia*. Aby uzyskać więcej informacji, zobacz [odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md).  
@@ -154,4 +154,4 @@ Module: CLSCompliant(True)>
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)  
  [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
- [Atrybuty](https://msdn.microsoft.com/library/5x6cd29c)
+ [Atrybuty](../../../../../docs/standard/attributes/index.md)

@@ -21,11 +21,11 @@ ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
 caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 64e01fdfc4951dc23cd7ce92941a367882b3b6bb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a7882614b9663d1c38f137f7a69054d5bbd50b19
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Wprowadzenie do LINQ w Visual Basic
 Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] i zapewnia prosta i skuteczna możliwości podczas pracy z wszystkich typów danych. Zamiast Wysyłanie zapytania do bazy danych w celu przetworzenia lub Praca z inną składnię dla każdego typu danych, które w przypadku wyszukiwania, LINQ wprowadza zapytania jako część [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] języka. Używa ujednoliconego składni niezależnie od typu danych.  
@@ -71,7 +71,7 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
 |Dostawcy|Opis|  
 |---|---|  
 |LINQ do obiektów|LINQ do obiektów dostawcy umożliwia zapytania w pamięci kolekcji i tablic. Jeśli obiekt obsługuje albo <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> interfejsu LINQ do obiektów dostawcy umożliwia on zapytania.<br /><br /> LINQ do obiektów dostawcy można włączyć, importując <xref:System.Linq> przestrzeni nazw, który jest importowany domyślnie dla wszystkich [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projektów.<br /><br /> Aby uzyskać więcej informacji na temat LINQ do obiektów dostawcy, zobacz [LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).|  
-|LINQ do SQL|LINQ do SQL dostawcy umożliwia zapytania i modyfikować danych w bazie danych programu SQL Server. Ułatwia to mapowania modelu obiektu do tabel i obiektów w bazie danych aplikacji.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ułatwia posługiwanie się LINQ do SQL umieszczając Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych). Ten Projektant służy do tworzenia modeli obiektów w aplikacji, która mapuje do obiektów w bazie danych. Projektant obiektów relacyjnych również zapewnia funkcje do mapowania procedury składowane i funkcje, które mają <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacji z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji na temat LINQ do SQL dostawcy, zobacz [LINQ do SQL](https://msdn.microsoft.com/library/bb386976). Aby uzyskać więcej informacji na temat Projektant obiektów relacyjnych, zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
+|LINQ do SQL|LINQ do SQL dostawcy umożliwia zapytania i modyfikować danych w bazie danych programu SQL Server. Ułatwia to mapowania modelu obiektu do tabel i obiektów w bazie danych aplikacji.<br /><br /> [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ułatwia posługiwanie się LINQ do SQL umieszczając Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych). Ten Projektant służy do tworzenia modeli obiektów w aplikacji, która mapuje do obiektów w bazie danych. Projektant obiektów relacyjnych również zapewnia funkcje do mapowania procedury składowane i funkcje, które mają <xref:System.Data.Linq.DataContext> obiektu, który zarządza komunikacji z bazą danych i zapisuje stan kontroli optymistycznej współbieżności.<br /><br /> Aby uzyskać więcej informacji na temat LINQ do SQL dostawcy, zobacz [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md). Aby uzyskać więcej informacji na temat Projektant obiektów relacyjnych, zobacz [składnika LINQ to SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2).|  
 |LINQ do XML|LINQ do XML dostawcy umożliwia zapytania i modyfikować XML. Można zmodyfikować XML w pamięci, albo można ładowanie XML z, a następnie zapisz XML w pliku.<br /><br /> Ponadto LINQ do XML dostawcy umożliwia literały XML i właściwości osi XML, które pozwalają na zapis XML bezpośrednio w Twojej [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu. Aby uzyskać więcej informacji, zobacz [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md).|  
 |LINQ do DataSet|LINQ do DataSet dostawcy umożliwia utworzenie zapytania i aktualizacji danych w [!INCLUDE[vstecado](~/includes/vstecado-md.md)] zestawu danych. Możesz dodać możliwości LINQ do aplikacji, które używają zestawów danych w celu uproszczenia i rozszerzyć możliwości zapytań, agregację i aktualizowanie danych w zestawie danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ do DataSet](../../../../framework/data/adonet/linq-to-dataset.md).|  
   
@@ -82,7 +82,7 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
   
  [!code-vb[VbVbalrIntroToLINQ#2](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_3.vb)]  
   
- W tym przykładzie jest prawidłowa kwerenda siebie. jednak zapytanie staje się znacznie bardziej wydajne, po dodaniu więcej klauzule zapytań, aby doprecyzować wynik. Na przykład można dodać `Where` klauzuli do filtrowania według wartości co najmniej jeden wynik. Wyrażenia zapytania są pojedynczy wiersz kodu; klauzule dodatkowe zapytania można dodać tylko na końcu zapytania. Zapytania można podzielić na wiele wierszy tekstu, aby poprawić czytelność przy użyciu znak kontynuacji wiersza podkreślenia (_). Poniższy przykładowy kod przedstawia przykład kwerendę, która obejmuje `Where` klauzuli.  
+ W tym przykładzie jest prawidłowa kwerenda siebie. jednak zapytanie staje się znacznie bardziej wydajne, po dodaniu więcej klauzule zapytań, aby doprecyzować wynik. Na przykład można dodać `Where` klauzuli do filtrowania według wartości co najmniej jeden wynik. Wyrażenia zapytania są pojedynczy wiersz kodu; klauzule dodatkowe zapytania można dodać tylko na końcu zapytania. Zapytania można podzielić na wiele wierszy tekstu w celu zwiększenia czytelności za pomocą znaku podkreślenia (\_) znak kontynuacji wiersza. Poniższy przykładowy kod przedstawia przykład kwerendę, która obejmuje `Where` klauzuli.  
   
  [!code-vb[VbVbalrIntroToLINQ#3](../../../../visual-basic/programming-guide/language-features/linq/codesnippet/VisualBasic/introduction-to-linq_4.vb)]  
   
@@ -173,7 +173,7 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
 |[XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)|Zawiera opis funkcji XML w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] może być badana i które umożliwiają włączenia XML jako obiekty najwyższej jakości danych w sieci [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu.|  
 |[Zapytania](../../../../visual-basic/language-reference/queries/queries.md)|Udostępnia informacje na temat klauzule zapytań, które są dostępne w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
 |[LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ.|  
-|[LINQ do SQL](https://msdn.microsoft.com/library/bb386976)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla składnika LINQ to SQL.|  
+|[LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla składnika LINQ to SQL.|  
 |[LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ do obiektów.|  
 |[LINQ do ADO.NET (Portal strony)](http://msdn.microsoft.com/library/dd7d3c6a-ff98-47e9-a1a7-2d4cfc42d150)|Zawiera linki do informacji ogólnych, programowania wskazówki i przykłady dla składnika LINQ to [!INCLUDE[vstecado](~/includes/vstecado-md.md)].|  
 |[LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)|Zawiera informacje ogólne, programowania wskazówki i przykłady dla LINQ do XML.|  
@@ -204,6 +204,6 @@ Zapytanie języku zintegrowanym (LINQ) dodaje możliwość wykonywania kwerend d
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  [LINQ do DataSet — omówienie](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ do SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  [LINQ do SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
  [Metody DataContext (Projektanta obiektów relacyjnych)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

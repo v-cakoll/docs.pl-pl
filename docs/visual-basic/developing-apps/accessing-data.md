@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: da2fb9171a6b09ad94cea62877445bcb77c521ee
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Uzyskiwanie dostępu do danych w aplikacjach Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zawiera kilka nowych funkcji ułatwiających projektowanie aplikacji uzyskujących dostęp do danych. Powiązane z danymi formularzy dla aplikacji systemu Windows są tworzone przez przeciąganie elementów z [Data Sources — okno](/visualstudio/data-tools/add-new-data-sources) na formularzu. Powiązanie formantów danych przez przeciąganie elementów z **Data Sources — okno** na istniejące kontrolki.  
@@ -24,19 +24,19 @@ ms.lasthandoff: 10/18/2017
  [Uzyskiwanie dostępu do danych w programie Visual Studio](/visualstudio/data-tools/)  
  Dostarcza łącza do stron, które mówią o dołączaniu funkcji dostępu do danych do aplikacji.
 
- [Visual Studio tools danych dla platformy .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
+ [Narzędzia do obsługi danych programu Visual Studio dla platformy .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
  Dostarcza łącza do stron dotyczących tworzenia aplikacji, które działają z danymi za pomocą [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Dostarcza łącza do tematów opisujących, jak używać programu LINQ z języka Visual Basic.  
   
- [LINQ do SQL](https://msdn.microsoft.com/library/bb386976)  
+ [LINQ do SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
  Dostarcza informacje na temat [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Zawiera przykłady programowania.  
   
  [LINQ do SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Zawiera łącza do innych tematów dotyczących sposobu tworzenia [LINQ do SQL](https://msdn.microsoft.com/library/bb386976) model obiektów w aplikacji.  
+ Zawiera łącza do innych tematów dotyczących sposobu tworzenia [LINQ do SQL](../../../docs/framework/data/adonet/sql/linq/index.md) model obiektów w aplikacji.  
   
- [Praca z zestawami danych w aplikacjach warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
+ [Praca z zestawami danych w aplikacjach n-warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Dostarcza łącza do tematów dotyczących tworzenia wielowarstwowych danych aplikacji.  
      
  [Dodaj nowe połączenia](/visualstudio/data-tools/add-new-connections)  
@@ -51,10 +51,10 @@ ms.lasthandoff: 10/18/2017
  [Edytowanie danych w zestawach danych](/visualstudio/data-tools/edit-data-in-datasets)  
  Dostarcza łącza do stron opisujących sposoby manipulowania danymi w tabelach danych zestawu danych.  
   
- [Sprawdzanie poprawności danych w zestawach danych](/visualstudio/data-tools/validate-data-in-datasets)  
+ [Weryfikowanie danych w zestawach danych](/visualstudio/data-tools/validate-data-in-datasets)  
  Dostarcza łącza do stron opisujących sposób dodawania do zestawu danych walidacji podczas zmian wierszy i kolumn.  
   
- [Zapisywanie danych w bazie danych](/visualstudio/data-tools/save-data-back-to-the-database)  
+ [Zapisywanie danych z powrotem w bazie danych](/visualstudio/data-tools/save-data-back-to-the-database)  
  Dostarcza łącza do stron wyjaśniających jak wysyłać zaktualizowane dane z aplikacji do bazy danych.  
   
  [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  

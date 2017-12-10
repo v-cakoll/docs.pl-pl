@@ -11,11 +11,11 @@ ms.assetid: da9fc326-4648-454a-8e13-3911a2edefd7
 caps.latest.revision: "13"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5535334514afb0b9891dfce2e0cc0a0e95526069
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e6fdd32fb41c3bda83e848952f70cbd736a0fc60
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="generics-and-attributes-c-programming-guide"></a>Typy ogólne i atrybuty (Przewodnik programowania w języku C#)
 Atrybuty może odnosić się do typów ogólnych w taki sam sposób jak typy nierodzajową. Aby uzyskać więcej informacji na temat stosowania atrybutów, zobacz [atrybutów](../../../csharp/programming-guide/concepts/attributes/index.md).  
@@ -51,4 +51,4 @@ Atrybuty może odnosić się do typów ogólnych w taki sam sposób jak typy nie
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Typy ogólne](../../../csharp/programming-guide/generics/index.md)  
- [Atrybuty](https://msdn.microsoft.com/library/5x6cd29c)
+ [Atrybuty](../../../../docs/standard/attributes/index.md)

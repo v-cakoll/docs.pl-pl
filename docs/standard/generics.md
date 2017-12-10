@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: a315b111-8e48-446c-ab19-acb6405894a7
-ms.openlocfilehash: 08b8de2fe17a0032a1c1180667f39b1d6ce0feb6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: acd6f1cc3a6200140f25fc31e4f6fb0f8da5a6e3
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="generic-types-generics-overview"></a>Ogólne typy (Ogólne) — omówienie
 
@@ -22,7 +22,7 @@ Używamy ogólne cały czas w języku C#, czy jawnie lub niejawnie. Korzystając
 
 Po raz pierwszy wprowadzone do programu .NET Framework 2.0, ogólne zaangażowany zmiany języka C# i środowiska uruchomieniowego języka wspólnego (CLR). **Typy ogólne** są zasadniczo "kod szablonu" który umożliwia deweloperom Zdefiniuj [bezpieczne](https://msdn.microsoft.com/library/hbzz1a9a.aspx) struktury danych, nie poświęcając na to rzeczywisty typ danych. Na przykład `List<T>` jest [kolekcji ogólnej](xref:System.Collections.Generic) który zadeklarowany i używane w przypadku każdego typu: `List<int>`, `List<string>`, `List<Person>`itp.
 
-Tak co to jest punkt? Typy ogólne są przydatne Aby to zrozumieć, należy spojrzeć na określonej klasy przed i po dodaniu typów ogólnych. Przyjrzyjmy się `ArrayList`. W języku C# 1.0 `ArrayList` elementy zostały typu `object`. Oznacza to, że dowolny element, który został dodany dyskretnie został przekonwertowany na `object`; tym samym co się dzieje na odczyt elementów na liście (ten proces jest nazywany [boxing](https://msdn.microsoft.com/library/yz2be5wk.aspx) i konwersja unboxing odpowiednio). Opakowywanie i rozpakowywanie wpływają na wydajność. Więcej niż ta ponieważ nie ma można sprawdzić w czasie kompilacji, co jest rzeczywisty typ danych na liście. Dzięki temu wrażliwych kodu. Typy ogólne rozwiązać ten problem, udostępniając dodatkowe informacje typu danych, który będzie zawierać każde wystąpienie listy. Po prostu umieść, można dodawać tylko liczb całkowitych na `List<int>` i osoby, które mają być dodawane tylko `List<Person>`itp.
+Tak co to jest punkt? Typy ogólne są przydatne Aby to zrozumieć, należy spojrzeć na określonej klasy przed i po dodaniu typów ogólnych. Przyjrzyjmy się `ArrayList`. W języku C# 1.0 `ArrayList` elementy zostały typu `object`. Oznacza to, że dowolny element, który został dodany dyskretnie został przekonwertowany na `object`; tym samym co się dzieje na odczyt elementów na liście (ten proces jest nazywany [boxing](../../docs/csharp/programming-guide/types/boxing-and-unboxing.md) i konwersja unboxing odpowiednio). Opakowywanie i rozpakowywanie wpływają na wydajność. Więcej niż ta ponieważ nie ma można sprawdzić w czasie kompilacji, co jest rzeczywisty typ danych na liście. Dzięki temu wrażliwych kodu. Typy ogólne rozwiązać ten problem, udostępniając dodatkowe informacje typu danych, który będzie zawierać każde wystąpienie listy. Po prostu umieść, można dodawać tylko liczb całkowitych na `List<int>` i osoby, które mają być dodawane tylko `List<Person>`itp.
 
 Typy ogólne są również dostępne w czasie wykonywania, lub **reified**. Oznacza to, że środowisko wykonawcze wie, jakiego rodzaju struktury danych używany i nie można przechowywać go wydajniej w pamięci.
 
@@ -72,4 +72,4 @@ Ostatnim etapem przydatne informacje o środowisku uruchomieniowym, znajomość 
 ## <a name="further-reading-and-resources"></a>Dalsze informacje i zasoby
 
 *   [Wprowadzenie do typami ogólnymi C#](https://msdn.microsoft.com/library/ms379564.aspx)
-*   [C# przewodnik programowania w języku — ogólne](https://msdn.microsoft.com/library/512aeb7t.aspx)
+*   [C# przewodnik programowania w języku — ogólne](../../docs/csharp/programming-guide/generics/index.md)

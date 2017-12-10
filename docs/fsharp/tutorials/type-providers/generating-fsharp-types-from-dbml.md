@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6fbb6ccc-248f-4226-95e9-f6f99541dbe4
-ms.openlocfilehash: 50e0a2bb6378c82b5c6425589da8a982b5fc496a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a919c2acb2b5b8c2ce93124f2f541bd092d15c35
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="walkthrough-generating-f-types-from-a-dbml-file"></a>Wskazówki: generowanie typów F# za pomocą pliku DBML
 
@@ -24,7 +24,7 @@ Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zo
 > [!NOTE]
 Linki odwołań interfejsu API spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
 
-Tego przewodnika w celu F # 3.0 zawiera opis sposobu tworzenia typów danych z bazy danych, jeśli masz zakodowane w pliku .dbml informacji o schemacie. LINQ do SQL korzysta z tego formatu pliku do reprezentowania schematu bazy danych. LINQ do SQL pliku schematu w programie Visual Studio można wygenerować za pomocą Projektanta obiektów relacyjnych (obiektów relacyjnych). Aby uzyskać więcej informacji, zobacz [Omówienie projektanta obiektów relacyjnych](https://msdn.microsoft.com/library/bb384511.aspx) i [generowanie kodu w składniku LINQ to SQL](https://msdn.microsoft.com/library/bb386976).
+Tego przewodnika w celu F # 3.0 zawiera opis sposobu tworzenia typów danych z bazy danych, jeśli masz zakodowane w pliku .dbml informacji o schemacie. LINQ do SQL korzysta z tego formatu pliku do reprezentowania schematu bazy danych. LINQ do SQL pliku schematu w programie Visual Studio można wygenerować za pomocą Projektanta obiektów relacyjnych (obiektów relacyjnych). Aby uzyskać więcej informacji, zobacz [Omówienie projektanta obiektów relacyjnych](https://msdn.microsoft.com/library/bb384511.aspx) i [generowanie kodu w składniku LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).
 
 Typ dostawcy bazy danych Markup Language (DBML) służy do pisania kodu, który używa typy oparte na schemat bazy danych bez konieczności Określ ciąg połączenia statycznych w czasie kompilacji. Może to być przydatne, jeśli konieczne jest zezwolenie na możliwość, że końcowego aplikacja będzie korzystać z innej bazy danych, innych poświadczeń lub ciąg połączenia innego niż jeden, którego używasz do opracowywania aplikacji. Jeśli masz połączenie z bazą danych bezpośrednio używanej w czasie kompilacji i są to te same bazy danych i poświadczenia, które będą używane po pewnym czasie zbudowany aplikacji, można również użyć sqldataconnection — dostawca typów. Aby uzyskać więcej informacji, zobacz [wskazówki: uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów](accessing-a-sql-database.md).
 

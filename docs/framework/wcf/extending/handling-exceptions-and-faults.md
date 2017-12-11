@@ -10,14 +10,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a64d01c6-f221-4f58-93e5-da4e87a5682e
 caps.latest.revision: "12"
-author: Erikre
-ms.author: erikre
-manager: erikre
-ms.openlocfilehash: cf621ce53b1e0aa5fd95adbd9de01bdbd97392bb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+author: dotnet-bot
+ms.author: dotnetcontent
+manager: wpickett
+ms.openlocfilehash: 3a69acb9b640c17e6641efc6c30798e3856ef6e9
+ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/02/2017
 ---
 # <a name="handling-exceptions-and-faults"></a>Obsługa wyjątków i błędów
 Wyjątki są używane do komunikacji błędy lokalnie w obrębie implementacji klienta lub usługi. Błędy, z drugiej strony, są używane do komunikacji błędy w granicach usługi, takie jak z serwera do klienta lub na odwrót. Oprócz błędów kanały transportu często używają mechanizmów specyficznych dla transportu do komunikowania się błędy na poziomie transportu. Na przykład transportu HTTP używa kodów stanu, takie jak 404 do komunikowania się nieistniejącego punktu końcowego adresu URL (Brak żaden punkt końcowy do odesłania błędów). Ten dokument zawiera trzy sekcje, które zawierają wskazówki autorom niestandardowym kanale. Pierwsza sekcja zawiera wskazówki dotyczące czasu i sposób definiowania i zgłaszanie wyjątków. Druga sekcja zawiera wskazówki dotyczące generowania i korzystanie z błędów. Trzeci sekcji opisano sposób Podaj informacje o śledzeniu, aby ułatwić rozwiązywanie problemów uruchamianie aplikacji użytkownika niestandardowego kanału.  

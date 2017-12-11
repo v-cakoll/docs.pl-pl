@@ -1,0 +1,7 @@
+# [Współdziałanie](index.md)
+## [Przegląd współdziałania](interoperability-overview.md)
+## [Instrukcje: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C#](how-to-access-office-onterop-objects.md)
+## [Instrukcje: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM](how-to-use-indexed-properties-in-com-interop-rogramming.md)
+## [Instrukcje: użycie wywołania platformy do odtwarzania pliku Wave](how-to-use-platform-invoke-to-play-a-wave-file.md)
+## [Przewodnik: programowanie Office (C# i Visual Basic)](walkthrough-office-programming.md)
+## [Przykładowa klasa modelu COM](example-com-class.md)

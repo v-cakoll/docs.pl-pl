@@ -1,0 +1,5 @@
+# [Typy ogólne](index.md)
+## [Kolekcje ogólne w oprogramowaniu .NET Framework](collections.md)
+## [Delegaci ogólni do manipulowania tablicami i listami](delegates-for-manipulating-arrays-and-lists.md)
+## [Interfejsy ogólne](interfaces.md)
+## [Kowariancja i kontrawariancja](covariance-and-contravariance.md)

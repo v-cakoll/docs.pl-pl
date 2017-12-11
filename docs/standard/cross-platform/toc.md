@@ -1,0 +1,7 @@
+# [Tworzenie aplikacji dla wielu platform](index.md)
+## [Biblioteka klas przenośnych](cross-platform-development-with-the-portable-class-library.md)
+## [Korzystanie z biblioteki klas przenośnych z modelem MVVM](using-portable-class-library-with-model-view-view-model.md)
+## [Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform](app-resources-for-libraries-that-target-multiple-platforms.md)
+## [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](support-for-windows-store-apps-and-windows-runtime.md)
+## [Przekazywanie identyfikatora URI do środowiska wykonawczego systemu Windows](passing-a-uri-to-the-windows-runtime.md)
+## [WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream), metoda](windowsruntimestreamextensions-asrandomaccessstream-method.md)

@@ -1,0 +1,7 @@
+# [Zdarzenia](index.md)
+## [Instrukcje: subskrybowanie i anulowanie subskrypcji zdarzeń](how-to-subscribe-to-and-unsubscribe-from-events.md)
+## [Instrukcje: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework](how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+## [Instrukcje: wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](how-to-raise-base-class-events-in-derived-classes.md)
+## [Instrukcje: zdarzenia implementowania interfejsu](how-to-implement-interface-events.md)
+## [Instrukcje: użycie słownika do przechowywania wystąpień zdarzeń](how-to-use-a-dictionary-to-store-event-instances.md)
+## [Instrukcje: implementowanie niestandardowych metod dostępu zdarzeń](how-to-implement-custom-event-accessors.md)

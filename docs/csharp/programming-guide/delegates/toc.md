@@ -1,0 +1,5 @@
+# [Delegaci](index.md)
+## [Używanie delegatów](using-delegates.md)
+## [Delegaci z metodami nazwanymi lub anonimowymi](delegates-with-named-vs-anonymous-methods.md)
+## [Instrukcje: łączenie delegatów (delegatów multiemisji) (Przewodnik programowania w języku C#)](how-to-combine-delegates-multicast-delegates.md)
+## [Instrukcje: deklarowanie, tworzenie wystąpień i użycie delegowania](how-to-declare-instantiate-and-use-a-delegate.md)

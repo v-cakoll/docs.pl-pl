@@ -1,0 +1,6 @@
+# [Wprowadzenie](index.md)
+## [Migrowanie istniejących aplikacji do usługi Azure IaaS metodą „lift and shift”](lift-and-shift-existing-apps-azure-iaas.md)
+## [Migrowanie relacyjnych baz danych na platformę Azure](migrate-your-relational-databases-to-azure.md)
+## [Migrowanie istniejących aplikacji do metodyki DevOps metodą „lift and shift”](lift-and-shift-existing-apps-devops/)
+## [Przewodniki i wprowadzająca dokumentacja techniczna](walkthroughs-technical-get-started-overview.md)
+## [Wnioski](conclusions.md)

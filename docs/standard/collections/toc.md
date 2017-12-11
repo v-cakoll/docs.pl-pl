@@ -1,0 +1,8 @@
+# [Kolekcje i struktury danych](index.md)
+# [Wybieranie klasy kolekcji](selecting-a-collection-class.md)
+# [Często używane typy kolekcji](commonly-used-collection-types.md)
+# [Kiedy należy używać kolekcji ogólnych](when-to-use-generic-collections.md)
+# [Porównywanie i sortowanie w ramach kolekcji](comparisons-and-sorts-within-collections.md)
+# [Sortowane typy kolekcji](sorted-collection-types.md)
+# [Typy kolekcji: słownikowy i tabela skrótów](hashtable-and-dictionary-collection-types.md)
+# [Kolekcje bezpieczne wątkowo](thread-safe/)

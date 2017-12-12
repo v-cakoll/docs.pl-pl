@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a1d6315c2546de12e85efdd06cf2520605cb6e91
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 58003c88baf0f8aeea1a511334b99bd0295f8bf1
+ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/09/2017
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -169,7 +169,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 Alternatywnie, Otwórz program Visual Studio, otwórz menu debugowanie, wybierz pozycję `Debug/Attach to process…`i Dołącz do innego `devenv` proces, w którym edycji skryptu. Za pomocą tej metody, można łatwiej kierować konkretnej logiki w dostawcy typów interaktywnie wpisując wyrażenia do drugiego wystąpienia (z pełną IntelliSense i inne funkcje).
 
-Można wyłączyć opcję tylko mój kod debugowanie, aby łatwiej odróżnić błędy w wygenerowanym kodzie. Aby dowiedzieć się, jak włączyć lub wyłączyć tę funkcję, zobacz [nawigowanie po kodzie za pomocą debugera](https://msdn.microsoft.com/library/y740d9d3.aspx). Ponadto można również ustawić wyjątkach pierwszej szansy Przechwytywanie otwierając `Debug` menu, a następnie wybierając `Exceptions` lub wybierając klawisze Ctrl + Alt + E, aby otworzyć `Exceptions` okno dialogowe. W tym oknie dialogowym w obszarze `Common Language Runtime Exceptions`, wybierz pozycję `Thrown` pole wyboru.
+Można wyłączyć opcję tylko mój kod debugowanie, aby łatwiej odróżnić błędy w wygenerowanym kodzie. Aby dowiedzieć się, jak włączyć lub wyłączyć tę funkcję, zobacz [nawigowanie po kodzie za pomocą debugera](/visualstudio/debugger/navigating-through-code-with-the-debugger). Ponadto można również ustawić wyjątkach pierwszej szansy Przechwytywanie otwierając `Debug` menu, a następnie wybierając `Exceptions` lub wybierając klawisze Ctrl + Alt + E, aby otworzyć `Exceptions` okno dialogowe. W tym oknie dialogowym w obszarze `Common Language Runtime Exceptions`, wybierz pozycję `Thrown` pole wyboru.
 
 
 ### <a name="implementation-of-the-type-provider"></a>Implementacja dostawcy typów
@@ -404,7 +404,7 @@ Dla niektórych zastosowaniach wymazanych podanych typów nie jest wymagana. Na 
 
 - Co to są oświadczenia udostępnionego typu?
 <br />
-  - Zestaw obiektów możliwych do wymazanej podany typ są nazywane oświadczeń. W tym przykładzie w tym dokumencie typy oświadczeń wszystkich wymazanej podany `Type1..Type100` są zawsze obiektów typu string.
+  - Zestaw obiektów możliwych do wymazanej podany typ są nazywane oświadczeń. W tym przykładzie w tym dokumencie typy oświadczeń wszystkich wymazanej podany `Type1.Type100` są zawsze obiektów typu string.
 <br />
 
 Wszystkie oświadczenia udostępnionego typu muszą być zgodne z skasowanie podanego typu. (W przeciwnym razie kompilator języka F # zapewni Błąd stosowania typ dostawcy lub zostanie wygenerowany zweryfikowanie kodu platformy .NET, który nie jest prawidłowy. Typ dostawcy nie jest prawidłowy, jeśli zwróci ona kod, który udostępnia reprezentację, który nie jest prawidłowy.)

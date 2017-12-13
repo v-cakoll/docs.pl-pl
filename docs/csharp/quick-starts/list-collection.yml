@@ -9,11 +9,11 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: e00cf6badcbd39cc1e9320095169d86efb9cad8f
-  ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+  ms.openlocfilehash: 764caf36026fb96ecfdd002c6df5294f8282a4c3
+  ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 12/07/2017
+  ms.lasthandoff: 12/12/2017
 items:
 - durationInMinutes: 1
   content: "To szybki start zawiera C# interaktywnego, za pomocą przeglądarki do pisania kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg lekcje, które tworzenia, modyfikacji i Eksploruj kolekcji i tablic.\n"
@@ -31,8 +31,8 @@ items:
   content: "Obecnie używasz `string` typu na listach wykonanej do tej pory. Upewnijmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utworzymy zbioru liczb. Usuń kod do tej pory napisanym i zastąp go to:\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\nKtóra tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. Są to pierwsze dwie wartości *sekwencji Fibonacci*, sekwencji liczb. Znaleziono każdej kolejny numer Fibonacci wykonując Suma poprzednich dwóch liczb. Dodaj ten kod:\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nNaciśnij klawisz **Uruchom** Aby wyświetlić wyniki.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
 - title: "żądanie"
   durationInMinutes: 10
-  content: "Zobacz, czy można utworzyć niektórych wnioski z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj i napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
+  content: "Zobacz, czy można utworzyć niektóre z pojęć związanych z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj i napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji. (Jako wskazówki, 20 numer Fibonacci jest 6765).\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
 - title: "Żądanie ukończone"
   durationInMinutes: 3
   content: "Czy można korzystać z przypominać?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nPrzy każdej iteracji pętli tworzenia ostatnich dwóch liczb całkowitych na liście sumowanie je, a następnie dodanie tej wartości na liście. Pętla jest powtarzany aż 20 elementy dodane do listy.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- content: "Zakończono listy szybki start. To szybki start jest końcowego interakcyjne szybki start. Te przewodniki Szybki Start można kontynuować na środowiska deweloperskiego. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego. Po wykonaniu tego kontynuować [wprowadzenie do klasy](introduction-to-classes.md) w środowisku lokalnym.\n\nDowiedz się więcej o pracy z `List` wpisz [.NET przewodnik](../../standard/index.md) temat [kolekcje](../../standard/collections/index.md). Dowiesz się o innych typów kolekcji.\0"
+- content: "Zakończono listy szybki start. To szybki start jest końcowego interakcyjne szybki start. Można kontynuować te Szybki Start na środowiska deweloperskiego. Poznaj podstawy z [lokalne działania projektowe](local-environment.md) , a następnie wybierz szybki start. Możesz spróbować tego samego ćwiczenia, przejście bezpośrednio do następnego szybki start lub rozpoczynać ponownie w [numery w języku C#](numbers-in-csharp-local.md) Szybki Start.\n\nDowiedz się więcej o pracy z `List` wpisz [.NET przewodnik](../../standard/index.md) temat [kolekcje](../../standard/collections/index.md). Dowiesz się o innych typów kolekcji.\0"

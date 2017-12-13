@@ -12,11 +12,11 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.openlocfilehash: 1c9ce7a008c86d1c245ce8b7d616e05fcb3d4bbc
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: 0164c36dcfb8a851dcb40d82265390795dc3d16c
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do usług .NET i Docker
 
@@ -169,7 +169,7 @@ Przykłady użycia .NET Core 2.0. Używają Docker [kompilacji wieloetapowym](ht
 
 #### <a name="microsoft-azure-command-line-interface-cli"></a>Interfejs wiersza polecenia platformy Microsoft Azure (CLI)
 
-* [Microsoft Azure interfejs wiersza polecenia (CLI) obrazów na DockerHub](Docker image for Microsoft Azure Command Line Interface) 
+* [Microsoft Azure interfejs wiersza polecenia (CLI) obrazów na DockerHub](https://hub.docker.com/r/microsoft/azure-cli/) 
 
 * [Microsoft Azure interfejs wiersza polecenia (CLI) obrazów w witrynie GitHub](https://github.com/Microsoft/OMS-docker)
 
@@ -201,5 +201,5 @@ Teraz, kiedy znasz o różnych obrazy usługi Docker i platformy Docker, następ
 
 ## <a name="next-steps"></a>Następne kroki
 
-* [Dowiedz się podstawy Docker z platformą .NET Core](../docker/docker-basics-dotnet-core.md)
+* [Poznaj podstawy korzystania z platformy Docker z programem .NET Core](../docker/docker-basics-dotnet-core.md)
 * [Tworzenie obrazy usługi Docker .NET Core](../docker/building-net-docker-images)

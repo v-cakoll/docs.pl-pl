@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: af7b04969519cce49e9d753993245e1347f596d4
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-starts"></a>C# Szybki Start #
 
@@ -24,25 +24,25 @@ Pierwszy — lekcje opisano pojęcia języka C# przy użyciu małych fragmentów
 
 Szybki Start po lekcji Hello World są dostępne przy użyciu środowiska online przeglądarki lub na środowiska deweloperskiego. Na końcu każdej lekcji zdecyduj, czy chcesz kontynuować dalej szybki start online lub na własnym komputerze. Istnieją linki ułatwiające konfiguracji środowiska i przejdź do następnego szybki start na tym komputerze.
 
-## <a name="hello-worldhello-worldyml"></a>[Cześć ludzie](hello-world.yml)
+## <a name="hello-worldhello-worldyml"></a>[Hello World](hello-world.yml)
 
 W [Hello world](hello-world.yml) szybki start, utworzysz najbardziej podstawowa programu C#. Możesz odkryć `string` typu i sposobu pracy z tekstem.
 
-## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Numery w języku C#](numbers-in-csharp.yml)
+## <a name="numbers-in-cnumbers-in-csharpyml"></a>[Liczby w języku C#](numbers-in-csharp.yml)
 
-W [numery w języku C#](numbers-in-csharp.yml) szybki start, dowiesz się, jak komputery przechowywać cyfry oraz sposób wykonywania obliczeń z różnymi typami liczb. Poznasz podstawy zaokrąglania i jak wykonać obliczenia przy użyciu języka C#. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](numbers-in-csharp-local.md).
+W [numery w języku C#](numbers-in-csharp.yml) szybki start, dowiesz się, jak komputery przechowywać cyfry oraz sposób wykonywania obliczeń na typy liczbowe. Poznasz podstawy zaokrąglania i jak wykonać obliczenia przy użyciu języka C#. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](numbers-in-csharp-local.md).
 
 To szybki start założono, że zakończono [Hello world](hello-world.yml) samouczka.
 
-## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Gałęzie i pętli](branches-and-loops.yml)
+## <a name="branches-and-loopsbranches-and-loopsyml"></a>[Gałęzie i pętle](branches-and-loops.yml)
 
-[Gałęzie i pętli](branches-and-loops.yml) szybki start zawiera podstawowe informacje dotyczące wybierania różne ścieżki kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, który stanowi podstawę jak programy podejmując decyzje i wybrać różne akcje. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](branches-and-loops-local.md).
+[Gałęzie i pętli](branches-and-loops.yml) szybki start zawiera podstawowe informacje dotyczące wybierania różne ścieżki wykonanie kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, który stanowi podstawę jak programy podejmując decyzje i wybrać różne akcje. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](branches-and-loops-local.md).
 
 Tej lekcji początku przyjęto założenie, że zakończono [Hello World](hello-world.yml) i [numery w języku C#](numbers-in-csharp.yml) — lekcje.
 
 ## <a name="list-collectionlist-collectionyml"></a>[Kolekcja list](list-collection.yml)
 
-[Listy kolekcji](list-collection.yml) lekcji daje samouczek typu kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy, wyszukiwanie elementów i usuwanie elementów i sortowania listy. Będzie Poznaj różne rodzaje list. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](arrays-and-collections.md).
+[Listy kolekcji](list-collection.yml) lekcji daje samouczek typu kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy wyszukiwania elementów i sortować listy. Będzie Poznaj różne rodzaje list. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](arrays-and-collections.md).
 
 To początku szybki start założono, Zakończono Szybki Start wymienionych powyżej.
 

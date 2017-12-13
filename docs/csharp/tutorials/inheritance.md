@@ -10,11 +10,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: ec5ca3132ac68b85ebb517e569241f20080b4f63
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 39de8879fd902c714a58cf59c70f0a4914b2ff6e
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="inheritance-in-c-and-net"></a>Dziedziczenie w języku C# i .NET
 
@@ -179,7 +179,7 @@ W projektowaniu naszych `Publication` klasy, należy podjąć kilka decyzje doty
 
 - Jakie elementy członkowskie do uwzględnienia w naszej bazie `Publication` klasy oraz tego, czy `Publication` członków Podaj implementacji metody, lub czy `Publication` jest abstrakcyjna klasa podstawowa, która służy jako szablon dla jej klas pochodnych.
 
-  W takim przypadku `Publication` klasy zapewni implementacje metod. [Klas podstawowych abstrakcyjny projektowanie amd ich pochodne](#abstract) sekcji przedstawiono przykładową, która używa abstrakcyjnego klasy podstawowej w celu zdefiniowania metody, które klasy pochodne muszą przesłaniać. Klasy pochodne mogą się do żadnych implementacji, które jest odpowiednie dla typu pochodnego.
+  W takim przypadku `Publication` klasy zapewni implementacje metod. [Opracowywania abstrakcyjnych klas podstawowych i ich pochodne](#abstract) sekcji przedstawiono przykładową, która używa abstrakcyjnego klasy podstawowej w celu zdefiniowania metody, które klasy pochodne muszą przesłaniać. Klasy pochodne mogą się do żadnych implementacji, które jest odpowiednie dla typu pochodnego.
 
   Możliwość ponownego użycia kodu (oznacza to, wielu klas pochodnych udział deklaracji i implementacji podstawowej metody klasy i nie powinny być one zastąpione) jest zaletą nieabstrakcyjnej klasy podstawowej. W związku z tym należy dodawać członków do `Publication` w przypadku ich kod może być współużytkowane przez niektóre lub najbardziej specjalizowany `Publication` typów. Jeśli firma Microsoft nie powiedzie się w tym celu wydajnie, firma Microsoft będzie przechodzili konieczności podawania implementacje przeważającej mierze identyczny elementów członkowskich w klasach pochodnych raczej pojedynczą implementacją w klasie podstawowej. To konieczności obsługiwania zduplikowany kod w wielu lokalizacjach jest źródłem potencjalnych błędów.
 

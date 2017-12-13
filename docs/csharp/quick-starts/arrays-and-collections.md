@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 228a9dd88d0a511492ccb8b70e0231278969acbe
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="c-quick-start-collections"></a>C# szybki start: kolekcje #
 
 To szybki start zawiera wprowadzenie do języka C# i podstawy <xref:System.Collections.Generic.List%601> klasy.
 
-To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux.
+To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="a-basic-list-example"></a>Przykład podstawowa lista.
 
@@ -210,7 +210,7 @@ Zapisz plik i typ `dotnet run` wyników.
 > Aby skoncentrować się na tylko w tej sekcji, możesz przekształcić w komentarz kod, który wywołuje `WorkingWithStrings();`. Po prostu umieść dwa `/` znaków przed wywołanie podobnie do następującej: `// WorkingWithStrings();`. 
 
 ## <a name="challenge"></a>żądanie
-Zobacz, czy można utworzyć niektórych wnioski z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj i napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji.
+Zobacz, czy można utworzyć niektóre z pojęć związanych z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji. (Jako wskazówki, 20 numer Fibonacci jest 6765).
 
 ## <a name="complete-challenge"></a>Żądanie ukończone
 

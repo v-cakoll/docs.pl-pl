@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 821cca4ea6d6148410e9b179f05d5b74c4844628
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: f275f157d9a9e41407be0beac83c337c7706a95d
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="numbers-in-c-quick-start"></a>Liczby w języku C# — szybki start #
 
 To szybki start zawiera informacje na temat typu liczbowego w języku C# interaktywnie. Przedstawiono tworzenie niewielkich ilości kodu, a następnie będzie można skompilować i uruchomić ten kod. Szybki start zawiera szereg — lekcje przedstawiających operacji matematycznych w języku C# i cyfry. Że wnioski uczy również podstaw programu w języku C#.
 
-To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux.
+To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="explore-integer-math"></a>Eksploruj matematyczne liczba całkowita
 
@@ -312,8 +312,9 @@ Należy zauważyć, że obliczenia przy użyciu typu decimal zawiera więcej cyf
 
 ***Żądanie***
 
-Skoro już znasz różne typy liczbowe pisania kodu, który oblicza obszaru koło którego radius jest 2,50 cala. Należy pamiętać, że obszar koła jest radius kwadrat pomnożona przez PI. Jedną wskazówkę: C# zawiera stałą Pi, <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
+Skoro już znasz różne typy liczbowe pisania kodu, który oblicza obszaru koło którego radius jest 2,50 cala. Należy pamiętać, że obszar koła jest radius kwadrat pomnożona przez PI. Jedną wskazówkę: .NET zawiera stałą Pi, <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
 
+Należy uzyskać odpowiedzi od 19 do 20.
 Można sprawdzić odpowiedzi przez [patrzeć Zakończono przykładowy kod w witrynie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)
 
 Jeśli chcesz, spróbuj niektóre inne formuły. 

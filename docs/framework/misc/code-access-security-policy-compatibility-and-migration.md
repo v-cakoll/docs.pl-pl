@@ -1,12 +1,8 @@
 ---
 title: "Zgodność i migracja zasad zabezpieczenia dostępu kodu"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - policy migration, compatibility
@@ -16,11 +12,11 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 29e81f5e83bc3cbf9467c7940ba6acfd0a8c99b7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 11c64d3ece454e95adfc41c7d89913e9ce7363dc
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>Zgodność i migracja zasad zabezpieczenia dostępu kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -150,4 +146,5 @@ ms.lasthandoff: 10/18/2017
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: uruchamianie częściowo zaufanego kodu w bibliotece](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+ [Porady: uruchamianie częściowo zaufanego kodu w bibliotece](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)  
+ [Wytyczne dotyczące bezpiecznego programowania](../../standard/security/secure-coding-guidelines.md)

@@ -7,11 +7,11 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: d66738593a1542affc956e08bbc38a3b2b1841b9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Oprogramowanie .NET core narzędzi interfejsu wiersza polecenia (CLI)
 
@@ -34,7 +34,7 @@ Domyślnie instalowane są następujące polecenia:
 
 **Podstawowe polecenia**
 
-* [Nowy](dotnet-new.md)
+* [new](dotnet-new.md)
 * [Przywracanie](dotnet-restore.md)
 * [kompilacji](dotnet-build.md)
 * [Publikowanie](dotnet-publish.md)
@@ -68,7 +68,7 @@ Domyślnie instalowane są następujące polecenia:
 
 **Podstawowe polecenia**
 
-* [Nowy](dotnet-new.md)
+* [new](dotnet-new.md)
 * [Przywracanie](dotnet-restore.md)
 * [kompilacji](dotnet-build.md)
 * [Publikowanie](dotnet-publish.md)
@@ -146,7 +146,7 @@ Opcje do polecenia wywoływane są opcje przebiegu w wierszu polecenia. Na przyk
 
 ## <a name="migration-from-projectjson"></a>Migracja z pliku project.json
 
-Jeśli używana wersja zapoznawcza 2 narzędzi do tworzenia *project.json*— na podstawie projektów, zapoznaj się [migracji dotnet](dotnet-migrate.md) tematu zawiera informacje na temat migracji projektu do MSBuild /*.csproj*do użytku z wersji narzędzi. Dla projektów .NET Core utworzone przed w wersji Preview 2 narzędzi, albo ręcznie zaktualizować projektu, postępując zgodnie ze wskazówkami w [migracji ze środowiska DNX .NET Core interfejsu wiersza polecenia (project.json)](../migration/from-dnx.md) , a następnie użyj `dotnet migrate` lub bezpośrednio Uaktualnij swoje projekty.
+Jeśli używana wersja zapoznawcza 2 narzędzi do tworzenia *project.json*— na podstawie projektów, zapoznaj się [migracji dotnet](dotnet-migrate.md) tematu zawiera informacje na temat migracji projektu do MSBuild /*.csproj*do użytku z wersji narzędzi. Dla platformy .NET Core projektów utworzonych przed wydaniem narzędzi Preview 2 ręcznie zaktualizować projektu, postępując zgodnie ze wskazówkami w [migracji ze środowiska DNX .NET Core interfejsu wiersza polecenia (project.json)](../migration/from-dnx.md) , a następnie użyj `dotnet migrate` lub bezpośrednio uaktualnienia projekty.
 
 ## <a name="see-also"></a>Zobacz także
 

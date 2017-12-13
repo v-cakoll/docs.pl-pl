@@ -1,5 +1,5 @@
 ---
-title: "Szybki Start - gałęzie i lops — przewodnik C#"
+title: "Przewodnik Szybki Start - gałęzie i pętle - C#"
 description: "W tym szybki start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4b077a29cf42072a93b054f50a13a4580ad54304
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="branches-and-loops"></a>Gałęzie i pętli
 
 To szybki start jest przedstawienie sposobu pisania kodu, który sprawdza zmienne i zmieniona ścieżka wykonywania na podstawie tych zmiennych. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania go. Szybki start zawiera szereg lekcje, które eksplorować rozgałęzianie i zapętlenia konstrukcje w języku C#. Że wnioski uczy również podstaw programu w języku C#.
 
-To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux.
+To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Podejmowanie decyzji przy użyciu `if` — instrukcja
 
@@ -45,7 +45,7 @@ int b = 3;
 Typ `dotnet run` ponownie. Ponieważ odpowiedź jest mniejsza niż 10, nic nie jest wydrukowane. **Warunku** jesteś testowania ma wartość false. Nie masz żadnych kod do wykonania, ponieważ został zapisany tylko jedną z możliwych gałęzi dla `if` instrukcji: gałąź prawdy.
 
 > [!TIP]
-> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Przeglądanie błędów wyjścia i kod, który wygenerował błąd. Błąd compler zwykle może pomóc w znalezieniu problem. 
+> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Należy dokładnie przejrzeć dane wyjściowe błędów i kod, który wygenerował błąd. Błąd compler zwykle może pomóc w znalezieniu problem. 
 
 W tym przykładzie pierwsze pokazano możliwości `if` i typów logicznych. A *logiczna* jest zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C# definiuje specjalny typ `bool` dla zmienne typu Boolean. `if` Instrukcji sprawdza wartość `bool`. Jeśli wartość jest `true`, instrukcji następującej `if` wykonuje. W przeciwnym razie zostanie pominięte. 
 
@@ -250,7 +250,7 @@ Teraz, w tym samouczku `if` instrukcji i konstrukcji pętli w języku C#, zobacz
 - `if` Instrukcja zawiera warunek, aby zobaczyć, jeśli liczba powinna być częścią suma.
 - `for` Pętli mogą pomóc w serie kroków należy powtórzyć dla wszystkich liczb od 1 do 20.
 
-Wypróbuj ją samodzielnie. Następnie sprawdź, jak Ty. Zobaczysz jednego możliwe odpowiedzi przez [wyświetlanie kompletny kod w serwisie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Wypróbuj ją samodzielnie. Następnie sprawdź, jak Ty. Należy pobrać 63 dla odpowiedzi. Zobaczysz jednego możliwe odpowiedzi przez [wyświetlanie kompletny kod w serwisie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
 Zakończono szybki start "gałęzi i pętlę".
 

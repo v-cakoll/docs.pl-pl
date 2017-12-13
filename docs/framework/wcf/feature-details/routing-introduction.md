@@ -13,11 +13,11 @@ caps.latest.revision: "11"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 2b1347ff4e04a638ed5973f20ae64ef0058dc025
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f0205f4bc468d4a38a50fd2be36d05583ad87906
+ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/12/2017
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiającej przesyłania wiadomości, na podstawie zawartości wiadomości. Usługa routingu umożliwia tworzenie złożonej logiki routingu, która umożliwia Implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi routingu priorytet i routing multiemisji. Usługa routingu znajdują się również błąd obsługi, który pozwala zdefiniować listę kopii zapasowych punktów końcowych, do której komunikaty są wysyłane, jeśli wystąpi błąd podczas wysyłania do głównej docelowego punktu końcowego.  
@@ -48,7 +48,7 @@ Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiają
  W poniższym przykładzie zdefiniowano punktów końcowych usługi i klienta, które są używane przez usługę Routing programowo i za pomocą pliku konfiguracji.  
   
 ```xml  
-<services>  
+    <services>  
       <!--ROUTING SERVICE -->  
       <service behaviorConfiguration="routingData"  
                name="System.ServiceModel.Routing.RoutingService">  
@@ -61,7 +61,8 @@ Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiają
         <endpoint address=""  
                   binding="wsHttpBinding"  
                   name="reqReplyEndpoint"  
-                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      </service>  
+                  contract="System.ServiceModel.Routing.IRequestReplyRouter" />      
+      </service>  
     </services>  
     <behaviors>  
       <serviceBehaviors>  
@@ -413,4 +414,4 @@ using (ServiceHost serviceHost =
 ## <a name="see-also"></a>Zobacz też  
  [Filtry komunikatów](../../../../docs/framework/wcf/feature-details/message-filters.md)  
  [Kontrakty routingu](../../../../docs/framework/wcf/feature-details/routing-contracts.md)  
- [Wybieranie filtra](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)
+ [Wybieranie filtru](../../../../docs/framework/wcf/feature-details/choosing-a-filter.md)

@@ -14,11 +14,11 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b6d24356841e8b385bef47bcba0e5694b48240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 543e6496c826c864dc77e50fd096fc4cb43f600e
+ms.sourcegitcommit: 01ea3686e74ff05e4f6de3d8d46dc603d051ec00
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/13/2017
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do użycia w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji. W tym przewodniku zastosowano style i szablon, aby utworzyć zasób dostosowany przycisk umożliwiający ponowne użycie kodu i oddzielenie logiki przycisk z deklaracji przycisku. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -76,7 +76,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do u�
     </Application>  
     ```  
   
-     Zakres zasobów jest określana przez gdzie został zdefiniowany zasób. Definiowanie zasobów w `Application.Resoureses` w pliku app.xaml plik umożliwia zasobów do użycia w dowolnym miejscu w aplikacji. Aby dowiedzieć się więcej na temat definiowania zakresu zasobów, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
+     Zakres zasobów jest określana przez gdzie został zdefiniowany zasób. Definiowanie zasobów w `Application.Resources` w pliku app.xaml plik umożliwia zasobów do użycia w dowolnym miejscu w aplikacji. Aby dowiedzieć się więcej na temat definiowania zakresu zasobów, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
   
 2.  **Tworzenie stylu oraz definiować wartości właściwości podstawowych z nim:** Dodaj następujący kod do `Application.Resources` bloku. Tworzy tego znacznika <xref:System.Windows.Style> dotyczy wszystkich przycisków w ustawienia aplikacji <xref:System.Windows.FrameworkElement.Width%2A> przycisków do 90 i <xref:System.Windows.FrameworkElement.Margin%2A> do 10:  
   
@@ -328,7 +328,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację i kliknij jeden z przycisków. Zwróć uwagę, czy przycisk pozostaje wyróżnione po kliknięciu, ponieważ nadal ma fokus. Jeśli klikniesz przycisk inny przycisk Nowy zyskuje fokus podczas ostatnią utraci go.  
   
-4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** obok dodamy niektórych animacji wyzwalacze.   Dodaj następujący kod w dowolnym miejscu wewnątrz elementu `ControlTemplate.Triggers` bloku.  
+4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** obok dodamy niektórych animacji wyzwalacze. Dodaj następujący kod w dowolnym miejscu wewnątrz elementu `ControlTemplate.Triggers` bloku.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  
@@ -399,8 +399,8 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do u�
 -   Dostosowywać zachowanie w przypadku przycisków, w odpowiedzi na działania użytkownika (takich jak <xref:System.Windows.UIElement.MouseEnter>, <xref:System.Windows.UIElement.MouseLeave>, i <xref:System.Windows.Controls.Primitives.ButtonBase.Click>) które zawarte efekty animacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Utwórz przycisk przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Malowanie pełnych kolorów i gradientów — omówienie](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Omówienie skutków mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)
+ [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)

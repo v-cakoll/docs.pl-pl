@@ -17,11 +17,11 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a27e17e4940ff68f34d1e7e4accfb9e112bc412b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  
@@ -45,7 +45,7 @@ W aplikacjach istnieje możliwość, że programy obsługi, które są dołączo
 |--------------|-----------------------|  
 |Użyj istniejącej klasy Menedżera słabe zdarzeń|Jeśli chcesz subskrybować zdarzenie ma odpowiadające mu <xref:System.Windows.WeakEventManager>, użyj istniejącego menedżera słabe zdarzeń. Aby uzyskać listę menedżerów słabe zdarzeń, które są dołączone do WPF, zobacz w hierarchii dziedziczenia <xref:System.Windows.WeakEventManager> klasy. Należy jednak pamiętać, że są względnie mało menedżerów słabe zdarzeń dołączonych WPF, dzięki czemu prawdopodobnie trzeba wybrać jeden z innych metod.|  
 |Używanie klasy Menedżera ogólnego słabe zdarzeń|Użyj ogólnego <xref:System.Windows.WeakEventManager%602> kiedy istniejący <xref:System.Windows.WeakEventManager> jest nie jest dostępny, chcesz w prosty sposób wdrożenia, które nie mają danych o wydajności. Ogólnego <xref:System.Windows.WeakEventManager%602> jest mniej wydajne niż Menedżer zdarzeń słabe istniejących lub niestandardowy. Na przykład klasa ogólna ma więcej odbicia do odnajdywania zdarzenie otrzymuje nazwę zdarzenia. Ponadto kod, aby zarejestrować zdarzenia przy użyciu ogólnej <xref:System.Windows.WeakEventManager%602> jest bardziej pełne niż przy użyciu istniejącej lub niestandardowych <xref:System.Windows.WeakEventManager>.|  
-|Utwórz klasę Menedżera słabe zdarzenie niestandardowe|Utworzenie niestandardowego <xref:System.Windows.WeakEventManager> podczas możesz istniejące <xref:System.Windows.WeakEventManager> nie jest dostępna i ma najlepszą wydajność. Przy użyciu niestandardowego <xref:System.Windows.WeakEventManager> Aby subskrybować zdarzenia będą bardziej wydajne, ale ponoszenia kosztów więcej kod na początku.|  
+|Utwórz klasę Menedżera słabe zdarzenie niestandardowe|Utworzenie niestandardowego <xref:System.Windows.WeakEventManager> kiedy istniejący <xref:System.Windows.WeakEventManager> nie jest dostępna i ma najlepszą wydajność. Przy użyciu niestandardowego <xref:System.Windows.WeakEventManager> Aby subskrybować zdarzenia będą bardziej wydajne, ale ponoszenia kosztów więcej kod na początku.|  
   
  W poniższych sekcjach opisano sposobu implementacji wzorca słabe zdarzeń.  Dla celów tej dyskusji Aby subskrybować zdarzenia o następujących cechach.  
   
@@ -142,5 +142,5 @@ W aplikacjach istnieje możliwość, że programy obsługi, które są dołączo
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.WeakEventManager>  
  <xref:System.Windows.IWeakEventListener>  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)

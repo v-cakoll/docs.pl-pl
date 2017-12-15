@@ -3,15 +3,15 @@ title: polecenie Pakiet DotNet - .NET Core interfejsu wiersza polecenia
 description: "Polecenie Pakiet dotnet tworzy pakietów NuGet dla projektu platformy .NET Core."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 12/13/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 8594c863d67baf0237b63e61f28ca9ee315eeddf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: ac1ff90cb97fa4802883e70b0abdf4e77b58dd65
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="dotnet-pack"></a>Pakiet DotNet
 
@@ -45,7 +45,7 @@ Zależności NuGet spakowana projektu są dodawane do *.nuspec* plików, dzięki
 
 Domyślnie `dotnet pack` najpierw tworzy projekt. Jeśli chcesz uniknąć tego zachowania, należy przekazać `--no-build` opcji. Często jest to przydatne w scenariuszach kompilacji ciągłej integracji (CI), gdy wiesz, że kod został wcześniej utworzony.
 
-Możesz podać właściwości programu MSBuild do `dotnet pack` polecenia procesu pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference).
+Możesz podać właściwości programu MSBuild do `dotnet pack` polecenia procesu pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). [Przykłady](#examples) sekcji przedstawia sposób użycia przełącznika MSBuild z kilku różnych scenariuszy.
 
 ## <a name="arguments"></a>Argumenty
 
@@ -172,3 +172,7 @@ W projekcie sufiks wersji skonfigurowana jako `<VersionSuffix>$(VersionSuffix)</
 Ustaw wersję pakietu do `2.1.0` z `PackageVersion` właściwości programu MSBuild:
 
 `dotnet pack /p:PackageVersion=2.1.0`
+
+Projekt dla określonego pakietu [platformy docelowej](../../standard/frameworks.md):
+
+`dotnet pack /p:TargetFrameworks=net45`

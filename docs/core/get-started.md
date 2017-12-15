@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: d1453a0d-317c-4da6-b68e-422a2c0bfe49
-ms.openlocfilehash: 45b361a40148c287511fafe25de4000c1dd54102
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 1800eb5c69e2436d89f4abd3b519902c5724e411
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="get-started-with-net-core"></a>Rozpoczynanie pracy z platformą .NET Core
 
@@ -25,9 +25,9 @@ Zainstaluj oprogramowanie .NET Core na [Windows](https://www.microsoft.com/net/c
 
 Można rozpocząć, tworzenie aplikacji .NET Core, wykonując następujące samouczki krok po kroku.
 
-* [Tworzenie aplikacji C# Hello World z platformą .NET Core w Visual Studio 2017](./tutorials/with-visual-studio.md) — Dowiedz się, jak do tworzenia, debugowania i opublikować prostej aplikacji konsoli .NET Core przy użyciu języka C# i Visual Studio 2017 r.
+* [Tworzenie aplikacji C# Hello World z platformą .NET Core w Visual Studio 2017](./tutorials/with-visual-studio.md) — Dowiedz się do tworzenia, debugowania i opublikować prostej aplikacji konsoli .NET Core przy użyciu języka C# i Visual Studio 2017 r.
 * [Kompilowanie biblioteki klas C# i .NET Core w Visual Studio 2017](./tutorials/library-with-visual-studio.md) — informacje o sposobie tworzenia biblioteki klas napisane w języku C# za pomocą programu Visual Studio 2017 r.
-* [Tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w Visual Studio 2017](./tutorials/vb-with-visual-studio.md) — Dowiedz się, jak do tworzenia, debugowania i opublikować prostej aplikacji konsoli .NET Core za pomocą Visual Basic i Visual Studio 2017 r. 
+* [Tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w Visual Studio 2017](./tutorials/vb-with-visual-studio.md) — Dowiedz się do tworzenia, debugowania i opublikować prostej aplikacji konsoli .NET Core za pomocą Visual Basic i Visual Studio 2017 r. 
 * [Tworzenie biblioteki klas z języka Visual Basic i .NET Core w Visual Studio 2017](./tutorials/vb-library-with-visual-studio.md) — informacje o sposobie tworzenia biblioteki klas napisane w języku Visual Basic przy użyciu programu Visual Studio 2017 r.
 * [Rozpoczynanie pracy z kodem Visual Studio przy użyciu języka C# i .NET Core w systemie Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core) — to [Channel9](https://channel9.msdn.com) wideo przedstawiono sposób instalowania i używania [Visual Studio Code](https://www.visualstudio.com/products/code-vs), lekkie firmy Microsoft Edytor kodu i platform, utworzyć swoją pierwszą aplikację konsoli w .NET Core.
 * [Wprowadzenie do platformy .NET Core i Visual Studio 2017](https://channel9.msdn.com/Blogs/dotnet/Get-Started-NET-Core-Visual-Studio-2017) — to [Channel9](https://channel9.msdn.com) wideo przedstawiono sposób instalowania i używania [programu Visual Studio 2017](https://www.visualstudio.com/), Microsoft elementu pełni funkcjonalny IDE, aby utworzyć pierwszą Aplikacja konsoli i platform w .NET Core.

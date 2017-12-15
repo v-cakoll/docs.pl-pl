@@ -36,11 +36,11 @@ ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
 caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02ba9a999db20abce2106269522c9a3221a00cef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a2d0d5ffdca857a3a5ca58cd38b0930f254526f
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="sub-statement-visual-basic"></a>Sub — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Sub` procedury.  
@@ -70,13 +70,13 @@ End Sub
   
      Opcjonalny. Może to być jedna z następujących czynności:  
   
-    -   [Publiczna](../modifiers/public.md)  
+    -   [Public](../modifiers/public.md)  
   
-    -   [Chronione](../modifiers/protected.md)  
+    -   [Protected](../modifiers/protected.md)  
   
     -   [Friend](../modifiers/friend.md)  
   
-    -   [Prywatne](../modifiers/private.md)  
+    -   [Private](../modifiers/private.md)  
   
     -   `Protected Friend`  
   
@@ -86,11 +86,11 @@ End Sub
   
      Opcjonalny. Może to być jedna z następujących czynności:  
   
-    -   [Przeciążenia](../modifiers/overloads.md)  
+    -   [Overloads](../modifiers/overloads.md)  
   
-    -   [Zastąpienia](../modifiers/overrides.md)  
+    -   [Overrides](../modifiers/overrides.md)  
   
-    -   [Możliwym do zastąpienia](../modifiers/overridable.md)  
+    -   [Overridable](../modifiers/overridable.md)  
   
     -   [NotOverridable](../modifiers/notoverridable.md)  
   
@@ -231,13 +231,13 @@ End Sub
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/sub-statement_2.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Implements — instrukcja](implements-statement.md)  
- [Function — instrukcja](function-statement.md)  
- [Listy parametrów](parameter-list.md)  
- [Dim — instrukcja](dim-statement.md)  
- [Call — instrukcja](call-statement.md)  
+ [Implements, instrukcja](implements-statement.md)  
+ [Function, instrukcja](function-statement.md)  
+ [Lista parametrów](parameter-list.md)  
+ [Dim, instrukcja](dim-statement.md)  
+ [Call, instrukcja](call-statement.md)  
  [Z](of-clause.md)  
  [Tablice parametrów](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Porady: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Procedury rozwiązywania problemów](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
+ [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
  [Metody częściowe](../../../visual-basic/programming-guide/language-features/procedures/partial-methods.md)

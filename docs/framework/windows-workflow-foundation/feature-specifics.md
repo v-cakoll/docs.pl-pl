@@ -12,11 +12,11 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 369c8738addeb083b42063161957cf9f97e2cd1c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.openlocfilehash: e60ed6fb2fb85faa1d2d744bf29e40d3eaa639c3
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation funkcji charakterystykę
 [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]Dodaje liczbę funkcji do systemu Windows Workflow Foundation. Ten dokument opisano kilka nowych funkcji i zwraca szczegółowe informacje o scenariuszach, w których mogą być przydatne.  
@@ -149,7 +149,7 @@ ms.lasthandoff: 12/02/2017
   
 -   Przykłady:  
   
-    -   [Obiektu DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)  
+    -   [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)  
   
     -   [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)  
   
@@ -180,11 +180,11 @@ ms.lasthandoff: 12/02/2017
   
 -   Przykłady:  
   
-    -   [Obsługa w działaniu Flowchart przy użyciu TryCatch błędów](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    -   [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    -   [Obiekt StateMachine scenariusz przy użyciu kombinacji schematu blokowego i pobrania](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+    -   [Scenariusz StateMachine używający kombinacji obiektów FlowChart i Pick](../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
   
-    -   [Zatrudniania procesu](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+    -   [Proces zatrudniania](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
 -   Projektanta dokumentacji:  
   
@@ -214,9 +214,9 @@ ms.lasthandoff: 12/02/2017
   
 -   Przykłady:  
   
-    -   [Zatrudniania procesu](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
+    -   [Proces zatrudniania](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)  
   
-    -   [Proces zakupu firmowych](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
+    -   [Proces zakupów firmowych](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)  
   
 -   Projektanta dokumentacji:  
   
@@ -258,9 +258,9 @@ ms.lasthandoff: 12/02/2017
   
 -   Przykłady:  
   
-    1.  [Obsługa w działaniu Flowchart przy użyciu TryCatch błędów](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
+    1.  [Obsługa błędów w działaniu schematu blokowego przy użyciu działania TryCatch](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)  
   
-    2.  [Przy użyciu procedur działań](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
+    2.  [Używanie działań proceduralnych](../../../docs/framework/windows-workflow-foundation/samples/using-procedural-activities.md)  
   
 -   Dokumentacja projektanta: [projektantów działań Obsługa błędów](/visualstudio/workflow-designer/error-handling-activity-designers)  
   

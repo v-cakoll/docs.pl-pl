@@ -13,11 +13,11 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 67d4c4f08661bbf2febefead64e62c8a84045f47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ddc93c7d707b9569bd2ea1e2c09889d68ff056bf
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy w SqlClient Entity Framework
 W tej sekcji opisano znane problemy związane z dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient).  
@@ -58,7 +58,7 @@ SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP
  Niektóre zachowania bazy danych zależy od poziomu zgodności, ustaw w bazie danych. Jeśli Twoje `ProviderManifestToken` atrybut ma ustawioną 2005 i SQL Server w wersji jest 2005, ale poziom zgodności bazy danych jest ustawiony na "80" (SQL Server 2000), wygenerowany [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] będzie przeznaczonych dla programu SQL Server 2005, ale może nie zostać wykonana zgodnie z oczekiwaniami ze względu na Ustawienie poziomu zgodności. Na przykład jeśli nazwa kolumny w liście ORDER BY odpowiada nazwie kolumny w selektorze może spowodować utratę porządkowania informacji.  
   
 ## <a name="nested-queries-in-projection"></a>Zapytania zagnieżdżone w projekcji  
- Zapytania zagnieżdżone w klauzuli projekcji może pobrać przetłumaczyć iloczyn kartezjański zapytania na serwerze. W przypadku niektórych serwerów zaplecza w tym SQL Server może to spowodować tabeli bazy danych TempDB na uzyskanie bardzo duże. Może to zmniejszyć wydajność serwera.  
+ Zapytania zagnieżdżone w klauzuli projekcji może pobrać przetłumaczyć iloczyn kartezjański zapytania na serwerze. W przypadku niektórych serwerów zaplecza w tym SQL Server może to spowodować tabeli bazy danych TempDB uzyskanie bardzo duże. Może to zmniejszyć wydajność serwera.  
   
  Poniżej przedstawiono przykładowe zapytanie zagnieżdżone w klauzuli projekcji:  
   
@@ -70,5 +70,5 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serwer wartości generowanych przez identyfikator GUID typu tożsamości, ale dostawca musi obsługiwać zwracanie wartości generowanych przez serwer tożsamości po został wstawiony wiersz. Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, można zwrócić typu GUID generowany przez serwer w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] bazy danych za pośrednictwem [klauzuli OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Zobacz też  
- [SqlClient Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
+ [Element SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
  [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

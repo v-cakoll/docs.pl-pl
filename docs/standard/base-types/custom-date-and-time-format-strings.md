@@ -24,11 +24,11 @@ caps.latest.revision: "79"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f0346de00988a6863c212a95be3ffa9d356fe5ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11fdbcd65c4f5588d9f32357dcf344f5f8544614
+ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/14/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość będącą wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [standardowa Data i godzina ciąg formatu](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) jest interpretowana jako niestandardowa data i godzina ciąg formatu.  
@@ -691,7 +691,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 ### <a name="control-panel-settings"></a>Ustawienia Panelu sterowania  
  **Opcje regionalne i językowe** ustawienia w Panelu sterowania mają wpływ ciąg wyniku utworzone za pomocą operacji formatowania, która zawiera wiele niestandardowa data i godzina specyfikatory formatu. Te ustawienia są używane do zainicjowania <xref:System.Globalization.DateTimeFormatInfo> obiekt skojarzony z bieżącej kultury wątku, co zapewnia wartości używane do sterowania formatowania. Na komputerach, na których są używane różne ustawienia, są generowane różne ciągi wynikowe.  
   
- Ponadto, jeśli używasz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> konstruktora, aby utworzyć obiekt klasy <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje tego samego kultury bieżącej kultury systemu, wszelkie dostosowania ustala **Opcje regionalne i językowe** w Panelu sterowania zostaną zastosowane do nowego <xref:System.Globalization.CultureInfo> obiektu. Można użyć <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> constructo, aby utworzyć <xref:System.Globalization.CultureInfo> obiekt, który nie odzwierciedla dostosowania systemu.  
+ Ponadto, jeśli używasz <xref:System.Globalization.CultureInfo.%23ctor%28System.String%29?displayProperty=nameWithType> konstruktora, aby utworzyć obiekt klasy <xref:System.Globalization.CultureInfo> obiekt, który reprezentuje tego samego kultury bieżącej kultury systemu, wszelkie dostosowania ustala **Opcje regionalne i językowe** w Panelu sterowania zostaną zastosowane do nowego <xref:System.Globalization.CultureInfo> obiektu. Można użyć <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora w celu utworzenia <xref:System.Globalization.CultureInfo> obiekt, który nie odzwierciedla dostosowania systemu.  
   
 ### <a name="datetimeformatinfo-properties"></a>Właściwości DateTimeFormatInfo  
  Formatowanie ma wpływ właściwości bieżącego <xref:System.Globalization.DateTimeFormatInfo> obiektu, który jest dostarczany niejawnie według bieżącej kultury wątku lub jawnie <xref:System.IFormatProvider> parametru metody, która wywołuje formatowania. Dla <xref:System.IFormatProvider> parametr, należy określić <xref:System.Globalization.CultureInfo> obiektu, który reprezentuje kultury, lub <xref:System.Globalization.DateTimeFormatInfo> obiektu.  
@@ -701,6 +701,6 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+ [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
  [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -6,11 +6,11 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 9ff9380b318457a842dec4e41b9b74dcddcda3d3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 00140e0dfd88481b90d5c310db060c5888205c62
+ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="characteristics-of-modern-web-applications"></a>Właściwości nowoczesnych aplikacji sieci Web
 
@@ -39,9 +39,9 @@ Dotyczą one między innymi aplikacją odwołanie *eShopOnWeb*, który przedstaw
 
 Platformy ASP.NET Core jest zoptymalizowana pod kątem chmury (chmury publicznej, prywatnej chmury, żadną chmurą), ponieważ jest on ilości pamięci i wysokiej przepustowości. Mniejsze zużycie aplikacji platformy ASP.NET Core oznacza, że można obsługiwać jeden z nich na tym samym sprzęcie i płacisz za mniej zasobów, gdy za pomocą płatności — jako Przejdź hostingu usług w chmurze. Wyższej przepustowości oznacza, że może obsługiwać więcej klientów z aplikacji, podanych w tym samym sprzęcie, co dodatkowo zwiększa konieczności inwestowania w serwerów i infrastruktury obsługi.
 
-## <a name="cross-platform"></a>Różne platformy
+## <a name="cross-platform"></a>Wiele platform
 
-Platformy ASP.NET Core jest między platformami, a można uruchomić w systemie Linux i MacOS, a także systemu Windows. Spowoduje to otwarcie wiele nowych opcji dla rozwoju i wdrażaniu aplikacji skompilowanej za pomocą platformy ASP.NET Core. Kontenery docker, które są zazwyczaj uruchamiane Linux dzisiaj, może obsługiwać aplikacje platformy ASP.NET Core, dzięki czemu mogą korzystać z zalet [kontenery i mikrousług](../microservices-architecture).
+Platformy ASP.NET Core jest między platformami, a można uruchomić w systemie Linux i MacOS, a także systemu Windows. Spowoduje to otwarcie wiele nowych opcji dla rozwoju i wdrażaniu aplikacji skompilowanej za pomocą platformy ASP.NET Core. Kontenery docker, które są zazwyczaj uruchamiane Linux dzisiaj, może obsługiwać aplikacje platformy ASP.NET Core, dzięki czemu mogą korzystać z zalet [kontenery i mikrousług](../microservices-architecture/index.md).
 
 ## <a name="modular-and-loosely-coupled"></a>Moduły i luźno powiązanych
 

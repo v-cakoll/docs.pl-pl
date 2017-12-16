@@ -19,18 +19,18 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bf609a8c350a44fc802cce0ec10693431bbf4f42
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 45cbf9fc6ecda5c1695ee3441fab7fde6c423861
+ms.sourcegitcommit: 5bfcb8d341239df251351f318038d31cdc9159d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/15/2017
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Porady: Pisanie i odbieranie wiadomości w bloku przepływu danych
 Ten dokument zawiera opis sposobu przepływu danych tpl umożliwia pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych tpl udostępnia metody synchroniczne i asynchroniczne do zapisywania wiadomości i odczytywania wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
   
 > [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+>  Biblioteka przepływu danych tpl ( <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw) nie jest dystrybuowane z programu .NET Framework. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w programie Visual Studio, wybierz pozycję **Zarządzaj pakietami NuGet** z **projektu** menu, a następnie wyszukaj w trybie online `System.Threading.Tasks.Dataflow` pakietu.  
+
 ## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Zapisywania i odczytywania synchronicznie z bloku przepływu danych  
  W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę, aby zapisać <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> bloku przepływu danych i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> metody do odczytu z tego samego obiektu.  
   
@@ -74,4 +74,4 @@ Ten dokument zawiera opis sposobu przepływu danych tpl umożliwia pisanie i odb
  W tym przykładzie pokazano, jak można odczytywać i zapisywać bezpośrednio do bloku komunikatów. Możesz również nawiązać bloków przepływu danych formularza *potoki*, liniowego sekwencji bloków przepływu danych, które są lub *sieci*, wykresy bloków przepływu danych, które są. W potoku lub w sieci źródeł asynchronicznie propagację danych do obiektów docelowych, wraz ze wzrostem dostępności danych. Na przykład, który tworzy potoku przepływu danych podstawowych, zobacz [wskazówki: tworzenie potoku przepływu danych](../../../docs/standard/parallel-programming/walkthrough-creating-a-dataflow-pipeline.md). Aby uzyskać przykład tworzenia bardziej złożonych sieci przepływu danych, zobacz [wskazówki: Korzystanie z przepływu danych w aplikacji formularzy systemu Windows](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -14,17 +14,17 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 46e79e67b5d6f088eb2a0fb39e6f4f10c6ed8549
-ms.sourcegitcommit: 7296449e03f747528f9bc59954c74bf4e359cc1e
+ms.openlocfilehash: cee014956ff4ba2f8e0f66df5bd46a4e843352e4
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj program .NET Framework dla deweloperów
 
 .NET jest integralną częścią wiele aplikacji działających w systemie Windows i zawiera często używane funkcje uruchomić te aplikacje. Dla deweloperów .NET Framework zapewnia kompleksowe i spójny model programowania do tworzenia aplikacji, które wizualnie ogłuszania wrażenia użytkowników oraz bezproblemową i bezpieczną komunikację.  
 
-Ten artykuł zawiera łącza do instalowania wszystkie wersje programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] na tym komputerze. Jeśli jesteś deweloperem umożliwia także linki do pobrania i wykonać ponowną dystrybucję programu .NET Framework z aplikacjami.
+Ten artykuł zawiera łącza do instalowania wszystkie wersje programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] na tym komputerze. Jeśli jesteś deweloperem umożliwia także linki do pobrania i wykonać ponowną dystrybucję programu .NET Framework z aplikacjami. Informacje na temat wdrażania wersji .NET Framework za pomocą aplikacji, zobacz [.NET Framework — przewodnik wdrażania dla deweloperów](../deployment/deployment-guide-for-developers.md).
 
 > [!NOTE]
 > Ten temat jest przeznaczony dla deweloperów chcących albo zainstalować program .NET Framework w systemie własnych lub który chcesz zainstalować go z aplikacji. Aby użytkownicy zainteresowani Instalowanie programu .NET Framework, zobacz tematy, które omówiono w nim Instalowanie programu .NET Framework w określonych systemach operacyjnych, takich jak [Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016](on-windows-10.md).  

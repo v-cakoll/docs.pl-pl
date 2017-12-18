@@ -1,7 +1,7 @@
 ---
 title: ".NET framework — przewodnik wdrażania dla deweloperów"
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 12/14/2017
 ms.prod: .net-framework
 ms.technology: dotnet-clr
 ms.topic: article
@@ -12,14 +12,14 @@ ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 287005af09f3f022c368d3c8fab12ad02b30e944
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 08716b0988e8c76144d8e0a3871c7c91f7419306
+ms.sourcegitcommit: 4a96a0fe9f87de70291245d71b76c7d1b15127ae
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/17/2017
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET framework — przewodnik wdrażania dla deweloperów
-Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1, 4.6.2, lub .NET Framework 4.7 lub 4.7.1 w swoich aplikacjach.
+Ten temat zawiera informacje dla deweloperów, którzy chcą zainstalować dowolnej wersji programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] w swoich aplikacjach.
 
 Pobieranie łączy, zobacz sekcję [pakiety redystrybucyjne](#redistributable-packages). Możesz również pobrać pakiet redystrybucyjny pakiety i pakiety językowe z tych stronach witryny Microsoft Download Center:
 
@@ -44,9 +44,9 @@ Pobieranie łączy, zobacz sekcję [pakiety redystrybucyjne](#redistributable-pa
 > [!NOTE]
 > Wyrażenie " [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i zwalnia jego punktu" odwołuje się do [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i wszystkich nowszych wersji.
 
-- [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 i 4.7.1 są aktualizacje w miejscu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], co oznacza korzystają z tej samej wersji środowiska uruchomieniowego, ale wersji zestawu są aktualizowane i zawiera nowe typy i składniki.
+- Wersje programu .NET Framework z [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] za pośrednictwem [!INCLUDE[net_current](../../../includes/net-current-version.md)] są aktualizacje w miejscu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], co oznacza korzystają z tej samej wersji środowiska uruchomieniowego, ale wersji zestawu są aktualizowane i zawiera nowe typy i składniki.
 
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i zwalnia jego punktu są tworzone przyrostowo na [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Po zainstalowaniu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 lub 4.7.1 w systemie, który ma [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zainstalowane, zestawy w wersji 4 są zamieniane na nowsze wersje.
+- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i zwalnia jego punktu są tworzone przyrostowo na [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]. Po zainstalowaniu [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub zwalnia jego punktu w systemie, który ma [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] zainstalowane, zestawy w wersji 4 są zamieniane na nowsze wersje.
 
 - Jeśli utworzono odwołanie do firmy Microsoft [pakietu poza pasmem](http://msdn.microsoft.com/library/dn151288\(v=vs.110\).aspx) w aplikacji, zestaw zostaną uwzględnione w pakiecie aplikacji.
 
@@ -342,7 +342,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 - [Kody wyników programu Windows Update Agent](http://go.microsoft.com/fwlink/?LinkId=180951)
 
 ## <a name="uninstalling-the-net-framework"></a>Odinstalowywanie programu .NET Framework
- Począwszy od [!INCLUDE[win8](../../../includes/win8-md.md)], można odinstalować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 lub 4.7.1 przy użyciu **funkcje systemu Windows i wyłącza** w Panelu sterowania. W starszych wersjach systemu Windows, można odinstalować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 lub 4.7.1 przy użyciu **Dodaj lub usuń programy** w Panelu sterowania.
+ Począwszy od [!INCLUDE[win8](../../../includes/win8-md.md)], można odinstalować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub jeden z jego punktu zwalnia przy użyciu **funkcje systemu Windows i wyłącza** w Panelu sterowania. W starszych wersjach systemu Windows, można odinstalować [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub jeden z jego punktu zwalnia przy użyciu **Dodaj lub usuń programy** w Panelu sterowania.
 
 > [!IMPORTANT]
 > Dla systemów Windows 7 i starszych systemach operacyjnych, odinstalowywanie [!INCLUDE[net_v451](../../../includes/net-v451-md.md)], 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7 lub 4.7.1 nie przywrócić [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] plików i odinstalowywania [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] nie przywrócić [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] plików. Jeśli chcesz powrócić do starszej wersji, należy ponownie zainstalować go i wszelkie aktualizacje.
@@ -403,6 +403,6 @@ Poniższa tabela zawiera listę pakietów językowych .NET Framework, które są
  [Przewodnik wdrażania dla administratorów](../../../docs/framework/deployment/guide-for-administrators.md)  
  [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md)  
  [Zainstaluj program .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)  
- [Rozwiązywanie problemów z zablokowaną .NET Framework i odinstalowywaniem programu](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
- [Zmniejszenie liczby systemu ponownych uruchomień podczas .NET Framework 4.5 instalacji](../../../docs/framework/deployment/reducing-system-restarts.md)  
- [Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+ [Rozwiązywanie problemów z zablokowaną instalacją i odinstalowywaniem programu .NET Framework](../../../docs/framework/install/troubleshoot-blocked-installations-and-uninstallations.md)  
+ [Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5](../../../docs/framework/deployment/reducing-system-restarts.md)  
+ [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

@@ -41,6 +41,7 @@
 ### [Implementowanie magistrali zdarzeń z oprogramowaniem RabbitMQ na potrzeby środowisk testowych lub deweloperskich](multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md)
 ### [Subskrybowanie zdarzeń](multi-container-microservice-net-applications/subscribe-events.md)
 ### [Testowanie aplikacji internetowych i usług ASP.NET Core](multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md)
+### [Implementowanie zadań w tle w mikrousługach za pomocą interfejsu IHostedService](multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md)
 ## [Rozwiązywanie problemów ze złożonościami biznesowymi w mikrousłudze z wzorcami DDD i CQRS](microservice-ddd-cqrs-patterns/index.md)
 ### [Stosowanie uproszczonych wzorców CQRS i DDD w mikrousługach](microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md)
 ### [Stosowanie zasad CQRS i CQS w mikrousługach DDD w ramach aplikacji eShopOnContainers](microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md)

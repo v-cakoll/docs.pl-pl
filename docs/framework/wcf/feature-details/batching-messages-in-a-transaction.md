@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9effe9b44a8e6f786103162930852de80ab4f8d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0587624dd3b9bc12c6e421343ad2cdc1da6b970f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-messages-in-a-transaction"></a>Tworzenie partii komunikatów w ramach transakcji
 Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawność i niezawodne dostarczanie komunikatów. Transakcje, jednak operacje kosztowne i może znacznie zmniejszyć wydajność obsługi wiadomości. Jednym ze sposobów poprawy wydajności przesyłania wiadomości jest używana aplikacja odczytywać i przetwarzać wiele komunikatów w ramach jednej transakcji. Jest kompromis między wydajnością i odzyskiwanie: jak zwiększa liczbę komunikatów w partii, co powoduje ilość pracy odzyskiwania, który wymagany, jeśli wycofywania transakcji. Należy zauważyć różnicę między tworzenie partii komunikatów w transakcji i sesje. A *sesji* jest grupowanie powiązanych wiadomości, które są przetwarzane przez pojedynczą aplikacją i zatwierdzona jako pojedyncza jednostka. Sesje są zazwyczaj stosowane, gdy grupy powiązane komunikaty, które muszą zostać przetworzone jednocześnie. Na przykład jest online zakupów witryna sieci Web. *Partie* są używane do przetwarzania wielu, niepowiązanych wiadomości w taki sposób, że zwiększa komunikatu przepływności. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]sesje, zobacz [grupowania w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md). Komunikaty w partii są również przetwarzane przez pojedynczą aplikacją i zatwierdzone jako pojedyncza jednostka, ale może być Brak relacji między komunikatami w partii. Tworzenie partii komunikatów w ramach transakcji jest optymalizacji, która nie zmienia sposób uruchamiania aplikacji.  
@@ -29,11 +30,11 @@ Aplikacje umieszczonych w kolejce używać transakcji, aby zapewnić poprawnoś�
 ## <a name="committing-a-transaction"></a>Zatwierdzanie transakcji  
  Transakcji wsadowej dba oparte na następujących czynności:  
   
--   `MaxBatchSize`. Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowania. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w partii. Po osiągnięciu tej liczby dba partii. Jest to wartość nie jest ścisłym limit, można przekazać partii przed otrzymaniem to liczba komunikatów.  
+-   `MaxBatchSize`., Właściwość <xref:System.ServiceModel.Description.TransactedBatchingBehavior> zachowania. Ta właściwość określa maksymalną liczbę wiadomości, które są umieszczane w partii. Po osiągnięciu tej liczby dba partii. Jest to wartość nie jest ścisłym limit, można przekazać partii przed otrzymaniem to liczba komunikatów.  
   
--   `Transaction Timeout`. Po upływie limitu czasu transakcji 80 procent, dba partii i utworzeniu nowej instancji. Oznacza to, że jeśli 20% lub mniej czasu dla transakcji ukończyć pozostaje, dba partii.  
+-   `Transaction Timeout`., Po upływie limitu czasu transakcji 80 procent, dba partii i utworzeniu nowej instancji. Oznacza to, że jeśli 20% lub mniej czasu dla transakcji ukończyć pozostaje, dba partii.  
   
--   `TransactionScopeRequired`. Podczas przetwarzania wsadowego komunikatów, jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znalezienia punktu, który ma `TransactionScopeRequired`  =  `false`, zatwierdza partii i ponownie otwiera nową instancję po otrzymaniu pierwszego komunikatu z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`., Podczas przetwarzania wsadowego komunikatów, jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znalezienia punktu, który ma `TransactionScopeRequired`  =  `false`, zatwierdza partii i ponownie otwiera nową instancję po otrzymaniu pierwszego komunikatu z `TransactionScopeRequired`  =  `true` i `TransactionAutoComplete` = `true`.  
   
 -   Jeśli nie więcej istnieją wiadomości w kolejce, a następnie bieżącej partii został przekazany, nawet jeśli `MaxBatchSize` nie został osiągnięty lub nie upłynął limit czasu transakcji 80 procent.  
   
@@ -93,4 +94,4 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(OrderProcessorService)))
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Usługi kolejkowania wiadomości w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
+ [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

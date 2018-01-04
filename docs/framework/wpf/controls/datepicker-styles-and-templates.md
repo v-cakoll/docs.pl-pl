@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbe8a3935da2d9aa928467b4c64da455f3b53c5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4683ebd66afb2d4ac5bfa615336787c4006b4335
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datepicker-styles-and-templates"></a>Style selektora daty i szablony
 W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.DatePicker> formantu. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> umożliwiają unikatowego wyglądu formantu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -89,7 +90,7 @@ W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.Date
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [Style formantu i szablony](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+ [Style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

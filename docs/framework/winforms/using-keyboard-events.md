@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19bad48188a039baeeb6365a2cd38671f83fca4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 394ebc503338ad73001aa9859e0aa0d9c3fa42b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-keyboard-events"></a>Używanie zdarzeń klawiatury
 Większość programów formularzy systemu Windows przetwarzania danych wprowadzonych z klawiatury poprzez obsługi zdarzenia klawiatury. Ten temat zawiera omówienie zdarzenia klawiatury, w tym informacji o tym, kiedy należy używać każdego zdarzenia i dane, które jest dostarczone dla każdego zdarzenia.  Zobacz też [Przegląd obsługi zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Przegląd zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\)).  
@@ -49,6 +50,6 @@ Większość programów formularzy systemu Windows przetwarzania danych wprowadz
 |<xref:System.Windows.Forms.Control.KeyUp>|To zdarzenie jest wywoływane, gdy użytkownik zwolni klawisz fizycznych.|Program obsługi dla <xref:System.Windows.Forms.Control.KeyUp> odbiera:<br /><br /> <ul><li>A <xref:System.Windows.Forms.KeyEventArgs> parametru:<br /><br /> <ul><li>Zapewniające <xref:System.Windows.Forms.KeyEventArgs.KeyCode%2A> właściwości (który określa przycisku klawiatury fizycznych).</li><li><xref:System.Windows.Forms.KeyEventArgs.Modifiers%2A> Właściwości (SHIFT, CTRL lub ALT).</li><li><xref:System.Globalization.SortKey.KeyData%2A> Właściwości (które łączy kod klucza i modyfikatora).</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzanie z klawiatury w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
  [Działanie wprowadzania z klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md)  
- [Wejście myszy w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

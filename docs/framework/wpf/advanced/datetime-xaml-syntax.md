@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e261018e6c7b9fea9ad449c5e92a131df40807
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3010d3123e78a5e292c5ac78ef4894962fb8f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datetime-xaml-syntax"></a>DateTime — Składnia XAML
 Niektóre formanty, takie jak <xref:System.Windows.Controls.Calendar> i <xref:System.Windows.Controls.DatePicker>, właściwości, które używają <xref:System.DateTime> typu. Mimo że początkowej daty lub godziny dla tych kontrolek zazwyczaj określić w kodem w czasie wykonywania, można określić początkowej daty lub godziny w języku XAML. WPF XAML parser obsługuje analizowania <xref:System.DateTime> wartości przy użyciu składni wbudowanego tekstu XAML. W tym temacie opisano specyfice <xref:System.DateTime> składni tekstu XAML.  
@@ -85,4 +86,4 @@ Niektóre formanty, takie jak <xref:System.Windows.Controls.Calendar> i <xref:Sy
  Jak wspomniano wcześniej, <xref:System.DateTime> w języku XAML może być określona jako dowolny ciąg, który jest dopuszczalna jako wejściowe dla <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. Dotyczy to również inne formaty formalny (na przykład <xref:System.Globalization.DateTimeFormatInfo.UniversalSortableDateTimePattern%2A>) i formatów, które nie są sformalizowane jako określonego <xref:System.Globalization.DateTimeFormatInfo> formularza. Na przykład formularz `YYYY/mm/dd` jest dopuszczalna jako wejściowe dla <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>. W tym temacie podjęto próby opisania wszystkich możliwych formatów, które będzie działać, a zamiast tego zaleca wzorzec krótkiej daty jako standardowe rozwiązanie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce594234e601cd8feb4723bbc383db9e3ed40522
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d21667ada5592c62824a97b4a8a9b8127abab75a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>Konwertowanie ciągów na typy danych programu .NET Framework
 Do przekonwertowania ciągu na typ danych .NET Framework, należy użyć **obiekt XmlConvert** — metoda, która pasuje do wymagań aplikacji. Aby uzyskać listę wszystkich metod konwersji danych dostępne w **obiekt XmlConvert** , zobacz <xref:System.Xml.XmlConvert>.  
@@ -56,9 +59,9 @@ DateTime date = new DateTime (2001, 08, 04);
 writer.WriteElementString("Date", XmlConvert.ToString(date));  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
- `<Date>2001-08-04T00:00:00</Date>`.  
+ `<Date>2001-08-04T00:00:00</Date>`.,  
   
  Poniższy kod konwertuje całkowitą na ciąg:  
   
@@ -74,7 +77,7 @@ Int32 value = 200;
 writer.WriteElementString("Number", XmlConvert.ToString(value));  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
  `<Number>200</Number>`  
   

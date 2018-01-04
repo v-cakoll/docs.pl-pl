@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62c207f6074e33813887c6903f5285ee72d14e85
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 035834959aa5f9340727327b22cae93b3f21b056
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-basics"></a>Zarządzana wątkowość — podstawy
 Pierwsze pięć tematy w tej sekcji mają ułatwić określenie, kiedy używać zarządzanych wątków i opisano niektóre podstawowe funkcje. Aby informacji na temat klas, które zapewniają dodatkowe funkcje, zobacz [wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md) i [podstawowych Omówienie synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  
@@ -45,16 +48,16 @@ Pierwsze pięć tematy w tej sekcji mają ułatwić określenie, kiedy używać 
  [Zarządzane stany wątków](../../../docs/standard/threading/managed-thread-states.md)  
  Opisano stany wątków podstawowych oraz wyjaśniono, jak wykryć, czy wątek jest uruchomiony.  
   
- [Na pierwszym planie oraz wątki w tle](../../../docs/standard/threading/foreground-and-background-threads.md)  
+ [Wątki pierwszego planu i tła](../../../docs/standard/threading/foreground-and-background-threads.md)  
  Wyjaśniono różnice między wątkami pierwszego planu i tła.  
   
  [Zarządzana i niezarządzana wątkowość w systemie Windows](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  Związek między zarządzana i niezarządzana wątkowość, zawiera listę zarządzanych odpowiedników wątkowość interfejsów API systemu Windows i w tym artykule omówiono interakcji apartamentach COM i zarządzanych wątków.  
   
- [Thread.Suspend, wyrzucanie elementów bezużytecznych i punkty bezpieczeństwa](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
+ [Thread.Suspend, odzyskiwanie pamięci i punkty bezpieczeństwa](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
  W tym artykule opisano wątku zawieszenia i odzyskiwanie pamięci.  
   
- [Pamięć lokalna wątku: Powiązane z wątkiem pola statyczne i gniazda danych](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [Pamięć lokalna wątku: powiązane z wątkiem pola statyczne i gniazda danych](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  W tym artykule opisano mechanizmy magazynu powiązane z wątkiem.  
   
  [Anulowanie w zarządzanych wątkach](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
@@ -71,7 +74,7 @@ Pierwsze pięć tematy w tej sekcji mają ułatwić określenie, kiedy używać 
  [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
  W tym artykule opisano klasy zarządzane używane do synchronizowania działania wiele wątków.  
   
- [Zarządzana wątkowość — najlepsze praktyki](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Zarządzana wątkowość — najlepsze rozwiązania](../../../docs/standard/threading/managed-threading-best-practices.md)  
  W tym artykule opisano typowe problemy z wielowątkowość i strategii unikanie problemów.  
   
  [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  

@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 905f30d8b7e6d7c10a0e2b32109076e2950a99ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b82943a2382fd18a2ddbcee69707a02b97661ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>Delegaty ogólne do manipulowania tablicami i listami
 Ten temat zawiera omówienie delegatów konwersje, predykatów wyszukiwania i działań podejmowanych w przypadku elementów tablicy lub kolekcji.  
@@ -52,6 +55,6 @@ Ten temat zawiera omówienie delegatów konwersje, predykatów wyszukiwania i dz
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
  <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
  [Typy ogólne](../../../docs/standard/generics/index.md)  
- [Kolekcje ogólne w programie .NET Framework](../../../docs/standard/generics/collections.md)  
+ [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)  
  [Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)  
- [Kowariancja i Kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)
+ [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f17ec5f48115f3e85852f33ea926657df172a2da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 745a5b87119bbce3211332eee9f23d80c15c9c28
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-partial-trust-security"></a>Zabezpieczenie częściowej relacji zaufania WPF
 <a name="introduction"></a>Ogólnie rzecz biorąc można ograniczyć aplikacji internetowych, z mające bezpośredni dostęp do zasobów systemowych krytyczne, aby zapobiec uszkodzeniu złośliwe. Domyślnie [!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)] i języki skryptów po stronie klienta nie będą mogli uzyskiwać dostęp do zasobów systemu. Ponieważ [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] aplikacje obsługiwane w przeglądarce może być uruchamiany z przeglądarki, powinny odpowiadać podobny zestaw ograniczeń. Aby wymusić ograniczenia te [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] opiera się na obu [!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] i [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] (zobacz [strategii zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)). Domyślnie aplikacje obsługiwane w przeglądarce żądań strefy internetowej [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] zestaw uprawnień, niezależnie od tego, czy są one uruchamiane z Internetu, lokalnego intranetu lub komputera lokalnego. Aplikacje uruchamiane przy użyciu innych mniej niż pełny zestaw uprawnień są określane jako działać z częściowa relacja zaufania.  
@@ -174,6 +175,6 @@ ms.lasthandoff: 11/21/2017
  Alternatywnie można użyć modelu wdrażania zaufanych ClickOnce do wdrożenia pełnego zaufania z dowolnej strefie zabezpieczeń. Aby uzyskać więcej informacji, zobacz [zaufane Omówienie wdrożenia aplikacji](/visualstudio/deployment/trusted-application-deployment-overview) i [zabezpieczeń](../../../docs/framework/wpf/security-wpf.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczeń](../../../docs/framework/wpf/security-wpf.md)  
- [Strategia zabezpieczeń WPF - zabezpieczeń platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
- [Strategia zabezpieczeń WPF — Engineering zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+ [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)  
+ [Strategia zabezpieczeń WPF — zabezpieczenia platformy](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)  
+ [Strategia zabezpieczeń WPF — projekt zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0f407f1c17c67ec99f4499b89c49932a4ba6d32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d551a9d4ba6a66a02718f9184d962539361aa6c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>Porady: zapewnianie pomocy w aplikacji Windows
 Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika można dołączyć tematów pomocy w pliku pomocy do określonych formantów na formularzach systemu Windows. Może to być plik Pomocy HTML lub HTMLHelp 1.x lub format większa.  
@@ -66,7 +67,7 @@ Można również użyć <xref:System.Windows.Forms.HelpProvider> składnika moż
  Można również użyć <xref:System.Windows.Forms.HelpProvider> składnik, aby wyświetlić Pomoc wyskakująca, nawet jeśli jest ona skonfigurowana do wyświetlania plików pomocy dla formantów na formularzach systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie wyskakujących pomocy](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: wyświetlanie pomocy podręcznej](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- [Pomoc w kontroli używanie etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Integrowanie pomocy użytkownika w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Formularze systemu Windows](../../../../docs/framework/winforms/index.md)
+ [Instrukcje: wyświetlanie pomocy podręcznej](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
+ [Pomoc do kontrolek przy użyciu etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Integrowanie pomocy użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [Windows Forms](../../../../docs/framework/winforms/index.md)

@@ -14,17 +14,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ceeedf3d6b73d08ce8aeade74288dc797d462123
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 47410b2a0259e81e7009d547b0c2d6c742b15f25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Zmienianie wyglądu formularzy systemu Windows
 Można dostosować wygląd aplikacji formularzy systemu Windows na wiele sposobów, np. Zmiana obramowania, nieprzezroczystość kształtu, style, lub ustawienie obraz tła dla aplikacji Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Zmienianie granic formularzy systemu Windows](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
+ [Instrukcje: zmienianie granic formularzy Windows Forms](../../../docs/framework/winforms/how-to-change-the-borders-of-windows-forms.md)  
  Pokazuje, jak zmienić styl obramowania formularza.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -47,11 +48,11 @@ Można dostosować wygląd aplikacji formularzy systemu Windows na wiele sposob�
  Ta klasa opisuje i zawiera linki do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dostosowywanie rozmiaru i skali formularzy systemu Windows](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
+ [Dostosowywanie rozmiaru i skali formularzy Windows Forms](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)  
  Zawiera łącza do tematów, które przedstawiają sposób zmiany rozmiaru i skali formularza.  
   
- [Grafika i rysowanie w formularzach systemu Windows](../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Grafika i rysowanie w formularzach Windows Forms](../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  Zawiera linki do tematów opisujących sposób wykonywania Rysowanie niestandardowe w formularzach systemu Windows.  
   
- [Formanty z wbudowaną obsługą rysowania przez właściciela](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [Kontrolki z wbudowaną obsługą rysowania przez właściciela](../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
  Obsługa rysowania przez właściciela listy w formantach formularzy systemu Windows.

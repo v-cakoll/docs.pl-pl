@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34fe3d74adc94930710cf7ee55013b471a2bd43c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 836702a3200a21c6a9830bdcd1f74a78129b5a6c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="select-nodes-using-xpath-navigation"></a>Wybierz węzeł, za pomocą wyrażenia XPath nawigacji
 XML modelu DOM (Document Object) zawiera metody, które umożliwiają użycie nawigacji XML Path Language (XPath) do informacji dotyczących zapytań w modelu DOM. Można znaleźć węzła jednej, określonej lub aby znaleźć wszystkie węzły, które spełniają pewne kryteria, można użyć wyrażenia XPath.  
@@ -170,4 +173,4 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

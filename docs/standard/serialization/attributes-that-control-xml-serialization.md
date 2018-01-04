@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de1b43b62a8c16fd4b000093977805680ba0b38d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e93912fc221d5c76dd5a462e6141fae2d0f4ca16
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="attributes-that-control-xml-serialization"></a>Atrybuty, które kontrolują serializacji XML
 Możesz stosowanie atrybutów w poniższej tabeli do klas i klasy elementów członkowskich do kontrolowania sposobu, w jaki <xref:System.Xml.Serialization.XmlSerializer> serializuje i deserializuje wystąpienia klasy. Aby zrozumieć, jak te atrybuty sterowania serializacją XML, zobacz [kontrolowanie atrybutów za pomocą serializacji XML](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md).  
@@ -53,9 +56,9 @@ Możesz stosowanie atrybutów w poniższej tabeli do klas i klasy elementów cz�
  Aby kontrolować zakodowanego serializacji XML protokołu SOAP, zobacz [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Porady: Określ nazwę elementu alternatywnego strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

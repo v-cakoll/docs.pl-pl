@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 5bae77fc4e0df9d0bc7fecfad25adfcee2419084
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)
 
@@ -85,7 +88,7 @@ Jeśli interfejs API sieci web jest już obsługiwane dla innych klientów, moż
 
 W poniższej tabeli decyzji przedstawiono niektóre podstawowe czynniki, które należy wziąć pod uwagę podczas wybierania między aplikacją sieci web tradycyjnych i SPA.
 
-  | **Współczynnik** | **Aplikacja sieci Web tradycyjny** | **Aplikacji jednej strony** |
+  | **Współczynnik** | **Aplikacja sieci Web tradycyjny** | **Aplikacja jednostronicowa** |
   |---|---|---|
   | Wymagane zespołu znajomość JavaScript/TypeScript | **Minimalny** | **Wymagane** |
   | Obsługa przeglądarki bez obsługi skryptów | **Obsługiwane** | **Nieobsługiwane** |

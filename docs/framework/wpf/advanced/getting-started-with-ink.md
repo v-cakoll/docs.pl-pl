@@ -22,11 +22,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dc8ffe9ad68060d9dfbcafe99133a736237a2bb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-ink"></a>Wprowadzenie do użycia atramentu
 Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedykolwiek. Odręczne powstał z jest następstwem COM i formularze systemu Windows metody programowania do osiągnięcia Pełna integracja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Nie trzeba zainstalować oddzielne zestawy SDK lub bibliotek środowiska uruchomieniowego.  
@@ -88,7 +89,7 @@ Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedyk
  [!code-vb[InkCanvasConsoleApp#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InkCanvasConsoleApp/VisualBasic/Module1.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Elektroniczne pismo odręczne](../../../../docs/framework/wpf/advanced/digital-ink.md)  
- [Zbieranie pisma odręcznego](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
- [Rozpoznawania pisma ręcznego](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
- [Przechowywanie odręcznego](../../../../docs/framework/wpf/advanced/storing-ink.md)
+ [Cyfrowy atrament](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Zbieranie atramentu](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+ [Rozpoznawanie pisma odręcznego](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+ [Przechowywanie pisma odręcznego](../../../../docs/framework/wpf/advanced/storing-ink.md)

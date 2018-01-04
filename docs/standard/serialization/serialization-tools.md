@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ea06f1ce1d49b731a37d28a43626b05380a3718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33da3336cc78763de080eb21e3b84fd4cfdc7716
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-tools"></a>Narzędzia do serializacji
 Ta sekcja zawiera szczegółowe informacje dotyczące narzędzia serializacji. Wszystkie narzędzia, które można uruchomić z wiersza polecenia.  
@@ -28,7 +31,7 @@ Ta sekcja zawiera szczegółowe informacje dotyczące narzędzia serializacji. W
   
 |Narzędzie|Opis|  
 |----------|-----------------|  
-|[Narzędzie generowania serializatora XML (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Tworzy zestaw serializacji XML dla typów w określonym zestawie, aby poprawić wydajność wykonywania <xref:System.Xml.Serialization.XmlSerializer>.|  
+|[Narzędzie generatora serializatora XML (Sgen.exe)](../../../docs/standard/serialization/xml-serializer-generator-tool-sgen-exe.md)|Tworzy zestaw serializacji XML dla typów w określonym zestawie, aby poprawić wydajność wykonywania <xref:System.Xml.Serialization.XmlSerializer>.|  
 |[Narzędzie definicji schematu XML (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)|Generuje schematów XML, które podlegają język XSD proponowanych przez konsorcjum World Wide Web (W3C). Narzędzie generuje typowych klas środowiska wykonawczego języka i <xref:System.Data.DataSet> klasy z PLiku schematu XSD.|  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a603c854d389076d0054a43ebeb26f19145fa8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 85584c17675167d374c595aa26288f550a033efb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localization-attributes-and-comments"></a>Lokalizacja atrybutów i komentarzy
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Lokalizacja komentarze są właściwościami, wewnątrz [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] kod źródłowy, dostarczone przez deweloperów do zapewnienia lokalizacji zasad i wskazówek dotyczących serwerów. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Lokalizacja komentarze zawierają dwa zestawy informacji: atrybuty możliwości zlokalizowania i lokalizacja dowolne komentarze. Możliwość lokalizacji atrybuty są używane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] lokalizacja interfejsu API, aby wskazać, zasobów, do których mają być lokalizowany. Dowolne komentarze są wszystkie informacje, które chce dołączyć Autor aplikacji.  
@@ -111,6 +112,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Umożliwia utworzenie przycisk Automatyczny układ](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [Użyj siatki układu automatycznego](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
+ [Używanie automatycznego układu do utworzenia przycisku](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
+ [Używanie siatki do automatycznego układu](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
  [Lokalizowanie aplikacji](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)

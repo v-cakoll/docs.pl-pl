@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b20c526b27eb185bf79eaf0ace47e5a9fded42a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4645e502544072cbc6268ae07e054ea5450d9c5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>Porady: wyświetlanie pasków przewijania w komórkach formantu RichTextBox formularzy systemu Windows
 Domyślnie program Windows Forms <xref:System.Windows.Forms.RichTextBox> kontrolka Wyświetla pasków przewijania w poziomie i w pionie w razie potrzeby. Istnieje siedem możliwe wartości <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> właściwość <xref:System.Windows.Forms.RichTextBox> kontroli, które są opisane w poniższej tabeli.  
@@ -52,5 +53,5 @@ Domyślnie program Windows Forms <xref:System.Windows.Forms.RichTextBox> kontrol
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.RichTextBoxScrollBars>  
  <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox — formant](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

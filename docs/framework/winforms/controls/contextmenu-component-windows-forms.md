@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6c3c0122eceab8b59bed15391e076863c5a2f144
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 56e87d6d873ba69e3ee9fe788025d66f4a55a4ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu — Składnik (Formularze systemu Windows)
 > [!NOTE]
@@ -34,10 +35,10 @@ ms.lasthandoff: 11/21/2017
  Formularze systemu Windows `ContextMenu` składnik jest używany do udostępniania użytkownikom menu skrótów łatwo dostępne często używanych poleceń, które są skojarzone z wybranego obiektu. Elementy menu skrótów są często podzbioru elementów, z menu głównego, które pojawiają się w innym miejscu w aplikacji. Menu skrótów są zwykle dostępne przez kliknięcie prawym przyciskiem myszy. W formularzach systemu Windows są skojarzone z innych kontrolek.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o składniku ContextMenu](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu, składnik — omówienie](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
  Ogólne pojęcia związane z `ContextMenu` składnika, który pozwala użytkownikom na tworzenie menu często używanych poleceń skojarzonych z wybranym obiektem.  
   
- [Porady: Dodawanie i usuwanie elementów Menu z systemu Windows formularzy ContextMenu — składnik](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [Instrukcje: dodawanie i usuwanie elementów menu za pomocą składnika ContextMenu formularzy Windows Forms](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  Wyjaśniono, jak dodawać i usuwać elementy menu skrótów w formularzach systemu Windows.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/21/2017
  Zawiera informacje dotyczące <xref:System.Windows.Forms.ContextMenu> klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
   
 ## <a name="see-also"></a>Zobacz też  

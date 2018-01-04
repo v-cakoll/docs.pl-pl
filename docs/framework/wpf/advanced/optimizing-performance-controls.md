@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1b414aee19082196ab242706c7730c031cf3a76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b8008d104437454f36f6f425634c40968d5481a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-performance-controls"></a>Optymalizacja wydajności: kontrolki
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zawiera wiele wspólnych składników interfejsu użytkownika (UI), które są używane w większości aplikacji systemu Windows. Ten temat zawiera techniki zwiększanie wydajności interfejsu użytkownika.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Ustawienie <xref:System.Windows.Controls.ScrollViewer.CanContentScroll%2A> do `false`.  
   
--   Ustawienie <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` do `false`.    
+-   Ustawienie <!--zz <xref:System.Windows.Controls.VirtualizingStackPanel.IsVirtualizing%2A>--> `IsVirtualizing` do `false`.  
   
  Ważną kwestią podczas wirtualizacji kontenery elementu jest, czy masz stanu dodatkowe informacje skojarzone z kontenera elementu, który należy do elementu. W takim przypadku należy zapisać dodatkowe stanu. Na przykład może być element zawarty w <xref:System.Windows.Controls.Expander> kontroli i <xref:System.Windows.Controls.Expander.IsExpanded%2A> stanu jest powiązany z elementu w kontenerze, a nie sam element. Gdy kontener zostanie ponownie użyty dla nowego elementu bieżącą wartość <xref:System.Windows.Controls.Expander.IsExpanded%2A> jest używany dla nowego elementu. Ponadto stary element utraci poprawny <xref:System.Windows.Controls.Expander.IsExpanded%2A> wartość.  
   
@@ -89,6 +90,6 @@ ms.lasthandoff: 11/21/2017
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
  [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
  [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Formanty](../../../../docs/framework/wpf/controls/index.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Wskazówki: Buforowania danych aplikacji w aplikacji WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Przewodnik: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

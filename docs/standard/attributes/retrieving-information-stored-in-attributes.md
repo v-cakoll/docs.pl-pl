@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d3fd9a5a49d65b37d2cdb5107e9c516a6df5847
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 146572fb060d1bd37d6eee5b5dce3c255b28f8b2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>Pobieranie informacji przechowywanych w atrybutach
 Podczas pobierania atrybutów niestandardowych jest prosty proces. Po pierwsze Zadeklaruj wystąpienie atrybutu, który ma zostać pobrane. Następnie należy użyć <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> metodę, aby zainicjować nowy atrybut na wartość atrybutu do pobrania. Po zainicjowaniu nowy atrybut po prostu użyć jego właściwości w celu uzyskania wartości.  

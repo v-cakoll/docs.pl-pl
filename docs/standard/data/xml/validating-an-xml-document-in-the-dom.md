@@ -17,11 +17,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 51ca7b5d18e4b664fcc5a56f7de004c42cb95c9e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 716e9baca52e9f5b7f4f24821e50b6a16aef9136
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>Sprawdzanie poprawności dokumentu XML w modelu DOM
 <xref:System.Xml.XmlDocument> Klasy nie można zweryfikować XML w modelu DOM (Document Object) względem schematu XML definition language (XSD) schemat lub dokument definicji typu (DTD) domyślnie; XML tylko zweryfikowaniu jest poprawnie sformułowany.  
@@ -94,5 +97,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Xml.XmlReader>  
  <xref:System.Xml.Schema.ValidationEventHandler>  
  <xref:System.Xml.XmlReaderSettings>  
- [Przetwarzania danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Praca z schematy XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+ [Przetwarzanie danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [Praca ze schematami XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

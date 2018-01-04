@@ -27,11 +27,14 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 656c390358b6f6a671cf3ef11ea7be75f897d21c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8d460f07e7558fdf9190561b1cac4307767ff245
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-find-existing-files-and-directories-in-isolated-storage"></a>Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie
 Aby wyszukać katalog w magazynie izolowanym, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetDirectoryNames%2A?displayProperty=nameWithType> metody. Ta metoda przyjmuje ciąg, który reprezentuje wzorzec wyszukiwania. Można użyć zarówno jednoznakowym (?) i wielu znaków (*) znaki symboli wieloznacznych we wzorcu wyszukiwania, ale symboli wieloznacznych musi występować w końcowa część nazwy. Na przykład `directory1/*ect*` jest prawidłowy ciąg wyszukiwania, ale `*ect*/directory2` nie jest.  
@@ -49,4 +52,4 @@ Aby wyszukać katalog w magazynie izolowanym, użyj <xref:System.IO.IsolatedStor
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

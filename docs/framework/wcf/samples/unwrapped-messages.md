@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 476a708acebc7c671e8d7f6ef1812a34e5221db8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6014ee5fa7f714340f7069e5b5d39e6b4146dbb8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unwrapped-messages"></a>Nieopakowane komunikaty
 W tym przykładzie przedstawiono nieopakowane komunikaty. Domyślnie treść komunikatu jest sformatowany w taki sposób, że są opakowywane parametrów do operacji usługi. Następujące przykładowe pokazuje `Add` komunikat żądania do `ICalculator` usługę w trybie opakowana.  

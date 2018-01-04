@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 5106e066de71c8cf5be472ae831adf3cd29e300d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be727fe2b69258a058ba99dc8aa40ae148d3dd99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-messages-using-message-security"></a>Korzystanie z zabezpieczeń komunikatów
 W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości, korzystając z <xref:System.ServiceModel.NetMsmqBinding>.  
@@ -74,7 +75,7 @@ W tej sekcji omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z
  Podczas korzystania zarówno z zabezpieczeń transportu i zabezpieczeń wiadomości, certyfikat używany do zabezpieczania komunikatów zarówno na poziomie komunikatu protokołu SOAP i transportu muszą być takie same.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
- [Zabezpieczenia komunikatów w ramach usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

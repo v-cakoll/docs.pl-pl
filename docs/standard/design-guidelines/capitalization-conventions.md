@@ -19,11 +19,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1bddb7bb3559e6f39b7884b92f64bee8fbb3510
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b36f230c9a5f8653f3e252d26fe6464bb9cac4bb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="capitalization-conventions"></a>Konwencje wielkość liter
 Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek, który po zastosowaniu spójnie upewnij identyfikatory typów, członków i parametry łatwy do odczytania.  
@@ -113,5 +116,5 @@ Wskazówki zawarte w ten rozdział układ prostą metodę przy użyciu przypadek
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Zasady nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

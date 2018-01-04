@@ -32,11 +32,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d813522d0aeb9bf37582c167760d44268df27039
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e04b4b85b9a14e842c94226017fcd903ad1cbb40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-anticipate-out-of-space-conditions-with-isolated-storage"></a>Porady: przewidywanie warunków braku miejsca w izolowanym magazynie
 Kod, który korzysta z magazynu izolowanego jest ograniczane przez [przydziału](../../../docs/standard/io/isolated-storage.md#quotas) , który określa maksymalny rozmiar dla przedziału danych, w którym odizolowane pliki i katalogi istnieją. Limit przydziału jest definiowana za pomocą zasad zabezpieczeń i jest konfigurowane przez administratorów. Jeśli maksymalny dozwolony rozmiar jest przekroczony podczas próby zapisu danych, <xref:System.IO.IsolatedStorage.IsolatedStorageException> wyjątku i kończy się niepowodzeniem. Pomaga to zapobiec złośliwymi atakami typu "odmowa usługi", które może spowodować aplikacji odrzucać żądania, ponieważ Magazyn danych jest wypełnione.  
@@ -54,5 +57,5 @@ Kod, który korzysta z magazynu izolowanego jest ograniczane przez [przydziału]
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)  
- [Porady: uzyskiwanie magazynów dla izolowanego magazynu](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
+ [Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)

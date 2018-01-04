@@ -14,11 +14,11 @@ ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1657febf935560ff4c8dd2f54b10fdcb2254891f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7339afdc35341739b592b2a327094754031c346c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>Szybkie opracowywanie aplikacji przy użyciu My.Resources i My.Settings (Visual Basic)
 `My.Resources` Obiekt zapewnia dostęp do zasobów aplikacji i pozwala dynamicznie pobrać zasobów dla aplikacji.  
@@ -28,11 +28,11 @@ ms.lasthandoff: 11/21/2017
   
  [!code-vb[VbVbcnMy#7](../../../visual-basic/developing-apps/development-with-my/codesnippet/VisualBasic/rapid-application-development-with-my-resources-and-my-settings_1.vb)]  
   
- `My.Resources` Obiekt ujawnia tylko zasoby globalne. Nie ma dostępu do plików zasobów skojarzonych z formularzami. W formularzu musi uzyskiwać dostęp do zasobów formularza. Aby uzyskać więcej informacji, zobacz [wskazówki: Lokalizowanie formularzy systemu Windows](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5).  
+ `My.Resources` Obiekt ujawnia tylko zasoby globalne. Nie ma dostępu do plików zasobów skojarzonych z formularzami. W formularzu musi uzyskiwać dostęp do zasobów formularza.  
   
  Podobnie `My.Settings` obiektu zapewnia dostęp do ustawień aplikacji i pozwala na dynamicznie przechowywać i pobierać ustawienia właściwości i inne informacje dotyczące aplikacji. Aby uzyskać więcej informacji, zobacz [My.resources — obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md) i [My.Settings — obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [My.resources — obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)  
- [My.Settings — obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)  
+ [My.Resources, obiekt](../../../visual-basic/language-reference/objects/my-resources-object.md)  
+ [My.Settings, obiekt](../../../visual-basic/language-reference/objects/my-settings-object.md)  
  [Uzyskiwanie dostępu do ustawień aplikacji](../../../visual-basic/developing-apps/programming/app-settings/accessing-application-settings.md)

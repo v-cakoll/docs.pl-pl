@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 754c938242035549b9deb94a2fe3b975b1384fc0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 713b9594ac628c2c256e8592d3894feee8029332
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-and-specifying-faults"></a>Definiowanie i określanie błędów
 Błąd warunku informacji z usługi do klienta, a w przypadku dupleksowy, od klienta do usługi w sposób interoperacyjne przedstawienia błędach SOAP W tym temacie omówiono, kiedy i jak definiowanie zawartości błędów niestandardowych i określ, jakie operacje może zwracać je. [!INCLUDE[crabout](../../../includes/crabout-md.md)]usługi lub dupleks klient może wysyłać te błędy i sposób obsługi tych błędów w aplikacji klienta lub usługi, zobacz [wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md). Omówienie obsługi błędów w [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, zobacz [określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md).  
@@ -103,7 +104,7 @@ End Class
  <xref:System.Runtime.Serialization.DataMemberAttribute>  
  [Określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [Wysyłanie i odbieranie błędów](../../../docs/framework/wcf/sending-and-receiving-faults.md)  
- [Porady: deklarowanie błędów w kontraktach usług](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
+ [Deklarowanie błędów w kontraktach usługi](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)  
  [Omówienie poziomów ochrony](../../../docs/framework/wcf/understanding-protection-level.md)  
- [Porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Instrukcje: ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Określanie transferu danych w kontraktach usług](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

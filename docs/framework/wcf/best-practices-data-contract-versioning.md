@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a84b671725ab41bc3287f184406ebec381f0a554
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78373d482aaaa0121a6c2708f543188d9cc9464d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-data-contract-versioning"></a>Wskazówki: Przechowywanie wersji kontraktów danych
 Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych, które można łatwo rozwijać, wraz z upływem czasu. [!INCLUDE[crabout](../../../includes/crabout-md.md)]kontrakty danych, zobacz Tematy w [za pomocą kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md).  
@@ -113,5 +114,5 @@ Ten temat zawiera najlepsze rozwiązania w zakresie tworzenia kontraktów danych
  [Używanie kontraktów danych](../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
  [Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-versioning.md)  
  [Nazwy kontraktów danych](../../../docs/framework/wcf/feature-details/data-contract-names.md)  
- [Kontrakty danych zgodne z nowszymi](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
+ [Kontrakty danych zgodne z nowszymi wersjami](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)  
  [Wywołania zwrotne serializacji z tolerancją dla wersji](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)

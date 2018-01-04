@@ -22,11 +22,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ce3c5ce3d79a36320eee6b7312518d2559509127
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02c8b4b9f46f051e42fb2ae85a39b6ff48ad2f1a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="principal-and-identity-objects"></a>Obiekty główne i obiekty tożsamości
 Zarządzany kod umożliwia odnalezienie tożsamość lub roli podmiot zabezpieczeń za pomocą <xref:System.Security.Principal.IPrincipal> obiekt, który zawiera odwołanie do <xref:System.Security.Principal.IIdentity> obiektu. Może być przydatne do porównania obiektów tożsamości i podstawowe do znanego pojęć, podobnie jak konta użytkowników i grup. W większości środowisk sieci kont użytkowników reprezentują osób lub programy, podczas gdy konta grupy reprezentują niektórych kategorii użytkowników i praw, które posiadają. Podobnie .NET Framework tożsamości reprezentować użytkowników, gdy reprezentują ról członkostwa i kontekstów zabezpieczeń. W programie .NET Framework obiekt główny hermetyzuje roli i obiektu tożsamości. Aplikacji programu .NET framework przyznać uprawnienia do podmiotu zabezpieczeń na podstawie jego tożsamość lub częściej, członkostwo w roli.  
@@ -50,9 +53,9 @@ Zarządzany kod umożliwia odnalezienie tożsamość lub roli podmiot zabezpiecz
  Podczas przekazywania **główna** obiektów między domenami aplikacji, ale w tym samym procesie (i w związku z tym na tym samym komputerze), w zdalnej infrastrukturze kopiuje odwołanie do **główna** obiekt skojarzony z kontekstem wywołującego kontekst wywołującej.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie obiektu WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
- [Porady: Tworzenie obiektów GenericPrincipal i GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
- [Zastępowanie obiektu głównego](../../../docs/standard/security/replacing-a-principal-object.md)  
+ [Instrukcje: tworzenie obiektu WindowsPrincipal](../../../docs/standard/security/how-to-create-a-windowsprincipal-object.md)  
+ [Instrukcje: tworzenie obiektów GenericPrincipal i GenericIdentity](../../../docs/standard/security/how-to-create-genericprincipal-and-genericidentity-objects.md)  
+ [Zastępowanie obiektu podmiotu zabezpieczeń](../../../docs/standard/security/replacing-a-principal-object.md)  
  [Personifikacja i przywracanie](../../../docs/standard/security/impersonating-and-reverting.md)  
  [Zabezpieczenia oparte na rolach](../../../docs/standard/security/role-based-security.md)  
  [Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)

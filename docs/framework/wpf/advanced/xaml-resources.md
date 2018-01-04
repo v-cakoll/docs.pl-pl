@@ -18,11 +18,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f9d0ff535d0784343b36d0b2df48b123ff3beef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2d58802bcdfa57bb7689e7406651fcc9829a7e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-resources"></a>Zasoby XAML
 Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w aplikacji. Przykładami zasobów pędzle i style. Ten przegląd zawiera opis sposobu korzystania z zasobów w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]. Można również tworzyć i uzyskiwać dostęp do zasobów przy użyciu kodu lub zamiennie między kodu i [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Aby uzyskać więcej informacji, zobacz [zasobów i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md).  
@@ -167,8 +168,8 @@ Zasób jest obiekt, który mogą być ponownie używane w różnych miejscach w 
  <xref:System.Windows.ResourceDictionary>  
  [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
  [Zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Definiowanie i odwołuje się zasób](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [x: Type — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
- [Rozszerzenie StaticResource znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Rozszerzenie znaczników DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)
+ [Definiowanie zasobu i odwoływanie się do niego](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [x:Type, rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)

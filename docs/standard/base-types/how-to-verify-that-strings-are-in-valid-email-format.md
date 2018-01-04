@@ -28,11 +28,14 @@ caps.latest.revision: "30"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03623cc4086981dc321aafe3020dcd571b74d9bc
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 376acbeb09519f0b4724c659984dccab81f4a0f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>Porady: sprawdzanie, czy format poczty e-mail ciągów jest prawidłowy
 W poniższym przykładzie użyto wyrażenia regularnego, aby sprawdzić, czy ciąg w formacie prawidłowy adres e-mail.  

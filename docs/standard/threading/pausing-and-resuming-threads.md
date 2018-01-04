@@ -20,11 +20,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b146987d2491f044e1f5794eba17d02d8f5e478c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b87fbb51dbdcd5226a902e8b7ee5aeb7e126b7e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pausing-and-resuming-threads"></a>Wstrzymywanie i wznawianie wątków
 Najbardziej typowe sposoby synchronizowania działania wątków są bloku i wersji wątków lub obiektów blokady lub regiony kodu. Aby uzyskać więcej informacji o tych blokowania i blokuje mechanizmów, zobacz [podstawowych Omówienie synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md).  

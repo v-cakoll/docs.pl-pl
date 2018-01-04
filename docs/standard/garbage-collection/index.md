@@ -28,11 +28,14 @@ caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1636bf1cf047e7505be7567f5b5061df25d899c7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c8288473b25b3f3cd75666e1da0611dec37c3127
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection"></a>Odzyskiwanie pamięci
 . Moduł zbierający elementy bezużyteczne w NET zarządza alokacji i wersji pamięci dla aplikacji. Zawsze podczas tworzenia nowego obiektu środowisko uruchomieniowe języka wspólnego przydziela pamięć dla obiektu z zarządzanego stosu. Tak długo, jak przestrzeń adresowa jest dostępna w zarządzanym stosie, środowisko wykonawcze w dalszym ciągu przydziela miejsce dla nowych obiektów. Jednak pamięć nie jest nieskończona. Ostatecznie moduł zbierający elementy bezużyteczne musi wykonać kolekcję w celu zwolnienia pamięci. Aparat optymalizacji w module odśmiecania pamięci ustala najlepszy moment na wykonanie procesu wyrzucania w oparciu o dokonywane przydziały. Gdy moduł zbierający elementy bezużyteczne wykonuje kolekcję, sprawdza czy istnieją obiekty na zarządzanym stosie, które nie są już używane przez aplikację, i wykonuje niezbędne operacje do odzyskania ich pamięci.  
@@ -42,13 +45,13 @@ ms.lasthandoff: 10/18/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Podstawy dotyczące wyrzucania elementów bezużytecznych](../../../docs/standard/garbage-collection/fundamentals.md)|Opisuje jak działa wyrzucanie elementów bezużytecznych, jak obiekty są przydzielane na zarządzanym stosie oraz inne podstawowe pojęcia.|  
-|[Wyrzucanie elementów bezużytecznych i wydajność](../../../docs/standard/garbage-collection/performance.md)|Opisuje testy wydajności, które można użyć do diagnozowania problemów z wydajnością wyrzucania elementów bezużytecznych.|  
+|[Podstawy dotyczące odzyskiwania pamięci](../../../docs/standard/garbage-collection/fundamentals.md)|Opisuje jak działa wyrzucanie elementów bezużytecznych, jak obiekty są przydzielane na zarządzanym stosie oraz inne podstawowe pojęcia.|  
+|[Odzyskiwanie pamięci i wydajność](../../../docs/standard/garbage-collection/performance.md)|Opisuje testy wydajności, które można użyć do diagnozowania problemów z wydajnością wyrzucania elementów bezużytecznych.|  
 |[Wywołane kolekcje](../../../docs/standard/garbage-collection/induced.md)|Opisuje, jak sprawić, aby nastąpiło wyrzucanie elementów bezużytecznych.|  
 |[Tryby opóźnienia](../../../docs/standard/garbage-collection/latency.md)|Opisuje tryby, które określają ingerencję operacji wyrzucania elementów bezużytecznych.|  
-|[Optymalizacja hostingu udostępnionych w sieci Web](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Opisuje, jak zoptymalizować wyrzucanie elementów bezużytecznych na serwerach współużytkowanych przez kilka małych witryn sieci Web.|  
+|[Optymalizacja udostępnionej usługi hostingu internetowego](../../../docs/standard/garbage-collection/optimization-for-shared-web-hosting.md)|Opisuje, jak zoptymalizować wyrzucanie elementów bezużytecznych na serwerach współużytkowanych przez kilka małych witryn sieci Web.|  
 |[Powiadomienia dotyczące odzyskiwania pamięci](../../../docs/standard/garbage-collection/notifications.md)|Opisuje, jak określić kiedy zbliża się pełne wyrzucanie elementów bezużytecznych i kiedy zostało ono ukończone.|  
-|[Zasobów domen aplikacji monitorowania](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Opisuje, jak monitorować wykorzystanie procesora i pamięci przez domenę aplikacji.|  
+|[Monitorowanie zasobów domen aplikacji](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|Opisuje, jak monitorować wykorzystanie procesora i pamięci przez domenę aplikacji.|  
 |[Słabe odwołania](../../../docs/standard/garbage-collection/weak-references.md)|Opisuje funkcje, które pozwalają modułowi zbierającemu elementy bezużyteczne na zbieranie obiektu, wciąż zezwalając aplikacjom na dostęp do tego obiektu.|  
   
 ## <a name="reference"></a>Tematy pomocy  

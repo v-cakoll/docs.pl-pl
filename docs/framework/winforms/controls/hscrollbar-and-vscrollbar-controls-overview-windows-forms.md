@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80ec592bf83969ae57495b0df2af110b5622ea11
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7a6f1d569234f7cee4b5eedc81fcc68a41fcf0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar i VScrollBar — Informacje o formantach (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.ScrollBar> formantów służą do zapewniania nawigację za pośrednictwem długą listę elementów lub duża ilość informacji, albo przewijanie w poziomie lub pionie w aplikacji lub kontrolki. Paski przewijania są wspólnego elementu interfejsu systemu Windows, więc <xref:System.Windows.Forms.ScrollBar> kontroli jest często używana z formantami, które nie pochodzą z <xref:System.Windows.Forms.ScrollableControl> klasy. Podobnie wielu deweloperów wybierz uwzględnienie <xref:System.Windows.Forms.ScrollBar> sterowania w przypadku tworzenia własne kontrolki użytkownika.  
@@ -49,4 +50,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.ScrollBar> formantów słu
  <xref:System.Windows.Forms.HScrollBar>  
  <xref:System.Windows.Forms.VScrollBar>  
  [Dodawanie do formularzy systemu Windows dla programu .NET Framework 2.0](http://msdn.microsoft.com/en-us/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

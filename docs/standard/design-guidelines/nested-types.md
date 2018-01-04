@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ae09df49b97cc2fe84285c3a37e1562da185f84
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 389ba73c4509f41f6c2cf86363e59ea720eb3c9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="nested-types"></a>Zagnieżdżone typy
 Zagnieżdżony typ jest typ zdefiniowany w zakresie innego typu, która jest wywoływana typu otaczającego. Zagnieżdżony typ ma dostęp do wszystkich elementów członkowskich jego typ otaczający. Na przykład ma dostęp do prywatnego pól zdefiniowane w typie otaczającym i chronione pola zdefiniowane w wszystkich nadrzędnych typu otaczającego.  
@@ -54,5 +57,5 @@ Zagnieżdżony typ jest typ zdefiniowany w zakresie innego typu, która jest wyw
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania typu](../../../docs/standard/design-guidelines/type.md)  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

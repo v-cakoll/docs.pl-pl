@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fab2d0f7dfe94857a3c6c5cb6e8414360d3078e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9129b9c2776f46a719f42b74131b2b37146e930c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-dockpanel"></a>Porady: tworzenie DockPanel
 ## <a name="example"></a>Przykład  
@@ -35,4 +36,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.DockPanel>  
  <xref:System.Windows.Controls.Dock>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

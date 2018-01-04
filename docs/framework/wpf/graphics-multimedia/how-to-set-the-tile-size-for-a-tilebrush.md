@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484419c05c3d607212ea6d565777cf49cbfdbc19
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1e9b746fe66635054dbd35463f727d28a8abd3d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>Jak ustawić rozmiar sąsiadujących kafelków dla TileBrush
 W tym przykładzie pokazano, jak ustawić rozmiar kafelka <xref:System.Windows.Media.TileBrush>. Domyślnie <xref:System.Windows.Media.TileBrush> tworzy pojedynczy fragment, który całkowicie wypełnienia malowanego obszaru. To zachowanie można przesłonić, ustawiając <xref:System.Windows.Media.TileBrush.Viewport%2A> i <xref:System.Windows.Media.TileBrush.ViewportUnits%2A> właściwości.  
@@ -50,5 +51,5 @@ W tym przykładzie pokazano, jak ustawić rozmiar kafelka <xref:System.Windows.M
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.TileBrush>  
- [Malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Utwórz kafelka różnych wzorców z element TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)
+ [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Tworzenie różnych wzorów kafelkowych z użyciem elementu TileBrush](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)

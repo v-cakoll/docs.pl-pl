@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d03a0ca7518b06c08d98967d7c5ae864f1c04ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0728ff5d695ccc5fc5912631d29c89b7cc36ca5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>Integracja XML z danych relacyjnych i ADO.NET
 **Dokumentu XmlDataDocument** klasy jest klasy pochodnej z **XmlDocument**i zawiera dane XML. Zaletą **dokumentu XmlDataDocument** jest mostka między danych relacyjnych i hierarchicznych. Jest **XmlDocument** może być powiązana z **DataSet** i obie klasy można synchronizować zmiany wprowadzone w danych znajdujących się w dwóch klas. **XmlDocument** który jest powiązany **DataSet** umożliwia XML do integracji z danych relacyjnych i nie trzeba mieć dane reprezentowane jako albo XML lub w formacie relacyjnym. Możesz wykonać obie czynności i nie można ograniczyć do pojedynczego reprezentację danych.  
@@ -55,4 +58,4 @@ ms.lasthandoff: 10/18/2017
  W przypadku **DataSet** z **dokumentu XmlDataDocument** dotyczy Twoich potrzeb dotyczących zobacz [synchronizowanie Datasetwith dokumentu XML](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą języka XML w zestawie danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+ [Używanie języka XML w elemencie DataSet](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

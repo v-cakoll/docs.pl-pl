@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 919197d8fdb40f0e0fb7b91fecae38f4e0e061bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38e5337f775d98f8729c62b3481c3e839bff2252
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>Scenariusze formantu DataGridView (Formularze systemu Windows)
 Z <xref:System.Windows.Forms.DataGridView> sterowania, można wyświetlić dane tabelaryczne z różnych źródeł danych. Do prostych zastosowań, może ręcznie wypełnić <xref:System.Windows.Forms.DataGridView> i manipulowanie danymi bezpośrednio za pomocą formantu. Zazwyczaj można jednak będzie przechowywać dane w zewnętrznym źródłem danych i powiązać ją przy użyciu formantu <xref:System.Windows.Forms.BindingSource> składnika.  
@@ -98,4 +99,4 @@ Z <xref:System.Windows.Forms.DataGridView> sterowania, można wyświetlić dane 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView>  
- [Informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+ [DataGridView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)

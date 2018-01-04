@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f47f56e28064c852e5d8f721bdb3a0f73172c12a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="planning-for-application-performance"></a>Planowanie wydajności aplikacji
 Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracowanie strategii wydajności. Planowanie to pierwszy etap w tworzeniu każdego produktu. W tym temacie opisano kilka bardzo proste zasady opracowanie strategii dobrą wydajność.  
@@ -44,9 +45,9 @@ Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracow
   
 ## <a name="see-also"></a>Zobacz też  
  [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  
- [Dzięki funkcji sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
+ [Wykorzystanie możliwości sprzętu](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)  
  [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Zachowanie obiektu](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)  
  [Zasoby aplikacji](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)  
  [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  

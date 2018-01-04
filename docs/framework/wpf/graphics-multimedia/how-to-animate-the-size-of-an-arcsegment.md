@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6f71f910dca651b66d02971d05fb83a8d7bbc5f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f58a4e7b23204167acb31cfcfb3a4fe27977e70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-the-size-of-an-arcsegment"></a>Jak animować rozmiar ArcSegment
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.ArcSegment.Size%2A> właściwość <xref:System.Windows.Media.ArcSegment>.  
@@ -40,8 +41,8 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.ArcSegment
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.ArcSegment.Size%2A>  
  <xref:System.Windows.Media.ArcSegment>  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
  [Synchronizację](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

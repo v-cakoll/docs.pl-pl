@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 071ca1547898b80440e86df0e4cb9c0667e462ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76584e0d22b6e651dfd851675a72d1f0cb70feb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="names-of-assemblies-and-dlls"></a>Nazw zestawów i bibliotek DLL
 Zestaw jest jednostką wdrożenia i tożsamości dla programów kodu zarządzanego. Mimo że zestawy mogą znajdować się co najmniej jednego pliku, zwykle zestawu mapuje jeden do jednego z biblioteki DLL. W związku z tym w tej sekcji opisano tylko DLL konwencji nazewnictwa, które następnie mogą być mapowane na zestawie konwencji nazewnictwa.  
@@ -37,12 +40,12 @@ Zestaw jest jednostką wdrożenia i tożsamości dla programów kodu zarządzane
   
  gdzie `<Component>` zawiera co najmniej jedną klauzulę oddzielona kropkami. Na przykład:  
   
- `Litware.Controls.dll`.  
+ `Litware.Controls.dll`.,  
   
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Zasady nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

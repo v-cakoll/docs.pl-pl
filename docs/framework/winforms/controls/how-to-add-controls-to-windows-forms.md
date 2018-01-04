@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1f5f739afa914a69017dbba2a9a4afb990f6e43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d9075c93181b68828a307924259a9170c046baa6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>Porady: dodawanie formantów do formularzy systemu Windows
 Większość formularzy przez dodawanie formantów do powierzchni formularza do definiowania interfejsu użytkownika (UI). A *kontroli* jest składnikiem w formularzu używane do wyświetlania informacji i akceptowanie danych wejściowych użytkownika. Aby uzyskać więcej informacji na temat formantów, zobacz [formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md).  
@@ -100,8 +101,8 @@ Większość formularzy przez dodawanie formantów do powierzchni formularza do 
     >  Na komputerze lokalnym zagrożenie bezpieczeństwa w sieci może udostępniać za pomocą odwołań do złośliwych `UserControl`. Tylko będzie to problemem w przypadku złośliwe osoby tworzenie kontrolkę niestandardową szkodliwy, następuje można przez pomyłkę dodanie go do projektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
- [Rozmieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Porady: zmiana rozmiaru formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
- [Porady: Ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Instrukcje: zmienianie rozmiaru kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)  
+ [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

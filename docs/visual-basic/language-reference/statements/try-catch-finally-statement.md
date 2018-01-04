@@ -27,11 +27,11 @@ ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
 caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 56dd7fc339c452d64eb18211337b9a7674a83e1c
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: c297a84b37b455a4b30b1848aa9bdd30dc567ec1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally — Instrukcja (Visual Basic)
 Zapewnia sposób obsługi niektórych lub wszystkich możliwych błędów, które mogą wystąpić w danym bloku kodu, w trakcie wykonywania kodu.  
@@ -137,7 +137,7 @@ End Try
 ## <a name="iterators"></a>Iteratory  
  Funkcji iteracyjnej lub `Get` akcesor wykonuje niestandardowych iteracji w kolekcji. Używa iteratora [Yield](../../../visual-basic/language-reference/statements/yield-statement.md) instrukcji, aby zwracany był każdy element kolekcji jednym naraz. Wywołania funkcji iteratora przy użyciu [For Each... Następna instrukcja](../../../visual-basic/language-reference/statements/for-each-next-statement.md).  
   
- A `Yield` instrukcja może być wewnątrz `Try` bloku. A `Try` bloku, który zawiera `Yield` instrukcja może mieć `Catch` blokuje i może mieć `Finally` bloku. Zobacz sekcję "Spróbuj bloków w języku Visual Basic" [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7) przykład.  
+ A `Yield` instrukcja może być wewnątrz `Try` bloku. A `Try` bloku, który zawiera `Yield` instrukcja może mieć `Catch` blokuje i może mieć `Finally` bloku. Zobacz sekcję "Spróbuj bloków w języku Visual Basic" [Iteratory](../../programming-guide/concepts/iterators.md) przykład.  
   
  A `Yield` instrukcja nie może być wewnątrz `Catch` bloku lub `Finally` bloku.  
   
@@ -191,8 +191,8 @@ End Try
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Information.Err%2A>  
  <xref:System.Exception>  
- [Exit — instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [On Error — instrukcja](../../../visual-basic/language-reference/statements/on-error-statement.md)  
+ [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [On Error, instrukcja](../../../visual-basic/language-reference/statements/on-error-statement.md)  
  [Najlepsze rozwiązania dotyczące korzystania z fragmentów kodu](/visualstudio/ide/best-practices-for-using-code-snippets)  
- [Obsługa wyjątków](../../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)  
- [Throw — instrukcja](../../../visual-basic/language-reference/statements/throw-statement.md)
+ [Obsługa wyjątków](../../../standard/parallel-programming/exception-handling-task-parallel-library.md)  
+ [Throw, instrukcja](../../../visual-basic/language-reference/statements/throw-statement.md)

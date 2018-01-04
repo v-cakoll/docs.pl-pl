@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 879e5a73417f9347224bc22b397814b83972751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68c1ad34952ee4d20dbf56aa8ca437a3f99db751
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="pipe-operations-in-the-net-framework"></a>Operacje potokowe w oprogramowaniu .NET Framework
 Potoki umożliwiają do komunikacji międzyprocesowej. Istnieją dwa typy potoków:  
@@ -45,5 +48,5 @@ Potoki umożliwiają do komunikacji międzyprocesowej. Istnieją dwa typy potok�
   
 ## <a name="see-also"></a>Zobacz też  
  [Plik i strumienia I-O](../../../docs/standard/io/index.md)  
- [Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
- [Porady: stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+ [Instrukcje: stosowanie potoków anonimowych do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)  
+ [Instrukcje: stosowanie potoków nazwanych do sieciowej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)

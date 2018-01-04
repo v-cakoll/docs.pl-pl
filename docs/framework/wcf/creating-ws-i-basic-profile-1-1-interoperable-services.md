@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 500e57b36bbbdd1d23e6efb2c50421e3e134bcb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61c4f26c9880d8a7f6a8fb356bafcc0d312509dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I
 Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web:  
@@ -51,4 +52,4 @@ Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu k
  [!code-xml[C_HowTo-WCFServiceAndASMXClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto-wcfserviceandasmxclient/common/app.config#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z usługami sieci Web ASP.NET](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)
+ [Współdziałanie z usługami ASP.NET w sieci Web](../../../docs/framework/wcf/feature-details/interop-with-aspnet-web-services.md)

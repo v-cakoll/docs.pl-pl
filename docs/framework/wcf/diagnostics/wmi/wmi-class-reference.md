@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a74f1d7e70b8664df5022d6f9f42cf04b88f930
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e221c8197b9713dd5f4e35114ada3c63f4978ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-class-reference"></a>Informacje o klasach WMI
 Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] dostawcy WMI.  
@@ -32,11 +33,11 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [AspNetCompatibilityRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/aspnetcompatibilityrequirementsattribute.md)  
   
- [Element AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
+ [AsymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/asymmetricsecuritybindingelement.md)  
   
  "Zachowanie class"  
   
- [Elementu BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
+ [BinaryMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/binarymessageencodingbindingelement.md)  
   
  [Powiązanie](../../../../../docs/framework/wcf/diagnostics/wmi/binding.md)  
   
@@ -44,7 +45,7 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [CallbackBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/callbackbehavior.md)  
   
- [Klasa kanału](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
+ [Klasa Channel](../../../../../docs/framework/wcf/diagnostics/wmi/channel-class.md)  
   
  [ChannelPoolSettings](../../../../../docs/framework/wcf/diagnostics/wmi/channelpoolsettings.md)  
   
@@ -60,7 +61,7 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [CustomBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/custombindingelement.md)  
   
- [Element DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
+ [DeliveryRequirementsAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/deliveryrequirementsattribute.md)  
   
  [Punkt końcowy](../../../../../docs/framework/wcf/diagnostics/wmi/endpoint.md)  
   
@@ -72,13 +73,13 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [MatchAllEndpointBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/matchallendpointbehavior.md)  
   
- [Element MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
+ [MessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/messageencodingbindingelement.md)  
   
  [MsmqBindingElementBase](../../../../../docs/framework/wcf/diagnostics/wmi/msmqbindingelementbase.md)  
   
  [MsmqIntegrationBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqintegrationbindingelement.md)  
   
- [Elementem MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
+ [MsmqTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/msmqtransportbindingelement.md)  
   
  [MtomMessageEncodingBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/mtommessageencodingbindingelement.md)  
   
@@ -88,31 +89,31 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [NamedPipeTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/namedpipetransportbindingelement.md)  
   
- [Element OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
+ [OneWayBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/onewaybindingelement.md)  
   
  "Operacji class"  
   
  [OperationBehaviorAttribute](../../../../../docs/framework/wcf/diagnostics/wmi/operationbehaviorattribute.md)  
   
- [Element PeerCustomResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
+ [PeerCustomResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peercustomresolverbindingelement.md)  
   
- [Element PeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
+ [PeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peerresolverbindingelement.md)  
   
  [PeerSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peersecuritysettings.md)  
   
  [PeerTransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportbindingelement.md)  
   
- [Obiekt PeerTransportSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
+ [PeerTransportSecuritySettings](../../../../../docs/framework/wcf/diagnostics/wmi/peertransportsecuritysettings.md)  
   
  [PnrpPeerResolverBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/pnrppeerresolverbindingelement.md)  
   
  [PrivacyNoticeBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/privacynoticebindingelement.md)  
   
- [Elementu ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
+ [ReliableSessionBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/reliablesessionbindingelement.md)  
   
- [Elementu SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
+ [SecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/securitybindingelement.md)  
   
- [Usługi](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
+ [Usługa](../../../../../docs/framework/wcf/diagnostics/wmi/service.md)  
   
  [ServiceAppDomain](../../../../../docs/framework/wcf/diagnostics/wmi/serviceappdomain.md)  
   
@@ -136,7 +137,7 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [SslStreamSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/sslstreamsecuritybindingelement.md)  
   
- [Element SymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
+ [SymmetricSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)  
   
  [SynchronousReceiveBehavior](../../../../../docs/framework/wcf/diagnostics/wmi/synchronousreceivebehavior.md)  
   
@@ -156,7 +157,7 @@ Ta sekcja zawiera listę klas usługi WMI udostępnianych przez [!INCLUDE[indigo
   
  [TransactionFlowBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transactionflowbindingelement.md)  
   
- [Element TransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
+ [TransportBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportbindingelement.md)  
   
  [TransportSecurityBindingElement](../../../../../docs/framework/wcf/diagnostics/wmi/transportsecuritybindingelement.md)  
   

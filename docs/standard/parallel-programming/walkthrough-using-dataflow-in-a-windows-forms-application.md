@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d2775cc99020fd99d6e7d79cdf3e1ffcc3219146
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f9f5a771818231e87f05777803fff39cb40ebd48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  
@@ -143,4 +146,4 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
 ## <a name="next-steps"></a>Następne kroki  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

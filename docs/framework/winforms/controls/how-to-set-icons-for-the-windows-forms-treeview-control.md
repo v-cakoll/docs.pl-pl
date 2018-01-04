@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5abe07a80e457c4a0254b4c1a734cba2f6ed1766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d6133a378c4939a20cef6bab8f3ee5f36b9c3cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>Porady: ustawienie ikon dla kontrolki TreeView formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.TreeView> formant może wyświetlać ikony obok każdego węzła. Ikony są pozycjonowane do natychmiastowego po lewej stronie tekstu węzła. Aby wyświetlić te ikony, należy skojarzyć z widoku drzewa <xref:System.Windows.Forms.ImageList> formantu. Aby uzyskać więcej informacji na temat list obrazów, zobacz [składnika ImageList](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md) i [porady: Dodawanie lub usuwanie obrazów za pomocą składnika ImageList formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md).  
@@ -79,8 +80,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.TreeView> formant może wy
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie TreeView](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
- [Porady: Dodawanie i usuwanie węzłów za pomocą systemu Windows formantu TreeView formularzy](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
- [Porady: iterowanie wszystkich węzłów formantu TreeView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
- [Porady: Określanie, który węzeł TreeView został kliknięty](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
- [Porady: Dodawanie niestandardowych informacji do formantu TreeView lub ListView (formularze systemu Windows)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+ [TreeView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/treeview-control-overview-windows-forms.md)  
+ [Instrukcje: dodawanie i usuwanie węzłów za pomocą kontrolki TreeView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)  
+ [Instrukcje: iterowanie po wszystkich węzłach kontrolki TreeView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)  
+ [Instrukcje: określanie, który węzeł TreeView został kliknięty](../../../../docs/framework/winforms/controls/how-to-determine-which-treeview-node-was-clicked-windows-forms.md)  
+ [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

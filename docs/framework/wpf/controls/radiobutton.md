@@ -17,11 +17,12 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edf71bf9c7415867e714848dfef038ff16f537bc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8b71a7de3a759809bc75e30f0dbb08c24d9d9f40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton"></a>RadioButton
 <xref:System.Windows.Controls.RadioButton>Formanty zwykle są zgrupowane umożliwiającą użytkownikom pojedynczego wyboru między kilka opcji; można wybrać tylko jeden przycisk naraz.  

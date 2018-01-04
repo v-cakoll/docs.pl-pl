@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7616a418b9f2f6b175b925e4385322c42546e9bc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eb7e917c59f11ed78f8d44fa4b674d8d572f3623
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>Jak renderować w interwałach klatek z użyciem CompositionTarget
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Aparat animacji zapewnia wiele funkcji do tworzenia opartych na ramki animacji. Istnieją jednak scenariuszy aplikacji, w których należy dopasowanymi bardziej precyzyjną kontrolę nad renderowania na podstawie na ramki. <xref:System.Windows.Media.CompositionTarget> Obiekt zapewnia możliwość tworzenia niestandardowych animacje oparte na wywołanie zwrotne na ramki.  
@@ -52,4 +53,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.CompositionTarget>  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

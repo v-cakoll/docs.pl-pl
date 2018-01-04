@@ -18,11 +18,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d601ab89b08dd9e9bd0b27d2cfb1c495c33a2786
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 276c5883487d8fba47d7fb80060d4c947e0f6cd6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="abstractions-abstract-types-and-interfaces"></a>Obiekty abstrakcyjne (typy abstrakcyjne i interfejsy)
 Abstrakcja jest typem, który opisuje kontrakt, ale nie zapewnia pełnej implementacji kontraktu. Obiekty abstrakcyjne są zazwyczaj zaimplementowane jako interfejsów lub klas abstrakcyjnych i pochodzą z dobrze zdefiniowany zestaw dokumentacji opisujące wymagany semantyka typów Implementowanie kontraktu. Poniżej wymieniono niektóre z najważniejszych abstrakcje w programie .NET Framework <xref:System.IO.Stream>, <xref:System.Collections.Generic.IEnumerable%601>, i <xref:System.Object>.  
@@ -46,5 +49,5 @@ Abstrakcja jest typem, który opisuje kontrakt, ale nie zapewnia pełnej impleme
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
  [Projektowanie pod kątem rozszerzalności](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

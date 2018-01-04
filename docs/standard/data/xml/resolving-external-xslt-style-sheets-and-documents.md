@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5e84935f9fff1f993a677d408287cd775269f03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 85176c45b768d1e8fe9efc408fd644bf33aa8c05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>Rozpoznawanie arkuszy stylów XSLT zewnętrznych i dokumentów
 Istnieje kilka razy podczas transformację, gdy trzeba rozwiązać zasobów zewnętrznych.  
@@ -52,14 +55,14 @@ Istnieje kilka razy podczas transformację, gdy trzeba rozwiązać zasobów zewn
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Klasa XslTransform implementuje procesorze XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
- [Dane wyjściowe z XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
- [Przekształcenia XSLT w sklepach](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
- [XsltArgumentList parametry arkusza stylów i rozszerzenia obiektów](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
+ [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)  
+ [Dane wyjściowe klasy XslTransform](../../../../docs/standard/data/xml/outputs-from-an-xsltransform.md)  
+ [Przekształcenia XSLT w różnych magazynach](../../../../docs/standard/data/xml/xslt-transformations-over-different-stores.md)  
+ [Klasa XsltArgumentList — parametry arkusza stylów i obiekty rozszerzeń](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)  
  [XSLT skryptów przy użyciu arkusza stylów \<msxsl:script >](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)  
- [Obsługa msxsl:node-set() — funkcja](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
- [Element XPathNavigator w przekształcenia](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
- [Element XPathNodeIterator w przekształcenia](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
- [Dane wejściowe XPathDocument XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
- [Dane wejściowe dokumentu XmlDataDocument XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
- [Dane wejściowe XmlDocument XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)
+ [Obsługa funkcji msxsl:node-set()](../../../../docs/standard/data/xml/support-for-the-msxsl-node-set-function.md)  
+ [Klasa XPathNavigator w przekształceniach](../../../../docs/standard/data/xml/xpathnavigator-in-transformations.md)  
+ [Klasa XPathNodeIterator w przekształceniach](../../../../docs/standard/data/xml/xpathnodeiterator-in-transformations.md)  
+ [Dane wejściowe obiektu XPathDocument klasy XslTransform](../../../../docs/standard/data/xml/xpathdocument-input-to-xsltransform.md)  
+ [Dane wejściowe obiektu XmlDataDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldatadocument-input-to-xsltransform.md)  
+ [Dane wejściowe obiektu XmlDocument klasy XslTransform](../../../../docs/standard/data/xml/xmldocument-input-to-xsltransform.md)

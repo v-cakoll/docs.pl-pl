@@ -7,11 +7,14 @@ ms.date: 08/23/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: ce3368f4c34a8e4b20a7deb2a6c6e4d163927cd4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -87,10 +90,10 @@ Masz dostęp do rozbudowany zestaw narzędzi i składników infrastruktury, któ
 
 ## <a name="see-also"></a>Zobacz także
 [Wybór między .NET Core i .NET Framework dla serwera aplikacji](choosing-core-framework-server.md)   
-[.NET standard](net-standard.md)  
-[Przewodnik po podstawowej platformy .NET](../core/index.md)  
+[.NET Standard](net-standard.md)  
+[Przewodnik platformy .NET Core](../core/index.md)  
 [.NET framework — przewodnik](../framework/index.md)  
-[Przewodnik C#](../csharp/index.md)  
-[Przewodnik F #](../fsharp/index.md)  
+[Przewodnik dla języka C#](../csharp/index.md)  
+[Podręcznik języka F #](../fsharp/index.md)  
 [Przewodnik VB.NET](../visual-basic/index.md)  
 

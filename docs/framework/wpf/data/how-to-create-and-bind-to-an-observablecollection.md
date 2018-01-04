@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7918d97f2f1bcd521e7e7e38231c999d2fbda53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc99b09edbc16403e2c0fc4d948a39811801c64b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>Jak utworzyć i powiązać z ObservableCollection
 W tym przykładzie pokazano, jak utworzyć i powiązania z kolekcją, która jest pochodną <xref:System.Collections.ObjectModel.ObservableCollection%601> klasy, która jest klasę kolekcji, która zawiera powiadomienia elementów uzyskać dodania lub usunięcia.  
@@ -153,6 +154,6 @@ End Class
 ## <a name="see-also"></a>Zobacz też  
  [Sortowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
  [Filtrowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [Sortowanie i grupowanie danych przy użyciu widoku w języku XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Sortowanie i grupowanie danych przy użyciu widoku w XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

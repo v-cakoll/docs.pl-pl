@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f822133b44f0f32224402463b4332811f8cd52b5
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 03d2661752e5c0acb36fe76a8fa72b0638b4ad54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="order-of-events-in-windows-forms"></a>Kolejność zdarzeń w formularzach systemu Windows
 Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu Windows ma szczególne znaczenie dla deweloperów związane z obsługi każdego z tych zdarzeń z kolei. Rozwiązania wymaga dokładnych obsługi zdarzenia, na przykład gdy są ponownego narysowania części formularza, konieczne jest świadomości dokładne kolejności, w której zdarzenia są generowane w czasie wykonywania. Ten temat zawiera pewne szczegóły rzędu zdarzenia podczas kilka ważnych etapach cykl życia aplikacji i kontrolek. Aby uzyskać szczegółowe informacje o zamówieniu myszy zdarzenia wejściowe, zobacz [zdarzenia myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-events-in-windows-forms.md). Przegląd zdarzeń w formularzach systemu Windows, temacie [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md). Aby uzyskać więcej informacji o w skład programów obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
@@ -91,4 +92,4 @@ Kolejność, w której zdarzenia są generowane w aplikacjach formularzy systemu
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+ [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)

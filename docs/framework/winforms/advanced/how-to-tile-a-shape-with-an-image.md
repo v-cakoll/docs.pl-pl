@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f825371d3849e96ace627e660fd7c59bd290185
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d8726322e9443042b76c28e7b4b22ebc51c871bb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-tile-a-shape-with-an-image"></a>Porady: wypełnianie kafelków w obrębie kształtu obrazem
 Tak samo, jak kafelki mogą być umieszczone obok siebie, aby pokrywał piętra, prostokątne obrazów mogą być umieszczone obok siebie do wypełnienia kształtu (kafelka). Na kafelku wewnątrz kształtu, użyj pędzla tekstury. Podczas konstruowania <xref:System.Drawing.TextureBrush> obiektu, jeden z argumentów przekazać do konstruktora jest <xref:System.Drawing.Image> obiektu. Pędzel tekstury umożliwia malowanie wnętrza kształtu, kształt jest wypełniony powtarzane kopii tego obrazu.  

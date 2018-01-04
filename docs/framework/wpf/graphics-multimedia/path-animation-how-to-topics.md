@@ -17,22 +17,23 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dcda3888df64e95704e726db118bf75c92deaa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c1eeb859ecb39c5c2bb7eaef480e32c17d391cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animation-how-to-topics"></a>Animacja ścieżki Tematy Pomocy
 Tematy w tej sekcji przedstawiają sposób animować obiektu wzdłuż ścieżki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animowanie obiektu wzdłuż ścieżki (dwa razy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [Animowanie obiektu wzdłuż ścieżki (punkt Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [Animowanie obiektu wzdłuż ścieżki (macierzy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [Animowanie obiektu wzdłuż ścieżki (animacja macierzy z przesunięcia akumulacji)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [Obracanie obiektu przy użyciu ścieżki geometrycznych (macierzy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [Obracanie obiektu przy użyciu ścieżki geometrycznych](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [Animowanie obiektu na ścieżce (animacja double)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
+ [Animowanie obiektu na ścieżce (animacja punktu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
+ [Animowanie obiektu na ścieżce (animacja Matrix)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [Animowanie obiektu na ścieżce (animacja matrycy akumulacją przesunięcia)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [Obracanie obiektu przy użyciu ścieżki geometrycznej (animacja Matrix)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [Obracanie obiektu przy użyciu ścieżki geometrycznej](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
@@ -40,6 +41,6 @@ Tematy w tej sekcji przedstawiają sposób animować obiektu wzdłuż ścieżki.
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Omówienie klucza poklatkowych](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

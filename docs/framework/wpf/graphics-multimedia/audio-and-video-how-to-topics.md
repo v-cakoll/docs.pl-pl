@@ -17,23 +17,24 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bea43192d7f9a5bd875914633118dd6609c7804b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: a013eac5b3306339c82abaa62f97e4aad7d8ed76
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="audio-and-video-how-to-topics"></a>Audio i wideo Tematy porad
 Poniższe tematy przedstawiają sposób zastosowania <xref:System.Windows.Controls.MediaElement> Integracja zawartości audio i wideo w aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Porady: Dodawanie elementu dynamicznie](http://msdn.microsoft.com/en-us/d00f258a-7973-4de7-bc54-a3fc1f638419)  
- [Kontrolowanie MediaElement (Play, Wstrzymaj Stop, woluminów i szybkość)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
- [Kontrolowanie MediaElement przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
- [Odtwarzanie multimediów wyzwalacza ze zdarzeniem użytkownika](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
- [Powtórz odtwarzanie multimediów](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
- [Odtwarzanie multimediów animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
- [Transformacje w systemie MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
+ [Sterowanie elementem MediaElement (odtwórz, pauza, zatrzymaj, głośność i szybkość)](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md)  
+ [Sterowanie elementem MediaElement z użyciem scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-mediaelement-by-using-a-storyboard.md)  
+ [Wyzwalanie odtwarzania multimediów za pomocą zdarzenia użytkownika](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-media-playback-with-a-user-event.md)  
+ [Powtarzanie odtwarzania multimediów](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-media-playback.md)  
+ [Odtwarzanie multimediów z animacjami](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-with-animations.md)  
+ [Używanie przekształceń w elemencie MediaElement](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-transforms-on-a-mediaelement.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.MediaElement>  
@@ -43,4 +44,4 @@ Poniższe tematy przedstawiają sposób zastosowania <xref:System.Windows.Contro
  <xref:System.Windows.Media.MediaTimeline>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

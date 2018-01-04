@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 522c47865294b7313b0b5e745d40726996230c49
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 027fb2efaff5cfdd4d6962798a85923631fa4e9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-properties-of-a-hosted-wpf-element-at-design-time"></a>Wskazówki: zmienianie właściwości hostowanego elementu WPF w czasie projektowania
 W tym przewodniku przedstawiono sposób zmiany wartości właściwości kontrolki Windows Presentation Foundation (WPF) obsługiwanych na formularzu systemu Windows.  
@@ -43,7 +44,7 @@ W tym przewodniku przedstawiono sposób zmiany wartości właściwości kontrolk
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].,  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu formularzy systemu Windows.  
@@ -92,9 +93,9 @@ W tym przewodniku przedstawiono sposób zmiany wartości właściwości kontrolk
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Porady: zakotwiczenie i dokowanie formantów podrzędnych w formancie TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
- [Porady: wyrównywanie formantu z krawędziami formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
- [Wskazówki: Rozmieszczanie formantów na formularzach systemu Windows za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Instrukcje: zakotwiczenie i dokowanie kontrolek podrzędnych w kontrolce TableLayoutPanel](../../../../docs/framework/winforms/controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)  
+ [Instrukcje: wyrównywanie kontrolki z krawędziami formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+ [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Korzystanie z formantów WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [Korzystanie z kontrolek WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
  [Projektant WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

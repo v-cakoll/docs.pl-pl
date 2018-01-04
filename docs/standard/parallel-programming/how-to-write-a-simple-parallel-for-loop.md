@@ -20,11 +20,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ed621f41e76addde777b974732470fcfbc903563
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3a70dcb5e3811a18e23aeb2ebf0940d2c52f49a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>Porady: zapisywanie prostej równoległej pętli For
 Ten temat zawiera dwa przykłady ilustrujące <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody. Używa pierwszego <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> przeciążenie metody, a drugi używa <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> przeciążenia, dwa przeciążeń najprostszym <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody. Korzystając z tych dwóch przeciążeń <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> metody, gdy jest konieczne anulowanie pętli, Podziel poza iteracji pętli lub obsługa każdy stan lokalnej wątku.  

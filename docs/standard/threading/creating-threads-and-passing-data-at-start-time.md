@@ -21,11 +21,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 61808dc804cc627ab368a5250414dfcc5f54c87e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d17ef8a199061f56f00e39fa887e2e64f64427ec
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>Tworzenie wątków i przekazywanie danych w czasie rozpoczęcia
 Po utworzeniu procesu systemu operacyjnego, systemu operacyjnego injects wątku wykonania kodu w tego procesu, w tym wszelkie oryginalnego domeny aplikacji. Od tego momentu można tworzyć i zniszczone bez żadnych wątków systemu operacyjnego zawsze tworzona lub zniszczony domen aplikacji. Jeśli kod wykonywany jest zarządzany kod, a następnie <xref:System.Threading.Thread> obiekt wątku wykonywania w bieżącej domenie aplikacji można uzyskać, pobierając statycznych <xref:System.Threading.Thread.CurrentThread%2A> właściwości typu <xref:System.Threading.Thread>. W tym temacie opisano tworzenie wątków i omówiono alternatyw przekazywania danych do procedury wątku.  

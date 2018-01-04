@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71cc1410a13fc73cce931a063a929ba94aab91be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b0735718db6317716055b9ee59cf90e869f2015c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generic-interfaces"></a>Interfejsy ogólne
 Ten temat zawiera omówienie interfejsach zapewniające często używane funkcje w rodzin typów ogólnych.  
@@ -53,6 +56,6 @@ Ten temat zawiera omówienie interfejsach zapewniające często używane funkcje
  <xref:System.Collections.Generic?displayProperty=nameWithType>  
  <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
  [Typy ogólne](../../../docs/standard/generics/index.md)  
- [Kolekcje ogólne w programie .NET Framework](../../../docs/standard/generics/collections.md)  
- [Delegaty ogólne do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
- [Kowariancja i Kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)
+ [Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)  
+ [Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+ [Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)

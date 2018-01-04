@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b867b2d7eb2f4b1252579bbf1f47430d9a9a48f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fe2848deadd8de4494f485d792604663515686e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrowanie z klasy XslTransform
 Architektura XSLT został przeprojektowany w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wersji. <xref:System.Xml.Xsl.XslTransform> Klasa została zastąpiona przez <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  
@@ -126,4 +129,4 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Za pomocą klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+ [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

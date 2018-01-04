@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7223fc47c885b7e659b9bab00c276759410d2567
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb249ba360ebaf9ed6a2b799ec4ebcccff9f8d58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer"></a>Porady: dodawanie kolumn do formantu ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze systemu Windows <xref:System.Windows.Forms.ListView> formant może wyświetlać wiele kolumn dla każdej listy elementów w **szczegóły** widoku. Kolumny służy do wyświetlania kilka typów informacji na temat każdego elementu listy. Na przykład można wyświetlić listę plików, nazwy pliku, typu pliku, rozmiar i datę ostatniej modyfikacji pliku. Informacji o wprowadzaniu kolumny po ich utworzeniu można zobaczyć [porady: wyświetlanie podelementów w kolumnach za pomocą formantu ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md).  
@@ -41,8 +42,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.ListView> formant może wy
 3.  Użyj **Dodaj** przycisk, aby dodać nowe kolumny. Następnie można wybrać nagłówek kolumny i Ustaw tekst (podpis kolumny), wyrównanie tekstu i szerokość.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Porady: Dodawanie i usuwanie elementów za pomocą systemu Windows formantu ListView formularzy](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [Porady: wyświetlanie podelementów w kolumnach z systemu Windows formantu ListView formularzy](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- [Porady: wyświetlanie ikon dla formantu ListView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- [Porady: Dodawanie niestandardowych informacji do formantu TreeView lub ListView (formularze systemu Windows)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
+ [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
+ [Instrukcje: wyświetlanie podelementów w kolumnach za pomocą kontrolki ListView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
+ [Instrukcje: wyświetlanie ikon dla kontrolki ListView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
+ [Instrukcje: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)

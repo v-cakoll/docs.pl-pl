@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bf43922fb702988e9057f541833cd58d33c820a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2191cb15a85e9b16ff0a21084668e80d3c197bfa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>Mapowanie hierarchii obiektów do danych XML
 Gdy dokument XML znajduje się w pamięci, koncepcyjnego reprezentacja jest drzewa. Programowania, musisz mieć hierarchię obiektów, uzyskać dostęp do węzłów drzewa. Poniższy przykład przedstawia sposób zawartości XML staje się węzłów.  
@@ -185,7 +188,7 @@ public class Sample
   
  Dane wyjściowe z przykładu ujawnia mapowanie danych do typów węzłów.  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```xml  
 <?xml version='1.0'?><!--This is a sample XML document --><!DOCTYPE Items [<!ENTITY number "123">]<Items><Item>Test with an entity: 123</Item><Item>test with a child element <more> stuff</Item><Item>test with a CDATA section <![CDATA[<456>]]> def</Item><Item>Test with a char entity: A</Item><--Fourteen chars in this element.--><Item>1234567890ABCD</Item></Items>  
@@ -228,4 +231,4 @@ public class Sample
  Aby dodać nowe węzły do modelu DOM, zobacz [Wstawianie węzły w dokumencie XML](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md). Do usuwania węzłów z modelu DOM, zobacz [wartości z dokumentu XML, zawartość i usuwanie węzłów](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md). Aby zmodyfikować zawartość węzłów w modelu DOM, zobacz [modyfikowanie węzłów, zawartość i wartości w dokumencie XML](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

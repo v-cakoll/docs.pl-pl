@@ -14,20 +14,23 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05883a89511574c43bf27d9781e862f7f52a6471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 89ea927d2862aa447ad2b66c77eb493541b0e62d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-tpl-with-other-asynchronous-patterns"></a>Korzystanie z modelu TPL z innymi wzorami asynchronicznymi
 Biblioteka zadań równoległych może służyć z tradycyjnego .NET Framework programowania wzorami asynchronicznymi na różne sposoby.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Programowanie asynchroniczne w TPL i standardowym .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
+ [Programowanie asynchroniczne w modelu TPL i tradycyjnym środowisku .NET Framework](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
  Opisuje sposób <xref:System.Threading.Tasks.Task> obiekty mogą być używane w połączeniu z asynchronicznego programowania modelu (APM) i oparty na zdarzeniach asynchroniczny wzorzec (EAP).  
   
- [Porady: zawijanie wzorów EAP w zadanie](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
+ [Instrukcje: opakowywanie wzorców EAP w zadaniu](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
  Przedstawia sposób użycia <xref:System.Threading.Tasks.Task> obiektów w celu hermetyzacji wzorów EAP.  
   
 ## <a name="see-also"></a>Zobacz też  

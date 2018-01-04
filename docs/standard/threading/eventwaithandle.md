@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1bd248133bd95ff05246eb36a8e250247fd7ed61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 665676a25aea48388ba01b8028af00049b113f2b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> Klasa umożliwia wątków, aby komunikować się ze sobą za pomocą sygnalizacji i Oczekiwanie na sygnały. Uchwyty oczekiwania na zdarzenie (zwaną także po prostu zdarzeń) to dojścia oczekiwania, które można zasygnalizować aby zwolnić jeden lub więcej wątków oczekujących. Po zostanie zasygnalizowane dojścia oczekiwania jest resetowany ręcznie lub automatycznie. <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo lokalnego oczekiwania obsługi zdarzenia (zdarzenie lokalnego) lub zdarzenia o nazwie systemu Zaczekaj dojścia (o nazwie zdarzenia lub zdarzeń systemowych są widoczne dla wszystkich procesów).  
@@ -74,4 +77,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.WaitHandle>  
  <xref:System.Threading.AutoResetEvent>  
  <xref:System.Threading.ManualResetEvent>  
- [EventWaitHandle, autoresetevent —, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+ [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

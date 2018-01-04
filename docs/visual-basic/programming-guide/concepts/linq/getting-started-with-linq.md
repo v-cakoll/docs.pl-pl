@@ -18,17 +18,17 @@ ms.assetid: 53c66373-ff43-431f-b4bb-f98362830279
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53087db3225ffd66be39a496057758cfc80d27b6
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 718eff92a2ba472661f0067e1766e63e0703178a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getting-started-with-linq-in-visual-basic"></a>Wprowadzenie do programu LINQ w Visual Basic
 Ta sekcja zawiera omówienie, przykłady i ogólne informacje, które mogą pomóc w zrozumieniu i użytkowaniu Visual Basic i język Language-Integrated zapytania (LINQ).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Pisanie pierwszej kwerendy LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
+ [Pisanie pierwszego zapytania LINQ](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)  
  W tym artykule opisano trzy etapy w pisania podstawowych zapytań LINQ: uzyskiwania źródła danych, zapisywanie zapytania i wykonywania zapytania.  
   
  [Podstawowe operacje zapytań (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)  
@@ -50,10 +50,10 @@ Ta sekcja zawiera omówienie, przykłady i ogólne informacje, które mogą pom�
  [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
  W tym artykule opisano, jak obsługuje LINQ do XML w Visual Basic.  
   
- [LINQ do DataSet — omówienie](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [Omówienie LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
  Zawiera omówienie LINQ do DataSet.  
   
- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
  Wyjaśniono LINQ do SQL technologii i udostępnia łącza do tematów, które ułatwiają korzystanie z LINQ do SQL.  
   
  [Visual Studio IDE i obsługę narzędzia LINQ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/visual-studio-ide-and-tools-support-for-linq.md)  

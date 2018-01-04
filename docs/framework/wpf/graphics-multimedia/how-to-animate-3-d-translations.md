@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0477943b715a23a1d6992f7e9da885ffa01061c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d49ad52906787eed9ab115adeb763b89b2ea38e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-3-d-translations"></a>Jak animować przesunięcie 3-D
 W tym temacie przedstawiono sposób animować transformację tłumaczenia ustawiony na [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] modelu.  
@@ -39,7 +40,7 @@ W tym temacie przedstawiono sposób animować transformację tłumaczenia ustawi
  [!code-xaml[Animation3DGallery_snip#Translation3DAnimationExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/Translation3DAnimationExample.xaml#translation3danimationexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Utwórz 3-sceny](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [Przegląd grafiki 3-w](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Przekształca — omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Tworzenie sceny 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [Grafika 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

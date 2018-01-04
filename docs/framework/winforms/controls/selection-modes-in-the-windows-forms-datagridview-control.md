@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f6b603382382971249b08cddd482566ec6e5fa5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f0d605b7ee7e48ad0ed2e693f0e71e5f1c25e022
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-modes-in-the-windows-forms-datagridview-control"></a>Tryby wyboru w formancie DataGridView formularzy systemu Windows
 Czasami ma aplikacji do wykonywania akcji na podstawie wybranych użytkowników w ramach <xref:System.Windows.Forms.DataGridView> formantu. W zależności od akcji których chcesz ograniczyć rodzaje wybór, które są możliwe. Na przykład załóżmy, że aplikację można wydrukować raportu dla aktualnie wybranego rekordu. W takim przypadku można skonfigurować <xref:System.Windows.Forms.DataGridView> sterowania, aby klikanie wiersza zawsze wybiera cały wiersz i tak aby tylko jeden wiersz jednocześnie można wybrać.  
@@ -59,5 +60,5 @@ Czasami ma aplikacji do wykonywania akcji na podstawie wybranych użytkowników 
  <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>  
  <xref:System.Windows.Forms.DataGridViewSelectionMode>  
- [Wybór i używanie Schowka z formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
- [Porady: Ustawianie trybu zaznaczania formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)
+ [Wybór i używanie schowka za pomocą kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: ustawianie trybu zaznaczania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)

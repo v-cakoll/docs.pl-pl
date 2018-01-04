@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4e0bc3f14a3d21776506f0a269a1a8c9f970cac0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8bcfa7d8a55cd2754965430db7ea6d2351892658
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-console-applications-in-the-net-framework"></a>Projektowanie aplikacji konsoli w programie .NET Framework
 Aplikacje w programie .NET Framework mogą używać <xref:System.Console?displayProperty=nameWithType> klasy odczytywanie znaków z i zapisywanie znaków do konsoli. Dane z konsoli są odczytywane z Standardowy strumień wejściowy, dane w konsoli są zapisywane do standardowego strumienia wyjściowego, a dane błąd w konsoli są zapisywane do strumienia wyjściowego błąd standardowy. Tych strumieni są automatycznie kojarzone z konsoli po uruchomieniu aplikacji i są widoczne jako <xref:System.Console.In%2A>, <xref:System.Console.Out%2A>, i <xref:System.Console.Error%2A> właściwości, odpowiednio.  
@@ -41,4 +44,4 @@ Aplikacje w programie .NET Framework mogą używać <xref:System.Console?display
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Console?displayProperty=nameWithType>  
- [Formatowanie tekstu](../../docs/standard/base-types/formatting-types.md)
+ [Formatowanie typów](../../docs/standard/base-types/formatting-types.md)

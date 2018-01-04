@@ -24,11 +24,14 @@ caps.latest.revision: "79"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11fdbcd65c4f5588d9f32357dcf344f5f8544614
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość będącą wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [standardowa Data i godzina ciąg formatu](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) jest interpretowana jako niestandardowa data i godzina ciąg formatu.  

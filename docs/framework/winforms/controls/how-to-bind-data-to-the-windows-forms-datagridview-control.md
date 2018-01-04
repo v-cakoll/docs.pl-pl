@@ -21,11 +21,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63194d01d5de1eab9d71376e472a70613f83d1ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04fee5f753cb4b3786d5ca58f85880f151caf0b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control"></a>Porady: powiązanie danych z formantem DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Sterowanie obsługuje standardowy model powiązanie danych formularzy systemu Windows, więc zostanie powiązany z różnych źródeł danych. W większości przypadków, jednak użytkownik zostanie z nim powiązane <xref:System.Windows.Forms.BindingSource> składników, które będą zarządzać szczegółowe informacje o interakcji ze źródłem danych. <xref:System.Windows.Forms.BindingSource> Składnika może reprezentować dowolnego źródła danych formularzy systemu Windows i zapewnia elastyczność podczas wybierania lub modyfikowania lokalizację danych. Aby uzyskać więcej informacji o źródłach danych obsługiwane przez <xref:System.Windows.Forms.DataGridView> sterowania, zobacz [informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md).  
@@ -69,5 +70,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.BindingSource>  
- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)

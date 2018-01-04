@@ -24,11 +24,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4aaf2da77a1fab55cbebd6bfa05a2b1c74e5cbbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 952696cf813a4bd0915f85a02946489d389d23e7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localization"></a>Lokalizacja
 Lokalizacja jest proces tłumaczenie zasobów aplikacji na zlokalizowane wersje każdego kultury, która aplikacja będzie obsługiwać. Należy przejść do kroku lokalizacji, dopiero po ukończeniu [sprawdzenie](../../../docs/standard/globalization-localization/localizability-review.md) krok, aby sprawdzić, czy uniwersalnych aplikacji jest gotowa do lokalizacji.  
@@ -40,7 +43,7 @@ Lokalizacja jest proces tłumaczenie zasobów aplikacji na zlokalizowane wersje 
  [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] Dostarcza Edytor zasobów formularzy systemu Windows (Winres.exe), który pozwala na szybkie lokalizowanie formularzy systemu Windows dla docelowej kultur. Aby dowiedzieć się, jak za pomocą tego narzędzia, zobacz [Winres.exe (Edytor zasobów formularzy systemu Windows)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)  
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)  
  [Sprawdzenie możliwości lokalizacji](../../../docs/standard/globalization-localization/localizability-review.md)  
  [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

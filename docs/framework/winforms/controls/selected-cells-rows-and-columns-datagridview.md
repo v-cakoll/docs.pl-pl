@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aada475af0ccac03dfa6ef9248b0fb07fd86b3ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22b44668b403b5a991c03de661b6e680ccde0a44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Porady: pobieranie wybranych komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 Można uzyskać zaznaczonych komórek, wierszy i kolumn z <xref:System.Windows.Forms.DataGridView> formantu przy użyciu odpowiednich właściwości: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>, <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>, i <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>. W poniższych procedurach, będzie pobrać zaznaczonych komórek i wyświetlić ich indeksy wierszy i kolumn w <xref:System.Windows.Forms.MessageBox>.  
@@ -72,4 +73,4 @@ Można uzyskać zaznaczonych komórek, wierszy i kolumn z <xref:System.Windows.F
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>  
  <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>  
- [Wybór i używanie Schowka z formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+ [Wybór i używanie schowka za pomocą kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

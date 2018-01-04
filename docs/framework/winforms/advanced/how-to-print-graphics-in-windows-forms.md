@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5f495135b3210f430c887451844bec8b154db33c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 634689b0b39510cbcc9dc49b1f4717e7e07f88d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>Porady: drukowanie grafiki w formularzach systemu Windows
 Często mają drukowanie grafiki w aplikacji opartych na systemie Windows. <xref:System.Drawing.Graphics> Klasa zawiera metody służące do rysowania obiektów na urządzeniu, na przykład ekranu lub drukarki.  
@@ -79,4 +80,4 @@ Często mają drukowanie grafiki w aplikacji opartych na systemie Windows. <xref
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Graphics>  
  <xref:System.Drawing.Brush>  
- [Obsługa drukowania w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

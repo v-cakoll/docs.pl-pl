@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e7cb01c81b5fb24830cbe0cc39befbadaf4405e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78d90414d86d06040065ad8ae18a037412723ce0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>Jak zastąpić metadane dla właściwości zależności
 W tym przykładzie pokazano, jak zastąpić domyślny metadanych właściwości zależności, które pochodzi z klasy dziedziczonej, wywołując <xref:System.Windows.DependencyProperty.OverrideMetadata%2A> — metoda i udostępnia metadane określonego typu.  
@@ -44,5 +45,5 @@ W tym przykładzie pokazano, jak zastąpić domyślny metadanych właściwości 
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.DependencyProperty>  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

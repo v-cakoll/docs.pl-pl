@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2bfd6eee5831b6bb92c0274fe5925184c80a92e2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cc74b13fd4771cc4f00500ff3253795f45db2b40
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>Obsługa zdarzeń w dokumencie XML przy użyciu XmlNodeChangedEventArgs
 **XmlNodeChangedEventArgs** hermetyzuje Argumenty przekazane do obsługi zdarzeń zarejestrowane na **XmlDocument** obiektu na potrzeby obsługi zdarzeń. Zdarzenia oraz gdy są one uruchamiane opis znajduje się w poniższej tabeli.  
@@ -216,4 +219,4 @@ public class Sample
  Aby uzyskać więcej informacji, zobacz <xref:System.Xml.XmlNodeChangedEventArgs> i <xref:System.Xml.XmlNodeChangedEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21623987e9e3798488df6ed0e001a2baf54c3575
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b433beaa67fa3c8d574f7b07e1d2f12af8b3dd00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-a-windows-forms-control-to-a-factory-object"></a>Porady: powiązanie formantu formularzy systemu Windows z obiektem fabryki
 Podczas tworzenia formantów, które współdziałają z danymi będą czasami jest konieczne do wiązania kontrolki do obiektu lub metodę, która generuje inne obiekty. Obiekt lub metoda jest wywoływana fabrykę. Źródło danych może być na przykład, wartość zwracana z wywołania metody, zamiast obiektu w pamięci lub typu. Formant można powiązać z tym rodzajem źródła danych, tak długo, jak źródło zwraca kolekcję.  
@@ -51,5 +52,5 @@ Podczas tworzenia formantów, które współdziałają z danymi będą czasami j
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource — składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Porady: powiązanie formantu formularzy systemu Windows z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Instrukcje: powiązanie kontrolki Windows Forms z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

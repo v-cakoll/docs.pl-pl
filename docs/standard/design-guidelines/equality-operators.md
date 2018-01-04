@@ -19,11 +19,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 55c0505f5a06dfc87897fa59e9d6083cbd63c8ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5aa37d2ee6b3b18d9decbc98bd1c427168e8ab35
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="equality-operators"></a>Operatory równości
 W tej sekcji omówiono przeciążania Operatory równości i odwołuje się do `operator==` i `operator!=` jako operatory równości.  
@@ -57,5 +60,5 @@ W tej sekcji omówiono przeciążania Operatory równości i odwołuje się do `
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące użycia](../../../docs/standard/design-guidelines/usage-guidelines.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)

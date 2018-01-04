@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4aa22b011b895a20cefdcc5a7c9e6c1cd0531923
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bfd955b4153c7a2bc54d8b52ff1801541c3a7559
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>Porady: łączenie wielu zdarzeń z jednym programem obsługi zdarzeń w formularzach systemu Windows
 W projekcie aplikacji może być konieczne użycie obsługą jednego zdarzenia dla wielu zdarzeń lub ma wiele zdarzeń wykonanie tej procedury. Na przykład często jest zaawansowanym oszczędność czasu do polecenia wywołaj zdarzenie sam, jak przycisk w formularzu, jeśli udostępniają te same funkcje. Aby to zrobić, za pomocą widoku zdarzeń okna właściwości w języku C# lub `Handles` — słowo kluczowe i **Nazwa klasy** i **nazwę metody** list rozwijanych w edytorze kodu języka Visual Basic.  
@@ -70,5 +71,5 @@ W projekcie aplikacji może być konieczne użycie obsługą jednego zdarzenia d
      Kod zostanie dodany do formularza, aby powiązać zdarzenia istniejącego programu obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+ [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Przegląd procedur obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

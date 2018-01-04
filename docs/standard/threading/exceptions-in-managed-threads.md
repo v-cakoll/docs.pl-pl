@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebb5559d300bb3db34fe640e87eb8b9e67931561
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f68a7aebdb1625b149287d70fd91c2108a658b9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="exceptions-in-managed-threads"></a>Wyjątki w zarządzanych wątkach
 Środowisko uruchomieniowe języka wspólnego w programie .NET Framework w wersji 2.0, umożliwia najbardziej nieobsługiwanych wyjątków w wątkach, aby kontynuować naturalny. W większości przypadków oznacza to, że nieobsługiwany wyjątek powoduje zamknięcie aplikacji.  

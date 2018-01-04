@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 7f92dd26def56deacb24de37fb7f23f79799d20a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7626b0a6a902465416187b2c09d624dfe9a9773
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system--common-language-specification"></a>Wspólny System typów & Specyfikacja języka wspólnego
 
@@ -57,5 +60,5 @@ Należy zapoznać się z dokumentami w [więcej zasobów](#more-resources) poni�
 
 ## <a name="more-resources"></a>Więcej zasobów
 
-*   [Wspólny System typów](./base-types/common-type-system.md)
+*   [System typu wspólnego](./base-types/common-type-system.md)
 *   [Specyfikacja języka wspólnego](language-independence-and-language-independent-components.md)

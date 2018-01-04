@@ -22,11 +22,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: af0159f20ed8a8b4c174ab07ebccfedd5a8e7f8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 099937fe113c39c717b4c9fcba2042115b9105e6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-decrypt-xml-elements-with-asymmetric-keys"></a>Porady: odszyfrowywanie elementów XML przy użyciu kluczy asymetrycznych
 Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do szyfrowania i odszyfrowywania element w dokumencie XML.  Szyfrowanie XML jest standardowym sposobem exchange lub przechowywania zaszyfrowanych danych XML, nie martwiąc się o łatwo odczytywane dane.  Aby uzyskać więcej informacji na temat standardowych szyfrowanie XML, zobacz zalecenia konsorcjum World Wide Web (W3C) [składnia XML podpisu i przetwarzania](http://go.microsoft.com/fwlink/?LinkID=136777).  
@@ -90,4 +93,4 @@ Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw d
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Cryptography.Xml>  
- [Porady: szyfrowanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)
+ [Instrukcje: szyfrowanie elementów XML przy użyciu kluczy asymetrycznych](../../../docs/standard/security/how-to-encrypt-xml-elements-with-asymmetric-keys.md)

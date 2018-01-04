@@ -25,11 +25,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c500b882c335572b8b458ba515b282e9f5362b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e65eb85e1355d3aa98e04e7bd73f0194243dcdb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Wykonywanie niezależnych od kultury zmian wielkości liter
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>, I <xref:System.Char.ToLower%2A?displayProperty=nameWithType> metody udostępniają przeciążeń, które nie akceptują parametrów. Domyślnie te przeciążenia bez parametrów wykonują zmiany wielkości liter na podstawie wartości z <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>. Daje to wyniki z uwzględnieniem wielkości liter, które zależą od kultury. Aby umożliwić Wyczyść, czy wielkość zmiany, które mają być zależne od kultury lub niezależnych od kultury, należy używać przeciążeń tych metod, które wymagają jawnie określić `culture` parametru. Zależne od kultury zmian wielkości liter, można określić `CultureInfo.CurrentCulture` dla `culture` parametru. Niezależne od kultury zmian wielkości liter, można określić `CultureInfo.InvariantCulture` dla `culture` parametru.  
@@ -79,4 +82,4 @@ static object LookupKey(string key)
  <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
  <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
- [Wykonywanie operacji na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

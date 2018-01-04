@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ddbbab88a22a4350626a36f79236aab67da24a7f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 28cb1b02e67d076f9190e2d8e36b72c20cc5c4e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>Domyślne zachowanie myszy i klawiatury w formancie DataGrid
 W tym temacie opisano sposób interakcji użytkowników z <xref:System.Windows.Controls.DataGrid> formantu przy użyciu klawiatury i myszy.  

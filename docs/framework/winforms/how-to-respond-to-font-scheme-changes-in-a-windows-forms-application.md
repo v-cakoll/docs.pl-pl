@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b2e53df114c491e99e13940ae47a4119bd8da46
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aac8d56c87ff03b313565a3d04cd3f3cc4e85f72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>Porady: reagowanie na zmiany schematu czcionek w aplikacji Windows Forms
 W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki systemowe, aby upewnić domyślnej czcionki są wyświetlane, większy lub mniejszy. Zmiana tych ustawień czcionki jest kluczowa dla użytkowników, którzy są niedowidzących i wymagają większej typu tekstu na ekranie. Można dostosować aplikacji Windows Forms reagowanie na te zmiany, zwiększ lub Zmniejsz rozmiar formularza i wszystkich zawartych w niej tekstu przy każdej zmianie schematu czcionek. Jeśli chcesz, aby formularz, aby uwzględnić zmiany w rozmiarze czcionki dynamicznie, można dodać kod do formularza.  
@@ -75,4 +76,4 @@ W systemach operacyjnych Windows użytkownik może zmienić ustawienia czcionki 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>  
- [Automatyczne skalowanie w formularzach systemu Windows](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)
+ [Automatyczne skalowanie w formularzach Windows Forms](../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)

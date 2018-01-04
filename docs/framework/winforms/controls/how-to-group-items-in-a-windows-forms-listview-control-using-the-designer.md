@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c9dc3a12227d3c9bfd64c97be61e69b50d2bbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 537aff8a49e42fe521ca6e0b2b698a461d4f5eaf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>Porady: grupowanie elementów w formancie ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Funkcji grupowania <xref:System.Windows.Forms.ListView> kontroli umożliwia wyświetlanie zestawów powiązanych elementów w grupach. Grupy te są oddzielone na ekranie nagłówki poziomy grupy, które zawierają tytuły grupy. Można użyć <xref:System.Windows.Forms.ListView> grupy, aby łatwiej nawigowanie po dużych list przez alfabetycznie, grupowanie elementów według daty lub logiczne grupowanie. Na poniższej ilustracji przedstawiono niektóre zgrupowane elementy.  
@@ -59,7 +60,7 @@ Funkcji grupowania <xref:System.Windows.Forms.ListView> kontroli umożliwia wyś
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.Groups%2A>  
  <xref:System.Windows.Forms.ListViewGroup>  
- [ListView — formant](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Informacje o formancie ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [Porady: Dodawanie i usuwanie elementów za pomocą systemu Windows formantu ListView formularzy](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+ [Instrukcje: dodawanie i usuwanie elementów za pomocą kontrolki ListView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

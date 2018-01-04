@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1d533a1f559044caf3bc711e9401b75703254bc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d3ca06c2e702ef64a05834116e1c89b4872b32b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-a-peer-channel-application"></a>Tworzenie aplikacji kanału równorzędnego
 Poniższe sekcje zawierają wskazówki dotyczące tworzenia aplikacji kanału równorzędnego.  
@@ -29,7 +30,7 @@ Poniższe sekcje zawierają wskazówki dotyczące tworzenia aplikacji kanału r�
  [Ograniczanie dystrybucji komunikatów](../../../../docs/framework/wcf/feature-details/limiting-message-distribution.md)  
  W tym artykule omówiono, kontrolowania, jak komunikaty są przekazywane w sieci za pomocą liczby przeskoków, filtr propagacji komunikatu, Filtr lokalny lub bezpośredniego połączenia i zawiera ogólne wskazówki dotyczące wybierania podejście.  
   
- [Dodawanie stanu Online i Offline](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
+ [Dodawanie stanu online i offline](../../../../docs/framework/wcf/feature-details/adding-online-and-offline-status.md)  
  Informacje dotyczące używania <xref:System.ServiceModel.IOnlineStatus> interfejs do monitorowania konkretne szczegółowe informacje o stanie online i offline kanał elementu równorzędnego połączenia.  
   
  [Zabezpieczanie aplikacji kanałów równorzędnych](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)  

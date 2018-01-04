@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 821cd152ccb7a02dda5338d6a3ec44d6625c0097
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97b83feb9d19760208d9cc103290c5c6293c30c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource — Rozszerzenie znaczników
 Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] atrybutu właściwości wyszukując odwołanie do zasobu już zdefiniowane. Zachowanie wyszukiwania dla tego zasobu jest odpowiednikiem wyszukiwanie czas ładowania, które będzie wyglądać na zasoby, które wcześniej zostały załadowane z poziomu znacznika bieżącego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony oraz innych źródeł aplikacji i wygeneruje tej wartości zasobu jako wartość właściwości w obiektach czasu wykonywania.  
@@ -78,8 +79,8 @@ Zawiera wartość dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla
  `StaticResource`to rozszerzenie znacznika. Rozszerzenia znaczników są zazwyczaj implementowane w sytuacji, gdy istnieje wymóg, aby wartości atrybutów były wyprowadzane w postaci innej niż wartości literałów lub nazwy programów obsługi, a wymóg ma charakter bardziej globalny niż zwykłe umieszczenie konwerterów typów w niektórych typach lub właściwościach. Wszystkie rozszerzenia znaczników w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Użyj {i} znaków w ich składni atrybutu Konwencji za pomocą którego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] procesora rozpoznaje, że rozszerzenie znacznika musi przetworzyć atrybutu. Aby uzyskać więcej informacji, zobacz [rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)

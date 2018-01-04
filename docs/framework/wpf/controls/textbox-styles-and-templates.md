@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7f5cfd1c0715c7f9610f85201cd40a3973a2be64
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d4fdb652876f2df049b71c18b0b79b7b435da8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-styles-and-templates"></a>TextBox — Style i szablony
 W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.TextBox> formantu. Można zmodyfikować domyślne <xref:System.Windows.Controls.ControlTemplate> umożliwiają unikatowego wyglądu formantu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md).  
@@ -65,7 +66,7 @@ W tym temacie opisano, style i szablonów dla <xref:System.Windows.Controls.Text
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement.Style%2A>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [Style formantu i szablony](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Dostosowywanie wyglądu formant tworząc ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)
+ [Style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Dostosowywanie wyglądu istniejącej kontrolki przez tworzenie ControlTemplate](../../../../docs/framework/wpf/controls/customizing-the-appearance-of-an-existing-control.md)

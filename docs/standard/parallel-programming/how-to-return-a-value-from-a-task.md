@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ade2aadc7d76c12c633f84eeb9eced7a637d5df9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4497f7f9c6802a9b3d4edca66ceb4a894a59646a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-return-a-value-from-a-task"></a>Porady: zwracanie wartości z zadania
 Ten przykład przedstawia sposób użycia <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> typu w celu zwrócenia wartości z <xref:System.Threading.Tasks.Task%601.Result%2A> właściwości. Wymaga ona, że C:\Users\Public\Pictures\Sample Pictures\ katalog istnieje i czy zawiera pliki.  
@@ -35,5 +38,5 @@ Ten przykład przedstawia sposób użycia <xref:System.Threading.Tasks.Task%601?
  Aby zobaczyć, jak przekazać wynik jednego <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> do kontynuacji zadania, zobacz [tworzenie łańcuchów zadań przy użyciu zadań kontynuacji](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie asynchroniczne opartego na zadaniach](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
- [Wyrażenia lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [Programowanie asynchroniczne oparte na zadaniach](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)  
+ [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 906c23caa7065486bb094ad2475ed9e7e24b3d9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ca1331cc45f437882d38adba241e2767821de36
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="weak-references"></a>Słabe odwołania
 Moduł zbierający elementy bezużyteczne nie można zebrać obiektu używany przez aplikację, gdy kod aplikacji może osiągnąć tego obiektu. Aplikacja jest nazywany ma silne odwołanie do obiektu.  
@@ -60,4 +63,4 @@ Moduł zbierający elementy bezużyteczne nie można zebrać obiektu używany pr
  Unikaj używania słabe odwołania jako automatyczne rozwiązanie problemów z zarządzaniem pamięci. Zamiast tego Tworzenie skutecznych zasad buforowania obsługi obiektów aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

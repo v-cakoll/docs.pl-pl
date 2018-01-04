@@ -8,11 +8,11 @@ ms.assetid: 5d26c4b1-45ca-459b-9b96-907dbc6ea25c
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 06149dfaaff4ac0f1b52e1b05177b083b12bac0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cc4165660ac04922389292d3ee8ba845241cb7dd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="baudrate-must-be-greater-than-0"></a>Szybkość transmisji musi być większa niż 0
 `BaudRate` Określono argumentu dla `My.Computer.Ports.OpenSerialPort` metoda musi być większa od zera.  
@@ -22,4 +22,4 @@ ms.lasthandoff: 10/18/2017
 -   Zmień wartość `BaudRate` argument liczbą dodatnią.  
   
 ## <a name="see-also"></a>Zobacz też  
- [My.Computer.Ports.OpenSerialPort — metoda](http://msdn.microsoft.com/en-us/ed1e75f0-635a-4229-8fe6-becea5d036c3)
+ [My.Computer.Ports.OpenSerialPort](xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A)

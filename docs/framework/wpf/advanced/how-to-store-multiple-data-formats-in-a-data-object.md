@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7019385e9c6acd8baf74dac163b75b10307a7f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 38fb4f65728dfb93fd920cea6432f3617fe60705
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-store-multiple-data-formats-in-a-data-object"></a>Jak przechować wiele formatów danych w obiekcie danych
 Poniższy przykład przedstawia użycie <xref:System.Windows.DataObject.SetData%28System.String%2CSystem.Object%29> metody, aby dodać dane do obiektu danych w wielu formatach.  
@@ -39,4 +40,4 @@ Poniższy przykład przedstawia użycie <xref:System.Windows.DataObject.SetData%
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.IDataObject>  
- [Przeciągnij i upuść — omówienie](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+ [Przegląd przeciągania i upuszczania](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

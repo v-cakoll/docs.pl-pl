@@ -20,11 +20,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e396bb1f6a710e49e311ca1526a7aae9bca7bf90
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c23ef17e2bf2bec389368d1b9d88d11723ef531e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading-best-practices"></a>Zarządzana wątkowość — najlepsze rozwiązania
 Wielowątkowość wymaga zachować ostrożność podczas programowania. W przypadku większości zadań można zmniejszyć złożoność kolejkowania wiadomości żądania do wykonania przez wątków z puli wątków. Ten temat dotyczy sytuacji trudniej, takich jak koordynowanie pracy wiele wątków, lub obsługa wątki tego bloku.  

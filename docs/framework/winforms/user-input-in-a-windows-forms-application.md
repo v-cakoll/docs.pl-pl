@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb6f832b77404b57ab22e4ac472e7707f0e10dd5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60135c09f63bd98f753e151c515938cbf13e70ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Wprowadzanie przez użytkownika w aplikacjach Windows Forms
 W formularzach systemu Windows dane wejściowe użytkownika są wysyłane do aplikacji w formie komunikatów systemu Windows. Szereg metod, które można przetworzyć tych wiadomości w aplikacji, formularz i sterować poziomem. Podczas tych metod odbieranie komunikatów myszy i klawiatury, zgłoś one zdarzenia, które są obsługiwane w celu uzyskania informacji na temat myszy lub klawiatury danych wejściowych. W wielu przypadkach aplikacji formularzy systemu Windows będzie można przetwarzać wszystkie dane wejściowe użytkownika za pomocą obsługi tych zdarzeń. W pozostałych przypadkach aplikacji może być konieczne zastąpienie jednej z metod, które przetwarzają wiadomości, aby przechwycić danego komunikatu, zanim aplikacja, formularz lub formant otrzymuje.  
@@ -40,6 +41,6 @@ W formularzach systemu Windows dane wejściowe użytkownika są wysyłane do apl
  Klawiatura i mysz wiadomości również są przetwarzane przez dodatkowy zestaw nadpisywalnych metod, które są specyficzne dla tych typów wiadomości. Aby uzyskać więcej informacji, zobacz [sposób działania wejście klawiatury](../../../docs/framework/winforms/how-keyboard-input-works.md) i [sposób działania wejście myszy w formularzach systemu Windows](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane wejściowe użytkownika w formularzach systemu Windows](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
- [Wprowadzanie z klawiatury w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
- [Wejście myszy w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Dane użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Wprowadzanie z klawiatury w aplikacjach Windows Forms](../../../docs/framework/winforms/keyboard-input-in-a-windows-forms-application.md)  
+ [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

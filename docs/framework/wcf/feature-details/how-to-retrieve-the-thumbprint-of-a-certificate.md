@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45f66a7003fe712ab482d5237762e2bafffc5a6e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f6d00d31023aa8d6dbfec4a8306f1cb9da17c74
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>Porady: Pobieranie odcisku palca certyfikatu
 Podczas zapisywania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji, która używa certyfikatu X.509 do uwierzytelniania, często jest niezbędne do określenia oświadczenia, znalezione w certyfikacie. Na przykład, należy podać oświadczenie odcisk palca podczas przy użyciu <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> wyliczanie w <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> metody. Znajdowanie wartość oświadczenia wymaga wykonania dwóch kroków. Po pierwsze Otwórz przystawkę Microsoft Management Console (MMC) dla certyfikatów. (Zobacz [porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).) Po drugie zgodnie z opisem w tym miejscu, Znajdź odpowiedni certyfikat i skopiuj jego odcisk palca (lub inne wartości oświadczenia).  
@@ -50,6 +51,6 @@ Podczas zapisywania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] apli
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>  
  <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>  
- [Porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
- [Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
- [Porady: Tworzenie certyfikatów tymczasowych do użytku w czasie projektowania](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+ [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Instrukcje: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)  
+ [Instrukcje: tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

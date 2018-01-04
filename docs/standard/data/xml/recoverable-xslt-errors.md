@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 78149e0e1c84a457f68b67ea8fe4c82098e794ad
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d75bb34b6258819290a5d2dd8c33b37945cce5c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="recoverable-xslt-errors"></a>Błędy możliwe do odzyskania XSLT
 Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których implementacji dostawcy może decyzję dotyczącą sposobu obsługi sytuacji. Te obszary są uważane za DACL zachowanie. Na przykład w sekcji 7.3 Tworzenie przetwarzania instrukcje, zalecenie XSLT 1.0 stwierdza, czy jest błąd, jeśli Tworzenie wystąpień zawartość `xsl:processing-instruction` tworzy węzły inne niż węzły tekstowe. W przypadku niektórych problemów 1.0 XSLT zalecenie wskazuje co decyzja należy Jeśli procesor decyduje o tym odzyskać sprawność po błędzie. Tego problemu podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać tego błędu ignorowanie węzły i jego zawartość.  

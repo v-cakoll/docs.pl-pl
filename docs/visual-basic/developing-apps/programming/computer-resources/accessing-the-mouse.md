@@ -14,11 +14,11 @@ ms.assetid: 6d31a3d2-d860-459d-9d13-3aa192d62ba2
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c4d46bbd3e432e2551c60f9e2996cadeda39c8d7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: e36652e50a9708ef523babde9372702dfcc3829c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-the-mouse-visual-basic"></a>Uzyskiwanie dostępu do myszy (Visual Basic)
 `My.Computer.Mouse` Obiekt zapewnia sposób znaleźć informacje o myszy komputera, np. Jeśli myszy istnieje, liczba przycisków myszy oraz szczegółowe informacje o kółka myszy.  
@@ -28,9 +28,9 @@ ms.lasthandoff: 10/22/2017
   
 |Do|Zobacz|  
 |--------|---------|  
-|Określ, czy wskaźnik myszy ma kółka przewijania.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists%2A>|  
-|Określić, czy zostały zamienione przycisku myszy lewy i prawy|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped%2A>|  
-|Ustaw ile do przewijania, gdy kółko myszy jest obracany o jedną pozycję.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines%2A>|  
+|Określ, czy wskaźnik myszy ma kółka przewijania.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists>|  
+|Określić, czy zostały zamienione przycisku myszy lewy i prawy|<xref:Microsoft.VisualBasic.Devices.Mouse.ButtonsSwapped>|  
+|Ustaw ile do przewijania, gdy kółko myszy jest obracany o jedną pozycję.|<xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines>|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Devices.Mouse>

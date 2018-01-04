@@ -25,11 +25,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1ee7c7b4e21d147bad1cd8e4b854c0ff4fe13aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 588ab00d61a701dc43e2af5978a6023a93f367f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-dependency-properties"></a>Niestandardowe właściwości zależności
 W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperzy aplikacji autorów składnik może być utworzenie właściwości niestandardowe zależności i opisano kroki implementacji, a także niektóre opcje wdrażania, które może poprawić wydajność, użyteczność lub wszechstronność właściwości.  
@@ -169,9 +170,9 @@ W tym temacie opisano przyczyny który [!INCLUDE[TLA#tla_winclient](../../../../
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Metadane właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Typ kolekcji właściwości zależności](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
+ [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Właściwości zależności typu kolekcji](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
  [Zabezpieczenia właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
  [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [Wzorce bezpieczne konstruktora dla DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)
+ [Bezpieczne wzorce konstruktora dla obiektów DependencyObjects](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)

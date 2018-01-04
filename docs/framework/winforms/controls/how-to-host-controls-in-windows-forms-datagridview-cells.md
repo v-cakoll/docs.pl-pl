@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7fd74b54a4e8c91762a3f32c6c89877470c10960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dbd315b5980c0aed222c9576632064ea9f7b2ce1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>Porady: kontrolki hosta w komórkach DataGridView formularzy systemu Windows
 <xref:System.Windows.Forms.DataGridView> Kontrola zapewnia kilka typów kolumn, aby umożliwić użytkownikom wprowadzanie i edytowanie wartości w różny sposób. Jeśli te typy kolumn nie spełniają potrzeb wprowadzania danych, można jednak utworzyć własnych typów kolumn z komórek obsługujących formanty wybrane. Aby to zrobić, należy zdefiniować klasy, które pochodzą z <xref:System.Windows.Forms.DataGridViewColumn> i <xref:System.Windows.Forms.DataGridViewCell>. Należy również zdefiniować klasą pochodzącą z <xref:System.Windows.Forms.Control> i implementuje <xref:System.Windows.Forms.IDataGridViewEditingControl> interfejsu.  
@@ -52,6 +53,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
  <xref:System.Windows.Forms.IDataGridViewEditingControl>  
  <xref:System.Windows.Forms.DateTimePicker>  
- [Dostosowywanie formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- [DataGridView — architektura formantu](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
- [Typy kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+ [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [DataGridView, kontrolka — architektura](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

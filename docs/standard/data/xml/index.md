@@ -1,5 +1,5 @@
 ---
-title: Dokumenty XML i dane
+title: Dokumenty i dane XML
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -13,13 +13,16 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 38382609fb21069fd69a84eb8b9de4701efeaf2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22a2eb72dc06a644171c143a61698e661d2c66c6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="xml-documents-and-data"></a>Dokumenty XML i dane
+# <a name="xml-documents-and-data"></a>Dokumenty i dane XML
 .NET Framework zapewnia kompleksowy, zintegrowany zestaw klas, które umożliwiają łatwe tworzenie aplikacji obsługującym kod XML. Klasy w następujących przestrzeni nazw obsługuje analizowania i zapisywanie edytowania plików XML, dane XML w pamięci, sprawdzanie poprawności danych i przekształcenie XSLT.  
   
 -   <xref:System.Xml>  
@@ -74,23 +77,23 @@ ms.lasthandoff: 10/18/2017
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  W tym artykule opisano sposób użycia procesora XSLT.  
   
- [Model obiektu schematu XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  W tym artykule opisano klasy, służące do tworzenia i operowanie nimi schematów XML (XSD), zapewniając <xref:System.Xml.Schema.XmlSchema> klasy obciążenia i Edytuj schematu.  
   
- [Integracja XML z danych relacyjnych i ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
+ [Integracja XML z danymi relacyjnymi i sterownikiem ADO.NET](../../../../docs/standard/data/xml/xml-integration-with-relational-data-and-adonet.md)  
  W tym artykule opisano, jak programu .NET Framework udostępnia w czasie rzeczywistym, synchronicznej relacyjnych i hierarchicznych reprezentacje danych za pośrednictwem <xref:System.Data.DataSet> obiektu i <xref:System.Xml.XmlDataDocument> obiektu.  
   
- [Zarządzanie przestrzeni nazw w dokumencie XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
+ [Zarządzanie przestrzeniami nazw w dokumencie XML](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
  Opisuje sposób <xref:System.Xml.XmlNamespaceManager> klasa jest używana do przechowywania i obsługi informacji dotyczących przestrzeni nazw.  
   
- [Obsługa typu do zestawów System.Xml klas](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
  W tym artykule opisano, jak typy mapowania typów danych XML do środowiska CLR, jak przekonwertować typów danych XML i innymi funkcjami pomocy technicznej typu <xref:System.Xml> klasy.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
  Zawiera informacje na temat dostępu do danych za pomocą ADO.NET.  
   
- [Zabezpieczeń](../../../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../../../docs/standard/security/index.md)  
  Omówienie systemu zabezpieczeń .NET Framework.  
   
  [Centrum deweloperów języka XML](http://go.microsoft.com/fwlink/?linkid=42458)  

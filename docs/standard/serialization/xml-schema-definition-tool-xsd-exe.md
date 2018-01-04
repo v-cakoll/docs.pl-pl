@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31bb350d454d2fcb0f38d092240c98c1b87966be
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.  
@@ -66,7 +69,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |**/f**[**pola**]|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|  
 |**/l**[**ęzyk**]**:***języka*|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić pełną nazwę Implementacja klasy<xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**]**:***przestrzeni nazw*|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|  
-|**/ nologo**|Pomija transparentu.|  
+|**/nologo**|Pomija transparentu.|  
 |**/ ORDER**|Generuje jawne kolejności identyfikatorów dla wszystkich członków cząstek.|  
 |**/o [ut]:** *directoryName*|Określa katalog wyjściowy, który można umieścić pliki w. Ustawieniem domyślnym jest bieżący katalog.|  
 |**/u**[**ri**]**:***identyfikatora uri*|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli jest dostępna ma zastosowanie do wszystkich elementów określony za pomocą `/element` opcji.|  
@@ -234,7 +237,7 @@ xsd myAssembly.dll
  <xref:System.Data.DataSet>  
  <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>  
  [Narzędzia](../../../docs/framework/tools/index.md)      
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
- [LINQ do DataSet — omówienie](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [Wykonywanie zapytania Typizowane zbiory danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [Omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
+ [Wykonywanie zapytania do typizowanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

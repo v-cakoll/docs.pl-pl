@@ -25,11 +25,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f90cf4e481d8ce8f5f34c3aaab3e544e37e1481
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 36df7286bad0d26108b726d2499bbeb0b2caa198
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>Kontrolowanie serializacji XML przy użyciu atrybutów
 Atrybuty można kontrolować serializacji XML obiektu lub utworzyć alternatywny strumień XML z tego samego zestawu klas. Aby uzyskać więcej informacji o tworzeniu alternatywnego strumienia XML, zobacz [porady: Określ alternatywną nazwę elementu strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md).  
@@ -317,10 +320,10 @@ public class Group{
  Może to być sytuacje, gdy właściwość publiczna lub pola nie jest konieczne serializacji. Na przykład pole lub właściwość może służyć do zawierają metadanych. W takiej sytuacji należy zastosować <xref:System.Xml.Serialization.XmlIgnoreAttribute> pola lub właściwości i <xref:System.Xml.Serialization.XmlSerializer> pominie go.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Atrybuty, które kontrolują serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
- [Atrybuty, które sterowania serializacją użyciu zakodowanego protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Atrybuty kontrolujące serializację XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [Przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
- [Porady: Określ nazwę elementu alternatywnego strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

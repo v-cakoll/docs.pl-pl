@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9549fa11b3f019dce3cc77d5f6d1d08a8485f0cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5ac840953e34ac6726bb1c240c062d0f17b8cb71
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>Porady: Ukrywanie ToolStripMenuItems przy użyciu narzędzia Projektant
 Ukrywanie elementów menu jest możliwość sterowania interfejsem użytkownika (UI), aplikacji i ograniczyć poleceń użytkownika. Często chcesz ukryć całe menu, gdy wszystkich elementów menu na nim są niedostępne. Przedstawia informacje o tym przeszkadzał dla użytkownika. Ponadto możesz chcieć zarówno Ukryj i Wyłącz menu lub elementu menu, jak ukrywanie wyłącznie nie uniemożliwia użytkownikowi uzyskiwanie dostępu do polecenia menu za pomocą klawisza skrótu. Aby uzyskać więcej informacji dotyczących wyłączanie elementów menu, zobacz [porady: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md).  
@@ -50,5 +51,5 @@ Ukrywanie elementów menu jest możliwość sterowania interfejsem użytkownika 
  <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>  
  <xref:System.Windows.Forms.ToolStripItem.Available%2A>  
  <xref:System.Windows.Forms.ToolStripMenuItem.Overflow%2A>  
- [Informacje o formancie MenuStrip](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
- [Porady: wyłączanie ToolStripMenuItems przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)
+ [MenuStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)  
+ [Instrukcje: wyłączanie kontrolki ToolStripMenuItems przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-disable-toolstripmenuitems-using-the-designer.md)

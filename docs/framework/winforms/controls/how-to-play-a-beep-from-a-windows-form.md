@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e214b368b65797100722cb41ad6a77ecd16424de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c0c0c369756547231c0f8171bdfa940cb353544b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-beep-from-a-windows-form"></a>Porady: odtwarzanie sygnału dźwiękowego za pomocą formularza systemu Windows
 W tym przykładzie odtwarza dźwięk w czasie wykonywania.  
@@ -55,5 +56,5 @@ public void onePing()
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Interaction.Beep%2A>  
  <xref:System.Media.SoundPlayer>  
- [Porady: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
- [Porady: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+ [Instrukcje: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-system-sound-from-a-windows-form.md)  
+ [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

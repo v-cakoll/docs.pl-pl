@@ -22,11 +22,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38032fccce1a8f6f7cbcb3bbd3d3f9d008a74141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e50fd66096d6bd58fb7db692449e7f8654b5ca76
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="the-managed-thread-pool"></a>Zarządzana pula wątków
 <xref:System.Threading.ThreadPool> Klasa udostępnia aplikacji dla puli wątków roboczych, które są zarządzane przez system, umożliwiając skoncentrować się na zadania aplikacji, a nie wątku zarządzania. Jeśli masz krótkie zadania, które wymagają przetwarzania w tle zarządzana Pula wątków to prosty sposób korzystać z wielu wątków. Na przykład, począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] można utworzyć <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> obiekty, do których wykonywania zadań asynchronicznych w wątku puli wątków.  
@@ -151,8 +154,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Threading.Tasks.Task%601>  
  [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
  [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Porady: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
+ [Instrukcje: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)  
  [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
  [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)  
- [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
  [Czasomierze](../../../docs/standard/threading/timers.md)

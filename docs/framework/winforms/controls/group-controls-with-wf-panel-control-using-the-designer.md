@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1d4a49f36ac294199871075a04b7e682bd5613b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4582a4bcec1d82651c39be179cbefa2dfc34fa2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>Porady: grupowanie formantów z formantem panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze systemu Windows <xref:System.Windows.Forms.Panel> formanty są używane do grupowania inne formanty. Istnieją trzy powodów Grupowanie formantów. Jedna jest visual grupowanie elementów pokrewnych formularza dla interfejsu użytkownika wyczyść; inny jest programowe grupowania, przyciski radiowe na przykład; ostatni jest przenoszenie kontrolek jako jednostki w czasie projektowania.  
@@ -40,6 +41,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.Panel> formanty są używa
 3.  (Opcjonalnie) Jeśli chcesz dodać obramowanie do panelu, ustaw jej <xref:System.Windows.Forms.BorderStyle> właściwości. Istnieją trzy opcje: <xref:System.Windows.Forms.BorderStyle.Fixed3D>, <xref:System.Windows.Forms.BorderStyle.FixedSingle>, i <xref:System.Windows.Forms.BorderStyle.None>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Panel — formant](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Panel — Informacje o formancie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [Porady: Ustawianie tła panelu](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+ [Panel, kontrolka](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Panel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [Instrukcje: ustawianie tła panelu](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)

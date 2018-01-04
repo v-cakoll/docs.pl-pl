@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 63cf236f93fa3352e536c71000f6bb110abf02fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1c29ac094fb5149b4146701315f1458884a2701c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>Porady: wyświetlanie większej niż jeden liczby miesięcy w formancie MonthCalendar formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant może wyświetlać do 12 miesięcy naraz. Domyślnie kontrolka ma wyświetlać tylko jeden miesiąc, ale można określić liczbę miesięcy są wyświetlane i sposób rozmieszczenia w formancie. Jeśli zmienisz wymiary kalendarza zostanie zmieniony rozmiar formantu, dlatego upewnij się, że jest za mało miejsca na formularzu dla nowych wymiarów.  
@@ -48,6 +49,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant mo�
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [MonthCalendar — formant](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
- [Porady: Wybieranie zakresu dat w formancie MonthCalendar formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- [Porady: Zmienianie wyglądu formantu MonthCalendar formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)
+ [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)  
+ [Instrukcje: wybieranie zakresu dat w kontrolce MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ [Instrukcje: zmienianie wyglądu kontrolki MonthCalendar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)

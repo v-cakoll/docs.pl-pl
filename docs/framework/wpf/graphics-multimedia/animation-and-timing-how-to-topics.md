@@ -17,41 +17,42 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 72ec8c723ccb5c13a21360bd5abfcc5261dce1b4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e3123df62e66354b35da26bbda894c5828136d05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Animacja i chronometraż Tematy porad
 Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animacji i chronometrażu systemu w aplikacjach użytkownika.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przyspieszenia lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [Accumulate wartości animacji podczas cykli powtórzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [Dodaj wartość wyjściowa animacji do animacji wartość początkowa](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Animować właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Animować właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [Animacja ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [Animacja w stylu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [Animuj przezroczystość pędzla lub Element](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [Zmień prędkość zegara bez zmieniania szybkości osi czasu](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [Kontrolowanie scenorysu po uruchomieniu, za pomocą jej metod interakcyjne](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Kontrolowanie animacji przy użyciu z do i przez](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
+ [Przyspieszanie lub zwalnianie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
+ [Gromadzenie wartości animacji podczas cykli powtórzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [Dodawanie wartości danych wyjściowych animacji do wartości początkowej animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Animowanie właściwości przy użyciu scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Animowanie właściwości bez użycia scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
+ [Animowanie w elemencie ControlTemplate](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
+ [Animowanie w stylu](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
+ [Animowanie nieprzezroczystości elementu lub pędzla](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [Zmiana prędkości zegara bez zmiany szybkości jego osi czasu](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
+ [Kontrolowanie scenorysu po uruchomieniu przy użyciu jego metod interakcyjnych](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [Kontrolowanie animacji z użyciem elementów od, do i przez](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Definiowanie zakresu nazw](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [Otrzymywać powiadomienie, gdy zmienia się stan zegara](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
+ [Odbieranie powiadomienia po zmianie stanu zegara](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
  [Porady: usuwanie scenorysu](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Powtarzanie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Wyszukiwanie scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [Wyszukiwanie scenorysu synchronicznie](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [Ustaw czas trwania animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Ustawianie właściwości po animacji go scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [Uproszczenie animacji za pomocą podrzędnej osi czasu](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Określ właściwości HandoffBehavior między scenorysu animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [Określ FillBehavior osi czasu osiągnięcia zakończenia z jego okres aktywności](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [Określ, czy oś czasu automatycznie cofa](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [Wyzwalanie animacji, gdy wartość właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Wyzwalacze zdarzeń umożliwia sterowanie scenorysu po jego uruchomieniu](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [Synchroniczne wyszukiwanie scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
+ [Ustawianie czas trwania animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
+ [Ustawianie właściwości po zanimowaniu jej za pomocą scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [Upraszczanie animacji przy użyciu podrzędnych osi czasu](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
+ [Określanie elementu HandoffBehavior między animacjami scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [Określanie elementu FillBehavior dla osi czasu, która osiągnęła koniec swojego okresu aktywności](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
+ [Określanie, czy oś czasu ma być automatycznie odtwarzana od końca](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [Wyzwalanie animacji w przypadku zmiany wartości właściwości](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Sterowanie scenorysem po uruchomieniu przy użyciu wyzwalaczy zdarzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -65,4 +66,4 @@ Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

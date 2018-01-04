@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daa4caac0046293e8b86a773bfffd46cf30e835b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d3b8f1ca1dbf7ba5452acffc62fdf0b655c9c12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>Jak uprościć animacje przy użyciu podrzędnych szeregów czasowych
 W tym przykładzie pokazano, jak uprościć animacji za pomocą podrzędnej <xref:System.Windows.Media.Animation.ParallelTimeline> obiektów. A <xref:System.Windows.Media.Animation.Storyboard> jest typem <xref:System.Windows.Media.Animation.Timeline> udostępniająca informacje określania wartości docelowej dla osi czasu, zawiera. Użyj <xref:System.Windows.Media.Animation.Storyboard> zapewnienie kierowanie informacji, w tym informacje o obiekcie i właściwości osi czasu.  
@@ -36,5 +37,5 @@ W tym przykładzie pokazano, jak uprościć animacji za pomocą podrzędnej <xre
  [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Określ właściwości HandoffBehavior między scenorysu animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Określanie elementu HandoffBehavior między animacjami scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)

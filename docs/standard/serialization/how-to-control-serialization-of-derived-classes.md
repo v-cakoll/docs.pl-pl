@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f97445be151afdf460da6610462930c564e42ccc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8f66f737b0668028fa45434fed4e6d6180ee69f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>Porady: kontrolowanie serializacji klas pochodnych
 Przy użyciu **elementu XmlElementAttribute** atrybutu, aby zmienić nazwę elementu XML nie jest jedynym sposobem na dostosowanie serializacji obiektu. Można również dostosować strumień XML wynikających z istniejącej klasy, a jeśli <xref:System.Xml.Serialization.XmlSerializer> wystąpienia jak do serializacji nowej klasy.  
@@ -246,6 +249,6 @@ public class Run
  <xref:System.Xml.Serialization.XmlElementAttribute>  
  <xref:System.Xml.Serialization.XmlAttributes>  
  <xref:System.Xml.Serialization.XmlAttributeOverrides>  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: Określ nazwę elementu alternatywnego strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4fd768a3a254616dc5dd8b5127ec7f794b71159
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: deb02217b5d2a79cdf90d511658657f642ca1fc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>Instrukcje: Serializowanie i deserializowanie danych JSON
 JSON (JavaScript Object Notation) jest format kodowania danych wydajne umożliwiający szybkie wymianę niewielkich ilości danych między przeglądarki klienta i usługi sieci Web obsługujących technologię AJAX.  
@@ -150,4 +151,4 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
   
 ## <a name="see-also"></a>Zobacz też  
  [Autonomiczna serializacja kodu JSON](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
- [Obsługa formatów transferowania formatu JSON i innych danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Obsługa formatu JSON i innych formatów transferowania danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

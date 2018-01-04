@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18fc87d4ebccd101bec47abd39805746d0b9ef81
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 204c4229852d4e91d2af7a27163c7418b9a1e9b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar — Formant (Formularze systemu Windows)
 > [!NOTE]
@@ -32,16 +33,16 @@ ms.lasthandoff: 10/18/2017
 >  `ToolBar` Formantu <xref:System.Windows.Forms.ToolBarButton.DropDownMenu%2A> właściwość przyjmuje wystąpienia <xref:System.Windows.Forms.ContextMenu> klasy jako odwołanie. Należy rozważyć, odwołanie zostanie przekazany podczas wdrażania tego rodzaju przycisku na paskach narzędzi w aplikacji jako właściwość przyjmuje żadnego obiektu, który dziedziczy z <xref:System.Windows.Forms.Menu> klasy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie paska narzędzi](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
+ [ToolBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
  Ogólne pojęcia związane z `ToolBar` kontroli, co pozwala na projektowanie niestandardowe paski narzędzi, które użytkownicy mogą pracować z.  
   
- [Porady: dodawanie przycisków do formantu ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
+ [Instrukcje: dodawanie przycisków do kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)  
  Opisuje sposób dodawania przycisków `ToolBar` formantu.  
   
- [Porady: Określanie ikony dla przycisku paska narzędzi](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
+ [Instrukcje: określanie ikony dla przycisku kontrolki ToolBar](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
  Opisuje sposób wyświetlania ikon w `ToolBar` przycisków kontrolki.  
   
- [Porady: zdarzenia wyzwalaczy Menu dla przycisków paska narzędzi](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
+ [Instrukcje: zdarzenia wyzwalaczy menu dla przycisków kontrolki Toolbar](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
  Kierunkach pozwala na temat pisania kodu, aby zinterpretować, które przycisk użytkownik kliknie `ToolBar` formantu.  
   
  Zobacz też [porady: Określanie ikony dla narzędzi przycisk przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233659\(v=vs.110\)), [porady: dodawanie przycisków paska narzędzi formantu przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233650\(v=vs.110\)).  
@@ -51,8 +52,8 @@ ms.lasthandoff: 10/18/2017
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
   
- [ToolStrip — formant](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
  W tym artykule opisano paski narzędzi, które mogą zawierać menu, kontrolek i kontrolek użytkownika w aplikacjach formularzy systemu Windows.

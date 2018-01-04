@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a0d88e521d953e57ce729e3365e78f274a0283a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eed39a0a0388d1d091a167addb8f81f25c8c04b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-an-image-to-greyscale"></a>Jak konwertować obraz na odcienie szarości
 W tym przykładzie pokazano, jak przekonwertować obraz na skali szarości za pomocą <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.  
@@ -36,6 +37,6 @@ W tym przykładzie pokazano, jak przekonwertować obraz na skali szarości za po
  [!code-vb[ImagingSnippetGallery_procedural_snip#FormatConvertedBitmapCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/FormatConvertedBitmapExample.vb#formatconvertedbitmapcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Użyj elementu obrazu](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
- [Przytnij obraz](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
- [Obracanie obrazów](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)
+ [Używanie elementu obrazu](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+ [Przycinanie obrazu](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+ [Obracanie obrazu](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)

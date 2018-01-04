@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ac89b8dce67c95c78a5dd46e591d84730a68346
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład zarezerwować drukarek do wyłącznego użytku niektórych działu po 17: 00. Działu musi innej kolejki drukarki niż aplikacje innych działów obsługi użycia. Czy można ustawić kolejki dla innych działów będzie dostępny od 17: 00, gdy kolejka działu favored można ustawić jako dostępne przez cały czas.  
@@ -88,5 +89,5 @@ Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one w�
  <xref:System.DateTime>  
  <xref:System.Printing.PrintSystemJobInfo>  
  <xref:System.Printing.PrintQueue>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)

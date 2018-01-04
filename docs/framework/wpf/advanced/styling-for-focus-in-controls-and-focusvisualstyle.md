@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bf04af2baa037b2df9e2980cc2347460de961c39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d29fda788aa4ec79ad4278beefa16ee14208832
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>Style dla Fokusu w formantach i FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia dwa mechanizmy równoległych zmiany wygląd formantu, gdy odbierze fokus klawiatury. Pierwszy mechanizm jest używać metody ustawiające właściwości dla właściwości, takich jak <xref:System.Windows.UIElement.IsKeyboardFocused%2A> w stylu lub szablonie, która jest stosowana do formantu. Drugi mechanizmu jest zapewnienie oddzielne styl jako wartość <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> właściwości; "skoncentrowane stylu wizualnego" tworzy oddzielne drzewa wizualnego dla modułu definiowania układu kodu, który rysuje na górze kontrolki, zamiast zmieniać wizualnym drzewie kontrolki lub innych interfejsu użytkownika Element poprzez zastąpienie jej. W tym temacie opisano scenariusze, w których każdy z tych mechanizmów jest właściwe.  
@@ -88,6 +89,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Omówienie fokus](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)

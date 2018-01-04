@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7c0afbb9be9af3ffe69ddfcac85b70de53a391ae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0918802a146940fb7579279e56f752bd114c746c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatafilter-interface"></a>IMetaDataFilter — Interfejs
 Udostępnia metody dla oznaczenie i Filtrowanie tokenów metadanych, aby uniknąć powtarzania działania, które zostały już wykonane.  
@@ -32,9 +33,9 @@ Udostępnia metody dla oznaczenie i Filtrowanie tokenów metadanych, aby unikną
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[IsTokenMarked — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Pobiera wartość wskazującą, czy token określonych metadanych została przetworzona.|  
-|[MarkToken — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Ustawia wartość wskazującą przetworzeniu token określonych metadanych.|  
-|[UnmarkAll — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Usuwa znaczniki przetwarzania z wszystkich tokenów w bieżącym zakresie metadanych.|  
+|[IsTokenMarked, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-istokenmarked-method.md)|Pobiera wartość wskazującą, czy token określonych metadanych została przetworzona.|  
+|[MarkToken, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-marktoken-method.md)|Ustawia wartość wskazującą przetworzeniu token określonych metadanych.|  
+|[UnmarkAll, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-unmarkall-method.md)|Usuwa znaczniki przetwarzania z wszystkich tokenów w bieżącym zakresie metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

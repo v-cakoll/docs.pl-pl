@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2b4ede7bdb8dad65e9cd959dfaa2f8956a877762
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Kompilator XSLT (xsltc.exe)
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Arkusz stylów skompilowanego można następnie przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można wygenerować zestawy podpisane za pomocą xsltc.exe.  
@@ -91,5 +94,5 @@ xsltc booksort.xsl output.xsl
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
- [Porady: przekształcenie XSLT przy użyciu zestawu](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
+ [Instrukcje: Wykonywanie przekształcenia XSLT przy użyciu zestawu](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

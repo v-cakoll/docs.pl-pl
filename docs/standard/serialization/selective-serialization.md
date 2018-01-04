@@ -12,11 +12,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf1c585a171f2842084c1fdce639e479ce5ca8d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cb4391e0f78534146ee253f88ad2ae94aa1a11f8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="selective-serialization"></a>Selektywne serializacji
 Klasa często zawiera pola, które nie powinny być serializowane. Załóżmy na przykład, że identyfikator wątku w klasie są przechowywane w zmiennej członkowskiej. Podczas deserializacji jest klasa, wątek przechowywane identyfikator kiedy została wykonana serializacja klasy nie może być uruchomiony; Dlatego serializacji tej wartości nie ma sensu. Zmienne Członkowskie uniemożliwi serializowana oznaczając je za pomocą [NonSerialized](xref:System.NonSerializedAttribute) atrybutu w następujący sposób.  
@@ -37,5 +40,5 @@ Jeśli to możliwe należy obiekt zawierający dane dotyczące zabezpieczeń non
   
 ## <a name="see-also"></a>Zobacz także  
  [Serializacja binarna](binary-serialization.md)  
- [XML i serializacji SOAP](xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](xml-and-soap-serialization.md)  
  [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)

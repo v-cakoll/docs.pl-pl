@@ -18,11 +18,11 @@ ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 53bd56647d04c40c44a240edcd084f0719c3d4aa
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plików i katalogów.  
@@ -46,7 +46,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 -   **Wyszukiwanie**. Można zbadać i modyfikować z pozycją w strumieniu.  
   
- Aby uzyskać więcej informacji, zobacz [strumieni redagowanie](../../../../../docs/standard/io/composing-streams.md).  
+ Aby uzyskać więcej informacji, zobacz [strumieni redagowanie](../../../../standard/io/composing-streams.md).  
   
 ## <a name="types-of-streams"></a>Typy strumieni  
  W [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], strumień jest reprezentowana przez <xref:System.IO.Stream> klasy, która stanowi klasa abstrakcyjna, dla wszystkich innych strumieni. Nie można bezpośrednio utworzyć wystąpienia <xref:System.IO.Stream> klasy, ale muszą używać jednej z klas implementuje.  
@@ -59,19 +59,19 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 -   <xref:System.IO.MemoryStream>  
   
--   <xref:System.Net.Sockets.NetworkStream>.  
+-   <xref:System.Net.Sockets.NetworkStream>.,  
   
  W poniższej tabeli wymieniono zadania zazwyczaj są realizowane przy użyciu strumienia:  
   
 |Do|Zobacz|
 |---|---|   
-|Odczyt i zapis do pliku danych|[Porady: Odczyt i zapis do pliku danych nowo utworzony](../../../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
-|Odczytaj tekst z pliku|[Porady: Odczyt tekstu z pliku](../../../../../docs/standard/io/how-to-read-text-from-a-file.md)|  
-|Zapisywanie tekstu do pliku|[Porady: zapisywanie tekstu do pliku](../../../../../docs/standard/io/how-to-write-text-to-a-file.md)|  
-|Odczytywanie znaków z ciągu|[Porady: odczytywanie znaków z ciągu](../../../../../docs/standard/io/how-to-read-characters-from-a-string.md)|  
-|Zapisywanie do ciągu znaków|[Porady: zapisywanie znaków ciągu](../../../../../docs/standard/io/how-to-write-characters-to-a-string.md)|  
-|Szyfrowanie danych|[Szyfrowanie danych](../../../../../docs/standard/security/encrypting-data.md)|  
-|Odszyfrowywanie danych|[Odszyfrowywanie danych](../../../../../docs/standard/security/decrypting-data.md)|  
+|Odczyt i zapis do pliku danych|[Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|  
+|Odczytaj tekst z pliku|[Instrukcje: odczytywanie tekstu z pliku](../../../../standard/io/how-to-read-text-from-a-file.md)|  
+|Zapisywanie tekstu do pliku|[Instrukcje: zapisywanie tekstu w pliku](../../../../standard/io/how-to-write-text-to-a-file.md)|  
+|Odczytywanie znaków z ciągu|[Instrukcje: odczytywanie znaków z ciągu](../../../../standard/io/how-to-read-characters-from-a-string.md)|  
+|Zapisywanie do ciągu znaków|[Instrukcje: zapisywanie znaków w ciągu](../../../../standard/io/how-to-write-characters-to-a-string.md)|  
+|Szyfrowanie danych|[Szyfrowanie danych](../../../../standard/security/encrypting-data.md)|  
+|Odszyfrowywanie danych|[Odszyfrowywanie danych](../../../../standard/security/decrypting-data.md)|  
   
 ## <a name="file-access-and-attributes"></a>Dostęp do plików i atrybuty  
  Można kontrolować sposób tworzenia plików, otwarty i udostępnione <xref:System.IO.FileAccess>, <xref:System.IO.FileMode>, i <xref:System.IO.FileShare> wyliczenia, zawierające flagi używane przez konstruktorów <xref:System.IO.FileStream> klasy. Na przykład, gdy można otworzyć lub utworzyć nowy <xref:System.IO.FileStream>, <xref:System.IO.FileMode> wyliczenie umożliwia określenie, czy plik jest otwarty dołączania, czy zostanie utworzony nowy plik, jeśli określony plik nie istnieje, czy plik jest zastępowany i tak dalej.  
@@ -82,11 +82,11 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 |Do|Zobacz|  
 |---|---|
-|Otwórz i dołączać tekstu do pliku dziennika|[Porady: otwieranie i Dołącz do pliku dziennika](../../../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)|  
+|Otwórz i dołączać tekstu do pliku dziennika|[Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|  
 |Określić atrybutów pliku|<xref:System.IO.FileAttributes>|  
   
 ## <a name="file-permissions"></a>Uprawnienia do pliku  
- Kontrolowanie dostępu do plików i katalogów można zrobić za pomocą <xref:System.Security.Permissions.FileIOPermission> klasy. Może to być szczególnie ważne dla deweloperów korzystających z formularzy sieci Web, która domyślnie uruchamiane w kontekście konta użytkownika lokalnego specjalne o nazwie ASPNET, który jest tworzony jako część [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] instalacji. Podczas takich aplikacji żądań dostępu do zasobu, konto ASPNET ma ograniczone uprawnienia, które mogą uniemożliwić użytkownikowi wykonywanie akcji, takich jak zapis do pliku z aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [uprawnień zabezpieczeń](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0)i <xref:System.Security.Permissions.FileIOPermission>.  
+ Kontrolowanie dostępu do plików i katalogów można zrobić za pomocą <xref:System.Security.Permissions.FileIOPermission> klasy. Może to być szczególnie ważne dla deweloperów korzystających z formularzy sieci Web, która domyślnie uruchamiane w kontekście konta użytkownika lokalnego specjalne o nazwie ASPNET, który jest tworzony jako część [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] i [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] instalacji. Podczas takich aplikacji żądań dostępu do zasobu, konto ASPNET ma ograniczone uprawnienia, które mogą uniemożliwić użytkownikowi wykonywanie akcji, takich jak zapis do pliku z aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.FileIOPermission>.  
   
 ## <a name="isolated-file-storage"></a>Pliku izolowanego magazynu  
  Izolowany magazyn jest próba rozwiązywania problemów podczas pracy z plikami, gdy użytkownik lub kod może nie niezbędne uprawnienia. Izolowany magazyn przypisuje każdego użytkownika przedział danych, które mogą zawierać jeden lub więcej magazynów. Magazyny można odizolować od siebie przez użytkownika i przez zestaw. Tylko użytkownika i zestawu, który utworzono magazyn jest do niego dostęp. Magazyn działa jako zakończenie wirtualnym systemie plików — w ramach jednego magazynu można utworzyć i manipulowania katalogów i plików.  
@@ -95,19 +95,19 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 |Do|Zobacz|
 |---|---|  
-|Tworzenie izolowanego magazynu|[Porady: uzyskiwanie magazynów dla izolowanego magazynu](../../../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
-|Wyliczanie izolowanych magazynów|[Porady: wykazywanie magazynów dla izolowanego magazynu](../../../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
-|Usuwanie izolowanego magazynu|[Porady: Usuń magazyny w izolowanym magazynie](../../../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|  
-|Utwórz plik lub katalog w izolowanym magazynie|[Porady: tworzenie plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
-|Znajdź plik w izolowanym magazynie|[Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
-|Odczytywanie i zapisywanie do pliku w magazynie insolated|[Porady: Odczyt i zapis w plikach w izolowanym magazynie](../../../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
-|Usuń plik lub katalog w izolowanym magazynie|[Porady: usuwanie plików i katalogów w izolowanym magazynie](../../../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
+|Tworzenie izolowanego magazynu|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|  
+|Wyliczanie izolowanych magazynów|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|  
+|Usuwanie izolowanego magazynu|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|  
+|Utwórz plik lub katalog w izolowanym magazynie|[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|  
+|Znajdź plik w izolowanym magazynie|[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|  
+|Odczytywanie i zapisywanie do pliku w magazynie insolated|[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|  
+|Usuń plik lub katalog w izolowanym magazynie|[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|  
   
 ## <a name="file-events"></a>Zdarzenia pliku  
  <xref:System.IO.FileSystemWatcher> Składnik umożliwia oczekiwał na zmiany plików i katalogów w systemie lub na dowolnym komputerze, do których masz dostęp do sieci. Na przykład jeśli plik został zmodyfikowany, możesz powiadomi użytkownika czy miała miejsce zmiana. Podczas wprowadzania zmian, co najmniej jednego zdarzenia wywoływane, przechowywane w buforze i przekazać do <xref:System.IO.FileSystemWatcher> składnika do przetwarzania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie strumieni](../../../../../docs/standard/io/composing-streams.md)  
- [We/Wy plików i strumieni](https://msdn.microsoft.com/library/k3352a4t)  
- [Asynchroniczne We/Wy pliku](https://msdn.microsoft.com/library/kztecsys)  
+ [Tworzenie strumieni](../../../../standard/io/composing-streams.md)  
+ [We/Wy plików i strumieni](../../../../standard/io/index.md)  
+ [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)  
  [Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/classes-used-in-net-framework-file-io-and-the-file-system.md)

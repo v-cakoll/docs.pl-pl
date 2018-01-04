@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83f59f2df9311f30995b18529a733a5569c85ee0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c491ff4e231d932b3714d2d059b52bad2502368c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-a-routed-event"></a>Jak obsłużyć zdarzenie trasowane
 Ten przykład przedstawia sposób propagacji pracy zdarzenia i jak napisać programu obsługi, który może przetwarzać danych kierowanego zdarzenia.  
@@ -46,7 +47,7 @@ Ten przykład przedstawia sposób propagacji pracy zdarzenia i jak napisać prog
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.RoutedEvent>  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
- [Składnia języka XAML szczegółowo](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

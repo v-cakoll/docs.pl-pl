@@ -17,11 +17,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a8111cc9f2798ff96be8b128f22a75d21b441178
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 392e975f6bf566c2ba36290940eb0daee03f004f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="barrier-net-framework"></a>Bariera (.NET Framework)
 A *bariery* jest zdefiniowane przez użytkownika prymitywu synchronizacji, który umożliwia wiele wątków (nazywane *uczestników*) nad jednocześnie algorytm w fazach. Uczestnik wykonuje, dopóki nie osiągnie punkt bariery w kodzie. Bariera reprezentuje koniec jedną fazą pracy. Gdy uczestnika osiągnie bariery, blokuje aż do osiągnięcia wszystkich uczestników ma tego samego bariery. Po wszystkich uczestników osiągnęły bariery, opcjonalnie można wywołać akcję po fazie. Ta faza po akcja może zostać użyta do wykonania akcji przez pojedynczy wątek, podczas gdy inne wątki nadal są zablokowane. Po wykonaniu akcji, uczestników są wszystkie odblokowane.  
@@ -57,4 +60,4 @@ A *bariery* jest zdefiniowane przez użytkownika prymitywu synchronizacji, któr
   
 ## <a name="see-also"></a>Zobacz też  
  [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
- [Porady: synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)
+ [Instrukcje: synchronizacja jednoczesnych operacji za pomocą elementu Barrier](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8935616159d2ea55e5616b6d7f4ebc4ff2c61e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2952c1c59e5a60cbc51d505d3a53e063ec3351d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-windows-presentation-foundation"></a>Zaawansowane (Windows Presentation Foundation)
 W tej sekcji opisano niektóre zaawansowane obszary na platformie WPF.  
@@ -31,14 +32,14 @@ W tej sekcji opisano niektóre zaawansowane obszary na platformie WPF.
 ## <a name="in-this-section"></a>W tej sekcji  
  [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
  [Elementy podstawowe](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [Element drzewa i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [Przeciągnij i upuść](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [Drzewo elementów i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+ [Przeciąganie i upuszczanie](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
  [Dokumenty](../../../../docs/framework/wpf/advanced/documents.md)  
- [Lokalizacja i globalizacja](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
+ [Globalizacja i lokalizacja](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  [Wydajność](../../../../docs/framework/wpf/advanced/performance.md)  
  [Model wątkowości](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [Omówienie dodatków WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
+ [Dodatki WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
  [Dokumentacja interfejsu API niezarządzane WPF](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne

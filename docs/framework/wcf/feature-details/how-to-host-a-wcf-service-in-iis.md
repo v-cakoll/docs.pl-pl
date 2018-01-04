@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 934b5d16cdea7026e0e7874cf04ab53c8fbdf58e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3b23d3f69d52299fcf3ca8b5ff56d0c4673026b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>Instrukcje: Hostowanie usługi WCF w programie IIS
 W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi hostowanej w Internet Information Services (IIS). W tym temacie założono zapoznali się z usługami IIS i zrozumieć, jak używać narzędzia zarządzania usług IIS do tworzenia i zarządzania aplikacjami usług IIS. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Usługi IIS zobacz [Internetowe usługi informacyjne](http://go.microsoft.com/fwlink/?LinkId=132449). A [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, który jest uruchamiany w środowisku usług IIS w pełni korzysta funkcje usług IIS, takie jak odtwarzanie procesów, bezczynności zamykania, monitorowanie kondycji procesów i aktywacji opartej na wiadomość. Ta opcja hostingu wymaga usług IIS zostać prawidłowo skonfigurowane, ale nie wymaga się, że każdy kod hostingu można zapisywać w ramach aplikacji. Można użyć tylko z transportem HTTP hostowanie usług IIS.  
@@ -88,6 +89,6 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia [!INCLU
 ## <a name="see-also"></a>Zobacz też  
  [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
  [Usługi hostingowe](../../../../docs/framework/wcf/hosting-services.md)  
- [Usługi WCF i platformy ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
- [Zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Usługi WCF i platforma ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)  
+ [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
  [Windows Server AppFabric funkcje hostingu](http://go.microsoft.com/fwlink/?LinkId=201276)

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c3373cb6a2c535bd7d42eb062e1f9727952f7cfb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7d94a1fa4c559552a32140fd172c0c62e033f7a8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="understanding-speedup-in-plinq"></a>Ogólne informacje o przyspieszeniach w PLINQ
 Głównym celem PLINQ ma przyspieszyć wykonywanie LINQ do obiektów zapytań, wykonując delegatów zapytania równolegle na komputerach z procesorami wielordzeniowymi. PLINQ sprawdza się najlepiej, gdy przetwarzania każdego elementu w kolekcji źródłowej jest niezależny, bez udostępnionych stanu związane między poszczególnych obiektów delegowanych. Takie operacje są często używane w LINQ do obiektów i PLINQ i są często nazywane "*delightfully równoległe*" ponieważ możliwa jest łatwo planowania na wiele wątków. Jednak nie wszystkie zapytania składa się wyłącznie z operacji równoległych delightfully; w większości przypadków zapytania obejmuje niektóre operatory, które albo nie może być zarządzana z przetwarzaniem lub który spowolnić przetwarzania równoległego. I nawet w przypadku zapytań, które są całkowicie delightfully równoległe, PLINQ i musi być nadal partycji źródła danych i harmonogramu pracy nad wątki, zwykle scalania wyniki po wykonaniu kwerendy. Dodaj te operacje obliczeniową koszty równoległości; Dodawanie paralelizacja koszty są nazywane *koszty*. Aby osiągnąć optymalną wydajność w zapytaniu PLINQ, celem jest zmaksymalizować części, które są delightfully równoległe i zminimalizować części, które wymagają obciążenia. Ten artykuł zawiera informacje, dzięki którym można pisać zapytania PLINQ, które są najbardziej efektywne podczas nadal reaguje poprawnych wyników.  

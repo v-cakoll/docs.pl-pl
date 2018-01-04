@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e61b0c94b1512509008d67017389fa11f938999
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 238f164fec78fe5e6dae9e7880fabc0a386bf399
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zadaniach
 Oparty na zadaniach asynchronicznej wzorca (TAP) można wdrożyć na trzy sposoby: za pomocą Kompilatory języka C# i Visual Basic w programie Visual Studio, ręcznie lub za pomocą kombinacji metod kompilatora i ręcznie. W poniższych sekcjach omówiono każdej metody szczegółowo. Wzorzec NACIŚNIJ umożliwia implementować zarówno powiązane z obliczeń, jak i I/E-powiązane z operacji asynchronicznych. [Obciążeń](#workloads) sekcji omówiono każdego typu działania.
@@ -106,6 +109,6 @@ Nie są ograniczone do operacji tylko powiązane z obliczeń lub I/E-powiązane 
 Również w tym przykładzie pokazano, jak token anulowania pojedynczego może wątków za pomocą wielu operacji asynchronicznych. Aby uzyskać więcej informacji, zobacz sekcję użycia anulowania w [wykorzystywanie wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md).
 
 ## <a name="see-also"></a>Zobacz także
- [Asynchroniczny wzorzec oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
  [Wykorzystywanie wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)  
  [Współdziałanie z innymi wzorcami asynchronicznymi i typami](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)  

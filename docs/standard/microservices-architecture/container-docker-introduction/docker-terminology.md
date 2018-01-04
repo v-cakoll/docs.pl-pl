@@ -8,15 +8,18 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 885b1fbd3369dec54ebde21a5378630c764f852d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 342b4443470053d81534d4de1d56d2797798c746
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="docker-terminology"></a>Terminologia docker
 
-W tej sekcji wymieniono terminy i definicje, należy zapoznać się z przed pobraniem głębiej do rozwiązania Docker. Dla dalszego definicje, zobacz szeroką gamę [słownik](https://docs.docker.com/v1.11/engine/reference/glossary/) dostarczonych przez Docker.
+W tej sekcji wymieniono terminy i definicje, należy zapoznać się z przed pobraniem głębiej do rozwiązania Docker. Dla dalszego definicje, zobacz szeroką gamę [słownik](https://docs.docker.com/glossary/) dostarczonych przez Docker.
 
 **Kontener obrazu**: pakiet ze wszystkich zależności i informacje potrzebne do utworzenia kontenera. Obraz zawiera wszystkie zależności (na przykład struktury) oraz konfiguracji wdrożenia i wykonywania mają być używane przez moduł wykonawczy kontenera. Zazwyczaj obraz pochodzi z wielu obrazów podstawowej są warstwy skumulowany na siebie w celu utworzenia kontenera systemu plików. Obraz nie można modyfikować po jego utworzeniu.
 

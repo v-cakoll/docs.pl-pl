@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb39ddefb1bc22d4349ad1ced68bd471452b43b9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 82aa15e8a61dee8a542798f4adbd4904a7c07882
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding"></a>Powiązanie
 Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutu powiązania elementu punktu końcowego.  
@@ -29,11 +30,11 @@ Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutu powiązania elem
  [Podstawowe powiązanie](../../../../docs/framework/wcf/samples/basic-binding.md)  
  Przedstawia podstawowe powiązanie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Wiązanie niestandardowe](../../../../docs/framework/wcf/samples/custom-binding.md)  
+ [Powiązanie niestandardowe](../../../../docs/framework/wcf/samples/custom-binding.md)  
  Demonstracja niestandardowego powiązania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Wiązanie sieci](../../../../docs/framework/wcf/samples/net-binding.md)  
+ [Powiązanie sieci](../../../../docs/framework/wcf/samples/net-binding.md)  
  Pokazuje powiązanie sieci w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Powiązania WS](../../../../docs/framework/wcf/samples/ws-binding.md)  
+ [Powiązanie WS](../../../../docs/framework/wcf/samples/ws-binding.md)  
  Pokazuje powiązania usługi systemu Windows w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].

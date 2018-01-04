@@ -23,11 +23,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 550b1e8bf04bf7e2cec52ce26d647022688c4004
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ee2baef3ddcaebb494f1eae2813e861f93e489dd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="examples-of-xml-serialization"></a>Przykłady serializacji XML
 Serializacja XML może zająć więcej niż jednej formy z proste i złożone. Na przykład można serializować klasy, która po prostu składa się z pola publiczne i właściwości, jak pokazano w [wprowadzenie serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md). W poniższych przykładach kodu adresów różne scenariusze zaawansowane, łącznie ze sposobem użyć serializacji XML do wygenerowania strumień XML, który odpowiada określony dokument schematu XML (XSD).  
@@ -774,7 +777,7 @@ public class Test
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
- [Atrybuty, które kontrolują serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
+ [Atrybuty kontrolujące serializację XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)  
  [Klasa XmlSerializer](https://msdn.microsoft.com/library/system.xml.serialization.xmlserializer.aspx)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

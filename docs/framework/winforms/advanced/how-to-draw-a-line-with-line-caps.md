@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1e2d5a5aba4a7634e0ea8480aa9744a5a7b9721d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4048757e11724aa1e175d8b18c47f48d22d807e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>Porady: rysowanie linii z zakończeniem linii
 Może wykonywać Rysowanie początek lub koniec wiersza w jednym z kilku kształtów o nazwie wielkości graniczne linii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]obsługuje kilka wielkości graniczne linii, takich jak round, kwadratowe romb i strzałki.  
@@ -47,5 +48,5 @@ Może wykonywać Rysowanie początek lub koniec wiersza w jednym z kilku kształ
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>  
- [Grafika i rysowanie w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)

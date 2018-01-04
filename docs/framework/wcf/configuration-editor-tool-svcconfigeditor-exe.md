@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a301e23ead8e52273ed4fe7a503f1fe11e2f1348
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Usługi edytora konfiguracji (SvcConfigEditor.exe) umożliwia administratorów i deweloperów, tworzenie i modyfikowanie ustawień konfiguracji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika. Z tego narzędzia można zarządzać ustawieniami dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania zachowania, usług i diagnostyki bez konieczności bezpośredniego edytowania plików XML konfiguracji.  

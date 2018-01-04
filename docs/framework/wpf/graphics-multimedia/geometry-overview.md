@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1a10e74342141f8ef6664cc424552dc173d9b0f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e58e3ea00a00b24e476fd158beb3b0515e607f9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometry-overview"></a>Przegląd Geometria
 Ten przegląd zawiera opis sposobu używania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry> klas opisujących kształtów. W tym temacie uwidocznia także różnice między <xref:System.Windows.Media.Geometry> obiektów i <xref:System.Windows.Shapes.Shape> elementy.  
@@ -126,7 +127,7 @@ EllipseGeometry umożliwia obcina formantu obrazu
 |------------------|-----------------|-------------|  
 |<xref:System.Windows.Media.ArcSegment>|Tworzy łuku między dwoma punktami.|[Utwórz łuku](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md).|  
 |<xref:System.Windows.Media.BezierSegment>|Tworzy sześcienny krzywej Beziera między dwoma punktami.|[Tworzenie sześcienny krzywej Beziera](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md).|  
-|<xref:System.Windows.Media.LineSegment>|Tworzy linię między dwoma punktami.|[Utwórz obiekt LineSegment w PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)|  
+|<xref:System.Windows.Media.LineSegment>|Tworzy linię między dwoma punktami.|[Tworzenie obiektu LineSegment w elemencie PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)|  
 |<xref:System.Windows.Media.PolyBezierSegment>|Tworzy serię sześcienny krzywych Beziera.|Zobacz <xref:System.Windows.Media.PolyBezierSegment> typu strony.|  
 |<xref:System.Windows.Media.PolyLineSegment>|Tworzy serię wierszy.|Zobacz <xref:System.Windows.Media.PolyLineSegment> typu strony.|  
 |<xref:System.Windows.Media.PolyQuadraticBezierSegment>|Tworzy serię kwadratową krzywych Beziera.|Zobacz <xref:System.Windows.Media.PolyQuadraticBezierSegment> strony.|  
@@ -231,9 +232,9 @@ PathGeometry z wielu wartości
  <xref:System.Windows.Media.PathGeometry>  
  <xref:System.Windows.Shapes.Path>  
  <xref:System.Windows.Media.GeometryDrawing>  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Składnia znacznika ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Kształty i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Rysowanie obiekty — omówienie](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Składnia znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/geometries-how-to-topics.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

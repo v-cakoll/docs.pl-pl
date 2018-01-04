@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b16f87b73654a3faa7cc261c552bc48647ad2e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19868e282409180383fb6bef232082bee6b71f99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Porady: ustawianie opcji siatki dla wszystkich formularzy systemu Windows
 Co stanie pracy w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Środowisko deweloperskie, można ustawić preferencje dotyczące wszystkich formularzy i pracować z projektami w narzędziu Projektant dla formularzy systemu Windows.  
@@ -40,13 +41,13 @@ Co stanie pracy w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Środowi
      W prawym okienku w obszarze **ustawień układu** nagłówek, można ustawić domyślne ustawienia siatki dla wszystkich nowych formularzy, należy utworzyć. Te ustawienia obejmują rozmiar siatki, czy formanty mają być przyciągane do niej, czy jest włączone i domyślnie. Ponadto można wybrać między **SnapToGrid** i **linie przyciągania** tryby układu. Aby uzyskać więcej informacji dotyczących linie przyciągania, zobacz [wskazówki: rozmieszczanie formantów na formularzach systemu Windows przy użyciu linie przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Rozmieszczanie formantów na formularzach systemu Windows za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
  [Ogólne, Projektant formularzy systemu Windows, opcje — Okno dialogowe](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
- [Porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Rozmieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Porady: Ustawianie kolejności tabulacji na formularzach systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
- [Porady: Ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Umieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Formanty przez funkcję formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Instrukcje: ustawianie kolejności tabulacji na formularzach Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-tab-order-on-windows-forms.md)  
+ [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

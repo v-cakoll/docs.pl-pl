@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: cbbad72f06bcaa882bc50083d9103b0872f51754
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -24,7 +27,7 @@ W typowej modelu usług wysyłać raporty o stanie ich, a tych informacji jest a
 
 ## <a name="implementing-health-checks-in-aspnet-core-services"></a>Implementowanie kondycji sprawdza w usługach platformy ASP.NET Core
 
-Podczas tworzenia aplikacji platformy ASP.NET Core mikrousługi lub sieci web, mogą używać biblioteki o nazwie HealthChecks od zespołu ASP.NET. (Począwszy od 2017 maja wczesnego wydawania jest dostępna w serwisie GitHub).
+Podczas tworzenia aplikacji platformy ASP.NET Core mikrousługi lub sieci web, mogą używać biblioteki o nazwie `HealthChecks` od zespołu programu ASP.NET. Wczesnego wydawania jest dostępny w tej [repozytorium GitHub](https://github.com/dotnet-architecture/HealthChecks).
 
 Ta biblioteka jest łatwy w użyciu i udostępnia funkcje, dzięki którym można zweryfikować określonego zasobu zewnętrznego wymagane dla aplikacji (na przykład baza danych SQL Server lub zdalnego interfejsu API) działa prawidłowo. Korzystając z tej biblioteki, można również określić, co oznacza to, czy zasób jest w dobrej kondycji, jak możemy wyjaśnić później.
 
@@ -34,7 +37,7 @@ Aby użyć tej biblioteki, musisz najpierw użyć biblioteki w Twojej mikrousłu
 
 Widać, jak biblioteka HealthChecks jest używana w eShopOnContainers przykładowej aplikacji. Aby rozpocząć, musisz zdefiniować, co stanowi stan kondycji dla każdego mikrousługi. W przykładowej aplikacji mikrousług są w dobrej kondycji, jeśli mikrousługi interfejsu API jest dostępny za pośrednictwem protokołu HTTP i jeśli jego powiązanych bazy danych programu SQL Server jest również dostępna.
 
-W przyszłości można zainstalować biblioteki HealthChecks jako pakietu NuGet. Jednak opracowywania tego tekstu, musisz pobrać i Skompiluj kod jako część rozwiązania. Klonowanie kodu, które są dostępne pod adresem https://github.com/aspnet/HealthChecks i skopiuj następujące foldery do rozwiązania.
+W przyszłości można zainstalować biblioteki HealthChecks jako pakietu NuGet. Jednak opracowywania tego tekstu, musisz pobrać i Skompiluj kod jako część rozwiązania. Klonowanie kodu, które są dostępne pod adresem https://github.com/dotnet-architecture/HealthChecks i skopiuj następujące foldery do rozwiązania:
 
   - src/wspólne
   - src/Microsoft.AspNetCore.HealthChecks

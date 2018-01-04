@@ -25,11 +25,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a1ecba9c055f8e99d26283c7f37c2430dc17bf31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b84f25aa2470104be98b9f3858091c44f40ba6a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>Wykonywanie niezależnych od kultury operacji na ciągach w kolekcjach
 Brak klas i członków w <xref:System.Collections> przestrzeni nazw, która zapewniają zależne od kultury zachowanie domyślne. Konstruktory domyślne <xref:System.Collections.CaseInsensitiveComparer> i <xref:System.Collections.CaseInsensitiveHashCodeProvider> klasy zainicjować nowego wystąpienia przy użyciu <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> właściwości. Skompilowanie wszystkich przeciążeń <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> metody Utwórz nowe wystąpienie klasy <xref:System.Collections.Hashtable> przy użyciu `Thread.CurrentCulture` właściwość domyślnie. Overloads z <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> metody wykonanie zależne od kultury sortowania przy użyciu domyślnego `Thread.CurrentCulture`. Sortowanie i wyszukiwanie w <xref:System.Collections.SortedList> mogą mieć wpływ `Thread.CurrentCulture` Jeśli ciągi są używane jako klucze. Postępować zgodnie z zaleceniami użycia podane w tej sekcji można uzyskać niezależne od kultury wyniki z tych klas i metod w `Collections` przestrzeni nazw.  
@@ -147,5 +150,5 @@ internal class InvariantComparer : IComparer
  <xref:System.Collections.SortedList>  
  <xref:System.Collections.Hashtable>  
  <xref:System.Collections.IComparer>  
- [Wykonywanie operacji na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
+ [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)  
  <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType>

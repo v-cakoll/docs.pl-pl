@@ -40,11 +40,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0aa85c9ec6e6b911444b07a4169dc769ac4df816
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 88e66210fd8066e82a11d07ea0cfeb83808d646c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-syntax-in-detail"></a>Szczegóły składni XAML
 W tym temacie opisano terminy, które służą do opisywania elementy składni języka XAML. Te warunki są często używane w dalszej części tej dokumentacji, zarówno dla dokumentacji WPF w szczególności i dla innych platform, które używają XAML lub podstawowe pojęcia języka XAML, aby włączyć obsługę języka XAML na poziomie System.Xaml. W tym temacie omówiono w podstawowej terminologii wprowadzone w temacie [omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md).  
@@ -326,9 +327,9 @@ W tym temacie opisano terminy, które służą do opisywania elementy składni j
  Ale podobnie jak *typeName*. *memberName* formularza dla atrybutów, *baseTypeName*. *memberName* jest niska styl znaczników, i należy go unikać.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Przestrzeń nazw XAML (x:) — funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [TypeConverters i języka XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XAML oraz klas niestandardowych dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [TypeConverters i XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

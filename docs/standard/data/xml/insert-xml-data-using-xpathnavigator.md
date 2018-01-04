@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 34151590a14c48c0a84677f2d7cae662291edf40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33a1bf08d7a66dd970a3a7207293277021ed46b7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>Wstawianie danych XML przy użyciu parametrem XPathNavigator
 <xref:System.Xml.XPath.XPathNavigator> Klasa udostępnia zestaw metod służy do wstawiania podrzędnych, węzłów atrybutu i rodzeństwa w dokumencie XML. Aby można było używać tych metod <xref:System.Xml.XPath.XPathNavigator> obiekt musi być edytowalny, czyli jego <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> właściwość musi być `true`.  
@@ -341,6 +344,6 @@ document.Save("book.xml");
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Modyfikowanie danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
- [Usuwanie danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Modyfikowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+ [Usuwanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

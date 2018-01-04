@@ -20,11 +20,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 941bcb3d69a80ff415cb76d69414ad25e3a8c76d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Porady: opracowywanie prostego formantu formularzy systemu Windows
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu formularzy systemu Windows. Proste kontrolki opracowane w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwość zostanie zmieniony. Nie podnieść lub obsługę zdarzeń.  
@@ -113,5 +114,5 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
  [!code-vb[System.Windows.Forms.FirstControl#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Właściwości formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
- [Zdarzenia w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)
+ [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Zdarzenia w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)

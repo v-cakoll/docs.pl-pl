@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: dc3683cfe27bfed0f89cba4e0df0b0515fc6f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b85bcbf537f5306b0b4c30630523eaf511dd3d9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-transform-a-node-fragment"></a>Porady: Przekształcanie fragmentu węzła
 Gdy przekształcenie danych zawartych w <xref:System.Xml.XmlDocument> lub <xref:System.Xml.XPath.XPathDocument> obiektów przekształceń XSLT stosowane do całego dokumentu. Innymi słowy w przypadku przekazania w węźle innym niż węzeł główny dokumentu, to nie zapobiega proces przekształcania podczas uzyskiwania dostępu do wszystkich węzłów w załadowanego dokumentu. Aby przekształcić fragmentu węzła, należy utworzyć oddzielny obiekt zawierający tylko fragmentu węzeł i przekazać do obiektu <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> metody.  
@@ -55,4 +58,4 @@ Gdy przekształcenie danych zawartych w <xref:System.Xml.XmlDocument> lub <xref:
  Tytuł książki jest Man. zaufania  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+ [Używanie klasy XslCompiledTransform](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)

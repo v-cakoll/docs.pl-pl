@@ -16,11 +16,14 @@ caps.latest.revision: "36"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ab02ada92e06333cc7ec2ea3ae832c48d3e16ec
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipulować jako kolekcja. Można użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzeni nazw, aby dodać, usuwanie i modyfikowanie poszczególne elementy lub zakres elementów w kolekcji.  
@@ -82,10 +85,10 @@ Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipul
 |[Wybieranie klasy kolekcji](../../../docs/standard/collections/selecting-a-collection-class.md)|W tym artykule opisano różne kolekcje i pomaga wybrać jeden dla danego scenariusza.|  
 |[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|W tym artykule opisano często używane rodzajowa i nierodzajowe typy kolekcji takich jak <xref:System.Array?displayProperty=nameWithType>, <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>, i <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>.|  
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule omówiono używanie typy kolekcji ogólnych.|  
-|[Porównywanie i sortowanie w kolekcjach](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównywanie równości i sortowania porównania w kolekcjach.|  
-|[Sortowane typów kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|W tym artykule opisano kolekcje posortowane wydajności i właściwości|  
-|[HashTable typy kolekcji i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Zawiera opis funkcji typy ogólne i inny niż ogólny słownik na podstawie wyznaczania wartości skrótu.|  
-|[Kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> obsługujących bezpieczne i wydajne współbieżny dostęp wiele wątków.|  
+|[Porównywanie i sortowanie w ramach kolekcji](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|W tym artykule omówiono używanie porównywanie równości i sortowania porównania w kolekcjach.|  
+|[Sortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|W tym artykule opisano kolekcje posortowane wydajności i właściwości|  
+|[Typy kolekcji: słownikowy i tabela skrótów](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Zawiera opis funkcji typy ogólne i inny niż ogólny słownik na podstawie wyznaczania wartości skrótu.|  
+|[Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)|Opisuje typy kolekcji, takie jak <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> obsługujących bezpieczne i wydajne współbieżny dostęp wiele wątków.|  
 |System.Collections.Immutable|Wprowadza niezmienne kolekcje i łącza do typów kolekcji.|  
   
 <a name="BKMK_Reference"></a>   

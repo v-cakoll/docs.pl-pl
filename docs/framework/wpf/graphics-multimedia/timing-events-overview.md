@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f50923d9e314d2f677e26416cef59fdf380213e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 79669bdc4b5f9cfb8bdac92efa07e932cc14ac57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-events-overview"></a>Przegląd Zdarzenia chronometrażu
 W tym temacie opisano sposób używania pięciu zdarzenia czasowe na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiektów.  
@@ -87,6 +88,6 @@ W tym temacie opisano sposób używania pięciu zdarzenia czasowe na <xref:Syste
  Gdy zarejestrujesz <xref:System.Windows.Media.Animation.Timeline.Completed> zdarzeń na osi czasu, na przykład możesz jest rzeczywiście informuje system, można zarejestrować na potrzeby <xref:System.Windows.Media.Animation.Clock.Completed> zdarzenia każdego zegara, który jest tworzony dla osi czasu. W kodzie, należy zarejestrować dla tego zdarzenia przed <xref:System.Windows.Media.Animation.Clock> jest tworzona dla tej osi czasu; w przeciwnym razie nie będzie otrzymywać powiadomienia. Dzieje się to automatycznie w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; analizator automatycznie rejestruje zdarzenia przed <xref:System.Windows.Media.Animation.Clock> jest tworzony.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja i chronometrażu Przegląd systemu](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Omówienie zachowania chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+ [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Zachowania chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

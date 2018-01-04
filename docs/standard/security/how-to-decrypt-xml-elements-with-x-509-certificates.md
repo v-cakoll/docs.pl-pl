@@ -23,11 +23,14 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ac1f986fdbfe139bdcffc8268fc5fdbf916c936
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c922b3da772c685343b8989c5dc1bc89cad857fd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>Porady: odszyfrowywanie elementów XML za pomocą certyfikatów X.509
 Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do szyfrowania i odszyfrowywania element w dokumencie XML.  Szyfrowanie XML jest standardowym sposobem exchange lub przechowywania zaszyfrowanych danych XML, nie martwiąc się o łatwo odczytywane dane.  Aby uzyskać więcej informacji o szyfrowaniu XML standardowego Zobacz się, że w sieci World Wide Web konsorcjum W3C specyfikacji szyfrowanie XML znajduje się w http://www.w3.org/TR/xmldsig-core/.  
@@ -86,4 +89,4 @@ Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw d
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Cryptography.Xml>  
- [Porady: szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)
+ [Instrukcje: szyfrowanie elementów XML za pomocą certyfikatów X.509](../../../docs/standard/security/how-to-encrypt-xml-elements-with-x-509-certificates.md)

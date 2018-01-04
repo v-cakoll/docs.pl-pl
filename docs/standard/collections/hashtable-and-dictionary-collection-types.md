@@ -20,11 +20,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: aa2392775f0bd2d68c0aeb28aa0654b690b11808
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5ab3a6bb2128a3753cb80a60836a781d987ca253
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="hashtable-and-dictionary-collection-types"></a>Typy kolekcji tablic wartości funkcji mieszającej i słowników
 <xref:System.Collections.Hashtable?displayProperty=nameWithType> Klasy, a <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> i <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType> implementuje klasy ogólne <xref:System.Collections.IDictionary?displayProperty=nameWithType> interfejsu. <xref:System.Collections.Generic.Dictionary%602> Implementuje również klasy ogólnej <xref:System.Collections.Generic.IDictionary%602> interfejs generyczny. W związku z tym każdy element w tych kolekcjach jest parę klucza i wartości.  

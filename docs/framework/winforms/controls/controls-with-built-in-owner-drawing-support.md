@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8fb699a93effcdf0b5f88606419479d51754125b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: efd297dcc11005d6b6d47bb9ce3853a757046e8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>Formanty z wbudowaną obsługą rysowania przez właściciela
 Rysowanie w formularzach systemu Windows, który jest również nazywany Rysowanie niestandardowe, przez właściciela jest technika Zmienianie wyglądu niektórych formantów.  
@@ -96,7 +97,7 @@ Rysowanie w formularzach systemu Windows, który jest również nazywany Rysowan
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [Porady: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>Składnik MenuItem  
  <xref:System.Windows.Forms.MenuItem> Składnik reprezentuje pojedynczy element menu w <xref:System.Windows.Forms.MainMenu> lub <xref:System.Windows.Forms.ContextMenu> składnika.  
@@ -182,9 +183,9 @@ Rysowanie w formularzach systemu Windows, który jest również nazywany Rysowan
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [Porady: Dostosowywanie wyglądu komórek w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [Instrukcje: dostosowywanie wyglądu komórek w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [Porady: Dostosowywanie wyglądu wierszy w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [Instrukcje: dostosowywanie wyglądu wierszy w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip — Formant  
  <xref:System.Windows.Forms.ToolStrip>i formanty pochodne umożliwiają dostosowanie każdego aspektu wyglądu ich.  
@@ -195,9 +196,9 @@ Rysowanie w formularzach systemu Windows, który jest również nazywany Rysowan
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [Porady: tworzenie i ustawianie niestandardowego modułu renderowania dla formantu ToolStrip w systemie Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [Instrukcje: tworzenie i ustawienie niestandardowego modułu renderowania dla kontrolki ToolStrip w formularzach Windows Forms](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [Porady: niestandardowy rysunek formantu ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [Instrukcje: niestandardowy rysunek kontrolki ToolStrip](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

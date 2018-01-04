@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dc3249518dd1e1c751de08c22d1c5eb4fa28dc6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ccced2c9e816122d770f43056c36ab4a6d510fde
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="field-design"></a>Pole projektu
 Zasada hermetyzacji jest jednym z najważniejsze koncepcje zorientowane obiektowo projektu. Ta zasada mówi, że dane przechowywane wewnątrz obiektu powinien być dostępny tylko dla tego obiektu.  
@@ -51,5 +54,5 @@ Zasada hermetyzacji jest jednym z najważniejsze koncepcje zorientowane obiektow
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania elementu członkowskiego](../../../docs/standard/design-guidelines/member.md)  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

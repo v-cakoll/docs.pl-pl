@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12913a9afc0003b041b260379a55e469273c5910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0d023d3623777a93cf72715410aed87fe8a63ee5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="one-way-services"></a>Usługi jednokierunkowe
 Domyślne zachowanie operacji usługi jest wzorzec żądanie odpowiedź. We wzorcu żądanie odpowiedź, klient oczekuje na komunikat odpowiedzi nawet wtedy, gdy operacja usługi jest reprezentowana w kodzie jako `void` metody. Z operacji jednokierunkowych są przesyłane tylko jeden komunikat. Odbiornik nie wysyła komunikat odpowiedzi nie jest nadawca oczekiwany jeden.  
@@ -65,4 +66,4 @@ public interface IOneWayCalculator
  Jest to zalecane, zamiast tego należy zbadać różnych formantów w usłudze, a także na kliencie, a następnie przetestować scenariusze aplikacji w celu ustalenia najlepszej konfiguracji po obu stronach. Na przykład, jeśli użycie sesji blokuje przetwarzanie komunikatów w usłudze, możesz ustawić <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwości <xref:System.ServiceModel.InstanceContextMode.PerCall> tak, aby każdy komunikat może przetworzone przez wystąpienie innej usługi i ustaw <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> do <xref:System.ServiceModel.ConcurrencyMode.Multiple> Aby umożliwić więcej niż jeden wątek na wysyłanie wiadomości w czasie. Innym rozwiązaniem jest zwiększenie odczytu przydziały powiązania usługi i klienta.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Jednokierunkowe](../../../../docs/framework/wcf/samples/one-way.md)
+ [Komunikacja jednokierunkowa](../../../../docs/framework/wcf/samples/one-way.md)

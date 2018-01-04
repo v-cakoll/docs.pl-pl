@@ -12,11 +12,14 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd047d1c099cf926760c4e4efcdbe2101ce0853c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 822b05758c7751e6f82f7a7f46a219d2c0001cd1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="basic-serialization"></a>Podstawowe serializacji
 
@@ -100,4 +103,4 @@ public class MyStuff : MyObject
   
 ## <a name="see-also"></a>Zobacz także  
  [Serializacja binarna](binary-serialization.md)  
- [XML i serializacji SOAP](xml-and-soap-serialization.md)
+ [Serializacja XML i SOAP](xml-and-soap-serialization.md)

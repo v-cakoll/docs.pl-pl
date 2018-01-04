@@ -30,11 +30,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cb612d524f32eb4a97ac358d6deb8d2889ee5391
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b9922576e4ef942e896f365c44cebec717abe3b4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-regular-expressions"></a>Wyrażeń regularnych programu .NET
 Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie tekstu. Rozbudowana notacji dopasowywanie do wzorca wyrażeń regularnych umożliwia szybkie analizy dużych ilości tekst do znalezienia wzorce określonego znaku; Aby sprawdzić poprawność tekstu, aby upewnić się, że ze wzorcem wstępnie zdefiniowane (takie jak adres e-mail); do wyodrębnienia, Edycja, Zamień lub usuń tekst podciągów; i dodać wyodrębnione ciągi do kolekcji w celu wygenerowania raportu. Dla wielu aplikacji, które zajmują się ciągów lub który analizy dużych bloków tekstu i wyrażenia regularne są niezbędne narzędzia.  
@@ -122,7 +125,7 @@ Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie t
 |-----------|-----------------|  
 |[Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Zawiera informacje dotyczące zestawu znaków, Operatorzy i konstrukcji, których można użyć do zdefiniowania wyrażeń regularnych.|  
 |[Model obiektów wyrażeń regularnych](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Zawiera informacje i przykłady kodu, które przedstawiają sposób użycia klasy wyrażeń regularnych.|  
-|[Szczegóły zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Zawiera informacje dotyczące możliwości i zachowania wyrażeń regularnych programu .NET.|  
+|[Szczegóły dotyczące zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Zawiera informacje dotyczące możliwości i zachowania wyrażeń regularnych programu .NET.|  
 |[Przykłady wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-examples.md)|Zawiera przykłady kodu, które ilustrują typowe używa wyrażeń regularnych.|  
   
 ## <a name="reference"></a>Tematy pomocy  

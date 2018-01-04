@@ -17,11 +17,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 58fb520365d0a80a8f8bc46e3fdbd23483fdf07f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 79d6e384458e289c4da8587eae66486a054aad08
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="overview-of-synchronization-primitives"></a>Przegląd elementów podstawowych synchronizacji
 <a name="top"></a>.NET Framework zapewnia szereg elementy podstawowe synchronizacji kontroli interakcji wątków i unikanie wyścigu. Te można około podzielone na trzy kategorie: blokowanie sygnalizowania i blokowanego operacji.  
@@ -38,7 +41,7 @@ ms.lasthandoff: 11/21/2017
   
 -   [Typy lekkie synchronizacji](#lightweight_synchronization_types)  
   
--   [Metody SpinWait](#spinwait)  
+-   [SpinWait](#spinwait)  
   
 -   [Operacje blokowane](#interlocked_operations)  
   
@@ -176,11 +179,11 @@ ms.lasthandoff: 11/21/2017
  [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
  [Monitory](http://msdn.microsoft.com/library/33fe4aef-b44b-42fd-9e72-c908e39e75db)  
  [Muteksy](../../../docs/standard/threading/mutexes.md)  
- [Semafor i klasa SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
- [EventWaitHandle, autoresetevent —, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
+ [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)  
+ [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)  
  [Uchwyty oczekiwania](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
  [Operacje blokowane](../../../docs/standard/threading/interlocked-operations.md)  
- [Reader_writer_lock](../../../docs/standard/threading/reader-writer-locks.md)  
- [Bariery](../../../docs/standard/threading/barrier.md)  
- [Metody SpinWait](../../../docs/standard/threading/spinwait.md)  
- [Struktury SpinLock](../../../docs/standard/threading/spinlock.md)
+ [reader_writer_lock, klasa](../../../docs/standard/threading/reader-writer-locks.md)  
+ [Barrier](../../../docs/standard/threading/barrier.md)  
+ [SpinWait](../../../docs/standard/threading/spinwait.md)  
+ [SpinLock](../../../docs/standard/threading/spinlock.md)

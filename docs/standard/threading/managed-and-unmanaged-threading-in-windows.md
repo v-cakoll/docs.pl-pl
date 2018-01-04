@@ -17,11 +17,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c55caaff3fd96b2791e75a392a9522abfceb22e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 56d094e3b5a834b77cce58f1f554e4e2871e3e46
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w systemie Windows
 Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym utworzone przez środowisko uruchomieniowe języka wspólnego wątki i utworzone poza środowisko uruchomieniowe, które wprowadź zarządzanego środowiska do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w procesie, które kiedykolwiek wykonali kodu w ramach zarządzanego środowiska wykonawczego. Nie śledzi inne wątki. Wątki można wprowadzić zarządzanego środowiska wykonawczego za pomocą modelu COM interop (ponieważ środowisko uruchomieniowe przedstawia zarządzanych obiektów w postaci obiektów COM niezarządzane world), modelu COM [metody DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) funkcji i wywołanie platformy.  

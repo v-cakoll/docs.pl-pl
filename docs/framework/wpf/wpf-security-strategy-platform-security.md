@@ -28,11 +28,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc8914f4bc891aefa191ba5cf2b659afda0f905b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b40a4f1ba28559ee35dff9866539476e55cbd0fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-security-strategy---platform-security"></a>Strategia zabezpieczeń WPF - zabezpieczenia platformy
 Gdy [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] udostępnia wiele usług zabezpieczeń on również korzysta z funkcji zabezpieczeń w podstawowej platformy, który zawiera system operacyjny, [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], i [!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]. Te warstwy połączyć zapewnienie [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] model zabezpieczeń silne, obrony zabezpieczeń, podejmowanych w celu uniknięcia dowolnego pojedynczego punktu awarii, jak pokazano na poniższej ilustracji:  
@@ -53,7 +54,7 @@ Gdy [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] udostępnia
   
 -   Kompilacja/GS  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+-   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].,  
   
 #### <a name="gs-compilation"></a>Kompilacja/GS  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]zapewnia ochronę przez kompilację wiele podstawowe biblioteki systemu, wraz ze wszystkimi [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] zależności, takich jak [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)], aby ułatwić uniknięcie przepełnienia buforu. Jest to osiągane przy użyciu parametru/GS z wiersza polecenia kompilatora C/C++. Mimo że można jawnie uniknąć przepełnienia buforu, / GS kompilacji zawiera przykład obrony zabezpieczeń przed potencjalnych luk w zabezpieczeniach przypadkowego lub umyślnego tworzonych przez nich.  
@@ -224,6 +225,6 @@ Gdy [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)] udostępnia
  [Windows XP Service Pack 3](http://www.microsoft.com/windows/products/windowsxp/sp3/default.mspx)  
  [Podręcznik zabezpieczeń systemu Windows Vista](http://www.microsoft.com/downloads/details.aspx?familyid=a3d1bbed-7f35-4e72-bfb5-b84a526c1565&displaylang=en)  
  [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)  
- [Zabezpieczeń](../../../docs/framework/wpf/security-wpf.md)  
- [WPF częściowej relacji zaufania zabezpieczeń](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
- [Strategia zabezpieczeń WPF — Engineering zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+ [Zabezpieczenia](../../../docs/framework/wpf/security-wpf.md)  
+ [Zabezpieczenie częściowej relacji zaufania WPF](../../../docs/framework/wpf/wpf-partial-trust-security.md)  
+ [Strategia zabezpieczeń WPF — projekt zabezpieczeń](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)

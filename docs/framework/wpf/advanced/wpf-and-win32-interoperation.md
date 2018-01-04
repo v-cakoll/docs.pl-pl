@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ff6e008c95844388930a505caacbaf6d407edd1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f762751da94d25a934d038c1da5adf4a7b88439b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF i Win32 — Współdziałanie
 Ten temat zawiera omówienie sposobu współdziałać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] kodu. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej efektywną ponowne części kodu.  
@@ -170,5 +171,5 @@ Ten temat zawiera omówienie sposobu współdziałać [!INCLUDE[TLA2#tla_winclie
  <xref:System.Windows.Interop.HwndHost>  
  <xref:System.Windows.Interop.HwndSource>  
  <xref:System.Windows.Interop>  
- [Wskazówki: Hostowanie formantu Win32 na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
- [Wskazówki: Hostowanie zawartości WPF w Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)
+ [Przewodnik: hosting kontrolki Win32 w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-win32-control-in-wpf.md)  
+ [Przewodnik: hosting zawartości WPF w Win32](../../../../docs/framework/wpf/advanced/walkthrough-hosting-wpf-content-in-win32.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4278f569a789ca6e8466e0b8e71557446b63955e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6ed04ab478cc6c20d88ec97934f5e45528558c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant jest używany do wyświetlania, wprowadzania i manipulowanie formatowanie tekstu. <xref:System.Windows.Forms.RichTextBox> Formant wykonuje wszystko <xref:System.Windows.Forms.TextBox> formant wykonuje, ale można również wyświetlić czcionek, kolorów i łączy; załadować z pliku; tekst i obrazy osadzone i znaleźć określonych znaków. <xref:System.Windows.Forms.RichTextBox> Kontroli jest zwykle służą do udostępniania manipulowania tekstu i wyświetlić funkcje podobne do edytora aplikacji, takich jak Microsoft Word. Podobnie jak <xref:System.Windows.Forms.TextBox> kontroli, <xref:System.Windows.Forms.RichTextBox> formant może wyświetlać paski przewijania; ale w przeciwieństwie do <xref:System.Windows.Forms.TextBox> kontroli, jego domyślne ustawienie to można wyświetlić zarówno poziome i pionowe paski przewijania, zgodnie z potrzebami i zawiera ustawienia dodatkowe paska przewijania.  
@@ -35,5 +36,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant jest 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox — formant](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Informacje o formancie TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
+ [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)

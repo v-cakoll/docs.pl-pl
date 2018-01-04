@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 790260f974dcb0be398af202cc7156fc91efed91
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a8e80f1032e886d59240b74281c2ed87ad5743a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>Jak animować położenie kamery i kierunek w scenie 3D
 Poniższy przykład pokazuje, jak animować pozycja kamery i animować kierunku, który wskazuje sceny 3W. Jest to zrobić za pomocą <xref:System.Windows.Media.Animation.Point3DAnimation> i <xref:System.Windows.Media.Animation.Vector3DAnimation> do animowania <xref:System.Windows.Media.Media3D.ProjectionCamera.Position%2A> i <xref:System.Windows.Media.Media3D.ProjectionCamera.LookDirection%2A> właściwości odpowiednio <xref:System.Windows.Media.Media3D.PerspectiveCamera>. Aby zmienić widok onlooker sceny w odpowiedzi na zdarzenia można użyć animacji następująco.  
@@ -35,5 +36,5 @@ Poniższy przykład pokazuje, jak animować pozycja kamery i animować kierunku,
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Animation.Vector3DAnimation>  
  <xref:System.Windows.Media.Animation.Point3DAnimation>  
- [Animowanie pozycji kamery i kierunek za pomocą klucza ramek](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [Przegląd grafiki 3-w](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+ [Animowanie położenia kamery i kierunku z użyciem klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [Grafika 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5c0bcb27ed9c8981665a50c129dfbd824c9612f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c545f9ebc924c0a12ee2e76fdb6c725c25e2353
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="eventwaithandle-autoresetevent-countdownevent-manualresetevent"></a>EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent
 Uchwyty oczekiwania na zdarzenie Zezwalaj wątków, aby zsynchronizować działań przez siebie sygnalizowania i Oczekiwanie na sygnały siebie nawzajem. Te zdarzenia synchronizacji są oparte na uchwyty oczekiwania Win32 i można podzielić na dwa typy: te, które automatycznie resetować podczas sygnalizowane oraz te, które są resetowane ręcznie.  
@@ -32,7 +35,7 @@ Uchwyty oczekiwania na zdarzenie Zezwalaj wątków, aby zsynchronizować działa
  [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md)  
  <xref:System.Threading.EventWaitHandle> Klasa może reprezentować albo automatyczne lub ręczne Resetowanie zdarzenia i albo lokalnego lub o nazwie zdarzeń systemowych.  
   
- [Autoresetevent —](../../../docs/standard/threading/autoresetevent.md)  
+ [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
  <xref:System.Threading.AutoResetEvent> Pochodną klasy <xref:System.Threading.EventWaitHandle> i reprezentuje lokalnym zdarzeniem, które automatycznie resetuje.  
   
  [ManualResetEvent i ManualResetEventSlim](../../../docs/standard/threading/manualresetevent-and-manualreseteventslim.md)  

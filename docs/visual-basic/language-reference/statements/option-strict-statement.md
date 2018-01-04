@@ -19,11 +19,11 @@ ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 caps.latest.revision: "49"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 238f64001b097b86306e0ed9630bd5df2e6a189f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1a01edd918ea49c08defddb45bf23c33307e814f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="option-strict-statement"></a>Option Strict — Instrukcja
 Ogranicza niejawne konwersje typów danych można tylko rozszerzanie konwersji, uniemożliwia późne wiązanie i nie zezwala na niejawne wpisanie, który daje w `Object` typu.  
@@ -72,15 +72,15 @@ Option Strict { On | Off }
   
  Konwersje, które mogą powodować błędy obejmują niejawne konwersje, które występują w wyrażeniach. Więcej informacji znajduje się w następujących tematach:  
   
--   [+ — Operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
+-   [+, operator](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= — Operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+-   [+=, operator](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
 -   [\ — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
 -   [/ = — Operator (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [CHAR — typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Char, typ danych](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  Podczas łączenia ciągów za pomocą [& — Operator](../../../visual-basic/language-reference/operators/concatenation-operator.md), wszystkie konwersji na ciągi są uważane za można rozszerzanie. Dlatego te konwersje nie generują niejawne błąd konwersji zawężającej, nawet jeśli `Option Strict` znajduje się na.  
   
@@ -116,7 +116,7 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>Aby ustawić Option Strict w środowisku IDE  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  W **Eksploratora rozwiązań**, wybierz projekt. Na **projektu** menu, kliknij przycisk **właściwości**.  
   
 2.  Na **skompilować** ustaw wartość **Option Strict** pole.  
   
@@ -162,11 +162,11 @@ Option Strict { On | Off }
  [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
  [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
  [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
- [Option Explicit — instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Porady: dostęp do elementów członkowskich obiektu](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
+ [Instrukcje: dostęp do elementów członkowskich obiektu](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)  
  [Wyrażenia osadzone w XML](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)  
  [Swobodna konwersja delegatów](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)  
- [Późne wiązania w rozwiązaniach pakietu Office](https://msdn.microsoft.com/library/3xxe951d)  
- [/ optionstrict —](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
+ [Późne powiązania w rozwiązaniach pakietu Office](https://msdn.microsoft.com/library/3xxe951d)  
+ [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
  [Okno dialogowe Opcje domyślne, projektów, Visual Basic](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

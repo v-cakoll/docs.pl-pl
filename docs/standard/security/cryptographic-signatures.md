@@ -30,11 +30,14 @@ caps.latest.revision: "17"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0651ae0fbc85b01d3e02354c06a9796804c8516e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-signatures"></a>Podpisy kryptograficzne
 <a name="top"></a>Kryptograficznych podpisów cyfrowych korzysta algorytmy kluczy publicznych w celu zapewnienia integralności danych. Podczas rejestrowania danych za pomocą podpisu cyfrowego ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po podpisaniu jej. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).  

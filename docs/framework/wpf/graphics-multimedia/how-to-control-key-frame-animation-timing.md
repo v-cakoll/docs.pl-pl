@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc3566cf25282749a09c5f2372cd1c81e3ce881
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 252da422ffb34e5865a29112e349e18d0f40327f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>Jak kontrolować chronometraż animacji kluczowych klatek
 W tym przykładzie przedstawiono sposób kontrolować czas klatek kluczowych w animacji ramki klucza. Podobnie jak inne animacje mają klucz poklatkowych <xref:System.Windows.Media.Animation.Timeline.Duration%2A> właściwości. Oprócz określanie czasu trwania animacji, należy określić, jaka część ten czas trwania jest przydzielony do każdego z jego klatek kluczowych. Aby przyznać czas, należy określić <xref:System.Windows.Media.Animation.KeyTime> dla każdego klatek kluczowych animacji.  
@@ -76,6 +77,6 @@ W tym przykładzie przedstawiono sposób kontrolować czas klatek kluczowych w a
  Pełny przykład, zobacz [klatek kluczowych animacji próbki](http://go.microsoft.com/fwlink/?LinkID=160012). Aby uzyskać więcej informacji na temat klatek kluczowych animacji, zobacz [klucza ramki animacji omówienie](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie klucza poklatkowych](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)
+ [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

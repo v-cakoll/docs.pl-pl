@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5a1c4ab7c2ee6f7164b6158dcb4ca4721be12650
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6a84a68f9082d00559938c2710b6574690fa6ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>Używanie pędzla gradientów do wypełniania kształtów
 Pędzla gradientów służy do wypełnienia kształtu zmieniających się stopniowo kolorem. Na przykład umożliwia poziome gradientu wypełnienia kształtu kolorem, który zmienia stopniowo podczas przenoszenia od lewej krawędzi kształtu do prawej krawędzi. Wyobraź sobie prostokąt z lewej krawędzi, czarne (reprezentowane przez składniki czerwony, zielonemu i niebieskiemu, 0, 0, 0) i prawej krawędzi czyli czerwony (reprezentowane przez 255, 0, 0). Jeśli prostokąt 256 pikseli szerokości, składnika czerwony danego piksela będzie dłuższą o jeden niż składnika czerwony piksela po lewej stronie. Po lewej stronie piksel w wierszu zawiera składniki kolorów (0, 0, 0), drugi pikseli ma (1, 0, 0), trzeci pikseli ma (2, 0, 0) i tak dalej, aż do piksela po prawej stronie zawiera składniki kolorów (255, 0, 0). Te wartości kolorów interpolowane tworzą kolor gradientu.  
@@ -33,13 +34,13 @@ Pędzla gradientów służy do wypełnienia kształtu zmieniających się stopni
  ![Gradient](../../../../docs/framework/winforms/advanced/media/gradient2.png "gradient2")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Tworzenie gradientu liniowego](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
+ [Instrukcje: tworzenie gradientu liniowego](../../../../docs/framework/winforms/advanced/how-to-create-a-linear-gradient.md)  
  Przedstawia sposób tworzenia gradientu liniowego użyciu <xref:System.Drawing.Drawing2D.LinearGradientBrush> klasy.  
   
- [Porady: Tworzenie gradientu ścieżki](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
+ [Instrukcje: tworzenie gradientu ścieżki](../../../../docs/framework/winforms/advanced/how-to-create-a-path-gradient.md)  
  Opisuje sposób Tworzenie gradientu ścieżki przy użyciu <xref:System.Drawing.Drawing2D.PathGradientBrush> klasy.  
   
- [Porady: stosowanie korekcji Gamma do gradientu](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
+ [Instrukcje: stosowanie korekcji gamma do gradientu](../../../../docs/framework/winforms/advanced/how-to-apply-gamma-correction-to-a-gradient.md)  
  Wyjaśniono, jak używać korekcja gamma z pędzla gradientu.  
   
 ## <a name="reference"></a>Tematy pomocy  

@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c494b386cc52786c5adfbcbbea78b912bbf9887d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zgodnie z implementacją w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowych klasy lub struktury w żadnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] język, a następnie dostępu które przy użyciu znaczników XAML. Można użyć kombinację [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-zdefiniowanych typów i z typów niestandardowych w ramach tego samego pliku znaczników, zazwyczaj przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania, które muszą spełniać klasy niestandardowej, może być używany jako XAML element.  
@@ -123,8 +124,8 @@ XAML zgodnie z implementacją w [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
  Dla niektórych scenariuszy, np. Jeśli autor sterowania, można również upewnić się, że wszystkie reprezentację obiektu, który można wdrożyć w języku XAML również może być Zserializowany do równoważne znaczników XAML. Serializacja wymagania nie zostały opisane w tym temacie. Zobacz [kontrolować omówienie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md) i [Element drzewa i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)

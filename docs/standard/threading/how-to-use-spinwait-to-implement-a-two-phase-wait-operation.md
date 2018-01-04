@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2717ba2d63e4ecf40638c369b66f2c696e396a5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 63e4ea5c1c1d6143f1b6daa0312fa32b52af5787
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-spinwait-to-implement-a-two-phase-wait-operation"></a>Porady: korzystanie z metody SpinWait do implementacji dwufazowej operacji oczekiwania
 Poniższy przykład przedstawia użycie <xref:System.Threading.SpinWait?displayProperty=nameWithType> obiektu do implementacji dwufazowej operacji oczekiwania. W pierwszej fazie obiektu synchronizacji `Latch`, obraca przez kilka cykli podczas sprawdza, czy blokada stał się dostępny. W drugim etapie, jeśli blokada staje się dostępny a następnie `Wait` metoda zwraca bez użycia <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> przeprowadzić jego oczekiwania; w przeciwnym razie `Wait` wykonuje czas oczekiwania.  
@@ -37,5 +40,5 @@ Poniższy przykład przedstawia użycie <xref:System.Threading.SpinWait?displayP
  Dane wyjściowe rejestrowania pokazuje, jak często zatrzaśnięcia mógł zwiększenia wydajności, uzyskiwanie blokady bez użycia <xref:System.Threading.ManualResetEvent>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Metody SpinWait](../../../docs/standard/threading/spinwait.md)  
+ [SpinWait](../../../docs/standard/threading/spinwait.md)  
  [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)

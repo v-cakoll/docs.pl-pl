@@ -8,11 +8,12 @@ ms.date: 11/06/2017
 ms.topic: article-type-from-white-list
 ms.prod: .net-framework
 ms.devlang: cpp
-ms.openlocfilehash: 461d90aaf5beca1c0f1d1965ce0ea07411e56e79
-ms.sourcegitcommit: 43c656811dd38a66a6672084c65d10c0cbbf2015
+ms.workload: dotnet
+ms.openlocfilehash: 466ba410f7d6c13eb5f1949bf3aa32c3951a8ba7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Instrumentacja zarządzania Windows (WMI) i liczniki wydajności (niezarządzany wykaz interfejsów API)
 
@@ -24,31 +25,31 @@ Interfejs API zawiera następujące funkcje:
 
 | Funkcja | Opis |
 |---------|---------|
-| [Funkcja Beingenumeration](beginenumeration.md) | Resetuje modułu wyliczającego początek wyliczenia właściwości obiektu WMI. |
+| [Funkcja BeingEnumeration](beginenumeration.md) | Resetuje modułu wyliczającego początek wyliczenia właściwości obiektu WMI. |
 | [Funkcja BeginMethodEnumeration](beginmethodenumeration.md) |  Rozpoczyna się wyliczenia metod dla obiekt. |
 | [Funkcja BlessIWbemServices](blessiwbemservices.md) | Wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do określonej klasy IWbemServices. |
 | [Funkcja BlessIWbemServicesObject](blessiwbemservicesobject.md) | Wskazuje, czy poświadczenia użytkownika zezwolenie na dostęp do określonego obiektu usługi IWbem. |
-| [Clone — funkcja](clone.md) | Zwraca nowy obiekt, który jest pełny klonowania bieżącego obiektu. |
+| [Funkcja Clone](clone.md) | Zwraca nowy obiekt, który jest pełny klonowania bieżącego obiektu. |
 | [Funkcja CloneEnumWbemClassObject](cloneenumwbemclassobject.md) | Tworzy kopię logicznej moduł wyliczający, zachowując jego bieżącym położeniu w wyliczeniu. |
-| [CompareTo — funkcja](compareto.md) | Porównuje obiekt do innego obiektu zarządzania systemu Windows. |
+| [Funkcja CompareTo](compareto.md) | Porównuje obiekt do innego obiektu zarządzania systemu Windows. |
 | [Funkcja ConnectServerWmi](connectserverwmi.md) | Tworzy połączenie przy użyciu modelu DCOM do przestrzeni nazw usługi WMI na określonym komputerze. |
 | [Funkcja CreateClassEnumWmi](createclassenumwmi.md) | Zwraca moduł wyliczający dla wszystkich klas, które spełniają kryteria określonego zaznaczenia. |
 | [Funkcja CreateInstanceEnumWmi](createinstanceenumwmi.md) | Zwraca moduł wyliczający, który zwraca intances określonej klasy, który spełnia kryteria wyboru określony. |
-| [Usuń — funkcja](delete.md) | Usuwa określonej właściwości z definicji klasy i wszystkie jego kwalifikatorów. |
+| [Funkcja Delete](delete.md) | Usuwa określonej właściwości z definicji klasy i wszystkie jego kwalifikatorów. |
 | [Funkcja DeleteMethod](deletemethod.md) | Usuwa określoną metodą z definicji klasy modelu wspólnych informacji. |
 | [Funkcja EndEnumeration](endenumeration.md) | Kończy sekwencji wyliczenia. | 
 | [Funkcja EndMethodEnumeration](endmethodenumeration.md) | Kończy sekwencji wyliczenie uruchomiony przez wywołanie [funkcja BeginMethodEnumeration](beginmethodenumeration.md). |
 | [Funkcja ExecNotificationQueryWmi](execnotificationquerywmi.md) | Wykonuje zapytanie w celu odbierania zdarzeń. |
 | [Funkcja ExecQueryWmi](execquerywmi.md) | Wykonuje zapytanie w celu pobrania obiektów. |
 | [Funkcja FormatFromRawValue](formatfromrawvalue.md) | Konwertuje jedną wartość danych pierwotnych wydajności w określonym formacie lub dwóch wartości danych wydajność pierwotna, jeśli Konwersja formatu jest oparte na czasie. | 
-| [Get — funkcja](get.md) | Pobiera wartość określonej właściwości, jeśli istnieje. |
+| [Funkcja Get](get.md) | Pobiera wartość określonej właściwości, jeśli istnieje. |
 | [Funkcja GetCurrentApartmentType](getcurrentapartmenttype.md) | Pobiera rodzaj typu apartment, w którym jest wykonywany wywołującego. |
 | [Funkcja GetDemultiplexedStub](getdemultiplexedstub.md) | Tworzy obiekt sink usługi przesyłania dalej ułatwiających klienta odbieranie wywołania asynchroniczne z zarządzania systemu Windows. |
 | [GetErrorInfo — funkcja](geterrorinfo.md) | Pobiera informacje o błędzie z poprzedniego wywołania funkcji. | 
-| [GetMethod — funkcja](getmethod.md) | Pobiera informacje o określonej metody. | 
+| [Funkcja GetMethod](getmethod.md) | Pobiera informacje o określonej metody. | 
 | [Funkcja GetMethodOrigin](getmethodorigin.md) | Określa klasę, w którym zadeklarowany jest metoda. |
 | [Funkcja GetMethodQualifierSet](getmethodqualifierset.md) | Pobiera kwalifikator ustawić dla określonej metody. |
-| [GetNames — funkcja](getnames.md) | Pobiera podzbiór lub wszystkie nazwy właściwości obiektu. |
+| [Funkcja GetNames](getnames.md) | Pobiera podzbiór lub wszystkie nazwy właściwości obiektu. |
 | [Funkcja GetObjectText](getobjecttext.md) | Zwraca tekstową renderowanie obiektu składnią MOF. | 
 | [Funkcja GetPropertyHandle](getpropertyhandle.md) | Zwraca unikatowy dojścia identyfikujący właściwości. |
 | [Funkcja GetPropertyOrigin](getpropertyorigin.md) | Określa klasę, w którym zadeklarowany jest właściwością. |

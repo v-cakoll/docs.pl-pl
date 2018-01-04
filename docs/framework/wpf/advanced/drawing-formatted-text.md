@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad79f26a48f3f5e905b2f2ac7de9191dd8539f8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -135,7 +136,7 @@ Wyświetlanie wideo w geometrii ścieżki tekstu
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.FormattedText>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Tworzenie konspektu tekstu](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Tworzenie tekstu z konturem](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
  [Porady: Tworzenie animacji PathGeometry tekstu](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)

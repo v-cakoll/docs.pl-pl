@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61c7dd84b802d116721170080bb55a0be1ef1dfc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 60a2537f1ddc4563c1514032f7df4894f6ef47af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-service-instancing"></a>Porady: Tworzenie wystąpienia usługi sterowania
 Ustawianie trybu wystąpienia usługi umożliwia określenie, kiedy <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> (i jego obiekt skojarzona usługa zdefiniowane przez użytkownika) jest tworzony. Zobacz <xref:System.ServiceModel.InstanceContextMode> wyliczenie dla trybów. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zachowania, zobacz [Konfigurowanie i rozszerzanie środowiska uruchomieniowego za pomocą zachowań](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md). Przykłady pracy można znaleźć [zachowania](../../../../docs/framework/wcf/samples/behaviors.md).  

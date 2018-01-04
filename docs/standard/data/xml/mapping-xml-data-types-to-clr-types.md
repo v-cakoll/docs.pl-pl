@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3b6e67d27de33e61f5d5190249e90ac48e1aaaec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a90e7e58eba3938e8869ed48a118b44f47c2bf4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>Mapowanie typu danych XML na typy CLR
 W poniższej tabeli opisano domyślne mapowanie między typami danych XML i języka typowych środowiska uruchomieniowego (języka wspólnego CLR).  
@@ -87,4 +90,4 @@ W poniższej tabeli opisano domyślne mapowanie między typami danych XML i jęz
 |Węzeł instrukcja przetwarzania|<xref:System.Xml.XPath.XPathNavigator>|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa typu do zestawów System.Xml klas](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+ [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

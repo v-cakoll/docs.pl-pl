@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a154a3f639102e3f3e2acd62626379e12bbd1344
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 39645a02cd66d37d61df72028ab129677edb757e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje, czy określony warunek jest on lub off. Zwykle jest używana do prezentowania tak/nie lub PRAWDA/FAŁSZ wybór dla użytkownika. Formanty pól wyboru w grupach służy do wyświetlania wiele wyborów, z których użytkownik może wybrać co najmniej jeden.  
@@ -35,6 +36,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.CheckBox> formant wskazuje
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.CheckBox>  
- [Porady: Ustawianie opcji za pomocą formularzy systemu Windows formantów CheckBox](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
- [Porady: odpowiadanie na formularzach systemu Windows kliknięcia elementu CheckBox](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
- [CheckBox — formant](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+ [Instrukcje: ustawianie opcji za pomocą kontrolek CheckBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-options-with-windows-forms-checkbox-controls.md)  
+ [Instrukcje: odpowiadanie na kliknięcia kontrolki CheckBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)  
+ [CheckBox, kontrolka](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)

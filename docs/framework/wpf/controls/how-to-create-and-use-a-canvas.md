@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8925b9b6cd6cea1a29592f591f9c1c89d32d49e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 562531f75d6a800ff93a02709a053b790de52ea2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-use-a-canvas"></a>Jak utworzyć i używać kanwę
 W tym przykładzie przedstawiono sposób tworzenia i używania wystąpienia <xref:System.Windows.Controls.Canvas>.  
@@ -45,5 +46,5 @@ W tym przykładzie przedstawiono sposób tworzenia i używania wystąpienia <xre
  <xref:System.Windows.Controls.Canvas.SetLeft%2A>  
  <xref:System.Windows.Controls.Canvas.Top%2A>  
  <xref:System.Windows.Controls.Canvas.Left%2A>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)

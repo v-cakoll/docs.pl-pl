@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b743410f19e7782eff38c10ec996484399e00133
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: eeed1594582765e5079aa1e3d82f95737a79d1f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-queries-and-namespaces"></a>Kwerendy XPath i przestrzenie nazw
 Kwerendy XPath wiedzą z przestrzeni nazw w dokumencie XML i mogą być uprawnione nazw elementów i atrybutów prefiksy przestrzeni nazw. Kwalifikowanie nazw elementów i atrybutów z prefiksu przestrzeni nazw ogranicza węzłów zwróconych przez zapytanie XPath tylko węzły, które należą do określonych przestrzeni nazw.  
@@ -89,9 +92,9 @@ XPathNodeIterator nodes = navigator.Select(query);
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Wybierz dane XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
- [Ocena wyrażenia XPath użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
- [Zgodne węzły użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
- [Typy węzłów rozpoznany z kwerendy XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
- [Wyrażenia XPath skompilowanych](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Wybieranie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
+ [Obliczanie wyrażeń XPath przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
+ [Dopasowywanie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
+ [Typy węzłów rozpoznawanych w zapytaniach XPath](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+ [Skompilowane wyrażenia XPath](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

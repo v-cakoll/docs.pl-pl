@@ -23,11 +23,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 16038ffbe090cfd8d2c0578f75e66db3b021cb9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 988fd354caa5fcc716107087242ead113c9a9939
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-add-or-remove-access-control-list-entries"></a>Porady: dodawanie lub usuwanie pozycji listy kontroli dostępu
 Aby dodać lub usunąć wpisy listy kontroli dostępu (ACL) do lub z pliku, <xref:System.Security.AccessControl.FileSecurity> lub <xref:System.Security.AccessControl.DirectorySecurity> obiektu musi być uzyskane z pliku lub katalogu, modyfikować i następnie stosowane do pliku lub katalogu.  

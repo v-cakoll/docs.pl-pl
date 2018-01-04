@@ -17,11 +17,14 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a17eba2f930fda06d643d78c73c117e89ae86928
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4e1e123b8c8440b766e5b8903170c8cb392f154a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="synchronizing-data-for-multithreading"></a>Synchronizowanie danych na potrzeby wielowątkowości
 Wiele wątków może wykonywać wywołania do właściwości i metod pojedynczego obiektu, jest krytyczne zsynchronizowania wywołań. W przeciwnym razie jeden wątek może przerwać czynności inny wątek, a obiekt może pozostać w nieprawidłowym stanie. Klasa, której członkami są chronione przed przerw w zasilaniu nosi nazwę wątkowo.  
@@ -78,5 +81,5 @@ Wiele wątków może wykonywać wywołania do właściwości i metod pojedynczeg
  <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>  
  [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)  
  [Przegląd elementów podstawowych synchronizacji](../../../docs/standard/threading/overview-of-synchronization-primitives.md)  
- [SyncLock — instrukcja](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
- [Lock — instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md)
+ [SyncLock, instrukcja](~/docs/visual-basic/language-reference/statements/synclock-statement.md)  
+ [lock, instrukcja](~/docs/csharp/language-reference/keywords/lock-statement.md)

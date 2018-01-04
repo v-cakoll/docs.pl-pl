@@ -32,11 +32,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3accb01eb8c5edb8b3e245020b43c5a94a8bb4cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e0628dfefb8da5c11e9927ab5ec98c2feb3fe89f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>Porady: wyodrębnianie dnia tygodnia z określonej daty
 .NET Framework ułatwia ustalenie liczby porządkowej dzień tygodnia dla określonej daty i wyświetlić nazwę zlokalizowanej dzień tygodnia dla określonej daty. Wartość wyliczenia, która wskazuje dzień tygodnia odpowiadający określonej daty jest dostępna z <xref:System.DateTime.DayOfWeek%2A> lub <xref:System.DateTimeOffset.DayOfWeek%2A> właściwości. Z kolei pobierania nazwy dni tygodnia operacji formatowania, które mogą być wykonywane przez wywołanie metody formatowania, takie jak wartość daty i godziny jest `ToString` metody lub <xref:System.String.Format%2A?displayProperty=nameWithType> metody. W tym temacie przedstawiono sposób wykonywania tych operacji formatowania.  
@@ -109,5 +112,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+ [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)

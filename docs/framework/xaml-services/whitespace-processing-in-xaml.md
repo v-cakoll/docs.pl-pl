@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 80b75897f54136849aa4b356c414145510d9cd3c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c382be7dabca90ef201fa24cfb79472955347eef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whitespace-processing-in-xaml"></a>Przetwarzanie spacji w XAML
 Zasady języka XAML stanu, że znaczące światła muszą zostać przetworzone przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] implementacji procesora. W tym temacie omówiono te reguły języka XAML. Również dokumentów obsługi dodatkowych spacji jest definiowana za pomocą [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] implementacja procesora XAML i zapisywania XAML do serializacji.  
@@ -85,6 +86,6 @@ Zasady języka XAML stanu, że znaczące światła muszą zostać przetworzone p
  Ponadto niektórych elementów śródwierszowych, które oznacza rzeczywistej linebreak w modelu dokumentu przepływu celowo nie powinno wprowadzić dodatkowe miejsce nawet w kolekcji znaczących odstępu. Na przykład <xref:System.Windows.Documents.LineBreak> element ma tę samą funkcję co \<BR / > tagów w [!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)], a dla czytelności w znaczniku, zwykle <xref:System.Windows.Documents.LineBreak> jest oddzielona od kolejnych tekstu utworzone wysuwu wiersza. Tego wysuwu wiersza nie powinny być znormalizowane do stają się spacje wiodące kolejny wiersz. Aby włączyć to zachowanie definicji klasy dla <xref:System.Windows.Documents.LineBreak> zastosowanie elementu <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>, który następnie jest interpretowany przez [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] procesora oznacza, że otaczającego odstępu <xref:System.Windows.Documents.LineBreak> zawsze jest ograniczona.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Jednostki znaków XML i XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XML: Space Obsługa w XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+ [xml:space, obsługa w XAML](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)

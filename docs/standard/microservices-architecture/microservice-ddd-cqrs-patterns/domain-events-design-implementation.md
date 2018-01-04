@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2d98b302be4ee72d8225526944fc3e41cbadcb5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ca2977f382a3af20dac7470e970f483133756
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -24,7 +27,7 @@ Zdarzenie jest coś, co ma przypada w przeszłości. Zdarzenie w domenie jest, l
 
 Ważne korzyści zdarzeń domeny jest, że efekty uboczne po coś się stało w domenie może zostać wyrażona jawnie zamiast niejawnie. Te strony efekty muszą być zgodne, tak się zdarzyć, albo wszystkie operacje związane z zadań biznesowych lub żadna z nich. Ponadto zdarzenia domeny umożliwiają lepsze separacji między klas w ramach tej samej domenie.
 
-Na przykład jeśli tylko używane są tylko Entity Framework i jednostek lub nawet agregacje, jeśli ma być efekty uboczne znacznej w przypadku użycia, te będą realizowane jako niejawne koncepcji w kodzie sprzężonego po coś się stało. Jednak jeśli właśnie widzisz ten kod może być niemożliwe kodu (ubocznym) jest częścią operacji głównego lub naprawdę jest efektem. Z drugiej strony w przypadku używania zdarzeń domeny sprawia, że pojęcie jawne i część powszechny języka. Na przykład w aplikacji eShopOnContainers tworzenie kolejność nie jest chodzi o kolejność; jego aktualizuje lub tworzy nabywców agregacji, na podstawie oryginalnego użytkownika, ponieważ użytkownik nie jest kupujący, dopóki jest zamówienia. Jeśli używasz zdarzenia domeny, można jawnie express tej zasady domeny, na podstawie języka powszechny zapewniana przez ekspertów domeny.
+Na przykład jeśli tylko korzystania z programu Entity Framework i jednostek lub nawet agregacje, jeśli ma być efekty uboczne znacznej w przypadku użycia, te będą realizowane jako niejawne koncepcji w kodzie sprzężonego po coś się stało. Jednak jeśli właśnie widzisz ten kod może być niemożliwe kodu (ubocznym) jest częścią operacji głównego lub naprawdę jest efektem. Z drugiej strony w przypadku używania zdarzeń domeny sprawia, że pojęcie jawne i część powszechny języka. Na przykład w aplikacji eShopOnContainers tworzenie kolejność nie jest chodzi o kolejność; jego aktualizuje lub tworzy nabywców agregacji, na podstawie oryginalnego użytkownika, ponieważ użytkownik nie jest kupujący, dopóki jest zamówienia. Jeśli używasz zdarzenia domeny, można jawnie express tej zasady domeny, na podstawie języka powszechny zapewniana przez ekspertów domeny.
 
 Zdarzenia domeny są nieco podobne do stylu komunikatów zdarzeń, z jedną istotną różnicą. Z rzeczywistych komunikatów usługi kolejkowania komunikatów, brokerzy komunikat albo usługi service bus przy użyciu AMPQ wiadomość jest zawsze wysyłane asynchronicznie i przekazywane między procesami i maszyny. Jest to przydatne w przypadku integrowania wielu kontekstów ograniczone, mikrousług lub nawet różnych aplikacji. Jednak ze zdarzeniami domeny, aby wywołać zdarzenie z operacji domeny, które są aktualnie uruchomione, ale ma wszystkie efekty uboczne w tej samej domenie.
 
@@ -62,7 +65,7 @@ Z drugiej strony użycie zdarzeń domeny, można utworzyć szczegółowych i roz
 2.  Odbierać polecenia programu obsługi poleceń.
     -   Wykonaj transakcję pojedynczego agregacji.
     -   (Opcjonalnie) Wywoływanie zdarzeń domeny dla efekty uboczne (na przykład OrderStartedDomainDvent).
-1.  Dojście domeny zdarzenia (w ramach bieżącego procesu) thast wykona Otwórz liczba efekty uboczne w wielu wartości zagregowanych lub działania aplikacji. Na przykład:
+1.  Obsługi zdarzeń domeny (w ramach bieżącego procesu) wykona Otwórz liczba efekty uboczne w wielu wartości zagregowanych lub działania aplikacji. Na przykład:
     -   Sprawdź lub utwórz metody nabywców i płatności.
     -   Tworzenie i wysyłanie zdarzeń powiązanych integracji magistrali zdarzeń do stanów są propagowane na mikrousług lub wyzwalacza zewnętrznego akcji, takich jak wysyłanie wiadomości e-mail kupującemu.
     -   Obsługa inne efekty uboczne.
@@ -84,8 +87,9 @@ Suma zakupione w sklepie na dowolną liczbę zamówień, przekroczenia $6000 dot
 W języku C# zdarzenie w domenie jest po prostu używane do przechowywania danych struktury lub klasy, jak DTO, wszystkie informacje związane z naturę tylko w domenie, jak pokazano w poniższym przykładzie:
 
 ```csharp
-public class OrderStartedDomainEvent : IAsyncNotification
+public class OrderStartedDomainEvent : INotification
 {
+    public string UserId { get; private set; }
     public int CardTypeId { get; private set; }
     public string CardNumber { get; private set; }
     public string CardSecurityNumber { get; private set; }
@@ -94,9 +98,9 @@ public class OrderStartedDomainEvent : IAsyncNotification
     public Order Order { get; private set; }
 
     public OrderStartedDomainEvent(Order order,
-        int cardTypeId, string cardNumber,
-        string cardSecurityNumber, string cardHolderName,
-        DateTime cardExpiration)
+                                   int cardTypeId, string cardNumber,
+                                   string cardSecurityNumber, string cardHolderName,
+                                   DateTime cardExpiration)
     {
         Order = order;
         CardTypeId = cardTypeId;
@@ -112,7 +116,7 @@ Jest to zasadniczo klasę, która przechowuje wszystkie dane dotyczące zdarzeń
 
 W języku powszechny domeny ponieważ zdarzenie jest to przypada w przeszłości, nazwa klasy zdarzenia powinny być reprezentowane jako przeszłego zlecenia, takie jak OrderStartedDomainEvent lub OrderShippedDomainEvent. To zdarzenie w domenie jest implementowania porządkowania mikrousługi w eShopOnContainers.
 
-Jak możemy odnotowały ważną cechą zdarzenia jest to, że ponieważ zdarzenie jest to przypada w przeszłości, nie należy zmieniać. W związku z tym musi być klasą niezmienialny. Widać w poprzednim kodzie, którego właściwości są tylko do odczytu z poza obiekt. Za pomocą konstruktora jest jedynym sposobem, aby zaktualizować obiekt, podczas tworzenia obiektu zdarzenia.
+Jak wspomniano wcześniej, ważną cechą zdarzenia jest to, że zdarzenie jest coś, które wystąpiły w przeszłości, nie należy zmieniać. W związku z tym musi być klasą niezmienialny. Widać w poprzednim kodzie, którego właściwości są tylko do odczytu z poza obiekt. Za pomocą konstruktora jest jedynym sposobem, aby zaktualizować obiekt, podczas tworzenia obiektu zdarzenia.
 
 ### <a name="raising-domain-events"></a>Wywoływanie zdarzeń domeny
 
@@ -128,22 +132,22 @@ Zamiast wysyłania do obsługi zdarzeń domeny natychmiast, lepszym rozwiązanie
 
 Po wysłaniu zdarzenia domeny prawo przed lub po prawej stronie po zatwierdzania transakcji jest zazwyczaj ważne, ponieważ określa, czy będzie zawierać efekty uboczne w ramach tej samej transakcji lub w innej transakcji. W drugim przypadku należy uwzględniać spójność ostateczna między wiele wartości zagregowanych. W tym temacie omówiono w następnej sekcji.
 
-Odroczone podejście jest, jakie eShopOnContainers używa. Najpierw należy dodać zdarzenia wykonywane w jednostki w kolekcji lub listę zdarzeń na jednostkę. Tę listę powinny być obiektu jednostki, nawet lepiej części lub klasy podstawowej jednostki, jak pokazano w poniższym przykładzie:
+Odroczone podejście jest, jakie eShopOnContainers używa. Najpierw należy dodać zdarzenia wykonywane w jednostki w kolekcji lub listę zdarzeń na jednostkę. Tę listę powinny być obiektu jednostki, nawet lepiej części lub klasy podstawowej jednostki, jak pokazano w poniższym przykładzie klasa podstawowa jednostka:
 
 ```csharp
 public abstract class Entity
 {
-    private List<IAsyncNotification> _domainEvents;
+     //... 
+    private List<INotification> _domainEvents;
+    public List<INotification> DomainEvents => _domainEvents;
 
-    public List<IAsyncNotification> DomainEvents => _domainEvents;
-
-    public void AddDomainEvent(IAsyncNotification eventItem)
+    public void AddDomainEvent(INotification eventItem)
     {
-        _domainEvents = _domainEvents ?? new List<IAsyncNotification>();
+        _domainEvents = _domainEvents ?? new List<INotification>();
         _domainEvents.Add(eventItem);
     }
 
-    public void RemoveDomainEvent(IAsyncNotification eventItem)
+    public void RemoveDomainEvent(INotification eventItem)
     {
         if (_domainEvents is null) return;
         _domainEvents.Remove(eventItem);
@@ -152,19 +156,20 @@ public abstract class Entity
 }
 ```
 
-Jeśli chcesz zgłosić zdarzenie, możesz po prostu dodaj go do zbierania zdarzeń do umieszczenia wewnątrz metody agregacji jednostki, jak przedstawiono na poniższym kodem:
+Jeśli chcesz zgłosić zdarzenie, możesz po prostu dodaj go do zbierania zdarzeń z kodu w dowolnej metody jednostki głównego agregacji.
+
+Poniższy kod, część [kolejność agregate głównego na eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs), przedstawiono przykład:
 
 ```csharp
 var orderStartedDomainEvent = new OrderStartedDomainEvent(this, //Order object
-    cardTypeId,
-    cardNumber,
-    cardSecurityNumber,
-    cardHolderName,
-    cardExpiration);
+                                                          cardTypeId, cardNumber,
+                                                          cardSecurityNumber,
+                                                          cardHolderName,
+                                                          cardExpiration);
 this.AddDomainEvent(orderStartedDomainEvent);
 ```
 
-Zwróć uwagę, że jedynym elementem, który wykonuje metodę AddDomainEvent jest dodawanie zdarzenia do listy. Żadne zdarzenie jest wywoływane jeszcze i bez obsługi zdarzeń jest jeszcze wywołana.
+Zwróć uwagę, że jedynym elementem, który wykonuje metodę AddDomainEvent jest dodawanie zdarzenia do listy. Zdarzenie nie jest jeszcze wysłane i bez obsługi zdarzeń jest wywoływany jeszcze.
 
 Konieczne jest wysłanie zdarzenia później podczas zatwierdzania transakcji do bazy danych. Jeśli korzystasz z programu Entity Framework Core, oznacza to metody SaveChanges Twojej DbContext EF, zgodnie z poniższym kodem:
 
@@ -173,7 +178,7 @@ Konieczne jest wysłanie zdarzenia później podczas zatwierdzania transakcji do
 public class OrderingContext : DbContext, IUnitOfWork
 {
     // ...
-    public async Task<int> SaveEntitiesAsync()
+    public async Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default(CancellationToken))
     {
         // Dispatch Domain Events collection.
         // Choices:
@@ -182,8 +187,9 @@ public class OrderingContext : DbContext, IUnitOfWork
         // handlers that are using the same DbContext with Scope lifetime
         // B) Right AFTER committing data (EF SaveChanges) into the DB. This makes
         // multiple transactions. You will need to handle eventual consistency and
-        // compensatory actions in case of failures.
+        // compensatory actions in case of failures.        
         await _mediator.DispatchDomainEventsAsync(this);
+
         // After this line runs, all the changes (from the Command Handler and Domain
         // event handlers) performed through the DbContext will be commited
         var result = await base.SaveChangesAsync();
@@ -201,7 +207,7 @@ Należy pamiętać, tutaj odtwarzania transakcyjne granice wchodzą w znaczący.
 
 Pytanie, czy ma być przeprowadzane pojedynczej transakcji przez wartości zagregowanych i zależne spójność ostateczna w tych agregacji jest kontrowersyjna. Wielu autorów DDD jak Evans marek i Vaughn Vernon wspierają reguły tego jedna transakcja = co agregacji i w związku z tym argumentowało za spójność ostateczna między agregacji. Na przykład w jego książce *projekt Domain-Driven*, marek Evans mówi, że:
 
-Reguły obejmującej agreguje zostanie nie powinny być aktualne przez cały czas. Za pomocą przetwarzania zdarzeń, przetwarzanie wsadowe lub innych mechanizmów aktualizacji innych zależności można rozpoznawać w niektórych określony czas. (grupa ochrony. 128)
+Reguły obejmującej agreguje zostanie nie powinny być aktualne przez cały czas. Za pomocą przetwarzania zdarzeń, przetwarzanie wsadowe lub innych mechanizmów aktualizacji innych zależności można rozpoznawać w niektórych określony czas. (strona 128)
 
 Vaughn Vernon mówi następujące opcje w [efektywnym projektowaniu agregacji. Część II: Tworzenie agreguje pracy ze sobą](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf):
 
@@ -225,7 +231,7 @@ Jednak jak zostanie faktycznie wysyłania tych zdarzeń do ich odpowiednich proc
 
 ### <a name="the-domain-event-dispatcher-mapping-from-events-to-event-handlers"></a>Dyspozytor zdarzeń domeny: mapowanie ze zdarzeń do obsługi zdarzeń
 
-Po jest możliwość wysyłania lub opublikować zdarzenia, należy niektórych rodzaj artefaktu, która będzie publikować zdarzenia, dzięki czemu co obsługi pokrewne można pobrać go i efekty uboczne procesu na podstawie tego zdarzenia.
+Po będziesz mieć możliwość wysyłania lub opublikować zdarzenia, należy niektórych rodzaj artefaktu, która będzie publikować zdarzenia, dzięki czemu co obsługi pokrewne można pobrać go i przetwarzanie efekty uboczne, na podstawie tego zdarzenia.
 
 Jednym z podejść jest rzeczywistym komunikatów systemu lub nawet zdarzeń magistrali, najlepiej jest oparta na magistrali usług, w przeciwieństwie do zdarzeń w pamięci. Jednakże w pierwszym przypadku rzeczywistych wiadomości może być zbyt obszerne w przypadku przetwarzania zdarzeń domeny, ponieważ wystarczy do przetwarzania tych zdarzeń w ramach tego samego procesu (to znaczy w ramach tej samej warstwie domeny i aplikacji).
 
@@ -237,7 +243,7 @@ Innym sposobem mapowania zdarzeń na wielu obsług zdarzeń jest za pomocą reje
 
 Można tworzyć wszystkie żmudne procesy i artefakty do wdrożenia tego podejścia samodzielnie. Jednak można także używać dostępnych bibliotek, takich jak [MediatR](https://github.com/jbogard/MediatR), który poniżej obejmuje korzysta z kontenera IoT. W związku z tym bezpośrednio można wstępnie zdefiniowanych interfejsów i metod publikowania wysyłania obiektu mediatora.
 
-W kodzie najpierw należy zarejestrować typy programów obsługi zdarzeń w Twojej kontenera IoC, jak pokazano w poniższym przykładzie:
+W kodzie, najpierw należy zarejestrować typy programów obsługi zdarzeń w Twojej kontenera IoC, jak pokazano w poniższym przykładzie w [eShopOnContainers mikrousługi porządkowanie](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 
 ```csharp
 public class MediatorModule : Autofac.Module
@@ -245,13 +251,11 @@ public class MediatorModule : Autofac.Module
     protected override void Load(ContainerBuilder builder)
     {
         // Other registrations ...
-        // Register the DomainEventHandler classes (they implement
-        // IAsyncNotificationHandler<>) in assembly holding the Domain Events
-        builder.RegisterAssemblyTypes(
-            typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler)
-            .GetTypeInfo().Assembly)
-            .Where(t => t.IsClosedTypeOf(typeof(IAsyncNotificationHandler<>)))
-            .AsImplementedInterfaces();
+        // Register the DomainEventHandler classes (they implement IAsyncNotificationHandler<>)
+        // in assembly holding the Domain Events
+        builder.RegisterAssemblyTypes(typeof(ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler)
+                                       .GetTypeInfo().Assembly)
+                                         .AsClosedTypesOf(typeof(IAsyncNotificationHandler<>));
         // Other registrations ...
     }
 }
@@ -261,7 +265,7 @@ Kod najpierw identyfikuje zestaw zawierający obsługi zdarzeń domeny dzięki u
 
 ### <a name="how-to-subscribe-to-domain-events"></a>Subskrybowanie zdarzeń domeny
 
-W przypadku użycia MediatR, każdy program obsługi zdarzeń musi użyć typ zdarzenia, który znajduje się na parametrze ogólnym interfejsu IAsyncNotificationHandler, jak widać w poniższym kodzie:
+W przypadku użycia MediatR, każdy program obsługi zdarzeń musi użyć typ zdarzenia, który znajduje się na parametrze ogólnym interfejsu INotificationHandler, jak widać w poniższym kodzie:
 
 ```csharp
 public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
@@ -272,61 +276,66 @@ Na podstawie relacji między zdarzeń i program obsługi zdarzeń, które mogą 
 
 ### <a name="how-to-handle-domain-events"></a>Sposób obsługi zdarzeń domeny
 
-Na koniec programu obsługi zdarzeń zwykle implementuje kod warstwy aplikacji, który używa repozytoria infrastruktury, aby uzyskać wymagane dodatkowe wartości zagregowanych i wykonywanie logiki efekt uboczny domeny. Poniższy kod przedstawia przykład.
+Na koniec programu obsługi zdarzeń zwykle implementuje kod warstwy aplikacji, który używa repozytoria infrastruktury, aby uzyskać wymagane dodatkowe wartości zagregowanych i wykonywanie logiki efekt uboczny domeny. Następujące [kod obsługi zdarzenia domeny na eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Application/DomainEventHandlers/OrderStartedEvent/ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler.cs), przedstawiono przykład implementacji.
 
 ```csharp
 public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
-    : IAsyncNotificationHandler<OrderStartedDomainEvent>
+                   : INotificationHandler<OrderStartedDomainEvent>
 {
     private readonly ILoggerFactory _logger;
     private readonly IBuyerRepository<Buyer> _buyerRepository;
     private readonly IIdentityService _identityService;
+
     public ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler(
         ILoggerFactory logger,
         IBuyerRepository<Buyer> buyerRepository,
         IIdentityService identityService)
     {
-        // Parameter validations
-        //...
+        // ...Parameter validations...
     }
 
     public async Task Handle(OrderStartedDomainEvent orderStartedEvent)
     {
-        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ?
-            orderStartedEvent.CardTypeId : 1;
+        var cardTypeId = (orderStartedEvent.CardTypeId != 0) ? orderStartedEvent.CardTypeId : 1;        
         var userGuid = _identityService.GetUserIdentity();
         var buyer = await _buyerRepository.FindAsync(userGuid);
         bool buyerOriginallyExisted = (buyer == null) ? false : true;
+
         if (!buyerOriginallyExisted)
         {
             buyer = new Buyer(userGuid);
         }
+
         buyer.VerifyOrAddPaymentMethod(cardTypeId,
-            $"Payment Method on {DateTime.UtcNow}",
-            orderStartedEvent.CardNumber,
-            orderStartedEvent.CardSecurityNumber,
-            orderStartedEvent.CardHolderName,
-            orderStartedEvent.CardExpiration,
-            orderStartedEvent.Order.Id);
-        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) :
-        _buyerRepository.Add(buyer);
-        await _buyerRepository.UnitOfWork.SaveEntitiesAsync();
+                                       $"Payment Method on {DateTime.UtcNow}",
+                                       orderStartedEvent.CardNumber,
+                                       orderStartedEvent.CardSecurityNumber,
+                                       orderStartedEvent.CardHolderName,
+                                       orderStartedEvent.CardExpiration,
+                                       orderStartedEvent.Order.Id);
+
+        var buyerUpdated = buyerOriginallyExisted ? _buyerRepository.Update(buyer) 
+                                                                      : _buyerRepository.Add(buyer);
+
+        await _buyerRepository.UnitOfWork
+                .SaveEntitiesAsync();
+
         // Logging code using buyerUpdated info, etc.
     }
 }
 ```
 
-Ten kod obsługi zdarzenia jest uznawany za kod warstwy aplikacji, ponieważ używa repozytoria infrastruktury zgodnie z opisem w następnej sekcji na warstwie infrastrukturze trwałości. Programy obsługi zdarzeń można również użyć innych składników infrastruktury.
+Poprzedni kod obsługi zdarzenia domeny jest uznawany za kod warstwy aplikacji, ponieważ używa repozytoria infrastruktury zgodnie z opisem w następnej sekcji na warstwie infrastrukturze trwałości. Programy obsługi zdarzeń można również użyć innych składników infrastruktury.
 
 #### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>Zdarzenia domeny może wygenerować zdarzeń integracji publikowane poza granice mikrousługi
 
 Na koniec ważne jest, aby wymienić, że czasami warto zdarzenia są propagowane na wiele mikrousług. Która jest traktowana jako zdarzenie integracji i mogą być publikowane za pośrednictwem magistrali zdarzeń z obsługi zdarzeń dowolnej określonej domeny.
 
-## <a name="conclusions-on-domain-events"></a>Wnioski dotyczące zdarzeń domeny 
+## <a name="conclusions-on-domain-events"></a>Wnioski dotyczące zdarzeń domeny
 
 Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie skutków ubocznych zmiany w swojej domenie. Aby użyć terminologii DDD, za pomocą zdarzeń domeny jawne Implementowanie skutków ubocznych przez jednego lub wielu wartości zagregowanych. Ponadto i lepszą skalowalność i mniej wpływ na blokady bazy danych użyj spójność ostateczna między zagregowanych zakresu umieszczonych w tej samej domenie.
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Małych Gregowi. Co to jest zdarzenie domeny? ** 
      [ *http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)

@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56cb6f7ee9a7c52ff4763c0c310d679e4889dbd2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 995dd5982601ba92a2ec23b82acd7131db183835
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-background-of-a-windows-forms-panel-using-the-designer"></a>Porady: ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant
 Formularze systemu Windows <xref:System.Windows.Forms.Panel> formant może wyświetlać zarówno kolor tła i obraz tła. <xref:System.Windows.Forms.Control.BackColor%2A> Właściwość określa kolor tła dla kontrolek, które są zawarte w panelu, takich jak etykiety i przyciski radiowe. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> nie ustawiono właściwości <xref:System.Windows.Forms.Control.BackColor%2A> wyboru spowoduje wypełnienie wszystkich panelu. Jeśli <xref:System.Windows.Forms.Control.BackgroundImage%2A> właściwość jest ustawiona, obrazu będzie wyświetlany za formantów, które są zawarte w panelu.  
@@ -49,6 +50,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.Panel> formant może wyśw
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Control.BackColor%2A>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Panel — formant](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
- [Panel — Informacje o formancie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [Porady: Grupowanie formantów z formantem panelu formularzy systemu Windows przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)
+ [Panel, kontrolka](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)  
+ [Panel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [Instrukcje: grupowanie kontrolek za pomocą kontrolki Panel formularzy Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)

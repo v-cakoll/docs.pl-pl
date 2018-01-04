@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5730b930a4f863ad01fcb6153d9bfd8f700fdb92
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bb7956ab70dc30c7d090b9616cc603df2dc0b4e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>Jak kontrolować wypełnienie kształtu złożonego
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A> Właściwość <xref:System.Windows.Media.GeometryGroup> lub <xref:System.Windows.Media.PathGeometry>, określa "reguły" używanym do ustalenia, czy dany punkt jest częścią geometrii złożonego kształtu. Istnieją dwa możliwe wartości <xref:System.Windows.Media.FillRule>: <xref:System.Windows.Media.FillRule.EvenOdd> i <xref:System.Windows.Media.FillRule.Nonzero>. W poniższych sekcjach zostaną opisano sposób używania tych dwóch reguł.  
@@ -72,5 +73,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="example"></a>Przykład  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie złożonego kształtu](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
+ [Tworzenie kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)

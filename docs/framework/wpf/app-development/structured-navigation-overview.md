@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b241e9a2dbe84833f43dadb2e979e5ee079706a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f9d20fb5b16fbf44bdf8431ae32afee105af7676
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structured-navigation-overview"></a>Przegląd Strukturyzowana nawigacja
 Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)], <xref:System.Windows.Controls.Frame>, lub <xref:System.Windows.Navigation.NavigationWindow> składa się z stron, które mogą zostać zidentyfikowane przez pakiet [!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)] i nawigacji do hiperłącza. Struktura stron i sposoby, w którym one może zostać przesłane, zgodnie z definicją hiperłącza, jest określany jako topologii nawigacji. Takie topologii pasujące do różnych typów aplikacji, zwłaszcza tych, które przeglądanie dokumentów. Dla takich aplikacji użytkownika można przejść z jednej strony na innej stronie bez dowolnej stronie znajomości o innych.  
@@ -181,4 +182,4 @@ Zawartość, która może być obsługiwany przez [!INCLUDE[TLA#tla_xbap](../../
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
- [Omówienie topologii nawigacji](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)
+ [Topologia nawigacji — omówienie](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)

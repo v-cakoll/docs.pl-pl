@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 284bd30a0a42f245c6b75d916853b264c7f72e6a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 83ee8c5e0cd578a0eb821a35a27c5ff0072e5533
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>Porady: uzyskiwanie dostępu do modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Zarządzany HTML modelu DOM (Document Object) mogą korzystać z dwóch typów aplikacji:  
@@ -56,4 +57,4 @@ Zarządzany HTML modelu DOM (Document Object) mogą korzystać z dwóch typów a
 1.  Aplikacja lub <xref:System.Windows.Forms.UserControl> będzie wymagają pełnego zaufania, aby uzyskać dostęp do zarządzany HTML DOM Jeśli wdrażasz aplikacji formularzy systemu Windows przy użyciu [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)], możesz poprosić o pełnego zaufania przy użyciu podniesienia uprawnień lub zaufanych wdrożenia aplikacji, zobacz [zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications) szczegółowe informacje.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą modelu obiektów zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+ [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ad656e2db17e44733b5718fe2e3a2a48afcb1381
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2138b9c47c6e41cd94e775eaed005d8a6fd976c9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="saving-and-writing-a-document"></a>Zapisywanie i zapisywania dokumentu
 Podczas ładowania i zapisać <xref:System.Xml.XmlDocument>, zapisanego dokumentu może różnić się od oryginału w następujący sposób:  
@@ -98,4 +101,4 @@ string xml = mydoc.DocumentElement.OuterXml;
  Z kolei umożliwia <xref:System.Xml.XmlNode.InnerText%2A> właściwości, jeśli chcesz, aby zawartość węzłów podrzędnych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

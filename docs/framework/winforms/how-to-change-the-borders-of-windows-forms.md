@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94c95d1d938ff8038f1057ac7648082819562b98
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e977617f16ef882ad0dcfe1a96a6e8af73d2ae48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>Porady: zmienianie granic formularzy systemu Windows
 Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formularzy systemu Windows. Zmieniając <xref:System.Windows.Forms.Form.FormBorderStyle%2A> właściwości, można kontrolować zachowanie zmiany rozmiaru formularza. Ponadto ustawienie <xref:System.Windows.Forms.Form.FormBorderStyle%2A> wpływa na sposób wyświetlania paska podpisu oraz przyciski wygląda na nim. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.FormBorderStyle>.  
@@ -55,4 +56,4 @@ Masz kilka style obramowania do wyboru przy ustalaniu wygląd i zachowanie formu
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.FormBorderStyle>  
  <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>  
- [Wprowadzenie do formularzy systemu Windows](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+ [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

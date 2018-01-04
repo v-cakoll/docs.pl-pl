@@ -8,11 +8,14 @@ ms.topic: article
 ms.custom: updateeachrelease
 ms.prod: .net
 ms.technology: dotnet-standard
-ms.openlocfilehash: 20152a951f11b1b923209b56b31663a9a8a81587
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="target-frameworks"></a>Docelowych platform
 
@@ -132,9 +135,9 @@ Następujące struktury docelowej są przestarzałe. Pakietów przeznaczonych dl
 
 ## <a name="see-also"></a>Zobacz także
 
-[Pakiety, Metapackages i platform](~/docs/core/packages.md)  
-[Tworzenie bibliotek z wielu narzędzi platformy](~/docs/core/tutorials/libraries.md)  
-[.NET standard](~/docs/standard/net-standard.md)  
+[Pakiety, metapakiety i struktury](~/docs/core/packages.md)  
+[Tworzenie bibliotek za pomocą narzędzi międzyplatformowych](~/docs/core/tutorials/libraries.md)  
+[.NET Standard](~/docs/standard/net-standard.md)  
 [Przechowywanie wersji programu .NET core](~/docs/core/versions/index.md)  
 [repozytorium GitHub DotNet/standard](https://github.com/dotnet/standard)  
 [Repozytorium GitHub narzędzia NuGet](https://github.com/joelverhagen/NuGetTools)  

@@ -15,23 +15,24 @@ caps.latest.revision: "82"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc23483ee1c2b59de8c43c2a2582225d1b2c864c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b652805c921b4c1643e2c1ffcca8a361aa65541c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fonts-wpf"></a>Czcionki (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia możliwość obsługi przy użyciu tekstu sformatowanego prezentacji [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki. Przykładowy pakiet z [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] czcionki jest dołączana do [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Funkcje czcionek OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [OPAKOWYWANIE czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
- [Przykładowy pakiet czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
+ [Funkcje czcionki OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)  
+ [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/fonts-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FontStyle>  
  <xref:System.Windows.SystemFonts>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91f706b527551bd66bfa18dc926f9453ea9b30fe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: efb7f8f1603de67f21aee7e1746670e324d5e238
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-tree-inspection"></a>Działania kontroli drzewa
 Działanie drzewa kontroli jest używany przez autorów aplikacji przepływu pracy do zbadania przepływów pracy obsługiwanych przez aplikację. Za pomocą <xref:System.Activities.WorkflowInspectionServices>, przepływy pracy mogą być wyszukiwane działań podrzędnych określonych, poszczególne działania mogą być wyliczane ich właściwości i mogą być buforowane metadane środowiska wykonawczego działań w określonym czasie. Ten temat zawiera omówienie <xref:System.Activities.WorkflowInspectionServices> i jak z niego korzystać do zbadania drzewem działań.  

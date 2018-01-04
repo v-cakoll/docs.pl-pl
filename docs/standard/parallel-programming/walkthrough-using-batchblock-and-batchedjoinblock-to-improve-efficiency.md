@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc74b4acc5b29395c05e7c8302caefeb51718282
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 022657c6b1f0b77e97282c03edf418bad818a4d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock
 Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy, aby mogli otrzymywać i buforu danych z jednego lub więcej źródeł i rozpropagowane limit buforowane dane jako jedną kolekcję. Ten mechanizm przetwarzanie wsadowe jest przydatne, gdy zbieranie danych z jednego lub więcej źródeł, a następnie przetworzyć wielu elementów danych, takich jak partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów w bazie danych. Ta operacja może być bardziej wydajne, jeśli wiele elementów są wstawiane jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> liczba operacji wstawienia klasę, aby zwiększyć wydajność takiej bazy danych. Opisuje również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyniki oraz wszystkie wyjątki, które wystąpić, gdy program odczytuje z bazy danych.  
@@ -127,4 +130,4 @@ Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.
  [!code-vb[TPLDataflow_BatchDatabase#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_batchdatabase/vb/dataflowbatchdatabase.vb#100)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

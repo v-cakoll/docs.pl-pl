@@ -18,11 +18,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d93b60a4172f7acebb5c9ec533efdff9a61d959c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb882dbdc8b394fe416b0e173129c745977566db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview"></a>TreeView
 <xref:System.Windows.Controls.TreeView> Kontroli Wyświetla informacje w strukturze hierarchicznej przy użyciu zwijanej węzłów.  
@@ -33,12 +34,12 @@ ms.lasthandoff: 10/18/2017
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [TreeView — omówienie](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [Omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+  [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)

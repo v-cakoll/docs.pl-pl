@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 932223a48500d8a0df5be6ae1ca08e1f333fc711
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 921f8c7791620d51107fa2ff31a637094fc0c633
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator — Informacje o formancie [Formularze systemu Windows]
 Można użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzyć standardowych środków użytkownikom wyszukiwanie i zmienić danych na formularzu systemu Windows. Często używane <xref:System.Windows.Forms.BindingNavigator> z <xref:System.Windows.Forms.BindingSource> składnik, aby umożliwić użytkownikom przechodzenie między rekordów danych w formularzu i interakcję z rekordów.  
@@ -53,4 +54,4 @@ Można użyć <xref:System.Windows.Forms.BindingNavigator> formantu, aby utworzy
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingNavigator — formant](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+ [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)

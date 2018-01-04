@@ -17,11 +17,14 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13788542fa368bd5bcf1c2f277c9d83f84b35cdb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7fa35e58ed142e6a957326893613ac465e668c45
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Równoległość danych (Biblioteka zadań równoległych)
 *Równoległość danych* odwołuje się do scenariuszy, w których tej samej operacji jest wykonywane jednocześnie (równolegle w) w przypadku elementów w źródłowej kolekcji lub tablicy. W operacji równoległych danych kolekcji źródłowej jest partycjonowany, dzięki czemu wiele wątków może działać jednocześnie w różnych segmentach.  
@@ -49,13 +52,13 @@ ms.lasthandoff: 10/18/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: pisanie prostej równoległej pętli for](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli za pośrednictwem tablicy lub które można indeksować <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
-|[Porady: pisanie prostej pętli Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli żadnego <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
+|[Instrukcje: zapisywanie prostej pętli Parallel.For](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-for-loop.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli za pośrednictwem tablicy lub które można indeksować <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
+|[Instrukcje: zapisywanie prostej pętli Parallel.ForEach](../../../docs/standard/parallel-programming/how-to-write-a-simple-parallel-foreach-loop.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli żadnego <xref:System.Collections.Generic.IEnumerable%601> źródła kolekcji.|  
 |[Porady: zatrzymywanie lub przerwa w równoległej pętli for](http://msdn.microsoft.com/en-us/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Opisuje sposób zatrzymania lub przerwać pętlę równoległą poinformowania wszystkie wątki akcji.|  
-|[Porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
-|[Porady: zapisywanie równoległej pętli Foreach ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
-|[Porady: anulowanie równoległej lub pętli ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opisuje sposób anulowanie równoległej pętli przy użyciu<xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
-|[Porady: przyspieszanie małych jednostek pętli](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|W tym artykule opisano jeden ze sposobów przyspieszenia wykonywania, gdy wnętrze pętli jest bardzo mała.|  
+|[Instrukcje: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
+|[Instrukcje: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
+|[Instrukcje: anulowanie pętli Parallel.For lub ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opisuje sposób anulowanie równoległej pętli przy użyciu<xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
+|[Instrukcje: przyspieszanie małych jednostek pętli](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|W tym artykule opisano jeden ze sposobów przyspieszenia wykonywania, gdy wnętrze pętli jest bardzo mała.|  
 |[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Zawiera omówienie Biblioteka zadań równoległych.|  
 |[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Wprowadza Programowanie równoległe w .NET Framework.|  
   

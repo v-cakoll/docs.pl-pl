@@ -23,11 +23,14 @@ caps.latest.revision: "36"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1f4b311d6e933f6c653fd7ab189c2e644021970d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
 Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wejściowe listę obiektów i ciąg formatu złożonego. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
@@ -93,8 +96,8 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
   
 |Typ lub kategoria typów|Zobacz|  
 |---------------------------|---------|  
-|Typy daty i godziny (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
-|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|  
+|Typy daty i godziny (<xref:System.DateTime>, <xref:System.DateTimeOffset>)|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|  
+|Typy wyliczeniowe (wszystkie typy pochodne <xref:System.Enum?displayProperty=nameWithType>)|[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|  
 |Typy liczbowe (<xref:System.Numerics.BigInteger>, <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>)|[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|  
 |<xref:System.Guid>|<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|  
 |<xref:System.TimeSpan>|[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)<br /><br /> [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|  
@@ -166,11 +169,11 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
  [Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)  
  [Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)  
- [Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)
+ [Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)

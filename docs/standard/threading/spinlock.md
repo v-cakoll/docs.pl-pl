@@ -14,11 +14,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: efe9b3126b3c952ab156f9ca40752ad8d3fddcd1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e83505a36252457d286bc7fbc6bbe442732229a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="spinlock"></a>SpinLock
 <xref:System.Threading.SpinLock> Struktura jest niskiego poziomu, wzajemne wykluczenie prymitywu synchronizacji, który obraca podczas oczekiwania na uzyskanie blokady. W przypadku komputerów wielordzeniowych podczas czasy oczekiwania są powinien być krótki i kiedy rywalizacji jest minimalny <xref:System.Threading.SpinLock> może działać lepiej niż inne rodzaje blokad. Jednak zaleca się używanie <xref:System.Threading.SpinLock> tylko przy określaniu przez profilowania, która <xref:System.Threading.Monitor?displayProperty=nameWithType> metody lub <xref:System.Threading.Interlocked> metody znacznie spowalniają działanie programu.  

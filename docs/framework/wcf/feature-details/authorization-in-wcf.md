@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 09bbbaad055447103a1153f1888dcae4a511cbeb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ac43b2185048287d0edd4cb20561a936bce2f58b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authorization-in-wcf"></a>Autoryzacja w programie WCF
 Autoryzacja jest proces kontroli dostępu i uprawnienia do zasobów, takich jak usługi lub plików. Tematy w tej sekcji opisano sposób wykonania tego zadania podstawowe w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] na różne sposoby.  
@@ -29,13 +30,13 @@ Autoryzacja jest proces kontroli dostępu i uprawnienia do zasobów, takich jak 
  [Mechanizmy kontroli dostępu](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
  Zawiera krótki konspektu mechanizmów autoryzacji w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]i Sugerowane zastosowania.  
   
- [Porady: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
  Przedstawia proces ograniczania dostępu do usługi za pomocą <xref:System.Security.Permissions.PrincipalPermissionAttribute>.  
   
- [Porady: Używanie dostawcy ról ASP.NET z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
  Przeprowadzi Cię przez konfigurację usługi do korzystania z funkcji dostawcy roli programu [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)].  
   
- [Porady: Używanie dostawcy ról ASP.NET Menedżera autoryzacji z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]można użyć Menedżera autoryzacji do zarządzania autoryzacji dla witryny sieci Web. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Podobnie można wykorzystać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]kombinacja /Authorization Menedżera autoryzacji klientów.  
   
  [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 6df7c6e8f7670648405400cf48e4a1d54cdd7e34
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b59b88c38b6fa7f810bb3a12de09a962eb5679c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="type-converters-for-xaml-overview"></a>Typy konwerterów dla XAML — Omówienie
 Logika dostaw konwertery typu dla edytora obiektu, który konwertuje z ciągu w kodzie XAML, w szczególności obiektów na wykresie obiektu. W programie .NET Framework XAML Services konwertera typu musi być klasą pochodzącą z <xref:System.ComponentModel.TypeConverter>. Niektóre konwertery również obsługują XAML ścieżkę zapisu i może służyć do szeregowania obiektu do postaci ciągu w znaczniku serializacji. W tym temacie opisano, jak i kiedy są wywoływane konwertery typu w XAML i zapewnia implementacji porady zastępuje metodę z <xref:System.ComponentModel.TypeConverter>.  
@@ -120,4 +121,4 @@ Logika dostaw konwertery typu dla edytora obiektu, który konwertuje z ciągu w 
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.TypeConverterAttribute>  
  [Typy konwerterów i rozszerzenia znaczników dla XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)  
- [Omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

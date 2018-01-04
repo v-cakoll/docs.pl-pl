@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5faeb409e6076fe934d1b8c88423a8a348f786ca
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c6afdc93a207615a4ba92db10392dfaf311e2e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-service-host"></a>Niestandardowy host usługi
 W tym przykładzie przedstawiono sposób użycia niestandardowego pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania. Metoda ta umożliwia wielokrotnego użytku sposobem konfigurowania wielu usług w typowy sposób. Próbka przedstawiono również sposób użycia <xref:System.ServiceModel.Activation.ServiceHostFactory> klasy do użycia niestandardowego elementu ServiceHost w środowisku macierzystym Internet Information Services (IIS) lub usługi aktywacji procesów systemu Windows (WAS).  
@@ -185,4 +186,4 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 5.  Aby usunąć [!INCLUDE[iisver](../../../../includes/iisver-md.md)] aplikacji, uruchom Cleanup.bat.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+ [Instrukcje: hostowanie usługi WCF w programie IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4cbdc1cb96234e302458cbeac6d6ae26b63c956e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1505e2bc31afb4f44f0d635b06624528cb16ba15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>SaveFileDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.SaveFileDialog> składnik jest okno dialogowe wstępnie skonfigurowane. Jest to standardowy **Zapisz plik** okno dialogowe używane przez system Windows. Dziedziczy on z <xref:System.Windows.Forms.CommonDialog> klasy.  
@@ -35,4 +36,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.SaveFileDialog> składnik 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.SaveFileDialog>  
- [Savefiledialog — składnik](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+ [SaveFileDialog, składnik](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bc43226a508dfd0286c7667c02bdc2543346be9c
-ms.sourcegitcommit: 9c4b8d457ffb8d134c9d55c6d7682a0f22e2b9a8
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/20/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 .NET Framework jest niezależny od języka. Oznacza to, że deweloper, można tworzyć w jednym z wielu języków, które odnoszą się do programu .NET Framework, takich jak C#, C + +/ CLI, Eiffel F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i środowiska Windows PowerShell. Dostępne typy i składniki bibliotek klas utworzonych dla programu .NET Framework, bez konieczności znajomości języka, w której zostały pierwotnie zapisany i bez konieczności postępuj zgodnie z oryginalnego języka Konwencji. Jeśli jesteś deweloperem składnika składnika jest dostępna przez dowolną aplikację .NET Framework, niezależnie od języka.  
@@ -67,7 +70,7 @@ ms.lasthandoff: 10/20/2017
   
     -   [Zdarzenia](#events)  
   
-    -   [Przeciążenia](#overloads)  
+    -   [Overloads](#overloads)  
   
     -   [Wyjątki](#exceptions)  
   
@@ -144,8 +147,8 @@ ms.lasthandoff: 10/20/2017
 |Konwencje nazewnictwa|[Konwencje nazewnictwa](#naming)|Zestawy następuje załącznika 7 z techniczne raportu 15 Unicode Standard3.0 regulujące zestaw znaków mogą uruchomić i uwzględniane w identyfikatorach, http://www.unicode.org/unicode/reports/tr15/tr15-18.html onlineat dostępne. Identyfikatory powinien być w formacie thecanonical zdefiniowane przez Unicode normalizacji formularza C. Do celów ze specyfikacją CLS, identifiersare dwa takie same, jeśli ich mapowania małe litery (określone mapowania toonelowercase jednego z ustawień regionalnych niewrażliwe, Unicode) są takie same. Oznacza to, że dla dwóch identyfikatorów wziąć pod uwagę differentunder ze specyfikacją CLS są różnią się tylko w ich przypadku. Jednak aby można było zastąpić aninherited definicji interfejsu wiersza polecenia wymaga dokładne kodowanie oryginalnej deklaracji.|4|  
 |Przeciążenie|[Konwencje nazewnictwa](#naming)|Nazwy wszystkich wprowadzonych w zakresie zgodne ze specyfikacją CLS są różne ofkind niezależne, z wyjątkiem przypadków, w których nazwy są identyczne i rozwiązane za pomocą przeciążenia. Oznacza to, że podczas CTSallows jednego typu, aby użyć takiej samej nazwy metody i pole ze specyfikacją CLS nie.|5|  
 |Przeciążenie|[Konwencje nazewnictwa](#naming)|Pola i typy zagnieżdżone powinna różnić się przez porównanie identyfikator samodzielnie, eventhough CTS pozwala odrębnych podpisów rozróżnienie. Metody, właściwości i eventsthat mają takie same nazwy (porównanie identyfikator) może różnić się nie tylko typem zwracanym, z wyjątkiem zgodnie ze specyfikacją CLS 39 reguły.|6|  
-|Przeciążenie|[Przeciążenia](#overloads)|Tylko właściwości i metody może być przeciążony.|37|  
-|Przeciążenie|[Przeciążenia](#overloads)|Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów ich parametrów, z wyjątkiem operatory konwersji o nazwie `op_Implicit` i `op_Explicit`, które również można przeciążać na podstawie ich zwracanego typu.|38|  
+|Przeciążenie|[Overloads](#overloads)|Tylko właściwości i metody może być przeciążony.|37|  
+|Przeciążenie|[Overloads](#overloads)|Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów ich parametrów, z wyjątkiem operatory konwersji o nazwie `op_Implicit` i `op_Explicit`, które również można przeciążać na podstawie ich zwracanego typu.|38|  
 |Przeciążenie|--|Jeśli co najmniej dwie metody zgodne ze specyfikacją CLS zadeklarowana w typie ma tego samego nameand, do określonych wystąpień typu mają ten sam parametr i typy zwracane, thenall tych metod jest semantycznie równoważne w tych wystąpień typu.|48|  
 |Types|[Typ i podpisy elementów członkowskich typu](#Types)|<xref:System.Object?displayProperty=nameWithType>jest zgodny ze specyfikacją CLS. Inne klasy zgodne ze specyfikacją CLS są dziedziczy z klasy, zgodne ze specyfikacją CLS.|23|  
 |Właściwości|[Właściwości](#properties)|Metody, które implementują metody pobierającej i ustawiającej shallbe właściwości oznaczone `SpecialName` w metadanych.|24|  

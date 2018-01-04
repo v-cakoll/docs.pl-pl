@@ -14,11 +14,11 @@ ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b1bda4a3465af4ed95de720117ea2e03f9a86b84
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: f141421350b0ad7b8287e43b676a9439eae1f24c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>Wskazówki: tworzenie odbiorników logu niestandardowego (C# i Visual Basic)
 W tym przewodniku pokazano, jak utworzyć odbiornik dziennik niestandardowy i skonfigurować go do nasłuchiwania na dane wyjściowe `My.Application.Log` obiektu.  
@@ -41,11 +41,11 @@ W tym przewodniku pokazano, jak utworzyć odbiornik dziennik niestandardowy i sk
   
  Aby upewnić się, że `My.Application.Log` używa odbiornika z dziennika, należy silnie nazwę zestawu zawierającego odbiornika z dziennika.  
   
- Następna procedura zawiera kilku prostych czynności tworzenia zestawu o silnej nazwie odbiornika dziennika. Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md).  
+ Następna procedura zawiera kilku prostych czynności tworzenia zestawu o silnej nazwie odbiornika dziennika. Aby uzyskać więcej informacji, zobacz [tworzenie i zestawy Using Strong-Named](../../../../framework/app-domains/create-and-use-strong-named-assemblies.md).  
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>Silnej nazwy zestawu odbiornika dziennika  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, wybierz **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, wybierz **właściwości**.   
   
 2.  Kliknij przycisk **podpisywanie** kartę.  
   
@@ -115,6 +115,6 @@ W tym przewodniku pokazano, jak utworzyć odbiornik dziennik niestandardowy i sk
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>  
  [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Porady: wyjątki rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [Porady: zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [Wskazówki: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
+ [Instrukcje: wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

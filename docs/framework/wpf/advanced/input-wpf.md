@@ -17,23 +17,24 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 46e54e05d30e14ad89454a627a7436fbd3cbedbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1a39badbd6e7ddfc445d674a719ba9fe82f554d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-wpf"></a>Dane wejściowe (WPF)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]obsługuje kilka typów danych wejściowych. Tych danych wejściowych łącznie z tekstem, touch, mysz, polecenia, fokus, touch, przeciągnij i upuść i elektroniczne pismo odręczne. W tej sekcji opisano tematów związanych z danych wejściowych na platformie WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Sterująca — omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Omówienie fokus](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Style dla zespołu w formantach i FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [Wskazówki: Tworzenie pierwszej aplikacji platformy Touch](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [Elektroniczne pismo odręczne](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Style dla fokusu w kontrolkach i styl FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [Przewodnik: tworzenie pierwszej aplikacji dotykowej](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
+ [Cyfrowy atrament](../../../../docs/framework/wpf/advanced/digital-ink.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.UIElement>  
@@ -51,5 +52,5 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty](../../../../docs/framework/wpf/controls/index.md)  
+ [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
   [Zdarzenia](../../../../docs/framework/wpf/advanced/events-wpf.md)

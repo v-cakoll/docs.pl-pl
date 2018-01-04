@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a433ec5f83a50aa4fe4b2017a0dac3d2a5e5710c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f134761c4dadcef4692194293c8c99899bb6be2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-attributes-in-the-dom"></a>Uzyskiwanie dostępu do atrybutów w modelu DOM
 Atrybuty są właściwościami elementu nie elementów podrzędnych elementu. Ta różnica jest istotna z powodu metody używane do nawigacji element równorzędny, nadrzędny i węzły podrzędne elementu XML modelu DOM (Document Object). Na przykład **parametr PreviousSibling** i **NextSibling** metod nie są używane do nawigacji z elementu, atrybutu lub między atrybutami. Zamiast tego atrybutu jest właściwością elementu i jest własnością elementu, ma **OwnerElement** właściwości i nie **parentNode** właściwości, oraz różne metody nawigacji.  
@@ -28,7 +31,7 @@ Atrybuty są właściwościami elementu nie elementów podrzędnych elementu. Ta
  Jeśli bieżący węzeł jest elementem, użyj **HasAttribute** metodę, aby sprawdzić, czy są jakiekolwiek atrybuty skojarzone z elementem. Gdy wiadomo, że element ma atrybuty, istnieje wiele metod dostępu do atrybutów. Aby pobrać jednego atrybutu elementu, można użyć **GetAttribute** i **GetAttributeNode** metody **XmlElement** lub możesz uzyskać wszystkie atrybuty do kolekcji. Uzyskiwanie kolekcji jest przydatne, jeśli zachodzi konieczność wykonania iteracji w kolekcji. Jeśli chcesz, aby wszystkie atrybuty z elementu, użyj **atrybuty** właściwości elementu, aby pobrać wszystkie atrybuty w kolekcji.  
   
 ## <a name="retrieving-all-attributes-into-a-collection"></a>Pobieranie wszystkich atrybutów do kolekcji  
- Jeśli wszystkie atrybuty węzeł elementu wprowadzane do kolekcji, należy wywołać **XmlElement.Attributes** właściwości. Pobiera to **XmlAttributeCollection** zawiera wszystkie atrybuty elementu. **XmlAttributeCollection** klasa dziedziczy **XmlNamedNode** mapy. W związku z tym metody i właściwości dostępne w kolekcji obejmują dostępnych na mapie nazwany węzeł dodatkowo do metod i właściwości specyficzne dla **XmlAttributeCollection** klas, takich jak **ItemOf ** właściwości lub **Append** metody. Reprezentuje każdego elementu w kolekcji atrybutów **XmlAttribute** węzła. Aby znaleźć liczby atrybutów w elemencie, Pobierz **XmlAttributeCollection**i użyj **liczba** właściwości, aby wyświetlić liczbę **XmlAttribute** węzły są w kolekcji.  
+ Jeśli wszystkie atrybuty węzeł elementu wprowadzane do kolekcji, należy wywołać **XmlElement.Attributes** właściwości. Pobiera to **XmlAttributeCollection** zawiera wszystkie atrybuty elementu. **XmlAttributeCollection** klasa dziedziczy **XmlNamedNode** mapy. W związku z tym metody i właściwości dostępne w kolekcji obejmują dostępnych na mapie nazwany węzeł dodatkowo do metod i właściwości specyficzne dla **XmlAttributeCollection** klas, takich jak **ItemOf**  właściwości lub **Append** metody. Reprezentuje każdego elementu w kolekcji atrybutów **XmlAttribute** węzła. Aby znaleźć liczby atrybutów w elemencie, Pobierz **XmlAttributeCollection**i użyj **liczba** właściwości, aby wyświetlić liczbę **XmlAttribute** węzły są w kolekcji.  
   
  W poniższym przykładzie pokazano, jak można pobrać atrybutu kolekcji i przy użyciu **liczba** metodę indeksem pętli iteracja go. Następnie kod pokazano, jak pobrać jeden atrybut z kolekcji i wyświetlić jej wartość.  
   
@@ -123,7 +126,7 @@ public class Sample
   
  W tym przykładzie wyświetlane są następujące dane wyjściowe:  
   
- **Dane wyjściowe**  
+ **Output**  
   
  Wyświetl wszystkie atrybuty w kolekcji.  
   
@@ -268,4 +271,4 @@ XmlAttribute attr = doc.DocumentElement.Attributes[0];
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

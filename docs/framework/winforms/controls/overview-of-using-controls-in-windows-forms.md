@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 74bd36d422619d2ea537acdb855edb8285360a8a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 499d5455be29572f3b45df7180d2d436ff53a1b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Omówienie używania formantów w formularzach systemu Windows
 Ten temat zawiera opis podstawowych elementów aplikacji formularzy systemu Windows i udostępnia prosty przykład, która używa kontrolki i obsługuje zdarzenia w aplikacji formularzy systemu Windows.  
@@ -234,5 +235,5 @@ public class MyForm : Form {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opracowywanie niestandardowych formularzy systemu Windows formantów za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Podstawy programowania formantu formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+ [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)

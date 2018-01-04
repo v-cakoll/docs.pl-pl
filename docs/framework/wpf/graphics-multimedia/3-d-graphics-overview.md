@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 979cc7580471f616d39056f541b8374b372e8e88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58b756c24c1ca7e3f5b6b3f13c314363daf35443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-graphics-overview"></a>Przegląd Grafika 3-D
 <a name="introduction"></a>[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Funkcji [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwia deweloperom rysowania, transformacji i animowanie grafiki 3-w kodzie zarówno znaczników i procedur. Deweloperzy mogą łączyć [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] i [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] Obsługa grafiki, tworzenie zaawansowanych formantów, złożonych ilustrują danych lub zwiększyć użytkownika interfejsu aplikacji. [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]Obsługa w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] nie ma na celu zapewnienie platformy projektowej gry kompletne. Ten temat zawiera omówienie [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] funkcji [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] systemu grafiki.  
@@ -184,8 +185,8 @@ Perspektywy i projekcje rzutowanie
  <xref:System.Windows.Media.Media3D.PerspectiveCamera>  
  <xref:System.Windows.Media.Media3D.DirectionalLight>  
  <xref:System.Windows.Media.Media3D.Material>  
- [Przekształcenia 3-omówienie](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
- [Zmaksymalizować wydajność 3D WPF](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
- [Kształty i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)
+ [Przekształcenia 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-transformations-overview.md)  
+ [Maksymalizowanie wydajności 3D WPF](../../../../docs/framework/wpf/graphics-multimedia/maximize-wpf-3d-performance.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-how-to-topics.md)  
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)

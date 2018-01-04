@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: f7b744fff9e779db842402c5328dfeb5f3904071
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fe6b996c37e66f41c3946b8ef3437f8fa82c5201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-with-basic-authentication"></a>Zabezpieczenia transportu z uwierzytelnianiem podstawowym
 Na poniższej ilustracji pokazano [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi i klienta. Serwer musi mieć prawidłowy certyfikat X.509, który może służyć do Secure Sockets Layer (SSL), a klienci muszą ufać certyfikatu serwera. Ponadto usługa sieci Web jest już implementacja protokołu SSL, który może służyć. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Włączenie uwierzytelniania podstawowego na Internet Information Services (IIS), zobacz [http://go.microsoft.com/fwlink/?LinkId=83822](http://go.microsoft.com/fwlink/?LinkId=83822).  
@@ -124,7 +125,7 @@ Na poniższej ilustracji pokazano [!INCLUDE[indigo1](../../../../includes/indigo
  <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>  
  [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)  
  [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

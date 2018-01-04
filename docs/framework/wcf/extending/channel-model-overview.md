@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9be7f226c331ad20c58a06b5c7497c7942db013d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f6f45b788d825fed3c8f5d627190dd8911ec4c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="channel-model-overview"></a>Przegląd modelu kanału
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Kanału stos jest stos warstwy komunikacji z jednego lub więcej kanałów, które przetwarzania komunikatów. W dolnej części stosu jest kanał transportu, który jest odpowiedzialny za dostosowania stosu kanału do transportu źródłowego (na przykład TCP, HTTP, SMTP i inne rodzaje transportu). Kanały zapewniają niskiego poziomu model programowania do wysyłania i odbierania wiadomości. Ten model programowania opiera się na kilka interfejsów i innych typów nazywanych zbiorczo [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model kanału. W tym temacie omówiono kształtów kanału, konstrukcji odbiornika kanałów podstawowa (w usłudze) i fabryki kanałów (na kliencie).  
@@ -82,8 +83,8 @@ ms.lasthandoff: 12/02/2017
 |Temat|Opis|  
 |-----------|-----------------|  
 |[Usługa: Odbiorniki kanałów i kanały](../../../../docs/framework/wcf/extending/service-channel-listeners-and-channels.md)|W tym artykule opisano odbiorniki kanałów, które nasłuchuje przychodzących kanałów w aplikacji usługi.|  
-|[Klienta: Fabryk kanałów i kanały](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|W tym artykule opisano fabryk kanałów, które tworzenia kanałów nawiązać połączenia z aplikacją usługi.|  
+|[Klient: Fabryki kanałów i kanały](../../../../docs/framework/wcf/extending/client-channel-factories-and-channels.md)|W tym artykule opisano fabryk kanałów, które tworzenia kanałów nawiązać połączenia z aplikacją usługi.|  
 |[Opis zmian stanu](../../../../docs/framework/wcf/extending/understanding-state-changes.md)|Opisuje sposób <xref:System.ServiceModel.ICommunicationObject?displayProperty=nameWithType> interfejsu modele zmian stanu kanałów.|  
 |[Wybieranie platformy wymiany komunikatów](../../../../docs/framework/wcf/extending/choosing-a-message-exchange-pattern.md)|Opisuje sześć wzorce exchange podstawowe wiadomości obsługujących kanałów.|  
 |[Obsługa wyjątków i błędów](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)|Opisuje sposób obsługi błędów i wyjątków w kanałów niestandardowych.|  
-|[Konfiguracja i Obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Opisuje sposób obsługują kanałów niestandardowych z modelu aplikacji oraz eksportowanie i Importowanie metadanych za pomocą powiązania i elementy powiązań.|
+|[Konfiguracja i obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)|Opisuje sposób obsługują kanałów niestandardowych z modelu aplikacji oraz eksportowanie i Importowanie metadanych za pomocą powiązania i elementy powiązań.|

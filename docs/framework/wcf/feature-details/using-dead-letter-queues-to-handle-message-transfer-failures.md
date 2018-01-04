@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bd717b24eaf161145249e175425bd5296f3ef727
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9f10b3895fcdea0c3ab80617acd9874953b7665e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem
 Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te komunikaty nie powiodło się są rejestrowane w kolejce wiadomości utraconych. Nie powiodło się dostarczania może być spowodowane powodów, takich jak awarie sieci, usunięto kolejki, pełną kolejkę, niepowodzenie uwierzytelniania lub niepowodzenie dostarczyć na czas.  
@@ -85,5 +86,5 @@ Wiadomości w kolejce może zakończyć się niepowodzeniem dostarczania. Te kom
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Porady: wymiana komunikatów z punktami końcowymi WCF umieszczonych w kolejce](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

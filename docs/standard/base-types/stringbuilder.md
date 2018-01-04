@@ -26,11 +26,14 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3a6c8f6dee9f2a1da6ed4a8219c1b4832464d9aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cf8755ae6530c22bac88d8d8c5a6e92d86432994
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>Używanie klasy StringBuilder w .NET
 <xref:System.String> Obiektu nie można modyfikować. Zawsze używać jednej z metod w <xref:System.String?displayProperty=nameWithType> klasy, należy utworzyć nowy obiekt ciąg w pamięci, co wymaga nowej przydzielenie miejsca dla nowego obiektu. W sytuacjach, w którym należy przeprowadzić modyfikacji powtarzane na ciąg, obciążenie skojarzone z tworzeniem nowego <xref:System.String> obiekt może być kosztowne. <xref:System.Text.StringBuilder?displayProperty=nameWithType> Klasa może być używana, gdy chcesz zmodyfikować ciąg bez tworzenia nowego obiektu. Na przykład za pomocą <xref:System.Text.StringBuilder> klasy może zwiększyć wydajność, gdy łączenie wielu ciągów w pętli.  
@@ -121,4 +124,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
  [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)

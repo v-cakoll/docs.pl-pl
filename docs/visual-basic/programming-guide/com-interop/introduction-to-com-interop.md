@@ -14,11 +14,11 @@ ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 13df7dc6b325b97411b910c0fc8e05e65a332dc5
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Składnik modelu COM (Object) umożliwia obiekt ujawnia jego działanie z innymi składnikami i umożliwia obsługę aplikacji. Aplikacje przeznaczone dla środowisko uruchomieniowe języka wspólnego (CLR) oferują wiele zalet, gdy obiekty COM zostały podstawowych w systemie Windows programowania dla wielu lat.  
@@ -51,7 +51,7 @@ Składnik modelu COM (Object) umożliwia obiekt ujawnia jego działanie z innymi
 ### <a name="importing-and-exporting-type-libraries"></a>Importowanie i eksportowanie bibliotek typów  
  [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]zawiera narzędzia Tlbimp, umożliwiający importowanie informacji z biblioteki typów do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji. Za pomocą narzędzia Narzędziatlbexp można wygenerować biblioteki typów z zestawów.  
   
- Informacje o Tlbimp i Narzędziatlbexp, zobacz [Tlbimp.exe (Importer biblioteki typów)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382) i [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
+ Informacje o Tlbimp i Narzędziatlbexp, zobacz [Tlbimp.exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) i [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   
 ## <a name="interop-assemblies"></a>Zestawy międzyoperacyjne  
  Zestawy międzyoperacyjne są [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] kodem zestawy, które mostek między zarządzanych i niezarządzanych, Mapowanie elementów członkowskich obiektu COM na odpowiednik [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] zarządzanych elementów członkowskich. Zestawy międzyoperacyjne utworzony przez program Visual Basic .NET obsługi wielu szczegółów pracy z obiektami COM, takich jak przekazywanie współdziałania.  
@@ -60,12 +60,12 @@ Składnik modelu COM (Object) umożliwia obiekt ujawnia jego działanie z innymi
  Wszystkie [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacje mają zestaw typowych umożliwiających współdziałanie obiektów, niezależnie od języka programowania, który jest używany. Parametry i wartości zwracanych obiektów COM niekiedy używane typy danych, które różnią się od używanych w kodzie zarządzanym. *Organizowanie współdziałanie* się proces tworzenia pakietów parametrów i zwracanych wartości do typów danych równoważne przechodzą do i z obiektami COM. Aby uzyskać więcej informacji, zobacz [organizowanie międzyoperacyjne](../../../framework/interop/interop-marshaling.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Wskazówki: Wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
- [Problemów związanych ze współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- [Zestawy i Globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Tlbimp.exe (Importer biblioteki typów)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
- [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Przekazywanie międzyoperacyjne](../../../framework/interop/interop-marshaling.md)  
+ [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Współdziałanie z kodem niezarządzanym](../../../framework/interop/index.md)  
+ [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Marshaling międzyoperacyjny](../../../framework/interop/interop-marshaling.md)  
  [Współdziałanie z COM bez rejestrowania](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd)

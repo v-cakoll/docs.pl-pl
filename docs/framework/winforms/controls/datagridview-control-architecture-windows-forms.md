@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fb44a32e63fd7a0ff0e480c205d5459da2ce2bd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b3e51b87cdd766adcc10aa3f682647b28fbbe4d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView — Architektura formantu (Formularze systemu Windows)
 <xref:System.Windows.Forms.DataGridView> Kontroli oraz ich powiązanymi klasami, które są zaprojektowane jako elastyczny i rozszerzalny system do wyświetlania i edytowania danych tabelarycznych. Te klasy są zawarte w <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw, a ich są nazywane z prefiksem "DataGridView".  
@@ -151,6 +152,6 @@ Model obiektu DataGridViewRow
  Po włączeniu <xref:System.Windows.Forms.DataGridView> formantu <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> właściwość specjalne wiersz dodawania nowych wierszy jest wyświetlana jako ostatni wiersz. Ten wiersz jest częścią <xref:System.Windows.Forms.DataGridView.Rows%2A> kolekcji, ale ma specjalne funkcje, które mogą wymagać Twojej uwagi. Aby uzyskać więcej informacji, zobacz [używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- [Dostosowywanie formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
- [Używanie wiersza dla nowych rekordów w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+ [DataGridView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [Dostosowywanie kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [Używanie wiersza dla nowych rekordów w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

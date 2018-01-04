@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6a06de3f8fb6351d340e1c8f1bfe8f4105967e25
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: e18a3151228ea7edb5a8380f6ed707ee88d369e5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-object-model-overview"></a>Omówienie modelu obiektu schematu XML
 Model obiektu schematu (SOM) w programie Microsoft .NET Framework jest sformatowany interfejs API, który służy do tworzenia, edytowania i Zweryfikuj schematy programowo. SOM działa na dokumentach schematów XML w sposób podobny do modelu DOM (Document Object) funkcjonowania w dokumentach XML. Dokumenty XML schematu są prawidłowe pliki XML, które po załadowaniu do SOM, zmienić znaczenie dotyczących struktury i ważności inne dokumenty XML, które są zgodne ze schematem.  
@@ -46,10 +49,10 @@ Model obiektu schematu (SOM) w programie Microsoft .NET Framework jest sformatow
  Aby uzyskać więcej informacji o poszczególnych klasach w <xref:System.Xml.Schema> przestrzeni nazw, zobacz <xref:System.Xml.Schema> przestrzeni nazw dokumentacji w bibliotece klas programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odczytywanie i zapisywanie schematy XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Przechodzenie przez schematy XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Edytowanie schematy XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [W tym lub importowanie schematy XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Zestaw XmlSchemaSet schematu kompilacji](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Obiekt typu Infoset schematu po kompilacji](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Zestaw informacji po kompilacji schematu](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

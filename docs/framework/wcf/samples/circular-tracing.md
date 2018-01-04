@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21a455c0fcb7a6b4164da6f7fdc7efaa007273ae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a4942e7e23b3cddd0f1c5bd3be8195ceeb190ca3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="circular-tracing"></a>Śledzenie cykliczne
 W tym przykładzie przedstawiono implementacji obiektu nasłuchującego śledzenia cyklicznego buforu. Typowy scenariusz dla usług produkcji jest usług, które są dostępne przez dłuższy czas i ma włączonego na niskim poziomie rejestrowania śledzenia. Te usługi używać dużej ilości miejsca na dysku. Podczas rozwiązywania problemów z usługą, najnowszych danych w dzienniku śledzenia ma zastosowanie w rozwiązaniu problemu. Ten przykład przedstawia implementację odbiornika śledzenia cyklicznego buforu, w którym tylko najnowsze dane śledzenia są przechowywane na dysku do skonfigurowanej ilości danych. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i zawiera odbiornik śledzenia niestandardowych.  

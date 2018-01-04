@@ -11,11 +11,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fd4dbc66f37325afa64b7bf9720cad23e08c6bfb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: ae0611fdadabd6ab684f3f97995f3be3e348e648
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Uzyskiwanie dostępu do danych w aplikacjach Visual Basic
 [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zawiera kilka nowych funkcji ułatwiających projektowanie aplikacji uzyskujących dostęp do danych. Powiązane z danymi formularzy dla aplikacji systemu Windows są tworzone przez przeciąganie elementów z [Data Sources — okno](/visualstudio/data-tools/add-new-data-sources) na formularzu. Powiązanie formantów danych przez przeciąganie elementów z **Data Sources — okno** na istniejące kontrolki.  
@@ -30,11 +30,11 @@ ms.lasthandoff: 12/09/2017
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Dostarcza łącza do tematów opisujących, jak używać programu LINQ z języka Visual Basic.  
   
- [LINQ do SQL](../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../framework/data/adonet/sql/linq/index.md)  
  Dostarcza informacje na temat [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]. Zawiera przykłady programowania.  
   
  [LINQ do SQL narzędzia w programie Visual Studio](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)  
- Zawiera łącza do innych tematów dotyczących sposobu tworzenia [LINQ do SQL](../../../docs/framework/data/adonet/sql/linq/index.md) model obiektów w aplikacji.  
+ Zawiera łącza do innych tematów dotyczących sposobu tworzenia [LINQ do SQL](../../framework/data/adonet/sql/linq/index.md) model obiektów w aplikacji.  
   
  [Praca z zestawami danych w aplikacjach n-warstwowych](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)  
  Dostarcza łącza do tematów dotyczących tworzenia wielowarstwowych danych aplikacji.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 12/09/2017
  [Zapisywanie danych z powrotem w bazie danych](/visualstudio/data-tools/save-data-back-to-the-database)  
  Dostarcza łącza do stron wyjaśniających jak wysyłać zaktualizowane dane z aplikacji do bazy danych.  
   
- [ADO.NET](https://msdn.microsoft.com/library/e80y5yhx.aspx)  
+ [ADO.NET](../../framework/data/adonet/index.md)  
  Opisuje klasy ADO.NET, które ujawniają usługi dostępu do danych programiście .NET Framework.
 
  [Dane w rozwiązaniach pakietu Office](https://msdn.microsoft.com/library/xx069ybh)  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c407a2fcccfbda29ba23f63ba6ae71302c734d2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aa6d3f7109e8258dff0a07556bc8572f6071c961
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>Jak utworzyć Freezable tylko do odczytu
 W tym przykładzie pokazano, jak utworzyć <xref:System.Windows.Freezable> tylko do odczytu przez wywołanie jego <xref:System.Windows.Freezable.Freeze%2A> metody.  
@@ -48,5 +49,5 @@ W tym przykładzie pokazano, jak utworzyć <xref:System.Windows.Freezable> tylko
  <xref:System.Windows.Freezable>  
  <xref:System.Windows.Freezable.CanFreeze%2A>  
  <xref:System.Windows.Freezable.Freeze%2A>  
- [Obiekty obiektu freezable — omówienie](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+ [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)

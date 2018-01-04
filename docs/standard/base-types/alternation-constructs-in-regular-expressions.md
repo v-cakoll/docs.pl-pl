@@ -24,11 +24,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6ad632130b6f111ff863648b8b1a3b2835c27660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e565d029096b88d304b9cfc241807084873e735
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>Konstrukcje alternacyjne w wyrażeniach regularnych
 <a name="top"></a>Konstrukcje alternacyjne zmodyfikować wyrażenie regularne, aby włączyć opcję / lub lub pasujące warunkowego. .NET obsługuje trzy konstrukcje alternacyjne:  

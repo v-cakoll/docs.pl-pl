@@ -20,11 +20,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d5b5c8db7dc264185a5f58438ead83d4a65ec492
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. Model obiektu delegowanego następuje wzorzec projektowy obserwatora, który umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Nadawca zdarzeń wypycha powiadomienie, które miało miejsce zdarzenie, a odbiorca zdarzenia otrzymuje powiadomienia i definiuje odpowiedzi na to. W tym artykule opisano głównych składników modelu delegata, jak korzystanie ze zdarzeń w aplikacjach i implementowania zdarzenia w kodzie.  
@@ -89,10 +92,10 @@ Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: wywoływanie i korzystanie ze zdarzeń](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera przykłady wywoływanie i przetwarzanie zdarzeń.|  
-|[Porady: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Przedstawia sposób użycia właściwości zdarzenia do obsługi wielu zdarzeń.|  
+|[Instrukcje: Wywoływanie zdarzeń i korzystanie z nich](../../../docs/standard/events/how-to-raise-and-consume-events.md)|Zawiera przykłady wywoływanie i przetwarzanie zdarzeń.|  
+|[Instrukcje: Obsługa wielu zdarzeń przy użyciu właściwości zdarzenia](../../../docs/standard/events/how-to-handle-multiple-events-using-event-properties.md)|Przedstawia sposób użycia właściwości zdarzenia do obsługi wielu zdarzeń.|  
 |[Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)|W tym artykule opisano wzorzec projektowania, który umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy.|  
-|[Porady: Korzystanie ze zdarzeń w aplikacjach formularzy sieci Web](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje sposób obsługi zdarzeń, które jest wywoływane przez formant formularzy sieci Web.|  
+|[Instrukcje: Korzystanie ze zdarzeń w aplikacjach formularzy internetowych](../../../docs/standard/events/how-to-consume-events-in-a-web-forms-application.md)|Pokazuje sposób obsługi zdarzeń, które jest wywoływane przez formant formularzy sieci Web.|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.EventHandler>  

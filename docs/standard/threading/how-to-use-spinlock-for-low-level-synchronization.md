@@ -17,11 +17,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 30ddc7d340b210aaad4a04ea43e89555d2701f20
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 11d41a1fd04039fd08d945a72a37a479f79449a5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-spinlock-for-low-level-synchronization"></a>Porady: używanie struktury SpinLock do synchronizacji niskiego poziomu
 W poniższym przykładzie pokazano sposób użycia <xref:System.Threading.SpinLock>.  

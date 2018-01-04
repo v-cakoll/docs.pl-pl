@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: c348c36caeaf703a99336f1d2a8f6cdbe5968b99
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d418733ada67a1cb751bbfa74afee2eeeee04976
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="delegates-and-lambdas"></a>Delegaci i wyrażeń lambda
 
@@ -152,6 +155,6 @@ public MainWindow()
 
 ## <a name="further-reading-and-resources"></a>Dalsze informacje i zasoby
 
-*   [Obiekty delegowane](../../docs/csharp/programming-guide/delegates/index.md)
+*   [Delegaci](../../docs/csharp/programming-guide/delegates/index.md)
 *   [Funkcje anonimowe](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
 *   [Wyrażenia lambda](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

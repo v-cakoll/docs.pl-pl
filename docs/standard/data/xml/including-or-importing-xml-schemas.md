@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d3b336b0ac4ca4fd02950a572404a117d4c193f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ce86969bb9dc4a8db4359afa333d1f003c767895
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="including-or-importing-xml-schemas"></a>W tym lub importowanie schematy XML
 Schemat XML mogą zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementy. Te elementy schematu odwoływać się do innych schematów XML, które może służyć do uzupełnienia struktury schematu, która obejmuje lub importowane. <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klasy, mapy do tych elementów w schematu obiektu modelu (SOM) interfejsu API.  
@@ -108,9 +111,9 @@ Schemat XML mogą zawierać `<xs:import />`, `<xs:include />`, i `<xs:redefine /
  Aby uzyskać więcej informacji na temat `<xs:import />`, `<xs:include />`, i `<xs:redefine />` elementów i <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> i <xref:System.Xml.Schema.XmlSchemaRedefine> klas, zobacz [schematu W3C XML](http://go.microsoft.com/fwlink/?LinkId=45242) i <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeń nazw klasy dokumentacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie modelu obiektu schematu XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Odczytywanie i zapisywanie schematy XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Przechodzenie przez schematy XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Edytowanie schematy XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [Zestaw XmlSchemaSet schematu kompilacji](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
+ [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

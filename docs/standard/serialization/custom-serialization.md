@@ -23,11 +23,14 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4e85ee15223bc135384d698a175d57b4fd543747
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5718f19318121c2025b9d92a5947574289c1f4d0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-serialization"></a>Niestandardowej serializacji
 Niestandardowej serializacji to proces sterowania serializacji i deserializacji obiektu określonego typu. Kontrolowanie serializacji, jest możliwe w celu zapewnienia zgodności serializacji, który jest możliwość serializowania i deserializowania między wersjami typu bez przerywania podstawowych funkcji typu. Na przykład w pierwszej wersji typu, może istnieć tylko dwa pola. W następnej wersji typu są dodawane kilka więcej pól. Jeszcze druga wersja aplikacji musi mieć możliwość serializowania i deserializowania obu typów. W następujących sekcjach opisano kontrola serializacji.
@@ -191,5 +194,5 @@ End Class
   
 ## <a name="see-also"></a>Zobacz także  
  [Serializacja binarna](binary-serialization.md)  
- [XML i serializacji SOAP](xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](xml-and-soap-serialization.md)  
  [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)

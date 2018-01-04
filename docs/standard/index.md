@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 7819424510fe33c775cefb195f78697aef8b512d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c9b4ae0f845d3e290df66b85548b697d9be002a4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-guide"></a>.NET — przewodnik
 
@@ -49,9 +52,9 @@ Jeśli szukasz portu pakietu NuGet w celu .NET Standard, zapoznaj się [eksporto
 Jeśli interesuje Cię niektóre z najważniejszych pojęć .NET, zobacz:
 
 * [Składniki architektury .NET](components.md)
-* [.NET standard](net-standard.md)
+* [.NET Standard](net-standard.md)
 * [Współdziałanie natywnego](native-interop.md)
-* [Wyrzucanie elementów bezużytecznych](garbagecollection/index.md)
+* [Odzyskiwanie pamięci](garbagecollection/index.md)
 * [Typy podstawowe w .NET](base-types/index.md)
 * [Kolekcje](collections/index.md)
 * [Daty, godziny i strefy czasowe](datetime/index.md)
@@ -59,8 +62,8 @@ Jeśli interesuje Cię niektóre z najważniejszych pojęć .NET, zobacz:
 
 Ponadto zapoznaj się każdy z przewodników języka Aby dowiedzieć się więcej o tych trzech głównych języków .NET:
 
-* [Przewodnik C#](../csharp/index.md)
-* [Przewodnik F #](../fsharp/index.md)
+* [Przewodnik dla języka C#](../csharp/index.md)
+* [Podręcznik języka F #](../fsharp/index.md)
 * [Przewodnik po Visual Basic](../visual-basic/index.md)
 
 ## <a name="api-reference"></a>Odwołanie do biblioteki API

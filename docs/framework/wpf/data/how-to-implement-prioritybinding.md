@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9753462908928eaf177e100a16186826bf4828ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 13b254867200897acad2868e396d152a5f9efcbd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-prioritybinding"></a>Porady: implementowanie PriorityBinding
 <xref:System.Windows.Data.PriorityBinding>w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] działa przez określenie listy powiązań. Lista powiązań porządkowania z najwyższym priorytetem do najniższego priorytetu. Jeśli powiązanie najwyższy priorytet zwróci wartość pomyślnie podczas przetwarzania oznacza to, że nigdy nie potrzeba przetworzyć pozostałych powiązaniach na liście. Może to być to powiązanie najwyższy priorytet trwa długo ma zostać obliczone, dalej najwyższy priorytet, która zwraca wartość pomyślnie zostanie użyty, dopóki powiązanie o wyższym priorytecie zwraca wartość pomyślnie.  
@@ -55,5 +56,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae704ad9542c162b1c37f3eb9edf31f864cd42e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b20ae5329f08e9391fd7b93218c44c3c1978a48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami modelu COM
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia połączonych aplikacji dewelopera kodu zarządzanego. Jednak jeśli masz znaczących inwestycji w niezarządzanym kodzie oparte na modelu COM i nie chcesz migrować, można nadal zintegrować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług sieci Web bezpośrednio do istniejącego kodu za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] krótkiej nazwy. Krótka nazwa usługi może służyć w środowiskach programistycznych szeroki zakres modelu COM opartych, na przykład VBA pakietu Office, Visual Basic 6.0 lub Visual C++ 6.0.  
@@ -75,4 +76,4 @@ ms.lasthandoff: 12/02/2017
 >  `</configuration>`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: zarejestrować i skonfigurować krótkiej nazwy](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Instrukcje: rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

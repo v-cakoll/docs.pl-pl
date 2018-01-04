@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 2a629e25a7565aaba156f68cf06d9a24b6c2b8b0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5d7db6899068f84f9165022cfbf17767a75e7db9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-circuit-breaker-pattern"></a>Implementacja wzorca wyłącznika
 
@@ -152,7 +155,7 @@ Istnieje kilka sposobów można otworzyć obwodu i przetestować go z eShopOnCon
 
 Ma jedną opcję obniżyć dozwoloną liczbę ponownych prób 1 w zasadach wyłącznika i ponownie wdrożyć całe rozwiązanie do Docker. Z jednej ponownych prób istnieje szansa, że żądanie HTTP zakończy się niepowodzeniem podczas wdrażania, wyłącznik zostanie otwarty i wystąpi błąd.
 
-Innym rozwiązaniem jest do użycia niestandardowego oprogramowania pośredniczącego wdrożonej porządkowania mikrousługi. Po włączeniu tego oprogramowania pośredniczącego przechwytuje żądania HTTP i zwraca kod stanu 500. Oprogramowanie pośredniczące można włączyć dokonując żądanie GET, do którego nie można wykonać identyfikatora URI, takich jak następujące:
+Inną opcją jest użycie niestandardowego oprogramowania pośredniczącego, która jest zaimplementowana w `Basket` mikrousługi. Po włączeniu tego oprogramowania pośredniczącego przechwytuje żądania HTTP i zwraca kod stanu 500. Oprogramowanie pośredniczące można włączyć dokonując żądanie GET, do którego nie można wykonać identyfikatora URI, takich jak następujące:
 
 -   Pobierz/niepowodzenie
 
@@ -166,42 +169,44 @@ To żądanie umożliwia oprogramowania pośredniczącego.
 
 To żądanie wyłącza oprogramowania pośredniczącego.
 
-Na przykład gdy aplikacja jest uruchomiona, można włączyć oprogramowanie pośredniczące dokonując żądania za pomocą następującego identyfikatora URI w dowolnej przeglądarce. Należy pamiętać, że porządkowania mikrousługi korzysta z portu 5102.
+Na przykład gdy aplikacja jest uruchomiona, można włączyć oprogramowanie pośredniczące dokonując żądania za pomocą następującego identyfikatora URI w dowolnej przeglądarce. Należy pamiętać, że porządkowania mikrousługi korzysta z portu 5103.
 
-http://localhost:5102 / niepowodzeniem? Włącz
+http://localhost:5103 / niepowodzeniem? Włącz
 
-Następnie można sprawdzić stan, za pomocą identyfikatora URI [http://localhost:5102 / niepowodzeniem](http://localhost:5100/failing), jak pokazano na rysunku nr 10-4.
+Następnie można sprawdzić stan, za pomocą identyfikatora URI [http://localhost:5103 / niepowodzeniem](http://localhost:5103/failing), jak pokazano na rysunku nr 10-4.
 
 ![](./media/image4.png)
 
-**Rysunek 10-4**. Symulację awarii z platformy ASP.NET oprogramowania pośredniczącego
+**Rysunek 10-4**. Sprawdzanie stanu "Niepowodzenie" ASP.NET oprogramowanie pośredniczące — w takim przypadku wyłączone. 
 
-W tym momencie porządkowania odpowiada mikrousługi z kodem stanu 500, przy każdym wywołaniu wywołania go.
+W tym momencie odpowiada mikrousługi koszyka z kodem stanu 500, przy każdym wywołaniu wywołania go.
 
 Gdy oprogramowanie pośredniczące jest uruchomiony, możesz spróbować wprowadzania zamówienia z aplikacji sieci web MVC. Ponieważ żądania nie powiedzie się, zostanie otwarty obwodu.
 
 W poniższym przykładzie widać, że aplikacja sieci web MVC ma catch bloku w logikę złożeniem zamówienia. Jeśli kod przechwytuje wyjątek Otwórz obwód, przedstawia on użytkownika przyjazną komunikat z informacją oczekiwania.
 
 ```csharp
-[HttpPost]
-public async Task<IActionResult> Create(Order model, string action)
+public class CartController : Controller
 {
-    try
+    //…
+    public async Task<IActionResult> Index()
     {
-        if (ModelState.IsValid)
+        try
         {
-            var user = _appUserParser.Parse(HttpContext.User);
-            await _orderSvc.CreateOrder(model);
-            //Redirect to historic list.
-            return RedirectToAction("Index");
+            //… Other code
         }
-    }
-    catch(BrokenCircuitException ex)
+        catch (BrokenCircuitException)
+        {
+            // Catches error when Basket.api is in circuit-opened mode                 
+            HandleBrokenCircuitException();
+        }
+        return View();
+    }       
+
+    private void HandleBrokenCircuitException()
     {
-        ModelState.AddModelError("Error",
-            "It was not possible to create a new order, please try later on");
+        TempData["BasketInoperativeMsg"] = "Basket Service is inoperative, please try later on. (Business message due to Circuit-Breaker)";
     }
-    return View(model);
 }
 ```
 

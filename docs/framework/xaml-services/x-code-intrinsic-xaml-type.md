@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: d1b21e2a654b18547c8da7da724c87946724f71f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d39249a5d1c0e230d21e6d889b92d0b57c98e2ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code — Typ funkcji XAML
 Umożliwia umieszczanie kod w produkcji XAML. Taki kod albo mogą być kompilowane przez kompilowany XAML, lub do lewej w środowisku produkcyjnym XAML dla nowszej zastosowań, takich jak interpretacji przez środowisko uruchomieniowe implementacji procesora XAML.  
@@ -59,6 +60,6 @@ Umożliwia umieszczanie kod w produkcji XAML. Taki kod albo mogą być kompilowa
 -   Odwołania do jednostek kodu poza przestrzeń nazw środowiska CLR klasy częściowej muszą być wszystkie FQDN. Elementy członkowskie został zadeklarowany w przypadku zastąpienia do klasy częściowej członków możliwym do zastąpienia, to należy określić przy użyciu słowa kluczowego override specyficzny dla języka. Elementy członkowskie zadeklarowana w `x:Code` zakresu powodują konflikt z członkami klasy częściowej utworzony poza XAML, w taki sposób, że kompilator zgłasza konfliktu, plik XAML nie można skompilować lub obciążenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [x: Class — dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
- [Związane z kodem i języka XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [Omówienie XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+ [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [Plik codebehind i XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [Przegląd XAML (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)

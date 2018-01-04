@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 069d3b94a0269917400e75fdbe975ec39dcfdb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 00b997865c614756ea5fd9567ded3baa469f4c62
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="entity-references-are-expanded-and-not-preserved"></a>Odwołania do jednostek są rozwinięte i nie są zachowywane
 Gdy odwołanie do jednostki jest rozszerzony i zastępuje reprezentuje on **XmlEntityReference** węzeł nie został utworzony. Zamiast tego jest analizowana z deklaracji jednostki i węzły utworzone na podstawie zawartości w deklaracji zostaną skopiowane zamiast z **XmlEntityReference**. W związku z tym w `&publisher;` przykład `&publisher;` nie zostanie zapisana, ale zamiast tego **XmlText** jest tworzony węzeł.  
@@ -48,4 +51,4 @@ Struktura drzewa dla odwołań do jednostek, które zostaną rozwinięte
  Jeśli używasz czytnik nie może rozpoznać jednostki **obciążenia** metoda zgłosi wyjątek po napotkaniu odwołania do jednostki.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -19,11 +19,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a964bd031f6f8a7fc029b2b209b9693b72e688af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b895739daf1f4844d6300df4788441be67b90254
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-an-observer"></a>Porady: implementowanie obserwatora
 Wzorzec projektowy obserwatora wymaga podziału między obserwatora, który służy do rejestrowania dla powiadomień, a dostawcę, który monitoruje danych i wysyła powiadomienia do co najmniej jeden obserwatorów. W tym temacie omówiono sposób tworzenia obserwatora. Pokrewnego tematu, [porady: implementowania dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md), w tym artykule omówiono sposób tworzenia dostawcy.  
@@ -59,5 +62,5 @@ Wzorzec projektowy obserwatora wymaga podziału między obserwatora, który słu
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IObserver%601>  
  [Wzorzec projektowy obserwatora](../../../docs/standard/events/observer-design-pattern.md)  
- [Porady: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)  
- [Wzorzec projektowy obserwatora — najlepsze praktyki](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+ [Instrukcje: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)  
+ [Wzorzec projektowy obserwatora — najlepsze rozwiązania](../../../docs/standard/events/observer-design-pattern-best-practices.md)

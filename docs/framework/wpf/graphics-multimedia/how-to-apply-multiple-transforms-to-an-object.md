@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 954d29664da10f38ffd5cc97faf24343b50f1b03
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc2611092313ffa85590e18354a1abf371c0718f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>Jak zastosować wiele przekształceń do obiektu
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.TransformGroup> do grupy co najmniej dwa <xref:System.Windows.Media.Transform> obiektów w jednym złożone <xref:System.Windows.Media.Transform>.  
@@ -41,5 +42,5 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.TransformGr
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.UIElement.RenderTransform%2A>  
  <xref:System.Windows.Media.TransformGroup>  
- [Przekształca — omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Przykład 2-D transformacji](http://go.microsoft.com/fwlink/?LinkID=158252)

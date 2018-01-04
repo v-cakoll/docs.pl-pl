@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfc1de83c6c91e7a42c09b080b647aaf440e5a61
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a1292dae3a6fc7e86387ecbe3bf2b1da6912cc0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-property-without-using-a-storyboard"></a>Jak animować właściwości bez użycia scenorysu
 W tym przykładzie przedstawiono jeden sposób zastosowania animacji do właściwości bez użycia <xref:System.Windows.Media.Animation.Storyboard>.  
@@ -51,5 +52,5 @@ W tym przykładzie przedstawiono jeden sposób zastosowania animacji do właści
  <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>  
  <xref:System.Windows.Media.Animation>  
  <xref:System.Windows.Media.Animation.Storyboard>  
- [Omówienie techniki animacji właściwość](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+ [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

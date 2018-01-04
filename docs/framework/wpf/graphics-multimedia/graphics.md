@@ -17,11 +17,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a86833f2b773f1724393de091bc65a5cbb75c9b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157e7bf7ed481afc0b797a05721a4d7973b8790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics"></a>Grafika
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]oferuje zintegrowane obsługę multimediów, grafiki wektorowej, animacji i zawartości kompozycji, dzięki czemu deweloperzy mogą tworzyć interesujące interfejsów użytkownika i zawartości.  
@@ -30,12 +31,12 @@ ms.lasthandoff: 11/21/2017
  [Efekty mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
  [Pędzle](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
  [Rysunki](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [Mają geometrię](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
+ [Geometria](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
  [Obrazy](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
  [Kształty](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
  [Przekształcenia](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
  [Ustawienia rejestru renderowania grafiki](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Shapes.Shape>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Drawing>  
  <xref:System.Windows.Media.Brush>  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

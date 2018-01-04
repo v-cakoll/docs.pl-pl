@@ -24,11 +24,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b75319b5a07ac2ee1601f30394da641eb2b781c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a>Steruje jest mechanizmem wejściowego w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewniające wejściowych obsługi na poziomie semantycznego więcej niż dane wejściowe urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wiele aplikacji.  
@@ -198,8 +199,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Input.CommandBinding>  
  <xref:System.Windows.Input.InputBinding>  
  <xref:System.Windows.Input.CommandManager>  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Implementowanie ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
  [Porady: Dodawanie polecenia do elementu menu.](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
  [Tworzenie niestandardowych RoutedCommand przykładu](http://go.microsoft.com/fwlink/?LinkID=159980)

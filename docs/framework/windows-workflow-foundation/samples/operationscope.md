@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 242a9e32063deda0593552b70bf91dec3af7c346
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 837be2de516f604dd6869449d99df238fb6dbd24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="operationscope"></a>OperationScope
 W przykładzie pokazano sposób działania, do obsługi komunikatów <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> można użyć do udostępnienia istniejących działań niestandardowych jako operacji w usłudze przepływu pracy. Ten przykład zawiera nowe niestandardowe działanie o nazwie `OperationScope`. Jest on przeznaczony do jej obsługi ułatwiają tworzenie usługi przepływu pracy zezwolenie użytkownikom na tworzenie treści prace oddzielnie jako działań niestandardowych, a następnie łatwe udostępnianie je jako operacje usługi przy użyciu `OperationScope` działania. Na przykład niestandardowy `Add` działania, która przyjmuje dwa `in` argumentów i zwraca jedną `out` argument może być udostępniany jako `Add` operacji w usłudze przepływu pracy, przeciągając go do `OperationScope`.  

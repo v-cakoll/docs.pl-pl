@@ -17,19 +17,20 @@ caps.latest.revision: "67"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3046e88e26e16172a9c7e6c50123145ce7664f28
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0616507752c3053b71b2f050997eacfea22240a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-in-wpf-applications"></a>Okna w aplikacjach WPF
 Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows. Podstawowe celem okna jest hosta i wyświetlenie zawartości. Typ zawartości, że hosty okna zależy od typu danych, czy aplikacja działa przez, który może obejmować nośnika, Extensible Application Markup Language (XAML) strony, strony sieci Web, dokumentów, tabele bazy danych i rekordów i informacje o systemie.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [WPF systemu Windows — omówienie](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [Przegląd pól okna dialogowego](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [Okna WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
+ [Okna dialogowe — omówienie](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Window>  
@@ -37,7 +38,7 @@ Użytkownicy korzystają z aplikacji za pośrednictwem systemu windows. Podstawo
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Omówienie nawigacji](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
   [Tworzenie i wdrażanie](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)

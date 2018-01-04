@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04bdf32ea329ff25fd62255b4512d8a9d5703b8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a258a0e145e9a24e6e87bb511fdbd6166422a656
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preview-events"></a>Podgląd zdarzeń
 Podgląd zdarzeń, znany również jako tunelowania zdarzenia, są kierowane zdarzenia, gdy kierunek trasy przechodzi od katalogu głównego aplikacji na element, który wywołał zdarzenie i został zgłoszony jako źródło danych zdarzenia. Nie wszystkie scenariusze zdarzeń obsługuje ani nie wymaga podglądu zdarzeń. w tym temacie opisano sytuacje, gdy Podgląd zdarzeń istnieje, jak aplikacje i składniki powinna obsługiwać je, a przypadkach, gdy tworzenie podglądu zdarzeń w składnikach niestandardowych lub klasy jest odpowiedni.  
@@ -40,5 +41,5 @@ Podgląd zdarzeń, znany również jako tunelowania zdarzenia, są kierowane zda
  Każdy z tych metod ma efekty uboczne lub ograniczenia. Po stronie obsługi zdarzeń w wersji zapoznawczej powoduje, że w tym momencie obsługi zdarzenia może wyłączyć programy obsługi, które oczekują na zdarzenie propagacji i dlatego ograniczenia czy zazwyczaj nie jest dobrym rozwiązaniem jest oznaczenie zdarzeń obsługiwane, gdy jest on nadal na Previ Nowa część trasy. Ograniczenia `handledEventsToo` technika jest, że nie można określić `handledEventsToo` obsługi w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jako atrybutu, należy zarejestrować program obsługi zdarzeń w kodzie po uzyskaniu odwołania do obiektu do elementu, gdy program obsługi ma zostać dołączony.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Oznaczanie kierowane zdarzenia, ponieważ obsługiwane i klasy obsługi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+ [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

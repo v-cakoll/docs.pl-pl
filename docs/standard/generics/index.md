@@ -36,11 +36,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 510d7f30853496409caccab69e68f55a6638319e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06c2ae074045ae750c079383f43c3d6aa6f726c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generics-in-the-net-framework"></a>Typy ogólne w oprogramowaniu .NET Framework
 <a name="top"></a>Typy ogólne pozwalają dostosować metody, klasy, struktury lub interfejsu do typu dokładne dane, który działa na. Na przykład zamiast <xref:System.Collections.Hashtable> klasy, dzięki czemu klucze i wartości do być dowolnego typu, możesz użyć <xref:System.Collections.Generic.Dictionary%602> ogólne klasy i określ typu dozwolone dla klucza i dozwolona wartość. Zalety typów ogólnych należą od kodu zwiększenie bezpieczeństwa możliwość ponownego wykorzystania i typu.  
@@ -57,7 +60,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Tematy pokrewne](#related_topics)  
   
--   [Odwołanie](#reference)  
+-   [Dokumentacja](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>Definiowanie i użycie typów ogólnych  
@@ -169,16 +172,16 @@ ms.lasthandoff: 10/18/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Kolekcje ogólne w programie .NET Framework](../../../docs/standard/generics/collections.md)|W tym artykule opisano klasy rodzajowej kolekcji i innych typów ogólnych w programie .NET Framework.|  
-|[Delegaty ogólne do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|W tym artykule opisano delegatów konwersje, predykatów wyszukiwania i działań podejmowanych w przypadku elementów tablicy lub kolekcji.|  
+|[Kolekcje ogólne w oprogramowaniu .NET Framework](../../../docs/standard/generics/collections.md)|W tym artykule opisano klasy rodzajowej kolekcji i innych typów ogólnych w programie .NET Framework.|  
+|[Delegaci ogólni do manipulowania tablicami i listami](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|W tym artykule opisano delegatów konwersje, predykatów wyszukiwania i działań podejmowanych w przypadku elementów tablicy lub kolekcji.|  
 |[Interfejsy ogólne](../../../docs/standard/generics/interfaces.md)|W tym artykule opisano interfejsach zapewniające często używane funkcje w rodzin typów ogólnych.|  
-|[Kowariancja i Kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)|Opisuje Kowariancja i kontrawariancja w parametrach typu ogólnego.|  
+|[Kowariancja i kontrawariancja](../../../docs/standard/generics/covariance-and-contravariance.md)|Opisuje Kowariancja i kontrawariancja w parametrach typu ogólnego.|  
 |[Często używane typy kolekcji](../../../docs/standard/collections/commonly-used-collection-types.md)|Zawiera informacje podsumowania scenariuszy użycia typów kolekcji w programie .NET Framework, w tym typy ogólne i właściwości.|  
 |[Kiedy należy używać kolekcji ogólnych](../../../docs/standard/collections/when-to-use-generic-collections.md)|W tym artykule opisano ogólne reguły do określania, kiedy należy używać kolekcji ogólnych typów.|  
-|[Porady: Definiowanie typu ogólnego z odbiciem emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśniono, jak można wygenerować zestawów dynamicznych, które obejmują typy ogólne i metody.|  
+|[Instrukcje: definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Wyjaśniono, jak można wygenerować zestawów dynamicznych, które obejmują typy ogólne i metody.|  
 |[Typy ogólne w Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|Zawiera opis funkcji ogólne dla użytkowników programu Visual Basic, w tym — tematy porad dotyczących korzystania oraz definiowanie typów ogólnych.|  
 |[Wprowadzenie do typów ogólnych](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|Zawiera omówienie definiowanie i C# użytkowników przy użyciu typów ogólnych.|  
-|[Przegląd typów ogólnych w programie Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Zawiera opis funkcji ogólne dla użytkowników C++, w tym różnice między typy ogólne i szablony.|  
+|[Przegląd typów ogólnych w Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)|Zawiera opis funkcji ogólne dla użytkowników C++, w tym różnice między typy ogólne i szablony.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Tematy pomocy  

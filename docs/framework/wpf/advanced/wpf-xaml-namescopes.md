@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22b0354a0821021239140527793dc34e3911a733
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c4caaa9453cb3cec76a8606afb5601919eba607a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-namescopes"></a>Zakresy nazw WPF XAML
 XAML namescopes to pojęcie, który identyfikuje obiekty, które zostały zdefiniowane w języku XAML. Nazwy XAML namescope może służyć do ustanawiania relacji między nazwami zdefiniowane XAML obiektów i ich odpowiedniki wystąpienia drzewa obiektów. Zazwyczaj XAML namescopes w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kod zarządzany są tworzone podczas ładowania strony XAML poszczególnych katalogów głównych dla aplikacji XAML. Namescopes XAML jako obiekt programowania są definiowane przez <xref:System.Windows.Markup.INameScope> interfejsu i są również zaimplementowany przez klasę praktyczne <xref:System.Windows.NameScope>.  
@@ -107,5 +108,5 @@ XAML namescopes to pojęcie, który identyfikuje obiekty, które zostały zdefin
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przestrzeń nazw XAML i Namespace mapowania dla WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [x: Name — dyrektywa](../../../../docs/framework/xaml-services/x-name-directive.md)
+ [Przestrzeń nazw XAML i mapowanie przestrzeni nazw dla WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [x:Name, dyrektywa](../../../../docs/framework/xaml-services/x-name-directive.md)

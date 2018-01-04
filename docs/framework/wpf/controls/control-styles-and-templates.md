@@ -20,11 +20,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f51505a2b532da47591f2be4d767247c519aec40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f5f3bb1856a83309483119ded600396218b81fb7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
 Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawierający drzewa wizualnego tego formantu. Struktura i wyglądu formantu można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tego formantu. Nie istnieje sposób zastąpić tylko część wizualnym drzewie kontrolki; Aby zmienić wizualnym drzewie kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i pełne <xref:System.Windows.Controls.ControlTemplate>.  
@@ -43,38 +44,38 @@ Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Win
 |Aero.NormalColor.xaml|Motyw domyślny, w systemie operacyjnym Windows Vista.|  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Style przycisku i szablony](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Style kalendarza i szablony](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [Style pola wyboru i szablony](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [Style pola kombi ComboBox i szablony](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [Style ContextMenu i szablony](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [Style formantu DataGrid i szablony](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
+ [Style i szablony przycisków](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
+ [Style i szablony kalendarza](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
+ [CheckBox — style i szablony](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
+ [ComboBox — style i szablony](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
+ [ContextMenu — style i szablony](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
+ [DataGrid — style i szablony](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
  [Syles selektora daty i szablony](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [Style DocumentViewer i szablony](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Style Expander i szablony](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Style ramki i szablony](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
+ [DocumentViewer — style i szablony](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
+ [Style i szablony ekspandera](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
+ [Style i szablony klatek](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
  [GroupBox — style i szablony](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Style etykiety i szablony](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [Style pola listy i szablony](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [Style ListView i szablony](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Style menu i szablony](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [Style NavigationWindow i szablony](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox Syles i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [Style ProgressBar i szablony](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [Style RadioButton i szablony](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton Syles i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [Style paska przewijania i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [Style ScrollViewer i szablony](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Style suwaka i szablony](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [Pasek stanu style i szablony](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [Style formantu TabControl i szablony](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [Style pola tekstowego i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb Syles i szablony](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton Syles i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [Style paska narzędzi i szablony](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [Style etykietki narzędzia i szablony](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [Style TreeView i szablony](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Style okna i szablony](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Style i szablony etykiet](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
+ [ListBox — style i szablony](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
+ [ListView — style i szablony](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
+ [Style i szablony menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
+ [NavigationWindow — style i szablony](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
+ [PasswordBox — style i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [ProgressBar — style i szablony](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
+ [RadioButton — style i szablony](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
+ [RepeatButton — style i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
+ [ScrollViewer — style i szablony](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
+ [Style i szablony suwaka](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
+ [StatusBar — style i szablony](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
+ [TabControl — style i szablony](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
+ [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
+ [Style i szablony miniatury](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [ToggleButton — style i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [ToolBar — style i szablony](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
+ [ToolTip — style i szablony](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
+ [TreeView — style i szablony](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
+ [Style i szablony okien](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls>  
@@ -82,6 +83,6 @@ Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Win
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
   
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

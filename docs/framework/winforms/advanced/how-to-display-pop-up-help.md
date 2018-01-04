@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5f57e0a7981e8cae93960c8ffc3ed2168594cf5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4d139c283d002ac76005f22385d83190144c5082
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-pop-up-help"></a>Porady: wyświetlanie pomocy podręcznej
 Jednym ze sposobów Wyświetla Pomoc w formularzach systemu Windows odbywa się za pośrednictwem **pomocy** przycisk znajdujący się po prawej stronie paska tytułu dostępny za pośrednictwem <xref:System.Windows.Forms.Form.HelpButton%2A> właściwości. Ten typ wyświetlania Pomocy jest dobrze nadaje się do użytku z okien dialogowych. Okna dialogowe wyświetlane w trybie modalnym (z <xref:System.Windows.Forms.Form.ShowDialog%2A> — metoda) ma problem otworzeniem zewnętrzna Pomoc systemów, ponieważ muszą być zamknięte przed fokus można przejść do innego okna modalne okna dialogowe. Ponadto przy użyciu **pomocy** przycisk wymóg nie **Minimalizuj** przycisk lub **Maksymalizuj** przycisku znajdującego się na pasku tytułu. Jest to standardowe okno dialogowe Konwencja, formularze zazwyczaj mają **Minimalizuj** i **Maksymalizuj** przycisków.  
@@ -53,6 +54,6 @@ Jednym ze sposobów Wyświetla Pomoc w formularzach systemu Windows odbywa się 
 6.  Naciśnij klawisz **pomocy** znajdującego się na pasku tytułu, a następnie kliknij przycisk kontrolki, w którym można ustawić ciąg pomocy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Pomoc w kontroli używanie etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- [Integrowanie pomocy użytkownika w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Formularze systemu Windows](../../../../docs/framework/winforms/index.md)
+ [Pomoc do kontrolek przy użyciu etykietek narzędzi](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
+ [Integrowanie pomocy użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [Windows Forms](../../../../docs/framework/winforms/index.md)

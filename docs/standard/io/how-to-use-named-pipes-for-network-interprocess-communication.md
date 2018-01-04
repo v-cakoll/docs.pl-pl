@@ -25,11 +25,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 952600e71311184c4a4f906734addbf335d0358a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 36b33a3b29a739391cb926e706cfe811e82579be
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-named-pipes-for-network-interprocess-communication"></a>Porady: stosowanie nazwanych potoków do sieciowej komunikacji międzyprocesowej
 Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem potoku i jednym lub kilkoma klientami potoku. Oferują one więcej funkcji niż potoki anonimowe, które zapewniają komunikację międzyprocesorową na komputerze lokalnym. Nazwane potoki obsługują komunikację pełnodupleksową przez sieć i wiele instancji serwera, komunikację opartą na komunikatach i personifikację klienta, co pozwala łączyć procesy z ich własnymi zestawami uprawnień na serwerach zdalnych.  
@@ -56,4 +59,4 @@ Nazwane potoki zapewniają komunikację międzyprocesorową pomiędzy serwerem p
  <xref:System.Security.Principal.TokenImpersonationLevel>  
  <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName%2A>  
  [Potoki](../../../docs/standard/io/pipe-operations.md)  
- [Porady: stosowanie anonimowych potoków do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)
+ [Instrukcje: stosowanie potoków anonimowych do lokalnej komunikacji międzyprocesowej](../../../docs/standard/io/how-to-use-anonymous-pipes-for-local-interprocess-communication.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cadf31d45f8650336c6ac6257a84655a978a9035
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 36b20f4ee5bed6f81c42225f35083d51fb2a6308
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>Porady: włączanie widoku Tile w formancie ListView formularzy systemu Windows przy użyciu narzędzia Projektant
 Funkcja widoku kafelków <xref:System.Windows.Forms.ListView> kontroli umożliwia podanie visual równowagi między informacji graficznych i tekstowych. Wyświetlane dla elementu w widoku tile informacji tekstowych jest taka sama jak informacji o kolumnie zdefiniowanych w widoku szczegółów. Funkcje widoku kafelków w połączeniu z grupowania lub wstawiania oznaczyć funkcje <xref:System.Windows.Forms.ListView> formantu.  
@@ -48,4 +49,4 @@ Funkcja widoku kafelków <xref:System.Windows.Forms.ListView> kontroli umożliwi
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ListView.TileSize%2A>  
  [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [Informacje o formancie ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+ [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

@@ -20,11 +20,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 64b50839a5500b671a4bd5dd92eec2f0db9787a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, należy unikać typów w <xref:System.Collections> przestrzeni nazw o ile nie są specjalnie przeznaczonych dla platformy .NET Framework w wersji 1.1. Rodzajowa i współbieżnych wersje kolekcje są się ze względu na ich większe bezpieczeństwo typu i inne usprawnienia.  
@@ -90,4 +93,4 @@ Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu mo�
  <xref:System.Collections>  
  <xref:System.Collections.Specialized>  
  <xref:System.Collections.Generic>  
- [Kolekcje obsługujące wielowątkowość](../../../docs/standard/collections/thread-safe/index.md)
+ [Kolekcje bezpieczne wątkowo](../../../docs/standard/collections/thread-safe/index.md)

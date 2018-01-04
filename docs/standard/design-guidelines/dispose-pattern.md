@@ -19,11 +19,14 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 97f0c63857b7af408613e1ffdfecb157d1e2c704
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dispose-pattern"></a>Wzorzec Dispose
 Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci, systemu obsługuje lub połączenia z bazą danych w trakcie ich wykonanie. Deweloperzy muszą należy zachować ostrożność przy użyciu tych zasobów systemowych, ponieważ muszą zostać zwolnione po zostały zakupione i używane.  
@@ -289,6 +292,6 @@ public class ComplexResourceHolder : IDisposable {
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType>  
  <xref:System.Object.Finalize%2A?displayProperty=nameWithType>  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Wspólne wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Często używane wzorce projektowe](../../../docs/standard/design-guidelines/common-design-patterns.md)  
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

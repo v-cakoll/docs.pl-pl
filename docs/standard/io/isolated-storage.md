@@ -28,11 +28,14 @@ caps.latest.revision: "32"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4279e7933a88a060de52199d9ea0e9f54863fb11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 286261e9b40e65450113128c51c7c9b384380878
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a>Dla [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplikacji izolowanych magazynów jest mechanizmu magazynowania danych, która zapewnia izolację i bezpieczeństwo, definiując standardowych metod kojarzenia kodu z zapisane dane. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.  
@@ -58,7 +61,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Tematy pokrewne](#related_topics)  
   
--   [Odwołanie](#reference)  
+-   [Dokumentacja](#reference)  
   
 <a name="data_compartments_and_stores"></a>   
 ## <a name="data-compartments-and-stores"></a>Przedziały i magazyny danych  
@@ -166,14 +169,14 @@ ms.lasthandoff: 10/18/2017
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Typy izolacji](../../../docs/standard/io/types-of-isolation.md)|Opis różnych typów izolacji.|  
-|[Porady: uzyskiwanie magazynów dla izolowanego magazynu](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Przykład przy użyciu <xref:System.IO.IsolatedStorage.IsolatedStorageFile> klasy uzyskać magazynu, samodzielnie przez użytkownika i zestawu.|  
-|[Porady: wykazywanie magazynów dla izolowanego magazynu](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Przedstawia sposób użycia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> metody w celu obliczenia rozmiaru wszystkich izolowanych magazynów dla użytkownika.|  
-|[Porady: Usuń magazyny w izolowanym magazynie](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Przedstawia sposób użycia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> metody na dwa różne sposoby, aby usunąć izolowanych magazynów.|  
-|[Porady: przewidywać warunków poza braku miejsca w izolowanym magazynie](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Opis sposobu mierzenia ilości pozostałego miejsca w izolowanym magazynie.|  
-|[Porady: tworzenie plików i katalogów w izolowanym magazynie](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Przykłady tworzenia plików i katalogów w izolowanym magazynie.|  
-|[Porady: wyszukiwanie istniejących plików i katalogów w izolowanym magazynie](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Opis sposobu odczytywania struktury katalogów i plików w wydzielonej pamięci masowej.|  
-|[Porady: Odczyt i zapis w plikach w izolowanym magazynie](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Przykład zapisywania ciągu w pliku w wydzielonej pamięci masowej i odczytywania go z powrotem.|  
-|[Porady: usuwanie plików i katalogów w izolowanym magazynie](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Opis sposobu usuwania plików i katalogów wydzielonej pamięci masowej.|  
+|[Instrukcje: uzyskiwanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|Przykład przy użyciu <xref:System.IO.IsolatedStorage.IsolatedStorageFile> klasy uzyskać magazynu, samodzielnie przez użytkownika i zestawu.|  
+|[Instrukcje: wyliczanie magazynów dla wydzielonej pamięci masowej](../../../docs/standard/io/how-to-enumerate-stores-for-isolated-storage.md)|Przedstawia sposób użycia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A?displayProperty=nameWithType> metody w celu obliczenia rozmiaru wszystkich izolowanych magazynów dla użytkownika.|  
+|[Instrukcje: usuwanie danych z wydzielonej pamięci masowej](../../../docs/standard/io/how-to-delete-stores-in-isolated-storage.md)|Przedstawia sposób użycia <xref:System.IO.IsolatedStorage.IsolatedStorageFile.Remove%2A?displayProperty=nameWithType> metody na dwa różne sposoby, aby usunąć izolowanych magazynów.|  
+|[Instrukcje: przewidywanie warunków braku miejsca w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-anticipate-out-of-space-conditions-with-isolated-storage.md)|Opis sposobu mierzenia ilości pozostałego miejsca w izolowanym magazynie.|  
+|[Instrukcje: tworzenie plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|Przykłady tworzenia plików i katalogów w izolowanym magazynie.|  
+|[Instrukcje: znajdowanie istniejących plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|Opis sposobu odczytywania struktury katalogów i plików w wydzielonej pamięci masowej.|  
+|[Instrukcje: odczyt i zapis w plikach w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|Przykład zapisywania ciągu w pliku w wydzielonej pamięci masowej i odczytywania go z powrotem.|  
+|[Instrukcje: usuwanie plików i katalogów w wydzielonej pamięci masowej](../../../docs/standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|Opis sposobu usuwania plików i katalogów wydzielonej pamięci masowej.|  
 |[Plik i strumienia I-O](../../../docs/standard/io/index.md)|Opis sposobu synchronicznego i asynchronicznego uzyskiwania dostępu do pliku i strumienia danych.|  
   
 <a name="reference"></a>   

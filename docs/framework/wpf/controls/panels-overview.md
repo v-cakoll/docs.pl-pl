@@ -20,11 +20,12 @@ caps.latest.revision: "48"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f89ea3308d0e6cffc3ed50809f0e87e7ba854ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d25c6d9e4e6d067ad2107df2374329d84300c015
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panels-overview"></a>Przegląd Panele
 <xref:System.Windows.Controls.Panel>elementy są składniki, które kontrolują renderowanie elementów — ich rozmiar i wymiarów, ich pozycji i rozmieszczenia ich zawartość elementu podrzędnego. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Zawiera szereg wstępnie zdefiniowanych <xref:System.Windows.Controls.Panel> elementy, a także możliwość tworzenia niestandardowych <xref:System.Windows.Controls.Panel> elementów.  
@@ -263,12 +264,12 @@ ms.lasthandoff: 11/21/2017
  Aby uzyskać dodatkowe informacje na temat tworzenia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji za pomocą Lokalizowalny [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]s, zobacz [użycie automatycznego układu omówienie](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
  [Przykładu z galerii układu WPF](http://go.microsoft.com/fwlink/?LinkID=160054)  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
  [Przykładu z galerii formantów WPF](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [Wyrównanie, marginesy i dopełnienia — omówienie](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
+ [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
  [Tworzenie niestandardowych przykładu panelu zawijania zawartości](http://go.microsoft.com/fwlink/?LinkID=159979)  
- [Omówienie dołączone właściwości](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Użyj automatycznego układu — omówienie](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
+ [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

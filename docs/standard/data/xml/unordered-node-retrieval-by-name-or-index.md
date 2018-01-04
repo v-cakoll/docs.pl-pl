@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a8bea8f373dced08fd7a2a828255a593533df9d7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b80f48d425623c9e6cdf1431ceb4a37efe7f2465
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>Pobieranie węzła nieuporządkowaną przez nazwę lub indeks
 **XmlNamedNodeMap** jest opisany w sieci World Wide Web konsorcjum W3C specyfikacji jako NamedNodeMap i jest wymagany do obsługi nieuporządkowaną zestaw określonych węzłów z możliwością węzłów odwołanie przez ich nazwę lub indeks. Jedynym sposobem, musisz mieć dostęp do **XmlNamedNodeMap** jest, gdy **XmlNamedNodeMap** jest zwracany za pomocą metody lub właściwości. Istnieją trzy metody lub właściwości, które zwracają **XmlNamedNodeMap**:  
@@ -127,4 +130,4 @@ class test {
  Aby wyświetlić przykład dodatkowy kod, który zawiera atrybut usuwana z **AttributeCollection**, zobacz [metody XmlNamedNodeMap.RemoveNamedItem](Overload:System.Xml.XmlNamedNodeMap.RemoveNamedItem). Aby uzyskać więcej informacji na temat właściwości i metody, zobacz [członków XmlNamedNodeMap](AllMembers.T:System.Xml.XmlNamedNodeMap).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 134f42da7e4366d4d5bb971aaf26b2a3b57a4c1c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2912215cb8fb0090cef58e0201cc355da1f0bf19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>Przegląd Kształty i podstawowe rysowanie w WPF
 Ten temat zawiera omówienie sposobu Rysowanie za pomocą <xref:System.Windows.Shapes.Shape> obiektów. A <xref:System.Windows.Shapes.Shape> jest typem <xref:System.Windows.UIElement> umożliwiająca narysować kształt do ekranu. Ponieważ są one elementy interfejsu użytkownika <xref:System.Windows.Shapes.Shape> obiekty mogą być używane wewnątrz <xref:System.Windows.Controls.Panel> elementów i większość formantów.  
@@ -229,8 +230,8 @@ myPolygon.StrokeThickness = 2;
  W poprzednich przykładach transformacji pojedynczego została zastosowana do każdego obiektu kształtu. Aby zastosować kilka przekształceń do kształtu (lub innego elementu interfejsu użytkownika), należy użyć <xref:System.Windows.Media.TransformGroup>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Malowanie pełnych kolorów i gradientów — omówienie](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Omówienie geometrii](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Geometria — przegląd](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)

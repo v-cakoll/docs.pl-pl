@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1b7ab4ed91487965ac8b0d78a9a44818cfee9eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5dcefa658aec37b9af3c4f9285ec76a0d549b868
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>Instrukcje: Uzyskiwanie certyfikatu (WCF)
 Aby użyć dowolnego z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje, które korzystają z certyfikatów X.509, po prostu najpierw uzyskać certyfikaty.  
@@ -38,4 +39,4 @@ Aby użyć dowolnego z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] f
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Porady: Tworzenie certyfikatów tymczasowych do użytku w czasie projektowania](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+ [Instrukcje: tworzenie certyfikatów tymczasowych do używania w trakcie opracowywania](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)

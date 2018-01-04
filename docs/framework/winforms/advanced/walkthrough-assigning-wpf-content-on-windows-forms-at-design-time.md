@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0fa9e40a0a32d0bc9484a86da0f94d62f5c25aa7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 75dee4b230c790e5f1abf6bf7e77af106da0e7f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>Wskazówki: przypisywanie zawartości WPF na formularzach systemu Windows w czasie projektowania
 W tym przewodniku opisano sposób wybierz typy formantów systemu Windows Presentation Foundation (WPF), które mają być wyświetlane w formularzu. Możesz wybrać wszystkie typy formantów WPF, które są zawarte w projekcie.  
@@ -42,7 +43,7 @@ W tym przewodniku opisano sposób wybierz typy formantów systemu Windows Presen
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].,  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu formularzy systemu Windows.  
@@ -110,5 +111,5 @@ W tym przewodniku opisano sposób wybierz typy formantów systemu Windows Presen
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Korzystanie z formantów WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [Korzystanie z kontrolek WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
  [Projektant WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)

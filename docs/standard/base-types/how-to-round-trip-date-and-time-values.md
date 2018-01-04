@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 515a29e279cfa8fc100e0612fc19df7abc6a3b36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 68667369e1c7541313a166a1066e1ad9d69b6b71
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>Porady: obustronna konwersja wartości daty i godziny
 W wielu aplikacjach wartość daty i godziny ma na celu jego jednoznacznej identyfikacji pojedynczy punkt w czasie. W tym temacie pokazano, jak zapisywanie i przywracanie <xref:System.DateTime> wartość <xref:System.DateTimeOffset> wartość i wartość daty i godziny z czasem strefy informacje, aby wartość przywróconej identyfikuje jednocześnie jako zapisana wartość.  
@@ -94,13 +97,13 @@ W wielu aplikacjach wartość daty i godziny ma na celu jego jednoznacznej ident
   
     -   <xref:System>(C# tylko).  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>.  
+    -   <xref:System.Globalization?displayProperty=nameWithType>.,  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    -   <xref:System.IO?displayProperty=nameWithType>.,  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.,  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>.,  
   
 -   Odwołania do System.Core.dll.  
   
@@ -109,4 +112,4 @@ W wielu aplikacjach wartość daty i godziny ma na celu jego jednoznacznej ident
 ## <a name="see-also"></a>Zobacz też  
  [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
  [Wybieranie pomiędzy DateTime, DateTimeOffset, TimeSpan i TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+ [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)

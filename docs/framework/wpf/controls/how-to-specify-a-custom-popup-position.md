@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ab9baca1103adf8de96204bdb1b3353a5456b94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae10153f31b79a220b84cae7a6525eca0ce0bd9c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>Jak określić niestandardowe położenie okna podręcznego
 W tym przykładzie przedstawiono sposób określania pozycjonowanie niestandardowe dla <xref:System.Windows.Controls.Primitives.Popup> decyduje o <xref:System.Windows.Controls.Primitives.Popup.Placement%2A> właściwość jest ustawiona na <xref:System.Windows.Controls.Primitives.PlacementMode.Custom>.  
@@ -43,5 +44,5 @@ W tym przykładzie przedstawiono sposób określania pozycjonowanie niestandardo
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Primitives.Popup>  
- [Omówienie menu podręczne](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

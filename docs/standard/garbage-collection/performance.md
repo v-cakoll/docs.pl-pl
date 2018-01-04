@@ -16,11 +16,14 @@ caps.latest.revision: "35"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 13f89749a4df3496b8c169e67c2f221a940568bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0bceefc7ec2c6bc1aebaa0403bdfea6138125624
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 <a name="top"></a>W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci. Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji. Każde wydanie zawiera łącza do procedur, które służy do badania problemów.  
@@ -786,4 +789,4 @@ ms.lasthandoff: 10/18/2017
      Jeśli `% Time in GC` wartość wzrósł w tym samym czasie jako czas przetwarzania, wyrzucanie elementów bezużytecznych jest przyczyną wysokiego użycia procesora CPU. W przeciwnym razie profilu aplikacji można znaleźć, gdzie występuje wysokiego użycia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

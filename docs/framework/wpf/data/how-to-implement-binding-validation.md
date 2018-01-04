@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec860cc9cc58febd98d8642c98a50ec296592d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d57fb099fa364d34b7df5c5fce792eb42079a31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-binding-validation"></a>Jak implementować powiązaną walidację
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> i wyzwalacz style wizualne, aby poinformować użytkownika, gdy wprowadzono nieprawidłową wartość oparte na niestandardowej reguły walidacji.  
@@ -48,5 +49,5 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.Validati
  Należy pamiętać, że jeśli nie podasz niestandardowego <xref:System.Windows.Controls.Validation.ErrorTemplate%2A> domyślny szablon błąd powinien zapewniać wizualne użytkownikowi, gdy występuje błąd weryfikacji. Zobacz "Sprawdzanie poprawności danych" w [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md) Aby uzyskać więcej informacji. Ponadto [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera reguły poprawności wbudowanych przechwytuje wyjątków, które są generowane podczas aktualizacji powiązania właściwości source. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Controls.ExceptionValidationRule>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

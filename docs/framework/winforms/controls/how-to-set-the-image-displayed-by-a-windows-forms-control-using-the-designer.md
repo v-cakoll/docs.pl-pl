@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eee3c8c3f3890054e443f6246b8fa43fd2ef09b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2eff8d302b6e65f386835f744965f3754c3e3ffb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>Porady: ustawianie obrazu wyświetlanego przez formant formularzy systemu Windows przy użyciu narzędzia Projektant
 Kilka formantów formularzy systemu Windows można wyświetlić obrazy. Obraz może być ikonę, która wyjaśnia, w celu formantu, takie jak ikona dysku na przycisku określające **zapisać** polecenia. Ikona można alternatywnie obraz tła umożliwiają formantu wyglądu, który ma.  
@@ -46,4 +47,4 @@ Kilka formantów formularzy systemu Windows można wyświetlić obrazy. Obraz mo
  <xref:System.Drawing.Image.FromFile%2A>  
  <xref:System.Drawing.Image>  
  <xref:System.Windows.Forms.Control.BackgroundImage%2A>  
- [Etykietowanie formantów formularzy systemu Windows poszczególnych i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+ [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b57ffa91a41900e10aa921bd42509b1288134ff3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 281ae701bc3e5cee38952a05474360019f76a665
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>Porady: stosowanie przycinania za pomocą obszaru
 Jedna z właściwości obiektu <xref:System.Drawing.Graphics> klasy jest obszar przycinania. Rysowanie wszystkie wykonywane przez dany <xref:System.Drawing.Graphics> obiektu jest ograniczony do obszar przycinania na tym <xref:System.Drawing.Graphics> obiektu. Można ustawić obszar przycinania przez wywołanie metody <xref:System.Drawing.Graphics.SetClip%2A> metody.  
@@ -42,5 +43,5 @@ Jedna z właściwości obiektu <xref:System.Drawing.Graphics> klasy jest obszar 
  Powyższy przykład jest przeznaczony do użytku z formularzy systemu Windows i wymaga <xref:System.Windows.Forms.PaintEventArgs> `e`, który jest parametrem <xref:System.Windows.Forms.PaintEventHandler>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Regiony w GDI +](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ [Regiony w GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  [Używanie regionów](../../../../docs/framework/winforms/advanced/using-regions.md)

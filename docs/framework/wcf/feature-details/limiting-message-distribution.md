@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 191baa2df4a6a5a4fe8139e8b7ad36bd1c60b40d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4d81583a8dfc2c48fb9b7533f071495b562615e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limiting-message-distribution"></a>Ograniczanie dystrybucji komunikatów
 Kanał elementu równorzędnego jest celowe emisji siatki. Jego podstawowy model powodziom obejmuje dystrybucja każdy komunikat wysyłany przez dowolnego członka siatki dla wszystkich członków tej siatki. Jest to idealne rozwiązanie w sytuacjach, w którym każdej wiadomości generowany przez element członkowski ma zastosowanie i jest przydatne do wszystkich innych członków (na przykład pokoju rozmów). Wiele aplikacji jednak okazjonalne potrzebę ograniczanie dystrybucji komunikatów. Na przykład jeśli nowy element członkowski przyłączy siatki i chce pobierać ostatnią wiadomością wysłaną za pośrednictwem sieci, tego żądania nie musi być propagowane do każdego elementu siatki. Żądanie może być ograniczona do umieszczonej blisko sąsiadów lub odfiltrowane wiadomości wygenerowaną lokalnie. Komunikaty mogą być również wysyłane do oddzielnego węzła w sieci. W tym temacie omówiono kontrolowania, jak komunikaty są przekazywane w całej sieci za pomocą liczby przeskoków, filtr propagacji komunikatu, Filtr lokalny lub połączenie bezpośrednie i zawiera ogólne wskazówki dotyczące wybierania podejście.  

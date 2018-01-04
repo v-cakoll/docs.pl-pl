@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23cfa64aa698643f30409119e162b815e58e2379
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2444488418b7647111cf4b89db0c41a8e66470d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-clients"></a>Rozszerzanie klientów
 W aplikacji wywołującej jest odpowiedzialny za tłumaczenia wywołań metod w kodzie aplikacji w komunikatach wychodzących, wypychanie ich do podstawowej kanałów, tłumaczenia wyników do wartości zwracanych do edycji i parametrów w warstwy modelu usług Kod aplikacji, a następnie zwraca wyniki z powrotem do wywołującego. Rozszerzenia modelu usługi zmodyfikować, lub zaimplementuj wykonywania lub zachowanie komunikacji i funkcje dotyczące klienta lub dyspozytora funkcje, niestandardowe zachowania, wiadomości i przechwytywaniu parametru i innych funkcji rozszerzalności.  
@@ -126,5 +127,5 @@ W aplikacji wywołującej jest odpowiedzialny za tłumaczenia wywołań metod w 
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime>  
  <xref:System.ServiceModel.Dispatcher.ClientOperation>  
- [Porady: inspekcja lub modyfikowanie komunikatów na komputerze klienckim](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
- [Porady: inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+ [Instrukcje: inspekcja lub modyfikowanie komunikatów na kliencie](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)  
+ [Instrukcje: inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

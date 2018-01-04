@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e9761afe8b56e15edba6e0319cce9a02501a6bb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7901f4bf88215f84445c1d222e6582e0a063c25a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>Zarządzanie przestrzeni nazw w dokumencie XML
 Przestrzenie nazw XML skojarzenia elementu oraz nazwy atrybutów w dokumencie XML z wstępnie zdefiniowanych i niestandardowych identyfikatorów URI. Aby utworzyć skojarzenia, zdefiniuj prefiksów identyfikatorów URI przestrzeni nazw i używać tych prefiksów na kwalifikować się nazw elementów i atrybutów w danych XML. Przestrzenie nazw uniknąć konfliktów nazw elementów i atrybutów, a następnie włącz elementów i atrybutów o tej samej nazwie, można go obsłużyć ani zweryfikowany inaczej.  
@@ -88,4 +91,4 @@ Przestrzenie nazw XML skojarzenia elementu oraz nazwy atrybutów w dokumencie XM
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.XmlNamespaceManager>  
- [Dokumenty XML i dane](../../../../docs/standard/data/xml/index.md)
+ [Dokumenty i dane XML](../../../../docs/standard/data/xml/index.md)

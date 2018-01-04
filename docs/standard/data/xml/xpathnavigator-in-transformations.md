@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 09f89708607ada18181bc6605994c7908e1dd14b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c492d470fe29041f32039d98ecb854e18f40423c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnavigator-in-transformations"></a>Element XPathNavigator w przekształcenia
 <xref:System.Xml.XPath.XPathNavigator> Klasy zapewnia dostęp losowy tylko do odczytu do danych i jest przeznaczony do użytku jako dane wejściowe rozszerzalny język arkusza stylów dla przekształceń XSLT (). Jest wdrażana w <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDataDocument>, i <xref:System.Xml.XmlDocument>. <xref:System.Xml.XPath.XPathNavigator> Jest oparty na modelu danych w sieci World Wide Web konsorcjum W3C, zgodnie z opisem w sekcji 5 zalecenie XML Path Language (XPath).  
@@ -124,4 +127,4 @@ public class sample
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa XslTransform implementuje procesorze XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

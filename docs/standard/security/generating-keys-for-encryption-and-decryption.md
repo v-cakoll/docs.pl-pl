@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0b40e09a9a2c534d3376fa6930d8166591873a0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 333e99997bad3852ae34753165aa736ef32ac004
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="generating-keys-for-encryption-and-decryption"></a>Generowanie kluczy szyfrowania i odszyfrowywania
 Tworzenie i zarządzanie kluczami jest ważnym elementem procesu szyfrowania. Symetryczne algorytmy wymaga utworzenia klucza i wektor inicjowania (IV). Klucz musi być trzymane w każdy, kto powinien nie odszyfrowania danych. IV musi być tajny, ale powinny być zmieniane dla każdej sesji. Asymetryczne algorytmy wymaga utworzenia klucz publiczny i klucz prywatny. Klucz publiczny mogą być ujawniane innym osobom, gdy klucz prywatny musi znane tylko przez strony, która będzie odszyfrować dane zaszyfrowane przy użyciu klucza publicznego. W tej sekcji opisano, jak do generowania i zarządzania kluczami zarówno symetrycznego i asymetryczne algorytmy.  
@@ -99,4 +102,4 @@ RSAParameters RSAKeyInfo = RSA.ExportParameters(false);
  [Szyfrowanie danych](../../../docs/standard/security/encrypting-data.md)  
  [Odszyfrowywanie danych](../../../docs/standard/security/decrypting-data.md)  
  [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)  
- [Porady: przechowywanie kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)
+ [Instrukcje: przechowywanie kluczy asymetrycznych w kontenerze kluczy](../../../docs/standard/security/how-to-store-asymmetric-keys-in-a-key-container.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 77fe1790a4ff2f910a740e969e458549f1fd9642
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="post-schema-compilation-infoset"></a>Obiekt typu Infoset schematu po kompilacji
 [Zalecenie schematu XML w sieci World Wide Web konsorcjum W3C](http://go.microsoft.com/fwlink/?linkid=45242) omówiono zestaw informacji (obiekt typu infoset) muszą być widoczne dla sprawdzanie poprawności schematu przed i po schematu kompilacji. Model obiektu schematu XML (SOM) widoków tego narażenia przed i po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.  
@@ -48,4 +51,4 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[PsciSample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/PsciSample/VB/PsciSample.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Model obiektu schematu XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+ [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)

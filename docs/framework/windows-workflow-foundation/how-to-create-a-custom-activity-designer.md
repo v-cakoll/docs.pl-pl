@@ -12,11 +12,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0b1f27af6b4ec372b9dbd63e4bc89a5c435efe6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 10fc7461c077d73fedb1e326f88156e4a816cdee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>Porady: tworzenie Projektant działań niestandardowych
 Projektantów działań niestandardowych są zwykle implementowany ich działania skojarzone są zezwala na składanie z innymi działaniami projektantów, których można było porzucić na powierzchnię projektu z nimi. Ta funkcja wymaga, Projektant działań niestandardowych podania "strefy docelowej" rozmieszczenia dowolne działanie, a także sposób zarządzania wynikowy zbiór elementów na powierzchnię projektu. W tym temacie opisano, jak utworzyć projektanta działań niestandardowych, który zawiera strefy docelowej i jak utworzyć designer działania niestandardowego, który zapewnia, że funkcji edytowania potrzebne do zarządzania kolekcję elementów projektanta.  
@@ -357,4 +358,4 @@ Projektantów działań niestandardowych są zwykle implementowany ich działani
  <xref:System.Activities.Presentation.WorkflowItemsPresenter>  
  <xref:System.Activities.Presentation.WorkflowViewElement>  
  <xref:System.Activities.Presentation.Model.ModelItem>  
- [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+ [Dostosowywanie środowiska projektowania przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

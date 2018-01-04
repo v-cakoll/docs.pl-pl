@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9df2866251e08b8989f8550d045b587c9de8d2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b610e499ff980d2e705ad855ae98c1d54ff412e7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-image-metadata"></a>Porady: odczytywanie metadanych obrazu
 Niektóre pliki obrazów zawierać metadane, który można odczytać w celu określenia funkcji obrazu. Na przykład cyfrowych fotografii może zawierać metadane, który można odczytać w celu określenia marka i model aparatu służące do przechwytywania obrazu. Z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)], możesz przeczytać istniejące metadane i może także zapisać nowe metadane pliki obrazów.  
@@ -135,4 +136,4 @@ Niektóre pliki obrazów zawierać metadane, który można odczytać w celu okre
   
 ## <a name="see-also"></a>Zobacz też  
  [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Praca z obrazami, mapami bitowymi, ikony i metapliki](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "78"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf731504022cb25e0cdeff5e0a557b67b987fd4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 817a7ba73c37c15afa1be402da38e828d2aba426
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-overview"></a>Przegląd Wiązanie danych
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]. <xref:System.Windows.Controls.ContentControl>s, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.ItemsControl>s, takich jak <xref:System.Windows.Controls.ListBox> i <xref:System.Windows.Controls.ListView> ma wbudowanej funkcji, aby umożliwić elastyczne style elementów danych jednego lub kolekcje elementów danych. Sortowanie, filtrów i widoki grup można wygenerować na podstawie danych.  
@@ -185,9 +186,9 @@ ms.lasthandoff: 11/21/2017
   
  A <xref:System.Windows.Data.BindingExpression> obiektu można uzyskać za pomocą wartości zwrotnej wywołania <xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A> w obiekcie powiązanym z danymi. Poniższe tematy przedstawiają niektóre z sposobów użycia <xref:System.Windows.Data.BindingExpression> klasy:  
   
--   [Pobieranie obiektu powiązania z właściwości powiązanej docelowego](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
+-   [Pobieranie obiektu wiążącego z powiązanej własności docelowej](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [Formant, gdy tekst pola tekstowego aktualizuje źródła](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
+-   [Kontrolowanie momentu aktualizowania źródła tekstu kontrolki TextBox](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>Konwersja danych  
@@ -441,9 +442,9 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.DataErrorValidationRule>  
- [Nowości w wersji WPF 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)  
- [Powiązać wyników zapytania LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [Nowości w WPF w wersji 4.5](../../../../docs/framework/wpf/getting-started/whats-new.md)  
+ [Powiązywanie z wynikami zapytania LINQ](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
  [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
  [Wersja demonstracyjna dla powiązania danych](http://go.microsoft.com/fwlink/?LinkID=163703)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
- [Powiązanie ze źródłem danych ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [Powiązywanie ze źródłem danych ADO.NET](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)

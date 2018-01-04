@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a4df12d196c02b1d868d395a10ca17abafaa0fb9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83a95d2c1aa9f1704f143ae9095cb38596d2c1a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>Porady: ustawianie i zwracanie dat za pomocą formantu DateTimePicker formularzy systemu Windows
 Aktualnie zaznaczona data lub godzina w formularzach systemu Windows <xref:System.Windows.Forms.DateTimePicker> kontroli jest określany przez <xref:System.Windows.Forms.DateTimePicker.Value%2A> właściwości. Można ustawić <xref:System.Windows.Forms.DateTimePicker.Value%2A> właściwości przed wyświetleniem formantu (na przykład w czasie projektowania lub w postaci <xref:System.Windows.Forms.Form.Load> zdarzeń) do określenia daty, dla której będzie początkowo zaznaczone w formancie. Domyślnie formantu w <xref:System.Windows.Forms.DateTimePicker.Value%2A> jest ustawiona na bieżącą datę. Jeśli zmienisz formantu <xref:System.Windows.Forms.DateTimePicker.Value%2A> w kodzie, kontrolka jest automatycznie aktualizowany na formularzu, aby uwzględnić nowe ustawienie.  
@@ -83,5 +84,5 @@ Aktualnie zaznaczona data lub godzina w formularzach systemu Windows <xref:Syste
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [DateTimePicker — formant](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Porady: wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy systemu Windows](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+ [DateTimePicker, kontrolka](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [Instrukcje: wyświetlanie daty w niestandardowym formacie za pomocą kontrolki DateTimePicker formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

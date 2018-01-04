@@ -18,26 +18,27 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e4d52fab42dabeaa8ef51812308fe5807030184e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63efdae02dd14e1a2692ebb6ee00c7d56c8b04c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>Programowanie warstwy Visual Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania z warstwy visual dla kompozycji testowania trafień i niskiego poziomu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Pobierz przesunięcie element wizualny](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [Wyliczanie rysowania zawartości obiektu Visual](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [Trafienia geometrii testu w element wizualny](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [Kliknij przycisk Test przy użyciu geometrii jako parametr](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [Kliknij przycisk Test przy użyciu kontenera hosta Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [Renderowanie w interwale ramki za pomocą CompositionTarget](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [Pobieranie przesunięcia wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
+ [Wyliczanie zawartości rysowania wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
+ [Przeprowadzanie testu trafienia geometrii w wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
+ [Przeprowadzanie testu trafienia przy użyciu geometrii jako parametru](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [Przeprowadzanie testu trafienia za pomocą kontenera hosta Win32](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
+ [Renderowanie w interwałach klatek z użyciem elementu CompositionTarget](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

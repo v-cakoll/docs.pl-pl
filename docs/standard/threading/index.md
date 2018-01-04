@@ -16,11 +16,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 61cd2317b5690573532af2a25c0b84b1fe136fd9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 43fe5f9d193de3f48abfc0d91e01a70ee601a651
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-threading"></a>Zarządzana wątkowość
 Czy tworzysz dla komputerów z procesorem jednego lub kilku, mają Twojej aplikacji w celu umożliwienia najbardziej reakcji interakcji z użytkownikiem, nawet wtedy, gdy aplikacja jest aktualnie wykonywanych czynności inne zadania. Używanie wielu wątków wykonywania jest jednym z najbardziej zaawansowanych sposoby Zachowaj reakcji użytkownikowi aplikacji i w tym samym czasie wykorzystanie procesora w między lub nawet podczas zdarzeń użytkownika. Gdy w tej sekcji przedstawiono podstawowe pojęcia związane z wątków, koncentruje się na zarządzanych wątków koncepcje i przy użyciu zarządzanych wątków.  
@@ -35,7 +38,7 @@ Czy tworzysz dla komputerów z procesorem jednego lub kilku, mają Twojej aplika
  [Używanie wątków i wątkowości](../../../docs/standard/threading/using-threads-and-threading.md)  
  Opisano sposób tworzenia, uruchamiania, wstrzymać, wznowić i abort wątków.  
   
- [Zarządzana wątkowość — najlepsze praktyki](../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Zarządzana wątkowość — najlepsze rozwiązania](../../../docs/standard/threading/managed-threading-best-practices.md)  
  Omówienie poziomów synchronizacji, jak uniknąć zakleszczenie i sytuacja wyścigu, jeden procesor i komputerach wieloprocesorowych i inne problemy z wątków.  
   
  [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
@@ -55,13 +58,13 @@ Czy tworzysz dla komputerów z procesorem jednego lub kilku, mają Twojej aplika
  [Domeny aplikacji](../../../docs/framework/app-domains/application-domains.md)  
  Zawiera omówienie domen aplikacji i ich użycie za pomocą wspólnej infrastruktury języka.  
   
- [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
+ [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
  Opis korzyści związanych z wydajnością oraz podstawowych asynchronicznych operacji We/Wy.  
   
  [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
  Omówienie programowania asynchronicznego.  
   
- [Wywołanie metod synchronicznych w sposób asynchroniczny](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
+ [Wywoływanie metod synchronicznych w sposób asynchroniczny](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)  
  Wyjaśniono, jak wywoływać metod w wątku puli wątków przy użyciu wbudowanych funkcji obiektów delegowanych.  
   
  [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  

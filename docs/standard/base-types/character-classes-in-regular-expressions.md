@@ -21,11 +21,14 @@ caps.latest.revision: "58"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 603633e1a0f385c061fe0928ea7361490d61fa3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f488990232448e69ba2fa0d7c7a730df57d170fc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 <a name="Top"></a>Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się. Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:  

@@ -17,18 +17,19 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 86f812c233a161764836c54817dc616577a4bb5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 84020af84822ca4a8815e516a882fb15100b22e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="element-tree-and-serialization-how-to-topics"></a>Drzewo elementów i serializacja Tematy pomocy
 Tematy w tej sekcji opisano sposób korzystania z drzewa element WPF.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Znajdź Element na podstawie nazwy](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
- [Zastąpienie drzewie logicznym](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
+ [Znajdowanie elementu po jego nazwie](../../../../docs/framework/wpf/advanced/how-to-find-an-element-by-its-name.md)  
+ [Przesłanianie drzewa logicznego](../../../../docs/framework/wpf/advanced/how-to-override-the-logical-tree.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.LogicalTreeHelper>  

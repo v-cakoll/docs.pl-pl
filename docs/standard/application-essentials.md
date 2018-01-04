@@ -14,11 +14,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 00bc12a16418038c74a5e8858a77818e66982727
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f830064c585e1024bdc304c6356327ddc8c059f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-application-essentials"></a>Podstawy aplikacji .NET Framework
 Ta część dokumentacji środowiska .NET Framework zawiera informacje dotyczące podstawowych zadań tworzenia aplikacji w tym środowisku.  
@@ -48,7 +51,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Daty, godziny i strefy czasowe](../../docs/standard/datetime/index.md)  
  Opis pracy ze strefami czasowymi oraz konwersjami stref czasowych w aplikacjach uwzględniających strefy czasowe.  
   
- [Zestawów i domen aplikacji](../../docs/framework/app-domains/index.md)  
+ [Domeny aplikacji i zestawy](../../docs/framework/app-domains/index.md)  
  Opis tworzenia zestawów i domen aplikacji oraz pracy z nimi.  
   
  [Serializacja](../../docs/standard/serialization/index.md)  
@@ -57,7 +60,7 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Zasoby w aplikacjach klasycznych](../../docs/framework/resources/index.md)  
  Omówienie obsługi tworzenia i przechowywania zasobów w środowisku .NET Framework. W tej części opisano także obsługę zlokalizowanych zasobów i model zasobów zestawu satelickiego do pakowania i wdrażania tych zlokalizowanych zasobów.  
   
- [Lokalizacja i globalizacja](../../docs/standard/globalization-localization/index.md)  
+ [Globalizacja i lokalizacja](../../docs/standard/globalization-localization/index.md)  
  Informacje ułatwiające projektowanie i tworzenie aplikacji gotowych do wydania.  
   
  Ułatwienia dostępu  
@@ -66,12 +69,12 @@ Ta część dokumentacji środowiska .NET Framework zawiera informacje dotycząc
  [Atrybuty](../../docs/standard/attributes/index.md)  
  Omówienie dostosowywania metadanych za pomocą atrybutów.  
   
- [64-bit — aplikacje](../../docs/framework/64-bit-apps.md)  
+ [Aplikacje 64-bitowe](../../docs/framework/64-bit-apps.md)  
  Omówienie zagadnień istotnych w tworzeniu aplikacji przeznaczonych dla systemu operacyjnego Windows w wersji 64-bitowej.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podręcznik programowania](../../docs/framework/development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.  
   
- [Zabezpieczeń](../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../docs/standard/security/index.md)  
  Informacje o klasach i usługach w środowisku uruchomieniowym języka wspólnego i środowisku .NET Framework, które umożliwiają tworzenie bezpiecznych aplikacji.

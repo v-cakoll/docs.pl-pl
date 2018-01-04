@@ -23,11 +23,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 290682542a0accaf38408127f7358625abca14af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługują rozszerzalności w dodatku. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z i rozszerzanie funkcjonalności aplikacji. W niektórych scenariuszach aplikacji również należy wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatki. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wspomaga [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć te scenariusze, architektura za nią korzyści i jego ograniczenia.  
@@ -298,4 +299,4 @@ ms.lasthandoff: 11/21/2017
  [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)  
  [.NET framework zdalnych — omówienie](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
  [Tworzenie obiektów może być zastosowana zdalnie](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
- [Tematy porad](../../../../docs/framework/wpf/app-development/how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/how-to-topics.md)

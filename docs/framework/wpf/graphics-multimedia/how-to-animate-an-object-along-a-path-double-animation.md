@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6a461b741675a18ac1e3544b17a9bbe9a8d18547
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 60f662562422169bc7b234ed0136797294f0b39a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-an-object-along-a-path-double-animation"></a>Jak animować obiekt na ścieżce (animacja double)
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.Animation.DoubleAnimationUsingPath> klasy, aby przenieść obiekt na ścieżce zdefiniowane przez <xref:System.Windows.Media.PathGeometry>.  
@@ -45,5 +46,5 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.Animation.D
  Inny sposób, aby przenieść obiekt przy użyciu ścieżki geometrycznych jest użycie <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> obiektu. Na przykład zobacz [Animowanie obiektów wzdłuż ścieżki (macierzy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Ścieżka animacji — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)

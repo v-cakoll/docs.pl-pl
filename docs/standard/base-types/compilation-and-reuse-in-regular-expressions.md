@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 76acdf2d0d2f7805ec78ea44136bfc63441b9bc9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 230a1b8b083362c149b5b7e64f708bd09ab21788
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>Kompilacja i ponowne użycie w wyrażeniach regularnych
 Aby zoptymalizować wydajność aplikacji, które wykorzystują szeroką gamę wyrażeń regularnych zrozumienie, jak aparat wyrażeń regularnych kompiluje wyrażeń i zrozumienie, jak regular wyrażenia są buforowane. W tym temacie omówiono kompilacji i buforowania.  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 70f9bb374405496c62650ee3fb715f059e91cd7c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 748286b4f6fa22b23423ff5c176c76d11fbe742d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamic-update"></a>Instrukcje: Aktualizacja dynamiczna
 W tym temacie przedstawiono podstawowe czynności wymagane do tworzenia i dynamicznie Aktualizuj konfigurację routingu. W tym przykładzie początkowej konfiguracji routingu są uzyskiwane z pliku konfiguracji i kieruje komunikaty do usługi Kalkulator regularCalc; jednak jest następnie aktualizowany programowo Aby zmienić docelowy punkt końcowy usługi roundingCalc.  

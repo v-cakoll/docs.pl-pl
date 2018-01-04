@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8a50080fa4b84abe84fbb1a44f18e1fb680a07c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 367da11fd0af9673a60d9acff20aef5969c98aae
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Najlepsze praktyki dotyczące tworzenia aplikacji gotowych do wydania
 W tej sekcji opisano najlepszych rozwiązań, które należy wykonać podczas tworzenia aplikacji gotowych.  
@@ -108,5 +111,5 @@ W tej sekcji opisano najlepszych rozwiązań, które należy wykonać podczas tw
 5.  Należy pamiętać, że wartość uiCulture można ustawić w przeglądarce zaakceptować języka.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)  
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

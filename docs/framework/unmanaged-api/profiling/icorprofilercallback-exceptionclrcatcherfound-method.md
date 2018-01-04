@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ebb1779ca9f09089a071673f92810ea7a9e76b3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f539a93b72c7bf3570dd3cf4cb484564999699c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherfound-method"></a>ICorProfilerCallback::ExceptionCLRCatcherFound — Metoda
 Wywoływane, gdy `catch` zablokować dla wyjątek znajduje się wewnątrz środowisko uruchomieniowe języka wspólnego (CLR) samej siebie. Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.  
@@ -46,5 +47,5 @@ HRESULT ExceptionCLRCatcherFound();
  **Wersja platformy .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICorProfilerCallback — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ExceptionCLRCatcherExecute — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)
+ [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [ExceptionCLRCatcherExecute, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionclrcatcherexecute-method.md)

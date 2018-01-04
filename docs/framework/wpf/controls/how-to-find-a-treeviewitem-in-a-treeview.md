@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a231f5eae92bff8e3d525579dae865aaa0d7e496
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 696a9e2d92b9c44e4aedbcc200b41e5548cd7411
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>Jak znaleźć TreeViewItem w TreeView
 <xref:System.Windows.Controls.TreeView> Kontrola zapewnia wygodny sposób wyświetlania danych hierarchicznej. Jeśli Twoje <xref:System.Windows.Controls.TreeView> jest powiązany ze źródłem danych <xref:System.Windows.Controls.TreeView.SelectedItem%2A> właściwość umożliwia dogodny można szybko pobrać obiektu wybranych danych. Zazwyczaj najlepiej pracować z źródłowy obiekt danych, ale niekiedy konieczne może być programowane manipulowania zawierające dane <xref:System.Windows.Controls.TreeViewItem>. Na przykład konieczne może być programowane rozwiń <xref:System.Windows.Controls.TreeViewItem>, lub wybierz inny element w <xref:System.Windows.Controls.TreeView>.  
@@ -52,4 +53,4 @@ ms.lasthandoff: 10/22/2017
  [!code-xaml[TreeViewFindTVI#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Poprawianie wydajności elementu TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)
+ [Poprawianie wydajności kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)

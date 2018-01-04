@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 28fe3756a2881e8f746616f8275b505b1a01eada
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c36bf5790d033eddb6bb7e0d910482143a9bcac
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="static-class-design"></a>Projekt klasy statyczne
 Klasa statyczna jest zdefiniowany jako klasa, która zawiera tylko elementy członkowskie static (oczywiście oprócz elementów członkowskich wystąpień odziedziczone <xref:System.Object?displayProperty=nameWithType> i prawdopodobnie Konstruktor prywatny). W przypadku niektórych języków zapewniają obsługę wbudowanych klas statycznych. W języku C# 2.0 lub nowszy po klasie został zadeklarowany jako statyczny, jest zapieczętowany, abstrakcyjny i żadnych członków wystąpienia można zastąpić lub zadeklarowana.  
@@ -46,5 +49,5 @@ Klasa statyczna jest zdefiniowany jako klasa, która zawiera tylko elementy czł
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania typu](../../../docs/standard/design-guidelines/type.md)  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

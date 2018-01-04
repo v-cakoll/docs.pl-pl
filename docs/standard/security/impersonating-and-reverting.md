@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1bd053cacc677ca66fc2e2a9e14620e1d3a8b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 869b9aadfa236a39d9807062e61046922e382d13
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="impersonating-and-reverting"></a>Personifikacja i przywracanie
 Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifikacji konta systemu Windows. Na przykład aplikacja oparty na programie ASP.NET może być konieczne działają w imieniu kilku użytkowników w różnym czasie. Aplikacja może akceptuje token, który reprezentuje administrator z Internet Information Services (IIS), personifikacji tego użytkownika w trakcie operacji i powrócić do poprzedniej tożsamości. Następnie go może zaakceptować tokenu z usług IIS, które reprezentuje użytkownika z prawami mniej, niektórych operacji i przywrócić ponownie.  
@@ -70,5 +73,5 @@ Czasami może być konieczne uzyskanie tokenu konta systemu Windows do personifi
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Principal.WindowsIdentity>  
  <xref:System.Security.Principal.WindowsImpersonationContext>  
- [Główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)  
+ [Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)  
  [Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)

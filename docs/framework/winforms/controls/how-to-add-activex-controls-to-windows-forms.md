@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afee07f2f5009abb6cf8facc94b138f4ea2a11fd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9328400917208dde9f81b493fbf26c6080dc9c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>Porady: dodawanie kontrolek ActiveX do formularzy systemu Windows
 Gdy Projektant formularzy systemu Windows jest zoptymalizowany do hosta formanty formularzy systemu Windows, można również wprowadzić formantów na formularzach systemu Windows.  
@@ -44,10 +45,10 @@ Gdy Projektant formularzy systemu Windows jest zoptymalizowany do hosta formanty
     >  Importer kontrolki ActiveX formularzy systemu Windows (AxImp.exe) tworzy argumenty zdarzeń innego typu niż oczekiwano na Import biblioteki dołączanej dynamicznie ActiveX. Argumenty utworzone przez AxImp.exe są podobne do następujących: `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`, gdy `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` jest oczekiwany. Należy pamiętać, że ta nieprawidłowości nie zapobiega kod działa prawidłowo. Aby uzyskać więcej informacji, zobacz [Importer kontrolki ActiveX formularzy systemu Windows (Aximp.exe)](../../../../docs/framework/tools/aximp-exe-windows-forms-activex-control-importer.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
  [Formanty i obiektów programowalnych w różnych językach i biblioteki](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
- [Porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Rozmieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Etykietowanie formantów formularzy systemu Windows poszczególnych i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Formanty przez funkcję formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

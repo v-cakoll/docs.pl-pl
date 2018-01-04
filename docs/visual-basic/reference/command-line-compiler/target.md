@@ -14,11 +14,11 @@ ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8a8a9fcd6fa6dfaace01f8fbb7fa407145acc16f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 900693ac3793fb59133b31d8fc0136df63c11a10
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="target-visual-basic"></a>/target (Visual Basic)
 Określa format danych wyjściowych kompilatora.  
@@ -49,7 +49,7 @@ Określa format danych wyjściowych kompilatora.
   
 ### <a name="to-set-target-in-the-visual-studio-ide"></a>Aby ustawić/TARGET w środowisku IDE programu Visual Studio  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
   
 2.  Kliknij przycisk **aplikacji** kartę.  
   
@@ -64,10 +64,10 @@ vbc /target:library in.vb
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ main](../../../visual-basic/reference/command-line-compiler/main.md)  
+ [/main](../../../visual-basic/reference/command-line-compiler/main.md)  
  [/ out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
  [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [/ addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
- [/ moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
- [Zestawy i Globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)  
+ [/moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)  
+ [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

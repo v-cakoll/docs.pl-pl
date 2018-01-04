@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cb3afec00fea5432329bd30fc993ac0cafd8b10
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d856af12269416b3303e617338165771ae4f2b8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="access-control-mechanisms"></a>Mechanizmy kontroli dostępu
 Można kontrolować dostęp w sposób kilka z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. W tym temacie pokrótce omówiono różne mechanizmy i sugestie dotyczące każdej; użycie ma ona ułatwiające wybranie poprawne mechanizm do użycia. Technologie dostępu są wymienione w kolejności złożoności. Najprostszą jest <xref:System.Security.Permissions.PrincipalPermissionAttribute>; najbardziej złożonych jest modelu tożsamości.  
@@ -69,8 +70,8 @@ Można kontrolować dostęp w sposób kilka z [!INCLUDE[indigo1](../../../../inc
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
- [Porady: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Porady: Używanie dostawcy ról ASP.NET z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [Porady: Używanie dostawcy ról ASP.NET Menedżera autoryzacji z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
+ [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Instrukcje: używanie dostawcy ról ASP.NET razem z usługą](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
+ [Instrukcje: używanie dostawcy roli menedżera autoryzacji platformy ASP.NET za pomocą usługi](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
  [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  [Delegowanie i personifikacja](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

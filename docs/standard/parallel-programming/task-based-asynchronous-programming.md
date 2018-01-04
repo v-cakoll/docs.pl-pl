@@ -17,11 +17,14 @@ caps.latest.revision: "51"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5b672335c237fb4e07332d0d39975aaedb375306
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8e5367c8a786d720cdf3394922527020f8d4d47a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="task-based-asynchronous-programming"></a>Programowanie asynchroniczne opartego na zadaniach
 Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, który reprezentuje operację asynchroniczną. W pewnym sensie zadania jest podobny wątku lub <xref:System.Threading.ThreadPool> pracy elementu, ale na wyższym poziomie abstrakcji. Termin *równoległość zadań* odwołuje się do jednego lub więcej zadań niezależnie od uruchomione jednocześnie. Zadania zapewniają dwie podstawowe korzyści:  
@@ -264,12 +267,12 @@ Zadania biblioteki równoległych (TPL) opiera się na koncepcji *zadań*, któr
 |[Dołączone i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|Opisano różnicę między zadaniami podrzędnymi dołączonymi i odłączonymi.|  
 |[Anulowanie zadania](../../../docs/standard/parallel-programming/task-cancellation.md)|Opisuje wbudowaną obsługę anulowania <xref:System.Threading.Tasks.Task> obiektu.|  
 |[Obsługa wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)|Opisuje sposób obsługi wyjątków w wątkach współbieżnych.|  
-|[Porady: umożliwia parallel_invoke podczas przeprowadzania operacji równoległych](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Informacje dotyczące używania <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
-|[Porady: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Zawiera opis sposobu zwracania wartości z zadań.|  
-|[Porady: anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Opisuje, jak anulować zadania.|  
-|[Porady: Tworzenie wstępnie obliczonych zadań](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Informacje dotyczące używania <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metoda pobierania wyników operacji pobierania asynchroniczne, które są przechowywane w pamięci podręcznej.|  
-|[Porady: przenoszenie drzewa binarnego z zadaniami równoległymi](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Opisuje używanie zadań do przechodzenia w drzewie binarnym.|  
-|[Porady: dekodowanie zadania zagnieżdżonego](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Pokazuje, jak używać <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> — metoda rozszerzenia.|  
+|[Instrukcje: wykonywanie operacji równoległych za pomocą elementu Parallel.Invoke](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Informacje dotyczące używania <xref:System.Threading.Tasks.Parallel.Invoke%2A>.|  
+|[Instrukcje: zwracanie wartości z zadania](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)|Zawiera opis sposobu zwracania wartości z zadań.|  
+|[Instrukcje: anulowanie zadania i jego elementów podrzędnych](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)|Opisuje, jak anulować zadania.|  
+|[Instrukcje: tworzenie wstępnie obliczonych zadań](../../../docs/standard/parallel-programming/how-to-create-pre-computed-tasks.md)|Informacje dotyczące używania <xref:System.Threading.Tasks.Task.FromResult%2A?displayProperty=nameWithType> metoda pobierania wyników operacji pobierania asynchroniczne, które są przechowywane w pamięci podręcznej.|  
+|[Instrukcje: przenoszenie drzewa binarnego z zadaniami równoległymi](../../../docs/standard/parallel-programming/how-to-traverse-a-binary-tree-with-parallel-tasks.md)|Opisuje używanie zadań do przechodzenia w drzewie binarnym.|  
+|[Instrukcje: odpakowywanie zadania zagnieżdżonego](../../../docs/standard/parallel-programming/how-to-unwrap-a-nested-task.md)|Pokazuje, jak używać <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> — metoda rozszerzenia.|  
 |[Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|Informacje dotyczące używania <xref:System.Threading.Tasks.Parallel.For%2A> i <xref:System.Threading.Tasks.Parallel.ForEach%2A> umożliwia tworzenie pętle równoległe w danych.|  
 |[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Węzeł najwyższego poziomu dla .NET Framework programowania równoległego.|  
   

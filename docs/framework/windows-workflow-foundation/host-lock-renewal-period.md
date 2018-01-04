@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a5d2e1d8c5381f322ea1b6ffc9022853683efc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7447d11e93cf33e69bc52d2cdec239c1be55bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="host-lock-renewal-period"></a>Okres odnawiania blokady hosta
 **Okres odnawiania blokady hosta** właściwość w magazynie wystąpień przepływu pracy SQL pozwala określić okres czasu, w którym host odnawia jego blokadę wystąpienia przepływu pracy. Blokada pozostaje ważny na okres odnawiania blokady hosta + 30 sekund. Jeśli host nie może odnowić blokady (innymi słowy, przedłużyć dzierżawę) w tym okresie, blokady wygaśnie, a dostawca trwałości odblokowuje wystąpienie. Wartość tej właściwości jest typu TimeSpan w postaci "hh: mm:". Minimalna dozwolona wartość to "00: 00:01" (1 sekunda). Wartość domyślna tej właściwości to "00: 00:30" (30 sekund).  

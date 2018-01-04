@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e027a5b60e066a8d38db530c37a394227f2e892
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c735d363af49688530e318680cbb4132fc747be7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>Rozwiązywanie problemów związanych z formantami oraz autoryzacją elementów
 Ten temat zawiera następujące typowe problemy, które powstają podczas tworzenia składników i formantów. Aby uzyskać więcej informacji, zobacz [programowania ze składnikami](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3).  
@@ -118,10 +119,10 @@ Ten temat zawiera następujące typowe problemy, które powstają podczas tworze
  Jeśli używasz <xref:System.Drawing.ToolboxBitmapAttribute> zostać skojarzona ikona z składnik niestandardowy, mapy bitowej nie pojawia się w przyborniku składników wygenerowana automatycznie. Aby wyświetlić mapę bitową, należy ponownie załadować formantu przy użyciu **wybierz elementy przybornika** okno dialogowe. Aby uzyskać więcej informacji, zobacz [porady: Podaj mapy bitowej przybornika dla formantu](../../../../docs/framework/winforms/controls/how-to-provide-a-toolbox-bitmap-for-a-control.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opracowywanie formularzy systemu Windows formantów w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
- [Wskazówki: Automatyczne zapełnianie przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
- [Porady: testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Wskazówki: Debugowanie Windows niestandardowych formantów formularzy w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+ [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
+ [Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)  
+ [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [Przewodnik: debugowanie niestandardowych kontrolek formularzy Windows Forms w czasie projektowania](../../../../docs/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
  [Tworzenie składników](http://msdn.microsoft.com/library/4a5a5e49-0378-4a31-83bc-24da0f1a727d)  
  [Rozwiązywanie problemów z Programowanie w czasie projektowania](http://msdn.microsoft.com/library/e048d08e-fa7c-4be8-b238-4abaa199a0a6)  
  [Programowanie przy użyciu składników](http://msdn.microsoft.com/library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)

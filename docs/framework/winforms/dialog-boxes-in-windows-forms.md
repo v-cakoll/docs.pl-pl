@@ -17,17 +17,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1660bf08f10a7d4e0db4b7ae8d58fd631986974c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b8f493013744ffa7819d4cb554f794d9a591a371
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-boxes-in-windows-forms"></a>Okna dialogowe w formularzach systemu Windows
 Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informacji. Proste warunków, okno dialogowe jest formularz z jego <xref:System.Windows.Forms.FormBorderStyle> ustawioną właściwość wyliczenie `FixedDialog`. Można skonstruować własnych niestandardowych okien dialogowych za pomocą projektanta formularzy systemu Windows w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Dodaj formanty, takie jak `Label`, `Textbox`, i `Button` dostosować okien dialogowych do określonych potrzeb. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Obejmuje także wstępnie zdefiniowane okien dialogowych, takich jak **Otwórz plik** i pola wiadomości, które można dostosować do własnych aplikacji. Aby uzyskać więcej informacji, zobacz [okno dialogowe formanty i składniki](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: wyświetlanie okien dialogowych formularzy systemu Windows](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
+ [Instrukcje: wyświetlanie okien dialogowych formularzy Windows Forms](../../../docs/framework/winforms/how-to-display-dialog-boxes-for-windows-forms.md)  
  Zawiera wskazówki dotyczące wyświetlanie okien dialogowych.  
   
 -   [Porady: pobieranie informacji pole okna dialogowego selektywnie przy użyciu wielu właściwości](http://msdn.microsoft.com/library/56taefba\(v=vs.110\))  
@@ -47,11 +48,11 @@ Okna dialogowe są używane do interakcji z użytkownikiem i pobierania informac
 -   [Porady: wyświetlanie pola komunikatu](http://msdn.microsoft.com/library/3tt9e94f\(v=vs.110\))  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okno dialogowe formanty i składniki](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Kontrolki i składniki okien dialogowych](../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Wyświetla listę formantów okna dialogowego wstępnie zdefiniowane.  
   
- [Zmienianie wyglądu formularzy systemu Windows](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Zmienianie wyglądu formularzy Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
  Zawiera linki do tematów opisujących sposób zmienić wygląd aplikacji formularzy systemu Windows.  
   
- [Informacje o formancie TabControl](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl, kontrolka — omówienie](../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  W tym artykule wyjaśniono, jak dołączyć formantu karty w oknie dialogowym.

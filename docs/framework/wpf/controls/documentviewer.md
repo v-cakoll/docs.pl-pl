@@ -17,11 +17,12 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa8d4fba67227e9ca1e3971ea9dc983a5054e08e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6a46884b056b5ba3bc768deb0725f96386fea84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer> Formantu służy do wyświetlania <xref:System.Windows.Documents.FixedDocument> zawartości (takie jak [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] dokumenty) w formacie podzielonym na strony.  
@@ -33,5 +34,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumenty](../../../../docs/framework/wpf/advanced/documents.md)  
- [Serializacja dokumentu i magazynu](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
- [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Serializacja dokumentu i przechowywanie](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)  
+ [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)

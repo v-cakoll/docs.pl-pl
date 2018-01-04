@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28c90df258db8480f68eea05f922b36f30d81a3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27ef4200996108e378273c5f813106d4f82dacd8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>Porady: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy systemu Windows
 Formularze systemu Windows można użyć <xref:System.Windows.Forms.ErrorProvider> składnik, aby wyświetlić błędy kolumny w obrębie zestawu danych lub inne źródła danych. Dla <xref:System.Windows.Forms.ErrorProvider> składnik, aby wyświetlić błędy danych na formularzu, nie musi być bezpośrednio skojarzony z formantem. Gdy jest ona powiązana ze źródłem danych, będzie możliwe wyświetlenie ikony błędu obok każdego formantu, który jest powiązany z tym samym źródłem danych.  
@@ -73,5 +74,5 @@ Formularze systemu Windows można użyć <xref:System.Windows.Forms.ErrorProvide
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o składniku ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
- [Porady: wyświetlanie ikon błędów dotyczących weryfikacji formularza z systemu Windows składnika ErrorProvider formularzy](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+ [ErrorProvider, składnik — omówienie](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)  
+ [Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

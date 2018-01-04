@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b365d6d3236919f65c840343ec3b33edebea758b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8abfe549c34310ce256632a3e3146ec925284361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>Porady: dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection
 W tym przykładzie pokazano, jak dodawać i usuwać elementy z <xref:System.Collections.Concurrent.BlockingCollection%601> w obu blokujące i nieblokujące sposób. Aby uzyskać więcej informacji na temat <xref:System.Collections.Concurrent.BlockingCollection%601>, zobacz [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md).  
@@ -42,4 +45,4 @@ W tym przykładzie pokazano, jak dodawać i usuwać elementy z <xref:System.Coll
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)
+ [BlockingCollection — omówienie](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)

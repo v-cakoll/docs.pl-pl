@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0625d5272b4c3ae4f21793d0b0fc8645158e6a2c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Tworzenie programów obsługi zdarzeń w formularzach systemu Windows
 Program obsługi zdarzeń jest procedurą w kodzie, który określa, jakie akcje są wykonywane, gdy wystąpi zdarzenie, na przykład gdy użytkownik kliknie przycisk lub kolejki komunikatów odbiera komunikat. Gdy zdarzenie jest zgłaszane, program obsługi zdarzeń lub obsługi, które odbierają zdarzenia są wykonywane. Zdarzenia mogą być przypisane do wielu obsług i metody obsługujące określonego zdarzenia można zmieniać dynamicznie. Projektant formularzy systemu Windows umożliwia również tworzenie obsługi zdarzeń.  
@@ -32,16 +33,16 @@ Program obsługi zdarzeń jest procedurą w kodzie, który określa, jakie akcje
  [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md)  
  Opisano model zdarzeń oraz roli obiektów delegowanych.  
   
- [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
+ [Przegląd procedur obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)  
  Opisuje sposób obsługi zdarzeń.  
   
- [Porady: tworzenie obsługi zdarzeń w czasie wykonywania dla formularzy systemu Windows](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
+ [Instrukcje: tworzenie procedur obsługi zdarzeń w czasie wykonywania dla formularzy Windows Forms](../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)  
  Zawiera wskazówki dotyczące odpowiadanie na zdarzenia system lub użytkownik dynamicznie.  
   
- [Porady: łączenie wielu zdarzeń z obsługą jednego zdarzenia w formularzach systemu Windows](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
+ [Instrukcje: łączenie wielu zdarzeń z jedną procedurą obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md)  
  Zawiera wskazówki dotyczące przypisywania te same funkcje do wielu formantów za pomocą zdarzeń.  
   
- [Kolejność zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
+ [Kolejność zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Opisuje kolejność, w której zdarzenia są generowane w formantach formularzy systemu Windows.  
   
  [Porady: tworzenie obsługi zdarzeń przy użyciu narzędzia Projektant](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  

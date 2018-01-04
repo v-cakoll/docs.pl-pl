@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4d6fbde31cd4b4b5d0c6404b8baf23230f2bda77
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 321b4a01b4ce6445ac43cffcc14cb68f29db050d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Porady: Anulowanie bloku przepływu danych
 Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie użyto formularzy systemu Windows do wyświetlenia, gdy elementy robocze są aktywne w potoku przepływu danych, a także skutków anulowania.  
@@ -107,4 +110,4 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

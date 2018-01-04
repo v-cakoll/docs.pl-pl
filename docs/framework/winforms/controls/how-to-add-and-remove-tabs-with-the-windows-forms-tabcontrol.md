@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7df8b785b2c05acbbec9c17e12e462d755d0cd3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7691730f4f65d5d89f9f66f8fc1c8c6449702ae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>Porady: dodawanie i usuwanie kart za pomocą formantu TabControl formularzy systemu Windows
 Domyślnie <xref:System.Windows.Forms.TabControl> formant zawiera dwa <xref:System.Windows.Forms.TabPage> kontrolki. Można uzyskać dostępu do tych kart za pomocą <xref:System.Windows.Forms.TabControl.TabPages%2A> właściwości.  
@@ -85,7 +86,7 @@ Domyślnie <xref:System.Windows.Forms.TabControl> formant zawiera dwa <xref:Syst
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [Porady: Dodawanie formantu do strony karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [Porady: wyłączanie kart](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [Porady: Zmienianie wyglądu składnika TabControl formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+ [TabControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [Instrukcje: dodawanie kontrolki do karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Instrukcje: wyłączanie kart](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

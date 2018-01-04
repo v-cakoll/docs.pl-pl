@@ -18,20 +18,21 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07e173fce93266950be520880ced5e0e8be3fcbd
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f0e52a2a569d9b0787b5ba31c20fac176c5f6cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewdialog-control-windows-forms"></a>PrintPreviewDialog — Formant (Formularze systemu Windows)
 Formularze systemu Windows `PrintPreviewDialog` formant jest używany do wyświetlania, jak dokument pojawi się po wydrukowaniu okno dialogowe wstępnie skonfigurowane. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast własne okno dialogowe Konfigurowanie. Formant zawiera przyciski do drukowania, powiększyć wyświetlania jednego lub wielu stron i zamknięcie okna dialogowego.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Printpreviewdialog — informacje o formancie](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [PrintPreviewDialog, kontrolka — omówienie](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
  Ogólne pojęcia związane z `PrintPreviewDialog` kontroli, dzięki czemu można wyświetlać okno dialogowe wstępnie skonfigurowane, którego użytkownicy mogą zobaczyć wersję z ich dokumentu, jak będzie wyglądać po wydrukowaniu.  
   
- [Porady: wyświetlanie podglądu wydruku w systemie Windows formularzy aplikacji](../../../../docs/framework/winforms/controls/how-to-display-print-preview-in-windows-forms-applications.md)  
+ [Instrukcje: wyświetlanie podglądu wydruku w aplikacjach Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-print-preview-in-windows-forms-applications.md)  
  Opisano sposób wyświetlania strony, która ma być drukowana przy użyciu wystąpienia `PrintPreviewDialog` formantu w czasie wykonywania.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -39,14 +40,14 @@ Formularze systemu Windows `PrintPreviewDialog` formant jest używany do wyświe
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
   
  [Okna dialogowe stanowi podstawowy kod dla systemu Windows](http://go.microsoft.com/fwlink/?LinkID=102575)  
  Omówiono formantów okna dialogowego formularzy systemu Windows i składników oraz kod niezbędnych do wykonywania swoich podstawowych funkcji. (Artykułu technicznego na bibliotece MSDN Online)  
   
- [Okno dialogowe formanty i składniki](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Listę formantów różnych dialogowym dla formularzy systemu Windows.  
   
- [Okna dialogowe w formularzach systemu Windows](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Okna dialogowe w formularzach Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Opisuje sposób tworzenia dialogowym dla formularzy systemu Windows.

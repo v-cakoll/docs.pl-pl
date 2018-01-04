@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1cfce32a7e7099a601c76874c8ca951488335fc6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d8620dec4997947df2dc7078e337a5e421d66c55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>Instrukcje: Eksportowanie niestandardowych asercji zasad
 Potwierdzenia zasad opisano wymagania punktu końcowego usługi. Aplikacje usługi mogą używać niestandardowych asercji zasad w metadanych usługi do komunikowania się punkt końcowy, powiązanie lub kontrakt informacje o dostosowaniu do aplikacji klienckiej. Można użyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można wyeksportować potwierdzenia w wyrażeniach zasad dołączona w powiązania WSDL na punkt końcowy, operacji lub komunikat tematów, w zależności od możliwości lub wymagania komunikują się.  
@@ -62,4 +63,4 @@ Potwierdzenia zasad opisano wymagania punktu końcowego usługi. Aplikacje usłu
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Description.IPolicyImportExtension>  
  <xref:System.ServiceModel.Description.IPolicyExportExtension>  
- [Porady: importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+ [Instrukcje: importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

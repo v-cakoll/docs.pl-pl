@@ -15,26 +15,27 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d99817976d37d4da4429d79032e66fb2908b6c99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 512fdb59998961013a3412c3c85820d1cff2eab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements-how-to-topics"></a>Elementy bazy Tematy porad
 Tematy w tej sekcji opisano sposób korzystania z czterech podstawowych elementów WPF: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, i <xref:System.Windows.FrameworkContentElement>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadź elementu UIElement przezroczysty lub półprzezroczysty](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [Animowanie rozmiar typu FrameworkElement](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Określić, czy obiektu Freezable jest zablokowana](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Obsłuż zdarzenie załadowany](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [Ustaw marginesy elementów i kontrolek](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Utworzyć obiektu Freezable tylko do odczytu](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [Uzyskaj zapisywalny kopię tylko do odczytu obiektu Freezable](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [Przerzuć elementu UIElement poziomo czy pionowo](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [Użyj obiektu ThicknessConverter](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [Obsłuż zdarzenie ContextMenuOpening](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [Uzyskiwanie przezroczystości lub półprzezroczystości elementu interfejsu użytkownika](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [Animowanie rozmiaru elementu FrameworkElement](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Określanie, czy obiekt Freezable jest zamrożony](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Obsługa załadowanego zdarzenia](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
+ [Ustawianie marginesów elementów i kontrolek](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
+ [Ustawianie obiektu Freezable w obiekt tylko do odczytu](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
+ [Uzyskiwanie zapisywalnej kopii obiektu Freezable tylko do odczytu](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [Przerzucanie element interfejsu użytkownika w poziomie lub w pionie](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [Używanie obiektu ThicknessConverter](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
+ [Obsługa zdarzenia ContextMenuOpening](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.UIElement>  

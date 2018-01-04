@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 61c78adff541ac2ba261d31776478a0468e21d4f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 651a8e11b5782227cdf5ffcc3d53cf2c75def031
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="accessing-strongly-typed-xml-data-using-xpathnavigator"></a>Uzyskiwanie dostępu do silnie typu danych XML przy użyciu parametrem XPathNavigator
 Jako wystąpienie modelu danych XPath 2.0 <xref:System.Xml.XPath.XPathNavigator> klasy może zawierać jednoznacznie danych, który jest mapowany na typowych języka wspólnego (CLR). Zgodnie z modelem danych XPath 2.0 tylko elementy i atrybuty mogą zawierać silnie typizowane dane. <xref:System.Xml.XPath.XPathNavigator> Klasy zawiera mechanizmy do uzyskiwania dostępu do danych w ramach <xref:System.Xml.XPath.XPathDocument> lub <xref:System.Xml.XmlDocument> obiektu jako silnie typizowane dane, a także mechanizmy do konwertowania z jednego typu danych.  
@@ -196,8 +199,8 @@ Console.WriteLine("The price of the book has been dropped 20% from {0:C} to {1:C
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [Obsługa typu do zestawów System.Xml klas](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Węzeł nawigacji zestawu użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
- [Atrybut i Namespace węzła nawigacji użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
- [Wyodrębnianie danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)
+ [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Nawigacja po zestawie węzłów przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)  
+ [Nawigacja po atrybutach i przestrzeni nazw węzła przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/attribute-and-namespace-node-navigation-using-xpathnavigator.md)  
+ [Wyodrębnianie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/extract-xml-data-using-xpathnavigator.md)

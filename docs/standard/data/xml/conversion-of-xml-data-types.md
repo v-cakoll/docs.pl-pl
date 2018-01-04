@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d2f5f5d27b3d21ff12f5eea7613e80e73c5b6597
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d18b69c2d5baeac77cbdf45bebd6f0c9d5c94d9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="conversion-of-xml-data-types"></a>Konwersja typów danych XML
 Znaleziono większości metod w **obiekt XmlConvert** klasy służą do konwertowania danych pomiędzy ciągami a jednoznacznie formatów. Metody są niezależnie od ustawień regionalnych. Oznacza to, że nie uwzględniają wszystkie ustawienia regionalne podczas konwersji.  

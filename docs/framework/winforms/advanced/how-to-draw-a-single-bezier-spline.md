@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ebdba9e01824cc764a6ab759da049add180ba83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6d2eaf570190f85ca084e5a5ab5d1bee1be56871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>Porady: Rysowanie pojedynczego B &#233; zier krzywej składanej
 Krzywej Beziera jest definiowana za pomocą czterech punktów: punkt początkowy, punkty kontrolne dwóch i punkt końcowy.  
@@ -43,5 +44,5 @@ Krzywej Beziera jest definiowana za pomocą czterech punktów: punkt początkowy
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Graphics.DrawBezier%2A>  
- [Krzywe Beziera w GDI +](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- [Porady: Rysowanie sekwencji krzywych Beziera](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)
+ [Krzywe Beziera w GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [Instrukcje: rysowanie sekwencji krzywych Beziera](../../../../docs/framework/winforms/advanced/how-to-draw-a-sequence-of-bezier-splines.md)

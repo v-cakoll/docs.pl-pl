@@ -17,11 +17,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a6cf857ccecbdac88453fd1fba6e93d609196b1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 99e2f66a1aedafe316ab65ae302113ea553146ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>Sprawdzanie poprawności schematu (XSD) XML z XmlSchemaSet
 Dokumenty XML może zostać zweryfikowany względem schematu XML schema definition language (XSD) w <xref:System.Xml.Schema.XmlSchemaSet>.  
@@ -51,5 +54,5 @@ Dokumenty XML może zostać zweryfikowany względem schematu XML schema definiti
  [!code-vb[XmlSchemaSetOverall Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XmlSchemaSetOverall Example/VB/xmlschemasetexample.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestaw XmlSchemaSet schematu kompilacji](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Praca z schematy XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+ [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Praca ze schematami XML](../../../../docs/standard/data/xml/working-with-xml-schemas.md)

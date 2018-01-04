@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 750e5c42158a87c04a7fb0f2a83f126a698bb93f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f1a5d70807541a0a3faf6bc99a3ced42827efd72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>Wskazówki: Tworzenie zawartości Direct3D9 dla hostingu w WPF
 W tym przewodniku przedstawiono sposób tworzenia Direct3D9 zawartość, która jest odpowiednia dla hostowanie w aplikacji Windows Presentation Foundation (WPF). Aby uzyskać więcej informacji dotyczących obsługi Direct3D9 zawartości w aplikacjach WPF, zobacz [WPF i współdziałanie Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md).  
@@ -37,7 +38,7 @@ W tym przewodniku przedstawiono sposób tworzenia Direct3D9 zawartość, która 
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
+-   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].,  
   
 -   Później 9or zestawu SDK programu DirectX.  
   
@@ -150,5 +151,5 @@ W tym przewodniku przedstawiono sposób tworzenia Direct3D9 zawartość, która 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Interop.D3DImage>  
- [Zagadnienia dotyczące wydajności Direct3D9 i współdziałanie z WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
- [Wskazówki: Obsługa Direct3D9 zawartości na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+ [Zagadnienia dotyczące współdziałania Direct3D9 i WPF](../../../../docs/framework/wpf/advanced/performance-considerations-for-direct3d9-and-wpf-interoperability.md)  
+ [Przewodnik: hosting zawartości Direct3D9 w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

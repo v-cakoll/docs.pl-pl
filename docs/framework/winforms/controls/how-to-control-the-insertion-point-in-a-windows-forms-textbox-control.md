@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cc3dab3acafdb151cf14f81145ef47e5a6ff689
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c8de64ac28fe57e3c448c671859053fad4aae3b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>Porady: kontrolowanie punktu wstawiania w formancie TextBox formularzy systemu Windows
 Gdy program Windows Forms <xref:System.Windows.Forms.TextBox> formant najpierw uzyskuje fokus, wstawiania domyślną w polu tekstowym znajduje się na lewo od istniejącego tekstu. Użytkownik może przenieść punkt wstawiania z klawiatury lub myszy. Jeśli pole tekstowe utraci i ponownie otrzymuje fokus, punkt wstawiania będzie wszędzie tam, gdzie użytkownika ostatniego umieszczenia go.  
@@ -73,10 +74,10 @@ Gdy program Windows Forms <xref:System.Windows.Forms.TextBox> formant najpierw u
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.TextBox>  
- [Informacje o formancie TextBox](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
- [Porady: Tworzenie pola tekstowego hasła za pomocą formantu TextBox formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
- [Porady: Tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
- [Porady: umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
- [Porady: Zaznaczanie tekstu w oknach formantu TextBox formularzy](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
- [Porady: wyświetlanie wielu wierszy w oknach formantu TextBox formularzy](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
- [TextBox — formant](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+ [TextBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)  
+ [Instrukcje: tworzenie pola tekstowego hasła za pomocą kontrolki TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)  
+ [Instrukcje: tworzenie pola tekstowego tylko do odczytu](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)  
+ [Instrukcje: umieszczanie cudzysłowu w ciągu](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)  
+ [Instrukcje: zaznaczanie tekstu w kontrolce TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)  
+ [Instrukcje: wyświetlanie wielu wierszy w kontrolce TextBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)  
+ [TextBox, kontrolka](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)

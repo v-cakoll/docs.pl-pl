@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f35c5382455021f0a001604367e59204ce4ad93c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 25abf45cd0c78b8872da3c953f29843ef0b67cda
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadzono kilka nowych typów, które są przydatne w Programowanie równoległe, w tym zestaw kolekcji współbieżnych klas, elementy podstawowe synchronizacji lekkie i typy dla inicjowania z opóźnieniem. Z kodem aplikacji wielowątkowych, włączając w bibliotece równoległych zadań i PLINQ można używać tych typów.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 11/21/2017
   
  Aby uzyskać więcej informacji, zobacz:  
   
--   [Porady: używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+-   [Instrukcje: używanie struktury SpinLock do synchronizacji niskiego poziomu](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
 -   [Porady: synchronizacja jednoczesnych operacji za pomocą bariery](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md).  
   

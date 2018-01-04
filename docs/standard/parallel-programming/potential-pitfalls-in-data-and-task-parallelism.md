@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 54fd201bd4eaef607f8917ea693876aec7fa2923
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f575e8bdf06490eb0e5eba0ac07fe23787aa18d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>Potencjalne pułapki związane z równoległością danych i zadań
 W wielu przypadkach <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> zapewnia znaczną poprawę wydajności za pośrednictwem zwykłego pętle sekwencyjnych. Jednak pracy parallelizing pętli wprowadza złożoności, który może prowadzić do problemów, które w kolejnych kodu nie są jako wspólne lub w ogóle nie wystąpi. W tym temacie wymieniono niektóre praktyki, których należy unikać podczas pisania pętle równoległe.  

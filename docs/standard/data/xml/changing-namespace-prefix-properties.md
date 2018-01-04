@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 7ce6e4b705188b9c1d0949703991633e3f450689
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3cb0db0fbffa5f42fb09f29da2976727451e3741
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-namespace-prefix-properties"></a>Zmiana właściwości Namespace prefiksu
 **XmlNode** klasa pozwala na zmianę skojarzonych z danym węźle prefiks przestrzeni nazw. Na przykład poniższy kod przedstawia prefiks elementu zostanie zmieniona.  
@@ -41,7 +44,7 @@ e.Prefix = "b";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```xml  
 <b:test xmlns:a="123" xmlns:b="456" />  
@@ -65,7 +68,7 @@ e.Prefix = "a";
 Console.WriteLine(doc.InnerXml);  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```xml  
 <a:test xmlns="123" xmlns:a="123" />  
@@ -74,4 +77,4 @@ Console.WriteLine(doc.InnerXml);
  Po drzewie został utrwalony na ciąg w wyniku wywołania **dokumentu. InnerXml**, `xmlns:a='123'` atrybut został dodany do zachowania przestrzeń nazw `test` elementu. Było `'123'`, i pozostaje `'123'`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

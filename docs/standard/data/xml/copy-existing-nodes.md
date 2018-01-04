@@ -13,14 +13,17 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 11f3915dfebd7ad9d3144c9bedcd7f42b4754359
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c026d9f825375d74d53d5cc46969ff0f713bab1c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="copy-existing-nodes"></a>Skopiuj istniejących węzłów
 Istnieje wiele metod i właściwości w XML modelu DOM (Document Object) można wybrać węzła, takiej jak **SelectSingleNode**, **ChildNodes [int i]**, **atrybutów [int i]**. Po wybraniu węzła można wstawić je do drzewa przy użyciu jednej z metod wstawiania, które działają dla tego typu określonego węzła. Tylko ograniczenie do wstawiania węzeł w drzewie jest czy dokument nadal należy poprawnie sformułowanym po wstawieniu węzła. Po wstawieniu istniejący węzeł w drzewie DOM, jest usunięte z oryginalnej pozycji i dodane do miejsca docelowego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f55cfb6afa8ad533aac84b391a7cd6fef83d72d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f68642eb5f996722097976e042006afbf366ae39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="label-control-overview-windows-forms"></a>Label — Informacje o formancie (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty są używane do wyświetlania tekstu lub obrazów, które nie mogą być edytowane przez użytkownika. Są one używane do identyfikowania obiektów na formularzu — podaj opis jaką dany formant będzie wykonywać na przykład po kliknięciu lub wyświetlać informacje w odpowiedzi na zdarzenie środowiska wykonawczego lub proces w aplikacji. Na przykład można etykiety Dodawanie opisową podpisów do pól tekstowych, pola listy, pola kombi itd. Można również napisać kod, który zmienia tekst wyświetlany przez etykiety w odpowiedzi na zdarzenia w czasie wykonywania. Na przykład aplikacja zajmuje kilka minut przetwarzania zmian, można wyświetlić komunikat o stanie przetwarzania w etykiecie.  
@@ -34,5 +35,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty są używa
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Label>  
- [Porady: rozmiar formantu etykiety pasujący do jego zawartości formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Porady: Tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)
+ [Instrukcje: zmiana rozmiaru kontrolki Label formularzy Windows Forms w celu dopasowania jej do zawartości](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Instrukcje: tworzenie klawiszy dostępu za pomocą kontrolek Label formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-with-windows-forms-label-controls.md)

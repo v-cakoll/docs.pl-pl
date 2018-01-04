@@ -18,25 +18,26 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda7f9497751356c4c650e7fb672f7721ec3dd09
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cf622066bbfca8260670ca139f4acfe9affca07e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-wpf"></a>Zdarzenia (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]wprowadza kierowane zdarzenia, które mogą być wywoływane programy obsługi, które istnieją na różnych odbiorników w drzewie elementu aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Omówienie dołączone zdarzenia](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Przegląd zdarzeń dołączonych](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
  [Zdarzenia okresu istnienia obiektu](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [Oznaczanie kierowane zdarzenia, ponieważ obsługiwane i klasy obsługi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
  [Podgląd zdarzeń](../../../../docs/framework/wpf/advanced/preview-events.md)  
  [Zdarzenia zmiany właściwości](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic i obsługa zdarzeń WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [Wzorce słabe zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [Obsługa zdarzeń Visual Basic oraz WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
+ [Słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.RoutedEvent>  
@@ -49,10 +50,10 @@ ms.lasthandoff: 10/22/2017
  [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [XAML w WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
   [Elementy podstawowe](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [Element drzewa i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [Drzewo elementów i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
   [Właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [Zasoby](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [Model zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
   [Model wątkowości](../../../../docs/framework/wpf/advanced/threading-model.md)

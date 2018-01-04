@@ -9,11 +9,11 @@ ms.assetid: ba8aed14-2543-4c8e-ad88-c35b49078dd6
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d663efa63b28d4b07d0903c2398f5a2a5a68dda6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9872b5d795889453004d3e4a331c45a29a349b86
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39path39-is-nothing-or-empty"></a>Argument &#39; Ścieżka &#39; ma wartość Nothing lub jest pusty
 Nazwa ścieżki jest nieprawidłowa, ponieważ jest on zainicjowany `Nothing` lub jest pusty. Ścieżka musi mieć typ danych i prawidłową nazwę.  
@@ -23,6 +23,6 @@ Nazwa ścieżki jest nieprawidłowa, ponieważ jest on zainicjowany `Nothing` lu
 -   Dodaj nazwę prawidłową ścieżkę.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Właściwość My.Application.Info.DirectoryPath](http://msdn.microsoft.com/en-us/660586b9-638e-42a7-ae21-5eee34a3fccf)  
- [Porady: analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
+ [My.Application.Info.DirectoryPath](xref:Microsoft.VisualBasic.ApplicationServices.AssemblyInfo.DirectoryPath)  
+ [Instrukcje: analizowanie ścieżek plików](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
  [Nothing](../../visual-basic/language-reference/nothing.md)

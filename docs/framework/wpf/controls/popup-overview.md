@@ -16,11 +16,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 96ee7b227d4e2ea5dfcb0b8870d77d03abf08db8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb20895b5af35fec7274ca4c747740390104355
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-overview"></a>Przegląd Okna podręczne
 <xref:System.Windows.Controls.Primitives.Popup> Kontroli umożliwia wyświetlanie zawartości w oddzielnym oknie, który jest wyświetlany nad bieżące okno aplikacji względem wyznaczonych współrzędnych elementu lub ekranu. W tym temacie przedstawiono <xref:System.Windows.Controls.Primitives.Popup> kontroli i udostępnia informacje na temat jego używania.  
@@ -46,13 +47,13 @@ ms.lasthandoff: 11/21/2017
 ## <a name="controls-that-implement-a-popup"></a>Formanty, które implementują element Popup  
  Można tworzyć <xref:System.Windows.Controls.Primitives.Popup> kontrolek w inne formanty. Implementuje następujące formanty <xref:System.Windows.Controls.Primitives.Popup> formantu do określonych celów:  
   
--   <xref:System.Windows.Controls.ToolTip>. Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [omówienie ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
+-   <xref:System.Windows.Controls.ToolTip>., Jeśli chcesz utworzyć etykietkę narzędzia dla elementu, użyj <xref:System.Windows.Controls.ToolTip> i <xref:System.Windows.Controls.ToolTipService> klasy. Aby uzyskać więcej informacji, zobacz [omówienie ToolTip](../../../../docs/framework/wpf/controls/tooltip-overview.md).  
   
--   <xref:System.Windows.Controls.ContextMenu>. Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> formantu. Aby uzyskać więcej informacji, zobacz [omówienie ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
+-   <xref:System.Windows.Controls.ContextMenu>., Jeśli chcesz utworzyć menu kontekstowe dla elementu, użyj <xref:System.Windows.Controls.ContextMenu> formantu. Aby uzyskać więcej informacji, zobacz [omówienie ContextMenu](../../../../docs/framework/wpf/controls/contextmenu-overview.md).  
   
--   <xref:System.Windows.Controls.ComboBox>. Jeśli chcesz utworzyć formant wyboru, która znajduje się pole listy rozwijanej, które mogą być widoczne czy ukryte, użyj <xref:System.Windows.Controls.ComboBox> formantu.  
+-   <xref:System.Windows.Controls.ComboBox>., Jeśli chcesz utworzyć formant wyboru, która znajduje się pole listy rozwijanej, które mogą być widoczne czy ukryte, użyj <xref:System.Windows.Controls.ComboBox> formantu.  
   
--   <xref:System.Windows.Controls.Expander>. Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o obszarze zwijanej, który wyświetla zawartość, użyj <xref:System.Windows.Controls.Expander> formantu. Aby uzyskać więcej informacji, zobacz [omówienie Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
+-   <xref:System.Windows.Controls.Expander>., Jeśli chcesz utworzyć kontrolkę wyświetlającą nagłówek o obszarze zwijanej, który wyświetla zawartość, użyj <xref:System.Windows.Controls.Expander> formantu. Aby uzyskać więcej informacji, zobacz [omówienie Expander](../../../../docs/framework/wpf/controls/expander-overview.md).  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>Menu podręczne zachowania i wyglądu  
@@ -106,5 +107,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>  
  <xref:System.Windows.Controls.ToolTip>  
  <xref:System.Windows.Controls.ToolTipService>  
- [Tematy porad](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)

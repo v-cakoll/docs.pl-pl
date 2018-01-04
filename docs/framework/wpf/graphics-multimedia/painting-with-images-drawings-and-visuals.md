@@ -23,11 +23,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 16c3184c329fa83ddf091326c97d6faf2e2c88f5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01939eb8735e6764e0f0cba811091c7fdbd6797f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>Malowanie obrazami, rysowaniem i Visual
 W tym temacie opisano sposób użycia <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, i <xref:System.Windows.Media.VisualBrush> obiektów namalować obszar wraz z obrazem <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>.  
@@ -149,11 +150,11 @@ Składniki TileBrush z wielu kafelków
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
- [Omówienie TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Omówienie pędzle WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Rysowanie obiekty — omówienie](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Omówienie maski przezroczystości](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [TileBrush — przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [Pędzle WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Maska nieprzezroczystości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
  [Przykładowe ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Przykładowe VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)

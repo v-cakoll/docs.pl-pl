@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d46c27e57a7d71992a0b1378e0987a2c48a66ab6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e34c86d63cc4d9eb2d6ba08466e72086719d880a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="progressbar-control-windows-forms"></a>ProgressBar — Formant (Formularze systemu Windows)
 > [!IMPORTANT]
@@ -29,10 +30,10 @@ ms.lasthandoff: 10/18/2017
  Formularze systemu Windows <xref:System.Windows.Forms.ProgressBar> formant wskazuje postęp akcji, wyświetlając odpowiedniej liczby prostokąty ułożone w poziomym pasku. Po zakończeniu działania pasek jest wypełnione. Paski postępu często są używane do przedstawiać użytkownika jak długie oczekiwania na ukończenie akcji przedłużającym — na przykład gdy dużego pliku jest ładowany.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie ProgressBar](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
+ [ProgressBar, kontrolka — omówienie](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.ProgressBar> kontroli, dzięki czemu można wyświetlić postęp operacji.  
   
- [Porady: Ustawianie wartości wyświetlanej przez formant ProgressBar formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
+ [Instrukcje: ustawianie wartości wyświetlanej przez kontrolkę ProgressBar formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md)  
  Omówiono szereg różnych sposobów, aby zwiększyć wartości wyświetlanej przez <xref:System.Windows.Forms.ProgressBar> formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -40,5 +41,5 @@ ms.lasthandoff: 10/18/2017
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.

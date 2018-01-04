@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 80708dfa60636bbb038c3a86e336709339d2ac55
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 22adc805a1174b566d3febf8c6182527df59b32c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathdocument-input-to-xsltransform"></a>Dane wejściowe XPathDocument XslTransform
 <xref:System.Xml.XPath.XPathDocument> Jest tylko do odczytu pamięci podręcznej, przetwarzania dokumentów za pomocą <xref:System.Xml.Xsl.XslTransform>. Przypomina strukturę do XML modelu DOM (Document Object), ale wysoce jest zoptymalizowany do przetwarzania przekształceń XSLT () oraz modelu danych XML Path Language (XPath) przy użyciu funkcji optymalizacji XPath na językarozszerzonegoarkuszastylów<xref:System.Xml.XPath.XPathNavigator>.  
@@ -47,4 +50,4 @@ Xslt.Transform(doc, null, fs, null);
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa XslTransform implementuje procesorze XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

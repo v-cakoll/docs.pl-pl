@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03734babf27ac4350580e7bed03645f3049c956
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22322c7b8cd03abcf3a98c49b9d43125b37d956d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>Porady: tworzenie WSFederationHttpBinding
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceModel.WSFederationHttpBinding> klasy ([\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) w konfiguracji) zapewnia mechanizm udostępnianie usługi federacyjnej. Oznacza to, że usługa, która wymaga od klientów uwierzytelniania za pomocą tokenu zabezpieczającego wydanego przez usługę tokenu zabezpieczającego. W tym temacie przedstawiono sposób konfigurowania <xref:System.ServiceModel.WSFederationHttpBinding> w kodzie i konfiguracji. Po utworzeniu powiązania punktu końcowego można skonfigurować do używania tego powiązania.  
@@ -115,6 +116,6 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], <xref:System.ServiceM
  [!code-vb[c_FederationBinding#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_federationbinding/vb/source.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)  
  [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md)  
- [Porady: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)
+ [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)

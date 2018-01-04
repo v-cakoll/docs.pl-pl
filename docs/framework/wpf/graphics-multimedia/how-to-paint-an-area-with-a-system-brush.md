@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 355df3718d90768cdfa8bc9780c44c19eb4bf9bf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87979c16d52262c665e2fb37fdf6d7550c5930c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-paint-an-area-with-a-system-brush"></a>Jak malować obszar pędzlem systemowym
 <xref:System.Windows.SystemColors> Klasy zapewnia dostęp do systemu pędzle i kolory, takich jak <xref:System.Windows.SystemColors.ControlBrush%2A>, <xref:System.Windows.SystemColors.ControlBrushKey%2A>, i <xref:System.Windows.SystemColors.DesktopBrush%2A>. Pędzel systemu <xref:System.Windows.Media.SolidColorBrush> obiekt, który umożliwia malowanie obszar kolorem określonego systemu. Pędzel systemu zawsze daje wypełnieniem; Nie można użyć do Tworzenie gradientu.  
@@ -58,5 +59,5 @@ ms.lasthandoff: 11/21/2017
  Na przykład przedstawiający sposób użycia kolorem systemowym w gradiencie zobacz [Użyj kolorów systemu w gradiencie](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kolory System używany w gradiencie](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
- [Malowanie pełnych kolorów i gradientów — omówienie](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
+ [Używanie kolorów systemowych w gradiencie](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)

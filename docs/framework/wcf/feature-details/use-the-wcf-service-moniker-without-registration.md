@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9e91889947a17f8cba66d822b857e1c8bc875cab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 18f575e9bae37b66526d7b61a641374266ba627b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>Porady: Użyj Moniker usługi Windows Communication Foundation bez rejestracji
 Aby nawiązać połączenie i komunikować się z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacja kliencka musi mieć szczegóły adresu usługi, Konfiguracja powiązania i kontraktu usługi.  
@@ -67,4 +68,4 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  Jeśli krótka nazwa jest nieprawidłowo sformułowany lub usługa jest niedostępna, wywołanie `GetObject` zwraca błąd informujący o tym "Nieprawidłowa składnia". Jeśli zostanie wyświetlony ten błąd, upewnij się, krótkiej nazwy, którego używasz, jest poprawny i usługa jest dostępna.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: zarejestrować i skonfigurować krótkiej nazwy](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+ [Instrukcje: rejestrowanie i konfigurowanie monikera usługi](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f0e3be0a0b550f6fbbc9876709094d4a23abe1a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f8f80d93f9625ff962a3e3fab1f6647678ecf32f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>Jak udostępniać właściwości ustalania rozmiaru miedzy siatkami
 W tym przykładzie pokazano, jak udostępniać dane zmiany rozmiaru kolumn i wierszy między <xref:System.Windows.Controls.Grid> elementy, aby zachować zmiany rozmiaru spójne.  
@@ -48,4 +49,4 @@ W tym przykładzie pokazano, jak udostępniać dane zmiany rozmiaru kolumn i wie
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Grid>  
  <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

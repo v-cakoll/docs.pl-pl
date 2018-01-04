@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ffafaff2355e89e2127742f2fba5c005492b4580
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 827e93ad779dfeb2dd398a2fc031fcb99a77a39c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Powiadomienie o zmianie w powiązaniu danych w formularzach systemu Windows
 Jednym z najważniejszych pojęć wiązanie danych formularzy systemu Windows jest *powiadomienie o zmianie*. Aby upewnić się, że źródło danych i formanty powiązane zawsze mieć najnowsze dane, należy dodać powiadomienia o zmianie dla powiązania danych. Aby upewnij się, że formanty powiązane są powiadamiani o zmiany wprowadzone do swojego źródła danych i źródła danych jest powiadamiany o zmiany dokonane w powiązanej właściwości formantu.  
@@ -46,6 +47,6 @@ Jednym z najważniejszych pojęć wiązanie danych formularzy systemu Windows je
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.ComponentModel.INotifyPropertyChanged>  
  <xref:System.ComponentModel.BindingList%601>  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Źródła danych obsługiwane przez program Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- [Powiązanie danych i formularze systemu Windows](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Źródła danych obsługiwane przez formularze Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

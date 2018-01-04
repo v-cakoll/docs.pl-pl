@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 056aeaf1dfb7db420ce5359849a9a409dcd3fe13
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4adfabba76e9f6bf32e47fe4e52e42b68676bc0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-partition-space-by-using-the-dockpanel-element"></a>Jak rozdzielić przestrzeń przy użyciu elementu DockPanel
 Poniższy przykład tworzy prosty [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] framework za pomocą <xref:System.Windows.Controls.DockPanel> elementu. <xref:System.Windows.Controls.DockPanel> Partycje dostępne miejsce do jego elementów podrzędnych.  
@@ -47,4 +48,4 @@ Poniższy przykład tworzy prosty [!INCLUDE[TLA#tla_ui](../../../../includes/tla
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.DockPanel>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

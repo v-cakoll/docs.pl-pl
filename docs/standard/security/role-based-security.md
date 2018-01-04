@@ -21,11 +21,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83a3f58fc13eb1aaacb99a3f35c3149d78451c23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 18b2883fd69f5cadf2fce3dc677e5d2b79806d0b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="role-based-security"></a>Zabezpieczenia oparte na rolach
 Role są często używane w aplikacjach finansowych lub pracy do wymuszania zasad. Na przykład aplikacja może nałożyć limity rozmiaru transakcji przetwarzanych w zależności od tego, czy użytkownik zgłoszenia żądania jest członkiem określonej roli. Urzędników może być autoryzacji do przetwarzania transakcji, które mają mniej niż określony próg kierownicy mogą mieć wyższy limit i zastępców prezesa może być nadal wyższy limit (lub brak limitu wcale). Oparta na rolach zabezpieczeń można także jeśli aplikacja wymaga zatwierdzenia wielu ukończyć akcji. Taki przypadek może być systemu zakupów, w którym każdy pracownik może wygenerować żądania zakupu, ale tylko agent zakupów można przekształcić tego żądania w zamówienia zakupu, które mogą być wysyłane do dostawcy.  
@@ -42,7 +45,7 @@ Role są często używane w aplikacjach finansowych lub pracy do wymuszania zasa
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)|Opisano sposób konfigurowania i zarządzania systemu Windows i rodzajowy tożsamości i podmiotów zabezpieczeń.|  
+|[Obiekty główne i obiekty tożsamości](../../../docs/standard/security/principal-and-identity-objects.md)|Opisano sposób konfigurowania i zarządzania systemu Windows i rodzajowy tożsamości i podmiotów zabezpieczeń.|  
 |[Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)|Wprowadzono podstawowe pojęcia, które należy zrozumieć przed rozpoczęciem korzystania z zabezpieczeń .NET Framework.|  
   
 ## <a name="reference"></a>Tematy pomocy  

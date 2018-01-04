@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de551372806c62de7f4ceca08b87b0eca207e4ac
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 759da973662e407313dbfd1d1d8ffb18881d154c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-override-encoded-soap-xml-serialization"></a>Porady: Zastąp serializacji XML użyciu zakodowanego protokołu SOAP
 [Przykładowy kod](#tskhowtooverrideencodedsoapxmlserializationanchor1)  
@@ -288,9 +291,9 @@ public class Run
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
- [Atrybuty, które sterowania serializacją użyciu zakodowanego protokołu SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
- [Serializacja XML z usługami sieci Web XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
- [Porady: szeregowania obiektu jako strumień SOAP zakodowane w formacie XML](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
+ [Serializacja XML z usługami internetowymi XML](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)  
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+ [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)

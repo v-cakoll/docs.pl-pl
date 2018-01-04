@@ -14,11 +14,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ed163de9a5b01a3ddab8ef42d21f38d35f48519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a465ae44d3b8a4c43e5e34eaeedcd739d328bff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>Jak zmienić wyrównanie w poziomie kolumny w ListView
 Domyślnie, zawartości każdej kolumny w <xref:System.Windows.Controls.ListViewItem> jest wyrównany. Wyrównanie każdej kolumny można zmienić, zapewniając <xref:System.Windows.DataTemplate> i ustawienie <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A> właściwości w elemencie <xref:System.Windows.DataTemplate>. W tym temacie przedstawiono sposób <xref:System.Windows.Controls.ListView> Wyrównuje zawartość domyślnie i jak zmienić wyrównania jednej kolumny w <xref:System.Windows.Controls.ListView>.  
@@ -37,7 +38,7 @@ Domyślnie, zawartości każdej kolumny w <xref:System.Windows.Controls.ListView
 [!code-xaml[ListViewHowTos#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Powiązania danych XML przy użyciu XMLDataProvider i kwerendy XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Powiązywanie z danymi XML przy użyciu XMLDataProvider i zapytań XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
  [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)

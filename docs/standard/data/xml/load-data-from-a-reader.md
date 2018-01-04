@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Ładowanie danych z czytnika
 Jeśli dokument XML został załadowany przy użyciu <xref:System.Xml.XmlDocument.Load%2A> — metoda i parametr <xref:System.Xml.XmlReader>, istnieją różnice w zachowaniu, który występuje w porównaniu do zachowania podczas ładowania danych z innych formatów. Jeśli czytnik jest w stanie początkowym <xref:System.Xml.XmlDocument.Load%2A> zużywa całą zawartość z czytnika i tworzy XML modelu DOM (Document Object) z wszystkich danych w czytniku.  
@@ -37,4 +40,4 @@ Jeśli dokument XML został załadowany przy użyciu <xref:System.Xml.XmlDocumen
  Domyślnie <xref:System.Xml.XmlDocument.Load%2A> nie sprawdza, czy kod XML jest nieprawidłowa definicja typu dokumentu (DTD) lub Sprawdzanie poprawności schematu. Tylko sprawdzi, czy kod XML jest poprawnie sformułowany. Aby sprawdzanie poprawności jest wykonywane, musisz utworzyć <xref:System.Xml.XmlReader> przy użyciu <xref:System.Xml.XmlReaderSettings> klasy. <xref:System.Xml.XmlReader> Klasy można wymusić przy użyciu schematu języka (XSD) definicji DTD lub schemat sprawdzania poprawności. <xref:System.Xml.ValidationType> Właściwość <xref:System.Xml.XmlReaderSettings> klasa określa, czy <xref:System.Xml.XmlReader> wystąpienia wymusza sprawdzania poprawności. Aby uzyskać więcej informacji o weryfikacji danych XML, zobacz sekcję uwag <xref:System.Xml.XmlReader> strony odwołania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

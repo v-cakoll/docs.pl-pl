@@ -14,11 +14,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 92918e347b10dfcf3a0d6e2c08cec8c7a6963f5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6c3093a14fe5186df086cb5b63d20a7eb309c7ba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="induced-collections"></a>Wywołane kolekcje
 W większości przypadków moduł garbage collector można określić najlepszy moment na wykonać kolekcji, a należy udostępnić go uruchomić niezależnie. Istnieje rzadkich sytuacji po wymuszonym kolekcji może zwiększyć wydajność aplikacji. Wyrzucanie elementów bezużytecznych w tych przypadkach może wywołać przy użyciu <xref:System.GC.Collect%2A?displayProperty=nameWithType> metodę wymuszania wyrzucania elementów bezużytecznych.  
@@ -44,4 +47,4 @@ W większości przypadków moduł garbage collector można określić najlepszy 
   
 ## <a name="see-also"></a>Zobacz też  
  [Tryby opóźnienia](../../../docs/standard/garbage-collection/latency.md)  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

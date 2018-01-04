@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7ae79ad13b360a61e1d9b10f94dff5a37aae1d89
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ef101a9a5f78e1b85ac7cb983b4766088b83317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-scenarios"></a>Scenariusze routingu
 Usługa routingu jest w dużym stopniu dostosowywane, może być trudne do projektowania wydajne logiki routingu, podczas tworzenia nowej konfiguracji od początku.  Istnieje jednak kilka typowych scenariuszy, które należy wykonać w większości konfiguracji usługa routingu. Gdy te scenariusze mogą jednak nie dotyczyć bezpośrednio do określonej konfiguracji, zrozumienie, jak można skonfigurować usługi routingu w celu obsługi tych scenariuszy będzie pomocy można w opis usługi routingu.  
@@ -77,13 +78,13 @@ Usługa routingu jest w dużym stopniu dostosowywane, może być trudne do proje
  Procedura służąca do konfigurowania obsługi błędów, w sekcji [jak: obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md). Na przykład wdrażania obsługi błędów zobacz [mostkowanie i obsługa błędów](../../../../docs/framework/wcf/samples/bridging-and-error-handling.md) i [zaawansowane obsługi błędu](../../../../docs/framework/wcf/samples/advanced-error-handling.md) próbek.  
   
 ### <a name="in-this-section"></a>W tej sekcji  
- [Porady: Przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [Instrukcje: przechowywanie wersji usługi](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
- [Instrukcje: Partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
+ [Instrukcje: partycjonowanie danych usługi](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [Porady: Aktualizacja dynamiczna](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [Instrukcje: aktualizacja dynamiczna](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
- [Porady: Obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
+ [Instrukcje: obsługa błędów](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

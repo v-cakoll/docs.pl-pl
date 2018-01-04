@@ -14,11 +14,11 @@ ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: dc457a1a32048441f82976488158f223e7e3e087
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: b4d29f99d0c375eebee0f477720cb9a22172dddb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="delaysign"></a>/delaysign
 Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.  
@@ -40,11 +40,11 @@ Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.
   
  Na przykład za pomocą `/delaysign+`, deweloperów w organizacji można rozpowszechniać testu bez znaku testerów można zarejestrować przy użyciu pamięci podręcznej GAC i korzystać z zestawu. Po zakończeniu pracy w zestawie osoba odpowiedzialna za klucz prywatny organizacji można pełni podpisać zestawu. Ta segmentacji poszczególnych chroni klucz prywatny organizacji przed ujawnieniem, umożliwiając wszystkich deweloperów do pracy z zestawów.  
   
- Zobacz [tworzenie i zestawy Using Strong-Named](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
+ Zobacz [tworzenie i zestawy Using Strong-Named](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
   
 ### <a name="to-set-delaysign-in-the-visual-studio-integrated-development-environment"></a>Aby ustawić/DelaySign w programie Visual Studio zintegrowane środowisko deweloperskie  
   
-1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).  
+1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**.   
   
 2.  Kliknij przycisk **podpisywanie** kartę.  
   
@@ -52,6 +52,6 @@ Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ KeyFile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
- [/ KeyContainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [/keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)  
+ [/keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)  
+ [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

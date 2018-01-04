@@ -17,21 +17,22 @@ caps.latest.revision: "64"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6853b915cb133b2ea1cbc0579f3eb59e1e956f5e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: dfe53e4782fda95142a9eaa8ab10227f5353612b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="popup-how-to-topics"></a>Okno podręczne Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Primitives.Popup> formantu, aby wyświetlić zawartość w osobnym oknie, który jest wyświetlany nad bieżące okno aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animacja okna podręcznego](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [Określ pozycja podręcznego niestandardowych](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [Animowanie okna podręcznego](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
+ [Określanie niestandardowego położenia okna podręcznego](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie menu podręczne](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)

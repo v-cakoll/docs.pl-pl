@@ -20,11 +20,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f7eda2b6761a825dcb2b24ae9f11b2e1262d7e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a99bd2336de41366d27c15e4bc4cfb2b2aff3cd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-document-overview"></a>Przegląd Dokument przepływu
 Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelności. Zamiast ustawiany jeden układ wstępnie zdefiniowane, dokumenty przepływu dynamicznie dostosować i ułożenia ich zawartość na podstawie czasu wykonywania zmiennych, takich jak rozmiar okna, rozdzielczość urządzenia i preferencje użytkownika opcjonalne. Ponadto przepływ dokumentów oferuje dokumentu zaawansowane funkcje, takie jak podział na strony i kolumn. Ten temat zawiera omówienie przepływu dokumentów i sposób ich tworzenia.  
@@ -68,7 +69,7 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
 ## <a name="flow-document-types"></a>Przepływ typów dokumentów  
  Wyświetlanie zawartości dokumentu przepływu i sposób wyświetlania jest zależne od tego, jak obiekt jest używana do hostowania zawartości przepływu. Istnieją cztery kontrolki, które obsługują wyświetlanie zawartości przepływu: <xref:System.Windows.Controls.FlowDocumentReader>, <xref:System.Windows.Controls.FlowDocumentPageViewer>, <xref:System.Windows.Controls.RichTextBox>, i <xref:System.Windows.Controls.FlowDocumentScrollViewer>. Formanty krótko opisano poniżej.  
   
- **Uwaga:** <xref:System.Windows.Documents.FlowDocument> jest wymagany do bezpośrednio zawartość śródwierszowa hosta, aby korzystać z wszystkich tych wyświetlania formantów <xref:System.Windows.Documents.FlowDocument> umożliwiające hosting zawartości przepływu.  
+ **Uwaga:** <xref:System.Windows.Documents.FlowDocument> jest wymagany do bezpośrednio zawartość śródwierszowa hosta, aby korzystać z wszystkich tych wyświetlania formantów <xref:System.Windows.Documents.FlowDocument> umożliwiające hosting zawartości przepływu.
   
 ### <a name="flowdocumentreader"></a>FlowDocumentReader  
  <xref:System.Windows.Controls.FlowDocumentReader>zawiera funkcje, które umożliwiają użytkownikowi dynamicznie wybrać różne tryby wyświetlania, w tym tryb wyświetlania (strony na a-time) jednej strony, dwa strony na pojedynczych (format księgi odczytu) wyświetlanie trybu i trybie przewijania ciągłego wyświetlania (nieograniczone od dołu). Aby uzyskać więcej informacji na temat trybów wyświetlania, zobacz <xref:System.Windows.Controls.FlowDocumentReaderViewingMode>. Jeśli nie potrzebujesz możliwości dynamicznie przełączać tryby wyświetlania różnych <xref:System.Windows.Controls.FlowDocumentPageViewer> i <xref:System.Windows.Controls.FlowDocumentScrollViewer> Podaj zawartości przeglądarek, które zostały usunięte w trybie przeglądania określonego jaśniejszego wagi przepływu.  
@@ -360,10 +361,10 @@ Przepływ dokumenty są przeznaczone do optymalizacji wyświetlania i czytelnoś
   
 ## <a name="see-also"></a>Zobacz też  
  [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [Omówienie modelu zawartości elementu TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [Przegląd modelu zawartości TextElement](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
  [RichTextBox — omówienie](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Przegląd tabeli](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Omówienie adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [Przegląd adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: df0d1c5f8bff9d4cb546378f281a44c696246553
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3f0a38c69dc286587e702b80ef4093bb98d78b5a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="usage-guidelines"></a>Wskazówki dotyczące użycia
 Ta sekcja zawiera wskazówki dotyczące używania popularne typy w publicznie interfejsów API. Dotyczy on bezpośredniego użycia wbudowanych typów Framework (np. serializacji atrybutów) i przeładowanie operatorów wspólnej.  
@@ -33,11 +36,11 @@ Ta sekcja zawiera wskazówki dotyczące używania popularne typy w publicznie in
  [Atrybuty](../../../docs/standard/design-guidelines/attributes.md)  
  [Kolekcje](/cpp/mfc/collections)  
  [Serializacja](../../../docs/standard/design-guidelines/serialization.md)  
- [Użycie zestawów System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
- [Operatory porównania](../../../docs/standard/design-guidelines/equality-operators.md)  
+ [Używanie zestawu System.Xml](../../../docs/standard/design-guidelines/system-xml-usage.md)  
+ [Operatory równości](../../../docs/standard/design-guidelines/equality-operators.md)  
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

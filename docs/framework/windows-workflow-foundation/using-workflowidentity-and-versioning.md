@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7378609d056ded8602df827254248cf8a0476e59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 02620abf421256b53fb5919b39f441f7346a2e7c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-workflowidentity-and-versioning"></a>Za pomocą właściwości WorkflowIdentity i kontroli wersji
 <xref:System.Activities.WorkflowIdentity>zapewnia sposób przepływu pracy z deweloperami aplikacji, aby skojarzyć nazwę i <xref:System.Version> z definicją przepływu pracy, a te informacje mają być skojarzone z wystąpieniem przepływu pracy utrwalonych. Informacje o tożsamości mogą posłużyć deweloperzy aplikacji przepływu pracy na potrzeby scenariuszy, takich jak side-by-side wykonywanie wielu wersji definicji przepływu pracy i udostępnia inne funkcje, takie jak aktualizacja dynamiczna podstawy. W tym temacie przedstawiono jako omówienie używania <xref:System.Activities.WorkflowIdentity> z <xref:System.Activities.WorkflowApplication> hosting. Aby uzyskać informacje na wykonanie side-by-side definicji przepływu pracy w usłudze przepływu pracy, zobacz [równoległe przechowywanie wersji w klasie WorkflowServiceHost](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md). Uzyskać informacji dotyczących aktualizacji dynamicznej, zobacz [aktualizacji dynamicznej](../../../docs/framework/windows-workflow-foundation/dynamic-update.md).  

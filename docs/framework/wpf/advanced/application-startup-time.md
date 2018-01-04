@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1e39bf6db28290b7cba600ea1d2012c58633587
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af07e1876666351d72eada56e7af3e787ccc90f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-startup-time"></a>Czas uruchamiania aplikacji
 Ilość czasu wymaganego do uruchomienia aplikacji WPF mogą się znacznie różnić. W tym temacie opisano różne techniki skracanie czasu uruchamiania postrzegana i rzeczywistych dla aplikacji Windows Presentation Foundation (WPF).  
@@ -137,6 +138,6 @@ Ilość czasu wymaganego do uruchomienia aplikacji WPF mogą się znacznie róż
  <xref:System.AppDomain>  
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
  <xref:System.Resources.ResourceManager>  
- [Dodaj ekranu powitalnego aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
- [Ngen.exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [Dodawanie ekranu powitalnego do aplikacji WPF](../../../../docs/framework/wpf/app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)  
+ [Ngen.exe (generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
  [\<generatePublisherEvidence > — Element](../../../../docs/framework/configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

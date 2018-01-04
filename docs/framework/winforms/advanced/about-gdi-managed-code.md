@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711d25c600c2144ad4b134984501f641be24ced2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 817f90194d73bf6608cccde0ce3917717d0b4878
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-gdi-managed-code"></a>Informacje o kodzie zarządzanym GDI+
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]jest to część systemu operacyjnego grafiki wektorowej dwuwymiarowa, przetwarzanie obrazu i typografii. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]zwiększa na [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (graficzny interfejs urządzenia dołączone do wcześniejszych wersji systemu Windows) przez dodawanie nowych funkcji i optymalizowanie istniejące funkcje.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/22/2017
  [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
  W tym artykule omówiono typu dostępnych obrazów i jak pracować z nimi.  
   
- [Systemy i transformacje współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
  Omówiono sposób przekształcania grafiki [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
 ## <a name="reference"></a>Tematy pomocy  

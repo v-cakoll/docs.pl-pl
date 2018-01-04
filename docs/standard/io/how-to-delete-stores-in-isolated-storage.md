@@ -25,11 +25,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 138d1688f22cdc3bfa542af5433b6dbf8139e840
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3ae04deeb8d23b496a9111b0d4b5b68e12ac1439
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-delete-stores-in-isolated-storage"></a>Porady: usuwanie danych z izolowanego magazynu
 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia dwie metody usuwania plików izolowanych magazynów:  
@@ -47,4 +50,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

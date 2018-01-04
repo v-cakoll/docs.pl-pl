@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 417fea4dcbb5a8d0a27f9605be19de5921aaf0ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ece6a5d2123bb118f11940081e3c1d939815a8ce
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>Jak użyć słownika zasobów zakresu aplikacji
 Ten przykład przedstawia sposób definiowania i użyć słownika zasobów niestandardowych zakresu aplikacji.  
@@ -54,5 +55,5 @@ Ten przykład przedstawia sposób definiowania i użyć słownika zasobów niest
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.ResourceDictionary>  
  <xref:System.Windows.Application.Resources%2A>  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Scalonych słownikach zasobów](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Połączone słowniki zasobów](../../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)

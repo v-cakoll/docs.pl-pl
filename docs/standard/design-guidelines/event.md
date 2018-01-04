@@ -20,11 +20,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e8dcd1003b3f93db733ece4f90340d1d98867d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a07392ba805b5f2a3913b01a15dd0e1668f0ccf7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="event-design"></a>Projekt zdarzeń
 Zdarzenia są najczęściej używane formę wywołania zwrotne (konstrukcji umożliwiających framework do wywołania do kodu użytkownika). Inne mechanizmy wywołania zwrotnego zawierać elementów członkowskich delegatów, wirtualne elementy członkowskie i oparty na używanie dodatków. Dane z badań użyteczność wskazania, że większość deweloperów wygodniejsze za pomocą zdarzeń, nie są one za pomocą innych mechanizmów wywołania zwrotnego. Zdarzenia są dobrze zintegrowane z usługą Visual Studio i wielu języków.  
@@ -79,5 +82,5 @@ Zdarzenia są najczęściej używane formę wywołania zwrotne (konstrukcji umo�
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania elementu członkowskiego](../../../docs/standard/design-guidelines/member.md)  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

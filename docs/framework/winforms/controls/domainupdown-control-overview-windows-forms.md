@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0692677b8ef596bb31b1869480603573a9ec98d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5a86dc6c56c3afff8d8a3a4ca2c5d5efa8eac1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.DomainUpDown> formant jest zasadniczo kombinację pola tekstowego, a para przyciski przenoszenia w górę lub w dół listy. Kontrolka Wyświetla i ustawia ciąg tekstowy, z listy dostępnych opcji. Użytkownik może wybrać ciąg, kilikając przyciski, aby przejść na liście, naciskając klawisze strzałek w górę i w dół lub wpisując ciąg zgodny element na liście. Jeden możliwości zastosowania dla tego formantu jest wybierania elementów z posortowane alfabetycznie listę nazw.  
@@ -38,4 +39,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.DomainUpDown> formant jest
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DomainUpDown>  
- [DomainUpDown — formant](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)
+ [DomainUpDown, kontrolka](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ee46c41d6f0f42bbb9f50bd5862f6eb076b34bb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a33e56b69a357694a1d1a23d5cd3c887c88cea37
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-drawingvisual-objects"></a>Użycie obiektów DrawingVisual
 Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingVisual> obiekty w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] visual warstwy.  
@@ -82,5 +83,5 @@ Ten temat zawiera omówienie sposobu użycia <xref:System.Windows.Media.DrawingV
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.DrawingVisual>  
  <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Testowanie w warstwie Visual trafień](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Test trafienia w warstwie wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)

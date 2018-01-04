@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f82b1ee3c769e4103f22d877ee399e62a778cbc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b10b2a0ec38a84aa281debf9a091689cac83dd8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-work-with-image-columns-in-the-windows-forms-datagridview-control"></a>Porady: praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows
 Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Windows.Forms.DataGridView> obrazu kolumn w interaktywnego interfejsu użytkownika (UI). W przykładzie pokazano również możliwości zmiany rozmiaru i Układ obrazu z <xref:System.Windows.Forms.DataGridViewImageColumn>.  
@@ -45,5 +46,5 @@ Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Windows.Form
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridViewImageColumn>  
- [Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
- [Porady: wyświetlanie obrazów w komórkach systemu Windows do formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+ [Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)  
+ [Instrukcje: wyświetlanie obrazów w komórkach kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)

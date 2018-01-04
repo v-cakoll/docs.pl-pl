@@ -19,11 +19,14 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b4cfa24da8083eac01275ad76f5c2db974b39a25
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 804f83d85206b5f49a0bea290f281b36e18bb847
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="thread-safety-in-regular-expressions"></a>Bezpieczeństwo wątków w wyrażeniach regularnych
 <xref:System.Text.RegularExpressions.Regex> Samej klasy jest wątku bezpieczne i modyfikować (tylko do odczytu). Oznacza to **Regex** obiektów można tworzyć w którymkolwiek wątku i udostępniane między wątkami; metod może być wywołana z dowolnego wątku i nigdy nie zmienia żadnych stan globalny.  

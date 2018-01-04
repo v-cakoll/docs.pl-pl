@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: d65448bbbed350eb3f75ff2a26ee9097d31eb481
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0754ba124cbc37c6c6e3aedd90dc860e16c21d73
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (może być ponownie używane klasy podstawowe i interfejsy dla modelu domeny)
 
@@ -28,16 +31,16 @@ Jest to typ, kopiowania i wklejania ponownego użycia wielu deweloperów udziale
 
 ## <a name="the-custom-entity-base-class"></a>Niestandardowe klasy podstawowej jednostki
 
-Następujący kod jest przykładem klasy podstawowej jednostki lokalizację kodu, który może służyć samo przez osobę domeny, takich jak identyfikator jednostki [Operatory równości](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal)itp.
+Następujący kod jest przykładem klasy podstawowej jednostki lokalizację kodu, który może służyć samo przez osobę domeny, takich jak identyfikator jednostki [Operatory równości](/cpp/cpp/equality-operators-equal-equal-and-exclpt-equal), listy zdarzeń domeny na jednostki itp.
 
 ```csharp
-// ENTITY FRAMEWORK CORE 1.1
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
 public abstract class Entity
 {
     int? _requestedHashCode;
-    int _Id;
-
-    public virtual int Id
+    int _Id;    
+    private List<INotification> _domainEvents;
+    public virtual int Id 
     {
         get
         {
@@ -47,6 +50,18 @@ public abstract class Entity
         {
             _Id = value;
         }
+    }
+
+    public List<INotification> DomainEvents => _domainEvents;        
+    public void AddDomainEvent(INotification eventItem)
+    {
+        _domainEvents = _domainEvents ?? new List<INotification>();
+        _domainEvents.Add(eventItem);
+    }
+    public void RemoveDomainEvent(INotification eventItem)
+    {
+        if (_domainEvents is null) return;
+        _domainEvents.Remove(eventItem);
     }
 
     public bool IsTransient()
@@ -68,13 +83,13 @@ public abstract class Entity
         else
             return item.Id == this.Id;
     }
-  
+
     public override int GetHashCode()
     {
         if (!IsTransient())
         {
             if (!_requestedHashCode.HasValue)
-                _requestedHashCode = this.Id.GetHashCode() \^ 31;
+                _requestedHashCode = this.Id.GetHashCode() ^ 31; 
             // XOR for random distribution. See:
             // http://blogs.msdn.com/b/ericlippert/archive/2011/02/28/guidelines-and-rules-for-gethashcode.aspx
             return _requestedHashCode.Value;
@@ -82,7 +97,6 @@ public abstract class Entity
         else
             return base.GetHashCode();
     }
-
     public static bool operator ==(Entity left, Entity right)
     {
         if (Object.Equals(left, null))
@@ -90,7 +104,6 @@ public abstract class Entity
         else
             return left.Equals(right);
     }
-
     public static bool operator !=(Entity left, Entity right)
     {
         return !(left == right);
@@ -98,22 +111,32 @@ public abstract class Entity
 }
 ```
 
+Poprzedni kod przy użyciu listy zdarzeń domeny na jednostkę opisano w kolejnych sekcjach podczas koncentrujących się na zdarzenia domeny. 
+
 ## <a name="repository-contracts-interfaces-in-the-domain-model-layer"></a>Kontrakty repozytorium (interfejsy) w warstwie modelu domeny
 
-Kontrakty repozytorium są po prostu interfejsów .NET, które express wymagania umowy repozytoriów do zastosowania w przypadku każdego agregacji. Repozytoria się z kodem EF podstawowe lub inne zależności infrastruktury i kodu, nie może być realizowana w ramach modelu domeny; repozytoria tylko powinien implementować interfejsów, które należy zdefiniować.
+Kontrakty repozytorium są po prostu interfejsów .NET, które express wymagania umowy repozytoriów do zastosowania w przypadku każdego agregacji. 
+
+Repozytoria się z kodem EF podstawowe lub inne zależności infrastruktury i kodu (Linq, SQL, itp.), nie może być realizowana w ramach modelu domeny; repozytoria tylko powinien implementować interfejsów, które należy zdefiniować. 
 
 Wzorzec związane z tym rozwiązaniem (wprowadzenie do interfejsów repozytorium warstwy modelu domeny) jest wzorzec oddzielone interfejsu. Jako [wyjaśniono](http://www.martinfowler.com/eaaCatalog/separatedInterface.html) przez Fowler pole "Użyj interfejsu oddzielone można zdefiniować interfejs w jednej pakietu, ale ją wdrożyć w innym. W ten sposób klient, który wymaga zależności do interfejsu może być dostarczanie implementacji."
 
 Po wzorzec oddzielone interfejs umożliwia ma zależności od wymagań zdefiniowanych w modelu domeny, ale nie bezpośrednie zależności do infrastruktury/trwałości warstwy aplikacji (w tym przypadku projekt interfejsu API sieci Web do mikrousługi) warstwy. Ponadto iniekcji zależności można użyć do izolowania implementację, która jest zaimplementowana w infrastrukturze / warstwę trwałości przy użyciu repozytoriów.
 
-Na przykład w poniższym przykładzie z interfejsem IOrderRepository zdefiniowano jakie operacje OrderRepository klasy należy zaimplementować w warstwie infrastrukturze. Bieżąca implementacja aplikacji kod po prostu musi dodać kolejności do bazy danych, ponieważ zapytania są następujące podziału, podejście CQS i aktualizacje zleceń nie zaimplementowane.
+Na przykład w poniższym przykładzie z interfejsem IOrderRepository zdefiniowano jakie operacje OrderRepository klasy należy zaimplementować w warstwie infrastrukturze. Bieżąca implementacja aplikacji kod właśnie musi dodać lub zaktualizować zamówień w bazie danych, ponieważ zapytania są podzielone na następujące podejście CQRS uproszczone.
 
 ```csharp
+// Defined at IOrderRepository.cs
 public interface IOrderRepository : IRepository<Order>
 {
     Order Add(Order order);
+        
+    void Update(Order order);
+
+    Task<Order> GetAsync(int orderId);
 }
 
+// Defined at IRepository.cs (Part of the Domain Seedwork)
 public interface IRepository<T> where T : IAggregateRoot
 {
     IUnitOfWork UnitOfWork { get; }

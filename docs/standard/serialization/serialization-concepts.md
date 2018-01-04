@@ -8,11 +8,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f442f450aea5833fd21e57980c842cc1559ccc1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 76946ed1b714ba0bd01c79bb772524c84cf8b2ca
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-concepts"></a>Pojęcia dotyczące serializacji
 Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są, aby zachować stan obiektu na nośniku, dokładna kopia może zostać ponownie utworzone na późniejszym etapie, a aby wysłać obiekt przez wartość z domeny w jednej aplikacji na inny. Na przykład serializacji służy do zapisywania stanu sesji w programie ASP.NET i skopiować obiekty do Schowka w formularzach systemu Windows. On również używany łącząc do przekazywania obiektów przez wartość z domeny jedną aplikację do innego.
@@ -38,5 +41,5 @@ Gdy obiekt jest pochodną `MarshalByRefObject`, odwołanie do obiektu jest przek
  [Obiekty zdalnego](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
  Opis różnych metod komunikacji dostępnych w programie .NET Framework do komunikacji zdalnej.  
   
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Opisuje mechanizm serializacji XML i protokołu SOAP, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.

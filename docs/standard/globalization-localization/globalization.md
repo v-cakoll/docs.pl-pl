@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a60284bf2db8f47dd17c04fad5cbd6db4970a8a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 357d18843af0af2869d0ec98def6c733e51f9a4c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalization"></a>Globalizacja
 Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsługuje interfejsy zlokalizowanych i dane regionalne dla użytkowników w wielu kultur. Przed rozpoczęciem fazy projektowania, należy określić, które kultur aplikacji będzie obsługiwać. Mimo że aplikacja jest przeznaczony dla jednego kultury lub regionu, jako jego domyślny, można projektować i zapisać go tak, aby łatwo może zostać rozszerzony do użytkowników w innych kultur lub regionach.  
@@ -377,5 +380,5 @@ Globalizacja obejmuje projektowanie i tworzenie aplikacji gotowe, który obsług
 -   Użytkownik może dostosować ustawienia specyficzne dla kultury przy użyciu **Region i język** aplikacji w Panelu sterowania. Podczas tworzenia wystąpienia <xref:System.Globalization.CultureInfo> obiektu, można określić, czy odzwierciedla te modyfikacje użytkownika, wywołując <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> konstruktora. Zazwyczaj dla aplikacji przez użytkownika końcowego można powinna być zgodna preferencje użytkownika tak, aby użytkownik zobaczy z danymi w formacie, który użytkownik oczekuje.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)  
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)  
  [Najlepsze rozwiązania dotyczące używania ciągów](../../../docs/standard/base-types/best-practices-strings.md)

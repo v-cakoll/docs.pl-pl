@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3012afc118420a83c869785d26c28f1eee969cb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e821bd95679372fd169b7880e969fd10b5d03c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>Jak wykryć, czy wtyczka WPF dla Firefox jest zainstalowana
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Dodatek plug-in dla przeglądarki Firefox umożliwia [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] utrata plików XAML, aby uruchomić w przeglądarce Mozilla Firefox. Ten temat zawiera skrypt zapisywane w kodzie HTML i JavaScript, które Administratorzy mogą używać do określenia, czy jest zainstalowany dodatek plug-in dla przeglądarki Firefox WPF.  
@@ -73,6 +74,6 @@ ms.lasthandoff: 11/21/2017
  `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wykryj, czy jest zainstalowany program .NET Framework 3.0](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [Wykryj, czy jest zainstalowany program .NET Framework 3.5](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Omówienie aplikacje przeglądarki XAML w WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)
+ [Wykrywanie, czy wtyczka .NET Framework 3.0 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [Wykrywanie, czy wtyczka .NET Framework 3.5 jest zainstalowana](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Aplikacje przeglądarek WPF XAML — omówienie](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b340bfb2d9106827d39a3253f65f3c2419bd94
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a4777a6cb30f641faf2305bc6d8bca55d243c94b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-technology-summary"></a>Podsumowanie informacji o technologii formantów ToolStrip
 Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które obsługują jej zastosowania.  
@@ -129,5 +130,5 @@ Ten temat zawiera podsumowanie informacji o `ToolStrip` kontroli i klasy, które
  <xref:System.Windows.Forms.ToolStrip>, <xref:System.Windows.Forms.MenuStrip>, I <xref:System.Windows.Forms.StatusStrip> let przepełnienie elementów. Efekt jest podobny do sposobu te elementy działają na paskach narzędzi Microsoft Office.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip — architektura formantu](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
+ [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip, kontrolka — architektura](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)

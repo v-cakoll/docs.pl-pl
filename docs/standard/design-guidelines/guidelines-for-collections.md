@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9eea60dafef508748df53e23c211f5778250e7f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
 Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pewne cechy wspólne mogą zostać uwzględnione w kolekcji. Prawie zawsze jest ona odpowiednia dla takich typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy można kolekcje.  
@@ -137,5 +140,5 @@ Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pew
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówki dotyczące użycia](../../../docs/standard/design-guidelines/usage-guidelines.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Zalecenia dotyczące użytkowania](../../../docs/standard/design-guidelines/usage-guidelines.md)

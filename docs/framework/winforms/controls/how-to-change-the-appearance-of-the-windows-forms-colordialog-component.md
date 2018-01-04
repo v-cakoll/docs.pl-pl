@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11edb1019b8fedde368d712ab27dd0954a2de50a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af3a9ec6ba301a27a7940bc752ffaf12f345abec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>Porady: zmienianie wyglądu składnika ColorDialog formularzy systemu Windows
 Możesz skonfigurować wygląd formularzy systemu Windows <xref:System.Windows.Forms.ColorDialog> składnika o liczbie jego właściwości. Okno dialogowe ma dwie sekcje —, który przedstawia kolorów podstawowych i taki, który umożliwia użytkownikowi zdefiniowanie kolorów niestandardowych.  
@@ -61,5 +62,5 @@ Możesz skonfigurować wygląd formularzy systemu Windows <xref:System.Windows.F
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ColorDialog>  
- [Colordialog — składnik](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
- [Informacje o składniku ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)
+ [ColorDialog, składnik](../../../../docs/framework/winforms/controls/colordialog-component-windows-forms.md)  
+ [ColorDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)

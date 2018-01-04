@@ -26,11 +26,14 @@ caps.latest.revision: "54"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a391ee54aaeaf007afcb6aacdb9376820950e89e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych. Ciąg niestandardowego formatu liczbowego jest dowolny ciąg formatu, który nie jest [ciągu standardowego formatu liczbowego](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
@@ -237,7 +240,7 @@ Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jed
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Globalization.NumberFormatInfo>  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
- [Porady: uzupełnianie liczby zerami prowadzącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

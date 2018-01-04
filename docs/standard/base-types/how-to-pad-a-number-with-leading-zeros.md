@@ -21,11 +21,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6266807a01e8119ae1410a1ba09cab55c788b4d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ea854f69e59c614d03f10ff546bd3181f5b51ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-pad-a-number-with-leading-zeros"></a>Porady: uzupełnianie liczby zerami prowadzącymi
 Można dodać zera wiodące na liczbę całkowitą za pomocą "D" [ciągu standardowego formatu liczbowego](../../../docs/standard/base-types/standard-numeric-format-strings.md) z Specyfikator dokładności. Można dodać zera wiodące do liczby całkowitej i liczby zmiennoprzecinkowe przy użyciu [ciąg niestandardowego formatu liczbowego](../../../docs/standard/base-types/custom-numeric-format-strings.md). W tym temacie pokazano, jak uzupełnianie liczby zerami prowadzącymi przy użyciu obu metod.  

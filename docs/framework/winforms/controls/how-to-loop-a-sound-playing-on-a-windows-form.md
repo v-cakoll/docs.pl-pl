@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e61a15a7a249a90ce9eca035ebe6fd67275bb74
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f7ade624f57f58a5ec91a5d993375c73d1cc26fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>Porady: odtwarzanie dźwięku w pętli w formularzu systemu Windows
 Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingButton_Click` uruchamia program obsługi zdarzeń, wszystkie obecnie odtwarzanie zatrzymuje dźwięku. Jeśli żaden dźwięk jest odtwarzany, nic się nie dzieje.  
@@ -65,5 +66,5 @@ Poniższy przykład kodu odtwarza dźwięk wielokrotnie. Gdy kod w `stopPlayingB
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Media.SoundPlayer.PlayLooping%2A>  
- [Porady: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
- [Przegląd klasy SoundPlayer](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+ [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)  
+ [SoundPlayer, klasa — omówienie](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)

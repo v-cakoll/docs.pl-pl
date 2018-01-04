@@ -14,11 +14,11 @@ ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e8e9cd761263b3b61a4e6d3e33c5f7f875be7a1d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6cdb7cff2221930113d6b49a640da0844f175f1b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="imports-visual-basic"></a>/imports (Visual Basic)
 Importuje przestrzeni nazw z określonego zestawu.  
@@ -42,7 +42,7 @@ Importuje przestrzeni nazw z określonego zestawu.
   
 |Aby ustawić/Import w Visual Studio zintegrowane środowisko programistyczne|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Kliknij przycisk **odwołania** kartę.<br />3.  Wprowadź nazwę przestrzeni nazw w polu obok **dodać importu użytkownika** przycisku.<br />4.  Kliknij przycisk **dodać importu użytkownika** przycisku.|  
+|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **odwołania** kartę.<br />3.  Wprowadź nazwę przestrzeni nazw w polu obok **dodać importu użytkownika** przycisku.<br />4.  Kliknij przycisk **dodać importu użytkownika** przycisku.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod kompiluje kiedy `/imports:system` jest określona.  
@@ -51,5 +51,5 @@ Importuje przestrzeni nazw z określonego zestawu.
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [Referencje i Importy — instrukcja](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [Referencje i instrukcja Imports](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)  
+ [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

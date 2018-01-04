@@ -30,11 +30,12 @@ caps.latest.revision: "57"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2a03ec6feef26c8c3666ba5e4ff946ba237c177f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
 W tym temacie opisano funkcje języka XAML oraz przedstawiono sposób użycia XAML do zapisu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie szczegółowo opisano XAML wykonane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML sam to pojęcie języka większych niż [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -338,9 +339,9 @@ W tym temacie opisano funkcje języka XAML oraz przedstawiono sposób użycia XA
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md) zawiera więcej informacji o wszechstronność właściwości w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i pojęcia związane z właściwości zależności.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Składnia języka XAML szczegółowo](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML oraz klas niestandardowych dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Przestrzeń nazw XAML (x:) — funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Drzewa na platformie WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)

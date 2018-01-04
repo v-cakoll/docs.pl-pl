@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4de910e2e66bc480abefe228bd183fe95270fb69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5e9d7fbf42f2ed9b8f68b1faf2e2425050b62eaa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-quotas"></a>Przydziały dla transportu
 Przydziały dla transportu są mechanizm zasad dotyczących decydowania, kiedy korzysta z połączenia nadmiernego zasobów. Limit przydziału jest stały limit, który uniemożliwia użycie dodatkowych zasobów, po przekroczeniu przydziału wartości. Przydziały dla transportu zapobiec złośliwe lub przypadkowe "odmowa usługi".  

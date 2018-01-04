@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3145df6517df9db580bfcc5d67edd9d1a61f290b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2b8135a55c537f480e0d595e127c2cad55e977ca
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespace-support-in-the-dom"></a>Obsługa Namespace w modelu DOM
 XML modelu DOM (Document Object) jest całkowicie przestrzeni nazw aware. Obsługiwane są tylko dokumenty obsługujących przestrzeń nazw XML. Sieci World Wide Web konsorcjum W3C Określa, czy aplikacje modelu DOM, które implementują poziomu 1 może być nie rozpoznający — przestrzeń nazw i funkcje DOM poziomu 2 rozpoznają przestrzeni nazw. Jednak są wszystkie funkcje w modelu DOM XML obsługujących przestrzeń nazw, niezależnie od tego, czy metoda jest z poziomu 1 lub poziom 2 DOM zalecenie.  
@@ -33,4 +36,4 @@ XML modelu DOM (Document Object) jest całkowicie przestrzeni nazw aware. Obsłu
 -   Jeśli zostanie znaleziony dwukropek, nazwa jest podzielony na dwie części na podstawie położenia pierwszym znakiem dwukropka. Prefiks jest ustawiona na ciąg znaleziono przed dwukropkiem, a nazwa lokalna jest ustawiona na ciąg po dwukropkiem. Dla metod, które nie przyjmują wartości NamespaceURI, jego identyfikator NamespaceURI nie został rozwiązany i pozostanie ustawiony na pusty ciąg. W przeciwnym razie jego identyfikator NamespaceURI ma ustawioną wartość ciągu przekazany do metody. Jeśli zdefiniowano prefiksu, a następnie **zapisać** — metoda i **InnerXml** i **OuterXml** właściwości kończyć się niepowodzeniem.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

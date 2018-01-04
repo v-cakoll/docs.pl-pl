@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8e1d808d4daf91b5ff89b05cab8359c90090f293
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 829e9f2bcf909bee41f53b4b7cabbb0803e77963
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>Instrukcje: Tworzenie usługi zwracającej dowolne dane za pomocą modelu programowania protokołu HTTP sieci Web w programie WCF
 Czasami deweloperzy musi mieć pełną kontrolę nad jak dane są zwracane z operacji usługi. Dotyczy to sytuacji, gdy operacji usługi musi zwrócić dane w formacie nie jest obsługiwana przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W tym temacie omówiono przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] modelu programowania pakietu sieci WEB HTTP do tworzenia takiej usługi. Ta usługa ma jedną operację, która zwraca strumienia.  
@@ -186,4 +187,4 @@ namespace RawImageService
 -   W przypadku kompilowania kodu próbki kodu odwołania System.ServiceModel.dll i System.ServiceModel.Web.dll.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Model programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c9b707108d5849db57dcebfb4cb1f7b18378bff0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3c87fa08a698350d601f72d5d19ef353bd4257a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation"></a>Federacja
 Ten temat zawiera krótki przegląd koncepcji zabezpieczeń. Opisano również [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę wdrażania architektury zabezpieczeń. Przykładową aplikację prezentującą federacyjnego, zobacz [Federacja — przykład](../../../../docs/framework/wcf/samples/federation-sample.md).  
@@ -300,4 +301,4 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  Zabezpieczeń zawiera jasny podział odpowiedzialności i ułatwia tworzenie architektur bezpiecznego, skalowalnego usługi. Jako platformę umożliwiającą tworzenie i wdrażanie aplikacji rozproszonych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia macierzystą obsługę wdrażania zabezpieczeń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md)
+ [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)

@@ -13,11 +13,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: ed48191ee397bb5f892a7afba6dfbfa2d06e1045
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 
@@ -58,7 +61,7 @@ W tym artykule:
     
     * [Zdarzenia](#events)
     
-    * [Przeciążenia](#overloads)
+    * [Overloads](#overloads)
     
     * [Wyjątki](#exceptions)
     
@@ -192,8 +195,8 @@ Elementy członkowskie | [Ogólnie rzecz biorąc wpisz elementy członkowskie](#
 Konwencje nazewnictwa | [Konwencje nazewnictwa](#naming-conventions) | Zestawy postępuje zgodnie z załącznikiem 7 z techniczne raportu 15 Unicode Standard3.0 regulujące zestaw znaków mogą uruchomić i zawarte w identyfikatorach dostępnych online w [formuły normalizacji Unicode](http://www.unicode.org/unicode/reports/tr15/tr15-18.html). Identyfikatory jest w formacie canonical zdefiniowane przez Unicode normalizacji formularza C. Do celów ze specyfikacją CLS, identifiersare dwa takie same, jeśli ich mapowania małe litery (zgodnie z instrukcjami w Unicode niezależne od ustawień regionalnych, jeden do jednego małe mapowania) są takie same. Oznacza to, że dla dwóch identyfikatorów wziąć pod uwagę różne zgodnie ze specyfikacją CLS są różnią się tylko w ich przypadku. Jednak aby można było zastąpić dziedziczone definicji interfejsu wiersza polecenia wymaga dokładne kodowanie oryginalnej deklaracji. | 4
 Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Nazwy wszystkich wprowadzonych w zakresie zgodne ze specyfikacją CLS są różne niezależnie od rodzaju, z wyjątkiem przypadków, w których nazwy są identyczne i rozwiązane za pomocą przeciążenia. Oznacza to, że chociaż CTS pozwala na jednym typie, do korzystania z tej samej nazwy dla metody i pole, ze specyfikacją CLS nie. | 5
 Przeciążenie | [Konwencje nazewnictwa](#naming-conventions) | Pola i typy zagnieżdżone powinna różnić się przez porównanie identyfikator samodzielnie, eventhough CTS pozwala odrębnych podpisów rozróżnienie. Metody, właściwości i zdarzenia, które mają taką samą nazwę (przez porównanie identyfikator) może różnić się nie tylko typem zwracanym, z wyjątkiem określonych w 39 reguły ze specyfikacją CLS | 6
-Przeciążenie | [Przeciążenia](#overloads) | Tylko właściwości i metody może być przeciążony. | 37
-Przeciążenie | [Przeciążenia](#overloads) |Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów ich parametrów, z wyjątkiem operatory konwersji o nazwie `op_Implicit` i `op_Explicit`, które również można przeciążać na podstawie ich zwracanego typu. | 38
+Przeciążenie | [Overloads](#overloads) | Tylko właściwości i metody może być przeciążony. | 37
+Przeciążenie | [Overloads](#overloads) |Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów ich parametrów, z wyjątkiem operatory konwersji o nazwie `op_Implicit` i `op_Explicit`, które również można przeciążać na podstawie ich zwracanego typu. | 38
 Przeciążenie | -- | Co najmniej dwie metody zgodne ze specyfikacją CLS zadeklarowana w typie ma tego samego nameand, dla określonej grupy wystąpień typu mają ten sam parametr i typy zwracane, a następnie tych metod jest semantycznie równoważne w tych wystąpień typu. | 48
 Właściwości | [Właściwości](#properties) | Metody, które implementują metody pobierającej i ustawiającej właściwość jest oznaczona jako `SpecialName` w metadanych. | 24
 Właściwości | [Właściwości](#properties) | Metody dostępu właściwości zostaje być wszystkie statyczne, wszystkie wirtualne lub wszystkie można instancji. | 26

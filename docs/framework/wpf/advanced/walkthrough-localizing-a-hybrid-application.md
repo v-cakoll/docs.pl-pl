@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5e1425eafd0f1663aaf82185e0f32bf2a3bea509
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2d46ea30a0e6a509d6a6cac6d8686e5f5307f0cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
 W tym przewodniku przedstawiono sposób localize [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-hybrydowych aplikacji.  
@@ -44,7 +45,7 @@ W tym przewodniku przedstawiono sposób localize [!INCLUDE[TLA2#tla_winclient](.
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../../includes/vs-orcas-long-md.md)].,  
   
 ## <a name="creating-the-windows-forms-host-project"></a>Tworzenie projektu hosta formularzy systemu Windows  
  Pierwszym krokiem jest utworzenie [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji projektu i dodać [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] element z zawartością, która będzie localize.  

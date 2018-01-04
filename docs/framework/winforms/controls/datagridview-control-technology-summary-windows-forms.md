@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f172d28e5f03e1177db6ad1bd9e98f4c68267765
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e074229e4fe344633d277b77b6f7db881c154d8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>Podsumowanie informacji o technologii formantów DataGridView (Formularze systemu Windows)
 Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klasy, które obsługują jej zastosowania.  
@@ -71,6 +72,6 @@ Ten temat zawiera podsumowanie informacji o `DataGridView` kontroli i klasy, kt�
  <xref:System.Windows.Forms.DataGridView> Formant może działać Zamknij razem z <xref:System.Windows.Forms.BindingSource> składnika. Ten składnik została zaprojektowana jako podstawowego źródła danych formularza. Można zarządzać interakcji między <xref:System.Windows.Forms.DataGridView> typ źródła danych, niezależnie od danych i kontroli źródła.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie DataGridView](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
- [DataGridView — architektura formantu](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [DataGridView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)  
+ [DataGridView, kontrolka — architektura](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)

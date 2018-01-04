@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce02b772bacf2115a1bb74039fdff30a46fea8b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6cbea4316db159582790f371844f6e65fc22fd5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="merged-resource-dictionaries"></a>Połączone słowniki zasobów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zasoby obsługuje funkcji słownika zasobów scalone. Ta funkcja udostępnia sposób definiowania zasobów część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji poza skompilowanych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacji. Następnie można udostępniać zasoby w aplikacjach i są również więcej wygodny sposób izolowany lokalizacji.  
@@ -63,6 +64,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.ResourceDictionary>  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Zasoby i kod](../../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Zasób w aplikacji WPF, zawartość i plików danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+ [Zasoby aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)

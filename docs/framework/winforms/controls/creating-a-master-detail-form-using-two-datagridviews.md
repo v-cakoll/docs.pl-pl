@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d213d70d6f12cb8b574f07457c1b20317670d8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Wskazówki: tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows
 Jedną z najbardziej typowych scenariuszy stosowania <xref:System.Windows.Forms.DataGridView> formant jest *wzorzec/szczegół* formularza, w którym jest wyświetlany relacji nadrzędny/podrzędny między dwiema tabelami bazy danych. Wybierania wierszy w tabeli głównej powoduje, że tabela szczegółów aktualizowania przy użyciu odpowiednich danych podrzędnych.  
@@ -88,6 +89,6 @@ Jedną z najbardziej typowych scenariuszy stosowania <xref:System.Windows.Forms.
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [Wyświetlanie danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
- [Porady: Tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
+ [Wyświetlanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: tworzenie formularza wzorzec/szczegół za pomocą dwóch kontrolek DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/create-a-master-detail-form-using-two-datagridviews.md)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)

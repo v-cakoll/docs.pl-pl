@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a2c2929f37895f0dee5529a5bf90f84146585032
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5cf2091d50433bb936b3d4976d1c3eabea73edc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>Jak walidować i scalać PrintTickets
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [Schematu drukowania](http://go.microsoft.com/fwlink/?LinkId=186397) obejmuje elastyczny i rozszerzalny <xref:System.Printing.PrintCapabilities> i <xref:System.Printing.PrintTicket> elementy. Pierwsza itemizes możliwości drukarki, a drugie Określa, jak urządzenia należy używać tych funkcji w odniesieniu do określonej sekwencji dokumentów, pojedynczy dokument lub pojedynczej strony.  
@@ -74,6 +75,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Printing.EnumeratedPrintQueueTypes>  
  <xref:System.Printing.PrintQueue>  
  <xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Drukowanie schematu](http://go.microsoft.com/fwlink/?LinkId=186397)

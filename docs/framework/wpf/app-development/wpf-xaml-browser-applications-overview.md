@@ -21,11 +21,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 58ed9a97d9a1eb09ccbcf832c62bbdfb990c7838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -197,5 +198,5 @@ ms.lasthandoff: 11/21/2017
  Ponadto ulepszone współbieżności [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] sekwencji pobierania poprawia czas rozpoczęcia przez maksymalnie 10 procent. Po [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] pliki do pobrania i sprawdza poprawność manifestów, uruchamia pobierania aplikacji i uruchamia pasek postępu do aktualizacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie programu Visual Studio, aby debugować aplikacja przeglądarki XAML do wywoływania usługi sieci Web](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [Konfigurowanie w programie Visual Studio debugowania aplikacji przeglądarki XAML w celu wywoływania usługi internetowej](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
  [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

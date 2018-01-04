@@ -39,11 +39,12 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3323efa3306fd55d7c1d43cbc6eeaaf846e373ff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji autonomicznych przy użyciu systemu windows. Głównym celem okna jest zawartość hosta, wizualizuje danych, które umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemu windows w autonomicznej aplikacji.  
@@ -341,13 +342,13 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
  Jeśli chcesz, szerokość i wysokość okna mają rozmiar, który pasuje do rozmiaru okna elementu zawartości, można użyć <xref:System.Windows.Window.SizeToContent%2A> właściwość, która ma następujące wartości:  
   
--   <xref:System.Windows.SizeToContent.Manual>. Żadnego skutku (ustawienie domyślne).  
+-   <xref:System.Windows.SizeToContent.Manual>., Żadnego skutku (ustawienie domyślne).  
   
--   <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+-   <xref:System.Windows.SizeToContent.Width>., Dopasuj do szerokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
--   <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
+-   <xref:System.Windows.SizeToContent.Height>., Dopasuj do wysokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do zawartości szerokość i wysokość, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, a ustawienie obu <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>., Dopasuj do zawartości szerokość i wysokość, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, a ustawienie obu <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
  W poniższym przykładzie przedstawiono okno to automatycznie rozmiary dopasowana do jego zawartości, w pionie i w poziomie, przy pierwszym wyświetleniu.  
   
@@ -506,5 +507,5 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
  <xref:System.Windows.MessageBox>  
  <xref:System.Windows.Navigation.NavigationWindow>  
  <xref:System.Windows.Application>  
- [Przegląd pól okna dialogowego](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [Tworzenie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
+ [Okna dialogowe — omówienie](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
+ [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)

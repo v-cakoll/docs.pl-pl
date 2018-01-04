@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 19fd82daabd5ed12776b2deee6bc850529a6ef23
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 284c3b6788fd43a10d65cfa8bd6c032e4b1e1cd6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]aplikacje często są zależne od plików, które zawierają dane inne niż wykonywalne, takich jak [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], obrazy, wideo i audio. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]oferuje obsługę specjalne Konfigurowanie, identyfikowanie i używanie tych typów plików danych, które są nazywane pliki danych aplikacji. Ta obsługa dotyczy tego określonego zestawu danych typów plików aplikacji, w tym:  
@@ -249,4 +250,4 @@ ms.lasthandoff: 10/22/2017
  Po zmianie typu kompilacji pliku danych aplikacji, należy przebudować całej aplikacji, aby upewnić się, że te zmiany zostaną zastosowane. Jeśli tylko skompilowania aplikacji, zmiany nie zostaną zastosowane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Identyfikatory URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
+ [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)

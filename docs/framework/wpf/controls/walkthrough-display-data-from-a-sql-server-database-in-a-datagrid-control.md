@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c89ed9425920602f80a2407b7529b3eb215a2e3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid
 W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświetlić dane w <xref:System.Windows.Controls.DataGrid> formantu. ADO.NET Entity Framework umożliwia tworzenie klasy jednostki, które reprezentują dane i użyć LINQ, aby zapisać kwerendę, która pobiera określone dane z klasy jednostka.  
@@ -31,7 +32,7 @@ W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświe
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].,  
   
 -   Dostęp do działającego wystąpienia programu SQL Server lub SQL Server Express zawierający przykładową bazę danych AdventureWorks do niego dołączony. Możesz pobrać z bazy danych AdventureWorks z [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
   

@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b57cac34009e13c27c6d34a0ab402f9ecbe08305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 91db5cf75053f7a9b343036345a97d8084ae38fb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="threads-and-threading"></a>Wątki i wątkowość
 Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działają procesów. Wątki są jednostkę podstawową, system operacyjny przydziela czas procesora i więcej niż jeden wątek może wykonywania kodu wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet i zestaw struktur, które system używa zapisać kontekstu wątku, dopóki nie zostanie określony. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonywanie wątku zestaw rejestrów Procesora i stosu, w tym do przestrzeni adresowej procesu hosta wątku.  
@@ -100,4 +103,4 @@ Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działaj�
  <xref:System.Threading.ThreadPool>  
  <xref:System.ComponentModel.BackgroundWorker>  
  [Synchronizowanie danych na potrzeby wielowątkowości](../../../docs/standard/threading/synchronizing-data-for-multithreading.md)  
- [Zarządzana Pula wątków](../../../docs/standard/threading/the-managed-thread-pool.md)
+ [Zarządzana pula wątków](../../../docs/standard/threading/the-managed-thread-pool.md)

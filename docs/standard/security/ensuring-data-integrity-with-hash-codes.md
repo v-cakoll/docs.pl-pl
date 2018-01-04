@@ -24,11 +24,14 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5d54a608ae87a1b453b4fa2b4b351ac5fc9f068
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fcede920b0e57dee0449d8ff6d7c935b177dcbcd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>Zapewnianie integralności danych za pomocą wartości skrótu
 Wartość skrótu jest wartość liczbową o stałej długości, który unikatowo identyfikuje dane. Wartości skrótu reprezentują dużych ilości danych jako dużo mniejsze wartości liczbowe, dlatego są one używane z podpisami cyfrowymi. Wartość skrótu można podpisać efektywniej niż podpisywania wyższej wartości. Wartości skrótu są także przydatne do sprawdzania integralności danych przesyłanych za pośrednictwem niezabezpieczonych kanałów. Wartość skrótu odebranych danych można porównać wartości skrótu danych jako został wysłany do określenia, czy dane zostało zmienione.  

@@ -15,11 +15,11 @@ ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 99f5129d5cb43cddfb17731f337a72fae22d3626
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0bc2f5c2dca1fbd6039f10ddd6204673f60a679d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="yield-statement-visual-basic"></a>Yield — Instrukcja (Visual Basic)
 Wysyła następnego elementu kolekcji do `For Each...Next` instrukcji.  
@@ -47,7 +47,7 @@ Yield expression
   
  "Yield" nie jest słowem zastrzeżonym i ma specjalne znaczenie tylko wtedy, gdy jest on używany w `Iterator` funkcji lub `Get` dostępu.  
   
- Aby uzyskać więcej informacji o funkcje iteracyjne i `Get` metod dostępu, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Aby uzyskać więcej informacji o funkcje iteracyjne i `Get` metod dostępu, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="iterator-functions-and-get-accessors"></a>Funkcje iteracyjne i metody dostępu Get  
  Deklaracja funkcji iteracyjnej lub `Get` akcesora musi spełniać następujące wymagania:  
@@ -60,7 +60,7 @@ Yield expression
   
  Funkcji iteracyjnej nie może wystąpić w zdarzenia, konstruktora wystąpienia, statycznego konstruktora lub destruktora statycznych.  
   
- Funkcji iteracyjnej można funkcji anonimowej. Aby uzyskać więcej informacji, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Funkcji iteracyjnej można funkcji anonimowej. Aby uzyskać więcej informacji, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="exception-handling"></a>Obsługa wyjątków  
  A `Yield` instrukcja może być wewnątrz `Try` zablokować z [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md). A `Try` bloku, który ma `Yield` instrukcja może mieć `Catch` blokuje i może mieć `Finally` bloku.  
@@ -97,8 +97,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/yield-statement_2.vb)]  
   
- Aby uzyskać dodatkowe przykłady, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Aby uzyskać dodatkowe przykłady, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7)  
  [Instrukcje](../../../visual-basic/language-reference/statements/index.md)

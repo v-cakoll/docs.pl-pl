@@ -20,11 +20,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e0992d8591711073f9094c29fad980a8e652e686
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58004fa19f2ec3b1ca7570d6ca75702510148002
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="enumeration-format-strings"></a>Wyliczanie ciągów formatujących
 Można użyć <xref:System.Enum.ToString%2A?displayProperty=nameWithType> metodę, aby utworzyć nowy obiekt ciągu reprezentujący liczbowe, szesnastkowo lub wartość ciągu dla elementu członkowskiego wyliczenia. Ta metoda przyjmuje jeden wyliczenie formatowania ciągi, aby określić wartości, które mają być zwracane.  
@@ -55,4 +58,4 @@ Można użyć <xref:System.Enum.ToString%2A?displayProperty=nameWithType> metod�
  [!code-vb[Formatting.Enum#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)

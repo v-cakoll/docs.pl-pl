@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7097f5bd58573315681c61d0380e58638a4c4fb1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 65553e18fc66825c9c0a991aba600b4b90d0d4c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multimedia-overview"></a>Przegląd Multimedia
 Funkcje multimediów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] umożliwiają integrowanie aplikacji ulepszanie środowiska użytkownika audio i wideo. W tym temacie przedstawiono funkcje multimediów [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -89,11 +90,11 @@ Funkcje multimediów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> i <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> właściwości nie są jedynym sposobem na odtwarzanie multimediów formantu. W trybie zegara, można kontrolować zegar <xref:System.Windows.Controls.MediaElement> i metody sterowania interaktywnego ma decyduje o <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> jest <xref:System.Windows.Controls.MediaState.Manual>. <xref:System.Windows.Controls.MediaElement>obsługuje to konkurowanie o kontroli przez oceny następujący priorytetów.  
   
-1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. W miejscu, gdy nośnik zostanie zwolniona. Dzięki temu, czy wszystkie zasoby nośnika są wydawane domyślnie nawet wtedy, gdy <xref:System.Windows.Media.MediaClock> jest skojarzony z <xref:System.Windows.Controls.MediaElement>.  
+1.  <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>., W miejscu, gdy nośnik zostanie zwolniona. Dzięki temu, czy wszystkie zasoby nośnika są wydawane domyślnie nawet wtedy, gdy <xref:System.Windows.Media.MediaClock> jest skojarzony z <xref:System.Windows.Controls.MediaElement>.  
   
-2.  <xref:System.Windows.Media.MediaClock>. W miejscu po nośnika <xref:System.Windows.Controls.MediaElement.Clock%2A>. Jeśli nośnik jest zwolniony, <xref:System.Windows.Media.MediaClock> zacznie obowiązywać tak długo, jak <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> jest <xref:System.Windows.Controls.MediaState.Manual>. Tryb zegara zawsze zastępuje załadować zachowanie <xref:System.Windows.Controls.MediaElement>.  
+2.  <xref:System.Windows.Media.MediaClock>., W miejscu po nośnika <xref:System.Windows.Controls.MediaElement.Clock%2A>. Jeśli nośnik jest zwolniony, <xref:System.Windows.Media.MediaClock> zacznie obowiązywać tak długo, jak <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A> jest <xref:System.Windows.Controls.MediaState.Manual>. Tryb zegara zawsze zastępuje załadować zachowanie <xref:System.Windows.Controls.MediaElement>.  
   
-3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. W miejscu po załadowaniu nośnika.  
+3.  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>., W miejscu po załadowaniu nośnika.  
   
 4.  Metody sterowania interaktywnego. Umieść w przypadku <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A> jest <xref:System.Windows.Controls.MediaState.Manual>. Dostępne metody kontroli <xref:System.Windows.Controls.MediaElement.Play%2A>, <xref:System.Windows.Controls.MediaElement.Pause%2A>, <xref:System.Windows.Controls.MediaElement.Close%2A>, i <xref:System.Windows.Controls.MediaElement.Stop%2A>.  
   
@@ -113,7 +114,7 @@ Funkcje multimediów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
   
 1.  Metody sterowania interaktywnego. W miejscu w trybie niezależne (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A> właściwości).  
   
-2.  <xref:System.Windows.Media.MediaClock>. W miejscu po nośnika <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
+2.  <xref:System.Windows.Media.MediaClock>., W miejscu po nośnika <xref:System.Windows.Media.MediaPlayer.Clock%2A>.  
   
 ### <a name="displaying-a-mediaplayer"></a>Wyświetlanie MediaPlayer  
  Z technicznego punktu widzenia <xref:System.Windows.Media.MediaPlayer> nie można wyświetlić, ponieważ go nie posiada fizycznych. Jednak może służyć do prezentowania nośnika w <xref:System.Windows.Media.Drawing> przy użyciu <xref:System.Windows.Media.VideoDrawing> klasy. W poniższym przykładzie pokazano użycie <xref:System.Windows.Media.VideoDrawing> do wyświetlenia nośnika.  
@@ -125,4 +126,4 @@ Funkcje multimediów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlashar
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.DrawingGroup>  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/audio-and-video-how-to-topics.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c80769a1563953fc412afc6baeffcb91b49667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6344fed6cf480e3d3f91a559c99b79f438afa985
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opentype-font-features"></a>OpenType funkcje czcionki
 W tym temacie omówiono niektóre z kluczowych funkcji usługi [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] technologii czcionek w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -373,6 +374,6 @@ Wielkie litery OpenType tekstu
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Documents.Typography>  
  [Specyfikacja OpenType](http://go.microsoft.com/fwlink/?LinkId=96731)  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Przykładowy pakiet czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
- [OPAKOWYWANIE czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Przykład pakietu czcionek OpenType](../../../../docs/framework/wpf/advanced/sample-opentype-font-pack.md)  
+ [Pakowanie czcionek z aplikacjami](../../../../docs/framework/wpf/advanced/packaging-fonts-with-applications.md)

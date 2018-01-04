@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f42ee49a4690c23a563740993e721207d5dedea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e37714f2c317456935f7b8694a083468dfa43a72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-author-controls-for-windows-forms"></a>Porady: formanty autoryzacji dla formularzy systemu Windows
 Formant reprezentuje graficznego łącza między użytkownikiem i program. Formant można podać przetwarzania danych, akceptuje dane wejściowe użytkownika, odpowiadanie na zdarzenia lub wykonać dowolną liczbę inne funkcje, które połączenia użytkownika i aplikacji. Ponieważ formant jest zasadniczo składnika z interfejsem graficznym, może służyć każda funkcja, która jest składnikiem, a także podać interakcji z użytkownikiem. Formanty są tworzone w celu obsługi określonych celów i tworzenia formantów jest po prostu inną zadań programowania. Z tym pamiętać następujące kroki reprezentują Omówienie procesu tworzenia formantu. Łącza zawierają dodatkowe informacje na temat poszczególnych kroków.  
@@ -62,10 +63,10 @@ Formant reprezentuje graficznego łącza między użytkownikiem i program. Forma
 10. Pakiet i wdróż formantu. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji, usług i składników](https://msdn.microsoft.com/library/wtzawcsz).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Tworzenie formantu złożonego za pomocą Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
- [Wskazówki: Dziedziczenie z formantu formularzy systemu Windows za pomocą Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
- [Porady: dziedziczenie z klasy UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
- [Porady: dziedziczenie z klasy formantów](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
- [Porady: dziedziczyć Windows istniejących formantów formularzy](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
- [Porady: testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
- [Różne typy formantów niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+ [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+ [Przewodnik: dziedziczenie z kontrolki formularzy Windows Forms za pomocą języka Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+ [Instrukcje: dziedziczenie z klasy UserControl](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)  
+ [Instrukcje: dziedziczenie z klasy kontrolek](../../../../docs/framework/winforms/controls/how-to-inherit-from-the-control-class.md)  
+ [Instrukcje: dziedziczenie z istniejących kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-inherit-from-existing-windows-forms-controls.md)  
+ [Instrukcje: testowanie zachowania UserControl w czasie wykonywania](../../../../docs/framework/winforms/controls/how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+ [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)

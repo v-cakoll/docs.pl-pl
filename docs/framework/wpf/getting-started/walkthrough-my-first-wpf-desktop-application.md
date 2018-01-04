@@ -19,11 +19,12 @@ caps.latest.revision: "71"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9818231a68f5c2ac2a6852f27e4876baa9728e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Wskazówki: Pierwszy WPF pulpitu aplikację
 Ten przewodnik zawiera wprowadzenie do rozwoju [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji, która zawiera elementy, które są wspólne dla większości [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] znaczników, związane z kodem, definicji aplikacji, kontrolki, układ Powiązanie danych i style. 
@@ -443,7 +444,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
 -   [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   
--   [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+-   [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
   
 -   [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
   
@@ -453,16 +454,16 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
 -   [Projektowanie aplikacji](../../../../docs/framework/wpf/app-development/index.md)  
   
--   [Formanty](../../../../docs/framework/wpf/controls/index.md)  
+-   [Kontrolki](../../../../docs/framework/wpf/controls/index.md)  
   
--   [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+-   [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
   
--   [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+-   [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
--   [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+-   [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
   
 ## <a name="see-also"></a>Zobacz także  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Tworzenie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [Style i szablony](../../../../docs/framework/wpf/controls/styles-and-templates.md)

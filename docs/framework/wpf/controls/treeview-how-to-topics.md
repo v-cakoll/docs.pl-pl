@@ -17,21 +17,22 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3619f26e8c447340e005c0d44be9018f2746f10
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4f1f042894f96cafc36944be7b18d5777e5f3c10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="treeview-how-to-topics"></a>TreeView — Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.TreeView> formantu, aby wyświetlić informacje w strukturze hierarchicznej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie prostego lub złożonych TreeViews](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [Użyj SelectedValue, właściwości SelectedValuePath i SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [Wiązania elementu TreeView do danych, który ma Indeterminable głębokość](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [Poprawianie wydajności elementu TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [Znajdź element TreeViewItem w elemencie TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [Tworzenie prostej lub złożonej kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
+  [Używanie SelectedValue, SelectedValuePath i SelectedItem](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [Powiązywanie TreeView z danymi, które mają nieokreśloną głębokość](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [Poprawianie wydajności kontrolki TreeView](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
+  [Znajdowanie elementu TreeViewItem w kontrolce TreeView](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.TreeView>  

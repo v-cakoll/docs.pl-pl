@@ -24,11 +24,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dde3adbb7640978829dea4b977ed14eec38a9077
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
 W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące należy unikać nazw specyficzny dla języka.  
@@ -68,20 +71,20 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
-|**sbyte —**|**Sbyte —**|**char**|**Sbyte —**|  
-|**bajtów**|**Bajtów**|**char bez znaku**|**Bajtów**|  
-|**krótki**|**Krótki**|**krótki**|**Int16**|  
+|**sbyte**|**Sbyte —**|**char**|**Sbyte —**|  
+|**byte**|**Bajtów**|**char bez znaku**|**Bajtów**|  
+|**short**|**Krótki**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**short bez znaku**|**UInt16**|  
 |**int**|**Liczba całkowita**|**int**|**Int32**|  
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|  
-|**długa**|**Długa**|**__int64**|**Int64**|  
+|**long**|**Długa**|**__int64**|**Int64**|  
 |**ulong**|**UInt64 —**|**__int64 bez znaku**|**UInt64 —**|  
 |**float**|**Pojedynczy**|**float**|**Pojedynczy**|  
-|**podwójne**|**O podwójnej precyzji**|**podwójne**|**O podwójnej precyzji**|  
-|**wartość logiczna**|**Wartość logiczna**|**wartość logiczna**|**Wartość logiczna**|  
+|**double**|**O podwójnej precyzji**|**double**|**O podwójnej precyzji**|  
+|**bool**|**Wartość logiczna**|**bool**|**Wartość logiczna**|  
 |**char**|**Char**|**wchar_t**|**Char**|  
-|**ciąg**|**Ciąg**|**Ciąg**|**Ciąg**|  
-|**obiekt**|**Obiekt**|**Obiekt**|**Obiekt**|  
+|**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
+|**object**|**Obiekt**|**Obiekt**|**Obiekt**|  
   
  **CZY ✓** Użyj nazwą pospolitą, takiego jak `value` lub `item`, zamiast powtarzające się nazwa typu w rzadkich przypadkach, gdy identyfikator nie ma znaczenia semantycznego i typ parametru nie jest ważna.  
   
@@ -107,5 +110,5 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Zasady nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Wskazówki dotyczące nazewnictwa](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f236296d604bc465973d17d63883e7b212b7f02d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d14c4338290856c09ca1d23ec6acc895450f83ea
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>Porady: przekształcenie XSLT przy użyciu zestawu
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Zestaw mogą być przekazywane bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody.  
@@ -192,4 +195,4 @@ xslt.Load(System.Reflection.Assembly.Load("Transform").GetType("Transform"))
  <xref:System.Xml.Xsl.XslCompiledTransform>  
  [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Za pomocą wiersza polecenia z csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)
+ [Kompilacja za pomocą wiersza polecenia przy użyciu csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e1553bfd6820c8a3f45e1e5e447e5a95d3c36b86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: aae2b9ace191cd8697680f4ba67cc2e38ba5702b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-bands-in-the-windows-forms-datagridview-control"></a>Porady: manipulowanie paskami w formancie DataGridView formularzy systemu Windows
 Poniższy przykładowy kod przedstawia różne sposoby manipulowania <xref:System.Windows.Forms.DataGridView> wierszy i kolumn za pomocą właściwości <xref:System.Windows.Forms.DataGridViewBand> klasy, z którego <xref:System.Windows.Forms.DataGridViewRow> i <xref:System.Windows.Forms.DataGridViewColumn> pochodzi z klasy.  
@@ -47,4 +48,4 @@ Poniższy przykładowy kod przedstawia różne sposoby manipulowania <xref:Syste
  <xref:System.Windows.Forms.DataGridViewBand>  
  <xref:System.Windows.Forms.DataGridViewRow>  
  <xref:System.Windows.Forms.DataGridViewColumn>  
- [Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)
+ [Programowanie przy użyciu komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/programming-with-cells-rows-and-columns-in-the-datagrid.md)

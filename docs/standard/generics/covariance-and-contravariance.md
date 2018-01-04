@@ -21,11 +21,14 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1ae8b6da5917950664e1ab780b8db76cb6500e70
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2abd4c772c02c431ecb73139be7f620fe04d5d82
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>Kowariancja i kontrawariancja w typach ogólnych
 <a name="top"></a>Kowariancja i kontrawariancja są warunki, które odwołują się do możliwość używania mniej pochodnego (szerszym) lub typu (więcej określonych) więcej pochodnego niż określona pierwotnie. Parametry typu ogólnego obsługują kowariancję i kontrawariancję, aby umożliwić większą elastyczność przypisywania i używania typów ogólnych. W kontekście systemu typów kowariancja, kontrawariancja i inwariancja mają następujące definicje. Przykłady założono klasy podstawowej o nazwie `Base` i pochodne klasy o nazwie `Derived`.  
@@ -198,4 +201,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  [Kowariancja i Kontrawariancja (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/index.md)  
  [Kowariancja i Kontrawariancja (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/index.md)    
- [Wariancje w Delegatach](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)
+ [Wariancje w delegatach](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca)

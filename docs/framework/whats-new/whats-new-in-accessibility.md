@@ -12,11 +12,12 @@ helpviewer_keywords: what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4886dad94d3a67e78525241a1538c06b9fe4b0be
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 9fe4b24f14dd8f08d1168cc26b91e04faa4bf183
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
@@ -46,7 +47,7 @@ Podobnie, aplikacji, które odnoszą się do wersji programu .NET Framework, poc
 
 - [Windows Presentation Foundation (WPF)](#windows-presentation-foundation-wpf)
 
-- [Formularze systemu Windows](#windows-forms-accessibility-improvements)
+- [Windows Forms](#windows-forms-accessibility-improvements)
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
@@ -80,10 +81,10 @@ Do obsługi na żywo regionów, WPF dodano następujące interfejsy API:
  
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> Wyliczenia, który definiuje następujące możliwości **LiveSetting** wartości:
 
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>. Element nie wysyła powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.   
-   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>. Element wysyła powiadomienia interruptive zmiana zawartości na żywo regionu.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>., Element nie wysyła powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.   
+   - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>., Element wysyła powiadomienia interruptive zmiana zawartości na żywo regionu.   
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>. Element wysyła interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.   
+  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>., Element wysyła interruptive powiadomienia, jeśli zawartość obszaru na żywo została zmieniona.   
 
 Można utworzyć LiveRegion przez ustawienie **AutomationProperties.LiveSetting** właściwości w elemencie zainteresowań, jak pokazano w poniższym przykładzie:   
 

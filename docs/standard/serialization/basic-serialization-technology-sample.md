@@ -12,11 +12,14 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6ae1d5be9a8e6e13473bd537ba3b0742cf131fad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c3d269b7603c63db73fdcbab91b777e69b228cc9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="basic-serialization-technology-sample"></a>Przykład technologii podstawowe serializacji
 [Pobieranie próbki](http://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -99,9 +102,9 @@ ms.lasthandoff: 12/02/2017
  <xref:System.Runtime.Serialization.IFormatter>  
  <xref:System.SerializableAttribute>  
  <xref:System.Xml.Serialization>  
- [Podstawowe serializacji](../../../docs/standard/serialization/basic-serialization.md)  
+ [Serializacja podstawowa](../../../docs/standard/serialization/basic-serialization.md)  
  [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
  [Kontrolowanie serializacji XML przy użyciu atrybutów](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
  [Wprowadzenie do serializacji XML](../../../docs/standard/serialization/introducing-xml-serialization.md)  
  [Serializacja](../../../docs/standard/serialization/index.md)  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

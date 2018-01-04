@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: df45441089fd59d5e0e52b4bcec409adcc11fb71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Projektowanie zorientowane na DDD mikrousługi
 
@@ -38,7 +41,7 @@ Na przykład jednostki można załadować z bazy danych. Następnie część inf
 
 Ponadto musisz mieć zawsze prawidłowe jednostki (zobacz [projektowania poprawności warstwy modelu domeny](#designing-validations-in-the-domain-model-layer) sekcji) kontrolowane przez korzenie agregacji (jednostek głównego). W związku z tym jednostki powinien nie można powiązać z widokami klienta, ponieważ na poziomie interfejsu użytkownika część danych może nadal nie można sprawdzić poprawności. Jest to co ViewModel dla. ViewModel to model danych wyłącznie na potrzeby warstwy prezentacji. Jednostek domeny nie należy bezpośrednio do ViewModel. Zamiast tego potrzebne jest tłumaczenie między jednostkami ViewModels i domeny i na odwrót.
 
-Kiedy realizowanie złożoności, ważne jest, aby mieć modelu domeny kontrolowane przez łączny katalogi (możemy przejść do tego bardziej szczegółowo później) upewnij się, że wszystkie invariants i reguły związane z tej grupy jednostek (agregacji) są wykonywane za pomocą pojedynczego wpisu punkt lub bramy, głównego agregacji.
+Kiedy realizowanie złożoności, ważne jest, aby mieć modelu domeny kontrolowane przez katalogi agregacji upewnij się, że wszystkie invariants i reguły związane z tej grupy jednostek (agregacji) są wykonywane za pośrednictwem punktu pojedynczy wpis lub bramy, głównego agregacji.
 
 Rysunek 9-5 zawiera implementowania warstwowego projektu w aplikacji eShopOnContainers.
 
@@ -46,7 +49,7 @@ Rysunek 9-5 zawiera implementowania warstwowego projektu w aplikacji eShopOnCont
 
 **Rysunek 9-5**. Warstwy DDD porządkowania mikrousługi w eShopOnContainers
 
-Chcesz zaprojektować system tak, aby każda warstwa komunikuje się tylko z niektórych innych warstw. Może to być łatwiejsze do wymuszania Jeśli warstwy są zaimplementowane jako biblioteki inną klasę, ponieważ wyraźnie określenie, jakie zależności są ustawione między bibliotekami. Na przykład warstwy modelu domeny nie powinna przyjmować zależności na inną warstwę (klasy modelu domeny powinien być zwykłym stare obiekty CLR lub [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), klasy). Jak pokazano w rysunku 9-6 **Ordering.Domain** Biblioteka warstwy ma zależności tylko w bibliotekach .NET Core, ale nie na inne niestandardowe biblioteki (biblioteka danych, biblioteka trwałości itp.).
+Chcesz zaprojektować system tak, aby każda warstwa komunikuje się tylko z niektórych innych warstw. Może to być łatwiejsze do wymuszania Jeśli warstwy są zaimplementowane jako biblioteki inną klasę, ponieważ wyraźnie określenie, jakie zależności są ustawione między bibliotekami. Na przykład warstwy modelu domeny nie powinna przyjmować zależności na inną warstwę (klasy modelu domeny powinien być zwykłym stare obiekty CLR lub [POCO](https://en.wikipedia.org/wiki/Plain_Old_CLR_Object), klasy). Jak pokazano w rysunku 9-6 **Ordering.Domain** Biblioteka warstwy ma zależności tylko w przypadku bibliotek .NET Core i pakiety NuGet, ale nie na inne niestandardowe biblioteki, takich jak dane biblioteki lub biblioteki trwałości.
 
 ![](./media/image7.PNG)
 

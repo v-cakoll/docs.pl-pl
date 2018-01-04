@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 62a514f94857044af5020d36a1cfd6ce06741ac7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 648f8b86ecf73a7da5f3f33d71fb8617bacccee1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="application-domain-resource-monitoring"></a>Monitorowanie zasobów domen aplikacji
 Zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie użycia procesora CPU i pamięci według domeny aplikacji. Jest to przydatne dla hostów, takich jak ASP.NET, korzystających z wielu domen aplikacji w procesie długotrwałe. Hosta można wyładować domeny aplikacji, aplikacji, która jest negatywnego wpływu na wydajność całego procesu, ale tylko wtedy, jeśli można zidentyfikować problematyczne aplikacji. ARM zawiera informacje, które mogą służyć do celów podczas podejmowania decyzji.  
@@ -92,6 +95,6 @@ Zasobów domen aplikacji monitorowania (ARM) umożliwia hostom monitorowanie uż
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>  
- [ICLRAppDomainResourceMonitor — interfejs](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
+ [ICLRAppDomainResourceMonitor, interfejs](../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  
  [\<appdomainresourcemonitoring — >](../../../docs/framework/configure-apps/file-schema/runtime/appdomainresourcemonitoring-element.md)  
  [Zdarzenia CLR ETW](../../../docs/framework/performance/clr-etw-events.md)

@@ -20,22 +20,23 @@ caps.latest.revision: "54"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c384e9e77eeee29cf91cceca3863f54c0ad1654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9737a006e7f3591defeaf7039236bd1768aa5361
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="glyphs"></a>Glify
 Symbole są niskiego poziomu sceny znaku być rysowane na ekranie. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia bezpośredni dostęp do symboli dla klientów, których chcesz przechwytywać i przetrwają formatowania tekstu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do obiektu GlyphRun obiektu i symboli](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [Porady: Rysowanie tekstu przy użyciu symboli](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
+ [Wprowadzenie do obiektu GlyphRun i elementu glifu](../../../../docs/framework/wpf/advanced/introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [Instrukcje: rysowanie tekstu z użyciem glifów](../../../../docs/framework/wpf/advanced/draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.GlyphRun>  
  <xref:System.Windows.Media.DrawingContext.DrawText%2A>  
  <xref:System.Windows.Documents.Glyphs>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)

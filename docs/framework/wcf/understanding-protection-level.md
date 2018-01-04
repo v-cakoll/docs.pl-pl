@@ -19,11 +19,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f107e4d1a9779c04a33060af34ee1fc873305eab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c379cf39f30bf7e75907dba5fb06ba4e3862e299
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-protection-level"></a>Omówienie poziomów ochrony
 `ProtectionLevel` Właściwości znajduje się na wiele różnych klas, takich jak <xref:System.ServiceModel.ServiceContractAttribute> i <xref:System.ServiceModel.OperationContractAttribute> klasy. Właściwość określa, jak chronione części (lub całego) wiadomości. W tym temacie opisano [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] funkcji i jej działania.  
@@ -38,11 +39,11 @@ ms.lasthandoff: 12/02/2017
   
 -   Istnieją trzy podstawowe poziomy ochrony dla dowolnej części wiadomości. Właściwość (wszędzie tam, gdzie występuje) jest ustawiona na jeden z <xref:System.Net.Security.ProtectionLevel> wartości wyliczenia. Rosnąco ochrony, obejmują:  
   
-    -   `None`.  
+    -   `None`.,  
   
-    -   `Sign`. Element chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie części chronionej wiadomości.  
+    -   `Sign`., Element chroniony jest podpisany cyfrowo. Dzięki temu wykrywanie wszelkie manipulowanie części chronionej wiadomości.  
   
-    -   `EncryptAndSign`. Część wiadomości są szyfrowane, aby zapewnić poufność, zanim jest podpisany.  
+    -   `EncryptAndSign`., Część wiadomości są szyfrowane, aby zapewnić poufność, zanim jest podpisany.  
   
 -   Można ustawić wymagania ochrony tylko w przypadku *danych aplikacji* przy użyciu tej funkcji. Na przykład WS-Addressing nagłówki są infrastruktury danych i, w związku z tym nie dotyczy `ProtectionLevel`.  
   
@@ -113,6 +114,6 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.MessageBodyMemberAttribute>  
  <xref:System.Net.Security.ProtectionLevel>  
  [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)  
- [Porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Instrukcje: ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
  [Określanie i obsługa błędów w kontraktach i usługach](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)  
  [Używanie kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

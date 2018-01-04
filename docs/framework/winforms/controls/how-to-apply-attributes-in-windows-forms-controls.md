@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4697ef7a74916bcc7b922f265262a83b8f0316d5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e4d5bfb445ce6ed37ad1dc63d92fde833ac9870
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>Porady: stosowanie atrybutów w formantach formularzy systemu Windows
 Aby opracować składników i formantów, które nawiązują prawidłową interakcję z środowiska projektowania i poprawnego wykonania w czasie wykonywania, należy poprawnie zastosować atrybutów do klas i członków.  
@@ -90,6 +91,6 @@ Aby opracować składników i formantów, które nawiązują prawidłową intera
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IComparable>  
  <xref:System.Windows.Forms.DataGridView>  
- [Opracowywanie niestandardowych formularzy systemu Windows formantów za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
- [Atrybuty w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Opracowywanie niestandardowych kontrolek formularzy Windows Forms za pomocą programu .NET Framework](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)  
+ [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  [Porady: serializacji kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)

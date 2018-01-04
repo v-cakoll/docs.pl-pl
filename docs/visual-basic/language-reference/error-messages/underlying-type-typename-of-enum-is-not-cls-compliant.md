@@ -14,24 +14,24 @@ ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a6a301c06cb86a4681709fbf67d3f731e2e6a9eb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e054f8d992154f66ab1d48a477a7e04900aa5b4d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="underlying-type-lttypenamegt-of-enum-is-not-cls-compliant"></a>Typ podstawowy &lt;typename&gt; Enum nie jest zgodne ze specyfikacją CLS
-Typ danych określony dla tego wyliczenia nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../../docs/standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje tego typu danych. Jednak inny składnik napisana ściśle kodu zgodne ze specyfikacją CLS nie może obsługiwać ten typ danych. Takie składnika nie można pomyślnie interakcyjnie składnika.  
+Typ danych określony dla tego wyliczenia nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje tego typu danych. Jednak inny składnik napisana ściśle kodu zgodne ze specyfikacją CLS nie może obsługiwać ten typ danych. Takie składnika nie można pomyślnie interakcyjnie składnika.  
   
  Następujące [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] typy danych nie są zgodne ze specyfikacją CLS:  
   
--   [SByte — typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Uinteger — typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [Ulong — typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [ULong, typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [Ushort — typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [UShort, typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -48,6 +48,6 @@ Typ danych określony dla tego wyliczenia nie jest częścią [niezależność o
 -   Jeśli użytkownik są relacje z obiektami automatyzacji lub COM, należy pamiętać, że niektóre typy szerokości danych innego niż w [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]. Na przykład `uint` jest często 16 bitów w innych środowiskach. Jeśli argument 16-bitowych jest przekazywany do takich składników, Zadeklaruj ją jako `UShort` zamiast `UInteger` w sieci zarządzanej [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kodu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Odbicie](http://msdn.microsoft.com/library/5d1d1bcf-08de-4d0b-97a8-912d17c00f26)  
+ [Odbicie (Visual Basic)](../../programming-guide/concepts/reflection.md)  
  [Odbicie](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE za pośrednictwem > Pisanie kodu zgodne ze specyfikacją CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

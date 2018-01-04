@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b91c49be9268d8dc967daeac116cf67b2ed7d742
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 06cac8d76b17f3ef32931ea21d0556085f05d7b1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-the-dom"></a>Rozszerzanie modelu DOM
 Microsoft .NET Framework zawiera podstawowy zestaw klas, który zawiera implementację elementu XML modelu DOM (Document Object). <xref:System.Xml.XmlNode>i ich pochodne klasy, udostępnia metody i właściwości, które umożliwiają nawigowanie, zapytania i modyfikować zawartości i struktury dokumentu XML.  
@@ -256,4 +259,4 @@ Number of elements in book.xml: 3
  Jeśli są zastępowanie <xref:System.Xml.XmlDocument.CreateElement%2A> metody w klasie pochodnej domyślne atrybuty nie są dodawane podczas tworzenia nowych elementów podczas edytowania dokumentu. Ten problem występuje tylko podczas edytowania. Ponieważ <xref:System.Xml.XmlDocument.CreateElement%2A> metoda jest odpowiedzialna za dodanie atrybutów domyślnych do <xref:System.Xml.XmlDocument>, musi kodu tę funkcję w <xref:System.Xml.XmlDocument.CreateElement%2A> metody. Gdy ładowany <xref:System.Xml.XmlDocument> zawierającą domyślne atrybuty, będą one poprawnie obsługiwane. Aby uzyskać więcej informacji dotyczących atrybutów domyślnych, zobacz [tworzenie nowych atrybutów elementów w modelu DOM](../../../../docs/standard/data/xml/creating-new-attributes-for-elements-in-the-dom.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f953f6477abf1f4e0d6aaf79e67005172ff1144
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 144bcde6c4c8fb227773fe613da8445f100ce66d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="countdownevent"></a>CountdownEvent
 <xref:System.Threading.CountdownEvent?displayProperty=nameWithType>jest prymitywu synchronizacji, który odblokowuje wątków oczekiwania, po przeprowadzeniu sygnalizowane wiele razy. <xref:System.Threading.CountdownEvent>jest przeznaczony do scenariuszy, w których mogłyby w przeciwnym razie należy użyć <xref:System.Threading.ManualResetEvent> lub <xref:System.Threading.ManualResetEventSlim> i ręcznie dekrementacji zmiennej przed sygnalizowania zdarzenia. Na przykład w przypadku rozwidlenia/sprzężenia, po prostu utworzeniem <xref:System.Threading.CountdownEvent> mający sygnału liczbę 5, a następnie start pięć elementów roboczych w wątku puli i mieć każdego wywołania elementu roboczego <xref:System.Threading.CountdownEvent.Signal%2A> po zakończeniu wykonywania. Każde wywołanie <xref:System.Threading.CountdownEvent.Signal%2A> zmniejsza liczba sygnał o 1. W głównym wątku wywołanie <xref:System.Threading.CountdownEvent.Wait%2A> zablokuje dopóki liczba sygnałów wynosi zero.  
@@ -54,4 +57,4 @@ ms.lasthandoff: 10/18/2017
  Uwaga operacji oczekiwania nie spowoduje anulowania wątków, które są sygnalizowania go. Zazwyczaj anulowania jest stosowany do operacji logicznych i który może zawierać oczekiwania na zdarzenie, a także wszystkie elementy robocze, które synchronizuje czas oczekiwania. W tym przykładzie każdy element roboczy jest przekazywany kopię tego samego token anulowania, dzięki czemu mogą odpowiadać na żądania anulowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [EventWaitHandle, autoresetevent —, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+ [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)

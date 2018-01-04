@@ -21,11 +21,14 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81c05aeae00e79f614ef1514e54765b21e7e2dde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ab98973fadf1893b4954fd19f679fe0ff690539d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="calling-asynchronous-methods-using-iasyncresult"></a>Wywołanie metod asynchronicznych za pomocą interfejsu IAsyncResult
 Typy w .NET Framework i bibliotek klas innych firm zapewnia metody, które pozwalają aplikacji do kontynuowania wykonywania podczas wykonywania operacji asynchronicznych wątków innych niż wątku głównego aplikacji. W poniższych sekcjach opisano i przedstawiono przykłady kodu, które przedstawiają różne sposoby, można wywoływać metod asynchronicznych, które używają <xref:System.IAsyncResult> wzorzec projektowy.  
@@ -40,4 +43,4 @@ Typy w .NET Framework i bibliotek klas innych firm zapewnia metody, które pozwa
   
 ## <a name="see-also"></a>Zobacz też  
  [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [Omówienie wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+ [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

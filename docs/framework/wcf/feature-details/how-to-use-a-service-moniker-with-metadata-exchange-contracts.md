@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31720b0639f9be68a2124b4ff844a2837787ef81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d2b5b6d4a671a3eb281f49dd60fd3c00ee76f8a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>Instrukcje: Używanie krótkiej nazwy z kontraktami wymiany metadanych
 Po rozwinięciu niektóre nowe [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług, użytkownik może zadecydować chcesz mieć możliwość wywołania tych usług z skryptu lub aplikacji Visual Basic 6.0. Jedna z metod byłoby Generowanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zestawu klienta zarejestrować zestawu w modelu COM, zainstalowania zestawu w pamięci podręcznej GAC i odwoływanie do typów COM w kodzie języka Visual Basic. Podczas dystrybucji aplikacji, konieczne będzie dystrybuować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] również zestawu klienta. Użytkownik będzie miał do rejestrowania zestawów klienta WCF COM i umieszczenie go w pamięci GAC. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Współdziałanie z COM umożliwia także wywoływać tej samej usługi bez polegania na [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zestawu klienta. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Moniker pozwala wywoływać żadnego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług z dowolnego języka zgodny z modelu COM (Visual Basic, VBScript, Visual Basic for Applications (VBA) i tak dalej), określając punkt końcowy programu exchange (Mex) metadanych identyfikator URI, który używa moniker usługi Aby wyodrębnić informacje o typie dotyczących usługi. W tym temacie opisano sposób wywołania wprowadzenie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbkowania przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] krótkiej nazwy, która określa punkt końcowy Mex.  
@@ -50,5 +51,5 @@ Po rozwinięciu niektóre nowe [!INCLUDE[indigo2](../../../../includes/indigo2-m
     >  Jeśli krótka nazwa jest nieprawidłowo sformułowany lub usługa jest niedostępna, wywołanie `GetObject` zwróci błąd informujący o tym "Nieprawidłową składnię."  Jeśli zostanie wyświetlony ten błąd, upewnij się, krótkiej nazwy, którego używasz, jest poprawny i usługa jest dostępna.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Użyj Moniker usługi Windows Communication Foundation bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
- [Porady: używanie krótkiej nazwy z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+ [Instrukcje: używanie monikera programu Windows Communication Foundation bez rejestracji](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)  
+ [Instrukcje: używanie krótkiej nazwy z kontraktami WSDL](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

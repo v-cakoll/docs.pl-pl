@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/09/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 26c480a82ad7bb806734decebdfbe5b4a07998e6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 07a79f3d52db400d1539fb4172166cccf8905fb8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-a-microservice-domain-model-with-net-core"></a>Implementowanie modelu domeny mikrousługi z platformą .NET Core 
 
@@ -47,39 +50,48 @@ Po otwarciu plików w folderze agregacji widać jak jest oznaczony jako niestand
 Model domeny można zaimplementować w .NET przez utworzenie klas POCO, które implementują obiekty domeny. W poniższym przykładzie klasa kolejności jest zdefiniowana jako jednostki, a także jako główny agregacji. Ponieważ klasa kolejności pochodzi od klasy podstawowej jednostki, można użyć ponownie typowy Kod powiązane z jednostkami. Przy tym pamiętać, że te klasy podstawowe i interfejsy są zdefiniowane przez użytkownika w projekcie modelu domeny, więc Twojej kod, nie infrastrukturze kod z ORM, takich jak EF.
 
 ```csharp
-// COMPATIBLE WITH ENTITY FRAMEWORK CORE 1.0
+// COMPATIBLE WITH ENTITY FRAMEWORK CORE 2.0
 // Entity is a custom base class with the ID
 public class Order : Entity, IAggregateRoot
 {
-    public int BuyerId { get; private set; }
-    public DateTime OrderDate { get; private set; }
-    public int StatusId { get; private set; }
-    public ICollection<OrderItem> OrderItems { get; private set; }
-    public Address ShippingAddress { get; private set; }
-    public int PaymentId { get; private set; }
-    protected Order() { } //Design constraint needed only by EF Core
-    public Order(int buyerId, int paymentId)
+    private DateTime _orderDate;
+    public Address Address { get; private set; }
+    private int? _buyerId;
+
+    public OrderStatus OrderStatus { get; private set; }
+    private int _orderStatusId;
+
+    private string _description;
+    private int? _paymentMethodId;
+
+    private readonly List<OrderItem> _orderItems;
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
+  
+    public Order(string userId, Address address, int cardTypeId, string cardNumber, string cardSecurityNumber,
+            string cardHolderName, DateTime cardExpiration, int? buyerId = null, int? paymentMethodId = null)
     {
-        BuyerId = buyerId;
-        PaymentId = paymentId;
-        StatusId = OrderStatus.InProcess.Id;
-        OrderDate = DateTime.UtcNow;
-        OrderItems = new List<OrderItem>();
+        _orderItems = new List<OrderItem>();
+        _buyerId = buyerId;
+        _paymentMethodId = paymentMethodId;
+        _orderStatusId = OrderStatus.Submitted.Id;
+        _orderDate = DateTime.UtcNow;
+        Address = address;
+
+        // ...Additional code ...
     }
 
-    public void AddOrderItem(productName,
-        pictureUrl,
-        unitPrice,
-        discount,
-        units)
+    public void AddOrderItem(int productId, string productName, 
+                            decimal unitPrice, decimal discount, 
+                            string pictureUrl, int units = 1)
     {
         //...
         // Domain rules/logic for adding the OrderItem to the order
         // ...
-        OrderItem item = new OrderItem(this.Id, ProductId, productName,
-            pictureUrl, unitPrice, discount, units);
+
+        var orderItem = new OrderItem(productId, productName, unitPrice, discount, pictureUrl, units);
+        
+        _orderItems.Add(orderItem);
   
-        OrderItems.Add(item);
     }
     // ...
     // Additional methods with domain rules/logic related to the Order aggregate
@@ -87,7 +99,7 @@ public class Order : Entity, IAggregateRoot
 }
 ```
 
-Należy zauważyć, że jest jednostką domeny, zaimplementowane jako klasa POCO. Nie ma żadnych bezpośrednich zależność od Entity Framework Core lub inne struktury infrastruktury. Ta implementacja jest się co, po prostu C\# kod implementacji modelu domeny.
+Należy zauważyć, że jest jednostką domeny, zaimplementowane jako klasa POCO. Nie ma żadnych bezpośrednich zależność od Entity Framework Core lub inne struktury infrastruktury. Ta implementacja jest powinny być w DDD, po prostu C\# kod implementacji modelu domeny.
 
 Ponadto klasa zostanie nadany interfejsu o nazwie IAggregateRoot. Ten interfejs jest interfejsem pusta, nazywane również *interfejsu znacznika*, która jest używana tylko w celu oznaczać, że ta klasa jednostki jest również głównego agregacji.
 
@@ -95,7 +107,13 @@ Interfejs znacznika czasami jest uznawany za wzorca oprogramowania; jednak równ
 
 O oznacza głównego agregacji, że większość kod powiązany spójności i reguły biznesowe jednostek wartości zagregowanej powinny zostać wdrożone jako metod klasy głównym agregacji kolejności (na przykład AddOrderItem podczas dodawania obiektu OrderItem do agregacji) . Nie należy utworzyć ani zaktualizować obiektów OrderItems niezależnie lub bezpośrednio; Klasa AggregateRoot musi przechowywać i kontroli spójności żadnej operacji aktualizacji, przed jego obiektów podrzędnych.
 
-Na przykład należy *nie* wykonaj następujące czynności z dowolnej polecenie obsługi metody lub aplikacji warstwy klasy:
+## <a name="encapsulating-data-in-the-domain-entities"></a>Zawieranie dane w jednostkach domeny
+
+To powszechny problem w modelach jednostki jest czy udostępniają właściwości nawigacji kolekcji jako typów list publicznie. Dzięki temu każdy Deweloper współpracownika do manipulowania zawartość te typy kolekcji, których może pominąć ważnymi reguł związanych z kolekcji, prawdopodobnie pozostawienie obiektu w nieprawidłowym stanie. To rozwiązanie jest ujawnia dostęp tylko do odczytu do kolekcji powiązanych i jawnie Podaj metod, które definiują sposób, w którym klienci można przekształcać je.
+
+W poprzednim kodzie należy zauważyć, że wiele atrybutów są tylko do odczytu lub prywatnych i tylko są tak Każda aktualizacja uwzględnia invariants domeny business konta i logikę określoną w ramach metod klasy nadaje się do aktualizacji za pomocą metod klasy.
+
+Na przykład następujące wzorce DDD należy *nie* wykonaj następujące czynności z dowolnej polecenie obsługi metody lub aplikacji warstwy klasy:
 
 ```csharp
 // WRONG ACCORDING TO DDD PATTERNS – CODE AT THE APPLICATION LAYER OR
@@ -138,88 +156,22 @@ W tym fragmencie, większość operacji sprawdzania poprawności lub logiki powi
 
 Ponadto nowej operacji OrderItem(params) utworzy również być kontrolowane i wykonywane przez metodę AddOrderItem od elementu głównego agregacji kolejności. W związku z tym większość logiki lub Sprawdzanie poprawności związane z konieczności operacji (szczególnie wszystko, co ma wpływ na spójności między innymi jednostek podrzędnych) w jednym miejscu w katalogu głównym agregacji. To jest ostatecznym celem wzorzec głównego agregacji.
 
-Korzystając z programu Entity Framework 1.1, jednostki DDD można lepiej wyrazić ponieważ jedną z nowych funkcji programu Entity Framework Core 1.1 jest możliwość [mapowania pól](https://docs.microsoft.com/ef/core/modeling/backing-field) oprócz właściwości. Jest to przydatne podczas ochrony kolekcji jednostek podrzędnych lub obiekty wartości. To rozszerzenie zamiast właściwości można korzystać z prostego pól prywatnych i można zaimplementować żadnych aktualizacji do kolekcji pola w metodach publicznego i zapewnić dostęp tylko do odczytu za pomocą metody AsReadOnly.
+Jeśli używasz Entity Framework Core 1.1 lub później, jednostki DDD można lepiej wyrazić ponieważ zezwala ona na [mapowania pól](https://docs.microsoft.com/ef/core/modeling/backing-field) oprócz właściwości. Jest to przydatne podczas ochrony kolekcji jednostek podrzędnych lub obiekty wartości. To rozszerzenie zamiast właściwości można korzystać z prostego pól prywatnych i można zaimplementować żadnych aktualizacji do kolekcji pola w metodach publicznego i zapewnić dostęp tylko do odczytu za pomocą metody AsReadOnly.
 
 W DDD do zaktualizowania jednostki tylko za pośrednictwem metod w obiekcie (lub konstruktora) w celu sterowania wszystkie niezmiennej i spójność danych więc właściwości są zdefiniowane tylko za pomocą metody dostępu get. Właściwości bazują na pól prywatnych. Prywatne elementy członkowskie są dostępne tylko z należące do klasy. Jednak istnieje jeden wyjątek: EF Core musi ustawić także tych pól.
 
-```csharp
-// ENTITY FRAMEWORK CORE 1.1 OR LATER
-// Entity is a custom base class with the ID
-public class Order : Entity, IAggregateRoot
-{
-    // DDD Patterns comment
-    // Using private fields, allowed since EF Core 1.1, is a much better
-    // encapsulation aligned with DDD aggregates and domain entities (instead of
-    // properties and property collections)
-    private bool _someOrderInternalState;
-    private DateTime _orderDate;
-    public Address Address { get; private set; }
-    public Buyer Buyer { get; private set; }
-    private int _buyerId;
-    public OrderStatus OrderStatus { get; private set; }
-    private int _orderStatusId;
-
-    // DDD patterns comment
-    // Using a private collection field is better for DDD aggregate encapsulation.
-    // OrderItem objects cannot be added from outside the aggregate root
-    // directly to the collection, but only through the
-    // OrderAggrergateRoot.AddOrderItem method, which includes behavior.
-    private readonly List<OrderItem> _orderItems;
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
-    // Using List<>.AsReadOnly()
-    // This will create a read-only wrapper around the private list so it is
-    // protected against external updates. It's much cheaper than .ToList(),
-    // because it will not have to copy all items in a new collection.
-    // (Just one heap alloc for the wrapper instance)
-    // https://msdn.microsoft.com/en-us/library/e78dcd75(v=vs.110).aspx
-    public PaymentMethod PaymentMethod { get; private set; }
-    private int _paymentMethodId;
-
-    protected Order() { }
-
-    public Order(int buyerId, int paymentMethodId, Address address)
-    {
-        _orderItems = new List<OrderItem>();
-        _buyerId = buyerId;
-        _paymentMethodId = paymentMethodId;
-        _orderStatusId = OrderStatus.InProcess.Id;
-        _orderDate = DateTime.UtcNow;
-        Address = address;
-    }
-
-    // DDD patterns comment
-    // The Order aggregate root method AddOrderitem() should be the only way
-    // to add items to the Order object, so that any behavior (discounts, etc.)
-    // and validations are controlled by the aggregate root in order to
-    // maintain consistency within the whole aggregate.
-    public void AddOrderItem(int productId, string productName, decimal unitPrice,
-        decimal discount, string pictureUrl, int units = 1)
-    {
-        // ...
-        // Domain rules/logic here for adding OrderItem objects to the order
-        // ...
-        OrderItem item = new OrderItem(this.Id, productId, productName,
-            pictureUrl, unitPrice, discount, units);
-        OrderItems.Add(item);
-    }
-
-    // ...
-    // Additional methods with domain rules/logic related to the Order aggregate
-    // ...
-}
-```
 
 ### <a name="mapping-properties-with-only-get-accessors-to-the-fields-in-the-database-table"></a>Mapowania właściwości z tylko Pobierz metod dostępu do pola w tabeli bazy danych
 
-Mapowanie właściwości do kolumny tabeli bazy danych nie jest odpowiedzialność domeny, ale część warstwy infrastruktury i trwałości. Firma Microsoft informacje o tym tutaj tylko tak poznać nowe funkcje w wersji 1.1 EF związane z jak modelu jednostki. Dodatkowe szczegóły dotyczące tego tematu opisano w sekcji infrastruktury i trwałości.
+Mapowanie właściwości do kolumny tabeli bazy danych nie jest odpowiedzialność domeny, ale część warstwy infrastruktury i trwałości. Firma Microsoft informacje o tym tutaj wystarczy, aby poznać nowe funkcje w wersji 1.1 Core EF lub później związanych z jak modelu jednostki. Dodatkowe szczegóły dotyczące tego tematu opisano w sekcji infrastruktury i trwałości.
 
-Jeśli używasz EF 1.0, w ramach DbContext należy zamapować właściwości, które są zdefiniowane tylko za pomocą metody pobierające, do rzeczywistych pola w tabeli bazy danych. Można to zrobić za pomocą metody HasField klasy PropertyBuilder.
+Jeśli używasz EF Core 1.0, w ramach DbContext należy zamapować właściwości, które są zdefiniowane tylko za pomocą metody pobierające, do rzeczywistych pola w tabeli bazy danych. Można to zrobić za pomocą metody HasField klasy PropertyBuilder.
 
 ### <a name="mapping-fields-without-properties"></a>Mapowanie pól bez właściwości
 
-Dzięki nowej funkcji EF Core 1.1 mapowanie kolumn do pól jest również możliwe nie używać właściwości. Zamiast tego można mapować tylko kolumny tabeli do pól. Przypadek użycia wspólnych dla tego jest prywatny pól dla stanu wewnętrznego, które nie muszą być dostępne spoza jednostki.
+Dzięki funkcji w programie EF Core 1.1 lub nowszej do mapowania kolumn do pól jest również możliwe nie używać właściwości. Zamiast tego można mapować tylko kolumny tabeli do pól. Przypadek użycia wspólnych dla tego jest prywatny pól dla stanu wewnętrznego, które nie muszą być dostępne spoza jednostki.
 
-Na przykład w poprzednim przykładzie kodu \_someOrderInternalState pola nie ma powiązanych właściwości metody ustawiającej lub metody pobierającej. To pole zostanie również obliczona w kolejności logiki biznesowej i będzie używana z metody kolejności, ale zachodzi potrzeba jego utrwalenia w bazie danych oraz. Tak w wersji 1.1 EF istnieje sposób mapowania pola bez powiązanych właściwości do kolumny w bazie danych. Jest to również szczegółowo [warstwę infrastruktury](#the-infrastructure-layer) tego przewodnika.
+Na przykład w poprzednim przykładzie kodu OrderAggregate istnieje kilka pól prywatnych, jak `_paymentMethodId` pole, które ma nie powiązanych właściwości metody ustawiającej lub metody pobierającej. Można również tego pola obliczane w kolejności logiki biznesowej i użycia w kolejności metody, ale zachodzi potrzeba jego utrwalenia w bazie danych oraz. Dlatego w EF Core (od momentu w wersji 1.1) mapują pole bez właściwości powiązanych z kolumną w bazie danych. Jest to również szczegółowo [warstwę infrastruktury](#the-infrastructure-layer) tego przewodnika.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 

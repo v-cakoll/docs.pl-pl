@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: 0f43f569cdb8b9e4be68b61ba7b5cc4686fdb871
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.workload: dotnetcore
+ms.openlocfilehash: 6dbbc2e95c613d468c7d8c7b0dc15c85849f79dc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Oprogramowanie .NET core narzędzi interfejsu wiersza polecenia (CLI)
 
@@ -35,7 +36,7 @@ Domyślnie instalowane są następujące polecenia:
 **Podstawowe polecenia**
 
 * [new](dotnet-new.md)
-* [Przywracanie](dotnet-restore.md)
+* [restore](dotnet-restore.md)
 * [kompilacji](dotnet-build.md)
 * [Publikowanie](dotnet-publish.md)
 * [Uruchom](dotnet-run.md)
@@ -69,7 +70,7 @@ Domyślnie instalowane są następujące polecenia:
 **Podstawowe polecenia**
 
 * [new](dotnet-new.md)
-* [Przywracanie](dotnet-restore.md)
+* [restore](dotnet-restore.md)
 * [kompilacji](dotnet-build.md)
 * [Publikowanie](dotnet-publish.md)
 * [Uruchom](dotnet-run.md)

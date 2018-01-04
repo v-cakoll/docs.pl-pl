@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91ab838ec543e2cc17e380ee9ec0d629989a003e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b3f1efefa4d32e3512b0dda6eca237a5e4938bf7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-templating-overview"></a>Przegląd Szablonowanie danych
 Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdefiniowania prezentacja danych. Formantów WPF ma wbudowaną funkcję obsługi dostosowywania prezentacji danych. W tym temacie przedstawiono najpierw sposób definiowania <xref:System.Windows.DataTemplate> , a następnie wprowadza inne funkcje tworzenia szablonów danych, takie jak wyboru szablonów na podstawie niestandardowej logiki i obsługę wyświetlania danych hierarchicznej.  
@@ -204,7 +205,7 @@ Model tworzenia szablonów danych WPF zapewnia dużą elastyczność w celu zdef
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiązanie danych](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
- [Znajdź elementy generowane DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Przegląd szablonów i styl nagłówka kolumny w widoku GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)
+ [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [GridView — style i szablony nagłówków kolumn — omówienie](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)

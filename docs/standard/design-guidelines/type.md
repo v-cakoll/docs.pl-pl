@@ -18,11 +18,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2b24a934285f88386daa764c5b28bd82cf5d39a9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6b02abef0180b6de82e26837863849cce35c994f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="type-design-guidelines"></a>Wytyczne dotyczące projektowania typu
 Z punktu widzenia środowiska CLR, dostępne są tylko dwie kategorie typów — odwołanie typy i wartość — ale dyskusji dotyczących framework projektu na potrzeby możemy podział typy bardziej logiczne, grup, każda z własne zasady określonego projektu.  
@@ -42,16 +45,16 @@ Z punktu widzenia środowiska CLR, dostępne są tylko dwie kategorie typów —
  **CZY ✓** upewnij się, że każdy typ jest dobrze zdefiniowany zestaw elementów członkowskich powiązane, nie tylko losowe kolekcji funkcji niepowiązanych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wybór między klasy i struktury](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
+ [Wybieranie między klasą i strukturą](../../../docs/standard/design-guidelines/choosing-between-class-and-struct.md)  
  [Projekt klasy abstrakcyjnej](../../../docs/standard/design-guidelines/abstract-class.md)  
- [Projekt klasy statyczne](../../../docs/standard/design-guidelines/static-class.md)  
+ [Projekt klasy statycznej](../../../docs/standard/design-guidelines/static-class.md)  
  [Projekt interfejsu](../../../docs/standard/design-guidelines/interface.md)  
- [Projektowanie struktury](../../../docs/standard/design-guidelines/struct.md)  
- [Projekt wyliczenia](../../../docs/standard/design-guidelines/enum.md)  
+ [Projekt struktury](../../../docs/standard/design-guidelines/struct.md)  
+ [Projekt wyliczeń](../../../docs/standard/design-guidelines/enum.md)  
  [Zagnieżdżone typy](../../../docs/standard/design-guidelines/nested-types.md)  
  *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)

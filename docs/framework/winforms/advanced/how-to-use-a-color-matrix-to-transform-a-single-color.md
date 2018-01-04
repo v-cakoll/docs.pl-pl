@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 60da29b60d2b9b5b98c76a0a9c3ae73ac9142bbd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d6c9273102dc8e8f0fe6be3e31d0f0b6e570c7af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>Porady: stosowanie macierzy kolorów do przekształcenia pojedynczego koloru
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]udostępnia <xref:System.Drawing.Image> i <xref:System.Drawing.Bitmap> klasy do przechowywania i manipulowanie obrazów. <xref:System.Drawing.Image>i <xref:System.Drawing.Bitmap> obiektów przechowywania koloru każdego piksela jako 32-bitową liczbą: 8, usługa bits dla czerwony, zielony, niebieski i alfa. Każdy z czterech składników jest liczba z przedziału od 0 do 255, gdzie 0 reprezentujący natężenie i 255 reprezentujący intensywność pełna. Określa przezroczystość koloru, składnika alfa: 0 jest w pełni przezroczyste, i jest całkowicie nieprzezroczyste 255.  
@@ -75,4 +76,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Ponowne kolorowanie obrazów](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
- [Systemy i transformacje współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)
+ [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)

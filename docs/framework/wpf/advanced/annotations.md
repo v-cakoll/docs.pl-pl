@@ -17,18 +17,19 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ad5825c63672f0cadd30b7a57d81427407e5097e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67f0a1f4a032a5175406dedcf282ed695f58e51e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations"></a>Adnotacje
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia dokument wyświetlania formantów, które obsługują adnotacji zawartości dokumentu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
-  [Adnotacje schematu](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
+ [Przegląd adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)  
+  [Schemat adnotacji](../../../../docs/framework/wpf/advanced/annotations-schema.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Annotations.Annotation>  
@@ -36,5 +37,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Controls.DocumentViewer>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
-  [Przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+  [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

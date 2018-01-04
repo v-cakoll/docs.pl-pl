@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 045807df433d519b00969812afb0ae2feac94b75
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 485a5f98ead246b02aab4ffc5abebd5c88ea92dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="announcements-sample"></a>Anonse — przykład
 Ten przykład przedstawia sposób użycia anonsu działanie funkcji odnajdywania. Anonse Zezwalaj usługom do wysłania wiadomości anonsów, zawierające metadane dotyczące usługi. Domyślnie powiadomienia hello są wysyłane podczas uruchamiania usługi i anonsu bye są wysyłane podczas zamykania usługi. Anonse te mogą być multiemisji lub mogą być wysyłane point-to-point. W tym przykładzie obejmuje dwa projekty usługi i klienta.  

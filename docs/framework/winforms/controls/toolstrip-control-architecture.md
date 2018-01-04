@@ -14,11 +14,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6884598e6b883ab5e6369be5f2f796a194c7f930
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b112cb1e383b092c1bcc4403e04938b3b83c5ecc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip — Architektura formantu
 <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.ToolStripItem> klasy zapewniają elastyczny i rozszerzalny system do wyświetlania elementów paska narzędzi, stanu i menu. Te klasy są zawarte w <xref:System.Windows.Forms> przestrzeni nazw, a wszystkie nazwy z prefiksem "ToolStrip" (takie jak <xref:System.Windows.Forms.ToolStripOverflow>) lub z sufiksem "Usuń" (takie jak <xref:System.Windows.Forms.MenuStrip>).  
@@ -388,10 +389,10 @@ Model obiektu ToolStripItem
 -   <xref:System.Windows.Forms.ToolStripPanel>miejsce do przenoszenia i rozmieszczanie <xref:System.Windows.Forms.ToolStrip> kontrolki. Jeśli tak, można użyć tylko jednego panelu i <xref:System.Windows.Forms.ToolStripPanel> działa dobrze w scenariuszach MDI.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Informacje o formancie ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [Podsumowanie technologii formantów ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)  
- [ToolStrip — formant](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [MenuStrip — formant](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
- [StatusStrip — formant](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
- [ContextMenuStrip — formant](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
- [BindingNavigator — formant](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+ [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip — podsumowanie informacji o technologii](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)  
+ [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [MenuStrip, kontrolka](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)  
+ [StatusStrip, kontrolka](../../../../docs/framework/winforms/controls/statusstrip-control.md)  
+ [ContextMenuStrip, kontrolka](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)  
+ [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)

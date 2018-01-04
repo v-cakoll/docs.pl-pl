@@ -17,11 +17,14 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1c034b656cf7a953ae532c12640b5916001764c0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4ef7c8050b26cffeed03cc394193116f8f6797a9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>Porady: dodawanie i usuwanie elementów ConcurrentDictionary
 W tym przykładzie pokazano, jak dodać, pobierania, aktualizowanie i usuwanie elementów z <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>. Ta klasa kolekcji jest implementacją wątkowo. Zaleca się używania jej w każdym przypadku, gdy wiele wątków może próby uzyskania dostępu do elementów jednocześnie.  
@@ -56,4 +59,4 @@ W tym przykładzie pokazano, jak dodać, pobierania, aktualizowanie i usuwanie e
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
- [Kolekcje obsługujące wielowątkowość](../../../../docs/standard/collections/thread-safe/index.md)
+ [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)

@@ -17,16 +17,17 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cad3fd6a1bdecf9d6187f3592fe4771bbb0b0e98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 214fdff11b5b64c78b2719e66813b5210884e318
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip-how-to-topics"></a>ToolTip — Tematy porad
 ## <a name="in-this-section"></a>W tej sekcji  
- [Umieść etykietka narzędzia](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
-  [Użyj właściwości BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
+ [Ustawianie położenia etykietki narzędzia](../../../../docs/framework/wpf/controls/how-to-position-a-tooltip.md)  
+  [Używanie właściwości BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ToolTip>  
@@ -36,6 +37,6 @@ ms.lasthandoff: 10/22/2017
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie menu podręczne](../../../../docs/framework/wpf/controls/popup-overview.md)  
+ [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)  
   
- [Tematy porad](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

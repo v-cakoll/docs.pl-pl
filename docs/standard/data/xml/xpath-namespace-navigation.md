@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: beb6265e8b245893cd7fa5edca28ba1b081481ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cae3fa68d3820e98bee333d0252aeb74b15fe2a7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpath-namespace-navigation"></a>Wyrażenie XPath Namespace nawigacji
 Aby korzystać z zapytania XPath z dokumentów XML, masz prawidłowego adresowania przestrzeni nazw XML i elementy zawarty w przestrzeni nazw. Przestrzenie nazw uniknąć niejednoznaczności, które mogą wystąpić podczas nazw są używane w kontekście więcej niż jeden; na przykład nazwa `ID` może odwoływać się do więcej niż jeden identyfikator skojarzony z różnych elementów dokumentu XML. Składnia Namespace Określa identyfikatory URI, nazwy i które odróżniania elementów dokumentu XML.  
@@ -78,5 +81,5 @@ using (XmlReader reader = XmlReader.Create("response.xml"))
  Dokładność pełni kwalifikowanie nazwy i przestrzeni nazw jest większa niż udogodnienie. Nieco eksperymenty z definicji dokumentu i kodu w poprzednich przykładach zweryfikuje, że nawigacji bez nazwy FQDN elementów zgłasza wyjątków. Na przykład definicji elementu: `<Search xmlns="http://schemas.microsoft.com/v1/Search">`i zapytań: ciąg `xpath = "/s:Envelope/s:Body/Search";` bez prefiksu przestrzeni nazw na `Search` zwraca element `null` zamiast `Search` elementu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Uzyskiwanie dostępu do danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Wybieranie, Evaluating i dopasowywania danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+ [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)

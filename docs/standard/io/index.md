@@ -20,11 +20,14 @@ caps.latest.revision: "33"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 48a3c0e0e00e9fd55dd3e4dfde8e20522b801bc8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -163,15 +166,15 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   
--   [Typowe zadania we/wy](../../../docs/standard/io/common-i-o-tasks.md)  
+-   [Typowe zadania We/Wy](../../../docs/standard/io/common-i-o-tasks.md)  
   
  Lista zadań We/Wy skojarzonych z plikami, katalogami, i strumieniami oraz łącza do odpowiedniej zawartości i przykładów dla każdego zadania.  
   
--   [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
+-   [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)  
   
  Opis korzyści związanych z wydajnością oraz podstawowych asynchronicznych operacji We/Wy.  
   
--   [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)  
+-   [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
   
  Opis mechanizmu pamięci masowej danych, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych opcji kojarzenia kodu z zapisanymi danymi.  
   

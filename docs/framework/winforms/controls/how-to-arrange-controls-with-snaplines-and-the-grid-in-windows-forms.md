@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ab199f390fa6a704ad3b3d2a17387d034cf2e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7e3754df2930503e7e7a123ffdb4d4b787338c20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows
 Przy użyciu funkcji układu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], możesz dokładnie wskazać rozmieszczenie kontrolek w formularzu. Formanty dodane do formularza lub przeniesione w formularzu zostanie automatycznie wyrównany do wierszy i kolumn siatki projektanta formularzy systemu Windows lub można wyrównywanie formantów za pomocą funkcji linie przyciągania.  
@@ -46,10 +47,10 @@ Przy użyciu funkcji układu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md
   
 ## <a name="see-also"></a>Zobacz też  
  [Ogólne, Projektant formularzy systemu Windows, opcje — Okno dialogowe](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
- [Wskazówki: Rozmieszczanie formantów na formularzach systemu Windows za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
- [Porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Rozmieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Etykietowanie formantów formularzy systemu Windows poszczególnych i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Formanty przez funkcję formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Przewodnik: rozmieszczanie kontrolek na formularzach Windows Forms za pomocą linii przyciągania](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)  
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

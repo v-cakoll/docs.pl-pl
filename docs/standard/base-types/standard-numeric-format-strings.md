@@ -21,11 +21,14 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 81547bbcdbae5b4cc8dc1f20e829dfb5ede08963
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Ciąg formatu liczbowego standardowe mają postać `Axx`, gdzie:  
@@ -354,7 +357,7 @@ Aby uzyskać <xref:System.Double> i <xref:System.Single> wartości, specyfikator
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Globalization.NumberFormatInfo>  
  [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
- [Porady: uzupełnianie liczby zerami prowadzącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+ [Instrukcje: Uzupełnianie liczby zerami wiodącymi](../../../docs/standard/base-types/how-to-pad-a-number-with-leading-zeros.md)  
  [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)  
  [Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)

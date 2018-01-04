@@ -25,11 +25,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8fcb5ea90cc16d62fee5b8e95b03bfe53c3a6793
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac08dcf305e8cc0c1a3be3b8300ed9981e7d84d4
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="metadata-and-self-describing-components"></a>Składniki samoopisujące się i metadane
 W przeszłości składnika oprogramowania (.exe lub .dll), który został zapisany w jednym języku nie można łatwo użyć składnika oprogramowania, który został zapisany w innym języku. COM podany krok w rozwiązaniu tego problemu. .NET Framework ułatwia współdziałanie składnika nawet zezwalając kompilatory do emituje dodatkowe informacje deklaratywne do wszystkie moduły i zestawy. Te informacje o nazwie metadanych, pomaga składniki bezproblemowo interakcję.  

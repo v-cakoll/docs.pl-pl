@@ -38,11 +38,12 @@ caps.latest.revision: "27"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6d7918a369b5a5656fa2e059bdaaf6c211bd022c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 84688ed80d0cb1b802290176400eb45998052a34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-overview"></a>Omówienie profilowania
 <a name="top"></a>Profiler to narzędzie, które monitoruje wykonywanie innej aplikacji. Typowe profiler środowiska uruchomieniowego (języka wspólnego CLR) języka jest biblioteki dołączanej (dynamicznie DLL), która składa się z funkcji, które odbierać komunikaty z i wysyłać wiadomości do środowiska CLR za pomocą interfejsu API profilowania. Biblioteki DLL profilera jest ładowany przez środowisko CLR w czasie wykonywania.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Wątki powiadomień](#notification_threads)  
   
--   [Zabezpieczeń](#security)  
+-   [Zabezpieczenia](#security)  
   
 -   [Łączenie zarządzanych i niezarządzanych kodu w profilera kodu](#combining_managed_unmanaged)  
   
@@ -239,6 +240,6 @@ Profilowanie architektury
 |-----------|-----------------|  
 |[Konfigurowanie środowiska profilowania](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)|Wyjaśniono, jak zainicjować profilera, ustawienie powiadomień o zdarzeniach i profilu usługi systemu Windows.|  
 |[Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)|W tym artykule opisano niezarządzane interfejsy, które używa interfejsu API profilowania.|  
-|[Statyczne funkcje globalne profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Opisuje niezarządzane statyczne funkcje globalne, które używa interfejsu API profilowania.|  
+|[Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)|Opisuje niezarządzane statyczne funkcje globalne, które używa interfejsu API profilowania.|  
 |[Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)|W tym artykule opisano niezarządzane wyliczenia, które używa interfejsu API profilowania.|  
-|[Struktury profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|W tym artykule opisano niezarządzane struktury, których używa interfejsu API profilowania.|
+|[Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)|W tym artykule opisano niezarządzane struktury, których używa interfejsu API profilowania.|

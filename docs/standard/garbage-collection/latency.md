@@ -16,11 +16,14 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 439fdd8fe78a0c0f0fda4ac7e759a4a780bb9b58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d0ac0db376ad7cd4aa139ed0eb065a5ba33836c8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="latency-modes"></a>Tryby opóźnienia
 Aby odzyskać obiektów, moduł zbierający elementy bezużyteczne należy zatrzymać wszystkie wątki wykonywane w aplikacji. W niektórych sytuacjach, na przykład w przypadku aplikacji pobiera dane lub wyświetla zawartość pełnego wyrzucania elementów bezużytecznych mogą wystąpić jednocześnie krytyczne i utrudniać wydajności. Przez ustawienie można dostosować intrusiveness modułu zbierającego elementy bezużyteczne <xref:System.Runtime.GCSettings.LatencyMode%2A?displayProperty=nameWithType> jedną z właściwości <xref:System.Runtime.GCLatencyMode?displayProperty=nameWithType> wartości.  
@@ -64,4 +67,4 @@ Aby odzyskać obiektów, moduł zbierający elementy bezużyteczne należy zatrz
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.GC?displayProperty=nameWithType>  
  [Wywołane kolekcje](../../../docs/standard/garbage-collection/induced.md)  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

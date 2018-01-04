@@ -12,11 +12,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41f71519ee8945ae93b85e7f6ac2725bf50d4913
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generowania serializatora XML (Sgen.exe)
 Generator serializatora XML tworzy zestawu serializacji XML dla typów w określonym zestawie w celu zwiększenia wydajności uruchamiania <xref:System.Xml.Serialization.XmlSerializer> po serializuje lub deserializuje obiektów określonego typu.  
@@ -67,4 +70,4 @@ sgen Data.dll
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
  [Omówienie usług XML sieci Web](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

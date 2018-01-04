@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cc1883e8503567bdf2f6e0bda20cea777a12c7cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ceca36b5e988751dff34b5574978aa0ae2da1259
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="traversing-xml-schemas"></a>Przechodzenie przez schematy XML
 Przechodzenie przez schemat XML przy użyciu schematu obiektu modelu (SOM) interfejsu API zapewnia dostęp do elementy, atrybuty i przechowywane w SOM. typów Przechodzenie XML schematu ładowane do SOM jest również pierwszym etapem schematu XML przy użyciu interfejsu API SOM edycji.  
@@ -75,10 +78,10 @@ Przechodzenie przez schemat XML przy użyciu schematu obiektu modelu (SOM) inter
  Przykładowy kod w [schematów XML budynku](../../../../docs/standard/data/xml/building-xml-schemas.md) tematu używane <xref:System.Xml.Schema.XmlSchemaComplexType.Attributes%2A?displayProperty=nameWithType> kolekcji można dodać atrybutu `CustomerId` do `Customer` elementu. Jest to właściwość wstępnie przygotowany schema kompilacji. Jest odpowiadającą właściwością po-Schema-kompilacji-typu Infoset <xref:System.Xml.Schema.XmlSchemaComplexType.AttributeUses%2A?displayProperty=nameWithType> kolekcji, która zawiera wszystkie atrybuty typu złożonego, w tym te, które są dziedziczone przez wyprowadzenie typu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie modelu obiektu schematu XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Odczytywanie i zapisywanie schematy XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
  [Tworzenie schematów XML](../../../../docs/standard/data/xml/building-xml-schemas.md)  
- [Edytowanie schematy XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [W tym lub importowanie schematy XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Zestaw XmlSchemaSet schematu kompilacji](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Obiekt typu Infoset schematu po kompilacji](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Zestaw informacji po kompilacji schematu](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

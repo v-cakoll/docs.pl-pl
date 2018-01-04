@@ -1,6 +1,6 @@
 ---
 title: "Wprowadzenie do języka F # z narzędzi wiersza polecenia"
-description: "Dowiedz się, jak za pomocą F # i platform .NET Core interfejsu wiersza polecenia."
+description: "Dowiedz się, jak używać F # na systemie operacyjnym (Windows, System MacOS, Linux) z wielu platform .NET Core interfejsu wiersza polecenia."
 keywords: "Visual f #, f #, funkcjonalności programowania .NET, .NET Core"
 author: cartermp
 ms.author: phcart
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 615db1ec-6ef3-4de2-bae6-4586affa9771
-ms.openlocfilehash: a23d4861ce599f20f37ecd0564a0187e7b9b739f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4820a8a306bd478429b497a8b7c70ff170c1c655
+ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/19/2017
 ---
 # <a name="get-started-with-f-with-the-net-core-cli"></a>Rozpoczynanie pracy z F # z poziomu interfejsu wiersza polecenia platformy .NET Core
 
-W tym artykule opisano, jak można rozpocząć korzystanie z języka F # na .NET Core. Będzie ona przejść przez tworzenie wielu projektów rozwiązania z biblioteki klas, który jest wywoływany przez aplikacji konsoli.
+W tym artykule opisano, jak możesz rozpocząć pracę na systemie operacyjnym (Windows, system macOS lub Linux) przy użyciu języka F # z interfejsu wiersza polecenia platformy .NET Core. Będzie ona przejść przez tworzenie wielu projektów rozwiązania z biblioteki klas, który jest wywoływany przez aplikacji konsoli.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

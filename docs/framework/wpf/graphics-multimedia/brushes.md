@@ -18,23 +18,24 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ece5049f6749315e393aa0aad4e002fcb416ba7c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9af3fcfc2e910a61e9ac1b999863e40bc26400da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="brushes"></a>Pędzle
 W poniższych tematach opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] pędzle namalować "" zawartość do ekranu  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie pędzle WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [Omówienie przekształcania pędzla](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [Omówienie maski przezroczystości](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [Malowanie pełnych kolorów i gradientów — omówienie](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [Malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Omówienie TileBrush](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Pędzle WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
+ [Przekształcanie pędzla — przegląd](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
+ [Maska nieprzezroczystości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
+ [Malowanie jednolitymi kolorami i gradientami — przegląd](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
+ [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [TileBrush — przegląd](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Brush>  
@@ -50,6 +51,6 @@ W poniższych tematach opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../.
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)

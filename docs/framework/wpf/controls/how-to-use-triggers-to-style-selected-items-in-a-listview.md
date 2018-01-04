@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e86c7f875376a4ab28eec7cd032a165745445441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3f8965ee524d6a5cb03a54ac07d8889ff9801440
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-triggers-to-style-selected-items-in-a-listview"></a>Jak użyć wyzwalaczy, aby nadać styl zaznaczonym elementom w ListView
 W tym przykładzie pokazano sposób definiowania <xref:System.Windows.Style.Triggers%2A> dla <xref:System.Windows.Controls.ListViewItem> sterowania, aby gdy wartość właściwości <xref:System.Windows.Controls.ListViewItem> zmiany, <xref:System.Windows.Style> z <xref:System.Windows.Controls.ListViewItem> zmianach w odpowiedzi.  
@@ -42,6 +43,6 @@ W tym przykładzie pokazano sposób definiowania <xref:System.Windows.Style.Trig
  <xref:System.Windows.Controls.Control>  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Tematy porad](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Omówienie widoku GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)

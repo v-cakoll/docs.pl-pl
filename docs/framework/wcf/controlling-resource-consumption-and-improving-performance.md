@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8cd80805eee58db16f5865683cbd322a49c554a8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ecb8ae5edfb35ccaffecbfb4e960d3f4a46bad0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-resource-consumption-and-improving-performance"></a>Kontrolowanie zużycia zasobów i zwiększanie wydajności
 W tym temacie opisano różne właściwości w różnych obszarach [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architekturę, która działa kontrolowanie zużycia zasobów i wpływają na metryki wydajności.  
@@ -57,5 +58,5 @@ W tym temacie opisano różne właściwości w różnych obszarach [!INCLUDE[ind
  Gdy usługa WCF jest hostowana w ramach usług IIS i platformy ASP.NET, ustawienia konfiguracji usług IIS i platformy ASP.NET może mieć wpływ na przepustowość i pamięci rozmiaru usługi WCF.  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Wydajność programu ASP.NET, zobacz [poprawę wydajności ASP.NET](http://go.microsoft.com/fwlink/?LinkId=186462).  Jeden ustawienie może być jest niezamierzone skutki <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A>, która jest właściwością <xref:System.Web.Configuration.ProcessModelSection>. Jeśli aplikacja ma stały lub małej liczby klientów, ustawienie <xref:System.Web.Configuration.ProcessModelSection.MinWorkerThreads%2A> 2 może zawierać większą przepustowość na komputerze wieloprocesorowych, który ma użycie procesora CPU, bliski 100%. To zwiększenie wydajności jest dostarczany z koszt: również spowoduje zwiększenie użycia pamięci, co może zmniejszyć skalowalności.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Administracja i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
- [Duże ilości danych i przesyłania strumieniowego](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+ [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Duże ilości danych i przesyłanie strumieniowe](../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)

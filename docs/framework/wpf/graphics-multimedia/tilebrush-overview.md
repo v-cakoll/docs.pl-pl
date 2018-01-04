@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f759a56233e8cf2b1c1d39862706be518fefe43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a7d5e9fa36ddeda0c724eeb0bb46a64d0ba36c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tilebrush-overview"></a>TileBrush — Przegląd
 <xref:System.Windows.Media.TileBrush>obiekty umożliwiają z dużym stopniem kontrolę nad jak obszar jest rysowane przy użyciu obrazu <xref:System.Windows.Media.Drawing>, lub <xref:System.Windows.Media.Visual>. W tym temacie opisano sposób użycia <xref:System.Windows.Media.TileBrush> funkcji, aby uzyskać większą kontrolę nad jak <xref:System.Windows.Media.ImageBrush>, <xref:System.Windows.Media.DrawingBrush>, lub <xref:System.Windows.Media.VisualBrush> rysują obszaru.  
@@ -136,8 +137,8 @@ Składniki TileBrush z TileMode kafelków
  <xref:System.Windows.Media.DrawingBrush>  
  <xref:System.Windows.Media.VisualBrush>  
  <xref:System.Windows.Media.TileBrush>  
- [Malowanie obrazów, rysunki i elementy wizualne](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
- [Obiekty obiektu freezable — omówienie](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Malowanie przy użyciu obrazów, rysowania i wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
  [Przykładowe ImageBrush](http://go.microsoft.com/fwlink/?LinkID=160005)  
  [Przykładowe VisualBrush](http://go.microsoft.com/fwlink/?LinkID=160049)

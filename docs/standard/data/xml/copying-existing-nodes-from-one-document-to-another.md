@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0f20e5bd595c8eb49360e58f281a8cf6eda89acf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 **ImportNode** metody to mechanizm, za pomocą którego węzeł lub całego węzła poddrzewo zostaną skopiowane z jednego **XmlDocument** na inny. Węzeł zwracana z wywołania jest kopią węzła w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła typu węzła i wszystkie atrybuty związane z przestrzeni nazw, takie jak prefiks, nazwę lokalną i przestrzeń nazw identyfikatora URI (Uniform Resource). Dokument źródłowy nie zostanie zmieniona. Po zaimportowaniu tego węzła, musisz dodać je do drzewa przy użyciu jednej z metod służy do wstawiania węzłów.  
@@ -48,4 +51,4 @@ ms.lasthandoff: 10/18/2017
 >  Mimo że można zaimportować węzłów dokumentu, dokument może mieć tylko jeden typ dokumentu. Dlatego po zaimportowaniu typu dokumentu przed wstawieniem do drzewa, musisz upewnić się, że nie ma dokumentu typu w dokumencie. Aby uzyskać informacje dotyczące usuwania węzłów, zobacz [wartości z dokumentu XML, zawartość i usuwanie węzłów](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

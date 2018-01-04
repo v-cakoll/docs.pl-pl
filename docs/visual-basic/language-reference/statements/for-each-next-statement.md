@@ -30,11 +30,11 @@ ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 caps.latest.revision: "56"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4aefacd33e0b3c8f64fd26929af06469136237f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 11601eb1caad1c6cc6d9898f590436a977a78fa1
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next — Instrukcja (Visual Basic)
 Powtarza grupę instrukcji dla każdego elementu w kolekcji.  
@@ -73,7 +73,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#121](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_1.vb)]  
   
- Aby uzyskać więcej przykładów, zobacz [kolekcje](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) i [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
+ Aby uzyskać więcej przykładów, zobacz [kolekcje](../../../standard/collections/index.md) i [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
 ## <a name="nested-loops"></a>Pętle zagnieżdżone  
  Można zagnieżdżać `For Each` pętle, ustawiając dla pętli w innym.  
@@ -114,7 +114,7 @@ Next [ element ]
   
  [!code-vb[VbVbalrStatements#127](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_4.vb)]  
   
- Aby uzyskać więcej informacji, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7), [instrukcji Yield](../../../visual-basic/language-reference/statements/yield-statement.md), i [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
+ Aby uzyskać więcej informacji, zobacz [Iteratory](../../programming-guide/concepts/iterators.md), [instrukcji Yield](../../../visual-basic/language-reference/statements/yield-statement.md), i [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 ## <a name="technical-implementation"></a>Realizacja techniczna  
  Gdy `For Each`...`Next` Uruchamia instrukcji, Visual Basic oblicza kolekcji tylko jeden raz, przed rozpoczęciem pętli. W przypadku zmiany z bloku instrukcji `element` lub `group`, zmiany te nie wpływają na iteracji pętli.  
@@ -180,12 +180,12 @@ End Sub
  [!code-vb[VbVbalrStatements#125](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/for-each-next-statement_7.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kolekcje](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Dla... Next — instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
+ [Kolekcje](../../../standard/collections/index.md)  
+ [For...Next, instrukcja](../../../visual-basic/language-reference/statements/for-next-statement.md)  
  [Struktury pętli](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)  
- [While... End While — instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
- [Czy... Loop — instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
+ [While...End While, instrukcja](../../../visual-basic/language-reference/statements/while-end-while-statement.md)  
+ [Do...Loop, instrukcja](../../../visual-basic/language-reference/statements/do-loop-statement.md)  
  [Rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)

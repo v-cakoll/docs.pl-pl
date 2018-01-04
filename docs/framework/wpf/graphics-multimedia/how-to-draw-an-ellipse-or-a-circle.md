@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4da623c34b4c3b84dee0f02d631d032eb1c061d4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8f03fd8cea706e2927ed8e14b4f89a94a208e266
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-an-ellipse-or-a-circle"></a>Jak narysować elipsę na okręgu
 W tym przykładzie pokazano, jak Rysowanie elips i okręgi przy użyciu <xref:System.Windows.Shapes.Ellipse> elementu. Aby narysować elipsę, Utwórz <xref:System.Windows.Shapes.Ellipse> element i określ jej <xref:System.Windows.FrameworkElement.Width%2A> i <xref:System.Windows.FrameworkElement.Height%2A>. Użyj jego <xref:System.Windows.Shapes.Shape.Fill%2A> właściwości w celu określenia <xref:System.Windows.Media.Brush> używany do wnętrza elipsy. Użyj jego <xref:System.Windows.Shapes.Shape.Stroke%2A> właściwości w celu określenia <xref:System.Windows.Media.Brush> używany namalować kontur elipsy. <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> Właściwość określa szerokość konturu elipsy.  

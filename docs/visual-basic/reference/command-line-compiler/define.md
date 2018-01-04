@@ -17,11 +17,11 @@ ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8bc3056c3e2d7a4aad469d3bf2c404f5f5248384
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="define-visual-basic"></a>/define (Visual Basic)
 Definiuje warunkowe stałe kompilatora.  
@@ -52,7 +52,7 @@ Definiuje warunkowe stałe kompilatora.
   
 |Aby ustawić / define w programie Visual Studio zintegrowane środowisko deweloperskie|  
 |---|  
-|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. Aby uzyskać więcej informacji, zobacz [wprowadzenie do projektanta projektu](http://msdn.microsoft.com/en-us/898dd854-c98d-430c-ba1b-a913ce3c73d7).<br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane**.<br />4.  Zmodyfikuj wartość w **stałe niestandardowe** pole.|  
+|1.  Projekt wybrany w **Eksploratora rozwiązań**. Na **projektu** menu, kliknij przycisk **właściwości**. <br />2.  Kliknij przycisk **skompilować** kartę.<br />3.  Kliknij przycisk **zaawansowane**.<br />4.  Zmodyfikuj wartość w **stałe niestandardowe** pole.|  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod definiuje, a następnie używa dwóch warunkowe stałe kompilatora.  
@@ -61,6 +61,6 @@ Definiuje warunkowe stałe kompilatora.
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [#If... Then... #Else — dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [#Const-dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [#If...Then...#Else, dyrektywy](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
+ [#Const, dyrektywa](../../../visual-basic/language-reference/directives/const-directive.md)  
+ [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

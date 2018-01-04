@@ -11,11 +11,11 @@ ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
 caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bceda3e102ec79bda6607d77c3b778f9a2014a33
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 37c88c7d88e01e6201a4679ae312e045c8cfab4a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-basic-run-time-messages"></a>Komunikaty środowiska wykonawczego Visual Basic
 Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błędach, które występują w czasie wykonywania.  
@@ -24,13 +24,13 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Ogranicznik nie może być Nothing ani ciągiem pustym](../../visual-basic/misc/a-delimiter-cannot-be-nothing-or-an-empty-string.md)  
   
- [Podwójny cudzysłów nie jest prawidłowym tokenem dla rozdzielonych pól, EscapeQuote ma wartość ustawioną na wartość True](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
+ [Podwójny cudzysłów nie jest prawidłowym tokenem komentarza dla rozdzielonych pól, jeżeli parametr EscapeQuote jest ustawiony na wartość True](../../visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md)  
   
  [Dziennik został już utworzony o tej nazwie na tym komputerze](../../visual-basic/misc/a-log-has-already-been-created-with-this-name-on-this-machine.md)  
   
  [Właściwość lub wywołanie metody nie może zawierać odwołania do obiektu prywatnego jako do argumentu lub jako do wartości zwracanej](../../visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md)  
   
- [Formularz początkowy nie został określony.](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
+ [Formularz początkowy nie został określony](../../visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md)  
   
  [Odmowa dostępu do '\<name > "](../../visual-basic/misc/access-denied-to-name.md)  
   
@@ -40,7 +40,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Określono nieprawidłową nazwę dziennika zdarzeń](../../visual-basic/misc/an-invalid-name-was-specified-for-the-event-log.md)  
   
- [Wystąpił nieoczekiwany błąd wystąpił, ponieważ zasób systemu operacyjnego zażądany dla uruchomienia pojedynczego wystąpienia nie może zostać pobrany](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
+ [Wystąpił nieoczekiwany błąd, ponieważ nie można uzyskać zasobu systemu operacyjnego wymaganego dla uruchomienia pojedynczego wystąpienia](../../visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md)  
   
  [Inny dziennik zdarzeń zarejestrowała już źródło o tej nazwie](../../visual-basic/misc/another-event-log-has-already-registered-a-source-with-this-name.md)  
   
@@ -128,7 +128,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Zły tryb pliku](../../visual-basic/language-reference/error-messages/bad-file-mode.md)  
   
- [Nieprawidłowa nazwa pliku lub numer](../../visual-basic/language-reference/error-messages/bad-file-name-or-number.md)  
+ [Zła nazwa lub numer pliku](../../visual-basic/language-reference/error-messages/bad-file-name-or-number.md)  
   
  [Zła długość rekordu](../../visual-basic/language-reference/error-messages/bad-record-length.md)  
   
@@ -172,7 +172,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Klasy\<classname >' nie implementuje interfejsu System.Collections.ICollection](../../visual-basic/misc/class-classname-does-not-implement-the-system-collections-icollection-interface.md)  
   
- [Klasy nie obsługuje automatyzacji lub oczekiwanego interfejsu jest nieobsługiwana](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
+ [Klasa nie obsługuje automatyzacji lub oczekiwanego interfejsu](../../visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md)  
   
  [Klasa nie jest zarejestrowana na komputerze lokalnym](../../visual-basic/misc/class-not-registered-on-local-machine.md)  
   
@@ -194,11 +194,11 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [DataBits musi być większa niż 0](../../visual-basic/misc/databits-must-be-greater-than-0.md)  
   
- [Błąd urządzenia We/Wy](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
+ [Błąd We/Wy urządzenia](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
   
  [Urządzenie jest niedostępne](../../visual-basic/misc/device-unavailable.md)  
   
- [Należy najpierw wywołać funkcję "Dir" z argumentem "PathName"](../../visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)  
+ [Należy najpierw wywołać funkcję „Dir” z argumentem „PathName”](../../visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)  
   
  [Dysk jest zapełniony (Visual Basic)](../../visual-basic/misc/disk-full.md)  
   
@@ -244,11 +244,11 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Nie można żądać informacji plik otwarty do zapisu](../../visual-basic/misc/file-information-cannot-be-queried-while-open-for-writing.md)  
   
- [Plik jest zbyt duży do odczytu do tablicy typu byte](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
+ [Plik jest za duży, aby odczytać do tablicy bajtów](../../visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md)  
   
  [Nazwa pliku lub nazwy klasy nie można odnaleźć podczas operacji automatyzacji (Visual Basic)](../../visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md)  
   
- [Nie znaleziono (błąd czasu wykonywania Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
+ [Nie odnaleziono pliku (błąd środowiska uruchomionego Visual Basic)](../../visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md)  
   
  [Plik określony przez nazwę pliku nie korzysta z kodowaniem określonym przez kodowanie plików](../../visual-basic/misc/file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding.md)  
   
@@ -304,7 +304,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Nie znaleziono metody lub danych członka.](../../visual-basic/misc/method-or-data-member-not-found.md)  
   
- [My.Application.log — nie można określić ilość wolnego miejsca na dysku](../../visual-basic/misc/my-application-log-cannot-determine-the-amount-of-free-disk-space.md)  
+ [My.Application.Log](xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase.Log)  
   
  [Nazwany argument '\<argumentname > "został określony wiele razy](../../visual-basic/misc/named-argument-argumentname-specified-multiple-times.md)  
   
@@ -356,7 +356,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Operator nie jest prawidłowa dla typu "\<typename >"](../../visual-basic/misc/operator-is-not-valid-for-type-typename.md)  
   
- [Liczba porządkowa nie jest prawidłowy](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
+ [Liczba porządkowa nie jest prawidłowa](../../visual-basic/language-reference/error-messages/ordinal-is-not-valid.md)  
   
  [Za mało pamięci (błąd czasu wykonywania Visual Basic)](../../visual-basic/misc/out-of-memory-run-time-error.md)  
   
@@ -364,7 +364,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Brak miejsca na ciąg (Visual Basic)](../../visual-basic/language-reference/error-messages/out-of-string-space.md)  
   
- [Przepełnienie (błąd czasu wykonywania języka Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
+ [Przepełnienie (błąd czasu wykonywania w Visual Basic)](../../visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md)  
   
  [Ścieżka "\<pathname >' nie znaleziono](../../visual-basic/misc/path-pathname-not-found.md)  
   
@@ -388,7 +388,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Indeks tablicy właściwości nie jest prawidłowy](../../visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md)  
   
- [Nie zdefiniowano procedura let właściwości, a procedura get właściwości nie zwraca obiektu](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
+ [Procedura Let właściwości nie została zdefiniowana, a procedura Get właściwości nie zwraca obiektu](../../visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md)  
   
  [Nie odnaleziono właściwości](../../visual-basic/language-reference/error-messages/property-not-found.md)  
   
@@ -462,7 +462,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Parametr TextFieldParser nie obsługuje ograniczników zawierających znaki endline](../../visual-basic/misc/textfieldparser-does-not-support-delimiters-that-contain-endline-characters.md)  
   
- [Parametr TextFieldParser nie może wykonać operacji odczytu, ponieważ został przekroczony maksymalny rozmiar buforu](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
+ [TextFieldParser nie może wykonać operacji odczytu, ponieważ został przekroczony maksymalny rozmiar buforu](../../visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md)  
   
  [Adres parametru UploadFile musi zawierać nazwę pliku](../../visual-basic/misc/the-address-for-uploadfile-needs-to-include-a-filename.md)  
   
@@ -512,13 +512,13 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Zbyt wielu klientów aplikacji DLL](../../visual-basic/misc/too-many-dll-application-clients.md)  
   
- [Zbyt wiele plików](../../visual-basic/language-reference/error-messages/too-many-files.md)  
+ [Za dużo plików](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
  [Niezgodność typów (Visual Basic)](../../visual-basic/language-reference/error-messages/type-mismatch.md)  
   
  [Typ argumentu "\<argumentname >" jest "\<typename >", który nie jest liczbą](../../visual-basic/misc/type-of-argument-argumentname-is-typename-which-is-not-numeric.md)  
   
- [Nie można uzyskać nazw portów seryjnych z powodu wewnętrznego błędu systemu](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
+ [Nie można uzyskać nazw portów seryjnych z powodu wystąpienia wewnętrznego błędu systemowego](../../visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md)  
   
  [Nie można uzyskać strumienia dla dziennika](../../visual-basic/misc/unable-to-obtain-a-stream-for-the-log.md)  
   
@@ -544,7 +544,7 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
   
  [Przerwana przez użytkownika](../../visual-basic/misc/user-interrupt-occurred.md)  
   
- [Zmienna używa typu automatyzacji, który nie jest obsługiwane w języku Visual Basic](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
+ [Zmienna używa typu automatyzacji, który nie jest obsługiwany przez język Visual Basic](../../visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md)  
   
  [Elementów VbStrConv.Wide i VbStrConv.Narrow nie mają zastosowania do podanych ustawień regionalnych](../../visual-basic/misc/vbstrconv-wide-and-vbstrconv-narrow-are-not-applicable-to-the-locale-specified.md)  
   
@@ -559,5 +559,5 @@ Ta sekcja zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] komunikaty o błę
  [Należy określić ścieżkę, która znajduje się w bieżącym folderze lub jeden z jego podfoldery](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [NOTINBUILD porady: uzyskiwanie informacji na temat błędów czasu wykonywania języka Visual Basic](http://msdn.microsoft.com/en-us/22a7d0a6-b7d7-4c5d-971c-52ff0583c656)  
+   
  [Komunikaty o błędach](../../visual-basic/language-reference/error-messages/index.md)

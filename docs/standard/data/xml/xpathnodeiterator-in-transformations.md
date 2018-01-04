@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 28877f10e11f2eebdcbcc8ff75854551302e3f66
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 523a4774de9975812838b22bbb5193e59cd58130
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xpathnodeiterator-in-transformations"></a>Element XPathNodeIterator w przekształcenia
 <xref:System.Xml.XPath.XPathNodeIterator> Zawiera metody do wykonywania iteracji zestawu węzłów utworzone w wyniku zapytania XML Path Language (XPath) lub wynikowego fragmentu drzewa przekonwertowane do węzła przy użyciu metody zestaw węzłów. <xref:System.Xml.XPath.XPathNodeIterator> Umożliwia iteracja węzłów w ramach tego zestawu węzłów. Po pobraniu zestawu węzłów <xref:System.Xml.XPath.XPathNodeIterator> klasa udostępnia tylko do odczytu, tylko do przodu kursor do wybranego zestawu węzłów. Zestaw węzłów jest tworzone w kolejności dokumentu wywołaniem tej metody przechodzi do następnego węzła w kolejności dokumentu. <xref:System.Xml.XPath.XPathNodeIterator>nie Konstruuj węzła drzewa wszystkich węzłów w zestawie. Zamiast tego zawiera okno jednego węzła na dane, udostępnianie podstawowej węzła, który wskazuje jako poruszanie się w drzewie. Metody i właściwości dostępne z <xref:System.Xml.XPath.XPathNodeIterator> klasy umożliwiające uzyskiwanie informacji z bieżącego węzła. Aby uzyskać listę dostępnych metod i właściwości, zobacz <xref:System.Windows.Forms.ToolBar>.  
@@ -166,4 +169,4 @@ xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Klasa XslTransform implementuje procesorze XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

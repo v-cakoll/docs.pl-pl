@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8c1dc0ea45efe32e36b649d92111fff3d5f61a7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 9cd6f9d7025de9f5deb836d48a8ce9c7134973d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-security"></a>Zabezpieczenie właściwości zależności
 Właściwości zależności zazwyczaj należy traktować jako właściwości publiczne. Rodzaj [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu właściwość zapobiega możliwości gwarancje bezpieczeństwa o wartość właściwości zależności.  
@@ -50,4 +51,4 @@ Właściwości zależności zazwyczaj należy traktować jako właściwości pub
  Żądanie do stosowania <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> i oczekiwano niepowodzenia weryfikacji w przypadku niepowodzenia żądanie, aby zapobiec ustawiania właściwości nie jest mechanizm odpowiednich zabezpieczeń. Ustaw wartość unieważniania wymuszane za pośrednictwem <xref:System.Windows.DependencyProperty.ValidateValueCallback%2A> również mogła zostać pominięta przez złośliwe obiekty wywołujące, jeśli tych wywołań działają w ramach domeny aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

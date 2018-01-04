@@ -8,11 +8,14 @@ ms.date: 05/26/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 1e1dc919c7e35580576c86b4cf9872b4f8cea2c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7ba7f09e189cd6d58ba9e84c4b668b871eb25dcb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji korzystających z mikrousługi
 
@@ -58,7 +61,7 @@ Co należy architektura wdrożenia aplikacji Wymagania dotyczące aplikacji, wra
 
 W takie podejście każdej usługi (kontenera) implementuje zestaw funkcji spójności i ściśle powiązane. Na przykład aplikacja może obejmować usług, takich jak usługi katalogu, kolejność usługi, Usługa koszyka, usługi profilu użytkownika, itp.
 
-Mikrousług komunikacji przy użyciu protokołów takich jak HTTP (REST), ale również asynchronicznie (tzn. AMQP) Jeśli to możliwe, szczególnie gdy propagowanie aktualizuje zdarzeń integracji.
+Mikrousług komunikacji przy użyciu protokołów, takich jak HTTP (REST), ale również asynchronicznie (na przykład za pomocą protokołu AMQP) Jeśli to możliwe, szczególnie gdy propagowanie aktualizuje zdarzeń integracji.
 
 Mikrousług opracowany i jest wdrożona jako kontenery niezależnie od siebie. Oznacza to, że zespół deweloperów może być projektowania i wdrażania niektórych mikrousługi bez wpływania na inne podsystemy.
 
@@ -150,7 +153,7 @@ Jak wspomniano w sekcji architektura podczas projektowania i tworzenia złożony
 
 ## <a name="external-versus-internal-architecture-and-design-patterns"></a>Zewnętrzne i wewnętrzne wzorce architektury i projektu
 
-Architektura zewnętrzne jest architektury mikrousługi składane przez usługę wiele, następujące zasady opisane w sekcji architektura tego przewodnika. Jednak w zależności od charakteru każdego mikrousługi i niezależnie od architektury mikrousługi wysokiego poziomu, możesz wybrać jest typowe i czasami wskazane mają różne architektury wewnętrznego, każdy na podstawie różnych wzorców dla różnych mikrousług. Mikrousług może za pomocą różnych technologii i języków programowania. Rysunek 8-2 przedstawia Ta różnorodność.
+Architektura zewnętrzne jest architektury mikrousługi składane przez wielu usług, następujące zasady opisane w sekcji architektura tego przewodnika. Jednak w zależności od charakteru każdego mikrousługi i niezależnie od architektury mikrousługi wysokiego poziomu, możesz wybrać jest typowe i czasami wskazane mają różne architektury wewnętrznego, każdy na podstawie różnych wzorców dla różnych mikrousług. Mikrousług może za pomocą różnych technologii i języków programowania. Rysunek 8-2 przedstawia Ta różnorodność.
 
 ![](./media/image2.png)
 

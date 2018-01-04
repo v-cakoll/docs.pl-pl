@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe11dc8df1a29518ba05792877bd26670f96b29d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 20d17ef43f99f6815334c0acbf7eb2040959751e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a>Jak usunąć moduł definiowania układów z elementu
 W tym przykładzie pokazano, jak programowane usuwanie określonego modułu definiowania układu kodu z określonej <xref:System.Windows.UIElement>.  
@@ -39,4 +40,4 @@ W tym przykładzie pokazano, jak programowane usuwanie określonego modułu defi
  [!code-vb[AdornersMiscCode#_RemoveSpecificAdornerShort](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removespecificadornershort)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie modułu definiowania układu kodu](../../../../docs/framework/wpf/controls/adorners-overview.md)
+ [Moduły indeksowania układu — omówienie](../../../../docs/framework/wpf/controls/adorners-overview.md)

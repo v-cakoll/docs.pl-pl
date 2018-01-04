@@ -24,11 +24,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7deea3aca390ebfa4cc1fcbf16a0e898301ae434
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows
 Niewizualne kontrolki (lub składnik) zapewnia funkcje do aplikacji. W odróżnieniu od innych kontrolek składników nie udostępniają interfejsu użytkownika dla użytkownika i w związku z tym nie trzeba będzie wyświetlany na powierzchni projektanta formularzy systemu Windows. Gdy składnik zostanie dodany do formularza, Projektant formularzy systemu Windows wyświetla o zmiennym rozmiarze na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu formantu do składnika na pasku zadań, można wybrać składnika i ustawienia swoich właściwości, jak w przypadku innych formantu w formularzu.  
@@ -89,11 +90,11 @@ Niewizualne kontrolki (lub składnik) zapewnia funkcje do aplikacji. W odróżni
     >  Na komputerze lokalnym zagrożenie bezpieczeństwa w sieci może udostępniać za pomocą odwołań do elementu UserControl złośliwe. Tylko będzie to problemem w przypadku złośliwe osoby tworzenie kontrolkę niestandardową szkodliwy, następuje można przez pomyłkę dodanie go do projektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
- [Porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
- [Porady: dodawanie formantów ActiveX do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
- [Porady: kopiowanie formantów pomiędzy formularzami systemu Windows](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
- [Umieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
- [Etykietowanie formantów formularzy systemu Windows poszczególnych i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Formanty przez funkcję formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)  
+ [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  
+ [Instrukcje: kopiowanie kontrolek pomiędzy formularzami Windows Forms](../../../../docs/framework/winforms/controls/how-to-copy-controls-between-windows-forms.md)  
+ [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)  
+ [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

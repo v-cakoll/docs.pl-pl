@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: f7cb18157122d8bc053f34b21f623f3ab1e14305
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 66cde52d7453e149510d0c2e1d63f9e9182e3e99
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-create-an-object-pool-by-using-a-concurrentbag"></a>Porady: tworzenie puli obiektów przy użyciu ConcurrentBag
 Ten przykład przedstawia użycie zbiór równoczesnych do zaimplementowania puli obiektów. Pule obiektu może poprawić wydajność aplikacji w sytuacji, gdy wymagają wielu wystąpień klasy i klasa jest kosztowne do utworzenia lub zniszczenia. Gdy program kliencki zażąda nowy obiekt, puli obiektów najpierw próbuje udostępnić, który został już utworzony i zwrócony do puli. Jeśli żaden nie jest dostępny, następnie jest tworzony nowy obiekt.  
@@ -33,4 +36,4 @@ Ten przykład przedstawia użycie zbiór równoczesnych do zaimplementowania pul
  [!code-vb[CDS#04](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds/vb/objectpool04.vb#04)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kolekcje obsługujące wielowątkowość](../../../../docs/standard/collections/thread-safe/index.md)
+ [Kolekcje bezpieczne wątkowo](../../../../docs/standard/collections/thread-safe/index.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d0f0c60e9df6a1ec816b1f9cf5769c93b382ae5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f463c15855e267a4c246625a8d06e627852f48a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-cached-element-as-a-brush"></a>Jak użyć zachowanego w pamięci podręcznej elementu jako pędzla
 Użyj <xref:System.Windows.Media.BitmapCacheBrush> klasy do ponownego użycia pamięci podręcznej elementu wydajnie. W pamięci podręcznej elementu, Utwórz nowe wystąpienie klasy <xref:System.Windows.Media.BitmapCache> klasy i przypisz je do elementu <xref:System.Windows.UIElement.CacheMode%2A> właściwości.  
@@ -36,4 +37,4 @@ Użyj <xref:System.Windows.Media.BitmapCacheBrush> klasy do ponownego użycia pa
  <xref:System.Windows.Media.BitmapCache>  
  <xref:System.Windows.Media.BitmapCacheBrush>  
  <xref:System.Windows.UIElement.CacheMode%2A>  
- [Porady: poprawy renderowania wydajności przez buforowanie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)
+ [Instrukcje: poprawianie wydajności renderowania przez zapisanie elementu w pamięci podręcznej](../../../../docs/framework/wpf/graphics-multimedia/how-to-improve-rendering-performance-by-caching-an-element.md)

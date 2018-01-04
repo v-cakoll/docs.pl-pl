@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5290256f302f16f17dd50b570b470beedd00d81
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e63bb0b44e19ec9186096a819801ea05195b5523
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>Konfigurowanie usług i klientów za pomocą powiązań
 Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do połączenia z punktem końcowym. W szczególności powiązania zawierają informacje o konfiguracji, który jest używany do tworzenia środowiska uruchomieniowego klienta lub usługę, definiując specyfice transportów, formatów łańcuchowych (kodowania wiadomości) i protokoły dla odpowiednich kanału klienta lub punktu końcowego. Aby utworzyć działanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi, powiązanie wymaga każdego punktu końcowego w usłudze. W tym temacie opisano powiązania są, jak są definiowane i jak określono konkretnego powiązanie dla punktu końcowego.  
@@ -67,7 +68,7 @@ Powiązania są obiekty, które Określ szczegóły komunikacji wymagane do poł
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)  
- [Porady: Określanie wiązań usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
- [Porady: Określanie wiązań usługi w kodzie](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  
- [Porady: Określanie wiązania klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)  
- [Porady: Określanie wiązania klienta w kodzie](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+ [Instrukcje: określanie powiązania usługi w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)  
+ [Instrukcje: określanie wiązań usługi w kodzie](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)  
+ [Instrukcje: określanie powiązań klienta w konfiguracji](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)  
+ [Instrukcje: określanie wiązania klienta w kodzie](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

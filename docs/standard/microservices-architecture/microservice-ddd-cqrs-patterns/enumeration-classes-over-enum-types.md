@@ -4,23 +4,28 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 88decdc2f2ea945dc04cdb66402b12bd972414ce
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4b190ee9dde5628bf16fe9c483d3636539c29361
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-enumeration-classes-instead-of-enum-types"></a>Za pomocą klasy wyliczenie zamiast Typy wyliczeniowe
 
-[Wyliczenia](../../../../docs/csharp/language-reference/keywords/enum.md) (*wyliczenia* skrócie) są alokowania języka otokę typ całkowity. Możesz chcieć ograniczyć ich wykorzystania, gdy jedna wartość z zamkniętego zestawu wartości są przechowywane. Klasyfikacja na podstawie płci (na przykład męskiego, gniazdo, nieznany) lub rozmiary (S-M, L, XL) są dobre przykłady. Przy użyciu wyliczenia przepływu sterowania i bardziej niezawodna abstrakcje może być [kodu zapachu](http://deviq.com/code-smells/). Ten typ użycia doprowadzi do słabe kodu o wielu instrukcjach przepływu sterowania sprawdzanie wartości wyliczenia.
+[Wyliczenia](../../../../docs/csharp/language-reference/keywords/enum.md) (lub *Typy wyliczeniowe* skrócie) są alokowania języka otokę typ całkowity. Możesz chcieć ograniczyć ich wykorzystania, gdy jedna wartość z zamkniętego zestawu wartości są przechowywane. Klasyfikacja na podstawie płci (na przykład męskiego, gniazdo, nieznany) lub rozmiarów (małe, średnie, duża) są dobre przykłady. Przy użyciu wyliczenia przepływu sterowania i bardziej niezawodna abstrakcje może być [kodu zapachu](http://deviq.com/code-smells/). Ten typ użycia prowadzi do słabe kodu o wielu instrukcjach przepływu sterowania sprawdzanie wartości wyliczenia.
 
-Zamiast tego można utworzyć klasy wyliczenia, które umożliwiają rozbudowane funkcje zorientowany obiektowo język. Jednak nie jest to problem krytyczny i w wielu przypadkach, dla uproszczenia, można nadal używać regularne wyliczenia czyli swoich preferencji.
+Zamiast tego można utworzyć klasy wyliczenia, które umożliwiają rozbudowane funkcje zorientowany obiektowo język.
 
-## <a name="implementing-enumeration-classes"></a>Implementowanie klas — wyliczenie
+Jednak nie jest to temat krytycznych i w wielu przypadkach, dla uproszczenia, można nadal używać regular [Typy wyliczeniowe](../../../../docs/csharp/language-reference/keywords/enum.md) przypadku swoich preferencji.
+
+## <a name="implementing-an-enumeration-base-class"></a>Implementacja klasy podstawowej — wyliczenie
 
 Porządkowania mikrousługi w eShopOnContainers zawiera przykładowe zastosowanie klasy podstawowej wyliczenia, jak pokazano w poniższym przykładzie:
 
@@ -83,7 +88,7 @@ public abstract class Enumeration : IComparable
 }
 ```
 
-Ta klasa służy jako typ w dowolnym obiekcie jednostka lub wartość, jak w przypadku następującej klasy CardType wyliczenia.
+Ta klasa służy jako typ w dowolnym obiekcie jednostka lub wartość, jak w przypadku następującej klasy wyliczenie CardType:
 
 ```csharp
 public class CardType : Enumeration
@@ -98,7 +103,6 @@ public class CardType : Enumeration
         : base(id, name)
     {
     }
-
 
     public static IEnumerable<CardType> List()
     {

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7bb3247f531a0dac83657e118fb53ebaf708ec9a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 603b76c999933f177a9e48ddb819562b8e4dd8f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vector-graphics-overview"></a>Przegląd grafiki wektorowej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Rysuje linii, prostokątów i innych kształtów w układzie współrzędnych. Można wybrać spośród różnych systemów współrzędnych, ale domyślny układ współrzędnych ma źródła w lewym górnym rogu z wskazanie osi y skierowany w dół i prawej osi x. Jednostka miary w układzie współrzędnych domyślny jest piksela.  
@@ -70,4 +71,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Drawing.Graphics?displayProperty=nameWithType>  
  <xref:System.Drawing.Pen?displayProperty=nameWithType>  
  [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Porady: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
+ [Instrukcje: tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)

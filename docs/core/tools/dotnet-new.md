@@ -10,11 +10,12 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.openlocfilehash: d64881380febee08414f57a36ed92079e8d69ed6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: f5815e1ad2a36a8ef3279f6ff83465dba9ec5d50
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 
@@ -324,6 +325,6 @@ Lista wszystkich dostępnych szablonów dla platformy MVC:
 ## <a name="see-also"></a>Zobacz także
 
 [Szablony niestandardowe dla nowego dotnet](custom-templates.md)  
-[Utwórz nowy szablon niestandardowy dla platformy dotnet](~/docs/core/tutorials/create-custom-template.md)  
+[Tworzenie szablonu niestandardowego dla polecenia dotnet new](~/docs/core/tutorials/create-custom-template.md)  
 [repozytorium GitHub DotNet/dotnet szablonu — przykłady](https://github.com/dotnet/dotnet-template-samples)  
 [Dostępne szablony dla nowych dotnet](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)

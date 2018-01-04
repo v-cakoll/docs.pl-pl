@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd1da930df151869ea3e891da7057f44ed0a4603
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43bd899a1dd53dc8cdae4f81e90b1aa74c29cb67
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="structure-of-the-graphics-interface"></a>Struktura interfejsu grafiki
 Interfejs zarządzanej klasy [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zawiera około 60 klas, 50 wyliczenia i struktury 8. <xref:System.Drawing.Graphics> Klasy jest stanowiącej podstawę [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] funkcji; jest klasa, która faktycznie rysuje linii, krzywych rysunki, obrazy i tekst.  
@@ -33,6 +34,6 @@ Interfejs zarządzanej klasy [!INCLUDE[ndptecgdiplus](../../../../includes/ndpte
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]definiuje kilka wyliczenia, które są kolekcjami elementów pokrewnych stałe. Na przykład <xref:System.Drawing.Drawing2D.LineJoin> wyliczenie zawiera elementy <xref:System.Drawing.Drawing2D.LineJoin.Bevel>, <xref:System.Drawing.Drawing2D.LineJoin.Miter>, i <xref:System.Drawing.Drawing2D.LineJoin.Round>, które określą, style, które mogą służyć do przyłączenia dwa wiersze.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd grafiki](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
- [Kodzie zarządzanym GDI + — informacje](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
+ [Grafika — omówienie](../../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [Informacje o kodzie zarządzanym GDI+](../../../../docs/framework/winforms/advanced/about-gdi-managed-code.md)  
  [Używanie zarządzanych klas grafiki](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)

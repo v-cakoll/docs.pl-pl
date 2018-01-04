@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1828ef3614cc1f3a81d8aeff62c15ed5accfe380
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b894a56caa3644bae140e7ec37cf5b55ab093a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xclass-directive"></a>x:Class — dyrektywa
 Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe między znaczników i związane z kodem. Klasy częściowe kod jest zdefiniowany w osobnym pliku kodu w [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)] języka, podczas gdy klasy częściowej znaczników jest zwykle tworzony przy generowania kodu podczas kompilacji XAML.  
@@ -71,7 +72,7 @@ Konfiguruje kompilację znaczników XAML, aby dołączyć klasy częściowe mię
  `x:Class`dla programu Silverlight jest udokumentowany oddzielnie. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (platformy Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Zobacz też  
- [x: Subclass — dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)  
- [XAML oraz klas niestandardowych dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [x: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
+ [x:Subclass, dyrektywa](../../../docs/framework/xaml-services/x-subclass-directive.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [x:ClassModifier, dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)  
  [Typy migrowane z WPF do System.Xaml](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)

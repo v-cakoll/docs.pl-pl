@@ -27,11 +27,14 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 971f27cd25cbe4be3ca3fad6283ab32d4f6db0ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cd17b85dbdc9315654d042e18d28fbfd0e2dcc52
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-delete-files-and-directories-in-isolated-storage"></a>Porady: usuwanie plików i katalogów w izolowanym magazynie
 Można usunąć katalogów i plików znajdujących się w pliku izolowanego magazynu. W sklepie nazw plików i katalogów są zależne od systemu operacyjnego i są określone jako względem katalogu głównego wirtualnego systemu plików. Nie są one z uwzględnieniem wielkości liter w systemach operacyjnych Windows.  
@@ -49,4 +52,4 @@ Można usunąć katalogów i plików znajdujących się w pliku izolowanego maga
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile?displayProperty=nameWithType>  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

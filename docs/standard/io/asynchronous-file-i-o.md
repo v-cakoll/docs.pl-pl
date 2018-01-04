@@ -27,11 +27,14 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: d8a461d79ecdcadc3f880f6a813918cf891abd45
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ff9ae65e47a35f4acfade1d06c703f9e1f5f6bee
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-file-io"></a>Asynchroniczne We/Wy pliku
 Mechanizm operacji asynchronicznych umożliwia wykonywanie operacji We/Wy mocno obciążających zasoby bez blokowania wątku głównego. Ten aspekt dotyczący wydajności jest szczególnie ważny w aplikacji [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] lub aplikacjach [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)], gdzie czasochłonne operacje strumieniowe mogą zablokować wątek interfejsu użytkownika i spowodować, że aplikacja będzie wyglądać, jakby przestała działać.  

@@ -13,11 +13,12 @@ caps.latest.revision: "35"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4d5537c636edfa557c75298c5cf63127f10f4827
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbierać dane z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług w czasie wykonywania za pomocą dostawcy Instrumentacji zarządzania Windows (WMI), który jest wbudowany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ponadto w przykładzie pokazano sposób dodawania obiektu WMI zdefiniowane przez użytkownika do usługi. Przykład aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  

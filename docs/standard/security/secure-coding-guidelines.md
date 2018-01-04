@@ -25,11 +25,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3be1a51db31f18255eabe633cdeaeb860f9c8ce7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3e75f3c74c5966ce5ce22b23f7ba179e903d37aa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="secure-coding-guidelines"></a>Wytyczne dotyczące bezpiecznego programowania
 Zabezpieczenia oparte na dowód i zabezpieczenia dostępu kodu zapewniają mechanizmy bardzo zaawansowane, jawnej implementacji zabezpieczeń. Większość kodu aplikacji można po prostu użyć infrastruktury wdrożone przez program .NET Framework. W niektórych przypadkach dodatkowe zabezpieczenia aplikacji jest wymagana, utworzony przez rozszerzanie systemu zabezpieczeń lub przy użyciu nowych metod ad hoc.  
@@ -84,7 +87,7 @@ Zabezpieczenia oparte na dowód i zabezpieczenia dostępu kodu zapewniają mecha
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Zabezpieczanie danych o stanie](../../../docs/standard/security/securing-state-data.md)|W tym artykule opisano, jak chronić prywatne elementy członkowskie.|  
-|[Zabezpieczenia i dane wejściowe użytkownika](../../../docs/standard/security/security-and-user-input.md)|W tym artykule opisano problemy z zabezpieczeniami dla aplikacji, które akceptuje dane wejściowe użytkownika.|  
+|[Zabezpieczenia i dane użytkownika](../../../docs/standard/security/security-and-user-input.md)|W tym artykule opisano problemy z zabezpieczeniami dla aplikacji, które akceptuje dane wejściowe użytkownika.|  
 |[Zabezpieczenia i sytuacja wyścigu](../../../docs/standard/security/security-and-race-conditions.md)|Opisuje sposób uniknąć wyścigu w kodzie.|  
 |[Zabezpieczenia i generowanie kodu na bieżąco](../../../docs/standard/security/security-and-on-the-fly-code-generation.md)|W tym artykule opisano problemy z zabezpieczeniami dla aplikacji, które generują kod dynamicznych.|  
 |[Zabezpieczenia oparte na rolach](../../../docs/standard/security/role-based-security.md)|W tym artykule opisano zabezpieczenia oparte na rolach .NET Framework szczegółowo i zawiera instrukcje dotyczące używania go w kodzie.|

@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 82f5f69390f2b4d27f1f41050971afa9faede960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9a5f33ab22779002e85d7a73b29ae74dac81c26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="layout"></a>Układ
 W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] układu systemu. Zrozumienie, jak i kiedy układu obliczenia są wykonywane jest niezbędne do tworzenia interfejsów użytkownika w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -161,6 +162,6 @@ W tym temacie opisano [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharp
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FrameworkElement>  
  <xref:System.Windows.UIElement>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Wyrównanie, marginesy i dopełnienia — omówienie](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
  [Układ i projekt](../../../../docs/framework/wpf/advanced/optimizing-performance-layout-and-design.md)

@@ -19,24 +19,25 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 906cc5575ec8fc307068e7341331ae024cf07542
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 24983386b6f34e7471626fcff50fe5106ca0c8dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-layer-programming"></a>Programowanie warstwy Visual
 <xref:System.Windows.Media.Visual> Obiekt jest podstawowa [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] obiektu, którego podstawową rolą jest zapewnia obsługę renderowania. Formanty interfejsu użytkownika, takich jak <xref:System.Windows.Controls.Button> i <xref:System.Windows.Controls.TextBox>, pochodzi z <xref:System.Windows.Media.Visual> klasy, a następnie użyć jej do przechowywanie ich renderowania danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Testowanie w warstwie Visual trafień](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
- [Przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
- [Samouczek: Hostingu Visual obiektów w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
+ [Test trafienia w warstwie wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/hit-testing-in-the-visual-layer.md)  
+ [Użycie obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)  
+ [Samouczek: hosting obiektów wizualnych w aplikacji Win32](../../../../docs/framework/wpf/graphics-multimedia/tutorial-hosting-visual-objects-in-a-win32-application.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Visual>  
  <xref:System.Windows.Media.VisualTreeHelper>  
  <xref:System.Windows.Media.DrawingVisual>  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

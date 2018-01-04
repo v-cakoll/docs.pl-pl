@@ -17,11 +17,12 @@ caps.latest.revision: "19"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 441b3a72d5b0a9e63d6093bc130335801503489e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad5e459e7dc070b9412de860048c840f677421f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-security-in-wcf"></a>Najlepsze rozwiązania dotyczące zabezpieczeń programu WCF
 W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę podczas tworzenia bezpiecznego aplikacji przy użyciu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]zabezpieczenia, zobacz [zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md), [zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md), i [zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md).  
@@ -68,6 +69,6 @@ W poniższych sekcjach wymieniono najważniejsze wskazówki wziąć pod uwagę p
  Podczas tworzenia niestandardowego powiązania, należy ustawić <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> do `true`. W przeciwnym razie, jeśli <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> ma ustawioną wartość `false`, a klient używa asymetrycznego token opartego na kluczach, takich jak X509 certyfikatu, komunikat nie zostanie podpisana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Zagadnienia dotyczące zabezpieczeń dla danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Zagadnienia związane z zabezpieczeniami danych](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
  [Zagadnienia dotyczące zabezpieczeń obejmujące metadane](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

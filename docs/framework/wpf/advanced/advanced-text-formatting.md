@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1828b6ffe2d24c2bfb98b4668a9540adf5978e5f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9bb2664b267301fdf1e3a67e385595a5d28212bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="advanced-text-formatting"></a>Zaawansowane formatowanie tekstu
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Oferuje niezawodny zestaw [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] dla łącznie z tekstem w aplikacji. Układ i [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Controls.TextBlock>, podaj najbardziej typowe i ogólne użycie elementy prezentacji tekstu. Rysowanie [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)], takich jak <xref:System.Windows.Media.GlyphRunDrawing> i <xref:System.Windows.Media.FormattedText>, pozwalają na tym tekst sformatowany na rysunkach. Najbardziej zaawansowane poziom [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oferuje rozszerzalny aparat do sterowania wszystkie aspekty prezentacji tekstu, takich jak zarządzanie magazynem tekstu, zarządzania formatowania tekstu, uruchom i zarządzania osadzonego obiektu formatowania tekstu.  
@@ -105,5 +106,5 @@ Interakcja między aplikacją a obiekt TextFormatter
  <xref:System.Windows.Media.TextFormatting.TextRun>obiekty są sformatowane przy użyciu właściwości udostępniane przez sklep tekstu. Te właściwości są dostępne w dwóch typów <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties>. <xref:System.Windows.Media.TextFormatting.TextParagraphProperties>takie jak obsługa właściwości włącznie <xref:System.Windows.TextAlignment> i <xref:System.Windows.FlowDirection>. <xref:System.Windows.Media.TextFormatting.TextRunProperties>nie ma właściwości, które mogą być różne dla każdego tekstu Uruchom akapitu, takie jak pędzla pierwszego planu <xref:System.Windows.Media.Typeface>i rozmiar czcionki. Wdrażanie niestandardowych akapitu i tekstu niestandardowego Uruchom typy właściwości, aplikacji, należy utworzyć klasy, które pochodzą z <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> i <xref:System.Windows.Media.TextFormatting.TextRunProperties> odpowiednio.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typografia na platformie WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

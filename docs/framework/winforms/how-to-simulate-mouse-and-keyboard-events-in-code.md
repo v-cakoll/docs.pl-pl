@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b764533b845ddf1585c9b3de9eb6283ec5ec6ea
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c06cb2868c810b685401c78dd9d0bc3f70479cd1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>Porady: symulowanie zdarzeń myszy i klawiatury w kodzie
 Formularze systemu Windows zapewnia kilka opcji programowo symulując myszy i klawiatury. Ten temat zawiera omówienie tych opcji.  
@@ -100,4 +101,4 @@ Formularze systemu Windows zapewnia kilka opcji programowo symulując myszy i kl
  Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane wejściowe użytkownika w formularzach systemu Windows](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+ [Dane użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-in-windows-forms.md)

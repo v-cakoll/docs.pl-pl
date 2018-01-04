@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90d2ab68f76bef8d8f437a7dd6096011889303fa
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 481990acdf2f5b8f798144d36434569b9e2cd481
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-rendering-ink"></a>Niestandardowy atrament renderowania
 <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Właściwości pociągnięcia umożliwia określenie wyglądu pociągnięcia, takie jak jego rozmiar, kolor i kształt, ale czasami, które chcesz dostosować wygląd poza co <xref:System.Windows.Ink.Stroke.DrawingAttributes%2A> Zezwalaj. Można dostosować wygląd odręczne przez renderowanie wygląd pędzla lotniczego, paint wydobycie ropy naftowej i innych skutków. [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] Umożliwia niestandardowy renderowania odręczne dzięki implementacji niestandardowego <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> i <xref:System.Windows.Ink.Stroke> obiektu.  
@@ -102,4 +103,4 @@ ms.lasthandoff: 10/22/2017
  Można dostosować wygląd odręczne wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>, <xref:System.Windows.Ink.Stroke>, i <xref:System.Windows.Controls.InkCanvas> klasy. Razem te klasy upewnij się, czy wygląd obiektu stroke jest spójne, gdy użytkownik wprowadzi obrysu i po ich zebraniu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa zaawansowanych odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+ [Zaawansowana obsługa pisma odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

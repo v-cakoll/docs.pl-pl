@@ -15,22 +15,23 @@ caps.latest.revision: "80"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1d1fe4245c313a7aad003b1f268a2c46fed21ef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80b9518a7bfff1057acc76831f7def1e66f3b11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-how-to-topics"></a>Przeciąganie i upuszczanie Tematy porad
 Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework przeciągania i upuszczania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Otwórz plik, który zostanie porzucony w formancie RichTextBox](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [Otwieranie pliku, który został upuszczony na kontrolkę RichTextBox](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
  [Tworzenie obiektu danych](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [Określa, czy Format danych jest obecnie w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [Lista formatów danych w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [Pobieranie danych w formacie danych](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [Przechowywanie wielu formatów danych w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [Określanie, czy format danych jest obecny w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [Wyświetlanie listy formatów danych w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
+ [Uzyskiwanie danych w konkretnym formacie danych](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
+ [Przechowanie wielu formatów danych w obiekcie danych](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przeciągnij i upuść — omówienie](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+ [Przegląd przeciągania i upuszczania](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b7662213d7204675de7e8681b6fc8141f04dd21
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 1c5a9df438353701932a3e732d6df28b08402ee8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-host-presentationhostexe"></a>Host WPF (PresentationHost.exe)
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]Host (PresentationHost.exe) to aplikacja, która umożliwia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji ma być obsługiwana w przeglądarkach zgodne (w tym [!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)] i nowsze). Domyślnie [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] hosta jest zarejestrowany jako powłoki i [!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)] Obsługa oparta na przeglądarce [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zawartość, która obejmuje:  
@@ -68,4 +69,4 @@ ms.lasthandoff: 10/22/2017
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md)
+ [Zabezpieczenia](../../../../docs/framework/wpf/security-wpf.md)

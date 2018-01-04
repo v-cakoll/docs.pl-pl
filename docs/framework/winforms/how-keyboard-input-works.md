@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f45d01da6f9a851a0e51f9d614e84a3fba91e4d3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43b92051b6524a730735fea98d64ee64578b4e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-keyboard-input-works"></a>Działanie wprowadzania z klawiatury
 Formularze systemu Windows przetwarza wprowadzanie z klawiatury przez wywoływanie zdarzeń klawiatury w odpowiedzi na komunikaty systemu Windows. Większość aplikacji Windows Forms przetworzyć klawiatury wyłącznie przez obsługi zdarzenia klawiatury. Jednak należy zrozumieć, jak komunikaty klawiatury działają, można wdrożyć bardziej zaawansowanych scenariuszy wejście klawiatury, takie jak przechwytywaniu kluczy przed dotarciem formantu. W tym temacie opisano typy danych klucza, że program Windows Forms rozpoznaje i omówiono sposób kierowania komunikaty klawiatury. Aby uzyskać informacje o zdarzeniach klawiatury, zobacz [zdarzenia klawiatury przy użyciu](../../../docs/framework/winforms/using-keyboard-events.md).  
@@ -82,6 +83,6 @@ Formularze systemu Windows przetwarza wprowadzanie z klawiatury przez wywoływan
  <xref:System.Windows.Forms.Keys>  
  <xref:System.Windows.Forms.Control.WndProc%2A>  
  <xref:System.Windows.Forms.Control.PreProcessMessage%2A>  
- [My.Computer.Keyboard — obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)  
+ [My.Computer.Keyboard, obiekt](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)  
  [Uzyskiwanie dostępu do klawiatury](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)  
  [Używanie zdarzeń klawiatury](../../../docs/framework/winforms/using-keyboard-events.md)

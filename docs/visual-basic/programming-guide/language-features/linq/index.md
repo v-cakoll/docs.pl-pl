@@ -12,11 +12,11 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b0e558e50f75b10a77834a6e94ccb7aadc55fdcb
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: acec0a067ef318d34c033529415afb5c321e19a2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linq-in-visual-basic"></a>LINQ w Visual Basic
 Ta sekcja zawiera omówienie, przykłady i ogólne informacje, które mogą pomóc w zrozumieniu i użytkowaniu programu Visual Basic i [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)].  
@@ -49,11 +49,11 @@ Ta sekcja zawiera omówienie, przykłady i ogólne informacje, które mogą pom�
  [Porady: znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
  Przykłady sposobu obejmują funkcje agregujące, aby określić minimalną i maksymalną wartość dane zwrócone w wyniku zapytania za pomocą LINQ.  
   
- [Porady: zwracanie wyniku zapytania LINQ jako określonego typu](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
+ [Instrukcje: zwracanie wyniku zapytania LINQ jako określonego typu](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)  
  Zawiera przykładowy sposób zwracania wyników zapytania LINQ jako określonego typu zamiast jako typu anonimowego.  
   
 ## <a name="see-also"></a>Zobacz też  
  [LINQ (zapytania o języku zintegrowanym)](../../../../visual-basic/programming-guide/concepts/linq/index.md)  
  [Przegląd LINQ do XML w Visual Basic](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)  
- [LINQ do DataSet — omówienie](../../../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
- [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [Omówienie LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset-overview.md)  
+ [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

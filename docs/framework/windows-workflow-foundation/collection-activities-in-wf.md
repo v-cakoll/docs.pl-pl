@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f9d044ab9b95eb4144770a90367028b5b513a69c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 52713566419eedbb5a39153541402920479eb500
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-activities-in-wf"></a>Kolekcja działań w WF
 Kolekcja są używane do pracy z obiektami kolekcji w przepływie pracy. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]ma dostarczane przez system działania Dodawanie i usuwanie elementów z kolekcji, testowanie pod kątem istnienia elementu w kolekcji i wyczyszczenie kolekcji. `ExistsInCollection`i `RemoveFromCollection` ma <xref:System.Activities.OutArgument%601> typu <xref:System.Boolean>, która wskazuje wynik.  
@@ -435,4 +436,4 @@ Activity wf = new Sequence
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywne](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+ [Tworzenie przepływów pracy, działań i wyrażeń przy użyciu kodu imperatywnego](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)

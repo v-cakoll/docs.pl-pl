@@ -26,11 +26,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7633c7fe9e99bde96ee108460e983eff48f1c7f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2aaf7c466c6662611e2b37d5c967a99d050158df
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="localizability-review"></a>Sprawdzenie możliwości lokalizacji
 Sprawdzenie możliwości lokalizacji jest etap pośredni do tworzenia aplikacji gotowe. Sprawdzi, czy uniwersalnych aplikacji jest gotowy do lokalizacji i identyfikuje żadnego kodu lub aspekty interfejsu użytkownika, które wymagają specjalnej obsługi. Ten krok pozwala, upewnij się, że proces lokalizacji nie wprowadzi wad funkcjonalności do aplikacji. Jeśli zostały rozwiązane wszystkie problemy zgłoszone przez sprawdzenie, aplikacja jest gotowa do lokalizacji. W przypadku dokładne sprawdzenie, należy nie należy zmodyfikować każdy kod źródłowy podczas procesu lokalizacji.  
@@ -81,7 +84,7 @@ Sprawdzenie możliwości lokalizacji jest etap pośredni do tworzenia aplikacji 
  Jeśli już podczas opracowywania aplikacji, a następnie zalecenia dotyczące globalizacji, obsługiwane funkcje zależne od kultury poprawnie i zidentyfikować i metod rozwiązania lokalizacji, które powstały podczas testowania, możesz przejść do następnego kroku [Lokalizacja](../../../docs/standard/globalization-localization/localization.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)  
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)  
  [Lokalizacja](../../../docs/standard/globalization-localization/localization.md)  
  [Globalizacja](../../../docs/standard/globalization-localization/globalization.md)  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

@@ -32,11 +32,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a81c2202400968b4d4c95b40de7476fbd68d6182
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 858d1d9b80af89be3e029ce59c521fa6e4d24c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>Porady: ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows
 Formanty formularzy systemu Windows zazwyczaj wyświetlić tekst związany z podstawowej funkcji formantu. Na przykład <xref:System.Windows.Forms.Button> kontroli zwykle zawiera nagłówek wskazującą, jakie działania zostaną wykonane, po kliknięciu przycisku. Dla wszystkich kontrolek, można ustawić lub zwróć tekst za pomocą <xref:System.Windows.Forms.Control.Text%2A> właściwości. Czcionkę można zmienić za pomocą <xref:System.Windows.Forms.Control.Font%2A> właściwości. Można również ustawić tekst przy użyciu narzędzia Projektant.  Zobacz też [jak: utworzyć dostępu do kluczy dla systemu Windows formularzy formantów przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233673\(v=vs.110\)), [porady: ustawić tekst wyświetlany za pomocą formantu formularzy systemu Windows projektanta](http://msdn.microsoft.com/library/ms233665\(v=vs.110\)), [porady: Ustawianie obrazu Wyświetlany przez formant przy użyciu narzędzia Projektant formularzy systemu Windows](http://msdn.microsoft.com/library/ms233656\(v=vs.110\)).  
@@ -83,5 +84,5 @@ Formanty formularzy systemu Windows zazwyczaj wyświetlić tekst związany z pod
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>  
- [Porady: Tworzenie klawiszy dostępu dla formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Porady: odpowiadanie na kliknięcia przycisków formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+ [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)

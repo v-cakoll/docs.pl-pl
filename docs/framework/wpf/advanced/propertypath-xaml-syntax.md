@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dc58845a78607090002467e3aa63d4c549ec116
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9778094eb098d1e119ef4ef0c25dd022130a11ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath — Składnia XAML
 <xref:System.Windows.PropertyPath> Obiekt obsługuje złożone wbudowanego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] składnię ustawiania różne właściwości, które przyjmują <xref:System.Windows.PropertyPath> typu jako ich wartości. Ten temat dokumenty <xref:System.Windows.PropertyPath> składni jak stosować do składni powiązania i animacji.  
@@ -208,5 +209,5 @@ or
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.PropertyPath>  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Scenorys — omówienie](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

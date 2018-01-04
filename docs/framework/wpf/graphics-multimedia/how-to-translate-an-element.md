@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 222aebe0ffe3d2bb1d84002a2ad94b0b92ede15b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2f9b8363f0c3b9e0a9653dfc9864727c9460f695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-translate-an-element"></a>Jak przesunąć element
 W tym przykładzie pokazano, jak tłumaczenia (przenoszenia) elementu przy użyciu <xref:System.Windows.Media.TranslateTransform>.  
@@ -35,4 +36,4 @@ W tym przykładzie pokazano, jak tłumaczenia (przenoszenia) elementu przy użyc
  Pełny przykład, zobacz [2-D transformacje próbki](http://go.microsoft.com/fwlink/?LinkID=158252).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przekształca — omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)
+ [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0e7086e52992f575781449e5dc2a83c3443f558d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64e51a8911e27a612500ba222df7e3637cd24a13
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>Porady: dodawanie niestandardowych informacji do kontrolki TreeView lub ListView (Formularze systemu Windows)
 Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.Windows.Forms.TreeView> formant lub pochodnego elementu w <xref:System.Windows.Forms.ListView> formantu. Tworzenie wartości pochodnych umożliwia dodanie wszystkie pola, które są wymagane, a także niestandardowe metody i konstruktory ich obsługę. Jedno użycie tej funkcji jest można dołączyć obiektu klienta do każdego drzewa węzła lub elementu listy. Przykłady w tym miejscu są dla <xref:System.Windows.Forms.TreeView> sterowania, ale same podejście może służyć do <xref:System.Windows.Forms.ListView> formantu.  
@@ -140,5 +141,5 @@ Można utworzyć pochodnej węzeł w formularzach systemu Windows <xref:System.W
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [TreeView — formant](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [ListView — formant](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+ [TreeView, kontrolka](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
+ [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdc478d62ca97f8f61c26fbbf1ee6c3ea8b4e189
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f6355ed45d7422735d1dac1e1419990e1c5bd120
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-selectedvalue-selectedvaluepath-and-selecteditem"></a>Jak użyć SelectedValue, SelectedValuePath i SelectedItem
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.TreeView.SelectedValue%2A> i <xref:System.Windows.Controls.TreeView.SelectedValuePath%2A> właściwości, aby określić wartość dla <xref:System.Windows.Controls.TreeView.SelectedItem%2A> z <xref:System.Windows.Controls.TreeView>.  
@@ -51,4 +52,4 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.TreeView
  <xref:System.Windows.Controls.TreeView>  
  <xref:System.Windows.Controls.TreeViewItem>  
  [TreeView — omówienie](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)

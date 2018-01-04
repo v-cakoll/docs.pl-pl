@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd9693209cc35ecd3c0473133b7c21639a239ff5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 972ece6964d1f3cc42c6221c3b18336e3353bc18
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-select-ink-from-a-custom-control"></a>Porady: wybrać atrament w niestandardowej kontrolce
 Dodając <xref:System.Windows.Ink.IncrementalLassoHitTester> do formantu niestandardowego można włączyć formantu, dzięki czemu użytkownik może wybrać odręczne za pomocą narzędzia lasso, podobnie jak <xref:System.Windows.Controls.InkCanvas> wybiera z pewnymi lasso.  
@@ -100,4 +101,4 @@ Dodając <xref:System.Windows.Ink.IncrementalLassoHitTester> do formantu niestan
  <xref:System.Windows.Ink.IncrementalLassoHitTester>  
  <xref:System.Windows.Ink.StrokeCollection>  
  <xref:System.Windows.Input.StylusPointCollection>  
- [Tworzenie formantu wprowadzania odręcznego](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)
+ [Tworzenie kontrolki danych wejściowych pisma odręcznego](../../../../docs/framework/wpf/advanced/creating-an-ink-input-control.md)

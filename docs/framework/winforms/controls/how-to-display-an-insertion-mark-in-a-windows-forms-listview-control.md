@@ -22,11 +22,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3b1a312159d548351e96fd16c32caf35a0522065
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff59a7b716944779fd5c87b58034eb60d5981b02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-an-insertion-mark-in-a-windows-forms-listview-control"></a>Porady: wyświetlanie znacznika wstawiania w formancie ListView formularzy systemu Windows
 Znacznika wstawiania w <xref:System.Windows.Forms.ListView> kontroli wyświetlani użytkownicy punktu, w którym zostanie wstawiony przeciąganego elementów. Gdy użytkownik przeciągnie element do punktu między dwoma innymi elementami, znacznika wstawiania zawiera oczekiwanej lokalizacji nowego elementu.  
@@ -56,7 +57,7 @@ Znacznika wstawiania w <xref:System.Windows.Forms.ListView> kontroli wyświetlan
  <xref:System.Windows.Forms.ListView>  
  <xref:System.Windows.Forms.ListView.InsertionMark%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListViewInsertionMark>  
- [ListView — formant](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Informacje o formancie ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
+ [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
  [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
- [Wskazówki: Wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)
+ [Przewodnik: wykonywanie operacji przeciągania i upuszczania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)

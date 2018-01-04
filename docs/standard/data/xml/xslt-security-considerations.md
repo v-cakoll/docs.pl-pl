@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 560a0866a526caf4c8fe129209d0077374306a9f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 545fd05888a556e21cea795953ba94b94f7f2e45
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xslt-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XSLT
 Język XSLT zawiera bogaty zestaw funkcji, które zapewniają dużą możliwościach i elastyczności. Zawiera wiele funkcji, które jest to przydatne, mogą być również wykorzystywane przez zewnętrznych źródeł. Aby można było używać bezpiecznie XSLT, muszą zrozumieć typy problemy z zabezpieczeniami, które użytkowania XSLT i podstawowe strategie, których można użyć, aby ograniczyć te zagrożenia.  

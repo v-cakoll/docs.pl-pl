@@ -19,11 +19,14 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2602d431aada7b3e0ee226eed319903492022ae9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 23755f7b76e8cc050df8529852af9bf151472f72
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="memory-mapped-files"></a>Pliki mapowane w pamięci
 Zawartość pliku w pamięci wirtualnej zawiera plik mapowanych na pamięć. To mapowanie między pliku i pamięci miejsca umożliwia aplikacji, w tym wiele procesów zmodyfikować plik przy odczytywanie i zapisywanie bezpośrednio do pamięci. Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć kodu zarządzanego do dostępu do plików mapowanych na pamięć w taki sam sposób, że funkcje natywne Windows dostępu pliki mapowane w pamięci, zgodnie z opisem w [Managing Memory-Mapped plików w systemie Win32](http://go.microsoft.com/fwlink/?linkid=180801).  

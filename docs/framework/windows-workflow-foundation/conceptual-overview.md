@@ -15,21 +15,22 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aef97889abdd2ad4d2d6ff7978140ae09f75565b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 70c60d00ed59cf6b28c05d7948f579eda39a8fae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-workflow-conceptual-overview"></a>Omówienie przepływu pracy systemu Windows
 Ta sekcja zawiera zestaw tematów dyskutować większych pojęć dotyczących [!INCLUDE[wf](../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie przepływu pracy systemu Windows](../../../docs/framework/windows-workflow-foundation/overview.md)  
+ [Omówienie programu Windows Workflow](../../../docs/framework/windows-workflow-foundation/overview.md)  
  W tym artykule opisano foundation, który umożliwia użytkownikom tworzenie systemu lub człowieka przepływów pracy w ich aplikacje napisane dla [!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], i [!INCLUDE[lserver](../../../includes/lserver-md.md)] systemów operacyjnych.  
   
- [Windows podstawowych koncepcji przepływu pracy](../../../docs/framework/windows-workflow-foundation/fundamental-concepts.md)  
+ [Podstawowe pojęcia związane z programem Windows Workflow](../../../docs/framework/windows-workflow-foundation/fundamental-concepts.md)  
  W tym artykule opisano podstawowe pojęcia używane w [!INCLUDE[wf2](../../../includes/wf2-md.md)] projektowania, które mogą być nowe dla niektórych deweloperów.  
   
- [Architektura przepływu pracy systemu Windows](../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [Architektura programu Windows Workflow](../../../docs/framework/windows-workflow-foundation/architecture.md)  
  W tym artykule opisano składniki używane w [!INCLUDE[wf2](../../../includes/wf2-md.md)] programowanie.

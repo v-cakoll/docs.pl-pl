@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8b03dec350d38d15faaa6a0afc6a1f2c31d5c58f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a3d845f53238f3b5b1744c13de9800e0d8f65dbc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="changing-case-in-net"></a>Zmienianie wielkości liter w .NET
 Jeśli piszesz aplikację, która akceptuje dane wejściowe użytkownika, nigdy nie można się przypadek, jakie użytkownik będzie służy do wprowadzania danych. Często mają ciągi, aby mieć prawidłową wielkość spójnie, zwłaszcza w przypadku, gdy są ich wyświetlanie interfejsu użytkownika. W poniższej tabeli opisano trzy metody zmiana case. Pierwsze dwie metody Udostępnij przeciążenie akceptującego kultury.  
@@ -79,4 +82,4 @@ Jeśli piszesz aplikację, która akceptuje dane wejściowe użytkownika, nigdy 
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawowe operacje na ciągach](../../../docs/standard/base-types/basic-string-operations.md)  
- [Wykonywanie operacji na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+ [Wykonywanie niezależnych od kultury operacji na ciągach](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

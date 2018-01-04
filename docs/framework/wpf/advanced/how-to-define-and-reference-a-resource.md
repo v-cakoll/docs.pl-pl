@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 322ac3e5ebfe2d820a4711d877396b9a1a2759a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 173be3048f7bf082db2eef2ea21eb1e0319f9a43
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-and-reference-a-resource"></a>Jak definiować i tworzyć odwołanie do zasobu
 W tym przykładzie pokazano, jak zdefiniować zasobu i odwołaj się przy użyciu atrybutu w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
@@ -35,5 +36,5 @@ W tym przykładzie pokazano, jak zdefiniować zasobu i odwołaj się przy użyci
  [!code-xaml[FEResource#XAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FEResource/CS/default.xaml#xaml)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -17,31 +17,32 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e58fbb6a577354f862d4b4d79e947e7618bd75a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 472bb286f57701342be82d4a981714236e147932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flow-content-elements-how-to-topics"></a>Elementy zawartości przepływu Tematy porad
 W tematach w tej sekcji opisano sposób wykonywania typowych zadań przy użyciu różnych elementów zawartości przepływu i powiązane funkcje.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Dostosować odstępy między akapitów](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
+ [Dopasowywanie odstępów między akapitami](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
  [Programowe tworzenie tabeli](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [Programowo zmienić wartość FlowDirection zawartości](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [Zmień wartość właściwości TextWrapping programowo](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [Zdefiniuj tabelę z XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [Instrukcja ALTER typografii tekstu](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [Włącz przycinanie tekstu](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [Wstawianie tekstu elementu programowo](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [Manipulowanie przepływu elementów zawartości przy użyciu właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Manipulowanie przepływu elementów zawartości przy użyciu właściwości Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [Manipulowanie FlowDocument za pośrednictwem właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipulowanie kolumnami tabeli za pomocą właściwości kolumn](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Manipulowanie grupy wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Elementy zawartości przepływu](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [Użyj oddzielanie kolumny FlowDocument atrybutów](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [Programowe zmienianie parametru FlowDirection zawartości](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [Programowe zmienianie parametru TextWrapping zawartości](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
+ [Definiowanie tabeli przy użyciu XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [Zmienianie typografii tekstu](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
+ [Włączanie przycinania tekstu](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
+ [Programowe wstawianie elementu do tekstu](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
+ [Zarządzanie przepływem elementów zawartości za pomocą właściwości Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Zarządzanie przepływem elementów zawartości za pomocą właściwości Inlines](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [Zarządzanie parametrem FlowDocument przez właściwość Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Zarządzanie kolumnami tabeli za pomocą właściwości Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Używanie elementów zawartości przepływu](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
+ [Używanie atrybutów oddzielających kolumny FlowDocument](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -49,4 +50,4 @@ W tematach w tej sekcji opisano sposób wykonywania typowych zadań przy użyciu
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

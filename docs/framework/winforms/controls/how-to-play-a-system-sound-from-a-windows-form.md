@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 51de367f2558abfc28be740409d8a0d394065acf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b620b7386752e531a8d5252159c5f172176890a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-play-a-system-sound-from-a-windows-form"></a>Porady: odtwarzanie dźwięku systemowego za pomocą formularza systemu Windows
 Poniższy kod przykładowy odtwarza `Exclamation` dźwięku systemowego w czasie wykonywania. Aby uzyskać więcej informacji na temat dźwięki systemu, zobacz <xref:System.Media.SystemSounds>.  
@@ -56,5 +57,5 @@ public void playExclamation()
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Media.SoundPlayer>  
  <xref:System.Media.SystemSounds>  
- [Porady: odtwarzanie sygnału dźwiękowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
- [Porady: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
+ [Instrukcje: odtwarzanie sygnału dźwiękowego za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-beep-from-a-windows-form.md)  
+ [Instrukcje: odtwarzanie dźwięku za pomocą formularza systemu Windows](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)

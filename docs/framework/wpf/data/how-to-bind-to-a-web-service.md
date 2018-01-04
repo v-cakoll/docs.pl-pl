@@ -20,11 +20,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d1b81949d6d91420c828564debd311af47dfdfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b035f5922722a05759ff1e13514cc760a57d668
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-a-web-service"></a>Jak powiązać z usługą sieci Web
 W tym przykładzie pokazano, jak można powiązać obiekty zwrócone przez wywołania metody usługi sieci Web.  
@@ -56,6 +57,6 @@ W tym przykładzie pokazano, jak można powiązać obiekty zwrócone przez wywo�
  Aby uzyskać informacje dotyczące struktury **getContentResponse**, zobacz [usługi zawartość dokumentacji](http://services.msdn.microsoft.com/ContentServices/ContentService.asmx).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Przegląd źródeł powiązania](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [Przechowuj dane dostępne przez powiązanie w XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Wiązanie źródeł — omówienie](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
+ [Udostępnianie danych do powiązania w XAML](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)

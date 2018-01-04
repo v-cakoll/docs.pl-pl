@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0130e0745dfca20da5dc723bb7cc84748bb0b148
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f49fc4b1e59879b9ecc67295610187fa2e5e80d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>Porady: poprawianie wydajności dzięki unikaniu automatycznego skalowania
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]może automatycznie skalować obrazu podczas rysowania, które mogłoby obniżyć wydajność. Alternatywnie można kontrolować skalowanie obrazu przekazując wymiary prostokąt docelowy <xref:System.Drawing.Graphics.DrawImage%2A> metody.  
@@ -52,4 +53,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [Praca z obrazami, mapami bitowymi, ikony i metapliki](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+ [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2162377fbe8f8329c12dfd88a55d893d26f5b2bf
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a71ab8d8b4f96900e6d0f83541b6ae17f09ddeee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="emitting-user-code-traces"></a>Emitowanie danych śledzenia elementu User-Code
 Oprócz włączenia śledzenia w konfiguracji, aby zbieranie danych Instrumentacji generowanych przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)], można również wysyłać dane śledzenia w kodzie użytkownika. W ten sposób można utworzyć aktywne dane instrumentacji, który można przejrzeć później w celu diagnostyki. W tym temacie opisano, jak to zrobić.  

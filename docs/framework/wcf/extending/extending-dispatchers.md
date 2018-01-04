@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a79a9c3362bd2a186d09f7337c0f742b91871c9e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4240a19401d97cd0636d13a94fd07ad4ef753388
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-dispatchers"></a>Rozszerzanie dyspozytorów
 Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza podstawowej kanały, tłumaczenia je do wywołania metody w kodzie aplikacji i wysłaniem wyniki z powrotem do wywołującego. Rozszerzenia dyspozytorów umożliwiają modyfikowanie tego przetwarzania.  Można zaimplementować inspektorzy komunikatów lub parametr, które inspekcja lub modyfikowanie zawartość wiadomości lub parametrów.  Możesz zmienić sposób komunikaty są kierowane do operacji lub podaj niektóre inne funkcje.  
@@ -139,6 +140,6 @@ Dystrybucja są odpowiedzialne za ściąganie wiadomości przychodzących poza p
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime>  
  <xref:System.ServiceModel.Dispatcher.DispatchOperation>  
- [Porady: Sprawdzanie i modyfikowanie komunikatów w usłudze](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
- [Porady: inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
- [Porady: blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+ [Instrukcje: sprawdzanie i modyfikowanie komunikatów w usłudze](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)  
+ [Instrukcje: inspekcja lub modyfikowanie parametrów](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)  
+ [Instrukcje: blokowanie punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

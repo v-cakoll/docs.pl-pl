@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5c04da670c84aaecf3587e6620c70e94c6b7350e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0f13ba797b0c0e5c8b0d1eef271baf62f920f199
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>Instrukcje: Ujawnianie kontraktu klientom sieci Web i SOAP
 Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia punkty końcowe tylko do klientów protokołu SOAP. W [porady: Tworzenie podstawowej usługi HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md), punkt końcowy będą dostępne dla klientów z systemem innym niż SOAP. Może to być razy, jeśli chcesz udostępnić ten sam kontrakt obu kierunkach, jako punkt końcowy sieci Web, a punkt końcowy protokołu SOAP. W tym temacie przedstawiono przykład sposobu wykonania tego zadania.  
@@ -116,4 +117,4 @@ Domyślnie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] udostępnia p
  <xref:System.ServiceModel.Web.WebServiceHost>  
  <xref:System.ServiceModel.ChannelFactory>  
  <xref:System.ServiceModel.Description.WebHttpBehavior>  
- [Model programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41a2ed9c5d239f1570955e87bb5b749e29830bc3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ac951ad1f89d058b06280bc176ca7928a1dc65bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="garbage-collection-notifications"></a>Powiadomienia dotyczące odzyskiwania pamięci
 Istnieją sytuacje, w których pełnego wyrzucania elementów bezużytecznych (czyli kolekcji generacji 2) przez środowisko uruchomieniowe języka wspólnego może niekorzystnie wpłynąć na wydajność. Może to być problem szczególnie z serwerów, które przetwarzają dużą liczbę żądań; w takim przypadku długich wyrzucania elementów bezużytecznych może spowodować limit czasu żądania. Aby zapobiec pełną kolekcję wystąpienia krytyczny okres, użytkownik może zostać powiadomiony czy pełnego wyrzucania elementów bezużytecznych zbliża się do, a następnie podjęcia działania, aby przekierować obciążenia do innego wystąpienia serwera. Użytkownik może także wywołać kolekcji samodzielnie, pod warunkiem, że bieżące wystąpienie serwera nie jest konieczne przetwarzanie żądań.  
@@ -129,4 +132,4 @@ Istnieją sytuacje, w których pełnego wyrzucania elementów bezużytecznych (c
  [!code-vb[GCNotification#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GCNotification/vb/program.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrzucanie elementów bezużytecznych](../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../docs/standard/garbage-collection/index.md)

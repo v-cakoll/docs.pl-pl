@@ -9,11 +9,11 @@ ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
 caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 17e0460ce55eb94dc48473cc898b31808876a34f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 857ab77428dec212c4fc3eddd7b827a721c1f10d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-39ltargumentnamegt39-must-be-greater-than-zero"></a>Argument &#39; &lt;argumentname&gt;&#39; musi być większa od zera.
 Argument jest nieprawidłowy, ponieważ jest ona mniejsza niż lub równa zero.  
@@ -26,4 +26,4 @@ Argument jest nieprawidłowy, ponieważ jest ona mniejsza niż lub równa zero.
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekazywanie argumentów według wartości i według odwołania](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)  
- [Parametr przekazywanie mechanizm zmiany w języku Visual Basic](http://msdn.microsoft.com/en-us/0fa2b0dc-aa1c-4797-bbd6-aa13c611cab2)
+ 

@@ -17,11 +17,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 649fc2572e809238977ca3deb5740ada2dd5dc14
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] środowisko programowania. Są one przeznaczone do wypełnienia kolejności na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje klienckie. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jedną operację usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klient musi komunikować się z usługą i kontrakt definiujący funkcje udostępniony przez usługę klientom.  
@@ -40,22 +41,22 @@ Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!
  Aby uzyskać więcej szczegółowych informacji o tworzeniu usług i klientów, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
+ [Instrukcje: definiowanie kontraktu usługi](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)  
  Opisuje sposób tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kontraktu przy użyciu interfejsu użytkownika. Kontrakt definiuje funkcji udostępnianych przez usługę.  
   
- [Porady: Implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
+ [Instrukcje: implementowanie kontraktu usługi](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)  
  Opisuje sposób Implementowanie kontraktu usługi. Gdy kontrakt jest zdefiniowanie, musi być implementowana z klasą usługi.  
   
- [Porady: hostowanie i uruchamianie podstawowej usługi](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
+ [Instrukcje: hostowanie i uruchamianie podstawowej usługi](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)  
  Zawiera opis sposobu konfigurowania punktu końcowego usługi w kodzie i obsługiwać usługę w aplikacji konsoli. Staje się aktywny, usługi należy skonfigurować i hostowany w środowisku czasu wykonywania. To środowisko tworzy usługi i formanty jego kontekstu i okresem istnienia.  
   
- [Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
  Zawiera opis sposobu pobierania metadanych używany do tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. Ten proces korzysta z funkcji Dodaj odwołanie do usługi w programie Visual Studio 2011.  
   
- [Porady: Konfigurowanie klienta](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
+ [Instrukcje: konfigurowanie klienta](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)  
  Opisuje sposób konfigurowania WCF klienta Konfigurowanie klienta wymaga określenia punktu końcowego, który klient używa do uzyskania dostępu do usługi.  
   
- [Porady: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
+ [Instrukcje: używanie klienta](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)  
  Informacje dotyczące używania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta do wywołania operacji usługi.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -71,5 +72,5 @@ Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
  [Przewodnik po dokumentacji](../../../docs/framework/wcf/guide-to-the-documentation.md)  
- [Co to jest Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)

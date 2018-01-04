@@ -14,24 +14,24 @@ ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9f7121d4787ce36feb6de5f08ca60a4419877f98
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: bc82714d25efbe9d379fff36f92261cf25a78862
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="type-of-member-39ltmembernamegt39-is-not-cls-compliant"></a>Typ elementu członkowskiego &#39; &lt;membername&gt;&#39; nie jest zgodne ze specyfikacją CLS
-Typ danych określony dla tego elementu członkowskiego nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../../docs/standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje tego typu danych. Jednak inny składnik napisana ściśle kodu zgodne ze specyfikacją CLS nie może obsługiwać ten typ danych. Takie składnika nie można pomyślnie interakcyjnie składnika.  
+Typ danych określony dla tego elementu członkowskiego nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS). Nie jest to błąd w ramach składnika, ponieważ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje tego typu danych. Jednak inny składnik napisana ściśle kodu zgodne ze specyfikacją CLS nie może obsługiwać ten typ danych. Takie składnika nie można pomyślnie interakcyjnie składnika.  
   
  Następujące [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] typy danych nie są zgodne ze specyfikacją CLS:  
   
--   [SByte — typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+-   [SByte, typ danych](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [Uinteger — typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+-   [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [Ulong — typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+-   [ULong, typ danych](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [Ushort — typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+-   [UShort, typ danych](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  Domyślnie ten komunikat jest ostrzeżenie. Aby uzyskać więcej informacji na ukrywanie ostrzeżenia lub traktowanie ostrzeżeń jako błędy, zobacz [Konfigurowanie ostrzeżeń w Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic).  
   
@@ -49,4 +49,4 @@ Typ danych określony dla tego elementu członkowskiego nie jest częścią [nie
   
 ## <a name="see-also"></a>Zobacz też  
  [Odbicie](../../../framework/reflection-and-codedom/reflection.md)  
- [\<PAVE za pośrednictwem > Pisanie kodu zgodne ze specyfikacją CLS](http://msdn.microsoft.com/en-us/4c705105-69a2-4e5e-b24e-0633bc32c7f3)
+ 

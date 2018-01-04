@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e6ddb27f724e30071be339ac753cfd85599ccd86
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Porady: tworzenie aplikacji formularzy systemu Windows z wiersza polecenia
 W poniższych procedurach opisano podstawowe kroki, które należy wykonać w celu tworzenia i uruchamiania aplikacji Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [wskazówki: Tworzenie prostego formularza systemu Windows](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -120,6 +121,6 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać w ce
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Control>  
- [Zmienianie wyglądu formularzy systemu Windows](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
+ [Zmienianie wyglądu formularzy Windows Forms](../../../docs/framework/winforms/changing-the-appearance-of-windows-forms.md)  
  [Rozszerzanie aplikacji Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
- [Wprowadzenie do formularzy systemu Windows](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+ [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)

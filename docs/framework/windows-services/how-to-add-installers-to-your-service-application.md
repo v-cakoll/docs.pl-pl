@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 8137e41f92335849916dfc9e9ce72afeb186e73c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Porady: dodawanie instalatorów od aplikacji usług
 Program Visual Studio jest dostarczany instalacji składników, które można zainstalować zasoby skojarzone z usługi aplikacji. Instalacja składników zarejestrować poszczególnych usług w systemie, do której jest instalowany i umożliwić Menedżera sterowania usługami wiedzieć, czy Usługa istnieje. Podczas pracy z aplikacją usługi, możesz wybrać link w oknie właściwości można automatycznie dodać odpowiednie pliki instalacyjne do projektu.  
@@ -71,6 +72,6 @@ Program Visual Studio jest dostarczany instalacji składników, które można za
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Porady: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Porady: Określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)
+ [Instrukcje: instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Instrukcje: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Instrukcje: określanie kontekstu zabezpieczeń dla usług](../../../docs/framework/windows-services/how-to-specify-the-security-context-for-services.md)

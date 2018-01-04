@@ -17,11 +17,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: edec8a00aff59195c6c80414eb4b950d68e488da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 915aba380b6fe35299de94720f216cda5ab66721
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Style komórki w formancie DataGridView formularzy systemu Windows
 Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć własną styl, na przykład format tekstu, kolor tła kolor pierwszego planu i czcionki. Zwykle jednak wiele komórek udostępni właściwości danego stylu.  
@@ -172,6 +173,6 @@ Każda komórka w <xref:System.Windows.Forms.DataGridView> formant może mieć w
  <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>  
- [Podstawowe formatowanie i style w oknach formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Porady: Ustawianie domyślnych stylów komórki dla formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
- [Formatowanie danych w oknie formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)
+ [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: ustawianie domyślnych stylów komórki dla kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)  
+ [Formatowanie danych w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/data-formatting-in-the-windows-forms-datagridview-control.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a6f0dcfd24414ef868a1a5414af4fcde1b9a14ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8658b51515d8d3934613b40a8d4bec0ab9bf618
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a>Porady: tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox
 W tym przykładzie przedstawiono rysowanie niestandardowego tekstu w <xref:System.Windows.Forms.ComboBox> formantu. Jeśli element spełnia określone kryteria, jest rysowana w większej czcionki i włączone czerwony.  
@@ -80,6 +81,6 @@ End Sub
  <xref:System.Windows.Forms.ComboBox.DrawItem>  
  <xref:System.Windows.Forms.DrawItemEventArgs>  
  <xref:System.Windows.Forms.ComboBox.MeasureItem>  
- [Formanty z wbudowaną obsługą rysowania przez właściciela](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
- [ListBox — formant](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
- [ComboBox — formant](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+ [Kontrolki z wbudowaną obsługą rysowania przez właściciela](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)  
+ [ListBox, kontrolka](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)  
+ [ComboBox, kontrolka](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)

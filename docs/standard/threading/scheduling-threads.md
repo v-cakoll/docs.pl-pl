@@ -16,11 +16,14 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e1fb7d61b8e250884b2c57cad8c5106bc77787a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6bb715c11cc0d9b07e4ea8805ace7680ca92097c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="scheduling-threads"></a>Harmonogram wątków
 Każdy wątek ma priorytet wątku przypisane do niej. Utworzone w ramach środowisko uruchomieniowe języka wspólnego wątki są początkowo przypisana priorytet **ThreadPriority.Normal**. Wątki utworzony poza środowisko uruchomieniowe zachować priorytet, który wcześniej one umieszczone w zarządzanym środowisku. Można pobrać lub ustawić priorytet którymkolwiek wątku z **Thread.Priority** właściwości.  

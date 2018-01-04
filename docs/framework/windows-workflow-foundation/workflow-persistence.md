@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769197b3f59c68c79f94c71c49ba4b1f4f98da2c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e65f07fc01d0d364d7271c4f1378b968b687881
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-persistence"></a>Trwałość przepływu pracy
 Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia przepływu pracy, niezależnie od informacji procesu lub komputera. Jest to zrobić, aby przekazać dobrze znanego punktu odzyskiwania dla wystąpienia przepływu pracy w przypadku awarii systemu lub zachować pamięci przez zwalnianie wystąpienia przepływu pracy, które są aktywnie niewykonania pracy lub przenoszenie stanu wystąpienia przepływu pracy z jednego węzła do innego węzeł w farmie serwerów.  
@@ -51,14 +52,14 @@ Trwałość przepływu pracy jest trwałe przechwytywania stanu wystąpienia prz
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Magazyn wystąpienia przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
+-   [Magazyn wystąpień przepływu pracy SQL](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)  
   
--   [Wystąpienie magazynów](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
+-   [Magazyny wystąpień](../../../docs/framework/windows-workflow-foundation/instance-stores.md)  
   
--   [Uczestnicy trwałości](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
+-   [Uczestnicy stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)  
   
--   [Najlepsze rozwiązania w zakresie trwałości](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
+-   [Najlepsze rozwiązania w zakresie stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-best-practices.md)  
   
--   [Wystąpienia-utrwalony przepływu pracy](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
+-   [Nietrwałe wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/non-persisted-workflow-instances.md)  
   
 -   [Wstrzymywanie i wznawianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/pausing-and-resuming-a-workflow.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4717e3a077648d9db51fe39228209617b384bd0c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2cab2fb9c26a8ddaa868cafebac718e5dfd6baa0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-prevent-a-child-task-from-attaching-to-its-parent"></a>Porady: Jak zapobiec łączeniu zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym
 Ten dokument pokazano, jak zapobiec łączeniu zadania podrzędnego z odpowiadającym zadaniem nadrzędnym. Zapobieganie zadania podrzędnego z odpowiadającym mu zadaniem nadrzędnym jest przydatne, gdy wywołanie składnika, która została napisana przez innych firm i używa również zadania. Na przykład składnikiem innej firmy, który używa <xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> opcję, aby utworzyć <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> obiektu może spowodować problemy w kodzie, jeśli jest długotrwałe lub nieobsługiwany wyjątek.  
@@ -48,4 +51,4 @@ Ten dokument pokazano, jak zapobiec łączeniu zadania podrzędnego z odpowiadaj
 ## <a name="robust-programming"></a>Niezawodne programowanie  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie asynchroniczne opartego na zadaniach](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)
+ [Programowanie asynchroniczne oparte na zadaniach](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

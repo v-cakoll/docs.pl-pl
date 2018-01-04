@@ -17,11 +17,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e49c2130702fc7df223f2eab0ea0500b1c27b660
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72e3d707caf9c5e64c9860a8e79b5e151ce68852
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="building-xml-schemas"></a>Tworzenie schematów XML
 Klasy w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeń nazw mapowania do struktury zdefiniowane w sieci World Wide Web konsorcjum W3C zalecenie schematu XML i może służyć do tworzenia XML schematów w pamięci.  
@@ -96,10 +99,10 @@ Klasy w <xref:System.Xml.Schema?displayProperty=nameWithType> przestrzeń nazw m
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie modelu obiektu schematu XML](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
- [Odczytywanie i zapisywanie schematy XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
- [Przechodzenie przez schematy XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
- [Edytowanie schematy XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
- [W tym lub importowanie schematy XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
- [Zestaw XmlSchemaSet schematu kompilacji](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
- [Obiekt typu Infoset schematu po kompilacji](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)
+ [Model SOM (XML Schema Object Model) ― omówienie](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
+ [Odczytywanie i zapisywanie schematów XML](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
+ [Przechodzenie schematów XML](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
+ [Edytowanie schematów XML](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+ [Uwzględnianie lub importowanie schematów XML](../../../../docs/standard/data/xml/including-or-importing-xml-schemas.md)  
+ [Klasa XmlSchemaSet na potrzeby kompilacji schematu](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+ [Zestaw informacji po kompilacji schematu](../../../../docs/standard/data/xml/post-schema-compilation-infoset.md)

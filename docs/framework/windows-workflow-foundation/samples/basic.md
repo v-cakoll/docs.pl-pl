@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cfd3075ef58114d50be07e4070cfaa4492408e83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7ec3fe498bc76c5fe7221d14c8af219420037c14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic"></a>Podstawowy
 Ta sekcja zawiera przykłady ilustrujące basic [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji.  
@@ -25,7 +26,7 @@ Ta sekcja zawiera przykłady ilustrujące basic [!INCLUDE[wf](../../../../includ
  [Wbudowane działania](../../../../docs/framework/windows-workflow-foundation/samples/built-in-activities.md)  
  Zawiera przykłady korzystające z biblioteki działań wbudowanych.  
   
- [Kompensacji](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
+ [Kompensacja](../../../../docs/framework/windows-workflow-foundation/samples/compensation-samples.md)  
  Zawiera przykłady ilustrujące kompensacji.  
   
  [Działania niestandardowe](../../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)  
@@ -34,7 +35,7 @@ Ta sekcja zawiera przykłady ilustrujące basic [!INCLUDE[wf](../../../../includ
  [Projektant](../../../../docs/framework/windows-workflow-foundation/samples/designer.md)  
  Zawiera przykłady, które prezentują sposób użycia [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)].  
   
- [Projektant ReHosting](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
+ [Rehostowanie projektanta](../../../../docs/framework/windows-workflow-foundation/samples/designer-rehosting.md)  
  Zawiera przykłady ilustrujące ponownie hosting Projektant działań.  
   
  [Wykonanie](../../../../docs/framework/windows-workflow-foundation/samples/execution.md)  
@@ -43,7 +44,7 @@ Ta sekcja zawiera przykłady ilustrujące basic [!INCLUDE[wf](../../../../includ
  [Wyrażenia](../../../../docs/framework/windows-workflow-foundation/samples/expressions.md)  
  Zawiera przykłady ilustrujące [!INCLUDE[wf](../../../../includes/wf-md.md)] wyrażenia.  
   
- [Migracji](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
+ [Migracja](../../../../docs/framework/windows-workflow-foundation/samples/migration.md)  
  Zawiera przykłady ilustrujące Migrowanie przepływy pracy utworzone we wcześniejszych wersjach [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
  [Trwałość](../../../../docs/framework/windows-workflow-foundation/samples/persistence.md)  
@@ -61,7 +62,7 @@ Ta sekcja zawiera przykłady ilustrujące basic [!INCLUDE[wf](../../../../includ
  [Transakcje](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Zawiera przykłady ilustrujące przepływu transakcji.  
   
- [Sprawdzanie poprawności](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
+ [Walidacja](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  Zawiera przykłady ilustrujące sprawdzanie poprawności w [!INCLUDE[wf2](../../../../includes/wf2-md.md)].  
   
 ## <a name="reference"></a>Tematy pomocy

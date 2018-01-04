@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21493e0e0c9e42cf5efc42d86c8f126fbae9b392
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6c68ddd29b8221a073b00ade87e3b9d3dc870b8
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>Porady: wyświetlanie zlokalizowanych informacji daty i godziny dla użytkowników sieci Web
 Ponieważ strony sieci Web mogą być wyświetlane w dowolnym miejscu w świecie, operacje przeanalizować i sformatować wartości daty i godziny nie należy polegać na domyślnym formacie (która jest najczęściej format kultury lokalnego serwera sieci Web) po interakcji z użytkownikiem. Zamiast tego formularzy sieci Web, które obsługują daty i czasu ciągi wprowadzane przez użytkownika należy przeanalizować ciągów, za pomocą preferowanej kultury użytkownika. Podobnie danych daty i godziny powinna być wyświetlana użytkownikowi w formacie, który odpowiada kulturę użytkownika. W tym temacie pokazano, jak to zrobić.  
@@ -117,6 +120,6 @@ Ponieważ strony sieci Web mogą być wyświetlane w dowolnym miejscu w świecie
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)  
- [Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
+ [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
  [Analizowanie ciągów daty i godziny](../../../docs/standard/base-types/parsing-datetime.md)

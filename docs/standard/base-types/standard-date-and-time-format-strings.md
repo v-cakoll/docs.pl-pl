@@ -24,11 +24,14 @@ caps.latest.revision: "92"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca51c13a8c25575080c56b8d1ffe5723f34b539e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Wszystkie daty i godziny ciąg formatu, który zawiera więcej niż jeden znak, łącznie ze spacjami, jest interpretowany jako niestandardowa data i godzina ciąg formatu; Aby uzyskać więcej informacji, zobacz [niestandardowe ciągi daty i godziny Format](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:  
@@ -421,6 +424,6 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.DateTime?displayProperty=nameWithType>  
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
- [Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+ [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
  [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acc757d899da3ff737b2884131b77135265fd197
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cd9bfb187f77f1cff344aaeabebd36aec1312e30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>Jak zdiagnozować problematyczne zadanie drukowania
 Administratorzy sieci często pola utrudnień od użytkowników o zadań drukowania, które nie wydruku lub wydrukować powoli. Bogaty zestaw właściwości zadania drukowania w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] z [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] stanowić sposób przeprowadzania szybkiej diagnostyki zdalnego zadań drukowania.  
@@ -97,5 +98,5 @@ Administratorzy sieci często pola utrudnień od użytkowników o zadań drukowa
  <xref:System.FlagsAttribute>  
  <xref:System.Printing.PrintQueue>  
  [& — Operator (odwołanie w C#)](~/docs/csharp/language-reference/operators/and-operator.md)  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)

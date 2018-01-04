@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d69d635fbdd8720937cd189826c1496b8126ddef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b8552f185a93b688555dbcfab3da9d28d9bfde6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>Stosowanie antyaliasingu do linii i krzywych
 Jeśli używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] do rysowania linii, podaj punkt początkowy i końcowy punkt wiersza, ale nie musisz podać wszystkie informacje o poszczególnych pikseli w wierszu. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]działa w połączeniu z oprogramowaniem sterownik ekranu do określenia, które piksele zostanie włączona do wyświetlenia na urządzeniu określonego wiersza.  
@@ -57,4 +58,4 @@ Jeśli używasz [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.m
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>  
  [Linie, krzywe i kształty](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)  
- [Porady: stosowanie antyaliasingu do tekstu](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)
+ [Instrukcje: stosowanie antyaliasingu do tekstu](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)

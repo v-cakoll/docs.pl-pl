@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17e4fcd1b471a5197f2e6a30bad10cbdbe22f216
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 059fe3661878b51ef27facc2888286ecd1aaa97a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ltxmlserializergt-element"></a>&lt;Element xmlSerializer&gt; — Element
 Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSerializer> jest wykonywane.  
@@ -72,4 +75,4 @@ Określa, czy dodatkowe wyboru postęp <xref:System.Xml.Serialization.XmlSeriali
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [\<System.XML.serialization > — Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)

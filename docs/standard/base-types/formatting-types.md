@@ -35,11 +35,14 @@ caps.latest.revision: "43"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 816337ead810be405339a0616798a06689b97315
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 31cb95b20369eaef85f280497acb99e294e97faa
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania w .NET
 <a name="Introduction"></a>Formatowanie to proces konwertowania wystąpienia klasy, struktury lub wyliczenia wartości do reprezentacji ciągu, często, tak aby wynikowy ciąg może być widoczny dla użytkowników lub deserializacji, aby przywrócić oryginalny typ danych. Ta konwersja może stanowić wiele wyzwań:  
@@ -87,7 +90,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Tematy pokrewne](#RelatedTopics)  
   
--   [Odwołanie](#Reference)  
+-   [Dokumentacja](#Reference)  
   
 <a name="NetFormatting"></a>   
 ## <a name="formatting-in-net"></a>Formatowanie w .NET  
@@ -267,11 +270,11 @@ ms.lasthandoff: 10/18/2017
 |-----------|----------------|  
 |[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane wartości liczbowych.|  
 |[Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla wartości liczbowych ciągi formatu niestandardowego.|  
-|[Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> wartości.|  
-|[Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> wartości.|  
+|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> wartości.|  
+|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> wartości.|  
 |[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane odstępach czasu.|  
 |[Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla przedziały czasu ciągi formatu niestandardowego.|  
-|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano standardowym formacie ciągów, które zostaną użyte do utworzenia reprezentacji ciągu wartości wyliczenia.|  
+|[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano standardowym formacie ciągów, które zostaną użyte do utworzenia reprezentacji ciągu wartości wyliczenia.|  
 |<xref:System.Guid.ToString%28System.String%29?displayProperty=nameWithType>|Opisuje standardowe ciągi formatujące dla <xref:System.Guid> wartości.|  
   
 <a name="FormatProviders"></a>   
@@ -303,7 +306,7 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Globalization.NumberFormatInfo>, Klasa udostępniająca informacje numeryczne formatowania dla określonej kultury. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja zwraca wystąpienia samej siebie.  
   
--   <xref:System.Globalization.CultureInfo>. Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może zwracać <xref:System.Globalization.NumberFormatInfo> obiekt, aby podać informacje numeryczne formatowania lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, aby podać informacje dotyczące formatowania dla wartości daty i godziny.  
+-   <xref:System.Globalization.CultureInfo>., Jego <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> implementacja może zwracać <xref:System.Globalization.NumberFormatInfo> obiekt, aby podać informacje numeryczne formatowania lub <xref:System.Globalization.DateTimeFormatInfo> obiekt, aby podać informacje dotyczące formatowania dla wartości daty i godziny.  
   
  Można też wdrożyć własnego dostawcę formatowanie zastąpić któregokolwiek z tych klas. Jednak implementację programu <xref:System.IFormatProvider.GetFormat%2A> metoda musi zwracać obiekt typu wymienione w powyższej tabeli, jeśli musi podać informacje dotyczące formatowania do `ToString` metody.  
   
@@ -414,11 +417,11 @@ ms.lasthandoff: 10/18/2017
 |-----------|----------------|  
 |[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane wartości liczbowych.|  
 |[Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla wartości liczbowych ciągi formatu niestandardowego.|  
-|[Ciągi formatujące standardowa Data i godzina](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> wartości.|  
-|[Niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> wartości.|  
+|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> wartości.|  
+|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> wartości.|  
 |[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane odstępach czasu.|  
 |[Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla przedziały czasu ciągi formatu niestandardowego.|  
-|[Wyliczanie ciągów formatujących](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano standardowym formacie ciągów, które zostaną użyte do utworzenia reprezentacji ciągu wartości wyliczenia.|  
+|[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano standardowym formacie ciągów, które zostaną użyte do utworzenia reprezentacji ciągu wartości wyliczenia.|  
 |[Złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md)|Opisuje sposób osadzić w ciągu jednego lub więcej wartości sformatowane. Ciąg można następnie wyświetlane w konsoli lub w strumieniu.|  
 |[Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)|Wyświetla listę tematów, które zawierają instrukcje krok po kroku do wykonywania określonych operacji formatowania.|  
 |[Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)|Zawiera opis sposobu zainicjowania obiekty do wartości opisanego przez ciąg reprezentacje tych obiektów. Analiza jest odwrotny operacji formatowania.|  

@@ -26,11 +26,14 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8d733efc3d70070dd12f55c651033e97d1792c38
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cfb1500150d2dfb500a698713c0de6b8e5518010
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>Porady: odczyt i zapis w plikach w izolowanym magazynie
 Aby odczytać lub zapisać do pliku w magazynie izolowanym, użyj <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> obiektu Czytnik strumienia (<xref:System.IO.StreamReader> obiektu) lub piszący strumienia (<xref:System.IO.StreamWriter> obiektu).  
@@ -49,4 +52,4 @@ Aby odczytać lub zapisać do pliku w magazynie izolowanym, użyj <xref:System.I
  <xref:System.IO.StreamReader?displayProperty=nameWithType>  
  <xref:System.IO.StreamWriter?displayProperty=nameWithType>  
  [Plik i strumienia I-O](../../../docs/standard/io/index.md)  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 91cd9a03ad1acf61681ecfad0edb061802c4362c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5098db5131c2e47c0b73efaac51477ef3b107761
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-standard-exception-types"></a>Używanie typów wyjątków standardowe
 W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczegóły ich użycia. Lista w żadnym wypadku nie jest kompletną. Skontaktuj się z dokumentacją odwołanie .NET Framework użycia innych typów wyjątków Framework.  
@@ -72,5 +75,5 @@ W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczeg�
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wytyczne dotyczące projektowania Framework](../../../docs/standard/design-guidelines/index.md)  
- [Wskazówek dotyczących wyjątków](../../../docs/standard/design-guidelines/exceptions.md)
+ [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  
+ [Wyjątki — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/exceptions.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ea78cadae6e033bc54274e5428ba5e8c6410259d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a467cb266f284e2bfdedbb5061f26231736af2b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timer-component-overview-windows-forms"></a>Timer — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Timer> to składnik, który wywołuje zdarzenie w regularnych odstępach czasu. Ten składnik jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, które jest odpowiednie dla środowiska serwera, zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
@@ -31,5 +32,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.Timer> to składnik, któr
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Timer>  
- [Timer — składnik](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
- [Ograniczenia właściwości Interval składnika Timer formularzy systemu Windows](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)
+ [Timer, składnik](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)  
+ [Ograniczenia właściwości Interval składnika Timer formularzy Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)

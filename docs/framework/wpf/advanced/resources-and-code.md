@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1177f7eeb2b6184ea6ae0a021730658913a4794b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 772c44b63627204da7056a5707f2840a82053f11
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-and-code"></a>Zasoby i kod
 To omówienie koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zasobów można uzyskać dostępu do lub utworzone za pomocą kodu zamiast [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] składni. Aby uzyskać więcej informacji na temat użycia zasobów ogólne i zasoby z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] perspektywy składni, zobacz [zasobów XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md).  
@@ -57,5 +58,5 @@ To omówienie koncentruje się na temat [!INCLUDE[TLA#tla_winclient](../../../..
  Większość użycia zasobów ustawi klucz zasób powinien być ciągiem. Jednak różnych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje celowo nie należy używać typu ciąg do określenia klucze, zamiast tego parametru jest obiektem. Możliwość wystąpienia zasobu trzeba wprowadzić przez obiekt jest używany przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Obsługa stylów i motywów. Style w kompozycje, które stają się domyślny styl formantu w przeciwnym razie nie stylem każdego określonemu przez <xref:System.Type> którego ma być stosowana do formantu. Trwa wyznaczaną przez typ zapewnia mechanizm niezawodnej wyszukiwania, który działa na wystąpień poszczególnych typów kontroli i typu może być wykrywane przez odbicie i używane do zdefiniowania stylów klas pochodnych, nawet jeśli typ pochodny, w przeciwnym razie ma żaden styl domyślny. Można określić <xref:System.Type> klucza zdefiniowane w zasobu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] za pomocą [x: Type — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md). Podobne rozszerzenia istnieją inne użycia klucza typu, które obsługują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] funkcje, takie jak [ComponentResourceKey — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 35c947e3efbb9b2e5df775f83ffc6068e49c84e8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3e5dc6630d9bc7a2090a28daabbf08eeed59005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.OpenFileDialog> składnik jest okno dialogowe wstępnie skonfigurowane. Jest to ten sam **Otwórz plik** okno dialogowe udostępnianych przez system operacyjny Windows. Dziedziczy on z <xref:System.Windows.Forms.CommonDialog> klasy.  
@@ -35,4 +36,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.OpenFileDialog> składnik 
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.OpenFileDialog>  
- [Openfiledialog — składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+ [OpenFileDialog, składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)

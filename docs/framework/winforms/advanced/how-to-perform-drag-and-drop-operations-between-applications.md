@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 513c6b2a15502625e4b42aeee4947ff36e4bfd17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 514c283575ca54e74d23ae31d3590979be2c3ef0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>Porady: wykonywanie mapowania i zmniejszanie operacji przeciągania i upuszczania między aplikacjami
 Wykonywanie operacji przeciągania i upuszczania między aplikacjami nie różni się od włączenie tej akcji w aplikacji, pod warunkiem, obie aplikacje, które są zaangażowane działają zgodnie z między "kontraktu" <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> i <xref:System.Windows.Forms.DragEventArgs.Effect%2A> właściwości.  
@@ -48,6 +49,6 @@ Wykonywanie operacji przeciągania i upuszczania między aplikacjami nie różni
      Ponadto można skonfigurować sieci <xref:System.Windows.Forms.TextBox> kontrolki, które umożliwia ciągów tekstowych przeciągnąć i upuścić na WordPad. Aby uzyskać więcej informacji, zobacz [wskazówki: wykonywanie operacji przeciągania i upuszczania w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Dodawanie danych do Schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
- [Porady: pobieranie danych ze Schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
- [Operacje przeciągania i upuszczania oraz Obsługa schowka](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+ [Instrukcje: dodawanie danych do schowka](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)  
+ [Instrukcje: pobieranie danych ze schowka](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)  
+ [Operacje przeciągania i upuszczania oraz obsługa schowka](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e9bf586c1805fc5b5f1cc5f96f4e6b08d80c199a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4758046fef55af86754ecb38aa50c4ff832f54db
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="merge-options-in-plinq"></a>Opcje scalania w PLINQ
 Gdy kwerendy jest wykonywany jako równoległe, partycje PLINQ sekwencji źródłowej tak, aby wiele wątków może działać na różnych części jednocześnie, zwykle w oddzielnych wątkach. Jeśli wyniki mają być używane w jednym wątku, na przykład w `foreach` (`For Each` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) pętli, a następnie wyniki każdego wątku musi być scalone jedną sekwencję. Rodzaj operacji scalania, który wykonuje PLINQ zależy od operatory, które znajdują się w zapytaniu. Na przykład operatory, które nakładają zamówienie nowe wyniki musi bufor wszystkie elementy ze wszystkich wątków. Z perspektywy odbierającą wątku (która jest również użytkownik aplikacji) pełni buforowane zapytanie może działać zauważalne okres czasu, po upływie generuje jego pierwszego wyniku. Inne operatory domyślnie są częściowo buforowane; dają one ich wyniki w partiach. Jeden operator <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie jest buforowana domyślnie. Go zwraca wszystkie elementy ze wszystkich wątków natychmiast.  
@@ -73,4 +76,4 @@ Gdy kwerendy jest wykonywany jako równoległe, partycje PLINQ sekwencji źród�
   
 ## <a name="see-also"></a>Zobacz też  
  [Równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)  
- [Porady: Określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)
+ [Instrukcje: określanie opcji scalania w PLINQ](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

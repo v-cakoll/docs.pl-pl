@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d122512a16a0959d60bfa658d96aa87a52e40299
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ef5059a886012c00d3d33327baeaae49a9d5b54c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="soap-and-http-endpoints"></a>Punkty końcowe protokołów SOAP i HTTP
 W tym przykładzie przedstawiono sposób implementacji usługi opartego na protokole RPC i udostępnić go w formacie protokołu SOAP i formatowanie "Zwykły starego pliku XML" (POX) przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania sieci Web. Zobacz [podstawowa usługa HTTP](../../../../docs/framework/wcf/samples/basic-http-service.md) przykładowa, aby uzyskać więcej informacji o powiązanie HTTP dla usługi. Ten przykład dotyczy przede wszystkim szczegółowe informacje, które odnoszą się do udostępnianie tych samych usług za pośrednictwem protokołu SOAP i HTTP przy użyciu różnych powiązań.  

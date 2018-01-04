@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20de05b5df3737ccc525cb50c81b51bcba766287
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 388fd8d3e7f23dc55d46c5a097be99e9f1c34ab0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Działanie myszy w formularzach systemu Windows
 Otrzymywanie i obsługę myszą jest ważnym elementem każda aplikacja systemu Windows. Obsługa zdarzeń myszy do wykonywania akcji w aplikacji lub za pomocą myszy informacji o lokalizacji do testowania trafień lub innych działań. Ponadto można zmienić sposób myszą obsługi formantów w aplikacji. W tym temacie opisano te zdarzenia myszy w szczegółów i sposobu uzyskiwania i zmieniać ustawień systemowych myszy. Aby uzyskać więcej informacji na temat danych dostarczonych przy użyciu myszy pojawienia się zdarzenia i kolejność, w którym zdarzenia kliknięcia myszą, zobacz [zdarzenia myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-events-in-windows-forms.md).  
@@ -63,6 +64,6 @@ Otrzymywanie i obsługę myszą jest ważnym elementem każda aplikacja systemu 
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|Pobiera liczbę wierszy do przewijania podczas obracania kółka myszy.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wejście myszy w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
- [Przechwytywanie myszy w systemie Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
- [Wskaźniki myszy w formularzach systemu Windows](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+ [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)  
+ [Przechwytywanie myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)  
+ [Wskaźniki myszy w formularzach Windows Forms](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)

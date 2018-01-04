@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 446967cc157962a1ec4a87193bbf84b1a356efa6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 76d43a620b64c771427cd30af770e70642dabe7a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE — Wyliczenie
 Wskazuje, czy pole jest statyczny, a jeśli tak, statyczne jakości dotyczący pola. Wartości te można łączyć, używając operacji lub wskaż, czy pole ma wiele różnych klas statycznych.  

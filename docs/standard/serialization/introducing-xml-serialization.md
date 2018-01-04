@@ -22,11 +22,14 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e5bd9abd37c7c70d03965698828e0adf64a8b1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f0e6091528987eb6798d3880bdb2190af337f8a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="introducing-xml-serialization"></a>Wprowadzenie do serializacji XML
 Serializacji to proces konwersji obiektu do formularza, który można łatwo przesłać. Na przykład można serializować obiektu i przetransportować go przez Internet między klientem serwerem przy użyciu protokołu HTTP. Z drugiej deserializacji rekonstruuje obiektów ze strumienia.  
@@ -181,10 +184,10 @@ public string MyToken;
  <xref:System.Xml.Serialization.XmlSerializer>  
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.IO.FileStream>  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
  [Serializacja](../../../docs/standard/serialization/index.md)  
  <xref:System.Xml.Serialization.XmlSerializer>  
  [Przykłady serializacji XML](../../../docs/standard/serialization/examples-of-xml-serialization.md)  
- [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
- [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+ [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+ [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b96f9e6cc54e028e94cc7ae377012ac4f1328bb0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 350b6969cfa4ae1b378c574acee73d87ff1dffca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-render-a-visual-style-element"></a>Porady: renderowanie elementu stylu wizualnego
 <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> Przedstawia przestrzeni nazw <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> elementy (UI), obsługiwane przez style wizualne interfejsu obiektów, które reprezentują użytkownika systemu Windows. W tym temacie przedstawiono sposób użycia <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy do renderowania <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> reprezentujący **Wyloguj** i **Shut Down** przycisków menu Start.  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/22/2017
 -   Odwołuje się do <xref:System?displayProperty=nameWithType>, <xref:System.Drawing?displayProperty=nameWithType>, <xref:System.Windows.Forms?displayProperty=nameWithType>, i <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Renderowanie formantów przy użyciu stylów wizualnych](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)
+ [Renderowanie kontrolek przy użyciu stylów wizualnych](../../../../docs/framework/winforms/controls/rendering-controls-with-visual-styles.md)

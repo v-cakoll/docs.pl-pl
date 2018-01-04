@@ -20,26 +20,27 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5cdac074b873d3a627e6971d440fdd1f98952b08
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-security"></a>Zabezpieczenia formularzy systemu Windows
 Formularze systemu Windows funkcji modelu zabezpieczeń, które jest oparte na kodzie (zabezpieczenia są ustawione przez kod, niezależnie od kodu użytkownika dla poziomów). Jest to oprócz żadnych schematów zabezpieczeń, które mogą być spełnione już na komputerze. Mogą to być te przeglądarki (np. na podstawie strefy zabezpieczeń programu Internet Explorer) lub system operacyjny (na przykład zabezpieczenia oparte na dostęp do poświadczeń systemu Windows NT).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zabezpieczenia w formularzach systemu Windows-omówienie](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Przegląd zabezpieczeń w formularzach Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
  Krótko opisano model zabezpieczeń .NET Framework i podstawowe kroki niezbędne do zapewnienia formularzy systemu Windows w aplikacji to bezpieczne.  
   
- [Plik bezpieczniejsze i dostęp do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [Bezpieczniejszy dostęp do plików i danych w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
  Opisuje sposób dostępu do plików i danych w częściowo zaufanym środowisku.  
   
- [Bezpieczniejsze drukowanie w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Bezpieczniejsze drukowanie w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
  Opisuje sposób uzyskiwać dostęp do funkcji drukowania w częściowo zaufanym środowisku.  
   
- [Zagadnienia dotyczące zabezpieczeń w formularzach systemu Windows](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
  W tym artykule opisano wykonywania manipulowanie okna, korzystanie ze Schowka i wykonywania wywołań do kodu niezarządzanego w częściowo zaufanym środowisku.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

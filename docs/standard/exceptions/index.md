@@ -21,11 +21,14 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b064dc39f5807b154a1529eebe17493ae84981cf
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 82e314dacc9fb2657a3a7088a928b59d00282a5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>Obsługa i zgłaszanie wyjątków w .NET
 
@@ -68,13 +71,13 @@ W poniższej tabeli przedstawiono niektóre typowe wyjątki z przykładami, co m
 ## <a name="see-also"></a>Zobacz też
 
 * [Właściwości i klasy wyjątków](exception-class-and-properties.md)
-* [Porady: umożliwia przechwytywanie wyjątków w bloku Try-Catch](how-to-use-the-try-catch-block-to-catch-exceptions.md)
-* [Porady: użycie określonych wyjątków w bloku Catch](how-to-use-specific-exceptions-in-a-catch-block.md)
-* [Porady: jawne zgłaszanie wyjątków](how-to-explicitly-throw-exceptions.md)
-* [Porady: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md)
-* [Przy użyciu obsługi wyjątków filtrowanych przez użytkownika](using-user-filtered-exception-handlers.md)
-* [Porady: użycie bloków Finally](how-to-use-finally-blocks.md)
+* [Instrukcje: Używanie bloku try/catch do przechwytywania wyjątków](how-to-use-the-try-catch-block-to-catch-exceptions.md)
+* [Instrukcje: Używanie określonych wyjątków w bloku catch](how-to-use-specific-exceptions-in-a-catch-block.md)
+* [Instrukcje: Jawne zgłaszanie wyjątków](how-to-explicitly-throw-exceptions.md)
+* [Instrukcje: Tworzenie wyjątków zdefiniowanych przez użytkownika](how-to-create-user-defined-exceptions.md)
+* [Używanie obsługi wyjątków filtrowanych przez użytkownika](using-user-filtered-exception-handlers.md)
+* [Instrukcje: Używanie bloków finally](how-to-use-finally-blocks.md)
 * [Obsługa wyjątków międzyoperacyjności COM](handling-com-interop-exceptions.md)
-* [Najlepsze praktyki dotyczące wyjątków](best-practices-for-exceptions.md)
+* [Najlepsze rozwiązania dotyczące wyjątków](best-practices-for-exceptions.md)
 
 Aby dowiedzieć się więcej na temat działania wyjątki .NET, zobacz [deweloperów co co trzeba wiedzieć o wyjątków w czasie wykonywania](https://github.com/dotnet/coreclr/blob/master/Documentation/botr/exceptions.md).

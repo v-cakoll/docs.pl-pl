@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bda4cb3641ff890646614af35d38ff13621cc16b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f042816b912a0de643dd1d0f66ddba6d5eff7df2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>Porady: tworzenie warstw obiektów na formularzach systemu Windows
 Tworzenie interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) interfejsu, często można warstwy zarówno kontroli, jak i formularze podrzędne, aby utworzyć bardziej złożoną interfejsy użytkownika (UI). Aby przenieść i śledzenie kontrolek i systemu windows w ramach grupy, manipulować ich porządek osi z. *Porządek osi* jest visual warstwy formantów w formularzu wzdłuż osi z formularza (głębokość). Okno w górnej części porządek nakłada się na wszystkich innych okien. Wszystkie inne okna nakładać się na okna w dolnej części porządek osi z.  
@@ -63,8 +64,8 @@ Tworzenie interfejsu użytkownika złożonych lub praca wielu dokumentów (MDI) 
 >  Formularze systemu Windows obsługuje *zawieranie kontrolek*. Zawierania formantów obejmuje umieszczenie kontrolki w formancie zawierającego, takie jak liczba <xref:System.Windows.Forms.RadioButton> steruje w obrębie <xref:System.Windows.Forms.GroupBox> formantu. Następnie można warstwy kontrolki wewnątrz formantu zawierającego. Przenoszenie pole grupy przenosi również formanty, ponieważ są one zawarte w nim.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty formularzy systemu Windows](../../../../docs/framework/winforms/controls/index.md)  
- [Rozmieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
- [Etykietowanie formantów formularzy systemu Windows poszczególnych i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- [Formanty przez funkcję formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+ [Kontrolki formularzy Windows Forms](../../../../docs/framework/winforms/controls/index.md)  
+ [Rozmieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)  
+ [Etykietowanie pojedynczych kontrolek formularzy Windows Forms i określanie skrótów dla nich](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms według funkcji](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)

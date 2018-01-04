@@ -22,11 +22,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dddd46dc5d825738dd9d5038ae573910122953c8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 697d3ec32af6b704fbb1787bbb9ba1de57a0632e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="culture-insensitive-string-operations"></a>Niezależne od kultury operacje na ciągach
 Operacje na ciągach, w których jest uwzględniana kultura, mogą okazać się przydatne w przypadku tworzenia aplikacji, które mają wyświetlać wyniki użytkownikom na podstawie kultury. Domyślnie zależne od kultury metod uzyskania kultura używana z <xref:System.Globalization.CultureInfo.CurrentCulture%2A> właściwości bieżącego wątku.  
@@ -40,4 +43,4 @@ Operacje na ciągach, w których jest uwzględniana kultura, mogą okazać się 
  Bez względu na to, czy jest tworzona aplikacja zawierająca kod służący do obsługi problemów lokalizacji i globalizacji, należy pamiętać o metodach programu .NET Framework pobierających domyślnie wyniki, w których jest uwzględniana kultura. Celem tego tematu jest zilustrowanie prawidłowego sposobu używania tych metod w aplikacjach w celu uzyskania wyników, w których nie jest uwzględniana kultura.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)

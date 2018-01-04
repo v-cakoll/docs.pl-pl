@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb7092a2eae8d950f3709ea4fde63f6c7d5b32b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 826adbecfc6a57b05db482766baae397ce72bc9d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>Porównywanie i sortowanie w kolekcjach
 <xref:System.Collections> Klasy wykonywać porównania w niemal wszystkich procesów Zarządzanie kolekcjami, czy wyszukiwanie elementu do usunięcia lub zwrócenie wartości parę klucza i wartości.  

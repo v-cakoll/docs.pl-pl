@@ -18,11 +18,14 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5d6bf5929466d09b70cb74ffdf6c46d21c6f85ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7f8600da624ff75ce2dbd5c417f886d6b3b1ac37
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="security-in-the-net-framework"></a>Zabezpieczenia w programie .NET Framework
 Środowisko uruchomieniowe języka wspólnego i .NET Framework oferują wiele klas przydatne i usług, które umożliwiają deweloperom łatwe napisać kod bezpiecznego i umożliwiają administratorom systemu dostosować uprawnienia przyznane do kodu, dzięki czemu aplikacja może uzyskiwać dostępu do chronionych zasobów. Ponadto środowisko uruchomieniowe i .NET Framework zapewnia przydatne klasy i usług, które ułatwiają korzystanie z kryptografii i opartej na rolach zabezpieczeń.  
@@ -46,7 +49,7 @@ ms.lasthandoff: 10/18/2017
  [Wytyczne dotyczące bezpiecznego programowania dla niezarządzanego kodu](../../../docs/framework/security/secure-coding-guidelines-for-unmanaged-code.md)  
  Wywoływanie kodu niezarządzanego, należy opisano niektóre z najlepszych rozwiązań i bezpieczeństwem.  
   
- [Program Windows Identity Foundation](../../../docs/framework/security/index.md)  
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)  
  W tym artykule opisano, jak można zaimplementować tożsamości opartego na oświadczeniach w aplikacjach.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

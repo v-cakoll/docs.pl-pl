@@ -23,11 +23,14 @@ caps.latest.revision: "56"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ab77293796eb20b1056f57f64903beb9357a80c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
 <a name="top"></a>Wyrażenie regularne jest wzorzec, który aparat wyrażeń regularnych próbuje dopasować w wejściowego tekstu. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie, zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
@@ -36,12 +39,12 @@ ms.lasthandoff: 11/21/2017
   
  [Znaki specjalne](#character_escapes)  
  [Klasy znaków](#character_classes)  
- [Punkty kontrolne](#atomic_zerowidth_assertions)  
+ [Kotwice](#atomic_zerowidth_assertions)  
  [Konstrukcje grupujące](#grouping_constructs)  
  [Kwantyfikatory](#quantifiers)  
  [Konstrukcje dopasowań](#backreference_constructs)  
  [Konstrukcje alternacyjne](#alternation_constructs)  
- [Podstawień](#substitutions)  
+ [Zastąpienia](#substitutions)  
  [Opcje wyrażeń regularnych](#options)  
  [Inne konstrukcje](#miscellaneous_constructs)  
   

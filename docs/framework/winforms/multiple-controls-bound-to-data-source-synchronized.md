@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2573f342530e59fa05e7f24342f251990b2ce47d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 227ad36e87c3deceb7fefe3cd19013fc8e76c686
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>Porady: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych
 Często, podczas pracy z powiązanie danych w formularzach systemu Windows, wielu formantów powiązanych z tym samym źródle danych. W niektórych przypadkach może być konieczne wykonać dodatkowe czynności, aby upewnić się, czy powiązania właściwości formantów pozostają zsynchronizowane ze sobą i źródła danych. Te kroki są niezbędne w dwóch sytuacjach:  
@@ -51,7 +52,7 @@ Często, podczas pracy z powiązanie danych w formularzach systemu Windows, wiel
 -   Formularz z <xref:System.Windows.Forms.Form.Load> obsługi zdarzeń i wywołanie `InitializeControlsAndDataSource` metody w przykładzie z formularza <xref:System.Windows.Forms.Form.Load> obsługi zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
- [Powiadomienie o zmianie w powiązaniu danych formularzy systemu Windows](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Interfejsy dotyczące powiązania danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Instrukcje: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)  
+ [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Interfejsy dotyczące wiązania danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

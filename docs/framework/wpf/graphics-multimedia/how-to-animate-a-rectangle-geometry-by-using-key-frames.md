@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b6c23f894b6fa93a3889356416bd95f61fff8beb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5f110bcea76a61d46932c9e1aacf27f6f3255a91
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>Jak animować geometrię prostokąta z wykorzystaniem klatek kluczowych
 W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.RectangleGeometry.Rect%2A> właściwość <xref:System.Windows.Media.RectangleGeometry> przy użyciu klucza ramki.  
@@ -48,5 +49,5 @@ W tym przykładzie pokazano, jak animować <xref:System.Windows.Media.RectangleG
  <xref:System.Windows.Media.RectangleGeometry>  
  <xref:System.Windows.Media.RectangleGeometry.Rect%2A>  
  <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>  
- [Omówienie klucza poklatkowych](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Klucz ramki — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+ [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
+ [Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)

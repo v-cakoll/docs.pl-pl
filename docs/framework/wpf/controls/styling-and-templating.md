@@ -26,11 +26,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5bd85383cc27687974fbf3689793a60569a4f97a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c33739d0e753146ffdc8b825d88c6ca7ba63fa1a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styling-and-templating"></a>Tworzenie szablonów i stylów
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Style i tworzenia szablonów odwoływać się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają deweloperów i projektantów do tworzenia efektów wizualny i utworzyć spójny wygląd ich produktu. Chociaż deweloperów i projektantów lub można dostosować wygląd często na podstawie aplikacji przez aplikację, model strong style i tworzenia szablonów jest niezbędne w celu umożliwienia obsługi i udostępnianie wyglądu w ramach i między aplikacjami. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia modelu.  
@@ -209,6 +210,6 @@ ms.lasthandoff: 11/21/2017
  Jeśli tworzysz motyw dla Ciebie kontrolki niestandardowej, zobacz sekcję zewnętrznej biblioteki kontroli [informacje o formancie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Identyfikatory URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Porady: znajdowanie elementy wygenerowane ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
- [Znajdź elementy generowane DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)
+ [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Instrukcje: znajdowanie elementów generowanych przez ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Znajdowanie elementów wygenerowanych przez szablon DataTemplate](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)

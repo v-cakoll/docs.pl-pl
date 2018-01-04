@@ -17,19 +17,20 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 07757f28c52705ec4d5ea7ed6356c28cc68bbe86
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e6dfa0e6c772fb4623c9717c1085ab862df74ca5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overviews"></a>ListViewprzeglądy
 Tematy w tej sekcji opisano, jak używać <xref:System.Windows.Controls.ListView> formantu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [Omówienie widoku GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Przegląd szablonów i styl nagłówka kolumny w widoku GridView](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [GridView — style i szablony nagłówków kolumn — omówienie](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ListView>  
@@ -37,4 +38,4 @@ Tematy w tej sekcji opisano, jak używać <xref:System.Windows.Controls.ListView
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Tematy porad](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)

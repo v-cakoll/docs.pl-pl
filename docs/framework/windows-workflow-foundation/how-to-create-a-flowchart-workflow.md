@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3df93a876522ccdc001bc3f6bc8c780bc80dc21b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b7a8eab16b089597eecc03896f86827aae1ad85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-flowchart-workflow"></a>Porady: tworzenie przepływów pracy schematu blokowego
 Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. W tym temacie prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.Flowchart> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier.  
@@ -52,7 +53,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
   
 5.  Kliknij przycisk **utworzenia argumentu**.  
   
-6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję ** Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
+6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję  **Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
   
 7.  Kliknij przycisk **argumenty** w lewym dolnym rogu Projektant działań, aby zamknąć **argumenty** okienka.  
   
@@ -91,7 +92,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
     > [!TIP]
     >  Jeśli **przybornika** nie zostanie wyświetlone okno, wybierz **przybornika** z **widoku** menu.  
   
-3.  Przeciągnij **monitu** działania z **NumberGuessWorkflowActivities** sekcji **przybornika**, upuść ją poniżej **przypisać** działania od poprzedniego kroku, a następnie połącz **monitu** działanie **przypisać** działania. Istnieją trzy sposoby podłączenia dwóch działań. Pierwszym sposobem jest ich połączenia, ponieważ musisz porzucić **monitu** działania w przepływie pracy. Podczas przeciągania **monitu** działania w przepływie pracy, umieść ją nad **przypisać** działania i upuść ją na jeden z czterech trójkątów widocznych **monitu** działanie znajduje się nad **przypisać** działania. Drugi sposób polega na porzucić **monitu** działania do przepływu pracy w wybranej lokalizacji. Następnie, umieść kursor myszy nad **przypisać** działania i przeciągnij jedną prostokątów występujące w dół do **monitu** działania. Przeciągnij mysz, aby połączyć wiersz z **przypisać** działania połączy się z jednym z prostokątów z **monitu** działania, a następnie zwolnij przycisk myszy. Trzeci sposób jest bardzo podobny do pierwszy sposób, z wyjątkiem przeciąganie **monitu** działania z **przybornika**, przeciągnij ją z lokalizacji na powierzchni projektu przepływu pracy, Aktywuj ** Przypisz** działania i upuść ją na jedną trójkąty, które zostanie wyświetlone.  
+3.  Przeciągnij **monitu** działania z **NumberGuessWorkflowActivities** sekcji **przybornika**, upuść ją poniżej **przypisać** działania od poprzedniego kroku, a następnie połącz **monitu** działanie **przypisać** działania. Istnieją trzy sposoby podłączenia dwóch działań. Pierwszym sposobem jest ich połączenia, ponieważ musisz porzucić **monitu** działania w przepływie pracy. Podczas przeciągania **monitu** działania w przepływie pracy, umieść ją nad **przypisać** działania i upuść ją na jeden z czterech trójkątów widocznych **monitu** działanie znajduje się nad **przypisać** działania. Drugi sposób polega na porzucić **monitu** działania do przepływu pracy w wybranej lokalizacji. Następnie, umieść kursor myszy nad **przypisać** działania i przeciągnij jedną prostokątów występujące w dół do **monitu** działania. Przeciągnij mysz, aby połączyć wiersz z **przypisać** działania połączy się z jednym z prostokątów z **monitu** działania, a następnie zwolnij przycisk myszy. Trzeci sposób jest bardzo podobny do pierwszy sposób, z wyjątkiem przeciąganie **monitu** działania z **przybornika**, przeciągnij ją z lokalizacji na powierzchni projektu przepływu pracy, Aktywuj  **Przypisz** działania i upuść ją na jedną trójkąty, które zostanie wyświetlone.  
   
 4.  W **okna właściwości** dla **monitu** działania, typ `"EnterGuess"` z cudzysłowami do **Nazwa zakładki** pole wartości właściwości. Typ `Guess` do **wynik** właściwości wartość pola, a następnie wpisz następujące wyrażenie w **tekst** pole właściwości.  
   
@@ -106,7 +107,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
     > [!TIP]
     >  Jeśli **okna właściwości** nie jest wyświetlane, wybierz pozycję **okna właściwości** z **widoku** menu.  
   
-5.  Przeciągnij **przypisać** działania z **podstawowych** sekcji **przybornika** i podłącz go przy użyciu jednej z metod opisanych w poprzednim kroku, aby była poniżej ** Monituj** działania.  
+5.  Przeciągnij **przypisać** działania z **podstawowych** sekcji **przybornika** i podłącz go przy użyciu jednej z metod opisanych w poprzednim kroku, aby była poniżej  **Monituj** działania.  
   
 6.  Typ `Turns` do **do** pole i `Turns + 1` do **wprowadź wyrażenie C#** lub **wprowadź wyrażenia języka VB.** pole.  
   
@@ -131,7 +132,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
     Guess < Target  
     ```  
   
-10. Przeciągnij dwa **WriteLine** działania z **podstawowych** sekcji **przybornika** i upuść je, aby były one obok siebie poniżej dwa **elementu FlowDecision ** działań. Połączyć **True** akcji dolnego **elementu FlowDecision** działania do lewej **WriteLine** działania i **False** akcji po prawej stronie **WriteLine** działania.  
+10. Przeciągnij dwa **WriteLine** działania z **podstawowych** sekcji **przybornika** i upuść je, aby były one obok siebie poniżej dwa **elementu FlowDecision**  działań. Połączyć **True** akcji dolnego **elementu FlowDecision** działania do lewej **WriteLine** działania i **False** akcji po prawej stronie **WriteLine** działania.  
   
 11. Kliknij przycisk lewej **WriteLine** działanie, aby go zaznaczyć, a następnie wpisz następujące wyrażenie w **tekst** wartość właściwości pola w **okna właściwości**.  
   
@@ -162,8 +163,8 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Statements.Flowchart>  
  <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation programowania](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Projektowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Instrukcje: Tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

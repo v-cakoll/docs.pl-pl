@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 9a445d7e730ecb743d5e4086ec682b12a7bf3ff9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25aac1d4478279561cbcdda6c1cf912c3c3b2cde
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>Atrybuty CLR związane z XAML dla niestandardowych typów i bibliotek
 W tym temacie opisano typowe atrybutów środowiska uruchomieniowego (języka wspólnego CLR) języka, które są zdefiniowane przez usług .NET Framework XAML. Omówiono także inne atrybuty CLR zdefiniowanych w programie .NET Framework mających scenariusza związane z XAML dla aplikacji do zestawów lub typów. Przypisywanie zestawy, typów albo elementów członkowskich z tymi atrybutami CLR dostarcza dane systemowe typu XAML powiązane z typami. Informacje są dostępne wszelkie odbiorcy XAML, który korzysta z usług .NET Framework XAML do przetwarzania strumień węzłów XAML bezpośrednio lub za pośrednictwem dedykowanej czytników XAML i zapisywania XAML.  

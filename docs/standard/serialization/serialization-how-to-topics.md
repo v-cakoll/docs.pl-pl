@@ -13,32 +13,35 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75915c92390be1698f5a972901c1defc8003e096
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 462812070446e9013c2cf2c4d3e2f15831e84e70
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-how-to-topics"></a>Serializacja — tematy porad
 Poniższa lista zawiera łącza do tematów dotyczące wykonywania określonych zadań znajdującego się w dokumentacji koncepcyjnego dla serializacji.  
   
--   [Porady: szeregowania obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+-   [Instrukcje: Serializacja obiektu](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
   
--   [Porady: deserializacji obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
+-   [Instrukcje: Deserializacja obiektu](../../../docs/standard/serialization/how-to-deserialize-an-object.md)  
   
--   [Porady: Użyj narzędzia definicji schematu XML do generowania klasy i dokumentach schematów XML.](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
+-   [Instrukcje: Generowanie klas i dokumentów schematu XML przy użyciu narzędzia definicji schematu XML](../../../docs/standard/serialization/xml-schema-def-tool-gen.md)  
   
--   [Porady: Określ nazwę elementu alternatywnego strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
+-   [Instrukcje: Określanie alternatywnej nazwy elementu dla strumienia XML](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
   
--   [Porady: kontrolowanie serializacji klas pochodnych](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
+-   [Instrukcje: Kontrola serializacji klas pochodnych](../../../docs/standard/serialization/how-to-control-serialization-of-derived-classes.md)  
   
--   [Porady: kwalifikują się do elementu XML i nazwach atrybutów XML](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
+-   [Instrukcje: Kwalifikowanie elementu XML i nazw atrybutów XML](../../../docs/standard/serialization/how-to-qualify-xml-element-and-xml-attribute-names.md)  
   
--   [Porady: szeregowania obiektu jako strumień SOAP zakodowane w formacie XML](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
+-   [Instrukcje: Serializacja obiektu jako kodowanego strumienia XML protokołu SOAP](../../../docs/standard/serialization/how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
   
--   [Porady: Zastąp serializacji XML użyciu zakodowanego protokołu SOAP](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
+-   [Instrukcje: Przesłanianie zakodowanej serializacji XML protokołu SOAP](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)  
   
--   [Porady: fragmentu serializacji danych](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
+-   [Instrukcje: Dzielenie danych serializowanych na fragmenty](../../../docs/standard/serialization/how-to-chunk-serialized-data.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Serializacja](../../../docs/standard/serialization/index.md)

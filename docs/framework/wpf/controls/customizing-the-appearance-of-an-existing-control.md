@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5455007e407bf4320355aebfd043bfc056d6d56
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 0019b739c794cbffa62b49749371c2a19f752267
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>Dostosowywanie wyglądu istniejącego formantu przez stworzenie ControlTemplate
 <a name="introduction"></a>A <xref:System.Windows.Controls.ControlTemplate> określa visual strukturę i zachowanie visual formantu. Można dostosować wygląd formantu, zapewniając it nowy <xref:System.Windows.Controls.ControlTemplate>. Po utworzeniu <xref:System.Windows.Controls.ControlTemplate>, Zastąp wygląd formant bez zmieniania jego funkcjonalność. Na przykład możesz wprowadzić przycisków w aplikacji round zamiast domyślnego kwadratu, ale nadal zgłosi przycisku <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń.  
@@ -272,4 +273,4 @@ Używa szablonu kontrolki niestandardowej w stan naciśnięcia przycisku
  [!code-xaml[VSMButtonTemplate#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

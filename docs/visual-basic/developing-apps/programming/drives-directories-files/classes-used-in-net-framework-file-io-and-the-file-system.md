@@ -12,16 +12,16 @@ ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
 caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 772d3e59dbc84f77dc6f94e7cc60a89c7888551a
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 08fd340e895376b43f95a767992ef0d3c0c819c6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>Klasy stosowane w .NET Framework File I/O i systemie plików (Visual Basic)
 W poniższej tabeli wymieniono klasy powszechnie używane dla .NET Framework plik we/wy, podzielić na klasy używany do odczytu i zapisu do strumieni, klasy służące do tworzenia strumieni i klasy We/Wy plików.  
   
- Aby wprowadzić [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] dokumentacji i Znajdź wyczerpujący listę, zobacz [Przegląd biblioteki klas](../../../../../docs/standard/class-library-overview.md).  
+ Aby wprowadzić [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] dokumentacji i Znajdź wyczerpujący listę, zobacz [Przegląd biblioteki klas](../../../../standard/class-library-overview.md).  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>Klasy podstawowe we/wy dla plików, dysków i katalogów  
  W poniższej tabeli wymieniono i opisano klasy głównym plik we/wy.  
@@ -64,7 +64,7 @@ W poniższej tabeli wymieniono klasy powszechnie używane dla .NET Framework pli
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|Zapisuje znaków `String`. Dane wyjściowe może być strumień w kodowanie lub `String`.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie strumieni](../../../../../docs/standard/io/composing-streams.md)  
- [We/Wy plików i strumieni](https://msdn.microsoft.com/library/k3352a4t)  
- [Asynchroniczne We/Wy pliku](https://msdn.microsoft.com/library/kztecsys)  
+ [Tworzenie strumieni](../../../../standard/io/composing-streams.md)  
+ [We/Wy plików i strumieni](../../../../standard/io/index.md)  
+ [Asynchroniczne operacje We/Wy pliku](../../../../standard/io/asynchronous-file-i-o.md)  
  [Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)

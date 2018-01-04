@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b48b5d78ce3136146f7ad17f859a489b5556a000
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a246a3297d212eabc31bf2ac9d000aeb56329d09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Struktura wejścia ze zdolnością do współpracy Windows Forms i WPF
 Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] musi mieć obu tych technologii przetwarzania wejściowych odpowiedniej klawiatury. W tym temacie opisano, jak te technologie zaimplementować klawiatury i przetwarzania umożliwia sprawne współdziałanie w aplikacjach hybrydowego komunikatów.  
@@ -143,6 +144,6 @@ Współdziałanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla
  <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>  
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Wskazówki: Obsługa formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
- [Wskazówki: Hostowanie formantu złożonego WPF w formularzach systemu Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+ [Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)  
+ [Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
+ [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)

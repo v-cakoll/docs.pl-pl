@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 13d3077b1536d4e96cb9e4f1f09313dd793a906e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 780af689f6aff86e2e96738c356df4a81128f4ef
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="ordered-node-retrieval-by-index"></a>Uporządkowane pobierania węzła według indeksu
 Sieci World Wide Web konsorcjum W3C XML modelu DOM (Document Object) opisano również wstawienia, który ma możliwość obsługi uporządkowaną listę węzłów, w przeciwieństwie do zestawu nieuporządkowaną obsługiwane przez **XmlNamedNodeMap**. Wstawienia programu Microsoft .NET Framework jest nazywany **XmlNodeList**. Metody i właściwości, które zwracają **XmlNodeList** są:  
@@ -102,4 +105,4 @@ End While
  Aby uzyskać więcej informacji na temat metod i właściwości dostępnych na **XmlNodeList**, zobacz <xref:System.Xml.XmlNodeList>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

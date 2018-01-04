@@ -17,33 +17,34 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6e3c52b7deaa27862fe8dedc0b3c91a96597461f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 42a57e029c642aa01cd290db0971a70f27e25739
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-graphics-how-to-topics"></a>Grafika 3-D Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] grafiki w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Utwórz 3-sceny](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [Dotyczą rysunku 3-modelu](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [Zastosuj materiały do przodu i z tyłu 3-obiekt](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [Stosowanie materiałów emisji do obiektu 3-w](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [Przekształć skali 3-modelu](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [Wiele przekształcane modelu 3-w](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [Animacja tłumaczeń 3-w](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [Animowanie obrót 3-w przy użyciu Scenorys](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Animowanie obrót 3-w przy użyciu Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [Animowanie obrót 3-w przy użyciu Quaternions](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [Animowanie obrót 3-w przy użyciu klucza ramek (Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [Animowanie obrót 3-w przy użyciu klucza ramek (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [Animowanie pozycji kamery i kierunek scenę 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [Animowanie pozycji kamery i kierunek za pomocą klucza ramek](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [Animowania właściwości materiału w 3-sceny](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Kliknij przycisk Test w Viewport3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Struktur Point4D testu równości i nierówności](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [Tworzenie sceny 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
+ [Stosowanie rysowania do modelu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [Stosowanie materiału na przedniej i tylnej stronie obiektu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [Stosowanie materiału emisyjnego dla obiektu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [Przekształcanie skali modelu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
+ [Stosowanie wielu przekształceń do modelu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [Animowanie przesunięcia 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
+ [Animowanie obrotu 3D przy użyciu scenorysów](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Animowanie obrotu 3D przy użyciu elementu Rotation3DAnimation](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [Animowanie obrotu 3D przy użyciu kwaternionów](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [Animowanie obrotu 3D przy użyciu klatek kluczowych (Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [Animowanie obrotu 3D przy użyciu klatek kluczowych (QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [Animowanie położenia kamery i kierunku w scenie 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [Animowanie położenia kamery i kierunku z użyciem klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [Animowanie właściwości materiału w scenie 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Przeprowadzanie testu trafienia w elemencie Viewport3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
+ [Testowanie struktur Point4D pod kątem równości i nierówności](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -55,4 +56,4 @@ Tematy w tej sekcji przedstawiono sposób korzystania [!INCLUDE[TLA#tla_3d](../.
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

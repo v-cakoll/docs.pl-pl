@@ -18,11 +18,14 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ab8f86b66e92ea250fbe20e8bcb27e6706302db4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a0d9f5fd32b5610e3d7b05455c7bd3c55b5b77e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="serialization-in-net"></a>Serializacja w .NET
 Serializacja jest proces konwersji stan obiektu do formularza, które mogą być utrwalone lub transportowane. Uzupełnienie serializacji jest deserializacji, które służy do obiektu strumienia. Razem te procesy umożliwiają danych można łatwo przechowywane i przekazywane.  
@@ -34,13 +37,13 @@ Usług .NET features dwie technologie serializacji:
 -   Serializacji XML serializuje tylko właściwości publiczne i pola i nie zostaną zachowane wierności typu. Jest to przydatne, jeśli chcesz dostarczyć lub użyć danych bez ograniczania aplikacji korzystającej z danych. Ponieważ kod XML jest otwarty standard, jest atrakcyjny wybór udostępnianie danych w sieci Web. Podobnie protokołu SOAP jest otwarty standard, co pozwala na wybór atrakcyjny.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
-[Serializacja — tematy porad](../../../docs/standard/serialization/serialization-how-to-topics.md)  
+[Serializacja — instrukcje](../../../docs/standard/serialization/serialization-how-to-topics.md)  
 Zawiera także łącza do tematów instrukcje zawarte w tej sekcji.
   
 [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
 Opisuje mechanizm serializacji binarnej, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.
 
-[XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+[Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
 Opisuje mechanizm serializacji XML i protokołu SOAP, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.
 
 [Narzędzia do serializacji](../../../docs/standard/serialization/serialization-tools.md)  

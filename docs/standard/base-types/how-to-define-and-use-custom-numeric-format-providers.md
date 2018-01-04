@@ -25,11 +25,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0e44a909eb92f0d9dfa21980a918a2d370dcf427
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką gamę kontrolę nad reprezentację ciągu wartości liczbowych. Format wartości liczbowych dostosowywania obsługuje następujące funkcje:  

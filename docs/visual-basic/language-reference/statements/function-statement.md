@@ -35,11 +35,11 @@ ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
 caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 667ab7ceb54e1f339fd645883ca2686c0cbb72b0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 52e9210f9e715b6055e6ed199ef1aa4b919c6dd6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-statement-visual-basic"></a>Function — Instrukcja (Visual Basic)
 Deklaruje nazwę, parametry i kod, który definiuje `Function` procedury.  
@@ -65,13 +65,13 @@ End Function
   
      Opcjonalny. Może to być jedna z następujących czynności:  
   
-    -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
@@ -81,11 +81,11 @@ End Function
   
      Opcjonalny. Może to być jedna z następujących czynności:  
   
-    -   [Przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md)  
+    -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
-    -   [Zastąpienia](../../../visual-basic/language-reference/modifiers/overrides.md)  
+    -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
-    -   [Możliwym do zastąpienia](../../../visual-basic/language-reference/modifiers/overridable.md)  
+    -   [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
     -   [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
@@ -239,7 +239,7 @@ End Function
   
  Może być zwracany typ funkcji iteracyjnej <xref:System.Collections.IEnumerable>, <xref:System.Collections.Generic.IEnumerable%601>, <xref:System.Collections.IEnumerator>, lub <xref:System.Collections.Generic.IEnumerator%601>.  
   
- Aby uzyskać więcej informacji, zobacz [Iteratory](http://msdn.microsoft.com/library/f45331db-d595-46ec-9142-551d3d1eb1a7).  
+ Aby uzyskać więcej informacji, zobacz [Iteratory](../../programming-guide/concepts/iterators.md).  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto `Function` instrukcji, aby zadeklarować nazwę, parametry i kod, który tworzą treści `Function` procedury. `ParamArray` Modyfikator włącza funkcję zaakceptować zmienną liczbę argumentów.  
@@ -259,14 +259,14 @@ End Function
  [!code-vb[csAsyncMethod#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/VisualBasic/function-statement_5.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sub — instrukcja](sub-statement.md)  
+ [Sub, instrukcja](sub-statement.md)  
  [Procedury funkcji](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)  
- [Listy parametrów](parameter-list.md)  
- [Dim — instrukcja](dim-statement.md)  
- [Call — instrukcja](call-statement.md)  
+ [Lista parametrów](parameter-list.md)  
+ [Dim, instrukcja](dim-statement.md)  
+ [Call, instrukcja](call-statement.md)  
  [Z](of-clause.md)  
  [Tablice parametrów](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)  
- [Porady: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
- [Procedury rozwiązywania problemów](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
+ [Instrukcje: używanie klasy ogólnej](../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)  
+ [Rozwiązywanie problemów z procedurami](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)  
  [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Function — wyrażenie](../../../visual-basic/language-reference/operators/function-expression.md)
+ [Function, wyrażenie](../../../visual-basic/language-reference/operators/function-expression.md)

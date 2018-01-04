@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5391c48720e68a8a7e6e0fb7735252d00025adc6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80f794be15eae33ca4e28dc0cfe04872f63230b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>Porady: wyświetlanie łączy stylu sieci Web za pomocą formantu RichTextBox formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant może wyświetlać linki sieci Web jako kolorowy i podkreślony. Można napisać kod, który powoduje otwarcie okna przeglądarki przedstawiający witryny sieci Web określonego w tekst łącza, gdy łącze zostanie kliknięte.  
@@ -130,5 +131,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.RichTextBox> formant może
  <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>  
  <xref:System.Windows.Forms.RichTextBox.LinkClicked>  
  <xref:System.Windows.Forms.RichTextBox>  
- [RichTextBox — formant](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [RichTextBox, kontrolka](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

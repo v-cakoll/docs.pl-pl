@@ -15,28 +15,29 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd3771e0fcbf83b00f52d78a5c63793dae116e4e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7fea4c74fc837181e1b0a007fb83ddce1c4cd52a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="window-management-how-to-topics"></a>Okno zarządzania — tematy porad
 W następujących tematach opisano sposób zarządzania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Automatycznie rozmiar okna dopasowana do jego zawartości.](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [Pobierz wszystkie okna w aplikacji](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [Pobieranie i ustawianie w głównym oknie aplikacji](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [Otwórz okno dialogowe](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [Otwórz okno komunikatu](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [Otwórz okno](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [Zwraca wynik — okno dialogowe](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [Automatyczne dopasowywanie rozmiaru okna do jego zawartości](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [Pobieranie wszystkich okien w aplikacji](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
+  [Pobieranie i ustawianie okna głównego aplikacji](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
+  [Otwieranie okna dialogowego](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
+  [Otwieranie okna komunikatu](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
+  [Otwieranie okna](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
+  [Zwracanie wyniku okna dialogowego](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
   
- [Omówienie nawigacji](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
   
  [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7bd296fb8a761527e132aecfed9310208f56222
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f31f0b247c882b8ccba84930f7e21f5eea088a35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>Porady: ustawianie i zwracanie wartości liczbowych za pomocą formantu NumericUpDown formularzy systemu Windows
 Wartość liczbowa formularzy systemu Windows <xref:System.Windows.Forms.NumericUpDown> kontroli jest określany przez jego <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwości. Testy warunkowe wartości formantu można napisać tak jak w przypadku innych właściwości. Raz <xref:System.Windows.Forms.NumericUpDown.Value%2A> właściwość jest ustawiona, możesz je dostosować bezpośrednio przez pisanie kodu w celu wykonania operacji na nim lub można wywołać <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> i <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> metody.  
@@ -105,5 +106,5 @@ Wartość liczbowa formularzy systemu Windows <xref:System.Windows.Forms.Numeric
  <xref:System.Windows.Forms.NumericUpDown.Increment%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.UpButton%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.NumericUpDown.DownButton%2A?displayProperty=nameWithType>  
- [Numericupdown — formant](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
- [Informacje o formancie NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)
+ [NumericUpDown, kontrolka](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md)  
+ [NumericUpDown, kontrolka — omówienie](../../../../docs/framework/winforms/controls/numericupdown-control-overview-windows-forms.md)

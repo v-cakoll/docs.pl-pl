@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c136bd5bdacec04a011f728694550fb66ae6d897
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68bfe46462a374899a0782903804edea0e93f161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-the-input-mask"></a>Porady: ustawienie maski wprowadzania
 Kontrolki pola tekstowego maskowanego jest rozszerzony polu tekstowym obsługująca składni deklaratywnej akceptowanie lub odrzucanie danych wejściowych użytkownika. Przez ustawienie właściwości maski, można określić danych wejściowych użytkownika dopuszczalny bez pisania wszelka logika niestandardowego sprawdzania poprawności w aplikacji. Aby uzyskać więcej informacji, zobacz sekcję uwag <xref:System.Windows.Forms.MaskedTextBox> klasy.  
@@ -72,4 +73,4 @@ Kontrolki pola tekstowego maskowanego jest rozszerzony polu tekstowym obsługuj�
      Maska została wprowadzona w **maski** właściwości w **właściwości** okna.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Praca z formantem MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+ [Przewodnik: praca z kontrolką MaskedTextBox](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)

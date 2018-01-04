@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7353f3ab4513d8331b1d38cb01ad16c7d3cde165
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 44d79fb9d6ca2712c470354999b4795408044166
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-handlers-overview-windows-forms"></a>Przegląd obsługi zdarzeń (formularze systemu Windows)
 Program obsługi zdarzeń jest to metoda, która jest powiązany ze zdarzeniem. Gdy zdarzenie jest zgłaszane, wykonywany jest kod wewnątrz obsługi zdarzeń. Każdy program obsługi zdarzeń zawiera dwa parametry, które umożliwiają obsługę zdarzenia poprawnie. W poniższym przykładzie przedstawiono program obsługi zdarzeń dla <xref:System.Windows.Forms.Button> formantu <xref:System.Windows.Forms.Control.Click> zdarzeń.  
@@ -59,5 +60,5 @@ private:
  Umożliwia także tej procedury obsługi zdarzeń do obsługi tego samego zdarzenia dla inne formanty. Na przykład, jeśli istnieje grupa <xref:System.Windows.Forms.RadioButton> formantów w formularzu, można utworzyć jednym programem obsługi zdarzeń dla <xref:System.Windows.Forms.Control.Click> zdarzeń i każdej kontrolki <xref:System.Windows.Forms.Control.Click> zdarzenia powiązane z obsługą jednego zdarzenia. Aby uzyskać więcej informacji, zobacz [porady: łączenie wielu zdarzeń pojedynczego obsługi zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
  [Przegląd zdarzeń](../../../docs/framework/winforms/events-overview-windows-forms.md)

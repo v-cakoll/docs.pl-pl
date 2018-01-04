@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6db621912e76d24b05c8dcdca7f1d3f4e62c2838
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f29fb5fc4f873431471cd1c037446a5157d5f07c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>Porady: tworzenie złożonego interfejsu użytkownika z formularzami Windows
 W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do tego używanego w programie Microsoft Outlook z **folderu** listy **wiadomości** okienku i **wwersjizapoznawczej** okienka. To rozmieszczenie odbywa się głównie za pośrednictwem dokowanie formantów w formularzu.  
@@ -188,5 +189,5 @@ W poniższej procedurze utworzysz złożonego interfejsu użytkownika podobny do
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer — formant](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
- [Porady: Tworzenie złożonego interfejsu użytkownika z formularzami systemu Windows przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+ [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)

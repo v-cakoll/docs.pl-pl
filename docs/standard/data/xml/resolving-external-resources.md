@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 824a35ee5d4ecafc45167ff3f4bc89802af4ed96
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c711cbd7b563bf647d7b4fb90873a396ddfaefdf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="resolving-external-resources"></a>Rozpoznawanie zewnętrznych zasobów
 **Element XmlResolver** właściwość **XmlDocument** jest używany przez **XmlDocument** klasy lokalizowanie zasobów, które nie są wbudowane w danych XML, takie jak typ dokumentu zewnętrznego definicje (elementów DTD), jednostki i schematów. Te elementy mogą znajdować się w sieci lub na lokalnym dysku i zidentyfikować przez zasób identyfikator URI (Uniform). Dzięki temu **XmlDocument** rozwiązywać **EntityReference** węzłów, które znajdują się w dokumencie i walidacji dokumentu zgodnie z zewnętrzna definicja DTD lub schemat.  
@@ -60,4 +63,4 @@ ms.lasthandoff: 10/18/2017
  Aby uzyskać więcej informacji, zobacz sekcję uwag <xref:System.Xml.XmlResolver> strony odwołania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

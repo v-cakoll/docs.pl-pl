@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ebe0a47d38a2cfda2a7d150b4a3886d9f63ee190
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f540ad92c69219a2c22763403ce4ecc734c8e5cb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-data-by-using-gridviewrowpresenter"></a>Jak wyświetlić dane za pomocą GridViewRowPresenter
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.GridViewRowPresenter> i <xref:System.Windows.Controls.GridViewHeaderRowPresenter> obiektów do wyświetlenia danych w kolumnach.  
@@ -34,4 +35,4 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Controls.GridView
  <xref:System.Windows.Controls.GridViewHeaderRowPresenter>  
  <xref:System.Windows.Controls.GridViewRowPresenter>  
  <xref:System.Windows.Controls.GridViewColumnCollection>  
- [Omówienie widoku GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)
+ [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)

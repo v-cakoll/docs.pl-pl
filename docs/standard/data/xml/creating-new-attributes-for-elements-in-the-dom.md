@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6970ffc38e900c9b47c58c8ae4b81b9551f5589b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4f3ae0c3db65fe7bda1bcc5bd247fea80a2a9c4e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>Tworzenie nowych atrybutów dla elementów w modelu DOM
 Tworzenie nowych atrybutów różni się od tworzenia innych typów węzła, ponieważ atrybuty nie są węzłami, ale są właściwości węzeł elementu i są zawarte w **XmlAttributeCollection** skojarzone z elementem. Istnieje wiele sposobów tworzenia atrybutu i dołączenie go do elementu:  
@@ -111,7 +114,7 @@ doc.DocumentElement.SetAttributeNode(attr)
 doc.DocumentElement.SetAttributeNode(attr);  
 ```  
   
- **Dane wyjściowe**  
+ **Output**  
   
 ```xml  
 <book genre="novel" ISBN="1-861001-57-5" publisher="WorldWide Publishing">  
@@ -132,4 +135,4 @@ doc.DocumentElement.SetAttributeNode(attr);
  Wartość węzła atrybutu staje się węzły podrzędne. Istnieją tylko dwa typy węzłów prawidłowy element podrzędny: **XmlText** węzłów i **XmlEntityReference** węzłów. Są to węzłów podrzędnych w tym sensie, że metod, takich jak **FirstChild** i **LastChild** ich przetworzyć jako węzły podrzędne. Podczas próby usunięcia atrybuty lub atrybut węzły podrzędne, ważne jest tej różnicy atrybutu o węzłów podrzędnych. Aby uzyskać więcej informacji, zobacz [usuwanie atrybutów z węzłem elementu w modelu DOM](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

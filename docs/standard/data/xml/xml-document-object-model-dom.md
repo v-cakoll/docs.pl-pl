@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ff91e929876ceec8512e962b88795b6a8a29f3d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: af9473af6a315feb6b1f0a741525cbf42dd32d1d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-document-object-model-dom"></a>XML Document Object Model (DOM)
 Klasa XML modelu DOM (Document Object) ma reprezentacji w pamięci dokumentu XML. Modelu DOM umożliwia programowo odczytu, modyfikowania i modyfikowanie dokumentu XML. **XmlReader** klasy odczytuje również XML; jednak zapewnia dostęp niebuforowanym, tylko do przodu, tylko do odczytu. Oznacza to, że nie ma żadnych funkcji do edytowania wartości atrybutu lub zawartości elementu lub możliwość wstawiania i usuwania węzłów z **XmlReader**. Edytowanie jest podstawową funkcją modelu DOM. Jest typowe i sposób strukturalnych, że dane XML są reprezentowane w pamięci, mimo że rzeczywiste dane XML są przechowywane w sposób liniowy w pliku lub odbierane z innego obiektu. Poniżej przedstawiono dane XML.  
@@ -85,4 +88,4 @@ Struktura dokumentu XML
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy węzłów XML](../../../../docs/standard/data/xml/types-of-xml-nodes.md)  
- [Mapowanie hierarchii obiektów do danych XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)
+ [Mapowanie hierarchii obiektów na dane XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md)

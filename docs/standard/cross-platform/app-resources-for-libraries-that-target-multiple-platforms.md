@@ -22,11 +22,14 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 74cd3df645c2490bcf98533ca8846ddfb742f67f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7006c07d32a9f0adbafce1c83c1b29842f634a9a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform
 Można użyć programu .NET Framework [przenośnej biblioteki klas](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md) projektu typu, aby upewnić się, że zasoby w bibliotekach klas jest możliwy z wielu platform. Ten typ projektu jest dostępny w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)] i elementów docelowych podzestaw przenośny bibliotece klas programu .NET Framework. Przy użyciu [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] gwarantuje, że biblioteki są dostępne z aplikacje komputerowe, aplikacje Silverlight, aplikacje Windows Phone i [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  

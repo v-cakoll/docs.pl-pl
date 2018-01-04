@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 198ec8b8cb0b27e009f01f8e60a47e8086a7dbc7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 570a065d3f28befe8db4887ff908c3bd60a639a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="easing-functions"></a>Zwalnianie funkcji
 Funkcji sterowania tempem zmian umożliwiają stosowanie niestandardowych matematycznymi do animacji. Na przykład możesz obiektu realistycznie Odbijanie lub zachowują się tak, jakby była na źródła. Można użyć do przybliżonego określenia tych skutków ramki klucza lub nawet z lub do/przez animacje, ale zajmuje dużo pracy, a następnie animacji będzie dokładności mniejszej niż przy użyciu formuły matematycznych.  

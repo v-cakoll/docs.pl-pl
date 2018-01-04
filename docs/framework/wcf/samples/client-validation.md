@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 340af20c44b8fde3fdff92d07837c3cc04ca517d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f187e6fb64fd3bbf08b3d0b92917ffc640b02186
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-validation"></a>Walidacja klienta
 Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie i konfigurowanie typów serwera proxy klienta. Jeśli usługa nie jest zaufany, aplikacje klienckie należy zweryfikować, że metadane odpowiada aplikacji klienckiej zasad dotyczących zabezpieczeń, transakcje, typ kontraktu usługi i tak dalej. W poniższym przykładzie pokazano, jak napisać klienta zachowania punktu końcowego, która weryfikuje punktu końcowego usługi, aby upewnić się, że tego punktu końcowego usługi jest bezpiecznie korzystać.  
@@ -74,4 +75,4 @@ Usługi często Publikowanie metadanych, aby włączyć automatyczne generowanie
     >  Ten skrypt nie powoduje usunięcia usług certyfikatów na komputerze klienckim, podczas uruchamiania na komputerach w przykładzie. Jeśli uruchomiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przykłady, które korzystają z certyfikatów na komputerach, należy wyczyścić certyfikaty usługi, które zostały zainstalowane w CurrentUser - TrustedPeople magazynu. Aby to zrobić, użyj następującego polecenia: `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)
+ [Używanie metadanych](../../../../docs/framework/wcf/feature-details/using-metadata.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a527824ba11928d59bc700f253c5a4d77056abf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 42298bc8e3101b03f6c3e03fec453b72cd959efb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="asynchronous-programming-patterns"></a>Wzorce programowania asynchronicznego
 
@@ -82,7 +85,7 @@ Kompleksowe omówienie NACIŚNIJ APM i EAP, zobacz łączy znajdujących się w 
 | ----- | ----------- |
 | [Model programowania asynchronicznego (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) | W tym artykule opisano model starszej wersji, który używa <xref:System.IAsyncResult> interfejsu, aby zapewnić zachowanie asynchronicznego. Ten model nie jest już zalecany dla nowych aplikacji. |
 | [Asynchroniczny wzorzec oparty na zdarzeniach (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) | W tym artykule opisano oparty na zdarzeniach modelu starszych zapewniające zachowanie asynchroniczne. Ten model nie jest już zalecany dla nowych aplikacji. |
-| [Asynchroniczny wzorzec oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | W tym artykule opisano nowy asynchroniczny wzorzec oparty na <xref:System.Threading.Tasks> przestrzeni nazw. Ten model jest zalecane podejście do programowania asynchronicznego w programie .NET Framework 4 i nowsze wersje. |
+| [Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) | W tym artykule opisano nowy asynchroniczny wzorzec oparty na <xref:System.Threading.Tasks> przestrzeni nazw. Ten model jest zalecane podejście do programowania asynchronicznego w programie .NET Framework 4 i nowsze wersje. |
 
 ## <a name="see-also"></a>Zobacz także
 

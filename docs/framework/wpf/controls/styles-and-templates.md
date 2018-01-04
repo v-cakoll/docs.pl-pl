@@ -17,18 +17,19 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2bc4dc0721ad0fb756a5449d0af65fd2aae22381
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37f4084b5874c49ed1de8d215d53767ab5a21c5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="styles-and-templates"></a>— Style i szablony
 Style Windows Presentation Foundation (WPF) oraz tworzenia szablonów odnoszą się do zestawu funkcji (style, szablony, wyzwalaczy i scenorys), które umożliwiają aplikacji, dokumentu lub Projektant interfejsu użytkownika do tworzenia aplikacji wizualny oraz do Zapewnij standaryzację na konkretnego wyglądu ich produktu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [Porady: znajdowanie elementy wygenerowane ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [Instrukcje: znajdowanie elementów generowanych przez ControlTemplate](../../../../docs/framework/wpf/controls/how-to-find-controltemplate-generated-elements.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Style>  
@@ -37,5 +38,5 @@ Style Windows Presentation Foundation (WPF) oraz tworzenia szablonów odnoszą s
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Zaawansowane](../../../../docs/framework/wpf/advanced/index.md)  
-  [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md)  
-  [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+  [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)  
+  [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

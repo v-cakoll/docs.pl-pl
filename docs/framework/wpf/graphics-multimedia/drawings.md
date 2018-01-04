@@ -23,22 +23,23 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e37c830e8f5290584db8320b041e05ac74839b78
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45207de8b2e98dd1bd13879f8bbee1fdaf80aa24
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drawings"></a>Rysunki
 <xref:System.Windows.Media.Drawing>obiekty służą do wydajnie Rysowanie kształtów, obrazy i tekst. Rysunki są używane podczas malowania <xref:System.Windows.Media.DrawingBrush> lub programowania z <xref:System.Windows.Media.Visual> obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Rysowanie obiekty — omówienie](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+ [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Drawing>  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [Przegląd renderowania grafiki WPF](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [Kształty i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Renderowanie grafiki WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

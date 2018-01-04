@@ -18,11 +18,11 @@ ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
 caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4df7a80907b29a5eea79992f46c46603cbe2cc81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f35a850a262e96762b4ada3fdff1f14634f77317
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>Wskazówki: ustalanie, gdzie My.Application.Log zapisuje informacje (Visual Basic)
 `My.Application.Log` Obiektu można zapisać informacji do kilku odbiorniki dzienników. Odbiorniki logu są konfigurowane przez plik konfiguracji komputera i może zostać zastąpiona przez pliku konfiguracji aplikacji. W tym temacie opisano ustawienia domyślne i jak określić ustawienia aplikacji.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 11/21/2017
   
     -   A <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje do pliku dziennika, zgodnie z opisem w wprowadzenie.  
   
-    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje informacje w dzienniku zdarzeń komputera określona przez `initializeData` parametru. Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w programie .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299).  
+    -   A <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> odbiornika zapisuje informacje w dzienniku zdarzeń komputera określona przez `initializeData` parametru. Aby wyświetlić dziennik zdarzeń, można użyć **Eksploratora serwera** lub **Podgląd zdarzeń systemu Windows**. Aby uzyskać więcej informacji, zobacz [zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md).  
   
     -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> i <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> odbiorników zapisać do pliku określonego w `initializeData` parametru.  
   
@@ -79,8 +79,8 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics>  
  [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)  
- [Porady: wyjątki rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
- [Porady: zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
- [Wskazówki: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [Zdarzenia ETW w programie .NET Framework](http://msdn.microsoft.com/library/d186276f-6afb-4dfd-bf3c-4251edc2c299)  
- [Rozwiązywanie problemów: Odbiorniki logu](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
+ [Instrukcje: wyjątki dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)  
+ [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [Zdarzenia ETW w programie .NET Framework](../../../../framework/performance/etw-events.md)  
+ [Rozwiązywanie problemów: odbiorcy dzienników](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)

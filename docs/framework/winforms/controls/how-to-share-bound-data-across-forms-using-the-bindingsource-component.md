@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 95fd7583e6d86aa84c53f6cee7056f1d631e948b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de9dcdf39aa00a1a1cad694010ff9bbe7a6a47d2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>Porady: udostępnianie danych powiązanych w wielu formularzach za pomocą składnika BindingSource
 Dane można łatwo udostępniać wielu formularzach za pomocą <xref:System.Windows.Forms.BindingSource> składnika. Na przykład można wyświetlić jeden formularz tylko do odczytu, który znajduje się podsumowanie danych źródła danych oraz innej formy można edytować, który zawiera szczegółowe informacje dotyczące aktualnie wybranego elementu w źródle danych. W tym przykładzie pokazano, w tym scenariuszu.  
@@ -47,6 +48,6 @@ Dane można łatwo udostępniać wielu formularzach za pomocą <xref:System.Wind
  Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
- [BindingSource — składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Powiązanie danych formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Porady: obsługa błędów i wyjątków występujących za powodu powiązania danych](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+ [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Instrukcje: obsługa błędów i wyjątków występujących za powodu powiązania danych](../../../../docs/framework/winforms/controls/how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 42ad427fc2c1175c0d9b333aa418aea039f11a35
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 83022bd27379e1ee34197af4897a5c809f495f48
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="foreground-and-background-threads"></a>Wątki pierwszego planu i tła
 Zarządzane wątek jest wątku w tle lub wątku pierwszego planu. Wątki w tle są takie same jak wątki pierwszoplanowe z jednym wyjątkiem: wątku w tle nie przechowuje zarządzanego środowiska wykonawczego uruchomiona. Po w procesie zarządzanych (gdzie plik .exe jest zestaw zarządzany) zostały zatrzymane wszystkie wątki pierwszego planu, system zatrzymuje wszystkie wątki w tle i zamyka.  

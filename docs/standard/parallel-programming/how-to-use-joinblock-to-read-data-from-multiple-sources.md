@@ -20,11 +20,14 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 41445e4874b94809840ecf9ebda6f27ccc955c9b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: fa5f531257c0593f615e4620b56b2ef581ac143c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł
 W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasę, aby wykonać operację, gdy dane są dostępne z wielu źródeł. On również pokazano, jak w trybie niezachłanne włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.  
@@ -55,4 +58,4 @@ W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.J
  Użycie złączenia niezachłanne może również pomóc zapobiegać zakleszczenie w aplikacji. W aplikacji *zakleszczenie* występuje, gdy dwie lub więcej procesów każdego przechowywania zasobu i wzajemnie poczekaj, aż inny proces zwolnić innego zasobu. Należy wziąć pod uwagę aplikacji, który definiuje dwa <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> obiektów. Oba obiekty każdego odczytywać dane z dwóch bloków udostępnionego źródła. W trybie intensywnie Jeśli jeden blok sprzężenia odczytuje z pierwszego źródła, a w drugim bloku sprzężenia odczytuje z drugie źródło aplikacji może do zakleszczenia, ponieważ zarówno bloki sprzężenia wzajemnie oczekiwania dla pozostałych zwolnić jego zasobów. W trybie niezachłanne każdy blok sprzężenia odczyty źródła tylko wtedy, gdy wszystkie dane są dostępne i w związku z tym ryzyko zakleszczenia wyeliminowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

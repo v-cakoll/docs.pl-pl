@@ -22,11 +22,14 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a5602a4e227f3cd17e4a7c9a086bee69d3e3e506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 43e9027c1dbfc831f598991374c22434e01fe7ff
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-copy-directories"></a>Porady: kopiowanie katalogów
 W tym przykładzie przedstawiono sposób użycia klasy we/wy synchronicznie skopiować zawartość katalogu w innej lokalizacji. W tym przykładzie użytkownik określić, czy też kopiowanie podkatalogów. Jeśli zostaną skopiowane podkatalogi, w tym rekursywnie przykład metody kopiuje je poprzez wywołanie sam w każdej kolejnych podkatalogu dopóki istnieje nie są już do skopiowania.  
@@ -42,5 +45,5 @@ W tym przykładzie przedstawiono sposób użycia klasy we/wy synchronicznie skop
  <xref:System.IO.DirectoryInfo>  
  <xref:System.IO.FileStream>  
  [We/Wy plików i strumieni](../../../docs/standard/io/index.md)  
- [Typowe zadania we/wy](../../../docs/standard/io/common-i-o-tasks.md)  
- [Asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)
+ [Typowe zadania We/Wy](../../../docs/standard/io/common-i-o-tasks.md)  
+ [Asynchroniczne operacje We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md)

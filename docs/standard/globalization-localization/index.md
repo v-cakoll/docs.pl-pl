@@ -21,11 +21,14 @@ caps.latest.revision: "42"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3f6beb720819a1be4e45bf4cefac3d805d7ee5e7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7e176ebf6660e1c517e5ef7a505c259666bb30a0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="globalizing-and-localizing-net-framework-applications"></a>Globalizacja i lokalizacja aplikacji .NET Framework
 Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), w tym aplikacji, która może być lokalizowany do co najmniej jednego języka, obejmuje trzy kroki: sprawdzenie, lokalizacja i globalizacja.  
@@ -59,10 +62,10 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
  [Lokalizacja](../../../docs/standard/globalization-localization/localization.md)  
  Omówienie końcowego etapu tworzenia zlokalizowanych aplikacji, który polega na dostosowywaniu interfejsu użytkownika aplikacji dla określonych regionów lub kultur.  
   
- [Operacje na ciągach niezależnych od kultury](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
+ [Niezależne od kultury operacje na ciągach](../../../docs/standard/globalization-localization/culture-insensitive-string-operations.md)  
  Opis sposobu użycia metod i klas programu .NET Framework, które domyślnie są zależne od kultury w celu uzyskania wyników niezależnych od kultury.  
   
- [Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
+ [Najlepsze rozwiązania dotyczące tworzenia aplikacji gotowych do wydania](../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)  
  Opis najlepszych rozwiązań w zakresie globalizacji, lokalizacji i projektowania gotowych do użycia na całym świecie aplikacji ASP.NET.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -75,8 +78,8 @@ Tworzenie [aplikacji gotowe](http://msdn.microsoft.com/goglobal/bb978433.aspx), 
  <xref:System.Text>przestrzeń nazw  
  Zawiera klasy reprezentujące kodowania znaków ASCII, ANSI, Unicode i inne.  
   
- [ResGen.exe (Generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
+ [Resgen.exe (generator pliku zasobów)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  Opis sposobu używania programu Resgen.exe w celu konwertowania plików z rozszerzeniem txt i zasobów opartych na formacie języka XML (resx) na pliki binarne resources środowiska uruchomieniowego języka wspólnego.  
   
- [Winres.exe (Edytor zasobów formularzy systemu Windows)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
+ [Winres.exe (Edytor zasobów formularzy Windows Forms)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)  
  Opis sposobu używania programu Winres.exe w celu lokalizowania formularzy programu Windows Forms.

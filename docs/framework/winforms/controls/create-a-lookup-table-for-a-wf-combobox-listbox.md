@@ -25,11 +25,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cb7ffb8a7f20c1e53b24a1db8bda326d73743a93
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 93f49a8fbd2cc8ffae94e4dcbbc4babf7c1137cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>Porady: tworzenie tabeli wyszukiwania dla formantów ComboBox, ListBox i CheckedListBox formularzy systemu Windows
 Czasami jest przydatne do wyświetlania danych w formacie przyjazną dla użytkownika na formularzu systemu Windows, ale przechowywania danych w formacie, który jest bardziej zrozumiałej do programu. Na przykład w formularzu zamówienia ds może być wyświetlany elementów menu według nazwy w polu listy. Jednak w tabeli danych rejestrowania kolejność może zawierać unikatowe numery identyfikacyjne reprezentujący żywności. W poniższej tabeli przedstawiono przykład sposobu przechowywania i wyświetlania danych formularza zamówienia ds.  
@@ -81,8 +82,8 @@ Czasami jest przydatne do wyświetlania danych w formacie przyjazną dla użytko
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Powiązanie danych i formularze systemu Windows](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Informacje o formancie ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [Informacje o formancie ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
- [CheckedListBox — informacje o formancie](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
- [Formanty używane do obsługi opcji List formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+ [Wiązanie danych i formularzy Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [ListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [ComboBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [CheckedListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)

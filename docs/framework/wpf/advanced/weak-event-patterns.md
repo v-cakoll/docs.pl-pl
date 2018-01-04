@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f024ae77740c596d8646b10a036428e2342d084
-ms.sourcegitcommit: 8ed4ebc15b5ef89d06a7507dc9d5e306e30accf7
+ms.workload: dotnet
+ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
 W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  

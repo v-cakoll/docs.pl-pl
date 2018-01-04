@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d7afc8cc67dc3a428e4995230345938075fbcc0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b7c0d570dbb6389ef22dba635bbbc2885c5f3a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Podawanie informacji o ułatwieniach dostępu dotyczących formantów w formularzu systemu Windows
 Narzędzi ułatwień dostępu są programy specjalistyczne i urządzenia, które pomagają osób niepełnosprawnych komputerów wydajniej wykorzystywać. Przykładami czytników ekranu dla osób blind i głos wejściowych narzędzi dla osób, które udostępniają ustne polecenia zamiast za pomocą klawiatury lub myszy. Tych narzędzi ułatwień dostępu w interakcje z właściwości dostępu udostępnianych przez formanty formularzy systemu Windows. Te właściwości są:  

@@ -17,11 +17,11 @@ ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 694bd74e2b5ae374269accd845fe9178958bf56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a8ac167b40688b1d1116f148d0d5fd6afdcaada8
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>Porady: odwołania do obiektów COM z Visual Basic
 W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dodawanie odwołań do obiektów COM, które mają bibliotek typów wymaga utworzenia zestaw międzyoperacyjny dla biblioteki COM. Odwołania do elementów członkowskich obiektu COM są kierowane do zestawu międzyoperacyjnego, a następnie przekazywane do rzeczywistego obiektu COM. Odpowiedzi z obiektu COM są kierowane do zestawu międzyoperacyjnego i przekazywane do Twojej [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji.  
@@ -61,9 +61,9 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dodawanie odwołań do obiektów 
      Tlbimp służy do tworzenia zestawy międzyoperacyjne dla biblioteki typów, nawet w przypadku obiektów COM wyrejestrowany. Jednak z obiektami COM odwołuje się zestawy międzyoperacyjne musi być poprawnie zarejestrowany na komputerze, gdy są do użycia. Obiekt COM można zarejestrować za pomocą narzędzia Regsvr32 zawarte w systemie operacyjnym Windows.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z COM](../../../visual-basic/programming-guide/com-interop/index.md)  
- [Tlbimp.exe (Importer biblioteki typów)](http://msdn.microsoft.com/library/ec0a8d63-11b3-4acd-b398-da1e37e97382)  
- [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
- [Wskazówki: Wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
- [Problemów związanych ze współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
- [Imports — instrukcja (.NET Namespace i Type)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+ [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Tlbimp.exe (importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Tlbexp.exe (eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d)  
+ [Przewodnik: wdrażanie dziedziczenia z obiektami COM](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
+ [Rozwiązywanie problemów związanych z współdziałaniem](../../../visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md)  
+ [Imports, instrukcja (przestrzeń nazw i typ .NET)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)

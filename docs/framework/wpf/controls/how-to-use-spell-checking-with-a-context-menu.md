@@ -20,11 +20,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 257f343a7fa01e251159797a83e89b533292b6b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8a85426dc526e1e8560f494bcde5247fc394f7bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>Jak użyć sprawdzania pisowni z menu kontekstowym
 Domyślnie po włączeniu sprawdzania w formancie edycji pisowni, takich jak <xref:System.Windows.Controls.TextBox> lub <xref:System.Windows.Controls.RichTextBox>, Pobierz sprawdzanie pisowni wybory w menu kontekstowym. Na przykład po użytkowników prawym przyciskiem myszy wyrazu otrzymują zestaw sugestie dotyczące pisowni lub opcję **Ignoruj wszystkie**. Jednak aby zastąpić domyślne menu kontekstowe z własnych menu kontekstowe niestandardowych, te funkcje zostaną utracone i trzeba napisać kod, aby ponownie włączyć funkcję Sprawdzanie pisowni w menu kontekstowym. Poniższy przykład pokazuje, jak je włączyć na <xref:System.Windows.Controls.TextBox>.  
@@ -51,5 +52,5 @@ Domyślnie po włączeniu sprawdzania w formancie edycji pisowni, takich jak <xr
 ## <a name="see-also"></a>Zobacz też  
  [TextBox — omówienie](../../../../docs/framework/wpf/controls/textbox-overview.md)  
  [RichTextBox — omówienie](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Włącz sprawdzanie w formancie edycji tekstu pisowni](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [Menu kontekstowe niestandardowych za pomocą pola tekstowego](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)
+ [Włączanie sprawdzania pisowni w kontrolce edycji tekstu](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [Używanie niestandardowego menu kontekstowego z kontrolką TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)

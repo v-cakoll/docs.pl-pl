@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dba6762017877824308608bc58f80aed71ca9f21
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d9cc01d929421b8065a3df21374150bc68fd968
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-transactions"></a>Transakcje przepływu pracy
 [!INCLUDE[wf1](../../../includes/wf1-md.md)]zapewnia obsługę uczestniczących w <xref:System.Transactions> transakcji przy użyciu <xref:System.Activities.Statements.TransactionScope> działania do określania zakresu transakcyjne jednostkę pracy. Gdy <xref:System.Transactions.TransactionScope?displayProperty=nameWithType> muszą być wypełnione jawnie <xref:System.Activities.Statements.TransactionScope?displayProperty=nameWithType> niejawnie wywołania ukończyć działania transakcji po pomyślnym zakończeniu. Żadnych działań, które są zawarte w <xref:System.Activities.Statements.TransactionScope.Body%2A> z <xref:System.Activities.Statements.TransactionScope> działania uczestniczyć w transakcji. WF można przepływ transakcji w przepływie pracy za pośrednictwem <xref:System.ServiceModel.Activities.TransactedReceiveScope> działania. Podobnie jak <xref:System.Activities.Statements.TransactionScope> działania, wszystkie działania zawarte w <xref:System.ServiceModel.Activities.TransactedReceiveScope.Body%2A> uczestniczy w transakcji. WF zapewnia zależnych od tego działania na <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> działa z obiema <xref:System.Activities.Statements.TransactionScope> i <xref:System.ServiceModel.Activities.TransactedReceiveScope>. Jeśli działania dostarczane przez system nie dotyczą wszystkich wymagań, działań niestandardowych można skonstruować za pomocą <xref:System.Activities.RuntimeTransactionHandle> umożliwiające przepływ zaawansowane i scenariuszy kontroli transakcji.  

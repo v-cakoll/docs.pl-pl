@@ -14,11 +14,14 @@ ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 caps.latest.revision: "5"
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: b29435b3e9918caf130bb9a0a3a81707a069b4c7
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8ae76c100cdf448bd0e9625e6b3378b6b9e25324
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="binary-serialization"></a>Serializacja binarna
 
@@ -339,25 +342,25 @@ Oprogramowanie .NET core obsługuje serializacji binarnej z podzbioru typów. Mo
 
 ## <a name="in-this-section"></a>W tej sekcji
 
- [Pojęcia dotyczące serializacji](../../../docs/standard/serialization/serialization-concepts.md)  
+ [Koncepcje z zakresu serializacji](../../../docs/standard/serialization/serialization-concepts.md)  
  Opisano dwa scenariusze, w których serializacji jest użyteczny: gdy trwałych danych do magazynu i przekazywanie obiektów między domenami aplikacji.  
   
- [Podstawowe serializacji](../../../docs/standard/serialization/basic-serialization.md)  
+ [Serializacja podstawowa](../../../docs/standard/serialization/basic-serialization.md)  
  Opisuje sposób używania PLiku binarnego i SOAP elementy formatujące do wykonywania serializacji obiektów.  
   
- [Selektywne serializacji](../../../docs/standard/serialization/selective-serialization.md)  
+ [Serializacja selektywna](../../../docs/standard/serialization/selective-serialization.md)  
  Opisuje sposób zapobiegania serializacji niektórych składowych klasy.  
   
- [Niestandardowej serializacji](../../../docs/standard/serialization/custom-serialization.md)  
+ [Serializacja niestandardowa](../../../docs/standard/serialization/custom-serialization.md)  
  Opisuje sposób dostosowywania serializacji dla klasy przy użyciu <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
  [Kroki procesu serializacji](../../../docs/standard/serialization/steps-in-the-serialization-process.md)  
  Opisuje kurs akcji serializacji przyjmuje, gdy <xref:System.Runtime.Serialization.Formatter.Serialize%2A> metoda jest wywoływana w elementu formatującego.  
   
- [Serializacji z tolerancją dla wersji](../../../docs/standard/serialization/version-tolerant-serialization.md)  
+ [Serializacja z tolerancją wersji](../../../docs/standard/serialization/version-tolerant-serialization.md)  
  Wyjaśnia sposób tworzenia typów możliwych do serializacji, które mogą być modyfikowane w czasie bez powodowania aplikacjom zgłaszają wyjątki.  
   
- [Wytyczne serializacji](../../../docs/standard/serialization/serialization-guidelines.md)  
+ [Wskazówki dotyczące serializacji](../../../docs/standard/serialization/serialization-guidelines.md)  
  Zawiera ogólne zasady ustalania, kiedy można serializować obiektu.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -365,7 +368,7 @@ Oprogramowanie .NET core obsługuje serializacji binarnej z podzbioru typów. Mo
  Zawiera klasy, które mogą być używane do serializacji i deserializacji obiektów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [XML i serializacji SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
+ [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
  Opisuje mechanizm serializacji XML, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.  
   
  [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)  

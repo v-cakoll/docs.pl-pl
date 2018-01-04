@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 90b2a36f0e6bf06b0fefe2191d5b17c9c07d1588
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3eddf8899863b7f1c59950c9cd4fa4d42f7acdb7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>Wykorzystywanie wzorca asynchronicznego opartego na zadaniach
 Gdy używasz opartego na zadaniach asynchronicznej wzorca (TAP) do pracy z operacji asynchronicznych służy wywołań zwrotnych do osiągnięcia oczekiwania bez blokowania.  W przypadku zadań to odbywa się za pośrednictwem metody takie jak <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>. Obsługa komunikacji asynchronicznej opartych na języku ukrywa wywołania zwrotne zezwalając operacji asynchronicznych do dokumentów, w ramach przepływu sterowania normalne i kod wygenerowany przez kompilator obsługuje ten sam poziom interfejsu API.  
@@ -842,6 +845,6 @@ private static void Produce(int data)
 >  <xref:System.Threading.Tasks.Dataflow> Przestrzeń nazw jest dostępna w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] za pośrednictwem **NuGet**. Aby zainstalować zestaw zawierający <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online pakiet Microsoft.Tpl.Dataflow.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Asynchroniczny wzorzec oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
- [Implementacja wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+ [Wzorzec asynchroniczny oparty na zadaniach (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
+ [Implementowanie wzorca asynchronicznego opartego na zadaniach](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
  [Współdziałanie z innymi wzorcami asynchronicznymi i typami](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)

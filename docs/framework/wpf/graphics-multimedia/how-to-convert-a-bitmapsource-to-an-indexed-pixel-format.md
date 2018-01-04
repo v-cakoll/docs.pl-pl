@@ -27,11 +27,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b4c905b73eca1466116d1f51922a2102c4286054
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 37a65a9ba9e8ea8e0571ff1068523897b054abf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-a-bitmapsource-to-an-indexed-pixel-format"></a>Jak konwertować BitmapSource na format indeksowanych pikseli
 W tym przykładzie pokazano, jak przekonwertować <xref:System.Windows.Media.Imaging.BitmapSource> do formatu piksela indeksowanego.  

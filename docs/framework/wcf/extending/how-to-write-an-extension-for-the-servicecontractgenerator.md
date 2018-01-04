@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e40ea594c7743dfec06876515a1165da1a16d4e5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c62aa9ac582e93bb86399472e47c41fdb6fad2d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>Instrukcje: Pisanie rozszerzenia dla elementu ServiceContractGenerator
 W tym temacie opisano sposób pisanie rozszerzenia dla <xref:System.ServiceModel.Description.ServiceContractGenerator>. Można to zrobić z zastosowaniem <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> interfejsu na zachowanie operacji lub implementacja <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interfejsu na zachowanie kontraktu. W tym temacie przedstawiono sposób wykonania <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> interfejsu na zachowanie kontraktu.  
@@ -110,4 +111,4 @@ W tym temacie opisano sposób pisanie rozszerzenia dla <xref:System.ServiceModel
   
 ## <a name="see-also"></a>Zobacz też  
  [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)  
- [Porady: importowanie niestandardowych WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

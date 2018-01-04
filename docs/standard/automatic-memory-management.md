@@ -22,11 +22,14 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7f8ee49861902002e69af96168def5883d73c3a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5405b6fc080696b7e507e70dd8b04f8ddcc4bbb2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="automatic-memory-management"></a>Automatyczne zarządzanie pamięcią
 Automatyczne zarządzanie pamięcią jest jednym z usług, które udostępnia środowisko uruchomieniowe języka wspólnego [zarządzane wykonywania](../../docs/standard/managed-execution-process.md). Środowisko uruchomieniowe języka wspólnego przez moduł Garbage Collector zarządza alokacji i wersji pamięci dla aplikacji. Z perspektywy deweloperów oznacza to, że podczas tworzenia zarządzanych aplikacji nie trzeba pisać kodu wykonującego zadania zarządzania pamięcią. Funkcjonalność automatycznego zarządzania pamięcią może wyeliminować typowe problemy, takie jak zapominanie o zwalnianiu obiektów z pamięci, powodowanie przecieków pamięci czy próba uzyskania dostępu do pamięci dla obiektu, który został już zwolniony z pamięci. W tej części opisano, jak moduł odśmiecania pamięci przydziela i zwalnia pamięć.  
@@ -60,5 +63,5 @@ Automatyczne zarządzanie pamięcią jest jednym z usług, które udostępnia ś
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.GC>  
- [Wyrzucanie elementów bezużytecznych](../../docs/standard/garbage-collection/index.md)  
+ [Odzyskiwanie pamięci](../../docs/standard/garbage-collection/index.md)  
  [Proces zarządzanego wykonania](../../docs/standard/managed-execution-process.md)

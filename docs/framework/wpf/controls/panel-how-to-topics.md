@@ -17,21 +17,22 @@ caps.latest.revision: "66"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 877367098baf6e50b18ecfba2e6b20cdbe29313d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8b3fca74adb89ba46d2be2a4cba83cc5458396c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-how-to-topics"></a>Panel Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Panel> element i pokrewnych [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Porady: dotyczył właściwości LayoutTransform elementu](http://msdn.microsoft.com/en-us/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [Utwórz Element panelu niestandardowych](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Zastąp metodę metody OnRender panelu](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [Ustaw właściwości wysokość elementu](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [Ustaw właściwości szerokość elementu](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [Tworzenie niestandardowego elementu panelu](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
+ [Zastępowanie metody OnRender panelu](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
+ [Ustawianie właściwości wysokości elementu](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
+ [Ustawianie właściwości szerokości elementu](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -51,6 +52,6 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Pa
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Omówienie ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

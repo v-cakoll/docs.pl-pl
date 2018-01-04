@@ -13,17 +13,17 @@ ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a5aa7af1f07a29660335d968c1ecc17be5f8beec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe548caacf2c8e7498e3b7abc814b4f89af9b3d6
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="myforms-object"></a>My.Forms — Obiekt
 Dostarcza właściwości, aby uzyskać dostęp do wystąpienia każdego formularza systemu Windows zadeklarowana w bieżącym projekcie.  
   
 ## <a name="remarks"></a>Uwagi  
- `My.Forms` Obiektu zawiera wystąpienie każdego formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, który uzyskuje dostęp do właściwości. Uzyskać informacji o dodawaniu formularzy do projektu, zobacz [porady: dodawanie formularzy systemu Windows z projektem](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ `My.Forms` Obiektu zawiera wystąpienie każdego formularza w bieżącym projekcie. Nazwa właściwości jest taka sama jak nazwa formularza, który uzyskuje dostęp do właściwości.   
   
  Dostęp można uzyskać formularzy dostarczonych przez `My.Forms` obiektu przy użyciu nazwy w postaci bez kwalifikacji. Nazwa właściwości jest taka sama jak nazwa typu formularza, to umożliwia dostęp do formularza tak, jakby zawierał wystąpienia domyślnego. Na przykład `My.Forms.Form1.Show` jest odpowiednikiem `Form1.Show`.  
   
@@ -53,7 +53,7 @@ Dostarcza właściwości, aby uzyskać dostęp do wystąpienia każdego formular
   
  [!code-vb[VbVbalrMyForms#2](../../../visual-basic/language-reference/objects/codesnippet/VisualBasic/my-forms-object_1.vb)]  
   
- Na przykład do pracy projektu musi mieć formularza o nazwie `SidebarMenu`. Aby uzyskać więcej informacji, zobacz [porady: dodawanie formularzy systemu Windows z projektem](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1).  
+ Na przykład do pracy projektu musi mieć formularza o nazwie `SidebarMenu`.  
   
  Ten kod będzie działać tylko w projekcie aplikacji systemu Windows.  
   
@@ -76,7 +76,6 @@ Dostarcza właściwości, aby uzyskać dostęp do wystąpienia każdego formular
  <xref:System.Windows.Forms.Form>  
  <xref:System.Windows.Forms.Form.Close%2A>  
  [Obiekty](../../../visual-basic/language-reference/objects/index.md)  
- [Porady: dodawanie formularzy systemu Windows do projektu](http://msdn.microsoft.com/en-us/3d7bb25f-fd90-47cf-9378-fa0d764686c1)  
- [Is — Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot — Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
  [Uzyskiwanie dostępu do formularzy aplikacji](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)

@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e050a3e5d3207f883be915aa6f00d527023f561e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c06692f19fe31bfcf2ae1f9778d847f412a007e1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu
 Często po współpracujesz powiązanie danych w formularzach systemu Windows, co jest nazywane nadrzędny/podrzędny lub głównych/szczegółów widoku będą wyświetlane dane. Odnosi się do scenariusz wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch formantów. Zmiana wyboru w jeden formant powoduje danych wyświetlanych w formancie drugi do zmiany. Na przykład pierwszy formant może zawierać listę klientów, a drugi listę zleceń związane z wybranego klienta w pierwszego formantu.  
@@ -94,6 +95,6 @@ Często po współpracujesz powiązanie danych w formularzach systemu Windows, c
  Informacje o sposobie budowania w tym przykładzie z wiersza polecenia dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [csc.exe budynku wiersza polecenia z](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Upewnij się, wiele formantów powiązanych z tym samym źródłem danych pozostają zsynchronizowane](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
- [BindingSource — składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Powiązanie danych i formularze systemu Windows](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+ [Instrukcje: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  
+ [BindingSource, składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)

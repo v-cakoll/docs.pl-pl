@@ -15,11 +15,12 @@ caps.latest.revision: "40"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d0e0c5b0ea05d1a0a9798e1b6f22ce06257f03b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a667c303cd1a98e0b027ca2026fe9c719e6baf4f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy
 Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest możliwość środowiska uruchomieniowego utrwalić i zwolnić bezczynne przepływy pracy z bazą danych. Kroki opisane w [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące obsługi przepływu pracy za pomocą aplikacji konsoli. Przykłady zostały przedstawione początkowy przepływy pracy, programy obsługi cyklu życia przepływu pracy i wznawianie zakładki. W celu zaprezentowania skutecznie utrwalania przepływu pracy, konieczne jest bardziej złożonych hosta przepływu pracy obsługującego uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok samouczka przedstawia sposób tworzenia hosta formularzy systemu Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, utrwalania przepływu pracy i stanowi podstawę do zaawansowanych funkcji, takich jak śledzenia i wersjonowania, które są zostało to pokazane w kolejnych krokach samouczka.  
@@ -104,11 +105,11 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     |Formant|Właściwość: wartość|  
     |-------------|---------------------|  
     |**Przycisk**|Nazwa: NewGame<br /><br /> Lokalizacja: 13, 13<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Gry nowy|  
-    |**Etykiety**|Lokalizacji: 94, 18<br /><br /> Tekst: Liczba z przedziału od 1 do odgadnięcia|  
-    |**Pola kombi ComboBox**|Nazwa: NumberRange<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Elementy: 10, 100, 1000<br /><br /> Lokalizacja: 228, 12<br /><br /> Rozmiar: 143, 21|  
-    |**Etykiety**|Lokalizacji: 13, 43<br /><br /> Tekst: Typ przepływu pracy|  
-    |**Pola kombi ComboBox**|Nazwa: WorkflowType<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Elementy: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow,<br /><br /> Lokalizacji: 94, 40<br /><br /> Rozmiar: 277, 21|  
-    |**Etykiety**|Nazwa: WorkflowVersion<br /><br /> Lokalizacji: 13, 362<br /><br /> Tekst: Wersja przepływu pracy|  
+    |**Etykieta**|Lokalizacji: 94, 18<br /><br /> Tekst: Liczba z przedziału od 1 do odgadnięcia|  
+    |**ComboBox**|Nazwa: NumberRange<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Elementy: 10, 100, 1000<br /><br /> Lokalizacja: 228, 12<br /><br /> Rozmiar: 143, 21|  
+    |**Etykieta**|Lokalizacji: 13, 43<br /><br /> Tekst: Typ przepływu pracy|  
+    |**ComboBox**|Nazwa: WorkflowType<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Elementy: SequentialNumberGuessWorkflow StateMachineNumberGuessWorkflow, FlowchartNumberGuessWorkflow,<br /><br /> Lokalizacji: 94, 40<br /><br /> Rozmiar: 277, 21|  
+    |**Etykieta**|Nazwa: WorkflowVersion<br /><br /> Lokalizacji: 13, 362<br /><br /> Tekst: Wersja przepływu pracy|  
     |**GroupBox**|Lokalizacji: 13, 67<br /><br /> Rozmiar: 358, 287<br /><br /> Tekst: gry|  
   
     > [!NOTE]
@@ -116,13 +117,13 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
   
     |Formant|Właściwość: wartość|  
     |-------------|---------------------|  
-    |**Etykiety**|Lokalizacji: 7, 20<br /><br /> Tekst: Identyfikator wystąpienia przepływu pracy|  
-    |**Pola kombi ComboBox**|Nazwa: identyfikator wystąpienia<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Lokalizacji: 121, 17<br /><br /> Rozmiar: 227, 21|  
-    |**Etykiety**|Lokalizacji: 7, 47<br /><br /> Tekst: odgadnięcia|  
-    |**Pole tekstowe**|Nazwa: odgadnięcia<br /><br /> Lokalizacji: 50, 44<br /><br /> Rozmiar: 65, 20|  
+    |**Etykieta**|Lokalizacji: 7, 20<br /><br /> Tekst: Identyfikator wystąpienia przepływu pracy|  
+    |**ComboBox**|Nazwa: identyfikator wystąpienia<br /><br /> Parametr DropDownStyle: Lista DropDownList<br /><br /> Lokalizacji: 121, 17<br /><br /> Rozmiar: 227, 21|  
+    |**Etykieta**|Lokalizacji: 7, 47<br /><br /> Tekst: odgadnięcia|  
+    |**TextBox**|Nazwa: odgadnięcia<br /><br /> Lokalizacji: 50, 44<br /><br /> Rozmiar: 65, 20|  
     |**Przycisk**|Nazwa: EnterGuess<br /><br /> Lokalizacji: 121, 42<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Wynik wprowadź|  
     |**Przycisk**|Nazwa: QuitGame<br /><br /> Lokalizacji: 274, 42<br /><br /> Rozmiar: 75, 23<br /><br /> Tekst: Zamknij|  
-    |**Pole tekstowe**|Nazwa: WorkflowStatus<br /><br /> Lokalizacja: 10, 73<br /><br /> Wiele linii: True<br /><br /> Tylko do odczytu: True<br /><br /> Paski przewijania: pionowe<br /><br /> Rozmiar: 338, 208|  
+    |**TextBox**|Nazwa: WorkflowStatus<br /><br /> Lokalizacja: 10, 73<br /><br /> Wiele linii: True<br /><br /> Tylko do odczytu: True<br /><br /> Paski przewijania: pionowe<br /><br /> Rozmiar: 338, 208|  
   
 5.  Ustaw **AcceptButton** właściwości formularza, aby **EnterGuess**.  
   

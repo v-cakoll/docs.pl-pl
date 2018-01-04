@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28c51c6208bfdfe068b9fb3ed2cdc58dd0350fdb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7cd424dfd936427edb855a92e54921c064c8a8fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-in-wpf"></a>Typografia w WPF
 W tym temacie przedstawiono główne funkcje związane z typografią [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Te funkcje obejmują lepszą jakość i wydajność renderowanie tekstu [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] typografii pomocy technicznej, rozszerzone tekstu międzynarodowe, rozszerzona obsługa czcionek i interfejsy programowania aplikacji w usłudze nowy tekst (API).  
@@ -179,9 +180,9 @@ Interakcja między aplikacją a obiekt TextFormatter
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.FormattedText>  
  <xref:System.Windows.Media.TextFormatting.TextFormatter>  
- [Omówienie ClearType](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [Funkcje czcionek OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [Rysowanie sformatowanego tekstu](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
+ [ClearType — przegląd](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
+ [Funkcje czcionki OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
+ [Rysowanie formatowanego tekstu](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
  [Zaawansowane formatowanie tekstu](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
  [Tekst](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)  
  [Typografia firmy Microsoft](http://www.microsoft.com/typography/default.mspx)

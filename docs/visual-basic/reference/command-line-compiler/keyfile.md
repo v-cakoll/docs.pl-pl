@@ -14,11 +14,11 @@ ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b7f41b659399ae5a12663d4e359c02606bb6f952
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: e0be7d230f16750395aaceb3c94539546716b8fd
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keyfile"></a>/keyfile
 Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy zestawu.  
@@ -34,7 +34,7 @@ Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy ze
  Wymagany. Plik, który zawiera klucz. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w cudzysłów ("").  
   
 ## <a name="remarks"></a>Uwagi  
- Kompilator wstawia klucz publiczny w manifeście zestawu i podpisuje następnie zestawie końcowym z kluczem prywatnym. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnej nazwy)](https://msdn.microsoft.com/library/k5b5tt23).  
+ Kompilator wstawia klucz publiczny w manifeście zestawu i podpisuje następnie zestawie końcowym z kluczem prywatnym. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnej nazwy)][Sn.exe (narzędzie silnej nazwy)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
   
  Jeśli kompilacji z `/target:module`, nazwa pliku klucza jest przechowywany w module i włączyć do zestawu, który jest tworzony podczas kompilowania zestawu z [/addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).  
   
@@ -46,7 +46,7 @@ Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy ze
   
  Należy pamiętać, że plik klucza może zawierać tylko klucz publiczny.  
   
- Zobacz [tworzenie i zestawy Using Strong-Named](../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
+ Zobacz [tworzenie i zestawy Using Strong-Named](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
   
 > [!NOTE]
 >  `/keyfile` Opcja nie jest dostępne w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] środowisko projektowe; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
@@ -59,7 +59,7 @@ vbc /keyfile:myfile.sn input.vb
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawy i Globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
+ [Zestawy i globalna pamięć podręczna zestawów](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
  [/ Reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)  
- [Kompilacja przykładów — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+ [Przykłady kompilacji — wiersze poleceń](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

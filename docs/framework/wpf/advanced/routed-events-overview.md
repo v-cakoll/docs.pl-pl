@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be4447570f89637910506b6257c092c86f24991b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje terminologii kierowane zdarzenia, w tym artykule opisano sposób kierowane zdarzenia są wysyłane za pośrednictwem drzewa elementów, zawiera podsumowanie sposobu obsługi kierowane zdarzenia oraz przedstawiono sposób tworzenia własnego niestandardowego kierowane zdarzenia.
@@ -258,9 +259,9 @@ Zdarzenie wejściowe propagacji i tunelowania
  <xref:System.Windows.EventManager>  
  <xref:System.Windows.RoutedEvent>  
  <xref:System.Windows.RoutedEventArgs>  
- [Oznaczanie kierowane zdarzenia, ponieważ obsługiwane i klasy obsługi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Sterująca — omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Drzewa na platformie WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [Wzorce słabe zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)
+ [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Drzewa w WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
+ [Słabe wzorce zdarzeń](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)

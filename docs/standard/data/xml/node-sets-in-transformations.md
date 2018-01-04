@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e4d6d2f5a68ce5cef9937edc136e52efcd5366df
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 95df2f2888899093943feda35768694bf414de84
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="node-sets-in-transformations"></a>Ustawia węzeł w przekształcenia
 Zestaw węzłów są jednym z cztery typy podstawowe dane, które zostaną zwrócone z wyrażenia XML Path Language (XPath). Zestaw węzłów, które nieuporządkowaną zbiór węzłów bez duplikatów, utworzony w kolejności dokumentu, można przypisać do zmiennej w arkuszu stylów.  
@@ -84,4 +87,4 @@ History of Trenton Vol 3
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.XPath.XPathNodeIterator>  
  [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
- [Klasa XslTransform implementuje procesorze XSLT](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+ [Implementowanie procesora XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

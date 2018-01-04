@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ad99683f0e41e64a42032a9d64e589723fa8ed4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 63291cddc294b6ad8003636d6d79169f2d0852e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>Porady: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta
 Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istniejące dynamiczny kod aplikacji sieci Web HTML (DHTML) aplikacjom klienckim formularzy systemu Windows. Jest to przydatne, gdy zainwestowały czasu znaczących programowania do tworzenia opartych na DHTML — formanty i chcesz korzystać z funkcji interfejsu użytkownika sformatowanego formularzy systemu Windows bez konieczności ponownego zapisania istniejącego kodu.  
@@ -121,4 +122,4 @@ Można użyć <xref:System.Windows.Forms.WebBrowser> formantu, aby dodać istnie
  <xref:System.Windows.Forms.WebBrowser>  
  <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>  
- [WebBrowser — formant](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)
+ [WebBrowser, kontrolka](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)

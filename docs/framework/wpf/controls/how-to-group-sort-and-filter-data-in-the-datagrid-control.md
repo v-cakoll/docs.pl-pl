@@ -20,11 +20,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3c8afacfafbe14794bf17a4e9a4df7c175a3668
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e648b5a4a45c3583d496ac0ea6036d268d6d33a6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>Jak grupować, sortować i filtrować dane w DataGrid kontrolce
 Często jest to przydatne do wyświetlania danych w <xref:System.Windows.Controls.DataGrid> w różny sposób grupowania, sortowania i filtrowania danych. Do grupy, sortować i filtrować dane w <xref:System.Windows.Controls.DataGrid>, możesz powiązać <xref:System.Windows.Data.CollectionView> która obsługuje te funkcje. Potem można pracować z danymi w <xref:System.Windows.Data.CollectionView> bez wpływu na podstawowe źródło danych. Zmiany w widoku kolekcji są uwzględniane w <xref:System.Windows.Controls.DataGrid> interfejsu użytkownika (UI).  
@@ -162,8 +163,8 @@ Dane zgrupowane w DataGrid
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tworzenie i powiązać obiektu ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tworzenie i powiązywanie z ObservableCollection](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
  [Filtrowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
  [Sortowanie danych w widoku](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [Sortowanie i grupowanie danych przy użyciu widoku w języku XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)
+ [Sortowanie i grupowanie danych przy użyciu widoku w XAML](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)

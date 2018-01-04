@@ -20,11 +20,14 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 809b21fa6e1470890011604792d849998dd03ede
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1a17bdf149d3a263b064f96feae8c660be34d375
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych
 Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, jednak można również utworzyć niestandardowe bloku typów. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje zachowanie niestandardowych.  
@@ -74,4 +77,4 @@ Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, 
 ## <a name="next-steps"></a>Następne kroki  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -16,11 +16,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2e127fb02725d11e62c45157b4e45327fc9f1ace
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: badf5511c5638d98d25997f31a3aff8dc11144d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="script-blocks-using-msxslscript"></a>Msxsl:script bloki za pomocą skryptu
 <xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje osadzonych skryptów przy użyciu `msxsl:script` elementu. Po załadowaniu arkusza stylów żadnych określonych funkcji są kompilowane na język pośredni firmy Microsoft (MSIL) przez kod Document Object Model (CodeDOM) i są wykonywane w czasie wykonywania. Zestaw wygenerowane z bloku osadzony skrypt jest oddzielony niż zestaw wygenerowany dla arkusza stylów.  
@@ -157,4 +160,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
- [Źródło dynamiczne generowanie i kompilacja kodu](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)
+ [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

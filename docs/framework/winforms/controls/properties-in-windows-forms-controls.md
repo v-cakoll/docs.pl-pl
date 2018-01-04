@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5de09635fb92b46a2c0f89427ad03449de6bd53
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8d645a321319bf54ca0cc4f142c343420eb1f30e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-in-windows-forms-controls"></a>Właściwości formantów formularzy systemu Windows
 Formant formularzy systemu Windows dziedziczy wiele formularza właściwości klasy podstawowej <xref:System.Windows.Forms.Control?displayProperty=nameWithType>. Te właściwości obejmują takie jak <xref:System.Windows.Forms.Control.Font%2A>, <xref:System.Windows.Forms.Control.ForeColor%2A>, <xref:System.Windows.Forms.Control.BackColor%2A>, <xref:System.Windows.Forms.Control.Bounds%2A>, <xref:System.Windows.Forms.Control.ClientRectangle%2A>, <xref:System.Windows.Forms.Control.DisplayRectangle%2A>, <xref:System.Windows.Forms.Control.Enabled%2A>, <xref:System.Windows.Forms.Control.Focused%2A>, <xref:System.Windows.Forms.Control.Height%2A>, <xref:System.Windows.Forms.Control.Width%2A>, <xref:System.Windows.Forms.Control.Visible%2A>, <xref:System.Windows.Forms.Control.AutoSize%2A>i wiele innych. Aby uzyskać szczegółowe informacje o właściwości dziedziczone, zobacz <xref:System.Windows.Forms.Control?displayProperty=nameWithType>.  
@@ -32,16 +33,16 @@ Formant formularzy systemu Windows dziedziczy wiele formularza właściwości kl
  [Definiowanie właściwości](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)  
  Pokazuje, jak implementować właściwość dla kontrolek niestandardowych lub składnik oraz sposób integracji właściwość w środowisku projektowania.  
   
- [Definiowanie wartości domyślnych z metod ShouldSerialize i Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
+ [Definiowanie wartości domyślnych za pomocą metod ShouldSerialize i Reset](../../../../docs/framework/winforms/controls/defining-default-values-with-the-shouldserialize-and-reset-methods.md)  
  Pokazuje, jak można definiować wartości właściwości domyślnej dla składnika lub kontrolki niestandardowej.  
   
  [Zdarzenia zmiany właściwości](../../../../docs/framework/winforms/controls/property-changed-events.md)  
  Opisuje sposób włączenia powiadomień zmiany właściwości, gdy wartość właściwości zostanie zmieniona.  
   
- [Porady: udostępnianie właściwości formantów składowych](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
+ [Instrukcje: udostępnianie właściwości kontrolek składowych](../../../../docs/framework/winforms/controls/how-to-expose-properties-of-constituent-controls.md)  
  Pokazuje, jak do udostępnienia właściwości formantów składowych w złożonych kontrolek niestandardowych.  
   
- [Implementacja metody w formantach niestandardowych](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
+ [Implementacja metody w kontrolkach niestandardowych](../../../../docs/framework/winforms/controls/method-implementation-in-custom-controls.md)  
  Zawiera opis sposobu implementacji metod w niestandardowych kontrolek i składników.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -55,7 +56,7 @@ Formant formularzy systemu Windows dziedziczy wiele formularza właściwości kl
  Dokumenty atrybut, który określa <xref:System.Drawing.Design.UITypeEditor> dla właściwości niestandardowej.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Atrybuty w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Zawiera opis atrybutów, które można zastosować do właściwości lub innych elementach członkowskich niestandardowe formanty i składniki.  
   
  [Atrybuty czasu projektowania dla składników](http://msdn.microsoft.com/library/12050fe3-9327-4509-9e21-4ee2494b95c3)  

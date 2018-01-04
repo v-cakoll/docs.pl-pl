@@ -19,11 +19,14 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769dcbd554f8b39fbe449a8e3a6b379a7472a38f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 21d03e6f60e9df2af3b14442b14b576f0aee739e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-chunk-serialized-data"></a>Porady: bryłkach danych serializacji.
 
@@ -64,4 +67,4 @@ Poniższy przykład kodu pokazuje metody sieci Web na komputerze klienckim, któ
 -   W kodzie za pomocą następujących przestrzeni nazw: <xref:System>, <xref:System.Runtime.Serialization>, <xref:System.Web.Services>, <xref:System.Web.Services.Protocols>, <xref:System.Xml>, <xref:System.Xml.Serialization>, i <xref:System.Xml.Schema>.  
   
 ## <a name="see-also"></a>Zobacz także  
- [Niestandardowej serializacji](custom-serialization.md)
+ [Serializacja niestandardowa](custom-serialization.md)

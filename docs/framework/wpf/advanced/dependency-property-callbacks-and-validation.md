@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d1b62c7f49653627c626bce2583b2799df931dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 15ba7f3315b2ce71357bd4735e2dfca1b3de616d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>Zależność wartości wywołania zwrotnego i walidacji
 W tym temacie opisano sposób tworzenia właściwości zależności przy użyciu alternatywnych implementacji niestandardowych dla powiązanych właściwości funkcje, takie jak oznaczania sprawdzania poprawności, wywołania zwrotne wywoływane po każdej zmianie właściwości wartość efektywna i zastępowanie możliwe poza wpływ na określenie wartości. W tym temacie omówiono również zastosowaniach rozszerzając domyślne właściwości systemu zachowania przy użyciu tych metod odpowiednie.  
@@ -92,5 +93,5 @@ W tym temacie opisano sposób tworzenia właściwości zależności przy użyciu
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Metadane właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

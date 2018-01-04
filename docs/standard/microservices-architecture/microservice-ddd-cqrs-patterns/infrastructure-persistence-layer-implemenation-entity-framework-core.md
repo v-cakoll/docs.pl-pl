@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/12/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 508d60d73eb7c0f0cc2cc909613cc4f8712b4aba
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core
 
@@ -46,11 +49,11 @@ Z punktu widzenia DDD, ważna możliwość EF jest możliwość korzystania z je
 
 Na wzorce DDD zalecaną zachowanie domeny i reguły w obrębie klasy jednostka, więc może kontrolować invariants, sprawdzanie poprawności i reguł podczas uzyskiwania dostępu do żadnej kolekcji. W związku z tym nie jest dobrym rozwiązaniem w DDD umożliwia publiczny dostęp do kolekcji podrzędnych obiektów lub obiekty wartości. Zamiast tego chcesz udostępnić metod, które kontrolują, jak i kiedy może być aktualizowana z pól i właściwości kolekcji, i jakie zachowanie i akcji powinien wystąpić, gdy tak się stanie.
 
-W wersji 1.1 Core EF by spełnić te wymagania DDD mogą mieć zwykłych pól w jednostki zamiast właściwości za pomocą metody ustawiające publiczne i prywatne. Jeśli nie chcesz, aby pole jednostki jako dostępne z zewnątrz, możesz utworzyć atrybutu lub pola zamiast właściwości. Nie istnieje potrzeba do użycia prywatnej metody ustawiające, jeśli wolisz tej metody czyszczącej.
+Od wersji 1.1 Core EF aby spełnić te wymagania DDD mogą mieć zwykłych pól w jednostki zamiast właściwości publiczne. Jeśli nie chcesz, aby pole jednostki jako dostępne z zewnątrz, możesz utworzyć atrybutu lub pola zamiast właściwości. Umożliwia także metody ustawiające właściwości prywatnej.
 
-W podobny sposób można teraz mają dostęp tylko do odczytu do kolekcji przy użyciu właściwości publicznej typu IEnumerable&lt;T&gt;, która nie jest obsługiwana przez element pole prywatne dla kolekcji (takie jak listy&lt;&gt;) w sieci Jednostka, która zależy od EF trwałości. Poprzednie wersje programu Entity Framework wymaganych właściwości kolekcji do obsługi kolekcji ICollection&lt;T&gt;, który oznaczało, że każdy Deweloper przy użyciu klasy nadrzędnej jednostki można dodać lub usunąć elementy z jego kolekcji właściwości. Możliwość ta będzie przed zalecane wzorce w DDD.
+W podobny sposób można masz teraz dostęp tylko do odczytu do kolekcji przy użyciu właściwości publicznej wpisanych jako `IReadOnlyCollection<T>`, która nie jest obsługiwana przez element pole prywatne dla kolekcji (takie jak `List<T>`) w jednostce korzystający EF trwałości. Poprzednie wersje programu Entity Framework wymaganych właściwości kolekcji do obsługi `ICollection<T>`, który oznaczało, że każdy Deweloper przy użyciu klasy nadrzędnej jednostki można dodać lub usunąć elementy za pomocą jego kolekcji właściwości. Możliwość ta będzie przed zalecane wzorce w DDD.
 
-Można użyć prywatnych kolekcji podczas udostępnianie obiektu IEnumerable tylko do odczytu, jak pokazano w poniższym przykładzie kodu:
+Można użyć kolekcji prywatnych podczas udostępnianie tylko do odczytu `IReadOnlyCollection<T>` obiektów, jak pokazano w poniższym przykładzie:
 
 ```csharp
 public class Order : Entity
@@ -58,9 +61,9 @@ public class Order : Entity
     // Using private fields, allowed since EF Core 1.1
     private DateTime _orderDate;
     // Other fields ...
-    private readonly List<OrderItem> _orderItems;
 
-    public IEnumerable<OrderItem> OrderItems => _orderItems.AsReadOnly();
+    private readonly List<OrderItem> _orderItems; 
+    public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;
 
     protected Order() { }
 
@@ -70,40 +73,52 @@ public class Order : Entity
     }
 
     public void AddOrderItem(int productId, string productName,
-        decimal unitPrice, decimal discount,
-        string pictureUrl, int units = 1)
+                             decimal unitPrice, decimal discount,
+                             string pictureUrl, int units = 1)
     {
         // Validation logic...
-        var orderItem = new OrderItem(productId, productName, unitPrice, discount,
-            pictureUrl, units);
+
+        var orderItem = new OrderItem(productId, productName, 
+                                      unitPrice, discount,
+                                      pictureUrl, units);
         _orderItems.Add(orderItem);
     }
 }
 ```
 
-Należy pamiętać, że właściwość OrderItems są dostępne tylko jako tylko do odczytu przy użyciu listy&lt;&gt;. AsReadOnly(). Ta metoda tworzy tylko do odczytu otokę prywatnej listy, aby jest chroniony przed aktualizacje zewnętrznych. Jest znacznie tańszy niż przy użyciu metody tolist —, ponieważ nie trzeba skopiować wszystkie elementy w nowej kolekcji; Zamiast tego wykonuje tylko jedną operację alokacji sterty dla wystąpienia otoki.
+Należy pamiętać, że `OrderItems` właściwości są dostępne tylko jako tylko do odczytu za pomocą `IReadOnlyCollection<OrderItem>`. Ten typ jest tylko do odczytu, więc jest chroniony przed regularne aktualizacje zewnętrznych. 
 
-Podstawowe EF umożliwia mapowanie modelu domeny do fizycznej bazy danych bez zanieczyszczających modelu domeny. Jest czysty .NET obiektów POCO kodu, ponieważ akcja mapowania jest zaimplementowana w warstwę trwałości. W tym mapowania akcji należy skonfigurować mapowanie pól w bazie danych. W poniższym przykładzie metody OnModelCreating wyróżniony kod informuje Core EF dostępu do właściwości OrderItems za pomocą tego pola.
+Podstawowe EF umożliwia mapowanie modelu domeny do fizycznej bazy danych bez "zanieczyszczających" modelu domeny. Jest czysty .NET obiektów POCO kodu, ponieważ akcja mapowania jest zaimplementowana w warstwę trwałości. W tym mapowania akcji należy skonfigurować mapowanie pól w bazie danych. W poniższym przykładzie metody OnModelCreating wyróżniony kod informuje Core EF dostępu do właściwości OrderItems za pomocą tego pola.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    // ...
-    modelBuilder.Entity<Order>(ConfigureOrder);
-    // Other entities ...
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    // Other configuration ...
-    var navigation = orderConfiguration.Metadata.
-    FindNavigation(nameof(Order.OrderItems));
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
-    // Other configuration ...
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+        orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
+        // Other configuration
+
+        var navigation = 
+              orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+
+        //EF access the OrderItem collection property through its backing field
+        navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+        // Other configuration
+    }
 }
 ```
 
-Użycie pola zamiast właściwości jednostki OrderItem jest trwały, tak jakby listy&lt;OrderItem&gt; właściwości. Jednak przedstawia jedną metodę dostępu (metoda AddOrderItem) do dodawania nowych elementów do zlecenia. W związku z tym zachowanie są ze sobą powiązane i dane będą spójne w całym kod źródłowy aplikacji, która używa modelu domeny.
+Użycie pola zamiast właściwości jednostki OrderItem jest trwały, tak jakby listy&lt;OrderItem&gt; właściwości. Jednak eksponuje jedną metodę dostępu `AddOrderItem` metoda dodawania nowych elementów do zlecenia. W związku z tym zachowanie są ze sobą powiązane i dane będą spójne w całym kod źródłowy aplikacji, która używa modelu domeny.
 
 ## <a name="implementing-custom-repositories-with-entity-framework-core"></a>Wdrażanie niestandardowe repozytoria z programu Entity Framework Core
 
@@ -116,7 +131,6 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
     public class BuyerRepository : IBuyerRepository
     {
         private readonly OrderingContext _context;
-
         public IUnitOfWork UnitOfWork
         {
             get
@@ -124,34 +138,31 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
                 return _context;
             }
         }
-    }
 
-    public BuyerRepository(OrderingContext context)
-    {
-        if (context == null)
+        public BuyerRepository(OrderingContext context)
         {
-            throw new ArgumentNullException(
-                nameof(context));
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
-        _context = context;
-    }
 
-    public Buyer Add(Buyer buyer)
-    {
-        return _context.Buyers.Add(buyer).Entity;
-    }
+        public Buyer Add(Buyer buyer)
+        {
+            return _context.Buyers.Add(buyer).Entity; 
+        }
 
-    public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
-    {
-        var buyer = await _context.Buyers.Include(b => b.Payments)
-            .Where(b => b.FullName == BuyerIdentityGuid)
-            .SingleOrDefaultAsync();
-        return buyer;
+        public async Task<Buyer> FindAsync(string BuyerIdentityGuid)
+        {
+            var buyer = await _context.Buyers
+                .Include(b => b.Payments)
+                .Where(b => b.FullName == BuyerIdentityGuid)
+                .SingleOrDefaultAsync();
+
+            return buyer;
+        }
     }
 }
 ```
 
-Należy pamiętać, że interfejs IBuyerRepository pochodzi z warstwy modelu domeny. Jednak implementacja repozytorium jest wykonywane na trwałość i warstwę infrastruktury.
+Należy pamiętać, że interfejs IBuyerRepository pochodzi z warstwy modelu domeny jako kontrakt. Jednak implementacja repozytorium jest wykonywane na trwałość i warstwę infrastruktury.
 
 EF DbContext jest dostarczany za pomocą konstruktora za pomocą iniekcji zależności. Są one udostępniane między wielu repozytoriów w ramach tego samego zakresu żądania HTTP, dzięki użyciu jego istnienia domyślnego (ServiceLifetime.Scoped) w kontenerze IoC (które można również jawnie ustawić z usługami. AddDbContext&lt;&gt;).
 
@@ -185,7 +196,7 @@ Jeśli były używane DbContext bezpośrednio, tylko wybrane trzeba byłoby do u
 
 ## <a name="ef-dbcontext-and-iunitofwork-instance-lifetime-in-your-ioc-container"></a>EF DbContext i IUnitOfWork okres istnienia wystąpienia w Twojej kontenera IoC
 
-Obiekt DbContext (widoczne jako obiekt IUnitOfWork) może być konieczne być współużytkowane przez wielu repozytoriów w ramach tego samego zakresu żądania HTTP. Na przykład dotyczy to podczas wykonywania operacji musi uwzględniać wiele wartości zagregowanych lub po prostu ponieważ używasz wielu wystąpień repozytorium. Należy również podać, czy interfejs IUnitOfWork jest częścią domeny, a nie typu EF.
+Obiekt DbContext (widoczne jako obiekt IUnitOfWork) może być konieczne być współużytkowane przez wielu repozytoriów w ramach tego samego zakresu żądania HTTP. Na przykład dotyczy to podczas wykonywania operacji musi uwzględniać wiele wartości zagregowanych lub po prostu ponieważ używasz wielu wystąpień repozytorium. Należy również podać, czy interfejs IUnitOfWork jest częścią warstwą domeny, nie EF podstawowego typu.
 
 Aby to zrobić, wystąpienie obiektu DbContext musi mieć ustawioną wartość ServiceLifetime.Scoped jego okres istnienia usługi. Jest to domyślny okres istnienia podczas rejestrowania obiektu DbContext z usług. AddDbContext w Twojej kontenera IoC z metody ConfigureServices pliku Startup.cs w projekcie interfejsu API platformy ASP.NET Core sieci Web. Ilustruje to poniższy kod.
 
@@ -199,16 +210,16 @@ public IServiceProvider ConfigureServices(IServiceCollection services)
     }).AddControllersAsServices();
 
     services.AddEntityFrameworkSqlServer()
-    .AddDbContext<OrderingContext>(options =>
-    {
-        options.UseSqlServer(Configuration["ConnectionString"],
-        sqlop => sqlop.MigrationsAssembly(typeof(Startup).GetTypeInfo().
-        Assembly.GetName().Name));
-    },
-    ServiceLifetime.Scoped // Note that Scoped is the default choice
-    // in AddDbContext. It is shown here only for
-    // pedagogic purposes.
-    );
+      .AddDbContext<OrderingContext>(options =>
+      {
+          options.UseSqlServer(Configuration["ConnectionString"],
+                               sqlOptions => sqlOptions.MigrationsAssembly(typeof(Startup).GetTypeInfo().
+                                                                                    Assembly.GetName().Name));
+      },
+      ServiceLifetime.Scoped // Note that Scoped is the default choice
+                             // in AddDbContext. It is shown here only for
+                             // pedagogic purposes.
+      );
 }
 ```
 
@@ -252,54 +263,70 @@ Adnotacje danych musi być używany w klasy modelu jednostki, która jest bardzi
 
 ### <a name="fluent-api-and-the-onmodelcreating-method"></a>Interfejsu API Fluent i metody OnModelCreating
 
-Jak wspomniano, aby można było zmienić konwencje i mapowania, służy metody OnModelCreating klasy DbContext. W poniższym przykładzie pokazano, jak firma Microsoft to zrobić w porządkowania mikrousługi w eShopOnContainers.
+Jak wspomniano, aby można było zmienić konwencje i mapowania, służy metody OnModelCreating klasy DbContext. 
+
+Porządkowania mikrousługi w eShopOnContainers implementuje jawnego mapowania konfiguracji i, w razie potrzeby, jak pokazano w poniższym kodzie.
 
 ```csharp
+// At OrderingContext.cs from eShopOnContainers
 protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
-    //Other entities
-    modelBuilder.Entity<OrderStatus>(ConfigureOrderStatus);
-    //Other entities
+   // ...
+   modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
+   // Other entities’ configuration ...
 }
 
-void ConfigureOrder(EntityTypeBuilder<Order> orderConfiguration)
+// At OrderEntityTypeConfiguration.cs from eShopOnContainers
+class OrderEntityTypeConfiguration : IEntityTypeConfiguration<Order>
 {
-    orderConfiguration.ToTable("orders", DEFAULT_SCHEMA);
-    orderConfiguration.HasKey(o => o.Id);
-    orderConfiguration.Property(o => o.Id).ForSqlServerUseSequenceHiLo("orderseq", DEFAULT_SCHEMA);
-    orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
-    orderConfiguration.Property<string>("Street").IsRequired();
-    orderConfiguration.Property<string>("State").IsRequired();
-    orderConfiguration.Property<string>("City").IsRequired();
-    orderConfiguration.Property<string>("ZipCode").IsRequired();
-    orderConfiguration.Property<string>("Country").IsRequired();
-    orderConfiguration.Property<int>("BuyerId").IsRequired();
-    orderConfiguration.Property<int>("OrderStatusId").IsRequired();
-    orderConfiguration.Property<int>("PaymentMethodId").IsRequired();
+    public void Configure(EntityTypeBuilder<Order> orderConfiguration)
+    {
+            orderConfiguration.ToTable("orders", OrderingContext.DEFAULT_SCHEMA);
 
-    var navigation =
-    orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
-    // DDD Patterns comment:
-    // Set as Field (new since EF 1.1) to access
-    // the OrderItem collection property as a field
-    navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+            orderConfiguration.HasKey(o => o.Id);
 
-    orderConfiguration.HasOne(o => o.PaymentMethod)
-        .WithMany()
-        .HasForeignKey("PaymentMethodId")
-        .OnDelete(DeleteBehavior.Restrict);
-        orderConfiguration.HasOne(o => o.Buyer)
-        .WithMany()
-        .HasForeignKey("BuyerId");
-        orderConfiguration.HasOne(o => o.OrderStatus)
-        .WithMany()
-        .HasForeignKey("OrderStatusId");
+            orderConfiguration.Ignore(b => b.DomainEvents);
+
+            orderConfiguration.Property(o => o.Id)
+                .ForSqlServerUseSequenceHiLo("orderseq", OrderingContext.DEFAULT_SCHEMA);
+
+            //Address Value Object persisted as owned entity type supported since EF Core 2.0
+            orderConfiguration.OwnsOne(o => o.Address);
+
+            orderConfiguration.Property<DateTime>("OrderDate").IsRequired();
+            orderConfiguration.Property<int?>("BuyerId").IsRequired(false);
+            orderConfiguration.Property<int>("OrderStatusId").IsRequired();
+            orderConfiguration.Property<int?>("PaymentMethodId").IsRequired(false);
+            orderConfiguration.Property<string>("Description").IsRequired(false);
+
+            var navigation = orderConfiguration.Metadata.FindNavigation(nameof(Order.OrderItems));
+            
+            // DDD Patterns comment:
+            //Set as field (New since EF 1.1) to access the OrderItem collection property through its field
+            navigation.SetPropertyAccessMode(PropertyAccessMode.Field);
+
+            orderConfiguration.HasOne<PaymentMethod>()
+                .WithMany()
+                .HasForeignKey("PaymentMethodId")
+                .IsRequired(false)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            orderConfiguration.HasOne<Buyer>()
+                .WithMany()
+                .IsRequired(false)
+                .HasForeignKey("BuyerId");
+
+            orderConfiguration.HasOne(o => o.OrderStatus)
+                .WithMany()
+                .HasForeignKey("OrderStatusId");
+    }
 }
 ```
 
-Można ustawić mapowania interfejsu API Fluent w ramach tej samej metody OnModelCreating, ale zaleca się partycji kodu i mają wiele submethods, po jednym dla każdego obiektu, jak pokazano w przykładzie. Dla modeli szczególnie duże nawet może być wskazane mieć osobne pliki źródłowe (klas statycznych) konfigurowania typów jednostek inny.
+Można ustawić mapowania interfejsu API Fluent w ramach tej samej metody OnModelCreating, ale zaleca się partycje kodu i mieć wielu klas konfiguracji, po jednym dla każdego obiektu, jak pokazano w przykładzie. Szczególnie w przypadku modeli szczególnie duże jest posiadanie osobną konfiguracją klasy do konfigurowania typów jednostek inny.
 
-Kod w tym przykładzie jest jawne. Konwencje EF Core jednak większość to automatycznie, więc rzeczywisty kod będzie potrzebny do zapisania do osiągnięcia samo będzie znacznie mniejszy.
+Kod w tym przykładzie przedstawiono kilka jawne deklaracje i mapowania. Konwencje EF Core jednak wiele z tych mapowania automatycznie, więc rzeczywisty kod, który będzie potrzebny w Twoim przypadku może być mniejszy.
+
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Algorytm Hi/Lo EF główną
 
@@ -319,46 +346,114 @@ Jądro EF obsługuje [HiLo](http://stackoverflow.com/questions/282099/whats-the-
 
 ### <a name="mapping-fields-instead-of-properties"></a>Mapowanie pól zamiast właściwości
 
-Dzięki funkcji EF Core 1.1, mapująca kolumn do pól jest możliwe, aby nie używać żadnych właściwości w klasie jednostki i tylko w celu mapowania kolumn z tabeli do pola. Użycia który będą pól prywatnych dla stanów wewnętrznych, które nie muszą być dostępne spoza jednostki.
+Przy użyciu tej funkcji dostępne od wersji 1.1 Core EF, możesz bezpośrednio mapować kolumn do pól. Istnieje możliwość, aby nie używać właściwości w klasie jednostki i tylko w celu mapowania kolumn z tabeli do pola. Użycia który będą pól prywatnych dla stanów wewnętrznych, które nie muszą być dostępne spoza jednostki. 
 
-EF 1.1 obsługuje mapują pole bez właściwości powiązanych z kolumną w bazie danych. Można to zrobić, kolekcje, takie jak listy z jednego pola lub również&lt; &gt; pola. Ten punkt wspomniano wcześniej, gdy Rozmawialiśmy modelowania klasy modelu domeny, ale tutaj można zobaczyć, jak mapowania odbywa się przy użyciu konfiguracji PropertyAccessMode.Field wyróżnione poprzedni kod.
+Można to zrobić z jednego pola lub kolekcji, takie jak `List<>` pola. Ten punkt wspomniano wcześniej Rozmawialiśmy modelowania klasy modelu domeny, ale tutaj można zobaczyć, jak mapowania jest wykonywane z `PropertyAccessMode.Field` konfiguracji wyróżnione poprzedni kod.
 
-### <a name="using-shadow-properties-in-value-objects-for-hidden-ids-at-the-infrastructure-level"></a>Przy użyciu właściwości cienia w obiektach wartości identyfikatorów ukryte na poziomie infrastruktury
+### <a name="using-shadow-properties-in-ef-core-hidden-at-the-infrastructure-level"></a>Za pomocą właściwości cienia w podstawowej EF ukryte na poziomie infrastruktury
 
 Właściwości cienia w EF Core są właściwości, które nie istnieją w modelu klasy jednostki. Wartości i stanów te właściwości, które są obsługiwane wyłącznie w [ChangeTracker](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.changetracking.changetracker) klasy na poziomie infrastruktury.
 
-Z punktu widzenia DDD cień właściwości są wygodny sposób zaimplementować obiekty wartości ukrywając identyfikator jako klucz podstawowy właściwości cienia. Jest to ważne, ponieważ obiekt wartości nie powinna mieć tożsamości (co najmniej nie powinno być identyfikator warstwy modelu domeny podczas kształtowania obiekty wartości). Punkt, w tym miejscu jest począwszy od bieżącej wersji EF Core EF Core nie sposób implementowania obiekty wartości jako [typów złożonych](https://msdn.microsoft.com/library/jj680147(v=vs.113).aspx), jak to możliwe w EF 6.x. To jest aktualnie muszą implementować obiekt wartości jako jednostki o identyfikatorze ukryte (klucz podstawowy) ustawiona jako wartość właściwości cienia.
 
-Jak widać w [adres obiektu wartości](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Address.cs) w eShopOnContainers, w modelu adresów nie ma Identyfikatora:
+## <a name="implementing-the-specification-pattern"></a>Implementacja wzorca specyfikacji
+
+Jak wprowadzone wcześniej w sekcji projektu, wzorzec specyfikacji (pełną nazwę byłoby wzorzec specyfikacji zapytania) jest wzorca projektowego Domain-Driven zaprojektowany jako miejsce, w którym można umieścić definicji zapytania opcjonalne, sortowanie i stronicowanie logiki. Wzorzec specyfikacja definiuje kwerendę w obiekcie. Na przykład aby hermetyzować stronicowane zapytanie, które wyszukuje niektórych produktów, można utworzyć specyfikację PagedProduct, która pobiera niezbędne parametry wejściowe (pageNumber pageSize, filtr, itp.). Następnie metoda z repozytorium (zazwyczaj przeciążenia List()) Zaakceptuj ISpecification i uruchom zapytanie oczekiwanych na podstawie tej specyfikacji.
+
+Przykładowy ogólny interfejs specyfikacji jest następujący kod z [eShopOnweb](https://github.com/dotnet-architecture/eShopOnWeb). 
 
 ```csharp
-public class Address : ValueObject
+// GENERIC SPECIFICATION INTERFACE
+// https://github.com/dotnet-architecture/eShopOnWeb 
+
+public interface ISpecification<T>
 {
-    public String Street { get; private set; }
-    public String City { get; private set; }
-    public String State { get; private set; }
-    public String Country { get; private set; }
-    public String ZipCode { get; private set; }
-    //Constructor initializing, etc
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
 }
 ```
 
-Jednak w tle, należy podać identyfikator tak, aby EF Core jest w stanie zachować te dane w tabelach bazy danych. Przejdziemy w metodzie ConfigureAddress [OrderingContext.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Infrastructure/OrderingContext.cs) klasy na poziomie infrastruktury, więc firma Microsoft nie charakteryzują się z kodem infrastruktury EF modelu domeny.
+Następnie implementacji klasy podstawowej specyfikacji ogólnego jest poniżej.
 
 ```csharp
-void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
+// GENERIC SPECIFICATION IMPLEMENTATION (BASE CLASS)
+// https://github.com/dotnet-architecture/eShopOnWeb
+ 
+public abstract class BaseSpecification<T> : ISpecification<T>
 {
-    addressConfiguration.ToTable("address", DEFAULT_SCHEMA);
-    // DDD pattern comment:
-    // Implementing the Address ID as a shadow property, because the
-    // address is a value object and an identity is not required for a
-    // value object
-    // EF Core just needs the ID so it can store it in a database table
-    // See: https://docs.microsoft.com/ef/core/modeling/shadow-properties
-    addressConfiguration.Property<int>("Id").IsRequired();
-    addressConfiguration.HasKey("Id");
+    public BaseSpecification(Expression<Func<T, bool>> criteria)
+    {
+        Criteria = criteria;
+    }
+    public Expression<Func<T, bool>> Criteria { get; }
+
+    public List<Expression<Func<T, object>>> Includes { get; } = 
+                                           new List<Expression<Func<T, object>>>();
+
+    public List<string> IncludeStrings { get; } = new List<string>();
+ 
+    protected virtual void AddInclude(Expression<Func<T, object>> includeExpression)
+    {
+        Includes.Add(includeExpression);
+    }
+    
+    // string-based includes allow for including children of children
+    // e.g. Basket.Items.Product
+    protected virtual void AddInclude(string includeString)
+    {
+        IncludeStrings.Add(includeString);
+    }
 }
 ```
+
+Następującą specyfikację ładuje podmiot koszyka pojedynczy identyfikator koszyka lub identyfikator nabywców, do którego należy koszyka. Będzie on [wczesny obciążenia](https://docs.microsoft.com/en-us/ef/core/querying/related-data) koszyka kolekcji elementów.
+
+```csharp
+// SAMPLE QUERY SPECIFICATION IMPLEMENTATION
+
+public class BasketWithItemsSpecification : BaseSpecification<Basket>
+{
+    public BasketWithItemsSpecification(int basketId)
+        : base(b => b.Id == basketId)
+    {
+        AddInclude(b => b.Items);
+    }
+    public BasketWithItemsSpecification(string buyerId)
+        : base(b => b.BuyerId == buyerId)
+    {
+        AddInclude(b => b.Items);
+    }
+}
+```
+
+A na koniec są wyświetlane poniżej ogólnego repozytorium EF służy specyfikacja filtru i obciążenia eager danych związanych z typem danej jednostki T.
+
+```csharp
+// GENERIC EF REPOSITORY WITH SPECIFICATION
+// https://github.com/dotnet-architecture/eShopOnWeb
+
+public IEnumerable<T> List(ISpecification<T> spec)
+{
+    // fetch a Queryable that includes all expression-based includes
+    var queryableResultWithIncludes = spec.Includes
+        .Aggregate(_dbContext.Set<T>().AsQueryable(),
+            (current, include) => current.Include(include));
+ 
+    // modify the IQueryable to include any string-based include statements
+    var secondaryResult = spec.IncludeStrings
+        .Aggregate(queryableResultWithIncludes,
+            (current, include) => current.Include(include));
+ 
+    // return the result of the query using the specification's criteria expression
+    return secondaryResult
+                    .Where(spec.Criteria)
+                    .AsEnumerable();
+}
+```
+Oprócz hermetyzując logiki filtrowania, specyfikację można określić kształtu danych ma zostać zwrócona, łącznie z właściwości, które można wypełnić. 
+
+Mimo że firma Microsoft nie jest zalecane, aby zwracać IQueryable z repozytorium, jest doskonale poprawnie z nich korzystać w repozytorium w celu zbudowania zestawu wyników. Takie podejście używany na liście zawiera metodę powyżej, która używa wyrażenia IQueryable pośredniego stworzenie listy kwerendy przed wykonaniem kwerendy z kryteriami specyfikacji w ostatnim wierszu jest widoczny.
+
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -377,6 +472,9 @@ void ConfigureAddress(EntityTypeBuilder<Address> addressConfiguration)
 -   **Właściwości w tle**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
+-   **Wzorzec specyfikacji**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    
 
 >[!div class="step-by-step"]
 [Poprzednie] (infrastruktury trwałości warstwy design.md) [dalej] (nosql — bazy danych — trwałości infrastructure.md)

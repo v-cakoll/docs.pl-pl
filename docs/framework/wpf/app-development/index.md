@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff8f8ab85cda7bdbf66b000a89d8a862e765d561
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 67a49e1b27c227623d01dba17b7b0a1aea7c1290
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a>
@@ -134,10 +135,10 @@ ms.lasthandoff: 10/22/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
-|[Systemu Windows na platformie WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Zawiera szczegółowe informacje dotyczące zarządzania systemu windows, w tym dotyczące używania aplikacji <xref:System.Windows.Window> pola klasy i okna dialogowego.|  
-|[Omówienie nawigacji](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Omówienie zarządzania nawigacji między stronami aplikacji.|  
+|[Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)|Zawiera omówienie <xref:System.Windows.Application> klasy w tym zarządzanie okresem istnienia aplikacji, systemu windows, zasobów aplikacji i nawigacji.|  
+|[Okna w programie WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)|Zawiera szczegółowe informacje dotyczące zarządzania systemu windows, w tym dotyczące używania aplikacji <xref:System.Windows.Window> pola klasy i okna dialogowego.|  
+|[Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)|Omówienie zarządzania nawigacji między stronami aplikacji.|  
 |[Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)|Zawiera omówienie [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)].|  
 |[Tworzenie i wdrażanie](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)|Opisuje sposób tworzenia i wdrażania aplikacji WPF.|  
 |[Wprowadzenie do platformy WPF w programie Visual Studio 2015](../../../../docs/framework/wpf/getting-started/introduction-to-wpf-in-vs.md)|Zawiera opis głównych funkcji WPF.|  
-|[Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Wskazówki, które pokazuje, jak utworzyć WPF aplikacji przy użyciu strony nawigacji, układ, kontrolek, obrazy, style i powiązania.|
+|[Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Wskazówki, które pokazuje, jak utworzyć WPF aplikacji przy użyciu strony nawigacji, układ, kontrolek, obrazy, style i powiązania.|

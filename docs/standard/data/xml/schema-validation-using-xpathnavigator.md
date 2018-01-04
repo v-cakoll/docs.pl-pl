@@ -16,11 +16,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 91ad5c2e6f8af7f2c3709b9dff65bd728de08e5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d06b82998deba05abe0fca1d4e93cd5c5ea319eb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>Weryfikacja schematu za pomocą parametrem XPathNavigator
 Przy użyciu <xref:System.Xml.XmlDocument> klasy, można sprawdzić poprawność zawartości XML zawartych w <xref:System.Xml.XmlDocument> obiektu na dwa sposoby. Pierwszym sposobem jest sprawdzanie zawartości XML przy użyciu sprawdzania poprawności <xref:System.Xml.XmlReader> obiekt i drugim sposobem jest użycie <xref:System.Xml.XmlDocument.Validate%2A> metody <xref:System.Xml.XmlDocument> klasy. Można również wykonywać walidacji tylko do odczytu zawartości przy użyciu XML <xref:System.Xml.XPath.XPathDocument> klasy.  
@@ -370,8 +373,8 @@ class ValidatingReaderExample
  <xref:System.Xml.XmlDocument>  
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Odczytywanie danych XML przy użyciu XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
- [Wybieranie, Evaluating i dopasowywania danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
- [Uzyskiwanie dostępu do danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
- [Edytowanie danych XML przy użyciu parametrem XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Wczytywanie danych XML przy użyciu klas XPathDocument i XmlDocument](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
+ [Wybieranie, obliczanie i dopasowywanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
+ [Uzyskiwanie dostępu do danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Edytowanie danych XML przy użyciu klasy XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)

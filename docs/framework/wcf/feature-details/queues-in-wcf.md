@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d00f8847e64e30b42490f319ea3e1df5e5a1850d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c87e384b3186a1dd4b53ba6c21d92bf4d0e6a8c7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Kolejki programu Windows Communication Foundation
 Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługę kolejki. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia obsługę dla usługi kolejkowania wiadomości dzięki wykorzystaniu kolejkowania wiadomości Microsoft (wcześniej znane jako MSMQ) jako transportu i umożliwia realizację następujących scenariuszy:  
@@ -37,22 +38,22 @@ Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indi
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
  Omówienie koncepcji usługi kolejkowania komunikatów.  
   
- [Usługi kolejkowania wiadomości w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  Omówienie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kolejka pomocy technicznej.  
   
- [Porady: wymiana komunikatów z punktami końcowymi WCF umieszczonych w kolejce](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
  Wyjaśniono, jak używać <xref:System.ServiceModel.NetMsmqBinding> klasy do komunikacji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
   
- [Porady: wymiana komunikatów z punktami końcowymi WCF i aplikacji usługi kolejkowania komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+ [Instrukcje: wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
  Wyjaśniono, jak używać <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> do komunikacji między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i aplikacji usługi kolejkowania komunikatów.  
   
- [Grupowanie w kolejce wiadomości w sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
+ [Grupowanie komunikatów z obsługą kolejek w ramach sesji](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)  
  Wyjaśniono, jak wiadomości w kolejce ułatwiające przetwarzania komunikatów skorelowane przez aplikację odbierającą jednej grupy.  
   
  [Tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
  Wyjaśniono, jak partii komunikatów w ramach transakcji.  
   
- [Przy użyciu kolejki utraconych wiadomości do obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  Opisano sposób obsługi błędów transferu i dostarczania wiadomości przy użyciu kolejki utraconych wiadomości oraz do przetwarzania komunikatów z kolejki utraconych wiadomości.  
   
  [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)  
@@ -61,7 +62,7 @@ Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indi
  [Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
  Zawiera podsumowanie różnic w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kolejki funkcji między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
- [Zabezpieczanie komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
+ [Ochrona komunikatów za pomocą zabezpieczeń transportu](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  Opisuje sposób użyć zabezpieczeń transportu do zabezpieczenia wiadomości w kolejce.  
   
  [Korzystanie z zabezpieczeń komunikatów](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)  
@@ -70,7 +71,7 @@ Tematy w tej sekcji omówiono w nim [!INCLUDE[indigo1](../../../../includes/indi
  [Rozwiązywanie problemów obsługi komunikatów kolejek](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)  
  Wyjaśniono, jak rozwiązać typowe problemy z kolejkowania wiadomości.  
   
- [Najlepsze rozwiązania w zakresie komunikacji z obsługą kolejek](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
+ [Najlepsze rozwiązania dotyczące komunikacji z obsługą kolejek](../../../../docs/framework/wcf/feature-details/best-practices-for-queued-communication.md)  
  Wyjaśniono, najlepsze rozwiązania dotyczące używania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] komunikatu w kolejce.  
   
 ## <a name="see-also"></a>Zobacz też  

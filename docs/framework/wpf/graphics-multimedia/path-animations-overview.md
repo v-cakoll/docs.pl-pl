@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 237dbe83fa52bb967d2f2429fb2beb021c084f23
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10f2e27a2f68dd784c6fce66ae63873436923d63
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="path-animations-overview"></a>Przegląd Animacja ścieżki
 <a name="introduction"></a>W tym temacie przedstawiono animacje ścieżki, które umożliwiają korzystanie geometrycznych ścieżki do generowania wartości danych wyjściowych. Ścieżka animacje są przydatne w przypadku przenoszenia i obracanie obiektów wzdłuż ścieżki złożone.  
@@ -63,9 +64,9 @@ ms.lasthandoff: 11/21/2017
   
 |Typ właściwości|Odpowiadającą klasę animacji ścieżki|Przykład|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Animowanie obiektu wzdłuż ścieżki (dwa razy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
-|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animowanie obiektu wzdłuż ścieżki (macierzy Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
-|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animowanie obiektu wzdłuż ścieżki (punkt Animacja)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[Animowanie obiektu na ścieżce (animacja double)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[Animowanie obiektu na ścieżce (animacja Matrix)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)|  
+|<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[Animowanie obiektu na ścieżce (animacja punktu)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)|  
   
  A <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> generuje <xref:System.Windows.Media.Matrix> wartości z jego <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.PathGeometry%2A>. W przypadku użycia z <xref:System.Windows.Media.MatrixTransform>, <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> można przenieść obiekt na ścieżce. Jeśli ustawisz <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath.DoesRotateWithTangent%2A> właściwość <xref:System.Windows.Media.Animation.MatrixAnimationUsingPath> do `true`, również obraca obiekt wzdłuż krzywych ścieżki.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Ścieżka animacji próbki](http://go.microsoft.com/fwlink/?LinkID=160028)  
- [Składnia znacznika ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
- [Ścieżka animacji — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Omówienie techniki animacji właściwość](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)
+ [Składnia znacznikowania ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-markup-syntax.md)  
+ [Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)

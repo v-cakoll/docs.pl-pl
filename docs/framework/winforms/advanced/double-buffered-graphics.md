@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89413e0958366dd39c62bfaedb7e36471123bc22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e7e4445b0a729eb1f826d17340db02f0c56149b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="double-buffered-graphics"></a>Podwójnie buforowana grafika
 Migotania jest to powszechny problem programowania grafiki. Operacje graficzne, wymagające wielu operacji malowania złożonego może spowodować renderowanych wyświetlania migotać ani w przeciwnym razie można zaakceptować wygląd obrazów. Aby rozwiązać te problemy, .NET Framework zapewnia dostęp do podwójnego buforowania.  
@@ -46,7 +47,7 @@ Migotania jest to powszechny problem programowania grafiki. Operacje graficzne, 
  <xref:System.Drawing.BufferedGraphics>  
  <xref:System.Drawing.BufferedGraphicsContext>  
  <xref:System.Drawing.BufferedGraphicsManager>  
- [Porady: ręczne renderowanie buforowanej grafiki](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
- [Porady: Zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
- [Porady: ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
- [Grafika i rysowanie w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+ [Instrukcje: ręczne renderowanie buforowanej grafiki](../../../../docs/framework/winforms/advanced/how-to-manually-render-buffered-graphics.md)  
+ [Instrukcje: zmniejszanie migotania grafiki za pomocą podwójnego buforowania formularzy i kontrolek](../../../../docs/framework/winforms/advanced/how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)  
+ [Instrukcje: ręczne zarządzanie buforowaną grafiką](../../../../docs/framework/winforms/advanced/how-to-manually-manage-buffered-graphics.md)  
+ [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)

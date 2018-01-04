@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2bb7251b87356361844e075831c95885879476
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c606406fb47d6297e70bfa3db5fc17631969e4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza kontroli <xref:System.Windows.Forms.ListBox> formantu. Robi prawie wszystkie czy pole listy, a także można wyświetlić znacznik wyboru obok elementów na liście. Inne różnice między formantami dwóch są, że zaznaczone, obsługiwana jest tylko pola listy <xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; oraz że zaznaczone pola listy może mieć tylko jeden element ani nie wybrano none. Należy pamiętać, że wybrany element pojawi się zaznaczony w formularzu i nie jest taka sama jak zaznaczony element.  
@@ -33,6 +34,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.CheckedListBox> rozszerza 
  <xref:System.Windows.Forms.CheckedListBox>  
  <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>  
- [Informacje o formancie ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
- [Formanty używane do obsługi opcji List formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
- [Porady: ustalić formancie CheckedListBox formularzy zaznaczonych elementów w systemie Windows](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+ [ListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Instrukcje: określanie zaznaczonych elementów w kontrolce CheckedListBox formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

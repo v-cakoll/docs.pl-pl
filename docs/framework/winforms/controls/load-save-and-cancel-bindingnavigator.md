@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4bc4f53c404e3767b9f98ca5ab46b19db31f9c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2dd45b33fb1f99c280e126b9e601692a85da5dba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>Porady: dodawanie przycisków załaduj, zapisz i anuluj do kontrolki BindingNavigator formularzy systemu Windows
 <xref:System.Windows.Forms.BindingNavigator> Formant jest specjalnych <xref:System.Windows.Forms.ToolStrip> formant, który jest przeznaczony do nawigowania i operowanie nimi formantów w formularzu, które są związane z danymi.  
@@ -123,5 +124,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.ToolStrip>  
- [BindingNavigator — formant](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
- [Informacje o składniku BindingSource](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+ [BindingNavigator, kontrolka](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)  
+ [BindingSource, składnik — omówienie](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)

@@ -17,20 +17,21 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ee925facb1dee797c94efc8d795150217b081b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e423178c12e7882ed331eece17d170c4c79d5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox"></a>RichTextBox
 <xref:System.Windows.Controls.RichTextBox> Element definiuje kontrolkę edycji dzięki wbudowanej obsłudze funkcje takie jak wycinanie i wklejanie, prezentacji sformatowanego dokumentu i zawartości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [RichTextBox — omówienie](../../../../docs/framework/wpf/controls/richtextbox-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.TextBox>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Przegląd dokumentu przepływu](../../../../docs/framework/wpf/advanced/flow-document-overview.md)

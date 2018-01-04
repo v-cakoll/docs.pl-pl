@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c895a8a7c46020fa5277a3e592c7d3e18f02ab6
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c2a6f5b67d4e8bb0653b7f472296d86a770ccbf8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>Jak kodować i dekodować obraz BMP
 Poniższe przykłady przedstawiają sposób dekodowania i kodowanie [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)] obrazu przy użyciu konkretnych <xref:System.Windows.Media.Imaging.BmpBitmapDecoder> i <xref:System.Windows.Media.Imaging.BmpBitmapEncoder> obiektów.  
@@ -48,4 +49,4 @@ Poniższe przykłady przedstawiają sposób dekodowania i kodowanie [!INCLUDE[TL
  [!code-vb[BmpBitmapDecoderEncoder#4](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BmpBitmapDecoderEncoder/VB/BitmapFrame.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

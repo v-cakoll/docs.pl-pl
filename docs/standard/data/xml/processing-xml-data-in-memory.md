@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ec4ccbff095071b279e07cee6a1aab3ca830423f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9fc2f9e7a9ba232c062b12e8c1aeb72eece760e2
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="processing-xml-data-in-memory"></a>Przetwarzanie danych XML w pamięci
 Microsoft .NET Framework obejmuje trzy modele przetwarzania danych XML: <xref:System.Xml.XmlDocument> klasy <xref:System.Xml.XPath.XPathDocument> klasy, a [LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
@@ -29,14 +32,14 @@ Microsoft .NET Framework obejmuje trzy modele przetwarzania danych XML: <xref:Sy
  [LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) jest nowy model w programie .NET Framework w wersji 3.5 przetwarzania danych XML. Jest modelu w pamięci, która wykorzystuje [LINQ (zapytania język Language-Integrated)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d). LINQ rozszerza składnię języka C# i Visual Basic zapewnienie nowe możliwości zapytania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przetwarzania danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [Przetwarzanie danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
  Omówienie korzystania z <xref:System.Xml.XmlDocument>oraz ich powiązanymi klasami do przetworzenia danych XML.  
   
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  Omówienie korzystania z <xref:System.Xml.XPath.XPathDocument>, <xref:System.Xml.XmlDocument>, i <xref:System.Xml.XPath.XPathNavigator> klasy do przetwarzania danych XML.  
   
- [Dane XML procesu za pomocą LINQ do XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
+ [Przetwarzanie danych XML przy użyciu modelu LINQ to XML](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  Zawiera krótki przegląd LINQ do XML i łącza do LINQ do dokumentacji XML.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dokumenty XML i dane](../../../../docs/standard/data/xml/index.md)
+ [Dokumenty i dane XML](../../../../docs/standard/data/xml/index.md)

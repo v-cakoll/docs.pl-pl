@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d2f387ddc6671c640ce47759050f27dbdaf7146
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f28c0c4956c5e32dac204a99967ddd4b6352484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-workflows"></a>Przepływy pracy automatu stanów
 Komputer stanu jest dobrze znanego modelu programowania programy. <xref:System.Activities.Statements.StateMachine> Działania, wraz z <xref:System.Activities.Statements.State>, <xref:System.Activities.Statements.Transition>, i innych działań może służyć do tworzenia programów przepływu pracy komputera stanu. Ten temat zawiera omówienie tworzenia przepływów pracy komputera stanu.  
@@ -110,7 +111,7 @@ Komputer stanu jest dobrze znanego modelu programowania programy. <xref:System.A
  Stan, który reprezentuje ukończenie automatu stanów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [Instrukcje: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  [StateMachine, projektant działań](/visualstudio/workflow-designer/statemachine-activity-designer)  
  [State, projektant działań](/visualstudio/workflow-designer/state-activity-designer)  
  [FinalState, projektant działań](/visualstudio/workflow-designer/finalstate-activity-designer)  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2dbe0bcb5d3c46edcb97410e00832f1b9d6205b6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0ca385e1aee10fb10ac3e912999aec3a11d03ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>Jak ustawić położenie elementów podrzędnych siatki
 W tym przykładzie pokazano, jak użyć get i ustawić metody, które są zdefiniowane na <xref:System.Windows.Controls.Grid> położenie elementów podrzędnych.  
@@ -38,4 +39,4 @@ W tym przykładzie pokazano, jak użyć get i ustawić metody, które są zdefin
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Grid>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)

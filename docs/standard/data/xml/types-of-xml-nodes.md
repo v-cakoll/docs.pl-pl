@@ -13,11 +13,14 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3914a2c5c06a2cc73f14bc473984094b474d537e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 0fd196f4aed5d4faa3e703f639b927f001b50174
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="types-of-xml-nodes"></a>Typy węzłów XML
 Podczas odczytywania dokumentu XML do pamięci jako drzewo węzłów typy węzłów, węzłom ustalonymi podczas tworzenia węzłów. XML modelu DOM (Document Object) ma kilka rodzajów typy węzłów, określany przez sieci World Wide Web konsorcjum W3C i wymienione w sekcji 1.1.1 strukturę modelu DOM. W poniższej tabeli wymieniono typy węzłów przypisane do tego typu węzła oraz krótki opis każdego obiektu.  
@@ -54,4 +57,4 @@ Podczas odczytywania dokumentu XML do pamięci jako drzewo węzłów typy węzł
  Więcej informacji o hierarchii obiektów typy węzłów i ich nazwy odpowiadającego mu obiektu, dla [hierarchii XML modelu DOM (Document Object)](../../../../docs/standard/data/xml/xml-document-object-model-dom-hierarchy.md). Aby uzyskać więcej informacji dotyczących obiektów utworzonych w węźle drzewa, zobacz [mapowania hierarchii obiektów do danych XML](../../../../docs/standard/data/xml/mapping-the-object-hierarchy-to-xml-data.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

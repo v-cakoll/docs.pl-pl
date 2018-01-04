@@ -21,11 +21,14 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 6f2ffaeeb8a92dd7ab16b4ba233196230b595af2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ce442c679425e5d069a0e5e163cbe2ad46702480
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="decrypting-data"></a>Odszyfrowywanie danych
 Odszyfrowywanie jest odwrotnej operacji szyfrowania. Do szyfrowania klucza tajnego musisz znać klucz i IV, które były używane do szyfrowania danych. Do szyfrowania klucza publicznego musisz znać klucza publicznego (jeśli zostały zaszyfrowane przy użyciu klucza prywatnego) lub klucza prywatnego (jeśli zostały zaszyfrowane za pomocą klucza publicznego).  

@@ -26,11 +26,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80661b24c35742b57a98b51fe055b0df05b34cad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 16837a310eabf881da8c88c9192264b918592929
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a>Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i przywraca poprzedni zapisany stan, aby kontynuować aparat wyrażeń regularnych Wyszukiwanie w celu dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -226,5 +229,5 @@ ms.lasthandoff: 11/21/2017
  [Wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md)  
  [Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)  
  [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)  
- [Konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
+ [Konstrukcje warunkowe](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)  
  [Konstrukcje grupujące](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)

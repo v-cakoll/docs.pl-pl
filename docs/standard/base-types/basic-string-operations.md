@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f241b99f97cad081a65fd8654169e444a1b588cb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1ee53343a68a2c2169baefaebc68a817159d0313
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="basic-string-operations-in-net"></a>Podstawowe operacje na ciągach w .NET
 Aplikacje często odpowiadają użytkownikom tworząc wiadomości w oparciu o dane wejściowe użytkownika. Na przykład nie jest nietypowe dla witryn sieci Web odpowiadanie na nowo zalogowanego użytkownika o specjalne powitanie zawierające nazwę użytkownika. Kilka metod w <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy umożliwiają dynamicznie utworzyć niestandardowe ciągi do wyświetlenia w interfejsie użytkownika. Te metody także pomóc wykonywać podstawowe operacje na ciągach, takich jak tworzenie nowych ciągów w tablice bajtów, porównanie wartości ciągów i modyfikowanie istniejących ciągów.  
@@ -44,12 +47,12 @@ Aplikacje często odpowiadają użytkownikom tworząc wiadomości w oparciu o da
  [Używanie klasy StringBuilder](../../../docs/standard/base-types/stringbuilder.md)  
  Opisuje sposób tworzenia i modyfikowania obiektów ciąg dynamiczny <xref:System.Text.StringBuilder> klasy.  
   
- [Porady: wykonywanie podstawowych na ciągach](../../../docs/standard/base-types/basic-manipulations.md)  
+ [Instrukcje: Wykonywanie podstawowych działań na ciągach](../../../docs/standard/base-types/basic-manipulations.md)  
  Pokazuje użycie podstawowe operacje na ciągach.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Konwersja typów w .NET](../../../docs/standard/base-types/type-conversion.md)  
+ [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)  
  Opisuje sposób konwertowania jednego typu do innego typu.  
   
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  Opisuje sposób formatowania ciągów za pomocą specyfikatory formatu.

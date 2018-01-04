@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 41b423235fc2ed9c0e0612c90017d41ab0e83d0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="richtextbox-overview"></a>RichTextBox — Przegląd
 <xref:System.Windows.Controls.RichTextBox> Kontroli umożliwia wyświetlanie lub edytowanie tym akapitów, obrazy, tabele i zawartości przepływu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -105,5 +106,5 @@ ms.lasthandoff: 11/21/2017
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tematy porad](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/richtextbox-how-to-topics.md)  
  [TextBox — omówienie](../../../../docs/framework/wpf/controls/textbox-overview.md)

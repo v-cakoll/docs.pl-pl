@@ -14,11 +14,12 @@ topic_type: Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 12a742774bff22030bdfaaa34e431059e016a4bf
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 90c3e8448a61145290ea4a75b1d38f7ae010cb9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="beginenumeration-function"></a>Funkcja Beingenumeration
 Moduł wyliczający resetuje do początku wyliczenia.  

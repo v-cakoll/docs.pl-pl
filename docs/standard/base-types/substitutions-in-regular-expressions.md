@@ -23,11 +23,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7a92c454548c69d1a64c954ab2d510b77553a895
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f93584b9dff721c8521d8cb58aaf5eab2c1fc931
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="substitutions-in-regular-expressions"></a>Podstawienia w wyrażeniach regularnych
 <a name="Top"></a>Podstawienia są elementy języka, które są rozpoznawane tylko w obrębie wzorce zamiany. Używają one wzorca wyrażenia regularnego w celu zdefiniowania całości lub części teksu, który ma zastąpić dopasowany tekst w ciągu wejściowym. Wzorzec zamieniania może składać się z co najmniej jednego podstawienia oraz znaków literału. Wzorce zamiany są dostarczane do przeciążenia <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> metodę, która ma `replacement` parametru i <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> metody. Metody Zastąp wzorzec dopasowany wzorzec, który jest zdefiniowany przez `replacement` parametru.  

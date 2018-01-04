@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac0a04c506919ef807a3f8c5ed5aa75ee998f64a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 67befd973dec38628f97a0d3153c399d48c18305
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.RadioButton> formanty wyświetlania zestawu co najmniej dwa wzajemnie wykluczających się opcji do użytkownika. Podczas gdy przycisków radiowych i pól wyboru mogą pojawiać się działają podobnie, jest istotną różnicą:, gdy użytkownik wybierze przycisk radiowy, innych przycisków radiowych w tej samej grupy nie można również wybrać. Z kolei można wybrać dowolną liczbę pól wyboru. Definiowanie Grupa przycisków radiowych informuje użytkownika, "W tym miejscu jest zestaw opcji, z których można wybrać jeden i tylko jeden".  
@@ -35,10 +36,10 @@ Formularze systemu Windows <xref:System.Windows.Forms.RadioButton> formanty wyś
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.RadioButton>  
- [Panel — Informacje o formancie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
- [Informacje o formancie GroupBox](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
- [Informacje o formancie CheckBox](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
- [Porady: Tworzenie klawiszy dostępu dla formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
- [Porady: Ustawianie tekstu wyświetlanego przez formant formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
- [Porady: Grupowanie formantów RadioButton formularzy systemu Windows, aby działały jak zestaw](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
- [RadioButton — formant](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)
+ [Panel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)  
+ [GroupBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/groupbox-control-overview-windows-forms.md)  
+ [CheckBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)  
+ [Instrukcje: tworzenie klawiszy dostępu dla kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)  
+ [Instrukcje: ustawianie tekstu wyświetlanego przez kontrolkę Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)  
+ [Instrukcje: grupowanie kontrolek RadioButton formularzy Windows Forms, aby działały jak zestaw](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [RadioButton, kontrolka](../../../../docs/framework/winforms/controls/radiobutton-control-windows-forms.md)

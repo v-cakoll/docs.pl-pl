@@ -17,11 +17,14 @@ caps.latest.revision: "95"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 697842906772c190c67e2f6ec1a4eb255229f289
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
 Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Studio pomaga w utworzeniu wieloplatformowych aplikacji i bibliotek dla platform firmy Microsoft, szybkie i łatwe.  
@@ -227,8 +230,8 @@ Przykład — informacje o wersji
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu przenośnej biblioteki klas z modelem MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
- [Zasoby aplikacji dla bibliotek przeznaczonych dla wielu platform](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
+ [Korzystanie z biblioteki klas przenośnych z modelem MVVM](../../../docs/standard/cross-platform/using-portable-class-library-with-model-view-view-model.md)  
+ [Zasoby aplikacji dla bibliotek przeznaczonych do wielu platform](../../../docs/standard/cross-platform/app-resources-for-libraries-that-target-multiple-platforms.md)  
  [Analizator przenośność .NET](http://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)  
- [.NET framework — obsługa dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
- [Wdrożenia](../../../docs/framework/deployment/net-framework-applications.md)
+ [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Wdrażanie](../../../docs/framework/deployment/net-framework-applications.md)

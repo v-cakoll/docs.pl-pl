@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4c163897af27c9b34c8cd87a3b197047f86d21ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 58f29783e48aa7173010ffec6a65f9ac1d8a2b62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-rectangle"></a>Jak narysować prostokąt
 W tym przykładzie pokazano, jak narysować prostokąt przy użyciu <xref:System.Windows.Shapes.Rectangle> elementu.  
@@ -42,5 +43,5 @@ W tym przykładzie pokazano, jak narysować prostokąt przy użyciu <xref:System
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Shapes.Rectangle>  
  [Przykładowe elementy kształtu](http://go.microsoft.com/fwlink/?LinkID=160037)  
- [Kształty i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
  [Przegląd tabeli](../../../../docs/framework/wpf/advanced/table-overview.md)

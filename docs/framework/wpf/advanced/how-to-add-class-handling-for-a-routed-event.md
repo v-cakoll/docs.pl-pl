@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abbbdce0ca12c4d8bdd12f616bf49c3d6f66f441
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f0315bbd1d1a5ab2ae08d8bc1810e240cb6a5a7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-class-handling-for-a-routed-event"></a>Jak dodać obsługę klasy dla zdarzenia trasowanego
 Kierowane zdarzenia mogą być obsługiwane przez programy obsługi klasy lub wystąpienia obsługi na dowolny węzeł w trasie. Klasy obsługi są wywoływane najpierw i implementacji klasy można pominąć zdarzenia z obsługi wystąpienia lub wprowadzenie innych zachowań określonych zdarzeń na zdarzenia, które należą do klasy podstawowej. W tym przykładzie przedstawiono dwie metody ściśle związanych wykonawczych obsługę klas.  
@@ -44,6 +45,6 @@ Kierowane zdarzenia mogą być obsługiwane przez programy obsługi klasy lub wy
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.EventManager>  
- [Oznaczanie kierowane zdarzenia, ponieważ obsługiwane i klasy obsługi](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [Dojście kierowanego zdarzenia](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+ [Oznaczanie zdarzeń trasowanych jako obsłużonych oraz obsługa klasy](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
+ [Obsługa zdarzenia trasowanego](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)

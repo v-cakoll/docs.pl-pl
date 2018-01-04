@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0d84f0c70619324bbbd38a2961914f88ac42671
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3985fc9916b3e95e650502ef1f8dc301363b1f90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-security"></a>Zabezpieczenia WebBrowser
 <xref:System.Windows.Forms.WebBrowser> Kontroli jest przeznaczona do pracy w trybie tylko pełnego zaufania. Zawartość HTML wyświetlanych w formancie mogą pochodzić z zewnętrznych serwerów sieci Web i mogą zawierać kod niezarządzany w postaci skryptów lub formantów sieci Web. Jeśli używasz <xref:System.Windows.Forms.WebBrowser> formantu w tej sytuacji formant jest nie mniej bezpieczne niż program Internet Explorer, ale zarządzanej <xref:System.Windows.Forms.WebBrowser> formantu nie uniemożliwia takie kodu niezarządzanego uruchomiona.  
@@ -29,5 +30,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.WebBrowser>  
- [Informacje o formancie WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
- [WebBrowser — formant](http://go.microsoft.com/fwlink/?LinkId=198812)
+ [WebBrowser, kontrolka — omówienie](../../../../docs/framework/winforms/controls/webbrowser-control-overview.md)  
+ [WebBrowser, kontrolka](http://go.microsoft.com/fwlink/?LinkId=198812)

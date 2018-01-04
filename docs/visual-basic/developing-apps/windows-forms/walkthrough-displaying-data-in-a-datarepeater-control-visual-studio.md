@@ -13,11 +13,11 @@ ms.assetid: 65dcdb95-6c3e-47cc-987d-190000f71653
 caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6f0cf690b816d57dc4a2646eb82d649727d033a9
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 93072bf30c8ee2a4a44c4862de0882072c298f8b
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-displaying-data-in-a-datarepeater-control-visual-studio"></a>Wskazówki: wyświetlanie danych w formancie DataRepeater (Visual Studio)
 Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie powiązanych danych w <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu.  
@@ -25,7 +25,7 @@ Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie po
 ## <a name="prerequisite"></a>Wymaganie wstępne  
  W tym przewodniku wymaga przykładowej bazy danych Northwind.  
   
- Jeśli nie ma tej bazy danych na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+ Jeśli nie ma tej bazy danych na komputerze deweloperskim, możesz pobrać go z [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkID=98088). Aby uzyskać instrukcje, zobacz [pobieranie przykładowe bazy danych](../../../framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
 ## <a name="overview"></a>Omówienie  
  Pierwsza część tego przewodnika składa się z czterech głównych zadań:  
@@ -93,7 +93,7 @@ Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie po
   
          —lub—  
   
-    -   Kliknij przycisk **nowe połączenie** można skonfigurować nowe połączenia danych. Aby uzyskać więcej informacji, zobacz [porady: tworzenie połączeń bazy danych programu SQL Server](http://msdn.microsoft.com/en-us/360c340d-e5a6-4a7e-a569-e95d500be43d).  
+    -   Kliknij przycisk **nowe połączenie** można skonfigurować nowe połączenia danych. Aby uzyskać więcej informacji, zobacz [dodać nowe połączenia](/visualstudio/data-tools/add-new-connections).  
   
 5.  Jeśli baza danych wymaga hasła, wybierz opcję, aby obejmować dane poufne, a następnie kliknij przycisk **dalej**.  
   
@@ -237,13 +237,13 @@ Ten przewodnik zawiera podstawowe scenariusz start zakończenie wyświetlanie po
 7.  Naciśnij klawisz F5, aby uruchomić aplikację. Po wybraniu każdego klienta w pierwszym <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> kontrolować zamówienia dla tego klienta są wyświetlane w ciągu sekundy <xref:Microsoft.VisualBasic.PowerPacks.DataRepeater> formantu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie powiązanych danych w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie formantów niepowiązanych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
- [Porady: Zmienianie układu formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
- [Porady: wyświetlanie nagłówków elementów w formancie Datarepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
- [Porady: wyszukiwanie danych w formancie DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
+ [Wprowadzenie do kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/introduction-to-the-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie powiązanych danych w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-bound-data-in-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie niepowiązanych kontrolek w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-unbound-controls-in-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: zmienianie układu kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-layout-of-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyświetlanie nagłówków elementów w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-display-item-headers-in-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyszukiwanie danych w kontrolce DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-search-data-in-a-datarepeater-control-visual-studio.md)  
  [Porady: Tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataRepeater (Visual Studio)](../../../visual-basic/developing-apps/windows-forms/how-to-create-a-master-detail-form-by-using-two-datarepeater-controls.md)  
- [Porady: Zmienianie wyglądu formantu DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
- [Porady: wyłączanie dodawania i usuwania elementów DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
- [Rozwiązywanie problemów z formantem DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)
+ [Instrukcje: zmienianie wyglądu kontrolki DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-change-the-appearance-of-a-datarepeater-control-visual-studio.md)  
+ [Instrukcje: wyłączanie dodawania i usuwania elementów DataRepeater](../../../visual-basic/developing-apps/windows-forms/how-to-disable-adding-and-deleting-datarepeater-items-visual-studio.md)  
+ [Rozwiązywanie problemów z kontrolką DataRepeater](../../../visual-basic/developing-apps/windows-forms/troubleshooting-the-datarepeater-control-visual-studio.md)

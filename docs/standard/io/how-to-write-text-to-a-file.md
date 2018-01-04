@@ -21,11 +21,14 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9605e514be380415d3c8b66ed28ae7de0a52ca1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-text-to-a-file"></a>Porady: wpisywanie tekstu do pliku
 Ten temat przedstawia różne sposoby tekst może zapisywać do pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
@@ -93,8 +96,8 @@ Ten temat przedstawia różne sposoby tekst może zapisywać do pliku dla aplika
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.StreamWriter>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
- [Porady: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
- [Porady: Odczyt i zapis do pliku danych nowo utworzony](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
- [Porady: otwieranie i Dołącz do pliku dziennika](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
- [Porady: Odczyt tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
+ [Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
+ [Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
+ [Instrukcje: otwieranie pliku dziennika i dołączanie do niego](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
+ [Instrukcje: odczytywanie tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
  [Plik i strumienia I-O](../../../docs/standard/io/index.md)

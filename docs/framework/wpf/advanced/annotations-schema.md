@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a68b8966e72339a6bf5929661cf89f7f8a0b07c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7989269e8076eda1deef6384b7efdb51c2d279ec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="annotations-schema"></a>Schemat adnotacji
 W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Microsoft adnotacje do zapisywania i pobierania danych adnotacji użytkownika.  
@@ -597,4 +598,4 @@ W tym temacie opisano definicji schematu XML (XSD) używany przez platformę Mic
  <xref:System.Windows.Annotations.Annotation>  
  <xref:System.Windows.Annotations.Storage.AnnotationStore>  
  <xref:System.Windows.Annotations.Storage.XmlStreamStore>  
- [Omówienie adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)
+ [Przegląd adnotacji](../../../../docs/framework/wpf/advanced/annotations-overview.md)

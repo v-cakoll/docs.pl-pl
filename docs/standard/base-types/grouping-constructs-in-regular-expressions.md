@@ -23,11 +23,14 @@ caps.latest.revision: "33"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 37428cf96bbe36a55e88edeb5ec56e09895be994
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  

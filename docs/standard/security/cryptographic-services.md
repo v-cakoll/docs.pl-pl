@@ -34,11 +34,14 @@ caps.latest.revision: "34"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cbea6ab0fcf72937bc936510a89593861115f287
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a>Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
@@ -118,15 +121,15 @@ ms.lasthandoff: 10/18/2017
   
 -   <xref:System.Security.Cryptography.AesManaged>(wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
   
--   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.  
+-   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.,  
   
 -   <xref:System.Security.Cryptography.HMACSHA1>(Jest to technicznie algorytm klucza tajnego ponieważ reprezentuje ona kod uwierzytelniania wiadomości, która jest obliczana przy użyciu funkcji skrótu kryptograficznego, w połączeniu z kluczem tajnym. Zobacz [wartości skrótu](#hash_values)w dalszej części tego tematu.)  
   
--   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
+-   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.,  
   
--   <xref:System.Security.Cryptography.RijndaelManaged>.  
+-   <xref:System.Security.Cryptography.RijndaelManaged>.,  
   
--   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.  
+-   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.,  
   
  [Powrót do początku](#top)  
   
@@ -221,21 +224,21 @@ ms.lasthandoff: 10/18/2017
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmów mieszania:  
   
--   <xref:System.Security.Cryptography.HMACSHA1>.  
+-   <xref:System.Security.Cryptography.HMACSHA1>.,  
   
--   <xref:System.Security.Cryptography.MACTripleDES>.  
+-   <xref:System.Security.Cryptography.MACTripleDES>.,  
   
--   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.  
+-   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.,  
   
--   <xref:System.Security.Cryptography.RIPEMD160>.  
+-   <xref:System.Security.Cryptography.RIPEMD160>.,  
   
--   <xref:System.Security.Cryptography.SHA1Managed>.  
+-   <xref:System.Security.Cryptography.SHA1Managed>.,  
   
--   <xref:System.Security.Cryptography.SHA256Managed>.  
+-   <xref:System.Security.Cryptography.SHA256Managed>.,  
   
--   <xref:System.Security.Cryptography.SHA384Managed>.  
+-   <xref:System.Security.Cryptography.SHA384Managed>.,  
   
--   <xref:System.Security.Cryptography.SHA512Managed>.  
+-   <xref:System.Security.Cryptography.SHA512Managed>.,  
   
 -   Metoda HMAC wariantów wszystkich algorytmów Secure Hash Algorithm (SHA), Message Digest 5 (MD5) i RIPEMD 160.  
   
@@ -318,5 +321,5 @@ ms.lasthandoff: 10/18/2017
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Model kryptografii](../../../docs/standard/security/cryptography-model.md)|W tym artykule opisano, jak kryptografii jest zaimplementowana w klasie podstawowej biblioteki.|  
-|[Wskazówki: Tworzenie aplikacji kryptograficznej](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Przedstawia podstawowe zadania szyfrowania i odszyfrowywania.|  
-|[Konfigurowanie klasy kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Opisuje sposób mapowania nazw algorytmu kryptograficznego klas i mapowanie identyfikatorów obiektów na algorytmów kryptograficznych.|
+|[Przewodnik: tworzenie aplikacji kryptograficznej](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|Przedstawia podstawowe zadania szyfrowania i odszyfrowywania.|  
+|[Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)|Opisuje sposób mapowania nazw algorytmu kryptograficznego klas i mapowanie identyfikatorów obiektów na algorytmów kryptograficznych.|

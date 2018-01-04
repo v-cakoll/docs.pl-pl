@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d9e096969713cc4b9c42261b238691d51cb49d9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 80871d9daeec257351134e9f7a72a10b697e842a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>Jak użyć wyzwalaczy zdarzeń, aby kontrolować scenorys po uruchomieniu
 W tym przykładzie przedstawiono sposób kontrolowania <xref:System.Windows.Media.Animation.Storyboard> po jego uruchomieniu. Aby uruchomić <xref:System.Windows.Media.Animation.Storyboard> za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], użyj <xref:System.Windows.Media.Animation.BeginStoryboard>, która dystrybuuje animacje obiektów i właściwości animacji i następnie uruchamia scenorysu. Jeśli zostanie nadana <xref:System.Windows.Media.Animation.BeginStoryboard> nazwę przez określenie jego <xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A> właściwości, można ustawić, którymi można sterować scenorysu. Użytkownik może interakcyjnie wybrać scenorysu po jego uruchomieniu.  
@@ -56,6 +57,6 @@ W tym przykładzie przedstawiono sposób kontrolowania <xref:System.Windows.Medi
  <xref:System.Windows.Media.Animation.PauseStoryboard>  
  <xref:System.Windows.Media.Animation.StopStoryboard>  
  <xref:System.Windows.Media.Animation.SeekStoryboard>  
- [Kontrolowanie scenorysu po uruchomieniu, za pomocą jej metod interakcyjne](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Scenorys — omówienie](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [Kontrolowanie scenorysu po uruchomieniu przy użyciu jego metod interakcyjnych](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)

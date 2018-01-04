@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/30/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: c5d4d2c9fb9fbb595f6f6ea195247474f353a32f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml 
 
@@ -183,7 +186,7 @@ Gdy przeznaczonych dla różnych środowisk, należy używać wielu tworzą plik
 
 Można użyć pliku pojedynczego docker-compose.yml jak uproszczone przykłady zamieszczone w poprzednich sekcjach. Jednak, że nie zaleca się dla większości aplikacji.
 
-Domyślnie Redaguj odczytuje dwóch plików, docker-compose.yml i plik docker-compose.override.yml opcjonalne. Jak pokazano w rysunek 8-11, jeśli używasz programu Visual Studio i włączania obsługi Docker, Visual Studio tworzy także tych plików oraz niektóre dodatkowe pliki używane do debugowania.
+Domyślnie Redaguj odczytuje dwóch plików, docker-compose.yml i plik docker-compose.override.yml opcjonalne. Jak pokazano w rysunek 8-11, gdy za pomocą programu Visual Studio i również włączania obsługi Docker, Visual Studio tworzy plik dodatkowe compose.ci.build,yml docker do użycia z Twojej potoków CI/CD, podobnie jak w VSTS.
 
 ![](./media/image12.png)
 
@@ -207,81 +210,62 @@ Możesz uruchomić plik docker-compose.yml podstawowej. Tego pliku podstawowego 
 
 ```yml
 #docker-compose.yml (Base)
-version: '2'
-
+version: '3'
 services:
   basket.api:
-    image: eshop/basket.api
+    image: eshop/basket.api:${TAG:-latest}
     build:
-    context: ./src/Services/Basket/Basket.API
-    dockerfile: Dockerfile
+      context: ./src/Services/Basket/Basket.API
+      dockerfile: Dockerfile    
     depends_on:
       - basket.data
       - identity.api
       - rabbitmq
 
   catalog.api:
-    image: eshop/catalog.api
+    image: eshop/catalog.api:${TAG:-latest}
     build:
-    context: ./src/Services/Catalog/Catalog.API
-    dockerfile: Dockerfile
+      context: ./src/Services/Catalog/Catalog.API
+      dockerfile: Dockerfile    
     depends_on:
       - sql.data
       - rabbitmq
 
-  identity.api:
-    image: eshop/identity.api
+  marketing.api:
+    image: eshop/marketing.api:${TAG:-latest}
     build:
-    context: ./src/Services/Identity/Identity.API
-    dockerfile: Dockerfile
+      context: ./src/Services/Marketing/Marketing.API
+      dockerfile: Dockerfile    
     depends_on:
       - sql.data
-
-  ordering.api:
-    image: eshop/ordering.api
-    build:
-    context: ./src/Services/Ordering/Ordering.API
-    dockerfile: Dockerfile
-    depends_on:
-      - sql.data
-      - rabbitmq
-
-  webspa:
-    image: eshop/webspa
-    build:
-    context: ./src/Web/WebSPA
-    dockerfile: Dockerfile
-    depends_on:
+      - nosql.data
       - identity.api
-      - basket.api
+      - rabbitmq
 
   webmvc:
-    image: eshop/webmvc
+    image: eshop/webmvc:${TAG:-latest}
     build:
-    context: ./src/Web/WebMVC
-    dockerfile: Dockerfile
+      context: ./src/Web/WebMVC
+      dockerfile: Dockerfile    
     depends_on:
       - catalog.api
       - ordering.api
       - identity.api
       - basket.api
+      - marketing.api
 
   sql.data:
-    image: microsoft/mssql-server-linux
-    basket.data:
-    image: redis
-    expose:
-      - "6379"
-    rabbitmq:
-    image: rabbitmq
-    ports:
-      - "5672:5672"
+    image: microsoft/mssql-server-linux:2017-latest
 
-  webstatus:
-    image: eshop/webstatus
-    build:
-    context: ./src/Web/WebStatus
-    dockerfile: Dockerfile
+  nosql.data:
+    image: mongo
+
+  basket.data:
+    image: redis
+      
+  rabbitmq:
+    image: rabbitmq:3-management
+
 ```
 
 Wartości w pliku podstawowego docker-compose.yml nie należy zmieniać ze względu na inny element docelowy wdrożenia środowiska.
@@ -302,97 +286,119 @@ Zazwyczaj docker compose.override.yml jest używana dla swojego środowiska prog
 
 ```yml
 #docker-compose.override.yml (Extended config for DEVELOPMENT env.)
-version: '2'
+version: '3'
 
-services:
-# Simplified number of services here:
+services: 
+# Simplified number of services here: 
+      
+  basket.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=${ESHOP_AZURE_REDIS_BASKET_DB:-basket.data}
+      - identityUrl=http://identity.api              
+      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
+      - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}      
+      - AzureServiceBusEnabled=False
+      - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
+      - OrchestratorType=${ORCHESTRATOR_TYPE}
+      - UseLoadTest=${USE_LOADTEST:-False}
+
+    ports:
+      - "5103:80"
+
   catalog.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5101
-      - ConnectionString=Server=sql.data; Database=Microsoft.eShopOnContainers.Services.CatalogDb; User Id=sa;Password=Pass@word
-      - ExternalCatalogBaseUrl=http://localhost:5101
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=${ESHOP_AZURE_CATALOG_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word}
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_CATALOG_URL:-http://localhost:5101/api/v1/catalog/items/[0]/pic/}   
+      - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
+      - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}         
+      - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_CATALOG_NAME}
+      - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_CATALOG_KEY}
+      - UseCustomizationData=True
+      - AzureServiceBusEnabled=False
+      - AzureStorageEnabled=False
+      - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
+      - OrchestratorType=${ORCHESTRATOR_TYPE}
     ports:
-      - "5101:5101"
+      - "5101:80"
 
-  identity.api:
-    environment:
-    - ASPNETCORE_ENVIRONMENT=Development
-    - ASPNETCORE_URLS=http://0.0.0.0:5105
-    - SpaClient=http://localhost:5104
-    - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-    - MvcClient=http://localhost:5100
-    ports:
-      - "5105:5105"
-
-  webspa:
+  marketing.api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - ASPNETCORE_URLS=http://0.0.0.0:5104
-      - CatalogUrl=http://localhost:5101
-      - OrderingUrl=http://localhost:5102
-      - IdentityUrl=http://localhost:5105
-      - BasketUrl=http:// localhost:5103
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionString=${ESHOP_AZURE_MARKETING_DB:-Server=sql.data;Database=Microsoft.eShopOnContainers.Services.MarketingDb;User Id=sa;Password=Pass@word}
+      - MongoConnectionString=${ESHOP_AZURE_COSMOSDB:-mongodb://nosql.data}
+      - MongoDatabase=MarketingDb
+      - EventBusConnection=${ESHOP_AZURE_SERVICE_BUS:-rabbitmq}
+      - EventBusUserName=${ESHOP_SERVICE_BUS_USERNAME}
+      - EventBusPassword=${ESHOP_SERVICE_BUS_PASSWORD}          
+      - identityUrl=http://identity.api              
+      - IdentityUrlExternal=http://${ESHOP_EXTERNAL_DNS_NAME_OR_IP}:5105
+      - CampaignDetailFunctionUri=${ESHOP_AZUREFUNC_CAMPAIGN_DETAILS_URI}
+      - PicBaseUrl=${ESHOP_AZURE_STORAGE_MARKETING_URL:-http://localhost:5110/api/v1/campaigns/[0]/pic/}
+      - AzureStorageAccountName=${ESHOP_AZURE_STORAGE_MARKETING_NAME}
+      - AzureStorageAccountKey=${ESHOP_AZURE_STORAGE_MARKETING_KEY}
+      - AzureServiceBusEnabled=False
+      - AzureStorageEnabled=False
+      - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
+      - OrchestratorType=${ORCHESTRATOR_TYPE}
+      - UseLoadTest=${USE_LOADTEST:-False}
     ports:
-      - "5104:5104"
+      - "5110:80"
 
+  webmvc:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - CatalogUrl=http://catalog.api
+      - OrderingUrl=http://ordering.api
+      - BasketUrl=http://basket.api
+      - LocationsUrl=http://locations.api
+      - IdentityUrl=http://10.0.75.1:5105
+      - MarketingUrl=http://marketing.api                                                    
+      - CatalogUrlHC=http://catalog.api/hc
+      - OrderingUrlHC=http://ordering.api/hc
+      - IdentityUrlHC=http://identity.api/hc     
+      - BasketUrlHC=http://basket.api/hc
+      - MarketingUrlHC=http://marketing.api/hc
+      - PaymentUrlHC=http://payment.api/hc
+      - UseCustomizationData=True
+      - ApplicationInsights__InstrumentationKey=${INSTRUMENTATION_KEY}
+      - OrchestratorType=${ORCHESTRATOR_TYPE}
+      - UseLoadTest=${USE_LOADTEST:-False}
+    ports:
+      - "5100:80"
   sql.data:
     environment:
-      - SA_PASSWORD=Pass@word
+      - MSSQL_SA_PASSWORD=Pass@word
       - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
     ports:
       - "5433:1433"
+  nosql.data:
+    ports:
+      - "27017:27017"
+  basket.data:
+    ports:
+      - "6379:6379"      
+  rabbitmq:
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
 ```
 
 W tym przykładzie programowanie zastępczą konfigurację przedstawia niektóre porty do hosta, definiuje zmiennych środowiskowych poleceniem przekierowania adresów URL i określa parametry połączenia dla środowiska programowania. Te ustawienia dotyczą wszystkich tylko Środowisko deweloperskie.
 
-Po uruchomieniu rozwiązania docker compose w górę (lub uruchomić go w programie Visual Studio) polecenie odczytuje automatycznie zastąpienia, tak jakby były scalanie oba pliki.
+Po uruchomieniu `docker-compose up` (lub uruchomić go w programie Visual Studio), polecenia odczytuje automatycznie zastąpienia, tak jakby były scalanie oba pliki.
 
-Załóżmy, że ma inny plik tworzenia w środowisku produkcyjnym, wartościami innej konfiguracji. Można utworzyć inny plik zastąpienie, podobnie jak poniżej. (Ten plik może być przechowywane w różnych repozytorium Git lub zarządzane i zabezpieczane przez inny zespół.)
-
-```yml
-#docker-compose.prod.yml (Extended config for PRODUCTION env.)
-version: '2'
-
-services:
-  # Simplified number of services here:
-  catalog.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://0.0.0.0:5101
-      - ConnectionString=Server=sql.data; Database = Microsoft.eShopOnContainers.Services.CatalogDb; User Id=sa;Password=Prod@Pass
-      - ExternalCatalogBaseUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101
-    ports:
-      - "5101:5101"
-
-  identity.api:
-    environment:
-      - ASPNETCORE_ENVIRONMENT=Production
-      - ASPNETCORE_URLS=http://0.0.0.0:5105
-      - SpaClient=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5104
-      - ConnectionStrings__DefaultConnection = Server=sql.data;Database=Microsoft.eShopOnContainers.Service.IdentityDb;User Id=sa;Password=Pass@word
-      - MvcClient=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5100
-    ports:
-      - "5105:5105"
-
-  webspa:
-    environment:
-      - ASPNETCORE_ENVIRONMENT= Production
-      - ASPNETCORE_URLS=http://0.0.0.0:5104
-      - CatalogUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5101
-      - OrderingUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5102
-      - IdentityUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5105
-      - BasketUrl=http://${ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP}:5103
-    ports:
-      - "5104:5104"
-
-  sql.data:
-    environment:
-      - SA_PASSWORD=Prod@Pass
-      - ACCEPT_EULA=Y
-    ports:
-      - "5433:1433"
-```
+Załóżmy, że ma inny plik tworzenia w środowisku produkcyjnym, za pomocą wartości różnych konfiguracji, portów lub parametry połączenia. Można utworzyć inny plik zastąpienie, takich jak plik o nazwie `docker-compose.prod.yml` z różnymi ustawieniami i zmiennych środowiskowych.  Ten plik może być przechowywane w różnych repozytorium Git lub zarządzane i zabezpieczone przez inny zespół.
 
 #### <a name="how-to-deploy-with-a-specific-override-file"></a>Jak wdrożyć przy użyciu określonego zastąpienia pliku
 
@@ -471,7 +477,7 @@ Inną zaletą Docker jest, że można skompilować aplikację z kontenera wstęp
 
 ![](./media/image14.png)
 
-**Rysunek 8-13**. Tworzenie usługi bits .NET z kontenera składników
+**Rysunek 8-13**. Kompilowanie plików binarnych programu .NET kompilacji kontenera docker 
 
 W tym scenariuszu udzielamy [aspnetcore-microsoft Zbuduj](https://hub.docker.com/r/microsoft/aspnetcore-build/) obrazu, który służy do kompilowania i tworzenie aplikacji programu ASP.NET Core. Dane wyjściowe są umieszczane w obrazu na podstawie [microsoft/aspnetcore](https://hub.docker.com/r/microsoft/aspnetcore/) obrazu, który jest obrazem zoptymalizowanego środowiska uruchomieniowego zauważyć, jak wcześniej.
 
@@ -494,14 +500,21 @@ Jak widać, kontenera, w którym jest uruchomiona jest kompilacji integracji ci�
 [Docker compose.ci.build.yml](https://github.com/dotnet/eShopOnContainers/blob/master/docker-compose.ci.build.yml) plik obrazu (część eShopOnContainers) zawiera następujący kod. Widać uruchamiania kontenera kompilacji za pomocą [aspnetcore-microsoft Zbuduj](https://hub.docker.com/r/microsoft/aspnetcore-build/) obrazu.
 
 ```yml
-version: '2'
-  services:
-    ci-build:
-      image: microsoft/aspnetcore-build:1.0-1.1
-      volumes:
-        - .:/src
-      working_dir: /src
-      command: /bin/bash -c "pushd ./src/Web/WebSPA && npm rebuild node-sass && pushd ./../../.. && dotnet restore ./eShopOnContainers-ServicesAndWebApps.sln && dotnet publish ./eShopOnContainers-ServicesAndWebApps.sln -c Release -o ./obj/Docker/publish"
+version: '3'
+
+services:
+
+  ci-build:
+
+    image: microsoft/aspnetcore-build:2.0
+
+    volumes:
+      - .:/src
+
+    working_dir: /src
+
+    command: /bin/bash -c "pushd ./src/Web/WebSPA && npm rebuild node-sass && popd && dotnet restore ./eShopOnContainers-ServicesAndWebApps.sln && dotnet publish ./eShopOnContainers-ServicesAndWebApps.sln -c Release -o ./obj/Docker/publish"
+
 ```
 
 * Począwszy od **.NET Core 2.0**, `dotnet restore` polecenie zostanie wykonane automatycznie po `dotnet publish` polecenie jest wykonywane.

@@ -16,11 +16,14 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f663dd17b063f77e2f9ce6bd4bbd0f8859ba4116
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b90a84cf87c6c64d48d89840e2213d83b2e39d44
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manualresetevent-and-manualreseteventslim"></a>ManualResetEvent i ManualResetEventSlim
 <xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> Klasa reprezentuje zdarzenie dojścia oczekiwania lokalnych, które można ręcznie zresetować po zostanie zasygnalizowane. Ta klasa reprezentuje szczególnych przypadkach klasy podstawowej, <xref:System.Threading.EventWaitHandle?displayProperty=nameWithType>. Zobacz [EventWaitHandle](../../../docs/standard/threading/eventwaithandle.md) dokumentacja koncepcyjna wykorzystania i funkcje ręczne Resetowanie zdarzenia.  
@@ -33,6 +36,6 @@ ms.lasthandoff: 11/21/2017
  [Wątkowość](../../../docs/standard/threading/index.md)  
  [Wątkowość obiektów i funkcji](../../../docs/standard/threading/threading-objects-and-features.md)  
  [Uchwyty oczekiwania](http://msdn.microsoft.com/library/48d10b6f-5fd7-407c-86ab-0179aef72489)  
- [Autoresetevent —](../../../docs/standard/threading/autoresetevent.md)  
- [Metody SpinWait](../../../docs/standard/threading/spinwait.md)  
- [Semafor i klasa SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)
+ [AutoResetEvent](../../../docs/standard/threading/autoresetevent.md)  
+ [SpinWait](../../../docs/standard/threading/spinwait.md)  
+ [Semaphore i SemaphoreSlim](../../../docs/standard/threading/semaphore-and-semaphoreslim.md)

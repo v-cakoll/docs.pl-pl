@@ -15,11 +15,11 @@ ms.assetid: 8371ce2c-e1c7-476b-a86d-9afc2614b6b7
 caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6939dee58051e9a97fa704f063f35ff0ac440036
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a58ce248404bfe4d6c55bba741b332acd7fcbf5c
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-receive-strings-from-serial-ports-in-visual-basic"></a>Porady: odbieranie ciągów z portów seryjnych w Visual Basic
 W tym temacie opisano sposób użycia `My.Computer.Ports` na odbieranie ciągów z portów szeregowych komputera w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -42,11 +42,11 @@ W tym temacie opisano sposób użycia `My.Computer.Ports` na odbieranie ciągów
   
      [!code-vb[VbVbalrMyComputer#40](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_3.vb)]  
   
-5.  Użyj <xref:System.IO.Ports.SerialPort.ReadLine%2A> metody można odczytać następnego wiersza dostępne tekstu z portu szeregowego.  
+5.  Użyj <xref:System.IO.Ports.SerialPort.ReadLine> metody można odczytać następnego wiersza dostępne tekstu z portu szeregowego.  
   
      [!code-vb[VbVbalrMyComputer#41](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_4.vb)]  
   
-6.  Użyj `If` instrukcji, aby ustalić, czy <xref:System.IO.Ports.SerialPort.ReadLine%2A> metoda zwraca `Nothing` (co oznacza, że nie ma więcej tekstu jest dostępna). Jeśli aplikacja zwracać `Nothing`, zamknąć `Do` pętli.  
+6.  Użyj `If` instrukcji, aby ustalić, czy <xref:System.IO.Ports.SerialPort.ReadLine> metoda zwraca `Nothing` (co oznacza, że nie ma więcej tekstu jest dostępna). Jeśli aplikacja zwracać `Nothing`, zamknąć `Do` pętli.  
   
      [!code-vb[VbVbalrMyComputer#42](../../../../visual-basic/developing-apps/programming/computer-resources/codesnippet/VisualBasic/how-to-receive-strings-from-serial-ports_5.vb)]  
   
@@ -74,6 +74,6 @@ W tym temacie opisano sposób użycia `My.Computer.Ports` na odbieranie ciągów
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>  
- [Porady: modemy dostępowe powiązane z portami seryjnymi](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
- [Porady: wysyłanie ciągów do portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
- [Porady: wyświetlanie dostępnych portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+ [Instrukcje: modemy dostępowe powiązane z portami seryjnymi](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)  
+ [Instrukcje: wysyłanie ciągów do portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)  
+ [Instrukcje: wyświetlanie dostępnych portów seryjnych](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

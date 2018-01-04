@@ -17,41 +17,42 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05a110318bbe92f18d0bc6becb453a5d7851821c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 017d3e51022ad9980dc8f058415697c80a2a6b35
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="federation-and-issued-tokens"></a>Federacja i wystawione tokeny
 Z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], Utwórz klientów komunikujących się bezpiecznie z usługami, które implementują specyfikacji WS-Federation i WS-Trust. Specyfikacje umożliwia XML, SOAP i Web Services Description Language (WSDL) zapewniają mechanizmy, które włączyć uwierzytelnianie i autoryzację w obszarach różnych zaufania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)  
  Zawiera omówienie federacji.  
   
  [Federacja i zaufanie](../../../../docs/framework/wcf/feature-details/federation-and-trust.md)  
  Wyświetla listę problemów projektu pod uwagę podczas tworzenia federacyjnych, usług lub klientów.  
   
- [Porady: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  W tym artykule opisano tworzenie klienta federacyjnego z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
  W tym artykule opisano kroki tworzenia usługi federacyjnej.  
   
- [Porady: tworzenie WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
+ [Instrukcje: tworzenie elementu WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)  
  Opisuje sposób skonfigurować klientów i usługi używające `WSFederationHttpBinding`.  
   
- [Porady: Tworzenie usługi tokenów zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
+ [Instrukcje: tworzenie usługi tokenów zabezpieczeń](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-token-service.md)  
  W tym artykule opisano kroki tworzenia usługi tokenu zabezpieczającego.  
   
- [Zabezpieczenia potwierdzenia Markup Language (SAML) tokenów i oświadczeń](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
+ [Tokeny i oświadczenia języka SAML (Security Assertions Markup Language)](../../../../docs/framework/wcf/feature-details/saml-tokens-and-claims.md)  
  Opisuje tokenów zabezpieczeń potwierdzenia Markup Language (SAML), które można rozszerzać i włączyć funkcję do tworzenia zaawansowanych typów oświadczeń.  
   
- [Porady: Konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
+ [Instrukcje: konfigurowanie lokalnego wystawcy](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)  
  Opisuje sposób tworzenia lokalnego wystawcy tokenów zabezpieczających.  
   
- [Porady: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [Instrukcje: wyłączanie bezpiecznej sesji przy użyciu klasy WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  Opisuje sposób wyłączania bezpiecznej sesji na `WSFederationHttpBinding`. Wyłączanie bezpiecznej sesji jest niezbędne, podczas tworzenia kolektywu serwerów sieci Web, która wymaga sesji dla każdego klienta.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -72,6 +73,6 @@ Z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], Utwórz klientów kom
  <xref:System.ServiceModel.WSFederationHttpBinding>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  [Tokeny niestandardowe](../../../../docs/framework/wcf/extending/custom-tokens.md)  
  [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

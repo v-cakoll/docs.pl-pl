@@ -19,11 +19,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d049d20f5e685096a72857cd18a89688633883c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 58adf778986883b5aac823fc5e69d0a2308304dc
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane
 *Wykonanie bloku przepływu danych* typy wywołać delegata dostarczane przez użytkownika, po odebraniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typy bloku przepływu danych wykonywania. Można użyć `delegate` — słowo kluczowe (`Sub` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenia lambda, podając funkcję Praca do wykonywania bloku przepływu danych. W tym dokumencie opisano sposób użycia <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
@@ -64,4 +67,4 @@ ms.lasthandoff: 10/18/2017
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

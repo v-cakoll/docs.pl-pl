@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81f95ea4582230fe66c59655ab9b98a405c1e173
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 95d25ff6819ba913b7e9270bc2d87dd77032c5c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textelement-content-model-overview"></a>Przegląd Model zawartości TextElement
 To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość <xref:System.Windows.Documents.TextElement>. <xref:System.Windows.Documents.Paragraph> Klasa jest elementem typu <xref:System.Windows.Documents.TextElement>. Model zawartości opisano, jakie obiekty/elementy mogą być zawarte w innym. W tym omówieniu przedstawiono modelu zawartości używana dla obiektów pochodzących od <xref:System.Windows.Documents.TextElement>. Aby uzyskać więcej informacji, zobacz [przepływ dokumentami — omówienie](../../../../docs/framework/wpf/advanced/flow-document-overview.md).  
@@ -112,8 +113,8 @@ To omówienie modelu zawartości w tym artykule opisano obsługiwane zawartość
  Zobacz [modelu zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Manipulowanie FlowDocument za pośrednictwem właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipulowanie przepływu elementów zawartości przy użyciu właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Manipulowanie FlowDocument za pośrednictwem właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipulowanie kolumnami tabeli za pomocą właściwości kolumn](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [Manipulowanie grupy wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [Zarządzanie parametrem FlowDocument przez właściwość Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Zarządzanie przepływem elementów zawartości za pomocą właściwości Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Zarządzanie parametrem FlowDocument przez właściwość Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Zarządzanie kolumnami tabeli za pomocą właściwości Columns](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

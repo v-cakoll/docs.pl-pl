@@ -12,11 +12,11 @@ ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 838038fd873c3a841fd83d30df1c7b3e27fe697f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9a7abe74b76b2b7d0b4b2d45894e2cd4940f989a
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>Wskazówki: Przechowywanie obiektu w programie Visual Studio (Visual Basic)
 Mimo że można ustawić właściwości obiektu do wartości domyślnych w czasie projektowania, wartości wprowadzone w czasie wykonywania zostaną utracone, gdy obiekt zostanie zniszczony. Można użyć serializacji do utrwalenia danych obiektu między wystąpieniami, które umożliwia przechowywanie wartości i pobrać je przy następnym uruchomieniu tworzenia wystąpienia obiektu klasy.  
@@ -33,7 +33,7 @@ Mimo że można ustawić właściwości obiektu do wartości domyślnych w czasi
 >  W tym przykładzie przechowuje dane w pliku binarnym. Nie można używać tych formatów dla poufnych danych, takie jak hasła lub karty kredytowej.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [personalizowanie środowiska IDE programu Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).  
   
 ## <a name="creating-the-loan-object"></a>Tworzenie obiektu pożyczki  
  Pierwszym krokiem jest utworzenie `Loan` klasy i aplikacja testowa, który używa klasy.  

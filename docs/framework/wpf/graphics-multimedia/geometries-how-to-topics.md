@@ -15,34 +15,35 @@ caps.latest.revision: "72"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9540de6140a9dbfdb0d7dd4ab5d9e461caec5268
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e0c75871074bc7e2bae4789a9f77525b9f09c61f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="geometries-how-to-topics"></a>Geometrie Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania <xref:System.Windows.Media.Geometry> obiektów w aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animacja EllipseGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
- [Animowanie rozmiar element ArcSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
- [Formant wypełnienia kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
- [Utwórz połączony geometrii](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
- [Tworzenie złożonego kształtu](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
- [Tworzenie sześcienny krzywej Beziera](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
- [Tworzenie przy użyciu LineGeometry wiersza](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
- [Utwórz obiekt LineSegment w PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
- [Tworzenie za pomocą PathGeometry kształtu](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
- [Utwórz kształt za pomocą StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
- [Tworzenie kwadratową krzywej Beziera](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
- [Utwórz łuku](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
- [Tworzenie wielu podrzędne w PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
- [Zdefiniuj prostokąt przy użyciu RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
- [Zaokrąglania narożników RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
+ [Animowanie elementu EllipseGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-ellipsegeometry.md)  
+ [Animowanie rozmiaru elementu ArcSegment](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-size-of-an-arcsegment.md)  
+ [Kontrolowanie wypełnienia kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-the-fill-of-a-composite-shape.md)  
+ [Tworzenie połączonej geometrii](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-combined-geometry.md)  
+ [Tworzenie kształtu złożonego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-shape.md)  
+ [Tworzenie krzywej Beziera trzeciego stopnia](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-cubic-bezier-curve.md)  
+ [Tworzenie linii przy użyciu elementu LineGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-line-using-a-linegeometry.md)  
+ [Tworzenie obiektu LineSegment w elemencie PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-linesegment-in-a-pathgeometry.md)  
+ [Tworzenie kształtu przy użyciu elementu PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)  
+ [Tworzenie kształtu przy użyciu elementu StreamGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-using-a-streamgeometry.md)  
+ [Tworzenie krzywej Beziera drugiego stopnia](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-quadratic-bezier-curve.md)  
+ [Tworzenie łuku eliptycznego](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-an-elliptical-arc.md)  
+ [Tworzenie wielu podścieżek w obrębie elementu PathGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-multiple-subpaths-within-a-pathgeometry.md)  
+ [Definiowanie prostokąta przy użyciu elementu RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-rectangle-using-a-rectanglegeometry.md)  
+ [Zaokrąglanie rogów elementu RectangleGeometry](../../../../docs/framework/wpf/graphics-multimedia/how-to-round-the-corners-of-a-rectanglegeometry.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Brushes>  
  <xref:System.Windows.Shapes.Shape>  
- [Kształty i podstawowe rysunek w omówieniu WPF](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [Kształty i podstawowe rysowanie w programie WPF — przegląd](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)

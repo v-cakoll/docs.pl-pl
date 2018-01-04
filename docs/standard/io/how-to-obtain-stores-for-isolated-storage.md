@@ -23,11 +23,14 @@ caps.latest.revision: "19"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: bb0b877aa0f4cee36bd1f8c1cea624cf9368fbaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 61f183398c3f8c93ead965036e1edeb200dd8cb1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-obtain-stores-for-isolated-storage"></a>Porady: uzyskiwanie magazynów dla izolowanego magazynu
 Izolowane store ujawnia wirtualnym systemie plików w ramach przedziału danych. <xref:System.IO.IsolatedStorage.IsolatedStorageFile> Klasa zapewnia kilka metod do interakcji z magazynu izolowanego. Aby utworzyć i pobrać magazynów, <xref:System.IO.IsolatedStorage.IsolatedStorageFile> oferuje trzy metody statycznej:  
@@ -66,6 +69,6 @@ Izolowane store ujawnia wirtualnym systemie plików w ramach przedziału danych.
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile>  
  <xref:System.IO.IsolatedStorage.IsolatedStorageScope>  
- [Izolowany Magazyn](../../../docs/standard/io/isolated-storage.md)  
+ [Wydzielona pamięć masowa](../../../docs/standard/io/isolated-storage.md)  
  [Typy izolacji](../../../docs/standard/io/types-of-isolation.md)  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
+ [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)

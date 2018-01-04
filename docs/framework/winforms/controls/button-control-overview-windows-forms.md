@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff98eb39113a2fa8117d091645ac04526e2983c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e04b99c9d85ae92ad4d013abc01c5b16914fe1c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="button-control-overview-windows-forms"></a>Informacje o kontrolce przycisku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Button> formant umożliwia użytkownikowi kliknij go, aby wykonać akcję. Po kliknięciu przycisku wygląda, jakby trwa spoczywa i wydane. Gdy użytkownik kliknie przycisk <xref:System.Windows.Forms.Control.Click> jest wywoływana procedura obsługi zdarzeń. Umieść kod w <xref:System.Windows.Forms.Control.Click> obsługi zdarzeń do wykonywania dowolnych akcji wybierzesz.  
@@ -32,8 +33,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.Button> formant umożliwia
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Button>  
- [Porady: odpowiadanie na kliknięcia przycisków formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [Sposoby wyboru formantu przycisku formularzy systemu Windows](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [Porady: wyznaczanie przycisku formularzy systemu Windows na przycisk Akceptuj przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
- [Porady: wyznaczanie przycisku formularzy systemu Windows na przycisk Anuluj przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- [Button — formant](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+ [Instrukcje: odpowiadanie na kliknięcia przycisków Windows Forms](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
+ [Sposoby wyboru kontrolki przycisku Windows Forms](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
+ [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Akceptuj przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-accept-button-using-the-designer.md)  
+ [Instrukcje: wyznaczanie przycisku Windows Forms na przycisk Anuluj przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
+ [Button, kontrolka](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)

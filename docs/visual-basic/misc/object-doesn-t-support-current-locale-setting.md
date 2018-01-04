@@ -9,11 +9,11 @@ ms.assetid: 580a26bc-479a-4569-9246-10dcf0251bcb
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d0ebd93efeebc46481eba7619182796a01cf28fc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c72dc333cc6bf767238a114a68cd3f2018724b75
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="object-doesn39t-support-current-locale-setting-visual-basic"></a>Obiekt &#39; t Obsługa bieżących ustawień regionalnych ustawienie (Visual Basic)
 Próbowano uzyskać dostęp do obiektu, który nie obsługuje ustawień regionalnych dla bieżącego projektu.  
@@ -23,5 +23,5 @@ Próbowano uzyskać dostęp do obiektu, który nie obsługuje ustawień regional
 -   Sprawdź ustawienia regionalne, które obsługuje obiektu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../visual-basic/programming-guide/language-features/error-types.md)  
- [Pomoc techniczna PAVEOVER i ułatwień dostępu](http://msdn.microsoft.com/en-us/14e1d293-7b6d-40a6-bf3e-a92f8ee6c88c)
+ [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)  
+

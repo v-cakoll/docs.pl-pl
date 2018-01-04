@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8f39a26d52d7002e793935135e0c5d5e8f11c3d8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migracji aplikacji, która używa .NET Remoting do używania usług Windows Communication Foundation (WCF). Porównuje podobne pojęcia między tymi produktami, a następnie opisano, jak wykonać kilka typowych scenariuszy komunikacji zdalnej programu WCF.  
@@ -112,7 +113,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  Istnieje wiele sposobów, aby skonfigurować i do obsługi usług WCF. To jest tylko jeden przykład, nazywany "hosta samodzielnego". Więcej informacji znajduje się w następujących tematach:  
   
--   [Porady: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
+-   [Instrukcje: definiowanie kontraktu usługi](how-to-define-a-wcf-service-contract.md)  
   
 -   [Konfigurowanie usług za pomocą plików konfiguracji](configuring-services-using-configuration-files.md)  
   
@@ -294,7 +295,7 @@ catch (FaultException<CustomerServiceFault> fault)
 #### <a name="security-in-wcf"></a>Zabezpieczenia w programie WCF  
  WCF został opracowany z zabezpieczeniami, pamiętając, w części adresu rodzaje luk w zabezpieczeniach w funkcji zdalnych .NET. Usługi WCF oferuje zabezpieczeń na poziomie komunikatu i transportu i oferuje wiele opcji uwierzytelniania, autoryzacji, szyfrowania i tak dalej. Więcej informacji znajduje się w następujących tematach:  
   
--   [Zabezpieczeń](./feature-details/security.md)  
+-   [Zabezpieczenia](./feature-details/security.md)  
   
 -   [Wskazówki dotyczące zabezpieczeń programu WCF](./feature-details/security-guidance-and-best-practices.md)  
   

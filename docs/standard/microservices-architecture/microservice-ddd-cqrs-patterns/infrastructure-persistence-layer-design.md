@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 11/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: ce0f1d608eed909a7707f3c580afc5253f3eef06
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9fd09ad4e9ff36e8ab2478ff3e1d5226974a4d17
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projektowanie infrastruktury warstwę trwałości
 
@@ -36,7 +39,7 @@ Jak wspomniano wcześniej, jeśli używasz wzorzec architektury CQS/CQRS, począ
 
 Jeśli użytkownik wprowadzi zmiany, mają być aktualizowane dane będą pobierane z warstwy aplikacji lub prezentacji klienta do warstwy aplikacji (na przykład usługi interfejsu API sieci Web). Po otrzymaniu programem obsługi polecenia (z danymi) umożliwia repozytoria pobrać dane, które chcesz zaktualizować z bazy danych. Należy zaktualizować w pamięci z informacjami o przekazany za pomocą poleceń, a następnie dodać lub zaktualizować danych (jednostki domeny) w bazie danych za pomocą transakcji.
 
-Firma Microsoft może wyróżnić ponownie który repozytorium tylko jeden powinien być zdefiniowany dla każdego katalogu głównego agregacji, jak pokazano na rysunku 9-17. Aby osiągnąć głównego agregacji do zapewniania spójności transakcyjnej między wszystkich obiektów w agregacji, nigdy nie należy tworzyć repozytorium dla każdej tabeli w bazie danych.
+Należy pamiętać, że tego repozytorium tylko jeden powinien być zdefiniowany dla każdego katalogu głównego agregacji, jak pokazano na rysunku 9-17. Aby osiągnąć głównego agregacji do zapewniania spójności transakcyjnej między wszystkich obiektów w agregacji, nigdy nie należy tworzyć repozytorium dla każdej tabeli w bazie danych.
 
 ![](./media/image18.png)
 
@@ -83,13 +86,13 @@ Pod względem separacji dla testów jednostkowych logika działa na jednostkach 
 
 ### <a name="the-difference-between-the-repository-pattern-and-the-legacy-data-access-class-dal-class-pattern"></a>Różnica między wzorca repozytorium i starszych wzorzec klasą (DAL) dostęp do danych
 
-Obiekt dostępu do danych bezpośrednio wykonuje operacje dostępu i trwałości danych z magazynu. Znaczniki repozytorium, który danych przy użyciu operacje, które należy wykonać w pamięci jednostkę pracy obiektu (jak EF przy użyciu kontekstu DbContext), ale te aktualizacje nie odbędzie się natychmiast.
+Obiekt dostępu do danych bezpośrednio wykonuje operacje dostępu i trwałości danych z magazynu. Znaczniki repozytorium danych przy użyciu operacje, które należy wykonać w pamięci jednostkę pracy obiektu (jak EF przy użyciu kontekstu DbContext), ale te aktualizacje nie są wykonywane bezpośrednio.
 
 Jednostka pracy jest określana jako jedna transakcja, która obejmuje wiele wstawiania, aktualizowania lub usuwania operacji. Proste warunków oznacza to, że działania określonego użytkownika (na przykład, rejestracja w witrynie sieci Web), insert, update i delete transakcji są obsługiwane w ramach jednej transakcji. Jest to bardziej efektywne niż Obsługa wielu transakcji bazy danych w sposób chattier.
 
-Te wiele operacji utrwalania będą wykonywane później w ramach jednej akcji w przypadku polecenia kodu z warstwy aplikacji. Decyzja o wprowadzanie zmian w pamięci do magazynu rzeczywistej bazy danych jest zwykle oparta na [wzorzec jednostki pracy](http://martinfowler.com/eaaCatalog/unitOfWork.html). W EF wzorzec jednostki pracy jest implementowany jako DBContext.
+Te wiele operacji trwałości są wykonywane później w ramach jednej akcji, gdy polecenia kodu z warstwy aplikacji. Decyzja o wprowadzanie zmian w pamięci do magazynu rzeczywistej bazy danych jest zwykle oparta na [wzorzec jednostki pracy](http://martinfowler.com/eaaCatalog/unitOfWork.html). W EF wzorzec jednostki pracy jest implementowany jako DBContext.
 
-W wielu przypadkach ten wzorzec lub sposób stosowania operacje magazynu mogą zwiększyć wydajność aplikacji i zmniejszyć ryzyko wystąpienia niespójności. Ponadto zmniejsza transakcji blokowania w tabelach bazy danych, ponieważ wszystkie operacje przeznaczone są zatwierdzone w ramach jednej transakcji. Jest to bardziej skuteczne, w odróżnieniu od wykonywania wielu izolowanego operacji w bazie danych. W związku z tym wybranego ORM będzie można zoptymalizować wykonywania w bazie danych przez grupowanie kilka akcji aktualizacji w ramach tej samej transakcji, w przeciwieństwie do wielu wykonaniami małych i oddzielne transakcji.
+W wielu przypadkach ten wzorzec lub sposób stosowania operacje magazynu mogą zwiększyć wydajność aplikacji i zmniejszyć ryzyko wystąpienia niespójności. Ponadto zmniejsza transakcji blokowania w tabelach bazy danych, ponieważ wszystkie operacje przeznaczone są zatwierdzone w ramach jednej transakcji. Jest to bardziej skuteczne, w odróżnieniu od wykonywania wielu izolowanego operacji w bazie danych. W związku z tym wybranego ORM jest w stanie zoptymalizować wykonywania w bazie danych przez grupowanie kilka akcji aktualizacji w ramach tej samej transakcji, w przeciwieństwie do wielu wykonaniami małych i oddzielne transakcji.
 
 ### <a name="repositories-should-not-be-mandatory"></a>Repozytoria nie będą już wymagane
 
@@ -101,9 +104,39 @@ Prawdopodobnie będzie największych opinii. Naprawdę nie mam wentylator repozy
 
 Znaleźliśmy repozytoria użyteczne, ale możemy potwierdzić, że nie są istotne dla Twojej DDD w taki sposób, łączny wzorca i model domeny sformatowanego. W związku z tym Użyj wzorca repozytorium, lub nie, jak widać dopasowania.
 
-#### <a name="additional-resources"></a>Dodatkowe zasoby
+## <a name="the-specification-pattern"></a>Wzorzec specyfikacji
 
-##### <a name="the-repository-pattern"></a>Wzorzec repozytorium
+Wzorzec specyfikacji (pełną nazwę byłoby wzorzec specyfikacji zapytania) jest zaprojektowany jako miejsce, w którym można umieścić definicji zapytania opcjonalne, sortowanie i stronicowanie logiki wzorca projektowego Domain-Driven.
+
+Wzorzec specyfikacja definiuje kwerendę w obiekcie. Na przykład aby hermetyzować stronicowane zapytanie, które wyszukuje niektórych produktów, można utworzyć specyfikację PagedProduct, która pobiera niezbędne parametry wejściowe (pageNumber pageSize, filtr, itp.). Następnie w dowolnej metody repozytorium (zazwyczaj przeciążenia List()) będzie akceptować ISpecification i uruchomić zapytanie oczekiwanych na podstawie tej specyfikacji.
+
+Istnieje kilka zalety tego podejścia:
+
+* Specyfikacja ma nazwę (w przeciwieństwie do grupy wyrażenia LINQ) można omawiać temat.
+
+* Specyfikacja można jednostki testowane w izolacji upewnij się, że jest ona odpowiednia. Można również łatwo ponownie, jeśli potrzebujesz podobne zachowania. Na przykład, w widoku MVC akcji i interfejsu API sieci Web, a także w różnych usług.
+
+* Specyfikacja mogą służyć do opisywania kształt danych ma zostać zwrócona, tak, aby zapytania mogą zwracać tylko te dane są wymagane. Eliminuje to potrzebę opóźnionego ładowania w aplikacji sieci web (która zazwyczaj nie jest dobrym pomysłem) i pomaga zapewnić implementacje repozytorium z staje się przeładowanie Dysponując tymi szczegółowymi informacjami.
+
+Przykładowy ogólny interfejs specyfikacji jest następujący kod z [eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb ).
+
+```csharp
+// https://github.com/dotnet-architecture/eShopOnWeb 
+public interface ISpecification<T>
+{
+    Expression<Func<T, bool>> Criteria { get; }
+    List<Expression<Func<T, object>>> Includes { get; }
+    List<string> IncludeStrings { get; }
+}
+```
+
+W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji Entity Framework Core 2.0 i jak z niego korzystać z dowolnej klasy repozytorium.
+
+**Ważna Uwaga:** wzorzec specyfikacji jest starego wzorzec, który można zaimplementować wiele różnych sposobów, jak w następujących zasobach dodatkowych. Wzorzec/pomysł warto wiedzieć, niemniej jednak starszej implementacji, które są nie wykorzystaniu nowoczesny język funkcji, takich jak Linq i wyrażenia są starsze metod.
+
+## <a name="additional-resources"></a>Dodatkowe zasoby
+
+### <a name="the-repository-pattern"></a>Wzorzec repozytorium
 
 -   **Edward Hieatt i Tomasz mnie. Wzorzec repozytorium. ** 
      [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
@@ -116,7 +149,7 @@ Znaleźliśmy repozytoria użyteczne, ale możemy potwierdzić, że nie są isto
 
 -   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie wzorca repozytorium) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
-##### <a name="unit-of-work-pattern"></a>Jednostka pracy wzorca
+### <a name="unit-of-work-pattern"></a>Jednostka pracy wzorca
 
 -   **Pole Fowler. Jednostka pracy wzorca. ** 
      [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
@@ -126,6 +159,15 @@ Znaleźliśmy repozytoria użyteczne, ale możemy potwierdzić, że nie są isto
 -   **Implementowanie repozytorium i jednostki pracy w aplikacji platformy ASP.NET MVC**
     [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
+### <a name="the-specification-pattern"></a>Wzorzec specyfikacji
+
+-   **Wzorzec specyfikacji. ** 
+     [ *http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+
+-   **Evans, marek (2004). Domena zmiennych projektu. Addison-Wesley. str. 224.**
+
+-   **Wymagania. Pole Fowler**
+    [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
 [Poprzednie] (domena — zdarzenia projekt implementation.md) [dalej] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

@@ -14,11 +14,14 @@ caps.latest.revision: "24"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b5394cd2e9c9fa2b0cacb93ddf2cf05b33fabc71
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: ae53d5afbca15f8adafed428d4c2141312c972ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="thread-safe-collections"></a>Kolekcje bezpieczne wątkowo
 W programie [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] wprowadzono przestrzeń nazw <xref:System.Collections.Concurrent?displayProperty=nameWithType> zawierającą kilka klas kolekcji, które są zarówno bezpieczne wątkowo, jak i skalowalne. Wiele wątków można bezpiecznie i efektywnie Dodaj lub usuń elementy z tych kolekcji bez konieczności dodatkowe synchronizacji w kodzie użytkownika. Pisząc nowy kod, należy używać klas kolekcji współbieżnych w każdej sytuacji, gdy kolekcja będzie zapisywać równocześnie do wielu wątków. Jeśli z udostępnionej kolekcji odbywa się tylko odczyt, można używać klas z przestrzeni nazw <xref:System.Collections.Generic?displayProperty=nameWithType>. Zalecamy nieużywanie klas kolekcji w wersji 1.0, chyba że aplikacje mają być przeznaczone dla środowiska uruchomieniowego .NET Framework 1.1 lub starszego.  
@@ -53,13 +56,13 @@ W programie [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[BlockingCollection — Przegląd](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Opisuje funkcje zawarte w typie <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
-|[Porady: Dodawanie i usuwanie elementów concurrentdictionary](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Opisuje metody dodawania i usuwania elementów w klasie <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.|  
-|[Porady: Dodawanie i pobieranie elementów osobno z kolekcji BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Opisuje metody dodawania i pobierania elementów z kolekcji blokującej bez używania modułu wyliczającego z właściwością tylko do odczytu.|  
-|[Porady: dodawanie do kolekcji funkcji blokujących i ograniczających](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Opisuje wykorzystywanie klas kolekcji jako podstawowego mechanizmu przechowywania dla kolekcji <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
-|[Porady: używanie ForEach do usuwanie elementów blockingcollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Opisuje zastosowanie instrukcji `foreach` (`For Each` w języku Visual Basic) do usuwania wszystkich elementów w kolekcji blokującej.|  
-|[Porady: Użycie tablic kolekcji blokujących w potoku](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Opisuje zastosowanie wielu kolekcji blokujących równocześnie w celu zaimplementowania potoku.|  
-|[Porady: tworzenie puli obiektów przy użyciu ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Pokazuje, jak za pomocą współbieżnego zbioru poprawić wydajność w scenariuszach, gdzie można wykorzystywać istniejące obiekty zamiast ciągle tworzyć nowe.|  
+|[BlockingCollection — omówienie](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|Opisuje funkcje zawarte w typie <xref:System.Collections.Concurrent.BlockingCollection%601>.|  
+|[Instrukcje: Dodawanie elementów do kolekcji ConcurrentDictionary i ich usuwanie](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|Opisuje metody dodawania i usuwania elementów w klasie <xref:System.Collections.Concurrent.ConcurrentDictionary%602>.|  
+|[Instrukcje: Dodawanie i pobieranie elementów osobno w ramach kolekcji BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-add-and-take-items.md)|Opisuje metody dodawania i pobierania elementów z kolekcji blokującej bez używania modułu wyliczającego z właściwością tylko do odczytu.|  
+|[Instrukcje: Dodawanie funkcji blokujących i ograniczających do kolekcji](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md)|Opisuje wykorzystywanie klas kolekcji jako podstawowego mechanizmu przechowywania dla kolekcji <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>.|  
+|[Instrukcje: Używanie metody ForEach do usuwania elementów z kolekcji BlockingCollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md)|Opisuje zastosowanie instrukcji `foreach` (`For Each` w języku Visual Basic) do usuwania wszystkich elementów w kolekcji blokującej.|  
+|[Instrukcje: Używanie tablic kolekcji blokujących w potoku](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|Opisuje zastosowanie wielu kolekcji blokujących równocześnie w celu zaimplementowania potoku.|  
+|[Instrukcje: Tworzenie puli obiektów przy użyciu obiektu ConcurrentBag](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|Pokazuje, jak za pomocą współbieżnego zbioru poprawić wydajność w scenariuszach, gdzie można wykorzystywać istniejące obiekty zamiast ciągle tworzyć nowe.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

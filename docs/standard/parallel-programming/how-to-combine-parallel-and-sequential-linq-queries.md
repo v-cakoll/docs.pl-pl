@@ -17,11 +17,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4da91ff535059b181baa637164a854cd75d06334
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 02e3af91525b75df051b73587eb3e7cd8ede5504
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-combine-parallel-and-sequential-linq-queries"></a>Porady: łączenie równoległych i sekwencyjnych zapytań LINQ
 Ten przykład przedstawia sposób użycia <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metody nakazać programowi PLINQ sekwencyjnie przetworzyć wszystkie kolejne operatory w zapytaniu. Mimo że zazwyczaj wolniej niż równoległego przetwarzania sekwencyjnych czasami jest potrzebne do wygenerowania poprawnych wyników.  

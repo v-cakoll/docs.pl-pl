@@ -16,17 +16,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f37fdb04d29ae713d0ca851b53fe075c04a8e6bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c65d90b39dde9adaae3a6711c978383eb92c4480
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument — Składnik (Formularze systemu Windows)
 Formularze systemu Windows `PrintDocument` składnika służy do ustawiania właściwości, które opisują wydruku, a następnie wydrukować dokument w aplikacjach opartych na systemie Windows. Mogą być używane w połączeniu z <xref:System.Windows.Forms.PrintDialog> składnika będzie polecenia wszystkich aspektów drukowanie dokumentów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o składniku PrintDocument —](../../../../docs/framework/winforms/controls/printdocument-component-overview-windows-forms.md)  
+ [PrintDocument, składnik — omówienie](../../../../docs/framework/winforms/controls/printdocument-component-overview-windows-forms.md)  
  Ogólne pojęcia związane z `PrintDocument` składników, które można ustawić właściwości, które opisują wydruku i uruchamia drukowanie w aplikacji opartych na systemie Windows.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -34,14 +35,14 @@ Formularze systemu Windows `PrintDocument` składnika służy do ustawiania wła
  Zawiera informacje o klasie i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Obsługa drukowania w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
+ [Obsługa drukowania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)  
  Wyświetla listę drukowanie tematów związanych z formularzy systemu Windows.  
   
- [Printdialog — składnik](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
+ [PrintDialog, składnik](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.PrintDialog> składnika, dzięki czemu można wyświetlać okno dialogowe wstępnie skonfigurowane, którego użytkownicy mogą wybrać drukarkę, wybierz strony, aby wydrukować, a następnie określić ustawienia związane z drukowaniem.  
   
- [Printpreviewcontrol — formant](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
+ [PrintPreviewControl, kontrolka](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.PrintPreviewControl>, które służy do projektowania własnych okno dialogowe podglądu wydruku lub składnika.  
   
- [Printpreviewdialog — formant](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [PrintPreviewDialog, kontrolka](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.PrintPreviewDialog> kontroli, dzięki czemu można wyświetlać okno dialogowe wstępnie skonfigurowane, którego użytkownicy mogą zobaczyć wersję z ich dokumentu, jak będzie wyglądać po wydrukowaniu.

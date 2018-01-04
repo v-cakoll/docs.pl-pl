@@ -17,33 +17,34 @@ caps.latest.revision: "79"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 30310b08f33d0f8c4b854635ba41565bce439c05
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3d2d3bd20a35f5d4b28f0ab4aaba02fdd19a3ee9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imaging-how-to-topics"></a>Obrazowanie Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] w celu wyświetlania lub modyfikowania bitmapy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Użyj obiektu BitmapImage w języku XAML](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [Załadowanie obraz miniatury](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [Zastosuj przekształcenie do obrazu mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [Utwórz mapę bitową z element wizualny](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [Kodowanie Visual do pliku obrazu](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [Utwórz nowy element BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [Łańcuch BitmapSource obiektów](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [Konwertuj elementy BitmapSource na różnych PixelFormat](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [Konwertuj elementy BitmapSource indeksowanym formatem pikseli](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [Kodowania i dekodowania obrazu JPEG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [Kodowania i dekodowania obrazu w formacie BMP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [Kodowania i dekodowania obrazu PNG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [Kodowania i dekodowania obrazu WDP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [Kodowania i dekodowania obrazu GIF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [Kodowania i dekodowania obrazu TIFF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [Zapisywania metadanych mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [Odczytywać metadanych mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [Używanie elementu BitmapImage w języku XAML](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
+ [Ładowanie obrazu jako miniatury](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
+ [Stosowanie przekształcenia do obrazu mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [Tworzenie mapy bitowej za pomocą wizualizacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
+ [Kodowanie wizualizacji do pliku obrazu](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
+ [Tworzenie nowego elementu BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
+ [Łańcuchowe łączenie obiektów BitmapSource](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
+ [Konwertowanie elementu BitmapSource na inny element PixelFormat](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [Konwertowanie elementu BitmapSource na format indeksowanych pikseli](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [Kodowanie i dekodowanie obrazu JPEG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
+ [Kodowanie i dekodowanie obrazu BMP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
+ [Kodowanie i dekodowanie obrazu PNG](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
+ [Kodowanie i dekodowanie obrazu WDP](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
+ [Kodowanie i dekodowanie obrazu GIF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
+ [Kodowanie i dekodowanie obrazu TIFF](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
+ [Wpisywanie metadanych do mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
+ [Odczytywanie metadanych z mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Image>  
@@ -53,4 +54,4 @@ Tematy w tej sekcji przedstawiono sposób korzystania [!INCLUDE[TLA#tla_winclien
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

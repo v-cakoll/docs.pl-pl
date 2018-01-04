@@ -6,11 +6,14 @@ ms.author: mairaw
 ms.date: 08/15/2016
 ms.topic: article
 ms.prod: .net
-ms.openlocfilehash: fa001492aa76c4690faca23cb2a1e0467a857a6d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybór między .NET Core i .NET Framework dla serwera aplikacji
 
@@ -107,8 +110,8 @@ Niektóre firmy Microsoft lub innych firm platformy nie obsługuje platformy .NE
 
 ## <a name="see-also"></a>Zobacz także
  [Wybór między ASP.NET i ASP.NET Core](/aspnet/core/choose-aspnet-framework)  
- [Przewodnik po podstawowej platformy .NET](../core/index.md)  
+ [Przewodnik platformy .NET Core](../core/index.md)  
  [Eksportowanie z .NET Framework do platformy .NET Core](../core/porting/index.md)  
- [.NET framework w przewodniku Docker](../framework/docker/index.md)  
+ [.NET Framework na platformie Docker — przewodnik](../framework/docker/index.md)  
  [Omówienie składników platformy .NET](components.md)  
  [Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych](microservices-architecture/index.md)

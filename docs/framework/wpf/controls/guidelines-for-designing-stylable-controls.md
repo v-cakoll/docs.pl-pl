@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 80edbd452be52e77a464ab29347dbe5d4067d0e1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6707a434f64838467033966c9093e1e415b1fb31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>Wytyczne do projektowania kontrolek w określonych stylach
 Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należy rozważyć podczas projektowania formantu, który ma zostać łatwo stylable i templatable. Zdecydowaliśmy się do tego zestawu najlepszych rozwiązań za pomocą wielu prób i błędów podczas pracy nad stylów formantu motywu wbudowanych [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolować zestawu. Dowiedzieliśmy się, że pomyślnie stylów jest tyle funkcją modelu obiektu dobrze zaprojektowanego się sam stylu. Docelowa grupa odbiorców dla tego dokumentu jest autorem formantu nie autora stylu.  
@@ -129,5 +130,5 @@ Ten dokument zawiera podsumowanie zestawu najlepszych rozwiązań, które należ
 -   **Style kompozycji nie trzeba ma semantykę spójnego "układu" we wszystkich tematów**. Na przykład domyślny styl nie trzeba zagwarantować, czy formant będzie zajmować tego samego rozmiaru w wszystkich tematów lub gwarantuje, że formant tej samej zawartości marginesy / dopełnienie we wszystkich tematów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)

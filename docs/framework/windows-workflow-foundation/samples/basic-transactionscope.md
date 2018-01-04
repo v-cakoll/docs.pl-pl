@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e610d11afe0b6b4016478a5c8c1ea9ef747b5a55
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78b6faacb131adf18417bf8b9e77182e8e0f8938
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-transactionscope"></a>Podstawowy element TransactionScope
 W tym przykładzie składa się z czterech scenariuszy uruchomienia przedstawiająca sposób zagnieździć <xref:System.Activities.Statements.TransactionScope> wystąpień. Pierwszy scenariusz przedstawia zagnieżdżania 3 działania firm, które autor nie zna konstrukcji. Scenariusze drugiego i trzeciego pokazują, jak są przestrzegane limity czasu i końcowe scenariuszu pokazano <xref:System.Activities.Statements.TransactionScope.AbortInstanceOnTransactionFailure%2A> ustawienie.  

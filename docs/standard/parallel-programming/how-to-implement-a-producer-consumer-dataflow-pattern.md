@@ -20,11 +20,14 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1aba08e8364d8a21f70ab480d58041115a4849e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2cf5eea6a130d34df2cbcd84a08e63ff9c9bd260
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Porady: Implementowanie wzorca przepływu danych producent — konsument
 Ten dokument zawiera opis sposobu umożliwia Implementowanie wzorca producent — konsument przepływu danych tpl. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów i *konsumenta* odczytuje wiadomości z tego bloku.  
@@ -60,4 +63,4 @@ Ten dokument zawiera opis sposobu umożliwia Implementowanie wzorca producent �
  <xref:System.Threading.Tasks.Dataflow.IReceivableSourceBlock%601.TryReceive%2A> Metoda zwraca `False` kiedy dane są niedostępne. Gdy wielu klientów muszą uzyskać dostęp do bloku źródłowego współbieżnie, ten mechanizm gwarantuje, czy dane są nadal dostępne po wywołaniu <xref:System.Threading.Tasks.Dataflow.DataflowBlock.OutputAvailableAsync%2A>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

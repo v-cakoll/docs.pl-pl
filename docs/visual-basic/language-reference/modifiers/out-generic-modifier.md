@@ -12,11 +12,11 @@ ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
 caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 94d18200e6d7ce0ad63a229223ae77d99302e0e6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4e54504cd65b78846af41692f39899140a6d99b5
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (modyfikator ogólny) (Visual Basic)
 Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowariantny.  
@@ -34,7 +34,7 @@ Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowari
 -   Parametr typu jest używany tylko jako typ zwracany metody interfejsu i nie jest używany jako typ argumentów metody.  
   
     > [!NOTE]
-    >  Istnieje jeden wyjątek od tej reguły. Jeśli w interfejsie kowariantnego to delegat generyczny kontrawariantnego jako parametr metody, można użyć typu kowariantnego jako parametr typu ogólnego dla tego obiektu delegowanego. Aby uzyskać więcej informacji na temat kowariantnego i kontrawariantnego delegatów, zobacz [wariancji w Delegatach](http://msdn.microsoft.com/library/e3b98197-6c5b-4e55-9c6e-9739b60645ca) i [przy użyciu wariancję Func i delegatów akcji](http://msdn.microsoft.com/library/e69c4f39-09aa-4c6d-a752-08cc767d8290).  
+    >  Istnieje jeden wyjątek od tej reguły. Jeśli w interfejsie kowariantnego to delegat generyczny kontrawariantnego jako parametr metody, można użyć typu kowariantnego jako parametr typu ogólnego dla tego obiektu delegowanego. Aby uzyskać więcej informacji na temat kowariantnego i kontrawariantnego delegatów, zobacz [wariancji w Delegatach](../../programming-guide/concepts/covariance-contravariance/variance-in-delegates.md) i [przy użyciu wariancję Func i delegatów akcji](../../programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md).  
   
 -   Parametr typu nie jest używany jako ogólne ograniczenia dla metod interfejsu.  
   
@@ -60,5 +60,5 @@ Parametry typu ogólnego `Out` — słowo kluczowe Określa, że typ jest kowari
  [!code-vb[vbVarianceKeywords#4](../../../visual-basic/language-reference/modifiers/codesnippet/VisualBasic/out-generic-modifier_2.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wariancje w interfejsach](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
+ [Wariancje w interfejsach ogólnych](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)  
  [W](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)

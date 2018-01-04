@@ -4,21 +4,26 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: f58d355b6f5fd31a21791d3b072c77f70f90c387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 3505cb993c736165d4aff4ce8fad38cfa14ed417
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>Implementowanie magistrali zdarzeń z RabbitMQ dla środowisk deweloperskich lub testowania
 
 Firma Microsoft należy zacząć od informujący o tym, że po utworzeniu sieci magistrali niestandardowe zdarzenie oparte na RabbitMQ uruchomione w kontenerze, tak jak w przypadku aplikacji eShopOnContainers tej opcji należy używać tylko w przypadku projektowania i środowisk testowych. Nie należy używać go do środowiska produkcyjnego, chyba że tworzysz, jako część magistrali usługi gotowe do produkcji. Magistrali proste niestandardowe zdarzenie może brakować wiele funkcji krytyczne gotowe do produkcji, które ma komercyjnych usługi service bus.
 
-Implementacja niestandardowa eShopOnContainers magistrali zdarzeń jest zasadniczo bibliotekę przy użyciu interfejsu API RabbitMQ. Implementacja umożliwia mikrousług subskrybowanie zdarzeń, publikowanie zdarzeń i odbierania zdarzeń, jak pokazano w rysunek 8-21.
+Jeden z implementacji niestandardowych magistrali zdarzeń w eShopOnContainers jest zasadniczo bibliotekę przy użyciu interfejsu API RabbitMQ (Brak innego wdrożenia oparte na Azure Service Bus). 
+
+Implementacja magistrali zdarzeń z RabbitMQ umożliwia mikrousług subskrybowanie zdarzeń, publikowanie zdarzeń i odbierania zdarzeń, jak pokazano w rysunek 8-21.
 
 ![](./media/image22.png)
 
@@ -37,7 +42,7 @@ Implementacja RabbitMQ magistralą zdarzeń i testowania próbki jest schematycz
 
 ## <a name="implementing-a-simple-publish-method-with-rabbitmq"></a>Implementowanie prostego metody z RabbitMQ publikowania
 
-Następujący kod jest część implementacji magistrali zdarzenia eShopOnContainers dla RabbitMQ, dzięki czemu zwykle nie trzeba kodu go, chyba że wprowadzać ulepszenia. Kod pobiera połączenia i kanał RabbitMQ, tworzy komunikat i następnie publikuje komunikat do kolejki.
+Poniższy kod jest częścią dotyczy implementacji magistrali uproszczony zdarzeń RabbitMQ zwiększona [rzeczywisty kod](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/BuildingBlocks/EventBus/EventBusRabbitMQ/EventBusRabbitMQ.cs) z eShopOnContainers. Zwykle nie trzeba go kodu, chyba że wprowadzać ulepszenia. Kod pobiera połączenia i kanał RabbitMQ, tworzy komunikat i następnie publikuje komunikat do kolejki.
 
 ```csharp
 public class EventBusRabbitMQ : IEventBus, IDisposable
@@ -78,24 +83,30 @@ public class EventBusRabbitMQ : IEventBus, IDisposable
 {
     // Member objects and other methods ...
     // ...
-    public void Subscribe<T>(IIntegrationEventHandler<T> handler)
+
+    public void Subscribe<T, TH>()
         where T : IntegrationEvent
+        where TH : IIntegrationEventHandler<T>
     {
-        var eventName = typeof(T).Name;
-        if (_handlers.ContainsKey(eventName))
+        var eventName = _subsManager.GetEventKey<T>();
+        
+        var containsKey = _subsManager.HasSubscriptionsForEvent(eventName);
+        if (!containsKey)
         {
-            _handlers[eventName].Add(handler);
+            if (!_persistentConnection.IsConnected)
+            {
+                _persistentConnection.TryConnect();
+            }
+
+            using (var channel = _persistentConnection.CreateModel())
+            {
+                channel.QueueBind(queue: _queueName,
+                                    exchange: BROKER_NAME,
+                                    routingKey: eventName);
+            }
         }
-        else
-        {
-            var channel = GetChannel();
-            channel.QueueBind(queue: _queueName,
-                exchange: _brokerName,
-                routingKey: eventName);
-            _handlers.Add(eventName, new List<IIntegrationEventHandler>());
-            _handlers[eventName].Add(handler);
-            _eventTypes.Add(typeof(T));
-        }
+
+        _subsManager.AddSubscription<T, TH>();
     }
 }
 ```

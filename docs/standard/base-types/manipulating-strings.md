@@ -16,11 +16,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f56dbd878012019f5cab68f2836286d9a6c2f548
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: b1db77672928ebf4a03b69b4bef1af80f04124b5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="manipulating-strings-in-net"></a>Manipulowanie ciągami w .NET
 .NET udostępnia wiele procedur, które umożliwiają wydajne tworzenia, porównania i modyfikowania ciągów, jak również szybko analizy dużych ilości danych do wyszukania, usuwania i Zastąp wzorce tekstu i tekst.  
@@ -36,10 +39,10 @@ ms.lasthandoff: 10/18/2017
  W tym artykule opisano operacje na ciągach dostarczonych przez <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy, w tym tworzenie nowych ciągów w tablice bajtów, porównanie wartości ciągu i modyfikowanie istniejących ciągów.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Konwersja typów w .NET](../../../docs/standard/base-types/type-conversion.md)  
+ [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)  
  Wyjaśniono technik i reguły służące do konwersji typów przy użyciu platformy .NET.  
   
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  Zapewnia sposób użycia klasy podstawowej biblioteki do zaimplementowania formatowanie, sposób formatowania typy liczbowe typów ciąg formatowania i sposób formatowania dla określonej kultury.  
   
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  

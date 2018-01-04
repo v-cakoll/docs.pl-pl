@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0efa81a9606235b214f30a8c6febb94ea2968714
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: df30adf232ad782999d8bdf52b1946f84785f98d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>Jak umieścić kursor na początku lub na końcu tekstu w formancie TextBox
 W tym przykładzie pokazano, jak umieść kursor na początku lub na końcu zawartość tekstową <xref:System.Windows.Controls.TextBox> formantu.  

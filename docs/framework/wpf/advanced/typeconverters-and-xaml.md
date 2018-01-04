@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 073730382f98a6c3d61ebdadf4f1f74411ba4e63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b7ee4b3b00a675cfafc884d41079b76656bdf49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters i XAML
 W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji języka XAML. W programie .NET Framework <xref:System.ComponentModel.TypeConverter> klasy służy określonego celu jako część wdrożenia dla zarządzanej klasy niestandardowych, które mogą być używane jako wartości właściwości w języku XAML, użycie atrybutu. Jeśli zapisu niestandardowej klasy, a ma wystąpień klasy może być używany jako wartości można ustawić atrybutów pliku XAML, może być konieczne zastosowanie <xref:System.ComponentModel.TypeConverterAttribute> do własnej klasy zapisu niestandardowego <xref:System.ComponentModel.TypeConverter> lub klasę.  
@@ -125,6 +126,6 @@ W tym temacie przedstawiono celem konwersji typu z ciągu jako ogólne funkcji j
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.TypeConverter>  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [Składnia języka XAML szczegółowo](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)
+ [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)

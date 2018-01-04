@@ -20,17 +20,18 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d99cf3dee06141599f70016fdd1bace492b2bfb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: fdeea9139500ff9d521a722ef6bb9dac1954dd1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listbox-control-windows-forms"></a>ListBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `ListBox` formantu zostanie wyświetlona lista elementów, z których użytkownik może wybrać co najmniej jeden.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie ListBox](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
+ [ListBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listbox-control-overview-windows-forms.md)  
  Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -38,5 +39,5 @@ Formularze systemu Windows `ListBox` formantu zostanie wyświetlona lista elemen
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty używane do obsługi opcji List formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
  Zawiera listę czynności, które można wykonywać z pola listy, pola kombi i pól listy zaznaczenia.

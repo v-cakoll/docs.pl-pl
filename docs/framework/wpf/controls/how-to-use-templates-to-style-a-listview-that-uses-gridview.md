@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 246c144a18d7c1014096a6e37ad09b6eec5ad932
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9abc19ca14cf512deff898f5f20d23870b8b7847
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>Jak użyć szablonów do stylu ListView która korzysta z GridView
 Ten przykład przedstawia sposób użycia <xref:System.Windows.DataTemplate> i <xref:System.Windows.Style> obiektów, aby określić wygląd <xref:System.Windows.Controls.ListView> formant, który używa <xref:System.Windows.Controls.GridView> trybu wyświetlania.  
@@ -47,6 +48,6 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.DataTemplate> i <
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.GridView>  
- [Omówienie widoku GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
  [ListView — omówienie](../../../../docs/framework/wpf/controls/listview-overview.md)

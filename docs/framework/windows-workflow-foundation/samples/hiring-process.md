@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b82fabec32a256e0ba1aad4ab28896782cef0c04
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 30cad662a9cca679f7e8ce720cfde3d369b9ba60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hiring-process"></a>Zatrudniania procesu
 W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu działań obsługi wiadomości i dwóch przepływów pracy hostowany jako usługi przepływu pracy. Te przepływy pracy są częścią infrastruktury IT fikcyjnej firmy o nazwie Contoso, Inc.  
@@ -104,7 +105,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 ## <a name="projects-in-the-sample"></a>Projekty w próbce.  
  W poniższej tabeli przedstawiono projektów w rozwiązaniu próbki.  
   
-|Project|Opis|  
+|Projekt|Opis|  
 |-------------|-----------------|  
 |ContosoHR|Zawiera klasy repozytorium, obiektów biznesowych i kontraktów danych.|  
 |HiringRequestService|Zawiera definicję przepływu pracy zatrudnienia proces żądania.<br /><br /> Ten projekt jest wdrażany jako aplikacji konsoli własnym obsługującego przepływu pracy (plik xaml) jako usługa.|  
@@ -117,7 +118,7 @@ W tym przykładzie pokazano, jak zaimplementować proces biznesowy przy użyciu 
 ## <a name="feature-summary"></a>Podsumowanie funkcji  
  W poniższej tabeli opisano, jak każdej funkcji jest używany w tym przykładzie.  
   
-|Funkcja|Opis|Project|  
+|Funkcja|Opis|Projekt|  
 |-------------|-----------------|-------------|  
 |Schemat blokowy|Proces biznesowy jest reprezentowany jako blokowego. Ten opis schemat blokowy przedstawia proces w taki sam sposób, w którym firma będzie mieć narysowana go w tablicy.|HiringRequestService|  
 |usługi przepływu pracy|Schemat blokowy procesu definicji znajduje się w usłudze (w tym przykładzie usługa znajduje się w aplikacji konsoli).|HiringRequestService|  

@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fc1608cc4e746af56e7d89237f0c1f5e6cc3bc7e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0a0be008eae45ca5bbe6ca77383bde433931b72e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation"></a>Korelacja
 Aplikacje usług przepływu pracy komunikować się z innymi usługami, jest ważne, czy wiadomości między nimi są wysyłane do wystąpienia przepływu pracy odpowiednie. Korelacji udostępnia mechanizm dla tego. Tematy w tej sekcji zawierają omówienie korelacji i jak z niego korzystać w scenariuszach usługi innego przepływu pracy.  
@@ -35,7 +36,7 @@ Aplikacje usług przepływu pracy komunikować się z innymi usługami, jest wa�
  [Na podstawie zawartości](../../../../docs/framework/wcf/feature-details/content-based-correlation.md)  
  W tym artykule opisano na podstawie zawartości korelacji.  
   
- ["Żądanie-odpowiedź"](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
+ [Żądanie i odpowiedź](../../../../docs/framework/wcf/feature-details/request-reply-correlation.md)  
  W tym artykule opisano korelacja żądań i odpowiedzi.  
   
  [Korelacja rozwiązywania problemów](../../../../docs/framework/wcf/feature-details/troubleshooting-correlation.md)  
@@ -46,5 +47,5 @@ Aplikacje usług przepływu pracy komunikować się z innymi usługami, jest wa�
  <xref:System.ServiceModel.Activities.Send>  
  <xref:System.ServiceModel.Activities.Receive>  
  <xref:System.ServiceModel.CorrelationQuery>  
- [Korelacja na podstawie zawartości](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [Kalkulator skorelowane](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)
+ [Korelacja oparta na zawartości](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [Skorelowany kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)

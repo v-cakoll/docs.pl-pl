@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8c611919b5702877db34e9a02e367312678a1b27
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78846e2b6a1d73e011441b0ccb46b8aad365d5dd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>Jak implementuj walidację za pomocą formantu DataGrid
 <xref:System.Windows.Controls.DataGrid> Kontroli umożliwia przeprowadzanie weryfikacji na poziomie wiersza i komórki. Z weryfikacji na poziomie komórki zweryfikować poszczególnych właściwości obiektu powiązana z danymi, gdy użytkownik zaktualizuje wartość. Z weryfikacji na poziomie wiersza sprawdzania poprawności danych obiektów, gdy użytkownik zatwierdza zmiany na wiersz. Można również podać dostosowane wizualne błędy sprawdzania poprawności lub użyć domyślnej wizualne który <xref:System.Windows.Controls.DataGrid> zawiera kontrolki.  
@@ -104,5 +105,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.DataGrid>  
  [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
  [Powiązanie danych](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
- [Implementowanie sprawdzić poprawności powiązania](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [Implementowanie logiki sprawdzania poprawności na niestandardowe obiekty](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)
+ [Implementowanie powiązanej walidacji](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
+ [Implementowanie logiki walidacji w obiektach niestandardowych](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)

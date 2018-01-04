@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f86ff2fbb3944ce2ed381cb29e2b3c6df39b62bf
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 86234aca209c5533abf9025911b22c391b0ef22b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Funkcjonalność przeciągania i upuszczania w formularzach systemu Windows
 Formularze systemu Windows zawiera zestaw metod, zdarzeń i klasy, które implementują zachowanie przeciągania i upuszczania. Ten temat zawiera omówienie obsługi przeciągania i upuszczania w formularzach systemu Windows.  Zobacz też [operacji przeciągania i upuszczania oraz Obsługa schowka](http://msdn.microsoft.com/library/fe5ebfwe\(v=vs.110\)).  
@@ -54,4 +55,4 @@ Formularze systemu Windows zawiera zestaw metod, zdarzeń i klasy, które implem
  <xref:System.Windows.Forms.QueryContinueDragEventArgs> Klasy podaje bieżący stan myszy przycisków i klawisze modyfikujące klawiatury, wartość określającą, czy został naciśnięty klawisz ESC, a <xref:System.Windows.Forms.DragAction> wartości, który można ustawić, aby określić, czy należy kontynuować operację przeciągania i upuszczania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wejście myszy w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

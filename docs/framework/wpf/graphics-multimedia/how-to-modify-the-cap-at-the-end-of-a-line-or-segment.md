@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e062b82e698a99705a2b06588aa9aae3a0c93157
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d2cd55de403b766344749259068ccd313558f89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-the-cap-at-the-end-of-a-line-or-segment"></a>Jak modyfikować zakończenie na końcu linii lub segmentu
 W tym przykładzie przedstawiono sposób modyfikowania kształt na początek lub koniec Otwórz <xref:System.Windows.Shapes.Shape> elementu. Aby zmienić zakończenie na początku otwarty <xref:System.Windows.Shapes.Shape>, użyj jej <xref:System.Windows.Shapes.Shape.StrokeStartLineCap%2A> właściwości. Aby zmienić limit na koniec Otwórz <xref:System.Windows.Shapes.Shape>, użyj jej <xref:System.Windows.Shapes.Shape.StrokeEndLineCap%2A> właściwości. Aby wyświetlić zakończeniem linii dostępności, zobacz <xref:System.Windows.Media.PenLineCap> wyliczenia.  

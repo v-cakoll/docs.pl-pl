@@ -13,11 +13,14 @@ caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 39110a9b44e6efbe7ad0331cfdb4fbe6078e7cfc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9b59f85eb0ef6646345eaef2a409f622c6fe4651
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="namespace-affect-on-entity-reference-expansion-for-new-nodes-containing-elements-and-attributes"></a>Namespace ma to wpływu na jednostki odwołanie do rozszerzenia dla nowych węzłów zawierających elementy i atrybuty
 Treść jednostki deklaracji może zawierać prawie wszystko, istnieje możliwość, że zawartość może zawierać elementu jak `<!ENTITY aname "<elem>test</elem>">`.  
@@ -28,4 +31,4 @@ Treść jednostki deklaracji może zawierać prawie wszystko, istnieje możliwo�
 >  W momencie rozszerzenia w węźle odwołania nowo utworzonej jednostki go nigdy nie wystąpi ponownie. W związku z tym w czasie węzła nadrzędnego jest ustawiona, są powiązane obszarów nazw używanych w tekst zastępczy dla elementu. Jednak można zmienić przestrzeni nazw dla istniejących węzłów odwołanie do jednostki po usunięciu i wstawić je w innej lokalizacji lub na węzłach odwołanie do jednostki, które są klonowane z **CloneNode** metody.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Modelu obiektu dokumentu XML modelu DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [Model DOM (XML Document Object Model)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ac6671033a439051b062ddae70649a63bacd4979
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9305b69927a1ed0ad4f154ab972316f3dee951e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timing-behaviors-overview"></a>Przegląd Zachowania chronometrażu
 W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.Windows.Media.Animation.Timeline> obiektów.  
@@ -133,8 +134,8 @@ W tym temacie opisano zachowania chronometrażu animacji i innych <xref:System.W
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A>— Umożliwia określenie wartości procentowej <xref:System.Windows.Media.Animation.Timeline.Duration%2A> osi czasu poświęconego decelerating. Na przykład zobacz [porady: przyspieszanie lub zwalnia animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Animacja i chronometrażu Przegląd systemu](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
- [Przegląd zdarzeń chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)  
+ [Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)  
  [Przykład zachowania chronometrażu animacji](http://go.microsoft.com/fwlink/?LinkID=159970)

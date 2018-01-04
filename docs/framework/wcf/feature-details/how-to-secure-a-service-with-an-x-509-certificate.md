@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ec2800d2b6a910f75366e323b7580afe08de2acb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e1ad7cd844ffbd3f45517f7d812ad3f5fa1ae3c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>Instrukcje: Zabezpieczanie usługi za pomocą certyfikatu X.509
 Zabezpieczanie usługi za pomocą certyfikatu X.509 to technika podstawowe który większości powiązania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] użycia. W tym temacie przedstawiono kroki konfigurowania samodzielnie hostowana usługa za pomocą certyfikatu X.509.  

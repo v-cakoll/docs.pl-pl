@@ -14,11 +14,11 @@ ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cc6138c7a7ca7d50a56fdd1f536e8d2dc3462a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f22516a5ca9626f43cb89745e67c66619cf9461f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-of-type-39lttypename1gt39-cannot-be-converted-to-39lttypename2gt39-multiple-file-references"></a>Wartość typu &#39; &lt;typename1&gt;&#39; nie można przekonwertować na &#39;&lt; typename2&gt;&#39; (Wiele odwołań do pliku)
 Wartości typu "\<typename1 >' nie można przekonwertować na"\<typename2 > ". Niezgodność typów przyczyną może być połączenie odwołania pliku do "\<filepath1 >" w projekcie "\<projectname1 >" z odwołaniem pliku do "\<filepath2 >" w projekcie "\<projectname2 >". Jeżeli oba zestawy są identyczne, spróbuj zamienić te odwołania, tak aby oba pochodziły z tej samej lokalizacji.  
@@ -40,4 +40,4 @@ Wartości typu "\<typename1 >' nie można przekonwertować na"\<typename2 > ". N
 ## <a name="see-also"></a>Zobacz też  
  [Konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
  [Zarządzanie odwołaniami w projekcie](/visualstudio/ide/managing-references-in-a-project)  
- [NIB porady: Dodawanie lub usuwanie odwołań za pomocą okno dialogowe Dodaj odwołanie](http://msdn.microsoft.com/en-us/3bd75d61-f00c-47c0-86a2-dd1f20e231c9)
+ 

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3c898dc24c9a4418e3af45fce507e6befcf905a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ed071a4d38a0167ac9414ee7d383736dd38a62a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.PrintPreviewDialog> formant jest używany do wyświetlania okno dialogowe wstępnie skonfigurowane jak [PrintDocument —](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) po wydrukowaniu. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast konfigurować własne okno dialogowe. Formant zawiera przyciski do drukowania, powiększyć wyświetlania jednego lub wielu stron i zamknięcie okna dialogowego.  
@@ -31,6 +32,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.PrintPreviewDialog> forman
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- [Printpreviewcontrol — informacje o formancie](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
- [Printpreviewdialog — formant](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
- [Okno dialogowe formanty i składniki](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+ [PrintPreviewControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
+ [PrintPreviewDialog, kontrolka](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  
+ [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)

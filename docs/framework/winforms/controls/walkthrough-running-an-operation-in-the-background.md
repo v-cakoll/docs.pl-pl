@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de485eb0b9c67ee9c3c897b6521971f50aaf751c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9be47fd57e49973c0f77a069c4f3371e4f63194
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>Wskazówki: przeprowadzanie operacji w tle
 Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w interfejsie użytkownika, można użyć <xref:System.ComponentModel.BackgroundWorker> klasę, aby uruchomić operację w innym wątku.  
@@ -44,7 +45,7 @@ Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w inter
   
     |Przycisk|Nazwa|Tekst|  
     |------------|----------|----------|  
-    |`button1`|`startBtn`|**Początek**|  
+    |`button1`|`startBtn`|**Start**|  
     |`button2`|`cancelBtn`|**Anuluj**|  
   
 2.  Otwórz **przybornika**, kliknij przycisk **składniki** karcie, a następnie przeciągnij <xref:System.ComponentModel.BackgroundWorker> składnika w formularzu.  
@@ -113,6 +114,6 @@ Jeśli masz operacji potrwa długo, i nie chcesz powodować opóźnienia w inter
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.BackgroundWorker>  
  <xref:System.ComponentModel.DoWorkEventArgs>  
- [Porady: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Porady: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
- [BackgroundWorker — składnik](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+ [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Instrukcje: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [BackgroundWorker, składnik](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

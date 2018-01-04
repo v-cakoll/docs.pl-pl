@@ -17,33 +17,34 @@ caps.latest.revision: "61"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 405c9485e61692df83337740c2ccdae0408c1c0b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cdf54273ba040b82a3e292f82680a480b8a807a3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespace-x-language-features"></a>Przestrzeń nazwa (x:) XAML — Funkcje językowe
 ## <a name="in-this-section"></a>W tej sekcji  
- [x: Array — rozszerzenie znaczników](x-array-markup-extension.md)  
- [x: Class — dyrektywa](x-class-directive.md)  
- [x: classmodifier — dyrektywa](x-classmodifier-directive.md)  
- [x: Code — typ funkcji XAML](x-code-intrinsic-xaml-type.md)  
- [x: fieldmodifier — dyrektywa](x-fieldmodifier-directive.md)  
- [x: Key — dyrektywa](x-key-directive.md)  
- [x: Member — dyrektywa](x-member-directive.md)  
- [x: Members — dyrektywa](x-members-directive.md)  
- [x: Name — dyrektywa](x-name-directive.md)  
- [x: Null — rozszerzenie znaczników](x-null-markup-extension.md)  
- [x: Shared — atrybut](x-shared-attribute.md)  
- [x: Property — dyrektywa](x-property-directive.md)  
- [x: Static — rozszerzenie znaczników](x-static-markup-extension.md)  
- [x: Subclass — dyrektywa](x-subclass-directive.md)  
- [x: Type — rozszerzenie znaczników](x-type-markup-extension.md)  
- [x: typearguments — dyrektywa](x-typearguments-directive.md)  
- [x: Uid — dyrektywa](x-uid-directive.md)  
- [x: XData — typ funkcji XAML](x-xdata-intrinsic-xaml-type.md)  
- [Xamlname — gramatyka](xamlname-grammar.md)  
+ [x:Array, rozszerzenie znaczników](x-array-markup-extension.md)  
+ [x:Class, dyrektywa](x-class-directive.md)  
+ [x:ClassModifier, dyrektywa](x-classmodifier-directive.md)  
+ [x:Code, wewnętrzny typ XAML](x-code-intrinsic-xaml-type.md)  
+ [x:FieldModifier, dyrektywa](x-fieldmodifier-directive.md)  
+ [x:Key, dyrektywa](x-key-directive.md)  
+ [x:Member, dyrektywa](x-member-directive.md)  
+ [x:Members, dyrektywa](x-members-directive.md)  
+ [x:Name, dyrektywa](x-name-directive.md)  
+ [x:Null, rozszerzenie znaczników](x-null-markup-extension.md)  
+ [x:Shared, atrybut](x-shared-attribute.md)  
+ [x:Property, dyrektywa](x-property-directive.md)  
+ [x:Static, rozszerzenie znaczników](x-static-markup-extension.md)  
+ [x:Subclass, dyrektywa](x-subclass-directive.md)  
+ [x:Type, rozszerzenie znaczników](x-type-markup-extension.md)  
+ [x:TypeArguments, dyrektywa](x-typearguments-directive.md)  
+ [x:Uid, dyrektywa](x-uid-directive.md)  
+ [x:XData, wewnętrzny typ XAML](x-xdata-intrinsic-xaml-type.md)  
+ [XamlName, gramatyka](xamlname-grammar.md)  
  [{} Sekwencja unikowa — rozszerzenie znaczników](escape-sequence-markup-extension.md)  
- [XML: lang — Obsługa w XAML](xml-lang-handling-in-xaml.md)  
- [XML: Space Obsługa w XAML](xml-space-handling-in-xaml.md)
+ [xml:lang, obsługa w XAML](xml-lang-handling-in-xaml.md)  
+ [xml:space, obsługa w XAML](xml-space-handling-in-xaml.md)

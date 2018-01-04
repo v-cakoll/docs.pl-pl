@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 6dea2c3e-2f9d-4c9d-97a2-d8f9a72b6f4c
-ms.openlocfilehash: 9750e37647a3e382c7a8308c3ffede15729012d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: adb2b0b3680c97582dfefda41c43735f9f09e6c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="functions"></a>Funkcje
 
@@ -188,11 +188,11 @@ let result2 = Compose2 2
 // Pipelining
 // Pipeline operator
 // ( |> ) : 'T1 -> ('T1 -> 'U) -> 'U
-let Pipeline1 x = addOne <| timesTwo x
+let Pipeline2 x = addOne x |> timesTwo
 
 // Backward pipeline operator
 // ( <| ) : ('T -> 'U) -> 'T -> 'U
-let Pipeline2 x = addOne x |> timesTwo
+let Pipeline1 x = addOne <| timesTwo x
 
 // Result is 5
 let result3 = Pipeline1 2
@@ -208,4 +208,4 @@ Można przeciążać metod z typem, ale nie działa. Aby uzyskać więcej inform
 ## <a name="see-also"></a>Zobacz też
 [Wartości](../values/index.md)
 
-[Dokumentacja języka F #](../index.md)
+[Dokumentacja języka F#](../index.md)

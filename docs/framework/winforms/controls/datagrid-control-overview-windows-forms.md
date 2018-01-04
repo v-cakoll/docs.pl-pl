@@ -30,11 +30,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 13adfeb8a6cffb94ed4cfdc06c3932b5cc336f60
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -149,8 +150,8 @@ Na poniższej ilustracji przedstawiono obiektów uwzględnionych w formancie Dat
  Oprócz typowe kontrolowanie zdarzeń takich jak <xref:System.Windows.Forms.Control.MouseDown>, <xref:System.Windows.Forms.Control.Enter>, i <xref:System.Windows.Forms.DataGrid.Scroll>, <xref:System.Windows.Forms.DataGrid> sterowanie obsługuje zdarzenia związane z edycji i nawigacja w siatce. <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> Określa właściwości komórki, która jest zaznaczona. <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> Zdarzenie jest wywoływane, gdy użytkownik przechodzi do nowego komórki. Gdy użytkownik przechodzi do nowej tabeli przy użyciu relacji nadrzędny/podrzędny <xref:System.Windows.Forms.DataGrid.Navigate> zdarzenia. <xref:System.Windows.Forms.DataGrid.BackButtonClick> Zdarzenie jest wywoływane, gdy użytkownik kliknie przycisk Wstecz, przeglądając użytkownika jest tabelą podrzędną i <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> zdarzenie jest wywoływane po kliknięciu ikony wiersze nadrzędne Pokaż/Ukryj.  
   
 ## <a name="see-also"></a>Zobacz też  
- [DataGrid — formant](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [Porady: powiązywanie formantu DataGrid formularzy systemu Windows ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [Porady: Dodawanie tabel i kolumn do systemu Windows formantu DataGrid formularzy](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
- [Porady: usuwanie lub ukrywanie kolumn w oknach formantu DataGrid formularzy](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
- [Porady: formatowanie formantu DataGrid formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)
+ [DataGrid, kontrolka](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
+ [Instrukcje: powiązywanie kontrolki DataGrid formularzy Windows Forms ze źródłem danych](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [Instrukcje: dodawanie tabel i kolumn do kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)  
+ [Instrukcje: usuwanie lub ukrywanie kolumn w kontrolce DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)  
+ [Instrukcje: formatowanie kontrolki DataGrid formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-format-the-windows-forms-datagrid-control.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6102274f75d2fe66b89f917cf9095d3a6dfaa3e2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 4c65edd8959cbf5f83e3353770f71cad130953d1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-write-a-parallelforeach-loop-with-thread-local-variables"></a>Porady: zapisywanie równoległej pętli ForEach ze zmiennymi lokalnymi wątku
 W poniższym przykładzie pokazano, w jaki sposób napisać metodę <xref:System.Threading.Tasks.Parallel.ForEach%2A>, która używa zmiennych lokalnych wątku. Gdy wykonywana jest pętla <xref:System.Threading.Tasks.Parallel.ForEach%2A>, kolekcja źródłowa jest dzielona na wiele partycji. Każda partycja otrzyma własną kopię zmiennej „lokalnej wątku”. (Termin „lokalna wątku” jest nieprecyzyjny, ponieważ w niektórych przypadkach dwie partycje mogą działać w tym samym wątku).  
@@ -56,5 +59,5 @@ W poniższym przykładzie pokazano, w jaki sposób napisać metodę <xref:System
   
 ## <a name="see-also"></a>Zobacz też  
  [Równoległość danych](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)  
- [Porady: zapisywanie równoległej pętli for ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
- [Wyrażenia lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+ [Instrukcje: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)  
+ [Wyrażenia Lambda w PLINQ i TPL](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)

@@ -45,11 +45,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Przegląd biblioteki klas programu .NET Framework
 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Zawiera klasy, interfejsy i typy wartości, które przyspieszenia i zoptymalizować proces rozwoju i zapewnienia dostępu do funkcji systemu. W celu ułatwienia współdziałanie między językami, większość typów .NET Framework są zgodne ze specyfikacją CLS i w związku z tym można używać z dowolnego języka programowania, w których kompilatora odpowiada specyfikacja języka wspólnego (ze specyfikacją CLS).  
@@ -90,29 +93,29 @@ ms.lasthandoff: 11/21/2017
   
 |Kategoria|Nazwa klasy|Opis|Typ danych Visual Basic|C# — typ danych|Typ danych języka C++|Typ danych języka JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
-|Liczba całkowita|<xref:System.Byte>|8-bitową nieznakowaną liczbą całkowitą.|**Bajtów**|**bajtów**|**char bez znaku**|**Bajtów**|  
-||<xref:System.SByte>|8-bitową liczbę całkowitą ze znakiem.<br /><br /> Nie zgodne z CLS.|**Sbyte —**|**sbyte —**|**char**<br /><br /> —lub—<br /><br /> **podpisana** **char**|**Sbyte —**|  
-||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**Krótki**|**krótki**|**krótki**|**krótki**|  
-||<xref:System.Int32>|Całkowita 32-bitowych.|**Liczba całkowita**|**int**|**int**<br /><br /> —lub—<br /><br /> **długa**|**int**|  
-||<xref:System.Int64>|Całkowita 64-bitowych.|**Długa**|**długa**|**__int64**|**długa**|  
+|Liczba całkowita|<xref:System.Byte>|8-bitową nieznakowaną liczbą całkowitą.|**Bajtów**|**byte**|**char bez znaku**|**Bajtów**|  
+||<xref:System.SByte>|8-bitową liczbę całkowitą ze znakiem.<br /><br /> Nie zgodne z CLS.|**Sbyte —**|**sbyte**|**char**<br /><br /> —lub—<br /><br /> **podpisana** **char**|**Sbyte —**|  
+||<xref:System.Int16>|16-bitową liczbę całkowitą ze znakiem.|**Krótki**|**short**|**short**|**short**|  
+||<xref:System.Int32>|Całkowita 32-bitowych.|**Liczba całkowita**|**int**|**int**<br /><br /> —lub—<br /><br /> **long**|**int**|  
+||<xref:System.Int64>|Całkowita 64-bitowych.|**Długa**|**long**|**__int64**|**long**|  
 ||<xref:System.UInt16>|16-bitową liczbę całkowitą bez znaku.<br /><br /> Nie zgodne z CLS.|**UShort**|**ushort**|**short bez znaku**|**UInt16**|  
 ||<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**Uinteger —**|**uint**|**unsigned int**<br /><br /> —lub—<br /><br /> **unsigned long**|**UInt32**|  
 ||<xref:System.UInt64>|64-bitowa liczba całkowita bez znaku.<br /><br /> Nie zgodne z CLS.|**ULong**|**ulong**|**__int64 bez znaku**|**UInt64 —**|  
 |Liczba zmiennoprzecinkowa|<xref:System.Single>|Liczby zmiennoprzecinkowe (32-bitowy) pojedynczej precyzji.|**Pojedynczy**|**float**|**float**|**float**|  
-||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**O podwójnej precyzji**|**podwójne**|**podwójne**|**podwójne**|  
-|Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Wartość logiczna**|**wartość logiczna**|**wartość logiczna**|**wartość logiczna**|  
+||<xref:System.Double>|Liczba zmiennoprzecinkowa (64-bitowy) podwójnej precyzji.|**O podwójnej precyzji**|**double**|**double**|**double**|  
+|Logiczne|<xref:System.Boolean>|Wartość logiczna (true lub false).|**Wartość logiczna**|**bool**|**bool**|**bool**|  
 |Inne|<xref:System.Char>|Znak Unicode (16-bitowe).|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|Wartość dziesiętna (128-bitowe).|**Decimal**|**decimal**|**Decimal**|**Decimal**|  
 ||<xref:System.IntPtr>|Całkowita którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**<br /><br /> Brak typu wbudowanego.|**IntPtr**|  
 ||<xref:System.UIntPtr>|Całkowitą bez znaku, którego rozmiar jest zależna od podstawowej platformy (32-bitową wartość na platformie 32-bitowy) oraz wartość 64-bitowym na 64-bitowej platformy.<br /><br /> Nie zgodne z CLS.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**<br /><br /> Brak typu wbudowanego.|**UIntPtr**|  
-ści obiektów|<xref:System.Object>|Element główny hierarchii obiektów.|**Obiekt**|**obiekt**|**Obiekt\***|**Obiekt**|  
-||<xref:System.String>|Niezmienne, o stałej długości ciągu znaków Unicode.|**Ciąg**|**ciąg**|**Ciąg\***|**Ciąg**|  
+ści obiektów|<xref:System.Object>|Element główny hierarchii obiektów.|**Obiekt**|**object**|**Obiekt\***|**Obiekt**|  
+||<xref:System.String>|Niezmienne, o stałej długości ciągu znaków Unicode.|**Ciąg**|**string**|**Ciąg\***|**Ciąg**|  
   
  Oprócz podstawowe typy danych <xref:System> przestrzeń nazw zawiera klasy ponad 100, począwszy od klasy, które obsługi wyjątków do klasy, które zajmują się podstawowe koncepcje środowiska uruchomieniowego, takich jak moduł garbage collector i domen aplikacji. <xref:System> Przestrzeń nazw zawiera także wiele nazw drugiego poziomu.  
   
  Aby uzyskać więcej informacji na temat obszarów nazw Przeglądaj [Biblioteka klas programu .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195). W dokumentacji referencyjnej zawiera krótki przegląd każdej przestrzeni nazw, a także posiadanie opis każdego typu i jej elementów członkowskich.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wspólny System typów](../../docs/standard/base-types/common-type-system.md)  
+ [System typu wspólnego](../../docs/standard/base-types/common-type-system.md)  
  [Biblioteka klas programu .NET framework](http://go.microsoft.com/fwlink/?LinkID=227195)  
  [Omówienie](../../docs/framework/get-started/overview.md)

@@ -13,11 +13,14 @@ caps.latest.revision: "5"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18f8f9c76a1842517340eaa3f74b4778f869403e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2619842bedef2c28e792969dfbd5c724375122bf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-processing-options"></a>Opcje przetwarzania XML
 Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używanych do przetwarzania danych XML.  
@@ -26,7 +29,7 @@ Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używany
   
 |**Opcja**|**Przetwarzania typu**|**Opis**|  
 |----------------|-------------------------|---------------------|  
-|[LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> przestrzeni nazw)|W pamięci|-Oparte na technologii .NET Framework Language-Integrated zapytania (LINQ).<br />— Zapewnia zapytania podobne do bazy danych SQL dla obiektów, danych relacyjnych i danych XML.<br />— Zapewnia inituive możliwości tworzenia i Przekształcenie dokumentu.<br />— Użyj tej opcji, jeśli piszesz nowy kod.|  
+|[LINQ to XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13) <br />(<xref:System.Xml.Linq> przestrzeni nazw)|W pamięci|-Oparte na technologii .NET Framework Language-Integrated zapytania (LINQ).<br />— Zapewnia zapytania podobne do bazy danych SQL dla obiektów, danych relacyjnych i danych XML.<br />— Zapewnia inituive możliwości tworzenia i Przekształcenie dokumentu.<br />— Użyj tej opcji, jeśli piszesz nowy kod.|  
 |<xref:System.Xml.XmlReader?displayProperty=nameWithType>|Na podstawie strumienia|— Umożliwia szybkie, niebuforowanym, tylko do przodu do dostępu do danych XML.<br />— Można utworzyć obiektów przy użyciu <xref:System.Xml.XmlReader.Create%2A?displayProperty=nameWithType> metody i określ zestaw funkcji, aby włączyć obiektu przy użyciu <xref:System.Xml.XmlReaderSettings> klasy.|  
 |<xref:System.Xml.XmlWriter?displayProperty=nameWithType>|Na podstawie strumienia|— Umożliwia szybkie, niebuforowanym, tylko do przodu do generowania danych XML.<br />— Można utworzyć obiektów przy użyciu <xref:System.Xml.XmlWriter.Create%2A?displayProperty=nameWithType> metody i określ zestaw funkcji, aby włączyć obiektu przy użyciu <xref:System.Xml.XmlWriterSettings> klasy.|  
 |<xref:System.Xml.XmlDocument?displayProperty=nameWithType>|W pamięci|-Implementuje [W3C modelu DOM (Document Object) poziom 1 Core](http://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html) i [DOM poziom 2 rdzenie](http://www.w3.org/TR/DOM-Level-2-Core/) zalecenia.<br />— Utwórz, wstawianie, usuwanie i modyfikowanie węzłów przy użyciu metod i właściwości na podstawie znanych modelu DOM.<br />— Użyj tej opcji w przypadku modyfikacji istniejącego kodu korzystającego z modelu DOM. W3C|  
@@ -41,6 +44,6 @@ Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używany
 |[PROGRAM MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|COM opartych na technologii przetwarzania kodu XML, który jest dołączony do systemu operacyjnego Windows.<br />— Zapewnia implementacji native modelu DOM obsługę XPath i XSLT.<br />-Zawiera SAX2 analizatora opartego na zdarzeniach.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przetwarzania danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
- [Przetwarzania danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
+ [Przetwarzanie danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  
+ [Przetwarzanie danych XML przy użyciu modelu danych XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
  [Kompilator XSLT (xsltc.exe)](../../../../docs/standard/data/xml/xslt-compiler-xsltc-exe.md)

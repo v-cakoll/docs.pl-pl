@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3fd3e7e1d9efc5f96ffa044275fb1d76c490be0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77e0e5b162be875a7d37d32e4b5a08b19315b9ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost
 <xref:System.Windows.Forms.ToolStripControlHost>Umożliwia obsługę dowolnego formanty formularzy systemu Windows przy użyciu <xref:System.Windows.Forms.ToolStripControlHost> konstruktora lub przez rozszerzenie <xref:System.Windows.Forms.ToolStripControlHost> samej siebie. Ułatwia zawijanie formantu rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementowanie właściwości i metody, które udostępniają często używane właściwości i metod formantu. Można również ujawniać zdarzenia dla formantu w <xref:System.Windows.Forms.ToolStripControlHost> poziom.  
@@ -77,6 +78,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ToolStripControlHost>  
- [Informacje o formancie ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
- [ToolStrip — architektura formantu](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
- [Podsumowanie technologii formantów ToolStrip](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+ [ToolStrip, kontrolka — omówienie](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)  
+ [ToolStrip, kontrolka — architektura](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)  
+ [ToolStrip — podsumowanie informacji o technologii](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9d52b71fe783764dcdbf5acd2ffe0e0ee1e7e56d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3f6282dfbf5e67f91167e5abf0640641000994d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-msmq-binding"></a>Powiązanie usługi MSMQ sieci
 Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutów powiązanie MSMQ elementu punktu końcowego.  
@@ -29,7 +30,7 @@ Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutów powiązanie MS
  [Komunikacja za pomocą nietrwałych kolejek](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)  
  Pokazuje, jak wykonać volatile komunikatu w kolejce przez transportu usługi kolejkowania komunikatów (MSMQ).  
   
- [Kolejki utraconych wiadomości](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
+ [Kolejki utraconych komunikatów](../../../../docs/framework/wcf/samples/dead-letter-queues.md)  
  Przedstawiono sposób obsługi i przetwarzania komunikatów, które nie powiodły dostarczania.  
   
  [Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)  
@@ -41,13 +42,13 @@ Ta sekcja zawiera przykłady ilustrujące przy użyciu atrybutów powiązanie MS
  [Komunikacja dwukierunkowa](../../../../docs/framework/wcf/samples/two-way-communication.md)  
  Pokazuje, jak wykonać transakcyjne dwukierunkowej komunikacji w kolejce przez usługę MSMQ.  
   
- [Nietransakcyjnego przetwarzanie wsadowe](../../../../docs/framework/wcf/samples/transacted-batching.md)  
+ [Obsługa wsadowa w ramach transakcji](../../../../docs/framework/wcf/samples/transacted-batching.md)  
  Demonstracja partii odczyty transakcyjne przy użyciu usługi kolejkowania komunikatów (MSMQ).  
   
  [SRMP](../../../../docs/framework/wcf/samples/srmp.md)  
  Pokazuje, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ) za pośrednictwem protokołu HTTP.  
   
- [Zabezpieczenia komunikatów w ramach usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
+ [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)  
  Pokazuje, jak wdrożyć aplikację, która używa WS-Security przy użyciu uwierzytelniania certyfikatu X.509v3 klienta i wymaga uwierzytelniania serwera za pomocą certyfikatu X.509v3 serwera za pośrednictwem usługi MSMQ.  
   
  [Generator iloczynu elementów ReceiveContext](../../../../docs/framework/wcf/samples/receivecontext-enabled-wcf-channels.md)  

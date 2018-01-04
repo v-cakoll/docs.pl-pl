@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 48a28db24731f9aa248bb149c9f19a57cf76bbf1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych przed aplikacja używa go. Może wymagać pewnych pól tekstowych konieczności o zerowej długości, że pole można sformatować jako numer telefonu lub inny typ danych poprawnie sformułowany lub że ciąg nie zawiera znaków niebezpieczne, które mogą służyć do naruszenia zabezpieczeń bazy danych. Formularze systemu Windows udostępnia kilka metod można sprawdzić poprawności danych wejściowych w aplikacji.  
@@ -104,5 +105,5 @@ Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych 
  <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>  
  <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>  
- [Maskedtextbox — formant](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
+ [MaskedTextBox, kontrolka](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)  
  [Przykłady wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-examples.md)

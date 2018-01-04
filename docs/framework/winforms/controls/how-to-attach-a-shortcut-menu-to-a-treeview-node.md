@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d3814e95ad2d91157181682984fc9b53254ba813
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ca251c9dec87db0ecb4b565b522839ace7f44479
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>Porady: dołączanie menu ShortCut do węzła TreeView
 Formularze systemu Windows <xref:System.Windows.Forms.TreeView> kontrolka Wyświetla hierarchię węzłów, podobnie jak pliki i foldery wyświetlane w okienku po lewej stronie Eksploratora Windows. Przez ustawienie <xref:System.Windows.Forms.Control.ContextMenuStrip%2A> właściwości, można podać kontekstowa operacji użytkownikowi po ich prawym przyciskiem myszy <xref:System.Windows.Forms.TreeView> formantu. Kojarząc <xref:System.Windows.Forms.ContextMenuStrip> składnika z poszczególnymi <xref:System.Windows.Forms.TreeNode> elementy, można dodać dostosowanego poziomu funkcjonalności menu skrótów do Twojej <xref:System.Windows.Forms.TreeView> kontrolki.  
@@ -48,4 +49,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.TreeView> kontrolka Wyświ
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ContextMenuStrip>  
- [TreeView — formant](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+ [TreeView, kontrolka](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)

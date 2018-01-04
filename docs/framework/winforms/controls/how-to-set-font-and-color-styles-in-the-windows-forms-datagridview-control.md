@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb1c15be20775903a6fb7674660c552c464daab1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 577a8237c79f90ae717b75e8d6633bfbdba82f58
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control"></a>Porady: ustawianie stylów czcionek i koloru w formancie DataGridView formularzy systemu Windows
 Można określić wygląd komórek wewnątrz <xref:System.Windows.Forms.DataGridView> kontroli przez ustawienie właściwości <xref:System.Windows.Forms.DataGridViewCellStyle> klasy. Wystąpienia tej klasy można pobrać różne właściwości <xref:System.Windows.Forms.DataGridView> klasy i jej klas pomocnika lub można utworzyć wystąpienia <xref:System.Windows.Forms.DataGridViewCellStyle> obiekty do przypisania do tych właściwości.  
@@ -72,5 +73,5 @@ Można określić wygląd komórek wewnątrz <xref:System.Windows.Forms.DataGrid
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridViewCellStyle>  
- [Podstawowe formatowanie i style w oknach formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Style komórki w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
+ [Podstawowe formatowanie i style w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
+ [Style komórki w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)

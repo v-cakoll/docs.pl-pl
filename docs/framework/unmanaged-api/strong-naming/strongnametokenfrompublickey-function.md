@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: cfde09f6383646f24077c3bdc0efa4b31bc50ba0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0cb649f43bfea2e11c986aa3fff5a702e2b58c25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey — Funkcja
 Pobiera token reprezentujący klucza publicznego. Token silnej nazwy jest skrócona forma klucza publicznego.  
@@ -77,6 +78,6 @@ BOOLEANStrongNameTokenFromPublicKey (
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [StrongNameTokenFromPublicKey — metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
- [StrongNameGetPublicKey — metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
- [Publickeyblob — struktura](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)
+ [StrongNameTokenFromPublicKey, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)  
+ [StrongNameGetPublicKey, metoda](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)  
+ [PublicKeyBlob, struktura](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

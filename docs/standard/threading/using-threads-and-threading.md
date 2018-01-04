@@ -16,17 +16,20 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 80eb4c3bb98acdd1f83dbf5bcf57b2f7b295742b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5bed13950a29cfa787ef8c9eb2608c6d74dfd49f
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-threads-and-threading"></a>Używanie wątków i wątkowości
 Tematy w tej sekcji omówiono tworzenie i zarządzanie wątków zarządzanych, jak przekazywać dane do zarządzanych wątków i uzyskiwać wyniki z powrotem i jak zniszczyć wątków i obsługiwać <xref:System.Threading.ThreadAbortException>.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie wątków i przekazywanie danych w chwili rozpoczęcia](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
+ [Tworzenie wątków i przekazywanie danych w czasie rozpoczęcia](../../../docs/standard/threading/creating-threads-and-passing-data-at-start-time.md)  
  Opisano i przedstawiono tworzenie wątków zarządzanych, w tym sposób przekazywania danych do nowego wątków i jak odzyskać dane.  
   
  [Wstrzymywanie i wznawianie wątków](../../../docs/standard/threading/pausing-and-resuming-threads.md)  

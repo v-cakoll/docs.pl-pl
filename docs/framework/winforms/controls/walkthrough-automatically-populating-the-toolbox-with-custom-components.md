@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 691487046e2a34dbf233dc4bc03e20f9ec245da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 08cb39215ea1d9aff1cd7ecc125bd731f14a4d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>Wskazówki: automatyczne zapełnianie Przybornika składnikami niestandardowymi
 Jeśli składniki są zdefiniowane przez projekt w aktualnie otwarte rozwiązanie, będzie automatycznie wyświetlane w **przybornika**, z trzeba wykonywać żadnych czynności przez użytkownika. Można też ręcznie wypełnić **przybornika** Twojego składnikami niestandardowymi za pomocą [wybierz przybornika elementy — okno dialogowe (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb), ale **przybornika** uwzględnia elementów rozwiązania kompilacji dane wyjściowe o następującej charakterystyce:  
@@ -109,4 +110,4 @@ Jeśli składniki są zdefiniowane przez projekt w aktualnie otwarte rozwiązani
  [Ogólne, Projektant formularzy systemu Windows, opcje — Okno dialogowe](http://msdn.microsoft.com/en-us/8dd170af-72f0-4212-b04b-034ceee92834)  
  [Porady: manipulowanie kart z przybornika](http://msdn.microsoft.com/en-us/21285050-cadd-455a-b1f5-a2289a89c4db)  
  [Wybierz elementy przybornika, okno dialogowe (Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)  
- [Umieszczanie formantów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+ [Umieszczanie kontrolek na formularzach Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)

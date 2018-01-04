@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0886e387b6de34673cd4990ef8b61e08674b531
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 62144217199a62da3e41bf381162c94c91d00e72
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listview-overview"></a>ListView — Przegląd
 <xref:System.Windows.Controls.ListView> Kontroli zapewnia infrastrukturę do wyświetlenia zbiór elementów danych w różnych układów lub widoków. Na przykład użytkownik może być do wyświetlenia elementów danych w tabeli, a także do sortowania kolumn.  
@@ -98,6 +99,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.ListView>  
  <xref:System.Windows.Controls.ListViewItem>  
  <xref:System.Windows.Data.Binding>  
- [Omówienie widoku GridView](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
- [Formanty](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+ [GridView — omówienie](../../../../docs/framework/wpf/controls/gridview-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)  
+ [Kontrolki](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)

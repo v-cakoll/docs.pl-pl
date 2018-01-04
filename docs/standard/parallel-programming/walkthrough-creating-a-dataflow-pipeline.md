@@ -20,11 +20,14 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d63fb872382bfc0a3ba3b8637c7357ab65c58fbf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6cc65464248ec27c4bda4934408a9bafc823a80c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Wskazówki: Tworzenie potoku przepływu danych
 Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metod do odbierania wiadomości z źródło bloków, możesz również nawiązać bloki komunikatów formularza *potoku przepływu danych*. Potoku przepływu danych jest szeregu składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, która wspiera większy cel. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę po otrzymaniu komunikatu od innego bloku przepływu danych. Odpowiednio do tego zestawu dla jest wiersz samochodów produkcyjnym. Każdy vehicle przechodzi przez wiersz zestawu, jednej stacji składana ramki, kolejny instaluje aparat i tak dalej. Ponieważ wiersza zestawu umożliwia wielu pojazdów odbywać się w tym samym czasie, zapewnia lepszą przepustowość niż zebrania pojazdów kompletnych jednym naraz.  
@@ -137,4 +140,4 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
  Możesz również nawiązać połączenie bloku przepływu danych źródła wiele bloków docelowej do utworzenia *przepływu danych sieci*. Przeciążone wersja <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> ma metodę <xref:System.Predicate%601> obiektu, który definiuje, czy blok docelowy akceptuje każdy komunikat na podstawie jego wartości. Większość przepływu danych bloku typy, które pełnić rolę źródła oferują komunikaty, aby wszystkie bloki docelowym, w kolejności, w jakiej były one połączone, dopóki jeden bloków akceptuje tej wiadomości. Za pomocą tego mechanizmu filtrowania, można utworzyć systemów bloków przepływu danych połączonych bezpośrednie niektórych danych za pośrednictwem jednej ścieżki i innych danych za pomocą innej ścieżki. Na przykład, który używa filtrowania, aby utworzyć sieć przepływu danych, zobacz [wskazówki: Korzystanie z przepływu danych w aplikacji formularzy systemu Windows](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)
+ [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

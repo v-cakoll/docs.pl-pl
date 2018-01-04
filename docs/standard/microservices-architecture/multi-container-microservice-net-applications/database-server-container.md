@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 10/30/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: 7e5f33c4e7edf9d0d4551c5125976fcb8fda392f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 70dd3686519fc38ae35910284948ccf95e743ef7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>Za pomocą serwera bazy danych z uruchomionym jako kontener
 
@@ -25,16 +28,17 @@ W eShopOnContainers, ma kontenera o nazwie sql.data zdefiniowane w [docker-compo
 SQL Server, kontenera w przykładowej aplikacji jest skonfigurowana z następującym kodem yaml programu w pliku docker-compose.yml, który zostanie wykonany po uruchomieniu rozwiązania docker-compose się. Należy pamiętać, że kod yaml programu ma skonsolidowane informacje o konfiguracji z pliku ogólnego docker-compose.yml i pliku docker compose.override.yml. (Zazwyczaj będzie odrębnych ustawień środowiska z podstawowej lub statycznej informacje związane z obrazu programu SQL Server.)
 
 ```yml
-sql.data:
-  image: microsoft/mssql-server-linux
-  environment:
-    - SA_PASSWORD=your@password
-    - ACCEPT_EULA=Y
-  ports:
-    - "5434:1433"
+  sql.data:
+    image: microsoft/mssql-server-linux
+    environment:
+      - MSSQL_SA_PASSWORD=Pass@word
+      - ACCEPT_EULA=Y
+      - MSSQL_PID=Developer
+    ports:
+      - "5434:1433"
 ```
 
-Następujące docker, uruchom polecenie można uruchomić tego kontenera:
+W podobny sposób, zamiast `docker-compose`, następujące `docker run` polecenie można uruchomić tego kontenera:
 
 ```
   docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD= your@password' -p 1433:1433 -d microsoft/mssql-server-linux

@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5e99573fc3a82db7798426172a13a78e10c65636
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML uwagi dotyczące implementacji pomocy technicznej dla typu
 W tym temacie opisano niektóre szczegóły implementacji, które mają być znane.  
@@ -55,4 +58,4 @@ W tym temacie opisano niektóre szczegóły implementacji, które mają być zna
  Gdy wystąpienie klasy `xs:anyURI` że reprezentuje względny identyfikator URI, jest mapowany na <xref:System.Uri>, <xref:System.Uri> obiekt nie ma podstawowego identyfikatora URI.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa typu do zestawów System.Xml klas](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+ [Obsługa typu w ramach klas zestawu System.Xml](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)

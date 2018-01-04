@@ -26,11 +26,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89a352baed4d07c3c935643e9962131a20af2802
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c12892c4761f0158153c87464066dd727c83bfc3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>Wskazówki: wdrażanie formularza korzystającego z operacji w tle
 Jeśli masz operacji potrwa długo, i nie ma interfejsu użytkownika (UI) przestanie odpowiadać lub "zawiesza się," można użyć <xref:System.ComponentModel.BackgroundWorker> klasy, aby wykonać tę operację w innym wątku.  
@@ -175,9 +176,9 @@ Jeśli masz operacji potrwa długo, i nie ma interfejsu użytkownika (UI) przest
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.BackgroundWorker>  
- [Zarządzana wątkowość — najlepsze praktyki](../../../../docs/standard/threading/managed-threading-best-practices.md)  
+ [Zarządzana wątkowość — najlepsze rozwiązania](../../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Wielowątkowość składników](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [NIE w kompilacji: Wielowątkowość w języku Visual Basic](http://msdn.microsoft.com/en-us/c731a50c-09c1-4468-9646-54c86b75d269)  
- [Porady: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
- [Wskazówki: Przeprowadzanie operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
- [BackgroundWorker — składnik](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+ [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Przewodnik: przeprowadzanie operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
+ [BackgroundWorker, składnik](../../../../docs/framework/winforms/controls/backgroundworker-component.md)

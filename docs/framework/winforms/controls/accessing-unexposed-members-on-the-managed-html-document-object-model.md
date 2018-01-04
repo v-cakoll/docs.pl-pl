@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dda2581ceed854fa5121076f0c7b9df414bffe52
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97a795930eb6965bd0ed15254969a72f45700306
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>Uzyskiwanie dostępu do nieujawnionych elementów w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
 Zarządzany HTML modelu DOM (Document Object) zawiera klasy o nazwie <xref:System.Windows.Forms.HtmlElement> która udostępnia właściwości, metod i zdarzeń, mających wspólne wszystkich elementów HTML. Czasami jednak konieczne będzie dostęp do elementów członkowskich, które zarządzanego interfejsu bezpośrednio nie ujawnia. W tym temacie sprawdza, czy dwa sposoby do uzyskiwania dostępu do nieujawnionych elementów członkowskich, w tym [!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)] i funkcji VBScript, zdefiniowane wewnątrz strony sieci Web.  
@@ -82,4 +83,4 @@ Zarządzany HTML modelu DOM (Document Object) zawiera klasy o nazwie <xref:Syste
  Możesz wywołać wszystkie funkcje skryptu można zdefiniować na stronie HTML za pomocą <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A> metody. Jeśli skrypt zwraca HTML element, umożliwia rzutowanie Konwertuj ten wynik zwracany <xref:System.Windows.Forms.HtmlElement>. Aby uzyskać szczegółowe informacje i przykładowy kod, zobacz <xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą modelu obiektów zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+ [Używanie modelu DOM (Document Object Model) zarządzanych dokumentów HTML](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)

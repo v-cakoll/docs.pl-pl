@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7d1978d3b2cf8634d9222ee5278077dfbe437d04
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 807aa16e4d70a105bcd2fb1426a94d6fdcebbf31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-item-addition-with-the-windows-forms-bindingsource"></a>Porady: dostosowywanie dodawania elementu przy użyciu kontrolki BindingSource formularzy systemu Windows
 Jeśli używasz <xref:System.Windows.Forms.BindingSource> składnika powiązanie formantu formularzy systemu Windows ze źródłem danych może być konieczne dostosowanie tworzenie nowych elementów. <xref:System.Windows.Forms.BindingSource> Składnika sprawia, że to proste zapewniając <xref:System.Windows.Forms.BindingSource.AddingNew> zdarzenie, które zwykle jest wywoływane, gdy formant związany potrzebuje do utworzenia nowego elementu. Obsługi zdarzenia zapewniają wszelkie niestandardowe zachowanie jest wymagana (na przykład wywołanie metody usługi sieci Web lub wprowadzenie nowego obiektu z fabryki klasy).  
@@ -52,5 +53,5 @@ Jeśli używasz <xref:System.Windows.Forms.BindingSource> składnika powiązanie
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource — składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [Porady: powiązanie formantu formularzy systemu Windows z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+ [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [Instrukcje: powiązanie kontrolki Windows Forms z typem](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)

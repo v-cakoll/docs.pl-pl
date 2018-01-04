@@ -17,11 +17,14 @@ caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 12d234b86b0067178d54d2fdcb5d37ceaee6109d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: bc409a528dd095d3defb0026a48430b10a3ba6f3
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>Niestandardowe partycjonery dla PLINQ i TPL
 Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków do *partycji* źródła do sekcje, które mogą być jednocześnie udostępniane przez wiele wątków. PLINQ i zadania biblioteki równoległych (TPL) zapewniają partycjonery domyślne, które działają w sposób przezroczysty podczas pisania zapytania równoległe lub <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli. Dla bardziej zaawansowanych scenariuszy można dodać własne partycjonera.  
@@ -128,5 +131,5 @@ Do parallelize operacji na źródle danych, jest jednym z podstawowych kroków d
   
 ## <a name="see-also"></a>Zobacz też  
  [Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)  
- [Porady: Implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
- [Porady: Implementowanie Partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)
+ [Instrukcje: implementowanie partycji dynamicznych](../../../docs/standard/parallel-programming/how-to-implement-dynamic-partitions.md)  
+ [Instrukcje: implementowanie partycjonera dla partycjonowania statycznego](../../../docs/standard/parallel-programming/how-to-implement-a-partitioner-for-static-partitioning.md)

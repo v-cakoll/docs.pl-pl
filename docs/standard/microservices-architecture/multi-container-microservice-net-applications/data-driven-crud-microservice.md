@@ -4,15 +4,18 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: b814d344f2c78e7cf57f9e2896cf1d6b52db38d9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1fa9f3ad2e08b68fcdc60375ab164cb87a3eeb91
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD opartych na danych
 
@@ -48,7 +51,7 @@ Aby wdrożyć prosty mikrousługi CRUD przy użyciu platformy .NET Core i Visual
 
 **Rysunek 8-6**. Tworzenie projektu interfejsu API platformy ASP.NET Core sieci Web w programie Visual Studio
 
-Po utworzeniu projektu, można zaimplementować kontrolerów MVC, tak jak w innych projektów interfejsu API sieci Web, przy użyciu interfejsu API programu Entity Framework lub innego interfejsu API. W projekcie eShopOnContainers.Catalog.API widoczny czy głównego zależności dla tego mikrousługi są tylko platformy ASP.NET Core, samego programu Entity Framework i Swashbuckle, jak pokazano w rysunek 8-7.
+Po utworzeniu projektu, można zaimplementować kontrolerów MVC, tak jak w innych projektów interfejsu API sieci Web, przy użyciu interfejsu API programu Entity Framework lub innego interfejsu API. W nowym projekcie interfejsu API sieci Web widać, że tylko zależności masz w tym mikrousługi znajduje się na platformy ASP.NET Core, sam. Wewnętrznie, w ramach `Microsoft.AspNetCore.All` zależności, odwołuje się ona do programu Entity Framework i wiele innych pakietów Nuget programu .NET Core, jak pokazano w rysunek 8-7.
 
 ![](./media/image8.PNG)
 
@@ -60,13 +63,6 @@ Program Entity Framework (EF) Core to lekkie, rozszerzalny, i technologii dostę
 
 Mikrousługi katalogu wykorzystuje EF i dostawcy programu SQL Server, ponieważ jego baz danych jest uruchomione w kontenerze z programem SQL Server dla systemu Linux Docker obrazu. Niemniej jednak bazy danych mogą być wdrożone do programu SQL Server, takich jak Windows lokalnymi lub bazy danych SQL Azure. Jedyną operacją, której należy zmienić to ciąg połączenia w mikrousługi interfejsu API sieci Web platformy ASP.NET.
 
-#### <a name="add-entity-framework-core-to-your-dependencies"></a>Dodaj Entity Framework Core do zależności
-
-Można zainstalować pakietu NuGet dla dostawcy bazy danych, którego chcesz użyć, w tym przypadku serwera SQL z wewnątrz środowiska IDE programu Visual Studio lub z konsoli programu NuGet. Użyj następującego polecenia:
-
-```
-  Install-Package Microsoft.EntityFrameworkCore.SqlServer
-```
 
 #### <a name="the-data-model"></a>Model danych
 
@@ -79,12 +75,20 @@ public class CatalogItem
     public string Name { get; set; }
     public string Description { get; set; }
     public decimal Price { get; set; }
+    public string PictureFileName { get; set; }
     public string PictureUri { get; set; }
     public int CatalogTypeId { get; set; }
     public CatalogType CatalogType { get; set; }
     public int CatalogBrandId { get; set; }
     public CatalogBrand CatalogBrand { get; set; }
+    public int AvailableStock { get; set; }
+    public int RestockThreshold { get; set; }
+    public int MaxStockThreshold { get; set; }
+
+    public bool OnReorder { get; set; }
     public CatalogItem() { }
+
+    // Additional code ...
 }
 ```
 
@@ -96,7 +100,6 @@ public class CatalogContext : DbContext
     public CatalogContext(DbContextOptions<CatalogContext> options) : base(options)
     {
     }
-
     public DbSet<CatalogItem> CatalogItems { get; set; }
     public DbSet<CatalogBrand> CatalogBrands { get; set; }
     public DbSet<CatalogType> CatalogTypes { get; set; }
@@ -106,9 +109,7 @@ public class CatalogContext : DbContext
 }
 ```
 
-Masz dodatkowy kod w celu wykonania DbContext. Na przykład w aplikacji przykładowej mamy metody OnModelCreating w klasie CatalogContext automatycznie wypełni przykładowych danych po raz pierwszy próbuje uzyskać dostępu do bazy danych. Ta metoda jest przydatna do danych demonstracyjnych. Umożliwia także metody OnModelCreating dostosować mapowania jednostek bazie danych i obiektów z wielu innych [punkty rozszerzeń EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
-
-Można można zobaczyć więcej informacji o OnModelCreating w [implementacja warstwa trwałości infrastruktury z programu Entity Framework Core](#implementing_infrastructure_persistence) sekcji dalej w tej sekcji.
+Mogą mieć dodatkowe `DbContext` implementacji. Na przykład w mikrousługi Catalog.API próbki, istnieje drugi `DbContext` o nazwie `CatalogContextSeed` gdzie automatycznie wypełni przykładowych danych po raz pierwszy próbuje uzyskać dostępu do bazy danych. Ta metoda jest przydatna, dane demonstracyjne i automatyczne scenariuszy testowych, jak również. W ramach `DbContext`, możesz użyć `OnModelCreating` metodę w celu dostosowania mapowania jednostek w bazie danych i obiektów z i inne [punkty rozszerzeń EF](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/).
 
 ##### <a name="querying-data-from-web-api-controllers"></a>Wykonywanie zapytania na danych z kontrolerów interfejsu API sieci Web
 
@@ -122,13 +123,13 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context,
-        IOptionsSnapshot<CatalogSettings> settings,
-        ICatalogIntegrationEventService catalogIntegrationEventService)
+    public CatalogController(CatalogContext context, 
+                             IOptionsSnapshot<CatalogSettings> settings,
+                             ICatalogIntegrationEventService catalogIntegrationEventService)
     {
         _catalogContext = context ?? throw new ArgumentNullException(nameof(context));
-        _catalogIntegrationEventService = catalogIntegrationEventService ??
-           throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+        _catalogIntegrationEventService = catalogIntegrationEventService ?? throw new ArgumentNullException(nameof(catalogIntegrationEventService));
+
         _settings = settings.Value;
         ((DbContext)context).ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
     }
@@ -136,22 +137,27 @@ public class CatalogController : ControllerBase
     // GET api/v1/[controller]/items[?pageSize=3&pageIndex=10]
     [HttpGet]
     [Route("[action]")]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
-    [FromQuery]int pageIndex = 0)
+    [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+                                           [FromQuery]int pageIndex = 0)
+
     {
         var totalItems = await _catalogContext.CatalogItems
             .LongCountAsync();
+
         var itemsOnPage = await _catalogContext.CatalogItems
             .OrderBy(c => c.Name)
             .Skip(pageSize * pageIndex)
             .Take(pageSize)
             .ToListAsync();
+
         itemsOnPage = ChangeUriPlaceholder(itemsOnPage);
+
         var model = new PaginatedItemsViewModel<CatalogItem>(
             pageIndex, pageSize, totalItems, itemsOnPage);
+
         return Ok(model);
     } 
-
     //...
 }
 ```
@@ -162,20 +168,22 @@ Dane są tworzone, usunięte i zmodyfikowane w bazie danych za pomocą wystąpie
 
 ```csharp
 var catalogItem = new CatalogItem() {CatalogTypeId=2, CatalogBrandId=2,
-   Name="Roslyn T-Shirt", Price = 12};
+                                     Name="Roslyn T-Shirt", Price = 12};
 _context.Catalog.Add(catalogItem);
 _context.SaveChanges();
 ```
 
 ##### <a name="dependency-injection-in-aspnet-core-and-web-api-controllers"></a>Iniekcji zależności w kontrolery ASP.NET Core i interfejsu API sieci Web
 
-W ASP.NET Core można użyć zależności Iniekcja poza pole. Nie trzeba skonfigurować kontener Inwersja kontroli (IoC) innej firmy, chociaż z preferowanych kontenera IoC można podłączyć do infrastruktury platformy ASP.NET Core, jeśli chcesz. W takim przypadku oznacza to, że użytkownik bezpośrednio wstrzyknąć wymagane DBContext EF lub dodatkowe repozytoria za pośrednictwem konstruktora kontrolera. W powyższym przykładzie klasy CatalogController możemy są wstrzyknięcie CatalogContext typu obiektu oraz innych obiektów za pomocą konstruktora CatalogController.
+W ASP.NET Core można użyć zależności Iniekcja poza pole. Nie trzeba skonfigurować kontener Inwersja kontroli (IoC) innej firmy, chociaż z preferowanych kontenera IoC można podłączyć do infrastruktury platformy ASP.NET Core, jeśli chcesz. W takim przypadku oznacza to, że użytkownik bezpośrednio wstrzyknąć wymagane DBContext EF lub dodatkowe repozytoria za pośrednictwem konstruktora kontrolera. W powyższym przykładzie `CatalogController` klasy, możemy są wstrzyknięcie obiektu `CatalogContext` wpisz oraz innych obiektów za pomocą `CatalogController()` konstruktora.
 
-Ważne konfiguracji, aby skonfigurować w projekcie interfejsu API sieci Web jest rejestrowanie klasy DbContext do kontenera IoC usługi. Zwykle w tym Klasa początkowa poprzez wywołanie usługi. Metoda AddDbContext wewnątrz metody ConfigureServices, jak pokazano w poniższym przykładzie:
+Ważne konfiguracji, aby skonfigurować w projekcie interfejsu API sieci Web jest rejestrowanie klasy DbContext do kontenera IoC usługi. Zwykle jest to ustalane dlatego w `Startup` klasy przez wywołanie metody `services.AddDbContext<DbContext>()` metody w ramach `ConfigureServices()` metody, jak pokazano w poniższym przykładzie:
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
+    // Additional code...
+
     services.AddDbContext<CatalogContext>(options =>
     {
         options.UseSqlServer(Configuration["ConnectionString"],
@@ -183,10 +191,10 @@ public void ConfigureServices(IServiceCollection services)
         {
            sqlOptions.
                MigrationsAssembly(
-               typeof(Startup).
-               GetTypeInfo().
-               Assembly.
-               GetName().Name);
+                   typeof(Startup).
+                    GetTypeInfo().
+                     Assembly.
+                      GetName().Name);
 
            //Configuring Connection Resiliency:
            sqlOptions.
@@ -234,9 +242,9 @@ Można użyć ustawień platformy ASP.NET Core i Dodaj właściwości Connection
 }
 ```
 
-Plik settings.json może mieć wartości domyślnej dla właściwości ConnectionString lub inne właściwości. Jednak te właściwości zostaną zastąpione przez wartości zmiennych środowiskowych, które można określić w pliku docker compose.override.yml.
+Plik settings.json może mieć wartości domyślnej dla właściwości ConnectionString lub inne właściwości. Jednak te właściwości zostaną zastąpione przez wartości zmiennych środowiskowych, które określisz w pliku docker compose.override.yml przy użyciu rozwiązania Docker.
 
-Od plików docker-compose.yml lub docker compose.override.yml można inicjowania tych zmiennych środowiskowych, tym Docker skonfiguruje je jako zmiennych środowiskowych systemu operacyjnego, jak pokazano w następującym pliku docker compose.override.yml (połączenia ciąg i innych wierszy opakowywania w tym przykładzie, ale nie będzie zawijany w własny plik).
+Od plików docker-compose.yml lub docker compose.override.yml można inicjowania tych zmiennych środowiskowych, tym Docker skonfiguruje je jako zmiennych środowiskowych systemu operacyjnego, jak pokazano w następującym pliku docker compose.override.yml (połączenia ciąg i innych wierszy opakowywania w tym przykładzie, ale nie będzie zawijany w pliku kodu).
 
 ```yml
 # docker-compose.override.yml
@@ -245,14 +253,12 @@ Od plików docker-compose.yml lub docker compose.override.yml można inicjowania
 catalog.api:
   environment:
     - ConnectionString=Server=sql.data;Database=Microsoft.eShopOnContainers.Services.CatalogDb;User Id=sa;Password=Pass@word
-    - ExternalCatalogBaseUrl=http://10.0.75.1:5101
-    #- ExternalCatalogBaseUrl=http://dockerhoststaging.westus.cloudapp.azure.com:5101
-  
+    # Additional environment variables for this service
   ports:
-    - "5101:5101"
+    - "5101:80"
 ```
 
-Pliki docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczne niż pliki konfiguracji na poziomie projektu lub mikrousługi, ale także bardziej bezpieczne. Należy wziąć pod uwagę obrazy Docker kompilacji na mikrousługi nie zawierają docker-compose.yml pliki tylko pliki binarne i pliki konfiguracji dla każdego mikrousługi, w tym plik Dockerfile. Jednak plik docker-compose.yml nie są wdrażane wraz z aplikacji; jest używany tylko w czasie wdrażania. W związku z tym wprowadzenie wartości zmiennych środowiskowych w tych plikach docker-compose.yml (nawet bez szyfrowania wartości) jest bezpieczniejsza niż umieszczenie tych wartości w regularnych .NET pliki konfiguracyjne, które zostały wdrożone za pomocą kodu.
+Pliki docker-compose.yml na poziomie rozwiązania nie są tylko bardziej elastyczne niż pliki konfiguracji na poziomie projektu lub mikrousługi, ale także więcej, ale również wyższy poziom bezpieczeństwa w razie przesłonięcia zmienne środowiskowe zadeklarowane na pliki docker-compose z wartości z narzędziami wdrażania, takie jak z zadania wdrażania programu VSTS Docker. 
 
 Ponadto można uzyskać tę wartość w kodzie za pomocą konfiguracji\["ConnectionString"\], jak pokazano w metodzie ConfigureServices w wcześniejszego przykładu kodu.
 
@@ -290,9 +296,8 @@ Ten mechanizm versioning jest prosta i zależy od serwera routingu żądania do 
 -   **Scott Hanselman. Przechowywanie wersji interfejsu API sieci Web RESTful Core ASP.NET łatwe**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Przechowywanie wersji interfejs API RESTful sieci web**
-
-    [*https://docs.microsoft.com/Azure/Architecture/Best-Practices/API-Design#Versioning-a-restful-Web-API*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+-   **Przechowywanie wersji interfejs API sieci web RESTful**
+    [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Fielding Royowi. Przechowywanie wersji, hipermedialnych i REST**
     [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
@@ -343,9 +348,7 @@ Oznacza to, że można rozszerzyć interfejsu API z odnajdywaniem nieuprzywilejo
 
 W Eksploratorze interfejsu API nie jest ważne jest, w tym miejscu. Po utworzeniu interfejsu API sieci Web, który można opisania siebie w metadanych struktury Swagger interfejsu API można bezproblemowo z narzędzi na podstawie struktury Swagger, w tym generatory kodu klasy serwera proxy klienta, które mogą współpracować z wielu platform. Na przykład, jak wspomniano [AutoRest](https://github.com/Azure/AutoRest) automatycznie wygeneruje klasy klienta .NET. Ale dodatkowych narzędzi, takich jak [swagger codegen](https://github.com/swagger-api/swagger-codegen) są również dostępne, która zezwala na generowanie kodu klienta interfejsu API biblioteki klas zastępczych serwera i dokumentacji automatycznie.
 
-Obecnie Swashbuckle składa się z dwóch pakietów NuGet: Swashbuckle.SwaggerGen i Swashbuckle.SwaggerUi. Pierwsza zapewnia funkcje do generowania co najmniej jednego dokumentu Swagger bezpośrednio z implementacji interfejsu API i ujawniać je jako punkty końcowe JSON. Drugie zawiera osadzony wersji narzędzia interfejsu użytkownika programu swagger, który może zostać obsłużone przez aplikację i obsługiwane przez generowane dokumenty programu Swagger do opisu interfejsu API. Jednak najnowsze wersje pakietu Swashbuckle zawijany, należy je Swashbuckle.AspNetCore metapackage.
-
-Należy pamiętać, że dla projektów interfejsu API sieci Web programu .NET Core, musisz użyć [Swashbuckle.AspNetCore](https://www.nuget.org/packages/Swashbuckle.AspNetCore/1.0.0) w wersji 1.0.0 lub nowszej.
+Obecnie Swashbuckle składa się z dwóch kilka pakietów NuGet wewnętrznego w obszarze wysokiego poziomu metapakiet [Swashbuckle.Swashbuckle.AspNetCoreSwaggerGen](https://www.nuget.org/packages/Swashbuckle.AspNetCore/) w wersji 1.0.0 lub nowszej dla aplikacji platformy ASP.NET Core.
 
 Po zainstalowaniu tych pakietów NuGet w projekcie interfejsu API sieci Web, należy skonfigurować struktury Swagger w klasie uruchamiania zgodnie z poniższym kodem:
 
@@ -358,18 +361,20 @@ public class Startup
     public void ConfigureServices(IServiceCollection services)
     {
         // Other ConfigureServices() code...
-        services.AddSwaggerGen();
-        services.ConfigureSwaggerGen(options =>
+
+        // Add framework services.
+        services.AddSwaggerGen(options =>
         {
             options.DescribeAllEnumsAsStrings();
-            options.SingleApiVersion(new Swashbuckle.Swagger.Model.Info()
+            options.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info
             {
                 Title = "eShopOnContainers - Catalog HTTP API",
                 Version = "v1",
-                Description = "The Catalog Microservice HTTP API",
-                TermsOfService = "eShopOnContainers terms of service"
+                Description = "The Catalog Microservice HTTP API. This is a Data-Driven/CRUD microservice sample",
+                TermsOfService = "Terms Of Service"
             });
         });
+
         // Other ConfigureServices() code...
     }
 
@@ -380,7 +385,10 @@ public class Startup
         // Other Configure() code...
         // ...
         app.UseSwagger()
-            .UseSwaggerUi();
+            .UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
     }
 }
 ```
@@ -390,7 +398,7 @@ Po zakończeniu możesz uruchomić aplikację i Przeglądaj następujących inte
 ```json
   http://<your-root-url>/swagger/v1/swagger.json
   
-  http://<your-root-url>/swagger/ui
+  http://<your-root-url>/swagger/
 ```
 
 Widać wcześniej wygenerowany interfejsu użytkownika utworzone przez pakiet Swashbuckle dla danego adresu URL, takie jak http://&lt;adres url katalogu głównego &gt; /swagger/interfejsu użytkownika. W rysunek 8-9 widoczny jest także jak można przetestować dowolnej metody interfejsu API.

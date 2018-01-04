@@ -1,5 +1,5 @@
 ---
-title: Praca z typami podstawowymi w .NET
+title: Praca z typami podstawowymi na platformie .NET
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -17,20 +17,23 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d6b1c760fb8667850d4f4e88ca8fe5bcf0b0a662
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 7746d53748260610a7f0e33611dd672fd644d269
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="working-with-base-types-in-net"></a>Praca z typami podstawowymi w .NET
+# <a name="working-with-base-types-in-net"></a>Praca z typami podstawowymi na platformie .NET
 W tej sekcji opisano operacje typu podstawowego .NET, w tym formatowania, konwersja i typowych operacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Konwersja typów w programie .NET Framework](../../../docs/standard/base-types/type-conversion.md)  
  W tym artykule opisano, jak konwertować z jednego typu.  
   
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  Opisuje sposób formatowania ciągów za pomocą specyfikatory formatu ciągu.  
   
  [Manipulowanie ciągami](../../../docs/standard/base-types/manipulating-strings.md)  
@@ -40,7 +43,7 @@ W tej sekcji opisano operacje typu podstawowego .NET, w tym formatowania, konwer
  Opisuje sposób konwertowania ciągów na typy .NET Framework.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wspólny System typów](../../../docs/standard/base-types/common-type-system.md)  
+ [System typu wspólnego](../../../docs/standard/base-types/common-type-system.md)  
  W tym artykule opisano typy używane przez program .NET Framework.  
   
  [Daty, godziny i strefy czasowe](../../../docs/standard/datetime/index.md)  

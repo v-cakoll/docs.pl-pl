@@ -13,23 +13,26 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8ccd1a95586bc92bcc712639eded135a69da1a36
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: aea28532dd81745b8d018cbeed454bbd008c8ed7
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="extending-xslt-style-sheets"></a>Rozszerzanie arkuszy stylów XSLT
 W tej sekcji opisano różne metody rozszerzania funkcji XSLT. Możesz dodać rozszerzenie obiektów lub parametry, używając <xref:System.Xml.Xsl.XsltArgumentList> klasy. Następnie można wywołać rozszerzenie obiektów lub parametrów z arkusza stylów. Ponadto można również osadzać blokach skryptu do arkusza stylów przy użyciu `msxsl:script` elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Obiekty rozszerzenia XSLT](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
+ [Obiekty rozszerzeń XSLT](../../../../docs/standard/data/xml/xslt-extension-objects.md)  
  Omówienie korzystania z <xref:System.Xml.Xsl.XsltArgumentList> klasy obiektów rozszerzenia XSLT procesów.  
   
  [Parametry XSLT](../../../../docs/standard/data/xml/xslt-parameters.md)  
  Omówienie korzystania z <xref:System.Xml.Xsl.XsltArgumentList> klasy parametrów XSLT procesu.  
   
- [Msxsl:script bloki za pomocą skryptu](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
+ [Bloki skryptów i element msxsl:script](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
  Omówienie korzystania z `msxsl:script` elementu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

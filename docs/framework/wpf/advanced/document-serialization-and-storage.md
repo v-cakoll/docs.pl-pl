@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 34b517366a5f143a86388abff5ae13022bc710c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
 [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]udostępnia zaawansowane środowisko do tworzenia i wyświetlania dokumentów wysokiej jakości.  Udoskonalone funkcje, które obsługują dokumenty stałej i dokumenty przepływu, zaawansowane wyświetlania formantów, połączeniu z zaawansowanych 2W i podejmij możliwości grafiki 3D [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] aplikacji do nowego poziomu jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], i możliwość efektywnego zapisywanie i ładowanie dokumentów z magazynu danych potrzeby prawie każdej aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
@@ -87,6 +88,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Documents.Serialization>  
  <xref:System.Windows.Xps.XpsDocumentWriter>  
  <xref:System.Windows.Xps.Packaging.XpsDocument>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Przegląd drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md)  
  [Formatu XML Paper Specification: omówienie](http://go.microsoft.com/fwlink?LinkID=106246)

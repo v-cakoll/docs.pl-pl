@@ -13,11 +13,14 @@ caps.latest.revision: "2"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c28c0f21b03fe7db014f118251363230a6ffc591
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 2f4a50fcd3e3ee56ded97edef08c2ee08f4a7233
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>Zasady wnioskowanie schematu węzła typy i struktury
 W tym temacie opisano, jak proces wnioskowania schematu tłumaczy typy węzłów w dokumencie XML do struktury języka (XSD) definicja schematu XML.  
@@ -155,7 +158,7 @@ W tym temacie opisano, jak proces wnioskowania schematu tłumaczy typy węzłów
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Xml.Schema.XmlSchemaInference>  
- [Model obiektu schematu XML (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
+ [Model SOM (XML Schema Object Model)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
  [Wnioskowanie schematu XML](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
- [Wnioskowanie schematów z dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
- [Wnioskowanie typów prostych reguł](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+ [Wnioskowanie schematów na podstawie dokumentów XML](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)  
+ [Zasady wnioskowania typów prostych](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

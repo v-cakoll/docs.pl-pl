@@ -22,11 +22,14 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83663a28ac7ae19848552583f2ec39a5e96c7fdc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 1650365946797e4c352421d0196b3b0e17913456
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="observer-design-pattern"></a>Wzorzec projektowy obserwatora
 Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Jest to odpowiednie dla dowolnego scenariusz, który wymaga wypychania powiadomień. Definiuje wzorzec *dostawcy* (znanej także jako *podmiotu* lub *według*) i zero, co najmniej jeden *obserwatorów*. Obserwatorów Zarejestruj dostawcę i zawsze, gdy wstępnie zdefiniowanego warunku, zdarzenia lub zmiana stanu występuje, dostawca automatycznie powiadamia wszystkich obserwatorów przez wywołanie metody ich. W tym wywołaniu metody dostawcę można też podać informacje o bieżącym stanie do obserwatorów. W programie .NET Framework wzorzec projektowy obserwatora jest stosowany przez zastosowanie ogólnego <xref:System.IObservable%601?displayProperty=nameWithType> i <xref:System.IObserver%601?displayProperty=nameWithType> interfejsów. Parametr typu ogólnego reprezentuje typ, który zawiera informacje powiadomień.  
@@ -99,6 +102,6 @@ Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbier
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wzorzec projektowy obserwatora — najlepsze praktyki](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Opis najlepszych rozwiązań do przyjęcia podczas tworzenia aplikacji, które implementują wzorzec projektowy obserwatora.|  
-|[Porady: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)|Udostępnia implementację krok dostawcy dla temperatury monitorowania aplikacji.|  
-|[Porady: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md)|Udostępnia implementację krok obserwatora dla temperatury monitorowania aplikacji.|
+|[Wzorzec projektowy obserwatora — najlepsze rozwiązania](../../../docs/standard/events/observer-design-pattern-best-practices.md)|Opis najlepszych rozwiązań do przyjęcia podczas tworzenia aplikacji, które implementują wzorzec projektowy obserwatora.|  
+|[Instrukcje: Implementowanie dostawcy](../../../docs/standard/events/how-to-implement-a-provider.md)|Udostępnia implementację krok dostawcy dla temperatury monitorowania aplikacji.|  
+|[Instrukcje: Implementowanie obserwatora](../../../docs/standard/events/how-to-implement-an-observer.md)|Udostępnia implementację krok obserwatora dla temperatury monitorowania aplikacji.|

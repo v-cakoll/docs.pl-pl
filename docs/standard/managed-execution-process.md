@@ -20,11 +20,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a47761acfabd3de77d65483d50fbe7a77f96e076
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 702ed3e73117fe01769ec9d7bf939ae8df523793
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="managed-execution-process"></a>Proces zarządzanego wykonania
 <a name="introduction"></a>Proces zarządzanego wykonania obejmuje następujące kroki, które opisano szczegółowo w dalszej części tego tematu:  
@@ -116,11 +119,11 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie](../../docs/framework/get-started/overview.md)  
- [Niezależność od języka i elementy niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)  
- [Metadane i składniki samoopisujące](../../docs/standard/metadata-and-self-describing-components.md)  
+ [Niezależność od języka i składniki niezależne od języka](../../docs/standard/language-independence-and-language-independent-components.md)  
+ [Składniki samoopisujące się i metadane](../../docs/standard/metadata-and-self-describing-components.md)  
  [Ilasm.exe (asembler IL)](../../docs/framework/tools/ilasm-exe-il-assembler.md)  
- [Zabezpieczeń](../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../docs/standard/security/index.md)  
  [Współdziałanie z kodem niezarządzanym](../../docs/framework/interop/index.md)  
- [Wdrożenia](../../docs/framework/deployment/net-framework-applications.md)  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Wdrażanie](../../docs/framework/deployment/net-framework-applications.md)  
+ [Zestawy w środowisku uruchomieniowym CLR](../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Domeny aplikacji](../../docs/framework/app-domains/application-domains.md)

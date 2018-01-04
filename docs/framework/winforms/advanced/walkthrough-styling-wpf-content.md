@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5ae28df17e17e81814cb8cba8b2630751707f354
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0fa4772ebb321f927087fe13d0d50a6ae8145e55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-styling-wpf-content"></a>Wskazówki: nadawanie stylu zawartości WPF
 W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Presentation Foundation (WPF) obsługiwanych na formularzu systemu Windows.  
@@ -40,7 +41,7 @@ W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Present
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].,  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu formularzy systemu Windows.  
@@ -163,7 +164,7 @@ W tym przewodniku opisano sposób stosowanie stylów do formantu Windows Present
  <xref:System.Windows.Forms.Integration.ElementHost>  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [Korzystanie z formantów WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
+ [Korzystanie z kontrolek WPF](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)  
  [Projektant WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

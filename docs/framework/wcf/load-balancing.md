@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 699a770e1ff1ec8cebf904a72338f400236b737a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5874d7237608331e5d8284a4ad1cd94ba6fb3451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="load-balancing"></a>Równoważenie obciążenia
 Aby zwiększyć pojemność [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji ma limit skalować je przez wdrożenie ich do farmy serwerów z równoważeniem obciążenia. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]aplikacje mogą być równoważone za pomocą standardowego obciążenia równoważenia technik, w tym usługi równoważenia obciążenia oprogramowania, takie jak Windows Równoważenie obciążenia sieciowego, a także równoważenie urządzenia obciążenia oparte na sprzęcie.  
@@ -101,4 +102,4 @@ Aby zwiększyć pojemność [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]
  Aby uzyskać najlepszą wydajność w scenariuszach z równoważeniem obciążenia, należy rozważyć użycie <xref:System.ServiceModel.NetTcpSecurity> (albo <xref:System.ServiceModel.SecurityMode.Transport> lub <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Internetowe usługi informacyjne najlepsze rozwiązania dotyczące hostowania](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+ [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

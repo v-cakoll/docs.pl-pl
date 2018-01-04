@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d2e4771ac7ed2c9dce94bc4e9da62bb0017daa30
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9e27134c9a18d5125566b582ac17cf6a95b3b83f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-queueing-integration"></a>Integracja usługi kolejkowania komunikatów
 Ta sekcja zawiera przykłady ilustrujące Integracja usługi kolejkowania komunikatów i [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -29,7 +30,7 @@ Ta sekcja zawiera przykłady ilustrujące Integracja usługi kolejkowania komuni
  [Niestandardowe demultipleksowanie](../../../../docs/framework/wcf/samples/custom-demux.md)  
  Pokazuje, jak nagłówki wiadomości usługi MSMQ mogą być mapowane do operacji innej usługi, aby [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi używające <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> nie są ograniczone do przy użyciu jednej operacji usługi.  
   
- [Windows Communication Foundation, do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  Pokazuje, jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji można wysłać wiadomości do aplikacji usługi kolejkowania komunikatów (MSMQ).  
   
  [Korelacja komunikatów](../../../../docs/framework/wcf/samples/message-correlation.md)  

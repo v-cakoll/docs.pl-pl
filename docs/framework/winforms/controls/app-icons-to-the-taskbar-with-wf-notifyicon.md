@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c31998885926e9a7372bcf3182d1c95f0b79d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d795df8e8b514345632491fd6afdd618c2f18ec2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>Porady: dodawanie ikon aplikacji do elementu TaskBar za pomocą składnika NotifyIcon formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.NotifyIcon> składnik wyświetla pojedynczej ikony w obszarze powiadomień stanu na pasku zadań. Aby wyświetlić wiele ikony w obszarze stanu, musi mieć wiele <xref:System.Windows.Forms.NotifyIcon> składniki w formularzu. Aby ustawić ikonę wyświetlaną dla formantu, należy użyć <xref:System.Windows.Forms.NotifyIcon.Icon%2A> właściwości. Można również napisać kod <xref:System.Windows.Forms.NotifyIcon.DoubleClick> obsługi zdarzeń, tak że coś się stanie, gdy użytkownik kliknie dwukrotnie ikonę. Na przykład można utworzyć okno dialogowe wyświetlana użytkownikowi na konfigurowanie reprezentowany przez ikonę proces w tle.  
@@ -83,6 +84,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.NotifyIcon> składnik wyś
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.NotifyIcon>  
  <xref:System.Windows.Forms.NotifyIcon.Icon%2A>  
- [Porady: kojarzenie Menu skrótów za pomocą składnika NotifyIcon formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
- [Notifyicon — składnik](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
- [Informacje o składniku NotifyIcon](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+ [Instrukcje: kojarzenie menu skrótów za pomocą składnika NotifyIcon formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md)  
+ [NotifyIcon, składnik](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)  
+ [NotifyIcon, składnik — omówienie](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)

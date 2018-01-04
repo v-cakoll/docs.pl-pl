@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 55e5aa633e3d788ac8acaa09684c92b8608e7cfa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: caf652f8a80da8e927a74ffc012d09b2389b1b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>Wskazówki: Hosting zegara WPF w Win32
 Aby umieścić [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji, użyj <xref:System.Windows.Interop.HwndSource>, zapewniające HWND, który zawiera Twoje [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości. Najpierw należy utworzyć <xref:System.Windows.Interop.HwndSource>, nadanie mu podobna do właściwości CreateWindow parametrów.  Następnie można sprawdzić <xref:System.Windows.Interop.HwndSource> o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawartości, która ma w nim.  Ponadto możesz uzyskać HWND z <xref:System.Windows.Interop.HwndSource>. W tym przewodniku ilustruje sposób tworzenia mieszane [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wewnątrz [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] aplikacji, która reimplements systemu operacyjnego **właściwości daty i godziny** okna dialogowego.  
@@ -237,5 +238,5 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Interop.HwndSource>  
- [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
  [Przykład współdziałanie zegara Win32](http://go.microsoft.com/fwlink/?LinkID=160051)

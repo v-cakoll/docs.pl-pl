@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fe5871ba9926d1741b42d70d1e0e798c2a0aecc5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72b026e06fde1b7acebf1e069f4386377236e02b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu — Składnik (Formularze systemu Windows)
 > [!NOTE]
@@ -27,7 +28,7 @@ ms.lasthandoff: 11/21/2017
  Formularze systemu Windows `MainMenu` składnik wyświetla menu w czasie wykonywania.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie MainMenu — składnik](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
+ [MainMenu, składnik — omówienie](../../../../docs/framework/winforms/controls/mainmenu-component-overview-windows-forms.md)  
  Wyjaśniono, co to jest ten składnik i jego najważniejszych funkcjach i właściwości.  
   
 ## <a name="reference"></a>Tematy pomocy  

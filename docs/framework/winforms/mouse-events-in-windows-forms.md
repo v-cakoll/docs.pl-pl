@@ -26,11 +26,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 803f2daab5b8f6e216effe4a9ae9f34752d24e70
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 5bde1c1045849fe5507081171711d5a00e99b0b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mouse-events-in-windows-forms"></a>Zdarzenia myszy w formularzach systemu Windows
 Podczas obsługi myszy w danych wejściowych, zwykle zapoznać się położenie myszy wskaźnik i stan przycisku myszy. Ten temat zawiera szczegółowe informacje dotyczące sposobu uzyskania tych informacji ze zdarzeń myszy i wyjaśniono kolejności, w których kliknięcie zdarzenia są generowane w formantach formularzy systemu Windows. Aby uzyskać listę i opis wszystkich zdarzeń myszy, zobacz [sposób działania wejście myszy w formularzach systemu Windows](../../../docs/framework/winforms/how-mouse-input-works-in-windows-forms.md).  Zobacz też [Przegląd obsługi zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/be6fx1bb\(v=vs.110\)), [Przegląd zdarzeń (formularze systemu Windows)](http://msdn.microsoft.com/library/1h12f09z\(v=vs.110\))  
@@ -152,4 +153,4 @@ Podczas obsługi myszy w danych wejściowych, zwykle zapoznać się położenie 
     >  Jeśli użytkownik przesuwa wskaźnik poza formantu przełącznika, gdy przycisk myszy jest wciśnięty (takie jak przesuwanie wskaźnika myszy <xref:System.Windows.Forms.Button> kontrolować naciśniętym zostanie), Przełącz sterowanie namaluje w zgłoszono stanu i to tylko <xref:System.Windows.Forms.Control.MouseUp> zdarzenie. <xref:System.Windows.Forms.Control.Click> Lub <xref:System.Windows.Forms.Control.MouseClick> w takiej sytuacji nie nastąpi zdarzenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wejście myszy w systemie Windows formularzy aplikacji](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+ [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

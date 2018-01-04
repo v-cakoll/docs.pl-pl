@@ -13,14 +13,14 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d03e12ae60b9a0145dcb58765ae00f756f84ca56
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="platform-c-compiler-options"></a>/platform (opcje kompilatora C#)
-Określa, która wersja środowisko uruchomieniowe języka wspólnego (CLR) można uruchomić zestawu.  
+Określa, która wersja z środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -40,11 +40,11 @@ Określa, która wersja środowisko uruchomieniowe języka wspólnego (CLR) moż
   
 -   **ARM** kompiluje z zestawu do uruchomienia na komputerze, na które ma procesor Advanced RISC Machine (ARM).  
   
--   **x64** kompiluje z zestawu do uruchomienia na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T przez 64-bitowe środowisko uruchomieniowe języka wspólnego.  
+-   **x64** kompiluje z zestawu do uruchomienia na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T przez 64-bitowym CLR.  
   
--   **x86** kompiluje z zestawu do uruchomienia przez 32-bitowy, x86 zgodnego wykonywalnych języka wspólnego.  
+-   **x86** kompiluje z zestawu do uruchomienia przez środowisko CLR 32-bitowy, x86 zgodna.  
   
--   **Itanium** kompiluje z zestawu do uruchomienia w 64-bitowego środowiska CLR na komputerze z procesorem Itanium.  
+-   **Itanium** kompiluje z zestawu do uruchomienia w 64-bitowym CLR na komputerze z procesorem Itanium.  
   
  W 64-bitowym systemie operacyjnym Windows:  
   
@@ -81,4 +81,4 @@ csc /platform:anycpu filename.cs
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

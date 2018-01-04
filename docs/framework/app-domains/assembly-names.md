@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 624cc6ad264f32b9a43917d9bae751f57b4421a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: da2137a9ab979d9e610d033324a87939a9777a97
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-names"></a>Nazwy zestawów
 Nazwa zestawu jest przechowywany w metadanych i ma znaczny wpływ na zakres zestawu i używany przez aplikację. Zestawu z silną nazwą ma nazwę FQDN, która zawiera nazwę zestawu, kultury, klucz publiczny i numer wersji. Jest to często określane jako wyświetlana nazwa i dla zestawów załadowanych można uzyskać za pomocą <xref:System.Reflection.Assembly.FullName%2A> właściwości.  
@@ -66,9 +67,9 @@ System.data, version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e08
 >  Jeśli umieścisz zestawu z silną nazwą w globalnej pamięci podręcznej zestawów, nazwę pliku zestawu musi odpowiadać nazwie zestawu (nie w tym rozszerzenie nazwy pliku, takie jak .exe lub .dll). Na przykład jeśli nazwa pliku zestawu jest myAssembly.dll, nazwa zestawu musi być myAssembly. Zestawy prywatne wdrażane tylko w katalogu głównym aplikacji może mieć nazwę zestawu, która różni się od nazwy pliku.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: ustalić w pełni kwalifikowana nazwa zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
+ [Instrukcje: określanie w pełni kwalifikowanej nazwy zestawu](../../../docs/framework/app-domains/how-to-determine-assembly-fully-qualified-name.md)  
  [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
  [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/gac.md)  
- [Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

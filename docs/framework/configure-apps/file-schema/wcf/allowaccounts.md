@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20d411fbe052940fd8fc752e74d012f28ffa441b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a1716aa77808b2a9f8f3ca903dabf81b21b8f709
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
 Zawiera kolekcję elementów konfiguracyjnych określających konta użytkowników dla procesów obsługujących [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] usług i przyznano im dostęp do połączenia z usługą udostępniania.  

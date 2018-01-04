@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 56b6252188854374b9e0eddd7aca53daba6f6086
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 094c962e2576653fc8c9de4c0dece912fcaa07f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlation-overview"></a>Przegląd korelacji
 Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub stan wystąpienia aplikacji, takich jak odpowiedzi na żądanie początkowej lub identyfikator określonej kolejności stanu utrwalonego kolejność przetwarzania przepływu pracy. Ten temat zawiera przegląd korelacji. W innych tematach w tej sekcji zawierają dodatkowe informacje dla każdego typu korelacji.  
@@ -36,7 +37,7 @@ Korelacja jest mechanizm dotyczących komunikatów usługi przepływu pracy lub 
  Na podstawie zawartości korelacji używa elementu informacji w komunikacie Aby skojarzyć ją do określonego wystąpienia. W przeciwieństwie do opartych na protokole korelacji korelacji na podstawie zawartości wymaga Autor aplikacji jawnie określić, gdzie te dane znajdują się w każdej wiadomości pokrewne. Operacje używające korelacji na podstawie zawartości określić te dane wiadomości przy użyciu <xref:System.ServiceModel.MessageQuerySet>. Na podstawie zawartości korelacji jest przydatne podczas komunikowania się z usługami, które nie korzystają z jednym z powiązań kontekstu, takich jak <xref:System.ServiceModel.BasicHttpContextBinding>. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Korelacja na podstawie zawartości, zobacz [na podstawie zawartości](../../../../docs/framework/wcf/feature-details/content-based-correlation.md). Przykładowy kod, zobacz [na podstawie zawartości korelacji](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md) i [skorelowane Kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md) próbek.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Korelacja na podstawie zawartości](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
- [Kalkulator skorelowane](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
+ [Korelacja oparta na zawartości](../../../../docs/framework/windows-workflow-foundation/samples/content-based-correlation.md)  
+ [Skorelowany kalkulator](../../../../docs/framework/windows-workflow-foundation/samples/correlated-calculator.md)  
  [Niezawodna komunikacja dwukierunkowa &#91; WF — przykłady &#93;](../../../../docs/framework/windows-workflow-foundation/samples/durable-duplex.md)  
  [NetContextExchangeCorrelation](http://msdn.microsoft.com/en-us/93c74a1a-b9e2-46c6-95c0-c9b0e9472caf)

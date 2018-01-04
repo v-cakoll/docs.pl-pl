@@ -17,27 +17,28 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-and-commands-how-to-topics"></a>Dane wejściowe i polecenia Tematy porad
 Tematy w tej sekcji opisano sposób korzystania z infrastruktury wejściowych i sterująca w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Włącz polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Zmień typ kursora](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [Zmiana koloru elementu za pomocą zdarzeń fokusu](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [Stosowanie FocusVisualStyle do formantu](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Wykryć podczas Wprowadź naciśnięcia klawisza](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [Tworzenie efektu przerzucania za pomocą zdarzeń](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [Utwórz obiekt wykonaj wskaźnika myszy](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [Utwórz element RoutedCommand](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [Implementowanie ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Podłączanie polecenia do formantu bez obsługi polecenia](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [Podłączanie polecenia dla formantu o obsługę poleceń](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [Włączanie polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [Zmienianie typu kursora](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
+ [Zmienianie koloru elementu przy użyciu zdarzeń fokusu](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [Stosowanie stylu FocusVisualStyle do kontrolki](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Wykrywanie chwili wciśnięcia klawisza Enter](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
+ [Tworzenie efektu najazdu przy użyciu zdarzeń](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
+ [Sprawianie, aby obiekt podążał za wskaźnikiem myszy](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [Tworzenie elementu RoutedCommand](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
+ [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [Podpinanie polecenia do kontrolki bez użycia obsługi poleceń](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [Podpinanie polecenia do kontrolki za pomocą obsługi poleceń](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.UIElement>  

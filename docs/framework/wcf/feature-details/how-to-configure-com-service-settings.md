@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa497567c5cf380d7764499991ad9e7e95a5cbe0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bdbdbae857685ddb447843fd704896de018b1c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-com-service-settings"></a>Porady: Konfigurowanie ustawień usług COM +
 Interfejs aplikacji jest dodania lub usunięcia za pomocą narzędzia konfiguracji usług COM +, konfiguracji usługi sieci Web jest aktualizowana w pliku konfiguracji aplikacji. W trybie COM + hostowanej pliku Application.config znajduje się w katalogu głównym aplikacji (aplikacje %PROGRAMFILES%\ComPlus\\{appid} jest ustawieniem domyślnym). W obu trybach hostowanych w sieci Web w katalogu określonego vroot znajduje się plik Web.config.  
@@ -106,4 +107,4 @@ public interface IFinancesContract : IDisposable
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie z aplikacjami COM +](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+ [Współdziałanie z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

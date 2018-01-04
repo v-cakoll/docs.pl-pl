@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 27c1c6cd0e617c0940a734e7e16a3ec5d12f920d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 324e4ed290b98d2268dd82fa55b81deaeb849770
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>Porady: tworzenie tabeli wyszukiwania za pomocą składnika BindingSource formularzy systemu Windows
 Tabela odnośników jest tabelą danych, która zawiera kolumnę wyświetlającą z rekordów w powiązanej tabeli. W poniższych procedurach <xref:System.Windows.Forms.ComboBox> formantu służy do wyświetlania pola z relacji klucza obcego z elementu nadrzędnego z tabelą podrzędną.  
@@ -103,6 +104,6 @@ Tabela odnośników jest tabelą danych, która zawiera kolumnę wyświetlając�
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.BindingSource>  
- [BindingSource — składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
- [ComboBox — formant](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
+ [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  
+ [ComboBox, kontrolka](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)  
  [Powiązywanie formantów z danymi w Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

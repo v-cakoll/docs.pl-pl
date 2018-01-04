@@ -13,11 +13,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89de6bcbb44ca70592697ccf891099446b230ce6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7cf6bb08dc6607bf6c5b9e283ce449b603cb38d3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-diagnostics-feed-sample"></a>Przykład autonomicznego kanału diagnostycznego
 Ten przykład przedstawia sposób tworzenia źródła danych dla zespolonego z RSS/Atom [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]. Jest podstawowy program "Hello World", który zawiera podstawowe informacje o modelu obiektów oraz jak je skonfigurować na [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi.  
@@ -104,5 +105,5 @@ foreach (SyndicationItem i in feed.Items)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Syndication\DiagnosticsFeed`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Model programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)

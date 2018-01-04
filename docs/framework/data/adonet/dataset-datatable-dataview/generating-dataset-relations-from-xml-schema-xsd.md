@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bda9ff0052c6dc2462f007e3febb3cbf9ca7d5ac
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 916b9ad24c2ae2334635760a520116b4c19df314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>Generowanie relacji zestawu danych na podstawie schematu XML (XSD)
 W <xref:System.Data.DataSet>, formularz skojarzenia między co najmniej dwie kolumny przez utworzenie relacji nadrzędny podrzędny. Istnieją trzy sposoby do reprezentowania **DataSet** relacji w ramach schematu schematu XML definition language (XSD):  
@@ -91,20 +92,20 @@ msdata:childkey="" />
  Proces mapowania **relacji** elementu do utworzenia relacji nadrzędny podrzędny między **OrderNumber** kolumny w **kolejności** tabeli i **OrderNo** kolumny w **OrderDetail** tabeli w **zestawu danych**. Proces mapowania tylko określa relację; nie automatycznie określa żadnych ograniczeń na wartościach w tych kolumn, tak jak podstawowy klucz/ograniczeń klucza obcego w relacyjnych baz danych.  
   
 ### <a name="in-this-section"></a>W tej sekcji  
- [Mapowanie niejawnych relacji między elementami zagnieżdżonych schematu](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
+ [Mapowanie niejawnych relacji między zagnieżdżonymi elementami schematu](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-implicit-relations-between-nested-schema-elements.md)  
  Opisuje warunki ograniczające i relacje, które są domyślnie tworzone w **DataSet** gdy wystąpi elementów zagnieżdżonych w schemacie XML.  
   
- [Mapowanie relacji określonych dla elementów zagnieżdżonych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
+ [Mapowanie relacji określonych dla zagnieżdżonych elementów](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/map-relations-specified-for-nested-elements.md)  
  Opisuje sposób jawnie ustawiona relacji **zestawu danych** dla elementów zagnieżdżonych w schemacie XML.  
   
- [Określanie relacji między elementami z nie zagnieżdżania](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
+ [Określanie relacji między elementami bez zagnieżdżania](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/specify-relations-between-elements-with-no-nesting.md)  
  Opisuje sposób tworzenia relacji w **DataSet** między elementami schematu XML, które nie są zagnieżdżone.  
   
 ### <a name="related-sections"></a>Sekcje pokrewne  
- [Wyprowadzanie relacyjne struktury zestawu danych z schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
+ [Pobieranie relacyjnej struktury elementu DataSet ze schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)  
  Opisuje relacyjne struktury lub schematu z **DataSet** utworzonego ze schematu (XSD) języka definicji schematu XML.  
   
- [Ograniczenia (XSD) schematu XML mapowania do ograniczenia zestawu danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
+ [Mapowanie ograniczeń schematu XML (XSD) na ograniczenia elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)  
  Zawiera opis elementów schematu XML używany do tworzenia unikatowych obcego klucza ograniczeń i **zestawu danych**.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3705db8b9d359ce83c6c47bef58de327745bed44
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de415a6282b1d27d803d448bd3225355c08e011b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server integrację środowiska uruchomieniowego
 SQL Server 2005 wprowadzono integracji składnika wspólne języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, czy możesz zapisywać procedur składowanych, wyzwalaczy, typy danych zdefiniowane przez użytkownika, funkcjach zdefiniowanych przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji zwracającej tabelę przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i firmy Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestawu nowych interfejsów programowania aplikacji (API), dzięki czemu kod zarządzany mogą współdziałać ze środowiskiem programu Microsoft SQL Server.  
@@ -31,13 +32,13 @@ SQL Server 2005 wprowadzono integracji składnika wspólne języka wspólnego (C
 1.  [Koncepcje programowania integracji wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR)](http://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do integracji środowiska CLR programu SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
+ [Wprowadzenie do integracja środowiska CLR programu SQL Server](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  
  Wprowadzenie do integracji środowiska CLR programu SQL Server. Zawiera łącza do dodatkowych tematów.  
   
- [Funkcje zdefiniowane przez użytkownika CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
+ [Zdefiniowane przez użytkownika funkcje CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-functions.md)  
  Opisuje sposób zaimplementowania i użycia różnych typów funkcji CLR: przechowywanymi w tabeli, skalarne i zdefiniowanych przez użytkownika funkcji agregujących.  
   
- [Typy danych zdefiniowane przez użytkownika CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
+ [Zdefiniowane przez użytkownika typy CLR](../../../../../docs/framework/data/adonet/sql/clr-user-defined-types.md)  
  Opisuje sposób zaimplementowania i użycia typy CLR zdefiniowane przez użytkownika. Zawiera łącza do dodatkowych tematów.  
   
  [Procedury składowane CLR](../../../../../docs/framework/data/adonet/sql/clr-stored-procedures.md)  

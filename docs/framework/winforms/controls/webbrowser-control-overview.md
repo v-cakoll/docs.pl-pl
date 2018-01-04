@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c2dfae4cbd7f583ce69ff5591c24a573db0d4e4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d2c1ed93769cc91d9622a86ea2d894cea57f5bcd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser — Informacje o formancie
 <xref:System.Windows.Forms.WebBrowser> Kontrola zapewnia zarządzany otok dla formantu WebBrowser ActiveX. Zarządzany otok umożliwia wyświetlanie strony sieci Web w aplikacjach formularzy systemu Windows klienta. Można użyć <xref:System.Windows.Forms.WebBrowser> formantu powielają funkcjonalność przeglądania sieci Web programu Internet Explorer w aplikacji lub można wyłączyć domyślna funkcjonalność programu Internet Explorer i używać kontrolki jako proste przeglądarki dokumentów HTML. Umożliwia także formantu dodawanie do formularza elementów interfejsu użytkownika opartego na DHTML i Ukryj fakt, że są one hostowane w <xref:System.Windows.Forms.WebBrowser> formantu. To rozwiązanie umożliwia bezproblemowe łączenie formantów formanty formularzy systemu Windows w jednej aplikacji sieci Web.  
@@ -61,9 +62,9 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>  
  <xref:System.Windows.Forms.WebBrowserReadyState>  
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
- [Porady: nawigowanie do adresu URL za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
- [Porady: drukowanie za pomocą formantu WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
- [Porady: Dodawanie funkcji przeglądarki sieci Web do aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
- [Porady: tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
- [Porady: Implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
+ [Instrukcje: nawigowanie do adresu URL za pomocą kontrolki WebBrowser](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)  
+ [Instrukcje: drukowanie za pomocą kontrolki WebBrowser](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)  
+ [Instrukcje: dodawanie funkcji przeglądarki internetowej do aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)  
+ [Instrukcje: tworzenie przeglądarki dokumentów HTML w aplikacji Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)  
+ [Instrukcje: implementowanie dwukierunkowej komunikacji między kodem DHTML i kodem aplikacji klienta](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)  
  [Zabezpieczenia WebBrowser](../../../../docs/framework/winforms/controls/webbrowser-security.md)

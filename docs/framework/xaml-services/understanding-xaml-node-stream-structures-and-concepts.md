@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: ae5cfd6cdb557aff4910f38ea0fb7f4b54afbbb0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5bce62b03b97f182d314a379c9532fc05148050
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>Zapoznanie się ze strukturami i koncepcjami strumienia węzłów XAML
 Czytniki XAML i zapisywania XAML zgodnie z implementacją w .NET Framework XAML Services są oparte na koncepcję projektu strumienia węzłów XAML. Strumień węzłów XAML jest conceptualization zestawu węzłów XAML. W tym conceptualization procesora XAML przedstawiono struktury relacje węzła w języku XAML, co w czasie. W dowolnym momencie istnieje tylko jeden rekord bieżący lub bieżącą pozycję w otwartych strumień węzłów XAML, a wiele aspektów interfejsu API zgłaszać tylko te informacje dostępne w tym miejscu. Bieżący węzeł w strumień węzłów XAML można przedstawić jako obiekt, element członkowski lub wartość. Traktując XAML jako strumień węzłów XAML, czytników XAML można komunikować się z autorów XAML i włączyć program do wyświetlania, interakcji z i zmienić zawartość strumienia węzłów XAML podczas ładowania ścieżki lub Zapisz operacji ścieżki, która obejmuje XAML. Projekt interfejsu API składników zapisywania i odczytywania XAML i koncepcji strumienia węzłów XAML są takie jak podobne do poprzedniego czytnika pokrewne i zapisywania projektów i pojęcia [!INCLUDE[TLA#tla_xmldom](../../../includes/tlasharptla-xmldom-md.md)] i <xref:System.Xml.XmlReader> i <xref:System.Xml.XmlWriter> klasy. W tym temacie omówiono pojęcia strumienia węzłów XAML i zawiera opis sposobu pisania procedury wchodzące w interakcje z reprezentacji XAML na poziomie węzła XAML.  

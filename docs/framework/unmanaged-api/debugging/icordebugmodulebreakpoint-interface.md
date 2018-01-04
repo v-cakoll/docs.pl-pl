@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3e3937c6c0baef4cc927b5c5d789826c70beebf2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cec51a7efe17c2188f12039333dd90f557b1e724
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint Interface1
 Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą klasy interfejsu ICorDebugBreakpoint.  
@@ -32,7 +33,7 @@ Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą klasy i
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetModule — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Pobiera wskaźnika interfejsu do ICorDebugModule, który odwołuje się do modułu, w których ustawiony jest ten punkt przerwania.|  
+|[GetModule, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|Pobiera wskaźnika interfejsu do ICorDebugModule, który odwołuje się do modułu, w których ustawiony jest ten punkt przerwania.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,4 +50,4 @@ Zapewnia dostęp do określonych modułów. Ten interfejs jest podklasą klasy i
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 372b2466baaa76ba47a6710447d93f9fa6bb967f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 18e4518a2e321609a8add06c399ed9588748d1ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost — Klasa coclass
 Zawiera interfejsy zarządzania wykonywanie kodu w czasie wykonywania.  
@@ -41,8 +42,8 @@ coclass CLRRuntimeHost {
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost — interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Udostępnia metody do kontroli wykonania aplikacji w czasie wykonywania.|  
-|[ICLRValidator — interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Udostępnia metody weryfikacji przenośnych obrazy wykonywalne oraz szczegółowe raportowanie błędów sprawdzania poprawności.|  
+|[ICLRRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|Udostępnia metody do kontroli wykonania aplikacji w czasie wykonywania.|  
+|[ICLRValidator, interfejs](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|Udostępnia metody weryfikacji przenośnych obrazy wykonywalne oraz szczegółowe raportowanie błędów sprawdzania poprawności.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

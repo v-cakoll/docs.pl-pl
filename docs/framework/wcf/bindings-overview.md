@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eb2d66217202ee43fb2377f4a8ef26a47b676c11
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4bc4fc7559872a808c2de87e4926075614351030
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Omówienie powiązań WCF (Windows Communication Foundation)
 Powiązania są obiekty, które są używane do określania szczegółów komunikacji, które są wymagane do nawiązania połączenia z punktów końcowych [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi. Każdy punkt końcowy w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi wymaga powiązania być poprawnie określona. W tym temacie przedstawiono typy komunikacji szczegóły definiujące powiązań, elementy powiązania, jakie powiązania są uwzględnione w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], jak można określić powiązanie dla punktu końcowego.  

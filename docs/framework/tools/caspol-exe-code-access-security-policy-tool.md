@@ -26,11 +26,12 @@ caps.latest.revision: "44"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71f0a8c8d0e5e09cb6f39e5b8b104c0848c4d8ce
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (Narzędzie zasad zabezpieczeń dostępu kodu)
 Narzędzie (Caspol.exe) sprawdzania zabezpieczeń dostępu kodu (CAS) pozwala użytkownikom i administratorom na modyfikowanie zasad bezpieczeństwa na poziomie zasad komputera, na poziomie zasad użytkownika i na poziomie zasad przedsiębiorstwa.  
@@ -95,7 +96,7 @@ caspol [options]
 |**-appdir**|Określa katalog aplikacji. Jeśli określisz **— appdir** jako warunek członkostwa dowód adresu URL kodu jest porównywana z świadectwo katalogu aplikacji, kodu. Jeśli obie wartości są takie same, warunek członkostwa jest spełniony. Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition>.|  
 |**-niestandardowych***plik_xml* |Dodaje niestandardowy warunek członkostwa. Obowiązkowe *plik_xml* argument określa plik XML, który zawiera serializacja XML warunek członkostwa niestandardowych.|  
 |**-hash** *Algorytm_mieszania* {**-szesnastkowych** *hashValue* &#124; **-pliku** *assembly_file* }|Określa kod, który posiada podany skrót zestawu. Aby użyć skrótu jako warunku członkostwa grupy kodu, należy określić wartość skrótu lub plik zestawu. Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.HashMembershipCondition>.|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-plik** *signed_file_name* &#124; **-szesnastkowych***hex_string* }  |Określa kod, który posiada podanego wydawcę oprogramowania wskazanego przez plik certyfikatu, sygnaturę pliku lub reprezentację szesnastkową certyfikatu X509. Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.PublisherMembershipCondition>.|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-plik** *signed_file_name* &#124; **-szesnastkowych***hex_string* }|Określa kod, który posiada podanego wydawcę oprogramowania wskazanego przez plik certyfikatu, sygnaturę pliku lub reprezentację szesnastkową certyfikatu X509. Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.PublisherMembershipCondition>.|  
 |**-witryny** *witryny sieci Web*|Określa kod, który posiada określoną witrynę pochodzenia. Na przykład:<br /><br /> **-witryny** www.proseware.com<br /><br /> Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.SiteMembershipCondition>.|  
 |**-strong - pliku** *nazwa_pliku* {*nazwa* &#124; **- noname**} {*wersji* &#124; **- noversion**}|Określa kod, który ma określone silnej nazwy jako wyznaczony przez nazwę pliku, nazwa zestawu jako ciąg, a wersja zestawu w formacie *głównych*. *drobne*. *Tworzenie*. *poprawki*. Na przykład:<br /><br /> **-strong - pliku** myAssembly.exe myAssembly 1.2.3.4<br /><br /> Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.StrongNameMembershipCondition>.|  
 |**— adres url** *adresu URL*|Określa kod, który pochodzi z określonego adresu URL. Adres URL musi zawierać nazwę protokołu, taką jak http:// lub ftp://. Ponadto symbolu wieloznacznego (\*) może służyć do określenia wielu zestawów z określonego adresu URL. **Uwaga:** ponieważ można ustalić adresu URL za pomocą wielu nazw przy użyciu adresu URL jako warunek członkostwa nie jest bezpiecznym sposobem sprawdzenia tożsamości kodu. Gdy jest to możliwe, należy używać silnej nazwy jako warunku członkostwa, wydawcy jako warunku członkostwa lub skrótu jako warunku członkostwa. <br /><br /> Aby uzyskać więcej informacji na temat ten warunek członkostwa, zobacz <xref:System.Security.Policy.UrlMembershipCondition>.|  
@@ -256,4 +257,4 @@ caspol -all -resolveperm testassembly
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

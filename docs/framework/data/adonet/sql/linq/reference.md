@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bd381706c9ceb7c1c8f80002cee3b857b695372
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 81803df493d53b94a57720755f9bc351404b7d49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference"></a>Tematy pomocy
 Ta sekcja zawiera informacje dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] deweloperów.  
@@ -28,26 +29,26 @@ Ta sekcja zawiera informacje dotyczące [!INCLUDE[vbtecdlinq](../../../../../../
  [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  Opisuje sposób CLR konstrukcje środowiska uruchomieniowego (języka wspólnego CLR) ma odpowiednie wyrażenia w języku SQL tylko wtedy, gdy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] jawnie udostępnił konwersji w aparacie translacji.  
   
- [Mapowanie opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  W tym artykule opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] opartych na atrybutach podejście do mapowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] model obiektów do bazy danych programu SQL Server.  
   
  [Generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)  
  Opisuje sposób [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uzyskuje informacje metadanych z bazy danych, a następnie generuje pliki kodu.  
   
- [Mapowanie zewnętrznych](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  W tym artykule opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapowania zewnętrzne podejście do mapowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] model obiektów do bazy danych programu SQL Server. Zawiera definicję schematu XSD mapowania plików.  
   
  [Często zadawane pytania](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)  
  Zawiera odpowiedzi na często zadawane pytania dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [SQL Server Compact i LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
+ [SQL Server Compact i LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-server-compact-and-linq-to-sql.md)  
  Opisuje sposób [!INCLUDE[ssEW](../../../../../../includes/ssew-md.md)] różni się od [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji.  
   
- [Translacja Operator zapytania standardowe](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
+ [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)  
  Opisuje sposób [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy standardowych operatorów zapytań do poleceń SQL.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+ [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)  
  Udostępniono portal dla [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tematów.  
   
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

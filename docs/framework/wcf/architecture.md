@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7be93c5949966c052e77adebe8bb4d7aac9149bb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1bc7383c5b93203b144c965f06fa7365c864de27
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-architecture"></a>Architektura WCF (Windows Communication Foundation)
 Poniższa ilustracja przedstawia główne warstwy [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architektury.  
@@ -56,5 +57,5 @@ Poniższa ilustracja przedstawia główne warstwy [!INCLUDE[indigo1](../../../in
  Można też usług *hostowanej*, lub uruchom w pliku wykonywalnym zarządzane przez firmę zewnętrzną, na przykład Windows Activation Service (WAS) lub programu IIS. Umożliwia WAS [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji zostać aktywowana automatycznie podczas wdrażania na komputerze z systemem WAS. Usługi można też ręcznie uruchomić jako pliki wykonywalne (pliki .exe). Usługi można również uruchomić automatycznie jako usługa systemu Windows. Składniki modelu COM + mogą być również obsługiwane jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Co to jest Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Podstawowych Windows Communication Foundation pojęcia](../../../docs/framework/wcf/fundamental-concepts.md)
+ [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Podstawowe pojęcia programu Windows Communication Foundation](../../../docs/framework/wcf/fundamental-concepts.md)

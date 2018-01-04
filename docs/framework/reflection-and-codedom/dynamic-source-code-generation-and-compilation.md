@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f1eb17af8fef96f42973e65859bd17b1e835fa98
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a74d25372b83c848621a44f6ea32a455a0f18ccf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dynamiczne generowanie i kompilacja kodu źródłowego
 Mechanizm wywołuje kod Document Object Model (CodeDOM), który umożliwia deweloperom programów, które Emituj kod źródłowy do generowania kodu źródłowego w wielu języków programowania, w czasie wykonywania, oparte na jednym modelu, który reprezentuje kod zawiera programu .NET Framework do renderowania.  
@@ -45,10 +46,10 @@ Mechanizm wywołuje kod Document Object Model (CodeDOM), który umożliwia dewel
  [Generowanie kodu źródłowego i kompilowanie programu z wykresu CodeDOM](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
  Opisuje sposób generowania kodu źródłowego i kompilowania wygenerowanego kodu z zewnętrznego kompilatorem przy użyciu klas zdefiniowanych w `System.CodeDom.Compiler` przestrzeni nazw.  
   
- [Porady: Tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [Instrukcje: tworzenie pliku dokumentacji XML przy użyciu modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
  Informacje dotyczące używania CodeDOM do generowania kodu przy użyciu komentarze dokumentacji XML i kompilowania wygenerowanego kodu tak, aby tworzy dane wyjściowe dokumentacji XML.  
   
- [Porady: Tworzenie klasy za pomocą modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [Instrukcje: tworzenie klasy za pomocą modelu CodeDOM](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
  Informacje dotyczące używania CodeDOM do generowania klasy zawierające pola, właściwości, metody, konstruktora i punktu wejścia.  
   
 ## <a name="reference"></a>Tematy pomocy  

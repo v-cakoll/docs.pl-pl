@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: b05d77df28b560b9236e467a914229c0fa9ae7e8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 68e1d66b615db7369d71f56b402c13ce41ad5e54
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych ma reprezentacji w postaci typowych w pamięci zarządzane i niezarządzane i nie wymagają specjalnej obsługi przez organizatora międzyoperacyjnego. Te typy są nazywane *typy kopiowalne* ponieważ one nie wymagają konwersji, gdy są one przekazywane między zarządzanych i niezarządzanych kodu.  
@@ -82,4 +83,4 @@ Większość typów danych ma reprezentacji w postaci typowych w pamięci zarzą
  Typy klas i obiektów są obsługiwane tylko przez COM interop. Dla odpowiednich typów w [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# i C++, zobacz [Przegląd biblioteki klas](../../../docs/standard/class-library-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie Marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)
+ [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)

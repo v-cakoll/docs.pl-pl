@@ -13,11 +13,12 @@ caps.latest.revision: "43"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bb2646a500db299f164dce34fb062a509f90047
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 96ae88fd29391bf173da33398dfb41b3a06441ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unsupported-scenarios"></a>Nieobsługiwane scenariusze
 Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie obsługuje niektóre scenariusze zabezpieczeń. Na przykład [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition nie obsługuje protokoły uwierzytelniania SSPI lub protokołu Kerberos i w związku z tym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] nie obsługuje uruchamiania usługi z uwierzytelnianiem systemu Windows na tej platformie. Innych mechanizmów uwierzytelniania, takich jak nazwy użytkownika i hasła i zintegrowane uwierzytelnianie HTTP i HTTPS są obsługiwane podczas uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w systemie Windows XP Home Edition.  
@@ -119,9 +120,9 @@ Z różnych powodów [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] nie
  Będzie można zmodyfikować powiązanie bezpośrednio na komputerze klienckim po wykonaniu importu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ujawnienie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  
- [Ataki](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+ [Ataki oparte na metodzie powtórzeń](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -168,11 +168,12 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83f7b1f91b70281b4cce57632977bfc4685a58fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 22f556c87f676b86228fbb68f66206f3c39140cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe — komunikaty o błędach
 Wywołania procesu kompilacji [Winmdexp.exe (Narzędzie systemu Windows Runtime metadanych wyeksportować)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md) korzystając  **[!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika** szablonu w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], więc komunikaty o błędach Winmdexp.exe są **Listy błędów**. Winmdexp.exe działa w module, który jest skompilowana przy użyciu `/target:winmdobj` opcji. Ponieważ wymaga ona modułu skompilowanego jako dane wejściowe, jego komunikaty o błędach nie są wyświetlane, chyba że kompilacja zakończy się pomyślnie.  
@@ -182,5 +183,5 @@ Wywołania procesu kompilacji [Winmdexp.exe (Narzędzie systemu Windows Runtime 
  Jeśli ten błąd nie została szczegółowo opisana w tym artykule i uważasz, że komunikat nie zawiera wystarczających informacji, aby rozwiązać ten problem, użyj link opinii w tym artykule i zawierać komunikat o błędzie. Alternatywnie można pliku błędu pod adresem [witryny sieci Web Microsoft Connect](http://go.microsoft.com/fwlink/p/?LinkId=251130). Można także wyszukać więcej informacji [Forums Microsoft](http://go.microsoft.com/fwlink/p/?LinkId=251129).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Winmdexp.exe (narzędzie eksportowania metadanych środowiska wykonawczego systemu Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
+ [Winmdexp.exe (narzędzie eksportowania metadanych środowiska uruchomieniowego systemu Windows)](../../../docs/framework/tools/winmdexp-exe-windows-runtime-metadata-export-tool.md)  
  [Diagnozowanie błędów składnika środowiska wykonawczego systemu Windows](http://go.microsoft.com/fwlink/p/?LinkId=251127)

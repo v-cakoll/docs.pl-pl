@@ -23,11 +23,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7dfa8bab1d142462d49524495e3e5dc0b4960a4d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a4123ea28b317d432f9a36ea0c084d7fdacc7ffe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>Zestawy w środowisku uruchomieniowym języka wspólnego
 Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnienia zabezpieczeń. Zestaw jest kolekcją typów i zasobów, które są przeznaczone do współpracują ze sobą i utworzenia jednostki logicznej funkcji. Zestaw zawiera środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Do środowiska wykonawczego typ nie istnieje poza kontekstem zestawu.  
@@ -58,15 +59,15 @@ Zestawy są blokami konstrukcyjnymi aplikacji .NET Framework; stanowią podstawo
 |-----------|-----------------|  
 |[Zawartość zestawu](../../../docs/framework/app-domains/assembly-contents.md)|W tym artykule opisano elementy wchodzące w skład zestawu.|  
 |[Manifest zestawu](../../../docs/framework/app-domains/assembly-manifest.md)|W tym artykule opisano w manifeście zestawu i sposób przechowywania w zestawach danych.|  
-|[Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/gac.md)|Opis pamięci podręcznej GAC i sposobu korzystania z zestawami.|  
+|[Global Assembly Cache](../../../docs/framework/app-domains/gac.md)|Opis pamięci podręcznej GAC i sposobu korzystania z zestawami.|  
 |[Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)|Opisuje właściwości zestawy o silnych nazwach.|  
 |[Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)|W tym artykule omówiono, jak działają zabezpieczenia z zestawami.|  
 |[Przechowywanie wersji zestawu](../../../docs/framework/app-domains/assembly-versioning.md)|Omówienie zasad przechowywania wersji .NET Framework.|  
 |[Umieszczanie zestawu](../../../docs/framework/app-domains/assembly-placement.md)|W tym artykule omówiono, gdzie umieścić zestawy.|  
-|[Zestawy i wykonywanie Side-by-Side](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Zawiera omówienie sposobu użycia wielu wersji środowiska uruchomieniowego lub zestawu jednocześnie.|  
+|[Zestawy i wykonywanie równoczesne](../../../docs/framework/app-domains/assemblies-and-side-by-side-execution.md)|Zawiera omówienie sposobu użycia wielu wersji środowiska uruchomieniowego lub zestawu jednocześnie.|  
 |[Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)|Opisuje sposób tworzenia, zaloguj się i ustawić atrybuty zestawów.|  
 |[Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|Opisuje sposób tworzenia zestawów dynamicznych.|  
-|[Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|W tym artykule opisano, jak programu .NET Framework jest rozpoznawany jako odwołania do zestawów w czasie wykonywania.|  
+|[Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|W tym artykule opisano, jak programu .NET Framework jest rozpoznawany jako odwołania do zestawów w czasie wykonywania.|  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Reflection.Assembly?displayProperty=nameWithType>

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4792967bb21912e475c32c0f37149b89a838b133
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 232f57890e70e5be0ec60408587a622fafd1ba7e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="responsibilities-of-the-developer-in-overriding-default-behavior"></a>Obowiązki dewelopera w Zastępowanie domyślnego zachowania
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie wymusza następujące wymagania, ale zachowanie jest niezdefiniowana, jeśli te wymagania nie zostały spełnione.  
@@ -37,4 +38,4 @@ ms.lasthandoff: 10/18/2017
 -   Na koniec metodę zastępującą powinien wykonać określonej operacji. Semantyka [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] operacji, takich jak wczesny ładowania, odłożone ładowanie, i <xref:System.Data.Linq.DataContext.SubmitChanges%2A>) wymagają zastąpienia w stanie określonej usługi. Na przykład obciążenia musi zostać zastąpiona po prostu zwracającej pustą kolekcję bez sprawdzenia, czy zawartość w bazie danych prawdopodobnie spowoduje niespójność danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostosowywanie wstawiania, aktualizowania i usuwania operacji](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+ [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)

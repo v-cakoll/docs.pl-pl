@@ -16,11 +16,12 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e5719cf7cfb5ec99f1bfbf952048e98c9465e1fa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services-overview"></a>Przegląd usług aplikacji klienta
 Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług profilu w aplikacjach formularzy systemu Windows i Windows Presentation Foundation (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]usługi aplikacji znajdują się w Microsoft ASP.NET 2.0 AJAX rozszerzeń, które jest dołączana do [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] i [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows.  
@@ -87,10 +88,10 @@ Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_shor
 |<xref:System.Web.ClientServices.Providers.UserValidatedEventArgs>|Ta klasa udostępnia <xref:System.Web.ClientServices.Providers.UserValidatedEventArgs.UserName%2A> właściwości do użycia w ramach <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider.UserValidated> programu obsługi zdarzeń.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługi aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Porady: Konfigurowanie usług aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Porady: Implementowanie logowania użytkownika z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
- [Wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Instrukcje: konfigurowanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Instrukcje: implementowanie logowania użytkownika przy użyciu usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Przewodnik: używanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md)  
  [Przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)  
  [Korzystanie z uwierzytelniania formularzy z Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)  

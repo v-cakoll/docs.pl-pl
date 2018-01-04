@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 9428c5d7c8c6cf0f571b05a8b9c33b96d073d7a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8881768d66e95ce1391ce1be1663bdc3107a347
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-security-scenarios"></a>Typowe scenariusze zabezpieczeń
 Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpieczeń usługi. Konfiguracje różny w zależności od szeregu czynników. Na przykład czy usługi lub klienta znajduje się w intranecie lub czy zabezpieczeń są dostarczane przez Windows lub transportu (na przykład HTTPS).  
@@ -27,7 +28,7 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
  [Niezabezpieczony klient internetowy i usługa](../../../../docs/framework/wcf/feature-details/internet-unsecured-client-and-service.md)  
  Przykład publiczny, niezabezpieczony klient i usługa.  
   
- [Intranet niezabezpieczony klient i usługa](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
+ [Niezabezpieczony klient i usługa w intranecie](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  Podstawowy [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi opracowany, aby podać informacje w sieci prywatnej bezpieczny do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
   
  [Zabezpieczenia transportu z uwierzytelnianiem podstawowym](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
@@ -36,19 +37,19 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
  [Zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
  Przedstawia klientów i usług zabezpieczonych przez zabezpieczenia systemu Windows.  
   
- [Zabezpieczenia transportu z anonimowym klientem](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
+ [Zabezpieczanie transportu za pomocą anonimowego klienta](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
  Zabezpieczenia transportu (na przykład HTTPS) w tym scenariuszu są używane do zapewnienia poufności i integralności.  
   
- [Zabezpieczenia transportu z uwierzytelnianiem certyfikatu](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
+ [Zabezpieczanie transportu przy użyciu uwierzytelniania certyfikatów](../../../../docs/framework/wcf/feature-details/transport-security-with-certificate-authentication.md)  
  Pokazuje klienta i usługi zabezpieczone za pomocą certyfikatu.  
   
  [Zabezpieczenia komunikatów z anonimowym klientem](../../../../docs/framework/wcf/feature-details/message-security-with-an-anonymous-client.md)  
  Przedstawia klientów i usług zabezpieczonych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia wiadomości.  
   
- [Zabezpieczenia komunikatów z użyciem klienta nazwy użytkownika](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
+ [Zabezpieczenia na poziomie komunikatu z użyciem klienta nazwy użytkownika](../../../../docs/framework/wcf/feature-details/message-security-with-a-user-name-client.md)  
  Klient jest aplikacji formularzy systemu Windows, która umożliwia klientom zalogować się przy użyciu nazwy użytkownika domeny i hasła.  
   
- [Zabezpieczenia komunikatów z klientem certyfikat](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
+ [Zabezpieczenia komunikatów z klientem dysponującym certyfikatem](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
  Serwery mają certyfikaty, a każdy klient ma certyfikat. Kontekst zabezpieczeń jest nawiązywane za pośrednictwem negocjacji zabezpieczeń TLS (Transport Layer).  
   
  [Zabezpieczanie komunikatów za pomocą klienta systemu Windows](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
@@ -70,11 +71,11 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
   
- [Zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
   
  [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
   
@@ -82,12 +83,12 @@ Tematy w tej części wykazu liczba możliwych klienta i konfiguracje zabezpiecz
   
  [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
   
- [Autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
  [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
   
  [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

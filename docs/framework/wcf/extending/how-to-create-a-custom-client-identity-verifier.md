@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 70c94d38a50425c702e382edcd7290cba3d61e91
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b10dd9be996369385ca323b0409145a9cde46a1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>Porady: tworzenie weryfikatora tożsamości niestandardowego klienta
 *Tożsamości* funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] z góry określić oczekiwaną tożsamość usługi przez klienta. Zawsze, gdy serwer uwierzytelnia do klienta, tożsamość jest sprawdzana względem Oczekiwana tożsamość. (Aby uzyskać informacje o tożsamości i jej działania, zobacz [uwierzytelnianie i tożsamość usługi](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).)  

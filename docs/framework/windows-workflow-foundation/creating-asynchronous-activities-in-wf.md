@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: aa388328b1fee73aef829a512dcbcadbd3889781
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1d06f825b96f66e35bdd30db272b99bb4e2e3e1e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>Tworzenie asynchroniczne działania WF
 <xref:System.Activities.AsyncCodeActivity>udostępnia klasę podstawową do użycia, że umożliwia pochodnych działań do wykonania operacji asynchronicznych logiki autorów działania. Jest to przydatne dla działań niestandardowych, które należy wykonać zadanie asynchroniczne bez zawierający wątku harmonogramu przepływu pracy i blokuje żadnych działań, które można uruchomić równolegle. Ten temat zawiera omówienie sposobu tworzenia działań niestandardowych asynchronicznych za pomocą <xref:System.Activities.AsyncCodeActivity>.  
@@ -58,4 +59,4 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Action>  
  <xref:System.Func%602>  
- [Przy użyciu AsyncOperationContext w działaniu](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)
+ [Używanie AsyncOperationContext w działaniu](../../../docs/framework/windows-workflow-foundation/samples/using-asyncoperationcontext-in-an-activity-sample.md)

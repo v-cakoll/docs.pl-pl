@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 382d20c66728869ce006c35a1e44e3a56217e1c2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 63248009497152a41a6313a50ed6e7544ac62cbe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-settings-for-windows-forms"></a>Ustawienia aplikacji dla formularzy systemu Windows
 Funkcja ustawień aplikacji formularzy systemu Windows można łatwo tworzyć, przechowywać i Obsługa niestandardowych aplikacji i preferencji użytkownika na komputerze klienckim. Ustawienia aplikacji można przechowywać nie tylko dane aplikacji, takie jak parametry połączenia bazy danych, ale również dane specyficzne dla użytkownika, takie jak położenie paska narzędzi i ostatnio używane listy.  
@@ -39,10 +40,10 @@ Funkcja ustawień aplikacji formularzy systemu Windows można łatwo tworzyć, p
  [Ustawienia aplikacji dotyczące kontrolek niestandardowych](~/docs/framework/winforms/advanced/application-settings-for-custom-controls.md)  
  W tym artykule omówiono, co należy zrobić, aby zapewnić możliwość utrzymania ustawienia aplikacji, podczas udostępniania w aplikacjach innych firm Kontrolki niestandardowe.  
   
- [Porady: Tworzenie ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
+ [Instrukcje: tworzenie ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-create-application-settings.md)  
  Demonstracja tworzenia nowego ustawienia aplikacji, które są zachowywane między sesjami aplikacji.  
   
- [Porady: Sprawdzanie poprawności ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
+ [Instrukcje: sprawdzanie poprawności ustawień aplikacji](~/docs/framework/winforms/advanced/how-to-validate-application-settings.md)  
  Pokazuje sprawdzania poprawności ustawień aplikacji, zanim zostają one zachowane.  
   
 ## <a name="related-topics"></a>Tematy pokrewne
@@ -52,4 +53,4 @@ Dokumenty ustawienia w celu włączenia wysokiej rozdzielczości obsługuje w ap
 
 ## <a name="see-also"></a>Zobacz także  
   
-[Formularze systemu Windows](../index.md)
+[Windows Forms](../index.md)

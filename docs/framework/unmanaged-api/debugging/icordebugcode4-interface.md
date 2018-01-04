@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: bddbdb0986392bf1d9664e351bcc654ffa526257
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 30c0599e183d51030ac5b063a2aca4352ad95eca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugcode4-interface"></a>Interfejs ICorDebugCode4
 Udostępnia metodę umożliwiającą debugera wyliczyć zmiennych lokalnych i argumenty w funkcji.  
@@ -32,7 +33,7 @@ Udostępnia metodę umożliwiającą debugera wyliczyć zmiennych lokalnych i ar
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateVariableHomes — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Pobiera moduł wyliczający do zmiennych lokalnych i argumenty w funkcji.|  
+|[EnumerateVariableHomes, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugcode4-enumeratevariablehomes-method.md)|Pobiera moduł wyliczający do zmiennych lokalnych i argumenty w funkcji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -51,5 +52,5 @@ Udostępnia metodę umożliwiającą debugera wyliczyć zmiennych lokalnych i ar
 ## <a name="see-also"></a>Zobacz też  
     
     
- [Icordebugcode3 — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

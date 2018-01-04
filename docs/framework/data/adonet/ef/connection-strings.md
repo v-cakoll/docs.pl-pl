@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b141f7bb31374c403f8d802a5df2ff1329b1e079
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings"></a>Parametry połączenia
 Parametry połączenia zawierają informacje inicjowania jest przekazywana jako parametr z dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a podczas próby otwarcia połączenia jest przeanalizować parametrów połączenia. Parametry połączenia używane przez program Entity Framework zawierają informacje używane do łączenia się z podstawowej dostawcy danych ADO.NET, która obsługuje programu Entity Framework. Zawierają one również informacje dotyczące wymaganego modelu i mapowania plików.  
@@ -118,7 +119,7 @@ Metadata=.\
  Rozpoznanie `DataDirectory` ciąg podstawienia i ~ operator jest niecykliczne. Na przykład, jeśli `DataDirectory` obejmuje `~` znak, wystąpi wyjątek. Zapobiega to nieskończoną rekursję.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z dostawców danych](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
+ [Praca z dostawcami danymi](../../../../../docs/framework/data/adonet/ef/working-with-data-providers.md)  
  [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
  [Zarządzanie połączeniami i transakcji](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99)  
- [Parametry połączenia](../../../../../docs/framework/data/adonet/connection-strings.md)
+ [Parametry połączeń](../../../../../docs/framework/data/adonet/connection-strings.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 23a1d8c638b198c31d7c83aaf3f216b465f01453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 47867a82432ec6abe2245a0421d800c242d92b2c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>Porady: instalowanie zestawu w globalnej pamięci podręcznej zestawów
 Istnieją dwa sposoby instalacji zestawu o silnej nazwie w globalnej pamięci podręcznej zestawów (GAC):  
@@ -86,8 +87,8 @@ gacutil -i hello.dll
     4.  Przeciągnij plik w kroku c do **plików na komputerze docelowym** okienka (lub użyj **kopiowania** i **Wklej** poleceń menu skrótów pliku).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z zestawami i Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Porady: usuwanie zestawu z globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
+ [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [Instrukcje: usuwanie zestawu z pamięci Global Assembly Cache](../../../docs/framework/app-domains/how-to-remove-an-assembly-from-the-gac.md)  
  [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
- [Porady: podpisać zestaw o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Instrukcje: podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
  [Wdrożenia Instalatora Windows](http://msdn.microsoft.com/en-us/121be21b-b916-43e2-8f10-8b080516d2a0)

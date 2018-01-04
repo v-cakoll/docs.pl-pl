@@ -19,17 +19,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c730f4ea5a83efcfad15d181ac182fbd232690cc
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: ce11db2d01f8938d0f97a3c0526c65a7c9740fba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-windows-forms"></a>HScrollBar i VScrollBar — Formanty (Formularze systemu Windows)
 Formanty paska przewijania formularzy systemu Windows są używane do zapewnienia nawigację za pośrednictwem długą listę elementów lub duża ilość informacji albo przewijanie w poziomie lub pionie w aplikacji lub kontroli. Paski przewijania są wspólnego elementu interfejsu systemu Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [HScrollBar i vscrollbar — informacje o formantach](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
+ [HScrollBar i VScrollBar, kontrolki — omówienie](../../../../docs/framework/winforms/controls/hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.HScrollBar> i <xref:System.Windows.Forms.VScrollBar> formanty, które użytkownicy mogą przewijać dużych ilości informacji o poziomie i w pionie.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -40,5 +41,5 @@ Formanty paska przewijania formularzy systemu Windows są używane do zapewnieni
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.

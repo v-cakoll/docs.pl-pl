@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ddd937ec891f5e00410b74fffd152e23431652f2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
@@ -64,12 +65,12 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
 |**/FC**|Znajduje lub tworzy aplikację docelową.|  
 |**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/noreconfig**|Nie konfiguruje ponownie istniejącej aplikacji docelowej.|  
-|**/ nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/parname:** *nazwy*|Określa nazwę lub identyfikator aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/reconfig**|Konfiguruje ponownie istniejącą aplikację docelową. Domyślnie włączone.|  
 |**/ TLB:** *typelibraryfile*|Określa plik biblioteki typów do zainstalowania.|  
 |**/u**|Odinstalowuje aplikację docelową.|  
-|**/ quiet**|Określa tryb cichy; pomija wyświetlanie logo i komunikatów o sukcesie.|  
+|**/quiet**|Określa tryb cichy; pomija wyświetlanie logo i komunikatów o sukcesie.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -96,5 +97,5 @@ regsvcs /appname:myTargetApp /tlb:newTest.tlb myTest.dll
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [Porady: podpisać zestaw o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Instrukcje: podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

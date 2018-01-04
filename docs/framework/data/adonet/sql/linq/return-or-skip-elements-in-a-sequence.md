@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f8fed70e5eafb096ae2e7b2da882e1e4f6c8ed63
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d588ad393d6077d5b6e5279a1212f69da9a7d64c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>Zwracanym lub Pomiń elementy w sekwencji
 Użyj <xref:System.Linq.Queryable.Take%2A> operatora w celu uzyskania danej liczby elementów w sekwencji, a następnie pominąć resztę.  
@@ -90,4 +91,4 @@ ORDER BY [t0].[CustomerID]
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Translacja Operator zapytania standardowe](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+ [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

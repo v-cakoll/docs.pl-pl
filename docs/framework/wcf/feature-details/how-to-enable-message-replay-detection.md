@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12b0317503a907700099b1594b8b33799938f752
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b6524f0e32d5876851ce89b01a439ed1d1d09da3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-message-replay-detection"></a>Instrukcje: Włączanie wykrywania powtarzania komunikatu
 Atak powtarzania występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarzaniem strumienia do jednego lub więcej stron. O ile skorygowane, komputery mogą ulec ataku zostaną przetworzone strumienia jako istotnych wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówień elementu.  
@@ -40,13 +41,13 @@ Atak powtarzania występuje, gdy osoba atakująca kopiuje strumienia komunikató
   
 2.  Użyj <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A> zwraca odwołanie do właściwości <xref:System.ServiceModel.Channels.LocalClientSecuritySettings> klasy i ustaw dowolne z poniższych właściwości, zależnie od potrzeb:  
   
-    1.  `DetectReplay`. Wartość logiczna. Decyduje to, czy klient powinien wykryć odtworzenie z serwera. Wartość domyślna to `true`.  
+    1.  `DetectReplay`., Wartość logiczna. Decyduje to, czy klient powinien wykryć odtworzenie z serwera. Wartość domyślna to `true`.  
   
-    2.  `MaxClockSkew`. A <xref:System.TimeSpan> wartość. Kontroluje ilość czasu zegara, mechanizmu powtarzania może tolerować między klientem a serwerem. Mechanizm zabezpieczeń sprawdza, czy czas sygnatury wysyłane i określa, czy została ona wysłana zbyt daleko w przeszłości. Wartość domyślna to 5 minut.  
+    2.  `MaxClockSkew`., A <xref:System.TimeSpan> wartość. Kontroluje ilość czasu zegara, mechanizmu powtarzania może tolerować między klientem a serwerem. Mechanizm zabezpieczeń sprawdza, czy czas sygnatury wysyłane i określa, czy została ona wysłana zbyt daleko w przeszłości. Wartość domyślna to 5 minut.  
   
-    3.  `ReplayWindow`. A `TimeSpan` wartość. Kontroluje to czas przechowywania wiadomości może współdziałać w sieci po serwer wysyła on (za pośrednictwem pośredników) przed osiągnięciem klienta. Klient śledzi podpisy wiadomości wysłane w najnowszej `ReplayWindow` na potrzeby wykrywania powtarzania.  
+    3.  `ReplayWindow`., A `TimeSpan` wartość. Kontroluje to czas przechowywania wiadomości może współdziałać w sieci po serwer wysyła on (za pośrednictwem pośredników) przed osiągnięciem klienta. Klient śledzi podpisy wiadomości wysłane w najnowszej `ReplayWindow` na potrzeby wykrywania powtarzania.  
   
-    4.  `ReplayCacheSize`. Wartość całkowita. Klient przechowuje podpisy wiadomości w pamięci podręcznej. To ustawienie określa, ile podpisów mogą być przechowywane w pamięci podręcznej. Jeśli liczbę komunikatów wysłanych w oknie powtarzania ostatniego osiągnie limit pamięci podręcznej, nowe komunikaty są odrzucane, dopóki najstarsze podpisów buforowane osiągnięcia limitu czasu. Wartość domyślna wynosi 500 000.  
+    4.  `ReplayCacheSize`., Wartość całkowita. Klient przechowuje podpisy wiadomości w pamięci podręcznej. To ustawienie określa, ile podpisów mogą być przechowywane w pamięci podręcznej. Jeśli liczbę komunikatów wysłanych w oknie powtarzania ostatniego osiągnie limit pamięci podręcznej, nowe komunikaty są odrzucane, dopóki najstarsze podpisów buforowane osiągnięcia limitu czasu. Wartość domyślna wynosi 500 000.  
   
 ### <a name="to-control-replay-detection-on-the-service-using-code"></a>Aby kontrolować wykrywania powtórzeń w usłudze przy użyciu kodu  
   
@@ -98,7 +99,7 @@ Atak powtarzania występuje, gdy osoba atakująca kopiuje strumienia komunikató
   
  Jeśli nie używasz sesji bezpiecznej konwersacji, wykrywania powtórzeń nie gwarantuje wykrywania odtworzenie w scenariusze farmy serwera i gdy proces zostanie odtworzony. Dotyczy to następujących powiązania dostarczane przez system:  
   
--   <xref:System.ServiceModel.BasicHttpBinding>.  
+-   <xref:System.ServiceModel.BasicHttpBinding>.,  
   
 -   <xref:System.ServiceModel.WSHttpBinding>z <xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A> ustawioną właściwość `false`.  
   
@@ -117,4 +118,4 @@ Atak powtarzania występuje, gdy osoba atakująca kopiuje strumienia komunikató
  <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
  [Bezpieczne konwersacje i bezpieczne sesje](../../../../docs/framework/wcf/feature-details/secure-conversations-and-secure-sessions.md)  
  [\<localClientSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localclientsettings-element.md)  
- [Porady: Tworzenie niestandardowego wiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+ [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

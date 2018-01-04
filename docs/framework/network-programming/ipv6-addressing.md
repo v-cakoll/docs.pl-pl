@@ -36,11 +36,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: be73fe51e6b3a52ccb2717f0216ab82b90dd9841
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 01d4fd0fbeeb0f111505fde0f8154c54b2bdcc38
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ipv6-addressing"></a>Adresowanie IPv6
 W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn miejsca długich adresów jest dalszy dostępnych adresów do hierarchii domen routingu, które odzwierciedlać topologii sieci Internet. Kolejny powód jest mapowania adresów karty sieciowe (lub interfejsy) łączące urządzeń w sieci. IPv6 funkcjami związanego z używaniem możliwość rozpoznawania adresów na najniższym poziomie, który znajduje się na poziomie interfejsu sieciowego i zapewnia również funkcję automatycznej konfiguracji.  
@@ -61,7 +62,7 @@ W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn mi
   
  Oto przykład adresu z prefiksem 64-bitowych.  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`.,  
   
  Prefiks, w tym przykładzie jest `3FFE:FFFF:0:CD30`. Adres może być także zapisane w postaci skompresowanej jako `3FFE:FFFF:0:CD30::/64`.  
   
@@ -82,5 +83,5 @@ W Internet Protocol w wersji 6 (IPv6) adresy to 128 bitów. Jedną z przyczyn mi
  Ogólnie rzecz biorąc węzeł ma zawsze adres połączenia lokalnego. Może mieć adres lokacji lokalnej i co najmniej jeden adres globalnego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Protokół internetowy w wersji 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)

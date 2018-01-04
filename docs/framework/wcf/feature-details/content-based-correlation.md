@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0a19c7e8dec9587816d78be8bea58fc4ca366d5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 72c7233a1c667b7ee3a1f00cc2fdf3c78f58e789
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-based-correlation"></a>Korelacja na podstawie zawartości
 Gdy usługi przepływu pracy komunikację z klientami oraz innymi usługami, często istnieje części danych w ramach wymiany wiadomości, które jednoznacznie odnosi się komunikat do konkretnego wystąpienia. Na podstawie zawartości korelacji używa tych danych w komunikacie, takich jak numer lub kolejności ID klienta do wyznaczania tras wiadomościom do wystąpienia przepływu pracy właściwe. W tym temacie opisano sposób korzystania na podstawie zawartości korelacji w przepływach pracy.  

@@ -20,11 +20,12 @@ caps.latest.revision: "44"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0c93019b2024029fd27d78ac191f0f99bc9b0ce9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f05290486b107f325e61cfffad052311258eee3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-client-profile"></a>.NET Framework Client Profile
 Profil klienta programu .NET jest podzbiorem programu .NET Framework, które zostały dostarczone z [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i starszych wersji i została zoptymalizowana dla aplikacji klienckich. .NET Framework to platforma programistyczna systemu Windows, Windows Phone i Microsoft Azure i zapewnia środowiska wykonawczego zarządzaną aplikację i bibliotece klas programu .NET Framework. [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] i wcześniejszych wersji są dostępne dwie opcje wdrożenia: Pełna .NET Framework i profil klienta. Program Client Profile umożliwiał szybsze wdrażanie i tworzenie mniejszych pakietów instalacyjnych aplikacji, niż pełny program .NET Framework.  
@@ -37,6 +38,6 @@ Profil klienta programu .NET jest podzbiorem programu .NET Framework, które zos
   
 ## <a name="see-also"></a>Zobacz też  
  [.NET framework Client Profile (.NET Framework 4)](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)  
- [Visual Studio Wielowersyjności kodu — omówienie](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
- [Rozwiązywanie problemów z błędami obiektów docelowych w programie .NET Framework](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
- [Porady: wersja docelowa platformy .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)
+ [Wielowersyjność kodu w programie Visual Studio ― przegląd](http://msdn.microsoft.com/library/b1702c33-0672-4ebc-b779-2b324d6ea880)  
+ [Rozwiązywanie problemów z błędami obiektów docelowych programu .NET Framework](http://msdn.microsoft.com/library/830e3e45-9a93-4279-a249-75b84599aefb)  
+ [Instrukcje: Określanie wersji docelowej programu .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)

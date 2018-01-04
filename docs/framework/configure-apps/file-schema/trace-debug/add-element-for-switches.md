@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: de1acb37f3236598e9d8a74a188033d18b65ac8e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4406caa4da1375bea9809843ca96774e24421d5d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddgt-element-for-ltswitchesgt"></a>&lt;Dodaj&gt; elementu &lt;przełączników&gt;
 Określa poziom, gdy jest ustawiona przełącznik śledzenia.  
@@ -46,7 +47,7 @@ Określa poziom, gdy jest ustawiona przełącznik śledzenia.
 |Atrybut|Opis|  
 |---------------|-----------------|  
 |**Nazwa**|Atrybut wymagany.<br /><br /> Określa nazwę tego przełącznika. Wartość tego atrybutu odpowiada *displayName* parametr przekazany do konstruktora przełącznika.|  
-|**wartość**|Atrybut wymagany.<br /><br /> Określa poziom przełącznika.|  
+|**value**|Atrybut wymagany.<br /><br /> Określa poziom przełącznika.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -80,4 +81,4 @@ Określa poziom, gdy jest ustawiona przełącznik śledzenia.
  <xref:System.Diagnostics.Switch>  
  <xref:System.Diagnostics.TraceSwitch>  
  <xref:System.Diagnostics.BooleanSwitch>  
- [Schemat ustawień debugowania i śledzenia](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

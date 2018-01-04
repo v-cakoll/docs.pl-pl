@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75b18dab37a18723671cebf51c3cc943b907b38a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6f9d0b9631420013593cb44903b5451549e8c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>Instrukcje: Wymiana komunikatów z punktami końcowymi programu WCF i aplikacjami do obsługi kolejek komunikatów
 Możesz też zintegrować istniejące aplikacje usługi kolejkowania komunikatów (MSMQ) z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji za pomocą powiązania integracji usługi MSMQ do przekonwertowania wiadomości usługi MSMQ do i z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wiadomości. Dzięki temu można wywołać do aplikacji odbiornika usługi MSMQ z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów, a także wywołanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług z aplikacji nadawcy usługi MSMQ.  
@@ -74,8 +75,8 @@ Możesz też zintegrować istniejące aplikacje usługi kolejkowania komunikató
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  
- [Porady: wymiana komunikatów z punktami końcowymi WCF umieszczonych w kolejce](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
- [Windows Communication Foundation, do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
+ [Instrukcje: wymiana komunikatów znajdujących się w kolejce z punktami końcowymi WCF](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+ [Wysyłanie komunikatów z usługi WCF do usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)  
  [Instalowanie usługi kolejkowania komunikatów (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  [Obsługa kolejek komunikatów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)  
- [Zabezpieczenia komunikatów w ramach usługi kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
+ [Zabezpieczenia komunikatów w ramach kolejkowania komunikatów](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)

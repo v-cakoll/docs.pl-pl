@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 54e9a3b6f72eee2246d2c76b10e01fe011435b3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87f3dfbb3af6e638207d68540217f7134b95c354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-statistics-for-sql-server"></a>Statystyki dostawcy dla programu SQL Server
 W programie .NET Framework w wersji 2.0, .NET Framework Data Provider for SQL Server obsługuje statystyk czasu wykonywania. Należy włączyć statystyki przez ustawienie <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> właściwość <xref:System.Data.SqlClient.SqlConnection> do obiektu `True` po poprawnego obiektu połączenia utworzone. Po włączeniu statystyki można przeglądać je jako "migawka w czasie" pobierając <xref:System.Collections.IDictionary> odwoływać się za pośrednictwem <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu. Wyliczanie za pośrednictwem listy jako zbiór wpisy słownika pary nazwa/wartość. Tych par nazwa/wartość są nieuporządkowane. W dowolnym momencie można wywołać <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> metody <xref:System.Data.SqlClient.SqlConnection> obiektu do resetowania liczników. Jeśli nie włączono zbieranie statystyk, wyjątek nie zostanie wygenerowany. Ponadto jeśli <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> jest wywoływana bez <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> o najpierw wywołuje, wartości pobierane są wartości początkowe dla każdego wpisu. Po włączeniu statystyki uruchomienie aplikacji przez pewien czas i Wyłącz statystyk, wartości pobierane odpowiada wartości zebranych do punktu wyłączonym statystyk. Wszystkie wartości statystyczne zebrane znajdują się na poszczególnych połączeń.  

@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8ac4bec06f2d5c7f8876c8e4e18a9d5c59f094fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0980488f3093bfcaedc730bac126b1b5b6505187
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-custom-attributes"></a>Uzyskiwanie dostępu do atrybutów niestandardowych
 Po atrybuty zostały skojarzone z elementów programu, odbicia może służyć do badania ich istnienie i wartości. W programie .NET Framework w wersji 1.0, 1.1 atrybuty niestandardowe są sprawdzane w kontekstu wykonywania. .NET Framework w wersji 2.0 zapewnia nowy kontekst ładowania kontekstu reflection-only, którego można użyć do sprawdzenia kod, który nie może zostać załadowany do wykonania.  

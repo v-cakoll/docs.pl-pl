@@ -14,11 +14,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1f4f518b1676e998cf8a3fd93f893398342cba6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
 W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -150,12 +151,12 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługi aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Omówienie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  [Strona usług, Projektant projektu](https://msdn.microsoft.com/library/bb398109)  
- [Zaawansowane ustawienia dla usług — okno dialogowe](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
- [Porady: Implementowanie logowania użytkownika z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
- [Wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Zaawansowane ustawienia dla usług, okno dialogowe](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
+ [Instrukcje: implementowanie logowania użytkownika przy użyciu usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Przewodnik: używanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Implementowanie dostawcy członkostwa](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582)  
  [Implementowanie dostawcy roli](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d)  
  [Architektura ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-architecture.md)  

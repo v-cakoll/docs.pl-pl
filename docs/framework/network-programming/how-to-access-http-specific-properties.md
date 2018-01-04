@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f277321ab94874970cb392dfe7f84a52a1cc2c40
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3800883307ad0d25677b7feeae15d865c8d2d9d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-http-specific-properties"></a>Porady: dostęp do właściwości specyficzne dla protokołu HTTP
 W tym przykładzie pokazano, jak wyłączyć HTTP **Keep-alive** zachowanie i Pobierz wersję protokołu numer z serwera sieci Web.  
@@ -59,6 +60,6 @@ HttpWResp.Close();
 -   Odwołuje się do **System.Net** przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do Internetu za pośrednictwem serwera Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Przy użyciu protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
  [HTTP](../../../docs/framework/network-programming/http.md)

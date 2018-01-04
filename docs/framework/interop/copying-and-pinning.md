@@ -18,11 +18,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8e25d9a7bffdf0a3e8f68639dc0442ccf62a4412
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5014bcc0696a8650bed1d00d1224c892660c041e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 Podczas organizowania danych, międzyoperacyjnego organizatora można skopiować lub przypiąć dane są przekazywane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji pamięci. Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typ przekazany przez odwołanie z zarządzanych do niezarządzanych pamięci.  
@@ -86,7 +87,7 @@ Typy odwołań przekazywane według wartości i według odwołania
  Gdy <xref:System.Text.StringBuilder?displayProperty=nameWithType> jest przekazywany przez wartość i przekazuje organizatora odwołaniem do wewnętrznego buforu elementu **StringBuilder** bezpośrednio do obiektu wywołującego. Obiekt wywołujący i wywoływany należy uzgodnić rozmiar buforu. Element wywołujący jest odpowiedzialny za tworzenie **StringBuilder** odpowiedniej długości. Wywoływany musi podjąć niezbędne środki ostrożności, aby upewnić się, że nie jest przepełnienie buforu. **StringBuilder** jest wyjątek do reguły odwołujące się do typów przekazywane przez wartość są przekazywane tak jak parametry domyślnie. Jest on zawsze przekazany jako we/wy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie Marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Zarządzanie pamięcią z organizatora międzyoperacyjne](http://msdn.microsoft.com/en-us/417206ce-ee3e-4619-9529-0c0b686c7bee)  
  [Atrybuty kierunkową](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Przekazywanie międzyoperacyjne](../../../docs/framework/interop/interop-marshaling.md)
+ [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)

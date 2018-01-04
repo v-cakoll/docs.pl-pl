@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 389a3be7342005e424c89ff4e430b4a257f2da5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50b29e5ae0df37238a16ba08898d307918f0b439
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="complex-type"></a>Typ złożony
 A *typu złożonego* szablonem służącym do definiowania właściwości rozbudowane, strukturalnych na [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) lub na inne typy złożone. Każdy szablon zawiera następujące elementy:  
@@ -49,4 +50,4 @@ A *typu złożonego* szablonem służącym do definiowania właściwości rozbud
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

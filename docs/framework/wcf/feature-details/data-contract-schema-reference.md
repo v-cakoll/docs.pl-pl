@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 261d6e41ca79ca245b104513a92306ab8833c905
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57ccc812aab5df0a9acd99bdcde327d56e4bad8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-schema-reference"></a>Odwołanie do schematu kontraktu danych
 W tym temacie opisano podzestawu elementu schematu XML (XSD) używany przez <xref:System.Runtime.Serialization.DataContractSerializer> do opisywania wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) typy serializacji XML.  
@@ -485,52 +486,52 @@ public class Employee : Person
   
 |Typ XSD|Typ architektury .NET|  
 |--------------|---------------|  
-|`anyType`|<xref:System.Object>.|  
-|`anySimpleType`|<xref:System.String>.|  
-|`duration`|<xref:System.TimeSpan>.|  
-|`dateTime`|<xref:System.DateTime>.|  
+|`anyType`|<xref:System.Object>.,|  
+|`anySimpleType`|<xref:System.String>.,|  
+|`duration`|<xref:System.TimeSpan>.,|  
+|`dateTime`|<xref:System.DateTime>.,|  
 |`dateTimeOffset`|<xref:System.DateTime>i <xref:System.TimeSpan> przesunięcia. Zobacz poniższe serializacji typu DateTimeOffset.|  
-|`time`|<xref:System.String>.|  
-|`date`|<xref:System.String>.|  
-|`gYearMonth`|<xref:System.String>.|  
-|`gYear`|<xref:System.String>.|  
-|`gMonthDay`|<xref:System.String>.|  
-|`gDay`|<xref:System.String>.|  
-|`gMonth`|<xref:System.String>.|  
+|`time`|<xref:System.String>.,|  
+|`date`|<xref:System.String>.,|  
+|`gYearMonth`|<xref:System.String>.,|  
+|`gYear`|<xref:System.String>.,|  
+|`gMonthDay`|<xref:System.String>.,|  
+|`gDay`|<xref:System.String>.,|  
+|`gMonth`|<xref:System.String>.,|  
 |`boolean`|<xref:System.Boolean>|  
 |`base64Binary`|<xref:System.Byte>Tablica.|  
-|`hexBinary`|<xref:System.String>.|  
-|`float`|<xref:System.Single>.|  
-|`double`|<xref:System.Double>.|  
-|`anyURI`|<xref:System.Uri>.|  
-|`QName`|<xref:System.Xml.XmlQualifiedName>.|  
-|`string`|<xref:System.String>.|  
-|`normalizedString`|<xref:System.String>.|  
-|`token`|<xref:System.String>.|  
-|`language`|<xref:System.String>.|  
-|`Name`|<xref:System.String>.|  
-|`NCName`|<xref:System.String>.|  
-|`ID`|<xref:System.String>.|  
-|`IDREF`|<xref:System.String>.|  
-|`IDREFS`|<xref:System.String>.|  
-|`ENTITY`|<xref:System.String>.|  
-|`ENTITIES`|<xref:System.String>.|  
-|`NMTOKEN`|<xref:System.String>.|  
-|`NMTOKENS`|<xref:System.String>.|  
-|`decimal`|<xref:System.Decimal>.|  
-|`integer`|<xref:System.Int64>.|  
-|`nonPositiveInteger`|<xref:System.Int64>.|  
-|`negativeInteger`|<xref:System.Int64>.|  
-|`long`|<xref:System.Int64>.|  
-|`int`|<xref:System.Int32>.|  
-|`short`|<xref:System.Int16>.|  
-|`Byte`|<xref:System.SByte>.|  
-|`nonNegativeInteger`|<xref:System.Int64>.|  
-|`unsignedLong`|<xref:System.UInt64>.|  
-|`unsignedInt`|<xref:System.UInt32>.|  
-|`unsignedShort`|<xref:System.UInt16>.|  
-|`unsignedByte`|<xref:System.Byte>.|  
-|`positiveInteger`|<xref:System.Int64>.|  
+|`hexBinary`|<xref:System.String>.,|  
+|`float`|<xref:System.Single>.,|  
+|`double`|<xref:System.Double>.,|  
+|`anyURI`|<xref:System.Uri>.,|  
+|`QName`|<xref:System.Xml.XmlQualifiedName>.,|  
+|`string`|<xref:System.String>.,|  
+|`normalizedString`|<xref:System.String>.,|  
+|`token`|<xref:System.String>.,|  
+|`language`|<xref:System.String>.,|  
+|`Name`|<xref:System.String>.,|  
+|`NCName`|<xref:System.String>.,|  
+|`ID`|<xref:System.String>.,|  
+|`IDREF`|<xref:System.String>.,|  
+|`IDREFS`|<xref:System.String>.,|  
+|`ENTITY`|<xref:System.String>.,|  
+|`ENTITIES`|<xref:System.String>.,|  
+|`NMTOKEN`|<xref:System.String>.,|  
+|`NMTOKENS`|<xref:System.String>.,|  
+|`decimal`|<xref:System.Decimal>.,|  
+|`integer`|<xref:System.Int64>.,|  
+|`nonPositiveInteger`|<xref:System.Int64>.,|  
+|`negativeInteger`|<xref:System.Int64>.,|  
+|`long`|<xref:System.Int64>.,|  
+|`int`|<xref:System.Int32>.,|  
+|`short`|<xref:System.Int16>.,|  
+|`Byte`|<xref:System.SByte>.,|  
+|`nonNegativeInteger`|<xref:System.Int64>.,|  
+|`unsignedLong`|<xref:System.UInt64>.,|  
+|`unsignedInt`|<xref:System.UInt32>.,|  
+|`unsignedShort`|<xref:System.UInt16>.,|  
+|`unsignedByte`|<xref:System.Byte>.,|  
+|`positiveInteger`|<xref:System.Int64>.,|  
   
 ## <a name="iserializable-types-mapping"></a>Mapowanie typów iSerializable  
  W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 1.0 `ISerializable` została wprowadzona jako mechanizm ogólne do serializacji obiektów do transferu danych lub trwałości. Istnieje wiele [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typy, które implementują `ISerializable` i mogą być przekazywane między aplikacjami. `DataContractSerializer`Oczywiście zapewnia obsługę `ISerializable` klasy. `DataContractSerializer` Mapy `ISerializable` implementacja schematu typy, które różnią się tylko wielkością QName (kwalifikowana nazwa) tego typu i są efektywne kolekcji właściwości. Na przykład `DataContractSerializer` mapuje <xref:System.Exception> do następującego typu XSD w przestrzeni nazw http://schemas.datacontract.org/2004/07/System.  

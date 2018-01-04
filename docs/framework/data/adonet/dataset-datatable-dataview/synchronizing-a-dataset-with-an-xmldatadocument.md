@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bea557d8a09ba874fb4b6a3f3a54c09dac4778cc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6285c46884201faadd2befff3a89430606f1a681
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>Synchronizowanie zestawu danych z dokumentu XmlDataDocument
 W tej sekcji przedstawiono jeden krok w procesie przetwarzania zamówienia zakupu, za pomocą silnie typizowaną <xref:System.Data.DataSet> synchronizowane z <xref:System.Xml.XmlDataDocument>. Utwórz w przykładach **zestawu danych** ze schematem zminimalizowane, który jest zgodny tylko część dokumentu XML źródła. W przykładach użyto **dokumentu XmlDataDocument** Aby zachować wierność źródło dokumentu w formacie XML, włączanie **DataSet** służący do udostępnienia podzbiór dokumentu XML.  
@@ -242,5 +243,5 @@ public class Sample
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestaw danych i dokumentu XmlDataDocument synchronizacji](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
+ [Synchronizacja elementów DataSet i XmlDataDocument](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

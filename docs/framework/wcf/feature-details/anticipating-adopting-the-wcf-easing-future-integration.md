@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6e5363da872d3902c12713bd19f5820370428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8dbb50af9d5655a76abb3827cd2f512eab0fd662
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Prognozowanie wdrożeń programu Windows Communication Foundation: Ułatwianie integracji w przyszłości
 Jeśli obecnie za pomocą programu ASP.NET, a przewiduje się przy użyciu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] w przyszłości, w tym temacie przedstawiono wskazówki dotyczące upewnij się, że nowe usługi sieci Web ASP.NET będzie współpracować razem z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
@@ -54,4 +55,4 @@ public interface IEcho
  Unikaj używania opcji uwierzytelniania dostępnych przez Internet Information Services (IIS). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Klienci nie obsługują je. Jeśli usługa musi być zabezpieczony, użyj opcji dostarczanych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], ponieważ te opcje są bardziej rozbudowane i są oparte na standardowych protokołów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie przyszłych migracji.](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+ [Prognozowanie wdrożeń programu Windows Communication Foundation: ułatwianie migracji w przyszłości](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

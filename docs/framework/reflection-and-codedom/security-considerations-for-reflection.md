@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 756873e93d6e13cbb9077d10a52a718932afcedb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ef0f9aac9222badb43e19c2901ff705485d5cf3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-considerations-for-reflection"></a>Zagadnienia dotyczące zabezpieczeń dla odbicia
 Odbicie pozwala, aby uzyskać informacje o typy i składniki oraz do elementów członkowskich dostępu (to znaczy do wywołania metody i konstruktory do pobierania i ustawiania właściwości wartości, dodawanie i usuwanie programów obsługi zdarzeń i tak dalej). Użyj odbicia w celu uzyskania informacji na temat typów i członków nie jest ograniczone. Cały kod służy odbicia do wykonywania następujących zadań:  
@@ -118,7 +119,7 @@ Odbicie pozwala, aby uzyskać informacje o typy i składniki oraz do elementów 
  <xref:System.Security.Permissions.SecurityPermission>  
  [Zmiany zabezpieczeń](../../../docs/framework/security/security-changes.md)  
  [Zabezpieczenia dostępu kodu](../../../docs/framework/misc/code-access-security.md)  
- [Emituj problemy z zabezpieczeniami w odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  [Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)  
  [Stosowanie atrybutów](../../../docs/standard/attributes/applying-attributes.md)  
  [Uzyskiwanie dostępu do atrybutów niestandardowych](../../../docs/framework/reflection-and-codedom/accessing-custom-attributes.md)

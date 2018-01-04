@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c8243524b2de57c58143b7dfb74050a116c5186
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8591a2b42f375f0b0e275fa9f6e34e69e7c054ef
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-serializer"></a>Serializator kontraktów danych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Korzysta z infrastruktury <xref:System.Runtime.Serialization.DataContractSerializer> klasę jako domyślnego elementu serializującego. Tematy w tej sekcji zawierają więcej szczegółów dotyczących korzystania z niego jako autonomiczny serializatora.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
  [Serializacja i deserializacja](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)  
  Szczegółowe informacje dotyczące używania <xref:System.Runtime.Serialization.DataContractSerializer> klasy wykresów obiektów serializacji i deserializacji XML dokumentów do obiektów.  
   
- [Importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  Wyjaśniono sposób generowania schematu schematu XML definition language (XSD) z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] klasy lub sposób generowania kodu z dokumentu schematu XSD.  
   
 ## <a name="reference"></a>Tematy pomocy  

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f894d032527611c036e41fff783b31920c354778
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 307347a1209a74c76e71c42a4cb9e3c3f814dee6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>Porady: definiowanie metody ogólnej przy użyciu emisji odbicia
 Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma parametrami typu i sposób stosowania ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych parametrów typu.  
@@ -180,4 +181,4 @@ Pierwsza procedura pokazuje, jak utworzyć prostą metodę ogólnego z dwoma par
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.Emit.MethodBuilder>  
- [Porady: Definiowanie typu ogólnego z odbiciem emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)
+ [Instrukcje: definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)

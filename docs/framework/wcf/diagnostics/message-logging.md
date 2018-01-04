@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a771cbc22febf966fec2cf608a9b59204fc6e51a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: da73af529a20a8d2e3e7df0ebadf2aeee4acbf1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-logging"></a>Rejestrowanie komunikatów
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Umożliwia rejestrowanie wiadomości przychodzących i wychodzących do użytku w trybie offline. Rejestrowanie komunikatów temu możesz zobaczyć, jakie wiadomość, a komunikat treści prawdopodobnie. Ten typ rejestrowania jest szczególnie przydatna w tym, co argumenty zostały przekazane i sposób odbierania punkt końcowy był wyświetlany argumenty wyrażonej w postaci XML. Ponadto rejestrowania komunikatu, ponieważ zostało przesłane umożliwia diagnozowanie źle sformułowane wiadomości, a także aby zobaczyć, jak odebrania wiadomości. Można również sprawdzić zabezpieczeń tokeny używane części zaszyfrowana i podpisana i części pozostanie bez zmian.  
@@ -35,9 +36,9 @@ ms.lasthandoff: 12/02/2017
   
  W tym temacie opisano sposób wyświetlania dzienników komunikatów.  
   
- [Problemy z zabezpieczeniami dla rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
+ [Uwagi dotyczące zabezpieczeń rejestrowania komunikatów](../../../../docs/framework/wcf/diagnostics/security-concerns-for-message-logging.md)  
   
  W tym temacie opisano, jak możesz chronić poufne dane z ujawniany w dzienników komunikatów, a także zdarzenia generowane przez rejestrowanie komunikatów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Administracja i Diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)

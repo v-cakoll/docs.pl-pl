@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 73d98d5e2f97bd0425f11db35877f3eabca449be
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono sposób dostawcy magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -290,4 +291,4 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
  Każdy dostawca magazynu danych należy zdefiniować przestrzeni nazw lub grupy przestrzeni nazw dla informacje zdefiniowane w manifeście. Tej przestrzeni nazw mogą być używane w zapytaniach SQL jednostki do rozpoznawania nazw funkcji i typów. Na przykład: SqlServer. Tej przestrzeni nazw musi się różnić od nazw canonical, EDM, zdefiniowane przez usługi jednostki dla standardowe funkcje obsługiwane przez zapytania SQL jednostki.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Pisanie dostawca danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)
+ [Pisanie dostawcy danych programu Entity Framework](../../../../../docs/framework/data/adonet/ef/writing-an-ef-data-provider.md)

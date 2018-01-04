@@ -14,11 +14,12 @@ ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c8ed8b0211c8366d799fe158d91dcb42f92ad0cf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4e7de6e5ce6415c58deeca14df74c26e24957054
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="section-element"></a>\<sekcja > — element
 
@@ -56,7 +57,7 @@ Następujące atrybuty są stosowane tylko do aplikacji ASP.NET. System konfigur
 |                     | Opis |
 | ------------------- | ----------- |
 | **allowDefinition** | Określa do jakiego sekcji mogą być używane w pliku konfiguracji. Użyj jednej z następujących wartości:<br><br>**Wszędzie**<br>Umożliwia sekcji, aby można używać w dowolnym pliku konfiguracji. Domyślnie włączone.<br>**MachineOnly**<br>Umożliwia sekcji, aby można używać tylko w pliku konfiguracji komputera (*Machine.config*).<br>**MachineToApplication**<br>Umożliwia sekcji do użycia w pliku konfiguracyjnym maszyny lub pliku konfiguracji aplikacji. |
-| **allowLocation**   | Określa, czy sekcja mogą być używane w ramach  **\<lokalizacji >** elementu. Użyj jednej z następujących wartości:<br><br>**wartość true**<br>Umożliwia sekcji do użycia w  **\<lokalizacji >** elementu. Domyślnie włączone.<br>**wartość false**<br>Nie zezwalaj na sekcji do użycia w  **\<lokalizacji >** elementu. |
+| **allowLocation**   | Określa, czy sekcja mogą być używane w ramach  **\<lokalizacji >** elementu. Użyj jednej z następujących wartości:<br><br>**true**<br>Umożliwia sekcji do użycia w  **\<lokalizacji >** elementu. Domyślnie włączone.<br>**false**<br>Nie zezwalaj na sekcji do użycia w  **\<lokalizacji >** elementu. |
 
 ## <a name="parent-elements"></a>Elementy nadrzędne
 

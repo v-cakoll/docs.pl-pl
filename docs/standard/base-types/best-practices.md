@@ -19,11 +19,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4d140c8bf88b296d4ad7d6de368117dfb310b4fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f19d6b5907fe85ae96eeafe6c5ee68bf6c7856d6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze praktyki dotyczące prawidłowych wyrażeń w .NET
 <a name="top"></a>Aparat wyrażeń regularnych programu .NET to narzędzie zaawansowane, oferujący wszystkie funkcje, które przetwarza tekst w dopasowaniach wzorców, a nie na dopasowanie literały tekstowe i porównywanie. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  
@@ -301,6 +304,6 @@ ms.lasthandoff: 10/18/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Szczegóły zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Sprawdza, czy implementacja aparat wyrażeń regularnych programu .NET. W tym temacie skupiono się na elastyczności wyrażeń regularnych i wyjaśniono odpowiedzialność deweloperów za zapewnienie wydajnych i niezawodnych operacji aparatu wyrażeń regularnych.|  
+|[Szczegóły dotyczące zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|Sprawdza, czy implementacja aparat wyrażeń regularnych programu .NET. W tym temacie skupiono się na elastyczności wyrażeń regularnych i wyjaśniono odpowiedzialność deweloperów za zapewnienie wydajnych i niezawodnych operacji aparatu wyrażeń regularnych.|  
 |[Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Informacje, co to jest wycofywanie i jak wpływa na wydajność wyrażeń regularnych oraz analiza elementów języka, które dostarczają alternatywy dla wycofywania.|  
 |[Język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|Zawiera opis elementów języka wyrażeń regularnych programu .NET i łącza do szczegółowa dokumentacja dla każdego elementu języka.|

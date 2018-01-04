@@ -17,20 +17,21 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e92ce3e74ee4da518b78f8ab4ac5015a50a547b1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 97f2db18737578087f4db151669d6d3b05cf3598
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest okno dialogowe wstępnie skonfigurowane. Jest to ten sam **czcionki** okno dialogowe udostępnianych przez system operacyjny Windows. Składnik dziedziczy <xref:System.Windows.Forms.CommonDialog> klasy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o składniku FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ [FontDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.FontDialog> składnik, który umożliwia wyświetlenie okna dialogowego wstępnie skonfigurowane. Użytkownicy, można użyć okna dialogowego do manipulowania czcionek i ich ustawienia.  
   
- [Porady: pokazywanie listy czcionek przy użyciu składnika FontDialog](../../../../docs/framework/winforms/controls/how-to-show-a-font-list-with-the-fontdialog-component.md)  
+ [Instrukcje: pokazywanie listy czcionek przy użyciu składnika FontDialog](../../../../docs/framework/winforms/controls/how-to-show-a-font-list-with-the-fontdialog-component.md)  
  Wyjaśniono, jak wybrać czcionkę w czasie wykonywania za pośrednictwem wystąpienia <xref:System.Windows.Forms.FontDialog> składnika.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -38,8 +39,8 @@ Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest
  Zawiera informacje na temat <xref:System.Windows.Forms.FontDialog> klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okno dialogowe formanty i składniki](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
+ [Kontrolki i składniki okien dialogowych](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
  Opisuje zestaw kontrolek i składników, które umożliwiają użytkownikom do wykonywania standardowych interakcji z aplikacji lub systemu.  
   
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera pełną listę formanty formularzy systemu Windows, linki do informacji na temat ich użycia.

@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d30e9e5ac15f48dabf983123ba007674a14626d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 70a2c1e7735a6df31a44fce7eb9bb2371acc208b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>Jak ozdobić elementy podrzędne panelu
 W tym przykładzie pokazano, jak programowo powiązać modułu definiowania układu kodu do podrzędnych określonej <xref:System.Windows.Controls.Panel>.  
@@ -44,4 +45,4 @@ W tym przykładzie pokazano, jak programowo powiązać modułu definiowania ukł
 >  Przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] powiązać modułu definiowania układu kodu do innego elementu nie jest obecnie obsługiwany.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie modułu definiowania układu kodu](../../../../docs/framework/wpf/controls/adorners-overview.md)
+ [Moduły indeksowania układu — omówienie](../../../../docs/framework/wpf/controls/adorners-overview.md)

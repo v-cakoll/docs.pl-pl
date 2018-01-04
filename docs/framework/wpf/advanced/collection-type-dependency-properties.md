@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 11927efee2b8375550767d119e6b4a95b3ef7bd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e572bf7d404d0d824d3127789190ce81d4c98998
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="collection-type-dependency-properties"></a>Właściwości zależności typu kolekcji
 Ten temat zawiera wskazówki i sugerowane wzorce dla implementowania właściwości zależności, których typ właściwości jest typem kolekcji.  
@@ -68,8 +69,8 @@ Ten temat zawiera wskazówki i sugerowane wzorce dla implementowania właściwo�
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.FreezableCollection%601>  
- [XAML oraz klas niestandardowych dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [Metadane właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)

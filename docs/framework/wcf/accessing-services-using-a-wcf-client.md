@@ -17,11 +17,12 @@ caps.latest.revision: "36"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8698e0657de31d78699df478da5e716bf831fc4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f33d64e9ec1881b1ef7b93ba29d233f2f580c29
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>Uzyskiwanie dostępu do usług za pomocą klienta WCF
 Po utworzeniu usługi, następnym krokiem jest utworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta. Aplikacja kliencka używa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] proxy klienta do komunikowania się z usługą. Aplikacje klienckie zwykle Importowanie metadanych usługi do generowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] kodu klienta, który może służyć do wywołania usługi.  
@@ -193,12 +194,12 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
  W przypadku wystąpienia tego typu wyjątki najlepszy sposób, aby umożliwić rozwiązanie tego problemu jest Włącz śledzenie po stronie usługi, a także określenie, jakie wyjątek wystąpił brak. [!INCLUDE[crabout](../../../includes/crabout-md.md)]śledzenie, zobacz [śledzenie](../../../docs/framework/wcf/diagnostics/tracing/index.md) i [przy użyciu śledzenie, aby rozwiązać Twoja aplikacja](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Porady: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
- [Porady: asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
- [Porady: uzyskiwanie dostępu do usług za pomocą kontraktów jednokierunkowych i kontraktów "żądanie-odpowiedź"](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
- [Porady: dostęp do WSE 3.0 usługi](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
+ [Instrukcje: tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego](../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)  
+ [Instrukcje: asynchroniczne wywoływanie operacji usługi](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)  
+ [Instrukcje: uzyskiwanie dostępu do usług za pomocą kontraktów jednokierunkowych i kontraktów „żądanie-odpowiedź”](../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)  
+ [Instrukcje: dostęp do usługi WSE 3.0](../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)  
  [Opis wygenerowanego kodu klienta](../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
- [Porady: poprawy uruchamiania czasu programu WCF aplikacje klienckie przy użyciu elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
+ [Instrukcje: skracanie czasu uruchamiania aplikacji klienckich programu WCF za pomocą elementu XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)  
  [Określanie zachowania klienta w czasie wykonywania](../../../docs/framework/wcf/specifying-client-run-time-behavior.md)  
  [Konfigurowanie zachowań klienta](../../../docs/framework/wcf/configuring-client-behaviors.md)

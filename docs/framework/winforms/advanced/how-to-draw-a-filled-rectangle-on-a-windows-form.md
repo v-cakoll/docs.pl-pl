@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dce1a8d1070ed1d016da0c94c1f3ecc1ed9df389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17d143c0c265fea876d084ebc21663d93553fe9d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>Porady: rysowanie wypełnionego prostokąta w formularzu systemu Windows
 W tym przykładzie Rysuje wypełniony prostokąt w formularzu.  
@@ -46,6 +47,6 @@ W tym przykładzie Rysuje wypełniony prostokąt w formularzu.
  <xref:System.Drawing.Graphics.FillRectangle%2A>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Grafika i rysowanie w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
+ [Grafika i rysowanie w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)  
  [Rysowanie linii i kształtów za pomocą pióra](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
- [Pędzle i wypełnione kształty w GDI +](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)
+ [Pędzle i wypełnione kształty w GDI+](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)

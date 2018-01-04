@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd78b4f47d7f48d7b4cbacdf53140758a05b7869
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c232ca2888c957bea33d06c84a62b00fdc7fd80c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="querying-typed-datasets"></a>Wykonywanie zapytania Typizowane zbiory danych
 Jeśli schemat <xref:System.Data.DataSet> jest znany w czasie projektowania aplikacji, zalecane jest użycie typu <xref:System.Data.DataSet> przy użyciu [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]. Typizowany <xref:System.Data.DataSet> jest klasą pochodną <xref:System.Data.DataSet>. W efekcie dziedziczy wszystkie metody, zdarzeń i właściwości <xref:System.Data.DataSet>. Ponadto maszynowy <xref:System.Data.DataSet> udostępnia silnie typizowane metody, zdarzeń i właściwości. Oznacza to, że masz dostęp tabele i kolumny według nazwy, zamiast za pomocą metody opartej na kolekcji. Dzięki temu zapytania prostszy i bardziej czytelne. Aby uzyskać więcej informacji, zobacz [wpisanych zestawów danych](../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md).  
@@ -67,6 +68,6 @@ Next
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytania zbiory danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
- [Zapytania w tabeli](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Zapytania pojedynczej tabeli](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)
+ [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [Zapytania jednotabelowe](../../../../docs/framework/data/adonet/single-table-queries-linq-to-dataset.md)

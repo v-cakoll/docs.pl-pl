@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: de93298062c7f99fcca3688efbd0b546d3c04c0e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6bc9a754325f7d01ee36622a23efde1cbc7c4812
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributed-transactions"></a>Transakcje rozproszone
 Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (zatwierdzania) albo nie powiedzie się (przerwanie) jako jednostki, między innymi. A *transakcja rozproszona* transakcji, które ma wpływ na kilku zasobów. Transakcji rozproszonych można przekazać wszystkich uczestników musi zapewniać każda zmiana danych będą trwałe. Zmiany muszą zostać zachowane niezależnie awarie systemu lub inne nieprzewidziane zdarzenia. Jeśli jednego uczestnika nie powiedzie się gwarancji, cała transakcja nie powiedzie się i wycofać zmiany wprowadzone w danych w zakresie transakcji.  
@@ -59,5 +60,5 @@ Transakcja jest zestaw powiązanych zadań, który zakończy się powodzeniem (z
   
 ## <a name="see-also"></a>Zobacz też  
  [Transakcje i współbieżność](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
- [System.Transactions integracji z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
+ [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

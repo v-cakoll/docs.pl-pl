@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 876dfabd835fa96fd3661f4e91eeb661ddaf9c30
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hosting (Niezarządzany wykaz interfejsów API)
 Hostingu API umożliwia hostom niezarządzanych do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
@@ -36,10 +37,10 @@ Hostingu API umożliwia hostom niezarządzanych do integracji środowisko urucho
  [Statyczne funkcje globalne hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
  Opisuje niezarządzane statyczne funkcje globalne, używanych do obsługi interfejsu API.  
   
- [Hosting — interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
+ [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
  Opisuje interfejsy niezarządzane, umożliwiających host środowiska uruchomieniowego do integracji środowiska CLR w niezarządzanej aplikacji.  
   
- [Hosting — struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  W tym artykule opisano niezarządzane struktury, używane do obsługi interfejsu API.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b507769ba6868a4cd841ca463900b126cfb5b90
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 15648a3dfc115e55dd78eb1f074b9c4235b89f34
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mitigation-product-versioning"></a>Ograniczenie: wersjonowanie produktu
 W [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] i nowszych wersji produktu został zmieniony z poprzednich wersji programu .NET Framework (.NET Framework 4, 4.5.1, 4.5 i 4.5.2).  

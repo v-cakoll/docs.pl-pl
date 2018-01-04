@@ -28,11 +28,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31738e205d0b2b88cbb049607eeb027db873db3f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 597b2d4d37d76ca722ddcebf9fcfeae532f67a00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-application-services"></a>Usługi aplikacji klienta
 Usługi aplikacji klienta ułatwiają tworzenie aplikacji systemu Windows, które używają [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług aplikacji profil w ramach rozszerzenia AJAX Microsoft ASP.NET 2.0. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows. Można na przykład korzystania z tych usług do wykonywania następujących zadań:  
@@ -48,16 +49,16 @@ Usługi aplikacji klienta ułatwiają tworzenie aplikacji systemu Windows, któr
  Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Omówienie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
  Zawiera opis funkcji dostępnych za pośrednictwem dostawcy usług aplikacji klienta.  
   
- [Porady: Konfigurowanie usług aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Instrukcje: konfigurowanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  Informacje dotyczące używania [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta projektu do Włączanie i konfigurowanie usług aplikacji. Opisano również odpowiednie zmiany w pliku App.config.  
   
- [Porady: Implementowanie logowania użytkownika z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
+ [Instrukcje: implementowanie logowania użytkownika przy użyciu usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  Opisuje sposób sprawdzania poprawności użytkownika, gdy aplikacja jest skonfigurowana do używania dostawcy usługi uwierzytelniania klienta.  
   
- [Wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Przewodnik: używanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  Zawiera opis sposobu łączenia wszystkich funkcji usług aplikacji klienta w pojedynczej aplikacji. Ten przewodnik zawiera wskazówki dotyczące end-to-end. Na przykład zawiera instrukcje dotyczące tworzenia aplikacji usługi sieci Web ASP.NET, którego można używać do testowania usługi aplikacji klienta.  
   
 ## <a name="reference"></a>Tematy pomocy  

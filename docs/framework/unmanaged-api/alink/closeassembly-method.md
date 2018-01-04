@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be68348b619f342eca4841a6052088bf7152f453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 160ec53440f4ecdb924537c732a367881e75acf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="closeassembly-method"></a>CloseAssembly — Metoda
 Kończenie znajdujących się w zestawie operacji. Tę metodę należy wywołać przed rozpoczęciem nowego zestawu lub modułu niepowiązanych.  
@@ -49,6 +50,6 @@ HRESULT CloseAssembly(
  Wymaga alink.h.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [Ialink2 — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

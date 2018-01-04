@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8009f832434d6bbad2ad7bee9cbfd62c81d623c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: efdb5055197611baf56fdc25fe7c0700c1a06dfd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="winresexe-windows-forms-resource-editor"></a>Winres.exe (Edytor zasobów formularzy systemu Windows)
 Edytor zasobów Windows Forms, Winres.exe, jest narzędziem układu wizualnego, które ułatwia ekspertom lokalizowanie zasobów interfejsu użytkownika Windows Forms używanych przez formularze. Pliki resx lub resources używane jako dane wejściowe do Winres.exe mogą być tworzone przy użyciu środowiska projektowania wizualnego, takiego jak Microsoft Visual Studio. Aby uzyskać informacje na temat wdrażania zasobów w aplikacjach .NET Framework, zobacz [zasobów w aplikacjach pulpitu](../../../docs/framework/resources/index.md).  
@@ -149,4 +150,4 @@ winres /?
  <xref:System.Resources.ResourceWriter>  
  [Narzędzia](../../../docs/framework/tools/index.md)  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
- [Lokalizacja i globalizacja](../../../docs/standard/globalization-localization/index.md)
+ [Globalizacja i lokalizacja](../../../docs/standard/globalization-localization/index.md)

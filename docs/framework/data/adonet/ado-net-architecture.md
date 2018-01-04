@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 227bef975a54676ceda5f922ed02f98c27fc8759
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2916321ff51f335b40a2cc4eef90cdccdfc25bda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-architecture"></a>Architektura ADO.NET
 Przetwarzanie danych ma tradycyjnie zależał przede wszystkim od modelu opartego na połączeniach, dwuwarstwowa. Ponieważ przetwarzanie danych używa coraz wielowarstwowych architekturach, programistów przełączenie się do odłączonego rozwiązanie zapewniające lepszą skalowalność dla swoich aplikacji.  
@@ -55,7 +56,7 @@ Architektura ADO.NET
 ## <a name="linq-to-sql"></a>LINQ do SQL  
  LINQ do SQL obsługuje zapytania względem modelu obiektów zamapowanego struktur danych relacyjnej bazy danych bez użycia pośredniego modelu koncepcyjnego. Każda tabela jest reprezentowany przez klasę oddzielne ściśle sprzężenia w modelu obiektu schematu relacyjnej bazy danych. LINQ do SQL tłumaczy zapytania o języku zintegrowanym w modelu obiektów języka Transact-SQL i wysyła je do bazy danych do wykonania. Gdy baza danych zwraca wyniki, LINQ do SQL tłumaczy wyniki do obiektów. Aby uzyskać więcej informacji, zobacz [LINQ do SQL](../../../../docs/framework/data/adonet/sql/linq/index.md).  
   
-## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
+## <a name="adonet-entity-framework"></a>Program Entity Framework na platformie ADO.NET  
  ADO.NET Entity Framework umożliwia deweloperom tworzenie aplikacji dostęp do danych przez Programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. Celem jest, aby zmniejszyć ilość kodu i konserwacja wymagane przez aplikacje zorientowane na danych. Aby uzyskać więcej informacji, zobacz [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md).  
   
 ## <a name="wcf-data-services"></a>Usługi danych WCF  
@@ -67,5 +68,5 @@ Architektura ADO.NET
  [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]i klasy XML w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] zbieżne w `DataSet` obiektu. `DataSet` Można wypełniać za pomocą danych z źródła XML pliku lub strumienia XML. `DataSet` Mogą być zapisywane jako World Wide Web konsorcjum W3C XML zgodnego ze obejmuje schematem XML schematu definition language (XSD) Schema, niezależnie od tego źródła danych w `DataSet`. Ze względu na format serializacji natywnej `DataSet` XML, jest doskonałym średni przenoszenie danych między warstwami, co `DataSet` optymalny wybór dla kontekstu danych i schematu usług zdalnych do i z usługi XML sieci Web. Aby uzyskać więcej informacji, zobacz [dokumenty XML i dane](../../../../docs/standard/data/xml/index.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET — omówienie](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

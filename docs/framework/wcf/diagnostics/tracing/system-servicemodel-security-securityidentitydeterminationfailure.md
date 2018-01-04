@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 905673e2ece8b51ffe4c2ee6717628747d1fa843
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: de160dde8244c0864421613f082482fded8d1972
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecurityidentitydeterminationfailure"></a>System.ServiceModel.Security.SecurityIdentityDeterminationFailure
 System.ServiceModel.Security.SecurityIdentityDeterminationFailure  
@@ -28,4 +29,4 @@ System.ServiceModel.Security.SecurityIdentityDeterminationFailure
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

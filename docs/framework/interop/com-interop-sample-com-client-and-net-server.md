@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c26b3b538517c216aa31b2cfa0c6174a9b76ab1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7bf7bed76503f9ee0919826d39fe3df502a55511
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="com-interop-sample-com-client-and-net-server"></a>Przykład międzyoperacyjnego modelu COM: klient modelu COM i serwer .NET
 W tym przykładzie pokazano współdziałanie z [klient modelu COM](#cpconcominteropsamplecomclientnetserveranchor1) i [.NET Server](#cpconcominteropsamplecomclientnetserveranchor2) wykonująca hipoteczne obliczeń. W tym przykładzie klient tworzy i wywołuje wystąpienie zarządzanej `Loan` klasy, przekazuje cztery argumenty (lub jeden z tych czterech jest większy od zera) do wystąpienia i wyświetla obliczeń. Przykłady kodu w tym przykładzie są wyświetlane w tej sekcji.  

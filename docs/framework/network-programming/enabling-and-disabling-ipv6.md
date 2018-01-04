@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 9edb87cf1ee35ac6848a478552cf8d0732177a81
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9304487963b3df4a3c2870399c474a431deb43b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-and-disabling-ipv6"></a>Włączanie i wyłączanie IPv6
 Aby korzystać z protokołu IPv6, upewnij się, że używasz wersji systemu operacyjnego, który obsługuje protokół IPv6 i upewnij się, że system operacyjny i klasy sieciowe są prawidłowo skonfigurowane.  
@@ -50,7 +51,7 @@ Aby korzystać z protokołu IPv6, upewnij się, że używasz wersji systemu oper
  Dla programu .NET Framework w wersji 2.0 lub nowszej, jeśli system Windows obsługuje protokół IPv6, a następnie członkami <xref:System.Net.Dns?displayProperty=nameWithType> klasy, (na przykład <xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> — metoda), którą będzie zwracać adresów IPv6 z jednym z ograniczeń. Przestarzali członkowie DNS <xref:System.Net.Dns?displayProperty=nameWithType> (na przykład <xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> metody) odczytuje i rozpoznać wartości w pliku konfiguracji dla ustawienia włączony protokół ipv6.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Protokół internetowy w wersji 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)  
  [Schemat ustawień sieci](../../../docs/framework/configure-apps/file-schema/network/index.md)  
  [\<IPv6 > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/ipv6-element-network-settings.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39b46386c6861b6a8c2824a0055d4122ec0523c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d9609027d31e757af93f6a4401a784a68a53cfdb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsubtypesgt-element-net-native"></a>Element &lt;Subtypes&gt; (architektura .NET Native)
 Zastosowanie zasad wykonywania dla wszystkich klas dziedziczony z typu zawierającego.  
@@ -99,6 +100,6 @@ Zastosowanie zasad wykonywania dla wszystkich klas dziedziczony z typu zawieraj�
   
 ## <a name="see-also"></a>Zobacz też  
  [\<Typ > — Element](../../../docs/framework/net-native/type-element-net-native.md)  
- [Odwołanie do pliku konfiguracji dyrektyw (rd.xml) środowiska wykonawczego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+ [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
  [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)  
  [Ustawienia zasad dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

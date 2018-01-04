@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1b5aa725d30e280d672724c7b7f4fd11a848a3ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8d182ec26d6d15ad3e4c93e9bfa8287ba028e424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="identifying-functions-in-dlls"></a>Identyfikowanie funkcji w bibliotekach DLL
 Tożsamość funkcji DLL składa się z następujących elementów:  
@@ -58,4 +59,4 @@ Tożsamość funkcji DLL składa się z następujących elementów:
  [Określanie punktu wejścia](../../../docs/framework/interop/specifying-an-entry-point.md)  
  [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
  [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
- [Wywoływanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+ [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 33dc3bfd3c70d5ea1105fb47c283aa8cf1c827c8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3eb975b7ee8fdbba8435937fcb6f976d464db932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resolving-assembly-loads"></a>Rozwiązywanie załadowań zestawów
 Platforma .NET Framework zapewnia <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> zdarzenia dla aplikacji, które wymagają większej kontroli nad ładowania zestawu. Obsługa tego zdarzenia, aplikacja może załadować zestawu do kontekstu ładowania z poza zwykłych sondowania ścieżek, wybierz które z kilku wersji zestawu do załadowania, emisji dynamicznego zestawu i zwraca je i tak dalej. Ten temat zawiera wskazówki dotyczące obsługi <xref:System.AppDomain.AssemblyResolve> zdarzeń.  
@@ -90,4 +91,4 @@ Platforma .NET Framework zapewnia <xref:System.AppDomain.AssemblyResolve?display
   
 ## <a name="see-also"></a>Zobacz też  
  [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [Używanie domeny aplikacji](../../../docs/framework/app-domains/use.md)
+ [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

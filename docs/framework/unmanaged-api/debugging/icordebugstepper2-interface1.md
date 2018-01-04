@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0ddce28e646541ee9e51d02d98834d8def1225ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 357a0906aedd4a0fc88b1304bd29bbcf24fe59d6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstepper2-interface1"></a>ICorDebugStepper2 Interface1
 Zapewnia obsługę tylko mój kod (JMC) debugowania.  
@@ -32,7 +33,7 @@ Zapewnia obsługę tylko mój kod (JMC) debugowania.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetJMC — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Ustawia wartość określającą, czy ten ICorDebugStepper — przeprowadza tylko przez kod, który został utworzony przez dewelopera aplikacji.|  
+|[SetJMC, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|Ustawia wartość określającą, czy ten ICorDebugStepper — przeprowadza tylko przez kod, który został utworzony przez dewelopera aplikacji.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,4 +50,4 @@ Zapewnia obsługę tylko mój kod (JMC) debugowania.
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

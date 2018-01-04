@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d532bbd2d338f942c09c4213620468a3361db5f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 215d80c3d207c2f50cfbd74386915b0467692b57
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assemblyinfo-structure"></a>ASSEMBLY_INFO — Struktura
 Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
@@ -59,4 +60,4 @@ typedef struct _ASSEMBLY_INFO {
   
 ## <a name="see-also"></a>Zobacz też  
  [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
- [Globalna pamięć podręczna zestawów](../../../../docs/framework/app-domains/gac.md)
+ [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

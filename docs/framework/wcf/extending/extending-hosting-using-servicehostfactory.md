@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 05cce66a1b03bee91672cd65bae78305c290c410
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a7bcd2e0ba68499cad63ec47918fd2bd6bd80d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-hosting-using-servicehostfactory"></a>Rozszerzanie hostingu za pomocą elementu ServiceHostFactory
 Standardowe <xref:System.ServiceModel.ServiceHost> interfejsu API do obsługi usług w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] punkt rozszerzalności w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] architektury. Użytkownicy mogą pochodzić własnych klas hosta z <xref:System.ServiceModel.ServiceHost>, zazwyczaj w celu zastąpienia <xref:System.ServiceModel.Channels.CommunicationObject.OnOpening> do używania <xref:System.ServiceModel.Description.ServiceDescription> do dodawania domyślnych punktów końcowych imperatively lub modyfikowania zachowania, przed otwarciem usługi.  

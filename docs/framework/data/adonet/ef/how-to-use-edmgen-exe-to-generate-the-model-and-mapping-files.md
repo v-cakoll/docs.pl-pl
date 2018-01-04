@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 741da2e7f69d5f8fa54f07046d88fec9cf722dbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ebff53126b808f679855b43fd8e1d2461b516e66
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>Porady: Generowanie modelu i mapowania plików za pomocą EdmGen.exe
 W tym temacie pokazano, jak korzystać z narzędzia generatora EDM (EdmGen.exe) do generowania następujące pliki na podstawie bazy danych służbowych:  
@@ -64,8 +65,8 @@ W tym temacie pokazano, jak korzystać z narzędzia generatora EDM (EdmGen.exe) 
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowanie i modelowania](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
+ [Modelowanie i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)  
  [Porady: ręczne konfigurowanie projektu programu Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e)  
  [Porady: wstępnego wygenerowania widoków, aby poprawić wydajność zapytań](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579)  
  [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
- [Porady: używanie EdmGen.exe do walidacji modelu i mapowania plików](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)
+ [Instrukcje: Walidacja modelu i mapowania plików za pomocą EdmGen.exe](../../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md)

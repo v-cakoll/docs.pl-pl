@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a2653a94992440b747371c5d8a7b9daa66b3e3ab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 26fbae0474253dc9792a0290a36dd52044d148b9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dataviews"></a>DataViews
 A <xref:System.Data.DataView> można tworzyć widoki danych przechowywanych w <xref:System.Data.DataTable>, możliwość, która jest często używana w aplikacjach powiązania danych. Przy użyciu **DataView**, można udostępnić dane w tabeli z innego sortowania i dane można filtrować według wierszy stanu lub w oparciu o wyrażenie filtru.  
@@ -29,28 +30,28 @@ A <xref:System.Data.DataView> można tworzyć widoki danych przechowywanych w <x
  Można użyć <xref:System.Data.DataView.DataViewManager%2A> umożliwia zarządzanie ustawieniami widoku wszystkie tabele w **zestawu danych**. **DataViewManager** zapewnia wygodny sposób zarządzania domyślne ustawienia widoku dla każdej tabeli. Podczas tworzenia wiązania formantu więcej niż jednej tabeli **DataSet**, powiązania do **DataViewManager** jest idealnym wyborem.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie widoku danych.](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
+ [Tworzenie elementu DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  Opisuje sposób tworzenia **DataView** dla **DataTable**.  
   
  [Sortowanie i filtrowanie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  Opisuje sposób ustawiania właściwości **DataView** zwracanie podzbiorów danych wiersze spełniające kryteria określony filtr lub zwróć dane określony porządek sortowania.  
   
- [Elementów DataRows i DataRowViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
+ [Elementy DataRow i DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
  Zawiera opis sposobu uzyskiwania dostępu do danych udostępnianych przez **DataView**.  
   
  [Znajdowanie wierszy](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/finding-rows.md)  
  Opisuje sposób wyszukiwania określonego wiersza w **DataView**.  
   
- [ChildViews i relacji](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
+ [Elementy ChildView i relacje](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/childviews-and-relations.md)  
  Opisuje sposób tworzenia widoków danych z relacji nadrzędny podrzędny przy użyciu **DataView**.  
   
- [Modyfikowanie DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
+ [Modyfikowanie elementów DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  Opisuje sposób modyfikowania danych podstawowych **DataTable** za pośrednictwem **DataView**, w tym o włączeniu lub wyłączeniu aktualizacji.  
   
- [Obsługa zdarzeń widoku danych.](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [Obsługa zdarzeń elementu DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  Informacje dotyczące używania **ListChanged** zdarzeń, aby otrzymać powiadomienie po zawartości lub kolejność **DataView** jest aktualizowana.  
   
- [Zarządzanie DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
+ [Zarządzanie elementami DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
  Informacje dotyczące używania **DataViewManager** do zarządzania **DataView** ustawienia dla każdej tabeli w **zestawu danych**.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
@@ -60,10 +61,10 @@ A <xref:System.Data.DataView> można tworzyć widoki danych przechowywanych w <x
  [Aplikacje systemu Windows](http://msdn.microsoft.com/en-us/a6bb2180-09b1-4738-b9fd-7fb05fc92f23)  
  Zawiera szczegółowe informacje dotyczące pracy z formularzy systemu Windows i aplikacji konsoli.  
   
- [Zbiory danych, DataTables i DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  W tym artykule opisano **DataSet** obiektu i jak go używać do zarządzania danymi aplikacji.  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [Elementy DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  W tym artykule opisano **DataTable** obiektu i jak go używać do zarządzania danymi aplikacji, samodzielnie lub w ramach **zestawu danych**.  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  

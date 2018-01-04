@@ -1,5 +1,5 @@
 ---
-title: Przewodnik po podstawowej platformy .NET
+title: Przewodnik platformy .NET Core
 description: "Oprogramowanie .NET core jest implementacją moduły, wysokiej wydajności platformy .NET do tworzenia aplikacji systemu Windows, Linux i komputerów Mac. Więcej informacji na temat platformy .NET Core, aby rozpocząć pracę."
 keywords: .NET, .NET core
 author: richlander
@@ -9,13 +9,14 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f2b312cb-f80c-4b0d-9101-93908f06a6fa
-ms.openlocfilehash: 54540b8a1fc0ceaf68dfb3fcbb04fefae2296695
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: de71e043533d7a7d3d7d3fd3af0a8530c0e145b6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="net-core-guide"></a>Przewodnik po podstawowej platformy .NET
+# <a name="net-core-guide"></a>Przewodnik platformy .NET Core
 
 > Zapoznaj się z ["Wprowadzenie" samouczki](get-started.md) Aby dowiedzieć się, jak utworzyć prostą aplikację platformy .NET Core. Potrwa to tylko kilka minut, aby uzyskać pierwszej aplikacji do pracy.
 
@@ -61,7 +62,7 @@ Oprogramowanie .NET core implementuje standardowe .NET i w związku z tym obsłu
 
 Samodzielnie .NET Core zawiera model pojedynczej aplikacji — aplikacje konsoli — co jest przydatne dla narzędzi, usług lokalnych i gry tekstowych. Modele dodatkowych aplikacji zostały utworzone na podstawie .NET Core do rozszerzenia jego funkcji, takich jak:
 
-- [Platformy ASP.NET Core](/aspnet/core/)
+- [ASP.NET Core](/aspnet/core/)
 - [Platforma uniwersalna systemu Windows 10 systemu Windows (UWP)](https://developer.microsoft.com/windows)
 - [Platformy Xamarin.Forms przy przeznaczonych dla platformy uniwersalnej systemu Windows](https://www.xamarin.com/forms)
 

@@ -16,11 +16,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d1e1de5637dbb955dd72ed0291da1f4f537ce28
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: aa4db0e3e136eee1d2037ad6041ac6945d313776
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-performance"></a>Wydajność środowiska .NET Framework
 Jeśli chcesz utworzyć aplikacje o bardzo dużej wydajności, projektowanie i Planowanie wydajności tylko innych funkcji aplikacji czy projektu. Można używać narzędzi dostarczanych przez firmę Microsoft do mierzenia wydajności aplikacji i, w razie potrzeby poprawiają wykorzystanie pamięci, kod przepływności i czasu odpowiedzi. W tym temacie wymieniono narzędzia analizy wydajności firmy Microsoft zapewnia i łącza do innych tematów, które obejmują wydajność dla określonych obszarach tworzenia aplikacji.  
@@ -53,7 +54,7 @@ Jeśli chcesz utworzyć aplikacje o bardzo dużej wydajności, projektowanie i P
   
 |Typ aplikacji|Zobacz|  
 |--------------|---------|  
-|Aplikacje środowiska .NET framework dla wszystkich platform|[Wyrzucanie elementów bezużytecznych i wydajność](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Porady dotyczące wydajności](../../../docs/framework/performance/performance-tips.md)|  
+|Aplikacje środowiska .NET framework dla wszystkich platform|[Odzyskiwanie pamięci i wydajność](../../../docs/standard/garbage-collection/performance.md)<br /><br /> [Wskazówki dotyczące wydajności](../../../docs/framework/performance/performance-tips.md)|  
 |[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]aplikacji napisanych w języku C++, C# i Visual Basic|[Najlepsze praktyki wydajności dla aplikacji ze Sklepu Windows przy użyciu języka C++, C# i Visual Basic](http://msdn.microsoft.com/library/windows/apps/hh750313.aspx)|  
 |Windows Phone|[Zagadnienia dotyczące wydajności aplikacji Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/ff967560\(v=vs.105\).aspx)<br /><br /> [Analiza aplikacji Windows Phone](http://msdn.microsoft.com/library/windowsphone/develop/hh202934\(v=vs.105\).aspx)<br /><br /> [Pobierz aplikacje Windows Phone w witrynie Marketplace szybsze](http://msdn.microsoft.com/magazine/hh781024.aspx)|  
 |Windows Presentation Foundation (WPF)|[Pakiet wydajności WPF](http://msdn.microsoft.com/library/67cafaad-57ad-4ecb-9c08-57fac144393e)|  
@@ -66,6 +67,6 @@ Jeśli chcesz utworzyć aplikacje o bardzo dużej wydajności, projektowanie i P
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Buforowanie w aplikacjach .NET Framework](../../../docs/framework/performance/caching-in-net-framework-applications.md)|Opisuje metody do buforowania danych w celu zwiększenia wydajności w aplikacji.|  
-|[Inicjalizacja z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)|Zawiera opis sposobu zainicjowania obiekty wymagane do zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
+|[Inicjowanie z opóźnieniem](../../../docs/framework/performance/lazy-initialization.md)|Zawiera opis sposobu zainicjowania obiekty wymagane do zwiększenia wydajności, szczególnie podczas uruchamiania aplikacji.|  
 |[Niezawodność](../../../docs/framework/performance/reliability.md)|Zawiera informacje dotyczące zapobiegania asynchroniczne wyjątki w środowisku serwera.|  
-|[Pisanie dużych i sprawnie działających .NET Framework aplikacje](../../../docs/framework/performance/writing-large-responsive-apps.md)|Zawiera wskazówki dotyczące wydajności zebrane z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i zawiera kilka przykładów rzeczywistych kompilatora C#.|
+|[Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework](../../../docs/framework/performance/writing-large-responsive-apps.md)|Zawiera wskazówki dotyczące wydajności zebrane z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i zawiera kilka przykładów rzeczywistych kompilatora C#.|

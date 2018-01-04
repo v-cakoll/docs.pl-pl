@@ -18,11 +18,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e44ded58e7c48fae281030b5757d0d891d5600e6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera widok ogólny [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architektury. Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programowania, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -163,6 +164,6 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Skrócona forma rosnącej gamy parametry usługi sieci Web (WS), na przykład WS-Security, WS-ReliableMessaging i tak dalej, które zostały wdrożone w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Zobacz też  
- [Co to jest Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
- [Architektura programu Windows Communication Foundation](../../../docs/framework/wcf/architecture.md)  
+ [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)  
  [Architektura zabezpieczeń](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)

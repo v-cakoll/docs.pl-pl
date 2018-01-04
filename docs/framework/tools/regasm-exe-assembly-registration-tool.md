@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 21da853d442a86eb42d04ff4f32d9f2798e14477
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b2762080c66c3c9451e7c7c3d4621d8cb9d4846e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (Narzędzie rejestracji zestawów)
 Narzędzie do rejestracji zestawów czyta metadane w zestawie i dodaje niezbędne wpisy do rejestru, co umożliwia klientom COM przejrzyste tworzenie klas .NET Framework. Po zarejestrowaniu klasy dowolny klient COM może jej używać tak, jakby była klasą modelu COM. Klasa jest rejestrowana tylko raz, kiedy zestaw jest instalowany. Nie można utworzyć wystąpień klas w zestawie z COM, dopóki nie zostaną one faktycznie zarejestrowane.  
@@ -48,12 +49,12 @@ regasm assemblyFile [options]
 |**/ codebase**|Tworzy wpis Codebase w rejestrze. Wpis Codebase określa ścieżkę pliku dla zestawu, który nie jest zainstalowany w globalnej pamięci podręcznej zestawów. Nie należy określać tej opcji, jeśli później instalowany będzie zestaw, który jest rejestrowany w globalnej pamięci podręcznej zestawów. *AssemblyFile* argument, który określisz z **/ codebase** opcja musi być [zestawu z silną nazwą](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
 |**/ zarejestrowany**|Określa, że narzędzie będzie odnosić się tylko do bibliotek typów, które zostały już zarejestrowane.|  
 |**asmpath**|Określa katalog zawierający odwołania do zestawów. Musi być używany z **/RegFile** opcji.|  
-|**/ nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/ RegFile** [**:** *polecenia regFile*]|Generuje określony plik reg dla zestawu zawierający potrzebne wpisy rejestru. Zaznaczenie tej opcji nie powoduje zmiany rejestru. Nie można użyć tej opcji z **/u** lub **/TLB** opcje.|  
 |**/ silent** lub   **/s**|Pomija wyświetlanie komunikatów o sukcesie.|  
 |**/ TLB** [**:** *typeLibFile*]|Generuje bibliotekę typów z określonego zestawu zawierającego definicje dostępnych typów zdefiniowanych w zestawie.|  
 |**/ unregister** lub **/u**|Wyrejestrowuje możliwość utworzenia klasy w *assemblyFile*. Pominięcie tej opcji powoduje, że Regasm.exe rejestruje utworzone klasy w zestawie.|  
-|**/ verbose**|Określa tryb pełny; Wyświetla listę wszelkie odwołania do zestawów, dla których ma zostać wygenerowany, gdy określony za pomocą biblioteki typów **/TLB** opcji.|  
+|**/verbose**|Określa tryb pełny; Wyświetla listę wszelkie odwołania do zestawów, dla których ma zostać wygenerowany, gdy określony za pomocą biblioteki typów **/TLB** opcji.|  
 |**/?** lub   **/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 > [!NOTE]
@@ -91,7 +92,7 @@ regasm myTest.dll /tlb:myTest.tlb
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [Tlbexp.exe (Eksporter biblioteki typów)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
- [Tlbimp.exe (Importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Rejestrowanie zestawów w modelu COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Tlbexp.exe (eksporter biblioteki typów)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+ [Rejestrowanie zestawów do użycia z modelem COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

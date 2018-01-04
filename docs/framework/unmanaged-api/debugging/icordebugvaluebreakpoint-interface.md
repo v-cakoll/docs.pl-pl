@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 04ce1827bbc70fc4f1406f802c3a382858b08699
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92de5aa960c9ded27aef09d2c795437e9c599835
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvaluebreakpoint-interface1"></a>ICorDebugValueBreakpoint Interface1
 Rozszerzenie interfejsu ICorDebugBreakpoint w celu zapewnienia dostępu do określonej wartości.  
@@ -32,7 +33,7 @@ Rozszerzenie interfejsu ICorDebugBreakpoint w celu zapewnienia dostępu do okre�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetValue — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Pobiera wskaźnika interfejsu do obiektu ICorDebugValue reprezentujący wartość obiektu, na którym jest ustawiony punkt przerwania.|  
+|[GetValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|Pobiera wskaźnika interfejsu do obiektu ICorDebugValue reprezentujący wartość obiektu, na którym jest ustawiony punkt przerwania.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,4 +50,4 @@ Rozszerzenie interfejsu ICorDebugBreakpoint w celu zapewnienia dostępu do okre�
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

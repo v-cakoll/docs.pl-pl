@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 38f62a6ccc0c9291f3963173475f99d5800feb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f2314c8def27bac9e64685d2af3cdd7639332f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-security"></a>Zabezpieczenia programu WCF (Windows Communication Foundation)
 W tematach w tej sekcji opisano [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje zabezpieczeń i sposób ich użycia, aby ułatwić zabezpieczonych wiadomości.  
@@ -50,19 +51,19 @@ W tematach w tej sekcji opisano [!INCLUDE[indigo1](../../../../includes/indigo1-
  [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  Pokazuje typowe zadania dotyczące uwierzytelniania.  
   
- [Autoryzacji](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Autoryzacja](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  W tym artykule opisano typowe scenariusze autoryzacji z zabezpieczeniami.  
   
  [Federacja i wystawione tokeny](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  W tym artykule opisano podstawy federacyjnego oraz sposobu tworzenia klientów komunikujących się z serwerów federacyjnych.  
   
- [Częściowa relacja zaufania](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
+ [Zaufanie częściowe](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
  Opisuje sposób uruchamiania scenariuszach częściowo zaufanych i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ograniczenia podczas uruchamiania częściowo zaufany.  
   
  [Inspekcja](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  Informacje dotyczące inspekcji zdarzeń zabezpieczeń.  
   
- [Wskazówki dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [Wytyczne dotyczące zabezpieczeń i najlepsze rozwiązania](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  Wytyczne dotyczące tworzenia bezpiecznego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -73,11 +74,11 @@ W tematach w tej sekcji opisano [!INCLUDE[indigo1](../../../../includes/indigo1-
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Szczegóły funkcji WCF](../../../../docs/framework/wcf/feature-details/index.md)  
   
- [Programowanie podstawowe usługi WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
  [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [Omówienie pojęć](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Konfigurowanie aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+ [Konfigurowanie własnej aplikacji](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

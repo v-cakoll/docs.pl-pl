@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 4e521e06920d06383f75c4dc40ec88b862112aef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 93af3c68ccb60bbef8870ea2fc3dc8d4807b3493
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wif"></a>Wprowadzenie do korzystania z programu WIF
--   [Tworzenie mojej pierwszej aplikacji sieci Web ASP.NET obsługujących oświadczenia](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+-   [Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+-   [Tworzenie pierwszej usługi WCF obsługującej oświadczenia](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Program Windows Identity Foundation](../../../docs/framework/security/index.md)
+ [Windows Identity Foundation](../../../docs/framework/security/index.md)

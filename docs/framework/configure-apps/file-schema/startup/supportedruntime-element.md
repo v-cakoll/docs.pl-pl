@@ -15,11 +15,12 @@ ms.assetid: 1ae16e23-afbe-4de4-b413-bc457f37b69f
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 5c38dc87d6015f0c814ea319c9353ea757478b85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77886cef1a8dbd320223526b86f86fa9cee6a9f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsupportedruntimegt-element"></a>&lt;supportedRuntime&gt; — Element
 Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługuje aplikacja. Ten element powinien być używany przez wszystkie aplikacje kompilowane przy użyciu programu .NET Framework w wersji 1.1 i nowszych.  
@@ -46,7 +47,7 @@ Określa wersje środowiska uruchomieniowego języka wspólnego, które obsługu
 ## <a name="remarks"></a>Uwagi  
 Jeśli  **\<supportedRuntime >** element nie jest obecny w pliku konfiguracji aplikacji, używana wersja środowiska uruchomieniowego, używany do tworzenia aplikacji.  
 
-**\<SupportedRuntime >** element powinna być używana przez wszystkie aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje przeznaczone do obsługi tylko wersję 1.0 środowiska uruchomieniowego musi używać [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elementu.  
+ **\<SupportedRuntime >** element powinna być używana przez wszystkie aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje przeznaczone do obsługi tylko wersję 1.0 środowiska uruchomieniowego musi używać [ \<requiredRuntime >](../../../../../docs/framework/configure-apps/file-schema/startup/requiredruntime-element.md) elementu.  
   
 > [!NOTE]
 >  Jeśli używasz [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md) funkcji, aby określić plik konfiguracji, należy użyć `<requiredRuntime>` elementu dla wszystkich wersji środowiska uruchomieniowego. `<supportedRuntime>` Element jest ignorowana, korzystając z [CorBindToRuntimeByCfg](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md).  
@@ -112,4 +113,4 @@ Zalecane jest, aby testować aplikacje z każdą wersją programu .NET Framework
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień uruchamiania](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [W trakcie wykonywania Side-by-Side](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)
+ [Wykonywanie równoczesne i wewnątrzprocesowe](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

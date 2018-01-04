@@ -17,62 +17,63 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 38462833e3b0ccd56265b02d9a1bc9f37ac12f5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 126edd5f25b56a069a87cd1bd50cce955334a342
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-global-static-functions"></a>Łączenie statycznych funkcji globalnych
 W tej sekcji opisano niezarządzane statyczne funkcje globalne, używane fusion interfejsu API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Cleardownloadcache — funkcja](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
+ [ClearDownloadCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/cleardownloadcache-function.md)  
  Powoduje wyczyszczenie pamięci podręcznej GAC pobrany zestawów.  
   
- [Compareassemblyidentity — funkcja](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
+ [CompareAssemblyIdentity, funkcja](../../../../docs/framework/unmanaged-api/fusion/compareassemblyidentity-function.md)  
  Porównuje dwa tożsamości zestawu do ustalenia, czy są równoważne.  
   
- [Createapplicationcontext — funkcja](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
+ [CreateApplicationContext, funkcja](../../../../docs/framework/unmanaged-api/fusion/createapplicationcontext-function.md)  
  Tylko wewnętrznie. (Ta funkcja obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie).  
   
- [Createassemblycache — funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
+ [CreateAssemblyCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblycache-function.md)  
  Pobiera wskaźnik do nowego [IAssemblyCache](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md) wystąpienie reprezentującego globalnej pamięci podręcznej zestawów.  
   
- [CreateAssemblyEnum — funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
+ [CreateAssemblyEnum, funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblyenum-function.md)  
  Pobiera wskaźnik do [IAssemblyEnum](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md) wystąpienia, który reprezentuje listę obiektów, które istnieją w określonym zestawie.  
   
- [Createassemblynameobject — funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
+ [CreateAssemblyNameObject, funkcja](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
  Pobiera wskaźnik do [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) wystąpienia, który reprezentuje unikatową tożsamość zestawu o określonej nazwie.  
   
- [Createhistoryreader — funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
+ [CreateHistoryReader, funkcja](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
  Tworzy czytnik historii dla określonego pliku.  
   
- [Createinstallreferenceenum — funkcja](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
+ [CreateInstallReferenceEnum, funkcja](../../../../docs/framework/unmanaged-api/fusion/createinstallreferenceenum-function.md)  
  Pobiera wskaźnik do [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) wystąpienia, który reprezentuje listę odwołań aplikacji do określonego zestawu.  
   
- [Getappidauthority — funkcja](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
+ [GetAppIdAuthority, funkcja](../../../../docs/framework/unmanaged-api/fusion/getappidauthority-function.md)  
  Pobiera wskaźnik do [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md) wystąpienia zarządzanego kluczy dla tożsamości aplikacji i odwołań.  
   
- [Getassemblyidentityfromfile — funkcja](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
+ [GetAssemblyIdentityFromFile, funkcja](../../../../docs/framework/unmanaged-api/fusion/getassemblyidentityfromfile-function.md)  
  Pobiera wskaźnik do `IUnknown` obiektu z określonym `IID` w zestawie przy użyciu określonej ścieżki.  
   
- [Getcachepath — funkcja](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
+ [GetCachePath, funkcja](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)  
  Pobiera ścieżkę do zestawu pamięci podręcznej, przy użyciu określonych flag.  
   
- [Gethistoryfiledirectory — funkcja](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
+ [GetHistoryFileDirectory, funkcja](../../../../docs/framework/unmanaged-api/fusion/gethistoryfiledirectory-function.md)  
  Pobiera ścieżkę katalogu historii aplikacji.  
   
- [Getidentityauthority — funkcja](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
+ [GetIdentityAuthority, funkcja](../../../../docs/framework/unmanaged-api/fusion/getidentityauthority-function.md)  
  Pobiera wskaźnik do [IIdentityAuthority](../../../../docs/framework/unmanaged-api/fusion/iidentityauthority-interface.md) wystąpienia zarządzanego klucze obiekty kod.  
   
- [Isframeworkassembly — funkcja](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
+ [IsFrameworkAssembly, funkcja](../../../../docs/framework/unmanaged-api/fusion/isframeworkassembly-function.md)  
  Pobiera wartość wskazującą, czy jest zarządzana w określonym zestawie.  
   
- [Nukedownloadedcache — funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
+ [NukeDownloadedCache, funkcja](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
  Usuwa pamięć podręczną wspólnego języka środowiska uruchomieniowego pobierania.  
   
- [Prebindassemblyex — funkcja](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
+ [PreBindAssemblyEx, funkcja](../../../../docs/framework/unmanaged-api/fusion/prebindassemblyex-function.md)  
  Pobiera nazwę wyświetlaną po zastosowaniu zasad dla zestawu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
@@ -82,4 +83,4 @@ W tej sekcji opisano niezarządzane statyczne funkcje globalne, używane fusion 
   
  [Łączenie — struktury](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)  
   
- [Globalna pamięć podręczna zestawów](../../../../docs/framework/app-domains/gac.md)
+ [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

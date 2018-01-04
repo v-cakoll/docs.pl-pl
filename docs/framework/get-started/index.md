@@ -12,11 +12,12 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7d84b55abd6c7d72c3a74d17b4f24d00e117a0c
-ms.sourcegitcommit: f416ac259c1a771e4e6c72728d8c11a77082f11c
+ms.workload: dotnet
+ms.openlocfilehash: 3295d17b0ef4650c38f264dfc785eee7a452be86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-started-with-the-net-framework"></a>Wprowadzenie do programu .NET Framework
 
@@ -84,11 +85,11 @@ Aby uzyskać więcej informacji na temat tworzenia aplikacji przeznaczonych dla 
 | ----- |------------ |
 | [Omówienie](../../../docs/framework/get-started/overview.md) | Zawiera szczegółowe informacje dla deweloperów, którzy tworzą aplikacje kierowanych programu .NET Framework. |
 | [Przewodnik instalacji](../../../docs/framework/install/index.md) | Informacje na temat Instalowanie programu .NET Framework. |  
-| [.NET Framework i zwalnia poza pasmem](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Zawiera opis programu .NET Framework poza harmonogramem i używania ich w aplikacji. |
+| [Program .NET Framework i wydania poza harmonogramem (OOB)](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md) | Zawiera opis programu .NET Framework poza harmonogramem i używania ich w aplikacji. |
 | [Wymagania systemowe](../../../docs/framework/get-started/system-requirements.md) | Wymieniono wymagania sprzętowe i programowe dotyczące uruchamiania programu .NET Framework. |
-| [Oprogramowanie .NET core i Open Source](../../../docs/framework/get-started/net-core-and-open-source.md) | W tym artykule opisano .NET Core w odniesieniu do programu .NET Framework oraz sposobu otwierania projektów platformy .NET Core open source. |
+| [Oprogramowanie .NET Core i Open-Source](../../../docs/framework/get-started/net-core-and-open-source.md) | W tym artykule opisano .NET Core w odniesieniu do programu .NET Framework oraz sposobu otwierania projektów platformy .NET Core open source. |
 | [Dokumentacja platformy .NET core](https://docs.microsoft.com/dotnet/) | Udostępnia koncepcyjnej i dokumentacji interfejsu API dla platformy .NET Core. |
-| [.NET standard](~/docs/standard/net-standard.md) | W tym artykule omówiono .NET Standard, specyfikacja wersji poszczególnych implementacji .NET obsługuje zagwarantowanie, że spójny zestaw interfejsów API są dostępne na wielu platformach.
+| [.NET Standard](~/docs/standard/net-standard.md) | W tym artykule omówiono .NET Standard, specyfikacja wersji poszczególnych implementacji .NET obsługuje zagwarantowanie, że spójny zestaw interfejsów API są dostępne na wielu platformach.
 
 ## <a name="see-also"></a>Zobacz także
 

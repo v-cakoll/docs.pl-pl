@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: daebd84c9cef5e64ea7ed55c27b671ba01d14df0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing-contracts"></a>Kontrakty routingu
 Kontrakty routingu zdefiniuj wzorce wiadomości, które może przetworzyć usługi routingu.  Każdej umowy jest bez typu i umożliwia usłudze komunikat bez wiedzy o schematu wiadomości lub akcji. Dzięki temu usługa routingu objęty rozesłać komunikaty bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowej wiadomości przesyłane.  

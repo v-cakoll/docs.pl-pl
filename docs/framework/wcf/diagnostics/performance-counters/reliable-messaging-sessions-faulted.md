@@ -1,5 +1,5 @@
 ---
-title: "Sesje niezawodnego przesyłania komunikatów zakończone niepowodzeniem"
+title: "Błędne sesje komunikacji niezawodnej"
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -13,13 +13,14 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 365ed993be6c21567090b51fd41b551240abd1e1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 489b2526ab91f03f420b7db6237d3e9cce62241f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="reliable-messaging-sessions-faulted"></a>Sesje niezawodnego przesyłania komunikatów zakończone niepowodzeniem
+# <a name="reliable-messaging-sessions-faulted"></a>Błędne sesje komunikacji niezawodnej
 Nazwa licznika: Sesji komunikacji niezawodnej z błędami.  
   
 ## <a name="description"></a>Opis  

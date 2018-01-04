@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 06fc335e4b8011afd92e698b20e4b84572b153c3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 133d48baa9613ea698b6d6a21f0dfe88a798859c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="garbage-collection-etw-events"></a>Zdarzenia ETW odzyskiwania pamięci
 <a name="top"></a>Te zdarzenia zbierać informacje dotyczące wyrzucania elementów bezużytecznych. Pomagają w diagnostyce i debugowanie, określając, ile razy wyrzucanie elementów bezużytecznych została wykonana, ile pamięci został zwolniony podczas wyrzucanie elementów bezużytecznych i tak dalej.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/18/2017
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Liczba|Windows: UInt32.|*n* Th wyrzucanie elementów bezużytecznych.|  
+|Liczba|Windows: UInt32.| *n* Th wyrzucanie elementów bezużytecznych.|  
 |Głębokość|Windows: UInt32.|Generowanie zbieranych.|  
 |Przyczyna|Windows: UInt32.|Dlaczego zostało wyzwolone odzyskiwanie pamięci:<br /><br /> 0x0 - Alokacja sterty dla małego obiektu.<br /><br /> 0x1 — powstaniu.<br /><br /> 0x2 — Brak pamięci.<br /><br /> 0x3 — pusty.<br /><br /> 0x4 - Alokacja sterty dla dużego obiektu.<br /><br /> 0x5 — Brak miejsca (dla sterty małego obiektu).<br /><br /> 0x6 — Brak miejsca (dla sterty dużego obiektu).<br /><br /> 0x7 - powstaniu, ale nie wymuszono jako blokowania.|  
 |Typ|Windows: UInt32.|0x0 — blokowanie pamięci wystąpiło poza odzyskiwanie pamięci w tle.<br /><br /> 0x1 — odzyskiwanie pamięci w tle.<br /><br /> 0x2 — blokowanie wyrzucanie elementów bezużytecznych podczas odzyskiwanie pamięci w tle.|  
@@ -100,7 +101,7 @@ ms.lasthandoff: 10/18/2017
   
 |Nazwa pola|Typ danych|Opis|  
 |----------------|---------------|-----------------|  
-|Liczba|Windows: UInt32.|*n* Th wyrzucanie elementów bezużytecznych.|  
+|Liczba|Windows: UInt32.| *n* Th wyrzucanie elementów bezużytecznych.|  
 |Głębokość|Windows: UInt32.|Generowanie, który został zebrany.|  
 |ClrInstanceID|Windows: UInt16|Unikatowy identyfikator wystąpienia CLR lub środowisko CoreCLR.|  
   

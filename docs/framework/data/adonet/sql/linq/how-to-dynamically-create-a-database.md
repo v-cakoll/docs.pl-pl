@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5374c5a7954a8a31736e62c7f954e3fc5a1b937b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 27986236c6b693b2c89157229cd79f0de64266e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-dynamically-create-a-database"></a>Porady: dynamiczne tworzenie bazy danych
 W składniku LINQ to SQL model obiektów jest mapowany relacyjnej bazy danych. Mapowanie jest włączane przy użyciu mapowania na podstawie atrybutów lub plik mapowania zewnętrznych do opisania struktury relacyjnej bazy danych. W obu przypadkach ma wystarczającej ilości informacji o relacyjnej bazy danych, możesz utworzyć nowe wystąpienie klasy przy użyciu bazy danych <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> metody.  
@@ -59,8 +60,8 @@ W składniku LINQ to SQL model obiektów jest mapowany relacyjnej bazy danych. M
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowanie opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Mapowanie zewnętrznych](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
- [Mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
  [Tworzenie i przesyłanie zmian danych](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

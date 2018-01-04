@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1ec4dc2d7f066d79b2cf54c3d474b47e769b626c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ee138c52c8cdd63137bf3c468ebbdd064d60d443
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-a-custom-user-name-and-password-validator"></a>Instrukcje: Używanie niestandardowej nazwy użytkownika i modułu weryfikacji hasła
 Domyślnie, jeśli nazwa użytkownika i hasło jest używane do uwierzytelniania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] korzysta z systemu Windows do weryfikowania nazwy użytkownika i hasła. Jednak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia użytkownika niestandardowego nazwy i hasła schematy uwierzytelniania, nazywane również *modułów sprawdzania poprawności*. Dołączanie moduł weryfikacji nazwy i hasła użytkownika niestandardowego, Utwórz klasę pochodzącą z <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> , a następnie skonfigurować go.  
@@ -128,5 +129,5 @@ Domyślnie, jeśli nazwa użytkownika i hasło jest używane do uwierzytelniania
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>  
- [Porady: Używanie dostawcy członkostwa ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
+ [Instrukcje: użycie dostawcy członkostwa platformy ASP.NET](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)  
  [Uwierzytelnianie](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9c4f96f084a96ccdc9857a64217284b485aa73a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5053ea14ac7a8af33319bbbb289db01dbbc86169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugclass2-interface1"></a>ICorDebugClass2 Interface1
 Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Type>. Ten interfejs stanowi rozszerzenie [ICorDebugClass](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md).  
@@ -32,8 +33,8 @@ Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Typ
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetParameterizedType — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Pobiera deklaracji typu dla tej klasy.|  
-|[SetJMCStatus — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Ustawia wartość wskazującą, czy metoda jest zdefiniowane przez użytkownika kod dla każdej metody tej klasy.|  
+|[GetParameterizedType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-getparameterizedtype-method.md)|Pobiera deklaracji typu dla tej klasy.|  
+|[SetJMCStatus, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugclass2-setjmcstatus-method.md)|Ustawia wartość wskazującą, czy metoda jest zdefiniowane przez użytkownika kod dla każdej metody tej klasy.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -50,5 +51,5 @@ Reprezentuje klasy ogólnej lub klasie z parametrem metody typu <xref:System.Typ
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICorDebugClass Interface1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugClass, interfejs1](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-interface.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

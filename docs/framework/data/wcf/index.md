@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8a0ab816aa21082cf98462f5f9d7ffd20e4dcfd
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](wcześniej znane jako "Usług danych ADO.NET") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantykę [representational stanu Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP z GET, PUT, POST i DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]używa konwencji Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) do udostępnienia zasobów jako zestawy jednostek, które są powiązane przez skojarzenia.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/02/2017
  W zależności od zainteresowania, należy rozważyć wprowadzenie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] w następujących tematach.  
   
  Chcę, aby od razu...  
- -   [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ -   [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
 -   [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
   
@@ -44,11 +45,11 @@ ms.lasthandoff: 12/02/2017
 -   [Szybki start Silverlight dla systemu Windows Phone programowanie](http://go.microsoft.com/fwlink/?LinkID=214535)  
   
  Po prostu Pokaż kodu...  
- -   [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ -   [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
   
--   [Porady: wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+-   [Instrukcje: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
--   [Porady: wiązanie danych do systemu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
+-   [Instrukcje: Wiązanie danych do elementów systemu Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)  
   
  Chcę, aby dowiedzieć się więcej o [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]...  
  -   [Oficjalny dokument: Wprowadzenie do OData](http://go.microsoft.com/fwlink/?LinkId=220867)  
@@ -78,7 +79,7 @@ ms.lasthandoff: 12/02/2017
   
 -   [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
   
--   [Dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
+-   [Dostawca programu Entity Framework](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)  
   
  Co można zrobić z nim?  
  -   [Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
@@ -100,11 +101,11 @@ ms.lasthandoff: 12/02/2017
 -   [Open Data Protocol (OData) klienta dla Windows Phone](http://go.microsoft.com/fwlink/?LinkID=208749)  
   
  Chcę użyć LINQ...  
- -   [Zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ -   [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
   
 -   [Zagadnienia dotyczące LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
--   [Porady: wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+-   [Instrukcje: Wykonywanie zapytań usługi danych](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
  Wciąż potrzebuję więcej informacji...  
  -   [Blog zespołu usługi danych WCF](http://go.microsoft.com/fwlink/?LinkID=150511)  
@@ -125,10 +126,10 @@ ms.lasthandoff: 12/02/2017
  [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  
  Opisuje sposób ujawniać i korzystanie z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych za pomocą [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Definiowanie usługi danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  Opisuje sposób tworzenia i konfigurowania usługi danych, który ujawnia [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych.  
   
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
  Informacje dotyczące używania bibliotek klienckich zużyje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł z aplikacją kliencką programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2e02c1b9499bc2972f88c9045d3f59423edb6cb2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3a6f26c8337f89d829f42e00a9e5e79731a15156
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding — Interfejs
 Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić aplikacji hosta utworzono domeny aplikacji.  
@@ -32,7 +33,7 @@ Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe ję
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OnAppDomain — metoda](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić hosta utworzono domeny aplikacji.|  
+|[OnAppDomain, metoda](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|Wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), aby powiadomić hosta utworzono domeny aplikacji.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,4 +45,4 @@ Udostępnia metody, która jest wywoływana przez środowisko uruchomieniowe ję
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hosting — interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

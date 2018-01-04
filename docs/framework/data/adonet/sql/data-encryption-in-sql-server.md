@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4428cf8fbfcaa853ca2c877a8cc4902f585b6754
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ea062a65f250a3532249783b0c7b147ed460317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-encryption-in-sql-server"></a>Szyfrowanie danych w programie SQL Server
 SQL Server udostępnia funkcje do szyfrowania i odszyfrowywania danych przy użyciu certyfikatu, klucza asymetrycznego lub klucza symetrycznego. Zarządza wszystkich tych w magazynie certyfikatu wewnętrznego. Magazyn używa szyfrowania hierarchii, która zabezpiecza certyfikatów i kluczy na jednym poziomie z warstwą wyżej w hierarchii. Ten obszar funkcji programu SQL Server jest nazywany magazynu klucz tajny.  
@@ -42,8 +43,8 @@ SQL Server udostępnia funkcje do szyfrowania i odszyfrowywania danych przy uży
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
- [Uwierzytelnianie programu SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
- [Serwer i ról bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
- [Własność i oddzielenie użytkowników schematu w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
+ [Uwierzytelnianie w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)  
+ [Serwer i role bazy danych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)  
+ [Własność i oddzielenie schematu użytkownika w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)  
  [Autoryzacja i uprawnienia w programie SQL Server](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

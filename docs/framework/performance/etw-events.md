@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 27f3ede2967d030d0f85919e658ca6a8dd410743
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7ce0b322c2601709bdb17cb6990c4b6d96480bb0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="etw-events-in-the-net-framework"></a>Zdarzenia ETW w programie .NET Framework
 Śledzenie zdarzeń systemu Windows (ETW) to system wysokiej wydajności, narzut na małej, skalowalna śledzenia podany przez systemy operacyjne Windows. Uzupełnia profilowania i debugowania wsparcie w programie .NET Framework, a może służyć do rozwiązywania z szerokiej gamy scenariuszy.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 11/21/2017
  [Zdarzenia ETW w bibliotece równoległych zadań i PLINQ](../../../docs/framework/performance/etw-events-in-task-parallel-library-and-plinq.md)  
  Opisuje sposób profilowanie kodu aplikacji równoległych.  
   
- [Zdarzenia ETW w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
+ [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)  
  W tym artykule opisano, jak zdarzenia CLR ETW uzupełnić profilowania i debugowania wsparcie przez środowisko uruchomieniowe języka wspólnego.  
   
 ## <a name="see-also"></a>Zobacz też  

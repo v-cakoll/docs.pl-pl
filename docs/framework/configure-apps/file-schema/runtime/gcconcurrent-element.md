@@ -20,11 +20,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c7ab16546ae85d1161f9e1323d74f17253edb7e5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 254b3be8f270a9186377b264094c919314efb27f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltgcconcurrentgt-element"></a>&lt;gcconcurrent —&gt; — Element
 Określa, czy środowisko uruchomieniowe języka wspólnego wyrzucanie elementów bezużytecznych jest uruchamiana w oddzielnym wątku.  
@@ -100,4 +101,4 @@ Określa, czy środowisko uruchomieniowe języka wspólnego wyrzucanie elementó
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Podstawy dotyczące wyrzucania elementów bezużytecznych](../../../../../docs/standard/garbage-collection/fundamentals.md)
+ [Podstawy dotyczące odzyskiwania pamięci](../../../../../docs/standard/garbage-collection/fundamentals.md)

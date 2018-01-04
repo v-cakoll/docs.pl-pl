@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11be45743bd215315139fb77f016e85bc9b592c5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a86604febb7641eef147608e564a27883fdc4bec
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE — Struktura
 Zawiera informacje dotyczące obiektu, który ma być zbierane z pamięci.  
@@ -59,11 +60,11 @@ typedef struct _COR_GC_REFERENCE {
   
  `extraData` Pole zawiera dodatkowe dane w zależności od źródłowego (lub typ) odwołanie. Możliwe wartości to:  
   
--   `DependentSource`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongDependent`, to pole jest obiekt, który jeśli aktywności, katalogów głównych obiektu ma być pobrane pamięci w `COR_GC_REFERENCE.Location`.  
+-   `DependentSource`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongDependent`, to pole jest obiekt, który jeśli aktywności, katalogów głównych obiektu ma być pobrane pamięci w `COR_GC_REFERENCE.Location`.  
   
--   `RefCount`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest liczba odwołań uchwytu.  
+-   `RefCount`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongRefCount`, to pole jest liczba odwołań uchwytu.  
   
--   `Size`. Jeśli `type` jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiar drzewa obiektów, dla którego moduł zbierający elementy bezużyteczne obliczana katalogów głównych obiektów. Należy zwrócić uwagę, to obliczenie nie jest zawsze aktualny.  
+-   `Size`., Jeśli `type` jest `CorGCREferenceType.CorHandleStrongSizedByref`, to pole jest ostatnim rozmiar drzewa obiektów, dla którego moduł zbierający elementy bezużyteczne obliczana katalogów głównych obiektów. Należy zwrócić uwagę, to obliczenie nie jest zawsze aktualny.  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

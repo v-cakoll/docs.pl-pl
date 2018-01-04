@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6dc2654b8c51dad53c05a37f5febe15d6d69fd1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7e637a744d24ed32be71d0ecf3f5d93144d32aa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltenablewebscriptgt"></a>&lt;enableWebScript&gt;
 Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie z usługi z ASP.NET AJAX stron sieci web.  
@@ -55,5 +56,5 @@ Ten element włącza zachowanie punktu końcowego, który pozwala na korzystanie
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Configuration.WebScriptEnablingElement>  
  <xref:System.ServiceModel.Description.WebScriptEnablingBehavior>  
- [Integracji AJAX i obsługi JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [Obsługa integracji AJAX i notacji JSON](../../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  [\<webHttp >](../../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 18e83e629eb9736db054f239c6ffe3f30baf5ea4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 18e67fd379e877ce25058ba3c90e3831b6361a0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
 Łączenie z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonna. Kanału fizycznego, takie jak gniazda lub nazwanego potoku należy ustalić, musi nastąpić początkowego uzgadniania z serwerem, musi zostać przeanalizowany informacje o parametrach połączenia, połączenie musi zostać uwierzytelniony przez serwer, kontroli musi zostać uruchomione dla rejestrowanie w Bieżąca transakcja i tak dalej.  

@@ -19,11 +19,12 @@ caps.latest.revision: "47"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fba53a19810a91a2e679616e73ea8c5fc8d38da1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzysta z usługi aplikacji klienta do uwierzytelniania użytkowników i ról użytkownika i ustawienia.  
@@ -47,7 +48,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne są następujące składnika w tym przewodniku:  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].,  
   
 ## <a name="creating-the-client-application"></a>Tworzenie aplikacji klienckiej  
  Pierwszą czynnością, który będzie do jest utworzenie projektu formularzy systemu Windows. W tym przewodniku zastosowano formularzy systemu Windows, ponieważ więcej osób zapoznać się z nią, ale proces jest podobny do projektów Windows Presentation Foundation (WPF).  
@@ -545,9 +546,9 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
  Aby zwiększyć bezpieczeństwo aplikacji, upewnij się, że dokładnie przetestować aplikację i serwera przed przystąpieniem do wdrożenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługi aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Porady: Konfigurowanie usług aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Omówienie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Instrukcje: konfigurowanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
  [Narzędzie do administrowania witryną sieci Web ASP.NET](http://msdn.microsoft.com/library/100ddd8b-7d11-4df9-91ef-0bbbe92e5aec)  
  [Tworzenie i Konfigurowanie bazy danych usług aplikacji dla programu SQL Server](http://msdn.microsoft.com/library/ab894e83-7e2f-4af8-a116-b1bff8f815b2)  
  [Wskazówki: Korzystanie z usługi aplikacji platformy ASP.NET](http://msdn.microsoft.com/library/f3f394f0-20d6-4361-aa8f-4b21bf4933eb)

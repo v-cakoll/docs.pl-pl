@@ -21,11 +21,12 @@ caps.latest.revision: "29"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e87568cc6ac86e7bdc24fd7e31f5b8c3ed260c88
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9a9774a9811d5c53d44d66fba452098367846bf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (Importer biblioteki typów)
 Importer biblioteki typów konwertuje definicje typów znalezione w bibliotece typów modelu COM do równoważnych definicji w zestawie środowiska uruchomieniowego języka wspólnego. Wyjściem programu Tlbimp.exe jest plik binarny (zestaw) zawierający metadane środowiska wykonawczego dla typów zdefiniowanych w oryginalnej biblioteki typów. Można sprawdzić ten plik przy użyciu narzędzia, takie jak [Ildasm.exe](../../../docs/framework/tools/ildasm-exe-il-disassembler.md).  
@@ -51,14 +52,14 @@ tlbimp tlbFile [options]
 |**/asmversion:** *numerwersji*|Określa numer wersji zestawu do produkcji. Określ *numerwersji* w formacie *główna.pomocnicza.kompilacja.poprawka*.|  
 |**/ firmy:**`companyinformation`|Dodaje informacje o firmie do wyjściowego zestawu.|  
 |**/ copyright:**`copyrightinformation`|Dodaje informacje o prawach autorskich do wyjściowego zestawu. Te informacje mogą być wyświetlane w **właściwości pliku** okno dialogowe dla zestawu.|  
-|**/ DelaySign**|Określa, że Tlbimp.exe ma podpisać wynikowy zestaw silną nazwą przy użyciu opóźnionego podpisywania. Tę opcję należy określić przy użyciu jednej **/KeyContainer:**, **/KeyFile:**, lub **/publickey:** opcji. Aby uzyskać więcej informacji na opóźnione proces podpisywania, zobacz [opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
+|**/delaysign**|Określa, że Tlbimp.exe ma podpisać wynikowy zestaw silną nazwą przy użyciu opóźnionego podpisywania. Tę opcję należy określić przy użyciu jednej **/KeyContainer:**, **/KeyFile:**, lub **/publickey:** opcji. Aby uzyskać więcej informacji na opóźnione proces podpisywania, zobacz [opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/ KeyContainer:** *containername*|Podpisuje wynikowego zestawu z mocną nazwą przy użyciu pary kluczy publiczny/prywatny znaleziony w określone przez kontener kluczy *containername*.|  
 |**/ KeyFile:** *filename*|Podpisuje wynikowego zestawu z mocną nazwą za pomocą wydawcy oficjalnego publicznego i prywatnego pary kluczy w *filename*.|  
 |**/ maszyny:**`machinetype`|Tworzy to zestaw przeznaczony dla określonego typu komputera (procesor). Obsługiwane typy maszyn: x86, x64, Itanium i Agnostic.|  
 |**/ NAMESPACE:** *przestrzeni nazw*|Określa przestrzeń nazw, w którym ma zostać wyprodukowany zestaw.|  
 |**/noclassmembers**|Zapobiega dodawaniu przez Tlbimp.exe składowych do klasy. Dzięki temu można uniknąć potencjalne <xref:System.TypeLoadException>.|  
-|**/ nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/ out:** *filename*|Określa nazwę wyjściowego pliku zestawu i przestrzeń nazw, w którym mają być zapisywane definicje metadanych. **/Out** opcji nie ma wpływu na przestrzeń nazw zestawu Jeśli biblioteka typów określa niestandardowy atrybut języka definicji interfejsu (IDL), który jawnie określa zestaw przestrzeni nazw. Jeśli ta opcja nie zostanie określona, Tlbimp.exe zapisuje metadane do pliku o takiej samej nazwie jak rzeczywista biblioteka zdefiniowana w pliku wejściowym i przypisuje mu rozszerzenie dll. Jeśli plik wyjściowy ma taką samą nazwę jak plik wejściowy, narzędzie wygeneruje błąd, aby zapobiec zastąpieniu biblioteki typów.|  
 |**/ podstawowego**|Tworzy podstawowy zestaw międzyoperacyjny dla określonej biblioteki typu. Do zestawu są dodawane informacje wskazujące, że wydawca biblioteki typów wyprodukował zestaw. Określając podstawowy zestaw międzyoperacyjny, różnicuje się zestawu wydawcy od innych zestawów utworzonych z biblioteki typów za pomocą Tlbimp.exe. Należy używać tylko **/primary** opcji w przypadku, gdy są wydawcy biblioteki typów, które są importowane z Tlbimp.exe. Należy pamiętać, że możesz zalogować podstawowego zestawu międzyoperacyjnego z [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md). Aby uzyskać więcej informacji, zobacz [podstawowe zestawy międzyoperacyjne](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080).|  
 |**/Product:**`productinformation`|Dodaje informacje o produkcie do wyjściowego zestawu. Te informacje mogą być wyświetlane w **właściwości pliku** okno dialogowe dla zestawu.|  
@@ -74,7 +75,7 @@ tlbimp tlbFile [options]
 |**/ znak towarowy:**`trademarkinformation`|Dodaje informacje o znaku towarowym do wyjściowego zestawu. Te informacje mogą być wyświetlane w **właściwości pliku** okno dialogowe dla zestawu.|  
 |**/ Przekształcenie:** *transformname*|Przekształca metadanych określony przez *transformname* parametru.<br /><br /> Określ **dispret** dla *transformname* parametr [out, retval]. Przekształcanie parametrów metod tylko do wysyłania interfejsy (dispinterfaces) do wartości zwracanych.<br /><br /> Aby uzyskać więcej informacji dotyczących tej opcji, zobacz przykłady w dalszej części tego tematu.|  
 |**/ unsafe**|Produkuje interfejsy bez sprawdzania zabezpieczeń platformy .NET Framework. Wywołanie metody, która jest widoczna w ten sposób, może stanowić zagrożenie bezpieczeństwa. Nie należy używać tej opcji, chyba że masz świadomość ryzyka związanego z ujawnieniem takiego kodu.|  
-|**/ verbose**|Określa tryb pełnej informacji; wyświetla dodatkowe informacje o importowanej bibliotece typów.|  
+|**/verbose**|Określa tryb pełnej informacji; wyświetla dodatkowe informacje o importowanej bibliotece typów.|  
 |**/ VariantBoolFieldToBool**|Konwertuje `VARIANT_BOOL` pól struktur <xref:System.Boolean>.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
@@ -135,11 +136,11 @@ void SomeMethod(out bool x);
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [Tlbexp.exe (Eksporter biblioteki typów)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
+ [Tlbexp.exe (eksporter biblioteki typów)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Importowanie biblioteki typów jako zestawu](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
  [Biblioteki typów na zestaw konwersja — podsumowanie](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
- [SN.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Zestawy o silnych nazwach](../../../docs/framework/app-domains/strong-named-assemblies.md)  
  [Atrybuty Importowanie biblioteki typów zestawy międzyoperacyjne](http://msdn.microsoft.com/en-us/81e587b8-393f-43e1-9add-c4b05e65cbfd)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d57517daaf78e737ea4417d5d46cf33400ff97a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 75870850a7df01d255d3512dde2a550e2a6c205a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracing"></a>Śledzenie
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]udostępnia instrumentacji aplikacji i danych diagnostycznych dla błędów monitorowania i analizy. Śledzenie można użyć zamiast debugera zrozumienie zachowania aplikacji lub przyczynę błędów. Między składnikami, aby zapewnić środowisko end-to-end można również dostosować błędów i przetwarzania.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 12/02/2017
   
  W tym temacie opisano, jak skonfigurować śledzenie na różnych poziomach do własnych potrzeb określone.  
   
- [Śledzenia end-to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
+ [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)  
   
  W tej sekcji opisano, jak można użyć działania śledzenia i Propagacja dla korelacji end-to-end ułatwiających debugowania.  
   
@@ -50,4 +51,4 @@ ms.lasthandoff: 12/02/2017
  W tym temacie wymieniono wszystkie ślady generowane przez [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)].  
   
 ## <a name="see-also"></a>Zobacz też  
- [Narzędzie podglądu śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+ [Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 054744612ec54861f675005a27a309e00024b242
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0c914b566727d882939c23a982fad5db12985de5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Wytyczne dotyczące tworzenia składników pod kątem wykonywania równoczesnego
 Wykonaj te ogólne wytyczne, aby utworzyć aplikacje zarządzane lub składniki przeznaczone do wykonywania side-by-side:  
@@ -71,5 +72,5 @@ Wykonaj te ogólne wytyczne, aby utworzyć aplikacje zarządzane lub składniki 
  [Narzędzie Global Assembly Cache (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) pozwala zastąpić zestawu, gdy numer wersji pliku jest nowsza. Instalator zazwyczaj nie są instalowane za pośrednictwem zestawu chyba, że numer wersji zestawu jest większa.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wykonanie Side-by-Side](../../../docs/framework/deployment/side-by-side-execution.md)  
- [Porady: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+ [Wykonywanie równoczesne](../../../docs/framework/deployment/side-by-side-execution.md)  
+ [Instrukcje: włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

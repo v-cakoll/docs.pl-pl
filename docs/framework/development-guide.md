@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 429eae61ab311d2a7a68567c97f40e1fdc0a1f3e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7aaac046a6f5022e4b903faacd609748092d2809
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczenia i wdrażanie aplikacji .NET Framework. Sekcja ta zawiera też informacji na temat obszarów technologii, takich jak dynamiczne programowania, współdziałanie rozszerzalności, zarządzanie pamięcią i wątków.  
@@ -30,7 +31,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  [Dane i modelowanie](../../docs/framework/data/index.md)  
  Zawiera informacje o tym, jak uzyskać dostęp do danych za pomocą ADO.NET, język kwerendy zintegrowanym (LINQ), usługi danych WCF i XML.  
   
- [Aplikacje klienta](../../docs/framework/develop-client-apps.md)  
+ [Aplikacje klienckie](../../docs/framework/develop-client-apps.md)  
  Wyjaśnia sposób tworzenia aplikacji opartych na systemie Windows przy użyciu systemu Windows Presentation Foundation (WPF) lub program Windows Forms.  
   
  [Aplikacje sieci Web wykorzystujące technologie ASP.NET](../../docs/framework/develop-web-apps-with-aspnet.md)  
@@ -54,10 +55,10 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  [Konfigurowanie aplikacji programu .NET Framework](configure-apps/index.md)    
  W tym artykule wyjaśniono, jak pliki konfiguracji można użyć do zmiany ustawień bez konieczności ponownego kompilowania aplikacji .NET Framework.  
   
- [Kompilowanie aplikacji za pomocą architektury .NET Native](../../docs/framework/net-native/index.md)  
+ [Kompilowanie aplikacji z architekturą .NET Native](../../docs/framework/net-native/index.md)  
  Wyjaśniono, jak używasz [!INCLUDE[net_native](../../includes/net-native-md.md)] technologii wstępnej kompilacji do tworzenia i wdrażania aplikacji ze Sklepu Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)]kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i które dla środowiska .NET Framework do kodu natywnego.  
   
- [Zabezpieczeń](../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../docs/standard/security/index.md)  
  Informacje na temat klas i usług w programie .NET Framework, które ułatwiają tworzenie aplikacji bezpiecznego.  
   
  [Debugowanie, śledzenie i profilowanie](../../docs/framework/debug-trace-profile/index.md)  
@@ -66,7 +67,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  [Tworzenie aplikacji dla wielu platform](../../docs/standard/cross-platform/index.md)  
  Zawiera informacje na temat wykorzystania programu .NET Framework do kompilacji zestawy, które mogą być współużytkowane przez wiele platform i wielu urządzeń, takich jak telefony, pulpitu i sieci web.  
   
- [Wdrożenia](../../docs/framework/deployment/index.md)  
+ [Wdrażanie](../../docs/framework/deployment/index.md)  
  Wyjaśniono, jak pakietu i rozproszyć aplikacji .NET Framework i zawiera wskazówki dotyczące wdrażania dla administratorów i deweloperów.  
   
  [Wydajność](../../docs/framework/performance/index.md)  
@@ -83,7 +84,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  [Wprowadzenie](../../docs/framework/get-started/index.md)  
  Wyczerpujące omówienie programu .NET Framework i łącza do dodatkowych zasobów.  
   
- [Nowości](../../docs/framework/whats-new/index.md)  
+ [Co nowego](../../docs/framework/whats-new/index.md)  
  Opisuje Najważniejsze nowe funkcje i zmiany w najnowszej wersji programu .NET Framework. Zawiera listę nowych i przestarzałe typy i składniki i udostępnia Przewodnik po migracji aplikacji z poprzedniej wersji programu .NET Framework.  
   
  [Narzędzia](../../docs/framework/tools/index.md)  

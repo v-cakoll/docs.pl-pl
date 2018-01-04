@@ -22,11 +22,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4b95f3d70c7329efd1affcb333ac6eee08cc29d3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2507acc7ddf41d921af0b86622b1e85208191767
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (Asembler IL)
 
@@ -72,12 +73,12 @@ ilasm [options] filename [[options]filename...]
 |**/mSv:** `major`.`minor`|Ustawia wersję strumienia metadanych, gdy `major` i `minor` są liczbami całkowitymi.|
 |**/noautoinherit**|Wyłącza domyślnej dziedziczenia z <xref:System.Object> gdy został określony parametr klasy podstawowej.|
 |**/nocorstub**|Powoduje pominięcie generowania procedury wejścia CORExeMain.|
-|**/ nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
+|**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|
 |**/ output:**`file.ext`|Określa nazwę i rozszerzenie pliku wyjściowego. Domyślnie nazwa pliku wyjściowego jest taka sama jak nazwa pierwszego pliku źródłowego. To domyślne rozszerzenie *.exe*. Jeśli określisz **/dll** opcja, to domyślne rozszerzenie *.dll*. **Uwaga:** określanie **/output**: myfile.dll nie ustawia **/dll** opcji. Jeśli nie określisz **/dll**, wynikiem będzie pliku wykonywalnego o nazwie *myfile.dll*.|
-|**/ optimize**|Optymalizuje długie instrukcje, co powoduje zamianę ich na krótkie. Na przykład `br` do `br.s`.|
+|**/optimize**|Optymalizuje długie instrukcje, co powoduje zamianę ich na krótkie. Na przykład `br` do `br.s`.|
 |**/pe64**|Tworzy obraz 64-bitowy (PE32+).<br /><br /> Jeśli nie procesor docelowy jest określony, wartością domyślną jest `/itanium`.|
 |**/ PDB**|Tworzy plik PDB bez włączania śledzenia informacji o debugowaniu.|
-|**/ quiet**|Określa tryb cichy; nie zgłasza postępów zestawu.|
+|**/quiet**|Określa tryb cichy; nie zgłasza postępów zestawu.|
 |**/ Resource:**`file.res`|Zawiera plik zasobu określonego w \*format .res w wynikowym *.exe* lub *.dll* pliku. Za pomocą można określić tylko jeden plik .res **/Resource** opcji.|
 |**/ssver:** `int`.`int`|Ustawia numer wersji podsystemu w opcjonalnym nagłówku NT. Aby uzyskać **/appcontainer** i **/arm** numer wersji jest 6.02.|
 |**/ stack:**`stackSize`|Ustawia wartość SizeOfStackReserve w nagłówku NT opcjonalne `stackSize`.|
@@ -240,4 +241,4 @@ Poniższy przykład kodu w języku IL odpowiada poprzedniemu przykładowi kodu w
 [Narzędzia](../../../docs/framework/tools/index.md)  
 [*Ildasm.exe* (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)  
 [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)  
-[Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+[Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

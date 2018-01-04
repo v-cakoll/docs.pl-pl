@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b708d39ba6e5f53579f575d5e228de43db3d90a9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 78f21887ab4a43e13984f2460435e862dfb702f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>Niestandardowe projektantów złożonego - Prezenterze elementy przepływu pracy
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> Jest typem klucza w WF projektanta modelu programowania umożliwiający edytowanie kolekcję elementów zawartych w niej. W tym przykładzie pokazano, jak zbudować Projektant działań, która udostępnia można edytować kolekcji.  

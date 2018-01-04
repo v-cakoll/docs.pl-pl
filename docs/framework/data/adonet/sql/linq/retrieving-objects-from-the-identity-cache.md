@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d078476e881c3823d7772a9db4cdbdb23dac8bb4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8497f728019c97bb59162d39a9f77e34e4e6f3c6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>Pobieranie obiektów z pamięci podręcznej tożsamości
 W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pamięci podręcznej tożsamości zarządzanych przez <xref:System.Data.Linq.DataContext>.  
@@ -34,9 +35,9 @@ W tym temacie opisano typy LINQ do zapytania SQL, które zwracają obiekt z pami
   
  Zapytanie musi mieć jedną z następujących postaci ogólne można pobrać obiektu z pamięci podręcznej tożsamości:  
   
--   <xref:System.Data.Linq.Table%601>`.Function1(``predicate``)`  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `)`  
   
--   <xref:System.Data.Linq.Table%601>`.Function1(``predicate``).Function2()`  
+-   <xref:System.Data.Linq.Table%601> `.Function1(` `predicate` `).Function2()`  
   
  W tych formularze ogólne `Function1`, `Function2`, i `predicate` są zdefiniowane w następujący sposób.  
   

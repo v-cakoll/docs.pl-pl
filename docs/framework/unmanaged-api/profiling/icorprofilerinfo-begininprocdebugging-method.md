@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8c7c0b3c0a20c98b9ca2e5dd5ea51053008e415a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 91306bbea7b099f7e9e408f8bf69625f1d7da68e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilerinfobegininprocdebugging-method"></a>ICorProfilerInfo::BeginInprocDebugging — Metoda
 Inicjuje obsługę debugowania w procesie. Ta metoda jest przestarzała w programie .NET Framework w wersji 2.0.  
@@ -58,4 +59,4 @@ HRESULT BeginInprocDebugging(
  **Wersja platformy .NET framework:** 1.0  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICorProfilerInfo — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+ [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d50c9c4e4bb102e94c5a5302576f623a8e04ed5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ffd3eb58a471e5685b34aaae634f6d200375b0eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cleardownloadcache-function"></a>ClearDownloadCache — Funkcja
 Powoduje wyczyszczenie pamięci podręcznej GAC pobrany zestawów.  
@@ -48,4 +49,4 @@ HRESULT ClearDownloadCache ();
   
 ## <a name="see-also"></a>Zobacz też  
  [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [Globalna pamięć podręczna zestawów](../../../../docs/framework/app-domains/gac.md)
+ [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

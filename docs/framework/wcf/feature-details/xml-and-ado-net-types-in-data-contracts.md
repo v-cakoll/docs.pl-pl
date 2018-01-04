@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c5395797dd2ebba467448b90be139d750bbcc6b6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c4641815687f2c510aa664a287a79f64dc86d769
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>Typy XML i ADO.NET w kontraktach danych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Modelu kontraktu danych obsługuje pewnych typów, które reprezentują XML bezpośrednio. Gdy te typy są serializowane do pliku XML, serializator zapisuje poza zawartość XML w typach bez dalszego przetwarzania. Obsługiwane typy to <xref:System.Xml.XmlElement>, tablic <xref:System.Xml.XmlNode> (, ale nie `XmlNode` samego typu), a także jako typy które implementują <xref:System.Xml.Serialization.IXmlSerializable>. <xref:System.Data.DataSet> i <xref:System.Data.DataTable> typu, a także typizowane zbiory danych, są często używane w programowania bazy danych. Implementuje te typy `IXmlSerializable` interfejsu i dlatego możliwy do serializacji w danych są kontraktu modelu. Niektóre uwagi dotyczące tych typów są wyświetlane na końcu tego tematu.  

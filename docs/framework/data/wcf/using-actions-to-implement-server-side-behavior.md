@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7879a600ec0ecfebc96b18476121f2ad205ece8f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9d8ca19a5a49815130103672f43452ebbfedfae3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>Za pomocą akcji do wykonania zachowanie po stronie serwera
 Akcji OData umożliwiają wdrożenie zachowanie, który działa na zasób, który został pobrany z usługi OData.  Na przykład należy wziąć pod uwagę film cyfrowy jako zasób, istnieje wiele rzeczy, które można wykonać z film cyfrowy: wyewidencjonowania, szybkość/comment lub zaewidencjonowania. Są to wszystkie przykłady akcji, które mogą być wykonywane przez usługi danych WCF, która zarządza filmów cyfrowych. Działania są opisane w odpowiedzi OData, która zawiera zasób, w którym można wywołać akcję. Gdy użytkownik zażąda z zasobem, który reprezentuje film cyfrowy odpowiedź zwrócona z usługi danych WCF zawiera informacje o akcjach, które są dostępne dla tego zasobu. Dostępność akcji może zależeć od stanu usługi danych lub zasobu. Na przykład po filmu cyfrowego jest wyewidencjonowany go nie może zostać wyewidencjonowany przez innego użytkownika. Klienci mogą wywoływać akcję po prostu, określając adres URL. Na przykład http://MyServer/MovieService.svc/Movies (6) może zidentyfikować określonych film cyfrowy i http://MyServer/MovieService.svc/Movies (6) / Checkout powodowałoby wywołanie akcji w określonych filmu. Akcje umożliwiają można ujawnić modelu usługi bez narażania modelu danych. Kontynuowaniem service przykład movie, można zezwolić użytkownikowi na szybkości filmu, ale nie są bezpośrednio udostępniania danych klasyfikacji jako zasób. Można zaimplementować akcję szybkość pozwala użytkownikom sklasyfikować filmu, ale nie bezpośredni dostęp do danych klasyfikacji jako zasób.  
@@ -91,6 +92,6 @@ MoviesModel context = new MoviesModel (new Uri("http://MyServer/MoviesService.sv
   
 ## <a name="see-also"></a>Zobacz też  
  [Usługi danych WCF 4.5](../../../../docs/framework/data/wcf/index.md)  
- [Definiowanie usługi danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Tworzenie i wdrażanie usług danych WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
- [Niestandardowych dostawców usług danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)
+ [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [Tworzenie i wdrażanie usług danych programu WCF](../../../../docs/framework/data/wcf/developing-and-deploying-wcf-data-services.md)  
+ [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)

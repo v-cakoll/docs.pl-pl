@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: 2912568e967c8c6096842b1b4f24eac88318dffb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 17d4c5908929f02077b1eb48932a50e83f48d076
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-windows-service-applications"></a>Tworzenie aplikacji usług systemu Windows
 Za pomocą programu Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawu SDK, można łatwo utworzyć usług przez utworzenie aplikacji, która jest zainstalowany jako usługa. Ten typ aplikacji nosi nazwę usługi systemu Windows. Z funkcjami framework można tworzenie usług, je zainstalować i uruchomić, zatrzymać i inny sposób kontroluje ich zachowanie.  
@@ -37,13 +38,13 @@ Za pomocą programu Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
  Zawiera omówienie aplikacji usług systemu Windows, okres istnienia usługi i jak aplikacje usług różnią się od innych typowych projektu.  
   
- [Wskazówki: Tworzenie aplikacji usługi systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
  Stanowi przykład tworzenia usługi w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] i Visual C#.  
   
  [Architektura programowania aplikacji usług](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Opisano elementy języka używany w programowaniu usługi.  
   
- [Porady: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
  W tym artykule opisano proces tworzenia i konfigurowania usług systemu Windows przy użyciu szablonu projektu usług systemu Windows.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

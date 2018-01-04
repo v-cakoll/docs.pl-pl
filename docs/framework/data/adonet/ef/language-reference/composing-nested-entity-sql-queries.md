@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 175affdd8e9763f6cc7d0c48c38498af6e8ffabb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6aab21c4b22e731f3d85a2f444e82bc04906c320
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="composing-nested-entity-sql-queries"></a>Tworzenie zapytań SQL zagnieżdżonych jednostki
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]jest bogaty język funkcjonalności. Blokiem konstrukcyjnym [!INCLUDE[esql](../../../../../../includes/esql-md.md)] jest wyrażenie. W przeciwieństwie do konwencjonalnych SQL [!INCLUDE[esql](../../../../../../includes/esql-md.md)] nie jest ograniczone do zestawu wyników tabelarycznym: [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje tworzenie złożonych wyrażeń, które mogą mieć literały, parametry lub zagnieżdżonych wyrażeń. Wartość w wyrażeniu można sparametryzowanych lub składa się z niektórych innych wyrażenia.  
@@ -86,4 +87,4 @@ SELECT C2.FirstName, C2.LastName
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie SQL jednostki](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Omówienie jednostki SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

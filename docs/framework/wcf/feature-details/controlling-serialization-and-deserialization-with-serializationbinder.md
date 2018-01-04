@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 67afc6dbc069678c8fb692f70bc0e7a0a12b1076
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba2140459c0b571e9b35824d3dba274e8447ac40
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>Kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder
 Podczas serializacji element formatujący przesyła informacje wymagane do utworzenia wystąpienia obiektu poprawnego typu i wersji. Informacje te obejmują zazwyczaj Pełna nazwa typu i nazwy zestawu obiektu. Domyślnie deserializacji używa tych informacji do utworzenia wystąpienia obiektu identyczne. W przypadku niektórych użytkowników może być konieczne do kontrolowania, która klasa w celu serializacji i deserializacji, albo ponieważ oryginalnej klasy mogą nie istnieć na komputerze wykonywania deserializacji, między zestawami przeniósł oryginalnej klasy lub inna wersja tej klasy jest wymagany na serwera i klienta. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Używanie obiektu wiążącego serializacji](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md).  

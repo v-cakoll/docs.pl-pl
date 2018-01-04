@@ -15,11 +15,12 @@ caps.latest.revision: "80"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: efdd8624311ad6e3fe751d39d689e84663b4c61e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a0e4499816bd6cd4e2703d28d615a8732a0524e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessibility"></a>Ułatwienia dostępu
 > [!NOTE]
@@ -30,14 +31,14 @@ ms.lasthandoff: 10/18/2017
  W tej dokumentacji opisano [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)] dla kodu zarządzanego. Aby uzyskać informacje dotyczące programowania dla [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] w języku C++, zobacz [automatyzacji interfejsu użytkownika dla aplikacji Win32](https://msdn.microsoft.com/library/ms726294.aspx).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Najlepsze praktyki dotyczące ułatwień dostępu](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
+ [Najlepsze rozwiązania dotyczące ułatwień dostępu](../../../docs/framework/ui-automation/accessibility-best-practices.md)  
  [Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md)  
- [Dostawcy automatyzacji interfejsu użytkownika dla zarządzanego kodu](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
- [Klienci automatyzacji interfejsu użytkownika dla zarządzanego kodu](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
- [Wzorce formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
+ [Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)  
+ [Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)  
+ [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)  
  [Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)  
- [Typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
- [Specyfikacja automatyzacji interfejsu użytkownika i Obietnica dla społeczności](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
+ [Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)  
+ [Specyfikacja automatyzacji interfejsu użytkownika i obietnica dla społeczności](../../../docs/framework/ui-automation/ui-automation-specification-and-community-promise.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Przykłady ułatwień dostępu](https://msdn.microsoft.com/library/ms771315.aspx)

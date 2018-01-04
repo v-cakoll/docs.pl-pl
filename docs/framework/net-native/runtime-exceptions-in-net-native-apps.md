@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d4f5787faa2fdf5f5450d8ddce285919a658645
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cea4901eca45a4b02e3eeb9fa8a3ac2a9efa3484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-exceptions-in-net-native-apps"></a>Wyjątki czasu wykonywania w natywnych aplikacji .NET
 Należy koniecznie test kompilacjami wydania aplikacji platformy uniwersalnej systemu Windows na ich platformach docelowych, ponieważ są całkowicie różne konfiguracje debug i release. Domyślnie korzysta z konfiguracji debugowania środowiska uruchomieniowego .NET Core do skompilowania aplikacji, ale konfiguracja wydania używają platformy .NET Native skompilować aplikację do kodu natywnego.  

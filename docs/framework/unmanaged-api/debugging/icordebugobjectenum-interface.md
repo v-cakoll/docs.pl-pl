@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: baa8ea056c457455482a5f7631956f7edce0ac91
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1f2610600d102177c80821c78e7d07f8aed1b6de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum Interface1
 Implementuje metody ICorDebugEnum i wylicza tablice obiektów przez względną wirtualnych adresów (RVAs).  
@@ -32,7 +33,7 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów przez względną w
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Pobiera RVAs o określoną liczbę obiektów z wyliczenia, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|Pobiera RVAs o określoną liczbę obiektów z wyliczenia, zaczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,4 +50,4 @@ Implementuje metody ICorDebugEnum i wylicza tablice obiektów przez względną w
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

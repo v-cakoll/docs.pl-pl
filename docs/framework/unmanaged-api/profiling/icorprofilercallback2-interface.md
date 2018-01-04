@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4d1afed1aefbdd8a2733697c342fcf7aafabd8f4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7927d3b4d41731c9b69154fa8895a8f698f53e31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorprofilercallback2-interface"></a>ICorProfilerCallback2 — Interfejs
 Udostępnia metody, które są używane przez środowisko uruchomieniowe języka wspólnego (CLR) do powiadamiania profilera kodu występowania zdarzeń, do których subskrybowanych profilera. `ICorProfilerCallback2` Interfejsu jest rozszerzeniem [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) interfejsu. Oznacza to, że zapewnia nowy wywołania zwrotne wprowadzone w programie .NET Framework w wersji 2.0.  
@@ -35,14 +36,14 @@ Udostępnia metody, które są używane przez środowisko uruchomieniowe języka
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[FinalizeableObjectQueued — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Powiadamia profilera kodu, że obiekt o finalizator zostało umieszczone w kolejce do wątku finalizatora dla wykonywania jego `Finalize` metody.|  
-|[GarbageCollectionFinished — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Powiadamia profilera wyrzucania elementów bezużytecznych zostało ukończone, a wszystkie wywołania zwrotne kolekcji pamięci zostały wydane dla niego.|  
-|[GarbageCollectionStarted — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Powiadamia profilera kodu rozpoczęto wyrzucania elementów bezużytecznych.|  
-|[HandleCreated — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Powiadamia profilera kodu utworzono uchwyt kolekcji pamięci.|  
-|[HandleDestroyed — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Powiadamia profilera kodu zniszczono dojścia kolekcji pamięci.|  
-|[RootReferences2 — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Powiadamia profilera odwołania głównego informacje po zakończeniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metody.|  
-|[SurvivingReferences — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Powiadamia profilera o odwołania do obiektów, które mają udało przetrwać wyrzucania elementów bezużytecznych.|  
-|[ThreadNameChanged — metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Powiadamia profilera kodu zmienił nazwę wątku.|  
+|[FinalizeableObjectQueued, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-finalizeableobjectqueued-method.md)|Powiadamia profilera kodu, że obiekt o finalizator zostało umieszczone w kolejce do wątku finalizatora dla wykonywania jego `Finalize` metody.|  
+|[GarbageCollectionFinished, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)|Powiadamia profilera wyrzucania elementów bezużytecznych zostało ukończone, a wszystkie wywołania zwrotne kolekcji pamięci zostały wydane dla niego.|  
+|[GarbageCollectionStarted, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)|Powiadamia profilera kodu rozpoczęto wyrzucania elementów bezużytecznych.|  
+|[HandleCreated, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handlecreated-method.md)|Powiadamia profilera kodu utworzono uchwyt kolekcji pamięci.|  
+|[HandleDestroyed, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-handledestroyed-method.md)|Powiadamia profilera kodu zniszczono dojścia kolekcji pamięci.|  
+|[RootReferences2, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)|Powiadamia profilera odwołania głównego informacje po zakończeniu wyrzucania elementów bezużytecznych. Ta metoda jest rozszerzeniem [ICorProfilerCallback::RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) metody.|  
+|[SurvivingReferences, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-survivingreferences-method.md)|Powiadamia profilera o odwołania do obiektów, które mają udało przetrwać wyrzucania elementów bezużytecznych.|  
+|[ThreadNameChanged, metoda](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-threadnamechanged-method.md)|Powiadamia profilera kodu zmienił nazwę wątku.|  
   
 ## <a name="remarks"></a>Uwagi  
  Środowisko CLR wywołuje metodę `ICorProfilerCallback` (lub `ICorProfilerCallback2`) interfejsu powiadomiono profilera, gdy zdarzenie, do którego ma subskrypcję profilera, występuje. Jest interfejsem podstawowym wywołania zwrotnego, za pomocą którego CLR komunikuje się z profilera kodu.  
@@ -65,6 +66,6 @@ Udostępnia metody, które są używane przez środowisko uruchomieniowe języka
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [ICorProfilerCallback — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback3 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
- [ICorProfilerCallback4 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+ [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [ICorProfilerCallback3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
+ [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)

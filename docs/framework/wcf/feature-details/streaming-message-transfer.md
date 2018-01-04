@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0ff5fbf570c826f5c430109d9f79b3d5f39382f6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a751245f0a933fda649d5919bab86abf2969dbf6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-message-transfer"></a>Strumieniowy transfer komunikatów
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]transport obsługuje dwa tryby przesyłania komunikatów:  
@@ -57,4 +58,4 @@ ms.lasthandoff: 12/02/2017
  Tryb transferu z buforowanego do strumieniowego również zmiana kształtu natywnego kanału TCP i transportu nazwanego potoku. Transferów buforowany, jest kształtu kanału natywnego <xref:System.ServiceModel.Channels.IDuplexSessionChannel>. Transferów przesyłany strumieniowo, są natywnego kanały <xref:System.ServiceModel.Channels.IRequestChannel> i <xref:System.ServiceModel.Channels.IReplyChannel>. Zmienianie trybu transferu w istniejących aplikacji, która wykorzystuje te transporty bezpośrednio (to znaczy nie za pomocą kontraktu usługi) konieczna jest zmiana kształtu kanału oczekiwanego fabryk kanałów i odbiorników.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+ [Instrukcje: włączanie przesyłania strumieniowego](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

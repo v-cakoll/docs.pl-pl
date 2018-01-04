@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c615c985f885734800b471ee31451cfb8a4c8500
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f77d5c98c96bd4b6085c30b6d1dd713bd324fbad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="oracle-and-adonet"></a>Oracle i ADO.NET
 > [!NOTE]
@@ -50,13 +51,13 @@ csc /r:System.Data.OracleClient.dll
  [Wymagania systemowe](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
  W tym artykule opisano wymagania dotyczące korzystania z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu Oracle i opisano różne problemy pod uwagę podczas korzystania z niego.  
   
- [Oracle BFILEs](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
+ [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  W tym artykule opisano <xref:System.Data.OracleClient.OracleBFile> klasy, która jest używana do pracy z typem danych Oracle BPLIK.  
   
- [Oracle obiektów LOB](../../../../docs/framework/data/adonet/oracle-lobs.md)  
+ [Oracle LOB](../../../../docs/framework/data/adonet/oracle-lobs.md)  
  W tym artykule opisano <xref:System.Data.OracleClient.OracleLob> klasy, która jest używana do pracy z typami danych Oracle LOB.  
   
- [Kursory REF Oracle](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
+ [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)  
  W tym artykule opisano obsługę typ danych Oracle REF CURSOR.  
   
  [OracleTypes](../../../../docs/framework/data/adonet/oracletypes.md)  
@@ -75,10 +76,10 @@ csc /r:System.Data.OracleClient.dll
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  Opisuje bezpieczne praktyk kodowania, korzystając z [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
- [Zbiory danych, DataTables i DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Opisuje sposób tworzenia i używania `DataSets`, typizowanych `DataSets`, `DataTables`, i `DataViews`.  
   
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Opisuje sposób pracy z danymi programu ADO.NET.  
   
  [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  

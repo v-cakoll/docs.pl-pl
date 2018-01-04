@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b6c95613cdc7ac656e8beafcf9a685e51eddf5a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 49d2154b1af4350c3145f2cb9be30505e0967a4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (narzędzie optymalizacji sterowania zarządzanym profilem)
 Zarządzane profil z przewodnikiem narzędzie optymalizacji (Mpgo.exe) jest narzędziem wiersza polecenia, korzystającą z typowych scenariuszy użytkownika końcowego w celu zoptymalizowania zestawy obrazu macierzystego, które zostały utworzone przy użyciu [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md). To narzędzie umożliwia uruchamianie scenariuszy szkoleniowych, które generują dane profilu. [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) używa tych danych w celu optymalizowania jego zestawów aplikacji generowanego obrazu macierzystego. Scenariusz szkoleniowy jest próbnym uruchomieniem oczekiwanego użycia aplikacji. Mpgo.exe jest dostępny w programie Visual Studio Ultimate 2012 i jego nowszych wersjach. Począwszy od [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], umożliwia także Mpgo.exe w celu zoptymalizowania [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
@@ -134,7 +135,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
+ [Ngen.exe (generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)  
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [Poprawianie wydajności uruchamianie aplikacji klasycznych](http://go.microsoft.com/fwlink/p/?LinkId=248943)  
  [Omówienie lepsza wydajność programu .NET 4.5](http://go.microsoft.com/fwlink/p/?LinkId=249131)

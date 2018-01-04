@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3cb7880621a849b7162ea5f86ee0786f6184ea58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 590df03857805c43b6e9a60c030cadcad3501d3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient Entity Framework
 W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient), dzięki czemu Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.  
@@ -51,13 +52,13 @@ W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Se
  Dostawca SqlClient Entity Framework definiuje listę funkcje obsługiwane przez dostawcę. Aby uzyskać listę obsługiwanych funkcji, zobacz [SqlClient Entity Framework funkcji](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Klient SQL dla funkcji, Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
+ [Klient SQL dla funkcji programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)  
   
- [Klient SQL dla FrameworkTypes jednostki](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
+ [Klient SQL dla typów programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)  
   
- [Znane problemy w SqlClient Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
+ [Znane problemy klienta SQL dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/known-issues-in-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Jednostki języka SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)  
- [Odwołanie językowe](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
+ [Dokumentacja języka](../../../../../docs/framework/data/adonet/ef/language-reference/index.md)  
  [Znane problemy w programie dostawca SqlClient Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)

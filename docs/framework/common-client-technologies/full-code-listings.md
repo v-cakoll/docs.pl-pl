@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 0d1588dd6c1dacc70401c5143f53e8da1784c7e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 980ab21355e9f9fb130a7d17453861ae1daf626c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="full-code-listings"></a>Listy pełnego kodu
 Ten temat zawiera całego kodu dla aplikacji, która używa [manipulacji i bezwładności](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md) procesorów.  
@@ -39,7 +40,7 @@ Ten temat zawiera całego kodu dla aplikacji, która używa [manipulacji i bezw�
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulacje i bezwładność](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
- [Korzystanie z manipulacji i bezwładności w aplikacji platformy XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Korzystanie z manipulacji i bezwładności w aplikacjach XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [Tworzenie klasy GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
  [Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Tworzenie klasy Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)

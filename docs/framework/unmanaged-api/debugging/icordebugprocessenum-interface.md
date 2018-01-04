@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 255107738c3ab6dafbbd81d0839a671f9621cf4f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4b5b96f679b520824e8e1764d8d0f9e005b30330
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocessenum-interface1"></a>ICorDebugProcessEnum Interface1
 Implementuje metody ICorDebugEnum i wylicza ICorDebugProcess tablic.  
@@ -32,7 +33,7 @@ Implementuje metody ICorDebugEnum i wylicza ICorDebugProcess tablic.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Pobiera określoną liczbę `ICorDebugProcess` wystąpień z wyliczenia, zaczynając od bieżącego położenia.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocessenum-next-method.md)|Pobiera określoną liczbę `ICorDebugProcess` wystąpień z wyliczenia, zaczynając od bieżącego położenia.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,4 +50,4 @@ Implementuje metody ICorDebugEnum i wylicza ICorDebugProcess tablic.
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

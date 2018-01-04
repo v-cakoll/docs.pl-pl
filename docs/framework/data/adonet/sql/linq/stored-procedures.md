@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1cf8d155dd04cd4f7b3f860186428c14ce4e462e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7061fca911924de62cb522f4cf29481fb8cbeda7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stored-procedures"></a>Procedury składowane
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]używa metody w modelu obiektu do reprezentowania procedur przechowywanych w bazie danych. Wyznaczyć procedur składowanych jako metody, stosując <xref:System.Data.Linq.Mapping.FunctionAttribute> atrybutu i, jeżeli jest to wymagane, <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutu. Aby uzyskać więcej informacji, zobacz [LINQ w modelu obiektu SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md).  
@@ -25,30 +26,30 @@ ms.lasthandoff: 10/18/2017
  Deweloperzy przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] zwykle użyje [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do mapowania procedur składowanych. Tematy w tej sekcji przedstawiają sposób tworzą i wywołania tych metod w aplikacji, podczas pisania kodu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: zwracać zestawy wierszy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
+ [Instrukcje: Zwracane zestawy wierszy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-return-rowsets.md)  
  Zawiera opis sposobu zwracanie wszystkich wierszy danych i przedstawia sposób użycia parametru wejściowego.  
   
- [Porady: Użyj procedur składowanych, które przyjmują parametrów](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-that-take-parameters.md)  
+ [Instrukcje: Używanie procedur składowanych, które przyjmują parametry](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-that-take-parameters.md)  
  Informacje dotyczące używania parametrów wejściowych i wyjściowych.  
   
- [Porady: Użyj procedur składowanych mapowane do wielu kształtów wyników](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
+ [Instrukcje: Używanie procedur składowanych zmapowanych do wielu kształtów wyników](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)  
  Opisuje sposób zapewnienia zwraca wiele kształtów w tej samej procedury składowanej.  
   
- [Porady: Użyj procedur składowanych mapowane do wyniku sekwencyjnych kształtów](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
+ [Instrukcje: Używanie procedur składowanych zmapowanych do sekwencyjnych kształtów wyników](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)  
  Opisuje sposób zapewnienia wielu kształtów, gdzie jest znany sekwencji zwrotnej.  
   
- [Dostosowywanie operacje przy użyciu procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)  
+ [Dostosowywanie operacji przy użyciu procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures.md)  
  W tym artykule opisano sposób użycia procedury składowane służące do implementacji insert, update i operacji usuwania.  
   
- [Wyłącznie Dostosowywanie operacje przy użyciu procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures-exclusively.md)  
+ [Dostosowywanie operacji przy użyciu wyłącznie procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures-exclusively.md)  
  Informacje dotyczące używania nic, ale procedury składowane służące do implementacji insert, update i operacji usuwania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przewodnik programowania w języku](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Zawiera informacje o sposobie tworzenia i używania programu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obiektu modelu.  
   
- [Wskazówki: Tylko przy użyciu przechowywanych procedur (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
+ [Przewodnik: Tylko przy użyciu procedur składowanych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-visual-basic.md)  
  Zawiera procedury, które przedstawiają sposób użycia procedury składowane w języku Visual Basic.  
   
- [Wskazówki: Tylko przy użyciu przechowywanych procedur (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
+ [Przewodnik: Tylko przy użyciu procedur składowanych (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-using-only-stored-procedures-csharp.md)  
  Zawiera procedury, które przedstawiają sposób użycia procedury składowane w języku C#.

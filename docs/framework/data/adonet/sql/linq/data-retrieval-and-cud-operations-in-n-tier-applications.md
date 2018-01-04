@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: adc5d50707155495c43703b6586cedf5da209b69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84a72642636be2238a81f1b9c00e3ac4e7037272
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>Pobieranie danych i CUD operacje w aplikacjach warstwowych (LINQ to SQL)
 Podczas obiekty obiektów, takich jak klienci lub zamówienia klienta za pośrednictwem sieci, podmioty są odłączone od ich kontekstu danych. Kontekst danych śledzi już ich zmiany i ich powiązania z innych obiektów. Nie jest to problem, tak długo, jak klienci są tylko do odczytu danych. Jest również stosunkowo proste umożliwić klientom dodawać nowe wiersze do bazy danych. Jednak jeśli aplikacja wymaga, aby klienci mogli aktualizować lub usuwać dane, następnie należy dołączyć jednostek do nowy kontekst danych przed wywołaniem <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>. Ponadto jeśli sprawdzenie optymistycznej współbieżności korzystają z oryginalnych wartości, następnie należy również sposób zapewniające bazy danych oryginalna jednostka i jednostki zmienione. `Attach` Metody są dostarczane do umożliwiają poddane jednostek nowy kontekst danych po ich odłączony.  
@@ -417,5 +418,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
  Po dołączeniu z `IEnumerable` zestaw obiektów, <xref:System.Data.Linq.DuplicateKeyException> jest generowany, gdy istnieje już istniejącego klucza. Pozostałe obiekty nie są dołączone.  
   
 ## <a name="see-also"></a>Zobacz też  
- [N-warstwowa oraz zdalnych aplikacji za pomocą LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

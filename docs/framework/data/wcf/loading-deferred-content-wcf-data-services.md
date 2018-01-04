@@ -20,11 +20,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 599b420dee2e1d19c85a078ac358a9249ca055ed
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 11b796b5b2abaff00c6d0f20894056f5863942b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>Ładowanie odłożone zawartości (usługi danych WCF)
 Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza ilość danych, która zwraca zapytanie. Można jednak w sposób jawny załadować dodatkowych danych, w tym powiązanych jednostek, dane odpowiedzi stronicowana i strumieni danych binarnych, w usłudze danych, gdy potrzebny jest. W tym temacie opisano, jak załadować takiej odroczonego zawartości do aplikacji.  
@@ -68,5 +69,5 @@ Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ogranicza
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Umożliwia dostęp do danych dużego obiektu binarnego (BLOB) jako strumienia danych. Przesyłanie strumieniowe różni ładowanie danych binarnych, dopóki nie jest wymagana, a klient wydajniej może przetwarzać danych. Aby korzystać z tej funkcji, Usługa danych musi implementować <xref:System.Data.Services.Providers.IDataServiceStreamProvider> dostawcy. Aby uzyskać więcej informacji, zobacz [przesyłania strumieniowego dostawcy](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md). Po włączeniu przesyłania strumieniowego typów jednostek zwracanych bez powiązanych danych binarnych. W takim przypadku należy użyć <xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A> metody <xref:System.Data.Services.Client.DataServiceContext> klasę, aby uzyskać dostęp do strumienia danych dla danych binarnych z usługi. Podobnie, użyj <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> metodę, aby dodać lub zmienić dane binarne dla jednostki jako strumień. Aby uzyskać więcej informacji, zobacz [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 260b77789df6a03b640895ed158c94bfd1533f9b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: afb421993c39e66e437a0ecbb35091532df61716
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltactivityscheduledquerygt-of-wcf"></a>&lt;activityScheduledQuery&gt; w WCF
 Reprezentuje kolekcję zapytań, które są używane do śledzenia działania zaPLanowane do wykonania przez działanie nadrzędne. Zapytanie jest niezbędne do śledzenia uczestnika do subskrybowania zaPLanowane rekordów.  
@@ -59,5 +60,5 @@ Reprezentuje kolekcję zapytań, które są używane do śledzenia działania za
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Activities.Tracking.Configuration.ActivityScheduledQueryElement>     
  <xref:System.Activities.Tracking.ActivityScheduledQuery>     
- [Przepływ pracy, kontrola i śledzenie](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
+ [Kontrola i śledzenie przepływu pracy](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
  [Profile śledzenia](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

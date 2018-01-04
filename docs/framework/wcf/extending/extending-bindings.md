@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 692e51fc6276fbee0c1764c0040a251fe32b2c9f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5d0be5e799137d24c2d6e53f4b6846007f3a2a79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-bindings"></a>Rozszerzanie powiązań
 Powiązania Określ transportu, kodowanie i protokół wymagane do połączenia z punktem końcowym. Rozszerzenia powiązania i powiązania niestandardowe implementowania niestandardowych komunikacji wymagane do obsługi funkcji aplikacji.  
@@ -36,4 +37,4 @@ Powiązania Określ transportu, kodowanie i protokół wymagane do połączenia 
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Tworzenie elementu BindingElement](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)  
   
- [Konfiguracja i Obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)
+ [Konfiguracja i obsługa metadanych](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)

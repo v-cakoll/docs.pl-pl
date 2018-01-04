@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b7f959318c5991fea2df92ff8000e85345fb35ed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4bfaee35ba9f8cf60deb01c52a142433d08021c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey — Rozszerzenie znaczników
 Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zewnętrznych zestawów. Dzięki temu wyszukiwania zasobów określić typ docelowy w zestawie, a nie słownika jawne zasobów w zestawie lub klasy.  
@@ -87,6 +88,6 @@ Definiuje i odwołuje się do kluczy dla zasobów, które są ładowane z zewnę
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.ComponentResourceKey>  
  <xref:System.Windows.Controls.ControlTemplate>  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
  [Rozszerzenia znaczników i WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)

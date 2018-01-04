@@ -27,11 +27,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f9e011b304a7f6c7d0d07761677c0368efcfcf4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9f6cf68115f69e7238d2bec226258ab06c417d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-streams-on-the-network"></a>W sieci za pomocą strumieni
 Zasoby sieciowe są reprezentowane w programie .NET Framework jako strumieni. Traktując strumieni objęty, .NET Framework oferuje następujące możliwości:  
@@ -112,5 +113,5 @@ sr.Close()
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: dane przy użyciu klasy WebRequest żądania](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
+ [Instrukcje: żądanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-request-data-using-the-webrequest-class.md)  
  [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)

@@ -13,40 +13,41 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: be20fa22484cb002792a5bc714f2009fb342f644
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7b82c1821362b874f38f9419269708a7f61ab690
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exceptions-reference"></a>Informacje o wyjątkach
 Ta sekcja zawiera wszystkie wyjątki w następujących obszarach generowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]:  
   
- [Modelu IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
+ [IdentityModel](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/identitymodel-exceptions.md)  
   
- [Integracja modelu COM +](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
+ [Integracja modelu COM+](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/com-integration.md)  
   
  [Konfiguracja](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/configuration.md)  
   
- [Podstawowe wiadomości: Struktura kanału](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
+ [Podstawowe wiadomości: struktura kanału](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-channel-framework.md)  
   
- [Podstawowe wiadomości: Struktura połączenia](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
+ [Podstawowe wiadomości: struktura połączenia](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-connection-framework.md)  
   
  Podstawowe wiadomości: Kanały transportu HTTP/HTTPS  
   
- [Podstawowe wiadomości: Kanały transportu usługi wewnętrznej dupleks](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
+ [Komunikacja podstawowa: kanały transportu dupleksu wewnętrznego](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-internal-duplex-transport-channels.md)  
   
- [Podstawowe wiadomości: Kanały transportu nazwanego potoku](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
+ [Podstawowe wiadomości: kanały transportu nazwanego potoku](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-named-pipe-transport-channels.md)  
   
- [Podstawowe wiadomości: Kanały transportu TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
+ [Komunikacja podstawowa: kanały transportu TCP](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-tcp-transport-channels.md)  
   
- [Podstawowe wiadomości: Struktura transportu](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
+ [Podstawowe wiadomości: struktura transportu](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-transport-framework.md)  
   
  [Komunikacja podstawowa: narzędzia](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-utilities.md)  
   
- [Podstawowe wiadomości: Obsługa hosta sieci Web](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
+ [Podstawowe wiadomości: obsługa hosta internetowego](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/core-communications-webhost-support.md)  
   
- [Transakcji](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
+ [Transakcja](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/transaction-exceptions.md)  
   
  [Hosting](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/hosting-exceptions.md)  
   
@@ -54,7 +55,7 @@ Ta sekcja zawiera wszystkie wyjątki w następujących obszarach generowane prze
   
  [Transport integracji usługi MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-integration-transport.md)  
   
- [MSMQ Transport](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
+ [Transport MSMQ](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/msmq-transport.md)  
   
  [Niezawodna obsługa komunikatów](../../../../../docs/framework/wcf/diagnostics/exceptions-reference/reliable-messaging.md)  
   

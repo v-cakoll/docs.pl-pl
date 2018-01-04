@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 759805b2970aa760e4bce882789efbc947303573
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ccc54df7a69db8186c653afb415a5679b65ab50d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="constant-expressions"></a>Wyrażenia stałe
 Wyrażenie stałe składa się z wartością stałą. Wartości stałe bezpośrednio są konwertowane na wyrażenia drzewa polecenia stałe, bez tłumaczenia na kliencie. W tym wyrażeń, które powodują powstanie wartość stałą. W związku z tym zachowanie źródła danych można się spodziewać dla wszystkich wyrażeń zawierających stałe. Może to spowodować zachowanie różni się od zachowania CLR.  
@@ -33,4 +34,4 @@ Wyrażenie stałe składa się z wartością stałą. Wartości stałe bezpośre
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]nie obsługuje używania klasy użytkownika jako stała. Jednak odwołania do właściwości klasy użytkownika jest uznawany za stałą i będzie można przekonwertować na stałe wyrażenie drzewa polecenia ani wykonywać w źródle danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrażenia w składniku LINQ to Entities zapytań](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+ [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

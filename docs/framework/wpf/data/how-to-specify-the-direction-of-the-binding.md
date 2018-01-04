@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdcda02a61f0114bfbbe5d5c411cb397cddcf683
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9944ff214a9dfe12b21e005c4e1998c249bf72b2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>Jak określić kierunek łączenia
 Ten przykład przedstawia sposób określić, czy powiązanie aktualizować tylko właściwość target (docelowy) powiązania powiązania właściwości source (źródło), lub zarówno właściwość target właściwości oraz źródła.  
@@ -51,5 +52,5 @@ Ten przykład przedstawia sposób określić, czy powiązanie aktualizować tylk
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Data.Binding>  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

@@ -13,20 +13,21 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 93e631d8f8cc32943f7563495d9846a80822245f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33b41121ff70eaba07e5d3e14f3b828a3d35d34c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET to zestaw klas, które udostępniają usługi dostępu do danych dla programistów platformy .NET Framework. ADO.NET zapewnia bogaty zestaw składników do tworzenia aplikacji rozproszonej, udostępnianie danych. Jest integralną częścią programu .NET Framework, zapewniając dostęp do relacyjnych, XML i dane aplikacji. ADO.NET obsługuje wiele różnych potrzeb, w tym tworzenie klientów frontonu bazy danych i obiektów biznesowym warstwy środkowej używanych przez aplikacje, narzędzia, języki lub przeglądarek internetowych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Zawiera funkcje, które są nowością w programie ADO.NET.  
   
- [ADO.NET — omówienie](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  Wprowadzenie do projektowania i składniki ADO.NET.  
   
  [Entity Framework](http://go.microsoft.com/fwlink/?LinkID=213876)  
@@ -38,13 +39,13 @@ ADO.NET to zestaw klas, które udostępniają usługi dostępu do danych dla pro
  [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Opisuje mapowanie typu danych między typami danych .NET Framework i dostawcy danych .NET Framework.  
   
- [Zbiory danych, DataTables i DataViews](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Elementy DataSet, DataTable i DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  Opisuje sposób tworzenia i używania `DataSets`, typizowanych `DataSets`, `DataTables`, i `DataViews`.  
   
- [LINQ do DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
+ [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
  Zawiera informacje dotyczące LINQ do zestawu danych, w tym przykłady programowania.  
   
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Opisuje sposób nawiązywania połączenia ze źródłem danych oraz sposób pobrać i zmodyfikować danych przy użyciu `Commands`, `DataReaders` i `DataAdapters`.  
   
  [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  

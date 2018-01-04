@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dcf8baa87038bc5625d46968b39d759daae25cbc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d3122100f93d15c04c109564e1abd2dc13f37990
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Udostępnianie pętli komunikatów pomiędzy Win32 i WPF
 W tym temacie opisano implementowania na współdziałanie z pętli komunikatów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)], przy użyciu istniejących komunikatów narażenia pętli w <xref:System.Windows.Threading.Dispatcher> lub przez tworzenie pętli osobnej wiadomości na [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] obok siebie współdziałanie kodu.  
@@ -74,6 +75,6 @@ W tym temacie opisano implementowania na współdziałanie z pętli komunikatów
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Interop.ComponentDispatcher>  
  <xref:System.Windows.Interop.IKeyboardInputSink>  
- [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
  [Model wątkowości](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)

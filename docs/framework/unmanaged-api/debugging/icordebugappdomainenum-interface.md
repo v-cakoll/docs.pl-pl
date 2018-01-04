@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a77ce6e00ed4bbf866b8761d6339f4191151a6f6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e5d3d11e3897ff56ffcd475eb363405651578c1c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
 Udostępnia `Next` metody, która zwraca określoną liczbę `ICorDebugAppDomainEnum` wartości, zaczynając od następnej lokalizacji w wyliczeniu. Ten interfejs jest podklasą klasy "ICorDebugEnum".  
@@ -32,7 +33,7 @@ Udostępnia `Next` metody, która zwraca określoną liczbę `ICorDebugAppDomain
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Pobiera określoną liczbę domen aplikacji z kolekcji, począwszy od bieżącej pozycji kursora.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|Pobiera określoną liczbę domen aplikacji z kolekcji, począwszy od bieżącej pozycji kursora.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -49,5 +50,5 @@ Udostępnia `Next` metody, która zwraca określoną liczbę `ICorDebugAppDomain
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICorDebug — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

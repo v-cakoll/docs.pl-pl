@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3b02f97caeef2a560682e5746c6c24986d5a3ad2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ff5acf8edcda68979c04f5e62237464ee6f040a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfiltergt-element-for-ltaddgt-for-ltlistenersgt-for-ltsourcegt"></a>&lt;Filtr&gt; elementu &lt;dodać&gt; dla &lt;odbiorników&gt; dla &lt;źródła&gt;
 Dodaje filtr do odbiornika w `Listeners` kolekcji źródła śledzenia.  
@@ -105,4 +106,4 @@ Dodaje filtr do odbiornika w `Listeners` kolekcji źródła śledzenia.
  <xref:System.Diagnostics.TraceListener>  
  <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>  
  <xref:System.Diagnostics.TraceFilter>  
- [Schemat ustawień debugowania i śledzenia](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

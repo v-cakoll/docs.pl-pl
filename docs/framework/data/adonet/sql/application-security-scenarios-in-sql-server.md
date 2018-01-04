@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: d3791ea4084a6ae568fef1e76680f91434284639
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8576ba3ae26788076fedf71a1f8028afbd263378
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-security-scenarios-in-sql-server"></a>Scenariusze zabezpieczeń aplikacji w programie SQL Server
 Nie istnieje jeden sposób poprawne do tworzenia bezpiecznego aplikacji klienckiej programu SQL Server. Każda aplikacja jest unikatowa w jego wymagania, środowisko wdrażania i użytkowników. Aplikacja, która jest bezpieczny okres, po początkowym wdrożeniu może stać się mniej bezpieczne wraz z upływem czasu. Nie można przewidzieć z dowolnym dokładność, jakie zagrożenia mogą pojawić się w przyszłości.  
@@ -45,16 +46,16 @@ Nie istnieje jeden sposób poprawne do tworzenia bezpiecznego aplikacji kliencki
  Zawsze należy przypisać silne hasło, aby `sa` konta, nawet w przypadku korzystania z uwierzytelniania systemu Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zarządzanie uprawnieniami w procedurach składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
+ [Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)  
  Informacje dotyczące używania procedur składowanych do zarządzania uprawnieniami i kontroli dostępu do danych. Korzystanie z procedur składowanych jest efektywny sposób reagowania na zagrożenia bezpieczeństwa wiele.  
   
- [Zapisywanie Secure dynamiczne SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
+ [Pisanie bezpiecznego dynamicznego kodu SQL w programie SQL Server](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)  
  Opisuje metody zapisywania bezpiecznego dynamiczne SQL przy użyciu procedur składowanych.  
   
  [Rejestrowanie procedur składowanych w programie SQL Server](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)  
  Opisuje sposób procedurę składowaną z certyfikatem, aby umożliwić użytkownikom pracę z danymi, które nie mają bezpośredniego dostępu do podpisania. Dzięki temu procedur składowanych do wykonywania operacji, które obiekt wywołujący nie ma uprawnień do wykonania bezpośrednio.  
   
- [Dostosowywanie uprawnieniami personifikacja w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
+ [Dostosowywanie uprawnień personifikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)  
  Informacje dotyczące używania EXECUTE AS klauzuli personifikować innego użytkownika. Personifikacja przełącza kontekst wykonywania wywołujący dla określonego użytkownika.  
   
  [Udzielanie uprawnień na poziomie wiersza w programie SQL Server](../../../../../docs/framework/data/adonet/sql/granting-row-level-permissions-in-sql-server.md)  

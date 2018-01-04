@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d5975cff014c1d74b9935a7cc95a6b2f25359db5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ddfa98a8b9de0b362a27b55d4cd9a4c02ac8a761
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-workflows"></a>Schemat blokowy przepływów pracy
 Schemat blokowy jest dobrze znanego modelu projektowania programów. Schemat blokowy działania jest zwykle używane do implementowania niesekwencyjnych przepływy pracy, ale może służyć do sekwencyjnego przepływy pracy, jeśli nie `FlowDecision` węzły są używane.  

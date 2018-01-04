@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b7c9d92e4ba58ae5c5f2cbff1c79fd7a3ae673a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8a66d0da6e010efbad77e9544267d1b6af9d1233
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>Porady: dodawanie i usuwanie elementów za pomocą formantu ListView formularzy systemu Windows
 Proces dodawania elementu do formularzy systemu Windows <xref:System.Windows.Forms.ListView> kontroli obejmuje głównie określenie elementu i przypisywanie właściwości. Dodawanie lub usuwanie elementów listy można zrobić w dowolnym momencie.  
@@ -45,5 +46,5 @@ Proces dodawania elementu do formularzy systemu Windows <xref:System.Windows.For
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ListView>  
- [ListView — formant](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [Informacje o formancie ListView](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+ [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
+ [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)

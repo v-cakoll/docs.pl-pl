@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1fc1e843bb5841fcd5571bb1b57d6fb449336240
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a790ca50522adcffd5d8cd8433f1291102672430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>Porady: tworzenie i inicjowanie źródeł śledzenia
 <xref:System.Diagnostics.TraceSource> Klasa jest używana przez aplikacje do tworzenia śledzenia, które mogą być skojarzone z aplikacją. <xref:System.Diagnostics.TraceSource>udostępnia metody śledzenia, które pozwalają łatwo śledzić zdarzenia, dane śledzenia i zapisy informacyjne problem. Dane wyjściowe z śledzenia <xref:System.Diagnostics.TraceSource> można tworzyć i zainicjować z lub bez użycia plików konfiguracyjnych. Ten temat zawiera instrukcje dla obu opcji. Jednak zaleca się stosowania plików konfiguracji ułatwia ponowne konfigurowanie śledzenia utworzonego przez źródła śledzenia w czasie wykonywania.  
@@ -91,4 +92,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Diagnostics.TextWriterTraceListener>  
  <xref:System.Diagnostics.ConsoleTraceListener>  
  <xref:System.Diagnostics.EventTypeFilter>  
- [Śledzenie i Instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+ [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

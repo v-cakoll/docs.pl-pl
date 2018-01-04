@@ -17,11 +17,12 @@ caps.latest.revision: "41"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 659028e56849af1404768afff2de3ae95fb3aba8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
 <a name="introduction"></a>W tabelach w tym artykule przedstawiono typy, które są nieaktualne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], uporządkowany według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałe typy i zalecanych rozwiązań alternatywnych w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementy Członkowskie również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).  
@@ -785,5 +786,5 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll jest zestawem przestarzałe i istnieje tylko w przypadku zapewnienia zgodności.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Co to jest przestarzałe w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md)  
- [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md)
+ [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)

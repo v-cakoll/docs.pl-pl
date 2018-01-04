@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0019931c0ebe2bfef7ce8db72b768f31ad67f938
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7505f44524ae8476842599b9dc4643128dea4bf2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>Zmniejszenie liczby ponownych uruchomień systemu podczas instalowania programu .NET Framework 4.5
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalator używa [ponownie uruchom Menedżera](http://go.microsoft.com/fwlink/?LinkId=231425) zapobiegające system uruchamia ponownie w miarę możliwości podczas instalacji. Jeśli program Instalator aplikacji instaluje program .NET Framework, mogą łączyć się z menedżerem Uruchom ponownie, aby móc korzystać z tej funkcji. Aby uzyskać więcej informacji, zobacz [porady: uzyskiwanie postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md).  
@@ -43,6 +44,6 @@ Monituj o zamknięcie aplikacji .NET Framework, które są używane
  Jeśli używasz łańcuchowa Instalatora, ale nie chcesz podać własne okno komunikatu zamknięcia aplikacji, można użyć `/showrmui` i `/passive` procesie instalacji opcje wiersza polecenia podczas tworzenia łańcucha programu .NET Framework. Jeśli korzystasz ze sobą te opcje, Instalator zawiera komunikat zamknięcia aplikacji, jeśli może zostać zamknięty w celu uniknięcia ponownego uruchomienia systemu. To okno komunikatu działa tak samo w trybie pasywnym, nie pełny interfejs użytkownika. Zobacz [przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md) dla pełny zestaw opcji wiersza polecenia dla pakietu redystrybucyjnego programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wdrożenia](../../../docs/framework/deployment/index.md)  
+ [Wdrażanie](../../../docs/framework/deployment/index.md)  
  [Przewodnik wdrażania dla deweloperów](../../../docs/framework/deployment/deployment-guide-for-developers.md)  
- [Porady: pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)
+ [Instrukcje: Pobieranie danych o postępie z Instalatora .NET Framework 4.5](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)

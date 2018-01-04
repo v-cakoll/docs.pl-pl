@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 4304a8928b2fe768f20b2ff0bde94921565155ac
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7a249277a82a1b234f83e2fe17510e997425f278
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="synchronous-server-socket-example"></a>Przykład gniazda synchroniczne serwera
 Następujący przykład program tworzy serwera służącą do odbierania żądań połączeń od klientów. Serwer jest oparty z gniazdem synchroniczna, dlatego zawiesza wykonywanie aplikacji serwera podczas oczekiwania na połączenie z klientem. Aplikacji odbiera ciąg od klienta, wyświetla ciąg w konsoli, a następnie zwraca ciąg do klienta. Ciąg z klienta musi zawierać ciąg "\<EOF >" która sygnalizuje koniec komunikatu.  
@@ -167,6 +168,6 @@ public class SynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykład gniazda synchroniczne klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
- [Przy użyciu gniazda synchroniczne serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Przykłady kodu gniazda](../../../docs/framework/network-programming/socket-code-examples.md)
+ [Przykład synchronicznego gniazda klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)  
+ [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Przykłady kodu gniazd](../../../docs/framework/network-programming/socket-code-examples.md)

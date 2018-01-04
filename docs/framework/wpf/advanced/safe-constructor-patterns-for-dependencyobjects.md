@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 43a38406a3c9cc171944448fce2fa2f70c483baa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db1b7f47ef135b1a174eecef7e53b41e6996256d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>Bezpieczne wzorce konstruktora DependencyObjects
 Ogólnie rzecz biorąc konstruktorów klasy nie powinny wywoływać wywołań zwrotnych, takich jak metody wirtualne lub delegatów, ponieważ konstruktorów można wywołać jako podstawowy inicjowania konstruktorów dla klasy pochodnej. Wprowadzanie wirtualnej może odbywać się w stanie inicjowania niekompletne dowolnego danego obiektu. Jednak sam system właściwości wywołuje i ujawnia wywołania zwrotne wewnętrznie, jako część systemu właściwości zależności. Prosta operacja jako ustawienie wartości właściwości zależności z <xref:System.Windows.DependencyObject.SetValue%2A> wywołanie potencjalnie zawiera wywołanie zwrotne gdzieś w ustalaniu. Z tego powodu należy zachować ostrożność podczas ustawiania wartości właściwości w treści konstruktora, który może stać się problemem, jeśli z danym typem jest używany jako klasa podstawowa zależności. Brak określonego wzorca wykonywania <xref:System.Windows.DependencyObject> konstruktorów, które pozwala uniknąć określonych problemów z stanów właściwości zależności i związanego z używaniem wywołania zwrotne, które opisano w tym miejscu.  
@@ -125,6 +126,6 @@ public MyClass : SomeBaseClass {
  Te same wzory zastosowania po ustawieniu właściwości, która nie ma otoki dla wygody ustawienie właściwości i wartości z <xref:System.Windows.DependencyObject.SetValue%2A>. Wywołaniami <xref:System.Windows.DependencyObject.SetValue%2A> przez parametrami konstruktora również powinny wywoływać tej klasy domyślnego konstruktora dla inicjowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
  [Zabezpieczenia właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-security.md)

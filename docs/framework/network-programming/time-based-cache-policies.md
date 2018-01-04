@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4cfa67d7fba06140838e04bdbff71102a2a303
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f712f223ef5787e50ef6a0c26949ff99c13dee33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="time-based-cache-policies"></a>Zasady na podstawie czasu pamięci podręcznej
 Zasady na podstawie czasu pamięci podręcznej definiuje świeżości wpisów pamięci podręcznej, za pomocą czas, który został pobrany zasobów, nagłówki zwrócony z zasobem, a bieżącą godziną. Podczas ustawiania zasad na podstawie czasu pamięci podręcznej, można użyć <xref:System.Net.Cache.HttpRequestCacheLevel.Default> oparte na czasie zasady lub tworzenie niestandardowych zasad na podstawie czasu. Używając domyślne zasady na podstawie czasu dla zasobów uzyskany przy użyciu protokołu HTTP (Hypertext Transfer), zachowanie dokładne pamięci podręcznej jest określany przez nagłówki zawarte w buforowanej odpowiedzi i zachowania określone w sekcjach 13 i 14 RFC 2616 dostępne pod adresem [http://www.ietf.org](http://www.ietf.org/). Na przykład kodu pokazuje ustawienie domyślne zasady oparte na czasie HTTP zasobów, zobacz [porady: ustawienie zasad pamięci podręcznej Default Time-Based dla aplikacji](../../../docs/framework/network-programming/how-to-set-the-default-time-based-cache-policy-for-an-application.md). Aby uzyskać przykłady kodu, które przedstawiają Tworzenie zasad i korzystanie z pamięci podręcznej, zobacz [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md).  
@@ -66,13 +67,13 @@ Zasady na podstawie czasu pamięci podręcznej definiuje świeżości wpisów pa
   
  Informacje o skutkach łączenia kryteria zasad na podstawie czasu pamięci podręcznej można znaleźć w następujących tematach:  
   
--   [Pamięci podręcznej zasad interakcji — maksymalny wiek i nieaktualności maksymalny](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
+-   [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i maksymalna nieaktualność](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness.md)  
   
--   [Pamięci podręcznej zasad interakcji — maksymalny wiek i świeżości minimalna](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
+-   [Interakcja z zasadami pamięci podręcznej — maksymalny wiek i minimalna świeżość](../../../docs/framework/network-programming/cache-policy-interaction-maximum-age-and-minimum-freshness.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięci podręcznej dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
- [Zasady oparte na lokalizacji pamięci podręcznej](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Zasady pamięci podręcznej oparte na lokalizacji](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [Konfigurowanie pamięci podręcznej w aplikacjach sieciowych](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

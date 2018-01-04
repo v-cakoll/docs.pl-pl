@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 99111cb9e48bd5ccd4463afcee6b78bc2387cf7b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 679196a6cc21705c8cc07e373a928f3c77c6befb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]zezwala aplikacji można znaleźć [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wystąpień w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasy udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierających informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwracana tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą pod warunkiem, gdy użytkownik próbuje utworzyć nowe połączenie i rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są kompletne.  

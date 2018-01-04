@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 08526aeebd01196c064154a35df267b8040df796
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b580f0611d18b03ba831a3f5a3d0481bd27b0869
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Klient SQL dla funkcji, Entity Framework
 Dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient) dla programu Entity Framework oferuje zestaw funkcji do wykonania matematycznych i obliczeń agregacji, a także funkcje do wykonania `System.DateTime` i `string` operacji. Te funkcje są w `SQLServer` przestrzeni nazw.  
@@ -37,8 +38,8 @@ Dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient) dla 
   
  [Funkcje ciągów](../../../../../docs/framework/data/adonet/ef/string-functions.md)  
   
- [Funkcje systemu](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
+ [Funkcje systemowe](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Omówienie SQL jednostki](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
+ [Omówienie jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

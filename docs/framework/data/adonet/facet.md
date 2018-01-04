@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e72ecd610951a42ceb5c3aa581bf70f255e5e2f7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3dde7c08fcbdd6c69ecfd987244cb71465ce807f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="facet"></a>facet
 A *aspektu* służy do dodawania szczegółów do definicji właściwości typu pierwotnego. A [właściwości](../../../../docs/framework/data/adonet/property.md) definicja zawiera informacje o typie właściwości, ale często konieczne jest bardziej szczegółowo. Na przykład typ jednostki w modelu koncepcyjnym może mieć właściwość typu `String` wartości, których nie można ustawić na wartość null. Aspekty umożliwiają określenie ten poziom szczegółowości.  
@@ -46,4 +47,4 @@ A *aspektu* służy do dodawania szczegółów do definicji właściwości typu 
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

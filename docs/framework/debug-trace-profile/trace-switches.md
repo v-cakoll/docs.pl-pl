@@ -23,11 +23,12 @@ caps.latest.revision: "16"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 082d84fe0ac4193f3da5ac9be52789432bde76aa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4df092afd4d60811683b4187df78f27ad971cf89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trace-switches"></a>Przełączniki śledzenia
 Przełączniki śledzenia umożliwiają włączać, wyłączać i Filtruj dane wyjściowe śledzenia. Są one obiekty, które istnieją w kodzie i zewnętrznie można skonfigurować za pomocą pliku .config. Istnieją trzy typy przełączników śledzenia w programie .NET Framework: <xref:System.Diagnostics.BooleanSwitch> klasy <xref:System.Diagnostics.TraceSwitch> klasy, a <xref:System.Diagnostics.SourceSwitch> klasy. <xref:System.Diagnostics.BooleanSwitch> Klasa działa jako przełącznika przełączania, albo Włączanie lub wyłączanie szereg instrukcji śledzenia. <xref:System.Diagnostics.TraceSwitch> i <xref:System.Diagnostics.SourceSwitch> klasy umożliwiają włączenie przełącznika śledzenia, poziom śledzenia w szczególności, aby <xref:System.Diagnostics.Trace> lub <xref:System.Diagnostics.TraceSource> wiadomości określona dla tego poziomu i na wszystkich poziomach poniżej są wyświetlane. Jeśli wyłączysz przełącznika nie będą wyświetlane komunikaty śledzenia. Te klasy pochodzi z klasy abstrakcyjnej (**MustInherit**) klasy **przełącznika**, jak powinna przełącznikami opracowane przez użytkownika.  
@@ -92,6 +93,6 @@ MessageBox.Show(myTraceSwitch.TraceVerbose.ToString());
  Oprócz zapewnienia **BooleanSwitch** i **TraceSwitch**, możesz definiować własne przełączniki za dziedziczących **przełącznika** klasy i zastępowanie metod klasy podstawowej za pomocą metod niestandardowych. Aby uzyskać więcej informacji o tworzeniu zdefiniowane przez dewelopera przełączników, zobacz <xref:System.Diagnostics.Switch> klasy w odwołania programu .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obiekty nasłuchujące śledzenia](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
- [Porady: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
- [Śledzenie i Instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+ [Obiekty nasłuchujące śledzenie](../../../docs/framework/debug-trace-profile/trace-listeners.md)  
+ [Instrukcje: Dodawanie instrukcji śledzenia do kodu aplikacji](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)  
+ [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

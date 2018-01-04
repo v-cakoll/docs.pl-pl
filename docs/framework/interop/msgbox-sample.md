@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0d9be3d490a687541a0b1c7af3d90c52523413a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d5dcabfadae35cad980d210806c47dab3f5a0082
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="msgbox-sample"></a>MsgBox — Przykład
 W przykładzie pokazano sposób przekazywania typów ciąg według wartości, tak jak parametry i kiedy należy używać <xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>, <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>, i <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> pól.  
@@ -55,6 +56,6 @@ W przykładzie pokazano sposób przekazywania typów ciąg według wartości, ta
 ## <a name="see-also"></a>Zobacz też  
  [Marshaling ciągów](../../../docs/framework/interop/marshaling-strings.md)  
  [Typy danych wywołanie platformy](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
- [Organizowanie domyślne dotyczące ciągów](../../../docs/framework/interop/default-marshaling-for-strings.md)  
+ [Domyślny marshaling dla ciągów](../../../docs/framework/interop/default-marshaling-for-strings.md)  
  [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)  
  [Określanie zestawu znaków](../../../docs/framework/interop/specifying-a-character-set.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 633769573253d7516bc50f0210c30376e6aa230a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 12be2350cb123407b2f71d1f5f07e836ccddb9c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltrequiredruntimegt-element"></a>&lt;requiredRuntime&gt; — Element
 Określa, czy aplikacja obsługuje tylko wersję 1.0 środowisko uruchomieniowe języka wspólnego. Ten element jest przestarzały i nie będzie można użyć. [ `supportedRuntime` ](supportedruntime-element.md) Elementu należy użyć.

@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: db293cbc636d0ae4e532f24b2852444395f603c3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5be982d25a4ab135d2b521b558e809b306b88230
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="association-set"></a>zestawu skojarzeń
 *Zestawu skojarzeń* jest kontenerem logicznym dla [skojarzenia](../../../../docs/framework/data/adonet/association-type.md) wystąpień tego samego typu. Zestaw skojarzenia nie jest danych modelowania konstrukcji; oznacza to, że nie opisano struktury danych lub relacji. Zamiast tego zestawu skojarzeń zapewnia konstrukcję w środowisku obsługującym lub magazynu (na przykład środowisko uruchomieniowe języka wspólnego lub bazy danych programu SQL Server) do wystąpień skojarzenie grupy mogą być mapowane do magazynu danych.  
@@ -51,5 +52,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)  
- [Właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)  
+ [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)

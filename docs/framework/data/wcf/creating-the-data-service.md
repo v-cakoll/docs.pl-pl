@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 22fc561d7df9bbd81bf19d351af2d07bc6b51237
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 57e305fd8b03e8d46c1fdcb7dd551f32062a1009
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-data-service"></a>Tworzenie usługi danych
 W ramach tego zadania spowoduje utworzenie usługa dane przykładowe z wykorzystaniem [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] do udostępnienia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, która jest oparta na bazie danych Northwind. Zadanie obejmuje następujące podstawowe czynności:  
@@ -110,7 +111,7 @@ W ramach tego zadania spowoduje utworzenie usługa dane przykładowe z wykorzyst
 ## <a name="next-steps"></a>Następne kroki  
  Pomyślnie utworzono nową usługę danych, który ujawnia [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych, która jest oparta na bazie danych Northwind, a ma włączony dostęp do źródła dla klientów, które mają uprawnienia do [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Następnie powoduje uruchomienie usługi danych z [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] i będą uzyskiwać dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła strumieniowego poprzez przesłanie żądania HTTP GET za pośrednictwem przeglądarki sieci Web:  
   
- [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Uzyskiwanie dostępu do usługi z przeglądarki internetowej](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)

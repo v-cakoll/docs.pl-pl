@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 39fbd38549a791a761c633dca90dbdeeeefce10b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f3a087f296a742bc9f0f5672d9bf0cb73c836121
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-and-using-strong-named-assemblies"></a>Tworzenie i używanie zestawów o silnej nazwie
 <a name="top"></a>Silnej nazwy składa się z tożsamości zestawu — zwykły tekst nazwa, numer wersji i informacje o ustawieniach kulturowych (jeśli jest dostępny) — oraz klucz publiczny i podpis cyfrowy. Jest generowany na podstawie pliku zestawu przy użyciu odpowiedniego klucza prywatnego. (Plik zestawu zawiera manifest zestawu, który zawiera nazwy i wartości skrótu wszystkie pliki wchodzące w skład zestawu).  
@@ -82,12 +83,12 @@ ms.lasthandoff: 10/18/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: tworzenie pary kluczy publiczno prywatnych](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Opisuje sposób tworzenia klucza kryptograficznego podpisywania zestawu.|  
-|[Porady: podpisać zestaw o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Opisuje sposób tworzenia zestawu z silną nazwą.|  
+|[Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|Opisuje sposób tworzenia klucza kryptograficznego podpisywania zestawu.|  
+|[Instrukcje: podpisywanie zestawu silną nazwą](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|Opisuje sposób tworzenia zestawu z silną nazwą.|  
 |[Poprawa silnego nazywania](../../../docs/framework/app-domains/enhanced-strong-naming.md)|Opisuje rozszerzenia silnych nazw w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)].|  
-|[Porady: odwołanie do zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Opisuje sposób odwoływać się do typów lub zasoby zestawu z silną nazwą w czasie kompilacji lub czasu wykonywania.|  
-|[Porady: wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Opisuje sposób wyłączenia funkcji omija Weryfikacja podpisów silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub określonych aplikacji.|  
+|[Instrukcje: odwołanie do zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|Opisuje sposób odwoływać się do typów lub zasoby zestawu z silną nazwą w czasie kompilacji lub czasu wykonywania.|  
+|[Instrukcje: wyłączanie funkcji pomijania silnej nazwy](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|Opisuje sposób wyłączenia funkcji omija Weryfikacja podpisów silnej nazwy. Tę funkcję można wyłączyć dla wszystkich lub określonych aplikacji.|  
 |[Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)|Zawiera omówienie zestawy jednoplikowe i wiele plików.|  
 |[Jak opóźnienie Podpisz zestaw w programie Visual Studio](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|Wyjaśniono, jak podpisać zestaw o silnej nazwie po utworzeniu zestawu.|  
-|[SN.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|W tym artykule opisano narzędzia uwzględnione w programie .NET Framework, która pomaga utworzyć zestawy o silnych nazwach. To narzędzie dostarcza opcje do zarządzania kluczami oraz generowania podpisów i weryfikowania ich.|  
+|[Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|W tym artykule opisano narzędzia uwzględnione w programie .NET Framework, która pomaga utworzyć zestawy o silnych nazwach. To narzędzie dostarcza opcje do zarządzania kluczami oraz generowania podpisów i weryfikowania ich.|  
 |[Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)|W tym artykule opisano narzędzia uwzględnione w programie .NET Framework, który generuje plik manifestu z zasobu lub moduły pliki zestawu.|

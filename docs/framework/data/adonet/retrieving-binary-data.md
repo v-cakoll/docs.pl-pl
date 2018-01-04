@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: bd524ed605f1fe125480bae0949745f4f045f03a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 43e937836911808789e2cad8affb395cc73ceb68
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-binary-data"></a>Podczas pobierania danych binarnych
 Domyślnie **DataReader** ładuje dane przychodzące jako wiersz, jak cały wiersz danych jest dostępna. Duże obiekty binarne (BLOB) wymagają innego podejścia, jednak ponieważ zawierają one GB danych, które nie mogą wchodzić w jednym wierszu. **Command.ExecuteReader** metoda ma przeciążenia, które będą wymaga <xref:System.Data.CommandBehavior> argumentu, aby zmodyfikować domyślne zachowanie **DataReader**. Można przekazać <xref:System.Data.CommandBehavior.SequentialAccess> do **ExecuteReader** metodę, aby zmodyfikować domyślne zachowanie **DataReader** tak, aby zamiast ładowania wierszy danych, jego ładowanie danych sekwencyjnie odbierane. Jest to idealne rozwiązanie w przypadku ładowania obiektów blob lub inne struktury dużej ilości danych. Należy pamiętać, że takie zachowanie może zależeć od źródła danych. Na przykład zwracać obiekt BLOB z programu Microsoft Access załaduje całego obiektu BLOB ładowany do pamięci, a nie po kolei odbierane.  
@@ -165,5 +166,5 @@ connection.Close();
   
 ## <a name="see-also"></a>Zobacz też  
  [Praca z DataReaders](http://msdn.microsoft.com/en-us/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [Dane binarne i duża wartość serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
+ [Dane binarne i dużej wartości w programie SQL Server](../../../../docs/framework/data/adonet/sql/sql-server-binary-and-large-value-data.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

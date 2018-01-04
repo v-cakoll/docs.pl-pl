@@ -27,11 +27,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c5c696e04b940923d53eb79c055330a91734e1a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 128628815f99ecb0e3d89530211c8607d17d3fb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-an-asynchronous-server-socket"></a>Przy użyciu gniazda serwera asynchroniczne
 Gniazda asynchroniczne serwera umożliwia asynchroniczne model programowania .NET Framework przetworzyć żądania usługi sieci. <xref:System.Net.Sockets.Socket> Klasy następuje standardowego asynchroniczny wzorzec nazewnictwa .NET Framework; na przykład synchroniczne <xref:System.Net.Sockets.Socket.Accept%2A> metody odpowiada asynchroniczną <xref:System.Net.Sockets.Socket.BeginAccept%2A> i <xref:System.Net.Sockets.Socket.EndAccept%2A> metody.  
@@ -271,7 +272,7 @@ public static void readCallback(IAsyncResult ar) {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu gniazda synchroniczne serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Przykład gniazda serwera asynchroniczne](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
+ [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Przykład asynchronicznego gniazda serwera](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)  
  [Wątkowość](../../../docs/standard/threading/index.md)  
- [Nasłuchiwanie z gniazda](../../../docs/framework/network-programming/listening-with-sockets.md)
+ [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)

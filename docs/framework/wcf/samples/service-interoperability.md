@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33de75838c7a8df895fe385f2c7e18f31a22f774
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 69c7201e7d8f4778173bed0313e667dbd4bd4d81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-interoperability"></a>Współdziałanie usług
 Ta sekcja zawiera przykłady ilustrujące interakcji między [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i innych technologii usługi.  

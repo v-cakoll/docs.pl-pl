@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 321be8e2cd38ea1138e54587ee876ceb82f67440
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8170b1219bf66c1f90fb5db3143916f7a41aab94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-store-and-reuse-queries"></a>Porady: przechowywanie i ponowne użycie zapytań
 Jeśli masz aplikację, która wykonuje zapytania strukturę podobną tyle razy, często może zwiększyć wydajność kompilacji zapytania jeden raz i jej wykonanie kilka razy z innymi parametrami. Na przykład aplikacja może mieć można pobrać wszystkich klientów, którzy są określonego miasta, w którym miasta jest określone w czasie wykonywania przez użytkownika w postaci. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje korzystanie z *skompilowane zapytania* w tym celu.  
@@ -46,4 +47,4 @@ Jeśli masz aplikację, która wykonuje zapytania strukturę podobną tyle razy,
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Data.Linq.CompiledQuery>  
  [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [Zapytanie bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+ [Wykonywanie zapytania w bazie danych](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

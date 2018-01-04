@@ -13,29 +13,30 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 91d76cb823bd16b716889a8ef52dc1c6d2c94ee3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4bc63a2de6e5aa7cf0af8df79cf6a8b398c713ad
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-how-to39s-index"></a>Porada WIF &#39; s indeksu
--   [Porady: Tworzenie aplikacji sieci Web obsługujący oświadczenia platformy ASP.NET MVC za pomocą WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
+-   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji internetowej MVC ASP.NET za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md)  
   
--   [Porady: Tworzenie aplikacji formularzy sieci Web obsługujący oświadczenia ASP.NET za pomocą WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
+-   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji formularzy internetowych ASP.NET za pomocą programu WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)  
   
--   [Porady: Tworzenie aplikacji obsługującej oświadczenia ASP.NET przy użyciu uwierzytelniania opartego na formularzach](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
+-   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania opartego na formularzach](../../../docs/framework/security/claims-aware-aspnet-app-forms-authentication.md)  
   
--   [Porady: Tworzenie aplikacji ASP.NET obsługujący oświadczenia za pomocą uwierzytelniania systemu Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
+-   [Instrukcje: tworzenie obsługującej oświadczenia aplikacji ASP.NET przy użyciu uwierzytelniania systemu Windows](../../../docs/framework/security/how-to-build-claims-aware-aspnet-app-using-windows-authentication.md)  
   
--   [Porady: Debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
+-   [Instrukcje: debugowanie aplikacji obsługujących oświadczenia i usług za pomocą śledzenia programu WIF](../../../docs/framework/security/how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md)  
   
--   [Porady: Wyświetlanie zalogowany stanu przy użyciu WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
+-   [Instrukcje: wyświetlanie stanu zalogowania przy użyciu programu WIF](../../../docs/framework/security/how-to-display-signed-in-status-using-wif.md)  
   
--   [Porady: Włączanie wykrywania powtórzeń tokenów](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
+-   [Instrukcje: włączanie wykrywania ponownego odtwarzania tokenu](../../../docs/framework/security/how-to-enable-token-replay-detection.md)  
   
--   [Porady: Włączanie śledzenia WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
+-   [Instrukcje: włączanie śledzenia programu WIF](../../../docs/framework/security/how-to-enable-wif-tracing.md)  
   
--   [Porady: Włączanie programu WIF dla aplikacji usługi sieci Web WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
+-   [Instrukcje: włączanie programu WIF dla aplikacji usługi internetowej WCF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)  
   
--   [Porady: Przekształcanie oświadczeń przychodzących](../../../docs/framework/security/how-to-transform-incoming-claims.md)
+-   [Instrukcje: przekształcanie oświadczeń przychodzących](../../../docs/framework/security/how-to-transform-incoming-claims.md)

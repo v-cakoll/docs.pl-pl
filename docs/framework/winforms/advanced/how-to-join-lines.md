@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f02da181d66f7bb26a8414782e42eff2570e6918
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d12cc7b4b4c878ec812190fd56a1face64118ab4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-join-lines"></a>Porady: łączenie linii
 Połączenie linii jest typowe obszar, który jest tworzony przez dwa wiersze, w których zakończenia spełnia lub nakładają się. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]udostępnia trzy style sprzężenia linii: ostre, faza i zaokrąglona. Styl łączenia linii jest właściwością <xref:System.Drawing.Pen> klasy. Po określeniu styl łączenia linii dla <xref:System.Drawing.Pen> obiektu, czy styl łączenia zostaną zastosowane do wszystkich połączonych wierszy w żadnym <xref:System.Drawing.Drawing2D.GraphicsPath> rysowane przy użyciu pióra tego obiektu.  

@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 57b285ef5b2d3f8342b473f09650e6db7ec1693d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 77e97e31a20c392eebae1b373bb1af53f87c23e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugeval-interface1"></a>ICorDebugEval Interface1
 Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debugowanego kodu.  
@@ -32,16 +33,16 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Abort — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczenia to `ICorDebugEval` wykonuje obecnie obiektu.|  
-|[CallFunction — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Konfiguruje wywołanie określonych funkcji. (Przestarzałe w programie .NET Framework w wersji 2.0, przy użyciu [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast.)|  
-|[CreateValue — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Pobiera wskaźnika interfejsu do określonego typu obiektu "ICorDebugValue" o wartości początkowej zero lub wartość null. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) zamiast.)|  
-|[GetResult — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugValue` zawierającego wyniki oceny.|  
-|[GetThread — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Pobiera wskaźnika interfejsu do "ICorDebugThread", gdzie tej oceny jest wykonywany lub będą wykonywane.|  
-|[IsActive — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Pobiera wartość wskazującą, czy to `ICorDebugEval` obiektu jest aktualnie wykonywany.|  
-|[NewArray — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Przydziela nowej tablicy o typie określonym elemencie i wymiary. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) zamiast.)|  
-|[NewObject — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Przydziela nowe wystąpienie obiektu i wywołuje metodę określony Konstruktor. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) zamiast.)|  
-|[NewObjectNoConstructor — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Przydziela nowe wystąpienie obiektu określonego typu bez próba wywołania metody konstruktora. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) zamiast.)|  
-|[NewString — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Przydziela obiekt ciągu przy użyciu określonej zawartości.|  
+|[Abort, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-abort-method.md)|Przerywa obliczenia to `ICorDebugEval` wykonuje obecnie obiektu.|  
+|[CallFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-callfunction-method.md)|Konfiguruje wywołanie określonych funkcji. (Przestarzałe w programie .NET Framework w wersji 2.0, przy użyciu [ICorDebugEval2::CallParameterizedFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-callparameterizedfunction-method.md) zamiast.)|  
+|[CreateValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-createvalue-method.md)|Pobiera wskaźnika interfejsu do określonego typu obiektu "ICorDebugValue" o wartości początkowej zero lub wartość null. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::CreateValueForType](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-createvaluefortype-method.md) zamiast.)|  
+|[GetResult, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getresult-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugValue` zawierającego wyniki oceny.|  
+|[GetThread, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-getthread-method.md)|Pobiera wskaźnika interfejsu do "ICorDebugThread", gdzie tej oceny jest wykonywany lub będą wykonywane.|  
+|[IsActive, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-isactive-method.md)|Pobiera wartość wskazującą, czy to `ICorDebugEval` obiektu jest aktualnie wykonywany.|  
+|[NewArray, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newarray-method.md)|Przydziela nowej tablicy o typie określonym elemencie i wymiary. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedArray](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedarray-method.md) zamiast.)|  
+|[NewObject, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobject-method.md)|Przydziela nowe wystąpienie obiektu i wywołuje metodę określony Konstruktor. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedObject](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md) zamiast.)|  
+|[NewObjectNoConstructor, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newobjectnoconstructor-method.md)|Przydziela nowe wystąpienie obiektu określonego typu bez próba wywołania metody konstruktora. (Przestarzałe w .NET Framework 2.0, przy użyciu [ICorDebugEval2::NewParameterizedObjectNoConstructor](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobjectnoconstructor-method.md) zamiast.)|  
+|[NewString, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugeval-newstring-method.md)|Przydziela obiekt ciągu przy użyciu określonej zawartości.|  
   
 ## <a name="remarks"></a>Uwagi  
  `ICorDebugEval` Obiekt jest tworzony w kontekście określonego wątku, który służy do przeprowadzania oceny. Wszystkie obiekty i typów używanych w danym oceny musi znajdować się w tej samej domenie aplikacji. Tej domeny aplikacji nie musi być taka sama, jak domena aplikacji bieżącego wątku. Mogą być zagnieżdżane oceny.  
@@ -68,4 +69,4 @@ Dostarcza metody umożliwiające debugerowi wykonywanie kodu w kontekście debug
     
     
     
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

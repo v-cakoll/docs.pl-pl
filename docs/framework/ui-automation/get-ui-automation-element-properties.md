@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 2b9e1f24a6384cd052dd7b15c7afb3facac05c57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f3fcbb25fab616b60a1f60d9443af13b60f2d27a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-ui-automation-element-properties"></a>Pobierz właściwości elementu automatyzacji interfejsu użytkownika
 > [!NOTE]

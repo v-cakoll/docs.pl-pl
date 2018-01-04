@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 12f328d58ef568c78d1e2c8a8ff564839cba9f3b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4a6b277b2676409bebc059637daca5681b853f03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-network-tracing"></a>Porady: Konfigurowanie śledzenia sieci
 Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określają format i zawartość danych ze śledzenia sieci. Przed rozpoczęciem procedury należy się upewnić, że śledzenie jest włączone. Aby uzyskać informacje na temat włączania śledzenia, zobacz [umożliwiające śledzenie sieci](../../../docs/framework/network-programming/enabling-network-tracing.md).  
@@ -106,7 +107,7 @@ Plik konfiguracyjny aplikacji lub komputera zawiera ustawienia, które określaj
 |`Tracemode`|Opcjonalne <xref:System.String> atrybutu. Ustaw `includehex` pokazanie śladów protokołu w formacie szesnastkowym i tekst. Ustaw `protocolonly` do wyświetlenia tylko tekst. Wartość domyślna to `includehex`.<br /><br /> Ten atrybut musi być ustawiony na \<przełączniki > element, jak pokazano w przykładzie. Jest zwracany wyjątek, jeśli ten atrybut zostanie ustawiony na elemencie w obszarze \<źródło > elementu.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interpretowanie Śledzenie sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
+ [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  [Włączanie śledzenia sieci](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [Wprowadzenie do Instrumentacji i śledzenie](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

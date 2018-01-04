@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 960f5b33883d1c826c2b18fffb45215b5a7079ba
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3de34d942c4c73e73f3cdb61ea2a0f6adea6e354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>Instrukcje: Tworzenie punktu końcowego usługi w kodzie
 W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkulator, usługa jest wdrażana w `CalculatorService` klasy, a następnie jej punkt końcowy jest zdefiniowana w kodzie, w którym jest określone, że usługa musi używać <xref:System.ServiceModel.BasicHttpBinding> klasy.  
@@ -57,4 +58,4 @@ W tym przykładzie `ICalculator` kontraktu jest zdefiniowany dla usługi Kalkula
      [!INCLUDE[crabout](../../../../includes/crabout-md.md)]domyślne punkty końcowe, zobacz [uproszczony konfiguracji](../../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Określanie wiązań usługi w kodzie](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+ [Instrukcje: określanie wiązań usługi w kodzie](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

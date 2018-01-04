@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 7bdd8108261e1e1bc18dd636ba654f7fb6bed981
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4cadc6af85c833013ac56399ae0821731dbf2d41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>Porównanie identyfikator GUID i uniqueidentifier wartości
 Typ danych Unikatowy identyfikator globalny (GUID) w programie SQL Server jest reprezentowana przez `uniqueidentifier` typ danych, który przechowuje 16-bajtowych wartości binarnej. Identyfikator GUID jest liczbą binarną i jest głównie jako identyfikator, który musi być unikatowa w sieci z wielu komputerów w wielu lokacjach. Identyfikatory GUID mogą być generowane przez wywołanie funkcji NEWID języka Transact-SQL i jest musi być unikatowy w całym świecie. Aby uzyskać więcej informacji zobacz "Using uniqueidentifier danych" w dokumentacji SQL Server — książki Online.  
@@ -56,5 +57,5 @@ Sorted SqlGuids:
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Danych programu SQL Server typy i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [Typy danych programu SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0ec0b25976b1b54c91fcdebbc80bc048d2b48823
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6956d48163f9b9da66258c0dbb3452beab5420d9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="database-mirroring-in-sql-server"></a>Dublowania w programie SQL Server bazy danych
 Funkcja dublowania baz danych w programie SQL Server pozwala na zachowanie kopiowania lub dublowania bazy danych programu SQL Server na serwerze wstrzymania. Dublowanie gwarantuje, że dwa osobne kopie danych istnieje przez cały czas, wysokiej dostępności i ukończyć nadmiarowość danych. Dostawcy danych programu .NET dla programu SQL Server obsługuje niejawne dublowania bazy danych, dzięki czemu deweloper nie trzeba podejmować żadnych działań lub pisania kodu, gdy została skonfigurowana dla bazy danych programu SQL Server. Ponadto <xref:System.Data.SqlClient.SqlConnection> obiektu obsługuje tryb jawne połączenie, który umożliwia podanie nazwy serwera partnerskiego trybu failover w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  

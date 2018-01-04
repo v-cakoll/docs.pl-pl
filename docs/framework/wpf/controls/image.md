@@ -17,17 +17,18 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769c40434ecb0ac1bbae63f1697e5005c0de875b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 096773fd8cb303cc504bc956d500e8f1e55cda00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image"></a>Obraz
 <xref:System.Windows.Controls.Image> Element służy do wyświetlania obrazów mapy bitowej w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tematy porad](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Image>  
@@ -37,5 +38,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

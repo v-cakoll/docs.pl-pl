@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3928c6b3690bd03a4365d21d5fbf2f4bd2a4f457
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-to-peer-collaboration"></a>Współpraca peer-to-Peer
 Sieci peer-to-peer jest użycie stosunkowo zaawansowanych komputerów (komputery osobiste), znajdujące się na krawędzi Internetu dla więcej niż tylko opartą na kliencie zadań. Nowoczesne komputer (komputer) ma bardzo szybko procesora, pamięci przeważająca i dużych dysków twardych, które są jest w pełni wykorzystywane podczas wykonywania typowych zadań przetwarzania danych, takie jak wiadomości e-mail i przeglądania sieci Web. Nowoczesne PC łatwo może działać jako klienta i serwera (element równorzędny) dla różnych typów aplikacji.  
@@ -51,4 +52,4 @@ Sieci peer-to-peer jest użycie stosunkowo zaawansowanych komputerów (komputery
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Net.PeerToPeer.Collaboration>  
- [Namespace System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)
+ [Przestrzeń nazw System.Net.PeerToPeer.Collaboration — informacje](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

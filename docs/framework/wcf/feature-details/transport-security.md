@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: d9576321ca44d568633fcba40e56f9582d3f5db5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 364326e2ded11f7174adc891a5fd9bcdd3c98334
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security"></a>Zabezpieczenia transportu
 Transport zabezpieczeń w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zależy od wybrane powiązanie. Transport, który implementuje powiązania określa mechanizm rzeczywiste zabezpieczeń. Tematy w tej sekcji opisano mechanizmy, które są wykonywane i ich opcji.  
@@ -35,7 +36,7 @@ Transport zabezpieczeń w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)
  [Korzystanie z personifikacji z zabezpieczeniami transportu](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  W tym artykule wyjaśniono pięć poziomów personifikacji, które są możliwe za pomocą tryb zabezpieczeń transport.  
   
- [Porady: Konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [Instrukcje: konfigurowanie portu z certyfikatem SSL](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  Przedstawiono podstawowe informacje dotyczące konfigurowania port na komputerze za pomocą certyfikatu X.509 zabezpieczeń SSL (transportu).  
   
 ## <a name="reference"></a>Tematy pomocy  

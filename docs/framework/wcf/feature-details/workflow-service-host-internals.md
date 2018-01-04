@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cf12cac374759c1cb45a7086ac771a982758e78f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6761c044f166105a2e463d0f89ed0b3813d4b97a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-service-host-internals"></a>Elementy wewnętrzne hosta usługi przepływu pracy
 <xref:System.ServiceModel.WorkflowServiceHost>zapewnia hosta usługi przepływu pracy. Odpowiada do nasłuchiwania dla komunikatów przychodzących i routingu je do odpowiednich przepływu pracy wystąpienie usługi, kontroluje zwalnianie i przechowywanie bezczynne przepływy pracy i więcej. W tym temacie opisano, jak obiekt WorkflowServiceHost przetwarza wiadomości przychodzących.  
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/02/2017
  [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Hostowanie usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services.md)  
  [Punkt końcowy kontroli przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-control-endpoint.md)  
- [Przepływ pracy zarządzania punktu końcowego próbki](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
- [Porady: Konfigurowanie przepływu pracy nieobsłużony wyjątek zachowanie przy użyciu klasy WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
- [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [Przykład punktu końcowego zarządzania przepływem pracy](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  
+ [Instrukcje: konfigurowanie zachowania dotyczącego nieobsługiwanego wyjątku przepływu pracy przy użyciu klasy WorkflowServiceHost](../../../../docs/framework/wcf/feature-details/config-workflow-unhandled-exception-workflowservicehost.md)  
+ [Tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [Trwałość przepływu pracy](../../../../docs/framework/windows-workflow-foundation/workflow-persistence.md)

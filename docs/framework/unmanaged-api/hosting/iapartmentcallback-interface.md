@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5d2f2ea73da2273ff6f0abb725ec3e3fb8ca79ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 821e19f9078f65941c1826c55abcfafb730fe0da
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback — Interfejs
 Udostępnia metody do tworzenia wywołań zwrotnych w apartamencie. *Apartamentu* jest kontenerem logicznym, w ramach procesu dla obiektów, które mają te same wymagania dostępu wątku.  
@@ -32,7 +33,7 @@ Udostępnia metody do tworzenia wywołań zwrotnych w apartamencie. *Apartamentu
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[DoCallback — metoda](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Wykonuje określoną funkcję w apartamencie.|  
+|[DoCallback, metoda](../../../../docs/framework/unmanaged-api/hosting/iapartmentcallback-docallback-method.md)|Wykonuje określoną funkcję w apartamencie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -44,4 +45,4 @@ Udostępnia metody do tworzenia wywołań zwrotnych w apartamencie. *Apartamentu
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hosting — interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+ [Hosting, interfejsy](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9c0c9eb02cb95522d04765f454cd870f01a633f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3944fb6d68ed054feb8d7ddec149745b78810ee2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-adonet"></a>Jaki &#39; s Nowość w ADO.NET
 Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
@@ -57,12 +58,12 @@ Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../..
   
 -   Zestaw Microsoft.SqlServer.Types.dll, który zawiera typy danych przestrzennych, został uaktualniony z wersji 10.0 do wersji 11.0. Aplikacje, które odwołują się do tego zestawu może zakończyć się niepowodzeniem. Aby uzyskać więcej informacji, zobacz [fundamentalne zmiany do funkcji aparatu bazy danych](http://go.microsoft.com/fwlink/?LinkId=224367).  
   
-## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
+## <a name="adonet-entity-framework"></a>Program Entity Framework na platformie ADO.NET  
  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] Dodaje interfejsów API, które umożliwiają nowych scenariuszy podczas pracy z programu Entity Framework 5.0. Aby uzyskać więcej informacji o udoskonaleniach i funkcje, które zostały dodane do programu Entity Framework 5.0, zobacz następujące tematy: [What's New](http://go.microsoft.com/fwlink/?LinkID=251106) i [Entity Framework wersjach and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).  
   
 ## <a name="see-also"></a>Zobacz też  
  [ADO.NET](../../../../docs/framework/data/adonet/index.md)  
- [ADO.NET — omówienie](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
  [SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  [What's New in usługi danych WCF](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

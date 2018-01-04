@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e0175b14f556a68f9c289d84d79ce10a6982ffb3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2e890ff68967d04d5c0f487508c9ce559f377e56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (Kompilator licencji)
 Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowaniu i tworzy plik binarny, który może zostać osadzony jako zasób w pliku wykonywalnym środowiska uruchomieniowego języka wspólnego.  
@@ -53,7 +54,7 @@ Kompilator licencji czyta pliki tekstowe zawierające informacje o licencjonowan
 |**/complist:** *filename*|Określa nazwę pliku zawierającego listę licencjonowanych składników, która ma zostać umieszczona w pliku licenses. W odwołaniu do każdego składnika musi być używana jego pełna nazwa, a w wierszu może znajdować się tylko jeden składnik.<br /><br /> Użytkownicy wiersza polecenia mogą określić osobny plik dla każdego formularza w projekcie. Program LC.exe akceptuje wiele plików wejściowych i tworzy jeden plik licenses.|  
 |**/h**[**elp**]|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**i:** *modułu*|Określa modułów zawierających składniki na liście **/complist** pliku. Aby określić więcej niż jeden moduł, użyj wielu **/i** flagi.|  
-|**/ nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
+|**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**firmy:** *ścieżki*|Określa katalog, w którym ma zostać umieszczony wyjściowy plik licenses.|  
 |**/ target:** *targetPE*|Określa plik wykonywalny, dla którego jest generowany plik licenses.|  
 |**/v**|Określa tryb pełny; wyświetla informacje o postępie kompilacji.|  
@@ -105,4 +106,4 @@ lc @response.rsp
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
  [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+ [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

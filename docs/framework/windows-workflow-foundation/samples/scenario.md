@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91ef5c2c0d581575f60456e19920185a285cab07
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 50efd36e1d54bd456e184c42d62aded14e510947
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="scenario"></a>Scenariusz
 Ta sekcja zawiera przykłady [!INCLUDE[wf](../../../../includes/wf-md.md)] scenariuszy.  
@@ -31,14 +32,14 @@ Ta sekcja zawiera przykłady [!INCLUDE[wf](../../../../includes/wf-md.md)] scena
  [Transakcje](../../../../docs/framework/windows-workflow-foundation/samples/transactions.md)  
  Zawiera przykłady ilustrujące scenariuszy przy użyciu transakcji.  
   
- [Potwierdź automatycznie wzorca](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
+ [Wzorzec automatycznego potwierdzania](../../../../docs/framework/windows-workflow-foundation/samples/auto-confirm-pattern.md)  
  Składa się z trzech scenariuszy systemem pokazujący niestandardowego `AutoConfirmScope` działania.  
   
- [Obiekt StateMachine scenariusz przy użyciu kombinacji schematu blokowego i pobrania](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
+ [Scenariusz StateMachine używający kombinacji obiektów FlowChart i Pick](../../../../docs/framework/windows-workflow-foundation/samples/statemachine-scenario-using-a-combination-of-flowchart-and-pick.md)  
  Pokazuje, jak wdrożyć scenariusz proste stopera, przy użyciu kombinacji <xref:System.Activities.Statements.Flowchart> i <xref:System.Activities.Statements.Pick> działań.  
   
- [Integracja programu WF w języku XAML i WPF](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
+ [Integracja WPF i WF w języku XAML](../../../../docs/framework/windows-workflow-foundation/samples/wpf-and-wf-integration-in-xaml.md)  
  Przedstawia sposób tworzenia aplikacji, która używa [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] i [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji w jednym dokumencie XAML. W tym przykładzie użyto [!INCLUDE[wf](../../../../includes/wf-md.md)] i rozszerzalność języka XAML.  
   
- [Zewnętrzne Toolkit zestaw reguł](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
+ [Zewnętrzne przybornik zestawu reguł](../../../../docs/framework/windows-workflow-foundation/samples/external-ruleset-toolkit.md)  
  Pokazuje, jak zarządzać i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania.

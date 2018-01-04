@@ -23,11 +23,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31806d3ed13776e26634914b48bc887297ea4dab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3b9a70aaf2643811354cc9d7f6b51ed0805ca916
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>Wskazówki: implementowanie trybu wirtualnego w formancie DataGridView formularzy systemu Windows
 Jeśli chcesz wyświetlić bardzo dużych ilości danych tabelarycznych w <xref:System.Windows.Forms.DataGridView> sterowania, można ustawić <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> właściwości `true` i jawnego zarządzania formantu interakcji z jej magazynem danych. Dzięki temu można dostrojenie wydajności formantu w tej sytuacji.  
@@ -145,7 +146,7 @@ Jeśli chcesz wyświetlić bardzo dużych ilości danych tabelarycznych w <xref:
  <xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>  
  <xref:System.Windows.Forms.DataGridView.CancelRowEdit>  
  <xref:System.Windows.Forms.DataGridView.UserDeletingRow>  
- [Dostrajanie wydajności w systemu Windows do formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
- [Najlepsze praktyki dotyczące skalowania formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
- [Implementowanie trybu wirtualnego przy użyciu w czasie ładowania danych w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
- [Porady: Implementowanie trybu wirtualnego w oknach formantu DataGridView formularzy](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)
+ [Dostrajanie wydajności w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Najlepsze praktyki dotyczące skalowania kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)  
+ [Implementowanie trybu wirtualnego przy użyciu ładowania danych Just-In-Time w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
+ [Instrukcje: implementowanie trybu wirtualnego w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md)

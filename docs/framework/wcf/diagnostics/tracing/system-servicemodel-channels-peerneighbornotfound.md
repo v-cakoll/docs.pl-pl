@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b1f65f4525b00ae6d97e4dec0c24214e0c8172
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4ca6052284ad323ebdbdaac7d86ab0a976b588a9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelchannelspeerneighbornotfound"></a>System.ServiceModel.Channels.PeerNeighborNotFound
 Nie można wykonać operacji na sąsiada, ponieważ nie można odnaleźć tego sąsiada na liście sąsiedniego.  
@@ -28,4 +29,4 @@ Nie można wykonać operacji na sąsiada, ponieważ nie można odnaleźć tego s
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

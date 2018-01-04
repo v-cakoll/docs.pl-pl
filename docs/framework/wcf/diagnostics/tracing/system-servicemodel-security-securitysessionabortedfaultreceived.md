@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ee49b9535bd0943b56db064386b20cba72bfd141
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a9897cad60fdbbf99bbbdc28b02c57433e175034
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelsecuritysecuritysessionabortedfaultreceived"></a>System.ServiceModel.Security.SecuritySessionAbortedFaultReceived
 System.ServiceModel.Security.SecuritySessionAbortedFaultReceived  
@@ -28,4 +29,4 @@ System.ServiceModel.Security.SecuritySessionAbortedFaultReceived
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

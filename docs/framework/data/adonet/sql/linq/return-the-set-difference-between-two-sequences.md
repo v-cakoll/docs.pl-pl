@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: a3dae34f2b5904312fa3fcd994a01b2e024f1970
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7156e6a60527f4fd33e9b8d56504b4697152261e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>Zwraca różnicy pomiędzy dwoma sekwencji
 Użyj <xref:System.Linq.Queryable.Except%2A> operatora, aby zwrócić różnicy pomiędzy dwoma sekwencji.  
@@ -35,4 +36,4 @@ Użyj <xref:System.Linq.Queryable.Except%2A> operatora, aby zwrócić różnicy 
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykłady zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [Translacja Operator zapytania standardowe](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+ [Translacja standardowego operatora zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

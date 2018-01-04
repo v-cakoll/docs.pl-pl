@@ -17,11 +17,12 @@ caps.latest.revision: "61"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: e521f07048e37533e052dc8a43fb2c522750f92a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 658c5aca3dc8d70400cdd26d9e0af1e253e175c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-control-types"></a>Typy kontrolek automatyzacji interfejsu użytkownika
 **Uwaga** Niniejsza dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
@@ -29,48 +30,48 @@ ms.lasthandoff: 10/18/2017
  Ta sekcja zawiera informacje dotyczące obsługi typów kontroli w [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd typów formantu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu przycisk](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu kalendarz](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu dokument](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Edycja](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Grupa](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Nagłówek](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu hiperłącze](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu obraz](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Lista](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu okienko](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu suwak](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu pokrętło](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu karta](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Tabela](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu tekst](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu Miniatura](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu paska narzędzi](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu drzewa](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla typu formantu TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [Obsługa automatyzacji interfejsu użytkownika dla formantów typu okno](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
+ [Typy kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Button](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Calendar](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu CheckBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ComboBox](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataGrid](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu DataItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Document](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Edit](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Group](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Header](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu HeaderItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Hyperlink](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Image](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu List](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ListItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Menu](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu MenuBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu MenuItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Pane](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ProgressBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu RadioButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ScrollBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Separator](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Suwak](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Spinner](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu SplitButton](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu StatusBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Tab](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TabItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Table](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Text](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Thumb](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TitleBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ToolBar](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu ToolTip](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Tree](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu TreeItem](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
+ [Obsługa automatyzacji interfejsu użytkownika dla kontrolek typu Window](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Automation.ControlType>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wzorce formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+ [Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)

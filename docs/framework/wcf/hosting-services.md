@@ -14,11 +14,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4cafff46d31ed9a5737dbb74acecab96b1f1a1e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b23dac1db5252d3ce2bd60e4f8525dd89d9127b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-services"></a>Usługi hostingowe
 Staje się aktywny, usługa musi być hostowany w środowisku czasu wykonywania, która tworzy go i kontroluje jego kontekstu i okresem istnienia. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]usługi są przeznaczone do uruchamiania w dowolnym procesie systemu Windows obsługuje kodu zarządzanego.  
@@ -74,7 +75,7 @@ Staje się aktywny, usługa musi być hostowany w środowisku czasu wykonywania,
  [Wymagania systemowe](../../../docs/framework/wcf/wcf-system-requirements.md)  
  [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md)  
- [Porady: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
- [Porady: hostowanie usługi WCF w WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
- [Porady: hostowanie usługi WCF w usłudze zarządzanej systemu Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
- [Porady: hostowanie usługi WCF w zarządzanej aplikacji](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+ [Instrukcje: hostowanie usługi WCF w programie IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ [Instrukcje: hostowanie usługi WCF w usłudze zarządzanej systemu Windows](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)  
+ [Instrukcje: hostowanie usługi WCF w zarządzanej aplikacji](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

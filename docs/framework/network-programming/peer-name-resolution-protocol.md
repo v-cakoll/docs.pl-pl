@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 805f6f6ed7990b42065dfe7985a5d81844961897
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ba38c7e42126bb70161dcb72ffdd6965e8def044
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="peer-name-resolution-protocol"></a>Protokół PNRP
 W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznawania nazw określonych w ustalaniu każdej lokalizacji sieciowych (adresów, protokołów i portów) na podstawie nazw lub identyfikatorów innego typu. W przeszłości rozpoznawania nazw równorzędnych o zostały skomplikowanym łączności z założenia przejściowy, a także innych braków w ramach systemu nazw domen (DNS).  
@@ -70,5 +71,5 @@ W środowiskach peer-to-peer elementów równorzędnych użyć systemy rozpoznaw
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.PeerResolvers>  
  <xref:System.Net.PeerToPeer>  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Technologia PeerToPeer próbki](http://go.microsoft.com/fwlink/?LinkID=179571)

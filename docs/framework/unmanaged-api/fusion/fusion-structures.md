@@ -17,26 +17,27 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: eca1cba0f91805baf2277f3d3bc5e793d9e2ba1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c2d463ac5baf2067be8b5454407467c0e594e790
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fusion-structures"></a>Łączenie — Struktury
 W tej sekcji opisano niezarządzane struktury, używane fusion interfejsu API.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Assembly_info — struktura](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
+ [ASSEMBLY_INFO, struktura](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
  Zawiera informacje dotyczące zestawu, który jest zarejestrowany w globalnej pamięci podręcznej zestawów.  
   
- [Fusion_install_reference — struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
+ [FUSION_INSTALL_REFERENCE, struktura](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
  Reprezentuje odwołanie, które umożliwia aplikacji z zestawem aplikacji został zainstalowany w globalnej pamięci podręcznej zestawów.  
   
- [Identity_attribute — struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
+ [IDENTITY_ATTRIBUTE, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
  Zawiera informacje o atrybutach metadane dotyczące [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) wystąpienia.  
   
- [Identity_attribute_blob — struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
+ [IDENTITY_ATTRIBUTE_BLOB, struktura](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
  Zawiera dane przesunięcia skojarzony [identity_attribute —](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) struktury.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

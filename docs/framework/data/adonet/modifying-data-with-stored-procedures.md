@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1f8f0c37e5ac84d878f1d443d2bcc1e8ded099a6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5df938d6d55786c12e6d73171d2a5cb33f80ea84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modifying-data-with-stored-procedures"></a>Modyfikowanie danych w procedurach składowanych
 Procedury składowane można akceptować dane jako parametry wejściowe i mogą zwracać dane jako parametry wyjściowe, zestawów wyników lub wartości zwracanych. Poniższy przykład przedstawia sposób ADO.NET wysyła i odbiera dane wejściowe parametrów wyjściowych parametrów i wartości zwracane. Przykład wstawia nowego rekordu do tabeli, w których kolumna klucza podstawowego jest kolumną tożsamości w bazie danych programu SQL Server.  
@@ -50,7 +51,7 @@ RETURN @@ROWCOUNT
  [!code-vb[DataWorks SqlClient.SprocIdentityReturn#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.SprocIdentityReturn/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [Obiektów DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Elementy DataAdapter i DataReaders](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  [Wykonywanie polecenia](../../../../docs/framework/data/adonet/executing-a-command.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 96a65761cb6ddf31c0bb4c14077aed37336183f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9ede2dbf0718a4ca1d8025af3ce60c256afc867
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="finding-rows"></a>Znajdowanie wierszy
 Możesz wyszukać wierszy, zgodnie z ich wartości klucza sortowania za pomocą <xref:System.Data.DataView.Find%2A> i <xref:System.Data.DataView.FindRows%2A> metody <xref:System.Data.DataView>. Uwzględniana wielkość liter wyszukiwania wartości w **znaleźć** i **FindRows** metod jest określany przez **CaseSensitive** właściwości podstawowych <xref:System.Data.DataTable>. Wartości wyszukiwania musi być zgodna istniejące wartości klucza sortowania w całości w celu zwrócony wynik.  
@@ -106,5 +107,5 @@ else
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Data.DataTable>  
  <xref:System.Data.DataView>  
- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
+ [Elementy DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5f6051c3da274c6a8579516e073c0ea91a195d59
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2b31c029eb18943c926dfd5ed5b0576e866067d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="viewing-type-information"></a>Wyświetlanie informacji o typie
 <xref:System.Type?displayProperty=nameWithType> Klasy jest podstawą odbicia. Tworzy środowisko uruchomieniowe języka wspólnego **typu** dla typu załadowanego podczas żądania odbicia. Można użyć **typu** metod, pola, właściwości i zagnieżdżonych klas, aby dowiedzieć się wszystkiego o tego typu obiektu.  

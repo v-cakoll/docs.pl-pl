@@ -19,17 +19,18 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 12599c0bdf249271e8cd28e5a7591c130b1fd920
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 978cb7dcfd132ea253fcb5f13174e14c7341f11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-and-best-practices"></a>Wskazówki i najlepsze rozwiązania
 Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wskazówki: Przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
+ [Najlepsze rozwiązania: przechowywanie wersji kontraktów danych](../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
  Wyjaśniono, jak i kiedy utworzyć kontraktów danych, które nie Przerwij, gdy są tworzone w przyszłych wersjach.  
   
  [Przechowywanie wersji usługi](../../../docs/framework/wcf/service-versioning.md)  
@@ -52,10 +53,10 @@ Ta sekcja zawiera tematy zawierające wskazówki dotyczące tworzenia [!INCLUDE[
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
   
- [Programowanie podstawowe usługi WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Co to jest Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
+ [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
  [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
  [Kompilowanie klientów](../../../docs/framework/wcf/building-clients.md)

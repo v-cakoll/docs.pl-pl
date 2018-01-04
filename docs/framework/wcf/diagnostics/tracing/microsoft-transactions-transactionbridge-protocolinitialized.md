@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6acb1e9178de6d2041501f441b9985d31a49b6c0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 326b7db369d21acbaffee015aedf5d385d08df02
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsofttransactionstransactionbridgeprotocolinitialized"></a>Microsoft.Transactions.TransactionBridge.ProtocolInitialized
 Zainicjowano usługę protokołu WS-Atomic Transaction.  
@@ -28,4 +29,4 @@ Zainicjowano usługę protokołu WS-Atomic Transaction.
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

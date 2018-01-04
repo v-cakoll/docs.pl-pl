@@ -15,20 +15,21 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 18b393ca5048d9b96c6803cd536110ea2261daae
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 89c2e2fb12a91e06b3c4347b6f65c6fa91636911
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="base-elements"></a>Elementy bazy
 Cztery klucza klasy —<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, i <xref:System.Windows.FrameworkContentElement>— wdrożenie znaczny odsetek typowych funkcji elementu dostępnych w programowaniu WPF. Te cztery klas są określane w tym zestawie SDK jako klasy podstawowej elementów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Obiekty obiektu freezable — omówienie](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [Wyrównanie, marginesy i dopełnienia — omówienie](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Przegląd obiektów Freezable](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
+ [Przegląd wyrównania, marginesów i wypełnień](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.UIElement>  
@@ -42,10 +43,10 @@ Cztery klucza klasy —<xref:System.Windows.UIElement>, <xref:System.Windows.Con
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Architektura WPF](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
   [XAML w WPF](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [Element drzewa i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
+  [Drzewo elementów i serializacja](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
   [Właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
   [Zdarzenia](../../../../docs/framework/wpf/advanced/events-wpf.md)  
   [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
   [Zasoby](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+  [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
   [Model wątkowości](../../../../docs/framework/wpf/advanced/threading-model.md)

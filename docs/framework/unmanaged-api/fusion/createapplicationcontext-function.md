@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c089c32d4bc8474168274186a9303d39976abfca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 89c3181a157ce5162d93d1df14641b393fb3082d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext — Funkcja
 Ta funkcja obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.  
@@ -54,6 +55,6 @@ HRESULT CreateApplicationContext (
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [IAssemblyCache — interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
+ [IAssemblyCache, interfejs](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)  
  [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [Globalna pamięć podręczna zestawów](../../../../docs/framework/app-domains/gac.md)
+ [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

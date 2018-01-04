@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 3e473453576f04e89b58806c5140e29855d7d022
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dfa18b0f71e30c4e901dc3b55726306a4d46b220
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-namespaces"></a>Modelu danych jednostki: przestrzenie nazw
 Przestrzeń nazw w modelu danych jednostki (EDM) jest abstrakcyjny kontener dla [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md), [typów złożonych](../../../../docs/framework/data/adonet/complex-type.md), i [skojarzenia](../../../../docs/framework/data/adonet/association-type.md). Przestrzenie nazw w EDM są podobne do przestrzeni nazw w języku programowania: stanowią kontekst dla obiektów, które zawierają i umożliwiają do odróżniania obiektów, które mają taką samą nazwę (ale znajdują się w różnych przestrzeniach nazw).  
@@ -29,4 +30,4 @@ Przestrzeń nazw w modelu danych jednostki (EDM) jest abstrakcyjny kontener dla 
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 81611e7c5f509314b10e3188106870bdc67dfb0e
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 8ab5092b1bc9db22390a18b2c1cb1ad5725a2037
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="menu-overview"></a>Przegląd Menu
 <xref:System.Windows.Controls.Menu> Klasa umożliwia organizowanie elementów, skojarzonego z poleceniami i obsługi zdarzeń w porządku hierarchicznym. Każdy <xref:System.Windows.Controls.Menu> element zawiera kolekcję <xref:System.Windows.Controls.MenuItem> elementów.  

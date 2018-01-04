@@ -18,21 +18,22 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ba1092b9fd4a39a3e497ec31b9fd6bb1227f827
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 42ef2d29f7364d09c35dec27e0aa6f775dbc2982
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-xaml-extensions"></a>Rozszerzenia WPF XAML
 ## <a name="in-this-section"></a>W tej sekcji  
- [Powiązanie — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [Rozszerzenie znaczników ColorConvertedBitmap](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [Rozszerzenie znaczników ComponentResourceKey](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [Rozszerzenie znaczników DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [Rozszerzenie StaticResource znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [Rozszerzenie znacznika TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [Rozszerzenie znaczników ThemeDictionary](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [Składnia PropertyPath XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [Atrybut PresentationOptions:Freeze](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [Rozszerzenie znaczników powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
+  [ColorConvertedBitmap, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
+  [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+  [RelativeSource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
+  [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+  [TemplateBinding, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
+  [ThemeDictionary, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
+  [PropertyPath, składnia XAML](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze, atrybut](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)

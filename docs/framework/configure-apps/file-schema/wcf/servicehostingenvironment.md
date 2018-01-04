@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e3951c52a5bc510cc288b1289f2f6cc9c39255db
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a08df7c620065bb483d276e3ead2c179040f1c9a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltservicehostingenvironmentgt"></a>&lt;serviceHostingEnvironment&gt;
 Ten element definiuje typ, który usługę hostingu środowiskowego dla danego transportu. Jeśli ten element jest pusta, domyślny typ jest używany. Ten element może być użyty tylko w aplikacji lub pliki konfiguracji na poziomie maszyny.  
@@ -104,4 +105,4 @@ Ten element definiuje typ, który usługę hostingu środowiskowego dla danego t
  <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>  
  <xref:System.ServiceModel.ServiceHostingEnvironment>  
  [Hosting](../../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Usługi WCF i platformy ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
+ [Usługi WCF i platforma ASP.NET](../../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fcdfee8486b089456d294d983c09dc6246bd8ac2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 61de1bf5f3e5eb16718f2af7fa29325dc94770d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu dla ADO.NET
 Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -33,13 +34,13 @@ Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danyc
 
 - ADO.NET Entity Framework:
 
-  - [LINQ do jednostek](#linq-to-entities)
+  - [LINQ to Entities](#linq-to-entities)
 
   - [Typizowany ObjectQuery](#typed-objectquery)
 
   - [Dostawca EntityClient](#entityclient) (`System.Data.EntityClient`)
 
-- [LINQ do SQL](#linq-to-sql)
+- [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>Przykłady dostawcy danych ADO.NET
 Następujące listy kodu przedstawiają sposób pobierać dane z bazy danych przy użyciu dostawcy danych ADO.NET. Dane są zwracane w `DataReader`. Aby uzyskać więcej informacji, zobacz [pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
@@ -350,8 +351,8 @@ End Class
 ```
 
 ## <a name="see-also"></a>Zobacz także
- [ADO.NET — omówienie](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [Tworzenie aplikacji danych](http://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
  [Wykonywanie zapytania modelu danych jednostki (Entity Framework zadania)](http://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
  [Porady: kwerenda zwraca obiekty typu anonimowego](http://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  

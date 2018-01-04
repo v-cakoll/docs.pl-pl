@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 885c87439ebf7393380c7ff20165d8587f1b26f0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 84c7f870edd1c8082936b380547e181d129f529e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu środowiska CLR SQL
 W składniku LINQ to SQL relacyjnej bazy danych w modelu danych mapuje modelu obiektów, które są jest wyrażone w języku programowania wybranych przez użytkownika. Po uruchomieniu aplikacji, LINQ do SQL tłumaczy zapytania języku zintegrowanym w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników LINQ do SQL tłumaczy wyniki z powrotem do obiektów, które można pracować w języku programowania w języku użytkownika.  
@@ -265,7 +266,7 @@ W składniku LINQ to SQL relacyjnej bazy danych w modelu danych mapuje modelu ob
  LINQ do SQL nie obsługuje innych mapowanie typu dla tych różnych typów.  Aby uzyskać więcej informacji, zobacz [Typ mapowania Uruchom czas zachowania macierzy](#BehaviorMatrix).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowanie opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
- [Mapowanie zewnętrznych](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
+ [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapowanie zewnętrzne](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)  
  [Typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)  
  [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)

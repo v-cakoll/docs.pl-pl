@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 545717c1aa620644203bf6adaa866cec3e8e7fed
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d44e6375209f6ad9c733d1c4412ee605b439d992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multiple-active-result-sets-mars"></a>Wielu aktywnych zestawów wyników (MARS)
 Wiele aktywnych zestawów wyników (MARS) to funkcja umożliwiająca wykonywanie wielu instancji na jedno połączenie. W poprzednich wersjach tylko jedno zadanie wsadowe może zostać wykonany w czasie przed jednego połączenia. Wykonywanie wielu instancji z MARS nie oznacza jednoczesne wykonywanie operacji.  
@@ -26,7 +27,7 @@ Wiele aktywnych zestawów wyników (MARS) to funkcja umożliwiająca wykonywanie
  [Włączanie wielu aktywnych zestawów wyników](../../../../../docs/framework/data/adonet/sql/enabling-multiple-active-result-sets.md)  
  W tym artykule omówiono sposób użycia MARS z programem SQL Server.  
   
- [Manipulowania danymi](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
+ [Manipulowanie danymi](../../../../../docs/framework/data/adonet/sql/manipulating-data.md)  
  Zawiera przykłady kodowania MARS aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

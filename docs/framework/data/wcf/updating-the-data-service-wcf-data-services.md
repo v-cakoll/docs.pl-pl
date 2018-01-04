@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d51508abf27038e27b4a9d356c726bc8e15cb321
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc8041dee12c8300e18e6321c717cbd80b93d650
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>Aktualizowanie usługi danych (usługi danych WCF)
 Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] biblioteki klienta użycie [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, biblioteki tłumaczy wpisy w źródle danych do wystąpienia klasy usługi danych klienta. Klasy usługi te dane są śledzone za pomocą <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy. Klient śledzi zmiany do jednostki, które raportu za pomocą metod na <xref:System.Data.Services.Client.DataServiceContext>. Te metody włączyć klienta do śledzenia jednostek dodany i usunięty, a także zmiany wprowadzone do wartości właściwości lub relacje między wystąpieniami jednostki. Rejestrowane są wysyłane do usługi data jako opartego na interfejsie REST operacje podczas wywoływania <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> metody.  
@@ -104,9 +105,9 @@ Jeśli używasz [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] bibl
  Zmiany są śledzone w <xref:System.Data.Services.Client.DataServiceContext> wystąpienia, ale nie natychmiast wysyłane do serwera. Po zakończeniu zmiany wymagane dla określonego działania wywołać <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> do Prześlij wszystkie zmiany do usługi danych. Aby uzyskać więcej informacji, zobacz [Zarządzanie kontekstu danych usługi](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md). Można także zapisać zmiany asynchronicznie za pomocą <xref:System.Data.Services.Client.DataServiceContext.BeginSaveChanges%2A> i <xref:System.Data.Services.Client.DataServiceContext.EndSaveChanges%2A> metody. Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
- [Przetwarzanie wsadowe operacji](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
- [Obiekt Materialization](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
- [Zarządzanie kontekstu usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)
+ [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [Materializacja obiektu](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)  
+ [Zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: fc5554193d93f2a88fd9e6d1c1af7923a23b2280
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87443a83b80440a30e942b30bd98cce09816f25f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>Wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 do wersji WIF 4.5
 ## <a name="applies-to"></a>Dotyczy:  
@@ -180,7 +181,7 @@ add-windowsfeature windows-identity-foundation
 >  Ponieważ wiele klas WIF 3.5 i wersji WIF 4.5 udział tych samych nazw, gdy jest używany zarówno WIF 3.5, jak i wersji WIF 4.5 razem należy Użyj pełnych nazw klasy albo użyj przestrzeni nazw aliasów do rozróżniania między klasami w WIF 3.5 i wersji WIF 4.5.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Schemat konfiguracji WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
- [Namespace mapowanie między WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [What's New in Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
- [Tożsamość i narzędzie dostępu do programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)
+ [Schemat konfiguracji programu WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
+ [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Co nowego w programie Windows Identity Foundation 4.5](../../../docs/framework/security/whats-new-in-wif.md)  
+ [Narzędzie tożsamości i dostępu dla programu Visual Studio 2012](../../../docs/framework/security/identity-and-access-tool-for-vs.md)

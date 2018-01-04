@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d9fe72090de3722137c2b0c2190c11f190be5fbc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 25a45626564bb58950b251ae5e9041609d96a207
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-a-resource-manager"></a>Implementowanie Menedżera zasobów
 Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zasobów, których działania są koordynowany przez Menedżera transakcji. Menedżer zasobów działa we współpracy z menedżerem transakcji, aby zapewnić aplikacji niepodzielność i izolacji. Microsoft SQL Server, kolejki komunikatów trwałe, tabelami skrótów w pamięci są wszystkie przykłady menedżerowie zasobów.  
@@ -44,11 +45,11 @@ Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zas
 ## <a name="in-this-section"></a>W tej sekcji  
  W następujących tematach opisano kroki zwykle następuje Menedżera zasobów.  
   
- [Rejestrowanie zasobów jako uczestnicy transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
+ [Rejestrowanie zasobów jako uczestników transakcji](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)  
   
  Opisuje, jak trwałe zasobu można zarejestrować w transakcji.  
   
- [Zatwierdzanie transakcji w jednofazowy i wielu fazy](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
+ [Zatwierdzanie transakcji jednofazowe i wielofazowe](../../../../docs/framework/data/transactions/committing-a-transaction-in-single-phase-and-multi-phase.md)  
   
  Opisuje, jak Zatwierdź powiadomień i przygotowania zatwierdzanie z użytkownikiem odpowiada Menedżera zasobów.  
   
@@ -60,6 +61,6 @@ Poszczególne zasoby używane w transakcji jest zarządzane przez Menedżera zas
   
  Opisuje sposób trzy poziomy zaufania System.Transactions ograniczyć dostęp dla typów zasobów, które <xref:System.Transactions> przedstawia.  
   
- [Optymalizacja za pomocą pojedynczego zatwierdzić fazy i awansowanie pojedyncze powiadomienia fazy](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
+ [Optymalizacja za pomocą zatwierdzania jednofazowego i umożliwiającego awansowanie powiadomienia jednofazowego](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)  
   
  Zawiera wskazówki optymalizacji dostępne do implementacji menedżerowie zasobów.

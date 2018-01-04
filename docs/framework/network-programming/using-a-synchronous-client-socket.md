@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: ecd08b708b8725ae7b53bfee26b1d4d8668756cd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03595539d825f26251a24fce33ede2552b79b38b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-synchronous-client-socket"></a>Przy użyciu gniazda synchroniczne klienta
 Gniazda synchroniczne klienta zawiesza program aplikacji podczas operacji sieciowej. Gniazda synchroniczne nie są odpowiednie dla aplikacji, które w znacznym stopniu wykorzystywane sieci dla ich działania, ale umożliwiają one proste dostęp do usług sieciowych dla innych aplikacji.  
@@ -80,6 +81,6 @@ s.Close();
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu gniazda asynchroniczne klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Nasłuchiwanie z gniazda](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Przykład gniazda synchroniczne klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+ [Używanie asynchronicznego gniazda klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [Przykład synchronicznego gniazda klienta](../../../docs/framework/network-programming/synchronous-client-socket-example.md)

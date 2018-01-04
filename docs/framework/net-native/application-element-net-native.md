@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f4e4eebce1779f1b32a74819fea19fb23204b80c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c486faf43a1109b0391f40072ab267b72e1d07d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltapplicationgt-element-net-native"></a>Element &lt;Application&gt; (architektura .NET Native)
 Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, których metadanych jest dostępny w celu odbicia w czasie wykonywania i zastosowanie zasad wykonywania odbicia do wszystkich elementów programu w aplikacji.  
@@ -97,4 +98,4 @@ Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, k
  [\<Biblioteka > — Element](../../../docs/framework/net-native/library-element-net-native.md)  
  [\<Dyrektywy > — Element](../../../docs/framework/net-native/directives-element-net-native.md)  
  [Elementy dyrektyw środowiska uruchomieniowego](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [Odwołanie do pliku konfiguracji dyrektyw (rd.xml) środowiska wykonawczego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+ [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

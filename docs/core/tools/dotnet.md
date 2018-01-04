@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: bba8d77cda7538bf008dc0f510f9279d3c695c3d
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.workload: dotnetcore
+ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-command"></a>polecenie DotNet
 
@@ -121,35 +122,35 @@ Drukuje wersji programu .NET Core SDK w użyciu.
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [Kompilacja DotNet](dotnet-build.md)     | Tworzy aplikacji .NET Core.                                     |
-| [Wyczyść DotNet](dotnet-clean.md)     | Wyczyść wyniki do kompilacji.                                              |
-| [Pomoc DotNet](dotnet-help.md)       | Przedstawia szczegółowe dokumentacji online dla polecenia.           |
-| [Migrowanie DotNet](dotnet-migrate.md) | Wykonuje migrację prawidłowy projekt Preview 2 projektu .NET Core SDK 1.0.  |
-| [DotNet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [nowe DotNet](dotnet-new.md)         | Inicjuje języka C# lub projektów F # dla danego szablonu.                |
-| [Pakiet DotNet](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
-| [Publikowanie DotNet](dotnet-publish.md) | Publikowanie aplikacji .NET framework zależne lub niezależne. |
-| [Przywracanie DotNet](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
-| [Uruchom DotNet](dotnet-run.md)         | Aplikacja jest uruchamiana ze źródła.                                   |
-| [DotNet sln](dotnet-sln.md)         | Opcje do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
-| [Magazyn DotNet](dotnet-store.md)     | Przechowuje zestawy w magazynie pakietów środowiska wykonawczego.                     |
-| [DotNet test](dotnet-test.md)       | Uruchamia testy przy użyciu runner testu.                                     |
+| [dotnet build](dotnet-build.md)     | Tworzy aplikacji .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Wyczyść wyniki do kompilacji.                                              |
+| [dotnet help](dotnet-help.md)       | Przedstawia szczegółowe dokumentacji online dla polecenia.           |
+| [dotnet migrate](dotnet-migrate.md) | Wykonuje migrację prawidłowy projekt Preview 2 projektu .NET Core SDK 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Inicjuje języka C# lub projektów F # dla danego szablonu.                |
+| [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
+| [dotnet publish](dotnet-publish.md) | Publikowanie aplikacji .NET framework zależne lub niezależne. |
+| [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
+| [dotnet run](dotnet-run.md)         | Aplikacja jest uruchamiana ze źródła.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opcje do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
+| [dotnet store](dotnet-store.md)     | Przechowuje zestawy w magazynie pakietów środowiska wykonawczego.                     |
+| [dotnet test](dotnet-test.md)       | Uruchamia testy przy użyciu runner testu.                                     |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [Kompilacja DotNet](dotnet-build.md)     | Tworzy aplikacji .NET Core.                                     |
-| [Wyczyść DotNet](dotnet-clean.md)     | Wyczyść wyniki do kompilacji.                                              |
-| [Migrowanie DotNet](dotnet-migrate.md) | Wykonuje migrację prawidłowy projekt Preview 2 projektu .NET Core SDK 1.0.  |
-| [DotNet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
-| [nowe DotNet](dotnet-new.md)         | Inicjuje języka C# lub projektów F # dla danego szablonu.                |
-| [Pakiet DotNet](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
-| [Publikowanie DotNet](dotnet-publish.md) | Publikowanie aplikacji .NET framework zależne lub niezależne. |
-| [Przywracanie DotNet](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
-| [Uruchom DotNet](dotnet-run.md)         | Aplikacja jest uruchamiana ze źródła.                                   |
-| [DotNet sln](dotnet-sln.md)         | Opcje do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
-| [DotNet test](dotnet-test.md)       | Uruchamia testy przy użyciu runner testu.                                     |
+| [dotnet build](dotnet-build.md)     | Tworzy aplikacji .NET Core.                                     |
+| [dotnet clean](dotnet-clean.md)     | Wyczyść wyniki do kompilacji.                                              |
+| [dotnet migrate](dotnet-migrate.md) | Wykonuje migrację prawidłowy projekt Preview 2 projektu .NET Core SDK 1.0.  |
+| [dotnet msbuild](dotnet-msbuild.md) | Zapewnia dostęp do wiersza polecenia programu MSBuild.                        |
+| [dotnet new](dotnet-new.md)         | Inicjuje języka C# lub projektów F # dla danego szablonu.                |
+| [dotnet pack](dotnet-pack.md)       | Tworzy pakiet NuGet kodu.                               |
+| [dotnet publish](dotnet-publish.md) | Publikowanie aplikacji .NET framework zależne lub niezależne. |
+| [dotnet restore](dotnet-restore.md) | Przywraca zależności dla danej aplikacji.                  |
+| [dotnet run](dotnet-run.md)         | Aplikacja jest uruchamiana ze źródła.                                   |
+| [dotnet sln](dotnet-sln.md)         | Opcje do dodawania, usuwania i wyświetlić listę projektów w pliku rozwiązania.       |
+| [dotnet test](dotnet-test.md)       | Uruchamia testy przy użyciu runner testu.                                     |
 
 ---
 
@@ -157,24 +158,24 @@ Drukuje wersji programu .NET Core SDK w użyciu.
 
 Polecenie | Funkcja
 --- | ---
-[DotNet Dodaj odwołanie](dotnet-add-reference.md) | Dodaj odwołanie do projektu.
-[Odwołanie do listy DotNet](dotnet-list-reference.md) | Lista odwołań do projektu.
-[DotNet Usuń odwołanie](dotnet-remove-reference.md) | Usuń odwołanie do projektu.
+[dotnet add reference](dotnet-add-reference.md) | Dodaj odwołanie do projektu.
+[dotnet list reference](dotnet-list-reference.md) | Lista odwołań do projektu.
+[dotnet remove reference](dotnet-remove-reference.md) | Usuń odwołanie do projektu.
 
 ### <a name="nuget-packages"></a>Pakiety NuGet
 
 Polecenie | Funkcja
 --- | ---
-[DotNet Dodaj pakiet](dotnet-add-package.md) | Dodaj pakiet NuGet.
-[Pakiet Usuń DotNet](dotnet-remove-package.md) | Usunięcie pakietu NuGet.
+[dotnet add package](dotnet-add-package.md) | Dodaj pakiet NuGet.
+[dotnet remove package](dotnet-remove-package.md) | Usunięcie pakietu NuGet.
 
 ### <a name="nuget-commands"></a>Polecenia NuGet
 
 Polecenie | Funkcja
 --- | ---
-[Usuń nuget DotNet](dotnet-nuget-delete.md) | Usuwa lub unlists pakietu z serwera.
-[Zmienne lokalne nuget DotNet](dotnet-nuget-locals.md) | Czyści lub wyświetla ich listę zasobów lokalnych NuGet np. pamięci podręcznej żądania http, tymczasowego pamięci podręcznej lub folderu packages globalne dla komputera.
-[wypychania nuget DotNet](dotnet-nuget-push.md) | Wypychanie pakietu do serwera i publikuje ją.
+[dotnet nuget delete](dotnet-nuget-delete.md) | Usuwa lub unlists pakietu z serwera.
+[dotnet nuget locals](dotnet-nuget-locals.md) | Czyści lub wyświetla ich listę zasobów lokalnych NuGet np. pamięci podręcznej żądania http, tymczasowego pamięci podręcznej lub folderu packages globalne dla komputera.
+[dotnet nuget push](dotnet-nuget-push.md) | Wypychanie pakietu do serwera i publikuje ją.
 
 ## <a name="examples"></a>Przykłady
 

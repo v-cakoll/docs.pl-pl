@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 0eec8d5cfb09df66b6ba739c7cd5087434986fdc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0692e0b952a031c628d8aa4ff8730a96e358cfca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iclrprofiling-interface"></a>ICLRProfiling — Interfejs
 Udostępnia [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodę, która pozwala na dołączenie do uruchomionego procesu profilera.  
@@ -32,7 +33,7 @@ Udostępnia [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[AttachProfiler — metoda](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Dołącza określony profiler do określonego procesu.|  
+|[AttachProfiler, metoda](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md)|Dołącza określony profiler do określonego procesu.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,4 +48,4 @@ Udostępnia [ICLRProfiling::AttachProfiler](../../../../docs/framework/unmanaged
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [ICorProfilerInfo — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+ [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

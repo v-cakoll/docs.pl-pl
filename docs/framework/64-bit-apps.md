@@ -17,11 +17,12 @@ caps.latest.revision: "53"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ee85512cde0ce50e6a5c34cc5f6acc531c24bc0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e968d64d02780eb8f8d404e533443c7663d3d60f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="64-bit-applications"></a>Aplikacje 64-bitowe
 Podczas kompilowania aplikacji można określić, czy ma być uruchamiany w systemie Windows 64-bitowym systemie operacyjnym jako natywnych aplikacji lub w emulatorze WOW64 (32-bitowego w systemie Windows 64-bitowe). WOW64 jest środowisko zgodności, które umożliwia 32-bitowej aplikacji do uruchomienia w 64-bitowym systemie. WOW64 jest uwzględniona we wszystkich wersjach 64-bitowego systemu operacyjnego Windows.  

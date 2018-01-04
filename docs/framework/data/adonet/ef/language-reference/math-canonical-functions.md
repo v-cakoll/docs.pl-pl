@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b6e69a9dbc204cfa8f0abc7e641b0784a08d747c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1d8f959980be1c765a3eacba97992f42d9231201
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="math-canonical-functions"></a>Canonical funkcje matematyczne
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obejmuje funkcje canonical matematyczne.  
@@ -41,4 +42,4 @@ ms.lasthandoff: 10/18/2017
  Równoważne funkcje są dostępne w Microsoft SQL klienta zarządzanego dostawcy. Aby uzyskać więcej informacji, zobacz [SqlClient Entity Framework funkcji](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Canonical funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+ [Funkcje Canonical](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)

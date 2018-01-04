@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 09b2c74673b0126865a7536de77f99e250b3afec
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: abb5fd319630392f38effa21f351c1b656727bd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>Wskazówki: Manipulowanie danych (Visual Basic)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza Dodawanie, modyfikowanie i usuwanie danych z bazy danych. Aby dodać klienta, Zmień nazwę klienta i usunąć zamówienie będzie używał kopii przykładowej bazy danych Northwind.  
@@ -196,4 +197,4 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 >  Po dodaniu nowego klienta, przesyłając zmiany, nie można wykonać tego rozwiązania ponownie, ponieważ nie można dodać tego samego klienta ponownie jako jest. Aby wykonać ponownie rozwiązanie, zmienić wartości Identyfikatora klienta ma zostać dodana.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Learning przez — wskazówki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+ [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

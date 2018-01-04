@@ -18,18 +18,19 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23d0238c2c1606358a8cc2374e209a8f385c4d0d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: bd43baee7ed7ab75a85775a4abecf38aa41faf93
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-topics"></a>— Tematy porad
 W następujących tematach opisano sposób tworzenia [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] dodatków.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Utwórz dodatek zwracające interfejsu użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
- [Utwórz dodatku, który jest interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
+ [Tworzenie dodatku, który zwraca interfejs użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-returns-a-ui.md)  
+ [Tworzenie dodatku, który jest interfejsem użytkownika](../../../../docs/framework/wpf/app-development/how-to-create-an-add-in-that-is-a-ui.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie dodatków WPF](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)
+ [Dodatki WPF — omówienie](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 97c45e044bf5ae8e3afa56b06b253a43fbb95f83
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1f5f723ddf5c81550661c6b96de77b35984b1eeb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-protocol-implementation-details"></a>Szczegóły implementacji protokołu usługi danych WCF
 ## <a name="odata-protocol-implementation-details"></a>Szczegóły implementacji protokołu OData  
@@ -33,5 +34,5 @@ ms.lasthandoff: 12/02/2017
  Jeżeli zawiera żądanie zapytania, które są wysyłane do usługi data `$top` lub `$skip` systemu opcji zapytania i nie zawiera `$orderby` systemu opcji zapytania, zwracane źródła danych są sortowane według właściwości klucza w kolejności rosnącej. Jest to spowodowane porządkowania jest konieczne, aby zapewnić poprawne stronicowania wyników. Aby to zrobić, Usługa danych dodaje wyrażenie sortowania do zapytania. Ten problem występuje także w przypadku, gdy włączono stronicowania obsługiwanego przez serwer w usłudze danych. Aby uzyskać więcej informacji, zobacz [Konfigurowanie usługi danych](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md). Aby kontrolować kolejność zwracanych źródła danych, należy uwzględnić `$orderby` zapytania identyfikatora URI.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Definiowanie usługi danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+ [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

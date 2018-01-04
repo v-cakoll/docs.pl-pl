@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 414ae499b777be5536e64a86fa0c60f9cd2da25a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f81a95546d593cd5a0acb6a89edf2f6c763f07df
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http-transport-security"></a>Zabezpieczenia transportu HTTP
 Korzystając z protokołu HTTP jako transportu, zabezpieczenia przez implementację protokołu Secure Sockets Layer (SSL). Protokół SSL jest powszechnie używany w Internecie do uwierzytelniania usługi na kliencie, a następnie zapewnienie poufności (szyfrowanie) do kanału. W tym temacie wyjaśniono, jak działa protokół SSL i jak jest zaimplementowana w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d71be02173bfcfeace5412e22e51f4fc0b247a5f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 6b0e0eda77ebe3d980a99340db8366533e601687
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dynamic-programming-in-the-net-framework"></a>Programowanie dynamiczne w .NET Framework
 Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Framework.  
@@ -32,10 +33,10 @@ Ta sekcja dokumentacji zawiera informacje o programowanie dynamiczne w .NET Fram
  [Emitowanie dynamicznych metod i zestawów](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  
  Opisuje sposób tworzenia metod i zestawów w czasie wykonywania za pomocą Reflection.Emit.  
   
- [Omówienie środowiska uruchomieniowego języka dynamicznego](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
+ [Przegląd środowiska uruchomieniowego języka dynamicznego](../../../docs/framework/reflection-and-codedom/dynamic-language-runtime-overview.md)  
  Zawiera opis funkcji środowiska uruchomieniowego języka dynamicznego.  
   
- [Źródło dynamiczne generowanie i kompilacja kodu](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
+ [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
  Opisuje sposób Generowanie i kompilowanie kodu źródłowego dynamicznych.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

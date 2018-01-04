@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 03350825b3de4515a0d30e8644f34df71efa25db
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a565ec6ded0a82ed4ab3c0fd03b082d996369ddc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="common-data-types-unmanaged-api-reference"></a>Standardowe typy danych (niezarządzana dokumentacja interfejsu API)
 Ten temat zawiera listę typów proste danych używany przez niezarządzane interfejsy API programu .NET Framework, które są definiowane przez C/C++ `typedef` instrukcje. Te typy danych są zazwyczaj aliasów dla typów pierwotnych danych C/C++. Zazwyczaj wartości te typy danych są nieprzezroczyste; oznacza to, że są zwracane przez określonej funkcji lub metody, dzięki czemu mogą być przekazywane do innych funkcji lub metody bez żadnych modyfikacji.  
@@ -45,4 +46,4 @@ Ten temat zawiera listę typów proste danych używany przez niezarządzane inte
 |Identyfikator wątku|`typedef UINT_PTR ThreadID;`|corprof.h|Identyfikator zarządzanego wątku.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Niezarządzany wykaz interfejsów API](../../../docs/framework/unmanaged-api/index.md)
+ [Niezarządzane interfejsy API — informacje](../../../docs/framework/unmanaged-api/index.md)

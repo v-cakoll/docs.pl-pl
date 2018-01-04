@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6244e6c3b0cc88c50cda050a480f5af5b3996b47
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 21ebc29a6c442625f7a532f7b1e6a47e7dc4cb69
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache — Interfejs
 Reprezentuje Globalna pamięć podręczna zestawów do użycia przez technologię fusion.  
@@ -32,11 +33,11 @@ Reprezentuje Globalna pamięć podręczna zestawów do użycia przez technologi�
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem — metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Pobiera odwołanie do nowego [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
-|[CreateAssemblyScavenger — metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Zarezerwowany do użytku wewnętrznego przez technologię fusion.|  
-|[InstallAssembly — metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|Instaluje określonego zestawu w globalnej pamięci podręcznej zestawów.|  
-|[QueryAssemblyInfo — metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Pobiera żądane dane dotyczące określonego zestawu.|  
-|[UninstallAssembly — metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów.|  
+|[CreateAssemblyCacheItem, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|Pobiera odwołanie do nowego [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md).|  
+|[CreateAssemblyScavenger, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Zarezerwowany do użytku wewnętrznego przez technologię fusion.|  
+|[InstallAssembly, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|Instaluje określonego zestawu w globalnej pamięci podręcznej zestawów.|  
+|[QueryAssemblyInfo, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|Pobiera żądane dane dotyczące określonego zestawu.|  
+|[UninstallAssembly, metoda](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|Odinstalowuje określony zestaw z globalnej pamięci podręcznej zestawów.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -47,4 +48,4 @@ Reprezentuje Globalna pamięć podręczna zestawów do użycia przez technologi�
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Globalna pamięć podręczna zestawów](../../../../docs/framework/app-domains/gac.md)
+ [Global Assembly Cache](../../../../docs/framework/app-domains/gac.md)

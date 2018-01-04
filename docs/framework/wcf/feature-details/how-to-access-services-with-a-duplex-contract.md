@@ -17,11 +17,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8ec8b7f37dc7f04a7ddb2c6373b50e98fe41cf98
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 425d17fa34b61985ad3600f992e028e156f6adb9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>Instrukcje: Uzyskiwanie dostępu do usług za pomocą kontraktu dwukierunkowego
 Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możliwość tworzenia usługi, który korzysta ze wzorca komunikacji dupleksowej. Ten wzorzec umożliwia usługi do komunikacji z klientem za pośrednictwem wywołania zwrotnego. W tym temacie przedstawiono kroki, aby utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta w klasie klienta, który implementuje interfejs wywołania zwrotnego.  
@@ -99,7 +100,7 @@ Jedna funkcja [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest możl
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md)  
- [Porady: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
+ [Instrukcje: tworzenie kontraktu dwukierunkowego](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)  
  [Narzędzie do obsługi metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)  
- [Porady: Tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
- [Porady: używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+ [Instrukcje: tworzenie klienta](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)  
+ [Instrukcje: używanie elementu ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f44bef7804e9101b2d1bc50ba53f3fc7a5fa90ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fbf25ae866b338d2f1ac0ea11570e0d535e9137c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-authentication"></a>Uwierzytelnianie Internet
 <xref:System.Net> Klasy obsługi różnych mechanizmów uwierzytelniania klienta, w tym standardowe Internet metod uwierzytelniania, podstawowe, szyfrowane, negocjowania, NTLM, a uwierzytelnianie Kerberos, a także metod niestandardowych, które można utworzyć.  
@@ -49,6 +50,6 @@ ms.lasthandoff: 11/21/2017
  Niektóre schematy uwierzytelniania można uwierzytelnić użytkownika bez wcześniejszego utworzenia żądania dla zasobu. Aplikacja może zaoszczędzić czas preauthenticating użytkownika z zasobem, eliminując co najmniej jeden obiegu do serwera. Lub może przeprowadzać uwierzytelnianie podczas uruchamiania programu Aby później można bardziej odpowiednie dla użytkownika. Schematy uwierzytelniania, korzystających z uwierzytelniania wstępnego zestawu <xref:System.Net.IAuthenticationModule.PreAuthenticate%2A> właściwości **true**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawowe oraz uwierzytelnianie szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
+ [Uwierzytelnianie podstawowe i szyfrowane](../../../docs/framework/network-programming/basic-and-digest-authentication.md)  
  [Uwierzytelnianie NTLM i uwierzytelnianie Kerberos](../../../docs/framework/network-programming/ntlm-and-kerberos-authentication.md)  
- [Zabezpieczenia w programowaniu usługi sieciowej](../../../docs/framework/network-programming/security-in-network-programming.md)
+ [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)

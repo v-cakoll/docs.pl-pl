@@ -32,11 +32,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 372f681fbdd4808b5f6a0012cf6ad01e278e05c9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3cc7ad6b6270b74e2eb6aa4a2cc3a540175d540b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introducing-pluggable-protocols"></a>Wprowadzenie podłączany protokołów
 Microsoft .NET Framework udostępnia implementację warstwowych, rozszerzalne i zarządzanych usług internetowych, które można zintegrować szybko i łatwo aplikacji. Dostęp do Internetu klas w <xref:System.Net> i <xref:System.Net.Sockets> przestrzeni nazw może służyć do wdrożenia aplikacji opartych na sieci Web, a internetowy.  
@@ -76,7 +77,7 @@ Microsoft .NET Framework udostępnia implementację warstwowych, rozszerzalne i 
  Deweloperzy zapoznać się z interfejsu Windows Sockets lub osoby, które wymagają kontroli podał programowanie na poziomie gniazda zostanie ustalone, które **System.Net.Sockets** klas konkretnych potrzeb. **System.Net.Sockets** klasy są punkt przejście z kodu zarządzanego do kodu macierzystego w **System.Net** klasy. W większości przypadków **System.Net.Sockets** klasy organizowania danych do ich odpowiedniki 32-bitowego, jak również kontroli zabezpieczeń wymaganymi do obsługi.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Protokoły podłączany programowania](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
+ [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Przykłady sieci dla platformy .NET w galerii kodu MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)

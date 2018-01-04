@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fefbd3894063c0298a7ad5110ed6867408869107
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b29caeed4bf60a5a7ad723ffd46520a89a5bd87
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="null-comparisons"></a>Porównania wartości null
 A `null` wartość w źródle danych wskazuje, że wartość jest nieznany. W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] kwerendy, można sprawdzić, tak aby niektóre obliczenia wartości null lub porównania są realizowane wyłącznie na wiersze, które mają prawidłowy lub inną niż null, danych. Semantyka null CLR, jednak mogą się różnić od null semantykę źródła danych. Większość baz danych używa wersji przechowywanymi w trzech logiki do obsługi porównania wartości null. Oznacza to, że porównanie z wartością null nie zostało oszacowane jako `true` lub `false`, daje w wyniku `unknown`. Często jest to implementacja ANSI wartości null, ale nie zawsze jest wielkość liter.  
@@ -57,4 +58,4 @@ WHERE h.ShipDate IS Null
  W [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)], podczas przekazywania kolekcji, która obsługuje `IQueryable` do funkcji agregującej, operacje agregacji są wykonywane na bazie danych. Mogą wystąpić różnice w wynikach zapytania, które było wykonywane w pamięci i kwerendę, która została wykonana w bazie danych. Jeśli nie ma żadnych wyników z kwerendy w pamięci, zapytanie zwraca zero. W bazie danych, takie same zapytanie zwraca `null`. Jeśli `null` wartość jest przekazywana do funkcji agregującej LINQ, zostanie wygenerowany wyjątek. Aby zaakceptować możliwe `null` rzutowania wartości, typy i właściwości typów, które odbierania wyników zapytania do typów dopuszczających wartości zerowe.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wyrażenia w składniku LINQ to Entities zapytań](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)
+ [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

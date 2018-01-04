@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: abe9487f9c2ebbb93c2e712959237f722ee707b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 99845420549393829582ade11f38b75e3ebff484
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient LocalDB
 Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] o nazwie kodowej Denali, to Uproszczona wersja [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], nazywany LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączenia z bazą danych LocalDB.  
@@ -69,5 +70,5 @@ Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]
 -   Użyj `AttachDBFilename` słowo kluczowe parametrów połączenia, aby określić. Pliku MDF.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Funkcje serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

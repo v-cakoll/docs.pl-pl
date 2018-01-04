@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4fab5868556d5b7ba3a63cbc06780b0102783910
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 27e9391b72ccb65e50ce3154cf7a1c97d796ebd7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-and-modeling-in-the-net-framework"></a>Dane i modelowanie w programie .NET Framework
 Ta sekcja zawiera informacje na temat dostępu do danych za pomocą ADO.NET, język kwerendy zintegrowanym (LINQ), usługi danych WCF i XML.  
@@ -39,7 +40,7 @@ Ta sekcja zawiera informacje na temat dostępu do danych za pomocą ADO.NET, ję
  [Usługi danych WCF 4.5](../../../docs/framework/data/wcf/index.md)  
  Zawiera informacje o sposobie używania usługi danych WCF do wdrożenia usług danych w sieci Web lub intranet.  
   
- [Dokumenty XML i dane](../../../docs/standard/data/xml/index.md)  
+ [Dokumenty i dane XML](../../../docs/standard/data/xml/index.md)  
  Zawiera omówienie kompleksowy, zintegrowany zestaw klas, które współpracują z dokumentów XML i danych w programie .NET Framework.  
   
  [Odwołanie XML standardów](http://msdn.microsoft.com/en-us/79c78508-c9d0-423a-a00f-672e855de401)  
@@ -52,5 +53,5 @@ Ta sekcja zawiera informacje na temat dostępu do danych za pomocą ADO.NET, ję
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  
  Przewodnik po wszystkich obszarach kluczowych technologii i zadaniach związanych z rozwojem aplikacji, takich jak tworzenie, konfigurowanie, debugowanie, zabezpieczanie i wdrażanie aplikacji, oraz informacje na temat programowania dynamicznego, interoperacyjności, rozszerzalności, zarządzania pamięcią i wątków.  
   
- [Zabezpieczeń](../../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../../docs/standard/security/index.md)  
  Łącza do dodatkowych informacji klas i usług w środowisko uruchomieniowe języka wspólnego i .NET Framework, które ułatwiają tworzenie aplikacji bezpiecznego.

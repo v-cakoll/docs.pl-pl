@@ -17,23 +17,24 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 154c60112e74371f0d4d9afb2fbb38aaa32221c7
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2e78ce6b61ed1c6755072729b08a76d402e021b5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="timer-component-windows-forms"></a>Timer — Składnik (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Timer> to składnik, który wywołuje zdarzenie w regularnych odstępach czasu. Ten składnik jest przeznaczony dla środowiska Windows Forms.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Timer — informacje o składniku](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
+ [Timer, składnik — omówienie](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.Timer> składnika, dzięki czemu można skonfigurować aplikację do reagowania na zdarzenia okresowe.  
   
- [Ograniczenia właściwości Interval składnika Timer formularzy systemu Windows](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
+ [Ograniczenia właściwości Interval składnika Timer formularzy Windows Forms](../../../../docs/framework/winforms/controls/limitations-of-the-timer-component-interval-property.md)  
  W tym artykule opisano znane ograniczenia czasomierza interwału, który może mieć wpływ na sposób go używać.  
   
- [Porady: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
+ [Instrukcje: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy Windows Forms](../../../../docs/framework/winforms/controls/run-procedures-at-set-intervals-with-wf-timer-component.md)  
  Opisuje sposób reagowania na upłynął odstępach czasu w aplikacjach opartych na systemie Windows.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -44,7 +45,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.Timer> to składnik, któr
  Zawiera informacje dotyczące <xref:System.Timers.Timer?displayProperty=nameWithType> klasy, która jest używana przez czasomierze na serwerze.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
   
  [Czasomierz kontrolę dla użytkowników programu Visual Basic 6.0](http://msdn.microsoft.com/en-us/38e5184a-1e50-45cf-b936-dae566c0cfc5)  

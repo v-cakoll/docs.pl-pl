@@ -21,11 +21,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d0f15339b829335798d7ee21dcc90b81cb536cf2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8264e49b29f5a790e37c97c3683d7bf09e850c3e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-manipulate-a-table39s-columns-through-the-columns-property"></a>Porady: manipulowanie tabeli &#39; s kolumn za pomocą właściwości kolumn
 W tym przykładzie przedstawiono niektóre z najczęściej operacje wykonywane na kolumnach tabeli do <xref:System.Windows.Documents.Table.Columns%2A> właściwości.  
@@ -77,8 +78,8 @@ W tym przykładzie przedstawiono niektóre z najczęściej operacje wykonywane n
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd tabeli](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [Zdefiniuj tabelę z XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [Definiowanie tabeli przy użyciu XAML](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
  [Programowe tworzenie tabeli](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [Manipulowanie grupy wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [Manipulowanie FlowDocument za pośrednictwem właściwości bloków](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Manipulowanie grupy wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+ [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [Zarządzanie parametrem FlowDocument przez właściwość Blocks](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

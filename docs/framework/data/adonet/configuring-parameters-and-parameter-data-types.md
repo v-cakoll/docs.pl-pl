@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 9119b6db6b1d3c2099af3c7bdbe042ced4dca94e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając Sprawdzanie typu i weryfikacji. W odróżnieniu od tekst polecenia parametr wejściowy jest traktowany jako wartość literału nie jako kod wykonywalny. Dzięki temu zabezpieczenia przed atakami "Iniekcja kodu SQL", w których osoba atakująca Wstawia polecenie Zabezpieczenia dokonywania na serwerze do instrukcji SQL.  
@@ -206,7 +207,7 @@ parameter.Direction = ParameterDirection.Output;
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Poleceń i parametrów](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [Element DataAdapter parametrów](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
+ [Polecenia i parametry](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
+ [Parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
  [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

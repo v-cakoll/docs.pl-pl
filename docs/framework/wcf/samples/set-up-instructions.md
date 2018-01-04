@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e88737d50b24f524e4a33fd51ee16678c1928b1a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: cfbd4769d1fc974369093e3b5253f9853a9ef730
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji
 Ten zbiór tematów zawiera opis sposobu konfigurowania usług, które są wymagane do uruchomienia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi.  
@@ -32,10 +33,10 @@ Ten zbiór tematów zawiera opis sposobu konfigurowania usług, które są wymag
  [Instrukcje dotyczące zapory](../../../../docs/framework/wcf/samples/firewall-instructions.md)  
  Opisano kroki wymagane do skonfigurowania zapory systemu Windows, aby umożliwić [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług do funkcji.  
   
- [Informacje o usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
  Omówiono kroki wymagane do skonfigurowania usług IIS.  
   
- [Internetowe usługi informacyjne instrukcje instalacji certyfikatu serwera (IIS)](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
+ [Instrukcje instalacji certyfikatu serwera Internet Information Services](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)  
  Zawiera opis procesu, aby zainstalować certyfikaty serwera dla usług IIS.  
   
  [Instrukcje dotyczące konfigurowania katalogów wirtualnych](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)  
@@ -44,7 +45,7 @@ Ten zbiór tematów zawiera opis sposobu konfigurowania usług, które są wymag
  [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
  Opisano kroki tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbek.  
   
- [Uruchamiania przykładów Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
+ [Uruchamianie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  Opisano kroki dotyczące uruchamiania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbek na tym samym komputerze i na komputerach.  
   
  [Włączanie usług równorzędnych](http://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  

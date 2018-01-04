@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 28e6de46098a8309a17e0c264411f865fb9b1de2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d1d8ea4987d918da79dcf1f69b842f19901e63a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility"></a>Rozszerzalność
 Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń i innych funkcji [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -26,7 +27,7 @@ Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń 
  [Rozszerzalność kanałów](../../../../docs/framework/wcf/samples/channels-extensibility.md)  
  Pokazuje kanałów niestandardowych.  
   
- [Rozszerzalność odnajdywania](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
+ [Discovery Extensibility](../../../../docs/framework/wcf/samples/discovery-extensibility.md)  
  Pokazuje niestandardowych odnajdywania.  
   
  [Tworzenie wystąpienia rozszerzalności](../../../../docs/framework/wcf/samples/instancing-extensibility.md)  
@@ -50,7 +51,7 @@ Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń 
  [Rozszerzalność transportu](../../../../docs/framework/wcf/samples/transport-extensibility.md)  
  Pokazuje niestandardowych transportów.  
   
- [Rozszerzalność sieci Web](../../../../docs/framework/wcf/samples/web-extensibility.md)  
+ [Rozszerzalność Internetu](../../../../docs/framework/wcf/samples/web-extensibility.md)  
  Pokazuje niestandardowe funkcje sieci Web.  
   
  [Element formatujący operacji i selektor operacji](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)  
@@ -59,10 +60,10 @@ Ta sekcja zawiera przykłady, które zajmują się niestandardowych rozszerzeń 
  [Niestandardowy filtr komunikatów](../../../../docs/framework/wcf/samples/custom-message-filter.md)  
  Pokazuje, jak zastąpić komunikat filtrów, które [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa do wysyłania wiadomości do punktów końcowych.  
   
- [Niestandardowy Host usługi](../../../../docs/framework/wcf/samples/custom-service-host.md)  
+ [Niestandardowy host usługi](../../../../docs/framework/wcf/samples/custom-service-host.md)  
  Pokazuje, jak używać niestandardowych pochodną <xref:System.ServiceModel.ServiceHost> klasy do zmiany zachowania usługi w czasie wykonywania.  
   
- [DataContract — Surogat](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
+ [DataContract — surogat](../../../../docs/framework/wcf/samples/datacontract-surrogate.md)  
  Pokazuje, jak procesy, takie jak serializacji, deserializacji schematu eksportowania i importowania schematu można dostosować za pomocą kontraktu danych dwuskładnikowy klasy.  
   
  [Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  

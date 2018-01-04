@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4f41a794916c63672ca0c844f086629f77b90aa0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4b8eafeedd03097488b1493b5654db360eab94fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-security"></a>Zabezpieczenia serwera SQL
 [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]oferuje wiele funkcji, które obsługują tworzenie bezpiecznej bazie danych aplikacji.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 11/21/2017
  [Scenariusze zabezpieczeń aplikacji w programie SQL Server](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)  
  Zawiera tematy dyskutować różne scenariusze zabezpieczeń aplikacji dla ADO.NET i [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] aplikacji.  
   
- [SQL Server Express zabezpieczeń](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
+ [Bezpieczeństwo programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-security.md)  
  W tym artykule opisano zagadnienia dotyczące zabezpieczeń [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

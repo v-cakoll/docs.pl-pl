@@ -19,11 +19,12 @@ caps.latest.revision: "73"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15eeb27d493cd1138b0d3d41b55a57228a226a11
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 118d63bbbcd0cbb52d092af7002df2538df7790b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-overview"></a>Przegląd Animacja
 <a name="introduction"></a>
@@ -341,21 +342,21 @@ ms.lasthandoff: 10/22/2017
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Animacja i chronometrażu Przegląd systemu](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|W tym artykule opisano, jak system chronometrażu używa <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> klasy, które pozwalają tworzyć animacji.|  
-|[Animacja porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Wyświetla listę przydatne porady dotyczące rozwiązywania problemów z animacji, takich jak wydajność.|  
-|[Omówienie animacji niestandardowej](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|Opisuje sposób rozszerzyć systemu animacji klatek kluczowych, klasy animacji lub wywołań zwrotnych na ramki.|  
+|[Animacja i system chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-system-overview.md)|W tym artykule opisano, jak system chronometrażu używa <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> klasy, które pozwalają tworzyć animacji.|  
+|[Animacja — porady i wskazówki](../../../../docs/framework/wpf/graphics-multimedia/animation-tips-and-tricks.md)|Wyświetla listę przydatne porady dotyczące rozwiązywania problemów z animacji, takich jak wydajność.|  
+|[Niestandardowe animacje — przegląd](../../../../docs/framework/wpf/graphics-multimedia/custom-animations-overview.md)|Opisuje sposób rozszerzyć systemu animacji klatek kluczowych, klasy animacji lub wywołań zwrotnych na ramki.|  
 |Przegląd Cechy animacji od/do/przez|Opisuje sposób tworzenia animacji, który przechodzi między dwiema wartościami.|  
-|[Omówienie klucza poklatkowych](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|Opisuje sposób tworzenia animacji z wielu wartości docelowych, w tym możliwość kontrolowania metodę interpolacji.|  
-|[Funkcji sterowania tempem zmian](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|Wyjaśniono, jak dotyczą matematycznymi realistyczne zachowanie, takich jak odbijania animacji.|  
-|[Omówienie animacje ścieżki](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|Opisuje sposób przenieść ani obrócić obiekt złożony ścieżce.|  
-|[Omówienie techniki animacji właściwość](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)|Opisuje animacji właściwość przy użyciu scenorys, lokalne animacje zegary i na poklatkowych.|  
-|[Scenorys — omówienie](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|Informacje dotyczące używania scenorys z wielu osiach czasu tworzenia złożonych animacji.|  
-|[Omówienie zachowania chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|W tym artykule opisano <xref:System.Windows.Media.Animation.Timeline> typy i właściwości używane w animacji.|  
-|[Przegląd zdarzeń chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|Opisuje zdarzenia dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiekty do wykonywania kodu w punktach na osi czasu, takich jak rozpocząć, wstrzymać, wznowić, Pomiń lub zatrzymać.|  
-|[Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu animacji i osi czasu w aplikacji.|  
-|[Zegary — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu <xref:System.Windows.Media.Animation.Clock> obiektów w aplikacji.|  
-|[Klucz ramki — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu klucza poklatkowych w aplikacji.|  
-|[Ścieżka animacji — tematy porad](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|Zawiera przykłady kodu w aplikacji przy użyciu ścieżki animacji.|  
+|[Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)|Opisuje sposób tworzenia animacji z wielu wartości docelowych, w tym możliwość kontrolowania metodę interpolacji.|  
+|[Funkcje easingu](../../../../docs/framework/wpf/graphics-multimedia/easing-functions.md)|Wyjaśniono, jak dotyczą matematycznymi realistyczne zachowanie, takich jak odbijania animacji.|  
+|[Animacje ścieżki — przegląd](../../../../docs/framework/wpf/graphics-multimedia/path-animations-overview.md)|Opisuje sposób przenieść ani obrócić obiekt złożony ścieżce.|  
+|[Techniki animacji właściwości — przegląd](../../../../docs/framework/wpf/graphics-multimedia/property-animation-techniques-overview.md)|Opisuje animacji właściwość przy użyciu scenorys, lokalne animacje zegary i na poklatkowych.|  
+|[Scenorysy — przegląd](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)|Informacje dotyczące używania scenorys z wielu osiach czasu tworzenia złożonych animacji.|  
+|[Zachowania chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)|W tym artykule opisano <xref:System.Windows.Media.Animation.Timeline> typy i właściwości używane w animacji.|  
+|[Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)|Opisuje zdarzenia dostępne na <xref:System.Windows.Media.Animation.Timeline> i <xref:System.Windows.Media.Animation.Clock> obiekty do wykonywania kodu w punktach na osi czasu, takich jak rozpocząć, wstrzymać, wznowić, Pomiń lub zatrzymać.|  
+|[Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu animacji i osi czasu w aplikacji.|  
+|[Zegary — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/clocks-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu <xref:System.Windows.Media.Animation.Clock> obiektów w aplikacji.|  
+|[Klatki kluczowe — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)|Zawiera przykłady kodu dla przy użyciu klucza poklatkowych w aplikacji.|  
+|[Animacja ścieżki — tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/path-animation-how-to-topics.md)|Zawiera przykłady kodu w aplikacji przy użyciu ścieżki animacji.|  
   
 <a name="reference"></a>   
 ## <a name="reference"></a>Tematy pomocy  

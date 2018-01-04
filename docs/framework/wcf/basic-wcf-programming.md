@@ -19,11 +19,12 @@ caps.latest.revision: "31"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 83404a56de68de8f8aec271c28e9896c4fa8702b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="basic-wcf-programming"></a>Podstawy programowania przy użyciu programu WCF
 W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji.  
@@ -32,7 +33,7 @@ W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[
  [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
  W tym artykule opisano cyklem życia projektowanie, tworzenie i wdrażanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje klienckie.  
   
- [Projektowanie i Implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Projektowanie i implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
  Opisuje sposób projektowanie i implementowanie kontraktu usługi, wybierz wymiany komunikatów, określ kontrakt błędu i inne aspekty podstawowych usług.  
   
  [Konfigurowanie usług](../../../docs/framework/wcf/configuring-services.md)  
@@ -47,10 +48,10 @@ W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[
  [Wprowadzenie do rozszerzalności](../../../docs/framework/wcf/introduction-to-extensibility.md)  
  Opisuje sposób rozszerzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] do tworzenia niestandardowych rozwiązań.  
   
- [Szybki Start WCF Rozwiązywanie problemów](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
+ [Szybki start: rozwiązywanie problemów z architekturą WCF](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md)  
  Opisano niektóre z najczęściej występujących problemów, które występują, co można zrobić w celu rozwiązania tych problemów i gdzie można znaleźć więcej informacji o problemie.  
   
- [Interfejs API sieci Web ASP.NET i WCF](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
+ [Internetowy interfejs API programu WCF i platformy ASP.NET](../../../docs/framework/wcf/wcf-and-aspnet-web-api.md)  
  W tym artykule omówiono te dwie technologie, jak są one powiązane ze sobą i kiedy należy używać ich.  
   
 ## <a name="reference"></a>Tematy pomocy  

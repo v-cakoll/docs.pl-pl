@@ -23,11 +23,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 87df4a79ec288323fff3dda5789fbbd90c0e88e9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfe0d97b86a27859d79685e035d8f3f765a965b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="attached-events-overview"></a>Przegląd Załączone zdarzenia
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]Definiuje składnika język i typ zdarzenia o nazwie *dołączone zdarzenie*. Pojęcie dołączone zdarzenie umożliwia dodanie obsługi dla określonego zdarzenia do dowolnego elementu, a nie do elementu, który faktycznie definiuje lub dziedziczy zdarzenia. W takim przypadku obiekt potencjalnie wywołaniem zdarzenia ani obsługi wystąpienia docelowego definiuje lub w przeciwnym razie "właścicielem" zdarzenia.  
@@ -102,6 +103,6 @@ ms.lasthandoff: 11/21/2017
  Jednak jeśli definiujesz niestandardowych dołączone zdarzenie na podstawie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] model tworzony dołączone zdarzenia na <xref:System.Windows.RoutedEvent>, można użyć <xref:System.Windows.UIElement.RaiseEvent%2A> aby wywołać zdarzenie dołączonych za pomocą dowolnego <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement>. Wywoływanie kierowanego zdarzenia (dołączony lub nie) wymaga, aby zadeklarować określonego elementu w drzewie elementu jako źródło zdarzenia; to źródło jest raportowane jako <xref:System.Windows.UIElement.RaiseEvent%2A> wywołującego. Określanie, który element jest zgłaszana jako źródła w drzewie jest odpowiedzialny za usługi  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Składnia języka XAML szczegółowo](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [XAML oraz klas niestandardowych dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Szczegóły składni XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b2c8b85c2920133e21e7659ca0c27e28ab4a8eae
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z kolejek oraz sposobu mapowania punktów końcowych usługi kolejki. Dla przypomnienia, na poniższej ilustracji przedstawiono klasycznego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wdrożenia aplikacji w kolejce.  
@@ -115,4 +116,4 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
  Należy pamiętać, że nie można użyć net.msmq:// adresowania z `MsmqIntegrationBinding`. Ponieważ `MsmqIntegrationBinding` obsługuje dowolnych MSMQ format nazwy addressing, można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która używa tego powiązania do funkcji multiemisji i dystrybucji listy w usłudze MSMQ. Jedynym wyjątkiem jest określenie `CustomDeadLetterQueue` przy użyciu `MsmqIntegrationBinding`. Musi to być net.msmq:// formularza, podobnie jak jest określona za pomocą `NetMsmqBinding`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sieć Web hostująca aplikację Zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+ [Sieć Web hostująca aplikację zakolejkowaną](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

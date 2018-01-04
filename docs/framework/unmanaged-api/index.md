@@ -17,11 +17,12 @@ ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7069762dd95636399c53c98e8bdef6f00be62c1
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.workload: dotnet
+ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="unmanaged-api-reference"></a>Niezarządzany wykaz interfejsów API
 Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być używane przez zarządzanego kodu — związanych z aplikacji, takich jak hosty w czasie wykonywania, kompilatory, deasemblerów pakietów, obfuscators, debugery i profilowania.  
@@ -63,10 +64,10 @@ Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być 
  [Silne nazewnictwo](../../../docs/framework/unmanaged-api/strong-naming/index.md)  
  Opisuje silne nazewnictwa interfejsu API, który umożliwia klientowi administrowania silnej nazwy podpisywania dla zestawów.  
 
- [Liczniki wydajności i WMI](wmi/index.md)  
+ [Usługi WMI i liczniki wydajności](wmi/index.md)  
  W tym artykule opisano interfejsów API, które zawijać wywołania bibliotek Instrumentacji zarządzania Windows (WMI).
   
- [Tlbexp — funkcje pomocy](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
+ [Tlbexp, funkcje pomocy](../../../docs/framework/unmanaged-api/tlbexp/index.md)  
  Opisuje dwóch funkcji pomocnika i interfejs używany przez Eksporter biblioteki typów (Tlbexp.exe) w procesie konwersji zestawu do typu biblioteki.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

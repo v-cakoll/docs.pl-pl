@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 31f458f884bb7d1aad64657244e2e0278d713c20
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 792588bd12493c54da73887a326fc4ce950ec7ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deployment-considerations-entity-framework"></a>Zagadnienia dotyczące wdrażania (Entity Framework)
 Ten temat zawiera informacje na temat wdrażania aplikacji, które używają programu Entity Framework ADO.NET dla dostępu do danych. Aby uzyskać więcej informacji na temat programu Entity Framework, zobacz [wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md).  
@@ -39,5 +40,5 @@ Ten temat zawiera informacje na temat wdrażania aplikacji, które używają pro
 -   Ponieważ programu Entity Framework jest składnikiem programu .NET Framework, mogą być rozpowszechniane za pomocą aplikacji zgodnie z umową licencyjną .NET Framework.  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Projektowanie i zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/development-and-deployment-considerations.md)

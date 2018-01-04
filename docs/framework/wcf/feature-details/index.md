@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fbf351f0d71893457419d3b8b0e2cfb9c96ad0b0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2aa8adc0ce197c3776b8314009fcaa061bed884d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-feature-details"></a>Szczegóły funkcji WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia szeroką gamę kontrolę nad funkcji obsługi wiadomości w aplikacji. Tematy w tej sekcji, przejdź do szczegółów dotyczących dostępnych funkcji. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]podstawowe programowania, zobacz [podstawowe programowania WCF](../../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -30,7 +31,7 @@ ms.lasthandoff: 12/02/2017
  [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  Opisuje sposób tworzenia i konfigurowania usług przepływu pracy.  
   
- [Punkty końcowe: Adresy powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Punkty końcowe: adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  Zawiera opis sposobu kontrolowania wiele aspektów usługi.  
   
  [Transfer i serializacja danych](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)  
@@ -48,10 +49,10 @@ ms.lasthandoff: 12/02/2017
  [Transakcje](../../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)  
  Wyjaśnia sposób tworzenia Operacje transakcyjne, które można wycofać ponownie, jeśli jest to konieczne.  
   
- [Zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
  Opisuje sposób [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczeń ułatwia tworzenie aplikacji, które mają poufności i integralności. Uwierzytelnianie i autoryzacja są również dostępne, ponieważ funkcje inspekcji.  
   
- [Sieci peer-to-Peer](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
+ [Sieci równorzędne](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)  
  Zawiera szczegóły dotyczące sposobu tworzenia elementów równorzędnych, usług i klientów.  
   
  [Metadane](../../../../docs/framework/wcf/feature-details/metadata.md)  
@@ -66,16 +67,16 @@ ms.lasthandoff: 12/02/2017
  [Współdziałanie i integracja](../../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)  
  Informacje dotyczące używania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rozszerzyć istniejącą logiki zamiast konieczności ponownego zapisania go, jeśli masz znaczących inwestycji w logice na podstawie składnika aplikacji hostowanej w modelu COM +.  
   
- [Model programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
+ [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)  
  Opisuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] programowania modelu sieci Web, dzięki której deweloperzy mogą uwidaczniać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] operacje punktów końcowych SOAP z systemem innym niż usługi.  
   
  [Syndykacja programu WCF](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)  
  W tym artykule opisano umożliwiają łatwe udostępnianie zespolonego źródła [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
   
- [Integracji AJAX i obsługi JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
+ [Obsługa integracji AJAX i notacji JSON](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)  
  W tym artykule opisano obsługę asynchronicznych języka JavaScript ASP.NET i XML (AJAX) i format danych JavaScript Object Notation (JSON), umożliwia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług do udostępnienia operacji klientom AJAX.  
   
- [Odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
+ [Odnajdywanie w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery.md)  
  Informacje pomocy technicznej, aby włączyć usługi będzie wykrywalny w czasie wykonywania w sposób interoperacyjne za pomocą protokołu WS-Discovery.  
   
  [Routing](../../../../docs/framework/wcf/feature-details/routing.md)  
@@ -91,4 +92,4 @@ ms.lasthandoff: 12/02/2017
  <xref:System.ServiceModel.Routing>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Programowanie podstawowe usługi WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)
+ [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)

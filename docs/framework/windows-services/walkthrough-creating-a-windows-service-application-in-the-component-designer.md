@@ -15,11 +15,12 @@ caps.latest.revision: "57"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: fb868aa38381294333538afcd99c030162d2f235
-ms.sourcegitcommit: 6f49c973f62855ffd6c4a322903e7dd50c5c1b50
+ms.workload: dotnet
+ms.openlocfilehash: 42fc5f27f1c78e243ff1d3a705c61a20ff459937
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/23/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-windows-service-application-in-the-component-designer"></a>Wskazówki: tworzenie aplikacji usługowej systemu Windows w Projektancie składników
 W tym artykule pokazano, jak utworzyć prostą aplikację usługi systemu Windows w programie Visual Studio, który zapisuje komunikaty do dziennika zdarzeń. Poniżej przedstawiono podstawowe kroki, które należy wykonać w celu tworzenia i używania usługi:  
@@ -490,5 +491,5 @@ Ten kod modyfikuje **ImagePath** klucz rejestru zwykle zawiera pełną ścieżk�
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje usług systemu Windows](../../../docs/framework/windows-services/index.md)  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Porady: debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Instrukcje: debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
  [Usługi (system Windows)](http://msdn.microsoft.com/library/windows/desktop/ms685141.aspx)

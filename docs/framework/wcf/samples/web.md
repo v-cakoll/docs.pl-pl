@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 541ddbcdaefc14c3b9915186761a7842959cd91e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 867d80ed54f4ee64f87938ac9af89e3e3b198d8c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web"></a>sieć Web
 Ta sekcja zawiera przykłady hostowanych w sieci Web.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zaawansowane Wybieranie formatu](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
+ [Zaawansowane wybieranie formatu](../../../../docs/framework/wcf/samples/advanced-format-selection.md)  
  Pokazuje, jak rozszerzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania protokołu HTTP sieci Web do obsługi nowych formatów odpowiedzi wychodzącej.  
   
  [Automatyczne wybieranie formatu](../../../../docs/framework/wcf/samples/automatic-format-selection.md)  
@@ -41,16 +42,16 @@ Ta sekcja zawiera przykłady hostowanych w sieci Web.
  [Warunkowe operacje Get i Put](../../../../docs/framework/wcf/samples/conditional-get-and-put.md)  
  Pokazuje, jak nowy pobrać warunkowe i zaktualizuj interfejsy API dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania protokołu HTTP sieci Web.  
   
- [Punktów końcowych HTTP i SOAP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
+ [Punkty końcowe protokołów SOAP i HTTP](../../../../docs/framework/wcf/samples/soap-and-http-endpoints.md)  
  Demonstracja implementacji usługi opartego na protokole RPC i udostępnić go w formacie protokołu SOAP i przy użyciu formatu "XML starego zwykły" (POX) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania protokołu HTTP sieci Web.  
   
  [Integracja buforowania platformy ASP.NET](../../../../docs/framework/wcf/samples/aspnet-caching-integration.md)  
  Pokazuje, jak korzystać z pamięci podręcznej danych wyjściowych programu ASP.NET z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] model programowania protokołu HTTP sieci Web.  
   
- [Obiekt UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
+ [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)  
  Przedstawia podstawowe pojęcia dotyczące <xref:System.UriTemplate>.  
   
- [Tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
+ [Tabela UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)  
  Pokazuje, jak <xref:System.UriTemplateTable> klasa udostępnia struktury tabeli asocjacyjnej słownika podobne do pracy z zestawem <xref:System.UriTemplate> wystąpień.  
   
  [Dyspozytor tabeli UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)  

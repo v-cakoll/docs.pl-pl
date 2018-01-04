@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 7104aa2fee49a21dab7fcc8392a9d4bb291203fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c6a3f95f2ecea342072de010a6cee51069f755fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-service-data-partitioning"></a>Instrukcje: Partycjonowanie danych usługi
 W tym temacie przedstawiono podstawowe czynności wymagane do partycji komunikaty w wielu wystąpieniach tej samej usługi docelowej. Partycjonowanie danych usługi jest zwykle używany w przypadku konieczności zmiany skali usługi w celu zapewnienia lepszej jakości usługi lub gdy potrzebne do obsługi żądań od innych klientów w określony sposób. Na przykład wiadomości z wysokiej wartości lub klientów "Złota" może być konieczne przetworzenie na wyższy priorytet niż komunikatów standardowych klienta.  

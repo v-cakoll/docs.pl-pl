@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: fe56dc279471f77a3f9ae014f65faaa99a113624
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87406da2c591f9f3a8f47adb2029bf1e239cc64e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego skompilowana do kodu źródłowego aplikacji można wyświetlić przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli kiedykolwiek zmieni się parametry połączenia, aplikacja musi ponownie skompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
@@ -180,7 +181,7 @@ Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemó
  Aby uzyskać więcej informacji, zabezpieczanie aplikacji ASP.NET, zobacz [NIB: zabezpieczenia w programie ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [ASP.NET 2.0 rozwiązania jeden rzut oka](http://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Konstruktorzy ciągów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Używanie klas konfiguracji](http://msdn.microsoft.com/library/98d2b386-baf6-4a17-974b-76e3b4c87acc)  
  [Konfigurowanie aplikacji](../../../../docs/framework/configure-apps/index.md)  

@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77e9f664ababa32cf0629f513f81b1e24030eac1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 26832827b0e92813802073adcb4c2db99dff0807
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>Jak zastosować wiele przekształceń do modelu 3-D
 Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.Media3D.RotateTransform3D> i <xref:System.Windows.Media.Media3D.ScaleTransform3D> do obracania i zmieniania skali 3-w modelu. Poniższy kod przedstawia sposób stosowania tych transformacji do <xref:System.Windows.Media.Media3D.Model3D.Transform%2A> właściwość <xref:System.Windows.Media.Media3D.GeometryModel3D> w języku XAML.  
@@ -45,4 +46,4 @@ Ten przykład przedstawia sposób użycia <xref:System.Windows.Media.Media3D.Rot
  [!code-vb[3DGallery_procedural_snip#Multiple3DTransformationsCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/3DGallery_procedural_snip/visualbasic/multipletransformationsexample.vb#multiple3dtransformationscodeexamplewholepage)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przekształć skali 3-modelu](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)
+ [Przekształcanie skali modelu 3D](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)

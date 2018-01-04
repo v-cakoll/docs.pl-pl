@@ -12,11 +12,12 @@ ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0c1f9ffd1df3861c2e9b000faccae381b04295dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ae193819b191e6a3a09f0556ff221960c1aeb7b3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Przewodnik po migracji do programu .NET Framework 4.7, 4.6 i 4.5 
 Jeśli utworzono aplikację przy użyciu wcześniejszej wersji programu .NET Framework, zazwyczaj uaktualnieniem go do programu .NET Framework 4.5 i jego wersje punktu (4.5.1 i 4.5.2), .NET Framework 4.6 i jego wersje punktu (4.6.1 i 4.6.2), lub .NET Framework 4.7 i jego punktu Zwolnij, .NET Framework 4.7.1, łatwe. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, **zgodność projektu** automatycznie zostanie otwarte okno dialogowe. Aby uzyskać więcej informacji na temat uaktualniania projektu programu Visual Studio, zobacz [portu, migracji i uaktualniania projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) i [programu Visual Studio 2017 platformy elementów docelowych i zgodności](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
@@ -36,11 +37,11 @@ Jeśli utworzono aplikację przy użyciu wcześniejszej wersji programu .NET Fra
   
 ## <a name="see-also"></a>Zobacz też  
  [Zgodność aplikacji](../../../docs/framework/migration-guide/application-compatibility.md)  
- [Migrowanie z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [Migracja z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
  [Zgodność wersji](../../../docs/framework/migration-guide/version-compatibility.md)  
  [Wersje i zależności](../../../docs/framework/migration-guide/versions-and-dependencies.md)  
- [Porady: Konfigurowanie aplikacji do obsługi platformy .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
- [Nowości](../../../docs/framework/whats-new/index.md)  
- [Co to jest przestarzałe w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Instrukcje: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5](../../../docs/framework/migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)  
+ [Co nowego](../../../docs/framework/whats-new/index.md)  
+ [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)  
  [.NET framework w wersji oraz informacje o zestawie](http://go.microsoft.com/fwlink/?LinkId=201701)  
  [Microsoft .NET Framework wsparcia technicznego produktów](http://go.microsoft.com/fwlink/?LinkId=196607) [problemy przy migracji programu .NET Framework 4](net-framework-4-migration-issues.md)

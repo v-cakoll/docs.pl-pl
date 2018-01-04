@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 381eccc42d5abb85cde618f4710f044f172295d5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interop-marshaling"></a>Marshaling międzyoperacyjny
 <a name="top"></a>Przekazywanie międzyoperacyjne decyduje o tym, jak dane są przekazywane w metody argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Przekazywanie międzyoperacyjne jest wykonywane przez usługę kierowania środowisko uruchomieniowe języka wspólnego firmy działalnością czasu wykonywania.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/18/2017
   
 -   [Tematy pokrewne](#related_topics)  
   
--   [Odwołanie](#reference)  
+-   [Dokumentacja](#reference)  
   
 <a name="platform_invoke_and_com_interop_models"></a>   
 ## <a name="platform-invoke-and-com-interop-models"></a>Wywołanie platformy i modele międzyoperacyjnego modelu COM  
@@ -153,11 +154,11 @@ Zdalne wywołania przez zapory przy użyciu protokołu SOAP lub klasy TcpChannel
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Domyślne zachowanie Marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)|Opisuje reguły, które usługa kierowania międzyoperacyjnego używa do organizowania danych.|  
+|[Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)|Opisuje reguły, które usługa kierowania międzyoperacyjnego używa do organizowania danych.|  
 |[Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)|Opisuje sposób deklarowanie parametrów metod i przekazywanie argumentów do funkcji wyeksportowane przez niezarządzanych bibliotek.|  
 |[Marshaling danych za pomocą modelu COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otoki COM, aby zmienić zachowanie marshalingu.|  
-|[Porady: Migrowanie zarządzanego kodu DCOM do WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|W tym artykule opisano sposób migracji z modelu DCOM do WCF.|  
-|[Porady: mapowanie wyników HRESULT i wyjątków](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Opisuje sposób odwzorowywania niestandardowymi wyjątkami wyników HRESULT i zapewnia pełną mapowania z każdego HRESULT do jej klasy można porównywać pod względem wyjątek w programie .NET Framework.|  
+|[Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|W tym artykule opisano sposób migracji z modelu DCOM do WCF.|  
+|[Instrukcje: Mapowanie wyników HRESULT i wyjątków](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Opisuje sposób odwzorowywania niestandardowymi wyjątkami wyników HRESULT i zapewnia pełną mapowania z każdego HRESULT do jej klasy można porównywać pod względem wyjątek w programie .NET Framework.|  
 |[Współdziałanie za pomocą typów ogólnych](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Opisuje akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
 |[Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)|Opisuje współdziałanie usług świadczonych przez środowisko uruchomieniowe języka wspólnego.|  
 |[Współdziałanie COM zaawansowane](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Zawiera łącza do dodatkowych informacji o włączenie składniki modelu COM aplikacji .NET Framework.|  

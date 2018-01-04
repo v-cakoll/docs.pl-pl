@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 97c07ce351de5b7939bdcaf441bc46dac50a8c23
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cb4e25c2c2a1832b662a23caa7d5f3d7090228ac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-identity"></a>Tożsamość obiektu
 Obiekty w środowisku uruchomieniowym mają unikatowych tożsamości. Dwie zmienne odwołujące się do tego samego obiektu faktycznie odwoływać się do tego samego wystąpienia obiektu. Ze względu na fakt ten zmiany wprowadzone na ścieżkę za pośrednictwem jednej zmiennej są od razu widoczne przez innych.  

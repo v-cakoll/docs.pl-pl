@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 30231ea756e80ddeac087fa8b3e46664860c26a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ecccda5b9570519f69cadc9214daded16edbc89
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ do SQL modelu obiektów
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy wyrażone w języku programowania dewelopera jest zamapowana do modelu danych relacyjnej bazy danych. Operacje na danych następnie są przeprowadzane zgodnie z modelem obiektu.  
@@ -91,5 +92,5 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obi
  Aby uzyskać więcej informacji, zobacz sekcje atrybut funkcji, przechowywane procedury atrybut i atrybut parametru [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md) i [procedur składowanych](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowanie opartych na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
+ [Mapowanie oparte na atrybutach](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)  
  [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -34,11 +34,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 11d455f16c5ee3ce78c26c7642831900e527b960
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikacji do wyświetlenia ciągów, obrazy i innych danych przez użytkownika języka i kultury oraz w celu zapewnienia alternatywnych danych, jeśli zasoby dla języka dla użytkownika lub kultury są niedostępne. .NET Framework wykorzystuje model gwiazdy — Aby znaleźć i pobrać zlokalizowanych zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny niemożliwe do zlokalizowania i zasobów dla kultury pojedynczego, nazywanego zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; Jeśli nie są dostępne nie zlokalizowanych zasobów jest używany. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut do wyznaczenia kultura kultury domyślnej aplikacji. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla pojedynczego kultury zlokalizowany, ale nie zawiera żadnego kodu. Ponieważ zestawów satelickich nie są częścią zestawu głównego, można łatwo aktualizacji lub zastąpienia zasobów, które odpowiadają określoną kulturę bez zastępowania główny zestaw aplikacji.  
@@ -320,6 +321,6 @@ gacutil /i:StringLibrary.resources.dll
  [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
  [Opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md)  
  [Al.exe (konsolidator zestawów)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [SN.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)

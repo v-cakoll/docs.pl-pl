@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 1e4fd15013f10667b397e010fff56b7bc6a0f641
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7453c4f650e2dcadd3b8fac27b66f4db97fa0136
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-game1-class"></a>Tworzenie klasy Game1
 Jak z wszystkich projektów Microsoft XNA pochodną klasy Game1 [Microsoft.Xna.Framework.Game](http://msdn.microsoft.com/library/microsoft.xna.framework.game.aspx) klasy, która dostarcza inicjowania urządzenia podstawowe grafiki, gier logiki i renderowania kodu dla platformy XNA gier. Klasy Game1 jest dość proste, ponieważ większość pracy w GamePiece i GamePieceCollection klasy.  
@@ -45,7 +46,7 @@ Jak z wszystkich projektów Microsoft XNA pochodną klasy Game1 [Microsoft.Xna.F
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulacje i bezwładność](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
- [Korzystanie z manipulacji i bezwładności w aplikacji platformy XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Korzystanie z manipulacji i bezwładności w aplikacjach XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [Tworzenie klasy GamePiece](../../../docs/framework/common-client-technologies/creating-the-gamepiece-class.md)  
  [Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Listy pełnego kodu](../../../docs/framework/common-client-technologies/full-code-listings.md)

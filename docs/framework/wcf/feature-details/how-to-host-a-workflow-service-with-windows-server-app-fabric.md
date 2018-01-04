@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d8a2f0883a2d83ad5b3c1a2a3dd6c7e016583af7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc7af813f7fff422a2513c58c9e3cba6376de060
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>Instrukcje: Hostowanie usługi przepływu pracy przy użyciu rozwiązania AppFabric w systemie Windows Server
 Hostowanie usług przepływu pracy w aplikacji sieci szkieletowej jest podobny do hostingu w środowisku usług IIS / WAS. Jedyna różnica polega na te narzędzia, które zapewnia AppFabric wdrażania, monitorowania i zarządzania usług przepływu pracy. W tym temacie korzysta z usługi przepływu pracy utworzone w [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md). Ten temat przeprowadzi Cię przez proces tworzenia usługi przepływu pracy. W tym temacie objaśnia sposób hosta usługi przepływu pracy przy użyciu aplikacji sieci szkieletowej. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Windows Server AppFabric, zobacz [dokumentacją sieci szkieletowej systemu Windows Server aplikacji](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409). Przed wykonaniem poniższych instrukcji upewnij się, że masz systemu Windows Server AppFabric zainstalowane.  Aby zrobić to open zapasowej Internetowe usługi informacyjne (inetmgr.exe), kliknij nazwę serwera w **połączeń** wyświetlić, kliknij przycisk witryny, a następnie kliknij przycisk **domyślna witryna sieci Web**. W prawej części ekranu powinna być widoczna sekcja o nazwie **AppFabric**. Jeśli nie widzisz tej sekcji (będzie górnej części okienka po prawej stronie) nie masz AppFabric zainstalowane. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Instalowanie systemu Windows Server AppFabric zobacz [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136).  
@@ -101,7 +102,7 @@ Hostowanie usług przepływu pracy w aplikacji sieci szkieletowej jest podobny d
      Aby uzyskać więcej informacji na temat systemu Windows Server AppFabric funkcje i sposobu ich używania, zobacz [Hosting funkcje systemu Windows Server aplikacji sieci szkieletowej](http://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie usługi przepływu pracy długotrwałe](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
+ [Tworzenie długo działającej usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)  
  [Windows Server AppFabric funkcje hostingu](http://go.microsoft.com/fwlink/?LinkId=193143)  
  [Instalowanie systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkId=193136)  
  [Dokumentację systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)

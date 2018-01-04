@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c5bfafcad5f1f60e7e763b69f220188517d29f17
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 Parametry i pola typu <xref:System.Object?displayProperty=nameWithType> można wyświetlać do kodu niezarządzanego jako jeden z następujących typów:  
@@ -339,7 +340,7 @@ Wariantów przekazywane według wartości i według odwołania
 |**Variant***v* **(VT_BYREF** *&#124;* **VT_)** |**Odwołanie***o* |Tylko wtedy, gdy typ nie został zmieniony.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie Marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Typy Kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
+ [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [Atrybuty kierunkową](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)

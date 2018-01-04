@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 20deffe53c677e01a7bff1a5e2fd3e2a4f0637af
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4169cb730f36ded3894f79966c3e3e4fa85f094c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="systemservicemodelservicehostcreation"></a>System.ServiceModel.ServiceHostCreation
 System.ServiceModel.ServiceHostCreation  
@@ -28,4 +29,4 @@ System.ServiceModel.ServiceHostCreation
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)

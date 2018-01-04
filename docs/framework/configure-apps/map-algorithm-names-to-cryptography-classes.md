@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e59b2551545b8b70bcb54a5d43d041c44579b786
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9c9c5b1f69200d4ee5d39c98445b668813718dd9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>Mapowanie nazw algorytmów na klasy kryptografii
 Istnieją cztery metody dewelopera można utworzyć obiektu kryptografii przy użyciu [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
@@ -79,4 +80,4 @@ Istnieją cztery metody dewelopera można utworzyć obiektu kryptografii przy u�
   
 ## <a name="see-also"></a>Zobacz też  
  [Usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md)  
- [Konfigurowanie klasy kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+ [Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 7fe48904a59751da3f4089153b32ac68cc6f4b6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4cd38d8e026b3cf4bb0bf224f81be9bdab23e06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  
@@ -447,8 +448,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy Kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
+ [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
  [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)  
- [Organizowanie domyślne dotyczące tablic](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Organizowanie domyślne dotyczące obiektów](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Organizowanie domyślne dotyczące ciągów](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Domyślny marshaling dla tablic](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
+ [Domyślny marshaling dla obiektów](../../../docs/framework/interop/default-marshaling-for-objects.md)  
+ [Domyślny marshaling dla ciągów](../../../docs/framework/interop/default-marshaling-for-strings.md)

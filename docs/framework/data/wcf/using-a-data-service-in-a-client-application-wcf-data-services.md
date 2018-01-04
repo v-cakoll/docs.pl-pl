@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 79c4f7e066f4961caa66d3fd19dee9eb0f21ada4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usługi danych w aplikacji klienckiej (usługi danych WCF)
 Można uzyskać dostępu to usługa, która przedstawia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI zawiera adres zasobu, a żądanie komunikaty są wysyłane do tych adresów na dostęp lub zmienić danych, który reprezentuje zasobu. W przeglądarce polecenia HTTP GET i zwraca wartość żądanego zasobu jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarką sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -62,5 +63,5 @@ Można uzyskać dostępu to usługa, która przedstawia [!INCLUDE[ssODataFull](.
  Są dostępne, której można korzystać z biblioteki programistyczne [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w innych rodzajach aplikacji klienckich. Aby uzyskać więcej informacji, zobacz [OData SDK](http://go.microsoft.com/fwlink/?LinkId=185796).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podczas uzyskiwania dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
- [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)
+ [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

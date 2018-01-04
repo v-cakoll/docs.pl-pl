@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 143447020f41368a3553a0c8cda78e80806b75ba
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0424a92f2308c21404cf35cd59c797498e6af992
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-adonet-applications"></a>Zabezpieczanie aplikacji ADO.NET
 Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólnej kodowania problemów, takich jak nie Walidacja danych wejściowych użytkownika. Aplikacja, która uzyskuje dostęp do danych ma wiele punktów potencjalnych awarii, które osoba atakująca może wykorzystać do pobrania, manipulowania lub zniszczenie poufnych danych. W związku z tym ważne jest zrozumienie wszystkie aspekty zabezpieczeń w procesie modelowania w fazie projektowania aplikacji, w celu jego ostatecznego wdrażaniem i konserwacją bieżących zagrożeń.  
@@ -33,7 +34,7 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólne
  [Bezpieczny dostęp do danych](../../../../docs/framework/data/adonet/secure-data-access.md)  
  Opisuje sposób pracy z danymi ze źródła zabezpieczonych danych.  
   
- [Zabezpieczanie aplikacji klienckich](../../../../docs/framework/data/adonet/secure-client-applications.md)  
+ [Zabezpieczanie aplikacje klienckich](../../../../docs/framework/data/adonet/secure-client-applications.md)  
  W tym artykule opisano zagadnienia dotyczące zabezpieczeń dla aplikacji klienckich.  
   
  [Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)  
@@ -46,10 +47,10 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólne
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  Opisuje funkcje zabezpieczeń programu SQL Server z punktu widzenia dewelopera.  
   
- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/data/adonet/ef/security-considerations.md)  
  W tym artykule opisano zabezpieczenia dla aplikacji programu Entity Framework.  
   
- [Zabezpieczeń](../../../../docs/standard/security/index.md)  
+ [Zabezpieczenia](../../../../docs/standard/security/index.md)  
  Zawiera łącza do tematów opisujących wszystkie aspekty zabezpieczeń w programie .NET Framework.  
   
  [Narzędzia zabezpieczeń](http://msdn.microsoft.com/en-us/2a3eb98a-2de6-4fba-b41c-01a74d354c11)  
@@ -58,7 +59,7 @@ Pisanie zabezpieczonej aplikacji ADO.NET obejmuje więcej niż unikanie wspólne
  [Zasoby służące do tworzenia bezpiecznych aplikacji](http://msdn.microsoft.com/en-us/0ebf5f69-76f2-498a-a2df-83cf3443e132)  
  Zawiera łącza do tematów do tworzenia bezpiecznego aplikacji.  
   
- [Bibliografia dotyczące zabezpieczeń](/visualstudio/ide/security-bibliography)  
+ [Bibliografia dotycząca zabezpieczeń](/visualstudio/ide/security-bibliography)  
  Zawiera linki do zasobów zewnętrznych dostępna online i drukowania.  
   
 ## <a name="see-also"></a>Zobacz też  

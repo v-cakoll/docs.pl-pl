@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 90fa57bae7bec1fb7f29ad566e92ae9143a39539
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2835f1fdbe2132feb929a5264d3b2772d8f66377
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Zarządzany Asystent debugowania (MDA) wykrywa próby wykonania kodu zarządzanego w wątku, który posiada blokady modułu ładującego systemu operacyjnego Microsoft Windows.  Takie wykonanie jest niedozwolona, ponieważ może to prowadzić do zakleszczenia i korzystanie z bibliotek DLL, zanim zostały zainicjowane przez modułu ładującego systemu operacyjnego.  
@@ -64,4 +65,4 @@ ms.lasthandoff: 10/18/2017
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Diagnozowanie błędów przy użyciu Asystenci zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+ [Diagnozowanie błędów przy użyciu asystentów zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

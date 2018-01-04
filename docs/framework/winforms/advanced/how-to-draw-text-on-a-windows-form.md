@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 23919145a04bb4b3d1674b153649aca2228364eb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 03e663f455a348b2699331ec5bf1ea6df2e54493
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>Porady: rysowanie tekstu w formularzu systemu Windows
 Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Drawing.Graphics.DrawString%2A> metody <xref:System.Drawing.Graphics> Rysowanie tekstu w formularzu. Alternatywnie można użyć <xref:System.Windows.Forms.TextRenderer> dla Rysowanie tekstu w formularzu. Aby uzyskać więcej informacji, zobacz [porady: Rysowanie tekstu z GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md).  
@@ -50,4 +51,4 @@ Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Drawing.Grap
  <xref:System.Windows.Forms.TextFormatFlags>  
  <xref:System.Windows.Forms.Control.OnPaint%2A>  
  [Wprowadzenie do programowania grafiki](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)  
- [Porady: Rysowanie tekstu z GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)
+ [Instrukcje: rysowanie tekstu za pomocą GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)

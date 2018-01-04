@@ -15,11 +15,12 @@ caps.latest.revision: "54"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 57fd183b042779d06274573db7b4569dbe6a54d0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c87034827d0295578f9a7efe134d158291f87713
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-fundamentals"></a>Podstawowe założenia automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -31,11 +32,11 @@ ms.lasthandoff: 10/18/2017
  [Przegląd automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-overview.md)  
  [Automatyzacja interfejsu użytkownika a Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
  [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Przegląd wzorców formantu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
  [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [Przy użyciu automatyzacji interfejsu użytkownika do testów automatycznych](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Automation>  

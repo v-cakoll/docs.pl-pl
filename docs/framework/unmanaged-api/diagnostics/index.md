@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4b9b37e89ce364a814142c20a403064cfc0bff10
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c60d70013e79360c05062a497d1f9f060e187ce9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>Magazyn symboli diagnostycznych (Niezarządzany wykaz interfejsów API)
 API magazynu symboli diagnostycznych umożliwia kompilatorowi generowanie informacji o symbolach do użycia przez debuger.  

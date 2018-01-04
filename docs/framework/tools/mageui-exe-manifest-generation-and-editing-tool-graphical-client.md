@@ -16,11 +16,12 @@ caps.latest.revision: "38"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7b7b77622ee4305dde3d126cb2e062055aa9df4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
 MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.exe, ale z interfejsem użytkownika systemu Windows (UI). Za pomocą tego narzędzia można tworzyć, edytować i podpisywać manifesty wdrażania i aplikacji. Nowe manifestów, które są tworzone z elementem docelowym MageUI.exe [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Poprzednie wersje MageUI.exe stosuje się do poprzednich wersji .NET Framework. Dodawanie lub usuwanie zestawów z manifestu lub ponownego podpisania manifestów istniejących, MageUI.exe nie zaktualizował manifest docelowej [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aby uzyskać więcej informacji, zobacz [Mage.exe (Generowanie manifestu i edytowania narzędzie)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -129,7 +130,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Wypełnij**|Dodaje do manifestu aplikacji wszystkie pliki w katalogu aplikacji i jego podkatalogach. Jeśli MageUI.exe znajduje pojedynczy plik wykonywalny w katalogu, automatycznie oznacza to jako punkt wejścia, który jest wykonywany jako pierwszy, po uruchomieniu aplikacji ClickOnce na kliencie pliku.|  
 |**Pliki aplikacji**|Wyświetla listę wszystkich plików w aplikacji. Każdy plik ma trzy edytowalne atrybuty omówiony poniżej.|  
 |**Typ pliku**|Typ pliku może być jedna z cztery wartości:<br /><br /> -Brak.<br />— Punkt wejścia. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może być oznaczony jako punkt wejścia.<br />-Dane plików. Plik, takich jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikona. Na pulpicie lub w rogu okna aplikacji takich jak pojawi się ikona aplikacji.|  
-|**Opcjonalne**|Pliki oznaczone jako opcjonalne nie zostaną pobrane na początkowej instalacji lub aktualizacji, ale może zostać pobrana w czasie wykonywania za pomocą interfejsu API System.Deployment na żądanie. Aby uzyskać więcej informacji, zobacz [wskazówki: Pobieranie zestawów na żądanie z ClickOnce wdrażania interfejsu API przy użyciu narzędzia Projektant](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
+|**Optional**|Pliki oznaczone jako opcjonalne nie zostaną pobrane na początkowej instalacji lub aktualizacji, ale może zostać pobrana w czasie wykonywania za pomocą interfejsu API System.Deployment na żądanie. Aby uzyskać więcej informacji, zobacz [wskazówki: Pobieranie zestawów na żądanie z ClickOnce wdrażania interfejsu API przy użyciu narzędzia Projektant](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grupy**|Etykieta dla zestawu plików opcjonalne. Można zastosować Etykieta grupy do zestawu plików i pobieranie plików przy użyciu jednego wywołania interfejsu API partii za pomocą interfejsu API na żądanie.|  
   
 ### <a name="permissions-required-tab"></a>Na karcie wymagane uprawnienia  
@@ -200,6 +201,6 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Wybierz manifestu**|Umożliwia wybór manifest aplikacji. Wszystkie pola na tej stronie są powielane po wybraniu manifest aplikacji.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment)  
- [Wskazówki: Ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
- [Mage.exe (Generowanie manifestu i edytowania narzędzie)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)
+ [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)  
+ [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

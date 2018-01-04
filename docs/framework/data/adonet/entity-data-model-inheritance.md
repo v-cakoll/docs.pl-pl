@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 15862f545092d0573b97b77d6cdb2e1fcdc33978
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 421a2bdbf2652880097fb1df3c9b63f38ac2bd10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-inheritance"></a>Modelu danych jednostki: dziedziczenie
 Modelu danych jednostki (EDM) obsługuje dziedziczenia dla [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md). Dziedziczenie w modelu EDM jest podobny do dziedziczenia klas w zorientowane obiektowo języków programowania. Tak jak w przypadku klas w językach zorientowane obiektowo w modelu koncepcyjnym można zdefiniować typu jednostki ( *typu pochodnego*) dziedziczący z innego typu jednostki ( *typ podstawowy*). Jednak w przeciwieństwie do klas w programowanie zorientowane obiektowo, w modelu koncepcyjnym Typ pochodny zawsze dziedziczy wszystkie [właściwości](../../../../docs/framework/data/adonet/property.md) i [właściwości nawigacji](../../../../docs/framework/data/adonet/navigation-property.md) typu podstawowego. Nie można przesłonić dziedziczonego właściwości w typie pochodnym.  
@@ -37,4 +38,4 @@ Modelu danych jednostki (EDM) obsługuje dziedziczenia dla [typów jednostek](..
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

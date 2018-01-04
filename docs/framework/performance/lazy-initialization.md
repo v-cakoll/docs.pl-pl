@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1ffa3cb853a02af21ca1dd528174e560b8d830a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f4998cc0c836cf46d79d854ad9a85e7eacf70d7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lazy-initialization"></a>Inicjalizacja z opóźnieniem
 *Inicjalizacja z opóźnieniem* obiektu oznacza, że jej tworzenia została odroczona aż najpierw jest używany. (W tym temacie warunki *incjalizacji* i *opóźnieniem wystąpienia* to samo.) Inicjalizacja z opóźnieniem służy głównie w celu zwiększenia wydajności, uniknąć niepotrzebne obliczeń i zmniejszyć wymagania dotyczące pamięci programu. Są to najbardziej typowych scenariuszy:  
@@ -163,4 +164,4 @@ ms.lasthandoff: 11/21/2017
  [Zarządzana wątkowość — podstawy](../../../docs/standard/threading/managed-threading-basics.md)  
  [Wątki i wątkowość](../../../docs/standard/threading/threads-and-threading.md)  
  [Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)  
- [Porady: wykonywanie Incjalizacji obiektów](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+ [Instrukcje: wykonywanie inicjowania obiektów z opóźnieniem](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

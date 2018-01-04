@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fe6affcf82a16a4fd51a5e5a4bf33b247dae0688
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1096942775dd579fa530415873694b3e6e67a74a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 — Interfejs
 Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorDebugILFrame3`to rozszerzenie logicznej interfejsów ICorDebugILFrame i ICorDebugILFrame2.  
@@ -30,7 +31,7 @@ Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorD
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetReturnValueForILOffset — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Pobiera obiekt ICorDebugValue hermetyzujący wartość zwracaną przez funkcję.|  
+|[GetReturnValueForILOffset, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|Pobiera obiekt ICorDebugValue hermetyzujący wartość zwracaną przez funkcję.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -47,5 +48,5 @@ Dostarcza metodę, która hermetyzuje wartość zwracaną przez funkcję. `ICorD
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v451plus](../../../../includes/net-current-v451plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Icordebugcode3 — interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [ICorDebugCode3, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

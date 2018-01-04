@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 1d4746e2303949ddeabee36e4875e7480467f33e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 868ab986a0f7343e2efd2d4b5f7016d0554084cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="socket-performance-enhancements-in-version-35"></a>Ulepszenia wydajności gniazda w wersji 3.5
 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> Klasa została rozszerzona w wersji 3.5 do użycia przez aplikacje używające sieci asynchroniczne We/Wy, aby osiągnąć najwyższą wydajność. Dodano szereg nowych klas jako część zestawu rozszerzeń <xref:System.Net.Sockets.Socket> klasy, która zapewnić alternatywne wzorca asynchronicznego, które mogą być używane przez aplikacje specjalistyczne gniazda wysokiej wydajności. Te ulepszenia zostały zaprojektowane specjalnie dla aplikacji serwera sieci, które wymagają wysokiej wydajności. Aplikację można używać wyłącznie rozszerzone wzorca asynchronicznego lub tylko w docelowe gorących obszary aplikacji (w przypadku odbierania dużej ilości danych, na przykład).  
@@ -47,5 +48,5 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Net.Sockets.SendPacketsElement?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncEventArgs?displayProperty=nameWithType>  
  <xref:System.Net.Sockets.SocketAsyncOperation?displayProperty=nameWithType>  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Próbka technologii wydajności gniazda](http://go.microsoft.com/fwlink/?LinkID=179570)

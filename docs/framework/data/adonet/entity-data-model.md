@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69b72a824e6f9468c9b3d86073243d506382e766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8433376c9950594b57b800b401d68d849e743d85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model"></a>Entity Data Model
 Modelu danych jednostki (EDM) to zestaw kwestie dotyczące struktury danych, niezależnie od jego przechowywanych formularza. EDM obiektowy opisanego przez Chen Peterowi w 1976 modelu Relacja jednostki, ale również oparty na modelu Relacja jednostki i zwiększa jego tradycyjnego wykorzystania.  
@@ -31,47 +32,47 @@ Modelu danych jednostki (EDM) to zestaw kwestie dotyczące struktury danych, nie
   
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
   
- [Modelu danych jednostki: przestrzenie nazw](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
+ [Model danych jednostki: Przestrzenie nazw](../../../../docs/framework/data/adonet/entity-data-model-namespaces.md)  
   
- [Modelu Entity Data Model: Typy danych pierwotnych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
+ [Model danych jednostki: Typy danych pierwotnych](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)  
   
- [Modelu danych jednostki: dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
+ [Model danych jednostki: Dziedziczenie](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)  
   
  [punkt końcowy skojarzenia](../../../../docs/framework/data/adonet/association-end.md)  
   
- [skojarzenie liczebność zakończenia](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
+ [skojarzenie i liczebność](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set.md)  
+ [zestaw skojarzeń](../../../../docs/framework/data/adonet/association-set.md)  
   
- [Konfigurowanie skojarzenia](../../../../docs/framework/data/adonet/association-set-end.md)  
+ [punkt końcowy zestawu skojarzeń](../../../../docs/framework/data/adonet/association-set-end.md)  
   
- [Typ powiązania](../../../../docs/framework/data/adonet/association-type.md)  
+ [typ skojarzenia](../../../../docs/framework/data/adonet/association-type.md)  
   
- [Typ złożony](../../../../docs/framework/data/adonet/complex-type.md)  
+ [typ złożony](../../../../docs/framework/data/adonet/complex-type.md)  
   
- [kontenera jednostek](../../../../docs/framework/data/adonet/entity-container.md)  
+ [kontener jednostek](../../../../docs/framework/data/adonet/entity-container.md)  
   
  [klucz jednostki](../../../../docs/framework/data/adonet/entity-key.md)  
   
- [Zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md)  
+ [zestaw jednostek](../../../../docs/framework/data/adonet/entity-set.md)  
   
- [Typ jednostki](../../../../docs/framework/data/adonet/entity-type.md)  
+ [typ jednostki](../../../../docs/framework/data/adonet/entity-type.md)  
   
  [aspekt](../../../../docs/framework/data/adonet/facet.md)  
   
- [Właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)  
+ [właściwość klucza obcego](../../../../docs/framework/data/adonet/foreign-key-property.md)  
   
- [Funkcja zadeklarowana modelu](../../../../docs/framework/data/adonet/model-declared-function.md)  
+ [funkcja zadeklarowana modelu](../../../../docs/framework/data/adonet/model-declared-function.md)  
   
  [funkcja zdefiniowana przez model](../../../../docs/framework/data/adonet/model-defined-function.md)  
   
- [Właściwość nawigacji](../../../../docs/framework/data/adonet/navigation-property.md)  
+ [właściwość nawigacji](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [Właściwość](../../../../docs/framework/data/adonet/property.md)  
+ [właściwość](../../../../docs/framework/data/adonet/property.md)  
   
  [ograniczenie integralności referencyjnej](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)  
  [Omówienie plików edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
- [Specyfikacja pliku CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)
+ [Specyfikacja CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e069c1636004896bfb193fd70a352195ba045865
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 96b3105dcd1eaf6d95269d05518e6892b42a638f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="assembly-location"></a>Lokalizacja zestawu
 Lokalizacji zestawu Określa, czy można zlokalizować gdy odwołuje się do środowisko uruchomieniowe języka wspólnego i można również określić, czy zestaw może być współużytkowana z innych zestawów. Można wdrożyć zestawu w następujących lokalizacjach:  
@@ -39,6 +40,6 @@ Lokalizacji zestawu Określa, czy można zlokalizować gdy odwołuje się do śr
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
- [Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/gac.md)  
- [Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Global Assembly Cache](../../../docs/framework/app-domains/gac.md)  
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

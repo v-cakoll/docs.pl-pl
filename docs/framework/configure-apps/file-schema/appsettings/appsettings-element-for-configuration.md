@@ -12,11 +12,12 @@ ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
 author: guardrex
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: cb59120d88816ea193bd8588b152d6b848b682d2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cebb9ba7ebeb483233276324289a4ddc5a0bc381
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="appsettings-element-for-configuration"></a>\<appSettings > elementu \<configuration >
 
@@ -55,7 +56,7 @@ Zawiera ustawienia aplikacji niestandardowej. Jest to sekcję konfiguracji wstę
 
 ## <a name="remarks"></a>Uwagi
 
-**\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do pliku, adresy URL usługi XML sieci Web lub innych informacji konfiguracji niestandardowej dla aplikacja. Pary klucz wartość określona w  **\<appSettings >** elementu są dostępne w kodu za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
+ **\<AppSettings >** element przechowuje informacje o konfiguracji niestandardowej aplikacji, takich jak parametry połączenia bazy danych, ścieżki do pliku, adresy URL usługi XML sieci Web lub innych informacji konfiguracji niestandardowej dla aplikacja. Pary klucz wartość określona w  **\<appSettings >** elementu są dostępne w kodu za pomocą <xref:System.Configuration.ConfigurationSettings> klasy.
 
 Można użyć **pliku** atrybutu w  **\<appSettings >** elementu *Web.config* i pliki konfiguracji aplikacji. Ten atrybut określa plik konfiguracji, który udostępnia dodatkowe ustawienia lub zastępuje ustawienia określone w  **\<appSettings >** elementu. **Pliku** atrybut może być używany w źródła formantu zespołu scenariusze programowania, np. gdy użytkownik chce, aby zastąpić ustawienia projektu określony w pliku konfiguracji aplikacji.
 

@@ -14,23 +14,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432b9935113a700160f89ad427ebf5cade6d0e99
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 40c304ba3af28b20dfe158a40ef9cf2e7dd5b083
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="filedialog-class"></a>FileDialog — Klasa
 Formularze systemu Windows <xref:System.Windows.Forms.FileDialog> klasy jest wspólna klasa podstawowa dla <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> składników. Można wprowadzać zmiany do <xref:System.Windows.Forms.FileDialog> klasy, które mają wpływ na wygląd i zachowanie tych okien dialogowych, w zależności od wersji systemu Windows, aplikacja jest uruchomiona na.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Opcja rezygnacji z automatycznej aktualizacji okno dialogowe pliku](../../../../docs/framework/winforms/controls/how-to-opt-out-of-file-dialog-box-automatic-upgrade.md)  
+ [Instrukcje: jak nie zgadzać się na uczestnictwo dotyczące automatycznego uaktualniania okna dialogowego obsługi pliku](../../../../docs/framework/winforms/controls/how-to-opt-out-of-file-dialog-box-automatic-upgrade.md)  
  Opisuje sposób rezygnacji z automatycznej aktualizacji stylów, okno dialogowe pliku.  
   
- [Porady: Dodawanie Custom Place do okna dialogowego pliku](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)  
+ [Instrukcje: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)  
  Opisuje sposób dodawania lokalizację niestandardowego pliku do okna dialogowego pliku.  
   
- [Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego pliku](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)  
+ [Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)  
  Lista nazw folderów i ich skojarzonych identyfikatorów GUID.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -39,6 +40,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.FileDialog> klasy jest wsp
  <xref:System.Windows.Forms.SaveFileDialog>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Openfiledialog — składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
+ [OpenFileDialog, składnik](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)  
   
- [Savefiledialog — składnik](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+ [SaveFileDialog, składnik](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)

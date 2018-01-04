@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e03a38e2a93dd866bc3da65527d5410b09009e00
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b95ee7c28c67ff861dc401d1405306c78b9663de
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>Instrukcje: Udostępnianie certyfikatów X.509 w architekturze WCF
 Aby udostępnić certyfikat X.509 do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], kod aplikacji należy określić nazwę magazynu certyfikatów i lokalizacji. W pewnych okolicznościach tożsamość procesu musi mieć dostęp do pliku, który zawiera klucz prywatny skojarzony z certyfikatem X.509. Aby uzyskać klucz prywatny skojarzony z certyfikatem X.509 w magazynie certyfikatów [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] musi mieć uprawnienia, aby to zrobić. Domyślnie tylko właściciel i konta System można uzyskać dostępu do klucza prywatnego certyfikatu.  
@@ -82,5 +83,5 @@ Aby udostępnić certyfikat X.509 do [!INCLUDE[indigo1](../../../../includes/ind
   
 ## <a name="see-also"></a>Zobacz też  
  [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)  
- [Porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
+ [Instrukcje: pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)  
  [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: dbc97aec2fc9758df17767188c6b4d044b5016fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e317cb24e0eeaeaa38833433791eb546ee3c0478
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugheapenum-interface"></a>ICorDebugHeapEnum — Interfejs
 Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfejs jest podklasą klasy interfejsu ICorDebugEnum.  
@@ -32,7 +33,7 @@ Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfe
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Next — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Pobiera określoną liczbę [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stercie zarządzanej.|  
+|[Next, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md)|Pobiera określoną liczbę [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) wystąpień, które zawierają informacje dotyczące obiektów na stercie zarządzanej.|  
   
 ## <a name="remarks"></a>Uwagi  
  `ICorDebugHeapEnum` Interfejsu implementuje interfejs ICorDebugEnum.  
@@ -49,4 +50,4 @@ Dostarcza moduł wyliczający dla obiektów na zarządzanej stercie. Ten interfe
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

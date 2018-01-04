@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5eb97ea9db0fa7132b1ed4320bf73d124452c201
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (usługi danych WCF)
 Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane binarne może reprezentować strumienie audio i wideo, obrazów, plików dokumentów lub binarne nośników innych typów. Kiedy jednostki w modelu danych obejmuje co najmniej jednej właściwości binarnych, Usługa danych zwraca to dane binarne zakodowane jako base-64 wewnątrz wpis w odpowiedzi źródła danych. Ponieważ ładowanie i serializacji dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, niezależnie od podmiotu, do którego należy. Jest to osiągane przez rozdzielić danych binarnych z jednostki jeden lub więcej strumieni danych.  
@@ -53,7 +54,7 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
 ## <a name="defining-a-media-link-entry-in-the-data-model"></a>Definiowanie wpisu łącza nośnika w modelu danych  
  Dostawca źródła danych określa sposób, że jednostka jest zdefiniowany jako wpisu media link entry w modelu danych.  
   
- **Dostawcy programu Entity Framework**  
+ **Dostawca programu Entity Framework**  
  Aby wskazać, że jednostka jest wpisem łącza nośnika, należy dodać `HasStream` atrybutu do definicji typu jednostki w modelu koncepcyjnym, jak w poniższym przykładzie:  
   
  [!code-xml[Astoria Photo Streaming Service#HasStream](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria photo streaming service/xml/photodata.edmx#hasstream)]  
@@ -140,6 +141,6 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
  Aby uzyskać więcej informacji, zobacz [przechowywanie wersji usługi danych](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
- [Niestandardowych dostawców usług danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
- [Praca z danych binarnych](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)
+ [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Niestandardowi dostawcy usługi danych](../../../../docs/framework/data/wcf/custom-data-service-providers-wcf-data-services.md)  
+ [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de970bf27fdf3365daa0ac515852a68d01a246eb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 857ec77e54d6a55bde1a94fd9fd5758ef7a24309
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-services"></a>Konfigurowanie usług
 Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do konfigurowania usługi. To pozwala definiować i dostosowywać, jak usługa jest widoczne dla klientów, łącznie z określeniem adres, gdzie można je znaleźć, transport i kodowanie wiadomości używanych do wysyłania i odbierania wiadomości oraz typ zabezpieczeń, które wymaga.  
@@ -41,7 +42,7 @@ Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do k
  [Zabezpieczanie usług](../../../docs/framework/wcf/securing-services.md)  
  Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] i istniejące mechanizmy zabezpieczeń, można zaimplementować poufność, integralność, uwierzytelniania i autoryzacji do dowolnej usługi. Można również przeprowadzać inspekcję dla zabezpieczeń sukcesy i niepowodzenia.  
   
- [Tworzenie usługi WS-I Basic Profile 1.1 usługi międzyoperacyjne](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
+ [Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I](../../../docs/framework/wcf/creating-ws-i-basic-profile-1-1-interoperable-services.md)  
  Wymagania dotyczące wdrażania usługi, która współdziała z usług i klientów na dowolnej platformie lub systemu operacyjnego zostały opisane w WS-I Basic Profile 1.1 specyfikacji.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -54,7 +55,7 @@ Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do k
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   
- [Projektowanie i Implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+ [Projektowanie i implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
  [Usługi hostingowe](../../../docs/framework/wcf/hosting-services.md)  
   
@@ -62,9 +63,9 @@ Po zaprojektowane i zaimplementowane umowy serwisowej, możesz przystąpić do k
   
  [Wprowadzenie do rozszerzalności](../../../docs/framework/wcf/introduction-to-extensibility.md)  
   
- [Administracja i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie podstawowe usługi WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
  [Omówienie pojęć](../../../docs/framework/wcf/conceptual-overview.md)  
  [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)

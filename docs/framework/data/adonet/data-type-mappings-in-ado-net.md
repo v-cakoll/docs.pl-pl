@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 65f9d8a6182c5882a173a3a3733c1c0c220efbf6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b30f4e36ffd98289bb971e04b55b0249138e0efd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-type-mappings-in-adonet"></a>Mapowanie typu danych w ADO.NET
 .NET Framework jest oparta na wspólny system typów, który definiuje sposób typy są zadeklarowany, używane i zarządzane w czasie wykonywania. Zawiera typy wartości i typy referencyjne, które wynikają z <xref:System.Object> typ podstawowy. Podczas pracy ze źródłem danych, wywnioskować typu danych od dostawcy danych, jeśli nie został jawnie określony. Na przykład <xref:System.Data.DataSet> obiektu jest niezależna od wszelkich określonego źródła danych. Dane w `DataSet` jest pobierana ze źródła danych i zmiany są zachowywane do źródła danych przy użyciu `DataAdapter`. Oznacza to, że w przypadku `DataAdapter` wypełnia <xref:System.Data.DataTable> w `DataSet` z wartości ze źródła danych, wynikowy typy danych kolumn w `DataTable` są [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typów, zamiast specyficzne dla typów [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych Dostawca używany do nawiązania połączenia ze źródłem danych.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/21/2017
  [Mapowanie typu danych serwera SQL](../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
  Wyświetla wywnioskować mapowanie typu danych i danych metod typu accessor dla <xref:System.Data.SqlClient>.  
   
- [Mapowanie typu danych bazy danych OLE](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
+ [Mapowanie typu danych OLE DB](../../../../docs/framework/data/adonet/ole-db-data-type-mappings.md)  
  Wyświetla wywnioskować mapowanie typu danych i danych metod typu accessor dla <xref:System.Data.OleDb>.  
   
  [Mapowanie typu danych ODBC](../../../../docs/framework/data/adonet/odbc-data-type-mappings.md)  
@@ -46,9 +47,9 @@ ms.lasthandoff: 11/21/2017
  W tym artykule opisano problemy napotykane przez programistów często podczas pracy z liczb zmiennoprzecinkowych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Danych programu SQL Server typy i ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
+ [Typy danych programu SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  
  [Konfigurowanie parametrów i typów danych parametrów](../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
  [Pobieranie informacji o schemacie bazy danych](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)  
- [Wspólny System typów](../../../../docs/standard/base-types/common-type-system.md)  
+ [System typu wspólnego](../../../../docs/standard/base-types/common-type-system.md)  
  [Konwertowanie typów](http://msdn.microsoft.com/en-us/6038316e-bdaf-4f55-8006-407f591ce156)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

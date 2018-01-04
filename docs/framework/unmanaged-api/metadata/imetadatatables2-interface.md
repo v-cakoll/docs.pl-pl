@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 83e9f6acf870e120a0fabd164ea099aff68a24e7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c08dc8ea9af83e15b6736564eca5d376c6264387
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatatables2-interface"></a>IMetaDataTables2 — Interfejs
 Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md) uwzględnienie metody pracy ze strumieni metadanych.  
@@ -32,8 +33,8 @@ Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/im
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetMetaDataStorage — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Pobiera rozmiar i zawartość z określonej sekcji metadanych.|  
-|[GetMetaDataStreamInfo — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Pobiera nazwę, rozmiar i zawartość strumienia metadanych pod określonym indeksem.|  
+|[GetMetaDataStorage, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastorage-method.md)|Pobiera rozmiar i zawartość z określonej sekcji metadanych.|  
+|[GetMetaDataStreamInfo, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-getmetadatastreaminfo-method.md)|Pobiera nazwę, rozmiar i zawartość strumienia metadanych pod określonym indeksem.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  
@@ -45,5 +46,5 @@ Rozszerza [IMetaDataTables](../../../../docs/framework/unmanaged-api/metadata/im
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [IMetaDataTables — interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
+ [IMetaDataTables, interfejs](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
  [Interfejsy metadanych](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

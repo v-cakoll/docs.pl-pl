@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 701ff252380ef93dbe3668c8aca73f08a8425d6b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f72a77e19d04c0dd55887628033f7c975ac3ff25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="http"></a>HTTP
 .NET Framework zapewnia kompleksowe obsługę protokołu HTTP, dzięki czemu większość cały ruch internetowy, z <xref:System.Net.HttpWebRequest> i <xref:System.Net.HttpWebResponse> klasy. Te klasy wyprowadzone z <xref:System.Net.WebRequest> i <xref:System.Net.WebResponse>, zwracane są domyślnie zawsze, gdy metody statycznej <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> napotka przez identyfikator URI rozpoczynający się od "http" lub "https". W większości przypadków **WebRequest** i **WebResponse** klasy podać wszystko jest to niezbędne do zapewnienia żądania, ale jeśli potrzebny jest dostęp do funkcji specyficzne dla protokołu HTTP udostępniony jako właściwości, można rzutowanie typu te klasy do **HttpWebRequest** lub **HttpWebResponse**.  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
  Aplikacje odbierać błędy protokołu HTTP przez <xref:System.Net.WebException> z <xref:System.Net.WebException.Status%2A> ustawioną <xref:System.Net.WebExceptionStatus>. <xref:System.Net.WebException.Response%2A> Właściwość zawiera **WebResponse** wysyłane przez serwer i wskazuje rzeczywiste wystąpił błąd protokołu HTTP.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostęp do Internetu za pośrednictwem serwera Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
- [Przy użyciu protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
- [Porady: dostęp do właściwości specyficzne dla protokołu HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+ [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [Instrukcje: dostęp do właściwości specyficznych dla protokołu HTTP](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 8233db6bdf8c07bcc62f2e0f3819afb72dc10f5a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc41a51a9c85b84f2f5365eb1650ebec37888652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-core-and-open-source"></a>Oprogramowanie .NET Core i Open-Source
 Ten temat zawiera krótki przegląd co .NET Core i pokazuje, jak można znaleźć więcej informacji. Aby uzyskać pełną listę tematów dla platformy .NET Core, odwiedź stronę [.NET Core przewodnik](../../core/index.md).
@@ -51,9 +52,9 @@ Ten temat zawiera krótki przegląd co .NET Core i pokazuje, jak można znaleź�
   
 -   [Roslyn - platformę .NET kompilatora](https://github.com/dotnet/roslyn)  
   
--   [Platformy ASP.NET Core](https://github.com/aspnet/home)  
+-   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Strona główna platformy .NET core](https://www.microsoft.com/net/core)  
- [Przewodnik po podstawowej platformy .NET](../../core/index.md)  
+ [Przewodnik platformy .NET Core](../../core/index.md)  
  [Dokumentacja platformy ASP.NET Core](/aspnet/core/)

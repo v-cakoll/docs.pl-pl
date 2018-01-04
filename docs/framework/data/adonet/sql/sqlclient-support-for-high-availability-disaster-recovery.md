@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cf17253478def72fe4fdc24de0a67c26fcbba0bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 612f667020522d94b53c3f7e715b9a2ad1177836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności, zobacz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] — książki Online.  
@@ -104,5 +105,5 @@ W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45
  Tylko do odczytu routingu może trwać dłużej niż łączenie z serwera podstawowego, ponieważ odczytu tylko routing pierwszy raz łączy się serwerem podstawowym, a następnie szuka najlepiej dostępne dodatkowego do odczytu. W związku z tym należy zwiększyć limit czasu użytkownika logowania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Funkcje serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
+ [Funkcje Serwera SQL i ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

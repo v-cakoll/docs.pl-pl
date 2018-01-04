@@ -18,11 +18,12 @@ caps.latest.revision: "37"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 71600e0771c31392f568e11a7f51fc258ac5b362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 830c141a13f2a7676e120600e05d786093a5ff44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (Konsolidator zestawów)
 
@@ -72,7 +73,7 @@ Można określić następujące `options`; należy określić **/out**.
 |**[plik] /keyf:**`filename`|Określa plik (`filename`) zawiera pary kluczy lub klucz publiczny, aby podpisać zestaw. Kompilator wstawia klucz publiczny w manifeście zestawu, a następnie podpisuje ostateczny zestaw przy użyciu klucza prywatnego. Zobacz [Strong Name — narzędzia (*Sn.exe*)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) informacje dotyczące generowania kluczy plików i instalowania pary kluczy do kontenerów kluczy.<br /><br /> W przypadku używania opóźnionego podpisywania, plik zazwyczaj będzie posiadać tylko klucz publiczny bez klucza prywatnego.<br /><br /> Informacje o kluczu publicznym (z pary kluczy) pojawią się w polu .publickey zestawu.<br /><br /> Tę opcję można również określić jako atrybut niestandardowy (<xref:System.Reflection.AssemblyKeyFileAttribute>) w kodzie źródłowym dla każdy moduł MSIL.<br /><br /> Jeśli oba **/KeyFile** i **/keyname** zostały określone w tej samej kompilacji (przez opcję wiersza polecenia lub przez atrybut niestandardowy) *Al.exe* próbują używać najpierw kontenera określona z **/keyname**. Jeśli operacja zakończy się to powodzeniem, zestaw zostanie podpisany przy użyciu informacji z kontenera kluczy. Jeśli *Al.exe* nie były znajdowane kontener kluczy spróbuje określić za pomocą pliku **/KeyFile**. Jeśli który zakończy się powodzeniem, zestaw jest podpisany za pomocą informacji w pliku klucza i informacje o kluczu zostaną zainstalowane w kontenerze kluczy (podobnie jak -i opcji [ *Sn.exe*](../../../docs/framework/tools/sn-exe-strong-name-tool.md)), aby przy następnym Kompilacja **/keyname** opcja jest nieprawidłowa.|
 |**/keyn [nazwa]:**`text`|Określa kontener zawierający parę kluczy. Zestaw zostanie podpisany (należy nadać mu silną nazwę) przez wstawienie klucza publicznego do manifestu zestawu. *Al.exe* zostanie następnie znak zestawie końcowym z kluczem prywatnym.<br /><br /> Użyj *Sn.exe* można wygenerować pary kluczy.<br /><br /> Informacje o kluczu pojawią się w polu .publickey zestawu.<br /><br /> Miejsce `text` w podwójny cudzysłów ("") czy osadzonych miejsca.<br /><br /> Tę opcję można również określić jako atrybut niestandardowy (<xref:System.Reflection.AssemblyKeyNameAttribute>) w kodzie źródłowym dla każdy moduł MSIL.|
 |**/ main:**`method`|Określa w pełni kwalifikowana nazwa (`class`.`method`) metody do użycia jako punkt wejścia podczas konwertowania modułu do pliku wykonywalnego.|
-|**/ nologo**|Pomijaj transparent lub logo, wyświetlane w wierszu polecenia, po rozpoczęciu *Al.exe*.|
+|**/nologo**|Pomijaj transparent lub logo, wyświetlane w wierszu polecenia, po rozpoczęciu *Al.exe*.|
 |**/ out:**`filename`|Określa nazwę pliku utworzonego przez *Al.exe*. Ta opcja jest wymagana.|
 |**/ platform:**`text`|Ogranicza platformy, na których można uruchomić kod; dopuszczalne wartości to: x86, Itanium, x64, anycpu (domyślnie) lub anycpu32bitpreferred.|
 |**/ prod [UTC]:**`text`|Określa ciąg **produktu** pole w zestawie. Umieść ciąg w podwójny cudzysłów ("") czy `text` zawiera spację. Ten ciąg jest dla zestawu atrybutem niestandardowym i może być wyświetlany z refleksją.<br /><br /> Jeśli nie określisz **/win32res**, **/product** pojawia się w Eksploratorze plików jako Win32 **nazwa produktu** zasobów.<br /><br /> Jeśli tekst jest ciągiem pustym Win32 **nazwa produktu** zasobów jest wyświetlana jako pojedyncze spacje.<br /><br /> Jeśli określisz **/win32res**, **/product** nie ma wpływu na informacje o zasobie Win32.<br /><br /> Tę opcję można również określić jako atrybut niestandardowy (<xref:System.Reflection.AssemblyProductAttribute>) w kodzie źródłowym dla każdy moduł MSIL.|
@@ -187,4 +188,4 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 [*SN.exe* (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
 [*Gacutil.exe* (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)  
 [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
-[Wiersz polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+[Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

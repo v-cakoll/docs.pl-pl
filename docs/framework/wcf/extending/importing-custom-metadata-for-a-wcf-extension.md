@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d05cbb3091eb3a6bae3341947e14fcc1e78d1207
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9208a73f6a35e4c05ab9be612491f3f7db792a5b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>Importowanie niestandardowych metadanych dla rozszerzenia WCF
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importu metadanych jest proces generowania abstrakcyjną reprezentacją usługi lub jego składniki z jego metadanych. Na przykład [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można zaimportować <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień, <xref:System.ServiceModel.Channels.Binding> wystąpień lub <xref:System.ServiceModel.Description.ContractDescription> wystąpień z WSDL dokumentu usługi. Aby zaimportować metadane usługi w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], korzystać z implementacji <xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType> klasy abstrakcyjnej. Typy, które pochodzą z <xref:System.ServiceModel.Description.MetadataImporter> klasa implementuje pomocy technicznej dla importowania formaty metadanych, które korzystają z protokołu WS-Policy zaimportować logikę w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -59,6 +60,6 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], importu metadanych je
 >  Nieprawidłowy lub niewłaściwego metadane mogą być przekazywane do importera. Upewnij się, że importerów niestandardowe są niezawodne do wszystkich formularzy XML.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: importowanie niestandardowych WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
- [Porady: importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
- [Porady: pisanie rozszerzenia dla elementu ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+ [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)  
+ [Instrukcje: importowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)  
+ [Instrukcje: pisanie rozszerzenia dla elementu ServiceContractGenerator](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

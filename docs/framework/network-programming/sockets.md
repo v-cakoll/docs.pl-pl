@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: de5778e398a9a7205e99cc810d0b672ac247da08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9050c7bdae8f08601259e865742016f188d3e0af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sockets"></a>Gniazda
 <xref:System.Net.Sockets> Przestrzeń nazw zawiera zarządzaną implementację interfejsu Windows Sockets. Wszystkie inne sieci dostęp do klas w <xref:System.Net> przestrzeni nazw są oparte na tej implementacji gniazd.  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  **Gniazda** klasa obsługuje dwa tryby podstawowe synchroniczne i asynchroniczne. W trybie synchronicznym wywołań funkcji, które wykonują operacje sieciowe (takie jak <xref:System.Net.Sockets.Socket.Send%2A> i <xref:System.Net.Sockets.Socket.Receive%2A>) poczekaj na zakończenie operacji przed zwróceniem sterowania do wywoływania programu. W trybie asynchronicznym tych wywołań zwracać natychmiast.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+ [Instrukcje: tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
     
- [Przy użyciu protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+ [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)

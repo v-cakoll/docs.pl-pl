@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05b87dfbb54de87ce7591dd6363d56ab69ebb8a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3c912a97c0d362fa475ae93127b84cb4a680125c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-overview"></a>Omówienie struktury jednostek
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] To zestaw technologii w ADO.NET, która obsługuje programowanie zorientowane na dane aplikacji. Dla architektów i deweloperów aplikacje zorientowane na dane zmagały z koniecznością osiągnięcia dwóch celów bardzo różnią się. Muszą one modelu jednostki, relacje i logiki problemy biznesowe, które są one rozwiązywania i muszą one również współpracować z aparaty danych używany do przechowywania i pobierania danych. Dane mogą obejmować wiele systemów magazynowania, każdy z protokołami; nawet aplikacji, które działają w systemie pojedynczy magazyn musi równoważenie wymagania systemu magazynu względem wymagań pisania kodu wydajne i łatwy w obsłudze aplikacji.  
@@ -70,9 +71,9 @@ ms.lasthandoff: 10/18/2017
 ## <a name="accessing-and-changing-entity-data"></a>Uzyskiwanie dostępu i zmienianie danych dotyczących jednostki  
  Więcej niż tylko innego rozwiązania mapowania relacyjnego obiektu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] jest zasadniczo o zezwalaniu na aplikacje dostępu i zmiany danych, który jest reprezentowany jako jednostki i relacje w modelu koncepcyjnym. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Używa informacji w modelu i mapowania plików do przekształcania obiektu zapytań dotyczących typów jednostek reprezentowanych w modelu koncepcyjnym do kwerend specyficzne dla źródła danych. Wyniki zapytania są zmaterializowany na obiekty który [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zarządza. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Oferuje następujące sposoby wykonywania zapytań modelu koncepcyjnego i zwracać obiekty:  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]. Zapewnia obsługę język Language-Integrated zapytania (LINQ) do wykonywania zapytań typy jednostek, które są zdefiniowane w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]., Zapewnia obsługę język Language-Integrated zapytania (LINQ) do wykonywania zapytań typy jednostek, które są zdefiniowane w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]. Dialekt niezależne od magazynu programu SQL Server, które współpracuje bezpośrednio z jednostek w modelu koncepcyjnym i obsługującym [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)]jest używany zarówno w kwerendach obiektu i zapytań, które są wykonywane przy użyciu dostawcy EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie SQL jednostki](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)]., Dialekt niezależne od magazynu programu SQL Server, które współpracuje bezpośrednio z jednostek w modelu koncepcyjnym i obsługującym [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] pojęcia. [!INCLUDE[esql](../../../../../includes/esql-md.md)]jest używany zarówno w kwerendach obiektu i zapytań, które są wykonywane przy użyciu dostawcy EntityClient. Aby uzyskać więcej informacji, zobacz [omówienie SQL jednostki](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md).  
   
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje EntityClient dostawcy danych. Ten dostawca zarządza połączeniami przekłada zapytania jednostki na zapytania dotyczące źródła danych i zwraca czytnika danych, która [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] używa do zmaterializowania danych jednostki w obiektach. Gdy materialization obiektu nie jest wymagana, dostawca EntityClient można także jak standard [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, umożliwiając aplikacjom wykonywanie [!INCLUDE[esql](../../../../../includes/esql-md.md)] wysyła kwerendy i korzystać z czytnika zwracanych danych tylko do odczytu. Aby uzyskać więcej informacji, zobacz [dostawcy EntityClient Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).  
   
@@ -99,11 +100,11 @@ ms.lasthandoff: 10/18/2017
  [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
  Podaj informacje o tym, jak do uruchomienia i działanie szybko przy użyciu [szybkiego startu](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), który wskazuje, jak utworzyć prostą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
   
- [Entity Framework terminologia](../../../../../docs/framework/data/adonet/ef/terminology.md)  
+ [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Definiuje wiele warunków, które zostaną wprowadzone w modelu Entity Data Model i [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i które są używane w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji.  
   
- [Zasoby struktury jednostek](../../../../../docs/framework/data/adonet/ef/resources.md)  
+ [Zasoby programu Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)  
  Zawiera linki do tematy dotyczące pojęć i linki do tematów zewnętrznych i zasoby do budowy [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
+ [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b42c06b9507894568a4299f23b62010e44076194
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1218cda46a6a901c3dbf9fb11333b04d0133df42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacji klienckich
 Aplikacje zwykle składają się z wielu części, które muszą być wszystkie chronione przed lukami w zabezpieczeniach, które mogą spowodować utratę danych lub naruszyć bezpieczeństwo systemu, w przeciwnym razie wartość. Tworzenie interfejsów bezpiecznego użytkownika może uniemożliwić wiele problemów blokując osoby atakujące przed uzyskaniem dostępu do danych albo zasobów systemowych.  
@@ -28,13 +29,13 @@ Aplikacje zwykle składają się z wielu części, które muszą być wszystkie 
 > [!IMPORTANT]
 >  Należy także sprawdzić dane wejściowe użytkownika w źródle danych, a także jak aplikacja kliencka. Osoba atakująca może dołączyć do obejścia aplikacji i ataki bezpośrednio ze źródłem danych.  
   
- [Zabezpieczenia i dane wejściowe użytkownika](../../../../docs/standard/security/security-and-user-input.md)  
+ [Zabezpieczenia i dane użytkownika](../../../../docs/standard/security/security-and-user-input.md)  
  Opisuje sposób obsługi błędów delikatny i potencjalnie niebezpiecznych obejmujących dane wejściowe użytkownika.  
   
  [Walidacja danych wejściowych użytkownika na stronach sieci Web ASP.NET](http://msdn.microsoft.com/library/4ad3dacb-89e0-4cee-89ac-40a3f2a85461)  
  Omówienie sprawdzania poprawności z użytkownikiem za pomocą formantów weryfikacji platformy ASP.NET.  
   
- [Dane wejściowe użytkownika w formularzach systemu Windows](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Dane użytkownika w formularzach Windows Forms](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Zawiera łącza i informacje dotyczące sprawdzania poprawności myszy i klawiatury w aplikacjach formularzy systemu Windows.  
   
  [.NET framework — nieprawidłowe wyrażenia](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -43,10 +44,10 @@ Aplikacje zwykle składają się z wielu części, które muszą być wszystkie 
 ## <a name="windows-applications"></a>Aplikacje systemu Windows  
  W przeszłości aplikacji systemu Windows, zazwyczaj uruchamiane z pełnymi uprawnieniami. .NET Framework zapewnia infrastrukturę do ograniczenia kodu wykonywanego w aplikacji systemu Windows przy użyciu zabezpieczeń dostępu kodu (CAS). Jednak tylko urzędy certyfikacji nie jest wystarczająco do ochrony aplikacji.  
   
- [Zabezpieczenia formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Zabezpieczenia formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-security.md)  
  Zawiera omówienie zabezpieczania aplikacji formularzy systemu Windows, a także linki do powiązanych tematów.  
   
- [Formularze systemu Windows i niezarządzanych aplikacji](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Formularze Windows Forms i niezarządzane aplikacje](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Opisuje sposób interakcji z niezarządzanych aplikacji w aplikacji formularzy systemu Windows.  
   
  [Wdrożenie ClickOnce dla systemu Windows formularzy aplikacji](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df)  

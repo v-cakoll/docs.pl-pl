@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: acf15eb79fab479036f182c58b8ec94d3ac43ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 897f094f512e423f055f0abea04d5403552ba31c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networkinformation"></a>NetworkInformation
 <xref:System.Net.NetworkInformation> Przestrzeni nazw umożliwia zebranie informacji o sieci zdarzenia, zmiany statystyk i właściwości. Można również określić, czy zdalny host jest dostępny, za pomocą <xref:System.Net.NetworkInformation.Ping?displayProperty=nameWithType> klasy.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 11/21/2017
  Można użyć <xref:System.Net.NetworkInformation.Ping> klasę, aby określić, czy Host zdalny jest uruchomiona, w sieci i dostępny. Aby uzyskać więcej informacji, zobacz [porady: polecenie Ping przyjmujące](../../../docs/framework/network-programming/how-to-ping-a-host.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Przykładowe technologii informacje o sieci](http://go.microsoft.com/fwlink/?LinkID=179564)  
  [Narzędzie NetStat technologii próbki](http://go.microsoft.com/fwlink/?LinkID=179562)  
  [Przykładowe technologii klienta ping](http://go.microsoft.com/fwlink/?LinkID=179565)

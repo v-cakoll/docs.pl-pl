@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21189ffd5fc8b113cc746fd855bd5c325aad78c6
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fcbbbe5180acaf943956310d4837a105d8d049d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>Narzędzie klienta usługi danych WCF (DataSvcUtil.exe)
 DataSvcUtil.exe jest udostępniane przez narzędzie wiersza polecenia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] która zużywa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych i wygeneruje klasy usługi danych klienta, które są niezbędne do uzyskania dostępu do usługi danych z aplikacją kliencką programu .NET Framework. To narzędzie można wygenerować klas danych przy użyciu następujących źródeł metadanych:  
@@ -57,4 +58,4 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
   
 ## <a name="see-also"></a>Zobacz też  
  [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
- [Porady: Dodawanie odwołania do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)
+ [Instrukcje: Dodawanie odwołania do usługi danych](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)

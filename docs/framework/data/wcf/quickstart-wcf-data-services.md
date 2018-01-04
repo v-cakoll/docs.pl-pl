@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08296be1002ee50e18a45c546645f4cc117d6bb5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: fa6711ef5591110c74a1da95358aac4d8a8da655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-wcf-data-services"></a>Szybki Start (usługi danych WCF)
 Ta opcja szybkiego startu pomaga zapoznać się z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] przez kilka zadań, które obsługują tematy [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md).  
@@ -31,7 +32,7 @@ Ta opcja szybkiego startu pomaga zapoznać się z [!INCLUDE[ssAstoria](../../../
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Aby ukończyć tego przewodnika Szybki Start, należy zainstalować następujące składniki:  
   
--   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].  
+-   [!INCLUDE[vs2010](../../../../includes/vs2010-md.md)].,  
   
 -   Wystąpienie [!INCLUDE[msCoName](../../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Obejmuje to SQL Server Express, który jest dostępny w domyślnej instalacji [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
   
@@ -41,7 +42,7 @@ Ta opcja szybkiego startu pomaga zapoznać się z [!INCLUDE[ssAstoria](../../../
  [Tworzenie usługi danych](../../../../docs/framework/data/wcf/creating-the-data-service.md)  
  Zdefiniuj [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, definiują model danych, Utwórz usługę danych i umożliwiają dostęp do zasobów.  
   
- [Uzyskiwanie dostępu do usługi z przeglądarki sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
+ [Uzyskiwanie dostępu do usługi z przeglądarki internetowej](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)  
  Uruchom usługę z [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] i uzyskania dostępu do usługi poprzez przesłanie żądania HTTP GET za pośrednictwem przeglądarki sieci Web do dostępnego źródła.  
   
  [Tworzenie aplikacji klienckich programu .NET Framework](../../../../docs/framework/data/wcf/creating-the-dotnet-client-application-wcf-data-services-quickstart.md)  
@@ -54,4 +55,4 @@ Ta opcja szybkiego startu pomaga zapoznać się z [!INCLUDE[ssAstoria](../../../
  [Uruchom Szybki Start](../../../../docs/framework/data/wcf/creating-the-data-service.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)
+ [Program Entity Framework na platformie ADO.NET](../../../../docs/framework/data/adonet/ef/index.md)

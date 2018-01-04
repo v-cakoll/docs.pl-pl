@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 592354f11faac1fb4d5b050a096f4eab04643c0f
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c6b1c097d830af4e68035f79670983002c15c16d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument — Metoda
 Pobiera wartość określonego argumentu w tej ramce stosu język pośredni (MSIL) firmy Microsoft.  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 8483c53ed8b35fd3948ec42b14859146afa8ce42
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 894d3295b83a1971792e6da845f276be486a4ea5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 — Interfejs
 Steruje niestandardowymi powiadomieniami debugera.  
@@ -32,7 +33,7 @@ Steruje niestandardowymi powiadomieniami debugera.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[SetEnableCustomNotification — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Włącza i wyłącza powiadomienia debugera niestandardowe określonego typu.|  
+|[SetEnableCustomNotification, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|Włącza i wyłącza powiadomienia debugera niestandardowe określonego typu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs rozszerza logicznie ICorDebugProcess i ICorDebugProcess2 interfejsów.  
@@ -50,5 +51,5 @@ Steruje niestandardowymi powiadomieniami debugera.
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

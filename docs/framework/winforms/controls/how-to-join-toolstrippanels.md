@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2d77d29526656da0c149ee4b8e940f4ad9e87ca3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5a94000989d30c0de7b70d1d4ef29a08a435e713
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-join-toolstrippanels"></a>Porady: łączenie ToolStripPanels
 Możesz także dołączyć do <xref:System.Windows.Forms.ToolStrip> formanty <xref:System.Windows.Forms.ToolStripPanel> w czasie wykonywania, która zapewnia elastyczność aplikacje interfejsu wielu dokumentów (MDI).  
@@ -44,4 +45,4 @@ Możesz także dołączyć do <xref:System.Windows.Forms.ToolStrip> formanty <xr
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ToolStrip>  
  <xref:System.Windows.Forms.ToolStripPanel>  
- [Porady: używanie elementu ToolStripPanels dla MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)
+ [Instrukcje: używanie kontrolek ToolStripPanels dla MDI](../../../../docs/framework/winforms/controls/how-to-use-toolstrippanels-for-mdi.md)

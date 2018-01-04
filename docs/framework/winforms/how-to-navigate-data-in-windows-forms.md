@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7c754bba18e93f63306701381f66af04b593c473
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d99d794164307cb22c5dfc89d6c9c227aa457a59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>Porady: nawigowanie w danych w formularzach systemu Windows
 W aplikacji Windows, najłatwiejszym sposobem nawigowania rekordy w źródle danych jest powiązać <xref:System.Windows.Forms.BindingSource> składnika do źródła danych, a następnie powiązanie formantów <xref:System.Windows.Forms.BindingSource>. Można następnie użyć metody wbudowanych nawigacji na <xref:System.Windows.Forms.BindingSource> takich <xref:System.Windows.Forms.BindingSource.MoveNext%2A>, <xref:System.Windows.Forms.BindingSource.MoveLast%2A>, <xref:System.Windows.Forms.BindingSource.MovePrevious%2A> i <xref:System.Windows.Forms.BindingSource.MoveFirst%2A>. Za pomocą następujących metod dostosuje <xref:System.Windows.Forms.BindingSource.Position%2A> i <xref:System.Windows.Forms.BindingSource.Current%2A> właściwości <xref:System.Windows.Forms.BindingSource> odpowiednio. Możesz również znaleźć elementu i ustawić go jako bieżący element przez ustawienie <xref:System.Windows.Forms.BindingSource.Position%2A> właściwości.  
@@ -61,7 +62,7 @@ W aplikacji Windows, najłatwiejszym sposobem nawigowania rekordy w źródle dan
      [!code-vb[System.Windows.Forms.NavigatingData#2](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Źródła danych obsługiwane przez program Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
- [Powiadomienie o zmianie w powiązaniu danych formularzy systemu Windows](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
- [Powiązanie danych i formularze systemu Windows](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Źródła danych obsługiwane przez formularze Windows Forms](../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)  
+ [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  
+ [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

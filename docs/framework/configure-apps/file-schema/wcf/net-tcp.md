@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4a63d32cc4c0e48b8d3fb40526d810e2f66089d4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a3d22b6feef80dbff8c7f20b130ce2b0f9702c9e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltnettcpgt"></a>&lt;NET.TCP&gt;
 Określa ustawienia konfiguracji sieci. TCP Port usługi udostępniania, dzięki czemu wielu procesom współużytkowanie tego samego portu TCP.  
@@ -85,5 +86,5 @@ Określa ustawienia konfiguracji sieci. TCP Port usługi udostępniania, dzięki
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Activation.Configuration.NetTcpSection>  
- [Udostępniania portów Net.TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
+ [Współużytkowanie portów w składniku Net.TCP](http://msdn.microsoft.com/en-us/f13692ee-a179-4439-ae72-50db9534eded)  
  [Konfigurowanie usługi współużytkowania portów Net.TCP](http://msdn.microsoft.com/en-us/b6dd81fa-68b7-4e1b-868e-88e5901b7ea0)

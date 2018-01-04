@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 4dde3e44778511606a2dcd2ce32cb479788c0478
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d86c70ec4421bc716b12044bac30f8f925c375f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-overview"></a>Przegląd automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -56,11 +57,11 @@ ms.lasthandoff: 11/21/2017
 |Sekcja|Ek|Odbiorcy|  
 |-------------|--------------------|--------------|  
 |[Podstawowe założenia automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/index.md) (tej sekcji)|Szerokie omówienie pojęć.|Wszystkie.|  
-|[Dostawcy automatyzacji interfejsu użytkownika dla zarządzanego kodu](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Omówienie i — tematy porad ułatwiających korzystanie z interfejsu API dostawcy.|Deweloperzy formantu.|  
-|[Klienci automatyzacji interfejsu użytkownika dla zarządzanego kodu](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Omówienie i — tematy porad ułatwiających korzystanie z klienta interfejsu API.|Deweloperzy aplikacji klienta.|  
-|[Wzorce formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Informacje dotyczące implementowania wzorców formantu przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
+|[Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code.md)|Omówienie i — tematy porad ułatwiających korzystanie z interfejsu API dostawcy.|Deweloperzy formantu.|  
+|[Klienci automatyzacji interfejsu użytkownika do kodu zarządzanego](../../../docs/framework/ui-automation/ui-automation-clients-for-managed-code.md)|Omówienie i — tematy porad ułatwiających korzystanie z klienta interfejsu API.|Deweloperzy aplikacji klienta.|  
+|[Wzorce kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)|Informacje dotyczące implementowania wzorców formantu przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
 |[Wzorzec tekstu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-text-pattern.md)|Informacje dotyczące implementowania wzorzec tekstu formantu przez dostawców i jakie funkcje są dostępne dla klientów.|Wszystkie.|  
-|[Typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Informacje o obsługiwanych przez różne typy formantów wzorce właściwości i kontroli.|Wszystkie.|  
+|[Typy kontrolek automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types.md)|Informacje o obsługiwanych przez różne typy formantów wzorce właściwości i kontroli.|Wszystkie.|  
   
  W poniższej tabeli wymieniono [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] przestrzeni nazw, bibliotek DLL, które zawierają i który używa tych odbiorców.  
   
@@ -86,7 +87,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [Przegląd wzorców formantu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
+ [Wzorce kontrolek automatyzacji interfejsu użytkownika — omówienie](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
  [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
  [Przegląd zdarzeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
  [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)

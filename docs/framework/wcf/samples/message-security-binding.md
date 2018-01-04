@@ -13,17 +13,18 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: ca1ce99fae09ef7d3c9ad3ea47984b671cadb27c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: f0c8b125d3fc313dca4140b871ccea8165329fda
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-binding"></a>Powiązanie zabezpieczeń komunikatów
 Ta sekcja zawiera przykłady ilustrujące powiązanie zabezpieczeń komunikatów w usługach systemu Windows w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zabezpieczenia komunikatów z Anonimowością](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
+ [Zabezpieczenia komunikatów z anonimowością](../../../../docs/framework/wcf/samples/message-security-anonymous.md)  
  W tym przykładzie pokazano, jak wdrożyć [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji używającej zabezpieczenia na poziomie komunikatu bez uwierzytelniania klienta, ale który wymaga uwierzytelniania serwera za pomocą certyfikatu X.509 serwera.  
   
  [Certyfikat zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-certificate.md)  

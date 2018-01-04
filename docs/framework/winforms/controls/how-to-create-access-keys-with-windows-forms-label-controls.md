@@ -28,11 +28,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad6cd99a6399adea2e69cbf844b9f134d2e592e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a856090a76f484c21c1d9982d67e9fdf21e8451
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>Porady: tworzenie klawiszy dostępu za pomocą formantów etykiet formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty może służyć do definiowania klucze dostępu dla innych formantów. Po zdefiniowaniu klawisza dostępu w formancie etykiety, użytkownik może nacisnąć klawisz ALT i znak wyznaczyć można przechodzić do formantu, który następuje w kolejności tabulacji. Ponieważ etykiet nie można ustawić fokusu, automatycznie fokusu do następnego formantu w kolejności tabulacji. Ten sposób można przypisać klucze dostępu do pola tekstowe, pola kombi, pola listy i siatki danych.  
@@ -74,6 +75,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.Label> formanty może słu
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: rozmiar formantu etykiety pasujący do jego zawartości formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
- [Informacje o formancie etykiety](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
- [Label — formant](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)
+ [Instrukcje: zmiana rozmiaru kontrolki Label formularzy Windows Forms w celu dopasowania jej do zawartości](../../../../docs/framework/winforms/controls/how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)  
+ [Label, kontrolka — omówienie](../../../../docs/framework/winforms/controls/label-control-overview-windows-forms.md)  
+ [Label, kontrolka](../../../../docs/framework/winforms/controls/label-control-windows-forms.md)

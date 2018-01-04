@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 18353939108d58eb2aaffee97e059e4430b25e3a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0b76b3a1d4969a5ed81e5fa90afb06050b780804
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-providers"></a>Dostawcy CLR ETW
 Środowisko uruchomieniowe języka wspólnego (CLR) ma dwóch dostawców: stert dostawcy i dostawcy środowiska wykonawczego.  
@@ -100,4 +101,4 @@ ms.lasthandoff: 10/18/2017
  To narzędzie można wykonać kroki 2 i 3 (uruchamianie zamknięcia sesji i następnie Kończenie profilowania) zamiast natychmiast wyłączenie profilowania, gdy użytkownik żądań profilowanie, aby zostać zatrzymane. Narzędzia można również wykonać krok 4.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zdarzenia ETW w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+ [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

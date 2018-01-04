@@ -19,11 +19,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c15ca5efcb23fa6705a4fcfa3eac6d6db09fcbad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dddbd9cf8e11f09cf1c2dc36db49281d00e97aac
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>Dostęp do danych usługi zasobów (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obsługuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępnienia danych jako źródło danych z zasobami, które są adresowane przez identyfikator URI. Te zasoby są reprezentowane zgodnie z Konwencją Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md). W tym modelu jednostki reprezentują operacyjne moduły danych, które są typy danych w domenie aplikacji, takich jak klienci, zamówienia, elementy i produktów. Jednostki dane są dostępne i zmieniać za pomocą semantyki representational stanu transfer (REST), w szczególności standardowa zleceń HTTP GET, PUT, POST i DELETE.  

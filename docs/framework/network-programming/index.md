@@ -17,29 +17,30 @@ caps.latest.revision: "24"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 76b747624a22212fb7b9ba1a6353956a99ed1559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d702e7c910536566aabfaa7948afb24ae94d2cb1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="network-programming-in-the-net-framework"></a>Programowanie dla sieci w .NET Framework
 Środowisko Microsoft .NET Framework oferuje warstwowe, rozszerzalne i zarządzane wdrożenia usług internetowych, które można szybko i łatwo zintegrować ze swoimi aplikacjami. Aplikacje sieciowe mogą za pomocą podłączanych protokołów automatycznie wykorzystywać nowe protokoły internetowe albo za pośrednictwem zarządzanej implementacji interfejsu gniazd systemu Windows współpracować z siecią na poziomie gniazd.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie podłączany protokołów](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
+ [Wprowadzenie protokołów podłączanych](../../../docs/framework/network-programming/introducing-pluggable-protocols.md)  
  Opis sposobów uzyskiwania dostępu do zasobu internetowego bez względu na protokół dostępu, którego wymaga zasób.  
   
  [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)  
  Wyjaśnienie, jak za pomocą podłączanych protokołów przekazywać i pobierać dane z zasobów internetowych.  
   
- [Protokoły podłączany programowania](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
+ [Programowanie protokołów podłączanych](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
  Wyjaśnienie, jak utworzyć pochodne klasy specyficzne dla protokołów w celu zaimplementowania podłączanych protokołów.  
   
- [Przy użyciu protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
+ [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)  
  Opis zasad programowania aplikacji wykorzystujących protokoły sieciowe, takie jak TCP, UDP i HTTP.  
   
- [Protokół internetowy w wersji 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
+ [Protokół IPv6](../../../docs/framework/network-programming/internet-protocol-version-6.md)  
  Opis zalet protokołu Internet Protocol w wersji 6 (IPv6) w porównaniu z obecną wersją pakietu Internet Protocol (IPv4), a także mechanizmów adresowania, routingu i automatycznej konfiguracji w protokole IPv6 oraz sposobów włączania i wyłączania protokołu.  
   
  [Konfigurowanie aplikacji internetowych](../../../docs/framework/network-programming/configuring-internet-applications.md)  
@@ -48,16 +49,16 @@ ms.lasthandoff: 11/21/2017
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
  Wyjaśnienie, jak za pomocą mechanizmu śledzenia sieci uzyskiwać informacje o wywołaniach metod i ruchu sieciowym generowanym przez zarządzaną aplikację.  
   
- [Zarządzanie pamięci podręcznej dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  Informacje dotyczące używania buforowania dla aplikacji, które używają <xref:System.Net.WebClient?displayProperty=nameWithType>, <xref:System.Net.WebRequest?displayProperty=nameWithType>, i <xref:System.Net.HttpWebRequest?displayProperty=nameWithType> klasy.  
   
- [Zabezpieczenia w programowaniu usługi sieciowej](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)  
  Opis używania standardowych technik zabezpieczania i uwierzytelniania w Internecie.  
   
  [Najlepsze rozwiązania dotyczące klas System.Net](../../../docs/framework/network-programming/best-practices-for-system-net-classes.md)  
  Porady i wskazówki dotyczące optymalnego wykorzystania możliwości aplikacji internetowych.  
   
- [Dostęp do Internetu za pośrednictwem serwera Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  Opis konfigurowania serwerów proxy.  
   
  [NetworkInformation](../../../docs/framework/network-programming/networkinformation.md)  
@@ -66,7 +67,7 @@ ms.lasthandoff: 11/21/2017
  [Zmiany w przestrzeni nazw System.Uri w wersji 2.0](../../../docs/framework/network-programming/changes-to-the-system-uri-namespace-in-version-2-0.md)  
  W tym artykule opisano kilka zmian <xref:System.Uri?displayProperty=nameWithType> klasy w stałej nieprawidłowe zachowanie w wersji 2.0, zwiększają użyteczność i zwiększyć bezpieczeństwo.  
   
- [Obsługa identyfikatora zasobu międzynarodowe w System.Uri](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
+ [Obsługa identyfikatorów zasobów międzynarodowych w System.Uri](../../../docs/framework/network-programming/international-resource-identifier-support-in-system-uri.md)  
  Opisuje rozszerzenia <xref:System.Uri?displayProperty=nameWithType> obsługuje klasy w wersji 3.5, 3.0 z dodatkiem SP1 i 2.0 z dodatkiem SP1 międzynarodowej identyfikator zasobów (IRI) oraz międzynarodowych nazw domen (IDN).  
   
  [Ulepszenia wydajności gniazda w wersji 3.5](../../../docs/framework/network-programming/socket-performance-enhancements-in-version-3-5.md)  
@@ -75,22 +76,22 @@ ms.lasthandoff: 11/21/2017
  [Protokół PNRP](../../../docs/framework/network-programming/peer-name-resolution-protocol.md)  
  Opis mechanizmu dodanego w wersji 3.5 do obsługi protokołu PNRP (Peer Name Resolution Protocol), bezserwerowego i dynamicznego rejestrowania nazw oraz protokołu rozpoznawania nazw. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer?displayProperty=nameWithType> przestrzeni nazw.  
   
- [Współpraca peer-to-Peer](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
+ [Współpraca równorzędna](../../../docs/framework/network-programming/peer-to-peer-collaboration.md)  
  Opis mechanizmu dodanego w wersji 3.5 do obsługi współpracy między równorzędnymi urządzeniami w oparciu o protokół PNRP. Te nowe funkcje są obsługiwane przez <xref:System.Net.PeerToPeer.Collaboration?displayProperty=nameWithType> przestrzeni nazw.  
   
- [Zmiany do uwierzytelniania NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
+ [Zmiany w uwierzytelnianiu NTLM dla HttpWebRequest w wersji 3.5 z dodatkiem SP1](../../../docs/framework/network-programming/changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md)  
  W tym artykule opisano zmiany zabezpieczeń wprowadzone w wersji 3.5 z dodatkiem SP1, które mają wpływ na sposób zintegrowane z systemem Windows uwierzytelnianie jest obsługiwane przez <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, i powiązanych klas w przestrzeni nazw System.Net.  
   
- [Zintegrowane uwierzytelnianie systemu Windows z ochrony rozszerzonej](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
+ [Zintegrowane uwierzytelnianie systemu Windows z ochroną rozszerzoną](../../../docs/framework/network-programming/integrated-windows-authentication-with-extended-protection.md)  
  Opisuje rozszerzenia rozszerzonej ochrony, które mają wpływ na sposób zintegrowane uwierzytelnianie systemu Windows jest obsługiwany przez <xref:System.Net.HttpWebRequest?displayProperty=nameWithType>, <xref:System.Net.HttpListener?displayProperty=nameWithType>, <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>, <xref:System.Net.Security.SslStream?displayProperty=nameWithType>, <xref:System.Net.Security.NegotiateStream?displayProperty=nameWithType>, i powiązanych klas w <xref:System.Net?displayProperty=nameWithType> i pokrewne przestrzenie nazw.  
   
- [Przechodzenie translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
+ [Przechodzenie translatora adresów sieciowych przy użyciu protokołu IPv6 i Teredo](../../../docs/framework/network-programming/nat-traversal-using-ipv6-and-teredo.md)  
  Opisuje rozszerzenia dodane do <xref:System.Net?displayProperty=nameWithType>, <xref:System.Net.NetworkInformation?displayProperty=nameWithType>, i <xref:System.Net.Sockets?displayProperty=nameWithType> obszarów nazw do obsługi przechodzenia translatora adresów Sieciowych przy użyciu protokołu IPv6 i Teredo.  
   
- [Izolacja sieci dla aplikacji ze Sklepu Windows](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
+ [Izolacja sieci dla aplikacji ze sklepu Windows Store](../../../docs/framework/network-programming/network-isolation-for-windows-store-apps.md)  
  Opis wpływu izolacji sieci podczas klas w <xref:System.Net>, <xref:System.Net.Http>, i <xref:System.Net.Http.Headers> przestrzenie nazw są używane w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
   
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  Przykłady programowania, korzystających z klas w sieci łącza do pobrania <xref:System.Net>, <xref:System.Net.Cache>, <xref:System.Net.Configuration>, <xref:System.Net.Mail>, <xref:System.Net.Mime>, <xref:System.Net.NetworkInformation>, <xref:System.Net.PeerToPeer>, <xref:System.Net.Security>, <xref:System.Net.Sockets> przestrzeni nazw.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -143,7 +144,7 @@ ms.lasthandoff: 11/21/2017
  Umożliwia konfigurowanie uwierzytelniania przy użyciu mechanizmu rozszerzonej ochrony aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Sieci programowania — tematy porad](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Programowanie dla sieci — tematy z instrukcjami](../../../docs/framework/network-programming/network-programming-how-to-topics.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Przykłady sieci dla platformy .NET w galerii kodu MSDN](http://code.msdn.microsoft.com/Wiki/View.aspx?ProjectName=nclsamples)  
  [Przykładowe HttpClient](http://go.microsoft.com/fwlink/?LinkId=242550)

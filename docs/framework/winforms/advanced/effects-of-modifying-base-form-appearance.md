@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c1e0eb19946ef2231b5a58df4b8d0b2e40e8e99f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9b808d10cd393d84ed29cb5e1cccfcff9c6c098d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego &#39; wygląd s
 Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu formularza podstawowego, z którego są dziedziczone innych formularzy w projekcie (lub w innych projektów).  
@@ -36,6 +37,6 @@ Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu fo
  Modyfikacje formularza podstawowego w czasie wykonywania ma nie wpływa na odziedziczone formularze, które zostały już utworzone.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Podstawa](~/docs/csharp/language-reference/keywords/base.md)  
- [Porady: dziedziczenie formularzy systemu Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Formularze systemu Windows — dziedziczenie Visual](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+ [base](~/docs/csharp/language-reference/keywords/base.md)  
+ [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7a1be9f377f9b241bf46ac67f4f3f08fc5a43821
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a09c8c47c91222d6292d46d2eea80a30ed786494
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="location-based-cache-policies"></a>Zasady oparte na lokalizacji pamięci podręcznej
 Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości prawidłowych wpisów pamięci podręcznej podstawę, z którego można pobrać żądanego zasobu. Zasób pamięci podręcznej jest nieprawidłowy w przypadku korzystania z niego nie narusza wymagania określony serwer ponownego sprawdzania poprawności. Zasady oparte na lokalizacji pamięci podręcznej jest tworzona programowo przy użyciu <xref:System.Net.Cache.RequestCachePolicy> lub <xref:System.Net.Cache.HttpRequestCachePolicy> konstruktora klasy. Typ zasad na podstawie lokalizacji jest przekazywany do konstruktora przy użyciu <xref:System.Net.Cache.RequestCacheLevel> lub <xref:System.Net.Cache.HttpRequestCacheLevel> wartości wyliczenia. Przykłady kodu, które utworzyć zasady oparte na lokalizacji pamięci podręcznej można znaleźć [porady: ustawienia zasad oparte na lokalizacji pamięci podręcznej aplikacji](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md). W poniższych sekcjach opisano każdego typu zasad na podstawie lokalizacji pamięci podręcznej dla zasobów Hypertext Transfer Protocol (protokół http i https).  
@@ -56,8 +57,8 @@ Zasady oparte na lokalizacji pamięci podręcznej definiuje świeżości prawid�
  Porównuje kopię zasobu w pamięci podręcznej z kopią na serwerze. Jeśli na serwerze jest nowsza, służy do spełnienia żądania i zastępuje kopię w pamięci podręcznej. Jeśli w pamięci podręcznej jest taka sama jak kopii na serwerze, kopia pamięci podręcznej jest używany. W protokole HTTP, Protokół buforowania można to osiągnąć przy użyciu żądania warunkowego.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zarządzanie pamięci podręcznej dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
+ [Zarządzanie pamięcią podręczną dla aplikacji sieciowych](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
  [Zasady pamięci podręcznej](../../../docs/framework/network-programming/cache-policy.md)  
- [Zasady na podstawie czasu pamięci podręcznej](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [Konfigurowanie buforowanie w aplikacjach sieci](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [Zasady pamięci podręcznej oparte na czasie](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [Konfigurowanie pamięci podręcznej w aplikacjach sieciowych](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
  [\<requestCaching — > elementu (ustawienia sieciowe)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)

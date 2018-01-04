@@ -17,11 +17,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 65b02945aa81fdf18ad328a833f8f85744035871
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e8f5626ab7439b34377ba0200fd232c41017652
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-data-services-client-library"></a>Biblioteka klienta usługi danych WCF
 Wszelkie aplikacje mogą współdziałać z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]— na podstawie danych usługi, jeśli może wysłać żądania HTTP i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych zwracanych usługi danych. Współdziałanie ten umożliwia dostęp do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usług z szerokim aplikacje korzystające z zakresu sieci Web. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zawiera biblioteki klienta, które oferują więcej możliwości programowania, gdy zostaną zużyte na [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła .NET Framework lub aplikacji opartych na technologii Silverlight.  
@@ -34,33 +35,33 @@ Wszelkie aplikacje mogą współdziałać z [!INCLUDE[ssODataFull](../../../../i
  [Generowanie biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)  
  Opisuje sposób generowania biblioteki klienta i klasy usługi danych klienta, które są oparte na [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych.  
   
- [Zapytanie usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
+ [Wykonywanie zapytań do usługi danych](../../../../docs/framework/data/wcf/querying-the-data-service-wcf-data-services.md)  
  Opisuje sposób tworzenia zapytań za pomocą biblioteki klienta usługi danych z aplikacji opartych na programie .NET Framework.  
   
- [Ładowanie odłożone zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
+ [Ładowanie odroczonej zawartości](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)  
  Opisuje sposób załadować dodatkowej zawartości nie jest uwzględniony w odpowiedzi na zapytanie początkowej.  
   
- [Aktualizowanie usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ [Aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  Opisuje sposób tworzenia, modyfikowania i usuwania jednostki i relacje za pomocą biblioteki klienta.  
   
  [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
  Zawiera opis funkcji podana przez klienta biblioteki do pracy z usługą danych w sposób asynchroniczny.  
   
- [Przetwarzanie wsadowe operacji](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
+ [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)  
  Opisuje sposób wysyłania wielu żądań do usługi danych w jednej serii za pomocą biblioteki klienta.  
   
- [Powiązanie danych z formantami](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
+ [Wiązanie danych do kontrolki](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)  
  Opisuje sposób wiązania kontrolki [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zwrócony przez usługę danych źródła danych.  
   
  [Wywołania operacji usługi](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)  
  Opisuje sposób korzystania z biblioteki klienta do wywołania operacji usługi.  
   
- [Zarządzanie kontekstu usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
+ [Zarządzanie kontekstem usługi danych](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)  
  Opisuje opcje zarządzania zachowanie biblioteki klienta.  
   
- [Praca z danych binarnych](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
+ [Praca z danymi binarnymi](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)  
  Opisuje sposób dostępu i zmiany danych binarnych zwrócony przez usługę do dane jako strumienia danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Definiowanie usługi danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
+ [Definiowanie usług danych WCF](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)  
  [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

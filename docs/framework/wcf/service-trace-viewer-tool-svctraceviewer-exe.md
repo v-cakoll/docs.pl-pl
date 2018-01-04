@@ -13,11 +13,12 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7832060a29ceb2dc58feac9ce2fc97f58caf70f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługi Trace Viewer Tool pomaga analizować dane śledzenia diagnostycznego, które są generowane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi problemy.  
@@ -460,6 +461,6 @@ ms.lasthandoff: 12/02/2017
  Jeśli możesz otworzyć dziennika śledzenia utworzone za pomocą Arabic systemu operacyjnego, można zauważyć, że czas filtru nie działa. Na przykład roku 2005 odpowiada roku 1427 Arabic kalendarza. Jednak zakres czasu obsługiwane przez filtr narzędzia podglądu śledzenia usługi nie obsługuje starszych niż 1752 daty. Może to oznaczać, że nie jesteś w stanie wybierz poprawną datę w filtrze. Aby rozwiązać ten problem, należy utworzyć niestandardowego filtru (**widoku/niestandardowe filtry**) za pomocą wyrażenia XPath do uwzględnienia w określonym zakresie czasu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu przeglądarki śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
+ [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
  [Propagacja dla korelacji śledzenia End-To-End i śledzenie działań](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)

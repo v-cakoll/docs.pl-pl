@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ae25f03a091d3a9705a2e445fec948d8c5e15e0f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e18115e460bf546c2fd6263e4671457a3da68f65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adonet-overview"></a>ADO.NET — omówienie
 ADO.NET zapewnia spójny dostęp do źródeł danych, takich jak SQL Server i XML, a także do źródeł danych za pośrednictwem OLE DB i ODBC. Udostępnianie danych aplikacji użytkownika umożliwia ADO.NET połączenia z tych źródeł danych i pobrać, obsługi i aktualizować danych, które zawierają.  
@@ -42,20 +43,20 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takich jak SQL Server i XM
  [LINQ i ADO.NET](../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
  W tym artykule opisano, jak język Language-Integrated zapytania (LINQ) jest zaimplementowana w ADO.NET oraz linki do powiązanych tematów.  
   
- [Dostawcy danych .NET framework](../../../../docs/framework/data/adonet/data-providers.md)  
+ [Dostawcy danych .NET Framework](../../../../docs/framework/data/adonet/data-providers.md)  
  Omówienie projektowania dostawcy danych .NET Framework i dostawców danych .NET Framework, które są dołączone do ADO.NET.  
   
  [Zestawy danych ADO.NET](../../../../docs/framework/data/adonet/ado-net-datasets.md)  
  Zawiera omówienie `DataSet` projektowania i składniki.  
   
- [Wykonanie Side-by-Side w ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
+ [Wykonywanie równoczesne w ADO.NET](../../../../docs/framework/data/adonet/side-by-side-execution.md)  
  W tym artykule omówiono różnice w wersji ADO.NET i ich wpływ na wykonanie side-by-side oraz zgodności aplikacji.  
   
  [Przykłady kodu ADO.NET](../../../../docs/framework/data/adonet/ado-net-code-examples.md)  
  Zawiera przykłady kodu, które służą do pobierania danych przy użyciu dostawcy danych ADO.NET.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [What's New in ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
+ [Nowości w programie ADO.NET](../../../../docs/framework/data/adonet/whats-new.md)  
  Zawiera funkcje, które są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
@@ -64,7 +65,7 @@ ADO.NET zapewnia spójny dostęp do źródeł danych, takich jak SQL Server i XM
  [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  Opisuje mapowanie typu danych między typami danych .NET Framework i dostawcy danych .NET Framework.  
   
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  Informacje dotyczące połączenia ze źródłem danych, pobieranie danych i modyfikowania danych. Obejmuje to `DataReaders` i `DataAdapters`.  
   
 ## <a name="see-also"></a>Zobacz też  

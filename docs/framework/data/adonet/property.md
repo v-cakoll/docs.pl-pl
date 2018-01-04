@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c052c53488fde0ea767a46f51ef349dd6a7d2766
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 929815e70678e535485e922616fe19d629b0fb41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property"></a>property
 *Właściwości* są podstawowymi blokami konstrukcyjnymi elementu [typów jednostek](../../../../docs/framework/data/adonet/entity-type.md) i [typów złożonych](../../../../docs/framework/data/adonet/complex-type.md). Właściwości definiują kształt i właściwości danych, który będzie zawierać wystąpienia typu jednostki lub typu złożonego. Właściwości w modelu koncepcyjnym są analogiczne do właściwości zdefiniowane w klasie. W ten sam sposób, że właściwości dla klasy, zdefiniuj kształtu klasy i zawiera informacje o obiektach właściwości w modelu koncepcyjnym zdefiniuj kształtu typu jednostki i zawiera informacje na temat wystąpień typu jednostki.  
@@ -53,4 +54,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

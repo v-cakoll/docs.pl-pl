@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 8e35634f60ff68a07c199cf6f3893e741b631a08
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 71325089f2c72f6f01b2179bd150d21a98b3a8e2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transport-security-overview"></a>Przegląd zabezpieczeń transportu
 Mechanizmy zabezpieczeń transportu [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] są zależne od powiązania i transportu są używane. Na przykład w przypadku korzystania z <xref:System.ServiceModel.WSHttpBinding> klasy, transport HTTP i podstawowego mechanizmu zabezpieczanie transportu Secure Sockets Layer (SSL) za pośrednictwem protokołu HTTP, często nazywane HTTPS. W tym temacie omówiono mechanizmy zabezpieczeń transportu główne używane w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania dostarczane przez system.  

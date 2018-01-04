@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26c054e3cc9dbf920ab280df43d97acdb90ca055
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bc27663904371991855b2fe7d96b4a15827d1180
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-provider-wcf-data-services"></a>Dostawcy programu Entity Framework (usługi danych WCF)
 Podobnie jak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NET Entity Framework jest oparta na modelu danych jednostki, który jest typem modelu Relacja jednostki. Entity Framework tłumaczy operacji przed jej implementacja modelu danych jednostki, która jest wywoływana *modelu koncepcyjnego*, na równoważne operacje względem źródła danych. Dzięki temu programu Entity Framework idealne dostawcy usług danych, które są oparte na danych relacyjnych i wszystkie bazy danych, w której dostawcy danych, który obsługuje programu Entity Framework może być używany z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać listę źródeł danych, które obecnie obsługuje programu Entity Framework, zobacz [dostawców dla programu Entity Framework](http://go.microsoft.com/fwlink/?LinkId=143699).  
@@ -30,6 +31,6 @@ Podobnie jak [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], ADO.NE
  Aby dowiedzieć się więcej na temat programu Entity Framework, zobacz [Omówienie struktury jednostek](../../../../docs/framework/data/adonet/ef/overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
+ [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)  
  [Dostawca odbicia](../../../../docs/framework/data/wcf/reflection-provider-wcf-data-services.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

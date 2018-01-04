@@ -16,11 +16,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 69709fea628e6cb1d10a23f29b60911ab07e1111
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d8f9eac80d7a6679e7b3717446e79caf54a5fed3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copying-dataset-contents"></a>Kopiowanie zawartości zestawu danych
 Można utworzyć kopię <xref:System.Data.DataSet> tak, aby pracować z danymi bez wpływu na oryginalnych danych lub pracy z podzbiorem danych z **zestawu danych**. Podczas kopiowania **DataSet**, można wykonywać następujące czynności:  
@@ -107,5 +108,5 @@ foreach (DataRow copyRow in copyRows)
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Data.DataSet>  
  <xref:System.Data.DataTable>  
- [Zbiory danych, DataTables i DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -19,16 +19,17 @@ caps.latest.revision: "4"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c5f8761259e89b4befd0eeaf893ffbe5d4142350
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7e944f285ee0925b76fdd9b95c824deee38cead2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="setnonassemblyflags-method"></a><span data-ttu-id="24810-102">SetNonAssemblyFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="24810-102">SetNonAssemblyFlags Method</span></span>
-<span data-ttu-id="24810-103">Ustawia flagi, które nie są specyficzne dla zestawu.</span><span class="sxs-lookup"><span data-stu-id="24810-103">Sets flags that are not assembly-specific.</span></span>  
+# <a name="setnonassemblyflags-method"></a><span data-ttu-id="d83fa-102">SetNonAssemblyFlags — Metoda</span><span class="sxs-lookup"><span data-stu-id="d83fa-102">SetNonAssemblyFlags Method</span></span>
+<span data-ttu-id="d83fa-103">Ustawia flagi, które nie są specyficzne dla zestawu.</span><span class="sxs-lookup"><span data-stu-id="d83fa-103">Sets flags that are not assembly-specific.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="24810-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="24810-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d83fa-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="d83fa-104">Syntax</span></span>  
   
 ```  
 HRESULT SetNonAssemblyFlags(  
@@ -36,17 +37,17 @@ HRESULT SetNonAssemblyFlags(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="24810-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="24810-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d83fa-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="d83fa-105">Parameters</span></span>  
  `afFlags`  
- <span data-ttu-id="24810-106">ALink flagi.</span><span class="sxs-lookup"><span data-stu-id="24810-106">ALink flags.</span></span>  
+ <span data-ttu-id="d83fa-106">ALink flagi.</span><span class="sxs-lookup"><span data-stu-id="d83fa-106">ALink flags.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="24810-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="24810-107">Return Value</span></span>  
- <span data-ttu-id="24810-108">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="24810-108">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d83fa-107">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d83fa-107">Return Value</span></span>  
+ <span data-ttu-id="d83fa-108">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="d83fa-108">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="24810-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="24810-109">Requirements</span></span>  
- <span data-ttu-id="24810-110">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="24810-110">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d83fa-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d83fa-109">Requirements</span></span>  
+ <span data-ttu-id="d83fa-110">Wymaga alink.h</span><span class="sxs-lookup"><span data-stu-id="d83fa-110">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24810-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="24810-111">See Also</span></span>  
- [<span data-ttu-id="24810-112">Ialink — interfejs</span><span class="sxs-lookup"><span data-stu-id="24810-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="24810-113">Ialink2 — interfejs</span><span class="sxs-lookup"><span data-stu-id="24810-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="24810-114">ALink API</span><span class="sxs-lookup"><span data-stu-id="24810-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="d83fa-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d83fa-111">See Also</span></span>  
+ [<span data-ttu-id="d83fa-112">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="d83fa-112">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="d83fa-113">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="d83fa-113">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="d83fa-114">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="d83fa-114">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

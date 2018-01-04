@@ -21,16 +21,17 @@ caps.latest.revision: "8"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1e29cd4a38e9abbe380b51b81fc2849b833d87e9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee403a5f92ba4eb88eca880d9bf2f858b52d4f05
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="ea787-102">ISymUnmanagedVariable::GetSignature — Metoda</span><span class="sxs-lookup"><span data-stu-id="ea787-102">ISymUnmanagedVariable::GetSignature Method</span></span>
-<span data-ttu-id="ea787-103">Pobiera podpis tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="ea787-103">Gets the signature of this variable.</span></span>  
+# <a name="isymunmanagedvariablegetsignature-method"></a><span data-ttu-id="3a220-102">ISymUnmanagedVariable::GetSignature — Metoda</span><span class="sxs-lookup"><span data-stu-id="3a220-102">ISymUnmanagedVariable::GetSignature Method</span></span>
+<span data-ttu-id="3a220-103">Pobiera podpis tej zmiennej.</span><span class="sxs-lookup"><span data-stu-id="3a220-103">Gets the signature of this variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea787-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="ea787-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3a220-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3a220-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSignature(  
@@ -40,21 +41,21 @@ HRESULT GetSignature(
         length_is(*pcSig)] BYTE sig[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ea787-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="ea787-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="3a220-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="3a220-105">Parameters</span></span>  
  `cSig`  
- <span data-ttu-id="ea787-106">[in] Długość buforu wskazywana przez `sig` parametru.</span><span class="sxs-lookup"><span data-stu-id="ea787-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
+ <span data-ttu-id="3a220-106">[in] Długość buforu wskazywana przez `sig` parametru.</span><span class="sxs-lookup"><span data-stu-id="3a220-106">[in] The length of the buffer pointed to by the `sig` parameter.</span></span>  
   
  `pcSig`  
- <span data-ttu-id="ea787-107">[out] Wskaźnik do `ULONG32` rozmiaru, który odbiera znakami muszą zawierać podpis buforu.</span><span class="sxs-lookup"><span data-stu-id="ea787-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
+ <span data-ttu-id="3a220-107">[out] Wskaźnik do `ULONG32` rozmiaru, który odbiera znakami muszą zawierać podpis buforu.</span><span class="sxs-lookup"><span data-stu-id="3a220-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the signature.</span></span>  
   
  `sig`  
- <span data-ttu-id="ea787-108">[out] Bufor, który przechowuje podpisu.</span><span class="sxs-lookup"><span data-stu-id="ea787-108">[out] The buffer that stores the signature.</span></span>  
+ <span data-ttu-id="3a220-108">[out] Bufor, który przechowuje podpisu.</span><span class="sxs-lookup"><span data-stu-id="3a220-108">[out] The buffer that stores the signature.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ea787-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="ea787-109">Return Value</span></span>  
- <span data-ttu-id="ea787-110">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="ea787-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="3a220-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="3a220-109">Return Value</span></span>  
+ <span data-ttu-id="3a220-110">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="3a220-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea787-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="ea787-111">Requirements</span></span>  
- <span data-ttu-id="ea787-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ea787-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="3a220-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="3a220-111">Requirements</span></span>  
+ <span data-ttu-id="3a220-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3a220-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ea787-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ea787-113">See Also</span></span>  
- [<span data-ttu-id="ea787-114">ISymUnmanagedVariable — interfejs</span><span class="sxs-lookup"><span data-stu-id="ea787-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
+## <a name="see-also"></a><span data-ttu-id="3a220-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3a220-113">See Also</span></span>  
+ [<span data-ttu-id="3a220-114">ISymUnmanagedVariable, interfejs</span><span class="sxs-lookup"><span data-stu-id="3a220-114">ISymUnmanagedVariable Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

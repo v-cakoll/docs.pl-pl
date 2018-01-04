@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ceb0188ce2a52c3950b5fc89ea15c96852910d88
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f9ea20577b3132a2378013e7c5fa8356c14c8b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="4ad74-102">ICorDebugNativeFrame::GetIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="4ad74-102">ICorDebugNativeFrame::GetIP Method</span></span>
-<span data-ttu-id="4ad74-103">Pobiera kod macierzysty przesunięcia lokalizacji, do której jest aktualnie ustawione wskaźnik instrukcji.</span><span class="sxs-lookup"><span data-stu-id="4ad74-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
+# <a name="icordebugnativeframegetip-method"></a><span data-ttu-id="f509a-102">ICorDebugNativeFrame::GetIP — Metoda</span><span class="sxs-lookup"><span data-stu-id="f509a-102">ICorDebugNativeFrame::GetIP Method</span></span>
+<span data-ttu-id="f509a-103">Pobiera kod macierzysty przesunięcia lokalizacji, do której jest aktualnie ustawione wskaźnik instrukcji.</span><span class="sxs-lookup"><span data-stu-id="f509a-103">Gets the native code offset location to which the instruction pointer is currently set.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4ad74-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4ad74-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f509a-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="f509a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetIP (  
@@ -38,21 +39,21 @@ HRESULT GetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4ad74-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4ad74-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="f509a-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="f509a-105">Parameters</span></span>  
  `pnOffset`  
- <span data-ttu-id="4ad74-106">[out] Wskaźnik do przesunięcia lokalizacji w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="4ad74-106">[out] A pointer to the offset location in the native code.</span></span>  
+ <span data-ttu-id="f509a-106">[out] Wskaźnik do przesunięcia lokalizacji w kodzie natywnym.</span><span class="sxs-lookup"><span data-stu-id="f509a-106">[out] A pointer to the offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4ad74-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4ad74-107">Remarks</span></span>  
- <span data-ttu-id="4ad74-108">Jeśli ramka stosu reprezentowanego przez ten "ICorDebugNativeFrame" jest aktywna, przesunięcie jest adresem następną instrukcję do wykonania.</span><span class="sxs-lookup"><span data-stu-id="4ad74-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="4ad74-109">Jeśli ta ramka stosu nie jest aktywne, przesunięcie jest adresem następną instrukcję do wykonania po ponownym uaktywnieniu ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="4ad74-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="f509a-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="f509a-107">Remarks</span></span>  
+ <span data-ttu-id="f509a-108">Jeśli ramka stosu reprezentowanego przez ten "ICorDebugNativeFrame" jest aktywna, przesunięcie jest adresem następną instrukcję do wykonania.</span><span class="sxs-lookup"><span data-stu-id="f509a-108">If the stack frame that is represented by this "ICorDebugNativeFrame" is active, the offset is the address of the next instruction to be executed.</span></span> <span data-ttu-id="f509a-109">Jeśli ta ramka stosu nie jest aktywne, przesunięcie jest adresem następną instrukcję do wykonania po ponownym uaktywnieniu ramki stosu.</span><span class="sxs-lookup"><span data-stu-id="f509a-109">If this stack frame is not active, the offset is the address of the next instruction to be executed when the stack frame is reactivated.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4ad74-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4ad74-110">Requirements</span></span>  
- <span data-ttu-id="4ad74-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4ad74-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f509a-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="f509a-110">Requirements</span></span>  
+ <span data-ttu-id="f509a-111">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="f509a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4ad74-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4ad74-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="f509a-112">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="f509a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4ad74-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4ad74-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="f509a-113">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="f509a-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4ad74-114">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4ad74-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="f509a-114">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f509a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4ad74-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4ad74-115">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="f509a-115">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f509a-115">See Also</span></span>  
  

@@ -21,16 +21,17 @@ caps.latest.revision: "6"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be68348b619f342eca4841a6052088bf7152f453
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 160ec53440f4ecdb924537c732a367881e75acf9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="closeassembly-method"></a><span data-ttu-id="5817b-102">CloseAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="5817b-102">CloseAssembly Method</span></span>
-<span data-ttu-id="5817b-103">Kończenie znajdujących się w zestawie operacji.</span><span class="sxs-lookup"><span data-stu-id="5817b-103">Finalizes assembly operations.</span></span> <span data-ttu-id="5817b-104">Tę metodę należy wywołać przed rozpoczęciem nowego zestawu lub modułu niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="5817b-104">Call this method before beginning a new assembly or unbound module.</span></span>  
+# <a name="closeassembly-method"></a><span data-ttu-id="d9ffe-102">CloseAssembly — Metoda</span><span class="sxs-lookup"><span data-stu-id="d9ffe-102">CloseAssembly Method</span></span>
+<span data-ttu-id="d9ffe-103">Kończenie znajdujących się w zestawie operacji.</span><span class="sxs-lookup"><span data-stu-id="d9ffe-103">Finalizes assembly operations.</span></span> <span data-ttu-id="d9ffe-104">Tę metodę należy wywołać przed rozpoczęciem nowego zestawu lub modułu niepowiązanych.</span><span class="sxs-lookup"><span data-stu-id="d9ffe-104">Call this method before beginning a new assembly or unbound module.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="5817b-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="5817b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d9ffe-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="d9ffe-105">Syntax</span></span>  
   
 ```  
 HRESULT CloseAssembly(  
@@ -38,17 +39,17 @@ HRESULT CloseAssembly(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="5817b-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="5817b-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="d9ffe-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="d9ffe-106">Parameters</span></span>  
  `AssemblyID`  
- <span data-ttu-id="5817b-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="5817b-107">ID of the assembly.</span></span>  
+ <span data-ttu-id="d9ffe-107">Identyfikator zestawu.</span><span class="sxs-lookup"><span data-stu-id="d9ffe-107">ID of the assembly.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="5817b-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="5817b-108">Return Value</span></span>  
- <span data-ttu-id="5817b-109">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="5817b-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d9ffe-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="d9ffe-108">Return Value</span></span>  
+ <span data-ttu-id="d9ffe-109">Zwraca wartość S_OK, jeśli metoda zakończy się powodzeniem.</span><span class="sxs-lookup"><span data-stu-id="d9ffe-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="5817b-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5817b-110">Requirements</span></span>  
- <span data-ttu-id="5817b-111">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="5817b-111">Requires alink.h.</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d9ffe-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="d9ffe-110">Requirements</span></span>  
+ <span data-ttu-id="d9ffe-111">Wymaga alink.h.</span><span class="sxs-lookup"><span data-stu-id="d9ffe-111">Requires alink.h.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5817b-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5817b-112">See Also</span></span>  
- [<span data-ttu-id="5817b-113">Ialink — interfejs</span><span class="sxs-lookup"><span data-stu-id="5817b-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [<span data-ttu-id="5817b-114">Ialink2 — interfejs</span><span class="sxs-lookup"><span data-stu-id="5817b-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [<span data-ttu-id="5817b-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="5817b-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="d9ffe-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d9ffe-112">See Also</span></span>  
+ [<span data-ttu-id="d9ffe-113">IALink, interfejs</span><span class="sxs-lookup"><span data-stu-id="d9ffe-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [<span data-ttu-id="d9ffe-114">IALink2, interfejs</span><span class="sxs-lookup"><span data-stu-id="d9ffe-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [<span data-ttu-id="d9ffe-115">ALink, interfejs API</span><span class="sxs-lookup"><span data-stu-id="d9ffe-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

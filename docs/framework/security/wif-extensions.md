@@ -13,15 +13,16 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 52f2b474a5c3d9b9a1a2d412ef787f722a6dc380
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 8c21576fd9c9e1a778a40913c536d43f52ab4564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="wif-extensions"></a><span data-ttu-id="81771-102">rozszerzenia WIF</span><span class="sxs-lookup"><span data-stu-id="81771-102">WIF Extensions</span></span>
-<span data-ttu-id="81771-103">W tej sekcji opisano rozszerzeń dla systemu Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="81771-103">This section describes the extensions for Windows Identity Foundation.</span></span>  
+# <a name="wif-extensions"></a><span data-ttu-id="06657-102">rozszerzenia WIF</span><span class="sxs-lookup"><span data-stu-id="06657-102">WIF Extensions</span></span>
+<span data-ttu-id="06657-103">W tej sekcji opisano rozszerzeń dla systemu Windows Identity Foundation.</span><span class="sxs-lookup"><span data-stu-id="06657-103">This section describes the extensions for Windows Identity Foundation.</span></span>  
   
--   [<span data-ttu-id="81771-104">Program obsługi tokenów sieci Web JSON</span><span class="sxs-lookup"><span data-stu-id="81771-104">JSON Web Token Handler</span></span>](../../../docs/framework/security/json-web-token-handler.md)  
+-   [<span data-ttu-id="06657-104">Procedura obsługi tokenów internetowych JSON</span><span class="sxs-lookup"><span data-stu-id="06657-104">JSON Web Token Handler</span></span>](../../../docs/framework/security/json-web-token-handler.md)  
   
--   [<span data-ttu-id="81771-105">Sprawdzanie poprawności rejestru nazwy dostawcy</span><span class="sxs-lookup"><span data-stu-id="81771-105">Validating Issuer Name Registry</span></span>](../../../docs/framework/security/validating-issuer-name-registry.md)
+-   [<span data-ttu-id="06657-105">Weryfikowanie rejestru nazwy dostawcy</span><span class="sxs-lookup"><span data-stu-id="06657-105">Validating Issuer Name Registry</span></span>](../../../docs/framework/security/validating-issuer-name-registry.md)

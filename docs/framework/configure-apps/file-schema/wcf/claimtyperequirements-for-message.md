@@ -13,20 +13,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 158aad6a6a11bb889df74e1222a8881a1c38803f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5497156862859b2a797f27150362ed3a0498849a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="ead3e-102">&lt;claimTypeRequirements&gt; w &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="ead3e-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
-<span data-ttu-id="ead3e-103">Określa kolekcję wymaganych typów oświadczeń.</span><span class="sxs-lookup"><span data-stu-id="ead3e-103">Specifies a collection of required claim types.</span></span>  
+# <a name="ltclaimtyperequirementsgt-for-ltmessagegt"></a><span data-ttu-id="5e9e6-102">&lt;claimTypeRequirements&gt; w &lt;message&gt;</span><span class="sxs-lookup"><span data-stu-id="5e9e6-102">&lt;claimTypeRequirements&gt; for &lt;message&gt;</span></span>
+<span data-ttu-id="5e9e6-103">Określa kolekcję wymaganych typów oświadczeń.</span><span class="sxs-lookup"><span data-stu-id="5e9e6-103">Specifies a collection of required claim types.</span></span>  
   
- <span data-ttu-id="ead3e-104">Kolekcja jest używana przez usługę do określania wymaganych i opcjonalnych oświadczeń, które muszą być w wystawionego tokenu, którego klient używa do uzyskania dostępu do usługi.</span><span class="sxs-lookup"><span data-stu-id="ead3e-104">The collection is used by the service to specify any required and optional claims which must be in the issued token the client uses to access the service.</span></span> <span data-ttu-id="ead3e-105">Usługa przedstawia wymaganych typów oświadczeń w metadanych, jeśli publikowanie WSDL jest włączona, ale WCF nie wymaga wystawiony token zawiera typy określone oświadczenie.</span><span class="sxs-lookup"><span data-stu-id="ead3e-105">The service exposes the required claim types in metadata if WSDL publishing is enabled but WCF does not require the issued token contain the specified claim types.</span></span> <span data-ttu-id="ead3e-106">Usługi chcą wymusić typy są obecne wymagane oświadczeń należy wykonać przy użyciu zasad autoryzacji.</span><span class="sxs-lookup"><span data-stu-id="ead3e-106">Services wishing to enforce required claim types are present should do using authorization policy.</span></span>  
+ <span data-ttu-id="5e9e6-104">Kolekcja jest używana przez usługę do określania wymaganych i opcjonalnych oświadczeń, które muszą być w wystawionego tokenu, którego klient używa do uzyskania dostępu do usługi.</span><span class="sxs-lookup"><span data-stu-id="5e9e6-104">The collection is used by the service to specify any required and optional claims which must be in the issued token the client uses to access the service.</span></span> <span data-ttu-id="5e9e6-105">Usługa przedstawia wymaganych typów oświadczeń w metadanych, jeśli publikowanie WSDL jest włączona, ale WCF nie wymaga wystawiony token zawiera typy określone oświadczenie.</span><span class="sxs-lookup"><span data-stu-id="5e9e6-105">The service exposes the required claim types in metadata if WSDL publishing is enabled but WCF does not require the issued token contain the specified claim types.</span></span> <span data-ttu-id="5e9e6-106">Usługi chcą wymusić typy są obecne wymagane oświadczeń należy wykonać przy użyciu zasad autoryzacji.</span><span class="sxs-lookup"><span data-stu-id="5e9e6-106">Services wishing to enforce required claim types are present should do using authorization policy.</span></span>  
   
- <span data-ttu-id="ead3e-107">Na klientach federacyjnych Ta kolekcja zawiera listę wymaganych i opcjonalnych oświadczeń, które są przesyłane do usługi tokenu zabezpieczającego w żądaniu klienta dla wystawionego tokenu.</span><span class="sxs-lookup"><span data-stu-id="ead3e-107">On federated clients, this collection contains the list of required and optional claims which is sent to the security token service in the client’s request for an issued token.</span></span>  
+ <span data-ttu-id="5e9e6-107">Na klientach federacyjnych Ta kolekcja zawiera listę wymaganych i opcjonalnych oświadczeń, które są przesyłane do usługi tokenu zabezpieczającego w żądaniu klienta dla wystawionego tokenu.</span><span class="sxs-lookup"><span data-stu-id="5e9e6-107">On federated clients, this collection contains the list of required and optional claims which is sent to the security token service in the client’s request for an issued token.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ead3e-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ead3e-108">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="5e9e6-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5e9e6-108">See Also</span></span>  
  <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
  <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
  <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  

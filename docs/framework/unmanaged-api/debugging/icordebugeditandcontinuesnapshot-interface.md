@@ -19,14 +19,15 @@ caps.latest.revision: "5"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 64e5cb3d4cc03c08e209e0c2306c8981f7769836
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1d6156963ae5b9c0b25ef9a5d7f94a08b2c52ad9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="0e265-102">ICorDebugEditAndContinueSnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="0e265-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
-<span data-ttu-id="0e265-103">`ICorDebugEditAndContinueSnapshot`jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="0e265-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="0e265-104">Nie używaj tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="0e265-104">Do not use this interface.</span></span>  
+# <a name="icordebugeditandcontinuesnapshot-interface1"></a><span data-ttu-id="f8c38-102">ICorDebugEditAndContinueSnapshot Interface1</span><span class="sxs-lookup"><span data-stu-id="f8c38-102">ICorDebugEditAndContinueSnapshot Interface1</span></span>
+<span data-ttu-id="f8c38-103">`ICorDebugEditAndContinueSnapshot`jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="f8c38-103">`ICorDebugEditAndContinueSnapshot` is obsolete.</span></span> <span data-ttu-id="f8c38-104">Nie używaj tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="f8c38-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0e265-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0e265-105">See Also</span></span>  
- [<span data-ttu-id="0e265-106">Interfejsy debugowania</span><span class="sxs-lookup"><span data-stu-id="0e265-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="f8c38-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f8c38-105">See Also</span></span>  
+ [<span data-ttu-id="f8c38-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="f8c38-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

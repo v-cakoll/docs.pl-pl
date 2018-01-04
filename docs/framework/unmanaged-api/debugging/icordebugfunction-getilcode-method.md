@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: da955f6eb8e7480fb23192e1a77341166dd40f3b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ba960246c5aa1057df517d776819817d777402f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="4eb76-102">ICorDebugFunction::GetILCode — Metoda</span><span class="sxs-lookup"><span data-stu-id="4eb76-102">ICorDebugFunction::GetILCode Method</span></span>
-<span data-ttu-id="4eb76-103">Pobiera wystąpienie ICorDebugCode, który reprezentuje kod języka pośredniego (MSIL) firmy Microsoft, które są skojarzone z tym obiektem ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="4eb76-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  
+# <a name="icordebugfunctiongetilcode-method"></a><span data-ttu-id="01a6b-102">ICorDebugFunction::GetILCode — Metoda</span><span class="sxs-lookup"><span data-stu-id="01a6b-102">ICorDebugFunction::GetILCode Method</span></span>
+<span data-ttu-id="01a6b-103">Pobiera wystąpienie ICorDebugCode, który reprezentuje kod języka pośredniego (MSIL) firmy Microsoft, które są skojarzone z tym obiektem ICorDebugFunction.</span><span class="sxs-lookup"><span data-stu-id="01a6b-103">Gets the ICorDebugCode instance that represents the Microsoft intermediate language (MSIL) code associated with this ICorDebugFunction object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4eb76-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4eb76-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="01a6b-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="01a6b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetILCode (  
@@ -38,18 +39,18 @@ HRESULT GetILCode (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4eb76-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="4eb76-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="01a6b-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="01a6b-105">Parameters</span></span>  
  `ppCode`  
- <span data-ttu-id="4eb76-106">[out] Wskaźnik do `ICorDebugCode` wystąpienia, lub wartość null, jeśli funkcja nie został skompilowany do MSIL.</span><span class="sxs-lookup"><span data-stu-id="4eb76-106">[out] A pointer to the `ICorDebugCode` instance, or null, if the function was not compiled into MSIL.</span></span>  
+ <span data-ttu-id="01a6b-106">[out] Wskaźnik do `ICorDebugCode` wystąpienia, lub wartość null, jeśli funkcja nie został skompilowany do MSIL.</span><span class="sxs-lookup"><span data-stu-id="01a6b-106">[out] A pointer to the `ICorDebugCode` instance, or null, if the function was not compiled into MSIL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="4eb76-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="4eb76-107">Remarks</span></span>  
- <span data-ttu-id="4eb76-108">Jeśli zezwolono Edytuj i Kontynuuj dla tej funkcji `GetILCode` metoda pobierze kod MSIL odpowiadającego tej funkcji zmodyfikowaną wersję kodu w środowisku uruchomieniowym języka (wspólnego CLR).</span><span class="sxs-lookup"><span data-stu-id="4eb76-108">If Edit and Continue has been allowed on this function, the `GetILCode` method will get the MSIL code corresponding to this function's edited version of the code in the common language runtime (CLR).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="01a6b-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="01a6b-107">Remarks</span></span>  
+ <span data-ttu-id="01a6b-108">Jeśli zezwolono Edytuj i Kontynuuj dla tej funkcji `GetILCode` metoda pobierze kod MSIL odpowiadającego tej funkcji zmodyfikowaną wersję kodu w środowisku uruchomieniowym języka (wspólnego CLR).</span><span class="sxs-lookup"><span data-stu-id="01a6b-108">If Edit and Continue has been allowed on this function, the `GetILCode` method will get the MSIL code corresponding to this function's edited version of the code in the common language runtime (CLR).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4eb76-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4eb76-109">Requirements</span></span>  
- <span data-ttu-id="4eb76-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4eb76-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="01a6b-109">Wymagania</span><span class="sxs-lookup"><span data-stu-id="01a6b-109">Requirements</span></span>  
+ <span data-ttu-id="01a6b-110">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="01a6b-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4eb76-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4eb76-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="01a6b-111">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="01a6b-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="4eb76-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4eb76-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="01a6b-112">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="01a6b-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="4eb76-113">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4eb76-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="01a6b-113">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="01a6b-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

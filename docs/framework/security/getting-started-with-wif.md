@@ -13,16 +13,17 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 4e521e06920d06383f75c4dc40ec88b862112aef
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 93af3c68ccb60bbef8870ea2fc3dc8d4807b3493
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="getting-started-with-wif"></a><span data-ttu-id="1ec59-102">Wprowadzenie do korzystania z programu WIF</span><span class="sxs-lookup"><span data-stu-id="1ec59-102">Getting Started With WIF</span></span>
--   [<span data-ttu-id="1ec59-103">Tworzenie mojej pierwszej aplikacji sieci Web ASP.NET obsługujących oświadczenia</span><span class="sxs-lookup"><span data-stu-id="1ec59-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
+# <a name="getting-started-with-wif"></a><span data-ttu-id="a6a47-102">Wprowadzenie do korzystania z programu WIF</span><span class="sxs-lookup"><span data-stu-id="a6a47-102">Getting Started With WIF</span></span>
+-   [<span data-ttu-id="a6a47-103">Tworzenie pierwszej aplikacji internetowej ASP.NET obsługującej oświadczenia</span><span class="sxs-lookup"><span data-stu-id="a6a47-103">Building My First Claims-Aware ASP.NET Web Application</span></span>](../../../docs/framework/security/building-my-first-claims-aware-aspnet-web-app.md)  
   
--   [<span data-ttu-id="1ec59-104">Tworzenie Moje pierwszej usługi WCF obsługujący oświadczenia</span><span class="sxs-lookup"><span data-stu-id="1ec59-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
+-   [<span data-ttu-id="a6a47-104">Tworzenie pierwszej usługi WCF obsługującej oświadczenia</span><span class="sxs-lookup"><span data-stu-id="a6a47-104">Building My First Claims-Aware WCF Service</span></span>](../../../docs/framework/security/building-my-first-claims-aware-wcf-service.md)  
   
-## <a name="see-also"></a><span data-ttu-id="1ec59-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1ec59-105">See Also</span></span>  
- [<span data-ttu-id="1ec59-106">Program Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="1ec59-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)
+## <a name="see-also"></a><span data-ttu-id="a6a47-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a6a47-105">See Also</span></span>  
+ [<span data-ttu-id="a6a47-106">Windows Identity Foundation</span><span class="sxs-lookup"><span data-stu-id="a6a47-106">Windows Identity Foundation</span></span>](../../../docs/framework/security/index.md)

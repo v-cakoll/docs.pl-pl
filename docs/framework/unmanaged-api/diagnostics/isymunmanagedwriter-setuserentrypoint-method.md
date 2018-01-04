@@ -21,31 +21,32 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: be7f348237fdcf0a136d34ce3b6b8548c16d5547
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5da021bce46df02789547eb7ee50133b6f4d4af6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="e45b1-102">ISymUnmanagedWriter::SetUserEntryPoint — Metoda</span><span class="sxs-lookup"><span data-stu-id="e45b1-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
-<span data-ttu-id="e45b1-103">Określa metodę zdefiniowane przez użytkownika, który jest punkt wejścia dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="e45b1-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="e45b1-104">Ten punkt wejścia można na przykład metoda głównego użytkownika zamiast generowane przez kompilator klas zastępczych przed funkcją main.</span><span class="sxs-lookup"><span data-stu-id="e45b1-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
+# <a name="isymunmanagedwritersetuserentrypoint-method"></a><span data-ttu-id="72147-102">ISymUnmanagedWriter::SetUserEntryPoint — Metoda</span><span class="sxs-lookup"><span data-stu-id="72147-102">ISymUnmanagedWriter::SetUserEntryPoint Method</span></span>
+<span data-ttu-id="72147-103">Określa metodę zdefiniowane przez użytkownika, który jest punkt wejścia dla tego modułu.</span><span class="sxs-lookup"><span data-stu-id="72147-103">Specifies the user-defined method that is the entry point for this module.</span></span> <span data-ttu-id="72147-104">Ten punkt wejścia można na przykład metoda głównego użytkownika zamiast generowane przez kompilator klas zastępczych przed funkcją main.</span><span class="sxs-lookup"><span data-stu-id="72147-104">For example, this entry point could be the user's main method instead of compiler-generated stubs before main.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e45b1-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="e45b1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="72147-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="72147-105">Syntax</span></span>  
   
 ```  
 HRESULT SetUserEntryPoint(  
     [in] mdMethodDef entryMethod);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e45b1-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="e45b1-106">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="72147-106">Parametry</span><span class="sxs-lookup"><span data-stu-id="72147-106">Parameters</span></span>  
  `entryMethod`  
- <span data-ttu-id="e45b1-107">[in] Token metadanych metodę, która jest wpisu użytkownika punktu.</span><span class="sxs-lookup"><span data-stu-id="e45b1-107">[in] The metadata token for the method that is the user entry point.</span></span>  
+ <span data-ttu-id="72147-107">[in] Token metadanych metodę, która jest wpisu użytkownika punktu.</span><span class="sxs-lookup"><span data-stu-id="72147-107">[in] The metadata token for the method that is the user entry point.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="e45b1-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="e45b1-108">Return Value</span></span>  
- <span data-ttu-id="e45b1-109">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="e45b1-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="72147-108">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="72147-108">Return Value</span></span>  
+ <span data-ttu-id="72147-109">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="72147-109">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e45b1-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e45b1-110">Requirements</span></span>  
- <span data-ttu-id="e45b1-111">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="e45b1-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="72147-110">Wymagania</span><span class="sxs-lookup"><span data-stu-id="72147-110">Requirements</span></span>  
+ <span data-ttu-id="72147-111">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="72147-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e45b1-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e45b1-112">See Also</span></span>  
- [<span data-ttu-id="e45b1-113">ISymUnmanagedWriter — interfejs</span><span class="sxs-lookup"><span data-stu-id="e45b1-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="72147-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="72147-112">See Also</span></span>  
+ [<span data-ttu-id="72147-113">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="72147-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

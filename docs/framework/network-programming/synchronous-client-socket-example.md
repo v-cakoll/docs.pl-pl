@@ -19,14 +19,15 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: f7cf48f98b60d287cea1615cc8aefef6151c805c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: be6c48f240290e2571bfc605bc9c3a84f59aa8e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="51090-102">Przykład gniazda synchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="51090-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="51090-103">Następujący przykład program tworzy klienta, który łączy się z serwerem.</span><span class="sxs-lookup"><span data-stu-id="51090-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="51090-104">Klient jest oparty z gniazdem synchroniczne, dlatego wykonywanie aplikacji klienckiej został wstrzymany, dopóki serwer zwraca odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="51090-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="51090-105">Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.</span><span class="sxs-lookup"><span data-stu-id="51090-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="7436f-102">Przykład gniazda synchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="7436f-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="7436f-103">Następujący przykład program tworzy klienta, który łączy się z serwerem.</span><span class="sxs-lookup"><span data-stu-id="7436f-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="7436f-104">Klient jest oparty z gniazdem synchroniczne, dlatego wykonywanie aplikacji klienckiej został wstrzymany, dopóki serwer zwraca odpowiedź.</span><span class="sxs-lookup"><span data-stu-id="7436f-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="7436f-105">Aplikacja wysyła ciąg do serwera, a następnie wyświetla ciąg zwrócony przez serwer w konsoli.</span><span class="sxs-lookup"><span data-stu-id="7436f-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -144,7 +145,7 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="51090-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="51090-106">See Also</span></span>  
- [<span data-ttu-id="51090-107">Przykład gniazda synchroniczne serwera</span><span class="sxs-lookup"><span data-stu-id="51090-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
- [<span data-ttu-id="51090-108">Przy użyciu gniazda synchroniczne klienta</span><span class="sxs-lookup"><span data-stu-id="51090-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [<span data-ttu-id="51090-109">Przykłady kodu gniazda</span><span class="sxs-lookup"><span data-stu-id="51090-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="7436f-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7436f-106">See Also</span></span>  
+ [<span data-ttu-id="7436f-107">Przykład synchronicznego gniazda serwera</span><span class="sxs-lookup"><span data-stu-id="7436f-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)  
+ [<span data-ttu-id="7436f-108">Używanie synchronicznego gniazda klienta</span><span class="sxs-lookup"><span data-stu-id="7436f-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [<span data-ttu-id="7436f-109">Przykłady kodu gniazd</span><span class="sxs-lookup"><span data-stu-id="7436f-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

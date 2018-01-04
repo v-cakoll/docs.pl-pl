@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50dca2ad21c979a982e7d319a0448fc0dab792d2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: eae30217dcf8b55347163587532b40cd6ae04a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5402---tokenvalidationstarted"></a><span data-ttu-id="06c52-102">5402 — TokenValidationStarted</span><span class="sxs-lookup"><span data-stu-id="06c52-102">5402 - TokenValidationStarted</span></span>
-## <a name="properties"></a><span data-ttu-id="06c52-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="06c52-103">Properties</span></span>  
+# <a name="5402---tokenvalidationstarted"></a><span data-ttu-id="abcfe-102">5402 — TokenValidationStarted</span><span class="sxs-lookup"><span data-stu-id="abcfe-102">5402 - TokenValidationStarted</span></span>
+## <a name="properties"></a><span data-ttu-id="abcfe-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="abcfe-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="06c52-104">ID</span><span class="sxs-lookup"><span data-stu-id="06c52-104">ID</span></span>|<span data-ttu-id="06c52-105">5402</span><span class="sxs-lookup"><span data-stu-id="06c52-105">5402</span></span>|  
-|<span data-ttu-id="06c52-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="06c52-106">Keywords</span></span>|<span data-ttu-id="06c52-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="06c52-107">Security</span></span>|  
-|<span data-ttu-id="06c52-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="06c52-108">Level</span></span>|<span data-ttu-id="06c52-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="06c52-109">Verbose</span></span>|  
-|<span data-ttu-id="06c52-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="06c52-110">Channel</span></span>|<span data-ttu-id="06c52-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="06c52-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="abcfe-104">ID</span><span class="sxs-lookup"><span data-stu-id="abcfe-104">ID</span></span>|<span data-ttu-id="abcfe-105">5402</span><span class="sxs-lookup"><span data-stu-id="abcfe-105">5402</span></span>|  
+|<span data-ttu-id="abcfe-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="abcfe-106">Keywords</span></span>|<span data-ttu-id="abcfe-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="abcfe-107">Security</span></span>|  
+|<span data-ttu-id="abcfe-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="abcfe-108">Level</span></span>|<span data-ttu-id="abcfe-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="abcfe-109">Verbose</span></span>|  
+|<span data-ttu-id="abcfe-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="abcfe-110">Channel</span></span>|<span data-ttu-id="abcfe-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="abcfe-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="06c52-112">Opis</span><span class="sxs-lookup"><span data-stu-id="06c52-112">Description</span></span>  
- <span data-ttu-id="06c52-113">To zdarzenie jest emitowany po uruchomieniu sprawdzania poprawności obiektu SecurityToken.</span><span class="sxs-lookup"><span data-stu-id="06c52-113">This event is emitted when the SecurityToken validation started.</span></span>  
+## <a name="description"></a><span data-ttu-id="abcfe-112">Opis</span><span class="sxs-lookup"><span data-stu-id="abcfe-112">Description</span></span>  
+ <span data-ttu-id="abcfe-113">To zdarzenie jest emitowany po uruchomieniu sprawdzania poprawności obiektu SecurityToken.</span><span class="sxs-lookup"><span data-stu-id="abcfe-113">This event is emitted when the SecurityToken validation started.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="06c52-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="06c52-114">Message</span></span>  
- <span data-ttu-id="06c52-115">Rozpoczęto weryfikację SecurityToken (typu '%1' i identyfikatorze "%2").</span><span class="sxs-lookup"><span data-stu-id="06c52-115">SecurityToken (type '%1' and id '%2') validation started.</span></span>  
+## <a name="message"></a><span data-ttu-id="abcfe-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="abcfe-114">Message</span></span>  
+ <span data-ttu-id="abcfe-115">Rozpoczęto weryfikację SecurityToken (typu '%1' i identyfikatorze "%2").</span><span class="sxs-lookup"><span data-stu-id="abcfe-115">SecurityToken (type '%1' and id '%2') validation started.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="06c52-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="06c52-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="abcfe-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="abcfe-116">Details</span></span>

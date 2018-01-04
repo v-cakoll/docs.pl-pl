@@ -17,25 +17,26 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 769c40434ecb0ac1bbae63f1697e5005c0de875b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 096773fd8cb303cc504bc956d500e8f1e55cda00
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="image"></a><span data-ttu-id="89937-102">Obraz</span><span class="sxs-lookup"><span data-stu-id="89937-102">Image</span></span>
-<span data-ttu-id="89937-103"><xref:System.Windows.Controls.Image> Element służy do wyświetlania obrazów mapy bitowej w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="89937-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="886ad-102">Obraz</span><span class="sxs-lookup"><span data-stu-id="886ad-102">Image</span></span>
+<span data-ttu-id="886ad-103"><xref:System.Windows.Controls.Image> Element służy do wyświetlania obrazów mapy bitowej w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="886ad-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="89937-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="89937-104">In This Section</span></span>  
- [<span data-ttu-id="89937-105">Tematy porad</span><span class="sxs-lookup"><span data-stu-id="89937-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="886ad-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="886ad-104">In This Section</span></span>  
+ [<span data-ttu-id="886ad-105">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="886ad-105">How-to Topics</span></span>](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="89937-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="89937-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="886ad-106">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="886ad-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="89937-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="89937-107">See Also</span></span>  
- [<span data-ttu-id="89937-108">Omówienie tworzenia obrazu</span><span class="sxs-lookup"><span data-stu-id="89937-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [<span data-ttu-id="89937-109">Tematy porad</span><span class="sxs-lookup"><span data-stu-id="89937-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="886ad-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="886ad-107">See Also</span></span>  
+ [<span data-ttu-id="886ad-108">Obrazowanie — przegląd</span><span class="sxs-lookup"><span data-stu-id="886ad-108">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [<span data-ttu-id="886ad-109">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="886ad-109">How-to Topics</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

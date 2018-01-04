@@ -13,16 +13,17 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da0bc2ac9a4283ec9b23a1d4767f664de071ef47
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 63824ae2171053bee2af204e748a6fa811f2ba82
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="operationbehaviorattribute"></a><span data-ttu-id="55963-102">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="55963-102">OperationBehaviorAttribute</span></span>
-<span data-ttu-id="55963-103">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="55963-103">OperationBehaviorAttribute</span></span>  
+# <a name="operationbehaviorattribute"></a><span data-ttu-id="423b3-102">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="423b3-102">OperationBehaviorAttribute</span></span>
+<span data-ttu-id="423b3-103">OperationBehaviorAttribute</span><span class="sxs-lookup"><span data-stu-id="423b3-103">OperationBehaviorAttribute</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55963-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="55963-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="423b3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="423b3-104">Syntax</span></span>  
   
 ```  
 class OperationBehaviorAttribute : Behavior  
@@ -35,52 +36,52 @@ class OperationBehaviorAttribute : Behavior
 };  
 ```  
   
-## <a name="methods"></a><span data-ttu-id="55963-105">Metody</span><span class="sxs-lookup"><span data-stu-id="55963-105">Methods</span></span>  
- <span data-ttu-id="55963-106">Klasa OperationBehaviorAttribute nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="55963-106">The OperationBehaviorAttribute class does not define any methods.</span></span>  
+## <a name="methods"></a><span data-ttu-id="423b3-105">Metody</span><span class="sxs-lookup"><span data-stu-id="423b3-105">Methods</span></span>  
+ <span data-ttu-id="423b3-106">Klasa OperationBehaviorAttribute nie definiuje żadnych metod.</span><span class="sxs-lookup"><span data-stu-id="423b3-106">The OperationBehaviorAttribute class does not define any methods.</span></span>  
   
-## <a name="properties"></a><span data-ttu-id="55963-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="55963-107">Properties</span></span>  
- <span data-ttu-id="55963-108">Klasa OperationBehaviorAttribute ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="55963-108">The OperationBehaviorAttribute class has the following properties:</span></span>  
+## <a name="properties"></a><span data-ttu-id="423b3-107">Właściwości</span><span class="sxs-lookup"><span data-stu-id="423b3-107">Properties</span></span>  
+ <span data-ttu-id="423b3-108">Klasa OperationBehaviorAttribute ma następujące właściwości:</span><span class="sxs-lookup"><span data-stu-id="423b3-108">The OperationBehaviorAttribute class has the following properties:</span></span>  
   
-### <a name="autodisposeparameters"></a><span data-ttu-id="55963-109">AutoDisposeParameters</span><span class="sxs-lookup"><span data-stu-id="55963-109">AutoDisposeParameters</span></span>  
- <span data-ttu-id="55963-110">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="55963-110">Data type: boolean</span></span>  
+### <a name="autodisposeparameters"></a><span data-ttu-id="423b3-109">AutoDisposeParameters</span><span class="sxs-lookup"><span data-stu-id="423b3-109">AutoDisposeParameters</span></span>  
+ <span data-ttu-id="423b3-110">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="423b3-110">Data type: boolean</span></span>  
   
- <span data-ttu-id="55963-111">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="55963-111">Access type: Read-only</span></span>  
+ <span data-ttu-id="423b3-111">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="423b3-111">Access type: Read-only</span></span>  
   
- <span data-ttu-id="55963-112">Stan funkcji automatycznego usuwania parametrów.</span><span class="sxs-lookup"><span data-stu-id="55963-112">The state of the auto-dispose feature for parameters.</span></span>  
+ <span data-ttu-id="423b3-112">Stan funkcji automatycznego usuwania parametrów.</span><span class="sxs-lookup"><span data-stu-id="423b3-112">The state of the auto-dispose feature for parameters.</span></span>  
   
-### <a name="impersonation"></a><span data-ttu-id="55963-113">Personifikacja</span><span class="sxs-lookup"><span data-stu-id="55963-113">Impersonation</span></span>  
- <span data-ttu-id="55963-114">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="55963-114">Data type: string</span></span>  
+### <a name="impersonation"></a><span data-ttu-id="423b3-113">Personifikacja</span><span class="sxs-lookup"><span data-stu-id="423b3-113">Impersonation</span></span>  
+ <span data-ttu-id="423b3-114">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="423b3-114">Data type: string</span></span>  
   
- <span data-ttu-id="55963-115">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="55963-115">Access type: Read-only</span></span>  
+ <span data-ttu-id="423b3-115">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="423b3-115">Access type: Read-only</span></span>  
   
- <span data-ttu-id="55963-116">Wskazuje poziom personifikacji wywołującego obsługiwany przez operację.</span><span class="sxs-lookup"><span data-stu-id="55963-116">Indicates the level of caller impersonation that the operation supports.</span></span>  
+ <span data-ttu-id="423b3-116">Wskazuje poziom personifikacji wywołującego obsługiwany przez operację.</span><span class="sxs-lookup"><span data-stu-id="423b3-116">Indicates the level of caller impersonation that the operation supports.</span></span>  
   
-### <a name="releaseinstancemode"></a><span data-ttu-id="55963-117">ReleaseInstanceMode</span><span class="sxs-lookup"><span data-stu-id="55963-117">ReleaseInstanceMode</span></span>  
- <span data-ttu-id="55963-118">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="55963-118">Data type: string</span></span>  
+### <a name="releaseinstancemode"></a><span data-ttu-id="423b3-117">ReleaseInstanceMode</span><span class="sxs-lookup"><span data-stu-id="423b3-117">ReleaseInstanceMode</span></span>  
+ <span data-ttu-id="423b3-118">Typ danych: ciąg</span><span class="sxs-lookup"><span data-stu-id="423b3-118">Data type: string</span></span>  
   
- <span data-ttu-id="55963-119">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="55963-119">Access type: Read-only</span></span>  
+ <span data-ttu-id="423b3-119">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="423b3-119">Access type: Read-only</span></span>  
   
- <span data-ttu-id="55963-120">Wskazuje, kiedy ma wywołania operacji ponowne przetworzenie obiektu.</span><span class="sxs-lookup"><span data-stu-id="55963-120">Indicates when in the course of an operation invocation to recycle the object.</span></span>  
+ <span data-ttu-id="423b3-120">Wskazuje, kiedy ma wywołania operacji ponowne przetworzenie obiektu.</span><span class="sxs-lookup"><span data-stu-id="423b3-120">Indicates when in the course of an operation invocation to recycle the object.</span></span>  
   
-### <a name="transactionautocomplete"></a><span data-ttu-id="55963-121">Wartość TransactionAutoComplete</span><span class="sxs-lookup"><span data-stu-id="55963-121">TransactionAutoComplete</span></span>  
- <span data-ttu-id="55963-122">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="55963-122">Data type: boolean</span></span>  
+### <a name="transactionautocomplete"></a><span data-ttu-id="423b3-121">Wartość TransactionAutoComplete</span><span class="sxs-lookup"><span data-stu-id="423b3-121">TransactionAutoComplete</span></span>  
+ <span data-ttu-id="423b3-122">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="423b3-122">Data type: boolean</span></span>  
   
- <span data-ttu-id="55963-123">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="55963-123">Access type: Read-only</span></span>  
+ <span data-ttu-id="423b3-123">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="423b3-123">Access type: Read-only</span></span>  
   
- <span data-ttu-id="55963-124">Wskazuje, czy ma być automatycznie przekazywana bieżącej transakcji, jeśli wystąpi żaden nieobsługiwany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="55963-124">Indicates whether to automatically commit the current transaction if no unhandled exceptions occur.</span></span>  
+ <span data-ttu-id="423b3-124">Wskazuje, czy ma być automatycznie przekazywana bieżącej transakcji, jeśli wystąpi żaden nieobsługiwany wyjątek.</span><span class="sxs-lookup"><span data-stu-id="423b3-124">Indicates whether to automatically commit the current transaction if no unhandled exceptions occur.</span></span>  
   
-### <a name="transactionscoperequired"></a><span data-ttu-id="55963-125">Właściwości TransactionScopeRequired</span><span class="sxs-lookup"><span data-stu-id="55963-125">TransactionScopeRequired</span></span>  
- <span data-ttu-id="55963-126">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="55963-126">Data type: boolean</span></span>  
+### <a name="transactionscoperequired"></a><span data-ttu-id="423b3-125">Właściwości TransactionScopeRequired</span><span class="sxs-lookup"><span data-stu-id="423b3-125">TransactionScopeRequired</span></span>  
+ <span data-ttu-id="423b3-126">Typ danych: wartość logiczna</span><span class="sxs-lookup"><span data-stu-id="423b3-126">Data type: boolean</span></span>  
   
- <span data-ttu-id="55963-127">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="55963-127">Access type: Read-only</span></span>  
+ <span data-ttu-id="423b3-127">Dostęp typu: tylko do odczytu</span><span class="sxs-lookup"><span data-stu-id="423b3-127">Access type: Read-only</span></span>  
   
- <span data-ttu-id="55963-128">Wskazuje, czy operacja wymaga transakcji.</span><span class="sxs-lookup"><span data-stu-id="55963-128">Indicates whether the operation requires a transaction.</span></span>  
+ <span data-ttu-id="423b3-128">Wskazuje, czy operacja wymaga transakcji.</span><span class="sxs-lookup"><span data-stu-id="423b3-128">Indicates whether the operation requires a transaction.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="55963-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="55963-129">Requirements</span></span>  
+## <a name="requirements"></a><span data-ttu-id="423b3-129">Wymagania</span><span class="sxs-lookup"><span data-stu-id="423b3-129">Requirements</span></span>  
   
-|<span data-ttu-id="55963-130">MOF</span><span class="sxs-lookup"><span data-stu-id="55963-130">MOF</span></span>|<span data-ttu-id="55963-131">Zadeklarowany w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="55963-131">Declared in Servicemodel.mof.</span></span>|  
+|<span data-ttu-id="423b3-130">MOF</span><span class="sxs-lookup"><span data-stu-id="423b3-130">MOF</span></span>|<span data-ttu-id="423b3-131">Zadeklarowany w Servicemodel.mof.</span><span class="sxs-lookup"><span data-stu-id="423b3-131">Declared in Servicemodel.mof.</span></span>|  
 |---------|-----------------------------------|  
-|<span data-ttu-id="55963-132">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="55963-132">Namespace</span></span>|<span data-ttu-id="55963-133">Zdefiniowany w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="55963-133">Defined in root\ServiceModel</span></span>|  
+|<span data-ttu-id="423b3-132">Przestrzeń nazw</span><span class="sxs-lookup"><span data-stu-id="423b3-132">Namespace</span></span>|<span data-ttu-id="423b3-133">Zdefiniowany w root\ServiceModel</span><span class="sxs-lookup"><span data-stu-id="423b3-133">Defined in root\ServiceModel</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="55963-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="55963-134">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="423b3-134">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="423b3-134">See Also</span></span>  
  <xref:System.ServiceModel.OperationBehaviorAttribute>

@@ -17,17 +17,18 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33a2e7200a1154bbe79190809511401e6f12b370
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 378dac360e94d07bf8475286559e6aeed5321bbc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink-overviews"></a><span data-ttu-id="25e15-102">Przeglądy Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="25e15-102">Digital Ink Overviews</span></span>
-## <a name="in-this-section"></a><span data-ttu-id="25e15-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="25e15-103">In This Section</span></span>  
- [<span data-ttu-id="25e15-104">Wprowadzenie do odręcznego</span><span class="sxs-lookup"><span data-stu-id="25e15-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
-  [<span data-ttu-id="25e15-105">Zbieranie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="25e15-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
-  [<span data-ttu-id="25e15-106">Rozpoznawania pisma ręcznego</span><span class="sxs-lookup"><span data-stu-id="25e15-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
-  [<span data-ttu-id="25e15-107">Przechowywanie odręcznego</span><span class="sxs-lookup"><span data-stu-id="25e15-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
-  [<span data-ttu-id="25e15-108">Model obiektu odręczne: Windows formularzy i COM w porównaniu z WPF</span><span class="sxs-lookup"><span data-stu-id="25e15-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
-  [<span data-ttu-id="25e15-109">Obsługa zaawansowanych odręcznego</span><span class="sxs-lookup"><span data-stu-id="25e15-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)
+# <a name="digital-ink-overviews"></a><span data-ttu-id="16cde-102">Przeglądy Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="16cde-102">Digital Ink Overviews</span></span>
+## <a name="in-this-section"></a><span data-ttu-id="16cde-103">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="16cde-103">In This Section</span></span>  
+ [<span data-ttu-id="16cde-104">Wprowadzenie do użycia atramentu</span><span class="sxs-lookup"><span data-stu-id="16cde-104">Getting Started with Ink</span></span>](../../../../docs/framework/wpf/advanced/getting-started-with-ink.md)  
+  [<span data-ttu-id="16cde-105">Zbieranie atramentu</span><span class="sxs-lookup"><span data-stu-id="16cde-105">Collecting Ink</span></span>](../../../../docs/framework/wpf/advanced/collecting-ink.md)  
+  [<span data-ttu-id="16cde-106">Rozpoznawanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="16cde-106">Handwriting Recognition</span></span>](../../../../docs/framework/wpf/advanced/handwriting-recognition.md)  
+  [<span data-ttu-id="16cde-107">Przechowywanie pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="16cde-107">Storing Ink</span></span>](../../../../docs/framework/wpf/advanced/storing-ink.md)  
+  [<span data-ttu-id="16cde-108">Model obiektu pisma odręcznego: Windows Forms i COM a WPF</span><span class="sxs-lookup"><span data-stu-id="16cde-108">The Ink Object Model: Windows Forms and COM versus WPF</span></span>](../../../../docs/framework/wpf/advanced/the-ink-object-model-windows-forms-and-com-versus-wpf.md)  
+  [<span data-ttu-id="16cde-109">Zaawansowana obsługa pisma odręcznego</span><span class="sxs-lookup"><span data-stu-id="16cde-109">Advanced Ink Handling</span></span>](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)

@@ -12,30 +12,31 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4da95a4824325bb5ddfe0454756f682888ca93d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 005b95a98b7a30283be32ad1ea0b580a57a3b771
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="2022---executeworkitemstop"></a><span data-ttu-id="afcee-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="afcee-102">2022 - ExecuteWorkItemStop</span></span>
-## <a name="properties"></a><span data-ttu-id="afcee-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="afcee-103">Properties</span></span>  
+# <a name="2022---executeworkitemstop"></a><span data-ttu-id="1cb54-102">2022 - ExecuteWorkItemStop</span><span class="sxs-lookup"><span data-stu-id="1cb54-102">2022 - ExecuteWorkItemStop</span></span>
+## <a name="properties"></a><span data-ttu-id="1cb54-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="1cb54-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="afcee-104">ID</span><span class="sxs-lookup"><span data-stu-id="afcee-104">ID</span></span>|<span data-ttu-id="afcee-105">2022</span><span class="sxs-lookup"><span data-stu-id="afcee-105">2022</span></span>|  
-|<span data-ttu-id="afcee-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="afcee-106">Keywords</span></span>|<span data-ttu-id="afcee-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="afcee-107">WFRuntime</span></span>|  
-|<span data-ttu-id="afcee-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="afcee-108">Level</span></span>|<span data-ttu-id="afcee-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="afcee-109">Verbose</span></span>|  
-|<span data-ttu-id="afcee-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="afcee-110">Channel</span></span>|<span data-ttu-id="afcee-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="afcee-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="1cb54-104">ID</span><span class="sxs-lookup"><span data-stu-id="1cb54-104">ID</span></span>|<span data-ttu-id="1cb54-105">2022</span><span class="sxs-lookup"><span data-stu-id="1cb54-105">2022</span></span>|  
+|<span data-ttu-id="1cb54-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="1cb54-106">Keywords</span></span>|<span data-ttu-id="1cb54-107">WFRuntime</span><span class="sxs-lookup"><span data-stu-id="1cb54-107">WFRuntime</span></span>|  
+|<span data-ttu-id="1cb54-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="1cb54-108">Level</span></span>|<span data-ttu-id="1cb54-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="1cb54-109">Verbose</span></span>|  
+|<span data-ttu-id="1cb54-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="1cb54-110">Channel</span></span>|<span data-ttu-id="1cb54-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="1cb54-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="afcee-112">Opis</span><span class="sxs-lookup"><span data-stu-id="afcee-112">Description</span></span>  
- <span data-ttu-id="afcee-113">Wskazuje, że ExecuteWorkItem została ukończona.</span><span class="sxs-lookup"><span data-stu-id="afcee-113">Indicates an ExecuteWorkItem has completed.</span></span>  
+## <a name="description"></a><span data-ttu-id="1cb54-112">Opis</span><span class="sxs-lookup"><span data-stu-id="1cb54-112">Description</span></span>  
+ <span data-ttu-id="1cb54-113">Wskazuje, że ExecuteWorkItem została ukończona.</span><span class="sxs-lookup"><span data-stu-id="1cb54-113">Indicates an ExecuteWorkItem has completed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="afcee-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="afcee-114">Message</span></span>  
- <span data-ttu-id="afcee-115">Zatrzymano wykonywanie elementu pracy</span><span class="sxs-lookup"><span data-stu-id="afcee-115">Execute work item stop</span></span>  
+## <a name="message"></a><span data-ttu-id="1cb54-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="1cb54-114">Message</span></span>  
+ <span data-ttu-id="1cb54-115">Zatrzymano wykonywanie elementu pracy</span><span class="sxs-lookup"><span data-stu-id="1cb54-115">Execute work item stop</span></span>  
   
-## <a name="details"></a><span data-ttu-id="afcee-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="afcee-116">Details</span></span>  
+## <a name="details"></a><span data-ttu-id="1cb54-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="1cb54-116">Details</span></span>  
   
-|<span data-ttu-id="afcee-117">Nazwa elementu danych</span><span class="sxs-lookup"><span data-stu-id="afcee-117">Data Item Name</span></span>|<span data-ttu-id="afcee-118">Typ elementu danych</span><span class="sxs-lookup"><span data-stu-id="afcee-118">Data Item Type</span></span>|<span data-ttu-id="afcee-119">Opis</span><span class="sxs-lookup"><span data-stu-id="afcee-119">Description</span></span>|  
+|<span data-ttu-id="1cb54-117">Nazwa elementu danych</span><span class="sxs-lookup"><span data-stu-id="1cb54-117">Data Item Name</span></span>|<span data-ttu-id="1cb54-118">Typ elementu danych</span><span class="sxs-lookup"><span data-stu-id="1cb54-118">Data Item Type</span></span>|<span data-ttu-id="1cb54-119">Opis</span><span class="sxs-lookup"><span data-stu-id="1cb54-119">Description</span></span>|  
 |--------------------|--------------------|-----------------|  
-|<span data-ttu-id="afcee-120">Domeny aplikacji</span><span class="sxs-lookup"><span data-stu-id="afcee-120">AppDomain</span></span>|<span data-ttu-id="afcee-121">xs:String</span><span class="sxs-lookup"><span data-stu-id="afcee-121">xs:string</span></span>|<span data-ttu-id="afcee-122">Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="afcee-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|
+|<span data-ttu-id="1cb54-120">Domeny aplikacji</span><span class="sxs-lookup"><span data-stu-id="1cb54-120">AppDomain</span></span>|<span data-ttu-id="1cb54-121">xs:String</span><span class="sxs-lookup"><span data-stu-id="1cb54-121">xs:string</span></span>|<span data-ttu-id="1cb54-122">Długość ciągu zwróconego przez AppDomain.CurrentDomain.FriendlyName.</span><span class="sxs-lookup"><span data-stu-id="1cb54-122">The string returned by AppDomain.CurrentDomain.FriendlyName.</span></span>|

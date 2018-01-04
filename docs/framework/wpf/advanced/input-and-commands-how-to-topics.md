@@ -17,29 +17,30 @@ caps.latest.revision: "76"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1dbec8435c82e795d48544a366eeced2419f6d8c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 301532e640273073a884d62d24363557b4ce1e04
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="c58e9-102">Dane wejściowe i polecenia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="c58e9-102">Input and Commands How-to Topics</span></span>
-<span data-ttu-id="c58e9-103">Tematy w tej sekcji opisano sposób korzystania z infrastruktury wejściowych i sterująca w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="c58e9-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
+# <a name="input-and-commands-how-to-topics"></a><span data-ttu-id="8cf05-102">Dane wejściowe i polecenia Tematy porad</span><span class="sxs-lookup"><span data-stu-id="8cf05-102">Input and Commands How-to Topics</span></span>
+<span data-ttu-id="8cf05-103">Tematy w tej sekcji opisano sposób korzystania z infrastruktury wejściowych i sterująca w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span><span class="sxs-lookup"><span data-stu-id="8cf05-103">The topics in this section describe how to use the input and commanding infrastructure in [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)].</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c58e9-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c58e9-104">In This Section</span></span>  
- [<span data-ttu-id="c58e9-105">Włącz polecenia</span><span class="sxs-lookup"><span data-stu-id="c58e9-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [<span data-ttu-id="c58e9-106">Zmień typ kursora</span><span class="sxs-lookup"><span data-stu-id="c58e9-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [<span data-ttu-id="c58e9-107">Zmiana koloru elementu za pomocą zdarzeń fokusu</span><span class="sxs-lookup"><span data-stu-id="c58e9-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [<span data-ttu-id="c58e9-108">Stosowanie FocusVisualStyle do formantu</span><span class="sxs-lookup"><span data-stu-id="c58e9-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [<span data-ttu-id="c58e9-109">Wykryć podczas Wprowadź naciśnięcia klawisza</span><span class="sxs-lookup"><span data-stu-id="c58e9-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [<span data-ttu-id="c58e9-110">Tworzenie efektu przerzucania za pomocą zdarzeń</span><span class="sxs-lookup"><span data-stu-id="c58e9-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [<span data-ttu-id="c58e9-111">Utwórz obiekt wykonaj wskaźnika myszy</span><span class="sxs-lookup"><span data-stu-id="c58e9-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [<span data-ttu-id="c58e9-112">Utwórz element RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="c58e9-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [<span data-ttu-id="c58e9-113">Implementowanie ICommandSource</span><span class="sxs-lookup"><span data-stu-id="c58e9-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [<span data-ttu-id="c58e9-114">Podłączanie polecenia do formantu bez obsługi polecenia</span><span class="sxs-lookup"><span data-stu-id="c58e9-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [<span data-ttu-id="c58e9-115">Podłączanie polecenia dla formantu o obsługę poleceń</span><span class="sxs-lookup"><span data-stu-id="c58e9-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+## <a name="in-this-section"></a><span data-ttu-id="8cf05-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="8cf05-104">In This Section</span></span>  
+ [<span data-ttu-id="8cf05-105">Włączanie polecenia</span><span class="sxs-lookup"><span data-stu-id="8cf05-105">Enable a Command</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [<span data-ttu-id="8cf05-106">Zmienianie typu kursora</span><span class="sxs-lookup"><span data-stu-id="8cf05-106">Change the Cursor Type</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
+ [<span data-ttu-id="8cf05-107">Zmienianie koloru elementu przy użyciu zdarzeń fokusu</span><span class="sxs-lookup"><span data-stu-id="8cf05-107">Change the Color of an Element Using Focus Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [<span data-ttu-id="8cf05-108">Stosowanie stylu FocusVisualStyle do kontrolki</span><span class="sxs-lookup"><span data-stu-id="8cf05-108">Apply a FocusVisualStyle to a Control</span></span>](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [<span data-ttu-id="8cf05-109">Wykrywanie chwili wciśnięcia klawisza Enter</span><span class="sxs-lookup"><span data-stu-id="8cf05-109">Detect When the Enter Key is Pressed</span></span>](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
+ [<span data-ttu-id="8cf05-110">Tworzenie efektu najazdu przy użyciu zdarzeń</span><span class="sxs-lookup"><span data-stu-id="8cf05-110">Create a Rollover Effect Using Events</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
+ [<span data-ttu-id="8cf05-111">Sprawianie, aby obiekt podążał za wskaźnikiem myszy</span><span class="sxs-lookup"><span data-stu-id="8cf05-111">Make an Object Follow the Mouse Pointer</span></span>](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [<span data-ttu-id="8cf05-112">Tworzenie elementu RoutedCommand</span><span class="sxs-lookup"><span data-stu-id="8cf05-112">Create a RoutedCommand</span></span>](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
+ [<span data-ttu-id="8cf05-113">Implementowanie elementu ICommandSource</span><span class="sxs-lookup"><span data-stu-id="8cf05-113">Implement ICommandSource</span></span>](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
+ [<span data-ttu-id="8cf05-114">Podpinanie polecenia do kontrolki bez użycia obsługi poleceń</span><span class="sxs-lookup"><span data-stu-id="8cf05-114">Hook Up a Command to a Control with No Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [<span data-ttu-id="8cf05-115">Podpinanie polecenia do kontrolki za pomocą obsługi poleceń</span><span class="sxs-lookup"><span data-stu-id="8cf05-115">Hook Up a Command to a Control with Command Support</span></span>](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
-## <a name="reference"></a><span data-ttu-id="c58e9-116">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c58e9-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8cf05-116">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="8cf05-116">Reference</span></span>  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Input.FocusManager>  
   
-## <a name="related-sections"></a><span data-ttu-id="c58e9-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c58e9-117">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8cf05-117">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="8cf05-117">Related Sections</span></span>

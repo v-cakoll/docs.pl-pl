@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ba0657ec7b3567c80627fd708833504aa31fc510
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d933aeda76f7a0196d9b37e148ea4c4173f07053
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodnewtransaction"></a><span data-ttu-id="0f5cf-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span><span class="sxs-lookup"><span data-stu-id="0f5cf-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span></span>
-<span data-ttu-id="0f5cf-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span><span class="sxs-lookup"><span data-stu-id="0f5cf-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span></span>  
+# <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodnewtransaction"></a><span data-ttu-id="25aa7-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span><span class="sxs-lookup"><span data-stu-id="25aa7-102">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span></span>
+<span data-ttu-id="25aa7-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span><span class="sxs-lookup"><span data-stu-id="25aa7-103">System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodNewTransaction</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0f5cf-104">Opis</span><span class="sxs-lookup"><span data-stu-id="0f5cf-104">Description</span></span>  
- <span data-ttu-id="0f5cf-105">ComPlus: Wywoływanie metody z nową transakcją przychodzącą.</span><span class="sxs-lookup"><span data-stu-id="0f5cf-105">Complus: Invoking method with new incoming transaction.</span></span>  
+## <a name="description"></a><span data-ttu-id="25aa7-104">Opis</span><span class="sxs-lookup"><span data-stu-id="25aa7-104">Description</span></span>  
+ <span data-ttu-id="25aa7-105">ComPlus: Wywoływanie metody z nową transakcją przychodzącą.</span><span class="sxs-lookup"><span data-stu-id="25aa7-105">Complus: Invoking method with new incoming transaction.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0f5cf-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0f5cf-106">See Also</span></span>  
- [<span data-ttu-id="0f5cf-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="0f5cf-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="0f5cf-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="0f5cf-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="0f5cf-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="0f5cf-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="25aa7-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="25aa7-106">See Also</span></span>  
+ [<span data-ttu-id="25aa7-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="25aa7-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="25aa7-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="25aa7-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="25aa7-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="25aa7-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

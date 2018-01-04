@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3f326f08689a75c7931ad87dcccb6d42c715ea65
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7e15544217886c6ef13ec61c5a79033f8417617b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="d2ce2-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="d2ce2-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
-<span data-ttu-id="d2ce2-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="d2ce2-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
+# <a name="systemservicemodelchannelsmsmqstartingservice"></a><span data-ttu-id="17e87-102">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="17e87-102">System.ServiceModel.Channels.MsmqStartingService</span></span>
+<span data-ttu-id="17e87-103">System.ServiceModel.Channels.MsmqStartingService</span><span class="sxs-lookup"><span data-stu-id="17e87-103">System.ServiceModel.Channels.MsmqStartingService</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d2ce2-104">Opis</span><span class="sxs-lookup"><span data-stu-id="d2ce2-104">Description</span></span>  
- <span data-ttu-id="d2ce2-105">Środowisko hostingu uruchomiło usługę.</span><span class="sxs-lookup"><span data-stu-id="d2ce2-105">The hosting environment started the service.</span></span>  
+## <a name="description"></a><span data-ttu-id="17e87-104">Opis</span><span class="sxs-lookup"><span data-stu-id="17e87-104">Description</span></span>  
+ <span data-ttu-id="17e87-105">Środowisko hostingu uruchomiło usługę.</span><span class="sxs-lookup"><span data-stu-id="17e87-105">The hosting environment started the service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d2ce2-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d2ce2-106">See Also</span></span>  
- [<span data-ttu-id="d2ce2-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="d2ce2-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="d2ce2-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="d2ce2-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="d2ce2-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="d2ce2-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="17e87-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="17e87-106">See Also</span></span>  
+ [<span data-ttu-id="17e87-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="17e87-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="17e87-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="17e87-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="17e87-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="17e87-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

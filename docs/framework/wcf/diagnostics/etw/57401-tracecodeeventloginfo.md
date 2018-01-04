@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 98e4b833e12185ab386c46cfc79623f67c039061
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b7b6bb9872a5a7f1131c8530a1615763e62b91b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="57401---tracecodeeventloginfo"></a><span data-ttu-id="c982e-102">57401 — TraceCodeEventLogInfo</span><span class="sxs-lookup"><span data-stu-id="c982e-102">57401 - TraceCodeEventLogInfo</span></span>
-## <a name="properties"></a><span data-ttu-id="c982e-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="c982e-103">Properties</span></span>  
+# <a name="57401---tracecodeeventloginfo"></a><span data-ttu-id="6cb19-102">57401 — TraceCodeEventLogInfo</span><span class="sxs-lookup"><span data-stu-id="6cb19-102">57401 - TraceCodeEventLogInfo</span></span>
+## <a name="properties"></a><span data-ttu-id="6cb19-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="6cb19-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="c982e-104">ID</span><span class="sxs-lookup"><span data-stu-id="c982e-104">ID</span></span>|<span data-ttu-id="c982e-105">57401</span><span class="sxs-lookup"><span data-stu-id="c982e-105">57401</span></span>|  
-|<span data-ttu-id="c982e-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="c982e-106">Keywords</span></span>|<span data-ttu-id="c982e-107">Infrastruktura</span><span class="sxs-lookup"><span data-stu-id="c982e-107">Infrastructure</span></span>|  
-|<span data-ttu-id="c982e-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="c982e-108">Level</span></span>|<span data-ttu-id="c982e-109">Informacje</span><span class="sxs-lookup"><span data-stu-id="c982e-109">Information</span></span>|  
-|<span data-ttu-id="c982e-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="c982e-110">Channel</span></span>|<span data-ttu-id="c982e-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="c982e-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="6cb19-104">ID</span><span class="sxs-lookup"><span data-stu-id="6cb19-104">ID</span></span>|<span data-ttu-id="6cb19-105">57401</span><span class="sxs-lookup"><span data-stu-id="6cb19-105">57401</span></span>|  
+|<span data-ttu-id="6cb19-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="6cb19-106">Keywords</span></span>|<span data-ttu-id="6cb19-107">Infrastruktura</span><span class="sxs-lookup"><span data-stu-id="6cb19-107">Infrastructure</span></span>|  
+|<span data-ttu-id="6cb19-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="6cb19-108">Level</span></span>|<span data-ttu-id="6cb19-109">Informacje</span><span class="sxs-lookup"><span data-stu-id="6cb19-109">Information</span></span>|  
+|<span data-ttu-id="6cb19-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="6cb19-110">Channel</span></span>|<span data-ttu-id="6cb19-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="6cb19-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="c982e-112">Opis</span><span class="sxs-lookup"><span data-stu-id="c982e-112">Description</span></span>  
- <span data-ttu-id="c982e-113">To zdarzenie jest emitowany na TraceCodeEventLogInfo.</span><span class="sxs-lookup"><span data-stu-id="c982e-113">This event is emitted on TraceCodeEventLogInfo.</span></span>  
+## <a name="description"></a><span data-ttu-id="6cb19-112">Opis</span><span class="sxs-lookup"><span data-stu-id="6cb19-112">Description</span></span>  
+ <span data-ttu-id="6cb19-113">To zdarzenie jest emitowany na TraceCodeEventLogInfo.</span><span class="sxs-lookup"><span data-stu-id="6cb19-113">This event is emitted on TraceCodeEventLogInfo.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="c982e-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="c982e-114">Message</span></span>  
- <span data-ttu-id="c982e-115">Zapisano w dzienniku zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="c982e-115">Wrote to the EventLog.</span></span>  
+## <a name="message"></a><span data-ttu-id="6cb19-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="6cb19-114">Message</span></span>  
+ <span data-ttu-id="6cb19-115">Zapisano w dzienniku zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="6cb19-115">Wrote to the EventLog.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="c982e-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="c982e-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="6cb19-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="6cb19-116">Details</span></span>

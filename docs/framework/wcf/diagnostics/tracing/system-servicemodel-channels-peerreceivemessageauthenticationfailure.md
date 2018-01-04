@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 42a0317d47ef18f07994f3b7b0d2fc6f62b4f4e0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 282afb583ea081264205ac351a7f4a171f1c4f59
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a><span data-ttu-id="7f955-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="7f955-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span></span>
-<span data-ttu-id="7f955-103">Nie można uwierzytelnić źródła wiadomości</span><span class="sxs-lookup"><span data-stu-id="7f955-103">The message source could not be authenticated</span></span>  
+# <a name="systemservicemodelchannelspeerreceivemessageauthenticationfailure"></a><span data-ttu-id="4c864-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span><span class="sxs-lookup"><span data-stu-id="4c864-102">System.ServiceModel.Channels.PeerReceiveMessageAuthenticationFailure</span></span>
+<span data-ttu-id="4c864-103">Nie można uwierzytelnić źródła wiadomości</span><span class="sxs-lookup"><span data-stu-id="4c864-103">The message source could not be authenticated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7f955-104">Opis</span><span class="sxs-lookup"><span data-stu-id="7f955-104">Description</span></span>  
- <span data-ttu-id="7f955-105">Ślad wystąpi podczas próby uwierzytelniania wiadomości przychodzących i uwierzytelniania wiadomości jest włączona dla powiązania.</span><span class="sxs-lookup"><span data-stu-id="7f955-105">This trace occurs while trying to authenticate incoming messages and message authentication is enabled on the binding.</span></span>  
+## <a name="description"></a><span data-ttu-id="4c864-104">Opis</span><span class="sxs-lookup"><span data-stu-id="4c864-104">Description</span></span>  
+ <span data-ttu-id="4c864-105">Ślad wystąpi podczas próby uwierzytelniania wiadomości przychodzących i uwierzytelniania wiadomości jest włączona dla powiązania.</span><span class="sxs-lookup"><span data-stu-id="4c864-105">This trace occurs while trying to authenticate incoming messages and message authentication is enabled on the binding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7f955-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7f955-106">See Also</span></span>  
- [<span data-ttu-id="7f955-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="7f955-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="7f955-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="7f955-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="7f955-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="7f955-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="4c864-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4c864-106">See Also</span></span>  
+ [<span data-ttu-id="4c864-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="4c864-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="4c864-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="4c864-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="4c864-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="4c864-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

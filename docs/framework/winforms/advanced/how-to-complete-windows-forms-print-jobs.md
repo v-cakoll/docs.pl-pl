@@ -20,20 +20,21 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9decba052589bfcc3ecd7b2861dad51e9c51378a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00c43ff4ca418d272dc00132907c5bcbc0c5bc8b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="5563e-102">Porady: kończenie zadań drukowania formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="5563e-102">How to: Complete Windows Forms Print Jobs</span></span>
-<span data-ttu-id="5563e-103">Często edytory i inne aplikacje, które obejmują drukowanie zapewni opcję wyświetlania wiadomości do użytkowników o ukończeniu zadania drukowania.</span><span class="sxs-lookup"><span data-stu-id="5563e-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="5563e-104">Możesz podać tę funkcję w formularzach systemu Windows, obsługa <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzenie <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="5563e-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+# <a name="how-to-complete-windows-forms-print-jobs"></a><span data-ttu-id="d08bc-102">Porady: kończenie zadań drukowania formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="d08bc-102">How to: Complete Windows Forms Print Jobs</span></span>
+<span data-ttu-id="d08bc-103">Często edytory i inne aplikacje, które obejmują drukowanie zapewni opcję wyświetlania wiadomości do użytkowników o ukończeniu zadania drukowania.</span><span class="sxs-lookup"><span data-stu-id="d08bc-103">Frequently, word processors and other applications that involve printing will provide the option to display a message to users that a print job is complete.</span></span> <span data-ttu-id="d08bc-104">Możesz podać tę funkcję w formularzach systemu Windows, obsługa <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzenie <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="d08bc-104">You can provide this functionality in your Windows Forms by handling the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
- <span data-ttu-id="5563e-105">Poniższa procedura wymaga, że utworzono aplikację systemu Windows z <xref:System.Drawing.Printing.PrintDocument> składnik go, co jest standardowy sposób włączania drukowanie z aplikacji opartych na systemie Windows.</span><span class="sxs-lookup"><span data-stu-id="5563e-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="5563e-106">Aby uzyskać więcej informacji na temat drukowania z formularzy systemu Windows przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [porady: tworzenie standardowych systemu Windows Forms zadania drukowania](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="5563e-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
+ <span data-ttu-id="d08bc-105">Poniższa procedura wymaga, że utworzono aplikację systemu Windows z <xref:System.Drawing.Printing.PrintDocument> składnik go, co jest standardowy sposób włączania drukowanie z aplikacji opartych na systemie Windows.</span><span class="sxs-lookup"><span data-stu-id="d08bc-105">The following procedure requires that you have created a Windows-based application with a <xref:System.Drawing.Printing.PrintDocument> component on it, which is the standard way of enabling printing from a Windows-based application.</span></span> <span data-ttu-id="d08bc-106">Aby uzyskać więcej informacji na temat drukowania z formularzy systemu Windows przy użyciu <xref:System.Drawing.Printing.PrintDocument> składników, zobacz [porady: tworzenie standardowych systemu Windows Forms zadania drukowania](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).</span><span class="sxs-lookup"><span data-stu-id="d08bc-106">For more information about printing from Windows Forms using the <xref:System.Drawing.Printing.PrintDocument> component, see [How to: Create Standard Windows Forms Print Jobs](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md).</span></span>  
   
-### <a name="to-complete-a-print-job"></a><span data-ttu-id="5563e-107">Aby ukończyć zadanie drukowania</span><span class="sxs-lookup"><span data-stu-id="5563e-107">To complete a print job</span></span>  
+### <a name="to-complete-a-print-job"></a><span data-ttu-id="d08bc-107">Aby ukończyć zadanie drukowania</span><span class="sxs-lookup"><span data-stu-id="d08bc-107">To complete a print job</span></span>  
   
-1.  <span data-ttu-id="5563e-108">Ustaw <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> właściwość <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="5563e-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
+1.  <span data-ttu-id="d08bc-108">Ustaw <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> właściwość <xref:System.Drawing.Printing.PrintDocument> składnika.</span><span class="sxs-lookup"><span data-stu-id="d08bc-108">Set the <xref:System.Drawing.Printing.PrintDocument.DocumentName%2A> property of the <xref:System.Drawing.Printing.PrintDocument> component.</span></span>  
   
     ```vb  
     PrintDocument1.DocumentName = "MyTextFile"  
@@ -47,9 +48,9 @@ ms.lasthandoff: 11/21/2017
     printDocument1->DocumentName = "MyTextFile";  
     ```  
   
-2.  <span data-ttu-id="5563e-109">Napisać kod obsługujący <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="5563e-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
+2.  <span data-ttu-id="d08bc-109">Napisać kod obsługujący <xref:System.Drawing.Printing.PrintDocument.EndPrint> zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d08bc-109">Write code to handle the <xref:System.Drawing.Printing.PrintDocument.EndPrint> event.</span></span>  
   
-     <span data-ttu-id="5563e-110">W poniższym przykładzie kodu zostanie wyświetlone okno komunikatu, wskazujący, że zakończono drukowanie dokumentu.</span><span class="sxs-lookup"><span data-stu-id="5563e-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
+     <span data-ttu-id="d08bc-110">W poniższym przykładzie kodu zostanie wyświetlone okno komunikatu, wskazujący, że zakończono drukowanie dokumentu.</span><span class="sxs-lookup"><span data-stu-id="d08bc-110">In the following code example, a message box is displayed, indicating that the document has finished printing.</span></span>  
   
     ```vb  
     Private Sub PrintDocument1_EndPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDocument1.EndPrint  
@@ -76,7 +77,7 @@ ms.lasthandoff: 11/21/2017
        }  
     ```  
   
-     <span data-ttu-id="5563e-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="5563e-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
+     <span data-ttu-id="d08bc-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) umieścić następujący kod w Konstruktorze formularza, aby zarejestrować program obsługi zdarzeń.</span><span class="sxs-lookup"><span data-stu-id="d08bc-111">([!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) Place the following code in the form's constructor to register the event handler.</span></span>  
   
     ```csharp  
     this.printDocument1.EndPrint += new  
@@ -90,6 +91,6 @@ ms.lasthandoff: 11/21/2017
        (this, &Form1::printDocument1_EndPrint);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="5563e-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5563e-112">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="d08bc-112">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d08bc-112">See Also</span></span>  
  <xref:System.Drawing.Printing.PrintDocument>  
- [<span data-ttu-id="5563e-113">Obsługa drukowania w formularzach systemu Windows</span><span class="sxs-lookup"><span data-stu-id="5563e-113">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+ [<span data-ttu-id="d08bc-113">Obsługa drukowania w formularzach Windows Forms</span><span class="sxs-lookup"><span data-stu-id="d08bc-113">Windows Forms Print Support</span></span>](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)

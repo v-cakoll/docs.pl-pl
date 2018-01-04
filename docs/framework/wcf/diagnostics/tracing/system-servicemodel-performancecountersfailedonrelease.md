@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 77032086a206263a0e3f8a3234e69028ef249c3f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55348c8c9961fcd15556feb7dca2f42b471fcf12
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelperformancecountersfailedonrelease"></a><span data-ttu-id="47f90-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="47f90-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>
-<span data-ttu-id="47f90-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="47f90-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>  
+# <a name="systemservicemodelperformancecountersfailedonrelease"></a><span data-ttu-id="18599-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="18599-102">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>
+<span data-ttu-id="18599-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span><span class="sxs-lookup"><span data-stu-id="18599-103">System.ServiceModel.PerformanceCountersFailedOnRelease</span></span>  
   
-## <a name="description"></a><span data-ttu-id="47f90-104">Opis</span><span class="sxs-lookup"><span data-stu-id="47f90-104">Description</span></span>  
- <span data-ttu-id="47f90-105">Zwalnianie liczniki wydajności nie powiodło się.</span><span class="sxs-lookup"><span data-stu-id="47f90-105">Unloading the performance counters failed.</span></span>  
+## <a name="description"></a><span data-ttu-id="18599-104">Opis</span><span class="sxs-lookup"><span data-stu-id="18599-104">Description</span></span>  
+ <span data-ttu-id="18599-105">Zwalnianie liczniki wydajności nie powiodło się.</span><span class="sxs-lookup"><span data-stu-id="18599-105">Unloading the performance counters failed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="47f90-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="47f90-106">See Also</span></span>  
- [<span data-ttu-id="47f90-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="47f90-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="47f90-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="47f90-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="47f90-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="47f90-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="18599-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="18599-106">See Also</span></span>  
+ [<span data-ttu-id="18599-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="18599-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="18599-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="18599-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="18599-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="18599-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

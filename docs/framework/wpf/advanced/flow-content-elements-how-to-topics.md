@@ -17,36 +17,37 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e58fbb6a577354f862d4b4d79e947e7618bd75a0
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 472bb286f57701342be82d4a981714236e147932
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="a2fbc-102">Elementy zawartości przepływu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="a2fbc-102">Flow Content Elements How-to Topics</span></span>
-<span data-ttu-id="a2fbc-103">W tematach w tej sekcji opisano sposób wykonywania typowych zadań przy użyciu różnych elementów zawartości przepływu i powiązane funkcje.</span><span class="sxs-lookup"><span data-stu-id="a2fbc-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
+# <a name="flow-content-elements-how-to-topics"></a><span data-ttu-id="4741e-102">Elementy zawartości przepływu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="4741e-102">Flow Content Elements How-to Topics</span></span>
+<span data-ttu-id="4741e-103">W tematach w tej sekcji opisano sposób wykonywania typowych zadań przy użyciu różnych elementów zawartości przepływu i powiązane funkcje.</span><span class="sxs-lookup"><span data-stu-id="4741e-103">The topics in this section describe how to accomplish common tasks using various flow content elements and related features.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="a2fbc-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="a2fbc-104">In This Section</span></span>  
- [<span data-ttu-id="a2fbc-105">Dostosować odstępy między akapitów</span><span class="sxs-lookup"><span data-stu-id="a2fbc-105">Adjust Spacing Between Paragraphs</span></span>](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [<span data-ttu-id="a2fbc-106">Programowe tworzenie tabeli</span><span class="sxs-lookup"><span data-stu-id="a2fbc-106">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [<span data-ttu-id="a2fbc-107">Programowo zmienić wartość FlowDirection zawartości</span><span class="sxs-lookup"><span data-stu-id="a2fbc-107">Change the FlowDirection of Content Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [<span data-ttu-id="a2fbc-108">Zmień wartość właściwości TextWrapping programowo</span><span class="sxs-lookup"><span data-stu-id="a2fbc-108">Change the TextWrapping Property Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [<span data-ttu-id="a2fbc-109">Zdefiniuj tabelę z XAML</span><span class="sxs-lookup"><span data-stu-id="a2fbc-109">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [<span data-ttu-id="a2fbc-110">Instrukcja ALTER typografii tekstu</span><span class="sxs-lookup"><span data-stu-id="a2fbc-110">Alter the Typography of Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [<span data-ttu-id="a2fbc-111">Włącz przycinanie tekstu</span><span class="sxs-lookup"><span data-stu-id="a2fbc-111">Enable Text Trimming</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [<span data-ttu-id="a2fbc-112">Wstawianie tekstu elementu programowo</span><span class="sxs-lookup"><span data-stu-id="a2fbc-112">Insert an Element Into Text Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [<span data-ttu-id="a2fbc-113">Manipulowanie przepływu elementów zawartości przy użyciu właściwości bloków</span><span class="sxs-lookup"><span data-stu-id="a2fbc-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [<span data-ttu-id="a2fbc-114">Manipulowanie przepływu elementów zawartości przy użyciu właściwości Inlines</span><span class="sxs-lookup"><span data-stu-id="a2fbc-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [<span data-ttu-id="a2fbc-115">Manipulowanie FlowDocument za pośrednictwem właściwości bloków</span><span class="sxs-lookup"><span data-stu-id="a2fbc-115">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [<span data-ttu-id="a2fbc-116">Manipulowanie kolumnami tabeli za pomocą właściwości kolumn</span><span class="sxs-lookup"><span data-stu-id="a2fbc-116">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [<span data-ttu-id="a2fbc-117">Manipulowanie grupy wierszy tabeli za pomocą właściwości RowGroups</span><span class="sxs-lookup"><span data-stu-id="a2fbc-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [<span data-ttu-id="a2fbc-118">Elementy zawartości przepływu</span><span class="sxs-lookup"><span data-stu-id="a2fbc-118">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [<span data-ttu-id="a2fbc-119">Użyj oddzielanie kolumny FlowDocument atrybutów</span><span class="sxs-lookup"><span data-stu-id="a2fbc-119">Use FlowDocument Column-Separating Attributes</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+## <a name="in-this-section"></a><span data-ttu-id="4741e-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="4741e-104">In This Section</span></span>  
+ [<span data-ttu-id="4741e-105">Dopasowywanie odstępów między akapitami</span><span class="sxs-lookup"><span data-stu-id="4741e-105">Adjust Spacing Between Paragraphs</span></span>](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
+ [<span data-ttu-id="4741e-106">Programowe tworzenie tabeli</span><span class="sxs-lookup"><span data-stu-id="4741e-106">Build a Table Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
+ [<span data-ttu-id="4741e-107">Programowe zmienianie parametru FlowDirection zawartości</span><span class="sxs-lookup"><span data-stu-id="4741e-107">Change the FlowDirection of Content Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [<span data-ttu-id="4741e-108">Programowe zmienianie parametru TextWrapping zawartości</span><span class="sxs-lookup"><span data-stu-id="4741e-108">Change the TextWrapping Property Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
+ [<span data-ttu-id="4741e-109">Definiowanie tabeli przy użyciu XAML</span><span class="sxs-lookup"><span data-stu-id="4741e-109">Define a Table with XAML</span></span>](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
+ [<span data-ttu-id="4741e-110">Zmienianie typografii tekstu</span><span class="sxs-lookup"><span data-stu-id="4741e-110">Alter the Typography of Text</span></span>](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
+ [<span data-ttu-id="4741e-111">Włączanie przycinania tekstu</span><span class="sxs-lookup"><span data-stu-id="4741e-111">Enable Text Trimming</span></span>](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
+ [<span data-ttu-id="4741e-112">Programowe wstawianie elementu do tekstu</span><span class="sxs-lookup"><span data-stu-id="4741e-112">Insert an Element Into Text Programmatically</span></span>](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
+ [<span data-ttu-id="4741e-113">Zarządzanie przepływem elementów zawartości za pomocą właściwości Blocks</span><span class="sxs-lookup"><span data-stu-id="4741e-113">Manipulate Flow Content Elements through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [<span data-ttu-id="4741e-114">Zarządzanie przepływem elementów zawartości za pomocą właściwości Inlines</span><span class="sxs-lookup"><span data-stu-id="4741e-114">Manipulate Flow Content Elements through the Inlines Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [<span data-ttu-id="4741e-115">Zarządzanie parametrem FlowDocument przez właściwość Blocks</span><span class="sxs-lookup"><span data-stu-id="4741e-115">Manipulate a FlowDocument through the Blocks Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [<span data-ttu-id="4741e-116">Zarządzanie kolumnami tabeli za pomocą właściwości Columns</span><span class="sxs-lookup"><span data-stu-id="4741e-116">Manipulate a Table's Columns through the Columns Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [<span data-ttu-id="4741e-117">Zarządzanie grupami wierszy tabeli za pomocą właściwości RowGroups</span><span class="sxs-lookup"><span data-stu-id="4741e-117">Manipulate a Table's Row Groups through the RowGroups Property</span></span>](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [<span data-ttu-id="4741e-118">Używanie elementów zawartości przepływu</span><span class="sxs-lookup"><span data-stu-id="4741e-118">Use Flow Content Elements</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
+ [<span data-ttu-id="4741e-119">Używanie atrybutów oddzielających kolumny FlowDocument</span><span class="sxs-lookup"><span data-stu-id="4741e-119">Use FlowDocument Column-Separating Attributes</span></span>](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
   
-## <a name="reference"></a><span data-ttu-id="a2fbc-120">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="a2fbc-120">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="4741e-120">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="4741e-120">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.Inline>  
   
-## <a name="related-sections"></a><span data-ttu-id="a2fbc-121">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="a2fbc-121">Related Sections</span></span>  
- [<span data-ttu-id="a2fbc-122">Dokumentów na platformie WPF</span><span class="sxs-lookup"><span data-stu-id="a2fbc-122">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="4741e-121">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="4741e-121">Related Sections</span></span>  
+ [<span data-ttu-id="4741e-122">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="4741e-122">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

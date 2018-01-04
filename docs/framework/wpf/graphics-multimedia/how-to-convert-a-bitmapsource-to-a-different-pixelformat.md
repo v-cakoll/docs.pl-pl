@@ -22,18 +22,19 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 00c6b05adf92800b2f2c7119bb44cec109765727
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 606499a57dbad3c812b57b4a3d598218c0565742
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a><span data-ttu-id="fdaac-102">Jak konwertować BitmapSource na inny PixelFormat</span><span class="sxs-lookup"><span data-stu-id="fdaac-102">How to: Convert a BitmapSource to a Different PixelFormat</span></span>
-<span data-ttu-id="fdaac-103">W tym przykładzie pokazano, jak przekonwertować <xref:System.Windows.Media.Imaging.BitmapSource> obiektu (<xref:System.Windows.Media.Imaging.BitmapImage>) z innym <xref:System.Windows.Media.PixelFormat> przy użyciu <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="fdaac-103">This example demonstrates how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> object (<xref:System.Windows.Media.Imaging.BitmapImage>) to a different <xref:System.Windows.Media.PixelFormat> using a <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
+# <a name="how-to-convert-a-bitmapsource-to-a-different-pixelformat"></a><span data-ttu-id="f3781-102">Jak konwertować BitmapSource na inny PixelFormat</span><span class="sxs-lookup"><span data-stu-id="f3781-102">How to: Convert a BitmapSource to a Different PixelFormat</span></span>
+<span data-ttu-id="f3781-103">W tym przykładzie pokazano, jak przekonwertować <xref:System.Windows.Media.Imaging.BitmapSource> obiektu (<xref:System.Windows.Media.Imaging.BitmapImage>) z innym <xref:System.Windows.Media.PixelFormat> przy użyciu <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span><span class="sxs-lookup"><span data-stu-id="f3781-103">This example demonstrates how to convert a <xref:System.Windows.Media.Imaging.BitmapSource> object (<xref:System.Windows.Media.Imaging.BitmapImage>) to a different <xref:System.Windows.Media.PixelFormat> using a <xref:System.Windows.Media.Imaging.FormatConvertedBitmap>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="fdaac-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="fdaac-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="f3781-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="f3781-104">Example</span></span>  
  [!code-csharp[ImagingSnippetGallery_procedural_snip#PixelFormatConversion](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/CSharp/PixelFormatsExample.cs#pixelformatconversion)]
  [!code-vb[ImagingSnippetGallery_procedural_snip#PixelFormatConversion](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ImagingSnippetGallery_procedural_snip/VB/PixelFormatsExample.vb#pixelformatconversion)]  
   
-## <a name="see-also"></a><span data-ttu-id="fdaac-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fdaac-105">See Also</span></span>  
- [<span data-ttu-id="fdaac-106">Omówienie tworzenia obrazu</span><span class="sxs-lookup"><span data-stu-id="fdaac-106">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a><span data-ttu-id="f3781-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f3781-105">See Also</span></span>  
+ [<span data-ttu-id="f3781-106">Obrazowanie — przegląd</span><span class="sxs-lookup"><span data-stu-id="f3781-106">Imaging Overview</span></span>](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

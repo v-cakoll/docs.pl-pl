@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ab8c8a612ff51c9910172679c2f6568e05d93a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94c90e0dd4982de2afc733fd4f94baa7aeda3e51
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelssocketconnectionabort"></a><span data-ttu-id="b6557-102">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="b6557-102">System.ServiceModel.Channels.SocketConnectionAbort</span></span>
-<span data-ttu-id="b6557-103">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="b6557-103">System.ServiceModel.Channels.SocketConnectionAbort</span></span>  
+# <a name="systemservicemodelchannelssocketconnectionabort"></a><span data-ttu-id="20fab-102">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="20fab-102">System.ServiceModel.Channels.SocketConnectionAbort</span></span>
+<span data-ttu-id="20fab-103">System.ServiceModel.Channels.SocketConnectionAbort</span><span class="sxs-lookup"><span data-stu-id="20fab-103">System.ServiceModel.Channels.SocketConnectionAbort</span></span>  
   
-## <a name="description"></a><span data-ttu-id="b6557-104">Opis</span><span class="sxs-lookup"><span data-stu-id="b6557-104">Description</span></span>  
- <span data-ttu-id="b6557-105">Przerwano połączenie SocketConnection poprzez.</span><span class="sxs-lookup"><span data-stu-id="b6557-105">SocketConnection aborted.</span></span>  
+## <a name="description"></a><span data-ttu-id="20fab-104">Opis</span><span class="sxs-lookup"><span data-stu-id="20fab-104">Description</span></span>  
+ <span data-ttu-id="20fab-105">Przerwano połączenie SocketConnection poprzez.</span><span class="sxs-lookup"><span data-stu-id="20fab-105">SocketConnection aborted.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b6557-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b6557-106">See Also</span></span>  
- [<span data-ttu-id="b6557-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="b6557-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="b6557-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="b6557-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="b6557-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="b6557-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="20fab-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="20fab-106">See Also</span></span>  
+ [<span data-ttu-id="20fab-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="20fab-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="20fab-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="20fab-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="20fab-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="20fab-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

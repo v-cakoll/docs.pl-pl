@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3ef62df1f5913997e635a329d3d77c9197d682b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cbfd539d9852a43558b93f18d2a554d26df13943
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a><span data-ttu-id="23f16-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="23f16-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>
-<span data-ttu-id="23f16-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="23f16-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>  
+# <a name="systemservicemodelsecuritysecurityidentityverificationsuccess"></a><span data-ttu-id="dfad6-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="dfad6-102">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>
+<span data-ttu-id="dfad6-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span><span class="sxs-lookup"><span data-stu-id="dfad6-103">System.ServiceModel.Security.SecurityIdentityVerificationSuccess</span></span>  
   
-## <a name="description"></a><span data-ttu-id="23f16-104">Opis</span><span class="sxs-lookup"><span data-stu-id="23f16-104">Description</span></span>  
- <span data-ttu-id="23f16-105">Weryfikacja tożsamości zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="23f16-105">Identity verification succeeded.</span></span>  
+## <a name="description"></a><span data-ttu-id="dfad6-104">Opis</span><span class="sxs-lookup"><span data-stu-id="dfad6-104">Description</span></span>  
+ <span data-ttu-id="dfad6-105">Weryfikacja tożsamości zakończyło się pomyślnie.</span><span class="sxs-lookup"><span data-stu-id="dfad6-105">Identity verification succeeded.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23f16-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="23f16-106">See Also</span></span>  
- [<span data-ttu-id="23f16-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="23f16-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="23f16-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="23f16-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="23f16-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="23f16-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="dfad6-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="dfad6-106">See Also</span></span>  
+ [<span data-ttu-id="dfad6-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="dfad6-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="dfad6-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="dfad6-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="dfad6-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="dfad6-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0cadd8c4fa7b5c8627892b0cc7e37eaf519e4cad
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 238a0b3e7c880a4eda4fc0b8771019d5a3f76847
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="5011---dcgenreaderstop"></a><span data-ttu-id="2f0ac-102">5011 — DCGenReaderStop</span><span class="sxs-lookup"><span data-stu-id="2f0ac-102">5011 - DCGenReaderStop</span></span>
-## <a name="properties"></a><span data-ttu-id="2f0ac-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="2f0ac-103">Properties</span></span>  
+# <a name="5011---dcgenreaderstop"></a><span data-ttu-id="d09f8-102">5011 — DCGenReaderStop</span><span class="sxs-lookup"><span data-stu-id="d09f8-102">5011 - DCGenReaderStop</span></span>
+## <a name="properties"></a><span data-ttu-id="d09f8-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="d09f8-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="2f0ac-104">ID</span><span class="sxs-lookup"><span data-stu-id="2f0ac-104">ID</span></span>|<span data-ttu-id="2f0ac-105">5011</span><span class="sxs-lookup"><span data-stu-id="2f0ac-105">5011</span></span>|  
-|<span data-ttu-id="2f0ac-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="2f0ac-106">Keywords</span></span>|<span data-ttu-id="2f0ac-107">Serializacja</span><span class="sxs-lookup"><span data-stu-id="2f0ac-107">Serialization</span></span>|  
-|<span data-ttu-id="2f0ac-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="2f0ac-108">Level</span></span>|<span data-ttu-id="2f0ac-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="2f0ac-109">Verbose</span></span>|  
-|<span data-ttu-id="2f0ac-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="2f0ac-110">Channel</span></span>|<span data-ttu-id="2f0ac-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="2f0ac-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="d09f8-104">ID</span><span class="sxs-lookup"><span data-stu-id="d09f8-104">ID</span></span>|<span data-ttu-id="d09f8-105">5011</span><span class="sxs-lookup"><span data-stu-id="d09f8-105">5011</span></span>|  
+|<span data-ttu-id="d09f8-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="d09f8-106">Keywords</span></span>|<span data-ttu-id="d09f8-107">Serializacja</span><span class="sxs-lookup"><span data-stu-id="d09f8-107">Serialization</span></span>|  
+|<span data-ttu-id="d09f8-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="d09f8-108">Level</span></span>|<span data-ttu-id="d09f8-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="d09f8-109">Verbose</span></span>|  
+|<span data-ttu-id="d09f8-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="d09f8-110">Channel</span></span>|<span data-ttu-id="d09f8-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="d09f8-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="2f0ac-112">Opis</span><span class="sxs-lookup"><span data-stu-id="2f0ac-112">Description</span></span>  
- <span data-ttu-id="2f0ac-113">To zdarzenie jest emitowany po zatrzymaniu generowanie obiektu DataContract.</span><span class="sxs-lookup"><span data-stu-id="2f0ac-113">This event is emitted when the DataContract generation stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="d09f8-112">Opis</span><span class="sxs-lookup"><span data-stu-id="d09f8-112">Description</span></span>  
+ <span data-ttu-id="d09f8-113">To zdarzenie jest emitowany po zatrzymaniu generowanie obiektu DataContract.</span><span class="sxs-lookup"><span data-stu-id="d09f8-113">This event is emitted when the DataContract generation stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="2f0ac-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="2f0ac-114">Message</span></span>  
- <span data-ttu-id="2f0ac-115">Zatrzymaj generowanie obiektu DataContract.</span><span class="sxs-lookup"><span data-stu-id="2f0ac-115">DataContract generation stop.</span></span>  
+## <a name="message"></a><span data-ttu-id="d09f8-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="d09f8-114">Message</span></span>  
+ <span data-ttu-id="d09f8-115">Zatrzymaj generowanie obiektu DataContract.</span><span class="sxs-lookup"><span data-stu-id="d09f8-115">DataContract generation stop.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="2f0ac-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="2f0ac-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="d09f8-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="d09f8-116">Details</span></span>

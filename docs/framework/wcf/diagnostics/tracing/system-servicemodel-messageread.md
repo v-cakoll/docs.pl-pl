@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e61dffd6ad3823aa74be3f1e104ba5408de02192
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ea5a52ef89230fd9d06540b1cc63013bd73021ed
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelmessageread"></a><span data-ttu-id="79be9-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="79be9-102">System.ServiceModel.MessageRead</span></span>
-<span data-ttu-id="79be9-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="79be9-103">System.ServiceModel.MessageRead</span></span>  
+# <a name="systemservicemodelmessageread"></a><span data-ttu-id="652d3-102">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="652d3-102">System.ServiceModel.MessageRead</span></span>
+<span data-ttu-id="652d3-103">System.ServiceModel.MessageRead</span><span class="sxs-lookup"><span data-stu-id="652d3-103">System.ServiceModel.MessageRead</span></span>  
   
-## <a name="description"></a><span data-ttu-id="79be9-104">Opis</span><span class="sxs-lookup"><span data-stu-id="79be9-104">Description</span></span>  
- <span data-ttu-id="79be9-105">Odczytano wiadomość.</span><span class="sxs-lookup"><span data-stu-id="79be9-105">A message was read.</span></span>  
+## <a name="description"></a><span data-ttu-id="652d3-104">Opis</span><span class="sxs-lookup"><span data-stu-id="652d3-104">Description</span></span>  
+ <span data-ttu-id="652d3-105">Odczytano wiadomość.</span><span class="sxs-lookup"><span data-stu-id="652d3-105">A message was read.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="79be9-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="79be9-106">See Also</span></span>  
- [<span data-ttu-id="79be9-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="79be9-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="79be9-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="79be9-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="79be9-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="79be9-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="652d3-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="652d3-106">See Also</span></span>  
+ [<span data-ttu-id="652d3-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="652d3-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="652d3-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="652d3-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="652d3-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="652d3-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

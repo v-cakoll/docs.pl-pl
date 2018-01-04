@@ -14,21 +14,24 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05883a89511574c43bf27d9781e862f7f52a6471
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 89ea927d2862aa447ad2b66c77eb493541b0e62d
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
-# <a name="using-tpl-with-other-asynchronous-patterns"></a><span data-ttu-id="c6419-102">Korzystanie z modelu TPL z innymi wzorami asynchronicznymi</span><span class="sxs-lookup"><span data-stu-id="c6419-102">Using TPL with Other Asynchronous Patterns</span></span>
-<span data-ttu-id="c6419-103">Biblioteka zadań równoległych może służyć z tradycyjnego .NET Framework programowania wzorami asynchronicznymi na różne sposoby.</span><span class="sxs-lookup"><span data-stu-id="c6419-103">The Task Parallel Library can be used with traditional .NET Framework asynchronous programming patterns in various ways.</span></span>  
+# <a name="using-tpl-with-other-asynchronous-patterns"></a><span data-ttu-id="5e88a-102">Korzystanie z modelu TPL z innymi wzorami asynchronicznymi</span><span class="sxs-lookup"><span data-stu-id="5e88a-102">Using TPL with Other Asynchronous Patterns</span></span>
+<span data-ttu-id="5e88a-103">Biblioteka zadań równoległych może służyć z tradycyjnego .NET Framework programowania wzorami asynchronicznymi na różne sposoby.</span><span class="sxs-lookup"><span data-stu-id="5e88a-103">The Task Parallel Library can be used with traditional .NET Framework asynchronous programming patterns in various ways.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="c6419-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c6419-104">In This Section</span></span>  
- [<span data-ttu-id="c6419-105">Programowanie asynchroniczne w TPL i standardowym .NET Framework</span><span class="sxs-lookup"><span data-stu-id="c6419-105">TPL and Traditional .NET Framework Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
- <span data-ttu-id="c6419-106">Opisuje sposób <xref:System.Threading.Tasks.Task> obiekty mogą być używane w połączeniu z asynchronicznego programowania modelu (APM) i oparty na zdarzeniach asynchroniczny wzorzec (EAP).</span><span class="sxs-lookup"><span data-stu-id="c6419-106">Describes how <xref:System.Threading.Tasks.Task> objects may be used in conjunction with the Asynchronous Programming Model (APM) and the Event-based Asynchronous Pattern (EAP).</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5e88a-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="5e88a-104">In This Section</span></span>  
+ [<span data-ttu-id="5e88a-105">Programowanie asynchroniczne w modelu TPL i tradycyjnym środowisku .NET Framework</span><span class="sxs-lookup"><span data-stu-id="5e88a-105">TPL and Traditional .NET Framework Asynchronous Programming</span></span>](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)  
+ <span data-ttu-id="5e88a-106">Opisuje sposób <xref:System.Threading.Tasks.Task> obiekty mogą być używane w połączeniu z asynchronicznego programowania modelu (APM) i oparty na zdarzeniach asynchroniczny wzorzec (EAP).</span><span class="sxs-lookup"><span data-stu-id="5e88a-106">Describes how <xref:System.Threading.Tasks.Task> objects may be used in conjunction with the Asynchronous Programming Model (APM) and the Event-based Asynchronous Pattern (EAP).</span></span>  
   
- [<span data-ttu-id="c6419-107">Porady: zawijanie wzorów EAP w zadanie</span><span class="sxs-lookup"><span data-stu-id="c6419-107">How to: Wrap EAP Patterns in a Task</span></span>](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
- <span data-ttu-id="c6419-108">Przedstawia sposób użycia <xref:System.Threading.Tasks.Task> obiektów w celu hermetyzacji wzorów EAP.</span><span class="sxs-lookup"><span data-stu-id="c6419-108">Shows how to use <xref:System.Threading.Tasks.Task> objects to encapsulate EAP patterns.</span></span>  
+ [<span data-ttu-id="5e88a-107">Instrukcje: opakowywanie wzorców EAP w zadaniu</span><span class="sxs-lookup"><span data-stu-id="5e88a-107">How to: Wrap EAP Patterns in a Task</span></span>](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)  
+ <span data-ttu-id="5e88a-108">Przedstawia sposób użycia <xref:System.Threading.Tasks.Task> obiektów w celu hermetyzacji wzorów EAP.</span><span class="sxs-lookup"><span data-stu-id="5e88a-108">Shows how to use <xref:System.Threading.Tasks.Task> objects to encapsulate EAP patterns.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c6419-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c6419-109">See Also</span></span>  
- [<span data-ttu-id="c6419-110">Biblioteka zadań równoległych (TPL)</span><span class="sxs-lookup"><span data-stu-id="c6419-110">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+## <a name="see-also"></a><span data-ttu-id="5e88a-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5e88a-109">See Also</span></span>  
+ [<span data-ttu-id="5e88a-110">Biblioteka zadań równoległych (TPL)</span><span class="sxs-lookup"><span data-stu-id="5e88a-110">Task Parallel Library (TPL)</span></span>](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)

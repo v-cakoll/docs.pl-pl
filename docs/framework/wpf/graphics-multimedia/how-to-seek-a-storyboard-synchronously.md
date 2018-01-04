@@ -19,22 +19,23 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45d71dde85ea65e45a36b4f938e1fd5135cc0e00
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: cb5f0203c80cc94d17fcfcd40ff4d79bf8ecdc85
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-seek-a-storyboard-synchronously"></a><span data-ttu-id="91f64-102">Jak wyszukiwać scenorys synchronicznie</span><span class="sxs-lookup"><span data-stu-id="91f64-102">How to: Seek a Storyboard Synchronously</span></span>
-<span data-ttu-id="91f64-103">Poniższy przykład przedstawia użycie <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> metody <xref:System.Windows.Media.Animation.Storyboard> do wyszukania do każdej pozycji w animacji scenorysu synchronicznie.</span><span class="sxs-lookup"><span data-stu-id="91f64-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to seek to any position in a storyboard animation synchronously.</span></span>  
+# <a name="how-to-seek-a-storyboard-synchronously"></a><span data-ttu-id="681ac-102">Jak wyszukiwać scenorys synchronicznie</span><span class="sxs-lookup"><span data-stu-id="681ac-102">How to: Seek a Storyboard Synchronously</span></span>
+<span data-ttu-id="681ac-103">Poniższy przykład przedstawia użycie <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> metody <xref:System.Windows.Media.Animation.Storyboard> do wyszukania do każdej pozycji w animacji scenorysu synchronicznie.</span><span class="sxs-lookup"><span data-stu-id="681ac-103">The following example shows how to use the <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A> method of a <xref:System.Windows.Media.Animation.Storyboard> to seek to any position in a storyboard animation synchronously.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91f64-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="91f64-104">Example</span></span>  
- <span data-ttu-id="91f64-105">Poniżej znajduje się kod znaczników XAML przykładowej.</span><span class="sxs-lookup"><span data-stu-id="91f64-105">The following is the XAML markup for the sample.</span></span>  
+## <a name="example"></a><span data-ttu-id="681ac-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="681ac-104">Example</span></span>  
+ <span data-ttu-id="681ac-105">Poniżej znajduje się kod znaczników XAML przykładowej.</span><span class="sxs-lookup"><span data-stu-id="681ac-105">The following is the XAML markup for the sample.</span></span>  
   
  [!code-xaml[SeekStoryboard_snip#SeekStoryboardSynchronouslyExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardSynchronouslyExample.xaml#seekstoryboardsynchronouslyexamplewholepage)]  
   
-## <a name="example"></a><span data-ttu-id="91f64-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="91f64-106">Example</span></span>  
- <span data-ttu-id="91f64-107">Poniżej znajduje się kod używany z powyższym kodzie XAML.</span><span class="sxs-lookup"><span data-stu-id="91f64-107">The following is the code used with the XAML code above.</span></span>  
+## <a name="example"></a><span data-ttu-id="681ac-106">Przykład</span><span class="sxs-lookup"><span data-stu-id="681ac-106">Example</span></span>  
+ <span data-ttu-id="681ac-107">Poniżej znajduje się kod używany z powyższym kodzie XAML.</span><span class="sxs-lookup"><span data-stu-id="681ac-107">The following is the code used with the XAML code above.</span></span>  
   
  [!code-csharp[SeekStoryboard_snip#SeekStoryboardSynchronouslyCodeBehindExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SeekStoryboard_snip/CSharp/SeekStoryboardSynchronouslyExample.xaml.cs#seekstoryboardsynchronouslycodebehindexamplewholepage)]
  [!code-vb[SeekStoryboard_snip#SeekStoryboardSynchronouslyCodeBehindExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SeekStoryboard_snip/VisualBasic/SeekStoryboardSynchronouslyExample.xaml.vb#seekstoryboardsynchronouslycodebehindexamplewholepage)]

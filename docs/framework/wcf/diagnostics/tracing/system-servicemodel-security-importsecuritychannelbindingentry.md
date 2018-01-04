@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 7dab85cc57b108965cb7e8f48c99827bc6e5ddd6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 751f9959dc1c904c91e4dc9a885318b48077ab20
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelsecurityimportsecuritychannelbindingentry"></a><span data-ttu-id="0749f-102">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="0749f-102">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span></span>
-<span data-ttu-id="0749f-103">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="0749f-103">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span></span>  
+# <a name="systemservicemodelsecurityimportsecuritychannelbindingentry"></a><span data-ttu-id="45db4-102">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="45db4-102">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span></span>
+<span data-ttu-id="45db4-103">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span><span class="sxs-lookup"><span data-stu-id="45db4-103">System.ServiceModel.Security.ImportSecurityChannelBindingEntry</span></span>  
   
-## <a name="description"></a><span data-ttu-id="0749f-104">Opis</span><span class="sxs-lookup"><span data-stu-id="0749f-104">Description</span></span>  
- <span data-ttu-id="0749f-105">Uruchamianie metody zabezpieczeń ImportChannelBinding.</span><span class="sxs-lookup"><span data-stu-id="0749f-105">Starting the Security ImportChannelBinding.</span></span>  
+## <a name="description"></a><span data-ttu-id="45db4-104">Opis</span><span class="sxs-lookup"><span data-stu-id="45db4-104">Description</span></span>  
+ <span data-ttu-id="45db4-105">Uruchamianie metody zabezpieczeń ImportChannelBinding.</span><span class="sxs-lookup"><span data-stu-id="45db4-105">Starting the Security ImportChannelBinding.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0749f-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0749f-106">See Also</span></span>  
- [<span data-ttu-id="0749f-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="0749f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="0749f-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="0749f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="0749f-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="0749f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="45db4-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="45db4-106">See Also</span></span>  
+ [<span data-ttu-id="45db4-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="45db4-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="45db4-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="45db4-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="45db4-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="45db4-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

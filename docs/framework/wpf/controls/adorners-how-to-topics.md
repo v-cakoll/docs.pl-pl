@@ -15,23 +15,24 @@ caps.latest.revision: "52"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 328ecec80670e112019364d6749c4c54a58ddf48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f9c38e8cb466963d229b96e21f8149b7a4afaa7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="adorners-how-to-topics"></a><span data-ttu-id="b659e-102">Moduły definiowania układu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="b659e-102">Adorners How-to Topics</span></span>
-<span data-ttu-id="b659e-103">Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework modułu definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="b659e-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
+# <a name="adorners-how-to-topics"></a><span data-ttu-id="45ce1-102">Moduły definiowania układu Tematy porad</span><span class="sxs-lookup"><span data-stu-id="45ce1-102">Adorners How-to Topics</span></span>
+<span data-ttu-id="45ce1-103">Poniższe przykłady pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] framework modułu definiowania układu kodu.</span><span class="sxs-lookup"><span data-stu-id="45ce1-103">The following examples demonstrate how to accomplish common tasks using the [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] adorner framework.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="b659e-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="b659e-104">In This Section</span></span>  
- [<span data-ttu-id="b659e-105">Moduł definiowania układu Implementowanie</span><span class="sxs-lookup"><span data-stu-id="b659e-105">Implement an Adorner</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [<span data-ttu-id="b659e-106">Powiązać modułu definiowania układu kodu do elementu</span><span class="sxs-lookup"><span data-stu-id="b659e-106">Bind an Adorner to an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [<span data-ttu-id="b659e-107">Adorn elementy podrzędne panelu</span><span class="sxs-lookup"><span data-stu-id="b659e-107">Adorn the Children of a Panel</span></span>](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [<span data-ttu-id="b659e-108">Usuń moduł definiowania układu kodu z elementu</span><span class="sxs-lookup"><span data-stu-id="b659e-108">Remove an Adorner from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [<span data-ttu-id="b659e-109">Usuń wszystkie modułu definiowania układu kodu z elementu</span><span class="sxs-lookup"><span data-stu-id="b659e-109">Remove all Adorners from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+## <a name="in-this-section"></a><span data-ttu-id="45ce1-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="45ce1-104">In This Section</span></span>  
+ [<span data-ttu-id="45ce1-105">Implementowanie modułu definiowania układu</span><span class="sxs-lookup"><span data-stu-id="45ce1-105">Implement an Adorner</span></span>](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
+ [<span data-ttu-id="45ce1-106">Powiązywanie modułu definiowania układu z elementem</span><span class="sxs-lookup"><span data-stu-id="45ce1-106">Bind an Adorner to an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
+ [<span data-ttu-id="45ce1-107">Powiązywanie elementów podrzędnych panelu</span><span class="sxs-lookup"><span data-stu-id="45ce1-107">Adorn the Children of a Panel</span></span>](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
+ [<span data-ttu-id="45ce1-108">Usuwanie modułu definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="45ce1-108">Remove an Adorner from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
+ [<span data-ttu-id="45ce1-109">Usuwanie wszystkich modułów definiowania układów z elementu</span><span class="sxs-lookup"><span data-stu-id="45ce1-109">Remove all Adorners from an Element</span></span>](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
   
-## <a name="reference"></a><span data-ttu-id="b659e-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="b659e-110">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="45ce1-110">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="45ce1-110">Reference</span></span>  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  
   
  <xref:System.Windows.Documents.Adorner>  
@@ -42,4 +43,4 @@ ms.lasthandoff: 10/18/2017
   
  <xref:System.Windows.Documents.AdornerLayer>  
   
-## <a name="related-sections"></a><span data-ttu-id="b659e-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="b659e-111">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="45ce1-111">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="45ce1-111">Related Sections</span></span>

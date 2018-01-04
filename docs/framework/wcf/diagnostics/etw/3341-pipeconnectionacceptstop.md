@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f9009773219a2f846309a83efb334d6ef69fd50
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7972a478418836d8e6eaf8fb63f7cfa7b5e22185
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3341---pipeconnectionacceptstop"></a><span data-ttu-id="7f580-102">3341 — PipeConnectionAcceptStop</span><span class="sxs-lookup"><span data-stu-id="7f580-102">3341 - PipeConnectionAcceptStop</span></span>
-## <a name="properties"></a><span data-ttu-id="7f580-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="7f580-103">Properties</span></span>  
+# <a name="3341---pipeconnectionacceptstop"></a><span data-ttu-id="084fd-102">3341 — PipeConnectionAcceptStop</span><span class="sxs-lookup"><span data-stu-id="084fd-102">3341 - PipeConnectionAcceptStop</span></span>
+## <a name="properties"></a><span data-ttu-id="084fd-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="084fd-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="7f580-104">ID</span><span class="sxs-lookup"><span data-stu-id="7f580-104">ID</span></span>|<span data-ttu-id="7f580-105">3341</span><span class="sxs-lookup"><span data-stu-id="7f580-105">3341</span></span>|  
-|<span data-ttu-id="7f580-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="7f580-106">Keywords</span></span>|<span data-ttu-id="7f580-107">Kanał</span><span class="sxs-lookup"><span data-stu-id="7f580-107">Channel</span></span>|  
-|<span data-ttu-id="7f580-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="7f580-108">Level</span></span>|<span data-ttu-id="7f580-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="7f580-109">Verbose</span></span>|  
-|<span data-ttu-id="7f580-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="7f580-110">Channel</span></span>|<span data-ttu-id="7f580-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="7f580-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="084fd-104">ID</span><span class="sxs-lookup"><span data-stu-id="084fd-104">ID</span></span>|<span data-ttu-id="084fd-105">3341</span><span class="sxs-lookup"><span data-stu-id="084fd-105">3341</span></span>|  
+|<span data-ttu-id="084fd-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="084fd-106">Keywords</span></span>|<span data-ttu-id="084fd-107">Kanał</span><span class="sxs-lookup"><span data-stu-id="084fd-107">Channel</span></span>|  
+|<span data-ttu-id="084fd-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="084fd-108">Level</span></span>|<span data-ttu-id="084fd-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="084fd-109">Verbose</span></span>|  
+|<span data-ttu-id="084fd-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="084fd-110">Channel</span></span>|<span data-ttu-id="084fd-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="084fd-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="7f580-112">Opis</span><span class="sxs-lookup"><span data-stu-id="7f580-112">Description</span></span>  
- <span data-ttu-id="7f580-113">To zdarzenie jest emitowany gdy połączenie z potokiem akceptują zatrzymuje.</span><span class="sxs-lookup"><span data-stu-id="7f580-113">This event is emitted when the pipe connection accept stops.</span></span>  
+## <a name="description"></a><span data-ttu-id="084fd-112">Opis</span><span class="sxs-lookup"><span data-stu-id="084fd-112">Description</span></span>  
+ <span data-ttu-id="084fd-113">To zdarzenie jest emitowany gdy połączenie z potokiem akceptują zatrzymuje.</span><span class="sxs-lookup"><span data-stu-id="084fd-113">This event is emitted when the pipe connection accept stops.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="7f580-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="7f580-114">Message</span></span>  
- <span data-ttu-id="7f580-115">Połączenie z potokiem akceptowane.</span><span class="sxs-lookup"><span data-stu-id="7f580-115">Pipe connection accepted.</span></span>  
+## <a name="message"></a><span data-ttu-id="084fd-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="084fd-114">Message</span></span>  
+ <span data-ttu-id="084fd-115">Połączenie z potokiem akceptowane.</span><span class="sxs-lookup"><span data-stu-id="084fd-115">Pipe connection accepted.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="7f580-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="7f580-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="084fd-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="084fd-116">Details</span></span>

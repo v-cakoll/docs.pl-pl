@@ -13,27 +13,28 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91da7fa1dd3d72cb7a3092ad2ca3ddab9a61b9e4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 15c35ff356d29946565bff0aeff18da3fbcecc80
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3382---clientreliablesessionreconnect"></a><span data-ttu-id="b4517-102">3382 — ClientReliableSessionReconnect</span><span class="sxs-lookup"><span data-stu-id="b4517-102">3382 - ClientReliableSessionReconnect</span></span>
-## <a name="properties"></a><span data-ttu-id="b4517-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="b4517-103">Properties</span></span>  
+# <a name="3382---clientreliablesessionreconnect"></a><span data-ttu-id="62078-102">3382 — ClientReliableSessionReconnect</span><span class="sxs-lookup"><span data-stu-id="62078-102">3382 - ClientReliableSessionReconnect</span></span>
+## <a name="properties"></a><span data-ttu-id="62078-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="62078-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="b4517-104">ID</span><span class="sxs-lookup"><span data-stu-id="b4517-104">ID</span></span>|<span data-ttu-id="b4517-105">3382</span><span class="sxs-lookup"><span data-stu-id="b4517-105">3382</span></span>|  
-|<span data-ttu-id="b4517-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="b4517-106">Keywords</span></span>|<span data-ttu-id="b4517-107">Kanał</span><span class="sxs-lookup"><span data-stu-id="b4517-107">Channel</span></span>|  
-|<span data-ttu-id="b4517-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="b4517-108">Level</span></span>|<span data-ttu-id="b4517-109">Informacyjny</span><span class="sxs-lookup"><span data-stu-id="b4517-109">Informational</span></span>|  
-|<span data-ttu-id="b4517-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="b4517-110">Channel</span></span>|<span data-ttu-id="b4517-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="b4517-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="62078-104">ID</span><span class="sxs-lookup"><span data-stu-id="62078-104">ID</span></span>|<span data-ttu-id="62078-105">3382</span><span class="sxs-lookup"><span data-stu-id="62078-105">3382</span></span>|  
+|<span data-ttu-id="62078-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="62078-106">Keywords</span></span>|<span data-ttu-id="62078-107">Kanał</span><span class="sxs-lookup"><span data-stu-id="62078-107">Channel</span></span>|  
+|<span data-ttu-id="62078-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="62078-108">Level</span></span>|<span data-ttu-id="62078-109">Informacyjny</span><span class="sxs-lookup"><span data-stu-id="62078-109">Informational</span></span>|  
+|<span data-ttu-id="62078-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="62078-110">Channel</span></span>|<span data-ttu-id="62078-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="62078-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="b4517-112">Opis</span><span class="sxs-lookup"><span data-stu-id="b4517-112">Description</span></span>  
- <span data-ttu-id="b4517-113">To zdarzenie jest emitowany, gdy ClientReliableSession jest ponownie nawiązywane.</span><span class="sxs-lookup"><span data-stu-id="b4517-113">This event is emitted when the ClientReliableSession is reconnecting.</span></span>  
+## <a name="description"></a><span data-ttu-id="62078-112">Opis</span><span class="sxs-lookup"><span data-stu-id="62078-112">Description</span></span>  
+ <span data-ttu-id="62078-113">To zdarzenie jest emitowany, gdy ClientReliableSession jest ponownie nawiązywane.</span><span class="sxs-lookup"><span data-stu-id="62078-113">This event is emitted when the ClientReliableSession is reconnecting.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="b4517-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="b4517-114">Message</span></span>  
- <span data-ttu-id="b4517-115">Ponowne łączenie SessionId:% 1.</span><span class="sxs-lookup"><span data-stu-id="b4517-115">SessionId:%1 reconnecting.</span></span>  
+## <a name="message"></a><span data-ttu-id="62078-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="62078-114">Message</span></span>  
+ <span data-ttu-id="62078-115">Ponowne łączenie SessionId:% 1.</span><span class="sxs-lookup"><span data-stu-id="62078-115">SessionId:%1 reconnecting.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="b4517-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="b4517-116">Details</span></span>  
- <span data-ttu-id="b4517-117">To zdarzenie jest emitowany, gdy ClientReliableSession jest ponownie nawiązywane.</span><span class="sxs-lookup"><span data-stu-id="b4517-117">This event is emitted when the ClientReliableSession is reconnecting.</span></span>
+## <a name="details"></a><span data-ttu-id="62078-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="62078-116">Details</span></span>  
+ <span data-ttu-id="62078-117">To zdarzenie jest emitowany, gdy ClientReliableSession jest ponownie nawiązywane.</span><span class="sxs-lookup"><span data-stu-id="62078-117">This event is emitted when the ClientReliableSession is reconnecting.</span></span>

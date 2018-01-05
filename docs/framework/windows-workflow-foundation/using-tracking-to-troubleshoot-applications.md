@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52a599d9cba2e68fdb74d364dad562d2547ca020
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Do rozwiązywania problemów z aplikacjami za pomocą śledzenia
 [!INCLUDE[wf](../../../includes/wf-md.md)]Umożliwia śledzenie informacji związanych z przepływu pracy, o podanie szczegółów do wykonywania [!INCLUDE[wf2](../../../includes/wf2-md.md)] aplikacji lub usługi. [!INCLUDE[wf2](../../../includes/wf2-md.md)]hosty mogą uzyskiwać do przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy. Jeśli przepływ pracy generuje błędów i wyjątków, możesz użyć [!INCLUDE[wf2](../../../includes/wf2-md.md)] Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzanie.  

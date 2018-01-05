@@ -21,22 +21,23 @@ caps.latest.revision: "77"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbfd7be17e2e9472afbd5ad00dad2ca104ee1854
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: e9191778cdb8c57c5cf4628a072ea20fae532e81
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="globalization-and-localization"></a>Lokalizacja i globalizacja
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia zaawansowaną obsługę opracowywania aplikacji gotowe.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie lokalizacja i globalizacja WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
+ [Przeglądanie globalizacji i lokalizacji WPF](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
  [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Użyj automatycznego układu — omówienie](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
+ [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
  [Atrybuty lokalizacji i komentarze](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [Funkcje dwukierunkowe w omówieniu WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [Przegląd dwukierunkowych funkcji WPF](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Globalization>  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XML: lang — Obsługa w XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [xml:lang, obsługa w XAML](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>Sekcje pokrewne

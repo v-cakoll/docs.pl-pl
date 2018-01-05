@@ -17,22 +17,23 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4403d508f0a99b4cefd3ef59e6d1caf746f31fec
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 38da15eee931d2519efa0c502cfaa61ed0691a8f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-how-to-topics"></a>Zasoby Tematy porad
 W tematach w tej sekcji opisano sposób użycia [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] zasobów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Definiowanie i odwołuje się zasób](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [Korzystanie z zasobów aplikacji](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [Użyj SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Użyj klawiszy systemowych czcionek](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [Użyj SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [Użyj klawiszy parametry systemu](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Definiowanie zasobu i odwoływanie się do niego](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
+ [Używanie zasobów aplikacji](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
+ [Używanie elementu SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [Używanie kluczy czcionek systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
+ [Używanie elementu SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
+ [Używanie kluczy parametrów systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -44,4 +45,4 @@ W tematach w tej sekcji opisano sposób użycia [!INCLUDE[TLA#tla_wpf](../../../
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zasoby dla języka XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [Zasoby XAML](../../../../docs/framework/wpf/advanced/xaml-resources.md)

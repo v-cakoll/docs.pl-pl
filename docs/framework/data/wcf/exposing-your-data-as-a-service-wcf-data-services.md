@@ -17,11 +17,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c2d664166d9c0b750f6aecf9588a63b8705f0d1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 55e0bc058b92540c9b11965854d38e8d124e205c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-your-data-as-a-service-wcf-data-services"></a>Udostępnianie danych jako usługa (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]integruje się z programem Visual Studio, aby możliwe było łatwiej zdefiniować usług do udostępnienia danych jako [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródeł danych. Tworzenie usługi danych, który opisuje [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych obejmuje następujące podstawowe kroki:  

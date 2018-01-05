@@ -16,11 +16,12 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df52c44ca72108ffc984bed169daae654c01aa87
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-localize-an-application"></a>Jak lokalizować aplikację
 Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą narzędzia LocBaml.  
@@ -217,4 +218,4 @@ Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą na
   
 ## <a name="see-also"></a>Zobacz też  
  [Globalizacja dla WPF](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [Użyj automatycznego układu — omówienie](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
+ [Przegląd używania automatycznego układu](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)

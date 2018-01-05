@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c54ce56cccffa350479d0dd4dcec130ddd004764
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 013c9e963ca75cc612d869a55b33d69aebbcad33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="nettcp-port-sharing"></a>Współużytkowanie portów w składniku Net.TCP
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia nowy protokół sieciach opartych na protokole TCP (net.tcp://) komunikację wysokiej wydajności. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]wprowadza również nowy składnik systemu usługi udostępniania portów Net.TCP, który umożliwia porty net.tcp, które mają być udostępniane wielu procesom użytkownika.  
@@ -61,5 +62,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Zobacz też  
  [Konfigurowanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)  
  [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)  
- [Porady: Konfigurowanie usługi WCF w celu współużytkowania portów](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
- [Porady: Włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+ [Instrukcje: konfigurowanie usługi WCF na potrzeby współużytkowania portów](../../../../docs/framework/wcf/feature-details/how-to-configure-a-wcf-service-to-use-port-sharing.md)  
+ [Instrukcje: włączanie usługi współużytkowania portów Net.TCP](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)

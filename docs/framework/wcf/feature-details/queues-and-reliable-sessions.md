@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9b2ad869e8127bcaf513bee82e3175b35349d922
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a9a78bab9f7c4af23cf01c44e1d22a41a87a96f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="queues-and-reliable-sessions"></a>Kolejki i sesje niezawodne
 Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcje, które implementują niezawodna obsługa komunikatów. Tematy zawarte w tej sekcji omówiono w nim [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] niezawodnej funkcji obsługi komunikatów.  
@@ -50,6 +51,6 @@ Kolejki i sesje niezawodne są [!INCLUDE[indigo1](../../../../includes/indigo1-m
   
 ## <a name="see-also"></a>Zobacz też  
  [Kolejki programu WCF](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)  
- [Usługi kolejkowania wiadomości w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
+ [Tworzenie kolejek w programie WCF](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)  
  [Niezawodne sesje](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)  
  [Omówienie sesji niezawodnych](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

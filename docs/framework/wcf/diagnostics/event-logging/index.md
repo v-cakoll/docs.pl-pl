@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9a2d856aad069a5e532ba893185b6222ee1db0f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4028772caef8e5c0301ab3a6a0bde2f180d821ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-logging-in-wcf"></a>Rejestrowanie zdarzeń w architekturze WCF
 [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]śledzi wewnętrznego zdarzenia w dzienniku zdarzeń systemu Windows.  
@@ -57,5 +58,5 @@ ms.lasthandoff: 12/02/2017
  Po kliknięciu przycisku "więcej informacji" podczas wyświetlania zdarzeń w Podglądzie zdarzeń, Podgląd zdarzeń może wysłać informacje przez Internet. Aby uzyskać więcej informacji zobacz Pomoc Podglądu zdarzeń.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
  [Informacje ogólne o zdarzeniach](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 89c7ad8c6943aa335e81f1e1a475b01708b46eaa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c769d05ce0b02d397d597271cecb88f5e117fd6b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-execute-a-query-that-returns-primitivetype-results"></a>Porady: wykonywanie zapytań, które zwraca wyniki PrimitiveType
 W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego przy użyciu <xref:System.Data.EntityClient.EntityCommand>oraz jak pobierać <xref:System.Data.Metadata.Edm.PrimitiveType> wyniki za pomocą <xref:System.Data.EntityClient.EntityDataReader>.  
@@ -48,4 +49,4 @@ W tym temacie pokazano, jak uruchamiać polecenia względem modelu koncepcyjnego
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie do jednostki SQL](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)  
- [Dostawca EntityClient Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+ [Dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

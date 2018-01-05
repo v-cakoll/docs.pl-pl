@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 5a15ac314590b9b7e240e759b9482eafb7071cd3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d86d8a740aa0597a21c6665ee722f4a601dec9bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-native-and-compilation"></a>Architektura .NET Native i kompilacja
 Aplikacje Windows 8.1 i aplikacje dla komputerów z systemem Windows przeznaczonych dla platformy.NET Framework są zapisywane w określonym języku programowania i skompilowany w języku pośrednim (IL). W czasie wykonywania kompilatora just in time (JIT) jest odpowiedzialny za kompilowanie IL do kodu natywnego dla komputera lokalnego, po prostu, przed wykonaniem metody po raz pierwszy. Z kolei łańcucha narzędzi dla platformy .NET Native konwertuje kodu źródłowego do kodu macierzystego w czasie kompilacji. W tym temacie porównuje platformy .NET Native z innymi technologiami kompilacji dostępne dla aplikacji .NET Framework, a także omówienie praktyczne jak platforma .NET Native tworzy kodu natywnego, które mogą ułatwić zrozumienie, dlaczego wyjątków, które występują w kodzie skompilowanym z .NET Macierzysty nie występują w kodzie kompilacji JIT.  
@@ -109,7 +110,7 @@ Aplikacje Windows 8.1 i aplikacje dla komputerów z systemem Windows przeznaczon
 -   Zwykle obrazów NGEN za słabe. Na przykład poprawki lub zmiana zależność zwykle wymaga zestawy, które go używają także ponowna błąd. Jest to szczególnie istotne, system zestawów w bibliotece klas programu .NET Framework. Z kolei platformy .NET Native umożliwia aplikacjom ma być obsługiwana niezależnie od siebie.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Metadane i składniki samoopisujące](../../../docs/standard/metadata-and-self-describing-components.md)  
+ [Składniki samoopisujące się i metadane](../../../docs/standard/metadata-and-self-describing-components.md)  
  [Wewnątrz architektura .NET Native (klip wideo Channel 9)](http://channel9.msdn.com/Shows/Going+Deep/Inside-NET-Native)  
  [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
- [.NET native ogólne rozwiązywania problemów](../../../docs/framework/net-native/net-native-general-troubleshooting.md)
+ [Ogólne wskazówki dotyczące rozwiązywania problemów z architekturą .NET Native](../../../docs/framework/net-native/net-native-general-troubleshooting.md)

@@ -13,22 +13,23 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c7398fbea3b59cafed6f9a7f2f4f0440ef29b80a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5082adda3c03bfbc40eafb174513a39fe17a3da8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-pooling"></a>Pula połączeń
 Połączenie ze źródłem danych może zająć dużo czasu. Aby zminimalizować koszty otwarcia połączeń, ADO.NET używana technika optymalizacji o nazwie *puli połączeń*, który minimalizację kosztów wielokrotne otwieranie i zamykanie połączenia. Pula połączeń przebiega inaczej dla dostawcy danych .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Połączenie z serwerem SQL buforowanie (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
+ [Buforowanie połączenia z programem SQL Server (ADO.NET)](../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)  
  Zawiera omówienie puli połączeń i opisano, jak działa puli połączeń [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   
- [Połączenia Oracle, OLE DB i ODBC buforowanie](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
+ [Buforowanie połączenia Oracle, OLE DB i ODBC](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)  
  W tym artykule opisano tworzenie puli połączeń dla .NET Framework Data Provider for OLE DB, .NET Framework Data Provider for ODBC i .NET Framework Data Provider for Oracle.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e38339eceef97c4d6f64dffdea9ac04c598b70a3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: cc2e9f81094d16030dbe4595a8132569edab782a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-resize-windows-forms"></a>Porady: zmienianie rozmiarów formularzy systemu Windows
 Można określić rozmiar formularza systemu Windows na kilka sposobów. Można zmienić wysokość i szerokość formularza programowo, ustawiając nową wartość dla <xref:System.Windows.Forms.Form.Size%2A> właściwości, lub Dostosuj <xref:System.Windows.Forms.Control.Height%2A> lub <xref:System.Windows.Forms.Control.Width%2A> właściwości pojedynczo. Jeśli używasz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], można zmienić rozmiar przy użyciu narzędzia Projektant formularzy systemu Windows. Zobacz też [porady: Zmienianie rozmiaru Windows Forms przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/37k2zkwx\(v=vs.110\)).  
@@ -123,5 +124,5 @@ Można określić rozmiar formularza systemu Windows na kilka sposobów. Można 
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie do formularzy systemu Windows](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  [Rozszerzanie aplikacji Windows Forms](../../../docs/framework/winforms/advanced/index.md)

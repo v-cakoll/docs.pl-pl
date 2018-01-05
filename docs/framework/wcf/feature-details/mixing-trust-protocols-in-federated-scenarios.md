@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 007dec81766423ea2826e98ae0b6b399a1508f11
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7031e222b152bfa61e13e0e4a44b5ad9418b07c9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="mixing-trust-protocols-in-federated-scenarios"></a>Mieszanie protokołów zaufania w scenariuszach obejmujących federację
 Może to być scenariuszy w których federacyjnych klienci komunikują się z usługą i tokenu usługa zabezpieczenia (STS), które nie mają tej samej wersji zaufania. Usługa może zawierać WSDL `RequestSecurityTokenTemplate` potwierdzenia z elementami WS-Trust, które są w różnych wersjach niż Usługa tokenu Zabezpieczającego. W takich przypadkach [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] klienta konwertuje elementy WS-Trust otrzymanych od `RequestSecurityTokenTemplate` zgodna wersja zaufania usługi STS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]uchwyty niezgodne wersje zaufania tylko dla powiązań standardowych. Wszystkie parametry standard — algorytm, które są rozpoznawane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] są częścią standardowej powiązania. W tym temacie opisano [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowanie w przypadku różnych zaufania ustawienia między usługą i Usługa tokenu Zabezpieczającego.  

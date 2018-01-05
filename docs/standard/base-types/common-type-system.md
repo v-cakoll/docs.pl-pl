@@ -25,11 +25,14 @@ caps.latest.revision: "25"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9f9952cfd6ed2d5bac66d1cd5e3c8eed7506cd5c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 26ee5cffd5e04a8c78cf5913b286fadfaab03c7c
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system"></a>System typu wspólnego
 Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządzane przez środowisko uruchomieniowe języka wspólnego, a także jest ważnym elementem obsługi środowiska uruchomieniowego integracji między językami. Wspólny system typów wykonuje następujące funkcje:  
@@ -46,7 +49,7 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
   
 -   [Typy w .NET](#types_in_the_net_framework)  
   
--   [Definicje typów](#type_definitions)  
+-   [Definicje typu](#type_definitions)  
   
 -   [Elementy członkowskie typu](#type_members)  
   
@@ -70,7 +73,7 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
   
 -   [Interfejsy](#Interfaces)  
   
--   [Obiekty delegowane](#Delegates)  
+-   [Delegaci](#Delegates)  
   
 <a name="Classes"></a>   
 ### <a name="classes"></a>Klasy  
@@ -330,4 +333,4 @@ Wspólny system typów definiuje jak typy są zadeklarowane, używane i zarządz
 ## <a name="see-also"></a>Zobacz też  
  [Biblioteka klas programu .NET](http://go.microsoft.com/fwlink/?LinkID=217856)  
  [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md)  
- [Konwersja typów w .NET](../../../docs/standard/base-types/type-conversion.md)
+ [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)

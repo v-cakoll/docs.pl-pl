@@ -15,11 +15,12 @@ caps.latest.revision: "33"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a3467b9319a883445d95978e0c167a5552211afe
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2a41bf5c1f7a12e98ac10295af5b2608c8bf3a46
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-a-workflow"></a>Porady: uruchamianie przepływu pracy
 W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadzenie oraz opisano, jak utworzyć hosta przepływów pracy i Uruchom przepływ pracy określone w poprzedniej [porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md) tematu.  
@@ -171,9 +172,9 @@ W tym temacie jest to kontynuacja Samouczek Windows Workflow Foundation wprowadz
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.WorkflowApplication>  
  <xref:System.Activities.Bookmark>  
- [Windows Workflow Foundation programowania](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
- [Trwa oczekiwanie na dane wejściowe w przepływie pracy](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
- [Hosting przepływów pracy](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)
+ [Instrukcje: Tworzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
+ [Oczekiwanie na dane wejściowe w przepływie pracy](../../../docs/framework/windows-workflow-foundation/waiting-for-input-in-a-workflow.md)  
+ [Hostowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/hosting-workflows.md)

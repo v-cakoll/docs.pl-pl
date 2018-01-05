@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 15bb435269ca67e8de67e8e768e98d5832556f02
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0826881bac88f2bfa933ae71b798186dafc55303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diagnosing-transactional-applications"></a>Diagnozowanie aplikacji transakcyjnych
 W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] funkcji zarządzania i diagnostyki rozwiązywać transakcyjnych aplikacji.  
@@ -131,6 +132,6 @@ W tym temacie opisano sposób użycia [!INCLUDE[indigo1](../../../../includes/in
      Dzięki temu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] śledzenia, jako [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] korzysta również <xref:System.Transactions> infrastruktury.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Administracja i Diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Administracja i diagnostyka](../../../../docs/framework/wcf/diagnostics/index.md)  
  [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Narzędzie konfiguracji WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+ [Narzędzie do konfiguracji elementu WS-AtomicTransaction (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

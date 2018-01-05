@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 911a770fb4dc6d11f17c1f287a53ddb6552c690a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 47799c5eb10a3274b8b5f10d4ccec96a575da949
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transports"></a>Transporty
 Warstwa transportu jest na najniższym poziomie stosu kanału. Transporty główny używany w [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] są HTTP, HTTPS TCP i potoków nazwanych. Ta sekcja zawiera listę wszystkich elementów konfiguracji, które umożliwiają skonfigurowanie różnych typów transportów.  

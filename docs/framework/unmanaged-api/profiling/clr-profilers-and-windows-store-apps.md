@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: db1152e82edde34dc8dbaba09f20b9f769dffbca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d884b80ba8ccc42d1b6acc671db408305a095a7d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>Profilery CLR i aplikacji ze Sklepu Windows
 W tym temacie omówiono, jakie trzeba myśleć o podczas pisania narzędzia diagnostyczne analizy zarządzanego kodu uruchamianego w aplikacji ze Sklepu Windows.  Udostępnia również wytyczne do modyfikowania istniejących narzędzi rozwoju, aby nadal działa podczas wykonywania dla aplikacji ze Sklepu Windows.  Aby zrozumieć te informacje, najlepiej, jeśli znasz wspólnego języka środowiska uruchomieniowego profilowania API, już używane tego interfejsu API w narzędzia diagnostycznego, że działa prawidłowo, przed aplikacji klasycznych systemu Windows, a teraz jest zainteresowani modyfikowanie narzędzie jest do poprawnego działania względem aplikacji ze Sklepu Windows.  
@@ -424,7 +425,7 @@ GetAppContainerFolderPath(acSid, out acDir);
 -   [Dokumentacja interfejsu API metadanych CLR](../../../../docs/framework/unmanaged-api/metadata/index.md)  
   
  **CLR interakcji z środowiska uruchomieniowego systemu Windows**  
- [.NET framework — obsługa dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
+ [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)  
   
  **Aplikacje ze Sklepu Windows**  
  -   [Dostęp do plików i uprawnienia (aplikacje ze środowiska wykonawczego systemu Windows](https://msdn.microsoft.com/library/windows/apps/hh967755.aspx)  

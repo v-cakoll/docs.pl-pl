@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 08f0f48a71415878cd24640272a41de4c0a5ade6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ce40f08b8b31ae3a4647e8919b4ea862fc03506f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delay-signing-an-assembly"></a>Opóźnione podpisywanie zestawu
 Organizacja może mieć ściśle związany parę kluczy, że deweloperzy nie mają dostępu do codziennie. Klucz publiczny często są dostępne, ale dostęp do klucza prywatnego jest ograniczony do tylko kilka osób. Podczas tworzenia zestawy o silnych nazwach, każdego zestawu tego zestawu docelowego odwołania o silnych nazwach zawiera token klucza publicznego używać, aby zapewnić silnej nazwy zestawu docelowego. To wymaga klucza publicznego dostępne podczas procesu projektowania.  
@@ -78,6 +79,6 @@ Organizacja może mieć ściśle związany parę kluczy, że deweloperzy nie maj
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie zestawów](../../../docs/framework/app-domains/create-assemblies.md)  
- [Porady: tworzenie pary kluczy publiczno prywatnych](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [SN.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+ [Instrukcje: tworzenie pary kluczy publiczny-prywatny](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+ [Sn.exe (narzędzie silnych nazw)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

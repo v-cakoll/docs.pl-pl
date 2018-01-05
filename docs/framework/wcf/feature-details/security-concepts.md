@@ -13,17 +13,18 @@ caps.latest.revision: "11"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3d589b5411da147b3ae8f17ab862d00026867822
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1ac16afc6ee22665188d5df5e79288341072026e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-concepts"></a>Pojęcia dotyczące zabezpieczeń
 Ta sekcja zawiera krótkie opisy pojęć związanych z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Pojęcia zabezpieczeń użyte w programie WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
+ [Pojęcia zabezpieczeń użyte dla programu WCF](../../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)  
  Omówienie pojęć używanych w implementacji zabezpieczeń.  
   
  [Rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
@@ -47,6 +48,6 @@ Ta sekcja zawiera krótkie opisy pojęć związanych z [!INCLUDE[indigo1](../../
  [Rozszerzanie zabezpieczeń](../../../../docs/framework/wcf/extending/extending-security.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczeń](../../../../docs/framework/wcf/feature-details/security.md)  
+ [Zabezpieczenia](../../../../docs/framework/wcf/feature-details/security.md)  
  [Przegląd zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-overview.md)  
  [Model zabezpieczeń systemu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

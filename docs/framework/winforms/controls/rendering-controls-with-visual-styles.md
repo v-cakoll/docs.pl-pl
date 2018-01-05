@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e463e1571b33e8ed877bd79d980e2f24d336a7df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 127e3c411b4c75e5a2bd9f133defc447992b95f6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rendering-controls-with-visual-styles"></a>Renderowanie formantów przy użyciu stylów wizualnych
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zapewnia obsługę renderowania kontrolek i innych użytkowników systemu Windows elementy interfejsu użytkownika przy użyciu stylów wizualnych w systemach operacyjnych, które je obsługują. W tym temacie omówiono kilka poziomów obsługi w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dla formantów renderowania i inne elementy interfejsu użytkownika z aktualnym stylu wizualnym systemu operacyjnego.  
@@ -89,4 +90,4 @@ ms.lasthandoff: 10/22/2017
 >  Jeśli chcesz użyć <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> do renderowania formantu lub elementu interfejsu użytkownika, gdy użytkownik włączy lub zmienia stylów wizualnych, upewnij się, to zrobić podczas obsługi <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> zdarzeń zamiast <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> zdarzeń. Jeśli używasz będzie zgłaszany wyjątek <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> klasy podczas obsługi <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Malowanie i renderowanie formantu niestandardowego](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)
+ [Malowanie i renderowanie kontrolki niestandardowej](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)

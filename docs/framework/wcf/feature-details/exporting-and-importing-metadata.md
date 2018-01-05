@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 91b03e29c2841434d4222f59ae62028bf2431a84
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: a2785f74d9a07b267d836a9f6e6749d259a1ab21
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-and-importing-metadata"></a>Eksportowanie i importowanie metadanych
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], eksportowanie metadanych jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Importowanie metadanych usługi to proces generowania <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpień lub części z metadanych usługi.  
@@ -57,16 +58,16 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], eksportowanie metadan
  <xref:System.ServiceModel.Description.WsdlExporter> Typu ponownie zgłasza wszelkie wyjątki przechwycono podczas procesu eksportowania. Wyjątki te nie są przechwytywane jako błędy w `Errors` właściwości. Raz <xref:System.ServiceModel.Description.WsdlExporter> zgłasza wyjątek, który występuje, jest stan i nie można użyć ponownie. <xref:System.ServiceModel.Description.WsdlExporter> Dodać ostrzeżenia, aby jego `Errors` właściwość podczas operacji nie można wyeksportować, ponieważ użyto akcji symbolu wieloznacznego oraz gdy występują zduplikowane powiązanie nazwy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [Instrukcje: importowanie metadanych do punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  Opisuje sposób importowania metadanych pobranych do opisu obiektów.  
   
- [Porady: Eksportowanie metadanych z punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [Instrukcje: eksportowanie metadanych z punktów końcowych usług](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  Opisuje sposób eksportowania obiektów opis w metadanych.  
   
- [ServiceDescription i kodu WSDL odwołania](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
+ [Odwołania do elementu ServiceDescription i kodu WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  Opisuje mapowanie między obiektami opis i WSDL.  
   
- [Porady: Eksportowanie metadanych ze skompilowanego kodu usługi za pomocą Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [Instrukcje: eksportowanie metadanych ze skompilowanego kodu usługi za pomocą programu Svcutil.exe](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Opisuje Svcutil.exe do wyeksportowania metadanych dla usługi, kontrakty i typów danych w zestawach skompilowany.  
   
  [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
@@ -78,5 +79,5 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], eksportowanie metadan
  <xref:System.ServiceModel.Description.WsdlImporter>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Eksportowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
+ [Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)  
  [Importowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

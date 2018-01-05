@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9ce5efccfd2efda2f333b51868e375849f7c7752
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1a10a58552dd416084da39838a9e36f15e85074
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>Porady: dodawanie niestandardowego miejsca do okna dialogowego obsługi plików
 Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] ma obszar po lewej stronie okna dialogowego zatytułowany **Ulubione łącza**. Ten obszar jest nazywany niestandardowe lokalizacje. <xref:System.Windows.Forms.OpenFileDialog> i <xref:System.Windows.Forms.SaveFileDialog> klasy umożliwiają. Dodaj foldery do <xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> kolekcji.  
@@ -49,4 +50,4 @@ Wartość domyślna otworzyć i zapisać okien dialogowych na [!INCLUDE[wiprlhex
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.FileDialog>  
  <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>  
- [Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego pliku](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)
+ [Identyfikatory GUID znanych folderów dla niestandardowych miejsc okna dialogowego plików](../../../../docs/framework/winforms/controls/known-folder-guids-for-file-dialog-custom-places.md)

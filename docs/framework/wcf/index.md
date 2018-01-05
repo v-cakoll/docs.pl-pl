@@ -12,17 +12,18 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 184a5b8eeafd68907c76655cfed82634de106185
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b21dc040cc464495c06e8c824354563307622ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-service-oriented-applications-with-wcf"></a>Tworzenie zorientowanych na usługę aplikacji za pomocą usługi WCF
 Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WCF), czyli ujednolicony model programowania do tworzenia aplikacji korzystających z usług. Umożliwia ona deweloperom tworzenie rozwiązań bezpieczne, niezawodne i transakcyjne, zintegrowanie na różnych platformach, które współdziałają z dotychczasowych inwestycji.
  
 ## <a name="in-this-section"></a>W tej sekcji  
- [What's New in Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
+ [Co nowego w programie Windows Communication Foundation 4.5](../../../docs/framework/wcf/whats-new.md)  
  W tym artykule omówiono funkcje jesteś nowym użytkownikiem programu Windows Communication Foundation.  
   
  [Funkcje upraszczania programu WCF](../../../docs/framework/wcf/wcf-simplification-features.md)  
@@ -37,7 +38,7 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md)  
  Samouczek krok po kroku, aby utworzyć usługę WCF i klienta  
   
- [Programowanie podstawowe usługi WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../../../docs/framework/wcf/basic-wcf-programming.md)  
  W tym artykule opisano podstawy do tworzenia aplikacji Windows Communication Foundation.  
   
  [Szczegóły funkcji WCF](../../../docs/framework/wcf/feature-details/index.md)  
@@ -49,7 +50,7 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  [Wskazówki i najlepsze rozwiązania](../../../docs/framework/wcf/guidelines-and-best-practices.md)  
  Wskazówki dotyczące tworzenia aplikacji systemu Windows Communication Foundation (WCF).  
   
- [Administracja i Diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
+ [Administracja i diagnostyka](../../../docs/framework/wcf/diagnostics/index.md)  
  Opis diagnostycznych funkcji WCF  
   
  [Wymagania systemowe](../../../docs/framework/wcf/wcf-system-requirements.md)  
@@ -64,7 +65,7 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  [Migrowanie z programu .NET Remoting do programu WCF](../../../docs/framework/wcf/migrating-from-net-remoting-to-wcf.md)  
  Porównuje .NET Remoting do programu WCF i zawiera wskazówki dotyczące migracji dla typowych scenariuszy.  
   
- [Za pomocą narzędzi deweloperskich programu WCF](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
+ [Używanie narzędzi deweloperskich programu WCF](../../../docs/framework/wcf/using-the-wcf-development-tools.md)  
  Opisuje narzędzia programistyczne programu Visual Studio Windows Communication Foundation, które mogą pomóc w tworzeniu WCFservice Twojego.  
   
  [Narzędzia programu Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
@@ -82,5 +83,5 @@ Ta sekcja dokumentacji zawiera informacje o Windows Communication Foundation (WC
  [Opinie i społeczność](../../../docs/framework/wcf/feedback-and-community.md)  
  Informacje o sposobie wyrazić swoją opinię na temat programu Windows Communication Foundation  
   
- [Informacje o ochronie prywatności](../../../docs/framework/wcf/privacy-information.md)  
+ [informacje o prywatności](../../../docs/framework/wcf/privacy-information.md)  
  Informacje na temat usługi WCF i ochrona prywatności  

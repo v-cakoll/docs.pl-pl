@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8b47e55461610d2cc4bf85c839ddb1bef937d69e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 589735156ad4d6d639c2449d6bd693e2b3a32d50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md) składnika służy do sprawdzania poprawności danych wejściowych użytkownika dla formularza lub kontrolki. Jest ona zwykle używana w połączeniu z sprawdzanie poprawności danych wejściowych użytkownika dla formularza lub wyświetlanie błędów w elemencie dataset. Błąd dostawcy jest lepszym niż wyświetlanie komunikat o błędzie w oknie komunikatu, ponieważ gdy zostaje zamknięte okno komunikatu, komunikat o błędzie nie jest już widoczna. <xref:System.Windows.Forms.ErrorProvider> Składnika Wyświetla ikonę błędu (![ikona ErrorProvider](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) obok odpowiednie urządzenie, takie jak pole tekstowe; gdy użytkownik umieszcza kursor myszy nad błąd, etykietka pojawi się ikona, przedstawiający ciąg z komunikatem o.  
@@ -37,5 +38,5 @@ Formularze systemu Windows [ErrorProvider](../../../../docs/framework/winforms/c
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ErrorProvider>  
- [Porady: wyświetlanie błędów w zestawie danych z systemu Windows składnika ErrorProvider formularzy](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
- [Porady: wyświetlanie ikon błędów dotyczących weryfikacji formularza z systemu Windows składnika ErrorProvider formularzy](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+ [Instrukcje: wyświetlanie błędów w elemencie DataSet za pomocą składnika ErrorProvider formularzy Windows Forms](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
+ [Instrukcje: wyświetlanie ikon błędów dotyczących weryfikacji formularza za pomocą składnika ErrorProvider formularzy Windows Forms](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)

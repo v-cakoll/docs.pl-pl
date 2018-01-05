@@ -24,11 +24,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e415d5ab46bc354198135fc4e0902e3017923e20
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 46a11b072731daf420e35bc9c9cfd7d4fced1fe5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-change-events"></a>Zdarzenia zmiany właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]definiuje kilka zdarzeń, które zostały zgłoszone w odpowiedzi na zmianę wartości właściwości. Właściwość jest często właściwości zależności. Samym zdarzeniu jest czasami kierowanego zdarzenia i czasami jest standardem [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Definicji zdarzenia może być różna w zależności od scenariusza, ponieważ niektóre zmiany właściwości odpowiedniej są wysyłane za pośrednictwem drzewo elementu inne zmiany właściwości są zwykle tylko dotyczących obiektów, których zmianie właściwości.  
@@ -72,5 +73,5 @@ ms.lasthandoff: 11/21/2017
  Aby uzyskać więcej informacji na temat właściwości wyzwalaczy, zobacz [stylami i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)

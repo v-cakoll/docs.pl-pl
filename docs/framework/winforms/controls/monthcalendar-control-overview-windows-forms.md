@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dba245df31ad14150e57188c95ab3a980ae8d3db
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a22667e4227067dfbf0baaad1838ab520e0ac7e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant przedstawia intuicyjnego interfejsu graficznego dla użytkowników wyświetlić i ustawić informacje o dacie. Wyświetla formant Kalendarz: siatka zawierająca numerowane dni miesiąca, rozmieszczone w kolumnach poniżej dni tygodnia, z wybranego zakresu dat wyróżnione. Możesz wybrać inny miesiąc, klikając przycisk strzałki po obu stronach podpis miesiąca. W przeciwieństwie do podobnych <xref:System.Windows.Forms.DateTimePicker> sterowania, można wybrać więcej niż jednej daty z tym formantem. Aby uzyskać więcej informacji na temat <xref:System.Windows.Forms.DateTimePicker> sterowania, zobacz [DateTimePicker — formant](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md).  
@@ -36,4 +37,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant prz
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.MonthCalendar>  
- [MonthCalendar — formant](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
+ [MonthCalendar, kontrolka](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)

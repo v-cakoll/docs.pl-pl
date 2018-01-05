@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 759232d5c1e5bdf00c85145fa0fc3d69743c13f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ef3cc011afebc98e57bffbf0cba2a90cd28e3a19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugilframe2-interface1"></a>ICorDebugILFrame2 Interface1
 Logiczne rozszerzenie interfejsu ICorDebugILFrame.  
@@ -32,8 +33,8 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateTypeParameters — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum zawierający <xref:System.Type> parametrów do tej ramki.|  
-|[RemapFunction — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ponownie mapuje funkcję edytowany przez określenie nowego przesunięcie MSIL.|  
+|[EnumerateTypeParameters, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-enumeratetypeparameters-method.md)|Pobiera obiekt ICorDebugTypeEnum zawierający <xref:System.Type> parametrów do tej ramki.|  
+|[RemapFunction, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md)|Ponownie mapuje funkcję edytowany przez określenie nowego przesunięcie MSIL.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -50,4 +51,4 @@ Logiczne rozszerzenie interfejsu ICorDebugILFrame.
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

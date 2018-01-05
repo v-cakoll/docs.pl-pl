@@ -18,11 +18,12 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: de9740d74b87de7b81da10b458a7e935a427af98
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6873de24e33876b7caaf9014ca7e9d6bc80375c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="building-and-deploying-wpf-applications"></a>Kompilowanie i wdrażanie aplikacji WPF
 Kompilowanie i wdrażanie modelu oferuje możliwość tworzenia i wdrażania aplikacji lokalnie i zdalnie, takie jak następujące:  
@@ -34,16 +35,16 @@ Kompilowanie i wdrażanie modelu oferuje możliwość tworzenia i wdrażania apl
 -   Wdrożenie ClickOnce: .NET publikowania i wdrażania systemu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [Kompilowanie aplikacji WPF](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
  [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
- [Tematy porad](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/build-and-deploy-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  MSBuild  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [Systemu Windows na platformie WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
-  [Omówienie nawigacji](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [Omówienie aplikacje przeglądarki XAML w WPF](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
+ [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+  [Okna w programie WPF](../../../../docs/framework/wpf/app-development/windows-in-wpf-applications.md)  
+  [Nawigacja — omówienie](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+  [Aplikacje przeglądarek WPF XAML — omówienie](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)  
   [Hosting](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)

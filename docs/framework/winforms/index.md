@@ -17,33 +17,34 @@ caps.latest.revision: "25"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2799bd6652c9f575be8758f47c9770d3fde93580
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms"></a>Windows Forms
 Ponieważ formularze są podstawowa jednostka aplikacji, ważne jest zapewniają rozwagą do ich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, deweloperzy zwiększenia z służy do tworzenia interfejsu użytkownika i kodu w celu obsługi danych. W tym celu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zapewnia zintegrowane środowisko programistyczne (IDE) ułatwiających pisania kodu, a także sformatowanego formantu ustaw napisane z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Przez uzupełnienie funkcji tych kontrolek w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wprowadzenie do formularzy systemu Windows](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
+ [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  
  Zawiera łącza do tematów dotyczących korzystają z możliwości formularzy systemu Windows do wyświetlania danych, Obsługa danych wejściowych użytkownika i wdrażanie aplikacji, łatwe i bardziej niezawodna zabezpieczeń.  
   
  [Rozszerzanie aplikacji Windows Forms](../../../docs/framework/winforms/advanced/index.md)  
  Zawiera łącza do innych tematów dotyczących sposobu ulepszenia formularzy systemu Windows przy użyciu różnych funkcji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty formularzy systemu Windows](../../../docs/framework/winforms/controls/index.md)  
+ [Kontrolki formularzy Windows Forms](../../../docs/framework/winforms/controls/index.md)  
  Zawiera linki do tematów, które opisują formanty formularzy systemu Windows i przedstawiają sposób ich wdrażania.  
   
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
  Zawiera linki do tematów opisujących architektura powiązanie danych formularzy systemu Windows.  
   
- [Przegląd grafiki](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
+ [Grafika — omówienie](../../../docs/framework/winforms/advanced/graphics-overview-windows-forms.md)  
  Opisano sposób tworzenia grafiki, rysowanie tekstu i manipulowania obrazy jako obiekty przy użyciu zaawansowanych implementacji interfejsu projektowania grafiki systemu Windows.  
   
- [Zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment)  
+ [Wskazówki dotyczące wdrażania i zabezpieczeń ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)  
  W tym artykule omówiono zasady wdrażania ClickOnce.  
   
  [Różnice w programowaniu Windows Forms/MFC](/cpp/dotnet/windows-forms-mfc-programming-differences)  

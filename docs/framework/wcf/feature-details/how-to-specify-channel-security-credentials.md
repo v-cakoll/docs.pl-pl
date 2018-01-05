@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 2a1b2ba0ab49ebf470c0245f0827f82e1fe20ce8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e2aedb06ec694f6c7dfb12b70ab919ae23eed17e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>Porady: Określ poświadczenia zabezpieczeń kanału
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Moniker usługi umożliwia aplikacjom COM, wywołanie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług. Większość [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług wymaga od klienta określić poświadczenia dla uwierzytelniania i autoryzacji. Podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta, można określić te poświadczenia w kodzie zarządzanym lub w pliku konfiguracyjnym aplikacji. Podczas wywoływania metody [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z aplikacji modelu COM, możesz użyć <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejs, aby określić poświadczenia. W tym temacie przedstawiają różne sposoby, aby określić poświadczenia, za pomocą <xref:System.ServiceModel.ComIntegration.IChannelCredentials> interfejsu.  
@@ -148,8 +149,8 @@ ms.lasthandoff: 11/21/2017
      Aby uzyskać więcej informacji na temat parametrów dla tej metody, zobacz <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md)  
- [Porady: Konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
- [Porady: Tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
+ [Federacja](../../../../docs/framework/wcf/feature-details/federation.md)  
+ [Instrukcje: konfigurowanie poświadczeń usługi federacyjnej](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)  
+ [Instrukcje: tworzenie klienta federacyjnego](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)  
  [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
  [Powiązania i zabezpieczenia](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

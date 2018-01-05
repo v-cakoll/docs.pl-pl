@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69f7a5af655586a62776a8c470f2e1c9811f91d7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5b5c4ee554e8a0148c7d8d8044735f66778e7117
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-property-metadata"></a>Metadane zależności właściwości
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Właściwości systemu obejmuje metadanych systemu, które wykraczają poza, które mogą być zgłoszony dotyczące właściwości przy użyciu odbicia lub ogólne raportowania [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości. Metadane dla właściwości zależności można również przypisać unikatowo przez klasę, która definiuje właściwości zależności, można zmienić, gdy właściwość zależności jest dodana do innej klasy i może zostać przesłonięta w szczególności wszystkie klasy pochodne, które dziedziczą Właściwości zależności od definiującego klasy podstawowej.  
@@ -107,4 +108,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.DependencyProperty>  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Metadane właściwości Framework](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)
+ [Metadane właściwości struktury](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)

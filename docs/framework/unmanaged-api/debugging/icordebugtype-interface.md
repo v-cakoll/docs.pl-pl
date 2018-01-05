@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9a25e72766e6647f820c9871e989d4b24db0bf26
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 503d0debef2ec1bebd674234051db8101dcb0de2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugtype-interface1"></a>ICorDebugType Interface1
 Reprezentuje typ, podstawowe lub złożonych (który jest zdefiniowane przez użytkownika). Jeśli typ jest rodzajowy, `ICorDebugType` reprezentuje wystąpień typu ogólnego.  
@@ -32,13 +33,13 @@ Reprezentuje typ, podstawowe lub złożonych (który jest zdefiniowane przez uż
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[EnumerateTypeParameters — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Pobiera wskaźnika interfejsu do ICorDebugTypeEnum, który odwołuje się do ogólnego <xref:System.Type> parametrów klasy odwołuje się to `ICorDebugType`.|  
-|[GetBase — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugType` , która odwołuje się klasę podstawową klasy odwołuje się to `ICorDebugType`, jeśli taka istnieje.|  
-|[GetClass — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Pobiera wskaźnika interfejsu do ICorDebugClass, który odwołuje się do konstruktora typu `ICorDebugType`.|  
-|[GetFirstTypeParameter — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugType` , która odwołuje się pierwszy ogólny <xref:System.Type> parametr dla konstruktora klasy odwołuje się to `ICorDebugType`.|  
-|[GetRank — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Pobiera liczbę wymiarów w typie tablicy.|  
-|[GetStaticFieldValue — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Pobiera token w ramce stosu określonego wskaźnika interfejsu do ICorDebugValue zawierający wartość pola statycznego odwołuje się określonego pola.|  
-|[GetType — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Pobiera wartość CorElementType, która opisuje typ macierzysty środowisko uruchomieniowe języka wspólnego <xref:System.Type> odwołuje się to `ICorDebugType`.|  
+|[EnumerateTypeParameters, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-enumeratetypeparameters-method.md)|Pobiera wskaźnika interfejsu do ICorDebugTypeEnum, który odwołuje się do ogólnego <xref:System.Type> parametrów klasy odwołuje się to `ICorDebugType`.|  
+|[GetBase, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getbase-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugType` , która odwołuje się klasę podstawową klasy odwołuje się to `ICorDebugType`, jeśli taka istnieje.|  
+|[GetClass, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)|Pobiera wskaźnika interfejsu do ICorDebugClass, który odwołuje się do konstruktora typu `ICorDebugType`.|  
+|[GetFirstTypeParameter, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getfirsttypeparameter-method.md)|Pobiera wskaźnika interfejsu do `ICorDebugType` , która odwołuje się pierwszy ogólny <xref:System.Type> parametr dla konstruktora klasy odwołuje się to `ICorDebugType`.|  
+|[GetRank, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getrank-method.md)|Pobiera liczbę wymiarów w typie tablicy.|  
+|[GetStaticFieldValue, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getstaticfieldvalue-method.md)|Pobiera token w ramce stosu określonego wskaźnika interfejsu do ICorDebugValue zawierający wartość pola statycznego odwołuje się określonego pola.|  
+|[GetType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md)|Pobiera wartość CorElementType, która opisuje typ macierzysty środowisko uruchomieniowe języka wspólnego <xref:System.Type> odwołuje się to `ICorDebugType`.|  
   
 ## <a name="remarks"></a>Uwagi  
  Jeśli typ jest rodzajowy, `ICorDebugClass` reprezentuje typ bez wystąpień. `ICorDebugType` Interfejsu reprezentuje typu ogólnego. Na przykład Hashtable\<K, V > może być reprezentowany przez `ICorDebugClass`, podczas gdy Hashtable\<Int32, String > może być reprezentowany przez `ICorDebugType`.  
@@ -58,4 +59,4 @@ Reprezentuje typ, podstawowe lub złożonych (który jest zdefiniowane przez uż
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

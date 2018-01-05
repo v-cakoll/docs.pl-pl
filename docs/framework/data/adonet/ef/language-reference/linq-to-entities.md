@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 685651f4291a11b857da82a63068e4bd2333275c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c1ef47e6b4f584e0a49482d9eb2ed7bf14602a03
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-entities"></a>LINQ do Jednostek
 Składnik LINQ to Entities zapewnia obsługę język Language-Integrated zapytania (LINQ), który umożliwia deweloperom Pisanie zapytań dotyczących programu Entity Framework modelu koncepcyjnego za pomocą języka Visual Basic lub Visual C#. Zapytań dotyczących programu Entity Framework są reprezentowane przez kwerendy drzewa polecenia, których wykonanie względem kontekstu obiektów. Składnik LINQ to Entities konwertuje zapytań język Language-Integrated zapytania (LINQ) do polecenia drzewa zapytań, wykonuje zapytania względem programu Entity Framework i zwraca obiekty, które mogą być używane przez programu Entity Framework i LINQ. Poniżej przedstawiono procedurę tworzenia i wykonywania zapytania składnika LINQ to Entities:  
@@ -80,17 +81,17 @@ Składnik LINQ to Entities zapewnia obsługę język Language-Integrated zapytan
 ## <a name="in-this-section"></a>W tej sekcji  
  [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)  
   
- [Wyrażenia w składniku LINQ to Entities zapytań](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
+ [Wyrażenia w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)  
   
- [Wywoływanie funkcji w składniku LINQ to Entities zapytań](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
+ [Wywoływanie funkcji w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)  
   
- [Skompilowane zapytania (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
+ [Zapytania skompilowane (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)  
   
  [Wykonywanie zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)  
   
  [Wyniki zapytania](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)  
   
- [Standardowe operatory zapytań w składniku LINQ to Entities zapytań](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
+ [Standardowe operatory zapytań w zapytaniach składnika LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
  [Metody mapowania kanonicznej funkcji CLR](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
@@ -102,4 +103,4 @@ Składnik LINQ to Entities zapewnia obsługę język Language-Integrated zapytan
  [Znane problemy i zagadnienia dotyczące w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
  [LINQ i ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
+ [Program Entity Framework na platformie ADO.NET](../../../../../../docs/framework/data/adonet/ef/index.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d4813b7bd37c0c5bd9b04b37cb825067b35ce3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 06bd0686b31b52ccb8580a545910339d2e2cd5bd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>Zachowanie AutoSize w formancie TableLayoutPanel
 ## <a name="distinct-autosize-behaviors"></a>AutoSize różne zachowania  
@@ -46,4 +47,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.TableLayoutPanel>  
- [Informacje o formancie TableLayoutPanel](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+ [TableLayoutPanel, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)

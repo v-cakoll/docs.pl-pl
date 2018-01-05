@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 37cec82876edadfed5cda338ca12775ad19ae732
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 485640dc320809e9be5550d380b4fc9a2326e027
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domainupdown-control-windows-forms"></a>DomainUpDown — Formant (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.DomainUpDown> formant wygląda kombinację pole tekstowe i parę przyciski przenoszenia w górę lub w dół listy. Kontrolka Wyświetla i ustawia ciąg tekstowy, z listy dostępnych opcji. Użytkownik może wybrać ciąg, kilikając przyciski, aby przejść na liście, naciskając klawisze strzałek w górę i w dół lub wpisując ciąg zgodny element na liście. Jeden możliwości zastosowania dla tego formantu jest wybierania elementów z posortowane alfabetycznie listę nazw. (Aby posortować listę, należy ustawić <xref:System.Windows.Forms.DomainUpDown.Sorted%2A> właściwości `true`.) Funkcja tego formantu jest bardzo podobny do pola listy lub pola kombi, ale zajmuje on bardzo mało miejsca.  
@@ -33,13 +34,13 @@ Formularze systemu Windows <xref:System.Windows.Forms.DomainUpDown> formant wygl
  Ten formant wyświetla tylko ciągi. Formant, który wyświetla wartości liczbowe, należy użyć <xref:System.Windows.Forms.NumericUpDown> formantu. Aby uzyskać więcej informacji, zobacz [formantu NumericUpDown](../../../../docs/framework/winforms/controls/numericupdown-control-windows-forms.md) .  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie DomainUpDown](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
+ [DomainUpDown, kontrolka — omówienie](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)  
  Ogólne pojęcia związane z <xref:System.Windows.Forms.DomainUpDown> kontroli, co umożliwi użytkownikom do przeglądania i wybrać z listy ciągów tekstowych.  
   
- [Porady: Dodawanie elementów do systemu Windows formantu DomainUpDown formularzy programowo](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
+ [Instrukcje: dodawanie w sposób programowy elementów do kontrolki DomainUpDown formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md)  
  Opisuje sposób określenia ciągów tekstowych <xref:System.Windows.Forms.DomainUpDown> powinien być wyświetlany przez formant.  
   
- [Porady: usuwanie elementów za pomocą formularzy systemu Windows DomainUpDown — formanty](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
+ [Instrukcje: usuwanie elementów z kontrolki DomainUpDown formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-remove-items-from-windows-forms-domainupdown-controls.md)  
  Opisuje sposób usuwania pozycji z <xref:System.Windows.Forms.DomainUpDown> kontroli w kodzie.  
   
 ## <a name="reference"></a>Tematy pomocy  

@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bc2a6da9a43e29091c4ff9d086e9259594a01718
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 5b85acf2e3c4d885988e92948481182b7cf8c32c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persistence-participants"></a>Uczestnicy trwałości
 Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub obciążenia) wyzwalane przez hosta aplikacji. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] Jest dostarczany z dwóch klas abstrakcyjnych, **PersistenceParticipant** i **PersistenceIOParticipant**, które służy do tworzenia uczestnika trwałości. Uczestnika trwałości pochodzi z jednego z tych klas, implementuje metody zainteresowań, a następnie dodanie wystąpienia klasy do <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> kolekcji na <xref:System.ServiceModel.Activities.WorkflowServiceHost> . Host aplikacji może wyglądać dla tych rozszerzeń przepływu pracy po trwałym wystąpienia przepływu pracy i wywołać odpowiednie metody uczestnika trwałości w odpowiednim czasie.  
@@ -67,7 +68,7 @@ Uczestnika trwałości mogą uczestniczyć w operacji trwałości (Zapisz lub ob
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Porady: tworzenie uczestnika trwałości niestandardowych](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [Instrukcje: Tworzenie niestandardowego uczestnika stanów trwałych](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Rozszerzalność magazynu](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)

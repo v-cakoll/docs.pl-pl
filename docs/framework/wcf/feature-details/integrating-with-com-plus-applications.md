@@ -20,26 +20,27 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02e0fbf7c8b6ddfe0d722575042b4cbc82ba9bb3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 1a29b28608c9ca16dd5a2023bd3d9e135618d753
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications"></a>Współdziałanie z aplikacjami COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli masz znaczących inwestycji w logice na podstawie składnika aplikacji hostowanej w modelu COM +, można użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Tematy w tej sekcji opisano sposób korzystania COM + z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przegląd integrowania z modelu COM + aplikacjami](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
+ [Przegląd integrowania z aplikacjami COM+](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  Zawiera omówienie kiedy i jak zintegrować składniki modelu COM +.  
   
- [Porady: Użyj narzędzia konfiguracji modelu usług COM +](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [Instrukcje: używanie narzędzia konfiguracji modelu usług COM+](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  Wyjaśniono, jak skonfigurować interfejsów aplikacji, które mają być uwidocznione jako za pomocą narzędzia wiersza polecenia w konfiguracji modelu usług COM + (ComSvcConfig.exe) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.  
   
- [Porady: Konfigurowanie ustawień usług COM +](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [Instrukcje: konfigurowanie ustawień usługi COM+](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  Opisano sposób konfigurowania obiektu modelu COM + jako [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
   
- [Porady: Wdrażanie aplikacji integracji modelu COM +](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [Instrukcje: wdrażanie aplikacji integracji modelu COM+](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  Wyjaśniono, jak przenieść aplikacji integracji modelu COM +.  
   
 ## <a name="reference"></a>Tematy pomocy  

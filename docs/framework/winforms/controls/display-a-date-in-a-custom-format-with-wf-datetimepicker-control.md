@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0b92fec7565aad2a881f714f9232eae10bf7633c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5f5c7d856991ae8e0bf7caff656bf7010255628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>Porady: wyświetlanie daty w niestandardowym formacie za pomocą formantu DateTimePicker formularzy systemu Windows
 Formularze systemu Windows <xref:System.Windows.Forms.DateTimePicker> kontroli zapewnia elastyczność w formatowaniu wyświetlanie daty i godziny w formancie. <xref:System.Windows.Forms.DateTimePicker.Format%2A> Właściwości umożliwia wybranie ze wstępnie zdefiniowanych formatów, na liście <xref:System.Windows.Forms.DateTimePickerFormat>. Jeśli żaden z tych nie jest odpowiedni do własnych celów, można utworzyć własny styl formatu przy użyciu znaków format na liście <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>.  
@@ -74,5 +75,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.DateTimePicker> kontroli z
      W zależności od ustawienia kulturowe znaków, nie jest ujęta w znaki apostrofu może zostać zmieniona. Na przykład ciąg formatu powyżej Wyświetla bieżącą datę w formacie "obecnie jest: 05:30:31 piątek, 02 marca 2012" w języku angielskim (Stany Zjednoczone) kultury. Należy pamiętać, że pierwszy dwukropkiem jest ujęta w pojedynczy cudzysłów, ponieważ nie ma ona być znaki rozdzielające, ponieważ jest on "hh: mm:". W innym kultury, format mogą być wyświetlane jako "obecnie jest: 05.30.31 piątek, 02 marca 2012".  
   
 ## <a name="see-also"></a>Zobacz też  
- [DateTimePicker — formant](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- [Porady: Ustawianie i zwracanie dat z systemu Windows formantu DateTimePicker formularzy](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+ [DateTimePicker, kontrolka](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
+ [Instrukcje: ustawianie i zwracanie dat za pomocą kontrolki DateTimePicker formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

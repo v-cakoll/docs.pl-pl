@@ -21,20 +21,21 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52863e8551f798a2a4c50c3856bdb4673dd9fd4f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c0d8ee3a2c51cf05f0669573170c5e15d4e9346e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox — Formant (Formularze systemu Windows)
 Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania danych w polu kombi listy rozwijanej. Domyślnie `ComboBox` formant jest widoczny w dwóch częściach: górnej części jest polem tekstowym, który zezwala użytkownikowi na typ elementu listy. Druga część to pole listy, które wyświetla listę elementów, z których użytkownik może wybrać jeden.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie ComboBox](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
+ [ComboBox, kontrolka — omówienie](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)  
  Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
   
- [Porady: Tworzenie tekstu o zmiennym rozmiarze w formancie ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+ [Instrukcje: tworzenie tekstu o zmiennym rozmiarze w kontrolce ComboBox](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
  Pokazuje Rysowanie niestandardowego tekstu w `ComboBox` formantu.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -42,8 +43,8 @@ Formularze systemu Windows `ComboBox` formant jest używana do wyświetlania dan
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Formanty używane do obsługi opcji List formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
+ [Kontrolki formularzy Windows Forms używane do obsługi opcji list](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)  
  Zawiera listę czynności, które można wykonywać z pola listy, pola kombi i pól listy zaznaczenia.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)

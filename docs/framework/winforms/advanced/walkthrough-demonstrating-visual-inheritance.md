@@ -22,11 +22,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 711f823e418a1bbea1479b9d6a8d70d4fa506365
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54f521050025f2f9e55085ee2656a5874b62226d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Wskazówki: demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym przewodniku utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Zostanie zaimportować tę bibliotekę klas do innego projektu i Utwórz nowy formularz, który dziedziczy z formularza podstawowego. W tym przewodniku przedstawiono sposób:  
@@ -174,6 +175,6 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
  W przypadku kontrolek użytkownika dziedziczenia w podobny sposób. Otwórz nowy projektu biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompilować projekt. Otwórz innego nowego projektu biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać formant dziedziczony (za pośrednictwem **Dodawanie nowych elementów** okno dialogowe) do projektu i przy użyciu **selektora dziedziczenia**. Dodaj kontrolkę użytkownika, a następnie zmień `Inherits` (`:` w [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) instrukcji. Aby uzyskać więcej informacji, zobacz [porady: dziedziczenie formularzy systemu Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: dziedziczenie formularzy systemu Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
- [Formularze systemu Windows — dziedziczenie Visual](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
- [Formularze systemu Windows](../../../../docs/framework/winforms/index.md)
+ [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  
+ [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)  
+ [Windows Forms](../../../../docs/framework/winforms/index.md)

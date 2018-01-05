@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a1771f5c69442ea4e95925339c28204663f78eb2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0725c4f4275853cce958072a57d7f6ca4059e8cf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-endpoints"></a>Punkty końcowe WCF (Windows Communication Foundation)
 Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez *punkty końcowe* usługi. Punkty końcowe zapewnić klientom dostęp do funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] oferty usługi.  
@@ -37,7 +38,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
   
 -   [Konfigurowanie usług i klientów za pomocą powiązań](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
   
--   [Projektowanie i Implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
+-   [Projektowanie i implementowanie usług](../../../docs/framework/wcf/designing-and-implementing-services.md)  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przegląd tworzenia punktów końcowych](../../../docs/framework/wcf/endpoint-creation-overview.md)  
@@ -46,10 +47,10 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
  [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md)  
  W tym artykule opisano sposób komunikacji z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi odbywa się przez punkty końcowe.  
   
- [Porady: Tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [Instrukcje: tworzenie punktu końcowego usługi w konfiguracji](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  Pokazuje, jak utworzyć punkt końcowy usługi w konfiguracji.  
   
- [Porady: Tworzenie punktu końcowego usługi w kodzie](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [Instrukcje: tworzenie punktu końcowego usługi w kodzie](../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  Pokazuje, jak utworzyć punkt końcowy usługi w kodzie.  
   
  [Publikowanie punktów końcowych metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md)  

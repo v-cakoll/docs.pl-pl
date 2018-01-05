@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1e00fc074148ddd53885bafbb490a3e3868fc0a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9e3018d024254adb249860f7736399e7f2da72a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest wstępnie skonfigurowane okno dialogowe, które jest standard Windows **czcionki** okno dialogowe używany do udostępnienia czcionek, które są aktualnie zainstalowane w systemie. Używać go w aplikacji systemu Windows jako prostym rozwiązaniem wybór czcionki zamiast własne okno dialogowe Konfigurowanie.  
@@ -34,4 +35,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.FontDialog> składnik jest
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.FontDialog>  
- [Fontdialog — składnik](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+ [FontDialog, składnik](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)

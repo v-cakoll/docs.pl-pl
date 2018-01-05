@@ -29,11 +29,12 @@ caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4c1b751fc5fb5717ad4bf030777359bef2e69545
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowanych zasobów w aplikacjach klasycznych .NET Framework, należy w idealnym przypadku pakiet zasobów dla domyślnej lub kultury neutralnej o zestawie głównym i utworzyć zestaw satelicki osobne dla każdego języka i kultury, która obsługuje aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli wybierzesz nie osadzić zasobów w zestawie głównym i zestawy satelickie, można również przejść, pliki binarne .resources bezpośrednio, zgodnie z opisem w sekcji [podczas pobierania zasobów z plików .resources](#from_file) dalszej części tego artykuł.  Można pobrać zasobów w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów systemu Windows.  
@@ -212,5 +213,5 @@ csc Example.cs
  <xref:System.Resources.ResourceManager>  
  [Zasoby w aplikacjach klasycznych](../../../docs/framework/resources/index.md)  
  [Opakowanie i wdrażanie zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)  
- [Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkID=241674)

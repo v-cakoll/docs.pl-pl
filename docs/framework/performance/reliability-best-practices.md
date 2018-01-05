@@ -49,11 +49,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5ed637cd5d173e12114f436b739ce3c114bb420f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ad218e8f87c2a04a9df6f67a918097de20296d0c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reliability-best-practices"></a>Najlepsze rozwiązania dotyczące niezawodności
 Następujące reguły niezawodności są ukierunkowane do programu SQL Server; jednak mają one również zastosowanie do aplikacji opartej na hoście serwera. Jest bardzo ważne, że serwery, takich jak SQL Server nie nastąpił przeciek zasobów i nie można przełączyć w dół.  Jednak, że nie można wykonać pisząc kod wycofujący się dla każdej metody, która zmienia stan obiektu.  Celem jest nie do pisania 100 procent niezawodnej zarządzanego kodu, który będzie odzyskanie wszystkich błędów w każdej lokalizacji kod wycofujący się.  Który będzie stanowić nie lada wyzwanie z małego prawdopodobieństwo pomyślnego.  Środowisko uruchomieniowe języka wspólnego (CLR) nie można łatwo udostępnić wystarczająco silne gwarancje z kodem zarządzanym aby pisanie kodu doskonałe możliwe.  Należy pamiętać, że w przeciwieństwie do programu ASP.NET, program SQL Server używa tylko jednego procesu, który nie może zostać odtworzona bez konieczności przełączania bazy danych w dół przez zbyt długi czas.  

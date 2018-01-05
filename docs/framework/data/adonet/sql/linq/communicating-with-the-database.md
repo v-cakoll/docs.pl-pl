@@ -13,24 +13,25 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 4b7c59096f1decc57b5d8aa4194cbb838c358042
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 946ac72dd569e14cec6491f0cd4aff637f298004
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="communicating-with-the-database"></a>Podczas komunikacji z bazą danych
 W tematach w tej sekcji opisano niektóre podstawowe aspekty sposobu ustanowienia i komunikacja z bazą danych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: połączenie z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
+ [Instrukcje: Łączenie z bazą danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
  Informacje dotyczące używania <xref:System.Data.Linq.DataContext> klasy w celu połączenia z bazą danych.  
   
- [Porady: bezpośrednio wykonania polecenia SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
+ [Instrukcje: Bezpośrednie wykonywanie poleceń SQL](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
  W tym artykule opisano, jak używasz <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> należy wysyłać polecenia języka SQL.  
   
- [Porady: ponowne użycie połączenia między poleceniem ADO.NET i DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
+ [Instrukcje: Ponowne użycie połączenia między poleceniem ADO.NET a DataContext](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
  Przykłady sposobu korzystania z istniejącej [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] połączenia w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
+ [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)

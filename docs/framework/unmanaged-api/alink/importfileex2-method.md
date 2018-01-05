@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c2416a630f9bd763d4d4d31170cc606b160bb854
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 78ed173e795b875a171edd8ce49b11df49570827
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 — Metoda
 Importuje zestawów i modułów niepowiązanych. Ta metoda jest podobna [ImportFile — metoda](../../../../docs/framework/unmanaged-api/alink/importfile-method.md), ale działa, nawet jeśli importowany plik nie istnieje na dysku.  
@@ -75,6 +76,6 @@ HRESULT ImportFileEx2(
  Wymaga alink.h.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Ialink2 — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [Ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+ [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [ALink, interfejs API](../../../../docs/framework/unmanaged-api/alink/index.md)

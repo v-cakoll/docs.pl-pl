@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 989883034b30c3ec67f5441c5512418643546519
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 51494801773ac8724c2ca5392df8cb013e989466
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-the-gamepiece-class"></a>Tworzenie klasy GamePiece
 **GamePiece** klasa hermetyzuje wszystkie funkcje, które są wymagane do załadowania obrazu gier element XNA firmy Microsoft, śledzenie stanu myszy w odniesieniu do gier fragment, przechwytywanie myszy, podaj manipulacji i bezwładności przetwarzania, a zapewnienia możliwości podskakujące, gdy element gier osiągnie limitu portu widoku.  
@@ -109,6 +110,6 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Manipulacje i bezwładność](../../../docs/framework/common-client-technologies/manipulations-and-inertia.md)  
- [Korzystanie z manipulacji i bezwładności w aplikacji platformy XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
+ [Korzystanie z manipulacji i bezwładności w aplikacjach XNA](../../../docs/framework/common-client-technologies/use-manipulations-and-inertia-in-an-xna-application.md)  
  [Tworzenie klasy GamePieceCollection](../../../docs/framework/common-client-technologies/creating-the-gamepiececollection-class.md)  
  [Tworzenie klasy Game1](../../../docs/framework/common-client-technologies/creating-the-game1-class.md)

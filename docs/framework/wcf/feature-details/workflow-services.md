@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 043aa541e32077faf8141701a5ec7e8c0e711959
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0e33915105ca9ff095f09bcd52431212e7c8e927
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services"></a>Usługi przepływu pracy
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Umożliwia pełne opisanie usługi przepływu pracy na podstawie deklaratywnego w języku XAML. Można zdefiniować przepływu pracy, który implementuje usługi i opisz punkty końcowe udostępnia usługi, wszystkie wyłącznie w języku XAML. Tematy w tej sekcji opisano szczegółowo, model programowania, który obsługuje usługi zapisu deklaratywnie.  
@@ -29,25 +30,25 @@ ms.lasthandoff: 12/02/2017
  [Działania dotyczące komunikatów](../../../../docs/framework/wcf/feature-details/messaging-activities.md)  
  W tym artykule omówiono działań, które umożliwiają przepływy pracy w celu wysyłania i odbierania wiadomości.  
   
- [Porady: Tworzenie usługi przepływu pracy za pomocą działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
+ [Instrukcje: tworzenie przepływu pracy usługi przy użyciu działań dotyczących komunikatów](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)  
  Informacje dotyczące używania działań obsługi komunikatów do tworzenia usługi przepływu pracy.  
   
- [Porady: Dostęp do usługi z poziomu aplikacji przepływu pracy](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
+ [Instrukcje: uzyskiwanie dostępu do usługi z poziomu aplikacji przepływu pracy](../../../../docs/framework/wcf/feature-details/how-to-access-a-service-from-a-workflow-application.md)  
  W tym artykule omówiono sposób wywoływania usługi z poziomu aplikacji przepływu pracy.  
   
- [Korelacji](../../../../docs/framework/wcf/feature-details/correlation.md)  
+ [Korelacja](../../../../docs/framework/wcf/feature-details/correlation.md)  
  W tym artykule omówiono sposób korelacji mapy wiadomości i wystąpień.  
   
- [Przetwarzanie komunikatów poza kolejnością.](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
+ [Przetwarzanie komunikatów poza kolejnością](../../../../docs/framework/wcf/feature-details/out-of-order-message-processing.md)  
  W tym artykule opisano konfigurowanie usługi ma akceptować komunikaty poza kolejnością.  
   
- [Porady: Tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
+ [Instrukcje: tworzenie usługi przepływu pracy wywołującej inną usługę przepływu pracy](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-that-calls-another-workflow-service.md)  
  Opisuje sposób synchronicznego wywoływania usługi przepływu pracy z innej usługi przepływu pracy.  
   
- [Kontrakt pierwszy programowanie usługi przepływu pracy](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
+ [Programowanie usługi przepływu pracy narzędzia Contract-First](../../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md)  
  W tym artykule opisano tworzenie usługi przepływu pracy oparte na istniejący kontrakt usługi.  
   
- [Porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
+ [Instrukcje: Tworzenie usługi przepływu pracy wykorzystującej istniejący kontrakt usługi](../../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)  
  Zawiera krok przykładem tworzenia usługi przepływu pracy przy użyciu istniejący kontrakt usługi.  
   
  [Przegląd hostowania usług przepływu pracy](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)  

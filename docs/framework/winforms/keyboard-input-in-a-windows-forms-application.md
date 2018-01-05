@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e9d0c50fe8f99df471376d31a2258912c870dd37
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 256fb961c01b17c21613fe4ec60b8e7f68c2d8f1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Wprowadzanie z klawiatury w aplikacjach Windows Forms
 Formularze systemu Windows zawiera zdarzenia klawiatury standardowej, które pozwalają odpowiedzieć na określonych naciśnięć klawiszy i udostępnia również sposoby przechwycenia, zmodyfikować i zużywać naciśnięć klawiszy w aplikacji, formularz oraz kontrolowanie poziomu.  
@@ -33,11 +34,11 @@ Formularze systemu Windows zawiera zdarzenia klawiatury standardowej, które poz
  [Używanie zdarzeń klawiatury](../../../docs/framework/winforms/using-keyboard-events.md)  
  Zawiera informacje dotyczące tego typu zdarzenia klawiatury i informacje, które jest odbierany przez programy obsługi zdarzeń klawiatury.  
   
- [Porady: modyfikowanie sygnału z klawiatury do kontrolki standardowej](../../../docs/framework/winforms/how-to-modify-keyboard-input-to-a-standard-control.md)  
+ [Instrukcje: modyfikowanie sygnału z klawiatury do kontrolki standardowej](../../../docs/framework/winforms/how-to-modify-keyboard-input-to-a-standard-control.md)  
  Przedstawia przykładowy kod, przedstawiający sposób modyfikowania wartości klucza przed dotarciem formantu.  
   
- [Porady: ustalić, który klawisz modyfikujący został naciśnięty](../../../docs/framework/winforms/how-to-determine-which-modifier-key-was-pressed.md)  
+ [Instrukcje: określanie, który klawisz modyfikujący został naciśnięty](../../../docs/framework/winforms/how-to-determine-which-modifier-key-was-pressed.md)  
  Pokazuje, jak sprawdzić, czy został naciśnięty klawisz SHIFT, ALT lub CTRL oprócz innego klucza.  
   
- [Porady: Obsługa wprowadzania z klawiatury na poziomie formularza](../../../docs/framework/winforms/how-to-handle-keyboard-input-at-the-form-level.md)  
+ [Instrukcje: obsługa wprowadzania z klawiatury na poziomie formularza](../../../docs/framework/winforms/how-to-handle-keyboard-input-at-the-form-level.md)  
  Przedstawia przykładowy kod, który pokazuje, jak przechwycić kluczy przed dotarciem formantu.

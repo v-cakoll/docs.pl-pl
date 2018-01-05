@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fd4e0f65d404e70f441cf2918fd6c50e08ebec79
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4992b5be4243d8d29b6075c0ad746494dc2eb168
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transforms-overview"></a>Przegląd Przekształcenia
 W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform> klasy obracanie, skalowanie, Przenieś (tłumaczenie) i pochylanie <xref:System.Windows.FrameworkElement> obiektów.  
@@ -61,16 +62,16 @@ W tym temacie opisano sposób użycia [!INCLUDE[TLA#tla_2d](../../../../includes
 |Class|Opis|Przykład|Ilustracja|  
 |-----------|-----------------|-------------|------------------|  
 |<xref:System.Windows.Media.RotateTransform>|Obraca element przez określony <xref:System.Windows.Media.RotateTransform.Angle%2A>.|[Obracanie obiektu](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object.md)|![Ilustracja przedstawiająca obrót](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-rotate.png "graphicsmm_thumbnails_rotate")|  
-|<xref:System.Windows.Media.ScaleTransform>|Skaluje przez określony element <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> i <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> kwoty.|[Element skali](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Skalowanie ilustracji](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
+|<xref:System.Windows.Media.ScaleTransform>|Skaluje przez określony element <xref:System.Windows.Media.ScaleTransform.ScaleX%2A> i <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> kwoty.|[Skalowanie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-scale-an-element.md)|![Skalowanie ilustracji](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-scale.png "graphicsmm_thumbnails_scale")|  
 |<xref:System.Windows.Media.SkewTransform>|Pochyla przez określony element <xref:System.Windows.Media.SkewTransform.AngleX%2A> i <xref:System.Windows.Media.SkewTransform.AngleY%2A> kwoty.|[Pochylanie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-skew-an-element.md)|![Pochylanie ilustracji](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-skew.png "graphicsmm_thumbnails_skew")|  
-|<xref:System.Windows.Media.TranslateTransform>|Przenosi (przekłada) elementu przez określony <xref:System.Windows.Media.TranslateTransform.X%2A> i <xref:System.Windows.Media.TranslateTransform.Y%2A> kwoty.|[Tłumaczenie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Ilustracja przedstawiająca translację](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
+|<xref:System.Windows.Media.TranslateTransform>|Przenosi (przekłada) elementu przez określony <xref:System.Windows.Media.TranslateTransform.X%2A> i <xref:System.Windows.Media.TranslateTransform.Y%2A> kwoty.|[Przesuwanie elementu](../../../../docs/framework/wpf/graphics-multimedia/how-to-translate-an-element.md)|![Ilustracja przedstawiająca translację](../../../../docs/framework/wpf/graphics-multimedia/media/graphicsmm-thumbnails-translate.png "graphicsmm_thumbnails_translate")|  
   
  Do tworzenia bardziej złożone przekształcenia [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] zapewnia następujące dwie klasy:  
   
 |Class|Opis|Przykład|  
 |-----------|-----------------|-------------|  
-|<xref:System.Windows.Media.TransformGroup>|Wiele grup <xref:System.Windows.Media.TransformGroup> obiektów w ramach jednej <xref:System.Windows.Media.Transform> które następnie można zastosować do właściwości transform.|[Stosowanie przekształceń wielu do obiektu](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
-|<xref:System.Windows.Media.MatrixTransform>|Tworzy niestandardowych przekształceń, które nie są dostarczane przez innych <xref:System.Windows.Media.Transform> klasy. Jeśli używasz <xref:System.Windows.Media.MatrixTransform>, bezpośrednio manipulowania macierzy.|[Umożliwia tworzenie niestandardowych przekształceń MatrixTransform](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
+|<xref:System.Windows.Media.TransformGroup>|Wiele grup <xref:System.Windows.Media.TransformGroup> obiektów w ramach jednej <xref:System.Windows.Media.Transform> które następnie można zastosować do właściwości transform.|[Stosowanie wielu przekształceń do obiektu](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transforms-to-an-object.md)|  
+|<xref:System.Windows.Media.MatrixTransform>|Tworzy niestandardowych przekształceń, które nie są dostarczane przez innych <xref:System.Windows.Media.Transform> klasy. Jeśli używasz <xref:System.Windows.Media.MatrixTransform>, bezpośrednio manipulowania macierzy.|[Tworzenie niestandardowych przekształceń przy użyciu elementu MatrixTransform](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
  [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]dostępne są także [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] przekształcenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Media.Media3D.Transform3D> klasy.  
   
@@ -162,5 +163,5 @@ Właściwości LayoutTransform używany do obracania przycisku
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.Transform>  
  <xref:System.Windows.Media.Matrix>  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
  [Przykład 2-D transformacji](http://go.microsoft.com/fwlink/?LinkID=158252)

@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d33eb42aded2ad9d6cd32ae5790470fa1b2dc935
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: dbe7fe80639537293413d8fb923033909a2451e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-topologies-overview"></a>Przegląd Topologia nawigacji
 <a name="introduction"></a>Ten przegląd zawiera wprowadzenie do topologii nawigacji w [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]. Następnie omówiono trzy popularne topologie nawigacji, z próbek.  
@@ -154,4 +155,4 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.Controls.Page>  
  <xref:System.Windows.Navigation.PageFunction%601>  
  <xref:System.Windows.Navigation.NavigationService>  
- [Informacje o strukturze nawigacji](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [Strukturyzowana nawigacja — omówienie](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)

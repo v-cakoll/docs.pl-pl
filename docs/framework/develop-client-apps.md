@@ -24,20 +24,21 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: daf09f94b4c0854365274773f8c426cc07e8c6dd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1f90cbac0e7f78d8965a75df281c0db6b213d9e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-client-applications-with-the-net-framework"></a>Wdrażanie aplikacji klienta za pomocą programu .NET Framework
 Istnieje wiele sposobów tworzenia aplikacji opartych na systemie Windows w środowisku .NET Framework uruchamiane lokalnie na komputerach użytkowników lub urządzeń. Ta sekcja zawiera tematy, które opisują sposób tworzenia aplikacji systemu Windows przy użyciu systemu Windows Presentation Foundation (WPF) lub za pomocą formularzy systemu Windows. Jednak również można utworzyć aplikacji sieci web przy użyciu programu .NET Framework i aplikacji klienckich dla komputerów lub urządzeń, które mają być dostępne za pośrednictwem Sklepu Windows lub Sklepu Windows Phone.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Program Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
+ [Windows Presentation Foundation](../../docs/framework/wpf/index.md)  
  Zawiera informacje dotyczące tworzenia aplikacji przy użyciu WPF.  
   
- [Formularze systemu Windows](../../docs/framework/winforms/index.md)  
+ [Windows Forms](../../docs/framework/winforms/index.md)  
  Zawiera informacje dotyczące tworzenia aplikacji za pomocą formularzy systemu Windows.  
   
  [Typowe technologie klienckie](../../docs/framework/common-client-technologies/index.md)  

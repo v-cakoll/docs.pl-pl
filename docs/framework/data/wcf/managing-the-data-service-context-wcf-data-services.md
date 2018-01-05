@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50d523fdd0498aef7e662af5f4dc41b2394dcf42
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c993a4f09a7187b45331f6beb71a9637da87d20f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>Zarządzanie kontekstu usługi danych (usługi danych WCF)
 <xref:System.Data.Services.Client.DataServiceContext> Klasa hermetyzuje operacje, które są obsługiwane z usługą określone dane. Mimo że [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi są bezstanowych, kontekst nie jest. W związku z tym można użyć <xref:System.Data.Services.Client.DataServiceContext> klasy do zarządzania stanem na kliencie między interakcji z usługą danych, aby zapewnić obsługę funkcji, takich jak zarządzanie zmianami. Ta klasa również zarządza tożsamości i śledzi zmiany.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 12/02/2017
  Domyślnie wysyła biblioteki klienta tworzenia, odczytu, aktualizacji i usuwania żądań do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi przy użyciu odpowiednich metod HTTP POST, GET, PUT/MERGE/poprawki i usuwania. Podtrzymuje to podstawowe zasady z Transfer REST (Representational State). Jednak nie wszystkie wdrożenia serwera sieci Web obsługuje pełny zestaw metod HTTP. W niektórych przypadkach obsługiwane metody mogą być tylko GET i POST. Może się to zdarzyć, gdy pośrednik, takie jak zapory, blokuje żądań z niektórych metod. Ponieważ metody GET i POST najczęściej są obsługiwane, [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] określa sposób wykonania żadnych nieobsługiwany metod HTTP przy użyciu żądania POST. Znany jako *tunelowania metod* lub *tunelowania POST*, umożliwia to klientowi wysłanie żądania POST z rzeczywistego metody określonej w niestandardowej `X-HTTP-Method` nagłówka. Aby włączyć tunelowanie POST dla żądania, ustaw <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> właściwość <xref:System.Data.Services.Client.DataServiceContext> wystąpienie do `true`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Aktualizowanie usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [Aktualizacja usługi danych](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)  
  [Operacje asynchroniczne](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)  
- [Przetwarzanie wsadowe operacji](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
+ [Operacje przetwarzania wsadowego](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)

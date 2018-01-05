@@ -35,11 +35,12 @@ caps.latest.revision: "50"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c12d8655babeb45800f4a5c068cb2ab74faac3d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 910eed7c1786730a3ffce5add995e543021f4759
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="input-overview"></a>Przegląd Dane wejściowe
 <a name="introduction"></a>[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Podsystemu udostępnia zaawansowane [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] uzyskiwania danych wejściowych z różnych urządzeń, w tym myszy, klawiatury, touch i pióra. W tym temacie opisano usług świadczonych przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i opisano architekturę wejściowych systemów.  
@@ -155,7 +156,7 @@ ms.lasthandoff: 11/21/2017
 ### <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne są następujące składniki umożliwiające tworzenie aplikacji, która odpowiada touch.  
   
--   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].  
+-   [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)].,  
   
 -   Windows 7.  
   
@@ -404,8 +405,8 @@ Touch i manipulowania nimi zdarzenia
  Dostępne są dodatkowe zasoby objaśniające [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementy framework i zdarzenia routingu bardziej szczegółowo. W następujących omówieniach uzyskać więcej informacji, [droższe omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md), [omówienie fokus](../../../../docs/framework/wpf/advanced/focus-overview.md), [Omówienie elementów Base](../../../../docs/framework/wpf/advanced/base-elements-overview.md), [drzewa WPF](../../../../docs/framework/wpf/advanced/trees-in-wpf.md), i [kierowane Przegląd zdarzeń](../../../../docs/framework/wpf/advanced/routed-events-overview.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie fokus](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [Sterująca — omówienie](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [Omówienie kierowane zdarzenia](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [Przegląd fokusu](../../../../docs/framework/wpf/advanced/focus-overview.md)  
+ [Przegląd poleceń](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
+ [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
  [Właściwości](../../../../docs/framework/wpf/advanced/properties-wpf.md)

@@ -23,11 +23,14 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd48993f50ec8b91ba7941a682d7de9f22aa12e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 714c361507a95fc5f45efbca79191b17e7917fba
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-other-strings-in-net"></a>Analizowanie innych ciągów w .NET
 Oprócz numeryczne i <xref:System.DateTime> ciągi, możesz również przeanalizować ciągów, które reprezentują typy <xref:System.Char>, <xref:System.Boolean>, i <xref:System.Enum> do typów danych.  
@@ -59,5 +62,5 @@ Oprócz numeryczne i <xref:System.DateTime> ciągi, możesz również przeanaliz
   
 ## <a name="see-also"></a>Zobacz też  
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Konwersja typów w ramach platformy .NET](../../../docs/standard/base-types/type-conversion.md)

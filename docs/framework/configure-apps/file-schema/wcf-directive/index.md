@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f91e4ac7b74b0ee3ab92e8ae59fe0f20e8f66287
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 34ea3b412af75f136255c7e95cc4f321bafe075b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-directive-syntax"></a>Składnia dyrektyw programu WCF
 Określa ustawienia używane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] dyrektywy w pliku svc przekierować kompilatory. Dyrektywy każdy może zawierać jeden lub więcej atrybutów (łączyć się z wartościami), które są specyficzne dla tej dyrektywy. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]ma tylko [ @ServiceHost ](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md) dyrektywy.  
@@ -27,10 +28,10 @@ Określa ustawienia używane przez [!INCLUDE[indigo1](../../../../../includes/in
  Definiuje atrybuty specyficzne dla strony używany przez kompilator .svc. Może obejmować tylko pliki SVC.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Porady: hostowanie usługi WCF w programie IIS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
+ [Instrukcje: hostowanie usługi WCF w programie IIS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)  
  Opisuje sposób @ServiceHost dyrektywa jest używany podczas obsługującego usługę w Internet Information Services (IIS)  
   
- [Porady: hostowanie usługi WCF w WAS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
+ [Instrukcje: hostowanie usługi WCF w usłudze WAS](../../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)  
  Opisuje sposób @ServiceHost dyrektywa jest używany podczas obsługującego usługę w usługi aktywacji procesów systemu Windows (WAS)  
   
 ## <a name="see-also"></a>Zobacz też  

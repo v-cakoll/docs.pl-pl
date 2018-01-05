@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c68e00930b518a637a42e99c422e4acf7982f5f1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 78fbd1bde6727490e789ba22232af3f17af20d75
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-sql"></a>LINQ do SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wchodzi w skład [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] wersji 3.5, która zapewnia infrastrukturę środowiska wykonawczego do zarządzania jako obiekty relacyjnej bazie danych.  
@@ -35,10 +36,10 @@ ms.lasthandoff: 10/18/2017
  [Wprowadzenie](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)  
  Zawiera omówienie skrócone [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wraz z informacjami o tym, jak rozpocząć pracę przy użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Przewodnik programowania w języku](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Zawiera opis czynności mapowania, zapytanie, aktualizowanie, debugowanie i podobne zadania.  
   
- [Odwołanie](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
+ [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
  Udostępnia informacje na temat kilka aspektów [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]. Tematy zawierają mapowanie typu środowiska CLR SQL, standardowe Translacja Operator zapytania i inne.  
   
  [Przykłady](../../../../../../docs/framework/data/adonet/sql/linq/samples.md)  

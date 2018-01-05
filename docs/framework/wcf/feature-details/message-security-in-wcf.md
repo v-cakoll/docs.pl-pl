@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 21cbeff554be6da77ce28e87b7f82ffdd58f542d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 92422e40742909dbf338ec2660e5494ffcdd31cc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-security-in-wcf"></a>Zabezpieczenia komunikatów w architekturze WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]ma dwa tryby głównych zabezpieczeń (`Transport` i `Message`) i tryb trzeci (`TransportWithMessageCredential`) łączącą dwa. W tym temacie omówiono zabezpieczeń komunikatów i powodów z niego korzystać.  
@@ -71,5 +72,5 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Zabezpieczenia transportu](../../../../docs/framework/wcf/feature-details/transport-security.md)  
- [Porady: Korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
+ [Instrukcje: korzystanie z zabezpieczeń transportu i poświadczeń komunikatów](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)  
  [Microsoft Patterns and Practices, rozdział 3: Wdrażanie transportu i komunikat warstwy zabezpieczeń](http://go.microsoft.com/fwlink/?LinkId=88897)

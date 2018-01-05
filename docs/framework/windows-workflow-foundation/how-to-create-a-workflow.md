@@ -12,11 +12,12 @@ caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b20ca4258204f938d611f431abc5668b88f167b1
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8e619fa7fa6437b60b1d3cd6b50a2a68229899f5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-workflow"></a>Porady: tworzenie przepływów pracy
 Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. Ten tematy w tym kroku sekcji przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.Flowchart> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier. Tylko jeden tematy w tej sekcji jest wymagany do ukończenia samouczka; należy wybierz odpowiedni styl interesującego i wykonać ten krok. Jednak użytkownik może zakończyć się we wszystkich tematach w razie potrzeby.  
@@ -28,14 +29,14 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
 >  Aby pobrać ukończoną wersję tego samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: tworzenie sekwencyjnego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
+ [Instrukcje: Tworzenie sekwencyjnego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-sequential-workflow.md)  
  Opisuje sposób tworzenia sekwencyjnego przepływu pracy przy użyciu <xref:System.Activities.Statements.Sequence> działania.  
   
- [Porady: tworzenie przepływów pracy schematu blokowego](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
+ [Instrukcje: Tworzenie przepływu pracy schematu blokowego](../../../docs/framework/windows-workflow-foundation/how-to-create-a-flowchart-workflow.md)  
  Opisuje sposób tworzenia przepływu pracy schemat blokowy przy użyciu <xref:System.Activities.Statements.Flowchart> działania.  
   
- [Porady: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
+ [Instrukcje: Tworzenie przepływu pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)  
  Opisuje sposób tworzenia stanu komputera przepływu pracy używającego <xref:System.Activities.Statements.StateMachine> działania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Workflow Foundation programowania](../../../docs/framework/windows-workflow-foundation/programming.md)
+ [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)

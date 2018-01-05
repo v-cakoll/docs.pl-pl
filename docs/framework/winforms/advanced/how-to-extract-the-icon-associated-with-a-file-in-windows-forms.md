@@ -20,11 +20,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 69999e598bfc57278c1793d3cc82e0055026267d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a5153f6389c4477a18c647d7cdaf7b49b43bb7ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extract-the-icon-associated-with-a-file-in-windows-forms"></a>Porady: wyodrębnianie ikon skojarzonych z plikiem w formularzach systemu Windows
 Wiele plików zostały osadzone ikony, które pozwalają wizualną reprezentację skojarzonego typu pliku. Na przykład Microsoft Word dokumenty zawierają ikonę, która identyfikuje je jako dokumenty programu Word. Wyświetlanie plików w formancie listy lub formancie tabeli, możesz wyświetlić ikonę reprezentujący typ pliku obok nazwy każdego pliku. Łatwo to zrobić, za pomocą <xref:System.Drawing.Icon.ExtractAssociatedIcon%2A> metody.  
@@ -44,4 +45,4 @@ Wiele plików zostały osadzone ikony, które pozwalają wizualną reprezentacj�
   
 ## <a name="see-also"></a>Zobacz też  
  [Obrazy, mapy bitowe i metapliki](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
- [ListView — formant](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
+ [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)

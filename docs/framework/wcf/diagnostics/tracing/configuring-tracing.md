@@ -14,11 +14,12 @@ caps.latest.revision: "53"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1b3b200e26d4d615dd67c13770073b76dac78005
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -191,6 +192,6 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [Administracja i Diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [Porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](http://go.microsoft.com/fwlink/?LinkId=94648)  
+ [Administracja i diagnostyka](../../../../../docs/framework/wcf/diagnostics/index.md)  
+ [Instrukcje: Tworzenie i inicjowanie obiektów nasłuchujących śledzenie](http://go.microsoft.com/fwlink/?LinkId=94648)  
  [Tworzenie niestandardowego elementu TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239)

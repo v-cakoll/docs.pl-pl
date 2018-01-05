@@ -19,32 +19,33 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 313867b76d569fb98b1bd5d46c658763d0020726
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 443611afa2fd2deafb3268a1bcd15a55c36fffe9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Programowanie przy użyciu komórek, wierszy i kolumn w formancie DataGridView formularzy systemu Windows
 Ta sekcja zawiera tematy, które przedstawiają różne zadania programowania obejmujące komórek, wierszy i kolumn obiektów.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Dodawanie formantu DataGridView formularzy elementu ToolTips do pojedynczych komórek w systemie Windows](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [Instrukcje: dodawanie elementu ToolTips do pojedynczych komórek w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  Opisuje sposób obsługi <xref:System.Windows.Forms.DataGridView.CellFormatting> zdarzenie w celu udostępnienia innej etykietki narzędzi dla pojedynczych komórek.  
   
- [Porady: wykonywanie niestandardowej akcji na podstawie zmian w komórce formantu DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [Instrukcje: wykonywanie niestandardowej akcji na podstawie zmian w komórce kontrolki DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  Opisuje sposób obsługi <xref:System.Windows.Forms.DataGridView.CellValueChanged> i <xref:System.Windows.Forms.DataGridView.CellStateChanged> zdarzenia.  
   
- [Porady: manipulowanie paskami w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: manipulowanie paskami w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  Opisuje sposób programu z obiektami typu <xref:System.Windows.Forms.DataGridViewBand>, który jest typem podstawowym dla wierszy i kolumn.  
   
- [Porady: manipulowanie wierszami w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: manipulowanie wierszami w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  Opisuje sposób programu z obiektami typu `DataGridViewRow`.  
   
- [Porady: Manipulowanie kolumnami w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: manipulowanie kolumnami w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  Opisuje sposób programu z obiektami typu `DataGridViewColumn`.  
   
- [Porady: Praca z kolumnami obrazów w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [Instrukcje: praca z kolumnami obrazów w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  Opisuje sposób programu z `DataGridViewImageColumn` klasy.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -61,9 +62,9 @@ Ta sekcja zawiera tematy, które przedstawiają różne zadania programowania ob
  Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumn> klasy.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wierszy i kolumn podstawowe funkcje komórek w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
+ [Podstawowe funkcje komórek, wierszy i kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/basic-column-row-and-cell-features-wf-datagridview-control.md)  
  Zapewnia możliwość tematach opisano często używane właściwości komórek, wierszy i kolumn.  
   
 ## <a name="see-also"></a>Zobacz też  
- [DataGridView — formant](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [Typy kolumn w formancie DataGridView formularzy systemu Windows](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+ [DataGridView, kontrolka](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+ [Typy kolumn w kontrolce DataGridView formularzy Windows Forms](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)

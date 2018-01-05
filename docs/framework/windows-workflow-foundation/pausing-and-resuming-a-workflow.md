@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0d7637a9d49100d3a46ceb3c49769cacae14b5e8
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e51235105e9d2cdb1cad3847fb00ad5604061564
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pausing-and-resuming-a-workflow"></a>Wstrzymywanie i wznawianie przepływu pracy
 Przepływy pracy będzie wstrzymywanie i wznawianie w odpowiedzi na zakładek i działania blokujące, takich jak <xref:System.Activities.Statements.Delay>, ale przepływu pracy można również można jawnie wstrzymana, zwolnione i został wznowiony przy użyciu trwałości.  

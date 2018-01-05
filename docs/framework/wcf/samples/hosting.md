@@ -13,23 +13,24 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a861c4293cfa64776d2f5c9ea7880a1bd781189b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b270125ae5acc63094c3aa6be6e93e46f9433a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting"></a>Hosting
 Ta sekcja zawiera przykłady ilustrujące hosting [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Aktywacji procesów systemu Windows](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
+ [Aktywacja procesu systemu Windows](../../../../docs/framework/wcf/samples/windows-process-activation.md)  
  Pokazuje aktywacji usługi za pośrednictwem protokołów sieciowych.  
   
  [Aktywacja oparta na konfiguracji](../../../../docs/framework/wcf/samples/configuration-based-activation.md)  
  Pokazuje aktywacji [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług bez konieczności pliku svc.  
   
- [Integracji elementu Systemwebrouting](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
+ [Przykład integracji elementu SystemWebRouting](../../../../docs/framework/wcf/samples/systemwebrouting-integration-sample.md)  
  Pokazuje integracji hostingu warstwy z klas w <xref:System.Web.Routing> przestrzeni nazw.  
   
  [Zgodność platformy ASP.NET](../../../../docs/framework/wcf/samples/aspnet-compatibility.md)  

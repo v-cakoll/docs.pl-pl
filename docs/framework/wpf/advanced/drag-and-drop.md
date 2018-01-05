@@ -18,20 +18,21 @@ caps.latest.revision: "85"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6d02a32eb2d27d6e8ace4e81703bfadbb3a1b1ca
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7a051002fb0dda77ee2e8a5d8ef95ae3ebf24cc9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="drag-and-drop"></a>Przeciągnij i opuść
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]zapewnia bardzo elastyczne przeciągania i upuszczania infrastrukturę, która obsługuje przeciąganie i upuszczanie danych w obu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, a także innych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przeciągnij i upuść — omówienie](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
+ [Przegląd przeciągania i upuszczania](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)  
  [Dane i obiekty danych](../../../../docs/framework/wpf/advanced/data-and-data-objects.md)  
- [Wskazówki: Włączanie przeciągania i upuszczania formantu użytkownika](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
+ [Przewodnik: włączanie przeciągania i upuszczania w kontrolce użytkownika](../../../../docs/framework/wpf/advanced/walkthrough-enabling-drag-and-drop-on-a-user-control.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/drag-and-drop-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.DataFormat>  

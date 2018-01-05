@@ -7,11 +7,12 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.openlocfilehash: fcf1eeba0709e05cff124bc3ae7bb93f4ca57128
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnetcore
+ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="dotnet-store"></a>Magazyn DotNet
 
@@ -85,4 +86,4 @@ Przechowywania pakietów określone w *packages.csproj* bez optymalizacji:
 
 ## <a name="see-also"></a>Zobacz także
 
-[Środowisko uruchomieniowe pakietu magazynu](../deploying/runtime-store.md)   
+[Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md)   

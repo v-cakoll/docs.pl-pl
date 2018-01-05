@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a8c2836d841215ed3ca8e04461b1298cd41287de
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 33d5491feccacba7f7b010b57e890ff7543a46f8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>Porady: tworzenie formantu powiązanego oraz formatowanie wyświetlanych danych
 Z wiązanie danych formularzy systemu Windows, można sformatować danych wyświetlanych w formancie powiązane z danymi przy użyciu **formatowanie i zaawansowane powiązanie** okno dialogowe.  
@@ -65,6 +66,6 @@ Z wiązanie danych formularzy systemu Windows, można sformatować danych wyświ
 8.  Kliknij przycisk **OK** zamknąć **formatowanie i zaawansowane powiązanie** okno dialogowe i wrócić do okna właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie prostego formantu powiązanego na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Sprawdzanie poprawności danych użytkownika w formularzach systemu Windows](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Instrukcje: tworzenie prostej kontrolki powiązanej na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
+ [Weryfikacja danych użytkownika w formularzach Windows Forms](../../../docs/framework/winforms/user-input-validation-in-windows-forms.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

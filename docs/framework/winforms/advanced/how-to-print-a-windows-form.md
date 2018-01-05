@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9149b90317036c7c62c5fca3056bb697df56e543
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8c50b1f47d207334160ed12674ee8efb1390fb84
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-print-a-windows-form"></a>Porady: drukowanie formularza systemu Windows
 W ramach procesu tworzenia zwykle można wydrukować kopię formularza systemu Windows. Poniższy przykładowy kod przedstawia sposób wydrukować kopię bieżącego formularza za pomocą <xref:System.Drawing.Graphics.CopyFromScreen%2A> metody.  
@@ -49,5 +50,5 @@ W ramach procesu tworzenia zwykle można wydrukować kopię formularza systemu W
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Printing.PrintDocument>  
- [Porady: renderowanie obrazów za pomocą GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
- [Porady: drukowanie grafiki w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)
+ [Instrukcje: renderowanie obrazów za pomocą GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [Instrukcje: drukowanie grafiki w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)

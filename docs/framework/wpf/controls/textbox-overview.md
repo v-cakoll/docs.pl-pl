@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d1116093ddcd95c99deac8a1e1b14fef3b0a458f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 50e36192198c172843d79a4195e894b848f84c90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-overview"></a>TextBox — Przegląd
 <xref:System.Windows.Controls.TextBox> Klasa umożliwia wyświetlanie lub edycji niesformatowanego tekstu. Typowym zastosowaniem <xref:System.Windows.Controls.TextBox> jest edycji niesformatowanego tekstu w formularzu. Na przykład formularz monitowania o nazwę użytkownika, numer telefonu etc użyje <xref:System.Windows.Controls.TextBox> kontrolki wprowadzania tekstu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
@@ -78,5 +79,5 @@ ms.lasthandoff: 11/21/2017
  Zazwyczaj <xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged> zdarzenia mają być używane do wykrywania po każdej zmianie tekstu w <xref:System.Windows.Controls.TextBox> lub <xref:System.Windows.Controls.RichTextBox> zmiany, a następnie <xref:System.Windows.UIElement.KeyDown> zgodnie z oczekiwaniami może. Zobacz [wykryć gdy tekst w pole tekstowe został zmieniony](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md) przykład.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tematy porad](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/textbox-how-to-topics.md)  
  [RichTextBox — omówienie](../../../../docs/framework/wpf/controls/richtextbox-overview.md)

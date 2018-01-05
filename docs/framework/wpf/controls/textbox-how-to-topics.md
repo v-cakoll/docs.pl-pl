@@ -17,29 +17,30 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: e21053043a48b68dce229a7de20c4a7e38f7a62c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9cd716f4d9f072284b29958c79350d497442cf41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="textbox-how-to-topics"></a>TextBox — Tematy porad
 Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za pomocą <xref:System.Windows.Controls.TextBox> formantu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie formantu wielowierszowe pole tekstowe](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [Wykryj, kiedy został zmieniony tekst w polu tekstowym](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [Włącz znaki tabulacji w formancie TextBox](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [Pobierz kolekcję linii z pola tekstowego](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [Skonfigurować kontrolki pola tekstowego tylko do odczytu](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [Umieść kursor na początku lub na końcu tekstu w formancie TextBox](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [Pobieranie zaznaczonego tekstu](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [Ustaw fokus w formancie TextBox](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [Ustaw zawartości tekstowej TextBox — formant](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [Włącz sprawdzanie w formancie edycji tekstu pisowni](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [Menu kontekstowe niestandardowych za pomocą pola tekstowego](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [Użyj sprawdzania pisowni z Menu kontekstowego](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [Dodaj znak wodny do pola tekstowego](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [Tworzenie wielowierszowej kontrolki TextBox](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
+ [Wykrywanie momentu zmiany tekstu w kontrolce TextBox](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [Włączanie znaków tabulatora w kontrolce TextBox](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [Pobieranie kolekcji wierszy z kontrolki TextBox](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [Tworzenie kontrolki TextBox tylko do odczytu](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
+ [Umieszczanie kursora na początku lub na końcu tekstu w kontrolce TextBox](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [Pobieranie zaznaczenia tekstu](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
+ [Ustawianie fokusu w kontrolce TextBox](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
+ [Ustawianie zawartości tekstu dla kontrolki TextBox](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
+ [Włączanie sprawdzania pisowni w kontrolce edycji tekstu](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [Używanie niestandardowego menu kontekstowego z kontrolką TextBox](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [Używanie sprawdzania pisowni z menu kontekstowym](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
+ [Dodawanie znaku wodnego do kontrolki TextBox](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.TextBox>  
@@ -52,4 +53,4 @@ Ta sekcja zawiera przykłady, które pokazują, jak wykonywać typowe zadania za
   
 ## <a name="see-also"></a>Zobacz też  
  [Przykładu z galerii formantów WPF](http://go.microsoft.com/fwlink/?LinkID=160053)  
- [Style pola tekstowego i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+ [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)

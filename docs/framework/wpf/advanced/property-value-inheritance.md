@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 538b2e9cc1ce11dc336a8d90ec84ba504baa6f2b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: eac3e03cfc0ca8bbb6f61f1bc6663c67fd6303f9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-value-inheritance"></a>Przejęcie wartości właściwości
 Dziedziczenie wartość właściwości jest funkcją [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] właściwości systemu. Dziedziczenie wartości właściwości umożliwia elementy podrzędne w drzewie elementów, aby uzyskać wartość określonej właściwości z nadrzędnego elementom dziedziczenie tej wartości, ponieważ został ustawiony dowolne miejsce w najbliższym elemencie nadrzędnym. Element nadrzędny może również uzyskać wartość poprzez dziedziczenie wartości właściwości, więc system potencjalnie recurses aż do strony głównej. Dziedziczenie wartość właściwości nie jest domyślne zachowanie systemu właściwość; Właściwość należy ustanowić przy użyciu ustawienia określonego metadanych aby spowodować tej właściwości do zainicjowania dziedziczenie wartości właściwości w elementach podrzędnych.  
@@ -52,6 +53,6 @@ Dziedziczenie wartość właściwości jest funkcją [!INCLUDE[TLA#tla_winclient
  Dziedziczenie właściwości polega na przechodzenie drzewa elementów. Tego drzewa często jest zbliżony do drzewa logicznego. Jednak po każdej zmianie zawiera obiektem poziomu core WPF kod znaczników, który definiuje element drzewa, takich jak <xref:System.Windows.Media.Brush>, utworzono nieciągłego drzewa logicznego. Wartość true, drzewa logicznego nie rozszerza koncepcyjnie za pośrednictwem <xref:System.Windows.Media.Brush>, ponieważ drzewa logicznego to pojęcie poziomie struktury WPF. Widać to odzwierciedlone w wynikach, korzystając z metody <xref:System.Windows.LogicalTreeHelper>. Jednak dziedziczenie wartość właściwości może mostkować luki w drzewie logicznym, można nadal dziedziczonej wartości przekazywane za pośrednictwem, tak długo, jak właściwości dziedziczonych została zarejestrowana jako dołączona właściwość i nie zamierzonego granic blokowanie dziedziczenia (takie jak <xref:System.Windows.Controls.Frame>) napotkano.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Metadane właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [Omówienie dołączone właściwości](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [Pierwszeństwo wartość właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
+ [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Przegląd właściwości dołączonych](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
+ [Następstwo wartości właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)

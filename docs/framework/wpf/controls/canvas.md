@@ -18,17 +18,18 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9f2d82be5dc5a5c78b19a6ac5326cbecf9918092
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c79cd6b9c4b1f4f7227a08a1a719e147e41055fb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="canvas"></a>Kanwa
 <xref:System.Windows.Controls.Canvas>jest kontrolkę układu, która umożliwia bezwzględny elementów podrzędnych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Tematy porad](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -48,6 +49,6 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Omówienie ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

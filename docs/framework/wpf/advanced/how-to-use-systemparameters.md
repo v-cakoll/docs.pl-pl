@@ -17,11 +17,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4b2ee3956017e10da8adda52fa9a0ec31cb19ee
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec333fbc30374ff6f8e2e7674ab332644ff7aad0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-systemparameters"></a>Porady: korzystanie z SystemParameters
 W tym przykładzie pokazano, jak uzyskać dostęp i użyj właściwości <xref:System.Windows.SystemParameters> do nadawania stylu lub dostosowywanie przycisku.  
@@ -42,7 +43,7 @@ W tym przykładzie pokazano, jak uzyskać dostęp i użyj właściwości <xref:S
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.SystemParameters>  
- [Malowanie obszar o pędzla systemu](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [Użyj SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [Użyj klawiszy parametry systemu](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)
+ [Malowanie obszaru pędzlem systemowym](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
+ [Używanie elementu SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
+ [Używanie kluczy parametrów systemowych](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/resources-how-to-topics.md)

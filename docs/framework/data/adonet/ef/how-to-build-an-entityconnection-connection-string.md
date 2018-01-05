@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 387a3d13ea65f9e104cb2a29de3878324a528a8f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fcfba15112c59a1985adb25d164bfea0e434f7b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>Porady: Tworzenie ciągu połączenia EntityConnection
 W tym temacie przedstawiono przykład sposobu tworzenia <xref:System.Data.EntityClient.EntityConnection>.  
@@ -42,4 +43,4 @@ W tym temacie przedstawiono przykład sposobu tworzenia <xref:System.Data.Entity
   
 ## <a name="see-also"></a>Zobacz też  
  [Porady: EntityConnection za pomocą kontekstu obiektów](http://msdn.microsoft.com/en-us/2140fe7b-b88b-47c8-a749-d7f142eb1080)  
- [Dostawca EntityClient Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)
+ [Dostawca EntityClient dla programu Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

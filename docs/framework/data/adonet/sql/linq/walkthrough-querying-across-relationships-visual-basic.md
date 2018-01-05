@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 05ae619a4d3a31c83a740572eae13fe7ef883a40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 638382d21818bf879132461f3a6a74336d4ebd19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>Wskazówki: Wykonywanie zapytań w relacjach (Visual Basic)
 W tym przewodniku zademonstrowano użycie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] *skojarzenia* do reprezentowania relacji klucza obcego w bazie danych.  
@@ -101,4 +102,4 @@ W tym przewodniku zademonstrowano użycie [!INCLUDE[vbtecdlinq](../../../../../.
  Wskazówki dalej ([wskazówki: manipulowanie danych (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) pokazuje, jak można manipulować danymi. Ten przewodnik nie wymaga zapisać dwóch wskazówki w tej serii, która została już ukończona.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Learning przez — wskazówki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+ [Nauka przez przewodniki](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

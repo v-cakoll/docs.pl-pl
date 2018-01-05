@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4573c3a5e0cf64996f2a4e109736d966b754494a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a77f93a0dff198821509c2c26f67caa137073ced
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltdevelopmentmodegt-element"></a>&lt;developmentmode —&gt; — Element
 Określa, czy środowisko uruchomieniowe wyszukiwania zestawów w katalogach określonej przez zmienną środowiskową DEVPATH.  
@@ -52,8 +53,8 @@ Określa, czy środowisko uruchomieniowe wyszukiwania zestawów w katalogach okr
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|**wartość true**|Wyszukiwanie zestawów w katalogach określonej przez zmienną środowiskową DEVPATH.|  
-|**wartość false**|Nie wyszukiwania zestawów w katalogach określonej przez zmienną środowiskową DEVPATH. Jest to wartość domyślna|  
+|**true**|Wyszukiwanie zestawów w katalogach określonej przez zmienną środowiskową DEVPATH.|  
+|**false**|Nie wyszukiwania zestawów w katalogach określonej przez zmienną środowiskową DEVPATH. Jest to wartość domyślna|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -82,4 +83,4 @@ Określa, czy środowisko uruchomieniowe wyszukiwania zestawów w katalogach okr
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Porady: Lokalizowanie zestawów za pomocą DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+ [Instrukcje: lokalizowanie zestawów za pomocą DEVPATH](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

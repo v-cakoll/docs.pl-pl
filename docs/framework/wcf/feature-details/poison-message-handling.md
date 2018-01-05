@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 609f53431e52da3629f5107adf91994a55eca89d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  
@@ -29,13 +30,13 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
 ## <a name="handling-poison-messages"></a>Obsługa wiadomości  
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], skażone komunikat — Obsługa udostępnia mechanizm aplikacja odbierająca na wypadek wiadomości, które nie mogą być wysyłane do aplikacji lub wiadomości, które są wysyłane do aplikacji, ale które nie można przetworzyć z powodu przyczyny specyficzne dla aplikacji. Obsługi uszkodzonych komunikatów jest konfigurowana za pomocą następujących właściwości w każdym z dostępnych powiązań umieszczonych w kolejce:  
   
--   `ReceiveRetryCount`. Wartość całkowitą, która wskazuje maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. To jest odpowiednia w przypadku, gdy natychmiastowego ponawiania rozwiązuje problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
+-   `ReceiveRetryCount`., Wartość całkowitą, która wskazuje maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. To jest odpowiednia w przypadku, gdy natychmiastowego ponawiania rozwiązuje problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
   
--   `MaxRetryCycles`. Wartość całkowitą, która wskazuje maksymalną liczbę cykli ponownych prób. Cykl składa się z przesyłania wiadomości z kolejki aplikacji do ponawiania i opóźnieniem można skonfigurować z ponawiania do kolejki aplikacji do dostarczania Ponów. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles`jest ignorowany w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`., Wartość całkowitą, która wskazuje maksymalną liczbę cykli ponownych prób. Cykl składa się z przesyłania wiadomości z kolejki aplikacji do ponawiania i opóźnieniem można skonfigurować z ponawiania do kolejki aplikacji do dostarczania Ponów. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles`jest ignorowany w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`. Czas opóźnienia między liczbę cykli ponownych prób. Wartość domyślna to 30 minut. `MaxRetryCycles`i `RetryCycleDelay` razem udostępniają mechanizm rozwiązać problem, gdzie ponowna próba opóźnieniem okresowe rozwiązuje problem. Na przykład obsługuje wierszem zablokowanym ustawiony w programie SQL Server oczekiwania zatwierdzania transakcji.  
+-   `RetryCycleDelay`., Czas opóźnienia między liczbę cykli ponownych prób. Wartość domyślna to 30 minut. `MaxRetryCycles`i `RetryCycleDelay` razem udostępniają mechanizm rozwiązać problem, gdzie ponowna próba opóźnieniem okresowe rozwiązuje problem. Na przykład obsługuje wierszem zablokowanym ustawiony w programie SQL Server oczekiwania zatwierdzania transakcji.  
   
--   `ReceiveErrorHandling`. Wyliczenie wskazujący akcję do wykonania dla komunikatu, której nie dostarczania po prób wykonania maksymalnej liczby ponownych prób. Wartości można być Odrzuć usterka, Drop i przenieść. Opcja domyślna jest błędem.  
+-   `ReceiveErrorHandling`., Wyliczenie wskazujący akcję do wykonania dla komunikatu, której nie dostarczania po prób wykonania maksymalnej liczby ponownych prób. Wartości można być Odrzuć usterka, Drop i przenieść. Opcja domyślna jest błędem.  
   
 -   Błąd. Ta opcja wysyła odbiornika, który spowodował błąd `ServiceHost` do błędów. Komunikat należy usunąć z kolejki aplikacji przez inny mechanizm zewnętrzny przed kontynuowaniem aplikacji do przetwarzania komunikatów z kolejki.  
   
@@ -62,9 +63,9 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia dwa standardowe powiązania w kolejce:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi kolejki wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
+-   <xref:System.ServiceModel.NetMsmqBinding>., A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi kolejki wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>., Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
   
 > [!NOTE]
 >  Można zmienić właściwości w tych powiązań, w oparciu o wymagania Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Cały Trująca wiadomość mechanizmu obsługi jest lokalny do aplikacji odbierającej. Proces jest niewidoczne aplikacja wysyłająca, chyba że aplikacja odbierająca ostatecznie zatrzymuje i wysyła potwierdzenie negatywne do nadawcy. W takim przypadku wiadomość zostanie przeniesiona do kolejki utraconych wiadomości nadawcy.  

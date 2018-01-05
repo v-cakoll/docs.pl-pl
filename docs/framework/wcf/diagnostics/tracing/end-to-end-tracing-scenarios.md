@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 33f576b177ddb66d6145e0b1a5d0d104346640ee
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b4980beca761a4c49c39e92c6c73a7bc1a5038b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="end-to-end-tracing-scenarios"></a>Scenariusze kompleksowego śledzenia
 Ta sekcja zawiera tematy, które opisano różne scenariusze korzystanie z funkcji śledzenia.  
@@ -36,7 +37,7 @@ Ta sekcja zawiera tematy, które opisano różne scenariusze korzystanie z funkc
   
 -   [Lista działań](../../../../../docs/framework/wcf/diagnostics/tracing/activity-list.md)  
   
--   [Propagacja Identyfikatora działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
+-   [Propagacja identyfikatora działania](../../../../../docs/framework/wcf/diagnostics/tracing/activity-id-propagation.md)  
   
 -   [Scenariusze synchroniczne z zastosowaniem protokołu HTTP lub TCP albo potoku nazwanego](../../../../../docs/framework/wcf/diagnostics/tracing/synchronous-scenarios-using-http-tcp-or-named-pipe.md)  
   
@@ -44,10 +45,10 @@ Ta sekcja zawiera tematy, które opisano różne scenariusze korzystanie z funkc
   
 -   [Śledzenie działania w ramach zabezpieczeń komunikatów](../../../../../docs/framework/wcf/diagnostics/tracing/activity-tracing-in-message-security.md)  
   
--   [USŁUGI MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
+-   [Usługa MSMQ](../../../../../docs/framework/wcf/diagnostics/tracing/msmq.md)  
   
--   [COM +](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
+-   [COM+](../../../../../docs/framework/wcf/diagnostics/tracing/com.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Rozwiązywanie problemów z aplikacją za pomocą śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [Śledzenia end-to-End](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+ [Kompleksowe śledzenie](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

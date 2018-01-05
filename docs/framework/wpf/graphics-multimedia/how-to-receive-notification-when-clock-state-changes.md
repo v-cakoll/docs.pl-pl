@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f59fddb1add29d52ccba6fc8b8ce84938b53a1c2
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 396e2c51894ad5ed11f8953bceb1bd36899cfc62
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-receive-notification-when-a-clock39s-state-changes"></a>Porady: odbieranie powiadomień podczas zegar &#39; s zmiany stanu
 Zegar <xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated> zdarzenie po jego <xref:System.Windows.Media.Animation.Clock.CurrentState%2A> staje się nieprawidłowy, np. gdy zegar uruchomienia lub zatrzymania. Możesz zarejestrować dla tego zdarzenia z bezpośrednio za pomocą <xref:System.Windows.Media.Animation.Clock>, lub możesz zarejestrować za pomocą <xref:System.Windows.Media.Animation.Timeline>.  

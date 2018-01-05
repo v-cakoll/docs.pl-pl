@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3948a4c404036235767f8de6747966709b75bc4c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6a470113dc54876937850294f6d99fc15a2cf98e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 — Interfejs
 Rozszerza interfejsów "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsługę dla tablic, które są większe niż 2 GB.  
@@ -32,7 +33,7 @@ Rozszerza interfejsów "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsł
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetSize64 — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Pobiera rozmiar w bajtach to `ICorDebugValue3` obiektu.|  
+|[GetSize64, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|Pobiera rozmiar w bajtach to `ICorDebugValue3` obiektu.|  
   
 ## <a name="remarks"></a>Uwagi  
  [ICorDebugValue::GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metoda zwraca rozmiar obiektu zakresu od 0 do 2 147 483 647 bajtów. W [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], rozmiar tablic może być dłuższa niż 2 GB. `ICorDebugValue3` Interfejs umożliwia określenie rozmiaru tych tablicach.  
@@ -49,5 +50,5 @@ Rozszerza interfejsów "ICorDebugValue" i "ICorDebugValue2", aby zapewnić obsł
 ## <a name="see-also"></a>Zobacz też  
     
     
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

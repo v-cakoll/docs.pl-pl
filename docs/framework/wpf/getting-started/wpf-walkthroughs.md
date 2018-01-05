@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9c4c67033711575e0e13785fd448114a6042d8e8
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego powodu najlepiej rozpocząć zapoznawanie produktu lub obszar poszczególnych funkcji.  
@@ -41,20 +42,20 @@ Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Demonstracja tworzenia aplikacji WPF przy użyciu wielu typowych funkcji łącznie z formantami, układu i powiązanie danych WPF.|  
-|[Utwórz przycisk przy użyciu języka XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Pokazuje, jak utworzyć animowany przycisk.|  
-|[Utwórz przycisk przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Przedstawiono proces tworzenia dostosowanego przycisku przy użyciu Microsoft Expression Blend.|  
-|[Wskazówki: Wyświetlanie danych z bazy danych programu SQL Server w formancie DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Demonstracja pobierania danych z bazy danych programu SQL Server i wyświetlić dane w <xref:System.Windows.Controls.DataGrid> formantu.|  
+|[Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|Demonstracja tworzenia aplikacji WPF przy użyciu wielu typowych funkcji łącznie z formantami, układu i powiązanie danych WPF.|  
+|[Tworzenie przycisku przy użyciu XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|Pokazuje, jak utworzyć animowany przycisk.|  
+|[Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|Przedstawiono proces tworzenia dostosowanego przycisku przy użyciu Microsoft Expression Blend.|  
+|[Przewodnik: wyświetlanie danych z bazy danych programu SQL Server w kontrolce DataGrid](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|Demonstracja pobierania danych z bazy danych programu SQL Server i wyświetlić dane w <xref:System.Windows.Controls.DataGrid> formantu.|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>Migracja i współdziałanie na platformie WPF  
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wskazówki: Hostowanie kontrolki formularza systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Pokazuje, jak udostępniać formularze systemu Windows <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> formantu w aplikacji WPF.|  
-|[Wskazówki: Obsługa formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Pokazuje, jak udostępniać [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] wprowadzania danych złożonych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.|  
-|[Wskazówki: Hostowanie formantu złożonego WPF w formularzach systemu Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Pokazuje, jak udostępniać WPF formantu złożonego wprowadzania danych w aplikacji formularzy systemu Windows.|  
-|[Wskazówki: Rozmieszczanie formantów formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Demonstracja rozmieszczanie formantów formularzy systemu Windows w aplikacji hybrydowych przy użyciu funkcji układu WPF.|  
-|[Wskazówki: Powiązanie z danymi w aplikacjach hybrydowego](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Pokazuje, jak używać powiązania danych w aplikacji hybrydowych, które obejmują zarówno formularzy systemu Windows, jak i WPF formantów.|  
+|[Przewodnik: hosting kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Pokazuje, jak udostępniać formularze systemu Windows <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> formantu w aplikacji WPF.|  
+|[Przewodnik: hosting złożonej kontrolki Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Pokazuje, jak udostępniać [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] wprowadzania danych złożonych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.|  
+|[Przewodnik: hosting złożonej kontrolki WPF w Windows Forms](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|Pokazuje, jak udostępniać WPF formantu złożonego wprowadzania danych w aplikacji formularzy systemu Windows.|  
+|[Przewodnik: rozmieszczanie kontrolek formularzy Windows Forms w WPF](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|Demonstracja rozmieszczanie formantów formularzy systemu Windows w aplikacji hybrydowych przy użyciu funkcji układu WPF.|  
+|[Przewodnik: powiązanie z danymi w aplikacjach hybrydowych](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|Pokazuje, jak używać powiązania danych w aplikacji hybrydowych, które obejmują zarówno formularzy systemu Windows, jak i WPF formantów.|  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   

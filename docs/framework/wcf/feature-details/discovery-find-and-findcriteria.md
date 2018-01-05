@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b367b5133cd765fe7e160cd2706589c1773eeb59
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 470fb0788aa3407fff14d1e4df4a89180c5e079d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="discovery-find-and-findcriteria"></a>Odnajdywanie — znajdowanie i kryteria znajdowania
 Operacja find odnajdywania jest inicjowane przez klienta, aby dowiedzieć się, co najmniej jednej usługi i jest jednym z głównych działań podczas odnajdywania. Wykonywanie Znajdź wysyła komunikat sondowania usługi WS-Discovery za pośrednictwem sieci. Usługi, które spełniają kryteria określone odpowiedzi z wiadomości WS-Discovery ProbeMatch. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]komunikaty odnajdywania, zobacz [specyfikacji WS-Discovery](http://go.microsoft.com/fwlink/?LinkID=122347).  
@@ -76,7 +77,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie odnajdywania WCF](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
- [Za pomocą kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+ [Używanie kanału klienta odnajdywania](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
  [Odnajdywanie z zakresami](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)  
  [Znajdowanie asynchroniczne](../../../../docs/framework/wcf/samples/asynchronous-find-sample.md)  
- [Podstawowe](../../../../docs/framework/wcf/samples/basic-sample.md)
+ [Podstawy](../../../../docs/framework/wcf/samples/basic-sample.md)

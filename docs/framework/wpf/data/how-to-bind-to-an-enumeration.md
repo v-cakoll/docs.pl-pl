@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 31fb9adbda47514e5405d465c0b5e2493b966d8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 72439cdc1c1017378a5b6b3f6b4bf41a9eee2537
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>Jak powiązać z wyliczeniem
 W tym przykładzie pokazano, jak powiązać z wyliczeniem przez powiązanie do metody GetValues wyliczenia.  
@@ -32,6 +33,6 @@ W tym przykładzie pokazano, jak powiązać z wyliczeniem przez powiązanie do m
  [!code-xaml[BindToEnum#BindToEnum](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Powiązać z metodą.](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+ [Powiązywanie z metodą](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)

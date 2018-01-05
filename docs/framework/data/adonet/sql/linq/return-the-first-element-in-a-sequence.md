@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: cb43e75ae5cf55df87d00f44aa856d353dd25c0d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 476b8863d05f0c2d77b1b90c8795b85449ed3160
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="return-the-first-element-in-a-sequence"></a>Zwraca pierwszy Element w sekwencji
 Użyj <xref:System.Linq.Enumerable.First%2A> operatora, aby zwrócić pierwszego elementu w sekwencji. Wysyła zapytanie używające <xref:System.Linq.Enumerable.First%2A> są wykonywane natychmiast.  
@@ -33,7 +34,7 @@ Użyj <xref:System.Linq.Enumerable.First%2A> operatora, aby zwrócić pierwszego
   
  Po uruchomieniu tego zapytania względem przykładowej bazy danych Northwind, wyniki są  
   
- `ID = 1, Company = Speedy Express`.  
+ `ID = 1, Company = Speedy Express`.,  
   
  [!code-csharp[DLinqQueryExamples#14](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#14)]
  [!code-vb[DLinqQueryExamples#14](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#14)]  

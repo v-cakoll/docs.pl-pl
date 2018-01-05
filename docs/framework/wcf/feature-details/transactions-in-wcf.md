@@ -16,23 +16,24 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccf6243657e0a1fe9222a03ef113261339a18298
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 84b2a869b8a10a45c195cb64e95b82492e2d18c3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="transactions-in-wcf"></a>Transakcje w programie WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Funkcja transakcji umożliwia kilku składników jednocześnie uczestniczyć w operacji danych. Tematy w tej sekcji Sprawdź, czy funkcja szczegółowo.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie transakcji programu Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
+ [Omówienie transakcji WCF (Windows Communication Foundation)](../../../../docs/framework/wcf/feature-details/transactions-overview.md)  
  Omówienie funkcji transakcji pochodzącymi [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Modele transakcji](../../../../docs/framework/wcf/feature-details/transaction-models.md)  
  Porównuje różne modele programowania transakcji obsługiwane przez firmę Microsoft.  
   
- [Za pomocą protokołu WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
+ [Używanie elementu WS-AtomicTransaction](../../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)  
  Opis elementu WS-AtomicTransaction (WS-AT), protokół propagacji interoperacyjne transakcji, która jest zaimplementowana w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
  [Obsługa transakcyjna w elemencie System.ServiceModel](../../../../docs/framework/wcf/feature-details/transactional-support-in-system-servicemodel.md)  
@@ -41,7 +42,7 @@ ms.lasthandoff: 12/02/2017
 ## <a name="reference"></a>Tematy pomocy  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Programowanie podstawowe usługi WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
+ [Podstawy programowania przy użyciu programu WCF](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie sesji niezawodnych](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

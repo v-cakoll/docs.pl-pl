@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ae81b96a348712af58c5e8527f0f04a59689368
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 772ad2a7ea56001bf3ecba089e62d6bc0f59e5ba
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-custom-activity-template"></a>Porady: Tworzenie szablonu niestandardowego działania
 Szablony niestandardowe działania są używane do dostosowywania konfiguracji działania, w tym niestandardowych działań złożonych, dzięki czemu użytkownicy nie mają utworzyć każde działanie oddzielnie i skonfigurować ich właściwości i inne ustawienia ręcznie. Te szablony niestandardowe mogą być udostępniane w **przybornika** na [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] lub przy użyciu projektanta rehosted, z którego użytkownicy mogą przeciągnij je na powierzchnię projektu wstępnie skonfigurowane. [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]jest dostarczany z dobrym przykładem takich szablonów: [SendAndReceiveReply Template Designer](/visualstudio/workflow-designer/sendandreceivereply-template-designer) i [ReceiveAndSendReply Template Designer](/visualstudio/workflow-designer/receiveandsendreply-template-designer) w [wiadomości projektantów działań](/visualstudio/workflow-designer/messaging-activity-designers) kategorii.  
@@ -134,4 +135,4 @@ namespace DelayActivityTemplate
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Presentation.IActivityTemplateFactory>  
- [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+ [Dostosowywanie środowiska projektowania przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)

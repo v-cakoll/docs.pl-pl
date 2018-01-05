@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 04de29891bcf5d8cdbac32ffc85d64a4003e3184
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0fbed530a1b968bb049ee20262eb2b8fa9ba13c2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="integrating-with-com-applications-overview"></a>Przegląd integrowania z aplikacjami COM+
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]udostępnia bogate środowisko tworzenia aplikacji rozproszonych. Jeśli korzystasz już z logiki na podstawie składnika aplikacji hostowanej w modelu COM +, możesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do rozszerzenia istniejących logiki zamiast konieczności ponownego zapisania go. Typowy scenariusz obejmuje, gdy chcesz udostępnić istniejącego modelu COM + lub usług dla przedsiębiorstw logiki biznesowej za pośrednictwem usług sieci Web.  
@@ -112,4 +113,4 @@ ms.lasthandoff: 12/02/2017
  Proces COM + odtwarzania funkcji nie można używać w zintegrowanej aplikacji. Jeśli aplikacja jest skonfigurowana do używania odtwarzanie procesów i składniki są uruchomione w procesie obsługiwane COM +, nie można uruchomić usługi. To wymaganie nie obejmuje usług przy użyciu trybu w trakcie hostowanych w sieci Web, ponieważ nie są stosowane ustawienia odtwarzania procesu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd integrowania z COM aplikacjami](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+ [Przegląd integrowania z aplikacjami COM](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

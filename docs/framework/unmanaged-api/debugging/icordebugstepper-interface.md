@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 83d394669270eb26b33e084b20a621e18b5b14aa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 266e8c664ac7c5efa1b199efc522f0b890e38e3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugstepper-interface1"></a>ICorDebugStepper — Interface1
 Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy jako identyfikator między wydaniem i zakończeniem polecenia i zapewnia sposób anulowania kroku.  
@@ -32,14 +33,14 @@ Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[Deactivate — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Powoduje to `ICorDebugStepper` anulować ostatnie odebrała polecenie kroku.|  
-|[IsActive — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Pobiera wartość wskazującą, czy to `ICorDebugStepper` jest w trakcie wykonywania kroku.|  
-|[SetInterceptMask — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Ustawia wartość CorDebugIntercept, która określa typy kodu, które zostaną wykorzystane do.|  
-|[SetRangeIL — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Ustawia wartość wskazującą, czy wywołań [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) przekazać wartości argumentu względem kodu natywnego lub kod języka pośredniego (MSIL) firmy Microsoft metody, która jest trwa przeprowadził przez.|  
-|[SetUnmappedStopMask — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Ustawia wartość CorDebugUnmappedStop, która określa typ Niemapowane kodu, w którym zostanie zatrzymanie wykonywania.|  
-|[Step — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Powoduje to `ICorDebugStepper` do pojedynczego kroku za pośrednictwem jego zawierającego wątku oraz opcjonalnie można kontynuować krokowe funkcje, które są wywoływane w wątku pojedynczego.|  
-|[StepOut — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Powoduje to `ICorDebugStepper` pojedynczy krok za pomocą jego zawierającego wątku i gdy zakończenie bieżącej ramki zwraca sterowania do wywoływania ramki.|  
-|[StepRange — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Powoduje to `ICorDebugStepper` do pojedynczego kroku za pośrednictwem jego zawierającego wątku i zwracany, gdy osiągnie kodu poza ostatniego z określonymi zakresami.|  
+|[Deactivate, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)|Powoduje to `ICorDebugStepper` anulować ostatnie odebrała polecenie kroku.|  
+|[IsActive, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-isactive-method.md)|Pobiera wartość wskazującą, czy to `ICorDebugStepper` jest w trakcie wykonywania kroku.|  
+|[SetInterceptMask, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setinterceptmask-method.md)|Ustawia wartość CorDebugIntercept, która określa typy kodu, które zostaną wykorzystane do.|  
+|[SetRangeIL, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setrangeil-method.md)|Ustawia wartość wskazującą, czy wywołań [ICorDebugStepper::StepRange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md) przekazać wartości argumentu względem kodu natywnego lub kod języka pośredniego (MSIL) firmy Microsoft metody, która jest trwa przeprowadził przez.|  
+|[SetUnmappedStopMask, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)|Ustawia wartość CorDebugUnmappedStop, która określa typ Niemapowane kodu, w którym zostanie zatrzymanie wykonywania.|  
+|[Step, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-step-method.md)|Powoduje to `ICorDebugStepper` do pojedynczego kroku za pośrednictwem jego zawierającego wątku oraz opcjonalnie można kontynuować krokowe funkcje, które są wywoływane w wątku pojedynczego.|  
+|[StepOut, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-stepout-method.md)|Powoduje to `ICorDebugStepper` pojedynczy krok za pomocą jego zawierającego wątku i gdy zakończenie bieżącej ramki zwraca sterowania do wywoływania ramki.|  
+|[StepRange, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)|Powoduje to `ICorDebugStepper` do pojedynczego kroku za pośrednictwem jego zawierającego wątku i zwracany, gdy osiągnie kodu poza ostatniego z określonymi zakresami.|  
   
 ## <a name="remarks"></a>Uwagi  
  `ICorDebugStepper` Interfejs służy do następujących celów:  
@@ -67,4 +68,4 @@ Reprezentuje krok wykonaniu kodu, który jest realizowany przez debuger; służy
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

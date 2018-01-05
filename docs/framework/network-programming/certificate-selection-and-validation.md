@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: db75c3288b8247f0717c4792c57bfb30bb2e4416
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 54d1409b74793a8539f432ce0b43f410d578e934
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="certificate-selection-and-validation"></a>Wybór certyfikatu i sprawdzania poprawności
 <xref:System.Net> Klasy obsługuje kilka sposobów, aby wybrać i zweryfikować <xref:System.Security.Cryptography.X509Certificates> dla połączeń Secure Socket Layer (SSL). Klient może wybrać co najmniej jednego certyfikatu do samodzielnego uwierzytelnienia do serwera. Serwer może wymagać, aby certyfikat klienta ma jeden lub więcej atrybutów określonych dla uwierzytelniania.  
@@ -62,5 +63,5 @@ ms.lasthandoff: 11/21/2017
  Oprócz tych narzędzi <xref:System.Security.Cryptography.X509Certificates.X509Certificate> i <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> klasy udostępnia metody ładowania certyfikatu w systemie plików.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zabezpieczenia w programowaniu usługi sieciowej](../../../docs/framework/network-programming/security-in-network-programming.md)  
+ [Zabezpieczenia w programowaniu sieciowym](../../../docs/framework/network-programming/security-in-network-programming.md)  
  [Programowanie dla sieci w programie .NET Framework](../../../docs/framework/network-programming/index.md)

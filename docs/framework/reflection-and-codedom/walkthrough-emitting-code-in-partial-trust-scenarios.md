@@ -25,11 +25,12 @@ caps.latest.revision: "15"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 121dfd91d797aa03860abd4404ffe20113e70f85
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 835483d740b60f98c3170a590edbfbfbe970d783
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>Wskazówki: emitowanie kodu w scenariuszach częściowo zaufanych
 Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej relacji zaufania, ale niektóre funkcje wymagają szczególnych uprawnień w częściowo zaufany kod. Ponadto emisja odbicia ma funkcji hostowanej anonimowo metody dynamicznej, który jest przeznaczony do użycia z częściowa relacja zaufania i zestawy przezroczystym poziomie bezpieczeństwa.  
@@ -220,5 +221,5 @@ Emisja odbicia używa tego samego interfejsu API w pełnej lub częściowej rela
 -   W przypadku tworzenia tym przykładzie kodu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy zmienić nazwę klasy do dołączenia przestrzeni nazw, gdy przekaż go do <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> metody. Domyślnie przestrzeń nazw jest nazwa projektu. Na przykład jeśli projekt jest "PartialTrust", nazwa klasy musi być "PartialTrust.Worker".  
   
 ## <a name="see-also"></a>Zobacz też  
- [Emituj problemy z zabezpieczeniami w odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
+ [Problemy związane z zabezpieczeniami w emisji odbicia](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)  
  [Porady: uruchamianie częściowo zaufanego kodu w bibliotece](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1991d2a4b43c679fe7e30f633742e01e281e19b3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 7571b437c3879e829a11ed81c22dd12a0a1b592b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-an-object-follow-the-mouse-pointer"></a>Jak sprawić, aby obiekt podążał za wskaźnikiem myszy
 W tym przykładzie pokazano, jak zmienić wymiary obiektu, gdy wskaźnik myszy jest przesuwany na ekranie.  
@@ -42,4 +43,4 @@ W tym przykładzie pokazano, jak zmienić wymiary obiektu, gdy wskaźnik myszy j
  [!code-vb[mouseMoveWithPointer#MouseMovePointerGetPosition](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/mouseMoveWithPointer/VisualBasic/Window1.xaml.vb#mousemovepointergetposition)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)

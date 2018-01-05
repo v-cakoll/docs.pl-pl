@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0db69185df691fe13781e5aed96dedee239d7c9d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3ee73d87a65e9febed6ebd5ad981dcd548fc2404
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar — Informacje o formancie
 <xref:System.Windows.Forms.ToolStripProgressBar> Łączy rafting i renderowania funkcje wszystkich <xref:System.Windows.Forms.ToolStrip> formantów z jego typowe funkcje śledzenia procesu. A <xref:System.Windows.Forms.ToolStripProgressBar> najbardziej zwykle jest hostowana przez <xref:System.Windows.Forms.StatusStrip>i mniej często przez <xref:System.Windows.Forms.ToolStrip>.  

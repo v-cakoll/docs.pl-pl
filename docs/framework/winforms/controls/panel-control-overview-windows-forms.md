@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 62adba598f59b4662bfb4c51b868bad1aa2e53b2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a8855c88a0ec60cd0d44d73046e44c9614347d90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel — Informacje o formancie (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.Panel> formantów służą do zapewniania do zidentyfikowania grupowania dla innych formantów. Zwykle Użyj paneli do podziału formularza przez funkcję. Na przykład może być formularzu zamówienia określający wysyłkowy opcje, takie jak które liczbę operator do użycia. Grupowanie wszystkich opcji w panelu daje użytkownikowi logicznej wizualnie. Na projekt czasu wszystkie formanty, które mogą zostać przeniesione łatwo — po przeniesieniu <xref:System.Windows.Forms.Panel> sterowania wszystkie jego formanty zawarte Przenieś zbyt. Formanty są pogrupowane w panelu jest możliwy za pośrednictwem jego <xref:System.Windows.Forms.Control.Controls%2A> właściwości. Ta właściwość zwraca kolekcję <xref:System.Windows.Forms.Control> wystąpień, dzięki czemu zwykle trzeba rzutowania formantu pobrać ten sposób jego określonego typu.  
@@ -34,6 +35,6 @@ Formularze systemu Windows <xref:System.Windows.Forms.Panel> formantów służą
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Panel>  
- [GroupBox — formant](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
- [Porady: Grupowanie formantów z formantem panelu formularzy systemu Windows przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
- [Porady: Ustawianie tła panelu formularzy systemu Windows przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+ [GroupBox, kontrolka](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)  
+ [Instrukcje: grupowanie kontrolek za pomocą kontrolki Panel formularzy Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/group-controls-with-wf-panel-control-using-the-designer.md)  
+ [Instrukcje: ustawianie tła panelu formularzy Windows Forms przy użyciu narzędzia Projektant](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 432402fefc6c958fbab0b1450a429d9b130b8239
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8e8d05bd0c3e76d643d56b652c8849eef1045ea8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="global-and-local-transformations"></a>Globalne i lokalne przekształcenia
 Globalne przekształcenie jest transformację, która ma zastosowanie do każdego elementu narysowanymi przez dany <xref:System.Drawing.Graphics> obiektu. Z kolei transformację lokalnego jest transformację, która ma zastosowanie do określonego elementu do narysowania.  
@@ -71,5 +72,5 @@ Globalne przekształcenie jest transformację, która ma zastosowanie do każdeg
  ![Przekształcenia](../../../../docs/framework/winforms/advanced/media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>Zobacz też  
- [Systemy i transformacje współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
- [Używanie przekształceń w zarządzanym GDI +](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)
+ [Systemy i przekształcenia współrzędnych](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)  
+ [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)

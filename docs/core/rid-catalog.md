@@ -6,11 +6,12 @@ ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.openlocfilehash: 067f9cfc283a14b7ea59a7454b7f593ce6eb5806
-ms.sourcegitcommit: 62d3e3e74c1b7ffa927590012c0b9f87de1b0848
+ms.workload: dotnetcore
+ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID katalogu
 
@@ -20,13 +21,13 @@ Pakietów z zależnościami natywnego RID wyznacza platformy, na których można
 
 Można ustawić identyfikatorów RID w `<RuntimeIdentifier>` element pliku projektu. Są również używane za pośrednictwem `--runtime` opcji z następującymi [polecenia interfejsu wiersza polecenia platformy .NET Core](./tools/index.md):
 
-- [Kompilacja DotNet](./tools/dotnet-build.md)
-- [Wyczyść DotNet](./tools/dotnet-clean.md)
-- [Pakiet DotNet](./tools/dotnet-pack.md)
-- [Publikowanie DotNet](./tools/dotnet-publish.md)
-- [Przywracanie DotNet](./tools/dotnet-restore.md)
-- [Uruchom DotNet](./tools/dotnet-run.md)
-- [Magazyn DotNet](./tools/dotnet-store.md)
+- [dotnet build](./tools/dotnet-build.md)
+- [dotnet clean](./tools/dotnet-clean.md)
+- [dotnet pack](./tools/dotnet-pack.md)
+- [dotnet publish](./tools/dotnet-publish.md)
+- [dotnet restore](./tools/dotnet-restore.md)
+- [dotnet run](./tools/dotnet-run.md)
+- [dotnet store](./tools/dotnet-store.md)
 
 Identyfikatorów RID, reprezentują konkretnych systemów operacyjnych zwykle skorzystaj z tego wzorca: `[os].[version]-[architecture]-[additional qualifiers]` gdzie:
 

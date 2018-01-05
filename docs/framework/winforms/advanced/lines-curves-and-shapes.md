@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2caa77285ebe327adc690b26baeb58aa800627fb
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 04d93203f98c91b0d5bbed5f833745a9bb9ab1d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lines-curves-and-shapes"></a>Linie, krzywe i kształty
 Grafika wektorowa część [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] jest używany do rysowania linii, rysowanie krzywych oraz do rysowania i wypełniania kształtów.  
@@ -32,34 +33,34 @@ Grafika wektorowa część [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecg
  [Przegląd grafiki wektorowej](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
  W tym artykule omówiono grafiki wektorowej.  
   
- [Pióra, linie i prostokąty w GDI +](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ [Pióra, linie i prostokąty w GDI+](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
  W tym artykule omówiono rysowania linie i prostokąty.  
   
- [Elipsy i łuki w GDI +](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
+ [Elipsy i łuki w GDI+](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
  Definiuje łuki i wielokropek i identyfikuje klasy potrzebne do rysowania.  
   
- [Wielokąty w GDI +](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
+ [Wielokąty w GDI+](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
  Definiuje wielokątów i identyfikuje klasy potrzebne do rysowania.  
   
- [Krzywe Kardynalne w GDI +](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
+ [Krzywe kardynalne w GDI+](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
  Definiuje kardynalne i identyfikuje klasy potrzebne do rysowania.  
   
- [Krzywe Beziera w GDI +](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
+ [Krzywe Beziera w GDI+](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
  Definiuje krzywe Beziera i identyfikuje klasy potrzebne do rysowania.  
   
- [Ścieżki grafiki w GDI +](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
+ [Ścieżki grafiki w GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
  Opisuje ścieżki oraz do tworzenia i rysowania.  
   
- [Pędzle i wypełnione kształty w GDI +](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
+ [Pędzle i wypełnione kształty w GDI+](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
  W tym artykule opisano typy pędzla i sposobu ich używania.  
   
- [Krzywe otwarte i zamknięte w GDI +](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
+ [Krzywe otwarte i zamknięte w GDI+](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
  Definiuje Krzywe otwarte i zamknięte i jak narysować i wypełnić je.  
   
- [Regiony w GDI +](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ [Regiony w GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
  Zawiera opis metod skojarzonych z regionów.  
   
- [Ograniczenie powierzchni rysowania w GDI +](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
+ [Ograniczenie powierzchni rysowania w GDI+](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
  Opisuje wycinka i jak z niego korzystać.  
   
  [Stosowanie antyaliasingu do linii i krzywych](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  

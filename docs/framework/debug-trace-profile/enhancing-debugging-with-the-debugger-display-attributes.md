@@ -24,11 +24,12 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: c396a794cd3afa394cbb6b2393257a3103c6239d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ac5097326ae76a8790569c13fd8b1285b0cfeec0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>Udoskonalanie debugowania za pomocą atrybutów wyświetlania debugera
 Zezwalaj na wyświetlanie atrybutów debugera dewelopera typu, który określa i najlepiej rozumie zachowania w czasie wykonywania tego typu, można również określić, jakie tego typu będą wyglądać po wyświetleniu go w debugerze. Ponadto debuger wyświetlić atrybuty, które zapewniają `Target` właściwości można zastosować na poziomie zestawu przez użytkowników bez wiedzy o kodzie źródłowym. <xref:System.Diagnostics.DebuggerDisplayAttribute> Atrybut kontroluje sposób wyświetlania typu lub elementu członkowskiego w oknach zmiennych debugera. <xref:System.Diagnostics.DebuggerBrowsableAttribute> Atrybut określa, czy i jak pole lub właściwość jest wyświetlana w oknach zmiennych debugera. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> Atrybut określa typu zastępczego lub serwer proxy dla typu i zmienia sposób typ jest wyświetlana w oknach debugera. Po wyświetleniu zmiennej, która jest serwer proxy lub typu zastępczego serwera proxy dla oryginalnego typu w okna debugera oznacza**.** Wpisz windowdisplays zmiennych debugera tylko publiczne elementy członkowskie serwera proxy. Prywatne elementy członkowskie nie są wyświetlane.  

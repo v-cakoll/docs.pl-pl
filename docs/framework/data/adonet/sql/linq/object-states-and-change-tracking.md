@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2d6685bc3dc17294f786a572e6f11165ee011b83
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 92f2aa2aea721c424ba59af913b868907be36317
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="object-states-and-change-tracking"></a>Stanów obiektów i śledzenie zmian
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obiekty zawsze uczestniczyć w niektórych *stanu*. Na przykład, jeśli [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tworzy nowy obiekt, gdy obiekt jest w `Unchanged` stanu. Możesz samodzielnie utworzyć nowy obiekt jest nieznany w <xref:System.Data.Linq.DataContext> i znajduje się w `Untracked` stanu. Po pomyślnym wykonaniu <xref:System.Data.Linq.DataContext.SubmitChanges%2A>, wszystkie obiekty znane [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] w `Unchanged` stanu. (Jedynym wyjątkiem jest reprezentowana przez te, które zostały pomyślnie usunięte z bazy danych, które znajdują się w `Deleted` stanu i korzystanie z niej w tym <xref:System.Data.Linq.DataContext> wystąpienia.)  
@@ -74,4 +75,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Informacje uzupełniające](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)  
- [Wstawiania, aktualizowania i usuwania działań](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)
+ [Operacje wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

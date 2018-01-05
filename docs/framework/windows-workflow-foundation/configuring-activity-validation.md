@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 440f3ee85fe24707c6bb433736bf6104d9e0dfc5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d75f03a9af5caa5569cbfd4d1d09cda8936f6562
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-activity-validation"></a>Konfigurowanie sprawdzania poprawności działania
 Działanie sprawdzania poprawności umożliwia autorów działania i użytkowników zidentyfikować i raportów o błędach w konfiguracji działania przed jego wykonywania. [!INCLUDE[wf](../../../includes/wf-md.md)]udostępnia następujące trzy typy sprawdzania poprawności działania:  
@@ -33,13 +34,13 @@ Działanie sprawdzania poprawności umożliwia autorów działania i użytkownik
  [Wymagane argumenty i grupy metod przeciążonych](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)  
  Informacje dotyczące używania `RequiredArgument` i `OverloadGroup` atrybutów w celu udostępnienia weryfikacji.  
   
- [Weryfikacja opartej na kodzie imperatywne](../../../docs/framework/windows-workflow-foundation/imperative-code-based-validation.md)  
+ [Walidacja oparta na kodzie imperatywnym](../../../docs/framework/windows-workflow-foundation/imperative-code-based-validation.md)  
  Informacje dotyczące używania weryfikacji opartych na kodzie dla <xref:System.Activities.CodeActivity> i <xref:System.Activities.NativeActivity> na podstawie działań.  
   
  [Ograniczenia deklaratywne](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)  
  Informacje dotyczące używania deklaratywne ograniczenia do udostępnienia weryfikacji działania złożonego.  
   
- [Wywoływanie sprawdzania poprawności działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)  
+ [Wywoływanie walidacji działania](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)  
  W tym artykule omówiono podczas sprawdzania poprawności działania jest wywoływana automatycznie oraz sposób jawnego wywołania sprawdzania poprawności.  
   
 ## <a name="reference"></a>Tematy pomocy  

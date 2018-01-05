@@ -12,11 +12,11 @@ ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: fa30bc7cbe96b49c5d3f5703001e6a3ac379027f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: de34f27bc520c4e814738e0ba22620ed80f7f23e
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="introduction-to-linq-visual-basic"></a>Wprowadzenie do LINQ (Visual Basic)
 Zapytanie języku zintegrowanym (LINQ) jest innowacje wprowadzone w programie .NET Framework w wersji 3.5 który zawiera odstęp między world obiektów i world danych.  
@@ -34,7 +34,7 @@ Zapytanie języku zintegrowanym (LINQ) jest innowacje wprowadzone w programie .N
 ## <a name="next-steps"></a>Następne kroki  
  Aby uzyskać więcej informacji na temat LINQ, Rozpocznij od staje się poznać niektóre podstawowe założenia w sekcji wprowadzenie [wprowadzenie do LINQ w Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md), a następnie zapoznaj się z dokumentacją w technologii LINQ, w którym są zainteresowanych:  
   
--   Bazy danych programu SQL Server: [LINQ do SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+-   Bazy danych programu SQL Server: [LINQ do SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
 -   Dokumenty XML: [LINQ do XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
   

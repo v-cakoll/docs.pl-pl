@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 2052656a524eafd7b9a137ac7d5006aba53fc075
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77658b1c4b40090b8e532f1a0566ecb927328d65
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express zabezpieczeń
 Microsoft SQL Server Express Edition, (SQL Server Express) jest oparta na programie Microsoft SQL Server i obsługuje większość funkcji aparatu bazy danych. Zaprojektowano go tak, aby mniej ważne funkcje i łączność sieciową są domyślnie wyłączone. Zmniejsza to powierzchnia dostępne ataku przez złośliwego użytkownika.  
@@ -45,9 +46,9 @@ Microsoft SQL Server Express Edition, (SQL Server Express) jest oparta na progra
 |[Nawiązywanie połączenia z program SQL Server Express](http://msdn.microsoft.com/library/ms165679.aspx) w dokumentacji SQL Server Books Online|Informacje dotyczące używania programu SQL Server Express Edition w sieci.|  
 |[Microsoft SQL Server 2005 Express Edition — książki Online](http://msdn.microsoft.com/library/ms165706.aspx)|Pełną dokumentację SQL Server 2005 Express Edition.|  
 |[Wystąpienia użytkownika dla użytkowników niebędących administratorami](http://msdn.microsoft.com/library/ms143684.aspx) w dokumentacji SQL Server Books Online|Opisuje sposób tworzenia i wdrażania wystąpienia użytkownika.|  
-|[Wystąpienia programu SQL Server Express użytkownika](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Zawiera opis możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenia z wystąpieniem użytkownika przy użyciu <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  
+|[Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|Zawiera opis możliwości wystąpienia użytkownika w aplikacji ADO.NET. Zawiera informacje o tym, jak włączyć wystąpienia użytkownika, nawiązać połączenia z wystąpieniem użytkownika przy użyciu <xref:System.Data.SqlClient.SqlConnection>, okres istnienia wystąpienia użytkownika i scenariuszy wystąpienia użytkownika.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia serwera SQL](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Wystąpienia programu SQL Server Express użytkownika](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
+ [Wystąpienia użytkownika programu SQL Server Express](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

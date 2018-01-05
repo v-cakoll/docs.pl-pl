@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 9ae90221a1b305fdf09ae9583e720a2092289362
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4df7aa7400a180151de5420effc8738955d51c26
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError — Interfejs
 Udostępnia mechanizm wywołania zwrotnego dla usługi raportowania błędów podczas scalania metadanych.  
@@ -35,7 +36,7 @@ Udostępnia mechanizm wywołania zwrotnego dla usługi raportowania błędów po
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[OnError — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Zapewnia powiadomienie błędów występujących podczas scalania metadanych.|  
+|[OnError, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|Zapewnia powiadomienie błędów występujących podczas scalania metadanych.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

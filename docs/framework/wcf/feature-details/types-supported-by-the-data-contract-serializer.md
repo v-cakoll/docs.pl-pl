@@ -14,11 +14,12 @@ caps.latest.revision: "24"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4b6d9ed91e71b7d3f3f214a862389b8ba5316760
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 98eb46e0f31995efe7db177d90691a9f59288590
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>Typy obsługiwane przez serializator kontraktu danych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa <xref:System.Runtime.Serialization.DataContractSerializer> jako jego domyślny aparat serializacji, aby przekonwertować danych XML i przekonwertować do danych XML. <xref:System.Runtime.Serialization.DataContractSerializer> Jest przeznaczony do serializacji *kontraktu danych* typów. Obsługuje jednak wiele innych typów, które mogą być uważane za zawierające niejawnych danych kontraktu. Poniżej znajduje się pełna lista typów, które można serializować:  
@@ -79,6 +80,6 @@ ms.lasthandoff: 12/02/2017
 ## <a name="see-also"></a>Zobacz też  
  [Typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)  
  [Używanie kontraktów danych](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [Typów możliwych do serializacji](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
+ [Typy z możliwością serializowania](../../../../docs/framework/wcf/feature-details/serializable-types.md)  
  [Typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md)  
  [Typy wyliczeniowe w kontraktach danych](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bcb29fa522f706f5500ab3cb12f956d5e2236b5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 65bf6bfd0bd437848137506605a958f5f2e8d750
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="batching-operations-wcf-data-services"></a>Przetwarzanie wsadowe operacji (usługi danych WCF)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] Obsługuje przetwarzanie żądania wsadowe [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi. Aby uzyskać więcej informacji, zobacz [OData: przetwarzanie wsadowe](http://go.microsoft.com/fwlink/?LinkId=186075). W [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], każdej operacji, która używa <xref:System.Data.Services.Client.DataServiceContext>, takiej jak wykonywanie zapytania lub zapisywania zmian, wyniki w oddzielnych żądania wysyłane do usługi danych. Aby zachować logicznej zakresu dla zestawów działań, można jawnie definiować partie operacyjnej. Dzięki temu wszystkie operacje w partii są wysyłane do usługi data pojedyncze żądanie HTTP, umożliwia serwerowi przetwarzania operacji automatycznie czy zmniejsza liczbę rund do usługi danych.  
@@ -34,4 +35,4 @@ ms.lasthandoff: 12/02/2017
  Można również asynchronicznie zapisać zmiany wsadowej. Aby uzyskać więcej informacji, zobacz [operacji asynchronicznych](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

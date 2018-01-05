@@ -17,11 +17,12 @@ caps.latest.revision: "74"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b3e5e732fc52ed2ea4109c75e851f278f9a15e14
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d3dda23a9fd7b6c501f3f1d8222bfdea8f31fb10
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checkbox"></a>CheckBox
 Można użyć <xref:System.Windows.Controls.CheckBox> w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] aplikacji w celu reprezentowania opcje, które użytkownik można zaznaczyć lub wyczyścić. Można użyć jednego pola wyboru lub w przypadku grupowania dwóch lub więcej pól wyboru.  

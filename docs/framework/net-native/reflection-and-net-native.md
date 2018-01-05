@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: d9e4bdc26815feab7910e7518f7cd691a1f4dece
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e248071a0d35c5552976e5e4663094b76ee162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-net-native"></a>Odbicie i architektura .NET Native
 W programie .NET Framework zarządzane obsługuje programowanie metaprogramowania przez odbicie interfejsu API. Odbicie umożliwia inspekcję obiektów w aplikacji, wywoływanie metod na obiekty wykryte przez kontroli, generowanie nowych typów w czasie wykonywania i obsługuje wiele scenariuszy dynamicznej kodu. Obsługuje ona również serializacji i deserializacji, dzięki czemu wartości pól obiektu utrwalenia i później ją przywrócono. Te scenariusze wymaga kompilatora .NET Framework just in time (JIT) do generowania kodu natywnego na podstawie metadanych dostępne.  
@@ -39,8 +40,8 @@ W programie .NET Framework zarządzane obsługuje programowanie metaprogramowani
   
 -   [Dokumentacja interfejsu API odbicia](../../../docs/framework/net-native/net-native-reflection-api-reference.md)  
   
--   [Odwołanie do pliku konfiguracji dyrektyw (rd.xml) środowiska wykonawczego](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
+-   [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Kompilowanie aplikacji za pomocą architektury .NET Native](../../../docs/framework/net-native/index.md)  
- [Architektura .NET native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)
+ [Kompilowanie aplikacji z architekturą .NET Native](../../../docs/framework/net-native/index.md)  
+ [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)

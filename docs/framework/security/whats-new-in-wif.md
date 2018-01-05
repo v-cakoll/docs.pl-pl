@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 19116aba3049dce6612ca1a7170030f7ced6705e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 81506cfb0c08bbbd99d76dc76010fdb933623e0d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-windows-identity-foundation-45"></a>Jaki &#39; s Nowość w systemie Windows Identity Foundation 4.5
 Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana jako autonomiczny pakiet do pobrania. Jest znana pod nazwą WIF 3.5, ponieważ została wprowadzona mniej więcej w tym samym czasie co platforma .NET 3.5 z dodatkiem SP1. Począwszy od wersji .NET 4.5 środowisko WIF jest częścią oprogramowania .NET Framework. O klasach WIF bezpośrednio dostępne w ramach pozwala na znacznie lepsza integracja tożsamości opartego na oświadczeniach w programie .NET, co ułatwia użyć oświadczeń. Aplikacje napisane dla WIF 3.5 będzie muszą zostać zmodyfikowane, aby korzystać z nowego modelu; Aby uzyskać informacje, zobacz [wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md).  
@@ -66,7 +67,7 @@ Pierwsza wersja środowiska Windows Identity Foundation (WIF) była dostarczana 
      Korzystając **tożsamości i dostępu do narzędzi dla programu Visual Studio 2012** (zobacz **zmiany do środowiska Visual Studio** powyżej), dodaje `<serviceCredentials>` element z `useIdentityConfiguration` ustawić atrybutu Plik konfiguracyjny dla Ciebie. Dodano również odpowiedniego [ \<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) element, który zawiera ustawienia konfiguracji WIF i dodaje powiązania i inne ustawienia, które są wymagane do uwierzytelniania wybranego STS zewnętrzny.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki dotyczące migrowania aplikacji utworzony za pomocą programu WIF 3.5 do wersji WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
- [Namespace mapowanie między WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
- [Dokumentacja interfejsu API WIF](../../../docs/framework/security/wif-api-reference.md)  
- [Odwołanie do konfiguracji WIF](../../../docs/framework/security/wif-configuration-reference.md)
+ [Wskazówki dotyczące migrowania aplikacji utworzonych za pomocą programu WIF 3.5 do wersji WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  
+ [Mapowanie przestrzeni nazw między programami WIF 3.5 i WIF 4.5](../../../docs/framework/security/namespace-mapping-between-wif-3-5-and-wif-4-5.md)  
+ [Dokumentacja interfejsu API programu WIF](../../../docs/framework/security/wif-api-reference.md)  
+ [Odwołanie konfiguracji programu WIF](../../../docs/framework/security/wif-configuration-reference.md)

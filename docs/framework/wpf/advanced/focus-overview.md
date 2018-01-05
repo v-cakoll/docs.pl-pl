@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f4e10f7136b636829f99da34388db7676810cd06
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d35b65f88452085e601569b9dcfc62a541a1655f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="focus-overview"></a>Przegląd Fokus
 W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] istnieją dwa główne pojęcia, które odnoszą się do fokus: Klawiatura fokus i logiczny fokus.  Fokus klawiatury odwołuje się do elementu, który odbiera klawiatury i logiczny fokus odwołuje się do elementu w zakresie fokus, który ma fokus.  Pojęcia te omówiono szczegółowo w tym omówieniu.  Opis różnicy w tych pojęć jest ważne w przypadku tworzenia złożonych aplikacji z wielu regionach, gdzie można uzyskać fokusu.  
@@ -131,5 +132,5 @@ W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.m
  <xref:System.Windows.Input.FocusManager>  
  <xref:System.Windows.UIElement>  
  <xref:System.Windows.ContentElement>  
- [Dane wejściowe — omówienie](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)
+ [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)

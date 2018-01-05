@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a0cf8bd0368977b665f2ea412e4debbc1f681e5f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 568c25574fa5c3536f1c7678f2705c19719c62d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-writing-a-custom-activity"></a>Pobieranie rozpoczęte pisania działania niestandardowego
 W przykładzie pokazano sposób definiowania proste działania niestandardowego w języku XAML. Działanie podano nazwę `Rhyme`, i jego logiki jest sekwencją trzy <xref:System.Activities.Statements.WriteLine> działań.  

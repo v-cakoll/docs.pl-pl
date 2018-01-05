@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c02445a7a46bd9367b84edcf5ef5f012be5232e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1ab7b6cc6360103c43430516490199cc278d2dfe
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typenamefactory-coclass"></a>TypeNameFactory — Klasa coclass
 Interfejs zarządzania deconstruction nazwy typu.  
@@ -40,7 +41,7 @@ coclass TypeNameFactory {
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|[ITypeNameFactory — interfejs](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
+|[ITypeNameFactory, interfejs](../../../../docs/framework/unmanaged-api/hosting/itypenamefactory-interface.md)|Ten interfejs obsługuje infrastrukturę .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

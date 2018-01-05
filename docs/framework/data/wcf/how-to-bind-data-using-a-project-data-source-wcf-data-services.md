@@ -19,11 +19,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3ee72f1c3eaf2c78a7cdff9b2a4db81ef0b767a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 94ca7614e6df2d82216fa869309dff2da8eee634
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>Porady: wiązanie danych przy użyciu źródła danych projektu (usługi danych WCF)
 Można utworzyć źródła danych, które są oparte na obiekty danych wygenerowanych w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] aplikacji klienckiej. Podczas dodawania odwołania do usług danych przy użyciu **Dodaj odwołanie do usługi** okna dialogowego, wraz z klas danych wygenerowanego klienta utworzeniu źródła danych projektu. Jedno źródło danych jest tworzony dla każdego zestawu jednostek, usługa ujawnia danych. Możesz utworzyć formularze, które są wyświetlane dane z usługi przez przeciągnięcie tych elementów źródła danych z **źródeł danych** okna do projektanta. Te elementy stają się formanty, które są powiązane ze źródłem danych. Podczas wykonywania tego źródła danych jest powiązany z wystąpieniem <xref:System.Data.Services.Client.DataServiceCollection%601> klasy, która jest wypełniony obiektów, które są zwracane przez zapytanie do usługi danych. Aby uzyskać więcej informacji, zobacz [wiązanie danych do kontrolek](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md).  
@@ -127,5 +128,5 @@ Można utworzyć źródła danych, które są oparte na obiekty danych wygenerow
 10. Ten kod tworzy wystąpienie <xref:System.Data.Services.Client.DataServiceCollection%601> dla `Customers` typ oparty na wykonanie <xref:System.Data.Services.Client.DataServiceQuery%601> zwracającą <xref:System.Collections.Generic.IEnumerable%601> z `Customers` z Northwind danych usługi i wiąże go do `customersBindingSource`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Biblioteka klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
- [Porady: wiązanie danych do systemu Windows Presentation Foundation elementów](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+ [Biblioteka klienta usług danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)  
+ [Instrukcje: Wiązanie danych do elementów systemu Windows Presentation Foundation](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

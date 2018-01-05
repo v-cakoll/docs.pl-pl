@@ -13,11 +13,12 @@ ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 531da21d69f13a212eecb7b079fbf90bd7c8e681
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 34402e74bb0cb560d213760c38ce4b936d712eb4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-guide"></a>.NET framework — przewodnik
 
@@ -42,7 +43,7 @@ Aby uzyskać bardziej szczegółowe informacje dotyczące pobierania programu .N
   
 ## <a name="in-this-section"></a>W tej sekcji
 
-[Nowości](../../docs/framework/whats-new/index.md)  
+[Co nowego](../../docs/framework/whats-new/index.md)  
 Opis najważniejszych nowych funkcji i zmian w najnowszych wersjach programu .NET Framework. Zawiera listy nieaktualnych typów i elementów członkowskich, a także przewodnik migracji aplikacji z poprzedniej wersji programu .NET Framework.  
   
 [Wprowadzenie](../../docs/framework/get-started/index.md)  
@@ -60,5 +61,5 @@ Opis narzędzi, które pomagają tworzyć, konfigurować i wdrażać aplikacje p
 [Biblioteka klas programu .NET framework](/dotnet/api/?view=netframework-4.7.1)   
 Opis składni, przykłady kodu i powiązane informacje dotyczące każdej klasy dostępnej w przestrzeniach nazw programu .NET Framework.  
   
-[Biblioteki dodatkowe klasy i interfejsy API](../../docs/framework/additional-apis/index.md)  
+[Dodatkowe biblioteki klas i interfejsy API](../../docs/framework/additional-apis/index.md)  
 Zawiera dokumentacja dla klas zawartych w poza pasmem (OOB) wersjach, a także dla klas, które odnoszą się do określonych platform lub implementacji programu .NET Framework.

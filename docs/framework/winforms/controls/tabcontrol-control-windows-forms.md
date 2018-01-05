@@ -21,29 +21,30 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fdeb5011e5f44eb45d553045c2f89b97f9e4d100
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 705f9dbb8ea7f4d462a2b19cc0c6b845ae8f578b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tabcontrol-control-windows-forms"></a>TabControl — Formant (Formularze systemu Windows)
 Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separatorów w notesie lub etykiet w zestawie folderów w pliku cabinet zgłoszenia. Karty może zawierać obrazów i inne formanty. Użyj `TabControl` do utworzenia strony właściwości.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Informacje o formancie TabControl](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
+ [TabControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
  Wyjaśniono, co to jest formant i jego najważniejszych funkcjach i właściwości.  
   
- [Porady: Dodawanie formantu do strony karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
+ [Instrukcje: dodawanie kontrolki do karty](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
  Zawiera wskazówki dotyczące wyświetlania formantów na kartach.  
   
- [Porady: Dodawanie i usuwanie kart za pomocą formantu TabControl formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
+ [Instrukcje: dodawanie i usuwanie kart za pomocą kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)  
  Dodawanie i usuwanie kart w Projektancie lub w kodzie pozwala instrukcjami.  
   
- [Porady: Zmienianie wyglądu składnika TabControl formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
+ [Instrukcje: zmienianie wyglądu kontrolki TabControl formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)  
  Zawiera wskazówki dotyczące dostosowywania właściwości, które mają wpływ na wygląd poszczególnych kart.  
   
- [Porady: wyłączanie kart](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
+ [Instrukcje: wyłączanie kart](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
  Wyjaśniono, jak ograniczyć dostęp do strony karty, prawdopodobnie na podstawie poświadczeń użytkownika.  
   
  Zobacz też [porady: Dodaj i usuń karty przy użyciu formantu TabControl formularzy systemu Windows projektanta](http://msdn.microsoft.com/library/ms233654\(v=vs.110\)), [porady: Dodawanie formantu do karty strony przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/ms233668\(v=vs.110\))  
@@ -53,8 +54,8 @@ Formularze systemu Windows `TabControl` wyświetla wiele kart, takich jak separa
  Ta klasa opisuje i zawiera łącza do wszystkich jej członków.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okna dialogowe w formularzach systemu Windows](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Okna dialogowe w formularzach Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Zawiera listę zadań dla okien dialogowych, które często zawierają karty.  
   
- [Formanty do użycia w formularzach systemu Windows](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.

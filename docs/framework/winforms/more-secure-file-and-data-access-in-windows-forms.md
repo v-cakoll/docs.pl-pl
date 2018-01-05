@@ -24,11 +24,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f447df16aab29b91da6f34b8afd812dea2d109ef
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.  
@@ -369,9 +370,9 @@ public void Write()
  Ponieważ nie można uzyskać dostępu do rejestru w częściowej relacji zaufania, konieczne może być znaleźć inne metody przechowywania danych. Po zapisaniu ustawień aplikacji należy używać izolowanego magazynu, zamiast rejestru. Izolowany magazyn mogą służyć do przechowywania plików innych aplikacji. Można również przechowywać informacje o aplikacji globalnego dotyczące serwera lub witryny pochodzenia, ponieważ domyślnie aplikacja jest uprawnień dostępu do witryny ze swoją witryną źródłową.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Bezpieczniejsze drukowanie w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Zagadnienia dotyczące zabezpieczeń w formularzach systemu Windows](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
- [Zabezpieczenia w formularzach systemu Windows-omówienie](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Zabezpieczenia formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-security.md)  
- [Mage.exe (Generowanie manifestu i edytowania narzędzie)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
- [MageUI.exe (Generowanie manifestu i edytowania narzędzia, klient grafiki)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)
+ [Bezpieczniejsze drukowanie w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Dodatkowe zagadnienia z zakresu zabezpieczeń dotyczące formularzy Windows Forms](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)  
+ [Przegląd zabezpieczeń w formularzach Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Zabezpieczenia formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Mage.exe (narzędzie generowania manifestu i edytowania)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
+ [MageUI.exe (narzędzie generowania i edytowania manifestu, klient z interfejsem graficznym)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)

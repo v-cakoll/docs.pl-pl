@@ -17,27 +17,28 @@ caps.latest.revision: "55"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7da9803b6182ed21c25b0bb3a54cecd246587da7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d42c65207cd6bec7f6af6936589cb86745028e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="key-frame-animation-how-to-topics"></a>Animacja kluczowych klatek Tematy Pomocy
 Tematy w tej sekcji przedstawiają sposób umożliwia animować więcej niż dwóch wartości właściwości i kontroli interpolacji klatek kluczowych animacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Animowanie obiektów przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
- [Animowanie wartość logiczną przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
- [Animowanie wartość o podwójnej precyzji przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
- [Animowanie macierzy przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
- [Animowanie punkt przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
- [Animowanie geometrii prostokąt przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
- [Animowanie ciąg przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
- [Animowanie kolorów przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
- [Animowanie zmian rozmiaru przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
- [Animowanie grubość obramowania przy użyciu klucza ramki](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
- [Formant klucza ramki animacji chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
+ [Animowanie obiektu przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-by-using-key-frames.md)  
+ [Animowanie elementu boolean przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-boolean-by-using-key-frames.md)  
+ [Animowanie elementu double przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-double-by-using-key-frames.md)  
+ [Animowanie elementu Matrix przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-matrix-by-using-key-frames.md)  
+ [Animowanie punktu przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-point-by-using-key-frames.md)  
+ [Animowanie geometrii prostokąta przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-rectangle-geometry-by-using-key-frames.md)  
+ [Animowanie ciągu przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-string-by-using-key-frames.md)  
+ [Animowanie koloru przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-color-by-using-key-frames.md)  
+ [Animowanie zmian rozmiaru przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-size-changes-by-using-key-frames.md)  
+ [Animowanie grubości obramowania przy użyciu klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)  
+ [Kontrolowanie chronometrażu animacji klatek kluczowych](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-key-frame-animation-timing.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>  
@@ -47,6 +48,6 @@ Tematy w tej sekcji przedstawiają sposób umożliwia animować więcej niż dw�
  <xref:System.Windows.Media.Animation.KeyTime>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Omówienie klucza poklatkowych](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)

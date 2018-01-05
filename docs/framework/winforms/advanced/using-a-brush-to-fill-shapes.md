@@ -17,26 +17,27 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 057bc7bbfb9c1653fd4857ccc43fb6fc324e4c92
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15c68f2772357da0828bae367a80f1324b89a5bf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>Używanie pędzla do wypełniania kształtów
 A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush> obiekt jest używany do wypełniania wnętrza zamknięty kształt. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Definiuje styl wypełnienia kilka: pełnego koloru, wzorzec kreskowania tekstury obrazu i kolor gradientu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: wypełnianie kształtów jednolitym kolorem](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
+ [Instrukcje: wypełnianie kształtów jednolitym kolorem](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
  Informacje dotyczące używania pełny kolor pędzla do wypełniania kształtów.  
   
- [Porady: wypełnianie kształtów wzorem kreskowanym](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
+ [Instrukcje: wypełnianie kształtów wzorem kreskowanym](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
  Przedstawia sposób użycia kreskowania pędzla do wypełniania kształtów.  
   
- [Porady: wypełnianie kształtów teksturą obrazu](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
+ [Instrukcje: wypełnianie kształtów teksturą obrazu](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
  Wyjaśniono, jak używać tekstury pędzla do wypełniania kształtów.  
   
- [Porady: kafelka kształtu obrazem](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
+ [Instrukcje: wypełnianie kafelków w obrębie kształtu obrazem](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
  Opis kafelka obrazu w kształcie.  
   
 ## <a name="reference"></a>Tematy pomocy  

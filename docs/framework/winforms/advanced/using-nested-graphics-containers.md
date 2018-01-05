@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10c5a1b077e4339f17093e5eb935416bb1ae3d1b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 512c8903611f025364a1af2cb6cbaaffc8d759eb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-nested-graphics-containers"></a>Używanie zagnieżdżonych kontenerów grafiki
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]udostępnia kontenerów, które można użyć, aby tymczasowo zastąpić lub rozszerzyć część stanu w <xref:System.Drawing.Graphics> obiektu. Kontener można utworzyć przez wywołanie metody <xref:System.Drawing.Graphics.BeginContainer%2A> metody <xref:System.Drawing.Graphics> obiektu. Możesz wywołać <xref:System.Drawing.Graphics.BeginContainer%2A> wielokrotnie w celu utworzenia zagnieżdżone kontenery. Każde wywołanie <xref:System.Drawing.Graphics.BeginContainer%2A> muszą łączyć się z wywołania <xref:System.Drawing.Graphics.EndContainer%2A>.  
@@ -68,4 +69,4 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Graphics>  
- [Zarządzaniu stanem obiektu graficznego](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)
+ [Zarządzanie stanem obiektu graficznego](../../../../docs/framework/winforms/advanced/managing-the-state-of-a-graphics-object.md)

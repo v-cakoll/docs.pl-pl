@@ -35,11 +35,12 @@ caps.latest.revision: "69"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 73bb3a2f43c5bd91d7a107a0a053381ca7bc0559
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3a3b7d865a503189ebb5b3adadc7258603461c9b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="navigation-overview"></a>Przegląd Nawigacja
 [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]obsługuje nawigacji stylu przeglądarki, które mogą być używane w dwóch typów aplikacji: aplikacje autonomiczne i [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]. Zawartość pakietu do nawigacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] zapewnia <xref:System.Windows.Controls.Page> klasy. Można przejść z jednej <xref:System.Windows.Controls.Page> do innego deklaratywnie, za pomocą <xref:System.Windows.Documents.Hyperlink>, lub programowo, za pomocą <xref:System.Windows.Navigation.NavigationService>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]korzysta z dziennika do zapamiętania stron, które zostały przesłane z i do przejdź z powrotem do ich.  
@@ -299,19 +300,19 @@ ms.lasthandoff: 11/21/2017
 ### <a name="navigation-lifetime"></a>Okres istnienia nawigacji  
  Istnieje wiele sposobów, aby zainicjować nawigacji, w tym samouczku. Po zainicjowaniu nawigacji, a podczas nawigacji jest w toku, można śledzić i wpływ nawigacji przy użyciu następujących zdarzeń, które są implementowane przez <xref:System.Windows.Navigation.NavigationService>:  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigating>. Występuje, gdy wymagany jest nowy nawigacji. Może służyć do anulowania nawigacji.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigating>., Występuje, gdy wymagany jest nowy nawigacji. Może służyć do anulowania nawigacji.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>. Występuje okresowo podczas pobierania i udostępnia informacje o postępie nawigacji.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationProgress>., Występuje okresowo podczas pobierania i udostępnia informacje o postępie nawigacji.  
   
--   <xref:System.Windows.Navigation.NavigationService.Navigated>. Występuje, gdy strony zostało znajduje się i pobrane.  
+-   <xref:System.Windows.Navigation.NavigationService.Navigated>., Występuje, gdy strony zostało znajduje się i pobrane.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>. Występuje po zatrzymaniu nawigacji (wywołując <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), lub gdy wymagane jest nowe nawigacji w trakcie bieżącego nawigacji.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationStopped>., Występuje po zatrzymaniu nawigacji (wywołując <xref:System.Windows.Navigation.NavigationService.StopLoading%2A>), lub gdy wymagane jest nowe nawigacji w trakcie bieżącego nawigacji.  
   
--   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>. Występuje, gdy występuje błąd podczas nawigowania do żądanej zawartości.  
+-   <xref:System.Windows.Navigation.NavigationService.NavigationFailed>., Występuje, gdy występuje błąd podczas nawigowania do żądanej zawartości.  
   
--   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>. Występuje, gdy zawartość, która została przejście jest załadowany i przeanalizować i rozpoczęciu renderowania.  
+-   <xref:System.Windows.Navigation.NavigationService.LoadCompleted>., Występuje, gdy zawartość, która została przejście jest załadowany i przeanalizować i rozpoczęciu renderowania.  
   
--   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>. Występuje po rozpoczęciu nawigacji do fragmentu zawartości, która się w stanie:  
+-   <xref:System.Windows.Navigation.NavigationService.FragmentNavigation>., Występuje po rozpoczęciu nawigacji do fragmentu zawartości, która się w stanie:  
   
     -   Natychmiast Jeśli żądanego fragmentu znajduje się w bieżącej zawartości.  
   
@@ -742,9 +743,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Application.SetCookie%2A>  
  <xref:System.Windows.Application.GetCookie%2A>  
- [Omówienie zarządzania aplikacji](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
- [Identyfikatory URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
- [Informacje o strukturze nawigacji](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
- [Omówienie topologii nawigacji](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
+ [Zarządzanie aplikacjami — omówienie](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [Pakowanie URI w WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [Strukturyzowana nawigacja — omówienie](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)  
+ [Topologia nawigacji — omówienie](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/navigation-how-to-topics.md)  
  [Wdrażanie aplikacji WPF](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)

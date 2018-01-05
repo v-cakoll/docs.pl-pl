@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 817fb8d04e680335aff726db84cdfb9630b4cdf4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a2066ccce28138cfecf4e0b4574d45783a9ba4ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>Jak utworzyć ekspander za pomocą ScrollViewer
 W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls.Expander> formant, który zawiera złożone zawartości, takich jak obraz i tekst. Przykład obejmuje również zawartość <xref:System.Windows.Controls.Expander> w <xref:System.Windows.Controls.ScrollViewer> formantu.  
@@ -38,5 +39,5 @@ W tym przykładzie przedstawiono sposób tworzenia <xref:System.Windows.Controls
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Expander>  
- [Omówienie Expander](../../../../docs/framework/wpf/controls/expander-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)
+ [Ekspander — omówienie](../../../../docs/framework/wpf/controls/expander-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/expander-how-to-topics.md)

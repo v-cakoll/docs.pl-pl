@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2c2f982884177069f76ad0e96240757f8a54ea69
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79dae4a8ab2a97fe0c083defeba4c2f469dbd3c8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-activity-in-wf"></a>Aktywności migracji w WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]udostępnia <xref:System.Activities.Statements.Interop> działania do wykonywania działań, które pochodzi z działania w przepływie pracy, który jest oparty na <xref:System.Activities.Activity>. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md) sekcji.  

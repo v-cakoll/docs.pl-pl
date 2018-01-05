@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 16c43545b24f8c0290bfe993d91b7e4203ac11fa
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: acbdf1ff1f2827bf607c2f838685d5161af61fd0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-counters-and-in-process-side-by-side-applications"></a>Liczniki wydajności i wewnątrzprocesowe, równoczesne aplikacje
 Korzystanie z Monitora wydajności (Perfmon.exe), jest możliwe do odróżnienia liczników wydajności na podstawie na środowiska wykonawczego. W tym temacie opisano zmiany rejestru wymagane do włączenia tej funkcji.  

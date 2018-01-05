@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ccea982c45ab22a4b2ab81bc80c16dd472144bbe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e62fc49a8a08c79138df080246b99b6fe891162e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.TrackBar> formantu (nazywanych także "suwaka") jest używany na potrzeby nawigowaniu po dużej ilości informacji lub wizualnie dostosowywania liczbowych ustawienie. <xref:System.Windows.Forms.TrackBar> Formantu ma dwie części: thumb, znanej także jako suwaka i znaczniki osi. Stronie przycisku suwaka wchodzi w skład, którą można dostosować. Odpowiada jego położenie <xref:System.Windows.Forms.TrackBar.Value%2A> właściwości. Znaczniki są wskaźniki wizualne, które są rozmieszczone w regularnych odstępach czasu. Trackbar jest przesuwany w przyrostach, które określają i można wyrównać poziomo czy pionowo. Na przykład można użyć do kontrolowania szybkość lub mysz migania kursora dla systemu pasek śledzenia.  
@@ -34,4 +35,4 @@ Formularze systemu Windows <xref:System.Windows.Forms.TrackBar> formantu (nazywa
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.TrackBar>  
- [TrackBar — formant](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)
+ [TrackBar, kontrolka](../../../../docs/framework/winforms/controls/trackbar-control-windows-forms.md)

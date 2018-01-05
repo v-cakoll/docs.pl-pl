@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 383a93bee7a63bef966f4252ace13105d96ae505
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ba1a511442fead369fca7ca1e04a26dfacdde53b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>Zapobieganie atakom polegającym na odtwarzaniu, gdy usługa WCF jest hostowana na farmie sieci Web
 Gdy korzystanie z zabezpieczeń komunikatów usługi WCF zapobiega atakom metodą powtórzeń, tworząc NONCE poza komunikatu przychodzącego i sprawdzanie wewnętrznej `InMemoryNonceCache` czy wygenerowany identyfikator JEDNORAZOWY jest obecny. Jeśli tak jest, komunikat zostanie odrzucony jako powtarzania. Gdy usługa WCF jest obsługiwana w kolektywie serwerów sieci web, ponieważ `InMemoryNonceCache` nie jest udostępniana między węzłami w farmie sieci web, usługa jest narażony na ataki.  Aby ograniczyć ten scenariusz WCF 4.5 udostępnia punkt rozszerzalności umożliwiający implementowanie własne współużytkowanej pamięci podręcznej identyfikator JEDNORAZOWY przez wyprowadzanie klasy z klasy abstrakcyjnej <xref:System.ServiceModel.Security.NonceCache>.  
@@ -27,4 +28,4 @@ Gdy korzystanie z zabezpieczeń komunikatów usługi WCF zapobiega atakom metod�
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczenia komunikatów](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)  
- [Element SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)
+ [SymmetricSecurityBindingElement](../../../../docs/framework/wcf/diagnostics/wmi/symmetricsecuritybindingelement.md)

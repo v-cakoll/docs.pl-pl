@@ -17,11 +17,12 @@ caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: da7cb5e30cd4c8c5bf59c45b5e38d766990275b7
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 56744318e6ea29350fd02d1cb35e49e566894a23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-contract-names"></a>Nazwy kontraktów danych
 Czasami klientem a usługą nie mają takich samych typach. One nadal przekazują dane do siebie, tak długo, jak kontraktów danych są równoważne po obu stronach. [Równoważność kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md) opiera się na kontrakt danych i nazwy elementów członkowskich danych, i w związku z tym mechanizm jest dostępne do mapowania typów i członków tych nazw. W tym temacie opisano reguły dotyczące nazw kontraktów danych, a także domyślne zachowanie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] infrastruktury podczas tworzenia nazwy.  

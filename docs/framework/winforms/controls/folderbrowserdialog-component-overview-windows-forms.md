@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d7fab1dbe01c5b21e510841b1541150f6152ab0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 26d2b6294a503edd25b499da2ab67739cdf87174
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog — Informacje o składniku (Formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.FolderBrowserDialog> składnik jest modalne okno dialogowe służy do przeglądania i wybierz foldery. Można również tworzyć nowe foldery z poziomu <xref:System.Windows.Forms.FolderBrowserDialog> składnika.  
@@ -36,5 +37,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.FolderBrowserDialog> skła
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
- [Porady: Wybieranie składnika FolderBrowserDialog formularzy folderów z systemu Windows](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
- [FolderBrowserDialog — składnik](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)
+ [Instrukcje: wybieranie folderów za pomocą składnika FolderBrowserDialog formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
+ [FolderBrowserDialog, składnik](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-windows-forms.md)

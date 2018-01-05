@@ -13,11 +13,12 @@ ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4560988445b91939deef84211a1c8c13ed938560
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d5fc41473c4a3ea812013ee7e5204c22d0a694d7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-obsolete-in-the-net-framework-class-library"></a>Jaki &#39; s przestarzałe w bibliotece klas programu .NET Framework
 .NET Framework zmienia się wraz z upływem czasu. Każda nowa wersja dodaje nowe typy i elementy członkowskie typu, które zapewniają nowe funkcje. Istniejących typów i ich elementy członkowskie także ulec zmianie. Na przykład niektóre typy stają się mniej ważne technologii, które obsługują zastępuje to nowa technologia, a niektóre metody są zastępowane przez nowszą metod, które są bardziej wygodne lub zaawansowanych funkcji.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/18/2017
 ## <a name="obsolete-lists-for-the-net-framework-45-and-46"></a>Przestarzałe list dla programu .NET Framework 4.5 i 4.6  
  [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)  
   
- [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md)  
+ [Przestarzałe elementy członkowskie](../../../docs/framework/whats-new/obsolete-members.md)  
   
 ## <a name="obsolete-lists-for-previous-versions"></a>Przestarzałe list w poprzednich wersjach  
  [Przestarzałe typy w programie .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=224224)  

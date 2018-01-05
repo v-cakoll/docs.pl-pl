@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9bc4dee8f0b2eef76e5769ae7da3a13edf7c3300
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d63e66b2458fa4ff21a227bdc2898d97e5eb30f0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-a-dependency-property"></a>Jak implementować właściwość zależności
 W tym przykładzie pokazano, jak utworzyć kopię [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] właściwości o <xref:System.Windows.DependencyProperty> pola, w związku z tym Definiowanie właściwości zależności. Podczas definiowania własnych właściwości i chcesz, aby obsługiwać wiele aspektów [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] funkcje, w tym style, powiązanie danych dziedziczenia, animacji i wartości domyślne, należy je zaimplementować jako właściwość zależności.  
@@ -44,4 +45,4 @@ W tym przykładzie pokazano, jak utworzyć kopię [!INCLUDE[TLA#tla_clr](../../.
   
 ## <a name="see-also"></a>Zobacz też  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)

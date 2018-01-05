@@ -18,18 +18,19 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: fa929e36128086466f9b5843b617bb2363fd7672
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2831055ea0c99aa029b8f5ce8f15460304ec3c44
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-how-to-topics"></a>Właściwości Tematy porad
 ## <a name="in-this-section"></a>W tej sekcji  
  [Implementowanie właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [Dodaj typ właściciela dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [Zarejestruj dołączona właściwość](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [Zastępowanie metadanych dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+ [Dodawanie typu właściciela dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [Rejestrowanie dołączonej właściwości](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
+ [Przesłanianie metadanych dla właściwości zależności](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.DependencyProperty>  

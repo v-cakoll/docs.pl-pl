@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: c49d05a9ca09a12044c0846db381368166e105bd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 86d90e4129f089a77e51e6e58233a1087fe5d0f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-windows-service-applications"></a>Porady: debugowanie aplikacji usług systemu Windows
 Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a nie z poziomu programu Visual Studio. Z tego powodu debugowania usługi nie jest równie proste jak debugowanie różnych typów aplikacji Visual Studio. Aby debugować usługi, należy uruchomić usługę i następnie dołączyć do procesu, w którym jest uruchomiony. Można następnie Debuguj aplikację przy użyciu wszystkich standardowych funkcji debugowania programu Visual Studio.  
@@ -123,6 +124,6 @@ Usługa musi być uruchamiane w kontekście Menedżera sterowania usługami, a n
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie do aplikacji usług systemu Windows](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)  
- [Porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Porady: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Instrukcje: instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Instrukcje: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
  [Debugowanie usługi](http://msdn.microsoft.com/library/windows/desktop/ms682546.aspx)

@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f6fc37658606d5617334e02fd838a9c9fc679a1e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 59811a18dc2b111ac429207cbf338d05963727af
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>Porady: konfiguracja marginesów zaznaczania MenuStrip i marginesów obrazu
 Można dostosować <xref:System.Windows.Forms.MenuStrip> przez ustawienie <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowImageMargin%2A> i <xref:System.Windows.Forms.ToolStripDropDownMenu.ShowCheckMargin%2A> właściwości w różnych kombinacjach.  
@@ -46,5 +47,5 @@ Można dostosować <xref:System.Windows.Forms.MenuStrip> przez ustawienie <xref:
  <xref:System.Windows.Forms.MenuStrip>  
  <xref:System.Windows.Forms.ContextMenuStrip>  
  <xref:System.Windows.Forms.ToolStripDropDown>  
- [ToolStrip — formant](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
- [Porady: Włączanie marginesów zaznaczania i marginesów obrazów w formantach ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+ [ToolStrip, kontrolka](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)  
+ [Instrukcje: włączanie marginesów zaznaczania i marginesów obrazów w kontrolkach ContextMenuStrip](../../../../docs/framework/winforms/controls/how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

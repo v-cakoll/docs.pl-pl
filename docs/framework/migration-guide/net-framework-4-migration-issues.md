@@ -11,11 +11,12 @@ ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: mariaw
 manager: wpickett
-ms.openlocfilehash: a959e49fe4b400efc93de382837741083085de9c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: mariaw
+ms.openlocfilehash: b92299279e57a0662f7438cad7c6009d53bda9ee
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="net-framework-4-migration-issues"></a>Problemy przy migracji programu .NET framework 4
 
@@ -25,7 +26,7 @@ W tym temacie opisano znaczące zmiany w następujących obszarach:
 
 * [ASP.NET i sieć Web](#asp-net-and-web)
 
-* [Podstawowe](#core)
+* [Funkcje podstawowe](#core)
 
 * [Dane](#data)
 
@@ -124,7 +125,7 @@ Namespace: <xref:System.Reflection>; zestaw: mscorlib (w bibliotece mscorlib.dll
 | **Algorytmy wyznaczania wartości skrótu zestawu** | <xref:System.Reflection.AssemblyName.HashAlgorithm> Zwraca teraz właściwości <xref:System.Configuration.Assemblies.AssemblyHashAlgorithm>, ponieważ środowisko uruchomieniowe nie może określić algorytm wyznaczania wartości skrótu przywoływanego zestawu, gdy zestaw nie został załadowany. (Dotyczy to przy użyciu właściwości na przywoływanego zestawu, takim jak zwracany przez <xref:System.Reflection.Assembly.GetReferencedAssemblies%2A> metody.) | Brak. |
 | **Podczas ładowania zestawu** | Aby zapobiec nadmiarowe ładowania zestawów i zapisać wirtualnej przestrzeni adresowej, CLR teraz ładuje zestawów przy użyciu tylko Win32 `MapViewOfFile` funkcji. Nie będzie również wywołuje `LoadLibrary` funkcji.<br><br>Ta zmiana wpływa na aplikacje do diagnozowania w następujący sposób:<br><br>* A <xref:System.Diagnostics.ProcessModuleCollection> nie będzie zawierać wszystkie moduły z biblioteki klas (plik dll), uzyskany w wyniku wywołania `Process.GetCurrentProcess().Modules`.<br>* Win32 — aplikacje używające `EnumProcessModules` funkcji nie będą widzieć wszystkie zarządzane moduły wymienione na liście. | Brak. |
 | **Deklarowanie typu** | <xref:System.Type.DeclaringType> Właściwość teraz prawidłowo zwraca wartość null, jeśli typ nie ma typ deklarujący. | Brak. |
-| **Obiekty delegowane** | Delegat teraz zgłasza <xref:System.ArgumentNullException> zamiast <xref:System.NullReferenceException> po wartości null jest przekazywany do konstruktora delegata. | Upewnij się, że wszystkie wyjątki obsługi działania catch <xref:System.ArgumentNullException>. |
+| **Delegaci** | Delegat teraz zgłasza <xref:System.ArgumentNullException> zamiast <xref:System.NullReferenceException> po wartości null jest przekazywany do konstruktora delegata. | Upewnij się, że wszystkie wyjątki obsługi działania catch <xref:System.ArgumentNullException>. |
 | **Zmień lokalizację pamięci podręcznej GAC** | Dla zestawów platformy .NET Framework 4 Globalna pamięć podręczna zestawów został przeniesiony z katalogu systemu Windows (% WINDIR %) w podkatalogu Microsoft.Net (*% WINDIR %\\Microsoft.Net*). Zestawy z wcześniejszych wersji pozostają w starszych katalogu.<br><br>Niezarządzane [asm_cache_flags —](https://msdn.microsoft.com/library/ms231621(v=vs.100).aspx) wyliczenie zawiera nowe `ASM_CACHE_ROOT_EX` flagi. Ta flaga pobiera lokalizację pamięci podręcznej dla zestawów platformy .NET Framework 4, których można uzyskać przez [GetCachePath](/dotnet/framework/unmanaged-api/fusion/getcachepath-function) funkcji. | Brak, przy założeniu, że aplikacje nie używają jawne ścieżek do zestawów, który nie jest zalecanym rozwiązaniem. |
 | **Narzędzie Global assembly cache** | [Gacutil.exe (narzędzie globalnej pamięci podręcznej zestawów)](https://msdn.microsoft.com/library/ex0ss12c(v=vs.100).aspx) nie obsługuje już podglądu wtyczki powłoki. | Brak. |
 

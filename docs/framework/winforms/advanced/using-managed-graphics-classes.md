@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a53d5d4961e191ae3f3b821641e3f4b161cddf1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2a34e2726182c194882d94fe4b8d1164993d8284
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-managed-graphics-classes"></a>Używanie zarządzanych klas grafiki
 W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] interfejsu API w ramach zarządzanej klasy.  
@@ -39,7 +40,7 @@ W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../..
  [Używanie pędzla gradientów do wypełniania kształtów](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
  Przedstawia sposób tworzenia i używania różnych typów pędzle gradientów.  
   
- [Praca z obrazami, mapami bitowymi, ikony i metapliki](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
+ [Praca z obrazami, mapami bitowymi, ikonami i metaplikami](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)  
  Demonstracja tworzenia obrazów i manipulowania nimi.  
   
  [Przenikanie alfa linii i wypełnień](../../../../docs/framework/winforms/advanced/alpha-blending-lines-and-fills.md)  
@@ -54,7 +55,7 @@ W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../..
  [Konstruowanie i rysowanie ścieżek](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)  
  Przedstawia sposób tworzenia dane przy użyciu ścieżki.  
   
- [Używanie przekształceń w zarządzanym GDI +](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
+ [Używanie przekształceń w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-transformations-in-managed-gdi.md)  
  Pokazuje przekształcenia macierzowe.  
   
  [Używanie kontenerów grafiki](../../../../docs/framework/winforms/advanced/using-graphics-containers.md)  
@@ -66,7 +67,7 @@ W poniższych tematach opisano sposób użycia [!INCLUDE[ndptecgdiplus](../../..
  [Ponowne kolorowanie obrazów](../../../../docs/framework/winforms/advanced/recoloring-images.md)  
  Przedstawia różne aspekty manipulowanie kolorów.  
   
- [Używanie kodeków obrazu w zarządzanym GDI +](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ [Używanie kodeków obrazu w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
  Pokazują, jak używać kodeków obrazu do manipulowania obrazów.  
   
  [Podwójnie buforowana grafika](../../../../docs/framework/winforms/advanced/double-buffered-graphics.md)  

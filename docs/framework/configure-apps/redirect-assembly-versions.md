@@ -19,11 +19,12 @@ caps.latest.revision: "26"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 7446c43deff85e1a15288c0c847c9e3646870b72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 Można przekierować powiązanie kompilacji odwołania do zestawów platformy .NET Framework, zestawy innych firm lub zestawy własnych aplikacji. Można przekierować aplikację, aby użyć innej wersji zestawu na kilka sposobów: za pomocą zasad wydawcy, za pomocą pliku konfiguracji aplikacji; lub za pomocą pliku konfiguracji komputera. W tym artykule omówiono sposób działania powiązań zestawów w programie .NET Framework i jak można je skonfigurować.  
@@ -162,14 +163,14 @@ Można przekierować powiązanie kompilacji odwołania do zestawów platformy .N
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
+ [Instrukcje: włączanie i wyłączanie automatycznego przekierowania powiązań](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
  [\<w parametrze bindingRedirect > — Element](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)  
- [Uprawnienie zabezpieczeń przekierowania powiązania zestawu](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Uprawnienia zabezpieczeń przekierowania powiązania zestawu](../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)  
+ [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
- [Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
  [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
- [Porady: Tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)
+ [Instrukcje: tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

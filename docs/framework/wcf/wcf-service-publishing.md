@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 526544118432eb263cc856931d9f4943b9918d93
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługa publikowania pomaga w postępu wczesne środowiska programowania dostarczonych przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego faktycznie wdrażanie aplikacji w środowisku produkcyjnym do celów testowych. Przed dokonaniem planu wdrożenia końcowego można użyć [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi publikowania, aby sprawdzić, czy Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa wykonuje poprawnie i jest gotowy do opublikowania. Można również wdrożyć Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi biblioteki do testowania różnych miejsc docelowych.  
@@ -81,6 +82,6 @@ ms.lasthandoff: 12/02/2017
  Publikowanie do lokalnych usług IIS wymaga uprawnień administratora, ponieważ wymaga usług IIS uruchomiona na koncie administratora. Jeśli użytkownik bez uprawnień administratora otwiera [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] publikowania usługi, usługi IIS nie jest dostępny jako lokalizację docelową. Publikowanie do systemu plików lub witrynę FTP działa bez uprawnień administratora.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Szablony programu Visual Studio na potrzeby programu WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
  [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [Klienta testowego WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+ [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

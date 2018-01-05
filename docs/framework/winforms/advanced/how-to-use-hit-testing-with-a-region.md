@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: adc55d137a5578dbe8649afa02ab8525d4913cd8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7c0766c989df7c2329aa4d36af834378b02b1301
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-hit-testing-with-a-region"></a>Porady: stosowanie testowania trafień za pomocą obszaru
 Celem testowania trafień jest ustalenie, czy kursor znajduje się nad danego obiektu, takie jak ikony lub przycisku.  
@@ -39,5 +40,5 @@ Celem testowania trafień jest ustalenie, czy kursor znajduje się nad danego ob
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Region>  
- [Regiony w GDI +](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
- [Porady: stosowanie przycinania za pomocą obszaru](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)
+ [Regiony w GDI+](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ [Instrukcje: stosowanie przycinania za pomocą obszaru](../../../../docs/framework/winforms/advanced/how-to-use-clipping-with-a-region.md)

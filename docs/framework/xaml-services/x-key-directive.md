@@ -21,11 +21,12 @@ caps.latest.revision: "25"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5e2ad03fcb52db1ffdd01849381a392187082991
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2c73cf28905e1dd0f3056ab0eed953d6f05b0a7f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xkey-directive"></a>x:Key — dyrektywa
 Identyfikuje elementy, które są tworzone i przywoływany w słowniku zdefiniowany w języku XAML. Dodawanie `x:Key` wartość do elementu obiektu XAML jest najczęściej do identyfikacji zasobu w słowniku zasobów, na przykład na platformie WPF <xref:System.Windows.ResourceDictionary>.  
@@ -121,6 +122,6 @@ keyObject
  `x:Key`dla programu Silverlight jest udokumentowany oddzielnie. Aby uzyskać więcej informacji, zobacz [Namespace XAML (x:) Funkcje języka (platformy Silverlight)](http://go.microsoft.com/fwlink/?LinkId=199081).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zasoby dla języka XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)  
+ [Zasoby XAML](../../../docs/framework/wpf/advanced/xaml-resources.md)  
  [Zasoby i kod](../../../docs/framework/wpf/advanced/resources-and-code.md)  
- [Rozszerzenie StaticResource znaczników](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+ [StaticResource, rozszerzenie znaczników](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)

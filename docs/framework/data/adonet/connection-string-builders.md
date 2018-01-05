@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 836742264e44c4cb13f97a3528177080bd10c364
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a782969502509cb766e3a1d38222118a352dc3db
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="connection-string-builders"></a>Konstruktorzy ciągów połączenia
 W starszych wersjach [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)], kompilacji Sprawdzanie parametrów połączenia z połączony ciąg wartości nie zostało przeprowadzone, dzięki czemu w czasie wykonywania, generowane jest niepoprawna — słowo kluczowe <xref:System.ArgumentException>. Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawców danych obsługę różnych składni słowa kluczowe parametrów połączenia, które konstruowania trudne ciągi prawidłowe połączenie, jeśli jest wykonywane ręcznie. Aby rozwiązać ten problem, [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono nowe konstruktorów ciągu połączenia dla każdego [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych. Każdy dostawca danych obejmują dziedziczący z klasy konstruktora ciąg połączenia jednoznacznie <xref:System.Data.Common.DbConnectionStringBuilder>. W poniższej tabeli wymieniono [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych i ich skojarzonych z połączeniami ciągu konstruktora klasy.  
@@ -90,6 +91,6 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Parametry połączenia](../../../../docs/framework/data/adonet/connection-strings.md)  
+ [Parametry połączeń](../../../../docs/framework/data/adonet/connection-strings.md)  
  [Bezpieczeństwo danych i poufności informacji](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

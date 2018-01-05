@@ -17,23 +17,24 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="grid-how-to-topics"></a>Siatka Tematy porad
 W tematach w tej sekcji opisano położenie elementów za pomocą <xref:System.Windows.Controls.Grid> elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Utworzyć okno dialogowe standardowego interfejsu użytkownika przy użyciu siatki](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [Tworzenie złożonych siatki](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
+ [Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [Tworzenie siatki złożonej](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
  [Tworzenie elementu siatki](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
  [Tworzenie i używanie obiektu GridLengthConverter](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [Manipulowanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Położenie elementów podrzędnych siatki](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [Udostępnianie zmiany rozmiaru właściwości między siatki](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Ustawianie położenia elementów podrzędnych siatki](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
+ [Udostępnianie właściwości ustalania rozmiaru między siatkami](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -53,6 +54,6 @@ W tematach w tej sekcji opisano położenie elementów za pomocą <xref:System.W
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Omówienie ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

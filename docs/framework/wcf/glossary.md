@@ -16,11 +16,12 @@ caps.latest.revision: "243"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 49ed554c7bfea024acce6a6dc6d32db44a6e91f5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Słownik programu Windows Communication Foundation dla platformy .NET Framework 4.5
 Poniższe terminy są definiowane dla dokumentacji Windows Communication Foundation.  
@@ -49,7 +50,7 @@ Poniższe terminy są definiowane dla dokumentacji Windows Communication Foundat
 |Inicjowanie operacji|Operacja, która jest wywoływana jako pierwszą operacją nowej sesji. Operacje inicjowania nie można wywołać tylko wtedy, gdy co najmniej jedną operację inicjujący została wywołana.|  
 |Tworzenie wystąpienia modelu|Usługa ma wystąpień modelu. Istnieją trzy modele wystąpień: &quot;pojedynczego,&quot; w którym pojedynczego obiektu CLR usług wszystkich klientów; &quot;na wywołanie,&quot; , w której jest tworzony nowy obiekt CLR do obsługi każdego wywołania klienta; i &quot;sesji,&quot; w które obiekty Zestaw CLR, są tworzone, jeden dla każdej sesji oddzielne. Wybór wystąpień modelu zależy od wymagań aplikacji i wzorzec oczekiwane wykorzystanie usługi.|  
 |— komunikat|Komunikat jest samodzielna jednostka danych, która może składać się z kilku części, łącznie z treści i nagłówków.|  
-|kontrakt komunikatów|Kontakt komunikat opisuje format komunikatu. Na przykład deklaruje, czy elementy wiadomości powinny przejść w nagłówkach i treści, jaki poziom zabezpieczeń powinny być stosowane do elementy wiadomości i tak dalej.|  
+|kontrakt komunikatów|Kontrakt komunikatu opisuje format komunikatu. Na przykład deklaruje, czy elementy wiadomości powinny przejść w nagłówkach i treści, jaki poziom zabezpieczeń powinny być stosowane do elementy wiadomości i tak dalej.|  
 |Tryb zabezpieczeń komunikatów|Tryb zabezpieczeń wiadomości określa, że zabezpieczenia dzięki implementacji co najmniej jednego wymagania zabezpieczeń. Każdy komunikat zawiera mechanizmy niezbędne do zapewnienia bezpieczeństwa podczas jego przesyłania i umożliwienie odbiorcy przed naruszeniem i do odszyfrowywania wiadomości. W tym sensie zabezpieczeń jest hermetyzowany w każdej wiadomości, zapewniając zabezpieczeń na trasie między wieloma przeskokami. Ponieważ informacje o zabezpieczeniach staje się częścią komunikatu, również jest może zawierać wiele rodzajów poświadczeń z komunikatu (te są określane jako oświadczenia). Takie podejście charakteryzuje się również korzystać z włączeniem komunikat, aby bezpiecznie są przesyłane za pośrednictwem żadnych transportu, w tym wiele transportów między jego źródło i miejsce docelowe. Wadą tego podejścia jest złożoność mechanizmów kryptograficznych zatrudnionych, co powoduje wpływ na wydajność.|  
 |metadane|Metadane usługi opisano charakterystyki usługę jednostki zewnętrznej trzeba poznać, aby komunikować się z usługą. Metadane mogą być używane przez narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe) do generowania klienta WCF i towarzyszące konfiguracji, który aplikacja kliencka służy do interakcji z usługą.  Metadane udostępnianych przez usługę obejmuje dokumentach schematów XML, których definiowanie kontraktu danych usługi, i dokumentów WSDL, których opisano metody usługi.  Po włączeniu metadanych dla usługi jest automatycznie generowany przez WCF sprawdzając usługę i jej punkty końcowe. Publikowanie metadanych z usługą, musisz jawnie włączyć zachowanie metadanych.|  
 |Kontrakt operacji|Kontrakt operacji określa parametry oraz zwracany typ operacji. Podczas tworzenia interfejs, który definiuje kontrakt usługi, kontrakt operacji oznaczającego się przez zastosowanie atrybutu T:System.ServiceModel.OperationContractAttribute do każdej definicji metody, która jest częścią kontraktu. Operacje mogą być modelowane jako pobieranie pojedynczej wiadomości i zwracanie pojedynczej wiadomości lub biorąc zestaw typów i zwracanie typu. W drugim przypadku system Określa format wiadomości, które są wymieniane dla tej operacji.|  

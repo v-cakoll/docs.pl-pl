@@ -13,11 +13,12 @@ ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 2c8c7f8c4d4c7c882f4f295b13fa4add3a11582f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.workload: dotnet
+ms.openlocfilehash: 410b885daac00cd6da949b285721c206facb7079
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -57,7 +58,7 @@ Możesz wybrać docelową programu .NET Framework 4.7.1 w programie Visual Studi
 
 .NET Framework 4.7.1 zawiera nowe funkcje w następujących obszarach:
  
-- [Podstawowe](#core471)
+- [Funkcje podstawowe](#core471)
 - [Środowisko uruchomieniowe języka wspólnego (CLR)](#clr)
 - [Sieci](#net471)
 - [ASP.NET](#asp-net471) 
@@ -141,11 +142,11 @@ W .NET Framework 4.7 i starszych wersji platformy ASP.NET mogą deweloperów do 
 
 .NET Framework 4.7 zawiera nowe funkcje w następujących obszarach:
 
-- [Podstawowe](#Core47)
+- [Funkcje podstawowe](#Core47)
 - [Sieci](#net47)
 - [ASP.NET](#ASP-NET47)
 - [Windows Communication Foundation (WCF)](#wcf47)
-- [Formularze systemu Windows](#wf47)
+- [Windows Forms](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
 Aby uzyskać listę nowych interfejsów API dodane do .NET Framework 4.7, zobacz [zmiany interfejsu API programu .NET Framework 4.7](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md) w witrynie GitHub. Aby uzyskać listę ulepszenia funkcji i poprawek w .NET Framework 4.7, zobacz [.NET Framework 4.7 Lista zmian](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md) w witrynie GitHub.  Aby uzyskać dodatkowe informacje, zobacz [Announcing .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/) w blogu .NET.
@@ -672,7 +673,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - [Windows Presentation Foundation (WPF)](#WPF461)
 
-- [Program Windows Workflow Foundation](#WWF461)
+- [Windows Workflow Foundation](#WWF461)
 
 - [Profilowanie](#Profile461)
 

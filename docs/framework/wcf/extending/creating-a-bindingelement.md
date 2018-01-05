@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: bdd547a62391d11050071e1ede648b28c28bd3f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0184d07210322e6ed04441f7190857cf07205b15
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-bindingelement"></a>Tworzenie elementu BindingElement
 Powiązania i elementy powiązań (obiekty, które rozszerzają <xref:System.ServiceModel.Channels.Binding?displayProperty=nameWithType> i <xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>odpowiednio) są miejsce gdzie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model aplikacji jest skojarzony z fabryk kanałów i odbiorników kanału. Bez powiązania, za pomocą niestandardowych kanałów wymaga programowania na poziomie kanału zgodnie z opisem w [programowania na poziomie kanału usługi](../../../../docs/framework/wcf/extending/service-channel-level-programming.md) i [programowania na poziomie kanału klienta](../../../../docs/framework/wcf/extending/client-channel-level-programming.md). W tym temacie omówiono wymagania minimalne, aby włączyć za pomocą kanału w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], rozwoju <xref:System.ServiceModel.Channels.BindingElement> kanału i Włącz użycie z aplikacji, zgodnie z opisem w kroku 4 [kanały rozwijających się](../../../../docs/framework/wcf/extending/developing-channels.md).  
@@ -69,11 +70,11 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
 #### <a name="encoding-binding-elements"></a>Kodowanie elementów wiązania  
  Do tworzenia nowych kodowanie powiązania elementów, Rozpocznij od rozszerzanie <xref:System.ServiceModel.Channels.BindingElement> klasy i wdrażanie <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> klasy. Co najmniej, następnie należy zaimplementować <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>, <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> metod i <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> właściwości.  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. Zwraca nową kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>., Zwraca nową kopię tego elementu powiązania. Najlepszym rozwiązaniem, zaleca się wdrożenie autorów elementu powiązania <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> przy użyciu konstruktora kopiującego, który wywołuje Konstruktor kopiujący podstawowej, następnie klonów dodatkowe pola w tej klasie.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. Zwraca <xref:System.ServiceModel.Channels.MessageEncoderFactory>, zapewniające dojścia do rzeczywistego klasa implementuje kodera nowy i który powinien być rozszerzany <xref:System.ServiceModel.Channels.MessageEncoder>. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Channels.MessageEncoderFactory> i <xref:System.ServiceModel.Channels.MessageEncoder>.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>., Zwraca <xref:System.ServiceModel.Channels.MessageEncoderFactory>, zapewniające dojścia do rzeczywistego klasa implementuje kodera nowy i który powinien być rozszerzany <xref:System.ServiceModel.Channels.MessageEncoder>. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.Channels.MessageEncoderFactory> i <xref:System.ServiceModel.Channels.MessageEncoder>.  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. Zwraca <xref:System.ServiceModel.Channels.MessageVersion> używane kodowanie, który reprezentuje wersje protokołu SOAP i WS-Addressing w użyciu.  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>., Zwraca <xref:System.ServiceModel.Channels.MessageVersion> używane kodowanie, który reprezentuje wersje protokołu SOAP i WS-Addressing w użyciu.  
   
  Pełna lista opcjonalny metody i właściwości zdefiniowane przez użytkownika elementy powiązania kodowania, zobacz <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>.  
   

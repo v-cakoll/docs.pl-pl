@@ -16,17 +16,18 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 94296e623407aad2fecb52b9e6ece7500778931b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 70eb72b8755b24e0ee91c2a77b562984422b0c99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-forms-accessibility"></a>Dostępność formularzy systemu Windows
 Funkcje ułatwień dostępu formularzy systemu Windows umożliwia udostępnia wiele różnych użytkowników aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Wskazówki: Tworzenie dostępny aplikacji systemu Windows](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
+ [Przewodnik: tworzenie dostępnej aplikacji bazującej na systemie Windows](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)  
  W tym artykule opisano wszystkie funkcje powinna obsługiwać Aby zwiększyć dostępność.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -37,8 +38,8 @@ Funkcje ułatwień dostępu formularzy systemu Windows umożliwia udostępnia wi
  Zawiera informacje, które umożliwiają dostosowanie interfejsu użytkownika (UI) aplikacji dla użytkowników z wzroku aplikacji ułatwień dostępu.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Dostarczanie informacji ułatwień dostępu dla formantów w formularzu systemu Windows](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
+ [Podawanie informacji o ułatwieniach dostępu dotyczących kontrolek w formularzu systemu Windows](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
  Opisuje sposób dostarczania informacji formanty formularzy systemu Windows można użyć do świadczenia użytkownikom z wzroku pomocy.  
   
- [Automatyczne skalowanie w formularzach systemu Windows](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
+ [Automatyczne skalowanie w formularzach Windows Forms](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md)  
  Opisuje sposób aplikacji reagowania na zmiany w rozmiarze czcionki systemu formularzy systemu Windows.

@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a3cad92c204fa10f72d7a9a61460f1234206cb39
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 46208d6db716f7e1e7a443d958c059b22f74c46f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hosting-interfaces"></a>Hosting — Interfejsy
 W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
@@ -33,7 +34,7 @@ W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć
  [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] Interfejsy hostingu zastępują interfejsy .NET Framework 2.0.
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przestarzałe hostingu interfejsy i współklasy środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
+ [Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-interfaces-and-coclasses.md)  
  Opisuje interfejsy hostingu, wprowadzona w wersji systemu .NET Framework 1.0 i 1.1.  
   
  [Interfejsy hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces.md)  
@@ -45,11 +46,11 @@ W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Współklasy hostingu](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)  
   
- [Przestarzałe funkcje hostingu środowiska CLR.](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
+ [Przestarzałe funkcje hostingu środowiska CLR](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)  
   
  [Hosting — wyliczenia](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)  
   
- [Hosting — struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
   
  [Hosting](../../../../docs/framework/unmanaged-api/hosting/index.md)  
   

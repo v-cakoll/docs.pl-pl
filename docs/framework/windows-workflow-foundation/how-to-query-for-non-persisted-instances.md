@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b1957db5af18a571e209c62332e95d844fa866f4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: bde3ab1049edf6cb52a221225321f1e505a2491b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-query-for-non-persisted-instances"></a>Porady: zapytanie o-utrwalony wystąpień
 Po utworzeniu nowego wystąpienia usługi, a usługa zachowanie magazynu wystąpienia przepływu pracy SQL zdefiniowane, host usługi tworzy początkowej wpis dla tego wystąpienia usługi w magazynie wystąpień. Następnie, gdy wystąpienie usługi będzie nadal występować po raz pierwszy, zachowanie magazynu wystąpienia przepływu pracy SQL przechowuje bieżący stan wystąpienia oraz dodatkowe dane, które jest wymagane dla aktywacji, odzyskiwania i kontroli.  

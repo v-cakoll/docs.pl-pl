@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cd96404adea7fb8e7d59dcea322b2d3832f2bfe4
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: df2a7a78e876ec3228491569c918ad9add2e080d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replay-attacks"></a>Ataki oparte na metodzie powtórzeń
 A *powtarzania ataku* występuje, gdy osoba atakująca kopiuje strumienia komunikatów między dwiema stronami i odtwarzaniem strumienia do jednego lub więcej stron. Chyba że skorygowane, komputery mogą ulec ataku przetworzyć strumienia jako istotnych wiadomości, co w zakresie zły konsekwencje, takie jak nadmiarowe zamówień elementu.  
@@ -47,8 +48,8 @@ A *powtarzania ataku* występuje, gdy osoba atakująca kopiuje strumienia komuni
 -   Skonfiguruj usługę, aby użyć zabezpieczeń na poziomie transportu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zagadnienia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
- [Ujawnienie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [Zagadnienia dotyczące bezpieczeństwa](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [Ujawnianie informacji](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  [Podniesienie uprawnień](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  [Odmowa usługi](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  [Manipulowanie](../../../../docs/framework/wcf/feature-details/tampering.md)  

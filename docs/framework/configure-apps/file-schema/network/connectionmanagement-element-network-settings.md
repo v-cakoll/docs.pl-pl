@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e3380ce1e8e798740214feee0e76d9949caa6bc9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 700d06d22c76762c80ea877006a8ac3789052b14
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionmanagement —&gt; — Element (ustawienia sieciowe)
 Określa maksymalną liczbę połączeń z hostem sieci.  
@@ -49,9 +50,9 @@ Określa maksymalną liczbę połączeń z hostem sieci.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[Dodaj](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Dodaje adres IP lub nazwa DNS do listy zarządzania połączenia.|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|Dodaje adres IP lub nazwa DNS do listy zarządzania połączenia.|  
 |[Wyczyść](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|Usuwa listy zarządzania połączenia.|  
-|[Usuń](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Usuwa adres IP lub nazwa DNS z listy zarządzania połączenia.|  
+|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|Usuwa adres IP lub nazwa DNS z listy zarządzania połączenia.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   

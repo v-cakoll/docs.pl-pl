@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7a8a2d5a13cac97063bf2a04969928c859a5954d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c020e5f7306e73ee97dff0b492b04b5a153059cd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-fill-open-figures"></a>Porady: wypełnianie otwartych figur
 Możesz wpisać ścieżkę przez przekazanie <xref:System.Drawing.Drawing2D.GraphicsPath> do obiektu <xref:System.Drawing.Graphics.FillPath%2A> metody. <xref:System.Drawing.Graphics.FillPath%2A> Metody wypełnia ścieżki zgodnie z trybu wypełnienia (alternatywnego lub zawijania) aktualnie ustawione dla ścieżki. Jeśli ścieżka zawiera wszystkie otwartych figur, ścieżka zostanie wypełniony tak, jakby te dane zostały zamknięte. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]Zamyka rysunku za pomocą rysowania linii prostej od punktu końcowego do punktu początkowego.  
@@ -43,4 +44,4 @@ Możesz wpisać ścieżkę przez przekazanie <xref:System.Drawing.Drawing2D.Grap
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Drawing.Drawing2D.GraphicsPath>  
- [Ścieżki grafiki w GDI +](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)
+ [Ścieżki grafiki w GDI+](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)

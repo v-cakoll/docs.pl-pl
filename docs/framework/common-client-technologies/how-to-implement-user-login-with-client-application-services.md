@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 909fbaa4e7dc1d384b5085d71cec346bde44cf14
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2bf073b6db0a69cfda0c69ae34df0396f5dea35c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-user-login-with-client-application-services"></a>Porady: implementowanie logowania użytkownika przy użyciu usług aplikacji klienta
 Usługi aplikacji klienta można użyć do weryfikowania użytkowników za pomocą istniejącej [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi, zobacz [przy użyciu uwierzytelniania formularzy z Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e).  
@@ -65,8 +66,8 @@ Usługi aplikacji klienta można użyć do weryfikowania użytkowników za pomoc
  Przykładowy kod w tym temacie przedstawiono najprostszym użycia uwierzytelniania w aplikacji klienta systemu Windows. Podczas wywoływania `static` <xref:System.Web.Security.Membership.ValidateUser%2A?displayProperty=nameWithType> metody za pomocą aplikacji klienckiej usług i uwierzytelnianie formularzy, jednak może zgłosić kodu <xref:System.Net.WebException>. Oznacza to, że usługa uwierzytelniania jest niedostępny. Na przykład sposobu obsługi tego wyjątku zobacz [wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługi aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services.md)  
- [Przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [Porady: Konfigurowanie usług aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
- [Wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
+ [Usługi aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services.md)  
+ [Omówienie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
+ [Instrukcje: konfigurowanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md)  
+ [Przewodnik: używanie usług aplikacji klienckich](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  
  [Korzystanie z uwierzytelniania formularzy z Microsoft Ajax](http://msdn.microsoft.com/library/c50f7dc5-323c-4c63-b4f3-96edfc1e815e)

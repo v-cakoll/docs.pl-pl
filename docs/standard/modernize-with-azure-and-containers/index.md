@@ -4,11 +4,14 @@ description: "Dowiedz się, jak Podnieś i przesunięcie istniejące aplikacje d
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
-ms.openlocfilehash: b7ef8c0e68eee3b2b4247454929e92fb175cae0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 5e1a04a0d8ed151337e00c8147756644dfc9075a
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows (1.0)  
 
@@ -197,4 +200,4 @@ Obie aplikacje przykładowe druga wersja zmodernizowanej kodu, które są bardzo
 Napisaliśmy tego przewodnika, aby ułatwić zrozumienie opcji dotyczących poprawy i modernizacji istniejących aplikacji sieci web platformy .NET. Przewodnik i powiązane przykładowe aplikacje zmieniających się. Chętnie poznamy Twoją opinię. Jeśli masz komentarze na temat sposobu w tym przewodniku pomocne może być więcej Wyślij je do [ dotnet-architecture-ebooks-feedback@service.microsoft.com ](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book).
 
 >[!div class="step-by-step"]
-[Dalej](lift-and-shift-existing-apps-azure-iaas.md)
+[Next](lift-and-shift-existing-apps-azure-iaas.md)

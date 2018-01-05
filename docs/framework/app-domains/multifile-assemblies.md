@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fead0a944b464ffd8f72dca6da33fd97404fe2d1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bded4fae854d10a17ddd03b8855f6096e18ab87f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="multifile-assemblies"></a>Zestawy wieloplikowe
 Możesz utworzyć wiele plików zestawów przy użyciu kompilatory w wierszu polecenia lub [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] z programem Visual C++. Jeden plik w zestawie musi zawierać manifest zestawu. Zestaw, który uruchamia aplikację musi również zawierać punkt wejścia, takich jak metoda Main lub WinMain.  
@@ -49,5 +50,5 @@ Możesz utworzyć wiele plików zestawów przy użyciu kompilatory w wierszu pol
  Po utworzeniu zestawu, możesz utworzyć plik, który zawiera manifest zestawu (a tym samym zestawie), lub możesz nadać silnej nazwy pliku (i zestawu) i umieścić go w pamięci podręcznej GAC.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
+ [Instrukcje: kompilacja zestawów wieloplikowych](../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md)  
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)

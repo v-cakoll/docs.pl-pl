@@ -17,11 +17,12 @@ caps.latest.revision: "20"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 26fa9471b46a7a963d66ebf0d5b3c6a0286ae640
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5583a9b81d81acfca80368ca54d5f97899daa1d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-unmanaged-api-reference"></a>Profilowanie (Niezarządzany wykaz interfejsów API)
 Interfejsu API profilowania umożliwia profilera można monitorować wykonywania programu przez środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -36,19 +37,19 @@ Interfejsu API profilowania umożliwia profilera można monitorować wykonywania
  [Konfigurowanie środowiska profilowania](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md)  
  Zawiera opis czynności, które należy wykonać, aby profilu aplikacji .NET Framework.  
   
- [Profilery CLR i aplikacji ze Sklepu Windows](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
+ [Profilery CLR i aplikacje sklepu Windows Store](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md)  
  W tym artykule omówiono sposób do portu narzędzi diagnostycznych używające API profilowania CLR działało poprawnie z aplikacji ze Sklepu Windows.  
   
- [WYNIK CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
+ [CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)  
  Dokumenty warunków, w których zwraca wywołanie metody `CORPROF_E_UNSUPPORTED_CALL_SEQUENCE` HRESULT.  
   
- [Statyczne funkcje globalne profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
  Opisuje niezarządzane statyczne funkcje globalne, które używa interfejsu API profilowania.  
   
  [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
  W tym artykule opisano niezarządzane wyliczenia, które używa interfejsu API profilowania.  
   
- [Struktury profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
+ [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)  
  W tym artykule opisano niezarządzane struktury, których używa interfejsu API profilowania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

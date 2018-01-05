@@ -4,26 +4,36 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 keywords: "Docker, Mikrousług, ASP.NET, kontenera"
 author: CESARDELATORRE
 ms.author: wiwagn
-ms.date: 05/26/2017
+ms.date: 12/11/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.topic: article
-ms.openlocfilehash: fe17b53a39ff2964cd60183e291e2936d3ba28df
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 97035f297743626c5d9b306712cefdbd8a086c51
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
 Pierwszym krokiem przy użyciu magistrali zdarzeń jest jej zasubskrybowanie mikrousług do zdarzeń, które mają być wyświetlony. Który ma się odbywać w mikrousług odbiornika.
 
-Poniższy kod proste pokazuje, co każdy odbiorca mikrousługi należy zaimplementować podczas uruchamiania usługi (to znaczy w początkową klasy), subskrybuje zdarzenia go wymaga. Na przykład mikrousługi basket.api musi subskrybować ProductPriceChangedIntegrationEvent wiadomości. Powoduje to mikrousługi żadnych zmian do ceny produktu i umożliwia mu Ostrzegaj użytkownika o zmianie w przypadku tego produktu jest w koszyku użytkownika.
+Poniższy kod proste pokazuje, co każdy odbiorca mikrousługi należy zaimplementować podczas uruchamiania usługi (to znaczy w `Startup` klasy) tak subskrybuje zdarzenia go wymaga. W takim przypadku `basket.api` mikrousługi należy zasubskrybować `ProductPriceChangedIntegrationEvent` i `OrderStartedIntegrationEvent` wiadomości. 
+
+Na przykład podczas subskrybowania `ProductPriceChangedIntegrationEvent` zdarzeń, dzięki mikrousługi koszyka pamiętać o dowolnej zmiany ceny produktu i umożliwia mu Ostrzegaj użytkownika o zmianie w przypadku tego produktu jest w koszyku użytkownika.
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent>(
-    ProductPriceChangedIntegrationEventHandler);
+
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+                   ProductPriceChangedIntegrationEventHandler>();
+
+eventBus.Subscribe<OrderStartedIntegrationEvent, 
+                   OrderStartedIntegrationEventHandler>();
+
 ```
 
 Po uruchomieniu tego kodu mikrousługi subskrybent będzie nasłuchiwać kanałami RabbitMQ. Po odebraniu żadnych wiadomości typu ProductPriceChangedIntegrationEvent, kod wywołuje program obsługi zdarzeń, która została przekazana do niej i przetwarza zdarzenia.
@@ -83,7 +93,10 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-W takim przypadku mikrousługi źródła jest proste mikrousługi CRUD, ten kod jest umieszczany po prawej w kontrolera interfejsu API sieci Web. W bardziej zaawansowanym mikrousług go można można zaimplementować w klasie commandhandler — obiekt prawym po dba oryginalnych danych.
+W takim przypadku mikrousługi źródła jest proste mikrousługi CRUD, ten kod jest umieszczany po prawej w kontrolera interfejsu API sieci Web. 
+ 
+W mikrousług bardziej zaawansowanych, takich jak przy użyciu podejścia CQRS, może być wdrożonych w `CommandHandler` klasy poziomu `Handle()` metody. 
+
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>Projektowanie niepodzielność i odporność podczas publikowania magistrali zdarzeń
 
@@ -152,57 +165,60 @@ Dla uzyskania przejrzystości poniższy przykład przedstawia całego procesu w 
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult>
-    UpdateProduct([FromBody]CatalogItem productToUpdate)
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
 {
-    var catalogItem = await _catalogContext.CatalogItems
-        .SingleOrDefaultAsync(i => i.Id == productToUpdate.Id);
+  var catalogItem = 
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
+                                                               productToUpdate.Id); 
+  if (catalogItem == null) return NotFound();
 
-    if (catalogItem == null) return NotFound();
+  bool raiseProductPriceChangedEvent = false; 
+  IntegrationEvent priceChangedEvent = null; 
 
-    bool raiseProductPriceChangedEvent = false;
+  if (catalogItem.Price != productToUpdate.Price) 
+          raiseProductPriceChangedEvent = true; 
 
-    IntegrationEvent priceChangedEvent = null;
+  if (raiseProductPriceChangedEvent) // Create event if price has changed
+  {
+      var oldPrice = catalogItem.Price; 
+      priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
+                                                                  productToUpdate.Price, 
+                                                                  oldPrice); 
+  }
+  // Update current product
+  catalogItem = productToUpdate; 
 
-    if (catalogItem.Price != productToUpdate.Price)
-        raiseProductPriceChangedEvent = true;
+  // Just save the updated product if the Product's Price hasn't changed.
+  if !(raiseProductPriceChangedEvent) 
+  {
+      await _catalogContext.SaveChangesAsync();
+  }
+  else  // Publish to event bus only if product price changed
+  {
+        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // with a local transaction
+        using (var transaction = _catalogContext.Database.BeginTransaction())
+        {
+           _catalogContext.CatalogItems.Update(catalogItem); 
+           await _catalogContext.SaveChangesAsync();
 
-    if (raiseProductPriceChangedEvent) // Create event if price has changed
-    {
-        var oldPrice = catalogItem.Price;
-        priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-            productToUpdate.Price,
-            oldPrice);
-    }
+           // Save to EventLog only if product price changed
+           if(raiseProductPriceChangedEvent) 
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
 
-    // Update current product
-    catalogItem = productToUpdate;
-    // Achieving atomicity between original DB and the IntegrationEventLog
-    // with a local transaction
+           transaction.Commit();
+        }   
 
-    using (var transaction = _catalogContext.Database.BeginTransaction())
-    {
-        _catalogContext.CatalogItems.Update(catalogItem);
+      // Publish the intergation event through the event bus
+      _eventBus.Publish(priceChangedEvent); 
 
-        await _catalogContext.SaveChangesAsync();
+      integrationEventLogService.MarkEventAsPublishedAsync(
+                                                priceChangedEvent); 
+  }
 
-        // Save to EventLog only if product price changed
-        if(raiseProductPriceChangedEvent)
-            await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
-        transaction.Commit();
-   }
-
-   // Publish to event bus only if product price changed
-
-   if (raiseProductPriceChangedEvent)
-   {
-       _eventBus.Publish(priceChangedEvent);
-       integrationEventLogService.MarkEventAsPublishedAsync(
-           priceChangedEvent);
-   }
-
-   return Ok();
+  return Ok();
 }
+
 ```
 
 Po utworzeniu zdarzenia integracji ProductPriceChangedIntegrationEvent transakcji, która przechowuje operację domeny (Aktualizacja elementów katalogu) zawiera również trwałości zdarzenia w dzienniku zdarzeń tabeli. Dzięki temu pojedynczej transakcji i zawsze będzie mógł sprawdzić, czy komunikaty o zdarzeniach zostały wysłane.
@@ -306,6 +322,9 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
+-   **Rozwidlone eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
+    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+
 -   **Zdarzenia zmiennych wiadomości**
     [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
@@ -316,7 +335,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Komunikacja pomiędzy ograniczone kontekstów**
-    [*https://msdn.microsoft.com/en-us/library/jj591572.aspx*](https://msdn.microsoft.com/en-us/library/jj591572.aspx)
+    [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
 -   **Spójność ostateczna**
     [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
@@ -331,7 +350,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Wprowadzenie Sourcing zdarzeń**
-    [*https://msdn.microsoft.com/en-us/library/jj591559.aspx*](https://msdn.microsoft.com/en-us/library/jj591559.aspx)
+    [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Bazy danych zdarzeń magazynu**. Oficjalna witryna.
     [*https://geteventstore.com/*](https://geteventstore.com/)
@@ -346,7 +365,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
      [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
 -   **Elementarz spójności danych**
-    [*https://msdn.microsoft.com/en-us/library/dn589800.aspx*](https://msdn.microsoft.com/en-us/library/dn589800.aspx)
+    [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Rick Saling. Newtona zakończenia: Dlaczego "Wszystko, co jest różne" z chmury i Internet**
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
@@ -354,7 +373,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Marek Brewera. Zakończenie później dwunastu lat: jak "Zasady" zostały zmienione**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [ *https://msdn.microsoft.com/en-us/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/en-us/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
 -   **Usługa Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)

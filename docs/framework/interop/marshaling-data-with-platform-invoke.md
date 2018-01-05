@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 71a4962029c0056287e97ea56dc02ae6cef8b603
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 24ae6da0b32cf15ee9104bd10ba5fe6bb03a9763
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="marshaling-data-with-platform-invoke"></a>Marshaling danych w wywołaniu platformy
 Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzane, aplikacji programu .NET Framework wymaga prototypu funkcji w kodzie zarządzanym, który reprezentuje niezarządzanej funkcji. Aby utworzyć prototyp, który umożliwia platformie wywołania do organizowania danych prawidłowo, należy wykonać następujące czynności:  
@@ -42,12 +43,12 @@ Aby wywoływać funkcje wyeksportowane z biblioteki niezarządzane, aplikacji pr
 |--------------------------------|-------------------------------|------------------------|-----------------|  
 |**DOJŚCIE**|**void\***|<xref:System.IntPtr?displayProperty=nameWithType>|32-bitowy na 32-bitowego systemu operacyjnego, 64-bitowy na 64-bitowych systemach operacyjnych Windows.|  
 |**BAJTÓW**|**char bez znaku**|<xref:System.Byte?displayProperty=nameWithType>|8 bitów|  
-|**KRÓTKI**|**krótki**|<xref:System.Int16?displayProperty=nameWithType>|16 bitów|  
+|**KRÓTKI**|**short**|<xref:System.Int16?displayProperty=nameWithType>|16 bitów|  
 |**WORD**|**short bez znaku**|<xref:System.UInt16?displayProperty=nameWithType>|16 bitów|  
 |**INT**|**int**|<xref:System.Int32?displayProperty=nameWithType>|32-bitowy|  
 |**UINT**|**unsigned int**|<xref:System.UInt32?displayProperty=nameWithType>|32-bitowy|  
-|**DŁUGA**|**długa**|<xref:System.Int32?displayProperty=nameWithType>|32-bitowy|  
-|**WARTOŚĆ LOGICZNA**|**długa**|<xref:System.Byte>|32-bitowy|  
+|**DŁUGA**|**long**|<xref:System.Int32?displayProperty=nameWithType>|32-bitowy|  
+|**WARTOŚĆ LOGICZNA**|**long**|<xref:System.Byte>|32-bitowy|  
 |**DWORD**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32-bitowy|  
 |**ULONG**|**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|32-bitowy|  
 |**CHAR**|**char**|<xref:System.Char?displayProperty=nameWithType>|Dekoracji z ANSI.|  

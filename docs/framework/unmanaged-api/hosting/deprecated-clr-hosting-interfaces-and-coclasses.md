@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 4714183eb79a25639dae6824a1d27eb1ca6bb009
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 0a4410814669ed329e477fbad13dac60103b1ac0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deprecated-clr-hosting-interfaces-and-coclasses"></a>Przestarzałe klasy coclass i interfejsy hostingu środowiska CLR
 W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć do integracji środowisko uruchomieniowe języka wspólnego (CLR) w wersji systemu .NET Framework 1.0 i 1.1 w swoich aplikacjach. Te interfejsy podania metod dla hosta, skonfigurować i załadować środowiska uruchomieniowego do procesu.  
@@ -31,10 +32,10 @@ W tej sekcji opisano interfejsów, które niezarządzanych hostów można użyć
  IAppDomainSetup  
  Udostępnia metody dla hosta skonfigurować <xref:System.AppDomain>.  
   
- [ICeeFileGen — klasa](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
+ [ICeeFileGen, klasa](../../../../docs/framework/unmanaged-api/hosting/iceefilegen-class.md)  
  (Przestarzałe) Udostępnia funkcje tworzenia natywnych przenośnego (PE) pliku wykonywalnego.  
   
- [ICorRuntimeHost — interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
+ [ICorRuntimeHost, interfejs](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)  
  Udostępnia metody dla hosta skonfigurować ustawienia środowiska CLR.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

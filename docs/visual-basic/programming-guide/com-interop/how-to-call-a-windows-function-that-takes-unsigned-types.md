@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 5b1a306ba694d4bbfc4719fc728112964b1ce40f
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
 Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można przejść do tych elementów członkowskich z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -77,7 +77,7 @@ Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typ
     ```  
   
     > [!CAUTION]
-    >  `UInteger`, `ULong`, `UShort`, I `SByte` typy danych nie są częścią [niezależność od języka i elementy niezależne od języka](../../../../docs/standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie może korzystać składnik który używa ich.  
+    >  `UInteger`, `ULong`, `UShort`, I `SByte` typy danych nie są częścią [niezależność od języka i elementy niezależne od języka](../../../standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie może korzystać składnik który używa ich.  
   
     > [!IMPORTANT]
     >  Wywołania do kodu niezarządzanego, takich jak interfejsu programowania aplikacji (API), system Windows udostępnia kodu na potencjalne zagrożenia bezpieczeństwa.  
@@ -87,7 +87,7 @@ Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typ
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Integer — typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Uinteger — typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
- [DECLARE — instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
- [Wskazówki: Wywoływanie Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+ [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [UInteger, typ danych](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+ [Declare, instrukcja](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Przewodnik: wywoływanie interfejsów API systemu Windows](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)

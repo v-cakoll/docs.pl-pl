@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: c5b30f1dc3ccade3028c31c57ffdab521802f086
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 272a4262295b5dd67414dd0ef6523f90b2125836
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcodebasegt-element"></a>&lt;codeBase&gt; — Element
 Określa, gdzie znaleźć środowisko uruchomieniowe języka wspólnego zestawu.  
@@ -101,4 +102,4 @@ href="URL of assembly"/>
  [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [Określanie lokalizacji zestawu](../../../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [Jak lokalizuje zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+ [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

@@ -13,11 +13,12 @@ ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 0541ecf73fb719e7d28497492626d24fad0cc6d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9ae0e11ea5780ba7b86d097029615b0b176171e0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>Przestarzali członkowie w programie .NET Framework
 W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są przestarzałe w programie .NET Framework 4.5 i nowszymi wersjami uporządkowane według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałych elementów członkowskich i zalecanych rozwiązań alternatywnych w każdym zestawie. Ten temat nie zawiera członków przestarzałe typy. Aby uzyskać listę przestarzałe typy, zobacz [przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md).  
@@ -802,5 +803,5 @@ W tabelach w tym artykule przedstawiono elementy członkowskie typu, które są 
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` Klucz rejestru działa tylko na Win9x, który nie jest obsługiwany przez tę wersję programu .NET Framework. Użyj `PerformanceData` klucz rejestru, zamiast tego. Ta właściwość zostanie usunięte z przyszłych wersji platformy.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Co to jest przestarzałe w bibliotece klas](../../../docs/framework/whats-new/whats-obsolete.md)  
+ [Przestarzałe elementy w ułatwieniach dostępu](../../../docs/framework/whats-new/whats-obsolete.md)  
  [Przestarzałe typy](../../../docs/framework/whats-new/obsolete-types.md)

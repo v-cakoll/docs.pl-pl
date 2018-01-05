@@ -31,11 +31,12 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.openlocfilehash: d24daf5520c7bfe74c09abc24a4260266e5b9c1a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 613107a13820ad71b854dcba93f21c41f2a5fa5f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="introduction-to-windows-service-applications"></a>Wprowadzenie do aplikacji usług systemu Windows
 Program Microsoft Windows services, wcześniej znana jako usługi NT umożliwiają tworzenie aplikacji wykonywalnych długotrwałe działających w ich własnej sesji systemu Windows. Tych usług można automatycznie uruchamiana podczas rozruchu komputera, może być wstrzymane i ponownie uruchomione i nie wyświetlaj interfejsu użytkownika. Te funkcje należy usług idealne do użycia na serwerze lub jeśli potrzebne jest długotrwałe funkcje, które nie koliduje z innym użytkownikom pracującym na tym samym komputerze. Można również uruchomić usług w kontekście zabezpieczeń konta określonego użytkownika, który różni się od zalogowanego użytkownika lub domyślnego konta komputera. Aby uzyskać więcej informacji o usługach i sesji systemu Windows zobacz dokumentację zestawu Windows SDK.  
@@ -91,9 +92,9 @@ Program Microsoft Windows services, wcześniej znana jako usługi NT umożliwiaj
 ## <a name="see-also"></a>Zobacz też  
  [Aplikacje usług systemu Windows](../../../docs/framework/windows-services/index.md)  
  [Architektura programowania aplikacji usług](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
- [Porady: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
- [Porady: Instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
- [Porady: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
- [Porady: debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
- [Wskazówki: Tworzenie aplikacji usługi systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- [Porady: Dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
+ [Instrukcje: tworzenie usług systemu Windows](../../../docs/framework/windows-services/how-to-create-windows-services.md)  
+ [Instrukcje: instalowanie i odinstalowywanie usług](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)  
+ [Instrukcje: uruchamianie usług](../../../docs/framework/windows-services/how-to-start-services.md)  
+ [Instrukcje: debugowanie aplikacji usług systemu Windows](../../../docs/framework/windows-services/how-to-debug-windows-service-applications.md)  
+ [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
+ [Instrukcje: dodawanie instalatorów od aplikacji usług](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)

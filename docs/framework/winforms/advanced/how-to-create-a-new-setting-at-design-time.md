@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3e8a05b6f37f7686f18a6200e009aabe7eed5537
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 04b86579f45c5a357f8759bf36ae41f7a5c6e98b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-new-setting-at-design-time"></a>Porady: tworzenie nowego ustawienia w czasie projektowania
 Przy użyciu narzędzia Projektant ustawienia, można utworzyć nowe ustawienie w czasie projektowania. Projektant ustawienia jest interfejsem styl siatki, który pozwala utworzyć nowe ustawienia, a także określać właściwości dla tych ustawień. Należy określić nazwę, wartość, typ i zakres dla nowych ustawień. Po utworzeniu ustawienie jest dostępne w kodzie.  
@@ -44,4 +45,4 @@ Przy użyciu narzędzia Projektant ustawienia, można utworzyć nowe ustawienie 
 ## <a name="see-also"></a>Zobacz też  
  [Używanie ustawień aplikacji i ustawień użytkownika](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)  
  [Przegląd ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-overview.md)  
- [Porady: Zmiana wartości istniejącego ustawienia w czasie projektowania](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+ [Instrukcje: zmiana wartości istniejącego ustawienia w czasie projektowania](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)

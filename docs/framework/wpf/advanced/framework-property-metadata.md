@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7b516a3b979570c5b3cb3f6fd1edaa038167f1a5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4fec11a973572dce9e8d6f77bf65ce31ee77eb41
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="framework-property-metadata"></a>Metadane właściwości szablonu
 Opcje metadanych właściwości Framework są zgłaszane dla właściwości elementów obiektu uważane za w ramach WPF w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] architektury. Generalnie oznaczenie poziomie struktury WPF pociąga za sobą tej funkcji, takich jak renderowania danych powiązania, a właściwość uściślenia systemu są obsługiwane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] prezentacji [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] i plików wykonywalnych. Metadane właściwości Framework otrzymuje tych systemów, aby określić właściwości właściwych dla funkcji właściwości określonego elementu.  
@@ -39,7 +40,7 @@ Opcje metadanych właściwości Framework są zgłaszane dla właściwości elem
   
 -   Raportowanie właściwości układu, które mają wpływ na element nadrzędny elementu (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>, <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>). Przykłady, których te flagi są ustawiane domyślnie <xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType> i <xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>.  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. Domyślnie właściwości zależności nie dziedziczy wartości. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>Umożliwia również dziedziczenia również przejść do drzewa wizualnego, które są niezbędne dla niektórych scenariuszy składania kontroli.  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>., Domyślnie właściwości zależności nie dziedziczy wartości. <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A>Umożliwia również dziedziczenia również przejść do drzewa wizualnego, które są niezbędne dla niektórych scenariuszy składania kontroli.  
   
     > [!NOTE]
     >  Termin "inherits" w kontekście właściwości wartości oznacza, że coś określonych dla właściwości zależności; oznacza to, że elementy podrzędne można dziedziczą wartość właściwości rzeczywistych zależności z elementy nadrzędne z powodu możliwości poziomie struktury WPF [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] właściwości systemu. Go nie ma nic robić bezpośrednio z kodu zarządzanego typu i elementów członkowskich dziedziczenie przez typy pochodne. Aby uzyskać więcej informacji, zobacz [dziedziczenie wartości właściwości](../../../../docs/framework/wpf/advanced/property-value-inheritance.md).  
@@ -84,6 +85,6 @@ Opcje metadanych właściwości Framework są zgłaszane dla właściwości elem
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.DependencyProperty.GetMetadata%2A>  
- [Metadane właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
+ [Metadane zależności właściwości](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
  [Przegląd właściwości zależności](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [Właściwości niestandardowe zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
+ [Niestandardowe właściwości zależności](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)

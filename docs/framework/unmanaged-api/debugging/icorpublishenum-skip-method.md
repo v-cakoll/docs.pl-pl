@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 6f75681237ff00b61cf584fb99c7ee6bbda6df48
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a3601e96073b2db8336851c853491174c0d4382d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icorpublishenumskip-method"></a>ICorPublishEnum::Skip — Metoda
 Przesuwa kursor do przodu w wyliczeniu określoną liczbę elementów.  
@@ -52,4 +53,4 @@ HRESULT Skip (
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICorPublishEnum — interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+ [ICorPublishEnum, interfejs](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

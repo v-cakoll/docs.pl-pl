@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b094fd88321ffcf8d3bb5cdefe870bd12524b4b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 95ba37b123b57ba9f86fefb55a860fb2122ccd3d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>Porady: Tworzenie przepływu pracy automatu stanów
 Przepływy pracy można skonstruować z działań wbudowanych oraz z działań niestandardowych. W tym temacie prowadzi przez proces tworzenia przepływu pracy, który używa zarówno wbudowane działania, takie jak <xref:System.Activities.Statements.StateMachine> działania i działań niestandardowych z poprzedniej [porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md) tematu. Przepływ pracy modele numer guessing gier.  
@@ -52,7 +53,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
   
 5.  Kliknij przycisk **utworzenia argumentu**.  
   
-6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję ** Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
+6.  Typ `Turns` do **nazwa** pole poniżej nowo dodanego `MaxNumber` argumentu, wybierz opcję **limit** z **kierunek** listy rozwijanej wybierz pozycję  **Int32** z **typ argumentu** listy rozwijanej, a następnie naciśnij klawisz ENTER.  
   
 7.  Kliknij przycisk **argumenty** w lewym dolnym rogu Projektant działań, aby zamknąć **argumenty** okienka.  
   
@@ -145,7 +146,7 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
 19. W zależności od tego, czy wynik jest poprawny, przepływu pracy należy przejść do **stan końcowy** lub z powrotem do **Wprowadź wynik** stanu do innego elementu try. Zarówno przejścia udostępnianie tego samego wyzwalacza czekać na dopasowanie użytkownika do odebrania przez **ReadInt** działania. Jest to udostępniony przejścia. Aby utworzyć przejście udostępniony, kliknij koło, która wskazuje początek **odgadnąć poprawne** przejścia i przeciągnij go do pożądanego stanu. W takim przypadku przejście jest przejście zwrotne, więc przeciągnij punkt początkowy **odgadnąć poprawne** przejście i upuść go z powrotem na dole **wprowadź odgadnąć** stanu. Po utworzeniu przejścia, wybierz je w Projektancie przepływów pracy i ustawić jej **DisplayName** właściwości **odgadnąć niepoprawne**.  
   
     > [!NOTE]
-    >  Udostępniony przejścia można również tworzyć od w Projektancie przejścia, klikając **Dodaj udostępnione przejście z wyzwalaczem** w dolnej części projektanta przejścia, a następnie wybierając stan docelowy z ** Dostępne stany do połączenia** listy rozwijanej.  
+    >  Udostępniony przejścia można również tworzyć od w Projektancie przejścia, klikając **Dodaj udostępnione przejście z wyzwalaczem** w dolnej części projektanta przejścia, a następnie wybierając stan docelowy z  **Dostępne stany do połączenia** listy rozwijanej.  
   
     > [!NOTE]
     >  Należy pamiętać, że jeśli <xref:System.Activities.Statements.Transition.Condition%2A> przejścia daje w wyniku `false` (lub wszystkie warunki przejście z wyzwalaczem udostępnionym obliczać `false`), nie nastąpi przejście i będzie wszystkich wyzwalaczy dla wszystkich przejścia ze stanu zaplanowane ponownie. W tym samouczku tej sytuacji niemożliwe ze względu na sposób warunki są skonfigurowane (mamy określonych akcji dla tego, czy wynik jest prawidłowy lub nieprawidłowy).  
@@ -199,8 +200,8 @@ Przepływy pracy można skonstruować z działań wbudowanych oraz z działań n
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Activities.Statements.Flowchart>  
  <xref:System.Activities.Statements.FlowDecision>  
- [Windows Workflow Foundation programowania](../../../docs/framework/windows-workflow-foundation/programming.md)  
+ [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)  
  [Projektowanie przepływów pracy](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)  
  [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
- [Porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)
+ [Instrukcje: Tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)

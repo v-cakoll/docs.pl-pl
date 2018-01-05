@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4989a13ef16445bc19b3dc3c6d265d943a464c62
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f73a336da5b61de90a67a8392b5cfc8f28619254
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="events-overview-windows-forms"></a>Formularze systemu Windows — przegląd zdarzeń
 Zdarzenie jest działaniem, które mogą odpowiadać na lub "obsługi" w kodzie. Zdarzenia mogą być generowane przez działanie użytkownika, takie jak kliknięcie myszą lub naciśnięcie klawisza. w kodzie programu; czy przez system.  
@@ -54,5 +55,5 @@ Zdarzenie jest działaniem, które mogą odpowiadać na lub "obsługi" w kodzie.
  Mechanizm wiązanie używane z obiektów delegowanych jest dynamiczny: Delegat może być powiązana do dowolnej metody, której sygnatura jest zgodna z obsługi zdarzeń w czasie wykonywania. Za pomocą tej funkcji można zdefiniować lub zmienić metoda powiązana, w zależności od warunek i dynamicznie dołączyć program obsługi zdarzeń do formantu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie programów obsługi zdarzeń w formularzach systemu Windows](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
- [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)
+ [Tworzenie procedur obsługi zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)  
+ [Przegląd procedur obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)

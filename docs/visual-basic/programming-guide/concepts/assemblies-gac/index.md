@@ -12,22 +12,22 @@ ms.assetid: fcf78ff1-f1ab-4a5d-b6d8-00d2046b6c80
 caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9ef4306da5c093b8302e377cc3b68d5700b8dfa8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 893d869b1abaf9caa6f4705f40750912081d7df2
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assemblies-and-the-global-assembly-cache-visual-basic"></a>Zestawy i Globalna pamięć podręczna zestawów (Visual Basic)
 Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu, zakresu aktywacji i uprawnień zabezpieczeń dla. Aplikacja Asp.net. Zestawy formę plik wykonywalny (.exe) lub dołączana dynamicznie biblioteka (dll) pliku i są blokami konstrukcyjnymi programu .NET Framework. Zawierają środowisko uruchomieniowe języka wspólnego o informacje, które należy znać typ implementacji. Można potraktować zestawu jako kolekcję typów i zasobów, które tworzą jednostkę logiczną funkcjonalności i są tworzone współdziałają ze sobą.  
   
- Zestawy mogą zawierać przynajmniej jeden moduł. Na przykład większych projektów mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać w oddzielnych modułów, wszystkie najbliższych, aby utworzyć w jednym zestawie. Aby uzyskać więcej informacji o modułach, zobacz temat [porady: tworzenie zestawów Multifile](../../../../../docs/framework/app-domains/how-to-build-a-multifile-assembly.md).  
+ Zestawy mogą zawierać przynajmniej jeden moduł. Na przykład większych projektów mogą być planowane w taki sposób, że kilka indywidualnych deweloperów działać w oddzielnych modułów, wszystkie najbliższych, aby utworzyć w jednym zestawie. Aby uzyskać więcej informacji o modułach, zobacz temat [porady: tworzenie zestawów Multifile](../../../../framework/app-domains/how-to-build-a-multifile-assembly.md).  
   
  Zestawy mieć następujące właściwości:  
   
 -   Zestawy są zaimplementowane jako pliki .exe lub dll.  
   
--   Można udostępniać zestawu między aplikacjami, ustawiając dla niego w globalnej pamięci podręcznej zestawów. Zestawy muszą być o silnych nazwach, aby mogły one zostać uwzględnione w globalnej pamięci podręcznej zestawów. Aby uzyskać więcej informacji, zobacz [zestawy Strong-Named](../../../../../docs/framework/app-domains/strong-named-assemblies.md).  
+-   Można udostępniać zestawu między aplikacjami, ustawiając dla niego w globalnej pamięci podręcznej zestawów. Zestawy muszą być o silnych nazwach, aby mogły one zostać uwzględnione w globalnej pamięci podręcznej zestawów. Aby uzyskać więcej informacji, zobacz [zestawy Strong-Named](../../../../framework/app-domains/strong-named-assemblies.md).  
   
 -   Zestawy są ładowane do pamięci tylko wtedy, jeśli są wymagane. Jeśli nie są używane, nie są załadowane. Oznacza to, że zestawy mogą być wydajnym sposobem zarządzania zasobami w większych projektów.  
   
@@ -46,7 +46,7 @@ Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu,
   
  Ponieważ zestawy zawierają informacje o zawartości, przechowywanie wersji i zależności, aplikacje utworzone przy użyciu języka Visual Basic nie należy polegać na wartości rejestru systemu Windows w celu poprawnego działania. Zestawy zmniejszyć konflikty .dll i upewnić aplikacji, bardziej niezawodne i łatwiejsze do wdrożenia. W wielu przypadkach można zainstalować. Aplikacji opartej na sieci za pomocą kopiowania plików do komputera docelowego.  
   
- Aby uzyskać więcej informacji, zobacz [manifestu zestawu](../../../../../docs/framework/app-domains/assembly-manifest.md).  
+ Aby uzyskać więcej informacji, zobacz [manifestu zestawu](../../../../framework/app-domains/assembly-manifest.md).  
   
 ## <a name="adding-a-reference-to-an-assembly"></a>Dodawanie odwołania do zestawu  
  Aby użyć zestawu, należy dodać odwołanie do niej. Następnie użyj [Imports — instrukcja](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) wybierz przestrzeń nazw elementów, którego chcesz użyć. Po odwołuje się do zestawu i zaimportowane, wszystkie dostępne klasy, właściwości, metody i inni członkowie ich przestrzenie nazw są dostępne dla aplikacji tak, jakby ich kodem należały pliku źródłowego.  
@@ -58,7 +58,7 @@ Zestawy stanowią podstawową jednostkę wdrożenia, kontroli wersji, ponownemu,
 >  Tworzenie zestawu w programie Visual Studio na **kompilacji** menu wybierz **kompilacji**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Zestawy w środowisku uruchomieniowym CLR](../../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Przyjazne zestawy (Visual Basic)](friend-assemblies.md)  
  [Porady: dzielenie się zestawem z innymi aplikacjami (Visual Basic)](how-to-share-an-assembly-with-other-applications.md)  
  [Porady: ładowanie i zwalnianie zestawów (Visual Basic)](how-to-load-and-unload-assemblies.md)  

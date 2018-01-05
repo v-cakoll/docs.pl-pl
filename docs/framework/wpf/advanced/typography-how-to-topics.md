@@ -15,27 +15,28 @@ caps.latest.revision: "90"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2ecb85c1cb6bca654433ccddfb895bc361a4e2b4
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd866c67a5885a378dace6e14e280b5efe630695
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typography-how-to-topics"></a>Typografia Tematy porad
 W tematach w tej sekcji opisano sposób użycia [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] obsługę prezentacji sformatowanego tekstu w aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie dekoracji tekstu](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [Określ, czy hiperłącze jest podkreślony.](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [Określanie, czy hiperlink jest podkreślony](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [Stosowanie przekształceń do tekstu](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [Zastosowanie animacji do tekstu](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [Tworzenie tekstu z cień](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [Tworzenie konspektu tekstu](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Rysowanie tekstu do tła formantu](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [Rysowanie tekstu do obiektu Visual](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [Znaki specjalne w języku XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [Stosowanie animacji do tekstu](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
+ [Tworzenie tekstu z cieniem](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
+ [Tworzenie tekstu z konturem](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
+ [Rysowanie tekstu w tle kontrolki](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
+ [Rysowanie tekstu w wizualizacji](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
+ [Używanie znaku specjalnego w XAML](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Documents.Typography>  
- [Dokumentów na platformie WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [Funkcje czcionek OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+ [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
+ [Funkcje czcionki OpenType](../../../../docs/framework/wpf/advanced/opentype-font-features.md)

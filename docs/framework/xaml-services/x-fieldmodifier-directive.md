@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 77745744c0da1e4b4425af6d8e4319faaf524908
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 3ed50dd2aff1702543789f06939f7c2bc4b3dd83
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier — dyrektywa
 Modyfikuje zachowanie kompilacji XAML, tak aby pól dla odwołania do nazwanych obiektów są zdefiniowane z <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> dostępu zamiast <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> zachowanie domyślne.  
@@ -36,7 +37,7 @@ Modyfikuje zachowanie kompilacji XAML, tak aby pól dla odwołania do nazwanych 
   
 |||  
 |-|-|  
-|*Publiczna*|Dokładnie taki ciąg znaków, należy przekazać do określenia <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> i <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> może być różna w zależności od jest używany język programowania związane z kodem. Zobacz uwagi.|  
+|*Public*|Dokładnie taki ciąg znaków, należy przekazać do określenia <xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType> i <xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType> może być różna w zależności od jest używany język programowania związane z kodem. Zobacz uwagi.|  
   
 ## <a name="dependencies"></a>Zależności  
  Jeśli używa produkcji XAML `x:FieldModifier` wszędzie, musi mieć deklarację elementu głównego XAML produkcji [dyrektywy x: Class](../../../docs/framework/xaml-services/x-class-directive.md).  
@@ -61,8 +62,8 @@ Modyfikuje zachowanie kompilacji XAML, tak aby pól dla odwołania do nazwanych 
  Domyślnie jest publiczny; częściowej klasy dla elementu głównego jednak można tworzyć niepubliczne przy użyciu [x: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md). [X: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md) również wpływa na poziom dostępu do wystąpienia klasy głównym elementu. Możesz też zaznaczyć oba `x:Name` i `x:FieldModifier` w katalogu głównym elementu, ale tylko sprawia, że pole publiczne kopię element główny z głównego true element klasy poziom dostępu nadal kontrolowane przez [x: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [XAML oraz klas niestandardowych dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [Związane z kodem i języka XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [x: Name — dyrektywa](../../../docs/framework/xaml-services/x-name-directive.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
+ [Plik codebehind i XAML w WPF](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
+ [x:Name, dyrektywa](../../../docs/framework/xaml-services/x-name-directive.md)  
  [Tworzenie aplikacji WPF (WPF)](../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
- [x: classmodifier — dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)
+ [x:ClassModifier, dyrektywa](../../../docs/framework/xaml-services/x-classmodifier-directive.md)

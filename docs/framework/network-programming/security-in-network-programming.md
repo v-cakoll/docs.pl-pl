@@ -22,23 +22,24 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 0908dd50c870c26284c1ef90d8433122b00e7be1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: ee98461fdd7a74a752d21a2f4ce5c810477cd4d8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-in-network-programming"></a>Zabezpieczenia w programowaniu usługi sieciowej
 .NET Framework <xref:System.Net> przestrzeni nazw klas zapewniają obsługę wbudowanych dla popularnych mechanizmów uwierzytelniania aplikacji internetowych i uprawnień dostępu do kodu .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Przy użyciu bezpiecznych gniazd warstwy](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
+ [Używanie protokołu Secure Sockets Layer](../../../docs/framework/network-programming/using-secure-sockets-layer.md)  
  Opisuje sposób korzystania z połączeń Secure Sockets Layer (SSL).  
   
- [Uwierzytelnianie Internet](../../../docs/framework/network-programming/internet-authentication.md)  
+ [Uwierzytelnianie internetowe](../../../docs/framework/network-programming/internet-authentication.md)  
  Opisuje sposób użycia metod uwierzytelniania HTTP do ustanawiania połączeń uwierzytelnionych serwerom HTTP.  
   
- [Sieć Web i uprawnienia gniazda](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
+ [Internet i uprawnienia gniazd](../../../docs/framework/network-programming/web-and-socket-permissions.md)  
  Opisuje sposób ustawiania zabezpieczenia dostępu kodu dla aplikacji korzystających z połączenia z Internetem.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

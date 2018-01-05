@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0abc1ac1cea6c9799c3d6bb349869b77f1d0b7c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4b7ffdc00a7723fd6b514fbb5577c48da15d719c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-host-a-non-service-workflow-in-iis"></a>Porady: hosta z systemem innym niż usługi przepływu pracy w programie IIS
 Przepływy pracy, które nie są usługi przepływu pracy może być obsługiwany w środowisku usług IIS / WAS. Jest to przydatne, gdy trzeba hosta przepływu pracy napisane przez innej osoby. Na przykład, jeśli rehost projektanta przepływów pracy, a użytkownicy mogą tworzyć własne przepływy pracy.  Hosting przepływy pracy-service w usługach IIS zapewnia obsługę funkcji, takich jak proces zamykania odtwarzania, bezczynności, monitorowanie kondycji procesu i aktywacji opartej na komunikat. Przepływ pracy usług hostowanych w usługach IIS zawiera <xref:System.ServiceModel.Activities.Receive> działań i są aktywowany, gdy wiadomość zostanie odebrana przez usługi IIS. Non-service przepływy pracy nie zawierają działania obsługi wiadomości i domyślnie nie można aktywować, wysyłając wiadomość.  Musi pochodzić z klasy <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> i zdefiniowanie kontraktu usługi, który zawiera operacje można utworzyć wystąpienia przepływu pracy. Ten temat przeprowadzi Cię przez proces tworzenia prostych przepływu pracy, definiowanie kontraktu usługi, klient może używać do aktywowania przepływu pracy i wyprowadzanie klasy z <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> który używa kontraktu usługi do nasłuchiwania przepływu pracy tworzenia żądań.  
@@ -685,9 +686,9 @@ namespace CreationClient
 ## <a name="see-also"></a>Zobacz też  
  [Usługi przepływu pracy](../../../../docs/framework/wcf/feature-details/workflow-services.md)  
  [Hostowanie przez Internetowe usługi informacyjne](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)  
- [Internetowe usługi informacyjne najlepsze rozwiązania dotyczące hostowania](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
- [Informacje o usługi instrukcje dotyczące hostowania internetowej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
- [Architektura przepływu pracy systemu Windows](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
- [Wznów WorkflowHostingEndpoint zakładki](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
- [Rehosting projektanta przepływów pracy](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
- [Omówienie przepływu pracy systemu Windows](../../../../docs/framework/windows-workflow-foundation/overview.md)
+ [Najlepsze rozwiązania dotyczące hostowania Internetowych usług informacyjnych](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)  
+ [Instrukcje dotyczące hostowania internetowej usługi informacyjnej](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)  
+ [Architektura programu Windows Workflow](../../../../docs/framework/windows-workflow-foundation/architecture.md)  
+ [Wznowienie zakładki WorkflowHostingEndpoint](../../../../docs/framework/windows-workflow-foundation/samples/workflowhostingendpoint-resume-bookmark.md)  
+ [Rehostowanie projektanta przepływu pracy](../../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Omówienie programu Windows Workflow](../../../../docs/framework/windows-workflow-foundation/overview.md)

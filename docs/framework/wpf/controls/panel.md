@@ -18,18 +18,19 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a73772ddb9d9344e53bf4df71775f1f17e179342
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1a74bf246a66f54e274833c2c9f04f8da0f48a0f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="panel"></a>Panel
 <xref:System.Windows.Controls.Panel>jest klasą bazową dla wszystkich elementów, które obsługują układ aplikacji w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Panel>  
@@ -49,6 +50,6 @@ ms.lasthandoff: 10/18/2017
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [Wskazówki: Pierwszy WPF pulpitu aplikację](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [Przewodnik: moja pierwsza aplikacja klasyczna WPF](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [Omówienie ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer — omówienie](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

@@ -12,26 +12,27 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9064f56dab2c7a2b36394f6f77ded77edc0b387b
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d83731fcf9bde8642dcdc0291142885068d532b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-custom-activity-designers-and-templates"></a>Przy użyciu projektantów działań niestandardowych i szablonów
 Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projektantów i Szablony działań niestandardowych.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: tworzenie Projektant działań niestandardowych](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
+ [Instrukcje: Tworzenie niestandardowego projektanta działań](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-designer.md)  
  Opisuje jak utworzyć designer niestandardowe działania podczas projektantów udostępniane przez przepływ pracy nie są odpowiednie do zadania projektowania.  
   
- [Porady: Tworzenie szablonu niestandardowego działania](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-template.md)  
+ [Instrukcje: Tworzenie niestandardowego szablonu działań](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-activity-template.md)  
  Informacje dotyczące używania działań niestandardowych szablonów do działań należy wstępnie skonfigurować tak, aby użytkownicy muszą utworzyć każde działanie oddzielnie i skonfigurować ich właściwości i inne ustawienia ręcznie.  
   
- [Przy użyciu ModelItem edycji kontekstu](../../../docs/framework/windows-workflow-foundation/using-the-modelitem-editing-context.md)  
+ [Używanie kontekstu edycyjnego ModelItem](../../../docs/framework/windows-workflow-foundation/using-the-modelitem-editing-context.md)  
  Informacje dotyczące używania funkcji Kontekst edycyjny ModelItem umożliwia projektanta do interakcji z hostem.  
   
- [Powiązanie właściwości działań niestandardowych do projektanta formantu](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
+ [Powiązanie niestandardowych właściwości działań z kontrolką projektanta](../../../docs/framework/windows-workflow-foundation/binding-a-custom-activity-property-to-a-designer-control.md)  
  Opisuje sposób powiązania formantu listview do właściwości działania w projektancie.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -46,7 +47,7 @@ Ta sekcja zawiera tematy dotyczące tworzenia działań niestandardowych projekt
  <xref:System.Activities.Presentation.Model.ModelTreeManager>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Rehosting projektanta przepływów pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
+ [Rehostowanie projektanta przepływu pracy](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  [Działania niestandardowe](../../../docs/framework/windows-workflow-foundation/samples/custom-activities.md)

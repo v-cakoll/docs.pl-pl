@@ -16,11 +16,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f157bb172d173872aa7b792035b653976a9c1c0c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 103c7cde61350a1efaf0784964c3f31cc7d55e4b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>Pojedynczej tabeli zapytania (LINQ do DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]zapytania działają w źródeł danych, które implementują <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. <xref:System.Data.DataTable> Klasa nie implementuje albo interfejsu, dlatego należy wywołać <xref:System.Data.DataTableExtensions.AsEnumerable%2A> metodę, jeśli chcesz użyć <xref:System.Data.DataTable> jako źródło w `From` klauzuli [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] zapytania.  
@@ -41,6 +42,6 @@ ms.lasthandoff: 11/21/2017
  Należy pamiętać, że typ danych określony w parametrze ogólnym `T` z <xref:System.Data.DataRowExtensions.Field%2A> — metoda i <xref:System.Data.DataRowExtensions.SetField%2A> metody musi odpowiadać typowi wartości podstawowej lub <xref:System.InvalidCastException> zostanie wygenerowany. Określona nazwa kolumny musi również zgodna z nazwą kolumny <xref:System.Data.DataSet> lub <xref:System.ArgumentException> zostanie wygenerowany. W obu przypadkach wyjątku w czasie wykonywania wyliczanie danych podczas wykonywania zapytania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Zapytania w tabeli](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
- [Wykonywanie zapytania Typizowane zbiory danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [Pole ogólnego i metody SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)
+ [Zapytania wielotabelowe](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)  
+ [Wykonywanie zapytania do typizowanych zestawów danych](../../../../docs/framework/data/adonet/querying-typed-datasets.md)  
+ [Pole ogólne i metody SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

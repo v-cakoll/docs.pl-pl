@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: abe0bd7b08d254e97eef74ad1a99b1bcf6dd997e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dbdbef495232fb1ffaeb8d1dc739c2db1355556d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>Eksportowanie niestandardowych metadanych na potrzeby rozszerzenia programu WCF
 W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], eksportowania metadanych jest proces opisujące punktów końcowych usługi i projekcji ich reprezentację równoległe, standardowe, której klienci mogą używać, aby zrozumieć sposób korzystania z usługi. Niestandardowych metadanych składa się z elementów XML nie można wyeksportować eksportera metadanych dostarczane przez system. Zazwyczaj zawiera elementy WSDL niestandardowe zachowania użytkownika i elementy powiązania i potwierdzeń zasad o możliwości i wymagania dotyczące powiązania i kontrakty.  
@@ -52,6 +53,6 @@ W [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], eksportowania metadan
  Aby uzyskać więcej informacji, zobacz [porady: eksportowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: eksportowanie niestandardowych WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Porady: eksportowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
+ [Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Instrukcje: eksportowanie niestandardowych asercji zasad](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)  
  [Importowanie niestandardowych metadanych dla rozszerzenia WCF](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

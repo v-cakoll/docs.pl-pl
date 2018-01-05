@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4b9748de672e36ae4c4ff913ab8c76262dc5875
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b9c8a66d2b1d60226ad814730125754c7253ca94
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="networking-in-windows-forms-applications"></a>Sieć w aplikacjach Windows Forms
 .NET Framework zawiera klasy służące do wyświetlania stron sieci Web, pobierania zawartości sieci Web, interakcji z pliku transfer protocol (FTP) witryn i korzystanie z usług sieci Web, co ułatwia tworzenie funkcji sieciowych do aplikacji. Następujące zasoby pomoże Ci zrozumieć technologii sieciowych programu .NET Framework i sposób ich integracji z formularzy systemu Windows.  
@@ -42,5 +43,5 @@ ms.lasthandoff: 10/22/2017
  [Programowanie dla sieci w programie .NET Framework](../../../../docs/framework/network-programming/index.md)  
  Wprowadzenie do sieci w programie .NET Framework.  
   
- [Powiązanie danych formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
  Opisuje sposób wyświetlania zawartości bazy danych w aplikacji, ani w lokalnym magazynie danych lub bazę danych w sieci.

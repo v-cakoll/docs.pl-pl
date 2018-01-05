@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: ff43b9279130ed710d9d88cbf2ba5ead4a6f0ebc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6166cae86d2956ae3eec28b98fe0af864f6b708b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="diffgrams"></a>DataSets
 Elementu DiffGram jest w formacie XML, który identyfikuje bieżące i oryginalne wersje elementów danych. <xref:System.Data.DataSet> Używa formatu elementu DiffGram do ładowania i utrwalić jego zawartość, a do serializacji jego zawartość dla transportu przez połączenie sieciowe. Gdy <xref:System.Data.DataSet> są zapisywane jako elementu DiffGram wypełnia elementu DiffGram niezbędne informacje, aby dokładnie odtworzyć zawartość, jednak nie schematu z <xref:System.Data.DataSet>, łącznie z obu wartości w kolumnie **oryginalne** i **bieżącego** wersje wiersza, informacje o błędzie wiersza i kolejności wierszy.  
@@ -93,7 +94,7 @@ Elementu DiffGram jest w formacie XML, który identyfikuje bieżące i oryginaln
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
-|**Identyfikator**|Używany do elementów w parę  **\<diffgr: przed >** i  **\<diffgr:errors >** bloków do elementów w  **\<**  ***DataInstance***  **>**  bloku. Wartości z **diffgr:id** adnotacji mają postać *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Customers diffgr:id="Customers1">`.|  
+|**id**|Używany do elementów w parę  **\<diffgr: przed >** i  **\<diffgr:errors >** bloków do elementów w  **\<**  ***DataInstance***  **>**  bloku. Wartości z **diffgr:id** adnotacji mają postać *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Customers diffgr:id="Customers1">`.|  
 |**Parametr parentId**|Identyfikuje element, który z  **\<**  ***DataInstance***  **>**  bloku jest elementem nadrzędnym bieżącego elementu. Wartości z **diffgr:parentId** adnotacji mają postać *[Nazwa_tabeli] [RowIdentifier]*. Na przykład: `<Orders diffgr:parentId="Customers1">`.|  
 |**hasChanges**|Identyfikuje wiersz w  **\<**  ***DataInstance***  **>**  zablokować zmienione. **HasChanges** adnotacji może mieć jedną z następujących dwóch wartości:<br /><br /> **dodaje**<br /> Identyfikuje **Added** wiersza.<br /><br /> **zmodyfikowane**<br /> Identyfikuje **zmodyfikowane** wiersza, który zawiera **oryginalnego** wersja wiersza w  **\<diffgr: przed >** bloku. Należy pamiętać, że **usunięte** wierszy będą miały **oryginalnego** wersja wiersza w  **\<diffgr: przed >** bloku, ale będą się żaden element adnotacjami w  **\<**  ***DataInstance***  **>**  bloku.|  
 |**hasErrors**|Identyfikuje wiersz w  **\<**  ***DataInstance***  **>**  zablokować z **RowError**. Błędny element znajduje się w  **\<diffgr:errors >** bloku.|  
@@ -142,8 +143,8 @@ Elementu DiffGram jest w formacie XML, który identyfikuje bieżące i oryginaln
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą języka XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
- [Podczas ładowania zestawu danych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
- [Zapisywanie zawartości zestawu danych jako dane XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
- [Zbiory danych, DataTables i DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
+ [Używanie języka XML w elemencie DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [Ładowanie elementu DataSet z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)  
+ [Zapisywanie zawartości elementu DataSet jako danych XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)  
+ [Elementy DataSet, DataTable i DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

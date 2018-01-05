@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2ea9cb20b62e1b1fa8e726ba0c49c5e24202530c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: a069f65d3059bfa427ea20623ff9a2ac4049fd39
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iceegengetsectioncreate-method"></a>ICeeGen::GetSectionCreate — Metoda
 Generuje i pobiera sekcji kodu przy użyciu określonej nazwy i wartości flag.  
@@ -65,4 +66,4 @@ HRESULT GetSectionCreate (
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [ICeeGen — interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+ [ICeeGen, interfejs](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

@@ -21,11 +21,14 @@ caps.latest.revision: "20"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 3c9bb58b0d7b45ca197653742844be01ac3bbe41
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: f84fcba0ef37fa45c3dd0fb3ba56f5f912bfc2f1
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-numeric-strings-in-net"></a>Analizowanie ciągów liczbowych w sieci
 Wszystkie typy liczbowe ma dwie metody analizy statycznej, `Parse` i `TryParse`, której można konwertować reprezentację liczby typu liczbowego. Te metody umożliwiają analizowanie ciągów, które zostały utworzone za pomocą ciągów formatu w [standardowe ciągi formatu liczbowego](../../../docs/standard/base-types/standard-numeric-format-strings.md) i [niestandardowe ciągi formatów liczbowych](../../../docs/standard/base-types/custom-numeric-format-strings.md). Domyślnie `Parse` i `TryParse` metody pomyślnie przekonwertować ciągi zawierające integralną cyfr dziesiętnych tylko do wartości będące liczbami całkowitymi. Umożliwiają one pomyślnie Konwertowanie ciągów zawierających wynikających z zaokrągleń cyfr dziesiętnych, separatorów grup i separator dziesiętny na wartości zmiennoprzecinkowe. `Parse` Metoda zgłasza wyjątek, jeśli operacja nie powiedzie się, natomiast `TryParse` metoda zwraca `false`.  
@@ -93,4 +96,4 @@ Wszystkie typy liczbowe ma dwie metody analizy statycznej, `Parse` i `TryParse`,
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Globalization.NumberStyles>  
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "28"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 509da8b697f38ea75d9509a8243f3e9e09cc661b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2b8e84fe75f812cdcb97dcc24a0edad2d238515b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="securing-services"></a>Zabezpieczanie usług
 Bezpieczeństwo [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługa obejmuje dwa podstawowe wymagania: transfer zabezpieczeń i autoryzacji. (Trzeci wymaganie, przeprowadzanie inspekcji zdarzeń zabezpieczeń jest opisany w [inspekcji](../../../docs/framework/wcf/feature-details/auditing-security-events.md).) Krótko mówiąc transfer zabezpieczeń obejmuje uwierzytelniania (weryfikacji tożsamości klienta i usługi), poufność (szyfrowanie wiadomości) i integralności (cyfrowego podpisywania przed naruszeniem). Autoryzacja jest kontrola dostępu do zasobów, na przykład, dzięki czemu tylko użytkownicy o odpowiednich uprawnieniach do odczytu pliku. Przy użyciu funkcji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], łatwo zostały zaimplementowane dwa podstawowe wymagania.  
@@ -117,12 +118,12 @@ Bezpieczeństwo [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługa obe
  [Omówienie poziomów ochrony](../../../docs/framework/wcf/understanding-protection-level.md)  
  [Delegowanie i personifikacja](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)  
  [Projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md)  
- [Zabezpieczeń](../../../docs/framework/wcf/feature-details/security.md)  
+ [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)  
  [Przegląd zabezpieczeń](../../../docs/framework/wcf/feature-details/security-overview.md)  
- [Porady: Ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
- [Porady: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
- [Porady: Ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
- [Porady: Określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
- [Porady: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
- [Porady: personifikowania klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
- [Porady: badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+ [Instrukcje: ustawianie właściwości ProtectionLevel](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)  
+ [Instrukcje: zabezpieczanie usługi za pomocą poświadczeń systemu Windows](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)  
+ [Instrukcje: ustawianie trybu zabezpieczeń](../../../docs/framework/wcf/how-to-set-the-security-mode.md)  
+ [Instrukcje: określanie typu poświadczeń klienta](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)  
+ [Instrukcje: ograniczanie dostępu przy użyciu klasy PrincipalPermissionAttribute](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)  
+ [Instrukcje: personifikowanie klienta w usłudze](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)  
+ [Instrukcje: badanie kontekstu zabezpieczeń](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

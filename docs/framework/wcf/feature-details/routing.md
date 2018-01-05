@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 4ea56330e4de55a7acbc6ccca737cd62b8f151d1
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="routing"></a>Routing
 Tematy w tej sekcji dotyczą usługi routingu. Usługa routingu jest ogólny można skonfigurować pośredników SOAP obsługi błędów komunikacji umożliwia skonfigurowanie na podstawie zawartości routingu, konfigurowanie protokołu mostkowanie, i dynamicznie Aktualizuj logiki routingu w czasie wykonywania.  

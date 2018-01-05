@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 350dff0b6ea9d92e919e45e4f46cf888f44f6212
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: b932c7df822edabc5626f20af2bfc1eb3a7f93ae
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-a-table-with-xaml"></a>Jak zdefiniować tabelę przy użyciu XAML
 W poniższym przykładzie pokazano sposób definiowania <xref:System.Windows.Documents.Table> przy użyciu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  Przykładowa tabela ma cztery kolumny (reprezentowany przez <xref:System.Windows.Documents.TableColumn> elementy) i kilka wierszy (reprezentowane przez <xref:System.Windows.Documents.TableRow> elementy) zawierające dane, a także jako tytuł, nagłówek i informacje stopki.  Wierszy musi być zawarty w <xref:System.Windows.Documents.TableRowGroup> elementu.  Każdy wiersz w tabeli składa się z co najmniej jedna komórka (reprezentowane przez <xref:System.Windows.Documents.TableCell> elementów).  Zawartość w komórce tabeli muszą być zawarte w <xref:System.Windows.Documents.Block> elementu; w takim przypadku <xref:System.Windows.Documents.Paragraph> elementy są używane.  Tabela hostuje również hiperłącza (reprezentowane przez <xref:System.Windows.Documents.Hyperlink> element) w wierszu stopki.  

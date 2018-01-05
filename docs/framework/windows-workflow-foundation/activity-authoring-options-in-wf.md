@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ef85d6eaeb0fdb79960ae166cb1e83e88f6d529
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0422b7b433c8c2a6889e00d559207d25ed42eff1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-authoring-options-in-wf"></a>Opcje tworzenia działania WF
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]zapewnia kilka opcji tworzenia działań niestandardowych. Poprawną metodę do użycia na potrzeby tworzenia dane działanie zależy od tego, jakie funkcje środowiska wykonawczego są wymagane.  

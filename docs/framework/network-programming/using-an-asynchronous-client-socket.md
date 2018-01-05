@@ -27,11 +27,12 @@ caps.latest.revision: "14"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 263d8a82bf70ac86e776f28d660ef08c58a33384
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: abb262f58d611bdb4ef27d3391a2d0d9d221f005
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-an-asynchronous-client-socket"></a>Przy użyciu gniazda asynchroniczne klienta
 Gniazdo klienta asynchronicznego nie wstrzymuje aplikacji podczas oczekiwania na zakończenie operacji sieciowych. Zamiast tego używa standardowych model programowania asynchronicznego .NET Framework do przetwarzania połączenia sieciowego w jednym wątku, gdy aplikacja nadal działa w oryginalnym wątku. Gniazda asynchroniczne są odpowiednie dla aplikacji, która w znacznym stopniu wykorzystywane w sieci lub który nie może czekać na zakończenie przed kontynuowaniem operacji sieciowych.  
@@ -295,6 +296,6 @@ private static void ReceiveCallback( IAsyncResult ar ) {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu gniazda synchroniczne klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Nasłuchiwanie z gniazda](../../../docs/framework/network-programming/listening-with-sockets.md)  
- [Przykład gniazda asynchroniczne klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
+ [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Nasłuchiwanie przy użyciu gniazd](../../../docs/framework/network-programming/listening-with-sockets.md)  
+ [Przykład asynchronicznego gniazda klienta](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 10f18c46c85ed840b6625d9ed754d1d036a80975
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c48950e43d253679eebe16bff1b6ee18966e2cc7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.SplitContainer> formantu można traktować jako projekt wstępny; jest dwa panele oddzielone ruchomy paska. Gdy wskaźnik myszy znajduje się nad paskiem, kursor zmienia kształt pokazują, że pasek jest ruchomy.  
@@ -59,5 +60,5 @@ Formularze systemu Windows <xref:System.Windows.Forms.SplitContainer> formantu m
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer — formant](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
+ [SplitContainer, kontrolka](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)  
  [Przykładowe SplitContainer — formant](http://msdn.microsoft.com/en-us/9015fad0-7108-4d85-a83a-a72d038c4f65)

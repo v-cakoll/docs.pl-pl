@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f1a0675777f6ba5e353715e22b40a62f9cac0e32
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 07025b43b690d576b71f6f5cb7d846deccf55028
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="message-contracts"></a>Kontrakty komunikatów
 Ta sekcja zawiera przykłady ilustrujące kontrakty komunikatu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -35,5 +36,5 @@ Ta sekcja zawiera przykłady ilustrujące kontrakty komunikatu w [!INCLUDE[indig
  [Ustawianie właściwości Use i Style](../../../../docs/framework/wcf/samples/setting-the-use-and-style-properties.md)  
  Przedstawiono sposób użycia właściwości Use i Style na <xref:System.ServiceModel.XmlSerializerFormatAttribute> i <xref:System.ServiceModel.DataContractFormatAttribute>.  
   
- [Przykład klasy XmlReader](../../../../docs/framework/wcf/samples/xmlreader-sample.md)  
+ [XmlReader — przykład](../../../../docs/framework/wcf/samples/xmlreader-sample.md)  
  Pokazuje przetwarzania treści wiadomości przy użyciu <xref:System.Xml.XmlReader>.

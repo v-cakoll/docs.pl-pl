@@ -18,11 +18,12 @@ caps.latest.revision: "58"
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.openlocfilehash: 26d4bed96ca9d61ab30886322e6ca8fa25babb61
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 442817b5ab96bd992fff2e8bc85c45ac03dac81a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>Dostawcy automatyzacji interfejsu użytkownika do kodu zarządzanego
 > [!NOTE]
@@ -34,4 +35,4 @@ ms.lasthandoff: 10/18/2017
  [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie serwera](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
  [Przegląd dostawców automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
  [Implementacja dostawcy automatyzacji interfejsu użytkownika po stronie klienta](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [Tematy porad](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+ [Tematy z instrukcjami](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)

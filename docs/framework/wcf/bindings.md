@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 36924bdc79a9789a991befb53c0025b7ea1fd601
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e878aadf1c7df6042323c008ff52a4be8a9d817f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-communication-foundation-bindings"></a>Powiązania WCF (Windows Communication Foundation)
 Określ powiązania jak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] punktu końcowego usługi komunikuje się z innych punktów końcowych. W jego najbardziej podstawową powiązanie należy określić transportu (na przykład HTTP lub TCP) do użycia. Można również ustawić inne właściwości, takie jak zabezpieczenia i transakcji obsługuje za pośrednictwem powiązania.  
@@ -40,7 +41,7 @@ Określ powiązania jak [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] pun
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Punkty końcowe: Adresy powiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Punkty końcowe: adresy, powiązania i kontrakty](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [Powiązania](../../../docs/framework/wcf/feature-details/bindings.md)  
   

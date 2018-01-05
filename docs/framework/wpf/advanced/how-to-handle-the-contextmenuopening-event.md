@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 61048a8db67986c55e1a1b07d62d5142069dd63e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5eec8646a48f94fb9ffdcad14849416732618a06
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>Porady: obsługa zdarzenia ContextMenuOpening
 <xref:System.Windows.FrameworkElement.ContextMenuOpening> Zdarzeń mogą być obsługiwane w aplikacji albo dostosować istniejący przed menu kontekstu do wyświetlania lub pominąć menu, które w przeciwnym razie będzie wyświetlana przez ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości `true` w danych zdarzenia. Typowe przyczyny ustawienie <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` zdarzeń danych ma zastąpić menu całkowicie nową <xref:System.Windows.Controls.ContextMenu> obiektów, co wymaga czasami anulowanie operacji i uruchomienie nowej Otwórz. Podczas pisania obsług dla <xref:System.Windows.FrameworkElement.ContextMenuOpening> zdarzenia, należy zwrócić uwagę problemy dotyczące synchronizacji między <xref:System.Windows.Controls.ContextMenu> kontroli i usługi, która jest odpowiedzialna za otwierania i ogólnie pozycjonowanie menu kontekstowe dla formantów. W tym temacie przedstawiono niektóre techniki kodu dla różnych menu kontekstowe otwierania scenariuszy i przedstawiono w przypadku, gdy problem chronometrażu wejścia play.  
@@ -67,5 +68,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.ContextMenu>  
  <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>  
- [Przegląd podstawowych elementów](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [ContextMenu — omówienie](../../../../docs/framework/wpf/controls/contextmenu-overview.md)
+ [Przegląd elementów podstawowych](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
+ [ContextMenu — przegląd](../../../../docs/framework/wpf/controls/contextmenu-overview.md)

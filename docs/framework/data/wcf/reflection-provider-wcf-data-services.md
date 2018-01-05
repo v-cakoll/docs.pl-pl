@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 52fe7e777cfea04b6da2a04c0badfe92b2a0a756
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 617754fcd9515f080dc6cf8ae923c2c6fc34ad3a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-provider-wcf-data-services"></a>Dostawca odbicia (usługi danych WCF)
 Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity Framework [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] mogą uwidaczniać ściśle nie jest zdefiniowany w modelu jednostki na podstawie danych. Dostawca odbicia udostępnia dane klas, które zwracają typów, które implementują <xref:System.Linq.IQueryable%601> interfejsu. [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa odbicia do wywnioskowania modelu danych dla tych klas i może dokonywać translacji oparte na adresie zapytań względem zasobów na język kwerendy zintegrowanym (LINQ) — na podstawie zapytań dotyczących narażonych <xref:System.Linq.IQueryable%601> typów.  
@@ -104,4 +105,4 @@ Oprócz udostępnianie danych z modelu danych za pośrednictwem programu Entity 
  Ponieważ programu Entity Framework jest obsługiwany natywnie domyślnie, dostawcę danych zalecane jest dotyczące korzystania z danych relacyjnych z [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Jednak można użyć dostawcy odbicia do użycia LINQ w klasach SQL z usługą danych. <xref:System.Data.Linq.Table%601> Zestawy, które są zwracane przez metody na wyników <xref:System.Data.Linq.DataContext> generowane przez składnik LINQ to SQL Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych) wdrożenie <xref:System.Linq.IQueryable%601> interfejsu. Dzięki temu dostawcy odbicia dostępu do tych metod i zwróć jednostki danych z programu SQL Server za pomocą wygenerowanego LINQ w klasach SQL. Jednak ponieważ LINQ do SQL nie implementuje <xref:System.Data.Services.IUpdatable> interfejsu, musisz dodać częściowej klasy, która rozszerza istniejący <xref:System.Data.Linq.DataContext> częściowej klasy, aby dodać <xref:System.Data.Services.IUpdatable> implementacji. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych przy użyciu składnika LINQ to SQL źródła danych](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dostawców usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)
+ [Dostawcy usług danych](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

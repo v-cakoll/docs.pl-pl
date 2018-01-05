@@ -21,11 +21,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 611a2d2de56025e2f1b5add6106294834586f9af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b5fde62e2e1ab17b26c91051f68b7d4225450c60
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-input-from-the-stylus"></a>Przechwycenie danych z pisaka
 <xref:System.Windows.Input.StylusPlugIns> Architektura udostępnia mechanizm dla implementacji kontrolę niskiego poziomu nad <xref:System.Windows.Input.Stylus> dane wejściowe i tworzenia elektroniczne pismo odręczne <xref:System.Windows.Ink.Stroke> obiektów. <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> Klasa udostępnia mechanizm do implementowania niestandardowych zachowania i zastosować je w strumieniu danych przesyłanych przez pióro urządzenie pod kątem uzyskania optymalnej wydajności.  
@@ -81,5 +82,5 @@ ms.lasthandoff: 11/21/2017
  Przez wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> klasy i wstawianie ich do <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection> kolekcji, mogą znacznie zwiększyć zachowanie odręcznego cyfrowego. Masz dostęp do <xref:System.Windows.Input.StylusPoint> danych, ponieważ jest generowany, umożliwiając dostosować <xref:System.Windows.Input.Stylus> wejściowego. Ponieważ taki dostęp niskiego poziomu do <xref:System.Windows.Input.StylusPoint> danych, można zaimplementować odręczne kolekcji i renderowania z optymalną wydajnością aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa zaawansowanych odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [Zaawansowana obsługa pisma odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [Uzyskiwanie dostępu i operowanie nimi piórem](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

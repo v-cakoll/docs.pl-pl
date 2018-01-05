@@ -12,24 +12,25 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: acd8d5925e1aea82f53d222daf9ccc8063ae7841
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 24655f8e230cf2286dc451ab8a26f1a4ccf445a8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="custom-activities"></a>Działania niestandardowe
 Ta sekcja zawiera przykłady, które przedstawiają sposób tworzenia niestandardowych działań w [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Zabudowanych kodu](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
+ [Kod w treści](../../../../docs/framework/windows-workflow-foundation/samples/code-bodied.md)  
  Zawiera przykłady niestandardowego działania utworzone deklaratywnie w kodzie.  
   
- [Złożone](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
+ [Elementy złożone](../../../../docs/framework/windows-workflow-foundation/samples/composite.md)  
  Zawiera przykłady niestandardowe działanie składające się z innymi działaniami.  
   
  [Projektanci działań niestandardowych](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-designers.md)  
  Zawiera przykłady działania, które Użyj niestandardowych projektantów do wyświetlenia w Projektancie przepływów pracy.  
   
- [Sprawdzanie poprawności](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
+ [Walidacja](../../../../docs/framework/windows-workflow-foundation/samples/validation.md)  
  Zawiera przykłady ilustrujące sprawdzania poprawności działania w czasie projektowania.

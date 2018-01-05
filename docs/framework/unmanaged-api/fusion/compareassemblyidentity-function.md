@@ -21,11 +21,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 9d9d7b4934d4295ee799fb13d3d749e6b977e644
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 266868a65a0db75b57d46d92a469b4b6ceaa88e9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity — Funkcja
 Porównuje dwa tożsamości zestawu do ustalenia, czy są równoważne.  
@@ -89,4 +90,4 @@ STDAPI CompareAssemblyIdentity (
   
 ## <a name="see-also"></a>Zobacz też  
  [Łączenie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
- [AssemblyComparisonResult — wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)
+ [AssemblyComparisonResult, wyliczenie](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

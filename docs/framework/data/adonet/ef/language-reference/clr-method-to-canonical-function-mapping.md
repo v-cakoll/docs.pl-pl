@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 5d1e6a1cc362663be3aa6c6084f658eba25dfe54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania kanonicznej funkcji CLR
 Entity Framework zawiera zestaw kanonicznej funkcji, które implementuje funkcje, które są wspólne w wielu systemach bazy danych, takich jak funkcje matematyczne i manipulowanie ciągami. Pozwala to deweloperom target szeroką gamę systemów bazy danych. Przy wywołaniach z podczas badania technologii, takich jak LINQ to Entities, te kanonicznej funkcji są tłumaczone na poprawną odpowiedniego magazynu dla używany dostawca. Dzięki temu wywołania funkcji wyrażane w formie wspólnej między źródłami danych, zapewniając środowisko spójne zapytania między źródłami danych. Bitowe AND, OR, NOT i XOR operatory są również mapowany na funkcje canonical, gdy argument jest typu liczbowego. Dla logiczna operandy bitowe AND, OR, NOT, a nie obliczeniowe XOR operatorów logicznych AND, OR i ich operandami XOR operacji. Aby uzyskać więcej informacji, zobacz [kanonicznej funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -207,4 +208,4 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |Guid.NewGuid()|NewGuid()|  
   
 ## <a name="see-also"></a>Zobacz też  
- [LINQ do jednostek](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+ [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

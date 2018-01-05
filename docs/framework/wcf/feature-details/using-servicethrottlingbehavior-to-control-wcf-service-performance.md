@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ead2990285f10400cfae11c21bce76a5b6c362f0
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 2b7e00e70bab0c5652bbc721d582a1b276e6a3fa
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-servicethrottlingbehavior-to-control-wcf-service-performance"></a>Używanie elementu ServiceThrottlingBehavior do kontrolowania wydajności programu WCF
 <xref:System.ServiceModel.Description.ServiceThrottlingBehavior> Klasa udostępnia właściwości, które można użyć, aby ograniczyć liczbę wystąpień lub sesji są tworzone na poziomie aplikacji. Za pomocą tego zachowania, można dostosować wydajność sieci [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji.  

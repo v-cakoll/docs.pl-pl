@@ -25,11 +25,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2cfc6553fe9dd176d2aa557df906141c13a5f425
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7054728e8bf54a7cf7b71ea1224cab6a352176d4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-an-ink-input-control"></a>Tworzenie formantu danych wejściowych atramentu
 Można utworzyć niestandardowego formantu który dynamicznie i statycznie renderuje pismo odręczne. Oznacza to renderowania odręczne, jak użytkownik rysuje pociągnięcia, powodując pismo odręczne się pojawiać, aby "przebiegu" z pióra i wyświetlić odręczne po nim jest dodawana do kontrolki, albo za pomocą pióra wklejonych ze Schowka lub załadować z pliku. Aby dynamicznie renderowane odręczne, musisz użyć formantu <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>. Statycznie renderowanie odręczne, konieczne jest przesłonięcie metody zdarzeń pióra (<xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusMove%2A>, i <xref:System.Windows.UIElement.OnStylusUp%2A>) do zbierania <xref:System.Windows.Input.StylusPoint> danych, Utwórz pociągnięć i dodaj je do <xref:System.Windows.Controls.InkPresenter> (która renderuje pismo odręczne na formancie).  
@@ -109,5 +110,5 @@ Można utworzyć niestandardowego formantu który dynamicznie i statycznie rende
  Można utworzyć formantu, który zbiera i renderuje pismo odręczne przez zastąpienie metody zdarzeń pióra. Tworząc własne kontrolki wyprowadzanie własne <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn> klas i wstawianie ich do <xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>, można zaimplementować praktycznie dowolne zachowanie imaginable odręczne cyfrowego. Masz dostęp do <xref:System.Windows.Input.StylusPoint> danych, ponieważ jest generowany, umożliwiając dostosować <xref:System.Windows.Input.Stylus> argument wejściowy i renderować ją na ekranie zależnie od potrzeb aplikacji. Ponieważ taki dostęp niskiego poziomu do <xref:System.Windows.Input.StylusPoint> danych, można zaimplementować odręczne kolekcji i renderować ją z optymalną wydajnością aplikacji.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa zaawansowanych odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
+ [Zaawansowana obsługa pisma odręcznego](../../../../docs/framework/wpf/advanced/advanced-ink-handling.md)  
  [Uzyskiwanie dostępu i operowanie nimi piórem](http://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

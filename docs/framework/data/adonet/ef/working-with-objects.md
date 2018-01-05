@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: e15d5ebca489be07311c5ae2ed7f4201705e352b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2f0645509410d0f383caef1a0917138468dc2101
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-objects"></a>Praca z obiektami
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Umożliwia utworzenie zapytania, wstawiania, aktualizacji i usuwania danych, który jest wyrażony jako typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów, które są wystąpień typów jednostek. Typy jednostek reprezentują jednostek zdefiniowanych w modelu koncepcyjnym. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Mapuje jednostki i relacje, które są zdefiniowane w modelu koncepcyjnym ze źródłem danych. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Zapewnia ułatwienia wykonać następujące czynności: zmaterializowania dane zwrócone w wyniku źródła danych jako obiekty; śledzenia zmian, które zostały wprowadzone do obiektów; Obsługa współbieżności; Propaguj zmiany obiektu do źródła danych; i powiązanie obiektów z formantami.  

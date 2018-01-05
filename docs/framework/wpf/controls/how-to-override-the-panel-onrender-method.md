@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 774c612b09d5cb0ffdf36024a7e6a543f407cf67
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 958595cdfa521b372270d6283c7134ef0ba0ef79
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>Jak zastąpić metodę panela OnRender
 Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.Panel.OnRender%2A> metody <xref:System.Windows.Controls.Panel> Aby dodać niestandardowe efektów graficznych do elementu układu.  
@@ -42,6 +43,6 @@ Ten przykład przedstawia sposób przesłonięcia <xref:System.Windows.Controls.
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Panel>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Przykład niestandardowych panelu promieniowego](http://go.microsoft.com/fwlink/?LinkID=159982)  
- [Tematy porad](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)

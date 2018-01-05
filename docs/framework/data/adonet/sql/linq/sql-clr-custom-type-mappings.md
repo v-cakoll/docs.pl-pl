@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 82456bf5b892bc32a6eba0d3cf074b4adc76a305
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapowanie niestandardowego typu SQL CLR
 Automatycznie określono typ mapowania między serwerem SQL i środowisko uruchomieniowe języka wspólnego (CLR), korzystając z narzędzia wiersza polecenia SQLMetal Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych).  
@@ -42,5 +43,5 @@ Automatycznie określono typ mapowania między serwerem SQL i środowisko urucho
  Podczas zmiany bazy danych, musisz zaktualizować pliku DBML w celu odzwierciedlenia tych zmian. Aby wykonać to do automatycznego tworzenia nowego pliku DBML, a następnie wykonaj ponownie Twoje dostosowania mapowania typu. Alternatywnie możesz porównać nowego pliku DBML i dostosowanego pliku DBML i aktualizacja Twojego niestandardowego pliku DBML ręcznie, aby odzwierciedlić zmianę w bazie danych.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [Mapowania typów środowiska SQL-CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
  [Generowanie kodu w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)

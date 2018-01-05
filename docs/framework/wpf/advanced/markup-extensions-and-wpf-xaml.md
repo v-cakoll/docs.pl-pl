@@ -26,11 +26,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 08cdc3dcb9e6d73b0d3b95915bf955ee27782782
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącznie z ich składni reguł, cel i model obiektów klasy źródłowej je. Rozszerzenia znaczników są funkcją ogólne języka XAML i stosowania usługi XAML .NET. W tym temacie szczegółowo w szczególności rozszerzenia znaczników do użycia w WPF XAML.  
@@ -128,10 +129,10 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
  Większość rozszerzenia znaczników, gdy są używane w składni elementu obiektu do wypełniania elementu właściwości nie będzie zawierało składni elementu zawartości i żadnych dodatkowych właściwości w ciągu. W związku z tym spowoduje zamknięcie tagu elementu obiektu i podaj nie podrzędnych elementów. Napotkaniu dowolny element obiektu przez procesor XAML, konstruktora dla tej klasy, nosi nazwę, która tworzy wystąpienie obiektu utworzone na podstawie przeanalizowany element. Nie różni się klasa rozszerzenia struktury znaczników: Jeśli chcesz, aby rozszerzenie znacznika może być używany w składni elementu obiektu, należy podać konstruktora domyślnego. Niektóre istniejące rozszerzenia znaczników ma co najmniej jedną wartość wymaganej właściwości, która musi być określona dla inicjowania skuteczne. Jeśli tak, wartości tej właściwości jest zazwyczaj podawana jako atrybut właściwości w elemencie obiektu. W [Namespace XAML (x:) Funkcje języka](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md) i [WPF XAML rozszerzenia](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md) odwołania stron, znaczników rozszerzeń, które mają wymagane właściwości (i nazwy właściwości wymagane) zostanie zapisany. Strony podręcznika również zauważyć, jeśli obiekt składni elementu lub atrybutu składni jest niedozwolone dla rozszerzenia znaczników określonego. Godne wielkość liter jest [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md), który nie obsługuje Składnia atrybutu, ponieważ zawartości tablicy muszą być określone w znakowanie jako zawartość. Zawartość tablicy są obsługiwane jako ogólne obiekty, dlatego żaden konwerter typów domyślnego atrybutu jest możliwe. Ponadto [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md) wymaga `type` parametru.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [Namespace XAML (x:) Funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
+ [Przegląd XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
+ [Przestrzeń nazw XAML (x:) — funkcje językowe](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
  [Rozszerzenia WPF XAML](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [Rozszerzenie StaticResource znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
- [Powiązanie — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
- [Rozszerzenie znaczników DynamicResource](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
- [x: Type — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)
+ [StaticResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [Rozszerzenie znaczników powiązania](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
+ [DynamicResource, rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [x:Type, rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ca1a73874f6ca2f839639cbaf731a59721b2aede
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 80f6c35ba2ef2ec74293d0f025ddf20254f504a1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugprocess2-interface1"></a>ICorDebugProcess2 Interface1
 Logiczne rozszerzenie ICorDebugProcess — interfejs, który reprezentuje proces uruchamiania kodu zarządzanego.  
@@ -32,13 +33,13 @@ Logiczne rozszerzenie ICorDebugProcess — interfejs, który reprezentuje proces
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ClearUnmanagedBreakpoint — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Usunięcie punktu przerwania od wskazanego przesunięcia, który został ustawiony przez wywołanie wcześniejszych `ICorDebugProcess2::SetUnmanagedBreakpoint`.|  
-|[GetDesiredNGENCompilerFlags — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Pobiera flagi, które muszą być ustawione dla środowisko uruchomieniowe języka wspólnego (CLR) można załadować obrazu z procesem odwołuje się to `ICorDebugProcess2`.|  
-|[GetReferenceValueFromGCHandle — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|Pobiera wskaźnik odwołanie do określonego zarządzanego obiektu, który ma obsługiwać wyrzucania elementów bezużytecznych.|  
-|[GetThreadForTaskID — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|Pobiera wątku, na którym jest wykonywane zadanie o podanym identyfikatorze.|  
-|[GetVersion — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|Pobiera wersję środowiska CLR, na którym jest uruchomiona debugowanego procesu.|  
-|[SetDesiredNGENCompilerFlags — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|Ustawia flagi, które są wymagane dla kompilatora just in time (JIT) można załadować obrazu w debugowanym procesie.|  
-|[SetUnmanagedBreakpoint — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|Ustawia niezarządzanego punktu przerwania w przesunięciu określonego obrazu macierzystego.|  
+|[ClearUnmanagedBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-clearunmanagedbreakpoint-method.md)|Usunięcie punktu przerwania od wskazanego przesunięcia, który został ustawiony przez wywołanie wcześniejszych `ICorDebugProcess2::SetUnmanagedBreakpoint`.|  
+|[GetDesiredNGENCompilerFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getdesiredngencompilerflags-method.md)|Pobiera flagi, które muszą być ustawione dla środowisko uruchomieniowe języka wspólnego (CLR) można załadować obrazu z procesem odwołuje się to `ICorDebugProcess2`.|  
+|[GetReferenceValueFromGCHandle, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getreferencevaluefromgchandle-method.md)|Pobiera wskaźnik odwołanie do określonego zarządzanego obiektu, który ma obsługiwać wyrzucania elementów bezużytecznych.|  
+|[GetThreadForTaskID, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getthreadfortaskid-method.md)|Pobiera wątku, na którym jest wykonywane zadanie o podanym identyfikatorze.|  
+|[GetVersion, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-getversion-method.md)|Pobiera wersję środowiska CLR, na którym jest uruchomiona debugowanego procesu.|  
+|[SetDesiredNGENCompilerFlags, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setdesiredngencompilerflags-method.md)|Ustawia flagi, które są wymagane dla kompilatora just in time (JIT) można załadować obrazu w debugowanym procesie.|  
+|[SetUnmanagedBreakpoint, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)|Ustawia niezarządzanego punktu przerwania w przesunięciu określonego obrazu macierzystego.|  
   
 ## <a name="remarks"></a>Uwagi  
   
@@ -55,4 +56,4 @@ Logiczne rozszerzenie ICorDebugProcess — interfejs, który reprezentuje proces
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

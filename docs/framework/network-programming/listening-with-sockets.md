@@ -25,11 +25,12 @@ caps.latest.revision: "10"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 6f96463b4f9cb7e61c403cfd77f747c8aefd99a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 6b799f57644420653b371ac0e65b414c807008b1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="listening-with-sockets"></a>Nasłuchiwanie z gniazda
 Gniazda odbiornika lub serwera Otwórz port w sieci, a następnie poczekaj dla klienta połączyć się z tym portem. Mimo że istnieją inne rodziny adresów sieci i protokołów, w tym przykładzie pokazano, jak można utworzyć usługi zdalnej dla sieci TCP/IP.  
@@ -69,8 +70,8 @@ listener.Listen(100);
  **Nasłuchiwania** metoda przyjmuje jeden parametr, który określa liczbę oczekujących połączeń **gniazda** są dozwolone przed zwróceniem do klienta nawiązującego połączenie zajęty błąd serwera. W takim przypadku maksymalnie 100 klientami są umieszczane w kolejce połączenia przed zwróceniem do klienta o numerze 101 zajęty odpowiedź serwera.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu gniazda synchroniczne serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
- [Przy użyciu gniazda serwera asynchroniczne](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Używanie klienta gniazd](../../../docs/framework/network-programming/using-client-sockets.md)  
- [Porady: Tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+ [Używanie synchronicznego gniazda serwera](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)  
+ [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Używanie gniazd klientów](../../../docs/framework/network-programming/using-client-sockets.md)  
+ [Instrukcje: tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)

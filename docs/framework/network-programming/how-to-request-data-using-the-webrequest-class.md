@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e831f3c305716afe11df6c0b1e21db1ed5a4f01e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: bd714a9e006f87a817ca931757aaaaed920f50f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-request-data-using-the-webrequest-class"></a>Porady: dane przy użyciu klasy WebRequest żądania
 W poniższej procedurze opisano kroki używane do żądania zasobów z serwera, na przykład, strony sieci Web lub pliku. Zasób musi być identyfikowany przez identyfikator URI.  
@@ -182,8 +183,8 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie żądania internetowe](../../../docs/framework/network-programming/creating-internet-requests.md)  
- [W sieci za pomocą strumieni](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Dostęp do Internetu za pośrednictwem serwera Proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
+ [Tworzenie żądań internetowych](../../../docs/framework/network-programming/creating-internet-requests.md)  
+ [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Dostęp do Internetu za pośrednictwem serwera proxy](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)  
  [Żądanie danych](../../../docs/framework/network-programming/requesting-data.md)  
- [Porady: wysyłanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)
+ [Instrukcje: przesyłanie danych przy użyciu klasy WebRequest](../../../docs/framework/network-programming/how-to-send-data-using-the-webrequest-class.md)

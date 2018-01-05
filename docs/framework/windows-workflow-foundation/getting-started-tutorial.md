@@ -15,36 +15,37 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3bc2f081411577094ea1b95c25478822a6c1747c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f25058071e041ac1e14de2c223750013c8ef1d30
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Ta sekcja zawiera zestaw tematów wskazówki, które służą jako wprowadzenie do programowania w języku [!INCLUDE[wf](../../../includes/wf-md.md)] aplikacji. Zgodnie z instrukcjami opisanymi w tych tematach, zostanie utworzona aplikacja, która jest numer gry guessing. Pierwszym temacie samouczka poprowadzi Cię przez kroki tworzenia działań niestandardowych wymagane dla przepływu pracy. W drugim temacie te działania są łączone wraz z działań wbudowanych przepływów pracy w przepływie pracy schemat blokowy. W trzecim temacie aplikacja hosta jest skonfigurowana do uruchamiania przepływu pracy, a w ostatnim temacie wprowadzono trwałości. Każdy krok w procesie zależy od poprzednie kroki, tak więc zaleca się zakończyć je w kolejności.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
+ [Instrukcje: Tworzenie działania](../../../docs/framework/windows-workflow-foundation/how-to-create-an-activity.md)  
  Opisuje sposób tworzenia działań niestandardowych, która jest pochodną <xref:System.Activities.NativeActivity%601>oraz sposobu tworzenia tego działania wraz z wbudowanych działanie do działania złożonego przy użyciu narzędzia Projektant działań.  
   
- [Porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [Instrukcje: Tworzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
  Opisuje sposób tworzenia schematu blokowego sekwencyjnych i przepływów pracy maszyny stanu przy użyciu działań wbudowanych i niestandardowych działań z poprzednim samouczka.  
   
- [Porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)  
+ [Instrukcje: Uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)  
  W tym artykule opisano, jak wywołać przepływu pracy w środowisku hosta, przekazywanie danych do i z przepływu pracy i sposób wznowienia zakładki.  
   
- [Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
+ [Instrukcje: Tworzenie i uruchamianie długotrwałego przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)  
  Opisuje sposób dodawania trwałości aplikacji przepływu pracy.  
   
- [Porady: Tworzenie niestandardowych śledzenia uczestnika](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)  
+ [Instrukcje: Tworzenie niestandardowego uczestnika śledzenia](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)  
  Opisuje sposób tworzenia niestandardowych śledzenia uczestnika i profilu śledzenia.  
   
- [Porady: hostowanie wielu wersji przepływu pracy Side-by-Side](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
+ [Instrukcje: Równoczesne hostowanie wielu wersji przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)  
  Informacje dotyczące używania `WorkflowIdentity` do obsługi wielu wersji przepływu pracy side-by-side.  
   
- [Porady: aktualizowanie definicji działania wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
+ [Instrukcje: Aktualizowanie definicji działającego wystąpienia przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)  
  Informacje dotyczące używania aktualizacji dynamicznej można zmodyfikować uruchomionych wystąpień przepływu pracy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Workflow Foundation programowania](../../../docs/framework/windows-workflow-foundation/programming.md)
+ [Programowanie w programie Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/programming.md)

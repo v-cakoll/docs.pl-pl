@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9efad2da27f4003632b643b9f5f0602be0d55480
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 060f411dfc7c3153fdf0e0d6e19781f0d60b141b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>Porady: serializowanie kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute
 Kontrolki niestandardowe czasami powoduje to udostępnienie kolekcji jako właściwość. W tym przewodniku przedstawiono sposób użycia <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> klasę, aby kontrolować sposób kolekcji jest serializowany w czasie projektowania. Stosowanie <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> zapewnia wartość właściwości z kolekcji zostaną Zserializowane właściwości.  
@@ -61,7 +62,7 @@ Kontrolki niestandardowe czasami powoduje to udostępnienie kolekcji jako właś
     |**Wiele linii**|`true`|  
     |**Doku.**|<xref:System.Windows.Forms.DockStyle.Fill>|  
     |**Paski przewijania**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
-    |**Tylko do odczytu**|`true`|  
+    |**ReadOnly**|`true`|  
   
 6.  W **edytora kodu**, Zadeklaruj pola tablicy ciągu o nazwie `stringsValue` w `SerializationDemoControl`.  
   
@@ -141,14 +142,14 @@ Kontrolki niestandardowe czasami powoduje to udostępnienie kolekcji jako właś
   
 -   [Architektura w czasie projektowania](http://msdn.microsoft.com/library/4881917b-628f-4689-b872-472e4f8a4e3a)  
   
--   [Atrybuty w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
   
 -   [Omówienie projektanta serializacji](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
   
--   [Wskazówki: Tworzenie formantu formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [Przewodnik: tworzenie kontrolki formularzy Windows Forms wykorzystującej funkcje czasu projektowania programu Visual Studio](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>  
  [Omówienie projektanta serializacji](http://msdn.microsoft.com/library/c342635a-aa5f-4281-915b-b013738af15a)  
  [Porady: serializacji kolekcji standardowych typów za pomocą DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/7829fcdd-8205-405f-8231-a1282a9835c9)  
- [Wskazówki: Automatyczne zapełnianie przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+ [Przewodnik: automatyczne zapełnianie Przybornika składnikami niestandardowymi](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

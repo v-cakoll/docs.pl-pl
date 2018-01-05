@@ -18,11 +18,12 @@ caps.latest.revision: "14"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b8b693f7faf9abb71d214ca755fc9587a1dcc0ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 874bd286ec7dbafb95df1726fdc902b0ab7716e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Dodatkowe zagadnienia dotyczące zabezpieczeń dotyczące formularzy systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]ustawienia zabezpieczeń może spowodować aplikację do uruchamiania inaczej w środowisku częściowej relacji zaufania niż na komputerze lokalnym. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Ogranicza dostęp do takich krytyczne zasoby lokalne jako system plików, sieci i niezarządzane interfejsy API, między innymi. Ustawienia zabezpieczeń wpływają na możliwość wywołania interfejsu API Win32 firmy Microsoft lub innych interfejsów API, którego nie można zweryfikować przez system zabezpieczeń. Zabezpieczeń dotyczy również inne aspekty aplikacji, łącznie z dostępem do plików i danych i drukowania. Aby uzyskać więcej informacji na temat dostępu do plików i danych w środowisku częściowej relacji zaufania, zobacz [więcej Zabezpieczanie plików i dostępu do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md). Aby uzyskać więcej informacji na temat drukowania w środowisku częściowej relacji zaufania, zobacz [więcej Secure drukowania w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md).  
@@ -99,8 +100,8 @@ ms.lasthandoff: 11/21/2017
  Uprawnienia do wywoływania kodu niezarządzanego umożliwia aplikacji najbardziej wykonywać żadnych czynności. W związku z tym uprawnienia do wywoływania kodu niezarządzanego powinny być przyznane tylko dla aplikacji, które pochodzą z zaufanego źródła. Alternatywnie w zależności od aplikacji, część funkcji aplikacji, który wykonuje wywołanie do kodu niezarządzanego może być opcjonalne i włączone w środowisku pełnego zaufania tylko. Aby uzyskać więcej informacji na temat niebezpiecznych uprawnień, zobacz [niebezpieczne uprawnienia i administrowanie zasadami](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md). Aby uzyskać więcej informacji na temat wzrasta uprawnień, zobacz [NIB: ogólne administrowanie zasadami zabezpieczeń](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Plik bezpieczniejsze i dostęp do danych w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
- [Bezpieczniejsze drukowanie w formularzach systemu Windows](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
- [Zabezpieczenia w formularzach systemu Windows-omówienie](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
- [Zabezpieczenia formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-security.md)  
+ [Bezpieczniejszy dostęp do plików i danych w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)  
+ [Bezpieczniejsze drukowanie w formularzach Windows Forms](../../../docs/framework/winforms/more-secure-printing-in-windows-forms.md)  
+ [Przegląd zabezpieczeń w formularzach Windows Forms](../../../docs/framework/winforms/security-in-windows-forms-overview.md)  
+ [Zabezpieczenia formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-security.md)  
  [Zabezpieczanie aplikacji ClickOnce](/visualstudio/deployment/securing-clickonce-applications)

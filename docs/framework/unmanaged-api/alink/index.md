@@ -15,35 +15,36 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 2f8646fbb1c878e850d9bcda4e7117111dc825f3
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 92c4d7c6693e3a2a011cb4ac39b42a1d96985a36
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alink-api-unmanaged-api-reference"></a>ALink — Interfejs (Niezarządzany wykaz interfejsów API)
 Obsługuje Tworzenie niezwiązanego modułów i zestawy .NET Framework.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Assemblyattributesgohere —](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
+ [AssemblyAttributesGoHere](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgohere.md)  
   
- [Assemblyattributesgoherem —](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
+ [AssemblyAttributesGoHereM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoherem.md)  
   
- [Assemblyattributesgoheres —](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)  
+ [AssemblyAttributesGoHereS](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheres.md)  
   
- [Assemblyattributesgoheresm —](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
+ [AssemblyAttributesGoHereSM](../../../../docs/framework/unmanaged-api/alink/assemblyattributesgoheresm.md)  
   
- [Assemblyoptions — wyliczenie](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
+ [AssemblyOptions, wyliczenie](../../../../docs/framework/unmanaged-api/alink/assemblyoptions-enumeration.md)  
   
- [Createalink — funkcja](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
+ [CreateALink, funkcja](../../../../docs/framework/unmanaged-api/alink/createalink-function.md)  
   
- [Getalinkmessagedll — funkcja](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
+ [GetALinkMessageDll, funkcja](../../../../docs/framework/unmanaged-api/alink/getalinkmessagedll-function.md)  
   
- [Ialink — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
+ [IALink, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
   
- [Ialink2 — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
+ [IALink2, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
   
- [Ialink3 — interfejs](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
+ [IALink3, interfejs](../../../../docs/framework/unmanaged-api/alink/ialink3-interface.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Niezarządzany wykaz interfejsów API](../../../../docs/framework/unmanaged-api/index.md)
+ [Niezarządzane interfejsy API — informacje](../../../../docs/framework/unmanaged-api/index.md)

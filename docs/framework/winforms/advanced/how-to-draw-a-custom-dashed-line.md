@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 90fcc99414e8d5c9542d643677c85d4ff670f50f
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 770ce290b21f7d0094a487c30079063b79a7c08d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>Porady: rysowanie niestandardowej linii kreskowanej
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]dostępnych jest kilka typów kreska, które są wymienione w <xref:System.Drawing.Drawing2D.DashStyle> wyliczenia. Jeśli te style standard dash nie własnych potrzeb, można utworzyć niestandardowego wzorze.  

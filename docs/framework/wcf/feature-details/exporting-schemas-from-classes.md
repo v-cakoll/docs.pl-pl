@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5b60b31133a3721611285b5b4caa93d3c34e193f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 01e841e76c4a6cf06169113422921367d671ea98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exporting-schemas-from-classes"></a>Eksportowanie schematów z klas
 Aby wygenerować schematu XML definition language (XSD) schematów z klas, które są używane w modelu kontraktu danych, użyj <xref:System.Runtime.Serialization.XsdDataContractExporter> klasy. W tym temacie opisano proces tworzenia schematów.  
@@ -53,9 +54,9 @@ Aby wygenerować schematu XML definition language (XSD) schematów z klas, któr
 ## <a name="export-options"></a>Opcje eksportu  
  Można ustawić <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> właściwość <xref:System.Runtime.Serialization.XsdDataContractExporter> na wystąpienie <xref:System.Runtime.Serialization.ExportOptions> klasę, aby kontrolować różne aspekty procesu eksportowania. W szczególności można ustawić następujące opcje:  
   
--   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>. Ta kolekcja `Type` reprezentuje znanych typów dla typów eksportowane. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Te znane typy są eksportowane na każdym `Export` Ponadto wywołanie typów przekazywanej do `Export` — metoda.  
+-   <xref:System.Runtime.Serialization.ExportOptions.KnownTypes%2A>., Ta kolekcja `Type` reprezentuje znanych typów dla typów eksportowane. ([!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Znane typy kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md).) Te znane typy są eksportowane na każdym `Export` Ponadto wywołanie typów przekazywanej do `Export` — metoda.  
   
--   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>. <xref:System.Runtime.Serialization.IDataContractSurrogate> Mogą być dostarczane za pomocą tej właściwości, który będzie dostosowania procesu eksportu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Surogatów kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
+-   <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A>., <xref:System.Runtime.Serialization.IDataContractSurrogate> Mogą być dostarczane za pomocą tej właściwości, który będzie dostosowania procesu eksportu. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Surogatów kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
   
 ## <a name="helper-methods"></a>Metody pomocnicze  
  Oprócz jego podstawową rolą, jaką eksportowania schematu `XsdDataContractExporter` udostępnia kilka metod przydatne pomocnika, które zawierają informacje o typach. Należą do nich następujące elementy:  
@@ -72,5 +73,5 @@ Aby wygenerować schematu XML definition language (XSD) schematów z klas, któr
  <xref:System.Runtime.Serialization.DataContractSerializer>  
  <xref:System.Runtime.Serialization.XsdDataContractImporter>  
  <xref:System.Runtime.Serialization.XsdDataContractExporter>  
- [Importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
+ [importowanie i eksportowanie schematu](../../../../docs/framework/wcf/feature-details/schema-import-and-export.md)  
  [Importowanie schematu w celu generowania klas](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)

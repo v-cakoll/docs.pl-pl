@@ -24,11 +24,14 @@ caps.latest.revision: "24"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1beceb2b2d32c500e73cd7786c480fcd84c3001c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 6e3ef01abdb615b2850b5a9d07e1208ee22eda95
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny w .NET
 Metody analizy Konwertuj reprezentację ciągu daty i godziny na równoważne <xref:System.DateTime> obiektu. <xref:System.DateTime.Parse%2A> i <xref:System.DateTime.TryParse%2A> metody konwersja kilka typowych liczbami w postaci daty i godziny. <xref:System.DateTime.ParseExact%2A> i <xref:System.DateTime.TryParseExact%2A> metody konwersji reprezentację ciągu, który jest zgodny z wzorcem określona przez ciąg formatu daty i godziny. (Zobacz tematy na [standardowa Data i godzina ciągi formatujące](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) i [niestandardowa data i godzina ciągi formatujące](../../../docs/standard/base-types/custom-date-and-time-format-strings.md).)  
@@ -73,5 +76,5 @@ Metody analizy Konwertuj reprezentację ciągu daty i godziny na równoważne <x
   
 ## <a name="see-also"></a>Zobacz też  
  [Analizowanie ciągów](../../../docs/standard/base-types/parsing-strings.md)  
- [Formatowanie tekstu](../../../docs/standard/base-types/formatting-types.md)  
- [Konwersja typów w .NET](../../../docs/standard/base-types/type-conversion.md)
+ [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
+ [Konwersja typów w programie .NET](../../../docs/standard/base-types/type-conversion.md)

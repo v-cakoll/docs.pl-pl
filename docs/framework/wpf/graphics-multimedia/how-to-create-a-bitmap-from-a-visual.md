@@ -19,11 +19,12 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7aabb01d35e02323785b6bae0764a8d8bc636e16
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: db3ad547072f1d9162ede5c45144aa30e809c50e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-bitmap-from-a-visual"></a>Jak utworzyć mapę bitową z Visual
 W tym przykładzie pokazano, jak utworzyć mapę bitową z <xref:System.Windows.Media.Visual>. A <xref:System.Windows.Media.DrawingVisual> jest odwzorowywany z <xref:System.Windows.Media.FormattedText>. <xref:System.Windows.Media.Visual> Następnie jest renderowany do <xref:System.Windows.Media.Imaging.RenderTargetBitmap> tworzenia mapy bitowej danego tekstu.  
@@ -34,6 +35,6 @@ W tym przykładzie pokazano, jak utworzyć mapę bitową z <xref:System.Windows.
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.DrawingContext>  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Rysowanie obiekty — omówienie](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
- [Przy użyciu obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
+ [Użycie obiektów DrawingVisual](../../../../docs/framework/wpf/graphics-multimedia/using-drawingvisual-objects.md)

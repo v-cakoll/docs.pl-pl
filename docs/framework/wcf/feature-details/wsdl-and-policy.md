@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f502d24f98c9229d064be3de0e0edc081664dd03
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: dd52e36199fc2412abb003d530dd5614cda8049b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wsdl-and-policy"></a>WSDL i zasady
 W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] WSDL 1.1, szczegóły implementacji protokołu WS-Policy i WS-PolicyAttachment, a także dodatkowe potwierdzenia WS-Policy i wprowadzone przez rozszerzenia WSDL 1.1 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -84,5 +85,5 @@ W tym temacie omówiono [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
   
 ## <a name="see-also"></a>Zobacz też  
  [Niestandardowa publikacja WSDL](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)  
- [Porady: eksportowanie niestandardowych WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
- [Porady: importowanie niestandardowych WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+ [Instrukcje: eksportowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)  
+ [Instrukcje: importowanie niestandardowych informacji w formacie WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

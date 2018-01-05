@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 542dd132ece543b6a53a9e6d867b49fce4d15a58
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 2ee2669c41f4ee558d9457cee7df0ae8425cf065
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-convert-a-bmp-image-to-a-png-image"></a>Porady: konwertowanie obrazu w formacie BMP na format PNG
 Często należy przekonwertować z jednego obrazu pliku formatu do innego. Wykonaj tę konwersję łatwo wywołując <xref:System.Drawing.Image.Save%2A> metody <xref:System.Drawing.Image> klasy i określając <xref:System.Drawing.Imaging.ImageFormat> formatu pliku odpowiedni obraz.  
@@ -42,6 +43,6 @@ Często należy przekonwertować z jednego obrazu pliku formatu do innego. Wykon
 -   Odwołanie do `System.Drawing.Imaging` przestrzeni nazw.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: lista zainstalowanych koderów](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
- [Używanie kodeków obrazu w zarządzanym GDI +](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
+ [Instrukcje: lista zainstalowanych koderów](../../../../docs/framework/winforms/advanced/how-to-list-installed-encoders.md)  
+ [Używanie kodeków obrazu w zarządzanym GDI+](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)  
  [Typy map bitowych](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)

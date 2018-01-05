@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: a63a8080c71ad026664e2e14fc1762fcdd4bdb36
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e601fb5895460e52aa21836c542d0b1367527f09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments — dyrektywa
 Przekazuje ograniczający wpisz argumenty ogólne do konstruktora typu ogólnego.  
@@ -92,7 +93,7 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
  Na platformie WPF i przeznaczonych dla [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można użyć XAML 2009 — funkcje razem z `x:TypeArguments` , ale tylko w przypadku utracić XAML (XAML, który nie jest kompilowany do znaczników). Skompilowany kod znaczników XAML w WPF i BAML formę XAML aktualnie nie obsługują słowa kluczowe języka XAML 2009 i funkcje. Jeśli potrzebne do znaczników kompilowania pliku XAML, muszą być ustawione na ograniczenia wymienione w sekcji "XAML 2006 and WPF ogólny XAML użycia".  
   
 ## <a name="see-also"></a>Zobacz też  
- [x: Class — dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
- [x: Type — rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
+ [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [x:Type, rozszerzenie znaczników](../../../docs/framework/xaml-services/x-type-markup-extension.md)  
  [Typy wbudowane dla wspólnych elementów podstawowych języka XAML](../../../docs/framework/xaml-services/built-in-types-for-common-xaml-language-primitives.md)  
  [Typy ogólne w XAML](../../../docs/framework/xaml-services/generics-in-xaml.md)

@@ -18,53 +18,54 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca9f439dbb4f95a05886c822cd6436793acab6a9
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 15bcd9295ba825b156668152b3f1addf538aa884
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-graphics-programming"></a>Wprowadzenie do programowania grafiki
 W tej sekcji pokazano, jak rozpocząć korzystanie z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] w aplikacji formularzy systemu Windows. W następujących tematach opisano sposób wykonania kilku [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] zadań, takich jak rysowania i wypełnianie kształty i tekst.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
+ [Instrukcje: tworzenie obiektów graficznych do rysowania](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)  
  Przedstawia sposób tworzenia <xref:System.Drawing.Graphics> obiektu do rysowania.  
   
- [Porady: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
+ [Instrukcje: tworzenie pióra](../../../../docs/framework/winforms/advanced/how-to-create-a-pen.md)  
  Przedstawia sposób tworzenia pióra.  
   
- [Porady: Ustawianie koloru pióra](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
+ [Instrukcje: ustawianie koloru pióra](../../../../docs/framework/winforms/advanced/how-to-set-the-color-of-a-pen.md)  
  Pokazuje, jak można ustawić na kolor pióra.  
   
- [Porady: Tworzenie pędzla pełnego koloru](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
+ [Instrukcje: tworzenie pędzla pełnego koloru](../../../../docs/framework/winforms/advanced/how-to-create-a-solid-brush.md)  
  Opisuje sposób tworzenia pędzla pełnego koloru.  
   
- [Porady: Rysowanie linii w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
+ [Instrukcje: rysowanie linii w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-on-a-windows-form.md)  
  Demonstracja Rysowanie linii.  
   
- [Porady: Rysowanie konturu kształtu](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
+ [Instrukcje: rysowanie konturu kształtu](../../../../docs/framework/winforms/advanced/how-to-draw-an-outlined-shape.md)  
  Opisuje sposób narysować kształt.  
   
- [Porady: Rysowanie wypełnionego prostokąta w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
+ [Instrukcje: rysowanie wypełnionego prostokąta w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-rectangle-on-a-windows-form.md)  
  Wyjaśniono, jak narysować prostokąt.  
   
- [Porady: Rysowanie wypełnionej elipsy w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
+ [Instrukcje: rysowanie wypełnionej elipsy w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-a-filled-ellipse-on-a-windows-form.md)  
  Przedstawia sposób Rysowanie wypełnionej elipsy.  
   
- [Porady: Rysowanie tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
+ [Instrukcje: rysowanie tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-text-on-a-windows-form.md)  
  Opisuje sposób rysowania tekstu.  
   
- [Porady: Rysowanie pionowego tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
+ [Instrukcje: rysowanie pionowego tekstu w formularzu systemu Windows](../../../../docs/framework/winforms/advanced/how-to-draw-vertical-text-on-a-windows-form.md)  
  Przedstawia sposób Rysowanie pionowego tekstu.  
   
- [Porady: renderowanie obrazów za pomocą GDI +](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
+ [Instrukcje: renderowanie obrazów za pomocą GDI+](../../../../docs/framework/winforms/advanced/how-to-render-images-with-gdi.md)  
  Demonstracja rysowanie obrazów.  
   
- [Porady: Tworzenie formularza systemu Windows o określonych kształtach](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
+ [Instrukcje: tworzenie formularzy systemu Windows o określonych kształtach](../../../../docs/framework/winforms/advanced/how-to-create-a-shaped-windows-form.md)  
  Wyjaśniono, jak zmienić kształt formularza.  
   
- [Porady: kopiowanie pikseli w celi zmniejszenia migotania w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
+ [Instrukcje: kopiowanie pikseli w celi zmniejszenia migotania w formularzach Windows Forms](../../../../docs/framework/winforms/advanced/how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md)  
  Wyjaśniono, jak kopiowanie pikseli z jednego obszaru do innego.  
   
 ## <a name="reference"></a>Tematy pomocy  

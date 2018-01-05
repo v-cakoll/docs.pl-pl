@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c75a7cedac9d06c9f8da36dc131521053450a37
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8583ac00f1216e68f95c3d41d8c896b555d0aa8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="stand-alone-json-serialization"></a>Autonomiczna serializacja kodu JSON
 JSON (JavaScript Object Notation) to format danych przeznaczone do użycia przez kod JavaScript uruchomionych na stronach sieci Web w przeglądarce. Jest to domyślny format danych używany przez usługi ASP.NET AJAX utworzone w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -42,7 +43,7 @@ JSON (JavaScript Object Notation) to format danych przeznaczone do użycia przez
 |<xref:System.Array>typu<xref:System.Byte>|Tablica liczb|Każdy numer reprezentuje wartość jednego bajtu.|  
 |<xref:System.DateTime>|Data/Godzina lub ciąg|Zobacz daty / godziny i JSON w dalszej części tego tematu.|  
 |<xref:System.DateTimeOffset>|Typ złożony|Zobacz daty / godziny i JSON w dalszej części tego tematu.|  
-|Typy XML i ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>. Tablice <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Zobacz sekcję typów XML i JSON w tym temacie.|  
+|Typy XML i ADO.NET (<xref:System.Xml.XmlElement>,<br /><br /> <xref:System.Xml.Linq.XElement>., Tablice <xref:System.Xml.XmlNode>,<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|Zobacz sekcję typów XML i JSON w tym temacie.|  
 |<xref:System.DBNull>|Pusty typu złożonego|--|  
 |Kolekcje, słowniki i tablice|Tablica|Zobacz sekcję kolekcje, słowniki i tablic w tym temacie.|  
 |Typy złożone (z <xref:System.Runtime.Serialization.DataContractAttribute> lub <xref:System.SerializableAttribute> zastosowane)|Typ złożony|Elementy członkowskie danych stają się elementami typu złożonego kodu JavaScript.|  
@@ -271,4 +272,4 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  Nazwy kluczy serializator koduje XML, które nie są prawidłowe nazwy XML. Na przykład element członkowski danych o nazwie "123" miałyby zakodowane nazwy takie jak "_x0031\__x0032\__x0033\_" ponieważ "123" jest nieprawidłową nazwą — element XML (rozpoczyna się od cyfry). Podobna sytuacja mogą wynikać z niektóre zestawy znaków międzynarodowych nie jest prawidłowa w nazw XML. Aby uzyskać informacje o tej wpływa XML na przetwarzanie JSON, zobacz [mapowanie między formatami JSON i XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Obsługa formatów transferowania formatu JSON i innych danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)
+ [Obsługa formatu JSON i innych formatów transferowania danych](../../../../docs/framework/wcf/feature-details/support-for-json-and-other-data-transfer-formats.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8dbaa6f3df2bd4dcbde199f867686b3e05ae235f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61a0811176a5db17e040073d031fa50865a09857
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>Atrybuty modelu ServiceModel i odwołanie modelu ServiceDescription
 *Drzewa opis* jest hierarchia typów (począwszy od <xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType> klasy) ze sobą opisują każdego aspektu działania usługi. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa opis drzewa do kompilacji do publikowania Web Services Description Language (WSDL), języka definicji schematu XML (XSD) i potwierdzeń zasad (metadanymi) o usługę, której klienci mogą używać do łączenia się i korzystać z usługi oraz moduł wykonawczy prawidłową usługę Generowanie różne reprezentacje kodem i konfiguracją pliku wartości drzewa opis.  
@@ -124,4 +125,4 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Opis drzewa wartości są konwertowane na metadanych, zobacz [ServiceDescription i kodu WSDL odwołanie](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [ServiceDescription i kodu WSDL odwołania](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)
+ [Odwołania do elementu ServiceDescription i kodu WSDL](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)

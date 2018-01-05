@@ -12,20 +12,21 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17abe368b8e1d9a5212b564d201d5d163d849e4d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 79ec9c423f86a0a736ed1b99d8ddf0f5a38160c0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tracking"></a>Śledzenie
 Ta sekcja zawiera przykłady ilustrujące przepływu pracy śledzenia w [!INCLUDE[wf](../../../../includes/wf-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Niestandardowe śledzenia](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
+ [Niestandardowe śledzenie](../../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)  
  Pokazuje, jak utworzyć uczestnika niestandardowych śledzenia i zapisanie zawartości dane śledzenia do konsoli.  
   
- [Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
+ [Zdarzenia śledzenia do śledzenia zdarzeń w systemie Windows](../../../../docs/framework/windows-workflow-foundation/samples/tracking-events-into-event-tracing-in-windows.md)  
  Pokazuje, jak włączyć [!INCLUDE[wf1](../../../../includes/wf1-md.md)] śledzenie w przepływie pracy usługi i wysyłać zdarzenia śledzenia w funkcji Śledzenie zdarzeń systemu Windows ().  
   
  [Śledzenie SQL](../../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)  

@@ -23,11 +23,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ca969848ae82d567642cd0f4174c52ebc24ef5d0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 45cd99332ca5ea87bf70c9b881da7daa3705ec25
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-load-and-print-richtextbox-content"></a>Jak zapisać, ładować i drukować zawartość RichTextBox
 Poniższy przykład pokazuje, jak można zapisać zawartości <xref:System.Windows.Controls.RichTextBox> do pliku, załadować tego treść z powrotem do <xref:System.Windows.Controls.RichTextBox>i Drukuj zawartość.  

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 492fd5e95e316d053fc36b9bb5cf521b879d7d2e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 66c6cc58423a2af8d0fd6de93b8884918888fb48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="controls"></a>Formanty
 <a name="introduction"></a>
@@ -109,12 +110,12 @@ ms.lasthandoff: 11/21/2017
  Aby uzyskać więcej informacji na temat tych klas podstawowych, zobacz [modelu zawartości WPF](../../../../docs/framework/wpf/controls/wpf-content-model.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [Formanty według kategorii](../../../../docs/framework/wpf/controls/controls-by-category.md)  
- [Biblioteka formantów](../../../../docs/framework/wpf/controls/control-library.md)  
- [Omówienie tworzenia szablonów danych](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [Omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
+ [Kontrolki według kategorii](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [Biblioteka kontrolek](../../../../docs/framework/wpf/controls/control-library.md)  
+ [Szablonowanie danych — omówienie](../../../../docs/framework/wpf/data/data-templating-overview.md)  
+ [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  
  [Dane wejściowe](../../../../docs/framework/wpf/advanced/input-wpf.md)  
- [Włącz polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [Wskazówki: Tworzenie niestandardowego przycisku animowany](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
- [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md)
+ [Włączanie polecenia](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
+ [Przewodnik: tworzenie niestandardowego przycisku animowanego](../../../../docs/framework/wpf/controls/walkthroughs-create-a-custom-animated-button.md)  
+ [Niestandardowe dostosowywanie kontrolki](../../../../docs/framework/wpf/controls/control-customization.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 9532363adafd492ca35e10e6d20c788ddf5b1d17
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7d253f38fab21496dd305cc67e7b6e84846579f3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-wcf-development-tools"></a>Używanie narzędzi deweloperskich programu WCF
 W tej sekcji opisano [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] narzędzi programistycznych, które mogą pomóc w tworzeniu sieci [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]usługi.  
@@ -25,7 +26,7 @@ W tej sekcji opisano [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUD
  Można użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] następnie użyć szablonów jako podstawę do szybko tworzyć własne usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta do debugowania i testowania usługi. Te narzędzia razem Podaj szybkiego i łatwego debugowania i testowania cyklu i wyklucza trzeba przekazać do obsługi modelu na wczesnym etapie.  
   
 ## <a name="the-wcf-developer-tools"></a>Narzędzia deweloperskie programu WCF  
- [Szablony Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Szablony programu Visual Studio na potrzeby programu WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
   
  Można użyć wstępnie zdefiniowane [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] szablonów projektów i elementów w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] można szybko utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
   
@@ -33,11 +34,11 @@ W tej sekcji opisano [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] [!INCLUD
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Hosta usługi automatycznie (WcfSvcHost.exe) pozwala na uruchamianie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugera (F5), aby automatycznie udostępniać i testowanie usługi zostały zaimplementowane. Następnie można testować przy użyciu usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (wcfTestClient.exe) lub własnego klienta, aby znaleźć i rozwiązać wszelkie potencjalne błędy.  
   
- [Klienta testowego WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
+ [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Klient testowy (WcfTestClient.exe) to narzędzie graficznego interfejsu użytkownika, które można wprowadzić parametry dowolnego typu, że dane wejściowe do usługi i widoku, który odsyła odpowiedź usługi przesyłania. Zapewnia bezproblemowe usługi testowania czynności w połączeniu z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie.  
   
- [Generowanie klas typów danych z pliku XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
+ [Generowanie klas typów danych z kodu XML](../../../docs/framework/wcf/generating-data-type-classes-from-xml.md)  
   
  Dane XML przechowywane w Schowku można wkleić do strony kodowej. Klas zdefiniowanych w danych zostanie przekonwertowany na typy kodu.  
   
@@ -53,6 +54,6 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Netsh.exe, zobacz [jak używać narzędzia Netsh.exe i przełączniki wiersza polecenia](http://go.microsoft.com/fwlink/?LinkId=97877).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szablony Visual Studio WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
+ [Szablony programu Visual Studio na potrzeby programu WCF](../../../docs/framework/wcf/wcf-vs-templates.md)  
  [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)  
- [Klienta testowego WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)
+ [Testowy klient WCF (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

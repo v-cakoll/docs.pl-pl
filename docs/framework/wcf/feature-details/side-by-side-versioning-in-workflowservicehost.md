@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f3629778ded2b690f8169223101d89cb551e1449
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: db8f79fcdc1398b891933f5fef9f07410e5de11e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>Równoległe przechowywanie wersji w klasie WorkflowServiceHost
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> Wprowadzone w systemie kontroli wersji side-by-side [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] oferuje możliwość obsługi wielu wersji usługi przepływu pracy w jednym punkcie końcowym. Funkcjonalność side-by-side umożliwia usłudze przepływu pracy można skonfigurować tak, aby nowe wystąpienia usługi przepływu pracy są tworzone przy użyciu nowych definicji przepływu pracy, podczas uruchamiania wystąpienia pełną przy użyciu istniejącej definicji. Ten temat zawiera omówienie sposobu użycia wykonywania side-by-side usługi przepływu pracy <xref:System.ServiceModel.Activities.WorkflowServiceHost>.  

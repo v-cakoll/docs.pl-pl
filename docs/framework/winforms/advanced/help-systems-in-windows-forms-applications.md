@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 45d3385d008f823050f213252fdc2e1851cf422b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1b2f5d067d487bbd5b91576927aee21a9a44fde0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Systemy Pomocy w aplikacjach Windows Forms
 Jednym z najważniejszych courtesies, jako Deweloper aplikacji, można dostarczyć użytkownikom jest właściwy system pomocy. Jest to, gdzie spowoduje wyłączenie, gdy stają się pomylić lub disoriented. Zapewnianie system pomocy w aplikacji opartych na systemie Windows łatwo odbywa się przy użyciu [helpprovider — składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md).  
@@ -34,8 +35,8 @@ Jednym z najważniejszych courtesies, jako Deweloper aplikacji, można dostarczy
  Można wygenerować plików 1.x pomocy HTML z Workshop pomocy HTML. Aby uzyskać więcej informacji dotyczących pomocy HTML zobacz "HTML Help Workshop" lub innych "HTML" tematów w witrynie MSDN.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Integrowanie pomocy użytkownika w formularzach systemu Windows](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
- [Helpprovider — składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- [ToolTip — składnik](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- [Przegląd formularzy systemu Windows](../../../../docs/framework/winforms/windows-forms-overview.md)  
- [Formularze systemu Windows](../../../../docs/framework/winforms/index.md)
+ [Integrowanie pomocy użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)  
+ [HelpProvider, składnik](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
+ [ToolTip, składnik](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
+ [Windows Forms — omówienie](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [Windows Forms](../../../../docs/framework/winforms/index.md)

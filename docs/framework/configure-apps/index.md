@@ -34,11 +34,12 @@ caps.latest.revision: "28"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 2bd01e697d6852b9eb50418e5b6f506a133cbc2d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność za pośrednictwem aplikacji sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do chronionych zasobów aplikacji, które wersje zestawy aplikacja będzie używać i gdzie znajdują się aplikacje zdalne i obiektów. Deweloperzy można umieścić ustawień w plikach konfiguracji, co eliminuje konieczność ponownie skompilować aplikację za każdym razem, gdy zmienia ustawienia. W tej sekcji opisano, jakie można skonfigurować, dlaczego Konfigurowanie aplikacji może być pomocne.  
@@ -110,7 +111,7 @@ ms.lasthandoff: 11/21/2017
 -   Plik konfiguracji zasad użytkownika: config\v zabezpieczeń data\Microsoft\CLR %USERPROFILE%\Application*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Lokalizowanie zestawów za pomocą DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [Instrukcje: lokalizowanie zestawów za pomocą DEVPATH](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  Opisuje sposób kierowania środowisko uruchomieniowe służące do zmiennej środowiskowej DEVPATH wyszukiwania zestawów.  
   
  [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -119,10 +120,10 @@ ms.lasthandoff: 11/21/2017
  [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  Opisuje sposób określenia, gdzie powinna przeszukać środowiska uruchomieniowego dla zestawu.  
   
- [Konfigurowanie klasy kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [Konfigurowanie klas kryptografii](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  Opisuje sposób mapowania nazwy algorytmu klasy kryptografii i identyfikator obiektu do algorytmu kryptograficznego.  
   
- [Porady: Tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [Instrukcje: tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  Opisuje, kiedy i jak należy dodać plik zasad wydawcy, aby określić zestaw przekierowania i kodu ustawień podstawowych.  
   
  [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
@@ -135,6 +136,6 @@ ms.lasthandoff: 11/21/2017
  [Rejestrowanie obiektów zdalnych za pomocą plików konfiguracji](http://msdn.microsoft.com/en-us/bc503ee1-c811-4f82-9525-470343326adc)  
  [Administrowanie witryną sieci Web ASP.NET](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
  [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
- [Caspol.exe (narzędzie zasad zabezpieczenia dostępu kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- [Zestawy w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+ [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
+ [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
  [Obiekty zdalnego](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)

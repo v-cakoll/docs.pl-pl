@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 95266f9f28d5054db3ea8552ebb45e5a83aba060
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5
 Wszystkie aplikacje, które obsługują środowisko uruchomieniowe języka wspólnego (CLR) należy uruchomić, lub *aktywować*, CLR, aby można było uruchamiać kodu zarządzanego. Zazwyczaj aplikacja programu .NET Framework działa w wersji środowiska CLR, w którym została skompilowana, ale można zmienić to zachowanie dla aplikacji komputerowych, używając pliku konfiguracji aplikacji (czasami określanego jako plik app.config). Przy użyciu pliku konfiguracji aplikacji nie można jednak zmienić domyślnego zachowania aktywacji dla aplikacji do Sklepu Windows lub dla systemu Windows Phone. W tym artykule wyjaśniono, jak umożliwić uruchomienie aplikacji komputerowej w innej wersji programu .NET Framework i przedstawiono przykład określania jako platformy docelowej wersji 4 lub 4.5.  
@@ -90,5 +91,5 @@ Wszystkie aplikacje, które obsługują środowisko uruchomieniowe języka wspó
  \*Aby uzyskać więcej informacji na temat tego komunikatu o błędzie i sposobów, aby uniknąć tego problemu, zobacz [błędy inicjowania programu .NET Framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Migrowanie z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
- [Przewodnik po migracji](../../../docs/framework/migration-guide/index.md)
+ [Migracja z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  
+ [Przewodnik migracji](../../../docs/framework/migration-guide/index.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 35c6152836adf02d541bacd149ed9ac053765ba6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c9696687f292d7dcaa3d430c1e269f0fedb05e98
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ireferenceidentity-interface"></a>IReferenceIdentity — Interfejs
 Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.  
@@ -46,4 +47,4 @@ Reprezentuje odwołanie do unikatowego podpisu obiektu kodu.
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [Ienumidentity_attribute — interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)
+ [IEnumIDENTITY_ATTRIBUTE, interfejs](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)

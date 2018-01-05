@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 0bfd6a1f2ab938468cc1aa02d6cf4b1eb4d7c530
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e9bf1298a5e3fbac82a931abcfb0919238d81bfb
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Modelu Entity Data Model: Typy danych pierwotnych
 Modelu danych jednostki (EDM) obsługuje zestaw typów danych pierwotnych abstrakcyjny (na przykład String, Boolean, Int32 i tak dalej), które są używane do definiowania [właściwości](../../../../docs/framework/data/adonet/property.md) w modelu koncepcyjnym. Te typy danych pierwotnych są serwery proxy dla typów pierwotnych danych rzeczywistych, które są obsługiwane w środowisku macierzystym, takie jak bazy danych programu SQL Server lub środowisko uruchomieniowe języka wspólnego (CLR) lub magazynu. EDM nie definiuje semantykę operacje lub konwersji na typy pierwotne danych; Te semantyki są definiowane przez magazynu lub w środowisku macierzystym. Zazwyczaj typów danych pierwotnych w EDM są mapowane odpowiednie typy pierwotne danych w pamięci masowej lub środowisku macierzystym. Aby uzyskać informacje dotyczące sposobu mapowania programu Entity Framework typów pierwotnych w EDM do typów danych programu SQL Server, zobacz [SqlClient dla jednostki FrameworkTypes](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md).  
@@ -50,4 +51,4 @@ Modelu danych jednostki (EDM) obsługuje zestaw typów danych pierwotnych abstra
   
 ## <a name="see-also"></a>Zobacz też  
  [Kluczowe założenia modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [Modelu danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)
+ [Model danych jednostki](../../../../docs/framework/data/adonet/entity-data-model.md)

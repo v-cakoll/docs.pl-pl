@@ -15,11 +15,12 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 26385d91b4201820a5f6ba77b512e7bcfd5372c3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-an-activity"></a>Porady: tworzenie działania
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logiki wykonywania działania można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie przedstawiono sposób tworzenia dwóch działań. Pierwsze działanie jest proste działanie, które używa kod do implementacji logiki jego wykonywania. Do implementacji działania drugi jest definiowana za pomocą innych działań. Te działania są używane w następujących krokach samouczka.  
@@ -120,5 +121,5 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
  <xref:System.Activities.NativeActivity%601>  
  [Projektowanie i implementowanie niestandardowych działań](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)  
  [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)  
- [Porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
- [Przy użyciu ExpressionTextBox w Projektancie działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+ [Instrukcje: Tworzenie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)  
+ [Używanie elementu ExpressionTextBox w projektancie działań niestandardowych](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

@@ -6,11 +6,14 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
-ms.openlocfilehash: 93a74bb7ba537d3c7c0291f7903112dc470133a7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Architektów nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure
 
@@ -67,7 +70,7 @@ Ten przewodnik zawiera zostały zmniejszenia dokumentem stosunkowo mały, który
 Możesz przesłać ten przewodnik do zespołu w celu zapewnienia zrozumienie tych zagadnień i możliwości. Każdy Praca ze wspólnego zestawu terminologii i podstawowymi zasadami o pomoże zapewnienia spójnego stosowania wzorców architektury rozwiązania.
 
 ## <a name="references"></a>Odwołania
-- **Wybór między .NET Core i .NET Framework dla serwera aplikacji**  
+- **Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych**  
 <https://docs.microsoft.com/DotNet/articles/Standard/Choosing-Core-Framework-Server>
 
 >[!div class="step-by-step"]

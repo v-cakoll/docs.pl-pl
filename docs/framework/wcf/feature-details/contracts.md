@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cc7f90ed679abc55a62ca5ab6028af4c86bd52a2
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9a45fc606ac962b4dc7aac8b49ed9a3c6c421ccd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contracts"></a>Kontrakty
 W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]umów. Kontrakt usługi określa punkt końcowy komunikuje się publicznie. Na poziomie bardziej konkretną jest oświadczenie o zestaw określonych komunikatów podzielone na wzorce wymiany wiadomości podstawowe (MEPs), takich jak żądanie/odpowiedź, jednokierunkowe i dupleksowych. Jeśli kontrakt usługi to zestaw logicznie powiązanych wymiany komunikatów, operacji usługi jest exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście zaakceptować jeden komunikat (aby wywołujący może poinformować o powitanie) i może lub nie może zwracać komunikat (w zależności od uprzejmości operacji).  
@@ -76,6 +77,6 @@ W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo1](
  Ten proces dodawania wymaganie jest ważne, należy wziąć pod uwagę podczas projektowania, wdrażania, konfigurowanie i hostingu sieci [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji usługi. Na przykład kontrakt można określić, że musi obsługiwać sesji. Jeśli tak, musisz skonfigurować powiązania w celu spełnienia tego wymagania umownymi lub implementacji usługi nie będą działać. Lub jeśli usługa wymaga zintegrowanego uwierzytelniania systemu Windows i znajduje się w Internet Information Services (IIS), aplikacji sieci Web, w którym znajduje się usługa musi mieć włączone uwierzytelnianie zintegrowane systemu Windows i obsługa anonimowe wyłączone. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Funkcje i wpływ typów aplikacji hosta innej usługi, zobacz [hostingu](../../../../docs/framework/wcf/feature-details/hosting.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Punkty końcowe: Adresy powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [Punkty końcowe: adresy, powiązania i kontrakty](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
  [Projektowanie kontraktów usług](../../../../docs/framework/wcf/designing-service-contracts.md)  
  [Implementowanie kontraktów usług](../../../../docs/framework/wcf/implementing-service-contracts.md)

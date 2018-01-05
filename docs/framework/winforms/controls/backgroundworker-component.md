@@ -22,32 +22,33 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: cbcbc786c19ad1af74114915b0fd0689d466fcbe
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6d83ff69053a71626d0bf9a844d9e94235080d78
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="backgroundworker-component"></a>BackgroundWorker — Składnik
 `BackgroundWorker` Składnik umożliwia formularz lub formant asynchronicznie uruchom operację.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie BackgroundWorker — składnik](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
+ [BackgroundWorker, składnik — omówienie](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)  
  W tym artykule opisano `BackgroundWorker` składnik, który daje możliwość wykonania czas operacji asynchronicznie ("w tle"), na przez wątek inny niż główny wątek interfejsu użytkownika aplikacji.  
   
- [Wskazówki: Przeprowadzanie operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
+ [Przewodnik: przeprowadzanie operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-running-an-operation-in-the-background.md)  
  Pokazuje, jak używać `BackgroundWorker` składnika w projektancie do uruchomienia czasochłonna operacja w oddzielnym wątku.  
   
- [Porady: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
+ [Instrukcje: uruchamianie operacji w tle](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)  
  Pokazuje, jak używać `BackgroundWorker` składnik do uruchomienia czasochłonna operacja w oddzielnym wątku.  
   
- [Wskazówki: Wdrażanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
+ [Przewodnik: wdrażanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/walkthrough-implementing-a-form-that-uses-a-background-operation.md)  
  Tworzy aplikację przy użyciu narzędzia Projektant, który wykonuje obliczenia matematyczne asynchronicznie.  
   
- [Porady: Implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
+ [Instrukcje: implementowanie formularza korzystającego z operacji w tle](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)  
  Tworzy aplikację, który wykonuje obliczenia matematyczne asynchronicznie.  
   
- [Porady: pobieranie pliku w tle](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
+ [Instrukcje: pobieranie pliku w tle](../../../../docs/framework/winforms/controls/how-to-download-a-file-in-the-background.md)  
  Pokazuje, jak używać `BackgroundWorker` składnik można pobrać pliku w oddzielnym wątku.  
   
 ## <a name="reference"></a>Tematy pomocy  
@@ -61,5 +62,5 @@ ms.lasthandoff: 10/22/2017
  Opisuje typ, który przechowuje dane dla <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> zdarzeń.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie wzorca asynchronicznego opartego na zdarzeniach](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
+ [Asynchroniczny wzorzec oparty na zdarzeniach — omówienie](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)  
  W tym artykule opisano, jak wzorca asynchronicznego udostępnia zalety aplikacji wielowątkowych wiele złożonych problemów w wielowątkowe projektu są ukryte.

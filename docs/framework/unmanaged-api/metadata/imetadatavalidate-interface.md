@@ -19,11 +19,12 @@ caps.latest.revision: "13"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: a30de0ca9554d93e000a07af80b34bcd10814dfb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 7d4b83817883879c253fee4718e60a593a337314
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imetadatavalidate-interface"></a>IMetaDataValidate — Interfejs
 Udostępnia metody, aby sprawdzić poprawność podpisów metadanych.  
@@ -32,8 +33,8 @@ Udostępnia metody, aby sprawdzić poprawność podpisów metadanych.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[ValidateMetaData — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.|  
-|[ValidatorInit — metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Ustawia flagę, który określa typ modułu w bieżącym zakresie metadanych i rejestruje metodę wywołania zwrotnego określony dla błędy sprawdzania poprawności.|  
+|[ValidateMetaData, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatemetadata-method.md)|Sprawdza poprawność podpisów metadanych obiektów w bieżącym zakresie metadanych.|  
+|[ValidatorInit, metoda](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-validatorinit-method.md)|Ustawia flagę, który określa typ modułu w bieżącym zakresie metadanych i rejestruje metodę wywołania zwrotnego określony dla błędy sprawdzania poprawności.|  
   
 ## <a name="requirements"></a>Wymagania  
  **Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).  

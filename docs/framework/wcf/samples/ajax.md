@@ -13,17 +13,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 17fe1a073a2c8fe6b800ce353b23ca43059d3454
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: f9b1d2f957c54d1e91d7d14cd35c328d4a6666e4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ajax"></a>AJAX
 Ta sekcja zawiera przykłady ilustrujące funkcji asynchronicznych języka JavaScript i XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [FORMAT JSONP](../../../../docs/framework/wcf/samples/jsonp.md)  
+ [JSONP](../../../../docs/framework/wcf/samples/jsonp.md)  
  Przedstawia sposób obsługi formatu JSON z dopełnienie (JSONP) w usługach WCF REST.  
   
  [Serializacja JSON](../../../../docs/framework/wcf/samples/json-serialization.md)  
@@ -32,7 +33,7 @@ Ta sekcja zawiera przykłady ilustrujące funkcji asynchronicznych języka JavaS
  [Podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md)  
  Pokazuje, jak używać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] można utworzyć podstawowej usługi ASP.NET asynchronicznego JavaScript i XML (AJAX).  
   
- [POST protokołu HTTP przy użyciu usługi AJAX](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
+ [Usługa AJAX używająca żądań POST protokołu HTTP](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)  
  Pokazuje, jak używać [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utworzyć [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] asynchronicznego JavaScript i XML (AJAX) usługa, która używa metody POST protokołu HTTP.  
   
  [Usługa AJAX bez konfiguracji](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)  

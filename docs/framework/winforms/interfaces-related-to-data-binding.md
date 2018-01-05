@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 8108cd3c5ae305b6def5324385cb12c94cd42774
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: a0e48ddc6f74d3c4e030bc953ac4f853660a00d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interfaces-related-to-data-binding"></a>Interfejsy dotyczące powiązania danych
 Z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utworzyć wiele struktur danych różnych potrzeb powiązanie aplikacji i danych, użytkownik pracuje z. Możesz utworzyć własne klasy, które dostarczyć lub użyć danych w formularzach systemu Windows. Te obiekty może oferować różne poziomy funkcjonalności i złożoność, z powiązania danych podstawowych zapewnienie obsługi w czasie projektowania, sprawdzanie błędów, powiadomienia o zmianie lub nawet pomocy technicznej dla strukturalnych wycofania zmian wprowadzonych w samych danych.  
@@ -160,6 +161,6 @@ Z [!INCLUDE[vstecado](../../../includes/vstecado-md.md)], możesz utworzyć wiel
     >  Klasa, która dziedziczy <xref:System.Windows.Forms.Control> zarządza powiązania automatycznie za pomocą jego <xref:System.Windows.Forms.Control.BindingContext%2A> właściwości, tak przypadków, w których należy wdrożyć <xref:System.Windows.Forms.ICurrencyManagerProvider> są stosunkowo rzadko.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Powiązanie danych i formularze systemu Windows](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [Porady: Tworzenie prostego formantu powiązanego na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)
+ [Wiązanie danych i formularzy Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
+ [Instrukcje: tworzenie prostej kontrolki powiązanej na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)  
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)

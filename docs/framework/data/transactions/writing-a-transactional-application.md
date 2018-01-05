@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c988f5ab5a342ad3282414634ca3bfc21f481ea5
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 9fab355da61ea7445e429cfc4e336a14b588e30c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-transactional-application"></a>Pisanie aplikacji transakcyjnych
 Dla programisty transakcyjnych aplikacji, możesz korzystać udostępniane przez modele programowania <xref:System.Transactions> przestrzeni nazw, aby utworzyć transakcji. Może korzystać z jawnym modelu programowania przy użyciu <xref:System.Transactions.Transaction> klasy lub niejawne modelu programowania, w którym transakcje są automatycznie zarządzane przez infrastrukturę, za pomocą <xref:System.Transactions.TransactionScope> klasy. Zalecane jest użycie transakcji niejawnej modelu do tworzenia aplikacji. Można znaleźć więcej informacji na temat sposobu użycia w zakresie transakcji [wykonania transakcji niejawnej przy użyciu zakresu transakcji](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md) tematu.  
@@ -32,7 +33,7 @@ Dla programisty transakcyjnych aplikacji, możesz korzystać udostępniane przez
   
  Opisuje sposób <xref:System.Transactions> przestrzeń nazw obsługuje tworzenie niejawne transakcji za pomocą <xref:System.Transactions.TransactionScope> klasy.  
   
- [Implementowanie jawnych transakcji przy użyciu obiekcie CommittableTransaction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
+ [Implementowanie transakcji jawnej przy użyciu CommitableTransakction](../../../../docs/framework/data/transactions/implementing-an-explicit-transaction-using-committabletransaction.md)  
   
  Opisuje sposób <xref:System.Transactions> przestrzeń nazw obsługuje tworzenie jawnych transakcji przy użyciu <xref:System.Transactions.CommittableTransaction> klasy.  
   

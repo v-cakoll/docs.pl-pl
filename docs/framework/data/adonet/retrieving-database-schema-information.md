@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 71493eb91415b5f4695e771c7a549244629bb654
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 19fee0f90c1f460d253cfdc865035a6b8aa3db48
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="retrieving-database-schema-information"></a>Pobieranie informacji o schemacie bazy danych
 Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdywania schematu. Odnajdywanie schematu umożliwia aplikacjom żądanie czy zarządzanego dostawcy znaleźć i zwraca informacje dotyczące schematu bazy danych, nazywane również *metadanych*, danego bazy danych. Elementów schematu innej bazy danych, takich jak tabele, kolumny i procedury składowane są udostępniane za pomocą kolekcji schematu. Każdej kolekcji schematu zawiera szereg informacji o schemacie specyficzne dla używanego dostawcy.  
@@ -38,7 +39,7 @@ Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdyw
  [Typowe kolekcje schematów](../../../../docs/framework/data/adonet/common-schema-collections.md)  
  Zawiera opis wszystkich typowych kolekcji schematu obsługiwane przez wszystkich dostawców zarządzane w programie .NET Framework.  
   
- [Kolekcje schematów serwera SQL](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
+ [Kolekcje schematów programu SQL Server](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)  
  Opis kolekcji schematów, obsługiwane przez dostawcę .NET Framework dla programu SQL Server.  
   
  [Kolekcje schematów Oracle](../../../../docs/framework/data/adonet/oracle-schema-collections.md)  
@@ -82,5 +83,5 @@ Uzyskiwanie informacji o schemacie z bazy danych odbywa się z procesem odnajdyw
  W tym artykule opisano **GetSchemaTable** metody <xref:System.Data.SqlClient.SqlDataReader> klasy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Trwa pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [Pobieranie i modyfikowanie danych ADO.NET](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

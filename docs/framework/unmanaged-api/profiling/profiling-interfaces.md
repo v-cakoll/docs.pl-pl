@@ -17,87 +17,88 @@ caps.latest.revision: "31"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 5c0423f9c8b01c1289e1107c0c16c59968a6e2a4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 4f8c2a5ce5e1231c55f598e48d14bec896a4b5f4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="profiling-interfaces"></a>Interfejsy profilowania
 W tej sekcji opisano niezarządzane interfejsy, które umożliwiają profilu program, który jest wykonywany przez środowisko uruchomieniowe języka wspólnego (CLR).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ICLRProfiling — interfejs](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
+ [ICLRProfiling, interfejs](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-interface.md)  
  Udostępnia [AttachProfiler](../../../../docs/framework/unmanaged-api/profiling/iclrprofiling-attachprofiler-method.md) metodę, która pozwala na dołączenie do uruchomionego procesu profilera.  
   
- [Interfejs ICorProfilerAssemblyReferenceProvider](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
+ [ICorProfilerAssemblyReferenceProvider, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerassemblyreferenceprovider-interface.md)  
  Włącza profiler do informowania CLR odwołania do zestawów, które profilera doda w [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) wywołania zwrotnego.  
   
- [ICorProfilerCallback — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
+ [ICorProfilerCallback, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
  Udostępnia metody, które są używane przez środowisko CLR powiadomiono profilera kodu, w przypadku wystąpienia zdarzenia, do których subskrybowanych profilera.  
   
- [ICorProfilerCallback2 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
+ [ICorProfilerCallback2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)  
  Rozszerza `ICorProfilerCallback` interfejsu z wywołań zwrotnych obsługiwane w programie .NET Framework 2.0 i nowszych wersjach.  
   
- [ICorProfilerCallback3 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
+ [ICorProfilerCallback3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)  
  Udostępnia metody wywołania zwrotnego, używanych do komunikacji CLR dołączania i odłączania informacje o stanie do profilera.  
   
- [ICorProfilerCallback4 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
+ [ICorProfilerCallback4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
  Udostępnia metody wywołania zwrotnego, używanych do przekazywania informacji do profiler CLR.  
   
- [ICorProfilerCallback5 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)  
+ [ICorProfilerCallback5, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)  
  Udostępnia metody, która identyfikuje przechodnie zamknięcia odwołuje certyfikaty główne kolekcji odzyskiwanie obiektów.  
   
- [Interfejs ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md)  
+ [ICorProfilerCallback6, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md)  
  Udostępnia metody wywołania zwrotnego, która CLR używa powiadomiono profilera, który jest ładowany zestaw.  
   
- [Interfejs ICorProfilerCallback7](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
+ [ICorProfilerCallback7, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-interface.md)  
  Udostępnia metody wywołania zwrotnego, która środowisko uruchomieniowe języka wspólnego używa do powiadamiania profilera zaktualizowaniu strumienia symbol skojarzone z modułu w pamięci.  
   
- [ICorProfilerFunctionControl — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
+ [ICorProfilerFunctionControl, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)  
  Udostępnia metody umożliwiające profilującego do komunikowania się z CLR, aby kontrolować sposób przy użyciu kompilatora JIT powinna generować kod ponowną kompilację określonej metody.  
   
- [ICorProfilerFunctionEnum — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
+ [ICorProfilerFunctionEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)  
  Udostępnia metody sekwencyjnie iterowania po kolekcji funkcji środowiska CLR.  
   
- [ICorProfilerInfo — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
+ [ICorProfilerInfo, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
  Udostępnia metody do użycia przez profilery kodu do komunikowania się z CLR do kontrolowania, monitorowanie zdarzeń i żądań informacji.  
   
- [ICorProfilerInfo2 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
+ [ICorProfilerInfo2, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)  
  Rozszerza `ICorProfilerInfo` interfejsu z metod obsługiwanych w programie .NET Framework 2.0 i nowszych wersjach.  
   
- [ICorProfilerInfo3 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
+ [ICorProfilerInfo3, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)  
  Rozszerza `ICorProfilerInfo2` interfejsu z metod obsługiwanych w [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] i nowszych wersjach.  
   
- [ICorProfilerInfo4 — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
+ [ICorProfilerInfo4, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
  Udostępnia metody, które profilery kodu używają do komunikacji z CLR sterować monitorowaniem zdarzenia i żądania informacji.  
   
- [Interfejs ICorProfilerInfo5](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)  
+ [ICorProfilerInfo5, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-interface.md)  
  Udostępnia metody do użycia przez profilery kodu do komunikowania się z CLR do kontrolowania monitorowania zdarzeń.  
   
- [Interfejs ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
+ [ICorProfilerInfo6, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)  
  Udostępnia moduł wyliczający do wszystkich metod należących do danego modułu NGen i które są wbudowane w treści danej metody.  
   
- [Interfejs ICorProfilerInfo7](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
+ [ICorProfilerInfo7, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)  
  Udostępnia metody do zastosowania w nowo zdefiniowane metadanych do modułu i który zapewnia dostęp do strumienia symbol w pamięci.  
   
- [ICorProfilerModuleEnum — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
+ [ICorProfilerModuleEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilermoduleenum-interface.md)  
  Udostępnia metody sekwencyjnie iterowania po kolekcji moduły załadowane przez profiler lub aplikacji.  
   
- [ICorProfilerObjectEnum — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
+ [ICorProfilerObjectEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)  
  Udostępnia metody umożliwiające sekwencyjnie iterowania po kolekcji zablokowane obiekty, które są generowane przez [Ngen.exe (Generator obrazu natywnego)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md).  
   
- [ICorProfilerThreadEnum — interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
+ [ICorProfilerThreadEnum, interfejs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)  
  Udostępnia metody sekwencyjnie iterowania po kolekcji wątki środowiska CLR.  
   
- [IMethodMalloc — interfejs](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
+ [IMethodMalloc, interfejs](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)  
  Udostępnia [alokacji](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-alloc-method.md) metody można przydzielić pamięci dla nowego treści funkcji języka pośredniego (MSIL) firmy Microsoft.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Omówienie profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)  
   
- [Statyczne funkcje globalne profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
+ [Profilowanie statycznych funkcji globalnych](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)  
   
  [Profilowanie — wyliczenia](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)  
   
- [Struktury profilowania](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+ [Profiling — struktury](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)

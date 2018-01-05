@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4f1595cbb1d225e3dd4e73a354028745d4cd0428
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: acc7131d02f1f4e3cde0df152bdfbc591724b600
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wcf-syndication-overview"></a>Omówienie syndykacji WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]zapewnia obsługę udostępnianie zespolonego źródła [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Syndykacja jest mechanizm integracji aplikacji, w którym serwer przedstawia niektóre dane aplikacji w formacie interoperacyjne znany jako źródło danych. Źródło danych to kolekcja danych aplikacji, która składa się z niektórych metadanych źródła danych na poziomie (tytuł, autora, adres URL i innych metadanych) i szereg elementów strumieniowego źródła danych. W źródle danych elementów strumieniowego źródła danych są zwykle czas uporządkowanych w odwrotnej kolejności. Element źródła składa się ze standardowego zestawu metadanych poziomie elementu (tytuł, adres URL, Data utworzenia, kategorii i innych metadanych elementu poziom) oraz dowolnej liczby dane specyficzne dla aplikacji. Dwa najczęściej używane typy zespolonego źródła danych są naprawdę proste Syndication (RSS) 2.0 i Atom 1.0, które są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
@@ -32,4 +33,4 @@ ms.lasthandoff: 12/02/2017
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Zespolonego platformy obsługuje RSS 2.0 i Atom 1.0.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Model programowania protokołu HTTP sieci Web WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+ [Model programowania protokołu HTTP sieci Web w programie WCF](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d4b890b80880638fae62c1ae79f8d2f436ef309
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 368e6a4514eafdf4d3c5b38c5e31ff21e56f67e6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-sql-workflow-instance-store"></a>Właściwości magazynu wystąpienia przepływu pracy SQL
 Tematy w tej sekcji zawierają szczegółowe informacje o właściwościach magazynu wystąpienia przepływu pracy SQL.  
@@ -25,15 +26,15 @@ Tematy w tej sekcji zawierają szczegółowe informacje o właściwościach maga
   
 -   [Opcja kodowania wystąpienia](../../../docs/framework/windows-workflow-foundation/instance-encoding-option.md)  
   
--   [Wystąpienie zakończenia działania](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
+-   [Działanie ukończenia wystąpienia](../../../docs/framework/windows-workflow-foundation/instance-completion-action.md)  
   
--   [Wystąpienie zablokowane wyjątku](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
+-   [Działanie zablokowanego wyjątku wystąpienia](../../../docs/framework/windows-workflow-foundation/instance-locked-exception-action.md)  
   
--   [Okres odnawiania blokady hosta](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
+-   [Okres odnowienia blokady hosta](../../../docs/framework/windows-workflow-foundation/host-lock-renewal-period.md)  
   
 -   [Okres wykrywania wystąpień możliwych do uruchomienia](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)  
   
--   [Ciąg połączenia i nazwę ciągu połączenia](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
+-   [Parametry połączenia i nazwa parametrów połączenia](../../../docs/framework/windows-workflow-foundation/connection-string-and-connection-string-name.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Sklepu wystąpienia sieci szkieletowej dla systemu Windows Server](http://go.microsoft.com/fwlink/?LinkId=201201)  

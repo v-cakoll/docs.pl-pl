@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e3bb7a7c53cbca8bbd4026b46ce59589cef22382
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c22de3ed401e0be10b155649395da43cedb35e6d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-class-libraries-and-apis"></a>Biblioteki dodatkowe klasy i interfejsy API
 
@@ -32,7 +33,7 @@ Ponadto niektóre biblioteki docelowych określonych platform lub implementacji 
   
 ## <a name="oob-projects"></a>Projekty OOB
   
-| Project | Opis |  
+| Projekt | Opis |  
 | ------- | ----------- |  
 | <xref:System.Collections.Immutable> | Zawiera kolekcje, które są wątkowo bezpieczne i zagwarantowanie odpowiednich nigdy nie ulegną zmianie ich zawartość. |
 | <xref:System.Net.Http.WinHttpHandler> | Udostępnia program obsługi komunikatów dla <xref:System.Net.Http.HttpClient> oparte na interfejsie WinHTTP systemu Windows. |
@@ -41,7 +42,7 @@ Ponadto niektóre biblioteki docelowych określonych platform lub implementacji 
 
 ## <a name="platform-specific-libraries"></a>Biblioteki specyficzne dla platformy
   
-| Project | Opis |  
+| Projekt | Opis |  
 | ------- | ----------- |  
 | <xref:System.Text.CodePagesEncodingProvider> | Rozszerza <xref:System.Text.EncodingProvider> klasy, aby udostępnić kodowania strony kodu aplikacji przeznaczonych dla platformy uniwersalnej systemu Windows. |  
   
@@ -65,4 +66,4 @@ Te interfejsy API obsługuje infrastrukturę programu produktu i nie są/obsług
   
 ## <a name="see-also"></a>Zobacz także
 
-[.NET Framework i zwalnia poza pasmem](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)
+[Program .NET Framework i wydania poza harmonogramem (OOB)](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md)

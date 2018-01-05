@@ -19,47 +19,48 @@ caps.latest.revision: "16"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c18dde7265a07eb45e0211a882b19acc6342e924
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: f4febeed6aff2c18b5040020c2c1d3ee6cf59a52
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-fonts-and-text"></a>Używanie czcionek i tekstu
 Istnieje kilka klas oferowane przez [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] dla Rysowanie tekstu w formularzach systemu Windows. [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Graphics> Klasa ma kilka <xref:System.Drawing.Graphics.DrawString%2A> metod, które pozwalają określić różne funkcje tekstu, na przykład lokalizacji obwiedni prostokąta, czcionki i format. Ponadto rysowania i pomiar tekst z [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] przy użyciu statycznych <xref:System.Windows.Forms.TextRenderer.DrawText%2A> i <xref:System.Windows.Forms.TextRenderer.MeasureText%2A> metody oferowane przez `TextRenderer` klasy. [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] Metody umożliwiają również określenie lokalizacji, czcionki i format. Można wybrać [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] lub [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] do renderowania tekstu; jednak [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] zwykle zapewnia większą wydajność i dokładniejsze pomiaru tekstu. Inne klasy, które składają się z renderowaniem tekstu obejmują `FontFamily`, `Font`, <xref:System.Drawing.StringFormat>, i `TextFormatFlags`.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: tworzenie rodzin czcionek i czcionek](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
+ [Instrukcje: tworzenie rodzin czcionek i czcionek](../../../../docs/framework/winforms/advanced/how-to-construct-font-families-and-fonts.md)  
  Przedstawia sposób tworzenia `Font` i `FontFamily` obiektów.  
   
- [Porady: Rysowanie tekstu w określonej lokalizacji](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
+ [Instrukcje: rysowanie tekstu w określonej lokalizacji](../../../../docs/framework/winforms/advanced/how-to-draw-text-at-a-specified-location.md)  
  Opisuje sposób Rysowanie tekstu w niektórych lokalizacji przy użyciu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Porady: Rysowanie zawiniętego tekstu w prostokącie](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
+ [Instrukcje: rysowanie zawiniętego tekstu w prostokącie](../../../../docs/framework/winforms/advanced/how-to-draw-wrapped-text-in-a-rectangle.md)  
  Wyjaśniono, jak rysowanie tekstu w prostokącie przy użyciu [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)].  
   
- [Porady: Rysowanie tekstu z GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
+ [Instrukcje: rysowanie tekstu za pomocą GDI](../../../../docs/framework/winforms/advanced/how-to-draw-text-with-gdi.md)  
  Pokazuje, jak używać [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] rysowania tekstu.  
   
- [Porady: wyrównywanie narysowanego tekstu](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
+ [Instrukcje: wyrównywanie narysowanego tekstu](../../../../docs/framework/winforms/advanced/how-to-align-drawn-text.md)  
  Pokazuje sposób formatowania [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] i [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] tekstu.  
   
- [Porady: tworzenie pionowego tekstu](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
+ [Instrukcje: tworzenie pionowego tekstu](../../../../docs/framework/winforms/advanced/how-to-create-vertical-text.md)  
  Opisuje sposób Rysuj tekst wyrównany z [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Porady: ustawienie pozycji tabulatorów w rysowanym tekście](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
+ [Instrukcje: ustawienie pozycji tabulatorów w rysowanym tekście](../../../../docs/framework/winforms/advanced/how-to-set-tab-stops-in-drawn-text.md)  
  Pokazuje sposób Rysowanie tekstu za pomocą tabulatorów ze [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)].  
   
- [Porady: Wyliczanie zainstalowanych czcionek](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
+ [Instrukcje: wyliczanie zainstalowanych czcionek](../../../../docs/framework/winforms/advanced/how-to-enumerate-installed-fonts.md)  
  Wyjaśniono, jak wyświetlić listę nazw zainstalowanych czcionek.  
   
- [Porady: Tworzenie prywatnej kolekcji czcionek](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
+ [Instrukcje: tworzenie prywatnej kolekcji czcionek](../../../../docs/framework/winforms/advanced/how-to-create-a-private-font-collection.md)  
  Opisuje sposób tworzenia <xref:System.Drawing.Text.PrivateFontCollection> obiektu.  
   
- [Porady: uzyskiwanie miar czcionek](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
+ [Instrukcje: uzyskiwanie miar czcionek](../../../../docs/framework/winforms/advanced/how-to-obtain-font-metrics.md)  
  Przedstawia sposób uzyskiwanie miar czcionek, takie jak komórki wzrastająca i spadku.  
   
- [Porady: stosowanie antyaliasingu do tekstu](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
+ [Instrukcje: stosowanie antyaliasingu do tekstu](../../../../docs/framework/winforms/advanced/how-to-use-antialiasing-with-text.md)  
  Wyjaśniono, jak używać antyaliasing podczas rysowania tekstu.  
   
 ## <a name="reference"></a>Tematy pomocy  

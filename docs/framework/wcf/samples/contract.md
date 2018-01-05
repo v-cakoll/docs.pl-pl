@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f03e1bf9562b53ed4b43655848a4469ab8d7626d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: abdbe581f53931d72a8d60f6b1767c03d5205c9f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contract"></a>Kontrakt
 Ta sekcja zawiera przykłady ilustrujące kontrakty w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)].  
@@ -32,7 +33,7 @@ Ta sekcja zawiera przykłady ilustrujące kontrakty w [!INCLUDE[indigo1](../../.
  [Kontrakty usług](../../../../docs/framework/wcf/samples/service-contracts.md)  
  Pokazuje kontraktów usług w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)].  
   
- [Obiektu DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
+ [DataContractResolver](../../../../docs/framework/wcf/samples/datacontractresolver.md)  
  Pokazuje, jak można dostosować procesy serializacji i deserializacji za pomocą <xref:System.Runtime.Serialization.DataContractResolver> klasy.  
   
  [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)  

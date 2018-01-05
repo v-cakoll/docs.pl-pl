@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 3e448c28be6515748254e267b70f3c898b9226a1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: ec46d0363e5b10d3bd3bd3f9c8f4d3694abc1c8d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData — Typ funkcji XAML
 Umożliwia umieszczanie Wysp danych XML w produkcji XAML. Elementy XML w `x:XData` nie powinny być traktowane przez procesory XAML, jak, jeśli są one częścią działania domyślnej przestrzeni nazw XAML lub innych nazw XAML. `x:XData`może zawierać dowolne poprawnie sformułowany plik XML.  
@@ -61,5 +62,5 @@ Umożliwia umieszczanie Wysp danych XML w produkcji XAML. Elementy XML w `x:XDat
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Data.XmlDataProvider>  
- [Omówienie powiązania danych](../../../docs/framework/wpf/data/data-binding-overview.md)  
- [Powiązanie — rozszerzenie znaczników](../../../docs/framework/wpf/advanced/binding-markup-extension.md)
+ [Powiązanie danych — omówienie](../../../docs/framework/wpf/data/data-binding-overview.md)  
+ [Rozszerzenie znaczników powiązania](../../../docs/framework/wpf/advanced/binding-markup-extension.md)

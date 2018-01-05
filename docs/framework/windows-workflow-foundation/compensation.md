@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 248af9c669687d0ab4d41f0ac93985d0d9a17678
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7dd56b41b7b661b58446219d426be1a19edba059
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compensation"></a>kompensacji
 Kompensacji w [!INCLUDE[wf](../../../includes/wf-md.md)] to mechanizm, za pomocą której wcześniej ukończona Praca można cofnąć lub Skompensowane (po logiki zdefiniowane przez aplikację) po wystąpieniu awarii kolejne. W tej sekcji opisano sposób użycia kompensacji w przepływach pracy.  
@@ -336,4 +337,4 @@ Activity wf = new Sequence()
  <xref:System.Activities.Statements.Compensate>  
  <xref:System.Activities.Statements.Confirm>  
  <xref:System.Activities.Statements.CompensationToken>  
- [Compensable działania](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)
+ [Działanie kompensacyjne](../../../docs/framework/windows-workflow-foundation/samples/compensable-activity-sample.md)

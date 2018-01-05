@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: c33eaa36313f0cf6aae904761fb40bb2dbf9d753
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f501d49f007e22c6f7db0e759ee19b40f87b4b33
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 — Interfejs
 Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.  
@@ -32,9 +33,9 @@ Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[IsChild — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Określa, czy bieżącej ramki jest ramką podrzędną.|  
-|[IsMatchingParentFrame — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy określonej ramce nadrzędny bieżącej ramki.|  
-|[GetStackParameterSize — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Zwraca całkowity rozmiar wszystkich parametrów na stosie na x86 systemów operacyjnych.|  
+|[IsChild, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|Określa, czy bieżącej ramki jest ramką podrzędną.|  
+|[IsMatchingParentFrame, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|Określa, czy określonej ramce nadrzędny bieżącej ramki.|  
+|[GetStackParameterSize, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|Zwraca całkowity rozmiar wszystkich parametrów na stosie na x86 systemów operacyjnych.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten interfejs logicznie rozszerza interfejs "ICorDebugNativeFrame".  
@@ -53,5 +54,5 @@ Dostarcza metody testowania relacji podrzędnych i nadrzędnych ramek.
   
 ## <a name="see-also"></a>Zobacz też  
     
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
  [Debugowanie](../../../../docs/framework/unmanaged-api/debugging/index.md)

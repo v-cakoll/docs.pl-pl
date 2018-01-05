@@ -19,11 +19,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e7c620c4a33032711abc0d7b82af908018bd44cf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 02a775be4976760b354a492e7252a67ef04eace9
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS — Struktura
 Udostępnia statystykę mechanizmu kolekcji garbage środowisko uruchomieniowe języka wspólnego (CLR).  
@@ -89,6 +90,6 @@ pCLRGCManager->GetStats(&GCStats);
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Hosting — struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
+ [Hosting, struktury](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)  
  [Automatyczne zarządzanie pamięcią](../../../../docs/standard/automatic-memory-management.md)  
- [Wyrzucanie elementów bezużytecznych](../../../../docs/standard/garbage-collection/index.md)
+ [Odzyskiwanie pamięci](../../../../docs/standard/garbage-collection/index.md)

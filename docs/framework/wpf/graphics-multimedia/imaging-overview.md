@@ -32,11 +32,12 @@ caps.latest.revision: "32"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6821b724e45ea90a5b22c6efe6c36ee3b99e39ec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: c7d0a880dd30fe737a1bd4d1368dde16ed0df1e3
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imaging-overview"></a>Przegląd Obrazowanie
 Ten temat zawiera wprowadzenie do [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)]. [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]Umożliwia deweloperom wyświetlania, przekształcanie i sformatować obrazów.  
@@ -204,5 +205,5 @@ Kształty, kontrolek, tekst i wpisać pędzle obrazu
  <xref:System.Windows.Media.Imaging.BitmapImage>  
  <xref:System.Windows.Controls.Image>  
  <xref:System.Windows.Media.Imaging.BitmapMetadata>  
- [Grafika 2W i utworzenia obrazu](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
+ [Grafika 2D i obrazowanie](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
  [Koder-dekoder Win32 próbki](http://go.microsoft.com/fwlink/?LinkID=160052)

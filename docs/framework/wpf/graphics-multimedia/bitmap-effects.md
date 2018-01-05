@@ -19,11 +19,12 @@ caps.latest.revision: "62"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c4beb386528829bace92be6add471b87fb434d74
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 2c2776bda3cebfbe0d614666ce234c10a1ab466b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bitmap-effects"></a>Efekty mapy bitowej
 Tematy w tej sekcji opisano sposób dotyczą efekty wizualne bitmapy przy użyciu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -32,7 +33,7 @@ Tematy w tej sekcji opisano sposób dotyczą efekty wizualne bitmapy przy użyci
 >  W [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] lub nowszym, <xref:System.Windows.Media.Effects.BitmapEffect> klasa jest przestarzała. Jeśli spróbujesz użyć <xref:System.Windows.Media.Effects.BitmapEffect> klasy, wystąpi wyjątek przestarzałe. Aktualna alternatywa do <xref:System.Windows.Media.Effects.BitmapEffect> jest klasa <xref:System.Windows.Media.Effects.Effect> klasy. W większości przypadków <xref:System.Windows.Media.Effects.Effect> klasy jest znacznie szybsze.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie skutków mapy bitowej](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [Efekty mapy bitowej — przegląd](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -40,6 +41,6 @@ Tematy w tej sekcji opisano sposób dotyczą efekty wizualne bitmapy przy użyci
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Grafika i Multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
   
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)

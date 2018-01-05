@@ -23,19 +23,20 @@ caps.latest.revision: "41"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3d469d5f53b97ec05e8714cff1ea663dda827a1a
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 28d1fd13c6f189010f676dad6a1e2c4b700da161
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-and-interoperability"></a>Migracja i współdziałanie
 Ta strona zawiera linki do dokumentów, których opisano, jak wdrożyć współdziałanie między [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji i innych typów [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] aplikacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [WPF i współdziałanie formularzy systemu Windows](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [WPF i współdziałanie Win32](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [WPF i współdziałanie Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [Współdziałanie WPF i Windows Forms](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
+ [WPF i Win32 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
+ [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
   

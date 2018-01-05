@@ -13,17 +13,18 @@ caps.latest.revision: "2"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: 3777167e1c4789500212970f7900ad7b69136a9a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 51effb21befe178c0348d6a606eef4120977889f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wif-configuration-reference"></a>Odwołanie do konfiguracji WIF
 Windows Identity Foundation (WIF) w aplikacji można skonfigurować przez dodanie elementów do pliku konfiguracji. Ten temat zawiera linki do tematów odwołania do elementów konfiguracji programu WIF.  
   
- [Schemat konfiguracji WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
+ [Schemat konfiguracji programu WIF](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/index.md)  
  Odwołania do elementów konfiguracji programu WIF.  
   
- [Konwencje schematu konfiguracji WIF](../../../docs/framework/security/wif-configuration-schema-conventions.md)  
+ [Konwencje schematu konfiguracji programu WIF](../../../docs/framework/security/wif-configuration-schema-conventions.md)  
  Zawiera informacje o atrybuty ogólne i formatów używanych przez WIF elementy konfiguracji.

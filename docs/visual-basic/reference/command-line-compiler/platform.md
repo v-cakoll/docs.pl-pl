@@ -14,11 +14,11 @@ ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
 caps.latest.revision: "34"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4177b9da15bb89f37a7b3cbb27937e09d1c12635
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 90e2a6a0f6a7b1eb3b919cca22ae8ce37a9c00bc
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-visual-basic"></a>/platform (Visual Basic)
 Określa, która wersja platformy środowisko uruchomieniowe języka wspólnego (CLR) można uruchomić pliku wyjściowego.  
@@ -71,13 +71,11 @@ Określa, która wersja platformy środowisko uruchomieniowe języka wspólnego 
   
 -   Pliki wykonywalne, które są kompilowane przy użyciu `/platform:anycpu32bitpreferred` będą wykonywane na 32-bitowym CLR.  
   
- Aby uzyskać więcej informacji dotyczących sposobu tworzenia aplikacji do uruchomienia w 64-bitowej wersji systemu Windows, zobacz [aplikacji 64-bitowych](../../../../docs/framework/64-bit-apps.md).  
+ Aby uzyskać więcej informacji dotyczących sposobu tworzenia aplikacji do uruchomienia w 64-bitowej wersji systemu Windows, zobacz [aplikacji 64-bitowych](../../../framework/64-bit-apps.md).  
   
 ### <a name="to-set-platform-in-the-visual-studio-ide"></a>Aby ustawić/platform w programie Visual Studio IDE  
   
 1.  W **Eksploratora rozwiązań**, wybierz projekt, otwórz **projektu** menu, a następnie kliknij przycisk **właściwości**.  
-  
-     Aby uzyskać więcej informacji, zobacz [NIB: Zarządzanie właściwości projektu przy użyciu projektanta projektów](http://msdn.microsoft.com/en-us/983f3c18-832f-4666-afec-74b716ff3e0e).  
   
 2.  Na **skompilować** karcie, zaznacz lub wyczyść **preferowane jest 32-bitowych** pole wyboru lub w **Procesora docelowej** listy, wybierz wartość.  
   
@@ -93,4 +91,4 @@ vbc /platform:x86 myFile.vb
 ## <a name="see-also"></a>Zobacz też  
  [/ TARGET (Visual Basic)](target.md)  
  [Kompilator w wierszu polecenia programu Visual Basic](index.md)  
- [Kompilacja przykładów — wiersze poleceń](sample-compilation-command-lines.md)
+ [Przykłady kompilacji — wiersze poleceń](sample-compilation-command-lines.md)

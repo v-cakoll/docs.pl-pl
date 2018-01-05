@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 97d6673fddb20e99454bf97c87254049b82f0000
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b9c1f52f880a38791a9a8d5b5372b2ad53c5569f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltlistenersgt-element-for-lttracegt"></a>&lt;obiekty nasłuchujące&gt; elementu &lt;śledzenia&gt;
 Określa odbiornika zbiera, magazynów i kieruje komunikaty. Odbiorniki bezpośrednie dane wyjściowe śledzenia do odpowiedniego obiektu docelowego.  
@@ -95,4 +96,4 @@ Określa odbiornika zbiera, magazynów i kieruje komunikaty. Odbiorniki bezpośr
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Diagnostics.TraceListener>  
- [Schemat ustawień debugowania i śledzenia](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+ [Schemat ustawień śledzenia i debugowania](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d68f1b6ecfb55a917dde97b395b4455930565409
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: edfd0670d951a07526454bc380cee91c66e4e7a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services"></a>Usługi
 Ta sekcja zawiera przykłady ilustrujące [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług.  
@@ -32,7 +33,7 @@ Ta sekcja zawiera przykłady ilustrujące [!INCLUDE[indigo1](../../../../include
  [Zachowania](../../../../docs/framework/wcf/samples/behaviors.md)  
  Pokazuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zachowania usługi.  
   
- [Zabezpieczenia usługi](../../../../docs/framework/wcf/samples/service-security.md)  
+ [Zabezpieczenia usług](../../../../docs/framework/wcf/samples/service-security.md)  
  Pokazuje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zabezpieczenia usługi.  
   
  [Uproszczona konfiguracja usług WCF](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)  
@@ -41,7 +42,7 @@ Ta sekcja zawiera przykłady ilustrujące [!INCLUDE[indigo1](../../../../include
  [Użycie standardowych punktów końcowych](../../../../docs/framework/wcf/samples/usage-of-standard-endpoints.md)  
  Pokazuje, jak używać standardowych punktów końcowych w plikach konfiguracji usługi.  
   
- [Hierarchiczny Model konfiguracji](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
+ [Hierarchiczny model konfiguracji](../../../../docs/framework/wcf/samples/hierarchical-configuration-model.md)  
  Pokazuje, jak wdrożyć hierarchia pliki konfiguracji dla usług.  
   
  [Zasady ochrony rozszerzonej](../../../../docs/framework/wcf/samples/extended-protection-policy.md)  
@@ -53,10 +54,10 @@ Ta sekcja zawiera przykłady ilustrujące [!INCLUDE[indigo1](../../../../include
  [Adresowanie](../../../../docs/framework/wcf/samples/addressing.md)  
  Przedstawia różne aspekty i funkcje adresy punktów końcowych.  
   
- [Imperatywne](../../../../docs/framework/wcf/samples/imperative.md)  
+ [Imperatyw](../../../../docs/framework/wcf/samples/imperative.md)  
  Pokazuje, jak zdefiniować <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> dla usługi przy użyciu kodu, zamiast definiować `wsHttpBinding` powiązania w konfiguracji.  
   
- [Wiele umów](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
+ [Wiele kontraktów](../../../../docs/framework/wcf/samples/multiple-contracts.md)  
  Pokazuje, jak zaimplementować więcej niż jeden kontrakt na usługę i sposobie konfigurowania punktów końcowych do komunikowania się z każdym zaimplementowanych kontraktów.  
   
  [Wiele punktów końcowych](../../../../docs/framework/wcf/samples/multiple-endpoints.md)  
@@ -65,11 +66,11 @@ Ta sekcja zawiera przykłady ilustrujące [!INCLUDE[indigo1](../../../../include
  [Wiele punktów końcowych w pojedynczym identyfikatorze ListenUri](../../../../docs/framework/wcf/samples/multiple-endpoints-at-a-single-listenuri.md)  
  Pokazuje usługi, która obsługuje wiele punktów końcowych w pojedynczym `ListenUri`.  
   
- [Obiekt OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
+ [OperationContextScope](../../../../docs/framework/wcf/samples/operationcontextscope.md)  
  Pokazano sposób wysyłania dodatkowe informacje [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wywołanie przy użyciu nagłówków.  
   
  [Opis usługi](../../../../docs/framework/wcf/samples/service-description.md)  
  Pokazuje, jak usługa można pobrać jego informacje o opisie usługi w czasie wykonywania.  
   
- [Pomocą właściwości ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
+ [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)  
  Pokazuje, jak używać trybu współużytkowane współbieżności na implementacji usługi.

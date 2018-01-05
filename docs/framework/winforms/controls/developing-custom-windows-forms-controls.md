@@ -16,41 +16,42 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 89be7e347556c8ec34296044f17fbfd4450bc127
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d2f15dc4bb3bd4a6d1163823509f0f2c2bf2c11a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>Opracowywanie niestandardowych formantów formularzy systemu Windows za pomocą programu .NET Framework
 Formanty formularzy systemu Windows są składniki wielokrotnego użytku, Hermetyzowanie funkcji interfejsu użytkownika, które są używane w aplikacjach opartych na systemie Windows po stronie klienta. Nie tylko formularze systemu Windows udostępnia wiele gotowych do użycia formantów, również zapewnia infrastrukturę do tworzenia własnych formantów. Można połączyć istniejących formantów, rozszerzanie istniejących formantów lub tworzenie Kontrolki niestandardowe. Ta sekcja zawiera informacje i przykłady ułatwiające opracowanie formanty formularzy systemu Windows.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Omówienie używania formantów w formularzach systemu Windows](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
+ [Omówienie używania kontrolek w formularzach Windows Forms](../../../../docs/framework/winforms/controls/overview-of-using-controls-in-windows-forms.md)  
  Zawiera opis podstawowych elementów za pomocą formantów w aplikacjach formularzy systemu Windows.  
   
- [Różne typy formantów niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
+ [Różne typy kontrolek niestandardowych](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)  
  W tym artykule opisano różne rodzaje Kontrolki niestandardowe można tworzyć z <xref:System.Windows.Forms?displayProperty=nameWithType> przestrzeni nazw.  
   
- [Podstawy programowania formantu formularzy systemu Windows](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
+ [Podstawowe informacje o opracowywaniu kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)  
  W tym artykule omówiono pierwszym krokiem tworzenia kontrolki formularza systemu Windows.  
   
- [Właściwości formantów formularzy systemu Windows](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
+ [Właściwości kontrolek formularzy Windows Forms](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)  
  Przedstawiono sposób dodawania do właściwości formantów formularzy systemu Windows.  
   
- [Zdarzenia w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
+ [Zdarzenia w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/events-in-windows-forms-controls.md)  
  Przedstawia sposób obsługi i definiowanie zdarzeń w formantach formularzy systemu Windows.  
   
- [Atrybuty w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+ [Atrybuty w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
  Zawiera opis atrybutów, które można zastosować do właściwości lub innych elementach członkowskich niestandardowe formanty i składniki.  
   
- [Malowanie i renderowanie formantu niestandardowego](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
+ [Malowanie i renderowanie kontrolki niestandardowej](../../../../docs/framework/winforms/controls/custom-control-painting-and-rendering.md)  
  Pokazuje, jak dostosować wygląd formantów.  
   
- [Formanty formularzy układu w systemie Windows](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
+ [Układ w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/layout-in-windows-forms-controls.md)  
  Przedstawia sposób tworzenia zaawansowanych układów dla formantów i formularze.  
   
- [Wielowątkowość w formantach formularzy systemu Windows](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
+ [Wielowątkowość w kontrolkach formularzy Windows Forms](../../../../docs/framework/winforms/controls/multithreading-in-windows-forms-controls.md)  
  Przedstawia sposób wdrożenia formantów wielowątkowych.  
   
 ## <a name="reference"></a>Tematy pomocy  

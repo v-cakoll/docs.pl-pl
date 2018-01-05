@@ -19,11 +19,14 @@ caps.latest.revision: "10"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 4ef77fb9e196abf046e0d4648a49b5d4d3fad47e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 78ba02fa227bd5c10337da0ef8b65ceab476c1ed
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="passing-a-uri-to-the-windows-runtime"></a>Przekazywanie adresu URI do środowiska wykonawczego systemu Windows
 Środowisko wykonawcze systemu Windows metody akceptuje tylko bezwzględny identyfikator URI. W przypadku przekazania względny identyfikator URI do [!INCLUDE[wrt](../../../includes/wrt-md.md)] metody <xref:System.ArgumentException> wyjątku. Powód: Jeśli używasz [!INCLUDE[wrt](../../../includes/wrt-md.md)] w kodzie .NET Framework [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) klasy jest wyświetlany jako <xref:System.Uri?displayProperty=nameWithType> w Intellisense. <xref:System.Uri?displayProperty=nameWithType> Klasa umożliwia względne identyfikatory URI, ale [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376) nie obsługuje klasy. Dotyczy to również metody udostępnić w [!INCLUDE[wrt](../../../includes/wrt-md.md)] składników. Jeśli składnik udostępnia metodę, która ma identyfikator URI, obejmuje podpisu w kodzie <xref:System.Uri?displayProperty=nameWithType>. Jednak użytkownikom składnika sygnatura obejmuje [Windows.Foundation.Uri](http://go.microsoft.com/fwlink/p/?LinkId=238376). Identyfikator URI, który jest przekazywany do składnika musi być bezwzględnym identyfikatorem URI.  
@@ -45,4 +48,4 @@ ms.lasthandoff: 10/18/2017
  Aby uzyskać więcej informacji o tych systemów, zobacz [schematy identyfikatorów URI](http://msdn.microsoft.com/library/windows/apps/jj655406.aspx) w Centrum deweloperów systemu Windows.  
   
 ## <a name="see-also"></a>Zobacz też  
- [.NET framework — obsługa dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+ [Obsługa programu .NET Framework dla aplikacji ze Sklepu Windows i środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)

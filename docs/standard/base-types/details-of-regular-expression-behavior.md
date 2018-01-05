@@ -19,11 +19,14 @@ caps.latest.revision: "27"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ac5ddfb0ac7ae83537717e9bd0cd46eb629641fe
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: c875fee667639923faf44c79afd6488cfc205e20
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowania wyrażenia regularnego, uwzględniająca tradycyjnych aparat niedeterministyczne skończoną Automaton ds takim Perl, Python, Emacs i Tcl. To odróżnia go od szybsze, ale bardziej ograniczone, czysty wyrażenia regularnego aparaty deterministyczne Automaton ograniczone (DFA) takich jak awk, egrep lub lex. Ma to również odróżniać z znormalizowanych, ale wolniej, POSIX NFAs. Poniższej sekcji opisano trzy typy aparatów wyrażenia regularnego i objaśniono, dlaczego wyrażeń regularnych w programie .NET Framework są implementowane przy użyciu tradycyjnych aparat NFA.  
@@ -153,7 +156,7 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Śledzenie wsteczne](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|Zawiera informacje dotyczące sposobu wyrażenie_regularne śledzenie wsteczne gałęzie, które mają znaleźć alternatywne dopasowania.|  
-|[Kompilacja i ponowne użycie](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Zawiera informacje dotyczące kompilowania i ponowne używanie wyrażeń regularnych w celu zwiększenia wydajności.|  
+|[Kompilacja i ponowne używanie](../../../docs/standard/base-types/compilation-and-reuse-in-regular-expressions.md)|Zawiera informacje dotyczące kompilowania i ponowne używanie wyrażeń regularnych w celu zwiększenia wydajności.|  
 |[Bezpieczeństwo wątków](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|Zawiera informacje o bezpieczeństwo wątków wyrażenia regularnego wraz z wyjaśnieniem, kiedy należy synchronizować dostęp do obiektów wyrażeń regularnych.|  
 |[.NET framework — nieprawidłowe wyrażenia](../../../docs/standard/base-types/regular-expressions.md)|Omówienie programowania aspekt język wyrażeń regularnych.|  
 |[Model obiektów wyrażeń regularnych](../../../docs/standard/base-types/the-regular-expression-object-model.md)|Zawiera informacje i przykłady kodu, pokazujący sposób użycia klasy wyrażeń regularnych.|  

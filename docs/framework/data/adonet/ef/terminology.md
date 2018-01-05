@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 1e8207eb35d2bf4a62e02725d4cfff4303282cfd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9e27ba9cbf2a87fe15355b812ea2447197425173
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminologia
 W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Zostały podane linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -86,7 +87,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |Typ na tabeli|Metoda modelowania hierarchii typów, w bazie danych, których używa wielu tabel o relacje jeden do jednego modelu różnych typów.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)  
- [Omówienie struktury jednostek](../../../../../docs/framework/data/adonet/ef/overview.md)  
+ [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
+ [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [Zasoby struktury jednostek](../../../../../docs/framework/data/adonet/ef/resources.md)
+ [Zasoby programu Entity Framework](../../../../../docs/framework/data/adonet/ef/resources.md)

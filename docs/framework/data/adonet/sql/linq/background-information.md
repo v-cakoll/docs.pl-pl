@@ -13,11 +13,12 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: b10845bb985e1461ddc5e09c4a87e1a673899ad6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c504d86a44437c81aa7ff556947b6ddaff6f9de7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="background-information"></a>Informacje uzupełniające
 Tematy w tej sekcji dotyczą koncepcje i procedury, które wykraczają poza podstawowe informacje o użyciu [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -31,13 +32,13 @@ Tematy w tej sekcji dotyczą koncepcje i procedury, które wykraczają poza pods
 -   Badanie oficjalny dokument, który zawiera szczegóły [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] technologii, wraz z [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] i przykładów kodu w języku C#. Aby uzyskać więcej informacji, zobacz [LINQ do SQL: .NET Language-Integrated zapytania dla danych relacyjnych](http://go.microsoft.com/fwlink/?LinkId=93205).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [ADO.NET i LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
+ [ADO.NET i LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
  Opisuje związek [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
- [Analizowanie danych LINQ do SQL kodu źródłowego](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
+ [Analizowanie kodu źródłowego LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Zawiera opis sposobu analizy [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapowania przez generowanie i wyświetlanie kodu źródłowego z przykładowej bazy danych Northwind.  
   
- [Dostosowywanie wstawiania, aktualizowania i usuwania operacji](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
+ [Dostosowywanie operacji wstawiania, aktualizowania i usuwania](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)  
  Opisuje sposób dodawania kodu sprawdzania poprawności i inne dostosowania.  
   
  [Powiązanie danych](../../../../../../docs/framework/data/adonet/sql/linq/data-binding.md)  
@@ -46,22 +47,22 @@ Tematy w tej sekcji dotyczą koncepcje i procedury, które wykraczają poza pods
  [Obsługa dziedziczenia](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)  
  Zawiera opis roli dziedziczenia w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] model obiektów i sposobu użycia powiązanych operatory zapytania.  
   
- [Wywołania metody lokalnego](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
+ [Wywoływania metody lokalnej](../../../../../../docs/framework/data/adonet/sql/linq/local-method-calls.md)  
  W tym artykule opisano [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługę wywołań metody lokalnego.  
   
- [N-warstwowa oraz zdalnych aplikacji za pomocą LINQ do SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
+ [N-warstwowe i zdalne aplikacje z użyciem LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)  
  Zawiera szczegółowe informacje o aplikacjach wielowarstwowych na używających [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
   
  [Tożsamość obiektu](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)  
  W tym artykule opisano tożsamość obiektu w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektów oraz wyjaśniono, jak ta funkcja różni się od tożsamości obiektu w bazie danych.  
   
- [LINQ do SQL modelu obiektów](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
+ [Model obiektu LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)  
  W tym artykule opisano model obiektów i ich relacji z modelem danych relacyjnych.  
   
- [Stanów obiektów i śledzenie zmian](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
+ [Stany obiektów i śledzenie zmian](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  Zawiera szczegółowe informacje o tym, jak [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] śledzi zmiany.  
   
- [Optymistycznej współbieżności: omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [Optymistyczna współbieżność: Omówienie](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  Zawiera opis optymistycznej współbieżności i definiuje warunki.  
   
  [Pojęcia dotyczące zapytań](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
@@ -92,5 +93,5 @@ Tematy w tej sekcji dotyczą koncepcje i procedury, które wykraczają poza pods
  Opisuje sposób mapowania funkcje zdefiniowane przez użytkownika w czasie projektowania oraz połączeń telefonicznych z nimi z poziomu aplikacji.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Przewodnik programowania w języku](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
+ [Przewodnik programowania](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)  
  Zawiera łącza do sekcji, które opisano różne aspekty [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].

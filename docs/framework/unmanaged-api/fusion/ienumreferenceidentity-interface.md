@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 49e1425e8e7e3d09dc36915916b887d2887dccff
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: d1af31c72770947c33f358a9689bac6fd95ef53c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ienumreferenceidentity-interface"></a>IEnumReferenceIdentity — Interfejs
 Służy jako moduł wyliczający kolekcji `IReferenceIdentity` obiektów.  
@@ -46,4 +47,4 @@ Służy jako moduł wyliczający kolekcji `IReferenceIdentity` obiektów.
   
 ## <a name="see-also"></a>Zobacz też  
  [Interfejsy łączenia](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [IReferenceIdentity — interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)
+ [IReferenceIdentity, interfejs](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)

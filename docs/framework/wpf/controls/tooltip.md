@@ -18,11 +18,12 @@ caps.latest.revision: "68"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 29123dc5de6390d18aaccbb064e53748499d61e4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 79ef4306d193bdb6f55aec467074c8b5b2f374b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tooltip"></a>ToolTip
 Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>.  
@@ -35,7 +36,7 @@ Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wska
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [ToolTip — omówienie](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [Tematy porad](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+  [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.ToolTip>  
@@ -43,5 +44,5 @@ Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wska
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Omówienie menu podręczne](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [Tematy porad](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [Okno podręczne — omówienie](../../../../docs/framework/wpf/controls/popup-overview.md)  
+  [Tematy z instrukcjami](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)

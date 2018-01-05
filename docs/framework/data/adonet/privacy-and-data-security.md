@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 87b83732f1a34db848733c658f35f151c4de4e39
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 4109c15e5c1eaf843d57e10e636fa01555083e49
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="privacy-and-data-security"></a>Bezpieczeństwo danych i poufności informacji
 Zabezpieczenia i zarządzanie poufnych informacji w aplikacji ADO.NET jest zależne od podstawowej produktów i technologii go utworzono. ADO.NET nie są bezpośrednio dostępne usługi dla zabezpieczanie lub szyfrowania danych.  

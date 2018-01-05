@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: e8ac63cae9d70f0249533848fa472da77f04b807
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 333fbb452cb1f24b5e62d1106eff4560b26267b6
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="internet-protocol-version-6"></a>Protokół internetowy w wersji 6
 Internet Protocol w wersji 6 (IPv6) to nowy zestaw standardowych protokołów warstwy sieciowej Internetu. Protokół IPv6 jest przeznaczona do rozwiązuje wiele problemów w bieżącej wersji pakietu protokołu internetowego (nazywane IPv4) w odniesieniu do adresów wyczerpanie, zabezpieczeń, automatycznej konfiguracji, rozszerzalności i tak dalej. IPv6 rozszerza możliwości Internet umożliwiające nowych typów aplikacji, w tym aplikacje peer-to-peer i przenośnych. Poniżej przedstawiono główne kwestie bieżącego protokołu IPv4:  
@@ -68,5 +69,5 @@ Internet Protocol w wersji 6 (IPv6) to nowy zestaw standardowych protokołów wa
   
 ## <a name="see-also"></a>Zobacz też  
  [IPv6 Sockets próbki](http://go.microsoft.com/fwlink/?LinkID=179568)  
- [Przykłady programowania w języku sieci](../../../docs/framework/network-programming/network-programming-samples.md)  
+ [Przykłady programowania sieciowego](../../../docs/framework/network-programming/network-programming-samples.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)

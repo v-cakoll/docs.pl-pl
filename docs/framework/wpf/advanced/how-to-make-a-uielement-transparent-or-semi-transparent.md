@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ec35ae2e064acf78d1165f64ce8c9e34b153299d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 25245319c02ae376410d71afb7a1e56eda259e99
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>Jak uzyskać przezroczystość lub półprzezroczystość elementu interfejsu użytkownika
 W tym przykładzie pokazano, jak utworzyć <xref:System.Windows.UIElement> przezroczysty lub półprzezroczysty. Do uczynienia elementu przezroczystym lub półprzezroczystym, ustaw jej <xref:System.Windows.UIElement.Opacity%2A> właściwości. Wartość `0.0` powoduje, że element jest całkowicie przezroczysty podczas wartość `1.0` powoduje, że element jest całkowicie przezroczystości. Wartość `0.5` powoduje, że element 50% nieprzezroczystych i tak dalej. Element <xref:System.Windows.UIElement.Opacity%2A> ustawiono `1.0` domyślnie.  

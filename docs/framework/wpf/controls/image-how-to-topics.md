@@ -17,20 +17,21 @@ caps.latest.revision: "61"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c34bb03e27d223c09238f658563e8a368a0c6948
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: b6aee3d6161d5a20a55e05e86c8479b9182d4e0e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-how-to-topics"></a>Obraz Tematy porad
 W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Image> elementu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Użyj elementu obrazu](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
-  [Konwertuj obraz na skali odcieni szarości](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
-  [Przytnij obraz](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
-  [Obracanie obrazów](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
+ [Używanie elementu obrazu](../../../../docs/framework/wpf/controls/how-to-use-the-image-element.md)  
+  [Konwertowanie obrazu na odcienie szarości](../../../../docs/framework/wpf/controls/how-to-convert-an-image-to-greyscale.md)  
+  [Przycinanie obrazu](../../../../docs/framework/wpf/controls/how-to-crop-an-image.md)  
+  [Obracanie obrazu](../../../../docs/framework/wpf/controls/how-to-rotate-an-image.md)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Image>  
@@ -40,5 +41,5 @@ W tematach w tej sekcji opisano sposób użycia <xref:System.Windows.Controls.Im
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie tworzenia obrazu](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [Tematy porad](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+ [Obrazowanie — przegląd](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
+ [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)

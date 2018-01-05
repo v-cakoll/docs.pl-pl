@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dddf6940e180b3d997357390ead38f99f52994ae
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f00597d48ff100325c1fb2884f64169164415a50
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="toolbar-overview"></a>ToolBar — Przegląd
 <xref:System.Windows.Controls.ToolBar>Formanty są kontenerami dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji. A <xref:System.Windows.Controls.ToolBar> zwykle zawiera przyciski, które wywołują polecenia.  
@@ -54,5 +55,5 @@ Pasek narzędzi z elementami przepełnienia
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Primitives.ToolBarPanel>  
  <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>  
- [Styl formantu paska narzędzi](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+ [Kontrolki stylu na pasku ToolBar](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
  [Przykładu z galerii formantów WPF](http://go.microsoft.com/fwlink/?LinkID=160053)

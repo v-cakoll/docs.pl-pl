@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 04a3bb1c7499a60175aaaa9715e780ea5ddceb31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f62475e8b44d9cdda13322dc223509572c4ae541
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tcp-udp"></a>TCP I UDP
 Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokół UDP (User Datagram) z <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener>, i <xref:System.Net.Sockets.UdpClient> klasy. Te klasy protokołu są wbudowane nad <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> klasy a zajmie się szczegóły transferu danych.  
@@ -42,9 +43,9 @@ Aplikacje mogą używać usług Transmission Control Protocol (TCP) i protokół
  **UdpClient** klasa korzysta z tablicy bajtów do przechowywania datagramów protokołu UDP. Możesz użyć <xref:System.Net.Sockets.UdpClient.Send%2A> do wysyłania danych do sieci i <xref:System.Net.Sockets.UdpClient.Receive%2A> metodę, aby odbierać przychodzące datagramów.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Za pomocą usług TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
- [Za pomocą usług UDP](../../../docs/framework/network-programming/using-udp-services.md)  
- [W sieci za pomocą strumieni](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [Przy użyciu gniazda serwera asynchroniczne](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [Przy użyciu gniazda asynchroniczne klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Przy użyciu protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)
+ [Stosowanie usług TCP](../../../docs/framework/network-programming/using-tcp-services.md)  
+ [Stosowanie usług UDP](../../../docs/framework/network-programming/using-udp-services.md)  
+ [Stosowanie strumieni w sieci](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
+ [Używanie asynchronicznego gniazda serwera](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
+ [Używanie asynchronicznego gniazda klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Korzystanie z protokołów aplikacji](../../../docs/framework/network-programming/using-application-protocols.md)

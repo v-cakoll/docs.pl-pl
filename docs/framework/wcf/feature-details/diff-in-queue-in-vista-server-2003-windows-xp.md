@@ -14,11 +14,12 @@ caps.latest.revision: "21"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 669c6be6756d79b30266c9fda0909fedc71aeae3
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 8f30ad7819a570f0149868502261f986f4dd8c0b
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Różnice w funkcjach kolejkowania w systemach Windows Vista, Windows Server 2003 i Windows XP
 Ten temat zawiera podsumowanie różnic w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] kolejki funkcji między [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
@@ -45,5 +46,5 @@ Ten temat zawiera podsumowanie różnic w [!INCLUDE[indigo1](../../../../include
  Usługa MSMQ na [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje zdalne odczyty transakcyjnych. Dzięki temu aplikacja, która jest czytania z kolejki na komputerze, który jest inny niż komputer, na którym jest hostowany kolejki. Zapewnia to możliwość farmy usług czytania z kolejki centralnej, co zwiększa ogólną przepustowość sieci. Gwarantuje również, że jeśli wystąpi błąd podczas odczytywania i przetwarza wiadomość, transakcja wycofuje i pozostaje wiadomości w kolejce do późniejszego przetwarzania.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu kolejki utraconych wiadomości do obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
+ [Używanie utraconych kolejek na potrzeby obsługi transferów komunikatów zakończonych niepowodzeniem](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)  
  [Obsługa komunikatów zanieczyszczonych](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

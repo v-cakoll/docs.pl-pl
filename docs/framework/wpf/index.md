@@ -24,11 +24,12 @@ caps.latest.revision: "97"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 5d7dce942499984c24f982e321d976982e404978
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 4c2fb9d69e7b0ccfc2b87aea0cda5e7b4804f416
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
 Windows Presentation Foundation (WPF) w programie Visual Studio 2015 oferuje deweloperom ujednolicony model programowania do tworzenia nowoczesnych aplikacji klasycznych biznesowych — w systemie Windows.  
@@ -36,7 +37,7 @@ Windows Presentation Foundation (WPF) w programie Visual Studio 2015 oferuje dew
 > [!NOTE]
 >  Przeglądarki Mozilla Firefox wyłącza rozszerzenia Asystenta Framework firmy Microsoft. Zobacz [jak usunąć Asystenta pakietu .NET Framework dla programu Firefox](https://support.microsoft.com/en-us/kb/963707) informacji na temat sposobu usuwania rozszerzenia z Firefox.  
   
- [Tworzenie nowoczesnych aplikacji klasycznych z technologii Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
+ [Tworzenie nowoczesnych aplikacji klasycznych przy użyciu platformy Windows Presentation Foundation](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
   
  [Projektowanie XAML w programie Visual Studio i Blend for Visual Studio](/visualstudio/designers/designing-xaml-in-visual-studio)  
   

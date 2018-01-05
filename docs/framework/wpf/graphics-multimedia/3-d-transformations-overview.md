@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 431f4abd55da3b8c4e348d3abbd107e2f6344d5d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 7b45c2c12393f296f916eaf8ea3f912958b54b09
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="3-d-transformations-overview"></a>Przegląd Przekształcenia 3-D
 W tym temacie opisano sposób stosowania przekształcenia do modeli 3-w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] systemu grafiki. Przekształcenia umożliwiają deweloperom położenia, zmienianie rozmiaru i zmienić orientację modeli bez zmiany podstawowego wartości, które je zdefiniować.  
@@ -116,6 +117,6 @@ Przykład obrotu
  Ponieważ aparaty fotograficzne są również modeli, jest możliwe jest przekształcenie również właściwości kamery.  Gdy na pewno można zmienić wygląd sceny poprzez przekształcanie odległości lokalizacji lub płaszczyzny aparatu — w efekcie Przekształcanie projekcji całej sceny — należy pamiętać, że wiele efektów osiągnięcia w ten sposób może nie mieć tyle "sensu visual" podglądzie jako przekształcenia zastosowane do lokalizacji lub pozycji modeli sceny.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przegląd grafiki 3-w](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
- [Przekształca — omówienie](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
+ [Grafika 3D — przegląd](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)  
+ [Przekształcenia — przegląd](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
  [Przykład 2-D transformacji](http://go.microsoft.com/fwlink/?LinkID=158252)

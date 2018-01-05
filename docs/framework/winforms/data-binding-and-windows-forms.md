@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c20753aab569bf90b7db2f062050c7e185d638fb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="data-binding-and-windows-forms"></a>Powiązanie danych i formularze systemu Windows
 W formularzach systemu Windows można powiązać źródła danych nie tylko tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Można powiązać tablicy wartości, które obliczenia w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  
@@ -65,6 +66,6 @@ W formularzach systemu Windows można powiązać źródła danych nie tylko trad
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.Binding>  
- [Powiązanie danych formularzy systemu Windows](../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [Porady: powiązywanie formantu DataGrid formularzy systemu Windows ze źródłem danych](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
- [BindingSource — składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)
+ [Wiązanie danych formularzy Windows Forms](../../../docs/framework/winforms/windows-forms-data-binding.md)  
+ [Instrukcje: powiązywanie kontrolki DataGrid formularzy Windows Forms ze źródłem danych](../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)  
+ [BindingSource, składnik](../../../docs/framework/winforms/controls/bindingsource-component.md)

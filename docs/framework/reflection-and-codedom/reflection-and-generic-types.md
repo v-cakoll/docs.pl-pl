@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 99d8da622b23a98b8a48ad6fcdb82c270d24ed22
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reflection-and-generic-types"></a>Odbicie i typy ogólne
 <a name="top"></a>Z punktu widzenia odbicia, że typu ogólnego jest skojarzony z nim zestaw parametrów typu (jeśli jest definicją typu ogólnego) jest różnica między typem ogólnym i typu zwykłego lub argumentów typu (jeśli jest skonstruowanego typu). Metoda ogólna różni się od zwykłej metody w taki sam sposób.  
@@ -157,7 +158,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Porady: zbadanie i tworzenie wystąpień typów ogólnych za pomocą odbicia](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Przedstawia sposób użycia właściwości i metod <xref:System.Type> i <xref:System.Reflection.MethodInfo> do sprawdzenia typów ogólnych.|  
+|[Instrukcje: badanie i tworzenie wystąpień typów ogólnych za pomocą odbicia](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|Przedstawia sposób użycia właściwości i metod <xref:System.Type> i <xref:System.Reflection.MethodInfo> do sprawdzenia typów ogólnych.|  
 |[Typy ogólne](../../../docs/standard/generics/index.md)|Zawiera opis funkcji ogólne i jak jest obsługiwana w programie .NET Framework.|  
-|[Porady: Definiowanie typu ogólnego z odbiciem emisji](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Przedstawia sposób użycia odbicia emisji do generowania typów ogólnych w zestawów dynamicznych.|  
+|[Instrukcje: definiowanie typu ogólnego przy użyciu emisji odbicia](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|Przedstawia sposób użycia odbicia emisji do generowania typów ogólnych w zestawów dynamicznych.|  
 |[Wyświetlanie informacji o typie](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|W tym artykule opisano <xref:System.Type> klasy i przykłady kodu, które ilustrują sposób użycia <xref:System.Type> z różnymi klasami odbicia, aby uzyskać informacje o konstruktorów, metod, pola, właściwości i zdarzeń.|

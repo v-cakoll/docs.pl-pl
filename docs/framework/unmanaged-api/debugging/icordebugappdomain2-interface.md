@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ebd1e504cbf2f74ad82e7fea6b6c3f355a1bda34
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c811107fcf32696aee17810af06ac0b2ddc9102d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icordebugappdomain2-interface1"></a>ICorDebugAppDomain2 Interface1
 Udostępnia metody do pracy z tablic, wskaźników, wskaźników funkcji i typy referencyjne. Ten interfejs jest rozszerzenie interfejsu ICorDebugAppDomain.  
@@ -32,7 +33,7 @@ Udostępnia metody do pracy z tablic, wskaźników, wskaźników funkcji i typy 
   
 |Metoda|Opis|  
 |------------|-----------------|  
-|[GetArrayOrPointerType — metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Pobiera tablicę określonego typu lub wskaźnik lub odwołanie do określonego typu.|  
+|[GetArrayOrPointerType, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|Pobiera tablicę określonego typu lub wskaźnik lub odwołanie do określonego typu.|  
 |[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|Pobiera wskaźnik do funkcji, która ma danym podpisem.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -50,4 +51,4 @@ Udostępnia metody do pracy z tablic, wskaźników, wskaźników funkcji i typy 
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Interfejsy debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+ [Debugowanie, interfejsy](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

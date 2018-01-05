@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 50521591af6f77b98e52aa4a847216f63186d78b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **selektora dziedziczenia** okno dialogowe. Dzięki temu można korzystać z interfejsów kodu lub użytkownika (UI), zostały już utworzone w innych rozwiązań.  
@@ -67,7 +68,7 @@ Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **s
     >  Połączenie dziedziczone formanty i składniki ze standardowych kontrolek i składników w formularzach systemu Windows, mogą wystąpić powoduje konflikt z kolejność z. Problem można rozwiązać, zmieniając kolejność, które jest realizowane przez kliknięcie w **Format** menu i wskazujący **kolejności**, a następnie klikając pozycję **Przesuń na wierzch** lub  **Wyślij do tyłu**. Aby uzyskać więcej informacji o porządek formantów, zobacz [porady: warstwa obiektów na formularzach systemu Windows](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Inherits — instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
- [za pomocą](~/docs/csharp/language-reference/keywords/using.md)  
+ [Inherits, instrukcja](~/docs/visual-basic/language-reference/statements/inherits-statement.md)  
+ [using](~/docs/csharp/language-reference/keywords/using.md)  
  [Efekty modyfikowania wyglądu formularza podstawowego](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)  
- [Formularze systemu Windows — dziedziczenie Visual](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+ [Formularze Windows Forms — dziedziczenie wizualizacji](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)

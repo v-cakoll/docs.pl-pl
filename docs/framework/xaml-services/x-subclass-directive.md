@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: 5c6e91fcecb60dee2577ea62c2313f8b2c7eecbf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 1d620b59208b9dc852abee3dd2e4d6c58b223d70
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xsubclass-directive"></a>x:Subclass — dyrektywa
 Modyfikuje zachowanie kompilacji znaczników XAML podczas `x:Class` jest również udostępniany. Zamiast tworzenia częściowej klasy, która jest oparta na `x:Class`, dostarczonych `x:Class` zostanie utworzona jako klasa pośrednicząca, a następnie oczekuje na podstawie podanych klasy pochodnej `x:Class`.  
@@ -67,5 +68,5 @@ Modyfikuje zachowanie kompilacji znaczników XAML podczas `x:Class` jest równie
  Podczas definiowania zarówno `x:Class` i `x:Subclass`, nie trzeba podać implementacji klasy, która odwołuje się do niego `x:Class`. Musisz podać jego nazwę przy użyciu `x:Class` atrybutu, dzięki czemu kompilator ma pewne wskazówki dotyczące klasy, która tworzy w plikach pośredniego (kompilator nie wybierz nazwę domyślną w tym przypadku). Można nadać `x:Class` klasa implementacji; mimo to nie jest typowym scenariuszem stosowania zarówno `x:Class` i `x:Subclass`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [x: Class — dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
- [XAML oraz klas niestandardowych dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)
+ [x:Class, dyrektywa](../../../docs/framework/xaml-services/x-class-directive.md)  
+ [Klasy XAML i niestandardowe dla WPF](../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: dd8d93d128c03cb9ee482860603e5734e96c6fc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5cf689f8a7c475dbdda416297e28118d43bfdbff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-apply-a-guidelineset-to-a-drawing"></a>Jak zastosować GuidelineSet do rysowania
 W tym przykładzie pokazano, jak zastosować <xref:System.Windows.Media.GuidelineSet> do <xref:System.Windows.Media.DrawingGroup>.  
@@ -40,4 +41,4 @@ W tym przykładzie pokazano, jak zastosować <xref:System.Windows.Media.Guidelin
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Media.DrawingGroup>  
  <xref:System.Windows.Media.GuidelineSet>  
- [Rysowanie obiekty — omówienie](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)
+ [Rysowanie obiektów — przegląd](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)

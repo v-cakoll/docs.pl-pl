@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 0c0a57018959aedc72e0fa02befa1733f66f265b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 9d53ec57bdd6126aa1b82e3fa34d01b8907ca169
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="alignment-margins-and-padding-overview"></a>Przegląd Wyrównanie, marginesy i wypełnienia
 <xref:System.Windows.FrameworkElement> Klasa udostępnia kilka właściwości, które są używane w celu precyzyjnego rozmieszczenia elementów podrzędnych. W tym temacie omówiono cztery z właściwości najważniejszych: <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>, <xref:System.Windows.FrameworkElement.Margin%2A>, <xref:System.Windows.Controls.Border.Padding%2A>, i <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>. Skutki te właściwości są wziąć pod uwagę, ponieważ stanowią podstawę kontrolowanie położenie elementów w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -156,6 +157,6 @@ ms.lasthandoff: 11/21/2017
  <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>  
  <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>  
  <xref:System.Windows.FrameworkElement.Margin%2A>  
- [Omówienie paneli](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [Panele — omówienie](../../../../docs/framework/wpf/controls/panels-overview.md)  
  [Układ](../../../../docs/framework/wpf/advanced/layout.md)  
  [Przykładu z galerii układu WPF](http://go.microsoft.com/fwlink/?LinkID=160054)

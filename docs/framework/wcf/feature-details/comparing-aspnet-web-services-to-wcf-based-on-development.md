@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6aa79e76bd81c0d56b30d4bac2edd4b9cbef6b33
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: c12bd11cee62cd769f7dffc142806fa5ab1b0137
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>Porównywanie usług sieci Web na platformie ASP.NET z programem WCF na podstawie procesów programistycznych
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]jest dostępna opcja Tryb zgodności ASP.NET umożliwiające [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji zaprogramowane i skonfigurować usługi sieci Web ASP.NET, takich jak i naśladować ich zachowanie. Poniższe sekcje Porównanie usług sieci Web ASP.NET i [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] oparte na co jest wymagane do tworzenia aplikacji za pomocą obu tych technologii.  
@@ -761,4 +762,4 @@ public void Receive(Message input)
  Język konfiguracji ASP.NET umożliwia określenie kultury dla poszczególnych usług. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Nie obsługuje tego ustawienia konfiguracji, z wyjątkiem w trybie zgodności ASP.NET. Aby zlokalizować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, która nie używa tryb zgodności ASP.NET, skompilować typ usługi do zestawów specyficzne dla kultury i ma oddzielne punkty końcowe specyficzne dla kultury dla każdego zestawu specyficzne dla kultury.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porównanie usług sieci Web ASP.NET i WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+ [Porównanie usług internetowych platformy ASP.NET i architektury WCF na podstawie przeznaczenia oraz stosowanych standardów](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)

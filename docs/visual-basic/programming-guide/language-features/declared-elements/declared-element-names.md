@@ -32,11 +32,11 @@ ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 caps.latest.revision: "27"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 59fee9eb79af86df7f01bd77c27a929ef61fcfe2
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
 Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyli w kodzie użyto odwoływanie się do niego.  
@@ -71,7 +71,7 @@ Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyl
  `xyz$wv`  
   
 > [!CAUTION]
->  Nazwy elementów, począwszy od znaku podkreślenia (`_`) czy nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../../../docs/standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie można użyć składnika, który definiuje takich nazw. Jednak podkreślenia w inne położenie w nazwie elementu jest zgodne ze specyfikacją CLS.  
+>  Nazwy elementów, począwszy od znaku podkreślenia (`_`) czy nie jest częścią [niezależność od języka i elementy niezależne od języka](../../../../standard/language-independence-and-language-independent-components.md) (ze specyfikacją CLS), więc kodu zgodne ze specyfikacją CLS nie można użyć składnika, który definiuje takich nazw. Jednak podkreślenia w inne położenie w nazwie elementu jest zgodne ze specyfikacją CLS.  
   
 ### <a name="name-length-guidelines"></a>Wskazówki dotyczące długość nazwy  
  Jak to w praktyce Twoja nazwa powinna być możliwie krótki podczas nadal jednoznacznie identyfikujący rodzaj elementu. To poprawia czytelność kodu i zmniejsza rozmiar linii długość i pliku źródłowego.  
@@ -99,6 +99,6 @@ Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyl
   
 ## <a name="see-also"></a>Zobacz też  
  [Zadeklarowane elementy](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
- [Zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [Odwołania do elementów zadeklarowanych](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)  
  [Instrukcje](../../../../visual-basic/language-reference/statements/index.md)

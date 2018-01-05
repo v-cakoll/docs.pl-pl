@@ -17,21 +17,22 @@ caps.latest.revision: "75"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f09c1aac387d26d44398331d62b25e588d4bbdc1
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: d9bec0b3edd6a5ab3997c42e3b8154f0c41531d5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-customization"></a>Niestandardowe dostosowywanie formantu
 Ta kategoria obejmuje różnych klas podstawowych, interfejsów i inne elementy i pojęć tworzenia w pełni funkcjonalne [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] formantu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Formant tworzenia — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [Wskazówki dotyczące projektowania Stylable formantów](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [Modułu definiowania układu kodu](../../../../docs/framework/wpf/controls/adorners.md)  
- [Style formantu i szablony](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [Automatyzacja interfejsu użytkownika dla kontrolek niestandardowych WPF](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+ [Tworzenie kontrolek — omówienie](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [Wytyczne do projektowania kontrolek w określonych stylach](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
+ [Moduły definiowania układu](../../../../docs/framework/wpf/controls/adorners.md)  
+ [Style i szablony kontrolek](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
+ [Automatyzacja interfejsu użytkownika kontrolki niestandardowej WPF](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Style i tworzenia szablonów](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 484aa47744de95c849b237112f1a383c2c2cb0b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 87e3b1b63c8582a322f74659f03803d1dbb19621
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animation-and-timing-system-overview"></a>Przegląd Animacja i system chronometrażu
 W tym temacie opisano, jak system chronometrażu używa animacji, <xref:System.Windows.Media.Animation.Timeline>, i <xref:System.Windows.Media.Animation.Clock> klasy do animowania właściwości.  
@@ -93,6 +94,6 @@ ClockGroup
  Gdy animować właściwości, <xref:System.Windows.Media.Animation.AnimationClock> ustawia właściwość *bieżącego* wartość. Podczas pobierania wartości właściwości za pośrednictwem jego akcesor CLR lub <xref:System.Windows.DependencyObject.GetValue%2A> metoda zwraca dane wyjściowe <xref:System.Windows.Media.Animation.AnimationClock> podczas <xref:System.Windows.Media.Animation.AnimationClock> jest <xref:System.Windows.Media.Animation.ClockState.Active> lub <xref:System.Windows.Media.Animation.ClockState.Filling>. Podstawową wartość właściwości można pobrać za pomocą <xref:System.Windows.Media.Animation.IAnimatable.GetAnimationBaseValue%2A> metody.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Animacja — omówienie](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [Przegląd zdarzeń chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
- [Omówienie zachowania chronometrażu](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)
+ [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [Zdarzenia chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-events-overview.md)  
+ [Zachowania chronometrażu — przegląd](../../../../docs/framework/wpf/graphics-multimedia/timing-behaviors-overview.md)

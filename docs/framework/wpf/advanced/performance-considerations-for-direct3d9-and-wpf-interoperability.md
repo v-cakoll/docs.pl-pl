@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 886ef6c8c9df9d14b5c2a805da2e3948d5e55f69
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 8142125eae26b15f12652d28fdf0c34f19d49c4e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Zagadnienia dotyczące współdziałania Direct3D9 i WPF
 Zawartość Direct3D9 można obsługiwać przy użyciu <xref:System.Windows.Interop.D3DImage> klasy. Hostowanie zawartości Direct3D9 mogą wpływać na wydajność aplikacji. W tym temacie opisano najlepsze rozwiązania w celu optymalizacji wydajności, odnośnie do hostowania zawartości Direct3D9 w aplikacji Windows Presentation Foundation (WPF). Sposób użycia obejmują następujące najlepsze rozwiązania <xref:System.Windows.Interop.D3DImage> i najlepsze rozwiązania w przypadku, gdy używasz systemu Windows Vista, Windows XP i wielu monitor wyświetla.  
@@ -71,6 +72,6 @@ Zawartość Direct3D9 można obsługiwać przy użyciu <xref:System.Windows.Inte
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Interop.D3DImage>  
- [WPF i współdziałanie Direct3D9](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
- [Wskazówki: Tworzenie zawartości Direct3D9 hostingu na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
- [Wskazówki: Obsługa Direct3D9 zawartości na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)
+ [WPF i Direct3D9 — współdziałanie](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [Przewodnik: tworzenie zawartości Direct3D9 dla hostingu w WPF](../../../../docs/framework/wpf/advanced/walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)  
+ [Przewodnik: hosting zawartości Direct3D9 w WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-direct3d9-content-in-wpf.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 154bbe14a14d34c0d998e3192a70a96b9922f32c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 97428837d78c246915381b51fb5005a68518b7bc
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cordebugehclause-structure"></a>Struktura CorDebugEHClause
 [Obsługiwane w programie .NET Framework 4.5.2 i nowszych wersjach]  
@@ -58,7 +59,7 @@ typedef struct _CorDebugEHClause {
 ## <a name="remarks"></a>Uwagi  
  Tablica `CoreDebugEHClause` wartości zwracane przez [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md) metody.  
   
- Informacje klauzuli EH jest zdefiniowany w specyfikacji interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [standardowe ECMA-355: infrastruktury języka wspólnego (CLI), w wersji 6](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
+ Informacje klauzuli EH jest zdefiniowany w specyfikacji interfejsu wiersza polecenia. Aby uzyskać więcej informacji, zobacz [standardowe ECMA-355: infrastruktury języka wspólnego (CLI), w wersji 6.](http://www.ecma-international.org/publications/standards/Ecma-335.htm).  
   
  `flags` Pole może zawierać następujące flagi. Należy pamiętać, że nie są zdefiniowane w CorDebug.idl lub CorDebug.h.  
   
@@ -79,5 +80,5 @@ typedef struct _CorDebugEHClause {
  **Wersje programu .NET framework:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Metoda GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
+ [GetEHClauses, metoda](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)  
  [Struktury debugowania](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

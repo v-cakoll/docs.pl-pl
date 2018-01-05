@@ -26,11 +26,12 @@ caps.latest.revision: "12"
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.openlocfilehash: 3df78be14da96d0bb7b8875a5c7532c003d1dbc8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 25c033ae46abc65040c00b6beb105c8ebb6b1d90
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-client-sockets"></a>Używanie klienta gniazd
 Przed rozpoczęciem konwersacji za pośrednictwem <xref:System.Net.Sockets.Socket>, należy utworzyć potok danych pomiędzy aplikacją i urządzenia zdalnego. Mimo że istnieją inne rodziny adresów sieci i protokołów, w tym przykładzie pokazano, jak można utworzyć połączenia TCP/IP do zdalnej usługi.  
@@ -87,7 +88,7 @@ try {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przy użyciu gniazda synchroniczne klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
- [Przy użyciu gniazda asynchroniczne klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [Porady: Tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
+ [Używanie synchronicznego gniazda klienta](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)  
+ [Używanie asynchronicznego gniazda klienta](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
+ [Instrukcje: tworzenie gniazda](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
  [Gniazda](../../../docs/framework/network-programming/sockets.md)

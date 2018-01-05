@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: a7dfcd092cb7b21e31ec1098df5e9534cd27cfc9
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawiera szereg opcji i punkty rozszerzalności w gestii implementujący. W tym temacie przedstawiono protokoły usług sieci Web wykaz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu obsługiwane.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/02/2017
 -   [Podstawowe zabezpieczeń profilu 1.0 pracy projektu](http://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Protokoły obsługiwane przez wiązania współdziałania udostępnione przez System usług sieci Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
+ [Protokoły usług internetowych obsługiwane przez wiązania współdziałania udostępnione przez system](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)  
  [Protokoły obsługi komunikatów](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)  
  [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  
  [WSDL i zasady](../../../../docs/framework/wcf/feature-details/wsdl-and-policy.md)  

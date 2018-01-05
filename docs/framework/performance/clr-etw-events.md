@@ -17,11 +17,12 @@ caps.latest.revision: "45"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 1d0619388b429bd1824a62bc29ccb222eea1ffde
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 17701ee1ddbb1056c9b06b2467c4ce10b91271ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clr-etw-events"></a>Zdarzenia ETW CLR
 W tematach w tej sekcji opisano zdarzenia śledzenia dla zdarzeń systemu Windows (ETW). Każde zdarzenie ma skojarzone — słowo kluczowe i poziomu, które są opisane w [słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md) tematu. Środowisko CLR ma dwóch dostawców na potrzeby zdarzenia:  
@@ -33,7 +34,7 @@ W tematach w tej sekcji opisano zdarzenia śledzenia dla zdarzeń systemu Window
  Aby uzyskać więcej informacji o dostawcach, zobacz [dostawcy ETW CLR](../../../docs/framework/performance/clr-etw-providers.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Środowisko uruchomieniowe informacje o zdarzeniach](../../../docs/framework/performance/runtime-information-etw-events.md)  
+ [Informacje o zdarzeniach środowiska uruchomieniowego](../../../docs/framework/performance/runtime-information-etw-events.md)  
  Przechwytuje informacji na temat środowiska uruchomieniowego, jednostka SKU, numer wersji, sposób, w którym środowiska wykonawczego został aktywowany, w tym parametry wiersza polecenia, który został uruchomiony z identyfikatorem GUID (jeśli dotyczy) oraz inne istotne informacje.  
   
  [Zdarzenie wyjątku ETW Thrown_V1](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)  
@@ -51,7 +52,7 @@ W tematach w tej sekcji opisano zdarzenia śledzenia dla zdarzeń systemu Window
  [Zdarzenia metod](../../../docs/framework/performance/method-etw-events.md)  
  Przechwytuje informacje o metodach CLR do rozpoznawania symboli.  
   
- [Zdarzenia wyrzucania elementów bezużytecznych](../../../docs/framework/performance/garbage-collection-etw-events.md)  
+ [Zdarzenia odzyskiwania pamięci](../../../docs/framework/performance/garbage-collection-etw-events.md)  
  Przechwytuje informacje dotyczące pamięci, aby pomóc w diagnostyki i debugowanie.  
   
  [Zdarzenia śledzenia JIT](../../../docs/framework/performance/jit-tracing-etw-events.md)  
@@ -72,7 +73,7 @@ W tematach w tej sekcji opisano zdarzenia śledzenia dla zdarzeń systemu Window
 ## <a name="see-also"></a>Zobacz też  
  [Poprawa debugowania i dostrajania wydajności za pomocą funkcji ETW](http://go.microsoft.com/fwlink/?LinkId=179696)  
  [Blog dotyczący wydajności systemu Windows](http://go.microsoft.com/fwlink/?LinkId=179509)  
- [Kontrolowanie .NET Framework rejestrowania](../../../docs/framework/performance/controlling-logging.md)  
+ [Kontrolowanie logowania w programie .NET Framework](../../../docs/framework/performance/controlling-logging.md)  
  [Dostawcy CLR ETW](../../../docs/framework/performance/clr-etw-providers.md)  
- [Słowa kluczowe CLR ETW i poziomy](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
- [Zdarzenia ETW w środowisko uruchomieniowe języka wspólnego](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+ [Słowa kluczowe i poziomy ETW CLR](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)  
+ [Zdarzenia ETW w środowisku CLR](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)

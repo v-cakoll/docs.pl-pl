@@ -12,11 +12,11 @@ ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bcb5291737a9f4763f680daaf625c58d308423f8
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 51d04c573e91a351c48edefebdb3d32fce1d306f
+ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>Porady: tworzenie złożenia C/C++ za pomocą atrybutów (Visual Basic)
 Za pomocą atrybutów można dostosować sposób struktury są określone w pamięci. Na przykład można utworzyć, co jest nazywane Unii w języku C/C++ za pomocą `StructLayout(LayoutKind.Explicit)` i `FieldOffset` atrybutów.  
@@ -79,7 +79,7 @@ Structure TestExplicit
  <xref:System.Reflection>  
  <xref:System.Attribute>  
  [Przewodnik programowania w języku Visual Basic](../../../../visual-basic/programming-guide/index.md)  
- [Atrybuty](../../../../../docs/standard/attributes/index.md)  
+ [Atrybuty](../../../../standard/attributes/index.md)  
  [Odbicie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)  
  [Atrybuty (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)  
  [Tworzenie atrybutów niestandardowych (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)  

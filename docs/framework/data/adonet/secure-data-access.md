@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: c713cc8e5f3d7e81b196820e0a25fde0018b6c80
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpieczeń dostępne w odpowiedni magazyn danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które mogą zawierać aplikacji.  
@@ -35,7 +36,7 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
 |--------------|-----------------|  
 |[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Zawiera opis najlepszych rozwiązań dotyczących zabezpieczeń i techniki chroniące informacje dotyczące połączenia, na przykład szyfrowania parametrów połączenia za pomocą konfiguracji chronionych.|  
 |[Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywanie operacji bazy danych.|  
-|[Konstruktorzy ciągów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md)|Zawiera opis sposobu tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
+|[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|Zawiera opis sposobu tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
 |[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|W tym artykule opisano architekturę zabezpieczeń programu SQL Server.|  
   
 ## <a name="parameterized-commands-and-sql-injection"></a>Sparametryzowanych poleceń i iniekcja kodu SQL  
@@ -45,9 +46,9 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Element DataAdapter parametrów](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Informacje dotyczące używania parametrów z `DataAdapter`.|  
-|[Modyfikowanie danych w procedurach składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Opisuje sposób określić parametry i uzyskiwanie wartości zwracanej.|  
-|[Zarządzanie uprawnieniami w procedurach składowanych w programie SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Informacje dotyczące używania procedur składowanych serwera SQL w celu hermetyzacji dostępu do danych.|  
+|[Parametry elementu DataAdapter](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|Informacje dotyczące używania parametrów z `DataAdapter`.|  
+|[Modyfikowanie danych za pomocą procedur składowanych](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|Opisuje sposób określić parametry i uzyskiwanie wartości zwracanej.|  
+|[Zarządzanie uprawnieniami za pomocą procedur składowanych w programie SQL Server](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|Informacje dotyczące używania procedur składowanych serwera SQL w celu hermetyzacji dostępu do danych.|  
   
 ## <a name="script-exploits"></a>Luk w skryptach  
  Wykorzystać skryptu jest innej formy iniekcji używającej złośliwego znaków wstawione do strony sieci Web. Przeglądarka nie można zweryfikować wstawione znaki i będzie przetwarzać je jako część strony.  
@@ -66,7 +67,7 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Podstawowe założenia obsługi wyjątków](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|Opisuje podstawowe formy Obsługa wyjątków strukturalnych try/catch/finally.|  
-|[Najlepsze praktyki dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Opis najlepszych rozwiązań do obsługi wyjątków.|  
+|[Najlepsze rozwiązania dotyczące wyjątków](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|Opis najlepszych rozwiązań do obsługi wyjątków.|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>Ochrona programu Microsoft Access i źródeł danych  
  Programu Microsoft Access i Microsoft Excel może działać jako magazyn danych na potrzeby aplikacji ADO.NET, gdy wymagania dotyczące zabezpieczeń są minimalne lub nie istnieje. Ich funkcje zabezpieczeń dla przed intruzami, ale nie powinno być stosowane do więcej niż zniechęcić meddling przez użytkowników w organizacji uninformed. Pliki danych fizycznych dostępu i Excel istnieje w systemie plików, a musi być dostępny dla wszystkich użytkowników. Z tego powodu narażony na ataki, mogącymi skutkować kradzieżą lub utraty danych, ponieważ pliki można łatwo skopiować lub zmodyfikować. Gdy wymagana jest niezawodna zabezpieczeń, użyj programu SQL Server lub innej bazy danych na serwerze której pliki danych fizycznych nie są do odczytu z systemu plików.  
@@ -105,5 +106,5 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- [Konstruktorzy ciągów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md)  
+ [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

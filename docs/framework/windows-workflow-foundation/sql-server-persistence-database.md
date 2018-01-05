@@ -12,22 +12,23 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 3a86cbe3d36383623c70c6a0588d3c0e8fe0bf5c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: b66783ae09e15d324cc1b6ff2aa8db90e052dddf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sql-server-persistence-database"></a>Baza danych programu SQL Server trwałości
 Ta sekcja zawiera szczegółowe informacje o widoki publicznego bazy danych obsługiwane przez Magazyn wystąpienia przepływu pracy programu SQL i przedstawia sposób zdeserializować wystąpienia pierwotnych danych właściwości i wyszukać-utrwalony wystąpień.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
--   [Schemat bazy danych trwałości](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
+-   [Schemat bazy danych stanów trwałych](../../../docs/framework/windows-workflow-foundation/persistence-database-schema.md)  
   
--   [Porady: deserializacja właściwości obiektu danych](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
+-   [Instrukcje: Deserializacja właściwości danych wystąpienia](../../../docs/framework/windows-workflow-foundation/how-to-deserialize-instance-data-properties.md)  
   
--   [Porady: zapytanie o-utrwalony wystąpień](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
+-   [Instrukcje: Zapytanie dotyczące wystąpień nietrwałych](../../../docs/framework/windows-workflow-foundation/how-to-query-for-non-persisted-instances.md)  
   
 ## <a name="see-also"></a>Zobacz też  
  [AppFabric trwałości bazy danych SQL](http://go.microsoft.com/fwlink/?LinkID=201202&clcid=0x409)

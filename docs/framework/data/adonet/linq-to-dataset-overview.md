@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 8b853eac26f41a3537438bd1f9b0263ae06b6e77
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ do DataSet — omówienie
 <xref:System.Data.DataSet> Jest jedną z powszechnie używane składniki [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Jest kluczowym elementem odłączonego modelu programowania w języku [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zależy, i umożliwia jawnie pamięci podręcznej danych z różnych źródeł danych. Dla warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantami graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje kształt danych relacyjnych i zawiera fast prostego zapytania i hierarchii nawigacji usługi. Typowe technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> do buforowania danych w warstwie środkowej. Rozważmy na przykład opartego na danych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Często znaczna część danych aplikacji nie zmienia się często i jest wspólna dla sesji lub użytkowników. Te dane będą przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacji w celu dostosowania podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie można manipulować danych w pamięci, zachowując jego kształtu relacyjne.  
@@ -39,6 +40,6 @@ ms.lasthandoff: 11/21/2017
  W aplikacjach warstwowych <xref:System.Data.DataSet> jest często używane w warstwie środkowej do pamięci podręcznej informacji dla aplikacji sieci Web. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] Funkcjach zapytań jest implementowane za pośrednictwem metody rozszerzenia i rozszerza istniejący 2.0 ADO.NET <xref:System.Data.DataSet>.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wykonywanie zapytania zbiory danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [Wykonywanie zapytania do zestawów danych](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [LINQ do SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+ [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

@@ -15,11 +15,12 @@ ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: edd5a8e8cc32037d45d95d544f6eae5097d0c468
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Porady: określanie, które wersje programu .NET Framework są zainstalowane
 Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na swoich komputerach. Podczas opracowywania lub wdrożyć aplikację, konieczne może być wiedzieć, które wersje programu .NET Framework są zainstalowane na komputerze użytkownika. Należy pamiętać, że programu .NET Framework składa się z dwóch głównych elementów, które numerów wersji oddzielnie:  
@@ -134,12 +135,12 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |.NET framework 4.5.1 zainstalowane z Windows 8.1|378675|
     |.NET framework 4.5.1 w systemie Windows 8, Windows 7 z dodatkiem SP1 lub Windows Vista z dodatkiem SP2|378758|
     |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zainstalowane z systemem Windows 10|393295|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]zainstalowane we wszystkich wersjach systemu operacyjnego Windows|393297|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]zainstalowane w systemie Windows 10|394254|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]zainstalowane we wszystkich wersjach systemu operacyjnego Windows|394271|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]zainstalowanym systemem Windows 10 Anniversary aktualizacji|394802|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]zainstalowane we wszystkich wersjach systemu operacyjnego Windows|394806|
+    |.NET framework 4.6 zainstalowanego z systemem Windows 10|393295|
+    |.NET framework 4.6 zainstalowane we wszystkich wersjach systemu operacyjnego Windows|393297|
+    |.NET framework 4.6.1, systemie Windows 10|394254|
+    |.NET framework 4.6.1 zainstalowane we wszystkich wersjach systemu operacyjnego Windows|394271|
+    |.NET framework 4.6.2 z zainstalowanym systemem Windows 10 Anniversary aktualizacji|394802|
+    |.NET framework 4.6.2 zainstalowane we wszystkich wersjach systemu operacyjnego Windows|394806|
     |4.7 framework .NET zainstalowany w systemie Windows 10 twórców Update|460798|
     |4.7 framework .NET zainstalowany w innych wersjach systemu operacyjnego Windows|460805|
     |.NET framework w systemie Windows 10 spadek twórców Update 4.7.1|461308|
@@ -215,6 +216,6 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     ```
 
 ## <a name="see-also"></a>Zobacz też
- [Porady: Określanie, które aktualizacje programu .NET Framework są zainstalowane](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
+ [Instrukcje: określanie, które aktualizacje programu .NET Framework są zainstalowane](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)  
  [Zainstaluj program .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md)  
  [Wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md)

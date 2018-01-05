@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7ce4e6a62097fc673268f38a6db660b3bc9cba7b
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 3dbf95e54cbb2b6a729265ab39e99332d1cc1871
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>Formanty i składniki okien dialogowych (Formularze systemu Windows)
 Następujące składniki i formanty formularzy systemu Windows stanowi standardowych oknach dialogowych. Skorzystaj z linków, aby uzyskać więcej informacji na temat funkcji dostępnych w każdym polu okna dialogowego.  
@@ -50,31 +51,31 @@ Następujące składniki i formanty formularzy systemu Windows stanowi standardo
  Zawiera informacje na temat <xref:System.Windows.Forms.SaveFileDialog> klasy i jej elementów członkowskich.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Okna dialogowe w formularzach systemu Windows](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
+ [Okna dialogowe w formularzach Windows Forms](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)  
  Opisuje sposób tworzenia dialogowym dla formularzy systemu Windows.  
   
- [Informacje o składniku ColorDialog](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
+ [ColorDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/colordialog-component-overview-windows-forms.md)  
  Umożliwia użytkownikowi wybieranie koloru z palety w oknie dialogowym wstępnie skonfigurowane i dodać do tej palety kolorów niestandardowych.  
   
- [Omówienie FolderBrowserDialog — składnik (formularze systemu Windows)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
+ [FolderBrowserDialog, składnik — omówienie (Windows Forms)](../../../../docs/framework/winforms/controls/folderbrowserdialog-component-overview-windows-forms.md)  
  Umożliwia użytkownikom Przeglądaj i wybierz foldery.  
   
- [Informacje o składniku FontDialog](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
+ [FontDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
  Przedstawia czcionek, które są aktualnie zainstalowane w systemie.  
   
- [Informacje o składniku OpenFileDialog](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
+ [OpenFileDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/openfiledialog-component-overview-windows-forms.md)  
  Umożliwia użytkownikom otwieranie plików za pomocą wstępnie skonfigurowanych okno dialogowe.  
   
- [Omówienie PageSetupDialog — składnik](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
+ [PageSetupDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/pagesetupdialog-component-overview-windows-forms.md)  
  Ustawia strony szczegółów drukowanie za pomocą wstępnie skonfigurowanych okno dialogowe.  
   
- [Informacje o składniku PrintDialog](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
+ [PrintDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/printdialog-component-overview-windows-forms.md)  
  Wybiera drukarkę, wybierze strony do drukowania oraz inne ustawienia związane z drukowaniem.  
   
- [Printpreviewdialog — informacje o formancie](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
+ [PrintPreviewDialog, kontrolka — omówienie](../../../../docs/framework/winforms/controls/printpreviewdialog-control-overview-windows-forms.md)  
  Wyświetla dokument, jak będzie wyglądać po wydrukowaniu.  
   
- [Informacje o składniku SaveFileDialog](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
+ [SaveFileDialog, składnik — omówienie](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)  
  Wybiera pliki, aby zapisać i kiedy należy je zapisać.  
   
  Zobacz też [okna dialogowe w formularzach systemu Windows](http://msdn.microsoft.com/library/2chz8edb\(v=vs.110\)).

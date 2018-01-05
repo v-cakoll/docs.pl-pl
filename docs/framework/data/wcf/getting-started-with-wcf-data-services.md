@@ -14,11 +14,12 @@ caps.latest.revision: "2"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 75cb32ac55bfa397d12f4ec514488f6b2a159e3d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7f3593b6d7f8778ae8d74e779d3446403b99b655
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-wcf-data-services"></a>Wprowadzenie do korzystania z usługi danych WCF
 Tematy w tej sekcji pomaga w zrozumieniu szybko [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] i sposobu użycia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ujawnia i zużywać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła przez wyjaśniający podstawowe technologie. Ta sekcja zawiera zarówno koncepcyjnej zawartości i [szybkiego startu](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md) samouczka.  
@@ -26,16 +27,16 @@ Tematy w tej sekcji pomaga w zrozumieniu szybko [!INCLUDE[ssODataFull](../../../
 ## <a name="in-this-section"></a>W tej sekcji  
  W poniższych tematach opisano sposób tworzenia usług danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Udostępnianie danych jako usługa](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [Udostępnianie danych jako usługi](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  Opisuje czynności, które są wymagane do utworzenia usługi danych przy użyciu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [Podczas uzyskiwania dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
+ [Uzyskiwanie dostępu do zasobów usługi danych](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
  Opisuje sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródeł danych.  
   
- [Usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
+ [Używanie usługi danych w aplikacji klienta](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)  
  Opisuje sposób pracy z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w aplikacji klienta .NET Framework.  
   
- [Szybki Start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
+ [Szybki start](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
  Pokazuje, jak utworzyć i prosty dostęp [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi udostępniającej źródło danych oparte na bazie danych Northwind.  
   
  [Scenariusze aplikacji](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  

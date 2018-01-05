@@ -22,11 +22,14 @@ caps.latest.revision: "29"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ff8ae4475bde934258e4d3f97451e598a53fb6c5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="commonly-used-collection-types"></a>Często używane typy kolekcji
 Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele hash, kolejki, stosy, torebki, słowniki i listy.  
@@ -44,8 +47,8 @@ Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele hash, kol
 |Tytuł|Opis|  
 |-----------|-----------------|  
 |[Kolekcje i struktury danych](../../../docs/standard/collections/index.md)|W tym artykule omówiono różne typy kolekcji dostępne w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], w tym stosy, kolejek, list, tablic i słowników.|  
-|[HashTable typy kolekcji i słowników](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Zawiera opis funkcji typy ogólne i nierodzajowe słownik na podstawie wyznaczania wartości skrótu.|  
-|[Sortowane typów kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|W tym artykule opisano klasy, które zapewniają funkcje sortowania list i zestawów.|  
+|[Typy kolekcji: słownikowy i tabela skrótów](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|Zawiera opis funkcji typy ogólne i nierodzajowe słownik na podstawie wyznaczania wartości skrótu.|  
+|[Sortowane typy kolekcji](../../../docs/standard/collections/sorted-collection-types.md)|W tym artykule opisano klasy, które zapewniają funkcje sortowania list i zestawów.|  
 |[Typy ogólne](../../../docs/standard/generics/index.md)|Zawiera opis funkcji ogólne, w tym kolekcje ogólne, delegatów i interfejsami [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Zawiera linki do dokumentacji funkcji języka C#, Visual Basic i Visual C++, a do obsługi technologii, takich jak odbicia.|  
   
 ## <a name="reference"></a>Tematy pomocy  

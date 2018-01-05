@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.openlocfilehash: e09279209bf3d6925b61d55d6988b5af658f5aab
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: e4e94f116fa820d80e5e23833c20382591c5d479
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>Przestrzeń nazw dla usług .NET Framework XAML
 Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML. Podobnie jak w przestrzeni nazw XML, można określić przestrzeń nazw XAML przy użyciu `xmlns` atrybutów w znaczniku. Przestrzeń nazw XAML również są przedstawiane w strumieniu węzłów XAML i innych interfejsów API usługi języka XAML. W tym temacie wprowadzono pojęcie przestrzeni nazw XAML i opisuje sposób przestrzeń nazw XAML mogą być definiowane i są używane przez kontekst schematu XAML i inne aspekty usług .NET Framework XAML.  
@@ -74,4 +75,4 @@ Przestrzeń nazw XAML jest działaniem rozwijający w definicji obszaru nazw XML
  Atrybuty są dwa API, które są odpowiednie dla przestrzeni nazw XAML Obsługa w .NET Framework XAML Services <xref:System.Windows.Markup.XmlnsDefinitionAttribute> i <xref:System.Windows.Markup.XmlnsPrefixAttribute>. Te atrybuty stosowane do zestawów. <xref:System.Windows.Markup.XmlnsDefinitionAttribute>jest używany przez kontekst schematu XAML interpretować wszystkie deklaracji przestrzeni nazw XAML, który zawiera identyfikator URI. <xref:System.Windows.Markup.XmlnsPrefixAttribute>jest używana przez narzędzia, które Emituj XAML, aby określonej przestrzeni nazw XAML może być Zserializowany z prefiksem przewidywalne. Aby uzyskać więcej informacji, zobacz [XAML-Related atrybuty CLR dotyczące niestandardowych typów i bibliotek](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Opis XAML węzła strukturami i koncepcjami strumienia](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+ [Omówienie struktur i koncepcji strumienia węzłów XAML](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)

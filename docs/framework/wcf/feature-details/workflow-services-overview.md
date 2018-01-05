@@ -13,11 +13,12 @@ caps.latest.revision: "30"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: df3f52ef7b3620b67a00cf4f5eb731a4d0b98208
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 0c38abe8ab0ac99a7e5bd0499ff826a00730b211
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="workflow-services-overview"></a>Przegląd usług przepływu pracy
 Usługi przepływu pracy są [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]— na podstawie usług, które są implementowane przy użyciu przepływów pracy. Usługi przepływu pracy są przepływy pracy używające działania obsługi wiadomości do wysyłania i odbierania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wiadomości. .NET framework 4.5 wprowadzono wiele działań obsługi komunikatów, które umożliwia wysyłanie i odbieranie wiadomości z poziomu przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]działania obsługi wiadomości i jak one używane do implementowania inny komunikat wzorce programu exchange, zobacz [wiadomości działania](../../../../docs/framework/wcf/feature-details/messaging-activities.md).  

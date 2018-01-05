@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: f70283e15bbfaf111c8e677641682538a2361942
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 19ab5afbc1eb13a3126e94a040d51204fea131a5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="out-of-order-message-processing"></a>Przetwarzanie komunikatów poza kolejnością
 Usługi przepływu pracy może zależeć od wiadomości w określonej kolejności. Usługi przepływu pracy zawiera jeden lub więcej <xref:System.ServiceModel.Activities.Receive> działań i każdego <xref:System.ServiceModel.Activities.Receive> działania oczekuje określonego komunikatu. Bez gwarancją dostarczania danego transportu wiadomości wysyłane przez klientów mogą być opóźnione i w związku z tym dostarczane w określonym porządku usługi przepływu pracy nie mogą oczekiwać. Wdrażanie usługi przepływu pracy, który nie wymaga wiadomości wysyłane w określonej kolejności zwykle odbywa się za pomocą działania równoległego. Dla bardziej złożonego protokołu aplikacji przepływu pracy może być bardzo złożone bardzo szybko.  Funkcja przetwarzanie komunikatów poza kolejnością w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] pozwala utworzyć przepływ bez wszystkich złożoność zagnieżdżonego działania równoległe. Przetwarzanie komunikatów poza kolejnością jest obsługiwana tylko na kanałów, które obsługują <xref:System.ServiceModel.Channels.ReceiveContext> takich jak [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] powiązania usługi MSMQ.  

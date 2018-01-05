@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a17478c350d789d320e97d6b50d6f5f9daaf6db3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 5d50d6a1b27cf30511fece1540f002524238a424
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-remove-an-assembly-from-the-global-assembly-cache"></a>Porady: usuwanie zestawu z globalnej pamięci podręcznej zestawów
 Istnieją dwa sposoby usuwanie zestawu z globalnej pamięci podręcznej zestawów (GAC):  
@@ -60,6 +61,6 @@ gacutil -u hello
     >  Instalator systemu Windows obsługuje liczba odwołań dla zestawów zainstalowanych w pamięci GAC. Zestaw zostanie usunięty z pamięci podręcznej GAC tylko wtedy, gdy jego liczebności referencyjnej osiągnie zero, co oznacza, że nie jest używany przez wszelkie aplikacje zainstalowane przez pakiet Instalatora Windows.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Praca z zestawami i Globalna pamięć podręczna zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [Porady: Instalowanie zestawu w globalnej pamięci podręcznej zestawów](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
+ [Praca z zestawami i globalną pamięcią podręczną zestawów](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+ [Instrukcje: instalowanie zestawu w pamięci Global Assembly Cache](../../../docs/framework/app-domains/how-to-install-an-assembly-into-the-gac.md)  
  [Gacutil.exe (narzędzie Global Assembly Cache)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)

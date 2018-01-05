@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 626a212bbfe1da040fc323c592eaf520cf212d6c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 7bf6c48df7b04f420a4ea97976328e7f6aeb3235
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3347---socketacceptclosed"></a><span data-ttu-id="faa77-102">3347 — SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="faa77-102">3347 - SocketAcceptClosed</span></span>
-## <a name="properties"></a><span data-ttu-id="faa77-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="faa77-103">Properties</span></span>  
+# <a name="3347---socketacceptclosed"></a><span data-ttu-id="08ce5-102">3347 — SocketAcceptClosed</span><span class="sxs-lookup"><span data-stu-id="08ce5-102">3347 - SocketAcceptClosed</span></span>
+## <a name="properties"></a><span data-ttu-id="08ce5-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="08ce5-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="faa77-104">ID</span><span class="sxs-lookup"><span data-stu-id="faa77-104">ID</span></span>|<span data-ttu-id="faa77-105">3347</span><span class="sxs-lookup"><span data-stu-id="faa77-105">3347</span></span>|  
-|<span data-ttu-id="faa77-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="faa77-106">Keywords</span></span>|<span data-ttu-id="faa77-107">TCP</span><span class="sxs-lookup"><span data-stu-id="faa77-107">TCP</span></span>|  
-|<span data-ttu-id="faa77-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="faa77-108">Level</span></span>|<span data-ttu-id="faa77-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="faa77-109">Verbose</span></span>|  
-|<span data-ttu-id="faa77-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="faa77-110">Channel</span></span>|<span data-ttu-id="faa77-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="faa77-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
+|<span data-ttu-id="08ce5-104">ID</span><span class="sxs-lookup"><span data-stu-id="08ce5-104">ID</span></span>|<span data-ttu-id="08ce5-105">3347</span><span class="sxs-lookup"><span data-stu-id="08ce5-105">3347</span></span>|  
+|<span data-ttu-id="08ce5-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="08ce5-106">Keywords</span></span>|<span data-ttu-id="08ce5-107">TCP</span><span class="sxs-lookup"><span data-stu-id="08ce5-107">TCP</span></span>|  
+|<span data-ttu-id="08ce5-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="08ce5-108">Level</span></span>|<span data-ttu-id="08ce5-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="08ce5-109">Verbose</span></span>|  
+|<span data-ttu-id="08ce5-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="08ce5-110">Channel</span></span>|<span data-ttu-id="08ce5-111">Microsoft-Windows aplikacji debugowania serwera — aplikacje</span><span class="sxs-lookup"><span data-stu-id="08ce5-111">Microsoft-Windows-Application Server-Applications/Debug</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="faa77-112">Opis</span><span class="sxs-lookup"><span data-stu-id="faa77-112">Description</span></span>  
- <span data-ttu-id="faa77-113">To zdarzenie jest emitowany podczas akceptowania gniazda jest zamknięty.</span><span class="sxs-lookup"><span data-stu-id="faa77-113">This event is emitted when the socket accept is closed.</span></span>  
+## <a name="description"></a><span data-ttu-id="08ce5-112">Opis</span><span class="sxs-lookup"><span data-stu-id="08ce5-112">Description</span></span>  
+ <span data-ttu-id="08ce5-113">To zdarzenie jest emitowany podczas akceptowania gniazda jest zamknięty.</span><span class="sxs-lookup"><span data-stu-id="08ce5-113">This event is emitted when the socket accept is closed.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="faa77-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="faa77-114">Message</span></span>  
- <span data-ttu-id="faa77-115">Gniazda zaakceptować zamknięte.</span><span class="sxs-lookup"><span data-stu-id="faa77-115">Socket accept closed.</span></span>  
+## <a name="message"></a><span data-ttu-id="08ce5-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="08ce5-114">Message</span></span>  
+ <span data-ttu-id="08ce5-115">Gniazda zaakceptować zamknięte.</span><span class="sxs-lookup"><span data-stu-id="08ce5-115">Socket accept closed.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="faa77-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="faa77-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="08ce5-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="08ce5-116">Details</span></span>

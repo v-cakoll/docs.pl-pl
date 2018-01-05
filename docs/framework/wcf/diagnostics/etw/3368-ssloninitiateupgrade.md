@@ -13,26 +13,27 @@ caps.latest.revision: "3"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6854790de51bf062c5f98fce746cb65bdfba0b5a
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: efe73d593794af3cc58deba3723acd6724afb40a
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="3368---ssloninitiateupgrade"></a><span data-ttu-id="383d3-102">3368 — SslOnInitiateUpgrade</span><span class="sxs-lookup"><span data-stu-id="383d3-102">3368 - SslOnInitiateUpgrade</span></span>
-## <a name="properties"></a><span data-ttu-id="383d3-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="383d3-103">Properties</span></span>  
+# <a name="3368---ssloninitiateupgrade"></a><span data-ttu-id="26cbc-102">3368 — SslOnInitiateUpgrade</span><span class="sxs-lookup"><span data-stu-id="26cbc-102">3368 - SslOnInitiateUpgrade</span></span>
+## <a name="properties"></a><span data-ttu-id="26cbc-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="26cbc-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="383d3-104">ID</span><span class="sxs-lookup"><span data-stu-id="383d3-104">ID</span></span>|<span data-ttu-id="383d3-105">3368</span><span class="sxs-lookup"><span data-stu-id="383d3-105">3368</span></span>|  
-|<span data-ttu-id="383d3-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="383d3-106">Keywords</span></span>|<span data-ttu-id="383d3-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="383d3-107">Security</span></span>|  
-|<span data-ttu-id="383d3-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="383d3-108">Level</span></span>|<span data-ttu-id="383d3-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="383d3-109">Verbose</span></span>|  
-|<span data-ttu-id="383d3-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="383d3-110">Channel</span></span>|<span data-ttu-id="383d3-111">Microsoft-Windows aplikacji Server aplikacje/analityczne</span><span class="sxs-lookup"><span data-stu-id="383d3-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="26cbc-104">ID</span><span class="sxs-lookup"><span data-stu-id="26cbc-104">ID</span></span>|<span data-ttu-id="26cbc-105">3368</span><span class="sxs-lookup"><span data-stu-id="26cbc-105">3368</span></span>|  
+|<span data-ttu-id="26cbc-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="26cbc-106">Keywords</span></span>|<span data-ttu-id="26cbc-107">Zabezpieczenia</span><span class="sxs-lookup"><span data-stu-id="26cbc-107">Security</span></span>|  
+|<span data-ttu-id="26cbc-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="26cbc-108">Level</span></span>|<span data-ttu-id="26cbc-109">Pełny</span><span class="sxs-lookup"><span data-stu-id="26cbc-109">Verbose</span></span>|  
+|<span data-ttu-id="26cbc-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="26cbc-110">Channel</span></span>|<span data-ttu-id="26cbc-111">Microsoft-Windows aplikacji Server aplikacje/analityczne</span><span class="sxs-lookup"><span data-stu-id="26cbc-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="383d3-112">Opis</span><span class="sxs-lookup"><span data-stu-id="383d3-112">Description</span></span>  
- <span data-ttu-id="383d3-113">To zdarzenie jest emitowany z początkiem SslOnAcceptUpgrade.</span><span class="sxs-lookup"><span data-stu-id="383d3-113">This event is emitted with the SslOnAcceptUpgrade start.</span></span>  
+## <a name="description"></a><span data-ttu-id="26cbc-112">Opis</span><span class="sxs-lookup"><span data-stu-id="26cbc-112">Description</span></span>  
+ <span data-ttu-id="26cbc-113">To zdarzenie jest emitowany z początkiem SslOnAcceptUpgrade.</span><span class="sxs-lookup"><span data-stu-id="26cbc-113">This event is emitted with the SslOnAcceptUpgrade start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="383d3-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="383d3-114">Message</span></span>  
- <span data-ttu-id="383d3-115">SslOnAcceptUpgradeStart</span><span class="sxs-lookup"><span data-stu-id="383d3-115">SslOnAcceptUpgradeStart</span></span>  
+## <a name="message"></a><span data-ttu-id="26cbc-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="26cbc-114">Message</span></span>  
+ <span data-ttu-id="26cbc-115">SslOnAcceptUpgradeStart</span><span class="sxs-lookup"><span data-stu-id="26cbc-115">SslOnAcceptUpgradeStart</span></span>  
   
-## <a name="details"></a><span data-ttu-id="383d3-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="383d3-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="26cbc-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="26cbc-116">Details</span></span>

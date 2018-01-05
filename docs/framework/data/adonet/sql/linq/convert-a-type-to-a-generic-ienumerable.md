@@ -16,22 +16,23 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: f2e91a5fe4b27891b1750b0d74a8e9b01ad68449
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 1c1ab7f5831b2a8cbcf9932041d49aa67cc946d0
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="convert-a-type-to-a-generic-ienumerable"></a><span data-ttu-id="ce6c3-102">Przekonwertować typem rodzajowym interfejsem IEnumerable</span><span class="sxs-lookup"><span data-stu-id="ce6c3-102">Convert a Type to a Generic IEnumerable</span></span>
-<span data-ttu-id="ce6c3-103">Użyj <xref:System.Linq.Enumerable.AsEnumerable%2A> być zwracany argument typu ogólnego `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="ce6c3-103">Use <xref:System.Linq.Enumerable.AsEnumerable%2A> to return the argument typed as a generic `IEnumerable`.</span></span>  
+# <a name="convert-a-type-to-a-generic-ienumerable"></a><span data-ttu-id="17111-102">Przekonwertować typem rodzajowym interfejsem IEnumerable</span><span class="sxs-lookup"><span data-stu-id="17111-102">Convert a Type to a Generic IEnumerable</span></span>
+<span data-ttu-id="17111-103">Użyj <xref:System.Linq.Enumerable.AsEnumerable%2A> być zwracany argument typu ogólnego `IEnumerable`.</span><span class="sxs-lookup"><span data-stu-id="17111-103">Use <xref:System.Linq.Enumerable.AsEnumerable%2A> to return the argument typed as a generic `IEnumerable`.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ce6c3-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="ce6c3-104">Example</span></span>  
- <span data-ttu-id="ce6c3-105">W tym przykładzie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (przy użyciu domyślnego ogólnego `Query`) może spróbować skonwertować kwerendy do bazy danych SQL i wykonaj go na serwerze.</span><span class="sxs-lookup"><span data-stu-id="ce6c3-105">In this example, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (using the default generic `Query`) would try to convert the query to SQL and execute it on the server.</span></span> <span data-ttu-id="ce6c3-106">Ale `where` klauzuli odwołuje się do metody zdefiniowanej przez użytkownika po stronie klienta (`isValidProduct`), którego nie można przekonwertować do bazy danych SQL.</span><span class="sxs-lookup"><span data-stu-id="ce6c3-106">But the `where` clause references a user-defined client-side method (`isValidProduct`), which cannot be converted to SQL.</span></span>  
+## <a name="example"></a><span data-ttu-id="17111-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="17111-104">Example</span></span>  
+ <span data-ttu-id="17111-105">W tym przykładzie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (przy użyciu domyślnego ogólnego `Query`) może spróbować skonwertować kwerendy do bazy danych SQL i wykonaj go na serwerze.</span><span class="sxs-lookup"><span data-stu-id="17111-105">In this example, [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] (using the default generic `Query`) would try to convert the query to SQL and execute it on the server.</span></span> <span data-ttu-id="17111-106">Ale `where` klauzuli odwołuje się do metody zdefiniowanej przez użytkownika po stronie klienta (`isValidProduct`), którego nie można przekonwertować do bazy danych SQL.</span><span class="sxs-lookup"><span data-stu-id="17111-106">But the `where` clause references a user-defined client-side method (`isValidProduct`), which cannot be converted to SQL.</span></span>  
   
- <span data-ttu-id="ce6c3-107">Rozwiązanie jest określenie ogólnego po stronie klienta <xref:System.Collections.Generic.IEnumerable%601> implementacja `where` do zastąpienia ogólnego <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="ce6c3-107">The solution is to specify the client-side generic <xref:System.Collections.Generic.IEnumerable%601> implementation of `where` to replace the generic <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="ce6c3-108">W tym celu wywoływania <xref:System.Linq.Enumerable.AsEnumerable%2A> operatora.</span><span class="sxs-lookup"><span data-stu-id="ce6c3-108">You do this by invoking the <xref:System.Linq.Enumerable.AsEnumerable%2A> operator.</span></span>  
+ <span data-ttu-id="17111-107">Rozwiązanie jest określenie ogólnego po stronie klienta <xref:System.Collections.Generic.IEnumerable%601> implementacja `where` do zastąpienia ogólnego <xref:System.Linq.IQueryable%601>.</span><span class="sxs-lookup"><span data-stu-id="17111-107">The solution is to specify the client-side generic <xref:System.Collections.Generic.IEnumerable%601> implementation of `where` to replace the generic <xref:System.Linq.IQueryable%601>.</span></span> <span data-ttu-id="17111-108">W tym celu wywoływania <xref:System.Linq.Enumerable.AsEnumerable%2A> operatora.</span><span class="sxs-lookup"><span data-stu-id="17111-108">You do this by invoking the <xref:System.Linq.Enumerable.AsEnumerable%2A> operator.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#46](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#46)]
  [!code-vb[DLinqQueryExamples#46](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#46)]  
   
-## <a name="see-also"></a><span data-ttu-id="ce6c3-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ce6c3-109">See Also</span></span>  
- [<span data-ttu-id="ce6c3-110">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="ce6c3-110">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a><span data-ttu-id="17111-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="17111-109">See Also</span></span>  
+ [<span data-ttu-id="17111-110">Przykłady zapytań</span><span class="sxs-lookup"><span data-stu-id="17111-110">Query Examples</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

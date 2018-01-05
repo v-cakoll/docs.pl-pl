@@ -22,26 +22,27 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 641ed60b7c5ded70523028259be2415f2daf5197
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: d3a6731c8873b19768cc723473654652d724d80f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="shutdowndbgtransportmanager-function"></a><span data-ttu-id="4f729-102">ShutdownDbgTransportManager — Funkcja</span><span class="sxs-lookup"><span data-stu-id="4f729-102">ShutdownDbgTransportManager Function</span></span>
-<span data-ttu-id="4f729-103">Zamknięcie menedżera transportu na połączenie komputera zdalnego docelowej.</span><span class="sxs-lookup"><span data-stu-id="4f729-103">Shuts down the transport manager for a connection to a remote target machine.</span></span>  
+# <a name="shutdowndbgtransportmanager-function"></a><span data-ttu-id="5d9e0-102">ShutdownDbgTransportManager — Funkcja</span><span class="sxs-lookup"><span data-stu-id="5d9e0-102">ShutdownDbgTransportManager Function</span></span>
+<span data-ttu-id="5d9e0-103">Zamknięcie menedżera transportu na połączenie komputera zdalnego docelowej.</span><span class="sxs-lookup"><span data-stu-id="5d9e0-103">Shuts down the transport manager for a connection to a remote target machine.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f729-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="4f729-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5d9e0-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="5d9e0-104">Syntax</span></span>  
   
 ```  
 void InitDbgTransportManager ();  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="4f729-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="4f729-105">Requirements</span></span>  
- <span data-ttu-id="4f729-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="4f729-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5d9e0-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5d9e0-105">Requirements</span></span>  
+ <span data-ttu-id="5d9e0-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5d9e0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f729-107">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="4f729-107">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="5d9e0-107">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="5d9e0-107">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="4f729-108">**Biblioteka:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="4f729-108">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="5d9e0-108">**Biblioteka:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="5d9e0-108">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="4f729-109">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="4f729-109">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="5d9e0-109">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="5d9e0-109">**.NET Framework Versions:** 3.5 SP1</span></span>

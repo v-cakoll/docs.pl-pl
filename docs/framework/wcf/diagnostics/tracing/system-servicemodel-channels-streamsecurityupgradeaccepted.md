@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: edd832277ef27ee8f09b514d4d50a281efa8b1f1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 40c7164a0370865f6cfc79446e00a7393f626410
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelsstreamsecurityupgradeaccepted"></a><span data-ttu-id="2993f-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="2993f-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>
-<span data-ttu-id="2993f-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="2993f-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>  
+# <a name="systemservicemodelchannelsstreamsecurityupgradeaccepted"></a><span data-ttu-id="1b535-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="1b535-102">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>
+<span data-ttu-id="1b535-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span><span class="sxs-lookup"><span data-stu-id="1b535-103">System.ServiceModel.Channels.StreamSecurityUpgradeAccepted</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2993f-104">Opis</span><span class="sxs-lookup"><span data-stu-id="2993f-104">Description</span></span>  
- <span data-ttu-id="2993f-105">Uaktualnienie zabezpieczeń strumienia zostało pomyślnie przyjęte.</span><span class="sxs-lookup"><span data-stu-id="2993f-105">The stream security upgrade was accepted successfully.</span></span>  
+## <a name="description"></a><span data-ttu-id="1b535-104">Opis</span><span class="sxs-lookup"><span data-stu-id="1b535-104">Description</span></span>  
+ <span data-ttu-id="1b535-105">Uaktualnienie zabezpieczeń strumienia zostało pomyślnie przyjęte.</span><span class="sxs-lookup"><span data-stu-id="1b535-105">The stream security upgrade was accepted successfully.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2993f-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2993f-106">See Also</span></span>  
- [<span data-ttu-id="2993f-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="2993f-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="2993f-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="2993f-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="2993f-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="2993f-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="1b535-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="1b535-106">See Also</span></span>  
+ [<span data-ttu-id="1b535-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="1b535-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="1b535-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="1b535-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="1b535-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="1b535-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

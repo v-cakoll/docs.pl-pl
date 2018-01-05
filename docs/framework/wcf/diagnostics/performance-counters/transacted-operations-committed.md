@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 7dc66193d542370ffa3f266611068b67f089257c
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 61f7e2453778685715a90f8fbcf439be517f59ff
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="transacted-operations-committed"></a><span data-ttu-id="2c72d-102">Zatwierdzone operacje transakcyjne</span><span class="sxs-lookup"><span data-stu-id="2c72d-102">Transacted Operations Committed</span></span>
-<span data-ttu-id="2c72d-103">Nazwa licznika: Operacje transakcyjne.</span><span class="sxs-lookup"><span data-stu-id="2c72d-103">Counter Name: Transacted Operations Committed.</span></span>  
+# <a name="transacted-operations-committed"></a><span data-ttu-id="39ad8-102">Zatwierdzone operacje transakcyjne</span><span class="sxs-lookup"><span data-stu-id="39ad8-102">Transacted Operations Committed</span></span>
+<span data-ttu-id="39ad8-103">Nazwa licznika: Operacje transakcyjne.</span><span class="sxs-lookup"><span data-stu-id="39ad8-103">Counter Name: Transacted Operations Committed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="2c72d-104">Opis</span><span class="sxs-lookup"><span data-stu-id="2c72d-104">Description</span></span>  
- <span data-ttu-id="2c72d-105">Liczba operacji transakcyjnych, które zostały zatwierdzone w tej usłudze.</span><span class="sxs-lookup"><span data-stu-id="2c72d-105">Number of transactional operations that have been committed in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="39ad8-104">Opis</span><span class="sxs-lookup"><span data-stu-id="39ad8-104">Description</span></span>  
+ <span data-ttu-id="39ad8-105">Liczba operacji transakcyjnych, które zostały zatwierdzone w tej usłudze.</span><span class="sxs-lookup"><span data-stu-id="39ad8-105">Number of transactional operations that have been committed in this service.</span></span>

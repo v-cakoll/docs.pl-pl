@@ -21,29 +21,30 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 1c056edc2e5f05f91cac37e626f22682ee2d727d
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9f19b93d45478fbaa7b91f934f8bf9a2e4e26446
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icorruntimehostcreatelogicalthreadstate-method"></a><span data-ttu-id="16962-102">ICorRuntimeHost::CreateLogicalThreadState — Metoda</span><span class="sxs-lookup"><span data-stu-id="16962-102">ICorRuntimeHost::CreateLogicalThreadState Method</span></span>
-<span data-ttu-id="16962-103">Ta metoda obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="16962-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostcreatelogicalthreadstate-method"></a><span data-ttu-id="9f671-102">ICorRuntimeHost::CreateLogicalThreadState — Metoda</span><span class="sxs-lookup"><span data-stu-id="9f671-102">ICorRuntimeHost::CreateLogicalThreadState Method</span></span>
+<span data-ttu-id="9f671-103">Ta metoda obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczona do użycia bezpośrednio w kodzie.</span><span class="sxs-lookup"><span data-stu-id="9f671-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="16962-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="16962-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9f671-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="9f671-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="16962-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="16962-105">Requirements</span></span>  
- <span data-ttu-id="16962-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="16962-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9f671-105">Wymagania</span><span class="sxs-lookup"><span data-stu-id="9f671-105">Requirements</span></span>  
+ <span data-ttu-id="9f671-106">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="9f671-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="16962-107">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="16962-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="9f671-107">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9f671-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="16962-108">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="16962-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="9f671-108">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="9f671-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="16962-109">**Wersja platformy .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="16962-109">**.NET Framework Version:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="9f671-109">**Wersja platformy .NET framework:** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="9f671-109">**.NET Framework Version:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="16962-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="16962-110">See Also</span></span>  
- [<span data-ttu-id="16962-111">ICorRuntimeHost — interfejs</span><span class="sxs-lookup"><span data-stu-id="16962-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9f671-110">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9f671-110">See Also</span></span>  
+ [<span data-ttu-id="9f671-111">ICorRuntimeHost, interfejs</span><span class="sxs-lookup"><span data-stu-id="9f671-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

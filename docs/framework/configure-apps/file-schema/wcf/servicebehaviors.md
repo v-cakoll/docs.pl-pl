@@ -13,17 +13,18 @@ caps.latest.revision: "7"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c06f165aaf2a2ca0201841358e923030f0fb84fc
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: ed33e16e90343cd50f608e362d08194648f362b7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltservicebehaviorsgt"></a><span data-ttu-id="ef8e5-102">&lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="ef8e5-102">&lt;serviceBehaviors&gt;</span></span>
-<span data-ttu-id="ef8e5-103">Ta sekcja konfiguracji reprezentuje wszystkie zachowania zdefiniowanego dla określonej usługi.</span><span class="sxs-lookup"><span data-stu-id="ef8e5-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  
+# <a name="ltservicebehaviorsgt"></a><span data-ttu-id="09117-102">&lt;serviceBehaviors&gt;</span><span class="sxs-lookup"><span data-stu-id="09117-102">&lt;serviceBehaviors&gt;</span></span>
+<span data-ttu-id="09117-103">Ta sekcja konfiguracji reprezentuje wszystkie zachowania zdefiniowanego dla określonej usługi.</span><span class="sxs-lookup"><span data-stu-id="09117-103">This configuration section represents all the behaviors defined for a specific service.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef8e5-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ef8e5-104">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="09117-104">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="09117-104">See Also</span></span>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
  <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [<span data-ttu-id="ef8e5-105">\<zachowanie ></span><span class="sxs-lookup"><span data-stu-id="ef8e5-105">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
- [<span data-ttu-id="ef8e5-106">Określanie zachowania środowiska uruchomieniowego usługi</span><span class="sxs-lookup"><span data-stu-id="ef8e5-106">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
+ [<span data-ttu-id="09117-105">\<zachowanie ></span><span class="sxs-lookup"><span data-stu-id="09117-105">\<behavior></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [<span data-ttu-id="09117-106">Określanie zachowania środowiska uruchomieniowego usługi</span><span class="sxs-lookup"><span data-stu-id="09117-106">Specifying Service Run-Time Behavior</span></span>](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

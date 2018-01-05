@@ -21,32 +21,33 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: e3dffd9605bd238446156d7a32e8e668ddd80916
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: 77d50f6bac87d5a110b53a69044f96f547c51904
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="bca8b-102">ISymUnmanagedWriter::OpenNamespace — Metoda</span><span class="sxs-lookup"><span data-stu-id="bca8b-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
-<span data-ttu-id="bca8b-103">Zostanie otwarty nowy obszar nazw.</span><span class="sxs-lookup"><span data-stu-id="bca8b-103">Opens a new namespace.</span></span> <span data-ttu-id="bca8b-104">Tę metodę należy wywołać przed zdefiniowaniem metod lub zmienne, które zajmują przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="bca8b-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="bca8b-105">Przestrzenie nazw mogą być zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="bca8b-105">Namespaces can be nested.</span></span>  
+# <a name="isymunmanagedwriteropennamespace-method"></a><span data-ttu-id="43048-102">ISymUnmanagedWriter::OpenNamespace — Metoda</span><span class="sxs-lookup"><span data-stu-id="43048-102">ISymUnmanagedWriter::OpenNamespace Method</span></span>
+<span data-ttu-id="43048-103">Zostanie otwarty nowy obszar nazw.</span><span class="sxs-lookup"><span data-stu-id="43048-103">Opens a new namespace.</span></span> <span data-ttu-id="43048-104">Tę metodę należy wywołać przed zdefiniowaniem metod lub zmienne, które zajmują przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="43048-104">Call this method before defining methods or variables that occupy a namespace.</span></span> <span data-ttu-id="43048-105">Przestrzenie nazw mogą być zagnieżdżone.</span><span class="sxs-lookup"><span data-stu-id="43048-105">Namespaces can be nested.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bca8b-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="bca8b-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="43048-106">Składnia</span><span class="sxs-lookup"><span data-stu-id="43048-106">Syntax</span></span>  
   
 ```  
 HRESULT OpenNamespace(  
     [in] const WCHAR *name);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="bca8b-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="bca8b-107">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="43048-107">Parametry</span><span class="sxs-lookup"><span data-stu-id="43048-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="bca8b-108">[in] Wskaźnik na nazwę nowej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="bca8b-108">[in] A pointer to the name of the new namespace.</span></span>  
+ <span data-ttu-id="43048-108">[in] Wskaźnik na nazwę nowej przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="43048-108">[in] A pointer to the name of the new namespace.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="bca8b-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="bca8b-109">Return Value</span></span>  
- <span data-ttu-id="bca8b-110">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="bca8b-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="43048-109">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="43048-109">Return Value</span></span>  
+ <span data-ttu-id="43048-110">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="43048-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bca8b-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="bca8b-111">Requirements</span></span>  
- <span data-ttu-id="bca8b-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="bca8b-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="43048-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="43048-111">Requirements</span></span>  
+ <span data-ttu-id="43048-112">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="43048-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="bca8b-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="bca8b-113">See Also</span></span>  
- [<span data-ttu-id="bca8b-114">ISymUnmanagedWriter — interfejs</span><span class="sxs-lookup"><span data-stu-id="bca8b-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
- [<span data-ttu-id="bca8b-115">CloseNamespace — metoda</span><span class="sxs-lookup"><span data-stu-id="bca8b-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)
+## <a name="see-also"></a><span data-ttu-id="43048-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="43048-113">See Also</span></span>  
+ [<span data-ttu-id="43048-114">ISymUnmanagedWriter, interfejs</span><span class="sxs-lookup"><span data-stu-id="43048-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)  
+ [<span data-ttu-id="43048-115">CloseNamespace, metoda</span><span class="sxs-lookup"><span data-stu-id="43048-115">CloseNamespace Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closenamespace-method.md)

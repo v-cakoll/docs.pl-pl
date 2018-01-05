@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: d551c327a830743f869fdd651f13623f41e74a4d
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 4839324c6860808f2e5affee4878fe2fa66f5498
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelschanneldisposed"></a><span data-ttu-id="83109-102">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="83109-102">System.ServiceModel.Channels.ChannelDisposed</span></span>
-<span data-ttu-id="83109-103">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="83109-103">System.ServiceModel.Channels.ChannelDisposed</span></span>  
+# <a name="systemservicemodelchannelschanneldisposed"></a><span data-ttu-id="9057d-102">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="9057d-102">System.ServiceModel.Channels.ChannelDisposed</span></span>
+<span data-ttu-id="9057d-103">System.ServiceModel.Channels.ChannelDisposed</span><span class="sxs-lookup"><span data-stu-id="9057d-103">System.ServiceModel.Channels.ChannelDisposed</span></span>  
   
-## <a name="description"></a><span data-ttu-id="83109-104">Opis</span><span class="sxs-lookup"><span data-stu-id="83109-104">Description</span></span>  
- <span data-ttu-id="83109-105">Kanał został usunięty.</span><span class="sxs-lookup"><span data-stu-id="83109-105">A channel was disposed.</span></span>  
+## <a name="description"></a><span data-ttu-id="9057d-104">Opis</span><span class="sxs-lookup"><span data-stu-id="9057d-104">Description</span></span>  
+ <span data-ttu-id="9057d-105">Kanał został usunięty.</span><span class="sxs-lookup"><span data-stu-id="9057d-105">A channel was disposed.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="83109-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="83109-106">See Also</span></span>  
- [<span data-ttu-id="83109-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="83109-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="83109-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="83109-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="83109-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="83109-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="9057d-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9057d-106">See Also</span></span>  
+ [<span data-ttu-id="9057d-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="9057d-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="9057d-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="9057d-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="9057d-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="9057d-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

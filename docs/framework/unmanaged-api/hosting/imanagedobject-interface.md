@@ -19,30 +19,31 @@ caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: ece72d00dc8a1d99daa4202989879e95dcf0a4fc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 3ac7b41a5d42a8e2bc32077f02ad850b421efe31
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="imanagedobject-interface"></a><span data-ttu-id="86163-102">IManagedObject — Interfejs</span><span class="sxs-lookup"><span data-stu-id="86163-102">IManagedObject Interface</span></span>
-<span data-ttu-id="86163-103">Udostępnia metody umożliwiające sterowanie zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="86163-103">Provides methods for controlling a managed object.</span></span>  
+# <a name="imanagedobject-interface"></a><span data-ttu-id="5346b-102">IManagedObject — Interfejs</span><span class="sxs-lookup"><span data-stu-id="5346b-102">IManagedObject Interface</span></span>
+<span data-ttu-id="5346b-103">Udostępnia metody umożliwiające sterowanie zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="5346b-103">Provides methods for controlling a managed object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="86163-104">Metody</span><span class="sxs-lookup"><span data-stu-id="86163-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="5346b-104">Metody</span><span class="sxs-lookup"><span data-stu-id="5346b-104">Methods</span></span>  
   
-|<span data-ttu-id="86163-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="86163-105">Method</span></span>|<span data-ttu-id="86163-106">Opis</span><span class="sxs-lookup"><span data-stu-id="86163-106">Description</span></span>|  
+|<span data-ttu-id="5346b-105">Metoda</span><span class="sxs-lookup"><span data-stu-id="5346b-105">Method</span></span>|<span data-ttu-id="5346b-106">Opis</span><span class="sxs-lookup"><span data-stu-id="5346b-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="86163-107">GetObjectIdentity — metoda</span><span class="sxs-lookup"><span data-stu-id="86163-107">GetObjectIdentity Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|<span data-ttu-id="86163-108">Pobiera tożsamość tego zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="86163-108">Gets the identity of this managed object.</span></span>|  
-|[<span data-ttu-id="86163-109">GetSerializedBuffer — metoda</span><span class="sxs-lookup"><span data-stu-id="86163-109">GetSerializedBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|<span data-ttu-id="86163-110">Pobiera reprezentację ciągu tego zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="86163-110">Gets the string representation of this managed object.</span></span>|  
+|[<span data-ttu-id="5346b-107">GetObjectIdentity, metoda</span><span class="sxs-lookup"><span data-stu-id="5346b-107">GetObjectIdentity Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|<span data-ttu-id="5346b-108">Pobiera tożsamość tego zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="5346b-108">Gets the identity of this managed object.</span></span>|  
+|[<span data-ttu-id="5346b-109">GetSerializedBuffer, metoda</span><span class="sxs-lookup"><span data-stu-id="5346b-109">GetSerializedBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|<span data-ttu-id="5346b-110">Pobiera reprezentację ciągu tego zarządzanego obiektu.</span><span class="sxs-lookup"><span data-stu-id="5346b-110">Gets the string representation of this managed object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="86163-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="86163-111">Requirements</span></span>  
- <span data-ttu-id="86163-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="86163-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5346b-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="5346b-111">Requirements</span></span>  
+ <span data-ttu-id="5346b-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="5346b-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="86163-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="86163-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5346b-113">**Nagłówek:** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5346b-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="86163-114">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="86163-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="5346b-114">**Biblioteka:** uwzględnione jako zasób w MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5346b-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="86163-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86163-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="5346b-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5346b-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="86163-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="86163-116">See Also</span></span>  
- [<span data-ttu-id="86163-117">Hosting — interfejsy</span><span class="sxs-lookup"><span data-stu-id="86163-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="5346b-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="5346b-116">See Also</span></span>  
+ [<span data-ttu-id="5346b-117">Hosting, interfejsy</span><span class="sxs-lookup"><span data-stu-id="5346b-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a7e92a0edfe220bda820550cc385bf2eb3846b08
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: b821e23b9b45932fb9296e0d4dac81d2b8c06135
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugarrayvaluegetrank-method"></a><span data-ttu-id="b1b12-102">ICorDebugArrayValue::GetRank — Metoda</span><span class="sxs-lookup"><span data-stu-id="b1b12-102">ICorDebugArrayValue::GetRank Method</span></span>
-<span data-ttu-id="b1b12-103">Pobiera liczbę wymiarów tablicy.</span><span class="sxs-lookup"><span data-stu-id="b1b12-103">Gets the number of dimensions in the array.</span></span>  
+# <a name="icordebugarrayvaluegetrank-method"></a><span data-ttu-id="2d058-102">ICorDebugArrayValue::GetRank — Metoda</span><span class="sxs-lookup"><span data-stu-id="2d058-102">ICorDebugArrayValue::GetRank Method</span></span>
+<span data-ttu-id="2d058-103">Pobiera liczbę wymiarów tablicy.</span><span class="sxs-lookup"><span data-stu-id="2d058-103">Gets the number of dimensions in the array.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b1b12-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="b1b12-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2d058-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="2d058-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRank (  
@@ -38,15 +39,15 @@ HRESULT GetRank (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b1b12-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="b1b12-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="2d058-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="2d058-105">Parameters</span></span>  
  `pnRank`  
- <span data-ttu-id="b1b12-106">[out] Wskaźnik do liczby wymiarów w tym `ICorDebugArrayValue` obiektu.</span><span class="sxs-lookup"><span data-stu-id="b1b12-106">[out] A pointer to the number of dimensions in this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="2d058-106">[out] Wskaźnik do liczby wymiarów w tym `ICorDebugArrayValue` obiektu.</span><span class="sxs-lookup"><span data-stu-id="2d058-106">[out] A pointer to the number of dimensions in this `ICorDebugArrayValue` object.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b1b12-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="b1b12-107">Requirements</span></span>  
- <span data-ttu-id="b1b12-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="b1b12-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2d058-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="2d058-107">Requirements</span></span>  
+ <span data-ttu-id="2d058-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="2d058-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b1b12-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b1b12-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2d058-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2d058-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b1b12-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b1b12-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2d058-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2d058-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b1b12-111">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b1b12-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2d058-111">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2d058-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

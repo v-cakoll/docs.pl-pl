@@ -13,28 +13,29 @@ caps.latest.revision: "8"
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.openlocfilehash: c1d448d709c7ad20e9d08a291f5a38546cd93ce4
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: c52b54d2be2e824de478e0ee9ec2452c57e181b4
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="f18ad-102">Błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="f18ad-102">Security Validation and Authentication Failures</span></span>
-<span data-ttu-id="f18ad-103">Nazwa licznika: błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="f18ad-103">Counter name: Security Validation and Authentication Failures</span></span>  
+# <a name="security-validation-and-authentication-failures"></a><span data-ttu-id="1d482-102">Błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="1d482-102">Security Validation and Authentication Failures</span></span>
+<span data-ttu-id="1d482-103">Nazwa licznika: błędy walidacji zabezpieczeń i uwierzytelniania</span><span class="sxs-lookup"><span data-stu-id="1d482-103">Counter name: Security Validation and Authentication Failures</span></span>  
   
-## <a name="description"></a><span data-ttu-id="f18ad-104">Opis</span><span class="sxs-lookup"><span data-stu-id="f18ad-104">Description</span></span>  
- <span data-ttu-id="f18ad-105">Ten licznik jest zwiększany, gdy komunikat jest odrzucone z powodu problemu zabezpieczeń nie pasuje do żadnego licznika "Zabezpieczeń wywołań nieautoryzowane".</span><span class="sxs-lookup"><span data-stu-id="f18ad-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="f18ad-106">Takie problemy obejmują:</span><span class="sxs-lookup"><span data-stu-id="f18ad-106">Such problems include:</span></span>  
+## <a name="description"></a><span data-ttu-id="1d482-104">Opis</span><span class="sxs-lookup"><span data-stu-id="1d482-104">Description</span></span>  
+ <span data-ttu-id="1d482-105">Ten licznik jest zwiększany, gdy komunikat jest odrzucone z powodu problemu zabezpieczeń nie pasuje do żadnego licznika "Zabezpieczeń wywołań nieautoryzowane".</span><span class="sxs-lookup"><span data-stu-id="1d482-105">This counter is incremented whenever a message is rejected due to a security problem not covered by the "Security Calls Not Authorized" counter.</span></span> <span data-ttu-id="1d482-106">Takie problemy obejmują:</span><span class="sxs-lookup"><span data-stu-id="1d482-106">Such problems include:</span></span>  
   
--   <span data-ttu-id="f18ad-107">Nie można odczytać tokenu klienta z komunikatu.</span><span class="sxs-lookup"><span data-stu-id="f18ad-107">Client token cannot be read from the message.</span></span>  
+-   <span data-ttu-id="1d482-107">Nie można odczytać tokenu klienta z komunikatu.</span><span class="sxs-lookup"><span data-stu-id="1d482-107">Client token cannot be read from the message.</span></span>  
   
--   <span data-ttu-id="f18ad-108">Token klienta nie powiodło się uwierzytelniania (na przykład nieprawidłowe hasło).</span><span class="sxs-lookup"><span data-stu-id="f18ad-108">Client token has failed authentication (for example, bad password).</span></span>  
+-   <span data-ttu-id="1d482-108">Token klienta nie powiodło się uwierzytelniania (na przykład nieprawidłowe hasło).</span><span class="sxs-lookup"><span data-stu-id="1d482-108">Client token has failed authentication (for example, bad password).</span></span>  
   
--   <span data-ttu-id="f18ad-109">Weryfikacja podpisu nie powiodła się (na przykład wiadomości została naruszona).</span><span class="sxs-lookup"><span data-stu-id="f18ad-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
+-   <span data-ttu-id="1d482-109">Weryfikacja podpisu nie powiodła się (na przykład wiadomości została naruszona).</span><span class="sxs-lookup"><span data-stu-id="1d482-109">Signature verification has failed (for example, the message has been tampered).</span></span>  
   
--   <span data-ttu-id="f18ad-110">Komunikat jest duplikatem z poprzedniej wersji, która może się zdarzyć podczas atakiem polegającym na odtwarzaniu.</span><span class="sxs-lookup"><span data-stu-id="f18ad-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
+-   <span data-ttu-id="1d482-110">Komunikat jest duplikatem z poprzedniej wersji, która może się zdarzyć podczas atakiem polegającym na odtwarzaniu.</span><span class="sxs-lookup"><span data-stu-id="1d482-110">The message is a duplicate from a previous one, which can happen during a replay attack.</span></span>  
   
--   <span data-ttu-id="f18ad-111">Wystąpił błąd odszyfrowywania.</span><span class="sxs-lookup"><span data-stu-id="f18ad-111">A decryption failure has occurred.</span></span>  
+-   <span data-ttu-id="1d482-111">Wystąpił błąd odszyfrowywania.</span><span class="sxs-lookup"><span data-stu-id="1d482-111">A decryption failure has occurred.</span></span>  
   
--   <span data-ttu-id="f18ad-112">Niektóre elementy (na przykład brak sygnatury czasowej lub zaszyfrowanych danych, blokowanie) brakuje wymaganych z komunikatu.</span><span class="sxs-lookup"><span data-stu-id="f18ad-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
+-   <span data-ttu-id="1d482-112">Niektóre elementy (na przykład brak sygnatury czasowej lub zaszyfrowanych danych, blokowanie) brakuje wymaganych z komunikatu.</span><span class="sxs-lookup"><span data-stu-id="1d482-112">Some required elements (for example, missing timestamp or encrypted data block) are missing from the message.</span></span>  
   
--   <span data-ttu-id="f18ad-113">Wystąpił błąd podczas uzgadniania TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="f18ad-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>
+-   <span data-ttu-id="1d482-113">Wystąpił błąd podczas uzgadniania TLSNEGO/SPNEGO.</span><span class="sxs-lookup"><span data-stu-id="1d482-113">Errors have occurred during TLSNEGO/SPNEGO handshake.</span></span>

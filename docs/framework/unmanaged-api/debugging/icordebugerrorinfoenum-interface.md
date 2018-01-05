@@ -19,14 +19,15 @@ caps.latest.revision: "6"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 31a2e8ef8e93699af30d6166fcb2baf6f7c6f089
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: fc40b87ee58f6189fad5b0e7cf4d50064cc41ca7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugerrorinfoenum-interface1"></a><span data-ttu-id="3861e-102">ICorDebugErrorInfoEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="3861e-102">ICorDebugErrorInfoEnum Interface1</span></span>
-<span data-ttu-id="3861e-103">`ICorDebugErrorInfoEnum`jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="3861e-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="3861e-104">Nie używaj tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="3861e-104">Do not use this interface.</span></span>  
+# <a name="icordebugerrorinfoenum-interface1"></a><span data-ttu-id="de6c5-102">ICorDebugErrorInfoEnum Interface1</span><span class="sxs-lookup"><span data-stu-id="de6c5-102">ICorDebugErrorInfoEnum Interface1</span></span>
+<span data-ttu-id="de6c5-103">`ICorDebugErrorInfoEnum`jest przestarzała.</span><span class="sxs-lookup"><span data-stu-id="de6c5-103">`ICorDebugErrorInfoEnum` is obsolete.</span></span> <span data-ttu-id="de6c5-104">Nie używaj tego interfejsu.</span><span class="sxs-lookup"><span data-stu-id="de6c5-104">Do not use this interface.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3861e-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="3861e-105">See Also</span></span>  
- [<span data-ttu-id="3861e-106">Interfejsy debugowania</span><span class="sxs-lookup"><span data-stu-id="3861e-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="de6c5-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="de6c5-105">See Also</span></span>  
+ [<span data-ttu-id="de6c5-106">Debugowanie, interfejsy</span><span class="sxs-lookup"><span data-stu-id="de6c5-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

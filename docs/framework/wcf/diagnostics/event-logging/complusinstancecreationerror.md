@@ -13,22 +13,23 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: ff65a59ae1ce2d848ac5dc0f44abb2c0328e586e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: de2aacbf129bcafb38fbd4a2e676e4c320342f47
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="complusinstancecreationerror"></a><span data-ttu-id="ee707-102">ComPlusInstanceCreationError</span><span class="sxs-lookup"><span data-stu-id="ee707-102">ComPlusInstanceCreationError</span></span>
-<span data-ttu-id="ee707-103">Identyfikator: 134</span><span class="sxs-lookup"><span data-stu-id="ee707-103">Id: 134</span></span>  
+# <a name="complusinstancecreationerror"></a><span data-ttu-id="152b4-102">ComPlusInstanceCreationError</span><span class="sxs-lookup"><span data-stu-id="152b4-102">ComPlusInstanceCreationError</span></span>
+<span data-ttu-id="152b4-103">Identyfikator: 134</span><span class="sxs-lookup"><span data-stu-id="152b4-103">Id: 134</span></span>  
   
- <span data-ttu-id="ee707-104">Ważność: błąd</span><span class="sxs-lookup"><span data-stu-id="ee707-104">Severity: Error</span></span>  
+ <span data-ttu-id="152b4-104">Ważność: błąd</span><span class="sxs-lookup"><span data-stu-id="152b4-104">Severity: Error</span></span>  
   
- <span data-ttu-id="ee707-105">Kategoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="ee707-105">Category: ServiceModel</span></span>  
+ <span data-ttu-id="152b4-105">Kategoria: ServiceModel</span><span class="sxs-lookup"><span data-stu-id="152b4-105">Category: ServiceModel</span></span>  
   
-## <a name="description"></a><span data-ttu-id="ee707-106">Opis</span><span class="sxs-lookup"><span data-stu-id="ee707-106">Description</span></span>  
- <span data-ttu-id="ee707-107">COM +: Wystąpił błąd podczas tworzenia wystąpienia COM.</span><span class="sxs-lookup"><span data-stu-id="ee707-107">COM+: An error occurred while creating a COM instance.</span></span>  
+## <a name="description"></a><span data-ttu-id="152b4-106">Opis</span><span class="sxs-lookup"><span data-stu-id="152b4-106">Description</span></span>  
+ <span data-ttu-id="152b4-107">COM +: Wystąpił błąd podczas tworzenia wystąpienia COM.</span><span class="sxs-lookup"><span data-stu-id="152b4-107">COM+: An error occurred while creating a COM instance.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee707-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="ee707-108">See Also</span></span>  
- [<span data-ttu-id="ee707-109">Rejestrowanie zdarzeń</span><span class="sxs-lookup"><span data-stu-id="ee707-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
- [<span data-ttu-id="ee707-110">Informacje ogólne o zdarzeniach</span><span class="sxs-lookup"><span data-stu-id="ee707-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="152b4-108">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="152b4-108">See Also</span></span>  
+ [<span data-ttu-id="152b4-109">Rejestrowanie zdarzeń</span><span class="sxs-lookup"><span data-stu-id="152b4-109">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)  
+ [<span data-ttu-id="152b4-110">Informacje ogólne o zdarzeniach</span><span class="sxs-lookup"><span data-stu-id="152b4-110">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

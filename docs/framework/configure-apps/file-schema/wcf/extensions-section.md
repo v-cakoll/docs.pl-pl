@@ -13,18 +13,19 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 06c8106f004a25f1e4547e9629b881e5bf216490
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 04905ae0f40a1f9ca88b4a04d4e49b0ce895ca56
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="ltextensionsgt-section"></a><span data-ttu-id="dc7b6-102">&lt;extensions&gt; — sekcja</span><span class="sxs-lookup"><span data-stu-id="dc7b6-102">&lt;extensions&gt; section</span></span>
-<span data-ttu-id="dc7b6-103">Ta sekcja konfiguracji zawiera Kolekcja rozszerzeń, które umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika, zachowania i inne aspekty rozszerzeń.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-103">This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.</span></span>  
+# <a name="ltextensionsgt-section"></a><span data-ttu-id="1f80c-102">&lt;extensions&gt; — sekcja</span><span class="sxs-lookup"><span data-stu-id="1f80c-102">&lt;extensions&gt; section</span></span>
+<span data-ttu-id="1f80c-103">Ta sekcja konfiguracji zawiera Kolekcja rozszerzeń, które umożliwiają użytkownikowi utworzenie powiązań zdefiniowanych przez użytkownika, zachowania i inne aspekty rozszerzeń.</span><span class="sxs-lookup"><span data-stu-id="1f80c-103">This configuration section contains a collection of extensions, which enable the user to create user-defined bindings, behaviors, and other aspects of extensions.</span></span>  
   
-<span data-ttu-id="dc7b6-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="dc7b6-104">\<system.ServiceModel></span></span>  
+<span data-ttu-id="1f80c-104">\<System. ServiceModel ></span><span class="sxs-lookup"><span data-stu-id="1f80c-104">\<system.ServiceModel></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dc7b6-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="dc7b6-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1f80c-105">Składnia</span><span class="sxs-lookup"><span data-stu-id="1f80c-105">Syntax</span></span>  
   
 ```xml  
 <system.serviceModel>  
@@ -41,23 +42,23 @@ ms.lasthandoff: 12/02/2017
 </system.serviceModel>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="dc7b6-106">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="dc7b6-106">Attributes and Elements</span></span>  
- <span data-ttu-id="dc7b6-107">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="1f80c-106">Atrybuty i elementy</span><span class="sxs-lookup"><span data-stu-id="1f80c-106">Attributes and Elements</span></span>  
+ <span data-ttu-id="1f80c-107">W poniższych sekcjach opisano atrybuty, elementy podrzędne i elementy nadrzędne.</span><span class="sxs-lookup"><span data-stu-id="1f80c-107">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="dc7b6-108">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="dc7b6-108">Attributes</span></span>  
- <span data-ttu-id="dc7b6-109">Brak.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-109">None.</span></span>  
+### <a name="attributes"></a><span data-ttu-id="1f80c-108">Atrybuty</span><span class="sxs-lookup"><span data-stu-id="1f80c-108">Attributes</span></span>  
+ <span data-ttu-id="1f80c-109">Brak.</span><span class="sxs-lookup"><span data-stu-id="1f80c-109">None.</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="dc7b6-110">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="dc7b6-110">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="1f80c-110">Elementy podrzędne</span><span class="sxs-lookup"><span data-stu-id="1f80c-110">Child Elements</span></span>  
   
-|<span data-ttu-id="dc7b6-111">Element</span><span class="sxs-lookup"><span data-stu-id="dc7b6-111">Element</span></span>|<span data-ttu-id="dc7b6-112">Opis</span><span class="sxs-lookup"><span data-stu-id="dc7b6-112">Description</span></span>|  
+|<span data-ttu-id="1f80c-111">Element</span><span class="sxs-lookup"><span data-stu-id="1f80c-111">Element</span></span>|<span data-ttu-id="1f80c-112">Opis</span><span class="sxs-lookup"><span data-stu-id="1f80c-112">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="dc7b6-113">\<behaviorExtensions ></span><span class="sxs-lookup"><span data-stu-id="dc7b6-113">\<behaviorExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|<span data-ttu-id="dc7b6-114">Ta sekcja zawiera elementy podrzędne, które określają zachowanie rozszerzeń, które umożliwiają użytkownikowi dostosowywanie zachowania usługi lub punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-114">This section contains child elements that specify behavior extensions, which enable the user to customize service or endpoint behaviors.</span></span>|  
-|[<span data-ttu-id="dc7b6-115">\<bindingElementExtensions ></span><span class="sxs-lookup"><span data-stu-id="dc7b6-115">\<bindingElementExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|<span data-ttu-id="dc7b6-116">Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyny lub pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-116">This section enables the use of a custom binding element from a machine or application configuration file.</span></span>|  
-|[<span data-ttu-id="dc7b6-117">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="dc7b6-117">\<bindingExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|<span data-ttu-id="dc7b6-118">Ta sekcja zawiera elementy podrzędne, które Określ rozszerzenia powiązania, które umożliwiają użytkownikowi dostosowywanie powiązania.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-118">This section contains child elements that specify binding extensions, which enable the user to customize bindings.</span></span>|  
-|[<span data-ttu-id="dc7b6-119">\<endpointExtensions ></span><span class="sxs-lookup"><span data-stu-id="dc7b6-119">\<endpointExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|<span data-ttu-id="dc7b6-120">Ta sekcja zawiera elementy podrzędne, które rejestruje standardowych punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-120">This section contains child elements that registers standard endpoints.</span></span>|  
+|[<span data-ttu-id="1f80c-113">\<behaviorExtensions ></span><span class="sxs-lookup"><span data-stu-id="1f80c-113">\<behaviorExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)|<span data-ttu-id="1f80c-114">Ta sekcja zawiera elementy podrzędne, które określają zachowanie rozszerzeń, które umożliwiają użytkownikowi dostosowywanie zachowania usługi lub punktu końcowego.</span><span class="sxs-lookup"><span data-stu-id="1f80c-114">This section contains child elements that specify behavior extensions, which enable the user to customize service or endpoint behaviors.</span></span>|  
+|[<span data-ttu-id="1f80c-115">\<bindingElementExtensions ></span><span class="sxs-lookup"><span data-stu-id="1f80c-115">\<bindingElementExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingelementextensions.md)|<span data-ttu-id="1f80c-116">Ta sekcja umożliwia zastosowanie elementu niestandardowego powiązania z maszyny lub pliku konfiguracji aplikacji.</span><span class="sxs-lookup"><span data-stu-id="1f80c-116">This section enables the use of a custom binding element from a machine or application configuration file.</span></span>|  
+|[<span data-ttu-id="1f80c-117">\<bindingExtensions ></span><span class="sxs-lookup"><span data-stu-id="1f80c-117">\<bindingExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindingextensions.md)|<span data-ttu-id="1f80c-118">Ta sekcja zawiera elementy podrzędne, które Określ rozszerzenia powiązania, które umożliwiają użytkownikowi dostosowywanie powiązania.</span><span class="sxs-lookup"><span data-stu-id="1f80c-118">This section contains child elements that specify binding extensions, which enable the user to customize bindings.</span></span>|  
+|[<span data-ttu-id="1f80c-119">\<endpointExtensions ></span><span class="sxs-lookup"><span data-stu-id="1f80c-119">\<endpointExtensions></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/endpointextensions.md)|<span data-ttu-id="1f80c-120">Ta sekcja zawiera elementy podrzędne, które rejestruje standardowych punktów końcowych.</span><span class="sxs-lookup"><span data-stu-id="1f80c-120">This section contains child elements that registers standard endpoints.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="dc7b6-121">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="dc7b6-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="1f80c-121">Elementy nadrzędne</span><span class="sxs-lookup"><span data-stu-id="1f80c-121">Parent Elements</span></span>  
   
-|<span data-ttu-id="dc7b6-122">Element</span><span class="sxs-lookup"><span data-stu-id="dc7b6-122">Element</span></span>|<span data-ttu-id="dc7b6-123">Opis</span><span class="sxs-lookup"><span data-stu-id="dc7b6-123">Description</span></span>|  
+|<span data-ttu-id="1f80c-122">Element</span><span class="sxs-lookup"><span data-stu-id="1f80c-122">Element</span></span>|<span data-ttu-id="1f80c-123">Opis</span><span class="sxs-lookup"><span data-stu-id="1f80c-123">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="dc7b6-124">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="dc7b6-124">system.ServiceModel</span></span>|<span data-ttu-id="dc7b6-125">Element główny wszystkich elementów konfiguracji usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="dc7b6-125">The root element of all WCF configuration elements.</span></span>|
+|<span data-ttu-id="1f80c-124">System.ServiceModel</span><span class="sxs-lookup"><span data-stu-id="1f80c-124">system.ServiceModel</span></span>|<span data-ttu-id="1f80c-125">Element główny wszystkich elementów konfiguracji usługi WCF.</span><span class="sxs-lookup"><span data-stu-id="1f80c-125">The root element of all WCF configuration elements.</span></span>|

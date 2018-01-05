@@ -21,16 +21,17 @@ caps.latest.revision: "14"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: a412ec7fbc619ae01a981fefe10ce0e4f2874848
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 5cf99b35d45c1dda8f187e0206e068c128f347d1
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="fcd04-102">ICorDebugValue::GetSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="fcd04-102">ICorDebugValue::GetSize Method</span></span>
-<span data-ttu-id="fcd04-103">Pobiera rozmiar w bajtach tego obiektu "ICorDebugValue".</span><span class="sxs-lookup"><span data-stu-id="fcd04-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
+# <a name="icordebugvaluegetsize-method"></a><span data-ttu-id="13dc3-102">ICorDebugValue::GetSize — Metoda</span><span class="sxs-lookup"><span data-stu-id="13dc3-102">ICorDebugValue::GetSize Method</span></span>
+<span data-ttu-id="13dc3-103">Pobiera rozmiar w bajtach tego obiektu "ICorDebugValue".</span><span class="sxs-lookup"><span data-stu-id="13dc3-103">Gets the size, in bytes, of this "ICorDebugValue" object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcd04-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="fcd04-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="13dc3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="13dc3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSize (  
@@ -38,24 +39,24 @@ HRESULT GetSize (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fcd04-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="fcd04-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="13dc3-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="13dc3-105">Parameters</span></span>  
  `pSize`  
- <span data-ttu-id="fcd04-106">[out] Rozmiar w bajtach, ta wartość obiektu.</span><span class="sxs-lookup"><span data-stu-id="fcd04-106">[out] The size, in bytes, of this value object.</span></span>  
+ <span data-ttu-id="13dc3-106">[out] Rozmiar w bajtach, ta wartość obiektu.</span><span class="sxs-lookup"><span data-stu-id="13dc3-106">[out] The size, in bytes, of this value object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fcd04-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="fcd04-107">Remarks</span></span>  
- <span data-ttu-id="fcd04-108">Jeśli typ wartości jest typem referencyjnym, ta metoda zwraca rozmiar wskaźnika niż rozmiar obiektu.</span><span class="sxs-lookup"><span data-stu-id="fcd04-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="13dc3-107">Uwagi</span><span class="sxs-lookup"><span data-stu-id="13dc3-107">Remarks</span></span>  
+ <span data-ttu-id="13dc3-108">Jeśli typ wartości jest typem referencyjnym, ta metoda zwraca rozmiar wskaźnika niż rozmiar obiektu.</span><span class="sxs-lookup"><span data-stu-id="13dc3-108">If the value's type is a reference type, this method returns the size of the pointer rather than the size of the object.</span></span>  
   
- <span data-ttu-id="fcd04-109">`ICorDebugValue::GetSize` Metoda zwraca `COR_E_OVERFLOW` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych.</span><span class="sxs-lookup"><span data-stu-id="fcd04-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="fcd04-110">Użyj [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metody zamiast tego dla obiektów, które są większe niż 4 GB.</span><span class="sxs-lookup"><span data-stu-id="fcd04-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
+ <span data-ttu-id="13dc3-109">`ICorDebugValue::GetSize` Metoda zwraca `COR_E_OVERFLOW` dla obiektów, które są większe niż 4 GB na platformach 64-bitowych.</span><span class="sxs-lookup"><span data-stu-id="13dc3-109">The `ICorDebugValue::GetSize` method returns `COR_E_OVERFLOW` for objects that are larger than 4 GB on 64-bit platforms.</span></span> <span data-ttu-id="13dc3-110">Użyj [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) metody zamiast tego dla obiektów, które są większe niż 4 GB.</span><span class="sxs-lookup"><span data-stu-id="13dc3-110">Use the [ICorDebugValue3::GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md) method instead for objects that are larger than 4 GB.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcd04-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="fcd04-111">Requirements</span></span>  
- <span data-ttu-id="fcd04-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="fcd04-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="13dc3-111">Wymagania</span><span class="sxs-lookup"><span data-stu-id="13dc3-111">Requirements</span></span>  
+ <span data-ttu-id="13dc3-112">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="13dc3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fcd04-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="fcd04-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="13dc3-113">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="13dc3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="fcd04-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fcd04-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="13dc3-114">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="13dc3-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fcd04-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcd04-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="13dc3-115">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="13dc3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fcd04-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fcd04-116">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="13dc3-116">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="13dc3-116">See Also</span></span>  
     
- [<span data-ttu-id="fcd04-117">GetSize64 — metoda</span><span class="sxs-lookup"><span data-stu-id="fcd04-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+ [<span data-ttu-id="13dc3-117">GetSize64, metoda</span><span class="sxs-lookup"><span data-stu-id="13dc3-117">GetSize64 Method</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)

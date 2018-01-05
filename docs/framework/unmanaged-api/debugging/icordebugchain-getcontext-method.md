@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 060789990b547f263f9d8b46765a02e531789d15
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9ec212bb0de60c0cdff6b3fe26d6d4f6261d78fd
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="3a03f-102">ICorDebugChain::GetContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="3a03f-102">ICorDebugChain::GetContext Method</span></span>
-<span data-ttu-id="3a03f-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="3a03f-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
+# <a name="icordebugchaingetcontext-method"></a><span data-ttu-id="cb7ad-102">ICorDebugChain::GetContext — Metoda</span><span class="sxs-lookup"><span data-stu-id="cb7ad-102">ICorDebugChain::GetContext Method</span></span>
+<span data-ttu-id="cb7ad-103">Ta metoda nie jest zaimplementowana w bieżącej wersji programu .NET Framework.</span><span class="sxs-lookup"><span data-stu-id="cb7ad-103">This method is not implemented in the current version of the .NET Framework.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3a03f-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="3a03f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cb7ad-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="cb7ad-104">Syntax</span></span>  
   
 ```  
 HRESULT GetContext (  

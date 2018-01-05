@@ -21,16 +21,17 @@ caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: fe5736a1ca420eb361e062743ed93982e7ec3f29
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 9e9937222c215d22ef4ef572873385f279e7ba86
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="0362d-102">ICorDebugChain::IsManaged — Metoda</span><span class="sxs-lookup"><span data-stu-id="0362d-102">ICorDebugChain::IsManaged Method</span></span>
-<span data-ttu-id="0362d-103">Pobiera wartość wskazującą, czy ten łańcuch działa kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="0362d-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
+# <a name="icordebugchainismanaged-method"></a><span data-ttu-id="e9f16-102">ICorDebugChain::IsManaged — Metoda</span><span class="sxs-lookup"><span data-stu-id="e9f16-102">ICorDebugChain::IsManaged Method</span></span>
+<span data-ttu-id="e9f16-103">Pobiera wartość wskazującą, czy ten łańcuch działa kodu zarządzanego.</span><span class="sxs-lookup"><span data-stu-id="e9f16-103">Gets a value that indicates whether this chain is running managed code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0362d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="0362d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e9f16-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="e9f16-104">Syntax</span></span>  
   
 ```  
 HRESULT IsManaged (  
@@ -38,15 +39,15 @@ HRESULT IsManaged (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0362d-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="0362d-105">Parameters</span></span>  
+#### <a name="parameters"></a><span data-ttu-id="e9f16-105">Parametry</span><span class="sxs-lookup"><span data-stu-id="e9f16-105">Parameters</span></span>  
  `pManaged`  
- <span data-ttu-id="0362d-106">[out] `true` Jeśli ten łańcuch działa kod zarządzany; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="0362d-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
+ <span data-ttu-id="e9f16-106">[out] `true` Jeśli ten łańcuch działa kod zarządzany; w przeciwnym razie `false`.</span><span class="sxs-lookup"><span data-stu-id="e9f16-106">[out] `true` if this chain is running managed code; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0362d-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0362d-107">Requirements</span></span>  
- <span data-ttu-id="0362d-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0362d-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e9f16-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="e9f16-107">Requirements</span></span>  
+ <span data-ttu-id="e9f16-108">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="e9f16-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0362d-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="0362d-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e9f16-109">**Nagłówek:** CorDebug.idl, CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e9f16-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="0362d-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0362d-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e9f16-110">**Biblioteka:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9f16-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="0362d-111">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0362d-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="e9f16-111">**Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9f16-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

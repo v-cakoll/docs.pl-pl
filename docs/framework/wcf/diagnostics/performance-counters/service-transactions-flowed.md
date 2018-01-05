@@ -13,14 +13,15 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 01487cddc89b3b77039ddeadc9ec254af7c5f86f
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e6eb5e06f253e0deb63fa15c770ea49aeee5e2f7
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="service-transactions-flowed"></a><span data-ttu-id="7b26a-102">Usługa: Przekazane transakcje</span><span class="sxs-lookup"><span data-stu-id="7b26a-102">Service: Transactions Flowed</span></span>
-<span data-ttu-id="7b26a-103">Nazwa licznika: Przekazane transakcje.</span><span class="sxs-lookup"><span data-stu-id="7b26a-103">Counter Name: Transactions Flowed.</span></span>  
+# <a name="service-transactions-flowed"></a><span data-ttu-id="9e9eb-102">Usługa: Przekazane transakcje</span><span class="sxs-lookup"><span data-stu-id="9e9eb-102">Service: Transactions Flowed</span></span>
+<span data-ttu-id="9e9eb-103">Nazwa licznika: Przekazane transakcje.</span><span class="sxs-lookup"><span data-stu-id="9e9eb-103">Counter Name: Transactions Flowed.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="7b26a-104">Opis</span><span class="sxs-lookup"><span data-stu-id="7b26a-104">Description</span></span>  
- <span data-ttu-id="7b26a-105">Liczba transakcji skierowana do operacji w tej usłudze.</span><span class="sxs-lookup"><span data-stu-id="7b26a-105">Number of transactions flowed to operations in this service.</span></span>
+## <a name="description"></a><span data-ttu-id="9e9eb-104">Opis</span><span class="sxs-lookup"><span data-stu-id="9e9eb-104">Description</span></span>  
+ <span data-ttu-id="9e9eb-105">Liczba transakcji skierowana do operacji w tej usłudze.</span><span class="sxs-lookup"><span data-stu-id="9e9eb-105">Number of transactions flowed to operations in this service.</span></span>

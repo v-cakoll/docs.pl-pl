@@ -21,26 +21,27 @@ caps.latest.revision: "7"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 3ff2baa8a5006e2a3a83ddbcf5ca79b78350794b
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 10c36f1972e3c55b22a472c81ec8499fcfde3405
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="05be4-102">ISymUnmanagedWriter3::Commit — Metoda</span><span class="sxs-lookup"><span data-stu-id="05be4-102">ISymUnmanagedWriter3::Commit Method</span></span>
-<span data-ttu-id="05be4-103">Zatwierdza zmiany do tej pory zapisywane do strumienia.</span><span class="sxs-lookup"><span data-stu-id="05be4-103">Commits the changes written so far to the stream.</span></span>  
+# <a name="isymunmanagedwriter3commit-method"></a><span data-ttu-id="8cc0d-102">ISymUnmanagedWriter3::Commit — Metoda</span><span class="sxs-lookup"><span data-stu-id="8cc0d-102">ISymUnmanagedWriter3::Commit Method</span></span>
+<span data-ttu-id="8cc0d-103">Zatwierdza zmiany do tej pory zapisywane do strumienia.</span><span class="sxs-lookup"><span data-stu-id="8cc0d-103">Commits the changes written so far to the stream.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05be4-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="05be4-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8cc0d-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8cc0d-104">Syntax</span></span>  
   
 ```  
 HRESULT Commit();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="05be4-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="05be4-105">Return Value</span></span>  
- <span data-ttu-id="05be4-106">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="05be4-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="8cc0d-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8cc0d-105">Return Value</span></span>  
+ <span data-ttu-id="8cc0d-106">Wartość S_OK, jeśli metoda zakończy się pomyślnie; w przeciwnym razie E_FAIL lub inny kod błędu.</span><span class="sxs-lookup"><span data-stu-id="8cc0d-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05be4-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="05be4-107">Requirements</span></span>  
- <span data-ttu-id="05be4-108">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="05be4-108">**Header:** CorSym.idl , CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8cc0d-107">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8cc0d-107">Requirements</span></span>  
+ <span data-ttu-id="8cc0d-108">**Nagłówek:** CorSym.idl, CorSym.h</span><span class="sxs-lookup"><span data-stu-id="8cc0d-108">**Header:** CorSym.idl , CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05be4-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="05be4-109">See Also</span></span>  
- [<span data-ttu-id="05be4-110">ISymUnmanagedWriter3 — interfejs</span><span class="sxs-lookup"><span data-stu-id="05be4-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="8cc0d-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="8cc0d-109">See Also</span></span>  
+ [<span data-ttu-id="8cc0d-110">ISymUnmanagedWriter3, interfejs</span><span class="sxs-lookup"><span data-stu-id="8cc0d-110">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)

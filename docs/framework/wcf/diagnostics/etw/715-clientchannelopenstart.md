@@ -13,26 +13,27 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 1923964d7e586638c8b56bf3e6ab7a3f04fa9f5e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: e5316d3b579bb05a160e5928b4c17451be0ab7c5
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="715---clientchannelopenstart"></a><span data-ttu-id="baa5f-102">715 — ClientChannelOpenStart</span><span class="sxs-lookup"><span data-stu-id="baa5f-102">715 - ClientChannelOpenStart</span></span>
-## <a name="properties"></a><span data-ttu-id="baa5f-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="baa5f-103">Properties</span></span>  
+# <a name="715---clientchannelopenstart"></a><span data-ttu-id="f6ce9-102">715 — ClientChannelOpenStart</span><span class="sxs-lookup"><span data-stu-id="f6ce9-102">715 - ClientChannelOpenStart</span></span>
+## <a name="properties"></a><span data-ttu-id="f6ce9-103">Właściwości</span><span class="sxs-lookup"><span data-stu-id="f6ce9-103">Properties</span></span>  
   
 |||  
 |-|-|  
-|<span data-ttu-id="baa5f-104">ID</span><span class="sxs-lookup"><span data-stu-id="baa5f-104">ID</span></span>|<span data-ttu-id="baa5f-105">715</span><span class="sxs-lookup"><span data-stu-id="baa5f-105">715</span></span>|  
-|<span data-ttu-id="baa5f-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="baa5f-106">Keywords</span></span>|<span data-ttu-id="baa5f-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="baa5f-107">ServiceModel</span></span>|  
-|<span data-ttu-id="baa5f-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="baa5f-108">Level</span></span>|<span data-ttu-id="baa5f-109">Informacje</span><span class="sxs-lookup"><span data-stu-id="baa5f-109">Information</span></span>|  
-|<span data-ttu-id="baa5f-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="baa5f-110">Channel</span></span>|<span data-ttu-id="baa5f-111">Microsoft-Windows aplikacji Server aplikacje/analityczne</span><span class="sxs-lookup"><span data-stu-id="baa5f-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
+|<span data-ttu-id="f6ce9-104">ID</span><span class="sxs-lookup"><span data-stu-id="f6ce9-104">ID</span></span>|<span data-ttu-id="f6ce9-105">715</span><span class="sxs-lookup"><span data-stu-id="f6ce9-105">715</span></span>|  
+|<span data-ttu-id="f6ce9-106">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="f6ce9-106">Keywords</span></span>|<span data-ttu-id="f6ce9-107">ServiceModel</span><span class="sxs-lookup"><span data-stu-id="f6ce9-107">ServiceModel</span></span>|  
+|<span data-ttu-id="f6ce9-108">Poziom</span><span class="sxs-lookup"><span data-stu-id="f6ce9-108">Level</span></span>|<span data-ttu-id="f6ce9-109">Informacje</span><span class="sxs-lookup"><span data-stu-id="f6ce9-109">Information</span></span>|  
+|<span data-ttu-id="f6ce9-110">Kanał</span><span class="sxs-lookup"><span data-stu-id="f6ce9-110">Channel</span></span>|<span data-ttu-id="f6ce9-111">Microsoft-Windows aplikacji Server aplikacje/analityczne</span><span class="sxs-lookup"><span data-stu-id="f6ce9-111">Microsoft-Windows-Application Server-Applications/Analytic</span></span>|  
   
-## <a name="description"></a><span data-ttu-id="baa5f-112">Opis</span><span class="sxs-lookup"><span data-stu-id="baa5f-112">Description</span></span>  
- <span data-ttu-id="baa5f-113">To zdarzenie jest emitowany z start Otwórz obiektu ServiceChannel.</span><span class="sxs-lookup"><span data-stu-id="baa5f-113">This event is emitted with ServiceChannel Open start.</span></span>  
+## <a name="description"></a><span data-ttu-id="f6ce9-112">Opis</span><span class="sxs-lookup"><span data-stu-id="f6ce9-112">Description</span></span>  
+ <span data-ttu-id="f6ce9-113">To zdarzenie jest emitowany z start Otwórz obiektu ServiceChannel.</span><span class="sxs-lookup"><span data-stu-id="f6ce9-113">This event is emitted with ServiceChannel Open start.</span></span>  
   
-## <a name="message"></a><span data-ttu-id="baa5f-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="baa5f-114">Message</span></span>  
- <span data-ttu-id="baa5f-115">Otwórz początek obiektu ServiceChannel.</span><span class="sxs-lookup"><span data-stu-id="baa5f-115">ServiceChannel Open Start.</span></span>  
+## <a name="message"></a><span data-ttu-id="f6ce9-114">Komunikat</span><span class="sxs-lookup"><span data-stu-id="f6ce9-114">Message</span></span>  
+ <span data-ttu-id="f6ce9-115">Otwórz początek obiektu ServiceChannel.</span><span class="sxs-lookup"><span data-stu-id="f6ce9-115">ServiceChannel Open Start.</span></span>  
   
-## <a name="details"></a><span data-ttu-id="baa5f-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="baa5f-116">Details</span></span>
+## <a name="details"></a><span data-ttu-id="f6ce9-116">Szczegóły</span><span class="sxs-lookup"><span data-stu-id="f6ce9-116">Details</span></span>

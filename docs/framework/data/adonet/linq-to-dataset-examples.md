@@ -13,55 +13,56 @@ caps.latest.revision: "2"
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.openlocfilehash: 808c12ee0f9a52c09fa32a0bdf2cc0177bf8be4b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload: dotnet
+ms.openlocfilehash: e05042b8b94949c44e8a7a4942f02e7b7a84dd8e
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="linq-to-dataset-examples"></a><span data-ttu-id="0a49f-102">LINQ do DataSet przykłady</span><span class="sxs-lookup"><span data-stu-id="0a49f-102">LINQ to DataSet Examples</span></span>
-<span data-ttu-id="0a49f-103">Ta sekcja zawiera [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programowania, przykłady, które używają standardowych operatorów zapytań.</span><span class="sxs-lookup"><span data-stu-id="0a49f-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="0a49f-104"><xref:System.Data.DataSet> Używane w tym przykładzie jest wypełniany przy użyciu `FillDataSet` metodę, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="0a49f-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="0a49f-105">Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span><span class="sxs-lookup"><span data-stu-id="0a49f-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
+# <a name="linq-to-dataset-examples"></a><span data-ttu-id="d6bdf-102">LINQ do DataSet przykłady</span><span class="sxs-lookup"><span data-stu-id="d6bdf-102">LINQ to DataSet Examples</span></span>
+<span data-ttu-id="d6bdf-103">Ta sekcja zawiera [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programowania, przykłady, które używają standardowych operatorów zapytań.</span><span class="sxs-lookup"><span data-stu-id="d6bdf-103">This section provides [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] programming examples that use the standard query operators.</span></span> <span data-ttu-id="d6bdf-104"><xref:System.Data.DataSet> Używane w tym przykładzie jest wypełniany przy użyciu `FillDataSet` metodę, która została określona w [podczas ładowania danych do zestawu danych](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span><span class="sxs-lookup"><span data-stu-id="d6bdf-104">The <xref:System.Data.DataSet> used in these examples is populated by using the `FillDataSet` method, which is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span> <span data-ttu-id="d6bdf-105">Aby uzyskać więcej informacji, zobacz [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span><span class="sxs-lookup"><span data-stu-id="d6bdf-105">For more information, see [Standard Query Operators Overview](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0a49f-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="0a49f-106">In This Section</span></span>  
- [<span data-ttu-id="0a49f-107">Przykłady wyrażeń zapytania</span><span class="sxs-lookup"><span data-stu-id="0a49f-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
- <span data-ttu-id="0a49f-108">Zawiera następujące przykłady:</span><span class="sxs-lookup"><span data-stu-id="0a49f-108">Contains the following examples:</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="d6bdf-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d6bdf-106">In This Section</span></span>  
+ [<span data-ttu-id="d6bdf-107">Przykłady wyrażeń zapytania</span><span class="sxs-lookup"><span data-stu-id="d6bdf-107">Query Expression Examples</span></span>](../../../../docs/framework/data/adonet/query-expression-examples-linq-to-dataset.md)  
+ <span data-ttu-id="d6bdf-108">Zawiera następujące przykłady:</span><span class="sxs-lookup"><span data-stu-id="d6bdf-108">Contains the following examples:</span></span>  
   
--   [<span data-ttu-id="0a49f-109">Projekcji</span><span class="sxs-lookup"><span data-stu-id="0a49f-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
+-   [<span data-ttu-id="d6bdf-109">Projekcja</span><span class="sxs-lookup"><span data-stu-id="d6bdf-109">Projection</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-projection-linq-to-dataset.md)  
   
--   [<span data-ttu-id="0a49f-110">Ograniczenie</span><span class="sxs-lookup"><span data-stu-id="0a49f-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
+-   [<span data-ttu-id="d6bdf-110">Ograniczenie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-110">Restriction</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-restriction-linq-to-dataset.md)  
   
--   [<span data-ttu-id="0a49f-111">Podział na partycje</span><span class="sxs-lookup"><span data-stu-id="0a49f-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
+-   [<span data-ttu-id="d6bdf-111">Partycjonowanie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-111">Partitioning</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [<span data-ttu-id="0a49f-112">Kolejność</span><span class="sxs-lookup"><span data-stu-id="0a49f-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="d6bdf-112">Szeregowanie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-112">Ordering</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [<span data-ttu-id="0a49f-113">Operatory — element</span><span class="sxs-lookup"><span data-stu-id="0a49f-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="d6bdf-113">Operatory elementu</span><span class="sxs-lookup"><span data-stu-id="d6bdf-113">Element Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
--   [<span data-ttu-id="0a49f-114">Operatory agregacji</span><span class="sxs-lookup"><span data-stu-id="0a49f-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="d6bdf-114">Operatory agregacji</span><span class="sxs-lookup"><span data-stu-id="d6bdf-114">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-aggregate-operators.md)  
   
--   [<span data-ttu-id="0a49f-115">Dołącz do operatorów</span><span class="sxs-lookup"><span data-stu-id="0a49f-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
+-   [<span data-ttu-id="d6bdf-115">Operatory łączenia</span><span class="sxs-lookup"><span data-stu-id="d6bdf-115">Join Operators</span></span>](../../../../docs/framework/data/adonet/query-expression-syntax-examples-join-operators.md)  
   
- [<span data-ttu-id="0a49f-116">Przykłady zapytań — metoda</span><span class="sxs-lookup"><span data-stu-id="0a49f-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
- <span data-ttu-id="0a49f-117">Zawiera następujące przykłady:</span><span class="sxs-lookup"><span data-stu-id="0a49f-117">Contains the following examples:</span></span>  
+ [<span data-ttu-id="d6bdf-116">Przykłady zapytań oparte na metodzie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-116">Method-Based Query Examples</span></span>](../../../../docs/framework/data/adonet/method-based-query-examples-linq-to-dataset.md)  
+ <span data-ttu-id="d6bdf-117">Zawiera następujące przykłady:</span><span class="sxs-lookup"><span data-stu-id="d6bdf-117">Contains the following examples:</span></span>  
   
--   [<span data-ttu-id="0a49f-118">Projekcji</span><span class="sxs-lookup"><span data-stu-id="0a49f-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
+-   [<span data-ttu-id="d6bdf-118">Projekcja</span><span class="sxs-lookup"><span data-stu-id="d6bdf-118">Projection</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-projection.md)  
   
--   [<span data-ttu-id="0a49f-119">Podział na partycje</span><span class="sxs-lookup"><span data-stu-id="0a49f-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
+-   [<span data-ttu-id="d6bdf-119">Partycjonowanie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-119">Partitioning</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [<span data-ttu-id="0a49f-120">Kolejność</span><span class="sxs-lookup"><span data-stu-id="0a49f-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [<span data-ttu-id="d6bdf-120">Szeregowanie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-120">Ordering</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
--   [<span data-ttu-id="0a49f-121">Operatory zestawów</span><span class="sxs-lookup"><span data-stu-id="0a49f-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
+-   [<span data-ttu-id="d6bdf-121">Operatory zestawu</span><span class="sxs-lookup"><span data-stu-id="d6bdf-121">Set Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   
--   [<span data-ttu-id="0a49f-122">Operatory konwersji</span><span class="sxs-lookup"><span data-stu-id="0a49f-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
+-   [<span data-ttu-id="d6bdf-122">Operatory konwersji</span><span class="sxs-lookup"><span data-stu-id="d6bdf-122">Conversion Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-conversion-operators.md)  
   
--   [<span data-ttu-id="0a49f-123">Operatory — element</span><span class="sxs-lookup"><span data-stu-id="0a49f-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
+-   [<span data-ttu-id="d6bdf-123">Operatory elementu</span><span class="sxs-lookup"><span data-stu-id="d6bdf-123">Element Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-element-operators.md)  
   
--   [<span data-ttu-id="0a49f-124">Operatory agregacji</span><span class="sxs-lookup"><span data-stu-id="0a49f-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
+-   [<span data-ttu-id="d6bdf-124">Operatory agregacji</span><span class="sxs-lookup"><span data-stu-id="d6bdf-124">Aggregate Operators</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-aggregate-operators.md)  
   
--   [<span data-ttu-id="0a49f-125">Dołącz</span><span class="sxs-lookup"><span data-stu-id="0a49f-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
+-   [<span data-ttu-id="d6bdf-125">Łączenie</span><span class="sxs-lookup"><span data-stu-id="d6bdf-125">Join</span></span>](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-join-linq-to-dataset.md)  
   
- [<span data-ttu-id="0a49f-126">Przykłady Operator specyficzne dla zestawu danych</span><span class="sxs-lookup"><span data-stu-id="0a49f-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
- <span data-ttu-id="0a49f-127">Zawiera przykłady, które prezentują sposób użycia <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> — metoda i <xref:System.Data.DataRowComparer> klasy.</span><span class="sxs-lookup"><span data-stu-id="0a49f-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
+ [<span data-ttu-id="d6bdf-126">Przykłady operatorów specyficznych dla zestawu danych</span><span class="sxs-lookup"><span data-stu-id="d6bdf-126">DataSet-Specific Operator Examples</span></span>](../../../../docs/framework/data/adonet/dataset-specific-operator-examples-linq-to-dataset.md)  
+ <span data-ttu-id="d6bdf-127">Zawiera przykłady, które prezentują sposób użycia <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> — metoda i <xref:System.Data.DataRowComparer> klasy.</span><span class="sxs-lookup"><span data-stu-id="d6bdf-127">Contains examples that demonstrate how to use the <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> method and the <xref:System.Data.DataRowComparer> class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0a49f-128">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0a49f-128">See Also</span></span>  
- [<span data-ttu-id="0a49f-129">Przewodnik programowania w języku</span><span class="sxs-lookup"><span data-stu-id="0a49f-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
- [<span data-ttu-id="0a49f-130">Podczas ładowania danych do zestawu danych</span><span class="sxs-lookup"><span data-stu-id="0a49f-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+## <a name="see-also"></a><span data-ttu-id="d6bdf-128">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d6bdf-128">See Also</span></span>  
+ [<span data-ttu-id="d6bdf-129">Przewodnik programowania</span><span class="sxs-lookup"><span data-stu-id="d6bdf-129">Programming Guide</span></span>](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)  
+ [<span data-ttu-id="d6bdf-130">Ładowanie danych do zestawu danych</span><span class="sxs-lookup"><span data-stu-id="d6bdf-130">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)

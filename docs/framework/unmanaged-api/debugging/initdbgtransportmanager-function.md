@@ -22,36 +22,37 @@ caps.latest.revision: "4"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: f9f637589666af3723f11eb1f828d00be57793e5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 37b849ed482f76692a63c70cbb0a3b9e1bacc8ca
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="initdbgtransportmanager-function"></a><span data-ttu-id="8b4b3-102">InitDbgTransportManager — Funkcja</span><span class="sxs-lookup"><span data-stu-id="8b4b3-102">InitDbgTransportManager Function</span></span>
-<span data-ttu-id="8b4b3-103">Inicjuje menedżera transportu do nawiązania połączenia zdalnego celu wyliczenie procesu i środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="8b4b3-103">Initializes the transport manager to connect to a remote target for process and runtime enumeration.</span></span>  
+# <a name="initdbgtransportmanager-function"></a><span data-ttu-id="671a8-102">InitDbgTransportManager — Funkcja</span><span class="sxs-lookup"><span data-stu-id="671a8-102">InitDbgTransportManager Function</span></span>
+<span data-ttu-id="671a8-103">Inicjuje menedżera transportu do nawiązania połączenia zdalnego celu wyliczenie procesu i środowiska uruchomieniowego.</span><span class="sxs-lookup"><span data-stu-id="671a8-103">Initializes the transport manager to connect to a remote target for process and runtime enumeration.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8b4b3-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="8b4b3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="671a8-104">Składnia</span><span class="sxs-lookup"><span data-stu-id="671a8-104">Syntax</span></span>  
   
 ```  
 HRESULT InitDbgTransportManager ();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="8b4b3-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="8b4b3-105">Return Value</span></span>  
- <span data-ttu-id="8b4b3-106">S_OK</span><span class="sxs-lookup"><span data-stu-id="8b4b3-106">S_OK</span></span>  
- <span data-ttu-id="8b4b3-107">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="8b4b3-107">Success.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="671a8-105">Wartość zwracana</span><span class="sxs-lookup"><span data-stu-id="671a8-105">Return Value</span></span>  
+ <span data-ttu-id="671a8-106">S_OK</span><span class="sxs-lookup"><span data-stu-id="671a8-106">S_OK</span></span>  
+ <span data-ttu-id="671a8-107">Powodzenie.</span><span class="sxs-lookup"><span data-stu-id="671a8-107">Success.</span></span>  
   
- <span data-ttu-id="8b4b3-108">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="8b4b3-108">E_OUTOFMEMORY</span></span>  
- <span data-ttu-id="8b4b3-109">Funkcja nie może przydzielić pamięci dla menedżera transportu.</span><span class="sxs-lookup"><span data-stu-id="8b4b3-109">The function was unable to allocate memory for a transport manager.</span></span>  
+ <span data-ttu-id="671a8-108">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="671a8-108">E_OUTOFMEMORY</span></span>  
+ <span data-ttu-id="671a8-109">Funkcja nie może przydzielić pamięci dla menedżera transportu.</span><span class="sxs-lookup"><span data-stu-id="671a8-109">The function was unable to allocate memory for a transport manager.</span></span>  
   
- <span data-ttu-id="8b4b3-110">E_FAIL (lub inne kody powrotu E_)</span><span class="sxs-lookup"><span data-stu-id="8b4b3-110">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="8b4b3-111">Inne błędy.</span><span class="sxs-lookup"><span data-stu-id="8b4b3-111">Other failures.</span></span>  
+ <span data-ttu-id="671a8-110">E_FAIL (lub inne kody powrotu E_)</span><span class="sxs-lookup"><span data-stu-id="671a8-110">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="671a8-111">Inne błędy.</span><span class="sxs-lookup"><span data-stu-id="671a8-111">Other failures.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8b4b3-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="8b4b3-112">Requirements</span></span>  
- <span data-ttu-id="8b4b3-113">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="8b4b3-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="671a8-112">Wymagania</span><span class="sxs-lookup"><span data-stu-id="671a8-112">Requirements</span></span>  
+ <span data-ttu-id="671a8-113">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="671a8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8b4b3-114">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="8b4b3-114">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="671a8-114">**Nagłówek:** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="671a8-114">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="8b4b3-115">**Biblioteka:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="8b4b3-115">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="671a8-115">**Biblioteka:** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="671a8-115">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="8b4b3-116">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="8b4b3-116">**.NET Framework Versions:** 3.5 SP1</span></span>
+ <span data-ttu-id="671a8-116">**Wersje programu .NET framework:** 3.5 z dodatkiem SP1</span><span class="sxs-lookup"><span data-stu-id="671a8-116">**.NET Framework Versions:** 3.5 SP1</span></span>

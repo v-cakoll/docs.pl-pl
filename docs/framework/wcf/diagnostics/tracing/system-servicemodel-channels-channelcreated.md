@@ -13,19 +13,20 @@ caps.latest.revision: "5"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: afb92750146ff4facd0c9580e0c9a885616c977e
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22b33f0ec44226c5e59b4f5ad19178b66766907f
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelchannelschannelcreated"></a><span data-ttu-id="52f94-102">System.ServiceModel.Channels.ChannelCreated</span><span class="sxs-lookup"><span data-stu-id="52f94-102">System.ServiceModel.Channels.ChannelCreated</span></span>
-<span data-ttu-id="52f94-103">System.ServiceModel.Channels.ChannelCreated</span><span class="sxs-lookup"><span data-stu-id="52f94-103">System.ServiceModel.Channels.ChannelCreated</span></span>  
+# <a name="systemservicemodelchannelschannelcreated"></a><span data-ttu-id="70d99-102">System.ServiceModel.Channels.ChannelCreated</span><span class="sxs-lookup"><span data-stu-id="70d99-102">System.ServiceModel.Channels.ChannelCreated</span></span>
+<span data-ttu-id="70d99-103">System.ServiceModel.Channels.ChannelCreated</span><span class="sxs-lookup"><span data-stu-id="70d99-103">System.ServiceModel.Channels.ChannelCreated</span></span>  
   
-## <a name="description"></a><span data-ttu-id="52f94-104">Opis</span><span class="sxs-lookup"><span data-stu-id="52f94-104">Description</span></span>  
- <span data-ttu-id="52f94-105">Kanał został utworzony.</span><span class="sxs-lookup"><span data-stu-id="52f94-105">A channel was created.</span></span>  
+## <a name="description"></a><span data-ttu-id="70d99-104">Opis</span><span class="sxs-lookup"><span data-stu-id="70d99-104">Description</span></span>  
+ <span data-ttu-id="70d99-105">Kanał został utworzony.</span><span class="sxs-lookup"><span data-stu-id="70d99-105">A channel was created.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="52f94-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="52f94-106">See Also</span></span>  
- [<span data-ttu-id="52f94-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="52f94-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="52f94-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="52f94-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="52f94-109">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="52f94-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="70d99-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="70d99-106">See Also</span></span>  
+ [<span data-ttu-id="70d99-107">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="70d99-107">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="70d99-108">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="70d99-108">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="70d99-109">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="70d99-109">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

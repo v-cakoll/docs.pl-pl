@@ -17,22 +17,23 @@ caps.latest.revision: "70"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4ad42bc9d6a2b925ab6724acb61e345ca2ba4223
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 918afb4ada6d47824cfa5184e4071ba4dbac06f2
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="flow-content"></a><span data-ttu-id="0e13c-102">Zawartość przepływu</span><span class="sxs-lookup"><span data-stu-id="0e13c-102">Flow Content</span></span>
-<span data-ttu-id="0e13c-103">Elementy zawartości przepływu zawiera bloki konstrukcyjne do tworzenia zawartość śródwierszowa odpowiedni w przypadku hostowania w <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="0e13c-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
+# <a name="flow-content"></a><span data-ttu-id="2c439-102">Zawartość przepływu</span><span class="sxs-lookup"><span data-stu-id="2c439-102">Flow Content</span></span>
+<span data-ttu-id="2c439-103">Elementy zawartości przepływu zawiera bloki konstrukcyjne do tworzenia zawartość śródwierszowa odpowiedni w przypadku hostowania w <xref:System.Windows.Documents.FlowDocument>.</span><span class="sxs-lookup"><span data-stu-id="2c439-103">Flow content elements provide the building blocks for creating flow content suitable for hosting in a <xref:System.Windows.Documents.FlowDocument>.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="0e13c-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="0e13c-104">In This Section</span></span>  
- [<span data-ttu-id="0e13c-105">Przepływ dokumentami — omówienie</span><span class="sxs-lookup"><span data-stu-id="0e13c-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [<span data-ttu-id="0e13c-106">Omówienie modelu zawartości elementu TextElement</span><span class="sxs-lookup"><span data-stu-id="0e13c-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [<span data-ttu-id="0e13c-107">Przegląd tabeli</span><span class="sxs-lookup"><span data-stu-id="0e13c-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [<span data-ttu-id="0e13c-108">Tematy porad</span><span class="sxs-lookup"><span data-stu-id="0e13c-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2c439-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="2c439-104">In This Section</span></span>  
+ [<span data-ttu-id="2c439-105">Przegląd dokumentu przepływu</span><span class="sxs-lookup"><span data-stu-id="2c439-105">Flow Document Overview</span></span>](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
+ [<span data-ttu-id="2c439-106">Przegląd modelu zawartości TextElement</span><span class="sxs-lookup"><span data-stu-id="2c439-106">TextElement Content Model Overview</span></span>](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
+ [<span data-ttu-id="2c439-107">Przegląd tabeli</span><span class="sxs-lookup"><span data-stu-id="2c439-107">Table Overview</span></span>](../../../../docs/framework/wpf/advanced/table-overview.md)  
+ [<span data-ttu-id="2c439-108">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="2c439-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="0e13c-109">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="0e13c-109">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2c439-109">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="2c439-109">Reference</span></span>  
  <xref:System.Windows.Documents.FlowDocument>  
   <xref:System.Windows.Documents.Block>  
   <xref:System.Windows.Documents.List>  
@@ -47,5 +48,5 @@ ms.lasthandoff: 10/22/2017
   <xref:System.Windows.Documents.Span>  
   <xref:System.Windows.Documents.ListItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="0e13c-110">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="0e13c-110">Related Sections</span></span>  
- [<span data-ttu-id="0e13c-111">Dokumentów na platformie WPF</span><span class="sxs-lookup"><span data-stu-id="0e13c-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="related-sections"></a><span data-ttu-id="2c439-110">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="2c439-110">Related Sections</span></span>  
+ [<span data-ttu-id="2c439-111">Dokumenty w WPF</span><span class="sxs-lookup"><span data-stu-id="2c439-111">Documents in WPF</span></span>](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)

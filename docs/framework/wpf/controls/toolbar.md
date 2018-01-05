@@ -17,29 +17,30 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 6bc69beef04b41cda6baaab0f74d90bf5c5a78d8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: 497687eef2d31260f9eaf8cfbf2e9eb0441fcfbf
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="toolbar"></a><span data-ttu-id="1a96a-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="1a96a-102">ToolBar</span></span>
-<span data-ttu-id="1a96a-103"><xref:System.Windows.Controls.ToolBar> Formant jest kontenerem dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="1a96a-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
+# <a name="toolbar"></a><span data-ttu-id="c18ec-102">ToolBar</span><span class="sxs-lookup"><span data-stu-id="c18ec-102">ToolBar</span></span>
+<span data-ttu-id="c18ec-103"><xref:System.Windows.Controls.ToolBar> Formant jest kontenerem dla grupy poleceń lub kontrolek, które zwykle są związane z ich funkcji.</span><span class="sxs-lookup"><span data-stu-id="c18ec-103">The <xref:System.Windows.Controls.ToolBar> control is a container for a group of commands or controls that are typically related in their function.</span></span>  
   
- <span data-ttu-id="1a96a-104">Na poniższych ilustracjach przedstawiono poziome i pionowe <xref:System.Windows.Controls.ToolBar> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="1a96a-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
+ <span data-ttu-id="c18ec-104">Na poniższych ilustracjach przedstawiono poziome i pionowe <xref:System.Windows.Controls.ToolBar> kontrolki.</span><span class="sxs-lookup"><span data-stu-id="c18ec-104">The following illustrations show horizontal and vertical <xref:System.Windows.Controls.ToolBar> controls.</span></span>  
   
- <span data-ttu-id="1a96a-105">![Poziomym pasku narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="1a96a-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
-<span data-ttu-id="1a96a-106">Poziomy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="1a96a-106">Horizontal Toolbar</span></span>  
+ <span data-ttu-id="c18ec-105">![Poziomym pasku narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span><span class="sxs-lookup"><span data-stu-id="c18ec-105">![Horizontal ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-horztoolbar.GIF "SS_CTL_horztoolbar")</span></span>  
+<span data-ttu-id="c18ec-106">Poziomy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="c18ec-106">Horizontal Toolbar</span></span>  
   
- <span data-ttu-id="1a96a-107">![Pionowy pasek narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="1a96a-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
-<span data-ttu-id="1a96a-108">Pionowy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="1a96a-108">Vertical Toolbar</span></span>  
+ <span data-ttu-id="c18ec-107">![Pionowy pasek narzędzi](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span><span class="sxs-lookup"><span data-stu-id="c18ec-107">![Vertical ToolBar](../../../../docs/framework/wpf/controls/media/ss-ctl-verttoolbar.GIF "SS_CTL_verttoolbar")</span></span>  
+<span data-ttu-id="c18ec-108">Pionowy pasek narzędzi</span><span class="sxs-lookup"><span data-stu-id="c18ec-108">Vertical Toolbar</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="1a96a-109">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="1a96a-109">In This Section</span></span>  
- [<span data-ttu-id="1a96a-110">ToolBar — informacje</span><span class="sxs-lookup"><span data-stu-id="1a96a-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
-  [<span data-ttu-id="1a96a-111">Styl formantu paska narzędzi</span><span class="sxs-lookup"><span data-stu-id="1a96a-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
+## <a name="in-this-section"></a><span data-ttu-id="c18ec-109">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c18ec-109">In This Section</span></span>  
+ [<span data-ttu-id="c18ec-110">ToolBar — omówienie</span><span class="sxs-lookup"><span data-stu-id="c18ec-110">ToolBar Overview</span></span>](../../../../docs/framework/wpf/controls/toolbar-overview.md)  
+  [<span data-ttu-id="c18ec-111">Kontrolki stylu na pasku ToolBar</span><span class="sxs-lookup"><span data-stu-id="c18ec-111">Style Controls on a ToolBar</span></span>](../../../../docs/framework/wpf/controls/how-to-style-controls-on-a-toolbar.md)  
   
-## <a name="reference"></a><span data-ttu-id="1a96a-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="1a96a-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="c18ec-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c18ec-112">Reference</span></span>  
  <xref:System.Windows.Controls.ToolBar>  
   <xref:System.Windows.Controls.ToolBarTray>  
   
-## <a name="related-sections"></a><span data-ttu-id="1a96a-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="1a96a-113">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="c18ec-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="c18ec-113">Related Sections</span></span>

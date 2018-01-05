@@ -17,25 +17,26 @@ caps.latest.revision: "63"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 4288c2d9847edb38cec4d79e73ea713d3ab031f3
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 50820c87948fa9e1d81126a00b1b989e01242303
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="grid-how-to-topics"></a><span data-ttu-id="937e4-102">Siatka Tematy porad</span><span class="sxs-lookup"><span data-stu-id="937e4-102">Grid How-to Topics</span></span>
-<span data-ttu-id="937e4-103">W tematach w tej sekcji opisano położenie elementów za pomocą <xref:System.Windows.Controls.Grid> elementu.</span><span class="sxs-lookup"><span data-stu-id="937e4-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
+# <a name="grid-how-to-topics"></a><span data-ttu-id="d2319-102">Siatka Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d2319-102">Grid How-to Topics</span></span>
+<span data-ttu-id="d2319-103">W tematach w tej sekcji opisano położenie elementów za pomocą <xref:System.Windows.Controls.Grid> elementu.</span><span class="sxs-lookup"><span data-stu-id="d2319-103">The topics in this section describe how to position elements using the <xref:System.Windows.Controls.Grid> element.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="937e4-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="937e4-104">In This Section</span></span>  
- [<span data-ttu-id="937e4-105">Utworzyć okno dialogowe standardowego interfejsu użytkownika przy użyciu siatki</span><span class="sxs-lookup"><span data-stu-id="937e4-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [<span data-ttu-id="937e4-106">Tworzenie złożonych siatki</span><span class="sxs-lookup"><span data-stu-id="937e4-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [<span data-ttu-id="937e4-107">Tworzenie elementu siatki</span><span class="sxs-lookup"><span data-stu-id="937e4-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [<span data-ttu-id="937e4-108">Tworzenie i używanie obiektu GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="937e4-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [<span data-ttu-id="937e4-109">Manipulowanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="937e4-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [<span data-ttu-id="937e4-110">Położenie elementów podrzędnych siatki</span><span class="sxs-lookup"><span data-stu-id="937e4-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [<span data-ttu-id="937e4-111">Udostępnianie zmiany rozmiaru właściwości między siatki</span><span class="sxs-lookup"><span data-stu-id="937e4-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d2319-104">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d2319-104">In This Section</span></span>  
+ [<span data-ttu-id="d2319-105">Tworzenie standardowego okna dialogowego interfejsu użytkownika przy użyciu siatki</span><span class="sxs-lookup"><span data-stu-id="d2319-105">Build a Standard UI Dialog Box by Using Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [<span data-ttu-id="d2319-106">Tworzenie siatki złożonej</span><span class="sxs-lookup"><span data-stu-id="d2319-106">Create a Complex Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
+ [<span data-ttu-id="d2319-107">Tworzenie elementu siatki</span><span class="sxs-lookup"><span data-stu-id="d2319-107">Create a Grid Element</span></span>](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
+ [<span data-ttu-id="d2319-108">Tworzenie i używanie obiektu GridLengthConverter</span><span class="sxs-lookup"><span data-stu-id="d2319-108">Create and Use a GridLengthConverter Object</span></span>](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [<span data-ttu-id="d2319-109">Zarządzanie kolumnami i wierszami przy użyciu ColumnDefinitionsCollections i RowDefinitionsCollections</span><span class="sxs-lookup"><span data-stu-id="d2319-109">Manipulate Columns and Rows by Using ColumnDefinitionsCollections and RowDefinitionsCollections</span></span>](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [<span data-ttu-id="d2319-110">Ustawianie położenia elementów podrzędnych siatki</span><span class="sxs-lookup"><span data-stu-id="d2319-110">Position the Child Elements of a Grid</span></span>](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
+ [<span data-ttu-id="d2319-111">Udostępnianie właściwości ustalania rozmiaru między siatkami</span><span class="sxs-lookup"><span data-stu-id="d2319-111">Share Sizing Properties Between Grids</span></span>](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
   
-## <a name="reference"></a><span data-ttu-id="937e4-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="937e4-112">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d2319-112">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d2319-112">Reference</span></span>  
  <xref:System.Windows.Controls.Panel>  
   
  <xref:System.Windows.Controls.Canvas>  
@@ -50,9 +51,9 @@ ms.lasthandoff: 10/22/2017
   
  <xref:System.Windows.Controls.WrapPanel>  
   
-## <a name="related-sections"></a><span data-ttu-id="937e4-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="937e4-113">Related Sections</span></span>  
- [<span data-ttu-id="937e4-114">Układ</span><span class="sxs-lookup"><span data-stu-id="937e4-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
+## <a name="related-sections"></a><span data-ttu-id="d2319-113">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d2319-113">Related Sections</span></span>  
+ [<span data-ttu-id="d2319-114">Układ</span><span class="sxs-lookup"><span data-stu-id="d2319-114">Layout</span></span>](../../../../docs/framework/wpf/advanced/layout.md)  
   
- [<span data-ttu-id="937e4-115">Wskazówki: Pierwszy WPF pulpitu aplikację</span><span class="sxs-lookup"><span data-stu-id="937e4-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [<span data-ttu-id="d2319-115">Przewodnik: moja pierwsza aplikacja klasyczna WPF</span><span class="sxs-lookup"><span data-stu-id="d2319-115">Walkthrough: My first WPF desktop application</span></span>](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [<span data-ttu-id="937e4-116">Omówienie ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="937e4-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [<span data-ttu-id="d2319-116">ScrollViewer — omówienie</span><span class="sxs-lookup"><span data-stu-id="d2319-116">ScrollViewer Overview</span></span>](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)

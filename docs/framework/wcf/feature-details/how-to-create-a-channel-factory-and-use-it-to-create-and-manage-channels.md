@@ -13,19 +13,20 @@ caps.latest.revision: "4"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 2fb471a0d91c350bf5df320b8f2ea3b32e74d9ab
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: d41dfc85df1b706028fd95465596a980c040d512
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a><span data-ttu-id="f7325-102">Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi</span><span class="sxs-lookup"><span data-stu-id="f7325-102">How to: Create a Channel Factory and Use it to Create and Manage Channels</span></span>
-<span data-ttu-id="f7325-103"><xref:System.ServiceModel.DuplexChannelFactory%601> Klasa umożliwia tworzenie i zarządzanie nimi kanałach dupleksowych różnych typów używanych przez klientów do wysyłania i odbierania wiadomości do i z punktów końcowych usługi.</span><span class="sxs-lookup"><span data-stu-id="f7325-103">The <xref:System.ServiceModel.DuplexChannelFactory%601> class provides the means to create and manage duplex channels of different types that clients use to send and receive messages to and from service endpoints.</span></span>  
+# <a name="how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels"></a><span data-ttu-id="7a930-102">Instrukcje: Tworzenie fabryki kanałów i używanie jej do tworzenia kanałów oraz zarządzania nimi</span><span class="sxs-lookup"><span data-stu-id="7a930-102">How to: Create a Channel Factory and Use it to Create and Manage Channels</span></span>
+<span data-ttu-id="7a930-103"><xref:System.ServiceModel.DuplexChannelFactory%601> Klasa umożliwia tworzenie i zarządzanie nimi kanałach dupleksowych różnych typów używanych przez klientów do wysyłania i odbierania wiadomości do i z punktów końcowych usługi.</span><span class="sxs-lookup"><span data-stu-id="7a930-103">The <xref:System.ServiceModel.DuplexChannelFactory%601> class provides the means to create and manage duplex channels of different types that clients use to send and receive messages to and from service endpoints.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7325-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="f7325-104">Example</span></span>  
- <span data-ttu-id="f7325-105">Poniższy kod przedstawia sposób utworzyć fabryki kanałów i użyć go do tworzenia i zarządzania kanałów.</span><span class="sxs-lookup"><span data-stu-id="f7325-105">The following code shows how to create a channel factory and use it to create and manage channels.</span></span>  
+## <a name="example"></a><span data-ttu-id="7a930-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="7a930-104">Example</span></span>  
+ <span data-ttu-id="7a930-105">Poniższy kod przedstawia sposób utworzyć fabryki kanałów i użyć go do tworzenia i zarządzania kanałów.</span><span class="sxs-lookup"><span data-stu-id="7a930-105">The following code shows how to create a channel factory and use it to create and manage channels.</span></span>  
   
  [!code-csharp[S_CustomAuthentication#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_customauthentication/cs/instance.cs#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f7325-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="f7325-106">See Also</span></span>  
+## <a name="see-also"></a><span data-ttu-id="7a930-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="7a930-106">See Also</span></span>  
  <xref:System.ServiceModel.DuplexChannelFactory%601>

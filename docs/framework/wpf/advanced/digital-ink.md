@@ -17,18 +17,19 @@ caps.latest.revision: "39"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b0c283c58f2c39087c3d08b235b9056040971330
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 395d1a8d0536445cc1bcbc33b13d40c2bfc27fc8
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="digital-ink"></a><span data-ttu-id="d55eb-102">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="d55eb-102">Digital Ink</span></span>
-<span data-ttu-id="d55eb-103">W tej sekcji omówiono używanie elektroniczne pismo odręczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="d55eb-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="d55eb-104">Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, elektroniczne pismo odręczne jest teraz dostępna w podstawowej Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="d55eb-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="d55eb-105">Oznacza to, że pełni funkcjonalnymi aplikacje komputerów typu Tablet można teraz tworzyć przy użyciu możliwości Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="d55eb-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
+# <a name="digital-ink"></a><span data-ttu-id="cd653-102">Cyfrowy atrament</span><span class="sxs-lookup"><span data-stu-id="cd653-102">Digital Ink</span></span>
+<span data-ttu-id="cd653-103">W tej sekcji omówiono używanie elektroniczne pismo odręczne w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span><span class="sxs-lookup"><span data-stu-id="cd653-103">This section discusses the use of digital ink in the [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].</span></span> <span data-ttu-id="cd653-104">Tradycyjnie znalezione tylko w zestawie SDK komputerze typu Tablet, elektroniczne pismo odręczne jest teraz dostępna w podstawowej Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="cd653-104">Traditionally found only in the Tablet PC SDK, digital ink is now available in the core Windows Presentation Foundation.</span></span> <span data-ttu-id="cd653-105">Oznacza to, że pełni funkcjonalnymi aplikacje komputerów typu Tablet można teraz tworzyć przy użyciu możliwości Windows Presentation Foundation.</span><span class="sxs-lookup"><span data-stu-id="cd653-105">This means you can now develop full-fledged Tablet PC applications by using the power of Windows Presentation Foundation.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="d55eb-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="d55eb-106">In This Section</span></span>  
- [<span data-ttu-id="d55eb-107">Omówienie</span><span class="sxs-lookup"><span data-stu-id="d55eb-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
-  [<span data-ttu-id="d55eb-108">Tematy porad</span><span class="sxs-lookup"><span data-stu-id="d55eb-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="cd653-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="cd653-106">In This Section</span></span>  
+ [<span data-ttu-id="cd653-107">Omówienia</span><span class="sxs-lookup"><span data-stu-id="cd653-107">Overviews</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-overviews.md)  
+  [<span data-ttu-id="cd653-108">Tematy z instrukcjami</span><span class="sxs-lookup"><span data-stu-id="cd653-108">How-to Topics</span></span>](../../../../docs/framework/wpf/advanced/digital-ink-how-to-topics.md)  
   
-## <a name="related-sections"></a><span data-ttu-id="d55eb-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d55eb-109">Related Sections</span></span>  
- [<span data-ttu-id="d55eb-110">Program Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="d55eb-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)
+## <a name="related-sections"></a><span data-ttu-id="cd653-109">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="cd653-109">Related Sections</span></span>  
+ [<span data-ttu-id="cd653-110">Windows Presentation Foundation</span><span class="sxs-lookup"><span data-stu-id="cd653-110">Windows Presentation Foundation</span></span>](../../../../docs/framework/wpf/index.md)

@@ -23,17 +23,18 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: b68936ed83a61fc6d4c80408bd055c0eb05e030d
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 6109a45f885a6a94a5785329d10bce52a0090802
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="1f298-102">Porady: zatrzymać ładowanie strony</span><span class="sxs-lookup"><span data-stu-id="1f298-102">How to: Stop a Page from Loading</span></span>
-<span data-ttu-id="1f298-103">W tym przykładzie przedstawiono sposób wywoływania <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> metodę, aby zatrzymać nawigacji do zawartości, zanim zakończyło się w trakcie pobierania.</span><span class="sxs-lookup"><span data-stu-id="1f298-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  
+# <a name="how-to-stop-a-page-from-loading"></a><span data-ttu-id="5326a-102">Porady: zatrzymać ładowanie strony</span><span class="sxs-lookup"><span data-stu-id="5326a-102">How to: Stop a Page from Loading</span></span>
+<span data-ttu-id="5326a-103">W tym przykładzie przedstawiono sposób wywoływania <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> metodę, aby zatrzymać nawigacji do zawartości, zanim zakończyło się w trakcie pobierania.</span><span class="sxs-lookup"><span data-stu-id="5326a-103">This example shows how to call the <xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> method to stop navigation to content before it has finished being downloaded.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1f298-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="1f298-104">Example</span></span>  
- <span data-ttu-id="1f298-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>Zatrzymuje pobieranie żądanej zawartości i powoduje, że <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> się zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="1f298-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> stops the download of the requested content, and causes the <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> event to be raised.</span></span>  
+## <a name="example"></a><span data-ttu-id="5326a-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="5326a-104">Example</span></span>  
+ <span data-ttu-id="5326a-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>Zatrzymuje pobieranie żądanej zawartości i powoduje, że <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> się zdarzenia.</span><span class="sxs-lookup"><span data-stu-id="5326a-105"><xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A> stops the download of the requested content, and causes the <xref:System.Windows.Navigation.NavigationWindow.NavigationStopped> event to be raised.</span></span>  
   
  [!code-csharp[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/MainWindow.xaml.cs#navigatestoploadingcode)]
  [!code-vb[HOWTONavigationSnippets#NavigateStopLoadingCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/mainwindow.xaml.vb#navigatestoploadingcode)]

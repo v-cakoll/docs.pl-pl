@@ -17,22 +17,23 @@ caps.latest.revision: "65"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: eed0485fd823caea1f332262edd9bcd8817bc31a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload: dotnet
+ms.openlocfilehash: cc7e81e3735baff267b09ae59b80f53f80170354
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="tabcontrol"></a><span data-ttu-id="d7ee6-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="d7ee6-102">TabControl</span></span>
-<span data-ttu-id="d7ee6-103"><xref:System.Windows.Controls.TabControl>elementy wyświetlać zawartość na stronach odrębny dostępny po wybraniu odpowiedniej karty. Każda karta zawiera <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="d7ee6-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
+# <a name="tabcontrol"></a><span data-ttu-id="8467f-102">TabControl</span><span class="sxs-lookup"><span data-stu-id="8467f-102">TabControl</span></span>
+<span data-ttu-id="8467f-103"><xref:System.Windows.Controls.TabControl>elementy wyświetlać zawartość na stronach odrębny dostępny po wybraniu odpowiedniej karty. Każda karta zawiera <xref:System.Windows.Controls.TabItem>.</span><span class="sxs-lookup"><span data-stu-id="8467f-103"><xref:System.Windows.Controls.TabControl> elements display content on discrete pages accessed by selecting the appropriate tab. Each tab contains a <xref:System.Windows.Controls.TabItem>.</span></span>  
   
- <span data-ttu-id="d7ee6-104">Na poniższej ilustracji pokazano <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="d7ee6-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
+ <span data-ttu-id="8467f-104">Na poniższej ilustracji pokazano <xref:System.Windows.Controls.TabControl>.</span><span class="sxs-lookup"><span data-stu-id="8467f-104">The following illustration shows a <xref:System.Windows.Controls.TabControl>.</span></span>  
   
- <span data-ttu-id="d7ee6-105">![Karta sterowania](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="d7ee6-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
-<span data-ttu-id="d7ee6-106">TabControl — typowe</span><span class="sxs-lookup"><span data-stu-id="d7ee6-106">Typical TabControl</span></span>  
+ <span data-ttu-id="8467f-105">![Karta sterowania](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span><span class="sxs-lookup"><span data-stu-id="8467f-105">![Tab control](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")</span></span>  
+<span data-ttu-id="8467f-106">TabControl — typowe</span><span class="sxs-lookup"><span data-stu-id="8467f-106">Typical TabControl</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="d7ee6-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="d7ee6-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="8467f-107">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="8467f-107">Reference</span></span>  
  <xref:System.Windows.Controls.TabControl>  
   <xref:System.Windows.Controls.TabItem>  
   
-## <a name="related-sections"></a><span data-ttu-id="d7ee6-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="d7ee6-108">Related Sections</span></span>
+## <a name="related-sections"></a><span data-ttu-id="8467f-108">Sekcje pokrewne</span><span class="sxs-lookup"><span data-stu-id="8467f-108">Related Sections</span></span>

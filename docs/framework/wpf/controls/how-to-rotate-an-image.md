@@ -19,16 +19,17 @@ caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: c8b30b09aeb39123776ba5b0c27ae4ac3b062631
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.workload: dotnet
+ms.openlocfilehash: 565f0fa2dd81237fae11a3d872238faff09f3d23
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="how-to-rotate-an-image"></a><span data-ttu-id="92b60-102">Jak obrócić obraz</span><span class="sxs-lookup"><span data-stu-id="92b60-102">How to: Rotate an Image</span></span>
-<span data-ttu-id="92b60-103">W tym przykładzie pokazano, jak obrót o 90 stopni obrazu przy użyciu <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> właściwość <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="92b60-103">This example shows how to rotate an image 90 degrees by using a <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  
+# <a name="how-to-rotate-an-image"></a><span data-ttu-id="50672-102">Jak obrócić obraz</span><span class="sxs-lookup"><span data-stu-id="50672-102">How to: Rotate an Image</span></span>
+<span data-ttu-id="50672-103">W tym przykładzie pokazano, jak obrót o 90 stopni obrazu przy użyciu <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> właściwość <xref:System.Windows.Media.Imaging.BitmapImage>.</span><span class="sxs-lookup"><span data-stu-id="50672-103">This example shows how to rotate an image 90 degrees by using a <xref:System.Windows.Media.Imaging.BitmapImage.Rotation%2A> property of a <xref:System.Windows.Media.Imaging.BitmapImage>.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="92b60-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="92b60-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="50672-104">Przykład</span><span class="sxs-lookup"><span data-stu-id="50672-104">Example</span></span>  
  [!code-xaml[ImageElementExample_snip#TransformedXAML2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml#transformedxaml2)]  
   
  [!code-csharp[ImageElementExample_snip#TransformedCSharp1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/TransformedImageExample.xaml.cs#transformedcsharp1)]

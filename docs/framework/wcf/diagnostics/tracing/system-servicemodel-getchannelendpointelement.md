@@ -13,19 +13,20 @@ caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.openlocfilehash: 02cd16ef72f3e5ee7560e28a89d5de2078e83ecb
-ms.sourcegitcommit: ce279f2d7fe2220e6ea0a25a8a7a5370ddf8d9f0
+ms.workload: dotnet
+ms.openlocfilehash: 22b38c64c1f67543d1d07d5c503cdf45862e9c19
+ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/02/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="systemservicemodelgetchannelendpointelement"></a><span data-ttu-id="9664b-102">System.ServiceModel.GetChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="9664b-102">System.ServiceModel.GetChannelEndpointElement</span></span>
-<span data-ttu-id="9664b-103">System.ServiceModel.GetChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="9664b-103">System.ServiceModel.GetChannelEndpointElement</span></span>  
+# <a name="systemservicemodelgetchannelendpointelement"></a><span data-ttu-id="a9e64-102">System.ServiceModel.GetChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="a9e64-102">System.ServiceModel.GetChannelEndpointElement</span></span>
+<span data-ttu-id="a9e64-103">System.ServiceModel.GetChannelEndpointElement</span><span class="sxs-lookup"><span data-stu-id="a9e64-103">System.ServiceModel.GetChannelEndpointElement</span></span>  
   
-## <a name="description"></a><span data-ttu-id="9664b-104">Opis</span><span class="sxs-lookup"><span data-stu-id="9664b-104">Description</span></span>  
- <span data-ttu-id="9664b-105">Ślad jest emitowany podczas konstruowania fabryki kanałów, na poziomie informacji.</span><span class="sxs-lookup"><span data-stu-id="9664b-105">This trace is emitted when constructing a channel factory, at information level.</span></span> <span data-ttu-id="9664b-106">Zawiera on opis punktu końcowego, który rozmawia klient (na przykład adres zdalny, powiązanie, Nazwa kontraktu).</span><span class="sxs-lookup"><span data-stu-id="9664b-106">It provides a description of the endpoint the client is talking to (for example, remote address, binding, contract name).</span></span>  
+## <a name="description"></a><span data-ttu-id="a9e64-104">Opis</span><span class="sxs-lookup"><span data-stu-id="a9e64-104">Description</span></span>  
+ <span data-ttu-id="a9e64-105">Ślad jest emitowany podczas konstruowania fabryki kanałów, na poziomie informacji.</span><span class="sxs-lookup"><span data-stu-id="a9e64-105">This trace is emitted when constructing a channel factory, at information level.</span></span> <span data-ttu-id="a9e64-106">Zawiera on opis punktu końcowego, który rozmawia klient (na przykład adres zdalny, powiązanie, Nazwa kontraktu).</span><span class="sxs-lookup"><span data-stu-id="a9e64-106">It provides a description of the endpoint the client is talking to (for example, remote address, binding, contract name).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9664b-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9664b-107">See Also</span></span>  
- [<span data-ttu-id="9664b-108">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="9664b-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [<span data-ttu-id="9664b-109">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="9664b-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [<span data-ttu-id="9664b-110">Administracja i Diagnostyka</span><span class="sxs-lookup"><span data-stu-id="9664b-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="a9e64-107">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="a9e64-107">See Also</span></span>  
+ [<span data-ttu-id="a9e64-108">Śledzenie</span><span class="sxs-lookup"><span data-stu-id="a9e64-108">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
+ [<span data-ttu-id="a9e64-109">Rozwiązywanie problemów z aplikacją za pomocą śledzenia</span><span class="sxs-lookup"><span data-stu-id="a9e64-109">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [<span data-ttu-id="a9e64-110">Administracja i diagnostyka</span><span class="sxs-lookup"><span data-stu-id="a9e64-110">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

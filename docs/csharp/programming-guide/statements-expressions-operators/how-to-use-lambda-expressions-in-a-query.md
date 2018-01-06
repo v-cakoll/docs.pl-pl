@@ -9,17 +9,17 @@ ms.assetid: 3cac4d25-d11f-4abd-9e7c-0f02e97ae06d
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ccc94b1932336ff4a6b1787304846114869400e3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 279d76aa29f27d35bc907d6779a146a23c7e162a
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="how-to-use-lambda-expressions-in-a-query-c-programming-guide"></a>Porady: użycie wyrażeń lambda w kwerendzie (Przewodnik programowania w języku C#)
 Wyrażenia lambda nie należy używać bezpośrednio w składni zapytania, ale ich używać w wywołaniach metody i wyrażenia zapytania może zawierać wywołania metody. W rzeczywistości niektóre operacje zapytań może być wyrażona w składni metody. Aby uzyskać więcej informacji na temat różnic między składnia zapytania a składnia metody, zobacz [składnia zapytania a składnia metody w technologii LINQ](../../../csharp/programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md).  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak używać wyrażenia lambda w kwerendzie oparte na metodzie przy użyciu <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> — operator zapytań standardowa. Należy pamiętać, że <xref:System.Linq.Enumerable.Where%2A> metoda w tym przykładzie ma parametru wejściowego typu obiektu delegowanego <xref:System.Func%601> i ten delegat przyjmuje jako dane wejściowe typu integer i zwraca wartość logiczną. Wyrażenie lambda, może zostać przekonwertowany do tego obiektu delegowanego. Jeżeli [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] zapytania używanego <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> metoda, typ parametru byłaby `Expression<Func\<int,bool>>` , ale wyrażenie lambda będzie wyglądać dokładnie. Aby uzyskać więcej informacji na typ wyrażenia, zobacz <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
+ W poniższym przykładzie pokazano, jak używać wyrażenia lambda w kwerendzie oparte na metodzie przy użyciu <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> — operator zapytań standardowa. Należy pamiętać, że <xref:System.Linq.Enumerable.Where%2A> metoda w tym przykładzie ma parametru wejściowego typu obiektu delegowanego <xref:System.Func%601> i ten delegat przyjmuje jako dane wejściowe typu integer i zwraca wartość logiczną. Wyrażenie lambda, może zostać przekonwertowany do tego obiektu delegowanego. Jeżeli [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] zapytania używanego <xref:System.Linq.Queryable.Where%2A?displayProperty=nameWithType> metoda, typ parametru byłaby `Expression<Func<int,bool>>` , ale wyrażenie lambda będzie wyglądać dokładnie. Aby uzyskać więcej informacji na typ wyrażenia, zobacz <xref:System.Linq.Expressions.Expression?displayProperty=nameWithType>.  
   
  [!code-csharp[csProgGuideLINQ#1](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-use-lambda-expressions-in-a-query_1.cs)]  
   

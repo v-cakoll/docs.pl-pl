@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 90edda252c33b6f07c795b8db1a0edaf1a688445
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 404fdece284accf305ef3cf2324be2e37a8da4b6
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="implementing-a-dispose-method"></a>Implementacja metody Dispose
 
@@ -117,7 +117,7 @@ Poniżej przedstawiono ogólne wzorca w zakresie implementacji wzorca dispose dl
 
 Klasą pochodną klasy, która implementuje <xref:System.IDisposable> nie powinny implementować interfejs <xref:System.IDisposable>, ponieważ Implementacja klasy podstawowej <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> jest dziedziczona przez jej klas pochodnych. Tak więc, aby zaimplementować wzorzec usuwania dla klasy pochodnej, należy dostarczyć następujące elementy:  
   
-* A `protected``Dispose(Boolean)` metodę, która zastępuje metodę klasy podstawowej i wykonuje faktyczną pracę zwolnienie zasobów klasy pochodnej. Tej metody należy także wywołać `Dispose(Boolean)` metody podstawowej klasy i przekaż go wartość `true` dla *disposing* argumentu.  
+* A `protected Dispose(Boolean)` metodę, która zastępuje metodę klasy podstawowej i wykonuje faktyczną pracę zwolnienie zasobów klasy pochodnej. Tej metody należy także wywołać `Dispose(Boolean)` metody podstawowej klasy i przekaż go wartość `true` dla *disposing* argumentu.  
   
 * Każda klasa pochodzi od <xref:System.Runtime.InteropServices.SafeHandle> który opakowuje niezarządzanego zasobu (zalecane) lub zastąpienie <xref:System.Object.Finalize%2A?displayProperty=nameWithType> metody. <xref:System.Runtime.InteropServices.SafeHandle> Klasa udostępnia finalizatorze zwalnia z konieczności kodu. Jeśli podasz finalizator powinny wywoływać `Dispose(Boolean)` przeciążenia z *disposing* argument `false`.  
   

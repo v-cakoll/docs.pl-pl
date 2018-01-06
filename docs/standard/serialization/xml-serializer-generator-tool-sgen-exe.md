@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 005e78c32d49c8c1b204a3ac9376d943311868fd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0e2f268dc2ab1e2aebe2f51d733a59bd093329d5
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>Narzędzie generowania serializatora XML (Sgen.exe)
 Generator serializatora XML tworzy zestawu serializacji XML dla typów w określonym zestawie w celu zwiększenia wydajności uruchamiania <xref:System.Xml.Serialization.XmlSerializer> po serializuje lub deserializuje obiektów określonego typu.  
@@ -50,7 +50,7 @@ sgen [options]
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Gdy Generator serializatora XML nie jest używany, <xref:System.Xml.Serialization.XmlSerializer> generuje kodu serializacji i zestawu serializacji dla każdego typu w każdym uruchomieniu aplikacji. Aby zwiększyć wydajność uruchamiania serializacji XML, narzędzie Sgen.exe do generowania te zestawy zestawy z wyprzedzeniem. Następnie można wdrożyć te zestawy z aplikacją.  
+ Gdy Generator serializatora XML nie jest używany, <xref:System.Xml.Serialization.XmlSerializer> generuje kodu serializacji i zestawu serializacji dla każdego typu w każdym uruchomieniu aplikacji. Aby poprawić wydajność uruchamiania serializacji XML, należy użyć narzędzia Sgen.exe do wygenerowania tych zestawów z wyprzedzeniem. Następnie można wdrożyć te zestawy z aplikacją.  
   
  Generator serializatora XML może również zwiększyć wydajność klientów korzystających z serwerów proxy usług sieci Web XML do komunikowania się z serwerami, ponieważ ten proces serializacji nie będą powodować wydajności trafień, gdy typ jest ładowany po raz pierwszy.  
   

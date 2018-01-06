@@ -1,5 +1,5 @@
 ---
-title: Zestaw SDK platformy kompilatora .NET | Dokumentacja firmy Microsoft
+title: Platforma kompilatora .NET SDK (Roslyn API)
 description: "Dowiedz się na potrzeby .NET SDK platformy kompilatora (nazywanych również interfejsy API Roslyn) zrozumieć kodu platformy .NET, wykrywać błędy i Rozwiąż te błędy."
 keywords: roslyn, analizator, poprawki kodu
 author: billwagner
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 01553376cbfbcbafb74c836ea632342e23dfba0e
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 8bebb739805f28bdc192aef7678e762d0aa51016
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 

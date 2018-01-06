@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 074b5aae9d92b83d310a003e85709a4ba8e40c46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.  
@@ -59,7 +59,7 @@ Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajn
   
  W systemie Windows 8, zobacz [zadań obrazu macierzystego](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
   
- Aby uzyskać dodatkowe informacje na temat używania Ngen.exe i usługę obrazu macierzystego, zobacz [usługi natywnej obrazu](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Aby uzyskać dodatkowe informacje na temat używania Ngen.exe i usługę obrazu macierzystego, zobacz [usługi obrazu macierzystego][Native Image Service].  
   
 > [!NOTE]
 >  Składnia ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework, można znaleźć w [składni starszych Generator obrazu natywnego (Ngen.exe)](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
@@ -105,7 +105,7 @@ ngen /? | /help
 |--------------|-----------------|  
 |`1`|Obrazy natywne są generowane i instalowane natychmiast, bez czekania na okres bezczynności.|  
 |`2`|Obrazy natywne są generowane i instalowane bez czekania na okres bezczynności, ale po zakończeniu wszystkich akcji z priorytetem 1 (i ich zależności).|  
-|`3`|Obrazy natywne są instalowane, gdy usługa obrazów natywnych wykryje, że komputer jest w stanie bezczynności. Zobacz [obrazu macierzystego usługi](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).|  
+|`3`|Obrazy natywne są instalowane, gdy usługa obrazów natywnych wykryje, że komputer jest w stanie bezczynności. Zobacz [obrazu macierzystego usługi][Native Image Service].|  
   
 <a name="ScenarioTable"></a>   
 ## <a name="scenarios"></a>Scenariusze  
@@ -322,7 +322,7 @@ using namespace System::Runtime::CompilerServices;
   
 <a name="Deferred"></a>   
 ## <a name="deferred-processing"></a>Przetwarzanie z opóźnieniem  
- Generowanie obrazów natywnych dla bardzo dużych aplikacji może zająć znaczną ilość czasu. Podobnie zmiany składnika współużytkowanego lub zmiany w ustawieniach komputera mogą wymagać aktualizacji wielu obrazów natywnych. `install` i `update` akcji ma `/queue` opcję kolejkuje operację dla odroczonego wykonania przez usługę obrazu macierzystego. Ponadto ma Ngen.exe `queue` i `executeQueuedItems` działania, które zapewniają pewną kontrolę nad usługi. Aby uzyskać więcej informacji, zobacz [usługi natywnej obrazu](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Generowanie obrazów natywnych dla bardzo dużych aplikacji może zająć znaczną ilość czasu. Podobnie zmiany składnika współużytkowanego lub zmiany w ustawieniach komputera mogą wymagać aktualizacji wielu obrazów natywnych. `install` i `update` akcji ma `/queue` opcję kolejkuje operację dla odroczonego wykonania przez usługę obrazu macierzystego. Ponadto ma Ngen.exe `queue` i `executeQueuedItems` działania, które zapewniają pewną kontrolę nad usługi. Aby uzyskać więcej informacji, zobacz [usługi obrazu macierzystego][Native Image Service].  
   
 <a name="JITCompilation"></a>   
 ## <a name="native-images-and-jit-compilation"></a>Obrazy Native i kompilacja JIT  
@@ -384,7 +384,7 @@ using namespace System::Runtime::CompilerServices;
 ### <a name="opting-out-of-native-image-generation"></a>Rezygnacja z generowanie obrazu natywnego  
  W niektórych przypadkach NGen.exe mogą mieć trudności generowania, który obrazu macierzystego dla określonej metody, lub mogą preferować, że metoda być skompilowana w trybie JIT zamiast skompilowanych do obrazu macierzystego. W takim przypadku można użyć `System.Runtime.BypassNGenAttribute` atrybutu, aby zapobiec NGen.exe generowanie obrazu macierzystego dla określonej metody. Atrybut należy zastosować indywidualnie do każdej metody kodu, których nie chcesz dołączyć do obrazu macierzystego. NGen.exe rozpoznaje atrybutu i nie generuje kod w obrazu macierzystego dla odpowiedniej metody.  
   
- Zauważ, że `BypassNGenAttribute` nie jest zdefiniowany jako typ w bibliotece programu .NET Framework klasy. Aby można było korzystać z atrybutu w kodzie, należy najpierw zdefiniować ją w następujący sposób:  
+ Zauważ, że `BypassNGenAttribute` nie jest zdefiniowany jako typ w bibliotece klas programu .NET Framework. Aby można było korzystać z atrybutu w kodzie, należy najpierw zdefiniować ją w następujący sposób:  
   
  [!code-csharp[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/cs/Optout1.cs#1)]
  [!code-vb[System.Runtime.BypassNGenAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/System.Runtime.BypassNGenAttribute/vb/Optout1.vb#1)]  
@@ -479,7 +479,7 @@ ngen display "myAssembly, version=1.0.0.0"
 ngen update  
 ```  
   
- Aktualizacja wszystkich obrazów może być długotrwałym procesem. Można dodać do kolejki aktualizacje do wykonywania przez usługę obrazu macierzystego przy użyciu `/queue` opcji. Aby uzyskać więcej informacji na temat `/queue` priorytetów opcji i instalacji, zobacz [usługi natywnej obrazu](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Aktualizacja wszystkich obrazów może być długotrwałym procesem. Można dodać do kolejki aktualizacje do wykonywania przez usługę obrazu macierzystego przy użyciu `/queue` opcji. Aby uzyskać więcej informacji na temat `/queue` priorytetów opcji i instalacji, zobacz [usługi obrazu macierzystego][Native Image Service].  
   
 ```  
 ngen update /queue  
@@ -520,7 +520,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
   
  Jak `install` akcja, podając rozszerzenie wymaga albo wykonywania Ngen.exe od katalogu zawierającego zestaw lub określ pełną ścieżkę.  
   
- Przykłady dotyczące obrazu macierzystego usługi można znaleźć [usługi natywnej obrazu](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Przykłady dotyczące obrazu macierzystego usługi można znaleźć [usługi obrazu macierzystego][Native Image Service].  
   
 ## <a name="native-image-task"></a>Obraz macierzysty — zadanie  
  Zadanie obrazu macierzystego jest zadanie systemu Windows, które generuje i obsługuje obrazów macierzystych. Zadanie obrazu macierzystego generuje i zwraca obrazów macierzystych automatycznie dla obsługiwanych scenariuszach. (Zobacz [tworzenia obrazów macierzystych](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Umożliwia również instalatorów do użycia [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów macierzystych odroczonego naraz.  
@@ -532,7 +532,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
 |NET Framework NGEN 4.0.30319|Tak|Tak|  
 |NET Framework NGEN 4.0.30319 64|Nie|Tak|  
   
- Zadanie obrazu macierzystego jest jest dostępna w .NET Framework 4.5 lub nowszy, podczas uruchamiania w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows korzysta z programu .NET Framework [usługi natywnej obrazu](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309).  
+ Zadanie obrazu macierzystego jest jest dostępna w .NET Framework 4.5 lub nowszy, podczas uruchamiania w systemie Windows 8 lub nowszym. We wcześniejszych wersjach systemu Windows korzysta z programu .NET Framework [usługi obrazu macierzystego][Native Image Service].  
   
 ### <a name="task-lifetime"></a>Cykl życia zadania  
  Ogólnie rzecz biorąc harmonogramu zadań systemu Windows uruchamia zadanie obrazu macierzystego, każdej nocy, gdy komputer jest w stanie bezczynności. Zadanie sprawdza, czy odroczonego pracę umieszczonych w kolejce przez programy instalacyjne, żądań aktualizacji odroczonego obrazu macierzystego i tworzenia żadnych obrazów automatycznego. Zadanie kończy zaległych elementów pracy i zamknięcie. Jeśli komputer nie jest bezczynne podczas wykonywania zadania, zatrzymuje zadanie.  
@@ -594,9 +594,9 @@ ngen executeQueuedItems
  W programie .NET Framework w wersji 2.0 tylko interakcji z usługą obrazu macierzystego jest przy użyciu wiersza polecenia narzędzia Ngen.exe. Narzędzie wiersza polecenia w skryptach instalacji do kolejki akcji dla usługi obrazu macierzystego i interakcję z usługą.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługa obrazu macierzystego](http://msdn.microsoft.com/en-us/b15e0e32-59cb-4ae4-967c-6c9527781309)  
- [Zadanie obrazu macierzystego](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb)  
  [Narzędzia](../../../docs/framework/tools/index.md)  
  [Proces zarządzanego wykonania](../../../docs/standard/managed-execution-process.md)  
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+[Native Image Service]: #native-image-service

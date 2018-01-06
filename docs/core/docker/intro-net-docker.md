@@ -13,11 +13,11 @@ ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
 ms.workload: dotnetcore
-ms.openlocfilehash: e5f420df6c5cf4f9d517dd6ce2c6b33d3d3479d1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
+ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/06/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do usług .NET i Docker
 
@@ -42,7 +42,7 @@ Możesz utworzyć własne [warstwie obrazy](https://docs.docker.com/engine/userg
 * [Obrazy usługi Docker Kompilowanie aplikacji .NET Core](../docker/building-net-docker-images.md)
 
 
-### <a name="getting-net-docker-images"></a>Pobieranie obrazy usługi Docker .NET
+### <a name="getting-net-docker-images"></a>Pobieranie obrazy usługi .NET Docker
 
 Obrazy oficjalnego Docker .NET są utworzone i zoptymalizowane przez firmę Microsoft. Są one publicznie dostępne w repozytoria firmy Microsoft w Centrum Docker. Każdego repozytorium może zawierać wiele obrazów, w zależności od wersji platformy .NET, a także w wersjach systemu operacyjnego. Większość repozytoriów obrazu zapewniają szeroką gamę znakowanie ułatwiające wybranie zarówno wersji określonej platformy, jak i systemu operacyjnego (Linux distro lub wersji systemu Windows).
 
@@ -205,4 +205,3 @@ Teraz, kiedy znasz o różnych obrazy usługi Docker i platformy Docker, następ
 
 * [Poznaj podstawy korzystania z platformy Docker z programem .NET Core](docker-basics-dotnet-core.md)
 * [Tworzenie obrazy usługi Docker .NET Core](building-net-docker-images.md)
-\

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: d1000e991a6c07693f2e639ee8f0a386d53a2aae
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 
@@ -40,7 +40,7 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |`&`|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Oblicza adres modyfikowalne wartości do użycia podczas współpracy z innych języków.<br /></li><li>Używane we wzorcach i.<br /></li><ul/>|
 |`&&`|[Operatory logiczne](boolean-operators.md)|<ul><li>Oblicza operacji logicznych i.<br /></li><ul/>|
 |`&&&`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza operacji i.<br /></li><ul/>|
-|`'`|[Literały](../literals.md)<br /><br />[Automatyczna Generalizacja](../generics/automatic-generalization.md)|<ul><li>Rozgranicza literał jednoznakowym.<br /></li><li>Wskazuje parametr typu ogólnego.<br /></li><ul/>|
+|`'`|[Literały](../literals.md)<br /><br />[Automatyczna generalizacja](../generics/automatic-generalization.md)|<ul><li>Rozgranicza literał jednoznakowym.<br /></li><li>Wskazuje parametr typu ogólnego.<br /></li><ul/>|
 |<code>&#96;&#96;...&#96;&#96;</code>|Brak dostępnych informacji więcej.|<ul><li>Rozgranicza identyfikator, który nie byłby identyfikatorem prawne, takie jak słowo kluczowe języka.<br /></li><ul/>|
 |`( )`|[Typ jednostki](../unit-type.md)|<ul><li>Reprezentuje pojedynczą wartość typu jednostki.<br /></li><ul/>|
 |`(...)`|[Krotki](../tuples.md)<br /><br />[Przeładowanie operatora](../operator-overloading.md)|<ul><li>Określa kolejność, w jakiej są oceniane wyrażenia.<br /></li><li>Rozgranicza spójnych kolekcji.<br /></li><li>Używane w definicjach operatora.<br /></li><ul/>|
@@ -62,20 +62,20 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |`/`|[Operatory arytmetyczne](arithmetic-operators.md)<br /><br />[Jednostki miary](../units-of-measure.md)|<ul><li>Dzieli po lewej stronie (licznik) przez po prawej stronie (dzielnik).<br /></li><li>Używane w jednostkach typy miary.<br /></li><ul/>|
 |`/?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Dzieli po lewej stronie przez po prawej stronie, po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |`//`||<ul><li>Wskazuje początek jednowierszowego komentarza.<br /></li><ul/>|
-|`///`|[Plik dokumentacji XML](../xml-documentation.md)|<ul><li>Wskazuje komentarza XML.<br /></li><ul/>|
+|`///`|[Dokumentacja XML](../xml-documentation.md)|<ul><li>Wskazuje komentarza XML.<br /></li><ul/>|
 |`:`|[Funkcje](../functions/index.md)|<ul><li>W adnotację typu oddziela nazwę parametru lub elementu członkowskiego z jego typu.<br /></li><ul/>|
-|`::`|[Wyświetla listę](../lists.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Tworzy listę. Element z lewej strony jest dołączany na początku na liście po prawej stronie.<br /></li><li>Używany w dopasowanie wzorca do rozdzielania części listy.<br /></li><ul/>|
+|`::`|[Listy](../lists.md)<br /><br />[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Tworzy listę. Element z lewej strony jest dołączany na początku na liście po prawej stronie.<br /></li><li>Używany w dopasowanie wzorca do rozdzielania części listy.<br /></li><ul/>|
 |`:=`|[Komórki odwołań](../reference-cells.md)|<ul><li>Przypisuje wartość do komórka odwołania.<br /></li><ul/>|
 |`:>`|[Rzutowanie i konwersje](../casting-and-conversions.md)|<ul><li>Konwertuje typ do typu, który jest wyżej w hierarchii.<br /></li><ul/>|
 |`:?`|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Zwraca `true` Jeśli wartość zgodne z określonym typem; w przeciwnym razie zwraca `false` (operator typu testu).<br /></li><ul/>|
 |`:?>`|[Rzutowanie i konwersje](../casting-and-conversions.md)|<ul><li>Konwertuje typu na typ, który jest niżej w hierarchii.<br /></li><ul/>|
-|`;`|[Pełna składnia](../verbose-syntax.md)<br /><br />[Wyświetla listę](../lists.md)<br /><br />[Rekordy](../records.md)|<ul><li>Oddziela wyrażenia (używana głównie w Pełna składnia).<br /></li><li>Oddziela elementy listy.<br /></li><li>Oddziela pola rekordu.<br /></li><ul/>|
+|`;`|[Pełna składnia](../verbose-syntax.md)<br /><br />[Listy](../lists.md)<br /><br />[Rekordy](../records.md)|<ul><li>Oddziela wyrażenia (używana głównie w Pełna składnia).<br /></li><li>Oddziela elementy listy.<br /></li><li>Oddziela pola rekordu.<br /></li><ul/>|
 |`<`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Oblicza less — od operacji.<br /></li><ul/>|
 |`<?`|[Operatory dopuszczające wartość null](nullable-operators.md)|Oblicza less than operacji po prawej stronie jest typem zerowalnym.|
 |`<<`|[Funkcje](../functions/index.md)|<ul><li>Redaguj dwie funkcje w kolejności odwrotnej; drugi jest wykonywana pierwszy (operator kompozycji wstecz).<br /></li><ul/>|
 |`<<<`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Przesuwa bitów ilości po lewej stronie w lewo przez liczbę bitów określona po prawej stronie.<br /></li><ul/>|
 |`<-`|[Wartości](../values/index.md)|<ul><li>Przypisuje wartość do zmiennej.<br /></li><ul/>|
-|`<...>`|[Automatyczna Generalizacja](../generics/automatic-generalization.md)|<ul><li>Rozgranicza parametrów typu.<br /></li><ul/>|
+|`<...>`|[Automatyczna generalizacja](../generics/automatic-generalization.md)|<ul><li>Rozgranicza parametrów typu.<br /></li><ul/>|
 |`<>`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie nie równa się po prawej stronie; w przeciwnym razie zwraca wartość false.<br /></li><ul/>|
 |`<>?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza "nie równa" operacji po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |`<=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest mniejsza niż lub równa po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li><ul/>|
@@ -92,22 +92,22 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |`>?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "większy niż" po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |`>>`|[Funkcje](../functions/index.md)|<ul><li>Redaguj dwie funkcje (operator kompozycji do przodu).<br /></li><ul/>|
 |`>>>`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Bity zmian ilości po lewej stronie z prawej strony przez liczbę miejsc określony po prawej stronie.<br /></li><ul/>|
-|`>=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po prawej stronie jest większa niż lub równa po lewej stronie; w przeciwnym razie zwraca `false`.<br /></li><ul/>|
+|`>=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest większa niż lub równa po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li><ul/>|
 |`>=?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "większe lub równe" po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |`?`|[Parametry i argumenty](../parameters-and-arguments.md)|<ul><li>Określa opcjonalny argument.<br /></li><li>Używane jako operator dla wywołań metod i właściwości dynamicznych. Należy podać własne implementacji.<br /></li><ul/>|
 |`? ... <- ...`|Brak dostępnych informacji więcej.|<ul><li>Używane jako operator ustawienie właściwości dynamicznych. Należy podać własne implementacji.<br /></li><ul/>|
 |`?>=`, `?>`, `?<=`, `?<`, `?=`, `?<>`, `?+`, `?-`, `?*`, `?/`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odpowiednikiem odpowiedniego operatory bez? Prefiks, gdzie jest typu dopuszczającego wartości null po lewej stronie.<br /></li><ul/>|
 |`>=?`, `>?`, `<=?`, `<?`, `=?`, `<>?`, `+?`, `-?`, `*?`, `/?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Odpowiednikiem odpowiedniego operatory bez? sufiks, gdzie jest typem zerowalnym po prawej stronie.<br /></li><ul/>|
 |`?>=?`, `?>?`, `?<=?`, `?<?`, `?=?`, `?<>?`, `?+?`, `?-?`, `?*?`, `?/?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Wartość równoważna odpowiedniego operatory bez otaczających znaki zapytania, gdy obie strony są typy dopuszczające wartości zerowe.<br /></li><ul/>|
-|`@`|[Wyświetla listę](../lists.md)<br /><br />[Ciągi](../strings.md)|<ul><li>Łączy dwie listy.<br /></li><li>Po umieszczeniu przed ciąg literału, wskazuje ciąg interpretacji dokładnie, z nie interpretacji znaki specjalne.<br /></li><ul/>|
-|`[...]`|[Wyświetla listę](../lists.md)|<ul><li>Rozgranicza elementy listy.<br /></li><ul/>|
+|`@`|[Listy](../lists.md)<br /><br />[Ciągi](../strings.md)|<ul><li>Łączy dwie listy.<br /></li><li>Po umieszczeniu przed ciąg literału, wskazuje ciąg interpretacji dokładnie, z nie interpretacji znaki specjalne.<br /></li><ul/>|
+|`[...]`|[Listy](../lists.md)|<ul><li>Rozgranicza elementy listy.<br /></li><ul/>|
 |<code>[&#124;...&#124;]</code>|[Tablice](../arrays.md)|<ul><li>Rozgranicza elementy tablicy.<br /></li><ul/>|
 |`[<...>]`|[Atrybuty](../attributes.md)|<ul><li>Rozgranicza atrybutu.<br /></li><ul/>|
 |`\`|[Ciągi](../strings.md)|<ul><li>Specjalne następny znak; używany w literałach znaków i ciąg.<br /></li><ul/>|
 |`^`|[Statycznie rozwiązywane parametry typu](../generics/statically-resolved-type-parameters.md)<br /><br />[Ciągi](../strings.md)|<ul><li>Określa parametr typu, który musi zostać rozpoznane w czasie kompilacji, a nie w czasie wykonywania.<br /></li><li>Łączy ciągów.<br /></li><ul/>|
 |`^^^`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza operacji wyłączny OR.<br /></li><ul/>|
 |`_`|[Wyrażenia dopasowania](../match-expressions.md)<br /><br />[Typy ogólne](../generics/index.md)|<ul><li>Wskazuje wzorzec wieloznaczny.<br /></li><li>Określa anonimowe parametru ogólnego.<br /></li><ul/>|
-|<code>&#96;</code>|[Automatyczna Generalizacja](../generics/automatic-generalization.md)|<ul><li>Używana wewnętrznie w celu wskazania, parametru typu ogólnego.<br /></li><ul/>|
+|<code>&#96;</code>|[Automatyczna generalizacja](../generics/automatic-generalization.md)|<ul><li>Używana wewnętrznie w celu wskazania, parametru typu ogólnego.<br /></li><ul/>|
 |`{...}`|[Sekwencje](../sequences.md)<br /><br />[Rekordy](../records.md)|<ul><li>Rozgranicza wyrażeniach sekwencji i obliczeń wyrażenia.<br /></li><li>Używane w definicjach rekordów.<br /></li><ul/>|
 |<code>&#124;</code>|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Rozgranicza dopasowanie poszczególnych przypadków, poszczególne rozróżniane przypadki Unii i wartości wyliczenia.<br /></li><ul/>|
 |<code>&#124;&#124;</code>|[Operatory logiczne](boolean-operators.md)|<ul><li>Oblicza Boolean lub operacji.<br /></li><ul/>|
@@ -154,6 +154,6 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 Język F # obsługuje niestandardowe przeładowania operatora. Oznacza to, zdefiniować własny operatorów. W poprzedniej tabeli *op* może być dowolną prawidłową sekwencją (prawdopodobnie pusta) znaków operator wbudowanych i zdefiniowanych przez użytkownika. W związku z tym można użyć tej tabeli można ustalić, jakie sekwencji znaków do użycia dla operatora niestandardowego do osiągnięcia żądany poziom priorytetu. Początkowe `.` znaki są ignorowane, gdy kompilator określa priorytet.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](../index.md)
+[Dokumentacja języka F#](../index.md)
 
 [Przeładowanie operatora](../operator-overloading.md)

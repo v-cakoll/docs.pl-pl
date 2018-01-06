@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload: dotnetcore
-ms.openlocfilehash: 40469204906bef16e1604d052471721bad64cd7f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f2ad875430b2dc7f0ffbadfb9a39dd83854557cb
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="dotnet-vstest"></a>DotNet vstest
 
@@ -118,6 +118,10 @@ Uruchom testy w `mytestproject.dll`:
 
 `dotnet vstest mytestproject.dll`
 
+Uruchom testy w `mytestproject.dll`, eksportowanie do niestandardowego folderu o nazwie niestandardowych:
+
+`dotnet vstest mytestproject.dll --logger:"trx;LogFileName=custom_file_name.trx" --ResultsDirectory:custom/file/path`
+
 Uruchom testy w `mytestproject.dll` i `myothertestproject.exe`:
 
 `dotnet vstest mytestproject.dll myothertestproject.exe`
@@ -129,3 +133,4 @@ Uruchom `TestMethod1` testów:
 Uruchom `TestMethod1` i `TestMethod2` testów:
 
 `dotnet vstest /Tests:TestMethod1,TestMethod2`
+

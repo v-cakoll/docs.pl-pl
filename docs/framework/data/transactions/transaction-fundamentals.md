@@ -13,11 +13,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b7fd2b0ce2a8f5ab77fd654863a1e68baad6a41e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fa26531b1d2573b4bef49ec93f4205716227e25b
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="transaction-fundamentals"></a>Podstawowe informacje dotyczące transakcji
 Transakcje powiązania wielu zadań jednocześnie. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw tworzy nową tabelę w bazie danych. Następnie wywołuje obiekt specjalne do zbierania, formatowania i wstawianie danych w nowej tabeli. Te dwa zadania są powiązane i wzajemnie nawet wtedy, w taki sposób, że ma zostać Unikaj tworzenia nowej tabeli, o ile nie można wypełniać danych. Wykonywanie zadania, zarówno w zakresie pojedynczą transakcję wymusza połączenie między nimi. Jeśli drugie zadanie nie powiedzie się, pierwsze zadanie jest przywrócenie punkt przed utworzeniem nowej tabeli.  
@@ -30,7 +30,7 @@ Transakcje powiązania wielu zadań jednocześnie. Na przykład załóżmy, że 
   
  Podczas opracowywania transakcyjnych aplikacji przy użyciu klas dostarczonych przez <xref:System.Transactions>, nie trzeba martwić się o rodzaju transakcji należy lub związane z Menedżera transakcji. <xref:System.Transactions> Infrastruktury automatycznie zarządza to dla Ciebie.  
   
- Podczas tworzenia transakcji można określić poziom izolacji, która ma zastosowanie do transakcji. Poziom izolacji, zdefiniowane przez <xref:System.Transactions.IsolationLevel> klasy, określa poziom dostępu do innych transakcji będzie mieć danych wpływ transakcji.  
+ Podczas tworzenia transakcji można określić poziom izolacji, która ma zastosowanie do transakcji. Poziom izolacji, zdefiniowane przez <xref:System.Transactions.IsolationLevel> wyliczenia, określa poziom dostępu inne transakcje będzie mieć danych dotyczy transakcji.  
   
  Można utworzyć transakcji za pomocą ADO.NET, <xref:System.EnterpriseServices>, lub transakcyjnych modelu programowania pochodzącymi <xref:System.Transactions> przestrzeni nazw. [Funkcje oferowane przez bibliotekę System.Transactions](../../../../docs/framework/data/transactions/features-provided-by-system-transactions.md) temacie opisano funkcje, które służy do pisania aplikacji transakcyjnej przy użyciu <xref:System.Transactions> przestrzeni nazw.  
   

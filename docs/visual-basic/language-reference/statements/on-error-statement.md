@@ -29,16 +29,16 @@ ms.assetid: ff947930-fb84-40cf-bd66-1ea219561d5c
 caps.latest.revision: "22"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e1039359145902bffe3f91aa654a43790d16b887
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96baa5d91d0a600b84ed832fb1e3b1ed71a9d89d
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="on-error-statement-visual-basic"></a>On Error — Instrukcja (Visual Basic)
 Włącza procedurę obsługi błędu, i określa lokalizację procedury w ramach procedury; można również wyłączyć procedury obsługi błędów.  
   
- Bez `On Error` instrukcji, wszelkie błąd w czasie wykonywania jest krytyczny: wyświetlany jest komunikat o błędzie i zatrzymuje wykonywanie.  
+ Bez obsługi błędów żadnych błąd w czasie wykonywania jest krytyczny: wyświetlany jest komunikat o błędzie i zatrzymuje wykonywanie.  
   
  Jeśli to możliwe, zaleca się używać wyjątków strukturalnych obsługi w kodzie, zamiast korzystać z obsługi wyjątków bez struktury i `On Error` instrukcji. Aby uzyskać więcej informacji, zobacz [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   
@@ -129,8 +129,8 @@ On Error { GoTo [ line | 0 | -1 ] | Resume Next }
  <xref:Microsoft.VisualBasic.ErrObject.Number%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.Description%2A>  
  <xref:Microsoft.VisualBasic.ErrObject.LastDllError%2A>  
- [End — instrukcja](../../../visual-basic/language-reference/statements/end-statement.md)  
- [Exit — instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
- [Resume — instrukcja](../../../visual-basic/language-reference/statements/resume-statement.md)  
+ [End, instrukcja](../../../visual-basic/language-reference/statements/end-statement.md)  
+ [Exit, instrukcja](../../../visual-basic/language-reference/statements/exit-statement.md)  
+ [Resume, instrukcja](../../../visual-basic/language-reference/statements/resume-statement.md)  
  [Komunikaty o błędach](../../../visual-basic/language-reference/error-messages/index.md)  
- [Try... CATCH... Finally — instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+ [Try...Catch...Finally, instrukcja](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

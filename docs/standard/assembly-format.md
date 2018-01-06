@@ -13,15 +13,15 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 94f102c85ffdda5345a3ef3f0a8485b18b0b6893
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 
-.NET definiuje format pliku binarnego — "zestawu" — służy do pełni opisywania i zawierają programy .NET. Zestawy są używane do samych programów, a także wszelkich zależnych bibliotek. .NET program mogą być wykonywane co więcej zestawów, z nie innych wymaganych artefaktów, po wykonaniu odpowiednich .NET. Natywnego zależności, w tym system operacyjny interfejsów API, są oddzielne problemu i nie są zawarte w formacie zestawu .NET, mimo że czasami są opisane w tym formacie (na przykład WinRT).
+.NET definiuje format pliku binarnego — "zestawu" — służy do pełni opisywania i zawierają programy .NET. Zestawy są używane do samych programów, a także wszelkich zależnych bibliotek. .NET program mogą być wykonywane jako jeden lub więcej zestawów z nie innych wymaganych artefaktów, po wykonaniu odpowiednich .NET. Natywnego zależności, w tym system operacyjny interfejsów API, są oddzielne problemu i nie są zawarte w formacie zestawu .NET, mimo że czasami są opisane w tym formacie (na przykład WinRT).
 
 > Każdy składnik interfejsu wiersza polecenia niesie metadanych dla deklaracji, implementacji i odwołuje się do określonego dla tego składnika. W związku z tym metadane specyficzne dla składnika jest określana jako składnik metadane, a wynikowy składnik jest nazywany można samoopisujące — z ECMA 335 I.9.1, składników i zestawów.
 

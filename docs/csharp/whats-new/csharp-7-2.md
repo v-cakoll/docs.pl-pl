@@ -8,11 +8,11 @@ ms.date: 08/16/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: cc861f186bea681bb32a2f8041a7155026679987
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 9e7fefde6763dbd5c73c01e45e5652d9f207c213
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="whats-new-in-c-72"></a>Nowości w języku C# 7.2.
 
@@ -25,7 +25,7 @@ C# 7.2 używa [wybór wersji języka](csharp-7-1.md#language-version-selection) 
 
 Dostępne są następujące nowe funkcje językowe w tej wersji:
 
-* [Semantykę odwołania z typami wartości](#reference-semantics-with-value-types)
+* [Semantyka odwołań z typami wartości](#reference-semantics-with-value-types)
   - Kombinacja składni ulepszeń, które umożliwiają pracę z typów wartości, używając semantyki odwołania.
 * [Non końcowe nazwane argumenty](#non-trailing-named-arguments)
   - Argumenty pozycyjne może następować nazwanych argumentów.
@@ -59,7 +59,7 @@ Na przykład:
 int binaryValue = 0b_0101_0101;
 ```
 
-## `private protected`
+## <a name="private-protected-access-modifier"></a>_prywatne chronione_ modyfikator dostępu
 
 Ponadto nowe modyfikator dostępu złożone: `private protected` wskazuje, że element członkowski mogą być używane przez zawierające klasy lub klas pochodnych, które są zadeklarowane w tym samym zestawie. Gdy `protected internal` zezwala na dostęp klas pochodnych lub klasy, które znajdują się w tym samym zestawie, `private protected` ogranicza dostęp do typów pochodnych zadeklarowany w tym samym zestawie.
 

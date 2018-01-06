@@ -13,11 +13,11 @@ ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
 ms.workload: dotnetcore
-ms.openlocfilehash: 9935578f750e75c2261e1206cb6cc3292d16a049
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5f420df6c5cf4f9d517dd6ce2c6b33d3d3479d1
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do usług .NET i Docker
 
@@ -104,7 +104,7 @@ To repozytorium zawiera przykłady ilustrujące różne konfiguracje programu .N
 
 **.NET framework 4.7**
 
-[ [Dotnet — przykład struktury: 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) przedstawiono podstawowe "hello world" użycie [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Przedstawiono sposób tworzenia i wdrożyć aplikację jednostki uzależnionej na [obrazu docker .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
+[Dotnet — przykład struktury: 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) przedstawiono podstawowe "hello world" użycie [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Przedstawiono sposób tworzenia i wdrożyć aplikację jednostki uzależnionej na [obrazu docker .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
 **.NET framework 4.6.2**
 

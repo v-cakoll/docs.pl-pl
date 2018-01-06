@@ -12,11 +12,11 @@ ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: deeed6f6b572e04780f0eda1e7e42f1dd6233567
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Porady: subskrybowanie i anulowanie subskrypcji zdarzeń (Przewodnik programowania w języku C#)
 Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia pisanie kodu niestandardowego, który jest wywoływany, gdy zdarzenie jest wywoływane. Na przykład może subskrybować przycisk `click` zdarzeń, aby zwiększyć bezpieczeństwo aplikacji Zrób coś, które są przydatne, gdy użytkownik kliknie przycisk.  
@@ -35,7 +35,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
      Wiersz kodu, który jest wymagany, aby subskrybować zdarzenia jest automatycznie generowany w `InitializeComponent` metody w pliku Form1.Designer.cs w projekcie. Przypomina to:  
   
-    ```  
+    ```csharp
     this.Load += new System.EventHandler(this.Form1_Load);  
     ```  
   
@@ -43,7 +43,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 1.  Zdefiniuj metoda obsługi zdarzeń, których Podpis pasuje do podpisu delegata zdarzenia. Na przykład, jeśli zdarzenie jest oparta na <xref:System.EventHandler> typ delegata, poniższy kod przedstawia szkieletu metody:  
   
-    ```  
+    ```csharp
     void HandleCustomEvent(object sender, CustomEventArgs a)  
     {  
        // Do something useful here.  
@@ -52,19 +52,19 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 2.  Użyj operator przypisania dodawania (`+=`) można dołączyć obsługi zdarzenia do zdarzenia. W poniższym przykładzie założono, że obiekt o nazwie `publisher` ma zdarzenia o nazwie `RaiseCustomEvent`. Należy pamiętać, że klasa subskrybenta wymaga odwołania do klasy wydawcy, aby subskrybować jego zdarzeń.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += HandleCustomEvent;  
     ```  
   
      Należy pamiętać, że składnia poprzedniej nowego w języku C# 2.0. Jest dokładnym odpowiednikiem składni 1.0 C#, w której hermetyzowany delegata musi jawnie utworzone za pomocą `new` — słowo kluczowe:  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += new CustomEventHandler(HandleCustomEvent);  
     ```  
   
      Program obsługi zdarzeń można również dodać za pomocą wyrażenia lambda:  
   
-    ```  
+    ```csharp
     public Form1()  
     {  
         InitializeComponent();  
@@ -80,7 +80,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 -   Jeśli nie musisz anulować subskrypcję później na zdarzenie, można użyć operator przypisania dodawania (`+=`) można dołączyć do zdarzenia metody anonimowej. W poniższym przykładzie założono, że obiekt o nazwie `publisher` ma zdarzenia o nazwie `RaiseCustomEvent` oraz że `CustomEventArgs` klasa została zdefiniowana również do przenoszenia określonego rodzaju informacje dotyczące specjalnych zdarzenia. Należy pamiętać, że klasa subskrybenta wymaga odwołania do `publisher` Aby subskrybować jego zdarzenia.  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
     {  
       string s = o.ToString() + " " + e.ToString();  
@@ -97,7 +97,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 -   Użyj operator przypisania odejmowania (`-=`) na anulowanie subskrypcji zdarzeń:  
   
-    ```  
+    ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  
     ```  
   
@@ -105,7 +105,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 ## <a name="see-also"></a>Zobacz też  
  [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
- [zdarzenia](../../../csharp/language-reference/keywords/event.md)  
- [Porady: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
+ [event](../../../csharp/language-reference/keywords/event.md)  
+ [Instrukcje: publikowanie zdarzeń zgodnych ze wskazówkami dotyczącymi platformy .NET Framework](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)  
  [-= — Operator (odwołanie w C#)](../../language-reference/operators/subtraction-assignment-operator.md)  
- [+= — Operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+ [+=, operator](../../../csharp/language-reference/operators/addition-assignment-operator.md)

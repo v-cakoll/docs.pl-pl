@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fa9f3ad2e08b68fcdc60375ab164cb87a3eeb91
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD opartych na danych
 
@@ -318,9 +318,7 @@ Poniżej są główne powody generować metadane programu Swagger dla interfejs�
 
 **Możliwość dla innych produktów automatycznie używać i integrować swoje interfejsy API**. Dziesiątki produktów i [narzędzia komercyjnego](http://swagger.io/commercial-tools/) i wiele [bibliotek i platform](http://swagger.io/open-source-integrations/) obsługuje struktury Swagger. Firma Microsoft ma wysokiego poziomu produktów i narzędzi, które mogą automatycznie używać API podstawie struktury Swagger, takie jak następujące:
 
--   [AutoRest](https://github.com/Azure/AutoRest). Można automatycznie generować klasy klienta .NET wywoływania struktury Swagger. To
-
--   Narzędzie może być używane z poziomu interfejsu wiersza polecenia i integruje się również z programu Visual Studio dla łatwe za pośrednictwem graficznego interfejsu użytkownika.
+-   [AutoRest](https://github.com/Azure/AutoRest). Można automatycznie generować klasy klienta .NET wywoływania struktury Swagger. To narzędzie może być używane z poziomu interfejsu wiersza polecenia i integruje się również z programu Visual Studio dla łatwe za pośrednictwem graficznego interfejsu użytkownika.
 
 -   [Przepływ Microsoft](https://flow.microsoft.com/en-us/). Można automatycznie [użycia i integracja z interfejsem API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) do wysokiego poziomu przepływu pracy Microsoft Flow bez umiejętności programowania wymagane.
 

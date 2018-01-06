@@ -10,15 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 6cdc4eb0d0fea93b5210532210ad0c928e35a7a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Mikrousług hostowanych w Docker
-
-## <a name="introduction"></a>Wprowadzenie
 
 W tym samouczku opisano zadania niezbędne do tworzenia i wdrażania mikrousługi platformy ASP.NET Core w kontenerze Docker. W trakcie tego samouczka dowiesz się:
 
@@ -56,13 +54,13 @@ Na tym etapie należy zainstalować wiele narzędzi wiersza polecenia, które ob
 
 `npm install -g yo bower grunt-cli gulp`
 
-`-g` Opcja wskazuje, że jest on zainstalowany globalne, a te narzędzia są dostępne całym systemie. (Zakresy lokalnej instalacji pakietu do pojedynczego projektu). Po zainstalowaniu te podstawowe narzędzia, musisz zainstalować narzędzia yeoman asp.net generatory szablonu:
+`-g` Opcja wskazuje, że jest on zainstalowany globalne, a te narzędzia są dostępne całym systemie. (Zakresy lokalnej instalacji pakietu do pojedynczego projektu). Po zainstalowaniu te podstawowe narzędzia, musisz zainstalować generatory szablonu platformy ASP.NET narzędzia yeoman:
 
 `npm install -g generator-aspnet`
 
 ## <a name="create-the-application"></a>Tworzenie aplikacji
 
-Teraz, po zainstalowaniu wszystkich narzędzi, należy utworzyć nową aplikację asp.net core. Aby użyć generatora wiersza polecenia, należy wykonać następujące polecenie narzędzia yeoman w ulubionych powłoki:
+Teraz, po zainstalowaniu wszystkich narzędzi do tworzenia nowej aplikacji platformy ASP.NET Core. Aby użyć generatora wiersza polecenia, należy wykonać następujące polecenie narzędzia yeoman w ulubionych powłoki:
 
 `yo aspnet`
 
@@ -70,12 +68,12 @@ To polecenie wyświetla monit o wybranie rodzaju aplikacji, w którym chcesz utw
 
 Szablon tworzy osiem plików:
 
-* .Gitignore dostosowane dla aplikacji platformy asp.net core.
+* .Gitignore dostosowany do aplikacji platformy ASP.NET Core.
 * Pliku Startup.cs. Zawiera podstawę aplikacji.
 * Plik Program.cs. Zawiera punkt wejścia aplikacji.
 * Plik WeatherMicroservice.csproj. To jest plik kompilacji dla aplikacji.
 * Plik Dockerfile. Ten skrypt tworzy obraz Docker dla aplikacji.
-* README.md. Zawiera linki do innych zasobów core asp.net.
+* README.md. Zawiera linki do innych zasobów platformy ASP.NET Core.
 * Plik web.config. Zawiera podstawowe informacje o konfiguracji.
 * Plik runtimeconfig.template.json. Zawiera ustawienia debugowania używane przez IDEs.
 
@@ -113,7 +111,7 @@ Węzeł 'struktury' Określa wersje i konfiguracje programu .NET framework, któ
 
 Aplikacja jest zaimplementowana w pliku Startup.cs. Ten plik zawiera klasę uruchamiania.
 
-Te dwie metody są wywoływane przez infrastrukturę platformy asp.net core do skonfigurowania i uruchomienia aplikacji. `ConfigureServices` Metoda opisuje usług, które są niezbędne dla tej aplikacji. Tworzysz mikrousługi gotowa, więc nie trzeba skonfigurować wszelkie zależności. `Configure` Metody konfiguruje obsługi przychodzących żądań HTTP. Szablon generuje prosty program obsługi, który ma odpowiadać na każde żądanie od tekstu "Hello World!".
+Te dwie metody są wywoływane przez infrastrukturę platformy ASP.NET Core, aby skonfigurować i uruchomić aplikację. `ConfigureServices` Metoda opisuje usług, które są niezbędne dla tej aplikacji. Tworzysz mikrousługi gotowa, więc nie trzeba skonfigurować wszelkie zależności. `Configure` Metody konfiguruje obsługi przychodzących żądań HTTP. Szablon generuje prosty program obsługi, który ma odpowiadać na każde żądanie od tekstu "Hello World!".
 
 ## <a name="build-a-microservice"></a>Tworzenie mikrousługi
 
@@ -227,7 +225,7 @@ A ***kontenera Docker*** reprezentuje działającego wystąpienia obrazu Docker.
 
 Analogicznie, można traktować *obrazu Docker* jako *klasy*i *kontenera Docker* jako obiekt lub wystąpienia tej klasy.  
 
-Plik Dockerfile utworzonej przez szablon asp.net będzie służyć do naszej celów. Przejdźmy za pośrednictwem jego zawartość.
+Plik Dockerfile utworzonej przez szablon ASP.NET będzie służyć do naszej celów. Przejdźmy za pośrednictwem jego zawartość.
 
 Pierwszy wiersz określa obrazu źródłowego:
 
@@ -259,7 +257,7 @@ RUN dotnet publish -c Release -o out
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-Spowoduje to skopiuj plik projektu z bieżącego katalogu do docker maszyny Wirtualnej i przywrócić wszystkie pakiety. Użycie dotnet interfejsu wiersza polecenia oznacza, że obraz Docker musi zawierać .NET Core SDK. Po wykonaniu tej pozostałej części aplikacji są kopiowane i dotnet publikowanie polecenie kompilacji i pakiety aplikacji.
+Spowoduje to skopiuj plik projektu z bieżącego katalogu do maszyny Wirtualnej platformy Docker i przywrócić wszystkie pakiety. Użycie dotnet interfejsu wiersza polecenia oznacza, że obraz Docker musi zawierać .NET Core SDK. Po wykonaniu tej pozostałej części aplikacji są kopiowane i dotnet publikowanie polecenie kompilacji i pakiety aplikacji.
 
 Aplikacja jest uruchamiana w ostatnim wierszu pliku:
 
@@ -267,7 +265,7 @@ Aplikacja jest uruchamiana w ostatnim wierszu pliku:
 ENTRYPOINT ["dotnet", "out/WeatherMicroservice.dll", "--server.urls", "http://0.0.0.0:5000"]
 ```
 
-Odwołuje się tego skonfigurowanego portu `--server.urls` argument `dotnet` w ostatnim wierszu plik Dockerfile. `ENTRYPOINT` Polecenie informuje Docker jakie opcje polecenia i wiersza polecenia Uruchom usługę. 
+Odwołuje się tego skonfigurowanego portu `--server.urls` argument `dotnet` w ostatnim wierszu plik Dockerfile. `ENTRYPOINT` Polecenie informuje Docker, jakie polecenia i opcje wiersza polecenia Uruchom usługę. 
 
 ## <a name="building-and-running-the-image-in-a-container"></a>Tworzenie i uruchamianie obrazu w kontenerze.
 
@@ -279,7 +277,7 @@ obj/*
 out/*
 ```
 
-Możesz utworzyć obraz przy użyciu polecenia docker kompilacji. Uruchom następujące polecenie z katalogu z kodem.
+Tworzenie, przy użyciu obrazu `docker build` polecenia. Uruchom następujące polecenie z katalogu z kodem.
 
 ```console
 docker build -t weather-microservice .
@@ -320,7 +318,7 @@ docker attach --sig-proxy=false hello-docker
 `--sig-proxy=false` Argumentu oznacza, że `Ctrl-C` poleceń nie wysyłana do procesu kontenera, ale raczej zatrzymać `docker attach` polecenia. Ostatni argument jest nazwa kontenera w `docker run` polecenia. 
 
 > [!NOTE]
-> Umożliwia także docker przypisany identyfikator kontenera do odwoływania się do dowolnego kontenera. Jeśli nie określono nazwę Twojej kontenera w `docker run` musisz użyć identyfikatora kontenera.
+> Umożliwia także Docker przypisany identyfikator kontenera do odwoływania się do dowolnego kontenera. Jeśli nie określono nazwę Twojej kontenera w `docker run` musisz użyć identyfikatora kontenera.
 
 Otwórz przeglądarkę i przejdź do usługi. Zostanie wyświetlone komunikaty diagnostyczne w systemie windows polecenie z dołączonego uruchomionych kontenera.
 
@@ -346,8 +344,8 @@ docker rmi weather-microservice
 
 ## <a name="conclusion"></a>Wniosek 
 
-W tym samouczku wbudowane platformy asp.net core mikrousługi i dodać kilka prostych funkcji.
+W tym samouczku wbudowane mikrousługi platformy ASP.NET Core i dodać kilka prostych funkcji.
 
-Wbudowane docker kontenera obrazu dla tej usługi i uruchomienia tego kontenera na tym komputerze. Dołączone do usługi okno terminalu i był wyświetlany komunikaty diagnostyczne z usługi.
+Wbudowane Docker kontenera obrazu dla tej usługi i uruchomienia tego kontenera na tym komputerze. Dołączone do usługi okno terminalu i był wyświetlany komunikaty diagnostyczne z usługi.
 
 Przeglądania widać kilka funkcji języka C# w akcji.

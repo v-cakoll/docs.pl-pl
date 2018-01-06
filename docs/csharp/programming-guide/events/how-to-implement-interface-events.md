@@ -11,11 +11,11 @@ ms.assetid: 63527447-9535-4880-8e95-35e2075827df
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 944b894e7e5f305d35d4db96d7426bf05322ca54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a53c6ba29837ad8827d97ea745be0462451eb145
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-implement-interface-events-c-programming-guide"></a>Porady: zdarzenia implementowania interfejsu (Przewodnik programowania w języku C#)
 [Interfejsu](../../../csharp/language-reference/keywords/interface.md) mogą zadeklarować [zdarzeń](../../../csharp/language-reference/keywords/event.md). Poniższy przykład pokazuje, jak można zaimplementować interfejsu zdarzenia w klasie. Zasadniczo zasad są takie same jak podczas implementowania interfejsu metody ani właściwości.  
@@ -24,7 +24,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Deklarowanie zdarzenia w klasie i wywołać go w odpowiednich obszarach.  
   
-    ```  
+    ```csharp
     namespace ImplementInterfaceEvents  
     {  
         public interface IDrawingObject  
@@ -68,6 +68,6 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Zdarzenia](../../../csharp/programming-guide/events/index.md)  
- [Obiekty delegowane](../../../csharp/programming-guide/delegates/index.md)  
- [Jawna implementacja interfejsu](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
- [Porady: wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+ [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
+ [Implementacja interfejsu jawnego](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)  
+ [Instrukcje: wywoływanie zdarzeń klasy podstawowej w klasach pochodnych](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)

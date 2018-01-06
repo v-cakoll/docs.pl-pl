@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: dceb7fe4829dc891d06221e7234b4d2ad26a008d
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
+ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="work-with-syntax"></a>Praca z składni
 
@@ -85,7 +85,7 @@ Na przykład:
       }
 ```
 
-Węzeł instrukcji wewnątrz bloku ma należy do zakresu wskazanej przez pojedynczy pionowych słupków (|). Zawiera on znaki `throw new Exception(“Not right.”);`. Pełny zakres jest określane przez dwa razy pionowych słupków (|). Zawiera te same znaki jako zakres i skojarzone z elementy towarzyszące składni wiodące i końcowe znaki.
+Węzeł instrukcji wewnątrz bloku ma należy do zakresu wskazanej przez pojedynczy pionowych słupków (|). Zawiera on znaki `throw new Exception("Not right.");`. Pełny zakres jest określane przez dwa razy pionowych słupków (|). Zawiera te same znaki jako zakres i skojarzone z elementy towarzyszące składni wiodące i końcowe znaki.
 
 ## <a name="kinds"></a>Typy
 

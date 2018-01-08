@@ -257,6 +257,7 @@
 ### [Współdziałanie natywne](csharp/programming-guide/interop/index.md)
 ### [Dokumentowanie kodu](csharp/codedoc.md)
 ### [Przechowywanie wersji](csharp/versioning.md)
+## [How To C# Topics (Tematy z instrukcjami dotyczącymi języka C#)](csharp/how-to/index.md)
 <!-- End of C# Concepts section -->
 ## [Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)](csharp/roslyn-sdk/)
 ## [Przewodnik programowania w języku C#](csharp/programming-guide/)

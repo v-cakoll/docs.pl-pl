@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2619842bedef2c28e792969dfbd5c724375122bf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2f270b58d20b3fe9dbc514657def90776bdfe2b5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="xml-processing-options"></a>Opcje przetwarzania XML
 Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używanych do przetwarzania danych XML.  
@@ -40,8 +40,8 @@ Zobacz Następująca tabela zawiera listę technologii firmy Microsoft, używany
   
 |**Opcja**|**Opis**|  
 |----------------|---------------------|  
-|[XmlLite](http://go.microsoft.com/fwlink/?LinkId=93723)|Szybkie, bezpieczne, bez buforowania, tylko do przodu analizatora składni XML ułatwiające tworzenie wysokiej wydajności XML aplikacji.<br />-Współpracuje z dowolnego języka, który może używać biblioteki dołączanej dynamicznie (dll); Firma Microsoft zaleca używanie języka C++.|  
-|[PROGRAM MSXML](http://go.microsoft.com/fwlink/?LinkId=93722)|COM opartych na technologii przetwarzania kodu XML, który jest dołączony do systemu operacyjnego Windows.<br />— Zapewnia implementacji native modelu DOM obsługę XPath i XSLT.<br />-Zawiera SAX2 analizatora opartego na zdarzeniach.|  
+|[XmlLite](https://msdn.microsoft.com/library/ms752872.aspx)|Szybkie, bezpieczne, bez buforowania, tylko do przodu analizatora składni XML ułatwiające tworzenie wysokiej wydajności XML aplikacji.<br />-Współpracuje z dowolnego języka, który może używać biblioteki dołączanej dynamicznie (dll); Firma Microsoft zaleca używanie języka C++.|  
+|[PROGRAM MSXML](https://msdn.microsoft.com/library/ms763742.aspx)|COM opartych na technologii przetwarzania kodu XML, który jest dołączony do systemu operacyjnego Windows.<br />— Zapewnia implementacji native modelu DOM obsługę XPath i XSLT.<br />-Zawiera SAX2 analizatora opartego na zdarzeniach.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przetwarzanie danych XML przy użyciu modelu DOM](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)  

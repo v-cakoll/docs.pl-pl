@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6dccf9d70772c4eaa8818388ad662b1f93804431
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f11daa93aa4e1cbddd0fa0e9f065295f42c820d5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Obsługa .NET Framework dla aplikacji sklepu Windows Store i środowiska wykonawczego systemu Windows
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Jest obsługiwanych kilka scenariuszy rozwoju oprogramowania z [!INCLUDE[wrt](../../../includes/wrt-md.md)]. Te scenariusze dzielą się na trzy kategorie:  
@@ -160,5 +160,5 @@ ms.lasthandoff: 12/23/2017
 |[Przewodnik po aplikacji do Sklepu Windows przy użyciu języka C# lub Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=242212)|Udostępnia kluczowych zasobów, aby rozpocząć wdrażanie [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji przy użyciu języka C# lub Visual Basic, łącznie z wielu tematów — Szybki Start, wskazówki i najlepsze rozwiązania. (W Centrum deweloperów systemu Windows.)|  
 |[Tworzenie aplikacji ze Sklepu Windows (VB / C# / C++ i XAML)](http://go.microsoft.com/fwlink/p/?LinkId=238311)|Udostępnia kluczowych zasobów, aby rozpocząć wdrażanie [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji przy użyciu języka C# lub Visual Basic, łącznie z wielu tematów — Szybki Start, wskazówki i najlepsze rozwiązania. (W Centrum deweloperów systemu Windows.)|  
 |[Tworzenie składników środowiska wykonawczego systemu Windows w języku C# i Visual Basic](http://go.microsoft.com/fwlink/p/?LinkId=238313)|Opisuje sposób tworzenia [!INCLUDE[wrt](../../../includes/wrt-md.md)] składnika za pomocą programu .NET Framework, wyjaśniono, jak używać go jako część [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji dla systemu Windows przy użyciu języka JavaScript i opisano, jak można debugować połączenie z programem Visual Studio. (W Centrum deweloperów systemu Windows.)|  
-|[Odwołanie do środowiska wykonawczego systemu Windows](http://go.microsoft.com/fwlink/?LinkId=238319)|Dokumentacja referencyjna dla [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (W Centrum deweloperów systemu Windows.)|  
+|[Odwołanie do środowiska wykonawczego systemu Windows](/uwp/api/)|Dokumentacja referencyjna dla [!INCLUDE[wrt](../../../includes/wrt-md.md)]. (W Centrum deweloperów systemu Windows.)|  
 |[Przekazywanie identyfikatora URI do środowiska wykonawczego systemu Windows](../../../docs/standard/cross-platform/passing-a-uri-to-the-windows-runtime.md)|W tym artykule opisano problem, który może wystąpić podczas przekazywania identyfikatora URI z kodu zarządzanego do [!INCLUDE[wrt](../../../includes/wrt-md.md)]oraz jak uniknąć tego problemu.|

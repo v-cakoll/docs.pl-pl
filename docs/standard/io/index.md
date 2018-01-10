@@ -23,14 +23,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33d33826037197a0c679dacfff57eb77de5f5341
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
-Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework [System.IO](http://go.microsoft.com/fwlink/?LinkId=231142) przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
+Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
   
  Plik to uporządkowana i nazwana kolekcja bajtów, która ma stały magazyn. Podczas pracy z plikami użytkownik pracuje ze ścieżkami katalogów, magazynem dysku oraz nazwami plików i katalogów. Natomiast strumień to sekwencja bajtów służąca do odczytu i zapisu w magazynie zapasowym, który może być jednym z kilku nośników magazynu (na przykład dysk lub pamięć). Tak jak istnieje kilka magazynów zapasowych innych niż dyski, tak samo istnieje kilka rodzajów strumieni innych niż strumienie plików, takie jak strumienie sieci, pamięci i potoku.  
   
@@ -51,7 +51,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Oprócz używania tych klas, Visual Basic użytkownicy mogą używać metody i właściwości udostępniane przez <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> klasy dla we/wy pliku.  
   
- Zobacz [jak: kopiowania katalogów](../../../docs/standard/io/how-to-copy-directories.md), [porady: Tworzenie listy katalogów](http://msdn.microsoft.com/en-us/4d2772b1-b991-4532-a8a6-6ef733277e69), i [jak: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Zobacz [jak: kopiowania katalogów](../../../docs/standard/io/how-to-copy-directories.md), [porady: Tworzenie listy katalogów](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), i [jak: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Strumienie  
  Abstrakcyjna klasa podstawowa <xref:System.IO.Stream> obsługuje odczytuje i zapisuje bajty. Wszystkie klasy, które reprezentują strumieni dziedziczyć <xref:System.IO.Stream> klasy. <xref:System.IO.Stream> Klasy pochodne zapewniają dostęp do źródła danych i repozytoriów i izolowanie programisty z szczegóły urządzeń podstawowych i systemu operacyjnego.  
@@ -128,7 +128,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
 ## <a name="isolated-storage"></a>Izolowany magazyn  
  Wydzielona pamięć masowa to mechanizm magazynu, który dostarcza izolację i bezpieczeństwo przez definiowanie ustandaryzowanych metod kojarzenia kodu z zapisanymi danymi. Ta pamięć masowa oferuje wirtualny system plików, który jest izolowany dla konkretnego użytkownika, zestawu i (opcjonalnie) domeny. Wydzielona pamięć masowa jest szczególnie użyteczna, gdy aplikacja nie ma uprawnień dostępu do plików użytkownika. Można zapisać ustawienia lub pliki aplikacji w sposób, który jest kontrolowany przez zasady zabezpieczeń komputera.  
   
- Izolowanych magazynów nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji; zamiast tego należy użyć klasy danych aplikacji w [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [danych aplikacji](http://go.microsoft.com/fwlink/?LinkId=229175) w Centrum deweloperów systemu Windows.  
+ Izolowanych magazynów nie jest dostępna dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji; zamiast tego należy użyć klasy danych aplikacji w [Windows.Storage](/uwp/api/Windows.Storage) przestrzeni nazw. Aby uzyskać więcej informacji, zobacz [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  
   
  Podczas implementowania wydzielonej pamięci masowej często używane są następujące klasy:  
   
@@ -147,7 +147,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
 -   Typy dotyczące operacji na plikach, takich jak <xref:System.IO.File>, <xref:System.IO.FileInfo>, <xref:System.IO.Directory> i <xref:System.IO.DirectoryInfo>, nie są uwzględniane w [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]. Użyj typów w [Windows.Storage](http://msdn.microsoft.com/library/windows/apps/windows.storage.aspx) przestrzeń nazw [!INCLUDE[wrt](../../../includes/wrt-md.md)], takich jak [pliku magazynu](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefile.aspx) i [StorageFolder](http://msdn.microsoft.com/library/windows/apps/windows.storage.storagefolder.aspx).  
   
--   Izolowany magazyn jest niedostępny; Zamiast tego należy użyć [danych aplikacji](http://go.microsoft.com/fwlink/?LinkId=229175).  
+-   Izolowany magazyn jest niedostępny; Zamiast tego należy użyć [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)).  
   
 -   Używanie metod asynchronicznych, takiej jak <xref:System.IO.Stream.ReadAsync%2A> i <xref:System.IO.Stream.WriteAsync%2A>, aby zapobiec blokuje wątku interfejsu użytkownika.  
   
@@ -160,7 +160,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
 ## <a name="io-and-security"></a>Moduł We/Wy i zabezpieczenia  
  Kiedy używać klas w <xref:System.IO?displayProperty=nameWithType> przestrzeni nazw, należy wykonać, wymagania dotyczące zabezpieczeń systemu operacyjnego takie jak listy kontroli dostępu (ACL) do kontrolowania dostępu do plików i katalogów. To wymaganie dotyczy oprócz żadnego <xref:System.Security.Permissions.FileIOPermission> wymagania. Listami ACL można zarządzać programowo. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie lub usuwanie pozycji listy kontroli dostępu](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  
   
- Domyślne zasady zabezpieczeń uniemożliwiają aplikacjom internetowym i intranetowym dostęp do plików na komputerze użytkownika. W związku z tym podczas pisania kodu, który zostanie pobrany przez Internet lub intranet, nie należy używać klas We/Wy, które wymagają ścieżki do pliku fizycznego. Zamiast tego należy użyć [izolowanego magazynu](../../../docs/standard/io/isolated-storage.md) do tradycyjnych aplikacji .NET Framework lub użyj [danych aplikacji](http://go.microsoft.com/fwlink/?LinkId=229175) dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
+ Domyślne zasady zabezpieczeń uniemożliwiają aplikacjom internetowym i intranetowym dostęp do plików na komputerze użytkownika. W związku z tym podczas pisania kodu, który zostanie pobrany przez Internet lub intranet, nie należy używać klas We/Wy, które wymagają ścieżki do pliku fizycznego. Zamiast tego należy użyć [izolowanego magazynu](../../../docs/standard/io/isolated-storage.md) do tradycyjnych aplikacji .NET Framework lub użyj [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji.  
   
  Sprawdzanie zabezpieczeń jest wykonywane tylko wtedy, gdy jest konstruowany strumień. W związku z tym nie należy otwierać strumienia, a następnie przekazywać go do kodu lub domeny aplikacji o niższym poziomie zaufania.  
   

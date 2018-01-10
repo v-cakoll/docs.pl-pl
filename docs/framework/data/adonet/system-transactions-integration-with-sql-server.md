@@ -17,18 +17,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: 7765779187156866c20374b60a4b541d36ac9a5b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions integracji z programem SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 2.0 wprowadzono framework transakcji, które mogą być udostępniane za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta struktura przedstawia transakcji w taki sposób, który jest w pełni zintegrowana z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Oprócz rozszerzenia programowania <xref:System.Transactions> i [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mogą współdziałać ze sobą do koordynowania optymalizacje podczas pracy z transakcji. Awansowanie transakcji to lekkie transakcja (local), która może być automatycznie podwyższony do transakcji rozproszonej pełni na zgodnie z potrzebami.  
   
- Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje awansowanie transakcji podczas pracy z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Awansowanie transakcji nie jest wywoływany dodany narzutów transakcji rozproszonej, chyba że dodany jest wymagana. Awansowanie transakcje są automatyczne wymagają interwencji od dewelopera.  
+ Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje awansowanie transakcji podczas pracy z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Awansowanie transakcji nie jest wywoływany dodany narzutów transakcji rozproszonej, chyba że dodany jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
   
  Awansowanie transakcje są dostępne tylko, gdy używasz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (`SqlClient`) z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
   

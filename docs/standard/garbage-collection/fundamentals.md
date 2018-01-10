@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c3fe36e93cdea1315ee92f2dfdf76953511309a2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9a42c9aeb3295cd90fb6796e36b840daff843aac
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="fundamentals-of-garbage-collection"></a>Podstawy dotyczące odzyskiwania pamięci
 <a name="top"></a>W środowisko uruchomieniowe języka wspólnego (CLR) moduł zbierający elementy bezużyteczne służy jako Menedżer pamięci automatycznego. Zapewnia następujące korzyści:  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/23/2017
   
  Brak sterty zarządzanej dla każdego procesu zarządzanego. Wszystkie wątki w procesie przydzielić pamięci dla obiektów w tym samym stosie.  
   
- Aby zarezerwować pamięci, moduł zbierający elementy bezużyteczne wywołuje Win32 [VirtualAlloc](http://go.microsoft.com/fwlink/?LinkId=179047) funkcji i jeden segment rezerwy pamięci w czasie zarządzanych aplikacji. Moduł zbierający elementy bezużyteczne również rezerwuje segmentów zgodnie z potrzebami i zwalnia segmentów do systemu operacyjnego (po wyczyszczenie je wszystkie obiekty) przez wywołanie Win32 [VirtualFree](http://go.microsoft.com/fwlink/?LinkId=179050) funkcji.  
+ Aby zarezerwować pamięci, moduł zbierający elementy bezużyteczne wywołuje Win32 [VirtualAlloc](https://msdn.microsoft.com/library/aa366887.aspx) funkcji i jeden segment rezerwy pamięci w czasie zarządzanych aplikacji. Moduł zbierający elementy bezużyteczne również rezerwuje segmentów zgodnie z potrzebami i zwalnia segmentów do systemu operacyjnego (po wyczyszczenie je wszystkie obiekty) przez wywołanie Win32 [VirtualFree](https://msdn.microsoft.com/library/aa366892.aspx) funkcji.  
   
 > [!IMPORTANT]
 >  Rozmiar segmentów przydzielone przez moduł garbage collector jest konkretnej implementacji i może ulec zmianie w dowolnym momencie, w tym w okresowych aktualizacji. Aplikacji nigdy nie może dokonać założeń dotyczących lub zależą od rozmiaru określonego segmentu nie powinny podejmować próby skonfiguruj ilość pamięci dostępnej dla segmentu alokacji.  

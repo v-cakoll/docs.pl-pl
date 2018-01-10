@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f19d6b5907fe85ae96eeafe6c5ee68bf6c7856d6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4064e3f9bd9be425108baf934817645fc7fa51c2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>Najlepsze praktyki dotyczące prawidłowych wyrażeń w .NET
 <a name="top"></a>Aparat wyrażeń regularnych programu .NET to narzędzie zaawansowane, oferujący wszystkie funkcje, które przetwarza tekst w dopasowaniach wzorców, a nie na dopasowanie literały tekstowe i porównywanie. W większości przypadków dopasowanie do wzorca przebiega szybko i skutecznie. Jednak w niektórych przypadkach aparat wyrażeń regularnych może okazać się bardzo wolny. W skrajnych przypadkach może nawet pozornie przestać odpowiadać, ponieważ przetwarza stosunkowo mało danych wejściowych w ciągu kilku godzin lub nawet dni.  
@@ -77,7 +77,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Podczas tworzenia wzorca należy uwzględnić wpływ wycofywania na wydajność aparatu wyrażeń regularnych, szczególnie jeśli wyrażenie regularne jest przeznaczone do przetwarzania nieograniczonych danych wejściowych. Aby uzyskać więcej informacji, zobacz [zająć bezpłatnie z śledzenie wsteczne](#Backtracking) sekcji.  
   
--   Wyrażenie regularne należy dokładnie sprawdzić, używając nieprawidłowych i niemal prawidłowych danych wejściowych, a także prawidłowych danych wejściowych. Aby losowo wygenerować danych wejściowych dla określonego wyrażenia regularnego, można użyć [Rafał](http://go.microsoft.com/fwlink/?LinkId=210756), który jest narzędziem eksploracji wyrażenia regularnego Microsoft Research.  
+-   Wyrażenie regularne należy dokładnie sprawdzić, używając nieprawidłowych i niemal prawidłowych danych wejściowych, a także prawidłowych danych wejściowych. Aby losowo wygenerować danych wejściowych dla określonego wyrażenia regularnego, można użyć [Rafał](https://www.microsoft.com/en-us/research/project/rex-regular-expression-exploration/), który jest narzędziem eksploracji wyrażenia regularnego Microsoft Research.  
   
  [Powrót do początku](#top)  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/23/2017
  Istotą. Model obiektów wyrażeń regularnych w sieci jest <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> klasy, która reprezentuje aparat wyrażeń regularnych. Często jednym największy czynnik, który wpływa na wydajność wyrażenie regularne jest sposobu, w jaki <xref:System.Text.RegularExpressions.Regex> jest używany aparat. Definiowanie wyrażenia regularnego polega na ścisłym sprzęganiu aparatu wyrażeń regularnych z wzorcem wyrażenia regularnego. Czy sprzężenia procesu, czy obejmuje utworzenie wystąpienia <xref:System.Text.RegularExpressions.Regex> obiektu przez przekazanie jej konstruktora wzorzec wyrażenia regularnego lub wywołanie metody statycznej, przekazując wzorzec wyrażenia regularnego wraz z ciągu do analizy, jest konieczność jednego kosztowne.  
   
 > [!NOTE]
->  Bardziej szczegółowe omówienie skutki wydajności za pomocą wyrażeń regularnych interpretowany i skompilowany, zobacz [optymalizacji wydajności wyrażenie regularne, część II: pobieranie bezpłatnie z śledzenie wsteczne](http://go.microsoft.com/fwlink/?LinkId=211566) w blogu zespołu BCL.  
+>  Bardziej szczegółowe omówienie skutki wydajności za pomocą wyrażeń regularnych interpretowany i skompilowany, zobacz [optymalizacji wydajności wyrażenie regularne, część II: pobieranie bezpłatnie z śledzenie wsteczne](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.  
   
  Można sprzęgnąć aparat wyrażeń regularnych z konkretnym wzorcem wyrażenia regularnego, a następnie użyć aparatu, aby dopasować tekst na kilka sposobów:  
   
@@ -185,7 +185,7 @@ ms.lasthandoff: 12/23/2017
  Zazwyczaj aparat wyrażeń regularnych używa progresji liniowej do przechodzenia przez ciąg wejściowy i porównywania go ze wzorcem wyrażenia regularnego. Jednakże, gdy Kwantyfikatory nieokreślony, takie jak `*`, `+`, i `?` są używane w wzorzec wyrażenia regularnego, aparat wyrażeń regularnych może dać część pomyślne wyniki pasujące częściowo i powrócić do poprzednio zapisanego stanu Aby wyszukać pomyślnego dopasowania dla całego wzorca. Proces ten jest znany pod nazwą wycofywania.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji na śledzenie wsteczne, zobacz [szczegóły zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) i [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Aby uzyskać szczegółowe omówienie śledzenie wsteczne, zobacz [optymalizacji wydajności wyrażenie regularne, część II: biorąc bezpłatnie z śledzenie wsteczne](http://go.microsoft.com/fwlink/?LinkId=211567) w blogu zespołu BCL.  
+>  Aby uzyskać więcej informacji na śledzenie wsteczne, zobacz [szczegóły zachowania wyrażeń regularnych](../../../docs/standard/base-types/details-of-regular-expression-behavior.md) i [Backtracking](../../../docs/standard/base-types/backtracking-in-regular-expressions.md). Aby uzyskać szczegółowe omówienie śledzenie wsteczne, zobacz [optymalizacji wydajności wyrażenie regularne, część II: biorąc bezpłatnie z śledzenie wsteczne](https://blogs.msdn.microsoft.com/bclteam/2010/08/03/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha/) w blogu zespołu BCL.  
   
  Obsługa wycofywania daje wyrażeniom regularnym duże możliwości i elastyczność. Dodatkowo odpowiedzialność za kontrolowanie operacji aparatu wyrażeń regularnych spada na deweloperów wyrażeń regularnych. Ponieważ deweloperzy często nie są tego świadomi, błędne użycie wycofywania lub nadmierne poleganie na wycofywaniu często odgrywa najbardziej znaczącą rolę w zmniejszeniu wydajności wyrażeń regularnych. W scenariuszu najgorszego przypadku czas wykonywania może podwajać się dla każdego dodatkowego znaku w ciągu wejściowym. W rzeczywistości przy nadmiernym wykorzystaniu wycofywania łatwo jest stworzyć programowy odpowiednik pętli nieskończonej, jeżeli dane wejściowe niemal pasują do wzorca wyrażenia regularnego; przetwarzanie relatywnie krótkiego ciągu wejściowego może zająć aparatowi wyrażeń regularnych kilka godzin, a nawet dni.  
   

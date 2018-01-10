@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f488990232448e69ba2fa0d7c7a730df57d170fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
 <a name="Top"></a>Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się. Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:  
@@ -408,7 +408,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>Obsługiwane kategorie ogólne Unicode  
- Standard Unicode określa ogólne kategorie wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz tematy podrzędne "Format pliku UCD" i "Ogólne wartości kategorii" w [bazy danych znak Unicode](http://go.microsoft.com/fwlink/?LinkId=57650).  
+ Standard Unicode określa ogólne kategorie wymienione w poniższej tabeli. Aby uzyskać więcej informacji, zobacz tematy podrzędne "Format pliku UCD" i "Ogólne wartości kategorii" w [bazy danych znak Unicode](http://www.unicode.org/reports/tr44/).  
   
 |Kategoria|Opis|  
 |--------------|-----------------|  

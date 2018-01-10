@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 43c3d8e2c6e99d88f461b3c45f6839ddf738ae6a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f465ee77e06255c576146e3e184adede05f5d7bc
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="common-language-runtime-clr"></a>Środowisko uruchomieniowe języka wspólnego (CLR)
 .NET Framework zapewnia środowisko czasu wykonywania o nazwie środowisko uruchomieniowe języka wspólnego, która uruchamia kod i udostępnia usługi, które ułatwia proces tworzenia.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/23/2017
  Kompilatory narzędzia udostępniać funkcje środowisko uruchomieniowe języka wspólnego firmy i umożliwiają napisać kod tego korzyści z tym zarządzanego środowiska wykonawczego. Kod, który opracowywania kompilatora języka, przeznaczonego dla środowiska uruchomieniowego jest nazywany kod zarządzany; korzysta z funkcji takich jak integracja wielu języków, obsługa wielu języków wyjątków, zwiększone zabezpieczenia, przechowywanie wersji i wdrożenia obsługuje, uproszczony model interakcja składników i debugowanie i profilowania usług.  
   
 > [!NOTE]
->  Kompilatory i narzędzia są możliwe do generowania danych wyjściowych, który może wykorzystać środowisko uruchomieniowe języka wspólnego, ponieważ system typów, format metadanych i środowiska uruchomieniowego (systemu wirtualnego wykonywania) są definiowane przez publiczny standard języka wspólnego ECMA Specyfikacja infrastruktury. Aby uzyskać więcej informacji, zobacz [ECMA C# i wspólnych specyfikacji infrastruktury języka](http://go.microsoft.com/fwlink/?LinkId=99212).  
+>  Kompilatory i narzędzia są możliwe do generowania danych wyjściowych, który może wykorzystać środowisko uruchomieniowe języka wspólnego, ponieważ system typów, format metadanych i środowiska uruchomieniowego (systemu wirtualnego wykonywania) są definiowane przez publiczny standard języka wspólnego ECMA Specyfikacja infrastruktury. Aby uzyskać więcej informacji, zobacz [ECMA C# i wspólnych specyfikacji infrastruktury języka](https://www.visualstudio.com/license-terms/ecma-c-common-language-infrastructure-standards/).  
   
  Aby włączyć środowisko uruchomieniowe do świadczenia usług do kodu zarządzanego, Kompilatory języka musi wysyłać metadanych, które opisują typy elementów członkowskich i odwołań w kodzie. Metadane są przechowywane z kodem; co obciążana wspólnego języka środowiska uruchomieniowego przenośnego (PE) pliku wykonywalnego zawiera metadanych. Środowisko uruchomieniowe używa metadanych do zlokalizować i załadować klasy, układ wystąpień w pamięci, rozwiązać wywołania metody, wygenerować kodu natywnego, wymuszanie zabezpieczeń i określają granice kontekstu środowiska wykonawczego.  
   

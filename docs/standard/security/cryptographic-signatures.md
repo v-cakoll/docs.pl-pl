@@ -33,11 +33,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 866d31662b8ae7d5c887af7d86007cb93a57d88f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c4e460c11e0e78d56a54da1dd178b3f8e9f381b6
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-signatures"></a>Podpisy kryptograficzne
 <a name="top"></a>Kryptograficznych podpisów cyfrowych korzysta algorytmy kluczy publicznych w celu zapewnienia integralności danych. Podczas rejestrowania danych za pomocą podpisu cyfrowego ktoś inny może zweryfikować podpisu, a można udowodnić, że dane pochodzą od użytkownika oraz nie została zmodyfikowana po podpisaniu jej. Aby uzyskać więcej informacji na temat podpisów cyfrowych, zobacz [usługi kryptograficzne](../../../docs/standard/security/cryptographic-services.md).  
@@ -115,7 +115,7 @@ class Class1
 ### <a name="signing-xml-files"></a>Podpisywanie plików XML  
  Platforma .NET Framework zapewnia <xref:System.Security.Cryptography.Xml> przestrzeni nazw, która pozwala zarejestrować XML. Podpisywanie XML jest ważne, jeśli chcesz sprawdzić, czy plik XML pochodzą z danego źródła. Na przykład jeśli używasz usługi giełdowych, który jest używany plik XML możesz zweryfikować źródło XML jest podpisany.  
   
- Postępuj zgodnie z klas w tej przestrzeni nazw [składni XML podpisu i przetwarzania zalecenie](http://go.microsoft.com/fwlink/?LinkId=136777) z konsorcjum World Wide Web.  
+ Postępuj zgodnie z klas w tej przestrzeni nazw [składni XML podpisu i przetwarzania zalecenie](http://www.w3.org/TR/xmldsig-core/) z konsorcjum World Wide Web.  
   
  [Powrót do początku](#top)  
   

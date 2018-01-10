@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58ed01520a9bbed53d32fc10e48a479e68f6ef7c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eabe0c1511e6fd42798f1a879e9e8d526d543a29
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="converting-times-between-time-zones"></a>Konwertowanie godzin między strefami czasowymi
 
@@ -37,7 +37,7 @@ Staje się coraz bardziej ważne dla każdej aplikacji, która współdziała z 
 
 ## <a name="converting-to-coordinated-universal-time"></a>Konwertowanie na uniwersalny czas koordynowany
 
-Uniwersalny czas koordynowany (UTC) jest wysokiej precyzji, atomic czasu standardowego. Strefy czasowe na świecie są wyrażane jako dodatnie lub ujemne przesunięcie od czasu UTC. W związku z tym UTC zapewnia rodzaj strefy czasowej wolnego lub strefy czasowej niezależnym od czasu. Użycie czasu UTC jest zalecane w przypadku Data i przenośność czasu na komputerach jest ważna. (Szczegółowe informacje i innych najlepszych rozwiązań za pomocą dat i godzin, zobacz [kodowania najlepszych rozwiązań za pomocą daty/godziny w programie .NET Framework](http://go.microsoft.com/fwlink/?LinkId=92342).) Konwertowanie poszczególnych stref czasowych UTC ułatwia czas porównania.
+Uniwersalny czas koordynowany (UTC) jest wysokiej precyzji, atomic czasu standardowego. Strefy czasowe na świecie są wyrażane jako dodatnie lub ujemne przesunięcie od czasu UTC. W związku z tym UTC zapewnia rodzaj strefy czasowej wolnego lub strefy czasowej niezależnym od czasu. Użycie czasu UTC jest zalecane w przypadku Data i przenośność czasu na komputerach jest ważna. (Szczegółowe informacje i innych najlepszych rozwiązań za pomocą dat i godzin, zobacz [kodowania najlepszych rozwiązań za pomocą daty/godziny w programie .NET Framework](https://msdn.microsoft.com/library/ms973825.aspx).) Konwertowanie poszczególnych stref czasowych UTC ułatwia czas porównania.
 
 > [!NOTE]
 > Można również serializować <xref:System.DateTimeOffset> struktury w celu jego jednoznacznej reprezentują pojedynczy punkt w czasie. Ponieważ <xref:System.DateTimeOffset> obiektów przechowywanie wartości daty i godziny wraz z jego przesunięcie od czasu UTC, zawsze reprezentują określonego punktu w czasie w relacji do czasu UTC.
@@ -74,7 +74,7 @@ Wszystkie te metody zająć <xref:System.DateTime> wartości jako parametry i zw
 
 Aby przekonwertować UTC na czas lokalny, w sekcji "Konwertowanie UTC na czas lokalny" poniżej. Aby przekonwertować w dowolnej strefie czasowej wyznaczony czas UTC, należy wywołać <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> metody. Metoda przyjmuje dwa parametry:
 
-* Czas UTC do konwersji. Musi to być <xref:System.DateTime> wartości, których <xref:System.DateTime.Kind%2A> właściwość jest ustawiona na <xref:System.DateTimeKind?displayProperty=nameWithType> lub <xref:System.DateTimeKind?displayProperty=nameWithType>.
+* Czas UTC do konwersji. Musi to być <xref:System.DateTime> wartości, których <xref:System.DateTime.Kind%2A> właściwość jest ustawiona na `Unspecified` lub `Utc`.
 
 * Strefę czasową UTC, aby przekonwertować.
 

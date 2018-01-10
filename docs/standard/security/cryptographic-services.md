@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1fd0df0e12149371b3403782056982784c0ca3cd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a>Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
@@ -283,7 +283,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="suite_b"></a>   
 ## <a name="suite-b-support"></a>Obsługa pakietu Suite B  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Obsługuje zestaw Suite B algorytmów kryptograficznych opublikowane przez National Security Agency (NSA). Aby uzyskać więcej informacji na temat pakietu Suite B, zobacz [NSA Suite B kryptografii zestawieniem](http://go.microsoft.com/fwlink/?LinkId=100111).  
+ [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Obsługuje zestaw Suite B algorytmów kryptograficznych opublikowane przez National Security Agency (NSA). Aby uzyskać więcej informacji na temat pakietu Suite B, zobacz [NSA Suite B kryptografii zestawieniem](https://www.nsa.gov/what-we-do/information-assurance/).  
   
  Uwzględniono następujących algorytmów:  
   

@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 893bbc94d909d5c94b7f8727912a298575617c2c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
 Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Studio pomaga w utworzeniu wieloplatformowych aplikacji i bibliotek dla platform firmy Microsoft, szybkie i łatwe.  
@@ -57,7 +57,7 @@ Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Stud
   
 |Visual Studio jednostki SKU|Obsługa tworzenia biblioteki klas przenośnych|  
 |-----------------------|---------------------------------------------------|  
-|Program Visual Studio 2010, Professional, Premium lub Ultimate|Tak, po zainstalowaniu [przenośne narzędzia biblioteki](http://go.microsoft.com/fwlink/?LinkId=210823).|  
+|Program Visual Studio 2010, Professional, Premium lub Ultimate|Tak, po zainstalowaniu [przenośne narzędzia biblioteki](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Wersje usługi Visual Studio Express 2010.|Nie.|  
 |Program Visual Studio 2012 Professional, Premium lub Ultimate|Tak. Telefonów pomocy technicznej, należy zainstalować [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
 |Visual Studio Express 2012 wersji|Nie.|  
@@ -171,7 +171,7 @@ Okno dialogowe zmiany elementów docelowych w programie Visual Studio 2012
   
  Na przykład przenośnej biblioteki klas zawiera typy związane z interfejsu użytkownika tylko wtedy, gdy zostanie rozpoczęta dla Windows 8.1 i Windows Phone 8.1. Ponadto można napotkać ograniczenia w przypadku skierowania platformy (na przykład konsoli Xbox, .NET Framework 4 i Windows Phone 7), które zostały wydane przed wprowadzeniem przenośnej biblioteki klas. .NET Framework zwalnia pakiety za pośrednictwem pakietu NuGet, który zapewnia lepszą obsługę przenośnej biblioteki klas, niektóre z tych starszych platformach. Aby uzyskać więcej informacji oraz listę pakietów NuGet, zobacz [.NET Framework i poza harmonogramem](../../../docs/framework/get-started/the-net-framework-and-out-of-band-releases.md).  
   
- Jeśli element członkowski jest obsługiwany w przenośnej biblioteki klas i wybrane elementy docelowe, pojawi się w projekcie IntelliSense. Ponadto, ikona przenośnej biblioteki klas ![obsługiwane przez przenośnej biblioteki](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") pojawia się w tabelach elementów członkowskich w [Biblioteka klas programu .NET Framework](http://go.microsoft.com/fwlink/?LinkId=211358) dalej, aby obsługiwane elementy członkowskie. Na przykład w poniższej tabeli elementów członkowskich wskazuje, że <xref:System.String.Chars%2A> właściwości w <xref:System.String> klasa jest obsługiwana w przenośnej biblioteki klas:  
+ Jeśli element członkowski jest obsługiwany w przenośnej biblioteki klas i wybrane elementy docelowe, pojawi się w projekcie IntelliSense. Ponadto, ikona przenośnej biblioteki klas ![obsługiwane przez przenośnej biblioteki](../../../docs/standard/cross-platform/media/portablelibrary-referenceicon.png "PortableLibrary_ReferenceIcon") pojawia się w tabelach elementów członkowskich w [Biblioteka klas programu .NET Framework](https://msdn.microsoft.com/library/mt472912.aspx) dalej, aby obsługiwane elementy członkowskie. Na przykład w poniższej tabeli elementów członkowskich wskazuje, że <xref:System.String.Chars%2A> właściwości w <xref:System.String> klasa jest obsługiwana w przenośnej biblioteki klas:  
   
  ![Ikona składnika obsługiwanych](../../../docs/standard/cross-platform/media/plibsupportedmemberlist.png "PlibSupportedMemberList")  
 Ikona biblioteki klas przenośnych  

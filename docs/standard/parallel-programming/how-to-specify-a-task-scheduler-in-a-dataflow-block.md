@@ -1,12 +1,8 @@
 ---
 title: "Porady: Określanie harmonogramu zadań w bloku przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,26 +12,24 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - task scheduler, linking from TPL
 ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1d1df9584961b9c314e8be05114be12efd0b7904
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 592b6c5c92a2c752fa0d2694cdb477423b15eb0d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>Porady: Określanie harmonogramu zadań w bloku przepływu danych
-Ten dokument przedstawia sposób skojarzenia harmonogramu zadań określone przy użyciu przepływu danych w aplikacji. W przykładzie użyto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> klasy w aplikacji formularzy systemu Windows, gdy czytnik zadania są aktywne i podczas zadania zapisywania jest aktywny. Ponadto użyto <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> metodę umożliwiającą włączenie bloku przepływu danych do uruchamiania w wątku interfejsu użytkownika.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
-### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
+Ten dokument przedstawia sposób skojarzenia harmonogramu zadań określone przy użyciu przepływu danych w aplikacji. W przykładzie użyto <xref:System.Threading.Tasks.ConcurrentExclusiveSchedulerPair?displayProperty=nameWithType> klasy w aplikacji formularzy systemu Windows, gdy czytnik zadania są aktywne i podczas zadania zapisywania jest aktywny. Ponadto użyto <xref:System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext%2A?displayProperty=nameWithType> metodę umożliwiającą włączenie bloku przepływu danych do uruchamiania w wątku interfejsu użytkownika.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
+## <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
   
 1.  Utwórz [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] lub Visual Basic **aplikacji Windows Forms** projektu. W poniższych krokach projektu o nazwie `WriterReadersWinForms`.  
   
@@ -46,7 +40,7 @@ Ten dokument przedstawia sposób skojarzenia harmonogramu zadań określone przy
 ## <a name="adding-dataflow-functionality"></a>Dodawanie funkcjonalności przepływu danych  
  W tej sekcji opisano sposób tworzenia bloków przepływu danych, które uczestniczą w aplikacji oraz sposobu kojarzenia każdej z nich z harmonogramu zadań.  
   
-#### <a name="to-add-dataflow-functionality-to-the-application"></a>Aby dodać funkcję przepływu danych do aplikacji  
+### <a name="to-add-dataflow-functionality-to-the-application"></a>Aby dodać funkcję przepływu danych do aplikacji  
   
 1.  W projekcie Dodaj odwołanie do System.Threading.Tasks.Dataflow.dll.  
   

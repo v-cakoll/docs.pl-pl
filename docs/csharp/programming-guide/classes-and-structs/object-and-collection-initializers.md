@@ -11,11 +11,11 @@ ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
 caps.latest.revision: "27"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7445a2919baaa477b4611c4c5ee5a0031539ca30
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 628f08aaebfa209fc9cb7cfb2b506fc67d5424f9
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>Inicjatory obiektów i kolekcji (Przewodnik programowania w języku C#)
 Inicjatory obiektów umożliwiają przypisywanie wartości do dowolnych dostępnych pól lub właściwości obiektu w czasie jego tworzenia, bez konieczności wywoływania konstruktora, po którym występują wiersze instrukcji przypisania. Składnia inicjatora obiektów umożliwia określenie argumentów dla konstruktora lub pominięcie argumentów (i składni z nawiasami).  Poniższy przykład przedstawia użycie inicjatora obiektów z nazwanym typem `Cat` oraz sposób wywołania konstruktora domyślnego. Zwróć uwagę na użycie właściwości zaimplementowane automatycznie w `Cat` klasy. Aby uzyskać więcej informacji, zobacz [Auto-Implemented właściwości](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md).  
@@ -80,9 +80,20 @@ var numbers = new Dictionary<int, string> {
 };  
 ```  
   
-## <a name="example"></a>Przykład  
+## <a name="examples"></a>Przykłady
+
+ Poniższy przykład łączy pojęcia inicjatory obiektów i kolekcji.
+
  [!code-csharp[csProgGuideLINQ#46](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_6.cs)]  
-  
+ 
+ Pokazano w poniższym przykładzie obiektu, który implementuje <xref:System.Collections.IEnumerable> zawierający `Add` metody z parametrami wielu umożliwia inicjatory kolekcji z wielu elementów dla każdego elementu na liście odpowiadający podpis `Add` metody. 
+ 
+ [!code-csharp[csProgGuideLINQ#84](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_7.cs)]
+ 
+ `Add`można użyć metody `params` — słowo kluczowe podjęcie zmienna liczba argumentów, jak pokazano w poniższym przykładzie. W tym przykładzie przedstawiono implementacja niestandardowa indeksatora, jak również zainicjować kolekcji za pomocą indeksów.
+ 
+ [!code-csharp[csProgGuideLINQ#85](../../../csharp/programming-guide/arrays/codesnippet/CSharp/object-and-collection-initializers_8.cs)]
+ 
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wyrażenia zapytań LINQ](../../../csharp/programming-guide/linq-query-expressions/index.md)  

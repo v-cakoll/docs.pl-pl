@@ -1,30 +1,25 @@
 ---
 title: "Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - TPL dataflow library, in Windows Forms
 - Task Parallel Library, dataflows
 - Windows Forms, and TPL
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9f5a771818231e87f05777803fff39cb40ebd48
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e5389b1a9d608ad8aae002f3ef9b00420f998b76
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  
@@ -33,11 +28,9 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Odczyt [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed skorzystaniem z tego przewodnika.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
- 
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="sections"></a>Sekcje  
  Ten przewodnik zawiera następujące sekcje:  
   
@@ -142,8 +135,6 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
  Na poniższej ilustracji przedstawiono dane wyjściowe zazwyczaj wspólnym folderze \Sample Pictures\.  
   
  ![Aplikacji formularzy systemu Windows](../../../docs/standard/parallel-programming/media/tpldataflow-compositeimages.gif "TPLDataflow_CompositeImages")  
-  
-## <a name="next-steps"></a>Następne kroki  
-  
+
 ## <a name="see-also"></a>Zobacz też  
  [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

@@ -1,7 +1,7 @@
 ---
 title: "PrintPreviewDialog — Informacje o formancie [Formularze systemu Windows]"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -11,18 +11,17 @@ ms.topic: article
 f1_keywords: PrintPreviewDialog
 helpviewer_keywords: PrintPreviewDialog control (using designer), about PrintPreviewDialog
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
-caps.latest.revision: "14"
-author: dotnet-bot
-ms.author: dotnetcontent
+author: rpetrusha
+ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ed071a4d38a0167ac9414ee7d383736dd38a62a5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1228a3cf39ea412cde341c4c4b8b83e0ab2f0299
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
-# <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog — Informacje o formancie [Formularze systemu Windows]
+# <a name="printpreviewdialog-control-overview-windows-forms"></a>Printpreviewdialog — informacje o formancie (formularze systemu Windows)
 Formularze systemu Windows <xref:System.Windows.Forms.PrintPreviewDialog> formant jest używany do wyświetlania okno dialogowe wstępnie skonfigurowane jak [PrintDocument —](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md) po wydrukowaniu. Użyj go w aplikacji systemu Windows jako prostym rozwiązaniem zamiast konfigurować własne okno dialogowe. Formant zawiera przyciski do drukowania, powiększyć wyświetlania jednego lub wielu stron i zamknięcie okna dialogowego.  
   
 ## <a name="key-properties-and-methods"></a>Właściwości klucza i metody  
@@ -30,7 +29,35 @@ Formularze systemu Windows <xref:System.Windows.Forms.PrintPreviewDialog> forman
   
  Niektóre właściwości są dostępne za pośrednictwem <xref:System.Windows.Forms.PrintPreviewControl> który <xref:System.Windows.Forms.PrintPreviewDialog> zawiera. (Nie trzeba dodać to <xref:System.Windows.Forms.PrintPreviewControl> do formularza; jest on automatycznie zawarty w <xref:System.Windows.Forms.PrintPreviewDialog> po dodaniu okna dialogowego do formularza.) Przykłady dostępne za pośrednictwem właściwości <xref:System.Windows.Forms.PrintPreviewControl> są <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> i <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> właściwości, które określają liczba stron wyświetlanych w formancie poziomie i w pionie. Dostęp można uzyskać <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> właściwość jako `PrintPreviewDialog1.PrintPreviewControl.Columns` w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], `printPreviewDialog1.PrintPreviewControl.Columns` w [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], lub `printPreviewDialog1->PrintPreviewControl->Columns` w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)].  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="printpreviewdialog-performance"></a>Printpreviewdialog — wydajności
+
+W następujących warunkach <xref:System.Windows.Forms.PrintPreviewDialog> formant inicjuje bardzo wolno:
+
+- Drukarki sieciowej jest używany.
+- Preferencje użytkownika dotyczące tej drukarki, takie jak ustawienia dupleksu są modyfikowane.
+  
+Dla aplikacji działających na programie .NET Framework 4.5.2, można dodać następujący klucz \<appSettings > sekcji pliku konfiguracji, aby poprawić wydajność <xref:System.Windows.Forms.PrintPreviewDialog> kontroli inicjowania:
+
+```xml
+<appSettings>
+   <add key="EnablePrintPreviewOptimization" value="true" />
+</appSettings>
+```
+Jeśli `EnablePrintPreviewOptimization` jest ustawiona na dowolną inną wartość, lub jeśli klucz nie jest obecny, optymalizacja nie została zastosowana.
+
+Dla aplikacji działających na .NET Framework 4.6 lub nowszy, można dodać do następującego przełącznika [ \<AppContextSwitchOverrides >](../../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) element [ \<runtime >](../../configure-apps/file-schema/runtime/index.md) sekcji w pliku konfiguracyjnym aplikacji:
+
+```xml
+<runtime >
+   <!-- AppContextSwitchOverrides values are in the form of 'key1=true|false;key2=true|false -->
+   <AppContextSwitchOverrides value = "Switch.System.Drawing.Printing.OptimizePrintPreview=true" />
+</runtime >
+``` 
+Jeśli nie ma przełącznika lub jeśli ustawiono ją na inną wartość, optymalizacja nie została zastosowana. 
+
+Jeśli używasz <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> zdarzeń, aby zmodyfikować ustawienia drukarki, wydajność <xref:System.Windows.Forms.PrintPreviewDialog> nie poprawi kontroli, nawet jeśli jest ustawiona przełącznik konfiguracji optymalizacji.  
+
+## <a name="see-also"></a>Zobacz także  
  <xref:System.Windows.Forms.PrintPreviewDialog>  
  [PrintPreviewControl, kontrolka — omówienie](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)  
  [PrintPreviewDialog, kontrolka](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)  

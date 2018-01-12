@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d75bb34b6258819290a5d2dd8c33b37945cce5c6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Błędy możliwe do odzyskania XSLT
 Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których implementacji dostawcy może decyzję dotyczącą sposobu obsługi sytuacji. Te obszary są uważane za DACL zachowanie. Na przykład w sekcji 7.3 Tworzenie przetwarzania instrukcje, zalecenie XSLT 1.0 stwierdza, czy jest błąd, jeśli Tworzenie wystąpień zawartość `xsl:processing-instruction` tworzy węzły inne niż węzły tekstowe. W przypadku niektórych problemów 1.0 XSLT zalecenie wskazuje co decyzja należy Jeśli procesor decyduje o tym odzyskać sprawność po błędzie. Tego problemu podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać tego błędu ignorowanie węzły i jego zawartość.  
@@ -32,7 +32,7 @@ Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których
   
 -   Błąd wskazuje, czy wyjątek jest zgłaszany tego warunku.  
   
--   Można znaleźć w sekcji odwołań [W3C transformacji XSL (XSLT) w wersji 1.0 zalecenie](http://go.microsoft.com/fwlink/?LinkId=49919) i [W3C transformacji XSL (XSLT) w wersji 1.0 specyfikacji erracie](http://go.microsoft.com/fwlink/?LinkId=49917).  
+-   Można znaleźć w sekcji odwołań [W3C transformacji XSL (XSLT) w wersji 1.0 zalecenie](http://www.w3.org/TR/xslt) i [W3C transformacji XSL (XSLT) w wersji 1.0 specyfikacji erracie](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Warunek XSLT|Sekcja|Zachowanie XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  

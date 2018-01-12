@@ -31,17 +31,17 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 286261e9b40e65450113128c51c7c9b384380878
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0048c1946e5df59340bed211c5dbb81075047260
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="isolated-storage"></a>Izolowany magazyn
 <a name="top"></a>Dla [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] aplikacji izolowanych magazynów jest mechanizmu magazynowania danych, która zapewnia izolację i bezpieczeństwo, definiując standardowych metod kojarzenia kodu z zapisane dane. Standaryzacja oferuje także inne korzyści. Administratorzy mogą używać narzędzi przeznaczonych do wykonywania operacji na wydzielonej pamięci masowej w celu konfigurowania ilości miejsca przeznaczonego na pliki, ustawiania zasad zabezpieczeń i usuwania nieużywanych danych. Dzięki wydzielonej pamięci masowej kod nie wymaga unikatowych ścieżek określających bezpieczne lokalizacje w systemie plików, a dane są chronione przed innymi aplikacjami, które mają dostęp tylko do wydzielonej pamięci masowej. Ustalona informacja, która wskazuje, gdzie jest zlokalizowany obszar pamięci aplikacji nie jest potrzebna.  
   
 > [!IMPORTANT]
->  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](http://go.microsoft.com/fwlink/?LinkId=229175) w Centrum deweloperów systemu Windows.  
+>  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  
   
  Ten temat zawiera następujące sekcje:  
   

@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 88f1a22fc15e85e687c7b7eeb0a6e01445277d09
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6b603599232a5cb4d33e2b7c9ad00e7ab3a24649
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binding-sources-overview"></a>Przegląd Wiązanie źródeł
 W powiązaniu danych powiązania obiekt źródłowy odwołuje się do obiektu, do którego pobrane dane. W tym temacie omówiono typy obiektów, których można użyć jako źródła powiązania.  
@@ -39,7 +39,7 @@ W powiązaniu danych powiązania obiekt źródłowy odwołuje się do obiektu, d
 |obiekty dynamiczne|Można powiązać z dostępnych właściwości i indeksatorów obiektu, który implementuje <xref:System.Dynamic.IDynamicMetaObjectProvider> interfejsu. Jeśli uzyskujesz dostęp do elementu członkowskiego w kodzie, można go powiązać. Na przykład, jeśli obiekt dynamiczny pozwala na uzyskiwanie dostępu do członka w kodzie za pomocą `someObjet.AProperty`, można powiązać go przez ustawienie ścieżkę wiązania `AProperty`.|  
 |[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]obiekty|Można powiązać [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] obiekty, takie jak <xref:System.Data.DataTable>. [!INCLUDE[TLA2#tla_adonet](../../../../includes/tla2sharptla-adonet-md.md)] <xref:System.Data.DataView> Implementuje <xref:System.ComponentModel.IBindingList> interfejsu, która dostarcza powiadomienia o zmianach, które nasłuchuje aparat wiązania.|  
 |[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]obiekty|Możesz powiązać i uruchomić `XPath` zapytanie na <xref:System.Xml.XmlNode>, <xref:System.Xml.XmlDocument>, lub <xref:System.Xml.XmlElement>. Dogodny dostęp do [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] danych, który jest źródłem powiązania w znaczniku jest użycie <xref:System.Windows.Data.XmlDataProvider> obiektu. Aby uzyskać więcej informacji, zobacz [powiązania danych XML przy użyciu XMLDataProvider i kwerendy XPath](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md).<br /><br /> Można także powiązać <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument>, lub z wyników zapytania, uruchom na obiektach tego typu za pomocą LINQ do XML. Wygodnym sposobem użycia LINQ do XML do dostępu do danych XML, który jest źródłem powiązania w znaczniku jest użycie <xref:System.Windows.Data.ObjectDataProvider> obiektu. Aby uzyskać więcej informacji, zobacz [powiązanie klasy XDocument, klasy XElement lub LINQ dla wyników zapytania XML](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md).|  
-|<xref:System.Windows.DependencyObject>obiekty|Można powiązać propertiesof zależności żadnego <xref:System.Windows.DependencyObject>. Na przykład zobacz [powiązanie właściwości formantów dwóch](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
+|<xref:System.Windows.DependencyObject>obiekty|Można powiązać właściwości zależności dowolnego <xref:System.Windows.DependencyObject>. Na przykład zobacz [powiązanie właściwości formantów dwóch](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md).|  
   
 <a name="classes"></a>   
 ## <a name="implementing-a-class-for-the-binding-source"></a>Implementacja klasy dla powiązania źródła  

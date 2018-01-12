@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: 4ca87c8410a04e9198e9dd6c379760e7b6596585
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: db481c18a79f55b079ec2558b884ce288e2a9933
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="executing-expression-trees"></a>Wykonywanie drzew wyrażeń
 
@@ -28,7 +28,7 @@ Typ wyrażenia `Expression<TDelegate>` tylko konkretnych przykład w bibliotekac
 
 W większości przypadków spowoduje to utworzenie prostego mapowanie między wyrażenia i jego odpowiedniego obiektu delegowanego. Na przykład drzewo wyrażenia, który jest reprezentowany przez `Expression<Func<int>>` zostanie przekonwertowana na delegata typu `Func<int>`. Wyrażenia lambda z zwracany typ i listy argumentów istnieje typ delegata, który typ docelowy dla kodu wykonywalnego reprezentowany przez tego wyrażenia lamdba.
 
-`LamdbaExpression` Typ zawiera `Compile` i `CompileToMethod` elementów członkowskich, które należy użyć, aby przekonwertować kod wykonywalny drzewo wyrażenia. `Compile` Metoda tworzy delegata. `ConmpileToMethod` Aktualizacje metody `MethodBuilder` obiektu IL, reprezentujący skompilowanych danych wyjściowych drzewa wyrażenia. Należy pamiętać, że `CompileToMethod` znajduje się tylko w ramach całego pulpitu, a nie na platformę .NET Core.
+`LamdbaExpression` Typ zawiera `Compile` i `CompileToMethod` elementów członkowskich, które należy użyć, aby przekonwertować kod wykonywalny drzewo wyrażenia. `Compile` Metoda tworzy delegata. `CompileToMethod` Aktualizacje metody `MethodBuilder` obiektu IL, reprezentujący skompilowanych danych wyjściowych drzewa wyrażenia. Należy pamiętać, że `CompileToMethod` znajduje się tylko w ramach całego pulpitu, a nie na platformę .NET Core.
 
 Opcjonalnie można też podać `DebugInfoGenerator` który otrzyma symbol informacji debugowania dla obiekt wygenerowanego obiektu delegowanego. Dzięki temu można ich przekonwertować na obiekt delegowany drzewa wyrażenia oraz pełne informacje o debugowaniu o wygenerowanego obiektu delegowanego.
 

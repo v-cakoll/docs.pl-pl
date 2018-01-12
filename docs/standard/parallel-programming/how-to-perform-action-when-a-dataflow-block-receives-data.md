@@ -1,12 +1,8 @@
 ---
 title: "Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,25 +11,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 58adf778986883b5aac823fc5e69d0a2308304dc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4aee0462e641e755830b63d3d708bf51b22cd797
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>Porady: Wykonaj operację, kiedy blok przepływu danych odbiera dane
 *Wykonanie bloku przepływu danych* typy wywołać delegata dostarczane przez użytkownika, po odebraniu danych. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.TransformBlock%602?displayProperty=nameWithType>, I <xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602?displayProperty=nameWithType> klasy są typy bloku przepływu danych wykonywania. Można użyć `delegate` — słowo kluczowe (`Sub` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), <xref:System.Action%601>, <xref:System.Func%602>, lub wyrażenia lambda, podając funkcję Praca do wykonywania bloku przepływu danych. W tym dokumencie opisano sposób użycia <xref:System.Func%602> i wyrażenia lambda do wykonania akcji w blokach wykonywania.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Przykład  
  Poniższy przykład korzysta z przepływu danych w celu odczytania pliku z dysku i oblicza liczbę bajtów w pliku, które są równe zero. Używa <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> do odczytania danego pliku i obliczanie liczby zero bajtów i <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> do drukowania liczby zero bajtów do konsoli. <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> Określa obiekt <xref:System.Func%602> obiektu do wykonywania pracy, gdy bloki odbierać dane. <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> Obiekt używa wyrażenia lambda drukowanie do konsoli liczba zero bajtów, które są do odczytu.  
   

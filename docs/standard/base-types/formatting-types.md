@@ -38,11 +38,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 31cb95b20369eaef85f280497acb99e294e97faa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 201212251bf99e5a5bab7685544079968bbebdb1
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="formatting-types-in-net"></a>Typy formatowania w .NET
 <a name="Introduction"></a>Formatowanie to proces konwertowania wystąpienia klasy, struktury lub wyliczenia wartości do reprezentacji ciągu, często, tak aby wynikowy ciąg może być widoczny dla użytkowników lub deserializacji, aby przywrócić oryginalny typ danych. Ta konwersja może stanowić wiele wyzwań:  
@@ -261,17 +261,15 @@ ms.lasthandoff: 12/23/2017
  [Powrót do początku](#Introduction)  
   
 <a name="stringRef"></a>   
-### <a name="format-strings-and-net-class-library-types"></a>Formatowanie ciągów i typy biblioteki klas .NET  
- Wszystkie typy liczbowe (to znaczy <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>i <xref:System.Numerics.BigInteger>typów)  
-  
- , a także <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, i obsługują wszystkie typy wyliczeniowe, formatowanie z ciągami formatu. Uzyskać informacji o obsługiwanych przez każdy typ ciągi określonego formatu zobacz następujące tematy  
+### <a name="format-strings-and-net-types"></a>Ciągi formatujące i typów .NET  
+ Wszystkie typy liczbowe (to znaczy <xref:System.Byte>, <xref:System.Decimal>, <xref:System.Double>, <xref:System.Int16>, <xref:System.Int32>, <xref:System.Int64>, <xref:System.SByte>, <xref:System.Single>, <xref:System.UInt16>, <xref:System.UInt32>, <xref:System.UInt64>i <xref:System.Numerics.BigInteger>typy), a także <xref:System.DateTime>, <xref:System.DateTimeOffset>, <xref:System.TimeSpan>, <xref:System.Guid>, i obsługują wszystkie typy wyliczeniowe, formatowanie z ciągami formatu. Uzyskać informacji o obsługiwanych przez każdy typ ciągi określonego formatu zobacz następujące tematy:  
   
 |Tytuł|Definicja|  
 |-----------|----------------|  
 |[Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane wartości liczbowych.|  
 |[Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla wartości liczbowych ciągi formatu niestandardowego.|  
-|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> wartości.|  
-|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> wartości.|  
+|[Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)|Opisuje standardowe ciągi formatujące utworzonych często używanych ciągów <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.|  
+|[Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla ciągi formatu niestandardowego <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.|  
 |[Standardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/standard-timespan-format-strings.md)|W tym artykule opisano standardowe ciągi formatujące utworzonych reprezentacji ciągu często używane odstępach czasu.|  
 |[Niestandardowe ciągi formatujące TimeSpan](../../../docs/standard/base-types/custom-timespan-format-strings.md)|W tym artykule opisano tworzenie formatów specyficzne dla aplikacji dla przedziały czasu ciągi formatu niestandardowego.|  
 |[Ciągi formatujące wyliczenia](../../../docs/standard/base-types/enumeration-format-strings.md)|W tym artykule opisano standardowym formacie ciągów, które zostaną użyte do utworzenia reprezentacji ciągu wartości wyliczenia.|  

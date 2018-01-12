@@ -1,12 +1,8 @@
 ---
 title: "Porady: Pisanie i odbieranie wiadomości w bloku przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,24 +11,22 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, reading and writing messages
 ms.assetid: 1a9bf078-aa82-46eb-b95a-f87237f028c5
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f4f68cfd5abb319a453ab209c4161476e775534
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b64ef07c6ef28377c11dc879ad17f7c806e9f66a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-write-messages-to-and-read-messages-from-a-dataflow-block"></a>Porady: Pisanie i odbieranie wiadomości w bloku przepływu danych
 Ten dokument zawiera opis sposobu przepływu danych tpl umożliwia pisanie i odbieranie wiadomości w bloku przepływu danych. Biblioteka przepływu danych tpl udostępnia metody synchroniczne i asynchroniczne do zapisywania wiadomości i odczytywania wiadomości w bloku przepływu danych. Ten dokument używa <xref:System.Threading.Tasks.Dataflow.BufferBlock%601?displayProperty=nameWithType> klasy. <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> Klasy buforuje wiadomości i działa jako źródła komunikatów i jako obiektu docelowego komunikatu.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl ( <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw) nie jest dystrybuowane z programu .NET Framework. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w programie Visual Studio, wybierz pozycję **Zarządzaj pakietami NuGet** z **projektu** menu, a następnie wyszukaj w trybie online `System.Threading.Tasks.Dataflow` pakietu.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 
 ## <a name="writing-to-and-reading-from-a-dataflow-block-synchronously"></a>Zapisywania i odczytywania synchronicznie z bloku przepływu danych  
  W poniższym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Post%2A> metodę, aby zapisać <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> bloku przepływu danych i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A> metody do odczytu z tego samego obiektu.  

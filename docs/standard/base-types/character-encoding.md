@@ -1,7 +1,7 @@
 ---
 title: Znak kodowania w .NET
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 12/22/2017
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 29296261deb2cd94db339595464e3dcdf245fc82
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bf07665f0f7e79affd0b34b8faba94a56dd7d1d2
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="character-encoding-in-net"></a>Znak kodowania w .NET
 Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposobów. Kodowanie znaków to system, który pary każdego znaku w obsługiwanych zestaw z niektórych wartość, która reprezentuje ten znak znaków. Na przykład Morse'a jest kodowania każdego znaku alfabetu łacińskiego z wzorcem kropek tej pary znaków i łączniki, które są odpowiednie do przesyłania za pośrednictwem telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku zestaw z wartością numeryczną, która reprezentuje ten znak obsługiwanych znaków. Kodowanie znaków ma dwa różne składniki:  
@@ -70,7 +70,7 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
 > [!NOTE]
 >  Unicode Standard przypisuje punkt kodu (number) i nazwę każdego znaku w każdej obsługiwanej skryptu. Na przykład znak "A" jest reprezentowana przez punkt kodu U + 0041 i nazwie "ŁACIŃSKIEGO litera, A". Kodowanie Format transformacji Unicode (UTF) zdefiniuj sposoby kodowania tego punktu kodu do sekwencji bajtów co najmniej jeden. Schemat kodowania Unicode upraszcza projektowanie aplikacji gotowe, ponieważ zezwala ona na znaki z dowolnego zestawu być reprezentowane w jednym kodowania znaków. Deweloperzy aplikacji już nie mieć do śledzenia schemat kodowania, który został użyty do utworzenia znaków dla określonego języka lub zapisywanie systemu i danych mogą być współużytkowane przez systemy międzynarodowe nie są uszkodzone.  
 >   
->  .NET obsługuje trzy rodzaje kodowania zdefiniowane w standardzie Unicode: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, patrz Unicode Standard na [strony głównej Unicode](http://go.microsoft.com/fwlink/?LinkId=37123).  
+>  .NET obsługuje trzy rodzaje kodowania zdefiniowane w standardzie Unicode: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, patrz Unicode Standard na [strony głównej Unicode](http://www.unicode.org/).  
   
  Można pobrać informacji o kodowania dostępnych w programie .NET, wywołując <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> metody. .NET obsługuje zestaw znaków kodowania systemów wymienionych w poniższej tabeli.  
   
@@ -154,7 +154,10 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
 > [!NOTE]
 >  Teoretycznie kodowanie Unicode klasy podana w .NET (<xref:System.Text.UTF8Encoding>, <xref:System.Text.UnicodeEncoding>, i <xref:System.Text.UTF32Encoding>) obsługuje każdy znak każdego zestawu znaków, więc można go użyć aby wyeliminować problemy rezerwowy najlepszego dopasowania.  
   
- Strategie najlepszego dopasowania się różnić dla stron inny kod, a nie opisano szczegółowo. Na przykład Latin pełnej szerokości dla niektórych stron kodowych znaków mapy w celu częściej połówkowej szerokości znaki alfabetu łacińskiego. To mapowanie nie zostało utworzone dla innych stron kodowych. Nawet w przypadku aktywnego strategii najlepszego dopasowania nie ma żadnych imaginable nadające się do niektórych znaków w niektórych kodowania. Na przykład chiński ideogramów nie ma uzasadnione mapowania strona kodowa 1252. W takim przypadku służy ciąg zastępczy. Domyślnie ten ciąg jest tylko jeden znak zapytania (U + 003F).  
+ Strategie najlepszego dopasowania różnią się inny kod stron. Na przykład Latin pełnej szerokości dla niektórych stron kodowych znaków mapy w celu częściej połówkowej szerokości znaki alfabetu łacińskiego. To mapowanie nie zostało utworzone dla innych stron kodowych. Nawet w przypadku aktywnego strategii najlepszego dopasowania nie ma żadnych imaginable nadające się do niektórych znaków w niektórych kodowania. Na przykład chiński ideogramów nie ma uzasadnione mapowania strona kodowa 1252. W takim przypadku służy ciąg zastępczy. Domyślnie ten ciąg jest tylko jeden znak zapytania (U + 003F).  
+  
+> [!NOTE]
+>  Strategie najlepszego dopasowania nie opisano szczegółowo. Jednak kilka stron kodowych są udokumentowane w [konsorcjum Unicode](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) witryny sieci Web. Zapoznaj się z tematem **readme.txt** plików w tym folderze opis sposobu interpretowania pliki mapowania.
   
  W poniższym przykładzie użyto strona kodowa 1252 (Windows strony kodowej dla języków zachodnich Europejskiego) w celu zilustrowania mapowanie najlepszego dopasowania i jego wady. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> Metoda służy do pobierania kodowania obiekt strona kodowa 1252. Domyślnie używa mapowanie najlepszego dopasowania dla znaków Unicode, które nie obsługują. Przykład tworzy ciąg, który zawiera trzy z systemem innym niż znaki ASCII - KÓŁKU S litera ŁACIŃSKA (U + 24C 8), indeks GÓRNY PIĘĆ (U + 2075), a NIESKOŃCZONOŚCIĄ (U + 221E) - rozdzielone spacjami. Jak pokazano na dane wyjściowe z przykładu, gdy jest zakodowany ciąg, trzy znaki z systemem innym niż miejsce oryginalnego są zastępowane przez znak zapytania (U + 003F), PIĘCIU CYFR (U + 0035) i osiem CYFRĘ (U + 0038). 8 CYFR nie zastępuje szczególnie niską nieobsługiwany znak NIESKOŃCZONOŚCI, a znak zapytania oznacza, że mapowania dla nie była dostępna oryginalnego znaku.  
   

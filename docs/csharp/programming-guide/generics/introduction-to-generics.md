@@ -9,11 +9,11 @@ ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
 caps.latest.revision: "32"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ec4fe9cc9fe7bf868fcc8afe4dc4e4234241e352
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="introduction-to-generics-c-programming-guide"></a>Wprowadzenie do typów ogólnych (Przewodnik programowania w języku C#)
 Ogólne klasy i metody łączyć możliwość ponownego wykorzystania, zabezpieczeń i wydajności w taki sposób, aby ich odpowiedniki nierodzajową nie. Typy ogólne są najczęściej używane przez kolekcje i metod, które działają na nich. Biblioteka klas programu .NET Framework w wersji 2.0 zapewnia nowy obszar nazw <xref:System.Collections.Generic>, który zawiera kilka nowych klas kolekcję na podstawie ogólnego. Zaleca się, że wszystkie aplikacje których docelowe [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 2.0 lub nowszy Użyj nowe klasy rodzajowej kolekcji zamiast starsze odpowiedników nierodzajową takiego jak <xref:System.Collections.ArrayList>. Aby uzyskać więcej informacji, zobacz [typy ogólne w bibliotece klas programu .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
@@ -22,9 +22,9 @@ Ogólne klasy i metody łączyć możliwość ponownego wykorzystania, zabezpiec
   
 -   Typ parametru metody w `AddHead` metody.  
   
--   Zwracany typ metody publicznej `GetNext` i `Data` właściwości w zagnieżdżonych `Node` klasy.  
+-   Jako typ zwracany `Data` właściwości w zagnieżdżonych `Node` klasy.  
   
--   Jako typ danych prywatnego elementu członkowskiego klasy zagnieżdżonej.  
+-   Jako typ prywatnego elementu członkowskiego `data` klasy zagnieżdżonej.  
   
  Należy pamiętać, że T jest dostępny dla zagnieżdżone `Node` klasy. Gdy `GenericList<T>` zostanie uruchomiony z konkretnego typu, na przykład jako `GenericList<int>`, każde wystąpienie `T` zostanie zastąpiony `int`.  
   

@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 80f95099644552aed34553385544f21d07b29114
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. Model obiektu delegowanego następuje wzorzec projektowy obserwatora, który umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Nadawca zdarzeń wypycha powiadomienie, które miało miejsce zdarzenie, a odbiorca zdarzenia otrzymuje powiadomienia i definiuje odpowiedzi na to. W tym artykule opisano głównych składników modelu delegata, jak korzystanie ze zdarzeń w aplikacjach i implementowania zdarzenia w kodzie.  
@@ -102,6 +102,6 @@ Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. 
  <xref:System.EventHandler%601>  
  <xref:System.EventArgs>  
  <xref:System.Delegate>  
- [Zdarzenia i przegląd kierowane zdarzenia (aplikacje ze Sklepu Windows)](http://go.microsoft.com/fwlink/?LinkId=261485)  
+ [Zdarzenia i przegląd kierowane zdarzenia (aplikacji platformy uniwersalnej systemu Windows)](/windows/uwp/xaml-platform/events-and-routed-events-overview)  
  [Zdarzenia (Visual Basic)](../../visual-basic/programming-guide/language-features/events/index.md)  
  [Zdarzenia (C# przewodnik programowania w języku)](../../csharp/programming-guide/events/index.md)

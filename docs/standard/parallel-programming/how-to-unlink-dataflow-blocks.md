@@ -1,12 +1,8 @@
 ---
 title: "Porady: Rozłączanie bloków przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +12,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, unlinking dataflow blocks
 ms.assetid: 40f0208d-4618-47f7-85cf-4913d07d2d7d
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f75c1d3dfeb28f55dbb198315b9bd314b70843c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: db3c0d3a6d94e2e9eb65046267f14feff0c056cb
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-unlink-dataflow-blocks"></a>Porady: Rozłączanie bloków przepływu danych
-Ten dokument zawiera opis sposobu odłączania docelowy bloku przepływu danych ze źródła.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+Ten dokument zawiera opis sposobu odłączania docelowy bloku przepływu danych ze źródła.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy trzy <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> obiekty, każdy z których wywołania `TrySolution` metodę w celu obliczenia wartości. W tym przykładzie wymaga tylko wyników z pierwszego wywołania `TrySolution` aby zakończyć.  
   
@@ -55,8 +49,6 @@ Ten dokument zawiera opis sposobu odłączania docelowy bloku przepływu danych 
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowReceiveAny.vb**  
-  
-## <a name="robust-programming"></a>Niezawodne programowanie  
-  
+
 ## <a name="see-also"></a>Zobacz też  
  [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

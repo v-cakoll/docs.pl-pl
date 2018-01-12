@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 173d7974d9cad24aff7c4da8f38f22b150ea8a0c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7e9b28601970aecd139d2027bc0ebc73e869fc
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="types-of-isolation"></a>Typy izolacji
 Dostęp do magazynu izolowanego zawsze jest ograniczony do użytkownika, który go utworzył. Aby wdrożyć ten typ izolacji, środowisko uruchomieniowe języka wspólnego używa tego samego pojęcia tożsamości użytkownika, która rozpoznaje systemu operacyjnego, czyli tożsamość skojarzoną z procesem, w którym wykonywany jest kod po otwarciu Sklepu. Ta tożsamość jest tożsamość uwierzytelnionego użytkownika, ale personifikacji może spowodować tożsamości bieżącego użytkownika można zmienić dynamicznie.  
@@ -64,7 +64,7 @@ Typy izolowanego magazynu
  Należy pamiętać, że z wyjątkiem roamingu magazynów, izolowanego magazynu jest zawsze niejawnie izolowana przez komputer ponieważ używa funkcji magazynu, które są lokalne dla danego komputera.  
   
 > [!IMPORTANT]
->  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](http://go.microsoft.com/fwlink/?LinkId=229175) w Centrum deweloperów systemu Windows.  
+>  Izolowany magazyn jest niedostępny dla [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zamiast tego należy użyć klasy danych aplikacji w `Windows.Storage` obszary nazw dołączane w [!INCLUDE[wrt](../../../includes/wrt-md.md)] interfejsu API do przechowywania plików i danych lokalnych. Aby uzyskać więcej informacji, zobacz [danych aplikacji](/previous-versions/windows/apps/hh464917(v=win.10)) w Centrum deweloperów systemu Windows.  
   
 <a name="UserAssembly"></a>   
 ## <a name="isolation-by-user-and-assembly"></a>Izolacja według użytkownika i zestawu  

@@ -1,12 +1,8 @@
 ---
 title: "Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,25 +11,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, improving efficiency
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 022657c6b1f0b77e97282c03edf418bad818a4d4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49056607d84b48584660ff62bba13147d6aa43ec
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock
-Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy, aby mogli otrzymywać i buforu danych z jednego lub więcej źródeł i rozpropagowane limit buforowane dane jako jedną kolekcję. Ten mechanizm przetwarzanie wsadowe jest przydatne, gdy zbieranie danych z jednego lub więcej źródeł, a następnie przetworzyć wielu elementów danych, takich jak partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów w bazie danych. Ta operacja może być bardziej wydajne, jeśli wiele elementów są wstawiane jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> liczba operacji wstawienia klasę, aby zwiększyć wydajność takiej bazy danych. Opisuje również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyniki oraz wszystkie wyjątki, które wystąpić, gdy program odczytuje z bazy danych.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy, aby mogli otrzymywać i buforu danych z jednego lub więcej źródeł i rozpropagowane limit buforowane dane jako jedną kolekcję. Ten mechanizm przetwarzanie wsadowe jest przydatne, gdy zbieranie danych z jednego lub więcej źródeł, a następnie przetworzyć wielu elementów danych, takich jak partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów w bazie danych. Ta operacja może być bardziej wydajne, jeśli wiele elementów są wstawiane jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> liczba operacji wstawienia klasę, aby zwiększyć wydajność takiej bazy danych. Opisuje również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyniki oraz wszystkie wyjątki, które wystąpić, gdy program odczytuje z bazy danych.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="prerequisites"></a>Wymagania wstępne  
   
 1.  Przeczytać sekcję Join bloków w [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) dokumentów przed skorzystaniem z tego przewodnika.  

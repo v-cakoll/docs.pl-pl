@@ -1,12 +1,8 @@
 ---
 title: "Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,27 +12,25 @@ helpviewer_keywords:
 - TPL dataflow library, creating custom dataflow blocks
 - dataflow blocks, creating custom in TPL
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a17bdf149d3a263b064f96feae8c660be34d375
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54882ce5f646e9e790703e0951459a9fceac3bb6
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych
 Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, jednak można również utworzyć niestandardowe bloku typów. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje zachowanie niestandardowych.  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Odczyt [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed przeczytaniem tego dokumentu.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="defining-the-sliding-window-dataflow-block"></a>Definiowanie przesuwanego okna bloku przepływu danych  
  Należy wziąć pod uwagę aplikacji przepływu danych, która wymaga buforowane wartości wejściowe i następnie dane wyjściowe w sposób przesuwanego okna. Na przykład dla wartości wejściowych {0, 1, 2, 3, 4, 5} i rozmiar okna trzech przesuwanego okna bloku przepływu danych tworzy tablic danych wyjściowych {0, 1, 2}, {1, 2, 3}, {2, 3, 4} i {3, 4, 5}. W poniższych sekcjach opisano dwa sposoby tworzenia typu bloku przepływu danych, który implementuje to zachowanie niestandardowych. Używa pierwszego technika <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> metodę, aby połączyć funkcjonalność <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> obiektu i <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> obiektu do propagator jednego bloku. Druga metoda definiuje klasę pochodzącą z <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602> i łączy istniejące funkcje do wykonania działania niestandardowego.  
@@ -73,8 +67,6 @@ Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, 
  [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-  
-## <a name="next-steps"></a>Następne kroki  
-  
+
 ## <a name="see-also"></a>Zobacz też  
  [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

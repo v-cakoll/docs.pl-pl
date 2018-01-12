@@ -1,6 +1,6 @@
 ---
 title: Serializacja binarna
-ms.date: 11/20/2017
+ms.date: 01/02/2018
 ms.prod: .net
 ms.topic: article
 helpviewer_keywords:
@@ -17,11 +17,11 @@ ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8ae76c100cdf448bd0e9625e6b3378b6b9e25324
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="binary-serialization"></a>Serializacja binarna
 
@@ -186,6 +186,7 @@ Oprogramowanie .NET core obsługuje serializacji binarnej z podzbioru typów. Mo
 - <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType>(dostępne w .NET Core 2.0.4 i nowsze wersje)
 - <xref:System.EntryPointNotFoundException?displayProperty=nameWithType>(dostępne w .NET Core 2.0.4 i nowsze wersje)
 - <xref:System.Enum?displayProperty=nameWithType>   
+- <xref:System.EventArgs?displayProperty=nameWithType>(dostępne w .NET Core 2.0.6 i nowsze wersje)
 - <xref:System.Exception?displayProperty=nameWithType>   
 - <xref:System.ExecutionEngineException?displayProperty=nameWithType>(dostępne w .NET Core 2.0.4 i nowsze wersje)
 - <xref:System.FieldAccessException?displayProperty=nameWithType>(dostępne w .NET Core 2.0.4 i nowsze wersje)

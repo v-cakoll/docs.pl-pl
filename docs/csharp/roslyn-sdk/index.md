@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 8bebb739805f28bdc192aef7678e762d0aa51016
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
+ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/11/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 
-Kompilatory kompilacji szczegółowe model kodu aplikacji, zgodnie z ich Sprawdź poprawność składni i semantyce kodu. Użycie tego modelu do tworzenia pliku wykonywalnego wyjście z kodu źródłowego. Zestaw SDK platformy .NET kompilatora zapewnia dostęp do tego modelu. Coraz, możemy polegać na programowanie zintegrowane środowisko (IDE) funkcje takie jak IntelliSense, refaktoryzacji, Zmień nazwę inteligentnego, "Znajdź wszystkie odwołania" i "Przejdź do definicji" do zwiększenia produktywności naszych. Firma Microsoft korzystają z narzędzi analizy kodu do poprawy naszych jakości kodu i generatory kodu do pomocy w konstrukcji aplikacji. Zgodnie z tych narzędzi uzyskać inteligentny, należy uzyskać dostęp do coraz więcej modelu kompilatory tylko utworzyć przetwarzania kodu aplikacji. Jest to misji podstawowych interfejsów API Roslyn: otwarcia czarne pola, dzięki czemu narzędzia i użytkowników końcowych do udziału w wiele kompilatorów informacje ma temat naszego kodu.
+Kompilatory kompilacji szczegółowe model kodu aplikacji, zgodnie z ich Sprawdź poprawność składni i semantyce kodu. Ten model ich używać do tworzenia pliku wykonywalnego wyjście z kodu źródłowego. Zestaw SDK platformy .NET kompilatora zapewnia dostęp do tego modelu. Coraz, możemy polegać na programowanie zintegrowane środowisko (IDE) funkcje takie jak IntelliSense, refaktoryzacji, Zmień nazwę inteligentnego, "Znajdź wszystkie odwołania" i "Przejdź do definicji" do zwiększenia produktywności naszych. Firma Microsoft korzystają z narzędzi analizy kodu do poprawy naszych jakości kodu i generatory kodu do pomocy w konstrukcji aplikacji. Zgodnie z tych narzędzi uzyskać inteligentny, należy uzyskać dostęp do coraz więcej modelu kompilatory tylko utworzyć przetwarzania kodu aplikacji. Jest to misji podstawowych interfejsów API Roslyn: otwarcia czarne pola, dzięki czemu narzędzia i użytkowników końcowych do udziału w wiele kompilatorów informacje ma temat naszego kodu.
 Zamiast nieprzezroczystości źródła kodu — ruch przychodzący i obiektu kodu wychodzący tłumaczy za pośrednictwem Roslyn, kompilatory stają się platformy: interfejsów API, które służy do zadań związanych z kodu, narzędzi i aplikacji.
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>Pojęcia dotyczące zestawu SDK platformy kompilatora .NET

@@ -1,12 +1,8 @@
 ---
 title: "Przepływ danych (Biblioteka zadań równoległych)"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +11,24 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library
 ms.assetid: 643575d0-d26d-4c35-8de7-a9c403e97dd6
-caps.latest.revision: "22"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5c49217023f5c43f445d9e6b7f022ef4beefef24
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b48e580d078ec6bb736ac762d505583cf632a8bd
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="dataflow-task-parallel-library"></a>Przepływ danych (Biblioteka zadań równoległych)
 <a name="top"></a>Zadania biblioteki równoległych (TPL) zawiera składniki przepływu danych, aby zwiększyć niezawodność aplikacji z obsługą współbieżności. Te składniki przepływu danych są nazywane zbiorczo *przepływu danych tpl*. Ten model przepływu danych zamienia Programowanie oparte na aktora przez udostępnienie wiadomości w trakcie przekazywania dla coarse-grained przepływu danych i przetwarzanie potokowe zadania. Składniki przepływu danych kompilacji dla typów i planowania infrastruktury TPL i integracja z języka C#, [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]i F # Obsługa języka programowania asynchronicznego. Te składniki przepływu danych są przydatne, jeśli masz wiele operacji, które muszą asynchronicznie komunikować się ze sobą, lub gdy użytkownik chce przetwarzać dane po jej udostępnieniu. Rozważmy na przykład aplikacja, która przetwarza dane obrazu z kamery internetowej. Przy użyciu modelu przepływu danych, aplikacja może przetwarzać ramki obrazu staną się one dostępne. Jeśli aplikacja zwiększa ramki obrazu, na przykład, wykonując światła zmniejszenie korektę lub efektu czerwonych utworzeniem *potoku* składników przepływu danych. Każdy etap potoku może używać więcej funkcji coarse-grained równoległości, takich jak funkcje, które są udostępniane przez TPL, aby przekształcić obrazu.  
   
  Ten dokument zawiera omówienie przepływu danych tpl. Opisuje modelu programowania, typy bloku przepływu danych wstępnie zdefiniowane i konfigurowanie bloków przepływu danych w celu spełnienia określonych wymagań aplikacji.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
  Ten dokument zawiera następujące sekcje:  
   

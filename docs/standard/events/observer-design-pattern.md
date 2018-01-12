@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1650365946797e4c352421d0196b3b0e17913456
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c13424ad817ae73b5019f0ce5a7cda54c84adc71
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="observer-design-pattern"></a>Wzorzec projektowy obserwatora
 Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Jest to odpowiednie dla dowolnego scenariusz, który wymaga wypychania powiadomień. Definiuje wzorzec *dostawcy* (znanej także jako *podmiotu* lub *według*) i zero, co najmniej jeden *obserwatorów*. Obserwatorów Zarejestruj dostawcę i zawsze, gdy wstępnie zdefiniowanego warunku, zdarzenia lub zmiana stanu występuje, dostawca automatycznie powiadamia wszystkich obserwatorów przez wywołanie metody ich. W tym wywołaniu metody dostawcę można też podać informacje o bieżącym stanie do obserwatorów. W programie .NET Framework wzorzec projektowy obserwatora jest stosowany przez zastosowanie ogólnego <xref:System.IObservable%601?displayProperty=nameWithType> i <xref:System.IObserver%601?displayProperty=nameWithType> interfejsów. Parametr typu ogólnego reprezentuje typ, który zawiera informacje powiadomień.  
@@ -56,7 +56,7 @@ Wzorzec projektowy obserwatora umożliwia subskrybenta do rejestrowania i odbier
 -   Obiekt, który zawiera dane, które dostawca wysyła do jego obserwatorów. Typ obiektu odnosi się do parametru typu ogólnego <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Chociaż ten obiekt może być taka sama jak <xref:System.IObservable%601> implementacji najczęściej jest to typ oddzielne.  
   
 > [!NOTE]
->  Oprócz wykonania wzorzec projektowy obserwatora, może Cię zainteresować eksploracji bibliotek, które są tworzone przy użyciu <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Na przykład [reaktywne rozszerzeń dla platformy .NET (Rx)](http://go.microsoft.com/fwlink/?LinkId=186345) składają się z zestawu metod rozszerzeń i operatory sekwencji standardowe LINQ do obsługi programowania asynchronicznego.  
+>  Oprócz wykonania wzorzec projektowy obserwatora, może Cię zainteresować eksploracji bibliotek, które są tworzone przy użyciu <xref:System.IObservable%601> i <xref:System.IObserver%601> interfejsów. Na przykład [reaktywne rozszerzeń dla platformy .NET (Rx)](https://msdn.microsoft.com/library/hh242985.aspx) składają się z zestawu metod rozszerzeń i operatory sekwencji standardowe LINQ do obsługi programowania asynchronicznego.  
   
 ## <a name="implementing-the-pattern"></a>Implementacja wzorca  
  W poniższym przykładzie użyto wzorzec projektowy obserwatora wdrożenia systemu informacji lotnisku bagażu oświadczeń. A `BaggageInfo` klasa dostarcza informacji na temat nadchodzących lotach i carousels, w którym bagażu z każdym locie jest dostępny do pobrania. Jest on wyświetlany w poniższym przykładzie.  

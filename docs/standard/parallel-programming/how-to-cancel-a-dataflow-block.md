@@ -1,12 +1,8 @@
 ---
 title: "Porady: Anulowanie bloku przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,26 +12,24 @@ helpviewer_keywords:
 - dataflow blocks, canceling in TPL
 - TPL dataflow library,canceling dataflow blocks
 ms.assetid: fbddda0d-da3b-4ec8-a1d6-67ab8573fcd7
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 321b4a01b4ce6445ac43cffcc14cb68f29db050d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Porady: Anulowanie bloku przepływu danych
 Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie użyto formularzy systemu Windows do wyświetlenia, gdy elementy robocze są aktywne w potoku przepływu danych, a także skutków anulowania.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
-### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
+## <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
   
 1.  Tworzenie C# lub Visual Basic **aplikacji Windows Forms** projektu. W poniższych krokach projektu o nazwie `CancellationWinForms`.  
   
@@ -50,7 +44,7 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
 ## <a name="creating-the-dataflow-pipeline"></a>Tworzenie potoku przepływu danych  
  Ta sekcja zawiera opis sposobu tworzenia potoku przepływu danych, która przetwarza elementy robocze i aktualizuje paski postępu.  
   
-#### <a name="to-create-the-dataflow-pipeline"></a>Do utworzenia potoku przepływu danych  
+### <a name="to-create-the-dataflow-pipeline"></a>Do utworzenia potoku przepływu danych  
   
 1.  W projekcie Dodaj odwołanie do System.Threading.Tasks.Dataflow.dll.  
   
@@ -81,7 +75,7 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
 ## <a name="connecting-the-dataflow-pipeline-to-the-user-interface"></a>Połączenie potoku przepływu danych interfejsu użytkownika  
  W tej sekcji opisano sposób podłączania potoku przepływu danych interfejsu użytkownika. Tworzenie potoku, a także dodawanie elementów roboczych do potoku są kontrolowane przez program obsługi zdarzeń dla **dodać elementy robocze** przycisku. Anulowanie jest inicjowane przez **anulować** przycisku. Gdy użytkownik kliknie jeden z tych przycisków, odpowiednie działanie jest inicjowane w sposób asynchroniczny.  
   
-#### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Aby połączyć potoku przepływu danych interfejsu użytkownika  
+### <a name="to-connect-the-dataflow-pipeline-to-the-user-interface"></a>Aby połączyć potoku przepływu danych interfejsu użytkownika  
   
 1.  W projektancie formularzy dla tego formularza należy utworzyć programu obsługi zdarzeń dla <xref:System.Windows.Forms.ToolStripItem.Click> zdarzenia dla **dodać elementy robocze** przycisku.  
   
@@ -106,8 +100,6 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
  Na poniższej ilustracji przedstawiono działającej aplikacji.  
   
  ![Aplikacji formularzy systemu Windows](../../../docs/standard/parallel-programming/media/tpldataflow-cancellation.png "TPLDataflow_Cancellation")  
-  
-## <a name="robust-programming"></a>Niezawodne programowanie  
-  
+
 ## <a name="see-also"></a>Zobacz też  
  [Przepływ danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

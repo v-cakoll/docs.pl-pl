@@ -1,12 +1,8 @@
 ---
 title: "Wskazówki: Tworzenie potoku przepływu danych"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +12,23 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
-caps.latest.revision: "11"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6cc65464248ec27c4bda4934408a9bafc823a80c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6385f5f597ad31ad50253bc7b472b3344b74db7a
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Wskazówki: Tworzenie potoku przepływu danych
-Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metod do odbierania wiadomości z źródło bloków, możesz również nawiązać bloki komunikatów formularza *potoku przepływu danych*. Potoku przepływu danych jest szeregu składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, która wspiera większy cel. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę po otrzymaniu komunikatu od innego bloku przepływu danych. Odpowiednio do tego zestawu dla jest wiersz samochodów produkcyjnym. Każdy vehicle przechodzi przez wiersz zestawu, jednej stacji składana ramki, kolejny instaluje aparat i tak dalej. Ponieważ wiersza zestawu umożliwia wielu pojazdów odbywać się w tym samym czasie, zapewnia lepszą przepustowość niż zebrania pojazdów kompletnych jednym naraz.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metod do odbierania wiadomości z źródło bloków, możesz również nawiązać bloki komunikatów formularza *potoku przepływu danych*. Potoku przepływu danych jest szeregu składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, która wspiera większy cel. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę po otrzymaniu komunikatu od innego bloku przepływu danych. Odpowiednio do tego zestawu dla jest wiersz samochodów produkcyjnym. Każdy vehicle przechodzi przez wiersz zestawu, jednej stacji składana ramki, kolejny instaluje aparat i tak dalej. Ponieważ wiersza zestawu umożliwia wielu pojazdów odbywać się w tym samym czasie, zapewnia lepszą przepustowość niż zebrania pojazdów kompletnych jednym naraz.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
  W tym dokumencie przedstawiono potoku przepływu danych, który pobiera książkę *Iliad Homer* z witryny sieci Web i wyszukiwania tekstu do dopasowania poszczególnych wyrazów z wyrazów tego wstecznego pierwsze słowo znaków. Tworzenie potoku przepływu danych, w tym dokumencie obejmuje następujące kroki:  
   
 1.  Utwórz bloków przepływu danych, które uczestniczą w potoku.  

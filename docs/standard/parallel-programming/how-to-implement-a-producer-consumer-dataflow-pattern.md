@@ -1,12 +1,8 @@
 ---
 title: "Porady: Implementowanie wzorca przepływu danych producent — konsument"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,24 +12,22 @@ helpviewer_keywords:
 - Task Parallel Library, dataflows
 - producer-consumer patterns, implementing [TPL]
 ms.assetid: 47a1d38c-fe9c-44aa-bd15-937bd5659b0b
-caps.latest.revision: "10"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2cf5eea6a130d34df2cbcd84a08e63ff9c9bd260
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3758ec77a722a66c6faa287d299e5e9c38858be5
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-implement-a-producer-consumer-dataflow-pattern"></a>Porady: Implementowanie wzorca przepływu danych producent — konsument
 Ten dokument zawiera opis sposobu umożliwia Implementowanie wzorca producent — konsument przepływu danych tpl. W tym wzorcu *producent* wysyła komunikaty do bloku komunikatów i *konsumenta* odczytuje wiadomości z tego bloku.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano podstawowe producent — konsument modelu, który korzysta z przepływu danych. `Produce` Metoda zapisuje tablic zawierających losowych bajtów danych do <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601?displayProperty=nameWithType> obiektu i `Consume` metoda odczytuje bajtów z <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601?displayProperty=nameWithType> obiektu. Działając w <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> i <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> interfejsów, zamiast ich typów pochodnych może zapisywać do ponownego użycia kodu, który może działać na różnych typów bloku przepływu danych. W tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> klasy. Ponieważ <xref:System.Threading.Tasks.Dataflow.BufferBlock%601> klasa działa jako źródło zarówno zablokować, a także jako docelowy blok, producent i konsumenta można użyć obiektu współużytkowanego na przesyłanie danych.  

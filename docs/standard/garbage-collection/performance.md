@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0bceefc7ec2c6bc1aebaa0403bdfea6138125624
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e1cf3475ded3582cdf0754e68d13c97bd87b06a8
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="garbage-collection-and-performance"></a>Odzyskiwanie pamięci i wydajność
 <a name="top"></a>W tym temacie opisano problemy związane z użycia pamięci kolekcji i pamięci. Rozwiązuje problemy, które odnoszą się do sterty zarządzanej, a wyjaśniono sposób zminimalizować wpływ operacji wyrzucania elementów bezużytecznych w aplikacji. Każde wydanie zawiera łącza do procedur, które służy do badania problemów.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="sos"></a>   
 ### <a name="debugging-with-sos"></a>Debugowanie za pomocą SOS  
- Można użyć [debugera systemu Windows (WinDbg)](http://go.microsoft.com/fwlink/?LinkId=186482) do zbadania obiektów na stercie zarządzanej.  
+ Można użyć [debugera systemu Windows (WinDbg)](/windows-hardware/drivers/debugger/index) do zbadania obiektów na stercie zarządzanej.  
   
  Aby zainstalować WinDbg, zainstalować narzędzi debugowania dla systemu Windows z [WDK i Developer Tools w sieci Web](http://go.microsoft.com/fwlink/?LinkID=103787).  
   

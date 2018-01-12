@@ -1,7 +1,7 @@
 ---
 title: "&lt;AppContextSwitchOverrides&gt; — Element"
 ms.custom: 
-ms.date: 10/17/2017
+ms.date: 01/08/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9cc68f4be869a4773b8a6b932d1f6363855fe584
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
+ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext> klasy, aby zapewnić mechanizm rezygnacji z nowych funkcji.  
@@ -79,6 +79,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Jeśli wartość `false`, pozwala na debugowanie projektów opartych na języku XAML przepływu pracy z programem Visual Studio, gdy FIPS jest włączone. Bez tego <xref:System.NullReferenceException> jest zgłaszany w wywołaniach metody w zestawie elementu System.Activities.|.NET framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Określa, czy sumy kontrolnej dla wystąpienia przepływu pracy w debugerze używa MD5 lub SHA1. | .NET framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Formanty czy <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda zgłosi wyjątek podczas <xref:System.Drawing.Icon> obiekt ma ramki PNG. Aby uzyskać więcej informacji, zobacz [środki zaradcze: PNG ramki w obiektach ikona](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|  
+|`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Formanty czy wydajność <xref:System.Windows.Forms.PrintPreviewDialog> jest zoptymalizowana pod kątem drukarek sieciowych. Aby uzyskać więcej informacji, zobacz [printpreviewdialog — informacje o formancie](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Określa, czy operacje asynchroniczne nie przepływać z kontekstu wywołania wątku. Aby uzyskać więcej informacji, zobacz [CurrentCulture i CurrentUICulture przepływ między zadania](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Formanty czy <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> metoda próbuje dopasować typ oświadczenia tylko w przypadku ostatni wpis DNS. Aby uzyskać więcej informacji, zobacz [środki zaradcze: metoda X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|Formanty czy ścieżki przekracza `MAX_PATH` throw (260 znaków) <xref:System.IO.PathTooLongException>. Aby uzyskać więcej informacji, zobacz [długa ścieżka pomocy technicznej](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  

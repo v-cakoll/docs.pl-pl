@@ -1,12 +1,8 @@
 ---
 title: "Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,25 +12,23 @@ helpviewer_keywords:
 - TPL dataflow library, joining blocks in
 - dataflow blocks, joining in TPL
 ms.assetid: e9c1ada4-ac57-4704-87cb-2f5117f8151d
-caps.latest.revision: "7"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fa5f531257c0593f615e4620b56b2ef581ac143c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
+ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł
-W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasę, aby wykonać operację, gdy dane są dostępne z wielu źródeł. On również pokazano, jak w trybie niezachłanne włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.  
-  
-> [!TIP]
->  Biblioteka przepływu danych tpl (<xref:System.Threading.Tasks.Dataflow?displayProperty=nameWithType> przestrzeni nazw) nie jest rozpowszechniana z [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]. Aby zainstalować <xref:System.Threading.Tasks.Dataflow> przestrzeni nazw, otwórz projekt w [!INCLUDE[vs_dev11_long](../../../includes/vs-dev11-long-md.md)], wybierz **Zarządzaj pakietami NuGet** z menu projektu i wyszukaj w trybie online `Microsoft.Tpl.Dataflow` pakietu.  
-  
+W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasę, aby wykonać operację, gdy dane są dostępne z wielu źródeł. On również pokazano, jak w trybie niezachłanne włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.
+
+[!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
+
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie zdefiniowano trzy typy zasobów, `NetworkResource`, `FileResource`, i `MemoryResource`i wykonuje operacje, gdy zasoby będą dostępne. W tym przykładzie wymaga `NetworkResource` i `MemoryResource` pary w celu przeprowadzenia pierwszej operacji i `FileResource` i `MemoryResource` pary w celu wykonania drugiej operacji. Aby włączyć te operacje nastąpić, gdy wszystkie wymagane zasoby są dostępne, w tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasy. Gdy <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> obiektu odbiera dane ze wszystkich źródeł, propaguje on danych do jej obiekt docelowy, który w tym przykładzie jest <xref:System.Threading.Tasks.Dataflow.ActionBlock%601> obiektu. Zarówno <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> odczytywać obiekty z udostępnionej puli `MemoryResource` obiektów.  
   

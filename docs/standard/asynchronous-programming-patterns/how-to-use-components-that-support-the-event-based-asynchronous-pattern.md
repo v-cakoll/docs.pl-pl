@@ -31,16 +31,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cff126734dbaee315382d20cd43ded45d9f8e885
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: dd5371c8ce80383e2929099c9d9658694858f8df
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>Porady: używanie składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Wiele składników dają możliwość wykonywania pracy asynchronicznie. <xref:System.Media.SoundPlayer> i <xref:System.Windows.Forms.PictureBox> składników, na przykład umożliwiają ładowania dźwięki i obrazy "w tle", gdy z wątku głównego będzie kontynuował działanie bez przeszkód.  
   
- Używanie metod asynchronicznych klasy, która obsługuje [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) może być prosty jak dołączanie program obsługi zdarzeń do składnika *MethodName* `Completed` zdarzenia Podobnie jak inne zdarzenia. Podczas wywoływania *MethodName* `Async` metody, aplikacja będzie nadal działa nieprzerwanie aż do *MethodName* `Completed` zdarzenia. W przypadku obsługi zdarzenia należy zbadać <xref:System.ComponentModel.AsyncCompletedEventArgs> parametr, aby określić, czy pomyślnie Ukończono operację asynchroniczną, czy została anulowana.  
+ Używanie metod asynchronicznych klasy, która obsługuje [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md) może być prosty jak dołączanie program obsługi zdarzeń do składnika *MethodName *** Ukończono** zdarzenia Podobnie jak inne zdarzenia. Podczas wywoływania *MethodName *** Async** metody, aplikacja będzie nadal działa nieprzerwanie aż do *MethodName *** Ukończono** zdarzenia. W przypadku obsługi zdarzenia należy zbadać <xref:System.ComponentModel.AsyncCompletedEventArgs> parametr, aby określić, czy pomyślnie Ukończono operację asynchroniczną, czy została anulowana.  
   
  Aby uzyskać więcej informacji o korzystaniu z obsługi zdarzeń, zobacz [Przegląd obsługi zdarzeń](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md).  
   

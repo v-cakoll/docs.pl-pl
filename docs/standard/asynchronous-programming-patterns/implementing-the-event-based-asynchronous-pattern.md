@@ -30,11 +30,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 77156eb1ceeb549ce5fe09532e05096376b4569b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4c503b89c63d976fe6304291aa1157765fa5c6f7
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą zauważalnego opóźnienia, należy wziąć pod uwagę nadanie mu funkcji asynchroniczności zaimplementowanie [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -75,7 +75,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
 ## <a name="naming-asynchronous-methods"></a>Nazwy metod asynchronicznych  
  Dla każdej z metod synchronicznych *MethodName* dla którego chcesz podać asynchroniczne odpowiednikiem:  
   
- Zdefiniuj *MethodName* `Async` metody który:  
+ Zdefiniuj *MethodName *** Async** metody który:  
   
 -   Zwraca `void`.  
   
@@ -83,9 +83,9 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
 -   Akceptuje wiele wywołań.  
   
- Opcjonalnie zdefiniować *MethodName* `Async` przeciążenia taki sam jak *MethodName*`Async`, ale bez dodatkowy parametr zwracającej obiekt o nazwie `userState`. Jeśli jest przygotowane do zarządzania wielu współbieżnych wywołań metodę, w którym to przypadku `userState` wartości będą dostarczane do wszystkich procedur obsługi zdarzeń w celu odróżnienia wywołania metody. Można też to zrobić po prostu jako miejsce do przechowywania stanu użytkownika późniejszym pobierania.  
+ Opcjonalnie zdefiniować *MethodName *** Async** przeciążenia taki sam jak * MethodName ***Async**, wywołuje się, ale bez dodatkowy parametr zwracającej obiekt `userState`. Jeśli jest przygotowane do zarządzania wielu współbieżnych wywołań metodę, w którym to przypadku `userState` wartości będą dostarczane do wszystkich procedur obsługi zdarzeń w celu odróżnienia wywołania metody. Można też to zrobić po prostu jako miejsce do przechowywania stanu użytkownika późniejszym pobierania.  
   
- Dla każdej szczegółowej *MethodName* `Async` podpis metody:  
+ Dla każdej szczegółowej *MethodName *** Async** podpis metody:  
   
 1.  W tej samej klasie metodą, należy zdefiniować następujące zdarzenie:  
   
@@ -120,7 +120,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
     }  
     ```  
   
-    -   Upewnij się, że *MethodName* `CompletedEventArgs` klasy udostępnia jej elementów członkowskich jako właściwości tylko do odczytu i nie pola jako pola Zapobiegaj wiązania z danymi.  
+    -   Upewnij się, że *MethodName *** CompletedEventArgs** klasy udostępnia jej elementów członkowskich jako właściwości tylko do odczytu i nie pola jako pola Zapobiegaj wiązania z danymi.  
   
     -   Nie definiują <xref:System.ComponentModel.AsyncCompletedEventArgs>-pochodnych klas do metody, które nie dostarczyło wyników. Po prostu użyć wystąpienia <xref:System.ComponentModel.AsyncCompletedEventArgs> samej siebie.  
   
@@ -132,7 +132,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
 -   Klasy, w tym przyszłych przewidywanego dodatków, ma tylko jedną operację asynchroniczną, która obsługuje anulowanie?  
   
--   Można operacje asynchroniczne, które obsługują wiele oczekujących operacji anulowania obsługi? Oznacza to, że jest *MethodName* `Async` Wykonaj metodę `userState` parametru i jest możliwe wielu wywołań przed oczekiwania na zakończenie?  
+-   Można operacje asynchroniczne, które obsługują wiele oczekujących operacji anulowania obsługi? Oznacza to, że jest *MethodName *** Async** Wykonaj metodę `userState` parametru i jest możliwe wielu wywołań przed oczekiwania na zakończenie?  
   
  Użyj odpowiedzi na te pytania dwóch w poniższej tabeli, aby określić, jakie powinny być sygnatury dla metody anulowania.  
   
@@ -152,16 +152,16 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
  W przypadku definiowania `CancelAsync(object userState)` metody klientów należy zachować ostrożność, wybierając wartości stanu, aby pozwala na rozróżniania wśród wszystkich metod asynchronicznych wywołana dla obiektu, a nie tylko od wszystkich wywołań jednej metody asynchronicznej.  
   
- Decyzja o nazwę wersji jednym asynchroniczne operacje *MethodName* `AsyncCancel` opiera się na było łatwiej odnaleźć metody w środowisku projektowania, takie jak IntelliSense programu Visual Studio. Grupuje pokrewne elementy członkowskie, a odróżnia je od innych elementów członkowskich, które nie mają nic wspólnego z funkcji asynchronicznych. Jeśli przypuszczasz, że mogą istnieć dodatkowe operacje asynchroniczne dodane w kolejnych wersjach, lepiej zdefiniować `CancelAsync`.  
+ Decyzja o nazwę wersji jednym asynchroniczne operacje *MethodName *** AsyncCancel** jest oparta na było łatwiej odnaleźć metody w środowisku projektowania, takie jak IntelliSense programu Visual Studio. Grupuje pokrewne elementy członkowskie, a odróżnia je od innych elementów członkowskich, które nie mają nic wspólnego z funkcji asynchronicznych. Jeśli przypuszczasz, że mogą istnieć dodatkowe operacje asynchroniczne dodane w kolejnych wersjach, lepiej zdefiniować `CancelAsync`.  
   
  Wiele metod z powyższej tabeli nie zostaną zdefiniowane w tej samej klasy. Że nie ma sensu lub będzie zajmowały interfejsu klasy z mnożenie metody.  
   
- Te metody zwykle zwróci natychmiast i operacji może lub nie może faktycznie anulowania. W obsłudze zdarzeń dla *MethodName* `Completed` zdarzeń, *MethodName* `CompletedEventArgs` obiekt zawiera `Cancelled` pola, którego klienci mogą używać, aby określić, czy podczas anulowania.  
+ Te metody zwykle zwróci natychmiast i operacji może lub nie może faktycznie anulowania. W obsłudze zdarzeń dla *MethodName *** Ukończono** zdarzeń, *MethodName *** CompletedEventArgs** obiekt zawiera `Cancelled` pola, którego klienci mogą używać, aby określić, czy podczas anulowania.  
   
  Przestrzegać semantyki anulowania opisanego w [najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="optionally-support-the-isbusy-property"></a>Opcjonalnie obsługiwać Właściwość IsBusy  
- Jeśli klasa nie obsługuje wiele równoczesnych wywołań, należy wziąć pod uwagę udostępnianie `IsBusy` właściwości. Dzięki temu deweloperzy mogą określić, czy *MethodName* `Async` metody działa bez przechwytywanie wyjątku z *MethodName* `Async` metody.  
+ Jeśli klasa nie obsługuje wiele równoczesnych wywołań, należy wziąć pod uwagę udostępnianie `IsBusy` właściwości. Dzięki temu deweloperzy mogą określić, czy *MethodName *** Async** metody działa bez przechwytywanie wyjątku z *MethodName *** Async** — metoda.  
   
  Przestrzegać `IsBusy` semantyki opisanego w [najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -174,15 +174,15 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
     -   `ProgressChanged`Jeśli klasa ma wiele operacji asynchronicznych (lub jest oczekiwana Powiększ, aby dołączyć wielu operacji asynchronicznych w przyszłych wersjach);  
   
-    -   *MethodName* `ProgressChanged` Jeśli klasa ma jednej operacji asynchronicznej.  
+    -   *MethodName *** ProgressChanged** Jeśli klasa ma jednej operacji asynchronicznej.  
   
      Ten wybór nazewnictwa równoleżnikami zgłaszającego dla metody anulowania, zgodnie z opisem w sekcji opcjonalnie anulowania obsługi.  
   
  To zdarzenie należy używać <xref:System.ComponentModel.ProgressChangedEventHandler> podpisu delegata i <xref:System.ComponentModel.ProgressChangedEventArgs> klasy. Alternatywnie, jeśli wskaźnik postępu bardziej specyficznego dla domeny można podać (w przypadku wystąpienia odczytanych bajtów i łączna liczba bajtów dla operacji pobierania), następnie należy zdefiniować klasy pochodnej z <xref:System.ComponentModel.ProgressChangedEventArgs>.  
   
- Należy pamiętać, że istnieje tylko jeden `ProgressChanged` lub *MethodName* `ProgressChanged` zdarzenia dla klasy, niezależnie od liczby obsługiwanych metod asynchronicznych. Klienci powinni używać `userState` obiekt, który jest przekazywany do *MethodName* `Async` metody do odróżnienia postępu aktualizacji na wiele równoczesnych operacji.  
+ Należy pamiętać, że istnieje tylko jeden `ProgressChanged` lub *MethodName *** ProgressChanged** zdarzenia dla klasy, niezależnie od liczby obsługiwanych metod asynchronicznych. Klienci powinni używać `userState` obiekt, który jest przekazywany do *MethodName *** Async** metody do odróżnienia postępu aktualizacji na wiele równoczesnych operacji.  
   
- Mogą wystąpić sytuacje, w których wiele operacji obsługuje postępu i zwraca każdego innego wskaźnika postępu. W tym przypadku jednej `ProgressChanged` zdarzeń nie jest odpowiedni i można rozważyć obsługi wielu `ProgressChanged` zdarzenia. W takim przypadku należy użyć wzorzec nazewnictwa *MethodName* `ProgressChanged` dla każdego *MethodName* `Async` metody.  
+ Mogą wystąpić sytuacje, w których wiele operacji obsługuje postępu i zwraca każdego innego wskaźnika postępu. W tym przypadku jednej `ProgressChanged` zdarzeń nie jest odpowiedni i można rozważyć obsługi wielu `ProgressChanged` zdarzenia. W takim przypadku należy użyć wzorzec nazewnictwa *MethodName *** ProgressChanged** dla każdego *MethodName *** Async** metody.  
   
  Przestrzegać semantykę raportowania postępu opisane [najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -192,23 +192,23 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
 ### <a name="single-operation-class"></a>Klasy pojedynczej operacji  
  Jeśli klasa obsługuje tylko jednej operacji asynchronicznych i tej operacji może zwrócić wyniki przyrostowych, następnie:  
   
--   Rozszerzanie <xref:System.ComponentModel.ProgressChangedEventArgs> typu przenoszenia danych przyrostowych wyników i zdefiniuj *MethodName* `ProgressChanged` zdarzenie z rozszerzenia danych.  
+-   Rozszerzanie <xref:System.ComponentModel.ProgressChangedEventArgs> typu przenoszenia danych przyrostowych wyników i zdefiniuj *MethodName *** ProgressChanged** zdarzenie z rozszerzenia danych.  
   
--   Zgłoś to *MethodName* `ProgressChanged` zdarzenie, gdy istnieje przyrostowe wynik do raportu.  
+-   Zgłoś to *MethodName *** ProgressChanged** zdarzenie, gdy istnieje przyrostowe wynik do raportu.  
   
- To rozwiązanie dotyczy w szczególności klasy pojedynczej asynchronicznej operacji ponieważ nie ma problemów z tego samego zdarzenia występujące zwraca wyniki przyrostowe na "wszystkie operacje", jako *MethodName* `ProgressChanged` jest zdarzenie.  
+ To rozwiązanie dotyczy w szczególności klasy pojedynczej asynchronicznej operacji ponieważ nie ma problemów z tego samego zdarzenia występujące zwraca wyniki przyrostowe na "wszystkie operacje", jako *MethodName *** ProgressChanged** jest zdarzenie.  
   
 ### <a name="multiple-operation-class-with-homogeneous-incremental-results"></a>Klasa wielu operacji jednorodnych wyniki przyrostowe  
  W takim przypadku klasa obsługuje wiele metod asynchronicznych, każdy może zwracania wyników przyrostowych i przyrostowych wszystkie wyniki mają ten sam typ danych.  
   
- Postępuj zgodnie z modelem opisane powyżej, aby klasy pojedynczej operacji, jako takie same <xref:System.EventArgs> struktury będzie działać w przypadku wszystkich wyników przyrostowe. Zdefiniuj `ProgressChanged` zdarzeń zamiast *MethodName* `ProgressChanged` zdarzenie, ponieważ dotyczy on wiele metod asynchronicznych.  
+ Postępuj zgodnie z modelem opisane powyżej, aby klasy pojedynczej operacji, jako takie same <xref:System.EventArgs> struktury będzie działać w przypadku wszystkich wyników przyrostowe. Zdefiniuj `ProgressChanged` zdarzeń zamiast *MethodName *** ProgressChanged** zdarzenie, ponieważ dotyczy on wiele metod asynchronicznych.  
   
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>Klasa wielu operacji heterogenicznych wyniki przyrostowe  
  Jeśli klasa obsługuje wiele metod asynchronicznych, każdy zwracanie różnych typów danych, wykonaj następujące czynności:  
   
 -   Oddzielne przyrostowe wyników raportowania raportowania postępu.  
   
--   Zdefiniuj oddzielnej *MethodName* `ProgressChanged` zdarzeń z odpowiednich <xref:System.EventArgs> dla każdej metody asynchronicznej do obsługi danych przyrostowych wyniku tej metody.  
+-   Zdefiniuj oddzielnej *MethodName *** ProgressChanged** zdarzeń z odpowiednich <xref:System.EventArgs> dla każdej metody asynchronicznej do obsługi danych przyrostowych wyniku tej metody.  
   
  Wywołania programu obsługi zdarzeń w odpowiednich wątku, zgodnie z opisem w [najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md).  
   
@@ -217,9 +217,9 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
  Podana metoda synchroniczna *MethodName*:  
   
--   `out`Parametry *MethodName* nie powinna być częścią *MethodName*`Async`. Zamiast tego powinna być częścią *MethodName* `CompletedEventArgs` o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
+-   `out`Parametry *MethodName* nie powinna być częścią *MethodName ***Async**. Zamiast tego powinna być częścią *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
   
--   `ref`Parametry *MethodName* powinny się wyświetlać jako część *MethodName*`Async`i w ramach *MethodName* `CompletedEventArgs` o takiej samej nazwie jak jego Parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
+-   `ref`Parametry *MethodName* powinny się wyświetlać jako część *MethodName ***Async**i w ramach *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
   
  Przykładowo podana:  
   

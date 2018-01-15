@@ -31,11 +31,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5349bc9eada177a65cdfefd9a1f33c1c63e7fed6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a3e69ea3de0ac418956d51c6e942e33d90575c1d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Wskazówki: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą zauważalnego opóźnienia, należy wziąć pod uwagę nadanie mu funkcji asynchroniczności zaimplementowanie [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -70,7 +70,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
 -   Tworzenie klasy o nazwie `PrimeNumberCalculator` dziedziczący po <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definiowanie zdarzenia asynchroniczne publiczne i Delegaty  
- Składnik komunikuje się klientów przy użyciu zdarzenia. *MethodName* `Completed` alerty zdarzeń informujące o klientów do wykonania zadanie asynchroniczne i *MethodName* `ProgressChanged` zdarzeń poinformuje klientów postęp zadania asynchronicznego.  
+ Składnik komunikuje się klientów przy użyciu zdarzenia. *MethodName *** Ukończono** alerty zdarzeń informujące o klientów do wykonania zadanie asynchroniczne i *MethodName *** ProgressChanged** zdarzeń poinformuje klientów postęp zadania asynchronicznego.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Aby zdefiniować zdarzenia asynchroniczne dla klientów składnika:  
   

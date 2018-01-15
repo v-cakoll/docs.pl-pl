@@ -25,11 +25,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac206e41f727d24e7748226101b9b8a86ee77376
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach udostępnia efektywny sposób ujawniać asynchroniczne zachowanie w klasach ze zdarzeniem znanych i delegowanie semantyki. Do implementacji klienta wzorca asynchronicznego opartego na zdarzeniach, należy wykonać niektóre określone wymagania funkcjonalne. W poniższych sekcjach opisano wymagania i wskazówki, które należy rozważyć podczas implementowania klasę, która wykonuje asynchroniczny wzorzec oparty na zdarzeniach.  
@@ -40,14 +40,14 @@ Asynchroniczny wzorzec oparty na zdarzeniach udostępnia efektywny sposób ujawn
  Jeśli implementacji klienta wzorca asynchronicznego opartego na zdarzeniach, należy podać numer gwarancji, aby klasy będzie działać prawidłowo, a klienci klasy może polegać na takie zachowanie.  
   
 ### <a name="completion"></a>Zakończenie  
- Zawsze wywołania *MethodName* `Completed` obsługi zdarzeń po pomyślnym ukończeniu, błąd lub anulowania. Aplikacji nigdy nie powinna wystąpić sytuacja, w którym pozostają w stanie bezczynności i uzupełniania nigdy nie występuje. Jedynym wyjątkiem od tej reguły jest, jeśli operacja asynchroniczna, sama go tak zaprojektowane, że nigdy się nie kończy.  
+ Zawsze wywołania *MethodName *** Ukończono** Obsługa zdarzeń po pomyślnym ukończeniu, błąd lub anulowania. Aplikacji nigdy nie powinna wystąpić sytuacja, w którym pozostają w stanie bezczynności i uzupełniania nigdy nie występuje. Jedynym wyjątkiem od tej reguły jest, jeśli operacja asynchroniczna, sama go tak zaprojektowane, że nigdy się nie kończy.  
   
 ### <a name="completed-event-and-eventargs"></a>Zakończonego zdarzenia i EventArgs  
- Dla każdej szczegółowej *MethodName* `Async` metody, zastosuj następujące wymagania:  
+ Dla każdej szczegółowej *MethodName *** Async** metody, zastosuj następujące wymagania:  
   
--   Zdefiniuj *MethodName* `Completed` zdarzenia w tej samej klasy jako metodę.  
+-   Zdefiniuj *MethodName *** Ukończono** zdarzenia w tej samej klasy jako metodę.  
   
--   Zdefiniuj <xref:System.EventArgs> klasy i towarzyszące delegowanie dla *MethodName* `Completed` zdarzeń, która jest pochodną <xref:System.ComponentModel.AsyncCompletedEventArgs> klasy. Domyślna nazwa klasy powinna mieć postać *MethodName*`CompletedEventArgs`.  
+-   Zdefiniuj <xref:System.EventArgs> klasy i towarzyszące delegowanie dla *MethodName *** Ukończono** zdarzeń, która jest pochodną <xref:System.ComponentModel.AsyncCompletedEventArgs> klasy. Domyślna nazwa klasy powinna mieć postać * MethodName ***CompletedEventArgs**.  
   
 -   Upewnij się, że <xref:System.EventArgs> klasy jest specyficzna dla wartości zwracanych metody *MethodName* metody. Jeśli używasz <xref:System.EventArgs> klasy, należy nigdy nie wymagać deweloperom Rzutuj wynik.  
   
@@ -69,27 +69,27 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Nie definiują <xref:System.EventArgs> klasy dla zwracania metody, które zwracają `void`. Użyj wystąpienia <xref:System.ComponentModel.AsyncCompletedEventArgs> klasy.  
   
--   Upewnij się, że należy zawsze podnieść *MethodName* `Completed` zdarzeń. To zdarzenie zostanie zgłoszony na pomyślne zakończenie, błąd lub anulowania. Aplikacji nigdy nie powinna wystąpić sytuacja, w którym pozostają w stanie bezczynności i uzupełniania nigdy nie występuje.  
+-   Upewnij się, że należy zawsze podnieść *MethodName *** Ukończono** zdarzeń. To zdarzenie zostanie zgłoszony na pomyślne zakończenie, błąd lub anulowania. Aplikacji nigdy nie powinna wystąpić sytuacja, w którym pozostają w stanie bezczynności i uzupełniania nigdy nie występuje.  
   
 -   Upewnij się, że zostaną wychwycone wszelkie wyjątki, które występują w operacji asynchronicznej i przypisz zgłoszony wyjątek do <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> właściwości.  
   
 -   Wystąpił błąd podczas wykonywania zadania, wyniki powinny być niedostępne. Gdy <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> właściwość nie jest `null`, upewnij się, że podczas uzyskiwania dostępu do żadnej właściwości w <xref:System.EventArgs> struktury zgłasza wyjątek. Użyj <xref:System.ComponentModel.AsyncCompletedEventArgs.RaiseExceptionIfNecessary%2A> metodę w celu weryfikacji.  
   
--   Model limit czasu jako błąd. W przypadku przekroczenia limitu czasu podnieść *MethodName* `Completed` zdarzenie i przypisz <xref:System.TimeoutException> do <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> właściwości.  
+-   Model limit czasu jako błąd. W przypadku przekroczenia limitu czasu podnieść *MethodName *** Ukończono** zdarzenie i przypisz <xref:System.TimeoutException> do <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A> właściwości.  
   
--   Jeśli klasa obsługuje wiele równoczesnych wywołań, upewnij się, że *MethodName* `Completed` zdarzenie zawiera odpowiednie `userSuppliedState` obiektu.  
+-   Jeśli klasa obsługuje wiele równoczesnych wywołań, upewnij się, że *MethodName *** Ukończono** zdarzenie zawiera odpowiednie `userSuppliedState` obiektu.  
   
--   Upewnij się, że *MethodName* `Completed` zdarzenie jest wywoływane w wątku odpowiednie i w odpowiednim czasie w cyklu życia aplikacji. Aby uzyskać więcej informacji zobacz sekcję wątki i konteksty.  
+-   Upewnij się, że *MethodName *** Ukończono** zdarzenie jest wywoływane w wątku odpowiednie i w odpowiednim czasie w cyklu życia aplikacji. Aby uzyskać więcej informacji zobacz sekcję wątki i konteksty.  
   
 ### <a name="simultaneously-executing-operations"></a>Jednocześnie wykonywania operacji  
   
--   Jeśli klasa obsługuje wiele równoczesnych wywołań, Włącz projektanta do śledzenia każdego wywołania oddzielnie, definiując *MethodName* `Async` przeciążenia, które przyjmuje parametr zwracającej obiekt stanu lub identyfikator zadania o nazwie `userSuppliedState`. Ten parametr powinien zawsze być ostatnim parametrem *MethodName* `Async` podpis metody.  
+-   Jeśli klasa obsługuje wiele równoczesnych wywołań, Włącz projektanta do śledzenia każdego wywołania oddzielnie, definiując *MethodName *** Async** przeciążenia, które przyjmuje parametr zwracającej obiekt stanu lub identyfikator zadania, nazywany `userSuppliedState`. Ten parametr powinien zawsze być ostatnim parametrem *MethodName *** Async** podpis metody.  
   
--   Jeśli klasa definiuje *MethodName* `Async` przeciążenia, które przyjmuje parametr zwracającej obiekt stanu lub identyfikator zadania, pamiętaj śledzić okres istnienia operację, podając identyfikator tego zadania i należy podać go do zakończenia Program obsługi. Brak pomagające klasy pomocy. Aby uzyskać więcej informacji dotyczących zarządzania współbieżności, zobacz [wskazówki: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+-   Jeśli klasa definiuje *MethodName *** Async** przeciążenia, które przyjmuje parametr zwracającej obiekt stanu lub identyfikator zadania, pamiętaj śledzić okres istnienia operację, podając identyfikator tego zadania i należy podać go do programu obsługi zakończenia . Brak pomagające klasy pomocy. Aby uzyskać więcej informacji dotyczących zarządzania współbieżności, zobacz [wskazówki: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
   
--   Jeśli klasa definiuje *MethodName* `Async` metody bez parametru stanu który nie obsługuje wiele równoczesnych wywołań, upewnij się, że próby wywołania *MethodName* `Async` przed wcześniej *MethodName* `Async` wywołanie zostało ukończone zgłasza <xref:System.InvalidOperationException>.  
+-   Jeśli klasa definiuje *MethodName *** Async** metody bez parametru stanu który nie obsługuje wiele równoczesnych wywołań, upewnij się, że próby wywołania *MethodName *** Async** przed wcześniej *MethodName *** Async** wywołanie zostało ukończone zgłasza <xref:System.InvalidOperationException>.  
   
--   Ogólnie rzecz biorąc, nie zgłaszał wyjątku, jeśli *MethodName* `Async` metody bez `userSuppliedState` parametru jest wywołana kilka razy, tak aby były wiele oczekujących operacji. Należy zgłosić wyjątek, klasy jawnie nie może obsłużyć tej sytuacji, kiedy założono, że deweloperzy mogą obsługiwać te wielu wywołań zwrotnych nierozróżnialne  
+-   Ogólnie rzecz biorąc, nie zgłaszał wyjątku, jeśli *MethodName *** Async** metody bez `userSuppliedState` parametru jest wywołana kilka razy, tak aby były wiele oczekujących operacji. Należy zgłosić wyjątek, klasy jawnie nie może obsłużyć tej sytuacji, kiedy założono, że deweloperzy mogą obsługiwać te wielu wywołań zwrotnych nierozróżnialne  
   
 ### <a name="accessing-results"></a>Uzyskiwanie dostępu do wyników  
   
@@ -101,7 +101,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Obsługuje raportowania postępu, jeśli to możliwe. Dzięki temu deweloperzy mogą podać lepsze środowisko aplikacji w przypadku korzystania z klasy.  
   
--   W przypadku zastosowania `ProgressChanged` / *MethodName* `ProgressChanged` zdarzeń, upewnij się, że nie istnieją żadne zgłoszone dla określonej operacji asynchronicznych po zakończeniu tej operacji zdarzenia *MethodName* `Completed` zdarzeń został zgłoszony.  
+-   W przypadku zastosowania **ProgressChanged** lub *MethodName *** ProgressChanged** zdarzeń, upewnij się, że nie istnieją żadne zgłoszone dla określonej operacji asynchronicznych po tej operacji zdarzenia*MethodName *** Ukończono** zdarzeń został zgłoszony.  
   
 -   Jeśli standardowa <xref:System.ComponentModel.ProgressChangedEventArgs> jest wypełniony, upewnij się, że <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> zawsze może zostać zinterpretowany jako procent. Wartość procentowa musi być dokładne, ale powinien on reprezentować procent. Jeśli postęp raportowania Metryka musi być inną niż procent, klasa wyprowadzona z <xref:System.ComponentModel.ProgressChangedEventArgs> klasy i pozostawić <xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> w lokalizacji 0. Unikaj używania raportowania Metryka niż procent.  
   
@@ -111,7 +111,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Nie ujawniaj `IsBusy` właściwości, jeśli klasa obsługuje wiele równoczesnych wywołań. Na przykład serwery proxy usługi XML sieci Web nie ujawniaj `IsBusy` właściwości ponieważ obsługują wiele współbieżnych wywołań metod asynchronicznych.  
   
--   `IsBusy` Ma zwracać właściwość `true` po *MethodName* `Async` została wywołana metoda i przed *MethodName* `Completed` zdarzeń został zgłoszony. W przeciwnym razie powinien zwrócić `false`. <xref:System.ComponentModel.BackgroundWorker> i <xref:System.Net.WebClient> składniki są przykłady klas, które udostępniają `IsBusy` właściwości.  
+-   `IsBusy` Ma zwracać właściwość `true` po *MethodName *** Async** zostanie wywołana metoda i przed *MethodName *** Ukończono** zdarzeń został zgłoszony. W przeciwnym razie powinien zwrócić `false`. <xref:System.ComponentModel.BackgroundWorker> i <xref:System.Net.WebClient> składniki są przykłady klas, które udostępniają `IsBusy` właściwości.  
   
 ### <a name="cancellation"></a>Anulowanie  
   
@@ -123,7 +123,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
   
 -   Upewnij się, że wywołania metody anulowania zawsze zwracają pomyślnie i nigdy nie zgłaszał wyjątku. Ogólnie rzecz biorąc klient nie jest powiadamiany o operacji jest w pełni można anulować w dowolnym momencie i nie jest powiadamiany o określające, czy wcześniej wydanych anulowania zakończyła się pomyślnie. Jednak aplikacja zawsze otrzymają powiadomienie podczas anulowania zakończyło się pomyślnie, ponieważ aplikacja uczestniczy w stan ukończenia.  
   
--   Zgłoś *MethodName* `Completed` zdarzenie, gdy operacja została anulowana.  
+-   Zgłoś *MethodName *** Ukończono** zdarzenie, gdy operacja została anulowana.  
   
 ### <a name="errors-and-exceptions"></a>Błędy i wyjątki  
   
@@ -132,7 +132,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>Wątki i konteksty  
  Do poprawnego działania klasy jest krytyczny, że obsługi zdarzeń klienta są wywoływane na właściwy wątku lub kontekst dla modelu danej aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] i aplikacji formularzy systemu Windows. Aby zapewnić poprawne działanie asynchroniczne klasy w dowolnej aplikacji modelu znajdują się dwie klasy pomocy ważne: <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager>.  
   
- <xref:System.ComponentModel.AsyncOperationManager>zawiera jedną metodę <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, która zwraca wartość <xref:System.ComponentModel.AsyncOperation>. Twoje *MethodName* `Async` wywołania metody <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> i klasy używa zwróconego <xref:System.ComponentModel.AsyncOperation> śledzić okres istnienia zadanie asynchroniczne.  
+ <xref:System.ComponentModel.AsyncOperationManager>zawiera jedną metodę <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, która zwraca wartość <xref:System.ComponentModel.AsyncOperation>. Twoje *MethodName *** Async** wywołania metody <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> i klasy używa zwróconego <xref:System.ComponentModel.AsyncOperation> śledzić okres istnienia zadanie asynchroniczne.  
   
  Aby zgłosić postęp, wyniki przyrostowych i uzupełniania do klienta, należy wywołać <xref:System.ComponentModel.AsyncOperation.Post%2A> i <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> metody <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation>jest odpowiedzialny za organizowanie wywołań obsługi zdarzeń klienckich do właściwego thread lub context.  
   

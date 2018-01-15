@@ -17,11 +17,11 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.workload: dotnet
-ms.openlocfilehash: f7b002c1439a95929ca177aeced91164430220c6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5d9498454cfee02e5749a7ed87783b5476469b8d
+ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="local-transactions"></a>Lokalne transakcje
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, kiedy chcesz powiązać wielu zadań jednocześnie, dzięki czemu są one wykonywane jako pojedynczą jednostkę pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabeli, która zawiera informacje o spisie, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje są przywracane.  
@@ -29,7 +29,7 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
 ## <a name="determining-the-transaction-type"></a>Określanie typu transakcji  
  Transakcja jest uważana za transakcji lokalnej, gdy transakcja jednofazowy i są bezpośrednio obsługiwane przez bazę danych. Transakcja jest uważana za transakcji rozproszonej, kiedy jest koordynowane przez monitor transakcji i używa awaryjnego mechanizmów (na przykład dwufazowego) do rozpoznawania transakcji.  
   
- Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych dostawców ma własną `Transaction` obiektu do wykonania transakcji lokalnej. Jeśli potrzebujesz transakcji wykonywanych w bazie danych programu SQL Server, wybierz <xref:System.Data.SqlClient> transakcji. Dla transakcji Oracle, użyj <xref:System.Data.OracleClient> dostawcy. Ponadto jest dostępna nowa <xref:System.Data.Common.DbTransaction> klasy, która jest dostępna dla zapisywania kod niezależny od dostawcy, który wymaga transakcji.  
+ Każdy z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] danych dostawców ma własną `Transaction` obiektu do wykonania transakcji lokalnej. Jeśli potrzebujesz transakcji wykonywanych w bazie danych programu SQL Server, wybierz <xref:System.Data.SqlClient> transakcji. Dla transakcji Oracle, użyj <xref:System.Data.OracleClient> dostawcy. Ponadto istnieje <xref:System.Data.Common.DbTransaction> klasy, która jest dostępna dla zapisywania kod niezależny od dostawcy, który wymaga transakcji.  
   
 > [!NOTE]
 >  Transakcje są najbardziej efektywne, gdy jest wykonywane na serwerze. Jeśli pracujesz z bazy danych programu SQL Server, która sprawia, że zwiększone użycie jawnych transakcji, należy wziąć pod uwagę zostaną zapisane jako procedury składowane za pomocą instrukcji języka Transact-SQL BEGIN TRANSACTION. Aby uzyskać więcej informacji o wydajności transakcji po stronie serwera zobacz dokumentację SQL Server — książki Online.  

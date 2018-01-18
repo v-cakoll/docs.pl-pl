@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a04b2972c80aff654331aeb319390b6f817374bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e204612904aa55b4a0ae9aa65f2bbfd644bbc396
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="modulo-entity-sql"></a>(Modulo) (Jednostka SQL)
 Zwraca resztę z jednego wyrażenia podzielona przez inny.  
@@ -37,7 +37,7 @@ dividend % divisor
  Wyrażenie liczbowe do dzielenia dzielna przez. `divisor`jest dowolne prawidłowe wyrażenie jednego z typów numerycznych.  
   
 ## <a name="result-types"></a>Typy wyników  
- Typem Edm.Int32  
+ Edm.Int32  
   
 ## <a name="example"></a>Przykład  
  Następujące zapytanie SQL jednostki użyto operatora arytmetycznego %, która zwraca pozostałej części jedno wyrażenie podzielona przez inny. Kwerenda jest oparta na modelu sprzedaży AdventureWorks. Aby skompilować i uruchomić to zapytanie, wykonaj następujące kroki:  

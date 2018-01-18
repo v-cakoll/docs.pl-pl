@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 13e2e154a96b46d630b6df11fe3ae024d799c8e6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d7e2b25788b088d9da49bad206f8f2f11d0104a2
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="the-shape-of-the-command-trees"></a>Kształt drzew poleceń
 Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy danych określonej kwerendy SQL na podstawie wyrażenia drzewa zapytanie wejściowe danego polecenia. W tej sekcji omówiono charakterystyki, właściwości i struktura drzewa polecenia zapytania.  
@@ -52,17 +52,17 @@ Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy da
 ### <a name="expression-types-not-present-in-output-query-command-trees"></a>Typy wyrażenia nie występują w drzew poleceń w danych wyjściowych zapytania  
  Następujące typy wyrażeń nie są prawidłowe w drzewie dane wyjściowe polecenia zapytania i nie muszą być obsługiwane przez dostawców:  
   
- Obiekt DbDerefExpression  
+ DbDerefExpression  
   
- Obiekt DbEntityRefExpression  
+ DbEntityRefExpression  
   
- Obiekt DbRefKeyExpression  
+ DbRefKeyExpression  
   
  DbIsOfExpression  
   
  DbOfTypeExpression  
   
- Obiekt DbRefExpression  
+ DbRefExpression  
   
  DbRelationshipNavigationExpression  
   
@@ -84,7 +84,7 @@ Moduł generowania SQL jest odpowiedzialny za wygenerowanie wewnętrznej bazy da
   
  Ponadto funkcje, w których atrybut NiladicFunction nie mają argumentów i powinny być przekonwertowana bez nawiasów na końcu.  Oznacza to, do  *\<functionName >* zamiast  *\<functionName > ()*.  
   
-#### <a name="dbnewinstanceexpression"></a>Obiekt DbNewInstanceExpression  
+#### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Obiekt DbNewInstanceExpression może wystąpić tylko w następujących przypadków:  
   
 -   Jako właściwość projekcji DbProjectExpression.  Zastosowanie następujące ograniczenia:  

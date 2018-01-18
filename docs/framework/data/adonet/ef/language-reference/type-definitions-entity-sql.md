@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 269d0b7942a949b899a445af0fc15502e0ae3f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a1321ae85b1f4952334672e7333e80094ad2e31
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="type-definitions-entity-sql"></a>Definicje typów (jednostka SQL)
 Definicja typu jest używana w instrukcji deklaracji [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wbudowanej funkcji.  
@@ -48,7 +48,7 @@ Definicja typu jest używana w instrukcji deklaracji [!INCLUDE[esql](../../../..
   
 -   `IdentifierName`WIERSZ (`property_definition`), lub  
   
--   `IdentifierName`REF (`supported_entity_type`)  
+-   `IdentifierName` REF(`supported_entity_type`)  
   
  Opcja definicji właściwości jest `IdentifierName type_definition`.  
   

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: c97d98415e1b303c5849f15c4a7bfcca6fd285a4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f75a4fc0e529b602aca91aa3cfd2dff35e4fe640
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-data-model-key-concepts"></a>Kluczowe założenia modelu danych jednostki
 Do opisania struktury danych modelu danych jednostki (EDM) używa trzech podstawowych pojęć: *typu jednostki*, *typ skojarzenia*, i *właściwości*. Są to najważniejsze pojęcia związane z opisujące struktury danych w implementacji EDM.  

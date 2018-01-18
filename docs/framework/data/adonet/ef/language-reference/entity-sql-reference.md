@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 58f30c4c2c220660b62b03ea4eb052bd2cf015eb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f92fbcf1aaa8f5d2c856fe1acdbc6d3886fa0c25
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-reference"></a>Odwołanie do jednostki SQL
 Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy referencyjne. Ten temat zawiera podsumowanie i grup [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory według kategorii.  
@@ -57,12 +57,12 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |[= (Równa się)](../../../../../../docs/framework/data/adonet/ef/language-reference/equals-entity-sql.md)|Porównuje równość dwóch wyrażeń.|  
 |[> (Większe niż)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-entity-sql.md)|Porównuje dwa wyrażenia w celu określenia, czy wyrażenie po lewej stronie ma wartość większą niż prawe wyrażenie.|  
 |[>= (Większe niż lub równe)](../../../../../../docs/framework/data/adonet/ef/language-reference/greater-than-or-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby sprawdzić, czy po lewej stronie wyrażenia jest wartość większa niż lub równa prawe wyrażenie.|  
-|[JEST &#91; NIE &#93; WARTOŚĆ NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Określa, czy wyrażenie kwerendy jest null.|  
+|[IS &#91;NOT&#93; NULL](../../../../../../docs/framework/data/adonet/ef/language-reference/isnull-entity-sql.md)|Określa, czy wyrażenie kwerendy jest null.|  
 |[< (Mniejsze niż)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-entity-sql.md)|Porównuje dwa wyrażenia w celu określenia, czy wyrażenie po lewej stronie ma wartość mniejszą niż prawe wyrażenie.|  
 |[<= (Mniejsze niż lub równe)](../../../../../../docs/framework/data/adonet/ef/language-reference/less-than-or-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby określić, czy wyrażenie po lewej stronie ma wartość mniejszą niż lub równe prawe wyrażenie.|  
-|[&#91; NIE &#93; MIĘDZY](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Określa, czy wyrażenie wynikiem jest wartość w określonym zakresie.|  
+|[&#91;NOT&#93; BETWEEN](../../../../../../docs/framework/data/adonet/ef/language-reference/between-entity-sql.md)|Określa, czy wyrażenie wynikiem jest wartość w określonym zakresie.|  
 |[!= (Nie równa się)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-equal-to-entity-sql.md)|Porównuje dwa wyrażenia, aby określić, czy po lewej stronie wyrażenia nie jest równa prawe wyrażenie.|  
-|[&#91; NIE &#93; NP.](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Określa, czy dany ciąg znaków jest zgodna z określonym wzorcem.|  
+|[&#91;NOT&#93; LIKE](../../../../../../docs/framework/data/adonet/ef/language-reference/like-entity-sql.md)|Określa, czy dany ciąg znaków jest zgodna z określonym wzorcem.|  
   
 ## <a name="logical-and-case-expression-operators"></a>Operatory logiczne i Case wyrażenia  
  Operatory logiczne sprawdzić prawdy warunku. Wyrażenie CASE ocenia zestaw wyrażeń logicznych w celu ustalenia wyniku. W poniższej tabeli wymieniono operatorów logicznych i wielkość wyrażenia.  
@@ -109,9 +109,9 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |--------------|---------|  
 |[ANYELEMENT](../../../../../../docs/framework/data/adonet/ef/language-reference/anyelement-entity-sql.md)|Wyodrębnia element z kolekcji wielowartościowych.|  
 |[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)|Zwraca kolekcję wszystkie unikatowe wartości w wyrażeniu kwerendy do lewego operandu EXCEPT, które nie są również zwracane w wyrażeniu zapytania z prawej strony argument EXCEPT.|  
-|[&#91; NIE &#93; ISTNIEJE](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Określa, czy kolekcja jest pusta.|  
+|[&#91;NOT&#93; EXISTS](../../../../../../docs/framework/data/adonet/ef/language-reference/exists-entity-sql.md)|Określa, czy kolekcja jest pusta.|  
 |[FLATTEN](../../../../../../docs/framework/data/adonet/ef/language-reference/flatten-entity-sql.md)|Konwertuje kolekcję spłaszczonych kolekcją kolekcji.|  
-|[&#91; NIE &#93; W](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Określa, czy wartość odpowiada wartości w kolekcji.|  
+|[&#91;NOT&#93; IN](../../../../../../docs/framework/data/adonet/ef/language-reference/in-entity-sql.md)|Określa, czy wartość odpowiada wartości w kolekcji.|  
 |[INTERSECT](../../../../../../docs/framework/data/adonet/ef/language-reference/intersect-entity-sql.md)|Zwraca kolekcję różne wartości, które są zwracane przez wyrażenia zapytania po lewej stronie i prawej krawędzi argument INTERSECT.|  
 |[OVERLAPS](../../../../../../docs/framework/data/adonet/ef/language-reference/overlaps-entity-sql.md)|Określa, czy dwie kolekcje mają wspólne elementy.|  
 |[SET](../../../../../../docs/framework/data/adonet/ef/language-reference/set-entity-sql.md)|Umożliwia przekonwertowanie kolekcji obiektów do zestawu przez reaguje nowej kolekcji z wszystkie zduplikowane elementy usunięte.|  
@@ -124,7 +124,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |--------------|---------|  
 |[CAST](../../../../../../docs/framework/data/adonet/ef/language-reference/cast-entity-sql.md)|Konwertuje wyrażenie jednego typu danych na inny.|  
 |[COLLECTION](../../../../../../docs/framework/data/adonet/ef/language-reference/collection-entity-sql.md)|Używane w [funkcja](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md) operację, aby zadeklarować zbiór typy jednostek i typów złożonych.|  
-|[JEST &#91; NIE &#93; Z](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypach.|  
+|[IS &#91;NOT&#93; OF](../../../../../../docs/framework/data/adonet/ef/language-reference/isof-entity-sql.md)|Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypach.|  
 |[OFTYPE](../../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)|Zwraca kolekcję obiektów z wyrażenia zapytania, który jest określonego typu.|  
 |[Konstruktor typu nazwanego](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)|Używany do tworzenia wystąpień typów jednostek i typów złożonych.|  
 |[MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)|Tworzy wystąpienie zestaw wielokrotny na podstawie listy wartości.|  
@@ -137,7 +137,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |Operator|Zastosowanie|  
 |--------------|---------|  
 |[+ (Łączenie ciągów)](../../../../../../docs/framework/data/adonet/ef/language-reference/string-concatenation-entity-sql.md)|Używany do ciągów w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].|  
-|[., (Dostęp do elementu członkowskiego)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Używane do uzyskania dostępu do wartości właściwości lub pola wystąpienia typu strukturalnego modelu koncepcyjnego.|  
+|[. (Dostęp do elementu członkowskiego)](../../../../../../docs/framework/data/adonet/ef/language-reference/member-access-entity-sql.md)|Używane do uzyskania dostępu do wartości właściwości lub pola wystąpienia typu strukturalnego modelu koncepcyjnego.|  
 |[-- (Komentarz)](../../../../../../docs/framework/data/adonet/ef/language-reference/comment-entity-sql.md)|Obejmują [!INCLUDE[esql](../../../../../../includes/esql-md.md)] komentarze.|  
 |[FUNCTION](../../../../../../docs/framework/data/adonet/ef/language-reference/function-entity-sql.md)|Definiuje funkcję śródwierszową, które mogą być wykonywane w kwerendzie SQL jednostki.|  
   

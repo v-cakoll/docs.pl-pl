@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2b3d1a42430a02e4b3dd4a715ef27acd3e46b8ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcji schematu, które są implementowane przez każdego z dostawców zarządzane w programie .NET Framework. Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy kolekcji schematu obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z. Te kolekcje, opis wszystkich wymaganych kolumn. Aby dodać dodatkowe kolumny, jeśli chcą mogą dostawców. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczeń.  
@@ -76,7 +76,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |IsFixedLength|bool|TRUE — kolumny tego typu danych utworzone za pomocą języka definicji danych (DDL) będą miały o stałej długości.<br /><br /> FALSE — będzie kolumny tego typu danych utworzone przy użyciu kodu DDL o zmiennej długości.<br /><br /> DBNull.Value—It nie jest znany, czy dostawca przypisze to pole z kolumną o stałej długości lub o zmiennej długości.|  
 |IsFixedPrecisionScale|bool|TRUE — typ danych ma stały precyzję i skalę.<br /><br /> FALSE — typ danych nie ma stałej precyzję i skalę.|  
 |IsLong|bool|TRUE — typ danych zawiera bardzo dużo danych. Definicja bardzo dużo danych jest specyficznych dla dostawcy.<br /><br /> FALSE — typ danych nie zawiera bardzo dużo danych.|  
-|isNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
+|IsNullable|bool|TRUE — typ danych dopuszcza wartość null.<br /><br /> FALSE — typ danych nie jest dopuszczalna.<br /><br /> DBNull.Value—It nie jest znany, czy typ danych dopuszcza wartość null.|  
 |IsSearchable|bool|TRUE — typ danych może służyć w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.<br /><br /> FALSE — typ danych nie można używać w klauzuli WHERE z dowolnego operatora except w predykacie LIKE.|  
 |IsSearchableWithLike|bool|TRUE — typu danych można używać z klauzulą LIKE<br /><br /> FALSE — typ danych nie można używać z klauzulą LIKE.|  
 |IsUnsigned|bool|TRUE — typ danych nie jest podpisany.<br /><br /> FALSE — typ danych jest podpisany.<br /><br /> DBNull.Value—Not dla typu danych.|  

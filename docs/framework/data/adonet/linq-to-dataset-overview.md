@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 00b5d9ddd248c8a6bd54c77bd930eb56a4fa6057
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0295ff475367b0867ff0a5b0dd85f7a686e343bc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ do DataSet — omówienie
 <xref:System.Data.DataSet> Jest jedną z powszechnie używane składniki [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Jest kluczowym elementem odłączonego modelu programowania w języku [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zależy, i umożliwia jawnie pamięci podręcznej danych z różnych źródeł danych. Dla warstwy prezentacji <xref:System.Data.DataSet> jest ściśle zintegrowany z formantami graficznego interfejsu użytkownika dla powiązania danych. Dla warstwy środkowej zapewnia pamięci podręcznej, który zachowuje kształt danych relacyjnych i zawiera fast prostego zapytania i hierarchii nawigacji usługi. Typowe technika pozwala zmniejszyć liczbę żądań w bazie danych jest użycie <xref:System.Data.DataSet> do buforowania danych w warstwie środkowej. Rozważmy na przykład opartego na danych [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Często znaczna część danych aplikacji nie zmienia się często i jest wspólna dla sesji lub użytkowników. Te dane będą przechowywane w pamięci na serwerze sieci Web, co zmniejsza liczbę żądań w bazie danych i przyspiesza interakcji użytkownika. Inna zaleta <xref:System.Data.DataSet> jest możliwość aplikacji w celu dostosowania podzbiór danych z co najmniej jednego źródła danych do obszaru aplikacji. Aplikacja następnie można manipulować danych w pamięci, zachowując jego kształtu relacyjne.  

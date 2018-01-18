@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: df86e69684a111effc29a2663d18310b276f4b83
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9afc5e3bbf8e6fe732aca9e65c8ba5bd5f620c85
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="case-entity-sql"></a>W przypadku (jednostka SQL)
 Ocenia zestaw `Boolean` wyrażeń w celu ustalenia wyniku.  
@@ -42,7 +42,7 @@ END
  NASTĘPNIE`result_expression`  
  Wyrażenie zwracane, gdy `Boolean_expression` daje w wyniku `true`. `result expression`jest dowolne prawidłowe wyrażenie.  
   
- ELSE`else_result_expression`  
+ ELSE `else_result_expression`  
  Wyrażenie zwracane, jeśli żadna operacja porównania nie daje w wyniku `true`. Jeśli ten argument zostanie pominięty i żadna operacja porównania nie daje w wyniku `true`, przypadku zwraca wartość null. `else_result_expression`jest dowolne prawidłowe wyrażenie. Typy danych `else_result_expression` oraz wszelkie `result_expression` muszą być takie same lub musi być niejawnej konwersji.  
   
  KIEDY`Boolean_expression`  

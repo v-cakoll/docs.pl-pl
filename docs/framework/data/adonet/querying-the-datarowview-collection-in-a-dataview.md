@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: b9070a12-1094-44d6-bb87-a23b50bcb0af
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 02b32157fe88bddfd9a777042f6da87aa48ca551
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1912526d98dc7872470953e1bf61b72db191de5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="querying-the-datarowview-collection-in-a-dataview"></a>Wykonywanie zapytania do kolekcji DataRowView w elemencie DataView
 <xref:System.Data.DataView> Udostępnia kolekcję wyliczalny <xref:System.Data.DataRowView> obiektów. <xref:System.Data.DataRowView>reprezentuje dostosowany widok <xref:System.Data.DataRow> i przedstawia określoną wersję tego <xref:System.Data.DataRow> w formancie. Tylko jedna wersja <xref:System.Data.DataRow> można wyświetlić za pomocą formantu, takich jak <xref:System.Windows.Forms.DataGridView>. Dostęp można uzyskać <xref:System.Data.DataRow> widoczne przy <xref:System.Data.DataRowView> za pośrednictwem <xref:System.Data.DataRowView.Row%2A> właściwość <xref:System.Data.DataRowView>. Podczas wyświetlania wartości przy użyciu <xref:System.Data.DataRowView>, <xref:System.Data.DataView.RowStateFilter%2A> właściwość określa, która wersja wiersza podstawowych <xref:System.Data.DataRow> jest widoczna. Uzyskać informacji na temat uzyskiwania dostępu do wersji innego wiersza przy użyciu <xref:System.Data.DataRow>, zobacz [stany wiersza i wersje wiersza](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md). Ponieważ kolekcja <xref:System.Data.DataRowView> obiektów udostępnianych przez <xref:System.Data.DataView> jest wyliczalny, można użyć [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] zapytania nad nim.  

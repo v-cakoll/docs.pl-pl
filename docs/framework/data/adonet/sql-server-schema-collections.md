@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 76d9b8fab965523852adafb6b7d858c34e72d408
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e95c6dc6bceb367000f4aa174a368bf046bc1b93
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-server-schema-collections"></a>Kolekcje schematów serwera SQL
 Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsługuje kolekcje schematów dodatkowe, oprócz typowych kolekcje schematów. Kolekcje schematów nieco różnią się zależnie od wersji programu SQL Server są używane. Ustalenie listy kolekcji schematu obsługiwanych wywołać **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z.  
@@ -27,7 +27,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|nazwa_bazy_danych|String|Nazwa bazy danych.|  
+|database_name|String|Nazwa bazy danych.|  
 |DBID|Int16|Identyfikator bazy danych.|  
 |create_date|DataGodzina|Data utworzenia bazy danych.|  
   
@@ -54,15 +54,15 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |constraint_name|String|Nazwa indeksu.|  
 |table_catalog|String|Nazwa tabeli indeksu jest skojarzony.|  
 |table_schema|String|Schemat, który zawiera tabelę indeks jest skojarzony.|  
-|nazwa_tabeli|String|Nazwa tabeli.|  
+|table_name|String|Nazwa tabeli.|  
 |index_name|String|Nazwa indeksu.|  
   
-### <a name="indexes-sql-server-2008"></a>Indeksy (SQL Server 2008)  
+### <a name="indexes-sql-server-2008"></a>Indexes (SQL Server 2008)  
  Począwszy od programu .NET Framework w wersji 3.5 z dodatkiem SP1 i program SQL Server 2008, następujące kolumny zostały dodane do kolekcji schematu indeksów do obsługi nowych typów przestrzennych, filestream i kolumn rozrzedzonych. Te kolumny nie są obsługiwane we wcześniejszych wersjach programu .NET Framework i programu SQL Server.  
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|type_desc|String|Typ indeksu będzie jedną z następujących czynności:<br /><br /> -HEAP<br />— W KLASTRZE<br />-NIEKLASTROWANY<br />-XML<br />-PRZESTRZENNYCH|  
+|type_desc|String|Typ indeksu będzie jedną z następujących czynności:<br /><br /> -   HEAP<br />— W KLASTRZE<br />-NIEKLASTROWANY<br />-XML<br />-PRZESTRZENNYCH|  
   
 ## <a name="indexcolumns"></a>IndexColumns  
   
@@ -73,7 +73,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |constraint_name|String|Nazwa indeksu.|  
 |table_catalog|String|Nazwa tabeli indeksu jest skojarzony.|  
 |table_schema|String|Schemat, który zawiera tabelę indeks jest skojarzony.|  
-|nazwa_tabeli|String|Nazwa tabeli.|  
+|table_name|String|Nazwa tabeli.|  
 |column_name|String|Nazwa kolumny indeks jest skojarzony.|  
 |ordinal_position|Int32|Pozycja liczby porządkowej kolumny.|  
 |Właściwość KeyType|Byte|Typ obiektu.|  
@@ -118,8 +118,8 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |NUMERIC_PRECISION_RADIX|Int16|Podstawa dokładności przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zwraca wartość NULL.|  
 |NUMERIC_SCALE|Int32|Skala przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zwraca wartość NULL.|  
 |DATETIME_PRECISION|Int16|Precyzja w ułamkowych części sekundy w przypadku typu parametru datetime lub smalldatetime. W przeciwnym razie zwraca wartość NULL.|  
-|INTERVAL_TYPE|String|WARTOŚĆ NULL. Zarezerwowane do użytku w przyszłości przez program SQL Server.|  
-|INTERVAL_PRECISION|Int16|WARTOŚĆ NULL. Zarezerwowane do użytku w przyszłości przez program SQL Server.|  
+|INTERVAL_TYPE|String|NULL. Zarezerwowane do użytku w przyszłości przez program SQL Server.|  
+|INTERVAL_PRECISION|Int16|NULL. Zarezerwowane do użytku w przyszłości przez program SQL Server.|  
   
 ## <a name="tables"></a>Tabele  
   
@@ -142,7 +142,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |COLUMN_DEFAULT|String|Wartość domyślna kolumny|  
 |IS_NULLABLE|String|Dopuszczania wartości null w kolumnie. Jeśli ta kolumna zezwala na wartość NULL, ta funkcja tak. W przeciwnym razie nie jest zwracana.|  
 |DATA_TYPE|String|Typ danych dostarczane przez system.|  
-|CHARACTER_MAXIMUM_LENGTH|Int32 — Sql8, Int16 — Sql7|Maksymalna długość w znakach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
+|CHARACTER_MAXIMUM_LENGTH|Int32 – Sql8, Int16 – Sql7|Maksymalna długość w znakach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |CHARACTER_OCTET_LENGTH|Int32 — SQL8, Int16 — Sql7|Maksymalna długość w bajtach dla danych binarnych, dane znakowe lub danych tekstowych i obrazów. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |NUMERIC_PRECISION|Bajtu bez znaku|Dokładność przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |NUMERIC_PRECISION_RADIX|Int16|Podstawa dokładności przybliżonej dane liczbowe, dokładne dane liczbowe, danych liczb całkowitych lub dane finansowe. W przeciwnym razie zostanie zwrócona wartość NULL.|  
@@ -153,7 +153,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |CHARACTER_SET_NAME|String|Zwraca unikatową nazwę dla znaku ustawić, jeśli ta kolumna jest znak danych lub tekst typu. W przeciwnym razie zostanie zwrócona wartość NULL.|  
 |COLLATION_CATALOG|String|Zwraca główny, wskazującą bazy danych, w którym jest zdefiniowany sortowania, jeśli kolumna danych znakowych lub dane tekstowe typu. W przeciwnym razie ta kolumna ma wartość NULL.|  
   
-### <a name="columns-sql-server-2008"></a>Kolumny (SQL Server 2008)  
+### <a name="columns-sql-server-2008"></a>Columns (SQL Server 2008)  
  Począwszy od programu .NET Framework w wersji 3.5 z dodatkiem SP1 i program SQL Server 2008, następujące kolumny zostały dodane do kolekcji schematów kolumn do obsługi nowych typów przestrzennych, filestream i kolumn rozrzedzonych. Te kolumny nie są obsługiwane we wcześniejszych wersjach programu .NET Framework i programu SQL Server.  
   
 |Element columnName|Typ danych|Opis|  
@@ -223,7 +223,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
 |Identyfikator UID|Int16|Identyfikator użytkownika, unikatowe w tej bazie danych. 1 jest właścicielem bazy danych.|  
-|nazwa_użytkownika|String|Nazwa użytkownika lub grupy, unikatowa nazwa w tej bazie danych.|  
+|user_name|String|Nazwa użytkownika lub grupy, unikatowa nazwa w tej bazie danych.|  
 |CREATEDATE|DataGodzina|Data dodania tego konta.|  
 |updatedate|DataGodzina|Data ostatniej zmiany konta.|  
   
@@ -253,7 +253,7 @@ Dostawcy danych programu Microsoft .NET Framework dla programu SQL Server obsłu
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|nazwa_zestawu|String|Nazwa pliku zestawu.|  
+|assembly_name|String|Nazwa pliku zestawu.|  
 |udt_name|String|Nazwa klasy dla zestawu.|  
 |version_major|Obiekt|Numer wersji głównej.|  
 |version_minor|Obiekt|Numer wersji pomocniczej.|  

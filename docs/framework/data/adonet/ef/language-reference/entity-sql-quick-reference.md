@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 14d666624ac4572956364b3db3fd5ee7aad8799b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 81fd76d09f9cc02e89ac34d5f8fa74bd7f9d92f9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-sql-quick-reference"></a>Szybkie odwołanie do jednostki SQL
 Ten temat zawiera krótkie odwołanie do [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. Zapytania w tym temacie są oparte na modelu AdventureWorks sprzedaży.  
@@ -116,7 +116,7 @@ SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE produc
   
 |Identyfikator produktu|Nazwa|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
-|842|Sakwy turystyczne, duże|PA T100|…|  
+|842|Sakwy turystyczne, duże|PA-T100|…|  
   
 ### <a name="object"></a>Obiekt  
  [O nazwie konstruktora typu](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md) tworzy (nazwane) obiekty zdefiniowane przez użytkownika, takie jak `person("abc", 12)`.  
@@ -233,7 +233,7 @@ SELECT Length(c. FirstName) As NameLen FROM
 |6|  
 |5|  
   
-### <a name="microsoft-provider-specific"></a>Specyficzne dla dostawcy firmy Microsoft  
+### <a name="microsoft-provider-specific"></a>Microsoft Provider-Specific  
  [Funkcje właściwe dla dostawcy Microsoft](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md) w `SqlServer` przestrzeni nazw.  
   
  Przykład:  

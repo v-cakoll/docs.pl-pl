@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 48b80856242730a5412cd9d5d8dd2c7f857304ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce16e89e697a7865a65d86b408e49b5ad671bae1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="architecture-and-design"></a>Architektury i projektu
 W module generowania SQL w [dostawcy próbki](http://go.microsoft.com/fwlink/?LinkId=180616) jest zaimplementowany jako obiekt odwiedzający na drzewo wyrażenia, który reprezentuje drzewo poleceń. Generowanie odbywa się w jednym przebiegu za pośrednictwem drzewa wyrażenia.  
@@ -304,7 +304,7 @@ ORDER BY sk1, sk2, ...
   
 -   DbJoinExpression  
   
--   Obiekt DbCrossJoinExpression  
+-   DbCrossJoinExpression  
   
  Poniżej przedstawiono kroki, odwiedź stronę:  
   
@@ -354,7 +354,7 @@ ORDER BY sk1, sk2, ...
   
 -   Jeśli Symbol jest zwracany, metoda odwiedziny zwraca SqlBuilder metodę z tego wystąpienia jako alias i nazwę właściwości jako nazwa kolumny.  
   
-### <a name="dbnewinstanceexpression"></a>Obiekt DbNewInstanceExpression  
+### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  Gdy jest używany jako właściwość projekcji DbProjectExpression, DbNewInstanceExpression tworzy rozdzielana przecinkami lista argumentów do reprezentowania planowanego kolumn.  
   
  Gdy obiekt DbNewInstanceExpression ma typ zwracany kolekcji i definiuje nową kolekcję wyrażeń podane jako argumenty, oddzielnie obsługi następujących trzech przypadkach:  
@@ -399,7 +399,7 @@ Any(input, x) => Exists(Filter(input,x))
 All(input, x) => Not Exists(Filter(input, not(x))  
 ```  
   
-### <a name="dbnotexpression"></a>Obiekt DbNotExpression  
+### <a name="dbnotexpression"></a>DbNotExpression  
  W niektórych przypadkach prawdopodobnie Zwiń tłumaczenia obiekt DbNotExpression z jego wyrażenie wejściowe. Na przykład:  
   
 ```  

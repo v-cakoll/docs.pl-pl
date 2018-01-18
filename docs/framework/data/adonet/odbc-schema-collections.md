@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b8c31f4e8b1463c184c9a8ff1cf64808783f030d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45cfed80decc2336c5a2bacf24fd075c2b81c531
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="odbc-schema-collections"></a>Kolekcje schematów ODBC
 W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla programu Microsoft SQL Server, Oracle i Microsoft Jet.  
@@ -48,7 +48,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |TABLE_SCHEM|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|UWAGI|String|  
+|REMARKS|String|  
   
 ### <a name="indexes"></a>Indeksy  
   
@@ -85,7 +85,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
@@ -106,7 +106,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |NUM_INPUT_PARAMS|Int32|  
 |NUM_OUTPUT_PARAMS|Int32|  
 |NUM_RESULT_SETS|Int32|  
-|UWAGI|String|  
+|REMARKS|String|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
@@ -125,7 +125,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
@@ -152,7 +152,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  
@@ -188,7 +188,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |TABLE_OWNER|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|UWAGI|String|  
+|REMARKS|String|  
   
 ### <a name="columns"></a>Kolumny  
   
@@ -200,12 +200,12 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_NAME|String|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECISION|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALI|Int16|  
 |PODSTAWA|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
@@ -218,7 +218,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |NUM_INPUT_PARAMS|Int16|  
 |NUM_OUTPUT_PARAMS|Int16|  
 |NUM_RESULT_SETS|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
@@ -232,16 +232,16 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECISION|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALI|Int16|  
 |PODSTAWA|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |PRZECIĄŻENIA|Int32|  
 |ORDINAL_POSITION|Int32|  
   
-## <a name="microsoft-jet-odbc-driver"></a>Sterownik ODBC dla programu Microsoft Jet  
+## <a name="microsoft-jet-odbc-driver"></a>Microsoft Jet ODBC Driver  
  Sterownik ODBC firmy Microsoft Jet obsługuje następujące kolekcje określonego schematu, oprócz typowych kolekcje schematów:  
   
 -   Tabele  
@@ -266,7 +266,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |TABLE_OWNER|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|UWAGI|String|  
+|REMARKS|String|  
   
 ### <a name="columns"></a>Kolumny  
   
@@ -278,12 +278,12 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_NAME|String|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECISION|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALI|Int16|  
 |PODSTAWA|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |ORDINAL_POSITION|Int32|  
   
 ### <a name="procedures"></a>Procedury  
@@ -296,7 +296,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |NUM_INPUT_PARAMS|Int16|  
 |NUM_OUTPUT_PARAMS|Int16|  
 |NUM_RESULT_SETS|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |PROCEDURE_TYPE|Int16|  
   
 ### <a name="procedurecolumns"></a>ProcedureColumns  
@@ -310,12 +310,12 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |COLUMN_TYPE|Int16|  
 |DATA_TYPE|Int16|  
 |TYPE_NAME|String|  
-|DOKŁADNOŚĆ|Int32|  
+|PRECISION|Int32|  
 |DŁUGOŚĆ|Int32|  
 |SKALI|Int16|  
 |PODSTAWA|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |PRZECIĄŻENIA|Int32|  
 |ORDINAL_POSITION|Int32|  
   
@@ -335,7 +335,7 @@ W tej sekcji omówiono obsługi kolekcji schematu dla sterowników ODBC dla prog
 |DECIMAL_DIGITS|Int16|  
 |NUM_PREC_RADIX|Int16|  
 |DOPUSZCZAJĄCE WARTOŚCI ZEROWE|Int16|  
-|UWAGI|String|  
+|REMARKS|String|  
 |COLUMN_DEF|String|  
 |SQL_DATA_TYPE|Int16|  
 |SQL_DATETIME_SUB|Int16|  

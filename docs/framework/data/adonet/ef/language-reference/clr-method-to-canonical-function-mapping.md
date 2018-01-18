@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 53acc5745b3b80cd4c124dc3f9a74173bb118158
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 29f0c8e663dad2eaa849137e1d02d24b9cef398b
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>Metody mapowania kanonicznej funkcji CLR
 Entity Framework zawiera zestaw kanonicznej funkcji, które implementuje funkcje, które są wspólne w wielu systemach bazy danych, takich jak funkcje matematyczne i manipulowanie ciągami. Pozwala to deweloperom target szeroką gamę systemów bazy danych. Przy wywołaniach z podczas badania technologii, takich jak LINQ to Entities, te kanonicznej funkcji są tłumaczone na poprawną odpowiedniego magazynu dla używany dostawca. Dzięki temu wywołania funkcji wyrażane w formie wspólnej między źródłami danych, zapewniając środowisko spójne zapytania między źródłami danych. Bitowe AND, OR, NOT i XOR operatory są również mapowany na funkcje canonical, gdy argument jest typu liczbowego. Dla logiczna operandy bitowe AND, OR, NOT, a nie obliczeniowe XOR operatorów logicznych AND, OR i ich operandami XOR operacji. Aby uzyskać więcej informacji, zobacz [kanonicznej funkcji](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md).  
@@ -36,14 +36,14 @@ Entity Framework zawiera zestaw kanonicznej funkcji, które implementuje funkcje
 |Wartość logiczna IsNullOrEmpty (ciąg `value`)|(IsNull (`value`)) lub długość (`value`) = 0|  
 |Wartość logiczna op_Equality (ciąg `a`, ciąg `b`)|= — Operator|  
 |Wartość logiczna op_Inequality (ciąg `a` , ciąg `b`)|!= - Operator|  
-|Microsoft.VisualBasic.Strings.Trim (ciąg `str`)|Przytnij (`str`)|  
-|Microsoft.VisualBasic.Strings.LTrim (ciąg `str`)|Przytp (`str`)|  
-|Microsoft.VisualBasic.Strings.RTrim (ciąg `str`)|Przytk (`str`)|  
-|Microsoft.VisualBasic.Strings.Len (ciąg `expression`)|Długość (`expression`)|  
-|Microsoft.VisualBasic.Strings.Left (ciąg `str`, Int32 `Length`)|Od lewej (`str`, `Length`)|  
-|Microsoft.VisualBasic.Strings.Mid (ciąg `str`, Int32 `Start`, Int32 `Length`)|Substring (`str`, `Start`, `Length`)|  
-|Microsoft.VisualBasic.Strings.Right (ciąg `str`, Int32 `Length`)|Prawa (`str`, `Length`)|  
-|Microsoft.VisualBasic.Strings.UCase (ciąg `Value`)|ToUpper (`Value`)|  
+|Microsoft.VisualBasic.Strings.Trim(String `str`)|Przytnij (`str`)|  
+|Microsoft.VisualBasic.Strings.LTrim(String `str`)|Ltrim(`str`)|  
+|Microsoft.VisualBasic.Strings.RTrim(String `str`)|Rtrim(`str`)|  
+|Microsoft.VisualBasic.Strings.Len(String `expression`)|Length(`expression`)|  
+|Microsoft.VisualBasic.Strings.Left(String `str`, Int32 `Length`)|Od lewej (`str`, `Length`)|  
+|Microsoft.VisualBasic.Strings.Mid(String `str`, Int32 `Start`, Int32 `Length`)|Substring (`str`, `Start`, `Length`)|  
+|Microsoft.VisualBasic.Strings.Right(String `str`, Int32 `Length`)|Prawa (`str`, `Length`)|  
+|Microsoft.VisualBasic.Strings.UCase(String `Value`)|ToUpper (`Value`)|  
 |Microsoft.VisualBasic.Strings.LCase (ciąg)|ToLower (`Value`)|  
   
 ## <a name="systemstring-method-instance-mapping"></a>Metoda System.String (wystąpieniem) mapowania  
@@ -51,9 +51,9 @@ Entity Framework zawiera zestaw kanonicznej funkcji, które implementuje funkcje
 |Metoda System.String (wystąpieniem)|Canonical — funkcja|Uwagi|  
 |---------------------------------------|------------------------|-----------|  
 |Zawiera wartość logiczna (ciąg `value`)|`this`PODOBNIE JAK ' %`value`% "|Jeśli `value` nie jest stałą, a następnie mapuje to IndexOf (`this`, `value`) > 0.|  
-|Wartość logiczna EndsWith (String `value`)|`this`PODOBNIE JAK `'` % `value`"|Jeśli `value` nie jest stałą, to mapuje do prawej (`this`, długość (`value`)) = `value`.|  
+|Wartość logiczna EndsWith (String `value`)|`this` LIKE `'`%`value`'|Jeśli `value` nie jest stałą, to mapuje do prawej (`this`, długość (`value`)) = `value`.|  
 |Wartość logiczna StartsWith (String `value`)|`this`TAKIE JAK "`value`%"|Jeśli `value` nie jest stałą, a następnie mapuje to IndexOf (`this`, `value`) = 1.|  
-|długość|Długość (`this`)||  
+|długość|Length(`this`)||  
 |Int32 IndexOf (ciąg `value`)|IndexOf (`this`, `value`) - 1||  
 |System.String Insert(Int32 `startIndex`, String `value`)|Concat (Concat (podciąg (`this`, 1, `startIndex`), `value`), podciąg (`this`, `startIndex`+ 1, długość (`this`)- `startIndex`))||  
 |System.String Remove(Int32 `startIndex`)|Substring (`this`, 1, `startIndex`)||  
@@ -64,7 +64,7 @@ ystem. Zastąp ciąg (String `oldValue`, ciąg `newValue`)|Zastąp (`this`, `old
 |System.String ToLower()|ToLower (`this`)||  
 |System.String ToUpper()|ToUpper (`this`)||  
 |System.String Trim()|Przytnij (`this`)||  
-|System.String TrimEnd(Char[] `trimChars`)|Przytk (`this`)||  
+|System.String TrimEnd(Char[] `trimChars`)|RTrim(`this`)||  
 |System.String TrimStart(Char[]`trimChars`)|Przytp (`this`)||  
 |Logiczna Equals (ciąg `value`)|= — Operator||  
   
@@ -81,14 +81,14 @@ ystem. Zastąp ciąg (String `oldValue`, ciąg `newValue`)|Zastąp (`this`, `old
 |Wartość logiczna op_Inequality (DateTime `t1`, DateTime `t2`)|!= - Operator||  
 |Wartość logiczna op_LessThan (DateTime `t1`, DateTime `t2`)|< — Operator||  
 |Wartość logiczna op_LessThanOrEqual (DateTime `t1`, DateTime `t2`)|<= — Operator||  
-|Microsoft.VisualBasic.DateAndTime.DatePart (_<br /><br /> ByVal `Interval` jako DateInterval,\_<br /><br /> ByVal `DateValue` jako element DateTime,\_<br /><br /> Opcjonalne ByVal `FirstDayOfWeekValue` jako FirstDayOfWeek = stałej VbSunday,\_<br /><br /> Opcjonalne ByVal `FirstWeekOfYearValue` jako Pierwszy_tydzień_roku = VbFirstJan1\_<br /><br /> ) W postaci liczby całkowitej.||Zobacz sekcję Funkcja DatePart, aby uzyskać więcej informacji.|  
+|Microsoft.VisualBasic.DateAndTime.DatePart( _<br /><br /> ByVal `Interval` jako DateInterval,\_<br /><br /> ByVal `DateValue` jako element DateTime,\_<br /><br /> Opcjonalne ByVal `FirstDayOfWeekValue` jako FirstDayOfWeek = stałej VbSunday,\_<br /><br /> Opcjonalne ByVal `FirstWeekOfYearValue` jako Pierwszy_tydzień_roku = VbFirstJan1\_<br /><br /> ) W postaci liczby całkowitej.||Zobacz sekcję Funkcja DatePart, aby uzyskać więcej informacji.|  
 |Microsoft.VisualBasic.DateAndTime.Now|CurrentDateTime()||  
-|Microsoft.VisualBasic.DateAndTime.Year (DateTime `TimeValue`)|Year()||  
-|Microsoft.VisualBasic.DateAndTime.Month (DateTime `TimeValue`)|Month()||  
-icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||  
-|Microsoft.VisualBasic.DateAndTime.Hour (DateTime `TimeValue`)|Hour()||  
-|Microsoft.VisualBasic.DateAndTime.Minute (DateTime `TimeValue`)|MINUTE()||  
-|Microsoft.VisualBasic.DateAndTime.Second (DateTime `TimeValue`)|Second()||  
+|Microsoft.VisualBasic.DateAndTime.Year(DateTime `TimeValue`)|Year()||  
+|Microsoft.VisualBasic.DateAndTime.Month(DateTime `TimeValue`)|Month()||  
+icrosoft.VisualBasic.DateAndTime.Day(DateTime `TimeValue`)|Day()||  
+|Microsoft.VisualBasic.DateAndTime.Hour(DateTime `TimeValue`)|Hour()||  
+|Microsoft.VisualBasic.DateAndTime.Minute(DateTime `TimeValue`)|Minute()||  
+|Microsoft.VisualBasic.DateAndTime.Second(DateTime `TimeValue`)|Second()||  
   
 ## <a name="systemdatetime-method-instance-mapping"></a>Metoda System.DateTime (wystąpieniem) mapowania  
   
@@ -97,7 +97,7 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |Logiczna Equals (DateTime `value`)|= — Operator|  
 |Dzień|Dzień (`this`)|  
 |Godzina|Godzina (`this`)|  
-|Milisekundy|Milisekundy (`this`)|  
+|Milisekundy|Millisecond(`this`)|  
 |Minuta|Minuty (`this`)|  
 |Miesiąc|Miesiąc (`this`)|  
 |Sekunda|Drugi (`this`)|  
@@ -110,7 +110,7 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |-----------------------------------------------|------------------------|-----------|  
 |Dzień|Dzień (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |Godzina|Godzina (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
-|Milisekundy|Milisekundy (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
+|Milisekundy|Millisecond(`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |Minuta|Minuty (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |Miesiąc|Miesiąc (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |Sekunda|Drugi (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
@@ -132,7 +132,7 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |Obiekt System.TimeSpan — metoda (wystąpieniem)|Canonical — funkcja|Uwagi|  
 |-----------------------------------------|------------------------|-----------|  
 |Godziny|Godzina (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
-|w milisekundach|Milisekundy (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
+|w milisekundach|Millisecond(`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |minut|Minuty (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
 |Sekund|Drugi (`this`)|Nie jest obsługiwane dla programu SQL Server 2005.|  
   
@@ -148,49 +148,49 @@ icrosoft. VisualBasic.DateAndTime.Day (DateTime `TimeValue`)|Day()||
 |DateInterval.Month|Month()|  
 |DateInterval.Day|Day()|  
 |DateInterval.Hour|Hour()|  
-|DateInterval.Minute|MINUTE()|  
+|DateInterval.Minute|Minute()|  
 |DateInterval.Second|Second()|  
   
 ## <a name="mathematical-function-mapping"></a>Mapowanie funkcji matematycznych  
   
 |CLR — metoda|Canonical — funkcja|  
 |----------------|------------------------|  
-|System.Decimal.Ceiling (dziesiętne `d`)|CEILING (`d`)|  
-|System.Decimal.Floor (dziesiętne `d`)|FLOOR (`d`)|  
-|System.Decimal.Round (dziesiętne `d`)|ROUND (`d`)|  
-|System.Math.Ceiling (dziesiętne `d`)|CEILING (`d`)|  
-|System.Math.Floor (dziesiętne `d`)|FLOOR (`d`)|  
-|System.Math.Round (dziesiętne `d`)|ROUND (`d`)|  
-|System.Math.Ceiling (dwa razy `a`)|CEILING (`a`)|  
-|System.Math.Floor (dwa razy `a`)|FLOOR (`a`)|  
-|System.Math.Round (dwa razy `a`)|ROUND (`a`)|  
-|System.Math.Round (Double wartość, Int16 cyfr)|Zaokrąglij (wartość cyfr)|  
-|System.Math.Round (Double wartość, Int32 cyfr)|Zaokrąglij (wartość cyfr)|  
-|System.Math.Round (wartość dziesiętna, Int16 cyfr)|Zaokrąglij (wartość cyfr)|  
-|System.Math.Round (cyfry dziesiętnej, Int32)|Zaokrąglij (wartość cyfr)|  
-|System.Math.Abs (wartości Int16)|ABS(Value)|  
-|System.Math.Abs (wartości Int32)|ABS(Value)|  
-|System.Math.Abs (wartości Int64)|ABS(Value)|  
-|System.Math.Abs (wartość bajtu)|ABS(Value)|  
-|System.Math.Abs (pojedynczą wartość)|ABS(Value)|  
-|System.Math.Abs (wartości Double)|ABS(Value)|  
-|System.Math.Abs (dziesiętna wartość)|ABS(Value)|  
-|System.Math.Truncate (Double wartość, Int16 cyfr)|TRUNCATE (wartość cyfr)|  
-|System.Math.Truncate (Double wartość, Int32 cyfr)|TRUNCATE (wartość cyfr)|  
-|System.Math.Truncate (wartość dziesiętna, Int16 cyfr)|TRUNCATE (wartość cyfr)|  
-|System.Math.Truncate (wartość dziesiętna, Int32 cyfr)|TRUNCATE (wartość cyfr)|  
-|System.Math.Power (wartości Int32, Int64 wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartości Int32 wykładnik podwójny)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartości Int32, Decimal wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartości Int64, Int64 wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartości Int64 wykładnik podwójny)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartości Int64, Decimal wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (Double wartość, Int64 wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (podwojenie, Double wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (Double wartość, Decimal wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartość dziesiętna, Int64 wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartość dziesiętna, Double wykładnik)|Zasilania (wartość, wykładnika)|  
-|System.Math.Power (wartość dziesiętna, Decimal wykładnik)|Zasilania (wartość, wykładnika)|  
+|System.Decimal.Ceiling(Decimal `d`)|CEILING (`d`)|  
+|System.Decimal.Floor(Decimal `d`)|FLOOR (`d`)|  
+|System.Decimal.Round(Decimal `d`)|Round(`d`)|  
+|System.Math.Ceiling(Decimal `d`)|CEILING (`d`)|  
+|System.Math.Floor(Decimal `d`)|FLOOR (`d`)|  
+|System.Math.Round (dziesiętne `d`)|Round(`d`)|  
+|System.Math.Ceiling(Double `a`)|CEILING (`a`)|  
+|System.Math.Floor(Double `a`)|FLOOR (`a`)|  
+|System.Math.Round(Double `a`)|Round(`a`)|  
+|System.Math.Round(Double value, Int16 digits)|Zaokrąglij (wartość cyfr)|  
+|System.Math.Round(Double value, Int32 digits)|Zaokrąglij (wartość cyfr)|  
+|System.Math.Round(Decimal value, Int16 digits)|Zaokrąglij (wartość cyfr)|  
+|System.Math.Round(Decimal value, Int32, digits)|Zaokrąglij (wartość cyfr)|  
+|System.Math.Abs(Int16 value)|ABS(Value)|  
+|System.Math.Abs(Int32 value)|ABS(Value)|  
+|System.Math.Abs(Int64 value)|ABS(Value)|  
+|System.Math.Abs(Byte value)|ABS(Value)|  
+|System.Math.Abs(Single value)|ABS(Value)|  
+|System.Math.Abs(Double value)|ABS(Value)|  
+|System.Math.Abs(Decimal value)|ABS(Value)|  
+|System.Math.Truncate(Double value, Int16 digits)|TRUNCATE (wartość cyfr)|  
+|System.Math.Truncate(Double value, Int32 digits)|TRUNCATE (wartość cyfr)|  
+|System.Math.Truncate(Decimal value, Int16 digits)|TRUNCATE (wartość cyfr)|  
+|System.Math.Truncate(Decimal value, Int32 digits)|TRUNCATE (wartość cyfr)|  
+|System.Math.Power(Int32 value, Int64 exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Int32 value, Double exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Int32 value, Decimal exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Int64 value, Int64 exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Int64 value, Double exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Int64 value, Decimal exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Double value, Int64 exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Double value, Double exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Double value, Decimal exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Decimal value, Int64 exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Decimal value, Double exponent)|Zasilania (wartość, wykładnika)|  
+|System.Math.Power(Decimal value, Decimal exponent)|Zasilania (wartość, wykładnika)|  
   
 ## <a name="bitwise-operator-mapping"></a>Bitowy Operator mapowania  
   

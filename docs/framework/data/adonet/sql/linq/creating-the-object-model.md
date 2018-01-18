@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 37f96338868183e8bf0397d9c0d09719fa3f7049
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb6f8683ce49c8115b6dce477d0e61369d7abeef
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="creating-the-object-model"></a>Tworzenie modelu obiektów
 Można utworzyć modelu obiektów z istniejącej bazy danych i używać modelu w stanie domyślnym. Można również dostosować wiele aspektów modelu i jego zachowanie.  

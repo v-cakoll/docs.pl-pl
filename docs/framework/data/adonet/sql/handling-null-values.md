@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8467d1748cec216c01756049d889ea29f02c3c7c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 23a502cc3a286ed5cb47c7bbe21253f312722409
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="handling-null-values"></a>Obsługa wartości Null
 Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie jest nieznany lub nieobecny. Wartość null nie jest ciągiem pustym (dla typów danych daty/godziny lub znakiem) ani wartość zero (dla liczbowych typów danych). Ze specyfikacją ANSI SQL-92 się informacja o wartości null musi być taka sama dla wszystkich typów danych tak, aby spójną wszystkie wartości null. <xref:System.Data.SqlTypes> Przestrzeń nazw zawiera wartości null semantyki zaimplementowanie <xref:System.Data.SqlTypes.INullable> interfejsu. Typy wszystkich danych w <xref:System.Data.SqlTypes> ma własną `IsNull` właściwości i `Null` wartość przypisana do wystąpienia tego typu danych.  
@@ -32,7 +32,7 @@ Wartość null w relacyjnej bazie danych jest używany, gdy wartość w kolumnie
 ## <a name="nulls-and-three-valued-logic"></a>Wartości null i przechowywanymi na trzy logiczne  
  Stosowanie wartości null w definicjach kolumn wprowadza przechowywanymi w trzech logiki do aplikacji. Porównanie można ocenić do jednego z trzech warunków:  
   
--   Wartość true  
+-   True  
   
 -   False  
   

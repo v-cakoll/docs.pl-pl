@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 338d8a55-05cc-46b0-bbb8-1379d77068e9
 caps.latest.revision: "11"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2f0645509410d0f383caef1a0917138468dc2101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 44dd517f08b4a408a0f7c70964c6bc53ca663afd
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="working-with-objects"></a>Praca z obiektami
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Umożliwia utworzenie zapytania, wstawiania, aktualizacji i usuwania danych, który jest wyrażony jako typu wspólnego języka środowiska uruchomieniowego (języka wspólnego CLR) obiektów, które są wystąpień typów jednostek. Typy jednostek reprezentują jednostek zdefiniowanych w modelu koncepcyjnym. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Mapuje jednostki i relacje, które są zdefiniowane w modelu koncepcyjnym ze źródłem danych. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Zapewnia ułatwienia wykonać następujące czynności: zmaterializowania dane zwrócone w wyniku źródła danych jako obiekty; śledzenia zmian, które zostały wprowadzone do obiektów; Obsługa współbieżności; Propaguj zmiany obiektu do źródła danych; i powiązanie obiektów z formantami.  

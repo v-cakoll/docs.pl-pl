@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: a30adbc060ead6eb1805f85bd563021ba7530c36
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fc99fea9b722f6c3395f6bade625a09c6e97eb08
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="standard-query-operator-translation"></a>Translacja Operator zapytania standardowe
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wykonuje translację standardowych operatorów zapytań do poleceń SQL. Procesor zapytań bazy danych określa semantyki wykonywania tłumaczenia SQL.  
@@ -150,7 +150,7 @@ ORDER BY [t0].[CustomerID]
   
 |||||  
 |-|-|-|-|  
-|ToBoolean|Tosbyte —|Tobyte —|Tochar —|  
+|ToBoolean|Tosbyte —|ToByte|ToChar|  
 |ToCharArrayRankOne|ToDate|Todecimal —|Todouble —|  
 |ToInteger|ToUInteger|ToLong|ToULong|  
 |ToShort|ToUShort|Tosingle —|ToString|  

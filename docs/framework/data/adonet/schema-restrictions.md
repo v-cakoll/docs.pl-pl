@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 73d2980e-e73c-4987-913a-8ddc93d09144
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4a3cc1f0c27af1ad41e14374b4c155e6b8620f28
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5b004b70716c61af8ac37fef76f660c488e5a74
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="schema-restrictions"></a>Ograniczenia schematu
 Drugi parametr opcjonalny **GetSchema** metoda jest zwracane ograniczenia, które są używane w celu ograniczenia ilości informacji o schemacie, a jest przekazywana do **GetSchema** metodę jako tablica ciągów . Pozycja w tablicy określa wartości, które mogą upłynąć, a jest to równoważne numer ograniczeń.  
@@ -148,7 +148,7 @@ class Program
   
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|Nazwa_użytkownika|@Name|nazwa|1|  
+|User_Name|@Name|nazwa|1|  
   
 ### <a name="databases"></a>Bazy danych  
   
@@ -223,7 +223,7 @@ class Program
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalogu|@Catalog|db_name()|1|  
-|Właściciel|@Owner|User_name()|2|  
+|Właściciel|@Owner|user_name()|2|  
 |tabela|@Table|o.name|3|  
 |ConstraintName|@ConstraintName|x.name|4|  
 |Kolumny|@Column|c.name|5|  
@@ -233,14 +233,14 @@ class Program
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
 |Katalogu|@Catalog|db_name()|1|  
-|Właściciel|@Owner|User_name()|2|  
+|Właściciel|@Owner|user_name()|2|  
 |tabela|@Table|o.name|3|  
   
 ### <a name="userdefinedtypes"></a>UserDefinedTypes  
   
 |Nazwa ograniczenia|Nazwa parametru|Ograniczenie domyślne|Liczba ograniczeń|  
 |----------------------|--------------------|-------------------------|------------------------|  
-|nazwa_zestawu|@AssemblyName|assemblies.name|1|  
+|assembly_name|@AssemblyName|assemblies.name|1|  
 |udt_name|@UDTName|types.assembly_class|2|  
   
 ### <a name="foreignkeys"></a>ForeignKeys  

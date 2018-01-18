@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1218cda46a6a901c3dbf9fb11333b04d0133df42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 190e64945658f81400c2cc68beff82ccc38144f5
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="secure-client-applications"></a>Zabezpieczanie aplikacji klienckich
 Aplikacje zwykle składają się z wielu części, które muszą być wszystkie chronione przed lukami w zabezpieczeniach, które mogą spowodować utratę danych lub naruszyć bezpieczeństwo systemu, w przeciwnym razie wartość. Tworzenie interfejsów bezpiecznego użytkownika może uniemożliwić wiele problemów blokując osoby atakujące przed uzyskaniem dostępu do danych albo zasobów systemowych.  
@@ -62,7 +62,7 @@ Aplikacje zwykle składają się z wielu części, które muszą być wszystkie 
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[NIB: Zabezpieczenia programu ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|W tym artykule omówiono zabezpieczania aplikacji ASP.NET.|  
+|[NIB: ASP.NET Security](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d)|W tym artykule omówiono zabezpieczania aplikacji ASP.NET.|  
 |[Zabezpieczanie usług XML sieci Web utworzony za pomocą programu ASP.NET](http://msdn.microsoft.com/en-us/354b2ab1-2782-4542-b32a-dc560178b90c)|Zawiera omówienie sposobu implementacji zabezpieczeń dla usługi sieci Web ASP.NET.|  
 |[Przegląd luki w zabezpieczeniach skryptu](http://msdn.microsoft.com/library/772c7312-211a-4eb3-8d6e-eec0aa1dcc07)|W tym artykule omówiono sposób w celu ochrony przed atakiem wykorzystać skrypt, który próbuje wstawić znaki złośliwego do strony sieci Web.|  
 |[NIB: podstawowe wskazówki dotyczące zabezpieczeń dla aplikacji sieci Web ASP.NET](http://msdn.microsoft.com/en-us/94a52ab8-731d-417e-b997-721baf43df38)|Informacje ogólne zabezpieczeń i linki do dalszych dyskusji|  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ee356fc3e7d6e1279e0cba8014d6d285620add3b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: aea41a58697acaad0b089f8e35b9f870e8bf841d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="edm-generator-edmgenexe"></a>Generator EDM (EdmGen.exe)
 EdmGen.exe to narzędzie wiersza polecenia służące do pracy z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] modelu i mapowania plików. Narzędzie EdmGen.exe wykonaj następujące czynności:  
@@ -57,16 +57,16 @@ EdmGen /mode:choice [options]
 |`/p[roject]:`\<ciąg >|Określa nazwę projektu do użycia. Nazwa projektu jest używany jako domyślny dla przestrzeni nazw Ustawianie nazwy modelu i mapowania plików, nazwa pliku źródła obiektu i nazwę pliku źródłowego generowania widoku. Ustawiono nazwę kontenera jednostek \<projektu > kontekstu.|  
 |`/prov[ider]:`\<ciąg >|Nazwa [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dostawcy danych ma być używany do generowania pliku magazynu modelu (ssdl). Domyślny dostawca jest [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>).|  
 |`/c[onnectionstring]:`\<Parametry połączenia >|Określa ciąg, który jest używany do nawiązania połączenia ze źródłem danych.|  
-|`/incsdl:`\<Plik >|Określa plik .csdl lub katalog, w którym znajdują się pliki .csdl. Ten argument można określić wiele razy, dzięki czemu można określić kilka katalogów lub .csdl plików. Określanie wielu katalogów mogą być przydatne podczas generowania klasy (`/mode:EntityClassGeneration`) lub widoków (`/mode:ViewGeneration`) po modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|  
-|`/refcsdl:`\<Plik >|Określa dodatkowe .csdl plik lub pliki, używany do rozpoznawania odwołań w pliku CSDL źródła. (Plik .csdl źródła jest plik określony przez `/incsdl` opcja). `/refcsdl` Plik zawiera typy, które jest zależny plik .csdl źródła. Ten argument można podawać wiele razy.|  
-|`/inmsl:`\<Plik >|Określa .msl pliku lub katalogu, w którym znajdują się pliki MSL. Ten argument może być określone wiele razy, dzięki czemu można określić kilka katalogi i pliki MSL. Określanie wielu katalogów mogą być przydatne podczas generowania widoków (`/mode:ViewGeneration`) po modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|  
-|`/inssdl:`\<Plik >|Określa plik ssdl lub katalog, w którym znajduje się plik ssdl. Ten argument można określić wiele razy, aby określić wiele katalogów lub plików ssdl. Może to być przydatne, gdy chcesz zweryfikować wielu modeli `(/mode:ValidateArtifacts)`.|  
-|`/outcsdl:`\<Plik >|Określa nazwę pliku CSDL, który zostanie utworzony.|  
-|`/outmsl:`\<Plik >|Określa nazwę pliku MSL, który zostanie utworzony.|  
-|`/outssdl:`\<Plik >|Określa nazwę pliku ssdl, który zostanie utworzony.|  
-|`/outobjectlayer:`\<Plik >|Określa nazwę pliku kodu źródłowego, który zawiera obiekty generowane na podstawie pliku CSDL.|  
-|`/outviews:`\<Plik >|Określa nazwę pliku kodu źródłowego, który zawiera widoki, które zostały wygenerowane.|  
-|`/language:`[VB &#124; CSharp]|Określa język dla plików źródłowych wygenerowanego kodu. Wartością domyślną języka C#.|  
+|`/incsdl:`\<file>|Określa plik .csdl lub katalog, w którym znajdują się pliki .csdl. Ten argument można określić wiele razy, dzięki czemu można określić kilka katalogów lub .csdl plików. Określanie wielu katalogów mogą być przydatne podczas generowania klasy (`/mode:EntityClassGeneration`) lub widoków (`/mode:ViewGeneration`) po modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|  
+|`/refcsdl:`\<file>|Określa dodatkowe .csdl plik lub pliki, używany do rozpoznawania odwołań w pliku CSDL źródła. (Plik .csdl źródła jest plik określony przez `/incsdl` opcja). `/refcsdl` Plik zawiera typy, które jest zależny plik .csdl źródła. Ten argument można podawać wiele razy.|  
+|`/inmsl:`\<file>|Określa .msl pliku lub katalogu, w którym znajdują się pliki MSL. Ten argument może być określone wiele razy, dzięki czemu można określić kilka katalogi i pliki MSL. Określanie wielu katalogów mogą być przydatne podczas generowania widoków (`/mode:ViewGeneration`) po modelu koncepcyjnego jest podzielone między kilka plików. Może to być również przydatne, gdy chcesz zweryfikować wielu modeli (`/mode:ValidateArtifacts`).|  
+|`/inssdl:`\<file>|Określa plik ssdl lub katalog, w którym znajduje się plik ssdl. Ten argument można określić wiele razy, aby określić wiele katalogów lub plików ssdl. Może to być przydatne, gdy chcesz zweryfikować wielu modeli `(/mode:ValidateArtifacts)`.|  
+|`/outcsdl:`\<file>|Określa nazwę pliku CSDL, który zostanie utworzony.|  
+|`/outmsl:`\<file>|Określa nazwę pliku MSL, który zostanie utworzony.|  
+|`/outssdl:`\<file>|Określa nazwę pliku ssdl, który zostanie utworzony.|  
+|`/outobjectlayer:`\<file>|Określa nazwę pliku kodu źródłowego, który zawiera obiekty generowane na podstawie pliku CSDL.|  
+|`/outviews:`\<file>|Określa nazwę pliku kodu źródłowego, który zawiera widoki, które zostały wygenerowane.|  
+|`/language:`[VB&#124;CSharp]|Określa język dla plików źródłowych wygenerowanego kodu. Wartością domyślną języka C#.|  
 |`/namespace:`\<ciąg >|Określa przestrzeń nazw modelu do użycia. Przestrzeń nazw jest ustawiona w pliku CSDL, gdy uruchomione `/mode:FullGeneration` lub `/mode:FromSSDLGeneration`. Przestrzeń nazw nie jest używany podczas uruchamiania `/mode:EntityClassGeneration`.|  
 |`/entitycontainer:`\<ciąg >|Określa nazwę, aby zastosować do `<EntityContainer>` elementu w modelu wygenerowanym i mapowania plików.|  
 |`/pl[uralize]`|Zastosowanie zasady język angielski singulars i liczba mnoga do `Entity`, `EntitySet`, i `NavigationProperty` nazwy w modelu koncepcyjnym. Ta opcja będzie wykonywać następujące czynności:<br /><br /> -Sprawdź wszystkie `EntityType` pojedynczej nazwy.<br />-Sprawdź wszystkie `EntitySet` nazwy w liczbie mnogiej.<br />— Dla każdej `NavigationProperty` zwracającą co najwyżej jedną jednostkę, sprawdź nazwę pojedynczej.<br />— Dla każdej `NavigationProperty` zwracającą więcej niż jednej jednostki, sprawdź nazwę liczbie mnogiej.|  

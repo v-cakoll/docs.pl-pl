@@ -1,7 +1,7 @@
 ---
 title: "Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wstępne"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87a4b9f2bb076eccfa79e2951e509a35461ff257
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/17/2018
 ---
 ![](./media/cover.png)
 
@@ -33,7 +33,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399, USA
 
-Copyright © 2017 przez firmę Microsoft Corporation
+Copyright © 2017 by Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć lub przesyłane w jakimkolwiek formularzu, lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 
@@ -53,7 +53,7 @@ Współautorzy:
 
 > **Cesarowi de la Torre**, Sr. PM zespołu produktu .NET, Microsoft Corp.
 >
-> **Rachunek Wagnera**, Sr. Deweloper zawartości, C + E, Microsoft Corp.
+> **Rachunek Wagnera**, Sr. Content Developer, C+E, Microsoft Corp.
 >
 > **Jan Rousos**, inżynier oprogramowania podmiot zabezpieczeń, zespołu DevDiv CAT, Microsoft
 
@@ -65,7 +65,7 @@ Edytory:
 
 Uczestnicy i osoby dokonujące przeglądu:
 
-> **Jeffrey Ritcher**, Eng oprogramowania partnera, zespół Azure firmy Microsoft
+> **Jeffrey Richter**, Eng oprogramowania partnera, zespół Azure firmy Microsoft
 >
 > **Jimmy Bogard**, architektów główny na Headspring
 >
@@ -81,7 +81,7 @@ Uczestnicy i osoby dokonujące przeglądu:
 >
 > **Marcin Dorrans**, Sr. Menedżer programu zabezpieczeń
 >
-> **Tomaszewski rowan**, Sr. Menedżer programów firmy Microsoft
+> **Rowan Miller**, Sr. Menedżer programów firmy Microsoft
 >
 > **Ankit Asthana**, główny menedżer PM, .NET zespół firmy Microsoft
 >
@@ -103,7 +103,7 @@ Uczestnicy i osoby dokonujące przeglądu:
 >
 > **Javier Valero**, dyrektora operacyjnego urzędnika na rozwiązanie Grupo
 >
-> **Saint-Pierre proso**, Sr. Konsultanta firmy Microsoft
+> **Saint-Pierre proso**, Sr. Consultant, Microsoft
 >
 > **Jan Friis**, Menedżer produktu, Inc Docker
 >

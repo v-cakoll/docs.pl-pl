@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f888a682510dbf768e5eab2ffdd530e2ac7cf635
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e364efe0856a5291fc8157ef6ab185c2438a3347
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>Mapa keyref ograniczeń schematu XML (XSD) do ograniczenia zestawu danych
 **Keyref** element służy do ustanawiania łącza między elementami w dokumencie. Jest to podobna do relacji klucza obcego w relacyjnej bazie danych. Jeśli schemat określa **keyref** elementu, element jest konwertowana podczas procesu mapowania schematu do odpowiedniego ograniczenie klucza obcego dla kolumn w tabelach <xref:System.Data.DataSet>. Domyślnie **keyref** element również generuje relacji z **ParentTable**, **ChildTable**, **ParentColumn**i  **ChildColumn** właściwości określony w relacji.  
@@ -27,11 +27,11 @@ ms.lasthandoff: 12/22/2017
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określona w **keyref** elementu w schemacie, ograniczenie zostało utworzone, ale jest tworzona żadna relacja. Jeśli ten atrybut nie jest określony (lub ma ustawioną wartość **False**), zarówno ograniczenie, jak i relacji są tworzone w **zestawu danych**.|  
-|**MSDATA:ConstraintName**|Jeśli **ConstraintName** atrybut został określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu **keyref** element w schemacie udostępnia Nazwa ograniczenia w **zestawu danych**.|  
-|**MSDATA:UpdateRule**|Jeśli **elementu UpdateRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **elementu UpdateRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **elementu UpdateRule** właściwość jest ustawiona na **Cascade**.|  
-|**MSDATA:DeleteRule**|Jeśli **DeleteRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **DeleteRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **DeleteRule** właściwość jest ustawiona na **Cascade**.|  
-|**MSDATA:AcceptRejectRule**|Jeśli **AcceptRejectRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **AcceptRejectRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **AcceptRejectRule** właściwość jest ustawiona na **Brak**.|  
+|**msdata:ConstraintOnly**|Jeśli **ConstraintOnly = "true"** jest określona w **keyref** elementu w schemacie, ograniczenie zostało utworzone, ale jest tworzona żadna relacja. Jeśli ten atrybut nie jest określony (lub ma ustawioną wartość **False**), zarówno ograniczenie, jak i relacji są tworzone w **zestawu danych**.|  
+|**msdata:ConstraintName**|Jeśli **ConstraintName** atrybut został określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu **keyref** element w schemacie udostępnia Nazwa ograniczenia w **zestawu danych**.|  
+|**msdata:UpdateRule**|Jeśli **elementu UpdateRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **elementu UpdateRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **elementu UpdateRule** właściwość jest ustawiona na **Cascade**.|  
+|**msdata:DeleteRule**|Jeśli **DeleteRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **DeleteRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **DeleteRule** właściwość jest ustawiona na **Cascade**.|  
+|**msdata:AcceptRejectRule**|Jeśli **AcceptRejectRule** atrybut został określony w **keyref** element w schemacie, jego wartość jest przypisany do **AcceptRejectRule** właściwości ograniczenia w  **Zestaw danych**. W przeciwnym razie **AcceptRejectRule** właściwość jest ustawiona na **Brak**.|  
   
  Poniżej przedstawiono przykład zawierający schemat, który określa **klucza** i **keyref** relacje między **OrderNumber** elementem podrzędnym **kolejności**  elementu i **OrderNo** elementem podrzędnym **OrderDetail** elementu.  
   

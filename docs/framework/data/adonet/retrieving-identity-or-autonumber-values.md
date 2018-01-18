@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 87da4a20430373d15e433ffa21c1e29bf560ebd7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatyczny numer
 Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, które zawsze zawiera unikatowe wartości. Wiedzy o wartości klucza podstawowego można zlokalizować wiersza, który go zawiera. Relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet obsługuje tworzenie automatycznie zwiększany kolumn, które mogą być oznaczone jako klucze podstawowe. Wartości te są generowane przez serwer jako wiersze są dodawane do tabeli. W programie SQL Server ustaw właściwość identity kolumny w oprogramowaniu Oracle tworzenia sekwencji i programu Microsoft Access tworzenia automatycznie numerowane kolumny.  
@@ -42,7 +42,7 @@ Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, kt
 |--------------|-----------------|  
 |SCOPE_IDENTITY|Zwraca ostatnią wartość tożsamości w bieżącym zakresie wykonywania. SCOPE_IDENTITY jest zalecane dla większości scenariuszy.|  
 |@@IDENTITY|Zawiera wygenerowane w dowolnej tabeli w bieżącej sesji, ostatnią wartość tożsamości. @@IDENTITY mogą mieć wpływ wyzwalaczy i nie może zwracać wartości tożsamości, z oczekiwaniami.|  
-|ATRYBUTU IDENT_CURRENT|Zwraca ostatnią wartość tożsamości wygenerowany dla określonej tabeli w dowolnej sesji oraz wszelkich zakresach.|  
+|IDENT_CURRENT|Zwraca ostatnią wartość tożsamości wygenerowany dla określonej tabeli w dowolnej sesji oraz wszelkich zakresach.|  
   
  Poniższe procedury składowanej pokazano, jak wstawienia wiersza do **kategorii** tabeli i użyj parametru wyjściowego, aby zwrócić wartość tożsamości wygenerowane przez funkcję SCOPE_IDENTITY() języka Transact-SQL.  
   

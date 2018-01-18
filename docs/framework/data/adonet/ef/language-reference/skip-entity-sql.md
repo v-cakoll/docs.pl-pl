@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: e2139412-8ea4-451b-8f10-91af18dfa3ec
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 28f774b8d8bb232512fb975d292df4423f56a6d4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1578a5817e43943d5b4257e76c7706155504fc86
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="skip-entity-sql"></a>POMIŃ (jednostka SQL)
 Stronicowanie fizycznych można wykonać za pomocą klauzul podrzędnych SKIP w klauzuli ORDER BY. POMIŃ nie można używać osobno z klauzuli ORDER BY.  

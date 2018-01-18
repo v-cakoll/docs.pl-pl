@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d916c7fb-4b56-4214-acbe-5e23365047b2
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0df2c3eea706bae92a9cbef9165c374e8efb368a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9ead5c43d295a5dc42f09deb21955de46fa1a576
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-custom-type-mappings"></a>Mapowanie niestandardowego typu SQL CLR
 Automatycznie określono typ mapowania między serwerem SQL i środowisko uruchomieniowe języka wspólnego (CLR), korzystając z narzędzia wiersza polecenia SQLMetal Projektant obiektów relacyjnych (Projektanta obiektów relacyjnych).  

@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0b12703343480c58024d91ee87f001373552f66a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f03a82c2164eac489a568ff4c0f3f9c55cf4326
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="performance-considerations-entity-framework"></a>Zagadnienia dotyczące wydajności (Entity Framework)
 W tym temacie opisano charakterystyki wydajności programu ADO.NET Entity Framework oraz przedstawiono pewne kwestie dotyczące pomagają zwiększyć wydajność aplikacji programu Entity Framework.  
@@ -32,7 +32,7 @@ W tym temacie opisano charakterystyki wydajności programu ADO.NET Entity Framew
 |Otwieranie połączenia z bazą danych|Umiarkowany<sup>1</sup>|w razie potrzeby.|Ponieważ Otwieranie połączenia z bazą danych zużywa cenne zasobu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] otwiera i zamyka połączenie z bazą danych tylko w razie potrzeby. Można również jawnie otworzyć połączenia. Aby uzyskać więcej informacji, zobacz [Zarządzanie połączeniami i transakcje](http://msdn.microsoft.com/en-us/b6659d2a-9a45-4e98-acaa-d7a8029e5b99).|  
 |Generowanie widoków|Wysoka|Raz w każdej domenie aplikacji. (Można wstępnie wygenerować.)|Zanim programu Entity Framework można wykonać zapytania względem modelu koncepcyjnego lub zapisać zmian w źródle danych, go wygenerować zestaw widoków zapytań lokalnego dostępu do bazy danych. Z powodu wysokiego kosztu generowania tych widoków można wstępnego wygenerowania widoków i dodaj je do projektu w czasie projektowania. Aby uzyskać więcej informacji, zobacz [porady: Pre-Generate widoków, aby poprawić wydajność kwerend](http://msdn.microsoft.com/en-us/b18a9d16-e10b-4043-ba91-b632f85a2579).|  
 |Trwa przygotowywanie zapytania|Umiarkowany<sup>2</sup>|Tylko jeden raz dla każdego zapytania unikatowy.|Obejmuje koszty tworzą polecenia query Generowanie poziomu drzewa poleceń na podstawie modelu i mapowania metadanych i zdefiniuj kształt danych zwracanych. Ponieważ teraz są buforowane zarówno w poleceniach zapytań SQL jednostki i zapytań LINQ, nowsze wykonania tego samego zapytania zająć mniej czasu. Skompilowane zapytania LINQ nadal służy do tego kosztów w późniejszym wykonaniami i skompilowane zapytania może być skuteczniejsza niż zapytań LINQ, które są automatycznie buforowane. Aby uzyskać więcej informacji, zobacz [skompilowane zapytania (LINQ to Entities)](../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md). Aby uzyskać ogólne informacje na temat wykonywania zapytań LINQ, zobacz [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md). **Uwaga:** LINQ do jednostek zapytań, które są stosowane `Enumerable.Contains` operator do kolekcji w pamięci nie są automatycznie buforowane. Parametryzacja również kolekcji w pamięci w skompilowanych zapytań LINQ jest niedozwolone.|  
-|Wykonywanie zapytania|Niski<sup>2</sup>|Tylko jeden raz dla każdego zapytania.|Koszt wykonywania polecenia względem źródła danych przy użyciu dostawcy danych ADO.NET. Ponieważ większość źródeł danych pamięci podręcznej planów kwerend, nowsze wykonania tego samego zapytania może potrwać nawet mniej czasu.|  
+|Wykonywanie zapytania|Low<sup>2</sup>|Tylko jeden raz dla każdego zapytania.|Koszt wykonywania polecenia względem źródła danych przy użyciu dostawcy danych ADO.NET. Ponieważ większość źródeł danych pamięci podręcznej planów kwerend, nowsze wykonania tego samego zapytania może potrwać nawet mniej czasu.|  
 |Ładowanie i sprawdzanie poprawności typów|Niski<sup>3</sup>|Tylko jeden raz dla każdego <xref:System.Data.Objects.ObjectContext> wystąpienia.|Typów są ładowane ani weryfikowana pod kątem typy, które definiuje modelu koncepcyjnego.|  
 |Śledzenie|Niski<sup>3</sup>|Tylko jeden raz dla każdego obiektu, który zwraca zapytanie. <sup>4</sup>|Jeśli zapytanie używa <xref:System.Data.Objects.MergeOption.NoTracking> opcji scalania, tym etapie nie wpływa na wydajność.<br /><br /> Jeśli zapytanie używa <xref:System.Data.Objects.MergeOption.AppendOnly>, <xref:System.Data.Objects.MergeOption.PreserveChanges>, lub <xref:System.Data.Objects.MergeOption.OverwriteChanges> merge — opcja, zapytania wyniki są śledzone w <xref:System.Data.Objects.ObjectStateManager>. <xref:System.Data.EntityKey> Jest generowany dla każdego śledzonego obiektu zapytanie zwracające i jest używany do tworzenia <xref:System.Data.Objects.ObjectStateEntry> w <xref:System.Data.Objects.ObjectStateManager>. Jeśli istniejące <xref:System.Data.Objects.ObjectStateEntry> można znaleźć <xref:System.Data.EntityKey>, istniejący obiekt jest zwracany. Jeśli <xref:System.Data.Objects.MergeOption.PreserveChanges>, lub <xref:System.Data.Objects.MergeOption.OverwriteChanges> jest używana opcja, przed jego zwróceniem aktualizacji obiektu.<br /><br /> Aby uzyskać więcej informacji, zobacz [rozpoznawania tożsamości, zarządzanie stanem i śledzenia zmian](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  
 |Materializowania obiektów|Umiarkowany<sup>3</sup>|Tylko jeden raz dla każdego obiektu, który zwraca zapytanie. <sup>4</sup>|Proces odczytu zwróconego <xref:System.Data.Common.DbDataReader> obiektu i tworzenia obiektów i ustawiania wartości właściwości, które są oparte na wartościach każde wystąpienie <xref:System.Data.Common.DbDataRecord> klasy. Jeśli ten obiekt już istnieje w <xref:System.Data.Objects.ObjectContext> i zapytanie używa <xref:System.Data.Objects.MergeOption.AppendOnly> lub <xref:System.Data.Objects.MergeOption.PreserveChanges> opcji scalania, tym etapie nie wpływa na wydajność. Aby uzyskać więcej informacji, zobacz [rozpoznawania tożsamości, zarządzanie stanem i śledzenia zmian](http://msdn.microsoft.com/en-us/3bd49311-0e72-4ea4-8355-38fe57036ba0).|  

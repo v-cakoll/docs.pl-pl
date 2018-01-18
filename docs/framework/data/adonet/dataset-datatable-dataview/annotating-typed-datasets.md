@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 4528393d3d9491d9c1f12a867eb093e75d028f3d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc09f3f9b43b70b7f9b302d7a9d75428b5a0e6c7
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="annotating-typed-datasets"></a>Dodawanie adnotacji do Typizowane zbiory danych
 Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.Data.DataSet> bez modyfikowania schematu podstawowego. Modyfikowanie nazwy elementów w źródłowej schemat spowodowałoby wpisanego **DataSet** do odwoływania się do obiektów, które nie istnieje w źródle danych, jak również utracić odwołania do obiektów, które istnieją w źródle danych.  
@@ -56,7 +56,7 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
   
 |Adnotacja|Opis|  
 |----------------|-----------------|  
-|**nazwy wpisanej**|Nazwa obiektu.|  
+|**typedName**|Nazwa obiektu.|  
 |**typedPlural**|Nazwa kolekcji obiektów.|  
 |**typedParent**|Nazwa obiektu określonego w relacji nadrzędny.|  
 |**typedChildren**|Nazwa metody zwracać obiekty z relacji podrzędnych.|  
@@ -75,15 +75,15 @@ Adnotacje umożliwiają modyfikowanie nazwy elementów w wpisaną <xref:System.D
   
 |Metody obiektu lub zdarzenia|Domyślny|Adnotacja|  
 |---------------------------|-------------|----------------|  
-|**Element DataTable**|TableNameDataTable|typedPlural|  
-|**Element DataTable** metody|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|nazwy wpisanej|  
-|**Kolekcji DataRowCollection**|TableName|typedPlural|  
-|**Element DataRow**|TableNameRow|nazwy wpisanej|  
-|**Element DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|nazwy wpisanej|  
-|**Właściwość**|PropertyName|nazwy wpisanej|  
+|**DataTable**|TableNameDataTable|typedPlural|  
+|**Element DataTable** metody|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**DataRowCollection**|TableName|typedPlural|  
+|**Element DataRow**|TableNameRow|typedName|  
+|**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
+|**Właściwość**|PropertyName|typedName|  
 |**Podrzędne** metody dostępu|GetChildTableNameRows|typedChildren|  
 |**Nadrzędny** metody dostępu|TableNameRow|typedParent|  
-|**Zestaw danych** zdarzeń|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|nazwy wpisanej|  
+|**Zestaw danych** zdarzeń|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
  Aby użyć wpisane **zestawu danych** adnotacje, należy uwzględnić następujące **xmlns** odwołania w schemat schematu XML definition language (XSD). (Aby utworzyć xsd z tabel bazy danych, zobacz <xref:System.Data.DataSet.WriteXmlSchema%2A> lub [Praca z zestawami danych w programie Visual Studio](http://msdn.microsoft.com/library/8bw9ksd6.aspx)).  
   

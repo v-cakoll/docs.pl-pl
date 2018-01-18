@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 04c780980ef0665b40a0c3a698193fc9fa738424
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: cfe7115717fcca834d87b7bcdc64ddd1df8ef843
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="how-to-c"></a>Jak (C#)
 
@@ -57,7 +57,7 @@ Ciągi to podstawowy typ danych używany do wyświetlania lub modyfikowania teks
 - [Porównywanie ciągów](../programming-guide/strings/how-to-compare-strings.md).
 - [Modyfikowanie zawartości ciągu](../programming-guide/strings/how-to-modify-string-contents.md).
 - [Określanie, czy ciąg reprezentuje liczbę](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
-- [Użyj <xref:System.String.Split%2A> do rozdzielania ciągów](../programming-guide/strings/how-to-parse-strings-using-string-split.md).
+- [Użyj `String.Split` do rozdzielania ciągów](parse-strings-using-split.md).
 - [Łączenie wielu ciągów w jednym](../programming-guide/strings/how-to-concatenate-multiple-strings.md).
 - [Wyszukaj tekst w ciągu](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
 - [Wyszukiwanie ciągów za pomocą wyrażeń regularnych](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).

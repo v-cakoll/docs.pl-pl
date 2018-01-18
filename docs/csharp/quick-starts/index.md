@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 7847d21e3529de1a84ef17486710d10256003ce9
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="c-quick-starts"></a>C# Szybki Start #
 
@@ -39,6 +39,12 @@ To szybki start założono, że zakończono [Hello world](hello-world.yml) samou
 [Gałęzie i pętli](branches-and-loops.yml) szybki start zawiera podstawowe informacje dotyczące wybierania różne ścieżki wykonanie kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, który stanowi podstawę jak programy podejmując decyzje i wybrać różne akcje. To szybki start jest również dostępna [do uruchomienia lokalnie na komputerze](branches-and-loops-local.md).
 
 Tej lekcji początku przyjęto założenie, że zakończono [Hello World](hello-world.yml) i [numery w języku C#](numbers-in-csharp.yml) — lekcje.
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Ciągi interpolowane](interpolated-strings.yml)
+
+[Ciągi interpolowane](interpolated-strings.yml) szybki start pokazuje, jak wstawianie wyrażenia w większy ciąg. Poznasz sposób definiowania interpolowanego wyrażenia, jak utworzyć ciąg wyniku z ciągu interpolowanym, który ma co najmniej jednego wyrażenia interpolowane i sterowanie formatowania, szerokość kolumny i wyrównanie zawartego w wyniku wyrażenia ciąg. 
+
+Tej lekcji początku przyjęto założenie, że zakończono [Hello World](hello-world.yml), [numery w języku C#](numbers-in-csharp.yml), i [gałęzie i pętli](branches-and-loops.yml) — lekcje.
 
 ## <a name="list-collectionlist-collectionyml"></a>[Kolekcja list](list-collection.yml)
 

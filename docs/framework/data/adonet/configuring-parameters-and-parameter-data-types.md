@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 0f5aed56ba4958d44e0628f55115308751afae55
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając Sprawdzanie typu i weryfikacji. W odróżnieniu od tekst polecenia parametr wejściowy jest traktowany jako wartość literału nie jako kod wykonywalny. Dzięki temu zabezpieczenia przed atakami "Iniekcja kodu SQL", w których osoba atakująca Wstawia polecenie Zabezpieczenia dokonywania na serwerze do instrukcji SQL.  
@@ -55,22 +55,22 @@ Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub pro
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Typu dostawcy danych `Parameter` obiektu jest wywnioskowany na podstawie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] typu `Value` z `Parameter` obiekt, lub z `DbType` z `Parameter` obiektu. W poniższej tabeli przedstawiono wnioskowany `Parameter` typ oparty na obiekt przekazany jako `Parameter` wartość lub określony `DbType`.  
   
-|Typ programu .NET Framework|Wartość DbType|SqlDbType|OleDbType|OdbcType|Typu OracleType|  
+|Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|Typu OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
-|<xref:System.Boolean>|Boolean|bitowe|Boolean|bitowe|Byte|  
+|<xref:System.Boolean>|Boolean|Bit|Boolean|Bit|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
-|Byte]|plików binarnych|VarBinary`.` niejawnej konwersji zakończy się niepowodzeniem, jeśli tablica bajtów jest większy niż maksymalny rozmiar VarBinary, czyli 8000 bajtów. Tablice typu byte jest większy niż 8000 bajtów, jawnie ustaw <xref:System.Data.SqlDbType>.|VarBinary|plików binarnych|nieprzetworzone|  
+|byte[]|plików binarnych|VarBinary`.` niejawnej konwersji zakończy się niepowodzeniem, jeśli tablica bajtów jest większy niż maksymalny rozmiar VarBinary, czyli 8000 bajtów. Tablice typu byte jest większy niż 8000 bajtów, jawnie ustaw <xref:System.Data.SqlDbType>.|VarBinary|plików binarnych|nieprzetworzone|  
 |<xref:System.Char>|``|Wnioskowanie <xref:System.Data.SqlDbType> z char nie jest obsługiwane.|Char|Char|Byte|  
-|<xref:System.DateTime>|DataGodzina|DataGodzina|Odcisk czasowy|DataGodzina|DataGodzina|  
+|<xref:System.DateTime>|DataGodzina|DataGodzina|DBTimeStamp|DataGodzina|DataGodzina|  
 |<xref:System.DateTimeOffset>|DateTimeOffset|DateTimeOffset w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z DateTimeOffset nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|||DataGodzina|  
 |<xref:System.Decimal>|Wartość dziesiętna|Wartość dziesiętna|Wartość dziesiętna|numeryczne|Wartość liczbowa|  
 |<xref:System.Double>|Double|Float|Double|Double|Double|  
 |<xref:System.Single>|Single|Rzeczywiste|Single|Rzeczywiste|Float|  
-|<xref:System.Guid>|Identyfikator GUID|Unikatowy identyfikator|Identyfikator GUID|Unikatowy identyfikator|nieprzetworzone|  
+|<xref:System.Guid>|Identyfikator GUID|UniqueIdentifier|Identyfikator GUID|UniqueIdentifier|nieprzetworzone|  
 |<xref:System.Int16 >|Int16|SmallInt|SmallInt|SmallInt|Int16|  
 |<xref:System.Int32>|Int32|int|int|int|Int32|  
 |<xref:System.Int64>|Int64|BigInt|BigInt|BigInt|Wartość liczbowa|  
-|<xref:System.Object>|Obiekt|Variant|Variant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Obiekt blob|  
+|<xref:System.Object>|Obiekt|Variant|Variant|Wnioskowanie OdbcType z obiektu nie jest obsługiwane.|Blob|  
 |<xref:System.String>|String|NVarChar. Ta niejawna konwersja zakończy się niepowodzeniem, jeśli ciąg jest większy niż maksymalny rozmiar NVarChar, która jest 4000 znaków. Ciągi większej niż 4000 znaków, należy jawnie ustawić <xref:System.Data.SqlDbType>.|VarWChar|NVarChar|NVarChar|  
 |<xref:System.TimeSpan>|Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> z TimeSpan nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|  
 |<xref:System.UInt16>|UInt16|Wnioskowanie <xref:System.Data.SqlDbType> z UInt16 nie jest obsługiwane.|UnsignedSmallInt|int|UInt16|  

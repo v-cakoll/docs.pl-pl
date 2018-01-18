@@ -1,7 +1,7 @@
 ---
 title: "Zdarzenia domeny. Projektowanie i wdrażanie"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zdarzenia domeny, projektowanie i wdrażanie"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 607ca2977f382a3af20dac7470e970f483133756
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54d512261261eff0c09bb96fb963ea8b452ae77f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -64,7 +64,7 @@ Z drugiej strony użycie zdarzeń domeny, można utworzyć szczegółowych i roz
 1.  Wyślij polecenie (na przykład CreateOrder).
 2.  Odbierać polecenia programu obsługi poleceń.
     -   Wykonaj transakcję pojedynczego agregacji.
-    -   (Opcjonalnie) Wywoływanie zdarzeń domeny dla efekty uboczne (na przykład OrderStartedDomainDvent).
+    -   (Opcjonalnie) Wywoływanie zdarzeń domeny dla efekty uboczne (na przykład OrderStartedDomainEvent).
 1.  Obsługi zdarzeń domeny (w ramach bieżącego procesu) wykona Otwórz liczba efekty uboczne w wielu wartości zagregowanych lub działania aplikacji. Na przykład:
     -   Sprawdź lub utwórz metody nabywców i płatności.
     -   Tworzenie i wysyłanie zdarzeń powiązanych integracji magistrali zdarzeń do stanów są propagowane na mikrousług lub wyzwalacza zewnętrznego akcji, takich jak wysyłanie wiadomości e-mail kupującemu.
@@ -372,4 +372,4 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (klient-po stronie validation.md) [dalej] (infrastruktury trwałości warstwy design.md)
+[Previous] (client-side-validation.md) [Next] (infrastructure-persistence-layer-design.md)

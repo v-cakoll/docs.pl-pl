@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6aa72d4c3ac27b3be6704943819596ad628e4f7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0586a3cb658acb0732add3e78f68344d887646fc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="oracle-lobs"></a>Oracle obiektów LOB
 .NET Framework Data Provider for Oracle obejmuje <xref:System.Data.OracleClient.OracleLob> klasy, która jest używana do pracy z bazą danych Oracle **LOB** typów danych.  
@@ -27,8 +27,8 @@ ms.lasthandoff: 12/22/2017
   
 |Typ danych|Opis|  
 |---------------|-----------------|  
-|**Obiekt blob**|Oracle **obiektu BLOB** typ danych zawierający dane binarne o maksymalnym rozmiarze 4 gigabajty. Mapuje to **tablicy** typu **bajtów**.|  
-|**CLOB**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych zawierający dane znakowe, oparte na domyślny znak. Mapuje to **ciąg**.|  
+|**Blob**|Oracle **obiektu BLOB** typ danych zawierający dane binarne o maksymalnym rozmiarze 4 gigabajty. Mapuje to **tablicy** typu **bajtów**.|  
+|**Clob**|Oracle **CLOB** na serwerze, o maksymalnym rozmiarze 4 gigabajty ustawić typ danych zawierający dane znakowe, oparte na domyślny znak. Mapuje to **ciąg**.|  
 |**NClob**|Oracle **NCLOB** typ danych zawierający dane znakowe oparte na zestaw na serwerze o maksymalnym rozmiarze 4 gigabajty national znaków. Mapuje to **ciąg**.|  
   
  **OracleLob** różni się od <xref:System.Data.OracleClient.OracleBFile> ponieważ dane są przechowywane na serwerze zamiast w pliku fizycznego w systemie operacyjnym. Może to być także obiekt odczytu i zapisu w odróżnieniu od **OracleBFile**, która zawsze jest tylko do odczytu.  

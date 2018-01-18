@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 07892869759ac5856b26099f2421caff1ebaf74d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpieczeń dostępne w odpowiedni magazyn danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które mogą zawierać aplikacji.  
@@ -82,7 +82,7 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
 |[Często zadawane pytania dotyczące zabezpieczeń firmy Microsoft dostęp dla programu Microsoft Access w wersji 2.0 za pomocą 2000](http://go.microsoft.com/fwlink/?LinkId=47698)|W wersji do pobrania firmy Microsoft dostęp zabezpieczeń często zadawane pytania.|  
 |[Rozwiązywanie problemów dotyczących zabezpieczeń i ochrony](http://go.microsoft.com/fwlink/?LinkId=47703)|Przedstawia informacje o rozwiązania typowych problemów z zabezpieczeniami w programie Excel 2003.|  
   
-## <a name="enterprise-services"></a>Usługi w przedsiębiorstwie  
+## <a name="enterprise-services"></a>Enterprise Services  
  COM + zawiera własną model zabezpieczeń, który polega na konta systemu Windows NT i personifikacji procesu/wątku. <xref:System.EnterpriseServices> Przestrzeń nazw zawiera otoki, umożliwiających aplikacjom .NET integracji kodu zarządzanego z zabezpieczeń usług COM + za pośrednictwem <xref:System.EnterpriseServices.ServicedComponent> klasy.  
   
  Aby uzyskać więcej informacji zobacz następujące zasoby.  

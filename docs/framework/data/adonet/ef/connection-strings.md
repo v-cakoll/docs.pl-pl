@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 64f2d0fbc54900443046bd2c71215cc0928c8658
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c83c1883d00db1da8f0e7945d9cda5f2eb3f56a0
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="connection-strings"></a>Parametry połączenia
 Parametry połączenia zawierają informacje inicjowania jest przekazywana jako parametr z dostawcy danych do źródła danych. Składnia jest zależna od dostawcy danych, a podczas próby otwarcia połączenia jest przeanalizować parametrów połączenia. Parametry połączenia używane przez program Entity Framework zawierają informacje używane do łączenia się z podstawowej dostawcy danych ADO.NET, która obsługuje programu Entity Framework. Zawierają one również informacje dotyczące wymaganego modelu i mapowania plików.  
@@ -34,7 +34,7 @@ Parametry połączenia zawierają informacje inicjowania jest przekazywana jako 
   
  Znak równości (=) łączy każde słowo kluczowe i jego wartość. Słowa kluczowe nie jest uwzględniana wielkość liter i spacji między pary klucz wartość są ignorowane. Jednak wartości mogą być uwzględniana wielkość liter, w zależności od źródła danych. Wszelkie wartości zawierające średnika, pojedynczy cudzysłów lub podwójny cudzysłów musi być ujęta w znaki podwójnego cudzysłowu. W poniższej tabeli wymieniono prawidłowe nazwy wartości słów kluczowych w <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>.  
   
-|Słowo kluczowe|Opis|  
+|Keyword|Opis|  
 |-------------|-----------------|  
 |`Provider`|Jeśli wymagane `Name` nie zostanie określone słowo kluczowe. Nazwa dostawcy, która służy do pobierania <xref:System.Data.Common.DbProviderFactory> obiektu dla źródłowego dostawcy. Ta wartość jest stała.<br /><br /> Gdy `Name` — słowo kluczowe nie ma parametrów połączenia jednostki, niepustą wartość dla `Provider` — słowo kluczowe jest wymagana. To słowo kluczowe jest wykluczają się wzajemnie z `Name` — słowo kluczowe.|  
 |`Provider Connection String`|Opcjonalny. Określa parametry połączenia specyficznych dla dostawcy, który zostanie przekazany do źródła danych. Ten ciąg połączenia jest wyrażona przy użyciu pary prawidłową — słowo kluczowe/wartość dla dostawcy danych. Nieprawidłowy `Provider Connection String` spowoduje błąd w czasie wykonywania, gdy jest obliczane przez źródło danych.<br /><br /> To słowo kluczowe jest wykluczają się wzajemnie z `Name` — słowo kluczowe.<br /><br /> Wartość `Provider Connection String` musi być ujęte w cudzysłowy. Oto przykład:<br /><br /> `Provider Connection String ="Server=serverName; User ID = userID";`<br /><br /> Poniższy przykład nie będzie działać:<br /><br /> `Provider Connection String =Server=serverName; User ID = userID`|  

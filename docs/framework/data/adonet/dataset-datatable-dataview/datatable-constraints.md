@@ -13,29 +13,29 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3767467024d6c0d0dfbf1be8829d77ba3f7fa439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 500dad1699843bae04aea6d5c16a1ccf53bb102a
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="datatable-constraints"></a>Ograniczenia elementu DataTable
 Ograniczenia umożliwiają wymuszenie zastosowania ograniczenia dotyczące danych w <xref:System.Data.DataTable>, aby zapewnić integralność danych. Ograniczenie jest automatyczne reguły, kolumny lub powiązane kolumny określa sposób postępowania przypadku jakiś sposób zmiany wartości wiersza. Wymuszone są ograniczenia podczas `System.Data.DataSet.EnforceConstraints` właściwość <xref:System.Data.DataSet> jest **true**. Na przykład kodu, który pokazuje, jak ustawić `EnforceConstraints` właściwości, zobacz <xref:System.Data.DataSet.EnforceConstraints%2A> temat referencyjny.  
   
  Istnieją dwa rodzaje ograniczeń ADO.NET: <xref:System.Data.ForeignKeyConstraint> i <xref:System.Data.UniqueConstraint>. Domyślnie oba ograniczenia są tworzone automatycznie podczas tworzenia relacji między co najmniej dwie tabele, dodając <xref:System.Data.DataRelation> do **zestawu danych**. Jednak wyłączyć to zachowanie, określając **createConstraints** = **false** podczas tworzenia powiązania.  
   
-## <a name="foreignkeyconstraint"></a>Element ForeignKeyConstraint  
+## <a name="foreignkeyconstraint"></a>ForeignKeyConstraint  
  A **ForeignKeyConstraint** wymusza stosowanie reguł dotyczących sposobu propagacji aktualizacji i usunięć w tabelach pokrewnych. Na przykład, jeśli wartość w wierszu jedna tabela jest zaktualizowane lub usunięty i tej samej wartości jest również używana w jednej lub więcej powiązanych tabel **ForeignKeyConstraint** Określa, co się stanie w tabelach pokrewnych.  
   
  <xref:System.Data.ForeignKeyConstraint.DeleteRule%2A> i <xref:System.Data.ForeignKeyConstraint.UpdateRule%2A> właściwości **ForeignKeyConstraint** definiowania akcji do wykonania, kiedy użytkownik próbuje usunąć lub zaktualizować wiersza powiązanej tabeli. W poniższej tabeli opisano różne ustawienia dostępne dla **DeleteRule** i **elementu UpdateRule** właściwości **ForeignKeyConstraint**.  
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Kaskadowo**|Usuń lub zaktualizuj powiązane wiersze.|  
+|**Cascade**|Usuń lub zaktualizuj powiązane wiersze.|  
 |**SetNull**|Ustaw wartości w powiązane wiersze do **DBNull**.|  
 |**SetDefault**|Ustaw wartości w powiązane wiersze do wartości domyślnej.|  
 |**Brak**|Podejmij żadnej akcji na powiązane wiersze. Domyślnie włączone.|  
@@ -71,7 +71,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
   
 |Ustawienie reguły|Opis|  
 |------------------|-----------------|  
-|**Kaskadowo**|Zaakceptuj lub Odrzuć zmiany do wierszy podrzędnych.|  
+|**Cascade**|Zaakceptuj lub Odrzuć zmiany do wierszy podrzędnych.|  
 |**Brak**|Nie zająć się wierszy podrzędnych. Domyślnie włączone.|  
   
 ### <a name="example"></a>Przykład  

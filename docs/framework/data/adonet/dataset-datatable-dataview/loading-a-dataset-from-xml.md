@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ebbe1addf47bc76903e362cfb353ade359a1c8ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1d0c98224b8b508fec5fe584388872757a9dfdf3
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="loading-a-dataset-from-xml"></a>Podczas ładowania zestawu danych z pliku XML
 Zawartość ADO.NET <xref:System.Data.DataSet> mogą być tworzone z strumień XML lub dokument. Ponadto w środowisku .NET Framework masz dużą elastyczność w informacjach są ładowane z pliku XML i w jaki sposób schematu lub relacyjne struktury <xref:System.Data.DataSet> jest tworzony.  
@@ -36,7 +36,7 @@ Zawartość ADO.NET <xref:System.Data.DataSet> mogą być tworzone z strumień X
 |**ReadSchema**|Odczytuje wszystkie wbudowanego schematu i ładuje danych i schematu.<br /><br /> Jeśli <xref:System.Data.DataSet> już zawiera schemat, nowe tabele są dodawane z wbudowanego schematu istniejący schemat w <xref:System.Data.DataSet>. Jeśli wszystkie tabele w wbudowany schemat już istnieje w <xref:System.Data.DataSet>, jest zgłaszany wyjątek. Nie można zmodyfikować schemat istniejących przy użyciu tabeli **XmlReadMode.ReadSchema**.<br /><br /> Jeśli <xref:System.Data.DataSet> nie zawiera schematu, a nie Brak schemat wbudowany, nie są odczytywane dane.<br /><br /> Wbudowany schemat można zdefiniować przy użyciu schematu (XSD) języka definicji schematu XML. Aby uzyskać informacje na temat pisania wbudowanego schematu XML Schema, zobacz [wyprowadzanie struktury relacyjne zestawu danych z schematu XML (XSD)](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md).|  
 |**IgnoreSchema**|Ignoruje wszystkie wbudowanego schematu i ładuje dane do istniejącego <xref:System.Data.DataSet> schematu. Dane, które nie pasuje do istniejącego schematu zostaną odrzucone. Jeśli schemat nie istnieje w <xref:System.Data.DataSet>, jest załadowane żadne dane.<br /><br /> Jeśli dane są elementu DiffGram **IgnoreSchema** ma te same funkcje co **elementu DiffGram** *.*|  
 |**InferSchema**|Ignoruje wszystkie wbudowanego schematu i wnioskuje schemat na strukturze danych XML, a następnie ładuje dane.<br /><br /> Jeśli <xref:System.Data.DataSet> już zawiera schemat, bieżący schemat jest rozszerzony przez dodawanie kolumn do istniejących tabel. Dodatkowe tabele nie zostanie dodany, jeśli nie istnieją tabele. Jeśli wnioskowany tabela już istnieje z różnych przestrzeni nazw lub kolumn wnioskowany powodują konflikt z istniejących kolumn, jest zgłaszany wyjątek.<br /><br /> Aby uzyskać szczegółowe informacje o tym, jak **ReadXmlSchema** wnioskuje schemat dokumentu XML, zobacz temat [wnioskowanie struktury zestawu danych relacyjnych z pliku XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md).|  
-|**Elementu DiffGram**|Odczytuje elementu DiffGram i dodaje je do bieżącego schematu. **Elementu DiffGram** scala nowe wiersze z istniejących wierszy, jeśli takie same wartości unikatowego identyfikatora. Zobacz "Scalanie danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji o DataSets, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**DiffGram**|Odczytuje elementu DiffGram i dodaje je do bieżącego schematu. **Elementu DiffGram** scala nowe wiersze z istniejących wierszy, jeśli takie same wartości unikatowego identyfikatora. Zobacz "Scalanie danych z pliku XML" na końcu tego tematu. Aby uzyskać więcej informacji o DataSets, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
 |**Fragment**|Nadal odczytywania wielu fragmenty XML, aż do osiągnięcia końca strumienia. Fragmenty zgodnych <xref:System.Data.DataSet> schematu są dołączane do odpowiednich tabel. Fragmenty, które nie odpowiadają <xref:System.Data.DataSet> schematu zostaną odrzucone.|  
   
 > [!NOTE]

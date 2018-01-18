@@ -9,15 +9,15 @@ dev_langs:
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
 caps.latest.revision: "7"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 61de1bf5f3e5eb16718f2af7fa29325dc94770d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu dla ADO.NET
 Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -45,7 +45,7 @@ Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danyc
 ## <a name="adonet-data-provider-examples"></a>Przykłady dostawcy danych ADO.NET
 Następujące listy kodu przedstawiają sposób pobierać dane z bazy danych przy użyciu dostawcy danych ADO.NET. Dane są zwracane w `DataReader`. Aby uzyskać więcej informacji, zobacz [pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
-### <a name="sqlclient"></a>Klient SQL
+### <a name="sqlclient"></a>SqlClient
 Kod w tym przykładzie przyjęto założenie, że można nawiązać `Northwind` przykładowej bazy danych w systemie Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Kod tworzy <xref:System.Data.SqlClient.SqlCommand> do wybrania wierszy z tabeli Produkty Dodawanie <xref:System.Data.SqlClient.SqlParameter> Aby ograniczyć wyniki do wiersze z UnitPrice większa niż podana wartość parametru, w tym przypadku 5. <xref:System.Data.SqlClient.SqlConnection> Jest otwarty w `using` bloku, który zapewnia, że zasoby są zamknięty i usunięty, gdy kod jest kończona. Kod wykonywany polecenia przy użyciu <xref:System.Data.SqlClient.SqlDataReader>i wyświetla wyniki w oknie konsoli.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
@@ -57,7 +57,7 @@ Kod w tym przykładzie przyjęto założenie, czy możesz nawiązać przykładow
  [!code-csharp[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
-### <a name="odbc"></a>ODBC
+### <a name="odbc"></a>Odbc
 Kod w tym przykładzie przyjęto założenie, czy możesz nawiązać przykładowej bazy danych Northwind dostępu firmy Microsoft. Kod tworzy <xref:System.Data.Odbc.OdbcCommand> do wybrania wierszy z tabeli Produkty Dodawanie <xref:System.Data.Odbc.OdbcParameter> Aby ograniczyć wyniki do wiersze z UnitPrice większa niż podana wartość parametru, w tym przypadku 5. <xref:System.Data.Odbc.OdbcConnection> Jest otwarty w `using` bloku, który zapewnia, że zasoby są zamknięty i usunięty, gdy kod jest kończona. Kod wykonywany polecenia przy użyciu <xref:System.Data.Odbc.OdbcDataReader>i wyświetla wyniki w oknie konsoli.
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
@@ -193,7 +193,7 @@ Class ObjectQuerySample
 End Class
 ```
 
-### <a name="entityclient"></a>Dostawca EntityClient
+### <a name="entityclient"></a>EntityClient
 W kodzie w tym przykładzie użyto <xref:System.Data.EntityClient.EntityCommand> można wykonać zapytania SQL jednostki. To zapytanie zwraca listę rekordów, które reprezentują wystąpień typu jednostki kategorii. <xref:System.Data.EntityClient.EntityDataReader> Służy do uzyskiwania dostępu do danych rekordów w zestawie wyników. Aby uzyskać więcej informacji, zobacz [dostawcy EntityClient Entity Framework](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).
 
 ```csharp

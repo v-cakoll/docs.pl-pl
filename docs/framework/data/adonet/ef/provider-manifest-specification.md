@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: f3e80b5bb62cc785c220e2baeb773e6990c5fee1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono sposób dostawcy magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -72,7 +72,7 @@ W tej sekcji omówiono sposób dostawcy magazynu danych może obsługiwać typy 
 ## <a name="provider-manifest-discoverability"></a>Dostawca odnajdywania manifestu  
  Manifest jest pośrednio używana przez kilka typów składników w usługach jednostki (na przykład narzędzia lub zapytanie), ale więcej bezpośrednio wykorzystywane przez metadanych przy użyciu danych przechowywane metadane modułu ładującego.  
   
- ![dfb3d02b &#45; 7a8c &#45; 4d 51 &#45; ac5a &#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
+ ![dfb3d02b&#45;7a8c&#45;4d51&#45;ac5a&#45;a73d8aa145e6](../../../../../docs/framework/data/adonet/ef/media/dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6.gif "dfb3d02b-7a8c-4d51-ac5a-a73d8aa145e6")  
   
  Jednak danego dostawcy mogą obsługiwać sklepach lub różne wersje tego samego magazynu. W związku z tym dostawcą muszą zgłosić różnych manifestu dla każdego sklepu obsługiwane dane.  
   
@@ -88,7 +88,7 @@ W tej sekcji omówiono sposób dostawcy magazynu danych może obsługiwać typy 
 ## <a name="provider-manifest-programming-model"></a>Model programowania manifestu dostawcy  
  Dostawcy pochodzić od <xref:System.Data.Common.DbXmlEnabledProviderManifest>, dzięki czemu do określania manifestów, ich deklaratywnie. Na poniższej ilustracji przedstawiono hierarchii klas dostawcy:  
   
- ![Brak](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
+ ![None](../../../../../docs/framework/data/adonet/ef/media/d541eba3-2ee6-4cd1-88f5-89d0b2582a6c.gif "d541eba3-2ee6-4cd1-88f5-89d0b2582a6c")  
   
 ### <a name="discoverability-api"></a>Odnajdowanie interfejsu API  
  Manifest dostawcy jest ładowany przez moduł ładujący przechowywania metadanych (StoreItemCollection), przy użyciu danych przechowywania połączenia i tokenu manifestu dostawcy.  
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |Nazwa|String|Tak|n/d|Identyfikator/nazwę funkcji|  
 |Obiekt ReturnType|String|Nie|Void|Zwracany typ EDM funkcji|  
 |Agregowanie|Boolean|Nie|False|Wartość true, jeśli funkcja jest funkcją agregującą|  
-|Wbudowane|Boolean|Nie|Wartość true|Wartość true, jeśli funkcja jest wbudowana w magazynie danych|  
+|BuiltIn|Boolean|Nie|True|Wartość true, jeśli funkcja jest wbudowana w magazynie danych|  
 |StoreFunctionName|String|Nie|\<Nazwa >|Nazwa funkcji w magazynie danych.  Zezwala na poziomie przekierowania nazwy funkcji.|  
 |NiladicFunction|Boolean|Nie|False|Wartość true, jeśli funkcja nie wymaga parametrów i jest wywoływana bez parametrów|  
 |ParameterType<br /><br /> Semantyka|ParameterSemantics|Nie|AllowImplicit<br /><br /> Konwersja|Wybór sposobu potoku zapytania powinien zająć się zamienny parametr typu:<br /><br /> -ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  

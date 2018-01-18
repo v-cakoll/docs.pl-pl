@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56da90bf-21d3-4d1a-8bb8-de908866b78d
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5276697ebdc065965d970afc4ac2ef6be61c8f20
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3700e4010176abed05677043469476fe34cd564c
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="map-unique-xml-schema-xsd-constraints-to-dataset-constraints"></a>Ograniczenia unikalne schematu XML (XSD) mapy do ograniczenia zestawu danych
 W schemacie schematu XML definition language (XSD) **unikatowy** element określa ograniczenie unikatowości element lub atrybut. Właśnie tłumaczenie schematu XML na schemat relacyjny, unikatowego ograniczenia określone na element lub atrybut w schemacie XML jest zamapowana do ograniczenia unique w <xref:System.Data.DataTable> w odpowiednich <xref:System.Data.DataSet> generowany.  
@@ -27,8 +27,8 @@ W schemacie schematu XML definition language (XSD) **unikatowy** element określ
   
 |Nazwa atrybutu|Opis|  
 |--------------------|-----------------|  
-|**MSDATA:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu zawiera wartości nazwy ograniczenia.|  
-|**MSDATA:PrimaryKey**|Jeśli `PrimaryKey="true"` znajduje się w **unikatowy** unikatowego ograniczenia elementu, jest tworzony z **IsPrimaryKey** ustawioną właściwość **true**.|  
+|**msdata:ConstraintName**|Jeśli ten atrybut jest określony, jego wartość jest używana jako nazwa ograniczenia. W przeciwnym razie **nazwa** atrybutu zawiera wartości nazwy ograniczenia.|  
+|**msdata:PrimaryKey**|Jeśli `PrimaryKey="true"` znajduje się w **unikatowy** unikatowego ograniczenia elementu, jest tworzony z **IsPrimaryKey** ustawioną właściwość **true**.|  
   
  W poniższym przykładzie przedstawiono schematu XML, który używa **unikatowy** element, aby określić ograniczenie unikatowości.  
   

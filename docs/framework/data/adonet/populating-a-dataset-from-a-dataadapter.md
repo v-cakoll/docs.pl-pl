@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6df0b6a06240a5f59c888ddcfb2b34764fd888fa
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c0991398a28e491d381d10dea8a14ed463c67c89
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>Wypełnianie zestawu danych z element DataAdapter
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet> Jest rezydentny reprezentację danych, który zapewnia spójne relacyjne programowania modelu niezależnie od źródła danych. `DataSet` Reprezentuje pełny zestaw danych, który zawiera tabele, ograniczenia i relacje między tabelami. Ponieważ `DataSet` jest niezależna od źródła danych, `DataSet` mogą obejmować dane lokalne aplikacji i danych z wielu źródeł danych. Interakcja z istniejących źródeł danych są kontrolowane poprzez `DataAdapter`.  
@@ -178,7 +178,7 @@ adapter.Fill(customers, "Customers");
   
 ### <a name="tablename-customers"></a>TableName: klientów  
   
-|CustomerID|Nazwa firmy|Zlecenia|  
+|CustomerID|CompanyName|Zlecenia|  
 |----------------|-----------------|------------|  
 |ALFKI|Alfreds Futterkiste|0|  
 |ANATR|Helados y ana Trujillo Emparedados|1|  

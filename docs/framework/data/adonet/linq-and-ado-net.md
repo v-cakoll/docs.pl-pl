@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
 caps.latest.revision: "8"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9781d97a133a39a7768c853ce80f7524db87df39
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Dzisiaj, użyć wielu firm deweloperów języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstwy logiki i prezentacji biznesowych (takich jak [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] lub [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) i język kwerendy do interakcji z bazy danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Wymaga deweloperowi można wykorzystać w wielu językach zadziałało i powoduje także, że język niezgodności w środowisku programistycznym. Na przykład aplikację, która używa interfejsu API dostępu do danych można wykonać kwerendy w bazie danych określa zapytanie jako literału ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzany pod kątem błędów, takich jak Błędna składnia lub czy kolumn lub wierszy, do których się odwołuje faktycznie istnieją. Nie ma typu Sprawdzanie parametrów zapytania i nie `IntelliSense` obsługuje albo.  

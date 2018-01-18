@@ -1,5 +1,5 @@
 ---
-title: Obiekt System.TimeSpan metody
+title: System.TimeSpan Methods
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -10,17 +10,17 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9333fee8-1454-4374-855b-8c14c002f48f
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 257fff19d10c4b803ec6fc539087cc558bd07a0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: baec7609ce1d2f04b1c24165c53bc7cce425f06d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="systemtimespan-methods"></a>Obiekt System.TimeSpan metody
+# <a name="systemtimespan-methods"></a>System.TimeSpan Methods
 Obsługa elementu członkowskiego <xref:System.TimeSpan?displayProperty=nameWithType> zależy od wersji programu .NET Framework i program Microsoft SQL Server.  
   
  Gdy metoda, operator lub właściwość nie jest obsługiwany; oznacza to, że LINQ do SQL nie może dokonywać translacji elementu członkowskiego do wykonania na serwerze SQL. Można nadal używać tych elementów członkowskich w kodzie. Jednak ich musi przyjąć przed zapytania jest translacja języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.  

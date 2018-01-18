@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 caps.latest.revision: "9"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: b04a7199fefc5df93d5e3472163d16c66e9279c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 50898395dcba9e33544cae63208b352c7a6fb6f4
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Klient SQL dla FrameworkTypes jednostki
 Dostawcy danych programu .NET Framework dla pliku manifestu dostawcy programu SQL Server (SqlClient) zawiera listę dostawcy typów pierwotnych aspektów dla każdego typu mapowania między koncepcyjnej i typów pierwotnych modelu magazynu, a podwyższenia poziomu i konwersji reguły między typów pierwotnych modelu koncepcyjnego i magazynu.  
@@ -55,11 +55,11 @@ Dostawcy danych programu .NET Framework dla pliku manifestu dostawcy programu SQ
 |`char`|n/d|`Edm.String`|Element MaxLength:<br /><br /> — Wartość pola minimalna: 1<br /><br /> -Maksymalna: 8000<br /><br /> -Domyślne: 8000<br /><br /> -Stałej: False<br /><br /> Unicode:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True|  
 |`nchar`|n/d|`Edm.String`|Element MaxLength:<br /><br /> — Wartość pola minimalna: 1<br /><br /> -Maksymalna: 4000<br /><br /> -Domyślne: 4000<br /><br /> -Stałej: False<br /><br /> Unicode:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True|  
 |`varchar`(`max`)|n/d|`Edm.String`|Element MaxLength:<br /><br /> -Domyślne: 2147483647<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
-|`nvarchar`(`max`)|n/d|`Edm.String`|Element MaxLength:<br /><br /> -Domyślne: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
-|`ntext`|Porównywanie równości: False<br /><br /> Umożliwia porównywanie kolejności: False|`Edm.String`|Element MaxLength:<br /><br /> -Domyślne: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
+|`nvarchar`(`max`)|n/d|`Edm.String`|Element MaxLength:<br /><br /> - Default: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
+|`ntext`|Porównywanie równości: False<br /><br /> Umożliwia porównywanie kolejności: False|`Edm.String`|Element MaxLength:<br /><br /> - Default: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
 |`text`|Porównywanie równości: False<br /><br /> Umożliwia porównywanie kolejności: False|`Edm.String`|Element MaxLength:<br /><br /> -Domyślne: 2147483647<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
 |`Unique`<br /><br /> `identifier`|Porównywanie równości: True<br /><br /> Umożliwia porównywanie kolejności: True|`Edm.Guid`|n/d|  
-|`xml`|Porównywanie równości: False<br /><br /> Umożliwia porównywanie kolejności: False|`Edm.String`|Element MaxLength:<br /><br /> -Domyślne: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
+|`xml`|Porównywanie równości: False<br /><br /> Umożliwia porównywanie kolejności: False|`Edm.String`|Element MaxLength:<br /><br /> - Default: 1073741823<br /><br /> -Stałej: True<br /><br /> Unicode:<br /><br /> -Domyślnie: True<br /><br /> -Stałej: True<br /><br /> FixedLength:<br /><br /> -Domyślnie: False<br /><br /> -Stałej: True|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Specyfikacje CSDL, SSDL i MSL](../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)

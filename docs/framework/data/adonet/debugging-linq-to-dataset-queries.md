@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 08c66309d4c789acc0f2ddf6159a11c5fb963e80
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e1c8a518dd3f8bc4c1123099522ad4a4f452c78f
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>Debugowanie LINQ do DataSet zapytań
 [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)]obsługuje debugowanie [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu. Istnieją pewne różnice między debugowania [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu i nie-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu zarządzanego. Większość funkcji debugowania pracować z [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] instrukcje w tym wykonywanie krok po kroku, ustawianie punktów przerwania i wyświetlania wyników, które przedstawiono w oknach debugera. Jednak odroczone zapytania wykonywania w ma niektóre efekty uboczne, które należy wziąć pod uwagę podczas debugowania [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu i istnieją pewne ograniczenia przy użyciu Edytuj i Kontynuuj. W tym temacie omówiono aspektów debugowania, które są unikatowe dla [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] porównaniu z systemem innym niż[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] kodu zarządzanego.  

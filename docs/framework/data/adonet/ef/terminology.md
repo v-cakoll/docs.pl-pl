@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 9e27ba9cbf2a87fe15355b812ea2447197425173
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 25ff37093bce2a496c8664b876785c8e52fae2d1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminologia
 W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Zostały podane linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -41,7 +41,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |Plik edmx|Plik XML, który zawiera model koncepcyjny (w pliku CSDL), modelu magazynu (w pliku SSDL) i odwzorowania między nimi (MSL). Plik edmx jest tworzony przez [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] narzędzia. Aby uzyskać więcej informacji, zobacz [pliku Przegląd edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).|  
 |end|Podmiot uczestniczących w skojarzeniu.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu End (CSDL)](http://msdn.microsoft.com/en-us/04f3c141-95bc-424b-989b-1c071b449e7c) i [końca skojarzenia](../../../../../docs/framework/data/adonet/association-end.md).|  
 |jednostka|Koncepcja w domenie aplikacji, w którym zdefiniowano typ danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu EntityType (CSDL)](http://msdn.microsoft.com/en-us/19562e9f-fd70-4b59-bc15-3e289cbb6054) i [typu jednostki](../../../../../docs/framework/data/adonet/entity-type.md).|  
-|Dostawca EntityClient|Magazyn niezależne od [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, który zawiera klasy, takie jak `EntityConnection`, `EntityCommand`, i `EntityDataReader`. Współpracuje z [!INCLUDE[esql](../../../../../includes/esql-md.md)] i łączy do przechowywania określonych [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, takich jak `SqlClient`.<br /><br /> Aby uzyskać więcej informacji, zobacz [dostawcy EntityClient Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
+|EntityClient|Magazyn niezależne od [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, który zawiera klasy, takie jak `EntityConnection`, `EntityCommand`, i `EntityDataReader`. Współpracuje z [!INCLUDE[esql](../../../../../includes/esql-md.md)] i łączy do przechowywania określonych [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych, takich jak `SqlClient`.<br /><br /> Aby uzyskać więcej informacji, zobacz [dostawcy EntityClient Entity Framework](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md).|  
 |Kontenera jednostek|Określa zestawy jednostek i zestawy skojarzeń, które zostanie wdrożone w określonej przestrzeni nazw.<br /><br /> Aby uzyskać więcej informacji, zobacz [Element EntityContainer (CSDL)](http://msdn.microsoft.com/en-us/06d03ecb-3b7a-4e7f-95d5-b95307d47a27) i [kontenera jednostek](../../../../../docs/framework/data/adonet/entity-container.md).|  
 |Entity Data Model (EDM)|Zestaw kwestie dotyczące struktury danych, jako jednostki i relacje, niezależnie od jego przechowywanych formularza.<br /><br /> Aby uzyskać więcej informacji, zobacz [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).|  
 |Entity Framework|Zestaw technologii, która obsługuje programowanie zorientowane na dane aplikacji umożliwia deweloperom do pracy z modeli koncepcyjnych, które są mapowane na logicznych schematów w źródłach danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [Omówienie struktury jednostek](../../../../../docs/framework/data/adonet/ef/overview.md).|  
@@ -84,7 +84,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |Plik ssdl|Plik XML, który zawiera modelu magazynu, wyrażone w pliku SSDL.|  
 |store schema definition language (SSDL)|Ustawia języka opartych na języku XML, który służy do definiowania typów jednostek, skojarzenia, kontenerów jednostek, zestawów jednostek i skojarzenia modelu magazynu, umożliwiająca często schematu bazy danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [specyfikacji pliku SSDL](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |Tabela na hierarchii|Metoda modelowania hierarchii typu w bazie danych, która zawiera atrybuty wszystkie typy w hierarchii w jednej tabeli.|  
-|Typ na tabeli|Metoda modelowania hierarchii typów, w bazie danych, których używa wielu tabel o relacje jeden do jednego modelu różnych typów.|  
+|table-per-type|Metoda modelowania hierarchii typów, w bazie danych, których używa wielu tabel o relacje jeden do jednego modelu różnych typów.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  

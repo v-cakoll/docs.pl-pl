@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 caps.latest.revision: "4"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 84c7f870edd1c8082936b380547e181d129f529e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cc6a3d38b8534c9727562cb3fb82f96fa60db7ec
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="sql-clr-type-mapping"></a>Mapowanie typu środowiska CLR SQL
 W składniku LINQ to SQL relacyjnej bazy danych w modelu danych mapuje modelu obiektów, które są jest wyrażone w języku programowania wybranych przez użytkownika. Po uruchomieniu aplikacji, LINQ do SQL tłumaczy zapytania języku zintegrowanym w modelu obiektów programu SQL i wysyła je do bazy danych do wykonania. Po powrocie z bazy danych wyników LINQ do SQL tłumaczy wyniki z powrotem do obiektów, które można pracować w języku programowania w języku użytkownika.  
@@ -210,7 +210,7 @@ W składniku LINQ to SQL relacyjnej bazy danych w modelu danych mapuje modelu ob
   
  Dat programu SQL Server nie ma żadnych koncepcji <xref:System.TimeZone>, funkcja, która Bogato jest obsługiwana w środowisku CLR. <xref:System.TimeZone>wartości są zapisywane jako bazy danych bez <xref:System.TimeZone> konwersji, niezależnie od oryginalnej <xref:System.DateTimeKind> informacji. Gdy <xref:System.DateTime> wartości są pobierane z bazy danych, ich wartości został załadowany, ponieważ jest do <xref:System.DateTime> z <xref:System.DateTimeKind> z <xref:System.DateTimeKind.Unspecified>. Aby uzyskać więcej informacji na temat obsługiwanych <xref:System.DateTime?displayProperty=nameWithType> metod, zobacz [metody System.DateTime](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md).  
   
-### <a name="systemtimespan"></a>Obiekt System.TimeSpan  
+### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 i .NET Framework 3.5 SP1 umożliwiają mapowanie CLR <xref:System.TimeSpan?displayProperty=nameWithType> typu z programem SQL Server `TIME` typu. Istnieje jednak duża różnica zakres który CLR <xref:System.TimeSpan?displayProperty=nameWithType> obsługuje i jakie programu SQL Server `TIME` wpisz obsługuje. Mapowanie wartości mniejszej niż 0 lub większą niż godziny 23:59:59.9999999 SQL `TIME` spowoduje przepełnienie wyjątków. Aby uzyskać więcej informacji, zobacz [metody System.TimeSpan](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md).  
   
  W programie Microsoft SQL Server 2000 i SQL Server 2005, nie można mapować pola bazy danych do <xref:System.TimeSpan>. Jednak operacje na <xref:System.TimeSpan> są obsługiwane, ponieważ <xref:System.TimeSpan> może zwracać wartości <xref:System.DateTime> odejmowania lub wprowadzane jako zmienną literału lub powiązane wyrażenia.  

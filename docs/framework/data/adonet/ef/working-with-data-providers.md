@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b6ae53f4-34f8-4510-ad98-ff1e46621526
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3b70dc7956dfa62d54c25a19aee9901a3ce6723d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3c78170c01cbc0711f79ef554d2a3da585b41d6d
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="working-with-data-providers"></a>Praca z dostawców danych
 W tematach w tej sekcji opisano, usług i dostawców, które przetwarzają zapytań dotyczących modelu koncepcyjnego do natywnego zapytania względem źródła danych, która jest obsługiwana przez program Entity Framework.  

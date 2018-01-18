@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3b56d61593aed1a0cdce2fd45d902d9f4ac00cda
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions integracji z programem SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 2.0 wprowadzono framework transakcji, które mogą być udostępniane za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta struktura przedstawia transakcji w taki sposób, który jest w pełni zintegrowana z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/09/2018
   
  W poniższej tabeli opisano możliwe wartości.  
   
-|Słowo kluczowe|Opis|  
+|Keyword|Opis|  
 |-------------|-----------------|  
 |Niejawne usunięcia powiązania|Domyślnie. Połączenie odłącza transakcji po jej zakończeniu przełączania do trybu autozatwierdzania.|  
 |Jawne usuwanie powiązania|Połączenie pozostaje przyłączona do transakcji do czasu zamknięcia transakcji. Połączenia zakończy się niepowodzeniem, jeśli skojarzonej transakcji jest nieaktywny lub nie odpowiada <xref:System.Transactions.Transaction.Current%2A>.|  

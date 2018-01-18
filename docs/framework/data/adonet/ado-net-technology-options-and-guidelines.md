@@ -10,15 +10,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 caps.latest.revision: "6"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 11ca23427460ed4c469fc45e43f3b32e4ec5eb25
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26678ebf9478efadc73661defe19be77cb69d075
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>Opcje technologii ADO.NET i wskazówki
 Platforma danych ADO.NET to strategii wielu wersji, aby zmniejszyć ilość kodowania i konserwacji wymagane dla deweloperów, należy włączyć je do programowania dla modeli danych jednostki koncepcyjnego. Ta platforma obejmuje ADO.NET Entity Framework i technologii pokrewnych.  
@@ -38,7 +38,7 @@ Platforma danych ADO.NET to strategii wielu wersji, aby zmniejszyć ilość kodo
 ### <a name="entity-sql"></a>Entity SQL  
  Jednostka SQL jest język zapytań tekst przeznaczony do współdziałania z modelu danych jednostki. Jednostka SQL jest dialekt SQL, którego zawiera konstrukcje zapytań pod względem wyższego poziomu modelowania, takich jak dziedziczenia, typy złożone i jawnej relacji. Deweloperzy mogą również używać SQL jednostki bezpośrednio z usługami obiektu. Aby uzyskać więcej informacji, zobacz [języka SQL jednostki](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md).  
   
-### <a name="entityclient"></a>Dostawca EntityClient  
+### <a name="entityclient"></a>EntityClient  
  Dostawca EntityClient jest używana do interakcji z modelu Entity Data Model nowego dostawcy danych .NET Framework. Dostawca EntityClient zgodny ze wzorcem dostawcy danych .NET Framework, ujawnienia <xref:System.Data.EntityClient.EntityConnection> i <xref:System.Data.EntityClient.EntityCommand> obiekty, które zwraca <xref:System.Data.EntityClient.EntityDataReader>. Dostawca EntityClient współpracuje z języka SQL jednostki, zapewniając elastyczne mapowania do dostawcy magazynu danych. Aby uzyskać więcej informacji, zobacz [EntityClient i SQL jednostki](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ### <a name="entity-data-model-tools"></a>Narzędzi modelu danych jednostki  

@@ -13,15 +13,15 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 caps.latest.revision: "5"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8c28dee75d5371da50dec1d3b73ec6c305176582
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b1250d616ad5835fccd1a3acbf0b8a759c34181
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>Zapisywanie zawartości zestawu danych jako dane XML
 W ADO.NET można zapisywać reprezentację XML <xref:System.Data.DataSet>, z lub bez jego schematu. Informacje o schemacie są uwzględniane wbudowany z pliku XML, jest ona zapisywana, przy użyciu języka definicji schematu XML (XSD). Schemat zawiera definicje tabel <xref:System.Data.DataSet> oraz definicje relacja i ograniczenie.  
@@ -48,7 +48,7 @@ string xmlDS = custDS.GetXml();
 |-------------------------|-----------------|  
 |**IgnoreSchema**|Zapisuje bieżącą zawartość <xref:System.Data.DataSet> danych XML bez schematu XML. Domyślnie włączone.|  
 |**WriteSchema**|Zapisuje bieżącą zawartość <xref:System.Data.DataSet> jako dane XML ze strukturą relacyjne jako wbudowanego schematu XML.|  
-|**Elementu DiffGram**|Zapisuje całą <xref:System.Data.DataSet> jako elementu DiffGram tym oryginalny i bieżące wartości. Aby uzyskać więcej informacji, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
+|**DiffGram**|Zapisuje całą <xref:System.Data.DataSet> jako elementu DiffGram tym oryginalny i bieżące wartości. Aby uzyskać więcej informacji, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).|  
   
  Podczas zapisywania reprezentację XML <xref:System.Data.DataSet> zawierający **DataRelation** obiekty, najprawdopodobniej będziesz wynikowy kod XML ma wierszy podrzędnych każdej relacji zagnieżdżone w obrębie ich elementów nadrzędnych pokrewne. Aby to zrobić, ustaw **zagnieżdżone** właściwość **DataRelation** do **true** po dodaniu **DataRelation** do <xref:System.Data.DataSet>. Aby uzyskać więcej informacji, zobacz [zagnieżdżania DataRelations](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md).  
   

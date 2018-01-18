@@ -13,27 +13,27 @@ dev_langs:
 - vb
 ms.assetid: 202026a1-ec79-435e-b507-12a77f5011b2
 caps.latest.revision: "3"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: de3d0125adc6f18ebebf13ff3cf2fa5119ec17df
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2233beeab5bc613966375f9a8ccf18c333e9f4c6
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="navigating-datatables"></a><span data-ttu-id="c2c78-102">Nawigowanie po DataTables</span><span class="sxs-lookup"><span data-stu-id="c2c78-102">Navigating DataTables</span></span>
-<span data-ttu-id="c2c78-103"><xref:System.Data.DataTableReader> Uzyskuje zawartość jednego lub więcej <xref:System.Data.DataTable> obiekty w postaci jednego lub więcej zestawów wyników tylko do odczytu, tylko do przodu.</span><span class="sxs-lookup"><span data-stu-id="c2c78-103">The <xref:System.Data.DataTableReader> obtains the contents of one or more <xref:System.Data.DataTable> objects in the form of one or more read-only, forward-only result sets.</span></span>  
+# <a name="navigating-datatables"></a><span data-ttu-id="e987c-102">Nawigowanie po DataTables</span><span class="sxs-lookup"><span data-stu-id="e987c-102">Navigating DataTables</span></span>
+<span data-ttu-id="e987c-103"><xref:System.Data.DataTableReader> Uzyskuje zawartość jednego lub więcej <xref:System.Data.DataTable> obiekty w postaci jednego lub więcej zestawów wyników tylko do odczytu, tylko do przodu.</span><span class="sxs-lookup"><span data-stu-id="e987c-103">The <xref:System.Data.DataTableReader> obtains the contents of one or more <xref:System.Data.DataTable> objects in the form of one or more read-only, forward-only result sets.</span></span>  
   
- <span data-ttu-id="c2c78-104">A <xref:System.Data.DataTableReader> może zawierać wiele zestawów wyników, jeśli jest tworzona przy użyciu <xref:System.Data.DataSet.CreateDataReader%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="c2c78-104">A <xref:System.Data.DataTableReader> may contain multiple result sets if it is created by using the <xref:System.Data.DataSet.CreateDataReader%2A> method.</span></span> <span data-ttu-id="c2c78-105">Jeśli istnieje więcej niż jeden zestaw wyników, <xref:System.Data.DataTableReader.NextResult%2A> metody przesuwa kursor do następnego zestawu wyników.</span><span class="sxs-lookup"><span data-stu-id="c2c78-105">When there is more than one result set, the <xref:System.Data.DataTableReader.NextResult%2A> method advances the cursor to the next result set.</span></span> <span data-ttu-id="c2c78-106">Jest to proces tylko do przodu.</span><span class="sxs-lookup"><span data-stu-id="c2c78-106">This is a forward-only process.</span></span> <span data-ttu-id="c2c78-107">Nie jest możliwe powrócić do poprzedniego zestawu wyników.</span><span class="sxs-lookup"><span data-stu-id="c2c78-107">It is not possible to return to a previous result set.</span></span>  
+ <span data-ttu-id="e987c-104">A <xref:System.Data.DataTableReader> może zawierać wiele zestawów wyników, jeśli jest tworzona przy użyciu <xref:System.Data.DataSet.CreateDataReader%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="e987c-104">A <xref:System.Data.DataTableReader> may contain multiple result sets if it is created by using the <xref:System.Data.DataSet.CreateDataReader%2A> method.</span></span> <span data-ttu-id="e987c-105">Jeśli istnieje więcej niż jeden zestaw wyników, <xref:System.Data.DataTableReader.NextResult%2A> metody przesuwa kursor do następnego zestawu wyników.</span><span class="sxs-lookup"><span data-stu-id="e987c-105">When there is more than one result set, the <xref:System.Data.DataTableReader.NextResult%2A> method advances the cursor to the next result set.</span></span> <span data-ttu-id="e987c-106">Jest to proces tylko do przodu.</span><span class="sxs-lookup"><span data-stu-id="e987c-106">This is a forward-only process.</span></span> <span data-ttu-id="e987c-107">Nie jest możliwe powrócić do poprzedniego zestawu wyników.</span><span class="sxs-lookup"><span data-stu-id="e987c-107">It is not possible to return to a previous result set.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c2c78-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="c2c78-108">Example</span></span>  
- <span data-ttu-id="c2c78-109">W poniższym przykładzie `TestConstructor` metoda tworzy dwa <xref:System.Data.DataTable> wystąpień.</span><span class="sxs-lookup"><span data-stu-id="c2c78-109">In the following example, the `TestConstructor` method creates two <xref:System.Data.DataTable> instances.</span></span> <span data-ttu-id="c2c78-110">W celu zaprezentowania tego konstruktora dla <xref:System.Data.DataTableReader> klasy, tworzy nową próbkę **Element DataTableReader** na podstawie tablicy, która zawiera dwa **DataTables**i wykonuje operację proste Drukowanie zawartości z pierwszego kilka kolumn, w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="c2c78-110">In order to demonstrate this constructor for the <xref:System.Data.DataTableReader> class, the sample creates a new **DataTableReader** based on an array that contains the two **DataTables**, and performs a simple operation, printing the contents from the first few columns to the console window.</span></span>  
+## <a name="example"></a><span data-ttu-id="e987c-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="e987c-108">Example</span></span>  
+ <span data-ttu-id="e987c-109">W poniższym przykładzie `TestConstructor` metoda tworzy dwa <xref:System.Data.DataTable> wystąpień.</span><span class="sxs-lookup"><span data-stu-id="e987c-109">In the following example, the `TestConstructor` method creates two <xref:System.Data.DataTable> instances.</span></span> <span data-ttu-id="e987c-110">W celu zaprezentowania tego konstruktora dla <xref:System.Data.DataTableReader> klasy, tworzy nową próbkę **Element DataTableReader** na podstawie tablicy, która zawiera dwa **DataTables**i wykonuje operację proste Drukowanie zawartości z pierwszego kilka kolumn, w oknie konsoli.</span><span class="sxs-lookup"><span data-stu-id="e987c-110">In order to demonstrate this constructor for the <xref:System.Data.DataTableReader> class, the sample creates a new **DataTableReader** based on an array that contains the two **DataTables**, and performs a simple operation, printing the contents from the first few columns to the console window.</span></span>  
   
  [!code-csharp[DataWorks DataTableReader.NextResult#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/CS/source.cs#1)]
  [!code-vb[DataWorks DataTableReader.NextResult#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTableReader.NextResult/VB/source.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="c2c78-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c2c78-111">See Also</span></span>  
- [<span data-ttu-id="c2c78-112">Elementy DataTableReader</span><span class="sxs-lookup"><span data-stu-id="c2c78-112">DataTableReaders</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
- [<span data-ttu-id="c2c78-113">ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów</span><span class="sxs-lookup"><span data-stu-id="c2c78-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a><span data-ttu-id="e987c-111">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="e987c-111">See Also</span></span>  
+ [<span data-ttu-id="e987c-112">Elementy DataTableReader</span><span class="sxs-lookup"><span data-stu-id="e987c-112">DataTableReaders</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
+ [<span data-ttu-id="e987c-113">ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów</span><span class="sxs-lookup"><span data-stu-id="e987c-113">ADO.NET Managed Providers and DataSet Developer Center</span></span>](http://go.microsoft.com/fwlink/?LinkId=217917)

@@ -1,5 +1,5 @@
 ---
-title: Metody System.DateTime
+title: System.DateTime Methods
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
@@ -10,23 +10,23 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 50fe660a84dcb75c12655f2b60c7e5969a07a839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74c07a2f873d715bd82fba19499b36e8ed305dcc
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="systemdatetime-methods"></a><span data-ttu-id="4e1bc-102">Metody System.DateTime</span><span class="sxs-lookup"><span data-stu-id="4e1bc-102">System.DateTime Methods</span></span>
-<span data-ttu-id="4e1bc-103">Następujące LINQ do operatorów, właściwości i metod obsługiwanych przez program SQL są dostępne do użycia w składniku LINQ do SQL zapytań.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="4e1bc-104">Gdy metoda, operator lub właściwość nie jest obsługiwany, LINQ do SQL nie może dokonywać translacji elementu członkowskiego do wykonania na serwerze SQL.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="4e1bc-105">Możesz użyć tych elementów członkowskich w kodzie, jednak ich musi przyjąć przed zapytania jest translacja języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
+# <a name="systemdatetime-methods"></a><span data-ttu-id="98359-102">System.DateTime Methods</span><span class="sxs-lookup"><span data-stu-id="98359-102">System.DateTime Methods</span></span>
+<span data-ttu-id="98359-103">Następujące LINQ do operatorów, właściwości i metod obsługiwanych przez program SQL są dostępne do użycia w składniku LINQ do SQL zapytań.</span><span class="sxs-lookup"><span data-stu-id="98359-103">The following LINQ to SQL-supported methods, operators, and properties are available to use in LINQ to SQL queries.</span></span> <span data-ttu-id="98359-104">Gdy metoda, operator lub właściwość nie jest obsługiwany, LINQ do SQL nie może dokonywać translacji elementu członkowskiego do wykonania na serwerze SQL.</span><span class="sxs-lookup"><span data-stu-id="98359-104">When a method, operator or property is unsupported, LINQ to SQL cannot translate the member for execution on the SQL Server.</span></span> <span data-ttu-id="98359-105">Możesz użyć tych elementów członkowskich w kodzie, jednak ich musi przyjąć przed zapytania jest translacja języka Transact-SQL lub po wyniki zostały pobrane z bazy danych.</span><span class="sxs-lookup"><span data-stu-id="98359-105">You may use these members in your code, however, they must be evaluated before the query is translated to Transact-SQL or after the results have been retrieved from the database.</span></span>  
   
-## <a name="supported-systemdatetime-members"></a><span data-ttu-id="4e1bc-106">Elementy członkowskie System.DateTime obsługiwane</span><span class="sxs-lookup"><span data-stu-id="4e1bc-106">Supported System.DateTime Members</span></span>  
- <span data-ttu-id="4e1bc-107">Zmapowaniu w modelu obiektu lub plik mapowania zewnętrznych LINQ do SQL pozwala wywoływać następujące <xref:System.DateTime?displayProperty=nameWithType> członków wewnątrz LINQ do zapytania SQL.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
+## <a name="supported-systemdatetime-members"></a><span data-ttu-id="98359-106">Elementy członkowskie System.DateTime obsługiwane</span><span class="sxs-lookup"><span data-stu-id="98359-106">Supported System.DateTime Members</span></span>  
+ <span data-ttu-id="98359-107">Zmapowaniu w modelu obiektu lub plik mapowania zewnętrznych LINQ do SQL pozwala wywoływać następujące <xref:System.DateTime?displayProperty=nameWithType> członków wewnątrz LINQ do zapytania SQL.</span><span class="sxs-lookup"><span data-stu-id="98359-107">Once mapped in the object model or external mapping file, LINQ to SQL allows you to call the following <xref:System.DateTime?displayProperty=nameWithType> members inside LINQ to SQL queries.</span></span>  
   
-|<span data-ttu-id="4e1bc-108">Obsługiwane <xref:System.DateTime> metody</span><span class="sxs-lookup"><span data-stu-id="4e1bc-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="4e1bc-109">Obsługiwane <xref:System.DateTime> operatory</span><span class="sxs-lookup"><span data-stu-id="4e1bc-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="4e1bc-110">Obsługiwane <xref:System.DateTime> właściwości</span><span class="sxs-lookup"><span data-stu-id="4e1bc-110">Supported <xref:System.DateTime> Properties</span></span>|  
+|<span data-ttu-id="98359-108">Obsługiwane <xref:System.DateTime> metody</span><span class="sxs-lookup"><span data-stu-id="98359-108">Supported <xref:System.DateTime> Methods</span></span>|<span data-ttu-id="98359-109">Obsługiwane <xref:System.DateTime> operatory</span><span class="sxs-lookup"><span data-stu-id="98359-109">Supported <xref:System.DateTime> Operators</span></span>|<span data-ttu-id="98359-110">Obsługiwane <xref:System.DateTime> właściwości</span><span class="sxs-lookup"><span data-stu-id="98359-110">Supported <xref:System.DateTime> Properties</span></span>|  
 |------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime.Add%2A>|<xref:System.DateTime.op_Addition%2A>|<xref:System.DateTime.Date%2A>|  
 |<xref:System.DateTime.AddDays%2A>|<xref:System.DateTime.op_Equality%2A>|<xref:System.DateTime.Day%2A>|  
@@ -42,8 +42,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.DateTime.Equals%28System.DateTime%29>||<xref:System.DateTime.Today%2A>|  
 |||<xref:System.DateTime.Year%2A>|  
   
-## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="4e1bc-111">Elementy członkowskie nie jest obsługiwana w składniku LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="4e1bc-111">Members Not Supported by LINQ to SQL</span></span>  
- <span data-ttu-id="4e1bc-112">Następujące elementy członkowskie nie są obsługiwane wewnątrz LINQ do zapytania SQL.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
+## <a name="members-not-supported-by-linq-to-sql"></a><span data-ttu-id="98359-111">Elementy członkowskie nie jest obsługiwana w składniku LINQ to SQL</span><span class="sxs-lookup"><span data-stu-id="98359-111">Members Not Supported by LINQ to SQL</span></span>  
+ <span data-ttu-id="98359-112">Następujące elementy członkowskie nie są obsługiwane wewnątrz LINQ do zapytania SQL.</span><span class="sxs-lookup"><span data-stu-id="98359-112">The following members are not supported inside LINQ to SQL queries.</span></span>  
   
 |||  
 |-|-|  
@@ -57,17 +57,17 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.DateTime.FromFileTime%2A>|<xref:System.DateTime.FromFileTimeUtc%2A>|  
 |<xref:System.DateTime.FromOADate%2A>|<xref:System.DateTime.GetDateTimeFormats%2A>|  
   
-## <a name="method-translation-example"></a><span data-ttu-id="4e1bc-113">Przykład translatora — metoda</span><span class="sxs-lookup"><span data-stu-id="4e1bc-113">Method Translation Example</span></span>  
- <span data-ttu-id="4e1bc-114">Wszystkie metody obsługiwania w składniku LINQ to SQL są tłumaczone na języka Transact-SQL, przed ich wysłaniem do serwera SQL.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="4e1bc-115">Rozważmy na przykład następującego wzorca.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-115">For example, consider the following pattern.</span></span>  
+## <a name="method-translation-example"></a><span data-ttu-id="98359-113">Przykład translatora — metoda</span><span class="sxs-lookup"><span data-stu-id="98359-113">Method Translation Example</span></span>  
+ <span data-ttu-id="98359-114">Wszystkie metody obsługiwania w składniku LINQ to SQL są tłumaczone na języka Transact-SQL, przed ich wysłaniem do serwera SQL.</span><span class="sxs-lookup"><span data-stu-id="98359-114">All methods supported by LINQ to SQL are translated to Transact-SQL before they are sent to   SQL Server.</span></span> <span data-ttu-id="98359-115">Rozważmy na przykład następującego wzorca.</span><span class="sxs-lookup"><span data-stu-id="98359-115">For example, consider the following pattern.</span></span>  
   
  `(dateTime1 – dateTime2).{Days, Hours, Milliseconds, Minutes, Months, Seconds, Years}`  
   
- <span data-ttu-id="4e1bc-116">Gdy uznaje się jest przetłumaczyć bezpośrednie połączenie z programem SQL Server `DATEDIFF` działają w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="4e1bc-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
+ <span data-ttu-id="98359-116">Gdy uznaje się jest przetłumaczyć bezpośrednie połączenie z programem SQL Server `DATEDIFF` działają w następujący sposób:</span><span class="sxs-lookup"><span data-stu-id="98359-116">When it is recognized, it is translated into a direct call to the SQL Server `DATEDIFF` function, as follows:</span></span>  
   
  `DATEDIFF({DatePart}, @dateTime1, @dateTime2)`  
   
-## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="4e1bc-117">SQLMethods Data i godzina metody</span><span class="sxs-lookup"><span data-stu-id="4e1bc-117">SQLMethods Date and Time Methods</span></span>  
- <span data-ttu-id="4e1bc-118">Oprócz metod oferowane przez <xref:System.DateTime> struktury LINQ do SQL oferuje metody wymienione w poniższej tabeli z <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> klasy do pracy z datą i godziną.</span><span class="sxs-lookup"><span data-stu-id="4e1bc-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
+## <a name="sqlmethods-date-and-time-methods"></a><span data-ttu-id="98359-117">SQLMethods Data i godzina metody</span><span class="sxs-lookup"><span data-stu-id="98359-117">SQLMethods Date and Time Methods</span></span>  
+ <span data-ttu-id="98359-118">Oprócz metod oferowane przez <xref:System.DateTime> struktury LINQ do SQL oferuje metody wymienione w poniższej tabeli z <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> klasy do pracy z datą i godziną.</span><span class="sxs-lookup"><span data-stu-id="98359-118">In addition to the methods offered by the <xref:System.DateTime> structure, LINQ to SQL offers the methods listed in the following table from the <xref:System.Data.Linq.SqlClient.SqlMethods?displayProperty=nameWithType> class for working with date and time.</span></span>  
   
 ||||  
 |-|-|-|  
@@ -75,8 +75,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a><span data-ttu-id="4e1bc-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="4e1bc-119">See Also</span></span>  
- [<span data-ttu-id="4e1bc-120">Pojęcia dotyczące zapytań</span><span class="sxs-lookup"><span data-stu-id="4e1bc-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [<span data-ttu-id="4e1bc-121">Tworzenie modelu obiektu</span><span class="sxs-lookup"><span data-stu-id="4e1bc-121">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [<span data-ttu-id="4e1bc-122">Mapowania typów środowiska SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="4e1bc-122">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [<span data-ttu-id="4e1bc-123">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="4e1bc-123">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a><span data-ttu-id="98359-119">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="98359-119">See Also</span></span>  
+ [<span data-ttu-id="98359-120">Pojęcia dotyczące zapytań</span><span class="sxs-lookup"><span data-stu-id="98359-120">Query Concepts</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
+ [<span data-ttu-id="98359-121">Tworzenie modelu obiektu</span><span class="sxs-lookup"><span data-stu-id="98359-121">Creating the Object Model</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
+ [<span data-ttu-id="98359-122">Mapowania typów środowiska SQL-CLR</span><span class="sxs-lookup"><span data-stu-id="98359-122">SQL-CLR Type Mapping</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
+ [<span data-ttu-id="98359-123">Typy danych i funkcje</span><span class="sxs-lookup"><span data-stu-id="98359-123">Data Types and Functions</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

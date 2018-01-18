@@ -10,36 +10,36 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 4733e3b2-3efa-4b96-b591-ac31350e96ad
 caps.latest.revision: "2"
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: douglaslMS
+ms.author: douglasl
+manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 36699b403241e9a5496e722e81c833be0ed63101
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c90c908e567ac05f344292411978ff0c80919a65
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/17/2018
 ---
-# <a name="-member-access-entity-sql"></a><span data-ttu-id="55996-103">.</span><span class="sxs-lookup"><span data-stu-id="55996-103">.</span></span> <span data-ttu-id="55996-104">(Dostęp do elementu członkowskiego) (Jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="55996-104">(Member Access) (Entity SQL)</span></span>
-<span data-ttu-id="55996-105">Operator kropki (.) jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatora dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="55996-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="55996-106">Operator dostępu do elementu członkowskiego umożliwia uzyskanie wartość właściwości lub pola wystąpienia typu strukturalnego modelu koncepcyjnego.</span><span class="sxs-lookup"><span data-stu-id="55996-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  
+# <a name="-member-access-entity-sql"></a><span data-ttu-id="cce5a-103">.</span><span class="sxs-lookup"><span data-stu-id="cce5a-103">.</span></span> <span data-ttu-id="cce5a-104">(Dostęp do elementu członkowskiego) (Jednostka SQL)</span><span class="sxs-lookup"><span data-stu-id="cce5a-104">(Member Access) (Entity SQL)</span></span>
+<span data-ttu-id="cce5a-105">Operator kropki (.) jest [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatora dostępu do elementu członkowskiego.</span><span class="sxs-lookup"><span data-stu-id="cce5a-105">The dot operator (.) is the [!INCLUDE[esql](../../../../../../includes/esql-md.md)] member access operator.</span></span> <span data-ttu-id="cce5a-106">Operator dostępu do elementu członkowskiego umożliwia uzyskanie wartość właściwości lub pola wystąpienia typu strukturalnego modelu koncepcyjnego.</span><span class="sxs-lookup"><span data-stu-id="cce5a-106">You use the member access operator to yield the value of a property or field of an instance of structural conceptual model type.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="55996-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="55996-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cce5a-107">Składnia</span><span class="sxs-lookup"><span data-stu-id="cce5a-107">Syntax</span></span>  
   
 ```  
 expression.identifier  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="55996-108">Argumenty</span><span class="sxs-lookup"><span data-stu-id="55996-108">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="cce5a-108">Argumenty</span><span class="sxs-lookup"><span data-stu-id="cce5a-108">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="55996-109">Wystąpienie typu strukturalnego modelu koncepcyjnego.</span><span class="sxs-lookup"><span data-stu-id="55996-109">An instance of a structural conceptual model type.</span></span>  
+ <span data-ttu-id="cce5a-109">Wystąpienie typu strukturalnego modelu koncepcyjnego.</span><span class="sxs-lookup"><span data-stu-id="cce5a-109">An instance of a structural conceptual model type.</span></span>  
   
  `identifier`  
- <span data-ttu-id="55996-110">Właściwości lub pola należącego do wystąpienia obiektu.</span><span class="sxs-lookup"><span data-stu-id="55996-110">A property or field that belongs to an object instance.</span></span>  
+ <span data-ttu-id="cce5a-110">Właściwości lub pola należącego do wystąpienia obiektu.</span><span class="sxs-lookup"><span data-stu-id="cce5a-110">A property or field that belongs to an object instance.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="55996-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="55996-111">Remarks</span></span>  
- <span data-ttu-id="55996-112">Operator kropki (.) może służyć do wyodrębniania pól z rekordu, podobnie jak Wyodrębnianie właściwości typu złożonych lub jednostki.</span><span class="sxs-lookup"><span data-stu-id="55996-112">The dot (.) operator may be used to extract fields from a record, similar to extracting properties of a complex or entity type.</span></span> <span data-ttu-id="55996-113">Na przykład jeśli n Nazwa typu jest elementem członkowskim typu osoby i p jest wystąpieniem typu osoby, p.n jest wyrażenie dostępu elementu członkowskiego prawnych, zwracające wartość wpisz nazwę.</span><span class="sxs-lookup"><span data-stu-id="55996-113">For example, if n of type Name is a member of type Person, and p is an instance of type Person, then p.n is a legal member access expression that yields a value of type Name.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cce5a-111">Uwagi</span><span class="sxs-lookup"><span data-stu-id="cce5a-111">Remarks</span></span>  
+ <span data-ttu-id="cce5a-112">Operator kropki (.) może służyć do wyodrębniania pól z rekordu, podobnie jak Wyodrębnianie właściwości typu złożonych lub jednostki.</span><span class="sxs-lookup"><span data-stu-id="cce5a-112">The dot (.) operator may be used to extract fields from a record, similar to extracting properties of a complex or entity type.</span></span> <span data-ttu-id="cce5a-113">Na przykład jeśli n Nazwa typu jest elementem członkowskim typu osoby i p jest wystąpieniem typu osoby, p.n jest wyrażenie dostępu elementu członkowskiego prawnych, zwracające wartość wpisz nazwę.</span><span class="sxs-lookup"><span data-stu-id="cce5a-113">For example, if n of type Name is a member of type Person, and p is an instance of type Person, then p.n is a legal member access expression that yields a value of type Name.</span></span>  
   
  `select p.Name.FirstName from LOB.Person as p`  
   
-## <a name="see-also"></a><span data-ttu-id="55996-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="55996-114">See Also</span></span>  
- [<span data-ttu-id="55996-115">Odwołanie do jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="55996-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a><span data-ttu-id="cce5a-114">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="cce5a-114">See Also</span></span>  
+ [<span data-ttu-id="cce5a-115">Odwołanie do jednostki SQL</span><span class="sxs-lookup"><span data-stu-id="cce5a-115">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

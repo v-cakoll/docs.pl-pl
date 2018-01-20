@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d459ac318f2c4a3911830d08e26b31ae5366e896
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:  
@@ -55,7 +55,7 @@ Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:
   
  Zależne podstawowego zestawu międzyoperacyjnego z numerem wersji, która różni się od oryginalnej biblioteki typów nie jest wykrywalny, gdy zainstalowane w bieżącym katalogu. Należy zarejestrować zależnych podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyj **/reference** opcji, należy upewnić się, że Tlbimp.exe znajdzie zależnej biblioteki DLL.  
   
- Można również zawijać wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: zawijanie wielu wersji z biblioteki typów](http://msdn.microsoft.com/en-us/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
+ Można również zawijać wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: zawijanie wielu wersji z biblioteki typów](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład importuje Biblioteka typów COM `LibUtil.tlb` i podpisuje zestawu `LibUtil.dll` przy użyciu silnej nazwy przy użyciu pliku klucza `CompanyA.snk`. Pomijając nazwę określonych przestrzeni nazw, w tym przykładzie tworzy domyślną przestrzeń nazw, `LibUtil`.  

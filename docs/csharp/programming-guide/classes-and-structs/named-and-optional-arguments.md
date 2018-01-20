@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]wprowadza argumenty nazwane i opcjonalne. *Argumenty nazwane o* można określić argumentu dla parametru określonego przez skojarzenie argument o nazwie parametru, a nie parametru pozycji na liście parametrów. *Argumenty opcjonalne* można pominąć argumenty dla niektórych parametrów. Obie techniki można używać z metod, indeksatorów konstruktory i delegatów.  
@@ -106,7 +106,7 @@ Parametry opcjonalne w ExampleMethod
 ## <a name="com-interfaces"></a>Interfejsy modelu COM  
  Argumenty nazwane i opcjonalne mechanizmy obiekty dynamiczne i inne rozszerzenia znacznie zwiększyć współdziałanie z interfejsów API modelu COM, takie jak interfejsów API automatyzacji pakietu Office.  
   
- Na przykład [Autoformatowanie](http://go.microsoft.com/fwlink/?LinkId=148201) metody w programie Microsoft Office Excel [zakres](http://go.microsoft.com/fwlink/?LinkId=148196) interfejs ma siedmiu parametrów, które są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
+ Na przykład [Autoformatowanie](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) metody w programie Microsoft Office Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) interfejs ma siedmiu parametrów, które są opcjonalne. Te parametry są wyświetlane na poniższej ilustracji.  
   
  ![Szybkie informacje funkcji IntelliSense dla metody Autoformatowanie. ] (../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Parametry Autoformatowanie  
@@ -134,7 +134,7 @@ Parametry Autoformatowanie
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Użycie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
+ [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)  
  [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Używanie konstruktorów](../../../csharp/programming-guide/classes-and-structs/using-constructors.md)  
  [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)

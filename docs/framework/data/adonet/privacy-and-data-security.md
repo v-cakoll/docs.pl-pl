@@ -14,17 +14,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 5c645b493a1ffb99f4d60f8011bc05f275b5d10f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 002d4411e4fee10044ea5dc1d04d7a29cdcd6584
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="privacy-and-data-security"></a>Bezpieczeństwo danych i poufności informacji
 Zabezpieczenia i zarządzanie poufnych informacji w aplikacji ADO.NET jest zależne od podstawowej produktów i technologii go utworzono. ADO.NET nie są bezpośrednio dostępne usługi dla zabezpieczanie lub szyfrowania danych.  
   
 ## <a name="cryptography-and-hash-codes"></a>Kryptografii i kodów skrótów  
- Klasy w programie .NET Framework <xref:System.Security.Cryptography> przestrzeni nazw może służyć z aplikacji ADO.NET danych do odczytu lub zmodyfikowane przez osoby nieupoważnione innych. Niektóre klasy są otoki dla niezarządzanego CryptoAPI firmy Microsoft, a inne implementacje zarządzanych. [Usługi kryptograficzne](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781) temat zawiera omówienie kryptografii w programie .NET Framework, w tym artykule opisano sposób implementacji cryptograph i sposobu wykonywania określonych zadań kryptograficznych.  
+ Klasy w programie .NET Framework <xref:System.Security.Cryptography> przestrzeni nazw może służyć z aplikacji ADO.NET danych do odczytu lub zmodyfikowane przez osoby nieupoważnione innych. Niektóre klasy są otoki dla niezarządzanego CryptoAPI firmy Microsoft, a inne implementacje zarządzanych. [Usługi kryptograficzne](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781) temat zawiera omówienie kryptografii w programie .NET Framework, w tym artykule opisano sposób implementacji cryptograph i sposobu wykonywania określonych zadań kryptograficznych.  
   
  W przeciwieństwie do szyfrowania, dzięki czemu dane powinny być szyfrowane i odszyfrowywane następnie, tworzenia skrótu danych jest procesem jednokierunkowym. Wyznaczania wartości skrótu danych jest przydatne, jeśli chcesz zapobiec modyfikowaniu przez sprawdzenie, czy dane nie zostały zmienione: podana identycznych ciągów wejściowych, algorytmami wyznaczania wartości skrótu zawsze powodowało identyczne dane wyjściowe krótkich wartości, które można łatwo porównać. [Zapewnianie integralności danych za pomocą wartości skrótu](../../../../docs/standard/security/ensuring-data-integrity-with-hash-codes.md) opisano, jak można generować i weryfikować wartości skrótu.  
   

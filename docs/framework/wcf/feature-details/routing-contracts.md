@@ -14,11 +14,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3d70368f7514b64d67a186b328b1f19d231fe0c1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1c026c57129672eb25bb244a4fc928b827398e08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing-contracts"></a>Kontrakty routingu
 Kontrakty routingu zdefiniuj wzorce wiadomości, które może przetworzyć usługi routingu.  Każdej umowy jest bez typu i umożliwia usłudze komunikat bez wiedzy o schematu wiadomości lub akcji. Dzięki temu usługa routingu objęty rozesłać komunikaty bez dodatkowej konfiguracji, aby uzyskać szczegółowe informacje na temat podstawowej wiadomości przesyłane.  
@@ -38,5 +38,5 @@ Kontrakty routingu zdefiniuj wzorce wiadomości, które może przetworzyć usłu
 |<xref:System.ServiceModel.Routing.IDuplexSessionRouter>|SessionMode=SessionMode.Required<br /><br /> CallbackContract=typeof(ISimplexSession)<br /><br /> AsyncPattern = true<br /><br /> Ustawienie właściwości IsOneWay = true<br /><br /> TransactionFlow(TransactionFlowOption.Allowed)|IDuplexSessionChannel -> IDuplexSessionChannel|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługa routingu](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Usługa routingu](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

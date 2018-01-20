@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a74d25372b83c848621a44f6ea32a455a0f18ccf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 535a60aa1a174319a4db3403a64c3998784bbb58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>Dynamiczne generowanie i kompilacja kodu źródłowego
 Mechanizm wywołuje kod Document Object Model (CodeDOM), który umożliwia deweloperom programów, które Emituj kod źródłowy do generowania kodu źródłowego w wielu języków programowania, w czasie wykonywania, oparte na jednym modelu, który reprezentuje kod zawiera programu .NET Framework do renderowania.  
@@ -60,5 +60,5 @@ Mechanizm wywołuje kod Document Object Model (CodeDOM), który umożliwia dewel
  Definiuje interfejs Generowanie i kompilowanie kodu w czasie wykonywania.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Krótki przewodnik codeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [Krótki przewodnik codeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
  Umożliwia szybkie dla deweloperów znaleźć elementy CodeDOM, które reprezentują elementy kodu źródłowego.

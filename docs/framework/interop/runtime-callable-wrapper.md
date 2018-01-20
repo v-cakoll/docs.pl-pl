@@ -20,18 +20,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 722a317a01d79f56496810b8727ce041705c8f78
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego przedstawia obiekty COM za pośrednictwem serwera proxy, nazywany wywoływana otoka środowiska uruchomieniowego (otoki RCW). Mimo że otoki RCW wydaje się być obiekt zwykłej do klientów platformy .NET, jego podstawową funkcją jest do organizowania wywołań między klientem .NET obiektu COM.  
   
  Środowisko uruchomieniowe tworzy dokładnie jeden otoki RCW dla każdego obiektu modelu COM, niezależnie od liczby odwołań, które istnieją w tym obiekcie. Środowisko uruchomieniowe obsługuje pojedynczy otoki RCW na proces dla każdego obiektu.  Jeśli tworzenie otoki RCW w jednej domenie aplikacji lub typu apartment, a następnie przekazać odwołanie do innej domeny aplikacji lub typu apartment, będzie używany serwer proxy, aby pierwszy obiekt.  Jak pokazano na poniższej ilustracji, dowolną liczbę zarządzanych klientów może zawierać odwołania do obiektów COM, które udostępniają INew i INewer interfejsów.  
   
- ![Otoka RCW](../../../docs/framework/interop/media/rcw.gif "otoki rcw")  
+ ![RCW](../../../docs/framework/interop/media/rcw.gif "rcw")  
 Uzyskiwanie dostępu do obiektów COM za pomocą wywoływana otoka środowiska uruchomieniowego  
   
  Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy obiekt COM, wywoływana i otoki dla tego obiektu. Każdy otoki RCW obsługuje pamięć podręczną wskaźniki interfejsu w obiekcie COM zawijany i zwalnia jego odwołania do obiektu COM otoki RCW jest już potrzebne. Środowisko uruchomieniowe przeprowadzają otoki RCW wyrzucanie elementów bezużytecznych.  
@@ -62,12 +62,12 @@ Interfejsy modelu COM i wywoływana otoka środowiska uruchomieniowego
 |Interface|Opis|  
 |---------------|-----------------|  
 |**IConnectionPoint** i **IConnectionPointContainer**|Obiektów konwertuje otoki RCW, które udostępniają styl zdarzenie punktu połączenia na podstawie delegata zdarzenia.|  
-|**Interfejs IDispatchEx**|Jeśli klasa implementuje **IDispatchEx**, implementuje otoki RCW **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
-|**Interfejsu IEnumVARIANT**|Umożliwia typów COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
+|**IDispatchEx**|Jeśli klasa implementuje **IDispatchEx**, implementuje otoki RCW **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
+|**IEnumVARIANT**|Umożliwia typów COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Otoki COM](../../../docs/framework/interop/com-wrappers.md)  
- [Przekazywanie wybranego interfejsów](http://msdn.microsoft.com/en-us/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
+ [Przekazywanie wybranego interfejsów](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
  [Wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Biblioteki typów na zestaw konwersja — podsumowanie](http://msdn.microsoft.com/en-us/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Biblioteki typów na zestaw konwersja — podsumowanie](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
  [Importowanie biblioteki typów jako zestawu](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

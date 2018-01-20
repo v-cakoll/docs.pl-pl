@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae44c80f99b2753b4914ff0844fd9538f3ac3f34
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab40ab1cd889665829e42072803010ad49e717a9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-element-of-ltnettcpbindinggt"></a>&lt;message&gt; w &lt;netTcpBinding&gt;
 Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt końcowy skonfigurowany [ \<netTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md).  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<powiązania >  
-\<netTcpBinding >  
+\<netTcpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
-\<komunikat >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -48,7 +48,7 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
 |`algorithmSuite`|Ustawia komunikat algorytmów szyfrowania i zawijania klucza. Algorytmy i klucza rozmiary są określane przez <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> klasy. Algorytmy te są mapowane na te określone w specyfikacji języka zasad zabezpieczeń (WS-SecurityPolicy).<br /><br /> W poniższej tabeli przedstawiono możliwe wartości. Wartość domyślna to `Basic256`.<br /><br /> Jeśli powiązanie usługi Określa `algorithmSuite` wartość, która nie jest równa domyślne, a Generowanie pliku konfiguracji, przy użyciu Svcutil.exe, a następnie nie jest poprawnie wygenerowany i musi ręcznie edytować plik konfiguracji, aby ustawić wartość tego atrybutu żądaną wartość.|  
 |`clientCredentialType`|Określa typ poświadczenia do użycia podczas przeprowadzania uwierzytelniania klienta za pomocą zabezpieczenia na poziomie wiadomości. W poniższej tabeli przedstawiono możliwe wartości. Wartość domyślna to `UserName`. Ten atrybut jest typu <xref:System.ServiceModel.MessageCredentialType>.|  
   
-## <a name="algorithmsuite-attribute"></a>algorithmSuite atrybutu  
+## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -86,7 +86,7 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje zabezpieczeń dla <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)|Definiuje funkcje zabezpieczeń dla <xref:System.ServiceModel.Configuration.NetTcpBindingElement>.|  
   
 ## <a name="remarks"></a>Uwagi  
  Komunikat używa zabezpieczenia na poziomie komunikatu, integralności i poufności komunikatu protokołu SOAP, a także do wzajemnego uwierzytelniania komunikacji elementów równorzędnych. Zaznaczenie tego trybu zabezpieczeń dla powiązania stosu kanał jest skonfigurowany z elementami powiązanie zabezpieczeń komunikatów i zabezpieczonych wiadomości SOAP z zasadami usługi WS-Security * standardów.  
@@ -99,5 +99,5 @@ Określa typ zabezpieczenia na poziomie komunikatu wymagania dotyczące punkt ko
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

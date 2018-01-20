@@ -15,11 +15,11 @@ ms.assetid: 568df58a-d292-4b55-93ba-601578722878
 caps.latest.revision: "52"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8729677b0c7bee60f0ebeb07439b1c0e71508aa8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1361a7f115e2bae4b2d1f6271fa9020706581691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>Rzutowanie i konwersje typów (Przewodnik programowania w języku C#)
 C# jest wpisany statycznie w czasie kompilacji, po zadeklarowaniu zmiennej, nie można ponownie zadeklarować lub używany do przechowywania wartości innego typu, o ile nie jest możliwe do przekonwertowania na typ zmiennej typu. Na przykład nie jest konwersja z typu integer do dowolnego ciągu dowolnych. W związku z tym po deklaracji `i` jako liczba całkowita, nie można przypisać ciąg "Hello", jak to pokazano w poniższym kodzie.  
@@ -91,10 +91,10 @@ Giraffe g2 = (Giraffe) a;
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Typy](../../../csharp/programming-guide/types/index.md)  
- [() — Operator](../../../csharp/language-reference/operators/invocation-operator.md)  
- [jawne](../../../csharp/language-reference/keywords/explicit.md)  
- [niejawne](../../../csharp/language-reference/keywords/implicit.md)  
+ [(), operator](../../../csharp/language-reference/operators/invocation-operator.md)  
+ [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+ [implicit](../../../csharp/language-reference/keywords/implicit.md)  
  [Operatory konwersji](../../../csharp/programming-guide/statements-expressions-operators/conversion-operators.md)  
  [Konwersja typów ogólnych](http://msdn.microsoft.com/library/49253ae6-7657-4810-82ab-1176a6feeada)  
- [Konwersja wyeksportowanego typu](http://msdn.microsoft.com/en-us/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
- [Porady: konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)
+ [Konwersja wyeksportowanego typu](http://msdn.microsoft.com/library/1dfe55f4-07a2-4b61-aabf-a8cf65783a6b)  
+ [Instrukcje: konwertowanie ciągu na liczbę](../../../csharp/programming-guide/types/how-to-convert-a-string-to-a-number.md)

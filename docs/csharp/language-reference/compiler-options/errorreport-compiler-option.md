@@ -13,13 +13,13 @@ ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc8720662fb4c91953e2d399f08613f5055b1158
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 6d2fcb3f0bf4491de23b70c8beebf7ae495b2aa0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="errorreport-c-compiler-options"></a>/errorreport (opcje kompilatora C#)
+# <a name="-errorreport-c-compiler-options"></a>-errorreport (opcje kompilatora C#)
 Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora C# do firmy Microsoft.  
   
 > [!NOTE]
@@ -28,7 +28,7 @@ Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora 
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/errorreport:{ none | prompt | queue | send }  
+-errorreport:{ none | prompt | queue | send }  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -42,12 +42,12 @@ Ta opcja zapewnia wygodny sposób, aby zgłosić błąd wewnętrzny kompilatora 
  Kolejkuje raport o błędzie. Po zalogowaniu się przy użyciu poświadczeń administracyjnych, od czasu ostatniego zalogowania się może raportować zakończą się niepowodzeniem. Możesz nie będzie proszony o wysłanie raportu błędów więcej niż raz na trzy dni. **kolejka** jest domyślną kolekcją podczas kompilowania aplikacji w wierszu polecenia.  
   
  **Wyślij**  
- Automatycznie wysyła raporty błędów wewnętrznych kompilatora do firmy Microsoft. Aby włączyć tę opcję, należy najpierw wyrazić zgodę na zasady gromadzenia danych firmy Microsoft. Należy określić po raz pierwszy **/errorreport: Send** na komputerze, wiadomość kompilatora odniesie Cię do witryny sieci Web, który zawiera zasady zbierania danych firmy Microsoft.  
+ Automatycznie wysyła raporty błędów wewnętrznych kompilatora do firmy Microsoft. Aby włączyć tę opcję, należy najpierw wyrazić zgodę na zasady gromadzenia danych firmy Microsoft. Należy określić po raz pierwszy **- errorreport: wysyłanie** na komputerze, wiadomość kompilatora odniesie Cię do witryny sieci Web, który zawiera zasady zbierania danych firmy Microsoft.  
     
 ## <a name="remarks"></a>Uwagi  
  Wewnętrzny błąd kompilatora (ICE) powoduje, gdy kompilator nie może przetworzyć pliku kodu źródłowego. W przypadku ICE kompilator nie tworzy pliku wyjściowego lub żadnych przydatne diagnostyki, którego można użyć, aby naprawić kod.  
   
- W poprzednich wersjach po odebraniu ICE było zaleca się z pomocą techniczną firmy Microsoft, aby zgłosić problem. Za pomocą **/errorreport**, możesz podać informacje ICE do zespołu Visual C#. Z raportów o błędach może zwiększyć kompilatora w przyszłych wersjach.  
+ W poprzednich wersjach po odebraniu ICE było zaleca się z pomocą techniczną firmy Microsoft, aby zgłosić problem. Za pomocą **- errorreport**, możesz podać informacje ICE do zespołu Visual C#. Z raportów o błędach może zwiększyć kompilatora w przyszłych wersjach.  
   
  Możliwość wysyłania raportów użytkownika zależy od uprawnień zasad komputera i użytkownika.  
   

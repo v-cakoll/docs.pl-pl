@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 21b15fb2b3f3d204ebd5b59f5a93f8e53a89ff71
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 403ff897de4dc9ee95a854d9658bdee344755d59
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="specifying-an-endpoint-address"></a>Określanie adresu punktu końcowego
 Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi odbywa się przez jego punktów końcowych. Każdy <xref:System.ServiceModel.Description.ServiceEndpoint> zawiera <xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>, <xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>, a <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A>. Kontrakt określa, jakie operacje są dostępne. Powiązanie określa sposób komunikowania się z usługą, a adres Określa, gdzie można znaleźć usługi. Każdy punkt końcowy musi mieć unikatowy adres. Adres punktu końcowego jest reprezentowana przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera zasób identyfikator URI (Uniform) reprezentujący adres usługi, <xref:System.ServiceModel.EndpointAddress.Identity%2A>, reprezentuje tożsamości zabezpieczeń usługi, a kolekcja opcjonalne <xref:System.ServiceModel.EndpointAddress.Headers%2A>. Opcjonalne nagłówki zawierają bardziej szczegółowe informacje adresowania do identyfikacji użytkownika lub interakcji z punktem końcowym. Na przykład nagłówków można wskazać sposobu przetwarzania wiadomości przychodzących, gdzie wysłać komunikat odpowiedzi punktu końcowego lub które wystąpienie usługi do przetwarzania komunikat przychodzący z konkretnego użytkownika, jeśli dostępnych jest wiele wystąpień.  
@@ -34,11 +34,11 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
   
 -   Schemat: http:  
   
--   Maszyny: www.fabrikam.com  
+-   Machine: www.fabrikam.com  
   
 -   (Opcjonalnie) Port: 322  
   
--   Ścieżka: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
  Część modelu EPR jest, że odwołanie do każdego punktu końcowego może przenosić niektórych parametrów odwołania, które dodać informacje identyfikacyjne bardzo. W [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], te parametry odwołania są modelowane jako wystąpienia <xref:System.ServiceModel.Channels.AddressHeader> klasy.  
   
@@ -49,7 +49,7 @@ Cała komunikacja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi
  Jeśli obsługa za pomocą usług IIS, nie jest zarządzana <xref:System.ServiceModel.ServiceHost> wystąpienie samodzielnie. Adres podstawowy jest zawsze adresem określonym w pliku svc usługi odnośnie do hostowania w usługach IIS. Dlatego należy użyć adresy punktów końcowych względną dla punktów końcowych usług hostowanych przez usługi IIS. Podając w pełni kwalifikowany adres punktu końcowego może prowadzić do błędów w ramach wdrożenia usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wdrażanie usługi WCF hostowanej usługi informacyjne Internet](../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md).  
   
 ## <a name="defining-endpoint-addresses-in-configuration"></a>Definiowanie adresy punktów końcowych w konfiguracji  
- Aby zdefiniować punkt końcowy w pliku konfiguracji, należy użyć [ \<punktu końcowego >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+ Aby zdefiniować punkt końcowy w pliku konfiguracji, należy użyć [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
  [!code-xml[S_UEHelloWorld#5](../../../samples/snippets/common/VS_Snippets_CFX/s_uehelloworld/common/serviceapp2.config#5)]  
   

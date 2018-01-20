@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e13211a43c42d66fccd88473c8f881b9edd071d5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 45c65d0194ed44122a87dcd000359187fc020d0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo — Metoda
 Ta metoda nie jest zaimplementowana. Wywołuje się, zwraca E_NOTIMPL.  
@@ -44,7 +44,7 @@ HRESULT OpenScopeOnITypeInfo (
   
 #### <a name="parameters"></a>Parametry  
  `pITI`  
- [in] Wskaźnik do [ITypeInfo](http://msdn.microsoft.com/en-us/f3356463-3373-4279-bae1-953378aa2680) interfejs, który zawiera informacje o typie, na którym ma zostać otwarty zakresu.  
+ [in] Wskaźnik do [ITypeInfo](http://msdn.microsoft.com/library/f3356463-3373-4279-bae1-953378aa2680) interfejs, który zawiera informacje o typie, na którym ma zostać otwarty zakresu.  
   
  `dwOpenFlags`  
  [in] Flagi trybu otwartego.  

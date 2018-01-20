@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (opcje kompilatora C#)
+# <a name="-platform-c-compiler-options"></a>-platform (opcje kompilatora C#)
 Określa, która wersja z środowiska uruchomieniowego języka wspólnego (CLR) można uruchomić zestawu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Parametry  
@@ -48,13 +48,13 @@ Określa, która wersja z środowiska uruchomieniowego języka wspólnego (CLR) 
   
  W 64-bitowym systemie operacyjnym Windows:  
   
--   Zestawy są kompilowane przy użyciu **x 86** wykonania na 32-bitowego środowiska CLR uruchomione w emulatorze WOW64.  
+-   Zestawy są kompilowane przy użyciu **-platform: x 86** wykonania na 32-bitowego środowiska CLR uruchomione w emulatorze WOW64.  
   
--   Biblioteki DLL są kompilowane przy użyciu **/platform:anycpu** wykonuje w tej samej CLR jako proces, do którego został załadowany.  
+-   Biblioteki DLL są kompilowane przy użyciu **-platformy: anycpu** wykonuje w tej samej CLR jako proces, do którego został załadowany.  
   
--   Pliki wykonywalne, które są kompilowane przy użyciu **/platform:anycpu** wykonania na 64-bitowym CLR.  
+-   Pliki wykonywalne, które są kompilowane przy użyciu **-platformy: anycpu** wykonania na 64-bitowym CLR.  
   
--   Pliki wykonywalne skompilowane z **/platform: anycpu32bitpreferred** wykonania na 32-bitowym CLR.  
+-   Pliki wykonywalne skompilowane z **-platform: anycpu32bitpreferred** wykonania na 32-bitowym CLR.  
   
  **Anycpu32bitpreferred** ustawienie jest prawidłowe tylko dla pliku wykonywalnego (. Pliki z rozszerzeniem EXE) który wymaga platformy .NET Framework 4.5.  
   
@@ -68,15 +68,15 @@ Określa, która wersja z środowiska uruchomieniowego języka wspólnego (CLR) 
   
 3.  Modyfikowanie **platformy docelowej** właściwości oraz dla projektów przeznaczonych dla platformy .NET Framework 4.5, zaznacz lub wyczyść **preferowane jest 32-bitowych** pole wyboru.  
   
- **Należy pamiętać, / platform** nie jest dostępna w środowisku projektowania w programie Visual C# Express.  
+ **Uwaga - platformy** nie jest dostępna w środowisku projektowania w programie Visual C# Express.  
   
  Aby uzyskać informacje dotyczące ustawiania tej opcji kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia użycie **/platform** opcję, aby określić, że aplikacja powinien być wykonywany przez środowisko CLR 64-bitowym na 64-bitowym systemie operacyjnym Windows.  
+ Poniższy przykład przedstawia użycie **-platformy** opcję, aby określić, że aplikacja powinien być wykonywany przez środowisko CLR 64-bitowym na 64-bitowym systemie operacyjnym Windows.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

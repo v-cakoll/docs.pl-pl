@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fd5d812fbedcbef0f6ce10b324d60961eba804cf
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2aab11481bb23228f9ad920c5d01ef7d345e05d3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-custom-database-functions"></a>Porady: wywoływać funkcje w niestandardowej bazie danych
 W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zdefiniowane w bazie danych od w składniku LINQ do jednostek zapytań.  
@@ -38,14 +38,14 @@ W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zd
   
 2.  Deklarowanie funkcji w magazynie języka definicji schematu (SSDL) pliku edmx. Nazwa funkcji musi być taka sama jak nazwa funkcji zadeklarowany w bazie danych.  
   
-     Aby uzyskać więcej informacji, zobacz [funkcja elementu (SSDL)](http://msdn.microsoft.com/en-us/b60cfc3d-8b93-423e-8c99-b867256640a4).  
+     Aby uzyskać więcej informacji, zobacz [funkcja elementu (SSDL)](http://msdn.microsoft.com/library/b60cfc3d-8b93-423e-8c99-b867256640a4).  
   
 3.  Dodać odpowiedniej metody do klasy w kodzie aplikacji i zastosować <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> do metody należy pamiętać, że <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> i <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> parametry atrybutu jest nazwa przestrzeni nazw modelu koncepcyjnego i nazwa funkcji koncepcyjnego odpowiednio modelu. Funkcja rozpoznawania nazw dla LINQ jest rozróżniana wielkość liter.  
   
 4.  Wywołaj metodę w zapytaniu składnika LINQ to Entities.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie pokazano, jak wywołać funkcję w niestandardowej bazie danych od w LINQ do jednostek zapytania. W przykładzie użyto modelu służbowe. Informacje o modelu służbowe, zobacz [tworzenie przykładowej bazy danych służbowych](http://msdn.microsoft.com/en-us/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) i [generowania edmx służbowe pliku](http://msdn.microsoft.com/en-us/c48b3907-a8be-4fe6-884c-e95af1852758).  
+ W poniższym przykładzie pokazano, jak wywołać funkcję w niestandardowej bazie danych od w LINQ do jednostek zapytania. W przykładzie użyto modelu służbowe. Informacje o modelu służbowe, zobacz [tworzenie przykładowej bazy danych służbowych](http://msdn.microsoft.com/library/c1bec483-a0ea-4660-aa0b-7b0a8b68fed0) i [generowania edmx służbowe pliku](http://msdn.microsoft.com/library/c48b3907-a8be-4fe6-884c-e95af1852758).  
   
  Poniższy kod dodaje `AvgStudentGrade` funkcji do przykładowej bazy danych służbowych.  
   
@@ -72,5 +72,5 @@ W tym temacie opisano sposób wywołania funkcji niestandardowych, które są zd
  [!code-vb[DP L2E MapToDBFunction#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e maptodbfunction/vb/module1.vb#4)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Omówienie plików edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+ [Omówienie plików edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
  [Zapytania w składniku LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

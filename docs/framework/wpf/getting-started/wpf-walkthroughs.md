@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c24b5beae2a10720ee4d89b9d2d60306978d2628
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a6407ccb093d6bdba4e3953ffa1117cf4b56c119
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF
 Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego powodu najlepiej rozpocząć zapoznawanie produktu lub obszar poszczególnych funkcji.  
@@ -32,11 +32,11 @@ Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wskazówki: Tworzenie aplikacji WPF proste przy użyciu projektanta WPF](http://msdn.microsoft.com/en-us/2d412231-dbdf-4e69-b060-4f2b246c2027)|Pokazuje, jak utworzyć prostą aplikację WPF z [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
-|[Wskazówki: Konstruowanie układ dynamiczny](http://msdn.microsoft.com/en-us/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Demonstracja tworzenia układ dynamiczny za pomocą <xref:System.Windows.Controls.Grid> Panelu sterowania.|  
-|[Wskazówki: Tworzenie aplikacji o zmiennym rozmiarze przy użyciu narzędzia Projektant WPF](http://msdn.microsoft.com/en-us/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Przedstawia sposób tworzenia układów okien, które są o zmiennym rozmiarze przez użytkownika w czasie wykonywania.|  
-|[Wskazówki: Tworzenie danych powiązania przy użyciu narzędzia Projektant WPF](http://msdn.microsoft.com/en-us/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych, które połączenie danych z formantem.|  
-|[Wskazówki: Używanie rozszerzenie DesignInstance można powiązać z danymi w Projektancie](http://msdn.microsoft.com/en-us/a4d3747a-bd43-42bc-b66d-477856a6769c)|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych w czasie projektowania dla kontekstu danych, która jest przypisana w czasie wykonywania.|  
+|[Wskazówki: Tworzenie aplikacji WPF proste przy użyciu projektanta WPF](http://msdn.microsoft.com/library/2d412231-dbdf-4e69-b060-4f2b246c2027)|Pokazuje, jak utworzyć prostą aplikację WPF z [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)].|  
+|[Wskazówki: Konstruowanie układ dynamiczny](http://msdn.microsoft.com/library/483aafbb-b29d-435a-b956-8e4f67cd4a0f)|Demonstracja tworzenia układ dynamiczny za pomocą <xref:System.Windows.Controls.Grid> Panelu sterowania.|  
+|[Wskazówki: Tworzenie aplikacji o zmiennym rozmiarze przy użyciu narzędzia Projektant WPF](http://msdn.microsoft.com/library/18f5271e-4dc6-4eef-bc20-bb8862045d2e)|Przedstawia sposób tworzenia układów okien, które są o zmiennym rozmiarze przez użytkownika w czasie wykonywania.|  
+|[Wskazówki: Tworzenie danych powiązania przy użyciu narzędzia Projektant WPF](http://msdn.microsoft.com/library/8a79ed20-d59f-46b8-944f-6fd5dbb4e278)|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych, które połączenie danych z formantem.|  
+|[Wskazówki: Używanie rozszerzenie DesignInstance można powiązać z danymi w Projektancie](http://msdn.microsoft.com/library/a4d3747a-bd43-42bc-b66d-477856a6769c)|Pokazuje, jak używać [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] do tworzenia powiązań danych w czasie projektowania dla kontekstu danych, która jest przypisana w czasie wykonywania.|  
   
 ## <a name="wpf-walkthroughs"></a>Wskazówki dotyczące WPF  
   
@@ -61,4 +61,4 @@ Wskazówki dotyczące wskazówki krok po kroku dla typowych scenariuszy. Z tego 
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Wskazówki dotyczące programu Visual Studio](http://msdn.microsoft.com/en-us/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Udostępnia listę powiązanych wskazówki dla wszystkich obszarów programowania w programie Visual Studio.|
+|[Visual Studio Walkthroughs](http://msdn.microsoft.com/library/f5399a1f-2d3d-42fb-b989-134ccda2159f)|Udostępnia listę powiązanych wskazówki dla wszystkich obszarów programowania w programie Visual Studio.|

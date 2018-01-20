@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e946066a352fb29c593a7d84fd6e728c226a3175
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c26ca9e167455dfbd664ea96e574c130cdc3d2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peer-resolvers"></a>Mechanizmy rozpoznawania elementów równorzędnych
 Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP innych węzłów. Adresy IP są uzyskiwane poprzez bezpośredni kontakt z usługi rozpoznawania nazw, która przyjmuje identyfikator sieci i zwraca listę adresów odpowiadającego do węzłów w zarejestrowany ten identyfikator określonego siatki. Mechanizm rozpoznawania przechowuje listę zarejestrowanych adresów, które tworzy się przez każdy węzeł w siatce przeprowadzić rejestrację w usłudze.  
@@ -43,7 +43,7 @@ Aby można było nawiązać siatkę, węzła równorzędnego wymaga adresów IP 
 > [!NOTE]
 >  Podczas korzystania z sieci lokalnej i natychmiast z niestandardowego programu rozpoznawania nazw, zdecydowanie zaleca się czy aplikacji przy użyciu lub podtrzymywania połączenia lokalnego lub nieplanowane sieci obejmują logikę, która wybiera jeden adres połączenia lokalnego do użycia podczas połączenia. Zapobiega to niezgodności potencjalnie spowodowane przez komputery z wielu adresów połączenia lokalnego. Zgodnie z tym kanału równorzędnego obsługuje tylko, używając pojedynczy adres połączenia lokalnego w dowolnym momencie. Można określić tego adresu z `ListenIpAddress` właściwość <xref:System.ServiceModel.NetPeerTcpBinding>.  
   
- Aby demonstracyjne sposób implementowania niestandardowego programu rozpoznawania nazw, zobacz [program rozpoznawania elementów równorzędnych niestandardowego elementu równorzędnego kanału](http://msdn.microsoft.com/en-us/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
+ Aby demonstracyjne sposób implementowania niestandardowego programu rozpoznawania nazw, zobacz [program rozpoznawania elementów równorzędnych niestandardowego elementu równorzędnego kanału](http://msdn.microsoft.com/library/5b75a2bb-7ff1-4a14-abe7-3debf0537d23).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Szczegóły usługi CustomPeerResolverService: rejestracje klienta](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  

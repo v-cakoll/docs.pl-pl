@@ -37,11 +37,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1f95193e4ac90df0d0abe5a46ade08d799bdf6b2
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a>Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 01/09/2018
   
 -   [Szyfrowanie klucza tajnego](#secret_key)  
   
--   [Szyfrowanie klucza publicznego](#public_key)  
+-   [Public-Key Encryption](#public_key)  
   
 -   [Podpisy cyfrowe](#digital_signatures)  
   
@@ -121,20 +121,20 @@ ms.lasthandoff: 01/09/2018
   
 -   <xref:System.Security.Cryptography.AesManaged>(wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
   
--   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.,  
+-   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.  
   
 -   <xref:System.Security.Cryptography.HMACSHA1>(Jest to technicznie algorytm klucza tajnego ponieważ reprezentuje ona kod uwierzytelniania wiadomości, która jest obliczana przy użyciu funkcji skrótu kryptograficznego, w połączeniu z kluczem tajnym. Zobacz [wartości skrótu](#hash_values)w dalszej części tego tematu.)  
   
--   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.,  
+-   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.RijndaelManaged>.,  
+-   <xref:System.Security.Cryptography.RijndaelManaged>.  
   
--   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.,  
+-   <xref:System.Security.Cryptography.TripleDESCryptoServiceProvider>.  
   
  [Powrót do początku](#top)  
   
 <a name="public_key"></a>   
-## <a name="public-key-encryption"></a>Szyfrowanie klucza publicznego  
+## <a name="public-key-encryption"></a>Public-Key Encryption  
  Szyfrowanie kluczy publicznych używa klucza prywatnego, który musi być trzymane przed nieautoryzowanymi użytkownikami i klucz publiczny, które mogą być ujawniane innym osobom. Klucz publiczny i klucz prywatny są ze sobą matematycznie powiązane; dane są szyfrowane przy użyciu klucza publicznego mogły być odszyfrowane tylko przy użyciu klucza prywatnego i danych, który jest podpisany przy użyciu klucza prywatnego można sprawdzić tylko przy użyciu klucza publicznego. Klucz publiczny mogą być udostępniane innym osobom; szyfrowanie danych służy do wysłania do posiadacz klucza prywatnego. Algorytmy kryptograficzne klucza publicznego są nazywane także asymetryczne algorytmy, ponieważ jeden klucz jest wymagany do szyfrowania danych, a inny klucz jest wymagany do odszyfrowania danych. Podstawowe reguły kryptograficznych uniemożliwia ponowne użycie klucza, a oba klucze powinna być unikatowa dla każdej sesji komunikacji. Jednak w praktyce, klucze asymetryczne są zazwyczaj długotrwałe.  
   
  Obie strony (Alicja i Robert) mogą używać szyfrowania klucza publicznego w następujący sposób: najpierw Alicja generuje pary kluczy publiczny/prywatny. Jeśli Bob chce wysłać wiadomość zaszyfrowaną Alicji, zwróci jej dla swojego klucza publicznego. Alicja wysyła Bob jej klucz publiczny za pośrednictwem niezabezpieczonej sieci, a Roberta, który używa tego klucza szyfrowania wiadomości. Robert wysyła zaszyfrowaną wiadomość do Alicji i klika odszyfrowuje je, używając swojego klucza prywatnego. Jeśli Bob Odebrano Alicji klucza kanałem niezabezpieczone, takich jak sieć publiczną Roberta, który jest otwarty na atak typu man-in--middle. W związku z tym Bob należy sprawdzić z Alicji, że ma on poprawny kopię swojego klucza publicznego.  
@@ -206,7 +206,7 @@ ms.lasthandoff: 01/09/2018
   
 -   Alicja wysyła komunikat w postaci zwykłego tekstu i skrótu wiadomości (podpisu cyfrowego) do niego. Robert otrzymuje i tworzy skrót wiadomości i porównuje jego wartość skrótu, aby wartość skrótu, które on odebrane z Alicja. Jeśli wartości skrótu są identyczne, wiadomość nie została zmieniona. Jeśli wartości nie są identyczne, wiadomości została zmieniona po Alicja zapisano go.  
   
-     Niestety ta metoda nie ustanawia autentyczności nadawcy. Każda osoba, która personifikacji Alicja i wysyła komunikat do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisywania wiadomości i jest wszystkich Roberta, który można określić, czy komunikat odpowiada jego sygnatura. Jest to jedna forma ataku typu man-in--middle. Zobacz [NIB: przykład komunikacji Secure kryptografii nowej generacji (CNG)](http://msdn.microsoft.com/en-us/8048e94e-054a-417b-87c6-4f5e26710e6e) Aby uzyskać więcej informacji.  
+     Niestety ta metoda nie ustanawia autentyczności nadawcy. Każda osoba, która personifikacji Alicja i wysyła komunikat do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisywania wiadomości i jest wszystkich Roberta, który można określić, czy komunikat odpowiada jego sygnatura. Jest to jedna forma ataku typu man-in--middle. Zobacz [NIB: przykład komunikacji Secure kryptografii nowej generacji (CNG)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) Aby uzyskać więcej informacji.  
   
 -   Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznego. Skrótu wiadomości użytkownik wysyła do niego za pośrednictwem bezpiecznego kanału prywatnych. Robert odbiera wiadomości w postaci zwykłego tekstu, jego skróty i porównuje skrót do prywatnie wymieniane wyznaczania wartości skrótu. Jeśli skróty są zgodne, Roberta, który zna dwie czynności:  
   
@@ -224,21 +224,21 @@ ms.lasthandoff: 01/09/2018
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmów mieszania:  
   
--   <xref:System.Security.Cryptography.HMACSHA1>.,  
+-   <xref:System.Security.Cryptography.HMACSHA1>.  
   
--   <xref:System.Security.Cryptography.MACTripleDES>.,  
+-   <xref:System.Security.Cryptography.MACTripleDES>.  
   
--   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.,  
+-   <xref:System.Security.Cryptography.MD5CryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.RIPEMD160>.,  
+-   <xref:System.Security.Cryptography.RIPEMD160>.  
   
--   <xref:System.Security.Cryptography.SHA1Managed>.,  
+-   <xref:System.Security.Cryptography.SHA1Managed>.  
   
--   <xref:System.Security.Cryptography.SHA256Managed>.,  
+-   <xref:System.Security.Cryptography.SHA256Managed>.  
   
--   <xref:System.Security.Cryptography.SHA384Managed>.,  
+-   <xref:System.Security.Cryptography.SHA384Managed>.  
   
--   <xref:System.Security.Cryptography.SHA512Managed>.,  
+-   <xref:System.Security.Cryptography.SHA512Managed>.  
   
 -   Metoda HMAC wariantów wszystkich algorytmów Secure Hash Algorithm (SHA), Message Digest 5 (MD5) i RIPEMD 160.  
   

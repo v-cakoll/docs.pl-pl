@@ -17,11 +17,11 @@ ms.author: mairaw
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5547322759dcafb25e9f1c8541fa67876d0cd401
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 7d67bacab3f8f8f4c21c5048d3ffb332ae6e8d77
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="binary-serialization"></a>Serializacja binarna
 
@@ -375,8 +375,8 @@ Oprogramowanie .NET core obsługuje serializacji binarnej z podzbioru typów. Mo
  [Zabezpieczenia i serializacja](../../../docs/framework/misc/security-and-serialization.md)  
  Opisuje bezpiecznego wskazówek kodowania, które należy wykonać podczas pisania kodu, który będzie wykonywać serializacji.  
   
- [Obiekty zdalnego](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Obiekty zdalnego](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Opis różnych metod komunikacji dostępnych w programie .NET Framework do komunikacji zdalnej.  
   
- [Utworzone za pomocą programu ASP.NET i klientami usługi XML sieci Web usług XML sieci Web](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Utworzone za pomocą programu ASP.NET i klientami usługi XML sieci Web usług XML sieci Web](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Zawiera tematy, które opisują oraz wyjaśniono, jak do usług XML sieci Web utworzony za pomocą programu ASP.NET programu.

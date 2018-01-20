@@ -14,11 +14,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b24a367eaf78ef520cc2dd54db6ad58b215179ad
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7e4bc1814ed5c86660b4333542a3dc4eb7462e89
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 W temacie opisano metody, aby umożliwić współpracę między kodem C# zarządzanego i kodu niezarządzanego.  
@@ -64,8 +64,8 @@ W temacie opisano metody, aby umożliwić współpracę między kodem C# zarząd
   
 ## <a name="see-also"></a>Zobacz też  
  [Poprawianie wydajności międzyoperacyjności](http://go.microsoft.com/fwlink/?LinkId=99564)  
- [Wprowadzenie do COM Interop](http://go.microsoft.com/fwlink/?LinkId=112406)  
+ [Wprowadzenie do usługi międzyoperacyjnej modelu COM](http://go.microsoft.com/fwlink/?LinkId=112406)  
  [Organizowanie między zarządzanymi i niezarządzanymi kodu](http://go.microsoft.com/fwlink/?LinkId=112398)  
  [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
- [Współdziałanie COM zaawansowane](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Współdziałanie COM zaawansowane](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

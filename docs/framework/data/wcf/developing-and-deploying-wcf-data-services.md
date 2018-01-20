@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 34fd9bc3bf16446505caf12c6cfa4192ffb391c0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8abe23aebefadc68268aa1dada8474336b1f87e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="developing-and-deploying-wcf-data-services"></a>Tworzenie i wdrażanie usług danych WCF
 Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]. Aby uzyskać więcej ogólnych informacji o [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)], zobacz [wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md) i [omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md).  
@@ -63,7 +63,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
     -   Dostęp do tego serwera można uzyskać tylko na komputerze lokalnym.  
   
-    -   Ten serwer nasłuchuje na `localhost` i na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla wiadomości HTTP. Aby uzyskać więcej informacji, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+    -   Ten serwer nasłuchuje na `localhost` i na określonym porcie, a nie na porcie 80, który jest domyślnym portem dla wiadomości HTTP. Aby uzyskać więcej informacji, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
     -   Ten serwer uruchamia usługę danych w kontekście bieżącego konta użytkownika. Na przykład, jeśli są uruchomione jako użytkownika na poziomie administratora, Usługa danych działa w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] Development Server ma uprawnienia administratora. Może to spowodować, że usługa danych będzie mogła uzyskać dostęp do zasobów, do których nie ma praw dostępu w przypadku jej wdrożenia na serwerze IIS.  
   
@@ -89,7 +89,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
 -   Podczas debugowania usługi danych można uzyskać więcej informacji o błędzie z usługi danych niż podczas normalnej pracy. Dodatkowe informacje o błędzie można uzyskać z usługi danych, ustawiając <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> właściwości w <xref:System.Data.Services.DataServiceConfiguration> do `true` i ustawiając <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> właściwość <xref:System.ServiceModel.Description.ServiceDebugBehavior> atrybutu dla klasy usługi danych do `true`. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]wpis [debugowania usługi danych WCF](http://go.microsoft.com/fwlink/?LinkId=201868). Można również włączyć śledzenie w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do wyświetlania wyjątków zgłoszonych w warstwie obsługi komunikatów HTTP. Aby uzyskać więcej informacji, zobacz [Konfigurowanie śledzenia](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md).  
   
--   Usługi danych jest zwykle opracowany jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć należy Usługa danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt witryny sieci Web w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Informacje o różnicach między tymi dwoma typami projektów, zobacz [NIB: projekty aplikacji sieci Web i projektów witryny sieci Web w programie Visual Studio](http://msdn.microsoft.com/en-us/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
+-   Usługi danych jest zwykle opracowany jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt aplikacji, ale można również utworzyć należy Usługa danych jako [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] projekt witryny sieci Web w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Informacje o różnicach między tymi dwoma typami projektów, zobacz [NIB: projekty aplikacji sieci Web i projektów witryny sieci Web w programie Visual Studio](http://msdn.microsoft.com/library/2861815e-f5a2-4378-a2f8-b8a86dc012f5).  
   
 -   Podczas tworzenia usługi danych przy użyciu **Dodaj nowy element** okno dialogowe w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], Usługa danych jest obsługiwana przez [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] w usługach IIS. Gdy [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] i usług IIS jest domyślnego hosta dla usługi danych, obsługiwane są inne opcje hostingu. Aby uzyskać więcej informacji, zobacz [obsługujący usługę danych](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md).  
   
@@ -102,9 +102,9 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
     -   **Technologie wdrażania dla aplikacji sieci Web ASP.NET**  
   
-        -   [Pakiet wdrożeniowy sieci Web](http://msdn.microsoft.com/en-us/1f9713c8-9540-494c-b80d-9893b970ad6f)  
+        -   [Pakiet wdrożeniowy sieci Web](http://msdn.microsoft.com/library/1f9713c8-9540-494c-b80d-9893b970ad6f)  
   
-        -   [Publikowania jednym kliknięciem](http://msdn.microsoft.com/en-us/59226246-99ad-4aec-975d-7c61e8a8911c)  
+        -   [One-Click Publishing](http://msdn.microsoft.com/library/59226246-99ad-4aec-975d-7c61e8a8911c)  
   
     -   **Technologie wdrażania dla witryn sieci Web ASP.NET**  
   
@@ -114,7 +114,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
   
         -   [XCopy](http://msdn.microsoft.com/library/4312c651-2119-49be-bbeb-ee28bdbfe71e)  
   
-     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Opcje wdrożenia dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, zobacz [Omówienie wdrożenia sieci Web dla platformy ASP.NET i Visual Studio](http://msdn.microsoft.com/en-us/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
+     [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Opcje wdrożenia dla [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji, zobacz [Omówienie wdrożenia sieci Web dla platformy ASP.NET i Visual Studio](http://msdn.microsoft.com/library/99bd1927-b59f-4e02-87b4-55c6ba2adbc3).  
   
     > [!TIP]
     >  Przed próbą wdrożenia usługi danych w programie IIS należy przetestować wdrożenie na serwerze sieci Web, na którym działa program IIS. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie usługi danych WCF działającą na serwerze IIS](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md).  
@@ -126,7 +126,7 @@ Ten temat zawiera informacje o tworzeniu i wdrażaniu [!INCLUDE[ssAstoria](../..
 ### <a name="deployment-considerations"></a>Uwagi dotyczące wdrażania  
  Podczas wdrażania usługi danych należy wziąć pod uwagę następujące kwestie:  
   
--   Podczas wdrażania usługi danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne propagację struktury danych, danych, lub wdrożenie zarówno z danymi usługi. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych, i skrypty może być uwzględniony w pakiecie wdrożeniowym sieci Web z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [NIB: porady: Wdrażanie bazy danych z projektu aplikacji sieci Web](http://msdn.microsoft.com/en-us/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Kreator publikowania bazy danych** w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Aby uzyskać więcej informacji, zobacz [wdrażania bazy danych przy użyciu Kreatora publikowania bazy danych](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
+-   Podczas wdrażania usługi danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy bazy danych programu SQL Server, może być również konieczne propagację struktury danych, danych, lub wdrożenie zarówno z danymi usługi. [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]może automatycznie tworzyć skrypty (pliki SQL), aby to zrobić w docelowej bazie danych, i skrypty może być uwzględniony w pakiecie wdrożeniowym sieci Web z [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [NIB: porady: Wdrażanie bazy danych z projektu aplikacji sieci Web](http://msdn.microsoft.com/library/683b33f1-8a3d-45cf-af6e-61ab50fc518b). Aby uzyskać [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] witryny sieci Web, można to zrobić pomocą **Kreator publikowania bazy danych** w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Aby uzyskać więcej informacji, zobacz [wdrażania bazy danych przy użyciu Kreatora publikowania bazy danych](http://msdn.microsoft.com/library/1e3682e7-8b57-4da6-a393-af9640ccf8b7).  
   
 -   Ponieważ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] obejmuje podstawowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementacji, można użyć programu Windows Server AppFabric do monitorowania usługi danych wdrożonych w programie IIS w systemie Windows Server. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą programu Windows Server AppFabric do monitorowania usługi danych, zobacz wpis [śledzenia usług danych WCF za pomocą programu Windows Server AppFabric](http://go.microsoft.com/fwlink/?LinkID=202005).  
   

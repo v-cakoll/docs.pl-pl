@@ -23,11 +23,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ac4b6fc2ae36d848306178f281cceeeb0654ec03
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5cee99346d19c632739bcc6540c43f1a35217a2f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-an-extensible-application"></a>Wskazówki: tworzenie aplikacji rozszerzalnej
 Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalkulator funkcji. Nie wykazują rzeczywistych scenariuszy; zamiast go przedstawiono podstawowe funkcje potoku i jak dodatek może zapewnić usługi hosta.  
@@ -52,16 +52,16 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
   
 -   Uruchomienie aplikacji hosta.  
   
- Tego potoku przekazuje tylko dla typów możliwych do serializacji (<xref:System.Double> i <xref:System.String>), między hostem a dodatku. Na przykład pokazujący sposób przekazywania kolekcji typów złożonych danych zobacz [wskazówki: przekazywanie kolekcje między hostami i dodatki](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5).  
+ Tego potoku przekazuje tylko dla typów możliwych do serializacji (<xref:System.Double> i <xref:System.String>), między hostem a dodatku. Na przykład pokazujący sposób przekazywania kolekcji typów złożonych danych zobacz [wskazówki: przekazywanie kolekcje między hostami i dodatki](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5).  
   
  Model obiektowy cztery operacje arytmetyczne definiuje kontrakt dla tego potoku: Dodawanie, odejmowanie mnożenia i dzielenia. Host udostępnia dodatek równości, aby obliczyć, takich jak 2 + 2 i dodatek zwraca wynik do hosta.  
   
- W wersji 2 dodatku Kalkulator zapewnia możliwości bardziej obliczania i prezentuje przechowywania wersji. Opisano w [wskazówki: Włączanie zgodności z poprzednimi wersjami jako Twoje zmiany hosta](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+ W wersji 2 dodatku Kalkulator zapewnia możliwości bardziej obliczania i prezentuje przechowywania wersji. Opisano w [wskazówki: Włączanie zgodności z poprzednimi wersjami jako Twoje zmiany hosta](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne w tym przewodniku:  
   
--   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].,  
+-   [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 ## <a name="creating-a-visual-studio-solution"></a>Tworzenie rozwiązania Visual Studio  
  Za pomocą rozwiązania w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zawiera projekty segmentów potoku.  
@@ -73,7 +73,7 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
 2.  Nazwa rozwiązania `CalculatorV1`.  
   
 ## <a name="creating-the-pipeline-directory-structure"></a>Tworzenie potoku struktury katalogów  
- Model dodatku wymaga zestawy segmentów potoku do umieszczenia w strukturze określonego katalogu. Aby uzyskać więcej informacji o strukturze potoku, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Model dodatku wymaga zestawy segmentów potoku do umieszczenia w strukturze określonego katalogu. Aby uzyskać więcej informacji o strukturze potoku, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 #### <a name="to-create-the-pipeline-directory-structure"></a>Aby utworzyć struktury katalogu potoku  
   
@@ -92,10 +92,10 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
       HostSideAdapters  
     ```  
   
-     Nie jest konieczne umieszczanie potoku struktury folderów w folderze aplikacji; została ona wysłana tutaj wyłącznie dla wygody. Na odpowiedni krok przewodnika wyjaśniono, jak zmienić kod, jeśli struktura folderów potoku jest w innej lokalizacji. Zawiera omówienie wymagań katalogu potoku w [wymagania rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Nie jest konieczne umieszczanie potoku struktury folderów w folderze aplikacji; została ona wysłana tutaj wyłącznie dla wygody. Na odpowiedni krok przewodnika wyjaśniono, jak zmienić kod, jeśli struktura folderów potoku jest w innej lokalizacji. Zawiera omówienie wymagań katalogu potoku w [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
     > [!NOTE]
-    >  `CalcV2` Folder nie jest używany w tym przewodniku; jest symbolem zastępczym dla [wskazówki: Włączanie zgodności z poprzednimi wersjami jako Twoje zmiany hosta](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
+    >  `CalcV2` Folder nie jest używany w tym przewodniku; jest symbolem zastępczym dla [wskazówki: Włączanie zgodności z poprzednimi wersjami jako Twoje zmiany hosta](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848).  
   
 ## <a name="creating-the-contract-and-views"></a>Tworzenie kontraktu i widoków  
  Definiuje kontrakt segmentu dla tego potoku `ICalc1Contract` interfejs, który definiuje cztery metody: `add`, `subtract`, `multiply`, i `divide`.  
@@ -204,7 +204,7 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
   
  W tym potoku dodatku udostępnia usługę do hosta i przepływ typów z dodatku do hosta. Ponieważ żaden z typów przepływać z hosta do dodatku, masz nie zawiera karty widoku do kontraktu.  
   
- Aby zaimplementować Zarządzanie okresem istnienia, należy użyć <xref:System.AddIn.Pipeline.ContractHandle> obiekt można dołączyć do kontraktu tokenu okresu istnienia. Odwołanie do tego dojścia muszą zapewnić, aby zarządzanie okresem istnienia do pracy. Po zastosowaniu token nie dodatkowego programowania jest wymagana, ponieważ system dodatku można zlikwidować obiektów gdy nie są używane i udostępnienia ich do pamięci. Aby uzyskać więcej informacji, zobacz [Zarządzanie okresem istnienia](http://msdn.microsoft.com/en-us/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
+ Aby zaimplementować Zarządzanie okresem istnienia, należy użyć <xref:System.AddIn.Pipeline.ContractHandle> obiekt można dołączyć do kontraktu tokenu okresu istnienia. Odwołanie do tego dojścia muszą zapewnić, aby zarządzanie okresem istnienia do pracy. Po zastosowaniu token nie dodatkowego programowania jest wymagana, ponieważ system dodatku można zlikwidować obiektów gdy nie są używane i udostępnienia ich do pamięci. Aby uzyskać więcej informacji, zobacz [Zarządzanie okresem istnienia](http://msdn.microsoft.com/library/57a9c87e-394c-4fef-89f2-aa4223a2aeb5).  
   
 #### <a name="to-create-the-host-side-adapter"></a>Aby utworzyć karty po stronie hosta  
   
@@ -334,12 +334,12 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
     |Calc1AddInSideAdapter|MyApp\Pipeline\AddInSideAdapters|  
     |Calc1AddInView|MyApp\Pipeline\AddInViews|  
     |Calc1Contract|MyApp\Pipeline\Contracts|  
-    |Calc1Host|Moja_aplikacja|  
+    |Calc1Host|MyApp|  
     |Calc1HostSideAdapter|MyApp\Pipeline\HostSideAdapters|  
-    |Calc1HVA|Moja_aplikacja|  
+    |Calc1HVA|MyApp|  
   
     > [!NOTE]
-    >  Jeśli zdecydujesz się na umieszczanie strukturę folderu potoku w lokalizacji innej niż folderze aplikacji, należy zmodyfikować ścieżki odpowiednio wymienionych w tabeli. Zawiera omówienie wymagań katalogu potoku w [wymagania rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+    >  Jeśli zdecydujesz się na umieszczanie strukturę folderu potoku w lokalizacji innej niż folderze aplikacji, należy zmodyfikować ścieżki odpowiednio wymienionych w tabeli. Zawiera omówienie wymagań katalogu potoku w [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 2.  Skompiluj rozwiązanie Visual Studio.  
   
@@ -348,7 +348,7 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
     > [!NOTE]
     >  Jeśli nie została zmieniona **Kopiuj lokalnie** do **False** dla `Calc1AddInView` projektu odwołania w `AddInCalcV1` projektu, problemów z kontekstami modułu ładującego uniemożliwi dodatek znajdujących się.  
   
-     Informacje o wdrażaniu do potoku, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+     Informacje o wdrażaniu do potoku, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
 ## <a name="running-the-host-application"></a>Uruchomienie aplikacji hosta  
  Teraz można przystąpić do uruchomienia hosta i interakcji z dodatku.  
@@ -364,8 +364,8 @@ Ten przewodnik zawiera opis sposobu tworzenia potoku dodatku pełni prosty kalku
 4.  Typ **zakończyć** i naciśnij klawisz **Enter** klawisz, aby zamknąć aplikację.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Włączanie zgodności z poprzednimi wersjami zmiana hosta](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
- [Wskazówki: Przekazywanie kolekcje między hostami oraz dodatki](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
- [Wymagania dotyczące rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
- [Kontrakty, widoków i kart](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c)  
+ [Wskazówki: Włączanie zgodności z poprzednimi wersjami zmiana hosta](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+ [Wskazówki: Przekazywanie kolekcje między hostami oraz dodatki](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
+ [Wymagania dotyczące rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5)  
+ [Kontrakty, widoków i kart](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c)  
  [Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)

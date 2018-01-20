@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 8b363105f0dd6978d4e59678fb7cd1b3f1d721df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: dc2642df7cfe0f0a4b56537d0b2ebeae34304145
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="working-with-data-definition-language"></a>Praca z języka definicji danych
 Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] w wersji 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje języka definicji danych (DDL). Umożliwia to tworzenie lub usuwanie wystąpienia bazy danych, na podstawie parametrów połączenia i metadanych modelu magazynu (SSDL).  
@@ -51,11 +51,11 @@ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]
   
 2.  Dodawanie istniejącego modelu do aplikacji.  
   
-    1.  Dodaj pusty model o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [porady: Tworzenie nowego edmx pliku](http://msdn.microsoft.com/en-us/beb8189e-e51c-4051-839c-9902c224abf2) tematu.  
+    1.  Dodaj pusty model o nazwie `SchoolModel`. Aby utworzyć pusty model, zobacz [porady: Tworzenie nowego edmx pliku](http://msdn.microsoft.com/library/beb8189e-e51c-4051-839c-9902c224abf2) tematu.  
   
      Plik SchoolModel.edmx zostanie dodany do projektu.  
   
-    1.  Kopiowanie pojęciach, magazynu i mapowanie zawartości dla modelu służbowe [modelu służbowe](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac) tematu.  
+    1.  Kopiowanie pojęciach, magazynu i mapowanie zawartości dla modelu służbowe [modelu służbowe](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac) tematu.  
   
     2.  Otwórz plik SchoolModel.edmx i Wklej zawartość w `edmx:Runtime` tagów.  
   

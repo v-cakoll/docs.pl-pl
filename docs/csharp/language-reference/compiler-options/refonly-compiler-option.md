@@ -8,22 +8,23 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (opcje kompilatora C#)
+# <a name="-refonly-c-compiler-options"></a>-refonly (opcje kompilatora C#)
 
-**/Refonly** opcja wskazuje, że zestaw odwołania powinny być danymi wyjściowymi zamiast zestawu implementacji, jako główny wynik. `/refonly` Parametr dyskretnie wyłącza Generowanie plików PDB, jak zestawy odwołań nie może zostać wykonana.
+**- Refonly** opcja wskazuje, że zestaw odwołania powinny być danymi wyjściowymi zamiast zestawu implementacji, jako główny wynik. `-refonly` Parametr dyskretnie wyłącza Generowanie plików PDB, jak zestawy odwołań nie może zostać wykonana.
 
 ## <a name="syntax"></a>Składnia
 
 ```console
-/refonly
+-refonly
 ```
 
 ## <a name="remarks"></a>Uwagi
@@ -40,8 +41,8 @@ Dodatkowe zestawy referencyjne usunąć metadanych (prywatne elementy członkows
 - Wszystkie metody wirtualne są przechowywane. Jawne implementacje interfejsu są zachowywane. Jawnie implementowane właściwości i zdarzenia są przechowywane, zgodnie z ich metod dostępu wirtualne (i w związku z tym są przechowywane).
 - Wszystkie pola struktury są zachowywane. (To jest kandydatem do post-C# — uściślenia 7.1)
 
-`/refonly` i [ `/refout` ](refout-compiler-option.md) wykluczają się wzajemnie.
+`-refonly` i [ `-refout` ](refout-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz także
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fc3e7d545a502c040e7e3ee5140d385b60e82d5c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (usługi danych WCF)
 Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane binarne może reprezentować strumienie audio i wideo, obrazów, plików dokumentów lub binarne nośników innych typów. Kiedy jednostki w modelu danych obejmuje co najmniej jednej właściwości binarnych, Usługa danych zwraca to dane binarne zakodowane jako base-64 wewnątrz wpis w odpowiedzi źródła danych. Ponieważ ładowanie i serializacji dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, niezależnie od podmiotu, do którego należy. Jest to osiągane przez rozdzielić danych binarnych z jednostki jeden lub więcej strumieni danych.  
@@ -100,7 +100,7 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
   
  Aby uzyskać więcej informacji, zobacz [przesyłania strumieniowego transferu wiadomości](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md) i [przydziały dla transportu](../../../../docs/framework/wcf/feature-details/transport-quotas.md).  
   
- Domyślnie program Internet Information Services (IIS) ogranicza rozmiar żądania do 4MB. Aby włączyć usługi danych do odbierania strumieni większych niż 4MB uruchomionej na serwerze IIS, należy także ustawić `maxRequestLength` atrybutu [httpRuntime — Element (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/en-us/e9b81350-8aaf-47cc-9843-5f7d0c59f369) w `<system.web />` sekcji konfiguracji jako pokazano w poniższym przykładzie:  
+ Domyślnie program Internet Information Services (IIS) ogranicza rozmiar żądania do 4MB. Aby włączyć usługi danych do odbierania strumieni większych niż 4MB uruchomionej na serwerze IIS, należy także ustawić `maxRequestLength` atrybutu [httpRuntime — Element (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/e9b81350-8aaf-47cc-9843-5f7d0c59f369) w `<system.web />` sekcji konfiguracji jako pokazano w poniższym przykładzie:  
   
   
   
@@ -130,7 +130,7 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
   
 -   Po zaimplementowaniu <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A>, <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A>, lub <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> metod, musisz użyć eTag i wartości typu zawartości, które są określane jako parametry metody. Nie ustawiaj eTag lub nagłówki typu zawartości w Twojej <xref:System.Data.Services.Providers.IDataServiceStreamProvider> implementacji dostawcy.  
   
--   Domyślnie klient wysyła dużych strumienie binarne przy użyciu fragmentarycznego HTTP Transfer-Encoding. Ponieważ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server nie obsługuje tego typu kodowania, nie można użyć tego serwera sieci Web do obsługi przesyłania strumieniowego Usługa danych, musisz zaakceptować dużych strumienie binarne. Aby uzyskać więcej informacji na temat [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web ASP.NET](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
+-   Domyślnie klient wysyła dużych strumienie binarne przy użyciu fragmentarycznego HTTP Transfer-Encoding. Ponieważ [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server nie obsługuje tego typu kodowania, nie można użyć tego serwera sieci Web do obsługi przesyłania strumieniowego Usługa danych, musisz zaakceptować dużych strumienie binarne. Aby uzyskać więcej informacji na temat [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Development Server, zobacz [serwerów sieci Web w programie Visual Studio dla projektów sieci Web ASP.NET](http://msdn.microsoft.com/library/31d4f588-df59-4b7e-b9ea-e1f2dd204328).  
   
 <a name="versioning"></a>   
 ## <a name="versioning-requirements"></a>Wymagania dotyczące kontroli wersji  

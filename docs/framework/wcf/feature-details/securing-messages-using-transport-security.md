@@ -14,11 +14,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: d40dc1540e4270fc0f80178207edf7b8277d7a73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 461ec7d3cda41194317054ca2413b99f39ebda2c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-messages-using-transport-security"></a>Ochrona komunikatów za pomocą zabezpieczeń transportu
 W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikatów (MSMQ), który służy do zabezpieczania komunikatów wysłanych do kolejki.  
@@ -108,6 +108,6 @@ W tej sekcji omówiono zabezpieczenia transportu usługi kolejkowania komunikat�
  Są obsługiwane algorytmy `MD5`, `SHA1`, `SHA256`, i `SHA512`. Wartość domyślna to `SHA1`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Usługi kolejkowania komunikatów](http://msdn.microsoft.com/en-us/ff917e87-05d5-478f-9430-0f560675ece1)  
+ [Usługi kolejkowania komunikatów](http://msdn.microsoft.com/library/ff917e87-05d5-478f-9430-0f560675ece1)  
  [Pojęcia dotyczące zabezpieczeń](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
  [Zabezpieczanie usług i klientów](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

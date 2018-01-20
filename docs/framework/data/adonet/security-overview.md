@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 70f8b00ca0f57d4d6bf9fc49ab12443f0a8c9b83
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c952a79b70314ff9de195da322efd78d54176201
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-overview"></a>Przegląd zabezpieczeń
 Zabezpieczanie aplikacji jest ciągły proces. Nigdy nie będą punktu, w którym deweloper może zagwarantować, czy aplikacja jest bezpieczne przed atakami wszystkich, ponieważ nie jest możliwe do przewidzenia, jakie rodzaje ataków w przyszłości nowych technologii nastąpi. Z drugiej strony tak, ponieważ nikt nie ma luki w zabezpieczeniach jeszcze odnalezionych (lub opublikowany) w systemie nie oznacza brak istnieje, lub mogą istnieć. Musisz planowaniu zabezpieczeń w fazie projektowania projektu, a także zaplanować, jak zabezpieczeń będzie przechowywany w okresie istnienia aplikacji.  
@@ -78,7 +78,7 @@ Zabezpieczanie aplikacji jest ciągły proces. Nigdy nie będą punktu, w który
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Zabezpieczenia dostępu kodu i ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)|W tym artykule opisano interakcje między zabezpieczenia dostępu kodu, na podstawie ról zabezpieczeń i środowisk częściowo zaufany z perspektywy aplikacji ADO.NET.|  
-|[Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)|Zawiera łącza do dodatkowych tematów opisujących urzędów certyfikacji w programie .NET Framework.|  
+|[Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)|Zawiera łącza do dodatkowych tematów opisujących urzędów certyfikacji w programie .NET Framework.|  
   
 ## <a name="database-security"></a>Zabezpieczenia bazy danych  
  Zasadą najniższych uprawnień ma również zastosowanie do źródła danych. Zawiera ogólne wskazówki dotyczące zabezpieczeń bazy danych:  
@@ -100,7 +100,7 @@ Zabezpieczanie aplikacji jest ciągły proces. Nigdy nie będą punktu, w który
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)|Przegląd zabezpieczeń programu SQL Server z scenariuszy aplikacji, które zawierają wskazówki dotyczące tworzenia bezpiecznych aplikacji ADO.NET obiektu docelowego programu SQL Server.|  
-|[Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywanie operacji bazy danych.|  
+|[Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywanie operacji bazy danych.|  
   
 ## <a name="security-policy-and-administration"></a>Zasady zabezpieczeń i administracji  
  Nieprawidłowo administrowania zasadami zabezpieczeń (CAS) dostępu do kodu może utworzyć słabych zabezpieczeń. Po wdrożeniu aplikacji technik w celu monitorowania zabezpieczeń powinien być używany, a wyłonić ryzyka ocenione jako nowych zagrożeń.  
@@ -109,11 +109,11 @@ Zabezpieczanie aplikacji jest ciągły proces. Nigdy nie będą punktu, w który
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Zawiera informacje na temat tworzenia i administrowanie zasadami zabezpieczeń.|  
-|[NIB: Najlepsze rozwiązania zasad zabezpieczeń](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Łącza dotyczące administrowania zasadami zabezpieczeń.|  
+|[NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)|Zawiera informacje na temat tworzenia i administrowanie zasadami zabezpieczeń.|  
+|[NIB: Najlepsze rozwiązania zasad zabezpieczeń](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05)|Łącza dotyczące administrowania zasadami zabezpieczeń.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

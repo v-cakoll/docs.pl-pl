@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14d003c36fd3733c329aad1362c01e91f108ec2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.  
@@ -362,7 +362,7 @@ public void Write()
 ## <a name="database-access"></a>Dostęp do bazy danych  
  Uprawnienia wymagane do uzyskania dostępu bazy danych różnić w zależności od dostawcy bazy danych; jednak tylko te aplikacje, które działają z odpowiednimi uprawnieniami można uzyskać dostępu do bazy danych za pośrednictwem połączenia danych. Aby uzyskać więcej informacji dotyczących uprawnień, które są wymagane do uzyskania dostępu bazy danych, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../../../docs/framework/data/adonet/code-access-security.md).  
   
- Jeśli nie można bezpośrednio dostęp do bazy danych, ponieważ ma aplikację do uruchamiania w częściowej relacji zaufania, można użyć usługi sieci Web jako alternatywę oznacza dostępu do danych. Usługi sieci Web jest to oprogramowanie, które mogą uzyskiwać programowo za pośrednictwem sieci. Z usługami sieci Web aplikacje mogą udostępniać dane w różnych strefach grupy kodu. Domyślnie aplikacje w strefach Internet i Lokalny intranet mają prawo dostępu do swoich witryn pochodzenia, co umożliwia ich do wywoływania usługi sieci Web hostowanych na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [usług sieci Web w technologii ASP.NET AJAX](http://msdn.microsoft.com/en-us/8290e543-7eff-47a4-aace-681f3c07229b) lub [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
+ Jeśli nie można bezpośrednio dostęp do bazy danych, ponieważ ma aplikację do uruchamiania w częściowej relacji zaufania, można użyć usługi sieci Web jako alternatywę oznacza dostępu do danych. Usługi sieci Web jest to oprogramowanie, które mogą uzyskiwać programowo za pośrednictwem sieci. Z usługami sieci Web aplikacje mogą udostępniać dane w różnych strefach grupy kodu. Domyślnie aplikacje w strefach Internet i Lokalny intranet mają prawo dostępu do swoich witryn pochodzenia, co umożliwia ich do wywoływania usługi sieci Web hostowanych na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [usług sieci Web w technologii ASP.NET AJAX](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) lub [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Dostęp do rejestru  
  <xref:System.Security.Permissions.RegistryPermission> Klasy kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko uruchomione lokalnie aplikacje mogą uzyskać dostępu do rejestru.  <xref:System.Security.Permissions.RegistryPermission>tylko daje aplikacji prawo próby dostępu do rejestru; go nie gwarantuje, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczeń do rejestru.  

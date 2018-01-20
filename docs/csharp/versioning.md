@@ -1,7 +1,7 @@
 ---
 title: "C# Versioning — przewodnik C#"
 description: "Zrozumieć sposób działania kontroli wersji w języku C# i .NET"
-keywords: .NET, .NET core, C#
+keywords: .NET, .NET Core, C#
 author: BillWagner
 manager: wpickett
 ms.date: 01/08/2017
@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>Przechowywanie wersji w języku C# #
 
@@ -57,7 +57,7 @@ Dzięki temu deweloperzy przy użyciu biblioteki są lepiej przygotowane pod ką
 
 ### <a name="application-configuration-file"></a>Plik konfiguracji aplikacji
 
-Projektant .NET istnieje bardzo duże ryzyko został napotkany [ `app.config` pliku](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx) w większości typów projektów.
+Projektant .NET istnieje bardzo duże ryzyko został napotkany [ `app.config` pliku](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx) w większości typów projektów.
 Ten plik prostą konfigurację można zdecydowanie do poprawy wdrażanie nowych aktualizacji. Ogólnie należy projektować w bibliotekach w taki sposób, że mogą się zmieniać regularnie informacje są przechowywane w `app.config` pliku w ten sposób po zaktualizowaniu tych informacji w pliku config starszych wersji musi być zastąpiony nowym bez konieczności ponownej kompilacji biblioteki.
 
 ## <a name="consuming-libraries"></a>Korzystanie z biblioteki
@@ -68,7 +68,7 @@ Szczęście dla Ciebie C# i ekosystemem .NET zawiera funkcje i techniki, które 
 
 ### <a name="assembly-binding-redirection"></a>Przekierowanie powiązań zestawów
 
-Można użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowania powiązania* ](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx) Twojego można korzystać z nowych wersji biblioteki bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak będzie aktualizował aplikacji `app.config` plik `1.0.1` wersja poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany z wersji.
+Można użyć `app.config` plik, aby zaktualizować wersję biblioteki używany przez aplikację. Dodając tak zwany [ *przekierowania powiązania* ](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx) Twojego można korzystać z nowych wersji biblioteki bez konieczności ponownego kompilowania aplikacji. W poniższym przykładzie pokazano, jak będzie aktualizował aplikacji `app.config` plik `1.0.1` wersja poprawki `ReferencedLibrary` zamiast `1.0.0` pierwotnie został skompilowany z wersji.
 
 ```xml
 <dependentAssembly>
@@ -89,7 +89,7 @@ Wykonaj poniższy przykład:
 
 [!code-csharp[Sample usage of the 'new' modifier](../../samples/csharp/versioning/new/Program.cs#sample)]
 
-**Dane wyjściowe**
+**Output**
 
 ```
 A base method
@@ -107,7 +107,7 @@ Gdy nie `new` modyfikator jest określony, klasa pochodna domyślnie ukrywa powo
 
 [!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
 
-**Dane wyjściowe**
+**Output**
 
 ```
 Base Method One: Method One

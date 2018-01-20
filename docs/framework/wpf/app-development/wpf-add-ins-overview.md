@@ -24,11 +24,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 76a836e2699617803b78f76f90b27452bd0cdd0f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffd45957b41cdfd8488aedd865aa70ef5b2634b2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-add-ins-overview"></a>Przegląd Dodatki WPF
 <a name="Introduction"></a>[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Zawiera dodatek modelu, który deweloperzy mogą używać do tworzenia aplikacji, które obsługują rozszerzalności w dodatku. Ten model dodatku umożliwia tworzenie dodatków, które integrują się z i rozszerzanie funkcjonalności aplikacji. W niektórych scenariuszach aplikacji również należy wyświetlić [!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)] są dostarczane przez dodatki. W tym temacie przedstawiono sposób [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] wspomaga [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć te scenariusze, architektura za nią korzyści i jego ograniczenia.  
@@ -111,7 +111,7 @@ ms.lasthandoff: 12/22/2017
 -   Ma <xref:System.SerializableAttribute> atrybut zastosowany.  
   
 > [!NOTE]
->  Aby uzyskać więcej informacji dotyczących tworzenia może być zastosowana zdalnie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiekty, zobacz [wprowadzania zdalnych obiektów](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a).  
+>  Aby uzyskać więcej informacji dotyczących tworzenia może być zastosowana zdalnie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] obiekty, zobacz [wprowadzania zdalnych obiektów](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a).  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] Typy nie są wykonywane zdalnie. Aby rozwiązać ten problem, [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] rozszerza [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] modelu dodatku, aby włączyć [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] utworzone przez dodatki mają być wyświetlane w aplikacji hosta. Te są obsługiwane przez [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przez dwa typy: <xref:System.AddIn.Contract.INativeHandleContract> interfejsu i dwie metody statyczne implementowane przez <xref:System.AddIn.Pipeline.FrameworkElementAdapters> klasy: <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A> i <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>. Na wysokim poziomie te typy i metody są używane w następujący sposób:  
   
@@ -297,6 +297,6 @@ ms.lasthandoff: 12/22/2017
  <xref:System.LoaderOptimizationAttribute>  
  [Dodatki i rozszerzalność](../../../../docs/framework/add-ins/index.md)  
  [Domeny aplikacji](../../../../docs/framework/app-domains/application-domains.md)  
- [.NET framework zdalnych — omówienie](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
- [Tworzenie obiektów może być zastosowana zdalnie](http://msdn.microsoft.com/en-us/01197253-3f13-43b7-894d-9683e431192a)  
+ [.NET framework zdalnych — omówienie](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462)  
+ [Tworzenie obiektów może być zastosowana zdalnie](http://msdn.microsoft.com/library/01197253-3f13-43b7-894d-9683e431192a)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/app-development/how-to-topics.md)

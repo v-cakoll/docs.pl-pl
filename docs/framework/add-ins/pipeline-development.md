@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0ad577145c26b9c43e8b7fb3b61f27f374ff9298
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 33646bbd7b0043cb5fc036b9b11aa4cf37cd537f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="pipeline-development"></a>Opracowywanie potoku
 Potok dodatku jest ścieżką segmentów potoku, w których aplikacja hosta i jego dodatku musi komunikować się ze sobą.  
@@ -41,14 +41,14 @@ Potok dodatku
   
  Jeśli ładowania hosta i dodatek do domeny innej aplikacji, należy granica izolacji oddzielający zakresu aplikacji hosta z zakresu od dodatku. Umowa jest tylko zestawu, który jest ładowany w hosta i domeny aplikacji dodatku. Hosta i Dodaj w każdym odwoływać się tylko do ich widoku metody kontraktu. W związku z tym są rozdzielone przez warstwę abstrakcji z umowy.  
   
- Aby opracować segmentów potoku, należy utworzyć struktury katalogów, które je zawiera. Aby uzyskać więcej informacji na temat wymagań rozwoju i wskazówki w zakresie, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/en-us/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
+ Aby opracować segmentów potoku, należy utworzyć struktury katalogów, które je zawiera. Aby uzyskać więcej informacji na temat wymagań rozwoju i wskazówki w zakresie, zobacz [wymagania rozwój potoku](http://msdn.microsoft.com/library/ef9fa986-e80b-43e1-868b-247f4c1d9da5).  
   
  Na poniższej ilustracji przedstawiono typy, które tworzą segmentów potoku. Nazwy typów pokazany na rysunku są dowolne, ale wszystkie typy oprócz hosta i host wyświetlania atrybutów wymagają dodatku, może być rozpoznana za pomocą metod, które utworzyć magazyn informacji.  
   
  ![Dodaj &#45; w modelu z wymaganymi atrybutami typów. ] (../../../docs/framework/add-ins/media/addin-model.png "AddIn_Model")  
 Potok dodatku z typami  
   
- W poniższej tabeli opisano segmentów potoku dla aktywacji dodatku. Aby uzyskać więcej informacji na temat te segmenty, zobacz [kontrakty, widoków i kart](http://msdn.microsoft.com/en-us/a6460173-9507-4b87-8c07-d4ee245d715c).  
+ W poniższej tabeli opisano segmentów potoku dla aktywacji dodatku. Aby uzyskać więcej informacji na temat te segmenty, zobacz [kontrakty, widoków i kart](http://msdn.microsoft.com/library/a6460173-9507-4b87-8c07-d4ee245d715c).  
   
 |Segment potoku|Opis|  
 |----------------------|-----------------|  
@@ -89,14 +89,14 @@ Potok dodatku z typami
   
      Opisuje dodatku Kalkulator, który wykonuje dodawania, odejmowania mnożenia i dzielenia obliczeń dla hosta.  
   
--   [Wskazówki: Włączanie zgodności z poprzednimi wersjami zmiana hosta](http://msdn.microsoft.com/en-us/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
+-   [Wskazówki: Włączanie zgodności z poprzednimi wersjami zmiana hosta](http://msdn.microsoft.com/library/6fa15bb5-8f04-407d-bd7d-675dc043c848)  
   
      Opisuje dodać Kalkulator w możliwości udoskonalone Obliczanie i sposób zachować zgodność z pierwszego Kalkulator dodatku.  
   
--   [Wskazówki: Przekazywanie kolekcje między hostami oraz dodatki](http://msdn.microsoft.com/en-us/b532c604-548e-4fab-b11c-377257dd0ee5)  
+-   [Wskazówki: Przekazywanie kolekcje między hostami oraz dodatki](http://msdn.microsoft.com/library/b532c604-548e-4fab-b11c-377257dd0ee5)  
   
      Opisuje sposób przekazywania zbierania danych za pośrednictwem potoku książki scenariusz magazynu.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Scenariusze potoku dodatku](http://msdn.microsoft.com/en-us/feb70e0b-8734-494c-aeaf-b567f014043e)  
+ [Scenariusze potoku dodatku](http://msdn.microsoft.com/library/feb70e0b-8734-494c-aeaf-b567f014043e)  
  [Dodatki i rozszerzalność](../../../docs/framework/add-ins/index.md)

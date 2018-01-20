@@ -16,11 +16,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 545fd05888a556e21cea795953ba94b94f7f2e45
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7388bbc388dd46a30486a2300150bc9d1566593e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xslt-security-considerations"></a>Zagadnienia dotyczące zabezpieczeń XSLT
 Język XSLT zawiera bogaty zestaw funkcji, które zapewniają dużą możliwościach i elastyczności. Zawiera wiele funkcji, które jest to przydatne, mogą być również wykorzystywane przez zewnętrznych źródeł. Aby można było używać bezpiecznie XSLT, muszą zrozumieć typy problemy z zabezpieczeniami, które użytkowania XSLT i podstawowe strategie, których można użyć, aby ograniczyć te zagrożenia.  
@@ -69,4 +69,4 @@ Język XSLT zawiera bogaty zestaw funkcji, które zapewniają dużą możliwośc
 ## <a name="see-also"></a>Zobacz też  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)  
  [Rozpoznawanie zewnętrznych zasobów podczas przetwarzania XSLT](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
- [Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)
+ [Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)

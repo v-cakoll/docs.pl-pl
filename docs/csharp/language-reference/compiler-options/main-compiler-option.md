@@ -13,19 +13,19 @@ ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
 caps.latest.revision: "14"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a6dca6e62dbf69783babf2e16dc4e7c36c6705c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f1d06bf408f13a78df503ab10fe3c57b4ff68a3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="main-c-compiler-options"></a>/main (opcje kompilatora C#)
+# <a name="-main-c-compiler-options"></a>-main (opcje kompilatora C#)
 Ta opcja określa klasę, która zawiera wpis wskaż program, jeśli zawiera więcej niż jedną klasę **Main** metody.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/main:class  
+-main:class  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -51,9 +51,9 @@ Ta opcja określa klasę, która zawiera wpis wskaż program, jeśli zawiera wi�
  Kompiluj `t2.cs` i `t3.cs`, określania który **Main** będzie można znaleźć metody w `Test2`:  
   
 ```console  
-csc t2.cs t3.cs /main:Test2  
+csc t2.cs t3.cs -main:Test2  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

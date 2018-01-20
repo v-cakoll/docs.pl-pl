@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d635a1d5122319e228feb4d8a362b7609129c9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 76f3913f5cf6166793cb6f95ef3658c24e2453b4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="token-authenticator"></a>Wystawca uwierzytelnienia tokenów
 W tym przykładzie pokazano, jak do zaimplementowania niestandardowego wystawcy uwierzytelnienia tokenu. Wystawcy uwierzytelnienia tokenu w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] służy do sprawdzania poprawności tokenu używane z komunikatu, sprawdzania jest spójny, czy uwierzytelnianie tożsamość skojarzona z tokenem.  
@@ -350,7 +350,7 @@ static void DisplayIdentityInformation()
   
 3.  Uruchom client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
   
-4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na komputerach  
   
@@ -372,7 +372,7 @@ static void DisplayIdentityInformation()
   
 9. Na komputerze klienckim należy uruchomić Client.exe z wiersza polecenia.  
   
-10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
   

@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 25abf45cd0c78b8872da3c953f29843ef0b67cda
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f2da3e1ecfb9018adf7827aad6a569cd057c59eb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-structures-for-parallel-programming"></a>Struktury danych dla Programowania równoległego
 .NET Framework w wersji 4 wprowadzono kilka nowych typów, które są przydatne w Programowanie równoległe, w tym zestaw kolekcji współbieżnych klas, elementy podstawowe synchronizacji lekkie i typy dla inicjowania z opóźnieniem. Z kodem aplikacji wielowątkowych, włączając w bibliotece równoległych zadań i PLINQ można używać tych typów.  
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/23/2017
  Aby uzyskać więcej informacji, zobacz [Incjalizacji](../../../docs/framework/performance/lazy-initialization.md).  
   
 ## <a name="aggregate-exceptions"></a>Łączny wyjątków  
- <xref:System.AggregateException?displayProperty=nameWithType> Typu może służyć do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywróć ich łącząca wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używają <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d) i [porady: obsługi wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
+ <xref:System.AggregateException?displayProperty=nameWithType> Typu może służyć do przechwytywania wielu wyjątków, które są zgłaszane jednocześnie w oddzielnych wątkach i przywróć ich łącząca wątku pojedynczego wyjątek. <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> typów i PLINQ używają <xref:System.AggregateException> często w tym celu. Aby uzyskać więcej informacji, zobacz [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d) i [porady: obsługi wyjątków w zapytaniu PLINQ](../../../docs/standard/parallel-programming/how-to-handle-exceptions-in-a-plinq-query.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

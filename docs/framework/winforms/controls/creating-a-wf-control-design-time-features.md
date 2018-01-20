@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f7c875721436f0d6fe3f0cc57140a275e8d218f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a4e84c665897159d08cec36b0f35b4f5f2674445
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>Wskazówki: tworzenie kontrolki formularzy systemu Windows wykorzystującego funkcje czasu projektowania Visual Studio
 Środowisko czasu projektowania dla kontrolek niestandardowych można zwiększyć przez tworzenia skojarzone projektanta niestandardowych.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
  Lista kompletny kod znajduje się [porady: Tworzenie funkcji systemu Windows formularze kontroli czy ma korzystać z czasu projektowania](http://msdn.microsoft.com/library/8e0bad0e-56f3-43d2-bf63-a945c654d97c).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W celu przeprowadzenia tego instruktażu potrzebne są:  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
--   Utwórz projekt aplikacji formularzy systemu Windows o nazwie "MarqueeControlTest." Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Utwórz projekt aplikacji formularzy systemu Windows o nazwie "MarqueeControlTest." Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Tworzenie projektu biblioteki formantu  
  Następnym krokiem jest do tworzenia projektu biblioteki formantu. Spowoduje utworzenie nowej kontrolki niestandardowej i jego odpowiedniego projektanta niestandardowych.  
@@ -95,11 +95,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  Dodaj projekt Biblioteka formantów formularzy systemu Windows do rozwiązania. Nazwa projektu "MarqueeControlLibrary."  
   
-2.  Przy użyciu **Eksploratora rozwiązań**, usuń formant domyślnego projektu przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od języka wybór. Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+2.  Przy użyciu **Eksploratora rozwiązań**, usuń formant domyślnego projektu przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od języka wybór. Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Dodaj nową <xref:System.Windows.Forms.UserControl> elementu do `MarqueeControlLibrary` projektu. Nadaj nowej plik źródłowy podstawowej nazwy "MarqueeControl."  
   
-4.  Przy użyciu **Eksploratora rozwiązań**, Utwórz nowy folder w `MarqueeControlLibrary` projektu. Aby uzyskać więcej informacji, zobacz [NIB: porady: dodawanie nowych elementów projektu](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nazwa nowego folderu "Projekt".  
+4.  Przy użyciu **Eksploratora rozwiązań**, Utwórz nowy folder w `MarqueeControlLibrary` projektu. Aby uzyskać więcej informacji, zobacz [NIB: porady: dodawanie nowych elementów projektu](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nazwa nowego folderu "Projekt".  
   
 5.  Kliknij prawym przyciskiem myszy **projekt** folderu i Dodaj nową klasę. Nadaj pliku źródłowego z podstawowej nazwy "MarqueeControlRootDesigner."  
   

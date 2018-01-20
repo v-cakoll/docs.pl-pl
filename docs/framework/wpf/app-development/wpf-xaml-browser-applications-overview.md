@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c894d431aa31e32b4a8cb7ff02d39d5aa5e95381
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0f4f410f0f6c209dbc43642a15ae85a788390f4a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>Przegląd Aplikacje przeglądarek WPF XAML
 <a name="introduction"></a>
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="creating_a_new_xaml_browser_application_xbap"></a>   
 ## <a name="creating-a-new-xaml-browser-application-xbap"></a>Tworzenie nowej aplikacji przeglądarki XAML (XBAP)  
- Najprostszym sposobem, aby utworzyć nowy projekt XBAP jest z [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Podczas tworzenia nowego projektu, zaznacz **aplikacji przeglądarki WPF** z listy szablonów. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji przeglądarki WPF](http://msdn.microsoft.com/en-us/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
+ Najprostszym sposobem, aby utworzyć nowy projekt XBAP jest z [!INCLUDE[vs_dev10_ext](../../../../includes/vs-dev10-ext-md.md)]. Podczas tworzenia nowego projektu, zaznacz **aplikacji przeglądarki WPF** z listy szablonów. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji przeglądarki WPF](http://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f).  
   
  Po uruchomieniu projektów XBAP zostanie otwarty w oknie przeglądarki zamiast autonomicznej okna. Podczas debugowania XBAP z [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)], aplikacja jest uruchamiana z uprawnieniami strefy Internet i w związku z tym będzie zgłaszać wyjątki zabezpieczeń, w przypadku przekroczenia te uprawnienia. Aby uzyskać więcej informacji, zobacz [zabezpieczeń](../../../../docs/framework/wpf/security-wpf.md) i [WPF częściowego zaufania zabezpieczeń](../../../../docs/framework/wpf/wpf-partial-trust-security.md).  
   

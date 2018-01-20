@@ -14,11 +14,11 @@ ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 caps.latest.revision: "45"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 556d5f55f7564e960ac35ece2fba6eacb3e82b66
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd22abedc8fc43fd2bd0ea77e1506394400fbfbb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-programming-guide"></a>Podręcznik programowania C#
 Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funkcji i funkcji dostępne dla C# za pomocą programu .NET Framework.  
@@ -29,7 +29,7 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funk
   
 ## <a name="program-sections"></a>Sekcje programu
 
-[W programie C#](../../csharp/programming-guide/inside-a-program/index.md)  
+[Konstrukcja programu C#](../../csharp/programming-guide/inside-a-program/index.md)  
   
 [Main() i argumenty wiersza polecenia](../../csharp/programming-guide/main-and-command-args/index.md)  
  
@@ -44,7 +44,7 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funk
 
  [Typy wyliczeniowe](../../csharp/programming-guide/enumeration-types.md)  
   
- [Obiekty delegowane](../../csharp/programming-guide/delegates/index.md)  
+ [Delegaci](../../csharp/programming-guide/delegates/index.md)  
  
  [Tablice](../../csharp/programming-guide/arrays/index.md)  
   
@@ -66,16 +66,16 @@ Ta sekcja zawiera szczegółowe informacje na temat kluczowych w języku C# funk
   
  [Przestrzenie nazw](../../csharp/programming-guide/namespaces/index.md)  
   
- [Typy dopuszczające wartości zerowe](../../csharp/programming-guide/nullable-types/index.md)  
+ [Typy dopuszczające wartości null](../../csharp/programming-guide/nullable-types/index.md)  
   
  [Niebezpieczny kod i wskaźniki](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
  [Komentarze dokumentacji XML](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
   
 ## <a name="platform-sections"></a>Sekcje platformy  
- [Domeny aplikacji (C# i Visual Basic)](http://msdn.microsoft.com/en-us/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
+ [Domeny aplikacji (C# i Visual Basic)](http://msdn.microsoft.com/library/1bc2939a-79db-4a4a-a677-4a2ce6de2b1e)  
   
- [Zestawy i Globalna pamięć podręczna zestawów](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
+ [Zestawy i globalna pamięć podręczna zestawów](../../csharp/programming-guide/concepts/assemblies-gac/index.md)  
   
  [Atrybuty](../../csharp/programming-guide/concepts/attributes/index.md)  
   

@@ -21,11 +21,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 969ab4f3c63571488c66c8a505df3969fcd788e3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fdd26f335fb2f9b8072103def5b00d91a6740817
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-the-automationid-property"></a>Użyj właściwości AutomationID
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>Użyj ścieżki trwałe aby powrócić do poprzednio zidentyfikowanych Obiekt AutomationElement  
   
--   Aplikacje klienckie ze prosty test skryptów niezawodny rekordu i narzędzia odtwarzania mogą wymagać dostępu do elementów, które są nie obecnie wystąpienia, takich jak plik Otwórz okno dialogowe, lub elementu menu i dlatego nie istnieją w drzewie automatyzacji interfejsu użytkownika. Te elementy można wdrożyć tylko odtwarzanie, lub "Odtwarzanie", określonej sekwencji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] akcje za pośrednictwem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, takie jak AutomationID, wzorców formantu i odbiorników zdarzeń. Zobacz [testu z przykładowym skrypcie Generator](http://msdn.microsoft.com/en-us/028467fd-2980-4691-9522-0131dcef23a0) na przykład, który używa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] generowania skryptów testu oparte na interakcję użytkownika z [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
+-   Aplikacje klienckie ze prosty test skryptów niezawodny rekordu i narzędzia odtwarzania mogą wymagać dostępu do elementów, które są nie obecnie wystąpienia, takich jak plik Otwórz okno dialogowe, lub elementu menu i dlatego nie istnieją w drzewie automatyzacji interfejsu użytkownika. Te elementy można wdrożyć tylko odtwarzanie, lub "Odtwarzanie", określonej sekwencji [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] akcje za pośrednictwem [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości, takie jak AutomationID, wzorców formantu i odbiorników zdarzeń. Zobacz [testu z przykładowym skrypcie Generator](http://msdn.microsoft.com/library/028467fd-2980-4691-9522-0131dcef23a0) na przykład, który używa [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] generowania skryptów testu oparte na interakcję użytkownika z [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)].  
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  

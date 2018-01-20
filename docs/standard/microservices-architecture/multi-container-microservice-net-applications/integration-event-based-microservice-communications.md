@@ -1,7 +1,7 @@
 ---
 title: "Implementowanie oparty na zdarzeniach komunikacji między mikrousług (zdarzeń integracji)"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie oparty na zdarzeniach komunikacji między mikrousług (zdarzeń integracji)"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bfa7a3b732c67b568f0d68b1811a1ce9bb336a7e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 50ab0be6b92304eee4bc46643c867ee2827fc805
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>Implementowanie oparty na zdarzeniach komunikacji między mikrousług (zdarzeń integracji)
 
@@ -82,7 +82,7 @@ W [wzorzec obserwatora](https://en.wikipedia.org/wiki/Observer_pattern), obiektu
 
 ### <a name="publish-subscribe-pubsub-pattern"></a>Wzorzec publikowania / subskrypcji (Pub/Sub) 
 
-Celem [wzorzec Pub/Sub](https://msdn.microsoft.com/en-us/library/ff649664.aspx) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi, gdy określone zdarzenia została wykonana. Występuje istotną różnicą między wzorce obserwatora i Pub/Sub. We wzorcu obserwatora emisji jest wykonywane bezpośrednio z według do obserwatorów, dzięki czemu "znane" siebie nawzajem. Podczas korzystania z wzorca Pub/Sub, występuje trzeci składnik o nazwie broker lub komunikatów brokera lub zdarzenia magistrali, znaną wydawcy i subskrybenta. W związku z tym podczas używania wzorca Pub/Sub wydawcy i subskrybentów są dokładnie całkowicie niezależna dzięki użyciu brokera magistrali lub komunikat zdarzenia opisane powyżej.
+Celem [wzorzec Pub/Sub](https://msdn.microsoft.com/library/ff649664.aspx) jest taka sama jak wzorzec obserwatora: chcesz powiadomić inne usługi, gdy określone zdarzenia została wykonana. Występuje istotną różnicą między wzorce obserwatora i Pub/Sub. We wzorcu obserwatora emisji jest wykonywane bezpośrednio z według do obserwatorów, dzięki czemu "znane" siebie nawzajem. Podczas korzystania z wzorca Pub/Sub, występuje trzeci składnik o nazwie broker lub komunikatów brokera lub zdarzenia magistrali, znaną wydawcy i subskrybenta. W związku z tym podczas używania wzorca Pub/Sub wydawcy i subskrybentów są dokładnie całkowicie niezależna dzięki użyciu brokera magistrali lub komunikat zdarzenia opisane powyżej.
 
 ### <a name="the-middleman-or-event-bus"></a>Magistrala pośredników lub zdarzenia 
 
@@ -135,4 +135,4 @@ public interface IEventBus
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (bazy danych server-container.md) [dalej] (rabbitmq-event-bus-development-test-environment.md)
+[Previous] (database-server-container.md) [Next] (rabbitmq-event-bus-development-test-environment.md)

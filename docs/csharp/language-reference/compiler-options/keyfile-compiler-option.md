@@ -13,19 +13,19 @@ ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d120b325f433108cd1b01dd1c25d2a0e55da401b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fc80c1f6614cdfc8e2f56855d0a0315977316f4c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keyfile-c-compiler-options"></a>/keyfile (opcje kompilatora C#)
+# <a name="-keyfile-c-compiler-options"></a>-keyfile (opcje kompilatora C#)
 Określa nazwę pliku zawierającego klucz kryptograficzny.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/keyfile:file  
+-keyfile:file  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -37,11 +37,11 @@ Określa nazwę pliku zawierającego klucz kryptograficzny.
 ## <a name="remarks"></a>Uwagi  
  Gdy ta opcja jest używana, kompilator wstawia klucza publicznego z określonego pliku do manifestu zestawu i podpisuje następnie zestawie końcowym z kluczem prywatnym. Aby wygenerować plik klucza, wpisz sn -k `file` w wierszu polecenia.  
   
- Jeśli kompilacji z **/target: module**, nazwa pliku klucza jest przechowywany w module i włączyć do zestawu, który jest tworzony podczas kompilowania zestawu z [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Jeśli kompilacji z **-docelowych: moduł**, nazwa pliku klucza jest przechowywany w module i włączyć do zestawu, który jest tworzony podczas kompilowania zestawu z [- addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
- Można również przekazać do kompilatora z informacjami szyfrowania [/KeyContainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Użyj [/DelaySign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) Jeśli chcesz częściowo podpisanych zestawów.  
+ Można również przekazać do kompilatora z informacjami szyfrowania [- keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md). Użyj [- delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) Jeśli chcesz częściowo podpisanych zestawów.  
   
- W przypadku/KeyFile określony zarówno i/KeyContainer (przez opcję wiersza polecenia lub przez atrybut niestandardowy) w tej samej kompilacji, kompilator próbują używać najpierw kontener kluczy. Jeśli który zakończy się powodzeniem, zestaw jest podpisany z informacjami w kontenerze kluczy. Kompilator nie może znaleźć kontener kluczy, spróbuje plik określony z/KeyFile. Jeśli który zakończy się powodzeniem, zestaw jest podpisany za pomocą informacji w pliku klucza i informacje o kluczu zostaną zainstalowane w kontenerze kluczy (podobnie jak sn -i), aby w następnej kompilacji, kontener kluczy będzie nieprawidłowa.  
+ W przypadku - keyfile i keycontainer — podano (przez opcję wiersza polecenia lub przez atrybut niestandardowy) w tej samej kompilacji, kompilator próbują używać najpierw kontener kluczy. Jeśli który zakończy się powodzeniem, zestaw jest podpisany z informacjami w kontenerze kluczy. Kompilator nie może znaleźć kontener kluczy, spróbuje plik określony za pomocą - keyfile. Jeśli który zakończy się powodzeniem, zestaw jest podpisany za pomocą informacji w pliku klucza i informacje o kluczu zostaną zainstalowane w kontenerze kluczy (podobnie jak sn -i), aby w następnej kompilacji, kontener kluczy będzie nieprawidłowa.  
   
  Należy pamiętać, że plik klucza może zawierać tylko klucz publiczny.  
   
@@ -59,4 +59,4 @@ Określa nazwę pliku zawierającego klucz kryptograficzny.
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

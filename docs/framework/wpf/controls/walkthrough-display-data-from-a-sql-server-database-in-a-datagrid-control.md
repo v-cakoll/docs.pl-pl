@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3c8ed596706c8d656842191262c25301db595ee3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0397206a05ef47a7fc9b130fbd13fa19a0d766fa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>Wskazówki: Wyświetlanie danych z serwera bazy danych SQL w formancie DataGrid
 W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświetlić dane w <xref:System.Windows.Controls.DataGrid> formantu. ADO.NET Entity Framework umożliwia tworzenie klasy jednostki, które reprezentują dane i użyć LINQ, aby zapisać kwerendę, która pobiera określone dane z klasy jednostka.  
@@ -32,7 +32,7 @@ W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświe
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Następujące składniki są wymagane do przeprowadzenia tego instruktażu:  
   
--   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].,  
+-   [!INCLUDE[vs_dev11_long](../../../../includes/vs-dev11-long-md.md)].  
   
 -   Dostęp do działającego wystąpienia programu SQL Server lub SQL Server Express zawierający przykładową bazę danych AdventureWorks do niego dołączony. Możesz pobrać z bazy danych AdventureWorks z [GitHub](https://github.com/Microsoft/sql-server-samples/releases).  
   
@@ -88,7 +88,7 @@ W tym przewodniku, pobieranie danych z bazy danych programu SQL Server i wyświe
   
 4.  Wybierz <xref:System.Windows.Window>.  
   
-5.  Przy użyciu okna właściwości lub edytora XAML, utworzyć programu obsługi zdarzeń dla <xref:System.Windows.Window> o nazwie `Window_Loaded` dla <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie prostego obsługi zdarzeń](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480).  
+5.  Przy użyciu okna właściwości lub edytora XAML, utworzyć programu obsługi zdarzeń dla <xref:System.Windows.Window> o nazwie `Window_Loaded` dla <xref:System.Windows.FrameworkElement.Loaded> zdarzeń. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie prostego obsługi zdarzeń](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480).  
   
      Poniżej przedstawiono XAML MainWindow.xaml.  
   

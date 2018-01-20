@@ -26,11 +26,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8903f7da1c945ff927ad6dfe0a92650849a36439
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b9c12c4811e8b23e86fca3960acdb4da06e38fbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-view-assembly-contents"></a>Porady: wyświetlanie zawartości zestawu
 Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) Aby wyświetlić informacje o języku pośrednim (MSIL) firmy Microsoft w pliku. Jeśli badane plik jest zestawem, te informacje mogą uwzględniać zestaw atrybutów, a także odwołania do innych modułów i zestawów. Informacje te mogą być pomocne w określeniu, czy plik jest zestawem lub część zestawu i określa, czy plik ma odwołania do innych modułach ani zestawów.  
@@ -98,6 +98,6 @@ Można użyć [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm
  Manifest zestawu może zawierać wiele różnych dyrektyw, w zależności od zestawu zawartości. Obszernej listy dyrektywy w manifeście zestawu dokumentacji ECMA, szczególnie "Partycji II: metadane definicji i semantyki" i "III: CIL instrukcji zestawu partycji". Dokumentacja jest dostępna w trybie online; zobacz [ECMA C# i wspólne normy infrastruktury języka](http://go.microsoft.com/fwlink/?LinkID=99212) w witrynie MSDN i [standardowe ECMA-335 - infrastruktury języka wspólnego (CLI)](http://go.microsoft.com/fwlink/?LinkID=65552) w witrynie sieci Web międzynarodowej Ecma.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domeny aplikacji i zestawy](http://msdn.microsoft.com/en-us/433b04ae-4ba8-4849-9dbd-79194f240346)  
+ [Domeny aplikacji i zestawy](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)  
  [Instrukcje dotyczące zestawów i domen aplikacji](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)  
  [Ildasm.exe (dezasembler IL)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

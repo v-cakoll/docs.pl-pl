@@ -12,11 +12,11 @@ ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 785c23294abdbfa0684560a38fbd0279200a7d02
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bd26583c42302d8ce9ba4dd22119713548111236
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="abstract-c-reference"></a>abstract (odwołanie w C#)
 `abstract` Modyfikator oznacza, że element jest modyfikowany ma implementacji brakujące lub niekompletne. Modyfikator abstract można używać z klas, metod, właściwości, indeksatorów i zdarzeń. Użyj `abstract` modyfikatora w deklaracji klasy, aby wskazać, że klasa jest przeznaczona tylko jako klasę podstawową innych klas. Elementy członkowskie oznaczony jako abstrakcyjny lub częścią klasa abstrakcyjna, musi być implementowana przez klasy, które pochodzi z klasy abstrakcyjnej.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 11/21/2017
   
 -   Deklaracja metody abstrakcyjnej udostępnia nie rzeczywistego wykonania, więc nie istnieje żadne treści metody; Deklaracja metody kończy się po prostu średnikiem i nie ma żadnych nawiasy klamrowe ({}) po podpisu. Na przykład:  
   
-    ```  
+    ```csharp  
     public abstract void MyMethod();  
     ```  
   
@@ -75,11 +75,11 @@ ms.lasthandoff: 11/21/2017
   
  W poprzednim przykładzie, jeśli podjęto próbę utworzenia wystąpienia klasy abstrakcyjnej przy użyciu instrukcji w następujący sposób:  
   
-```  
+```csharp
 BaseClass bc = new BaseClass();   // Error  
 ```  
   
- wystąpi błąd informujący o tym, że kompilator nie można utworzyć wystąpienia klasy abstrakcyjnej "Baseclass —".  
+wystąpi błąd informujący o tym, że kompilator nie można utworzyć wystąpienia klasy abstrakcyjnej "Baseclass —".  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -88,6 +88,6 @@ BaseClass bc = new BaseClass();   // Error
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
- [wirtualny](../../../csharp/language-reference/keywords/virtual.md)  
- [zastąpienie](../../../csharp/language-reference/keywords/override.md)  
+ [virtual](../../../csharp/language-reference/keywords/virtual.md)  
+ [override](../../../csharp/language-reference/keywords/override.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)

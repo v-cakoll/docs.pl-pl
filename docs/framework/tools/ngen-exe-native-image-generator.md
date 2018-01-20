@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b13da21709bb85ddf376f84df4fe2c7ae9f1a513
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.  
@@ -57,12 +57,12 @@ Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajn
   
 -   Niektóre przyczyny unieważnienia obrazu zostały wyeliminowane.  
   
- W systemie Windows 8, zobacz [zadań obrazu macierzystego](http://msdn.microsoft.com/en-us/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
+ W systemie Windows 8, zobacz [zadań obrazu macierzystego](http://msdn.microsoft.com/library/9b1f7590-4e0d-4737-90ef-eaf696932afb).  
   
  Aby uzyskać dodatkowe informacje na temat używania Ngen.exe i usługę obrazu macierzystego, zobacz [usługi obrazu macierzystego][Native Image Service].  
   
 > [!NOTE]
->  Składnia ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework, można znaleźć w [składni starszych Generator obrazu natywnego (Ngen.exe)](http://msdn.microsoft.com/en-us/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
+>  Składnia ngen.exe w wersjach 1.0 i 1.1 programu .NET Framework, można znaleźć w [składni starszych Generator obrazu natywnego (Ngen.exe)](http://msdn.microsoft.com/library/5a69fc7a-103f-4afc-8ab4-606adcb46324).  
   
  To narzędzie jest instalowane automatycznie z programem Visual Studio. Aby uruchomić narzędzie, należy użyć wiersza polecenia dewelopera (lub wiersza polecenia programu Visual Studio w systemie Windows 7). Aby uzyskać więcej informacji, zobacz [wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md).  
   
@@ -523,7 +523,7 @@ ngen uninstall "ClientApp, Version=1.0.0.0, Culture=neutral,
  Przykłady dotyczące obrazu macierzystego usługi można znaleźć [usługi obrazu macierzystego][Native Image Service].  
   
 ## <a name="native-image-task"></a>Obraz macierzysty — zadanie  
- Zadanie obrazu macierzystego jest zadanie systemu Windows, które generuje i obsługuje obrazów macierzystych. Zadanie obrazu macierzystego generuje i zwraca obrazów macierzystych automatycznie dla obsługiwanych scenariuszach. (Zobacz [tworzenia obrazów macierzystych](http://msdn.microsoft.com/en-us/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Umożliwia również instalatorów do użycia [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów macierzystych odroczonego naraz.  
+ Zadanie obrazu macierzystego jest zadanie systemu Windows, które generuje i obsługuje obrazów macierzystych. Zadanie obrazu macierzystego generuje i zwraca obrazów macierzystych automatycznie dla obsługiwanych scenariuszach. (Zobacz [tworzenia obrazów macierzystych](http://msdn.microsoft.com/library/2bc8b678-dd8d-4742-ad82-319e9bf52418).) Umożliwia również instalatorów do użycia [Ngen.exe (Generator obrazu natywnego)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) do tworzenia i aktualizowania obrazów macierzystych odroczonego naraz.  
   
  Zadanie obrazu macierzystego jest zarejestrowany, gdy dla każdego Procesora architektura obsługiwana na komputerze, aby umożliwić kompilacji dla aplikacji przeznaczonych każdej architektury:  
   

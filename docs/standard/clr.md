@@ -24,11 +24,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f465ee77e06255c576146e3e184adede05f5d7bc
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4aa9a6d37a52d5f15643e9179060450a2d7a34c4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="common-language-runtime-clr"></a>Środowisko uruchomieniowe języka wspólnego (CLR)
 .NET Framework zapewnia środowisko czasu wykonywania o nazwie środowisko uruchomieniowe języka wspólnego, która uruchamia kod i udostępnia usługi, które ułatwia proces tworzenia.  
@@ -87,7 +87,7 @@ ms.lasthandoff: 01/09/2018
 |-----------|-----------------|  
 |[Proces zarządzanego wykonania](../../docs/standard/managed-execution-process.md)|W tym artykule opisano kroki wymagane do wykorzystać środowisko uruchomieniowe języka wspólnego.|  
 |[Automatyczne zarządzanie pamięcią](../../docs/standard/automatic-memory-management.md)|W tym artykule opisano, jak moduł garbage collector przydziela i zwalnia pamięć.|  
-|[NIB: Omówienie programu .NET Framework](http://msdn.microsoft.com/en-us/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|W tym artykule opisano podstawowe pojęcia .NET Framework, takich jak wspólny system typów, współdziałanie między językami, wykonania kodu zarządzanego, domeny aplikacji i zestawów.|  
+|[NIB: Omówienie programu .NET Framework](http://msdn.microsoft.com/library/ea38ac1e-92af-4d1b-8db1-e8a5ea10ed85)|W tym artykule opisano podstawowe pojęcia .NET Framework, takich jak wspólny system typów, współdziałanie między językami, wykonania kodu zarządzanego, domeny aplikacji i zestawów.|  
 |[System typu wspólnego](../../docs/standard/base-types/common-type-system.md)|Opisuje sposób typy są zadeklarowane, używane i zarządzane w środowisku wykonawczym wesprzeć integracja wielu języków.|  
   
 ## <a name="see-also"></a>Zobacz też  

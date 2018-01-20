@@ -14,11 +14,11 @@ ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
 caps.latest.revision: "49"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cf2517dd5989d36341b840ffcb476cbeb14baf54
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b1e7366d8d82ca99a8d779dda1e194dcc8c2ab6e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>Klasy statyczne i statyczni członkowie klas (Przewodnik programowania w języku C#)
 A [statycznej](../../../csharp/language-reference/keywords/static.md) klasy jest zasadniczo taki sam, jak Klasa statyczna, ale ma różnicy jednego: nie można utworzyć wystąpienia klasy statycznej. Innymi słowy, nie można użyć [nowe](../../../csharp/language-reference/keywords/new.md) — słowo kluczowe, aby utworzyć zmienną typu klasy. Ponieważ nie ma żadnych zmienna wystąpienia, możesz uzyskać dostęp z członkami klasy statycznej przy użyciu Nazwa klasy. Na przykład, jeśli statycznego klasy, która jest nazywane `UtilityClass` mający publiczną metodę o nazwie `MethodA`, należy wywołać metodę, jak pokazano w poniższym przykładzie:  
@@ -44,7 +44,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
  Podobnie jak w przypadku wszystkich typów klasy, informacje o typie dla klasy statycznej jest ładowany przez [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] środowisko uruchomieniowe języka wspólnego (CLR) po załadowaniu program, który odwołuje się do klasy. Program nie można określić dokładnie po załadowaniu klasy. Jednak gwarantowane do załadowania i jego pola zainicjowane i jego Konstruktor statyczny wywoływana przed po raz pierwszy w programie odwołuje się do klasy. Konstruktor statyczny wywołana tylko raz, a Klasa statyczna pozostaje w pamięci przez czas ich istnienia domeny aplikacji, w której znajduje się program.  
   
 > [!NOTE]
->  Aby utworzyć niestatyczna klasę, która umożliwia tylko jednego wystąpienia samej siebie, należy utworzyć, zobacz [implementacja Singleton w języku C#](http://go.microsoft.com/fwlink/?LinkID=100567).  
+>  Aby utworzyć niestatyczna klasę, która umożliwia tylko jednego wystąpienia samej siebie, należy utworzyć, zobacz [implementacja Singleton w języku C#](https://msdn.microsoft.com/library/ms998558.aspx).  
   
  Poniżej przedstawiono główne elementy klasy statycznej:  
   
@@ -93,8 +93,8 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [statyczne](../../../csharp/language-reference/keywords/static.md)  
+ [static](../../../csharp/language-reference/keywords/static.md)  
  [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
- [klasy](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  [Konstruktory statyczne](../../../csharp/programming-guide/classes-and-structs/static-constructors.md)  
  [Konstruktory wystąpień](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)

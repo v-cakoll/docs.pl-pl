@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (opcje kompilatora C#)
+# <a name="-langversion-c-compiler-options"></a>-langversion (opcje kompilatora C#)
 Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się w wybranym specyfikacja języka C#.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -42,7 +42,7 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 |5|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 5.0 lub niższy <sup id="TCS5"> [CS5](#FCS5)</sup>|
 |6|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 6.0 lub niższy <sup id="TCS6"> [CS6](#FCS6)</sup>|
 |7|Kompilator akceptuje tylko składnię, która jest dostępna w C# w wersji 7.0 lub niższy <sup id="TCS7"> [CS7](#FCS7)</sup>|
-|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[Najnowsze](#FLatest)</sup>|
+|najnowsze|Kompilator akceptuje wszystkie składni odpowiedni język, który może obsługiwać. <sup id="TLatest">[Latest](#FLatest)</sup>|
 <!--- Uncomment and move these above
 |latest| once they're officially released
 |7.1|The compiler accepts only syntax that is included in C# 7.1 or lower <sup id="TCS71">[CS71](#FCS71)</sup>|
@@ -52,13 +52,13 @@ Powoduje, że kompilator, aby zaakceptować tylko składni, który znajduje się
 
   
 ## <a name="remarks"></a>Uwagi  
- Metadane odwołuje się aplikacji C# nie jest warunkiem **/langversion** — opcja kompilatora.  
+ Metadane odwołuje się aplikacji C# nie jest warunkiem **- langversion** — opcja kompilatora.  
   
- Ponieważ każdy wersji kompilatora C# zawiera rozszerzenia w specyfikacji języka **/langversion** nie daje równoważne funkcje wcześniejszej wersji kompilatora.  
+ Ponieważ każdy wersji kompilatora C# zawiera rozszerzenia w specyfikacji języka **- langversion** nie daje równoważne funkcje wcześniejszej wersji kompilatora.  
  
  Ponadto podczas aktualizacji wersji języka C# zazwyczaj pokrywa się z głównych .net Framework w wersji, nowej składni i funkcje nie są zawsze związane z danej wersji określonej platformy. Nowe funkcje ostatecznie wymaga nową aktualizację kompilatora wydaną obok poprawki C#, każdej z funkcji ma własną minimalny interfejs API .net lub typowe wymagania środowiska uruchomieniowego języka, które mogą zezwolić na uruchamianie na platformach niższego poziomu przez w tym pakiety NuGet lub innych bibliotek.
   
- Niezależnie od tego, który **/langversion** ustawienie używanie użyjesz bieżącą wersję środowiska CLR do utworzenia .exe lub .dll. Jedynym wyjątkiem jest przyjaznych zestawów i [/moduleassemblyname (opcja kompilatora C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), która pracy w obszarze **/langversion:ISO-1**.  
+ Niezależnie od tego, który **- langversion** ustawienie używanie użyjesz bieżącą wersję środowiska CLR do utworzenia .exe lub .dll. Jedynym wyjątkiem jest przyjaznych zestawów i [- moduleassemblyname (opcja kompilatora C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), która pracy w obszarze **- langversion: ISO-1**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   

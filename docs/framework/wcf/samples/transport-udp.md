@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1933d216f991b78e21a56ec67826dce0b4a7b24a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7bb9f60340915f27c451d05bfbc28e1670c9d83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="transport-udp"></a>Transport: UDP
 Przykładowe transportu UDP pokazano, jak wdrażanie UDP emisji pojedynczej i multiemisji jako niestandardowego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] transportu. Próbka opisuje zalecaną procedurą tworzenia niestandardowych transportu w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], przy użyciu platformy kanału i wykonując [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] najlepsze rozwiązania. Kroki, aby utworzyć niestandardowe transportu są następujące:  
@@ -51,7 +51,7 @@ Przykładowe transportu UDP pokazano, jak wdrażanie UDP emisji pojedynczej i mu
   
      W tym MEP jest wysyłany komunikat i odpowiedzi. Wzorzec składa się z pary żądanie / odpowiedź. Przykłady wywołań żądań i odpowiedzi są zdalnych wywołań procedur (RPC) i przeglądarka pobiera. Ten wzorzec jest nazywany również półdupleks. W tym MEP wdrożenia klienta kanałów <xref:System.ServiceModel.Channels.IRequestChannel> i wdrożenie usługi kanałów <xref:System.ServiceModel.Channels.IReplyChannel>.  
   
--   Dupleks (IDuplexChannel)  
+-   Duplex (IDuplexChannel)  
   
      Dupleks MEP umożliwia dowolnej liczby wiadomości wysłane przez klienta i odbieranie w dowolnej kolejności. Dupleks MEP przypomina rozmowy telefonicznej każdego wyrazu jest używany w przypadku komunikatu. Ponieważ obie strony może wysyłać i odbierać w tym MEP, interfejs implementowany przez kanały klient i usługa jest <xref:System.ServiceModel.Channels.IDuplexChannel>.  
   
@@ -405,7 +405,7 @@ protected override void OnApplyConfiguration(string configurationName)
 ```  
   
 ## <a name="the-udp-test-service-and-client"></a>Usługa badania UDP i klienta  
- Za pomocą tego transportu przykładowy kod testu jest dostępny w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test ustawia punktów końcowych i powiązania z kodu i innych zrobi to za pomocą konfiguracji. Zarówno testy Użyj dwa punkty końcowe. Jeden punkt końcowy używa `SampleUdpProfileBinding` z [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) ustawioną `true`. Innych punktów końcowych używa niestandardowego powiązania z `UdpTransportBindingElement`. Jest to równoważne przy użyciu `SampleUdpProfileBinding` z [ \<reliableSession >](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) ustawioną `false`. Zarówno testy Tworzenie usługi, dodawanie punktu końcowego dla każdego powiązania, otwórz usługę i poczekaj, aż użytkownik trafienie ENTER przed zamknięciem usługi.  
+ Za pomocą tego transportu przykładowy kod testu jest dostępny w katalogach UdpTestService i UdpTestClient. Kod usługi składa się z dwóch testów — jeden test ustawia punktów końcowych i powiązania z kodu i innych zrobi to za pomocą konfiguracji. Zarówno testy Użyj dwa punkty końcowe. Jeden punkt końcowy używa `SampleUdpProfileBinding` z [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) ustawioną `true`. Innych punktów końcowych używa niestandardowego powiązania z `UdpTransportBindingElement`. Jest to równoważne przy użyciu `SampleUdpProfileBinding` z [ \<reliableSession >](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) ustawioną `false`. Zarówno testy Tworzenie usługi, dodawanie punktu końcowego dla każdego powiązania, otwórz usługę i poczekaj, aż użytkownik trafienie ENTER przed zamknięciem usługi.  
   
  Podczas uruchamiania aplikacji testu usługi powinny być widoczne następujące dane wyjściowe.  
   

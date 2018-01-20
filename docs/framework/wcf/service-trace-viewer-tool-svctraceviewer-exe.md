@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9c739db4db5afad8fc379a5da4764cb9ab6804fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7526f5cda302618b2f240e5ae1c126e60b9ab5e6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>Narzędzie do przeglądania danych śledzenia usług (SvcTraceViewer.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługi Trace Viewer Tool pomaga analizować dane śledzenia diagnostycznego, które są generowane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Przeglądarki danych śledzenia usługi umożliwia łatwe scalania, widoków i filtrować komunikaty śledzenia w dzienniku, tak aby zdiagnozować, naprawy i sprawdź [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi problemy.  
@@ -422,8 +422,8 @@ ms.lasthandoff: 12/22/2017
 |![Działanie Suspend śledzenia](../../../docs/framework/wcf/media/6f7f4191-df2b-4592-8998-8379769e2d32.gif "6f7f4191-df2b-4592-8998-8379769e2d32")|Działanie Suspend śledzenia: ślad oznacza czas działania jest wstrzymana. Ślady są emitowane w działaniu zawieszone, dopóki nie wznawia działania. Zawieszone działanie oznacza, że żadne przetwarzanie się nie dzieje tego działania w zakresie źródła śledzenia. Wstrzymanie/wznowienie dane śledzenia są przydatne do profilowania. Wstrzymaj śledzenia jest emitowany Jeśli ActivityTracing jest włączony dla źródła śledzenia.|  
 |![Działanie wznowienia śledzenia](../../../docs/framework/wcf/media/1060d9d2-c9c8-4e0a-9988-cdc2f7030f17.gif "1060d9d2-c9c8-4e0a-9988-cdc2f7030f17")|Działanie wznowienia śledzenia: ślad oznacza czas działania zostanie wznowione po jego została wstrzymana. Śladów może wyemitować ponownie w danego działania. Wstrzymanie/wznowienie dane śledzenia są przydatne do profilowania. Wznów śledzenia jest emitowany Jeśli ActivityTracing jest włączony dla źródła śledzenia.|  
 |![Transfer](../../../docs/framework/wcf/media/b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5.gif "b2d9850e-f362-4ae5-bb8d-9f6f3ca036a5")|Transfer: Śledzenia emitowanego podczas przepływu sterowania logicznej jest przenoszona z jednego działania do drugiego. Działanie, które transferu pochodzi z może kontynuować wykonywania równoległe działanie, gdy transfer przejdzie do pracy. Śledzenie Transfer jest emitowany Jeśli ActivityTracing jest włączony dla źródła śledzenia.|  
-|![Transfer z](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Przesyłanie z: Śledzenia definiujący transfer z innego działania do bieżącego działania.|  
-|![Przenieś do](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Przesyłanie danych do: Śledzenia definiujący przeniesienia przepływu sterowania logicznych z bieżącego działania do innego działania.|  
+|![Transfer From](../../../docs/framework/wcf/media/1df215cb-b344-4f36-a20d-195999bda741.gif "1df215cb-b344-4f36-a20d-195999bda741")|Przesyłanie z: Śledzenia definiujący transfer z innego działania do bieżącego działania.|  
+|![Transfer To](../../../docs/framework/wcf/media/74255b6e-7c47-46ef-8e53-870c76b04c3f.gif "74255b6e-7c47-46ef-8e53-870c76b04c3f")|Przesyłanie danych do: Śledzenia definiujący przeniesienia przepływu sterowania logicznych z bieżącego działania do innego działania.|  
   
 ### <a name="wcf-traces"></a>Dane śledzenia WCF  
   
@@ -437,14 +437,14 @@ ms.lasthandoff: 12/22/2017
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Działanie](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: Wskazuje, że bieżące działanie jest ogólne działanie.|  
+|![Activity](../../../docs/framework/wcf/media/wcfc-defaultactivityc.gif "wcfc_defaultActivityc")|Działanie: Wskazuje, że bieżące działanie jest ogólne działanie.|  
 |![Działanie główne](../../../docs/framework/wcf/media/5dc8e0eb-1c32-4076-8c66-594935beaee9.gif "5dc8e0eb-1c32-4076-8c66-594935beaee9")|Działania głównego: wskazuje działania głównego procesu.|  
   
 ### <a name="wcf-activities"></a>Działania programu WCF  
   
 |Ikona|Opis|  
 |----------|-----------------|  
-|![Działanie środowiska](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta lub klienta. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
+|![Environment activity](../../../docs/framework/wcf/media/29fa00ac-cf78-46e5-822d-56222fff61d1.gif "29fa00ac-cf78-46e5-822d-56222fff61d1")|Działanie środowiska: działanie, które tworzy, otwiera lub zamyka [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta lub klienta. Błędy, które wystąpiło podczas fazy te będą wyświetlane w tego działania.|  
 |![Nasłuchiwanie działania](../../../docs/framework/wcf/media/d7b135f6-ec7d-45d7-9913-037ab30e4c26.gif "d7b135f6-ec7d-45d7-9913-037ab30e4c26")|Nasłuchiwanie działania: działanie, które dzienniki śledzenia związane z odbiornik. Wewnątrz tego działania możemy wyświetlić żądania odbiornika informacji i połączenia.|  
 |![Odbieranie bajtów działania](../../../docs/framework/wcf/media/2f628580-b80f-45a7-925b-616c96426c0e.gif "2f628580-b80f-45a7-925b-616c96426c0e")|Działanie bajtów odbierania: działania, który grupuje wszystkie ślady dotyczące odbierania bajtów przychodzących na połączenie między dwoma punktami końcowymi. To działanie ma zasadnicze znaczenie korelacji z działaniami transportu, propagujące ich identyfikator działania, takie jak sterownik http.sys. Błędy połączenia, takie jak przerwań pojawi się tego działania.|  
 |![Przetwarzanie komunikatów działania](../../../docs/framework/wcf/media/wcfc-executionactivityiconc.GIF "wcfc_ExecutionActivityIconc")|Przetwarzanie działania komunikatu: działania, który grupuje dane śledzenia dotyczących tworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wiadomości. Błędy z powodu nieprawidłowych koperty lub źle sformułowane wiadomości będą wyświetlane w tym działania. Wewnątrz tego działania możemy sprawdzić nagłówki komunikatów, aby sprawdzić, czy identyfikator działania pochodzi z obiektu wywołującego. Jeśli to PRAWDA, gdy przekazywane do procesu akcji działania (dalej), firma Microsoft można także przypisać dla danego działania propagowany działania identyfikator korelacji między wywołującego i ślady wywołującej.|  
@@ -463,4 +463,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>Zobacz też  
  [Używanie przeglądarki danych śledzenia usługi do wyświetlania skorelowanych danych śledzenia i rozwiązywania problemów](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
  [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Propagacja dla korelacji śledzenia End-To-End i śledzenie działań](http://msdn.microsoft.com/en-us/2c11a905-64f8-47b5-bae5-a74fc666137e)
+ [Propagacja dla korelacji śledzenia End-To-End i śledzenie działań](http://msdn.microsoft.com/library/2c11a905-64f8-47b5-bae5-a74fc666137e)

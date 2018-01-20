@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="overview-of-the-net-framework"></a>Przegląd programu .NET Framework
 
@@ -96,7 +96,7 @@ Zgodnie z regułami z biblioteki klas zorientowane obiektowo, typy .NET Framewor
 
 - Aplikacje zorientowane na usługę przy użyciu usługi Windows Communication Foundation (WCF). Zobacz [zorientowane na usługę aplikacje z usługą WCF](../../../docs/framework/wcf/index.md).
 
-- Aplikacje z obsługą przepływu pracy przy użyciu systemu Windows Workflow Foundation (WF). Zobacz [tworzenia przepływów pracy w programie .NET Framework](http://msdn.microsoft.com/en-us/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Aplikacje z obsługą przepływu pracy przy użyciu systemu Windows Workflow Foundation (WF). Zobacz [tworzenia przepływów pracy w programie .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Klasy formularzy systemu Windows są rozbudowany zestaw typów wielokrotnego użytku, które znacząco upraszcza programowanie graficznego interfejsu użytkownika systemu Windows. Jeśli piszesz aplikację formularza sieci Web ASP.NET, można użyć klasy formularzy sieci Web.
 
@@ -106,5 +106,5 @@ Klasy formularzy systemu Windows są rozbudowany zestaw typów wielokrotnego uż
 [Przewodnik instalacji](../../../docs/framework/install/index.md)   
 [Podręcznik programowania](../../../docs/framework/development-guide.md)   
 [Narzędzia](../../../docs/framework/tools/index.md)   
-[.NET framework — przykłady](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[.NET framework — przykłady](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [Biblioteka klas programu .NET framework](http://go.microsoft.com/fwlink/?LinkID=227195)

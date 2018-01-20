@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d1d85e85079504e28a5b0ae78dc8be3a4b928ea3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 364362e8377f02b5d6518e6ae4d71b6dd1eafc02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="drawing-formatted-text"></a>Rysowanie formatowanego tekstu
 Ten temat zawiera omówienie funkcji <xref:System.Windows.Media.FormattedText> obiektu. Ten obiekt zapewnia kontrolę niskiego poziomu dla Rysowanie tekstu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji.  
@@ -96,7 +96,7 @@ Przykład pędzel obrazu na obrysu i wyróżnienia
  ![Kuli geometrią ścieżki tekstu](../../../../docs/framework/wpf/advanced/media/textpathgeometry01.gif "TextPathGeometry01")  
 Kuli geometrią ścieżki tekstu  
   
- Aby uzyskać więcej informacji, zobacz [porady: Tworzenie animacji PathGeometry tekstu](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67).  
+ Aby uzyskać więcej informacji, zobacz [porady: Tworzenie animacji PathGeometry tekstu](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67).  
   
  Można utworzyć inne ciekawe sposoby tekst sformatowany, gdy został przekonwertowany na <xref:System.Windows.Media.PathGeometry> obiektu. Można na przykład klipu wideo, aby wyświetlić wewnątrz niej.  
   
@@ -139,4 +139,4 @@ Wyświetlanie wideo w geometrii ścieżki tekstu
  [Dokumenty w WPF](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
  [Typografia w WPF](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
  [Tworzenie tekstu z konturem](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [Porady: Tworzenie animacji PathGeometry tekstu](http://msdn.microsoft.com/en-us/29f8051e-798a-463f-a926-a099a99e9c67)
+ [Porady: Tworzenie animacji PathGeometry tekstu](http://msdn.microsoft.com/library/29f8051e-798a-463f-a926-a099a99e9c67)

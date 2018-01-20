@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9509cb2c6478cf82cebd696ab92cd69a7e5b4097
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 53242a7411d261a6f2860fcf319725e40cfb6dcf
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="custom-token"></a>Token niestandardowy
 W tym przykładzie przedstawiono sposób dodawania niestandardowych implementacji tokenu do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] aplikacji. W przykładzie użyto `CreditCardToken` do bezpieczne przekazywanie informacji o kartach kredytowych klienta do usługi. Token jest przekazywany w nagłówku wiadomości WS-Security jest podpisany i szyfrowana przy użyciu elementu powiązania zabezpieczeń symetrycznego wraz z treści wiadomości i innych nagłówków komunikatów. Jest to przydatne w sytuacjach, gdy wbudowanych tokenów nie są wystarczające. W tym przykładzie pokazano, jak zapewnić tokenu zabezpieczeń niestandardowej z usługą zamiast przy użyciu jednej z wbudowanych tokenów. Usługa implementuje kontrakt definiuje wzorzec komunikacji żądanie odpowiedź.  
@@ -617,7 +617,7 @@ string GetCallerCreditCardNumber()
   
 1.  Uruchom Client.exe z katalogu client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
   
-2.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+2.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computer"></a>Aby uruchomić przykład na komputerze  
   
@@ -639,7 +639,7 @@ string GetCallerCreditCardNumber()
   
 9. Na komputerze klienckim uruchom Client.exe z poziomu okna wiersza polecenia.  
   
-10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+10. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
   

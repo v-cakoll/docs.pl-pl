@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: accbc05018644e3ead4ee0c08f44ec39cad8f036
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5c43c195411b07467f1041ecc5ed55239a1327dc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-resources"></a>Zasoby usługi danych WCF
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]Tematy wprowadzające można znaleźć w następujących lokalizacjach. Wiele z tych tematów zawiera również linki do powiązanych tematów, które zawierają więcej szczegółowych informacji.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  [Scenariusze aplikacji](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  Zapewnia to oparty na zadaniach podejście do tworzenia [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i aplikacje, które uzyskują dostęp do [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródeł danych.  
   
- [Program Visual Studio i .NET Framework — słownik](http://msdn.microsoft.com/en-us/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
+ [Program Visual Studio i .NET Framework — słownik](http://msdn.microsoft.com/library/6529d7c6-7e25-4426-a120-d57b239ca4eb)  
  Obejmuje terminów używanych w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] dokumentacji.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  

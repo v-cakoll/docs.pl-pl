@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 32607c853506ae7339057893c10fd9931e5823be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Konfigurowanie aplikacji za pomocą plików konfiguracji
 .NET Framework za pomocą plików konfiguracji zapewnia deweloperom i administratorom kontrolę i elastyczność za pośrednictwem aplikacji sposób uruchamiania. Pliki konfiguracji to pliki XML, które można zmieniać w razie potrzeby. Administrator może kontrolować, mogą uzyskiwać dostęp do chronionych zasobów aplikacji, które wersje zestawy aplikacja będzie używać i gdzie znajdują się aplikacje zdalne i obiektów. Deweloperzy można umieścić ustawień w plikach konfiguracji, co eliminuje konieczność ponownie skompilować aplikację za każdym razem, gdy zmienia ustawienia. W tej sekcji opisano, jakie można skonfigurować, dlaczego Konfigurowanie aplikacji może być pomocne.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="machine-configuration-files"></a>Pliki konfiguracji komputera  
- Plik konfiguracji komputera — Machine.config — zawiera ustawienia, które są stosowane do całego komputera. Ten plik znajduje się w folderze %*ścieżka instalacji środowiska uruchomieniowego*%\Config katalogu. Machine.config zawiera ustawienia konfiguracji dla zestawu komputera powiązanie wbudowanych [zdalnych kanałów](http://msdn.microsoft.com/en-us/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)i platformy ASP.NET.  
+ Plik konfiguracji komputera — Machine.config — zawiera ustawienia, które są stosowane do całego komputera. Ten plik znajduje się w folderze %*ścieżka instalacji środowiska uruchomieniowego*%\Config katalogu. Machine.config zawiera ustawienia konfiguracji dla zestawu komputera powiązanie wbudowanych [zdalnych kanałów](http://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18)i platformy ASP.NET.  
   
  System konfiguracji najpierw wyszukiwana w pliku konfiguracji maszyny [  **\<appSettings >** elementu](~/docs/framework/configure-apps/file-schema/appsettings/index.md) i innych sekcji konfiguracji, które deweloper może zdefiniować. Następnie przeszukuje plik konfiguracji aplikacji. Aby zachować możliwość zarządzania plikiem konfiguracji komputera, najlepiej jest umieścić te ustawienia w pliku konfiguracji aplikacji. Jednak umieszczenie tych ustawień w pliku konfiguracji komputera może sprawić, że system będzie łatwiejszy w utrzymaniu. Na przykład, jeśli zarówno aplikacja kliencka, jak i serwerowa, używa składnika innej firmy, łatwiej jest umieścić ustawienia dla tego składnika w jednym miejscu. W tym przypadku plik konfiguracji komputera jest właściwym miejscem dla tych ustawień, ponieważ dzięki temu te same ustawienia nie znajdują się w dwóch różnych plikach.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Aplikacja obsługiwana w programie ASP.NET.  
   
-     Aby uzyskać więcej informacji na temat plików konfiguracji ASP.NET, zobacz [ustawień konfiguracji platformy ASP.NET](http://msdn.microsoft.com/en-us/116608f3-c03d-4413-9fc7-978703e18b0f)  
+     Aby uzyskać więcej informacji na temat plików konfiguracji ASP.NET, zobacz [ustawień konfiguracji platformy ASP.NET](http://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f)  
   
 -   Aplikacja obsługiwana w programie Internet Explorer.  
   
@@ -133,9 +133,9 @@ ms.lasthandoff: 12/22/2017
  [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Określanie lokalizacji zestawu](../../../docs/framework/configure-apps/specify-assembly-location.md)  
  [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [Rejestrowanie obiektów zdalnych za pomocą plików konfiguracji](http://msdn.microsoft.com/en-us/bc503ee1-c811-4f82-9525-470343326adc)  
+ [Rejestrowanie obiektów zdalnych za pomocą plików konfiguracji](http://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
  [Administrowanie witryną sieci Web ASP.NET](http://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
+ [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
  [Caspol.exe (narzędzie zasad zabezpieczeń dostępu do kodu)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
  [Zestawy w środowisku uruchomieniowym CLR](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [Obiekty zdalnego](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)
+ [Obiekty zdalnego](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)

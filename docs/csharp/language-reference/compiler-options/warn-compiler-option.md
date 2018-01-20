@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn (opcje kompilatora C#)
-**/ Warn** opcji określa poziom ostrzeżenia kompilatora do wyświetlenia.  
+# <a name="-warn-c-compiler-options"></a>-warn (opcje kompilatora C#)
+**-Warn** opcji określa poziom ostrzeżenia kompilatora do wyświetlenia.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -47,9 +47,9 @@ ms.lasthandoff: 11/21/2017
 ## <a name="remarks"></a>Uwagi  
  Aby uzyskać informacje dotyczące błędów lub ostrzeżeń, można wyszukiwać kod błędu w indeksie Pomocy. Aby inne sposoby uzyskania informacji na temat błędu lub ostrzeżenia, zobacz [błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Użyj [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) na traktowanie wszystkich ostrzeżeń jako błędy. Użyj [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) Aby wyłączyć określone ostrzeżenia.  
+ Użyj [- warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) na traktowanie wszystkich ostrzeżeń jako błędy. Użyj [- nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) Aby wyłączyć określone ostrzeżenia.  
   
- **/w** jest krótka forma **/ warn**.  
+ **-w** jest krótka forma **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
@@ -65,9 +65,9 @@ ms.lasthandoff: 11/21/2017
  Kompiluj `in.cs` i mieć kompilatora tylko wyświetlić ostrzeżenia poziomu 1:  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

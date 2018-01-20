@@ -17,31 +17,31 @@ ms.assetid: 6dd5b6f2-cd1d-4593-a9f4-1c2ed9404ca0
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d74a338336d5878cb8d6f212076bb9f1eb7ef768
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2cf6919ee2d4f0a4031e18d46b9e5ebaf816b120
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="optimize-c-compiler-options"></a>/optimize (opcje kompilatora C#)
-**/ Optimize** opcja włącza lub wyłącza wykonywanie optymalizacji przez kompilator, aby plik wyjściowy był mniejszy, szybszy i bardziej wydajne.  
+# <a name="-optimize-c-compiler-options"></a>-optimize (opcje kompilatora C#)
+**-Zoptymalizować** opcja włącza lub wyłącza wykonywanie optymalizacji przez kompilator, aby plik wyjściowy był mniejszy, szybszy i bardziej wydajne.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/optimize[+ | -]  
+-optimize[+ | -]  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- **/ optimize** również informuje środowisko uruchomieniowe języka wspólnego do optymalizacji kodu w czasie wykonywania.  
+ **-optimize** również informuje środowisko uruchomieniowe języka wspólnego do optymalizacji kodu w czasie wykonywania.  
   
- Optymalizacje są domyślnie wyłączone. Określ **/ optimize +** do włączenia optymalizacji.  
+ Optymalizacje są domyślnie wyłączone. Określ **-zoptymalizować +** do włączenia optymalizacji.  
   
- Podczas kompilowania modułu używanego przez zespół, należy używać tego samego **/ optimize** ustawienia jak zestawu.  
+ Podczas kompilowania modułu używanego przez zespół, należy używać tego samego **-zoptymalizować** ustawienia jak zestawu.  
   
- **/o** jest krótka forma **/ optimize**.  
+ **-o** jest krótka forma **-zoptymalizować**.  
   
- Istnieje możliwość łączenia **/ optimize** i [/debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) opcje.  
+ Istnieje możliwość łączenia **— zoptymalizować** i [-debug](../../../csharp/language-reference/compiler-options/debug-compiler-option.md) opcje.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
@@ -57,9 +57,9 @@ ms.lasthandoff: 11/21/2017
  Kompiluj `t2.cs` i Włącz optymalizacje kompilatora:  
   
 ```console  
-csc t2.cs /optimize  
+csc t2.cs -optimize  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

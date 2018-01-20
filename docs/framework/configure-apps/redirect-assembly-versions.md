@@ -20,11 +20,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 8abf7868312883e264848b0de1aa803ce3be5839
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 26475a543950b4f7161243d72252cc1982adf93f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="redirecting-assembly-versions"></a>Przekierowywanie wersji zestawu
 Można przekierować powiązanie kompilacji odwołania do zestawów platformy .NET Framework, zestawy innych firm lub zestawy własnych aplikacji. Można przekierować aplikację, aby użyć innej wersji zestawu na kilka sposobów: za pomocą zasad wydawcy, za pomocą pliku konfiguracji aplikacji; lub za pomocą pliku konfiguracji komputera. W tym artykule omówiono sposób działania powiązań zestawów w programie .NET Framework i jak można je skonfigurować.  
@@ -170,7 +170,7 @@ Można przekierować powiązanie kompilacji odwołania do zestawów platformy .N
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
- [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Instrukcje: tworzenie zasad wydawcy](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)

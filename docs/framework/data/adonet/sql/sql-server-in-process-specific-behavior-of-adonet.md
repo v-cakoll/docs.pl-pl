@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: caafafe1efb7715722fddf8df79f6e84dd01ece7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a71d450753fca7d2b3535233f7528c442ec0532a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>Zachowanie w procesie specyficzne dla serwera SQL ADO.NET
 Istnieją cztery główne rozszerzeń funkcjonalności ADO.NET w <xref:Microsoft.SqlServer.Server> przestrzeni nazw, które są przeznaczone dla w trakcie: <xref:Microsoft.SqlServer.Server.SqlContext>, <xref:Microsoft.SqlServer.Server.SqlPipe>, <xref:Microsoft.SqlServer.Server.SqlTriggerContext>, i <xref:Microsoft.SqlServer.Server.SqlDataRecord>.  
@@ -30,5 +30,5 @@ Istnieją cztery główne rozszerzeń funkcjonalności ADO.NET w <xref:Microsoft
 1.  [SQL Server w trakcie określonych rozszerzeń ADO.NET](http://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>Zobacz też  
- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

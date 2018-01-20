@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6b2c19e6076be6364f6a14159a5376a0c8c45731
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Porady: mapowanie wyników HRESULT i wyjątków
 Metody modelu COM raportów o błędach przez zwrócenie wyników HRESULT; metod .NET Raportuj je przez zgłaszanie wyjątków. Środowisko uruchomieniowe obsługi przejścia między nimi. Każda klasa wyjątków w programie .NET Framework mapuje HRESULT.  
@@ -78,55 +78,55 @@ CMyClass::MethodThatThrows
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
 |**COR_E_CORE**|**CoreException**|  
 |**NTE_FAIL**|**Cryptographicexception —**|  
-|**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**Directorynotfoundexception —**|  
-|**COR_E_DIVIDEBYZERO**|**Dividebyzeroexception —**|  
-|**COR_E_DUPLICATEWAITOBJECT**|**Duplicatewaitobjectexception —**|  
-|**COR_E_ENDOFSTREAM**|**EndOfStreamException —**|  
-|**COR_E_TYPELOAD**|**Entrypointnotfoundexception —**|  
+|**COR_E_DIRECTORYNOTFOUND lub ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
+|**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
+|**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
+|**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
+|**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
 |**COR_E_EXCEPTION**|**Wyjątek**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
-|**COR_E_FIELDACCESS**|**Fieldaccessexception —**|  
+|**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
-|**COR_E_INVALIDCAST lub E_NOINTERFACE**|**Invalidcastexception —**|  
+|**COR_E_INVALIDCAST lub E_NOINTERFACE**|**InvalidCastException**|  
 |**COR_E_INVALIDCOMOBJECT**|**InvalidComObjectException**|  
-|**COR_E_INVALIDFILTERCRITERIA**|**Invalidfiltercriteriaexception —**|  
+|**COR_E_INVALIDFILTERCRITERIA**|**InvalidFilterCriteriaException**|  
 |**COR_E_INVALIDOLEVARIANTTYPE**|**Invalidolevarianttypeexception —**|  
 |**COR_E_INVALIDOPERATION**|**InvalidOperationException**|  
 |**COR_E_IO**|**IOException**|  
 |**COR_E_MEMBERACCESS**|**AccessException**|  
 |**COR_E_METHODACCESS**|**Powstanie wyjątku MethodAccessException**|  
-|**COR_E_MISSINGFIELD**|**Missingfieldexception —**|  
-|**COR_E_MISSINGMANIFESTRESOURCE**|**Missingmanifestresourceexception —**|  
+|**COR_E_MISSINGFIELD**|**MissingFieldException**|  
+|**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
 |**COR_E_MISSINGMEMBER**|**Missingmemberexception —**|  
 |**COR_E_MISSINGMETHOD**|**Missingmethodexception —**|  
-|**COR_E_MULTICASTNOTSUPPORTED**|**Multicastnotsupportedexception —**|  
-|**COR_E_NOTFINITENUMBER**|**Notfinitenumberexception —**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
+|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
 |**E_NOTIMPL**|**Notimplementedexception —**|  
 |**COR_E_NOTSUPPORTED**|**Notsupportedexception —**|  
 |**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY lub**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
-|**COR_E_OVERFLOW**|**Overflowexception —**|  
-|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**Pathtoolongexception —**|  
-|**COR_E_RANK**|**Rankexception —**|  
-|**COR_E_REFLECTIONTYPELOAD**|**Wyjątku ReflectionTypeLoadException**|  
+|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
+|**COR_E_RANK**|**RankException**|  
+|**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
 |**COR_E_REMOTING**|**Remotingexception —**|  
-|**COR_E_SAFEARRAYTYPEMISMATCH**|**Safearraytypemismatchexception —**|  
+|**COR_E_SAFEARRAYTYPEMISMATCH**|**SafeArrayTypeMismatchException**|  
 |**COR_E_SECURITY**|**SecurityException**|  
 |**COR_E_SERIALIZATION**|**SerializationException**|  
-|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**Stackoverflowexception —**|  
+|**COR_E_STACKOVERFLOW orERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**Synchronizationlockexception —**|  
 |**COR_E_SYSTEM**|**SystemException**|  
 |**COR_E_TARGET**|**Targetexception —**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**Targetparametercountexception —**|  
 |**COR_E_THREADABORTED**|**ThreadAbortException**|  
-|**COR_E_THREADINTERRUPTED**|**Threadinterruptedexception —**|  
+|**COR_E_THREADINTERRUPTED**|**ThreadInterruptedException**|  
 |**COR_E_THREADSTATE**|**Threadstateexception —**|  
 |**COR_E_THREADSTOP**|**ThreadStopException**|  
-|**COR_E_TYPELOAD**|**TypeLoadException —**|  
-|**COR_E_TYPEINITIALIZATION**|**Typeinitializationexception —**|  
+|**COR_E_TYPELOAD**|**TypeLoadException**|  
+|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
 |**COR_E_VERIFICATION**|**Verificationexception —**|  
 |**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
@@ -142,14 +142,14 @@ CMyClass::MethodThatThrows
 |---------------------|------------------------------------|  
 |**Kod błędu**|Zwrócony wynik HRESULT z wywołania.|  
 |**HelpLink**|Jeśli **IErrorInfo -> HelpContext** jest różna od zera, ten ciąg jest tworzony przez łączenie **IErrorInfo -> GetHelpFile** i "#" i **IErrorInfo -> GetHelpContext**. W przeciwnym razie zostanie zwrócony ciąg z **IErrorInfo -> GetHelpFile**.|  
-|**We właściwości InnerException**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
+|**InnerException**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
 |**Komunikat**|Ciąg zwrócony przez **IErrorInfo -> GetDescription**.|  
 |**Źródło**|Ciąg zwrócony przez **IErrorInfo -> GetSource**.|  
-|**Ślad stosu**|Ślad stosu.|  
+|**StackTrace**|Ślad stosu.|  
 |**TargetSite**|Nazwa metody, która zwrócił niepowodzenie HRESULT.|  
   
  Wyjątek pól, takich jak **komunikat**, **źródła**, i **ślad stosu** nie są dostępne dla **stackoverflowexception —**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie COM zaawansowane](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
+ [Współdziałanie COM zaawansowane](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
  [Wyjątki](../../../docs/standard/exceptions/index.md)

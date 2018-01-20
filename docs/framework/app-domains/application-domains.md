@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 668edf8cacc4d675592c776b0a24923f447d8810
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fe2d8ea8be2781e747398e18cc99cc6ce6cf6dc5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-domains"></a>Domeny aplikacji
 Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja pomiędzy aplikacjami. Na przykład system Windows używa procesów do izolowania aplikacji. Izolacja jest niezbędne do zapewnienia, że kod działający w jednej aplikacji nie może niekorzystnie wpłynąć na innych, niezależnych aplikacji.  
@@ -64,7 +64,7 @@ Systemy operacyjne i środowiska wykonawcze zwykle zapewnia jakiegoś izolacja p
     > [!NOTE]
     >  Nie można zwolnić pojedyncze zestawy lub typów. Zakończenie domeny może być usunięty z pamięci.  
   
--   Kodu uruchamianego w jednej aplikacji nie może bezpośrednio kod dostępu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza izolacja, zapobiegając bezpośrednich połączeń między obiektami w różnych domenach aplikacji. Obiekty, które przekazują między domenami są kopiowane lub dostęp do serwera proxy. Jeśli obiekt jest kopiowana, wywołania do obiektu jest lokalny. Oznacza to, że zarówno wywołującego i obiektu, do którego nastąpiło odwołanie znajdują się w tej samej domenie aplikacji. Jeśli obiekt jest dostępny za pośrednictwem serwera proxy, wywołanie do obiektu jest zdalny. W takim przypadku wywołującego i obiektu, do którego nastąpiło odwołanie znajdują się w różnych domenach aplikacji. Wywołania między domenami korzystać z tej samej infrastruktury zdalne wywołanie jako wywołań między dwoma procesami lub między dwoma komputerami. W efekcie metadanych dla obiektu, do którego nastąpiło odwołanie muszą być dostępne dla obu domen aplikacji, która umożliwia wywołanie metody są prawidłowo kompilacji JIT. Jeśli domena wywołujący nie ma dostępu do metadanych dla obiekt wywoływany, może się nie powieść kompilacji za pomocą wyjątku typu **System.IO.FileNotFound**. Zobacz [obiektów zdalnych](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58) więcej szczegółów. Mechanizm ustalania sposobu dostępnych obiektów między domenami jest określana przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
+-   Kodu uruchamianego w jednej aplikacji nie może bezpośrednio kod dostępu lub zasobów z innej aplikacji. Środowisko uruchomieniowe języka wspólnego wymusza izolacja, zapobiegając bezpośrednich połączeń między obiektami w różnych domenach aplikacji. Obiekty, które przekazują między domenami są kopiowane lub dostęp do serwera proxy. Jeśli obiekt jest kopiowana, wywołania do obiektu jest lokalny. Oznacza to, że zarówno wywołującego i obiektu, do którego nastąpiło odwołanie znajdują się w tej samej domenie aplikacji. Jeśli obiekt jest dostępny za pośrednictwem serwera proxy, wywołanie do obiektu jest zdalny. W takim przypadku wywołującego i obiektu, do którego nastąpiło odwołanie znajdują się w różnych domenach aplikacji. Wywołania między domenami korzystać z tej samej infrastruktury zdalne wywołanie jako wywołań między dwoma procesami lub między dwoma komputerami. W efekcie metadanych dla obiektu, do którego nastąpiło odwołanie muszą być dostępne dla obu domen aplikacji, która umożliwia wywołanie metody są prawidłowo kompilacji JIT. Jeśli domena wywołujący nie ma dostępu do metadanych dla obiekt wywoływany, może się nie powieść kompilacji za pomocą wyjątku typu **System.IO.FileNotFound**. Zobacz [obiektów zdalnych](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58) więcej szczegółów. Mechanizm ustalania sposobu dostępnych obiektów między domenami jest określana przez obiekt. Aby uzyskać więcej informacji, zobacz <xref:System.MarshalByRefObject?displayProperty=nameWithType>.  
   
 -   Zachowanie kodu jest ograniczone w zależności od aplikacji, w której jest uruchamiana. Innymi słowy domeny aplikacji zawiera ustawienia konfiguracji, takich jak zasady wersji aplikacji, lokalizację wszystkie zestawy zdalnego, który uzyskuje dostęp do oraz informacje o tym, gdzie można znaleźć zestawy, które są ładowane do domeny.  
   

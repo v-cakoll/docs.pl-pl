@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 56d094e3b5a834b77cce58f1f554e4e2871e3e46
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2ce17ef15a5b582a9df0f16d7e0ac82df626579d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="managed-and-unmanaged-threading-in-windows"></a>Zarządzana i niezarządzana wątkowość w systemie Windows
-Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym utworzone przez środowisko uruchomieniowe języka wspólnego wątki i utworzone poza środowisko uruchomieniowe, które wprowadź zarządzanego środowiska do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w procesie, które kiedykolwiek wykonali kodu w ramach zarządzanego środowiska wykonawczego. Nie śledzi inne wątki. Wątki można wprowadzić zarządzanego środowiska wykonawczego za pomocą modelu COM interop (ponieważ środowisko uruchomieniowe przedstawia zarządzanych obiektów w postaci obiektów COM niezarządzane world), modelu COM [metody DllGetClassObject](https://msdn.microsoft.com/en-us/library/ms680760.aspx) funkcji i wywołanie platformy.  
+Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threading.Thread> klasy, w tym utworzone przez środowisko uruchomieniowe języka wspólnego wątki i utworzone poza środowisko uruchomieniowe, które wprowadź zarządzanego środowiska do wykonywania kodu. Środowisko uruchomieniowe monitoruje wszystkie wątki w procesie, które kiedykolwiek wykonali kodu w ramach zarządzanego środowiska wykonawczego. Nie śledzi inne wątki. Wątki można wprowadzić zarządzanego środowiska wykonawczego za pomocą modelu COM interop (ponieważ środowisko uruchomieniowe przedstawia zarządzanych obiektów w postaci obiektów COM niezarządzane world), modelu COM [metody DllGetClassObject](https://msdn.microsoft.com/library/ms680760.aspx) funkcji i wywołanie platformy.  
   
  Gdy niezarządzany wątek pojawia się za pośrednictwem środowiska uruchomieniowego, na przykład wywoływana otoka COM, system sprawdza magazynu wątków lokalnych wątek do wyszukiwania dla wewnętrznego zarządzanych <xref:System.Threading.Thread> obiektu. Jeśli został znaleziony, środowisko wykonawcze jest już świadomość tego wątku. Nie można znaleźć jednego, jednak środowiska uruchomieniowego tworzy nową <xref:System.Threading.Thread> obiektu i instaluje je w magazynie lokalnej wątku tego wątku.  
   
@@ -49,7 +49,7 @@ Zarządzanie wszystkie wątki odbywa się za pośrednictwem <xref:System.Threadi
 |**WaitForSingleObject** na dojście wątku|<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType>|  
 |**ExitThread**|Odpowiednika|  
 |**GetCurrentThread**|<xref:System.Threading.Thread.CurrentThread%2A?displayProperty=nameWithType>|  
-|**Wykonanie funkcji SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
+|**SetThreadPriority**|<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>|  
 |Odpowiednika|<xref:System.Threading.Thread.Name%2A?displayProperty=nameWithType>|  
 |Odpowiednika|<xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>|  
 |Zamknij, aby **funkcja CoInitializeEx** (OLE32. BIBLIOTEKI DLL)|<xref:System.Threading.Thread.ApartmentState%2A?displayProperty=nameWithType>|  

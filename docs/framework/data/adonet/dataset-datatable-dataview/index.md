@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: fb8cf2c9f763ea32bb7c7907111fea80e542a7f7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5fe09601be7173fd1a9228dc090732ded7afdd90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="datasets-datatables-and-dataviews"></a>Elementy DataSet, DataTable i DataView
 ADO.NET <xref:System.Data.DataSet> jest rezydentny reprezentację danych, która zapewnia spójny model programowania relacyjne niezależnie od tego źródła danych zawiera. A <xref:System.Data.DataSet> reprezentuje kompletny zestaw danych w tym tabel, które zawierają, kolejność i Zachowaj dane, jak również relacje między tabelami.  
@@ -31,7 +31,7 @@ ADO.NET <xref:System.Data.DataSet> jest rezydentny reprezentację danych, która
   
 -   Ładowanie i utrwalić <xref:System.Data.DataSet> zawartości za pomocą języka XML. Aby uzyskać więcej informacji, zobacz [za pomocą XML w zestawie danych](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md).  
   
- Silnie typizowaną <xref:System.Data.DataSet> również może być transportowane przy użyciu usługi XML sieci Web. Projekt <xref:System.Data.DataSet> to idealny dla transportu danych przy użyciu usług XML sieci Web. Omówienie usług XML sieci Web, zobacz [Omówienie usług XML sieci Web](http://msdn.microsoft.com/en-us/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d). Na przykład eksploatującego <xref:System.Data.DataSet> usługi XML sieci Web, zobacz temat [korzystających z zestawu danych z usługi XML sieci Web](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
+ Silnie typizowaną <xref:System.Data.DataSet> również może być transportowane przy użyciu usługi XML sieci Web. Projekt <xref:System.Data.DataSet> to idealny dla transportu danych przy użyciu usług XML sieci Web. Omówienie usług XML sieci Web, zobacz [Omówienie usług XML sieci Web](http://msdn.microsoft.com/library/9db0c7b8-bca6-462b-9be5-f5f9a7f05a4d). Na przykład eksploatującego <xref:System.Data.DataSet> usługi XML sieci Web, zobacz temat [korzystających z zestawu danych z usługi XML sieci Web](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie elementu DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  

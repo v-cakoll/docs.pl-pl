@@ -32,11 +32,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0bb3ab57d78e1a7b6d53261af50d4698ab1a4ff2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2cd2b8e8ecb0e5d451ebf3c6823144e4a90e0d79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-the-codedom"></a>Używanie modelu CodeDOM
 Modelu CodeDOM zawiera typy, które reprezentują wiele typów wspólnych elementów kodu źródłowego. Można zaprojektować program, który tworzy modelu kodu źródłowego za pomocą modelu CodeDOM elementów do łączenia z wykresu obiektu. Ten wykres obiektu może być renderowany jako kodu źródłowego za pomocą modelu CodeDOM generator kodu dla obsługiwanych języków programowania. Modelu CodeDOM mogą służyć do kompilowania kodu źródłowego w ramach zestawu binarnego.  
@@ -136,4 +136,4 @@ Modelu CodeDOM zawiera typy, które reprezentują wiele typów wspólnych elemen
   
  Dokumentacja dla każdego z typów CodeDOM, zobacz dokumentację odwołanie <xref:System.CodeDom> przestrzeni nazw.  
   
- Szybkie wykresu można znaleźć elementu CodeDOM, który reprezentuje element kodu dla określonego typu, zobacz [CodeDOM krótkimi opisami](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524).
+ Szybkie wykresu można znaleźć elementu CodeDOM, który reprezentuje element kodu dla określonego typu, zobacz [CodeDOM krótkimi opisami](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524).

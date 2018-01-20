@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e478f145511266a919b1bc948e3218b60f3de993
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 85096406ae8996713d4861c805d75af42d8c1813
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="provider-manifest-specification"></a>Specyfikacja manifestu dostawcy
 W tej sekcji omówiono sposób dostawcy magazynu danych może obsługiwać typy i funkcje w magazynie danych.  
@@ -102,7 +102,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 ```  
   
 #### <a name="using-a-provider-manifest-token"></a>Za pomocą tokenu manifestu dostawcy  
- W scenariuszu w trybie offline token jest pobierany z reprezentacji pliku SSDL. Plik SSDL pozwala na określenie ProviderManifestToken (zobacz [elementu schematu (SSDL)](http://msdn.microsoft.com/en-us/fec75ae4-7f16-4421-9265-9dac61509222) Aby uzyskać więcej informacji). Na przykład jeśli nie można otworzyć połączenia, pliku SSDL ma token manifestu dostawcy, który określa informacje o manifeście.  
+ W scenariuszu w trybie offline token jest pobierany z reprezentacji pliku SSDL. Plik SSDL pozwala na określenie ProviderManifestToken (zobacz [elementu schematu (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222) Aby uzyskać więcej informacji). Na przykład jeśli nie można otworzyć połączenia, pliku SSDL ma token manifestu dostawcy, który określa informacje o manifeście.  
   
 ```  
 public DbProviderManifest GetProviderManifest(string manifestToken);  

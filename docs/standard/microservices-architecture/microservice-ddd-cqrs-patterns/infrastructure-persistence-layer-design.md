@@ -1,7 +1,7 @@
 ---
 title: "Projektowanie infrastruktury warstwę trwałości"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie infrastruktury warstwę trwałości"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/08/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9fd09ad4e9ff36e8ab2478ff3e1d5226974a4d17
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projektowanie infrastruktury warstwę trwałości
 
@@ -142,7 +142,7 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
      [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Wzorzec repozytorium**
-    [*https://msdn.microsoft.com/en-us/library/ff649690.aspx*](https://msdn.microsoft.com/en-us/library/ff649690.aspx)
+    [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
 
 -   **Wzorzec repozytorium: Danych abstrakcję funkcji trwałości**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
@@ -166,8 +166,8 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
 
 -   **Evans, marek (2004). Domena zmiennych projektu. Addison-Wesley. str. 224.**
 
--   **Wymagania. Pole Fowler**
+-   **Wymagania. Martin Fowler**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]
-[Poprzednie] (domena — zdarzenia projekt implementation.md) [dalej] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)
+[Previous] (domain-events-design-implementation.md) [Next] (infrastructure-persistence-layer-implemenation-entity-framework-core.md)

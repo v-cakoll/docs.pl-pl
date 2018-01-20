@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2d2c1c021759c7032257e95eb2cad202a461dc05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5a0a4c2bca136377b9c6812008189dae009e195f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Źródła danych obsługiwane przez formularze systemu Windows
 Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z danych przechowywanych w bazach danych. Wiązanie danych formularzy systemu Windows, umożliwia dostęp do danych z baz danych, a także dane w inne struktury, takich jak kolekcje i tablic tak długo, jak zostały spełnione pewne wymagania minimalne.  
@@ -48,7 +48,7 @@ Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z da
  Formularze systemu Windows obsługuje właściwości kontrolki powiązania danych właściwości publicznych na wystąpienie obiektu przy użyciu <xref:System.Windows.Forms.Binding> typu. Formularze systemu Windows umożliwia powiązanie formantów na podstawie listy, takich jak <xref:System.Windows.Forms.ListControl> do obiektu wystąpienia, gdy <xref:System.Windows.Forms.BindingSource> jest używany.  
   
  tablicą lub kolekcją  
- Do działania jako źródło danych, musi implementować listy <xref:System.Collections.IList> interfejsu; przykładem może być tablicę, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na tablice, zobacz [porady: tworzenie tablicy obiektów (Visual Basic)](http://msdn.microsoft.com/en-us/6b64e069-0387-400c-9081-3bdc581020c3).  
+ Do działania jako źródło danych, musi implementować listy <xref:System.Collections.IList> interfejsu; przykładem może być tablicę, która jest wystąpieniem <xref:System.Array> klasy. Aby uzyskać więcej informacji na tablice, zobacz [porady: tworzenie tablicy obiektów (Visual Basic)](http://msdn.microsoft.com/library/6b64e069-0387-400c-9081-3bdc581020c3).  
   
  Ogólnie rzecz biorąc, należy użyć <xref:System.ComponentModel.BindingList%601> podczas tworzenia list obiektów dla powiązania danych. <xref:System.ComponentModel.BindingList%601>jest ogólny wersja <xref:System.ComponentModel.IBindingList> interfejsu. <xref:System.ComponentModel.IBindingList> Rozszerza interfejs <xref:System.Collections.IList> interfejsu przez dodanie właściwości, metody i wymaganych przez powiązanie dwukierunkowe danych zdarzenia.  
   
@@ -58,15 +58,15 @@ Tradycyjnie wiązania danych został użyty w aplikacjach mógł korzystać z da
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]obiekty danych  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]udostępnia szereg struktur danych jest odpowiedni dla powiązania. Każdy różni się w jego wiedzy i złożoności.  
   
--   <xref:System.Data.DataColumn>., A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym liczbę kolumn w skład tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych blokad kolumny (na przykład utworzyć samochodów w tabelę opisującą samochodów). Możesz można prosty — wiązanie formantu (takich jak <xref:System.Windows.Forms.TextBox> formantu <xref:System.Windows.Forms.Control.Text%2A> właściwości) do kolumny w tabeli danych.  
+-   <xref:System.Data.DataColumn>. A <xref:System.Data.DataColumn> jest istotne blokiem konstrukcyjnym <xref:System.Data.DataTable>, w tym liczbę kolumn w skład tabeli. Każdy <xref:System.Data.DataColumn> ma <xref:System.Data.DataColumn.DataType%2A> właściwość, która określa rodzaj danych blokad kolumny (na przykład utworzyć samochodów w tabelę opisującą samochodów). Możesz można prosty — wiązanie formantu (takich jak <xref:System.Windows.Forms.TextBox> formantu <xref:System.Windows.Forms.Control.Text%2A> właściwości) do kolumny w tabeli danych.  
   
--   <xref:System.Data.DataTable>., A <xref:System.Data.DataTable> jest reprezentacja tabelę, z wierszy i kolumn w [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli (który określa rodzajów danych, które mogą być wprowadzane do tej tabeli), i <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Możesz można złożone — wiązanie formantu z informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> formantu do tabeli danych). Jednak po powiązaniu do <xref:System.Data.DataTable>, masz naprawdę powiązanie z tabeli widok domyślny.  
+-   <xref:System.Data.DataTable>. A <xref:System.Data.DataTable> jest reprezentacja tabelę, z wierszy i kolumn w [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. Tabela danych zawiera dwie kolekcje: <xref:System.Data.DataColumn>, reprezentujący kolumn danych w danej tabeli (który określa rodzajów danych, które mogą być wprowadzane do tej tabeli), i <xref:System.Data.DataRow>, reprezentujący wierszy danych w danej tabeli. Możesz można złożone — wiązanie formantu z informacji zawartych w tabeli danych (np. powiązania <xref:System.Windows.Forms.DataGridView> formantu do tabeli danych). Jednak po powiązaniu do <xref:System.Data.DataTable>, masz naprawdę powiązanie z tabeli widok domyślny.  
   
--   <xref:System.Data.DataView>., A <xref:System.Data.DataView> jest dostosowany widok tabeli danych, którą można filtrować i sortować. Widok danych to dane "snapshot" używane przez formanty powiązane z złożone. Można proste powiązania lub zespolonych — wiązanie z danych w widoku danych, ale należy pamiętać, że są wiązane stałej "obraz" dane, a nie źródła czystą, aktualizowania danych.  
+-   <xref:System.Data.DataView>. A <xref:System.Data.DataView> jest dostosowany widok tabeli danych, którą można filtrować i sortować. Widok danych to dane "snapshot" używane przez formanty powiązane z złożone. Można proste powiązania lub zespolonych — wiązanie z danych w widoku danych, ale należy pamiętać, że są wiązane stałej "obraz" dane, a nie źródła czystą, aktualizowania danych.  
   
--   <xref:System.Data.DataSet>., A <xref:System.Data.DataSet> jest zbiorem tabel, relacje i ograniczenia danych w bazie danych. Można wiązania proste lub złożone — wiązanie danych w zestawie danych, ale należy pamiętać, że są powiązanie domyślne <xref:System.Data.DataViewManager> dla <xref:System.Data.DataSet> (zobacz następny punktor punktu).  
+-   <xref:System.Data.DataSet>. A <xref:System.Data.DataSet> jest zbiorem tabel, relacje i ograniczenia danych w bazie danych. Można wiązania proste lub złożone — wiązanie danych w zestawie danych, ale należy pamiętać, że są powiązanie domyślne <xref:System.Data.DataViewManager> dla <xref:System.Data.DataSet> (zobacz następny punktor punktu).  
   
--   <xref:System.Data.DataViewManager>., A <xref:System.Data.DataViewManager> jest dostosowany widok całej <xref:System.Data.DataSet>, odpowiednikiem <xref:System.Data.DataView>, ale z relacjami uwzględnione. Z <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków który <xref:System.Data.DataViewManager> ma dla danej tabeli.  
+-   <xref:System.Data.DataViewManager>. A <xref:System.Data.DataViewManager> jest dostosowany widok całej <xref:System.Data.DataSet>, odpowiednikiem <xref:System.Data.DataView>, ale z relacjami uwzględnione. Z <xref:System.Data.DataViewManager.DataViewSettings%2A> kolekcji, można ustawić domyślne filtry i opcje sortowania dla dowolnego widoków który <xref:System.Data.DataViewManager> ma dla danej tabeli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiadomienie o zmianie w powiązaniu danych w formularzach Windows Forms](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)  

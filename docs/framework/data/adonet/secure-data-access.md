@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 428dd4cfb9533dbf57b984c8bc1c557f37bb7d15
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c26854af585fc026ba9abee77bc3b8a95bcaba79
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="secure-data-access"></a>Bezpieczny dostęp do danych
 Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpieczeń dostępne w odpowiedni magazyn danych lub bazy danych. Należy również wziąć pod uwagę ryzyko związane z innych funkcji lub składniki, które mogą zawierać aplikacji.  
@@ -35,7 +35,7 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)|Zawiera opis najlepszych rozwiązań dotyczących zabezpieczeń i techniki chroniące informacje dotyczące połączenia, na przykład szyfrowania parametrów połączenia za pomocą konfiguracji chronionych.|  
-|[Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywanie operacji bazy danych.|  
+|[Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)|Zawiera zalecenia dotyczące uzyskiwania dostępu do danych i wykonywanie operacji bazy danych.|  
 |[Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)|Zawiera opis sposobu tworzenia parametrów połączenia z danych wejściowych użytkownika w czasie wykonywania.|  
 |[Przegląd zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|W tym artykule opisano architekturę zabezpieczeń programu SQL Server.|  
   
@@ -89,7 +89,7 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[COM + opartej na rolach zabezpieczeń i .NET Framework](http://msdn.microsoft.com/en-us/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|W tym artykule omówiono sposobu integracji z usługami zabezpieczeń COM + kodu zarządzanego.|  
+|[COM + opartej na rolach zabezpieczeń i .NET Framework](http://msdn.microsoft.com/library/02ab22ef-e5e2-4d29-b33a-6e03d94c4981)|W tym artykule omówiono sposobu integracji z usługami zabezpieczeń COM + kodu zarządzanego.|  
   
 ## <a name="interoperating-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  .NET Framework zapewnia do interakcji z kodem niezarządzanym, w tym modelu COM składników, COM + usług, bibliotek typu zewnętrznego i wiele usług systemu operacyjnego. Praca z kodem niezarządzanym obejmuje będzie zewnątrz zabezpieczeń dla zarządzanego kodu. Zarówno w kodzie, jak i każdy kod wywołujący go musi mieć niezarządzanych uprawnień kodu (<xref:System.Security.Permissions.SecurityPermission> z <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> określona flaga). Niezarządzany kod można wprowadzać luk w zabezpieczeniach niezamierzone do aplikacji. W związku z tym należy unikać współdziałanie z kodem niezarządzanym, chyba że jest bezwzględnie konieczne.  
@@ -99,12 +99,12 @@ Aby napisać bezpiecznego kodu ADO.NET, należy zapoznać mechanizmy zabezpiecze
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)|Zawiera tematów opisujących sposób udostępnianie składników modelu COM aplikacji .NET Framework i udostępnianie składników .NET Framework modelowi COM.|  
-|[Współdziałanie COM zaawansowane](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowych.|  
+|[Współdziałanie COM zaawansowane](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Zawiera tematy zaawansowane, takie jak podstawowe zestawy międzyoperacyjne, wątków i przekazywanie niestandardowych.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [Zabezpieczenia serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md)  
- [Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/en-us/72411f32-d12a-4de8-b961-e54fca7faaf5)  
+ [Zalecenia dotyczące strategii dostępu do danych](http://msdn.microsoft.com/library/72411f32-d12a-4de8-b961-e54fca7faaf5)  
  [Ochrona informacji o połączeniu](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
  [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

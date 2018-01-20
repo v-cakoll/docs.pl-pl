@@ -11,11 +11,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76946ed1b714ba0bd01c79bb772524c84cf8b2ca
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="serialization-concepts"></a>Pojęcia dotyczące serializacji
 Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są, aby zachować stan obiektu na nośniku, dokładna kopia może zostać ponownie utworzone na późniejszym etapie, a aby wysłać obiekt przez wartość z domeny w jednej aplikacji na inny. Na przykład serializacji służy do zapisywania stanu sesji w programie ASP.NET i skopiować obiekty do Schowka w formularzach systemu Windows. On również używany łącząc do przekazywania obiektów przez wartość z domeny jedną aplikację do innego.
@@ -38,7 +38,7 @@ Gdy obiekt jest pochodną `MarshalByRefObject`, odwołanie do obiektu jest przek
  [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
  Opisuje mechanizm serializacji binarnej, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.  
   
- [Obiekty zdalnego](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Obiekty zdalnego](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Opis różnych metod komunikacji dostępnych w programie .NET Framework do komunikacji zdalnej.  
   
  [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

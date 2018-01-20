@@ -13,27 +13,27 @@ ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 242f8ada7cbffc4a6986339d28c4284b50afca25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library (opcje kompilatora C#)
-**/Target: Library** opcja powoduje, że kompilator, aby utworzyć biblioteki dołączanej (dynamicznie DLL) zamiast pliku wykonywalnego (EXE).  
+# <a name="-targetlibrary-c-compiler-options"></a>-docelowych: library (opcje kompilatora C#)
+**-Docelowa: Biblioteka** opcja powoduje, że kompilator, aby utworzyć biblioteki dołączanej (dynamicznie DLL), zamiast pliku wykonywalnego (EXE).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/target:library  
+-target:library  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
  Plik DLL, który zostanie utworzony z rozszerzeniem dll.  
   
- Jeżeli nie określono inaczej z [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.  
+ Chyba że określono inaczej [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md) opcji Nazwa pliku wyjściowego przyjmuje nazwę pierwszego pliku wejściowego.  
   
- Jeśli określona w wierszu polecenia, wszystkie pliki do następnej **/out** lub **/target: module** opcji są używane do tworzenia pliku dll.  
+ Kiedy określona w wierszu polecenia, wszystkie pliki do następnej **-out** lub **— docelowych: moduł** opcji są używane do tworzenia pliku dll.  
   
  Podczas tworzenia pliku .dll [Main](../../../csharp/programming-guide/main-and-command-args/index.md) — metoda nie jest wymagana.  
   
@@ -51,9 +51,9 @@ ms.lasthandoff: 11/21/2017
  Kompiluj `in.cs`, tworzenie `in.dll`:  
   
 ```console  
-csc /target:library in.cs  
+csc -target:library in.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [/ TARGET (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-docelowego (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)

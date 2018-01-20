@@ -11,20 +11,20 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (opcje kompilatora C#)
+# <a name="-refout-c-compiler-options"></a>-refout (opcje kompilatora C#)
 
-**/Refout** opcja określa ścieżkę pliku, w którym zestaw odwołania powinny być danymi wyjściowymi. Przekłada się `metadataPeStream` w interfejsie API emisji.
+**- Refout** opcja określa ścieżkę pliku, w którym zestaw odwołania powinny być danymi wyjściowymi. Przekłada się `metadataPeStream` w interfejsie API emisji.
 
 ## <a name="syntax"></a>Składnia
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Argumenty
@@ -45,8 +45,8 @@ Dodatkowe zestawy referencyjne usunąć metadanych (prywatne elementy członkows
 - Wszystkie metody wirtualne są przechowywane. Jawne implementacje interfejsu są zachowywane. Jawnie implementowane właściwości i zdarzenia są przechowywane, zgodnie z ich metod dostępu wirtualne (i w związku z tym są przechowywane).
 - Wszystkie pola struktury są zachowywane. (To jest kandydatem do post-C# — uściślenia 7.1)
 
-`/refout` i [ `/refonly` ](refonly-compiler-option.md) wykluczają się wzajemnie.
+`-refout` i [ `-refonly` ](refonly-compiler-option.md) wykluczają się wzajemnie.
 
 ## <a name="see-also"></a>Zobacz też
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

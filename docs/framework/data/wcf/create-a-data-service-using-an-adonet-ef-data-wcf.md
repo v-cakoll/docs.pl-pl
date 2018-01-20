@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9362aa6ea02f5878d2419ee7cbaab349cae27038
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]udostępnia dane jednostki jako usługa danych. Dane te jednostki są udostępniane przez [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] sieci Web aplikacji, która jest oparta na istniejącej bazy danych i umożliwia utworzenie nowej usługi danych tego modelu danych.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 9. Kliknij przycisk **Zakończ** aby zakończyć pracę kreatora.  
   
-     Spowoduje to utworzenie domyślny model danych, na podstawie określonej bazy danych. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Umożliwia w celu dostosowania modelu danych. Aby uzyskać więcej informacji, zobacz [zadania](http://msdn.microsoft.com/en-us/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
+     Spowoduje to utworzenie domyślny model danych, na podstawie określonej bazy danych. [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Umożliwia w celu dostosowania modelu danych. Aby uzyskać więcej informacji, zobacz [zadania](http://msdn.microsoft.com/library/7166f1f1-4de8-4bd4-86b5-5e20a2ebaccb).  
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Aby utworzyć usługę danych przy użyciu nowego modelu danych  
   

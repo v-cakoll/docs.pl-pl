@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1450acd6c4b68be79ad769106dfebc7d89484525
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ec4ac8d89d2d3a7d0dce11e5057db80190e7b963
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (Narzędzie generowania i edytowania manifestu, klient grafiki)
 MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.exe, ale z interfejsem użytkownika systemu Windows (UI). Za pomocą tego narzędzia można tworzyć, edytować i podpisywać manifesty wdrażania i aplikacji. Nowe manifestów, które są tworzone z elementem docelowym MageUI.exe [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Poprzednie wersje MageUI.exe stosuje się do poprzednich wersji .NET Framework. Dodawanie lub usuwanie zestawów z manifestu lub ponownego podpisania manifestów istniejących, MageUI.exe nie zaktualizował manifest docelowej [!INCLUDE[net_client_v40_long](../../../includes/net-client-v40-long-md.md)]. Aby uzyskać więcej informacji, zobacz [Mage.exe (Generowanie manifestu i edytowania narzędzie)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md).  
@@ -38,8 +38,8 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Polecenie|Menu|Skrót|Opis|  
 |-------------|----------|--------------|-----------------|  
-|**Manifest aplikacji**|**Plik, nowy**||Tworzy nowy manifest aplikacji.|  
-|**Manifest rozmieszczenia**|**Plik, nowy**||Tworzy nowy manifest wdrożenia.|  
+|**Manifest aplikacji**|**File, New**||Tworzy nowy manifest aplikacji.|  
+|**Manifest rozmieszczenia**|**File, New**||Tworzy nowy manifest wdrożenia.|  
 |**Otwórz**|**Plik**|CTRL+O|Otwiera do edycji istniejący manifest wdrażania, manifest aplikacji lub licencję zaufania.|  
 |**Zamknij**|**Plik**|CTRL+F4|Zamyka otwarty plik.<br /><br /> Jeśli modyfikujesz plik przed jego zamknięciem, MageUI.exe monituje o ponowne podpisywanie pliku kluczem publicznym, parą kluczy lub przechowywanym certyfikatem.|  
 |**Zapisz**|**Plik**|CTRL+S|Zapisuje na dysku dokument, który aktualnie ma fokus wprowadzania użytkownika.|  
@@ -47,11 +47,11 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Zapisz wszystkie**|**Plik**||Zapisuje zmiany wprowadzone do wszystkich plików aktualnie otwartych w MageUI.exe.|  
 |**Preferencje**|**Plik**||Otwiera **preferencje** okno dialogowe. Aby uzyskać więcej informacji, zobacz następującą sekcję.|  
 |**Zakończ**|**Plik**|ALT+F4|Zamyka program MageUI.exe.|  
-|**Wytnij**|**Edytowanie**|CTRL+X|Usuwa zaznaczony tekst z aplikacji i przenosi je do Schowka systemu Windows.|  
+|**Cut**|**Edytowanie**|CTRL+X|Usuwa zaznaczony tekst z aplikacji i przenosi je do Schowka systemu Windows.|  
 |**Kopiuj**|**Edytowanie**|CTRL+C|Kopiuje zaznaczony tekst do Schowka systemu Windows.|  
 |**Wklej**|**Edytowanie**|CTRL+V|Wkleja tekst ze Schowka systemu Windows do aktywnego elementu tekstu.|  
 |**Usuwanie**|**Edytowanie**||Usuwa element aktualnie wybrane na liście, takie jak licencji zaufania na **Manifest wdrażania** kartę.|  
-|**Zamknij wszystkie**|**Okno**||Zamyka wszystkie pliki otwarte w MageUI.exe. Jeżeli jeden lub więcej plików wymagają zapisania, MageUI.exe wyświetli monit o zapisanie ich. MageUI.exe również wyświetla monit o wybranie klucza podpisywania dla każdego niepodpisanego lub zmienionego pliku.|  
+|**Zamknij wszystkie**|**Window**||Zamyka wszystkie pliki otwarte w MageUI.exe. Jeżeli jeden lub więcej plików wymagają zapisania, MageUI.exe wyświetli monit o zapisanie ich. MageUI.exe również wyświetla monit o wybranie klucza podpisywania dla każdego niepodpisanego lub zmienionego pliku.|  
 |**— Informacje**|**Pomoc**||Wyświetla informacje o wersji i prawach autorskich dotyczące MageUI.exe.|  
   
 ## <a name="preferences-dialog-box"></a>Okno dialogowe Preferencje  
@@ -111,7 +111,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Wydawcy**|Nazwa osoby lub organizacja odpowiadające dla aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
+|**Publisher**|Nazwa osoby lub organizacja odpowiadające dla aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
 |**Produktu**|Pełna nazwa produktu. W przypadku wybrania **zainstalować lokalnie** dla **typu aplikacji** elementu na **opcje wdrażania** karta manifestu rozmieszczenia, ta nazwa będzie, co jest wyświetlana w **Start** łącze menu i **Dodaj lub usuń programy** dla tej aplikacji.|  
 |**Obsługa lokalizacji**|Adres URL, z którego klienci mogą uzyskać pomoc i obsługę techniczną dla aplikacji.|  
   
@@ -129,7 +129,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
 |**Katalog aplikacji**|Katalog, w którym znajdują się pliki aplikacji. Użyj wielokropek (**...** ) przycisk, aby wybrać katalog.|  
 |**Wypełnij**|Dodaje do manifestu aplikacji wszystkie pliki w katalogu aplikacji i jego podkatalogach. Jeśli MageUI.exe znajduje pojedynczy plik wykonywalny w katalogu, automatycznie oznacza to jako punkt wejścia, który jest wykonywany jako pierwszy, po uruchomieniu aplikacji ClickOnce na kliencie pliku.|  
 |**Pliki aplikacji**|Wyświetla listę wszystkich plików w aplikacji. Każdy plik ma trzy edytowalne atrybuty omówiony poniżej.|  
-|**Typ pliku**|Typ pliku może być jedna z cztery wartości:<br /><br /> -Brak.<br />— Punkt wejścia. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może być oznaczony jako punkt wejścia.<br />-Dane plików. Plik, takich jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikona. Na pulpicie lub w rogu okna aplikacji takich jak pojawi się ikona aplikacji.|  
+|**Typ pliku**|Typ pliku może być jedna z cztery wartości:<br /><br /> -Brak.<br />-   Entry Point. Podstawowy plik wykonywalny aplikacji. Tylko jeden plik wykonywalny może być oznaczony jako punkt wejścia.<br />-Dane plików. Plik, takich jak plik XML, który dostarcza dane do aplikacji.<br />— Plik ikona. Na pulpicie lub w rogu okna aplikacji takich jak pojawi się ikona aplikacji.|  
 |**Optional**|Pliki oznaczone jako opcjonalne nie zostaną pobrane na początkowej instalacji lub aktualizacji, ale może zostać pobrana w czasie wykonywania za pomocą interfejsu API System.Deployment na żądanie. Aby uzyskać więcej informacji, zobacz [wskazówki: Pobieranie zestawów na żądanie z ClickOnce wdrażania interfejsu API przy użyciu narzędzia Projektant](/visualstudio/deployment/walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer).|  
 |**Grupy**|Etykieta dla zestawu plików opcjonalne. Można zastosować Etykieta grupy do zestawu plików i pobieranie plików przy użyciu jednego wywołania interfejsu API partii za pomocą interfejsu API na żądanie.|  
   
@@ -138,7 +138,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Typ zestawu uprawnień**|Zestaw minimalne uprawnienia wymagane przez tę aplikację do uruchamiania na kliencie. Aby uzyskać opis tych zestawów uprawnień i uprawnienia, które ani nie wymagać, zobacz [NIB: ustawia uprawnienia o nazwie](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
+|**Typ zestawu uprawnień**|Zestaw minimalne uprawnienia wymagane przez tę aplikację do uruchamiania na kliencie. Aby uzyskać opis tych zestawów uprawnień i uprawnienia, które ani nie wymagać, zobacz [NIB: ustawia uprawnienia o nazwie](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).|  
 |**Szczegóły**|Wartość XML utworzony dla manifest aplikacji do reprezentowania uprawnienia. Jeśli nie masz dobrą znajomość manifest aplikacji w formacie XML, nie należy edytować plik XML ręcznie. Aby uzyskać więcej informacji, zobacz [Manifest aplikacji ClickOnce](/visualstudio/deployment/clickonce-application-manifest).|  
   
 ### <a name="deployment-manifest-tab"></a>Karta manifestu wdrożenia  
@@ -167,7 +167,7 @@ MageUI.exe obsługuje takie same funkcje jak narzędzie wiersza polecenia Mage.e
   
 |Element interfejsu użytkownika|Opis|  
 |----------------|-----------------|  
-|**Wydawcy**|Wymagany. Nazwa osoby lub organizacja odpowiadające dla aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
+|**Publisher**|Wymagany. Nazwa osoby lub organizacja odpowiadające dla aplikacji. Ta wartość jest używana jako nazwa folderu menu Start.|  
 |**Produktu**|Wymagany. Pełna nazwa produktu. W przypadku wybrania **zainstalować lokalnie** dla **typu aplikacji** elementu na **opcje wdrażania** kartę, ta nazwa będzie wyświetlaną **Start** łącze menu i **Dodaj lub usuń programy** dla tej aplikacji.|  
 |**Obsługa lokalizacji**|Opcjonalny. Adres URL, z którego klienci mogą uzyskać pomoc i obsługę techniczną dla aplikacji.|  
   

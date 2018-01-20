@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 367da11fd0af9673a60d9acff20aef5969c98aae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1fbdbe2596f44a6efda35b8c3e3aace303d79364
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>Najlepsze praktyki dotyczące tworzenia aplikacji gotowych do wydania
 W tej sekcji opisano najlepszych rozwiązań, które należy wykonać podczas tworzenia aplikacji gotowych.  
@@ -102,7 +102,7 @@ W tej sekcji opisano najlepszych rozwiązań, które należy wykonać podczas tw
   
 4.  Określ wartości dla atrybutów requestEncoding, responseEncoding kodowanie plików, kultury i uiCulture w następujących trzech miejscach w aplikacji ASP.NET:  
   
-    -   W sekcji globalizacji w pliku Web.config. Ten plik jest zewnętrzne do aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [ \<globalizacji > elementu](http://msdn.microsoft.com/en-us/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
+    -   W sekcji globalizacji w pliku Web.config. Ten plik jest zewnętrzne do aplikacji ASP.NET. Aby uzyskać więcej informacji, zobacz [ \<globalizacji > elementu](http://msdn.microsoft.com/library/e2dffc8e-ebd2-439b-a2fd-e3ac5e620da7).  
   
     -   W dyrektywie page. Należy pamiętać, że gdy aplikacja znajduje się na stronie, plik jest już przeczytana. W związku z tym jest za późno na Określ kodowanie plików i requestEncoding. Można określić tylko uiCulture, kultury i responseEncoding w dyrektywie page.  
   

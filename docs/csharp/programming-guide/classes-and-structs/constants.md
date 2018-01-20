@@ -11,11 +11,11 @@ ms.assetid: 1fb39621-1738-49b1-a1b3-8587f109123f
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 81a085ff016fb9ee8f8a13167728c37ca799920a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 86c9371a6a82c4034b7bdf279e7b205cfcc84bea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="constants-c-programming-guide"></a>Stałe (Przewodnik programowania w języku C#)
 Stałe są niezmienne wartości, które są określane w czasie kompilacji i nie należy zmieniać przez cały okres istnienia program. Stałe są deklarowane jako z [const](../../../csharp/language-reference/keywords/const.md) modyfikator. Tylko C# wbudowanych typów (z wyłączeniem <xref:System.Object?displayProperty=nameWithType>) może być zadeklarowana jako `const`. Aby uzyskać listę wbudowanych typów, zobacz [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md). Typy zdefiniowane przez użytkownika, łącznie z klas, struktur i tablic, nie mogą być `const`. Użyj [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md) modyfikator można utworzyć klasy, struktury lub tablicy, która została zainicjowana jeden raz w czasie wykonywania (na przykład w konstruktorze), a następnie nie można zmienić.  
@@ -55,5 +55,5 @@ Stałe są niezmienne wartości, które są określane w czasie kompilacji i nie
  [Klasy i struktury](../../../csharp/programming-guide/classes-and-structs/index.md)  
  [Właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md)  
  [Typy](../../../csharp/programming-guide/types/index.md)  
- [tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md)  
- [Część immutability w języku C#, pierwsza: rodzaje Immutability](http://go.microsoft.com/fwlink/?LinkId=112379)
+ [readonly](../../../csharp/language-reference/keywords/readonly.md)  
+ [Część immutability w języku C#, pierwsza: rodzaje Immutability](https://blogs.msdn.microsoft.com/ericlippert/2007/11/13/immutability-in-c-part-one-kinds-of-immutability)

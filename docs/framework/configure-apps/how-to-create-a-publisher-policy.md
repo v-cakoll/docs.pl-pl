@@ -19,11 +19,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 182882d33772054c7ac4208ca9571fa8018c2a07
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ccd490f6d31ad1d20128497e5115147eddb3df4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-publisher-policy"></a>Porady: tworzenie zasad wydawcy
 Dostawców zestawy mogą stanu aplikacje powinny używać nowszej wersji zestawu przez dołączenie pliku zasad wydawcy w zestawie uaktualniony. Plik zasad wydawcy określa przekierowanie zestawów i kod podstawowych ustawień i używa tego samego formatu co plik konfiguracji aplikacji. Plik zasad wydawcy są kompilowane do zestawu i umieszczane w pamięci podręcznej GAC.  
@@ -72,7 +72,7 @@ Dostawców zestawy mogą stanu aplikacje powinny używać nowszej wersji zestawu
   
     -   *PublisherPolicyAssemblyFile* argument jest nazwą zestaw zasad wydawcy, która wynika z tego polecenia. Nazwa pliku zestawu musi mieć format:  
   
-         **zasady.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
+         **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
     -   *KeyPairFile* argument jest nazwą pliku zawierającego pary kluczy. Musisz zalogować się zestaw i zestaw zasad wydawcy z tej samej pary kluczy.  
   
@@ -100,7 +100,7 @@ Dostawców zestawy mogą stanu aplikacje powinny używać nowszej wersji zestawu
   
 1.  Wpisz następujące polecenie w wierszu polecenia:  
   
-     **gacutil /i***publisherPolicyAssemblyFile*   
+     **gacutil /i**  *publisherPolicyAssemblyFile*  
   
      Następujące polecenie dodaje `policy.1.0.myAssembly.dll` do globalnej pamięci podręcznej zestawów.  
   
@@ -115,7 +115,7 @@ Dostawców zestawy mogą stanu aplikacje powinny używać nowszej wersji zestawu
  [Programowanie za pomocą zestawów](../../../docs/framework/app-domains/programming-with-assemblies.md)  
  [Sposoby lokalizowania zestawów przez środowisko uruchomieniowe](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)  
  [Konfigurowanie aplikacji](../../../docs/framework/configure-apps/index.md)  
- [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
+ [Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42)  
  [Schemat ustawień środowiska uruchomieniowego](../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../docs/framework/configure-apps/file-schema/index.md)  
  [Przekierowywanie wersji zestawu](../../../docs/framework/configure-apps/redirect-assembly-versions.md)

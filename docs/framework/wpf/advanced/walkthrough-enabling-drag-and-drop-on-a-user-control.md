@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e413a7ddf7e256538e56876712a54f875392b59a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d87872d3009b46878b7b614c1aef728d5b1d511d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>Wskazówki: włączanie przeciągania i upuszczania w kontrolce użytkownika
 Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowego, który mogą uczestniczyć w transferu danych przeciągania i upuszczania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)].  
@@ -51,9 +51,9 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
 ### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
-1.  Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `DragDropExample`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
+1.  Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `DragDropExample`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82).  
   
-2.  Otwórz MainWindow.xaml.  
+2.  Open MainWindow.xaml.  
   
 3.  Dodaj następujący kod między otwarcia i zamknięcia <xref:System.Windows.Controls.Grid> tagów.  
   
@@ -72,7 +72,7 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
      Circle.XAML i jej kodem jest dodane do projektu.  
   
-3.  Otwórz Circle.xaml.  
+3.  Open Circle.xaml.  
   
      Ten plik zawiera elementy interfejsu użytkownika kontrolki użytkownika.  
   
@@ -91,7 +91,7 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
 ### <a name="to-add-the-user-control-to-the-main-window"></a>Aby dodać kontrolkę użytkownika do głównego okna  
   
-1.  Otwórz MainWindow.xaml.  
+1.  Open MainWindow.xaml.  
   
 2.  Dodaj następujące XAML do otwarcia <xref:System.Windows.Window> tag, aby utworzyć odwołanie do przestrzeni nazw XML dla bieżącej aplikacji.  
   
@@ -177,7 +177,7 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
 ### <a name="to-enable-the-user-control-to-be-a-drop-target"></a>Aby włączyć kontrolę użytkownika jako miejsca docelowego  
   
-1.  Otwórz Circle.xaml.  
+1.  Open Circle.xaml.  
   
 2.  W otwarcia <xref:System.Windows.Controls.UserControl> tagów, Dodaj <xref:System.Windows.UIElement.AllowDrop%2A> właściwości i wartości `true`.  
   
@@ -297,7 +297,7 @@ Ten przewodnik przedstawia sposób tworzenia formant użytkownika niestandardowe
   
 ### <a name="to-enable-the-panel-to-be-a-drop-target"></a>Aby włączyć panelu jako miejsca docelowego  
   
-1.  Otwórz MainWindow.xaml.  
+1.  Open MainWindow.xaml.  
   
 2.  Jak pokazano w poniższych XAML, w każdym <xref:System.Windows.Controls.StackPanel> formantów, Dodaj obsługę <xref:System.Windows.UIElement.DragOver> i <xref:System.Windows.UIElement.Drop> zdarzenia. Nazwa <xref:System.Windows.UIElement.DragOver> program obsługi zdarzeń, `panel_DragOver`i nazwij <xref:System.Windows.UIElement.Drop> program obsługi zdarzeń, `panel_Drop`.  
   

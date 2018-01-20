@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 157b5648af4ef429a73fe71a924e15ad3973f7f5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 Parametry i pola typu <xref:System.Object?displayProperty=nameWithType> można wyświetlać do kodu niezarządzanego jako jeden z następujących typów:  
@@ -162,7 +162,7 @@ struct ObjectHolder {
 |<xref:System.Runtime.InteropServices.DispatchWrapper?displayProperty=nameWithType>|**VT_DISPATCH**|  
 |<xref:System.Runtime.InteropServices.UnknownWrapper?displayProperty=nameWithType>|**VT_UNKNOWN**|  
 |<xref:System.Runtime.InteropServices.CurrencyWrapper?displayProperty=nameWithType>|**VT_CY**|  
-|<xref:System.Boolean?displayProperty=nameWithType>|**VT_BOOL.**|  
+|<xref:System.Boolean?displayProperty=nameWithType>|**VT_BOOL**|  
 |<xref:System.SByte?displayProperty=nameWithType>|**VT_I1**|  
 |<xref:System.Byte?displayProperty=nameWithType>|**VT_UI1**|  
 |<xref:System.Int16?displayProperty=nameWithType>|**VT_I2**|  
@@ -235,12 +235,12 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  W poniższej tabeli przedstawiono możliwe wartości **elementu TypeCode** wyliczenie i odpowiedniego typu variant modelu COM dla każdej wartości.  
   
-|Elementu TypeCode|Typ variant modelu COM|  
+|TypeCode|Typ variant modelu COM|  
 |--------------|----------------------|  
 |**TypeCode.Empty**|**VT_EMPTY**|  
 |**TypeCode.Object**|**VT_UNKNOWN**|  
 |**TypeCode.DBNull**|**VT_NULL**|  
-|**TypeCode.Boolean**|**VT_BOOL.**|  
+|**TypeCode.Boolean**|**VT_BOOL**|  
 |**TypeCode.Char**|**VT_UI2**|  
 |**TypeCode.Sbyte**|**VT_I1**|  
 |**TypeCode.Byte**|**VT_UI1**|  
@@ -258,7 +258,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |Nieobsługiwane.|**VT_INT**|  
 |Nieobsługiwane.|**VT_UINT**|  
 |Nieobsługiwane.|**VT_ARRAY**|  
-|Nieobsługiwane.|**TYP VT_RECORD**|  
+|Nieobsługiwane.|**VT_RECORD**|  
 |Nieobsługiwane.|**VT_CY**|  
 |Nieobsługiwane.|**VT_VARIANT**|  
   
@@ -275,7 +275,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_DISPATCH**|**System.__ComObject** lub wartość null, jeśli (pdispVal == null)|  
 |**VT_UNKNOWN**|**System.__ComObject** lub wartość null, jeśli (punkVal == null)|  
 |**VT_ERROR**|<xref:System.UInt32?displayProperty=nameWithType>|  
-|**VT_BOOL.**|<xref:System.Boolean?displayProperty=nameWithType>|  
+|**VT_BOOL**|<xref:System.Boolean?displayProperty=nameWithType>|  
 |**VT_I1**|<xref:System.SByte?displayProperty=nameWithType>|  
 |**VT_UI1**|<xref:System.Byte?displayProperty=nameWithType>|  
 |**VT_I2**|<xref:System.Int16?displayProperty=nameWithType>|  
@@ -293,7 +293,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_UINT**|<xref:System.UInt32?displayProperty=nameWithType>|  
 |**VT_ARRAY** &#124; **VT_\***|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
-|**TYP VT_RECORD**|Odpowiadającego opakowanym typem wartościowym.|  
+|**VT_RECORD**|Odpowiadającego opakowanym typem wartościowym.|  
 |**VT_VARIANT**|Nieobsługiwane.|  
   
  Typy Variant przekazany z modelu COM do kodu zarządzanego i następnie powrót do modelu COM mogą nie zawierać ten sam typ variant na czas trwania wywołania. Należy rozważyć, co się stanie po wariant typu **VT_DISPATCH** jest przekazywany z modelu COM programu .NET Framework. Podczas przekazywania międzyprocesowego, wariant jest konwertowana na <xref:System.Object?displayProperty=nameWithType>. Jeśli **obiektu** są następnie przekazywane do modelu COM, jest przekazywane do wariant typu **VT_UNKNOWN**. Nie ma żadnej gwarancji, że wariant tworzone, gdy obiekt jest przekazywane z kodu zarządzanego w modelu COM będzie taki sam typ jak variant początkowo używane do tworzenia obiektu.  
@@ -342,5 +342,5 @@ Wariantów przekazywane według wartości i według odwołania
 ## <a name="see-also"></a>Zobacz też  
  [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atrybuty kierunkową](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Atrybuty kierunkową](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)

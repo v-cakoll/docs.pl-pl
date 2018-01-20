@@ -13,23 +13,23 @@ ms.assetid: 27ff7381-c281-45d7-b2eb-1ad644b1354e
 caps.latest.revision: "10"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 95630afcfcd2ae9ab64660eb0f022dd0733b4c4a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 3716445cb779e98f777a1677ff67e1ba603c5fa2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="utf8output-c-compiler-options"></a>/utf8output (opcje kompilatora C#)
-**/Utf8output** opcja powoduje wyświetlenie kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.  
+# <a name="-utf8output-c-compiler-options"></a>-utf8output (opcje kompilatora C#)
+**-Utf8output** opcja powoduje wyświetlenie kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/utf8output  
+-utf8output  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- W niektórych konfiguracjach międzynarodowe dane wyjściowe kompilatora poprawnie nie można wyświetlić w konsoli. W tych konfiguracjach, użyj **/utf8output** i Przekieruj dane wyjściowe kompilatora do pliku.  
+ W niektórych konfiguracjach międzynarodowe dane wyjściowe kompilatora poprawnie nie można wyświetlić w konsoli. W tych konfiguracjach, użyj **-utf8output** i Przekieruj dane wyjściowe kompilatora do pliku.  
   
  Ta opcja kompilatora jest niedostępna w programie Visual Studio i nie można zmienić programowo.  
   

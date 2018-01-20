@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
 W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
   
 2.  Wybierz lub wyczyść **zapisać skrót hasła lokalnie, aby włączyć logowanie offline**. Po wybraniu tej opcji zaszyfrowane hasło użytkownika będą buforowane lokalnie. Jest to przydatne w przypadku zastosowania w trybie offline dla aplikacji. W przypadku wybrania tej opcji można sprawdzić poprawność użytkowników nawet wtedy, gdy <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> ustawioną właściwość `true`.  
   
-3.  Wybierz lub wyczyść **wymagać od użytkowników zalogować się ponownie przy każdym wygasa plik cookie z serwera**. Plik cookie uwierzytelniania jest skonfigurowane w zdalnej usługi i wskazuje, jak długo będzie aktywna logowania użytkownika. Aby uzyskać więcej informacji o sposobie konfigurowania pliku cookie, zobacz `timeout` atrybutu w [formularzy Element uwierzytelniania (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Wybierz lub wyczyść **wymagać od użytkowników zalogować się ponownie przy każdym wygasa plik cookie z serwera**. Plik cookie uwierzytelniania jest skonfigurowane w zdalnej usługi i wskazuje, jak długo będzie aktywna logowania użytkownika. Aby uzyskać więcej informacji o sposobie konfigurowania pliku cookie, zobacz `timeout` atrybutu w [formularzy Element uwierzytelniania (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Wybierz tę opcję, próby uzyskania dostępu zdalnego ról lub zgłosi usługi ustawień sieci Web po wygaśnięciu pliku cookie uwierzytelniania <xref:System.Net.WebException>. Można obsłużyć tego wyjątku i wyświetlić okno dialogowe logowania, ponownie sprawdź poprawność użytkowników. Na przykład tego zachowania, zobacz [wskazówki: Korzystanie z usługi aplikacji klienta](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Ta opcja jest przydatna w przypadku aplikacji wdrożonych w miejscach publicznych upewnij się, że zawsze uwierzytelniani użytkownicy uzyskują pozostaw aplikacji uruchomiony po nie pozostanie Użyj.  
   

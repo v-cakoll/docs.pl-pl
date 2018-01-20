@@ -17,21 +17,21 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: efb968d40e54c7552fba0a592e759f9e83c92309
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 13b42405a0faf721c46476aadaa0cff8163883c1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltloadfromremotesourcesgt-element"></a>&lt;loadFromRemoteSources&gt; — Element
 Określa, czy zestawy ze źródła zdalnego należy przyznać pełne zaufanie.  
   
 > [!NOTE]
->  Jeśli były kierowane do tego tematu, z powodu komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [porady: Użyj zestawu z sieci Web w programie Visual Studio](http://msdn.microsoft.com/en-us/d8635b63-89a0-41aa-90f4-f351b2111070).  
+>  Jeśli były kierowane do tego tematu, z powodu komunikat o błędzie na liście błędów projektu programu Visual Studio lub błąd kompilacji, zobacz [porady: Użyj zestawu z sieci Web w programie Visual Studio](http://msdn.microsoft.com/library/d8635b63-89a0-41aa-90f4-f351b2111070).  
   
- \<Konfiguracja >  
-\<Runtime >  
-\<loadFromRemoteSources >  
+ \<configuration>  
+\<runtime>  
+\<loadFromRemoteSources>  
   
 ## <a name="syntax"></a>Składnia  
   

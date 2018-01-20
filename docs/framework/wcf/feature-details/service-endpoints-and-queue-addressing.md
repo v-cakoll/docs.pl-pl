@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5605c90d5f63e0ed80ac5a47b36781c45b687cba
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8488e802ee191c261b65388d48bd26aa37d18206
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>Punkty końcowe usługi i adresowanie kolejki
 W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z kolejek oraz sposobu mapowania punktów końcowych usługi kolejki. Dla przypomnienia, na poniższej ilustracji przedstawiono klasycznego [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] wdrożenia aplikacji w kolejce.  
@@ -57,7 +57,7 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
   
  Adres kolejki jest używany jako identyfikatora URI nasłuchiwania przez odbiornik do odczytu wiadomości. Innymi słowy adres kolejki jest odpowiednikiem gniazda portu TCP nasłuchiwania.  
   
- Odczyty z kolejki punktu końcowego, należy określić adres kolejki przy użyciu tego samego schematu określony wcześniej podczas otwierania elementu ServiceHost. Przykłady można znaleźć [Net powiązanie MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) i [próbek do powiązania integracji usługi kolejkowania komunikatów](http://msdn.microsoft.com/en-us/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
+ Odczyty z kolejki punktu końcowego, należy określić adres kolejki przy użyciu tego samego schematu określony wcześniej podczas otwierania elementu ServiceHost. Przykłady można znaleźć [Net powiązanie MSMQ](../../../../docs/framework/wcf/samples/net-msmq-binding.md) i [próbek do powiązania integracji usługi kolejkowania komunikatów](http://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a).  
   
 ### <a name="multiple-contracts-in-a-queue"></a>Wiele kontraktów w kolejce  
  Wiadomości w kolejce można zaimplementować różnymi umowami. W tym przypadku jest istotne, jedną z następujących jest wartość PRAWDA, aby pomyślnie odczytywać i przetwarzać komunikaty:  
@@ -83,9 +83,9 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
   
 |Adres URI usługi WCF na podstawie kolejki|Użyj właściwości usługi Active Directory|Właściwość Transfer Protocol kolejki|Wynikowa nazwy formatu MSMQ|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|NET.MSMQ://\<nazwa komputera >/prywatnej/abc|Wartość FAŁSZ (ustawienie domyślne)|Native (domyślnie)|DIRECT = OS:machine-name\private$ \abc|  
-|NET.MSMQ://\<nazwa komputera >/prywatnej/abc|False|SRMP|DIRECT = http://machine/msmq/private$ / abc|  
-|NET.MSMQ://\<nazwa komputera >/prywatnej/abc|Wartość true|Natywny|PUBLICZNY = niektóre guid (identyfikator GUID kolejki)|  
+|Net.msmq://\<machine-name>/private/abc|Wartość FAŁSZ (ustawienie domyślne)|Native (domyślnie)|DIRECT=OS:machine-name\private$\abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private$/abc|  
+|Net.msmq://\<machine-name>/private/abc|True|Natywne|PUBLICZNY = niektóre guid (identyfikator GUID kolejki)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>Odczytywanie wiadomości z kolejki utraconych wiadomości i kolejki wiadomości Poison  
  Aby odczytać wiadomości z kolejki wiadomości poison, która jest podkolejki kolejki docelowej, otwórz `ServiceHost` adres podkolejki.  
@@ -105,7 +105,7 @@ W tym temacie omówiono sposób klienci adresu usługi, które zapoznały się z
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding i adresowania usługi  
  `MsmqIntegrationBinding` Jest używany do komunikacji z tradycyjne aplikacje usługi MSMQ. Aby ułatwić współdziałanie z istniejącej aplikacji usługi MSMQ, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje tylko format nazw adresowania. W związku z tym komunikatów wysyłanych za pomocą tego powiązania musi odpowiadać schemat identyfikatora URI:  
   
- MSMQ.formatname:\<*MSMQ format nazwy*>>  
+ msmq.formatname:\<*MSMQ-format-name*>>  
   
  Nazwa formatu MSMQ ma postać określony przez usługę MSMQ w [o usługi kolejkowania komunikatów](http://go.microsoft.com/fwlink/?LinkId=94837).  
   

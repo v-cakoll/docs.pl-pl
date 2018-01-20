@@ -22,11 +22,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 36c8ae484120fc835bf341d37cda72b22b401117
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cf894239db623b34d23757edd1c39d3652a7e0f7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-method-access"></a>Zabezpieczanie dostępu metody
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -39,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Ograniczenie zakresu ułatwień dostępu do klasy, zestawu lub klasy pochodne, jeśli może być zaufane. Jest to najprostszy sposób, aby ograniczyć dostęp do metody. Należy pamiętać, że klasy pochodne — ogólnie rzecz biorąc, może być mniej zaufanego niż klasa, które pochodzą one od, chociaż w niektórych przypadkach mają tożsamości klasy nadrzędnej. W szczególności nie wnioskować zaufanie od słowa kluczowego **chronione**, który nie jest zawsze używany w kontekście zabezpieczeń.  
   
--   Ograniczenia dostępu metody wywołań określoną tożsamością — zasadniczo żadnych określonego [dowód](http://msdn.microsoft.com/en-us/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (silnej nazwy, wydawcy strefy i tak dalej) wybierz.  
+-   Ograniczenia dostępu metody wywołań określoną tożsamością — zasadniczo żadnych określonego [dowód](http://msdn.microsoft.com/library/64ceb7c8-a0b4-46c4-97dc-6c22da0539da) (silnej nazwy, wydawcy strefy i tak dalej) wybierz.  
   
 -   Ograniczenia dostępu metody dotyczące obiektów wywołujących uzyskanie niezależnie od uprawnień, należy wybrać.  
   

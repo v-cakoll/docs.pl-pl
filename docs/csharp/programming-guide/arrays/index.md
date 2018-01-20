@@ -11,11 +11,11 @@ ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1cdd319ef6bbb296c7afa5195563b92bdd361f0b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8d395bcb179650fe29ab0918e7f91f3c8b6197b5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="arrays-c-programming-guide"></a>Tablice (Przewodnik programowania w języku C#)
 W tablicy struktury danych można przechowywać wiele zmiennych tego samego typu. Można zadeklarować tablicy przez określenie typu elementów.  
@@ -45,11 +45,11 @@ W tablicy struktury danych można przechowywać wiele zmiennych tego samego typu
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
   
--   [Tablice jako obiekty](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+-   [Użycie tablic jako obiektów](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
 -   [Używanie instrukcji foreach z tablicami](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [Przekazywanie tablic jako argumenty](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+-   [Przekazywanie tablic jako argumentów](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
 -   [Przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md)   
   
@@ -59,4 +59,4 @@ W tablicy struktury danych można przechowywać wiele zmiennych tego samego typu
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Kolekcje](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b)  
- [Typ kolekcji tablicy](http://msdn.microsoft.com/en-us/8a9964de-8941-47b1-a3cf-a01bc88db9e8)
+ [Typ kolekcji tablicy](http://msdn.microsoft.com/library/8a9964de-8941-47b1-a3cf-a01bc88db9e8)

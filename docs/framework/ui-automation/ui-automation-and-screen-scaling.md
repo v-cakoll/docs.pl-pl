@@ -22,11 +22,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 5198de558d24770c8fdd4bfc10ce4a9199eeff47
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bb33d3175cf9e43797125b47c811042771e45782
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-and-screen-scaling"></a>Automatyzacja interfejsu użytkownika a skalowanie ekranu
 > [!NOTE]
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Highlighter#101](../../../samples/snippets/csharp/VS_Snippets_Wpf/Highlighter/CSharp/NativeMethods.cs#101)]
      [!code-vb[Highlighter#101](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Highlighter/VisualBasic/NativeMethods.vb#101)]  
   
-     Funkcja ta sprawia, że cały proces [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, co oznacza, że wszystkie okna, które należą do procesu są nieskalowanego. W [próbki wyróżnienia](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69), na przykład znajdują się w fizycznych współrzędne uzyskane z czterech systemu windows wchodzące w skład prostokąta [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], współrzędne logiczne. Jeśli próbka nie były [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-pamiętać wyróżnienie może być rysowany w logiczne współrzędne na pulpicie, co spowoduje nieprawidłowe położenie w innych niż-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] środowiska.  
+     Funkcja ta sprawia, że cały proces [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aware, co oznacza, że wszystkie okna, które należą do procesu są nieskalowanego. W [próbki wyróżnienia](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69), na przykład znajdują się w fizycznych współrzędne uzyskane z czterech systemu windows wchodzące w skład prostokąta [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], współrzędne logiczne. Jeśli próbka nie były [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-pamiętać wyróżnienie może być rysowany w logiczne współrzędne na pulpicie, co spowoduje nieprawidłowe położenie w innych niż-96 - [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)] środowiska.  
   
 2.  Aby uzyskać współrzędne kursora, należy wywołać [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcja `GetPhysicalCursorPos`. Poniższy przykład pokazuje, jak deklarowanie i użycie tej funkcji.  
   
@@ -87,4 +87,4 @@ ms.lasthandoff: 12/22/2017
  Jeśli aplikacja przeprowadza bezpośrednia komunikacja między procesami z inną niż [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]-aplikacjami, może mieć konwersji między współrzędne logicznej i fizycznej za pomocą [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] funkcje `PhysicalToLogicalPoint` i `LogicalToPhysicalPoint`.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Przykładowe wyróżnienia](http://msdn.microsoft.com/en-us/19ba4577-753e-4efd-92cc-c02ee67c1b69)
+ [Przykładowe wyróżnienia](http://msdn.microsoft.com/library/19ba4577-753e-4efd-92cc-c02ee67c1b69)

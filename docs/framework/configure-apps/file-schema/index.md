@@ -33,11 +33,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 283faabf0f23df2650f8d87fdebae1102b83235d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4af28280de24f3e25362f18985c209b1a2f29523
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>Schemat pliku konfiguracji dla programu .NET Framework
 
@@ -86,10 +86,10 @@ Dla informacji o typach, format i lokalizację plików konfiguracji, zobacz arty
 
 ## <a name="related-sections"></a>Sekcje pokrewne
 
-[Schemat ustawień komunikacji zdalnej](http://msdn.microsoft.com/en-us/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) opisano elementy służące do konfiguracji klienta i serwera aplikacji, które implementuje komunikacji zdalnej.
+[Schemat ustawień komunikacji zdalnej](http://msdn.microsoft.com/library/dc2d1e62-9af7-4ca1-99fd-98b93bb4db9e) opisano elementy służące do konfiguracji klienta i serwera aplikacji, które implementuje komunikacji zdalnej.
 
 [Schemat ustawień programu ASP.NET](http://msdn.microsoft.com/library/b5ysx397\(v=vs.100\).aspx) opisano elementy, które określają zachowanie aplikacji sieci Web ASP.NET.
 
-[Schemat ustawień usługi w sieci Web](http://msdn.microsoft.com/en-us/f84d6d55-1add-4eb7-ae46-33df5833ea2e) opisano elementy, które kontrolują zachowanie usługi sieci Web ASP.NET i klientów.
+[Schemat ustawień usługi w sieci Web](http://msdn.microsoft.com/library/f84d6d55-1add-4eb7-ae46-33df5833ea2e) opisano elementy, które kontrolują zachowanie usługi sieci Web ASP.NET i klientów.
 
-[Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/en-us/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) opisano sposób konfigurowania zabezpieczeń, powiązań zestawów i komunikacji zdalnej w programie .NET Framework.
+[Konfigurowanie aplikacji programu .NET Framework](http://msdn.microsoft.com/library/d789b592-fcb5-4e3d-8ac9-e0299adaaa42) opisano sposób konfigurowania zabezpieczeń, powiązań zestawów i komunikacji zdalnej w programie .NET Framework.

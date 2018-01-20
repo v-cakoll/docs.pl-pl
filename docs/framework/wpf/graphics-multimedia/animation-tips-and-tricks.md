@@ -26,11 +26,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4fceebbd3da7a0643e744d80a55cb1c953eba3bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 210f8ff8840f579d352cc579f80f38488b998c5a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-tips-and-tricks"></a>Porady i triki animacyjne
 Podczas pracy z animacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], istnieje wiele porady i wskazówki, które mogą ułatwić animacji działać lepiej i zaoszczędzić frustracji spowodowanej.  
@@ -116,7 +116,7 @@ Podczas pracy z animacji [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharpt
   
  Istnieją różne sposoby, aby usunąć animacji. Następujące techniki może służyć do usunięcia animacji, które należą do <xref:System.Windows.Media.Animation.Storyboard>.  
   
--   Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzeń, zobacz [porady: usuwanie scenorysu](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee).  
+-   Aby usunąć <xref:System.Windows.Media.Animation.Storyboard> wprowadzenie wyzwalacz zdarzeń, zobacz [porady: usuwanie scenorysu](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee).  
   
 -   Aby usunąć przy użyciu kodu <xref:System.Windows.Media.Animation.Storyboard>, zobacz <xref:System.Windows.Media.Animation.Storyboard.Remove%2A> metody.  
   

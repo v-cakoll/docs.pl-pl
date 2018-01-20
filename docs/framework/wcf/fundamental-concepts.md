@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0c05aa44a46b934a78af38c33ee34dd03f69e56d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 651515095a0c9f9e970fff2d77421cfa804fa701
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Podstawowe pojęcia programu Windows Communication Foundation
 Ten dokument zawiera widok ogólny [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] architektury. Jest on przeznaczony do podstawowych pojęć i sposób ich dopasowania. Samouczek dotyczący tworzenia najprostszym wersji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i klienta, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md). Aby dowiedzieć się [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] programowania, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
@@ -133,7 +133,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  Aplikacja kliencka  
  Program, który wymienia wiadomości z jedną lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od utworzenia wystąpienia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta i wywołanie metody [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta. Należy do pojedynczej aplikacji może zawierać zarówno klient, jak i usługi.  
   
- Kanał  
+ channel  
  Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfigurację i kanał jest skojarzony z tym konfiguracji wdrożenia. W związku z tym jest skojarzone z każdym elementem powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stosu kanału.  
   
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]klienta  
@@ -166,4 +166,4 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
 ## <a name="see-also"></a>Zobacz też  
  [Co to jest program Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)  
  [Architektura WCF (Windows Communication Foundation)](../../../docs/framework/wcf/architecture.md)  
- [Architektura zabezpieczeń](http://msdn.microsoft.com/en-us/16593476-d36a-408d-808c-ae6fd483e28f)
+ [Architektura zabezpieczeń](http://msdn.microsoft.com/library/16593476-d36a-408d-808c-ae6fd483e28f)

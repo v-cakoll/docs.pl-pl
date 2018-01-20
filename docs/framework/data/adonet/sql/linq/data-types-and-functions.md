@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 188609e1bb6e5ec3a51aa4411e23742c42d691c9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: f9f97f0ae0a75dd15edcb2256d991e987388f1ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="data-types-and-functions"></a>Typy danych i funkcje
 Tematy wymienione w poniższej tabeli opisano LINQ do SQL obsługę elementów członkowskich, konstrukcji i rzutowania środowisko uruchomieniowe języka wspólnego (CLR). Obsługiwane elementy Członkowskie oraz elementów składowych są dostępne do użycia w Twojej LINQ do zapytania SQL.  
@@ -45,4 +45,4 @@ Tematy wymienione w poniższej tabeli opisano LINQ do SQL obsługę elementów c
 ## <a name="see-also"></a>Zobacz też  
  [Niezgodność typu SQL CLR](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mismatches.md)  
  [Dokumentacja](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)  
- [Biblioteka klas programu .NET framework w programie Visual Studio](http://msdn.microsoft.com/en-us/a03e374c-3d5c-4169-937b-49857ab273ae)
+ [Biblioteka klas programu .NET framework w programie Visual Studio](http://msdn.microsoft.com/library/a03e374c-3d5c-4169-937b-49857ab273ae)

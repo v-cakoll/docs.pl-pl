@@ -12,11 +12,11 @@ ms.assetid: dda4fa9f-a02c-400f-8b6a-d58834e13d7f
 caps.latest.revision: "9"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d4dc8c81a9afd60add4c2a62be6804a0f6446124
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fbb95e0619857f38260ae74366ba4bb860779530
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="-c-compiler-options"></a>@ (opcje kompilatora C#)
 @ — Opcja pozwala określić plik, który zawiera opcje kompilatora i plików kodu źródłowego do skompilowania.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 10/18/2017
   
  Kompilator przetwarza opcji polecenia, ponieważ są one napotkał. W związku z tym argumenty wiersza polecenia można zastąpić opcje wymienione wcześniej w plikach odpowiedzi. Z drugiej strony Opcje w pliku odpowiedzi zastąpią opcje wymienione wcześniej w wierszu polecenia lub w innych plików odpowiedzi.  
   
- C# zawiera pliku csc.rsp, który znajduje się w tym samym katalogu co plik csc.exe. Zobacz [/noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) Aby uzyskać więcej informacji na temat csc.rsp.  
+ C# zawiera pliku csc.rsp, który znajduje się w tym samym katalogu co plik csc.exe. Zobacz [- noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) Aby uzyskać więcej informacji na temat csc.rsp.  
   
  Tej opcji kompilatora nie można ustawić w środowisku programowania Visual Studio i nie można go zmienić programowo.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 10/18/2017
   
 ```console  
 # build the first output file  
-/target:exe /out:MyExe.exe source1.cs source2.cs  
+-target:exe -out:MyExe.exe source1.cs source2.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

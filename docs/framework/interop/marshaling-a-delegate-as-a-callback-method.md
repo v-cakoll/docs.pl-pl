@@ -21,17 +21,17 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f6d9269261c6c0ce7573e0a8e298111971ae591c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 894445657c938d381a8585c5e9c7440c694aa5b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>Marshaling delegata jako metoda wywołania zwrotnego
 W tym przykładzie pokazano, jak przekazać delegatów niezarządzanych funkcji, oczekiwano wskaźników funkcji. Delegat jest klasa, która może zawierać odwołań do metody i stanowi odpowiednik wskaźnika funkcji bezpieczny lub funkcji wywołania zwrotnego.  
   
 > [!NOTE]
->  Gdy używasz delegata w wywołaniu środowisko uruchomieniowe języka wspólnego uniemożliwia jako elementu bezużytecznego zebrane na czas trwania tego wywołania delegata. Jednak jeśli niezarządzanej funkcji przechowuje delegata po zakończeniu wywołania, należy ręcznie uniemożliwienie wyrzucanie elementów bezużytecznych zakończenie niezarządzanej funkcji z obiektem delegowanym. Aby uzyskać więcej informacji, zobacz [Przykładowy element HandleRef](http://msdn.microsoft.com/en-us/ab23b04e-1d53-4ec7-b27a-e892d9298959) i [próbki dojścia GCHandle](http://msdn.microsoft.com/en-us/6acce798-0385-4ded-a790-77da842c113f).  
+>  Gdy używasz delegata w wywołaniu środowisko uruchomieniowe języka wspólnego uniemożliwia jako elementu bezużytecznego zebrane na czas trwania tego wywołania delegata. Jednak jeśli niezarządzanej funkcji przechowuje delegata po zakończeniu wywołania, należy ręcznie uniemożliwienie wyrzucanie elementów bezużytecznych zakończenie niezarządzanej funkcji z obiektem delegowanym. Aby uzyskać więcej informacji, zobacz [Przykładowy element HandleRef](http://msdn.microsoft.com/library/ab23b04e-1d53-4ec7-b27a-e892d9298959) i [próbki dojścia GCHandle](http://msdn.microsoft.com/library/6acce798-0385-4ded-a790-77da842c113f).  
   
  Przykład wywołania zwrotnego używa następujących funkcji niezarządzane, przedstawiono ich oryginalnej deklaracji funkcji:  
   
@@ -47,7 +47,7 @@ W tym przykładzie pokazano, jak przekazać delegatów niezarządzanych funkcji,
     void TestCallBack2(FPTR2 pf2, char* value);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane zawierającego implementację funkcji wymienione wcześniej.  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane zawierającego implementację funkcji wymienione wcześniej.  
   
  W tym przykładzie `LibWrap` klasa zawiera zarządzanych prototypy dla `TestCallBack` i `TestCallBack2` metody. Obie metody przekazywanie obiektu delegate funkcji wywołania zwrotnego jako parametr. Podpis delegata musi być zgodna podpis metody, których się odwołuje. Na przykład `FPtr` i `FPtr2` delegatów mają podpisy, które są takie same jak `DoSomething` i `DoSomething2` metody.  
   
@@ -62,6 +62,6 @@ W tym przykładzie pokazano, jak przekazać delegatów niezarządzanych funkcji,
  [!code-vb[Conceptual.Interop.Marshaling#38](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/callback.vb#38)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Dodatkowe przykłady Marshalingu](http://msdn.microsoft.com/en-us/a915c948-54e9-4d0f-a525-95a77fd8ed70)  
- [Typy danych wywołanie platformy](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Dodatkowe przykłady Marshalingu](http://msdn.microsoft.com/library/a915c948-54e9-4d0f-a525-95a77fd8ed70)  
+ [Typy danych wywołanie platformy](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Tworzenie prototypów w kodzie zarządzanym](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)

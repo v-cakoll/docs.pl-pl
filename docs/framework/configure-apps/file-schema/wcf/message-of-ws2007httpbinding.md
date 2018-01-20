@@ -14,21 +14,21 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5048bc2980d7eb51efc1707cfc143f3a81ddf81d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 88f9a766c85ec0fd6cb3379be239db33dc6ebb20
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltmessagegt-of-ltws2007httpbindinggt"></a>&lt;message&gt; w &lt;ws2007HttpBinding&gt;
 Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md) elementu.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<powiązania >  
-\<ws2007HttpBinding >  
+\<ws2007HttpBinding>  
 \<Powiązanie >  
-\<Zabezpieczenia >  
-\<komunikat >  
+\<security>  
+\<message>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -62,7 +62,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
 |`establishSecurityContext`|Wartość, która określa, czy kanał zabezpieczeń ustanawia bezpiecznej sesji. Bezpieczna sesja ustanawia token kontekstu zabezpieczeń (SCT) przed rozpoczęciem wymiany komunikatów aplikacji. Po nawiązaniu SCT kanału zabezpieczeń oferuje <xref:System.ServiceModel.Channels.ISession> interfejs do górnej kanałów. Aby uzyskać więcej informacji o korzystaniu z bezpiecznej sesji, zobacz [porady: tworzenie bezpiecznej sesji](../../../../../docs/framework/wcf/feature-details/how-to-create-a-secure-session.md).<br /><br /> Wartość domyślna to `true`.|  
 |`negotiateServiceCredential`|Opcjonalny. Wartość, która określa, czy poświadczenia usługi jest udostępniane po stronie klienta poza pasmem lub są uzyskiwane z usługi do klienta w procesie negocjacji. Takie negocjacji jest macierzystych do programu exchange zwykle wiadomości.<br /><br /> Jeśli `clientCredentialType` atrybut ma wartość None, nazwa użytkownika lub certyfikatu, ustawienie tego atrybutu na `false` oznacza to, że certyfikat usługi jest dostępny na kliencie poza pasmem klienta należy określić certyfikat usługi (za pomocą [ \<serviceCertificate >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) w [ \<serviceCredentials >](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md) zachowania usługi. Ten tryb jest współpraca z implementacji protokołu WS-Trust i WS-SecureConversation stosy protokołu SOAP.<br /><br /> Jeśli `ClientCredentialType` atrybut ma ustawioną `Windows`, ustawienie tego atrybutu na `false` określa uwierzytelniania opartego na protokołu Kerberos. Oznacza to, że klient i usługa muszą być częścią tej samej domeny protokołu Kerberos. Ten tryb jest współpraca z wdrożenia profilu token protokołu Kerberos (zgodnie z definicją w OASIS TC programu WSS) oraz protokołu WS-Trust i WS-SecureConversation stosy protokołu SOAP.<br /><br /> Jeśli ten atrybut jest `true`, powoduje negocjacji protokołu SOAP .NET, który tuneli <xref:System.ServiceModel.Security.Tokens.ServiceModelSecurityTokenTypes.Spnego%2A> exchange za pośrednictwem wiadomości SOAP.<br /><br /> Wartość domyślna to `true`.|  
   
-## <a name="algorithmsuite-attribute"></a>algorithmSuite atrybutu  
+## <a name="algorithmsuite-attribute"></a>algorithmSuite Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -100,7 +100,7 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Zabezpieczenia >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definiuje ustawienia zabezpieczeń dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|Definiuje ustawienia zabezpieczeń dla [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md).|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.NonDualMessageSecurityOverHttp>  
@@ -110,5 +110,5 @@ Definiuje ustawienia zabezpieczeń na poziomie komunikatu z [ \<ws2007HttpBindin
  [Zabezpieczanie usług i klientów](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

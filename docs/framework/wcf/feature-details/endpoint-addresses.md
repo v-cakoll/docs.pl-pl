@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 94610842cd801a54bba0266a4f658d8a4bb60dcd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 58e6d383856d57e95a1ea5bd2658af2ec0b22ed5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="endpoint-addresses"></a>Adresy punktów końcowych
 Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowania i identyfikowania punktu końcowego. Ten adres składa się przede wszystkim z zasobów identyfikator URI (Uniform), który określa położenie punktu końcowego. Adres punktu końcowego jest reprezentowana w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] model programowania przez <xref:System.ServiceModel.EndpointAddress> klasy, która zawiera opcjonalny <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwość, która umożliwia uwierzytelnianie punktu końcowego przez inne punkty końcowe, które wymiany wiadomości, a opcjonalny zestaw <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, które opisują inne nagłówki SOAP, wymagane w celu dotarcia do usługi. Opcjonalne nagłówki zawierają dodatkowe i bardziej szczegółowych informacji o adresach do identyfikacji użytkownika lub interakcji z punktem końcowym usługi. Adres punktu końcowego jest reprezentowana w sieci jako usługi WS-Addressing odwołaniu do punktu końcowego (EPR).  
@@ -32,11 +32,11 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
   
 -   Schemat: http:  
   
--   Maszyny: www.fabrikam.com  
+-   Machine: www.fabrikam.com  
   
 -   (opcjonalnie) Port: 322  
   
--   Ścieżka: /mathservice.svc/secureEndpoint  
+-   Path: /mathservice.svc/secureEndpoint  
   
 ## <a name="defining-an-address-for-a-service"></a>Definiowanie adresu dla usługi  
  Adres punktu końcowego usługi można określić albo imperatively za pomocą kodu lub deklaratywnie za pomocą konfiguracji. Definiowanie punktów końcowych w kodzie zazwyczaj nie jest praktyczne ponieważ powiązań i adresów dla wdrożonej usługi są zazwyczaj inne niż używane, gdy usługa jest obecnie opracowywane. Ogólnie rzecz biorąc lepiej jest punkty końcowe usługi przy użyciu konfiguracji zamiast kodu. Utrzymywanie powiązania i adresowanie poza kod pozwala na zmianę bez konieczności ponowne skompilowanie lub ponownego wdrażania aplikacji.  
@@ -67,9 +67,9 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
   
  Na przykład lokacji może zawierać następujący adres podstawowy:  
   
--   http://Payroll.myorg.com/Service.svc  
+-   http://payroll.myorg.com/Service.svc  
   
--   http://Shipping.myorg.com/Service.svc  
+-   http://shipping.myorg.com/Service.svc  
   
  Z [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)], należy określić filtr prefiks na poziomie elementu AppDomain w pliku konfiguracji. W tym z [ \<baseAddressPrefixFilters >](../../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) element, który zawiera listę prefiksów. Przychodzące adres podstawowy, dostarczone przez usługi IIS, są filtrowane w oparciu o liście opcjonalny prefiks. Domyślnie jeśli nie określono prefiksu, wszystkie adresy są przekazywane. Określenie prefiksu wyniki w tylko pasujących adres podstawowy schemat przekazywane.  
   
@@ -130,7 +130,7 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
   
 -   W kodzie, należy utworzyć niestandardowy adres nagłówki za pomocą <xref:System.ServiceModel.Channels.AddressHeader> klasy, a następnie używany do budowy <xref:System.ServiceModel.EndpointAddress>.  
   
--   W konfiguracji, niestandardowe [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) są określone jako elementy podrzędne [ \<punktu końcowego >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+-   W konfiguracji, niestandardowe [ \<nagłówki >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md) są określone jako elementy podrzędne [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
  Konfiguracja jest zazwyczaj kodu, jako umożliwia zmienianie nagłówków po wdrożeniu.  
   
@@ -141,7 +141,7 @@ Każdy punkt końcowy ma adres skojarzony z, która jest używana do lokalizowan
   
 -   W kodzie, określ niestandardowy adres nasłuchiwania przez dodanie <xref:System.ServiceModel.Description.ClientViaBehavior> klasy do kolekcji zachowania punktu końcowego.  
   
--   W konfiguracji, określ niestandardowy adres nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+-   W konfiguracji, określ niestandardowy adres nasłuchiwania z `ListenUri` atrybut usługi [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
 ### <a name="custom-soap-address-filter"></a>Filtr adresów SOAP niestandardowych  
  <xref:System.ServiceModel.EndpointAddress.Uri%2A> Jest używany w połączeniu ze wszystkimi <xref:System.ServiceModel.EndpointAddress.Headers%2A> właściwości, aby zdefiniować filtr adresu punktu końcowego protokołu SOAP (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>). Domyślnie ten filtr sprawdza, czy komunikat przychodzący ma `To` nagłówek komunikatu, odpowiadającą punktowi końcowemu przez identyfikator URI i czy wszystkie nagłówków wymaganego punktu końcowego są obecne w komunikacie.  

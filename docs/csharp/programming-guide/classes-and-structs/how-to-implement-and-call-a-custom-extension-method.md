@@ -9,14 +9,14 @@ ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
 caps.latest.revision: "15"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7de999c53f02fcc2bde4a8ccf504ba2b1d032638
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
-W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla każdego typu w [Biblioteka klas programu .NET Framework](http://go.microsoft.com/fwlink/?LinkID=217856), lub inny typ .NET, który ma zostać rozszerzony. Kod klienta można użyć metody rozszerzenia Dodawanie odwołania do pliku DLL zawierającego je i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy, który określa przestrzeń nazw, w którym zdefiniowano metody rozszerzenia.  
+W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla dowolnego typu .NET. Kod klienta można użyć metody rozszerzenia Dodawanie odwołania do pliku DLL zawierającego je i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy, który określa przestrzeń nazw, w którym zdefiniowano metody rozszerzenia.  
   
 ## <a name="to-define-and-call-the-extension-method"></a>Aby zdefiniować i wywołanie metody rozszerzenia  
   
@@ -47,11 +47,11 @@ W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla każdego t
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Metody rozszerzenia](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
+ [Metody rozszerzeń](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
- [Klasy statyczne i statyczni członkowie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [Ten](../../../csharp/language-reference/keywords/this.md)  
- [przestrzeń nazw](../../../csharp/language-reference/keywords/namespace.md)
+ [Klasy statyczne i statyczne elementy członkowskie klas](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)  
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [this](../../../csharp/language-reference/keywords/this.md)  
+ [namespace](../../../csharp/language-reference/keywords/namespace.md)

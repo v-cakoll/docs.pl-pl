@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 98d39bdc366eb6b5d757057c3d0e519d81aedd43
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4ba4548e6ea62f408fddf3629eca1318c482f728
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="authorization-policy"></a>Zasady autoryzacji
 W tym przykładzie pokazano, jak wdrożyć zasady autoryzacji oświadczeń i skojarzona usługa niestandardowych Menedżera autoryzacji. Jest to przydatne, sprawdza oparta na oświadczeniach dostępu do operacji usługi i przed kontroli dostępu umożliwia usługi przyznaje wywołującego pewne prawa. W tym przykładzie pokazano proces dodawania oświadczeń, a także proces ten kontrolę dostępu przed ukończone zestaw oświadczeń. Wszystkie komunikaty aplikacji między klientem a serwerem są podpisane i zaszyfrowane. Domyślnie z `wsHttpBinding` powiązanie, nazwę użytkownika i hasło podane przez klienta są używane do logowania się do prawidłowego konta systemu Windows NT. W tym przykładzie pokazano, jak korzystać z niestandardowego <!--zz <xref:System.IdentityModel.Selectors.UsernamePasswordValidator>--> `System.IdentityModel.Selectors.UsernamePasswordValidator` do uwierzytelniania klienta. Ponadto w tym przykładzie pokazano klienta uwierzytelniania w usłudze przy użyciu certyfikatu X.509. Ten przykład przedstawia implementację <xref:System.IdentityModel.Policy.IAuthorizationPolicy> i <xref:System.ServiceModel.ServiceAuthorizationManager>, które między nimi udzielić dostępu do określonych metod usługi dla określonych użytkowników. Ten przykład jest oparty na [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md), ale pokazano, jak wykonać przekształcania oświadczeń, przed <xref:System.ServiceModel.ServiceAuthorizationManager> wywoływane.  
@@ -471,7 +471,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
   
 4.  Uruchom Client.exe z \client\bin. Aktywność klienta jest wyświetlany w aplikacji konsoli klienta.  
   
-5.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+5.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-run-the-sample-across-computers"></a>Aby uruchomić przykład na komputerach  
   
@@ -501,7 +501,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
   
 13. Na komputerze serwera Uruchom Service.exe z okna wiersza polecenia.  
   
-14. Na komputerze klienckim uruchom Client.exe z poziomu okna wiersza polecenia. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+14. Na komputerze klienckim uruchom Client.exe z poziomu okna wiersza polecenia. Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 #### <a name="to-clean-up-after-the-sample"></a>Aby wyczyścić po próbki  
   

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9b6b9ddd27422c09f21833548634afd7945afa89
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b5b27a51dcec17f72b86e77a7ee2ab773aec1dc3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-data-services-45"></a>Usługi danych WCF 4.5
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)](wcześniej znane jako "Usług danych ADO.NET") jest składnikiem programu .NET Framework, która umożliwia tworzenie usług, które używają [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantykę [representational stanu Transfer (REST)](http://go.microsoft.com/fwlink/?LinkId=113919). [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Dane są dostępne i zmieniać przy użyciu standardowych poleceń HTTP z GET, PUT, POST i DELETE. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]używa konwencji Relacja jednostki z [modelu Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) do udostępnienia zasobów jako zestawy jednostek, które są powiązane przez skojarzenia.  
@@ -91,7 +91,7 @@ ms.lasthandoff: 12/22/2017
  Chcę użyć Silverlight...  
  -   [Szybki start Silverlight](http://go.microsoft.com/fwlink/?LinkID=192782)  
   
--   [Usługi danych WCF (platformy Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
+-   [WCF Data Services (Silverlight)](http://go.microsoft.com/fwlink/?LinkID=143149)  
   
 -   [Wprowadzenie do programu Silverlight](http://go.microsoft.com/fwlink/?LinkId=148366)  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 12/22/2017
  [Omówienie](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  Zawiera omówienie funkcji i możliwości, które są dostępne w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)].  
   
- [What's New in usługi danych WCF](http://msdn.microsoft.com/en-us/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
+ [What's New in usługi danych WCF](http://msdn.microsoft.com/library/cf22cad5-b8d9-472b-8d7c-b863b64eaae8)  
  Zawiera opis nowych funkcji w [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] i obsługę nowych [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] funkcji.  
   
  [Wprowadzenie](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)  

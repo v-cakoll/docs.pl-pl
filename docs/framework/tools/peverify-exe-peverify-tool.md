@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f5d9adcfe701b5897c434dc1479b9692448d8b98
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5acb6da7c68f899daa4144e897e9ec31fcfa868a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (narzędzie PEVerify)
 Narzędzie PEVerify pomaga deweloperom, którzy generują język Microsoft intermediate language (MSIL) (na przykład twórcom kompilatorów, deweloperom aparatów skryptów itd.), w ustalaniu, czy ich kod MSIL i związane z nim metadane spełniają wymogi bezpieczeństwa typu. Niektóre kompilatory generują weryfikowalny kod bezpieczny ze względu na typy tylko wtedy, gdy unika się używania pewnych konstrukcji języka. Jeśli jako programista używasz takiego kompilatora, możesz chcieć sprawdzić, czy nie występują zagrożenia bezpieczeństwa typów kodu. W tej sytuacji możesz uruchomić narzędzie PEVerify, aby sprawdzić MSIL i metadane plików.  
@@ -51,22 +51,22 @@ peverify filename [options]
 |------------|-----------------|  
 |**/ Podziel =** *maxErrorCount*|Przerywa weryfikacji po *maxErrorCount* błędy.<br /><br /> Ten parametr nie jest obsługiwany w .NET Framework w wersji 2.0 lub wyższej.|  
 |**/Clock**|Mierzy i raportuje następujące czasy weryfikacji w milisekundach:<br /><br /> **Cykl MD Val.**<br /> Cykl sprawdzania poprawności metadanych<br /><br /> **MD Val. czysty**<br /> Czysty czas sprawdzania poprawności metadanych<br /><br /> **Cykl wersja IL**<br /> Cykli weryfikacji języka pośredniego firmy Microsoft (MSIL)<br /><br /> **Czysty Ver IL**<br /> Czysty czas weryfikacji języka MSIL<br /><br /> **Cyklu MD Val.** i **cyklu wersja IL** razy obejmuje czasu wymaganego do wykonania niezbędnych procedur uruchamiania i wyłączania. **Val. MD czysty** i **Ver IL czysty** razy uwzględnienia czasu wymagane do przeprowadzenia weryfikacji lub tylko weryfikacji.|  
-|**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
-|**/HRESULT**|Wyświetla kody błędów w formacie szesnastkowym.|  
+|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/hresult**|Wyświetla kody błędów w formacie szesnastkowym.|  
 |**/ Ignoruj =** *hex.code* [, *hex.code*]|Ignoruje wymienione kody błędów.|  
 |**/ Ignoruj = @** *responseFile*|Ignoruje kody błędów wymienione w określonym pliku odpowiedzi.|  
-|**/Il**|Sprawdza MSIL typu bezpieczeństwa weryfikacji dla metod zaimplementowanych w zestawie określony przez *filename*. Narzędzie zwraca szczegółowy opis każdego problemu znaleziono, chyba że zostanie **/quiet** opcji.|  
-|**/ / MD**|Przeprowadza weryfikację metadanych dla zestawu określony przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
+|**/il**|Sprawdza MSIL typu bezpieczeństwa weryfikacji dla metod zaimplementowanych w zestawie określony przez *filename*. Narzędzie zwraca szczegółowy opis każdego problemu znaleziono, chyba że zostanie **/quiet** opcji.|  
+|**/md**|Przeprowadza weryfikację metadanych dla zestawu określony przez *filename*. Oznacza to przejrzenie pełnej struktury metadanych w pliku i raportowanie wszystkich napotkanych problemów.|  
 |**/nologo**|Pomija wyświetlanie informacji o wersji i prawach autorskich produktu.|  
 |**/nosymbols**|W wersji 2.0 .NET Framework wyłącza numery wierszy w celu zapewnienia zgodności z poprzednimi wersjami.|  
 |**/quiet**|Określa tryb cichy. Wyłącza raportowanie problemów weryfikacji. Peverify.exe w dalszym ciągu raportuje, czy plik jest bezpiecznych pod względem typów, ale nie raportuje problemów uniemożliwiających weryfikację bezpieczeństwa typów.|  
 |`/transparent`|Weryfikuje tylko metody przezroczyste.|  
-|**/ unique**|Ignoruje powtarzające się kody błędów.|  
+|**/unique**|Ignoruje powtarzające się kody błędów.|  
 |**/verbose**|W .NET Framework w wersji 2.0 wyświetla dodatkowe informacje w komunikatach weryfikacji MSIL.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
   
 ## <a name="remarks"></a>Uwagi  
- Środowisko uruchomieniowe języka wspólnego opiera się na wykonywaniu kodu aplikacji bezpiecznego pod kątem typów, aby ułatwić wymuszanie stosowania mechanizmów zabezpieczeń i izolacji. Zazwyczaj kod, który nie jest [sprawdzalnie bezpieczny typ](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) nie można uruchomić, chociaż można ustawić zasady zabezpieczeń, aby umożliwić wykonywanie kodu zaufane, ale niemożliwy.  
+ Środowisko uruchomieniowe języka wspólnego opiera się na wykonywaniu kodu aplikacji bezpiecznego pod kątem typów, aby ułatwić wymuszanie stosowania mechanizmów zabezpieczeń i izolacji. Zazwyczaj kod, który nie jest [sprawdzalnie bezpieczny typ](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc) nie można uruchomić, chociaż można ustawić zasady zabezpieczeń, aby umożliwić wykonywanie kodu zaufane, ale niemożliwy.  
   
  Jeśli żadna **/ / MD** ani **/il** opcje są określone, Peverify.exe wykonuje obu typów kontroli. Wykonuje Peverify.exe **/ / MD** najpierw sprawdza. Jeśli nie ma żadnych błędów **/il** kontroli. Jeśli możesz określić ich obu **/ / MD** i **/il**, **/il** sprawdzane jest nawet, jeśli występują błędy w metadanych. W związku z tym, jeśli nie ma żadnych błędów metadanych **peverify** *filename* jest odpowiednikiem **peverify** *filename* **/ / MD** **/il**.  
   
@@ -131,6 +131,6 @@ peverify myAssembly.exe /break=100 /ignore@ignoreErrors.rsp
   
 ## <a name="see-also"></a>Zobacz też  
  [Narzędzia](../../../docs/framework/tools/index.md)  
- [NIB: Sprawdzalnie bezpieczny kod zapisywania](http://msdn.microsoft.com/en-us/d18f10ef-3b48-4f47-8726-96714021547b)  
- [Typ bezpieczeństwa i zabezpieczeń](http://msdn.microsoft.com/en-us/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
+ [NIB: Sprawdzalnie bezpieczny kod zapisywania](http://msdn.microsoft.com/library/d18f10ef-3b48-4f47-8726-96714021547b)  
+ [Typ bezpieczeństwa i zabezpieczeń](http://msdn.microsoft.com/library/095cd1f6-d8db-4c0e-bce2-83ccb34dd5dc)  
  [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

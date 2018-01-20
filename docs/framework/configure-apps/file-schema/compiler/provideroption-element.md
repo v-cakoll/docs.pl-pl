@@ -19,17 +19,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 1f91b9fcd7ef9c9c616a7a41ced6be1cda365509
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f28b7b43f2f782744a0dbc81bd0b91bbbcd8abba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltprovideroptiongt-element"></a>&lt;provideroption —&gt; — Element
 Określa atrybuty wersji kompilatora dla dostawcy języka.  
   
  \<Element konfiguracji >  
-\<System.CodeDom — Element >  
+\<system.codedom Element>  
 \<Element kompilatorów >  
 \<Kompilator > — Element  
 \<provideroption — > — Element  
@@ -61,7 +61,7 @@ Określa atrybuty wersji kompilatora dla dostawcy języka.
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Konfiguracja > — Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Element główny w każdym pliku konfiguracyjnym, który jest używany przez środowisko uruchomieniowe języka wspólnego i aplikacji programu .NET Framework.|  
-|[\<System.CodeDom — > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia kompilatora konfiguracji dla dostawcy dostępnych języków.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia kompilatora konfiguracji dla dostawcy dostępnych języków.|  
 |[\<kompilatory > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementy kompilatora konfiguracji; zawiera zero lub więcej `<compiler>` elementów.|  
 |[\<Kompilator > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|Określa atrybuty kompilatora konfiguracji dostawcy języka.|  
   
@@ -105,4 +105,4 @@ Określa atrybuty wersji kompilatora dla dostawcy języka.
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<kompilatory > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Określanie w pełni kwalifikowanych nazw typów](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Kompilator elementu dla kompilatory kompilacji (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [Kompilator elementu dla kompilatory kompilacji (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

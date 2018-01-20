@@ -12,11 +12,11 @@ ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
 caps.latest.revision: "35"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 34a80e4bf129c6104d50a8a0877271136c0c4198
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 4c94e6cd2894959d64fe463c85b4460893f2bf96
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="extension-methods-c-programming-guide"></a>Metody rozszerzeń (Przewodnik programowania w języku C#)
 Metody rozszerzenia umożliwiają „dodawanie” metod do istniejących typów bez konieczności tworzenia nowego typu pochodnego, ponownej kompilacji lub modyfikowania oryginalnego typu w inny sposób. Metody rozszerzenia stanowią specjalny rodzaj metod statycznych, ale są wywoływane tak, jakby były metodami wystąpień w typie rozszerzonym. Dla klienta kod napisany w języku C#, F # i Visual Basic istnieje widocznej różnicy wywoływanie metody rozszerzenia i metody, które faktycznie są zdefiniowane w typie.  
@@ -90,8 +90,8 @@ using System.Linq;
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Równoległe przykłady programowania (dotyczy to wiele metod rozszerzenia przykład)](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)  
  [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Operatory standardowe zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
- [Konwersja na przykład zasady parametrów i ich wpływ](http://go.microsoft.com/fwlink/?LinkId=112385)  
- [Metody rozszerzenia współdziałanie między językami](http://go.microsoft.com/fwlink/?LinkId=112386)  
- [Metody rozszerzenia i delegatów typu Curried.](http://go.microsoft.com/fwlink/?LinkId=112387)  
- [Metody rozszerzenia powiązania oraz raportowania błędów](http://go.microsoft.com/fwlink/?LinkId=112388)
+ [Standardowe operatory zapytań — przegląd](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2)  
+ [Konwersja na przykład zasady parametrów i ich wpływ](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/conversion-rules-for-instance-parameters-and-their-impact)  
+ [Metody rozszerzenia współdziałanie między językami](https://blogs.msdn.microsoft.com/sreekarc/2007/10/11/extension-methods-interoperability-between-languages)  
+ [Metody rozszerzenia i delegatów typu Curried.](https://blogs.msdn.microsoft.com/sreekarc/2007/05/01/extension-methods-and-curried-delegates)  
+ [Metody rozszerzenia powiązania oraz raportowania błędów](https://blogs.msdn.microsoft.com/sreekarc/2007/04/26/extension-method-binding-and-error-reporting)

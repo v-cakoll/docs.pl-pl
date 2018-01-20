@@ -14,17 +14,17 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: aad62d8532fff09157d53f8307fb2b9dcd506cd1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba3948ef52e6ce527b0bdba77652949e43d05eb2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-exchange-messages-within-a-reliable-session"></a>Instrukcje: Wymiana komunikatów w ramach sesji niezawodnej
 
 W tym temacie opisano kroki wymagane w celu umożliwienia niezawodnej sesji przy użyciu jednej powiązań dostarczane przez system, które obsługują sesji programu, ale nie domyślnie. Włącz niezawodnej sesji imperatively przy użyciu kodu lub deklaratywnie w pliku konfiguracji. Ta procedura wykorzystuje pliki konfiguracji klienta i usługi, aby włączyć niezawodnej sesji i określić, że komunikaty dostarczone w tej samej kolejności, w jakiej zostały wysłane.
 
-Część klucza tej procedury jest, że element konfiguracji punktu końcowego zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `Binding1`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się do tej nazwy, aby włączyć niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](http://msdn.microsoft.com/en-us/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elementu `true`. Określ gwarancje uporządkowanego dostarczenia niezawodnej sesji przez ustawienie `ordered` atrybutu `true`.
+Część klucza tej procedury jest, że element konfiguracji punktu końcowego zawiera `bindingConfiguration` atrybut, który odwołuje się do konfiguracji powiązania o nazwie `Binding1`. [  **\<Powiązania >** ](../../../../docs/framework/misc/binding.md) element konfiguracji odwołuje się do tej nazwy, aby włączyć niezawodnej sesji przez ustawienie `enabled` atrybutu [  **\<reliableSession >** ](http://msdn.microsoft.com/library/9c93818a-7dfa-43d5-b3a1-1aafccf3a00b) elementu `true`. Określ gwarancje uporządkowanego dostarczenia niezawodnej sesji przez ustawienie `ordered` atrybutu `true`.
 
 Dla źródła kopię w tym przykładzie [sesja niezawodna WS](../../../../docs/framework/wcf/samples/ws-reliable-session.md).
 

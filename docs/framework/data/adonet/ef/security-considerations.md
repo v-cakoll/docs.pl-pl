@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 1c68fc09ca1ca50ec544e79ec6fb8bf00a1b09ee
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla tworzenie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również stosować zaleceń dotyczących tworzenia bezpiecznego [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -109,7 +109,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
      Ataki mogą być wykonywane w [!INCLUDE[esql](../../../../../includes/esql-md.md)] podając złośliwego dane wejściowe do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć zagrożenia iniekcja kodu SQL, nigdy nie należy łączyć danych wejściowych użytkownika z [!INCLUDE[esql](../../../../../includes/esql-md.md)] tekst polecenia.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)]zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Zapytania sparametryzowane należy używać zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć za pomocą metody konstruktora zapytań do skonstruowania bezpiecznie [SQL jednostki](http://msdn.microsoft.com/en-us/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)]zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Zapytania sparametryzowane należy używać zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć za pomocą metody konstruktora zapytań do skonstruowania bezpiecznie [SQL jednostki](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]ataki na wstrzyknięciu kodu:  
   
@@ -143,7 +143,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Podczas generowania i Praca z typami jednostek, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
   
 #### <a name="do-not-share-an-objectcontext-across-application-domains"></a>Nie udostępniaj obiektu ObjectContext między domenami aplikacji.  
- Udostępnianie <xref:System.Data.Objects.ObjectContext> z więcej niż jedną aplikację domeny może ujawnić informacji w parametrach połączenia. Zamiast tego należy przekazywać obiektów serializowanych ani wykresów obiektów domeny aplikacji i następnie dołączyć te obiekty, do <xref:System.Data.Objects.ObjectContext> w tej domenie aplikacji. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ Udostępnianie <xref:System.Data.Objects.ObjectContext> z więcej niż jedną aplikację domeny może ujawnić informacji w parametrach połączenia. Zamiast tego należy przekazywać obiektów serializowanych ani wykresów obiektów domeny aplikacji i następnie dołączyć te obiekty, do <xref:System.Data.Objects.ObjectContext> w tej domenie aplikacji. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
 #### <a name="prevent-type-safety-violations"></a>Zapobiegaj typu naruszenia bezpieczeństwa.  
  W przypadku naruszenia bezpieczeństwa typu [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie może zagwarantować spójność danych w obiektach. Naruszenia bezpieczeństwa typ mógł wystąpić, jeśli zezwolisz niezaufanych aplikacji do uruchamiania z zabezpieczeniami dostępu kodu pełnego zaufania.  

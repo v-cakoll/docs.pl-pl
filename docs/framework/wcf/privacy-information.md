@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f66f773551f45f9e4c5978ef09bbe4061a3326bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2d0172b91393e4e9e373a247c33be938a3160e14
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Informacje o prywatności dotyczące architektury WCF (Windows Communication Foundation)
 Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas budowania aplikacji przy użyciu [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], wersja 3.0, aplikacja może mieć wpływ na prywatność użytkowników końcowych. Na przykład aplikacja jawnie może zbierać informacje kontaktowe użytkownika lub może zażądać, lub wysłać informacje przez Internet do witryny sieci Web. Jeśli technologii firmy Microsoft możesz osadzić w aplikacji, technologia ta może być własną zachowanie, które mogą mieć wpływ na prywatność. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]nie wysyła żadnych informacji do firmy Microsoft z aplikacji, chyba że użytkownik lub użytkownik końcowy wybrać do wysyłania do nas.  
@@ -138,13 +138,13 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  Klucze, które zostały usunięte:  
   
- \-Xmlns:wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" i xmlns:wst = "http://schemas.xmlsoap.org/ws/2005/02/trust"  
+ \- For xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" and xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
   
- Wst:BinarySecret  
+ wst:BinarySecret  
   
  Wst:Entropy  
   
- \-Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:Password  
   
@@ -152,7 +152,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  Potencjalnie osobiste informacje zostaną usunięte:  
   
- \-Xmlns:wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" i xmlns:wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
+ \- For xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" and xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd"  
   
  wsse:username  
   
@@ -162,25 +162,25 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  \<Potwierdzenia  
   
- MajorVersion = "1"  
+ MajorVersion="1"  
   
- MinorVersion = "1"  
+ MinorVersion="1"  
   
- Identyfikator potwierdzenia = "[identyfikator]"  
+ AssertionId="[ID]"  
   
  Wystawca = "[parametry]"  
   
- IssueInstant = "[dateTime]"  
+ IssueInstant="[dateTime]"  
   
  >  
   
- \<Warunki nie wcześniej niż = "[dateTime]" NotOnOrAfter = "[dateTime]" >  
+ \<Conditions NotBefore="[dateTime]" NotOnOrAfter="[dateTime]">  
   
- \<AudienceRestrictionCondition >  
+ \<AudienceRestrictionCondition>  
   
- \<Grupy odbiorców > [identyfikator uri]\</Audience > +  
+ \<Audience>[uri]\</Audience>+  
   
- \</ AudienceRestrictionCondition > *  
+ \</AudienceRestrictionCondition>*  
   
  \<DoNotCacheCondition / > *  
   
@@ -200,15 +200,15 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  [any] *  
   
- \</ Porady >?  
+ \</Advice>?  
   
  <\!--Abstrakcyjnych typów podstawowych  
   
  \<Instrukcja / > *  
   
- \<SubjectStatement >  
+ \<SubjectStatement>  
   
- \<Temat >  
+ \<Subject>  
   
  `<NameIdentifier`  
   
@@ -222,19 +222,19 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  `</NameIdentifier>?`  
   
- \<SubjectConfirmation >  
+ \<SubjectConfirmation>  
   
  \<ConfirmationMethod > [anyUri]\</ConfirmationMethod > +  
   
  \<SubjectConfirmationData > [any]\</SubjectConfirmationData >?  
   
- \<DS:KeyInfo >... \</ds:KeyInfo >?  
+ \<ds:KeyInfo>...\</ds:KeyInfo>?  
   
- \</ SubjectConfirmation >?  
+ \</SubjectConfirmation>?  
   
- \</ Temat >  
+ \</Subject>  
   
- \</ SubjectStatement > *  
+ \</SubjectStatement>*  
   
  -->  
   
@@ -242,7 +242,7 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  AuthenticationMethod = "[identyfikator uri]"  
   
- AuthenticationInstant = "[dateTime]"  
+ AuthenticationInstant="[dateTime]"  
   
  >  
   
@@ -256,49 +256,49 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  `/>?`  
   
- < AuthorityBinding  
+ <AuthorityBinding  
   
- Atrybut AuthorityKind = "[QName]"  
+ AuthorityKind="[QName]"  
   
  Lokalizacja = "[identyfikator uri]"  
   
- Powiązanie = "[identyfikator uri]"  
+ Binding="[uri]"  
   
  />*  
   
- \</ AuthenticationStatement > *  
+ \</AuthenticationStatement>*  
   
- \<AttributeStatement >  
+ \<AttributeStatement>  
   
  [Podmiotu]  
   
  \<Atrybut  
   
- AttributeName = "[parametry]"  
+ AttributeName="[string]"  
   
- AttributeNamespace = "[identyfikator uri]"  
+ AttributeNamespace="[uri]"  
   
  >  
   
  `<AttributeValue>[any]</AttributeValue>+`  
   
- \</ Atrybut > +  
+ \</Attribute>+  
   
- \</ AttributeStatement > *  
+ \</AttributeStatement>*  
   
  \<AuthorizationDecisionStatement  
   
  Zasób = "[identyfikator uri]"  
   
- Decyzja = "[zezwolenia &#124; Odmów &#124; nieokreślony]"  
+ Decision="[Permit&#124;Deny&#124;Indeterminate]"  
   
  >  
   
  [Podmiotu]  
   
- \<Akcja Namespace = "[identyfikator uri]" > [parametry]\<Action > +  
+ \<Action Namespace="[uri]">[string]\</Action>+  
   
- \<Dowód >  
+ \<Evidence>  
   
  \<AssertionIDReference > [identyfikator]\</AssertionIDReference > +  
   
@@ -306,9 +306,9 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  \</ Dowody >?  
   
- \</ AuthorizationDecisionStatement > *  
+ \</AuthorizationDecisionStatement>*  
   
- \</ Potwierdzenie >  
+ \</Assertion>  
   
 #### <a name="information-removed-from-message-bodies-when-logging-decryptedunencrypted-messages"></a>Informacje o usuwane z treści wiadomości, gdy rejestrowanie komunikatów odszyfrować niezaszyfrowanej  
  Jak opisano wcześniej, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usuwa klucze i znanych potencjalnie dane osobowe z nagłówki komunikatów zarejestrowane komunikaty odszyfrować niezaszyfrowane. Ponadto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usuwa klucze i znanych potencjalnie dane osobowe z treści wiadomości treści elementy i działania na poniższej liście, które opisują komunikaty zabezpieczeń związane z wymiany kluczy.  
@@ -319,11 +319,11 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  Informacje są usuwane z tych elementów treści, które obejmują wymiany kluczy:  
   
- Wst:RequestSecurityToken  
+ wst:RequestSecurityToken  
   
- Wst:RequestSecurityTokenResponse  
+ wst:RequestSecurityTokenResponse  
   
- Wst:RequestSecurityTokenResponseCollection  
+ wst:RequestSecurityTokenResponseCollection  
   
  Informacje są również usuwane dla każdego z następujących czynności:  
   
@@ -331,17 +331,17 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Issue  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Renew  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Cancel  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Cancel  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/validate  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/Validate  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/validate  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/Validate  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT  
   
@@ -351,21 +351,21 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Amend  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Renew  
   
- http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/renew  
+ http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Renew  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RST/SCT/Cancel  
   
  http://schemas.xmlsoap.org/ws/2005/02/trust/RSTR/SCT/Cancel  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RST/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RST/SCT-Amend  
   
- http://schemas.xmlsoap.org/ws/2004/04/Security/Trust/RSTR/SCT-Amend  
+ http://schemas.xmlsoap.org/ws/2004/04/security/trust/RSTR/SCT-Amend  
   
 #### <a name="no-information-is-removed-from-application-specific-headers-and-body-data"></a>Informacje nie zostaną usunięte z nagłówków specyficzne dla aplikacji i danych treści  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]nie śledzi informacje osobiste w nagłówkach specyficzne dla aplikacji (na przykład ciągi zapytań) lub treści danych (na przykład numer karty kredytowej).  
@@ -413,5 +413,5 @@ Firma Microsoft dba o ochronę prywatności użytkowników końcowych. Podczas b
  Web Services Description Language (WSDL) zawiera definicję portu. Każdy port ma adres punktu końcowego i powiązania, które reprezentuje usługi używane przez aplikację. Udostępnianie WSDL można wyłączyć za pomocą konfiguracji. Żadne informacje nie są przechowywane na tym komputerze.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Windows Communication Foundation](http://msdn.microsoft.com/en-us/fd327ade-0260-4c40-adbe-b74645ba3277)  
+ [Windows Communication Foundation](http://msdn.microsoft.com/library/fd327ade-0260-4c40-adbe-b74645ba3277)  
  [Zabezpieczenia](../../../docs/framework/wcf/feature-details/security.md)

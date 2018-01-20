@@ -1,7 +1,7 @@
 ---
 title: "Testowanie platformy ASP.NET Core usług i aplikacji sieci web"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Testowanie platformy ASP.NET Core usług i aplikacji sieci web"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b2e9bdb08d4b1607dfea34babbe7fd14627decff
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 80b7fa75344f8737baacfba6462a03b436fdf6a8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>Testowanie platformy ASP.NET Core usług i aplikacji sieci web
 
@@ -110,10 +110,10 @@ public class PrimeWebDefaultRequestShould
     [*https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test*](https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
 
 -   **xUnit.net**. Oficjalna witryna.
-    [*https://xunit.github.IO/*](https://xunit.github.io/)
+    [*https://xunit.github.io/*](https://xunit.github.io/)
 
--   **Teście jednostkowym. ** 
-     [ *https://msdn.microsoft.com/en-us/library/hh694602.aspx*](https://msdn.microsoft.com/en-us/library/hh694602.aspx)
+-   **Unit Test Basics.**
+    [*https://msdn.microsoft.com/library/hh694602.aspx*](https://msdn.microsoft.com/library/hh694602.aspx)
 
 -   **Moq**. Repozytorium GitHub.
     [*https://github.com/moq/moq*](https://github.com/moq/moq)
@@ -130,4 +130,4 @@ Istnieje kilka metod, których można użyć. W plik docker-compose.yml, który 
 Po skonfigurowaniu i uruchomieniu aplikacji tworzenia może potrwać z punktów przerwania i wyjątków zalet Jeśli używasz programu Visual Studio. Lub uruchom testy integracji automatycznie planowaną CI w Visual Studio Team Services lub inny system CI/CD, który obsługuje kontenery Docker.
 
 >[!div class="step-by-step"]
-[Poprzednie] (subskrypcja events.md) [dalej] (.. /microservice-ddd-cqrs-patterns/index.MD)
+[Previous] (subscribe-events.md) [Next] (../microservice-ddd-cqrs-patterns/index.md)

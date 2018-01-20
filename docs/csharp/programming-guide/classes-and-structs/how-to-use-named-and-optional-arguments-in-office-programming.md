@@ -12,16 +12,16 @@ ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 caps.latest.revision: "34"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a453699591397224435fba1e602c305f18e84a11
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: fc3c0f6910238ba20582280426b4a40e68b95dd8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Porady: użycie argumentów nazwanych i opcjonalnych w programowaniu Office (Przewodnik programowania w języku C#)
 Nazwane argumenty i argumentów opcjonalnych, wprowadzone w systemie [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], zwiększenia wygody, elastyczność i możliwość odczytania w C# — programowanie. Ponadto te funkcje znacznie ułatwienia dostępu do interfejsów modelu COM, takich jak Microsoft Office automatyzacji interfejsów API.  
   
- W poniższym przykładzie metoda [ConvertToTable](http://go.microsoft.com/fwlink/?LinkId=145378) ma parametry, które reprezentują właściwości tabeli, takie jak liczba kolumn i wierszy, formatowanie, obramowania szesnastu, czcionki i kolory. Wszystkie szesnastu parametry są opcjonalne, ponieważ w większości przypadków nie chcesz określać wartości określonej dla wszystkich z nich. Jednak bez argumenty nazwane i opcjonalne, wartość lub wartość symbolu zastępczego musi zostać podany dla każdego parametru. Z argumenty nazwane i opcjonalne możesz określić wartości tylko dla parametrów, które są wymagane dla projektu.  
+ W poniższym przykładzie metoda [ConvertToTable](https://msdn.microsoft.com/library/bb216993.aspx) ma parametry, które reprezentują właściwości tabeli, takie jak liczba kolumn i wierszy, formatowanie, obramowania szesnastu, czcionki i kolory. Wszystkie szesnastu parametry są opcjonalne, ponieważ w większości przypadków nie chcesz określać wartości określonej dla wszystkich z nich. Jednak bez argumenty nazwane i opcjonalne, wartość lub wartość symbolu zastępczego musi zostać podany dla każdego parametru. Z argumenty nazwane i opcjonalne możesz określić wartości tylko dla parametrów, które są wymagane dla projektu.  
   
  Musi mieć program Microsoft Office Word zainstalowany na tym komputerze do wykonania tych procedur.  
   
@@ -63,7 +63,7 @@ Nazwane argumenty i argumentów opcjonalnych, wprowadzone w systemie [!INCLUDE[c
   
 ### <a name="to-display-text-in-a-word-document"></a>Do wyświetlania tekstu w dokumencie programu Word  
   
-1.  W `Program` klasy w pliku Program.cs, dodaj następującą metodę do tworzenia aplikacji programu Word i dokument programu Word. [Dodaj](http://go.microsoft.com/fwlink/?LinkId=145381) metoda ma cztery następujące parametry opcjonalne. W tym przykładzie używane wartości domyślne. W związku z tym bez argumentów są niezbędne w instrukcji wywoływania.  
+1.  W `Program` klasy w pliku Program.cs, dodaj następującą metodę do tworzenia aplikacji programu Word i dokument programu Word. [Dodaj](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) metoda ma cztery następujące parametry opcjonalne. W tym przykładzie używane wartości domyślne. W związku z tym bez argumentów są niezbędne w instrukcji wywoływania.  
   
      [!code-csharp[csProgGuideNamedAndOptional#6](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_2.cs)]  
   
@@ -102,7 +102,7 @@ Parametry ConvertToTable
   
      [!code-csharp[csProgGuideNamedAndOptional#10](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_7.cs)]  
   
-2.  Aby określić format wstępnie zdefiniowane dla tabeli, należy zastąpić w ostatnim wierszu `DisplayInWord` z poniższych instrukcji, a następnie wpisz CTRL + F5. Format może być dowolny z [WdTableFormat](http://go.microsoft.com/fwlink/?LinkId=145382) stałe.  
+2.  Aby określić format wstępnie zdefiniowane dla tabeli, należy zastąpić w ostatnim wierszu `DisplayInWord` z poniższych instrukcji, a następnie wpisz CTRL + F5. Format może być dowolny z [WdTableFormat](https://msdn.microsoft.com/library/microsoft.office.interop.word.wdtableformat.aspx) stałe.  
   
      [!code-csharp[csProgGuideNamedAndOptional#11](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-use-named-and-optional-arguments-in-office-programming_8.cs)]  
   

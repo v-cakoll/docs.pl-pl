@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 91db5cf75053f7a9b343036345a97d8084ae38fb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 114fb704a622d92ab8e92fa866fa0fc9bebf4e58
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="threads-and-threading"></a>Wątki i wątkowość
 Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działają procesów. Wątki są jednostkę podstawową, system operacyjny przydziela czas procesora i więcej niż jeden wątek może wykonywania kodu wewnątrz tego procesu. Każdy wątek obsługuje programy obsługi wyjątków, priorytet i zestaw struktur, które system używa zapisać kontekstu wątku, dopóki nie zostanie określony. Kontekst wątku zawiera wszystkie informacje wymagane przez wątek do bezbłędnie wznowić wykonywanie wątku zestaw rejestrów Procesora i stosu, w tym do przestrzeni adresowej procesu hosta wątku.  
@@ -36,7 +36,7 @@ Systemy operacyjne umożliwia rozdzielenie różnych aplikacji, które działaj�
  Długość przedziału czasu zależy od systemu operacyjnego i procesora. Ponieważ każdy przedział czasu jest mały, wiele wątków ma być wykonywane jednocześnie, nawet jeśli dostępny jest tylko jeden procesor. Jest rzeczywiście w systemach wieloprocesorowych, które wykonywalnego wątki są dystrybuowane między dostępnych procesorów.  
   
 ## <a name="when-to-use-multiple-threads"></a>Kiedy należy używać wiele wątków  
- Oprogramowanie, które wymaga interakcji użytkownika musi reagować na działania użytkownika tak szybko jak to możliwe, aby zapewnić użyciu zaawansowanego środowiska użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do przedstawienia danych użytkownika tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek, można połączyć [programowanie asynchroniczne](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z[.NET Framework remoting](http://msdn.microsoft.com/en-us/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) lub [usług XML sieci Web](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c) utworzone za pomocą ASP .NET na potrzeby czas przetwarzania innych komputerów dodatkowo z własnych zwiększenie czasu odpowiedzi użytkownika i zmniejsza czas przetwarzania danych aplikacji. Jeśli przeprowadzasz znacznym pracy wejścia/wyjścia, można zwiększyć czas odpowiedzi aplikacji w portów We/Wy.  
+ Oprogramowanie, które wymaga interakcji użytkownika musi reagować na działania użytkownika tak szybko jak to możliwe, aby zapewnić użyciu zaawansowanego środowiska użytkownika. W tym samym czasie jednak należy ją wykonać obliczeń niezbędnych do przedstawienia danych użytkownika tak szybko, jak to możliwe. Jeśli aplikacja używa tylko jeden wątek, można połączyć [programowanie asynchroniczne](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md) z[.NET Framework remoting](http://msdn.microsoft.com/library/eccb1d31-0a22-417a-97fd-f4f1f3aa4462) lub [usług XML sieci Web](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c) utworzone za pomocą ASP .NET na potrzeby czas przetwarzania innych komputerów dodatkowo z własnych zwiększenie czasu odpowiedzi użytkownika i zmniejsza czas przetwarzania danych aplikacji. Jeśli przeprowadzasz znacznym pracy wejścia/wyjścia, można zwiększyć czas odpowiedzi aplikacji w portów We/Wy.  
   
 ### <a name="advantages-of-multiple-threads"></a>Zalety wiele wątków  
  Jednak przy użyciu więcej niż jeden wątek, jest najbardziej zaawansowanych technik, można zwiększyć czas odpowiedzi dla użytkownika i przetwarzania danych, które są niezbędne, aby uzyskać zadanie wykonywane w niemal tym samym czasie. Na komputerze z jednym procesorem wiele wątków można utworzyć ten efekt, wykorzystaniu małych okresów Between zdarzeń użytkownika do przetwarzania danych w tle. Na przykład użytkownik może edytować arkusza kalkulacyjnego, podczas gdy inny wątek jest ponowne obliczanie inne części arkusza kalkulacyjnego w tej samej aplikacji.  

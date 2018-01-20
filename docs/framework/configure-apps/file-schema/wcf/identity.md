@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 819bb9dc9817050e45a39331361dd5489692f0b9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e583acee6309b6f8145cf8567cff12cea1c237e7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltidentitygt"></a>&lt;tożsamości&gt;
 Element tożsamości pozwala deweloperowi klienta określić w czasie projektu oczekiwaną tożsamość usługi. W ramach procesu uzgadniania między klientem a usługą [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] infrastruktury zapewnia, że odpowiada wartości tego elementu tożsamość oczekiwanej usługi i w związku z tym mogą być uwierzytelniane. Aby uzyskać więcej informacji, zobacz [uwierzytelnianie i tożsamość usługi](../../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md).  
   
- \<System. ServiceModel >  
-\<Klient >  
-\<punkt końcowy >  
+ \<system.ServiceModel>  
+\<client>  
+\<endpoint>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -65,11 +65,11 @@ Element tożsamości pozwala deweloperowi klienta określić w czasie projektu o
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<niestandardowe >](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa program rozpoznawania nazw dla netPeerTcpBinding równorzędnej niestandardowej.|  
-|[\<punkt końcowy >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Umożliwia skonfigurowanie różnych typów punktów końcowych.|  
+|[\<custom>](../../../../../docs/framework/configure-apps/file-schema/wcf/custom.md)|Określa program rozpoznawania nazw dla netPeerTcpBinding równorzędnej niestandardowej.|  
+|[\<punkt końcowy >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)|Umożliwia skonfigurowanie różnych typów punktów końcowych.|  
 |[\<Wystawca >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuer.md)|Określa zabezpieczeń tokenu usługi (STS) dla usługi federacyjnej.|  
-|[\<issuerMetadata >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punktu końcowego metadanych dla zabezpieczeń tokenu usługi (STS) usługi federacyjnej.|  
-|[\<issuedTokenParameters >](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawionego tokenu do niestandardowego powiązania.|  
+|[\<issuerMetadata>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuermetadata.md)|Określa punktu końcowego metadanych dla zabezpieczeń tokenu usługi (STS) usługi federacyjnej.|  
+|[\<issuedTokenParameters>](../../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)|Definiuje parametry dla wystawionego tokenu do niestandardowego powiązania.|  
 |[\<localIssuer >](../../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)|Określa lokalne zabezpieczenia tokenu usługi (STS).|  
   
 ## <a name="see-also"></a>Zobacz też  

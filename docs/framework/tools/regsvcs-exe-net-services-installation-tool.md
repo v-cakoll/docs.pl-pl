@@ -21,11 +21,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd7f50d591232feda0259ecefdb5b9e39514ccb2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bfe7c3e34c2ceaf01f89c1e54f930991ee7e0a2b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (Narzędzie instalacji usług .NET)
 Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:  
@@ -59,11 +59,11 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
 |**/appdir:** *ścieżki*|Określa katalog główny aplikacji.|  
 |**elementów/appname:** *applicationName*|Określa nazwę aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
 |**/c**|Tworzy aplikację docelową.|  
-|**componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
+|**/componly**|Konfiguruje tylko składniki; ignoruje metody i interfejsy.|  
 |**/exapp**|Określa, że narzędzie ma oczekiwać istniejącej aplikacji.|  
 |**/extlb**|Używa istniejącej biblioteki typów.|  
-|**/FC**|Znajduje lub tworzy aplikację docelową.|  
-|**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/fc**|Znajduje lub tworzy aplikację docelową.|  
+|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/noreconfig**|Nie konfiguruje ponownie istniejącej aplikacji docelowej.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/parname:** *nazwy*|Określa nazwę lub identyfikator aplikacji COM+, która ma zostać znaleziona lub utworzona.|  
@@ -76,7 +76,7 @@ Narzędzie instalacji usług platformy .NET wykonuje następujące akcje:
 ## <a name="remarks"></a>Uwagi  
  Regsvcs.exe wymaga pliku zestawu źródłowego określonego przez *assemblyFile.dll*. Ten zestaw musi być podpisany za pomocą silnej nazwy. Aby uzyskać więcej informacji dotyczących podpisywanie silną nazwą, zobacz [podpisywanie zestawu o silnej nazwie](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md). Nazwy aplikacji docelowej i pliku biblioteki typów są opcjonalne. *ApplicationName* argument mogą być generowane ze źródłowego pliku zestawu i zostanie utworzony przez Regsvcs.exe, jeśli jeszcze nie istnieje. *Typelibraryfile* argument można określić nazwy biblioteki typów. Jeśli nie zostanie określona nazwa biblioteki typów, program Regsvcs.exe użyje nazwy zestawu jako wartości domyślnej.  
   
- Regsvcs.exe rejestrujący metod składnika, jest warunkiem [wymagań](http://msdn.microsoft.com/en-us/e5283e28-2366-4519-b27d-ef5c1ddc1f48) i [link zapotrzebowanie](../../../docs/framework/misc/link-demands.md) na jednej z tych metod. To narzędzie działa we w pełni zaufanym środowisku, więc większość żądań uprawnienia kończy się pomyślnie. Jednak Regsvcs.exe nie można zarejestrować składników za pomocą metod chroniony przez żądanie lub linkdemand dla <xref:System.Security.Permissions.StrongNameIdentityPermission> lub <xref:System.Security.Permissions.PublisherIdentityPermission>.  
+ Regsvcs.exe rejestrujący metod składnika, jest warunkiem [wymagań](http://msdn.microsoft.com/library/e5283e28-2366-4519-b27d-ef5c1ddc1f48) i [link zapotrzebowanie](../../../docs/framework/misc/link-demands.md) na jednej z tych metod. To narzędzie działa we w pełni zaufanym środowisku, więc większość żądań uprawnienia kończy się pomyślnie. Jednak Regsvcs.exe nie można zarejestrować składników za pomocą metod chroniony przez żądanie lub linkdemand dla <xref:System.Security.Permissions.StrongNameIdentityPermission> lub <xref:System.Security.Permissions.PublisherIdentityPermission>.  
   
  Aby używać programu Regsvcs.exe, trzeba mieć uprawnienia administracyjne na komputerze lokalnym.  
   

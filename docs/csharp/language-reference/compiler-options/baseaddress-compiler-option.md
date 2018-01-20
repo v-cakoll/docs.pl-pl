@@ -7,25 +7,25 @@ ms.topic: article
 f1_keywords: /dllbase
 helpviewer_keywords:
 - baseaddress compiler option [C#]
-- /baseaddress compiler option [C#]
 - -baseaddress compiler option [C#]
+- /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f8cc5e19565a0e5044626c4fb8eb9d684fbe0a73
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 4e4b4964d587bfdf95949ebd6f0028a25988c2ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="baseaddress-c-compiler-options"></a>/baseaddress (opcje kompilatora C#)
-**/BaseAddress** pozwala określić preferowany adres podstawowy, w którym można załadować biblioteki DLL. Aby uzyskać więcej informacji na temat kiedy i dlaczego użyć tej opcji, zobacz [WebLog Larry Ostermana](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
+# <a name="-baseaddress-c-compiler-options"></a>-baseaddress (opcje kompilatora C#)
+**- Baseaddress** pozwala określić preferowany adres podstawowy, w którym można załadować biblioteki DLL. Aby uzyskać więcej informacji na temat kiedy i dlaczego użyć tej opcji, zobacz [WebLog Larry Ostermana](https://blogs.msdn.microsoft.com/larryosterman/2004/07/06/why-should-i-even-bother-to-use-dlls-in-my-system/).  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/baseaddress:address  
+-baseaddress:address  
 ```  
   
 ## <a name="arguments"></a>Argumenty  

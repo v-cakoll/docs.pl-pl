@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 17fc714acd85b065dbbfa6812d3b55970d5523a2
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 58fa10c62819979bfad15e4cae49118d25ed8670
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>Metody obsługiwane i nieobsługiwane LINQ (LINQ to Entities)
 Ta sekcja zawiera informacje o język Language-Integrated zapytania (LINQ) standardowych operatorów zapytań obsługiwane i nieobsługiwane w [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] zapytania. Wiele LINQ standardowych operatorów zapytań ma zastąpionej wersji, która akceptuje argument liczby całkowitej. Argument całkowitą odpowiada liczony od zera indeks w sekwencji, że jest on obsługiwany przez, <xref:System.Collections.Generic.IEqualityComparer%601>, lub <xref:System.Collections.Generic.IComparer%601>. Inaczej, te wersje przeciążone LINQ standardowych operatorów zapytań nie są obsługiwane, a następnie podjęto próbę użycia ich spowoduje zgłoszenie wyjątku.  
@@ -156,7 +156,7 @@ Ta sekcja zawiera informacje o język Language-Integrated zapytania (LINQ) stand
 |<xref:System.Linq.Queryable.Sum%2A>|Nieobsługiwane|`Function Sum(Of TSource) ( _ source As IQueryable(Of TSource), _ selector As Expression(Of Func(Of TSource, Nullable(Of Decimal))) _ ) As Nullable(Of Decimal)`|`Nullable<decimal> Sum<TSource>( this IQueryable<TSource> source, Expression<Func<TSource, Nullable<decimal>>> selector )`|  
   
 ## <a name="type-methods"></a>Metody typu  
- LINQ standardowych operatorów zapytań dotyczących konwersji typu CLR i testowania są obsługiwane w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. W składniku LINQ to Entities są obsługiwane tylko typy CLR, które mapują na typach modelu koncepcyjnego. Lista typów modelu koncepcyjnego dla [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). W poniższej tabeli wymieniono metody typu obsługiwane i nieobsługiwane.  
+ LINQ standardowych operatorów zapytań dotyczących konwersji typu CLR i testowania są obsługiwane w [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. W składniku LINQ to Entities są obsługiwane tylko typy CLR, które mapują na typach modelu koncepcyjnego. Lista typów modelu koncepcyjnego dla [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). W poniższej tabeli wymieniono metody typu obsługiwane i nieobsługiwane.  
   
 |Metoda|Obsługa|Sygnatura funkcji języka Visual Basic|Podpis metody C#|  
 |------------|-------------|-------------------------------------|--------------------------|  

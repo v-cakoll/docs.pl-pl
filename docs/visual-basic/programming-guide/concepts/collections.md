@@ -11,11 +11,11 @@ ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
 caps.latest.revision: "6"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aac9ed655982ff4618e0bdb7fd2af16aaa546719
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d0ea3b45803bc37f35d516260a57db422827f1e1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="collections-visual-basic"></a>Kolekcje (Visual Basic)
 Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązanych obiektów. Istnieją dwa sposoby do obiektów grup: tworzenie tablic obiektów oraz tworzenie kolekcji obiektów.  
@@ -37,9 +37,9 @@ Dla wielu aplikacji, dla których chcesz Utwórz i Zarządzaj grupami powiązany
   
 -   [Typy kolekcji](#BKMK_KindsOfCollections)  
   
-    -   [System.Collections.Generic — klasy](#BKMK_Generic)  
+    -   [System.Collections.Generic Classes](#BKMK_Generic)  
   
-    -   [Klasy System.Collections.Concurrent](#BKMK_Concurrent)  
+    -   [System.Collections.Concurrent Classes](#BKMK_Concurrent)  
   
     -   [System.Collections — klasy](#BKMK_Collections)  
   
@@ -193,7 +193,7 @@ End Class
 -   Visual Basic `Collection` — klasa  
   
 <a name="BKMK_Generic"></a>
-### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic — klasy  
+### <a name="systemcollectionsgeneric-classes"></a>System.Collections.Generic Classes  
 
  Można utworzyć kolekcję ogólną za pomocą jednej z klas w <xref:System.Collections.Generic> przestrzeni nazw. Ogólnej kolekcji jest przydatne, gdy każdy element w kolekcji ma ten sam typ danych. Wymusza ogólnej kolekcji silne wpisywanie, zezwalając tylko żądanych danych typu do dodania.  
   
@@ -210,7 +210,7 @@ End Class
  Aby uzyskać dodatkowe informacje, zobacz [często używane typy kolekcji](../../../standard/collections/commonly-used-collection-types.md), [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md), i <xref:System.Collections.Generic?displayProperty=nameWithType>.  
   
 <a name="BKMK_Concurrent"></a>
-### <a name="systemcollectionsconcurrent-classes"></a>Klasy System.Collections.Concurrent   
+### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent Classes   
  W programie .NET Framework 4 lub nowszego, kolekcje w <xref:System.Collections.Concurrent> przestrzeni nazw zapewniają wydajność operacji wątkowo do uzyskiwania dostępu do kolekcji elementów, wiele wątków.  
   
  Klasy w <xref:System.Collections.Concurrent> przestrzeń nazw powinna być używana zamiast odpowiednie typy w <xref:System.Collections.Generic?displayProperty=nameWithType> i <xref:System.Collections?displayProperty=nameWithType> przestrzeni nazw w każdym przypadku, gdy wiele wątków jednocześnie uzyskują kolekcji. Aby uzyskać więcej informacji, zobacz [kolekcje obsługujące wielowątkowość](../../../standard/collections/thread-safe/index.md) i <xref:System.Collections.Concurrent>.  
@@ -470,7 +470,7 @@ End Class
   
 <a name="BKMK_CustomCollection"></a> 
 ## <a name="defining-a-custom-collection"></a>Definiowanie kolekcji niestandardowej  
- Należy zdefiniować kolekcję zaimplementowanie <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać dodatkowe informacje, zobacz [wyliczanie kolekcji](http://msdn.microsoft.com/en-us/71807ea7-9180-48a6-916f-35a5251d477f).  
+ Należy zdefiniować kolekcję zaimplementowanie <xref:System.Collections.Generic.IEnumerable%601> lub <xref:System.Collections.IEnumerable> interfejsu. Aby uzyskać dodatkowe informacje, zobacz [wyliczanie kolekcji](http://msdn.microsoft.com/library/71807ea7-9180-48a6-916f-35a5251d477f).  
   
  Mimo że można zdefiniować niestandardowej kolekcji, jest zazwyczaj lepiej jest użyć kolekcje, które znajdują się w programie .NET Framework, które zostały opisane w [rodzaje kolekcji](http://msdn.microsoft.com/library/e76533a9-5033-4a0b-b003-9c2be60d185b) wcześniej w tym temacie.  
   
@@ -581,11 +581,11 @@ End Function
 ## <a name="see-also"></a>Zobacz też  
  [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Koncepcje programowania (Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)  
- [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [LINQ do obiektów (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
  [Równoległe LINQ (PLINQ)](../../../standard/parallel-programming/parallel-linq-plinq.md)  
  [Kolekcje i struktury danych](../../../standard/collections/index.md)  
- [Tworzenie i operowanie nimi kolekcje](http://msdn.microsoft.com/en-us/2065398e-eb1a-4821-9188-75f16e42e069)  
+ [Tworzenie i operowanie nimi kolekcje](http://msdn.microsoft.com/library/2065398e-eb1a-4821-9188-75f16e42e069)  
  [Wybieranie klasy kolekcji](../../../standard/collections/selecting-a-collection-class.md)  
- [Porównywanie i sortowanie w kolekcjach](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
+ [Porównywanie i sortowanie w ramach kolekcji](../../../standard/collections/comparisons-and-sorts-within-collections.md)  
  [Kiedy należy używać kolekcji ogólnych](../../../standard/collections/when-to-use-generic-collections.md)

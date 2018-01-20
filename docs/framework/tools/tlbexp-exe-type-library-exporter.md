@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a76d85fa19fc7869ff4298867286592583e86a12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 47710b81de79a9dfbb6bddd39035be2986350b0e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tlbexpexe-type-library-exporter"></a>Tlbexp.exe (Eksporter biblioteki typów)
 Eksporter biblioteki typów generuje bibliotekę typów, która opisuje typy zdefiniowane w zestawie środowiska uruchomieniowego języka wspólnego.  
@@ -48,7 +48,7 @@ tlbexp assemblyName [options]
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/ asmpath:** *katalogu*|Określa lokalizację do przeszukania pod kątem zestawów. W przypadku użycia tej opcji należy jawnie określić lokalizacje do przeszukiwania pod kątem zestawów, do których się odwoływano, łącznie z bieżącym katalogiem.<br /><br /> Jeśli używasz **asmpath** opcji Eksporter biblioteki typów nie będzie szukać zestawu w globalnej pamięci podręcznej zestawów (GAC).|  
-|**/ Help**|Wyświetla składnię polecenia i opcje narzędzia.|  
+|**/help**|Wyświetla składnię polecenia i opcje narzędzia.|  
 |**/ nazwy:** *filename*|Określa wielkość liter nazw w bibliotece typów. *Filename* argument jest plikiem tekstowym. Każdy wiersz w pliku określa wielkość liter jednej nazwy w bibliotece typów.|  
 |**/nologo**|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
 |**/oldnames**|Wymusza na Tlbexp.exe eksport uzupełnionych nazw typu, gdy występuje konflikt nazw typu. Należy zauważyć, że było to zachowanie domyślne w wersjach wcześniejszych niż .NET Framework w wersji 2.0.|  
@@ -57,7 +57,7 @@ tlbexp assemblyName [options]
 |**/silent**|Pomija wyświetlanie komunikatów o sukcesie. Nie można użyć tej opcji z **/wyłączeniu**.|  
 |**/tlbreference:** *typelibraryname*|Wymusza na Tlbexp.exe jawne rozwiązanie odwołań do biblioteki typów bez konsultacji z rejestrem. Na przykład jeśli zestaw B odwołuje się do zestawu A, można użyć tej opcji, aby dostarczyć jawne odwołanie do biblioteki typów, zamiast polegać na bibliotece typów określonej w rejestrze. Tlbexp.exe wykonuje sprawdzenie wersji, aby zapewnić zgodność wersji biblioteki typów z wersją zestawu; w przeciwnym wypadku wygeneruje błąd.<br /><br /> Należy pamiętać, że **tlbreference** opcji nadal sprawdza rejestru w przypadkach, gdy <xref:System.Runtime.InteropServices.ComImportAttribute> atrybut jest stosowany do interfejsu, który następnie jest implementowane za pomocą innego typu.|  
 |**/tlbrefpath:** *ścieżki*|W pełni kwalifikowana ścieżka do biblioteki typów, do którego się odwoływano.|  
-|**/Win32**|Podczas kompilowania na komputerze 64-bitowym ta opcja określa, że Tlbexp.exe generuje biblioteki typów 32-bitowych.|  
+|**/win32**|Podczas kompilowania na komputerze 64-bitowym ta opcja określa, że Tlbexp.exe generuje biblioteki typów 32-bitowych.|  
 |**/Win64**|W przypadku kompilowania kodu na komputerze 32-bitowym, ta opcja określa, że Tlbexp.exe generuje biblioteki typów 64-bitowych.|  
 |**/verbose**|Określa tryb informacji pełnej; wyświetla listę wszystkich zestawów, do których się odwoływano i dla których biblioteka typów musi zostać wygenerowana.|  
 |**/?**|Wyświetla składnię polecenia i opcje narzędzia.|  
@@ -99,7 +99,7 @@ HRESULT StructDispSafe([out, retval] SAFEARRAY(IDispatch*)* pRetVal);
   
  Należy pamiętać, że ignoruje Tlbexp.exe <xref:System.Runtime.InteropServices.MarshalAsAttribute.SafeArrayUserDefinedSubType> pola.  
   
- Ponieważ biblioteki typów nie mogą pomieścić wszystkich informacji znajdujących się w zestawach, Tlbexp.exe może odrzucić niektóre dane podczas procesu eksportu. Wyjaśnienie proces transformacji i identyfikator źródła każdego z nich wysyłanego do biblioteki typów informacji, zobacz [zestawu do typu biblioteki konwersja — Podsumowanie](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
+ Ponieważ biblioteki typów nie mogą pomieścić wszystkich informacji znajdujących się w zestawach, Tlbexp.exe może odrzucić niektóre dane podczas procesu eksportu. Wyjaśnienie proces transformacji i identyfikator źródła każdego z nich wysyłanego do biblioteki typów informacji, zobacz [zestawu do typu biblioteki konwersja — Podsumowanie](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896).  
   
  Należy pamiętać, że eksporter biblioteki typów eksportuje metod, które mają <xref:System.TypedReference> parametrów jako `VARIANT`, mimo że <xref:System.TypedReference> obiekt nie ma znaczenia, za pomocą kodu niezarządzanego. Podczas eksportowania metod, które mają <xref:System.TypedReference> parametrów, eksporter biblioteki typów nie będą generowane żadne ostrzeżenia lub błędu i kodu niezarządzanego korzystającej wynikowy biblioteki typów nie będzie działać prawidłowo.  
   
@@ -142,6 +142,6 @@ tlbexp Sample.dll
  <xref:System.Runtime.InteropServices.TypeLibExporterFlags>  
  [Narzędzia](../../../docs/framework/tools/index.md)  
  [Regasm.exe (narzędzie rejestracji zestawów)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)  
- [Zestaw do typu biblioteki konwersja — podsumowanie](http://msdn.microsoft.com/en-us/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
+ [Zestaw do typu biblioteki konwersja — podsumowanie](http://msdn.microsoft.com/library/3a37eefb-a76c-4000-9080-7dbbf66a4896)  
  [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
  [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

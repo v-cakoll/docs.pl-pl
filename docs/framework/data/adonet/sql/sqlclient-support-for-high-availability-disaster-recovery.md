@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d2a444440af9dfaa2b084a55db9348fa48df7b54
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4f6ede253f52682cfe5a698cf4fb02841dc4c1e0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>Obsługa SqlClient wysokiej dostępności, odzyskiwania po awarii
 W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]) wysokiej dostępności, odzyskiwania po awarii — zawsze włączonych grup dostępności.  Funkcja zawsze włączonych grup dostępności zostało dodane do [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012. Aby uzyskać więcej informacji na temat zawsze włączonych grup dostępności, zobacz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] — książki Online.  
@@ -41,6 +41,9 @@ W tym temacie omówiono SqlClient pomocy technicznej (dodany w [!INCLUDE[net_v45
 1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
 2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+
+> [!NOTE]
+>  Ustawienie `MultiSubnetFailover` do `true` nie jest wymagane w przypadku [!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]) lub nowszy.
   
 ## <a name="connecting-with-multisubnetfailover"></a>Łączenie z MultiSubnetFailover  
  Określ zawsze `MultiSubnetFailover=True` podczas nawiązywania połączenia [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] odbiornika grupy dostępności 2012 lub [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wystąpienia klastra trybu Failover 2012. `MultiSubnetFailover`Włącza przyspieszyć tryb failover dla wszystkich grup dostępności i wystąpienia klastra trybu Failover w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 i znacznie zmniejsza czas pracy awaryjnej dla pojedynczych i wielu podsieci topologie AlwaysOn. Podczas pracy awaryjnej wielu podsieci klient podejmie próbę połączenia równolegle. Podczas pracy awaryjnej podsieci agresywnie ponowi próbę połączenia TCP.  

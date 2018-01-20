@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f3d47f285643f0b989db9419392eed736d0efbea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ab9adb72a174da25298b6ea104b002914de0cc40
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>Wskazówki: tworzenie profesjonalnego formantu ToolStrip
 Umożliwia aplikacji <xref:System.Windows.Forms.ToolStrip> określa profesjonalny wygląd i zachowanie, tworząc własne klasy pochodzące z <xref:System.Windows.Forms.ToolStripProfessionalRenderer> typu.  
@@ -44,7 +44,7 @@ Umożliwia aplikacji <xref:System.Windows.Forms.ToolStrip> określa profesjonaln
  Aby skopiować kod w tym temacie na jednej liście, zobacz [porady: tworzenie profesjonalnego styl formantu ToolStrip](../../../../docs/framework/winforms/controls/how-to-create-a-professionally-styled-toolstrip-control.md).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="prerequisites"></a>Wymagania wstępne  
  W celu przeprowadzenia tego instruktażu potrzebne są:  
@@ -60,7 +60,7 @@ Umożliwia aplikacji <xref:System.Windows.Forms.ToolStrip> określa profesjonaln
   
 2.  W **Eksploratora rozwiązań**, usuń formant domyślnego projektu przez usunięcie pliku źródłowego o nazwie "UserControl1.cs" lub "UserControl1.vb", w zależności od języka wybór.  
   
-     Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+     Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 3.  Dodaj nową <xref:System.Windows.Forms.UserControl> elementu do **StackViewLibrary** projektu. Nadaj nazwę podstawową nowy plik źródłowy `StackView`.  
   
@@ -132,7 +132,7 @@ Umożliwia aplikacji <xref:System.Windows.Forms.ToolStrip> określa profesjonaln
   
 8.  Zmień nazwę `mailStackButton_Click` program obsługi zdarzeń do `stackButton_Click`.  
   
-     Aby uzyskać więcej informacji, zobacz [porady: Zmienianie nazwy identyfikator (Visual Basic)](http://msdn.microsoft.com/en-us/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
+     Aby uzyskać więcej informacji, zobacz [porady: Zmienianie nazwy identyfikator (Visual Basic)](http://msdn.microsoft.com/library/e5a5edf8-3dba-4119-81f4-fc2aba180e0c).  
   
 9. Wstaw następujący kod do `stackButton_Click` obsługi zdarzeń.  
   
@@ -146,7 +146,7 @@ Umożliwia aplikacji <xref:System.Windows.Forms.ToolStrip> określa profesjonaln
 12. Powtórz kroki od 10 i 11 dla `contactsStackButton` i `tasksStackButton` kontrolki.  
   
 ## <a name="defining-icons"></a>Definiowanie ikon  
- Każdy `StackView` przycisk ma skojarzona ikona. Dla wygody, każda z ikon jest reprezentowany jako ciąg zakodowany w formacie Base64, którego deserializowany jest przed <xref:System.Drawing.Bitmap> jest tworzony z niego. W środowisku produkcyjnym przechowują dane mapy bitowej jako zasób i ikony wyświetlane w narzędziu Projektant dla formularzy systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie obrazy tła do formularzy systemu Windows](http://msdn.microsoft.com/en-us/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
+ Każdy `StackView` przycisk ma skojarzona ikona. Dla wygody, każda z ikon jest reprezentowany jako ciąg zakodowany w formacie Base64, którego deserializowany jest przed <xref:System.Drawing.Bitmap> jest tworzony z niego. W środowisku produkcyjnym przechowują dane mapy bitowej jako zasób i ikony wyświetlane w narzędziu Projektant dla formularzy systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie obrazy tła do formularzy systemu Windows](http://msdn.microsoft.com/library/7a509ba2-055c-4ae6-b88a-54625c6d9aff).  
   
 #### <a name="to-define-icons"></a>Aby zdefiniować ikon  
   

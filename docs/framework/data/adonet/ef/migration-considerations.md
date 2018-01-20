@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: da287ea76e2300abf1b00f3bbab5897520eb0828
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 8e4c1b06e5a3a7717b99379fd9bca2c5a8a14a6a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="migration-considerations-entity-framework"></a>Zagadnienia dotyczące migracji (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework zapewnia kilka korzyści z istniejącą aplikacją. Jednym z najbardziej ważne z tych zalet jest możliwość używania modelu koncepcyjnego do oddzielania struktur danych używany przez aplikację ze schematu źródła danych. Dzięki temu można łatwo utworzyć przyszłe zmiany w modelu magazynu lub do źródła danych bez wprowadzania zmian kompensacyjnych do aplikacji. Aby uzyskać więcej informacji o zaletach korzystania [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)], zobacz [Omówienie struktury jednostek](../../../../../docs/framework/data/adonet/ef/overview.md) i [modelu Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md).  
@@ -40,7 +40,7 @@ ms.lasthandoff: 01/17/2018
  Ścieżka do migracji istniejącej aplikacji do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zależy od zarówno typ aplikacji oraz istniejąca strategia dostępu do danych. Jednak należy zawsze wykonać następujące zadania podczas migracji istniejącej aplikacji do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)].  
   
 > [!NOTE]
->  Wszystkie te zadania są wykonywane automatycznie za pomocą narzędzi modelu danych jednostki, począwszy od [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreatora modelu danych jednostki](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+>  Wszystkie te zadania są wykonywane automatycznie za pomocą narzędzi modelu danych jednostki, począwszy od [!INCLUDE[vsOrcas](../../../../../includes/vsorcas-md.md)]. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreatora modelu danych jednostki](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 1.  Uaktualnienie aplikacji.  
   
@@ -48,12 +48,12 @@ ms.lasthandoff: 01/17/2018
   
 2.  Zdefiniuj modeli i mapowania.  
   
-     Model i mapowania plików Definiowanie jednostek w modelu koncepcyjnym; struktury w źródle danych, takich jak tabele, procedury składowane i widoków; i mapowanie między struktury źródłowej jednostki i dane. Aby uzyskać więcej informacji, zobacz [porady: ręczne definiowanie modelu i mapowania plików](http://msdn.microsoft.com/en-us/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
+     Model i mapowania plików Definiowanie jednostek w modelu koncepcyjnym; struktury w źródle danych, takich jak tabele, procedury składowane i widoków; i mapowanie między struktury źródłowej jednostki i dane. Aby uzyskać więcej informacji, zobacz [porady: ręczne definiowanie modelu i mapowania plików](http://msdn.microsoft.com/library/d4fd6864-f2a1-48f0-aa32-1e318775a99a).  
   
-     Typy, które są zdefiniowane w modelu magazynu musi odpowiadać nazwie obiektów w źródle danych. Jeśli istniejącej aplikacji udostępnia dane jako obiekty, należy się upewnić, że nazwy tych istniejących klas danych i właściwości są zgodne jednostki i właściwości, które są zdefiniowane w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie modelowania i mapowania plików do pracy z obiektami niestandardowe](http://msdn.microsoft.com/en-us/bb40c4db-0121-4e45-a167-8fb06707a708).  
+     Typy, które są zdefiniowane w modelu magazynu musi odpowiadać nazwie obiektów w źródle danych. Jeśli istniejącej aplikacji udostępnia dane jako obiekty, należy się upewnić, że nazwy tych istniejących klas danych i właściwości są zgodne jednostki i właściwości, które są zdefiniowane w modelu koncepcyjnym. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie modelowania i mapowania plików do pracy z obiektami niestandardowe](http://msdn.microsoft.com/library/bb40c4db-0121-4e45-a167-8fb06707a708).  
   
     > [!NOTE]
-    >  Projektant modelu danych jednostki można zmienić nazwy jednostek w modelu koncepcyjnym odpowiadające istniejących obiektów. Aby uzyskać więcej informacji, zobacz [Projektant modelu danych jednostki](http://msdn.microsoft.com/en-us/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
+    >  Projektant modelu danych jednostki można zmienić nazwy jednostek w modelu koncepcyjnym odpowiadające istniejących obiektów. Aby uzyskać więcej informacji, zobacz [Projektant modelu danych jednostki](http://msdn.microsoft.com/library/4ccd7ad6-b934-4f7c-82a0-cfd2d4a95faf).  
   
 3.  Zdefiniowanie ciągu połączenia.  
   
@@ -61,10 +61,10 @@ ms.lasthandoff: 01/17/2018
   
 4.  Skonfiguruj [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] projektu.  
   
-     Odwołuje się do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zestawów i modelu i mapowania plików musi zostać dodany do [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] projektu. Możesz dodać pliki te mapowania do projektu, aby upewnić się, że są wdrożone w aplikacji w lokalizacji określonej w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [porady: ręczne konfigurowanie projektu programu Entity Framework](http://msdn.microsoft.com/en-us/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
+     Odwołuje się do [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] zestawów i modelu i mapowania plików musi zostać dodany do [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] projektu. Możesz dodać pliki te mapowania do projektu, aby upewnić się, że są wdrożone w aplikacji w lokalizacji określonej w parametrach połączenia. Aby uzyskać więcej informacji, zobacz [porady: ręczne konfigurowanie projektu programu Entity Framework](http://msdn.microsoft.com/library/73f6ae1d-b3b2-4577-aebd-ad5a75954e9e).  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>Zagadnienia dotyczące aplikacji za pomocą istniejących obiektów  
- Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje "zwykły stary" obiektów CLR (POCO), nazywany również ignorujących trwałość obiektów. W większości przypadków istniejących obiektów może współpracować z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] drobne zmiany. Aby uzyskać więcej informacji, zobacz [Praca z obiektów POCO jednostek](http://msdn.microsoft.com/en-us/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Można również migrację aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i używać klas danych, które są generowane przez narzędzia Entity Framework. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreatora modelu danych jednostki](http://msdn.microsoft.com/en-us/dadb058a-c5d9-4c5c-8b01-28044112231d).  
+ Począwszy od [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4, [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] obsługuje "zwykły stary" obiektów CLR (POCO), nazywany również ignorujących trwałość obiektów. W większości przypadków istniejących obiektów może współpracować z [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] drobne zmiany. Aby uzyskać więcej informacji, zobacz [Praca z obiektów POCO jednostek](http://msdn.microsoft.com/library/5e0fb82a-b6d1-41a1-b37b-c12db61629d3). Można również migrację aplikacji [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i używać klas danych, które są generowane przez narzędzia Entity Framework. Aby uzyskać więcej informacji, zobacz [porady: Użyj Kreatora modelu danych jednostki](http://msdn.microsoft.com/library/dadb058a-c5d9-4c5c-8b01-28044112231d).  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>Zagadnienia dotyczące aplikacji, które korzystają z dostawcy ADO.NET  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]dostawcy, na przykład SqlClient, umożliwiają zapytanie zwracające dane tabelaryczne źródła danych. Dane mogą również zostać załadowane do [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] zestawu danych. Na poniższej liście opisano zagadnienia dotyczące uaktualniania aplikacji, która wykorzystuje istniejące [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy:  
@@ -85,7 +85,7 @@ ms.lasthandoff: 01/17/2018
   
  Wylicza wyników zapytania do wyświetlania danych w aplikacji <xref:System.Windows.Forms.DataGridView> lub innego typu formantu, który obsługuje powiązanie danych, można zmodyfikować aplikację do powiązania kontrolki do wyniku <xref:System.Data.Objects.ObjectQuery%601>.  
   
- Aby uzyskać więcej informacji, zobacz [powiązanie obiektów z formantami](http://msdn.microsoft.com/en-us/2fd34855-929b-4303-a91e-4bb69d958f2b).  
+ Aby uzyskać więcej informacji, zobacz [powiązanie obiektów z formantami](http://msdn.microsoft.com/library/2fd34855-929b-4303-a91e-4bb69d958f2b).  
   
  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]kontrolki źródła danych.  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obejmuje formantu źródła danych ma na celu uproszczenie powiązanie danych w [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] aplikacji sieci Web. Aby uzyskać więcej informacji, zobacz [formantu źródła danych programu Entity Framework](http://msdn.microsoft.com/library/1f09af00-9578-4744-a029-765710a3c83f).  
@@ -94,17 +94,17 @@ ms.lasthandoff: 01/17/2018
  Poniżej przedstawiono informacje, które mogą być zastosowane podczas migracji określonych typów aplikacji do narzędzia Entity Framework.  
   
  Aplikacje, które udostępniają usługi danych.  
- Usługi sieci Web i aplikacje, które są oparte na systemie Windows Communication Foundation (WCF) ujawniać dane ze źródła danych przy użyciu formatu komunikatów żądań i odpowiedzi XML. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serializacji obiektów jednostek przy użyciu pliku binarnego, XML, lub kontraktu usługi WCF danych serializacji. Dane binarne i serializacji WCF obsługuje pełne serializacja wykresów obiektów. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji warstwowych](http://msdn.microsoft.com/en-us/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
+ Usługi sieci Web i aplikacje, które są oparte na systemie Windows Communication Foundation (WCF) ujawniać dane ze źródła danych przy użyciu formatu komunikatów żądań i odpowiedzi XML. [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serializacji obiektów jednostek przy użyciu pliku binarnego, XML, lub kontraktu usługi WCF danych serializacji. Dane binarne i serializacji WCF obsługuje pełne serializacja wykresów obiektów. Aby uzyskać więcej informacji, zobacz [tworzenie aplikacji warstwowych](http://msdn.microsoft.com/library/9439d2ba-6b5f-44e8-be65-8a442d922cbb).  
   
  Aplikacje, które używają danych XML.  
  Serializacja obiektu umożliwia utworzenie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] usług danych. Tych usług dostarczają dane do aplikacji, które wykorzystują dane XML, takie jak aplikacji internetowych opartych na technologii AJAX. W takich sytuacjach należy rozważyć użycie [!INCLUDE[ssAstoria](../../../../../includes/ssastoria-md.md)]. Usługi te dane są oparte na modelu danych jednostki i podaj dynamiczne dostęp do danych entity przy użyciu standardowych działań transferu REST (Representational State) HTTP, takich jak GET PUT i POST. Aby uzyskać więcej informacji, zobacz [4.5 usługi danych WCF](../../../../../docs/framework/data/wcf/index.md).  
   
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nie obsługuje typu danych native XML. Oznacza to, że gdy jednostka jest zamapowana do tabeli zawierającej kolumny XML, właściwość równoważne jednostki dla kolumny XML ma ciąg. Obiekty można rozłączona i zserializowanym w formacie XML. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](http://msdn.microsoft.com/en-us/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Nie obsługuje typu danych native XML. Oznacza to, że gdy jednostka jest zamapowana do tabeli zawierającej kolumny XML, właściwość równoważne jednostki dla kolumny XML ma ciąg. Obiekty można rozłączona i zserializowanym w formacie XML. Aby uzyskać więcej informacji, zobacz [serializacji obiektów](http://msdn.microsoft.com/library/06c77f9b-5b2e-4c78-b3e3-8c148ba0ea99).  
   
  Jeśli aplikacja wymaga możliwość wykonywania kwerend w danych XML, można nadal będzie korzystać z zalet zapytań LINQ za pomocą LINQ do XML. Aby uzyskać więcej informacji, zobacz [LINQ do XML](http://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13).  
   
  Aplikacje, które zarządzania stanem.  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Aplikacje sieci Web często muszą zachować stan strony sieci Web lub sesja użytkownika. Obiekty w <xref:System.Data.Objects.ObjectContext> wystąpienia można przechowywanych w widoku stanu klienta lub stanu sesji na serwerze i później pobrane i ponownie nałożona nowy kontekst obiektu. Aby uzyskać więcej informacji, zobacz [Dołączanie i odłączanie obiektów](http://msdn.microsoft.com/en-us/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
+ [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Aplikacje sieci Web często muszą zachować stan strony sieci Web lub sesja użytkownika. Obiekty w <xref:System.Data.Objects.ObjectContext> wystąpienia można przechowywanych w widoku stanu klienta lub stanu sesji na serwerze i później pobrane i ponownie nałożona nowy kontekst obiektu. Aby uzyskać więcej informacji, zobacz [Dołączanie i odłączanie obiektów](http://msdn.microsoft.com/library/41d5c1ef-1b78-4502-aa10-7e1438d62d23).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zagadnienia dotyczące wdrażania](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  

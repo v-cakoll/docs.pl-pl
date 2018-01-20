@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 3add191250a10d1d6016263ada0ba53fc8082717
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: c749cdd56f0c964b84788b05470406234ef3eb0a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-a-linq-to-dataset-project-in-visual-studio"></a>Porady: Tworzenie składnika LINQ to projektu DataSet w programie Visual Studio
 Różne typy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projekt wymaga niektórych importowane przestrzenie nazw (Visual Basic) lub `using` dyrektywy (C#) i odwołań. Minimalna wymagana wartość to odwołania do System.Core.dll i `using` dyrektywy dla <xref:System.Linq>. Domyślnie te są dostarczane w przypadku utworzenia nowego [!INCLUDE[csharp_orcas_long](../../../../includes/csharp-orcas-long-md.md)] projektu. [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]również wymaga odwołania do System.Data.dll i System.Data.DataSetExtensions.dll i `Imports` (Visual Basic) lub `using` — dyrektywa (C#).  
@@ -62,4 +62,4 @@ Różne typy [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] projekt
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzenie](../../../../docs/framework/data/adonet/getting-started-linq-to-dataset.md)  
- [Wprowadzenie do korzystania z LINQ](http://msdn.microsoft.com/en-us/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)
+ [Wprowadzenie do korzystania z LINQ](http://msdn.microsoft.com/library/6cc9af04-950a-4cc3-83d4-2aeb4abe4de9)

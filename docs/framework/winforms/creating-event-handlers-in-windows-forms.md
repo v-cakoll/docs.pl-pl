@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a18afd8ba06b5bcc70ca5a6febc10be8050891b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2a2fc73ee5e9f9e0a2f8351f8d38311801ebfb34
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="creating-event-handlers-in-windows-forms"></a>Tworzenie programów obsługi zdarzeń w formularzach systemu Windows
 Program obsługi zdarzeń jest procedurą w kodzie, który określa, jakie akcje są wykonywane, gdy wystąpi zdarzenie, na przykład gdy użytkownik kliknie przycisk lub kolejki komunikatów odbiera komunikat. Gdy zdarzenie jest zgłaszane, program obsługi zdarzeń lub obsługi, które odbierają zdarzenia są wykonywane. Zdarzenia mogą być przypisane do wielu obsług i metody obsługujące określonego zdarzenia można zmieniać dynamicznie. Projektant formularzy systemu Windows umożliwia również tworzenie obsługi zdarzeń.  
@@ -45,7 +45,7 @@ Program obsługi zdarzeń jest procedurą w kodzie, który określa, jakie akcje
  [Kolejność zdarzeń w formularzach Windows Forms](../../../docs/framework/winforms/order-of-events-in-windows-forms.md)  
  Opisuje kolejność, w której zdarzenia są generowane w formantach formularzy systemu Windows.  
   
- [Porady: tworzenie obsługi zdarzeń przy użyciu narzędzia Projektant](http://msdn.microsoft.com/en-us/8461e9b8-14e8-406f-936e-3726732b23d2)  
+ [Porady: tworzenie obsługi zdarzeń przy użyciu narzędzia Projektant](http://msdn.microsoft.com/library/8461e9b8-14e8-406f-936e-3726732b23d2)  
  Informacje dotyczące używania projektanta formularzy systemu Windows można utworzyć procedury obsługi zdarzeń.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

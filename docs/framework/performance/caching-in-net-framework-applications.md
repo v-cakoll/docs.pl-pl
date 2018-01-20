@@ -18,11 +18,11 @@ author: tdykstra
 ms.author: tdykstra
 manager: wpickett
 ms.workload: tdykstra
-ms.openlocfilehash: d72099543292a89f930135689358b37f87aac44f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9429a1a1eeef82c7587ef573f6413e45a4e97a91
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caching-in-net-framework-applications"></a>Buforowanie w aplikacjach .NET Framework
 Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dostępie do danych ponownie, aplikacje można pobrać danych z pamięci podręcznej zamiast z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że nie są dostępne dane, gdy źródłem danych jest tymczasowo niedostępna.  
@@ -64,7 +64,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dos
 >  Podczas opracowywania nowych aplikacji, firma Microsoft zaleca użycie <xref:System.Runtime.Caching.MemoryCache> klasy. Interfejs API, który znajduje się w <xref:System.Runtime.Caching> przestrzeni nazw przypomina interfejs API, który znajduje się w <xref:System.Web.Caching.Cache> przestrzeni nazw. W związku z tym interfejsu API jest znane, jeśli używana jest buforowanie we wcześniejszych wersjach programu ASP.NET. Na przykład sposobu użycia buforowanie w aplikacjach ASP.NET, zobacz [wskazówki: buforowania danych aplikacji w programie ASP.NET](http://msdn.microsoft.com/library/942236f6-0138-4aaf-af71-a5ea451a1e23).  
   
 ### <a name="output-caching"></a>Buforowanie danych wyjściowych  
- Aby ręcznie aplikacji danych z pamięci podręcznej, można użyć <xref:System.Runtime.Caching.MemoryCache> klasy w programie ASP.NET. Program ASP.NET obsługuje również buforowanie danych wyjściowych, który przechowuje w pamięci wygenerowanych danych wyjściowych stron, kontrolek i odpowiedzi HTTP. Można skonfigurować deklaratywnie buforowanie danych wyjściowych na stronie sieci Web ASP.NET lub przy użyciu ustawień w pliku Web.config. Aby uzyskać więcej informacji, zobacz [outputCache Element do buforowania (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/en-us/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
+ Aby ręcznie aplikacji danych z pamięci podręcznej, można użyć <xref:System.Runtime.Caching.MemoryCache> klasy w programie ASP.NET. Program ASP.NET obsługuje również buforowanie danych wyjściowych, który przechowuje w pamięci wygenerowanych danych wyjściowych stron, kontrolek i odpowiedzi HTTP. Można skonfigurować deklaratywnie buforowanie danych wyjściowych na stronie sieci Web ASP.NET lub przy użyciu ustawień w pliku Web.config. Aby uzyskać więcej informacji, zobacz [outputCache Element do buforowania (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/47cd2b47-316f-4dfd-bbf8-539be3066fee).  
   
  Program ASP.NET pozwala rozszerzyć buforowania danych wyjściowych przez tworzenie niestandardowych dostawców pamięci podręcznej danych wyjściowych. Przy użyciu dostawców niestandardowych, można przechowywać zawartość z pamięci podręcznej przy użyciu innych urządzeń pamięci masowej, takich jak dyski magazynu w chmurze i aparatów rozproszonej pamięci podręcznej. Aby utworzyć dostawcy niestandardowego wyjściowej pamięci podręcznej, należy utworzyć klasę, która jest pochodną <xref:System.Web.Caching.OutputCacheProvider> klasy i skonfigurować aplikację do używania dostawcy niestandardowego wyjściowej pamięci podręcznej.  
   

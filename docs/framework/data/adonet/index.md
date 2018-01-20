@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: cecb38e13a9539dcf92f1dcc7eecbd35c493a3f9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: cebd146505cd714a77c30cffe8fd3440c2d9f3cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET to zestaw klas, które udostępniają usługi dostępu do danych dla programistów platformy .NET Framework. ADO.NET zapewnia bogaty zestaw składników do tworzenia aplikacji rozproszonej, udostępnianie danych. Jest integralną częścią programu .NET Framework, zapewniając dostęp do relacyjnych, XML i dane aplikacji. ADO.NET obsługuje wiele różnych potrzeb, w tym tworzenie klientów frontonu bazy danych i obiektów biznesowym warstwy środkowej używanych przez aplikacje, narzędzia, języki lub przeglądarek internetowych.  
@@ -55,7 +55,7 @@ ADO.NET to zestaw klas, które udostępniają usługi dostępu do danych dla pro
  Opisuje funkcje i zachowania, które są specyficzne dla dostawcy danych programu .NET Framework dla programu Oracle.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
+ [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
  Łącza do tematów dotyczących zabezpieczeń dla programu Visual Studio, .NET Framework i kryptografii.  
   
  [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  

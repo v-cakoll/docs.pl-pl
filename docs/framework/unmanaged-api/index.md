@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9836d8d02bb81fc19a5b3a1714e32fcefeb8791d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d86cf65dfb3637dbacfeff0cf2b5f48b12c49212
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="unmanaged-api-reference"></a>Niezarządzany wykaz interfejsów API
 Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być używane przez zarządzanego kodu — związanych z aplikacji, takich jak hosty w czasie wykonywania, kompilatory, deasemblerów pakietów, obfuscators, debugery i profilowania.  
@@ -40,7 +40,7 @@ Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być 
  [Stałe](../../../docs/framework/unmanaged-api/constants-unmanaged-api-reference.md)  
  W tym artykule opisano stałe, które są zdefiniowane w CorSym.idl.  
   
- [Atrybuty niestandardowe interfejsu](http://msdn.microsoft.com/en-us/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
+ [Atrybuty niestandardowe interfejsu](http://msdn.microsoft.com/library/940952f9-46ad-4a1a-920f-118dc0bdcd9f)  
  Zawiera opis atrybutów niestandardowy interfejs model (COM) obiektu składnika.  
   
  [Debugowanie](../../../docs/framework/unmanaged-api/debugging/index.md)  
@@ -73,4 +73,4 @@ Ta sekcja zawiera informacje o niezarządzane interfejsy API, które mogą być 
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Podręcznik programowania](../../../docs/framework/development-guide.md)  
   
- [Zaawansowane odczytu dla programu .NET Framework](http://msdn.microsoft.com/en-us/faae8083-fecb-4514-b133-b0a5a32a7c3c)
+ [Zaawansowane odczytu dla programu .NET Framework](http://msdn.microsoft.com/library/faae8083-fecb-4514-b133-b0a5a32a7c3c)

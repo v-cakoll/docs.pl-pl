@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a3dee3d94063a94869869a9d94ab3cc2bc0a26fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7c945d23def3bbf6284e7e0db95d391066256df6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="tooltip-overview"></a>ToolTip — Przegląd
 Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wskaźnika myszy nad elementem, takie jak ponad <xref:System.Windows.Controls.Button>. W tym temacie przedstawiono wskazówki i opisano, jak tworzyć i dostosowywać zawartość etykietka narzędzia.  
@@ -78,7 +78,7 @@ Etykietka narzędzia jest mała okno podręczne pojawia się po zatrzymaniu wska
 ## <a name="using-the-time-interval-properties-of-tooltipservice"></a>Za pomocą właściwości interwału czasu ToolTipService  
  <xref:System.Windows.Controls.ToolTipService> Klasa udostępnia następujące właściwości można ustawić tooltip wyświetlić razy: <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A>, <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>, i <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A>.  
   
- Użyj <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> i <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> właściwości, aby określić opóźnienie, zwykle krótki, przed <xref:System.Windows.Controls.ToolTip> pojawia się, a także, aby określić, jak długo <xref:System.Windows.Controls.ToolTip> pozostaje widoczna. Aby uzyskać więcej informacji, zobacz [porady: opóźnienia wyświetlania etykietka narzędzia](http://msdn.microsoft.com/en-us/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
+ Użyj <xref:System.Windows.Controls.ToolTipService.InitialShowDelay%2A> i <xref:System.Windows.Controls.ToolTipService.ShowDuration%2A> właściwości, aby określić opóźnienie, zwykle krótki, przed <xref:System.Windows.Controls.ToolTip> pojawia się, a także, aby określić, jak długo <xref:System.Windows.Controls.ToolTip> pozostaje widoczna. Aby uzyskać więcej informacji, zobacz [porady: opóźnienia wyświetlania etykietka narzędzia](http://msdn.microsoft.com/library/618e05ef-f2bf-4a53-a0f4-aacb49918bd7).  
   
  <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> Właściwość określa etykietki narzędzi dla różnych formantów wyświetlane niezwłocznie początkowej podczas szybko przesuń wskaźnik myszy między nimi. Aby uzyskać więcej informacji na temat <xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A> właściwości, zobacz [, użyj właściwości BetweenShowDelay](../../../../docs/framework/wpf/controls/how-to-use-the-betweenshowdelay-property.md).  
   

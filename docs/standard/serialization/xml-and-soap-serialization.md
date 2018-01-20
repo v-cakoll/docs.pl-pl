@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 006727e70c58834a4e628f584a28302a62363844
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 1ac5e83d6daf9654c541dcd8a748717be3ed05d0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xml-and-soap-serialization"></a>XML i serializacji SOAP
 Konwertuje serializacji XML (serializuje) pola publiczne i właściwości obiektu, lub parametry i wartości zwracane metod do strumień XML, który odpowiada określony dokument języka (XSD) definicji schematu XML. Powoduje serializacji XML w silnie typizowanej klasy z właściwości publiczne i pola, które są konwertowane na format seryjny (w tym przypadku XML) do przechowywania lub transportu.  
@@ -80,7 +80,7 @@ Konwertuje serializacji XML (serializuje) pola publiczne i właściwości obiekt
  [Atrybuty kontrolujące zakodowaną serializację SOAP](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)  
  Wyświetla listę atrybutów, które są używane do kontrolowania serializacji kodowany w formacie protokołu SOAP.  
   
- [\<System.XML.serialization > — Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
+ [\<system.xml.serialization> Element](../../../docs/standard/serialization/system-xml-serialization-element.md)  
  Element konfiguracji najwyższego poziomu do sterowania serializacji XML.  
   
  [\<dateTimeSerialization > — Element](../../../docs/standard/serialization/datetimeserialization-element.md)  
@@ -93,10 +93,10 @@ Konwertuje serializacji XML (serializuje) pola publiczne i właściwości obiekt
  Dodaje typy, które są używane przez <xref:System.Xml.Serialization.XmlSchemaImporter> klasy.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Programowanie zaawansowanych technologii](http://msdn.microsoft.com/en-us/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
+ [Programowanie zaawansowanych technologii](http://msdn.microsoft.com/library/c4a7e341-f0c6-4df4-a74f-223387ac6e4e)  
  Łącza do dodatkowych informacji zadań związanych z projektowaniem zaawansowane i techniki programistyczne w programie .NET Framework.  
   
- [Utworzone za pomocą programu ASP.NET i klientami usługi XML sieci Web usług XML sieci Web](http://msdn.microsoft.com/en-us/1e64af78-d705-4384-b08d-591a45f4379c)  
+ [Utworzone za pomocą programu ASP.NET i klientami usługi XML sieci Web usług XML sieci Web](http://msdn.microsoft.com/library/1e64af78-d705-4384-b08d-591a45f4379c)  
  Zawiera tematy, które opisują oraz wyjaśniono, jak do usług XML sieci Web za pomocą programu ASP.NET programu.  
   
 ## <a name="see-also"></a>Zobacz też  

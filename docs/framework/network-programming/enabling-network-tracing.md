@@ -22,11 +22,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: c4957e3ec6891dbee207c7aac5fcf1564ecd0af5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f6a23ce156941291fe499b6402061639569815c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-network-tracing"></a>Włączanie śledzenia sieci
 Śledzenie sieci zapewnia dostęp do informacji na temat wywołań metod i ruch sieciowy generowany przez zarządzanej aplikacji. Należy wykonać następujące zadania, aby włączyć śledzenie sieci w aplikacji:  
@@ -58,4 +58,4 @@ ms.lasthandoff: 12/22/2017
 ## <a name="see-also"></a>Zobacz też  
  [Interpretowanie śledzenia sieci](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [Śledzenie sieci w programie .NET Framework](../../../docs/framework/network-programming/network-tracing.md)  
- [Wprowadzenie do Instrumentacji i śledzenie](http://msdn.microsoft.com/en-us/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [Wprowadzenie do Instrumentacji i śledzenie](http://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)

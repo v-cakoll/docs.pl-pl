@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3003c89b0cfcda9866c5b1accd154900bc650454
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 603a6dce17d527a3f14e408da19006509514df52
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Uruchamianie przykładów programu Windows Communication Foundation
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Próbki mogą być uruchamiane w konfiguracji pojedynczego komputera lub między komputerami. Dostarczony, próbki są gotowe do uruchamiania na jednym komputerze. W konfiguracji między komputerami należy zmodyfikować ustawienia pliku konfiguracji na próbkę. Poniższe procedury dotyczą sposobu uruchamiania próbkę w tym samym komputerze lub między komputerami konfiguracje. Należy pamiętać, że zmiany w opisach usług hostowanych w Internet Information Services (IIS) i hostowanie Samoobsługowe próbek. Większość przykładów są hostowane w usługach IIS; Zapoznaj się z informacjami readme próbki ustalenie, jak jest obsługiwana.  
@@ -30,13 +30,13 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>Aby uruchomić przykład na tym samym komputerze  
   
-1.  Jeśli usługa jest obsługiwana przez usługi IIS, upewnij się, że masz dostęp usługi przy użyciu przeglądarki wprowadź następujący adres: http://localhost/servicemodelsamples/service.svc. Powinna być wyświetlana strona potwierdzenia w odpowiedzi. Jeśli nie zostanie wyświetlona strona potwierdzenia, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+1.  Jeśli usługa jest obsługiwana przez usługi IIS, upewnij się, że masz dostęp usługi przy użyciu przeglądarki wprowadź następujący adres: http://localhost/servicemodelsamples/service.svc. Powinna być wyświetlana strona potwierdzenia w odpowiedzi. Jeśli nie zostanie wyświetlona strona potwierdzenia, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 2.  Jeśli usługa własnym jest obsługiwana, należy uruchomić Service.exe z \service\bin z folderu specyficzny dla języka. Działanie usługi jest wyświetlany w oknie konsoli usługi.  
   
 3.  Uruchom Client.exe z \client\bin\\, z folderu specyficzny dla języka. Aktywność klienta jest wyświetlany w oknie konsoli klienta.  
   
-4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b).  
+4.  Jeśli klient i usługa nie będą mogli komunikować się, zobacz [Rozwiązywanie problemów z porady](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b).  
   
 ### <a name="to-run-the-sample-across-machines"></a>Aby uruchomić przykład na komputerach  
   
@@ -92,5 +92,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md)  
- [Uruchomione z próbek w grupie roboczej i na komputerach](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113)  
- [Porady dotyczące rozwiązywania problemów](http://msdn.microsoft.com/en-us/8787c877-5e96-42da-8214-fa737a38f10b)
+ [Uruchomione z próbek w grupie roboczej i na komputerach](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113)  
+ [Porady dotyczące rozwiązywania problemów](http://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)

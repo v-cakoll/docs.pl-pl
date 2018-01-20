@@ -13,19 +13,19 @@ ms.assetid: f39665e3-4f6f-4357-88a2-3274c7bec0c1
 caps.latest.revision: "20"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d1341383d48a28966a0873f3124cdc3567ec3f76
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d2a6c27454cc8f95b9662d6ae688471849c5cee0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="bugreport-c-compiler-options"></a>/bugreport (opcje kompilatora C#)
+# <a name="-bugreport-c-compiler-options"></a>-bugreport (opcje kompilatora C#)
 Określa, czy informacje o debugowaniu powinna zostać umieszczona w pliku w celu późniejszej analizy.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/bugreport:file  
+-bugreport:file  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -33,7 +33,7 @@ Określa, czy informacje o debugowaniu powinna zostać umieszczona w pliku w cel
  Nazwa pliku, który ma zawierać raport o usterce.  
   
 ## <a name="remarks"></a>Uwagi  
- **/Bugreport** opcja określa, że następujące informacje powinny być umieszczone w `file`:  
+ **- Bugreport** opcja określa, że następujące informacje powinny być umieszczone w `file`:  
   
 -   Kopiowanie wszystkich plików kodu źródłowego w kompilacji.  
   
@@ -49,7 +49,7 @@ Określa, czy informacje o debugowaniu powinna zostać umieszczona w pliku w cel
   
 -   Opis sposobu uważasz, że problem należy ustalić, który pojawi się monit o.  
   
- Jeśli ta opcja jest używana z **/errorreport:prompt** lub **/errorreport: Send**, informacje w pliku będą wysyłane do firmy Microsoft Corporation.  
+ Jeśli ta opcja jest używana z **- errorreport: wiersz** lub **- errorreport: wysyłanie**, informacje w pliku będą wysyłane do firmy Microsoft Corporation.  
   
  Ponieważ kopię wszystkich plików kodu źródłowego zostaną umieszczone w `file`, należy odtworzyć kod podejrzanych wada najkrótszy program możliwe.  
   
@@ -59,5 +59,5 @@ Określa, czy informacje o debugowaniu powinna zostać umieszczona w pliku w cel
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [/ errorreport (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [-errorreport (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/errorreport-compiler-option.md)  
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c802342f352652e24e53b70c730ddb4c5b8973a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91edecf9b500c316b915e908bbbd412a47d86dac
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>Usługi danych w aplikacji klienckiej (usługi danych WCF)
 Można uzyskać dostępu to usługa, która przedstawia [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych, podając identyfikator URI do przeglądarki sieci Web. Identyfikator URI zawiera adres zasobu, a żądanie komunikaty są wysyłane do tych adresów na dostęp lub zmienić danych, który reprezentuje zasobu. W przeglądarce polecenia HTTP GET i zwraca wartość żądanego zasobu jako [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [uzyskiwania dostępu do usługi z przeglądarką sieci Web](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md).  
@@ -56,7 +56,7 @@ Można uzyskać dostępu to usługa, która przedstawia [!INCLUDE[ssODataFull](.
  Format komunikatu ładunku żądania w nagłówku komunikatu żądania HTTP. Aby uzyskać więcej informacji, zobacz [OData: operacje](http://go.microsoft.com/fwlink/?LinkID=185792).  
   
 ## <a name="accessing-and-changing-data-using-client-libraries"></a>Uzyskiwanie dostępu i zmiana danych przy użyciu bibliotek klienta  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obejmuje bibliotek klienta, które umożliwiają łatwiej wykorzystać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła .NET Framework i aplikacje klienckie oparte na technologii Silverlight. Te biblioteki upraszczają wysyłanie i odbieranie wiadomości HTTP. Tłumaczenie one również ładunek komunikatu do obiektów CLR, które reprezentują danych jednostki. Dwa podstawowe klasy funkcji bibliotek klienckich <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Te klasy umożliwiają zapytania usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty CLR. Aby uzyskać więcej informacji, zobacz [biblioteki klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) i [usługi danych WCF (platformy Silverlight)](http://msdn.microsoft.com/en-us/c0cd9f4b-1372-48e4-9935-c8421239da30).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]obejmuje bibliotek klienta, które umożliwiają łatwiej wykorzystać [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła .NET Framework i aplikacje klienckie oparte na technologii Silverlight. Te biblioteki upraszczają wysyłanie i odbieranie wiadomości HTTP. Tłumaczenie one również ładunek komunikatu do obiektów CLR, które reprezentują danych jednostki. Dwa podstawowe klasy funkcji bibliotek klienckich <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Te klasy umożliwiają zapytania usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty CLR. Aby uzyskać więcej informacji, zobacz [biblioteki klienta usługi danych WCF](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md) i [usługi danych WCF (platformy Silverlight)](http://msdn.microsoft.com/library/c0cd9f4b-1372-48e4-9935-c8421239da30).  
   
  Można użyć **Dodaj odwołanie do usługi** okna dialogowego w programie Visual Studio, aby dodać odwołania do usług danych. To narzędzie żądania metadanych usługi z usługą danych występujące w odwołaniu i generuje <xref:System.Data.Services.Client.DataServiceContext> który reprezentuje usługę danych, a także wygeneruje klasy usługi danych klienta, które reprezentują jednostek. Aby uzyskać więcej informacji, zobacz [generowania biblioteki klienta usługi danych](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Oparta na komunikatach komunikacji asynchronicznej
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Oparta na komunikatach komunikacji asynchronicznej"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ed0f12c5eca1ed45dabe94661f84216e07476ebd
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Oparta na komunikatach komunikacji asynchronicznej
 
@@ -83,7 +83,7 @@ Niemniej jednak w przypadku krytycznym i systemów produkcyjnych, które wymagaj
 
 -   Przy użyciu [wyszukiwania dziennik transakcji](http://www.scoop.it/t/sql-server-transaction-log-mining).
 
--   Przy użyciu pełnego [źródłem zdarzeń](https://msdn.microsoft.com/en-us/library/dn589792.aspx) wzorca.
+-   Przy użyciu pełnego [źródłem zdarzeń](https://msdn.microsoft.com/library/dn589792.aspx) wzorca.
 
 -   Przy użyciu [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/): Tabela transakcyjne bazy danych jako kolejki komunikatów, który ma być base składnika tworzenia zdarzeń, który może utworzyć zdarzenia i opublikuj go.
 
@@ -91,10 +91,10 @@ Tematy dodatkowe, które należy wziąć pod uwagę podczas komunikacji asynchro
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Zdarzenia zmiennych wiadomości**
-    [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Kanał publikowania/subskrypcji**
+-   **Publish/Subscribe Channel**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Udi Dahan. Zawiera wyjaśnienie CQRS**
@@ -103,11 +103,11 @@ Tematy dodatkowe, które należy wziąć pod uwagę podczas komunikacji asynchro
 -   **Poleceń i zapytań podział odpowiedzialności (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Komunikacja pomiędzy ograniczone kontekstów**
+-   **Communicating Between Bounded Contexts**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Spójność ostateczna**
-    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)

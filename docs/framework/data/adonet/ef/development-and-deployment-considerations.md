@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: e6c494354532ffdeffdc714f748c5b009511443a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 6d0d1a4a604549f18e48d690753451be4c98f280
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="development-and-deployment-considerations"></a>Projektowanie i zagadnienia dotyczące wdrażania
 Tematy w tej sekcji rozwiązywania problemów można wziąć pod uwagę podczas tworzenia lub wdrażania aplikacji, która jest oparta na platformie ADO.NET Entity Framework.  
@@ -36,4 +36,4 @@ Tematy w tej sekcji rozwiązywania problemów można wziąć pod uwagę podczas 
  [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  
  [Omówienie programu Entity Framework](../../../../../docs/framework/data/adonet/ef/overview.md)  
  [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/en-us/91076853-0881-421b-837a-f582f36be527)
+ [ADO.NET Entity Data Model Tools](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527)

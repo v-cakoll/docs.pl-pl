@@ -1,7 +1,7 @@
 ---
 title: "Projektowanie aplikacji korzystających z mikrousługi"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie aplikacji korzystających z mikrousługi"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7ba7f09e189cd6d58ba9e84c4b668b871eb25dcb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji korzystających z mikrousługi
 
@@ -104,7 +104,7 @@ W związku z tym jednostki wdrożenia mikrousług (a nawet w przypadku baz danyc
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **eShopOnContainers repozytorium GitHub. Źródłowy kod aplikacji odwołanie**
+-   **eShopOnContainers GitHub repo. Źródłowy kod aplikacji odwołanie**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Korzyści wynikające z rozwiązaniem opartym na mikrousługi
@@ -173,7 +173,7 @@ Istnieje wiele wzorców architektury używanych przez oprogramowanie architektó
 
 -   Proste CRUD, jednowarstwową, pojedynczej warstwy.
 
--   [Tradycyjny N-warstwowych](https://msdn.microsoft.com/en-us/library/ee658109.aspx#Layers).
+-   [Tradycyjny N-warstwowych](https://msdn.microsoft.com/library/ee658109.aspx#Layers).
 
 -   [Domeny oparte na projekt N-warstwowych](https://blogs.msdn.microsoft.com/cesardelatorre/2011/07/03/published-first-alpha-version-of-domain-oriented-n-layered-architecture-v2-0/).
 

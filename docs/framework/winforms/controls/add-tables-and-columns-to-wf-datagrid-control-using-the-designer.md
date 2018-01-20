@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 48471427baccfa9fb8e7c3aedbb9576ab0d34243
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ccc310303c7edb968b43f4d529782979024e8e73
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>Porady: dodawanie tabel i kolumn do formantu DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 > [!NOTE]
@@ -30,10 +30,10 @@ ms.lasthandoff: 12/22/2017
   
  Dane można wyświetlać w formularzach systemu Windows <xref:System.Windows.Forms.DataGrid> kontrolki tabele i kolumny, tworząc <xref:System.Windows.Forms.DataGridTableStyle> obiektów oraz dodanie ich do <xref:System.Windows.Forms.GridTableStylesCollection> obiektu, który jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGrid> formantu <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości. Każdy styl tabeli Wyświetla zawartość niezależnie od tabeli danych jest określona w <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Domyślny styl tabeli bez kolumn style określone będą wyświetlane wszystkie kolumny w tabeli danych. Można ograniczyć, które kolumny z tabeli są wyświetlane przez dodanie <xref:System.Windows.Forms.DataGridColumnStyle> obiekty do <xref:System.Windows.Forms.GridColumnStylesCollection>, który jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości każdego <xref:System.Windows.Forms.DataGridTableStyle>.  
   
- Wykonanie poniższych procedur wymaga **aplikacji systemu Windows** projektu z formularza, który zawiera <xref:System.Windows.Forms.DataGrid> formantu. Informacje dotyczące sposobu konfigurowania tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Domyślnie w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formant nie ma na liście **przybornika**. Uzyskać informacje dotyczące dodawania go, zobacz [porady: Dodawanie elementów do przybornika](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).  
+ Wykonanie poniższych procedur wymaga **aplikacji systemu Windows** projektu z formularza, który zawiera <xref:System.Windows.Forms.DataGrid> formantu. Informacje dotyczące sposobu konfigurowania tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) i [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). Domyślnie w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formant nie ma na liście **przybornika**. Uzyskać informacje dotyczące dodawania go, zobacz [porady: Dodawanie elementów do przybornika](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>Aby dodać tabelę z formantem DataGrid w Projektancie  
   

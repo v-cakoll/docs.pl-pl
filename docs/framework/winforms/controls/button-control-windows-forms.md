@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 085ef918b2828dc754f5b91e0ad61262ce7d8c60
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e4f9720f26458f3dd9cb2411d123fa830b20f3fd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="button-control-windows-forms"></a>Kontrolka przycisku (Formularze systemu Windows)
 Formularze systemu Windows `Button` formant umożliwia użytkownikowi kliknij go, aby wykonać akcję. `Button` Formant może wyświetlać tekst i obrazy. Po kliknięciu przycisku wygląda, jakby trwa spoczywa i wydane.  
@@ -52,4 +52,4 @@ Formularze systemu Windows `Button` formant umożliwia użytkownikowi kliknij go
  [Kontrolki do użycia w formularzach Windows Forms](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
  Zawiera listę wszystkich formanty formularzy systemu Windows, linki do informacji na temat ich użycia.  
   
- Zobacz też [danych wejściowych użytkownika do okien dialogowych](http://msdn.microsoft.com/en-us/63ad8645-6842-45e8-b215-73f778e29a55) i [porady: Zamknij okna dialogowe i Zachowaj dane wejściowe użytkownika](http://msdn.microsoft.com/en-us/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).
+ Zobacz też [danych wejściowych użytkownika do okien dialogowych](http://msdn.microsoft.com/library/63ad8645-6842-45e8-b215-73f778e29a55) i [porady: Zamknij okna dialogowe i Zachowaj dane wejściowe użytkownika](http://msdn.microsoft.com/library/9e118fad-3bf4-4f70-a3de-a0cda2b0229d).

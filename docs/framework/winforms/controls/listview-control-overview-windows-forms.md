@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc0f887743e9e129319ca9241203905670334cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b79fecb0a537f4c568b4a57e9ce2bfab8d8e1005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView — Informacje o formancie [Formularze systemu Windows]
 Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostanie wyświetlona lista elementy z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows. Kontrolka ma cztery trybów wyświetlania: widoku LargeIcon, SmallIcon, listy i szczegółów.  
@@ -48,14 +48,14 @@ Formularze systemu Windows <xref:System.Windows.Forms.ListView> formantu zostani
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A>— Metoda|<xref:System.Windows.Forms.View.SmallIcon>lub<xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A>— Metoda|<xref:System.Windows.Forms.View.Details>lub<xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A>Właściwość|Wszystkie widoki, z wyjątkiem<xref:System.Windows.Forms.View.List>|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A>Właściwość|<xref:System.Windows.Forms.View.Details>.,|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A>Właściwość|<xref:System.Windows.Forms.View.Details>.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A>Właściwość|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>, lub<xref:System.Windows.Forms.View.Tile>|  
   
  Właściwość klucza <xref:System.Windows.Forms.ListView> formant jest <xref:System.Windows.Forms.ListView.Items%2A>, który zawiera elementy wyświetlany przez formant. <xref:System.Windows.Forms.ListView.SelectedItems%2A> Właściwość zawiera kolekcję elementów aktualnie zaznaczony w formancie. Użytkownik może wybrać wiele elementów, na przykład w celu przeciągnij i upuść kilka elementów jednocześnie do innego formantu, jeśli <xref:System.Windows.Forms.ListView.MultiSelect%2A> właściwość jest ustawiona na `true`. <xref:System.Windows.Forms.ListView> Formant może wyświetlać pola wyboru obok elementów, jeśli <xref:System.Windows.Forms.ListView.CheckBoxes%2A> właściwość jest ustawiona na `true`.  
   
  <xref:System.Windows.Forms.ListView.Activation%2A> Właściwość określa typ akcji użytkownika należy wykonać, aby uaktywnić element na liście: dostępne są następujące opcje <xref:System.Windows.Forms.ItemActivation.Standard>, <xref:System.Windows.Forms.ItemActivation.OneClick>, i <xref:System.Windows.Forms.ItemActivation.TwoClick>. <xref:System.Windows.Forms.ItemActivation.OneClick>Aktywacja wymaga jednego kliknięcia, aby aktywować elementu. <xref:System.Windows.Forms.ItemActivation.TwoClick>Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby uaktywnić element; jednym kliknięciem zmienia kolor tekstu elementu. <xref:System.Windows.Forms.ItemActivation.Standard>Aktywacja wymaga od użytkownika kliknij dwukrotnie, aby aktywować elementu, ale element nie zmienia wygląd.  
   
- <xref:System.Windows.Forms.ListView> Formantu obsługuje również style wizualne i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku tile i znaczniki wstawiania. Aby uzyskać więcej informacji, zobacz [funkcji systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
+ <xref:System.Windows.Forms.ListView> Formantu obsługuje również style wizualne i inne funkcje, które są dostępne na platformie Windows XP, w tym grupowania, widoku tile i znaczniki wstawiania. Aby uzyskać więcej informacji, zobacz [funkcji systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ListView>  

@@ -17,11 +17,11 @@ author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: ae0b692c99f6682c6854292c230490637ad45727
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 71b2e95076edbda3a67a84c9185d8b689c158e12
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="enabling-jit-attach-debugging"></a>Włączanie debugowania dołączania JIT
 Debugowanie dołączania JIT jest hasło używane do opisywania dołączanie debugera do procesu, gdy wystąpią błędy, lub mogą być wyzwalane przez określone metody lub funkcji.  
@@ -47,4 +47,4 @@ Debugowanie dołączania JIT jest hasło używane do opisywania dołączanie deb
 ## <a name="see-also"></a>Zobacz też  
  [Debugowanie, śledzenie i profilowanie](../../../docs/framework/debug-trace-profile/index.md)  
  [Ułatwianie debugowania obrazu](../../../docs/framework/debug-trace-profile/making-an-image-easier-to-debug.md)  
- [Włączenie profilowania](http://msdn.microsoft.com/en-us/3b669676-f0e0-4ebf-8674-68986dd2020d)
+ [Włączenie profilowania](http://msdn.microsoft.com/library/3b669676-f0e0-4ebf-8674-68986dd2020d)

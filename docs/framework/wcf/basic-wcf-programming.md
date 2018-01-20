@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dfcd0a09f247077f299d8b9c14a07bdc667245b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a0635ff85c89f2e2758dc156bcb31e4cfeaf2466
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="basic-wcf-programming"></a>Podstawy programowania przy użyciu programu WCF
 W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji.  
@@ -72,7 +72,7 @@ W tej sekcji przedstawiono podstawowe informacje dotyczące tworzenia [!INCLUDE[
   
  [Narzędzia programu Windows Communication Foundation](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

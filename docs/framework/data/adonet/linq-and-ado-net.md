@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d55185153e3d03ddb2b1726ed25566d6b5f396ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: b020b3df627fcb220f4227d76fdf8eb3d60e80e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="linq-and-adonet"></a>LINQ i ADO.NET
 Dzisiaj, użyć wielu firm deweloperów języków programowania (co najmniej dwa): języka wysokiego poziomu dla warstwy logiki i prezentacji biznesowych (takich jak [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] lub [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) i język kwerendy do interakcji z bazy danych (takich jak [!INCLUDE[tsql](../../../../includes/tsql-md.md)]). Wymaga deweloperowi można wykorzystać w wielu językach zadziałało i powoduje także, że język niezgodności w środowisku programistycznym. Na przykład aplikację, która używa interfejsu API dostępu do danych można wykonać kwerendy w bazie danych określa zapytanie jako literału ciągu przy użyciu znaków cudzysłowu. Ten ciąg zapytania nie można odczytać w kompilatorze i nie jest sprawdzany pod kątem błędów, takich jak Błędna składnia lub czy kolumn lub wierszy, do których się odwołuje faktycznie istnieją. Nie ma typu Sprawdzanie parametrów zapytania i nie `IntelliSense` obsługuje albo.  
@@ -33,7 +33,7 @@ Dzisiaj, użyć wielu firm deweloperów języków programowania (co najmniej dwa
   
  ![LINQ do omówienia ADO.NET](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- Aby uzyskać ogólne informacje na temat funkcji języka LINQ, zobacz [wprowadzenie do LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Aby dowiedzieć się, jak za pomocą LINQ w aplikacji, zobacz [NOT IN kompilacji: Przewodnik programowania w języku LINQ ogólne](http://msdn.microsoft.com/en-us/609c7a6b-cbdd-429d-99f3-78d13d3bc049), zawiera szczegółowe informacje o sposobie używania technologii LINQ.  
+ Aby uzyskać ogólne informacje na temat funkcji języka LINQ, zobacz [wprowadzenie do LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e). Aby dowiedzieć się, jak za pomocą LINQ w aplikacji, zobacz [NOT IN kompilacji: Przewodnik programowania w języku LINQ ogólne](http://msdn.microsoft.com/library/609c7a6b-cbdd-429d-99f3-78d13d3bc049), zawiera szczegółowe informacje o sposobie używania technologii LINQ.  
   
  Poniższe sekcje zawierają więcej informacji na temat [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)], [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)], i [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)].  
   

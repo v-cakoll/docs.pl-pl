@@ -22,17 +22,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 2ef50301a5188193cc13cd0e657f53593ef0d93e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 547c08e324066b872abb8df8b8b780ab3e4644a7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltcompilergt-element"></a>&lt;Kompilator&gt; — Element
 Określa atrybuty kompilatora konfiguracji dostawcy języka.  
   
  \<Element konfiguracji >  
-\<System.CodeDom — Element >  
+\<system.codedom Element>  
 \<Element kompilatorów >  
 \<Kompilator > — Element  
   
@@ -72,7 +72,7 @@ Określa atrybuty kompilatora konfiguracji dostawcy języka.
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Konfiguracja > — Element](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
-|[\<System.CodeDom — > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia kompilatora konfiguracji dla dostawcy dostępnych języków.|  
+|[\<system.codedom> Element](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|Określa ustawienia kompilatora konfiguracji dla dostawcy dostępnych języków.|  
 |[\<kompilatory > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|Kontener dla elementy kompilatora konfiguracji; zawiera zero lub więcej `<compiler>` elementów.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -112,4 +112,4 @@ Określa atrybuty kompilatora konfiguracji dostawcy języka.
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
  [\<kompilatory > — Element](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)  
  [Określanie w pełni kwalifikowanych nazw typów](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)  
- [Kompilator elementu dla kompilatory kompilacji (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/en-us/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)
+ [Kompilator elementu dla kompilatory kompilacji (schemat ustawień programu ASP.NET)](http://msdn.microsoft.com/library/f7d6b078-5d42-4134-b3f7-62e1aba1df1e)

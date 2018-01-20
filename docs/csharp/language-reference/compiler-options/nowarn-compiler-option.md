@@ -13,19 +13,19 @@ ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 caps.latest.revision: "24"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 499203bb4714fa2d07b2c0e42958ffd0e472facc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2784e63b7c1e67b32fc448b4b112ad0252b1abd9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="nowarn-c-compiler-options"></a>/nowarn (opcje kompilatora C#)
-**/Nowarn** opcja pozwala pominąć kompilatora przy wyświetlaniu co najmniej jedno ostrzeżenie. Wiele numerów ostrzeżeń, które należy oddzielić przecinkami.  
+# <a name="-nowarn-c-compiler-options"></a>-nowarn (opcje kompilatora C#)
+**- Nowarn** opcja pozwala pominąć kompilatora przy wyświetlaniu co najmniej jedno ostrzeżenie. Wiele numerów ostrzeżeń, które należy oddzielić przecinkami.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/nowarn:number1[,number2,...]  
+-nowarn:number1[,number2,...]  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -33,11 +33,11 @@ ms.lasthandoff: 11/21/2017
  Numery ostrzeżeń, które kompilator, aby pominąć.  
   
 ## <a name="remarks"></a>Uwagi  
- Należy określić tylko numeryczna część identyfikatora ostrzeżenie. Na przykład, jeśli chcesz pominąć CS0028, można określić `/nowarn:28`.  
+ Należy określić tylko numeryczna część identyfikatora ostrzeżenie. Na przykład, jeśli chcesz pominąć CS0028, można określić `-nowarn:28`.  
   
- Kompilator będzie dyskretne ignorowanie numerów ostrzeżeń, które przekazany do `/nowarn` , które były nieprawidłowe w poprzednich wersjach, ale zostały usunięte z kompilatora. Na przykład CS0679 jest prawidłowe w kompilatorze w Visual Studio .NET 2002, ale później został usunięty.  
+ Kompilator będzie dyskretne ignorowanie numerów ostrzeżeń, które przekazany do `-nowarn` , które były nieprawidłowe w poprzednich wersjach, ale zostały usunięte z kompilatora. Na przykład CS0679 jest prawidłowe w kompilatorze w Visual Studio .NET 2002, ale później został usunięty.  
   
- Nie można pominąć następujące ostrzeżenia przez `/nowarn` opcji:  
+ Nie można pominąć następujące ostrzeżenia przez `-nowarn` opcji:  
   
 -   Kompilator CS2002 ostrzegawcze (poziom 1)  
   
@@ -57,5 +57,5 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)  
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)  
  [Błędy kompilatora C#](../../../csharp/language-reference/compiler-messages/index.md)

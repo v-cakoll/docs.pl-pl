@@ -15,11 +15,11 @@ author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload: dotnet
-ms.openlocfilehash: a30f42c88e2478341737b99ad239d37c87a1063e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 611272f9d0369a89d401315e9b6379d2e8cd27c0
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="securing-clients"></a>Zabezpieczanie klientów [WCF]
 W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymagania dotyczące zabezpieczeń dla klientów. To, że usługa określa, jakie tryb zabezpieczeń, aby używać, i określa, czy klient musi dostarczyć poświadczenia. Zabezpieczanie klientów, w związku z tym, proces jest prosty: używanie metadanych uzyskane z usługi (jeśli jest publikowany) i kompilacji klienta. Metadane określa sposób konfigurowania klienta. Jeśli usługa wymaga to, że klient podać poświadczenia, należy uzyskać poświadczenia, która pasuje do wymagań. W tym temacie opisano proces bardziej szczegółowo. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie bezpiecznej usługi, zobacz [zabezpieczania usług](../../../docs/framework/wcf/securing-services.md).  
@@ -117,7 +117,7 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)], usługa nakazują wymaga
 </configuration>  
 ```  
   
- Aby ustawić poświadczenia klienta w konfiguracji, należy dodać [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elementu do pliku konfiguracji. Ponadto musi być połączony element dodany zachowania punktu końcowego usługi za pomocą `behaviorConfiguration` atrybutu [ \<punktu końcowego >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) element, jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi być zgodna z wartością zachowanie `name` atrybutu.  
+ Aby ustawić poświadczenia klienta w konfiguracji, należy dodać [ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) elementu do pliku konfiguracji. Ponadto musi być połączony element dodany zachowania punktu końcowego usługi za pomocą `behaviorConfiguration` atrybutu [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) element, jak pokazano w poniższym przykładzie. Wartość `behaviorConfiguration` atrybutu musi być zgodna z wartością zachowanie `name` atrybutu.  
   
  `<configuration>`  
   

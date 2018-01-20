@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 14b7691b1c105ceb3e209c5d86bda455657a4198
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f5f6df22918dedf32738a8cb9d73af2e625923a4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-sessions"></a>Korzystanie z sesji
 W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są powiązane z grupą wiadomości do konwersacji. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]sesje są inne niż dostępna w obiekcie sesji [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] aplikacji, obsługuje różne zachowania i są kontrolowane na różne sposoby. W tym temacie opisano funkcje, które sesji umożliwiają w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji i sposobu ich używania.  
@@ -147,7 +147,7 @@ W [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji, *sesji* są po
  Brak interakcji między <xref:System.ServiceModel.SessionMode> wyliczenia w umowie i <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> właściwość, która określa skojarzenie między kanałów i obiektów określonej usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Sesje, tworzenie wystąpień i współbieżność](../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md).  
   
 ### <a name="sharing-instancecontext-objects"></a>Udostępnianie obiektów InstanceContext  
- Można również sterować kanał opartymi na sesji lub połączenia jest skojarzony z którym <xref:System.ServiceModel.InstanceContext> obiektu przez siebie wykonanie tego skojarzenia. Pełny przykład, zobacz [InstanceContextSharing](http://msdn.microsoft.com/en-us/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
+ Można również sterować kanał opartymi na sesji lub połączenia jest skojarzony z którym <xref:System.ServiceModel.InstanceContext> obiektu przez siebie wykonanie tego skojarzenia. Pełny przykład, zobacz [InstanceContextSharing](http://msdn.microsoft.com/library/4a6a46d7-b7d7-4bb5-a0dd-03ffa3cbc230).  
   
 ## <a name="sessions-and-streaming"></a>Sesje i przesyłania strumieniowego  
  Jeśli masz dużą ilość danych do przesłania tryb strumieniowy transfer w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest możliwe alternatywą do domyślne zachowanie buforowania i przetwarzanie komunikatów w pamięci w całości. Mogą wystąpić nieoczekiwane zachowanie podczas przesyłania strumieniowego wywołania z powiązaniem opartymi na sesji. Wszystkie wywołania przesyłania strumieniowego są nawiązywane przy użyciu jednego kanału (kanale datagramowym), który nie obsługuje sesji, nawet jeśli powiązania, używany jest skonfigurowana do używania sesji. Jeśli wielu klientów wywołań przesyłania strumieniowego do tego samego obiektu usługi za pośrednictwem powiązania opartymi na sesji i tryb współbieżności obiekt usługi jest ustawiony na jednym i jej wystąpienia kontekstu tryb ustawiono `PerSession`, wywołania musi przechodzić przez kanał datagram i dlatego tylko jedno wywołanie są przetwarzane pojedynczo. Co najmniej jeden klient następnie może upłynął limit czasu. Można obejść ten problem, ustawiając obiektu usługi `InstanceContextMode` do `PerCall` lub współbieżności do wielu.  

@@ -21,17 +21,17 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 4a502cb309bce3a1a2fb55c9e5477b7a6a395960
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4299775cd23162839ab9846adc7d2c64cc18a404
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltstartupgt-element"></a>&lt;uruchamianie&gt; — Element
 Określa uruchamiania informacje CLR.  
   
- \<Konfiguracja >  
-\<Uruchamianie >  
+ \<configuration>  
+\<startup>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -49,7 +49,7 @@ Określa uruchamiania informacje CLR.
 |---------------|-----------------|  
 |`useLegacyV2RuntimeActivationPolicy`|Atrybut opcjonalny.<br /><br /> Określa, czy włączyć [!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)] zasad aktywacji środowiska uruchomieniowego lub użyć [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] zasad aktywacji.|  
   
-## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>Atrybut useLegacyV2RuntimeActivationPolicy  
+## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy Attribute  
   
 |Wartość|Opis|  
 |-----------|-----------------|  
@@ -70,7 +70,7 @@ Określa uruchamiania informacje CLR.
 |`configuration`|Element główny w każdym pliku konfiguracji używanym przez środowisko uruchomieniowe języka wspólnego i aplikacje programu .NET Framework.|  
   
 ## <a name="remarks"></a>Uwagi  
-  **\<SupportedRuntime >** element powinna być używana przez wszystkie aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje przeznaczone do obsługi tylko wersję 1.0 środowiska uruchomieniowego musi używać  **\<requiredRuntime >** elementu.  
+ **\<SupportedRuntime >** element powinna być używana przez wszystkie aplikacje utworzone przy użyciu wersji 1.1 lub nowszej środowiska uruchomieniowego. Aplikacje przeznaczone do obsługi tylko wersję 1.0 środowiska uruchomieniowego musi używać  **\<requiredRuntime >** elementu.  
   
  Kod uruchomienia dla aplikacji hostowanej w programie Internet Explorer ignoruje  **\<uruchamiania >** elementu i jego elementów podrzędnych.  
   
@@ -78,7 +78,7 @@ Określa uruchamiania informacje CLR.
  Ten atrybut jest przydatne, jeśli aplikacja używa ścieżek aktywacji starszych wersji [CorBindToRuntimeEx — funkcja](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md), i chcesz tych ścieżek do aktywowania zamiast starszej wersji środowiska CLR w wersji 4 lub w przypadku aplikacji zbudowany z [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] ale ma zależność w zestawie trybu mieszanego skompilowanej za pomocą starszej wersji programu .NET Framework. W tych scenariuszach, ustaw dla atrybutu `true`.  
   
 > [!NOTE]
->  Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu, efektywne wyłączenie funkcji side-by-side w trakcie CLR w wersji 1.1 lub CLR w wersji 2.0 (zobacz [Side-by-Side wykonywanie COM Interop](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
+>  Ustawienie atrybutu `true` uniemożliwia ładowanie do tego samego procesu, efektywne wyłączenie funkcji side-by-side w trakcie CLR w wersji 1.1 lub CLR w wersji 2.0 (zobacz [Side-by-Side wykonywanie COM Interop](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład pokazuje, jak do określania wersji środowiska uruchomieniowego w pliku konfiguracji.  
@@ -102,6 +102,6 @@ Określa uruchamiania informacje CLR.
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień uruchamiania](../../../../../docs/framework/configure-apps/file-schema/startup/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [\<PaveOver > Określanie wersji środowiska uruchomieniowego do użycia](http://msdn.microsoft.com/en-us/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
- [Wykonanie Side-by-Side dla międzyoperacyjności z modelem COM](http://msdn.microsoft.com/en-us/4302318c-3586-49bf-8620-b9a39cdf4a32)  
+ [\<PaveOver > Określanie wersji środowiska uruchomieniowego do użycia](http://msdn.microsoft.com/library/c376208d-980d-42b4-865b-fbe0d9cc97c2)  
+ [Wykonanie Side-by-Side dla międzyoperacyjności z modelem COM](http://msdn.microsoft.com/library/4302318c-3586-49bf-8620-b9a39cdf4a32)  
  [Wykonywanie równoczesne i wewnątrzprocesowe](../../../../../docs/framework/deployment/in-process-side-by-side-execution.md)

@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7fd38f6246d44bd24753d9c86a5b0b08819d3db7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4dfdc102a5aeb2e3eaccde28a8ce57a1878141e4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>Wskazówki: debugowanie niestandardowych formantów formularzy systemu Windows w czasie projektowania
 Podczas tworzenia niestandardowego formantu będzie często jest konieczne do debugowania swojego zachowania w czasie projektowania. Jest to szczególnie w przypadku tworzenia niestandardowych projektanta dla formantu niestandardowego. Aby uzyskać więcej informacji, zobacz [wskazówki: tworzenie funkcje systemu Windows formularze kontroli czy ma korzystać z programu Visual Studio czasu projektowania](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md).  
@@ -55,14 +55,14 @@ Podczas tworzenia niestandardowego formantu będzie często jest konieczne do de
  Gdy skończysz, konieczne będzie zrozumienia zadań niezbędnych do debugowania zachowania czasu projektowania formantu niestandardowego.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ## <a name="creating-the-project"></a>Tworzenie projektu  
  Pierwszym krokiem jest utworzenie projektu aplikacji. Użyjesz tego projektu do tworzenia aplikacji, która obsługuje kontrolki niestandardowej.  
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
--   Utwórz projekt aplikacji systemu Windows o nazwie "DebuggingExample". Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+-   Utwórz projekt aplikacji systemu Windows o nazwie "DebuggingExample". Aby uzyskać więcej informacji, zobacz [porady: Tworzenie projektu aplikacji Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 ## <a name="creating-a-control-library-project"></a>Tworzenie projektu biblioteki formantu  
  Następnym krokiem jest utworzenie projektu biblioteki kontroli i skonfigurować kontrolki niestandardowej.  
@@ -71,9 +71,9 @@ Podczas tworzenia niestandardowego formantu będzie często jest konieczne do de
   
 1.  Dodaj **Biblioteka formantów systemu Windows** projektu do rozwiązania.  
   
-2.  Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [NIB: porady: dodawanie nowych elementów projektu](http://msdn.microsoft.com/en-us/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nadaj nazwę bazową "DebugControl" nowego pliku źródłowego.  
+2.  Dodaj nową **UserControl** elementu do projektu DebugControlLibrary. Aby uzyskać więcej informacji, zobacz [NIB: porady: dodawanie nowych elementów projektu](http://msdn.microsoft.com/library/63d3e16b-de6e-4bb5-a0e3-ecec762201ce). Nadaj nazwę bazową "DebugControl" nowego pliku źródłowego.  
   
-3.  Przy użyciu **Eksploratora rozwiązań**, usuń formant domyślnego projektu przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/en-us/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
+3.  Przy użyciu **Eksploratora rozwiązań**, usuń formant domyślnego projektu przez usunięcie pliku kodu z podstawowej nazwy "`UserControl1`". Aby uzyskać więcej informacji, zobacz [NIB: porady: usuwanie, usuwania i wykluczanie elementów](http://msdn.microsoft.com/library/6dffdc86-29c8-4eff-bcd8-e3a0dd9e9a73).  
   
 4.  Skompiluj rozwiązanie.  
   

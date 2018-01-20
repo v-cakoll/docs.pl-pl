@@ -13,19 +13,19 @@ ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
 caps.latest.revision: "19"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 146977522b400418a26f6a83e1a0ccdca8675bf9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="unsafe-c-compiler-options"></a>/unsafe (opcje kompilatora C#)
-**/ Unsafe** — opcja kompilatora umożliwia kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe do skompilowania.  
+# <a name="-unsafe-c-compiler-options"></a>-unsafe (opcje kompilatora C#)
+**-Unsafe** — opcja kompilatora umożliwia kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe do skompilowania.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/unsafe  
+-unsafe  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
@@ -45,9 +45,9 @@ ms.lasthandoff: 11/21/2017
  Kompiluj `in.cs` dla trybu niebezpiecznego:  
   
 ```console  
-csc /unsafe in.cs  
+csc -unsafe in.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

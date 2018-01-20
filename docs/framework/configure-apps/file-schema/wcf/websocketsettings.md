@@ -14,18 +14,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ee0f555fc1e3412032e0a7dda3a747bbfef6f4d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 01bc858aeeff750baa3f54e813dea5c9779143f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltwebsocketsettingsgt"></a>&lt;webSocketSettings&gt;
 Element konfiguracji, służy do określania ustawień gniazda sieci Web.  
   
-\<System. ServiceModel >  
+\<system.ServiceModel>  
 \<powiązania >  
-\<netHttpBinding >  
+\<netHttpBinding>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -57,7 +57,7 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
 |maxPendingConnections|Określa maksymalną liczbę połączeń oczekujących na wysyłania w usłudze.|  
 |receiveBufferSize|Określa rozmiar buforu odbioru.|  
 |sendBufferSize|Określa rozmiar buforów wysyłania.|  
-|Podprotokół|Określa podprotokołu gniazda sieci Web.|  
+|subProtocol|Określa podprotokołu gniazda sieci Web.|  
 |transportUsage|Określa, kiedy należy używać gniazda sieci Web.|  
   
 ## <a name="transportusage-attribute"></a>transportUsage atrybutu  
@@ -75,7 +75,7 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
   
 |Element|Opis|  
 |-------------|-----------------|  
-|\<netHttpBinding >|Określa elementu NetHttpBinding|  
+|\<netHttpBinding>|Określa elementu NetHttpBinding|  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład przedstawia użycie \<webSocketSettings > elementu.  
@@ -103,5 +103,5 @@ Element konfiguracji, służy do określania ustawień gniazda sieci Web.
  <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>  
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Konfigurowanie powiązań dostarczanych przez system](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/en-us/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
+ [Konfigurowanie usług Windows Communication Foundation i klientów za pomocą powiązań](http://msdn.microsoft.com/library/bd8b277b-932f-472f-a42a-b02bb5257dfb)  
  [\<Powiązanie >](../../../../../docs/framework/misc/binding.md)

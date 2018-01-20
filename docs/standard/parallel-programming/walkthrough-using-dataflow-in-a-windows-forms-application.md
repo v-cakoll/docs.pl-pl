@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e5389b1a9d608ad8aae002f3ef9b00420f998b76
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  
@@ -87,7 +87,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# wersja `CreateCompositeBitmap` — metoda używa wskaźników, aby umożliwić przetwarzanie wydajne <xref:System.Drawing.Bitmap?displayProperty=nameWithType> obiektów. W związku z tym należy włączyć **niebezpiecznego kodu** opcji w projekcie, aby można było używać [niebezpieczne](~/docs/csharp/language-reference/keywords/unsafe.md) — słowo kluczowe. Aby uzyskać więcej informacji o sposobie włączania niebezpieczny kod w [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] projektu, zobacz [kompilacji strony projektanta projektu (C#)] https://msdn.microsoft.com/library/kb4wyys2).  
+    >  C# wersja `CreateCompositeBitmap` — metoda używa wskaźników, aby umożliwić przetwarzanie wydajne <xref:System.Drawing.Bitmap?displayProperty=nameWithType> obiektów. W związku z tym należy włączyć **niebezpiecznego kodu** opcji w projekcie, aby można było używać [niebezpieczne](~/docs/csharp/language-reference/keywords/unsafe.md) — słowo kluczowe. Aby uzyskać więcej informacji o sposobie włączania niebezpieczny kod w [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] projektu, zobacz [strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  W poniższej tabeli opisano elementy członkowskie w sieci.  
   

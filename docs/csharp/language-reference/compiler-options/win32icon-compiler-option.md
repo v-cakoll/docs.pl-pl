@@ -13,19 +13,19 @@ ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
 caps.latest.revision: "18"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 356502b8528e22a5b5ff9a28a3f82d5f9c0a72f9
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 2ec19bacb975732f2ae04b8cefbfaeaa518b6f15
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="win32icon-c-compiler-options"></a>/win32icon (opcje kompilatora C#)
-**/Win32icon** opcja Wstawia plik .ico w pliku danych wyjściowych, który zawiera plik wyjściowy żądanego wyglądu w Eksploratorze plików.  
+# <a name="-win32icon-c-compiler-options"></a>-win32icon (opcje kompilatora C#)
+**-Win32icon** opcja Wstawia plik .ico w pliku danych wyjściowych, który zawiera plik wyjściowy żądanego wyglądu w Eksploratorze plików.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/win32icon:filename  
+-win32icon:filename  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -35,7 +35,7 @@ ms.lasthandoff: 12/06/2017
 ## <a name="remarks"></a>Uwagi  
  Plik .ico mogą być tworzone za pomocą [kompilator zasobów](https://msdn.microsoft.com/library/aa381042.aspx). Kompilator zasobów jest wywoływane, gdy kompilacja programu Visual C++; plik .rc jest utworzony plik .ico.  
   
- Zobacz [/linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (do odwołania) lub [/Resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (Aby dołączyć) plik zasobu .NET Framework. Zobacz [/win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) można zaimportować pliku .res.  
+ Zobacz [- linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (do odwołania) lub [-zasobów](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (Aby dołączyć) plik zasobu .NET Framework. Zobacz [-win32res](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) można zaimportować pliku .res.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Aby ustawić tę opcję kompilatora w środowisku programowania Visual Studio  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/06/2017
  Kompiluj `in.cs` i Dołącz plik .ico `rf.ico` do produkcji `in.exe`:  
   
 ```console  
-csc /win32icon:rf.ico in.cs  
+csc -win32icon:rf.ico in.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  

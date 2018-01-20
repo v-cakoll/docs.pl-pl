@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c70b7df47cb3f367318fb388ceda2163f538cb32
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 49ff6378bcd35ab2d4e2adf3783a1c4e73025d3a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>Instrukcje: Dostęp do usługi WSE 3.0 za pomocą klienta programu WCF
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]Klienci są przewodowy poziom zgodny z sieci Web usług ulepszenia (WSE) 3.0 dla usług Microsoft .NET, gdy [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klientów są skonfigurowane do korzystania z sierpnia 2004 wersja specyfikacji WS-Addressing. Jednak usługi WSE 3.0 nie obsługują protokół exchange (MEX) metadanych, dlatego jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) można utworzyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy klienta, ustawienia zabezpieczeń nie są stosowane do wygenerowany [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klienta. W związku z tym należy określić ustawienia zabezpieczeń, które wymaga usługi WSE 3.0 po [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest generowany przez klienta.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  Utwórz klasę, która reprezentuje powiązanie, który może komunikować się z usługami WSE 3.0 w sieci Web.  
   
-     Następujące klasy jest częścią [współpracy z WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41) próbki:  
+     Następujące klasy jest częścią [współpracy z WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41) próbki:  
   
     1.  Utwórz klasę pochodną od klasy <xref:System.ServiceModel.Channels.Binding>.  
   
@@ -75,4 +75,4 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.ServiceModel.Channels.Binding>  
- [Współdziałanie z WSE](http://msdn.microsoft.com/en-us/f6816861-96a0-45f9-8736-8e4e82cd3a41)
+ [Współdziałanie z WSE](http://msdn.microsoft.com/library/f6816861-96a0-45f9-8736-8e4e82cd3a41)

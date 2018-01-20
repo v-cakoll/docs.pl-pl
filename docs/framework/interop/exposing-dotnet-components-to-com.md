@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 61e1dbdcf919ee6aa2150e6a57cb88a8aa859efe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a3d34c60a5c2cae5abaa6763b935f6d11a29a39e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="exposing-net-framework-components-to-com"></a>Udostępnianie składników .NET Framework modelowi COM
 Typ architektury .NET do zapisu i korzystanie z tego typu z kodem niezarządzanym są różne działania dla deweloperów. W tej sekcji opisano kilka porady dotyczące pisania zarządzanego kodu, który współdziała z klientami COM:  
@@ -51,11 +51,11 @@ Typ architektury .NET do zapisu i korzystanie z tego typu z kodem niezarządzany
   
      Deweloperzy COM może odwoływać się do typów w zestawie przy użyciu tego samego narzędzi i technik, których używają obecnie.  
   
-3.  [Wywołanie obiektu .NET](http://msdn.microsoft.com/en-us/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
+3.  [Wywołanie obiektu .NET](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33).  
   
      Deweloperzy COM można wywoływać metod w obiektu .NET. ten sam sposób ich wywoływać metod w dowolnego typu niezarządzanego. Na przykład COM **wywołanie funkcji CoCreateInstance** interfejsu API aktywuje obiekty .NET.  
   
-4.  [Wdrażanie aplikacji modelu COM dostępu](http://msdn.microsoft.com/en-us/fb63564c-c1b9-4655-a094-a235625882ce).  
+4.  [Wdrażanie aplikacji modelu COM dostępu](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce).  
   
      Zestawu z silną nazwą można zainstalować w pamięci podręcznej GAC i wymaga podpisu od jego wydawcy. Zestawy, które nie są silne nazwy musi być zainstalowany w katalogu aplikacji klienta.  
   

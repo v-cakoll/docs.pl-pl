@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 6adbaafe170cf3f5398677d5df3b3d2ff0a95abe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 72b75451d69e107b78152b301027f902ff77a25d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>Generowanie biblioteki klienta usługi danych (usługi danych WCF)
 Usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] może zwrócić dokument metadanych usługi, który opisuje modelu danych udostępnianych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych. Aby uzyskać więcej informacji, zobacz [OData: Dokument metadanych usługi](http://go.microsoft.com/fwlink/?LinkId=186070). Można użyć **Dodaj odwołanie do usługi** okna dialogowego w programie Visual Studio można dodać odwołania do [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie usługi. Jeśli używasz tego narzędzia można dodać odwołania do metadanych zwróconych przez [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] źródła danych w projekcie klienta, wykonuje następujące czynności:  
@@ -32,7 +32,7 @@ Usługi danych, który implementuje [!INCLUDE[ssODataFull](../../../../includes/
     > [!NOTE]
     >  Zwrócone metadane są przechowywane w projektu klienta jako plik edmx. Nie można otworzyć tego pliku edmx przy użyciu narzędzia Projektant modelu danych jednostki, ponieważ nie ma taki sam format pliku edmx, używany przez program Entity Framework. Ten plik metadanych można wyświetlić za pomocą edytora XML lub edytorze tekstu. Aby uzyskać więcej informacji, zobacz [ \[MC EDMX\]: modelu Entity Data Model danych usługi tworzenia pakietów formatu](http://go.microsoft.com/fwlink/?LinkID=178833) specyfikacji  
   
--   Generuje reprezentację usługi jako klasy kontenera jednostka, która dziedziczy <xref:System.Data.Services.Client.DataServiceContext>. Ta klasa kontenera jednostek wygenerowanego podobny do kontenera jednostek, który generuje narzędzi modelu danych jednostki. Aby uzyskać więcej informacji, zobacz [obiektu usługi — omówienie (Entity Framework)](http://msdn.microsoft.com/en-us/43014cf9-c9cb-4538-bfbb-197820b60038).  
+-   Generuje reprezentację usługi jako klasy kontenera jednostka, która dziedziczy <xref:System.Data.Services.Client.DataServiceContext>. Ta klasa kontenera jednostek wygenerowanego podobny do kontenera jednostek, który generuje narzędzi modelu danych jednostki. Aby uzyskać więcej informacji, zobacz [obiektu usługi — omówienie (Entity Framework)](http://msdn.microsoft.com/library/43014cf9-c9cb-4538-bfbb-197820b60038).  
   
 -   Generuje klasy danych do typów modelu danych, które wykryje w metadanych usługi.  
   

@@ -1,7 +1,7 @@
 ---
 title: "Projektowanie modelu domeny mikrousługi"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie modelu domeny mikrousługi"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/09/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1813fe80ad4f84d891986123538dd9037f3fd945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -63,7 +63,7 @@ Niektórzy użytkownicy powiedzieć, że model anemic domeny jest uruchomiony wz
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **DevIQ. Jednostką domeny**
+-   **DevIQ. Domain Entity**
     [*http://deviq.com/entity/*](http://deviq.com/entity/)
 
 -   **Pole Fowler. Model domeny**
@@ -71,7 +71,7 @@ Niektórzy użytkownicy powiedzieć, że model anemic domeny jest uruchomiony wz
 
 -   **Pole Fowler. Model domeny Anemic**
 
-    <https://martinfowler.com/bliki/AnemicDomainModel.HTML>
+    <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>Wzorzec obiektu wartości
 
@@ -108,7 +108,7 @@ Identyfikowanie agregacji może być trudne. Wartość zagregowana jest grupy ob
 
 ### <a name="the-aggregate-root-or-root-entity-pattern"></a>Wzorzec główny agregacji lub głównego jednostki
 
-Wartość zagregowana składa się z co najmniej jedną jednostkę: głównego agregacji, skrót jednostki głównego lub ientity podstawowego. Ponadto może mieć wiele jednostek podrzędnych i obiekty wartości ze wszystkimi jednostek i obiektów, które współpracują, aby zaimplementować wymagane zachowanie i transakcji.
+Wartość zagregowana składa się z co najmniej jedną jednostkę: głównego agregacji, nazywany również jednostki głównej lub podstawowej jednostki. Ponadto może mieć wiele jednostek podrzędnych i obiekty wartości ze wszystkimi jednostek i obiektów, które współpracują, aby zaimplementować wymagane zachowanie i transakcji.
 
 Główny agregacji ma na celu zapewnienia spójności agregacji; należy go tylko punkt wejścia dla aktualizacji do zagregowania za pośrednictwem metody lub operacji w całkowitym Klasa główna. Należy wprowadzić zmiany do podmiotów w obrębie agregacji tylko przy użyciu głównego agregacji. Jest ochrona spójności wartości zagregowanej, biorąc pod uwagę wszystkie invariants i reguły spójności, potrzebne do wykonania w Twojej agregacji. W przypadku zmiany obiektu podrzędnego jednostka lub wartość niezależnie głównego agregacji nie powiodło się, że agregacji jest w prawidłowym stanie. Byłoby jak tabelę z utracić etap. Obsługa spójności jest głównym celem głównego agregacji.
 
@@ -148,7 +148,7 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 -   **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskanie wglądu za pomocą odnajdywania**
     *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
 
--   **Sergeyowi Grybniak. Wzorce projektowe taktyczne DDD**
+-   **Sergey Grybniak. Wzorce projektowe taktyczne DDD**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
 -   **Krzysztof Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowanych**
@@ -159,4 +159,4 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (ddd ukierunkowane microservice.md) [dalej] (net-core mikrousługi domeny model.md)
+[Previous] (ddd-oriented-microservice.md) [Next] (net-core-microservice-domain-model.md)

@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 6c87e805bd710b49ce805af8223cddb5c7036c50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="handling-dataset-events"></a>Obsługa zdarzeń zestawu danych
 <xref:System.Data.DataSet> Obiektu zawiera trzy zdarzenia: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, i <xref:System.Data.DataSet.MergeFailed>.  
@@ -62,7 +62,7 @@ private static void DataSetMergeFailed(
  `DataSet`jest pochodną <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> — metoda i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje do nasłuchiwania na zlikwidowanym zdarzenie dla składnika obsługi zdarzeń. Można użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenie `DataSet` Jeśli chcesz wykonać kodu, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
->  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługuje <xref:System.Runtime.Serialization.ISerializable> interfejs dla niego komunikację zdalną. Są to jedyne obiekty ADO.NET, które może zostać wykonana zdalnie. Aby uzyskać więcej informacji, zobacz [obiektów zdalnych](http://msdn.microsoft.com/en-us/515686e6-0a8d-42f7-8188-73abede57c58).  
+>  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługuje <xref:System.Runtime.Serialization.ISerializable> interfejs dla niego komunikację zdalną. Są to jedyne obiekty ADO.NET, które może zostać wykonana zdalnie. Aby uzyskać więcej informacji, zobacz [obiektów zdalnych](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  
   
  Aby uzyskać informacje na temat innych zdarzeń, które są dostępne podczas pracy z `DataSet`, zobacz [obsługi zdarzeń DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md) i [obsługi zdarzeń element DataAdapter](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md).  
   

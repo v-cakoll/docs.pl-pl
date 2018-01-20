@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 823f2e0b542f5a9d8868cd3b71adb9a8cca4ec6a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd22f655fa28e59386c5393d44af4bce85cb1b7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hosting-unmanaged-api-reference"></a>Hosting (Niezarządzany wykaz interfejsów API)
 Hostingu API umożliwia hostom niezarządzanych do integracji środowisko uruchomieniowe języka wspólnego (CLR) w swoich aplikacjach.  
@@ -44,5 +44,5 @@ Hostingu API umożliwia hostom niezarządzanych do integracji środowisko urucho
  W tym artykule opisano niezarządzane struktury, używane do obsługi interfejsu API.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Hosty w czasie wykonywania](http://msdn.microsoft.com/en-us/99d9246a-b994-4fe5-985c-8588d1d59998)  
+ [Hosty w czasie wykonywania](http://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
  Zawiera opis uwzględnionych w programie .NET Framework hosty w czasie wykonywania.

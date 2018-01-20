@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2176682a5e3f396cc9d9fc60baf409fd1e9ba807
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 1f34a43a482791d31f6265575b8cbb2c8190779a
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-animate-a-rectangle"></a>Jak animować prostokąt
 W tym przykładzie przedstawiono sposób animowanie zmian rozmiar i pozycja prostokąta.  
@@ -42,5 +42,5 @@ W tym przykładzie przedstawiono sposób animowanie zmian rozmiar i pozycja pros
  [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Grafika i multimedia](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
- [Synchronizację](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Synchronizację](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

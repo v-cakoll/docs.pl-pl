@@ -13,19 +13,19 @@ ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 58203570119676e0737b0142b7a7a5fbf23f1ae2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (opcje kompilatora C#)
-**/Lib** opcji określa lokalizację zestawy, do których odwołuje się za pomocą klasy [/Reference (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) opcji.  
+# <a name="-lib-c-compiler-options"></a>-lib (opcje kompilatora C#)
+**-Lib** opcji określa lokalizację zestawy, do których odwołuje się za pomocą klasy [/Reference (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) opcji.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -42,15 +42,15 @@ ms.lasthandoff: 11/21/2017
   
 2.  Katalogu środowiska CLR systemu.  
   
-3.  Katalogi określone przez **/lib**.  
+3.  Katalogi określone przez **-lib**.  
   
 4.  Katalogi określonej przez zmienną środowiskową LIB.  
   
- Użyj **/reference** do określenia odwołania do zestawu.  
+ Użyj **— odwołanie** do określenia odwołania do zestawu.  
   
- **/ lib** dodatku; Określanie on więcej niż raz dołącza wszystkie wcześniejsze wartości.  
+ **-lib** dodatku; Określanie on więcej niż raz dołącza wszystkie wcześniejsze wartości.  
   
- Zamiast **/lib** ma na celu kopiowanie do katalogu roboczego wszystkie wymagane zestawy; ta umożliwia po prostu przekaż nazwę zestawu **/reference**. Następnie można usunąć zestawów z katalogu roboczego. Ponieważ ścieżka do zestawu zależnego nie jest określona w manifeście zestawu, aplikacja może zostać uruchomiona na komputerze docelowym i Znajdź i użyć zestawu w globalnej pamięci podręcznej zestawów.  
+ Zamiast **-lib** ma na celu kopiowanie do katalogu roboczego wszystkie wymagane zestawy; ta umożliwia po prostu przekaż nazwę zestawu **— odwołanie**. Następnie można usunąć zestawów z katalogu roboczego. Ponieważ ścieżka do zestawu zależnego nie jest określona w manifeście zestawu, aplikacja może zostać uruchomiona na komputerze docelowym i Znajdź i użyć zestawu w globalnej pamięci podręcznej zestawów.  
   
  Ponieważ kompilator może odwoływać się do zestawu nie oznacza, że środowisko uruchomieniowe języka wspólnego będzie mógł odnaleźć i załadować zestawu w czasie wykonywania. Zobacz [jak zestawy środowiska wykonawczego lokalizuje](../../../framework/deployment/how-the-runtime-locates-assemblies.md) szczegółowe informacje na temat jak wyszukuje środowiska uruchomieniowego dla zestawów występujących w odwołaniach.  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 11/21/2017
  Kompiluj t2.cs do utworzenia pliku .exe. Kompilator będzie szukać w katalogu roboczego i w katalogu głównym dysku c. odwołania do zestawów.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Zarządzanie właściwościami projektów i rozwiązań](/visualstudio/ide/managing-project-and-solution-properties)
+ [Zarządzanie właściwościami projektu i rozwiązania](/visualstudio/ide/managing-project-and-solution-properties)

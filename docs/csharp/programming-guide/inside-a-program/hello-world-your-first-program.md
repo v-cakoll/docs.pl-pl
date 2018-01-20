@@ -14,14 +14,14 @@ ms.assetid: 6493182a-b0b6-4539-a719-518a168cb730
 caps.latest.revision: "39"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c17dcce921f3a6ff1a9c547c5ff5d34c3dbbf28d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1b6511394e69edd344c4f4a1bbc9da549a1a2a17
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="hello-world----your-first-program-c-programming-guide"></a>Witaj Świecie — pierwszy program (Przewodnik programowania w języku C#)
-Poniższa procedura tworzy wersję języka C# tradycyjnych "Witaj świecie!" Program. Program wyświetla ciąg`Hello World!`  
+Poniższa procedura tworzy wersję języka C# tradycyjnych "Witaj świecie!" program. Program wyświetla ciąg`Hello World!`  
   
  Więcej przykładów dotyczących pojęcia wprowadzające, zobacz [wprowadzenie do języka Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic).  
   
@@ -133,9 +133,9 @@ Poniższa procedura tworzy wersję języka C# tradycyjnych "Witaj świecie!" Pro
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [W programie C#](../../../csharp/programming-guide/inside-a-program/index.md)  
+ [Konstrukcja programu C#](../../../csharp/programming-guide/inside-a-program/index.md)  
  [Ciągi](../../../csharp/programming-guide/strings/index.md)  
- [\<paveover > C# przykładowe aplikacje](http://msdn.microsoft.com/en-us/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
+ [\<paveover > C# przykładowe aplikacje](http://msdn.microsoft.com/library/9a9d7aaa-51d3-4224-b564-95409b0f3e15)  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
- [Wprowadzenie do języka Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)
+ [Wprowadzenie do języków Visual C# i Visual Basic](/visualstudio/ide/getting-started-with-visual-csharp-and-visual-basic)

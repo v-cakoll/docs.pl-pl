@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9bc771b81e1db87f3d881dc2a0ab84f7aad93247
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8328bc705349ffeaa78d95e95ed0955ac6faa5c3
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="listview-control-windows-forms"></a>ListView — Formant (Formularze systemu Windows)
 Formularze systemu Windows `ListView` formantu zostanie wyświetlona lista elementy z ikonami. Widok listy służy do tworzenia interfejsu użytkownika, takie jak okienku po prawej stronie Eksploratora Windows.  
@@ -93,7 +93,7 @@ Formularze systemu Windows `ListView` formantu zostanie wyświetlona lista eleme
  [Instrukcje: tworzenie złożonego interfejsu użytkownika z formularzami Windows Forms](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  Zawiera instrukcje dotyczące układu formularza systemu Windows z wieloma okienkami.  
   
- [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
+ [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)  
  Wyjaśniono, jak korzystać z funkcji specyficznych dla systemu Windows XP, które są stosowane do <xref:System.Windows.Forms.ListView> formantu.  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 83022c879abe324287d821cec90f65f1865f8281
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f9e7ceb40167d970b1886aec17b93f4bcf08f631
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="xslt-stylesheet-scripting-using-ltmsxslscriptgt"></a>XSLT skryptów przy użyciu arkusza stylów &lt;msxsl:script&gt;
 <xref:System.Xml.Xsl.XslTransform> Klasa obsługuje osadzonych skryptów przy użyciu `script` elementu.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/23/2017
   
  Aby uzyskać dowody z tym zestawem, należy użyć `this.GetType().Assembly.Evidence`. Aby uzyskać dowody z zasobów identyfikator URI (Uniform), należy użyć `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`.  
   
- Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlResolver> , lecz nie `Evidence`, wartością domyślną pełnego zaufania strefy zabezpieczeń dla zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityZone> i [nazwane zestawy uprawnień](http://msdn.microsoft.com/en-us/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
+ Jeśli używasz <xref:System.Xml.Xsl.XslTransform.Load%2A> metod, które przyjmują <xref:System.Xml.XmlResolver> , lecz nie `Evidence`, wartością domyślną pełnego zaufania strefy zabezpieczeń dla zestawu. Aby uzyskać więcej informacji, zobacz <xref:System.Security.SecurityZone> i [nazwane zestawy uprawnień](http://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3).  
   
  Funkcje mogą być deklarowane w `msxsl:script` elementu. W poniższej tabeli przedstawiono przestrzenie nazw, które są obsługiwane domyślnie. Można użyć klasy spoza listy przestrzeni nazw. Jednak te klasy musi być w pełni kwalifikowana.  
   
@@ -177,7 +177,7 @@ public class Sample
 ```  
   
 ## <a name="input"></a>Dane wejściowe  
- Number.XML  
+ number.xml  
   
 ```xml  
 <?xml version='1.0'?>  
@@ -191,7 +191,7 @@ public class Sample
 </data>  
 ```  
   
- CALC.xsl  
+ calc.xsl  
   
 ```xml  
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  

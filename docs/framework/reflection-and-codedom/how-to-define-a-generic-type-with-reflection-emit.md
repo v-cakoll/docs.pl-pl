@@ -22,11 +22,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e10f0f4ad1552c7b8ba7e6bc5175ffe7576ec986
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d6096a54c6a530035bd32c24d427ba047f905476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>Porady: definiowanie typu ogólnego przy użyciu emisji odbicia
 W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma parametrami typu, jak zastosować ograniczenia klasy, interfejsu, ograniczenia i ograniczeń specjalnych do parametrów typu i sposobu tworzenia elementów członkowskich, które używają parametrów typu klasy jako typy parametrów i zwracanych typów.  
@@ -146,5 +146,5 @@ W tym temacie przedstawiono sposób tworzenia prostego typu ogólnego z dwoma pa
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.Emit.GenericTypeParameterBuilder>  
- [Emituj za pomocą odbicia](http://msdn.microsoft.com/en-us/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
- [Emisja odbicia scenariuszy w zestawie dynamicznym](http://msdn.microsoft.com/en-us/e1cc6750-e20f-473b-bb4e-f43bc66aecce)
+ [Emituj za pomocą odbicia](http://msdn.microsoft.com/library/ccc6540d-0e2c-4d89-b456-eb7353f9e9ac)  
+ [Emisja odbicia scenariuszy w zestawie dynamicznym](http://msdn.microsoft.com/library/e1cc6750-e20f-473b-bb4e-f43bc66aecce)

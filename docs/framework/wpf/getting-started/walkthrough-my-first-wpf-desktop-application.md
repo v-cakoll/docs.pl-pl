@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3667d507f4c35174c1e888c9781b5f74ffd496a0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 16ed99181f8462e805638b5d3881464b16f21177
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>Wskazówki: Pierwszy WPF pulpitu aplikację
 Ten przewodnik zawiera wprowadzenie do rozwoju [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji, która zawiera elementy, które są wspólne dla większości [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji: [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] znaczników, związane z kodem, definicji aplikacji, kontrolki, układ Powiązanie danych i style. 
@@ -56,7 +56,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="creating-the-application-project"></a>Tworzenie projektu aplikacji  
  W tej sekcji utworzysz infrastruktury aplikacji, w tym definicji aplikacji, dwie strony i obrazu. 
   
-1. Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `ExpenseIt`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji WPF](http://msdn.microsoft.com/en-us/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
+1. Utwórz nowy projekt aplikacji WPF w języku Visual Basic lub Visual C# o nazwie `ExpenseIt`. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie nowego projektu aplikacji WPF](http://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82). 
   
     > [!NOTE]
     >  W tym przewodniku zastosowano <xref:System.Windows.Controls.DataGrid> formant, który jest dostępny w .NET Framework 4. Należy się upewnić, że projekt jest przeznaczony dla programu .NET Framework 4 lub nowszej. Aby uzyskać więcej informacji, zobacz[porady: wersja docelowa platformy .NET Framework](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework). 
@@ -73,7 +73,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
     [!code-xaml[ExpenseIt#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/App.xaml#1)]  
   
-3. Otwórz MainWindow.xaml. 
+3. Open MainWindow.xaml. 
   
      To [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] plik jest w głównym oknie aplikacji i wyświetla zawartości dla strony. <xref:System.Windows.Window> Klasa definiuje właściwości okna, takie jak jego tytuł, rozmiaru lub ikona i obsługuje zdarzenia, takie jak zamknięcie lub ukrywanie. 
   
@@ -115,11 +115,11 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="adding-files-to-the-application"></a>Dodawanie plików do aplikacji  
  W tej sekcji możesz dodać dwie strony i obraz do aplikacji. 
   
-1. Dodawanie nowej strony (WPF) do projektu o nazwie `ExpenseItHome.xaml`. Aby uzyskać więcej informacji, zobacz [porady: dodawanie nowych elementów do projektu WPF](http://msdn.microsoft.com/en-us/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
+1. Dodawanie nowej strony (WPF) do projektu o nazwie `ExpenseItHome.xaml`. Aby uzyskać więcej informacji, zobacz [porady: dodawanie nowych elementów do projektu WPF](http://msdn.microsoft.com/library/17e6b238-fc32-4385-98ef-2f66ca09d9ad). 
   
      Ta strona jest pierwszą stroną, która jest wyświetlana, gdy aplikacja jest uruchamiana. Pojawi się lista osób, z którego użytkownik może wybrać osobę, aby wyświetlić raport wydatków dla. 
   
-2. Otwórz ExpenseItHome.xaml. 
+2. Open ExpenseItHome.xaml. 
   
 3. Ustaw <xref:System.Windows.Controls.Page.Title%2A> do programu "ExpenseIt — strona główna". 
   
@@ -131,7 +131,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
     [!code-xaml[ExpenseIt#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml#6)]  
   
-4. Otwórz MainWindow.xaml. 
+4. Open MainWindow.xaml. 
   
 5. Ustaw <xref:System.Windows.Navigation.NavigationWindow.Source%2A> właściwość <xref:System.Windows.Navigation.NavigationWindow> do "ExpenseItHome.xaml". 
   
@@ -147,7 +147,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
      Ta strona będzie przedstawiał raportu wydatków wybranego na ExpenseItHome.xaml osoby. 
   
-7. Otwórz ExpenseReportPage.xaml. 
+7. Open ExpenseReportPage.xaml. 
   
 8. Ustaw <xref:System.Windows.Controls.Page.Title%2A> do programu "ExpenseIt — widok wydatków". 
   
@@ -171,7 +171,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
     [!code-csharp[ExpenseIt#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt/ExpenseReportPage.xaml.cs#5)]
     [!code-vb[ExpenseIt#5](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ExpenseIt/VB/ExpenseIt1_A/ExpenseReportPage.xaml.vb#5)]  
   
-10. Dodaj obraz o nazwie watermark.png do projektu. Można utworzyć własny obraz lub skopiuj plik z przykładowym kodzie. Aby uzyskać więcej informacji, zobacz [NIB: porady: Dodawanie istniejących elementów do projektu](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
+10. Dodaj obraz o nazwie watermark.png do projektu. Można utworzyć własny obraz lub skopiuj plik z przykładowym kodzie. Aby uzyskać więcej informacji, zobacz [NIB: porady: Dodawanie istniejących elementów do projektu](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3). 
 
 ## <a name="building-and-running-the-application"></a>Tworzenie i uruchamianie aplikacji  
  W tej sekcji możesz skompilować i uruchomić aplikację. 
@@ -206,7 +206,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
  W sekcji tworzenia jednokolumnową tabelę z trzy wiersze i margines 10 pikseli, dodając definicje kolumn i wierszy do <xref:System.Windows.Controls.Grid> w ExpenseItHome.xaml. 
   
-1. Otwórz ExpenseItHome.xaml. 
+1. Open ExpenseItHome.xaml. 
   
 2. Ustaw <xref:System.Windows.FrameworkElement.Margin%2A> właściwość <xref:System.Windows.Controls.Grid> elementu "10,0,10,10", co odpowiada po lewej, górnej, prawej i dolnego marginesu. 
   
@@ -233,7 +233,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
  Każdy formant znajduje się w wierszu <xref:System.Windows.Controls.Grid> przez ustawienie <xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType> dołączona właściwość. Aby uzyskać więcej informacji na temat dołączone właściwości, zobacz [dołączony Przegląd właściwości](../../../../docs/framework/wpf/advanced/attached-properties-overview.md). 
   
-1. Otwórz ExpenseItHome.xaml. 
+1. Open ExpenseItHome.xaml. 
   
 2. Dodaj następujące [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] między <xref:System.Windows.Controls.Grid> tagów. 
   
@@ -248,7 +248,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="adding-an-image-and-a-title"></a>Dodawanie obrazu i tytuł  
  W tej sekcji, strony głównej [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] został zaktualizowany o obrazu i tytuł strony. 
   
-1. Otwórz ExpenseItHome.xaml. 
+1. Open ExpenseItHome.xaml. 
   
 2. Dodaj inną kolumnę do <xref:System.Windows.Controls.Grid.ColumnDefinitions%2A> ze stałym <xref:System.Windows.Controls.ColumnDefinition.Width%2A> 230 pikseli. 
   
@@ -278,9 +278,9 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
 ## <a name="adding-code-to-handle-events"></a>Dodawanie kodu do obsługi zdarzeń  
   
-1. Otwórz ExpenseItHome.xaml. 
+1. Open ExpenseItHome.xaml. 
   
-2. Dodaj <xref:System.Windows.Controls.Primitives.ButtonBase.Click> program obsługi zdarzeń do <xref:System.Windows.Controls.Button> elementu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie prostego obsługi zdarzeń](http://msdn.microsoft.com/en-us/b1456e07-9dec-4354-99cf-18666b64f480). 
+2. Dodaj <xref:System.Windows.Controls.Primitives.ButtonBase.Click> program obsługi zdarzeń do <xref:System.Windows.Controls.Button> elementu. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie prostego obsługi zdarzeń](http://msdn.microsoft.com/library/b1456e07-9dec-4354-99cf-18666b64f480). 
   
     [!code-xaml[ExpenseIt#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]  
   
@@ -294,7 +294,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="creating-the-ui-for-expensereportpage"></a>Tworzenie interfejsu użytkownika dla ExpenseReportPage  
  ExpenseReportPage.xaml wyświetla raport wydatków dla osoby, która została wybrana na ExpenseItHome.xaml. W tej sekcji dodaje formantów i tworzy [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla ExpenseReportPage.xaml. W tej sekcji dodaje również kolory tła i wypełnienia do różnych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementów. 
   
-1. Otwórz ExpenseReportPage.xaml. 
+1. Open ExpenseReportPage.xaml. 
   
 2. Dodaj następujące XAML między <xref:System.Windows.Controls.Grid> tagów. 
   
@@ -340,7 +340,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
      Style są zasobów i elementy podrzędne <xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType> elementu właściwości. W tej lokalizacji style są stosowane do wszystkich elementów w aplikacji. Przykład użycia zasobów w [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] aplikacji, zobacz [wykorzystania zasobów aplikacji](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md). 
   
-3. Otwórz ExpenseItHome.xaml. 
+3. Open ExpenseItHome.xaml. 
   
 4. Zastąp wszystko pomiędzy <xref:System.Windows.Controls.Grid> elementy o następujących XAML. 
   
@@ -348,7 +348,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
   
      Właściwości, takie jak <xref:System.Windows.VerticalAlignment> i <xref:System.Windows.Media.FontFamily> definiujących wygląd każdej kontrolki usunięty i zastąpiony, stosując style. Na przykład `headerTextStyle` jest stosowany do "Wyświetl raport wydatków" <xref:System.Windows.Controls.Label>. 
   
-5. Otwórz ExpenseReportPage.xaml. 
+5. Open ExpenseReportPage.xaml. 
   
 6. Zastąp wszystko pomiędzy <xref:System.Windows.Controls.Grid> elementy o następujących XAML. 
   
@@ -363,7 +363,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="binding-data-to-a-control"></a>Wiązanie danych do formantu  
  W tej sekcji utworzysz [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] danych, który jest powiązany z różnych formantów. 
   
-1. Otwórz ExpenseItHome.xaml. 
+1. Open ExpenseItHome.xaml. 
   
 2. Po otwarciu <xref:System.Windows.Controls.Grid> elementu, Dodaj następujący kod XAML, aby utworzyć <xref:System.Windows.Data.XmlDataProvider> dla każdej osoby, która zawiera dane. 
   
@@ -405,7 +405,7 @@ Aby uzyskać więcej informacji na temat instalowania najnowszej wersji programu
 ## <a name="styling-data-with-data-templates"></a>Style danych za pomocą szablonów danych  
  W tej sekcji możesz zaktualizować [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] dla każdego elementu w danych powiązane listy przy użyciu szablonów danych. 
   
-1. Otwórz ExpenseReportPage.xaml. 
+1. Open ExpenseReportPage.xaml. 
   
 2. Powiąż z zawartością "Name" i "Dział" <xref:System.Windows.Controls.Label> właściwość źródła elementy do odpowiednich danych. Aby uzyskać więcej informacji na temat wiązania danych, zobacz [omówienie powiązania danych](../../../../docs/framework/wpf/data/data-binding-overview.md). 
   

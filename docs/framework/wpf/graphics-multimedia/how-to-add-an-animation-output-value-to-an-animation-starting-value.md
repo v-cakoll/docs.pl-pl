@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b1a6a5923655c5857b813df778b36b6c7fd208b0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3a670a29e4bd982418ac92ef0e2ac65635763671
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-an-animation-output-value-to-an-animation-starting-value"></a>Jak dodawać wartość danych wyjściowych animacji do wartości początkowej animacji
 W tym przykładzie przedstawiono sposób dodawania wartość wyjściowa animacji na wartość początkową animacji.  
@@ -35,5 +35,5 @@ W tym przykładzie przedstawiono sposób dodawania wartość wyjściowa animacji
  [Gromadzenie wartości animacji podczas cykli powtórzeń](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
  [Animacja — przegląd](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
  [Animacje kluczowych klatek — przegląd](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)  
- [Synchronizację](http://msdn.microsoft.com/en-us/7d83765b-d5ae-41b1-b423-80206e1124aa)  
+ [Synchronizację](http://msdn.microsoft.com/library/7d83765b-d5ae-41b1-b423-80206e1124aa)  
  [Tematy z instrukcjami](../../../../docs/framework/wpf/graphics-multimedia/animation-and-timing-how-to-topics.md)

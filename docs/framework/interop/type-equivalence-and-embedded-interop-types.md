@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 28203dc428db6a2dd06e9c1e85b64ef80e81ffbe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e90769d4eec98fc7554294c73086446bba71a400
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>Równoważność typów i osadzone typy międzyoperacyjne
 Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], typowe obsługuje środowisko uruchomieniowe języka osadzanie informacji o typie dla typów COM bezpośrednio do zarządzanych zestawów, zwalniając zarządzanych zestawów można uzyskać informacji o typie dla typów COM z zestawy międzyoperacyjne. Ponieważ osadzony typ informacji obejmuje tylko typy i elementy członkowskie, które są rzeczywiście używane przez zestaw zarządzany, dwóch zestawów zarządzanych może być bardzo różne widoki tego samego typu COM. Każdy zestaw zarządzany ma inną <xref:System.Type> obiektu do reprezentowania jego widoku typu COM. Środowisko uruchomieniowe języka wspólnego obsługuje pełnienia roli równoważnika typu między tymi różne widoki dla interfejsów, struktury, wyliczenia i delegaty.  
@@ -61,5 +61,5 @@ Począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], ty
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Type.IsEquivalentTo%2A>  
- [Używanie typów COM w kodzie zarządzanym](http://msdn.microsoft.com/en-us/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Używanie typów COM w kodzie zarządzanym](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
  [Importowanie biblioteki typów jako zestawu](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)

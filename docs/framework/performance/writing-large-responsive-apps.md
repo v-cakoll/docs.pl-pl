@@ -14,11 +14,11 @@ author: BillWagner
 ms.author: wiwagn
 manager: wpickett
 ms.workload: wiwagn
-ms.openlocfilehash: ac4052773044e44f546894a54dc21728dbd6634a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a33e065d9daa886c27cde31c8f16f9b9eaa45938
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>Pisanie dużych i sprawnie działających aplikacji platformy .NET Framework
 Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji .NET Framework lub aplikacje, które przetwarzają dużą ilość danych, takich jak pliki lub bazy danych. Te wskazówki pochodzi z ponowne zapisywanie C# i Visual Basic kompilatory w kodzie zarządzanym i ten artykuł zawiera kilka przykładów rzeczywistych kompilatora C#.  
@@ -47,7 +47,7 @@ Ten artykuł zawiera wskazówki dotyczące poprawy wydajności dużych aplikacji
  Należy ustawić cele dotyczące wydajności dla klucza klienta środowiska lub scenariuszy w aplikacji i napisać testy do pomiaru wydajności.  Zbadaj w przypadku braku testy, stosując metodę wykładniczej: Profile umożliwiają pomocne, można przyjąć hipotezę, co może być problem i przetestować użytkownika hipoteza z eksperyment lub zmiany kodu.  Ustanowić miary wydajności bazowej wraz z upływem czasu z testowaniem regularnie, więc można odizolować zmiany, które powodują regresji w wydajności.  W sposób rygorystyczne zbliża się wydajność pracy, będzie uniknąć traci czasu z aktualizacjami kodu, które nie są potrzebne.  
   
 ### <a name="fact-3-good-tools-make-all-the-difference"></a>Fakt 3: Dobrej narzędziom do wszystkich różnicy  
- Dobrym narzędzia pozwalają szybko przejść do szczegółów największych problemy z wydajnością (procesora CPU, pamięć lub dysk) i pomocy możesz znaleźć kod, który powoduje, że te wąskich gardeł.  Microsoft dostarczany różnych narzędzi wydajności, takich jak [programu Visual Studio profilera](/visualstudio/profiling/beginners-guide-to-performance-profiling), [narzędzie do analizy Windows Phone](http://msdn.microsoft.com/en-us/e67e3199-ea43-4d14-ab7e-f7f19266253f), i [narzędzia PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
+ Dobrym narzędzia pozwalają szybko przejść do szczegółów największych problemy z wydajnością (procesora CPU, pamięć lub dysk) i pomocy możesz znaleźć kod, który powoduje, że te wąskich gardeł.  Microsoft dostarczany różnych narzędzi wydajności, takich jak [programu Visual Studio profilera](/visualstudio/profiling/beginners-guide-to-performance-profiling), [narzędzie do analizy Windows Phone](http://msdn.microsoft.com/library/e67e3199-ea43-4d14-ab7e-f7f19266253f), i [narzędzia PerfView](http://www.microsoft.com/download/details.aspx?id=28567).  
   
  Narzędzia PerfView jest bezpłatny i zdumiewająco zaawansowane narzędzie, które pozwala skupić się na bezpośrednich problemów, takich jak We/Wy dysku, zdarzenia GC i pamięci.  Można przechwycić związanych z wydajnością [śledzenia zdarzeń dla systemu Windows](../../../docs/framework/wcf/samples/etw-tracing.md) zdarzeń (ETW) i widoku łatwo na aplikacji, na proces, na stosie i na informacje o wątku.  Narzędzia PerfView pokazuje, ile i jakie rodzaj pamięci są przydzielane aplikacji, które funkcje i wywołania stosy współtworzyć ile alokacji pamięci. Aby uzyskać więcej informacji, zobacz sformatowanego tematy pomocy, pokazy i filmy wideo uwzględnione za pomocą narzędzia (takie jak [samouczki narzędzia PerfView](http://channel9.msdn.com/Series/PerfView-Tutorial) witrynie Channel 9).  
   
@@ -456,7 +456,7 @@ class Compilation { /*...*/
   
  Klasy i struktury w sposób, podaj zależnościami klasycznego miejsca i godziny dla Dostrajanie aplikacji.  Klasy pociągnąć za sobą 12 bajtów obciążenie x86 komputera nawet wtedy, gdy mają one nie ma pól, ale są one niedrogich do przekazania wokół, ponieważ trwa tylko wskaźnik do odwoływania się do wystąpienia klasy.  Struktury pociągnąć za sobą nie Alokacje sterty, jeśli nie są one opakowany, ale podczas przekazywania dużych struktury jako argumenty funkcji lub wartości zwracane, czas procesora CPU automatycznie skopiować wszystkie elementy członkowskie danych struktury.  Zwróć uwagę na powtarzane wywołania do właściwości, które zwraca struktury i pamięci podręcznej wartość właściwości w zmiennej lokalnej, aby uniknąć nadmiernego dane kopiowanie.  
   
- **Pamięci podręczne**  
+ **Caches**  
   
  Typowe lewy wydajności jest wyniki pamięci podręcznej.  Jednak bez zakończenia lub usuwania zasad rozmiar pamięci podręcznej może być przeciek pamięci.  Podczas przetwarzania dużych ilości danych, jeśli mają celu dużej ilości pamięci w pamięci podręcznej, może spowodować wyrzucanie elementów bezużytecznych do przesłonięcia korzyści z pamięci podręcznej wyszukiwania.  
   

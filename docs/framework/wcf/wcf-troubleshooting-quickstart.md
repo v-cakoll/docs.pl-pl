@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 37b8ff108cb9ddb0df8ff4cb365ae543959546cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d0bcd7d08a698a2a839094204dcc5f7105ef8f6b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>Szybki start: rozwiązywanie problemów z architekturą WCF
 W tym temacie zamieszczono listę znanych problemów, które klienci mają uruchamiać do podczas opracowywania WCF klientów i usług. Jeśli problem, którego używasz do nie jest na liście, zaleca się Konfiguruj śledzenie dla usługi. Spowoduje to wygenerowanie pliku śledzenia można wyświetlić podgląd pliku śledzenia i uzyskać szczegółowe informacje dotyczące wyjątków, który może być przeprowadzana w ramach usługi. Aby uzyskać więcej informacji na temat konfigurowania śledzenia, zobacz: [Konfigurowanie śledzenia](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Aby uzyskać więcej informacji na przeglądarka plików śledzenia, zobacz: [narzędzia podglądu śledzenia usług (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md).  
@@ -113,7 +113,7 @@ public class MyServiceHost : ServiceHost
   
 -   Może być konieczne otwarcie portu używanego do aplikacji. Aby uzyskać więcej informacji, zobacz [instrukcje dotyczące zapory](../../../docs/framework/wcf/samples/firewall-instructions.md) z próbek zestawu SDK.  
   
--   W przypadku innych możliwych problemów, zobacz temat przykłady [uruchamiania przykładów w grupie roboczej przez maszyny](http://msdn.microsoft.com/en-us/a451a525-e7ce-452d-9da9-620221260113).  
+-   W przypadku innych możliwych problemów, zobacz temat przykłady [uruchamiania przykładów w grupie roboczej przez maszyny](http://msdn.microsoft.com/library/a451a525-e7ce-452d-9da9-620221260113).  
   
 -   Jeśli klient korzysta z poświadczeń systemu Windows i jest wyjątek <xref:System.ServiceModel.Security.SecurityNegotiationException>, skonfiguruj protokołu Kerberos w następujący sposób.  
   
@@ -149,7 +149,7 @@ public class MyServiceHost : ServiceHost
   
 -   [Zarejestrowanie nazwy głównej usługi Kerberos za pomocą pliku Http.sys](http://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Opis protokołu Kerberos](http://go.microsoft.com/fwlink/?LinkId=86946)  
+-   [Kerberos Explained](http://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>Gdy I zgłoszenie wyjątku FaultException\<wyjątku > Typ w przypadku wyjątku, wyświetlany jest zawsze ogólne typu wyjątku FaultException na kliencie, a nie typu ogólnego. Co się dzieje?  

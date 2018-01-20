@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Kompilacji wiersza polecenia z csc.exe
 Można wywołać kompilatora C#, wpisując nazwę jego pliku wykonywalnego (*csc.exe*) w wierszu polecenia.
@@ -70,31 +70,31 @@ csc File.cs
 - Kompiluje *File.cs* produkujących *File.dll*:
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - Kompiluje *File.cs* i tworzy *My.exe*:
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - Kompiluje z włączonymi optymalizacjami wszystkie pliki C# w bieżącym katalogu i określa symboli debugowania. Dane wyjściowe *File2.exe*:
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - Kompiluje wszystkie pliki C# w bieżącym katalogu produkujących wersję debugowania *File2.dll*. Brak logo i ostrzeżenia nie są wyświetlane:
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - Kompiluje wszystkie pliki C# w bieżącym katalogu do *Something.xyz* (DLL):
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Różnice między kompilatora C# i dane wyjściowe kompilatora C++
@@ -102,10 +102,10 @@ Brak Brak obiektu (*.obj*) pliki tworzone w wyniku wywołania kompilatora C#; pl
 
 ## <a name="see-also"></a>Zobacz także
  [Opcje kompilatora C#](../../../csharp/language-reference/compiler-options/index.md)  
- [Opcje kompilatora C# alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [Opcje kompilatora C# według kategorii](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
+ [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
+ [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  [Main() i argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Argumenty wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
  [Porady: wyświetlanie argumentów wiersza polecenia](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
- [Porady: za pomocą argumentów wiersza polecenia dostępu instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
+ [Instrukcje: uzyskiwanie dostępu do argumentów wiersza polecenia za pomocą instrukcji foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Main() — zwracane wartości](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

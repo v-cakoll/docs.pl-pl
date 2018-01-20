@@ -17,18 +17,18 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 510896c6993008f30e7eacf2628ae4cceadea7e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dcead28d7bf66e0626a0108015add4f22c5fa476
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ltgccpugroupgt-element"></a>&lt;Gccpugroup —&gt; — Element
 Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup procesora CPU.  
   
- \<Konfiguracja >  
-\<Runtime >  
-\<Gccpugroup — >  
+ \<configuration>  
+\<runtime>  
+\<GCCpuGroup>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -84,5 +84,5 @@ Określa, czy wyrzucanie elementów bezużytecznych obsługuje wiele grup proces
 ## <a name="see-also"></a>Zobacz też  
  [Schemat ustawień środowiska uruchomieniowego](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
  [Schemat pliku konfiguracji](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [Porady: wyłączanie współbieżne odzyskiwanie pamięci](http://msdn.microsoft.com/en-us/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
+ [Porady: wyłączanie współbieżne odzyskiwanie pamięci](http://msdn.microsoft.com/library/ba2c6c67-5778-497c-9fac-5f793b5500c7)  
  [Wyrzucanie elementów bezużytecznych stacji roboczej i serwera](../../../../../docs/standard/garbage-collection/fundamentals.md#workstation_and_server_garbage_collection)

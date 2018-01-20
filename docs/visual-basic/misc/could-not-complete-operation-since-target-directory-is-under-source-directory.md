@@ -9,11 +9,11 @@ ms.assetid: 850d3a24-5d51-4ac8-a912-630efcd75278
 caps.latest.revision: "10"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 429d679157d25655ca73afef14ecd642f7cac37f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0a17877b2335ee010a97f0b522bd4c399867cd7d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="could-not-complete-operation-since-target-directory-is-under-source-directory"></a>Nie można ukończyć operacji, ponieważ katalog docelowy znajduje się w katalogu źródłowym
 Cykliczne operacja nie powiodła się. Operacje cykliczne cyklu i z tego powodu nie można ukończyć. Na przykład obiekt A może próbować dziedziczyć B obiektu, który z kolei dziedziczy obiektu A.  
@@ -23,5 +23,5 @@ Cykliczne operacja nie powiodła się. Operacje cykliczne cyklu i z tego powodu 
 -   Podczas dziedziczenia, upewnij się, że nie istnieją żadne odwołania cykliczne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Error — typy](../../visual-basic/programming-guide/language-features/error-types.md)  
- [Podstawy debugowania: punkty przerwania](http://msdn.microsoft.com/en-us/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)
+ [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Podstawy debugowania: punkty przerwania](http://msdn.microsoft.com/library/752a02c2-0ac7-4c8b-aa1b-4b2b3b21152e)

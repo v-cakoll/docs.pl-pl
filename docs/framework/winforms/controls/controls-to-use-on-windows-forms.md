@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: caee828d2379aaa2d6c6c80359d16c89b9b4aa42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9958af954675784e9cbdec4c26605fb83ffa0005
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Formanty do użycia w formularzach systemu Windows
 Poniżej przedstawiono listę alfabetyczne kontrolek i składników, które mogą być używane w formularzach systemu Windows. Oprócz formanty formularzy systemu Windows opisanych w tej sekcji można dodać do formularzy systemu Windows ActiveX i kontrolek niestandardowych. Jeśli nie znajdziesz się, że formant, który należy wymienione w tym miejscu, można również utworzyć własne. Aby uzyskać więcej informacji, zobacz [opracowywanie formantów formularzy systemu Windows w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md). Aby uzyskać więcej informacji o wybieraniu formantu zobacz [formantów formularzy systemu Windows przez funkcję](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md).  
@@ -239,7 +239,7 @@ Poniżej przedstawiono listę alfabetyczne kontrolek i składników, które mog�
  [Opracowywanie kontrolek formularzy Windows Forms w czasie projektowania](../../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)  
  Zawiera łącza do tematów krok po kroku, zalecenia dotyczące jakiego rodzaju formantu, aby utworzyć i innych informacji na temat tworzenia własnego formantu.  
   
- [Formanty i obiektów programowalnych w różnych językach i biblioteki](http://msdn.microsoft.com/en-us/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
+ [Formanty i obiektów programowalnych w różnych językach i biblioteki](http://msdn.microsoft.com/library/021f2a1b-8247-4348-a5ad-e1d9ab23004b)  
  Zawiera tabelę, która mapuje formantów w Visual Basic 6.0 do odpowiedniej kontrolki [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)]. Należy zauważyć, że kontrolki teraz klas w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)].  
   
  [Instrukcje: dodawanie kontrolek ActiveX do formularzy Windows Forms](../../../../docs/framework/winforms/controls/how-to-add-activex-controls-to-windows-forms.md)  

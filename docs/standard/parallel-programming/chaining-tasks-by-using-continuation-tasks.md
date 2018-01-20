@@ -20,11 +20,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e528996ddbe56be009566a755adab2fd2d5413b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowanie asynchroniczne jest często stosowane w jednej operacji asynchronicznej, po zakończeniu, aby wywołać operację drugi i przekazywania danych do niej. Tradycyjnie to przeprowadzono przy użyciu metody wywołania zwrotnego. W bibliotece równoległych zadań podał funkcji *zadań kontynuacji*. Zadania kontynuacji (nazywanego także po prostu utrzymania) jest zadanie asynchroniczne, które jest wywoływane przez inne zadanie, znany jako *antecedent*, po zakończeniu antecedent.  
@@ -127,7 +127,7 @@ W programowanie asynchroniczne jest często stosowane w jednej operacji asynchro
 ## <a name="associating-state-with-continuations"></a>Kojarzenie z Kontynuacje stanu  
  Stan dowolnego można skojarzyć z kontynuacji zadań. <xref:System.Threading.Tasks.Task.ContinueWith%2A> Metoda zapewnia przeciążone wersje każdego podjęcia <xref:System.Object> wartość, która reprezentuje stan kontynuacji. Ten obiekt stanu może później dostęp przy użyciu <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> właściwości. Ten obiekt stanu jest `null` , jeśli nie zostanie określona wartość.  
   
- Stan kontynuacji jest przydatne, jeśli Konwertuj istniejący kod, który używa [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) do użycia TPL. Zwykle w APM, można zapewnić stan obiektu w **rozpocząć***metody* — metoda i nowszym dostępu, który stanu przy użyciu <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> właściwości. Za pomocą <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody, można zachować ten stan podczas konwertowania kod, który używa APM do użycia TPL.  
+ Stan kontynuacji jest przydatne, jeśli Konwertuj istniejący kod, który używa [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) do użycia TPL. Zwykle w APM, można zapewnić stan obiektu w **rozpocząć *** metody* — metoda i nowszym dostępu, który stanu przy użyciu <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> właściwości. Za pomocą <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody, można zachować ten stan podczas konwertowania kod, który używa APM do użycia TPL.  
   
  Stan kontynuacji również może być przydatna podczas pracy z <xref:System.Threading.Tasks.Task> obiekty w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugera. Na przykład w **zadań równoległych** okna, **zadań** kolumny Wyświetla reprezentację ciągu obiektu stanu dla każdego zadania. Aby uzyskać więcej informacji na temat **zadań równoległych** okna, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window).  
   
@@ -154,7 +154,7 @@ W programowanie asynchroniczne jest często stosowane w jednej operacji asynchro
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](http://msdn.microsoft.com/en-us/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Jeśli kontynuacji jest zadania podrzędnego dołączone, który został utworzony przy użyciu <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> opcji jego wyjątki będą przekazywane przez nadrzędny powrót do wywoływania wątku, jak w przypadku innych podrzędnych dołączonych. Aby uzyskać więcej informacji, zobacz [dołączonego i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   

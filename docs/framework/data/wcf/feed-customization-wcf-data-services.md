@@ -22,11 +22,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f1ada694ed8bdb8aea4551a24f423f896ba1bd61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 2c5e33490a94346880986fdf66a4c5907084c8cd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="feed-customization-wcf-data-services"></a>Dostosowywanie kanału informacyjnego (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]używa [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] do udostępniania danych jako źródło danych. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]obsługuje zarówno Atom i JavaScript Object Notation (JSON) formaty dla źródła danych. Korzystając z źródła danych, Atom [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] zawiera standardowe metody do serializowania danych, takich jak jednostki i relacje w formacie XML, który można umieścić w treści komunikatu HTTP. [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]Definiuje właściwości jednostki domyślne mapowanie danych, który znajduje się w jednostkach i elementy Atom. Aby uzyskać więcej informacji, zobacz [OData: Atom Format](http://go.microsoft.com/fwlink/?LinkID=185794).  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie źródeł danych z dostawcy programu Entity Framework](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md).  
   
 > [!NOTE]
->  Rozszerzenia do modelu danych nie są obsługiwane przez program Entity Designer, należy ręcznie zmodyfikować plik XML, który zawiera model danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pliku edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [pliku Przegląd edmx](http://msdn.microsoft.com/en-us/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
+>  Rozszerzenia do modelu danych nie są obsługiwane przez program Entity Designer, należy ręcznie zmodyfikować plik XML, który zawiera model danych. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]pliku edmx, który jest generowany przez [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] narzędzia, zobacz [pliku Przegląd edmx](http://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4).  
   
 ### <a name="custom-feed-attributes"></a>Niestandardowe źródła atrybutów  
  W poniższej tabeli przedstawiono atrybuty XML, które dostosować źródła danych, które można dodać do języka definicji schematu koncepcyjnego (CSDL), który definiuje modelu danych. Te atrybuty są równoważne właściwości <xref:System.Data.Services.Common.EntityPropertyMappingAttribute> użycia z dostawcą odbicia.  

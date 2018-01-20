@@ -25,11 +25,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1af7d9dba986c3775dc3625d1e7a874f6b26c97d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3eb7d05cdf5f6a80a0a247a5f429052cc9a8368b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="commanding-overview"></a>Przegląd Polecenia
 <a name="introduction"></a>Steruje jest mechanizmem wejściowego w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] zapewniające wejściowych obsługi na poziomie semantycznego więcej niż dane wejściowe urządzenia. Przykłady poleceń **kopiowania**, **Wytnij**, i **Wklej** odnaleźć operacji na wiele aplikacji.  
@@ -202,5 +202,5 @@ ms.lasthandoff: 12/22/2017
  [Przegląd danych wejściowych](../../../../docs/framework/wpf/advanced/input-overview.md)  
  [Przegląd zdarzeń trasowanych](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
  [Implementowanie elementu ICommandSource](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [Porady: Dodawanie polecenia do elementu menu.](http://msdn.microsoft.com/en-us/013d68a0-5373-4a68-bd91-5de574307370)  
+ [Porady: Dodawanie polecenia do elementu menu.](http://msdn.microsoft.com/library/013d68a0-5373-4a68-bd91-5de574307370)  
  [Tworzenie niestandardowych RoutedCommand przykładu](http://go.microsoft.com/fwlink/?LinkID=159980)

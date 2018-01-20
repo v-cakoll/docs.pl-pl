@@ -14,16 +14,16 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 665e05907f837887a7dd0375e540b6e9167a820e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Usługa AJAX z formatami JSON i XML — przykład
 W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można utworzyć usługi asynchronicznego JavaScript i XML (AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML. Usługa AJAX mogą korzystać za pomocą kodu JavaScript w kliencie przeglądarki sieci Web. Ten przykład jest oparty na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
   
- W przeciwieństwie do innych próbek AJAX, w tym przykładzie nie korzysta z kodu ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> formantu. W przypadku niektórych konfiguracji dodatkowych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług AJAX są dostępne z dowolnej strony HTML przy użyciu języka JavaScript i pokazane w tym scenariuszu. Na przykład za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z ASP.NET AJAX, zobacz [przykłady AJAX](http://msdn.microsoft.com/en-us/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
+ W przeciwieństwie do innych próbek AJAX, w tym przykładzie nie korzysta z kodu ASP.NET AJAX i <xref:System.Web.UI.ScriptManager> formantu. W przypadku niektórych konfiguracji dodatkowych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług AJAX są dostępne z dowolnej strony HTML przy użyciu języka JavaScript i pokazane w tym scenariuszu. Na przykład za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] z ASP.NET AJAX, zobacz [przykłady AJAX](http://msdn.microsoft.com/library/f3fa45b3-44d5-4926-8cc4-a13c30a3bf3e).  
   
  W tym przykładzie pokazano, jak typ odpowiedzi operacji między formatami JSON i XML przełącznika. Ta funkcja jest dostępna, niezależnie od tego, czy usługa jest skonfigurowana można uzyskać dostępu do środowiska ASP.NET AJAX lub stronę klienta HTML/JavaScript.  
   

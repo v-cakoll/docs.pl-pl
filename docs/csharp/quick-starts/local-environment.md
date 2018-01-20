@@ -2,18 +2,17 @@
 title: "Przewodnik Szybki Start - lokalnego środowiska - C#"
 description: "Ta opcja szybkiego startu zawiera podstawowe informacje dotyczące uruchamiania lokalnie Szybki Start"
 author: billwagner
-ms.author: wiwagn
-ms.date: 12/07/2017
 ms.topic: article
+ms.date: 12/07/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4cbe66df4173854870dd6ac68c52e8c87c46c1f6
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="local-environment"></a>Środowisko lokalne
 

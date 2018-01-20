@@ -1,31 +1,31 @@
 ---
 title: "Wymagania wstępne dotyczące platformy .NET Core w systemie Linux"
 description: "Obsługiwane wersje systemu Linux i zależności platformy .NET Core na tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach z systemem Linux."
-keywords: Debian, ubuntu Linux, .NET i .NET core RHEL, centOS,
+keywords: .NET, .NET Core, Linux, debian, ubuntu, RHEL, centOS,
 author: jralexander
 ms.author: johalex
-ms.date: 09/07/2017
+ms.date: 12/06/2017
 ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
 ms.workload: dotnetcore
-ms.openlocfilehash: ec08d9fa3ad672400b61c269da0c6a70ed9ef2f5
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d3c5dde443f848831f7c0585633339c35213357b
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Linux
 
 W tym artykule opisano zależności niezbędne do tworzenia aplikacji platformy .NET Core w systemie Linux. Obsługiwane Linux dystrybucje wersje i zależności, które należy wykonać dotyczą dwa sposoby tworzenia aplikacji platformy .NET Core w systemie Linux:
 
 * [Wiersza polecenia z ulubionego edytora](tutorials/using-with-xplat-cli.md)
-* [Kod Visual Studio](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ## <a name="supported-linux-versions"></a>Obsługiwane wersje systemu Linux
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET core 2.0 traktuje Linux jako jeden system operacyjny. Brak jednej kompilacji systemu Linux (na architektura mikroukładu) dla obsługiwanych dystrybucjach systemu Linux.
 
@@ -43,7 +43,7 @@ NET Core 2.x jest obsługiwana w systemie Linux 64-bitowej (`x86_64` lub `amd64`
 
 Zobacz [2.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) Pełna lista .NET Core 2.x obsługiwanych systemów operacyjnych, poza wersje obsługi systemu operacyjnego i łącza do zasad cyklu życia.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Oprogramowanie .NET core 1.x jest obsługiwana w systemie Linux 64-bitowej (`x86_64` lub `amd64`) dystrybucje/wersji:
 
@@ -70,11 +70,11 @@ Poniżej mają być przykłady. Na wybranym dystrybucji systemu Linux, nazwy i w
 Ubuntu dystrybucji wymagają następujących bibliotek zainstalowane:
 
 * libunwind8
-* liblttng ust0
+* liblttng-ust0
 * libcurl3
 * libssl1.0.0
 * libuuid1
-* libkrb5
+* libkrb5-3
 * zlib1g
 * libicu52 (dla 14.X)
 * libicu55 (dla 16.X)
@@ -85,13 +85,13 @@ Ubuntu dystrybucji wymagają następujących bibliotek zainstalowane:
 CentOS dystrybucji wymagają następujących bibliotek zainstalowane:
 
 * libunwind
-* lttng ust
+* lttng-ust
 * libcurl
-* biblioteki openssl
+* openssl-libs
 * libuuid
-* krb5 biblioteki
+* krb5-libs
 * libicu
-* Zlib
+* zlib
 
 Aby uzyskać więcej informacji o zależnościach, zobacz [aplikacje w systemie Linux Self-contained](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md).
 
@@ -144,7 +144,7 @@ Aby zainstalować oprogramowanie .NET Core na RHEL 7:
     
 3. Zainstaluj oprogramowanie .NET Core
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Zainstaluj oprogramowanie .NET Core 2.0 SDK i środowiska uruchomieniowego:
 
@@ -158,9 +158,9 @@ Włącz .NET Core SDK/środowiska uruchomieniowego 2.0 w danym środowisku:
    scl enable rh-dotnet20 bash
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-**Oprogramowanie .NET core 1.1**
+**.NET Core 1.1**
 
 Zainstaluj oprogramowanie .NET Core 1.1 SDK i środowiska uruchomieniowego:
 
@@ -174,7 +174,7 @@ Włącz zestawu SDK programu .NET Core 1.1 i środowiska uruchomieniowego w dany
    scl enable rh-dotnetcore11 bash
    ```
 
-**Oprogramowanie .NET core 1.0**
+**.NET Core 1.0**
 
 Zainstaluj program .NET Core 1.0 SDK i środowiska uruchomieniowego:
 
@@ -201,7 +201,7 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
 
 1. Usuń wszystkie **poprzedniej wersji zapoznawczej** wersji platformy .NET Core z systemu.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 2. Zarejestruj klucz Product Microsoft jako zaufany.
 
@@ -225,14 +225,14 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
    sudo apt-get update
    ```
 
-   **Ubuntu 16.04 / Linux mennic 18**
+   **Ubuntu 16.04 / Linux Mint 18**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-xenial-prod xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
    sudo apt-get update
    ```
 
-   **Ubuntu 14.04 / Linux mennic 17**
+   **Ubuntu 14.04 / Linux Mint 17**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-ubuntu-trusty-prod trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -251,7 +251,7 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
    dotnet --version
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Skonfiguruj pakietów hosta żądanej wersji źródła danych.
 
@@ -263,7 +263,7 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
    sudo apt-get update
    ```
 
-  **Ubuntu 16.04 / Linux mennic 18**
+  **Ubuntu 16.04 / Linux Mint 18**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -271,7 +271,7 @@ Red Hat .NET kanał dostępu do rejestracji Pomoc [rozdział 1 .NET Core 1.1 Get
    sudo apt-get update
    ```
     
-   **Ubuntu 14.04 / Linux mennic 17**
+   **Ubuntu 14.04 / Linux Mint 17**
 
    ```bash
    sudo sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ trusty main" > /etc/apt/sources.list.d/dotnetdev.list'
@@ -302,7 +302,7 @@ Aby zainstalować oprogramowanie .NET Core na Debian 8 lub Debian 9 (64 bity):
 > [!NOTE]
 > Katalog kontrolowane przez użytkownika jest wymagana dla systemu Linux instaluje system z tar.gz.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 2. Zainstaluj składniki systemu.
 
@@ -352,7 +352,7 @@ Aby zainstalować oprogramowanie .NET Core na Debian 8 lub Debian 9 (64 bity):
    ```   
   
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Pobierz wymagania wstępne.
 
@@ -395,7 +395,7 @@ Aby zainstalować oprogramowanie .NET Core 2.x Fedora 26 lub Fedora 25 lub .NET 
 > [!NOTE]
 > Katalog kontrolowane przez użytkownika jest wymagana dla systemu Linux instaluje system z tar.gz.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 **Fedora 26 lub Fedora 25**
 
@@ -425,7 +425,7 @@ Aby zainstalować oprogramowanie .NET Core 2.x Fedora 26 lub Fedora 25 lub .NET 
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **Fedora 24**
 
@@ -470,7 +470,7 @@ Aby zainstalować oprogramowanie .NET Core CentOS 7.1 (64-bitowym) i Oracle Linu
 > [!NOTE]
 > Katalog kontrolowane przez użytkownika jest wymagana dla systemu Linux instaluje system z tar.gz.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 2. Zarejestruj klucz podpisu firmy Microsoft.
 
@@ -498,7 +498,7 @@ Aby zainstalować oprogramowanie .NET Core CentOS 7.1 (64-bitowym) i Oracle Linu
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Pobierz wymagania wstępne.
 
@@ -574,7 +574,7 @@ Aby zainstalować oprogramowanie .NET Core 2.x openSUSE lub .NET Core 1.x dla op
 > [!NOTE]
 > Katalog kontrolowane przez użytkownika jest wymagana dla systemu Linux instaluje system z tar.gz.
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 2. Zarejestruj klucz podpisu firmy Microsoft.
 
@@ -602,7 +602,7 @@ Aby zainstalować oprogramowanie .NET Core 2.x openSUSE lub .NET Core 1.x dla op
    export PATH=$PATH:$HOME/dotnet
    ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 2. Pobierz wymagania wstępne.
 

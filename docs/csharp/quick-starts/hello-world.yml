@@ -5,6 +5,7 @@ metadata:
   description: "W tym szybki start będzie Naucz się C# interaktywnie za pomocą przeglądarki. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu bezpośrednio w przeglądarce."
   audience: Developer
   level: Beginner
+  ms.topic: get-started-article
   nextTutorialHref: numbers-in-csharp
   nextTutorialTitle: "Numery w języku C#"
   displayType: two-column
@@ -12,11 +13,11 @@ metadata:
   ms.custom: mvc
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 66d701f1a5ce37283717d05a772f8f4f9d318442
-  ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+  ms.openlocfilehash: ca5fbcd903c5fd3aae35a4a1c4842f488d66fcf0
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/17/2018
+  ms.lasthandoff: 01/20/2018
 items:
 - durationInMinutes: 1
   content: "To szybki start zawiera C# interaktywnego, za pomocą przeglądarki do zapisywania C# i wyświetlić wyniki kompilowania i uruchamiania kodu. Zawiera szereg — lekcje zaczynające się przy użyciu programu \"Hello World\". Że wnioski uczy również podstaw programu w języku C#.\n"

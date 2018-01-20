@@ -1,12 +1,8 @@
 ---
 title: "Omówienie środowiska uruchomieniowego języka dynamicznego | Dokumentacja firmy Microsoft"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Przegląd środowiska uruchomieniowego języka dynamicznego
 *Środowisko uruchomieniowe języka dynamicznego* (DLR) jest środowisko uruchomieniowe, który dodaje zestaw usług dla języków dynamicznych do środowisko uruchomieniowe języka wspólnego (CLR). DLR ułatwia tworzenie dynamicznych języki do uruchomienia w programie .NET Framework oraz dodawać funkcje dynamicznego do statycznie językach.  
@@ -52,10 +48,10 @@ ms.lasthandoff: 12/22/2017
   
  `scriptobj.Count += 1;`  
   
- Podobnie jak CLR Runtime jest częścią programu .NET Framework i jest dostarczana z pakietów instalacyjnych .NET Framework i Visual Studio. Jest również dostępny do pobrania w wersji open source Runtime [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) witryny sieci Web.  
+ Podobnie jak CLR Runtime jest częścią programu .NET Framework i jest dostarczana z pakietów instalacyjnych .NET Framework i Visual Studio. Jest również dostępny do pobrania w wersji open source Runtime [IronLanguages/Runtime](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub.  
   
 > [!NOTE]
->  Wersja open source Runtime ma wszystkie funkcje DLR, który znajduje się w programie Visual Studio i .NET Framework. Umożliwia także dodatkowe wsparcie dla obiektów implementujących języka. Aby uzyskać więcej informacji, zobacz dokumentację na [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) witryny sieci Web.  
+>  Wersja open source Runtime ma wszystkie funkcje DLR, który znajduje się w programie Visual Studio i .NET Framework. Umożliwia także dodatkowe wsparcie dla obiektów implementujących języka. Aby uzyskać więcej informacji, zobacz dokumentację na [IronLanguages/Runtime](https://github.com/IronLanguages/dlr) repozytorium w witrynie GitHub. 
   
  Przykłady opracowano na podstawie Runtime języki są następujące:  
   
@@ -98,7 +94,7 @@ Architektura Runtime
  Runtime używa integratorów w miejsc wywołania do komunikowania się nie tylko w środowisku .NET Framework, ale z innymi infrastruktury i usług, w tym Silverlight i modelu COM. Integratorów Hermetyzowanie semantykę języka i określ sposób przeprowadzenia operacji w witrynie wywołanie za pomocą drzewa wyrażeń. To umożliwia dynamiczne i statycznie wpisane języków, które używają DLR do udziału biblioteki, a dostęp do wszystkich technologie, które obsługuje Runtime.  
   
 ## <a name="dlr-documentation"></a>Dokumentacja Runtime  
- Aby uzyskać więcej informacji o sposobie używania wersji typu open source DLR dodać dynamicznego zachowania do języka lub temat Korzystanie z języka dynamicznego z programu .NET Framework, zobacz dokumentację na [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028) witryny sieci Web.  
+ Aby uzyskać więcej informacji o sposobie używania wersji typu open source DLR dodać dynamicznego zachowania do języka lub temat Korzystanie z języka dynamicznego z programu .NET Framework, zobacz dokumentację na [IronLanguages/Runtime](https://github.com/IronLanguages/dlr/tree/master/Docs) repozytorium w witrynie GitHub.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Dynamic.ExpandoObject>  

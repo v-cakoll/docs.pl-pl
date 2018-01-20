@@ -5,16 +5,17 @@ metadata:
   description: "W tym samouczku użyjesz przeglądarki interakcyjnie korzystać z funkcji ciągu interpolowanym C#. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu bezpośrednio w przeglądarce."
   audience: Developer
   ms.custom: mvc
+  ms.topic: get-started-article
   level: Beginner
   displayType: two-column
   interactive: csharp
   nextTutorialHref: list-collection
   nextTutorialTitle: "Kolekcje w języku C#"
-  ms.openlocfilehash: fc47e15163ce1c018fa0cbab3ca670caa4aa27ef
-  ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+  ms.openlocfilehash: f54d8e5e3703556b333155fd9541f9d7c7e7fd1b
+  ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 01/19/2018
+  ms.lasthandoff: 01/20/2018
 items:
 - durationInMinutes: 2
   content: "To szybki start jest przedstawienie sposobu użycia ciągi interpolowane w języku C# do wstawienia wartości do ciągu wyjściowego pojedynczego interaktywnie. Pisanie kodu C# za pomocą przeglądarki i można natychmiast zobaczyć wyniki kompilowania i uruchamiania kodu. Szybki start zawiera szereg lekcje, które ciągów, wstawienia wartości do ciągów i sformatować te wartości na różne sposoby.\n"

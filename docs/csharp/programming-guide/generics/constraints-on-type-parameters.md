@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Ograniczenia dotyczące parametrów typu (Przewodnik programowania w języku C#)
 Podczas definiowania klasy ogólnej, można zastosować ograniczenia do rodzajów typów, których kod klienta można używać dla argumentów typu podczas tworzenia wystąpień klasy. Jeśli kod klienta próbuje utworzyć wystąpienia klasy przy użyciu typu, który nie jest dozwolona przez ograniczenie, wynikiem jest błąd kompilacji. Ograniczenia te są nazywane ograniczenia. Ograniczenia są określane przy użyciu `where` kontekstowe słowo kluczowe. W poniższej tabeli wymieniono sześć typy ograniczeń:  
   
 |Ograniczenia|Opis|  
 |----------------|-----------------|  
-|Gdy struktura T:|Argument typu musi być typem wartości. Wszystkie wartości typu z wyjątkiem <xref:System.Nullable> można określić. Zobacz [przy użyciu typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) Aby uzyskać więcej informacji.|  
-|gdzie T: klasa|Argument typu musi być typu referencyjnego; dotyczy to również klasy, interfejsu, delegata lub typ tablicy.|  
-|gdzie T: new()|Typ argumentu musi mieć publicznego konstruktora bez parametrów. Gdy jest używany z innymi ograniczeniami `new()` ograniczenie musi być określony jako ostatni.|  
-|gdzie T: \<nazwę klasy podstawowej >|Argument typu musi być lub pochodzić od określonej klasy podstawowej.|  
-|gdzie T: \<Nazwa interfejsu >|Argument typu muszą być lub implementować określonego interfejsu. Można określić wiele ograniczeń interfejsu. Można też ogólnego ograniczający interfejsu.|  
-|gdzie T: U|Argumentu typu dostarczonego T musi być lub pochodzić od argument dostarczony dla U.|  
+|`where T: struct`|Argument typu musi być typem wartości. Wszystkie wartości typu z wyjątkiem <xref:System.Nullable> można określić. Zobacz [przy użyciu typów dopuszczających wartości zerowe](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) Aby uzyskać więcej informacji.|  
+|`where T : class`|Argument typu musi być typu referencyjnego; dotyczy to również klasy, interfejsu, delegata lub typ tablicy.|  
+|`where T : new()`|Typ argumentu musi mieć publicznego konstruktora bez parametrów. Gdy jest używany z innymi ograniczeniami `new()` ograniczenie musi być określony jako ostatni.|  
+|`where T : `*\<Nazwa klasy podstawowej >*|Argument typu musi być lub pochodzić od określonej klasy podstawowej.|  
+|`where T : `*\<Nazwa interfejsu >*|Argument typu muszą być lub implementować określonego interfejsu. Można określić wiele ograniczeń interfejsu. Można też ogólnego ograniczający interfejsu.|  
+|`where T : U`|Argumentu typu dostarczonego T musi być lub pochodzić od argument dostarczony dla U.|  
   
 ## <a name="why-use-constraints"></a>Dlaczego warto korzystać z ograniczeniami  
  Jeśli chcesz sprawdzić element listy ogólnej do ustalenia, czy jest nieprawidłowy lub porównaj je z inny element, kompilator musi mieć niektóre gwarantuje, że operator lub metoda, który musi wywołać będą obsługiwane przez wszystkich argumentów typu określoną przez co klient Niemcy. Gwarancji są uzyskiwane przez zastosowanie jednego lub więcej ograniczeń do definicji klasy ogólnej. Na przykład ograniczenie klasy podstawowej informuje kompilator, że tylko obiekty tego typu lub pochodzi z tego typu, będzie można używać jako argumentów typu. Kompilator ma gwarancji, umożliwiają metody tego typu można wywołać w klasie rodzajowej. Ograniczenia są stosowane przy użyciu kontekstowe słowo kluczowe `where`. Poniższy przykład kodu pokazuje funkcji, można dodać do `GenericList<T>` klasy (w [wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)), stosując ograniczenie klasy podstawowej.  
@@ -82,4 +82,4 @@ Podczas definiowania klasy ogólnej, można zastosować ograniczenia do rodzajó
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wprowadzenie do typów ogólnych](../../../csharp/programming-guide/generics/introduction-to-generics.md)  
  [Klasy ogólne](../../../csharp/programming-guide/generics/generic-classes.md)  
- [New — ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)
+ [new, ograniczenie](../../../csharp/language-reference/keywords/new-constraint.md)

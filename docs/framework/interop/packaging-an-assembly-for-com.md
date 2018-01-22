@@ -28,11 +28,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 72b9237a8abeee936070799c5087abc6b45ff3b5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 79c0d8ff3d6f66ad3abf23cd371f86bb74edf78e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="packaging-an-assembly-for-com"></a>Pakowanie zestawu dla modelu COM
 COM deweloperzy mogą korzystać z następujące informacje o typach zarządzanych one ma włączenie w aplikacji:  
@@ -47,7 +47,7 @@ COM deweloperzy mogą korzystać z następujące informacje o typach zarządzany
   
      Klasy zarządzane, które implementują interfejs klasy (wygenerowany interop interfejsu COM) obowiązują ograniczenia wersji.  
   
-     Aby uzyskać wskazówki na temat używania interfejsu klasy, zobacz [wprowadzenie interfejsu klasy](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+     Aby uzyskać wskazówki na temat używania interfejsu klasy, zobacz [wprowadzenie interfejsu klasy](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
   
 -   Instrukcje dotyczące wdrażania  
   
@@ -69,7 +69,7 @@ COM deweloperzy mogą korzystać z następujące informacje o typach zarządzany
   
      Niezależnie od wybranego mechanizmu tylko typy publiczne zdefiniowane w zestawie, który podasz znajdują się w bibliotece typów wygenerowany.  
   
-     Możesz biblioteki typów jako osobny plik pakietu lub osadzać go jako plik zasobów Win32 w. Aplikacja Asp.net. Microsoft Visual Basic 6.0 wykonać tego zadania można automatycznie; Jednak przy użyciu [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], należy ręcznie osadzić biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: osadzanie biblioteki typów jako zasobów Win32 w. Aplikacje oparte na sieci](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
+     Możesz biblioteki typów jako osobny plik pakietu lub osadzać go jako plik zasobów Win32 w. Aplikacja Asp.net. Microsoft Visual Basic 6.0 wykonać tego zadania można automatycznie; Jednak przy użyciu [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)], należy ręcznie osadzić biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: osadzanie biblioteki typów jako zasobów Win32 w. Aplikacje oparte na sieci](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44).  
   
 <a name="cpconpackagingassemblyforcomanchor1"></a>   
 ## <a name="type-library-exporter"></a>Eksporter biblioteki typów  
@@ -94,8 +94,8 @@ COM deweloperzy mogą korzystać z następujące informacje o typach zarządzany
  <xref:System.Runtime.InteropServices.ITypeLibConverter>  
  [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
  [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
- [Wprowadzenie do interfejsu klasy](http://msdn.microsoft.com/en-us/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
+ [Wprowadzenie do interfejsu klasy](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024)  
  [Zagadnienia dotyczące zabezpieczeń zestawów](../../../docs/framework/app-domains/assembly-security-considerations.md)  
  [Tlbexp.exe (eksporter biblioteki typów)](../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)  
  [Rejestrowanie zestawów do użycia z modelem COM](../../../docs/framework/interop/registering-assemblies-with-com.md)  
- [Porady: osadzanie biblioteki typów jako zasobów Win32 w aplikacjach](http://msdn.microsoft.com/en-us/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)
+ [Porady: osadzanie biblioteki typów jako zasobów Win32 w aplikacjach](http://msdn.microsoft.com/library/c97b4b8c-2ab7-4ac7-8fc8-0ba5c5d59c44)

@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 06c1f2909658c140b1ad84f3b0ed5d3abdafb6c6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: bccf3a50aabe991f09217f501d14b6f9337d76ba
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server integrację środowiska uruchomieniowego
 SQL Server 2005 wprowadzono integracji składnika wspólne języka wspólnego (CLR) programu .NET Framework dla programu Microsoft Windows. Oznacza to, czy możesz zapisywać procedur składowanych, wyzwalaczy, typy danych zdefiniowane przez użytkownika, funkcjach zdefiniowanych przez użytkownika, agregacje zdefiniowane przez użytkownika i przesyłania strumieniowego funkcji zwracającej tabelę przy użyciu dowolnego języka .NET Framework, w tym programu Microsoft Visual Basic .NET i firmy Microsoft Visual C#. <xref:Microsoft.SqlServer.Server> Przestrzeń nazw zawiera zestawu nowych interfejsów programowania aplikacji (API), dzięki czemu kod zarządzany mogą współdziałać ze środowiskiem programu Microsoft SQL Server.  
@@ -55,5 +55,5 @@ SQL Server 2005 wprowadzono integracji składnika wspólne języka wspólnego (C
   
 ## <a name="see-also"></a>Zobacz też  
  [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/en-us/5358a825-e19b-49aa-8214-674ce5fed1da)  
+ [Tworzenie obiekty programu SQL Server 2005 w kodzie zarządzanym](http://msdn.microsoft.com/library/5358a825-e19b-49aa-8214-674ce5fed1da)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

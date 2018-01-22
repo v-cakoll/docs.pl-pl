@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 2127cdb1178da37bcfe77a0e1a02ccd34be2d800
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce89e27089ea2f0c918d0fe37c4eea141698f9be
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strong-naming-unmanaged-api-reference"></a>Silne nazewnictwo (Niezarządzany wykaz interfejsów API)
 Silnych nazw interfejsu API umożliwia klientowi administrowania silnej nazwy podpisywania dla zestawów.  
@@ -30,7 +30,7 @@ Silnych nazw interfejsu API umożliwia klientowi administrowania silnej nazwy po
  Podpisanie zestawu silną nazwą dodaje szyfrowanie kluczem publicznym do pliku zawierającego manifest zestawu. Podpisywanie silną nazwą pomaga Sprawdź unikatowość nazwy uniemożliwia fałszowania nazwy i udostępnia obiekty wywołujące unikatową tożsamość, gdy odwołanie zostało rozpoznane. Jednak żaden poziom zaufania jest skojarzony z silnej nazwy.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Silnych nazw statyczne funkcje globalne](http://msdn.microsoft.com/en-us/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
+ [Silnych nazw statyczne funkcje globalne](http://msdn.microsoft.com/library/efa715df-e8cc-48f2-9ec4-26586f0dc8d0)  
  Opisuje niezarządzane statyczne funkcje globalne, używane silnych nazw interfejsu API.  
   
 > [!NOTE]
@@ -114,7 +114,7 @@ Silnych nazw interfejsu API umożliwia klientowi administrowania silnej nazwy po
  [StrongNameTokenFromPublicKey, funkcja](../../../../docs/framework/unmanaged-api/strong-naming/strongnametokenfrompublickey-function.md)  
  Pobiera token reprezentujący klucza publicznego. Przestarzałe, począwszy od [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)].  
   
- [Silne nazewnictwo — struktura](http://msdn.microsoft.com/en-us/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
+ [Silne nazewnictwo — struktura](http://msdn.microsoft.com/library/4b041a2f-fd12-4b91-aacd-bc3b34a5124d)  
  W tym artykule opisano struktura niezarządzana, używaną do administrowania silnej nazwy podpisywania dla zestawów silnych nazw interfejsu API...  
   
  [PublicKeyBlob, struktura](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)  

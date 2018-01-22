@@ -18,11 +18,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5bfd5ca9d42c654882c77efafed82aec7e4f0c9b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 17638390a07f752a7101209e5635752bc0511d1d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="interop-marshaling"></a>Marshaling międzyoperacyjny
 <a name="top"></a>Przekazywanie międzyoperacyjne decyduje o tym, jak dane są przekazywane w metody argumentów i zwracanych wartości między zarządzanymi i niezarządzanymi pamięci podczas wywołania. Przekazywanie międzyoperacyjne jest wykonywane przez usługę kierowania środowisko uruchomieniowe języka wspólnego firmy działalnością czasu wykonywania.  
@@ -71,7 +71,7 @@ Wywołanie platformy i przepływu wywołania międzyoperacyjnego modelu COM
   
 |Klient modelu COM|Serwer .NET|Organizowanie wymagania|  
 |----------------|-----------------|-----------------------------|  
-|STA.|`Both`staje się pozostaje tryb komórek jednowątkowych|Przekazywanie tego samego typu apartment.|  
+|STA|`Both`staje się pozostaje tryb komórek jednowątkowych|Przekazywanie tego samego typu apartment.|  
 |MTA|`Both`staje się MTA.|Przekazywanie tego samego typu apartment.|  
   
  Ponieważ klienta i serwera znajdują się w tym samym apartamencie, interop automatycznie przekazywanie usługi obsługuje przekazywanie wszystkich danych. Na poniższej ilustracji przedstawiono funkcjonowania między zarządzanymi i niezarządzanymi stosów w ramach tego samego typu apartment styl modelu COM interop usług kierowania.  
@@ -88,8 +88,8 @@ Proces kierowania tego samego typu apartment
   
 |Klient .NET|Serwer COM|Organizowanie wymagania|  
 |-----------------|----------------|-----------------------------|  
-|MTA (ustawienie domyślne)|MTA<br /><br /> STA.|Przekazywanie międzyoperacyjne.<br /><br /> I organizowanie COM Interop.|  
-|STA.|MTA<br /><br /> STA.|I organizowanie COM Interop.<br /><br /> Przekazywanie międzyoperacyjne.|  
+|MTA (ustawienie domyślne)|MTA<br /><br /> STA|Przekazywanie międzyoperacyjne.<br /><br /> I organizowanie COM Interop.|  
+|STA|MTA<br /><br /> STA|I organizowanie COM Interop.<br /><br /> Przekazywanie międzyoperacyjne.|  
   
  Gdy klientów zarządzanych i niezarządzanych serwera są tego samego typu apartment, interop organizowanie usługi obsługuje przekazywanie wszystkich danych. Jednak jeśli klienta i serwera są inicjowane w różnych apartamentach, kierowanie modelu COM wymagany jest również. Na poniższej ilustracji przedstawiono elementy rozmowę między apartamentu.  
   
@@ -105,7 +105,7 @@ Wywołanie typu apartment między między klientem .NET a obiektu modelu COM
     > [!NOTE]
     >  Po ustawieniu wątek klienta C# STA wywołania składników MTA COM będzie wymagać przekazywanie typu apartment między.  
   
- Aby uzyskać instrukcje dotyczące wybierania jawnie z modelem typu apartment, zobacz [zarządzane i niezarządzane wątkowość](http://msdn.microsoft.com/en-us/db425c20-4b2f-4433-bf96-76071c7881e5).  
+ Aby uzyskać instrukcje dotyczące wybierania jawnie z modelem typu apartment, zobacz [zarządzane i niezarządzane wątkowość](http://msdn.microsoft.com/library/db425c20-4b2f-4433-bf96-76071c7881e5).  
   
  [Powrót do początku](#top)  
   
@@ -145,7 +145,7 @@ Odwołanie za pośrednictwem procesu i hosta
  ![Protokół SOAP lub TcpChannel](../../../docs/framework/interop/media/interopremotesoap.gif "interopremotesoap")  
 Zdalne wywołania przez zapory przy użyciu protokołu SOAP lub klasy TcpChannel  
   
- Niektóre połączenia niezarządzane można channeled za pośrednictwem protokołu SOAP, takie jak wywołania między [obsługiwanych składników](http://msdn.microsoft.com/en-us/f109ee24-81ad-4d99-9892-51ac6f34978c) i modelu COM.  
+ Niektóre połączenia niezarządzane można channeled za pośrednictwem protokołu SOAP, takie jak wywołania między [obsługiwanych składników](http://msdn.microsoft.com/library/f109ee24-81ad-4d99-9892-51ac6f34978c) i modelu COM.  
   
  [Powrót do początku](#top)  
   
@@ -159,10 +159,10 @@ Zdalne wywołania przez zapory przy użyciu protokołu SOAP lub klasy TcpChannel
 |[Marshaling danych za pomocą modelu COM](../../../docs/framework/interop/marshaling-data-with-com-interop.md)|Opisuje sposób dostosowywania otoki COM, aby zmienić zachowanie marshalingu.|  
 |[Instrukcje: Migrowanie zarządzanego kodu DCOM do WCF](../../../docs/framework/interop/how-to-migrate-managed-code-dcom-to-wcf.md)|W tym artykule opisano sposób migracji z modelu DCOM do WCF.|  
 |[Instrukcje: Mapowanie wyników HRESULT i wyjątków](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)|Opisuje sposób odwzorowywania niestandardowymi wyjątkami wyników HRESULT i zapewnia pełną mapowania z każdego HRESULT do jej klasy można porównywać pod względem wyjątek w programie .NET Framework.|  
-|[Współdziałanie za pomocą typów ogólnych](http://msdn.microsoft.com/en-us/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Opisuje akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
+|[Współdziałanie za pomocą typów ogólnych](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58)|Opisuje akcje, które są obsługiwane w przypadku współdziałania COM za pomocą typów ogólnych.|  
 |[Współdziałanie z kodem niezarządzanym](../../../docs/framework/interop/index.md)|Opisuje współdziałanie usług świadczonych przez środowisko uruchomieniowe języka wspólnego.|  
-|[Współdziałanie COM zaawansowane](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Zawiera łącza do dodatkowych informacji o włączenie składniki modelu COM aplikacji .NET Framework.|  
-|[Zagadnienia dotyczące projektowania dla współdziałanie](http://msdn.microsoft.com/en-us/b59637f6-fe35-40d6-ae72-901e7a707689)|Porady dotyczące pisania zintegrowane składników COM.|  
+|[Współdziałanie COM zaawansowane](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)|Zawiera łącza do dodatkowych informacji o włączenie składniki modelu COM aplikacji .NET Framework.|  
+|[Zagadnienia dotyczące projektowania dla współdziałanie](http://msdn.microsoft.com/library/b59637f6-fe35-40d6-ae72-901e7a707689)|Porady dotyczące pisania zintegrowane składników COM.|  
   
  [Powrót do początku](#top)  
   

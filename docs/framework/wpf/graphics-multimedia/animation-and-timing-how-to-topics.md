@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e3123df62e66354b35da26bbda894c5828136d05
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 86258ae472a39451359dec7e6bfe7fe2e5b4d0c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="animation-and-timing-how-to-topics"></a>Animacja i chronometraż Tematy porad
 Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] animacji i chronometrażu systemu w aplikacjach użytkownika.  
@@ -41,7 +41,7 @@ Poniższe tematy przedstawiają sposób zastosowania [!INCLUDE[TLA#tla_winclient
  [Kontrolowanie animacji z użyciem elementów od, do i przez](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
  [Definiowanie zakresu nazw](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
  [Odbieranie powiadomienia po zmianie stanu zegara](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [Porady: usuwanie scenorysu](http://msdn.microsoft.com/en-us/7fe39531-de2f-46a0-a69f-b783d04235ee)  
+ [Porady: usuwanie scenorysu](http://msdn.microsoft.com/library/7fe39531-de2f-46a0-a69f-b783d04235ee)  
  [Powtarzanie animacji](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
  [Wyszukiwanie scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
  [Synchroniczne wyszukiwanie scenorysu](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  

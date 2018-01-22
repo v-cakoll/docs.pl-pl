@@ -15,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cad3f3d813d6882b83a7e9db7ce212fba66e44ea
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj program .NET Framework dla deweloperów
 
@@ -74,8 +74,6 @@ Pakiet deweloperów pakietu .NET Framework 4.5.1 lub 4.5.2 wartości docelowej d
 - [Program Microsoft .NET Framework 4.7.1 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=852105)
 
 - [Program Microsoft .NET Framework 4.7 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=825319)
-
-- [Program Microsoft .NET Framework 4.6.2 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
 - [Program Microsoft .NET Framework 4.6.2 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
@@ -187,27 +185,27 @@ Poniższa tabela zawiera listę obsługiwanych języków.
 | Arabski                | ar      |
 | czeski                 | CS      |
 | duński                | da      |
-| Holenderski                 | NL      |
-| fiński               | Fi      |
+| Holenderski                 | nl      |
+| fiński               | fi      |
 | Francuski                | FR      |
 | niemiecki                | Niemcy      |
-| grecki                 | EL      |
+| grecki                 | el      |
 | Hebrajski                | ADAM      |
-| węgierski             | HU      |
-| Włoski               | go      |
-| japoński              | Japonia      |
-| koreański                | Ko      |
+| węgierski             | hu      |
+| Włoski               | it      |
+| japoński              | ja      |
+| koreański                | ko      |
 | Norweski             | Brak      |
 | polski                | pl      |
 | portugalski (Brazylia)   | pt-BR   |
-| Portugalski (Portugalia) | PT-PT   |
-| Rosyjski               | RU      |
+| Portugalski (Portugalia) | pt-PT   |
+| Rosyjski               | ru      |
 | Chiński uproszczony    | zh-CHS  |
 | Hiszpański               | ES      |
-| szwedzki               | SV      |
-| chiński tradycyjny   | (zh-cht)  |
+| szwedzki               | sv      |
+| chiński tradycyjny   | zh-CHT  |
 | turecki               | TR      |
-| Angielski (US)            | EN US   |
+| US English            | EN US   |
   
 ## <a name="next-steps"></a>Następne kroki  
   

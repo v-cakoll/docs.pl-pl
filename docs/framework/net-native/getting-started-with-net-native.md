@@ -14,11 +14,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 07882617e7625c07bade85c59116581e16f95121
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 56ff06c17eda8483c7d067af9fb39a402d2f6ea5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-with-net-native"></a>Wprowadzenie do architektury .NET Native
 Czy pisania nową aplikację systemu Windows dla systemu Windows 10 lub w przypadku migracji z istniejącej aplikacji Sklepu Windows, możesz wykonać ten sam zestaw procedur. Aby utworzyć [!INCLUDE[net_native](../../../includes/net-native-md.md)] aplikacji, wykonaj następujące kroki:  
@@ -123,7 +123,7 @@ Czy pisania nową aplikację systemu Windows dla systemu Windows 10 lub w przypa
   
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja pliku konfiguracji dyrektyw środowiska uruchomieniowego (rd.xml)](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [NIB: .NET Native i Konfiguracja](http://msdn.microsoft.com/en-us/7c9bc375-8b87-4c33-bede-72d513e362ec)  
+ [NIB: .NET Native i Konfiguracja](http://msdn.microsoft.com/library/7c9bc375-8b87-4c33-bede-72d513e362ec)  
  [Architektura .NET Native i kompilacja](../../../docs/framework/net-native/net-native-and-compilation.md)  
  [Odbicie i architektura .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)  
  [Interfejsy API, które działają na podstawie odbicia](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)  

@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9b808d10cd393d84ed29cb5e1cccfcff9c6c098d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: c5121238341afac46ad1c999710d51b5c203a1b6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="effects-of-modifying-a-base-form39s-appearance"></a>Efekty modyfikowania formularza podstawowego &#39; wygląd s
 Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu formularza podstawowego, z którego są dziedziczone innych formularzy w projekcie (lub w innych projektów).  
@@ -32,7 +32,7 @@ Podczas tworzenia aplikacji, może być często konieczne zmienianie wyglądu fo
  W czasie projektowania, zmienia się na wygląd formularza podstawowego (jest to ustawienie właściwości lub dodawania i odejmowania formantów) są uwzględniane w formularzach dziedziczone po utworzeniu projektu zawierającego formularza podstawowego. Nie jest wystarczające po prostu zapisać zmiany w podstawowej postaci. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
  Modyfikacje formularza podstawowego w czasie wykonywania ma nie wpływa na odziedziczone formularze, które zostały już utworzone.  
   

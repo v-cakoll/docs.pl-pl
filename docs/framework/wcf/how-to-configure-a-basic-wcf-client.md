@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 377a67edb37ada5c9e1b022d50a4718b5740afd8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f23918031c6cc8cd6509d7b7c079b8df050bbb08
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-a-basic-windows-communication-foundation-client"></a>Instrukcje: Konfigurowanie podstawowego klienta WCF (Windows Communication Foundation)
 To jest piątym sześciu zadania wymagane do tworzenia prostej [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
@@ -28,7 +28,7 @@ To jest piątym sześciu zadania wymagane do tworzenia prostej [!INCLUDE[indigo1
   
 ### <a name="to-configure-a-windows-communication-foundation-client"></a>Aby skonfigurować klienta Windows Communication Foundation  
   
-1.  Otwórz plik konfiguracji wygenerowanego (App.config) z projektu GettingStartedClient. Poniższy przykład jest to widok pliku konfiguracyjnego wygenerowany. W obszarze [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, Znajdź [ \<punktu końcowego >](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
+1.  Otwórz plik konfiguracji wygenerowanego (App.config) z projektu GettingStartedClient. Poniższy przykład jest to widok pliku konfiguracyjnego wygenerowany. W obszarze [ \<system.serviceModel >](../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, Znajdź [ \<punktu końcowego >](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017) elementu.  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  

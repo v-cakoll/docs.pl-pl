@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 638a439a663925be6eea230984310f7b86b81030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a126d3b21ddd4bd31e168726c3538de21fb7d956
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="control-type-recommendations"></a>Zalecenia dotyczące typu formantu
 .NET Framework zapewnia zasilania opracowanie i wdrożenie nowych formantów. Oprócz kontroli znanych użytkowników można będzie teraz okazać, że możliwość zapisywania Kontrolki niestandardowe własnych narysowania, a nawet mogą rozszerzyć funkcjonalność dysponujące przez dziedziczenie. Przy wyborze typu formantu, aby utworzyć może być mylące. W tej sekcji przedstawiono różnice między różnymi rodzajami formantów, z którego może dziedziczyć i zapewnia uwagi dotyczące typu do wyboru dla projektu.  
@@ -60,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Przewodnik: serializowanie kolekcji standardowych typów za pomocą elementu DesignerSerializationVisibilityAttribute](http://msdn.microsoft.com/library/ms171731\(v=vs.110\))  
   
--   [Przewodnik: dziedziczenie z kontrolki formularzy Windows Forms za pomocą języka Visual C#](http://msdn.microsoft.com/en-us/library/5h0k2e6x\(v=vs.110\))  
+-   [Przewodnik: dziedziczenie z kontrolki formularzy Windows Forms za pomocą języka Visual C#](http://msdn.microsoft.com/library/5h0k2e6x\(v=vs.110\))  
   
 -   [Instrukcje: dostarczanie mapy bitowej przybornika dla kontrolki](http://msdn.microsoft.com/library/4wk1wc0a\(v=vs.110\))  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual Basic](http://msdn.microsoft.com/library/c316f119\(v=vs.110\))  
   
--   [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual C#](http://msdn.microsoft.com/en-us/library/a6h7e207\(v=vs.110\))  
+-   [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual C#](http://msdn.microsoft.com/library/a6h7e207\(v=vs.110\))  
   
 -   [Przewodnik: dziedziczenie z kontrolki formularzy Windows Forms za pomocą języka Visual Basic](http://msdn.microsoft.com/library/w2a8y03d\(v=vs.110\))  
   

@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 7ffc74fdbec204b798ee93a8ee2c91db992a83cb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bab723e4e52db9936e635f1348dff86d75de274d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Procedura konfiguracji jednorazowej dla przykładów Windows Communication Foundation
 Większość [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki są obsługiwane w Internet Information Services (IIS) i uruchom z wspólnego katalogu wirtualnego. Ta procedura konfiguracji jednorazowej tworzy folder z dysku. Dodano również katalog wirtualny usług IIS o nazwie **ServiceModelSamples**.  
@@ -36,7 +36,7 @@ Większość [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] próbki są
   
 3.  Jeśli [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)] nie jest zainstalowany, i systemu operacyjnego nie jest systemu Windows Server 2008 z dodatkiem SP2 lub nowszym, zainstaluj [251798 poprawkę](http://go.microsoft.com/fwlink/?LinkId=184693).  
   
-4.  Uruchom następujące polecenia. Aby uzyskać więcej informacji na temat Dlaczego należy uruchamiać tych poleceń, zobacz [IIS hostowanej usługi nie powiedzie się](http://msdn.microsoft.com/en-us/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
+4.  Uruchom następujące polecenia. Aby uzyskać więcej informacji na temat Dlaczego należy uruchamiać tych poleceń, zobacz [IIS hostowanej usługi nie powiedzie się](http://msdn.microsoft.com/library/ee5499fc-1b10-4cda-a9b1-13dba70f05f8).  
   
     > [!WARNING]
     >  Przypadku ponownej instalacji usług IIS należy ponownie uruchomić następujące polecenia.  

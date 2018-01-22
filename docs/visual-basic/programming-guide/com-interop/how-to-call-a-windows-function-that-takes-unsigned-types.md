@@ -23,11 +23,11 @@ ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 caps.latest.revision: "18"
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a3663ca5d3e0e2c94530d4a19ebff0022f495f3d
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
 Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można przejść do tych elementów członkowskich z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
@@ -83,7 +83,7 @@ Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typ
     >  Wywołania do kodu niezarządzanego, takich jak interfejsu programowania aplikacji (API), system Windows udostępnia kodu na potencjalne zagrożenia bezpieczeństwa.  
   
     > [!IMPORTANT]
-    >  Wywołanie interfejsu API systemu Windows wymaga uprawnień kodu niezarządzanego, co może wpływać na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu do kodu](http://msdn.microsoft.com/en-us/e5ae402f-6dda-4732-bbe8-77296630f675).  
+    >  Wywołanie interfejsu API systemu Windows wymaga uprawnień kodu niezarządzanego, co może wpływać na jej wykonanie w sytuacjach częściowego zaufania. Aby uzyskać więcej informacji, zobacz <xref:System.Security.Permissions.SecurityPermission> i [uprawnienia dostępu do kodu](http://msdn.microsoft.com/library/e5ae402f-6dda-4732-bbe8-77296630f675).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  

@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 8253d1d04d2bf2a70076ffb003eb27be2eb47d46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 96b9c0caeecd4ae381ff2d163e9bf9ff0a89538f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>Wskazówki: aktualizowanie informacji na pasku stanu w czasie wykonywania
 > [!IMPORTANT]
@@ -50,7 +50,7 @@ ms.lasthandoff: 12/22/2017
 5.  Dodawanie do formularzy systemu Windows <xref:System.Windows.Forms.Timer> składnika w formularzu.  
   
     > [!NOTE]
-    >  Formularze systemu Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> składnika jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, które jest odpowiednie dla środowiska serwera, zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
+    >  Formularze systemu Windows <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> składnika jest przeznaczony dla środowiska Windows Forms. Jeśli potrzebujesz czasomierza, które jest odpowiednie dla środowiska serwera, zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).  
   
 6.  Ustaw <xref:System.Windows.Forms.Timer.Enabled%2A> właściwości `true`.  
   

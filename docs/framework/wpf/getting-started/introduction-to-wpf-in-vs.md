@@ -27,11 +27,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1fa9592dd6f2f0cb3f6fc70f0cc5843ee3b76403
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b1e3a91c4943a4f052d8136eaf32c0c431dd4924
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="introduction-to-wpf-in-visual-studio-2015"></a>Wprowadzenie do platformy WPF w programie Visual Studio 2015
 Windows Presentation Foundation (WPF) w programie Visual Studio 2015 oferuje deweloperom ujednolicony model programowania do tworzenia nowoczesnych aplikacji klasycznych biznesowych — w systemie Windows.  
@@ -42,6 +42,6 @@ Windows Presentation Foundation (WPF) w programie Visual Studio 2015 oferuje dew
   
  [Wprowadzenie do WPF](/visualstudio/designers/introduction-to-wpf)  
   
- [WPF w programie .NET Framework](https://msdn.microsoft.com/en-us/library/ms754130\(v=vs.100\).aspx)  
+ [WPF w programie .NET Framework](https://msdn.microsoft.com/library/ms754130\(v=vs.100\).aspx)  
   
  [Pobierz program Visual Studio](https://www.visualstudio.com/features/wpf-vs)

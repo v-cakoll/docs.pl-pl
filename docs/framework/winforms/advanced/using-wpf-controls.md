@@ -17,18 +17,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: c14da85b377b3ef80d6accbc8b0319959a75bcd5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5e616019d53648058d51a3d0df457b1380aaf3b1
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="using-wpf-controls"></a>Korzystanie z formantów WPF
 Formanty Windows Presentation Foundation (WPF) służy w aplikacjach opartych na formularzach systemu Windows. Chociaż te dwie technologie inny widok, ich współdziałać sprawnie.  
   
  Projektant formularzy systemu Windows udostępnia środowisko wizualnego projektu do hostowania kontrolki Windows Presentation Foundation. Formant WPF jest hostowana przez specjalne formantu formularzy systemu Windows o nazwie <xref:System.Windows.Forms.Integration.ElementHost>. Ten formant umożliwia kontrolce WPF do udziału w układu formularza i odbierać komunikaty klawiatury i myszy. W czasie projektowania, można rozmieścić <xref:System.Windows.Forms.Integration.ElementHost> sterować tak samo jak dowolnej kontrolki formularza systemu Windows.  
   
- Formanty formularzy systemu Windows umożliwia także w aplikacjach opartych na WPF. Aby uzyskać więcej informacji, zobacz [projektanta WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26).  
+ Formanty formularzy systemu Windows umożliwia także w aplikacjach opartych na WPF. Aby uzyskać więcej informacji, zobacz [projektanta WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Instrukcje: kopiowanie i wklejanie kontrolki ElementHost w czasie projektowania](../../../../docs/framework/winforms/advanced/how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  
@@ -63,5 +63,5 @@ Formanty Windows Presentation Foundation (WPF) służy w aplikacjach opartych na
  [Migracja i współdziałanie](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
  Opisuje współdziałanie między technologii Windows Presentation Foundation i formularze systemu Windows.  
   
- [Projektant WPF](http://msdn.microsoft.com/en-us/c6c65214-8411-4e16-b254-163ed4099c26)  
+ [Projektant WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26)  
  Opisuje sposób projektowania kontrolek Windows Presentation Foundation w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].

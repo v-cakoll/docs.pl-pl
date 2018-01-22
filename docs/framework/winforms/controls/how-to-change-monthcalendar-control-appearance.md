@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: b9c401532fa7a5f09462cf12084f32bca3f721cf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 89aa2d57e7990bb2b0016fa4936cf1487578db01
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-control39s-appearance"></a>Porady: formantu MonthCalendar formularzy systemu Windows &#39; Zmień wygląd s
 Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant umożliwia dostosowanie wyglądu kalendarza na wiele sposobów. Na przykład można ustawić schemat kolorów i wybierz wyświetlić lub ukryć numery tygodni i bieżącą datę.  
@@ -53,7 +53,7 @@ Formularze systemu Windows <xref:System.Windows.Forms.MonthCalendar> formant umo
     ```  
   
     > [!NOTE]
-    >  Uruchamianie z systemem Windows Vista i w zależności od motywu, niektóre właściwości mogą pozostać bez zmian wyglądu kalendarza. Na przykład, jeśli system Windows jest skonfigurowany używać kompozycji Aero, ustawienie <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, lub <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> właściwości nie ma wpływu. Jest to spowodowane zaktualizowaną wersję kalendarza jest odwzorowywany z wrażenie, że jest określana w czasie wykonywania na podstawie bieżącego motywu systemu operacyjnego. Jeśli chcesz użyć tych właściwości i Włącz starszą wersję kalendarza, można wyłączyć style wizualne dla aplikacji. Wyłączanie style wizualne mogą mieć wpływ na wygląd i zachowanie innych formantów w aplikacji. Aby wyłączyć style wizualne w języku Visual Basic, Otwórz w Projektancie projektu i usuń zaznaczenie pola wyboru **style wizualne XP włącz** pole wyboru. Aby wyłączyć style wizualne w języku C#, otwórz plik Program.cs i Oznacz jako komentarz `Application.EnableVisualStyles();`. Aby uzyskać więcej informacji na temat stylów wizualnych, zobacz [jak: włączyć style wizualne XP Windows](http://msdn.microsoft.com/en-us/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
+    >  Uruchamianie z systemem Windows Vista i w zależności od motywu, niektóre właściwości mogą pozostać bez zmian wyglądu kalendarza. Na przykład, jeśli system Windows jest skonfigurowany używać kompozycji Aero, ustawienie <xref:System.Windows.Forms.MonthCalendar.BackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>, <xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>, lub <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A> właściwości nie ma wpływu. Jest to spowodowane zaktualizowaną wersję kalendarza jest odwzorowywany z wrażenie, że jest określana w czasie wykonywania na podstawie bieżącego motywu systemu operacyjnego. Jeśli chcesz użyć tych właściwości i Włącz starszą wersję kalendarza, można wyłączyć style wizualne dla aplikacji. Wyłączanie style wizualne mogą mieć wpływ na wygląd i zachowanie innych formantów w aplikacji. Aby wyłączyć style wizualne w języku Visual Basic, Otwórz w Projektancie projektu i usuń zaznaczenie pola wyboru **style wizualne XP włącz** pole wyboru. Aby wyłączyć style wizualne w języku C#, otwórz plik Program.cs i Oznacz jako komentarz `Application.EnableVisualStyles();`. Aby uzyskać więcej informacji na temat stylów wizualnych, zobacz [jak: włączyć style wizualne XP Windows](http://msdn.microsoft.com/library/0a038ade-31cf-4e56-9cfe-7a1e6b83b57f).  
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>Aby wyświetlić bieżącą datę w dolnej części kontrolki  
   

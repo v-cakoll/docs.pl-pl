@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 24abe7be9acb01b81f4d2a76d74c2f75bdb7786f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 78bfcef336ad265b98069ed540f9156cf9cb65bd
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="isof-entity-sql"></a>ISOF (jednostka SQL)
 Określa, czy typ wyrażenia jest określonego typu lub jednego z jego podtypach.  
@@ -63,7 +63,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
 |JEST RowType z (RowType)|Zgłasza wyjątek|  
   
 ## <a name="example"></a>Przykład  
- Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania korzysta jest OF — operator można określić typu wyrażenia zapytania, a następnie operator TRAKTUJ można przekonwertować obiektu typu kursu do kolekcji obiektów typu OnsiteCourse. Zapytanie jest oparta na [modelu służbowe](http://msdn.microsoft.com/en-us/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
+ Następujące [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania korzysta jest OF — operator można określić typu wyrażenia zapytania, a następnie operator TRAKTUJ można przekonwertować obiektu typu kursu do kolekcji obiektów typu OnsiteCourse. Zapytanie jest oparta na [modelu służbowe](http://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac).  
   
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   

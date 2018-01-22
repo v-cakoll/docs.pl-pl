@@ -18,11 +18,11 @@ author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 335780b600535c066bc822cc5dd6c77233618bb6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 638c768e4abd199aa52bc85582305ffaf405fe87
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="routing"></a>Routing
 Tematy w tej sekcji dotyczą usługi routingu. Usługa routingu jest ogólny można skonfigurować pośredników SOAP obsługi błędów komunikacji umożliwia skonfigurowanie na podstawie zawartości routingu, konfigurowanie protokołu mostkowanie, i dynamicznie Aktualizuj logiki routingu w czasie wykonywania.  
@@ -31,7 +31,7 @@ Tematy w tej sekcji dotyczą usługi routingu. Usługa routingu jest ogólny mo�
  [Usługa routingu](../../../../docs/framework/wcf/feature-details/routing-service.md)  
  Zawiera omówienie funkcji usługi routingu.  
   
- [Usługa routingu](http://msdn.microsoft.com/en-us/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
+ [Usługa routingu](http://msdn.microsoft.com/library/5ac8718c-bcef-456f-bfd5-1e60a30d6eaa)  
  Zawiera opis funkcji usługi routingu.  
   
  [Wprowadzenie do routingu](../../../../docs/framework/wcf/feature-details/routing-introduction.md)  

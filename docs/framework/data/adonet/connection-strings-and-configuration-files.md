@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 358bc0428a53817e85d5a5e278d8da4e1a8b6927
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 447b2d6c0e5eeafeaff89aa1d6430eec72d59a4d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="connection-strings-and-configuration-files"></a>Parametry połączenia i pliki konfiguracji
 Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemów konserwacji i luk w zabezpieczeniach. Parametry połączenia nieszyfrowanego skompilowana do kodu źródłowego aplikacji można wyświetlić przy użyciu [Ildasm.exe (dezasembler IL)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) narzędzia. Ponadto jeśli kiedykolwiek zmieni się parametry połączenia, aplikacja musi ponownie skompilowana. Z tego względu zalecamy przechowywanie parametrów połączenia w pliku konfiguracyjnym aplikacji.  
@@ -156,7 +156,7 @@ Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemó
  <xref:System.Configuration> Przestrzeń nazw zawiera klasy do współdziałania z ustawieniami konfiguracji programowo. <xref:System.Configuration.ConfigurationManager> Klasy zapewnia dostęp do plików konfiguracji komputera, aplikacji i użytkownika. Jeśli tworzysz aplikację ASP.NET, możesz użyć <xref:System.Web.Configuration.WebConfigurationManager> klasy, która zapewnia te same funkcje podczas umożliwiającego dostęp do ustawień, które są unikatowe dla aplikacji ASP.NET, takich jak znajdują się w  **\< System.Web >**.  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które zapewniają dodatkowe opcje dotyczące szyfrowania i odszyfrowywania danych. Korzystając z tych klas, jeśli potrzebujesz usługi kryptograficzne, które nie są dostępne przy użyciu zabezpieczoną konfiguracji. Niektóre z tych klas są otoki dla niezarządzanego CryptoAPI firmy Microsoft, a inne implementacje czysto zarządzanych. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](http://msdn.microsoft.com/en-us/68a1e844-c63c-44af-9247-f6716eb23781).  
+>  <xref:System.Security.Cryptography> Przestrzeń nazw zawiera klasy, które zapewniają dodatkowe opcje dotyczące szyfrowania i odszyfrowywania danych. Korzystając z tych klas, jeśli potrzebujesz usługi kryptograficzne, które nie są dostępne przy użyciu zabezpieczoną konfiguracji. Niektóre z tych klas są otoki dla niezarządzanego CryptoAPI firmy Microsoft, a inne implementacje czysto zarządzanych. Aby uzyskać więcej informacji, zobacz [usługi kryptograficzne](http://msdn.microsoft.com/library/68a1e844-c63c-44af-9247-f6716eb23781).  
   
 ### <a name="appconfig-example"></a>Przykład App.config  
  W tym przykładzie pokazano, jak Przełącz szyfrowania **connectionStrings** sekcji **app.config** pliku dla aplikacji systemu Windows. W tym przykładzie nazwa aplikacji jako argument, na przykład "MyApplication.exe" przyjmowane przez procedurę. **App.config** pliku będą szyfrowane i skopiowane do folderu, który zawiera plik wykonywalny pod nazwą "MyApplication.exe.config".  
@@ -178,7 +178,7 @@ Osadzanie ciągów połączenia w kodzie aplikacji może prowadzić do problemó
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- Aby uzyskać więcej informacji, zabezpieczanie aplikacji ASP.NET, zobacz [NIB: zabezpieczenia w programie ASP.NET](http://msdn.microsoft.com/en-us/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [ASP.NET 2.0 rozwiązania jeden rzut oka](http://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
+ Aby uzyskać więcej informacji, zabezpieczanie aplikacji ASP.NET, zobacz [NIB: zabezpieczenia w programie ASP.NET](http://msdn.microsoft.com/library/04b37532-18d9-40b4-8e5f-ee09a70b311d) i [ASP.NET 2.0 rozwiązania jeden rzut oka](http://go.microsoft.com/fwlink/?LinkId=59997) w Centrum deweloperów platformy ASP.NET.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Konstruktorzy parametrów połączeń](../../../../docs/framework/data/adonet/connection-string-builders.md)  

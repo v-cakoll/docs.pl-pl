@@ -21,11 +21,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: f45d0fb6a2ffb2e20cc23e67de4cac6a2f2c81bc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8bd9b87fdfa54a6f9bf53e4fa897106257b4c625
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-security"></a>Zabezpieczenia formularzy systemu Windows
 Formularze systemu Windows funkcji modelu zabezpieczeń, które jest oparte na kodzie (zabezpieczenia są ustawione przez kod, niezależnie od kodu użytkownika dla poziomów). Jest to oprócz żadnych schematów zabezpieczeń, które mogą być spełnione już na komputerze. Mogą to być te przeglądarki (np. na podstawie strefy zabezpieczeń programu Internet Explorer) lub system operacyjny (na przykład zabezpieczenia oparte na dostęp do poświadczeń systemu Windows NT).  
@@ -44,10 +44,10 @@ Formularze systemu Windows funkcji modelu zabezpieczeń, które jest oparte na k
  W tym artykule opisano wykonywania manipulowanie okna, korzystanie ze Schowka i wykonywania wywołań do kodu niezarządzanego w częściowo zaufanym środowisku.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [NIB: Domyślnych zasad zabezpieczeń](http://msdn.microsoft.com/en-us/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
+ [NIB: Domyślnych zasad zabezpieczeń](http://msdn.microsoft.com/library/2c086873-0894-4f4d-8f7e-47427c1a3b55)  
  Zawiera listę domyślnych uprawnień w zestawy uprawnień pełnego zaufania, lokalny Intranet i Internet.  
   
- [NIB: Administrowanie zasadami zabezpieczeń Ogólne](http://msdn.microsoft.com/en-us/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
+ [NIB: Administrowanie zasadami zabezpieczeń Ogólne](http://msdn.microsoft.com/library/5121fe35-f0e3-402c-94ab-4f35b0a87b4b)  
  Zawiera informacje dotyczące administrowania zasadami zabezpieczeń .NET Framework i podnoszenia uprawnień.  
   
  [Niebezpieczne uprawnienia i administrowanie zasadami](../../../docs/framework/misc/dangerous-permissions-and-policy-administration.md)  
@@ -56,7 +56,7 @@ Formularze systemu Windows funkcji modelu zabezpieczeń, które jest oparte na k
  [Wytyczne dotyczące bezpiecznego programowania](../../../docs/standard/security/secure-coding-guidelines.md)  
  Linki do tematów dotyczących najlepszych rozwiązań dotyczących bezpiecznego pisanie kodu dla programu .NET Framework.  
   
- [NIB: Żądanie uprawnień](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
+ [NIB: Żądanie uprawnień](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2)  
  W tym artykule omówiono korzystanie z atrybutów, aby umożliwić środowiska uruchomieniowego wiedzieć, jakie uprawnienia kodu musi być uruchamiane.  
   
  [Główne pojęcia dotyczące zabezpieczeń](../../../docs/standard/security/key-security-concepts.md)  
@@ -65,8 +65,8 @@ Formularze systemu Windows funkcji modelu zabezpieczeń, które jest oparte na k
  [Podstawy zabezpieczeń dostępu kodu](../../../docs/framework/misc/code-access-security-basics.md)  
  W tym artykule omówiono podstawowe informacje dotyczące pracy z programu .NET Framework zasady zabezpieczeń w czasie uruchamiania.  
   
- [NIB: Określanie, kiedy należy zmodyfikować zasady zabezpieczeń](http://msdn.microsoft.com/en-us/af749b17-e461-409d-84b9-a3d44789db16)  
+ [NIB: Określanie, kiedy należy zmodyfikować zasady zabezpieczeń](http://msdn.microsoft.com/library/af749b17-e461-409d-84b9-a3d44789db16)  
  Wyjaśniono sposób określania, kiedy aplikacje muszą różnią się od domyślnych zasad zabezpieczeń.  
   
- [NIB: Wdrażanie zasad zabezpieczeń](http://msdn.microsoft.com/en-us/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
+ [NIB: Wdrażanie zasad zabezpieczeń](http://msdn.microsoft.com/library/f936c1e5-033b-4bd9-a3bd-a39ba733a681)  
  W tym artykule omówiono najlepsze sposób wdrażania zmian zasad zabezpieczeń.

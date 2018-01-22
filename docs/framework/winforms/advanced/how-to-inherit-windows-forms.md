@@ -21,18 +21,18 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 5f190fb101a3ff666d194d854c9ce152657ebf85
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b91cde9e04ab37f0dca7b1e36be8608310ac35db
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-windows-forms"></a>Porady: dziedziczenie formularzy systemu Windows
 Tworzenie nowych formularzy systemu Windows przez dziedziczenie z formularzy podstawowy jest to wygodna metoda mają zostać zduplikowane starań bez pośrednictwa całkowicie odtworzenie formularza za każdym razem, gdy wymagają tego procesu.  
   
  Aby uzyskać więcej informacji na temat dziedziczenie formularzy przy użyciu czasu projektowania **selektora dziedziczenia** okno dialogowe i jak wizualnie rozróżnienia poziomów zabezpieczeń dziedziczone formantów, zobacz [porady: dziedziczenie formularzy przy użyciu Okno dialogowe selektora dziedziczenia](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md).  
   
- **Uwaga** aby dziedziczyć z formularza, pliku lub przestrzeni nazw zawierającej formularza musi skompilowano do pliku wykonywalnego lub DLL. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu. Ponadto odwołanie do przestrzeni nazw musi można dodać do klasy dziedziczy formularza. Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+ **Uwaga** aby dziedziczyć z formularza, pliku lub przestrzeni nazw zawierającej formularza musi skompilowano do pliku wykonywalnego lub DLL. Aby utworzyć projekt, wybierz **kompilacji** z **kompilacji** menu. Ponadto odwołanie do przestrzeni nazw musi można dodać do klasy dziedziczy formularza. Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-inherit-a-form-programmatically"></a>Aby programowo dziedziczą formularza  
   

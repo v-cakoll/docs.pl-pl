@@ -21,14 +21,14 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 947ac4f8783b388135cf9e8147bb48eda93cfa08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 446e0f830e916e7f4118a7374c66f238a60fda02
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>Porady: dostarczanie mapy bitowej przybornika dla formantu
-Jeśli chcesz mieć specjalne ikon dla formantu są wyświetlane w **przybornika**, określonego obrazu można określić za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutu*, specjalny rodzaj klasy można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [NOT IN kompilacji: Omówienie atrybutów w języku Visual Basic](http://msdn.microsoft.com/en-us/0d0cff64-892d-4f57-83bd-bef388553d4f) dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] i [atrybuty](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) dla [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
+Jeśli chcesz mieć specjalne ikon dla formantu są wyświetlane w **przybornika**, określonego obrazu można określić za pomocą <xref:System.Drawing.ToolboxBitmapAttribute>. Ta klasa jest *atrybutu*, specjalny rodzaj klasy można dołączyć do innych klas. Aby uzyskać więcej informacji na temat atrybutów, zobacz [NOT IN kompilacji: Omówienie atrybutów w języku Visual Basic](http://msdn.microsoft.com/library/0d0cff64-892d-4f57-83bd-bef388553d4f) dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] i [atrybuty](http://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205) dla [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)].  
   
  Przy użyciu <xref:System.Drawing.ToolboxBitmapAttribute>, można określić ciąg, który określa ścieżkę i nazwę pliku mapy bitowej pikseli 16 na 16. Ta mapa bitowa pojawia się obok formantu podczas dodawania do **przybornika**. Można również określić <xref:System.Type>, w którym to przypadku mapy bitowej skojarzony z danym typem jest załadowany. Jeśli możesz określić ich obu <xref:System.Type> i ciąg, formantu wyszukuje zasób obrazu o nazwie określonej przez parametr ciągu w zestaw zawierający typ określony przez <xref:System.Type> parametru.  
   

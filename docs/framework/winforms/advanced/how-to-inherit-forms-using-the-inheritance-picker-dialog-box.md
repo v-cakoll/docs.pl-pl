@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: fad26de46f3af04ae0340da6aa02bbe454e77e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b330e84c14fa528fb84489e8fec16544144cf731
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>Porady: dziedziczenie formularzy korzystających z okna dialogowego selektora dziedziczenia
 Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **selektora dziedziczenia** okno dialogowe. Dzięki temu można korzystać z interfejsów kodu lub użytkownika (UI), zostały już utworzone w innych rozwiązań.  
@@ -30,7 +30,7 @@ Najprostszym sposobem dziedziczą formularza lub innego obiektu jest użycie **s
 > [!NOTE]
 >  Aby dziedziczyć z formularza z **selektora dziedziczenia** okno dialogowe projekt zawierający formularz musi są wbudowane w pliku wykonywalnego lub DLL. Aby utworzyć projekt, wybierz **Kompiluj rozwiązanie** z **kompilacji** menu.  
 >   
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>Do tworzenia formularzy systemu Windows dziedziczone z istniejącego formularza za pomocą selektora dziedziczenia  
   

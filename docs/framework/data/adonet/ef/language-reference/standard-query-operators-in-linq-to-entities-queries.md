@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d61dbe2051109273a8616336e0efb46f7bd20864
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 94a024081acfcf4b1926f485c6dbfc2f394b418c
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>Standardowe operatory zapytań w składniku LINQ to Entities zapytań
 W zapytaniu możesz określić informacje, które mają zostać pobrane ze źródła danych. Zapytania można również określić, jak te informacje sortowania, grupowane i w kształcie przed zwróceniem jest. LINQ udostępnia zestaw metod standardowych zapytania, które można użyć w zapytaniu. Większość tych metod działać na sekwencji; w tym kontekście sekwencji jest obiektem, którego typ implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu lub <xref:System.Linq.IQueryable%601> interfejsu. Funkcja zapytania operatorów standardowej kwerendy obejmuje filtrowania, projekcji agregacji, sortowanie, grupowanie, stronicowania i więcej. Standardowe operatory są wyposażone w dedykowane składni słowa kluczowego, dzięki czemu można wywołać przy użyciu składni wyrażeń zapytania zapytań niektórych często używane. Wyrażenia zapytania jest inny, bardziej czytelny sposobem express zapytania niż równoważne oparte na metodzie. Klauzule wyrażenia zapytania są przekształcane na wywołania metody zapytań w czasie kompilacji. Listę standardowych operatorów zapytań zawierających klauzule wyrażenia zapytania równoważne zawiera [standardowe operatory zapytań — omówienie](http://msdn.microsoft.com/library/24cda21e-8af8-4632-b519-c404a839b9b2).  
@@ -78,7 +78,7 @@ W zapytaniu możesz określić informacje, które mają zostać pobrane ze źró
 |`Sum`|Zwraca wartość null.|Zwraca wartość null.|Zwraca sumę wartości innych niż null w sekwencji.|Oblicza sumę sekwencję wartości liczbowych.|  
   
 ## <a name="type-methods"></a>Metody typu  
- Te dwie metody LINQ, które zajmują się konwersji typu i testowania są obsługiwane w kontekście [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Oznacza to, że tylko obsługiwane typy to typy, które mapują do odpowiedniego [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] typu. Aby uzyskać listę tych typów, zobacz [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/en-us/987b995f-e429-4569-9559-b4146744def4). Metody typu są `Convert` i `OfType`.  
+ Te dwie metody LINQ, które zajmują się konwersji typu i testowania są obsługiwane w kontekście [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]. Oznacza to, że tylko obsługiwane typy to typy, które mapują do odpowiedniego [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] typu. Aby uzyskać listę tych typów, zobacz [typu modelu koncepcyjnego (CSDL)](http://msdn.microsoft.com/library/987b995f-e429-4569-9559-b4146744def4). Metody typu są `Convert` i `OfType`.  
   
  `OfType`jest obsługiwana dla typów jednostek. `Convert`jest obsługiwana dla typów pierwotnych modelu koncepcyjnego.  C# `is` i `as` metody również są obsługiwane.  
   

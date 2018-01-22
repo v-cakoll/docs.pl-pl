@@ -17,11 +17,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 83b4c2ae04ab6be1f1a1327649bbf679a24580ce
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 61f9ca1e8a79942b04afd8628282ceeb1e1b4b51
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="accessibility-best-practices"></a>Najlepsze praktyki dotyczące ułatwień dostępu
 > [!NOTE]
@@ -143,5 +143,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Automation.Peers>  
- [Formant niestandardowy NumericUpDown motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](http://msdn.microsoft.com/en-us/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
+ [Formant niestandardowy NumericUpDown motywu i przykładowe Obsługa automatyzacji interfejsu użytkownika](http://msdn.microsoft.com/library/9aed3c10-68eb-419e-a57f-1d2af15a8253)  
  [Wskazówki dotyczące projektowania interfejsu użytkownika klawiatury](http://msdn2.microsoft.com/library/ms971323.aspx)

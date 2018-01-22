@@ -30,11 +30,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3ddb5abeee9c1cad12e40b84f2e5c81295cbed9f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6fb682d898de8cb6bc166426c3a1accbda452c83
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>Marshaling klas, struktur i unii
 Klasy i struktury są podobne w programie .NET Framework. Obydwie pola, właściwości i zdarzeń. Może to być również metody statyczne i Niestatyczne. Jeden znacząca różnica jest struktury są typy wartości oraz klasy są typy referencyjne.  
@@ -77,7 +77,7 @@ Klasy i struktury są podobne w programie .NET Framework. Obydwie pola, właści
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane, zawierający implementacji dla funkcji wymienione wcześniej i cztery struktury: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane, zawierający implementacji dla funkcji wymienione wcześniej i cztery struktury: **MYPERSON**, **MYPERSON2**,  **MYPERSON3**, i **MYARRAYSTRUCT**. Te struktury zawierają następujące elementy:  
   
 ```  
 typedef struct _MYPERSON  
@@ -138,7 +138,7 @@ typedef struct _MYARRAYSTRUCT
  [!code-vb[Conceptual.Interop.Marshaling#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/structures.vb#24)]  
   
 ## <a name="findfile-sample"></a>FindFile — przykład  
- W tym przykładzie pokazano, jak przekazać struktura, która zawiera drugi, osadzone struktury do funkcji niezarządzanej. Ponadto przedstawiono sposób użycia <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby zadeklarować tablicę o stałej długości w strukturze. W tym przykładzie elementy osadzone struktury są dodawane do struktury nadrzędnej. Przykładowy osadzone struktury, który nie jest spłaszczona [przykładowej struktury](http://msdn.microsoft.com/en-us/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
+ W tym przykładzie pokazano, jak przekazać struktura, która zawiera drugi, osadzone struktury do funkcji niezarządzanej. Ponadto przedstawiono sposób użycia <xref:System.Runtime.InteropServices.MarshalAsAttribute> atrybutu, aby zadeklarować tablicę o stałej długości w strukturze. W tym przykładzie elementy osadzone struktury są dodawane do struktury nadrzędnej. Przykładowy osadzone struktury, który nie jest spłaszczona [przykładowej struktury](http://msdn.microsoft.com/library/96a62265-dcf9-4608-bc0a-1f762ab9f48e).  
   
  Przykładowe FindFile używa następujących niezarządzanej funkcji wyświetlany z jego oryginalnej deklaracji funkcji:  
   
@@ -191,7 +191,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane zawierającego implementację funkcji wymienione wcześniej i unie dwóch **MYUNION** i **MYUNION2**. Unie zawiera następujące elementy:  
+ [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614) jest niestandardowa biblioteka niezarządzane zawierającego implementację funkcji wymienione wcześniej i unie dwóch **MYUNION** i **MYUNION2**. Unie zawiera następujące elementy:  
   
 ```  
 union MYUNION  
@@ -251,7 +251,7 @@ typedef struct _SYSTEMTIME {
   
  W tym przykładzie `SystemTime` klasa zawiera elementy pierwotnej struktury reprezentowane jako elementy członkowskie klasy. <xref:System.Runtime.InteropServices.StructLayoutAttribute> Atrybut ma ustawioną upewnij się, że członkowie ułożone w pamięci sekwencyjnie, w kolejności ich występowania.  
   
- `LibWrap` Klasa zawiera zarządzanych prototyp `GetSystemTime` metodę, która przekazuje `SystemTime` klasy jako In/Out parametru domyślnie. Parametr musi być zadeklarowany ze <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> atrybutów, ponieważ klasy, które są typy odwołań, są przekazywane jak parametry domyślnie. Dla obiekt wywołujący, aby otrzymywać wyniki te [kierunkową atrybuty](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2) muszą być stosowane w sposób jawny. `App` Klasy tworzy nowe wystąpienie klasy `SystemTime` klasy i uzyskuje dostęp do swoich pól danych.  
+ `LibWrap` Klasa zawiera zarządzanych prototyp `GetSystemTime` metodę, która przekazuje `SystemTime` klasy jako In/Out parametru domyślnie. Parametr musi być zadeklarowany ze <xref:System.Runtime.InteropServices.InAttribute> i <xref:System.Runtime.InteropServices.OutAttribute> atrybutów, ponieważ klasy, które są typy odwołań, są przekazywane jak parametry domyślnie. Dla obiekt wywołujący, aby otrzymywać wyniki te [kierunkową atrybuty](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2) muszą być stosowane w sposób jawny. `App` Klasy tworzy nowe wystąpienie klasy `SystemTime` klasy i uzyskuje dostęp do swoich pól danych.  
   
 ### <a name="code-samples"></a>Przykłady kodu  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -263,7 +263,7 @@ typedef struct _SYSTEMTIME {
   
  W tym przykładzie pokazano, jak wywoływanie funkcji natywnych przy użyciu <xref:System.Runtime.InteropServices.Marshal> klasy i przy użyciu niebezpieczny kod.  
   
- W przykładzie użyto funkcji otoki i platformy wywołuje zdefiniowane w [PinvokeLib.dll](http://msdn.microsoft.com/en-us/5d1438d7-9946-489d-8ede-6c694a08f614), również podana w plikach źródłowych. Używa `TestOutArrayOfStructs` funkcji i `MYSTRSTRUCT2` struktury. Struktura zawiera następujące elementy:  
+ W przykładzie użyto funkcji otoki i platformy wywołuje zdefiniowane w [PinvokeLib.dll](http://msdn.microsoft.com/library/5d1438d7-9946-489d-8ede-6c694a08f614), również podana w plikach źródłowych. Używa `TestOutArrayOfStructs` funkcji i `MYSTRSTRUCT2` struktury. Struktura zawiera następujące elementy:  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -299,6 +299,6 @@ typedef struct _MYSTRSTRUCT2
   
 ## <a name="see-also"></a>Zobacz też  
  [Marshaling danych w wywołaniu platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)  
- [Typy danych wywołanie platformy](http://msdn.microsoft.com/en-us/16014d9f-d6bd-481e-83f0-df11377c550f)  
+ [Typy danych wywołanie platformy](http://msdn.microsoft.com/library/16014d9f-d6bd-481e-83f0-df11377c550f)  
  [Marshaling ciągów](../../../docs/framework/interop/marshaling-strings.md)  
- [Organizowanie tablice typów](http://msdn.microsoft.com/en-us/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)
+ [Organizowanie tablice typów](http://msdn.microsoft.com/library/049b1c1b-228f-4445-88ec-91bc7fd4b1e8)

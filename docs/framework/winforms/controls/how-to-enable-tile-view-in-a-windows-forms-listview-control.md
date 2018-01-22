@@ -23,11 +23,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 582c4bbd79419bfaae10b3c21961bbd7ba2a7950
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ad4680490e95da91e72b3b8d6d5f65eec2d115f8
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>Porady: włączanie widoku Tile w formancie ListView formularzy systemu Windows
 Korzystając z funkcji Widok kafelków <xref:System.Windows.Forms.ListView> kontroli, możesz podać visual równowagi między informacji graficznych i tekstowych. Wyświetlane dla elementu w widoku tile informacji tekstowych jest taka sama jak informacji o kolumnie zdefiniowanych w widoku szczegółów. Widoku Tile współdziała z funkcjami znak grupowania lub wstawiania w <xref:System.Windows.Forms.ListView> formantu.  
@@ -75,4 +75,4 @@ Kafelek widoku ikon i tekst
  <xref:System.Windows.Forms.ListView.TileSize%2A>  
  [Kontrolka ListView](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
  [ListView, kontrolka — omówienie](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)  
- [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)
+ [Funkcje systemu Windows XP i formantów formularzy systemu Windows](http://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)

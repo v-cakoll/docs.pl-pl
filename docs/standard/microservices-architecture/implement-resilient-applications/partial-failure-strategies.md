@@ -1,7 +1,7 @@
 ---
 title: "Strategie dotyczące postępowania z częściowa awarii"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Strategie dotyczące postępowania z częściowa awarii"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86b8ccc467128970b60ba37f890057654ce682ef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące postępowania z częściowa awarii
 
@@ -39,10 +39,10 @@ Strategie dotyczące postępowania z błędami częściowe są następujące.
     [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](https://docs.microsoft.com/azure/architecture/patterns/category/resiliency)
 
 -   **Dodawanie odporności i optymalizacji wydajności**
-    [*https://msdn.microsoft.com/en-us/library/jj591574.aspx*](https://msdn.microsoft.com/en-us/library/jj591574.aspx)
+    [*https://msdn.microsoft.com/library/jj591574.aspx*](https://msdn.microsoft.com/library/jj591574.aspx)
 
--   **Grodziowego.** Repozytorium GitHub. Wdrożenia z zasadami Polly. \
-    [*https://github.com/App-vNext/Polly/Wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+-   **Bulkhead.** Repozytorium GitHub. Wdrożenia z zasadami Polly. \
+    [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 -   **Projektowanie aplikacji odporne na platformie Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)

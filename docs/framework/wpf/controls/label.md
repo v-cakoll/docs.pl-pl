@@ -18,23 +18,23 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ffb1a826bb37bddeefae9862e34f59096826685
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 8f8e38dc9560e2e5a35c709572333d0f84f38cda
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="label"></a>Etykieta
 <xref:System.Windows.Controls.Label>Formanty zwykle zawierają informacje w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)].  W przeszłości <xref:System.Windows.Controls.Label> ma zawiera tylko tekst, ale ponieważ <xref:System.Windows.Controls.Label> który jest dostarczany z [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Controls.ContentControl>, może zawierać text lub <xref:System.Windows.UIElement>.  
   
  A <xref:System.Windows.Controls.Label> obsługuje zarówno funkcjonalności i visual klucze dostępu. Często jest używana do włączenia klawiatury szybki dostęp do formantów, takich jak <xref:System.Windows.Controls.TextBox>. Aby przypisać <xref:System.Windows.Controls.Label> do <xref:System.Windows.Controls.Control>ustaw <xref:System.Windows.Controls.Label.Target%2A?displayProperty=nameWithType> właściwości formantu, który należy uzyskać fokusu, gdy użytkownik naciśnie klawisz dostępu.  
   
- Poniższy obraz przedstawia <xref:System.Windows.Controls.Label> "Motywów" przeznaczony <xref:System.Windows.Controls.ComboBox>.  Gdy użytkownik naciśnie, <xref:System.Windows.Controls.ComboBox> uzyskuje fokus.  Aby uzyskać więcej informacji, zobacz [porady: Ustaw właściwość Target etykiety](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
+ Poniższy obraz przedstawia <xref:System.Windows.Controls.Label> "Motywów" przeznaczony <xref:System.Windows.Controls.ComboBox>.  Gdy użytkownik naciśnie, <xref:System.Windows.Controls.ComboBox> uzyskuje fokus.  Aby uzyskać więcej informacji, zobacz [porady: Ustaw właściwość Target etykiety](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8).  
   
  ![Właściwości ekranu pokazuje oznaczonych przez użycie](../../../../docs/framework/wpf/controls/media/labeledby.JPG "LabeledBy")  
   
 ## <a name="in-this-section"></a>W tej sekcji  
- [Porady: Ustaw właściwość Target etykiety](http://msdn.microsoft.com/en-us/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
+ [Porady: Ustaw właściwość Target etykiety](http://msdn.microsoft.com/library/b24c6977-ebcb-4855-a9bb-3fd4435af8f8)  
   
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Windows.Controls.Label>

@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: douge
 ms.workload: dotnet
-ms.openlocfilehash: 0dcb666f317ab285ae0156d2df16947f71665aee
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 15487d4311f896aa09c1c7712292058086a49b50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-installers-to-your-service-application"></a>Porady: dodawanie instalatorów od aplikacji usług
 Program Visual Studio jest dostarczany instalacji składników, które można zainstalować zasoby skojarzone z usługi aplikacji. Instalacja składników zarejestrować poszczególnych usług w systemie, do której jest instalowany i umożliwić Menedżera sterowania usługami wiedzieć, czy Usługa istnieje. Podczas pracy z aplikacją usługi, możesz wybrać link w oknie właściwości można automatycznie dodać odpowiednie pliki instalacyjne do projektu.  
@@ -39,7 +39,7 @@ Program Visual Studio jest dostarczany instalacji składników, które można za
  Nie trzeba wykonać specjalne pisania kodu w ramach programów instalacyjnych, aby poprawnie zainstalować usługi. Jednak czasami konieczne może być modyfikować zawartość pliki instalacyjne, jeśli konieczne jest dodanie specjalne funkcje do procesu instalacji.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-installers-to-your-service-application"></a>Aby dodać instalatorów od aplikacji usług  
   

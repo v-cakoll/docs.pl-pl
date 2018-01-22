@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: d8d47b578d60d2c53aaa4b1f47e86430d3495ed1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 2bfccccbcfa41f8ed67cb309a0e4a3dd9dda6b90
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="entity-framework-overview"></a>Omówienie struktury jednostek
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] To zestaw technologii w ADO.NET, która obsługuje programowanie zorientowane na dane aplikacji. Dla architektów i deweloperów aplikacje zorientowane na dane zmagały z koniecznością osiągnięcia dwóch celów bardzo różnią się. Muszą one modelu jednostki, relacje i logiki problemy biznesowe, które są one rozwiązywania i muszą one również współpracować z aparaty danych używany do przechowywania i pobierania danych. Dane mogą obejmować wiele systemów magazynowania, każdy z protokołami; nawet aplikacji, które działają w systemie pojedynczy magazyn musi równoważenie wymagania systemu magazynu względem wymagań pisania kodu wydajne i łatwy w obsłudze aplikacji.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/17/2018
  Poniższe tematy umożliwiają Dowiedz się więcej o [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]:  
   
  [Wprowadzenie](../../../../../docs/framework/data/adonet/ef/getting-started.md)  
- Podaj informacje o tym, jak do uruchomienia i działanie szybko przy użyciu [szybkiego startu](http://msdn.microsoft.com/en-us/0bc534be-789f-4819-b9f6-76e51d961675), który wskazuje, jak utworzyć prostą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
+ Podaj informacje o tym, jak do uruchomienia i działanie szybko przy użyciu [szybkiego startu](http://msdn.microsoft.com/library/0bc534be-789f-4819-b9f6-76e51d961675), który wskazuje, jak utworzyć prostą [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji.  
   
  [Terminologia programu Entity Framework](../../../../../docs/framework/data/adonet/ef/terminology.md)  
  Definiuje wiele warunków, które zostaną wprowadzone w modelu Entity Data Model i [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] i które są używane w [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji.  

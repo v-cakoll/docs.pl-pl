@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 3149a0629fab704dbcae92095b3ef62dc5f9c36c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0b990c0a6084f3d2866c16aed3a390fdf7717596
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows
 Podczas projektowania i zmodyfikować interfejsu użytkownika w aplikacji formularzy systemu Windows, należy dodać, wyrównywanie i umieść formanty. Formanty są obiekty, które są zawarte w postaci obiektów. Każdy typ formantu ma swój własny zestaw właściwości, metod i zdarzeń, które była odpowiednia dla określonego celu. Można manipulować formantów w Projektancie i napisać kod do dodawania formantów dynamicznie w czasie wykonywania.  
@@ -50,5 +50,5 @@ Podczas projektowania i zmodyfikować interfejsu użytkownika w aplikacji formul
  [Aplikacje klienckie](../../../../docs/framework/develop-client-apps.md)  
  Omówienie tworzenia aplikacji opartych na systemie Windows.  
   
- [Wskazówki dotyczące formularzy systemu Windows](http://msdn.microsoft.com/en-us/fd44d13d-4733-416f-aefc-32592e59e5d9)  
+ [Wskazówki dotyczące formularzy systemu Windows](http://msdn.microsoft.com/library/fd44d13d-4733-416f-aefc-32592e59e5d9)  
  Wyświetla listę tematów wskazówki dotyczące i formantów formularzy systemu Windows.

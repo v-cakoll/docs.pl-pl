@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Wprowadzenie — samouczek
 Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] środowisko programowania. Są one przeznaczone do wypełnienia kolejności na liście w dolnej części tego tematu. Ten samouczek umożliwia poznanie wprowadzające kroków wymaganych do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje klienckie. Usługa udostępnia jeden lub więcej punktów końcowych, z których każdy ujawnia co najmniej jedną operację usługi. *Punktu końcowego* usługi Określa adres, gdzie można znaleźć usługi, powiązania, który zawiera informacje opisujące, jak klient musi komunikować się z usługą i kontrakt definiujący funkcje udostępniony przez usługę klientom.  
@@ -36,7 +36,7 @@ Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!
 > [!NOTE]
 >  Jeśli używasz [!INCLUDE[wv](../../../includes/wv-md.md)] lub nowszymi wersjami systemu operacyjnego Windows, należy uruchomić [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] , przechodząc do Start menu i programu Visual Studio 2011 kliknięcie prawym przyciskiem myszy i wybierając **Uruchom jako Administrator**. Można zawsze uruchomić programu Visual Studio 2011 jako administrator możesz można tworzenia skrótów, kliknij prawym przyciskiem myszy skrótów, wybierz polecenie Właściwości, wybierz **zgodności** i sprawdź **uruchomić ten program jako administrator** wyboru. Po uruchomieniu programu Visual Studio 2011 z ten skrót będzie zawsze Uruchom jako administrator.  
   
- Dla aplikacji przykładowej, które może być pobierany na dysku twardym i uruchom można znaleźć w tematach w [przykładów Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). W tym temacie można znaleźć, w szczególności [wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Dla aplikacji przykładowej, które może być pobierany na dysku twardym i uruchom można znaleźć w tematach w [przykładów Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). W tym temacie można znaleźć, w szczególności [wprowadzenie](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Aby uzyskać więcej szczegółowych informacji o tworzeniu usług i klientów, zobacz [podstawowe programowania WCF](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Tematy zawarte w tej sekcji mają na celu umożliwiają szybkie narażenia na [!
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation — przykłady](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Podstawowy cykl życia programowania](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

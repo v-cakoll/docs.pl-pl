@@ -25,27 +25,27 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1008de7e32143ae41658566f5c596f4112a88a27
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows
 Niewizualne kontrolki (lub składnik) zapewnia funkcje do aplikacji. W odróżnieniu od innych kontrolek składników nie udostępniają interfejsu użytkownika dla użytkownika i w związku z tym nie trzeba będzie wyświetlany na powierzchni projektanta formularzy systemu Windows. Gdy składnik zostanie dodany do formularza, Projektant formularzy systemu Windows wyświetla o zmiennym rozmiarze na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu formantu do składnika na pasku zadań, można wybrać składnika i ustawienia swoich właściwości, jak w przypadku innych formantu w formularzu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>Aby dodać składnik do formularza systemu Windows  
   
-1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formularzy systemu Windows w Projektancie](http://msdn.microsoft.com/en-us/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
+1.  Otwórz formularz. Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie formularzy systemu Windows w Projektancie](http://msdn.microsoft.com/library/bf3f1e5b-ea07-4529-85c6-6af3ded0cec5).  
   
 2.  W **przybornika**, kliknij i przeciągnij go do formularza.  
   
      Składnik zostanie wyświetlona na pasku składnika.  
   
- Ponadto składniki można dodać do formularza w czasie wykonywania. Jest to typowy scenariusz, szczególnie, ponieważ składniki nie ma wyrażenia visual, w przeciwieństwie do formantów interfejsu użytkownika. W poniższym przykładzie <xref:System.Windows.Forms.Timer> dodawania składnika w czasie wykonywania. (Należy pamiętać, że [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zawiera szereg różnych czasomierze; w takim przypadku należy użyć formularzy systemu Windows <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji na temat różnych czasomierze w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/en-us/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Ponadto składniki można dodać do formularza w czasie wykonywania. Jest to typowy scenariusz, szczególnie, ponieważ składniki nie ma wyrażenia visual, w przeciwieństwie do formantów interfejsu użytkownika. W poniższym przykładzie <xref:System.Windows.Forms.Timer> dodawania składnika w czasie wykonywania. (Należy pamiętać, że [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zawiera szereg różnych czasomierze; w takim przypadku należy użyć formularzy systemu Windows <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji na temat różnych czasomierze w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Składniki często mają właściwości specyficzne dla kontroli, które muszą być ustawione dla składnika efektywnie działać. W przypadku liczby <xref:System.Windows.Forms.Timer> poniższego składnika, ustawić `Interval` właściwości. Pamiętaj, podczas dodawania składników do projektu, ustawienie właściwości wymagane dla tego składnika.  

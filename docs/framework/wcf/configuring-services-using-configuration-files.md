@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 11229a5677341db05223116c932f13b1f567e712
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy użyciu pliku konfiguracji zapewnia elastyczność udostępniania punktu końcowego i Usługa danych zachowanie w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie przedstawiono podstawowe metody dostępne.  
@@ -84,24 +84,24 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ### <a name="the-service-element"></a>\<Usługi > — Element  
  Każda usługa ma następujące atrybuty:  
   
--   `name`., Określa typ, który zawiera implementację kontraktu usługi. Jest to pełna nazwa, która składa się z przestrzeni nazw, okres, a następnie nazwę typu. Na przykład `"MyNameSpace.myServiceType"`.  
+-   `name`. Określa typ, który zawiera implementację kontraktu usługi. Jest to pełna nazwa, która składa się z przestrzeni nazw, okres, a następnie nazwę typu. Na przykład `"MyNameSpace.myServiceType"`.  
   
--   `behaviorConfiguration`., Określa nazwę jednego z `behavior` elementy znalezione w `behaviors` elementu. Zachowanie określonego reguluje akcje, takie jak określa, czy usługa umożliwia personifikacji. Jeśli wartość jest pusta nazwa lub nie `behaviorConfiguration` podano domyślny zestaw zachowań usługi jest dodawana do usługi.  
+-   `behaviorConfiguration`. Określa nazwę jednego z `behavior` elementy znalezione w `behaviors` elementu. Zachowanie określonego reguluje akcje, takie jak określa, czy usługa umożliwia personifikacji. Jeśli wartość jest pusta nazwa lub nie `behaviorConfiguration` podano domyślny zestaw zachowań usługi jest dodawana do usługi.  
   
 -   [\<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
   
 ### <a name="the-endpoint-element"></a>\<Punktu końcowego > — Element  
  Każdy punkt końcowy wymaga adresu, powiązania i kontraktu, które są reprezentowane przez następujące atrybuty:  
   
--   `address`., Określa usługi identyfikator URI (Uniform Resource), może to adres bezwzględny lub taki, który znajduje się względem adres podstawowy usługi. Jeśli wartość pustego ciągu, informuje, że punkt końcowy jest dostępny na adres podstawowy, który został określony podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
+-   `address`. Określa usługi identyfikator URI (Uniform Resource), może to adres bezwzględny lub taki, który znajduje się względem adres podstawowy usługi. Jeśli wartość pustego ciągu, informuje, że punkt końcowy jest dostępny na adres podstawowy, który został określony podczas tworzenia <xref:System.ServiceModel.ServiceHost> dla usługi.  
   
--   `binding`., Zazwyczaj określa powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.WSHttpBinding>, ale można również określić powiązania zdefiniowane przez użytkownika. Określone powiązanie Określa typ transportu, zabezpieczeń i kodowanie używane i niezawodne sesje, transakcje lub przesyłania strumieniowego obsługiwane czy jest włączone.  
+-   `binding`. Zazwyczaj określa powiązania dostarczane przez system, takich jak <xref:System.ServiceModel.WSHttpBinding>, ale można również określić powiązania zdefiniowane przez użytkownika. Określone powiązanie Określa typ transportu, zabezpieczeń i kodowanie używane i niezawodne sesje, transakcje lub przesyłania strumieniowego obsługiwane czy jest włączone.  
   
--   `bindingConfiguration`., Jeśli wartości domyślne powiązania muszą zostać zmodyfikowane, można to zrobić przez skonfigurowanie odpowiednie `binding` element `bindings` elementu. Ten atrybut powinien mieć taką samą wartość jak `name` atrybutu `binding` element, który służy do zmiany ustawień domyślnych. Jeśli nazwa nie jest określony, lub nie `bindingConfiguration` określono powiązanie, powiązanie domyślny typ powiązania zostanie użyta w punkcie końcowym.  
+-   `bindingConfiguration`. Jeśli wartości domyślne powiązania muszą zostać zmodyfikowane, można to zrobić przez skonfigurowanie odpowiednie `binding` element `bindings` elementu. Ten atrybut powinien mieć taką samą wartość jak `name` atrybutu `binding` element, który służy do zmiany ustawień domyślnych. Jeśli nazwa nie jest określony, lub nie `bindingConfiguration` określono powiązanie, powiązanie domyślny typ powiązania zostanie użyta w punkcie końcowym.  
   
--   `contract`., Określa interfejs, który definiuje kontrakt. To jest zaimplementowana w wspólny typ środowiska uruchomieniowego (języka wspólnego CLR) język określony przez interfejs `name` atrybutu `service` elementu.  
+-   `contract`. Określa interfejs, który definiuje kontrakt. To jest zaimplementowana w wspólny typ środowiska uruchomieniowego (języka wspólnego CLR) język określony przez interfejs `name` atrybutu `service` elementu.  
   
--   [\<punkt końcowy > odwołanie do elementu](http://msdn.microsoft.com/en-us/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
+-   [\<punkt końcowy > odwołanie do elementu](http://msdn.microsoft.com/library/13aa23b7-2f08-4add-8dbf-a99f8127c017)  
   
 ### <a name="the-bindings-element"></a>\<Powiązania > — Element  
  `bindings` Element zawiera specyfikacje dla wszystkich powiązań, które mogą być używane przez dowolnego punktu końcowego zdefiniowana w dowolnej usługi.  
@@ -111,7 +111,7 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ### <a name="the-binding-element"></a>\<Powiązania > — Element  
  `binding` Elementów zawartych w `bindings` element może być jedną z powiązania dostarczane przez system (zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md)) lub niestandardowego powiązania (zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` Element ma `name` atrybutu odpowiadająca powiązania z punktem końcowym określone w `bindingConfiguration` atrybutu `endpoint` elementu. Jeśli nazwa nie zostanie określona, a następnie tego powiązania odpowiada wartość domyślna tego typu powiązania.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfigurowanie usług i klientów, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfigurowanie usług i klientów, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<Powiązanie >](../../../docs/framework/misc/binding.md)  
   
@@ -123,7 +123,7 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ### <a name="the-behavior-element"></a>\<Zachowanie > — Element  
  Każdy `behavior` element jest identyfikowany przez `name` atrybutu i zawiera albo dostarczane przez system zachowanie, takich jak <`throttling`>, lub zachowania niestandardowego. Jeśli nazwa nie jest określony element tego zachowania odpowiada domyślnego zachowania usługi lub punktu końcowego.  
   
- [\<zachowanie >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Jak używać powiązania i konfiguracje zachowanie  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]można łatwo udostępniać konfiguracje między punktami końcowymi za pomocą systemu odniesienia w konfiguracji. Zamiast bezpośrednio przypisywać wartości konfiguracji punktu końcowego, wartości konfiguracji odnoszące się do powiązania są pogrupowane w `bindingConfiguration` elementów w `<binding>` sekcji. Konfiguracja powiązania jest nazwaną grupę ustawień w powiązaniu. Następnie można odwoływać się punkty końcowe `bindingConfiguration` według nazwy.  
@@ -274,6 +274,6 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
   
 ## <a name="see-also"></a>Zobacz też  
  [Uproszczona konfiguracja](../../../docs/framework/wcf/simplified-configuration.md)  
- [Konfigurowanie systemu Windows Communication Foundation aplikacji](http://msdn.microsoft.com/en-us/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
+ [Konfigurowanie systemu Windows Communication Foundation aplikacji](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a)  
  [\<usługi >](../../../docs/framework/configure-apps/file-schema/wcf/service.md)  
  [\<Powiązanie >](../../../docs/framework/misc/binding.md)

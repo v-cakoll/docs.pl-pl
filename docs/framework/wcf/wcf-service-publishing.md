@@ -14,11 +14,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4e3d86153d4192e04e55fb9e99ef588b45511560
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 823edadf7d387d1a509edbdf839ac6eeece5d41f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="wcf-service-publishing"></a>Publikowanie usług WCF
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Usługa publikowania pomaga w postępu wczesne środowiska programowania dostarczonych przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego faktycznie wdrażanie aplikacji w środowisku produkcyjnym do celów testowych. Przed dokonaniem planu wdrożenia końcowego można użyć [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi publikowania, aby sprawdzić, czy Twoje [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa wykonuje poprawnie i jest gotowy do opublikowania. Można również wdrożyć Twojej [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi biblioteki do testowania różnych miejsc docelowych.  
@@ -30,13 +30,13 @@ ms.lasthandoff: 12/22/2017
   
 -   Biblioteka usługi zespolonego.  
   
- Te szablony usług można znaleźć, wybierając **pliku** -> **nowy projekt** -> **Visual Basic** lub **Visual C#**  ->  **WCF**. W przypadku innych szablonów usługi WCF w tej lokalizacji (w tym aplikacji usługi przepływu pracy WCF i aplikacji usługi WCF) można opublikować za pomocą [jednym kliknięciem publikowania aplikacji sieci web](https://msdn.microsoft.com/en-us/library/dd465337\(v=vs.110\).aspx).  
+ Te szablony usług można znaleźć, wybierając **pliku** -> **nowy projekt** -> **Visual Basic** lub **Visual C#**  ->  **WCF**. W przypadku innych szablonów usługi WCF w tej lokalizacji (w tym aplikacji usługi przepływu pracy WCF i aplikacji usługi WCF) można opublikować za pomocą [jednym kliknięciem publikowania aplikacji sieci web](https://msdn.microsoft.com/library/dd465337\(v=vs.110\).aspx).  
   
  Usługi mogą być publikowane w następujących lokalizacjach docelowych.  
   
 -   Lokalne usługi IIS.  
   
--   System plików.  
+-   File System.  
   
 -   Witryny FTP.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="svc-file"></a>. Pliku SVC  
  Operacja publikowania generuje plik *.svc dla każdego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, czy plik istnieje lub nie, aby upewnić się, ważność wersji. Istnieją dwa typy plików svc: jeden dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi i zespolonego usługi biblioteki, a innym sekwencyjnego i Biblioteka usługi przepływu pracy komputera stanu. Wygenerowany \*pliku svc jest kopiowany do folderu głównego w lokalizacji docelowej.  
   
-### <a name="webconfig-file"></a>Plik Web.config  
+### <a name="webconfig-file"></a>Web.config File  
  Zawsze, gdy projekt jest opublikowana w lokalizacji docelowej określonej tworzenia pliku Web.config.  
   
  Wygenerowany plik Web.config zawiera sekcje sieci Web, które są przydatne w przypadku usługi hostingu sieci Web i zawartość pliku App.config dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi z następującymi zmianami:  

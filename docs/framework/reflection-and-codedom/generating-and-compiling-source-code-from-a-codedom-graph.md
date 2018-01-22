@@ -38,11 +38,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 56e2effec282900101fc0cbe489c76b523184ab2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b99dacb5a30cd7b12a5a5dd96bf9fe25b32ab984
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>Generowanie i kompilowanie kodu źródłowego z wykresu CodeDOM
 <xref:System.CodeDom.Compiler> Przestrzeń nazw zawiera interfejsy do generowania kodu źródłowego z wykresów CodeDOM obiektu i zarządzania kompilacji z kompilatorów obsługiwane. Dostawca kodu może wygenerować kodu źródłowego w określonym języku programowania zgodnie z wykresu CodeDOM. Klasa, która pochodzi z <xref:System.CodeDom.Compiler.CodeDomProvider> zwykle zapewnia metody dla Generowanie i kompilowanie kodu dla języka dostawca obsługuje.  
@@ -106,4 +106,4 @@ ms.lasthandoff: 12/22/2017
  <xref:System.CodeDom>  
  <xref:System.CodeDom.Compiler>  
  [Dynamiczne generowanie i kompilacja kodu źródłowego](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)  
- [Krótki przewodnik codeDOM](http://msdn.microsoft.com/en-us/c77b8bfd-0a32-4e36-b59a-4f687f32c524)
+ [Krótki przewodnik codeDOM](http://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)

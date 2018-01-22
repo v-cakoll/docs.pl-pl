@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 4255356d4e50f3e8be28024f29701e0e9c010473
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b2ed0a0393f505d0126508e574b1cd9abe138866
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="application-settings-attributes"></a>Atrybuty ustawień aplikacji
 Architektura ustawień aplikacji zawiera wiele atrybutów, które można zastosować do klasy otoki ustawień aplikacji lub jego poszczególnych właściwości. Te atrybuty są badane w czasie wykonywania przez infrastrukturę ustawienia aplikacji, często w szczególności dostawcy ustawień, aby dostosować działanie do określonych potrzeb otoki niestandardowe.  
@@ -52,4 +52,4 @@ Architektura ustawień aplikacji zawiera wiele atrybutów, które można zastoso
  <xref:System.Configuration.ApplicationSettingsBase>  
  <xref:System.Configuration.SettingsProvider>  
  [Architektura ustawień aplikacji](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)  
- [Instrukcje: tworzenie ustawień aplikacji](http://msdn.microsoft.com/en-us/53b3af80-1c02-4e35-99c6-787663148945)
+ [Instrukcje: tworzenie ustawień aplikacji](http://msdn.microsoft.com/library/53b3af80-1c02-4e35-99c6-787663148945)

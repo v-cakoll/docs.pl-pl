@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 55f3393c84ec08d3c3944552ac2bed7d15dd025f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 4b8b795454ab038b9e992c5e1187a0c4dcb46c76
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="sql-server-express-user-instances"></a>Wystąpienia programu SQL Server Express użytkownika
 Microsoft SQL Server Express Edition, (SQL Server Express) obsługuje funkcję wystąpienia użytkownika, który jest dostępny tylko w przypadku używania dostawcy danych programu .NET Framework dla programu SQL Server (`SqlClient`). Wystąpienia użytkownika jest osobnego wystąpienia programu SQL Server Express aparat bazy danych jest generowany przez wystąpienie nadrzędne. Zezwalaj na użytkowników, którzy nie są administratorami na swoich komputerach lokalnych, aby podłączyć się do programu SQL Server Express baz danych, a wystąpienia użytkownika. Każde wystąpienie jest uruchamiany w kontekście zabezpieczeń użytkownika na podstawie jednego wystąpienia na użytkownika.  
@@ -157,7 +157,7 @@ private static void OpenSqlConnection()
   
 -   Dowolnej aplikacji pojedynczego użytkownika, których udostępnianie danych nie jest wymagane.  
   
--   Wdrożenie ClickOnce. .NET Framework 2.0 (lub nowszej) i programu SQL Server Express są już zainstalowane na komputerze docelowym, pakiet instalacyjny pobrane wyniku akcji ClickOnce można instalować i używane przez użytkowników niebędących administratorami. Należy pamiętać, że dla administrator musi zainstalować programu SQL Server Express, jeżeli jest to część instalacji. Aby uzyskać więcej informacji, zobacz [ClickOnce wdrożenia dla aplikacji systemu Windows Forms](http://msdn.microsoft.com/en-us/34d8c770-48f2-460c-8d67-4ea5684511df).  
+-   Wdrożenie ClickOnce. .NET Framework 2.0 (lub nowszej) i programu SQL Server Express są już zainstalowane na komputerze docelowym, pakiet instalacyjny pobrane wyniku akcji ClickOnce można instalować i używane przez użytkowników niebędących administratorami. Należy pamiętać, że dla administrator musi zainstalować programu SQL Server Express, jeżeli jest to część instalacji. Aby uzyskać więcej informacji, zobacz [ClickOnce wdrożenia dla aplikacji systemu Windows Forms](http://msdn.microsoft.com/library/34d8c770-48f2-460c-8d67-4ea5684511df).  
   
 -   W dedykowanym hostingu ASP.NET przy użyciu uwierzytelniania systemu Windows. Pojedyncze wystąpienie programu SQL Server Express może być hostowana w sieci intranet. Aplikacja nawiązuje połączenie przy użyciu konta systemu Windows ASPNET nie przy użyciu personifikacji. Wystąpienia użytkownika nie można używać dla innych firm lub udostępnionego hosting scenariuszy, w którym wszystkie aplikacje czy współużytkują to samo wystąpienie użytkownika nie jest już pozostać odizolowane od siebie.  
   

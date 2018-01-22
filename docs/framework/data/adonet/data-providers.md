@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: ec484bc544f2889d6f37055cb9863b4806ec20c8
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: a78654f5c8de480b1eb38fbf25fbc923a30a0d25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="net-framework-data-providers"></a>Dostawcy danych .NET framework
 A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawca danych służy do nawiązywania połączenia z bazą danych, wykonywania poleceń i pobierania wyników. Wyniki są albo przetwarzane bezpośrednio, umieszczone w <xref:System.Data.DataSet> aby widoczne dla użytkownika, zgodnie z potrzebami, połączony z danymi z wielu źródeł lub węzłach między warstwami. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]dostawcy danych to lekkie, tworzenie minimalnego warstwy między źródłem danych i kod, zwiększenie wydajności bez ograniczania funkcjonalności.  
@@ -166,7 +166,7 @@ using System.Data.OracleClient;
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]' Data Provider for Oracle|Zalecane dla Środkowej i warstwy pojedynczej aplikacji, które używają źródła danych Oracle.|  
   
 ## <a name="entityclient-provider"></a>Dostawca EntityClient  
- Dostawca EntityClient jest używany do uzyskiwania dostępu do danych oparte na modelu danych jednostki (EDM). W przeciwieństwie do innych .NET Framework dostawców danych nie współdziała bezpośrednio ze źródłem danych. Zamiast tego używa SQL jednostki do komunikowania się z podstawowym dostawcą danych. Aby uzyskać więcej informacji, zobacz [EntityClient i SQL jednostki](http://msdn.microsoft.com/en-us/49202ab9-ac98-4b4b-a05c-140e422bf527).  
+ Dostawca EntityClient jest używany do uzyskiwania dostępu do danych oparte na modelu danych jednostki (EDM). W przeciwieństwie do innych .NET Framework dostawców danych nie współdziała bezpośrednio ze źródłem danych. Zamiast tego używa SQL jednostki do komunikowania się z podstawowym dostawcą danych. Aby uzyskać więcej informacji, zobacz [EntityClient i SQL jednostki](http://msdn.microsoft.com/library/49202ab9-ac98-4b4b-a05c-140e422bf527).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie ADO.NET](../../../../docs/framework/data/adonet/ado-net-overview.md)  

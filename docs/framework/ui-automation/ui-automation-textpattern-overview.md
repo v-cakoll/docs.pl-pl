@@ -18,11 +18,11 @@ author: Xansky
 ms.author: mhopkins
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: 610b2d44fca43f2745b7b423a5cdb73c5a7d74d1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/22/2017
  Udostępnianie zawartości tekstowej formantu odbywa się za pośrednictwem <xref:System.Windows.Automation.TextPattern> wzorcu kontroli reprezentuje zawartość kontenera tekstu jako tekstu strumienia. Z kolei <xref:System.Windows.Automation.TextPattern> wymaga obsługi z <xref:System.Windows.Automation.Text.TextPatternRange> klasy do udostępnienia styl i formatu atrybutów. <xref:System.Windows.Automation.Text.TextPatternRange>obsługuje <xref:System.Windows.Automation.TextPattern> przez reprezentujący ciągły lub wielu rozłączne obejmuje tekst w kontenerze tekstu z kolekcją <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> i <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktów końcowych. <xref:System.Windows.Automation.Text.TextPatternRange>obsługuje funkcje takie jak zaznaczenia, porównanie, pobieranie i przechodzenia.  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.TextPattern> Klasy nie udostępniają sposób wstawiania lub zmodyfikować tekst. Jednak w zależności od tego formantu, to może być dokonane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> lub za pośrednictwem bezpośredniego klawiatury. Zobacz [TextPattern wstawić tekst przykładowy](http://msdn.microsoft.com/en-us/67353f93-7ee2-42f2-ab76-5c078cf6ca16) przykład.  
+>  <xref:System.Windows.Automation.TextPattern> Klasy nie udostępniają sposób wstawiania lub zmodyfikować tekst. Jednak w zależności od tego formantu, to może być dokonane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> lub za pośrednictwem bezpośredniego klawiatury. Zobacz [TextPattern wstawić tekst przykładowy](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) przykład.  
   
  Funkcje opisane w tym omówieniu jest ułatwianiem dostawców i użytkowników końcowych. Technologie pomocnicze można użyć [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Aby zebrać pełny tekst formatowania informacje o użytkowniku i zapewnić programowe nawigacji i zaznaczonego tekstu przez <xref:System.Windows.Automation.Text.TextUnit> (znak, word, wiersz lub akapitu).  
   

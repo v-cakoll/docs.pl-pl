@@ -1,7 +1,7 @@
 ---
 title: "Analizator przenośność .NET - .NET"
-description: "Dowiedz się, jak można ocenić, jak przenośnego kodu jest między różnymi implementacje .NET przy użyciu narzędzia Analizator przenośność .NET."
-keywords: .NET, .NET core
+description: "Dowiedz się, jak można ocenić, jak przenośnego kodu jest między różne implementacje .NET, w tym oprogramowanie .NET Core, .NET Standard platformy uniwersalnej systemu Windows i Xamarin przy użyciu narzędzia Analizator przenośność .NET."
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 07/26/2017
@@ -13,15 +13,15 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: fef0ddb05cd95c2db5492004c46951bb69ea01d8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośność .NET
 
-Mają być bibliotek obejmującego wiele platform? Chcesz zobaczyć, jak dużo pracy jest wymagana do udostępnienia aplikacji zgodne z innych implementacji .NET? [Analizator przenośność .NET](http://go.microsoft.com/fwlink/?LinkID=507467) to narzędzie, które umożliwia szczegółowe raportu w sposób elastyczny program jest przez implementacje .NET analizując zestawów. Analizator przenośność jest oferowany jako rozszerzenia programu Visual Studio i jako aplikacji konsoli.
+Mają być bibliotek obejmującego wiele platform? Chcesz zobaczyć, jak dużo pracy jest wymagana do uzyskania aplikacji zgodnych z innych implementacji .NET i profile, w tym oprogramowanie .NET Core, .NET Standard platformy uniwersalnej systemu Windows i program Xamarin dla systemu iOS, Android i komputerów Mac? [Analizator przenośność .NET](http://go.microsoft.com/fwlink/?LinkID=507467) to narzędzie, które umożliwia szczegółowe raportu w sposób elastyczny program jest przez implementacje .NET analizując zestawów. Analizator przenośność jest oferowany jako rozszerzenia programu Visual Studio i jako aplikacji konsoli.
 
 ## <a name="new-targets"></a>Nowe elementy docelowe
 

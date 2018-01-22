@@ -33,14 +33,14 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: df2f376da61f49bd00ea39783bc62015b31ba402
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b131b8b66315ffbb769eab059142f729cfaf2a2
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="reflection-in-the-net-framework"></a>Odbicie w oprogramowaniu .NET Framework
-Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](http://msdn.microsoft.com/en-us/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfejsów](http://msdn.microsoft.com/en-us/fd9d5975-5363-4bc9-b883-609f887895e5), i [typów wartości](http://msdn.microsoft.com/en-us/c9c567f8-8ab1-4d88-834d-00f7d92418de). Umożliwia także odbicia Tworzenie wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące określonych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego przeglądu.  
+Klasy w <xref:System.Reflection> przestrzeni nazw, wraz z <xref:System.Type?displayProperty=nameWithType>, umożliwiają uzyskanie informacji na temat załadować [zestawy](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md) i typy zdefiniowane w nich, takich jak [klasy](http://msdn.microsoft.com/library/ad7d3561-271e-4546-82fc-e00b059f27a9), [interfejsów](http://msdn.microsoft.com/library/fd9d5975-5363-4bc9-b883-609f887895e5), i [typów wartości](http://msdn.microsoft.com/library/c9c567f8-8ab1-4d88-834d-00f7d92418de). Umożliwia także odbicia Tworzenie wystąpień typów w czasie wykonywania, a także wywołania i uzyskiwać do nich dostęp. Tematy dotyczące określonych aspektów odbicia, zobacz [Tematy pokrewne](#related_topics) na końcu tego przeglądu.  
   
  [Środowisko uruchomieniowe języka wspólnego](../../../docs/standard/clr.md) zarządza modułu ładującego [domen aplikacji](../../../docs/framework/app-domains/application-domains.md), które stanowią zdefiniowane granice wokół obiektów, które mają ten sam zakres aplikacji. To zarządzanie obejmuje ładowania każdego zestawu, do odpowiedniej domeny aplikacji i określania układu pamięci hierarchii typów w każdym zestawie.  
   

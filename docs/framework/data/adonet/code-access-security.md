@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload: dotnet
-ms.openlocfilehash: 2181682fcdf0468a978dd939dbbcbb4a18cdd38b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: e69073f757c07c5dd262900d4d8f7ad2cc83cdc4
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="code-access-security-and-adonet"></a>Zabezpieczenia dostępu kodu i ADO.NET
 .NET Framework oferuje opartej na rolach zabezpieczeń, a także zabezpieczenia dostępu kodu (CAS), które są implementowane za pomocą wspólnej infrastruktury dostarczanych przez środowisko uruchomieniowe języka wspólnego (CLR). Większość aplikacji na świecie kodu niezarządzanego, wykonywane za pomocą uprawnienia użytkownika lub podmiot zabezpieczeń. W związku z tym systemów komputerowych może być uszkodzony i prywatnych danych zagrożone, gdy złośliwe lub wypełnione błąd oprogramowania jest uruchamiane przez użytkownika z podniesionymi uprawnieniami.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/17/2018
  Środowisko CLR umożliwia kod, aby wykonać te operacje, które kod ma uprawnienia do wykonania. Kod może zażądać uprawnień, a te żądania są honorowane na podstawie zasad zabezpieczeń ustawionych przez administratora.  
   
 > [!NOTE]
->  Kod wykonywany w środowisku CLR nie można udzielić uprawnienia do samej siebie. Na przykład kod mogą żądać i przyznać uprawnienia mniej niż zasady zabezpieczeń, ale będzie można nigdy nie przyznano więcej uprawnień. Podczas udzielania uprawnień, zaczynać się w ogóle nie ma uprawnień, a następnie dodaj najwęższym uprawnienia dla określonego zadania wykonywane. Następnie odrzuciła pojedyncze pliki, począwszy od wszystkie uprawnienia prowadzi do niebezpieczne aplikacje, które mogą zawierać luk w zabezpieczeniach niezamierzone z udzielanie więcej uprawnień niż jest to wymagane. Aby uzyskać więcej informacji, zobacz [NIB: Konfigurowanie zasad zabezpieczeń](http://msdn.microsoft.com/en-us/0f130bcd-1bba-4346-b231-0bcca7dab1a4) i [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+>  Kod wykonywany w środowisku CLR nie można udzielić uprawnienia do samej siebie. Na przykład kod mogą żądać i przyznać uprawnienia mniej niż zasady zabezpieczeń, ale będzie można nigdy nie przyznano więcej uprawnień. Podczas udzielania uprawnień, zaczynać się w ogóle nie ma uprawnień, a następnie dodaj najwęższym uprawnienia dla określonego zadania wykonywane. Następnie odrzuciła pojedyncze pliki, począwszy od wszystkie uprawnienia prowadzi do niebezpieczne aplikacje, które mogą zawierać luk w zabezpieczeniach niezamierzone z udzielanie więcej uprawnień niż jest to wymagane. Aby uzyskać więcej informacji, zobacz [NIB: Konfigurowanie zasad zabezpieczeń](http://msdn.microsoft.com/library/0f130bcd-1bba-4346-b231-0bcca7dab1a4) i [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
  Istnieją trzy typy uprawnień dostępu do kodu:  
   
@@ -49,14 +49,14 @@ ms.lasthandoff: 01/17/2018
 ### <a name="requesting-permissions"></a>Żądanie uprawnień  
  Celem żądania uprawnień jest poinformowanie uprawnienia, które aplikacja wymaga, aby można było uruchomić i zapewnia, że otrzyma uprawnienia faktycznie wymagane przez środowisko uruchomieniowe. Na przykład jeśli aplikacja wymaga do zapisywania danych na dysku lokalnym, wymaga <xref:System.Security.Permissions.FileIOPermission>. Jeśli nie zostało udzielone uprawnienie, aplikacja zakończy się niepowodzeniem podczas próby zapisu na dysku. Jednak jeśli aplikacja żąda `FileIOPermission` i nie udzielono uprawnienia, aplikacja zostanie wygenerowany wyjątek na początku i nie zostanie załadowany.  
   
- W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz zażądać, że go nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku usterki lub złośliwymi atakami kodu nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [NIB: żąda uprawnienia](http://msdn.microsoft.com/en-us/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
+ W przypadku której aplikacja musi tylko do odczytu danych z dysku możesz zażądać, że go nigdy nie zostać przyznane uprawnienia do zapisu. W przypadku usterki lub złośliwymi atakami kodu nie może uszkodzić dane, na którym działa. Aby uzyskać więcej informacji, zobacz [NIB: żąda uprawnienia](http://msdn.microsoft.com/library/0447c49d-8cba-45e4-862c-ff0b59bebdc2).  
   
 ## <a name="role-based-security-and-cas"></a>Zabezpieczenia oparte na rolach i urzędy certyfikacji  
  Implementacja oparta na rolach zabezpieczeń i zabezpieczeń dostępu do kodu (CAS) zwiększa ogólną zabezpieczeń aplikacji. Oparta na rolach zabezpieczeń może opierać się na konto systemu Windows lub tożsamość niestandardowa, udostępniając informacji na temat podmiotu zabezpieczeń bieżącego wątku. Ponadto aplikacje często są wymagane w celu zapewnienia dostępu do danych i zasobów na podstawie poświadczeń dostarczonych przez użytkownika. Zazwyczaj takie aplikacje Sprawdź rolę użytkownika i umożliwiają dostęp do zasobów na podstawie tych ról.  
   
  Zabezpieczenia oparte na rolach umożliwia składnik, aby zidentyfikować bieżąca liczba użytkowników i ich skojarzone role w czasie wykonywania. Te informacje jest następnie mapowany do określania zestawu uprawnień w czasie wykonywania za pomocą zasad CAS. W domenie określonej aplikacji hosta można zmienić domyślnych zasad zabezpieczeń opartych na rolach i ustawianie podmiotu zabezpieczeń domyślny, który reprezentuje użytkownika oraz role skojarzone z użytkownikiem.  
   
- Środowisko CLR używa uprawnienia do implementacji jego mechanizmu wymuszania ograniczeń kodu zarządzanego. Uprawnienia zabezpieczeń opartych na rolach udostępniają mechanizm wykrywania, czy użytkownik (lub agenta, działając w imieniu użytkownika) ma określonej tożsamości lub jest członkiem określonej roli. Aby uzyskać więcej informacji, zobacz [uprawnień zabezpieczeń](http://msdn.microsoft.com/en-us/b03757b4-e926-4196-b738-3733ced2bda0).  
+ Środowisko CLR używa uprawnienia do implementacji jego mechanizmu wymuszania ograniczeń kodu zarządzanego. Uprawnienia zabezpieczeń opartych na rolach udostępniają mechanizm wykrywania, czy użytkownik (lub agenta, działając w imieniu użytkownika) ma określonej tożsamości lub jest członkiem określonej roli. Aby uzyskać więcej informacji, zobacz [uprawnień zabezpieczeń](http://msdn.microsoft.com/library/b03757b4-e926-4196-b738-3733ced2bda0).  
   
  W zależności od typu aplikacji, które tworzysz należy również rozważyć wdrożenie oparte na rolach uprawnienia w bazie danych. Aby uzyskać więcej informacji dotyczących zabezpieczeń opartych na rolach w programie SQL Server, zobacz [zabezpieczeń serwera SQL](../../../../docs/framework/data/adonet/sql/sql-server-security.md).  
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 01/17/2018
  Aby włączyć korzystanie z <xref:System.Data.SqlClient> uprawnienia dla określonej strefy, administrator systemu musi utworzyć niestandardowe uprawnienia ustawić i ustaw go jako zestawu uprawnień dla określonej strefy. Domyślne zestawy uprawnień, takich jak `LocalIntranet`, nie może być modyfikowany. Na przykład, aby uwzględnić <xref:System.Data.SqlClient> uprawnienia dla kodu, który ma <xref:System.Security.Policy.Zone> z `LocalIntranet`, administrator systemu można skopiować zestawu uprawnień dla `LocalIntranet`, zmień jego nazwę na "CustomLocalIntranet", Dodaj <xref:System.Data.SqlClient> zaimportować uprawnienia zestawu przy użyciu uprawnień CustomLocalIntranet [Caspol.exe (narzędzie zasad zabezpieczenia dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)i ustaw zestaw uprawnień `LocalIntranet_Zone` do CustomLocalIntranet.  
   
 ### <a name="sample-permission-set"></a>Przykładowy zestaw uprawnień  
- Poniżej przedstawiono przykładowe zestawu uprawnień dla dostawcy danych programu .NET Framework dla programu SQL Server w scenariuszu częściowo zaufany. Aby uzyskać informacje o tworzeniu zestawów uprawnień niestandardowych, zobacz [NIB: Konfigurowanie uprawnień ustawia przy użyciu Caspol.exe](http://msdn.microsoft.com/en-us/94e2625e-21ad-4038-af36-6d1f9df40a57).  
+ Poniżej przedstawiono przykładowe zestawu uprawnień dla dostawcy danych programu .NET Framework dla programu SQL Server w scenariuszu częściowo zaufany. Aby uzyskać informacje o tworzeniu zestawów uprawnień niestandardowych, zobacz [NIB: Konfigurowanie uprawnień ustawia przy użyciu Caspol.exe](http://msdn.microsoft.com/library/94e2625e-21ad-4038-af36-6d1f9df40a57).  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -171,7 +171,7 @@ AllowBlankPassword="False">
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>Weryfikowanie przy użyciu uprawnień zabezpieczeń dostępu kodu ADO.NET  
- W scenariuszach częściowo zaufane, można wymagają uprawnień urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie jest niedozwolone przez zasady zabezpieczeń z ograniczeniami w celu, jest zwracany wyjątek, przed uruchomieniem kodu. Aby uzyskać więcej informacji dotyczących zasad zabezpieczeń, zobacz [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) i [NIB: najlepszych rozwiązań dotyczących zasad zabezpieczeń](http://msdn.microsoft.com/en-us/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
+ W scenariuszach częściowo zaufane, można wymagają uprawnień urzędów certyfikacji dla określonej metody w kodzie, określając <xref:System.Data.SqlClient.SqlClientPermissionAttribute>. Jeśli to uprawnienie jest niedozwolone przez zasady zabezpieczeń z ograniczeniami w celu, jest zwracany wyjątek, przed uruchomieniem kodu. Aby uzyskać więcej informacji dotyczących zasad zabezpieczeń, zobacz [NIB: Zarządzanie zasadami dotyczącymi zabezpieczeń](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9) i [NIB: najlepszych rozwiązań dotyczących zasad zabezpieczeń](http://msdn.microsoft.com/library/d49bc4d5-efb7-4caa-a2fe-e4d3cec63c05).  
   
 ### <a name="example"></a>Przykład  
  W poniższym przykładzie pokazano, jak napisać kod, który wymaga ciągu określonego połączenia. Symuluje, odmawianie nieograniczonych uprawnień do <xref:System.Data.SqlClient>, które administrator systemu może zaimplementować przy użyciu zasad CAS w świecie rzeczywistym.  
@@ -203,11 +203,11 @@ Failed, as expected: Request failed.
 ## <a name="interoperability-with-unmanaged-code"></a>Współdziałanie z kodem niezarządzanym  
  Kod uruchamiany poza środowiskiem CLR jest nazywany kodu niezarządzanego. W związku z tym mechanizmy zabezpieczeń, takich jak urzędy certyfikacji nie można zastosować do kodu niezarządzanego. Składniki modelu COM, interfejsy ActiveX i funkcji Win32 API są przykłady kodu niezarządzanego. Zabezpieczenia specjalne kwestie podczas wykonywania kodu niezarządzanego, aby nie stanowią zagrożenia zabezpieczeń ogólną aplikacji. Aby uzyskać więcej informacji, zobacz [współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md).  
   
- .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM dzięki dostępowi do COM interop. COM — składniki można zastosować do aplikacji autonomicznej .NET Framework za pomocą narzędzi międzyoperacyjnego COM do importowania odpowiednich typów COM. Po zaimportowaniu typów COM są gotowe do użycia. Współdziałanie z COM umożliwia również COM klientom dostęp do kodu zarządzanego, eksportowanie metadanych zestawu do biblioteki typów i rejestrowanie zarządzanego składnika jako składnik modelu COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](http://msdn.microsoft.com/en-us/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
+ .NET Framework obsługuje także zgodności z poprzednimi wersjami istniejących składników COM dzięki dostępowi do COM interop. COM — składniki można zastosować do aplikacji autonomicznej .NET Framework za pomocą narzędzi międzyoperacyjnego COM do importowania odpowiednich typów COM. Po zaimportowaniu typów COM są gotowe do użycia. Współdziałanie z COM umożliwia również COM klientom dostęp do kodu zarządzanego, eksportowanie metadanych zestawu do biblioteki typów i rejestrowanie zarządzanego składnika jako składnik modelu COM. Aby uzyskać więcej informacji, zobacz [zaawansowane współdziałanie COM](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/en-us/bd61be84-c143-409a-a75a-44253724f784)  
- [Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/en-us/23a20143-241d-4fe5-9d9f-3933fd594c03)  
- [Zabezpieczenia oparte na rolach](http://msdn.microsoft.com/en-us/239442e3-5be4-4203-b7fd-793baffea803)  
+ [Pave – zabezpieczeń w trybie macierzystym i kodu platformy .NET Framework](http://msdn.microsoft.com/library/bd61be84-c143-409a-a75a-44253724f784)  
+ [Zabezpieczenia dostępu kodu](http://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)  
+ [Zabezpieczenia oparte na rolach](http://msdn.microsoft.com/library/239442e3-5be4-4203-b7fd-793baffea803)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

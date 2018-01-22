@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: dd76921059222c9c5b8958ce8e1761a3f04cb037
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9647ce04528df390620dba67619a538d96aa7068
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="printing-how-to-topics"></a>Drukowanie Tematy porad
 Tematy w tej sekcji przedstawiono sposób korzystania z drukowania i dołączone do funkcji zarządzania system drukowania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] oraz nowe [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ścieżki wydruku.  
@@ -42,7 +42,7 @@ Tematy w tej sekcji przedstawiono sposób korzystania z drukowania i dołączone
  [Wyliczanie podzbioru kolejek drukowania](../../../../docs/framework/wpf/advanced/how-to-enumerate-a-subset-of-print-queues.md)  
  Instrukcje dotyczące generowania listę drukarek posiadające niektórych właściwości.  
   
- [NOTINBUILD: Porady: rozszerzanie schematu wydruku i tworzyć nowe klasy wydruku System](http://msdn.microsoft.com/en-us/a3600218-1ea5-478a-9853-6560464f2885)  
+ [NOTINBUILD: Porady: rozszerzanie schematu wydruku i tworzyć nowe klasy wydruku System](http://msdn.microsoft.com/library/a3600218-1ea5-478a-9853-6560464f2885)  
  Omówienie rozszerzonej jak zarządzanego kodu programistów schemat można rozszerzyć drukowania do urządzeń drukujących specjalistyczne lub drukarki z funkcjami nowych lub nieznanych.  
   
  [Pobieranie właściwości obiektu systemowego drukowania bez odbicia](../../../../docs/framework/wpf/advanced/how-to-get-print-system-object-properties-without-reflection.md)  

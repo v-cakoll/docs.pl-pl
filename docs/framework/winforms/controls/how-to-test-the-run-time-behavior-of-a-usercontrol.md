@@ -20,11 +20,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 9ccf386acd50338f1743bbf8f6be38b3267a7103
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 48b7c47a14f27439c60280a5c4202e9f4af76397
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>Porady: testowanie zachowania UserControl w czasie wykonywania
 Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetestować jego zachowania w czasie wykonywania. Można utworzyć projekt oddzielne aplikacji systemu Windows i umieścić formantu w formularzu testu, ale ta procedura jest niewygodne. Sposób szybciej i łatwiej jest użycie **kontener testu UserControl** dostarczane przez program Visual Studio. Ten kontener testowy rozpoczyna się bezpośrednio z projektu biblioteki sterowania systemu Windows.  
@@ -33,14 +33,14 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
 >  W celu załadować kontenera testu z <xref:System.Windows.Forms.UserControl>, kontrolka musi mieć co najmniej jeden konstruktor publiczny.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 > [!NOTE]
 >  Formant Visual C++ nie można przetestować przy użyciu **kontener testu UserControl**.  
   
 ### <a name="to-test-the-run-time-behavior-of-a-usercontrol"></a>Aby przetestować zachowania UserControl w czasie wykonywania  
   
-1.  Tworzenie projektu biblioteki sterowania systemu Windows o nazwie **TestContainerExample**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki systemu Windows formantu](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Tworzenie projektu biblioteki sterowania systemu Windows o nazwie **TestContainerExample**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki systemu Windows formantu](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  W **Projektant formularzy systemu Windows**, przeciągnij <xref:System.Windows.Forms.Label> kontrolować z **przybornika** na powierzchnię projektu formantu.  
   
@@ -52,7 +52,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
   
 6.  Zamknij kontener testu.  
   
-7.  Dodaj inny formant użytkownika do **TestContainerExample** projektu. Aby uzyskać więcej informacji, zobacz [NIB: porady: Dodawanie istniejących elementów do projektu](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+7.  Dodaj inny formant użytkownika do **TestContainerExample** projektu. Aby uzyskać więcej informacji, zobacz [NIB: porady: Dodawanie istniejących elementów do projektu](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 8.  W **Projektant formularzy systemu Windows**, przeciągnij <xref:System.Windows.Forms.Button> kontrolować z **przybornika** na powierzchnię projektu formantu.  
   
@@ -65,7 +65,7 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
   
 #### <a name="to-test-user-controls-from-another-project"></a>Aby przetestować kontrolek użytkownika z innego projektu  
   
-1.  Tworzenie projektu biblioteki sterowania systemu Windows o nazwie **TestContainerExample2**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki systemu Windows formantu](http://msdn.microsoft.com/en-us/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
+1.  Tworzenie projektu biblioteki sterowania systemu Windows o nazwie **TestContainerExample2**. Aby uzyskać więcej informacji, zobacz [szablon biblioteki systemu Windows formantu](http://msdn.microsoft.com/library/722f4e2d-1310-4ed5-8f33-593337ab66b4).  
   
 2.  W **Projektant formularzy systemu Windows**, przeciągnij <xref:System.Windows.Forms.RadioButton> kontrolować z **przybornika** na powierzchnię projektu formantu.  
   
@@ -82,4 +82,4 @@ Podczas opracowywania <xref:System.Windows.Forms.UserControl>, należy przetesto
  [Instrukcje: tworzenie kontrolek złożonych](../../../../docs/framework/winforms/controls/how-to-author-composite-controls.md)  
  [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual Basic](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-basic.md)  
  [Przewodnik: tworzenie kontrolki złożonej za pomocą języka Visual C#](../../../../docs/framework/winforms/controls/walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
- [Projektanta formantów użytkownika](http://msdn.microsoft.com/en-us/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)
+ [Projektanta formantów użytkownika](http://msdn.microsoft.com/library/2abb9eec-ba32-45cb-b73d-8b52a8bd6bf1)

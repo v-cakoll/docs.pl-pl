@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: a0bd0f8dcde95dcbb5ef8fcf398256b6931859c7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 7f5cd70e71a4a8bc48a3240055117dadc1086a50
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>Porady: blokowanie formantów do formularzy systemu Windows
 Podczas projektowania interfejsu użytkownika (UI) aplikacji systemu Windows, można zablokować formantów po znajdują się one poprawnie, tak aby nie mogą przypadkowo przenieść lub zmienić ich rozmiar przy ustawianiu inne właściwości.  
@@ -29,7 +29,7 @@ Podczas projektowania interfejsu użytkownika (UI) aplikacji systemu Windows, mo
  Ponadto można zablokować i odblokować wszystkich kontrolek w formularzu jednocześnie, co jest przydatne w przypadku wielu formantów, lub można odblokować pojedynczych formantów. Po umieszczeniu wszystkich kontrolek żądanym na formularzu, należy zablokować je w miejscu, aby zapobiec błędnej przepływu.  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-lock-a-control"></a>Aby zablokować formantu  
   

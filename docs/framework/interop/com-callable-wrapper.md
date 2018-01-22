@@ -24,11 +24,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e8c39d3c84fe24f86692c289860f22381a3cf5a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 65d09b33982f62b965d6907902ded98f87d9a97e
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="com-callable-wrapper"></a>Wywoływana otoka COM
 Gdy klient modelu COM wywołuje obiekt środowiska .NET, środowisko uruchomieniowe języka wspólnego tworzy zarządzany obiekt oraz otokę wywoływaną z modelu COM (CCW) dla tego obiektu. Klienci modelu COM nie potrafią się odwoływać bezpośrednio do obiektu środowiska .NET, dlatego używają otoki CCW jako pośrednika umożliwiającego dostęp do obiektu zarządzanego.  
@@ -58,12 +58,12 @@ Interfejsy modelu COM i wywoływana otoka COM
   
 |Interface|Opis|  
 |---------------|-----------------|  
-|**IDispatch**|Udostępnia mechanizm późne powiązania do typu.|  
+|**Idispatch**|Udostępnia mechanizm późne powiązania do typu.|  
 |**IerrorInfo**|Dostarcza opis tekstowy błąd, źródła pliku pomocy, kontekst pomocy i identyfikator GUID interfejsu, który zdefiniowano błędu (zawsze **GUID_NULL** dla klas .NET).|  
 |**IprovideClassInfo**|Umożliwia klientom uzyskanie dostępu do modelu COM **ITypeInfo** interfejsu implementowanego przez zarządzanej klasy.|  
 |**IsupportErrorInfo**|Umożliwia klientowi COM ustalić, czy obiekt zarządzany obsługuje **IErrorInfo** interfejsu. Jeśli tak, umożliwia klientowi uzyskać wskaźnik do najnowszej obiekt wyjątku. Wszystkie typy Obsługa zarządzanego **IErrorInfo** interfejsu.|  
 |**ItypeInfo**|Zawiera informacje o typie dla klasy, która jest dokładnie taka sama jak informacje o typie utworzonego przez Tlbexp.exe.|  
-|**IUnknown**|Udostępnia implementację standardowe **IUnknown** interfejs, z którym klient modelu COM zarządza czasem istnienia CCW i udostępnia koercja typu.|  
+|**Iunknown**|Udostępnia implementację standardowe **IUnknown** interfejs, z którym klient modelu COM zarządza czasem istnienia CCW i udostępnia koercja typu.|  
   
  Zarządzanej klasy oferuje również interfejsy modelu COM, opisane w poniższej tabeli.  
   
@@ -71,8 +71,8 @@ Interfejsy modelu COM i wywoływana otoka COM
 |---------------|-----------------|  
 |(_*Classname*) interfejsu klasy|Interfejs, udostępniane przez środowisko uruchomieniowe i nie są jawnie zdefiniowane, która udostępnia wszystkie interfejsy publiczne, metody, właściwości i pola, które są jawnie widoczne obiektu zarządzanego.|  
 |**IConnectionPoint** i **IconnectionPointContainer**|Interfejs dla obiektów, które źródła na podstawie delegata zdarzenia (interfejs do rejestrowania zdarzeń subskrybentów).|  
-|**Interfejs IdispatchEx**|Interfejs dostarczony przez środowisko uruchomieniowe, jeśli klasa implementuje **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
-|**Interfejsu IEnumVARIANT**|Interfejs dla klasy typ kolekcji, która wylicza obiektów w kolekcji, jeśli klasa implementuje **IEnumerable**.|  
+|**IdispatchEx**|Interfejs dostarczony przez środowisko uruchomieniowe, jeśli klasa implementuje **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
+|**IEnumVARIANT**|Interfejs dla klasy typ kolekcji, która wylicza obiektów w kolekcji, jeśli klasa implementuje **IEnumerable**.|  
   
 ## <a name="introducing-the-class-interface"></a>Wprowadzenie do interfejsu klasy  
  Interfejs klasy, która nie jest jawnie zdefiniowany w zarządzanym kodzie, to interfejs, który udostępnia wszystkie metody publiczne, właściwości pola i zdarzenia, które jawnie są dostępne dla obiektu .NET. Ten interfejs może być interfejsem podwójną lub w trybie tylko do wysyłania. Interfejs klasy uzyskuje nazwę klasy .NET, poprzedzone znaku podkreślenia. Na przykład dla klasy ssak interfejsu klasy jest _Mammal.  
@@ -190,6 +190,6 @@ public class LoanApp : IAnother {
  [Wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md)  
  [Otoki COM](../../../docs/framework/interop/com-wrappers.md)  
  [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Symulowanie symulacje interfejsy modelu COM](http://msdn.microsoft.com/en-us/ad2ab959-e2be-411b-aaff-275c3fba606c)  
+ [Symulowanie symulacje interfejsy modelu COM](http://msdn.microsoft.com/library/ad2ab959-e2be-411b-aaff-275c3fba606c)  
  [Kwalifikowanie typów .NET do międzyoperacyjności](../../../docs/framework/interop/qualifying-net-types-for-interoperation.md)  
  [Wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md)

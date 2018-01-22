@@ -20,11 +20,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: cb66908c28a54d4dc24cb77bd82c59862a7fd789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 91df17448a57f7495dc95fb2b4ab1fa63dd8a27f
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="default-marshaling-for-arrays"></a>Domyślny marshaling dla tablic
 W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruchomieniowe języka wspólnego przekazuje typy tablic jako we/wy parametrów. Z kolei międzyoperacyjnego organizatora przekazuje tablicy, tak jak parametry domyślnie.  
@@ -52,7 +52,7 @@ W aplikacji, składające się wyłącznie z kodu zarządzanego środowisko uruc
 |Typ tablicy zarządzanego|Typ elementu|Ranga|Dolna granica|Notacja podpisu|  
 |------------------------|------------------|----------|-----------------|------------------------|  
 |**ELEMENT_TYPE_ARRAY**|Określony przez typ.|Określony przez rangę.|Opcjonalnie określony przez granice.|*Typ* **[**  *n* ,*m* **]**|  
-|**PO ELEMENCIE ELEMENT_TYPE_CLASS**|Nieznany|Nieznany|Nieznany|**System.Array**|  
+|**ELEMENT_TYPE_CLASS**|Nieznany|Nieznany|Nieznany|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|Określony przez typ.|1|0|*Typ* **[**  *n*  **]**|  
   
 <a name="cpcondefaultmarshalingforarraysanchor2"></a>   
@@ -100,7 +100,7 @@ void New3([MarshalAs(UnmanagedType.SafeArray, SafeArraySubType=VT_BSTR)]
    ref String[] ar);  
 ```  
   
- Wielowymiarowym lub niezerowe granica tablic bezpieczne, można zorganizować kodu zarządzanego, jeśli podpis metody generowane przez Tlbimp.exe są modyfikowane w celu wskazywać typu elementu **ELEMENT_TYPE_ARRAY** zamiast **ELEMENT_ TYPE_SZARRAY**. Alternatywnie można użyć **/sysarray** przełącznik z Tlbimp.exe Aby zaimportować wszystkie tablice jako <xref:System.Array?displayProperty=nameWithType> obiektów. W przypadkach, gdy tablica przekazywany jest znany jako wielowymiarowych możesz edytować wyprodukowanych kod języka pośredniego (MSIL) firmy Microsoft przez Tlbimp.exe i ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat sposobu modyfikowania kodu MSIL, zobacz [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be).  
+ Wielowymiarowym lub niezerowe granica tablic bezpieczne, można zorganizować kodu zarządzanego, jeśli podpis metody generowane przez Tlbimp.exe są modyfikowane w celu wskazywać typu elementu **ELEMENT_TYPE_ARRAY** zamiast **ELEMENT_ TYPE_SZARRAY**. Alternatywnie można użyć **/sysarray** przełącznik z Tlbimp.exe Aby zaimportować wszystkie tablice jako <xref:System.Array?displayProperty=nameWithType> obiektów. W przypadkach, gdy tablica przekazywany jest znany jako wielowymiarowych możesz edytować wyprodukowanych kod języka pośredniego (MSIL) firmy Microsoft przez Tlbimp.exe i ponownie go skompilować. Aby uzyskać szczegółowe informacje na temat sposobu modyfikowania kodu MSIL, zobacz [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be).  
   
 ### <a name="c-style-arrays"></a>Tablice w stylu języka C  
  Po zaimportowaniu tablicy stylu języka C z biblioteki typów na zestaw .NET tablicy jest konwertowana na **ELEMENT_TYPE_SZARRAY**.  
@@ -164,7 +164,7 @@ void New2(ref double ar);
 void New3(ref String ar);   
 ```  
   
- Organizator można udostępnić w rozmiar tablicy, edytując kod języka pośredniego (MSIL) wyprodukowanych firmy Microsoft przez Tlbimp.exe i następnie ponownej kompilacji. Aby uzyskać szczegółowe informacje na temat sposobu modyfikowania kodu MSIL, zobacz [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](http://msdn.microsoft.com/en-us/4652beaf-77d0-4f37-9687-ca193288c0be). Wskaż liczbę elementów w tablicy, zastosuj <xref:System.Runtime.InteropServices.MarshalAsAttribute> typu parametru tablicy definicji metody zarządzanego w jednym z następujących sposobów:  
+ Organizator można udostępnić w rozmiar tablicy, edytując kod języka pośredniego (MSIL) wyprodukowanych firmy Microsoft przez Tlbimp.exe i następnie ponownej kompilacji. Aby uzyskać szczegółowe informacje na temat sposobu modyfikowania kodu MSIL, zobacz [Dostosowywanie wywoływane otoki środowiska uruchomieniowego](http://msdn.microsoft.com/library/4652beaf-77d0-4f37-9687-ca193288c0be). Wskaż liczbę elementów w tablicy, zastosuj <xref:System.Runtime.InteropServices.MarshalAsAttribute> typu parametru tablicy definicji metody zarządzanego w jednym z następujących sposobów:  
   
 -   Określ inny parametr, który zawiera liczbę elementów w tablicy. Parametry są identyfikowane za pomocą pozycji, począwszy od pierwszego parametru jako liczba 0.     
   
@@ -384,5 +384,5 @@ public struct MyStruct {
 ## <a name="see-also"></a>Zobacz też  
  [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
  [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atrybuty kierunkową](http://msdn.microsoft.com/en-us/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
+ [Atrybuty kierunkową](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
  [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)

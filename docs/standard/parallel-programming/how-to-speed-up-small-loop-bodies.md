@@ -20,14 +20,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a2e068b38c12d37755bee4c7da8c1ca8e5036c74
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fb1c39d3eb2c0b68182f49d8aa5dcc4e652f9215
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-speed-up-small-loop-bodies"></a>Porady: przyspieszanie małych jednostek pętli
-Gdy <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> pętli ma małych treści, go może działać wolniej niż równoważne pętli sekwencyjnych, takich jak [dla](~/docs/csharp/language-reference/keywords/for.md) pętli w języku C# i [dla](http://msdn.microsoft.com/en-us/c470a263-9b49-4308-8fd6-8592b84a7980) pętli w języku Visual Basic. Niższej wydajności jest spowodowany przez koszty związane z partycjonowanie danych i kosztów wywoływania delegata w każdej iteracji pętli. Aby rozwiązać takich scenariuszy <xref:System.Collections.Concurrent.Partitioner> klasa udostępnia <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> metodę, która umożliwia podanie loop sekwencyjnych jednostka delegata, tak aby delegat jest wywoływany tylko raz dla każdej partycji, zamiast raz dla iteracji. Aby uzyskać więcej informacji, zobacz [niestandardowe Partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
+Gdy <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> pętli ma małych treści, go może działać wolniej niż równoważne pętli sekwencyjnych, takich jak [dla](~/docs/csharp/language-reference/keywords/for.md) pętli w języku C# i [dla](http://msdn.microsoft.com/library/c470a263-9b49-4308-8fd6-8592b84a7980) pętli w języku Visual Basic. Niższej wydajności jest spowodowany przez koszty związane z partycjonowanie danych i kosztów wywoływania delegata w każdej iteracji pętli. Aby rozwiązać takich scenariuszy <xref:System.Collections.Concurrent.Partitioner> klasa udostępnia <xref:System.Collections.Concurrent.Partitioner.Create%2A?displayProperty=nameWithType> metodę, która umożliwia podanie loop sekwencyjnych jednostka delegata, tak aby delegat jest wywoływany tylko raz dla każdej partycji, zamiast raz dla iteracji. Aby uzyskać więcej informacji, zobacz [niestandardowe Partycjonery dla PLINQ i TPL](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md).  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]

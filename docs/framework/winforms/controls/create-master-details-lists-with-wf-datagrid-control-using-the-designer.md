@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 471d76450b2a14620773cbeb8982da43f130ac59
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: f1526a6e54078ea3dc0500c39a8fc2feda44d901
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>Porady: tworzenie list wzorzec-szczegół za pomocą formantu DataGrid formularzy systemu Windows przy użyciu narzędzia Projektant
 > [!NOTE]
@@ -30,14 +30,14 @@ ms.lasthandoff: 12/22/2017
   
  Jeśli Twoje <xref:System.Data.DataSet> zawiera serię tabel powiązanych, można użyć dwóch <xref:System.Windows.Forms.DataGrid> służy do wyświetlania danych w formacie główny szczegółowy. Jeden <xref:System.Windows.Forms.DataGrid> wyznaczony jako główny siatki, a drugi jest wyznaczony jako siatki szczegółów. Po wybraniu pozycji na liście głównej wszystkie wpisy podrzędnych są wyświetlane na liście szczegóły. Na przykład jeśli Twoje <xref:System.Data.DataSet> zawiera tabelę Klienci i powiązanej tabeli zamówienia, należy określić na tabeli klientów głównym siatki i na tabeli zamówienia siatki szczegółów. Po wybraniu klienta z głównym siatki wszystkich zamówień skojarzonych z klientem w tabeli poleceń będzie wyświetlana w siatce szczegółów.  
   
- Poniższa procedura wymaga **aplikacji systemu Windows** projektu. Informacje o konfigurowaniu tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/en-us/b2f93fed-c635-4705-8d0e-cf079a264efa).  
+ Poniższa procedura wymaga **aplikacji systemu Windows** projektu. Informacje o konfigurowaniu tych projektu, zobacz [jak: utworzyć projekt aplikacji systemu Windows](http://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa).  
   
 > [!NOTE]
->  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>Umożliwia utworzenie listy danych głównych w Projektancie  
   
-1.  Dodaj dwa <xref:System.Windows.Forms.DataGrid> formantów w formularzu. Aby uzyskać więcej informacji, zobacz [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formant nie ma na liście **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie elementów do przybornika](http://msdn.microsoft.com/en-us/458e119e-17fe-450b-b889-e31c128bd7e0).  
+1.  Dodaj dwa <xref:System.Windows.Forms.DataGrid> formantów w formularzu. Aby uzyskać więcej informacji, zobacz [porady: dodawanie formantów do formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md). W [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], <xref:System.Windows.Forms.DataGrid> formant nie ma na liście **przybornika** domyślnie. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie elementów do przybornika](http://msdn.microsoft.com/library/458e119e-17fe-450b-b889-e31c128bd7e0).  
   
     > [!NOTE]
     >  Poniższe kroki nie mają zastosowania do [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)], który korzysta z **źródeł danych** okna dla powiązania danych czasu projektowania. Aby uzyskać więcej informacji, zobacz [powiązywanie formantów z danymi w Visual Studio](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio) i [porady: wyświetlanie powiązanych danych w aplikacji formularzy systemu Windows](http://msdn.microsoft.com/library/60b1f1ec-6257-42ab-83f0-06d54ed364fd).  

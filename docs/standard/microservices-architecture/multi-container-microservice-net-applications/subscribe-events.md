@@ -1,7 +1,7 @@
 ---
 title: "Subskrybowanie zdarzeń"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Subskrybowanie zdarzeń"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 97035f297743626c5d9b306712cefdbd8a086c51
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -110,7 +110,7 @@ Przejdźmy do początkowej problemu i jego przykład. Jeśli usługa ulegnie awa
 
 Jak wspomniano wcześniej, w sekcji architektury, może mieć kilka metod dotyczące tego problemu:
 
--   Przy użyciu pełnego [źródłem zdarzeń wzorzec](https://msdn.microsoft.com/en-us/library/dn589792.aspx).
+-   Przy użyciu pełnego [źródłem zdarzeń wzorzec](https://msdn.microsoft.com/library/dn589792.aspx).
 
 -   Przy użyciu [wyszukiwania dziennik transakcji](http://www.scoop.it/t/sql-server-transaction-log-mining).
 
@@ -302,7 +302,7 @@ Przetwarza komunikat jest z założenia idempotentności. Na przykład jeśli sy
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Ramach komunikat idempotency** (Podnagłówek na tej stronie) [ *https://msdn.microsoft.com/en-us/library/jj591565.aspx*](https://msdn.microsoft.com/en-us/library/jj591565.aspx)
+-   **Ramach komunikat idempotency** (Podnagłówek na tej stronie) [ *https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Ani deduplikacja komunikaty o zdarzeniach integracji
 
@@ -325,20 +325,20 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Rozwidlone eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Zdarzenia zmiennych wiadomości**
-    [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Event Driven Messaging**
+    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Kanał publikowania / subskrypcji**
+-   **Publish-Subscribe channel**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Komunikacja pomiędzy ograniczone kontekstów**
+-   **Communicating Between Bounded Contexts**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Spójność ostateczna**
-    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Eventual Consistency**
+    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Brązowy Philip. Strategie integrowanie ograniczone kontekstów**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
@@ -349,7 +349,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Krzysztof Richardson. Wzorzec wysyłanie zawartości zdarzeń**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Wprowadzenie Sourcing zdarzeń**
+-   **Introducing Event Sourcing**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Bazy danych zdarzeń magazynu**. Oficjalna witryna.
@@ -358,13 +358,13 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Patrick Nommensen. Zarządzanie danymi dla Mikrousług sterowane zdarzeniami**
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1>*
 
--   **Newtona zakończenia**
-    [*https://en.wikipedia.org/wiki/CAP\_Newtona*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **The CAP Theorem**
+    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
 -   **Co to jest zakończenie Newtona? ** 
      [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Elementarz spójności danych**
+-   **Data Consistency Primer**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Rick Saling. Newtona zakończenia: Dlaczego "Wszystko, co jest różne" z chmury i Internet**
@@ -375,13 +375,13 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 
 -   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Usługa Azure Service Bus. Komunikaty obsługiwane przez brokera: Wykrywanie duplikatów**
+-   **Azure Service Bus. Brokered Messaging: Duplicate Detection**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Przewodnik niezawodności** (dokumentacja RabbitMQ) [ *https://www.rabbitmq.com/reliability.html\#konsumenta*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (rabbitmq-event-bus-development-test-environment.md) [dalej] (test-aspnet-core-services-web-apps.md)
+[Previous] (rabbitmq-event-bus-development-test-environment.md) [Next] (test-aspnet-core-services-web-apps.md)

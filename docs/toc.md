@@ -262,6 +262,7 @@
 ### [Przechowywanie wersji](csharp/versioning.md)
 ## [How To C# Topics (Tematy z instrukcjami dotyczącymi języka C#)](csharp/how-to/index.md)
 ### [Jak analizować ciągi za pomocą metody `String.Split`](csharp/how-to/parse-strings-using-split.md)
+### [Jak łączyć ciągi](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)](csharp/roslyn-sdk/)
 ## [Przewodnik programowania w języku C#](csharp/programming-guide/)

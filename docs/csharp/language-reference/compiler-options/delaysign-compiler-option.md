@@ -13,11 +13,11 @@ ms.assetid: bcb058eb-2933-4e7f-b356-5c941db4de75
 caps.latest.revision: "16"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 74cd4caaa134f881297134867018346c323deeab
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a931dccb2aebd2c898b55f0a007d9fac8da42f2e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="-delaysign-c-compiler-options"></a>-delaysign (opcje kompilatora C#)
 Ta opcja powoduje, że kompilator zarezerwowanego miejsca w pliku wyjściowym, tak aby później można dodać podpisu cyfrowego.  
@@ -33,7 +33,7 @@ Ta opcja powoduje, że kompilator zarezerwowanego miejsca w pliku wyjściowym, t
  Użyj **- delaysign —** Jeśli chcesz całkowicie podpisane zestawu. Użyj **- delaysign +** Jeśli chcesz umieścić klucz publiczny w zestawie. Wartość domyślna to **- delaysign —**.  
   
 ## <a name="remarks"></a>Uwagi  
- **- Delaysign** opcja nie ma znaczenia, chyba że używana z [/KeyFile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) lub [/KeyContainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
+ **- Delaysign** opcja nie ma znaczenia, chyba że używana z [- keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md) lub [- keycontainer](../../../csharp/language-reference/compiler-options/keycontainer-compiler-option.md).  
   
  Gdy użytkownik żąda zestawem całkowicie podpisane, kompilator tworzy skrót pliku, który zawiera manifest (metadanych zestawu) i podpisuje ten skrót z kluczem prywatnym. Wynikowy podpis cyfrowy jest przechowywany w pliku, który zawiera manifest. Jeśli zestaw jest podpisywany z opóźnieniem, kompilator nie obliczania i przechowywania podpisu, ale rezerw miejsca w pliku, aby później można dodać podpisu.  
   

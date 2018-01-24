@@ -8,15 +8,15 @@ ms.date: 01/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: 210f0a9bbf393055ebcd582d3accb3d77b1c9539
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Narzędzia dostawcy odwołanie z usługą sieci Web Microsoft WCF
 
-W ciągu lat wielu deweloperów programu Visual Studio korzystali produktywność który [ **Dodaj odwołanie do usługi** ](../../visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) Narzędzie dostarczone w razie potrzeby projektów .NET Framework dostępu do usług sieci web.  **Odwołania do usługi sieci Web WCF** narzędzie to rozszerzenie usługi Visual Studio połączone, które udostępnia środowisko będąca odpowiednikiem Dodaj odwołanie do usługi .NET Core i ASP.NET Core projektów. To narzędzie pobiera metadane z usługi sieci web w bieżącym rozwiązaniu, w lokalizacji sieciowej, lub z pliku WSDL i generuje plik zgodnego źródła .NET Core zawierające kod serwera proxy klienta usługi Windows Communication Foundation (WCF) używanego do dostępu do sieci web Usługa.
+W ciągu lat wielu deweloperów programu Visual Studio korzystali produktywność który [ **Dodaj odwołanie do usługi** ](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference) Narzędzie dostarczone w razie potrzeby projektów .NET Framework dostępu do usług sieci web.  **Odwołania do usługi sieci Web WCF** narzędzie to rozszerzenie usługi Visual Studio połączone, które udostępnia środowisko będąca odpowiednikiem Dodaj odwołanie do usługi .NET Core i ASP.NET Core projektów. To narzędzie pobiera metadane z usługi sieci web w bieżącym rozwiązaniu, w lokalizacji sieciowej, lub z pliku WSDL i generuje plik zgodnego źródła .NET Core zawierające kod serwera proxy klienta usługi Windows Communication Foundation (WCF) używanego do dostępu do sieci web Usługa.
 
 > [!IMPORTANT]
 > Użytkownik powinien odwoływać się tylko usługi z zaufanego źródła. Dodawanie odwołań z niezaufanego źródła może naruszyć bezpieczeństwo. 

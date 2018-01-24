@@ -1,5 +1,5 @@
 ---
-title: "Odwołanie csproj"
+title: Dodatki do formatu csproj dla platformy .NET Core
 description: "Więcej informacji na temat różnic między istniejących i pliki csproj .NET Core"
 keywords: "odwołanie, csproj, .NET Core"
 author: blackdwarf
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
 ms.workload: dotnetcore
-ms.openlocfilehash: 329a74cf083819896aafd7fc7993fa0e8ac8f8c2
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
@@ -55,7 +55,7 @@ W poniższej tabeli przedstawiono, który element i które [globs](https://en.wi
 |-------------------|-------------------------------------------|---------------------------------------------------------------|----------------------------|
 | Kompilacji           | \*\*/\*.cs (lub inne rozszerzenia językowe) | \*\*/\*.user;  \*\*/\*.\* Proj;  \* \* / \*.sln;  \* \* / \*.vssscc  | Brak                        |
 | EmbeddedResource  | \*\*/\*.resx                              | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | Brak                        |
-| Brak              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.CS; \* \* / \*.resx |
+| Brak              | \*\*/\*                                   | \*\*/\*.user; \*\*/\*.\* Proj; \* \* / \*.sln; \* \* / \*.vssscc     | - \*\*/\*.cs; \*\*/\*.resx |
 
 Jeśli masz globs w projekcie i zostanie podjęta próba skompiluj go przy użyciu najnowszego zestawu SDK, zostanie wyświetlony następujący błąd:
 
@@ -202,7 +202,7 @@ Rozdzielana średnikami lista autorzy pakietów, zgodne z nazwami profilu na nug
 ### <a name="description"></a>Opis
 Długi opis pakietu do wyświetlenia interfejsu użytkownika.
 
-### <a name="copyright"></a>Prawa autorskie
+### <a name="copyright"></a>Copyright
 Praw autorskich szczegóły pakietu.
 
 ### <a name="packagerequirelicenseacceptance"></a>PackageRequireLicenseAcceptance
@@ -223,7 +223,7 @@ Informacje o wersji dla pakietu.
 ### <a name="packagetags"></a>PackageTags
 Rozdzielaną średnikami listę znaczników, który wyznacza pakietu.
 
-### <a name="packageoutputpath"></a>Ścieżki PackageOutputPath
+### <a name="packageoutputpath"></a>PackageOutputPath
 Określa ścieżki wyjściowej, w którym spakowany pakiet zostanie porzucony. Wartość domyślna to `$(OutputPath)`. 
 
 ### <a name="includesymbols"></a>IncludeSymbols

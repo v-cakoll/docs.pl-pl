@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie klienta REST przy użyciu platformy .NET Core"
 description: "Ten samouczek zawiera szereg funkcji .NET Core i języka C#."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: bc74b644f432071dc2483e8df3e0938c9e9ee025
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 6b0f3acc3a6dbed4f44497d92d3c518ee5a5d2a7
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -95,12 +95,30 @@ public static void Main(string[] args)
 }
 ```
 
-Masz teraz program, który nie działa, ale nie jej asynchronicznie. Wróć do `ProcessRepositories` wypełnienia w pierwszej wersji i metody:
+Masz teraz program, który nie działa, ale nie jej asynchronicznie. Załóżmy ją udoskonalać.
+
+Najpierw należy obiektu, który jest w stanie pobrać danych z sieci web; można użyć <xref:System.Net.Http.HttpClient> w tym celu. Ten obiekt obsługuje żądania i odpowiedzi. Utworzyć pojedynczego wystąpienia tego typu w `Program` klasy w pliku Program.cs.
+
+```csharp
+namespace WebAPIClient
+{
+    class Program
+    {
+        private static readonly HttpClient client = new HttpClient();
+
+        static void Main(string[] args)
+        {
+            //...
+        }
+    }
+}
+```
+
+ Wróć do `ProcessRepositories` wypełnienia w pierwszej wersji i metody:
 
 ```csharp
 private static async Task ProcessRepositories()
 {
-    var client = new HttpClient();
     client.DefaultRequestHeaders.Accept.Clear();
     client.DefaultRequestHeaders.Accept.Add(
         new MediaTypeWithQualityHeaderValue("application/vnd.github.v3+json"));
@@ -120,7 +138,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-Ta wersja pierwszy sprawia, że żądania sieci web, aby zapoznać się z listą wszystkich repozytoriów w ramach organizacji foundation dotnet. (Identyfikator gitHub .NET Foundation jest "dotnet"). Najpierw należy utworzyć nowy <xref:System.Net.Http.HttpClient>. Ten obiekt obsługuje żądania i odpowiedzi. Skonfiguruj dalej kilka wierszy <xref:System.Net.Http.HttpClient> dla tego żądania. Najpierw jest skonfigurowany do akceptowania odpowiedzi GitHub JSON.
+Ta wersja pierwszy sprawia, że żądania sieci web, aby zapoznać się z listą wszystkich repozytoriów w ramach organizacji foundation dotnet. (Identyfikator gitHub .NET Foundation jest "dotnet"). Skonfiguruj kilka pierwszych wierszy <xref:System.Net.Http.HttpClient> dla tego żądania. Najpierw jest skonfigurowany do akceptowania odpowiedzi GitHub JSON.
 Ten format jest po prostu JSON. Następnego wiersza dodaje nagłówek agenta użytkownika do wszystkich żądań z tego obiektu. Te dwa nagłówki są sprawdzane przez kod serwera GitHub i są niezbędne do pobrania informacji z usługi GitHub.
 
 Po skonfigurowaniu <xref:System.Net.Http.HttpClient>, wprowadź sieci web żądania i pobierania odpowiedzi. W tej wersji pierwszej, użyj <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> wygodne metody. Ta metoda wygody uruchamia zadanie, które wysyła żądanie sieci web, a następnie po powrocie z żądania go odczytuje w strumieniu odpowiedzi i wyodrębnia zawartość ze strumienia. Treść odpowiedzi jest zwracany jako <xref:System.String>. Ten ciąg jest dostępna po zakończeniu zadania. 

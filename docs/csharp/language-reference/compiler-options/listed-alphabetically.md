@@ -13,11 +13,11 @@ ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
 caps.latest.revision: "25"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 07ca6b9473a4a3401742d05aa7c880da5ac43ad0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f4d7f1b122d3481dc8c3c5256ee361965846a830
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>Opcje kompilatora C# w porządku alfabetycznym
 Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista kategorii, [C# kompilatora opcje rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md).  
@@ -28,10 +28,10 @@ Następujące opcje kompilatora są sortowane w kolejności alfabetycznej. Lista
 |[-?](../../../csharp/language-reference/compiler-options/help-compiler-option.md)|Wyświetla komunikat o sposobie użycia stdout.|  
 |-additionalfile|Nazwy dodatkowych plików bezpośrednio nie wpływają na generowanie kodu, które mogą być używane przez analizatory do produkcji błędy lub ostrzeżenia.|  
 |[-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md)|Łączy określone moduły z tym zestawem|  
-|-analyzer|Uruchom analizatorów z tego zestawu (krótka wersja: /)|  
+|-analyzer|Uruchom analizatorów z tego zestawu (krótka wersja: -)|  
 |[-appconfig](../../../csharp/language-reference/compiler-options/appconfig-compiler-option.md)|Określa lokalizację pliku app.config w czasie powiązanie zestawu.|  
 |[-baseaddress](../../../csharp/language-reference/compiler-options/baseaddress-compiler-option.md)|Określa adres podstawowy biblioteki, który ma zostać utworzony.|  
-|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Tworzy plik "Usterek — raport". Ten plik zostanie wysłana wraz z informacjami awarii, jeśli jest używany z /errorreport:prompt lub/errorreport: Send.|  
+|[-bugreport](../../../csharp/language-reference/compiler-options/bugreport-compiler-option.md)|Tworzy plik "Usterek — raport". Ten plik zostanie wysłana wraz z informacjami awarii, jeśli jest używana z - errorreport: wiersz lub - errorreport: wysyłania.|  
 |[-checked](../../../csharp/language-reference/compiler-options/checked-compiler-option.md)|Umożliwia kompilatorowi Generowanie sprawdzanie nadmiaru dla operacji.|  
 |-checksumalgorithm:\<alg >|Określ algorytm oblicza sumę kontrolną pliku źródłowego, przechowywane w pliku PDB.  Obsługiwane są następujące wartości: SHA1 (ustawienie domyślne) lub SHA256.|  
 |[-codepage](../../../csharp/language-reference/compiler-options/codepage-compiler-option.md)|Określa stronę kodową do używania podczas otwierania plików źródłowych.|  

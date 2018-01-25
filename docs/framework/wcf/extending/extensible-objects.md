@@ -1,25 +1,20 @@
 ---
 title: Obiekty rozszerzalne
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: extensible objects [WCF]
 ms.assetid: bc88cefc-31fb-428e-9447-6d20a7d452af
-caps.latest.revision: "11"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: e7d7b5245130a7581efbf9badb0699f57a6743dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: a1bb341d9e164b1ce232f238f8ddf4a0cf807363
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="extensible-objects"></a>Obiekty rozszerzalne
 Wzorzec rozszerzonego obiektu jest używany, aby wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub aby dodać nowy stan do obiektu. Dołączony do jednego z obiekty rozszerzalne, dzięki rozszerzeniom zachowania w bardzo różnych etapach przetwarzania dostęp do stanu udostępnionego i dołączony do obiektu extensible wspólnej mogą uzyskiwać dostęp do funkcji.  
@@ -48,15 +43,15 @@ where T : IExtensibleObject<T>
   
  Jeśli rozszerzenie zostanie dodane do kolekcji, <xref:System.ServiceModel.IExtension%601.Attach%2A> jest wywoływana przed przechodzi on w kolekcji. Rozszerzenie zostanie usunięty z kolekcji, <xref:System.ServiceModel.IExtension%601.Detach%2A> jest wywoływana po jego usunięciu. (Przy założeniu odpowiedniej synchronizacji) oznacza, że rozszerzenie liczyć na dostępne tylko w kolekcji w czasie, gdy jest między <xref:System.ServiceModel.IExtension%601.Attach%2A> i <xref:System.ServiceModel.IExtension%601.Detach%2A>.  
   
- Obiekt przekazywany do <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> lub <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> nie muszą być <xref:System.ServiceModel.IExtension%601> (na przykład można przekazać dowolnych obiektów), ale zwrócone rozszerzenie to <xref:System.ServiceModel.IExtension%601>.  
+ Obiekt przekazywany do <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> lub <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> nie muszą być <xref:System.ServiceModel.IExtension%601> (na przykład można przekazać dowolnych obiektów), ale zwrócone rozszerzenie to <xref:System.ServiceModel.IExtension%601>.  
   
- Jeśli jest bez rozszerzenia w kolekcji <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> zwraca wartość null, a <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> zwraca pustą kolekcję. Jeśli implementuje wiele rozszerzeń <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A> zwraca jeden z nich. Wartość zwracana z <xref:System.ServiceModel.IExtensionCollection%601.FindAll%60%601%2A> jest to migawka.  
+ Jeśli jest bez rozszerzenia w kolekcji <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> zwraca wartość null, a <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> zwraca pustą kolekcję. Jeśli implementuje wiele rozszerzeń <xref:System.ServiceModel.IExtension%601>, <xref:System.ServiceModel.IExtensionCollection%601.Find%2A> zwraca jeden z nich. Wartość zwracana z <xref:System.ServiceModel.IExtensionCollection%601.FindAll%2A> jest to migawka.
   
  Istnieją dwa główne scenariusze. Używa pierwszego scenariusza <xref:System.ServiceModel.IExtensibleObject%601.Extensions%2A> właściwość jako słownik na podstawie typu do wstawienia stanu na obiekt, aby włączyć inny składnik do wyszukania go przy użyciu typu.  
   
  Drugi scenariusz używa <xref:System.ServiceModel.IExtension%601.Attach%2A> i <xref:System.ServiceModel.IExtension%601.Detach%2A> właściwości, aby włączyć obiekt, aby uczestniczyć w zachowaniu niestandardowe, takie jak rejestrowanie zdarzeń, obserwowanie przejść stanu i tak dalej.  
   
- <xref:System.ServiceModel.IExtensionCollection%601> Interfejsu jest kolekcją <xref:System.ServiceModel.IExtension%601> obiektów, które umożliwiają pobieranie <xref:System.ServiceModel.IExtension%601> przez jego typu. <xref:System.ServiceModel.IExtensionCollection%601.Find%60%601%2A?displayProperty=nameWithType>Zwraca ostatnio dodany obiekt, który jest <xref:System.ServiceModel.IExtension%601> tego typu.  
+ <xref:System.ServiceModel.IExtensionCollection%601> Interfejsu jest kolekcją <xref:System.ServiceModel.IExtension%601> obiektów, które umożliwiają pobieranie <xref:System.ServiceModel.IExtension%601> przez jego typu. <xref:System.ServiceModel.IExtensionCollection%601.Find%2A?displayProperty=nameWithType>Zwraca ostatnio dodany obiekt, który jest <xref:System.ServiceModel.IExtension%601> tego typu.  
   
 ### <a name="extensible-objects-in-windows-communication-foundation"></a>Obiekty rozszerzalne programu Windows Communication Foundation  
  Istnieją cztery obiekty rozszerzalne w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]:  

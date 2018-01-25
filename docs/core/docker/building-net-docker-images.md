@@ -1,7 +1,7 @@
 ---
 title: "Tworzenie obrazy usługi Docker .NET Core"
 description: "Opis obrazy usługi Docker i .NET Core"
-keywords: .NET, .NET core, Docker
+keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -13,11 +13,11 @@ ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
 ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Tworzenie aplikacji programu .NET Core obrazy usługi Docker
 
@@ -101,7 +101,7 @@ Używa [Docker wieloetapowym kompilacji funkcji](https://docs.docker.com/engine/
 * utworzyć przykład w kontenerze oparciu **większych** obrazu podstawowego platformy ASP.NET Core kompilacji Docker 
 * kopiuje wynik końcowy kompilacji do obrazu platformy Docker na podstawie **mniejszych** obrazu podstawowego środowiska wykonawczego programu ASP.NET Core Docker
 
-> [!Note]
+> [!NOTE]
 > Obraz kompilacji zawiera wymagane narzędzia do tworzenia aplikacji, a nie w obrazie środowiska wykonawczego.
 
 ### <a name="prerequisites"></a>Wymagania wstępne
@@ -133,7 +133,7 @@ Klient Docker można zainstalować w:
 
    * [Ubuntu](https://www.docker.com/docker-ubuntu)
 
-* [System macOS](https://docs.docker.com/docker-for-mac/)
+* [macOS](https://docs.docker.com/docker-for-mac/)
 
 * [Windows](https://docs.docker.com/docker-for-windows/).
 
@@ -174,7 +174,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] `docker run` "-P" argument mapy port 5000 na komputerze lokalnym do portu 80 w kontenerze (formularz mapowania portów jest `host:container`). Aby uzyskać więcej informacji, zobacz [docker Uruchom](https://docs.docker.com/engine/reference/commandline/exec/) odwołania dotyczące parametrów wiersza polecenia.
+> [!NOTE]
+> `docker run` "-P" argument mapy port 5000 na komputerze lokalnym do portu 80 w kontenerze (formularz mapowania portów jest `host:container`). Aby uzyskać więcej informacji, zobacz [docker Uruchom](https://docs.docker.com/engine/reference/commandline/exec/) odwołania dotyczące parametrów wiersza polecenia.
 
 Po uruchomieniu aplikacji, odwiedź stronę **http://localhost: 5000** w przeglądarce sieci web.
 
@@ -196,7 +197,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Run `docker exec aspnetcore_sample ipconfig`.
 * Skopiuj adres IP kontenera i Wklej w przeglądarce (na przykład 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Docker exec obsługuje identyfikację kontenery o nazwie lub wyznaczania wartości skrótu. Nazwa (aspnetcore_sample) jest używana w naszym przykładzie.
 
 Zobacz poniższy przykład sposobu uzyskania adresu IP uruchomionych kontenera systemu Windows.
@@ -215,7 +216,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec uruchamia nowe polecenie w kontenerze uruchomione. Aby uzyskać więcej informacji, zobacz [odwołania exec docker](https://docs.docker.com/engine/reference/commandline/exec/) na parametry wiersza polecenia.
 
 Służy do tworzenia aplikacji, która jest gotowe do wdrożenia w środowisku produkcyjnym lokalnie za pomocą [publikowania dotnet](../tools/dotnet-publish.md) polecenia.
@@ -224,7 +225,7 @@ Służy do tworzenia aplikacji, która jest gotowe do wdrożenia w środowisku p
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > -C argument wersji kompilacji aplikacji w trybie przygotowania do wydania (wartość domyślna to tryb debugowania). Aby uzyskać więcej informacji, zobacz [dotnet Uruchom odwołanie](../tools/dotnet-run.md) na parametry wiersza polecenia.
 
 Aplikację można uruchomić na **Windows** przy użyciu następującego polecenia.
@@ -265,5 +266,5 @@ Poniżej przedstawiono niektóre czynności, które można wykonać:
 * [Wprowadzenie ręce na z programem Visual Studio for Mac, kontenery i niekorzystającą kodu w chmurze](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Pierwsze kroki z Docker i Visual Studio for Mac laboratorium](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > Jeśli nie masz subskrypcji platformy Azure, [Zarejestruj się już dziś](https://azure.microsoft.com/free/?b=16.48) bezpłatnej 30-dniowe konto i 200 USD interweniować środków Azure wypróbowanie dowolną kombinację usługami Azure.

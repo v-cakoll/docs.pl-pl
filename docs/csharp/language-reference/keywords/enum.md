@@ -12,11 +12,11 @@ ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
 caps.latest.revision: "36"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 00ae9b555ae73db445fe4a4facf00753bf8c759a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f3ba82eb3fd1832a3d57090c9dc6941f962cb837
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="enum-c-reference"></a>enum (odwołanie w C#)
 `enum` — Słowo kluczowe służy do deklarowania wyliczenie różne typu, który zawiera zestaw stałe nazwane o nazwie listy modułu wyliczającego.  
@@ -26,13 +26,13 @@ ms.lasthandoff: 11/21/2017
  Domyślnie pierwszy modułu wyliczającego ma wartość 0, a wartość każdego kolejnych modułu wyliczającego jest zwiększana o 1. Na przykład w następujących wyliczenia `Sat` jest `0`, `Sun` jest `1`, `Mon` jest `2`, itd.  
   
 ```  
-enum Days {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Moduły wyliczające umożliwia inicjatory zastąpić wartości domyślne, jak pokazano w poniższym przykładzie.  
   
 ```  
-enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  W tym wyliczeniu sekwencję elementów wymusza na uruchamianie z `1` zamiast `0`. Jednak zaleca się tym stałą, który ma wartość 0. Aby uzyskać więcej informacji, zobacz [Typy wyliczeniowe](../../../csharp/programming-guide/enumeration-types.md).  
@@ -40,12 +40,12 @@ enum Days {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Każdy typ wyliczeniowy ma odpowiedni typ, który może być dowolnego typu całkowitego z wyjątkiem [char](../../../csharp/language-reference/keywords/char.md). Domyślny typ bazowy typu wyliczenia elementów jest [int](../../../csharp/language-reference/keywords/int.md). Aby zadeklarować wyliczenie innego typu całkowitego, takich jak [bajtów](../../../csharp/language-reference/keywords/byte.md), użyj dwukropka po identyfikatorze, a następnie według typu, jak pokazano w poniższym przykładzie.  
   
 ```  
-enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
+enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};  
 ```  
   
  Istnieją typy zatwierdzone dla wyliczenia `byte`, [sbyte](../../../csharp/language-reference/keywords/sbyte.md), [krótki](../../../csharp/language-reference/keywords/short.md), [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [długi](../../../csharp/language-reference/keywords/long.md), lub [ulong](../../../csharp/language-reference/keywords/ulong.md).  
   
- Zmienna typu `Days` można przypisać dowolną wartość z zakresu od typu źródłowego; wartości nie są ograniczone do stałe nazwane.  
+ Zmienna typu `Day` można przypisać dowolną wartość z zakresu od typu źródłowego; wartości nie są ograniczone do stałe nazwane.  
   
  Wartość domyślna `enum E` jest wartością produkowane przez wyrażenie `(E)0`.  
   
@@ -55,7 +55,7 @@ enum Days : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
  Podstawowy typ Określa, ile miejsca do magazynowania jest przydzielona dla każdego modułu wyliczającego. Jednak jawnego rzutowania jest niezbędne do przekonwertowania z `enum` typu na typ całkowity. Na przykład następująca instrukcja przypisuje modułu wyliczającego `Sun` do zmiennej typu [int](../../../csharp/language-reference/keywords/int.md) przy użyciu rzutowanie do przekonwertowania z `enum` do `int`.  
   
 ```  
-int x = (int)Days.Sun;  
+int x = (int)Day.Sun;  
 ```  
   
  Po zastosowaniu <xref:System.FlagsAttribute?displayProperty=nameWithType> na wyliczenie, który zawiera elementy, które można łączyć z bitowego `OR` operacji, ten atrybut ma wpływ na zachowanie `enum` gdy jest używana z niektóre narzędzia. Można zauważyć tych zmian, korzystając z narzędzi takich jak <xref:System.Console> klas, metod i ewaluatora wyrażenia. (Zobacz przykład trzeci).  
@@ -68,7 +68,7 @@ int x = (int)Days.Sun;
  Inni deweloperzy użycie kodu, wskazówki dotyczące sposobu ich kod powinien reagują, gdy nowe elementy są dodawane do dowolnego należy zapewnić `enum` typów.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie wyliczenie `Days`, jest zadeklarowany. Dwa moduły wyliczające jawnie przekonwertować na liczbę całkowitą i przypisane do zmiennych liczby całkowitej.  
+ W poniższym przykładzie wyliczenie `Day`, jest zadeklarowany. Dwa moduły wyliczające jawnie przekonwertować na liczbę całkowitą i przypisane do zmiennych liczby całkowitej.  
   
  [!code-csharp[csrefKeywordsTypes#10](../../../csharp/language-reference/keywords/codesnippet/CSharp/enum_1.cs)]  
   
@@ -99,4 +99,4 @@ int x = (int)Days.Sun;
  [Tabela typów całkowitych](../../../csharp/language-reference/keywords/integral-types-table.md)  
  [Tabela typów wbudowanych](../../../csharp/language-reference/keywords/built-in-types-table.md)  
  [Tabela niejawnych konwersji liczbowych](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
- [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)
+ [Tabela jawnych konwersji liczbowych](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md) [wyliczenia konwencje nazewnictwa](https://docs.microsoft.com/en-us/dotnet/standard/design-guidelines/names-of-classes-structs-and-interfaces#naming-enumerations)

@@ -1,6 +1,6 @@
 ---
 title: "Porady: Określanie, które wersje programu .NET Framework są zainstalowane"
-ms.date: 10/17/2017
+ms.date: 01/24/2018
 ms.prod: .net-framework
 ms.technology: dotnet-clr
 ms.topic: article
@@ -16,11 +16,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 83de6036a9b86478546cdb8356ce132ef32e6be2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: dd257e7d481a12389f8a47921ab985ca82a157fc
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>Porady: określanie, które wersje programu .NET Framework są zainstalowane
 Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na swoich komputerach. Podczas opracowywania lub wdrożyć aplikację, konieczne może być wiedzieć, które wersje programu .NET Framework są zainstalowane na komputerze użytkownika. Należy pamiętać, że programu .NET Framework składa się z dwóch głównych elementów, które numerów wersji oddzielnie:  
@@ -87,6 +87,8 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 
      Wartość `Release` DWORD wskazuje, która wersja architektury .NET Framework jest zainstalowana.
 
+    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+
     |Wartość DWORD dotycząca wersji|Wersja|
     |--------------------------------|-------------|
     |378389|.NET Framework 4.5|
@@ -97,7 +99,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |W systemach Windows 10 listopada Update: 394254<br /><br /> We wszystkich wersjach systemu operacyjnego: 394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
     |W usłudze Windows 10 Anniversary Update: 394802<br /><br /> We wszystkich wersjach systemu operacyjnego: 394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
     |Na 10 twórców usługi Windows Update: 460798<br/><br/> We wszystkich wersjach systemu operacyjnego: 460805 | .NET framework 4.7 |
-    |W systemie Windows 10 można podzielić aktualizacji twórcy: 461308<br/><br/> We wszystkich wersjach systemu operacyjnego: 461310 | .NET framework 4.7.1 |
+    |W systemie Windows 10 można podzielić aktualizacji twórcy: 461308<br/><br/> We wszystkich wersjach systemu operacyjnego: 461310 | .NET Framework 4.7.1 |
 <a name="net_c"></a> 
 #### <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>Aby znaleźć wersje programu .NET Framework, badając rejestru w kodzie (.NET Framework 1-4)
 
@@ -128,6 +130,8 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
 1. Istnienie `Release` DWORD wskazuje, że na komputerze zainstalowano .NET Framework 4.5 lub nowszej. Wartość słowa kluczowego wskazuje zainstalowanej wersji. Aby sprawdzić to słowo kluczowe, użyj <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> i <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> metody <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> klasy do podklucza Software\Microsoft\NET Framework Setup\NDP\v4\Full w HKEY_LOCAL_MACHINE w rejestrze systemu Windows.
 
 2. Sprawdź wartość `Release` — słowo kluczowe, aby określić zainstalowaną wersję. Być zgodne z nowszymi, można sprawdzić wartość większa niż lub równa wartości wymienionych w tabeli. Poniżej przedstawiono wersje programu .NET Framework i skojarzone `Release` słów kluczowych.
+
+    [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
     |Wersja|Wartość DWORD dotycząca wersji|
     |-------------|--------------------------------|
@@ -177,7 +181,7 @@ Użytkownicy mogą zainstalować i uruchamiać wiele wersji .NET Framework na sw
     |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
     |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
     |.NET framework 4.7|460798|
-    |.NET framework 4.7.1|461308|
+    |.NET Framework 4.7.1|461308|
     
 <a name="clr_a"></a> 
 #### <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Aby znaleźć bieżącą wersję środowiska uruchomieniowego za pomocą narzędzia Clrver

@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>Przegląd XAML (WPF)
 W tym temacie opisano funkcje języka XAML oraz przedstawiono sposób użycia XAML do zapisu [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. W tym temacie szczegółowo opisano XAML wykonane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. XAML sam to pojęcie języka większych niż [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -56,7 +56,7 @@ W tym temacie opisano funkcje języka XAML oraz przedstawiono sposób użycia XA
 ## <a name="xaml-syntax-in-brief"></a>Składnia języka XAML w Brief  
  W poniższych sekcjach opisano formy podstawowa składnia języka XAML i podać przykład krótkich znaczników. Poniższe sekcje mają nie udostępniają pełnych informacji na temat każdego formularza składni, takich jak jak są one reprezentowane w bazowego typu systemu. Aby uzyskać więcej informacji o szczegółowe informacje na temat składni języka XAML dla każdego z formy składni opisanymi w tym temacie, zobacz [szczegółów w składni języka XAML](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- Wiele materiałów w kolejnych sekcjach kilka będzie podstawowe, jeśli masz poprzedniej znajomość języka XML. Jest to konsekwencją zasady projektowania podstawowe języka XAML.  Języka XAML XAML definiuje pojęcia związane z własną, ale te pojęcia działa w formularzu języka i znaczników XML.  
+ Wiele materiałów w kolejnych sekcjach kilka będzie podstawowe, jeśli masz poprzedniej znajomość języka XML. Jest to konsekwencją zasady projektowania podstawowe języka XAML.  Pojęcia związane z własną definiuje języka XAML, ale tych pojęć działa w formularzu języka i znaczników XML.  
   
 ### <a name="xaml-object-elements"></a>Elementy obiektu XAML  
  Element obiektu zwykle deklaruje wystąpienia typu. Ten typ jest zdefiniowany w zestawy, które zapewniają typy zapasowy technologii, która używa jako języka XAML.  

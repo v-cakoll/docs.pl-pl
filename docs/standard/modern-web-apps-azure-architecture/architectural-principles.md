@@ -9,13 +9,13 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 18abca8ce8280ff1fa2b52650be57a59d1201fab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/29/2018
 ---
-#<a name="architectural-principles"></a>Zasady architektury
+# <a name="architectural-principles"></a>Zasady architektury
 
 > "Jeśli konstruktorów wbudowana budynków programistów sposób zapisano programy, a następnie woodpecker pierwszy, dostarczonej wraz z spowodowałoby zniszczenie cywilizacji."  
 > _\-Jan Weinberg_
@@ -110,15 +110,15 @@ Co najmniej aplikacji sieci web poszczególnych powinien starań, aby mieć wła
 > <http://deviq.com/separation-of-concerns/>
 > - **Hermetyzacja** <http://deviq.com/encapsulation/>
 > - **Zasada odwracanie zależności**  
-> <http://deviq.com/Dependency-Inversion-principle/>
+> <http://deviq.com/dependency-inversion-principle/>
 > - **Zasada jawne zależności**  
-> <http://deviq.com/Explicit-Dependencies-principle/>
+> <http://deviq.com/explicit-dependencies-principle/>
 > - **Nie powtarzaj samodzielnie**  
-> <http://deviq.com/Don-t-REPEAT-yourself/>
+> <http://deviq.com/don-t-repeat-yourself/>
 > - **Nieznajomości trwałości**  
 > <http://deviq.com/persistence-ignorance/>
 > - **Kontekst ograniczonego**  
-> <https://martinfowler.com/bliki/BoundedContext.HTML>
+> <https://martinfowler.com/bliki/BoundedContext.html>
 
 > [!div class="step-by-step"]
 [Poprzednie] (choose-between-traditional-web-and-single-page-apps.md) [dalej] (typowe web aplikacji architectures.md)

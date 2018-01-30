@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="dotnet-command"></a>polecenie DotNet
 
@@ -24,11 +25,11 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
 dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbose] [--version]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
 dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [-v|--verbose] [--version]
 ```
@@ -44,9 +45,9 @@ Tylko `dotnet` jest używany jako polecenia samodzielnie [aplikacje zależne od 
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`--additionaldeps <PATH>`
+`--additional-deps <PATH>`
 
 Ścieżka do dodatkowych *deps.json* pliku.
 
@@ -82,7 +83,7 @@ Włącza pełne dane wyjściowe.
 
 Drukuje wersji programu .NET Core SDK w użyciu.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
@@ -118,7 +119,7 @@ Drukuje wersji programu .NET Core SDK w użyciu.
 
 ### <a name="general"></a>Ogólne
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -136,7 +137,7 @@ Drukuje wersji programu .NET Core SDK w użyciu.
 | [dotnet store](dotnet-store.md)     | Przechowuje zestawy w magazynie pakietów środowiska wykonawczego.                     |
 | [dotnet test](dotnet-test.md)       | Uruchamia testy przy użyciu runner testu.                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | Polecenie                             | Funkcja                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |

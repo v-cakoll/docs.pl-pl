@@ -1,50 +1,63 @@
 ---
 title: "Rejestrowanie procedur składowanych w programie SQL Server"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/05/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Rejestrowanie procedur składowanych w programie SQL Server
-Możesz zarejestrować procedury składowanej z certyfikatu lub klucza asymetrycznego. To jest przeznaczona dla scenariuszy, gdy uprawnienia nie może być dziedziczona za pośrednictwem łańcucha własność lub łańcuch własności został przerwany, takich jak SQL dynamicznych. Następnie można utworzyć użytkownika mapowanego na certyfikat, udzielanie uprawnień użytkownika na obiekty, które procedury składowanej musi mieć dostęp do certyfikatu.  
+ Podpis cyfrowy jest szyfrowane dane zaszyfrowane przy użyciu klucza prywatnego osoby podpisującej. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowa dla jego elementów nośnych lub właściciela. Możesz utworzyć procedur składowanych, funkcje (z wyjątkiem funkcji śródwierszowych przechowywanymi w tabeli), wyzwalacze i zestawów.  
   
- Podczas wykonywania procedury składowanej SQL Server łączy z uprawnieniami użytkownika certyfikatu z właściwościami obiektu wywołującego. W przeciwieństwie do wykonania jako klauzuli nie zmienia kontekstu wykonywania procedury. Danych logowania tego zwracany funkcji wbudowanych i nazwy użytkownika zwrócił nazwę obiektu wywołującego, a nie nazwa użytkownika certyfikatu.  
+ Możesz zarejestrować procedury składowanej z certyfikatu lub klucza asymetrycznego. To jest przeznaczona dla scenariuszy, gdy uprawnienia nie może być dziedziczona za pośrednictwem łańcucha własność lub łańcuch własności został przerwany, takich jak SQL dynamicznych. Następnie można utworzyć użytkownika mapowanego na certyfikat, udzielanie uprawnień użytkownika na obiekty, które procedury składowanej musi mieć dostęp do certyfikatu.  
+
+ Możesz również utworzyć identyfikator logowania mapowany na ten sam certyfikat i przypisz wszelkie niezbędne uprawnienia poziomu serwera do tego logowania lub Dodaj logowanie do co najmniej jednej z ról serwera. Służy to nie włączaj `TRUSTWORTHY` bazy danych ustawienie w scenariuszach, w których wymagane są uprawnienia na wyższym poziomie.  
   
- Podpis cyfrowy jest szyfrowane dane zaszyfrowane przy użyciu klucza prywatnego osoby podpisującej. Klucza prywatnego gwarantuje, że podpis cyfrowy jest unikatowa dla jego elementów nośnych lub właściciela. Możesz zarejestrować wyzwalaczy, funkcji lub procedury składowane.  
-  
-> [!NOTE]
->  W bazie danych master można udzielić uprawnienia na poziomie serwera, można utworzyć certyfikatu.  
+ Podczas wykonywania procedury składowanej uprawnienia użytkownika certyfikatu i/lub logowania programu SQL Server łączy się z tymi obiektu wywołującego. W odróżnieniu od `EXECUTE AS` klauzuli nie zmienia kontekstu wykonywania procedury. Danych logowania tego zwracany funkcji wbudowanych i nazwy użytkownika zwrócił nazwę obiektu wywołującego, a nie nazwa użytkownika certyfikatu.  
   
 ## <a name="creating-certificates"></a>Tworzenie certyfikatów  
- Po zarejestrowaniu procedury składowanej przy użyciu certyfikatu szyfrowanie danych, składające się z zaszyfrowanego skrótu kodu procedury składowanej jest tworzony przy użyciu klucza prywatnego. W czasie wykonywania szyfrowanie danych jest odszyfrować za pomocą klucza publicznego i porównania z wartością skrótu procedury składowanej. Modyfikacja procedury składowanej unieważnia wartość skrótu, tak, aby podpisu cyfrowego nie jest już zgodne. Zapobiega to osobie, która nie ma dostępu do klucza prywatnego z zmiana kodu procedury składowanej. W związku z tym należy ponownie podpisać procedury go po każdej zmianie.  
+ Podczas rejestrowania certyfikatu lub klucza asymetrycznego, szyfrowanie danych, składające się z zaszyfrowanego skrótu kodu procedury składowanej, oraz wykonywanie procedury składowanej — jako użytkownik, jest tworzony przy użyciu klucza prywatnego. W czasie wykonywania szyfrowanie danych jest odszyfrować za pomocą klucza publicznego i porównania z wartością skrótu procedury składowanej. Zmiana execute-jako wartość skrótu unieważnienia użytkownika tak, aby podpisu cyfrowego nie jest już zgodny. Modyfikacja procedury składowanej porzuca podpis całkowicie, co uniemożliwia osobie, która nie ma dostępu do klucza prywatnego z zmiana kodu procedury składowanej. W obu przypadkach należy ponownie podpisać procedury każdej zmianie kodu lub wykonaj — jako użytkownik.  
   
- Istnieją cztery kroki związane z moduł podpisywania:  
+ Istnieją dwie czynności związane z moduł podpisywania:  
   
-1.  Utwórz certyfikat przy użyciu języka Transact-SQL `CREATE CERTIFICATE [certificateName]` instrukcji. Ta instrukcja ma kilka opcji do ustawiania datę początkową i końcową i hasła. Domyślne Data wygaśnięcia jest rok  
-  
-2.  Utwórz użytkownika bazy danych skojarzony z tym certyfikatem przy użyciu języka Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` instrukcji. Ten użytkownik istnieje w bazie danych tylko i nie są skojarzone z logowaniem.  
-  
-3.  Przyznaj użytkownikowi certyfikatów wymaganych uprawnień do obiektów bazy danych.  
-  
-> [!NOTE]
->  Certyfikat nie może przyznać uprawnienia użytkownika, który miał odwołany za pomocą instrukcji ODMÓW uprawnień. ODMÓW zawsze ma pierwszeństwo przed GRANT, uniemożliwia dziedziczy uprawnienia przyznane użytkownikowi certyfikatu przez obiekt wywołujący.  
+1.  Utwórz certyfikat przy użyciu języka Transact-SQL `CREATE CERTIFICATE [certificateName]` instrukcji. Ta instrukcja ma kilka opcji do ustawiania datę początkową i końcową i hasła. Domyślne Data wygaśnięcia jest jeden rok.  
   
 1.  Procedury należy podpisać certyfikat przy użyciu języka Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` instrukcji.  
+
+Podpisany modułu podmiotów zabezpieczeń co najmniej jeden musi zostać utworzona w celu przechowywania dodatkowe uprawnienia, które powinny być skojarzone z certyfikatem.  
+
+Jeśli moduł wymaga dodatkowych uprawnień na poziomie bazy danych:  
+  
+1.  Utwórz użytkownika bazy danych skojarzony z tym certyfikatem przy użyciu języka Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` instrukcji. Ten użytkownik istnieje w bazie danych tylko i nie jest skojarzony z logowaniem, chyba że identyfikator logowania została także utworzona na podstawie tego samego certyfikatu.  
+  
+1.  Przyznaj użytkownikowi certyfikatów wymaganych uprawnień poziom bazy danych.  
+  
+Jeśli moduł wymaga dodatkowych uprawnień na poziomie serwera:  
+  
+1.  Skopiuj certyfikat do `master` bazy danych.  
+ 
+1.  Utwórz dane logowania skojarzonego z tym certyfikatem przy użyciu języka Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instrukcji.  
+  
+1.  Przyznaj logowania certyfikatu wymagane uprawnienia na poziomie serwera.  
+  
+> [!NOTE]  
+>  Certyfikat nie może przyznać uprawnienia użytkownika, który miał odwołany za pomocą instrukcji ODMÓW uprawnień. ODMÓW zawsze ma pierwszeństwo przed GRANT, uniemożliwia dziedziczy uprawnienia przyznane użytkownikowi certyfikatu przez obiekt wywołujący.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji zobacz następujące zasoby.  

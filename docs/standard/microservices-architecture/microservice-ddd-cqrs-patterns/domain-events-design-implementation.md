@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 54d512261261eff0c09bb96fb963ea8b452ae77f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -241,7 +241,7 @@ Innym sposobem mapowania zdarzeń na wielu obsług zdarzeń jest za pomocą reje
 
 **Rysunek 9 – 16**. Dyspozytor zdarzeń domeny przy użyciu Inwersja kontroli
 
-Można tworzyć wszystkie żmudne procesy i artefakty do wdrożenia tego podejścia samodzielnie. Jednak można także używać dostępnych bibliotek, takich jak [MediatR](https://github.com/jbogard/MediatR), który poniżej obejmuje korzysta z kontenera IoT. W związku z tym bezpośrednio można wstępnie zdefiniowanych interfejsów i metod publikowania wysyłania obiektu mediatora.
+Można tworzyć wszystkie żmudne procesy i artefakty do wdrożenia tego podejścia samodzielnie. Jednak można także używać dostępnych bibliotek, takich jak [MediatR](https://github.com/jbogard/MediatR), który poniżej obejmuje korzysta z kontenera IoC. W związku z tym bezpośrednio można wstępnie zdefiniowanych interfejsów i metod publikowania wysyłania obiektu mediatora.
 
 W kodzie, najpierw należy zarejestrować typy programów obsługi zdarzeń w Twojej kontenera IoC, jak pokazano w poniższym przykładzie w [eShopOnContainers mikrousługi porządkowanie](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.API/Infrastructure/AutofacModules/MediatorModule.cs):
 

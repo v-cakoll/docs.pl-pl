@@ -4,8 +4,12 @@
 #### [m_WriteList, pole](m_writelist.md)
 ### [ConnectionGroup, klasa](connectiongroup.md)
 #### [m_ConnectionList, pole](m_connectionlist.md)
+### [CoreResponseData, klasa](coreresponsedata.md)
+#### [m_ResponseHeaders, pole](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode, pole](coreresponsedata_m_statuscode.md)
 ### HttpWebRequest, klasa
 #### [_AutoRedirects, pole](_autoredirects.md)
+#### [_CoreResponse, pole](httpwebrequest__coreresponse.md)
 #### [_HttpResponse, pole](_httpresponse.md)
 ### ServicePoint, klasa
 #### [m_ConnectionGroupList, pole](m_connectiongrouplist.md)

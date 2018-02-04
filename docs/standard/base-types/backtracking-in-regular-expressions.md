@@ -22,18 +22,18 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 16837a310eabf881da8c88c9192264b918592929
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
 <a name="top"></a>Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i przywraca poprzedni zapisany stan, aby kontynuować aparat wyrażeń regularnych Wyszukiwanie w celu dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
@@ -165,7 +165,7 @@ ms.lasthandoff: 12/23/2017
   
  `(?<=`*Podwyrażenie* `)` jest dodatnie wybieganie wstecz asercja; oznacza to znak lub znaki, przed bieżącą pozycję musi być zgodna *Podwyrażenie*. `(?<!`*Podwyrażenie* `)` jest ujemne wybieganie wstecz asercja; oznacza to znak lub znaki przed bieżącą pozycję nie musi odpowiadać *Podwyrażenie*. Zarówno potwierdzenia dodatnie i ujemne wybieganie wstecz są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem poprzedniego wyrażenia podrzędnego.  
   
- W poniższym przykładzie są używane dwa równoważne wzorce wyrażenia regularnego sprawdzające nazwę użytkownika w adresie e-mail. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wsteczną. Dane wyjściowe z przykładu przedstawia czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
+ W poniższym przykładzie użyto dwóch wzorce równoważne wyrażenia regularnego sprawdzania poprawności nazwy użytkownika w adresie e-mail. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wsteczną. Dane wyjściowe z przykładu przedstawia czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
   
  [!code-csharp[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/cs/backtracking5.cs#5)]
  [!code-vb[Conceptual.RegularExpressions.Backtracking#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.backtracking/vb/backtracking5.vb#5)]  

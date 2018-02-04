@@ -1,6 +1,6 @@
 ---
-title: "Przewodnik Szybki Start - gałęzie i pętle - C#"
-description: "W tym szybki start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie."
+title: "Samouczek gałęzie i pętli - C# lokalnego poradniki Szybki Start"
+description: "W tym Szybki Start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,21 +9,21 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="branches-and-loops"></a>Gałęzie i pętli
 
-To szybki start jest przedstawienie sposobu pisania kodu, który sprawdza zmienne i zmieniona ścieżka wykonywania na podstawie tych zmiennych. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania go. Szybki start zawiera szereg lekcje, które eksplorować rozgałęzianie i zapętlenia konstrukcje w języku C#. Że wnioski uczy również podstaw programu w języku C#.
+Ta opcja szybkiego startu jest przedstawienie sposobu pisania kodu, który sprawdza zmienne i zmieniona ścieżka wykonywania na podstawie tych zmiennych. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania go. Procedury szybkiego startu zawiera szereg lekcje, które eksplorować rozgałęzianie i zapętlenia konstrukcje w języku C#. Że wnioski uczy również podstaw programu w języku C#.
 
-To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
+Ta opcja szybkiego startu oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego poradniki Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Podejmowanie decyzji przy użyciu `if` — instrukcja
 
-Utwórz katalog o nazwie **szybkiego startu gałęzie**. Upewnij, że bieżący katalog i uruchom `dotnet new console -n BranchesAndLoops -o .`. To polecenie tworzy nową aplikację konsolową .NET Core w bieżącym katalogu. 
+Utwórz katalog o nazwie **szybkiego startu gałęzie**. Upewnij, że bieżący katalog i uruchom `dotnet new console -n BranchesAndLoops -o .`. To polecenie tworzy nową aplikację konsolową .NET Core w bieżącym katalogu.
 
 Otwórz **Program.cs** ulubionego edytora i Zastąp linię `Console.Writeline("Hello World!");` następującym kodem:
 
@@ -45,12 +45,11 @@ int b = 3;
 Typ `dotnet run` ponownie. Ponieważ odpowiedź jest mniejsza niż 10, nic nie jest wydrukowane. **Warunku** jesteś testowania ma wartość false. Nie masz żadnych kod do wykonania, ponieważ został zapisany tylko jedną z możliwych gałęzi dla `if` instrukcji: gałąź prawdy.
 
 > [!TIP]
-> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Należy dokładnie przejrzeć dane wyjściowe błędów i kod, który wygenerował błąd. Błąd compler zwykle może pomóc w znalezieniu problem. 
+> Ci poznać platformę C# (lub dowolnego języka programowania), należy podjąć błędów podczas pisania kodu. Kompilator znajdzie i raportów o błędach. Należy dokładnie przejrzeć dane wyjściowe błędów i kod, który wygenerował błąd. Błąd compler zwykle może pomóc w znalezieniu problem.
 
-W tym przykładzie pierwsze pokazano możliwości `if` i typów logicznych. A *logiczna* jest zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C# definiuje specjalny typ `bool` dla zmienne typu Boolean. `if` Instrukcji sprawdza wartość `bool`. Jeśli wartość jest `true`, instrukcji następującej `if` wykonuje. W przeciwnym razie zostanie pominięte. 
+W tym przykładzie pierwsze pokazano możliwości `if` i typów logicznych. A *logiczna* jest zmienna, która może mieć jedną z dwóch wartości: `true` lub `false`. C# definiuje specjalny typ `bool` dla zmienne typu Boolean. `if` Instrukcji sprawdza wartość `bool`. Jeśli wartość jest `true`, instrukcji następującej `if` wykonuje. W przeciwnym razie zostanie pominięte.
 
 Ten proces sprawdzania warunków i wykonywanie instrukcji na podstawie tych warunków jest bardzo zaawansowaną.
-
 
 ## <a name="make-if-and-else-work-together"></a>Upewnij się, jeśli i else współpracują ze sobą
 
@@ -69,7 +68,7 @@ Poniższa instrukcja `else` — słowo kluczowe jest wykonywana tylko wtedy, gdy
 
 > [!IMPORTANT]
 > Wcięcie w obszarze `if` i `else` jest instrukcje dla człowieka czytników.
-> W języku C# nie Traktuj wcięcia lub była białym znakiem za istotne. Poniższa instrukcja `if` lub `else` — słowo kluczowe zostanie wykonana na podstawie warunku. Wszystkie przykłady w tym szybki start wykonaj popularną praktyką tworzenia wcięć oparte na przepływie sterowania instrukcji.
+> W języku C# nie Traktuj wcięcia lub była białym znakiem za istotne. Poniższa instrukcja `if` lub `else` — słowo kluczowe zostanie wykonana na podstawie warunku. Wszystkie przykłady w tym szybkiego startu wykonaj popularną praktyką tworzenia wcięć oparte na przepływie sterowania instrukcji.
 
 Ponieważ wcięcia nie ma znaczenia, należy użyć `{` i `}` wskazująca, kiedy ma więcej niż jedną instrukcję jako część bloku, która wykonuje warunkowo. C# programistów zazwyczaj używają tych nawiasów klamrowych na wszystkich `if` i `else` klauzul. Poniższy przykład jest taki sam jak ten, który został utworzony. Modyfikowanie kodu powyżej, aby dopasować następujący kod:
 
@@ -87,7 +86,7 @@ else
 ```
 
 > [!TIP]
-> Za pomocą reszty to szybki start, wszystkie przykłady kodu zawiera nawiasy klamrowe, po zaakceptowane rozwiązania.
+> Za pomocą pozostałej części tego przewodnika Szybki Start, wszystkie przykłady kodu zawiera nawiasy klamrowe, po zaakceptowane rozwiązania.
 
 Można przetestować bardziej skomplikowane warunki. Dodaj następujący kod w Twojej `Main` metody po kodzie napisanych wykonanej do tej pory:
 
@@ -227,7 +226,7 @@ for(int index = 0; index < 10; index++)
 } 
 ```
 
-Wykonuje ten sam pracę jako `while` pętli i `do` pętli, które zostały już użyte. `for` Instrukcji ma trzy części, które kontrolują sposób działania. 
+Wykonuje ten sam pracę jako `while` pętli i `do` pętli, które zostały już użyte. `for` Instrukcji ma trzy części, które kontrolują sposób działania.
 
 Pierwsza część **dla inicjatora**: `for index = 0;` deklaruje, że `index` jest zmienna pętli i ustawia swojej wartości początkowej `0`.
 
@@ -252,13 +251,13 @@ Teraz, w tym samouczku `if` instrukcji i konstrukcji pętli w języku C#, zobacz
 
 Wypróbuj ją samodzielnie. Następnie sprawdź, jak Ty. Należy pobrać 63 dla odpowiedzi. Zobaczysz jednego możliwe odpowiedzi przez [wyświetlanie kompletny kod w serwisie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
-Zakończono szybki start "gałęzi i pętlę".
+Zakończono Szybki Start "gałęzie i pętle".
 
-Można kontynuować [ciągi interpolowane](interpolated-strings-local.md) szybki start w środowisku projektowania.
+Można kontynuować [ciągi interpolowane](interpolated-strings-local.md) szybkiego startu w środowisku projektowania.
 
 Użytkownik może dowiedzieć się więcej o tych pojęć w tych tematach:
 
-[Jeśli i else — instrukcja](../language-reference/keywords/if-else.md)   
-[While — instrukcja](../language-reference/keywords/while.md)   
-[— Instrukcja](../language-reference/keywords/do.md)   
-[For — instrukcja](../language-reference/keywords/for.md)   
+[Jeśli i else — instrukcja](../language-reference/keywords/if-else.md)  
+[While — instrukcja](../language-reference/keywords/while.md)  
+[— Instrukcja](../language-reference/keywords/do.md)  
+[For — instrukcja](../language-reference/keywords/for.md)  

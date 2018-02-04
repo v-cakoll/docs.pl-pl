@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c13450a7f05efd188607c80b920616f532f745d4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4cdea4d0ca5a8f7b829b9d0a99a6097d164bbf21
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="compiled-queries--linq-to-entities"></a>Skompilowane zapytania (LINQ to Entities)
 Jeśli masz aplikację, która wykonuje zapytania strukturę podobną wielokrotnie w ramach jednostki często może zwiększyć wydajność kompilacji zapytania jeden raz i jej wykonanie kilka razy z innymi parametrami. Na przykład aplikacje mogą mieć można pobrać wszystkich klientów określonego miasta; miasta określono w czasie wykonywania przez użytkownika w postaci. Składnik LINQ to Entities obsługuje przy użyciu skompilowane zapytania w tym celu.  
@@ -51,7 +53,7 @@ Jeśli masz aplikację, która wykonuje zapytania strukturę podobną wielokrotn
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery3_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery3_mq)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład kompiluje, a następnie wywołuje kwerendę, która akceptuje <xref:System.String> danych wejściowych parametru, a następnie zwraca `Contact` którego adres e-mail zaczyna się od określonego ciągu:  
+ Poniższy przykład kompiluje, a następnie wywołuje kwerendę, która akceptuje <xref:System.String> danych wejściowych parametru, a następnie zwraca `Contact` których adres e-mail zaczyna się od określonego ciągu:  
   
  [!code-csharp[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#compiledquery4_mq)]
  [!code-vb[DP L2E Conceptual Examples#CompiledQuery4_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#compiledquery4_mq)]  

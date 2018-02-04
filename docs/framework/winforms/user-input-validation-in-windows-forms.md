@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1eba92d764e73360b1cd58957ea5318c5b263b8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1d0e3ec867e44c4f01b239e8e243259d7c951d96
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Walidacja danych użytkownika w formularzach systemu Windows
 Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych przed aplikacja używa go. Może wymagać pewnych pól tekstowych konieczności o zerowej długości, że pole można sformatować jako numer telefonu lub inny typ danych poprawnie sformułowany lub że ciąg nie zawiera znaków niebezpieczne, które mogą służyć do naruszenia zabezpieczeń bazy danych. Formularze systemu Windows udostępnia kilka metod można sprawdzić poprawności danych wejściowych w aplikacji.  
@@ -46,7 +48,7 @@ Podczas wprowadzania danych do aplikacji, można sprawdzić poprawność danych 
   
  <xref:System.Windows.Forms.Control.Validating> Podano zdarzeń typu obiektu <xref:System.ComponentModel.CancelEventArgs>. Jeśli okaże się, że formantu danych jest nieprawidłowa, możesz anulować <xref:System.Windows.Forms.Control.Validating> zdarzenia przez ustawienie dla tego obiektu <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwości `true`. Jeśli nie ustawisz <xref:System.ComponentModel.CancelEventArgs.Cancel%2A> właściwości, formularze systemu Windows będzie założono, że Weryfikacja powiodła się dla tego formantu i wywoływania <xref:System.Windows.Forms.Control.Validated> zdarzeń.  
   
- Na przykład kodu, która weryfikuje adresów e-mail w <xref:System.Windows.Controls.TextBox>, zobacz <xref:System.Windows.Forms.Control.Validating>.  
+ Na przykład kodu, który sprawdza poprawność adresu e-mail w <xref:System.Windows.Controls.TextBox>, zobacz <xref:System.Windows.Forms.Control.Validating>.  
   
 ### <a name="data-binding-and-event-driven-validation"></a>Powiązanie danych i weryfikacji sterowane zdarzeniami  
  Sprawdzanie poprawności jest bardzo przydatny, gdy formanty mają powiązana ze źródłem danych, takich jak tabeli bazy danych. Przy użyciu weryfikacji, można upewnić się, że formantu danych spełnia na format wymagany przez źródło danych, i czy nie zawierać żadnych znaków specjalnych, takich jak znaków cudzysłowu i utworzyć kopię ułamkowe, który może być niebezpieczne.  

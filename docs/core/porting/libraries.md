@@ -1,7 +1,7 @@
 ---
 title: Eksportowanie do platformy .NET Core - bibliotek
 description: "Informacje o porcie projektów bibliotek z programu .NET Framework do platformy .NET Core."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: mairaw
 ms.date: 07/14/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: a0fd860d-d6b6-4659-b325-8a6e6f5fa4a1
-ms.workload: dotnetcore
-ms.openlocfilehash: c2cc62d1f7babb09eeccf0422bb4b3022d77ce02
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 24c74f0396dd7bfdf19fc0e11a29110fdbf27173
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="porting-to-net-core---libraries"></a>Eksportowanie do platformy .NET Core - bibliotek
 
@@ -52,7 +53,7 @@ Kilka technologie dostępne do bibliotek .NET Framework nie są dostępne do uż
 
 Tak, ponieważ nie jest obecnie zaimplementowana interfejsu API lub technologii nie oznacza, że celowo ma nieobsługiwany. Problem w pliku [problemy z repozytorium dotnet/corefx](https://github.com/dotnet/corefx/issues) w witrynie GitHub, aby poprosić o określonych interfejsów API i technologii. [Eksportowanie żądań w problemy](https://github.com/dotnet/corefx/labels/port-to-core) są oznaczone ikoną z `port-to-core` etykiety.
 
-### <a name="appdomains"></a>Domen aplikacji
+### <a name="appdomains"></a>AppDomains
 
 Elementami AppDomain izolowania aplikacji od siebie nawzajem. Domen wymagają obsługi środowiska uruchomieniowego i zazwyczaj są stosunkowo drogie. Nie jest zaimplementowana w .NET Core. Nie planujemy dodanie tej funkcji w przyszłości. Kod izolacji, zaleca się osobne procesy lub przy użyciu kontenery alternatywnym. Dynamiczne ładowanie zestawów, zaleca się nowe <xref:System.Runtime.Loader.AssemblyLoadContext> klasy.
 
@@ -78,7 +79,7 @@ Podobnie jak urzędy certyfikacji, przezroczystość zabezpieczeń umożliwia od
 
 Użyj granic zabezpieczeń dostarczane przez system operacyjny, takich jak konta użytkowników, kontenery i wirtualizacji dla uruchomionych procesów o najmniejszej zestaw uprawnień.
 
-### <a name="globaljson"></a>Global.JSON
+### <a name="globaljson"></a>global.json
 
 *Global.json* plik jest opcjonalny plik, który umożliwia ustawienie wersji narzędzi platformy .NET Core projektu. Jeśli używasz co noc kompilacje .NET Core i chcesz określić określoną wersję zestawu SDK, określ wersję z *global.json* pliku. Zazwyczaj znajduje się on w bieżącym katalogu roboczym lub jeden z jego katalogi nadrzędne. 
 
@@ -123,7 +124,7 @@ Ponieważ projekty są teraz celem .NET Framework 4.6.2, należy użyć tej wers
 
 Następnym krokiem jest do uruchamiania analizatora przenośność interfejsu API (ApiPort), aby wygenerować raport przenośność do analizy.
 
-Upewnij się, że rozumiesz [interfejsu API przenośność Analyzer (ApiPort)](~/docs/standard/portability-analyzer.md) i sposób generowania raportów przenośność dla przeznaczonych dla platformy .NET Core. Jak wykonać w tym prawdopodobnie w zależności od smaków osobistych i potrzeb użytkowników. Jaki sposób jest kilka różnych metod. Może się okazać się mieszanie kroki z tych metod w zależności od struktury kodu.
+Upewnij się, że rozumiesz [interfejsu API przenośność Analyzer (ApiPort)](../../standard/analyzers/portability-analyzer.md) i sposób generowania raportów przenośność dla przeznaczonych dla platformy .NET Core. Jak wykonać w tym prawdopodobnie w zależności od smaków osobistych i potrzeb użytkowników. Jaki sposób jest kilka różnych metod. Może się okazać się mieszanie kroki z tych metod w zależności od struktury kodu.
 
 ### <a name="dealing-primarily-with-the-compiler"></a>Przede wszystkim zajmujących kompilatora
 

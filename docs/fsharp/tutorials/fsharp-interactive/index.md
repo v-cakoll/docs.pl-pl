@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 36af8d1b-dc08-4a37-9497-d23c0a0ac11c
-ms.openlocfilehash: bcf3fe052f305f29ae4cf618d93759bd911e0078
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a18f339d898374a59858cd774154b3846594d183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interactive-programming-with-f"></a>Programowanie w języku F # Interactive #
 
@@ -26,7 +26,7 @@ W tym artykule opisano obecnie środowisko dla systemu Windows tylko.  Będzie o
 
 F # Interactive (fsi.exe) jest używany interakcyjne uruchomianie kodzie języka F # za pomocą konsoli lub wykonywanie skryptów F #. Innymi słowy F # interactive wykonuje REPL (Odczyt, Evaluate pętli drukowania) dla języka F #.
 
-Aby uruchomić narzędzia F # Interactive z konsoli, uruchom fsi.exe.  Dostępne są fsi.exe w "c:\Program pliki (x86) \Microsoft SDKs\F#\<wersji > \Framework\<wersji >\". Aby uzyskać informacje o dostępnych opcjach wiersza polecenia, zobacz [Opcje interakcyjne F #](fsharp-interactive-options.md).
+Aby uruchomić narzędzia F # Interactive z konsoli, uruchom fsi.exe.  Dostępne są fsi.exe w "c:\Program pliki (x86) \Microsoft SDKs\F#\<wersji > \Framework\<wersji >\". Aby uzyskać informacje o dostępnych opcjach wiersza polecenia, zobacz [Opcje interakcyjne F #](../../language-reference/fsharp-interactive-options.md).
 
 Aby uruchomić narzędzia F # Interactive za pomocą programu Visual Studio, kliknięcie przycisku odpowiednich narzędzi etykietą **F # Interactive**, lub użyj klawiszy **Ctrl + Alt + F**. W ten sposób otworzy okno interaktywne okna narzędzia, w którym działa sesja F # Interactive. Możesz też wybrać niektórych kod, który chcesz uruchomić w oknie interaktywnym i naciśnij kombinację klawiszy **ALT + ENTER**. F # Interactive rozpoczyna się w oknie narzędzia etykietą **F # Interactive**. Użycie tej kombinacji klawiszy, upewnij się, że okno edytora ma fokus.
 
@@ -98,5 +98,5 @@ test
 
 |Tytuł|Opis|
 |-----|-----------|
-|[Opcje interakcyjne F #](fsharp-interactive-options.md)|W tym artykule opisano składnia wiersza polecenia i opcje dotyczące programu F # Interactive, fsi.exe.|
+|[Opcje F# Interactive](../../language-reference/fsharp-interactive-options.md)|Zawiera opis składni wiersza polecenia i opcje dotyczące programu F # Interactive, fsi.exe.|
 |[Odwołanie do biblioteki interakcyjnej F #](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-interactive-library-reference)|Opisuje funkcje biblioteki są dostępne podczas wykonywania kodu w języku F # interactive.|

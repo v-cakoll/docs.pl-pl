@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 187927a9e75348454f5832c2a34bf780e48e4358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e9551fcf4f302be899dcee8737b3bcfad15f1210
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="large-data-and-streaming"></a>Duże ilości danych i przesyłanie strumieniowe
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML często jest zakodowany w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), połączonych projektanci systemów i architektów zwykle niepokoi rozmiaru danych przesyłanych w sieci (lub rozmiar) komunikaty wysyłane między sieci i kodowanie tekstowy XML stanowi wyzwanie specjalne wydajność transferu danych binarnych.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] to infrastruktura komunikacji opartych na języku XML. Ponieważ dane XML często jest zakodowany w formacie tekstu standardowego, zdefiniowane w [Specyfikacja XML 1.0](http://go.microsoft.com/fwlink/?LinkId=94838), połączonych projektanci systemów i architektów zwykle niepokoi rozmiaru danych przesyłanych w sieci (lub rozmiar) komunikaty wysyłane między sieci i kodowanie tekstowy XML stanowi wyzwanie specjalne wydajność transferu danych binarnych.  
   
 ## <a name="basic-considerations"></a>Podstawowe zagadnienia  
  Aby podać ogólne informacje o następujące informacje dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], w tej sekcji opisano niektóre problemy ogólne i zagadnienia dotyczące kodowania, dane binarne i przesyłania strumieniowego które zwykle dotyczą połączonych systemów infrastruktury.  
@@ -72,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="encodings"></a>Kodowanie  
  *Kodowanie* definiuje zestaw reguł temat do prezentowania wiadomości w sieci. *Koder* implementuje takie kodowania i odpowiada na stronie nadawcy Włączanie <xref:System.ServiceModel.Channels.Message> w pamięci komunikatu jako strumień bajtów lub Bufor bajtów, które mogą być wysyłane przez sieć. Na stronie odbiorcy koder włącza sekwencję bajtów do wiadomości w pamięci.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obejmuje trzy koderów i pozwala wpisać i dołączyć własnego koderów w razie potrzeby.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obejmuje trzy koderów i pozwala wpisać i dołączyć własnego koderów w razie potrzeby.  
   
  Każdy powiązań standardowych obejmuje wstępnie skonfigurowane kodera, zgodnie z którymi powiązania z prefiksem Net * Użyj kodera binarnego (umieszczając <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement> klasy) podczas <xref:System.ServiceModel.BasicHttpBinding> i <xref:System.ServiceModel.WSHttpBinding> klasy używać kodera wiadomości tekstowych (za pomocą klasy <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> klasy) domyślnie.  
   

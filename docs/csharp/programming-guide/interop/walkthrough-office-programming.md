@@ -2,7 +2,8 @@
 title: "Wskazówki: Programowanie Office (C# i Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 862f445107e0f58e8e00fba1708156c747165def
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, zwiększających programowania w języku Microsoft Office. Przydatne funkcje C# obejmują nazwane i opcjonalne argumenty i zwracać wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowane. W języku Visual Basic cechy automatycznie implementowane właściwości instrukcje, wyrażenia lambda i inicjatorów kolekcji.
@@ -98,11 +99,11 @@ Musi mieć program Microsoft Office Excel i Microsoft Office Word zainstalowanej
   
      Dwie nowe C# funkcje są używane w ramach tej metody. Obie te funkcje już istnieje w języku Visual Basic.  
   
-    -   Metoda [Dodaj](http://go.microsoft.com/fwlink/?LinkId=210910) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], można pominąć argumentu dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument są wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i tworzy nowy skoroszyt. Odpowiednik instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
+    -   Metoda [Dodaj](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) ma *opcjonalny parametr* służącą do konkretnego szablonu. Parametry opcjonalne nowego [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], można pominąć argumentu dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument są wysyłane w poprzednim przykładzie `Add` korzysta z domyślnego szablonu i tworzy nowy skoroszyt. Odpowiednik instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `excelApp.Workbooks.Add(Type.Missing)`.  
   
          Aby uzyskać więcej informacji, zobacz [nazwane i opcjonalne argumenty](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md).  
   
-    -   `Range` i `Offset` właściwości [zakres](http://go.microsoft.com/fwlink/?LinkId=210911) obiekt użyj *właściwości indeksowanych* funkcji. Ta funkcja pozwala korzystać z tych właściwości z typów COM za pomocą następujące typowe składni C#. Właściwości indeksowane pozwalają również na używanie `Value` właściwość `Range` obiektu, eliminując konieczność użycia `Value2` właściwości. `Value` Właściwość jest indeksowana, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
+    -   `Range` i `Offset` właściwości [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) obiekt użyj *właściwości indeksowanych* funkcji. Ta funkcja pozwala korzystać z tych właściwości z typów COM za pomocą następujące typowe składni C#. Właściwości indeksowane pozwalają również na używanie `Value` właściwość `Range` obiektu, eliminując konieczność użycia `Value2` właściwości. `Value` Właściwość jest indeksowana, ale indeks jest opcjonalne. Argumenty opcjonalne właściwości indeksowanych współpracują w poniższym przykładzie.  
   
          [!code-csharp[csOfficeWalkthrough#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_5.cs)]  
   
@@ -122,7 +123,7 @@ Musi mieć program Microsoft Office Excel i Microsoft Office Word zainstalowanej
   
      Te dodatki pokazują innej funkcji w języku C#: traktowanie `Object` wartości zwracane z hostów COM, takich jak Office tak, jakby mają typu [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md). Dzieje się to automatycznie podczas **Osadź typy międzyoperacyjne** ma ustawioną wartość domyślną `True`, lub ekwiwalentnie, gdy zestaw odwołuje się do niego [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora. Typ `dynamic` umożliwia późne wiązanie już dostępna w języku Visual Basic i uniknięcie rzutowania jawnego, wymagane w Visual C# 2008 i starszych wersji języka.  
   
-     Na przykład `excelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest Excel [zakres](http://go.microsoft.com/fwlink/?LinkId=210911) metody. Bez `dynamic`, należy rzutować obiektu zwróconego przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.  
+     Na przykład `excelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) metody. Bez `dynamic`, należy rzutować obiektu zwróconego przez `excelApp.Columns[1]` jako wystąpienie `Range` przed wywołaniem metody `AutoFit`.  
   
      [!code-csharp[csOfficeWalkthrough#8](../../../csharp/programming-guide/interop/codesnippet/CSharp/walkthrough-office-programming_8.cs)]  
   
@@ -196,21 +197,21 @@ Musi mieć program Microsoft Office Excel i Microsoft Office Word zainstalowanej
 8.  W programie Visual Studio, kliknij przycisk **czystą rozwiązania** na **kompilacji** menu, aby wyczyścić projektu zakończone.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Właściwości zaimplementowane automatycznie](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
- [Właściwości zaimplementowane automatycznie](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+ [Właściwości zaimplementowane automatycznie (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
+ [Właściwości zaimplementowane automatycznie (C#)](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
  [Inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)  
  [Inicjatory obiektów i kolekcji](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
  [Parametry opcjonalne](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
  [Przekazywanie argumentów według pozycji i według nazwy](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)  
  [Argumenty nazwane i opcjonalne](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
  [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
- [Wyrażenia lambda](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
- [Porady: użycie właściwości indeksowanych w programowaniu usługi Międzyoperacyjnej modelu COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Wskazówki: Osadzanie informacji o typie z zestawów Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Wskazówki: Osadzanie typów z zarządzanych zestawów](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Wskazówki: Tworzenie Twojego pierwszego dodatku narzędzi VSTO dla programu Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
- [Współdziałanie z COM](../../../visual-basic/programming-guide/com-interop/index.md)  
+ [Wyrażenia lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
+ [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
+ [Instrukcje: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
+ [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
+ [Przewodnik: osadzanie typów z zarządzanych zestawów](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Współdziałanie](../../../csharp/programming-guide/interop/index.md)

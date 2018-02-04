@@ -2,7 +2,8 @@
 title: "Poziomy ułatwień dostępu (odwołanie w C#)"
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
@@ -10,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 816ee0fab3fae21bff2ffbfcbfe39d04dcf95025
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: fed7d6d0eb3eda4d8d2e1847259dd8d23700d3e7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="accessibility-levels-c-reference"></a>Poziomy ułatwień dostępu (odwołanie w C#)
 
-Używać modyfikatorów dostępu [publicznego](../../../csharp/language-reference/keywords/public.md), [chronione](../../../csharp/language-reference/keywords/protected.md), [wewnętrzny](../../../csharp/language-reference/keywords/internal.md), lub [prywatnej](../../../csharp/language-reference/keywords/private.md), aby określić jedną z następujących zadeklarowana poziomy ułatwień dostępu dla członków.  
+Modyfikatory dostępu, użyj `public`, `protected`, `internal`, lub `private`, aby określić jedną z następujących poziomów zadeklarowane ułatwień dostępu dla członków.  
   
 |Zadeklarowane ułatwień dostępu|Znaczenie|  
 |----------------------------|-------------|  
-|`public`|Dostęp nie jest ograniczone.|  
-|`protected`|Dostęp jest ograniczony do zawierający klasy lub typy pochodzące od klasy zawierającego.|  
-|`internal`|Dostęp jest ograniczony do bieżącego zestawu.|  
-|`protected internal`|Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.|  
-|`private`|Dostęp jest ograniczony do typu zawierającego.|  
-|`private protected`|Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie. Dostępne od C# 7.2. |  
+|[`public`](public.md)|Dostęp nie jest ograniczone.|  
+|[`protected`](protected.md)|Dostęp jest ograniczony do zawierający klasy lub typy pochodzące od klasy zawierającego.|  
+|[`internal`](internal.md)|Dostęp jest ograniczony do bieżącego zestawu.|  
+|[`protected internal`](protected-internal.md)|Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.|  
+|[`private`](private.md)|Dostęp jest ograniczony do typu zawierającego.|  
+|[`private protected`](private-protected.md)|Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie. Dostępne od C# 7.2. |  
   
  Modyfikator dostępu tylko jeden jest dozwolone dla elementu członkowskiego lub typu, z wyjątkiem, korzystając z `protected internal` lub `private protected` kombinacji.  
   
@@ -59,7 +60,7 @@ Używać modyfikatorów dostępu [publicznego](../../../csharp/language-referenc
  [Domena dostępności](../../../csharp/language-reference/keywords/accessibility-domain.md)  
  [Ograniczenia dotyczące używania poziomów ułatwień dostępu](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
  [Modyfikatory dostępu](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
- [publiczny](../../../csharp/language-reference/keywords/public.md)  
- [prywatne](../../../csharp/language-reference/keywords/private.md)  
- [chronione](../../../csharp/language-reference/keywords/protected.md)  
- [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)
+ [public](../../../csharp/language-reference/keywords/public.md)  
+ [private](../../../csharp/language-reference/keywords/private.md)  
+ [protected](../../../csharp/language-reference/keywords/protected.md)  
+ [internal](../../../csharp/language-reference/keywords/internal.md)

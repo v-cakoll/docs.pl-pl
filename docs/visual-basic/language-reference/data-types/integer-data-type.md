@@ -1,9 +1,10 @@
 ---
 title: "Integer — Typ danych (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Integer
@@ -27,11 +28,11 @@ helpviewer_keywords:
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69c7fb6caf5d9a10c7d033d1ba0a05c9230d472c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ba700cac58c96b3d6d2f5ed3c74fdd7e95761352
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="integer-data-type-visual-basic"></a>Integer — typ danych (Visual Basic)
 Przechowuje 32-bitowe (4-bajtowe) liczby całkowite ze znakiem z zakresu wartości od -2 147 483,648 do 2 147 483 647.  
@@ -56,10 +57,18 @@ Począwszy od 2017 Visual Basic, umożliwia także znaku podkreślenia `_`, jako
 
 [!code-vb[integer](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#IntS)]  
 
+Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+
+```vb
+Dim number As Integer = &H_C305_F860
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Literały numeryczne mogą również obejmować `I` [znaku typu](../../programming-guide\language-features\data-types/type-characters.md) do oznaczania `Integer` typu danych, jak przedstawiono na poniższym przykładzie.
 
 ```vb
-Dim number = &H035826I
+Dim number = &H_035826I
 ```
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
@@ -94,8 +103,8 @@ k = 5.5
 
 <xref:System.Int32?displayProperty=nameWithType>   
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Long — typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [Short — typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

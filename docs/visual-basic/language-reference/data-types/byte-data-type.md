@@ -1,22 +1,24 @@
 ---
 title: "Byte — Typ danych (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Byte
+f1_keywords:
+- vb.Byte
 helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6475ff3ed905abb022a9ef60204c04b45130ae22
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 02234afc0dc51a2c1338cdd16d1f97765f64b45e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte — typ danych (Visual Basic)
 Przechowuje 8-bitową (1-bajtowy) liczb całkowitych bez znaku z zakresu wartości od 0 do 255.
@@ -41,6 +43,14 @@ W poniższym przykładzie liczb całkowitych równa 201, które są reprezentowa
 Począwszy od 2017 Visual Basic, umożliwia także znaku podkreślenia `_`, jako separator cyfr w celu zwiększenia czytelności, jak w poniższym przykładzie pokazano.
 
 [!code-vb[Byte](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#ByteS)]  
+
+Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+
+```vb
+Dim number As Byte = &H_6A
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
 

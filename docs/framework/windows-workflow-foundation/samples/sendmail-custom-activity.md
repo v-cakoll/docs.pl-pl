@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>Działania niestandardowe SendMail
 Ten przykład przedstawia sposób tworzenia działań niestandardowych, która jest pochodną <xref:System.Activities.AsyncCodeActivity> do wysyłania wiadomości e-mail do użycia w aplikacji przepływu pracy za pomocą protokołu SMTP. To niestandardowe działanie korzysta z funkcji programu <xref:System.Net.Mail.SmtpClient> do asynchronicznego wysyłania wiadomości e-mail i do wysyłania wiadomości e-mail z uwierzytelnianiem. Umożliwia także niektóre funkcje przez użytkownika końcowego, takie jak przetestować tryb, zastępujący tokenu, Szablony plików i test ścieżkę.  
@@ -28,16 +29,16 @@ Ten przykład przedstawia sposób tworzenia działań niestandardowych, która j
 |-|-|-|  
 |Host|String|Adres hosta serwera SMTP.|  
 |Port|String|Port usługi SMTP na hoście.|  
-|enableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> używa protokołu Secure Sockets Layer (SSL) do szyfrowania połączenia.|  
+|EnableSsl|bool|Określa, czy <xref:System.Net.Mail.SmtpClient> używa protokołu Secure Sockets Layer (SSL) do szyfrowania połączenia.|  
 |UserName|String|Nazwa użytkownika, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Hasło|String|Hasło, aby ustawić poświadczenia, aby uwierzytelnić nadawcę <xref:System.Net.Mail.SmtpClient.Credentials%2A> właściwości.|  
 |Temat|<xref:System.Activities.InArgument%601>\<ciąg >|Temat wiadomości.|  
 |Treści|<xref:System.Activities.InArgument%601>\<ciąg >|Treść wiadomości.|  
-|Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączony do tej wiadomości e-mail.|  
+|Załączniki|<xref:System.Activities.InArgument%601>\<ciąg >|Kolekcja załącznika używany do przechowywania danych dołączony do wiadomości e-mail.|  
 |Z|<xref:System.Net.Mail.MailAddress>|Adres początkowy dla tej wiadomości e-mail.|  
-|Do|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji, która zawiera adresatów wiadomości e-mail.|  
-|DW|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji zawierającej Adresaci kopii (DW) dla tej wiadomości e-mail.|  
-|UDW|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji, która zawiera adresatów kopii (UDW) dla tej wiadomości e-mail.|  
+|Do|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Kolekcja adresów, która zawiera adresatów wiadomości e-mail.|  
+|CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji zawierającej Adresaci kopii (DW) dla tej wiadomości e-mail.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Adres kolekcji, która zawiera adresatów kopii (UDW) dla tej wiadomości e-mail.|  
 |Tokeny|<xref:System.Activities.InArgument%601>< IDictionary\<ciąg, ciąg >>|Tokeny zastąpić w treści. Ta funkcja umożliwia użytkownikom określanie niektórych wartości w treści, niż można później zastąpić tokeny realizowane przy użyciu tej właściwości.|  
 |BodyTemplateFilePath|String|Ścieżka szablonu dla treści. `SendMail` Działanie kopiuje zawartość tego pliku do jej treści właściwości.<br /><br /> Szablon może zawierać tokeny, które są zastępowane przez wartości właściwości tokenów.|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|Gdy ta właściwość jest ustawiona, wszystkie wiadomości e-mail są wysyłane na adres określony w nim.<br /><br /> Ta właściwość jest przeznaczona do użycia podczas badania przepływów pracy. Na przykład jeśli chcesz upewnić się, że wszystkie wiadomości e-mail są wysyłane bez wysyłania ich do adresatów, do rzeczywistych.|  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instrukcje dotyczące konfiguracji  
  Dostęp do serwera SMTP jest wymagany dla tego przykładu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Konfigurowanie serwera SMTP, zobacz następujące linki.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Konfigurowanie serwera SMTP, zobacz następujące linki.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   

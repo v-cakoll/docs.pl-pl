@@ -1,5 +1,5 @@
 ---
-title: "Przewodnik Szybki Start - numery w języku C# - C#"
+title: Liczby w C# samouczek - C# lokalnego poradniki Szybki Start
 description: "Naucz się C# eksplorując typy liczbowe, ich właściwości i metody."
 author: billwagner
 ms.author: wiwagn
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a7f061de23c632560f40ac5eb46defd4537da16
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="numbers-in-c-quick-start"></a>Liczby w języku C# — szybki start #
+# <a name="numbers-in-c-quickstart"></a>Liczby w języku C# — Szybki Start
 
-To szybki start zawiera informacje na temat typu liczbowego w języku C# interaktywnie. Przedstawiono tworzenie niewielkich ilości kodu, a następnie będzie można skompilować i uruchomić ten kod. Szybki start zawiera szereg — lekcje przedstawiających operacji matematycznych w języku C# i cyfry. Że wnioski uczy również podstaw programu w języku C#.
+Ta opcja szybkiego startu zawiera informacje na temat typu liczbowego w języku C# interaktywnie. Przedstawiono tworzenie niewielkich ilości kodu, a następnie będzie można skompilować i uruchomić ten kod. Procedury szybkiego startu zawiera szereg — lekcje przedstawiających operacji matematycznych w języku C# i cyfry. Że wnioski uczy również podstaw programu w języku C#.
 
-To szybki start oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
+Ta opcja szybkiego startu oczekuje posiadania maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego poradniki Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="explore-integer-math"></a>Eksploruj matematyczne liczba całkowita
 
@@ -319,7 +319,7 @@ Można sprawdzić odpowiedzi przez [patrzeć Zakończono przykładowy kod w witr
 
 Jeśli chcesz, spróbuj niektóre inne formuły. 
 
-Zakończono szybki start "numery w języku C#". Można kontynuować [gałęzie i pętli](branches-and-loops-local.md) szybki start w środowisku projektowania.
+Zakończono Szybki Start "numery w języku C#". Można kontynuować [gałęzie i pętli](branches-and-loops-local.md) szybkiego startu w środowisku projektowania.
 
 Użytkownik może dowiedzieć się więcej o numery w języku C# w następujących tematach:
 

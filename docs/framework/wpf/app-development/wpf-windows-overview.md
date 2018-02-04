@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,16 +36,17 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-caps.latest.revision: "65"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1f9822c61f454f0dd166cfdad7f26798790a5f23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 594bb21983f51f3c0698c43d0f6ea39594b72705
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wpf-windows-overview"></a>Przegląd Okna WPF
 Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji autonomicznych przy użyciu systemu windows. Głównym celem okna jest zawartość hosta, wizualizuje danych, które umożliwia użytkownikom na interakcję z danymi. Autonomiczny [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji zapewniają własne systemu windows przy użyciu <xref:System.Windows.Window> klasy. W tym temacie przedstawiono <xref:System.Windows.Window> przed obejmujące podstawowe informacje dotyczące tworzenia i zarządzania systemu windows w autonomicznej aplikacji.  
@@ -120,7 +122,7 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
 ## <a name="configuring-a-window-definition-for-msbuild"></a>Konfigurowanie definicji okna narzędzia MSBuild  
  Jak zaimplementować okno programu Windows określa, jak jest skonfigurowany do [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]. Dla okna, które zdefiniowano przy użyciu zarówno [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] znaczników i związane z kodem:  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
+-   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki znaczników są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Page` elementów.  
   
 -   Plików z kodem są skonfigurowane jako [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `Compile` elementów.  
   
@@ -193,7 +195,7 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>Zapobieganie aktywacji okna  
- Istnieją scenariusze, w której systemu windows nie należy aktywować, gdy wyświetlana, takie jak windows konwersacji aplikacji messenger stylu Internet lub windows powiadomienie z aplikacji poczty e-mail.  
+ Istnieją scenariusze, w której systemu windows nie należy aktywować, gdy wyświetlana, takie jak windows konwersacji aplikacji messenger stylu Internet lub windows powiadomienia z aplikacji poczty e-mail.  
   
  Jeśli aplikacja ma okna, które nie powinny być aktywowany, gdy wyświetlany, można ustawić jej <xref:System.Windows.Window.ShowActivated%2A> właściwości `false` przed wywołaniem <xref:System.Windows.Window.Show%2A> metody po raz pierwszy. W rezultacie:  
   
@@ -299,7 +301,7 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
  Na poniższej ilustracji przedstawiono sekwencję zdarzeń podmiotu zabezpieczeń w okresie istnienia typu window, który jest wyświetlany bez aktywacji (<xref:System.Windows.Window.ShowActivated%2A> ustawiono `false` przed pokazaniem okna).  
   
- ![Okres istnienia okna &#40; Window.ShowActivated &#61; FALSE &#41; ] (../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![Window Lifetime &#40;Window.ShowActivated &#61; False&#41;](../../../../docs/framework/wpf/app-development/media/windowlifetimenoact.png "WindowLifetimeNoAct")  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>Położenie okna  
@@ -342,13 +344,13 @@ Użytkownicy korzystają z [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharpt
   
  Jeśli chcesz, szerokość i wysokość okna mają rozmiar, który pasuje do rozmiaru okna elementu zawartości, można użyć <xref:System.Windows.Window.SizeToContent%2A> właściwość, która ma następujące wartości:  
   
--   <xref:System.Windows.SizeToContent.Manual>., Żadnego skutku (ustawienie domyślne).  
+-   <xref:System.Windows.SizeToContent.Manual>. Żadnego skutku (ustawienie domyślne).  
   
--   <xref:System.Windows.SizeToContent.Width>., Dopasuj do szerokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+-   <xref:System.Windows.SizeToContent.Width>. Dopasuj do szerokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
--   <xref:System.Windows.SizeToContent.Height>., Dopasuj do wysokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
+-   <xref:System.Windows.SizeToContent.Height>. Dopasuj do wysokości zawartości, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości.  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>., Dopasuj do zawartości szerokość i wysokość, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, a ustawienie obu <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>. Dopasuj do zawartości szerokość i wysokość, który działa tak samo jak ustawienie zarówno <xref:System.Windows.FrameworkElement.MinHeight%2A> i <xref:System.Windows.FrameworkElement.MaxHeight%2A> do wysokości zawartości, a ustawienie obu <xref:System.Windows.FrameworkElement.MinWidth%2A> i <xref:System.Windows.FrameworkElement.MaxWidth%2A> szerokość zawartości.  
   
  W poniższym przykładzie przedstawiono okno to automatycznie rozmiary dopasowana do jego zawartości, w pionie i w poziomie, przy pierwszym wyświetleniu.  
   

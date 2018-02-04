@@ -15,18 +15,18 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c875fee667639923faf44c79afd6488cfc205e20
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowania wyrażenia regularnego, uwzględniająca tradycyjnych aparat niedeterministyczne skończoną Automaton ds takim Perl, Python, Emacs i Tcl. To odróżnia go od szybsze, ale bardziej ograniczone, czysty wyrażenia regularnego aparaty deterministyczne Automaton ograniczone (DFA) takich jak awk, egrep lub lex. Ma to również odróżniać z znormalizowanych, ale wolniej, POSIX NFAs. Poniższej sekcji opisano trzy typy aparatów wyrażenia regularnego i objaśniono, dlaczego wyrażeń regularnych w programie .NET Framework są implementowane przy użyciu tradycyjnych aparat NFA.  
@@ -145,7 +145,7 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
     |-------------|-----------------|  
     |`^`|Rozpocznij dopasowania na początku ciąg.|  
     |`[A-Z0-9]`|Dopasowuje dowolny znak numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
-    |`([-!#$%&'.*+/=?^`{} &#124; ~\w]) * "|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, ", {,}, &#124; lub ~.|  
+    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, ", {,}, &#124; lub ~.|  
     |`(?<=[A-Z0-9])`|Szukaj za do poprzedniego znaku, który musi być numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
     |`$`|Zakończenie dopasowuje koniec ciągu.|  
   

@@ -1,27 +1,29 @@
 ---
-title: "Modelu tożsamości opartego na oświadczeniach"
+title: Claims-Based Identity Model
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="claims-based-identity-model"></a>Modelu tożsamości opartego na oświadczeniach
-W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jednym oświadczeniem może być nazwa użytkownika, a innym adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
+# <a name="claims-based-identity-model"></a>Claims-Based Identity Model
+W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użytkownika jest reprezentowana w aplikacji jako zestaw oświadczeń. Jedno oświadczenie może być nazwa użytkownika, prawdopodobnie inny adres e-mail. Chodzi o to, że zewnętrzny system tożsamości jest skonfigurowany do podawania aplikacji wszystkiego, co musi wiedzieć o użytkowniku przy każdym wysyłanym przez niego żądaniu, a przy tym o kryptograficzne zapewnianie, że dane o tożsamości, które otrzymujesz, pochodzą z zaufanego źródła.  
   
  W ramach tego modelu logowanie jednokrotne jest znacznie łatwiejsze do osiągnięcia, a aplikacja przestaje być odpowiedzialna za następujące zadania:  
   
@@ -49,7 +51,7 @@ W przypadku tworzenia aplikacji obsługujących oświadczenia tożsamość użyt
  Zgodnie z opisem modelu programowania w systemie Windows Identity Foundation (WIF) zostanie wykorzystany do reprezentują zestaw atrybutów, które opisują użytkownika lub pewne inne jednostki w systemie, w którym chcesz zabezpieczyć termin "identity".  
   
 ### <a name="claim"></a>Oświadczenie  
- Oświadczenie to pewien fragment informacji o tożsamości, taki jak nazwa, adres e-mail, wiek, członkostwo w roli Sprzedaż. Im więcej oświadczeń odbiera aplikacja, tym więcej będziesz wiedzieć o użytkowniku. Możesz się zastanawiać, dlaczego są one nazywane "oświadczenia," zamiast "attributes", jak często jest używany do opisywania katalogów enterprise. Przyczyna wiąże się z metodą dostarczania. W tym modelu aplikacja nie wyszukuje atrybutów użytkownika w katalogu. W zamian użytkownik dostarcza oświadczenia do aplikacji, a aplikacja je bada. Każde oświadczenie jest tworzone przez wystawcę i ufasz oświadczeniu tylko na tyle, na ile ufasz wystawcy. Na przykład oświadczeniu przesłanemu przez kontroler domeny w Twojej firmie ufasz bardziej niż oświadczeniu przesłanemu przez samego użytkownika. WIF reprezentuje oświadczeń z <xref:System.Security.Claims.Claim> typu, który ma <xref:System.Security.Claims.Claim.Issuer%2A> właściwość, która pozwala sprawdzić, który wystawił oświadczenie.  
+ Należy traktować jako część informacji o tożsamości, takie jak nazwa, adres e-mail, wieku, członkostwo w roli sprzedaży oświadczenia. Im więcej oświadczeń odbiera aplikacja, tym więcej będziesz wiedzieć o użytkowniku. Możesz się zastanawiać, dlaczego są one nazywane "oświadczenia," zamiast "attributes", jak często jest używany do opisywania katalogów enterprise. Przyczyna wiąże się z metodą dostarczania. W tym modelu aplikacja nie wyszukuje atrybutów użytkownika w katalogu. W zamian użytkownik dostarcza oświadczenia do aplikacji, a aplikacja je bada. Każde oświadczenie jest tworzone przez wystawcę i ufasz oświadczeniu tylko na tyle, na ile ufasz wystawcy. Na przykład oświadczeniu przesłanemu przez kontroler domeny w Twojej firmie ufasz bardziej niż oświadczeniu przesłanemu przez samego użytkownika. WIF reprezentuje oświadczeń z <xref:System.Security.Claims.Claim> typu, który ma <xref:System.Security.Claims.Claim.Issuer%2A> właściwość, która pozwala sprawdzić, który wystawił oświadczenie.  
   
 ### <a name="security-token"></a>Token zabezpieczający  
  Użytkownik dostarcza do aplikacji zestaw oświadczeń wraz z żądaniem. W usłudze sieci Web te oświadczenia są przenoszone w nagłówku zabezpieczeń koperty protokołu SOAP. W aplikacji sieci Web opartej na przeglądarce oświadczenia docierają za pośrednictwem metody POST protokołu HTTP z przeglądarki użytkownika, a później mogą być buforowane w pliku cookie, jeśli jest pożądane ustanowienie sesji. Bez względu na to, jak docierają te oświadczenia, muszą być serializowane i z tej serializacji biorą się tokeny zabezpieczające. Token zabezpieczający to zserializowany zestaw oświadczeń podpisany cyfrowo przez urząd wystawiający. Podpis ma istotne znaczenie: zapewnia, że to nie sam użytkownik po prostu utworzył pakiet oświadczeń i przesłał go do Ciebie. W sytuacjach, które nie wymagają wysokiego poziomu zabezpieczeń, gdy kryptografia nie jest konieczna lub pożądana, możesz używać tokenów niepodpisanych, ale tego scenariusza nie opisano w tym temacie.  

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,21 +23,22 @@ helpviewer_keywords:
 - user authentication, code access security
 - code access security
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a28f8994c8cffdad69272322575df37c437b8b6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 04a46e30256b3b6df3de51346924cbb5fa057837
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="code-access-security"></a>Zabezpieczenia dostępu kodu
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
- Systemów komputerowych wysokim stopniu połączenia współczesnych często są widoczne dla kodu pochodzącego z różnymi, prawdopodobnie nieznane źródła. Kod można dołączyć do wiadomości e-mail, zawartych w dokumentach lub pobrane za pośrednictwem Internetu. Niestety w przypadku wielu użytkowników komputera wystąpił firsthand skutków złośliwego kodu przenośnych, w tym wirusy lub robaki, które mogą uszkodzenia lub zniszczenia danych i kosztów czas i pieniądze.  
+ Systemów komputerowych wysokim stopniu połączenia współczesnych często są widoczne dla kodu pochodzącego z różnymi, prawdopodobnie nieznane źródła. Kod może dołączony do wiadomości e-mail, zawartych w dokumentach lub pobrane za pośrednictwem Internetu. Niestety w przypadku wielu użytkowników komputera wystąpił firsthand skutków złośliwego kodu przenośnych, w tym wirusy lub robaki, które mogą uszkodzenia lub zniszczenia danych i kosztów czas i pieniądze.  
   
  Najbardziej typowych mechanizmów zabezpieczeń udzielić uprawnień do użytkowników na podstawie ich poświadczeń logowania (zwykle hasła) i ograniczanie zasobów (często katalogów i plików), które użytkownik może uzyskać dostęp. Jednak takie podejście nie uda się rozwiązać pewne problemy: użytkownicy uzyskują kodu z wielu źródeł, niektóre z nich mogą być nieprawidłowe; Kod może zawierać usterki lub luk w zabezpieczeniach mogła zostać wykorzystana przez złośliwy kod; i kod czasami wykonuje czynności, które użytkownik nie może określić, że będzie wykonywał. W związku z tym może być uszkodzony systemów komputerowych i dane prywatne mogą przedostawać użytkowników ostrożność i zaufanego uruchomienie złośliwego lub wypełnione błąd oprogramowania. Większość mechanizmy zabezpieczeń systemu operacyjnego wymagają, że każdy fragment kodu musi być całkowicie zaufany niezbędne do uruchomienia, z wyjątkiem prawdopodobnie skryptów na stronie sieci Web. W związku z tym nadal istnieje potrzeba mechanizm powszechnie stosowane zabezpieczeń, który umożliwia kodu pochodzącego z jednego komputera do wykonania z ochrony w innym systemie, nawet gdy nie ma relacji zaufania między systemów.  
   

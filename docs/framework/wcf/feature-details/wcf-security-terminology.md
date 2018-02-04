@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,21 +14,22 @@ helpviewer_keywords:
 - security glossary [WCF]
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: d63871f45fc8e209eb562fec7b208b10f67414b1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 352615238d95cf02788cf88ef412a11ffd2faf37
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wcf-security-terminology"></a>Terminologia dotycząca zabezpieczeń programu WCF
 Niektóre z terminologią używaną w opisach zabezpieczeń mogą być nieznane. Ten temat zawiera krótkie objaśnienia niektóre pojęcia dotyczące zabezpieczeń, ale nie mają na celu dostarczenie wyczerpujące dla każdego elementu.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]terminów używanych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokumentacji, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] terminów używanych w [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dokumentacji, zobacz [podstawowe pojęcia programu Windows Communication Foundation](../../../../docs/framework/wcf/fundamental-concepts.md).  
   
  listy kontroli dostępu (ACL)  
  Lista zabezpieczeń obiektu. (Obiekt może być pliku, procesu, zdarzenia lub niczego else o deskryptora zabezpieczeń). Wpis na liście kontroli dostępu jest wpisu kontroli dostępu (ACE). Istnieją dwa typy list kontroli dostępu: DACL i systemu.  
@@ -85,7 +87,7 @@ Niektóre z terminologią używaną w opisach zabezpieczeń mogą być nieznane.
  Urząd zabezpieczeń lokalnych (LSA)  
  Chroniony podsystem, który uwierzytelnia użytkowników i loguje się do systemu lokalnego. LSA przechowuje również informacje dotyczące wszystkich aspektów zabezpieczeń lokalnych w systemie, nazywanych zbiorczo zasady zabezpieczeń lokalnych systemu.  
   
- Negocjowania  
+ Negotiate  
  Dostawca obsługi zabezpieczeń (SSP), który działa jako warstwy aplikacji między interfejs obsługuje dostawcy zabezpieczeń (SSPI) i innych dostawców. Gdy aplikacja wywołuje do interfejsu SSPI, aby zalogować się do sieci, może określać SSP przetwarzania żądania. Jeśli aplikacja Określa `Negotiate`, `Negotiate` analizuje żądanie i wybiera najlepsze SSP można obsłużyć żądania na podstawie zasad zabezpieczeń skonfigurowane przez klienta.  
   
  Identyfikator jednorazowy  

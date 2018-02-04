@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Współpraca peer-to-Peer
 Sieci peer-to-peer jest użycie stosunkowo zaawansowanych komputerów (komputery osobiste), znajdujące się na krawędzi Internetu dla więcej niż tylko opartą na kliencie zadań. Nowoczesne komputer (komputer) ma bardzo szybko procesora, pamięci przeważająca i dużych dysków twardych, które są jest w pełni wykorzystywane podczas wykonywania typowych zadań przetwarzania danych, takie jak wiadomości e-mail i przeglądania sieci Web. Nowoczesne PC łatwo może działać jako klienta i serwera (element równorzędny) dla różnych typów aplikacji.  

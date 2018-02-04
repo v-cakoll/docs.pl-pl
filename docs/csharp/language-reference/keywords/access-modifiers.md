@@ -2,43 +2,42 @@
 title: "Modyfikatory dostępu (odwołanie w C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: access modifiers [C#]
+helpviewer_keywords:
+- access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 23f99d0925aefde7ef43888d16e888a0943dfc21
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d63cf724a2364059e5f3327254a9ec95f7493e5e
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="access-modifiers-c-reference"></a>Modyfikatory dostępu (odwołanie w C#)
 Modyfikatory dostępu są używany do określenia dostępności zadeklarowany element członkowski lub typ słów kluczowych. W tej sekcji przedstawiono Modyfikatory cztery dostępu:  
   
--   [publiczny](../../../csharp/language-reference/keywords/public.md)  
-  
--   [chronione](../../../csharp/language-reference/keywords/protected.md)  
-  
--   [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)  
-  
--   [prywatne](../../../csharp/language-reference/keywords/private.md)  
+-   `public`
+-   `protected`
+-   `internal`
+-   `private`
   
  Można określić następujące sześć poziomów ułatwień dostępu, używając modyfikatorów dostępu:  
   
- `public`: Dostępu nie jest ograniczone.  
+- [`public`](public.md): Dostępu nie jest ograniczone.  
   
- `protected`: Dostęp jest ograniczony do zawierający klasy lub typy pochodzące od klasy zawierającego.  
+- [`protected`](protected.md): Dostęp jest ograniczony do zawierający klasy lub typy pochodzące od klasy zawierającego.  
   
- `internal`: Dostęp jest ograniczony do bieżącego zestawu.  
+- [`internal`](internal.md): Dostęp jest ograniczony do bieżącego zestawu.  
   
- [`protected internal`](../../../csharp/language-reference/keywords/protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.  
+- [`protected internal`](protected-internal.md): Dostęp jest ograniczony do bieżącego zestawu lub typy pochodzące od klasy zawierającego.  
   
- `private`: Dostęp jest ograniczony do typu zawierającego.  
+- [`private`](private.md): Dostęp jest ograniczony do typu zawierającego.  
 
- [`private protected`](../../../csharp/language-reference/keywords/private-protected.md): Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie.  
+- [`private protected`](private-protected.md): Dostęp jest ograniczony do zawierającego klasę lub typy pochodzące od klasy zawierające w bieżącym zestawie.  
   
  W tej sekcji przedstawiono również następujące czynności:  
   

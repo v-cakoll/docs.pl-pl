@@ -1,6 +1,6 @@
 ---
-title: "Przewodnik Szybki Start — ciągi interpolowane - C#"
-description: "W tym szybki start o ciągi interpolowane pisania kodu C# do obejmują wynik wyrażenia w większych ciągu."
+title: "Ciągi interpolowane samouczek - C# lokalnego poradniki Szybki Start"
+description: "W tym Szybki Start o ciągi interpolowane pisania kodu C# do obejmują wynik wyrażenia w większych ciągu."
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,17 +9,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 14185dd4e364f12756541ac6401d1c6ff3206fe9
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 3cd9fc23dba104f92255b031eef32f80cca915b0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="interpolated-strings"></a>Ciągi interpolowane
 
-To szybki start jest przedstawienie sposobu użycia ciągi interpolowane w języku C# do wstawienia wartości do ciągu wyjściowego pojedynczego. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania go. Szybki start zawiera szereg lekcje, które wstawienia wartości do ciągów i sformatować te wartości na różne sposoby.
+Ta opcja szybkiego startu zawiera sposób użycia ciągi interpolowane w języku C# do wstawienia wartości do ciągu wyjściowego pojedynczego. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania go. Procedury szybkiego startu zawiera szereg lekcje, które wstawienia wartości do ciągów i sformatować te wartości na różne sposoby.
 
-To szybki start oczekuje, że masz maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów. 
+Ta opcja szybkiego startu oczekuje, że maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego poradniki Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów. 
 
 ## <a name="create-an-interpolated-string"></a>Tworzenie ciągu interpolowanym
 
@@ -162,9 +162,9 @@ Dane wyjściowe podobne następujące czynności:
 1/11/2018            Hour 09                1,063.34 feet
 ```
 
-Zakończono ciągi interpolowane szybki start. 
+Zakończono ciągi interpolowane — Szybki Start. 
     
-Można kontynuować [kolekcji i tablic](arrays-and-collections.md) szybki start w środowisku projektowania.
+Można kontynuować [kolekcji i tablic](arrays-and-collections.md) szybkiego startu w środowisku projektowania.
 
 Dowiedz się więcej o pracy z ciągi interpolowane w [ciągi interpolowane](../language-reference/keywords/interpolated-strings.md) tematu w odwołanie w C#.
 

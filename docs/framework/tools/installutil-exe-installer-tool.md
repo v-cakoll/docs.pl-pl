@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - progress information for installation
 - reporting installation progress
 ms.assetid: 3f9d0533-f895-4897-b4ea-528284e0241d
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: edda4e415f8ce0246ce6aa1a4d39f5bb6cec7728
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 68bb098cf34839e0587864092d1af302d70eca89
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installutilexe-installer-tool"></a>Installutil.exe (Narzędzie instalatora)
 Narzędzie Instalator to narzędzie wiersza polecenia umożliwiające instalowanie i odinstalowywanie zasobów serwera przez wykonywanie składników instalatora w określonych zestawach. To narzędzie działa w połączeniu z klasami <xref:System.Configuration.Install> przestrzeni nazw.  
@@ -57,8 +59,8 @@ installutil [/u[ninstall]] [options] assembly [[options] assembly] ...
 |------------|-----------------|  
 |`/h[elp]`<br /><br /> —lub—<br /><br /> `/?`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/help`*zestawu*<br /><br /> —lub—<br /><br /> `/?`*zestawu*|Wyświetla dodatkowe opcje rozpoznawane przez poszczególne instalatory w określonym zestawie, wraz ze składnią poleceń i opcjami programu InstallUtil.exe. Ta opcja dodaje tekst zwracany przez każdego składnika Instalator <xref:System.Configuration.Install.Installer.HelpText%2A?displayProperty=nameWithType> właściwości InstallUtil.exe tekst pomocy.|  
-|`/AssemblyName`"*assemblyName*<br /><br /> , Wersja =*główna.pomocnicza.kompilacja.poprawka*<br /><br /> , Culture =*ustawień regionalnych*<br /><br /> PublicKeyToken =*publicKeyToken*"|Określa silną nazwę zestawu, która musi zostać zarejestrowana w globalnej pamięci podręcznej zestawów. Nazwa zestawu musi być w pełni kwalifikowaną nazwą zawierającą wersję, kulturę i token klucza publicznego zestawu. W pełni kwalifikowana nazwa musi być ujęte w cudzysłowy.<br /><br /> Na przykład w pełni kwalifikowaną nazwą zestawu jest "mójZestaw, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0".|  
-|`/InstallStateDir=[`*directoryName*`]`|Określa katalog pliku InstallState, który zawiera dane służące do odinstalowywania zestawu. Domyślnie, jest to katalog, w którym znajduje się zestaw.|  
+|`/AssemblyName`"*assemblyName*<br /><br /> ,Version=*major.minor.build.revision*<br /><br /> , Culture =*ustawień regionalnych*<br /><br /> ,PublicKeyToken=*publicKeyToken*"|Określa silną nazwę zestawu, która musi zostać zarejestrowana w globalnej pamięci podręcznej zestawów. Nazwa zestawu musi być w pełni kwalifikowaną nazwą zawierającą wersję, kulturę i token klucza publicznego zestawu. W pełni kwalifikowana nazwa musi być ujęte w cudzysłowy.<br /><br /> Na przykład w pełni kwalifikowaną nazwą zestawu jest "mójZestaw, Culture=neutral, PublicKeyToken=0038abc9deabfle5, Version=4.0.0.0".|  
+|`/InstallStateDir=[` *directoryName* `]`|Określa katalog pliku InstallState, który zawiera dane służące do odinstalowywania zestawu. Domyślnie, jest to katalog, w którym znajduje się zestaw.|  
 |`/LogFile=`[*filename*]|Określa nazwę pliku dziennika, w którym jest rejestrowany postęp instalacji. Domyślnie jeśli `/LogFile` opcja zostanie pominięta, plik dziennika o nazwie *assemblyname*. InstallLog jest tworzony. Jeśli *filename* jest pominięty, plik dziennika nie jest generowany.|  
 |`/LogToConsole`={`true`&#124;`false`}|Jeśli `true`, wyświetla dane wyjściowe do konsoli. Jeśli `false` (ustawienie domyślne), pomija dane wyjściowe do konsoli.|  
 |`/ShowCallStack`|Przesyła stos wywołań do pliku dziennika, jeśli w jakimkolwiek punkcie instalacji wystąpi wyjątek.|  

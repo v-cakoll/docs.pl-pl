@@ -1,7 +1,7 @@
 ---
 title: "Kiedy należy wybrać .NET Framework dla kontenerów Docker"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Kiedy należy wybrać .NET Framework dla kontenerów Docker"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: aa072ca9aa1337bdae839749751c7faf7fc9b2a3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fcfb78bf521107b14d7796235f52c836f48f41fe
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Kiedy należy wybrać .NET Framework dla kontenerów Docker
 
@@ -33,7 +33,7 @@ Biblioteki innych firm są szybko obejmującego [.NET Standard](https://docs.mic
 
 Jednak nawet w przypadku tego wyjątkowych postępu od platformy .NET Standard w wersji 2.0 i .NET Core 2.0, mogą wystąpić przypadkach potrzebne do pracy systemu Windows i mogą nie obsługiwać .NET Core niektórych pakietów NuGet. Jeśli te pakiety są krytyczne dla aplikacji, będzie konieczne używanie środowiska .NET Framework do kontenerów systemu Windows.
 
-## <a name="usingnet-technologies-not-available-for-net-core"></a>Technologie Using.NET nie jest dostępna dla platformy .NET Core 
+## <a name="using-net-technologies-not-available-for-net-core"></a>Przy użyciu technologii .NET nie jest dostępna dla platformy .NET Core 
 
 Niektóre technologie .NET Framework nie są dostępne w bieżącej wersji programu .NET Core (wersja 2.0 opracowywania tego tekstu). Niektóre z nich będzie dostępny w nowszych wersjach platformy .NET Core (.NET Core 2.x), ale nie dotyczą innych nowej aplikacji wzorce objęci .NET Core i nigdy nie mogą być dostępne.
 
@@ -71,4 +71,4 @@ Tymczasem dowolną platformę i dowolne usługi w usłudze Azure nadal nie obsł
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (net-core kontenera scenarios.md) [dalej] (kontenera framework wybór factors.md)
+[Previous] (net-core-container-scenarios.md) [Next] (container-framework-choice-factors.md)

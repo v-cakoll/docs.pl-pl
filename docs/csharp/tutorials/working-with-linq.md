@@ -1,7 +1,7 @@
 ---
 title: Praca z LINQ
 description: "W tym samouczku jest przedstawienie sposobu generowania sekwencji za pomocą LINQ, zapisać metod do użycia w zapytaniach LINQ i rozróżnienia oceny wczesny i opóźnieniem."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/28/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e9707d3b67a80fface2c26c589780c60c2e293f7
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-linq"></a>Praca z LINQ
 
@@ -329,6 +329,6 @@ Skompiluj i uruchom ponownie. Dane wyjściowe są nieco bardziej przejrzyste i k
 
 ## <a name="conclusion"></a>Wniosek
 
-W tym przykładzie pokazano, możesz niektórych metod LINQ, jak utworzyć własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również wyświetlał różnice między opóźnieniem i wczesny ocena i wpływu tego decyzji może mieć na wydajność.
+W tym przykładzie pokazano, możesz niektórych metod LINQ, jak utworzyć własne metody, które będą używane łatwo za pomocą LINQ włączone kodu. On również wyświetlał różnice między opóźnieniem i wczesny ocena oraz wpływ, jaki decyzji może mieć na wydajność.
 
 Poznanie nieco technika magician jeden. Magicians Użyj losowa faro, ponieważ można kontrolować, którym przechodzi wszystkie karty w talii. W niektórych lewy magician ma umieść karty u góry talii członka grupy odbiorców i przesuwa kilka razy, wiedząc, gdzie przejdzie do tej karty. Inne Iluzje wymagają talii ustawić określony sposób. Magician ustawi talii przed wykonaniem lewy. Następnie użytkownik będzie losowo talii 5 razy przy użyciu losowego wewnętrzny. Na etapie klika Pokaż wygląd losowe talii, losowo go 3 razy więcej i talii ustawić dokładnie tak jak chce mieć.

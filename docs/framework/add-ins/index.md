@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - .NET Framework, extensibility
 - versioning [.NET Framework], add-ins
 ms.assetid: 8dd45b02-7218-40f9-857d-40d7b98b850b
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 030b84245a5cec09dac3133b04235c65f7bb2d80
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Dodatki i rozszerzalność
 <a name="top"></a>Dodatki Podaj rozszerzonych funkcji lub usług dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, w której deweloperzy mogą używać w celu opracowywania dodatków i aktywować je w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatku. Model jest zaimplementowana przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  

@@ -2,7 +2,8 @@
 title: "Wyrażenia lambda (Przewodnik programowania w języku C#)"
 ms.date: 03/03/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - lambda expressions [C#]
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-caps.latest.revision: "64"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9127cc5404fb85356f01cac26aa7b03a8ccd70da
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
+ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
 Wyrażenie lambda jest [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) używanej do tworzenia [delegaty](../../../csharp/programming-guide/delegates/using-delegates.md) lub [drzewo wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.  
@@ -274,13 +275,13 @@ class Test
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="featured-book-chapter"></a>Polecany rozdział książki  
- [Obiekty delegowane, zdarzeń i wyrażenia Lambda](http://go.microsoft.com/fwlink/?LinkId=195395) w [C# 3.0 Cookbook, trzecia edycja: ponad 250 rozwiązań dla programistów języka C# 3.0](http://go.microsoft.com/fwlink/?LinkId=195369)  
+ [Obiekty delegowane, zdarzeń i wyrażenia Lambda](https://msdn.microsoft.com/library/orm-9780596516109-03-09.aspx) w [C# 3.0 Cookbook, trzecia edycja: ponad 250 rozwiązań dla programistów języka C# 3.0](https://msdn.microsoft.com/library/orm-9780596516109-03.aspx)  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)  
+ [LINQ (zapytania o języku zintegrowanym)](../../../csharp/programming-guide/concepts/linq/index.md)  
  [Metody anonimowe](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
- [jest](../../../csharp/language-reference/keywords/is.md)  
- [Drzewa wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b)  
+ [is](../../../csharp/language-reference/keywords/is.md)  
+ [Drzewa wyrażeń](../../../csharp/programming-guide/concepts/expression-trees/index.md)  
  [Visual Studio 2008 C# przykłady (zobacz zapytań LINQ przykładowe pliki i XQuery program)](http://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)  
- [Wyrażenia lambda cykliczne](http://go.microsoft.com/fwlink/?LinkId=112395)
+ [Wyrażenia lambda cykliczne](https://blogs.msdn.microsoft.com/madst/2007/05/11/recursive-lambda-expressions/)

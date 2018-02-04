@@ -3,9 +3,11 @@ title: "SByte — Typ danych (Visual Basic)"
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,14 +19,14 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte — typ danych (Visual Basic)
 
@@ -51,6 +53,14 @@ Począwszy od 2017 Visual Basic, umożliwia także znaku podkreślenia `_`, jako
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
 
+Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Jeśli liczba całkowita literału jest poza zakresem `SByte` (to znaczy, jeśli jest mniejszy niż <xref:System.SByte.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.SByte.MaxValue?displayProperty=nameWithType>, występuje błąd kompilacji. Gdy całkowitą literału ma nie sufiks [całkowitą](integer-data-type.md) jest wywnioskowany. Jeśli liczba całkowita literału jest poza zakresem `Integer` typu [długi](long-data-type.md) jest wywnioskowany. To oznacza, że w poprzednich przykładach, literałach numerycznych `0x9A` i `0b10011010` będą interpretowane jako 32-bitowych liczb całkowitych ze znakiem z wartością 156, którego rozmiar przekracza <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Aby pomyślnie skompilować kod podobny do tego, który przypisuje podawać liczby całkowitej w celu `SByte`, wykonaj jedną z następujących czynności:
 
 - Wyłącz sprawdzanie granic całkowitych przez kompilowania przy użyciu `/removeintchecks` przełącznika kompilatora.
@@ -75,7 +85,7 @@ Jeśli liczba całkowita literału jest poza zakresem `SByte` (to znaczy, jeśli
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short — typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer — typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long — typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
+ [Short, typ danych](../../../visual-basic/language-reference/data-types/short-data-type.md)  
+ [Integer, typ danych](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
+ [Long, typ danych](../../../visual-basic/language-reference/data-types/long-data-type.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

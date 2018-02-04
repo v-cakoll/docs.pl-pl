@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>Model programowania oświadczeń WIF
 ASP.NET i Windows Communication Foundation (WCF) deweloperzy zazwyczaj używać interfejsów tożsamości i IPrincipal do pracy z informacji o tożsamości użytkownika. W programie .NET 4.5 Windows Identity Foundation (WIF) jest zintegrowana w taki sposób, że istnieją oświadczenia teraz zawsze dla dowolnego podmiotu, jak pokazano na poniższym diagramie:  
@@ -68,7 +70,7 @@ ClaimsPrincipal claimsPrincipal = Thread.CurrentPrincipal as ClaimsPrincipal;
 |SAML 1.1|1.  Wszystkie oświadczenia z System.IdentityModel.SecurityTokenService.GetOutputClaimsIdentity(System.Security.Claims.ClaimsPrincipal,System.IdentityModel.Protocols.WSTrust.RequestSecurityToken,System.IdentityModel.Scope).<br />2.  `http://schemas.microsoft.com/ws/2008/06/identity/claims/confirmationkey` Oświadczenie, które zawiera serializacja XML klucza potwierdzającego, jeśli token zawiera token potwierdzenia.<br />3.  `http://schemas.microsoft.com/ws/2008/06/identity/claims/samlissuername` Oświadczeń z elementu wystawcy.<br />4.  AuthenticationMethod AuthenticationInstant oświadczeń i, jeśli token zawiera instrukcję uwierzytelniania.|Oprócz oświadczenia na liście "SAML 1.1", z wyjątkiem oświadczeń typu `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name`, zostaną dodane oświadczenia i tożsamość będą reprezentowane przez WindowsClaimsIdentity związane z uwierzytelnianiem systemu Windows.|  
 |SAML 2.0|Taka sama jak "SAML 1.1".|Taka sama jak "SAML 1.1 mapowane na konta systemu Windows".|  
 |X509|1.  Oświadczenia o X500 rozróżnianych nazwę, nazwa_e-mail, dnsName, SimpleName, UpnName, UrlName, odcisku palca, RsaKey (to można wyodrębnić przy użyciu metody RSACryptoServiceProvider.ExportParameters z właściwości X509Certificate2.PublicKey.Key), DsaKey () to można wyodrębnić przy użyciu metody DSACryptoServiceProvider.ExportParameters z właściwości X509Certificate2.PublicKey.Key), z X509 właściwości numer seryjny certyfikatu.<br />2.  AuthenticationMethod oświadczenie z wartością `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509`. AuthenticationInstant oświadczenie z wartością czasu, jeśli certyfikat został zweryfikowany w formacie daty/godziny schematu XML.|1.  Używa nazwy FQDN konta systemu Windows jako `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` wartości oświadczenia. .<br />2.  Oświadczeń z X509 certyfikat nie jest zamapowany do systemu Windows i z konta systemu windows uzyskany przez mapowanie certyfikat do systemu Windows.|  
-|NAZWY UPN|1.  Oświadczenia są podobne do oświadczeń w sekcji uwierzytelnianie systemu Windows.<br />2.  AuthenticationMethod oświadczenie z wartością `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. AuthenticationInstant oświadczenie z wartością czasu, jeśli hasło zostało zweryfikowane w formacie daty/godziny schematu XML.||  
+|UPN|1.  Oświadczenia są podobne do oświadczeń w sekcji uwierzytelnianie systemu Windows.<br />2.  AuthenticationMethod oświadczenie z wartością `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password`. AuthenticationInstant oświadczenie z wartością czasu, jeśli hasło zostało zweryfikowane w formacie daty/godziny schematu XML.||  
 |Systemu Windows (Kerberos lub NTLM)|1.  Oświadczenia generowane z tokenu dostępu, takich jak: PrimarySID, DenyOnlyPrimarySID PrimaryGroupSID, DenyOnlyPrimaryGroupSID, identyfikatora GroupSID, DenyOnlySID i nazwy<br />2.  AuthenticationMethod z wartością `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows`. AuthenticationInstant z wartością czas, kiedy tokenu dostępu systemu Windows została utworzona w formacie daty/godziny schematu XML.||  
 |Pary kluczy RSA|1.  `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` Oświadczenie z wartością RSAKeyValue.<br />2.  AuthenticationMethod oświadczenie z wartością `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature`. AuthenticationInstant oświadczenie z wartością czas po klucz RSA został uwierzytelniony (to znaczy podpis została zweryfikowana) w formacie daty/godziny schematu XML.||  
   

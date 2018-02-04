@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - documents [WPF], annotations
 - sticky notes [WPF]
 ms.assetid: 716bf474-29bd-4c74-84a4-8e0744bdad62
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7cc7b09211bc9168bbab85105a0574dc142542ba
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1f3ac3ce66d944934724bef1b69307030ec813e2
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="annotations-overview"></a>Przegląd Adnotacje
 Uwagi dotyczące pisania lub komentarzy w dokumencie dokumentów jest takie działanie popularne, że firma Microsoft niemal stosować go dla przyznane. Te informacje i komentarze są "adnotacji" dodamy do dokumentu, aby flaga informacji lub Wyróżnij elementy do wykorzystania w późniejszym czasie. Pisanie uwagi na drukowanych dokumentów jest łatwe i popularne, aby dodać komentarz do elektronicznych dokumentów jest zazwyczaj bardzo ograniczony dostępne na wszystkich.  
@@ -73,7 +75,7 @@ Uwagi dotyczące pisania lub komentarzy w dokumencie dokumentów jest takie dzia
  [!code-csharp[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/CSharp/Window1.xaml.cs#handler)]
  [!code-vb[FlowDocumentAnnotatedViewer#Handler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentAnnotatedViewer/visualbasic/window1.xaml.vb#handler)]  
   
- Inny przykładowy scenariusz obejmuje aplikacje, które wymiany adnotacji i notatki między czytnikami dokumentu pocztą e-mail. Ta funkcja umożliwia tych aplikacji można przejść czytnik do strony, która zawiera adnotację, są wymieniane.  
+ Inny przykładowy scenariusz obejmuje aplikacje, które umożliwiają wymianę adnotacji i notatki między czytnikami dokumentu za pośrednictwem poczty e-mail. Ta funkcja umożliwia tych aplikacji można przejść czytnik do strony, która zawiera adnotację, są wymieniane.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Controls.Primitives.DocumentViewerBase>  

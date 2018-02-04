@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 124c9321623fd6fe9c5414fc1eed2e41be1e75f3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzysta z usługi aplikacji klienta do uwierzytelniania użytkowników i ról użytkownika i ustawienia.  
@@ -48,7 +50,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
 ## <a name="prerequisites"></a>Wymagania wstępne  
  Potrzebne są następujące składnika w tym przewodniku:  
   
--   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].,  
+-   [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)].  
   
 ## <a name="creating-the-client-application"></a>Tworzenie aplikacji klienckiej  
  Pierwszą czynnością, który będzie do jest utworzenie projektu formularzy systemu Windows. W tym przewodniku zastosowano formularzy systemu Windows, ponieważ więcej osób zapoznać się z nią, ale proces jest podobny do projektów Windows Presentation Foundation (WPF).  
@@ -191,7 +193,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   	|**Nazwa użytkownika**|`manager`|  
   	|**Hasło**|`manager!`|  
   	|**Potwierdź hasło**|`manager!`|  
-  	|**Wiadomości e-mail**|`manager@contoso.com`|  
+  	|**Poczta e-mail**|`manager@contoso.com`|  
   	|**Pytanie zabezpieczające**|`manager`|  
   	|**Odpowiedź zabezpieczeń**|`manager`|  
   
@@ -213,7 +215,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   	|**Nazwa użytkownika**|`employee`|  
   	|**Hasło**|`employee!`|  
   	|**Potwierdź hasło**|`employee!`|  
-  	|**Wiadomości e-mail**|`employee@contoso.com`|  
+  	|**Poczta e-mail**|`employee@contoso.com`|  
   	|**Pytanie zabezpieczające**|`Employee`|  
   	|**Odpowiedź zabezpieczeń**|`employee`|  
   
@@ -377,7 +379,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
   	|Właściwość|Wartość|  
   	|--------------|-----------|  
-  	|**(Nazwa)**|managerOnlyButton|  
+  	|**(Name)**|managerOnlyButton|  
   	|**Tekst**|& Menedżera zadań|  
   	|**Widoczne**|`False`|  
   

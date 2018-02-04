@@ -30,18 +30,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 653ffbf9597be9c82300b2be69ed6a7f9412769d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
 <a name="top"></a>Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 01/19/2018
   
  Wadą szyfrowania klucz tajny jest zakłada obie strony mają uzgodniony klucza i IV i przekazywane ich wartości. IV nie jest uważana za klucz tajny i może być przekazywane w postaci zwykłego tekstu z komunikatem. Jednak klucz muszą być trzymane przed nieautoryzowanymi użytkownikami. Te problemy, klucz tajny szyfrowanie jest często używane razem z szyfrowania klucza publicznego do prywatnie komunikacji wartości klucza i IV.  
   
- Przy założeniu, że Alicja i Robert są obie strony chcą komunikują się za pośrednictwem kanału niezabezpieczone, szyfrowania klucza tajnego mogą użyć w następujący sposób: Alicja i Robert zobowiązuje się używać jeden algorytm konkretnego (na przykład AES) z określonym kluczem i IV. Alicja Redaguj komunikat i tworzy strumień sieciowych (prawdopodobnie nazwanego potoku lub sieci wiadomości e-mail) do przesyłania wiadomości. Następnie użytkownik szyfruje tekst przy użyciu klucza i IV i wysyła wiadomości i IV do niego za pośrednictwem sieci intranet. Robert otrzymuje zaszyfrowanego tekstu i odszyfrowuje ją przy użyciu IV i uprzednio uzgodniony klucza. Jeśli transmisja zostaje zatrzymana, interceptor nie można odzyskać oryginalnej wiadomości, ponieważ nie zna klucza. W tym scenariuszu tylko klucz musi pozostać poufne. W przypadku rzeczywistych Alicja lub Bob generuje klucz tajny i używa publicznego klucza szyfrowania (asymetrycznym) przenieść klucz tajny (symetrycznego) do drugiej strony. Aby uzyskać więcej informacji na temat szyfrowania klucza publicznego zobacz następną sekcję.  
+ Przy założeniu, że Alicja i Robert są obie strony chcą komunikują się za pośrednictwem kanału niezabezpieczone, szyfrowania klucza tajnego mogą użyć w następujący sposób: Alicja i Robert zobowiązuje się używać jeden algorytm konkretnego (na przykład AES) z określonym kluczem i IV. Alicja Redaguj komunikat i tworzy strumień sieciowych (prawdopodobnie nazwanego potoku lub sieci poczta e-mail) do przesyłania wiadomości. Następnie użytkownik szyfruje tekst przy użyciu klucza i IV i wysyła wiadomości i IV do niego za pośrednictwem sieci intranet. Robert otrzymuje zaszyfrowanego tekstu i odszyfrowuje ją przy użyciu IV i uprzednio uzgodniony klucza. Jeśli transmisja zostaje zatrzymana, interceptor nie można odzyskać oryginalnej wiadomości, ponieważ nie zna klucza. W tym scenariuszu tylko klucz musi pozostać poufne. W przypadku rzeczywistych Alicja lub Bob generuje klucz tajny i używa publicznego klucza szyfrowania (asymetrycznym) przenieść klucz tajny (symetrycznego) do drugiej strony. Aby uzyskać więcej informacji na temat szyfrowania klucza publicznego zobacz następną sekcję.  
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmów szyfrowania klucz tajny:  
   

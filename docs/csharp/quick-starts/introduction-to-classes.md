@@ -1,5 +1,5 @@
 ---
-title: "Przewodnik Szybki Start — wprowadzenie do klasy - C#"
+title: Wprowadzenie do samouczka klasy - C# lokalnego poradniki Szybki Start
 description: "Utwórz pierwszy program C# i eksplorowanie obiektowej pojęcia"
 author: billwagner
 ms.author: wiwagn
@@ -9,15 +9,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="introduction-to-classes"></a>Wprowadzenie do klas
 
-To szybki start oczekuje, że masz maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
+Ta opcja szybkiego startu oczekuje, że maszynie, która służy do tworzenia aplikacji. Temat .NET [wprowadzenie w ciągu 10 minut](https://www.microsoft.com/net/core) zawiera instrukcje dotyczące konfigurowania środowiska deweloperskiego lokalnego Mac, komputera lub Linux. Jest to szybki przegląd poleceń będzie używany w [wprowadzenie do lokalnego poradniki Szybki Start](local-environment.md) wraz z łączami, aby uzyskać więcej szczegółów.
 
 ## <a name="create-your-application"></a>Tworzenie aplikacji
 
@@ -38,9 +38,9 @@ namespace classes
 }
 ```
 
-W tym szybki start możesz zacząć tworzyć nowe typy, które reprezentują konta bankowego. Zwykle programiści określają każdej klasy w pliku tekstowym inny. Który ułatwia zarządzanie wraz z rozwojem programu rozmiar.  Utwórz nowy plik o nazwie **BankAccount.cs** w **klasy** katalogu. 
+W tym szybkiego startu możesz zacząć tworzyć nowe typy, które reprezentują konta bankowego. Zwykle programiści określają każdej klasy w pliku tekstowym inny. Który ułatwia zarządzanie wraz z rozwojem programu rozmiar.  Utwórz nowy plik o nazwie **BankAccount.cs** w **klasy** katalogu. 
 
-Ten plik będzie zawierać definicję ***konta bankowego***. Obiekt programowania Oriented organizuje kodu przez tworzenie typów w formie ***klasy***. Tych klas zawiera kod, który reprezentuje określonej jednostki. `BankAccount` Klasa reprezentuje konta bankowego. Kod implementuje określonych operacji za pomocą metody i właściwości. W tym szybki start konta bankowego obsługuje tego zachowania:
+Ten plik będzie zawierać definicję ***konta bankowego***. Obiekt programowania Oriented organizuje kodu przez tworzenie typów w formie ***klasy***. Tych klas zawiera kod, który reprezentuje określonej jednostki. `BankAccount` Klasa reprezentuje konta bankowego. Kod implementuje określonych operacji za pomocą metody i właściwości. Ta opcja szybkiego startu konta bankowego obsługuje tego zachowania:
 
 1. Składa się z 10-cyfrowy numer, który unikatowo identyfikuje konta bankowego.
 1. Ma ona ciąg, który przechowuje nazwę lub nazwy właścicieli.
@@ -76,7 +76,7 @@ namespace classes
 }
 ```
 
-Przed przejściem, Spójrzmy na został skompilowany.  `namespace` Deklaracji umożliwia organizację kodu. To szybki start jest stosunkowo mały, więc będzie umieścić cały kod w jednym obszarze nazw. 
+Przed przejściem, Spójrzmy na został skompilowany.  `namespace` Deklaracji umożliwia organizację kodu. Ta opcja szybkiego startu jest stosunkowo mały, więc będzie umieścić cały kod w jednym obszarze nazw. 
 
 `public class BankAccount`definiuje klasę lub typ tworzony. Wszystkie elementy wewnątrz `{` i `}` następujący klasy deklaracji definiuje zachowanie klasy. Istnieje pięć ***członków*** z `BankAccount` klasy. Pierwsze trzy są ***właściwości***. Właściwości elementów danych i może mieć kod, który wymusza sprawdzania poprawności lub inne zasady. Ostatnie dwa są ***metody***. Metody są bloki kodu tego administracją jednej funkcji. Odczytywanie nazwy wszystkich członków powinien podać informacji wystarczających lub innego projektanta zrozumieć, co oznacza klasy.
 
@@ -199,11 +199,11 @@ Zapisz plik i typ `dotnet run` Wypróbuj ją.
 
 ## <a name="challenge---log-all-transactions"></a>Test — zalogować wszystkich transakcji
 
-Aby zakończyć to szybki start, można napisać `GetAccountHistory` metodę, która tworzy `string` historii transakcji. Dodaj tę metodę w celu `BankAccount` typu:
+Do zakończenia tego przewodnika Szybki Start, można napisać `GetAccountHistory` metodę, która tworzy `string` historii transakcji. Dodaj tę metodę w celu `BankAccount` typu:
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-Ta metoda korzysta <xref:System.Text.StringBuilder> klasy formatującej ciąg, który zawiera jeden wiersz dla każdej transakcji. Przedstawiono ciągu formatowania kodu we wcześniejszej części tych Szybki Start. Jest jeden znak nowego `\t`. Która wstawia kartę, aby sformatować dane wyjściowe.
+Ta metoda korzysta <xref:System.Text.StringBuilder> klasy formatującej ciąg, który zawiera jeden wiersz dla każdej transakcji. Przedstawiono ciągu formatowania kodu we wcześniejszej części te przewodniki Szybki Start. Jest jeden znak nowego `\t`. Która wstawia kartę, aby sformatować dane wyjściowe.
 
 Dodaj następujący wiersz do testowania w **Program.cs**:
 
@@ -215,6 +215,6 @@ Typ `dotnet run` wyników.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli użytkownik został zablokowany, można wyświetlić źródła dla tego szybki start [w naszym repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
+Jeśli użytkownik został zablokowany, można wyświetlić źródła dla tego przewodnika Szybki Start [w naszym repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
 
-Gratulacje, po zakończeniu wszystkich naszych Szybki Start. Jeśli chcesz dowiedzieć się więcej, spróbuj naszych [samouczki](../tutorials/index.md)
+Gratulacje, po zakończeniu wszystkich naszych Przewodniki Szybki Start. Jeśli chcesz dowiedzieć się więcej, spróbuj naszych [samouczki](../tutorials/index.md)

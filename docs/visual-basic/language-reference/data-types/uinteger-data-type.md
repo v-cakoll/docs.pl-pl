@@ -1,11 +1,13 @@
 ---
 title: "UInteger — Typ danych"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.uinteger
+f1_keywords:
+- vb.uinteger
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - UInteger data type
@@ -19,14 +21,13 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-caps.latest.revision: "19"
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f3852bd56d11c19e327e6c2f3e23cfb082a54e0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea6d42a604e5a50fab62644034afc82e089792c7
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="uinteger-data-type"></a>UInteger — Typ danych
 
@@ -53,10 +54,18 @@ Począwszy od 2017 Visual Basic, umożliwia także znaku podkreślenia `_`, jako
 
 [!code-vb[UInteger](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UIntS)]  
 
+Począwszy od programu Visual Basic 15,5 cala, umożliwia także znaku podkreślenia (`_`) jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. Na przykład:
+
+```vb
+Dim number As UInteger = &H_0F8C_0326
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Literały numeryczne mogą również obejmować `UI` lub `ui` [znaku typu](../../programming-guide\language-features\data-types/type-characters.md) do oznaczania `UInteger` typu danych, jak przedstawiono na poniższym przykładzie.
 
 ```vb
-Dim number = &H0FAC14D7ui
+Dim number = &H_0FAC_14D7ui
 ```
 
 ## <a name="programming-tips"></a>Porady dotyczące programowania
@@ -80,5 +89,5 @@ Dim number = &H0FAC14D7ui
  [Typy danych](../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
  [Konwersja — podsumowanie](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
+ [Instrukcje: wywoływanie funkcji Windows wykorzystującej typy bez znaku](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
  [Skuteczne stosowanie typów danych](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

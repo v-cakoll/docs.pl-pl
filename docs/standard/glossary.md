@@ -1,7 +1,7 @@
 ---
 title: ".NET — słownik"
 description: "Dowiedz się znaczenie wybranych terminów używanych w dokumentacji programu .NET."
-keywords: ".NET — słownik, słownik platformy .NET, terminologii .NET, platformy .NET, .NET framework, środowisko uruchomieniowe platformy .NET"
+keywords: .NET glossary, .NET dictionary, .NET terminology, .NET platform, .NET framework, .NET runtime
 author: tdykstra
 ms.author: tdykstra
 ms.date: 07/08/2017
@@ -12,17 +12,17 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 112be2518ddfb396fce8a14c5056c16cce9f376d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-glossary"></a>.NET — słownik
 
 Podstawowym celem tego słownika jest wyjaśnienie znaczenia wybranego terminów i skrótów, które często pojawiają się w dokumentacji programu .NET, bez definicji.
 
-## <a name="aot"></a>DRZEWA OBIEKTÓW APLIKACJI
+## <a name="aot"></a>AOT
 
 Kompilator z wyprzedzeniem o czasie.
 
@@ -44,9 +44,9 @@ Zobacz [dokumentacji platformy ASP.NET Core](/aspnet/#pivot=core).
 
 ## <a name="assembly"></a>zestaw
 
-A *.dll* pliku, który zawiera kolekcję interfejsów API, które może być wywoływany przez aplikacje lub innych zestawów.
+A *.dll*/*.exe* pliku, który może zawierać kolekcję interfejsów API, które może być wywoływany przez aplikacje lub innych zestawów.
 
-Zestaw .NET jest kolekcją typów. Zestaw zawiera interfejsy, klasy, struktury, wyliczenia i delegaty.  Zestawy w projekcie *bin* folderu są czasami określane jako *plików binarnych*. Zobacz też [biblioteki](#library).
+Zestaw może zawierać typów, takie jak interfejsy, klasy, struktury, wyliczenia i delegaty. Zestawy w projekcie *bin* folderu są czasami określane jako *plików binarnych*. Zobacz też [biblioteki](#library).
 
 ## <a name="clr"></a>CLR
 
@@ -54,7 +54,7 @@ Zestaw .NET jest kolekcją typów. Zestaw zawiera interfejsy, klasy, struktury, 
 
 Dokładne znaczenie zależy od kontekstu, ale zazwyczaj odnosi się do środowiska wykonawczego platformy .NET. Środowisko CLR obsługuje alokacją pamięci i zarządzania. Środowisko CLR jest również maszyny wirtualnej, który nie tylko wykonuje aplikacji, ale także generuje i kompiluje kodu na bieżąco przy użyciu kompilatora JIT. Bieżąca implementacja Microsoft CLR to tylko systemu Windows.
 
-## <a name="coreclr"></a>Środowisko CoreCLR
+## <a name="coreclr"></a>CoreCLR
 
 .NET core środowisko uruchomieniowe języka wspólnego.
 
@@ -68,13 +68,13 @@ Przestrzenie nazw bibliotek, które obejmują System.* (oraz w ograniczonym zakr
 
 ## <a name="corert"></a>CoreRT
 
-Środowisko uruchomieniowe .NET core.
+.NET Core runtime.
 
 W przeciwieństwie do środowiska CLR/na środowisko CoreCLR CoreRT nie jest maszyny wirtualnej, co oznacza, że nie ma wśród nich urządzeń do Generowanie i uruchamianie kodu na bieżąco, ponieważ nie ma wśród nich [JIT](#jit). Jednak zawierać [GC](#gc) z możliwością identyfikacji typu środowiska uruchomieniowego (RTTI) i odbicia. Jednak system jego typ zaprojektowano tak, aby metadanych w celu odbicia nie jest wymagane. Dzięki temu o [drzewa obiektów aplikacji](#aot) narzędzia łańcucha, który umożliwia łączenie zadań zbędny metadanych (ważniejsze) identyfikację kodu, który nie korzysta z aplikacji. CoreRT trwa opracowywanie.
 
 Zobacz [wprowadzenie do architektury .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="ecosystem"></a>ekosystemu
+## <a name="ecosystem"></a>ecosystem
 
 Wszystkie środowiska uruchomieniowego oprogramowania, narzędzia do programowania i zasoby społecznościowe, które są używane do tworzenia i uruchamiania aplikacji dla danej technologii.
 
@@ -210,7 +210,7 @@ Ta technologia można traktować jako trwałe kompilatora JIT. Zazwyczaj kompilu
 
 Pakiet NuGet &mdash; lub po prostu pakietu &mdash; jest *.zip* plików z jednego lub więcej zestawów o tej samej nazwie, oraz dodatkowe metadane, takie jak nazwisko autora.
 
-*.Zip* plik ma *.nupkg* rozszerzenia i mogą zawierać zasoby, takie jak *.dll* plików i *.xml* plików do użytku z wielu struktury i wersje. Podczas instalowania aplikacji lub w bibliotece, odpowiednie zasoby są zaznaczone, oparty na platformie docelowej określonej przez aplikację lub biblioteki. Zasoby, które definiują interfejsu znajdują się w *ref* folderu i zasoby, które definiują implementacji znajdują się w *lib* folderu.
+*.Zip* plik ma *.nupkg* rozszerzenia i mogą zawierać zasoby, takie jak *.dll* plików i *.xml* plików do użytku z wielu elementu docelowego struktury i wersje. Podczas instalowania aplikacji lub w bibliotece, odpowiednie zasoby są zaznaczone, oparty na platformie docelowej określonej przez aplikację lub biblioteki. Zasoby, które definiują interfejsu znajdują się w *ref* folderu i zasoby, które definiują implementacji znajdują się w *lib* folderu.
 
 ## <a name="platform"></a>platforma
 

@@ -5,28 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f40f6c3d94aeeae41c4cce00bac8de863226f287
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8a4fa1574b8e25a5d98f9547ad916a3c84f10b01
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="deferred-versus-immediate-loading"></a>Odroczone i ładowania bezpośredniego
 Określona w zapytaniu dla obiekt faktycznie pobrać tylko żądanego obiektu. *Powiązane* obiekty nie są automatycznie dołączone w tym samym czasie. (Aby uzyskać więcej informacji, zobacz [zapytań w relacji](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md).) Nie widać fakt, że powiązane obiekty nie są już załadowana, ponieważ próba dostępu do nich tworzy żądanie, które pobierają je.  
   
- Na przykład można wyszukać określonego zestawu zamówienia, a następnie sporadycznie Wyślij powiadomienie e-mail klientom określonego. Nie zawsze konieczne będzie początkowo pobrać wszystkich danych klientów z każdej kolejności. Ładowanie odłożone umożliwia odroczenie pobierania dodatkowe informacje do momentu bezwzględnie konieczne. Rozważmy następujący przykład:  
+ Na przykład możesz chcieć zapytania dla określonego zestawu zamówienia, a następnie tylko od czasu do czasu Wyślij wiadomość e-mail z powiadomieniem do konkretnego klientów. Nie zawsze konieczne będzie początkowo pobrać wszystkich danych klientów z każdej kolejności. Ładowanie odłożone umożliwia odroczenie pobierania dodatkowe informacje do momentu bezwzględnie konieczne. Rozważmy następujący przykład:  
   
  [!code-csharp[DLinqQueryConcepts#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryConcepts/cs/Program.cs#1)]
  [!code-vb[DLinqQueryConcepts#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#1)]  

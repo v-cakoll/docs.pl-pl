@@ -2,7 +2,8 @@
 title: "Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - optional parameters [C#], Office programming
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 25e83195d5f0d8a49e402a5a32e61940960b052a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 751e8240c9385f516315ff3b53221d1e1348ae58
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>Porady: uzyskiwanie dostępu do obiektów międzyoperacyjności pakietu Office za pomocą funkcji Visual C# (Przewodnik po programowaniu w języku C#)
 Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Office obiektów. Nowe funkcje obejmują argumenty nazwane i opcjonalne, nowy typ o nazwie `dynamic`i umożliwia przekazywanie argumentów do parametrów odwołania w metodach COM, tak jakby były wartości parametrów.  
@@ -80,7 +81,7 @@ Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Offic
   
 1.  Dodaj następującą metodę do `Program` klasa do konfigurowania programu Excel.  
   
-     Metoda [Dodaj](http://go.microsoft.com/fwlink/?LinkId=210910) ma parametr opcjonalny służącą do konkretnego szablonu. Parametry opcjonalne nowego [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], można pominąć argumentu dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument są wysyłane w poniższym kodzie `Add` korzysta z domyślnego szablonu i tworzy nowy skoroszyt. Odpowiednik instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.  
+     Metoda [Dodaj](https://msdn.microsoft.com/library/microsoft.office.interop.excel.workbooks.add.aspx) ma parametr opcjonalny służącą do konkretnego szablonu. Parametry opcjonalne nowego [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], można pominąć argumentu dla tego parametru, jeśli chcesz użyć wartości domyślnej parametru. Ponieważ żaden argument są wysyłane w poniższym kodzie `Add` korzysta z domyślnego szablonu i tworzy nowy skoroszyt. Odpowiednik instrukcji we wcześniejszych wersjach języka C# wymaga argumentu symbolu zastępczego: `ExcelApp.Workbooks.Add(Type.Missing)`.  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_4.cs)]  
   
@@ -96,11 +97,11 @@ Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Offic
   
      [!code-csharp[csProgGuideOfficeHowTo#13](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_7.cs)]  
   
-     Wcześniejszych wersjach języka C# wymaga jawnego rzutowania dla takich operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest Excel [zakres](http://go.microsoft.com/fwlink/?LinkId=210911) metody. Poniższe wiersze pokazują rzutowania.  
+     Wcześniejszych wersjach języka C# wymaga jawnego rzutowania dla takich operacji, ponieważ `ExcelApp.Columns[1]` zwraca `Object`, i `AutoFit` jest Excel [zakres](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.aspx) metody. Poniższe wiersze pokazują rzutowania.  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_8.cs)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowszych wersjach, konwertuje zwróconego `Object` do `dynamic` automatycznie, jeśli odwołuje się zestaw [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora lub ekwiwalentnie, jeśli programu Excel **Osadź typy międzyoperacyjne** właściwość jest ustawiona na true. Wartość true, jest to wartość domyślna dla tej właściwości.  
+     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowszych wersjach, konwertuje zwróconego `Object` do `dynamic` automatycznie, jeśli odwołuje się zestaw [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) — opcja kompilatora lub ekwiwalentnie, jeśli programu Excel **Osadź typy międzyoperacyjne**właściwość jest ustawiona na true. Wartość true, jest to wartość domyślna dla tej właściwości.  
   
 ### <a name="to-run-the-project"></a>Aby uruchomić projekt  
   
@@ -116,7 +117,7 @@ Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Offic
   
 1.  Aby zilustrować dodatkowe sposoby, w którym [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]i nowszych wersjach zwiększa Office programowania, poniższy kod otwiera aplikację Word i tworzy ikonę prowadzący w arkuszu programu Excel.  
   
-     Wklej metody `CreateIconInWordDoc`, podane w dalszej części tego kroku do `Program` klasy. `CreateIconInWordDoc`używa argumentów nazwanych i opcjonalnych uproszczeniu wywołań metody [Dodaj](http://go.microsoft.com/fwlink/?LinkId=210937) i [PasteSpecial](http://go.microsoft.com/fwlink/?LinkId=147099). Te wywołania uwzględnienie dwóch innych nowych funkcji wprowadzonych w [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] który uprościć wywołań do metod modelu COM, które mają parametry odwołania. Najpierw można wysłać argumenty parametrów odwołania, tak jakby były wartości parametrów. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmienną dla każdego parametru odwołania. Kompilator generuje tymczasowego zmienne do przechowywania wartości argumentów i odrzuca wszystkie zmienne, po powrocie z wywołania. Po drugie, można pominąć `ref` — słowo kluczowe w liście argumentów.  
+     Wklej metody `CreateIconInWordDoc`, podane w dalszej części tego kroku do `Program` klasy. `CreateIconInWordDoc`używa argumentów nazwanych i opcjonalnych uproszczeniu wywołań metody [Dodaj](https://msdn.microsoft.com/library/microsoft.office.interop.word.documents.add.aspx) i [PasteSpecial](https://msdn.microsoft.com/library/microsoft.office.interop.word.selection.pastespecial.aspx). Te wywołania uwzględnienie dwóch innych nowych funkcji wprowadzonych w [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] który uprościć wywołań do metod modelu COM, które mają parametry odwołania. Najpierw można wysłać argumenty parametrów odwołania, tak jakby były wartości parametrów. Oznacza to, że można wysyłać wartości bezpośrednio, bez tworzenia zmienną dla każdego parametru odwołania. Kompilator generuje tymczasowego zmienne do przechowywania wartości argumentów i odrzuca wszystkie zmienne, po powrocie z wywołania. Po drugie, można pominąć `ref` — słowo kluczowe w liście argumentów.  
   
      `Add` Metoda ma cztery parametry odwołania, które są opcjonalne. W [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)], lub nowszych wersji, można pominąć argumenty dla dowolnego lub wszystkich parametrów, jeśli chcesz użyć wartości domyślnych. W [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i wcześniejsze wersje, należy podać argument dla każdego parametru i argument musi być zmienną, ponieważ parametry są parametry odwołania.  
   
@@ -162,11 +163,11 @@ Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Offic
   
      [!code-csharp[csProgGuideOfficeHowTo#15](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_14.cs)]  
   
-     [Autoformatowanie](http://go.microsoft.com/fwlink/?LinkId=210948) metoda ma siedmiu wartości parametrów, które są opcjonalne. Argumenty nazwane i opcjonalne umożliwiają stosowanie argumentów none, niektóre lub wszystkie z nich. W poprzednich instrukcji argumentu tylko dla jednego z parametrów, `Format`. Ponieważ `Format` jest pierwszym parametrem na liście parametrów, nie musisz podać nazwę parametru. Jednak instrukcja może być łatwiejsze do zrozumienia, jeśli nazwa parametru jest uwzględnione, jak to pokazano w poniższym kodzie.  
+     [Autoformatowanie](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat.aspx) metoda ma siedmiu wartości parametrów, które są opcjonalne. Argumenty nazwane i opcjonalne umożliwiają stosowanie argumentów none, niektóre lub wszystkie z nich. W poprzednich instrukcji argumentu tylko dla jednego z parametrów, `Format`. Ponieważ `Format` jest pierwszym parametrem na liście parametrów, nie musisz podać nazwę parametru. Jednak instrukcja może być łatwiejsze do zrozumienia, jeśli nazwa parametru jest uwzględnione, jak to pokazano w poniższym kodzie.  
   
      [!code-csharp[csProgGuideOfficeHowTo#16](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-access-office-onterop-objects_15.cs)]  
   
-2.  Naciśnij klawisze CTRL + F5, aby zobaczyć wynik. Inne formaty są wymienione w [XlRangeAutoFormat](http://go.microsoft.com/fwlink/?LinkId=210967) wyliczenia.  
+2.  Naciśnij klawisze CTRL + F5, aby zobaczyć wynik. Inne formaty są wymienione w [XlRangeAutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.xlrangeautoformat.aspx) wyliczenia.  
   
 3.  Porównaj z instrukcją w kroku 1 z następującym kodem, który zawiera argumenty, które są wymagane w [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] i jego wcześniejsze wersje.  
   
@@ -179,7 +180,7 @@ Visual C# ma funkcje, które ułatwiają dostęp do interfejsu API usługi Offic
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Type.Missing?displayProperty=nameWithType>  
- [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)  
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
  [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Argumenty nazwane i opcjonalne](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)  
- [Porady: Użycie argumentów nazwanych i opcjonalnych w programowaniu pakietu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)
+ [Instrukcje: użycie argumentów nazwanych i opcjonalnych w programowaniu Office](../../../csharp/programming-guide/classes-and-structs/how-to-use-named-and-optional-arguments-in-office-programming.md)

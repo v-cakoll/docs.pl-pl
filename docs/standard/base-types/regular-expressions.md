@@ -26,21 +26,21 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b9922576e4ef942e896f365c44cebec717abe3b4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="net-regular-expressions"></a>Wyrażeń regularnych programu .NET
-Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie tekstu. Rozbudowana notacji dopasowywanie do wzorca wyrażeń regularnych umożliwia szybkie analizy dużych ilości tekst do znalezienia wzorce określonego znaku; Aby sprawdzić poprawność tekstu, aby upewnić się, że ze wzorcem wstępnie zdefiniowane (takie jak adres e-mail); do wyodrębnienia, Edycja, Zamień lub usuń tekst podciągów; i dodać wyodrębnione ciągi do kolekcji w celu wygenerowania raportu. Dla wielu aplikacji, które zajmują się ciągów lub który analizy dużych bloków tekstu i wyrażenia regularne są niezbędne narzędzia.  
+Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie tekstu. Rozbudowana notacji dopasowywanie do wzorca wyrażeń regularnych umożliwia szybkie analizy dużych ilości tekst do znalezienia wzorce określonego znaku; Aby sprawdzić poprawność tekstu, aby upewnić się, że jest zgodna z wzorcem wstępnie zdefiniowane (takie jak adres e-mail); do wyodrębnienia, Edycja, Zamień lub usuń tekst podciągów; i dodać wyodrębnione ciągi do kolekcji w celu wygenerowania raportu. Dla wielu aplikacji, które zajmują się ciągów lub który analizy dużych bloków tekstu i wyrażenia regularne są niezbędne narzędzia.  
   
 ## <a name="how-regular-expressions-work"></a>Sposób, a jaki działają wyrażenia regularne  
  Aparat wyrażeń regularnych, która jest reprezentowana przez jest bezpośrednio tekstu przetwarzania za pomocą wyrażeń regularnych <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> obiektu .NET. Co najmniej przetwarzania tekstu za pomocą wyrażeń regularnych wymaga podania aparat wyrażeń regularnych z poniższych dwóch elementów informacji:  

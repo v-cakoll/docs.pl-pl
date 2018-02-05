@@ -1,4 +1,4 @@
-# [Szybki start](index.md)
+# [Przewodniki Szybki start](index.md)
 ## [Hello World](hello-world.yml)
 ## [Liczby w języku C#](numbers-in-csharp.yml)
 ## [Gałęzie i pętle](branches-and-loops.yml)

@@ -1,21 +1,19 @@
 ---
 title: "Wprowadzenie do języka C# i Visual Studio Code — przewodnik C#"
 description: "Informacje o sposobie tworzenia i debugowania w języku C# za pomocą programu Visual Studio Code pierwszej aplikacji platformy .NET Core."
-keywords: "C#, Get pracę, nabycia, instalacji programu Visual Studio Code Cross Platform"
 author: kendrahavens
 ms.author: mairaw
 ms.date: 09/27/2017
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
-ms.devlang: csharp
-ms.assetid: 76c23597-4cf9-467e-8a47-0c3703ce37e7
-ms.workload: dotnetcore
-ms.openlocfilehash: 95052da1688ec1026f11ff679dda6aad50a340fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0c37040220bb7f38cdd75176bb9ed2a2199b7096
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>Wprowadzenie do języka C# i Visual Studio Code
 
@@ -25,7 +23,7 @@ Oprogramowanie .NET core umożliwia szybka, modularna platforma do tworzenia apl
 
 1. Zainstaluj [kodu programu Visual Studio](https://code.visualstudio.com/).
 2. Zainstaluj [.NET Core SDK](https://www.microsoft.com/net/download/core).
-3. Zainstaluj [C# rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) z Visual Studio Marketplace kodu.
+3. Zainstaluj [C# rozszerzenia](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp) dla programu Visual Studio Code. Aby uzyskać więcej informacji o sposobie instalowania rozszerzeń w Visual Studio Code, zobacz [VS kodu rozszerzenie Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery).
 
 ## <a name="hello-world"></a>Witaj Świecie
 

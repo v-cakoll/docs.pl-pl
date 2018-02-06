@@ -15,11 +15,11 @@ ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f799f86c5dc597b0fe26197ab6321b9d3e82f664
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 W temacie opisano metody, aby umożliwić współpracę między kodem C# zarządzanego i kodu niezarządzanego.  
@@ -65,6 +65,8 @@ W temacie opisano metody, aby umożliwić współpracę między kodem C# zarząd
   
 ## <a name="see-also"></a>Zobacz też  
  [Poprawianie wydajności międzyoperacyjności](https://msdn.microsoft.com/library/ms998551.aspx)  
- [Wprowadzenie do współdziałanie COM i .NET](https://msdn.microsoft.com/library/office/bb610378.aspx) [wprowadzenie do COM Interop w języku Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md) [organizowanie między zarządzanych i niezarządzanych kodu](../../../../docs/framework/interop/interop-marshaling.md)  
+ [Wprowadzenie do współdziałanie COM i .NET](https://msdn.microsoft.com/library/office/bb610378.aspx)  
+ [Wprowadzenie do COM Interop w języku Visual Basic](../../../../docs/visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
+ [Organizowanie między zarządzanymi i niezarządzanymi kodu](../../../../docs/framework/interop/interop-marshaling.md)  
  [Współdziałanie z kodem niezarządzanym](../../../../docs/framework/interop/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fa3b7af871380d4f18ebe7ef4f5bc5963cc247c4
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="work-with-syntax"></a>Praca z składni
 
@@ -89,7 +89,7 @@ Węzeł instrukcji wewnątrz bloku ma należy do zakresu wskazanej przez pojedyn
 
 ## <a name="kinds"></a>Typy
 
-Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=fullName>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=fullName> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=fullName>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do < xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*? displayProperty = nameWithType > lub < xref: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*? displayProperty = nameWithType > metody rozszerzenia.
+Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=nameWithType>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do < xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*? displayProperty = nameWithType > lub < xref: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*? displayProperty = nameWithType > metody rozszerzenia.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Właściwości umożliwia łatwe ujednoznacznienia składni węzeł typów, które korzystać z tej samej klasy węzła. Tokeny i elementy towarzyszące składni ta właściwość jest jedynym sposobem, aby odróżnić jeden typ elementu z innej. 
 

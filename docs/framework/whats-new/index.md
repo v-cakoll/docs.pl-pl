@@ -3,22 +3,25 @@ title: Co to jest nowe w programie .NET Framework
 ms.custom: updateeachrelease
 ms.date: 05/02/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: what's new [.NET Framework]
+helpviewer_keywords:
+- what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e2aa6e67fc45aa02421433a295fdbf5657e4e551
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
+ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -80,15 +83,15 @@ Aby utworzyć builder Konfiguracja niestandardowa, Twoje konstruktora pochodzi z
 
 **Wykrywanie funkcji środowiska wykonawczego**
 
-<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=fullName> Klasa udostępnia mechanizm Określ, czy wstępnie zdefiniowane funkcja jest obsługiwana w danej implementacji .NET w czasie kompilacji lub w czasie wykonywania. W czasie kompilacji kompilatora można sprawdzić, czy określone pole istnieje do ustalenia, czy funkcja jest obsługiwana; Jeśli tak, jego Emituj kod, który korzysta z tej funkcji. W czasie wykonywania, aplikacja może wywołać <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> metody przed emitowanie kodu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dodaj metodę pomocnika do opisywania funkcje obsługiwane przez środowisko uruchomieniowe](https://github.com/dotnet/corefx/issues/17116).
+<xref:System.Runtime.CompilerServices.RuntimeFeature?displayProperty=nameWithType> Klasa udostępnia mechanizm Określ, czy wstępnie zdefiniowane funkcja jest obsługiwana w danej implementacji .NET w czasie kompilacji lub w czasie wykonywania. W czasie kompilacji kompilatora można sprawdzić, czy określone pole istnieje do ustalenia, czy funkcja jest obsługiwana; Jeśli tak, jego Emituj kod, który korzysta z tej funkcji. W czasie wykonywania, aplikacja może wywołać <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported%2A?displayProperty=nameWithType> metody przed emitowanie kodu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Dodaj metodę pomocnika do opisywania funkcje obsługiwane przez środowisko uruchomieniowe](https://github.com/dotnet/corefx/issues/17116).
 
 **Wartość krotki typy możliwy do serializacji**
 
-Począwszy od programu .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=fullName> i jego skojarzone typy ogólne są oznaczone jako [Serializable](xref:System.SerializableAttribute), dzięki czemu serializacji binarnej. Powinna stanowić Migrowanie typów spójnej kolekcji, takie jak <xref:System.Tuple%603> i <xref:System.Tuple%604>, wartość krotki typów łatwiejsze. Aby uzyskać więcej informacji, zobacz "Kompilatora — ValueTuple jest możliwy do serializacji" w [środowiska uruchomieniowego .NET Framework 4.7.1 i funkcje kompilatora](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) wpis w blogu.
+Począwszy od programu .NET Framework 4.7.1, <xref:System.ValueTuple?displayProperty=nameWithType> i jego skojarzone typy ogólne są oznaczone jako [Serializable](xref:System.SerializableAttribute), dzięki czemu serializacji binarnej. Powinna stanowić Migrowanie typów spójnej kolekcji, takie jak <xref:System.Tuple%603> i <xref:System.Tuple%604>, wartość krotki typów łatwiejsze. Aby uzyskać więcej informacji, zobacz "Kompilatora — ValueTuple jest możliwy do serializacji" w [środowiska uruchomieniowego .NET Framework 4.7.1 i funkcje kompilatora](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) wpis w blogu.
 
 **Obsługa odwołań tylko do odczytu**
 
-.NET Framework 4.7.1 dodaje <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=fullName>. Ten atrybut jest używany przez Kompilatory języka aby oznaczyć elementów członkowskich, które mają parametrów lub zwracanych typów ref tylko do odczytu. Aby uzyskać więcej informacji, zobacz "Kompilatora — obsługa dla ReadOnlyReferences" w [środowiska uruchomieniowego .NET Framework 4.7.1 i funkcje kompilatora](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) wpis w blogu. Informacje o wartościach zwracany ref, zobacz [Ref zwracać wartości i ref, zmienne lokalne (C# przewodnik)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) i [Ref zwracane wartości (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
+.NET Framework 4.7.1 dodaje <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>. Ten atrybut jest używany przez Kompilatory języka aby oznaczyć elementów członkowskich, które mają parametrów lub zwracanych typów ref tylko do odczytu. Aby uzyskać więcej informacji, zobacz "Kompilatora — obsługa dla ReadOnlyReferences" w [środowiska uruchomieniowego .NET Framework 4.7.1 i funkcje kompilatora](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features) wpis w blogu. Informacje o wartościach zwracany ref, zobacz [Ref zwracać wartości i ref, zmienne lokalne (C# przewodnik)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) i [Ref zwracane wartości (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md).
 
 <a name="clr" />
 #### <a name="common-language-runtime-clr"></a>Środowisko uruchomieniowe języka wspólnego (CLR)
@@ -462,7 +465,7 @@ End Function
  Wszystkie programy, które zostały zarejestrowane niestandardowego <xref:System.Security.Cryptography.SignatureDescription> obsługi do <xref:System.Security.Cryptography.CryptoConfig> Aby dodać obsługę algorytmy te będą nadal działać jak w przeszłości, ale ponieważ ma teraz domyślne platformy, <xref:System.Security.Cryptography.CryptoConfig> rejestracji nie jest już niezbędne.
 
 <a name="SQLClient"></a> 
-### <a name="sqlclient"></a>Klient SQL
+### <a name="sqlclient"></a>SqlClient
  .NET framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) obejmuje następujące nowe funkcje w [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]:
 
  **Pula połączeń i limity czasu z bazy danych Azure SQL** po włączeniu buforowanie połączeń i przekroczenie limitu czasu lub inny błąd logowania, wyjątek jest buforowana i pamięci podręcznej wyjątku w kolejnych próba dalej 5 Liczba sekund na 1 minutę.  Aby uzyskać więcej informacji, zobacz [programu SQL Server połączenia buforowanie (ADO.NET)](../../../docs/framework/data/adonet/sql-server-connection-pooling.md).
@@ -1446,7 +1449,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 <a name="tailored"></a> 
 ### [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]
- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]aplikacje są przeznaczone dla określonych typów urządzeń i korzystać z możliwości systemu operacyjnego Windows. Podzbiór [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub 4.5.1 jest dostępny do budowy [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji dla systemu Windows przy użyciu języka C# lub Visual Basic. Ten podzestaw jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] co opisano w [omówienie](http://go.microsoft.com/fwlink/?LinkId=228491) w Centrum deweloperów systemu Windows.
+ [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacje są przeznaczone dla określonych typów urządzeń i korzystać z możliwości systemu operacyjnego Windows. Podzbiór [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] lub 4.5.1 jest dostępny do budowy [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji dla systemu Windows przy użyciu języka C# lub Visual Basic. Ten podzestaw jest nazywany [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] co opisano w [omówienie](http://go.microsoft.com/fwlink/?LinkId=228491) w Centrum deweloperów systemu Windows.
 
 <a name="portable"></a> 
 ### <a name="portable-class-libraries"></a>Biblioteki klas przenośnych

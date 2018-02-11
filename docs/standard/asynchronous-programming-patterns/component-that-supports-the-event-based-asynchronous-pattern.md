@@ -24,18 +24,18 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 57997b00082fd2068638d83cb828b3fa6fbdfb97
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4d42c1d4b58f5e2517ff8d8c504628c7aab6fd0d
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-implementing-a-component-that-supports-the-event-based-asynchronous-pattern"></a>Wskazówki: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach
 Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą zauważalnego opóźnienia, należy wziąć pod uwagę nadanie mu funkcji asynchroniczności zaimplementowanie [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -60,7 +60,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
 -   Implementowanie Start i metody Anuluj  
   
- Aby skopiować kod w tym temacie na jednej liście, zobacz [porady: implementacja składnika obsługującego wzorzec asynchroniczny oparty na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md).  
+ Aby skopiować kod w tym temacie na jednej liście, zobacz [porady: implementacja klienta wzorca asynchronicznego opartego na zdarzeniach](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md).  
   
 ## <a name="creating-the-component"></a>Tworzenie składnika  
  Pierwszym krokiem jest utworzyć składnika, który będzie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach.  

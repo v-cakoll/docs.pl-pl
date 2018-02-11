@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 480df976-7568-4df4-9d26-9911357b5a31
-ms.workload: dotnetcore
-ms.openlocfilehash: 66ad63f0b2a2f62f34f0784b236d242f1d92066a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9a78ec370fd53260f26a5d8c15707a5d611e458f
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-core-cli-tools-telemetry"></a>Dane telemetryczne narzędzi interfejsu wiersza polecenia programu .NET core
 
@@ -75,9 +76,9 @@ Chcemy się dowiedzieć się, jak są używane narzędzia i jeśli działają po
 
 Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zestawu SDK programu .NET Core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md). Kolumn w pliku danych są:
 - Znacznik czasu
-- Wystąpienia &#8224;
+- Occurrences&#8224;
 - Polecenie
-- Lokalizacja geograficzna &#8225;
+- Geography&#8225;
 - Rodzina systemów operacyjnych
 - RuntimeID
 - OSVersion
@@ -91,7 +92,7 @@ Dane publikowane jest dostępna co kwartał i znajduje się w [dane użycia zest
 
 | Znacznik czasu      | Wystąpienia | Polecenie | Lokalizacja geograficzna | Rodzina systemów operacyjnych | RuntimeID     | OSVersion | Wersjazestawusdk |
 | -------------- | ----------- | ------- | --------- | -------- | ------------- | --------- | ---------- |
-| 4/16/2017 0:00 | 8           | Uruchom     | Ugandy    | Darwin   | OSX.10.12 x64 | 10.12     | 1.0.1      |
+| 4/16/2017 0:00 | 8           | Uruchom     | Ugandy    | Darwin   | osx.10.12-x64 | 10.12     | 1.0.1      |
 
 ### <a name="datasets"></a>Zestawy danych
 
@@ -112,7 +113,7 @@ Rozkład Microsoft .NET Core jest licencjonowana z [MICROSOFT .NET LIBRARY EULA]
 
 [Pakietów NuGet programu .NET](https://www.nuget.org/profiles/dotnetframework) użyć tego samego licencji, ale nie włączysz telemetrii (zobacz [zakres](#scope)).
 
-> 2. DANE. Oprogramowanie może zbierać informacje o Tobie i korzystanie z oprogramowania i wysyłać do firmy Microsoft. Firma Microsoft może używać tych informacji do poprawy naszych produktów i usług. Można dowiedzieć się więcej o zbieraniu danych i używać w dokumentacji pomocy i poufności informacji w http://go.microsoft.com/fwlink/?LinkId=528096. Korzystanie z oprogramowania działa jako Twojej zgody na nich.
+> 2. DATA. Oprogramowanie może zbierać informacje o Tobie i korzystanie z oprogramowania i wysyłać do firmy Microsoft. Firma Microsoft może używać tych informacji do poprawy naszych produktów i usług. Można dowiedzieć się więcej o zbieraniu danych i używać w dokumentacji pomocy i poufności informacji w http://go.microsoft.com/fwlink/?LinkId=528096. Korzystanie z oprogramowania działa jako Twojej zgody na nich.
 
 ## <a name="disclosure"></a>Ujawnienie
 
@@ -133,5 +134,5 @@ You can read more about .NET Core tools telemetry @ https://aka.ms/dotnet-cli-te
 ## <a name="see-also"></a>Zobacz także
 
 [Co zostało dowiedzieliśmy się z .NET Core SDK Telemetrii](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/)  
-[Dane telemetryczne źródła odniesienia (repozytorium dotnet/cli; release/2.0.0 gałęzi)](https://github.com/dotnet/cli/blob/release/2.0.0/src/dotnet/Telemetry.cs)   
+[Dane telemetryczne źródła odniesienia (repozytorium dotnet/cli; release/2.0.0 gałęzi)](https://github.com/dotnet/cli/tree/release/2.0.0/src/dotnet/Telemetry)   
 [Dane użycia zestawu SDK programu .NET core](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md)

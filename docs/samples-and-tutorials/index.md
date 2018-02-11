@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.devlang: dotnet
 ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: 5c8b6e2d14a14724a040bed5cc58c5ffef3ce520
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d800d861f65779a73f83cf44e8884566eb7adee4
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="samples-and-tutorials"></a>Przykłady i samouczki
 
-Dokumentacja .NET zawiera zestaw przykłady i samouczki pokazujące o .NET. W tym temacie opisano, jak znajdować, wyświetlać i Pobierz przykłady .NET Core, platformy ASP.NET Core i C# i samouczki. Znajdź zasoby, aby dowiedzieć się programowania w języku F # [lokacji F # Foundation](http://fsharp.org/learn.html). Jeśli interesuje Cię eksplorowania przy użyciu edytora online kodu C#, spróbuj je [interaktywnych samouczków](http://go.microsoft.com/fwlink/p/?LinkId=817234). Aby uzyskać instrukcje dotyczące sposobu wyświetlania i pobrać przykładowy kod, zobacz [wyświetlania i pobierania próbek](#viewing-and-downloading-samples) sekcji.
+Dokumentacja .NET zawiera zestaw przykłady i samouczki pokazujące o .NET. W tym temacie opisano, jak znajdować, wyświetlać i Pobierz przykłady .NET Core, platformy ASP.NET Core i C# i samouczki. Znajdź zasoby, aby dowiedzieć się programowania w języku F # [lokacji F # Foundation](http://fsharp.org/learn.html). Jeśli interesuje Cię eksplorowania przy użyciu edytora online kodu C#, Rozpocznij od [to interaktywny samouczek](https://www.microsoft.com/net/learn/in-browser-tutorial/1) i kontynuować [C# interactive poradniki Szybki Start](../csharp/quick-starts/index.md). Aby uzyskać instrukcje dotyczące sposobu wyświetlania i pobrać przykładowy kod, zobacz [wyświetlania i pobierania próbek](#viewing-and-downloading-samples) sekcji.
 
 ## <a name="net-core"></a>.NET Core
 
@@ -37,7 +37,7 @@ Ten przewodnik przedstawia sposób korzystania z podstawowych .NET interfejsu wi
 
 W tym przykładzie omówiono sposób zapisania biblioteki dla platformy .NET przy użyciu narzędzi interfejsu wiersza polecenia i platform. Te narzędzia umożliwiają wydajne i niskiego poziomu środowiska, który działa na dowolnym obsługiwanym systemie operacyjnym. [Ukończone próbki](https://github.com/dotnet/docs/tree/master/samples/framework/libraries/frameworks-library) jest dostępny w repozytorium dotnet/docs w witrynie GitHub.
 
-## <a name="aspnet-core"></a>Platformy ASP.NET Core
+## <a name="aspnet-core"></a>ASP.NET Core
 
 Zobacz [samouczki platformy ASP.NET Core](/aspnet/core/tutorials/). Wiele artykułów w dokumentacji platformy ASP.NET Core zawierają łącza do próbek zapisywane dla nich.
 
@@ -45,7 +45,7 @@ Zobacz [samouczki platformy ASP.NET Core](/aspnet/core/tutorials/). Wiele artyku
 
 ### <a name="samples"></a>Przykłady
 
-**[Iteratory](../csharp/iterators.md)**
+**[Iterators](../csharp/iterators.md)**
 
 W tym przykładzie przedstawiono składni i funkcje dotyczące tworzenia i używania Iteratory C#. [Ukończone próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/iterators) jest dostępny w repozytorium dotnet/docs w witrynie GitHub.
 
@@ -71,7 +71,7 @@ Ta seria przykłady pokazują wiele funkcji z języka zintegrowane zapytania (LI
 
 W tym samouczku przedstawiono konsoli operacji We/Wy, struktury aplikacji konsoli i podstawy opartego na zadaniach asynchronicznej modelu programowania. [Ukończone próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) jest dostępny w repozytorium dotnet/docs w witrynie GitHub.
 
-**[Klient REST](../csharp/tutorials/console-webapiclient.md)**
+**[REST Client](../csharp/tutorials/console-webapiclient.md)**
 
 W tym samouczku przedstawiono komunikacji w sieci web, serializacji JSON oraz zorientowane obiektowo funkcji języka C#. [Ukończone próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) jest dostępny w repozytorium dotnet/docs w witrynie GitHub.
 

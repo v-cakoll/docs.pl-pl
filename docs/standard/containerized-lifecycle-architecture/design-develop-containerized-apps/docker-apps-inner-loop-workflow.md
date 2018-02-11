@@ -1,22 +1,22 @@
 ---
 title: "Przepływ pracy pętli wewnętrzny programowanie aplikacji Docker"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5c3b58ef434e1fd7b713102f2642250d8335d859
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
+ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy pętli wewnętrzny programowanie aplikacji Docker
 
-Aby mogło nastąpić wyzwolenie przepływu pracy zewnętrznego pętli obejmujących całą DevOps cykl, zaczyna na każdy Deweloper maszyny, kodowania samej aplikacji, za pomocą jego preferowanych języków lub platform i testowanie go lokalnie (14 4 rysunek). Jednak w każdym przypadku należy bardzo ważnym, niezależnie od tego, jakie języka, framework i platform wybierz. W tym określonego przepływu pracy są zawsze programują i testują rozwiązania Docker kontenerów, ale lokalnie.
+Aby mogło nastąpić wyzwolenie przepływu pracy zewnętrznego pętli obejmujących całą DevOps cykl, zaczyna na każdy Deweloper maszyny, kodowania samej aplikacji, za pomocą ich preferowanych języków lub platform i testowanie go lokalnie (14 4 rysunek). Jednak w każdym przypadku należy bardzo ważnym, niezależnie od tego, jakie języka, framework i platform wybierz. W tym określonego przepływu pracy są zawsze programują i testują rozwiązania Docker kontenerów, ale lokalnie.
 
 ![](./media/image18.png)
 

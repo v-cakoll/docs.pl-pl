@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8d540e3201f0a310641005d95d9c3c0f3dc1d501
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -100,12 +100,6 @@ Począwszy od programu .NET Framework 4.7.1, <xref:System.ValueTuple?displayProp
 
 Zmiany wyrzucanie elementów bezużytecznych (GC) w programie .NET Framework 4.7.1 zwiększyć ogólną wydajność, szczególnie w przypadku alokacji sterty obiektu duże (LOH). W programie .NET Framework 4.7.1 oddzielne blokady są używane dla małych obiektu sterty (raport) i LOH alokacji, dzięki czemu alokacji LOH nastąpić, gdy tło GC (BGC) jest profilach raport o kondycji. W związku z tym aplikacje wykonujące duża liczba przydziałów LOH powinna zostać wyświetlona zmniejszenia rywalizacji blokad alokacji i wydajności. Aby uzyskać więcej informacji, zobacz sekcję "Ulepszenia wydajności GC — środowisko uruchomieniowe" w [środowiska uruchomieniowego .NET Framework 4.7.1 i funkcje kompilatora](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/) wpis w blogu. 
 
-**Obsługa plików przenośnych PDB**
-
-.NET Framework, począwszy od wersji 4.7.1 obsługuje plików przenośnych PDB. Gdy standardowe PDB, pliki są tylko do systemu Windows, przenośne pliki PDB można tworzyć i odczytu na wszystkich platformach. W większości przypadków format pliku jest niewidoczny dla aplikacji działających na konkretnej implementacji .NET. Wyjątkiem jest aplikacja, która dynamicznie emituje zestawu w czasie wykonywania. w takim przypadku możliwość Emituj przenośnych PDB można oferują lepszą wydajność i mniejsze zużycie pamięci aplikacji. 
-
-Można określić w czasie wykonywania, czy plików przenośnych PDB są obsługiwane w bieżącej implementacji .NET przez przekazanie ciąg "PortablePdb" do <xref:System.Runtime.CompilerServices.RuntimeFeature.IsSupported(System.String)?displayProperty=nameWithType> metody przed emitowanie zestawu.  
- 
 <a name="net471"/>
 #### <a name="networking"></a>Obsługa sieci
 

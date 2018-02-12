@@ -2,7 +2,8 @@
 title: "Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)
 
@@ -148,7 +149,7 @@ Projekt dalej utworzonego w ramach tego przewodnika uzyskuje dostęp do bibliote
   
 3.  Jeśli używasz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], kliknij prawym przyciskiem myszy projekt DynamicIronPythonSample, a następnie kliknij przycisk **właściwości**. Kliknij przycisk **odwołania** kartę. Kliknij przycisk **Dodaj** przycisku. Jeśli używasz programu Visual C# w **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **odwołania** folder, a następnie kliknij przycisk **Dodaj odwołanie**.  
   
-4.  Na **Przeglądaj** karcie, przejdź do folderu, w którym są zainstalowane w bibliotekach IronPython. Na przykład C:\Program Files\IronPython 2.6 dla programu .NET 4.0. Wybierz **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, i **Microsoft.Dynamic.dll** biblioteki . Kliknij przycisk **OK**.  
+4.  Na **Przeglądaj** karcie, przejdź do folderu, w którym są zainstalowane w bibliotekach IronPython. For example, C:\Program Files\IronPython 2.6 for .NET 4.0. Wybierz **IronPython.dll**, **IronPython.Modules.dll**, **Microsoft.Scripting.dll**, i **Microsoft.Dynamic.dll** biblioteki . Kliknij przycisk **OK**.  
   
 5.  Jeśli używasz [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], przeprowadź edycję pliku Module1.vb. Jeśli używasz programu Visual C#, przeprowadź edycję pliku Program.cs.  
   
@@ -177,5 +178,5 @@ Projekt dalej utworzonego w ramach tego przewodnika uzyskuje dostęp do bibliote
  <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>  
  [Używanie typu dynamicznego](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
- [dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)  
- [Implementowanie interfejsów dynamicznego (blog zewnętrznych)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
+ [Implementowanie interfejsów dynamicznego (do pobrania plików PDF z Microsoft TechNet)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

@@ -1,7 +1,7 @@
 ---
 title: "Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F #"
 description: "Kolejek platformy Azure zapewniają niezawodne, asynchronicznego wysyłanie komunikatów między składnikami aplikacji. Chmury obsługi komunikatów włącza składniki aplikacji można skalować niezależnie."
-keywords: "Visual f #, f #, funkcjonalności programowania .NET, .NET Core Azure"
+keywords: visual f#, f#, functional programming, .NET, .NET Core, Azure
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 70dc554c-8f4d-42a7-8e2a-6438657d012a
-ms.openlocfilehash: f5ebdb3f3b50996a397c8420b773178493744d70
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8ec4652bab591dedc687d22c617b9466bc351f10
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F # #
 
@@ -142,8 +142,8 @@ Aby usunąć kolejkę i wszystkie zawarte w niej komunikaty, wywołaj `Delete` m
 
 Teraz, kiedy znasz już podstawy magazynu kolejek, skorzystaj z poniższych linków, aby dowiedzieć się więcej o bardziej skomplikowanych zadaniach magazynu.
 
-- [Biblioteka klienta usługi Storage dla platformy .NET odwołania](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
+- [Interfejsy API usługi Azure Storage dla platformy .NET](/dotnet/api/overview/azure/storage)
 - [Dostawca typów magazynu Azure](https://github.com/fsprojects/AzureStorageTypeProvider)
-- [Blog zespołu usługi Magazyn Azure](http://blogs.msdn.com/b/windowsazurestorage/)
-- [Konfigurowanie parametrów połączenia](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [Dokumentacja interfejsu API REST](http://msdn.microsoft.com/library/azure/dd179355)
+- [Azure Storage Team Blog](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Konfigurowanie parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
+- [Dokumentacja interfejsu API REST usług magazynu Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)

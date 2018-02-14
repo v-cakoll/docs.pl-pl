@@ -9,13 +9,16 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 44864274a86634c0199885b5507124f2f54ce0f6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: db9f0ddd875df1f84bcc5681ee1383b0185f8b7e
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>Architektów nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure
+
+![Obraz tytułowych](./media/cover.jpg)
+
 
 Oprogramowanie .NET core i ASP.NET Core oferują wiele zalet w porównaniu do tradycyjnego .NET — rozwój. Jeśli niektóre lub wszystkie z następujących czynności są ważne, aby wskazywał Powodzenie, aplikacji, należy użyć .NET Core dla aplikacji serwera:
 
@@ -52,10 +55,10 @@ W tym przewodniku znajdują się na trasie wskazówki dotyczące tworzenia aplik
 Ten przewodnik jest uzupełniające "*Architecting i tworzenie konteneryzowanych i aplikacji z platformą .NET Mikrousługi*" do hosta przedsiębiorstwa który skupia się więcej na Docker Mikrousług oraz wdrożenia kontenerów aplikacje.
 
 > ### <a name="architecting-and-developing-containerized-microservice-based-apps-in-net"></a>Projektowania i opracowywania konteneryzowanych Mikrousługi na podstawie aplikacji w .NET
-> - **Książka elektroniczna**  
-> <http://aka.MS/MicroservicesEbook>
+> - **e-book**  
+> <http://aka.ms/MicroservicesEbook>
 > - **Przykładowa aplikacja**  
-> <http://aka.MS/microservicesarchitecture>
+> <http://aka.ms/microservicesarchitecture>
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać ten przewodnik
 
@@ -71,7 +74,7 @@ Możesz przesłać ten przewodnik do zespołu w celu zapewnienia zrozumienie tyc
 
 ## <a name="references"></a>Odwołania
 - **Wybieranie między programami .NET Core i .NET Framework na potrzeby aplikacji serwerowych**  
-<https://docs.microsoft.com/DotNet/articles/Standard/Choosing-Core-Framework-Server>
+<https://docs.microsoft.com/dotnet/articles/standard/choosing-core-framework-server>
 
 >[!div class="step-by-step"]
 [Next] (modern-web aplikacje characteristics.md)

@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
-ms.workload: dotnetcore
-ms.openlocfilehash: cf65dc80f135badcb1580726a12a9ae9d94ae3d7
-ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/20/2018
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 01/20/2018
 
 ## <a name="name"></a>Nazwa
 
-`dotnet new`— Umożliwia utworzenie nowego projektu, pliku konfiguracji lub rozwiązania na podstawie określonego szablonu.
+`dotnet new` — Umożliwia utworzenie nowego projektu, pliku konfiguracji lub rozwiązania na podstawie określonego szablonu.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -76,7 +77,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyska
 | Konfiguracja sieci Web                                   | `webconfig`   |               |
 | Plik rozwiązania                                | `sln`         |               |
 | Strona razor                                   | `page`        |               |
-| MVC/ViewImports                              | `viewimports` |               |
+| MVC ViewImports                              | `viewimports` |               |
 | MVC ViewStart                                | `viewstart`   |               |
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
@@ -178,103 +179,103 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 **Konsola kątowego, reagować, reactredux**
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **classlib**
 
-`-f|--framework <FRAMEWORK>`— Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp2.0` można utworzyć podstawowej biblioteki klas .NET lub `netstandard2.0` do tworzenia biblioteki klas .NET Standard. Wartość domyślna to `netstandard2.0`.
+`-f|--framework <FRAMEWORK>` — Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp2.0` można utworzyć podstawowej biblioteki klas .NET lub `netstandard2.0` do tworzenia biblioteki klas .NET Standard. Wartość domyślna to `netstandard2.0`.
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **mstest, xunit**
 
-`-p|--enable-pack`— Umożliwia tworzenie pakietów dla projektu za pomocą [pakiet dotnet](dotnet-pack.md).
+`-p|--enable-pack` — Umożliwia tworzenie pakietów dla projektu za pomocą [pakiet dotnet](dotnet-pack.md).
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **globaljson**
 
-`--sdk-version <VERSION_NUMBER>`— Określa wersję platformy .NET Core SDK do użycia w *global.json* pliku.
+`--sdk-version <VERSION_NUMBER>` — Określa wersję platformy .NET Core SDK do użycia w *global.json* pliku.
 
 **web**
 
-`--use-launch-settings`-Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
+`--use-launch-settings` -Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **webapi**
 
-`-au|--auth <AUTHENTICATION_TYPE>`— Typ uwierzytelniania do użycia. Możliwe wartości to:
+`-au|--auth <AUTHENTICATION_TYPE>` — Typ uwierzytelniania do użycia. Możliwe wartości to:
 
-- `None`-Bez uwierzytelniania (ustawienie domyślne).
-- `IndividualB2C`-Poszczególnych uwierzytelniania za pomocą usługi Azure AD B2C.
-- `SingleOrg`-Organizacji uwierzytelnianie dla pojedynczej dzierżawy.
-- `Windows`— Uwierzytelnianie systemu Windows.
+- `None` -Bez uwierzytelniania (ustawienie domyślne).
+- `IndividualB2C` -Poszczególnych uwierzytelniania za pomocą usługi Azure AD B2C.
+- `SingleOrg` -Organizacji uwierzytelnianie dla pojedynczej dzierżawy.
+- `Windows` — Uwierzytelnianie systemu Windows.
 
-`--aad-b2c-instance <INSTANCE>`Wystąpienia usługi Azure Active Directory B2C do nawiązania połączenia. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
+`--aad-b2c-instance <INSTANCE>` Wystąpienia usługi Azure Active Directory B2C do nawiązania połączenia. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/`.
 
-`-ssp|--susi-policy-id <ID>`Identyfikator zasad logowania i rejestrowania dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+`-ssp|--susi-policy-id <ID>` Identyfikator zasad logowania i rejestrowania dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
 
-`--aad-instance <INSTANCE>`Wystąpienia usługi Azure Active Directory do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` Wystąpienia usługi Azure Active Directory do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
 
-`--client-id <ID>`— Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C` lub `SingleOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C` lub `SingleOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>`-Domeny dla katalogu dzierżawcy. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
+`--domain <DOMAIN>` -Domeny dla katalogu dzierżawcy. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
 
-`--tenant-id <ID>`-TenantId identyfikator katalogu do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` -TenantId identyfikator katalogu do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
 
-`-r|--org-read-access`— Umożliwia dostęp do odczytu do katalogu aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
+`-r|--org-read-access` — Umożliwia dostęp do odczytu do katalogu aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
 
-`--use-launch-settings`-Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
+`--use-launch-settings` -Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
 
-`-uld|--use-local-db`— Określa, że LocalDB powinna być używana zamiast funkcji SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
+`-uld|--use-local-db` — Określa, że LocalDB powinna być używana zamiast funkcji SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **MVC, razor**
 
-`-au|--auth <AUTHENTICATION_TYPE>`— Typ uwierzytelniania do użycia. Możliwe wartości to:
+`-au|--auth <AUTHENTICATION_TYPE>` — Typ uwierzytelniania do użycia. Możliwe wartości to:
 
-- `None`-Bez uwierzytelniania (ustawienie domyślne).
-- `Individual`-Poszczególnych uwierzytelniania.
-- `IndividualB2C`-Poszczególnych uwierzytelniania za pomocą usługi Azure AD B2C.
-- `SingleOrg`-Organizacji uwierzytelnianie dla pojedynczej dzierżawy.
-- `MultiOrg`-Organizacji uwierzytelnianie dla wielu dzierżawców.
-- `Windows`— Uwierzytelnianie systemu Windows.
+- `None` -Bez uwierzytelniania (ustawienie domyślne).
+- `Individual` -Poszczególnych uwierzytelniania.
+- `IndividualB2C` -Poszczególnych uwierzytelniania za pomocą usługi Azure AD B2C.
+- `SingleOrg` -Organizacji uwierzytelnianie dla pojedynczej dzierżawy.
+- `MultiOrg` -Organizacji uwierzytelnianie dla wielu dzierżawców.
+- `Windows` — Uwierzytelnianie systemu Windows.
 
-`--aad-b2c-instance <INSTANCE>`Wystąpienia usługi Azure Active Directory B2C do nawiązania połączenia. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/` .
+`--aad-b2c-instance <INSTANCE>` Wystąpienia usługi Azure Active Directory B2C do nawiązania połączenia. Za pomocą `IndividualB2C` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/tfp/` .
 
-`-ssp|--susi-policy-id <ID>`Identyfikator zasad logowania i rejestrowania dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+`-ssp|--susi-policy-id <ID>` Identyfikator zasad logowania i rejestrowania dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
 
-`-rp|--reset-password-policy-id <ID>`-Resetowania hasła zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+`-rp|--reset-password-policy-id <ID>` -Resetowania hasła zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
 
-`-ep|--edit-profile-policy-id <ID>`-Edycji profilu zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
+`-ep|--edit-profile-policy-id <ID>` -Edycji profilu zasad identyfikator dla tego projektu. Za pomocą `IndividualB2C` uwierzytelniania.
 
-`--aad-instance <INSTANCE>`Wystąpienia usługi Azure Active Directory do nawiązania połączenia. Za pomocą `SingleOrg` lub `MultiOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
+`--aad-instance <INSTANCE>` Wystąpienia usługi Azure Active Directory do nawiązania połączenia. Za pomocą `SingleOrg` lub `MultiOrg` uwierzytelniania. Wartość domyślna to `https://login.microsoftonline.com/`.
 
-`--client-id <ID>`— Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C`, `SingleOrg`, lub `MultiOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
+`--client-id <ID>` — Identyfikator klienta dla tego projektu. Za pomocą `IndividualB2C`, `SingleOrg`, lub `MultiOrg` uwierzytelniania. Wartość domyślna to `11111111-1111-1111-11111111111111111`.
 
-`--domain <DOMAIN>`-Domeny dla katalogu dzierżawcy. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
+`--domain <DOMAIN>` -Domeny dla katalogu dzierżawcy. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `qualified.domain.name`.
 
-`--tenant-id <ID>`-TenantId identyfikator katalogu do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
+`--tenant-id <ID>` -TenantId identyfikator katalogu do nawiązania połączenia. Za pomocą `SingleOrg` uwierzytelniania. Wartość domyślna to `22222222-2222-2222-2222-222222222222`.
 
-`--callback-path <PATH>`— Ścieżka żądania w podstawowej ścieżce aplikacji przekierowania URI. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `/signin-oidc`.
+`--callback-path <PATH>` — Ścieżka żądania w podstawowej ścieżce aplikacji przekierowania URI. Za pomocą `SingleOrg` lub `IndividualB2C` uwierzytelniania. Wartość domyślna to `/signin-oidc`.
 
-`-r|--org-read-access`— Umożliwia dostęp do odczytu do katalogu aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
+`-r|--org-read-access` — Umożliwia dostęp do odczytu do katalogu aplikacji. Dotyczy tylko `SingleOrg` lub `MultiOrg` uwierzytelniania.
 
-`--use-launch-settings`-Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
+`--use-launch-settings` -Zawiera *launchSettings.json* w wygenerowanych danych wyjściowych.
 
-`--use-browserlink`-Zawiera BrowserLink w projekcie.
+`--use-browserlink` -Zawiera BrowserLink w projekcie.
 
-`-uld|--use-local-db`— Określa, że LocalDB powinna być używana zamiast funkcji SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
+`-uld|--use-local-db` — Określa, że LocalDB powinna być używana zamiast funkcji SQLite. Dotyczy tylko `Individual` lub `IndividualB2C` uwierzytelniania.
 
-`--no-restore`-Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **Strona**
 
 `-na|--namespace <NAMESPACE_NAME>`-Namespace dla wygenerowanego kodu. Wartość domyślna to `MyApp.Namespace`.
 
-`-np|--no-pagemodel`-Tworzy tę stronę bez PageModel.
+`-np|--no-pagemodel` -Tworzy tę stronę bez PageModel.
 
 **viewimports**
 
@@ -284,19 +285,19 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 **console, xunit, mstest, web, webapi**
 
-`-f|--framework`— Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
+`-f|--framework` — Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
 
 **classlib**
 
-`-f|--framework`— Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0`, `netcoreapp1.1`, lub `netstandard1.0` do `netstandard1.6`. Wartość domyślna to `netstandard1.4`.
+`-f|--framework` — Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0`, `netcoreapp1.1`, lub `netstandard1.0` do `netstandard1.6`. Wartość domyślna to `netstandard1.4`.
 
 **mvc**
 
-`-f|--framework`— Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
+`-f|--framework` — Określa [framework](../../standard/frameworks.md) do obiektu docelowego. Wartości: `netcoreapp1.0` lub `netcoreapp1.1`. Wartość domyślna to `netcoreapp1.0`.
 
-`-au|--auth`— Typ uwierzytelniania do użycia. Wartości: `None` lub `Individual`. Wartość domyślna to `None`.
+`-au|--auth` — Typ uwierzytelniania do użycia. Wartości: `None` lub `Individual`. Wartość domyślna to `None`.
 
-`-uld|--use-local-db`— Określa, czy do korzystania z bazy danych LocalDB zamiast SQLite. Wartości: `true` lub `false`. Wartość domyślna to `false`.
+`-uld|--use-local-db` — Określa, czy do korzystania z bazy danych LocalDB zamiast SQLite. Wartości: `true` lub `false`. Wartość domyślna to `false`.
 
 ---
 

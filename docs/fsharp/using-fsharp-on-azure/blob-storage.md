@@ -1,7 +1,7 @@
 ---
 title: "Rozpoczynanie pracy z magazynem obiektów Blob platformy Azure przy użyciu języka F #"
 description: "Przechowuj dane niestrukturalne w chmurze za pomocą magazynu obiektów Blob platformy Azure."
-keywords: "Visual f #, f #, funkcjonalności programowania .NET, .NET Core Azure"
+keywords: visual f#, f#, functional programming, .NET, .NET Core, Azure
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 92e26aff605d3bed89e388dd3616a2a9a3a96081
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z magazynem obiektów Blob platformy Azure przy użyciu języka F # #
 
@@ -111,10 +111,10 @@ Rozważmy na przykład następujący zestaw blokowych obiektów blob w kontenerz
 *photo1.jpg*
 *2015/architecture/description.txt*
 *2015/architecture/photo3.jpg*
-*2015 / Architektura/photo4.jpg*
+*2015/architecture/photo4.jpg*
 *2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg* 
- *2016/architecture/description.txt*
+*2016/architecture/photo6.jpg*
+*2016/architecture/description.txt*
 *2016/photo7.jpg*
 
 Podczas wywoływania `ListBlobs` kontenera (jak w powyższym przykładzie), zwrócenie listy hierarchicznej. Jeśli oba zawiera `CloudBlobDirectory` i `CloudBlockBlob` obiektów reprezentujących katalogi i obiekty BLOB w kontenerze, odpowiednio, a następnie dane wyjściowe podobny do poniższego:
@@ -242,12 +242,13 @@ Teraz, kiedy znasz już podstawy magazynu obiektów Blob, skorzystaj z poniższy
 
 ### <a name="blob-storage-reference"></a>Odwołanie do obiektu blob magazynu
 
-- [Biblioteka klienta usługi Storage dla platformy .NET odwołania](http://go.microsoft.com/fwlink/?LinkID=390731&clcid=0x409)
-- [Dokumentacja interfejsu API REST](http://msdn.microsoft.com/library/azure/dd179355)
+- [Interfejsy API usługi Azure Storage dla platformy .NET](/dotnet/api/overview/azure/storage)
+- [Dokumentacja interfejsu API REST usług magazynu Azure](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
 
 ### <a name="related-guides"></a>Przewodniki pokrewne
 
 - [Wprowadzenie do magazynu obiektów Blob platformy Azure w języku C#](https://azure.microsoft.com/documentation/samples/storage-blob-dotnet-getting-started/)
-- [Transfer danych za pomocą wiersza polecenia azcopy](/azure/storage/storage-use-azcopy)
-- [Konfigurowanie parametrów połączenia](http://msdn.microsoft.com/library/azure/ee758697.aspx)
-- [Blog zespołu usługi Magazyn Azure](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Transfer danych za pomocą wiersza polecenia azcopy w systemie Windows](/azure/storage/common/storage-use-azcopy)
+- [Transfer danych za pomocą wiersza polecenia azcopy w systemie Linux](/azure/storage/common/storage-use-azcopy-linux)
+- [Konfigurowanie parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
+- [Azure Storage Team Blog](http://blogs.msdn.com/b/windowsazurestorage/)

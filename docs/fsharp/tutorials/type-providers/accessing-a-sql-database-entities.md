@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: dc82a932-5401-4d19-9fb3-92c50d8db514
-ms.openlocfilehash: 770d405921758eeb7e8d7ea98b95c29c99631475
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e0e78e06fa1129ba5eeb73bc36c14343c93d6927
+ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/13/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers-and-entities"></a>Wskazówki: uzyskiwanie dostępu do bazy danych SQL Database za pomocą dostawców typów i jednostek
 
@@ -66,7 +66,7 @@ Bazę danych School możesz utworzyć na dowolnym serwerze, na którym działa p
 3. Otwórz menu skrótów do nowego węzła połączenia, a następnie wybierz pozycję **nowe zapytanie**.
 <br />
 
-4. Otwórz [tworzenie przykładowej bazy danych służbowych](http://go.microsoft.com/fwlink/?LinkID=237278) w witrynie internetowej firmy Microsoft, a następnie kopiowania i wklejania skryptu bazy danych tworzącą uczniów bazy danych w oknie edytora.
+4. Otwórz [tworzenie przykładowej bazy danych służbowych](https://msdn.microsoft.com/library/bb399731(v=vs.100).aspx) w witrynie internetowej firmy Microsoft, a następnie kopiowania i wklejania skryptu bazy danych tworzącą służbowe bazy danych w oknie edytora.
 <br />
 
 
@@ -240,14 +240,9 @@ Eksploruj inne opcje zapytania, przeglądając operatorów zapytań dostępnych 
 
 
 ## <a name="see-also"></a>Zobacz też
-[Dostawcy typów](index.md)
-
-[Sqlentityconnection — dostawca typów](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)
-
-[Wskazówki: Generowanie typów F # za pomocą pliku schematu EDMX](generating-fsharp-types-from-edmx.md)
-
-[ADO.NET Entity Framework](https://msdn.microsoft.com/library/bb399572)
-
-[Omówienie plików edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
-
-[EDM Generator &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[Dostawcy typów](index.md)  
+[Sqlentityconnection — dostawca typów](https://msdn.microsoft.com/visualfsharpdocs/conceptual/sqlentityconnection-type-provider-%5bfsharp%5d)  
+[Wskazówki: Generowanie typów F # za pomocą pliku schematu EDMX](generating-fsharp-types-from-edmx.md)  
+[Program Entity Framework na platformie ADO.NET](https://msdn.microsoft.com/library/bb399572)  
+[Omówienie plików edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)  
+[EDM Generator &#40;EdmGen.exe&#41;](https://msdn.microsoft.com/library/bb387165)  

@@ -1,4 +1,4 @@
-# [Rozszerzanie architektury WCF](extending-wcf.md)
+# [Rozszerzanie architektury WCF](index.md)
 ## [Rozszerzanie elementu ServiceHost i warstwy modelu usług](extending-servicehost-and-the-service-model-layer.md)
 ### [Rozszerzanie klientów](extending-clients.md)
 #### [Instrukcje: inspekcja lub modyfikowanie komunikatów na kliencie](how-to-inspect-or-modify-messages-on-the-client.md)

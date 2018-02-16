@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 6dbbc2e95c613d468c7d8c7b0dc15c85849f79dc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: d1bb4eb3b18fe08f38c2cf99a642afb516a797ff
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>Oprogramowanie .NET core narzędzi interfejsu wiersza polecenia (CLI)
 
@@ -31,22 +32,22 @@ Domyślnie interfejsu wiersza polecenia instalacji w sposób side-by-side (SxS) 
 
 Domyślnie instalowane są następujące polecenia:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 **Podstawowe polecenia**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
-* [kompilacji](dotnet-build.md)
-* [Publikowanie](dotnet-publish.md)
-* [Uruchom](dotnet-run.md)
-* [Test](dotnet-test.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pakiet](dotnet-pack.md)
 * [Migracja](dotnet-migrate.md)
-* [czyszczenie](dotnet-clean.md)
-* [SLN](dotnet-sln.md)
-* [Pomoc](dotnet-help.md)
+* [Czyszczenie](dotnet-clean.md)
+* [sln](dotnet-sln.md)
+* [help](dotnet-help.md)
 * [Magazyn](dotnet-store.md)
 
 **Polecenia modyfikacji projektu**
@@ -62,24 +63,24 @@ Domyślnie instalowane są następujące polecenia:
 * [Usuń nuget](dotnet-nuget-delete.md)
 * [Zmienne lokalne nuget](dotnet-nuget-locals.md)
 * [wypychania nuget](dotnet-nuget-push.md)
-* [MSBUILD](dotnet-msbuild.md)
+* [msbuild](dotnet-msbuild.md)
 * [skrypt instalacji DotNet](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 **Podstawowe polecenia**
 
 * [new](dotnet-new.md)
 * [restore](dotnet-restore.md)
-* [kompilacji](dotnet-build.md)
-* [Publikowanie](dotnet-publish.md)
-* [Uruchom](dotnet-run.md)
-* [Test](dotnet-test.md)
+* [build](dotnet-build.md)
+* [publish](dotnet-publish.md)
+* [run](dotnet-run.md)
+* [test](dotnet-test.md)
 * [vstest](dotnet-vstest.md)
 * [pakiet](dotnet-pack.md)
 * [Migracja](dotnet-migrate.md)
-* [czyszczenie](dotnet-clean.md)
-* [SLN](dotnet-sln.md)
+* [Czyszczenie](dotnet-clean.md)
+* [sln](dotnet-sln.md)
 
 **Polecenia modyfikacji projektu**
 
@@ -94,7 +95,7 @@ Domyślnie instalowane są następujące polecenia:
 * [Usuń nuget](dotnet-nuget-delete.md)
 * [Zmienne lokalne nuget](dotnet-nuget-locals.md)
 * [wypychania nuget](dotnet-nuget-push.md)
-* [MSBUILD](dotnet-msbuild.md)
+* [msbuild](dotnet-msbuild.md)
 * [skrypt instalacji DotNet](dotnet-install-script.md)
 
 ---
@@ -105,7 +106,7 @@ Interfejsu wiersza polecenia przyjmuje modelu rozszerzalności, która pozwala n
 
 Struktura polecenia interfejsu wiersza polecenia składa się z [sterownika ("dotnet")](#driver), [polecenia (lub "zlecenie")](#command-verb)oraz prawdopodobnie poleceń [argumenty](#arguments) i [opcje](#options). Zobacz tego wzorca w większości operacji interfejsu wiersza polecenia, takie jak tworzenie nowej aplikacji konsoli i uruchomiony z wiersza polecenia jako następujące polecenia, Pokaż podczas wykonywania z katalogu o nazwie *moja_aplikacja*:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```console
 dotnet new console
@@ -113,7 +114,7 @@ dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```console
 dotnet new console
@@ -135,7 +136,7 @@ Jeśli podasz polecenia do sterownika, `dotnet.exe` rozpoczyna się proces wykon
 
 ### <a name="command-verb"></a>Polecenie ("zlecenie")
 
-Polecenie (lub "zlecenie") jest po prostu polecenie, które wykonuje akcję. Na przykład `dotnet build` kompilacji kodu. `dotnet publish`publikuje kodu. Polecenia są zaimplementowane jako aplikacji konsoli przy użyciu `dotnet {verb}` Konwencji.
+Polecenie (lub "zlecenie") jest po prostu polecenie, które wykonuje akcję. Na przykład `dotnet build` kompilacji kodu. `dotnet publish` publikuje kodu. Polecenia są zaimplementowane jako aplikacji konsoli przy użyciu `dotnet {verb}` Konwencji.
 
 ### <a name="arguments"></a>Argumenty
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9f3e39b-ce6c-41ff-991f-0625f46441ae
-ms.openlocfilehash: 0fc369993b3ee4c8a9139e4a365330197fe66946
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: f0a8893abca0435307907aa9c169646bf3dec2d5
+ms.sourcegitcommit: adcf9bdafeaa6bc243af7bf70b45f3df954f256a
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="f-interactive-options"></a>Opcje interakcyjne F#
 
@@ -42,9 +42,11 @@ W przypadku, gdy są wyświetlane w F # Interactive argumentów opcji, elementy 
 |**--**|Używanych w celu poinstruowania F # Interactive do Traktuj pozostałe argumenty jak argumenty wiersza polecenia F # program lub skrypt, które jest dostępne w kodzie za pomocą listy **elementu fsi.CommandLineArgs**.|
 |**--checked**[**+**&#124;**-**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
 |**-codepage:&lt;int&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
+|**--consolecolors**[**+**&#124;**-**]|Dane wyjściowe, ostrzeżenia i komunikaty o błędach w kolorze.|
 |**--crossoptimize**[**+**&#124;**-**]|Włącz lub wyłącz optymalizacje między modułami.|
-|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
+|**--debug**[**+**&#124;**-**]<br /><br />**--debug:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]<br /><br />**-g**[**+**&#124;**-**]<br /><br />**-g:**[**full**&#124;**pdbonly**&#124;**portable**&#124;**embedded**]|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
 |**— Zdefiniuj:&lt;ciągu&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
+|**--deterministic**[**+**&#124;**-**]|Tworzy zestaw deterministyczne (w tym identyfikator GUID wersji modułu i sygnatura czasowa).|
 |**--exec**|Nakazuje interakcyjne F # można zamknąć po załadowaniu plików lub uruchamianie pliku skryptu w wierszu polecenia.|
 |**--fullpaths**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
 |**--gui**[**+**&#124;**-**]|Włącza lub wyłącza pętli zdarzenia Windows Forms. Domyślnie włączone.|
@@ -61,7 +63,10 @@ W przypadku, gdy są wyświetlane w F # Interactive argumentów opcji, elementy 
 |**--quotations-debug**|Określa, że dodatkowe informacje o debugowaniu powinien wysyłanego dla wyrażeń, które pochodzą z literałów cytatu F # i odzwierciedlone definicje. Informacje debugowania są dodawane do niestandardowych atrybutów węzła drzewa wyrażenia F #. Zobacz [kodu ofert](code-quotations.md) i [Expr.customattributes —](https://msdn.microsoft.com/library/eb89943f-5f5b-474e-b125-030ca412edb3).|
 |**--readline**[**+**&#124;**-**]|Włącz lub wyłącz uzupełniania po naciśnięciu tabulatora w trybie interaktywnym.|
 |**--odwołania:&lt;filename&gt;**<br /><br />**-r:&lt;filename&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
+|**--shadowcopyreferences**[**+**&#124; **-**]|Uniemożliwia blokowanie przez proces narzędzia F # Interactive odwołań.|
+|**--simpleresolution**|Usuwa odwołania do zestawów przy użyciu reguł opartych na katalogu, a nie rozpoznawania narzędzia MSBuild.|
 |**--tailcalls**[**+**&#124;**-**]|Włącza lub wyłącza użycie instrukcji IL tail, co powoduje, że ramka stosu zostanie ponownie tail funkcji cyklicznej. Ta opcja jest domyślnie włączona.|
+|**--targetprofile:&lt;ciągu&gt;**|Określa profil platformy docelowej tego zestawu. Prawidłowe wartości to mscorlib, netcore lub krótkich nazw netstandard.  Wartość domyślna to mscorlib.|
 |**— Użyj:&lt;filename&gt;**|Określa, że interpreter do używania danego pliku przy uruchamianiu jako początkowych danych wejściowych.|
 |**--utf8output**|Taka sama jak fsc.exe — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|
 |**— Ostrzeżenie:&lt;poziom ostrzeżeń&gt;**|Taki sam jak **fsc.exe** — opcja kompilatora. Aby uzyskać więcej informacji, zobacz [— opcje kompilatora](compiler-options.md).|

@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 65a4695c6f4e5268582d83452246ed8262d6fe2f
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Zrozumienie modelu zestawu SDK platformy kompilatora .NET
 
@@ -34,7 +34,7 @@ Odpowiadający każdej z tych faz, zestawu SDK platformy kompilatora .NET przeds
 
 Każdy kompilatora łączy te składniki ze sobą jednej całości end-to-end.
 
-Te interfejsy API są takie same używane przez program Visual Studio. Dla wystąpienia kodu zwijania i funkcje formatowania używanie drzew składni, tabeli symboli refaktoryzacje Użyj funkcji przeglądarki obiektów i nawigacji przejdź do definicji Użyj modelu semantycznego i Edytuj i Kontynuuj wykorzystuje wszystkie z nich, łącznie z interfejsu API emisji. 
+Te interfejsy API są takie same jak używane przez program Visual Studio. Dla wystąpienia kodu zwijania i funkcje formatowania używanie drzew składni, tabeli symboli refaktoryzacje Użyj funkcji przeglądarki obiektów i nawigacji przejdź do definicji Użyj modelu semantycznego i Edytuj i Kontynuuj wykorzystuje wszystkie z nich, łącznie z interfejsu API emisji. 
 
 ## <a name="api-layers"></a>Warstwy interfejsu API
 

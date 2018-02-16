@@ -15,18 +15,18 @@ helpviewer_keywords:
 - customizing Dispose method name
 - Finalize method
 ms.assetid: 31a6c13b-d6a2-492b-9a9f-e5238c983bcb
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 86fef5b18ac2c1c1b1dfee385b726484191fe714
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e0c2e74afea8a0cb5a0e187f05511eabe0527b90
+ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="dispose-pattern"></a>Wzorzec Dispose
 Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci, systemu obsługuje lub połączenia z bazą danych w trakcie ich wykonanie. Deweloperzy muszą należy zachować ostrożność przy użyciu tych zasobów systemowych, ponieważ muszą zostać zwolnione po zostały zakupione i używane.  
@@ -35,7 +35,7 @@ Wszystkie programy uzyskać jeden lub więcej zasobów systemowych, np. pamięci
   
  Niestety pamięci zarządzanej jest tylko jeden z wielu typów zasobów systemowych. Zasoby innych niż pamięci zarządzanej nadal należy zwolnić jawnie i są określane jako zasoby niezarządzane. GC specjalnie nie jest przeznaczone do zarządzania takich niezarządzanych zasobów, co oznacza, że odpowiedzialność za zarządzanie niezarządzanych zasobów znajduje się w ręce deweloperów.  
   
- Środowisko CLR zapewnia pomoc podczas zwalniania niezarządzanych zasobów. <xref:System.Object?displayProperty=nameWithType>deklaruje metody wirtualnej <xref:System.Object.Finalize%2A> (nazywanych również finalizatora) który jest wywoływany przez GC przed pamięci obiektu jest odzyskana przez wykaz Globalny i może zostać zastąpiona w celu zwolnić zasoby niezarządzane. Typy, które zastępować finalizatora są określane jako finalizable typów.  
+ Środowisko CLR zapewnia pomoc podczas zwalniania niezarządzanych zasobów. <xref:System.Object?displayProperty=nameWithType> deklaruje metody wirtualnej <xref:System.Object.Finalize%2A> (nazywanych również finalizatora) który jest wywoływany przez GC przed pamięci obiektu jest odzyskana przez wykaz Globalny i może zostać zastąpiona w celu zwolnić zasoby niezarządzane. Typy, które zastępować finalizatora są określane jako finalizable typów.  
   
  Mimo że finalizatory są efektywne w niektórych scenariuszach oczyszczania, mają dwa istotne wady:  
   
@@ -95,7 +95,7 @@ public class DisposableResourceHolder : IDisposable {
   
  Ponadto ta sekcja dotyczy klasy z podstawowej, która już nie implementuje wzorzec Dispose. Jeśli możesz są dziedziczy z klasy, która już implementuje wzorzec, po prostu zastąpić `Dispose(bool)` metodę w celu zapewnienia dodatkowych zasobów oczyszczania logiki.  
   
- **CZY ✓** deklarować chronionych wirtualny element void `Dispose(bool disposing)` metody, można scentralizować całą logikę związany ze zwalnianiem zasoby niezarządzane.  
+ **CZY ✓** zadeklarować `protected virtual void Dispose(bool disposing)` metody, można scentralizować całą logikę związany ze zwalnianiem zasoby niezarządzane.  
   
  Oczyszczanie zasobów wszystkie powinien wystąpić w przypadku tej metody. Metoda jest wywoływana z obu finalizator i `IDisposable.Dispose` metody. Parametr nie będzie miał wartość false, jeśli jest wywoływany z wewnątrz finalizator. Stosuje się do upewnij się, że każdy kod działania podczas finalizacji nie uzyskuje dostęp do innych obiektów finalizable. Szczegóły dotyczące implementowania finalizatory są opisane w następnej sekcji.  
   
@@ -138,7 +138,7 @@ public class DisposableResourceHolder : IDisposable {
   
  **X nie** zadeklarować wszystkie przeciążenia `Dispose` metody inne niż `Dispose()` i `Dispose(bool)`.  
   
- `Dispose`należy rozważyć słowem zastrzeżonym, ułatwia skodyfikować tego wzorca i uniknąć nieporozumień wśród implementacje, użytkowników i kompilatory. W przypadku niektórych języków może wybrać automatycznie Wdrażaj tego wzorca dla niektórych typów.  
+ `Dispose` należy rozważyć słowem zastrzeżonym, ułatwia skodyfikować tego wzorca i uniknąć nieporozumień wśród implementacje, użytkowników i kompilatory. W przypadku niektórych języków może wybrać automatycznie Wdrażaj tego wzorca dla niektórych typów.  
   
  **CZY ✓** Zezwalaj `Dispose(bool)` metodę można wywołać więcej niż raz. Metoda może wybrać nic nie rób po pierwszym wywołaniu.  
   
@@ -285,7 +285,7 @@ public class ComplexResourceHolder : IDisposable {
   
  **ROZWAŻ ✓** tworzenie i używanie obiektu finalizable krytycznego (typ z hierarchii typów, który zawiera <xref:System.Runtime.ConstrainedExecution.CriticalFinalizerObject>) w sytuacjach, w których finalizator bezwzględnie wykonać nawet w wypadku zwalnia domeny wymuszone aplikacji i wątków przerywa.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   

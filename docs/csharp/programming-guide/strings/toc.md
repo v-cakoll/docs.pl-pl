@@ -1,5 +1,4 @@
 # [Ciągi](index.md)
-## [Instrukcje: łączenie wielu ciągów](how-to-concatenate-multiple-strings.md)
 ## [Instrukcje: modyfikowanie zawartości ciągu](how-to-modify-string-contents.md)
 ## [Instrukcje: porównywanie ciągów](how-to-compare-strings.md)
 ## [Instrukcje: wyszukiwanie ciągów za pomocą metod ciągów](how-to-search-strings-using-string-methods.md)

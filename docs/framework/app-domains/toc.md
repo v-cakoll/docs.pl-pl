@@ -10,7 +10,7 @@
 ### [Zestawy i wykonywanie równoczesne](assemblies-and-side-by-side-execution.md)
 ## [Domeny aplikacji](application-domains.md)
 ## [Instrukcje dotyczące zestawów i domen aplikacji](application-domains-and-assemblies-how-to-topics.md)
-## [Używanie domen aplikacji](application-domains.md)
+## [Używanie domen aplikacji](use.md)
 ### [Instrukcje: tworzenie domeny aplikacji](how-to-create-an-application-domain.md)
 ### [Instrukcje: zwolnienie domeny aplikacji](how-to-unload-an-application-domain.md)
 ### [Instrukcje: konfigurowanie domeny aplikacji](how-to-configure-an-application-domain.md)

@@ -43,7 +43,7 @@ Można dostęp za pośrednictwem portalu OMS lub w portalu Azure, które są uru
 
 -   Kubernetes
 
--   Sieci szkieletowej usług
+-   Service Fabric
 
 -   Red Hat OpenShift
 
@@ -71,31 +71,31 @@ Za pomocą rozwiązania monitorowania kontenera analizy dziennika na:
 
 -   **Omówienie monitorowania na platformie Microsoft Azure**
 
-[https://docs.microsoft.com/Azure/monitoring-and-Diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
 
--   **Co to jest usługa Application Insights?**
+-   Co to jest usługa Application Insights?
 
-[https://docs.microsoft.com/Azure/Application-insights/App-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
 
 -   **Co to jest analiza dziennika?**
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
 
--   **Kontener rozwiązania monitorowanie analizy dzienników**
+-   Kontener rozwiązania monitorowanie analizy dzienników
 
-[https://docs.microsoft.com/Azure/log-Analytics/log-Analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
 
 -   **Omówienie usługi Azure monitora**
 
-[https://docs.microsoft.com/Azure/monitoring-and-Diagnostics/monitoring-overview-Azure-Monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
 
 -   **Co to jest Operations Management Suite (OMS)?**
 
-[https://docs.microsoft.com/Azure/Operations-Management-Suite/Operations-Management-Suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
 
 -   **Monitorowanie kontenery systemu Windows Server w sieci szkieletowej usług z pakietu OMS**
 
-[https://docs.microsoft.com/Azure/Service-Fabric/Service-Fabric-Diagnostics-containers-WindowsServer](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
 
 >[!div class="step-by-step"]
 [Poprzednie](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

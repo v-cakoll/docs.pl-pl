@@ -219,11 +219,11 @@ Wbudowanymi aplikacje mogą korzystać z Docker podzielenie wbudowanymi aplikacj
 
 > ### <a name="references--common-web-architectures"></a>Odwołania — typowe architektury sieci Web
 > - **Architektura czyste**  
-> <https://8thlight.com/blog/uncle-Bob/2012/08/13/the-clean-Architecture.HTML>
+> <https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html>
 > - **Architektura przenikanie**  
-> <http://jeffreypalermo.com/blog/the-onion-Architecture-Part-1/>
+> <http://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 > - **Wzorzec repozytorium**  
-> <http://deviq.com/Repository-pattern/>
+> <http://deviq.com/repository-pattern/>
 > - **Przykładowe rozwiązanie czystej architektury**  
 > <https://github.com/ardalis/cleanarchitecture>
 > - **Zaprojektowanie Mikrousług e-book** <http://aka.ms/MicroservicesEbook>

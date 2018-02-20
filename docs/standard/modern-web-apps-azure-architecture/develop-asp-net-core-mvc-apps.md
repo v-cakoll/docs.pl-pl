@@ -207,7 +207,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 Platformy ASP.NET Core MVC również używa konwencji zlokalizować widoki. Można zastąpić go z Konwencją niestandardowe, aby widoki będą znajdować się w folderach funkcji (przy użyciu nazwy funkcji podanego przez FeatureConvention powyżej). Można dowiedzieć się więcej na temat tej metody i pobrać przykładowy pracy z artykuł w witrynie MSDN [wycinków funkcji dla platformy ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Dotyczy kompleksowymi
+### <a name="cross-cutting-concerns"></a>Cross-Cutting Concerns
 
 Wzrostem aplikacji staje się coraz bardziej ważne składników wychodzących kompleksowymi problemy, aby wyeliminować dublowania i zachowanie spójności. Przykłady kompleksowymi problemy w aplikacji platformy ASP.NET Core to uwierzytelnianie, reguł sprawdzania poprawności modelu, buforowanie danych wyjściowych i obsługi błędu, jeśli istnieje wiele innych. Platformy ASP.NET Core MVC [filtry](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) zezwalają na uruchamianie kodu przed lub po pewne czynności w potoku przetwarzania żądań. Na przykład filtr można uruchomić przed i po wiązania modelu, przed i po akcji lub przed i po wyniku akcji. Umożliwia także filtr autoryzacji do kontrolowania dostępu do pozostałego potoku. Pokazuje rysunki 7-2 jak żądanie wykonania przepływów filtry, skonfigurowanie.
 
@@ -282,13 +282,13 @@ Więcej o implementacji filtry i pobrać przykładowy pracy z artykuł w witryni
 
 > ### <a name="references--structuring-applications"></a>Odwołania — struktury aplikacji
 > - **Obszary**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/areas>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
 > - **MSDN — funkcja wycinki dla platformy ASP.NET Core MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtry**  
-> <https://docs.microsoft.com/ASPNET/Core/MVC/Controllers/Filters>
+> <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
 > - **MSDN — rzeczywistych platformy ASP.NET Core MVC filtry**  
-> <https://msdn.microsoft.com/Magazine/mt767699.aspx>
+> <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>Zabezpieczenia
 
@@ -388,15 +388,15 @@ Większość interfejsów API sieci web należy zaimplementować uwierzytelniani
 
 > ### <a name="references--security"></a>Odwołania — zabezpieczeń
 > - **Omówienie dokumentów dotyczących zabezpieczeń**  
-> https://docs.microsoft.com/ASPNET/Core/Security/
+> https://docs.microsoft.com/aspnet/core/security/
 > - **Wymuszanie protokołu SSL w aplikacji platformy ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/enforcing-SSL>
+> <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Wprowadzenie do tożsamości**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authentication/Identity>
+> <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **Wprowadzenie do autoryzacji**  
-> <https://docs.microsoft.com/ASPNET/Core/Security/Authorization/Introduction>
+> <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
 > - **Uwierzytelnianie i autoryzacja aplikacji interfejsu API w usłudze aplikacji Azure**  
-> <https://docs.microsoft.com/Azure/App-Service-API/App-Service-API-Authentication>
+> <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
 
 ## <a name="client-communication"></a>Komunikacja klienta
 
@@ -455,9 +455,9 @@ Należy rozważyć wystąpić sposoby, w których aplikacji komunikują się bez
 
 > ### <a name="references--client-communication"></a>Odwołania — komunikacji z klientem
 > - **SignalR platformy ASP.NET Core**  
-> <https://github.com/ASPNET/SignalR>
-> - **Menedżer protokołu WebSocket**  
-> https://github.com/Radu-matei/websocket-Manager
+> <https://github.com/aspnet/SignalR>
+> - **WebSocket Manager**  
+> https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Domeny oparte na projektowanie — powinien zastosowaniu?
 
@@ -505,7 +505,7 @@ Rozwiązanie hybrydowe byłoby do użycia tylko DDD obszarów transakcyjnej lub 
 
 > ### <a name="references--domain-driven-design"></a>Odwołania — projektowanie oparte na domenie
 > - **DDD w zwykły język angielski (StackOverflow odpowiedzi)**  
-> <https://StackOverflow.com/questions/1222392/CAN-someone-Explain-Domain-driven-Design-ddd-in-Plain-English-Please/1222488#1222488>
+> <https://stackoverflow.com/questions/1222392/can-someone-explain-domain-driven-design-ddd-in-plain-english-please/1222488#1222488>
 
 ## <a name="deployment"></a>wdrażania
 
@@ -547,13 +547,13 @@ Jeśli przechowujesz aplikacji na platformie Azure, można bramę aplikacji usł
 
 > ### <a name="references--deployment"></a>Odwołania — wdrożenia
 > - **Omówienie wdrożenia i obsługi**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/>
+> <https://docs.microsoft.com/aspnet/core/publishing/>
 > - **Kiedy należy używać Kestrel z zwrotny serwer proxy**  
-> <https://docs.microsoft.com/ASPNET/Core/Fundamentals/Servers/kestrel#When-to-use-kestrel-with-a-reverse-proxy>
+> <https://docs.microsoft.com/aspnet/core/fundamentals/servers/kestrel#when-to-use-kestrel-with-a-reverse-proxy>
 > - **Host aplikacji platformy ASP.NET Core w Docker**  
-> <https://docs.microsoft.com/ASPNET/Core/Publishing/docker>
+> <https://docs.microsoft.com/aspnet/core/publishing/docker>
 > - **Wprowadzenie do bramy aplikacji Azure**  
-> <https://docs.microsoft.com/Azure/Application-Gateway/Application-Gateway-Introduction>
+> <https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction>
 
 >[!div class="step-by-step"]
 [Poprzednie] (typowe klienta-po stronie web-technologies.md) [dalej] (work-with-data-in-asp-net-core-apps.md)

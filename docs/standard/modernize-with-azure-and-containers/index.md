@@ -23,13 +23,13 @@ Działy firmy Microsoft Corporation
 One Microsoft Way  
 Redmond, Washington 98052-6399, USA  
 
-Copyright © 2017 przez firmę Microsoft Corporation  
+Copyright © 2017 by Microsoft Corporation  
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć w jakimkolwiek formularzu, lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 
 Ten podręcznik jest dostępny bezpłatnie w formie elektronicznej książki (Książka elektroniczna) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takich jak <http://dot.net/architecture>
 
-Jeśli masz pytania dotyczące tej książki, poczty e-mail w[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
+Jeśli masz pytania dotyczące tej książki, poczty e-mail w [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
 Ten podręcznik podano "jako — jest" i odzwierciedla widoków i opinie autora. Widoki, opinie i informacje wyrażone w tej książki, w tym adresy URL i innymi odwołaniami do witryn internetowych, mogą ulec zmianie bez uprzedzenia.
 
@@ -38,12 +38,12 @@ Niektóre przedstawione przykłady są udostępniane tylko do celów ilustracyjn
 Microsoft i znakami, znajduje się na http://www.microsoft.com na stronie sieci Web "Znaki towarowe" są znakami towarowymi grupy firm Microsoft. Wszystkie inne znaki są własnością ich prawnych właścicieli.
 
 Autor:
-> **Cesarowi de la Torre**, Sr. PM, .NET produktu zespołu, Microsoft Corp.
+> **Cesarowi de la Torre**, Sr. PM, .NET Product Team, Microsoft Corp.
 
 Uczestnicy i osoby dokonujące przeglądu:
 > **Scott myśliwego**, PM Dyrektor partnera, .NET zespół firmy Microsoft  
 > **Yuknewicz Pawła**, główny menedżer PM, Microsoft Visual Studio Tools zespołu  
-> **Ewa Guthrie**, Sr. Microsoft Visual Studio Tools zespół PM  
+> **Ewa Guthrie**, Sr. PM, Visual Studio Tools team, Microsoft  
 > **Ankit Asthana**, główny menedżer PM, .NET zespół firmy Microsoft  
 > **Unai Zorrilla**, realizacji Developer, zwykły pojęcia  
 > **Javier Valero**, dyrektora operacyjnego urzędnika na rozwiązanie Grupo  
@@ -94,7 +94,7 @@ Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest opcjonaln
 
 Tabela 1-1 opisano podstawowe zalety i wybór każde podejście migracji lub modernizacji.
 
-> | **Gotowe do infrastruktury w chmurze** <br /> *Podnieś i przesunięcia* | **Gotowe do chmury opracowywania oprogramowania** <br /> *Podnieś i przesunięcia* | **Zoptymalizowane pod kątem chmury** *Modernize/zrefaktoryzuj/ponownego napisania* |
+> | **Cloud Infrastructure-Ready** <br /> *Podnieś i przesunięcia* | **Gotowe do chmury opracowywania oprogramowania** <br /> *Podnieś i przesunięcia* | **Zoptymalizowane pod kątem chmury** *Modernize/zrefaktoryzuj/ponownego napisania* |
 > |---|---|---|
 > | **Docelowy obliczeń aplikacji** |
 > | Aplikacje wdrożone na maszynach wirtualnych na platformie Azure | Konteneryzowanych wbudowanymi lub N-warstwowych aplikacji wdrożonych na maszynach wirtualnych, sieci szkieletowej usług Azure lub usługi kontenera platformy Azure (czyli Kubernetes) | Konteneryzowanych mikrousług lub regularnych aplikacje oparte na PaaS w usłudze kontenera platformy Azure w usłudze Azure App Service, sieć szkieletowa usług Azure (czyli Kubernetes) |
@@ -102,7 +102,7 @@ Tabela 1-1 opisano podstawowe zalety i wybór każde podejście migracji lub mod
 > | SQL lub dowolnego relacyjnej bazy danych na maszynie Wirtualnej | Zarządzane wystąpienia bazy danych Azure SQL | Baza danych Azure SQL, Azure rozwiązania Cosmos bazy danych lub innych NoSQL |
 > | **Zalety**|
 > | <li>Brak kodu przebudowy, żadna nowa <li> Co najmniej wysiłku dla szybkiej migracji. <li> Najmniej-najprostszy obsługiwany na platformie Azure <li> Gwarantuje dostępność podstawowych <li> Po przeniesieniu do chmury, łatwiej modernizacji jeszcze więcej | <li>Brak kodu przebudowy, żadna nowa <li> Kontenery oferują małych przyrostowe wysiłku przez maszyny wirtualne <li> Ulepszone wdrażanie oraz elastyczność DevOps do zwolnienia z powodu kontenerów <li> Zwiększona gęstość i obniżyć koszty wdrożenia <li> Mobilność aplikacji i zależności <li> Z usługi kontenera platformy Azure (lub Kubernetes) i sieci szkieletowej usług Azure zapewnia wysoką dostępność i aranżacji <li> Poprawki węzłów/maszyny Wirtualnej w sieci szkieletowej usług <li> Elastyczność host docelowy: zestawy skalowania maszyn wirtualnych platformy Azure lub maszyny Wirtualnej, usługi kontenera platformy Azure (lub Kubernetes), usługi Service Fabric i wybór na podstawie kontenera w przyszłości | <li>Architektów dla chmury, zrefaktoryzuj nowy kod potrzebne <li> Mikrousług metod natywnych w chmurze <li> Nowe aplikacje sieci web, wbudowanymi N-warstwowa, odporne w chmurze i zoptymalizowany pod kątem chmury <li> Usługi w pełni zarządzane <li> Automatyczne stosowanie poprawek <li> Zoptymalizowana pod kątem skalowania <li> Zoptymalizowana pod kątem elastyczność autonomicznego przez podsystem <li> Oparty na wdrożenia i opracowywania oprogramowania <li> Ulepszone DevOps, takich jak miejsc i strategii wdrażania <li> Cele PaaS i orchestrator: usługi Azure App Service, usługi kontenera platformy Azure (lub Kubernetes), sieć szkieletowa usług Azure i przyszłych PaaS na podstawie kontenera |
-> | **Wyzwania** |
+> | Wyzwania |
 > | <li> Mniejsze wartości chmury, innej niż shift kosztów operacyjnych lub zamknięcia centrów danych <li> Odbywa się bardzo mało: Brak systemu operacyjnego lub stosowanie poprawek do oprogramowania pośredniczącego; może rozwiązań infrastruktury, takich jak Terraform, Spinnaker lub Puppet | <li> Containerizing jest niezmienialny wymagają dodatkowych czynności w nauki | <li> Może wymagać znaczących kodu refaktoryzacji lub ponowne zapisywanie (zwiększona czas i pieniądze) |
 >> **Tabela 1-1.** Korzyści i wyzwania modernizacji ścieżki dla usług i aplikacji .NET
 

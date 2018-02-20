@@ -1,7 +1,7 @@
 ---
 title: wprowadzenie do
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -20,4 +20,4 @@ Cykl życia wnioski konteneryzowanych jest podróży, który rozpoczyna się od 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / docker kontenery — obrazy i registries.md) [dalej] (kontenery foundation do devops-collaboration.md)
+[Previous] (../docker-containers-images-and-registries.md) [Next] (containers-foundation-for-devops-collaboration.md)

@@ -1,7 +1,7 @@
 ---
 title: "Wprowadzenie do usług .NET i Docker"
 description: "Opis rozwiązania Docker i .NET Core"
-keywords: .NET, .NET core, Docker
+keywords: .NET, .NET Core, Docker
 author: jralexander
 ms.author: johalex
 ms.date: 11/06/2017
@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 manager: wpickett
 ms.custom: mvc
-ms.workload: dotnetcore
-ms.openlocfilehash: 8c6daabb3040998d3376ad022790c16b9629233f
-ms.sourcegitcommit: bf8a3ba647252010bdce86dd914ac6c61b5ba89d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e538cb541ee2c59caf1feba4a31f86118c42c3ca
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/06/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do usług .NET i Docker
 
@@ -37,7 +38,7 @@ Możesz utworzyć własne [warstwie obrazy](https://docs.docker.com/engine/userg
 
 * [Kontenery systemu Windows: tworzenie nowoczesnych aplikacji za pomocą formantu korporacyjnej.](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be)
 * [Omówienie docker](https://docs.docker.com/engine/docker-overview/)
-* [Plik Dockerfile kontenerów systemu Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile.md)
+* [Plik Dockerfile kontenerów systemu Windows](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
 * [Najlepsze rozwiązania dotyczące pisania Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/)
 * [Obrazy usługi Docker Kompilowanie aplikacji .NET Core](../docker/building-net-docker-images.md)
 
@@ -102,7 +103,7 @@ Przykłady użycia .NET Core 2.0. Używają Docker [kompilacji wieloetapowym](ht
 
 To repozytorium zawiera przykłady ilustrujące różne konfiguracje programu .NET Framework Docker. Obrazy te można użyć jako podstawa obrazów Docker.
 
-**.NET framework 4.7**
+.NET framework 4.7
 
 [Dotnet — przykład struktury: 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) przedstawiono podstawowe "hello world" użycie [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Przedstawiono sposób tworzenia i wdrożyć aplikację jednostki uzależnionej na [obrazu docker .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 

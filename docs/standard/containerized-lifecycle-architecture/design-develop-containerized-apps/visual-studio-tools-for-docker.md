@@ -1,7 +1,7 @@
 ---
 title: "Za pomocą narzędzi Visual Studio Tools for Docker (Visual Studio w systemie Windows)"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -38,7 +38,7 @@ Visual Studio Tools for Docker zapewnia spójny sposób rozwijać i zweryfikowa�
 
 Jeśli używasz jeden kontener, w pierwszej kolejności należy rozpocząć jest włączenie obsługi Docker do projektu platformy .NET Core. Aby to zrobić, kliknij prawym przyciskiem myszy plik projektu, jak pokazano na rysunku 4-25.
 
-![https://I1.visualstudiogallery.msdn.s-MSFT.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/Image/File/205468/1/Add-docker-support.PNG](./media/image31.png)
+![https://i1.visualstudiogallery.msdn.s-msft.com/0f5b2caa-ea00-41c8-b8a2-058c7da0b3e4/image/file/205468/1/add-docker-support.png](./media/image31.png)
 
 Rysunek 4-25: włączania obsługi Docker projektu programu Visual Studio
 

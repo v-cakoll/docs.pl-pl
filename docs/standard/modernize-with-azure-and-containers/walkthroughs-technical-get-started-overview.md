@@ -41,7 +41,7 @@ Każda z następujących wskazówki używa nowe próbki eShopLegacy i eShopModer
 
 Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/01.-Tour-on-eShopModernizing-Apps-Implementation-Code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
 
 ### <a name="overview"></a>Omówienie
 
@@ -79,7 +79,7 @@ Korzyści wynikające z tego przewodnika są proste: po prostu zapoznać się z 
 
 Zapoznaj się z bardziej szczegółowym zawartość w witrynie typu wiki GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/01.-Tour-on-eShopModernizing-Apps-Implementation-Code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-eShopModernizing-apps-implementation-code)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>Wskazówki 2: Containerize istniejących aplikacji .NET z kontenerami systemu Windows
 
@@ -87,7 +87,7 @@ Zapoznaj się z bardziej szczegółowym zawartość w witrynie typu wiki GitHub:
 
 Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/02.-How-to-containerize-the-.NET-Framework-Web-Apps-with-Windows-containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker](https://github.com/dotnet-architecture/eShopModernizing/wiki/02.-How-to-containerize-the-.NET-Framework-web-apps-with-Windows-Containers-and-Docker)
 
 ### <a name="overview"></a>Omówienie
 
@@ -133,7 +133,7 @@ Poznaj więcej informacji na temat zawartości w witrynie typu wiki GitHub: [htt
 
 Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/03.-How-to-deploy-your-Windows-containers-based-App-INTO-Azure-VMs-(including-Ci-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ### <a name="overview"></a>Omówienie
 
@@ -179,7 +179,7 @@ Mimo że kontenery systemu Windows można wdrożyć do lokalnego systemu Windows
 
 Zapoznaj się z bardziej szczegółowym zawartość w witrynie typu wiki GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/03.-How-to-deploy-your-Windows-containers-based-App-INTO-Azure-VMs-(including-Ci-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>Wskazówki 4: Wdrażanie aplikacji opartych na kontenery systemu Windows na Kubernetes w usłudze kontenera platformy Azure
 
@@ -187,7 +187,7 @@ Zapoznaj się z bardziej szczegółowym zawartość w witrynie typu wiki GitHub:
 
 Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/04.-How-to-deploy-your-Windows-containers-based-Apps-INTO-Kubernetes-in-Azure-container-Service-(including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
 
 ### <a name="overview"></a>Omówienie
 
@@ -247,7 +247,7 @@ Poznaj więcej informacji na temat zawartości w witrynie typu wiki GitHub: [htt
 
 Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/05.-How-to-deploy-your-Windows-containers-based-Apps-INTO-Azure-Service-Fabric-(including-Ci-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 ### <a name="overview"></a>Omówienie
 
@@ -313,7 +313,7 @@ Następujące funkcje są wyłączne w sieci szkieletowej usług (w porównaniu 
 
 Zapoznaj się z bardziej szczegółowym zawartość w witrynie typu wiki GitHub:
 
-[https://github.com/DotNet-Architecture/eShopModernizing/Wiki/05.-How-to-deploy-your-Windows-containers-based-Apps-INTO-Azure-Service-Fabric-(including-Ci-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
 
 >[!div class="step-by-step"]
 [Poprzednie](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

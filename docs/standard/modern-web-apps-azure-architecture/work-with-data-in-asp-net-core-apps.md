@@ -31,7 +31,7 @@ Jeśli piszesz nowej aplikacji platformy ASP.NET Core, który wymaga do pracy z 
 
 Aby używać EF Core z bazy danych programu SQL Server, uruchom następujące polecenie dotnet w interfejsu wiersza polecenia:
 
-Pakiet Microsoft.EntityFrameworkCore.SqlServer dodać DotNet
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 
 Aby dodać obsługę InMemory źródła danych, do testowania:
 
@@ -202,11 +202,11 @@ Jest first DbContext \_catalogContext, a drugi DbContext znajduje się w \_integ
 
 > ### <a name="references--entity-framework-core"></a>Odwołania — Entity Framework Core
 > - **Dokumentacja Core EF**  
-> <https://docs.microsoft.com/EF/>
+> <https://docs.microsoft.com/ef/>
 > - **EF rdzeni: Dane dotyczące**  
-> <https://docs.microsoft.com/EF/Core/querying/Related-Data>
+> <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Unikaj ładowania opóźnionego jednostek w aplikacjach ASPNET**  
-> <http://ardalis.com/AVOID-lazy-Loading-ENTITIES-in-ASP-NET-Applications>
+> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>Podstawowych funkcji EF lub micro ORM?
 
@@ -272,7 +272,7 @@ Jest to możliwe w bazach danych NoSQL, aby przechowywać wiele wersji obiektów
 
 Zwykle nie Wymuszaj bazy danych NoSQL [kwasu](http://en.wikipedia.org/wiki/ACID), co oznacza, że mają one korzyści skalowalność i wydajność za pośrednictwem relacyjnych baz danych. Są one odpowiednie do bardzo dużych zestawów danych i obiektów, które nie są odpowiednie do magazynu w strukturach znormalizowane tabeli. To nie ma powodu Dlaczego pojedynczej aplikacji nie może korzystać z obu relacyjnych i bazy danych NoSQL, przy użyciu których najlepiej nadaje się.
 
-## <a name="azure-documentdb"></a>Usługa Azure DocumentDB
+## <a name="azure-documentdb"></a>Azure DocumentDB
 
 Azure DocumentDB to w pełni zarządzana usługa bazy danych NoSQL, oferująca magazynu oparte na chmurze dane bez schematu. Usługa DocumentDB jest skompilowany dla szybkie przetwarzanie, przewidywalną wydajność, wysoką dostępność, elastyczne skalowanie i dystrybucji globalnego. Mimo iż bazy danych NoSQL, deweloperzy mogą używać znane i zaawansowanych możliwości zapytań SQL na dane JSON. Wszystkie zasoby w usłudze DocumentDB są przechowywane jako dokumenty JSON. Zasoby są zarządzane jako *elementów*, które są dokumentami zawierający metadane, i *źródła*, które są kolekcjami elementów. Rysunek 8-2 przedstawiono relacje między różnymi zasobami usługi DocumentDB.
 
@@ -286,7 +286,7 @@ Język zapytań usługi DocumentDB jest proste, ale zaawansowanym interfejsem do
 **Odwołania — usługi DocumentDB**
 
 -   Introduction\ usługi DocumentDB
-    <https://docs.microsoft.com/Azure/documentdb/documentdb-Introduction>
+    <https://docs.microsoft.com/azure/documentdb/documentdb-introduction>
 
 ## <a name="other-persistence-options"></a>Inne opcje trwałości
 
@@ -303,7 +303,7 @@ W dodatku relacyjnych i opcje magazynu NoSQL aplikacje platformy ASP.NET Core mo
 **Odwołania — usługa Azure Storage**
 
 -   Introduction\ magazynu Azure
-    <https://docs.microsoft.com/Azure/Storage/Storage-Introduction>
+    <https://docs.microsoft.com/azure/storage/storage-introduction>
 
 ## <a name="caching"></a>Buforowanie
 
@@ -441,4 +441,4 @@ _cache.Get<CancellationTokenSource>("cts").Cancel();
 ```
 
 >[!div class="step-by-step"]
-[Poprzednie] (develop-asp-net-core-mvc-apps.md) [dalej] (test-asp-net-core-mvc-apps.md)
+[Previous] (develop-asp-net-core-mvc-apps.md) [Next] (test-asp-net-core-mvc-apps.md)

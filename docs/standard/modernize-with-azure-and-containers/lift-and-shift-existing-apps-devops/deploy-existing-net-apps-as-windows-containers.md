@@ -95,17 +95,17 @@ W scenariuszach migracji istniejące lub starsze aplikacje, które są oparte na
 
 Po dodaniu nazwy obrazu do pliku plik Dockerfile wersja systemu operacyjnego i można wybrać przy użyciu tagu, na przykład w przypadku obrazów kontenera systemu Windows opartych na programie .NET Framework:
 
-> | **Tag** | **Wersja systemu i** |
+> | Tag | **Wersja systemu i** |
 > |---|---|
-> | **Microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x w systemie Windows Server Core |
-> | **Microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x z dodatkowe dostosowanie ASP.NET, w systemie Windows Server Core |
+> | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x w systemie Windows Server Core |
+> | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x z dodatkowe dostosowanie ASP.NET, w systemie Windows Server Core |
 
 Dla platformy .NET Core (i platform dla systemu Linux i Windows) znaczniki będzie wyglądać następująco:
 
-> | **Tag** | **Wersja systemu i**
+> | Tag | **Wersja systemu i**
 > |---|---|
-> | **Microsoft/DotNet:2.0.0-Runtime** | .NET core 2.0 tylko do środowiska uruchomieniowego w systemie Linux |
-> | **Microsoft/DotNet:2.0.0-Runtime-nanoserver** | .NET core 2.0 tylko do środowiska uruchomieniowego w systemie Windows Nano Server |
+> | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
+> | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 tylko do środowiska uruchomieniowego w systemie Windows Nano Server |
 
 ### <a name="multi-arch-images"></a>Wiele architektury obrazów
 
@@ -127,15 +127,15 @@ Uruchamianie kontener w systemie Windows z lub bez izolacji funkcji Hyper-V jest
 
 -   **Dokumentacja kontenery systemu Windows**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
 
 -   **Podstawowe informacje na temat kontenery systemu Windows**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/About/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
 
 -   **Infographic: Firma Microsoft i kontenery**
 
-    [https://info.microsoft.com/RS/157-GQE-382/images/container%20infographic%201.4.17.PDF](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
 
 >[!div class="step-by-step"]
 [Poprzednie](how-to-deploy-existing-net-apps-to-azure-app-service.md)

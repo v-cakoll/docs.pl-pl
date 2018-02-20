@@ -2,20 +2,21 @@
 title: "Ciągi (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 45dd48a53d3fae58596d9328ef8daba566b2ded1
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. Wewnętrznie, tekst jest przechowywana jako sekwencyjnych kolekcji tylko do odczytu z <xref:System.Char> obiektów. Brak nie przerywa null znak na końcu C# ciąg. w związku z tym ciągu języka C# może zawierać dowolną liczbę osadzonych znaki null ('\0'). <xref:System.String.Length%2A> Właściwości ciągu reprezentuje liczbę `Char` obiekty nie zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodowych Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -61,7 +62,7 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. W
 |\\\\ |ukośnik odwrotny|0x005C|  
 |\0|Null|0x0000|  
 |\a|Alert|0x0007|  
-|\b|Backspace|0X0008|  
+|\b|Backspace|0x0008|  
 |\f|Wysuw strony|0x000C|  
 |\n|Nowy wiersz|0x000A|  
 |\r|Powrót karetki|0x000D|  
@@ -122,14 +123,14 @@ string s = String.Empty;
   
 |Temat|Opis|  
 |-----------|-----------------|  
-|[Porady: modyfikowanie zawartości ciągu](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Udostępnia przykładowego kodu, która ilustruje sposób modyfikowania zawartości ciągów.|  
-|[Porady: łączenie wielu ciągów](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Przedstawia sposób użycia `+` operatora i `Stringbuilder` klasy sprzęgać ze sobą ciągów w czasie kompilacji i w czasie wykonywania.|  
-|[Porady: porównywanie ciągów](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Pokazuje, jak przeprowadzić porządkowej porównania ciągów.|  
-|[Porady: analizowanie ciągów za pomocą String.Split](../../../csharp/programming-guide/strings/how-to-parse-strings-using-string-split.md)|Zawiera przykładowy kod, który ilustruje sposób używania `String.Split` metodę, aby przeanalizować parametry.|  
-|[Porady: wyszukiwanie ciągów za pomocą metod ciągów](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Wyjaśniono, jak używać konkretnych metod do wyszukiwania ciągów.|  
-|[Porady: wyszukiwanie ciągów za pomocą wyrażeń regularnych](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Wyjaśniono, jak używać wyrażeń regularnych do wyszukiwania ciągów.|  
-|[Porady: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak można bezpiecznie przeanalizować ciągu czy ma prawidłową wartość liczbową.|  
-|[Porady: konwertowanie ciągu na datetime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Pokazuje, jak można przekonwertować ciągu, takich jak "2008-01-24" do <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
+|[Instrukcje: modyfikowanie zawartości ciągu](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md)|Udostępnia przykładowego kodu, która ilustruje sposób modyfikowania zawartości ciągów.|  
+|[Instrukcje: łączenie wielu ciągów](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Przedstawia sposób użycia `+` operatora i `Stringbuilder` klasy sprzęgać ze sobą ciągów w czasie kompilacji i w czasie wykonywania.|  
+|[Instrukcje: porównywanie ciągów](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Pokazuje, jak przeprowadzić porządkowej porównania ciągów.|  
+|[Porady: analizowanie ciągów za pomocą String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykładowy kod, który ilustruje sposób używania `String.Split` metodę, aby przeanalizować parametry.|  
+|[Instrukcje: wyszukiwanie ciągów za pomocą metod ciągów](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Wyjaśniono, jak używać konkretnych metod do wyszukiwania ciągów.|  
+|[Instrukcje: wyszukiwanie ciągów za pomocą wyrażeń regularnych](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Wyjaśniono, jak używać wyrażeń regularnych do wyszukiwania ciągów.|  
+|[Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak można bezpiecznie przeanalizować ciągu czy ma prawidłową wartość liczbową.|  
+|[Instrukcje: konwertowanie ciągu na DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Pokazuje, jak można przekonwertować ciągu, takich jak "2008-01-24" do <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
 |[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody wykonywać podstawowe operacje na ciągach.|  
 |[Analizowanie ciągów](../../../../docs/standard/base-types/parsing-strings.md)|Opisuje sposób wstawiania znaków lub pustych miejsc w ciągu.|  
 |[Porównywanie ciągów](../../../../docs/standard/base-types/comparing.md)|Zawiera informacje na temat sposobu porównywania ciągów oraz przykłady w języku C# i Visual Basic.|  

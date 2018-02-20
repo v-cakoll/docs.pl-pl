@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: acabbf5d-fbb8-479f-894c-7251bf16c8c3
-ms.openlocfilehash: 15ba2e167efc1d295d81439dcf85bc7272e05265
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c4ff998c65f3a5c458f36312f6887d869569d814
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="computation-expressions"></a>Wyrażenia obliczeń
 
@@ -47,9 +47,9 @@ W poniższej tabeli opisano metody, których można użyć w klasie konstruktora
 |`Delay`|`(unit -> M<'T>) -> M<'T>`|Opakowuje wyrażenie do obliczenia w funkcji.|
 |`Return`|`'T -> M<'T>`|Wywołuje się dla `return` w wyrażeniach obliczeń.|
 |`ReturnFrom`|`M<'T> -> M<'T>`|Wywołuje się dla `return!` w wyrażeniach obliczeń.|
-|`Run`|`M<'T> -> M<'T>`lub<br /><br />`M<'T> -> 'T`|Wykonuje wyrażenie do obliczenia.|
-|`Combine`|`M<'T> * M<'T> -> M<'T>`lub<br /><br />`M<unit> * M<'T> -> M<'T>`|Wywołuje się do sekwencjonowania w wyrażeniach obliczeń.|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`lub<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wywołuje się dla `for...do` wyrażenia w wyrażeniach obliczeń.|
+|`Run`|`M<'T> -> M<'T>` lub<br /><br />`M<'T> -> 'T`|Wykonuje wyrażenie do obliczenia.|
+|`Combine`|`M<'T> * M<'T> -> M<'T>` lub<br /><br />`M<unit> * M<'T> -> M<'T>`|Wywołuje się do sekwencjonowania w wyrażeniach obliczeń.|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` lub<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|Wywołuje się dla `for...do` wyrażenia w wyrażeniach obliczeń.|
 |`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|Wywołuje się dla `try...finally` wyrażenia w wyrażeniach obliczeń.|
 |`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|Wywołuje się dla `try...with` wyrażenia w wyrażeniach obliczeń.|
 |`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|Wywołuje się dla `use` powiązania w wyrażeniach obliczeń.|
@@ -76,7 +76,7 @@ W kodzie powyżej wywołań `Run` i `Delay` są pomijane, jeśli nie są zdefini
 |<code>{&#124; do! expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun () -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; yield expr &#124;}</code>|`builder.Yield(expr)`|
 |<code>{&#124; yield! expr &#124;}</code>|`builder.YieldFrom(expr)`|
-|<code>{&#124; return expr &#124;}<code>|`builder.Return(expr)`|
+|<code>{&#124; return expr &#124;}</code>|`builder.Return(expr)`|
 |<code>{&#124; return! expr &#124;}</code>|`builder.ReturnFrom(expr)`|
 |<code>{&#124; use pattern = expr in cexpr &#124;}</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; use! value = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> {&#124; cexpr &#124;}))))</code>|
@@ -84,7 +84,7 @@ W kodzie powyżej wywołań `Run` i `Delay` są pomijane, jeśli nie są zdefini
 |<code>{&#124; if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then {&#124; cexpr0 &#124;} else {&#124; cexpr1 &#124;}</code>|
 |<code>{&#124; match expr with &#124; pattern_i -> cexpr_i &#124;}</code>|<code>match expr with &#124; pattern_i -> {&#124; cexpr_i &#124;}</code>|
 |<code>{&#124; for pattern in expr do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}<code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
+|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
 |<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr), builder.Delay({&#124;cexpr &#124;})</code>|
 |<code>{&#124; try cexpr with &#124; pattern_i -> expr_i &#124;}</code>|<code>builder.TryWith(builder.Delay({&#124; cexpr &#124;}), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
 |<code>{&#124; try cexpr finally expr &#124;}</code>|<code>builder.TryFinally(builder.Delay( {&#124; cexpr &#124;}), (fun () -> expr))</code>|
@@ -227,10 +227,10 @@ Wyrażenie do obliczenia ma odpowiedni typ, który zwraca wartość wyrażenia. 
 Można zdefiniować niestandardowe operacja na wyrażeniu obliczenia i Użyj niestandardowej operacji jako operator w wyrażeniu obliczenia. Na przykład operator zapytania można uwzględnić w wyrażeniu zapytania. Podczas definiowania niestandardowych operacji, należy zdefiniować wydajność i metod w wyrażeniu obliczenia. Aby zdefiniować operacja niestandardowa, umieść ją w klasie konstruktora dla wyrażenia obliczeń, a następnie Zastosuj [ `CustomOperationAttribute` ](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19). Ten atrybut ma ciąg jako argument, czyli nazwa do użycia w ramach operacji niestandardowych. Ta nazwa wchodzi w zakres na początku otwierający nawias klamrowy wyrażenia obliczenia. W związku z tym nie można używać identyfikatorów, które mają taką samą nazwę jak operacja niestandardowa w tym bloku. Na przykład, takich jak należy unikać użycia identyfikatorów `all` lub `last` w wyrażeniach zapytań.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Asynchroniczne przepływy pracy](asynchronous-workflows.md)
 
 [Sekwencje](https://msdn.microsoft.com/library/6b773b6b-9c9a-4af8-bd9e-d96585c166db)
 
-[Wyrażenia zapytań](query-expressions.md)
+[Wyrażenia zapytania](query-expressions.md)

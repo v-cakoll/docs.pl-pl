@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci Web platformy ASP.NET Core hostingu Azure
 
 > "Biznesowych z liderów wszędzie są pomijanie działy IT, aby uzyskać aplikacje w chmurze (alias SaaS) i płatności dla nich jak Subskrypcja magazynu. I gdy usługa nie jest już wymagane, będzie można zrezygnować z subskrypcji z nie urządzeń pozostałych nieużywanych w prawym górnym rogu. "  
-> _\-Daryl Plummer, Gartner analityka_
+> _\- Daryl Plummer, Gartner analityka_
 
 ## <a name="summary"></a>Podsumowanie
 
@@ -32,7 +32,7 @@ Aplikacje sieci Web mogą być przechowywane z:
 
 -   Kontenery
 
--   Sieć szkieletowa usług Azure
+-   Azure Service Fabric
 
 -   Maszynach wirtualnych (VM)
 
@@ -66,7 +66,7 @@ Jeden cel usługi kontenera platformy Azure jest zapewnienie środowiska macierz
 
 **Rysunek 11-1.** Zarządzanie usługi kontenera platformy Azure z punktami końcowymi Docker, Kubernetes lub DC/OS.
 
-### <a name="azure-service-fabric"></a>Sieć szkieletowa usług Azure
+### <a name="azure-service-fabric"></a>Azure Service Fabric
 
 Sieć szkieletowa usług jest dobrym rozwiązaniem, jeśli tworzysz nową aplikację lub ponownego zapisywania istniejących aplikacji przy użyciu architektury mikrousługi. Aplikacje, które działają w udostępnionej puli maszyn, można rozpoczęcie od czegoś małego i powiększania na ogromną skalę z setkami lub tysiącami maszyn zgodnie z potrzebami. Usługi stanowej ułatwiają spójnie i niezawodne przechowywanie stanu aplikacji i sieci szkieletowej usług automatycznie zarządza partycjonowania usługi, skalowanie i dostępność dla Ciebie. Sieć szkieletowa usług obsługuje również WebAPI z interfejsu Open Web dla platformy .NET (OWIN) i ASP.NET Core. W porównaniu do usługi App Service, usługi sieć szkieletowa dostępne są także więcej kontroli nad lub bezpośredni dostęp do podstawowej infrastruktury. Możesz zdalnym do serwerów lub skonfigurować zadania uruchamiania serwera.
 
@@ -76,7 +76,7 @@ Jeśli masz istniejącą aplikację wymagające istotne zmiany do uruchamiania w
 
 #### <a name="feature-comparison"></a>Porównanie funkcji
 
-| Usługi aplikacji — funkcja | Sieci szkieletowej usług | Maszyny wirtualne |
+| Usługi aplikacji — funkcja | Service Fabric | Maszyny wirtualne |
 |---------|----------|----------|
 | Niemal natychmiastowe wdrożenia | X | X | |
 | Skalowanie w górę do większych maszyn bez ponownego wdrażania | X | X | |
@@ -118,16 +118,16 @@ Rysunek 11-2 przedstawiono przykład architekturę odwołania. Ten schemat przed
 **Odwołania — zalecenia dotyczące hostingu Azure**
 
 -   Architectures\ rozwiązania Azure
-    <https://Azure.microsoft.com/Solutions/Architecture/>
+    <https://azure.microsoft.com/solutions/architecture/>
 
 -   Guide\ deweloperów platformy Azure
-    <https://Azure.microsoft.com/Campaigns/Developer-Guide/>
+    <https://azure.microsoft.com/campaigns/developer-guide/>
 
 -   Co to jest usługa aplikacji Azure? \
-    <https://docs.microsoft.com/Azure/App-Service/App-Service-Value-Prop-What-is>
+    <https://docs.microsoft.com/azure/app-service/app-service-value-prop-what-is>
 
 -   Usługa aplikacji Azure, maszyny wirtualne i usługi sieć szkieletowa Comparison\ usługi w chmurze
-    <https://docs.microsoft.com/Azure/App-Service-Web/Choose-Web-site-cloud-Service-VM>
+    <https://docs.microsoft.com/azure/app-service-web/choose-web-site-cloud-service-vm>
 
 >[!div class="step-by-step"]
-[Poprzednie] (Programowanie — proces do azure.md)
+[Previous] (development-process-for-azure.md)

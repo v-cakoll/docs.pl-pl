@@ -30,7 +30,7 @@ ms.lasthandoff: 12/23/2017
 
 Czy można jednak pełne i wydajne środowiska IDE lub edytora nieskomplikowane i elastyczne Microsoft ma będzie podczas tworzenia aplikacji platformy ASP.NET Core.
 
-**Visual Studio 2017 r.** Jeśli używasz *programu Visual Studio 2017* można tworzyć platformy ASP.NET Core aplikacje tak długo, jak masz *aplikacji dla wielu platform .NET Core* obciążenia zainstalowane. Wymagane obciążenia przedstawiono na rysunku 10-1 w oknie dialogowym Ustawienia programu Visual Studio 2017 r.
+**Visual Studio 2017.** Jeśli używasz *programu Visual Studio 2017* można tworzyć platformy ASP.NET Core aplikacje tak długo, jak masz *aplikacji dla wielu platform .NET Core* obciążenia zainstalowane. Wymagane obciążenia przedstawiono na rysunku 10-1 w oknie dialogowym Ustawienia programu Visual Studio 2017 r.
 
 ![](./media/image10-1.png)
 
@@ -102,7 +102,7 @@ Po każdej nowe zatwierdzenia w repozytorium kodu aplikacji udostępnionych, now
 
 Po kompilacji, ponieważ zakończyło się pomyślnie, proces dysku CD przejmą wyprodukowanych artefaktów kompilacji. Będzie to obejmowało sieci web wdrażania pakietu. Serwer kompilacji zostanie wdrażania tego pakietu w usłudze Azure App Service, zastępując istniejące usługi z elementem nowo utworzony. Zazwyczaj ten krok dotyczy środowisko przejściowe, ale niektóre aplikacje wdrożyć bezpośrednio do środowiska produkcyjnego w procesie dysku CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa aplikacji Azure. Aplikacja sieci Web.
+#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa aplikacji Azure. Web App.
 
 Po wdrożeniu aplikacji platformy ASP.NET Core działa w kontekście aplikacji sieci Web platformy Azure App Service. Ta aplikacja sieci Web mogą być monitorowane i jeszcze skonfigurowane przy użyciu portalu Azure.
 
@@ -113,8 +113,8 @@ Po uruchomieniu aplikacji sieci Web można monitorowania kondycji aplikacji i zb
 ## <a name="references"></a>Odwołania
 
 **Tworzenie i wdrażanie aplikacji platformy ASP.NET Core w systemie Azure**  
-<https://www.VisualStudio.com/docs/Build/Apps/ASPNET/aspnetcore-to-Azure>
+<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (test-asp-net-core-mvc-apps.md) [dalej] (azure-hosting-recommendations-for-asp-net-web-apps.md)
+[Previous] (test-asp-net-core-mvc-apps.md) [Next] (azure-hosting-recommendations-for-asp-net-web-apps.md)

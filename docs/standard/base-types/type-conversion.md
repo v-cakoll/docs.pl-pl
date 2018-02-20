@@ -30,21 +30,21 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 643a1c7d8dd141a8d898af61ba8302f46207321b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d8bbf57625e1d944ab4e97235e718eef7b61a3a4
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="type-conversion-in-the-net-framework"></a>Konwersja typów w programie .NET Framework
-<a name="top"></a>Każda wartość ma skojarzony typ, który definiuje atrybuty, takie jak ilość miejsca przydzielonego na wartość zakresu możliwych wartości, który może mieć i elementów członkowskich, dla którego nie udostępnia. Wiele wartości można wyrazić za pomocą co najmniej dwóch typów. Na przykład wartość 4 może być wyrażona jako liczba całkowita lub wartość zmiennoprzecinkowa. Konwersja typu tworzy wartość nowego typu, która jest równoważna wartości starego typu, ale nie zawsze powoduje zachowanie tożsamości (dokładnej wartości) oryginalnego obiektu.  
+<a name="top"></a> Każda wartość ma skojarzony typ, który definiuje atrybuty, takie jak ilość miejsca przydzielonego na wartość zakresu możliwych wartości, który może mieć i elementów członkowskich, dla którego nie udostępnia. Wiele wartości można wyrazić za pomocą co najmniej dwóch typów. Na przykład wartość 4 może być wyrażona jako liczba całkowita lub wartość zmiennoprzecinkowa. Konwersja typu tworzy wartość nowego typu, która jest równoważna wartości starego typu, ale nie zawsze powoduje zachowanie tożsamości (dokładnej wartości) oryginalnego obiektu.  
   
  .NET Framework automatycznie obsługuje następujące konwersji:  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/23/2017
   
 -   <xref:System.IConvertible> Interfejs, który definiuje konwersje do każdego z typów podstawowych danych .NET Framework. Aby uzyskać więcej informacji, zobacz [interfejs IConvertible](#the_iconvertible_interface) sekcji.  
   
--   <xref:System.Convert> Klasy, która udostępnia zestaw metod, które implementują metody w <xref:System.IConvertible> interfejsu. Aby uzyskać więcej informacji, zobacz[klasy przekonwertować](#Convert) sekcji.  
+-   <xref:System.Convert> Klasy, która udostępnia zestaw metod, które implementują metody w <xref:System.IConvertible> interfejsu. Aby uzyskać więcej informacji, zobacz [klasy przekonwertować](#Convert) sekcji.  
   
 -   <xref:System.ComponentModel.TypeConverter> Klasy, która jest klasą podstawową, która może zostać rozszerzony do obsługuje konwersji o określonym typie, do żadnego innego typu. Aby uzyskać więcej informacji, zobacz [klasy TypeConverter](#the_typeconverter_class) sekcji.  
   
@@ -103,9 +103,9 @@ ms.lasthandoff: 12/23/2017
   
 |Typ|Porównanie z zakresem typu Int32|  
 |----------|------------------------------------|  
-|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType>jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>, i <xref:System.Int64.MinValue?displayProperty=nameWithType> jest mniejsza niż (większej liczby ujemne niż) <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
-|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType>jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
-|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType>jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
+|<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>, i <xref:System.Int64.MinValue?displayProperty=nameWithType> jest mniejsza niż (większej liczby ujemne niż) <xref:System.Int32.MinValue?displayProperty=nameWithType>.|  
+|<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
+|<xref:System.UInt64>|<xref:System.UInt64.MaxValue?displayProperty=nameWithType> jest większa niż <xref:System.Int32.MaxValue?displayProperty=nameWithType>.|  
   
  Do obsługi takich konwersji zawężającej, [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] umożliwia typy, aby zdefiniować `Explicit` operatora. Kompilatory języka poszczególnych można następnie wdrożyć to rozwiązanie tego operatora za pomocą ich własnych składni lub członkiem <xref:System.Convert> klasy można wywołać w celu wykonania konwersji. (Aby uzyskać więcej informacji na temat <xref:System.Convert> , zobacz [klasy przekonwertować](#Convert) dalszej części tego tematu.) Poniższy przykład przedstawia użycie funkcje językowe jawną konwersję te wartości całkowite potencjalnie out-of-range, aby obsłużyć <xref:System.Int32> wartości.  
   

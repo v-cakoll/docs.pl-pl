@@ -118,7 +118,7 @@ Chociaż usługi aplikacji może być najlepszym rozwiązaniem dla nowej aplikac
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Analiza zgodności w usłudze Azure App Service**  
-[https://www.migratetoazure.NET/Resources](https://www.migratetoazure.net/Resources)
+[https://www.migratetoazure.net/Resources](https://www.migratetoazure.net/Resources)
 
 
 ### <a name="benefits-of-moving-to-windows-containers"></a>Korzyści polegające na przeniesieniu do kontenerów systemu Windows

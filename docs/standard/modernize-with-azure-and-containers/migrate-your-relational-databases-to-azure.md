@@ -110,23 +110,23 @@ Aby dowiedzieć się, jak przeprowadzić migrację bazy danych przy użyciu usł
 
 -   **Wybierz chmurę programu SQL Server option: Azure SQL Database (PaaS) lub SQL Server na maszynie Wirtualnej Azure (IaaS)**
 
-    [https://docs.microsoft.com/Azure/SQL-Database/SQL-Database-paas-VS-SQL-Server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
 -   **Uzyskanie dostępu do chmury dzięki wystąpienia zarządzane bazy danych SQL Azure i usługi migracji bazy danych**
 
-    [https://channel9.msdn.com/events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
 -   **Migracja bazy danych programu SQL Server z bazą danych SQL w chmurze**
 
-    [https://docs.microsoft.com/Azure/SQL-Database/SQL-Database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   **Baza danych Azure SQL**
+-   Baza danych Azure SQL
 
-    [https://Azure.microsoft.com/Services/SQL-Database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
 -   **SQL Server na maszynach wirtualnych**
 
-    [https://Azure.microsoft.com/Services/Virtual-Machines/SQL-Server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
 >[!div class="step-by-step"]
 [Poprzednie](lift-and-shift-existing-apps-azure-iaas.md)

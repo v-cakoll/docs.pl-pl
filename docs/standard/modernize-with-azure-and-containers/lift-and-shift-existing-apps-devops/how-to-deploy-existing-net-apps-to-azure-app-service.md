@@ -25,7 +25,7 @@ Można użyć [Asystenta migracji usługi aplikacji Azure](https://www.migrateto
 
 Azure App Service Asystenta migracji obsługuje migrację z usług IIS w systemie Windows Server do chmury. Usługi aplikacji obsługuje system Windows Server 2003 i nowszych wersjach.
 
-> ![https://www.migratetoazure.NET/images/ImageCanvas.PNG](./media/image5.png)
+> ![https://www.migratetoazure.net/Images/ImageCanvas.png](./media/image5.png)
 >
 > **Rysunek 4 – 5.** Przy użyciu Asystenta migracji usługi aplikacji Azure
 
@@ -39,7 +39,7 @@ Narzędzie migracji usługi aplikacji może analiza witryny sieci Web i raport d
 
 -   **Asystent migracji usługi aplikacji Azure**
 
-    [https://www.migratetoazure.NET/](https://www.migratetoazure.net/)
+    [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 
 >[!div class="step-by-step"]
 [Poprzednie](what-about-cloud-optimized-applications.md)

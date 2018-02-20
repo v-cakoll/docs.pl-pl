@@ -1,7 +1,7 @@
 ---
 title: "Organizowanie mikrousług oraz multicontainer aplikacji o wysokiej skalowalności i dostępności"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
@@ -42,10 +42,10 @@ Tabela 4-1: platform oprogramowania dla kontenera, klaster, aranżacji i planowa
 
 | Platforma | Opis |
 |---|---|
-| Rozwiązanie docker Swarm<br/> ![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/images/swarm.PNG?v=2016-07-10-AM](./media/image7.png) | Rozwiązanie docker Swarm daje możliwość klastra i Zaplanuj kontenery Docker. Przy użyciu Swarm, można przekształcić w puli hostów Docker pojedynczego, wirtualnego host Docker. Klienci mogą wysyłać żądania interfejsu API do Swarm w taki sam sposób, jak na hostach, co oznacza, że Swarm ułatwia skalowania aplikacji na wielu hostach. <br /><br /> Rozwiązanie docker Swarm jest to produkt z Docker, firma. <br /><br /> Docker v1.12 lub nowszej można uruchomić tryb macierzysty i wbudowane Swarm. |
-| Mesosphere DC/OS<br/>![https://mesosphere.com/WP-Content/Uploads/2016/04/logo-Horizontal-styled.PNG](./media/image8.png) |  Mesosphere Enterprise DC/OS (oparte na Apache Mesos) to platforma gotowe do produkcji dla działających kontenerów i aplikacji rozproszonych. <br /><br /> DC/OS polega na abstrakcyjność kolekcji zasobów dostępnych w klastrze i udostępnianie tych zasobów oparty na jego składniki. Marathon zwykle jest używana jako harmonogramu zintegrowany z DC/OS. |
-| Google Kubernetes<br />![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes jest to produkt typu open source, który zawiera funkcję, która infrastruktura klastra i kontener planowania organizowanie możliwości w zakresie od. Można zautomatyzować wdrożenie skalowanie i operacje kontenery aplikacji w klastrach hostów. <br /><br /> Kubernetes udostępnia infrastrukturę skoncentrowane kontenera, która grupy kontenerów aplikacji do jednostek logicznych łatwe zarządzanie i odnajdywania. |
-| Sieć szkieletowa usług Azure<br />![https://Azure.microsoft.com/svghandler/Service-Fabric?Width=600&Height=315](./media/image10.png) | [Sieć szkieletowa usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do tworzenia aplikacji. Jest [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) z usług i tworzy klastry maszyn. Domyślnie usługi sieć szkieletowa wdraża i aktywuje usługi jako procesów, ale sieci szkieletowej usług można wdrożyć usługi w obrazach kontenera Docker. Bardziej istotne, można mieszać usług w procesach z usługami w kontenerach w tej samej aplikacji. <br /><br /> Począwszy od 2017 maja funkcji sieci szkieletowej usług, który obsługuje wdrażanie usługi jako kontenery Docker jest w stanie podglądu. <br /><br /> Można tworzyć usługi sieć szkieletowa usług na wiele sposobów korzystania z [usługi sieć szkieletowa modele programowania](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) wdrażanie [pliki wykonywalne gościa](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) oraz kontenerów. Sieć szkieletowa usług obsługuje modele przetestowanego aplikacji, takich jak [usługi stanowej](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) i [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
+| Rozwiązanie docker Swarm<br/> ![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image7.png) | Rozwiązanie docker Swarm daje możliwość klastra i Zaplanuj kontenery Docker. Przy użyciu Swarm, można przekształcić w puli hostów Docker pojedynczego, wirtualnego host Docker. Klienci mogą wysyłać żądania interfejsu API do Swarm w taki sam sposób, jak na hostach, co oznacza, że Swarm ułatwia skalowania aplikacji na wielu hostach. <br /><br /> Rozwiązanie docker Swarm jest to produkt z Docker, firma. <br /><br /> Docker v1.12 lub nowszej można uruchomić tryb macierzysty i wbudowane Swarm. |
+| Mesosphere DC/OS<br/>![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image8.png) |  Mesosphere Enterprise DC/OS (oparte na Apache Mesos) to platforma gotowe do produkcji dla działających kontenerów i aplikacji rozproszonych. <br /><br /> DC/OS polega na abstrakcyjność kolekcji zasobów dostępnych w klastrze i udostępnianie tych zasobów oparty na jego składniki. Marathon zwykle jest używana jako harmonogramu zintegrowany z DC/OS. |
+| Google Kubernetes<br />![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image9.png) | Kubernetes jest to produkt typu open source, który zawiera funkcję, która infrastruktura klastra i kontener planowania organizowanie możliwości w zakresie od. Można zautomatyzować wdrożenie skalowanie i operacje kontenery aplikacji w klastrach hostów. <br /><br /> Kubernetes udostępnia infrastrukturę skoncentrowane kontenera, która grupy kontenerów aplikacji do jednostek logicznych łatwe zarządzanie i odnajdywania. |
+| Azure Service Fabric<br />![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image10.png) | [Sieć szkieletowa usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do tworzenia aplikacji. Jest [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) z usług i tworzy klastry maszyn. Domyślnie usługi sieć szkieletowa wdraża i aktywuje usługi jako procesów, ale sieci szkieletowej usług można wdrożyć usługi w obrazach kontenera Docker. Bardziej istotne, można mieszać usług w procesach z usługami w kontenerach w tej samej aplikacji. <br /><br /> Począwszy od 2017 maja funkcji sieci szkieletowej usług, który obsługuje wdrażanie usługi jako kontenery Docker jest w stanie podglądu. <br /><br /> Można tworzyć usługi sieć szkieletowa usług na wiele sposobów korzystania z [usługi sieć szkieletowa modele programowania](https://docs.microsoft.com/azure/service-fabric/service-fabric-choose-framework) wdrażanie [pliki wykonywalne gościa](https://docs.microsoft.com/azure/service-fabric/service-fabric-deploy-existing-app) oraz kontenerów. Sieć szkieletowa usług obsługuje modele przetestowanego aplikacji, takich jak [usługi stanowej](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction) i [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
 ## <a name="using-container-based-orchestrators-in-azure"></a>Za pomocą orchestrators na podstawie kontenera na platformie Azure
 
@@ -92,19 +92,19 @@ Kontener usługi jest obecnie dostępny dla standardowych A, D DS, G i maszyn wi
 Poniżej przedstawiono lokalizacje, gdzie można znaleźć dodatkowe informacje:
 
 -   Wprowadzenie do kontenera Docker hosting rozwiązania z usługą kontenera:  
-    https://docs.microsoft.com/Azure/container-Service/kubernetes/container-Service-Intro-kubernetes>
+    https://docs.microsoft.com/azure/container-service/kubernetes/container-service-intro-kubernetes>
 
 -   Docker Swarm omówienie:  
     <https://docs.docker.com/swarm/overview/>
 
 -   Omówienie trybu swarm:  
-    <https://docs.docker.com/Engine/swarm/>
+    <https://docs.docker.com/engine/swarm/>
 
 -   Omówienie DC/OS mesosphere:    
     <https://docs.mesosphere.com/1.7/overview/>
 
 -   Kubernetes (oficjalna witryna):  
-    <http://kubernetes.IO/>
+    <http://kubernetes.io/>
 
 ## <a name="using-service-fabric"></a>Za pomocą sieci szkieletowej usług
 

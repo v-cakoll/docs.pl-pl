@@ -2,25 +2,26 @@
 title: "Klasy ogólne (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - C# language, generic classes
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c92efd63f7b24917dc50ca0864f1a132c5c2bf00
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: afeca9fc49221551470f90f6f57d1b40e0142521
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="generic-classes-c-programming-guide"></a>Klasy ogólne (Przewodnik programowania w języku C#)
 Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określonego typu danych. Jest najbardziej popularnym zastosowaniem klas ogólnych z kolekcjami, takie jak listy połączonej, tabelach skrótów, stosy, kolejek, drzewa i tak dalej. Operacje, takie jak dodawanie i usuwanie elementów z kolekcji są wykonywane w zasadniczo taki sam sposób, bez względu na typ przechowywanych danych.  
   
- Dla większości scenariuszy, które wymagają klasy kolekcji zalecanym rozwiązaniem jest użycie jednego z dostarczanych w bibliotece klas programu .NET Framework. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [typy ogólne w bibliotece klas programu .NET Framework](../../../csharp/programming-guide/generics/generics-in-the-net-framework-class-library.md).  
+ Dla większości scenariuszy, które wymagają klasy kolekcji zalecanym rozwiązaniem jest użycie jednego z dostarczanych w bibliotece klas programu .NET. Aby uzyskać więcej informacji o korzystaniu z tych klas, zobacz [kolekcje ogólne w .NET](../../../standard/generics/collections.md).  
   
  Zazwyczaj do tworzenia klas rodzajowych począwszy od konkretnego istniejącej klasy, a zmiany typów w parametrach typu jeden w chwili, aż dojdziesz optymalną proporcję uogólnianie i użyteczność. Podczas tworzenia własnych klas rodzajowych, ważne następujące czynniki:  
   
@@ -74,5 +75,5 @@ Klasy ogólne hermetyzować operacje, które nie są specyficzne dla określoneg
  <xref:System.Collections.Generic>  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Typy ogólne](../../../csharp/programming-guide/generics/index.md)  
- [Zapisywanie stanu moduły wyliczające](http://go.microsoft.com/fwlink/?LinkId=112390)  
- [Układanki dziedziczenia jedną część](http://go.microsoft.com/fwlink/?LinkId=112380)
+ [Zapisywanie stanu moduły wyliczające](https://blogs.msdn.microsoft.com/wesdyer/2006/01/13/saving-the-state-of-enumerators/)  
+ [Układanki dziedziczenia jedną część](https://blogs.msdn.microsoft.com/ericlippert/2007/07/27/an-inheritance-puzzle-part-one/)

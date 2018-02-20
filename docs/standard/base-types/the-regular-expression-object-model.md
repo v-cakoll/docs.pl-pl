@@ -41,21 +41,21 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4f1918788a571e9626554eaeec9fdd3f1686d4cc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8917ce764d615282f95aad2eee494fcc0ba7a847
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="the-regular-expression-object-model"></a>Model obiektów wyrażeń regularnych
-<a name="introduction"></a>W tym temacie opisano model obiektów używane w pracy w wyrażeniach regularnych programu .NET. Ten temat zawiera następujące sekcje:  
+<a name="introduction"></a> W tym temacie opisano model obiektów używane w pracy w wyrażeniach regularnych programu .NET. Ten temat zawiera następujące sekcje:  
   
 -   [Aparat wyrażeń regularnych](#Engine)  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 12/23/2017
   
 <a name="the_match_collection"></a>   
 ### <a name="the-match-collection"></a>Kolekcja dopasowania  
- <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Metoda zwraca <xref:System.Text.RegularExpressions.MatchCollection> obiekt, który zawiera <xref:System.Text.RegularExpressions.Match> obiektów, które reprezentują dopasowań, które można odnaleźć aparat wyrażeń regularnych w kolejności ich występowania w ciągu wejściowym. Jeśli nie mają odpowiedników, metoda zwraca <xref:System.Text.RegularExpressions.MatchCollection> obiektu bez członków. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> Właściwości umożliwia dostęp do poszczególnych członków kolekcji przez indeks, zero do jeden mniejsza niż wartość <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> właściwości. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A>to kolekcji indeksatora (w języku C#) i właściwości domyślnej (w języku Visual Basic).  
+ <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> Metoda zwraca <xref:System.Text.RegularExpressions.MatchCollection> obiekt, który zawiera <xref:System.Text.RegularExpressions.Match> obiektów, które reprezentują dopasowań, które można odnaleźć aparat wyrażeń regularnych w kolejności ich występowania w ciągu wejściowym. Jeśli nie mają odpowiedników, metoda zwraca <xref:System.Text.RegularExpressions.MatchCollection> obiektu bez członków. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> Właściwości umożliwia dostęp do poszczególnych członków kolekcji przez indeks, zero do jeden mniejsza niż wartość <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> właściwości. <xref:System.Text.RegularExpressions.MatchCollection.Item%2A> to kolekcji indeksatora (w języku C#) i właściwości domyślnej (w języku Visual Basic).  
   
  Domyślnie wywołanie <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> metoda używa obliczanie leniwe do wypełnienia <xref:System.Text.RegularExpressions.MatchCollection> obiektu. Dostęp do właściwości, które wymagają całkowicie wypełnione kolekcji, takie jak <xref:System.Text.RegularExpressions.MatchCollection.Count%2A?displayProperty=nameWithType> i <xref:System.Text.RegularExpressions.MatchCollection.Item%2A?displayProperty=nameWithType> właściwości, może pociągać za sobą zmniejszenie wydajności. W związku z tym zaleca się uzyskać dostępu do kolekcji przy użyciu <xref:System.Collections.IEnumerator> obiektu, który jest zwracany przez <xref:System.Text.RegularExpressions.MatchCollection.GetEnumerator%2A?displayProperty=nameWithType> metody. Poszczególne języki Podaj konstrukcje, taki jak `For``Each` w języku Visual Basic i `foreach` w języku C#, który zawijać kolekcji <xref:System.Collections.IEnumerator> interfejsu.  
   

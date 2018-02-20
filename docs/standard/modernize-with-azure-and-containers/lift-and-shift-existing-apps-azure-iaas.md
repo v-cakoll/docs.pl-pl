@@ -87,23 +87,23 @@ Rysunek 2 – 3 przedstawiono wykonywanie wielu migracji maszyny Wirtualnej za p
 
 -   **Arkusz danych migracji Azure**
 
-    [https://aka.MS/azuremigration\_arkusz danych](https://aka.ms/azuremigration\_datasheet)
+    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   **Migrowanie Azure**
+-   Migrowanie Azure
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
 -   **Migracja do usługi Azure z usługą Site Recovery**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-migrate-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
 -   **Usług Azure Site Recovery — omówienie**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
 -   **Migrowanie maszyn wirtualnych w AWS na maszynach wirtualnych platformy Azure**
 
-    [https://docs.microsoft.com/Azure/Site-Recovery/Site-Recovery-migrate-awS-to-Azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 
 >[!div class="step-by-step"]
 [Poprzednie](index.md)

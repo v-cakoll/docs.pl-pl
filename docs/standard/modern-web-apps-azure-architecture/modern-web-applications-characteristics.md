@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="characteristics-of-modern-web-applications"></a>Właściwości nowoczesnych aplikacji sieci Web
 
 > "… właściwy projekt funkcji pochodzić tanio. Takie podejście jest uciążliwe, ale nadal powiodło się."  
-> _\-Dennis Ritchie_
+> _\- Dennis Ritchie_
 
 ## <a name="summary"></a>Podsumowanie
 
@@ -36,7 +36,7 @@ Dotyczą one między innymi aplikacją odwołanie *eShopOnWeb*, który przedstaw
 
 > ### <a name="reference-application"></a>Odwołanie do aplikacji
 > - **eShopOnWeb**  
-> <https://github.com/DotNet/eShopOnWeb>
+> <https://github.com/dotnet/eShopOnWeb>
 
 ## <a name="cloud-hosted-and-scalable"></a>Skalowalna i hostowanych w chmurze
 
@@ -74,11 +74,11 @@ Oprócz platformy ASP.NET Core tradycyjnych ASP.NET 4.x jest nadal niezawodna pl
 
 > ### <a name="references--modern-web-applications"></a>Odwołania — nowoczesnych aplikacji sieci Web
 > - **Wprowadzenie do platformy ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/>
+> <https://docs.microsoft.com/aspnet/core/>
 > - **Sześć klucza korzyści z platformy ASP.NET Core umożliwiających różne i lepsze**  
-> <https://blog.trigent.com/Six-Key-Benefits-of-ASP-NET-Core-1-0-which-Make-IT-different-Better/>
+> <https://blog.trigent.com/six-key-benefits-of-asp-net-core-1-0-which-make-it-different-better/>
 > - **Testowanie w platformy ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/Testing/>
+> <https://docs.microsoft.com/aspnet/core/testing/>
 
 >[!div class="step-by-step"]
 [Poprzednie] (index.md) [dalej] (choose-between-traditional-web-and-single-page-apps.md)

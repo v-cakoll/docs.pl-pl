@@ -1,7 +1,7 @@
 ---
 title: "Przepływ pracy devops aplikacji docker z narzędzi firmy Microsoft"
 description: "Konteneryzowanych cyklem życia aplikacji Docker z platformy Microsoft a Toolsdevops przepływu pracy przy użyciu narzędzi firmy Microsoft"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -38,4 +38,4 @@ Złożoność projektowanie aplikacji konteneryzowanych stopniowo zwiększa się
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / design-develop-containerized-apps/set-up-windows-containers-with-powershell.md) [dalej] (docker-application-outer-loop-devops-workflow.md)
+[Previous] (../design-develop-containerized-apps/set-up-windows-containers-with-powershell.md) [Next] (docker-application-outer-loop-devops-workflow.md)

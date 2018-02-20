@@ -18,7 +18,7 @@ ms.lasthandoff: 12/23/2017
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)
 
 > "Prawa w Atwood: dowolnej aplikacji, które mogą być zapisywane w języku JavaScript, po pewnym czasie zostaną zapisane w języku JavaScript."  
-> _\-Jan Atwood_
+> _\- Jan Atwood_
 
 ## <a name="summary"></a>Podsumowanie
 
@@ -78,7 +78,7 @@ Zapisywanie źródła wymaga znajomości języka JavaScript i/lub TypeScript i t
 > - **AngularJS**  
 > <https://angularjs.org/>
 > - **Porównanie 4 JavaScript popularnych struktur**  
-> <https://www.developereconomics.com/Feature-Comparison-of-4-Popular-js-mV-Frameworks>
+> <https://www.developereconomics.com/feature-comparison-of-4-popular-js-mv-frameworks>
 
 **Aplikacja już musi ujawniać interfejsu API dla innych klientów (wewnętrzny lub publiczny)**
 
@@ -91,9 +91,9 @@ W poniższej tabeli decyzji przedstawiono niektóre podstawowe czynniki, które 
   | **Współczynnik** | **Aplikacja sieci Web tradycyjny** | **Aplikacja jednostronicowa** |
   |---|---|---|
   | Wymagane zespołu znajomość JavaScript/TypeScript | **Minimalny** | **Wymagane** |
-  | Obsługa przeglądarki bez obsługi skryptów | **Obsługiwane** | **Nieobsługiwane** |
-  | Zachowanie minimalnego aplikacji po stronie klienta | **Bardzo dobrze pasują** | **Zbyt obszerne** |
-  | Wymagania interfejsu użytkownika zaawansowane, złożone | **Ograniczone** | **Bardzo dobrze pasują** |
+  | Obsługa przeglądarki bez obsługi skryptów | Obsługiwane | Nieobsługiwane |
+  | Zachowanie minimalnego aplikacji po stronie klienta | **Well-Suited** | **Zbyt obszerne** |
+  | Wymagania interfejsu użytkownika zaawansowane, złożone | **Limited** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Poprzednie] (modern-web aplikacje characteristics.md) [dalej](architectural-principles.md)

@@ -1,23 +1,25 @@
 ---
 title: "Nowości w języku Visual Basic"
-ms.date: 04/27/2017
+ms.date: 02/15/2018
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: VB.StartPage.WhatsNew
+f1_keywords:
+- VB.StartPage.WhatsNew
 helpviewer_keywords:
 - new features, Visual Basic
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: "145"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d26eb23aae6e5baec98e27a246d06af6b78e0802
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
@@ -25,10 +27,13 @@ Ten temat zawiera listę nazw funkcji klucza dla każdej wersji programu Visual 
   
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic / Visual Studio .NET 2017   
-W przypadku nowych funkcji, zobacz [2017 Visual Basic](#visual-basic-2017)
+Visual Basic 15,5 cala   
+W przypadku nowych funkcji, zobacz [15,5 cala Visual Basic](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Poprzednie wersje
+
+Visual Basic 15 ustęp 3   
+W przypadku nowych funkcji, zobacz [15 ustęp 3 Visual Basic](#visual-basic-153)
 
 Visual Basic / Visual Studio .NET 2015   
 W przypadku nowych funkcji, zobacz [14 Visual Basic](#visual-basic-14)
@@ -37,7 +42,7 @@ Visual Basic / Visual Studio .NET 2013
 Podglądy technologii platformy kompilatora .NET ("Roslyn")
 
 Visual Basic / Visual Studio .NET 2012   
-`Async`i `await` słów kluczowych, Iteratory, caller — atrybuty informacji
+`Async` i `await` słów kluczowych, Iteratory, caller — atrybuty informacji
 
 Visual Basic, Visual Studio .NET 2010   
 Właściwości zaimplementowane automatycznie, inicjatory kolekcji, kontynuacji wiersza niejawne, odchylenie dynamicznych, ogólny co/ma przeciwwskazań, dostępu globalnej przestrzeni nazw
@@ -53,6 +58,41 @@ Operatory przesunięcia bitowego, deklaracja zmiennej pętli
 
 Visual Basic / Visual Studio .NET 2002   
 Pierwszej wersji programu Visual Basic .NET
+
+## <a name="visual-basic-155"></a>Visual Basic 15,5 cala
+
+[Non końcowe nazwane argumenty](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
+
+W Visual Basic 15 ustęp 3 i starszych wersjach gdy wywołanie metody uwzględnione argumentów zarówno według pozycji i według nazwy, argumenty pozycyjne musiał poprzedzać nazwane argumenty. Argumenty nazwane i pozycyjnych począwszy od 15,5 cala Visual Basic, może wystąpić w dowolnej kolejności, tak długo, jak wszystkie argumenty do ostatni argument pozycyjny są w poprawnej pozycji. Jest to szczególnie przydatne, gdy nazwane argumenty są używane, aby zwiększyć czytelność kodu.
+
+Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między nazwany argument. Nazwany argument ułatwia wyczyść reprezentowany przez wartość 19 wieku.
+
+```vb
+StudentInfo.Display("Mary", age:=19, #9/21/1998#)
+```
+
+**Wiodący znak separatora hex/binary/ósemkowe**
+
+Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separator cyfr. Począwszy od 15,5 cala Visual Basic, można użyć znaku podkreślenia jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. W poniższym przykładzie użyto wiodące separator cyfr, aby zdefiniować 3,271,948,384 jako liczbę szesnastkową:
+
+```vb
+Dim number As Integer = &H_C305_F860
+``` 
+Aby użyć w wyniku znak jako separator początkowych, należy dodać następujący element do pliku projektu (*.vbproj) Visual Basic:
+
+```xml
+<PropertyGroup>
+  <LangVersion>15.5</LangVersion>
+</PropertyGroup>
+```
+
+## <a name="visual-basic-153"></a>Visual Basic 15 ustęp 3
+
+[Wnioskowanie spójnej kolekcji o nazwie](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+
+Jeśli wartość krotki elementy z zmienne, Visual Basic wnioskuje nazwy elementów krotki z odpowiedniej nazwy zmiennych; nie trzeba jawnie nazwa element spójnej kolekcji. W poniższym przykładzie użyto wnioskowania do utworzenia spójnych kolekcji z trzy elementy o nazwie, `state`, `stateName`, i `capital`.
+
+[!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
 ## <a name="visual-basic-2017"></a>2017 Visual Basic
 
@@ -107,14 +147,14 @@ Aby uzyskać więcej informacji, zobacz [odwołania zwracać wartości](../progr
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Niekwalifikowane ciąg nazwę typu lub elementu członkowskiego do użycia w komunikacie o błędzie można uzyskać, bez twardych kodowanie ciągu.  Dzięki temu swój kod, aby pozostać poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku podłączenia łącza MVC model-view-controller i wyzwalania zdarzenia zmiany właściwości.  
   
-[Ciąg interpolacji](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolacja ciągów](../../csharp/language-reference/keywords/interpolated-strings.md)  
  Wyrażenia parametrów interpolacji służy do tworzenia ciągów.  Wyrażenie ciągu interpolowanym wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciągu interpolowanym łatwiej zrozumieć względem argumentów niż [złożone formatowanie](../../standard/base-types/composite-format.md).  
   
 [Dostęp do elementu członkowskiego warunkowe null i indeksowania](../../csharp/language-reference/operators/null-conditional-operators.md)  
 Można sprawdzić wartość null w sposób składni bardzo małe przed wykonaniem dostępu elementu członkowskiego (`?.`) lub indeks (`?[]`) operacji.  Tych operatorów pomóc zapisu sprawdza mniej kod obsługujący wartości null, szczególnie w przypadku malejącej do struktur danych.  Jeśli Lewy argument operacji lub obiektu odwołanie ma wartość null, operacje zwraca wartość null.  
   
 [Literały ciągu wiele wierszy](../../visual-basic/programming-guide/language-features/strings/string-basics.md)  
- Literały ciągu może zawierać sekwencje znaków nowego wiersza.  Możesz już konieczne stary obejść użycia`<xml><![CDATA[...text with newlines...]]></xml>.Value`  
+ Literały ciągu może zawierać sekwencje znaków nowego wiersza.  Możesz już konieczne stary obejść użycia `<xml><![CDATA[...text with newlines...]]></xml>.Value`  
   
 Komentarze  
 Możesz umieścić komentarze po kontynuacje niejawne wiersza, wewnątrz wyrażenia inicjatora, jak i między LINQ wyrażeń.  

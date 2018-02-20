@@ -70,14 +70,14 @@ Na przykład załóżmy, że jeśli pole tekstowe wartość przekracza 10, eleme
 
 ### <a name="jquery-vs-a-spa-framework"></a>vs jQuery SPA Framework
 
-| **Współczynnik** | **jQuery** | **Dyrektywy angular**|
+| **Współczynnik** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| Abstracts modelu DOM | **Tak** | **Tak** |
-| Obsługa technologii AJAX | **Tak** | **Tak** |
-| Powiązanie danych deklaratywne | **Brak** | **Tak** |
-| Styl MVC routingu | **Brak** | **Tak** |
-| Tworzenia szablonów | **Brak** | **Tak** |
-| Głębokie łącze routingu | **Brak** | **Tak** |
+| Abstracts modelu DOM | Tak | Tak |
+| Obsługa technologii AJAX | Tak | Tak |
+| Powiązanie danych deklaratywne | Brak | Tak |
+| MVC-style Routing | Brak | Tak |
+| Tworzenia szablonów | Brak | Tak |
+| Głębokie łącze routingu | Brak | Tak |
 
 Większość funkcji, które jQuery nie ma bardzo można dodać z uwzględnieniem innych bibliotek. Framework SPA, takich jak kątową zapewnia jednak te funkcje w sposób integracji, ponieważ jest on przeznaczony wszystkich z nich na uwadze od początku. Ponadto jQuery jest bardzo ważnych biblioteki, co oznacza konieczność wywoływać funkcje jQuery, aby można było wykonywać żadnych czynności z jQuery. Większość pracy i funkcje, które zapewniają struktur SPA można deklaratywnie, wymagających bez rzeczywistego kodu do zapisania.
 
@@ -148,27 +148,27 @@ Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zag
 
 > ### <a name="references--client-web-technologies"></a>Odwołania — technologii sieci Web klienta
 > - **HTML i CSS**  
-> <https://www.w3.org/Standards/webdesign/htmlcss>
-> - **Sass vs. MNIEJ**  
-> <https://www.keycdn.com/blog/sass-VS-less/>
+> <https://www.w3.org/standards/webdesign/htmlcss>
+> - **Sass vs. LESS**  
+> <https://www.keycdn.com/blog/sass-vs-less/>
 > - **Ustawianie stylów aplikacji platformy ASP.NET Core jest mniejsza, Sass i świetny czcionki**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-Side/less-sass-FA>
+> <https://docs.microsoft.com/aspnet/core/client-side/less-sass-fa>
 > - **Programowanie po stronie klienta w platformy ASP.NET Core**  
-> <https://docs.microsoft.com/ASPNET/Core/Client-Side/>
+> <https://docs.microsoft.com/aspnet/core/client-side/>
 > - **jQuery**  
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
-> <https://www.airpair.com/angularjs/posts/jquery-angularjs-Comparison-Migration-Walkthrough>
-> - **Dyrektywy angular**  
-> <https://angular.IO/>
-> - **Reakcji**  
-> <https://Facebook.github.IO/react/>
+> <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
+> - **Angular**  
+> <https://angular.io/>
+> - Reakcji  
+> <https://facebook.github.io/react/>
 > - **Zareagować Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>
 > - **Zareagować vs kątowego porównania 2**  
-> <https://www.codementor.IO/codementorteam/react-VS-angular-2-Comparison-beginners-Guide-lvz5710ha>
+> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
 > - **5 najlepsze platformach JavaScript 2017**  
-> <https://hackernoon.com/5-Best-JavaScript-Frameworks-in-2017-7a63b3870282>
+> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
 
 >[!div class="step-by-step"]
-[Poprzednie] (typowe web aplikacji architectures.md) [dalej] (develop-asp-net-core-mvc-apps.md)
+[Previous] (common-web-application-architectures.md) [Next] (develop-asp-net-core-mvc-apps.md)

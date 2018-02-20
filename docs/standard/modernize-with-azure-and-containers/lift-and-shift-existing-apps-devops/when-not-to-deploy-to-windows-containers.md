@@ -39,7 +39,7 @@ Nieobsługiwane w kontenerach systemu Windows, począwszy od połowy 2017 przypa
 
 -   **Maszyny wirtualne i kontenerów na platformie Azure**
 
-    [https://docs.microsoft.com/Azure/Virtual-Machines/Windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
+    [https://docs.microsoft.com/azure/virtual-machines/windows/containers](https://docs.microsoft.com/azure/virtual-machines/windows/containers)
 
 >[!div class="step-by-step"]
 [Poprzednie](deploy-existing-net-apps-as-windows-containers.md)

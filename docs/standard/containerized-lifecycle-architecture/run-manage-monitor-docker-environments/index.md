@@ -1,7 +1,7 @@
 ---
 title: "Uruchom, zarządzanie i monitorowanie środowisk produkcyjnych Docker"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -24,4 +24,4 @@ Jak uruchomić konteneryzowanych aplikacji w środowisku produkcyjnym (technolog
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (.. / docker-devops-workflow/docker-application-outer-loop-devops-workflow.md) [dalej] (run-microservices-based-applications-in-production.md)
+[Previous] (../docker-devops-workflow/docker-application-outer-loop-devops-workflow.md) [Next] (run-microservices-based-applications-in-production.md)

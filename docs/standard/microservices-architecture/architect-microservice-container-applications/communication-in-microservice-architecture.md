@@ -1,7 +1,7 @@
 ---
 title: "Komunikacja w ramach architektury mikrousługi"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Komunikacja w architektury architektury mikrousługi"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3920160697c55a81a131a7d8c40b096b064a6f03
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f373119f4d221745063688a9a5211d5ae11598b7
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
-W aplikacji wbudowanymi uruchomiony w ramach jednego procesu składniki wywołać za pomocą metody poziom języka lub wywołania funkcji. Te mogą być silnie sprzężona w przypadku tworzenia obiektów z kodem (na przykład `new ClassName()`), lub może być wywoływany w sposób rozdzielonymi, jeśli używasz iniekcji zależności odwołując abstrakcje zamiast konkretnych obiektów. W obu przypadkach obiekty są uruchomione w ramach tego samego procesu. Wyzwanie największych podczas zmiany z wbudowanymi aplikacji do aplikacji opartych na mikrousług znajduje się w zmiana mechanizm komunikacji. Konwersja bezpośrednie wywołania metody w trakcie do wywołań RPC usługi spowoduje, że chatty i nie sprawną komunikację, który nie będzie wykonywać również w rozproszonych środowiskach. Wyzwania prawidłowo projektowania Rozproszony system wystarczająco również wiadomo, czy jest parzysta canon, znany jako [fallacies rozproszonego przetwarzania danych](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) która wyświetla założenia, które deweloperzy tworzą często przy przechodzeniu wbudowanymi do rozproszonej projektów.
+W aplikacji wbudowanymi uruchomiony w ramach jednego procesu składniki wywołać za pomocą metody poziom języka lub wywołania funkcji. Te mogą być silnie sprzężona w przypadku tworzenia obiektów z kodem (na przykład `new ClassName()`), lub może być wywoływany w sposób rozdzielonymi, jeśli używasz iniekcji zależności odwołując abstrakcje zamiast konkretnych obiektów. W obu przypadkach obiekty są uruchomione w ramach tego samego procesu. Wyzwanie największych podczas zmiany z wbudowanymi aplikacji do aplikacji opartych na mikrousług znajduje się w zmiana mechanizm komunikacji. Konwersja bezpośrednie wywołania metody w trakcie do wywołań RPC usługi spowoduje, że chatty i nie sprawną komunikację, który nie będzie wykonywać również w rozproszonych środowiskach. Wyzwania prawidłowo projektowania Rozproszony system wystarczająco również wiadomo, czy jest parzysta canon, znany jako [Fallacies rozproszonego przetwarzania danych](https://en.wikipedia.org/wiki/Fallacies_of_distributed_computing) która wyświetla założenia, które deweloperzy tworzą często podczas przenoszenia z wbudowanymi projekty do rozproszonej.
 
 Brak nie jedno rozwiązanie, ale niektóre. Jedno rozwiązanie obejmuje izolowanie możliwie mikrousług biznesowych. Następnie użyj komunikacji asynchronicznej między wewnętrzny mikrousług i Zastąp szczegółowych komunikacji, typowy wewnątrz procesu komunikacji między obiektami z dopasowanymi gruboziarnisty komunikacji. Można to zrobić przez grupowanie połączeń i przez zwrócenie danych, który agreguje wyniki wielu wywołań wewnętrznego, do klienta.
 
@@ -96,10 +96,10 @@ Brak dodatkowych wartości podczas korzystania z usług REST protokołu HTTP jak
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Pole Fowler. Lesiak dojrzałości modelu.** Opis modelu REST.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.HTML*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
 
--   **Struktury swagger.** Oficjalna witryna.
-    [*http://swagger.IO/*](http://swagger.io/)
+-   **Swagger.** Oficjalna witryna.
+    [*http://swagger.io/*](http://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Wypychania i w czasie rzeczywistym komunikacji HTTP w oparciu
 
@@ -115,4 +115,4 @@ Ponieważ komunikacji znajduje się w czasie rzeczywistym, aplikacje klienckie P
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [dalej] (asynchroniczne wiadomości — na podstawie communication.md)
+[Previous] (direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md) [Next] (asynchronous-message-based-communication.md)

@@ -23,7 +23,7 @@ Jeśli chodzi o zabezpieczeń, można scentralizować zarządzania i bezpieczeń
 
 Na koniec można dystrybuować i bezproblemowo analizowanie danych, użyj te same języki zapytania dla zasobów w chmurze i lokalnie i stosować analizy i bezpośrednie learning na platformie Azure wzbogacić, niezależnie od tego źródła danych.
 
-## <a name="azure-stack"></a>Azure stosu
+## <a name="azure-stack"></a>Azure Stack
 
 Stos Azure jest hybrydowe platformy w chmurze, który pozwala dostarczyć usług platformy Azure z centrum danych w organizacji. Stos Azure umożliwia obsługę nowych opcji dla nowoczesnych aplikacji w różnych kluczowych scenariuszy, takich jak edge i środowisk odłączony lub spotkania szczególne wymagania zabezpieczeń i zgodności.
 
@@ -51,23 +51,23 @@ Microsoft Azure stosu Development Kit to wdrożenie jednowęzłowej stosu Azure,
 
 -   **Chmura hybrydowa Azure**
 
-    [https://www.microsoft.com/cloud-platform/Hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
+    [https://www.microsoft.com/cloud-platform/hybrid-cloud](https://www.microsoft.com/cloud-platform/hybrid-cloud)
 
--   **Azure stosu**
+-   **Azure Stack**
 
-    [https://Azure.microsoft.com/overview/Azure-Stack/](https://azure.microsoft.com/overview/azure-stack/)
+    [https://azure.microsoft.com/overview/azure-stack/](https://azure.microsoft.com/overview/azure-stack/)
 
 -   **Konta usługi Active Directory dla Windows kontenerów**
 
-    [https://docs.microsoft.com/Virtualization/windowscontainers/Manage-containers/Manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
+    [https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts](https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts)
 
 -   **Tworzenie kontenera z obsługą usługi Active Directory**
 
-    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/Create-a-container-with-Active-Directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
+    [https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/](https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/)
 
 -   **Azure licencjonowania korzyści hybrydowego**
 
-    [https://Azure.microsoft.com/pricing/Hybrid-use-Benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
+    [https://azure.microsoft.com/pricing/hybrid-use-benefit/](https://azure.microsoft.com/pricing/hybrid-use-benefit/)
 
 >[!div class="step-by-step"]
 [Poprzednie](modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md)

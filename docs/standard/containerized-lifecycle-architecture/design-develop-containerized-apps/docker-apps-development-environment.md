@@ -1,7 +1,7 @@
 ---
 title: "Środowisko projektowe dla aplikacji Docker"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -56,4 +56,4 @@ Zasadniczo można użyć dowolnego nowoczesnych języków obsługiwanych przez D
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (organizowania wysoki skalowalność availability.md) [dalej] (docker aplikacje — wewnętrzny pętli workflow.md)
+[Previous] (orchestrate-high-scalability-availability.md) [Next] (docker-apps-inner-loop-workflow.md)

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-bcl
+ms.technology:
+- dotnet-bcl
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,16 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f170c3e7174b231153a9e201f617faa786291056
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach klasycznych
 Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowany przez <xref:System.Resources.ResourceManager> klasy można pobrać zlokalizowanych zasobów. Menedżer zasobów przyjęto, że model gwiazdy jest używany pakiet i wdrażanie zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny nonlocalizable i zasoby dla pojedynczego kultury, nazywany zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; jest kultura, którego zasoby są używane, jeśli nie można odnaleźć zlokalizowanych zasobów. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla kultury pojedynczego, ale nie zawiera żadnego kodu.  
@@ -129,7 +131,7 @@ Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowany przez 
 </configuration>  
 ```  
   
- Zoptymalizowane sondowania zestawów satelickich jest funkcji opcjonalnych. Oznacza to, że środowisko uruchomieniowe wykonuje kroki opisane w temacie [procesu powrotu zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) chyba że [ \<relativebindforresources — >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) element jest obecny w aplikacji plik konfiguracji i jego `enabled` atrybut ma ustawioną `true`. Jeśli jest to możliwe, proces badania zestawu satelickiego zmienia się w następujący sposób:  
+ Zoptymalizowane sondowania zestawów satelickich jest funkcji opcjonalnych. Oznacza to, że środowisko uruchomieniowe wykonuje kroki opisane w temacie [procesu powrotu zasobów](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md#cpconpackagingdeployingresourcesanchor1) chyba że [ \<relativebindforresources — >](../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md) element znajduje się w konfiguracji aplikacji pliku i jego `enabled` atrybut ma ustawioną `true`. Jeśli jest to możliwe, proces badania zestawu satelickiego zmienia się w następujący sposób:  
   
 -   Środowisko uruchomieniowe używa lokalizacji nadrzędnego zestawu kodu do sondowania dla zestawu satelickiego. Jeśli zestaw nadrzędny jest zainstalowany w globalnej pamięci podręcznej zestawów, środowisko uruchomieniowe sondy w pamięci podręcznej, ale nie w katalogu aplikacji. Jeśli zestaw nadrzędny jest zainstalowany w katalogu aplikacji, środowisko uruchomieniowe sondy w katalogu aplikacji, ale nie znajduje się w globalnej pamięci podręcznej zestawów.  
   
@@ -154,19 +156,19 @@ Greeting=Добрый день
   
  Te dwa pliki są kompilowane do plików .resources, uruchamiając [generator pliku zasobów (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) z wiersza polecenia.  Dla zasobu języka francuskiego to polecenie jest:  
   
- **ResGen.exe resources.fr.txt**  
+ **resgen.exe resources.fr.txt**  
   
  Dla zasobu języka rosyjskiego polecenie jest:  
   
- **ResGen.exe resources.ru.txt**  
+ **resgen.exe resources.ru.txt**  
   
  .resources — pliki są osadzone w biblioteki dołączanej dynamicznie, uruchamiając [konsolidator zestawów (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) polecenia wiersza dla zasobu języka francuskiego w następujący sposób:  
   
- **Al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
+ **al /t:lib /embed:resources.fr.resources /culture:fr /out:fr\Example1.resources.dll**  
   
  i zasobu języka rosyjskiego w następujący sposób:  
   
- **Al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
+ **al /t:lib /embed:resources.ru.resources /culture:ru /out:ru\Example1.resources.dll**  
   
  Kod źródłowy aplikacji znajduje się w pliku o nazwie Example1.cs lub Example1.vb. Obejmuje on <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybutu, aby wskazać, czy domyślny zasób aplikacji znajduje się w podkatalogu fr. Tworzy wystąpienie Menedżera zasobów, pobiera wartość `Greeting` zasobów i wyświetla je w konsoli.  
   

@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 08eeb08debdc2e71a85dbc18053bf1aac779069a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -53,7 +53,7 @@ Aby dowiedzieć się więcej na temat programu .NET Framework, zobacz [.NET Fram
 
 ### <a name="mono"></a>Mono
 
-Mono jest implementację .NET, która jest głównie używane, gdy wymagana jest mała środowiska wykonawczego. To środowisko uruchomieniowe, które uprawnienia aplikacji platformy Xamarin Android, Mac, iOS, systemu tvOS i watchOS i koncentruje się przede wszystkim na niewielkie rozmiary.
+Mono jest implementację .NET, która jest głównie używane, gdy wymagana jest mała środowiska wykonawczego. To środowisko uruchomieniowe, które uprawnienia aplikacji platformy Xamarin Android, Mac, iOS, systemu tvOS i watchOS i koncentruje się przede wszystkim na niewielkie rozmiary. Mono obsługuje również gry utworzony za pomocą aparat Unity.
 
 Obsługuje wszystkie obecnie opublikowanej wersji platformy .NET Standard.
 
@@ -95,5 +95,5 @@ Masz dostęp do rozbudowany zestaw narzędzi i składników infrastruktury, któ
 [.NET framework — przewodnik](../framework/index.md)  
 [Przewodnik dla języka C#](../csharp/index.md)  
 [Podręcznik języka F #](../fsharp/index.md)  
-[Przewodnik VB.NET](../visual-basic/index.md)  
+[VB.NET Guide](../visual-basic/index.md)  
 

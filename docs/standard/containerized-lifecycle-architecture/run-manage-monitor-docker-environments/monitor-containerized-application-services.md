@@ -1,7 +1,7 @@
 ---
 title: "Monitor konteneryzowanych usługi aplikacji"
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
@@ -45,13 +45,13 @@ Aby utworzyć zasobu usługi Application Insights, postępuj zgodnie z instrukcj
 -   **Monitorowanie aplikacji Docker w usłudze Application Insights:**[https://docs.microsoft.com/azure/application-insights/app-insights-docker  ](https://docs.microsoft.com/azure/application-insights/app-insights-docker)
 
 -   **Obraz Insights Docker aplikacji w Centrum Docker i Github:**  
-[https://Hub.docker.com/r/Microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) i <https://github.com/Microsoft/ApplicationInsights-Docker>
+[https://hub.docker.com/r/microsoft/applicationinsights/](https://hub.docker.com/r/microsoft/applicationinsights/) and <https://github.com/Microsoft/ApplicationInsights-Docker>
 
 -   **Skonfiguruj usługę Application Insights dla platformy ASP.NET:**  
-[https://docs.microsoft.com/Azure/Application-insights/App-insights-ASP-NET](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
+[https://docs.microsoft.com/azure/application-insights/app-insights-asp-net](https://docs.microsoft.com/azure/application-insights/app-insights-asp-net)
 
 -   **Usługa Application Insights dla stron sieci web:**  
-<https://docs.microsoft.com/Azure/Application-insights/App-insights-JavaScript>
+<https://docs.microsoft.com/azure/application-insights/app-insights-javascript>
 
 ## <a name="microsoft-operations-management-suite"></a>Microsoft Operations Management Suite
 
@@ -91,13 +91,13 @@ Za pomocą Operations Management Suite kontenera rozwiązania, można wykonać n
 
 Informacje o wydajności wyświetlane przez uruchomienie zapytania, takie jak typ = wydajności, jak pokazano na rysunku 6-3.
 
-![DockerPerfMetricsView](./media/image3.png){width = "5.78625 w" height = "3,25 w"}
+![DockerPerfMetricsView](./media/image3.png){width="5.78625in" height="3.25in"}
 
 Rysunek 6-3 metryki wydajności hostów Docker wyświetlane przez usługi Operations Management Suite
 
 Zapisywanie kwerend również jest standardowa funkcja Operations Management Suite i pomaga zachować zapytań znaleźliśmy przydatne i odnajdywanie trendów w systemie.
 
-**Więcej informacji o** można znaleźć informacje o instalowaniu i konfigurowaniu Docker rozwiązania kontenera w [Operations Management Suite](http://microsoft.com/oms), przejdź do <https://docs.microsoft.com/azure/ Dziennik analytics/dziennika analytics — kontenery>.
+**Więcej informacji o** można znaleźć informacje o instalowaniu i konfigurowaniu Docker rozwiązania kontenera w [Operations Management Suite](http://microsoft.com/oms), przejdź do <https://docs.microsoft.com/azure/log-analytics /log-Analytics-containers>.
 
 >[!div class="step-by-step"]
 [Poprzednie] (Zarządzanie produkcji — docker-environments.md) [dalej] (.. /Key-takeaways/index.MD)

@@ -1,7 +1,7 @@
 ---
 title: Terminologia docker
 description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
@@ -50,4 +50,4 @@ W tej sekcji wymieniono terminy i definicje, z którymi należy zapoznać się z
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (co to docker.md) [dalej] (docker kontenery — obrazy i registries.md)
+[Previous] (what-is-docker.md) [Next] (docker-containers-images-and-registries.md)

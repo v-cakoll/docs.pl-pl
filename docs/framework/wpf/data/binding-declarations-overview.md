@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2fc90769b1524ec93fd3df6a9b8be3eb28de8195
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 615b92d264b91ab5b267d5e79ab829b8afa489cd
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="binding-declarations-overview"></a>Przegląd Wiązanie deklaracji
 W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.  
@@ -47,11 +49,11 @@ W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>Użycie rozszerzenia znaczników  
- <xref:System.Windows.Data.Binding>to rozszerzenie znacznika. Gdy używasz rozszerzenia powiązania Aby zadeklarować powiązanie deklaracji składa się z serii klauzule po `Binding` — słowo kluczowe i oddzielonych przecinkami (,). Klauzule w deklaracji powiązanie mogą znajdować się w dowolnej kolejności i istnieje wiele możliwych kombinacji. Klauzule są *nazwa*=*wartość* pary where *nazwa* jest nazwą <xref:System.Windows.Data.Binding> właściwości i *wartość* jest wartość, która jest ustawienie dla właściwości.  
+ <xref:System.Windows.Data.Binding> to rozszerzenie znacznika. Gdy używasz rozszerzenia powiązania Aby zadeklarować powiązanie deklaracji składa się z serii klauzule po `Binding` — słowo kluczowe i oddzielonych przecinkami (,). Klauzule w deklaracji powiązanie mogą znajdować się w dowolnej kolejności i istnieje wiele możliwych kombinacji. Klauzule są *nazwa*=*wartość* pary where *nazwa* jest nazwą <xref:System.Windows.Data.Binding> właściwości i *wartość* jest wartość, która jest ustawienie dla właściwości.  
   
  Podczas tworzenia powiązania deklaracji ciągów w znaczniku, musi być dołączony do właściwości zależności określonego obiektu docelowego. Poniższy przykład przedstawia sposób powiązania <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> właściwości przy użyciu rozszerzenia powiązania, określając <xref:System.Windows.Data.Binding.Source%2A> i <xref:System.Windows.Data.Binding.Path%2A> właściwości.  
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#L37-L37)]  
   
  Można określić większość właściwości <xref:System.Windows.Data.Binding> klasy w ten sposób. Aby uzyskać więcej informacji o rozszerzeniu powiązanie również podobnie jak w przypadku listę <xref:System.Windows.Data.Binding> Zobacz właściwości, których nie można ustawić przy użyciu rozszerzenia powiązania [powiązania — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md) omówienie.  
   
@@ -69,7 +71,7 @@ W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.
   
 <a name="MBandPB"></a>   
 ### <a name="multibinding-and-prioritybinding"></a>MultiBinding i PriorityBinding  
- <xref:System.Windows.Data.MultiBinding>i <xref:System.Windows.Data.PriorityBinding> nie obsługują składni rozszerzenia języka XAML. W związku z tym należy użyć składni elementu obiektu, jeśli są deklarowanie <xref:System.Windows.Data.MultiBinding> lub <xref:System.Windows.Data.PriorityBinding> w języku XAML.  
+ <xref:System.Windows.Data.MultiBinding> i <xref:System.Windows.Data.PriorityBinding> nie obsługują składni rozszerzenia języka XAML. W związku z tym należy użyć składni elementu obiektu, jeśli są deklarowanie <xref:System.Windows.Data.MultiBinding> lub <xref:System.Windows.Data.PriorityBinding> w języku XAML.  
   
 <a name="BindinginCode"></a>   
 ## <a name="creating-a-binding-in-code"></a>Tworzenie powiązania w kodzie  
@@ -77,8 +79,6 @@ W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.
   
  [!code-csharp[BindConversion#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#1)]
  [!code-vb[BindConversion#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#1)]  
-[!code-csharp[BindConversion#end1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindConversion/CSharp/Window1.xaml.cs#end1)]
-[!code-vb[BindConversion#end1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindConversion/visualbasic/window1.xaml.vb#end1)]  
   
  Jeśli obiekt jest powiązanie jest <xref:System.Windows.FrameworkElement> lub <xref:System.Windows.FrameworkContentElement> można wywołać `SetBinding` metody dla obiekt bezpośrednio zamiast <xref:System.Windows.Data.BindingOperations.SetBinding%2A?displayProperty=nameWithType>. Na przykład zobacz [Utwórz powiązanie w kodzie](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md).  
   
@@ -94,7 +94,7 @@ W tym temacie opisano różne sposoby, mogą zadeklarować powiązania.
   
 -   Indeksatory właściwości można określić w nawiasach kwadratowych po nazwie właściwości, w których stosowane jest indeksatora. Na przykład klauzuli `Path=ShoppingCart[0]` ustawia powiązanie do indeksu, który odpowiada jak z właściwości wewnętrznego indeksowania obsługuje literału ciągu "0". Indeksatory zagnieżdżone są również obsługiwane.  
   
--   Indeksatory i właściwości mogą być wymieszane `Path` klauzuli, np.`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   Indeksatory i właściwości mogą być wymieszane `Path` klauzuli, np. `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   Wewnątrz indeksatory może mieć wiele parametrów indeksatora rozdzielonych przecinkami (,). Można określić typ każdego parametru w nawiasach. Na przykład można mieć `Path="[(sys:Int32)42,(sys:Int32)24]"`, gdzie `sys` jest mapowany na `System` przestrzeni nazw.  
   

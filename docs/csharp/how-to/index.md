@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: d1bef5813df40fb5c6e6b96e0042a682022beb8d
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-c"></a>Jak (C#)
 
@@ -68,7 +68,7 @@ Konieczne może być konwersji obiektu do innego typu.
 
 - [Określanie, czy ciąg reprezentuje liczbę](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Konwertowanie ciągów, które reprezentują szesnastkowe numer](../programming-guide/types/how-to-convert-between-hexadecimal-strings-and-numeric-types.md).
-- [Konwertowanie ciągu do <xref:System.DateTime> ](../programming-guide/strings/how-to-convert-a-string-to-a-datetime.md).
+- [Konwertowanie ciągu do `DateTime` ](../../standard/base-types/parsing-datetime.md).
 - [Konwertowanie tablicy typu byte na liczbę całkowitą](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [Konwertowanie ciągu na liczbę](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [Użyj `as` i `is` można bezpiecznie rzutowany na inny typ](../programming-guide/types/how-to-safely-cast-by-using-as-and-is-operators.md).

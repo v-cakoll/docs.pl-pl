@@ -1,11 +1,12 @@
 ---
 title: "Jak udostępnić dane do powiązania w XAML"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/29/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -15,37 +16,33 @@ helpviewer_keywords:
 - data binding [WPF], making data available for binding
 - binding data [WPF], making data available for
 ms.assetid: 7103c2e8-0e31-4a13-bf12-ca382221a8d5
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0c342f0d635a9220a88a2af79c76e2c1580dee2f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4f4e8e785b246e191ae8052f676331ea116b8c0d
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-make-data-available-for-binding-in-xaml"></a>Jak udostępnić dane do powiązania w XAML
 W tym temacie opisano różne sposoby, które można udostępnić dane dla powiązania w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]w zależności od potrzeb aplikacji.  
   
 ## <a name="example"></a>Przykład  
- Jeśli masz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów, które chcesz powiązać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jedną z metod można udostępnić obiekt do powiązania zdefiniować go jako zasób i nadaj mu `x:Key`. W poniższym przykładzie należy `Person` obiektu z właściwością ciągu o nazwie `PersonName`. `Person` Obiektu jest zdefiniowana w obszarze nazw o nazwie `SDKSample`.  
+ Jeśli masz [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów, które chcesz powiązać z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jedną z metod można udostępnić obiekt do powiązania zdefiniować go jako zasób i nadaj mu `x:Key`. W poniższym przykładzie należy `Person` obiektu z właściwością ciągu o nazwie `PersonName`. `Person` Obiektu, który jest wyświetlany przez wyróżniony wiersz, który zawiera `<src>` jest zdefiniowany element, w obszarze nazw o nazwie `SDKSample`.  
   
- [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#instantiation)]  
-[!code-xaml[SimpleBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#2)]  
+ [!code-xaml[SimpleBinding#Instantiation](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Następnie możesz powiązać do obiektu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jak pokazano w poniższym przykładzie.  
+ Następnie możesz powiązać <xref:System.Windows.Controls.TextBlock> sterowania do obiektu w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], jak wyróżniony wiersz zawiera `<TextBlock>` pokazuje element. 
   
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ Alternatywnie można użyć <xref:System.Windows.Data.ObjectDataProvider> klasy, jak w poniższym przykładzie:  
   
- Alternatywnie można użyć <xref:System.Windows.Data.ObjectDataProvider> klasy, jak w poniższym przykładzie.  
+ [!code-xaml[ObjectDataProvider}](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=10-14,42)]  
   
- [!code-xaml[SimpleBinding#ODPCP](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml#odpcp)]  
-  
- Zdefiniuj powiązania taki sam sposób:  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
+ Zdefiniuj powiązania taki sam sposób, jak wyróżniony wiersz, który zawiera `<TextBlock>` pokazuje element.  
   
  W tym przykładzie, wynikiem jest taki sam: masz <xref:System.Windows.Controls.TextBlock> z zawartości tekstowej `Joe`. Jednak <xref:System.Windows.Data.ObjectDataProvider> klasa udostępnia funkcje, takie jak możliwość powiązać wynik metody. Możesz użyć <xref:System.Windows.Data.ObjectDataProvider> klasy, jeśli potrzebujesz funkcji zapewnia.  
   

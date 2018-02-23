@@ -3,17 +3,17 @@ title: polecenie DotNet - .NET Core interfejsu wiersza polecenia
 description: "Informacje o poleceniu dotnet (ogólnego sterownik narzędzi interfejsu wiersza polecenia platformy .NET Core) i jej użycia."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/14/2017
+ms.date: 11/28/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: bed0876645428cdff11fa83a091fc63e64cedc8f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="dotnet-command"></a>polecenie DotNet
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="name"></a>Nazwa
 
-`dotnet`-Ogólne sterownik do uruchamiania polecenia wiersza polecenia.
+`dotnet` -Ogólne sterownik do uruchamiania polecenia wiersza polecenia.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -37,7 +37,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="description"></a>Opis
 
-`dotnet`jest ogólny sterownik łańcuch narzędzi interfejsu wiersza polecenia (CLI). Wywoływane na jego własnej, zapewnia użycia krótkie instrukcje.
+`dotnet` jest ogólny sterownik łańcuch narzędzi interfejsu wiersza polecenia (CLI). Wywoływane na jego własnej, zapewnia użycia krótkie instrukcje.
 
 Każdej z funkcji jest implementowany jako polecenia. Aby można było użyć funkcji, polecenie określono po `dotnet`, takich jak [ `dotnet build` ](dotnet-build.md). Wszystkie argumenty następujące polecenie to własną argumentów.
 
@@ -200,6 +200,8 @@ Uruchamianie aplikacji zależnych od framework o nazwie `myapp.dll`:
 
 ## <a name="environment-variables"></a>Zmienne środowiskowe
 
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
 `DOTNET_PACKAGES`
 
 Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, domyślnie `$HOME/.nuget/packages` w systemie Unix lub `%HOME%\NuGet\Packages` w systemie Windows.
@@ -211,3 +213,23 @@ Określa lokalizację obsługi indeksu jest używany przez hosta udostępnionych
 `DOTNET_CLI_TELEMETRY_OPTOUT`
 
 Określa, czy dane dotyczące użycia narzędzia .NET Core został zebrany i wysyłany do firmy Microsoft. Ustaw `true` Aby zrezygnować z funkcji telemetrii (wartości `true`, `1`, lub `yes` zaakceptowane), w przeciwnym razie należy ustawić `false` w funkcji telemetrii (wartości `false`, `0`, lub `no` akceptowane). Jeśli nie jest ustawiony, wartości domyślne jest `false`, i funkcja telemetrii jest aktywna.
+
+`DOTNET_MULTILEVEL_LOOKUP`
+
+Określa, czy podstawowego środowiska wykonawczego .NET, udostępnionych framework lub zestawu SDK są rozpoznane w globalnej lokalizacji. Jeśli nie jest ustawiona, domyślne `true`. Ustaw `false` rozwiązania z globalnej lokalizacji i mają odizolowane instalacji platformy .NET Core (wartości `0` lub `false` są akceptowane). Aby uzyskać więcej informacji na temat wyszukiwania wielopoziomowe zobacz [wyszukiwania SharedFX wielopoziomowej](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md).
+
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+`DOTNET_PACKAGES`
+
+Pakiet główny pamięci podręcznej. Jeśli nie został ustawiony, domyślnie `$HOME/.nuget/packages` w systemie Unix lub `%HOME%\NuGet\Packages` w systemie Windows.
+
+`DOTNET_SERVICING`
+
+Określa lokalizację obsługi indeksu jest używany przez hosta udostępnionych podczas ładowania środowiska uruchomieniowego.
+
+`DOTNET_CLI_TELEMETRY_OPTOUT`
+
+Określa, czy dane dotyczące użycia narzędzia .NET Core został zebrany i wysyłany do firmy Microsoft. Ustaw `true` Aby zrezygnować z funkcji telemetrii (wartości `true`, `1`, lub `yes` zaakceptowane), w przeciwnym razie należy ustawić `false` w funkcji telemetrii (wartości `false`, `0`, lub `no` akceptowane). Jeśli nie jest ustawiony, wartości domyślne jest `false`, i funkcja telemetrii jest aktywna.
+
+---

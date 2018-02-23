@@ -5,31 +5,33 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b5c825a2-b48f-444a-8659-61751ff11d34
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 164b4e3bff3e327b82c78c403a0e65ec8db744ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ce70b8bca923645ea1e00a55ec4d41903d828a99
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="configuring-timeout-values-on-a-binding"></a>Konfigurowanie wartości limitów czasu w powiązaniu
 Powiązania WCF ma dostępnych wiele ustawień limitu czasu. Ustawienie tych limitu czasu ustawienia poprawnie może zwiększyć nie tylko z usługą wydajności, ale również play rolę w zakresie użyteczności i zabezpieczeń usługi. Następujące limity czasu są dostępne na powiązań WCF:  
   
-1.  openTimeout  
+1.  OpenTimeout  
   
 2.  closeTimeout  
   
 3.  właściwości sendTimeout  
   
-4.  receiveTimeout  
+4.  ReceiveTimeout  
   
 ## <a name="wcf-binding-timeouts"></a>Limity czasu wiązania WCF  
  Wszystkie ustawienia omówione w tym temacie są dokonywane na powiązanie, albo w konfiguracji lub kodu. Poniższy kod przedstawia sposób programowane Ustawianie limitów czasu dla wiązania WCF w ramach samodzielnie hostowana usługa.  
@@ -90,15 +92,15 @@ public static void Main()
   
 1.  Właściwości SendTimeout — używaną do inicjalizacji OperationTimeout, rządzące całego procesu wysyłania wiadomości, w tym odbieranie komunikatu odpowiedzi dla operacji żądania/odpowiedzi usługi. Ten limit czasu ma również zastosowanie, podczas wysyłania wiadomości odpowiedzi z metody kontrakt wywołania zwrotnego.  
   
-2.  OpenTimeout — używane podczas otwierania kanały, jeśli nie określono żadnej wartości limitu czasu jawne  
+2.  OpenTimeout — używane podczas otwierania kanały, jeśli nie określono żadnej wartości jawne limitu czasu.  
   
-3.  CloseTimeout — używany podczas zamykania kanałów, jeśli nie określono żadnej wartości limitu czasu jawne  
+3.  CloseTimeout — używany podczas zamykania kanałów, jeśli nie określono żadnej wartości jawne limitu czasu.  
   
 4.  ReceiveTimeout — nie jest używany.  
   
 ### <a name="service-side-timeouts"></a>Limity czasu po stronie serwera  
  Na stronie usługi:  
   
-1.  Właściwości SendTimeout, OpentTimeout, CloseTimeout są takie same, jak na komputerze klienckim  
+1.  Właściwości SendTimeout, OpenTimeout, CloseTimeout są takie same, jak na komputerze klienckim.  
   
 2.  ReceiveTimeout — używane przez warstwę Framework usługi można zainicjować limit czasu bezczynności sesji, która kontroluje, jak długo sesji może być bezczynne przed przekroczeniem limitu czasu.

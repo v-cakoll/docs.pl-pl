@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 73ed25406aa398aa35c275b20da1deee48b119ab
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: a595f255b014e08b4b5b2036a7b1940e46df268f
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="how-to-create-a-simple-binding"></a>Jak utworzyć proste powiązanie
 W tym przykładzie przedstawiono sposób tworzenia prostej <xref:System.Windows.Data.Binding>.  
@@ -32,15 +32,11 @@ W tym przykładzie przedstawiono sposób tworzenia prostej <xref:System.Windows.
 ## <a name="example"></a>Przykład  
  W tym przykładzie należy `Person` obiektu z właściwością ciągu o nazwie `PersonName`. `Person` Obiektu jest zdefiniowana w obszarze nazw o nazwie `SDKSample`.  
   
- Poniższy przykład tworzy `Person` obiekt z `PersonName` wartość właściwości `Joe`. Jest to wykonywane w `Resources` sekcji i przypisaniu `x:Key`.  
+ Wyróżniony wiersz, który zawiera `<src>` tworzy wystąpienie elementu w poniższym przykładzie `Person` obiekt z `PersonName` wartość właściwości `Joe`. Jest to wykonywane w `Resources` sekcji i przypisaniu `x:Key`.  
   
- [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml)]  
+ [!code-xaml[SimpleBinding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml?highlight=9,37)]  
   
- Aby powiązać `PersonName` właściwość, należy wykonać następujące czynności:  
-  
- [!code-xaml[SimpleBinding#BDO1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SimpleBinding/CSharp/Page1.xaml#bdo1)]  
-  
- W związku z tym <xref:System.Windows.Controls.TextBlock> pojawi się o wartości "Jan".  
+ Wyróżniony wiersz, który zawiera `<TextBlock>` element czym wiąże <xref:System.Windows.Controls.TextBlock> formant `PersonName` właściwości. W związku z tym <xref:System.Windows.Controls.TextBlock> pojawi się o wartości "Jan".  
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiązanie danych — omówienie](../../../../docs/framework/wpf/data/data-binding-overview.md)  

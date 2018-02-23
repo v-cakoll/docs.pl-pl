@@ -2,7 +2,8 @@
 title: "Niestety, mamy ADAM &#39; są dostępne szczegółowe informacje na temat tego błędu języka C# t"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - CS1583
@@ -882,27 +883,28 @@ f1_keywords:
 - CS8168
 - CS8172
 - CS8179
-helpviewer_keywords: errors [C#], additional information
+helpviewer_keywords:
+- errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 312bcc963e2e444bb5125124a0cb690126c0a770
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, mamy ADAM &#39; są dostępne szczegółowe informacje na temat tego błędu języka C# t
 Przepraszamy, ale nie mamy żadnych określone informacje o tym błędzie. Możesz wyszukać tekst numer i komunikat błędu można znaleźć informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
   
- [Visual C# — język](http://go.microsoft.com/fwlink/?LinkId=146921)  
+ [Visual C# — język](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
  Udostępnia forum odpowiedzi na pytania o i ogólnych dyskusjach [!INCLUDE[csprcs](~/includes/csprcs-md.md)] składni języka i kompilatora.  
   
- [Środowiska IDE programu Visual C#](http://go.microsoft.com/fwlink/?LinkId=146922)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
  Udostępnia forum odpowiedzi na pytania dotyczące pracy [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] środowiska.  
   
- [Visual C# ogólne](http://go.microsoft.com/fwlink/?LinkId=146920)  
+ [Visual C# ogólne](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Zapewnia forum pytania o i problemy związane z [!INCLUDE[csprcs](~/includes/csprcs-md.md)] nie opisano w innych forach.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
@@ -915,4 +917,3 @@ Przepraszamy, ale nie mamy żadnych określone informacje o tym błędzie. Może
  [Przewodnik programowania w języku C#](../../csharp/programming-guide/index.md)  
  [Odwołanie w C#](../../csharp/language-reference/index.md)  
  [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
- [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)

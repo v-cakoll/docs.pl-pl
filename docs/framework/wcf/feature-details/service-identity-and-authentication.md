@@ -5,29 +5,32 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: authentication [WCF], specifying the identity of a service
+helpviewer_keywords:
+- authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b741e421a8773e1a4b2d2ab7da5e119073e861ed
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 579f41a213564dd18dae719a14170100903efd92
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="service-identity-and-authentication"></a>Uwierzytelnianie i tożsamość usług
 Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usługę sieci Web Services Description Language (WSDL). Ta wartość propagowane do dowolnego klienta jest używany do uwierzytelniania usługi. Po inicjowania przez klienta komunikatu do punktu końcowego i usługa samodzielnie przeprowadza uwierzytelnianie klienta, klient porównuje wartości tożsamości punktu końcowego z wartością rzeczywistą zwrócił procesu uwierzytelniania punktu końcowego. Jeśli są zgodne, klient jest pewność, że ma nawiązać kontaktu z punktem końcowym usługi oczekiwanego. Funkcja ta działa jako ochrony przed *phishing* zapobiegając nastąpi przekierowanie do punktu końcowego hostowanej przez usługę złośliwego klienta.  
   
- Przykładową aplikację prezentującą ustawienie tożsamości, zobacz [tożsamość usług — przykład](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]punkty końcowe i adresy punktów końcowych, zobacz [adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
+ Przykładową aplikację prezentującą ustawienie tożsamości, zobacz [tożsamość usług — przykład](../../../../docs/framework/wcf/samples/service-identity-sample.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] punkty końcowe i adresy punktów końcowych, zobacz [adresy](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md).  
   
 > [!NOTE]
 >  Jeśli LanMan NT (NTLM) używany do uwierzytelniania, tożsamość usługi nie jest zaznaczone, ponieważ w obszarze NTLM, klient jest w stanie uwierzytelniania serwera. Uwierzytelnianie NTLM jest używany, gdy komputery są częścią grupy roboczej systemu Windows lub zainstalowana starsza wersja systemu Windows, która nie obsługuje uwierzytelniania Kerberos.  
@@ -45,22 +48,22 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
  <xref:System.ServiceModel.EndpointAddress.Identity%2A> Właściwość <xref:System.ServiceModel.EndpointAddress> klasa reprezentuje tożsamość usługi o nazwie przez klienta. Opis usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> w metadanych. Jeśli jest uruchomiony deweloperowi klienta [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) względem punktu końcowego usługi wygenerowanego konfiguracji zawiera wartość usługi <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Infrastruktury (jeśli jest skonfigurowane z zabezpieczeniami) sprawdza, czy usługa posiada określono tożsamości.  
   
 > [!IMPORTANT]
->  Metadane zawiera oczekiwaną tożsamość usługi, w związku z czym zaleca się uwidaczniać metadane usługi w sposób bezpieczny, na przykład, tworząc punkt końcowy HTTPS dla usługi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: bezpieczne punkty końcowe metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
+>  Metadane zawiera oczekiwaną tożsamość usługi, w związku z czym zaleca się uwidaczniać metadane usługi w sposób bezpieczny, na przykład, tworząc punkt końcowy HTTPS dla usługi. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Porady: bezpieczne punkty końcowe metadanych](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md).  
   
 ## <a name="identity-types"></a>Typów tożsamości  
- Usługa może zapewnić pięć typów tożsamości. Każdy typ tożsamości odnosi się do elementu, który może zostać umieszczony w `<identity>` element w konfiguracji. Typ użyty, zależy od scenariusza i wymagań dotyczących zabezpieczeń usługi. W poniższej tabeli opisano każdy typ tożsamości.  
+ Usługa może zapewnić sześć typów tożsamości. Każdy typ tożsamości odnosi się do elementu, który może zostać umieszczony w `<identity>` element w konfiguracji. Typ użyty, zależy od scenariusza i wymagań dotyczących zabezpieczeń usługi. W poniższej tabeli opisano każdy typ tożsamości.  
   
 |Typ tożsamości|Opis|Typowy scenariusz|  
 |-------------------|-----------------|----------------------|  
 |System nazw domen (DNS)|Użyj tego elementu z certyfikatami X.509 lub konta systemu Windows. Porównuje nazwa DNS określona w poświadczeniu z wartością określoną w tym elemencie.|Sprawdź DNS umożliwia korzystanie z certyfikatów w usłudze DNS lub nazwy podmiotu. Jeśli certyfikat jest utworzony ponownie z tym samym DNS lub nazwy podmiotu, sprawdzić tożsamości jest nadal ważny. Gdy certyfikat jest ponownie, pobiera nowego klucza RSA, ale zachowuje tego samego DNS lub nazwy podmiotu. Oznacza to, że klienci nie muszą zaktualizować swoje informacje o tożsamości o usłudze.|  
-|Certyfikat. Domyślnie gdy `ClientCredentialType` ma wartość Certificate.|Ten element Określa certyfikat X.509 z kodowaniem Base64 wartość do porównania z klienta.<br /><br /> Ten element służy również, korzystając z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] jako poświadczeń do uwierzytelniania usługi.|Ten element ogranicza uwierzytelniania jeden certyfikat na podstawie jego wartości odcisku palca. Umożliwia użycie uwierzytelniania bardziej restrykcyjne, ponieważ wartości odcisku palca są unikatowe. To jest dostarczany z jedno zastrzeżenie:: Jeśli certyfikat jest utworzony ponownie z taką samą nazwę podmiotu, ma także nowy odcisk palca. W związku z tym klienci nie będą mogli zweryfikować usługę, chyba że jest on znany nowy odcisk palca. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Znajdowanie odcisk palca certyfikatu, zobacz [porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
+|Certyfikat. Domyślnie gdy `ClientCredentialType` ma wartość Certificate.|Ten element Określa certyfikat X.509 z kodowaniem Base64 wartość do porównania z klienta.<br /><br /> Ten element służy również, korzystając z [!INCLUDE[infocard](../../../../includes/infocard-md.md)] jako poświadczeń do uwierzytelniania usługi.|Ten element ogranicza uwierzytelniania jeden certyfikat na podstawie jego wartości odcisku palca. Umożliwia użycie uwierzytelniania bardziej restrykcyjne, ponieważ wartości odcisku palca są unikatowe. To jest dostarczany z jedno zastrzeżenie:: Jeśli certyfikat jest utworzony ponownie z taką samą nazwę podmiotu, ma także nowy odcisk palca. W związku z tym klienci nie będą mogli zweryfikować usługę, chyba że jest on znany nowy odcisk palca. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Znajdowanie odcisk palca certyfikatu, zobacz [porady: Pobieranie odcisku palca certyfikatu](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md).|  
 |Odwołanie do certyfikatu|Taki sam jak opcja certyfikat opisanych powyżej. Jednak ten element umożliwia Określ nazwę certyfikatu i przechowywać lokalizację, z której można pobrać certyfikatu.|Taka sama jak w scenariuszu certyfikatu opisanych powyżej.<br /><br /> Korzyścią jest to, że można zmienić lokalizacji magazynu certyfikatów.|  
 |RSA|Ten element określa wartość klucza RSA do porównania z klienta. Przypomina to opcja certyfikat, ale zamiast przy użyciu odcisku palca certyfikatu, klucza RSA certyfikatu zamiast niego jest używana.|Sprawdź RSA umożliwia w szczególności ograniczyć uwierzytelnianie oparte na jego klucza RSA jeden certyfikat. Umożliwia to bardziej restrykcyjne uwierzytelnianie przy użyciu określonego klucza RSA kosztem usługi, która nie działa z istniejących klientów, jeśli zmieni się wartość klucza RSA.|  
 |Główna nazwa użytkownika (UPN). Domyślnie gdy `ClientCredentialType` jest ustawiony do systemu Windows i usługi procesu nie działa w ramach jednego z konta system.|Ten element Określa nazwę UPN, która jest uruchomiona w obszarze. Zobacz sekcję protokołu Kerberos i tożsamość [przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Dzięki temu, że usługa jest uruchomiona przy użyciu określonego konta użytkownika systemu Windows. Konto użytkownika może być bieżącego zalogowanego użytkownika lub usługę do uruchamiania konta określonego użytkownika.<br /><br /> To ustawienie korzysta z zabezpieczeń systemu Windows, jeśli usługa jest uruchomiona w ramach konta domeny w środowisku usługi Active Directory.|  
 |Główna nazwa usługi (SPN). Domyślnie gdy `ClientCredentialType` jest ustawiony do systemu Windows i usługi jest uruchomiony proces jedno z kont systemu — Usługa lokalna, LocalSystem lub NetworkService.|Ten element określa główną nazwę usługi skojarzone z kontem usługi. Zobacz sekcję protokołu Kerberos i tożsamość [przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).|Dzięki temu, że nazwa SPN i określonego konta systemu Windows, skojarzone z główną nazwę usługi identyfikowania usługi.<br /><br /> Narzędzie Setspn.exe skojarzyć konto komputera dla konta użytkownika usługi.<br /><br /> To ustawienie korzysta z protokołu Kerberos systemu Windows, zabezpieczenia, jeśli usługa jest uruchomiona, zgodnie z jednym z kont systemowych lub przy użyciu konta domeny, które ma nazwę SPN skojarzone z go i komputer jest członkiem domeny w środowisku usługi Active Directory.|  
   
 ## <a name="specifying-identity-at-the-service"></a>Określanie tożsamości w usłudze  
- Zazwyczaj nie trzeba ustawić tożsamość w usłudze, ponieważ typ tożsamości w metadanych usługi nakazują wybór typu poświadczeń klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]jak zastąpienie lub określ tożsamość usługi, zobacz [przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
+ Zazwyczaj nie trzeba ustawić tożsamość w usłudze, ponieważ typ tożsamości w metadanych usługi nakazują wybór typu poświadczeń klienta. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] jak zastąpienie lub określ tożsamość usługi, zobacz [przesłanianie tożsamości usługi na potrzeby uwierzytelniania](../../../../docs/framework/wcf/extending/overriding-the-identity-of-a-service-for-authentication.md).  
   
 ## <a name="using-the-identity-element-in-configuration"></a>Przy użyciu \<tożsamości > Element w konfiguracji  
  Jeśli zmienisz typ poświadczeń klienta w powiązaniu wcześniej wyświetlany `Certificate,` wygenerowanego WSDL zawiera seryjnych Base64 certyfikatu X.509 do wartości tożsamości, jak pokazano w poniższym kodzie. Jest to wartość domyślna dla wszystkich typów poświadczeń klienta innych niż Windows.  
@@ -96,7 +99,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
   
  Jeśli kanał jest skonfigurowany do uwierzytelniania za pomocą wiadomości lub poziomu transportu Secure Sockets Layer (SSL) za pomocą certyfikatów X.509 do uwierzytelniania, obowiązują następujące wartości tożsamości:  
   
--   W SYSTEMIE DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia, że certyfikat podczas uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) wartość określona w tożsamości DNS na kliencie. Należy pamiętać, że te testy są wykonywane dodatkowo do określania okres ważności certyfikatu serwera. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza, czy certyfikat serwera jest wystawiony przez zaufany główny urząd.  
+-   DNS. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia, że certyfikat podczas uzgadniania protokołu SSL zawiera DNS lub `CommonName` atrybutu (CN) wartość określona w tożsamości DNS na kliencie. Należy pamiętać, że te testy są wykonywane dodatkowo do określania okres ważności certyfikatu serwera. Domyślnie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawdza, czy certyfikat serwera jest wystawiony przez zaufany główny urząd.  
   
 -   Certyfikat. Podczas uzgadniania protokołu SSL [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] gwarantuje, że zdalny punkt końcowy zapewnia dokładną certyfikatu wybrana w tożsamości.  
   
@@ -106,11 +109,11 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
   
  Jeśli usługa jest uwierzytelniany przy użyciu poziomu transportu lub komunikat protokołu SSL z poświadczeniami systemu Windows do uwierzytelniania i negocjuje poświadczeń, obowiązują następujące wartości tożsamości:  
   
--   W SYSTEMIE DNS. Negocjacji przekazuje usługi SPN, dzięki czemu można sprawdzić nazwę DNS. Nazwa SPN jest w formie `host/<dns name>`.  
+-   DNS. Negocjacji przekazuje usługi SPN, dzięki czemu można sprawdzić nazwę DNS. Nazwa SPN jest w formie `host/<dns name>`.  
   
--   NAZWA SPN. Jawne usługi SPN jest zwracany, na przykład `host/myservice`.  
+-   SPN. Jawne usługi SPN jest zwracany, na przykład `host/myservice`.  
   
--   NAZWA UPN. Nazwa UPN konta usługi. Nazwa UPN jest w formie `username` @ `domain`. Na przykład, gdy usługa jest uruchomiona na koncie użytkownika, może być `username@contoso.com`.  
+-   UPN. Nazwa UPN konta usługi. Nazwa UPN jest w formie `username` @ `domain`. Na przykład, gdy usługa jest uruchomiona na koncie użytkownika, może być `username@contoso.com`.  
   
  Programowo określanie tożsamości (przy użyciu <xref:System.ServiceModel.EndpointAddress.Identity%2A> właściwości) jest opcjonalna. Jeśli tożsamości nie został określony i typu poświadczeń klienta jest systemu Windows, wartością domyślną jest nazwa SPN wartość nazwy hosta część adres punktu końcowego usługi jest poprzedzony prefiksem "host /" literału. Jeśli tożsamości nie został określony i typu poświadczeń klienta jest certyfikat, wartością domyślną jest `Certificate`. Dotyczy to zarówno zabezpieczenia na poziomie komunikatu i transportu.  
   
@@ -120,7 +123,7 @@ Usługa *tożsamość punktu końcowego*jest wartość wygenerowaną przez usłu
  [!code-csharp[C_Identity#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#8)]
  [!code-vb[C_Identity#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#8)]  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]stack — wiązanie elementów poprawnie dla niestandardowego powiązania, zobacz [powiązania Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Tworzenie niestandardowego powiązania z <xref:System.ServiceModel.Channels.SecurityBindingElement>, zobacz [porady: Tworzenie elementu SecurityBindingElement dla trybu uwierzytelniania określone](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] stack — wiązanie elementów poprawnie dla niestandardowego powiązania, zobacz [powiązania Creating User-Defined](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Tworzenie niestandardowego powiązania z <xref:System.ServiceModel.Channels.SecurityBindingElement>, zobacz [porady: Tworzenie elementu SecurityBindingElement dla trybu uwierzytelniania określone](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: tworzenie niestandardowego powiązania za pomocą elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  

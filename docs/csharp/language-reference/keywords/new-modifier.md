@@ -2,18 +2,20 @@
 title: "new — Modyfikator (odwołanie w C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: new modifier keyword [C#]
+helpviewer_keywords:
+- new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
-caps.latest.revision: "28"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28124c2f3ecef01fd4bc43fe7cfc975dd6466506
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4653cdc15415f0601d07cecb78d1c8e492994b11
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="new-modifier-c-reference"></a>new — Modyfikator (odwołanie w C#)
 Gdy jest używany jako modyfikatory deklaracji, `new` — słowo kluczowe jawnie ukrywa element członkowski, który jest dziedziczona z klasy podstawowej. Ukrycie dziedziczonego elementu członkowskiego pochodnymi wersjami element członkowski zastępuje wersji klasy podstawowej. Mimo że można ukryć składniki bez użycia `new` modyfikator, zostanie wyświetlone ostrzeżenie kompilatora. Jeśli używasz `new` Aby jawnie ukrywa element członkowski, powoduje pominięcie to ostrzeżenie.  
@@ -26,7 +28,7 @@ Gdy jest używany jako modyfikatory deklaracji, `new` — słowo kluczowe jawnie
   
  Ukrywanie poprzez dziedziczenie nazwa przyjmuje jeden z następujących formatów:  
   
--   Ogólnie rzecz biorąc stała, pola, właściwości lub typu, która została wprowadzona w klasie lub strukturze powoduje ukrycie wszystkich elementów członkowskich klasy podstawowej, które mają nazwy.  Brak przypadków specjalnych.  Na przykład, jeśli zadeklarować nowe pole o nazwie `N` typu, który nie jest wywoływać i typem bazowym deklaruje `N` jako metodę nowego pola nie ukrywa deklaracji podstawowej w Składnia wywołania.  Zobacz [specyfikacja języka C# w wersji 5.0](http://go.microsoft.com/fwlink/?LinkId=199552) szczegółowe (zobacz sekcję "Wyszukiwanie elementu członkowskiego" w sekcji "Wyrażenia").  
+-   Ogólnie rzecz biorąc stała, pola, właściwości lub typu, która została wprowadzona w klasie lub strukturze powoduje ukrycie wszystkich elementów członkowskich klasy podstawowej, które mają nazwy.  Brak przypadków specjalnych.  Na przykład, jeśli zadeklarować nowe pole o nazwie `N` typu, który nie jest wywoływać i typem bazowym deklaruje `N` jako metodę nowego pola nie ukrywa deklaracji podstawowej w Składnia wywołania.  Zobacz [specyfikacja języka C# w wersji 5.0](https://www.microsoft.com/download/details.aspx?id=7029) szczegółowe (zobacz sekcję "Wyszukiwanie elementu członkowskiego" w sekcji "Wyrażenia").  
   
 -   Metody wprowadzone w klasie lub strukturze ukrywa właściwości, pola i typy, które współużytkują tę nazwę w klasie podstawowej. Ukrywa również wszystkie metody klasy podstawowej, które mają taką samą sygnaturę.  
   
@@ -62,4 +64,4 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
  [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)  
  [Modyfikatory](../../../csharp/language-reference/keywords/modifiers.md)  
  [Przechowywanie wersji przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
- [Użycie zastępowania i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)
+ [Użycie przesłonięć i nowych słów kluczowych](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)

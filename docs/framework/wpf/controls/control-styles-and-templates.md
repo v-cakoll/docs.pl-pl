@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30fff79b163136b4405b8fe7a5dfffeda532525d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: fc62422125d6a9a17aa353cccec6ab23eca2008b
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/22/2018
 ---
 # <a name="control-styles-and-templates"></a>Style i szablony formantu
 Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Windows.Controls.ControlTemplate> zawierający drzewa wizualnego tego formantu. Struktura i wyglądu formantu można zmienić, modyfikując <xref:System.Windows.Controls.ControlTemplate> tego formantu. Nie istnieje sposób zastąpić tylko część wizualnym drzewie kontrolki; Aby zmienić wizualnym drzewie kontrolki, należy ustawić <xref:System.Windows.Controls.Control.Template%2A> właściwości formantu do nowych i pełne <xref:System.Windows.Controls.ControlTemplate>.  
@@ -53,7 +53,7 @@ Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Win
  [ComboBox — style i szablony](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
  [ContextMenu — style i szablony](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
  [DataGrid — style i szablony](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [Syles selektora daty i szablony](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
+ [DatePicker — style i szablony](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
  [DocumentViewer — style i szablony](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
  [Style i szablony ekspandera](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
  [Style i szablony klatek](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
@@ -63,18 +63,18 @@ Formanty w systemie Windows Presentation Foundation (WPF) mają <xref:System.Win
  [ListView — style i szablony](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
  [Style i szablony menu](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
  [NavigationWindow — style i szablony](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox — style i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
+ [Style PasswordBox i szablony](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
  [ProgressBar — style i szablony](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
  [RadioButton — style i szablony](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton — style i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
+ [Style RepeatButton i szablony](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
  [ScrollBar — style i szablony](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
  [ScrollViewer — style i szablony](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
  [Style i szablony suwaka](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
  [StatusBar — style i szablony](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
  [TabControl — style i szablony](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
  [TextBox — style i szablony](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Style i szablony miniatury](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton — style i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
+ [Style przycisku przewijania i szablony](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
+ [Style ToggleButton i szablony](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
  [ToolBar — style i szablony](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
  [ToolTip — style i szablony](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
  [TreeView — style i szablony](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  

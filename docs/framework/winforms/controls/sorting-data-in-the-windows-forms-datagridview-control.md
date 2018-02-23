@@ -1,55 +1,56 @@
 ---
 title: Sortowanie danych w formancie DataGridView formularzy systemu Windows
-ms.custom: 
-ms.date: 03/30/2017
+ms.date: 02/13/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - data [Windows Forms], sorting in grids
 - data grids [Windows Forms], sorting data
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
-caps.latest.revision: "9"
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a2327c6d9696bc5fb54943eb8bbce9d4795a378b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6ab4ec958a4275ed805ed33ee3eff9ab67fde3dc
+ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/22/2018
 ---
-# <a name="sorting-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="c8675-102">Sortowanie danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="c8675-102">Sorting Data in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="c8675-103">Domyślnie użytkownicy będą mogli sortować dane w `DataGridView` kontroli przez kliknięcie nagłówka kolumny pola tekstowego.</span><span class="sxs-lookup"><span data-stu-id="c8675-103">By default, users can sort the data in a `DataGridView` control by clicking the header of a text box column.</span></span> <span data-ttu-id="c8675-104">Można zmodyfikować `SortMode` właściwości określonych kolumn, aby umożliwić użytkownikom sortowanie według innych typów kolumn, gdy warto to zrobić.</span><span class="sxs-lookup"><span data-stu-id="c8675-104">You can modify the `SortMode` property of specific columns to allow users to sort by other column types when it makes sense to do so.</span></span> <span data-ttu-id="c8675-105">Można również sortować dane programowo według dowolnej kolumny lub wielu kolumn.</span><span class="sxs-lookup"><span data-stu-id="c8675-105">You can also sort the data programmatically by any column, or by multiple columns.</span></span>  
-  
-## <a name="in-this-section"></a><span data-ttu-id="c8675-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="c8675-106">In This Section</span></span>  
- [<span data-ttu-id="c8675-107">Tryb sortowania kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8675-107">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="c8675-108">Opisuje opcje sortowania danych w formancie.</span><span class="sxs-lookup"><span data-stu-id="c8675-108">Describes the options for sorting data in the control.</span></span>  
-  
- [<span data-ttu-id="c8675-109">Instrukcje: ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8675-109">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
- <span data-ttu-id="c8675-110">Opisuje sposób użytkownicy mogli sortować według kolumn, które nie są domyślnie sortowania.</span><span class="sxs-lookup"><span data-stu-id="c8675-110">Describes how to enable users to sort by columns that are not sortable by default.</span></span>  
-  
- [<span data-ttu-id="c8675-111">Instrukcje: dostosowywanie sortowania w kontrolce DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8675-111">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="c8675-112">Opisuje programowane sortowanie danych oraz dostosowywanie sortowania za pomocą <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> zdarzenia lub implementując <xref:System.Collections.IComparer> interfejsu.</span><span class="sxs-lookup"><span data-stu-id="c8675-112">Describes how to sort data programmatically and how to customize sorting by using the <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> event or by implementing the <xref:System.Collections.IComparer> interface.</span></span>  
-  
-## <a name="reference"></a><span data-ttu-id="c8675-113">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="c8675-113">Reference</span></span>  
- <xref:System.Windows.Forms.DataGridView>  
- <span data-ttu-id="c8675-114">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.</span><span class="sxs-lookup"><span data-stu-id="c8675-114">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
-  
- <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
- <span data-ttu-id="c8675-115">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView.Sort%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="c8675-115">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.Sort%2A> method.</span></span>  
-  
- <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
- <span data-ttu-id="c8675-116">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="c8675-116">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property.</span></span>  
-  
- <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
- <span data-ttu-id="c8675-117">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumnSortMode> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="c8675-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumnSortMode> enumeration.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="c8675-118">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="c8675-118">See Also</span></span>  
- [<span data-ttu-id="c8675-119">DataGridView, kontrolka</span><span class="sxs-lookup"><span data-stu-id="c8675-119">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
- [<span data-ttu-id="c8675-120">Typy kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="c8675-120">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)
+# <a name="sorting-data-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="43316-102">Sortowanie danych w formancie DataGridView formularzy systemu Windows</span><span class="sxs-lookup"><span data-stu-id="43316-102">Sorting data in the Windows Forms DataGridView control</span></span>
+
+<span data-ttu-id="43316-103">Domyślnie użytkownicy będą mogli sortować dane w <xref:System.Windows.Forms.DataGridView> kontroli przez kliknięcie nagłówka kolumny pola tekstowego (lub naciskając klawisz F3, gdy komórka pole tekstowe koncentruje się na .NET Framework 4.7.2 i nowszych wersjach).</span><span class="sxs-lookup"><span data-stu-id="43316-103">By default, users can sort the data in a <xref:System.Windows.Forms.DataGridView> control by clicking the header of a text box column (or by pressing F3 when a text box cell is focused on .NET Framework 4.7.2 and later versions).</span></span> <span data-ttu-id="43316-104">Można zmodyfikować <xref:System.Windows.Forms.DataGridViewColumn.SortMode> właściwości określonych kolumn, aby umożliwić użytkownikom sortowanie według innych typów kolumn, gdy warto to zrobić.</span><span class="sxs-lookup"><span data-stu-id="43316-104">You can modify the <xref:System.Windows.Forms.DataGridViewColumn.SortMode> property of specific columns to allow users to sort by other column types when it makes sense to do so.</span></span> <span data-ttu-id="43316-105">Można również sortować dane programowo według dowolnej kolumny lub wielu kolumn.</span><span class="sxs-lookup"><span data-stu-id="43316-105">You can also sort the data programmatically by any column, or by multiple columns.</span></span>
+
+## <a name="in-this-section"></a><span data-ttu-id="43316-106">W tej sekcji</span><span class="sxs-lookup"><span data-stu-id="43316-106">In this section</span></span>
+
+[<span data-ttu-id="43316-107">Tryb sortowania kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="43316-107">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-sort-modes-in-the-windows-forms-datagridview-control.md)  
+<span data-ttu-id="43316-108">Opisuje opcje sortowania danych w formancie.</span><span class="sxs-lookup"><span data-stu-id="43316-108">Describes the options for sorting data in the control.</span></span>
+
+[<span data-ttu-id="43316-109">Instrukcje: ustawianie trybów sortowania kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="43316-109">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/set-the-sort-modes-for-columns-wf-datagridview-control.md)  
+<span data-ttu-id="43316-110">Opisuje sposób użytkownicy mogli sortować według kolumn, które nie są domyślnie sortowania.</span><span class="sxs-lookup"><span data-stu-id="43316-110">Describes how to enable users to sort by columns that are not sortable by default.</span></span>
+
+[<span data-ttu-id="43316-111">Instrukcje: dostosowywanie sortowania w kontrolce DataGridView Windows Forms</span><span class="sxs-lookup"><span data-stu-id="43316-111">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
+<span data-ttu-id="43316-112">Opisuje programowane sortowanie danych oraz dostosowywanie sortowania za pomocą <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> zdarzenia lub implementując <xref:System.Collections.IComparer> interfejsu.</span><span class="sxs-lookup"><span data-stu-id="43316-112">Describes how to sort data programmatically and how to customize sorting by using the <xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> event or by implementing the <xref:System.Collections.IComparer> interface.</span></span>
+
+## <a name="reference"></a><span data-ttu-id="43316-113">Tematy pomocy</span><span class="sxs-lookup"><span data-stu-id="43316-113">Reference</span></span>
+
+<xref:System.Windows.Forms.DataGridView>  
+<span data-ttu-id="43316-114">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView> formantu.</span><span class="sxs-lookup"><span data-stu-id="43316-114">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+
+<xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
+<span data-ttu-id="43316-115">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridView.Sort%2A> metody.</span><span class="sxs-lookup"><span data-stu-id="43316-115">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.Sort%2A> method.</span></span>
+
+<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>  
+<span data-ttu-id="43316-116">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> właściwości.</span><span class="sxs-lookup"><span data-stu-id="43316-116">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property.</span></span>
+
+<xref:System.Windows.Forms.DataGridViewColumnSortMode>  
+<span data-ttu-id="43316-117">Zawiera dokumentacja referencyjna dla <xref:System.Windows.Forms.DataGridViewColumnSortMode> wyliczenia.</span><span class="sxs-lookup"><span data-stu-id="43316-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridViewColumnSortMode> enumeration.</span></span>
+
+## <a name="see-also"></a><span data-ttu-id="43316-118">Zobacz także</span><span class="sxs-lookup"><span data-stu-id="43316-118">See also</span></span>
+
+[<span data-ttu-id="43316-119">DataGridView, kontrolka</span><span class="sxs-lookup"><span data-stu-id="43316-119">DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)  
+[<span data-ttu-id="43316-120">Typy kolumn w kontrolce DataGridView formularzy Windows Forms</span><span class="sxs-lookup"><span data-stu-id="43316-120">Column Types in the Windows Forms DataGridView Control</span></span>](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  

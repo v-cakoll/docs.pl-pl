@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: d3cebc74-c392-497b-b1e6-62a262eabe05
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: fe65f81af28509c577e014353c43b72d34375459
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5e1a899223d0f6d15e6851c9320275bafe876118
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-c"></a>Anulowanie pozostałych zadań asynchronicznych po jednym jest pełna (C#)
 Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> metody razem z <xref:System.Threading.CancellationToken>, możesz anulować wszystkie pozostałe zadania po zakończeniu zadania. `WhenAny` Metoda przyjmuje argument, który jest kolekcji zadań. Metoda uruchamiania wszystkich zadań i zwraca jedno zadanie. Pojedyncze zadanie zakończeniu po ukończeniu zadań w kolekcji.  
@@ -26,7 +27,7 @@ Za pomocą <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWith
 >  Uruchamianie przykładów, musi mieć program Visual Studio 2012 lub nowszej i .NET Framework 4.5 lub nowszej zainstalowany na tym komputerze.  
   
 ## <a name="downloading-the-example"></a>Pobieranie przykładu  
- Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046) , a następnie wykonaj następujące kroki.  
+ Możesz pobrać pełną projekt Windows Presentation Foundation (WPF) z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) , a następnie wykonaj następujące kroki.  
   
 1.  Dekompresja pobranego pliku, a następnie uruchom program Visual Studio.  
   
@@ -86,7 +87,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  Wywołanie `WhenAny` w kolekcji zadań. `WhenAny`Zwraca `Task(Of Task(Of Integer))` lub `Task<Task<int>>`.  Oznacza to `WhenAny` zwraca zadanie, które ocenia pojedynczej `Task(Of Integer)` lub `Task<int>` po jest oczekiwane. Jednego zadania jest pierwszym zadaniem w kolekcji, aby zakończyć. Zadanie, które zostało zakończone najpierw jest przypisany do `firstFinishedTask`. Typ `firstFinishedTask` jest <xref:System.Threading.Tasks.Task%601> gdzie `TResult` jest liczbą całkowitą, ponieważ jest to typ zwracany `ProcessURLAsync`.  
+4.  Wywołanie `WhenAny` w kolekcji zadań. `WhenAny` Zwraca `Task(Of Task(Of Integer))` lub `Task<Task<int>>`.  Oznacza to `WhenAny` zwraca zadanie, które ocenia pojedynczej `Task(Of Integer)` lub `Task<int>` po jest oczekiwane. Jednego zadania jest pierwszym zadaniem w kolekcji, aby zakończyć. Zadanie, które zostało zakończone najpierw jest przypisany do `firstFinishedTask`. Typ `firstFinishedTask` jest <xref:System.Threading.Tasks.Task%601> gdzie `TResult` jest liczbą całkowitą, ponieważ jest to typ zwracany `ProcessURLAsync`.  
   
     ```csharp  
     // ***Call WhenAny and then await the result. The task that finishes   
@@ -115,7 +116,7 @@ async Task<int> ProcessURLAsync(string url, HttpClient client, CancellationToken
   
  Zwróć uwagę, że musisz dodać odwołanie do <xref:System.Net.Http>.  
   
- Można pobrać projektu z [próbki Async: poprawnie dostrajanie Twoja aplikacja](http://go.microsoft.com/fwlink/?LinkId=255046).  
+ Można pobrać projektu z [próbki Async: poprawnie dostrajanie Twoja aplikacja](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea).  
   
 ```csharp  
 using System;  
@@ -269,4 +270,4 @@ namespace CancelAfterOneTask
  <xref:System.Threading.Tasks.Task.WhenAny%2A>  
  [Dostrajanie aplikacji Async (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)  
  [Programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md)  
- [Próbka asynchronicznych: Dostrajanie aplikacji dokładnej](http://go.microsoft.com/fwlink/?LinkId=255046)
+ [Próbka asynchronicznych: Dostrajanie aplikacji dokładnej](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

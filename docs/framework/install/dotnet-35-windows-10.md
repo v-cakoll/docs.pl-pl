@@ -6,12 +6,13 @@ ms.author: mairaw
 ms.date: 11/27/2017
 ms.topic: article
 ms.prod: .net-framework
-ms.workload: dotnet
-ms.openlocfilehash: ca56bfb37cee60ab014dada7b5d72b74b375dd7f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Zainstaluj program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8
 
@@ -39,4 +40,4 @@ Można włączyć program .NET Framework 3.5 za pomocą Panelu sterowania system
 
 Podczas instalacji, może wystąpić błąd 0x800f0906, 0x800f0907, 0x800f081f lub 0x800F0922, w którym to przypadku odwoływać się do [błąd instalacji programu .NET Framework 3.5: 0x800f0906, 0x800f0907 lub 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) na temat sposobu rozwiązania tych problemy.
 
-Jeśli nie wszystkie metody omówione w poprzednim artykule, lub jeśli nie masz połączenia internetowego jest niezbędne do korzystania z nośnika instalacyjnego systemu Windows. Aby uzyskać więcej informacji, zobacz [wdrożyć program .NET Framework 3.5 przy użyciu Deployment Image Servicing and Management (DISM)](https://technet.microsoft.com/library/Dn482069.aspx). Jeśli nie masz nośnika instalacyjnego, zobacz [Utwórz nośnik instalacyjny dla systemu Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Jeśli nie wszystkie metody omówione w poprzednim artykule, lub jeśli nie masz połączenia internetowego jest niezbędne do korzystania z nośnika instalacyjnego systemu Windows. Aby uzyskać więcej informacji, zobacz [wdrożyć program .NET Framework 3.5 przy użyciu Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Jeśli nie masz nośnika instalacyjnego, zobacz [Utwórz nośnik instalacyjny dla systemu Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

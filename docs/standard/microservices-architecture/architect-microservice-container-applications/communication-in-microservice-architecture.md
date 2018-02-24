@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f373119f4d221745063688a9a5211d5ae11598b7
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
@@ -47,7 +47,7 @@ Jeśli komunikacja ma jeden odbiornik lub wieloma odbiornikami, jest zdefiniowan
 
 Aplikacja mikrousługi często używają kombinacji tych stylów komunikacji. Najczęściej spotykanym typem jest jeden odbiornik komunikacji przy użyciu protokołu synchroniczne, takich jak HTTP/HTTPS podczas wywoływania regularnej HTTP interfejsu API sieci Web. Mikrousług zwykle także używać protokoły komunikacji asynchronicznej między mikrousług.
 
-Osie te są warto wiedzieć, masz jasności mechanizmów komunikacyjnych, ale nie są ważne problemy podczas kompilowania mikrousług. Asynchroniczne rodzaj wykonywanie wątków klienta nawet asynchroniczne charakter wybranego protokołu są ważne punkty składników podczas integrowania mikrousług. Co *jest* ważna jest możliwość integracji z mikrousług asynchronicznie przy zachowaniu niezależność mikrousług, jak wyjaśniono w poniższej sekcji.
+Osie te są warto wiedzieć, masz jasności mechanizmów komunikacyjnych, ale nie są ważne problemy podczas kompilowania mikrousług. Ani asynchronicznego rodzaj wykonanie wątku klienta ani asynchronicznego rodzaj wybranego protokołu nie jest ważne punkty składników podczas integrowania mikrousług. Co *jest* ważna jest możliwość integracji z mikrousług asynchronicznie przy zachowaniu niezależność mikrousług, jak wyjaśniono w poniższej sekcji.
 
 ## <a name="asynchronous-microservice-integration-enforces-microservices-autonomy"></a>Integracja asynchroniczne mikrousługi wymusza Autonomia mikrousługi firmy
 

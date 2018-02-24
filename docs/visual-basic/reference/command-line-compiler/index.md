@@ -1,10 +1,9 @@
 ---
-title: "Kompilator wierszy poleceń w Visual Basic"
-ms.date: 07/20/2015
+title: Kompilator w wierszu polecenia programu Visual Basic
+ms.date: 02/20/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - compilers [Visual Basic], Visual Basic options
@@ -13,28 +12,32 @@ helpviewer_keywords:
 - compiler options, Visual Basic
 - Visual Basic compiler, options
 ms.assetid: 6b57c444-50c7-4b88-8f59-ed65cff5e05c
-caps.latest.revision: "16"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 7230e62a6ce201209df41ad457fbd93f3a5c866f
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: mairaw
+ms.author: mairaw
+ms.openlocfilehash: 3b1219a5965352057ab6fe564282394e14f6d063
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/23/2018
 ---
-# <a name="visual-basic-command-line-compiler"></a>Kompilator wierszy poleceń w Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora wiersza polecenia stanowi alternatywę dla kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Ta sekcja zawiera opisy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] — opcje kompilatora.  
+# <a name="visual-basic-command-line-compiler"></a>Kompilator w wierszu polecenia programu Visual Basic
+
+Kompilator wiersza polecenia programu Visual Basic stanowi alternatywę dla kompilowanie programów w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Ta sekcja zawiera opisy opcje kompilatora Visual Basic.
+
+Każdy — opcja kompilatora jest dostępny w dwóch formach:-opcja i/Option. Dokumentacja języka Visual Basic pokazuje tylko formularz/Option.
   
-## <a name="in-this-section"></a>W tej sekcji  
- [Tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
- W tym artykule opisano [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora wiersza polecenia, który stanowi alternatywę dla kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] IDE.  
+## <a name="in-this-section"></a>W tej sekcji
+
+[Tworzenie z wiersza polecenia](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)  
+W tym artykule opisano kompilatora wiersza polecenia języka Visual Basic, który stanowi alternatywę dla kompilowanie programów w programie Visual Studio IDE.
+
+[Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
+Opcje kompilatora list w tabeli alfabetycznym
+
+[Opcje kompilatora Visual Basic według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
+Przedstawia opcje kompilatora w grupy funkcjonalne.
   
- [Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- Wyświetla listę opcji kompilatora tabeli alfabetycznym.  
-  
- [Opcje kompilatora Visual Basic według kategorii](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md)  
- Przedstawia opcje kompilatora w grupy funkcjonalne.  
-  
-## <a name="related-sections"></a>Sekcje pokrewne  
- [Visual Basic](../../../visual-basic/index.md)  
- Punkt początkowy [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] pomocy.
+## <a name="related-sections"></a>Sekcje pokrewne
+
+[Przewodnik po Visual Basic](../../index.md)  
+Punkt początkowy dla dokumentacji Visual Basic.

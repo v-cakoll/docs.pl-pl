@@ -2,17 +2,18 @@
 title: "Ciągi interpolowane (C#)"
 ms.date: 10/18/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b8a1fe0be82a0e09d61c66ed463199ff626c9faa
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Ciągi interpolowane (odwołanie w C#)
 
@@ -23,7 +24,7 @@ Argumenty ciągu interpolowanym są łatwiejsze do zrozumienia niż [ciąg forma
 ```csharp  
 Console.WriteLine($"Name = {name}, hours = {hours:hh}");
 ```  
-zawiera dwa interpolowanego wyrażenia, "{name}" i "{godziny: gg}". Ciąg formatu złożonego równoważne jest:
+zawiera dwa interpolowanego wyrażenia, "{name}" i "{godziny: hh}". Ciąg formatu złożonego równoważne jest:
 
 ```csharp
 Console.WriteLine("Name = {0}, hours = {1:hh}", name, hours); 
@@ -80,7 +81,7 @@ Istnieją trzy niejawne konwersje typów w ciągu interpolowanym:
 
    Należy pamiętać, że ciągu interpolowanym mogą być kontrolowane tylko przy użyciu odbicia. Jeśli jest przekazywana do ciągu formatowania metody, takie jak <xref:System.Console.WriteLine(System.String)>, jego format elementy zostaną rozwiązane i został zwrócony ciąg wyniku. 
 
-3. Konwersja ciągu interpolowanym do <xref:System.FormattableString> zmienna, która reprezentuje ciąg formatu złożonego. Zapoznanie się ciąg formatu złożone i sposób renderowania w związku z tym ciąg może na przykład pomóc w ochronie przed atakami iniekcji zostały kompilowania zapytania. <xref:System.FormattableString>zawiera również <xref:System.FormattableString.ToString> przeciążenia, które pozwalają tworzyć ciągów wynikowych dla <xref:System.Globalization.CultureInfo.InvariantCulture> i <xref:System.Globalization.CultureInfo.CurrentCulture>.  Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają podwójne nawiasy klamrowe, dopóki nie zostanie sformatowany.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1} i tak dalej.  
+3. Konwersja ciągu interpolowanym do <xref:System.FormattableString> zmienna, która reprezentuje ciąg formatu złożonego. Zapoznanie się ciąg formatu złożone i sposób renderowania w związku z tym ciąg może na przykład pomóc w ochronie przed atakami iniekcji zostały kompilowania zapytania. <xref:System.FormattableString> zawiera również <xref:System.FormattableString.ToString> przeciążenia, które pozwalają tworzyć ciągów wynikowych dla <xref:System.Globalization.CultureInfo.InvariantCulture> i <xref:System.Globalization.CultureInfo.CurrentCulture>.  Wszystkie wystąpienia podwójne nawiasy klamrowe ("{{" i "}}") pozostają podwójne nawiasy klamrowe, dopóki nie zostanie sformatowany.  Wszystkie wyrażenia interpolacji zawarte są konwertowane na {0}, {1} i tak dalej.  
 
    [!code-csharp[interpolated-strings3](../../../../samples/snippets/csharp/language-reference/keywords/interpolated-strings3.cs#1)]  
 

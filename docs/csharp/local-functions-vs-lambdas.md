@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 20312b58a24dc991791edad4bb92d3a8ca6d501a
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 5aa097c19a86e9ae62a37d91fb1b54067280286d
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>Funkcje lokalne w porównaniu do wyrażenia lambda
 
@@ -38,19 +38,19 @@ Ostateczne przypisania zasad dotyczy również zmienne, które są przechwytywan
 Trzecie kompilator może wykonywać analizy statycznej, który zapewnia funkcje lokalnego można zdecydowanie przypisać przechwyconych zmiennych w otaczającym zakresie. Rozważmy następujący przykład:
 
 ```csharp
-bool M()
+int M()
 {
     int y;
-    Local();
+    LocalFunction();
     return y;
 
-    void Local() => y = 0;
+    void LocalFunction() => y = 0;
 }
 ```
 
-Kompilator może określić, że `Local` ostatecznie przypisuje `y` po wywołaniu. Ponieważ `Local` jest wywoływana przed `return` instrukcji, `y` definitiely przydzielono `return` instrukcji.
+Kompilator może określić, że `LocalFunction` ostatecznie przypisuje `y` po wywołaniu. Ponieważ `LocalFunction` jest wywoływana przed `return` instrukcji, `y` definitiely przydzielono `return` instrukcji.
 
-Analizy, który umożliwia tym analizy umożliwia czwarty różnicy.
+Analizy, który włącza analizę przykład umożliwia czwarty różnicy.
 W zależności od ich użycia funkcje lokalne mogą uniknąć Alokacje sterty zawsze są niezbędne dla wyrażeń lambda. Jeśli funkcja lokalna nigdy nie jest konwertowany na delegata i Brak zmiennych przechwycone przez funkcję lokalne są przechwytywane przez inne wyrażenia lambda lub funkcje lokalne, które są konwertowane na obiekty delegowane, kompilator można uniknąć Alokacje sterty. 
 
 Należy wziąć pod uwagę w tym przykładzie asynchronicznych:

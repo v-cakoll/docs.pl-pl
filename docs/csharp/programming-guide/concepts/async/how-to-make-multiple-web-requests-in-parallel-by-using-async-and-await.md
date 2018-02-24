@@ -5,17 +5,18 @@ ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11b6fef5356f97c53dc973b13eb5f1e8c31dbe72
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 509f9e690a5157c2d80ba9726354ce57a9d7ff26
+ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>Porady: wiele żądań sieci Web równolegle za pomocą async i await (C#)
 W metodzie asynchronicznej zadania są uruchamiane, gdy są tworzone. [Await](../../../../csharp/language-reference/keywords/await.md) operator jest stosowany do zadań w momencie w metodzie, której nie można kontynuować przetwarzania przed zakończeniem zadania. Często zadania jest oczekiwane, natychmiast po utworzeniu, jak przedstawiono na poniższym przykładzie.  
@@ -47,7 +48,7 @@ var result = await myTask;
   
  Na przykład innego uruchamiania wielu zadań jednocześnie, zobacz [porady: rozszerzanie async wskazówki za pomocą Task.WhenAll (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md).  
   
- Można pobrać kodu w tym przykładzie z [przykłady kodu dewelopera](http://go.microsoft.com/fwlink/?LinkId=254906).  
+ Można pobrać kodu w tym przykładzie z [przykłady kodu dewelopera](https://code.msdn.microsoft.com/Async-Make-Multiple-Web-49adb82e).  
   
 ### <a name="to-set-up-the-project"></a>Aby skonfigurować projekt  
   
@@ -75,9 +76,9 @@ var result = await myTask;
   
 3.  Dodaj następujące metody pomocy technicznej do projektu:  
   
-    -   `ProcessURLAsync`używa <xref:System.Net.Http.HttpClient> metodę, aby pobrać zawartość witryny sieci Web w postaci tablicy bajtów. Metoda obsługi `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
+    -   `ProcessURLAsync` używa <xref:System.Net.Http.HttpClient> metodę, aby pobrać zawartość witryny sieci Web w postaci tablicy bajtów. Metoda obsługi `ProcessURLAsync` następnie wyświetla i zwraca długość tablicy.  
   
-    -   `DisplayResults`Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Pokazuje to wyświetlenie podczas każdego zadania został pobrany.  
+    -   `DisplayResults` Wyświetla liczbę bajtów w tablicy bajtowej dla każdego adresu URL. Pokazuje to wyświetlenie podczas każdego zadania został pobrany.  
   
      Skopiuj następujące metody i wklej je po `startButton_Click` obsługi zdarzeń w MainWindow.xaml.cs.  
   

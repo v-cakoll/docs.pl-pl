@@ -2,21 +2,22 @@
 title: "Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - exception handling [C#]
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 458f6770a89f28dce1e441cd38ec9a56a1c58bc1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3c4ff558f2b850e195138dcc8901d6d860365cfc
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>Wyjątki i obsługa wyjątków (Przewodnik programowania w języku C#)
 Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wyjątkowych sytuacji, które wystąpić, gdy program jest uruchomiony. Obsługa używa wyjątków `try`, `catch`, i `finally` słów kluczowych, aby spróbować akcje, które może się nie powieść, do obsługi błędów w przypadku podjęcia decyzji, czy jest uzasadnione, aby to zrobić, a także aby wyczyścić zasoby później. Wyjątki mogą być generowane przez środowisko uruchomieniowe języka wspólnego (CLR) programu .NET Framework lub żadnych bibliotek innej firmy lub przez kod aplikacji. Wyjątki są tworzone za pomocą `throw` — słowo kluczowe.  
@@ -48,7 +49,7 @@ Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wy
   
 -   Kod w `finally` blok jest wykonywana nawet wtedy, gdy jest zgłaszany wyjątek. Użyj `finally` bloku, aby zwolnić zasoby, na przykład zamknąć wszystkie strumienie lub pliki, które były otwarte w `try` bloku.  
   
--   Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizmu obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [strukturalnych obsługi wyjątków (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [A awarii kursu na głębokości systemu Win32 strukturalnych obsługi wyjątków](http://go.microsoft.com/fwlink/?LinkId=119654).  
+-   Zarządzane wyjątki w programie .NET Framework są wdrażane na podstawie mechanizmu obsługi wyjątków strukturalnych Win32. Aby uzyskać więcej informacji, zobacz [strukturalnych obsługi wyjątków (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp) i [A awarii kursu na głębokości systemu Win32 strukturalnych obsługi wyjątków](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm).  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  Zobacz następujące tematy, aby uzyskać więcej informacji na temat wyjątki i obsługa wyjątków:  
@@ -63,7 +64,7 @@ Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wy
   
 -   [Porady: obsługa wyjątków za pomocą bloku try/catch (C# przewodnik programowania w języku)](../../../csharp/programming-guide/exceptions/how-to-handle-an-exception-using-try-catch.md)  
   
--   [Porady: wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
+-   [Instrukcje: wykonywanie czyszczenia kodu za pomocą instrukcji finally](../../../csharp/programming-guide/exceptions/how-to-execute-cleanup-code-using-finally.md)  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -77,6 +78,3 @@ Obsługa funkcji pomocy wyjątków języka C# uwzględniać nieoczekiwany lub wy
  [try-finally](../../../csharp/language-reference/keywords/try-finally.md)  
  [try-catch-finally](../../../csharp/language-reference/keywords/try-catch-finally.md)  
  [Wyjątki](../../../standard/exceptions/index.md)  
- [Hierarchia wyjątków](http://msdn.microsoft.com/library/f7d68675-be06-40fb-a555-05f0c5a6f66b)  
- [Pisanie kodu .NET niezawodnej](http://go.microsoft.com/fwlink/?LinkId=112400)  
- [Minizrzutów dla określonych wyjątków](http://go.microsoft.com/fwlink/?LinkId=112408)

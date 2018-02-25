@@ -1,7 +1,7 @@
 ---
 title: Format pliku zestawu .NET
 description: "Dowiedz się więcej o formacie pliku zestawu .NET, który jest używany do opisywania i zawierają aplikacji .NET i bibliotek."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdd76558852992a5c2f6b7def83e30fb004f93b6
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: d219a584f2f5521fc3b0fd00ab037a8e486c9050
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="net-assembly-file-format"></a>Format pliku zestawu .NET
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 01/05/2018
 
 > Każdy składnik interfejsu wiersza polecenia niesie metadanych dla deklaracji, implementacji i odwołuje się do określonego dla tego składnika. W związku z tym metadane specyficzne dla składnika jest określana jako składnik metadane, a wynikowy składnik jest nazywany można samoopisujące — z ECMA 335 I.9.1, składników i zestawów.
 
-Format w pełni jest określona i ujętą w standardzie ECMA-335. Użyj tego formatu, wszystkie kompilatory .NET i środowisk uruchomieniowych. Obecność udokumentowanych i rzadko zaktualizowane format binarny został najważniejszych korzyści (raczej wymaganie) współdziałanie. Format ostatniej aktualizacji w sposób merytorycznych w 2005 (.NET 2.0), aby pomieścić ogólne i architektury procesora.
+W pełni określić i znormalizowany w formacie [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm). Użyj tego formatu, wszystkie kompilatory .NET i środowisk uruchomieniowych. Obecność udokumentowanych i rzadko zaktualizowane format binarny został najważniejszych korzyści (raczej wymaganie) współdziałanie. Format ostatniej aktualizacji w sposób merytorycznych w 2005 (.NET 2.0), aby pomieścić ogólne i architektury procesora.
 
 Format jest funkcja Procesora i systemu operacyjnego. Został on użyty jako część implementacji .NET, które odnoszą się do wielu procesorów i mikroukłady. Gdy sam format ma dziedzictwa systemu Windows, jest implementable w dowolnym systemie operacyjnym. Jego raczej najważniejszych wybór współdziałania systemu operacyjnego jest, że większość wartości są przechowywane w formacie little endian. Nie ma określonego koligacji do rozmiaru wskaźnika maszyny (na przykład 32-bitowy, 64-bitowe).
 
@@ -41,4 +41,4 @@ Nagłówki zestawu z ECMA 335 II.25.1, strukturę środowiska uruchomieniowego f
 
 ## <a name="processing-the-assemblies"></a>Przetwarzanie zestawów
 
-Istnieje możliwość zapisu do procesu zestawów narzędzia lub interfejsów API. Informacje o zestawie umożliwia podejmowanie decyzji programowych w czasie wykonywania, ponowne zapisywanie zestawów, zapewniając interfejsu API IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType>i [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrym przykładem narzędzia, które są często używane w tym celu.
+Istnieje możliwość zapisu do procesu zestawów narzędzia lub interfejsów API. Informacje o zestawie umożliwia podejmowanie decyzji programowych w czasie wykonywania, ponowne zapisywanie zestawów, zapewniając interfejsu API IntelliSense w edytorze i generowanie dokumentacji. <xref:System.Reflection?displayProperty=nameWithType> i [Mono.Cecil](http://www.mono-project.com/docs/tools+libraries/libraries/Mono.Cecil/) są dobrym przykładem narzędzia, które są często używane w tym celu.

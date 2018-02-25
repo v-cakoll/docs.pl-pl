@@ -13,11 +13,11 @@ ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b4e19734bc1b7f394864a44ca0489c669cd63a61
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 7e3d628fe4b4a8f01e692a70892658fceeb87953
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="the-net-portability-analyzer"></a>Analizator przenośność .NET
 
@@ -25,8 +25,8 @@ Mają być bibliotek obejmującego wiele platform? Chcesz zobaczyć, jak dużo p
 
 ## <a name="new-targets"></a>Nowe elementy docelowe
 
-* [Oprogramowanie .NET core](https://dotnetfoundation.org/net-core): ma modularny projekt, wykorzystuje side-by-side i jest przeznaczony dla scenariuszy wieloplatformowych. Side-by-side pozwala na przyjęcie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
-* [Platformy ASP.NET Core](https://dotnetfoundation.org/asp-net-core): to nowoczesnych sieci web — architektura oparta na .NET Core, dzięki czemu deweloperzy takich samych korzyści.
+* [Oprogramowanie .NET core](../../core/index.md): ma modularny projekt, wykorzystuje side-by-side i jest przeznaczony dla scenariuszy wieloplatformowych. Side-by-side pozwala na przyjęcie nowych wersji platformy .NET Core bez przerywania innych aplikacji.
+* [Platformy ASP.NET Core](/aspnet/core): to nowoczesnych sieci web — architektura oparta na .NET Core, dzięki czemu deweloperzy takich samych korzyści.
 * [Platforma uniwersalna systemu Windows](https://blogs.msdn.microsoft.com/dotnet/2014/04/24/net-native-performance): poprawić wydajność aplikacji Sklepu Windows działających w x64 i architekturą ARM przy użyciu platformy .NET Native statycznych kompilacji. 
 * + Rozszerzenia platformy .NET core: Zawiera podstawowych interfejsów API .NET oprócz innych interfejsów API w ekosystemie .NET, takie jak usługi WCF, platformy ASP.NET Core języka FSharp i Azure.
 * .NET standard + rozszerzenia platformy: Obejmuje standardowych interfejsów API architektury .NET oprócz innych ekosystemu .NET, takie jak usługi WCF, platformy ASP.NET Core języka FSharp i Azure.
@@ -47,8 +47,8 @@ Po zakończeniu analizy, zobaczysz raportu przenośność .NET. Tylko typy, któ
 
 Nie chcesz użyć programu Visual Studio? Umożliwia także analizator przenośność z wiersza polecenia. Wystarczy pobrać [analizator przenośność interfejsu API](http://www.microsoft.com/download/details.aspx?id=42678).
 
-*   Wpisz następujące polecenie, aby przeanalizować bieżącego katalogu:`\...\ApiPort.exe analyze -f .`
-*   Do analizowania określonych listą plików .dll, wpisz następujące polecenie:`\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
+*   Wpisz następujące polecenie, aby przeanalizować bieżącego katalogu: `\...\ApiPort.exe analyze -f .`
+*   Do analizowania określonych listą plików .dll, wpisz następujące polecenie: `\...\ApiPort.exe analyze -f first.dll -f second.dll -f third.dll`
 
 .NET przenośność raport jest zapisywany jako plik programu Excel (*xlsx*) w bieżącym katalogu. **Szczegóły** karta w skoroszycie programu Excel zawiera więcej informacji.
 

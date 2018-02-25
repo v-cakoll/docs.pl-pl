@@ -2,20 +2,21 @@
 title: "Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4851938aafefd93aa9189aecbb3f5cdd9a09ea0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7f45bdc4a08922842b079be3ef9d112693ca5d7a
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>Porady: iterowanie drzewa katalogów (Przewodnik programowania w języku C#)
 Wyrażenie "Iterowanie drzewa katalogów" oznacza, że dostęp do każdego pliku w każdej zagnieżdżonej podkatalogu w folderze określonym katalogu głównym, wszelkie głębokość. Użytkownik nie musi mieć do otwierania każdego pliku. Podobnie można pobrać nazwy pliku lub podkatalogu co `string`, lub można pobrać dodatkowe informacje w postaci <xref:System.IO.FileInfo?displayProperty=nameWithType> lub <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> obiektu.  
@@ -59,9 +60,9 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  Jeśli zawartość drzewa katalogów, muszą być przechowywane w pamięci lub na dysku, najlepszym rozwiązaniem jest przechowywanie tylko <xref:System.IO.FileSystemInfo.FullName%2A> właściwości (typu `string`) dla każdego pliku. Ten ciąg następnie służy do tworzenia nowego <xref:System.IO.FileInfo> lub <xref:System.IO.DirectoryInfo> obiektu w razie potrzeby, lub Otwórz każdego pliku, który wymaga dodatkowego przetwarzania.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
- Kod iteracji niezawodne pliku musi uwzględniać wiele złożoności systemu plików. Aby uzyskać więcej informacji, zobacz [informacje techniczne dotyczące systemu plików NTFS](http://go.microsoft.com/fwlink/?LinkId=79488).  
+ Kod iteracji niezawodne pliku musi uwzględniać wiele złożoności systemu plików. Aby uzyskać więcej informacji dotyczących systemu plików, zobacz [informacje techniczne dotyczące systemu plików NTFS](https://technet.microsoft.com/library/81cc8a8a-bd32-4786-a849-03245d68d8e4).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO>  
- [LINQ i katalogi plików](http://msdn.microsoft.com/library/5a5d516c-0279-4a84-ac84-b87f54caa808)  
+ [LINQ i katalogi plików](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  [System plików i rejestr (C# przewodnik programowania w języku)](../../../csharp/programming-guide/file-system/index.md)

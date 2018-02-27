@@ -14,11 +14,11 @@ manager: wpickett
 ms.custom: mvc
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e538cb541ee2c59caf1feba4a31f86118c42c3ca
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: dabc7c0c4a0afab8edf7d2bab410bb9635821936
+ms.sourcegitcommit: 75a180acb5d8a2dbd4a52915ce8e980749fb1d05
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="introduction-to-net-and-docker"></a>Wprowadzenie do usług .NET i Docker
 
@@ -103,7 +103,7 @@ Przykłady użycia .NET Core 2.0. Używają Docker [kompilacji wieloetapowym](ht
 
 To repozytorium zawiera przykłady ilustrujące różne konfiguracje programu .NET Framework Docker. Obrazy te można użyć jako podstawa obrazów Docker.
 
-.NET framework 4.7
+**.NET framework 4.7**
 
 [Dotnet — przykład struktury: 4.7](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) przedstawiono podstawowe "hello world" użycie [.NET Framework 4.7](../../framework/whats-new/index.md#v47). Przedstawiono sposób tworzenia i wdrożyć aplikację jednostki uzależnionej na [obrazu docker .NET Framework 4.7](https://github.com/Microsoft/dotnet-framework-docker/blob/master/4.7/Dockerfile).
 
@@ -184,7 +184,7 @@ To repozytorium zawiera przykłady ilustrujące różne konfiguracje programu .N
 
 * [Obrazy emulatora bazy danych programu Microsoft Azure rozwiązania Cosmos w DockerHub](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) 
 
-* [Użyj emulatora usługi Azure rozwiązania Cosmos bazy danych dla lokalnych projektowania i testowania](/azure/cosmos-db/local-emulator.md#developing-with-the-emulator)
+* [Użyj emulatora usługi Azure rozwiązania Cosmos bazy danych dla lokalnych projektowania i testowania](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
 
 ## <a name="exploring-the-rich-docker-development-ecosystem"></a>Eksploracja rozbudowany ekosystem programowanie Docker
 
@@ -193,10 +193,10 @@ Teraz, kiedy znasz o różnych obrazy usługi Docker i platformy Docker, następ
 * [Ze sobą przy użyciu platformy .NET i Docker](https://blogs.msdn.microsoft.com/dotnet/2017/05/25/using-net-and-docker-together/)
 * [Projektowanie i tworzenie aplikacji na podstawie Mikrousługi i usługi kontenera platformy .NET](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
 * [Visual Studio Code Docker rozszerzenia](https://code.visualstudio.com/docs/languages/dockerfile)
-* [Dowiedz się, jak używać usługi Azure Service Fabric](/azure/service-fabric/index.md)
+* [Dowiedz się, jak używać usługi Azure Service Fabric](/azure/service-fabric/index)
 * [Przykładowe uruchomić pobierania sieci szkieletowej usług](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/)
-* [Korzyści wynikające z kontenerów systemu Windows](/virtualization/windowscontainers/about/index.md#video-overview)
-* [Praca z narzędzia Docker programu Visual Studio](/aspnet/core/publishing/visual-studio-tools-for-docker/index.md)
+* [Korzyści wynikające z kontenerów systemu Windows](/virtualization/windowscontainers/about/index#video-overview)
+* [Praca z narzędzia Docker programu Visual Studio](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
 * [Wdrażanie obrazów Docker z rejestru kontenera platformy Azure do wystąpień kontenera platformy Azure](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/)
 * [Profilowanie kodu Visual Studio](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container)
 * [Wprowadzenie ręce na z programem Visual Studio for Mac, kontenery i niekorzystającą kodu w chmurze](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)

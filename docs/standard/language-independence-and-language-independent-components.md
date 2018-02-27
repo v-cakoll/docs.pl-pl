@@ -19,18 +19,18 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec6f7df4cc42b71ab9c61e84b71a81f641a1d0b3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 81ccf70482c8b7f4acb0b18381ed4cf07edc06af
+ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 .NET Framework jest niezależny od języka. Oznacza to, że deweloper, można tworzyć w jednym z wielu języków, które odnoszą się do programu .NET Framework, takich jak C#, C + +/ CLI, Eiffel F #, IronPython, IronRuby, PowerBuilder, Visual Basic, Visual COBOL i środowiska Windows PowerShell. Dostępne typy i składniki bibliotek klas utworzonych dla programu .NET Framework, bez konieczności znajomości języka, w której zostały pierwotnie zapisany i bez konieczności postępuj zgodnie z oryginalnego języka Konwencji. Jeśli jesteś deweloperem składnika składnika jest dostępna przez dowolną aplikację .NET Framework, niezależnie od języka.  
@@ -150,7 +150,7 @@ ms.lasthandoff: 12/23/2017
 |Przeciążenie|[Overloads](#overloads)|Tylko właściwości i metody może być przeciążony.|37|  
 |Przeciążenie|[Overloads](#overloads)|Właściwości i metody mogą być przeciążone tylko na podstawie liczby i typów ich parametrów, z wyjątkiem operatory konwersji o nazwie `op_Implicit` i `op_Explicit`, które również można przeciążać na podstawie ich zwracanego typu.|38|  
 |Przeciążenie|--|Jeśli co najmniej dwie metody zgodne ze specyfikacją CLS zadeklarowana w typie ma tego samego nameand, do określonych wystąpień typu mają ten sam parametr i typy zwracane, thenall tych metod jest semantycznie równoważne w tych wystąpień typu.|48|  
-|Types|[Typ i podpisy elementów członkowskich typu](#Types)|<xref:System.Object?displayProperty=nameWithType>jest zgodny ze specyfikacją CLS. Inne klasy zgodne ze specyfikacją CLS są dziedziczy z klasy, zgodne ze specyfikacją CLS.|23|  
+|Types|[Typ i podpisy elementów członkowskich typu](#Types)|<xref:System.Object?displayProperty=nameWithType> jest zgodny ze specyfikacją CLS. Inne klasy zgodne ze specyfikacją CLS są dziedziczy z klasy, zgodne ze specyfikacją CLS.|23|  
 |Właściwości|[Właściwości](#properties)|Metody, które implementują metody pobierającej i ustawiającej shallbe właściwości oznaczone `SpecialName` w metadanych.|24|  
 |Właściwości|[Właściwości](#properties)|Metody dostępu właściwości zostaje być wszystkie statyczne, wszystkie wirtualne lub wszystkie można instancji.|26|  
 |Właściwości|[Właściwości](#properties)|Typ właściwości jest zwracany typ metody pobierającej i typ ostatni argument metody ustawiającej. Typy parametrów właściwości są typy parametrów metody pobierającej i wszystkie typy, ale ostatni parametr metody ustawiającej. Wszystkie te typy są zgodne ze specyfikacją CLS, a nie są zarządzane wskaźników (tj. nie mogą być przekazywane przez odwołanie).|27|  
@@ -187,7 +187,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Int64>|64-bitowej liczby całkowitej ze znakiem|  
 |<xref:System.Single>|Wartość zmiennoprzecinkową o pojedynczej dokładności|  
 |<xref:System.Double>|Wartość zmiennoprzecinkową podwójnej precyzji|  
-|<xref:System.Boolean>|`true`lub `false` typu wartości|  
+|<xref:System.Boolean>|`true` lub `false` typu wartości|  
 |<xref:System.Char>|Jednostka zakodowanego kodu UTF-16|  
 |<xref:System.Decimal>|Liczba dziesiętna non--zmiennoprzecinkowych|  
 |<xref:System.IntPtr>|Wskaźnika lub dojścia o rozmiarze określone platformy|  
@@ -201,7 +201,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.TypedReference>|Wskaźnik do obiektu i jego typ środowiska uruchomieniowego|Brak|  
 |<xref:System.UInt16>|16-bitową liczbę całkowitą bez znaku|<xref:System.Int32>|  
 |<xref:System.UInt32>|32-bitowa liczba całkowita bez znaku|<xref:System.Int64>|  
-|<xref:System.UInt64>|64-bitowej liczby całkowitej bez znaku|<xref:System.Int64>(może przepełnienie), <xref:System.Numerics.BigInteger>, lub<xref:System.Double>|  
+|<xref:System.UInt64>|64-bitowej liczby całkowitej bez znaku|<xref:System.Int64> (może przepełnienie), <xref:System.Numerics.BigInteger>, lub <xref:System.Double>|  
 |<xref:System.UIntPtr>|Niepodpisane wskaźnika lub dojścia|<xref:System.IntPtr>|  
   
  Biblioteka klas programu .NET Framework lub inne biblioteki klas może zawierać innych typów, które nie są zgodne z CLS; na przykład:  
@@ -391,7 +391,7 @@ ms.lasthandoff: 12/23/2017
   
  Specyfikacja języka wspólnego nakłada model wystąpienia zachowawcze zagnieżdżone typy i chronione elementy członkowskie. Otwórz typy ogólne nie może ujawnić pól lub elementy członkowskie o podpisy zawierające konkretnego wystąpienia typu ogólnego zagnieżdżone, chronionych. Inne niż ogólne typy, które rozszerzają konkretnego wystąpienia metody rodzajowe klasy podstawowej lub interfejsu nie może ujawnić pól lub elementy członkowskie o podpisy zawierające inną podczas tworzenia wystąpienia typu ogólnego zagnieżdżone, chronionych.  
   
- W poniższym przykładzie zdefiniowano typu ogólnego, `C1<T>` (lub `C1(Of T)` w języku Visual Basic) i Klasa chroniona, `C1<T>.N` (lub `C1(Of T).N` w języku Visual Basic). `C1<T>`ma dwie metody `M1` i `M2`. Jednak `M1` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` (lub `C1(Of Integer).N`) obiektu C1\<T > (lub `C1(Of T)`). W drugiej klasy `C2`, jest określana na podstawie `C1<long>` (lub `C1(Of Long)`). Składa się z dwóch metod `M3` i `M4`. `M3`nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` (lub `C1(Of Integer).N`) obiektu z podklasą `C1<long>`. Należy pamiętać, że Kompilatory języka można jeszcze bardziej restrykcyjne. W tym przykładzie Visual Basic jest wyświetlany błąd przy próbie skompilować `M4`.  
+ W poniższym przykładzie zdefiniowano typu ogólnego, `C1<T>` (lub `C1(Of T)` w języku Visual Basic) i Klasa chroniona, `C1<T>.N` (lub `C1(Of T).N` w języku Visual Basic). `C1<T>` ma dwie metody `M1` i `M2`. Jednak `M1` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` (lub `C1(Of Integer).N`) obiektu C1\<T > (lub `C1(Of T)`). W drugiej klasy `C2`, jest określana na podstawie `C1<long>` (lub `C1(Of Long)`). Składa się z dwóch metod `M3` i `M4`. `M3` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` (lub `C1(Of Integer).N`) obiektu z podklasą `C1<long>`. Należy pamiętać, że Kompilatory języka można jeszcze bardziej restrykcyjne. W tym przykładzie Visual Basic jest wyświetlany błąd przy próbie skompilować `M4`.  
   
  [!code-csharp[Conceptual.CLSCompliant#32](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/generics4.cs#32)]
  [!code-vb[Conceptual.CLSCompliant#32](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/generics4.vb#32)]  

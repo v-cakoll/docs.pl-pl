@@ -5,91 +5,96 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1718ea9c6ea1e029b66955e88fd54e20db1a3527
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: de8869956a59cb47623dbc4d84763e19d6f181bf
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
-# <a name="systemwebrouting-integration-sample"></a><span data-ttu-id="9df50-102">Przykład integracji elementu SystemWebRouting</span><span class="sxs-lookup"><span data-stu-id="9df50-102">SystemWebRouting Integration Sample</span></span>
-<span data-ttu-id="9df50-103">W tym przykładzie pokazano integracji hostingu warstwy z klas w <xref:System.Web.Routing> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="9df50-103">This sample demonstrates the hosting layer’s integration with the classes in the <xref:System.Web.Routing> namespace.</span></span> <span data-ttu-id="9df50-104">Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny.</span><span class="sxs-lookup"><span data-stu-id="9df50-104">The classes in the <xref:System.Web.Routing> namespace allow an application to use URLs that do not directly correspond to a physical resource.</span></span> <span data-ttu-id="9df50-105">Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane do rzeczywistego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.</span><span class="sxs-lookup"><span data-stu-id="9df50-105">Using Web routing allows the developer to create virtual addresses for HTTP that are then mapped back to actual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="9df50-106">Jest to przydatne, gdy usługa WCF musi być obsługiwana bez konieczności fizycznej plik lub zasób, lub gdy usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub aspx.</span><span class="sxs-lookup"><span data-stu-id="9df50-106">This is useful when a WCF service must be hosted without requiring a physical file or resource, or when services must be accessed with URLs that do not contain files such as .html or .aspx.</span></span> <span data-ttu-id="9df50-107">W tym przykładzie pokazano, jak korzystać z <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia wirtualnego identyfikatorów URI mapowane na uruchamianie usług zdefiniowane w pliku global.asax.</span><span class="sxs-lookup"><span data-stu-id="9df50-107">This sample demonstrates how to utilize the <xref:System.Web.Routing.RouteTable> class to create virtual URIs that map to running services defined in global.asax.</span></span> <span data-ttu-id="9df50-108">Na przykład istnieją dwa źródła danych RSS utworzone przy użyciu programu WCF: `movies` źródła danych i `channels` źródła danych.</span><span class="sxs-lookup"><span data-stu-id="9df50-108">For this example, there are two RSS feeds created using WCF: a `movies` feed and a `channels` feed.</span></span> <span data-ttu-id="9df50-109">Adresy URL do aktywowania usługi nie zawiera rozszerzenia i są rejestrowane w `Application_Start` metody `Global` klasą pochodną <xref:System.Web.HttpApplication.Application_Start> klasy.</span><span class="sxs-lookup"><span data-stu-id="9df50-109">The URLs to activate the services do not contain an extension and are registered in the `Application_Start` method of the `Global` class derived from the <xref:System.Web.HttpApplication.Application_Start> class.</span></span>  
+# <a name="systemwebrouting-integration-sample"></a><span data-ttu-id="31a0b-102">Przykład integracji elementu SystemWebRouting</span><span class="sxs-lookup"><span data-stu-id="31a0b-102">SystemWebRouting Integration Sample</span></span>
+<span data-ttu-id="31a0b-103">W tym przykładzie pokazano integracji hostingu warstwy z klas w <xref:System.Web.Routing> przestrzeni nazw.</span><span class="sxs-lookup"><span data-stu-id="31a0b-103">This sample demonstrates the hosting layer’s integration with the classes in the <xref:System.Web.Routing> namespace.</span></span> <span data-ttu-id="31a0b-104">Klasy w <xref:System.Web.Routing> przestrzeni nazw Zezwalaj aplikacji na używanie adresów URL, które nie odpowiadają bezpośrednio zasób fizyczny.</span><span class="sxs-lookup"><span data-stu-id="31a0b-104">The classes in the <xref:System.Web.Routing> namespace allow an application to use URLs that do not directly correspond to a physical resource.</span></span> <span data-ttu-id="31a0b-105">Przy użyciu routingu w sieci Web umożliwia deweloperom tworzenie wirtualnych adresów dla protokołu HTTP, które następnie są mapowane do rzeczywistego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usług.</span><span class="sxs-lookup"><span data-stu-id="31a0b-105">Using Web routing allows the developer to create virtual addresses for HTTP that are then mapped back to actual [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] services.</span></span> <span data-ttu-id="31a0b-106">Jest to przydatne, gdy usługa WCF musi być obsługiwana bez konieczności fizycznej plik lub zasób, lub gdy usług muszą być dostępne z adresami URL, które nie zawierają plików, takich jak HTML lub aspx.</span><span class="sxs-lookup"><span data-stu-id="31a0b-106">This is useful when a WCF service must be hosted without requiring a physical file or resource, or when services must be accessed with URLs that do not contain files such as .html or .aspx.</span></span> <span data-ttu-id="31a0b-107">W tym przykładzie pokazano, jak korzystać z <xref:System.Web.Routing.RouteTable> klasy w celu utworzenia wirtualnego identyfikatorów URI mapowane na uruchamianie usług zdefiniowane w pliku global.asax.</span><span class="sxs-lookup"><span data-stu-id="31a0b-107">This sample demonstrates how to utilize the <xref:System.Web.Routing.RouteTable> class to create virtual URIs that map to running services defined in global.asax.</span></span> 
+
+> [!NOTE]
+>  <span data-ttu-id="31a0b-108">Klasy w <xref:System.Web.Routing> przestrzeni nazw jest prawidłowe tylko dla usługi hostowanej za pośrednictwem protokołu HTTP.</span><span class="sxs-lookup"><span data-stu-id="31a0b-108">The classes in the <xref:System.Web.Routing> namespace only work for services hosted over HTTP.</span></span>  
+  
+<span data-ttu-id="31a0b-109">W tym przykładzie użyto WCF do utworzenia dwóch źródeł danych RSS: `movies` źródła danych i `channels` źródła danych.</span><span class="sxs-lookup"><span data-stu-id="31a0b-109">This example uses WCF to create two RSS feeds: a `movies` feed and a `channels` feed.</span></span> <span data-ttu-id="31a0b-110">Adresy URL do aktywowania usługi nie zawiera rozszerzenia i są rejestrowane w `Application_Start` metody `Global` klasą pochodną <xref:System.Web.HttpApplication> klasy.</span><span class="sxs-lookup"><span data-stu-id="31a0b-110">The URLs to activate the services do not contain an extension and are registered in the `Application_Start` method of the `Global` class derived from the <xref:System.Web.HttpApplication> class.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9df50-110">Klasy w <xref:System.Web.Routing> przestrzeni nazw jest prawidłowe tylko dla usługi hostowanej za pośrednictwem protokołu HTTP.</span><span class="sxs-lookup"><span data-stu-id="9df50-110">The classes in the <xref:System.Web.Routing> namespace only work for services hosted over HTTP.</span></span>  
+>  <span data-ttu-id="31a0b-111">W tym przykładzie działa tylko w Internet informacji Services (IIS) 7.0 i nowszy, jako usług IIS 6.0 używa innej metody do obsługi adresów URL bez rozszerzeń.</span><span class="sxs-lookup"><span data-stu-id="31a0b-111">This sample only works in Internet Information Services (IIS) 7.0 and later, as IIS 6.0 uses a different method for supporting extension-less URLs.</span></span>  
+
+#### <a name="to-download-this-sample"></a><span data-ttu-id="31a0b-112">Aby pobrać ten przykład</span><span class="sxs-lookup"><span data-stu-id="31a0b-112">To download this sample</span></span>
+  
+<span data-ttu-id="31a0b-113">W tym przykładzie może już być zainstalowany na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="31a0b-113">This sample may already be installed on your computer.</span></span> <span data-ttu-id="31a0b-114">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="31a0b-114">Check for the following (default) directory before continuing.</span></span>  
+   
+`<InstallDrive>:\WF_WCF_Samples`  
+   
+ <span data-ttu-id="31a0b-115">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="31a0b-115">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="31a0b-116">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="31a0b-116">This sample is located in the following directory.</span></span>  
+   
+`<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
+  
+#### <a name="to-use-this-sample"></a><span data-ttu-id="31a0b-117">Aby użyć tego przykładu</span><span class="sxs-lookup"><span data-stu-id="31a0b-117">To use this sample</span></span>  
+  
+1.  <span data-ttu-id="31a0b-118">Przy użyciu programu Visual Studio, otwórz plik WebRoutingIntegration.sln.</span><span class="sxs-lookup"><span data-stu-id="31a0b-118">Using Visual Studio, open the WebRoutingIntegration.sln file.</span></span>  
+  
+2.  <span data-ttu-id="31a0b-119">Aby uruchomić rozwiązanie i uruchomić serwera wdrożeniowego sieci Web, naciśnij klawisz F5.</span><span class="sxs-lookup"><span data-stu-id="31a0b-119">To run the solution and start the Web development server, press F5.</span></span>  
+  
+     <span data-ttu-id="31a0b-120">Zostanie wyświetlone listę przykładowej katalogów.</span><span class="sxs-lookup"><span data-stu-id="31a0b-120">A directory listing for the sample appears.</span></span> <span data-ttu-id="31a0b-121">Należy pamiętać, że nie ma żadnych plików z rozszerzeniem nazwy pliku svc.</span><span class="sxs-lookup"><span data-stu-id="31a0b-121">Note that there are no files with an .svc file extension.</span></span>  
+  
+3.  <span data-ttu-id="31a0b-122">Na pasku adresu dodać `movies` więc do adresu URL, którego nie odczytuje http://localhost: [portu] / filmy i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="31a0b-122">In the address bar, add `movies` to the URL, so that it reads http://localhost:[port]/movies and press ENTER.</span></span>  
+  
+     <span data-ttu-id="31a0b-123">Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="31a0b-123">The movies feed appears in the browser.</span></span>  
+  
+4.  <span data-ttu-id="31a0b-124">Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="31a0b-124">In the address bar, add `channels` to the URL, so that is reads http://localhost:[port]/channels and press ENTER.</span></span>  
+  
+     <span data-ttu-id="31a0b-125">Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="31a0b-125">The channels feed appears in the browser.</span></span>  
+  
+5.  <span data-ttu-id="31a0b-126">Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.</span><span class="sxs-lookup"><span data-stu-id="31a0b-126">Close the Web browser, by pressing ALT+F4.</span></span>  
+  
+     <span data-ttu-id="31a0b-127">Jeśli nie zakończył serwera wdrożeniowego programu, kliknij prawym przyciskiem myszy ikonę w obszarze powiadomień i wybierz **zatrzymać**.</span><span class="sxs-lookup"><span data-stu-id="31a0b-127">If the development server has not exited, right-click the notification area icon and select **Stop**.</span></span>  
+  
+#### <a name="to-use-this-sample-when-hosted-in-iis"></a><span data-ttu-id="31a0b-128">Aby użyć tego przykładu, podczas udostępniania w usługach IIS</span><span class="sxs-lookup"><span data-stu-id="31a0b-128">To use this sample when hosted in IIS</span></span>  
+  
+1.  <span data-ttu-id="31a0b-129">Przy użyciu programu Visual Studio, otwórz plik WebRoutingIntegration.sln.</span><span class="sxs-lookup"><span data-stu-id="31a0b-129">Using Visual Studio, open the WebRoutingIntegration.sln file.</span></span>  
+  
+2.  <span data-ttu-id="31a0b-130">Skompiluj projekt, naciskając klawisze CTRL + SHIFT + B.</span><span class="sxs-lookup"><span data-stu-id="31a0b-130">Build the project, by pressing CTRL+SHIFT+B.</span></span>  
+  
+3.  <span data-ttu-id="31a0b-131">Utwórz aplikację sieci Web w programie Internet Information Services (IIS) Manager.</span><span class="sxs-lookup"><span data-stu-id="31a0b-131">Create a Web application in Internet Information Services (IIS) Manager.</span></span>  
+  
+    1.  <span data-ttu-id="31a0b-132">W Menedżerze usług IIS kliknij prawym przyciskiem myszy **domyślna witryna sieci Web** i wybierz **Dodawanie aplikacji**.</span><span class="sxs-lookup"><span data-stu-id="31a0b-132">In IIS Manager, right click the **Default Web Site** and select **Add an Application**.</span></span>  
+  
+    2.  <span data-ttu-id="31a0b-133">Aby uzyskać **alias**, wpisz w `WebRoutingIntegration`.</span><span class="sxs-lookup"><span data-stu-id="31a0b-133">For the **alias**, type in `WebRoutingIntegration`.</span></span>  
+  
+    3.  <span data-ttu-id="31a0b-134">Aby uzyskać **ścieżka fizyczna**, wybierz folder usługi wewnątrz projektu.</span><span class="sxs-lookup"><span data-stu-id="31a0b-134">For the **Physical Path**, select the Service folder inside the project.</span></span>  
+  
+    4.  <span data-ttu-id="31a0b-135">Press **OK**.</span><span class="sxs-lookup"><span data-stu-id="31a0b-135">Press **OK**.</span></span>  
+  
+4.  <span data-ttu-id="31a0b-136">Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając polecenie **aplikacji Zarządzanie** , a następnie **Przeglądaj**.</span><span class="sxs-lookup"><span data-stu-id="31a0b-136">Start the application, by right-clicking the Web application and selecting **Manage Application** and then **Browse**.</span></span>  
+  
+5.  <span data-ttu-id="31a0b-137">Na pasku adresu dodać `movies` do adresu URL, więc to odczyty http://localhost: [portu] / filmy i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="31a0b-137">In the address bar, add `movies` to the URL, so that is reads http://localhost:[port]/movies and press ENTER.</span></span>  
+  
+     <span data-ttu-id="31a0b-138">Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="31a0b-138">The movies feed appears in the browser.</span></span>  
+  
+6.  <span data-ttu-id="31a0b-139">Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="31a0b-139">In the address bar, add `channels` to the URL, so that is reads http://localhost:[port]/channels and press ENTER.</span></span>  
+  
+     <span data-ttu-id="31a0b-140">Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="31a0b-140">The channels feed appears in the browser.</span></span>  
+  
+7.  <span data-ttu-id="31a0b-141">Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.</span><span class="sxs-lookup"><span data-stu-id="31a0b-141">Close the Web browser, by pressing ALT+F4.</span></span>  
+  
+ <span data-ttu-id="31a0b-142">W przykładzie pokazano warstwy obsługi jest w stanie składających się z klas w <xref:System.Web.Routing> przestrzeń nazw dla routingu żądań usług hostowanych za pośrednictwem protokołu HTTP.</span><span class="sxs-lookup"><span data-stu-id="31a0b-142">This sample demonstrates that the hosting layer is capable of composing with the classes in the <xref:System.Web.Routing> namespace for routing the requests of services hosted over HTTP.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9df50-111">W tym przykładzie działa tylko [!INCLUDE[iisver](../../../../includes/iisver-md.md)], jako [!INCLUDE[iis60](../../../../includes/iis60-md.md)] używa innej metody do obsługi adresów URL bez rozszerzeń.</span><span class="sxs-lookup"><span data-stu-id="9df50-111">This sample only works in [!INCLUDE[iisver](../../../../includes/iisver-md.md)], as [!INCLUDE[iis60](../../../../includes/iis60-md.md)] uses a different method for supporting extension-less URLs.</span></span>  
+>  <span data-ttu-id="31a0b-143">Należy zaktualizować domyślnej wersji puli aplikacji do [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Jeśli ustawiono w wersji 2.</span><span class="sxs-lookup"><span data-stu-id="31a0b-143">You must update the default application pool version to [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] if it’s set to version 2.</span></span>  
   
-> [!IMPORTANT]
->  <span data-ttu-id="9df50-112">Próbki mogą być zainstalowane na tym komputerze.</span><span class="sxs-lookup"><span data-stu-id="9df50-112">The samples may already be installed on your computer.</span></span> <span data-ttu-id="9df50-113">Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).</span><span class="sxs-lookup"><span data-stu-id="9df50-113">Check for the following (default) directory before continuing.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples`  
->   
->  <span data-ttu-id="9df50-114">Jeśli ten katalog nie istnieje, przejdź do [Windows Communication Foundation (WCF) i Windows Workflow Foundation (WF) przykłady dla programu .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) pobrać wszystkie [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek.</span><span class="sxs-lookup"><span data-stu-id="9df50-114">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](http://go.microsoft.com/fwlink/?LinkId=150780) to download all [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="9df50-115">W tym przykładzie znajduje się w następującym katalogu.</span><span class="sxs-lookup"><span data-stu-id="9df50-115">This sample is located in the following directory.</span></span>  
->   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Hosting\WebRoutingIntegration`  
-  
-#### <a name="to-use-this-sample"></a><span data-ttu-id="9df50-116">Aby użyć tego przykładu</span><span class="sxs-lookup"><span data-stu-id="9df50-116">To use this sample</span></span>  
-  
-1.  <span data-ttu-id="9df50-117">Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik WebRoutingIntegration.sln.</span><span class="sxs-lookup"><span data-stu-id="9df50-117">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the WebRoutingIntegration.sln file.</span></span>  
-  
-2.  <span data-ttu-id="9df50-118">Aby uruchomić rozwiązanie i uruchomić serwera wdrożeniowego sieci Web, naciśnij klawisz F5.</span><span class="sxs-lookup"><span data-stu-id="9df50-118">To run the solution and start the Web development server, press F5.</span></span>  
-  
-     <span data-ttu-id="9df50-119">Zostanie wyświetlone listę przykładowej katalogów.</span><span class="sxs-lookup"><span data-stu-id="9df50-119">A directory listing for the sample appears.</span></span> <span data-ttu-id="9df50-120">Należy pamiętać, że nie ma żadnych plików z rozszerzeniem nazwy pliku svc.</span><span class="sxs-lookup"><span data-stu-id="9df50-120">Note that there are no files with an .svc file extension.</span></span>  
-  
-3.  <span data-ttu-id="9df50-121">Na pasku adresu dodać `movies` do adresu URL, więc to odczyty http://localhost: [portu] / filmy i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="9df50-121">In the address bar, add `movies` to the URL, so that is reads http://localhost:[port]/movies and press ENTER.</span></span>  
-  
-     <span data-ttu-id="9df50-122">Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="9df50-122">The movies feed appears in the browser.</span></span>  
-  
-4.  <span data-ttu-id="9df50-123">Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="9df50-123">In the address bar, add `channels` to the URL, so that is reads http://localhost:[port]/channels and press ENTER.</span></span>  
-  
-     <span data-ttu-id="9df50-124">Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="9df50-124">The channels feed appears in the browser.</span></span>  
-  
-5.  <span data-ttu-id="9df50-125">Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.</span><span class="sxs-lookup"><span data-stu-id="9df50-125">Close the Web browser, by pressing ALT+F4.</span></span>  
-  
-     <span data-ttu-id="9df50-126">Jeśli nie zakończył serwera wdrożeniowego programu, kliknij prawym przyciskiem myszy ikonę w obszarze powiadomień i wybierz **zatrzymać**.</span><span class="sxs-lookup"><span data-stu-id="9df50-126">If the development server has not exited, right-click the notification area icon and select **Stop**.</span></span>  
-  
-#### <a name="to-use-this-sample-when-hosted-in-iis"></a><span data-ttu-id="9df50-127">Aby użyć tego przykładu, podczas udostępniania w usługach IIS</span><span class="sxs-lookup"><span data-stu-id="9df50-127">To use this sample when hosted in IIS</span></span>  
-  
-1.  <span data-ttu-id="9df50-128">Przy użyciu [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], otwórz plik WebRoutingIntegration.sln.</span><span class="sxs-lookup"><span data-stu-id="9df50-128">Using [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)], open the WebRoutingIntegration.sln file.</span></span>  
-  
-2.  <span data-ttu-id="9df50-129">Skompiluj projekt, naciskając klawisze CTRL + SHIFT + B.</span><span class="sxs-lookup"><span data-stu-id="9df50-129">Build the project, by pressing CTRL+SHIFT+B.</span></span>  
-  
-3.  <span data-ttu-id="9df50-130">Utwórz aplikację sieci Web w programie Internet Information Services (IIS) Manager.</span><span class="sxs-lookup"><span data-stu-id="9df50-130">Create a Web application in Internet Information Services (IIS) Manager.</span></span>  
-  
-    1.  <span data-ttu-id="9df50-131">W Menedżerze usług IIS kliknij prawym przyciskiem myszy **domyślna witryna sieci Web** i wybierz **Dodawanie aplikacji**.</span><span class="sxs-lookup"><span data-stu-id="9df50-131">In IIS Manager, right click the **Default Web Site** and select **Add an Application**.</span></span>  
-  
-    2.  <span data-ttu-id="9df50-132">Aby uzyskać **alias**, wpisz w `WebRoutingIntegration`.</span><span class="sxs-lookup"><span data-stu-id="9df50-132">For the **alias**, type in `WebRoutingIntegration`.</span></span>  
-  
-    3.  <span data-ttu-id="9df50-133">Aby uzyskać **ścieżka fizyczna**, wybierz folder usługi wewnątrz projektu.</span><span class="sxs-lookup"><span data-stu-id="9df50-133">For the **Physical Path**, select the Service folder inside the project.</span></span>  
-  
-    4.  <span data-ttu-id="9df50-134">Press **OK**.</span><span class="sxs-lookup"><span data-stu-id="9df50-134">Press **OK**.</span></span>  
-  
-4.  <span data-ttu-id="9df50-135">Uruchom aplikację, klikając prawym przyciskiem myszy aplikację sieci Web i wybierając polecenie **aplikacji Zarządzanie** , a następnie **Przeglądaj**.</span><span class="sxs-lookup"><span data-stu-id="9df50-135">Start the application, by right-clicking the Web application and selecting **Manage Application** and then **Browse**.</span></span>  
-  
-5.  <span data-ttu-id="9df50-136">Na pasku adresu dodać `movies` do adresu URL, więc to odczyty http://localhost: [portu] / filmy i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="9df50-136">In the address bar, add `movies` to the URL, so that is reads http://localhost:[port]/movies and press ENTER.</span></span>  
-  
-     <span data-ttu-id="9df50-137">Źródła strumieniowego filmów zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="9df50-137">The movies feed appears in the browser.</span></span>  
-  
-6.  <span data-ttu-id="9df50-138">Na pasku adresu dodać `channels` do adresu URL, więc to odczyty http://localhost: [portu] / kanałów i naciśnij klawisz ENTER.</span><span class="sxs-lookup"><span data-stu-id="9df50-138">In the address bar, add `channels` to the URL, so that is reads http://localhost:[port]/channels and press ENTER.</span></span>  
-  
-     <span data-ttu-id="9df50-139">Źródło strumieniowe kanały zostanie wyświetlona w przeglądarce.</span><span class="sxs-lookup"><span data-stu-id="9df50-139">The channels feed appears in the browser.</span></span>  
-  
-7.  <span data-ttu-id="9df50-140">Zamknij przeglądarkę sieci Web, naciskając klawisze ALT + F4.</span><span class="sxs-lookup"><span data-stu-id="9df50-140">Close the Web browser, by pressing ALT+F4.</span></span>  
-  
- <span data-ttu-id="9df50-141">W przykładzie pokazano warstwy obsługi jest w stanie składających się z klas w <xref:System.Web.Routing> przestrzeń nazw dla routingu żądań usług hostowanych za pośrednictwem protokołu HTTP.</span><span class="sxs-lookup"><span data-stu-id="9df50-141">This sample demonstrates that the hosting layer is capable of composing with the classes in the <xref:System.Web.Routing> namespace for routing the requests of services hosted over HTTP.</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="9df50-142">Zaktualizuj domyślnej wersji puli aplikacji do [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] Jeśli ustawiono w wersji 2.</span><span class="sxs-lookup"><span data-stu-id="9df50-142">Please update the default application pool version to [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] if it’s set to version 2.</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="9df50-143">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="9df50-143">See Also</span></span>  
- [<span data-ttu-id="9df50-144">Przykłady trwałości i hostingu AppFabric</span><span class="sxs-lookup"><span data-stu-id="9df50-144">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)
+## <a name="see-also"></a><span data-ttu-id="31a0b-144">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="31a0b-144">See Also</span></span>  
+ [<span data-ttu-id="31a0b-145">Przykłady trwałości i hostingu AppFabric</span><span class="sxs-lookup"><span data-stu-id="31a0b-145">AppFabric Hosting and Persistence Samples</span></span>](http://go.microsoft.com/fwlink/?LinkId=193961)

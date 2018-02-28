@@ -20,30 +20,30 @@ helpviewer_keywords:
 - quantifiers
 - lazy quantifiers
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: db1c3af1bb3ad207278eed64a8fb2ef8ed6dc465
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: ad4e8ab527ca59c21bf4771ca9d386866d9919f7
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quantifiers-in-regular-expressions"></a>Kwantyfikatory w wyrażeniach regularnych
 Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi być obecny w danych wejściowych znaleźć dopasowanie.  W poniższej tabeli wymieniono Kwantyfikatory obsługiwany przez platformę .NET.  
   
-|Zachłanne kwantyfikatora|Opóźnieniem kwantyfikatora|Opis|  
+|Zachłanne kwantyfikatora|Lazy quantifier|Opis|  
 |-----------------------|---------------------|-----------------|  
 |`*`|`*?`|Dopasowuje zero lub więcej razy.|  
 |`+`|`+?`|Dopasowuje jeden lub więcej razy.|  
 |`?`|`??`|Dopasowuje zero lub jeden raz.|  
 |`{` *n* `}`|`{` *n* `}?`|Takie same  *n*  razy.|  
 |`{` *n* `,}`|`{` *n* `,}?`|Zgodne z co najmniej  *n*  razy.|  
-|`{` *n*  `,` *m*`}`|`{` *n*  `,` *m*`}?`|Zgodny z  *n*  do *m* razy.|  
+|`{` *n* `,` *m* `}`|`{` *n* `,` *m* `}?`|Zgodny z  *n*  do *m* razy.|  
   
  Ilości `n` i `m` są stałe całkowite. Zwykle Kwantyfikatory są intensywnie; spowodują one aparat wyrażenia regularnego do dopasowania dowolną liczbę wystąpień konkretnych wzorców, jak to możliwe. Dołączanie `?` znak kwantyfikator sprawia, że opóźnieniem; ta powoduje, że aparat wyrażenia regularnego do dopasowania możliwie jak najmniejszej liczby wystąpień. Pełny opis różnicy między Kwantyfikatory intensywnie i opóźnieniem, zobacz sekcję [ustawienia Greedy i Kwantyfikatory opóźniające](#Greedy) dalszej części tego tematu.  
   
@@ -57,7 +57,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 >  Jeśli *, +,?, {, i} znaki zostaną napotkane w wzorzec wyrażenia regularnego, aparat wyrażeń regularnych interpretuje je jako Kwantyfikatory lub część konstrukcji kwantyfikatora o ile nie są objęte [znak klasy](../../../docs/standard/base-types/character-classes-in-regular-expressions.md). Interpretować je jako znaki poza klasą znaków, musi wprowadzić je poprzedzając kreski ułamkowej odwróconej. Na przykład ciąg `\*` w wyrażeniu regularnym wzorzec jest interpretowana jako literału gwiazdki ("\*") znaków.  
   
 ### <a name="match-zero-or-more-times-"></a>Dopasowanie do zera lub więcej razy: *  
- `*` Kwantyfikatora zgodny z poprzednim elementem zero lub więcej razy. Jest to równoważne `{0,}` kwantyfikatora. `*`jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `*?`.  
+ `*` Kwantyfikatora zgodny z poprzednim elementem zero lub więcej razy. Jest to równoważne `{0,}` kwantyfikatora. `*` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `*?`.  
   
  Poniższy przykład przedstawia tego wyrażenia regularnego. Dziewięć cyfr w ciągu wejściowym, pięć odpowiada wzorzec i cztery (`95`, `929`, `9129`, i `9919`) czy nie.  
   
@@ -74,7 +74,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-one-or-more-times-"></a>Dopasowuje jeden lub więcej razy: +  
- `+` Kwantyfikatora zgodny z poprzednim elementem jeden lub więcej razy. Jest to równoważne `{1,}`. `+`jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `+?`.  
+ `+` Kwantyfikatora zgodny z poprzednim elementem jeden lub więcej razy. Jest to równoważne `{1,}`. `+` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `+?`.  
   
  Na przykład, wyrażenie regularne `\ban+\w*?\b` próbuje dopasować całe wyrazy, które zaczynają się od litery `a` następuje co najmniej jedno wystąpienie litery `n`. Poniższy przykład przedstawia tego wyrażenia regularnego. Wyrażenie regularne dopasowuje wyrazy `an`, `annual`, `announcement`, i `antique`, a poprawnie nie odpowiada `autumn` i `all`.  
   
@@ -91,7 +91,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-zero-or-one-time-"></a>Dopasowanie do zera lub raz:?  
- `?` Kwantyfikator dopasowuje podczas poprzedniego elementu zero lub jeden. Jest to równoważne `{0,1}`. `?`jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `??`.  
+ `?` Kwantyfikator dopasowuje podczas poprzedniego elementu zero lub jeden. Jest to równoważne `{0,1}`. `?` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `??`.  
   
  Na przykład, wyrażenie regularne `\ban?\b` próbuje dopasować całe wyrazy, które zaczynają się od litery `a` następuje zero lub jeden wystąpienia litery `n`. Innymi słowy, próbuje dopasować słowa `a` i `an`. Poniższy przykład przedstawia tego wyrażenia regularnego.  
   
@@ -107,7 +107,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-exactly-n-times-n"></a>Dopasowuje dokładnie n razy: {n}  
- `{`  *n*  `}` Kwantyfikatora zgodny z poprzednim elementem dokładnie  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`}`jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
+ `{`  *n*  `}` Kwantyfikatora zgodny z poprzednim elementem dokładnie  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
   
  Na przykład, wyrażenie regularne `\b\d+\,\d{3}\b` próbuje dopasować granicy word następuje co najmniej jeden cyfr dziesiętnych, następuje trzech cyfr dziesiętnych następuje granic programu word. Poniższy przykład przedstawia tego wyrażenia regularnego.  
   
@@ -125,7 +125,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |`\b`|Kończy na granicy wyrazu.|  
   
 ### <a name="match-at-least-n-times-n"></a>Dopasowuje co najmniej n razy: {n,}  
- `{`  *n*  `,}` Kwantyfikatora zgodny z poprzednim elementem co najmniej  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`,}`jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
+ `{`  *n*  `,}` Kwantyfikatora zgodny z poprzednim elementem co najmniej  *n*  razy, gdzie  *n* jest liczbą całkowitą. `{`*n*`,}` jest intensywnie kwantyfikatora, którego opóźnieniem równoważne jest `{`  *n*  `}?`.  
   
  Na przykład, wyrażenie regularne `\b\d{2,}\b\D+` próbuje dopasować granicy word następuje co najmniej dwie cyfry następuje granic programu word i cyfra —. Poniższy przykład przedstawia tego wyrażenia regularnego. Wyrażenia regularnego nie powiedzie się dopasować frazę `"7 days"` ponieważ zawiera ona tylko jedną cyfrę, ale pomyślnie odpowiada fraz `"10 weeks and 300 years"`.  
   
@@ -273,7 +273,7 @@ Kwantyfikatory Określ liczbę wystąpień znaku, grupy lub klasy znaku musi by�
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`(a\1`|Albo dopasowania "", wraz z wartość pierwszego przechwyconej grupy...|  
-|`&#124;(?(1)`|… lub sprawdzić, czy pierwszy przechwyconej grupy została zdefiniowana. (Należy pamiętać, że `(?(1)` konstrukcja nie definiuje grupę przechwyconą.)|  
+|<code>&#124;(?(1)</code>|… lub sprawdzić, czy pierwszy przechwyconej grupy została zdefiniowana. (Należy pamiętać, że `(?(1)` konstrukcja nie definiuje grupę przechwyconą.)|  
 |`\1))`|Jeśli istnieje pierwszej grupy przechwycone, odpowiada jego wartości. Jeśli grupa nie istnieje, zostanie odpowiada grupie <xref:System.String.Empty?displayProperty=nameWithType>.|  
   
  Pierwsze wyrażenie regularne próbuje dopasować tego wzorca między zero a dwa razy; druga Strona, dokładnie dwa razy. Ponieważ pierwszy wzorzec osiągnie jego minimalną liczbę zbieranych z jej pierwszym przechwytywania <xref:System.String.Empty?displayProperty=nameWithType>, nigdy nie powtarza się, aby podjąć próbę dopasowania `a\1`; `{0,2}` kwantyfikatora umożliwia tylko puste dopasowań w ostatnim iteracji. Natomiast drugie wyrażenie regularne zgodne "", ponieważ jej wynikiem `a\1` po raz drugi; minimalna liczba iteracji, 2, wymusza aparat powtórzeń po pusty dopasowania.  

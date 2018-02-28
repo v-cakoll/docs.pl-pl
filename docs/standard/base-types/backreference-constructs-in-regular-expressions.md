@@ -17,18 +17,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2ec92933bdf123412a3d489fc493d76c4a0dc0d0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b4cecc44ff740dd99d10131341c6a6056ce3aab3
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>Konstrukcje dopasowań w wyrażeniach regularnych
 Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających się znaków lub podciąg ciągu. Na przykład jeśli ciąg wejściowy zawiera wiele wystąpień dowolnego podciąg, można odpowiada pierwszego wystąpienia z grupą przechwytywanie, a następnie użyć dopasuje odpowiadające kolejne wystąpienia podciąg.  
@@ -41,9 +41,9 @@ Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających 
 ## <a name="numbered-backreferences"></a>Numerowane odwołania wstecznego  
  Numerowane dopasuje używa następującej składni:  
   
- `\`*numer*  
+ `\` *Numer*  
   
- gdzie *numer* jest numerem porządkowym przechwytywania grupy w wyrażeniu regularnym. Na przykład `\4` odpowiada zawartość czwarty grupy przechwytywania. Jeśli *numer* nie jest zdefiniowany w wzorzec wyrażenia regularnego, występuje błąd analizy i zgłasza wyjątek, aparat wyrażeń regularnych <xref:System.ArgumentException>. Na przykład, wyrażenie regularne `\b(\w+)\s\1` jest nieprawidłowe, ponieważ `(\w+)` jest pierwszy i tylko Przechwytywanie grupy w wyrażeniu. Z drugiej strony `\b(\w+)\s\2` jest nieprawidłowy i zgłasza wyjątek argumentu, ponieważ nie istnieje żadna grupa przechwytywania numerowane `\2`.  
+ gdzie *numer* jest numerem porządkowym przechwytywania grupy w wyrażeniu regularnym. Na przykład `\4` odpowiada zawartość czwarty grupy przechwytywania. Jeśli *numer* nie jest zdefiniowany w wzorzec wyrażenia regularnego, występuje błąd analizy i zgłasza wyjątek, aparat wyrażeń regularnych <xref:System.ArgumentException>. Na przykład, wyrażenie regularne `\b(\w+)\s\1` jest nieprawidłowe, ponieważ `(\w+)` jest pierwszy i tylko Przechwytywanie grupy w wyrażeniu. Z drugiej strony `\b(\w+)\s\2` jest nieprawidłowy i zgłasza wyjątek argumentu, ponieważ nie istnieje żadna grupa przechwytywania numerowane `\2`. Ponadto jeśli *numer* identyfikuje grupę przechwytywania w określonym położeniu {numer porządkowy, ale że przechwytywanie grupy przypisano liczbową nazwa różni się od jego porządkowym, analizatora składni wyrażeń regularnych zgłasza wyjątek <xref:System.ArgumentException>. 
   
  Należy zwrócić uwagę niejednoznaczności między kody ósemkowe ESC (takich jak `\16`) i `\` *numer* odwołania wstecznego, które używają tego samego notacji. Tę niejednoznaczność zostanie rozwiązany w następujący sposób:  
   
@@ -70,11 +70,11 @@ Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających 
 ## <a name="named-backreferences"></a>Nazwane odwołania wstecznego  
  Nazwane dopasuje jest definiowana za pomocą następującej składni:  
   
- `\k<`*nazwa*`>`  
+ `\k<` *Nazwa* `>`  
   
  lub:  
   
- `\k'`*nazwa*`'`  
+ `\k'` *Nazwa* `'`  
   
  gdzie *nazwa* to nazwa grupy przechwytywania zdefiniowanej w wzorzec wyrażenia regularnego. Jeśli *nazwa* nie jest zdefiniowany w wzorzec wyrażenia regularnego, występuje błąd analizy i zgłasza wyjątek, aparat wyrażeń regularnych <xref:System.ArgumentException>.  
   
@@ -87,12 +87,24 @@ Odwołania wstecznego zapewnić wygodny sposób identyfikowania powtarzających 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference2.cs#2)]
  [!code-vb[RegularExpressions.Language.Backreferences#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference2.vb#2)]  
-  
- Należy pamiętać, że *nazwa* można także reprezentację liczby. Na przykład w poniższym przykładzie użyto wyrażenia regularnego `(?<2>\w)\k<2>` można znaleźć w ciągu znaków podwójna słów.  
+
+## <a name="named-numeric-backreferences"></a>O nazwie odwołania wstecznego numeryczne
+
+W nazwanym dopasowań z `\k`, *nazwa* można także reprezentację liczby. Na przykład w poniższym przykładzie użyto wyrażenia regularnego `(?<2>\w)\k<2>` można znaleźć w ciągu znaków podwójna słów. W takim przypadku w przykładzie zdefiniowano grupy przechwytywania, jawnie o nazwie "2", a dopasuje odpowiednio o nazwie "2". 
   
  [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
  [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]  
-  
+
+Jeśli *nazwa* jest reprezentację liczby, a nie przechwytywania grupa ma tej samej nazwie, `\k<` *nazwa* `>` jest taka sama jak dopasuje `\`  *numer*, gdzie *numer* jest numerem porządkowym przechwytywania. W poniższym przykładzie jest pojedynczej grupy przechwytywania o nazwie `char`. Konstrukcja dopasuje odwołuje się do niego jako `\k<1>`. Jako dane wyjściowe w przykładzie, wywołanie <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> powiedzie się, ponieważ `char` jest pierwszą grupą przechwytywania.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]  
+
+Jednak jeśli *nazwa* jest reprezentację liczby i przechwytywaniu grupy w czy pozycja jawnie przypisano nazwy liczbowej analizatora składni wyrażeń regularnych nie może zidentyfikować przechwytywania Grupuj według położenia porządkowej . Zamiast tego zgłasza <xref:System.ArgumentException>. Tylko grupy przechwytywania w poniższym przykładzie jest o nazwie "2". Ponieważ `\k` konstrukcja służy do definiowania dopasowań, o nazwie "1", analizatora składni wyrażeń regularnych nie może zidentyfikować pierwszej grupy przechwytywania i zgłasza wyjątek.
+
+[!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference7.cs)]
+[!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference7.vb)]  
+
 ## <a name="what-backreferences-match"></a>Jakie dopasowania odwołania wstecznego  
  Dopasuje odwołuje się do najnowszych definicji grupy (definicja najbardziej bezpośrednio po lewej, podczas dopasowywania od lewej do prawej). Gdy ułatwia grupy, który przechwytuje wielu, dopasuje odwołuje się do najnowszych przechwytywania.  
   

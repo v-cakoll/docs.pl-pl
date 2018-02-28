@@ -46,11 +46,11 @@ ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
 author: rpetrusha
 ms.author: ronpet
 ms.manager: wpickett
-ms.openlocfilehash: bdb675b9605d03829c95897382daa6d03cf1b041
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 20a9a30689fb62a6956987b06470e76eeb42ebab
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="type-characters-visual-basic"></a>Wpisz znaki (Visual Basic)
 
@@ -88,7 +88,7 @@ Formularz literału wyświetlaną w kodzie zwykle określa jego typu danych. W p
 |Postaci tekstowej literału|Domyślny typ danych|Przykład|  
 |-----------------------------|-----------------------|-------------|  
 |Numeryczne, nie ułamkowych części|`Integer`|`2147483647`|  
-|Numeryczne, nie ułamkowych części, zbyt duży dla`Integer`|`Long`|`2147483648`|  
+|Numeryczne, nie ułamkowych części, zbyt duży dla `Integer`|`Long`|`2147483648`|  
 |Numeryczne, ułamkowych części|`Double`|`1.2`|  
 |Ujęta w znaki podwójnego cudzysłowu|`String`|`"A"`|  
 |Ujęta w znaki numeru|`Date`|`#5/17/1993 9:32 AM#`|  
@@ -123,7 +123,7 @@ Kompilator interpretuje zwykle literał całkowity w układzie dziesiętnych (o 
 |Podstawowy numer|Prefiks|Wartości prawidłową cyfrą|Przykład|
 |-----------------|------------|------------------------|-------------|
 |Liczba szesnastkowa (16 podstawowy)|`&H`|0-9 i A-F|`&HFFFF`|
-|Dane binarne (podstawa 2)|`0B`|0-1|`&B01111100`|
+|Dane binarne (podstawa 2)|`&B`|0-1|`&B01111100`|
 |Octal (podstawa 8)|`&O`|0-7|`&O77`|
 
 Począwszy od 2017 Visual Basic, można użyć znaku podkreślenia (`_`) jako separator grupy, aby zwiększyć czytelność literał całkowity. W poniższym przykładzie użyto `_` znak do pliku binarnego literału w 8-bitową grup:

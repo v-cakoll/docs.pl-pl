@@ -19,18 +19,18 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c6da140ea82fc3c6d3f5f3001f37711ffe861370
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6592647ab3ff133bceb05b9ee84ce794e41aaf13
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>Przykład wyrażenia regularnego: wyszukiwanie wartości HREF
 Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie href = "..." wartości i ich lokalizacji w ciągu.  
@@ -54,7 +54,7 @@ Poniższy przykład wyszukuje ciąg wejściowy i wyświetla wszystkie href = "..
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
 |`=`|Zgodne znaku równości.|  
 |`\s*`|Dopasowanie do zera lub większej liczby znaków odstępu.|  
-|`(?:["'](?<1>[^"']*)"&#124;(?<1>\S+))`|Pasuje do jednej z następujących bez przypisywanie wynik do przechwyconej grupy:<br /><br /> -Cudzysłów lub apostrof, następuje zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof następuje znak cudzysłowu lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.<br />-Co najmniej jeden z systemem innym niż białe znaki. Grupa o nazwie `1` znajduje się w tym wzorcu.|  
+|<code>(?:\["'\](?<1>\[^"'\]*)"&#124;(?<1>\S+))</code>|Pasuje do jednej z następujących bez przypisywanie wynik do przechwyconej grupy:<br /> <ul><li><p>Znak cudzysłowu lub apostrof, a następnie zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof następuje znak cudzysłowu lub apostrof. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li><li><p>Co najmniej jeden z systemem innym niż biały znak. Grupa o nazwie `1` znajduje się w tym wzorcu.</p></li></ul>|  
 |`(?<1>[^"']*)`|Przypisz zero lub więcej wystąpień dowolnych znaków innych niż cudzysłów lub apostrof do przechwytywania grupy o nazwie `1`.|  
 |`"(?<1>\S+)`|Przypisz co najmniej jeden z systemem innym niż biały znak do przechwytywania grupy o nazwie `1`.|  
   

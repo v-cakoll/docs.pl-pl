@@ -9,11 +9,11 @@ ms.assetid: 324f267e-1c61-431a-97ed-852c1530742d
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0569636bde875d2d0d8921a544273f3214d05188
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 03315a2d9a44405ff520a1c333f56311e2657df6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="interpolated-strings-c-reference"></a>Ciągi interpolowane (odwołanie w C#)
 
@@ -43,11 +43,11 @@ gdzie:
 - *Ciąg formatu* jest odpowiednia dla typu obiektu jest sformatowana ciągu formatu. Na przykład w przypadku <xref:System.DateTime> wartości, może to być standardowa Data i godzina ciąg formatu, takie jak "D" lub "d".
 
 > [!IMPORTANT]
-> Nie może zawierać żadnych spacji między `$` i `"` zaczynającym się ciąg. To powoduje błąd w czasie kompilacji.
+> Nie może zawierać żadnych spacji między `$` i `"` zaczynającym się ciąg. To powoduje błąd kompilacji.
 
  Można użyć ciągu interpolowanym dowolnym można użyć literału ciągu.  W ciągu interpolowanym jest następuje za każdym razem, który wykonuje kod w ciągu interpolowanym. Dzięki temu można rozdzielić definicji i oceny ciągu interpolowanym.  
   
- Aby uwzględnić nawias klamrowy ("{" lub "}") w ciągu interpolowanym, użyj dwa nawiasy klamrowe, "{{" lub "}}".  Zobacz sekcję niejawne konwersje więcej szczegółów.  
+ Aby uwzględnić nawias klamrowy ("{" lub "}") w ciągu interpolowanym, użyj dwa nawiasy klamrowe, "{{" lub "}}".  Zobacz [niejawne konwersje](#implicit-conversions) sekcji, aby uzyskać więcej informacji.  
 
 Jeśli w ciągu interpolowanym zawiera znaki o specjalnym znaczeniu w ciągu interpolowanym, takie jak znak cudzysłowu ("), dwukropek (:) lub przecinkami (,), należy wpisywany je Jeśli występują one w tekście literału lub powinny one zostać włączone w wyrażeniu rozdzielone nawiasy, jeśli są one uwzględnione w wyrażeniu interpolowane elementy języka. Poniższy przykład specjalne znaki cudzysłowu, aby je uwzględnić w ciągu wynik i używa nawiasów do rozdzielenia wyrażenie `(age == 1 ? "" : "s")` , aby dwukropkiem nie jest interpretowany jako rozpoczynający się ciągiem formatu.
 
@@ -88,8 +88,11 @@ Istnieją trzy niejawne konwersje typów w ciągu interpolowanym:
 ## <a name="language-specification"></a>Specyfikacja języka  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz także  
  <xref:System.IFormattable?displayProperty=nameWithType>  
  <xref:System.FormattableString?displayProperty=nameWithType>  
+ <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Ciąg interpolacji w języku C#](../../../csharp/tutorials/string-interpolation.md)  
+ [Ciągi interpolowane w języku C#](../../../csharp/quick-starts/interpolated-strings.yml)  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)

@@ -21,21 +21,21 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 648c86c71de3c92825af3cfdd4ac2ca023f5e027
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e328c294a9b4ca3047c4ad1750ddedf64bac2218
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="anchors-in-regular-expressions"></a>Zakotwiczenia w wyrażeniach regularnych
-<a name="top"></a>Kotwice lub niepodzielne asercje o zerowej szerokości, należy określić pozycji w ciągu, w którym musi wystąpić dopasowania. Gdy używasz zakotwiczenia w wyrażeniu wyszukiwania aparat wyrażeń regularnych nie przechodzić przez ciąg lub zużywać znaków. Wyszukuje dopasowania w określonej pozycji. Na przykład `^` Określa, że dopasowania musi zaczynać się na początku wiersza lub ciąg. W związku z tym wyrażenia regularnego `^http:` zgodny "http:" tylko wtedy, gdy wystąpi go na początku wiersza. W poniższej tabeli wymieniono kotwice obsługiwane przez wyrażeń regularnych programu .NET.  
+<a name="top"></a> Kotwice lub niepodzielne asercje o zerowej szerokości, należy określić pozycji w ciągu, w którym musi wystąpić dopasowania. Gdy używasz zakotwiczenia w wyrażeniu wyszukiwania aparat wyrażeń regularnych nie przechodzić przez ciąg lub zużywać znaków. Wyszukuje dopasowania w określonej pozycji. Na przykład `^` Określa, że dopasowania musi zaczynać się na początku wiersza lub ciąg. W związku z tym wyrażenia regularnego `^http:` zgodny "http:" tylko wtedy, gdy wystąpi go na początku wiersza. W poniższej tabeli wymieniono kotwice obsługiwane przez wyrażeń regularnych programu .NET.  
   
 |Kotwica|Opis|  
 |------------|-----------------|  
@@ -71,9 +71,9 @@ ms.lasthandoff: 12/23/2017
 |`(\w+\s\w+)`|Zgodne z co najmniej jeden znak słowa spację, następuje co najmniej jeden znak programu word. Jest to czwarty grupa przechwytywania.|  
 |`,`|Zgodne przecinkami.|  
 |`\s\d{4}`|Zgodne miejsca, a następnie czterech cyfr dziesiętnych.|  
-|(-`(\d{4}&#124;present))?`|Zgodne wystąpienie zero lub jeden łącznik następuje cztery cyfry dziesiętne lub ciąg "istnieje". Jest to szóstego grupa przechwytywania. Obejmuje on też siódmego Przechwytywanie grupy.|  
+|<code>(-(\d{4}&#124;present))?</code>|Zgodne wystąpienie zero lub jeden łącznik następuje cztery cyfry dziesiętne lub ciąg "istnieje". Jest to szóstego grupa przechwytywania. Obejmuje on też siódmego Przechwytywanie grupy.|  
 |`,?`|Wystąpienie dopasowania zero lub jeden przecinkami.|  
-|`(\s\d{4}(-(\d{4}&#124;present))?,?)+`|Zgodne z co najmniej jedno wystąpienie następujących: spację, czterech cyfr dziesiętnych, zero lub jeden wystąpienia łącznika następuje cztery cyfry dziesiętne lub ciąg "Brak" oraz zero lub jeden przecinkami. Jest to piąty grupa przechwytywania.|  
+|<code>(\s\d{4}(-(\d{4}&#124;present))?,?)+</code>|Zgodne z co najmniej jedno wystąpienie następujących: spację, czterech cyfr dziesiętnych, zero lub jeden wystąpienia łącznika następuje cztery cyfry dziesiętne lub ciąg "Brak" oraz zero lub jeden przecinkami. Jest to piąty grupa przechwytywania.|  
   
  [Powrót do początku](#top)  
   

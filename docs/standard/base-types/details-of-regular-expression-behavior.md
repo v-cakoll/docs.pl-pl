@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c574ab8ddf506802fb42f53b5212dcb4a3bd9d34
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5b471cd8e934880fc8095fbad68b460174ec338c
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="details-of-regular-expression-behavior"></a>Szczegóły zachowania dotyczącego wyrażeń regularnych
 Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowania wyrażenia regularnego, uwzględniająca tradycyjnych aparat niedeterministyczne skończoną Automaton ds takim Perl, Python, Emacs i Tcl. To odróżnia go od szybsze, ale bardziej ograniczone, czysty wyrażenia regularnego aparaty deterministyczne Automaton ograniczone (DFA) takich jak awk, egrep lub lex. Ma to również odróżniać z znormalizowanych, ale wolniej, POSIX NFAs. Poniższej sekcji opisano trzy typy aparatów wyrażenia regularnego i objaśniono, dlaczego wyrażeń regularnych w programie .NET Framework są implementowane przy użyciu tradycyjnych aparat NFA.  
@@ -57,8 +57,8 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
   
     |Wzorzec|Opis|  
     |-------------|-----------------|  
-    |`.+`(intensywnie kwantyfikatora)|Zgodne z co najmniej jednego wystąpienia dowolnego znaku. Powoduje to, że aparat wyrażenia regularnego do dopasowania cały ciąg, a następnie Aby cofnąć jako potrzebne do pozostałej części wzorca dopasowania.|  
-    |`.+?`(tzw)|Dopasować co najmniej jedno wystąpienie dowolny znak, ale odpowiadać jak kupić.|  
+    |`.+` (intensywnie kwantyfikatora)|Zgodne z co najmniej jednego wystąpienia dowolnego znaku. Powoduje to, że aparat wyrażenia regularnego do dopasowania cały ciąg, a następnie Aby cofnąć jako potrzebne do pozostałej części wzorca dopasowania.|  
+    |`.+?` (tzw)|Dopasować co najmniej jedno wystąpienie dowolny znak, ale odpowiadać jak kupić.|  
     |`(\d+)`|Zgodne z co najmniej jednego znaku numerycznego i przypisz je do pierwszej grupy przechwytywania.|  
     |`\.`|Odpowiada danym okresie.|  
   
@@ -108,7 +108,7 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
     |`^`|Rozpocznij dopasowania na początku wiersza.|  
     |`(?<Pvt>\<PRIVATE\>\s)?`|Zgodne zero lub jeden wystąpienie ciągu `<PRIVATE>` następuje biały znak. Przypisz dopasowania do przechwytywania grupę o nazwie `Pvt`.|  
     |`(?(Pvt)((\w+\p{P}?\s)+)`|Jeśli `Pvt` Przechwytywanie grupy istnieje, zgodne z jednego lub więcej wystąpień co najmniej jeden znak słowa następuje zero lub jeden separatora znaki interpunkcyjne, następuje biały znak. Przypisz podciąg do pierwszej grupy przechwytywania.|  
-    |`&#124;((\w+\p{P}?\s)+))`|Jeśli `Pvt` Przechwytywanie grupa nie istnieje, pasuje do jednej lub więcej wystąpień co najmniej jeden znak słowa następuje zero lub jeden separatora znaki interpunkcyjne, następuje biały znak. Przypisz podciąg do trzeciego grupy przechwytywania.|  
+    |<code>&#124;((\w+\p{P}?\s)+))<code>|Jeśli `Pvt` Przechwytywanie grupa nie istnieje, pasuje do jednej lub więcej wystąpień co najmniej jeden znak słowa następuje zero lub jeden separatora znaki interpunkcyjne, następuje biały znak. Przypisz podciąg do trzeciego grupy przechwytywania.|  
     |`\r?$`|Zgodne koniec wiersza lub końca ciągu.|  
   
      Aby uzyskać więcej informacji na temat oceny warunkowego zobacz [konstrukcje Alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md).  
@@ -145,7 +145,7 @@ Aparat wyrażenia regularnego programu .NET Framework jest backtracking dopasowa
     |-------------|-----------------|  
     |`^`|Rozpocznij dopasowania na początku ciąg.|  
     |`[A-Z0-9]`|Dopasowuje dowolny znak numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
-    |`([-!#$%&'.*+/=?^`{}&#124;~\w])*`|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, ", {,}, &#124; lub ~.|  
+    |<code>([-!#$%&'.*+/=?^\`{}&#124;~\w])*<code>|Zgodne zero lub więcej wystąpień dowolny znak słowa lub dowolny z następujących znaków:-,!, #, $, % &, ',., *, +, /, =,?, ^, \`, {,}, &#124; lub ~.|  
     |`(?<=[A-Z0-9])`|Szukaj za do poprzedniego znaku, który musi być numeryczne lub alfanumeryczne. (Porównanie jest bez uwzględniania wielkości liter).|  
     |`$`|Zakończenie dopasowuje koniec ciągu.|  
   

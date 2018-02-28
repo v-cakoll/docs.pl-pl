@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ea42156f-e1b9-4535-9383-b45f46f3f7ca
-ms.openlocfilehash: 4378afebe6fd0d9317f734457576dc75d7488bf0
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f3f73c4fe2197f1f3f2babbe6691ef6662d8f581
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="namespaces"></a>Namespaces
 
@@ -77,7 +77,7 @@ Umożliwia także globalny ma dotyczyć odwołanie obszaru nazw .NET najwyższeg
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6408.fs)]
 
-##
+## <a name="recursive-namespaces"></a>Przestrzenie nazw cykliczne
 
 F # 4.1 wprowadzono pojęcie przestrzeni nazw, który umożliwia się wzajemnie rekursywne wszystkich zawartych w niej kodu.  Odbywa się za pośrednictwem `namespace rec`.  Użycie `namespace rec` można zlikwidować niektóre problemy, które nie jest możliwość napisać kod wzajemnie referencyjnej między typami i modułów.  Oto przykład:
 
@@ -124,7 +124,7 @@ Należy pamiętać, że wyjątek `DontSqueezeTheBananaException` i klasa `Banana
 Ta funkcja jest również dostępny do najwyższego poziomu [modułów](modules.md) w F # 4.1 lub nowszego.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Moduły](modules.md)
 

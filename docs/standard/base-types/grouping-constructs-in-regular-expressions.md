@@ -19,18 +19,18 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b6e0b9d3482bbfc3dabeee1f6b7fce7a93364dfb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  
@@ -64,7 +64,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="matched-subexpressions"></a>Dopasowane podwyrażenie  
  Poniższa konstrukcja grupowania przechwytuje Podwyrażenie dopasowane:  
   
- `(`*Podwyrażenie*`)`  
+ `(` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest wzorzec wszystkie prawidłowe wyrażenie regularne. Przechwytuje, że Użyj nawiasów są numerowane automatycznie od lewej do prawej na podstawie kolejności otwierającymi nawiasami w wyrażeniu regularnym, począwszy od jednej. Przechwytywanie, numerowana zero jest uwzględniony przez wzorzec wyrażenia regularnego cały tekst.  
   
@@ -292,7 +292,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="group-options"></a>Opcje grupy  
  Poniższa konstrukcja grupowania stosuje lub wyłącza określonych opcji w podwyrażenia:  
   
- `(?imnsx-imnsx:`*Podwyrażenie*`)`  
+ `(?imnsx-imnsx:` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest wzorzec wszystkie prawidłowe wyrażenie regularne. Na przykład `(?i-s:)` włącza liter i wyłącza tryb pojedynczej linii. Aby uzyskać więcej informacji na temat opcji wbudowany, można określić, zobacz [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -316,7 +316,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="zero-width-positive-lookahead-assertions"></a>Dodatnie asercje z patrzeniem w przód o zerowej szerokości  
  Poniższa konstrukcja grupowanie definiuje potwierdzenia wyprzedzenia dodatnią zerowej szerokości:  
   
- `(?=`*Podwyrażenie*`)`  
+ `(?=` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest żadnych wzorzec wyrażenia regularnego. Pod kątem dopasowania do pomyślnego ciąg wejściowy musi być zgodna ze wzorcem wyrażenia regularnego w *Podwyrażenie*, mimo że podciąg nie znajduje się w wyniku dopasowania. Potwierdzenie wyprzedzenia dodatnią zerowej szerokości nie śledzenie wsteczne.  
   
@@ -339,7 +339,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="zero-width-negative-lookahead-assertions"></a>Ujemne asercje z patrzeniem w przód o zerowej szerokości  
  Poniższa konstrukcja grupowanie definiuje potwierdzenia zerowej szerokości wyprzedzenia ujemna:  
   
- `(?!`*Podwyrażenie*`)`  
+ `(?!` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest żadnych wzorzec wyrażenia regularnego. Do dopasowania do pomyślnego ciąg wejściowy nie może być zgodna ze wzorcem wyrażenia regularnego w *Podwyrażenie*, mimo że dopasowany ciąg nie jest objęta wynik dopasowania.  
   
@@ -377,7 +377,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="zero-width-positive-lookbehind-assertions"></a>Dodatnie asercje wsteczne o zerowej szerokości  
  Poniższa konstrukcja grupowanie definiuje potwierdzenia dodatnie wybieganie wstecz zerowej szerokości:  
   
- `(?<=`*Podwyrażenie*`)`  
+ `(?<=` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest żadnych wzorzec wyrażenia regularnego. Dopasowanie do pomyślnej *Podwyrażenie* musi przypadać w ciągu wejściowego na lewo od bieżącego położenia, mimo że `subexpression` nie znajduje się w wyniku dopasowania. Potwierdzenie zerowej szerokości dodatnie wybieganie wstecz nie śledzenie wsteczne.  
   
@@ -402,7 +402,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 ## <a name="zero-width-negative-lookbehind-assertions"></a>Ujemne asercje wsteczne o zerowej szerokości  
  Poniższa konstrukcja grupowanie definiuje potwierdzenia ujemne wybieganie wstecz zerowej szerokości:  
   
- `(?<!`*Podwyrażenie*`)`  
+ `(?<!` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest żadnych wzorzec wyrażenia regularnego. Dopasowanie do pomyślnej *Podwyrażenie* nie musi przypadać w ciągu wejściowego na lewo od bieżącego położenia. Jednak podciąg, które nie odpowiadają `subexpression` nie znajduje się w wyniku dopasowania.  
   
@@ -421,13 +421,13 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 |`\w+`|Zgodne z co najmniej jeden znak word następuje biały znak.|  
 |`\d{1,2},`|Odpowiada jednej lub dwóch cyfr dziesiętnych, następuje biały znak i przecinkami.|  
 |`\d{4}\b`|Zgodne cztery cyfry dziesiętne i kończyć dopasowania na granicy programu word.|  
-|`(?<!(Saturday&#124;Sunday) )`|Jeśli dopasowanie jest poprzedzony przez inną niż ciągi, "Sobota" i "Niedziela", po którym następuje spacja, dopasowanie jest pomyślne.|  
+|<code>(?<!(Saturday&#124;Sunday) )</code>|Jeśli dopasowanie jest poprzedzony przez inną niż ciągi, "Sobota" i "Niedziela", po którym następuje spacja, dopasowanie jest pomyślne.|  
   
 <a name="nonbacktracking_subexpression"></a>   
 ## <a name="nonbacktracking-subexpressions"></a>Podwyrażenia bez nawrotów  
  Poniższa konstrukcja grupowania reprezentuje nonbacktracking Podwyrażenie (znanej także jako Podwyrażenie "zachłannego"):  
   
- `(?>`*Podwyrażenie*`)`  
+ `(?>` *Podwyrażenie* `)`  
   
  gdzie *Podwyrażenie* jest żadnych wzorzec wyrażenia regularnego.  
   

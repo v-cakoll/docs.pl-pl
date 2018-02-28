@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9a8b28d840d3c8ef63611e9f584e5984e1dcb1a3
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 99c2f8e4807c4d18c0c798e3a737f4a88d6e62d6
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="numbers-in-c-quickstart"></a>Liczby w języku C# — Szybki Start
 
@@ -38,9 +38,9 @@ Uruchom ten kod, wpisując `dotnet run` w oknie polecenia.
 
 Po prostu przedstawiono jednej z operacji matematycznych podstawowych z liczbami całkowitymi. `int` Wpisz reprezentuje **całkowitą**, liczbą całkowitą liczbą dodatnią lub ujemną. Możesz użyć `+` symbol do dodania. Inne typowe operacji matematycznych liczb całkowitych obejmują:
 
-- `-`dla odejmowania
-- `*`dla mnożenia
-- `/`podziału
+- `-` dla odejmowania
+- `*` dla mnożenia
+- `/` podziału
 
 Rozpocznij od eksploracji tych różnych operacji. Dodaj następujące wiersze po wierszu, który zapisuje wartość `c`:
 
@@ -312,7 +312,7 @@ Należy zauważyć, że obliczenia przy użyciu typu decimal zawiera więcej cyf
 
 ***Challenge***
 
-Skoro już znasz różne typy liczbowe pisania kodu, który oblicza obszaru koło którego radius jest 2,50 cala. Należy pamiętać, że obszar koła jest radius kwadrat pomnożona przez PI. Jedną wskazówkę: .NET zawiera stałą Pi, <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
+Skoro już znasz różne typy liczbowe pisania kodu, który oblicza obszaru koło którego radius jest 2,50 cm. Należy pamiętać, że obszar koła jest radius kwadrat pomnożona przez PI. Jedną wskazówkę: .NET zawiera stałą Pi, <xref:System.Math.PI?displayProperty=nameWithType> używanego dla tej wartości. 
 
 Należy uzyskać odpowiedzi od 19 do 20.
 Można sprawdzić odpowiedzi przez [patrzeć Zakończono przykładowy kod w witrynie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/numbers-quickstart/Program.cs#L104-L106)

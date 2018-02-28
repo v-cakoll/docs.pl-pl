@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: db062ed2f832ae933941da1c49e84303090f4390
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="string-interpolation-in-c"></a>Ciąg interpolacji w języku C# #
 
-Ciąg interpolacji jest sposób symbole zastępcze w ciągu zastępuje wartość zmiennej ciągu. Przed C# 6, jest sposób, w tym celu `System.String.Format`. To działanie jest zgoda, ale ponieważ używa numeru symbole zastępcze, może być trudniejsze do odczytu i pełniejsze.
+Ciąg interpolacji jest sposób symbole zastępcze w ciągu zastępuje wartość zmiennej ciągu. Przed C# 6, jest sposób, w tym celu <xref:System.String.Format%2A?displayProperty=nameWithType>. To działanie jest zgoda, ale ponieważ używa numeru symbole zastępcze, może być trudniejsze do odczytu i pełniejsze.
 
 Inne języki programowania miały interpolacji ciąg wbudowanych w języku jakiś czas. Na przykład w kodzie PHP:
 
@@ -42,7 +42,7 @@ Teraz, po zainstalowaniu wszystkich narzędzi, należy utworzyć nową aplikacj�
 dotnet new console
 ```
 
-To polecenie spowoduje utworzenie projektu podstawowe .NET core z pliku projektu *interpolated.csproj*i pliku kodu źródłowego, *Program.cs*. Konieczne będzie wykonanie `dotnet restore` do przywrócenia zależności niezbędne do skompilowania tego projektu.
+To polecenie tworzy projekt .NET Core podstawowe z pliku projektu *interpolated.csproj*i pliku kodu źródłowego, *Program.cs*. Konieczne będzie wykonanie `dotnet restore` do przywrócenia zależności niezbędne do skompilowania tego projektu.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -52,7 +52,7 @@ Do wykonania programu, należy użyć `dotnet run`. Powinien zostać wyświetlon
 
 ## <a name="intro-to-string-interpolation"></a>Wprowadzenie do ciągu interpolacji
 
-Z `System.String.Format`, określ "symbole zastępcze" w ciągu, który zastępuje parametrów po ciągu. Przykład:
+Z <xref:System.String.Format%2A?displayProperty=nameWithType>, określ "symbole zastępcze" w ciągu, który zastępuje argumentów po ciągu. Przykład:
 
 [!code-csharp[String.Format example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#StringFormatExample)]  
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Jak działa interpolacji ciągu
 
-W tle tej składni interpolacji ciągu jest przetłumaczyć String.Format przez kompilator. Tak, możesz zrobić [tego samego typu rzeczy wykonaniu przed z String.Format](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
+W tle przetłumaczyć tej składni interpolacji ciąg `String.Format` przez kompilator. Tak, możesz zrobić [tego samego typu rzeczy wykonaniu przed z `String.Format` ](../../standard/base-types/formatting-types.md).
 
 Na przykład można dodać uzupełniania i formatowania liczbowa:
 
@@ -96,7 +96,7 @@ Powyższe czy dane wyjściowe wyglądać mniej więcej tak:
 1004       6,227.77
 ```
 
-Jeśli nazwa zmiennej nie zostanie znaleziony, błąd w czasie kompilacji zostanie wygenerowany.
+Jeśli nazwa zmiennej nie zostanie znaleziony, generowany jest błąd kompilacji.
 
 Przykład:
 
@@ -107,21 +107,19 @@ var adj = "quick";
 Console.WriteLine(localizeMe);
 ```
 
-Kompilacja to spowoduje wyświetlenie błędów:
+Jeśli kompilacja to występują błędy:
  
-* `Cannot use local variable 'adj' before it is declared`- `adj` nie została zadeklarowana zmienna, do *po* ciągu interpolowanym.
-* `The name 'otheranimal' does not exist in the current context`-zmiennej o nazwie `otheranimal` nawet nigdy nie został zadeklarowany.
+* `Cannot use local variable 'adj' before it is declared` - `adj` nie została zadeklarowana zmienna, do *po* ciągu interpolowanym.
+* `The name 'otheranimal' does not exist in the current context` -zmiennej o nazwie `otheranimal` nawet nigdy nie został zadeklarowany.
 
 ## <a name="localization-and-internationalization"></a>Lokalizacja i internacjonalizacji
 
-Obsługuje ciągu interpolowanym `IFormattable` i `FormattableString`, które mogą być przydatne w przypadku internacjonalizacji.
+Obsługuje ciągu interpolowanym <xref:System.IFormattable?displayProperty=nameWithType> i <xref:System.FormattableString?displayProperty=nameWithType>, które mogą być przydatne w przypadku internacjonalizacji.
 
-Domyślnie w ciągu interpolowanym używa bieżącej kultury. Aby korzystać z inną kulturę, można rzutować go jako`IFormattable`
-
-Przykład:
+Domyślnie w ciągu interpolowanym używa bieżącej kultury. Aby korzystać z inną kulturę, rzutowania w ciągu interpolowanym jako `IFormattable`. Przykład:
 
 [!code-csharp[Interpolation internationalization example](../../../samples/snippets/csharp/new-in-6/string-interpolation.cs#InterpolationInternationalizationExample)]  
 
 ## <a name="conclusion"></a>Wniosek 
 
-W tym samouczku przedstawiono sposób korzystania z funkcji interpolacji ciągu języka C# 6. Zasadniczo jest bardziej zwięzły sposób zapisywania prosty `String.Format` instrukcji z niektórych ostrzeżenia dla bardziej zaawansowanych stosowania.
+W tym samouczku przedstawiono sposób korzystania z funkcji interpolacji ciągu języka C# 6. Zasadniczo jest bardziej zwięzły sposób zapisywania prosty `String.Format` instrukcji z niektórych zastrzeżenia do bardziej zaawansowanych zastosowań. Aby uzyskać więcej informacji, zobacz [ciągi interpolowane](../../csharp//language-reference/keywords/interpolated-strings.md) tematu.

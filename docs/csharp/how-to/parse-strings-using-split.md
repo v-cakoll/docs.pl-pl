@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: 5143fed04148fb17697bd5d040ad23b762505db4
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
-ms.translationtype: MT
+ms.openlocfilehash: 30b16ce5c263221fe917b3d6f289fea20d47b584
+ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Porady: analizowanie ciągów za pomocą String.Split (Przewodnik C#)
 
@@ -39,7 +39,7 @@ To zachowanie ułatwia formatów takich jak pliki wartości (CSV) rozdzielonych 
 
 Można przekazać opcjonalnie <xref:System.StringSplitOptions.RemoveEmptyEntries?displayProperty=nameWithType> parametr, aby wykluczyć wszystkie puste ciągi w zwróconej tablicy. W przypadku bardziej skomplikowanych przetwarzania zwracana kolekcja, można użyć [LINQ](../programming-guide/concepts/linq/index.md) do manipulowania sekwencji wynik.    
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>można użyć wielu znaków separatora. W poniższym przykładzie użyto spacji, przecinków okresów, dwukropki i karty, wszystkie przekazano tablicę zawierającą je do oddzielania znaków, <xref:System.String.Split%2A>.  Pętla w dolnej części kodu wyświetla poszczególnych wyrazów w zwróconej tablicy.  
+<xref:System.String.Split%2A?displayProperty=nameWithType> można użyć wielu znaków separatora. W poniższym przykładzie użyto spacji, przecinków okresów, dwukropki i karty, wszystkie przekazano tablicę zawierającą je do oddzielania znaków, <xref:System.String.Split%2A>.  Pętla w dolnej części kodu wyświetla poszczególnych wyrazów w zwróconej tablicy.  
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
@@ -47,7 +47,7 @@ Kolejne wystąpienia dowolnego separatora utworzyć pusty ciąg na tablicę dany
 
 [!code-csharp-interactive[split strings using multiple consecutive separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#4)]
 
-<xref:System.String.Split%2A?displayProperty=nameWithType>możliwe jest tablicą ciągów (sekwencji znaków, które działają jako separatorów do analizowania parametrów docelowej, zamiast pojedynczy znaki).  
+<xref:System.String.Split%2A?displayProperty=nameWithType> możliwe jest tablicą ciągów (sekwencji znaków, które działają jako separatorów do analizowania parametrów docelowej, zamiast pojedynczy znaki).  
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
@@ -56,4 +56,4 @@ Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHu
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../programming-guide/index.md)  
  [Ciągi](../programming-guide/strings/index.md)  
- [.NET framework — nieprawidłowe wyrażenia](https://msdn.microsoft.com/library/hs600312)
+ [Wyrażeń regularnych programu .NET](../../standard/base-types/regular-expressions.md)

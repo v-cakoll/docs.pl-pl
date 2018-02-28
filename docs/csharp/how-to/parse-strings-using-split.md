@@ -17,7 +17,7 @@ ms.author: wiwagn
 ms.custom: mvc
 ms.openlocfilehash: 30b16ce5c263221fe917b3d6f289fea20d47b584
 ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 02/27/2018
 ---

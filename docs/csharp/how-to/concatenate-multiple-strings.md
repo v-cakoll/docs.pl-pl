@@ -16,7 +16,7 @@ author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 60b36e0ef6bb6c16979c9f0b0e1407e0b4631a2f
 ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 02/27/2018
 ---

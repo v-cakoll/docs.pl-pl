@@ -3,14 +3,16 @@ title: "&#39; AddressOf &#39; Argument musi być nazwą metody (bez nawiasów)"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vbc30577
 - bc30577
-helpviewer_keywords: BC30577
+helpviewer_keywords:
+- BC30577
 ms.assetid: c2c55640-5c61-4e66-97a4-4322020c6001
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 02c996f1c94250526982e35395288b07db619db7

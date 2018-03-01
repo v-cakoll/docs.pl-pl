@@ -2,11 +2,13 @@
 title: "We/Wy pliku dla struktury zawierającej pole &#39; &lt;fieldname&gt;&#39; typ &#39;&lt; Właściwość TypeName&gt;&#39; jest nieprawidłowa"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_UnsupportedFieldType2
+f1_keywords:
+- vbrArgument_UnsupportedFieldType2
 ms.assetid: 028e936f-6210-4290-adb2-46298e13e160
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: d9e01ae8be48702f4f2e399ec6c811f30f1f6a19

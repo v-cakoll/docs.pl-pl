@@ -2,11 +2,13 @@
 title: "Argument &#39; &lt;argumentname&gt;&#39; musi znajdować się w zakresie od 0 do 99"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_Range0to99_1
+f1_keywords:
+- vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 59b3a4cc836c355ff261affb6b96e5e0dfa46712

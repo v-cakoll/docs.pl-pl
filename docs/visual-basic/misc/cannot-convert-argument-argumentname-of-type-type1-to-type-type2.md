@@ -2,11 +2,13 @@
 title: "Nie można przekonwertować argumentu &#39; &lt;argumentname&gt;&#39; typ &#39;&lt; type1&gt;&#39; na typ &#39;&lt; type2&gt;&#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrForLoop_ConvertToType3
+f1_keywords:
+- vbrForLoop_ConvertToType3
 ms.assetid: fdf6c571-9c6c-4db2-8960-f394720b01e5
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: f5d3dbf62d136eb53897545e6ee473ec57d97686

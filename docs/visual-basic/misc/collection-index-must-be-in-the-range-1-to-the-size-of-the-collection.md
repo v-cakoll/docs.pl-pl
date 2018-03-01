@@ -2,11 +2,13 @@
 title: "Indeks kolekcji musi należeć do zakresu od 1 do rozmiaru kolekcji"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_CollectionIndex
+f1_keywords:
+- vbrArgument_CollectionIndex
 ms.assetid: feee4d55-0754-40fe-9ce9-288ef543f569
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 27fb5461d9346be462acc04935db0761d8417013

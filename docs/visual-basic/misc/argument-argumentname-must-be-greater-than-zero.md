@@ -2,11 +2,13 @@
 title: "Argument &#39; &lt;argumentname&gt;&#39; musi być większa od zera."
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_GTZero1
+f1_keywords:
+- vbrArgument_GTZero1
 ms.assetid: f9939fbd-6c4f-4871-9452-9ea0267e948e
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 857ab77428dec212c4fc3eddd7b827a721c1f10d

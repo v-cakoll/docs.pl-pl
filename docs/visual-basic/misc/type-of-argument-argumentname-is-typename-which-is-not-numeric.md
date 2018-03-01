@@ -2,11 +2,13 @@
 title: "Typ argumentu &#39; &lt;argumentname&gt;&#39; jest &#39;&lt; Właściwość TypeName&gt;&#39; która nie jest liczbą"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_NotNumericType2
+f1_keywords:
+- vbrArgument_NotNumericType2
 ms.assetid: 6eca32a6-9a44-4f05-8791-abdb4cb316d2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: beb85b898fb1f727834758b7f8765ce453ed3861

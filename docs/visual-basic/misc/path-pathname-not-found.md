@@ -2,11 +2,13 @@
 title: "Ścieżka &#39; &lt;pathname&gt;&#39; nie znaleziono"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrFileSystem_PathNotFound1
+f1_keywords:
+- vbrFileSystem_PathNotFound1
 ms.assetid: 184d09ab-771f-4298-bd71-94b33efc325b
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: e4cca19f60a495c5f108b0e5674f69780ad6c79b

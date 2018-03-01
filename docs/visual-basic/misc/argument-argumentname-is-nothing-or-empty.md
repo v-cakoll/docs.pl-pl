@@ -2,11 +2,13 @@
 title: "Argument &#39; &lt;argumentname&gt;&#39; nic nie lub być puste"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrArgument_PathNullOrEmpty1
+f1_keywords:
+- vbrArgument_PathNullOrEmpty1
 ms.assetid: 4a742518-30ce-4054-b1bb-df6978f15c06
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 0fe84777f06933ece5abd829f7cabcce75d27313

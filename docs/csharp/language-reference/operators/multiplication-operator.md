@@ -2,14 +2,16 @@
 title: "* Operator (odwołanie w C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: '*_CSharpKeyword'
+f1_keywords:
+- '*_CSharpKeyword'
 helpviewer_keywords:
 - multiplication operator (*) [C#]
 - '* operator [C#]'
 ms.assetid: abd9a5f0-9b24-431e-971a-09ee1c45c50e
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 64c32def0935f4347f9aaccc2865b9cd33dd8a70
@@ -18,7 +20,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="-operator-c-reference"></a><span data-ttu-id="2d20a-102">* — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="2d20a-102">* Operator (C# Reference)</span></span>
+# <a name="-operator-c-reference"></a><span data-ttu-id="2d20a-102">\* — Operator (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="2d20a-102">\* Operator (C# Reference)</span></span>
 <span data-ttu-id="2d20a-103">Operator mnożenia (`*`), który oblicza iloczyn argumentów.</span><span class="sxs-lookup"><span data-stu-id="2d20a-103">The multiplication operator (`*`), which computes the product of its operands.</span></span>  <span data-ttu-id="2d20a-104">Ponadto dereference operator, który umożliwia odczytywanie i zapisywanie do wskaźnika.</span><span class="sxs-lookup"><span data-stu-id="2d20a-104">Also, the dereference operator, which allows reading and writing to a pointer.</span></span>  
   
 ## <a name="remarks"></a><span data-ttu-id="2d20a-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="2d20a-105">Remarks</span></span>  

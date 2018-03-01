@@ -2,11 +2,13 @@
 title: "Tablice jako obiekty (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: arrays [C#], as objects
+helpviewer_keywords:
+- arrays [C#], as objects
 ms.assetid: f76d4403-bd0a-42a0-9bc8-694c55b2c926
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: e29685af509009f42f38ba2dbf8524075e880ff9

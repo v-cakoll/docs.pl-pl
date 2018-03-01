@@ -2,11 +2,13 @@
 title: "Wprowadzenie do typów ogólnych (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-helpviewer_keywords: generics [C#], about generics
+helpviewer_keywords:
+- generics [C#], about generics
 ms.assetid: a1ad761e-42f7-41dd-a62f-452a2de26b9d
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 61baf26c9f942a59e3787ca55a2ac6a824410608

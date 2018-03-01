@@ -2,9 +2,11 @@
 title: Operatory C#
 ms.date: 03/09/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: cs.operators
+f1_keywords:
+- cs.operators
 helpviewer_keywords:
 - boolean operators [C#]
 - expressions [C#], operators
@@ -20,7 +22,7 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-caps.latest.revision: "40"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
@@ -90,12 +92,12 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="edb1b-144">[& x](../../../csharp/language-reference/operators/and-operator.md) — adres.</span><span class="sxs-lookup"><span data-stu-id="edb1b-144">[&x](../../../csharp/language-reference/operators/and-operator.md) – address of.</span></span>  
   
- <span data-ttu-id="edb1b-145">[* x](../../../csharp/language-reference/operators/multiplication-operator.md) — usuwania odwołań.</span><span class="sxs-lookup"><span data-stu-id="edb1b-145">[*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
+ <span data-ttu-id="edb1b-145">[\* x](../../../csharp/language-reference/operators/multiplication-operator.md) — usuwania odwołań.</span><span class="sxs-lookup"><span data-stu-id="edb1b-145">[\*x](../../../csharp/language-reference/operators/multiplication-operator.md) – dereferencing.</span></span>  
   
 ## <a name="multiplicative-operators"></a><span data-ttu-id="edb1b-146">Operatory mnożne</span><span class="sxs-lookup"><span data-stu-id="edb1b-146">Multiplicative Operators</span></span>  
  <span data-ttu-id="edb1b-147">Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.</span><span class="sxs-lookup"><span data-stu-id="edb1b-147">These operators have higher precedence than the next section and lower precedence than the previous section.</span></span>  <span data-ttu-id="edb1b-148">Uwaga: możesz kliknąć operatorów, aby przejść na szczegółowych stronach wraz z przykładami.</span><span class="sxs-lookup"><span data-stu-id="edb1b-148">NOTE, you can click on the operators to go the detailed pages with examples.</span></span>  
   
- <span data-ttu-id="edb1b-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md) — mnożenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-149">[x * y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
+ <span data-ttu-id="edb1b-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) — mnożenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-149">[x \* y](../../../csharp/language-reference/operators/multiplication-operator.md) – multiplication.</span></span>  
   
  <span data-ttu-id="edb1b-150">[x / y](../../../csharp/language-reference/operators/division-operator.md) — dzielenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-150">[x / y](../../../csharp/language-reference/operators/division-operator.md) – division.</span></span>  <span data-ttu-id="edb1b-151">Jeśli argumenty są liczbami całkowitymi, wyniku jest liczbą całkowitą obcięty w kierunku zera (na przykład `-7 / 2 is -3`).</span><span class="sxs-lookup"><span data-stu-id="edb1b-151">If the operands are integers, the result is an integer truncated toward zero (for example, `-7 / 2 is -3`).</span></span>  
   
@@ -181,7 +183,7 @@ ms.lasthandoff: 11/21/2017
   
  <span data-ttu-id="edb1b-227">[x-= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) — zmniejszyć.</span><span class="sxs-lookup"><span data-stu-id="edb1b-227">[x -= y](../../../csharp/language-reference/operators/subtraction-assignment-operator.md) – decrement.</span></span>  <span data-ttu-id="edb1b-228">Odejmowanie wartość `y` od wartości `x`, zapisać wynik w `x`i zwraca nową wartość.</span><span class="sxs-lookup"><span data-stu-id="edb1b-228">Subtract the value of `y` from the value of `x`, store the result in `x`, and return the new value.</span></span>  <span data-ttu-id="edb1b-229">Jeśli `x` wyznacza `event`, następnie `y` musi mieć odpowiednią funkcję, która C# usuwa jako program obsługi zdarzeń</span><span class="sxs-lookup"><span data-stu-id="edb1b-229">If `x` designates an `event`, then `y` must be an appropriate function that C# removes as an event handler</span></span>  
   
- <span data-ttu-id="edb1b-230">[x * = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — przypisania mnożenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-230">[x *= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="edb1b-231">Należy pomnożyć wartość `y` wartość `x`, zapisać wynik w `x`i zwraca nową wartość.</span><span class="sxs-lookup"><span data-stu-id="edb1b-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
+ <span data-ttu-id="edb1b-230">[x \* = y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) — przypisania mnożenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-230">[x \*= y](../../../csharp/language-reference/operators/multiplication-assignment-operator.md) – multiplication assignment.</span></span>  <span data-ttu-id="edb1b-231">Należy pomnożyć wartość `y` wartość `x`, zapisać wynik w `x`i zwraca nową wartość.</span><span class="sxs-lookup"><span data-stu-id="edb1b-231">Multiply the value of `y` to the value of `x`, store the result in `x`, and return the new value.</span></span>  
   
  <span data-ttu-id="edb1b-232">[x / = y](../../../csharp/language-reference/operators/division-assignment-operator.md) — przypisania dzielenia.</span><span class="sxs-lookup"><span data-stu-id="edb1b-232">[x /= y](../../../csharp/language-reference/operators/division-assignment-operator.md) – division assignment.</span></span>  <span data-ttu-id="edb1b-233">Podziel wartość `x` przez wartość `y`, zapisać wynik w `x`i zwraca nową wartość.</span><span class="sxs-lookup"><span data-stu-id="edb1b-233">Divide the value of `x` by the value of `y`, store the result in `x`, and return the new value.</span></span>  
   
@@ -200,7 +202,7 @@ ms.lasthandoff: 11/21/2017
  <span data-ttu-id="edb1b-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md)— deklaracji lambda.</span><span class="sxs-lookup"><span data-stu-id="edb1b-246">[=>](../../../csharp/language-reference/operators/lambda-operator.md) – lambda declaration.</span></span>  
   
 ## <a name="arithmetic-overflow"></a><span data-ttu-id="edb1b-247">Przepełnienie arytmetyczne</span><span class="sxs-lookup"><span data-stu-id="edb1b-247">Arithmetic Overflow</span></span>  
- <span data-ttu-id="edb1b-248">Operatory arytmetyczne ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) może dostarczyło wyników, które są poza zakresem możliwe wartości liczbowe rodzaju.</span><span class="sxs-lookup"><span data-stu-id="edb1b-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="edb1b-249">Należy zapoznać się w sekcji na konkretnym operatorze, aby uzyskać więcej informacji, ale w ogólne:</span><span class="sxs-lookup"><span data-stu-id="edb1b-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
+ <span data-ttu-id="edb1b-248">Operatory arytmetyczne ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ \* ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) może dostarczyło wyników, które są poza zakresem możliwe wartości liczbowe rodzaju.</span><span class="sxs-lookup"><span data-stu-id="edb1b-248">The arithmetic operators ([+](../../../csharp/language-reference/operators/addition-operator.md), [-](../../../csharp/language-reference/operators/subtraction-operator.md), [\*](../../../csharp/language-reference/operators/multiplication-operator.md), [/](../../../csharp/language-reference/operators/division-operator.md)) can produce results that are outside the range of possible values for the numeric type involved.</span></span> <span data-ttu-id="edb1b-249">Należy zapoznać się w sekcji na konkretnym operatorze, aby uzyskać więcej informacji, ale w ogólne:</span><span class="sxs-lookup"><span data-stu-id="edb1b-249">You should refer to the section on a particular operator for details, but in general:</span></span>  
   
 - <span data-ttu-id="edb1b-250">Albo zgłasza przepełnienie arytmetyczne całkowitą <xref:System.OverflowException> lub odrzuca najbardziej znaczących bitów wyniku.</span><span class="sxs-lookup"><span data-stu-id="edb1b-250">Integer arithmetic overflow either throws an <xref:System.OverflowException> or discards the most significant bits of the result.</span></span> <span data-ttu-id="edb1b-251">Dzielenie liczby całkowitej przez zero zawsze zwraca <xref:System.DivideByZeroException>.</span><span class="sxs-lookup"><span data-stu-id="edb1b-251">Integer division by zero always throws a <xref:System.DivideByZeroException>.</span></span>  
 

@@ -5,16 +5,19 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: COM+ [WCF], using service model configuration tool
+helpviewer_keywords:
+- COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: dd89a3333ab68b7d580c813a4b7741686b46c5b6
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -51,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      <span data-ttu-id="bbb5d-117">Polecenie dodaje `IFinances` interfejsu `ItemOrders.IFinancial` składnik (z OnlineStore aplikacji COM +), aby zestaw interfejsów, które mają być widoczne jako usługi sieci Web.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-117">The command adds the `IFinances` interface of the `ItemOrders.IFinancial` component (from the OnlineStore COM+ application) to the set of interfaces that will be exposed as Web services.</span></span> <span data-ttu-id="bbb5d-118">Usługa korzysta z trybu obsługi modelu COM + i dlatego wymaga aktywację jawnym aplikacji.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-118">The service uses the COM+ hosting mode and therefore requires explicit application activation.</span></span>  
   
-     <span data-ttu-id="bbb5d-119">Gdy znaku wieloznacznego gwiazdki (*) może służyć do działania składnika i interfejsie, unikać używania go, ponieważ można udostępniać tylko wybrane funkcje jako usługę sieci Web.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-119">While the wildcard asterisk (*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="bbb5d-120">Jeśli są uruchomione przy przyszłych wersjach tego składnika, przy użyciu symbolu wieloznacznego przypadkowo może narazić interfejsów, które mogły nie być wyświetlany, jeśli określono składni konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
+     <span data-ttu-id="bbb5d-119">Gdy znaku wieloznacznego gwiazdki (\*) może służyć do działania składnika i interfejsie, unikać używania go, ponieważ można udostępniać tylko wybrane funkcje jako usługę sieci Web.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-119">While the wildcard asterisk (\*) character can be used for the component and the interface, avoid using it because you might want to expose only selected functionality as a Web service.</span></span> <span data-ttu-id="bbb5d-120">Jeśli są uruchomione przy przyszłych wersjach tego składnika, przy użyciu symbolu wieloznacznego przypadkowo może narazić interfejsów, które mogły nie być wyświetlany, jeśli określono składni konfiguracji.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-120">If run with a future version of this component, using the wildcard may unintentionally expose interfaces that may not have been present when the configuration syntax was determined.</span></span>  
   
      <span data-ttu-id="bbb5d-121">/ Verbose — opcja powoduje, że narzędzie do wyświetlania ostrzeżeń oprócz wszelkie błędy.</span><span class="sxs-lookup"><span data-stu-id="bbb5d-121">The /verbose option instructs the tool to display warnings in addition to any errors.</span></span>  
   

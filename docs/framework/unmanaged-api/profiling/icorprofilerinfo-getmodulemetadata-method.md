@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: ICorProfilerInfo.GetModuleMetaData
-api_location: mscorwks.dll
-api_type: COM
-f1_keywords: ICorProfilerInfo::GetModuleMetaData
+api_name:
+- ICorProfilerInfo.GetModuleMetaData
+api_location:
+- mscorwks.dll
+api_type:
+- COM
+f1_keywords:
+- ICorProfilerInfo::GetModuleMetaData
 helpviewer_keywords:
 - GetModuleMetaData method [.NET Framework profiling]
 - ICorProfilerInfo::GetModuleMetaData method [.NET Framework profiling]
 ms.assetid: 7a439d92-348a-44dd-b60f-cad7cba56379
-topic_type: apiref
-caps.latest.revision: "15"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6ad52460bcd6eb320e970cd0ce2078f2e93df353
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -57,7 +64,7 @@ HRESULT GetModuleMetaData(
 ## <a name="remarks"></a><span data-ttu-id="0ad48-112">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0ad48-112">Remarks</span></span>  
  <span data-ttu-id="0ad48-113">Może poprosić o metadanych, które ma zostać otwarty w trybie odczytu i zapisu, ale spowoduje wolniejsze wykonywanie metadanych programu, ponieważ zmiany wprowadzone do metadanych nie można zoptymalizować w porównaniu z kompilatora.</span><span class="sxs-lookup"><span data-stu-id="0ad48-113">You may ask for the metadata to be opened in read/write mode, but this will result in slower metadata execution of the program, because changes made to the metadata cannot be optimized as they were from the compiler.</span></span>  
   
- <span data-ttu-id="0ad48-114">Niektóre moduły (takie jak moduły zasobów) mają Brak metadanych.</span><span class="sxs-lookup"><span data-stu-id="0ad48-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="0ad48-115">W takich przypadkach `GetModuleMetaData` zwróci wartość HRESULT S_FALSE lub wartość null w *`ppOut`.</span><span class="sxs-lookup"><span data-stu-id="0ad48-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in *`ppOut`.</span></span>  
+ <span data-ttu-id="0ad48-114">Niektóre moduły (takie jak moduły zasobów) mają Brak metadanych.</span><span class="sxs-lookup"><span data-stu-id="0ad48-114">Some modules (such as resource modules) have no metadata.</span></span> <span data-ttu-id="0ad48-115">W takich przypadkach `GetModuleMetaData` zwróci wartość HRESULT S_FALSE lub wartość null w \*`ppOut`.</span><span class="sxs-lookup"><span data-stu-id="0ad48-115">In those cases, `GetModuleMetaData` will return an HRESULT value of S_FALSE, and a null in \*`ppOut`.</span></span>  
   
 ## <a name="requirements"></a><span data-ttu-id="0ad48-116">Wymagania</span><span class="sxs-lookup"><span data-stu-id="0ad48-116">Requirements</span></span>  
  <span data-ttu-id="0ad48-117">**Platformy:** zobacz [wymagania systemowe](../../../../docs/framework/get-started/system-requirements.md).</span><span class="sxs-lookup"><span data-stu-id="0ad48-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  

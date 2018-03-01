@@ -5,23 +5,30 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: reference
-api_name: IMetaDataEmit.SetParamProps
-api_location: mscoree.dll
-api_type: COM
-f1_keywords: IMetaDataEmit::SetParamProps
+api_name:
+- IMetaDataEmit.SetParamProps
+api_location:
+- mscoree.dll
+api_type:
+- COM
+f1_keywords:
+- IMetaDataEmit::SetParamProps
 helpviewer_keywords:
 - IMetaDataEmit::SetParamProps method [.NET Framework metadata]
 - SetParamProps method [.NET Framework metadata]
 ms.assetid: a95a3908-9f87-4084-937e-8e01ef03ad63
-topic_type: apiref
-caps.latest.revision: "10"
+topic_type:
+- apiref
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e8ada9deddf8528321797c1f9bd06b5b775ac4bf
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT
@@ -55,7 +62,7 @@ HRESULT SetParamProps (
  <span data-ttu-id="65d83-108">[in] Flagi dla parametru.</span><span class="sxs-lookup"><span data-stu-id="65d83-108">[in] The flags for the parameter.</span></span>  
   
  `dwCPlusTypeFlag`  
- <span data-ttu-id="65d83-109">[in] Element ELEMENT_TYPE_ * wartości stałej.</span><span class="sxs-lookup"><span data-stu-id="65d83-109">[in] The ELEMENT_TYPE_* for the constant value.</span></span>  
+ <span data-ttu-id="65d83-109">[in] Element ELEMENT_TYPE_ \* wartości stałej.</span><span class="sxs-lookup"><span data-stu-id="65d83-109">[in] The ELEMENT_TYPE_\* for the constant value.</span></span>  
   
  `pValue`  
  <span data-ttu-id="65d83-110">[in] Wartość stała dla parametru.</span><span class="sxs-lookup"><span data-stu-id="65d83-110">[in] The constant value for the parameter.</span></span>  

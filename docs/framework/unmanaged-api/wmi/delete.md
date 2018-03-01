@@ -3,18 +3,26 @@ title: "Usuwanie funkcji (niezarządzany wykaz interfejsów API)"
 description: "Funkcja usuwania usuwa określonej właściwości i wszystkie jego kwalifikatory z definicji klasy modelu wspólnych informacji."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: Delete
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: Delete
-helpviewer_keywords: Delete function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- Delete
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- Delete
+helpviewer_keywords:
+- Delete function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 30f5bf651990cafe06811019cf2b3d92f866f646
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

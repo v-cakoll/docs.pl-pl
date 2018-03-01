@@ -3,18 +3,26 @@ title: "Funkcja ResetSecurity (niezarządzany wykaz interfejsów API)"
 description: "Funkcja ResetSecurity przypisuje token personifikacji bieżącego wątku."
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: ResetSecurity
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: ResetSecurity
-helpviewer_keywords: ResetSecurity function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- ResetSecurity
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- ResetSecurity
+helpviewer_keywords:
+- ResetSecurity function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: bacee65633d25e705d978d3902a6804516a88bf4
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

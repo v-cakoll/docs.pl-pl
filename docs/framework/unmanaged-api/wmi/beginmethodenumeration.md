@@ -3,18 +3,26 @@ title: "Funkcja BeginMethodEnumeration (niezarządzany wykaz interfejsów API)"
 description: Funkcja BeginMethodEnumeration rozpoczyna wyliczenie metody obiektu
 ms.date: 11/06/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: reference
-api_name: BeginMethodEnumeration
-api_location: WMINet_Utils.dll
-api_type: DLLExport
-f1_keywords: BeginMethodEnumeration
-helpviewer_keywords: BeginMethodEnumeration function [.NET WMI and performance counters]
-topic_type: Reference
+api_name:
+- BeginMethodEnumeration
+api_location:
+- WMINet_Utils.dll
+api_type:
+- DLLExport
+f1_keywords:
+- BeginMethodEnumeration
+helpviewer_keywords:
+- BeginMethodEnumeration function [.NET WMI and performance counters]
+topic_type:
+- Reference
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7d843c40a8ab0dd1c48a08126b8c7472505a1732
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

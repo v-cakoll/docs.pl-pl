@@ -2,11 +2,13 @@
 title: "To pojedyncze wystąpienie aplikacji nie można połączyć z oryginalnego wystąpienia"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrAppModel_SingleInstanceCantConnect
+f1_keywords:
+- vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 9cb8cef696ba93f922dfe0d92195a5fb5147b4cc

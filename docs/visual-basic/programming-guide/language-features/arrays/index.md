@@ -3,9 +3,11 @@ title: Tablice w Visual Basic
 ms.custom: 
 ms.date: 12/06/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Array
+f1_keywords:
+- vb.Array
 helpviewer_keywords:
 - arrays [Visual Basic]
 - Visual Basic, arrays
@@ -173,7 +175,7 @@ Dim sales()() As Double = New Double(11)() {}
   
 ## <a name="array-size"></a><span data-ttu-id="34c43-202">Rozmiar tablicy</span><span class="sxs-lookup"><span data-stu-id="34c43-202">Array Size</span></span>  
 
- <span data-ttu-id="34c43-203">Rozmiar tablicy jest produktem długości jej wymiarów.</span><span class="sxs-lookup"><span data-stu-id="34c43-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="34c43-204">Reprezentuje sumę elementów aktualnie znajdujących się w tablicy.</span><span class="sxs-lookup"><span data-stu-id="34c43-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="34c43-205">Na przykład poniższy przykład deklaruje 2-wymiarową tablicą z czterech elementów w każdego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="34c43-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="34c43-206">Jak pokazano na dane wyjściowe z przykładu, rozmiar tablicy wynosi 16 (lub (3 + 1) * (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="34c43-206">As the output from the example shows, the array's size is 16 (or (3 + 1) * (3 + 1).</span></span>
+ <span data-ttu-id="34c43-203">Rozmiar tablicy jest produktem długości jej wymiarów.</span><span class="sxs-lookup"><span data-stu-id="34c43-203">The size of an array is the product of the lengths of all its dimensions.</span></span> <span data-ttu-id="34c43-204">Reprezentuje sumę elementów aktualnie znajdujących się w tablicy.</span><span class="sxs-lookup"><span data-stu-id="34c43-204">It represents the total number of elements currently contained in the array.</span></span>  <span data-ttu-id="34c43-205">Na przykład poniższy przykład deklaruje 2-wymiarową tablicą z czterech elementów w każdego wymiaru.</span><span class="sxs-lookup"><span data-stu-id="34c43-205">For example, the following example declares a 2-dimensional array with four elements in each dimension.</span></span> <span data-ttu-id="34c43-206">Jak pokazano na dane wyjściowe z przykładu, rozmiar tablicy wynosi 16 (lub (3 + 1) \* (3 + 1).</span><span class="sxs-lookup"><span data-stu-id="34c43-206">As the output from the example shows, the array's size is 16 (or (3 + 1) \* (3 + 1).</span></span>
 
  [!code-vb[array-size](../../../../../samples/snippets/visualbasic/programming-guide/language-features/arrays/array-size.vb)]  
 

@@ -2,11 +2,13 @@
 title: "Nie można znaleźć typu &#39; członka domyślnego &lt;typename&gt;&#39;"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vbrMissingMember_NoDefaultMemberFound1
+f1_keywords:
+- vbrMissingMember_NoDefaultMemberFound1
 ms.assetid: 1869ecb8-7c6a-422f-86ac-5da96c6adc66
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 51cff2d989a22031984347ac4d82d9146d620760

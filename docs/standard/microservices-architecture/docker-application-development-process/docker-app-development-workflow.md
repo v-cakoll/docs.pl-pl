@@ -1,7 +1,7 @@
 ---
 title: "Przepływ pracy tworzenia aplikacji Docker"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0f20e5b568a464b5c860e3da51e52d4f7d79972
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 49cd0ade4586317158c901586f4dd9528760a9c4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia aplikacji Docker
 
@@ -73,7 +73,7 @@ Możesz uruchomić kodowania aplikację w zwykły .NET (zwykle w .NET Core, jeś
     [*https://docs.docker.com/docker-for-windows/*](https://docs.docker.com/docker-for-windows/)
 
 -   **Visual Studio 2017**
-    [*https://www.visualstudio.com/vs/visual-studio-2017/*](https://www.visualstudio.com/vs/visual-studio-2017/)
+    [*https://www.visualstudio.com/downloads/*](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 ![](./media/image4.png)
 
@@ -131,7 +131,7 @@ Można określić dodatkowe ustawienia konfiguracji w plik Dockerfile, w zależn
     [*https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images*](https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images)
 
 -   **Utwórz własny obraz**. W oficjalnej dokumentacji Docker.
-    [*https://docs.docker.com/Engine/Tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
+    [*https://docs.docker.com/engine/tutorials/dockerimages/*](https://docs.docker.com/engine/tutorials/dockerimages/)
 
 ### <a name="using-multi-arch-image-repositories"></a>Przy użyciu repozytoria wielu architektury obrazu
 
@@ -139,17 +139,17 @@ Pojedynczy repozytorium może zawierać wariantów platform, takich jak obraz sy
 
 Jeśli określisz tag, przeznaczonych dla platformy, która jest jawne, takich jak w następujących przypadkach:
 
--   **Microsoft/aspnetcore:2.0.0-jessie**
+-   **microsoft/aspnetcore:2.0.0-jessie**
 
         .NET Core 2.0 runtime-only on Linux 
 
--   **Microsoft/aspnetcore:2.0.0-nanoserver**
+-   **microsoft/aspnetcore:2.0.0-nanoserver**
 
         .NET Core 2.0 runtime-only on Windows Nano Server
 
 Ale i jest nowy od połowy 2017, jeśli określisz tej samej nazwie obrazu, nawet z tym samym tagiem, nowych obrazów wielu architektury (na przykład aspnetcore obrazu, który obsługuje wielu arch) będą używać wersji systemu Linux lub Windows, w zależności od platformy Docker systemu operacyjnego hosta wdrażasz , jak pokazano w poniższym przykładzie:
 
--   **Microsoft / aspnetcore:2.0**
+-   **microsoft/aspnetcore:2.0**
 
         Multi-arch: .NET Core 2.0 runtime-only on Linux or Windows Nano Server depending on the Docker host OS
 
@@ -162,9 +162,9 @@ Można utworzyć własny obraz podstawowy Docker od podstaw. W tym scenariuszu n
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Wiele architektury .NET Core obrazów**.
-https://github.com/DotNet/announcements/issues/14 
+https://github.com/dotnet/announcements/issues/14 
 -   **Tworzenie obrazu podstawowego**. Oficjalna dokumentacja Docker.
-    [*https://docs.docker.com/Engine/userguide/eng-Image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+    [*https://docs.docker.com/engine/userguide/eng-image/baseimages/*](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
 
 ![](./media/image7.png)
 
@@ -381,7 +381,7 @@ Jeśli tworzysz podejście Edytor/CLI trudniej jest debugowanie kontenerów i mo
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 -   **Steve Lasker. Tworzenie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu rozwiązania Docker.** Wideo.
-    [*https://channel9.msdn.com/events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+    [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Uproszczony przepływu pracy podczas opracowywania kontenery z programem Visual Studio
 
@@ -423,8 +423,8 @@ RUN powershell add-windowsfeature web-asp-net45
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **ASPNET — docker/plik Dockerfile.** Przykład polecenia programu Powershell do uruchamiania z dockerfiles dołączenie funkcji systemu Windows.
-    [*https://github.com/Microsoft/ASPNET-docker/blob/Master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
+-   **aspnet-docker/Dockerfile.** Przykład polecenia programu Powershell do uruchamiania z dockerfiles dołączenie funkcji systemu Windows.
+    [*https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile*](https://github.com/Microsoft/aspnet-docker/blob/master/4.6.2/Dockerfile)
 
 >[!div class="step-by-step"]
-[Poprzednie] (index.md) [dalej] (.. / net-core-single-containers-linux-windows-server-hosts/index.md)
+[Previous] (index.md) [Next] (../net-core-single-containers-linux-windows-server-hosts/index.md)

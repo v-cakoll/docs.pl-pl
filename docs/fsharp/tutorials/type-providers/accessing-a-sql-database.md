@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 1c413eb0-16a5-4c1a-9a4e-ad6877e645d6
-ms.openlocfilehash: 7177eca33ded712308bbc6198040d833b7364d55
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: dbc5d889fb7883b4327180fdf34accf45bf519e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-a-sql-database-by-using-type-providers"></a>Wskazówki: uzyskiwanie dostępu do bazy danych SQL Database za pomocą dostawców typów
 
 > [!NOTE]
-Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](http://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
+Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](https://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
 
 > [!NOTE]
 Linki odwołań interfejsu API spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
@@ -96,7 +96,7 @@ W tym kroku utworzysz typ dostawcy do schematu bazy danych.
 
 #### <a name="to-set-up-the-type-provider-from-a-direct-database-connection"></a>Aby skonfigurować typ dostawcy z połączenia bezpośredniego bazy danych
 
-Istnieją dwa wiersze krytyczne kodu, które są potrzebne do tworzenia typów, które umożliwiają zapytanie dotyczące bazy danych SQL przy użyciu dostawcy typów. Najpierw należy utworzyć wystąpienia dostawcy typów. W tym celu należy utworzyć wygląd skrót typu `SqlDataConnection` z parametrem ogólnym statycznych. `SqlDataConnection`Dostawca typu SQL i nie należy mylić z `SqlConnection` typu, który jest używany w programowaniu ADO.NET. Jeśli baza danych, który chcesz połączyć się z, a ma parametry połączenia, należy użyć poniższego kodu do wywołania typu dostawcy. Zastąp własne parametry połączenia dla ciągu przykład podane. Na przykład jeśli serwer jest MÓJSERWER i wystąpienie bazy danych jest WYSTĄPIENIEM mojabazadanych jest nazwa bazy danych i chcesz uzyskać dostępu do bazy danych, a następnie parametry połączenia za pomocą uwierzytelniania systemu Windows będzie jako podane w poniższy przykładowy kod.
+Istnieją dwa wiersze krytyczne kodu, które są potrzebne do tworzenia typów, które umożliwiają zapytanie dotyczące bazy danych SQL przy użyciu dostawcy typów. Najpierw należy utworzyć wystąpienia dostawcy typów. W tym celu należy utworzyć wygląd skrót typu `SqlDataConnection` z parametrem ogólnym statycznych. `SqlDataConnection` Dostawca typu SQL i nie należy mylić z `SqlConnection` typu, który jest używany w programowaniu ADO.NET. Jeśli baza danych, który chcesz połączyć się z, a ma parametry połączenia, należy użyć poniższego kodu do wywołania typu dostawcy. Zastąp własne parametry połączenia dla ciągu przykład podane. Na przykład jeśli serwer jest MÓJSERWER i wystąpienie bazy danych jest WYSTĄPIENIEM mojabazadanych jest nazwa bazy danych i chcesz uzyskać dostępu do bazy danych, a następnie parametry połączenia za pomocą uwierzytelniania systemu Windows będzie jako podane w poniższy przykładowy kod.
 
 ```fsharp
 type dbSchema = SqlDataConnection<"Data Source=MYSERVER\INSTANCE;Initial Catalog=MyDatabase;Integrated Security=SSPI;">
@@ -456,8 +456,8 @@ INSERT INTO Table3 (Id, Name, Data)
 
 [Wskazówki: Generowanie typów F # za pomocą pliku DBML](generating-fsharp-types-from-dbml.md)
 
-[Wyrażenia zapytań](../../language-reference/query-expressions.md)
+[Wyrażenia zapytania](../../language-reference/query-expressions.md)
 
-[LINQ do SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
+[LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)
 
-[SqlMetal.exe &#40; Narzędzie generowania kodu &#41;](https://msdn.microsoft.com/library/bb386987)
+[SqlMetal.exe &#40;Code Generation Tool&#41;](https://msdn.microsoft.com/library/bb386987)

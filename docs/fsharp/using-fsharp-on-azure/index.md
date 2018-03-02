@@ -1,7 +1,7 @@
 ---
 title: "Przy użyciu języka F # na platformie Azure"
 description: "Przewodnik po użyciu usług Azure F #"
-keywords: 'Azure, chmury, visual f #, f # programowanie funkcjonalne, .NET, .NET Core'
+keywords: Azure, cloud, visual f#, f#, functional programming, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
 ms.date: 09/22/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 636604b1a0b645f13ac20d7ed85bde9abae3f9f6
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-f-on-azure"></a>Przy użyciu języka F # na platformie Azure
 
@@ -40,7 +40,7 @@ Aby zainstalować F # na maszynę wirtualną do wykonania, kompilacji i/lub skry
 
 Inne zasoby dotyczące korzystania z usługi Azure Functions i F #:
 
-* [Skalować usługę Azure Functions w języku F # za pomocą Suave](http://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [Skalować usługę Azure Functions w języku F # za pomocą Suave](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
 * [Tworzenie funkcji platformy Azure w języku F #](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Przy użyciu dostawcy typów Azure z funkcjami platformy Azure](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
@@ -48,10 +48,10 @@ Inne zasoby dotyczące korzystania z usługi Azure Functions i F #:
 
 Usługa Azure Storage jest warstwy podstawowej usługi magazynu dla nowoczesnych aplikacji, które polegają na trwałości, dostępności i skalowalności, aby spełniać potrzeby klientów. F # programy można bezpośrednią interakcję z usług Azure storage, przy użyciu techinques opisane w następujących artykułach.
 
-* [Rozpoczynanie pracy z magazynem obiektów Blob platformy Azure przy użyciu języka F #](blob-storage.md)
-* [Rozpoczynanie pracy z magazynem plików Azure przy użyciu języka F #](file-storage.md)
-* [Rozpoczynanie pracy z magazynem kolejek Azure przy użyciu języka F #](queue-storage.md)
-* [Rozpoczynanie pracy z magazynem tabel Azure przy użyciu języka F #](table-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Blob Storage przy użyciu języka F #](blob-storage.md)
+* [Rozpoczynanie pracy z usługą Azure File Storage przy użyciu języka F #](file-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Queue Storage przy użyciu języka F #](queue-storage.md)
+* [Rozpoczynanie pracy z usługą Azure Table Storage przy użyciu języka F #](table-storage.md)
 
 Można także magazynu Azure w połączeniu z usługi Azure Functions za pośrednictwem deklaratywne konfiguracji zamiast jawnego wywołania interfejsu API. Zobacz [usługi Azure Functions wyzwalaczy i powiązań usługi Azure Storage](/azure/azure-functions/functions-bindings-storage) w tym przykłady F #.
 

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 25697ef6-465e-4248-9de5-1d199d4a8b59
-ms.openlocfilehash: 68462a24a9fbd1ee671d7e335f2774adf3476750
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f721b5b378bf70fb594cad66bd90bd96a0320ee2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="type-providers"></a>Dostawcy typów
 
 > [!NOTE]
-Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](http://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
+Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](https://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
 
 Dostawca typów języka F# to składnik, który dostarcza typy, właściwości i metody używane w programie. Dostawcy typów są znaczącą częścią obsługi programowania z dużą ilością informacji w języku F# 3.0. Kluczem do programowania z dużą ilością informacji jest wyeliminowanie barier w pracy z różnymi źródłami informacji w Internecie i nowoczesnych środowiskach w przedsiębiorstwach. Jedną ze znaczących barier w dołączaniu źródła informacji do programu jest potrzeba przedstawienia informacji jako typów, właściwości i metod, których można używać w środowisku języka programowania. Ręczne pisanie tych typów jest bardzo czasochłonne i trudne pod względem organizacyjnym. Powszechną alternatywą jest użycie generatora kodu, który dodaje pliki do projektu, jednak konwencjonalne typy generowania kodu nie integrują się poprawnie w eksploracyjnych trybach programowania obsługiwanych przez język F#, ponieważ wygenerowany kod musi być zastępowany za każdym razem, gdy odwołanie do usługi jest zmieniane.
 
@@ -48,6 +48,6 @@ Gdy jest to konieczne, można tworzyć własnych niestandardowych dostawców typ
 |[Rozwiązywanie problemów z dostawcami typów](troubleshooting-type-providers.md)|Informacje dotyczące typowych problemów, które mogą pojawić się podczas pracy z dostawcami typów, oraz propozycje ich rozwiązań.|
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](../../language-reference/index.md)
+[Dokumentacja języka F#](../../language-reference/index.md)
 
-[Visual F #](../../index.md)
+[Visual F#](../../index.md)

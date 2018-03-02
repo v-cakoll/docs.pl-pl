@@ -1,7 +1,7 @@
 ---
 title: "Rozpoczynanie pracy z magazynem plików Azure przy użyciu języka F #"
 description: "Przechowywanie plików danych w chmurze za pomocą magazyn plików Azure i instalowanie udziału plików w chmurze z maszyny wirtualnej platformy Azure (VM) lub z lokalnych aplikacji systemu Windows."
-keywords: "Visual f #, f #, funkcjonalności programowania .NET, .NET Core Azure"
+keywords: visual f#, f#, functional programming, .NET, .NET Core, Azure
 author: sylvanc
 ms.author: phcart
 ms.date: 09/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 5c26a0aa-186e-476c-9f87-e0191754579e
-ms.openlocfilehash: 66b2503744e9024deac3d6dabea57da4fd393bd8
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5e1f6914acad5ae8c7148a7238e2d1d6a8ca5867
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>Rozpoczynanie pracy z magazynem plików Azure przy użyciu języka F # #
 
@@ -97,7 +97,7 @@ W tym miejscu Pobierz plik właśnie utworzony dołączania zawartości do pliku
 
 ### <a name="set-the-maximum-size-for-a-file-share"></a>Ustawianie maksymalnego rozmiaru udziału plików
 
-W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału oraz jak ustawić limit przydziału dla udziału. `FetchAttributes`musi zostać wywołana, aby wypełnić udziału `Properties`, i `SetProperties` propagowanie zmian lokalnych do usługi Magazyn plików Azure.
+W poniższym przykładzie pokazano, jak sprawdzić bieżące użycie udziału oraz jak ustawić limit przydziału dla udziału. `FetchAttributes` musi zostać wywołana, aby wypełnić udziału `Properties`, i `SetProperties` propagowanie zmian lokalnych do usługi Magazyn plików Azure.
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L62-L72)]
 
@@ -161,5 +161,5 @@ Zobacz następujące łącza, aby uzyskać więcej informacji na temat usługi M
 
 - [Magazyn plików Azure jest ogólnie dostępna teraz](https://azure.microsoft.com/blog/azure-file-storage-now-generally-available/)
 - [Inside Azure File Storage](https://azure.microsoft.com/blog/inside-azure-file-storage/) 
-- [Wprowadzenie do usługi Microsoft Azure pliku](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/12/introducing-microsoft-azure-file-service.aspx)
-- [Utrwalanie połączeń pliki programu Microsoft Azure](http://blogs.msdn.com/b/windowsazurestorage/archive/2014/05/27/persisting-connections-to-microsoft-azure-files.aspx)
+- [Wprowadzenie do usługi Microsoft Azure pliku](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/12/introducing-microsoft-azure-file-service/)
+- [Utrwalanie połączeń pliki programu Microsoft Azure](https://blogs.msdn.microsoft.com/windowsazurestorage/2014/05/26/persisting-connections-to-microsoft-azure-files/)

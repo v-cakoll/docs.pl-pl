@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 0adae84c-b0fa-455f-994b-274ecdc6df30
-ms.openlocfilehash: 28c2e9a405670f4e5f9512e99e0e6c3e3082856c
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 750407c36a989cece30c0c0654ff905c8eee3b33
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-accessing-an-odata-service-by-using-type-providers"></a>Wskazówki: uzyskiwanie dostępu do usługi OData za pomocą dostawców typów
 
 > [!NOTE]
-Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](http://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
+Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](https://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
 
 > [!NOTE]
 Linki odwołań interfejsu API spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
@@ -69,7 +69,7 @@ W tym kroku utworzysz typ dostawcy, która zapewnia dostęp do danych i typów d
 open Microsoft.FSharp.Data.TypeProviders
 
 
-type Northwind = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
+type Northwind = ODataService<"https://services.odata.org/Northwind/Northwind.svc/">
 
 let db = Northwind.GetDataContext()
 let fullContext = Northwind.ServiceTypes.NorthwindEntities()
@@ -100,7 +100,7 @@ W tym kroku wyrażenia zapytania F # służy do wysłać zapytania do usługi OD
   - kolejność (`orderBy`, `thenBy`)
 <br />
 
-  - `AddQueryOption`i `Expand`, które są zależne od OData operacji
+  - `AddQueryOption` i `Expand`, które są zależne od OData operacji
 <br />
 
   Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące LINQ &#40; Usługi danych WCF &#41; ](https://msdn.microsoft.com/library/ee622463.aspx).
@@ -242,11 +242,11 @@ db.DataContext.SendingRequest.Add (fun eventArgs -> printfn "Requesting %A" even
 ```
 
 Dane wyjściowe poprzedniego kodu to:
-<br />`requesting http://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
+<br />`requesting https://services.odata.org/Northwind/Northwind.svc/Orders()?$orderby=ShippedDate&amp;$select=OrderID,ShippedDate`
 
 
 ## <a name="see-also"></a>Zobacz też
-[Wyrażenia zapytań](../../language-reference/query-expressions.md)
+[Wyrażenia zapytania](../../language-reference/query-expressions.md)
 
 [Zagadnienia dotyczące LINQ (usługi danych WCF)](https://msdn.microsoft.com/library/ee622463.aspx)
 

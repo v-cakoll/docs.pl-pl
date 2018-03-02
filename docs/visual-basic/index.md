@@ -2,18 +2,19 @@
 title: Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 38ccf61b488a40d100895d0dd2bb4bdecca7eba5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96c7c93056b11c08ccdfa48a0d78f2996c2d86d4
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-basic-guide"></a>Przewodnik po Visual Basic
 
@@ -21,7 +22,7 @@ Visual Basic została zaprojektowana w celu efektywnie tworzyć aplikacje bezpie
   
  Generowania kodu języka Visual Basic nadal tradycję umożliwiając szybki i łatwy sposób tworzenia aplikacji opartych na programie .NET Framework.  
   
- Jeśli nie masz jeszcze Visual Basic, można uzyskać wersji programu Visual Studio, która obejmuje Visual Basic bezpłatnie z [programu Visual Studio](https://www.visualstudio.com/products/downloads) lokacji.  
+ Jeśli nie masz jeszcze Visual Basic, można uzyskać wersji programu Visual Studio, która obejmuje Visual Basic bezpłatnie z [programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lokacji.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie](../visual-basic/getting-started/index.md)  
@@ -41,17 +42,17 @@ Visual Basic została zaprojektowana w celu efektywnie tworzyć aplikacje bezpie
  [Tworzenie aplikacji za pomocą języka Visual Basic](../visual-basic/developing-apps/index.md)  
  W tym artykule omówiono różne aspekty Programowanie w języku Visual Basic, takie jak zabezpieczenia, obsługa wyjątków i przy użyciu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] biblioteki klas.
 
- [Współdziałanie z COM](../visual-basic/programming-guide/com-interop/index.md)  
+ [Usługa międzyoperacyjna modelu COM](../visual-basic/programming-guide/com-interop/index.md)  
  Wyjaśniono problemami ze współdziałaniem skojarzone z tworzenie i używanie składnika object model (COM) obiektów za pomocą Visual Basic.  
   
  [Przykłady](../visual-basic/sample-applications.md)  
  Zawiera informacje o próbek.  
   
- [Instruktaże](../visual-basic/walkthroughs.md)  
+ [Przewodniki](../visual-basic/walkthroughs.md)  
  Zawiera łącza do instrukcje krok po kroku dla typowych scenariuszy.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Wprowadzenie do programowania z użyciem programu Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
+ [Wprowadzenie do programowania w programie Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)  
  Zawiera łącza do tematów, które ułatwiają podstawowe informacje na temat programu Visual Studio.  
   
  [Biblioteka klas programu .NET framework](http://go.microsoft.com/fwlink/?LinkID=227195)  

@@ -10,16 +10,16 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 81adb2eb-625f-4ad8-aeaa-8f672a6d79a2
-ms.openlocfilehash: 1df0344e8dab2b40d82d1b9c61ccd2f026906243
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 901457dce358f768b4f4c980703e09f6c744918e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="walkthrough-generating-f-types-from-an-edmx-schema-file"></a>Wskazówki: generowanie typów F# za pomocą pliku schematu EDMX
 
 > [!NOTE]
-Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](http://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
+Ten przewodnik został napisany w języku F # 3.0 i zostanie zaktualizowany.  Zobacz [FSharp.Data](https://fsharp.github.io/FSharp.Data/) dla dostawców typów aktualne, między platformami.
 
 > [!NOTE]
 Linki odwołań interfejsu API spowoduje przejście do MSDN.  Dokumentacja interfejsu API docs.microsoft.com nie została ukończona.
@@ -222,7 +222,7 @@ Tę procedurę należy wykonać tylko wtedy, gdy użytkownik chce wiedzieć, jak
 1. Na pasku menu wybierz **SQL**, **edytora języka Transact-SQL**, **nowe zapytanie** tworzenia bazy danych. Jeśli zostanie wyświetlony monit, określ serwer bazy danych i wystąpienie.
 <br />
 
-2. Skopiuj i Wklej zawartość skryptu bazy danych, który utworzy bazę danych dla użytkowników domowych, zgodnie z opisem w [dokumentację programu Entity Framework](http://msdn.microsoft.com/data/JJ614587.aspx) w Centrum deweloperów danych.
+2. Skopiuj i Wklej zawartość skryptu bazy danych, który utworzy bazę danych dla użytkowników domowych, zgodnie z opisem w [dokumentację programu Entity Framework](https://msdn.microsoft.com/data/JJ614587.aspx) w Centrum deweloperów danych.
 <br />
 
 3. Wybranie przycisku paska narzędzi z symbolem trójkąt lub wybierając pozycję klawiszy Ctrl + Q, uruchom skrypt SQL.
@@ -275,9 +275,9 @@ Eksploruj inne zapytania, analizując operatorów zapytań dostępne wymienionyc
 
 [Wskazówki: Uzyskiwanie dostępu do bazy danych SQL za pomocą dostawców typów i jednostek](accessing-a-sql-database-entities.md)
 
-[Entity Framework](http://msdn.microsoft.com/data/ef)
+[Entity Framework](https://msdn.microsoft.com/data/ef)
 
 [Omówienie plików edmx](https://msdn.microsoft.com/library/f4c8e7ce-1db6-417e-9759-15f8b55155d4)
 
-[EDM Generator &#40; EdmGen.exe &#41;](https://msdn.microsoft.com/library/bb387165)
+[EDM Generator &#40;EdmGen.exe&#41;](https://msdn.microsoft.com/library/bb387165)
 

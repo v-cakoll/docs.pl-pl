@@ -1,7 +1,7 @@
 ---
 title: "Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac"
 description: "W tym temacie przedstawiono tworzenie rozwiązania .NET Core biblioteki do ponownego wykorzystania i testowania jednostek."
-keywords: "System macOS .NET i .NET core, komputerów Mac"
+keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
 ms.date: 06/12/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
-ms.workload: dotnetcore
-ms.openlocfilehash: f64bc6463c455a288a374604e42e6747f701b0e7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac
 
@@ -31,9 +32,9 @@ Ten samouczek pokazuje, jak utworzyć aplikację, która akceptuje word wyszukiw
 
 - Biblioteki OpenSSL (jeśli jest uruchomiony program .NET Core 1.1): zobacz [wymagania wstępne dotyczące .NET Core w systemie Mac](../macos-prerequisites.md) tematu.
 - [Oprogramowanie .NET core SDK 1.1 lub nowszej](https://www.microsoft.com/net/core#macos)
-- [Visual Studio 2017 dla komputerów Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+- [Visual Studio 2017 for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
 
-Aby uzyskać więcej informacji dotyczących wymagań wstępnych, zobacz [wymagania wstępne dotyczące .NET Core w systemie Mac](../../core/macos-prerequisites.md). Aby uzyskać pełne wymagania systemowe programu Visual Studio 2017 dla komputerów Mac, zobacz [programu Visual Studio 2017 wymagania systemowe rodziny produktów Mac](https://www.visualstudio.com/productinfo/vs2017-system-requirements-mac).
+Aby uzyskać więcej informacji dotyczących wymagań wstępnych, zobacz [wymagania wstępne dotyczące .NET Core w systemie Mac](../../core/macos-prerequisites.md). Aby uzyskać pełne wymagania systemowe programu Visual Studio 2017 dla komputerów Mac, zobacz [programu Visual Studio 2017 wymagania systemowe rodziny produktów Mac](/visualstudio/productinfo/vs2017-system-requirements-mac).
 
 ## <a name="building-a-library"></a>Kompilowanie biblioteki
 
@@ -169,7 +170,7 @@ Testy jednostkowe Podaj oprogramowania zautomatyzowanych testów podczas program
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
 
-1. Aby uruchomić aplikację w oknie konsoli zamiast IDE, kliknij prawym przyciskiem myszy `WordCounterApp` projektu, zaznacz **opcje**i Otwórz **domyślne** węźle **konfiguracje**. Pole wyboru dla **Uruchom na zewnętrznej konsoli**. Pozostaw **wstrzymać dane wyjściowe konsoli** zaznaczoną opcją. To ustawienie powoduje, że aplikację można zduplikować w oknie konsoli, w którym można wpisać dane wejściowe dla `Console.ReadLine` instrukcje. Jeśli opuścisz aplikacji do uruchamiania w środowisku IDE może zobaczyć tylko dane wyjściowe `Console.WriteLine` instrukcje. `Console.ReadLine`instrukcje nie działają w IDE **danych wyjściowych aplikacji** panelu.
+1. Aby uruchomić aplikację w oknie konsoli zamiast IDE, kliknij prawym przyciskiem myszy `WordCounterApp` projektu, zaznacz **opcje**i Otwórz **domyślne** węźle **konfiguracje**. Pole wyboru dla **Uruchom na zewnętrznej konsoli**. Pozostaw **wstrzymać dane wyjściowe konsoli** zaznaczoną opcją. To ustawienie powoduje, że aplikację można zduplikować w oknie konsoli, w którym można wpisać dane wejściowe dla `Console.ReadLine` instrukcje. Jeśli opuścisz aplikacji do uruchamiania w środowisku IDE może zobaczyć tylko dane wyjściowe `Console.WriteLine` instrukcje. `Console.ReadLine` instrukcje nie działają w IDE **danych wyjściowych aplikacji** panelu.
 
    ![Okno Opcje projektu](./media/using-on-mac-vs-full-solution/vsmacfull13.png)
 
@@ -197,4 +198,4 @@ Testy jednostkowe Podaj oprogramowania zautomatyzowanych testów podczas program
 
 ## <a name="see-also"></a>Zobacz także
 
-[Visual Studio 2017 dla komputerów Mac informacje o wersji](https://www.visualstudio.com/news/releasenotes/vs2017-mac-relnotes)
+[Visual Studio 2017 dla komputerów Mac informacje o wersji](/visualstudio/releasenotes/vs2017-mac-relnotes)

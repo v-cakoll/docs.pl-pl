@@ -12,11 +12,11 @@ ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24a030bb43d49615a7487ce10ad2347fdfd8a290
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 6492edae6e4311252dc664236fb43cd373f7c59f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. Wewnętrznie, tekst jest przechowywana jako sekwencyjnych kolekcji tylko do odczytu z <xref:System.Char> obiektów. Brak nie przerywa null znak na końcu C# ciąg. w związku z tym ciągu języka C# może zawierać dowolną liczbę osadzonych znaki null ('\0'). <xref:System.String.Length%2A> Właściwości ciągu reprezentuje liczbę `Char` obiekty nie zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodowych Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -83,7 +83,7 @@ Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. W
  Jednego przeciążenia <xref:System.Console.WriteLine%2A> metoda przyjmuje jako parametr ciągu formatu. W związku z tym można osadzić tylko literał bez jawnego wywołania do metody ciągu formatu. Jednak jeśli używasz <xref:System.Diagnostics.Trace.WriteLine%2A> metodę w celu wyświetlenia danych wyjściowych debugowania w programie Visual Studio **dane wyjściowe** okna, musisz jawnie wywołać <xref:System.String.Format%2A> — metoda ponieważ <xref:System.Diagnostics.Trace.WriteLine%2A> akceptuje tylko ciąg znaków, a nie w ciągu formatu. Aby uzyskać więcej informacji na temat ciągi formatów, zobacz [typy formatowania](../../../standard/base-types/formatting-types.md).  
   
 ## <a name="substrings"></a>Podciągów  
- Ciąg jest sekwencja znaków, który jest zawarty w ciągu. Użyj <xref:System.String.Substring%2A> metodę w celu utworzenia nowego ciągu z części oryginalnego ciągu. Jedno lub więcej wystąpień podciągu można wyszukiwać za pomocą <xref:System.String.IndexOf%2A> metody. Użyj <xref:System.String.Replace%2A> metody należy zastąpić wszystkie wystąpienia wskazany podciąg nowe parametry. Podobnie jak <xref:System.String.Substring%2A> metody <xref:System.String.Replace%2A> faktycznie zwraca nowy ciąg i nie modyfikować oryginalnego ciągu. Aby uzyskać więcej informacji, zobacz [porady: wyszukiwanie ciągów za pomocą metod ciągów](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md) i [porady: modyfikowanie zawartości ciągu](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
+ Ciąg jest sekwencja znaków, który jest zawarty w ciągu. Użyj <xref:System.String.Substring%2A> metodę w celu utworzenia nowego ciągu z części oryginalnego ciągu. Jedno lub więcej wystąpień podciągu można wyszukiwać za pomocą <xref:System.String.IndexOf%2A> metody. Użyj <xref:System.String.Replace%2A> metody należy zastąpić wszystkie wystąpienia wskazany podciąg nowe parametry. Podobnie jak <xref:System.String.Substring%2A> metody <xref:System.String.Replace%2A> faktycznie zwraca nowy ciąg i nie modyfikować oryginalnego ciągu. Aby uzyskać więcej informacji, zobacz [porady: wyszukiwanie ciągów](../../how-to/search-strings.md) i [porady: modyfikowanie zawartości ciągu](../../../csharp/programming-guide/strings/how-to-modify-string-contents.md).  
   
  [!code-csharp[csProgGuideStrings#7](../../../csharp/programming-guide/strings/codesnippet/CSharp/index_7.cs)]  
   
@@ -127,8 +127,7 @@ string s = String.Empty;
 |[Instrukcje: łączenie wielu ciągów](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Przedstawia sposób użycia `+` operatora i `Stringbuilder` klasy sprzęgać ze sobą ciągów w czasie kompilacji i w czasie wykonywania.|  
 |[Instrukcje: porównywanie ciągów](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Pokazuje, jak przeprowadzić porządkowej porównania ciągów.|  
 |[Porady: analizowanie ciągów za pomocą String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykładowy kod, który ilustruje sposób używania `String.Split` metodę, aby przeanalizować parametry.|  
-|[Instrukcje: wyszukiwanie ciągów za pomocą metod ciągów](../../../csharp/programming-guide/strings/how-to-search-strings-using-string-methods.md)|Wyjaśniono, jak używać konkretnych metod do wyszukiwania ciągów.|  
-|[Instrukcje: wyszukiwanie ciągów za pomocą wyrażeń regularnych](../../../csharp/programming-guide/strings/how-to-search-strings-using-regular-expressions.md)|Wyjaśniono, jak używać wyrażeń regularnych do wyszukiwania ciągów.|  
+|[Porady: wyszukiwanie ciągów](../../how-to/search-strings.md)|Wyjaśniono, jak używać konkretnych metod do wyszukiwania ciągów.|  
 |[Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak można bezpiecznie przeanalizować ciągu czy ma prawidłową wartość liczbową.|  
 |[Instrukcje: konwertowanie ciągu na DateTime](../../../csharp/programming-guide/strings/how-to-convert-a-string-to-a-datetime.md)|Pokazuje, jak można przekonwertować ciągu, takich jak "2008-01-24" do <xref:System.DateTime?displayProperty=nameWithType> obiektu.|  
 |[Podstawowe operacje na ciągach](../../../../docs/standard/base-types/basic-string-operations.md)|Zawiera łącza do tematów, które używają <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> metody wykonywać podstawowe operacje na ciągach.|  

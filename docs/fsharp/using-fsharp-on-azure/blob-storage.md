@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: c5b74a4f-dcd1-4849-930c-904b6c8a04e1
-ms.openlocfilehash: 9011bdceabd1b5e0541ecb94f3e812871688025b
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 5be948e100c496bc6613f1fdfb826ece5de6df8e
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>Rozpoczynanie pracy z magazynem obiektów Blob platformy Azure przy użyciu języka F # #
 
@@ -236,7 +236,7 @@ Aby uzyskać więcej informacji na temat szyfrowania danych obiektów blob, zoba
 Teraz, kiedy znasz już podstawy magazynu obiektów Blob, skorzystaj z poniższych linków, aby dowiedzieć się więcej.
 
 ### <a name="tools"></a>Narzędzia
-- [F # AzureStorageTypeProvider](http://fsprojects.github.io/AzureStorageTypeProvider/) F # typ dostawcy, który może służyć do eksplorowania zasobów obiektów Blob, tabel i kolejek usługi Azure Storage i łatwo zastosować operacji CRUD na nich.
+- [F # AzureStorageTypeProvider](https://fsprojects.github.io/AzureStorageTypeProvider/) F # typ dostawcy, który może służyć do eksplorowania zasobów obiektów Blob, tabel i kolejek usługi Azure Storage i łatwo zastosować operacji CRUD na nich.
 - [FSharp.Azure.Storage](https://github.com/fsprojects/FSharp.Azure.Storage) F # interfejsu API przy użyciu usługi Microsoft Azure Table Storage
 - [Microsoft Azure magazynu Explorer (MASE)](/azure/vs-azure-tools-storage-manage-with-storage-explorer) jest bezpłatna, aplikacja autonomiczny firmy Microsoft, który umożliwia pracę wizualnie z danymi usługi Azure Storage w systemie Windows, OS X i Linux.
 
@@ -251,4 +251,4 @@ Teraz, kiedy znasz już podstawy magazynu obiektów Blob, skorzystaj z poniższy
 - [Transfer danych za pomocą wiersza polecenia azcopy w systemie Windows](/azure/storage/common/storage-use-azcopy)
 - [Transfer danych za pomocą wiersza polecenia azcopy w systemie Linux](/azure/storage/common/storage-use-azcopy-linux)
 - [Konfigurowanie parametrów połączenia usługi Azure Storage](/azure/storage/common/storage-configure-connection-string)
-- [Azure Storage Team Blog](http://blogs.msdn.com/b/windowsazurestorage/)
+- [Azure Storage Team Blog](https://blogs.msdn.microsoft.com/windowsazurestorage/)

@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 576a717cbdcb8cf465e8cb7b4898df1df7447aa7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="development-process-for-azure"></a>Proces programowania dla platformy Azure
 
@@ -36,7 +36,7 @@ Czy można jednak pełne i wydajne środowiska IDE lub edytora nieskomplikowane 
 
 **Rysunek 10-1.** Instalowanie obciążenia .NET Core w Visual Studio 2017 r.
 
-[Pobierz program Visual Studio 2017](https://www.visualstudio.com/downloads/)
+[Pobierz program Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code i platformy CLI dotnet** (narzędzia wieloplatformowe dla komputerów Mac, Linux i Windows). Jeśli wolisz edytorze nieskomplikowane i Międzyplatformowe obsługi żadnego języka programowania, można użyć programu Microsoft Visual Studio Code i dotnet interfejsu wiersza polecenia. Te produkty zapewniają proste, ale niezawodne środowisko, które upraszcza przepływu pracy deweloperów. Ponadto Visual Studio Code obsługuje rozszerzenia do C\# i aplikacji sieci web, zapewniając intellisense i skrótów zadań w edytorze.
 
@@ -56,9 +56,9 @@ Aby rozpocząć tworzenie aplikacji platformy ASP.NET Core za pomocą elementu k
 
 Aby utworzyć potok wersji aplikacji, należy mieć kod aplikacji w kontroli źródła. Konfigurowanie lokalnego repozytorium i podłącz go do zdalnego repozytorium w projekcie zespołowym. Wykonaj te instrukcje:
 
--   [Udostępnianie kodu Git i Visual Studio](https://www.visualstudio.com/docs/git/share-your-code-in-git-vs) lub
+-   [Udostępnianie kodu Git i Visual Studio](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs) lub
 
--   [Udostępnianie kodu TFVC i Visual Studio](https://www.visualstudio.com/docs/tfvc/share-your-code-in-tfvc-vs)
+-   [Udostępnianie kodu TFVC i Visual Studio](https://docs.microsoft.com/vsts/tfvc/share-your-code-in-tfvc-vs)
 
 Tworzenie usługi Azure App Service w przypadku wdrażania aplikacji. Tworzenie aplikacji sieci Web, przechodząc do bloku usługi aplikacji w portalu Azure. Kliknij pozycję + Dodaj, wybierz szablon aplikacji sieci Web, kliknij przycisk Utwórz i podaj nazwę i inne szczegóły. Aplikacja sieci web będzie dostępna z {nazwa}. azurewebsites.net.
 
@@ -68,13 +68,13 @@ Tworzenie usługi Azure App Service w przypadku wdrażania aplikacji. Tworzenie 
 
 Procesie budowy CI wykona automatyczne kompilacji zawsze, gdy nowy kod został przekazany do repozytorium kontroli źródła projektu. Dzięki temu można natychmiast uzyskuje opinie, która tworzy kod (a najlepiej, jeśli pomyślnie przejdzie testy automatyczne) i może potencjalnie być wdrożony. Ta kompilacja CI utworzy sieci web wdrażanie pakietu artefaktów i opublikować ją w celu użycia przez proces z dysku CD.
 
-[Definiowanie procesu kompilacji elementu konfiguracji](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#ci)
+[Definiowanie procesu kompilacji elementu konfiguracji](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#ci)
 
 Należy włączyć ciągłej integracji, więc system może umieścić w kolejce kompilacji zawsze, gdy ktoś w zespole zatwierdza nowy kod. Testowanie kompilacji i sprawdź, czy jest tworzenie sieci web podczas wdrażania pakietu jako jeden z jego artefakty.
 
 Gdy kompilacja zakończy się powodzeniem, proces CD wdroży wyniki kompilacji elementu konfiguracji do aplikacji sieci web platformy Azure. Aby to skonfigurować, należy utworzyć i skonfigurować *wersji*, które zostaną wdrożone do usługi Azure App Service.
 
-[Zdefiniuj proces wersji z dysku CD](https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure#cd)
+[Zdefiniuj proces wersji z dysku CD](https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core#cd)
 
 Po skonfigurowaniu planowaną CI/CD można po prostu aktualizowanie aplikacji sieci web i zatwierdzić je do kontroli źródła do nich wdrożone.
 
@@ -92,7 +92,7 @@ Tworzenie aplikacji platformy ASP.NET Core do wdrożenia na platformie Azure nie
 
 #### <a name="step-2-application-code-repository"></a>Krok 2. Repozytorium kodu aplikacji
 
-Zawsze, gdy wszystko jest gotowe do udostępnienia kodu zespołowi, ma wypychać zmiany z repozytorium lokalnego źródła do zespołu udostępnionego źródła repozytorium. Jeśli używane w niestandardowych gałęzi, ten krok obejmuje zwykle Wstawianie kodu do udostępnionego gałęzi (być może za pomocą klasy [żądania ściągnięcia](https://www.visualstudio.com/docs/git/pull-requests)).
+Zawsze, gdy wszystko jest gotowe do udostępnienia kodu zespołowi, ma wypychać zmiany z repozytorium lokalnego źródła do zespołu udostępnionego źródła repozytorium. Jeśli używane w niestandardowych gałęzi, ten krok obejmuje zwykle Wstawianie kodu do udostępnionego gałęzi (być może za pomocą klasy [żądania ściągnięcia](https://docs.microsoft.com/vsts/git/pull-requests)).
 
 #### <a name="step-3-build-server-continuous-integration-build-test-package"></a>Krok 3. Serwer kompilacji: Ciągłej integracji. Pakiet kompilacji, testu
 
@@ -113,7 +113,7 @@ Po uruchomieniu aplikacji sieci Web można monitorowania kondycji aplikacji i zb
 ## <a name="references"></a>Odwołania
 
 **Tworzenie i wdrażanie aplikacji platformy ASP.NET Core w systemie Azure**  
-<https://www.visualstudio.com/docs/build/apps/aspnet/aspnetcore-to-azure>
+<https://docs.microsoft.com/vsts/build-release/apps/aspnet/build-aspnet-core>
 
 
 >[!div class="step-by-step"]

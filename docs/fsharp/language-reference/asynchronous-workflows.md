@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ee2bb9bf-e04a-4fbe-bf58-46d07229e981
-ms.openlocfilehash: 425dbcbce06f183c81acb90993978c6dd9523de9
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: e1cbdb452c8f77d97a0231a5ec75d752a98d2ed6
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="asynchronous-workflows"></a>Asynchroniczne przepływy pracy
 
@@ -52,11 +52,11 @@ Oprócz `let!`, można użyć `use!` do wykonywania asynchronicznych powiązania
 
 ## <a name="asynchronous-primitives"></a>Asynchroniczne podstawowych
 
-Wywoływana jest metoda, która wykonuje pojedyncze zadanie asynchroniczne i zwraca wynik *asynchroniczne pierwotnych*, a te zostały zaprojektowane specjalnie dla `let!`. Kilka podstawowych asynchroniczne są definiowane w biblioteki podstawowej F #. Dwie metody takich aplikacji sieci Web są zdefiniowane w module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) i [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Oba elementy podstawowe pobierania danych ze strony sieci Web danego adresu URL. `AsyncGetResponse`Tworzy `System.Net.WebResponse` obiektu, a `AsyncDownloadString` generuje ciąg reprezentujący HTML dla strony sieci Web.
+Wywoływana jest metoda, która wykonuje pojedyncze zadanie asynchroniczne i zwraca wynik *asynchroniczne pierwotnych*, a te zostały zaprojektowane specjalnie dla `let!`. Kilka podstawowych asynchroniczne są definiowane w biblioteki podstawowej F #. Dwie metody takich aplikacji sieci Web są zdefiniowane w module [ `Microsoft.FSharp.Control.WebExtensions` ](https://msdn.microsoft.com/library/95ef17bc-ee3f-44ba-8a11-c90fcf4cf003): [ `WebRequest.AsyncGetResponse` ](https://msdn.microsoft.com/library/09a60c31-e6e2-4b5c-ad23-92a86e50060c) i [ `WebClient.AsyncDownloadString` ](https://msdn.microsoft.com/library/8a85a9b7-f712-4cac-a0ce-0a797f8ea32a). Oba elementy podstawowe pobierania danych ze strony sieci Web danego adresu URL. `AsyncGetResponse` Tworzy `System.Net.WebResponse` obiektu, a `AsyncDownloadString` generuje ciąg reprezentujący HTML dla strony sieci Web.
 
 Kilka podstawowych dla asynchronicznych operacji We/Wy są uwzględnione w [ `Microsoft.FSharp.Control.CommonExtensions` ](https://msdn.microsoft.com/library/2edb67cb-6814-4a30-849f-b6dbdd042396) modułu. Te metody rozszerzenia `System.IO.Stream` klasy są [ `Stream.AsyncRead` ](https://msdn.microsoft.com/library/85698aaa-bdda-47e6-abed-3730f59fda5e) i [ `Stream.AsyncWrite` ](https://msdn.microsoft.com/library/1b0a2751-e42a-47e1-bd27-020224adc618).
 
-Dostępne są dodatkowe podstawowych asynchronicznego [F # PowerTools](http://fsprojects.github.io/VisualFSharpPowerTools/). Można również napisać własny podstawowych asynchronicznego, definiując funkcji, których pełną treść jest ujęta w bloku async.
+Dostępne są dodatkowe podstawowych asynchronicznego [F # PowerTools](https://fsprojects.github.io/VisualFSharpPowerTools/). Można również napisać własny podstawowych asynchronicznego, definiując funkcji, których pełną treść jest ujęta w bloku async.
 
 Aby używać metod asynchronicznych w programie .NET Framework, które są przeznaczone dla innymi modelami asynchronicznymi z F # asynchroniczne modelu programowania, Utwórz funkcję, która zwraca F # `Async` obiektu. Biblioteki języka F # ma funkcje, które łatwo to zrobić.
 
@@ -74,7 +74,7 @@ Użyj funkcji [ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a
 
 ## <a name="see-also"></a>Zobacz też
 
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Wyrażenia obliczeń](computation-expressions.md)
 

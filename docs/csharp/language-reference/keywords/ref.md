@@ -2,7 +2,8 @@
 title: "ref (odwołanie w C#)"
 ms.date: 05/30/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - ref_CSharpKeyword
@@ -11,14 +12,14 @@ helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
 ms.assetid: b8a5e59c-907d-4065-b41d-95bf4273c0bd
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0be0eee67b507e2a209c9caaa3eb14cc60e8a763
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b1e926bd1d9c3a8e0525ed02d102f26e6ec9abd
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -82,10 +83,10 @@ Odwołanie zwrócić wartość jest definiowana za pomocą `ref` — słowo kluc
    ```csharp
    public ref decimal GetCurrentValue()
    ``` 
-- Przed każdym `return` instrukcji w metodzie. Na przykład:
+- Między `return` token i zwracany w zmiennej `return` instrukcji w metodzie. Na przykład:
  
    ```csharp
-   ref return Decimal.Zero;
+   return ref DecimalArray[0];
    ``` 
 
 Aby dla obiekt wywołujący, aby zmodyfikować stan obiektu odwołania zwrócić wartość musi być przechowywany w zmiennej, który jest jawnie zdefiniowany jako [lokalnej typu ref](#ref-locals). 
@@ -94,7 +95,7 @@ Na przykład zobacz [A ref zwraca i przykładowe elementy lokalne ref](#a-ref-re
 
 ## <a name="ref-locals"></a>Zmienne lokalne REF
 
-Zmienna lokalna ref jest używana do odwoływania się do wartości zwracanych przy użyciu `ref return`.  Zmienna lokalna ref należy zainicjować i przypisane do wartości zwracanej ref. Wszelkie modyfikacje wartość Zmienna lokalna ref są uwzględniane w stan obiektu, którego metoda zwróciła wartość przez odwołanie.
+Zmienna lokalna ref jest używana do odwoływania się do wartości zwracanych przy użyciu `return ref`.  Zmienna lokalna ref należy zainicjować i przypisane do wartości zwracanej ref. Wszelkie modyfikacje wartość Zmienna lokalna ref są uwzględniane w stan obiektu, którego metoda zwróciła wartość przez odwołanie.
 
 Zdefiniuj zmienna lokalna ref przy użyciu `ref` — słowo kluczowe przed deklaracją zmiennej, a także bezpośrednio przed wywołaniem metody, która zwraca wartość przez odwołanie. 
 

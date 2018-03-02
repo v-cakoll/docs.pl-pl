@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: 944bbbba6a26634ace269d86cbbdde9ef9de7bcd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 818bf50507a88e1d765da8d0505ed8da4790b71f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Rozpoczynanie pracy z F # w programie Visual Studio
 
-F # i narzędzia Visual F # są obsługiwane w programie Visual Studio IDE.  Aby rozpocząć, należy [pobierania programu Visual Studio](https://www.visualstudio.com/downloads/download-visual-studio-vs), jeśli nie jest jeszcze.  W tym artykule wykorzystano program Visual Studio 2017 Community Edition, ale może użyć F # z wersją wybranych przez użytkownika.
+F # i narzędzia Visual F # są obsługiwane w programie Visual Studio IDE.  Aby rozpocząć, należy [pobierania programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), jeśli nie jest jeszcze.  W tym artykule wykorzystano program Visual Studio 2017 Community Edition, ale może użyć F # z wersją wybranych przez użytkownika.
 
 ## <a name="installing-f"></a>Instalowanie F # #
 
@@ -32,9 +32,9 @@ Następnie wyświetlona lista obciążeń. Można zainstalować F # za pomocą d
 | ASP.NET i sieć web development | Żadna akcja - F # jest instalowany domyślnie |
 | Programowanie Azure | Żadna akcja - F # jest instalowany domyślnie |
 | Programowanie przenośnych z platformą .NET | Żadna akcja - F # jest instalowany domyślnie |
-| Nauki dane i aplikacje analitycznych | Żadna akcja - F # jest instalowany domyślnie |
+| Aplikacje do analizy i przetwarzania danych | Żadna akcja - F # jest instalowany domyślnie |
 | .NET — rozwój pulpitu | Wybierz **obsługi pulpitu języka F #** z prawej |
-| Magazyn danych i przetwarzania | Wybierz **obsługi pulpitu języka F #** z prawej |
+| Magazynowanie i przetwarzanie danych | Wybierz **obsługi pulpitu języka F #** z prawej |
 
 Następnie kliknij przycisk **Modyfikuj** w prawej dolnej.  Spowoduje to zainstalowanie wszystko, co jest wybrane.  Następnie możesz otworzyć programu Visual Studio 2017 z obsługą języka F #, klikając **uruchamianie**.
 
@@ -137,8 +137,8 @@ Jest to tylko glimpse do czego z F # Interactive. Aby dowiedzieć się więcej, 
 Jeśli nie jest jeszcze, zapoznaj się [samouczek programu F #](../tour.md), która obejmuje niektóre podstawowe funkcje języka F #.  Zostanie zawiera przegląd niektórych funkcji języka F # i zapewnić wystarczającą przykłady, które można skopiować do programu Visual Studio i uruchomić.  Są także niektóre dużą zasobów zewnętrznych można używać, pokazywane w [przewodnik F #](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
- [Visual F #](index.md)  
- [Samouczek języka F #](../tour.md)  
+ [Visual F#](index.md)  
+ [Przewodnik po F#](../tour.md)  
  [Dokumentacja języka F #](../language-reference/index.md)  
  [Wnioskowanie o typie](../language-reference/type-inference.md)  
  [Odwołanie do symbolu i operatora](../language-reference/symbol-and-operator-reference/index.md)  

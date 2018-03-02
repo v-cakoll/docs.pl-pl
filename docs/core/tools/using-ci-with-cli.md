@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 0d6e1e34-277c-4aaf-9880-3ebf81023857
-ms.workload: dotnetcore
-ms.openlocfilehash: cc2defb72c61e45ecfebd26937f1c3fd2d405171
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 552865f225ceac9e7a365452ee06d7fefeeb7213
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>Przy użyciu zestawu SDK programu .NET Core i narzędzi w ciągłej integracji (CI)
 
@@ -44,7 +45,7 @@ Skrypt Instalatora jest automatyczne uruchamianie na początku kompilacji, aby p
 
 ## <a name="ci-setup-examples"></a>Przykłady ustawień elementu konfiguracji
 
-W tej sekcji opisano instalacji ręcznej, za pomocą skryptu programu PowerShell lub bash, wraz z opisami kilka oprogramowania jako rozwiązania CI usługa (SaaS). Rozwiązania SaaS CI omówione są [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), i [programu Visual Studio Team Services Build](https://www.visualstudio.com/docs/build/overview).
+W tej sekcji opisano instalacji ręcznej, za pomocą skryptu programu PowerShell lub bash, wraz z opisami kilka oprogramowania jako rozwiązania CI usługa (SaaS). Rozwiązania SaaS CI omówione są [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), i [programu Visual Studio Team Services Build](https://docs.microsoft.com/vsts/build-release/index).
 
 ### <a name="manual-setup"></a>Instalacji ręcznej
 
@@ -155,7 +156,7 @@ Konfigurowanie programu Visual Studio Team Services (VSTS) do tworzenia projekt�
 1. Uruchom skrypt z [krok instalacji ręcznej](#manual-setup) przy użyciu poleceń.
 1. Utwórz kompilację składa się z kilka zadań programu VSTS wbudowanych kompilacji, które są skonfigurowane do używania narzędzi platformy .NET Core.
 
-Oba rozwiązania są prawidłowe. Przy użyciu skryptu instalacji ręcznej, możesz kontrolować wersji narzędzia, które zostanie wyświetlone, ponieważ możesz pobrać jako część kompilacji. Kompilacja jest uruchamiana skrypt, który należy utworzyć. W tym temacie omówiono tylko opcja ręcznego odbierania. Aby uzyskać więcej informacji na temat tworzenia kompilacji z programu VSTS zadania kompilacji, odwiedź witrynę programu VSTS [ciągłej integracji i wdrażania](https://www.visualstudio.com/docs/build/overview) tematu.
+Oba rozwiązania są prawidłowe. Przy użyciu skryptu instalacji ręcznej, możesz kontrolować wersji narzędzia, które zostanie wyświetlone, ponieważ możesz pobrać jako część kompilacji. Kompilacja jest uruchamiana skrypt, który należy utworzyć. W tym temacie omówiono tylko opcja ręcznego odbierania. Aby uzyskać więcej informacji na temat tworzenia kompilacji z programu VSTS zadania kompilacji, odwiedź witrynę programu VSTS [ciągłej integracji i wdrażania](https://docs.microsoft.com/vsts/build-release/index) tematu.
 
 Aby użyć skryptu instalacji ręcznej w VSTS, Utwórz nową definicję kompilacji i określ skrypt do uruchomienia kroku kompilacji. Jest to realizowane przy użyciu interfejsu użytkownika programu VSTS:
 
@@ -177,7 +178,7 @@ Aby użyć skryptu instalacji ręcznej w VSTS, Utwórz nową definicję kompilac
 
 ## <a name="orchestrating-the-build"></a>Organizowanie kompilacji
 
-Większość ten dokument zawiera opis sposobu uzyskania narzędzia .NET Core i konfigurowanie różnych usług CI bez podawania informacji na temat sposobu organizowania, lub *zbudowaniem*, kodu za pomocą platformy .NET Core. Opcje dostępne na struktury procesu kompilacji są zależne od wielu czynników, w których nie można w sposób ogólny, w tym miejscu. Eksploruj zasobów i przykłady podane w dokumentacji zestawy [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), i [VSTS](https://www.visualstudio.com/docs/build/overview) uzyskać więcej informacji o kompilacji z każdym organizowanie Technologia.
+Większość ten dokument zawiera opis sposobu uzyskania narzędzia .NET Core i konfigurowanie różnych usług CI bez podawania informacji na temat sposobu organizowania, lub *zbudowaniem*, kodu za pomocą platformy .NET Core. Opcje dostępne na struktury procesu kompilacji są zależne od wielu czynników, w których nie można w sposób ogólny, w tym miejscu. Eksploruj zasobów i przykłady podane w dokumentacji zestawy [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/), i [VSTS](https://docs.microsoft.com/vsts/build-release/index) uzyskać więcej informacji o kompilacji z każdym organizowanie Technologia.
 
 Dwa podejścia ogólnych, które wykonujesz w struktury procesu kompilacji dla kodu platformy .NET Core za pomocą narzędzi platformy .NET Core są bezpośrednio za pomocą programu MSBuild lub przy użyciu poleceń wiersza polecenia platformy .NET Core. Podejście, które należy podjąć jest określana przez poziom komfort z podejścia i kompromisy złożonością. MSBuild zapewnia możliwość express procesu kompilacji jako zadań i elementów docelowych, ale ma dodany złożoność uczenia składni pliku projektu MSBuild. Za pomocą narzędzia wiersza polecenia platformy .NET Core prawdopodobnie jest prostsze, ale wymaga do pisania logiki aranżacji w języku skryptów, takich jak `bash` lub programu PowerShell.
 

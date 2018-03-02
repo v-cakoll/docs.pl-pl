@@ -1,7 +1,7 @@
 ---
 title: "Programowanie asynchroniczne w języku F #"
 description: "Dowiedz się, jak F # — programowanie asynchroniczne odbywa się za pomocą modelu programowania poziom języka, który jest łatwy w użyciu i fizyczne dla języka."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: f9196bfc-b8a8-4d33-8b53-0dcbd58a69d8
-ms.openlocfilehash: 23528d84d0f28283868a1ea316953543d0fd566a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c3fde46e804b7acac78d3ce5454a3c6f806e24e7
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-programming-in-f"></a>Programowanie asynchroniczne w języku F # #
 
@@ -44,7 +44,7 @@ let fetchHtmlAsync url =
         return html
     }
 
-let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 printfn "%s" html
 ```
 
@@ -52,11 +52,11 @@ I to już wszystko! Oprócz stosowania `async`, `let!`, i `return`, jest to norm
 
 Istnieje kilka konstrukcji syntaktycznych, które warto zauważyć:
 
-*   `let!`wiąże wynik wyrażenia async (który jest uruchamiany w kontekście innym).
-*   `use!`działa podobnie do `let!`, ale usuwa jego powiązanych zasobów, gdy przechodzi ona poza zakresem.
-*   `do!`zostanie await async przepływu pracy, która nie zwraca żadnych czynności.
-*   `return`po prostu zwraca wynik wyrażenia asynchronicznej.
-*   `return!`wykonuje innego async przepływu pracy i zwraca jego wartości zwracanej w związku z tym.
+*   `let!` wiąże wynik wyrażenia async (który jest uruchamiany w kontekście innym).
+*   `use!` działa podobnie do `let!`, ale usuwa jego powiązanych zasobów, gdy przechodzi ona poza zakresem.
+*   `do!` zostanie await async przepływu pracy, która nie zwraca żadnych czynności.
+*   `return` po prostu zwraca wynik wyrażenia asynchronicznej.
+*   `return!` wykonuje innego async przepływu pracy i zwraca jego wartości zwracanej w związku z tym.
 
 Ponadto normalne `let`, `use`, i `do` słowa kluczowe można używać razem w wersjach asynchronicznych tak samo, jak w normalnym funkcji.
 
@@ -64,7 +64,7 @@ Ponadto normalne `let`, `use`, i `do` słowa kluczowe można używać razem w we
 
 Jak wspomniano wcześniej, kod asynchronicznej jest specyfikację pracy w innym kontekście, który musi być jawnie uruchomiona. Poniżej przedstawiono dwa podstawowe sposoby w tym celu:
 
-1.  `Async.RunSynchronously`uruchomi async przepływu pracy w innym wątku i poczekać na jego wynik.
+1.  `Async.RunSynchronously` uruchomi async przepływu pracy w innym wątku i poczekać na jego wynik.
 
 ```fsharp
 open System
@@ -79,13 +79,13 @@ let fetchHtmlAsync url =
     }
 
  // Execution will pause until fetchHtmlAsync finishes
- let html = "http://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+ let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
  // you actually have the result from fetchHtmlAsync now!
  printfn "%s" html
  ```
 
-2.  `Async.Start`Uruchamianie przepływu pracy asynchronicznych w innym wątku i będzie **nie** poczekać na jego wynik.
+2.  `Async.Start` Uruchamianie przepływu pracy asynchronicznych w innym wątku i będzie **nie** poczekać na jego wynik.
 
 ```fsharp
 open System
@@ -98,7 +98,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 // Execution will continue after calling this!
 Async.Start(workflow)
@@ -114,7 +114,7 @@ Wyrażenie "w innym wątku" został podany powyżej, ale należy pamiętać, że
 
 ## <a name="how-to-add-parallelism-to-async-code"></a>Jak dodać równoległości do kodu Async
 
-Czasami użytkownik może muszą do wykonywania wielu zadań asynchronicznych równolegle, zbieranie wyników, a zinterpretowane w jakiś sposób. `Async.Parallel`Można to zrobić bez konieczności korzystania z biblioteki równoległych zadań, która wymagałoby konieczności wymuszone `Task<'T>` i `Async<'T>` typów.
+Czasami użytkownik może muszą do wykonywania wielu zadań asynchronicznych równolegle, zbieranie wyników, a zinterpretowane w jakiś sposób. `Async.Parallel` Można to zrobić bez konieczności korzystania z biblioteki równoległych zadań, która wymagałoby konieczności wymuszone `Task<'T>` i `Async<'T>` typów.
 
 Poniższy przykład użyje `Async.Parallel` pobierania kodu HTML z czterech popularnych witryn równolegle, poczekaj na zakończenie tych zadań, a następnie wydrukuj kodu HTML, który został pobrany.
 
@@ -123,10 +123,10 @@ open System
 open System.Net
 
 let urlList = 
-    [ "http://www.microsoft.com"
-      "http://www.google.com"
-      "http://www.amazon.com"
-      "http://www.facebook.com" ]
+    [ "https://www.microsoft.com"
+      "https://www.google.com"
+      "https://www.amazon.com"
+      "https://www.facebook.com" ]
 
 let fetchHtmlAsync url = 
     async {
@@ -181,7 +181,7 @@ Istnieje kilka podobieństwa i różnice warto zauważyć.
 
 ### <a name="differences"></a>Różnice
 
-*   Zagnieżdżone `let!` nie jest dozwolone, w odróżnieniu od zagnieżdżone`await`
+*   Zagnieżdżone `let!` nie jest dozwolone, w odróżnieniu od zagnieżdżone `await`
 
  W odróżnieniu od `await`, które mogą być zagnieżdżane przez czas nieokreślony, `let!` nie i musi mieć wynik powiązany przed jego użyciem wewnątrz innego `let!`, `do!`, lub `use!`.
 
@@ -208,7 +208,7 @@ let uploadDataAsync url data =
         webClient.UploadStringAsync(uri, data)
     }
 
-let workflow = uploadDataAsync "http://url-to-upload-to.com" "hello, world!"
+let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
 let token = new CancellationTokenSource()
 Async.Start (workflow, token)
@@ -222,5 +222,5 @@ I to już wszystko!
 ## <a name="further-resources"></a>Dodatkowe zasoby:
 
 *   [Asynchroniczne przepływy pracy, w witrynie MSDN](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [Asynchroniczne sekwencji dla F #](http://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+*   [Asynchroniczne sekwencji dla F #](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
 *   [Narzędzia F # danych protokołu HTTP](https://fsharp.github.io/FSharp.Data/library/Http.html)

@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 8db75596-19a9-4eda-b20d-a12d517c8cc1
-ms.openlocfilehash: beee874e3a549531b520d4ac2150bc10dcab7725
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 776a2ddf5563a954e462b3888ebf05da90241e4b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Rozpoczynanie pracy z F # w programie Visual Studio dla komputerów Mac
 
-F # i narzędzia Visual F # są obsługiwane w programie Visual Studio dla komputerów Mac IDE.  Aby rozpocząć, należy [pobierania programu Visual Studio dla komputerów Mac](https://www.visualstudio.com/downloads/download-visual-studio-vs), jeśli nie jest jeszcze.  W tym artykule wykorzystano 2017 społeczności usługi Visual Studio dla komputerów Mac, ale może użyć F # z wersją wybranych przez użytkownika.
+F # i narzędzia Visual F # są obsługiwane w programie Visual Studio dla komputerów Mac IDE.  Aby rozpocząć, należy [pobierania programu Visual Studio dla komputerów Mac](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs), jeśli nie jest jeszcze.  W tym artykule wykorzystano 2017 społeczności usługi Visual Studio dla komputerów Mac, ale może użyć F # z wersją wybranych przez użytkownika.
 
 ## <a name="installing-f"></a>Instalowanie F # #
 
@@ -127,8 +127,8 @@ Jest to tylko glimpse do czego z F # Interactive.  Aby dowiedzieć się więcej,
 Jeśli nie jest jeszcze, zapoznaj się [samouczek programu F #](../tour.md), która obejmuje niektóre podstawowe funkcje języka F #.  Zostanie zawiera przegląd niektórych funkcji języka F # i zapewnić wystarczającą przykłady, które można skopiować do programu Visual Studio dla komputerów Mac i uruchomić.  Są także niektóre dużą zasobów zewnętrznych można używać, pokazywane w [przewodnik F #](../index.md).
 
 ## <a name="see-also"></a>Zobacz także
- [Visual F #](../index.md)  
- [Samouczek języka F #](../tour.md)  
+ [Visual F#](../index.md)  
+ [Przewodnik po F#](../tour.md)  
  [Dokumentacja języka F #](../language-reference/index.md)  
  [Wnioskowanie o typie](../language-reference/type-inference.md)  
  [Odwołanie do symbolu i operatora](../language-reference/symbol-and-operator-reference/index.md)  

@@ -1,7 +1,7 @@
 ---
 title: 'Wprowadzenie do programu F # w kodzie programu Visual Studio z Ionide'
 description: "Dowiedz się, jak używanie F # za pomocą programu Visual Studio Code i Ionide suite wtyczki."
-keywords: "Visual f #, f #, funkcjonalności programowania, vscode .NET, Visual Studio Code, Ionide"
+keywords: visual f#, f#, functional programming, .NET, Visual Studio Code, vscode, Ionide
 author: cartermp
 ms.author: phcart
 ms.date: 09/28/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: 336316eaf474f4c10d63657f178ce4a336ad7a54
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 83099005074ea273eae5319edacd2e2ee0f7145f
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="getting-started-with-f-in-visual-studio-code-with-ionide"></a>Wprowadzenie do programu F # w kodzie programu Visual Studio z Ionide
 
-Możesz pisać F # [Visual Studio Code](https://code.visualstudio.com) z [wtyczki Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), aby uzyskać doskonałe środowisko IDE i platform, lekkie IntelliSense i refaktoryzacje podstawowego kodu.  Odwiedź stronę [Ionide.io](http://ionide.io) Aby dowiedzieć się więcej o pakiecie wtyczki.
+Możesz pisać F # [Visual Studio Code](https://code.visualstudio.com) z [wtyczki Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp), aby uzyskać doskonałe środowisko IDE i platform, lekkie IntelliSense i refaktoryzacje podstawowego kodu.  Odwiedź stronę [Ionide.io](https://ionide.io) Aby dowiedzieć się więcej o pakiecie wtyczki.
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -39,9 +39,9 @@ Jeśli nie chcesz zainstalować program Visual Studio, użyj poniższych instruk
 2. Zainstaluj zestaw Windows SDK dla Twojego systemu operacyjnego:
 
     * [Windows 10 SDK](https://dev.windows.com/en-US/downloads/windows-10-sdk)
-    * [Windows 8.1 SDK](http://msdn.microsoft.com/windows/desktop/bg162891)
-    * [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363.aspx)
-    * [Windows 7 SDK](http://www.microsoft.com/download/details.aspx?id=8279)
+    * [Windows 8.1 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 8 SDK](https://developer.microsoft.com/windows/downloads/sdk-archive)
+    * [Windows 7 SDK](https://www.microsoft.com/download/details.aspx?id=8279)
 
 3. Zainstaluj [Microsoft Build Tools 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48159).  Należy również zainstalować [Microsoft kompilacji narzędzia 2013](https://www.microsoft.com/en-us/download/details.aspx?id=40760).
 
@@ -65,9 +65,9 @@ C:\Program Files\Microsoft SDKs\F#\4.0\Framework\v4.0\fsiAnyCpu.exe
 
 Ionide automatycznie wykrywa kompilatora i narzędzi, ale jeśli z jakiegoś powodu nie (na przykład Visual F # Tools zostały zainstalowane do innego katalogu), można ręcznie dodać folderu zawierającego (`...\Microsoft SDKs\F#\4.0`) do ścieżki.
 
-### <a name="macos"></a>System macOS
+### <a name="macos"></a>macOS
 
-Na macOS, używa Ionide [Mono](http://www.mono-project.com).  Najprostszym sposobem zainstalowania Mono na macOS odbywa się za pośrednictwem oprogramowania Homebrew.  W terminalu, po prostu wpisz następujące polecenie:
+Na macOS, używa Ionide [Mono](https://www.mono-project.com).  Najprostszym sposobem zainstalowania Mono na macOS odbywa się za pośrednictwem oprogramowania Homebrew.  W terminalu, po prostu wpisz następujące polecenie:
 
 ```
 brew install mono
@@ -75,7 +75,7 @@ brew install mono
 
 ### <a name="linux"></a>Linux
 
-W systemie Linux, używa również Ionide [Mono](http://www.mono-project.com).  Jeśli używasz Debian i Ubuntu, można użyć następujących czynności:
+W systemie Linux, używa również Ionide [Mono](https://www.mono-project.com).  Jeśli używasz Debian i Ubuntu, można użyć następujących czynności:
 
 ```
 sudo apt-get update
@@ -96,7 +96,7 @@ Można zainstalować program Visual Studio Code z [code.visualstudio.com](https:
 
     ![](media/getting-started-vscode/vscode-ext.png)
 
-Tylko wtyczki, wymagana jest obsługa F # w programie Visual Studio Code [języka fsharp Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Jednakże można także zainstalować [SFAŁSZOWANA Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) i uzyskać [SFAŁSZOWAĆ](http://fsharp.github.io/FAKE/) obsługuje i [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) uzyskanie [Paket](https://fsprojects.github.io/Paket/) obsługuje.  FAŁSZYWE i Paket są dodatkowe F # społeczności narzędzia do tworzenia projektów i zarządzanie nimi zależności, odpowiednio.
+Tylko wtyczki, wymagana jest obsługa F # w programie Visual Studio Code [języka fsharp Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp).  Jednakże można także zainstalować [SFAŁSZOWANA Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE) i uzyskać [SFAŁSZOWAĆ](https://fake.build/) obsługuje i [Ionide Paket](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket) uzyskanie [Paket](https://fsprojects.github.io/Paket/) obsługuje.  FAŁSZYWE i Paket są dodatkowe F # społeczności narzędzia do tworzenia projektów i zarządzanie nimi zależności, odpowiednio.
 
 ## <a name="creating-your-first-project-with-ionide"></a>Tworzenie pierwszego projektu z Ionide
 
@@ -121,7 +121,7 @@ Wybierz opcję "F #: nowego projektu" za pomocą **Enter**, która spowoduje prz
 
 ![](media/getting-started-vscode/vscode-proj-type.png)
 
-Wybierz opcję szablon dla określonego typu projektu.  Istnieje kilka opcji, takich jak [FsLab](http://fslab.org) szablon do analizy danych lub [Suave](https://suave.io) szablon programowania sieci Web.  W tym artykule wykorzystano `classlib` szablon, więc podkreślenie i naciśnij **Enter**.  Następnie zostanie osiągnąć następny krok:
+Wybierz opcję szablon dla określonego typu projektu.  Istnieje kilka opcji, takich jak [FsLab](https://fslab.org) szablon do analizy danych lub [Suave](https://suave.io) szablon programowania sieci Web.  W tym artykule wykorzystano `classlib` szablon, więc podkreślenie i naciśnij **Enter**.  Następnie zostanie osiągnąć następny krok:
 
 ![](media/getting-started-vscode/vscode-new-dir.png)
 
@@ -138,8 +138,8 @@ Po wykonaniu poprzednich kroków kroku, należy pobrać Visual Studio Code obsza
 Ten szablon generuje kilka rzeczy, które można znaleźć przydatne:
 
 1. F # projektu, underneath `ClassLibraryDemo` folderu.
-2. Dodawanie pakietów za pomocą struktury poprawny katalog [ `Paket` ](http://fsprojects.github.io/Paket/).
-3. Obsługujący wiele platform kompilacji skryptu o [ `FAKE` ](http://fsharp.github.io/FAKE/).
+2. Dodawanie pakietów za pomocą struktury poprawny katalog [ `Paket` ](https://fsprojects.github.io/Paket/).
+3. Obsługujący wiele platform kompilacji skryptu o [ `FAKE` ](https://fake.build/).
 4. `paket.exe` Plik wykonywalny, który można pobrać pakietów i rozpoznać zależności dla Ciebie.
 5. A `.gitignore` plik, jeśli chcesz dodać ten projekt do kontroli źródła na podstawie Git.
 
@@ -297,9 +297,9 @@ Aby dowiedzieć się więcej na temat języka F # i funkcji języka, zapoznaj si
 
 ## <a name="see-also"></a>Zobacz także
 
-[Samouczek języka F #](../tour.md)
+[Przewodnik po F#](../tour.md)
 
-[Dokumentacja języka F #](../language-reference/index.md)
+[Dokumentacja języka F#](../language-reference/index.md)
 
 [Funkcje](../language-reference/functions/index.md)
 
@@ -307,4 +307,4 @@ Aby dowiedzieć się więcej na temat języka F # i funkcji języka, zapoznaj si
 
 [Przestrzenie nazw](../language-reference/namespaces.md)
 
-[Ionide VSCode: języka FSharp](https://github.com/ionide/ionide-vscode-fsharp)
+[Ionide-VSCode: FSharp](https://github.com/ionide/ionide-vscode-fsharp)

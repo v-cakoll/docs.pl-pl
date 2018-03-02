@@ -1,7 +1,7 @@
 ---
 title: Hosting .NET Core
 description: "Hostowanie środowiska uruchomieniowego .NET Core z kodu natywnego"
-keywords: .NET, .NET core hostingu, Hosting .NET Core
+keywords: .NET, .NET Core, Hosting, Hosting .NET Core
 author: mjrousos
 ms.author: mikerou
 ms.date: 2/3/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
-ms.workload: dotnetcore
-ms.openlocfilehash: 2f421c72e8099a328fbc255d51f77a9cd0724e58
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="hosting-net-core"></a>Hosting .NET Core
 
@@ -26,7 +27,7 @@ Ten artykuł zawiera omówienie kroki niezbędne do uruchomienia środowiska uru
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
-Natywnych aplikacji nie są hosty, w tym samouczku opisano konstruowanie aplikacji C++, na hoście platformy .NET Core. Konieczne będzie środowiska programowania C++ (takim jak udostępniany przez [programu Visual Studio](https://www.visualstudio.com/downloads/)).
+Natywnych aplikacji nie są hosty, w tym samouczku opisano konstruowanie aplikacji C++, na hoście platformy .NET Core. Konieczne będzie środowiska programowania C++ (takim jak udostępniany przez [programu Visual Studio](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)).
 
 Trzeba będzie także prostą aplikację .NET Core, aby przetestować hosta, dlatego należy zainstalować [.NET Core SDK](https://www.microsoft.com/net/core) i [kompilacji małych przetestuj aplikację .NET Core](../../core/tutorials/with-visual-studio.md) (na przykład aplikacja "Hello World"). Aplikacja "Hello World" utworzone przez nowy szablon projektu konsoli .NET Core jest wystarczająca.
 
@@ -82,12 +83,12 @@ Po podjęciu decyzji, które AppDomain flagi do użycia, właściwości elementu
 
 Wspólne właściwości domeny aplikacji obejmują:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES`Jest to lista ścieżek zestawu (rozdzielonych przez ';' w systemie Windows i ":" w systemie Unix) który elementu AppDomain powinien ustalić ich priorytety ładowania i zapewnia pełne zaufanie (nawet w częściowo zaufane domeny). Ta lista jest przeznaczona do zawierają zestawy 'Struktury' i innych zaufanych modułów, podobny do pamięci podręcznej GAC w scenariuszach .NET Framework. Niektóre hosty wprowadzi żadnej biblioteki obok *coreclr.dll* na tej liście ustalony manifestów listę zaufanych zestawów ich w celach innych osób.
-* `APP_PATHS`Jest to lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Te ścieżki mają być lokalizacji, gdzie można znaleźć zestawów użytkowników. W trybie piaskownicy AppDomain zestawów załadowanych z tych ścieżek będzie można udzielać tylko częściowej relacji zaufania. Wspólne ścieżki APP_PATH obejmują ścieżka aplikacji docelowej został załadowany z ani innych lokalizacji, w którym zasoby użytkownika wiadomo, że na żywo.
-*  `APP_NI_PATHS`Ta lista jest bardzo podobny do APP_PATHS z tą różnicą, że ma ma być ścieżek, które będzie sondowany dla obrazów natywnych.
-*  `NATIVE_DLL_SEARCH_DIRECTORIES`Ta właściwość jest lista ścieżek, które moduł ładujący powinien sondowania wywołanego wyszukiwanie natywnych bibliotek DLL za pośrednictwem p/invoke.
-*  `PLATFORM_RESOURCE_ROOTS`Ta lista zawiera ścieżki do sondowania w zestawów satelickich zasobów (w podfolderach specyficzne dla kultury).
-*  `AppDomainCompatSwitch`Ten ciąg Określa, które Osobliwości zgodności ma być używany dla zestawów bez jawnego Moniker platformy docelowej (atrybut poziomu zestawu wskazującą Framework, które zestawu jest przeznaczona do uruchomienia). Zazwyczaj powinien to być ustawiony na `"UseLatestBehaviorWhenTFMNotSpecified"` , ale niektóre hosty mogą wolą starsze Silverlight lub Windows Phone zgodności Osobliwości, zamiast tego.
+* `TRUSTED_PLATFORM_ASSEMBLIES` Jest to lista ścieżek zestawu (rozdzielonych przez ';' w systemie Windows i ":" w systemie Unix) który elementu AppDomain powinien ustalić ich priorytety ładowania i zapewnia pełne zaufanie (nawet w częściowo zaufane domeny). Ta lista jest przeznaczona do zawierają zestawy 'Struktury' i innych zaufanych modułów, podobny do pamięci podręcznej GAC w scenariuszach .NET Framework. Niektóre hosty wprowadzi żadnej biblioteki obok *coreclr.dll* na tej liście ustalony manifestów listę zaufanych zestawów ich w celach innych osób.
+* `APP_PATHS` Jest to lista ścieżek do sondowania w dla zestawu, jeśli nie można znaleźć na liście zestawów (TPA) TPM. Te ścieżki mają być lokalizacji, gdzie można znaleźć zestawów użytkowników. W trybie piaskownicy AppDomain zestawów załadowanych z tych ścieżek będzie można udzielać tylko częściowej relacji zaufania. Wspólne ścieżki APP_PATH obejmują ścieżka aplikacji docelowej został załadowany z ani innych lokalizacji, w którym zasoby użytkownika wiadomo, że na żywo.
+*  `APP_NI_PATHS` Ta lista jest bardzo podobny do APP_PATHS z tą różnicą, że ma ma być ścieżek, które będzie sondowany dla obrazów natywnych.
+*  `NATIVE_DLL_SEARCH_DIRECTORIES` Ta właściwość jest lista ścieżek, które moduł ładujący powinien sondowania wywołanego wyszukiwanie natywnych bibliotek DLL za pośrednictwem p/invoke.
+*  `PLATFORM_RESOURCE_ROOTS` Ta lista zawiera ścieżki do sondowania w zestawów satelickich zasobów (w podfolderach specyficzne dla kultury).
+*  `AppDomainCompatSwitch` Ten ciąg Określa, które Osobliwości zgodności ma być używany dla zestawów bez jawnego Moniker platformy docelowej (atrybut poziomu zestawu wskazującą Framework, które zestawu jest przeznaczona do uruchomienia). Zazwyczaj powinien to być ustawiony na `"UseLatestBehaviorWhenTFMNotSpecified"` , ale niektóre hosty mogą wolą starsze Silverlight lub Windows Phone zgodności Osobliwości, zamiast tego.
 
 W naszym [hosta prosty przykład](https://github.com/dotnet/docs/tree/master/samples/core/hosting), te właściwości są skonfigurowane w następujący sposób:
 
@@ -132,7 +133,7 @@ Przykład użycia coreclrhost.h (zamiast bezpośrednio mscoree.h) są widoczne w
 1. Określenie kodu zarządzanego do wykonania (polecenia wiersz parametrów, na przykład). 
 2. Ładowanie biblioteki środowisko CoreCLR.
     1. `dlopen("./libcoreclr.so", RTLD_NOW | RTLD_LOCAL);` 
-3. Pobierz wskaźników funkcji do przez środowisko CoreCLR `coreclr_initialize`, `coreclr_create_delegate`, `coreclr_execute_assembly`, i `coreclr_shutdown` funkcji przy użyciu`dlsym`
+3. Pobierz wskaźników funkcji do przez środowisko CoreCLR `coreclr_initialize`, `coreclr_create_delegate`, `coreclr_execute_assembly`, i `coreclr_shutdown` funkcji przy użyciu `dlsym`
     1. `coreclr_initialize_ptr coreclr_initialize = (coreclr_initialize_ptr)dlsym(coreclrLib, "coreclr_initialize");`
 4. Ustawianie właściwości domeny aplikacji (na przykład lista TPA). To jest taka sama jak krok 5 z przepływu mscoree powyżej.
 5. Użyj `coreclr_initialize` Aby uruchomić środowisko uruchomieniowe i utworzyć elementu AppDomain. Spowoduje to również utworzenie `hostHandle` wskaźnika, który będzie używany w przyszłości hosting wywołania.

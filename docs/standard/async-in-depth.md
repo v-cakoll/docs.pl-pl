@@ -1,7 +1,7 @@
 ---
 title: "Asynchroniczne szczegółowo"
 description: "Dowiedz się, jak kod I/E-granica i procesora asynchroniczne jest proste przy użyciu modelu opartego na zadaniach .NET async."
-keywords: .NET, .NET core, .NET Standard
+keywords: .NET, .NET Core, .NET Standard
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b23a90de991b31005ba5a07a959c717c24869ffb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b01aa5d0fade29d04313a9db2e44517b6512166b
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="async-in-depth"></a>Asynchroniczne szczegółowo
 
@@ -27,8 +27,8 @@ Zapisu We/Wy i procesora asynchroniczne kodu jest proste przy użyciu modelu opa
 
 Zadania są konstrukcje używane do implementowania, co jest nazywane [Promise modelu współbieżności](https://en.wikipedia.org/wiki/Futures_and_promises).  Krótko mówiąc oferują się, że możesz "promise" działa zostanie ukończona w późniejszym czasie, co pozwala koordynować z promise z czystą interfejsu API.
 
-*   `Task`reprezentuje pojedynczy operacji, która nie zwraca wartości.
-*   `Task<T>`reprezentuje jednej operacji, która zwraca wartość typu `T`.
+*   `Task` reprezentuje pojedynczy operacji, która nie zwraca wartości.
+*   `Task<T>` reprezentuje jednej operacji, która zwraca wartość typu `T`.
 
 Ważne jest, aby Przyczyna o zadaniach jako obiekty abstrakcyjne pracy wykonywane asynchronicznie, i *nie* abstrakcji za pośrednictwem wątków. Domyślnie zadania wykonać na bieżącym wątku a obiektem delegowanym pracy do systemu operacyjnego, zgodnie z potrzebami. Opcjonalnie zadań można jawnie wymagane do uruchomienia w oddzielnym wątku za pośrednictwem `Task.Run` interfejsu API.
 
@@ -142,16 +142,17 @@ public async Task<int> CalculateResult(InputData data)
 }
 ```
 
-`CalculateResult()`wykonuje, na który została wywołana w wątku.  Gdy wywołuje `Task.Run`, jego kolejki kosztowna operacja procesora `DoExpensiveCalculation()`, w puli wątków i odbiera `Task<int>` obsługi.  `DoExpensiveCalculation()`Po pewnym czasie działa jednocześnie na dalej dostępne wątku, prawdopodobnie w innym rdzeń procesora CPU.  Istnieje możliwość pracy równoczesnych podczas `DoExpensiveCalculation()` jest zajęty w innym wątku, ponieważ wątek, który wywołuje `CalculateResult()` jest nadal wykonywane.
+`CalculateResult()` wykonuje, na który została wywołana w wątku.  Gdy wywołuje `Task.Run`, jego kolejki kosztowna operacja procesora `DoExpensiveCalculation()`, w puli wątków i odbiera `Task<int>` obsługi.  `DoExpensiveCalculation()` Po pewnym czasie działa jednocześnie na dalej dostępne wątku, prawdopodobnie w innym rdzeń procesora CPU.  Istnieje możliwość pracy równoczesnych podczas `DoExpensiveCalculation()` jest zajęty w innym wątku, ponieważ wątek, który wywołuje `CalculateResult()` jest nadal wykonywane.
 
 Raz `await` napotkano, wykonanie `CalculateResult()` jest zwróciło do swojego obiektu wywołującego, dzięki czemu inne pracy z bieżącego wątku, podczas `DoExpensiveCalculation()` jest mieszaniu limit wyników.  Po zakończeniu, wynik jest umieszczone w kolejce do uruchomienia w głównym wątku.  Po pewnym czasie głównego wątku nastąpi powrót do wykonywania `CalculateResult()`, po czym jej wynik `DoExpensiveCalculation()`.
 
 ### <a name="why-does-async-help-here"></a>Dlaczego usługa async pomaga w tym miejscu?
 
-`async`i `await` są najlepszym rozwiązaniem zarządzania pracy procesora, gdy będziesz potrzebować czas odpowiedzi. Istnieje wiele wzorców korzystania z procesora pracy przy użyciu asynchronicznej. Należy zauważyć, że istnieje małych koszt za pomocą async i nie jest zalecane dla ścisłej pętli.  Jest ustalenie sposobu pisania kodu wokół tej nowej możliwości.
+`async` i `await` są najlepszym rozwiązaniem zarządzania pracy procesora, gdy będziesz potrzebować czas odpowiedzi. Istnieje wiele wzorców korzystania z procesora pracy przy użyciu asynchronicznej. Należy zauważyć, że istnieje małych koszt za pomocą async i nie jest zalecane dla ścisłej pętli.  Jest ustalenie sposobu pisania kodu wokół tej nowej możliwości.
 
 ## <a name="see-also"></a>Zobacz także
 
 [Programowanie asynchroniczne w języku C#](~/docs/csharp/async.md)   
+[Programowanie asynchroniczne z async i await (C#)](../csharp/programming-guide/concepts/async/index.md)  
 [Programowanie asynchroniczne w języku F #](~/docs/fsharp/tutorials/asynchronous-and-concurrent-programming/async.md)   
 [Programowanie asynchroniczne z Async i Await (Visual Basic)](~/docs/visual-basic/programming-guide/concepts/async/index.md)

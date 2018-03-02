@@ -7,11 +7,11 @@ ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 918dfeceb0bfd8ee808e5615df014973dedf5cc1
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 26d4dffa6f6680b193788ee6d90dad01fde7cf51
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-c"></a>Jak (C#)
 
@@ -59,8 +59,7 @@ Ciągi to podstawowy typ danych używany do wyświetlania lub modyfikowania teks
 - [Określanie, czy ciąg reprezentuje liczbę](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Użyj `String.Split` do rozdzielania ciągów](parse-strings-using-split.md).
 - [Łączenie wielu ciągów w jednym](concatenate-multiple-strings.md).
-- [Wyszukaj tekst w ciągu](../programming-guide/strings/how-to-search-strings-using-string-methods.md).
-- [Wyszukiwanie ciągów za pomocą wyrażeń regularnych](../programming-guide/strings/how-to-search-strings-using-regular-expressions.md).
+- [Wyszukaj tekst w ciągu](search-strings.md).
 
 ## <a name="convert-between-types"></a>Konwertowanie typów
 

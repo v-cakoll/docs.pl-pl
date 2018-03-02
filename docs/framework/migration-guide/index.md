@@ -3,7 +3,8 @@ title: 'Przewodnik po migracji do programu .NET Framework 4.7, 4.6 i 4.5 '
 ms.custom: updateeachrelease
 ms.date: 10/17/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, migrating applications to
@@ -12,15 +13,16 @@ ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ae193819b191e6a3a09f0556ff221960c1aeb7b3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 59c4ae2961b3e029ddd5f67afc9644042af95efb
+ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="migration-guide-to-the-net-framework-47-46-and-45"></a>Przewodnik po migracji do programu .NET Framework 4.7, 4.6 i 4.5 
-Jeśli utworzono aplikację przy użyciu wcześniejszej wersji programu .NET Framework, zazwyczaj uaktualnieniem go do programu .NET Framework 4.5 i jego wersje punktu (4.5.1 i 4.5.2), .NET Framework 4.6 i jego wersje punktu (4.6.1 i 4.6.2), lub .NET Framework 4.7 i jego punktu Zwolnij, .NET Framework 4.7.1, łatwe. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, **zgodność projektu** automatycznie zostanie otwarte okno dialogowe. Aby uzyskać więcej informacji na temat uaktualniania projektu programu Visual Studio, zobacz [portu, migracji i uaktualniania projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) i [programu Visual Studio 2017 platformy elementów docelowych i zgodności](https://www.visualstudio.com/en-us/productinfo/vs2017-compatibility-vs).  
+Jeśli utworzono aplikację przy użyciu wcześniejszej wersji programu .NET Framework, zazwyczaj uaktualnieniem go do programu .NET Framework 4.5 i jego wersje punktu (4.5.1 i 4.5.2), .NET Framework 4.6 i jego wersje punktu (4.6.1 i 4.6.2), lub .NET Framework 4.7 i jego punktu Zwolnij, .NET Framework 4.7.1, łatwe. Otwórz projekt w programie Visual Studio. Jeśli projekt został utworzony we wcześniejszej wersji programu Visual Studio, **zgodność projektu** automatycznie zostanie otwarte okno dialogowe. Aby uzyskać więcej informacji na temat uaktualniania projektu programu Visual Studio, zobacz [portu, migracji i uaktualniania projektów programu Visual Studio](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects) i [programu Visual Studio 2017 platformy elementów docelowych i zgodności](/visualstudio/productinfo/vs2017-compatibility-vs).  
   
  Jednak niektóre zmiany w programie .NET Framework wymaga zmian w kodzie. Można również skorzystać z funkcji, która jest nowa w programie .NET Framework 4.5 i zwalnia jego punktu, w .NET Framework 4.6 i zwalnia jego punktu lub .NET Framework 4.7, a jego punktu wersja programu .NET Framework 4.7.1. Wprowadzanie zmiany tego typu aplikacji dla nowej wersji programu .NET Framework jest zwykle nazywany *migracji*. Jeśli aplikacja nie ma do migracji, można uruchomić go w .NET Framework 4.5 lub nowszej wersji, bez konieczności ponownego kompilowania go.  
   

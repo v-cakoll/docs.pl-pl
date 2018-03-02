@@ -9,7 +9,6 @@
 ### [Co nowego w programie .NET Standard](standard/whats-new/whats-new-in-dotnet-standard.md)
 ## [Platformy docelowe](standard/frameworks.md)
 ## [Słownik platformy .NET](standard/glossary.md)
-## [Tworzenie dokumentacji za pomocą mdoc](standard/mdoc/index.md)
 ## [Wskazówki dotyczące architektury](standard/guidance-architecture.md)
 ### [Tworzenie architektury nowoczesnych aplikacji internetowych za pomocą platformy ASP.NET Core i platformy Microsoft Azure](standard/modern-web-apps-azure-architecture/)
 ### [Modernizacja istniejących aplikacji platformy .NET za pomocą chmury platformy Azure i kontenerów systemu Windows](standard/modernize-with-azure-and-containers/)
@@ -25,9 +24,10 @@
 ### [Omówienie biblioteki klas](standard/class-library-overview.md)
 ### [Typy podstawowe](standard/base-types/)
 ## [Biblioteki klas .NET](standard/class-libraries.md)
-## Analizatory
+## [Analizatory](standard/analyzers/index.md)
 ### [API Analyzer](standard/analyzers/api-analyzer.md) 
 ### [Analizator przenośności](standard/analyzers/portability-analyzer.md)
+### [Analizator struktury](standard/analyzers/framework-analyzer.md)
 ## [Obsługa i zgłaszanie wyjątków](standard/exceptions/)
 ## [Format pliku zestawu .NET](standard/assembly-format.md)
 ## [Odzyskiwanie pamięci](standard/garbage-collection/)
@@ -266,6 +266,7 @@
 ### [Jak analizować ciągi za pomocą metody `String.Split`](csharp/how-to/parse-strings-using-split.md)
 ### [Jak łączyć ciągi](csharp/how-to/concatenate-multiple-strings.md)
 ### [Instrukcje konwertowanie ciągu na DateTime](standard/base-types/parsing-datetime.md)
+### [Jak wyszukiwać ciągi](csharp/how-to/search-strings.md)
 <!-- End of C# Concepts section -->
 ## [Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)](csharp/roslyn-sdk/)
 ## [Przewodnik programowania w języku C#](csharp/programming-guide/)

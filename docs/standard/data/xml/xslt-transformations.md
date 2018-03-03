@@ -9,23 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 202f8820-224c-494f-b61e-cd127eac6e03
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 92d0688b86e6a95af46e09c21c1a8b3cdf66efc3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 63c73fc48d0beaeb3a77acc464734b11410467a0
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-transformations"></a>Przekształcenia XSLT
-Extensible Stylesheet Language Transformation (XSLT) pozwala na przekształcanie zawartości dokumentu XML źródła do innego dokumentu, która różni się w formacie lub struktury. Na przykład można użyć XSLT do transformacji XML w kodzie HTML do użytku w witrynie sieci Web lub aby przekształcić go do dokumentu, który zawiera tylko te pola, które są wymagane przez aplikację. Ten proces transformacji jest określona przez [zalecenie W3C transformacji XSL (XSLT) w wersji 1.0](http://go.microsoft.com/fwlink/?LinkID=49919).  
+Extensible Stylesheet Language Transformation (XSLT) pozwala na przekształcanie zawartości dokumentu XML źródła do innego dokumentu, która różni się w formacie lub struktury. Na przykład można użyć XSLT do transformacji XML w kodzie HTML do użytku w witrynie sieci Web lub aby przekształcić go do dokumentu, który zawiera tylko te pola, które są wymagane przez aplikację. Ten proces transformacji jest określona przez [zalecenie W3C transformacji XSL (XSLT) w wersji 1.0](https://www.w3.org/TR/xslt-10/).  
   
- <xref:System.Xml.Xsl.XslCompiledTransform> Klasa jest procesorze XSLT w programie .NET Framework. <xref:System.Xml.Xsl.XslCompiledTransform> Klasa obsługuje zalecenie W3C XSLT 1.0.  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Klasa jest procesorze XSLT w .NET. <xref:System.Xml.Xsl.XslCompiledTransform> Klasy obsługuje [zalecenie W3C XSLT 1.0](https://www.w3.org/TR/xslt-10/).  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> Klasa jest przestarzałe w programie .NET Framework w wersji 2.0. <xref:System.Xml.Xsl.XslCompiledTransform> Klasa jest implementacją nowego aparatu XSLT. Zawiera ulepszenia wydajności i nowe funkcje zabezpieczeń. Zalecaną praktyką jest utworzenie aplikacji XSLT przy użyciu <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  
@@ -43,13 +43,9 @@ Extensible Stylesheet Language Transformation (XSLT) pozwala na przekształcanie
  [Przekształcenia XSLT przy użyciu klasy XslTransform](../../../../docs/standard/data/xml/xslt-transformations-with-the-xsltransform-class.md)  
  Zawiera informacje na temat używania <xref:System.Xml.Xsl.XslTransform> klasy.  
   
- **Uwaga** <xref:System.Xml.Xsl.XslTransform> klasa jest przestarzała w wersji .NET Framework 2.0.  
-  
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Xml.Xsl.XslCompiledTransform>  
-  
  <xref:System.Xml.Xsl.XsltArgumentList>  
-  
  <xref:System.Xml.Xsl.XsltSettings>  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  

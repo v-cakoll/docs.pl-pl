@@ -20,21 +20,21 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 95f610922126074017802ef53670b26b3596e17c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8835bd09e041ce8bb36c09951ea5526d42ff0c3c
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>Porady: podpisywanie dokumentów XML za pomocą podpisów cyfrowych
-Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do podpisywania dokumentu XML lub części dokumentu XML podpisu cyfrowego.  Podpisy cyfrowe XML (XMLDSIG) pozwalają sprawdzić, czy dane nie została zmodyfikowana po podpisaniu.  Aby uzyskać więcej informacji na temat standardu XMLDSIG, zobacz zalecenia konsorcjum World Wide Web (W3C) [składnia XML podpisu i przetwarzania](http://go.microsoft.com/fwlink/?LinkID=136777).  
+Można użyć klasy w <xref:System.Security.Cryptography.Xml> przestrzeni nazw do podpisywania dokumentu XML lub części dokumentu XML podpisu cyfrowego.  Podpisy cyfrowe XML (XMLDSIG) pozwalają sprawdzić, czy dane nie została zmodyfikowana po podpisaniu.  Aby uzyskać więcej informacji na temat standardu XMLDSIG, zobacz zalecenia konsorcjum World Wide Web (W3C) [składnia XML podpisu i przetwarzania](https://www.w3.org/TR/xmldsig-core/).  
   
  Przykład kodu w tej procedurze pokazano, jak cyfrowe podpisywanie całego dokumentu XML i dołączyć podpis do dokumentu w <`Signature`> elementu.  Przykład tworzy klucza podpisywania RSA, dodaje klucz do bezpiecznego kontenera klucza, a następnie używa klucza podpisywania dokumentu XML.  Klucz można pobrać można zweryfikować podpisu cyfrowego XML lub może być używany do podpisywania innego dokumentu XML.  
   

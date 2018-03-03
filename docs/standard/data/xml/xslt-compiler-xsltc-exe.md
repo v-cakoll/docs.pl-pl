@@ -9,23 +9,23 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1148af537ef9b502c6f3a9a3cc0588eaed39ac2f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 36696617d1e28a370f6b15f15fb39bc816973f15
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="xslt-compiler-xsltcexe"></a>Kompilator XSLT (xsltc.exe)
 Kompilator XSLT (xsltc.exe) kompiluje arkuszy stylów XSLT i generuje zestawu. Arkusz stylów skompilowanego można następnie przekazać bezpośrednio do <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> metody. Nie można wygenerować zestawy podpisane za pomocą xsltc.exe.  
   
- Narzędzie xsltc.exe jest dołączone do programu Visual Studio 2008. Aby uzyskać więcej informacji, zobacz [Microsoft Download Center](http://go.microsoft.com/fwlink/?LinkId=89463).  
+ Narzędzie xsltc.exe jest dołączone do programu Visual Studio. Aby uzyskać więcej informacji, zobacz [programu Visual Studio pobiera](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs).  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -47,7 +47,7 @@ xsltc [options] [/class:<name>] <sourceFile> [[/class:<name>] <sourceFile>...]
 |`/debug[`+&#124;-`]`|Określa, czy generować informacji o debugowaniu.<br /><br /> Określanie `+` lub `/debug`, powoduje, że kompilator generuje informacje o debugowaniu i umieszcza je w plik programu (PDB) bazy danych. Nazwa pliku PDB wygenerowanego jest `assemblyName`.pdb.<br /><br /> Określanie `-`, która jest włączona, jeśli nie określisz `/debug`, powoduje, że żadne informacje o debugowaniu ma zostać utworzony. Generowany jest zestawem sprzedaży detalicznej. **Uwaga:** kompilowanie w trybie debugowania mogą wpływać na wydajność XSLT w znacznym stopniu.|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
 |`/nologo`|Pomija komunikat o prawach autorskich kompilatora przy wyświetlaniu.|  
-|`/platform:``string`|Określa platformy, które można uruchomić zestawu na. Poniżej opisano platformy prawidłowe wartości:<br /><br /> `x86`kompiluje z zestawu do uruchomienia przez 32-bitowy, x86 zgodnego wykonywalnych języka wspólnego<br /><br /> `x64`kompiluje z zestawu do uruchomienia na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T przez 64-bitowe środowisko uruchomieniowe języka wspólnego.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)]kompiluje z zestawu do uruchomienia w 64-bitowego środowiska CLR na komputerze, który ma [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] procesora.<br /><br /> `anycpu`kompiluje używanemu zestawowi można uruchomić na dowolnej platformie. Domyślnie włączone.|  
+|`/platform:``string`|Określa platformy, które można uruchomić zestawu na. Poniżej opisano platformy prawidłowe wartości:<br /><br /> `x86` kompiluje z zestawu do uruchomienia przez 32-bitowy, x86 zgodnego wykonywalnych języka wspólnego<br /><br /> `x64` kompiluje z zestawu do uruchomienia na komputerze, który obsługuje zestaw instrukcji AMD64 lub EM64T przez 64-bitowe środowisko uruchomieniowe języka wspólnego.<br /><br /> [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] kompiluje z zestawu do uruchomienia w 64-bitowego środowiska CLR na komputerze, który ma [!INCLUDE[vcpritanium](../../../../includes/vcpritanium-md.md)] procesora.<br /><br /> `anycpu` Kompiluje używanemu zestawowi można uruchomić na dowolnej platformie. Domyślnie włączone.|  
 |`/out:``assemblyName`|Określa nazwę zestawu, który jest danych wyjściowych. Nazwy zestawu domyślnie nazwę arkusza stylów głównego lub pierwszego arkusza stylów, jeśli istnieją arkuszy stylów.<br /><br /> Jeśli arkusz stylów zawiera skryptów, skrypty są zapisywane osobny zestaw. Nazw zestawów skryptu są generowane na podstawie nazwy zestawu głównego. Na przykład jeśli określono CustOrders.dll nazwy zestawu, pierwszy zestaw skryptu nosi nazwę CustOrders_Script1.dll.|  
 |`/settings:``document+-, script+-, DTD+-,`|Określa, czy zezwalać `document()` funkcje, skrypt XSLT lub dokument definicji (DTD) należy wpisać w arkuszu stylów.<br /><br /> Domyślnie wyłącza obsługę definicji DTD, `document()` funkcji i skryptów.|  
 |`@``file`|Pozwala określić plik, który zawiera opcje kompilatora.|  

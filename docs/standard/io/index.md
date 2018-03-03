@@ -16,18 +16,18 @@ helpviewer_keywords:
 - streams, I/O
 - data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
-caps.latest.revision: "33"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ddb94119d009d61e8126724df2a4b852b7ad3f5
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -39,15 +39,15 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Poniżej przedstawiono kilka powszechnie używanych klas związanych z plikami i katalogami:  
   
--   <xref:System.IO.File>-udostępnia metody statyczne do tworzenia, kopiowanie, usuwanie, przenoszenie i otwieranie plików i ułatwia utworzenie <xref:System.IO.FileStream> obiektu.  
+-   <xref:System.IO.File> -udostępnia metody statyczne do tworzenia, kopiowanie, usuwanie, przenoszenie i otwieranie plików i ułatwia utworzenie <xref:System.IO.FileStream> obiektu.  
   
--   <xref:System.IO.FileInfo>— zapewnia wystąpienia metody tworzenia, kopiowanie, usuwanie, przenoszenie i otwieranie plików i ułatwia utworzenie <xref:System.IO.FileStream> obiektu.  
+-   <xref:System.IO.FileInfo> — zapewnia wystąpienia metody tworzenia, kopiowanie, usuwanie, przenoszenie i otwieranie plików i ułatwia utworzenie <xref:System.IO.FileStream> obiektu.  
   
--   <xref:System.IO.Directory>-udostępnia metody statyczne do tworzenia, przenoszenie i wyliczania katalogów i jego podkatalogach.  
+-   <xref:System.IO.Directory> -udostępnia metody statyczne do tworzenia, przenoszenie i wyliczania katalogów i jego podkatalogach.  
   
--   <xref:System.IO.DirectoryInfo>-udostępnia wystąpienie metody tworzenia, przenoszenie i wyliczania katalogów i jego podkatalogach.  
+-   <xref:System.IO.DirectoryInfo> -udostępnia wystąpienie metody tworzenia, przenoszenie i wyliczania katalogów i jego podkatalogach.  
   
--   <xref:System.IO.Path>-udostępnia metody i właściwości dla przetwarzania ciągów katalogu w sposób między platformami.  
+-   <xref:System.IO.Path> -udostępnia metody i właściwości dla przetwarzania ciągów katalogu w sposób między platformami.  
   
  Oprócz używania tych klas, Visual Basic użytkownicy mogą używać metody i właściwości udostępniane przez <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> klasy dla we/wy pliku.  
   
@@ -68,19 +68,19 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Poniżej przedstawiono niektóre powszechnie używane klasy strumieni:  
   
--   <xref:System.IO.FileStream>— do odczytu i zapisu do pliku.  
+-   <xref:System.IO.FileStream> — do odczytu i zapisu do pliku.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>— do odczytu i zapisu do pliku w magazynie izolowanym.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> — do odczytu i zapisu do pliku w magazynie izolowanym.  
   
--   <xref:System.IO.MemoryStream>— za odczytywanie i zapisywanie w pamięci jako magazynu zapasowego.  
+-   <xref:System.IO.MemoryStream> — za odczytywanie i zapisywanie w pamięci jako magazynu zapasowego.  
   
--   <xref:System.IO.BufferedStream>— dla poprawia wydajność odczytu i zapisu.  
+-   <xref:System.IO.BufferedStream> — dla poprawia wydajność odczytu i zapisu.  
   
--   <xref:System.Net.Sockets.NetworkStream>— do odczytywania i zapisywania za pośrednictwem sieci gniazda.  
+-   <xref:System.Net.Sockets.NetworkStream> — do odczytywania i zapisywania za pośrednictwem sieci gniazda.  
   
--   <xref:System.IO.Pipes.PipeStream>— do odczytywania i zapisywania w potokach nazwane i anonimowe.  
+-   <xref:System.IO.Pipes.PipeStream> — do odczytywania i zapisywania w potokach nazwane i anonimowe.  
   
--   <xref:System.Security.Cryptography.CryptoStream>— Łączenie strumieni danych z usług kryptograficznych przekształcenia.  
+-   <xref:System.Security.Cryptography.CryptoStream> — Łączenie strumieni danych z usług kryptograficznych przekształcenia.  
   
  Na przykład pracy strumieni asynchronicznie, zobacz [asynchroniczne We/Wy pliku](../../../docs/standard/io/asynchronous-file-i-o.md).  
   
@@ -89,13 +89,13 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Poniżej przedstawiono niektóre powszechnie używane klasy czytników i składników zapisywania:  
   
--   <xref:System.IO.BinaryReader>i <xref:System.IO.BinaryWriter> — do odczytywania i zapisywania typów pierwotnych danych jako dane binarne wartości.  
+-   <xref:System.IO.BinaryReader> i <xref:System.IO.BinaryWriter> — do odczytywania i zapisywania typów pierwotnych danych jako dane binarne wartości.  
   
--   <xref:System.IO.StreamReader>i <xref:System.IO.StreamWriter> — do odczytywania i zapisywania znaków za pomocą kodowania wartości do konwersji znaków do i z bajtów.  
+-   <xref:System.IO.StreamReader> i <xref:System.IO.StreamWriter> — do odczytywania i zapisywania znaków za pomocą kodowania wartości do konwersji znaków do i z bajtów.  
   
--   <xref:System.IO.StringReader>i <xref:System.IO.StringWriter> — do odczytywania i zapisywania znaków, do i z ciągów.  
+-   <xref:System.IO.StringReader> i <xref:System.IO.StringWriter> — do odczytywania i zapisywania znaków, do i z ciągów.  
   
--   <xref:System.IO.TextReader>i <xref:System.IO.TextWriter> — służyć jako abstrakcyjnych klas podstawowych dla innych czytelników i zapisywania odczytu i zapisu znaków i ciągi, ale nie dane binarne.  
+-   <xref:System.IO.TextReader> i <xref:System.IO.TextWriter> — służyć jako abstrakcyjnych klas podstawowych dla innych czytelników i zapisywania odczytu i zapisu znaków i ciągi, ale nie dane binarne.  
   
  Zobacz [jak: Odczyt tekstu z pliku](../../../docs/standard/io/how-to-read-text-from-a-file.md), [porady: zapisywanie tekstu do pliku](../../../docs/standard/io/how-to-write-text-to-a-file.md), [jak: odczytywanie znaków z ciągu](../../../docs/standard/io/how-to-read-characters-from-a-string.md), i [porady: zapisywanie znaków ciągu](../../../docs/standard/io/how-to-write-characters-to-a-string.md).  
   
@@ -111,17 +111,17 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Następujące klasy są często używane podczas kompresowania i dekompresowania plików i strumieni:  
   
--   <xref:System.IO.Compression.ZipArchive>— w celu tworzenia i pobierania wpisów w archiwum zip.  
+-   <xref:System.IO.Compression.ZipArchive> — w celu tworzenia i pobierania wpisów w archiwum zip.  
   
--   <xref:System.IO.Compression.ZipArchiveEntry>— reprezentujący skompresowany plik.  
+-   <xref:System.IO.Compression.ZipArchiveEntry> — reprezentujący skompresowany plik.  
   
--   <xref:System.IO.Compression.ZipFile>— do tworzenia, wyodrębnianie i otwieranie skompresowanym pakietem.  
+-   <xref:System.IO.Compression.ZipFile> — do tworzenia, wyodrębnianie i otwieranie skompresowanym pakietem.  
   
--   <xref:System.IO.Compression.ZipFileExtensions>— do tworzenia i wyodrębnianie wpisów w skompresowanym pakietem.  
+-   <xref:System.IO.Compression.ZipFileExtensions> — do tworzenia i wyodrębnianie wpisów w skompresowanym pakietem.  
   
--   <xref:System.IO.Compression.DeflateStream>— kompresji i dekompresji strumieni przy użyciu algorytmu Deflate.  
+-   <xref:System.IO.Compression.DeflateStream> — kompresji i dekompresji strumieni przy użyciu algorytmu Deflate.  
   
--   <xref:System.IO.Compression.GZipStream>— kompresji i dekompresji strumieni w dane w formacie gzip.  
+-   <xref:System.IO.Compression.GZipStream> — kompresji i dekompresji strumieni w dane w formacie gzip.  
   
  Zobacz [porady: kompresowanie i wyodrębnianie plików](../../../docs/standard/io/how-to-compress-and-extract-files.md).  
   
@@ -132,11 +132,11 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Podczas implementowania wydzielonej pamięci masowej często używane są następujące klasy:  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorage>— udostępnia klasę podstawową dla implementacji izolowanych magazynów.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorage> — udostępnia klasę podstawową dla implementacji izolowanych magazynów.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFile>— zapewnia obszaru izolowanego magazynu, który zawiera pliki i katalogi.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFile> — zapewnia obszaru izolowanego magazynu, który zawiera pliki i katalogi.  
   
--   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream>-przedstawia do pliku w magazynie izolowanym.  
+-   <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> -przedstawia do pliku w magazynie izolowanym.  
   
  Zobacz [izolowanego magazynu](../../../docs/standard/io/isolated-storage.md).  
   
@@ -155,7 +155,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  W razie potrzeby można wykonywać konwersje między strumieniami programu .NET Framework i strumieniami środowiska wykonawczego systemu Windows. Aby uzyskać więcej informacji, zobacz [porady: konwertowanie między .NET Framework i strumieni środowiska wykonawczego systemu Windows](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md) lub [System.IO.WindowsRuntimeStreamExtensions](https://msdn.microsoft.com/library/system.io.windowsruntimestreamextensions.aspx). <!--zz TODO: <xref:System.IO.WindowsRuntimeStreamExtensions>--> 
   
- Aby uzyskać więcej informacji o operacjach we/wy w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [Szybki Start: odczytywanie i zapisywanie pliku](http://go.microsoft.com/fwlink/p/?LinkId=243072) w Centrum deweloperów systemu Windows.  
+ Aby uzyskać więcej informacji o operacjach we/wy w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [Szybki Start: Odczyt i zapis plików](/previous-versions/windows/apps/hh758325(v=win.10)).  
   
 ## <a name="io-and-security"></a>Moduł We/Wy i zabezpieczenia  
  Kiedy używać klas w <xref:System.IO?displayProperty=nameWithType> przestrzeni nazw, należy wykonać, wymagania dotyczące zabezpieczeń systemu operacyjnego takie jak listy kontroli dostępu (ACL) do kontrolowania dostępu do plików i katalogów. To wymaganie dotyczy oprócz żadnego <xref:System.Security.Permissions.FileIOPermission> wymagania. Listami ACL można zarządzać programowo. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie lub usuwanie pozycji listy kontroli dostępu](../../../docs/standard/io/how-to-add-or-remove-access-control-list-entries.md).  

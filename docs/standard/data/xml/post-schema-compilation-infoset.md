@@ -13,21 +13,21 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 7f1bc7f4-401b-459f-9078-f099cc711fde
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4b59b2b59852190bd19a3c1c9536fadb7b40603e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5b55271306abdca95694bd8fb2ebb6e538d060ae
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="post-schema-compilation-infoset"></a>Obiekt typu Infoset schematu po kompilacji
-[Zalecenie schematu XML w sieci World Wide Web konsorcjum W3C](http://go.microsoft.com/fwlink/?linkid=45242) omówiono zestaw informacji (obiekt typu infoset) muszą być widoczne dla sprawdzanie poprawności schematu przed i po schematu kompilacji. Model obiektu schematu XML (SOM) widoków tego narażenia przed i po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.  
+[Zalecenie schematu XML w sieci World Wide Web konsorcjum W3C](https://www.w3.org/XML/Schema) omówiono zestaw informacji (obiekt typu infoset) muszą być widoczne dla sprawdzanie poprawności schematu przed i po schematu kompilacji. Model obiektu schematu XML (SOM) widoków tego narażenia przed i po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana.  
   
  Obiekt typu infoset sprawdzanie poprawności schematu przed jest tworzona podczas edytowania schematu. Obiekt typu infoset schematu po kompilacji jest generowany po <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> metoda <xref:System.Xml.Schema.XmlSchemaSet> jest wywoływana podczas kompilowania schematu i jest udostępniany jako właściwości.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Xml.Schema.XmlSchemaParticle>|<xref:System.Xml.Schema.XmlSchemaParticle.MaxOccurs%2A>, <xref:System.Xml.Schema.XmlSchemaParticle.MinOccurs%2A>|  
 |<xref:System.Xml.Schema.XmlSchemaComplexType>|<xref:System.Xml.Schema.XmlSchemaComplexType.AnyAttribute%2A>|  
   
- Na przykład <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaComplexType> klasy zarówno mają `BlockResolved` i `FinalResolved` właściwości. Te właściwości są używane do przechowywania wartości `Block` i `Final` właściwości po schemat został skompilowany i sprawdzania poprawności. `BlockResolved`i `FinalResolved` są właściwości tylko do odczytu, które są częścią typu infoset schematu po kompilacji.  
+ Na przykład <xref:System.Xml.Schema.XmlSchemaElement> i <xref:System.Xml.Schema.XmlSchemaComplexType> klasy zarówno mają `BlockResolved` i `FinalResolved` właściwości. Te właściwości są używane do przechowywania wartości `Block` i `Final` właściwości po schemat został skompilowany i sprawdzania poprawności. `BlockResolved` i `FinalResolved` są właściwości tylko do odczytu, które są częścią typu infoset schematu po kompilacji.  
   
  W poniższym przykładzie przedstawiono <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwość <xref:System.Xml.Schema.XmlSchemaElement> klasy zestawu po sprawdzania poprawności schematu. Przed sprawdzania poprawności, ta właściwość zawiera `null` odwołanie i <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest ustawiona na nazwę typu zagrożona. Po sprawdzeniu poprawności <xref:System.Xml.Schema.XmlSchemaElement.SchemaTypeName%2A> jest rozwiązane do prawidłowego typu i jest dostępna za pośrednictwem obiektu typu <xref:System.Xml.Schema.XmlSchemaElement.ElementSchemaType%2A> właściwości.  
   

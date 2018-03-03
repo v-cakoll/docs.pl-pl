@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9053724d-a1fb-4f0f-b9dc-7f6dd893e8ff
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: abb7c9322a9b7ddfd3e0add4d8b9be6941c5e240
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c186b25aeaa42b7285316d7bc9de913dd7b89af7
+ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="sql-server-security"></a>Zabezpieczenia serwera SQL
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]oferuje wiele funkcji, które obsługują tworzenie bezpiecznej bazie danych aplikacji.  
+[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] oferuje wiele funkcji, które obsługują tworzenie bezpiecznej bazie danych aplikacji.  
   
  Typowe kwestie dotyczące zabezpieczeń, takich jak dane przed kradzieżą lub vandalism, zastosuj niezależnie od wersji [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] używasz. Integralność danych, należy również uwzględnić jako problem z zabezpieczeniami. Jeśli dane nie są chronione, istnieje możliwość, że może stać się Optymalizacja manipulowania danymi ad hoc jest dozwolone, a dane są przypadkowego lub umyślnego modyfikacji z nieprawidłowymi wartościami lub całkowicie usunięte. Ponadto istnieją często wymagań prawnych, które należy przestrzegać, takie jak poprawny magazyn informacji poufnych. Przechowywanie niektóre rodzaje danych osobowych jest proscribed całkowicie, w zależności od prawa, które są stosowane w określonej właściwości.  
   
@@ -44,13 +46,12 @@ ms.lasthandoff: 01/17/2018
  W tym artykule opisano zagadnienia dotyczące zabezpieczeń [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
- [Zabezpieczenia i ochrona (aparat bazy danych)](http://msdn2.microsoft.com/library/bb510589\(SQL.100\).aspx.)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]— Książki Online security tematów.  
-  
- [Zagadnienia dotyczące zabezpieczeń dla programu SQL Server](http://go.microsoft.com/fwlink/?LinkId=98587)  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]— Książki Online security tematów.  
-  
+[Centrum zabezpieczeń dla aparatu bazy danych programu SQL Server i bazy danych Azure SQL](/sql/relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database)  
+W tym artykule opisano zagadnienia dotyczące zabezpieczeń programu SQL Server i bazy danych SQL Azure.
+
+[Zagadnienia dotyczące zabezpieczeń dla instalacji serwera SQL](/sql/sql-server/install/security-considerations-for-a-sql-server-installation)  
+W tym artykule opisano zagadnienia dotyczące zabezpieczeń, które należy uwzględnić przed zainstalowaniem programu SQL Server.
+
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  [SQL Server i ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)  
- [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

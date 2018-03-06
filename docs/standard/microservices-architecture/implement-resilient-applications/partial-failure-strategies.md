@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: baeeb47dde77ceaa461214f55482d2312d67ccec
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 0b5fdb03e4b0d0c2d4e8aa8a897fd46d56707f11
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="strategies-for-handling-partial-failure"></a>Strategie dotyczące postępowania z częściowa awarii
 
@@ -31,7 +31,7 @@ Strategie dotyczące postępowania z błędami częściowe są następujące.
 
 **Podaj przejścia**. W takie podejście proces klienta sprawdza logiki rezerwowej, gdy żądanie zakończy się niepowodzeniem, takich jak przekazywania danych z pamięci podręcznej lub wartość domyślną. Jest to podejście, które są odpowiednie dla zapytań i jest bardziej złożony dla aktualizacji lub poleceń.
 
-**Ogranicz liczbę żądań w kolejce**. Klienci także powinna nałożyć górnej granicy liczby oczekujących żądań, które mikrousługi klienta mogą wysyłać do określonej usługi. Jeśli został osiągnięty limit, jest prawdopodobnie bezcelowe dokonanie dodatkowych żądań i tymi próbami powinna zakończyć się niepowodzeniem natychmiast. W implementacji, Polly [izolacji grodziowego](https://github.com/App-vNext/Polly/wiki/Bulkhead) zasad może służyć do spełnienia tego wymagania. Ta metoda jest zasadniczo ograniczania paralelizacja z [SemaphoreSlim](https://docs.microsoft.com/dotnet/api/system.threading.semaphoreslim?view=netcore-1.1) jako implementacja. Umożliwia on również "kolejki" poza grodzi. Nadmiarowe obciążenia nawet przed wykonaniem można pozostawia aktywnego, (na przykład, ponieważ za pojemność jest pełna). Dzięki temu można szybciej niż wyłącznika, ponieważ oczekuje wyłącznik niepowodzeń swojej odpowiedzi do pewnych scenariuszy awarii. Obiekt BulkheadPolicy w Polly udostępnia jak Pełna grodziowego są kolejki i zdarzenia oferty na przepełnienie tak mogą służyć do kierowania automatyczne skalowanie w poziomie.
+**Ogranicz liczbę żądań w kolejce**. Klienci także powinna nałożyć górnej granicy liczby oczekujących żądań, które mikrousługi klienta mogą wysyłać do określonej usługi. Jeśli został osiągnięty limit, jest prawdopodobnie bezcelowe dokonanie dodatkowych żądań i tymi próbami powinna zakończyć się niepowodzeniem natychmiast. W implementacji, Polly [izolacji grodziowego](https://github.com/App-vNext/Polly/wiki/Bulkhead) zasad może służyć do spełnienia tego wymagania. Ta metoda jest zasadniczo ograniczania paralelizacja z <xref:System.Threading.SemaphoreSlim> jako implementacja. Umożliwia on również "kolejki" poza grodzi. Nadmiarowe obciążenia nawet przed wykonaniem można pozostawia aktywnego, (na przykład, ponieważ za pojemność jest pełna). Dzięki temu można szybciej niż wyłącznika, ponieważ oczekuje wyłącznik niepowodzeń swojej odpowiedzi do pewnych scenariuszy awarii. Obiekt BulkheadPolicy w Polly udostępnia jak Pełna grodziowego są kolejki i zdarzenia oferty na przepełnienie tak mogą służyć do kierowania automatyczne skalowanie w poziomie.
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
@@ -47,7 +47,7 @@ Strategie dotyczące postępowania z błędami częściowe są następujące.
 -   **Projektowanie aplikacji odporne na platformie Azure**
     [*https://docs.microsoft.com/azure/architecture/resiliency/*](https://docs.microsoft.com/azure/architecture/resiliency/)
 
--   **Obsługa błędów przejściowych**
+-   **Obsługa błędu przejściowego**
     <https://docs.microsoft.com/azure/architecture/best-practices/transient-faults>
 
 

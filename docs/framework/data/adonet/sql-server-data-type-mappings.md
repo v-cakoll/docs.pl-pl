@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 76343b75f09a3aa007a955b0ee869d1dcf1146aa
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapowanie typu danych serwera SQL
 SQL Server i programu .NET Framework są oparte na systemach innego typu. Na przykład, .NET Framework <xref:System.Decimal> struktury ma maksymalną skalę 28, natomiast typy danych numerycznych i dziesiętnych programu SQL Server ma maksymalną skalę wynosząca 38. Zachowanie spójności danych podczas odczytywania i zapisywania danych, <xref:System.Data.SqlClient.SqlDataReader> ujawnia specyficzne dla programu SQL Server typu metody dostępu, które zwracają obiekty <xref:System.Data.SqlTypes> oraz metod dostępu, które zwracają .NET Framework typów. Zarówno program SQL Server typy i .NET Framework, również są przedstawiane przez wyliczeń w <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> klasy, które można używać podczas określania <xref:System.Data.SqlClient.SqlParameter> typów danych.  
@@ -31,7 +33,7 @@ SQL Server i programu .NET Framework są oparte na systemach innego typu. Na prz
 |binarny|Byte[]|<xref:System.Data.SqlDbType.VarBinary>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |bit|Boolean|<xref:System.Data.SqlDbType.Bit>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBoolean%2A>|<xref:System.Data.DbType.Boolean>|<xref:System.Data.SqlClient.SqlDataReader.GetBoolean%2A>|  
 |char|String<br /><br /> CHAR]|<xref:System.Data.SqlDbType.Char>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiStringFixedLength>,<br /><br /> <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|Data<br /><br /> (SQL Server 2008 i nowsze)|DataGodzina|<xref:System.Data.SqlDbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|Data <sup>1</sup><br /><br /> (SQL Server 2008 i nowsze)|DataGodzina|<xref:System.Data.SqlDbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.Date> <sup>1</sup>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime|DataGodzina|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |datetime2<br /><br /> (SQL Server 2008 i nowsze)|DataGodzina|<xref:System.Data.SqlDbType.DateTime2>|Brak|<xref:System.Data.DbType.DateTime2>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |Datetimeoffset<br /><br /> (SQL Server 2008 i nowsze)|DateTimeOffset|<xref:System.Data.SqlDbType.DateTimeOffset>|brak|<xref:System.Data.DbType.DateTimeOffset>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTimeOffset%2A>|  
@@ -50,7 +52,7 @@ SQL Server i programu .NET Framework są oparte na systemach innego typu. Na prz
 |smalldatetime|DataGodzina|<xref:System.Data.SqlDbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlDateTime%2A>|<xref:System.Data.DbType.DateTime>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |smallint|Int16|<xref:System.Data.SqlDbType.SmallInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlInt16%2A>|<xref:System.Data.DbType.Int16>|<xref:System.Data.SqlClient.SqlDataReader.GetInt16%2A>|  
 |smallmoney|Wartość dziesiętna|<xref:System.Data.SqlDbType.SmallMoney>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlMoney%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
-|sql_variant|Obiekt *|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> *|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> *|  
+|sql_variant|Obiekt <sup>2</sup>|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> <sup>2</sup>|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> <sup>2</sup>|  
 |tekst|String<br /><br /> CHAR]|<xref:System.Data.SqlDbType.Text>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |czas<br /><br /> (SQL Server 2008 i nowsze)|TimeSpan|<xref:System.Data.SqlDbType.Time>|brak|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |znacznik czasu|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
@@ -60,9 +62,10 @@ SQL Server i programu .NET Framework są oparte na systemach innego typu. Na prz
 |varchar|String<br /><br /> CHAR]|<xref:System.Data.SqlDbType.VarChar>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.AnsiString>, <xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
 |xml|Xml|<xref:System.Data.SqlDbType.Xml>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlXml%2A>|<xref:System.Data.DbType.Xml>|brak|  
   
- \*Użyj określonego typu metody dostępu, jeśli znasz z typem podstawowym typu `sql_variant`.  
+<sup>1</sup> nie można ustawić `DbType` właściwość `SqlParameter` do `SqlDbType.Date`.  
+<sup>2</sup> użyć określonego typu metody dostępu, jeśli znasz z typem podstawowym typu `sql_variant`.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]Odwołanie do dokumentacji książki Online  
+## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Odwołanie do dokumentacji książki Online  
  Aby uzyskać więcej informacji na temat [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] , zobacz [typy danych (aparat bazy danych)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>Zobacz też  

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b10eeff18979674901197203716426af70433c46
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: e6ac6f2d316a94e69c2599acf07aaaf6361b3e5a
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="implementing-value-objects"></a>Implementowanie obiekty wartości
 
@@ -136,7 +136,7 @@ Widać tylko sposób definiowania obiektu wartości do modelu domeny. Ale, jak m
 
 ### <a name="background-and-older-approaches-using-ef-core-11"></a>Tło i starszych podejścia przy użyciu EF Core 1.1
 
-Jako tło, to ograniczenie, używając EF Core 1.0 i 1.1 został, że nie można użyć [typów złożonych](https://docs.microsoft.com/dotnet/api/system.componentmodel.dataannotations.schema.complextypeattribute?view=netframework-4.7) zgodnie z definicją w EF 6.x w tradycyjnych .NET Framework. W związku z tym jeśli przy użyciu EF Core w wersji 1.0 lub 1.1, potrzebne do przechowywania wartości obiektu jako jednostka EF z pola identyfikator. Następnie tak będzie wyglądał więcej takich jak obiekt wartości przy nie tożsamości, można ukryć jego identyfikator, więc można wyjaśnić, że tożsamość obiektu wartości nie jest ważna w modelu domeny. Ten identyfikator można ukryć przy użyciu Identyfikatora jako [w tle właściwości](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Ponieważ tego ukrywania identyfikator modelu jest skonfigurowany na poziomie infrastruktury EF, byłoby rodzaj niewidoczny dla modelu domeny.
+Jako tło, to ograniczenie, używając EF Core 1.0 i 1.1 został, że nie można użyć [typów złożonych](xref:System.ComponentModel.DataAnnotations.Schema.ComplexTypeAttribute) zgodnie z definicją w EF 6.x w tradycyjnych .NET Framework. W związku z tym jeśli przy użyciu EF Core w wersji 1.0 lub 1.1, potrzebne do przechowywania wartości obiektu jako jednostka EF z pola identyfikator. Następnie tak będzie wyglądał więcej takich jak obiekt wartości przy nie tożsamości, można ukryć jego identyfikator, więc można wyjaśnić, że tożsamość obiektu wartości nie jest ważna w modelu domeny. Ten identyfikator można ukryć przy użyciu Identyfikatora jako [w tle właściwości](https://docs.microsoft.com/ef/core/modeling/shadow-properties ). Ponieważ tego ukrywania identyfikator modelu jest skonfigurowany na poziomie infrastruktury EF, byłoby rodzaj niewidoczny dla modelu domeny.
 
 W pierwotnej wersji eShopOnContainers (.NET Core 1.1) identyfikator ukryte potrzebne w infrastrukturze podstawowej EF został wdrożony w następujący sposób na poziomie typu DbContext w projekcie infrastruktury przy użyciu interfejsu API Fluent. W związku z tym Identyfikatorem była ukrytych z punktu widzenia modelu domeny, lecz nadal znajdują się w infrastrukturze.
 
@@ -168,7 +168,7 @@ Typ jednostki należące do firmy pozwala na mapowanie typów, które nie mają 
 Tylko na podstawie modelu domeny, należących do typu prawdopodobnie nie ma żadnych tożsamości.
 Jednak w obszarze obejmuje należących do typów ma tożsamość, ale właściwość nawigacji właściciela jest częścią tej tożsamości.
 
-Tożsamość wystąpienia własnych typów nie jest całkowicie własne. Składa się z trzech składników: 
+Tożsamość wystąpienia własnych typów nie jest całkowicie własne. Składa się z trzech składników:
 
 - Tożsamość właściciela
 

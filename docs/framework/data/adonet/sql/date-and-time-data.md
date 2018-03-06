@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a146cf50639351479d42bff684ea7db21ecf5d3b
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 904b941a274cdd31485d35cf2d025f869638d448
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="date-and-time-data"></a>Daty i godziny
 SQL Server 2008 wprowadzono nowe typy danych obsługi informacji o datę i godzinę. Nowe typy danych obejmują osobne typy daty i godziny i typy danych rozszerzonych z większego zakresu, dokładność i świadomości strefy czasowej. Począwszy od wersji .NET Framework 3.5 z dodatkiem Service Pack (SP1), .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) zapewnia pełną obsługę wszystkich nowych funkcji aparatu bazy danych programu SQL Server 2008. .NET Framework 3.5 z dodatkiem SP1 należy zainstalować (lub nowsza) do użycia z SqlClient te nowe funkcje.  
@@ -60,7 +62,7 @@ SQL Server 2008 wprowadzono nowe typy danych obsługi informacji o datę i godzi
  Aby uzyskać więcej informacji na temat interpretowanie danych daty i godziny w programie SQL Server, zobacz [przy użyciu daty i godziny](http://go.microsoft.com/fwlink/?LinkID=98361) w dokumentacji SQL Server 2008 — książki Online.  
   
 ## <a name="datetime-data-types-and-parameters"></a>Data/Godzina danych typów i parametry  
- Można określić typu danych <xref:System.Data.SqlClient.SqlParameter> przy użyciu jednej z <xref:System.Data.SqlDbType> wyliczenia. Dodano następujące wyliczenia <xref:System.Data.SqlDbType> do obsługi nowych typów danych daty i godziny.  
+ Dodano następujące wyliczenia <xref:System.Data.SqlDbType> do obsługi nowych typów danych daty i godziny.  
   
 -   `SqlDbType.Date`  
   
@@ -69,7 +71,12 @@ SQL Server 2008 wprowadzono nowe typy danych obsługi informacji o datę i godzi
 -   `SqlDbType.DateTime2`  
   
 -   `SqlDbType.DateTimeOffSet`  
-  
+
+Można określić typu danych <xref:System.Data.SqlClient.SqlParameter> przy użyciu jednej z poprzednim <xref:System.Data.SqlDbType> wyliczenia. 
+
+> [!NOTE]
+> Nie można ustawić `DbType` właściwość `SqlParameter` do `SqlDbType.Date`.
+
  Można również określić typ <xref:System.Data.SqlClient.SqlParameter> objęty przez ustawienie <xref:System.Data.SqlClient.SqlParameter.DbType%2A> właściwość `SqlParameter` obiektu do określonego <xref:System.Data.DbType> wartości wyliczenia. Dodano następujące wartości wyliczenia <xref:System.Data.DbType> do obsługi `datetime2` i `datetimeoffset` typy danych:  
   
 -   DbType.DateTime2  

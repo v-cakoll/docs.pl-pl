@@ -8,11 +8,11 @@ ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3605a6cd53db695de3af015a777e3c1a0e92af58
-ms.sourcegitcommit: 672c9cd122c13c9813f57f022c86ebdf6dd69b4f
+ms.openlocfilehash: 632c04507c1478238a5dc2573542f8c88bae2a51
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Przepływ pracy pętli wewnętrzny programowanie aplikacji Docker
 
@@ -123,7 +123,7 @@ W plik DockerFile należy także poinstruować Docker do nasłuchiwania na porta
 
 Istnieją inne wiersze konfiguracji, które można dodać w plik DockerFile w zależności od języka/framework, którego używasz, więc Docker potrafi uruchomić aplikację. Na przykład, potrzebny jest wiersz punktu wejścia z \["dotnet", "MyCustomMicroservice.dll"\] do uruchamiania aplikacji .NET Core, chociaż może mieć wiele wariantów w zależności od rozwiązania do tworzenia i uruchamiania usługi. Jeśli używasz zestawu SDK i interfejsu wiersza polecenia platformy dotnet tworzenie i uruchamianie aplikacji .NET, może być nieco inne. Mierzenie jest, że ENTRYPOINT wiersza oraz dodatkowe wiersze będą różne w zależności od języka/platformy wybrane dla aplikacji.
 
-**Więcej informacji o** dla informacji o tworzeniu obrazy usługi Docker dla aplikacji .NET Core, przejdź do <https://docs.microsoft.com/dotnet/articles/core/docker/building-net-docker-images>.
+**Więcej informacji o** dla informacji o tworzeniu obrazy usługi Docker dla aplikacji .NET Core, przejdź do <https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images>.
 
 Aby dowiedzieć się więcej na temat tworzenia własnych obrazów, przejdź do [https://docs.docker.com/engine/ \samouczki/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/).
 
@@ -258,7 +258,7 @@ Visual Studio Code obsługuje Docker debugowania, jeśli używasz środowiska No
 
 Możesz również debugować kontenerów .NET Core w Docker przy użyciu programu Visual Studio, zgodnie z opisem w następnej sekcji.
 
-**Aby dowiedzieć się więcej:** Aby dowiedzieć się więcej na temat debugowania kontenery Node.js Docker, <https://blog.docker.com/2016/07/live-debugging-docker/> i [https://blogs.msdn.microsoft.com/ \ Użytkownik\_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
+**Aby dowiedzieć się więcej:** Aby dowiedzieć się więcej na temat debugowania kontenery Node.js Docker, <https://blog.docker.com/2016/07/live-debugging-docker/> i [https://blogs.msdn.microsoft.com/ \ użytkownika\_ed/2016/02/27 / Visual-Studio-Code-New-Features-13-big-Debugging-Updates-Rich-Object-Hover-Conditional-breakpoints-node-js-mono-more/](https://blogs.msdn.microsoft.com/user_ed/2016/02/27/visual-studio-code-new-features-13-big-debugging-updates-rich-object-hover-conditional-breakpoints-node-js-mono-more/).
 
 
 >[!div class="step-by-step"]

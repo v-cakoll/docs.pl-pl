@@ -7,11 +7,11 @@ ms.date: 10/26/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4cb85c9dbcc7586510db9947d0151e3856964ef4
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: adcb9d2352022cc94238296562b3eb7677bdf20b
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Jakie aplikacje zoptymalizowanych pod kątem chmury?
 
@@ -41,7 +41,7 @@ Główną różnicą w aplikacjach na poziomie zoptymalizowanych pod kątem chmu
 
 Tworzenie nowych aplikacji, które nie używają mikrousług również ma sens. Istnieje wiele scenariuszy nowych i nadal nowoczesnych w których mikrousług metoda może przekroczyć potrzeb. W niektórych przypadkach po prostu można utworzyć aplikacji sieci web wbudowanymi prostsze lub dodawanie coarse-grained usług do aplikacji warstwowych. W takich sytuacjach można nadal prowadzić pełne wykorzystanie chmury PaaS funkcje, takie jak te oferowane przez usługę Azure App Service. Nadal można zmniejszyć pracy konserwacji do limitu.
 
-Ponadto ponieważ tworzenie nowego kodu w scenariuszach zoptymalizowanych pod kątem chmury (pełna aplikacji lub częściowe podsystemów), podczas tworzenia nowego kodu należy używać nowsze wersje programu .NET ([.NET Core](https://docs.microsoft.com/dotnet/core/) i [platformy ASP.NET Core](https://docs.microsoft.com/aspnet/core/), w szczególności). Jest to szczególnie istotne w przypadku utworzenia mikrousług i kontenerów, ponieważ .NET Core framework gotowa i szybki. Zużycie pamięci i szybki start w kontenerach, zostanie wyświetlony, a Twoje aplikacje będą, wysokiej wydajności. Takie podejście jest dopasowany z wymaganiami mikrousług i kontenerów i uzyskać korzyści i platform framework-ich możliwości uruchamiania tej samej aplikacji w systemie Linux, Windows Server i komputerów Mac (Mac dla środowisk deweloperskich).
+Ponadto ponieważ tworzenie nowego kodu w scenariuszach zoptymalizowanych pod kątem chmury (pełna aplikacji lub częściowe podsystemów), podczas tworzenia nowego kodu należy używać nowsze wersje programu .NET ([.NET Core](../../../core/index.md) i [platformy ASP.NET Core](/aspnet/core/), w szczególności). Jest to szczególnie istotne w przypadku utworzenia mikrousług i kontenerów, ponieważ .NET Core framework gotowa i szybki. Zużycie pamięci i szybki start w kontenerach, zostanie wyświetlony, a Twoje aplikacje będą, wysokiej wydajności. Takie podejście jest dopasowany z wymaganiami mikrousług i kontenerów i uzyskać korzyści i platform framework-ich możliwości uruchamiania tej samej aplikacji w systemie Linux, Windows Server i komputerów Mac (Mac dla środowisk deweloperskich).
 
 ## <a name="cloud-native-applications-with-cloud-optimized-applications"></a>Aplikacje natywne chmury z aplikacjami zoptymalizowanych pod kątem chmury
 
@@ -65,7 +65,7 @@ Jednak mikrousług nie są wymagane dla każdej nowej lub nowoczesnych aplikacji
 
 Architektura mikrousług staje się to preferowane rozwiązanie dla rozproszonych i dużych lub złożonych aplikacji krytycznym, które są oparte na wiele niezależnych podsystemów w formie autonomicznej usługi. W architektura mikrousług aplikacji jest utworzony jako zbiór usług, które można niezależnie rozwinięte, przetestowane, wersji, wdrożyć i skalowania. Może to obejmować wszystkie powiązane, autonomicznej bazy danych na mikrousługi.
 
-Aby uzyskać szczegółowy widok architektury mikrousług, które można wdrożyć przy użyciu platformy .NET Core, zobacz e-book do pobrania plików PDF [mikrousług .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook). Przewodnik jest również dostępna [online](https://docs.microsoft.com/dotnet/standard/microservices-architecture/).
+Aby uzyskać szczegółowy widok architektury mikrousług, które można wdrożyć przy użyciu platformy .NET Core, zobacz e-book do pobrania plików PDF [mikrousług .NET: Architektura konteneryzowanych aplikacji .NET](https://aka.ms/microservicesebook). Przewodnik jest również dostępna [online](../../microservices-architecture/index.md).
 
 Ale nawet w scenariuszach, w których mikrousług oferują zaawansowane możliwości niezależne od wdrożenia, granice silne podsystemu i różnorodności technologii-też wiązać wiele wyzwania. Wyzwania dotyczące projektowanie aplikacji rozproszonych, takich jak modeli danych pofragmentowanych i niezależny; uzyskanie odporność komunikacji między mikrousług; potrzebę spójność ostateczna; i złożoność działania. Mikrousług wprowadzenie wyższy poziom złożoności w porównaniu do tradycyjnego wbudowanymi aplikacjami.
 

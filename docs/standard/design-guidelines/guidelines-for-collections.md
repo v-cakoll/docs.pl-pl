@@ -9,18 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 62205e6bea39214383f6a653d719c0285f374a9f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 09a2a075e21de6968989575385db07ab39eb627f
+ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="guidelines-for-collections"></a>Wytyczne dotyczące kolekcji
 Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pewne cechy wspólne mogą zostać uwzględnione w kolekcji. Prawie zawsze jest ona odpowiednia dla takich typów do zaimplementowania <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>, więc w tej sekcji możemy tylko należy wziąć pod uwagę typy Implementowanie jedno lub oba te interfejsy można kolekcje.  
@@ -31,7 +31,7 @@ Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pew
   
  **X nie** użyj <xref:System.Collections.ArrayList> lub <xref:System.Collections.Generic.List%601> w publicznych interfejsach API.  
   
- Te typy są przeznaczone do użycia w wewnętrznej implementacji nie znajduje się w publicznych interfejsach API struktury danych. `List<T>`jest zoptymalizowana pod kątem wydajności i zasilania kosztem czystości interfejsów API i elastyczność. Na przykład, jeśli `List<T>`, nie kiedykolwiek będzie Aby otrzymywać powiadomienia, gdy kod klienta modyfikuje kolekcję. Ponadto `List<T>` udostępnia wiele elementów członkowskich, takich jak <xref:System.Collections.Generic.List%601.BinarySearch%2A>, które nie są przydatne lub mające zastosowanie w wielu scenariuszach. W poniższych sekcjach dwóch opisano typy (abstrakcje) przeznaczony specjalnie do użytku w publicznych interfejsach API.  
+ Te typy są przeznaczone do użycia w wewnętrznej implementacji nie znajduje się w publicznych interfejsach API struktury danych. `List<T>` jest zoptymalizowana pod kątem wydajności i zasilania kosztem czystości interfejsów API i elastyczność. Na przykład, jeśli `List<T>`, nie kiedykolwiek będzie Aby otrzymywać powiadomienia, gdy kod klienta modyfikuje kolekcję. Ponadto `List<T>` udostępnia wiele elementów członkowskich, takich jak <xref:System.Collections.Generic.List%601.BinarySearch%2A>, które nie są przydatne lub mające zastosowanie w wielu scenariuszach. W poniższych sekcjach dwóch opisano typy (abstrakcje) przeznaczony specjalnie do użytku w publicznych interfejsach API.  
   
  **X nie** użyj `Hashtable` lub `Dictionary<TKey,TValue>` w publicznych interfejsach API.  
   
@@ -61,7 +61,7 @@ Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pew
   
  **CZY ✓** użyj <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>, podklasa klasy `ReadOnlyCollection<T>`, lub w rzadkich przypadkach `IEnumerable<T>` dla właściwości lub return wartości reprezentujące kolekcji tylko do odczytu.  
   
- Ogólnie rzecz biorąc, preferowane `ReadOnlyCollection<T>`. Jeśli go nie spełnia wymagań dotyczących niektórych (np. Kolekcja nie musi zawierać `IList`), użyj kolekcji niestandardowej zaimplementowanie `IEnumerable<T>`, `ICollection<T>`, lub `IList<T>`. Implementowanie niestandardowych kolekcji tylko do odczytu, należy wdrożyć `ICollection<T>.ReadOnly` do zwróci wartość false.  
+ Ogólnie rzecz biorąc, preferowane `ReadOnlyCollection<T>`. Jeśli go nie spełnia wymagań dotyczących niektórych (np. Kolekcja nie musi zawierać `IList`), użyj kolekcji niestandardowej zaimplementowanie `IEnumerable<T>`, `ICollection<T>`, lub `IList<T>`. Implementowanie niestandardowych kolekcji tylko do odczytu, należy wdrożyć `ICollection<T>.IsReadOnly` do zwrócenia `true`.  
   
  W przypadkach, gdy masz pewność, że jedyny scenariusz, w coraz można obsługiwać jest tylko do przodu iteracji, możesz użyć `IEnumerable<T>`.  
   
@@ -135,7 +135,7 @@ Dowolny typ zaprojektowany specjalnie w celu manipulowania grupy obiektów o pew
   
  Na przykład powinna być wywoływana tylko do odczytu kolekcji ciągów `ReadOnlyStringCollection`.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
  *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   

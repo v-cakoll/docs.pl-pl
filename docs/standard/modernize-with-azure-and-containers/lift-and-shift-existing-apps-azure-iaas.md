@@ -4,14 +4,15 @@ description: "Modernizacji istniejących aplikacji .NET z chmury Azure i kontene
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eed17ad06c138c3a4eb85f5e023427b681488784
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6811da4b59531e27f2d832c102d37ba1383b15ab
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="lift-and-shift-existing-apps-azure-iaas"></a>Podnieś i przesunięcie istniejące aplikacje IaaS platformy Azure
 
@@ -27,7 +28,7 @@ Rysunek 2-1 powoduje umieszczenie poziomów modernizacji aplikacje gotowe infras
 
 > **Rysunek 2-1.** Pozycjonowanie aplikacje infrastruktury chmury gotowe do wydania
 
-## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Dlaczego migracji istniejącej aplikacji sieci web .NET Azure IaaS 
+## <a name="why-migrate-existing-net-web-applications-to-azure-iaas"></a>Dlaczego migracji istniejącej aplikacji sieci web .NET Azure IaaS
 
 Głównym celem migrację do chmury, nawet na poziomie początkowej IaaS, jest umożliwia redukcję kosztów. Za pomocą więcej usług infrastruktury zarządzanych, organizacji można obniżyć inwestycji w sprzęt konserwacja, serwera lub obsługę maszyny Wirtualnej i wdrożenia i zarządzanie infrastrukturą.
 
@@ -39,7 +40,7 @@ Również stało się widoczne, czy aplikacje są łatwiejsze do modernizacji i 
 
 ## <a name="when-to-migrate-to-iaas-instead-of-to-paas"></a>Podczas migracji do IaaS zamiast do PaaS
 
-W kolejnych sekcjach omówiono aplikacji DevOps gotowe do chmury, które najczęściej są oparte na różnych platformach PaaS i usług. Te aplikacje zapewniają większości korzyści wynikające z migracji do chmury.
+Kolejnych sekcjach omówiono w nim aplikacje DevOps gotowe do chmury, które najczęściej są oparte na różnych platformach PaaS i usług. Te aplikacje zapewniają większości korzyści wynikające z migracji do chmury.
 
 Jeśli celem jest po prostu przenoszenia istniejących aplikacji w chmurze, najpierw należy zidentyfikować istniejące aplikacje, które wymagają znacznej modyfikacji do uruchamiania w usłudze Azure App Service. Te aplikacje powinny być pierwszym kandydatów.
 
@@ -53,15 +54,15 @@ Migracja do chmury nie musi być trudne. Jednak w wielu organizacjach mieć trud
 
 [Azure migracji](https://aka.ms/azuremigrate) jest nową usługę, która zawiera wskazówki, szczegółowych informacji i mechanizmów konieczne jest pomocne podczas migracji do usługi Azure. Udostępnia Azure migracji:
 
--   Odnajdywanie i oceny dla lokalnych maszyn wirtualnych
+- Odnajdywanie i oceny dla lokalnych maszyn wirtualnych
 
--   Mapowanie wbudowanych zależności dla odnajdywania wysokiego zaufania aplikacji wielowarstwowych
+- Mapowanie wbudowanych zależności dla odnajdywania wysokiego zaufania aplikacji wielowarstwowych
 
--   Inteligentnego restrukturyzujące do maszyn wirtualnych platformy Azure
+- Inteligentnego restrukturyzujące do maszyn wirtualnych platformy Azure
 
--   Raportowania z wytycznymi dotyczącymi korygując potencjalnych problemów ze zgodnością
+- Raportowania z wytycznymi dotyczącymi korygując potencjalnych problemów ze zgodnością
 
--   Integracja z usługi Azure Management bazy danych dla bazy danych odnajdywania i migracji
+- Integracja z usługi Azure Management bazy danych dla bazy danych odnajdywania i migracji
 
 Azure migracji daje pewność, że obciążeń można migrować przy minimalnym wpływie biznesową i działają zgodnie z oczekiwaniami na platformie Azure. Wskazówki i odpowiednie narzędzia można uzyskać maksymalny zwrot z inwestycji przy jednoczesnym zapewnieniu, że wydajności i niezawodności wymagania zostały spełnione.
 
@@ -85,23 +86,23 @@ Rysunek 2 – 3 przedstawiono wykonywanie wielu migracji maszyny Wirtualnej za p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Arkusz danych migracji Azure**
+- **Arkusz danych migracji Azure**
 
     [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
 
--   Migrowanie Azure
+- **Migrowanie Azure**
 
     [http://azuremigrationcenter.com/](http://azuremigrationcenter.com/)
 
--   **Migracja do usługi Azure z usługą Site Recovery**
+- **Migracja do usługi Azure z usługą Site Recovery**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
 
--   **Usług Azure Site Recovery — omówienie**
+- **Usług Azure Site Recovery — omówienie**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
 
--   **Migrowanie maszyn wirtualnych w AWS na maszynach wirtualnych platformy Azure**
+- **Migrowanie maszyn wirtualnych w AWS na maszynach wirtualnych platformy Azure**
 
     [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
 

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-wpf
+ms.technology:
+- dotnet-wpf
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - animation [WPF], gradient brush colors
 - brushes [WPF], animating colors of
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c977e8a4a23f9739541cf28d9e34ad9e8db1daf0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 74227ebe815e971087569ff39ac0a3479c1b0d14
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="getting-started-with-ink"></a>Wprowadzenie do użycia atramentu
 Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedykolwiek. Odręczne powstał z jest następstwem COM i formularze systemu Windows metody programowania do osiągnięcia Pełna integracja [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Nie trzeba zainstalować oddzielne zestawy SDK lub bibliotek środowiska uruchomieniowego.  
@@ -38,14 +40,14 @@ Włączenie elektroniczne pismo odręczne aplikacji jest łatwiejsze niż kiedyk
 ## <a name="quick-start"></a>Szybki Start  
  Ta sekcja pomoże Ci napisać prosty [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która gromadzi odręczne.  
   
- Jeśli jeszcze tego nie zrobiono, zainstaluj program Microsoft Visual Studio 2005 i [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]aplikacje zazwyczaj muszą być skompilowane zanim będzie możliwe wyświetlenie ich, nawet jeśli ich składać się wyłącznie z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Jednak [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] obejmuje aplikacji edytor XamlPad, zaprojektowane, aby przyspieszyć proces wdrażania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]— na podstawie interfejsu użytkownika. Aby wyświetlić i tinker z pierwszego kilka przykładów w tym dokumencie, można użyć tej aplikacji. Proces tworzenia skompilowanych aplikacji z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest uwzględnione w dalszej części tego dokumentu.  
+ Jeśli jeszcze tego nie zrobiono, zainstaluj program Microsoft Visual Studio 2005 i [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)]. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje zazwyczaj muszą być skompilowane zanim będzie możliwe wyświetlenie ich, nawet jeśli ich składać się wyłącznie z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Jednak [!INCLUDE[TLA#tla_winfxsdk](../../../../includes/tlasharptla-winfxsdk-md.md)] obejmuje aplikacji edytor XamlPad, zaprojektowane, aby przyspieszyć proces wdrażania [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]— na podstawie interfejsu użytkownika. Aby wyświetlić i tinker z pierwszego kilka przykładów w tym dokumencie, można użyć tej aplikacji. Proces tworzenia skompilowanych aplikacji z [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest uwzględnione w dalszej części tego dokumentu.  
   
- Aby uruchomić Edytor XAMLPad, kliknij przycisk **Start** menu wskaż **wszystkie programy**, wskaż polecenie **Microsoft Winndows SDK**, wskaż polecenie **narzędzia**i kliknij przycisk **Edytor XAMLPad**. W okienku renderowania Edytor XAMLPad renderuje kod XAML, napisany w okienku kodu. Można edytować kodu XAML, a zmiany są natychmiast widoczne w okienku renderowania.  
+ Aby uruchomić Edytor XAMLPad, kliknij przycisk **Start** menu wskaż **wszystkie programy**, wskaż polecenie **Microsoft Windows SDK**, wskaż polecenie **narzędzia**i kliknij przycisk **Edytor XAMLPad**. W okienku renderowania Edytor XAMLPad renderuje kod XAML, napisany w okienku kodu. Można edytować kodu XAML, a zmiany są natychmiast widoczne w okienku renderowania.  
   
 #### <a name="got-ink"></a>Otrzymano odręczne?  
  Aby uruchomić pierwszego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, która obsługuje odręczne:  
   
-1.  Otwórz program Microsoft Visual Studio 2005  
+1.  Open Microsoft Visual Studio 2005  
   
 2.  Utwórz nową **aplikacji systemu Windows (WPF)**  
   

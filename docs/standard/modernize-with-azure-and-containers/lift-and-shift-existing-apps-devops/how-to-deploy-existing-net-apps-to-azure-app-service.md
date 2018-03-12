@@ -4,14 +4,15 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bffe7aad6bbffb40519c9146d8156159d55850
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: aefcd79574cbbf6b3759bfa6cc0f9e46a58244ce
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="how-to-deploy-existing-net-apps-to-azure-app-service"></a>Jak wdrożyć istniejących aplikacji .NET w usłudze Azure App Service 
 
@@ -37,7 +38,7 @@ Narzędzie migracji usługi aplikacji może analiza witryny sieci Web i raport d
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Asystent migracji usługi aplikacji Azure**
+- **Asystent migracji usługi aplikacji Azure**
 
     [https://www.migratetoazure.net/](https://www.migratetoazure.net/)
 

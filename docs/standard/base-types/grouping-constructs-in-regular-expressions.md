@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  
@@ -393,7 +393,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\d{2}`|Zgodne dwóch cyfr dziesiętnych.|  
-|`{?<=\b20)`|Nadal dopasowania, jeśli dwa cyfr dziesiętnych są poprzedzone cyfr dziesiętnych "20" na granicy programu word.|  
+|`(?<=\b20)`|Nadal dopasowania, jeśli dwa cyfr dziesiętnych są poprzedzone cyfr dziesiętnych "20" na granicy programu word.|  
 |`\b`|Kończy dopasowanie na granicy wyrazu.|  
   
  Asercje o zerowej szerokości dodatnie wybieganie wstecz są również używane do ograniczania śledzenie wsteczne podczas ostatni znak lub znaki w przechwyconej grupy muszą być podzbiorem znaków, który jest zgodny z wzorcem wyrażenia regularnego tej grupy. Na przykład jeśli grupa przechwytuje wszystkie znaki kolejnych word, umożliwia potwierdzenie dodatnie wybieganie wstecz zerowej szerokości wymagają alfabetycznej ostatnim znakiem.  

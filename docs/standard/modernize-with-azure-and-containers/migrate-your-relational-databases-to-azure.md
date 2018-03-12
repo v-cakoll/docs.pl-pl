@@ -4,14 +4,15 @@ description: "Modernizacji istniejących aplikacji .NET z chmury Azure i kontene
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 221d8c2b837fb738425e26f3af4da895e4987212
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9189de8d083c8f9dea8c53b428e6cd34ae6dad15
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>Migrowanie relacyjnych baz danych na platformie azure
 
@@ -35,27 +36,27 @@ Organizacja, która działa w branży wysokiej podlegającymi ochronie, które t
 
 Zarządzane wystąpienie w bazie danych SQL Azure ma następującą charakterystykę:
 
--   Izolacji zabezpieczeń za pośrednictwem sieci wirtualnej platformy Azure
+- Izolacji zabezpieczeń za pośrednictwem sieci wirtualnej platformy Azure
 
--   Powierzchni zgodności aplikacji, z tych funkcji:
+- Powierzchni zgodności aplikacji, z tych funkcji:
 
-    -   Agenta programu SQL Server i SQL Server Profiler
+  - Agenta programu SQL Server i SQL Server Profiler
 
-    -   Między bazami danych odwołania i kwerend SQL CLR replikacji, przechwytywania zmian danych (CDC) i programu Service Broker
+  - Między bazami danych odwołania i kwerend SQL CLR replikacji, przechwytywania zmian danych (CDC) i programu Service Broker
 
--   Do 35 TB rozmiar bazy danych
+- Do 35 TB rozmiar bazy danych
 
--   Co najmniej przestoju migracji tych funkcji:
+- Co najmniej przestoju migracji tych funkcji:
 
-    -   Usługa migracji bazy danych Azure
+  - Usługa migracji bazy danych Azure
 
-    -   Natywnego wykonywania kopii zapasowych i przywracania oraz wysyłania dziennika
+  - Natywnego wykonywania kopii zapasowych i przywracania oraz wysyłania dziennika
 
 Dzięki takim funkcjom podczas migracji istniejącej bazy danych aplikacji do usługi Azure SQL Database, model zarządzanego wystąpienia oferuje prawie 100% zalet Paas dla programu SQL Server. Wystąpienie zarządzanych jest środowisko programu SQL Server, gdzie kontynuować przy użyciu funkcji na poziomie wystąpienia bez zmiany projektu aplikacji.
 
 Wystąpienie zarządzanych prawdopodobnie jest najlepszym rozwiązaniem dla przedsiębiorstw, który obecnie korzystają z programu SQL Server, a które wymagają elastyczność ich zabezpieczeń sieciowych w chmurze. Przypomina o wirtualnej sieci prywatnej dla bazy danych SQL.
 
-## <a name="when-to-migrate-to-azure-sql-database"></a>Podczas migracji do bazy danych SQL Azure 
+## <a name="when-to-migrate-to-azure-sql-database"></a>Podczas migracji do bazy danych SQL Azure
 
 Jak wspomniano, standardowe bazy danych SQL Azure jest DBaaS pełni zarządzany i relacyjny. Baza danych SQL obecnie zarządza miliony produkcyjnych baz danych, centrów 38 na świecie. Obsługuje szeroką gamę aplikacji i obciążeń, zarządzanie bezpośrednie danych transakcyjnych kierowania najbardziej dużą ilością danych, kluczowych aplikacji, które wymagają zaawansowane przetwarzania danych w skali globalnej.
 
@@ -65,19 +66,19 @@ Bazy danych SQL Azure to usługa bazy danych w chmurze tylko inteligentnego, kt�
 
 Baza danych SQL Azure oferuje następujące korzyści:
 
--   Wbudowane analizy (uczenie maszynowe), które uzyskuje informacje o i dostosowuje się do aplikacji
+- Wbudowane analizy (uczenie maszynowe), które uzyskuje informacje o i dostosowuje się do aplikacji
 
--   Inicjowanie obsługi administracyjnej bazy danych na żądanie
+- Inicjowanie obsługi administracyjnej bazy danych na żądanie
 
--   Zakres oferty, dla wszystkich obciążeń
+- Zakres oferty, dla wszystkich obciążeń
 
--   dostępność 99,99% SLA, zero konserwacji
+- dostępność 99,99% SLA, zero konserwacji
 
--   Replikacja geograficzna i przywracania usługi ochrony danych
+- Replikacja geograficzna i przywracania usługi ochrony danych
 
--   Punkt bazy danych SQL Azure w funkcji czasu przywracania
+- Punkt bazy danych SQL Azure w funkcji czasu przywracania
 
--   Zgodność z SQL Server 2016, łącznie z hybrydowego i migracji
+- Zgodność z SQL Server 2016, łącznie z hybrydowego i migracji
 
 Standardowa baza danych SQL Azure jest bliżej PaaS niż wystąpienia zarządzane bazy danych SQL Azure. Należy użyć, jeśli to możliwe, ponieważ uzyskasz więcej korzyści z chmury zarządzanych. Niemniej jednak bazy danych SQL Azure ma niektóre podstawowe różnice w regularnych i lokalnego wystąpienia programu SQL Server. W zależności od wymagań bazy danych istniejącej aplikacji i wymagań przedsiębiorstwa i zasady może nie być najlepszym wyborem podczas planowania migracji do chmury.
 
@@ -108,23 +109,23 @@ Aby dowiedzieć się, jak przeprowadzić migrację bazy danych przy użyciu usł
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Wybierz chmurę programu SQL Server option: Azure SQL Database (PaaS) lub SQL Server na maszynie Wirtualnej Azure (IaaS)**
+- **Wybierz chmurę programu SQL Server option: Azure SQL Database (PaaS) lub SQL Server na maszynie Wirtualnej Azure (IaaS)**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
 
--   **Uzyskanie dostępu do chmury dzięki wystąpienia zarządzane bazy danych SQL Azure i usługi migracji bazy danych**
+- **Uzyskanie dostępu do chmury dzięki wystąpienia zarządzane bazy danych SQL Azure i usługi migracji bazy danych**
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
--   **Migracja bazy danych programu SQL Server z bazą danych SQL w chmurze**
+- **Migracja bazy danych programu SQL Server z bazą danych SQL w chmurze**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
--   Baza danych Azure SQL
+- **Baza danych Azure SQL**
 
     [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
 
--   **SQL Server na maszynach wirtualnych**
+- **SQL Server na maszynach wirtualnych**
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 

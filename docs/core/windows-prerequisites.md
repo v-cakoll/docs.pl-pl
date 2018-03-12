@@ -3,16 +3,16 @@ title: "Wymagania wstępne dotyczące platformy .NET Core w systemie Windows"
 description: "Dowiedz się, w zależności, należy na okien komputera do opracowywania i uruchamiania aplikacji .NET Core."
 author: JRAlexander
 ms.author: johalex
-ms.date: 02/28/2018
+ms.date: 03/02/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: e64ecb807fd377458a9998ebbdfe2f6f15b115bb
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -100,5 +100,6 @@ Do opracowywania aplikacji 1.x .NET Core w programie Visual Studio, [pobrać i z
 >
 > * Na **pomocy** menu, wybierz **Microsoft Visual Studio**.
 > * W **Microsoft Visual Studio** okna dialogowego, sprawdź numer wersji.
->   * W przypadku aplikacji 2.x .NET Core, programu Visual Studio 2017 wersji 15 ustęp 3 (26730.01) lub nowszej.
->   * W przypadku aplikacji 1.x .NET Core, programu Visual Studio 2017 wersji 15.0 (26228.04) lub nowszej.
+>   * W przypadku aplikacji .NET Core 2.1 Preview 1 programu Visual Studio 2017 wersji 15,6 6 lub nowszy w wersji zapoznawczej.
+>   * W przypadku aplikacji .NET Core 2.0, Visual Studio 2017 wersji 15.3 lub nowszej.
+>   * W przypadku aplikacji .NET Core 1.x Visual Studio 2017 wersji 15,0 lub nowszej.

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - Tlbimp.exe
 - Type Library Importer
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4dfbf3c2282e60ec45cb136f52fb115a8d769678
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bdf39da2a597d75479a2a3ed3d60132a0f7e7def
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>Porady: Generowanie zestawów podstawowej obsługi międzyoperacyjnej przy użyciu programu Tlbimp.exe
 Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:  
@@ -55,7 +57,7 @@ Istnieją dwa sposoby Generowanie podstawowego zestawu międzyoperacyjnego:
   
  Zależne podstawowego zestawu międzyoperacyjnego z numerem wersji, która różni się od oryginalnej biblioteki typów nie jest wykrywalny, gdy zainstalowane w bieżącym katalogu. Należy zarejestrować zależnych podstawowy zestaw międzyoperacyjny w rejestrze systemu Windows lub użyj **/reference** opcji, należy upewnić się, że Tlbimp.exe znajdzie zależnej biblioteki DLL.  
   
- Można również zawijać wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: zawijanie wielu wersji z biblioteki typów](http://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f).  
+ Można również zawijać wielu wersji biblioteki typów. Aby uzyskać instrukcje, zobacz [porady: zawijanie wielu wersji z biblioteki typów](https://msdn.microsoft.com/library/79eefe04-a770-4bc3-8ea2-e90ddb8ec31f(v=vs.100)).  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład importuje Biblioteka typów COM `LibUtil.tlb` i podpisuje zestawu `LibUtil.dll` przy użyciu silnej nazwy przy użyciu pliku klucza `CompanyA.snk`. Pomijając nazwę określonych przestrzeni nazw, w tym przykładzie tworzy domyślną przestrzeń nazw, `LibUtil`.  

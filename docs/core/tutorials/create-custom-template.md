@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
-ms.workload: dotnetcore
-ms.openlocfilehash: 44b4ff6b870a6515f623c690ad722917c9ea5bd3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 
@@ -40,7 +41,7 @@ Jeśli chcesz użyć przykładowego pobranego z dystrybucji systemu plików, wyk
 
 ## <a name="create-a-template-from-a-project"></a>Tworzenie szablonu z projektu
 
-Użyj istniejącego projektu, który został potwierdzony kompiluje i uruchamia lub Utwórz nowy projekt aplikacji konsoli w folderze na dysku twardym. Ten samouczek zakłada, że nazwa folderu projektu *GarciaSoftware.ConsoleTemplate.CSharp* przechowywane w *dokumenty/szablonów* w profilu użytkownika. Projekt samouczka Nazwa szablonu jest w formacie  *\<nazwa firmy >.\< Typ szablonu >. \<Języka programowania >*, ale można go dowolnie nazwa szablon i projektu niczego ma.
+Użyj istniejącego projektu, który został potwierdzony kompiluje i uruchamia lub Utwórz nowy projekt aplikacji konsoli w folderze na dysku twardym. Ten samouczek zakłada, że nazwa folderu projektu *GarciaSoftware.ConsoleTemplate.CSharp* przechowywane w *Documents\Templates* w profilu użytkownika. Projekt samouczka Nazwa szablonu jest w formacie  *\<nazwa firmy >.\< Typ szablonu >. \<Języka programowania >*, ale można go dowolnie nazwa szablon i projektu niczego ma.
 
 1. Dodaj folder do katalogu głównego projektu o nazwie *. template.config*.
 1. Wewnątrz *. template.config* folderu, Utwórz *template.json* plik, aby skonfigurować szablon. Więcej informacji i element członkowski definicje dla *template.json* plików, zobacz [dotnet nowych szablonów niestandardowych](../tools/custom-templates.md#templatejson) tematu i [ *template.json* schemat w magazynie schematów JSON](http://json.schemastore.org/template).
@@ -65,7 +66,7 @@ Szablon został zakończony. W tym momencie masz dwie opcje dystrybucji szablonu
 
 ### <a name="pack-the-template-into-a-nuget-package"></a>Pakiet szablonu do pakietu NuGet
 
-1. Utwórz folder pakietu NuGet. Samouczek, nazwy folderu *GarciaSoftware.ConsoleTemplate.CSharp* jest używany, oraz folder jest tworzony w *dokumenty/NuGetTemplates* folderu w profilu użytkownika. Utwórz folder o nazwie *zawartości* wewnątrz nowego szablonu folderu do przechowywania plików projektu.
+1. Utwórz folder pakietu NuGet. Samouczek, nazwy folderu *GarciaSoftware.ConsoleTemplate.CSharp* jest używany, oraz folder jest tworzony w *Documents\NuGetTemplates* folderu w profilu użytkownika. Utwórz folder o nazwie *zawartości* wewnątrz nowego szablonu folderu do przechowywania plików projektu.
 1. Kopiuj zawartość folderu projektu, wraz z jego *.template.config/template.json* pliku, do *zawartości* utworzony folder.
 1. Obok pozycji *zawartości* folderu, Dodaj [ *nuspec* pliku](/nuget/create-packages/creating-a-package). Plik nuspec jest plik manifestu XML, który opisuje zawartość pakietu i dyskach proces tworzenia pakietu NuGet.
    
@@ -77,8 +78,8 @@ Szablon został zakończony. W tym momencie masz dwie opcje dystrybucji szablonu
    | ------------------ | ------ | ----------- |
    | **\<Autorzy >**     | string | Rozdzielana przecinkami lista autorzy pakietów, zgodne z nazwami profilu na nuget.org. Autorzy są wyświetlane w galerii NuGet w nuget.org i są odwoływania się do pakietów przez tego samego autorów. |
    | **\<Opis elementu >** | string | Długi opis pakietu do wyświetlenia interfejsu użytkownika. |
-   | **\<Identyfikator >**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w nuget.org lub niezależnie od pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i ogólnie zgodne reguły obszaru nazw .NET. Zobacz [wybranie identyfikator unikatowy pakiet i ustawianie numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) orientacji. |
-   | **\<packageType >** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
+   | **\<id>**          | string | Identyfikator pakietu bez uwzględniania wielkości liter, który musi być unikatowa w nuget.org lub niezależnie od pakietu będą znajdować się w galerii. Identyfikatory nie może zawierać spacji ani znaków, które nie są prawidłowe dla danego adresu URL i ogólnie zgodne reguły obszaru nazw .NET. Zobacz [wybranie identyfikator unikatowy pakiet i ustawianie numeru wersji](/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) orientacji. |
+   | **\<packageType>** | string | Umieść ten element wewnątrz  **\<packageTypes >** element między  **\<metadanych >** elementów. Ustaw `name` atrybutu  **\<packageType >** elementu `Template`. |
    | **\<Wersja >**     | string | Wersja pakietu, następujące wzorzec Wersja_główna.WERSJA_POMOCNICZA.poprawka. Numery wersji może zawierać sufiks wersji wstępnej, zgodnie z opisem w [wersje wstępne](/nuget/create-packages/prerelease-packages#semantic-versioning). |
 
    Zobacz [odwołania .nuspec](/nuget/schema/nuspec) dla pełnej *nuspec* pliku schematu.
@@ -102,10 +103,10 @@ Szablon został zakończony. W tym momencie masz dwie opcje dystrybucji szablonu
    </package>
    ```
 
-1. [Utwórz pakiet](/nuget/create-packages/creating-a-package#creating-the-package) przy użyciu `nuget pack <PATH_TO_NUSPEC_FILE>` polecenia. Polecenie zakłada, że folder, który zawiera zasoby NuGet w *C:/Users/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp/*. Ale wszędzie tam, gdzie umieścić folder w systemie, `nuget pack` polecenie akceptuje ścieżkę do *nuspec* pliku:
+1. [Utwórz pakiet](/nuget/create-packages/creating-a-package#creating-the-package) przy użyciu `nuget pack <PATH_TO_NUSPEC_FILE>` polecenia. Polecenie zakłada, że folder, który zawiera zasoby NuGet w * C:\Users\\\<użytkownika > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. Ale wszędzie tam, gdzie umieścić folder w systemie, `nuget pack` polecenie akceptuje ścieżkę do *nuspec* pliku:
 
    ```console
-   nuget pack C:/Users/<USER>/Documents/NuGetTemplates/GarciaSoftware.ConsoleTemplate.CSharp/GarciaSoftware.ConsoleTemplate.CSharp.nuspec
+   nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec
    ```
 
 ### <a name="publishing-the-package-to-nugetorg"></a>Publikowanie pakietu nuget.org
@@ -119,7 +120,7 @@ Aby opublikować pakietu NuGet, postępuj zgodnie z instrukcjami w [tworzenie i 
 Aby zainstalować szablon z *nupkg* pliku wytworzonego, użyj `dotnet new` z `-i|--install` opcję i wprowadź ścieżkę do *nupkg* pliku:
 
 ```console
-dotnet new -i C:/Users/<USER>/GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
+dotnet new -i C:\Users\<USER>\GarciaSoftware.ConsoleTemplate.CSharp.1.0.0.nupkg
 ```
 
 #### <a name="install-the-template-from-a-nuget-package-stored-at-nugetorg"></a>Zainstaluj szablonu z pakietem NuGet przechowywane w nuget.org
@@ -187,14 +188,14 @@ Do dystrybucji szablonu, umieścić w folderze szablonów projektu w lokalizacji
 W tym samouczku założono szablon projektu jest przechowywany w *dokumenty/szablonów* folderu profilu użytkownika. Z tej lokalizacji, należy zainstalować szablon z zastąpienia następujące polecenia \<użytkownika > o nazwie profilu użytkownika:
 
 ```console
-dotnet new -i C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -i C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 ### <a name="create-a-project-from-the-template"></a>Tworzenie projektu z szablonu
 
 Po zainstalowaniu szablonu z systemu plików za pomocą szablonu, wykonując `dotnet new <TEMPLATE>` umieścić wyjściowy polecenia z katalogu, w którym ma zostać aparatu szablonu (chyba że `-o|--output` opcję, aby określić określonego katalogu). Aby uzyskać więcej informacji, zobacz [ `dotnet new` opcje](~/docs/core/tools/dotnet-new.md#options). Podaj krótką nazwę szablonu bezpośrednio do `dotnet new` polecenia.
 
-Z folderu projektu utworzonego w dniu *użytkowników/C:/\<użytkownika >/dokumenty/projektów/MyConsoleApp*, Utwórz projekt z `garciaconsole` szablonu:
+Z folderu projektu utworzonego w dniu *C:\Users\\\<użytkownika > \Documents\Projects\MyConsoleApp*, Utwórz projekt z `garciaconsole` szablonu:
 
 ```console
 dotnet new garciaconsole
@@ -202,14 +203,14 @@ dotnet new garciaconsole
 
 ### <a name="uninstall-the-template"></a>Odinstaluj szablonu
 
-Jeśli szablon został utworzony w lokalnym systemie plików w *użytkowników/C:/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp*, odinstaluj je z `-u|--uninstall` przełącznika i ścieżkę do szablonu folder:
+Jeśli szablon został utworzony w lokalnym systemie plików w *C:\Users\\\<użytkownika > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*, odinstaluj je z `-u|--uninstall` przełącznika i ścieżki folder szablonu:
 
 ```console
-dotnet new -u C:/Users/<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp
+dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp
 ```
 
 > [!NOTE]
-> Aby odinstalować szablonu z lokalnego systemu plików, należy do pełnej kwalifikacji ścieżki. Na przykład *użytkowników/C:/\<użytkownika > /Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* będzie działać, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z zawierający folder nie będzie.
+> Aby odinstalować szablonu z lokalnego systemu plików, należy do pełnej kwalifikacji ścieżki. Na przykład *C:\Users\\\<użytkownika > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* będzie działać, ale *./GarciaSoftware.ConsoleTemplate.CSharp* z folderu zawierającego nie będzie.
 > Ponadto nie należy dołączać końcowego ukośnika katalogu zakończenia ścieżki szablonu.
 
 ## <a name="see-also"></a>Zobacz także

@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2653b9dc8a6ecbcb718c20be8bd6275edf4cfb6e
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
@@ -64,69 +64,70 @@ Aby włączyć nazwy elementów interred spójnej kolekcji, należy zdefiniować
 <PropertyGroup> 
   <LangVersion>15.3</LangVersion> 
 </PropertyGroup> 
+```
 
-The version number can be any version of the Visual Basic compiler starting with 15.3. Rather than hard-coding a specific compiler version, you can also specify "Latest" as the value of `LangVersion` to compile with the most recent version of the Visual Basic compiler installed on your system.
+Numer wersji może być dowolna wersja kompilatora Visual Basic, począwszy od 15 ustęp 3. Zamiast kodować kompilatora określonej wersji, można określić "R" jako wartości `LangVersion` do kompilacji z najnowszej wersji kompilatora Visual Basic zainstalowanych w systemie.
 
-In some cases, the Visual Basic compiler cannot infer the tuple element name from the candidate name, and the tuple field can only be referenced using its default name, such as `Item1`, `Item2`, etc. These include:
+W niektórych przypadkach kompilator Visual Basic nie można wywnioskować nazwy elementu krotki z nazwy candidate, a pole krotki tylko można odwoływać się przy użyciu domyślnej nazwy, takich jak `Item1`, `Item2`itp. Należą do nich następujące elementy:
 
-- The candidate name is the same as the name of a tuple member, such as `Item3`, `Rest`, or `ToString`.
+- Nazwa candidate jest taka sama jak nazwa elementu członkowskiego spójnej kolekcji, takie jak `Item3`, `Rest`, lub `ToString`.
 
-- The candidate name is duplicated in the tuple.
+- Nazwa candidate jest zduplikowany w spójnej kolekcji.
  
-When field name inference fails, Visual Basic does not generate a compiler error, nor is an exception thrown at runtime. Instead, tuple fields must be referenced by their predefined names, such as `Item1` and `Item2`. 
+Podczas wnioskowania Nazwa pola nie powiedzie się, nie generuje błąd kompilatora Visual Basic, nie jest wyjątek w czasie wykonywania. Zamiast tego pola krotki musi odwoływać się ich wstępnie zdefiniowanych nazw, takich jak `Item1` i `Item2`. 
   
-## Tuples versus structures
+## <a name="tuples-versus-structures"></a>Spójne kolekcje i struktury
 
-A Visual Basic tuple is a value type that is an instance of one of the a **System.ValueTuple** generic types. For example, the `holiday` tuple defined in the previous example is an instance of the <xref:System.ValueTuple%603> structure. It is designed to be a lightweight container for data. Since the tuple aims to make it easy to create an object with multiple data items, it lacks some of the features that a custom structure might have. These include:
+Krotka Visual Basic jest typem wartości, który jest wystąpieniem jednej z **System.ValueTuple** typów ogólnych. Na przykład `holiday` krotki zdefiniowane w poprzednim przykładzie jest wystąpieniem <xref:System.ValueTuple%603> struktury. Zaprojektowano go jako lekkie kontener dla danych. Ponieważ spójnej kolekcji ma na celu ułatwić tworzenie obiektu z wieloma elementami danych, brakuje niektórych funkcji, które mogą mieć strukturze niestandardowej. Należą do nich następujące elementy:
 
-- Customer members. You cannot define your own properties, methods, or events for a tuple.
+- Elementy członkowskie klienta. Nie można definiować własnych właściwości, metody lub zdarzenia dla spójnych kolekcji.
 
-- Validation. You cannot validate the data assigned to fields.
+- Sprawdzanie poprawności. Nie można sprawdzić poprawności danych przypisany do pola.
 
-- Immutability. Visual Basic tuples are mutable. In contrast, a custom structure allows you to control whether an instance is mutable or immutable.
+- Immutability. Modyfikowalne są krotek Visual Basic. Natomiast w strukturze niestandardowej umożliwia kontrolowanie, czy wystąpienie jest modyfikowalna lub modyfikować.
 
-If custom members, property and field validation, or immutability are important, you should use the Visual Basic [Structure](../../../language-reference/statements/structure-statement.md) statement to define a custom value type.
+Jeśli niestandardowe elementy członkowskie, właściwość i pole weryfikacji lub immutability są ważne, należy użyć programu Visual Basic [struktury](../../../language-reference/statements/structure-statement.md) instrukcji, aby zdefiniować typu wartości niestandardowych.
 
-A Visual Basic tuple does inherit the members of its **ValueTuple** type. In addition to its fields, these include the following methods:
+Krotka Visual Basic dziedziczą członkowie jego **ValueTuple** typu. Oprócz pól należą do nich następujące metody:
 
-| Member | Description |
+| Element członkowski | Opis |
 | ---|---|
-| CompareTo | Compares the current tuple to another tuple with the same number of elements. |
-| Equals | Determines whether the current tuple is equal to another tuple or object. |
-| GetHashCode | Calculates the hash code for the current instance. |
-| ToString | Returns the string representation of this tuple, which takes the form `(Item1, Item2...)`, where `Item1` and `Item2` represent the values of the tuple's fields. |
+| Wykonanie funkcji CompareTo | Porównuje bieżącą spójną kolekcję do innego krotki z taką samą liczbę elementów. |
+| równa się | Określa, czy bieżącą spójną kolekcję jest równa innego spójnej kolekcji lub obiektu. |
+| GetHashCode | Oblicza wartość skrótu dla bieżącego wystąpienia. |
+| ToString | Zwraca reprezentację ciągu tego spójnej kolekcji, która ma postać `(Item1, Item2...)`, gdzie `Item1` i `Item2` reprezentują wartości pól spójnej kolekcji. |
 
-In addition, the **ValueTuple** types implement <xref:System.Collections.IStructuralComparable> and <xref:System.Collections.IStructuralEquatable> interfaces, which allow you to define customer comparers.
+Ponadto **ValueTuple** typy implementować <xref:System.Collections.IStructuralComparable> i <xref:System.Collections.IStructuralEquatable> interfejsów, które umożliwiają definiowanie comparers klienta.
 
-## Assignment and tuples
+## <a name="assignment-and-tuples"></a>Przypisanie i spójnych kolekcji
 
-Visual Basic supports assignment between tuple types that have the same number of fields. The field types can be converted if one of the following is true:
+Visual Basic obsługuje przypisanie między typami spójnej kolekcji, które mają taką samą liczbę pól. Typy pól mogą być konwertowane, jeśli spełniony jest jeden z następujących czynności:
 
-- The source and target field are of the same type.
+- W polu źródłowa i docelowa są tego samego typu.
 
-- A widening (or implicit) conversion of the source type to the target type is defined. 
+- Zdefiniowano konwersji rozszerzającej (lub niejawne) typu źródłowego na typ docelowy. 
 
-- `Option Strict` is `On`, and a narrowing (or explicit) conversion of the source type to the target type is defined. This conversion can throw an exception if the source value is outside the range of the target type.
+- `Option Strict` jest `On`, a zdefiniowano konwersji zawężającej (bezpośredniego lub pośredniego) typu źródłowego na typ docelowy. Ta konwersja może zgłoszenia wyjątku, jeśli wartością źródłową jest poza zakresem typu docelowego.
 
-Other conversions are not considered for assignments. Let's look at the kinds of assignments that are allowed between tuple types.
+Inne konwersje nie są uznawane za przydziałów. Oto typy przydziałów, które mogą między typami spójnej kolekcji.
 
-Consider these variables used in the following examples:
+Należy wziąć pod uwagę następujące zmienne używane w poniższych przykładach:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#1)]
 
-The first two variables, `unnamed` and `anonymous`, do not have semantic names provided for the fields. Their field names are the default `Item1` and `Item2`. The last two variables, `named` and `differentName` have semantic field names. Note that these two tuples have different names for the fields.
+Pierwsze dwie zmienne `unnamed` i `anonymous`, nie ma nazwy semantycznego podana dla pola. Ich nazwy pól są domyślnymi `Item1` i `Item2`. Ostatnie dwie zmienne `named` i `differentName` mają nazwy pól semantycznego. Należy pamiętać, że te dwie spójne kolekcje mają różne nazwy pól.
 
-All four of these tuples have the same number of fields (referred to as 'arity'), and the types of those fields are identical. Therefore, all of these assignments work:
+Wszystkie cztery te krotki mają taką samą liczbę pól (określanych jako "Liczba ról") i typy pól są identyczne. W związku z tym wszystkie te przydziały działają:
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#2)]
 
-Notice that the names of the tuples are not assigned. The values of the fields are assigned following the order of the fields in the tuple.
+Należy zauważyć, że nazwy krotki nie są przypisane. Wartości pól są przypisywane kolejności pól w spójnej kolekcji.
 
-Finally, notice that we can assign the `named` tuple to the `conversion` tuple, even though the first field of `named` is an `Integer`, and the first field of `conversion` is a `Long`. This assignment succeeds because converting an `Integer` to a `Long` is a widening conversion.
+Warto zauważyć, że firma Microsoft można przypisać `named` spójnej kolekcji do `conversion` spójnej kolekcji, nawet jeśli pierwsze pole `named` jest `Integer`, a pierwsze pole `conversion` jest `Long`. To przypisanie zakończy się pomyślnie, ponieważ konwersja `Integer` do `Long` jest konwersję rozszerzającą.
 
 [!code-vb[Assign](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple3.vb#3)]
 
-Tuples with different numbers of fields are not assignable:
+Spójnych kolekcji zawierający różne liczby pól nie są można przypisać:
 
 ```vb
 ' Does not compile.

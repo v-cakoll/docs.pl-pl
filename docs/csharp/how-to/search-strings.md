@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: cb672ef74d9eb83df7d1c8985e518136dad54c34
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
@@ -60,7 +60,7 @@ Wzorzec wyszukiwania opisuje tekst wyszukiwania. W poniższej tabeli opisano ka�
 
 ## <a name="does-a-string-follow-a-pattern"></a>Ciąg jest zgodna z wzorcem?
 
-Poniższy kod używa wyrażeń regularnych do walidacji format każdego ciągu w tablicy. Sprawdzanie poprawności musi mieć każdy ciąg formę numer telefonu, w którym trzech grup cyfr są oddzielone kreskami, pierwsze dwie grupy zawierają trzech cyfr i trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [język wyrażeń regularnych — podręczny wykaz](http://msdn.microsoft.com/library/930653a6-95d2-4697-9d5a-52d11bb6fd4c).
+Poniższy kod używa wyrażeń regularnych do walidacji format każdego ciągu w tablicy. Sprawdzanie poprawności musi mieć każdy ciąg formę numer telefonu, w którym trzech grup cyfr są oddzielone kreskami, pierwsze dwie grupy zawierają trzech cyfr i trzecia grupa zawiera cztery cyfry. Wzorzec wyszukiwania używa wyrażenia regularnego `^\\d{3}-\\d{3}-\\d{4}$`. Aby uzyskać więcej informacji, zobacz [język wyrażeń regularnych — podręczny wykaz](../../standard/base-types/regular-expression-language-quick-reference.md).
 
 | wzorzec  | Znaczenie                             |
 | -------- |-------------------------------------|

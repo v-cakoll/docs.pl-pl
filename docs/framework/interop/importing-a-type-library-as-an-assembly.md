@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - COM interop, importing type library
 - COM interop, exposing COM components
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2b7b0e6e93660dd49b670975112380420d7d8f0b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 625bbce6dca8d57d7870dbe13e086c9a34954c9b
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>Importowanie biblioteki typów jako zestawu
 Definicje typów COM zazwyczaj znajdują się w bibliotece typów. Z kolei kompilatory zgodne ze specyfikacją CLS utworzyć metadanych typów w zestawie. Dwóch źródeł informacji o typie znacznie różnią się. W tym temacie opisano metody generowania metadanych z biblioteki typów. Wynikowy zestaw nosi nazwę zestawu międzyoperacyjnego i informacji o typie, który zawiera umożliwia używanie typów COM aplikacji .NET Framework.  
@@ -40,7 +42,7 @@ Definicje typów COM zazwyczaj znajdują się w bibliotece typów. Z kolei kompi
   
 -   Przy użyciu projektu tylko od czasu zestawy międzyoperacyjne: począwszy od [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)], można nakazać kompilatorowi osadzanie informacji o typie z zestawu międzyoperacyjnego do pliku wykonywalnego. Kompilator osadza informacje typu, używanych przez aplikację. Nie trzeba wdrażać zestawu międzyoperacyjnego z aplikacją. Jest to zalecana technika.  
   
--   Zestawy międzyoperacyjne wdrażania: można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W takim przypadku należy wdrożyć zestawu międzyoperacyjnego z aplikacją. Jeśli zostanie zastosowana ta technika, a nie jest używany prywatny składnika modelu COM, zawsze odwoływać się do podstawowego zestawu międzyoperacyjnego (PIA) opublikowane przez autora składnika modelu COM, który chcesz uwzględnić w kodzie zarządzanym. Aby uzyskać więcej informacji na temat Tworzenie i używanie podstawowe zestawy międzyoperacyjne zobacz [podstawowe zestawy międzyoperacyjne](http://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080).  
+-   Zestawy międzyoperacyjne wdrażania: można utworzyć standardowe odwołanie do zestawu międzyoperacyjnego. W takim przypadku należy wdrożyć zestawu międzyoperacyjnego z aplikacją. Jeśli zostanie zastosowana ta technika, a nie jest używany prywatny składnika modelu COM, zawsze odwoływać się do podstawowego zestawu międzyoperacyjnego (PIA) opublikowane przez autora składnika modelu COM, który chcesz uwzględnić w kodzie zarządzanym. Aby uzyskać więcej informacji na temat Tworzenie i używanie podstawowe zestawy międzyoperacyjne zobacz [podstawowe zestawy międzyoperacyjne](https://msdn.microsoft.com/library/b977a8be-59a0-40a0-a806-b11ffba5c080(v=vs.100)).  
   
  Gdy używasz projektu tylko od czasu zestawy międzyoperacyjne można osadzić informacji o typie z podstawowego zestawu międzyoperacyjnego opublikowane przez autora składnika modelu COM. Jednak nie musisz wdrażać podstawowego zestawu międzyoperacyjnego z aplikacją.  
   
@@ -59,7 +61,7 @@ Definicje typów COM zazwyczaj znajdują się w bibliotece typów. Z kolei kompi
   
      Importer biblioteki typów udostępnia opcje wiersza polecenia, aby dopasować metadanych w wynikowym pliku międzyoperacyjnego, importuje typy z istniejącej biblioteki typów, a następnie generuje zestawu międzyoperacyjnego i przestrzeni nazw. Aby uzyskać instrukcje, zobacz [porady: generowanie zestawy międzyoperacyjne z bibliotek typów](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType>klasy  
+-   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> Klasy  
   
      Ta klasa dostarcza metody do przekonwertowania klasy coclass i interfejsy w bibliotece typów do metadanych w zestawie. Tworzy tych samych danych wyjściowych metadanych jako Tlbimp.exe. Jednak w przeciwieństwie do Tlbimp.exe <xref:System.Runtime.InteropServices.TypeLibConverter> klasy można skonwertować biblioteki typów w pamięci na metadanych.  
   
@@ -75,17 +77,17 @@ Definicje typów COM zazwyczaj znajdują się w bibliotece typów. Z kolei kompi
   
     -   Znajomość reguły biblioteki do zestawu konwersji typu.  
   
-     Pisanie niestandardowych otoki jest zaawansowanych technik. Aby uzyskać dodatkowe informacje na temat generowania otoki niestandardowe, zobacz [dostosowywanie standardowych otoki](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d).  
+     Pisanie niestandardowych otoki jest zaawansowanych technik. Aby uzyskać dodatkowe informacje na temat generowania otoki niestandardowe, zobacz [dostosowywanie standardowych otoki](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100)).  
   
- Aby uzyskać więcej informacji na temat procesu importowania międzyoperacyjnego COM zobacz [biblioteki typów na zestaw konwersja — Podsumowanie](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958).  
+ Aby uzyskać więcej informacji na temat procesu importowania międzyoperacyjnego COM zobacz [biblioteki typów na zestaw konwersja — Podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.InteropServices.TypeLibConverter>  
  [Udostępnianie składników COM programowi .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Biblioteki typów na zestaw konwersja — podsumowanie](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
+ [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
  [Tlbimp.exe (importer biblioteki typów)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
- [Dostosowywanie standardowych otoki](http://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d)  
- [Używanie typów COM w kodzie zarządzanym](http://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66)  
+ [Dostosowywanie standardowych otoki](https://msdn.microsoft.com/library/c40d089b-6a3c-41b5-a20d-d760c215e49d(v=vs.100))  
+ [Używanie typów COM w kodzie zarządzanym](https://msdn.microsoft.com/library/1a95a8ca-c8b8-4464-90b0-5ee1a1135b66(v=vs.100))  
  [Kompilowanie projektu międzyoperacyjnego](../../../docs/framework/interop/compiling-an-interop-project.md)  
  [Wdrażanie aplikacji międzyoperacyjnych](../../../docs/framework/interop/deploying-an-interop-application.md)  
  [Instrukcje: Dodawanie odwołań do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)  

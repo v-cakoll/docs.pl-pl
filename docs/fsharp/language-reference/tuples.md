@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: c6a0565ac7022928f5c2bdad5387d896c6c3d387
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="tuples"></a>Krotki
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Współdziałanie z krotek C#
 
-Do języka C# 7 wprowadza spójnych kolekcji.  Spójne kolekcje w C# i czy struktur i są równoważne krotek struktury w języku F #.  Jeśli potrzebujesz na potrzeby współdziałania z C# używa krotek, należy użyć krotek struktury.
+Do języka C# 7 wprowadza spójnych kolekcji.  Spójne kolekcje w języku C# są struktury i odpowiadające krotek struktury w języku F #.  Współdziałanie z C#, należy użyć krotek struktury.
 
 Jest to łatwo zrobić.  Załóżmy, że trzeba przekazać krotka do klasy C# i korzystać z jej wynik, który jest także spójnych kolekcji:
 
@@ -133,6 +133,6 @@ Spójne kolekcje są kompilowane w obiektach jednego z kilku typów ogólnych, w
 Struktura krotek (na przykład `struct (x, y)`), są różni się od krotek odwołania.  Są one kompilowane do <xref:System.ValueTuple> typu przeciążony przez argumentów lub liczba parametrów typu.  Są równoważne [C# 7 krotek](../../csharp/tuples.md) i [krotek 2017 Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)oraz współpraca dwukierunkowo.
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
-[Typy F #](fsharp-types.md)
+[Typy F#](fsharp-types.md)

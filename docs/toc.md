@@ -267,6 +267,7 @@
 ### [Jak łączyć ciągi](csharp/how-to/concatenate-multiple-strings.md)
 ### [Instrukcje konwertowanie ciągu na DateTime](standard/base-types/parsing-datetime.md)
 ### [Jak wyszukiwać ciągi](csharp/how-to/search-strings.md)
+### [Jak modyfikować zawartość ciągu](csharp/how-to/modify-string-contents.md)
 <!-- End of C# Concepts section -->
 ## [Zestaw SDK platformy kompilatora .NET (interfejsy API Roslyn)](csharp/roslyn-sdk/)
 ## [Przewodnik programowania w języku C#](csharp/programming-guide/)

@@ -9,15 +9,17 @@ helpviewer_keywords:
 - strings [C#], modifying
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a67cf24c0f6024d23bc1106943d3447620f18b1f
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 830ca207c4cd5bd24dbb667328465cafb2509409
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>Porady: modyfikowanie zawartości ciągu w języku C# #
 
 W tym artykule przedstawiono kilka technik w celu utworzenia `string` przez zmodyfikowanie istniejącej `string`. Wszystkie techniki przedstawiona zwracają wynik jako nowe zmiany `string` obiektu. Aby zademonstrować to wyraźnie, wszystkie przykłady przechowywać wynik w nowej zmiennej. Następnie można sprawdzić zarówno oryginalny `string` i `string` wynikające z modyfikacji podczas uruchamiania każdy przykład.
+
+[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
 Istnieje kilka technik przedstawiona w tym artykule. Można zastąpić istniejącego tekstu. Można wyszukać wzorców i zamienić szukanego tekstu inny tekst. Ciąg można traktować jako sekwencja znaków. Umożliwia także podręczne metody, które Usuń biały znak. Należy wybrać techniki, które najlepiej pasują danego scenariusza.
 

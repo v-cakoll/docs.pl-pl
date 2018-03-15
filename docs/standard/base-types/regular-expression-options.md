@@ -18,21 +18,21 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a4a1513840d17f2e7b02acf821b5032eaac6e6fc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cc32a98930c4c1243f53fc9c5d2a10f339b4de11
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="regular-expression-options"></a>Opcje wyrażeń regularnych
-<a name="Top"></a>Domyślnie porównanie ciągu wejściowego z dowolnego literał znaków wzorzec wyrażenia regularnego jest rozróżniana wielkość liter, biały znak w wzorzec wyrażenia regularnego jest interpretowana jako literał znaków odstępu i grup przechwytywania w wyrażeniu regularnym są także niejawnie jako jawnie nazwane. Te i kilka innych aspektów domyślnego zachowania wyrażeń regularnych można zmieniać, określając opcje wyrażeń regularnych. Te opcje, które są wymienione w poniższej tabeli, może być wbudowany dołączone jako część wzorzec wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statyczna wzorca zgodną metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartości wyliczenia.  
+<a name="Top"></a> Domyślnie porównanie ciągu wejściowego z dowolnego literał znaków wzorzec wyrażenia regularnego jest rozróżniana wielkość liter, biały znak w wzorzec wyrażenia regularnego jest interpretowana jako literał znaków odstępu i grup przechwytywania w wyrażeniu regularnym są także niejawnie jako jawnie nazwane. Te i kilka innych aspektów domyślnego zachowania wyrażeń regularnych można zmieniać, określając opcje wyrażeń regularnych. Te opcje, które są wymienione w poniższej tabeli, może być wbudowany dołączone jako część wzorzec wyrażenia regularnego lub mogą być dostarczane do <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> konstruktora klasy lub statyczna wzorca zgodną metodę jako <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> wartości wyliczenia.  
   
 |Element członkowski RegexOptions|Znak w tekście|Efekt|  
 |-------------------------|----------------------|------------|  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/23/2017
 |<xref:System.Text.RegularExpressions.RegexOptions.Singleline>|`s`|Użyj trybu jeden wiersz, jeśli kropki (.) odpowiada każdego znaku (zamiast każdego znaku z wyjątkiem `\n`). Aby uzyskać więcej informacji, zobacz [tryb Singleline](#Singleline).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture>|`n`|Nie przechwytuje nienazwanych grup. Jedyne prawidłowe przechwytywane są jawnie o nazwie lub numerowane grup formularza `(?<` *nazwa* `>` *Podwyrażenie*`)`. Aby uzyskać więcej informacji, zobacz [tylko jawne przechwytuje](#Explicit).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.Compiled>|Niedostępne|Kompiluj wyrażenia regularnego do zestawu. Aby uzyskać więcej informacji, zobacz [skompilować wyrażeń regularnych](#Compiled).|  
-|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Wyklucz niezmienionym znaczeniu biały znak z wzorcem i Włącz komentarze po znaku numeru (`#`). Aby uzyskać więcej informacji, zobacz [Ignoruj odstępem](#Whitespace).|  
+|<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace>|`x`|Wyklucz niezmienionym znaczeniu biały znak z wzorcem i Włącz komentarze po znaku numeru (`#`). Aby uzyskać więcej informacji, zobacz [Ignoruj biały znak](#Whitespace).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft>|Niedostępne|Umożliwia zmianę kierunku wyszukiwania. Wyszukiwanie Przenosi od prawej do lewej strony zamiast od lewej do prawej. Aby uzyskać więcej informacji, zobacz [tryb od prawej do lewej](#RightToLeft).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript>|Niedostępne|Włącz zgodne ECMAScript zachowanie dla wyrażenia. Aby uzyskać więcej informacji, zobacz [zachowanie dopasowania ECMAScript](#ECMAScript).|  
 |<xref:System.Text.RegularExpressions.RegexOptions.CultureInvariant>|Niedostępne|Ignoruj kultury różnice w języku. Aby uzyskać więcej informacji, zobacz [porównanie przy użyciu Niezmienna kultura](#Invariant).|  
@@ -281,11 +281,11 @@ ms.lasthandoff: 12/23/2017
   
 -   Znak numeru (#) jest interpretowany jako początek wiersza, a nie jako literał znaków. Cały tekst w wzorzec wyrażenia regularnego z #-znak na końcu ciągu jest interpretowany jako komentarz.  
   
- Jednak w następujących przypadkach białych znaków w wyrażeniu regularnym nie są ignorowane, nawet jeśli używasz <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> opcji:  
+ Jednak w następujących przypadkach białe znaki w wyrażeniu regularnym nie są ignorowane, nawet jeśli używasz <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> opcji:  
   
 -   Biały znak w klasie znaku zawsze jest interpretowany jako literału. Na przykład wzorzec wyrażenia regularnego `[ .,;:]` dopasowuje wszystkie pojedynczy znak odstępu, okres, przecinek, średnik lub dwukropek.  
   
--   Biały znak nie jest dozwolona w nawiasach kwadratowych kwantyfikatora, takich jak `{`  *n*  `}`, `{`  *n*  `,}`i `{`  *n*  `,` *m*`}`. Na przykład wzorzec wyrażenia regularnego `\d{1. 3}` nie odpowiada dowolnej sekwencji cyfr od jednej do trzech cyfr, ponieważ zawiera biały znak.  
+-   Biały znak nie jest dozwolona w nawiasach kwadratowych kwantyfikatora, takich jak `{` *n*`}`, `{` *n*`,}`, i `{` *n* `,` *m*`}`. Na przykład wzorzec wyrażenia regularnego `\d{1. 3}` nie odpowiada dowolnej sekwencji cyfr od jednej do trzech cyfr, ponieważ zawiera biały znak.  
   
 -   Biały znak nie jest dozwolone w ramach sekwencji znaków, który wprowadzono w elemencie języka. Na przykład:  
   
@@ -367,18 +367,18 @@ ms.lasthandoff: 12/23/2017
   
     |Wzorzec|Opis|  
     |-------------|-----------------|  
-    |(+)|Dopasowuje litery "" jeden lub więcej razy. Jest to druga grupa przechwytywania.|  
+    |(a+)|Dopasowuje litery "" jeden lub więcej razy. Jest to druga grupa przechwytywania.|  
     |(\1)|Zgodny podciąg przechwycone przez pierwszą grupą przechwytywania. Jest to trzecia grupa przechwytywania.|  
     |?|Zgodne zero lub jeden znaków spacji.|  
-    |((a+)(\1)?) +|Dopasowanie wzorzec co najmniej jeden "" znak następuje ciąg, który odpowiada pierwszej grupy przechwytywania następuje zero lub jeden miejsca znaków jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|  
+    |((a+)(\1) ?)+|Dopasowanie wzorzec co najmniej jeden "" znak następuje ciąg, który odpowiada pierwszej grupy przechwytywania następuje zero lub jeden miejsca znaków jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|  
   
 -   Rozwiązania niejednoznaczności między specjalne ósemkowe i odwołania wstecznego. W poniższej tabeli przedstawiono różnice w ósemkowe i dopasuje interpretacji przez kanonicznej i wyrażeń regularnych języka ECMAScript.  
   
     |Wyrażenie regularne|Canonical zachowanie|Zachowanie języka ECMAScript|  
     |------------------------|------------------------|-------------------------|  
-    |`\0`następuje ósemkowe cyfry 0 do 2|Interpretuj jako ósemkowe. Na przykład `\044` zawsze jest interpretowana jako wartość ósemkową i oznacza "$".|Takie samo zachowanie.|  
-    |`\`następuje cyfrę z zakresu od 1 do 9, i nie dodatkowe cyfr dziesiętnych|Interpretuj jako dopasowań. Na przykład `\9` zawsze oznacza dopasuje 9, nawet jeśli dziewiąty Przechwytywanie grupa nie istnieje. Jeśli przechwytywanie grupa nie istnieje, zgłasza analizatora składni wyrażeń regularnych <xref:System.ArgumentException>.|Jeśli przechwytywanie pojedynczą cyfrą dziesiętną grupa istnieje, dopasuje tego cyfry. W przeciwnym razie interpretowania wartości jako literału.|  
-    |`\`następuje cyfrę z zakresu od 1 do 9, a następnie dodatkowych cyfr dziesiętnych|Interpretuj cyfr jako wartości dziesiętnej. Jeśli istnieje tej grupy przechwytywania, zinterpretować wyrażenia jako dopasowań.<br /><br /> W przeciwnym razie zinterpretować wiodące cyfry ósemkowe maksymalnie ósemkowe 377; oznacza to należy wziąć pod uwagę tylko niski 8 bitów wartość. Interpretowanie pozostałych znaków jako literały. Na przykład w wyrażeniu `\3000`, jeśli istnieje grupa 300 przechwytywania, zinterpretować jako dopasuje 300; Jeśli przechwytywanie grupy 300 nie istnieje, zinterpretować jako ósemkowe 300 następuje 0.|Interpretuj jako dopasowań, konwertując dowolną liczbę cyfr, jak to możliwe wartości dziesiętnej, który może odwoływać się do przechwytywania. Jeśli można przekonwertować nie cyfr, zinterpretować jako ósemkowe przy użyciu wiodące cyfry ósemkowe maksymalnie ósemkowe 377; Interpretowanie pozostałych znaków jako literały.|  
+    |`\0` następuje ósemkowe cyfry 0 do 2|Interpretuj jako ósemkowe. Na przykład `\044` zawsze jest interpretowana jako wartość ósemkową i oznacza "$".|Takie samo zachowanie.|  
+    |`\` następuje cyfrę z zakresu od 1 do 9, i nie dodatkowe cyfr dziesiętnych|Interpretuj jako dopasowań. Na przykład `\9` zawsze oznacza dopasuje 9, nawet jeśli dziewiąty Przechwytywanie grupa nie istnieje. Jeśli przechwytywanie grupa nie istnieje, zgłasza analizatora składni wyrażeń regularnych <xref:System.ArgumentException>.|Jeśli przechwytywanie pojedynczą cyfrą dziesiętną grupa istnieje, dopasuje tego cyfry. W przeciwnym razie interpretowania wartości jako literału.|  
+    |`\` następuje cyfrę z zakresu od 1 do 9, a następnie dodatkowych cyfr dziesiętnych|Interpretuj cyfr jako wartości dziesiętnej. Jeśli istnieje tej grupy przechwytywania, zinterpretować wyrażenia jako dopasowań.<br /><br /> W przeciwnym razie zinterpretować wiodące cyfry ósemkowe maksymalnie ósemkowe 377; oznacza to należy wziąć pod uwagę tylko niski 8 bitów wartość. Interpretowanie pozostałych znaków jako literały. Na przykład w wyrażeniu `\3000`, jeśli istnieje grupa 300 przechwytywania, zinterpretować jako dopasuje 300; Jeśli przechwytywanie grupy 300 nie istnieje, zinterpretować jako ósemkowe 300 następuje 0.|Interpretuj jako dopasowań, konwertując dowolną liczbę cyfr, jak to możliwe wartości dziesiętnej, który może odwoływać się do przechwytywania. Jeśli można przekonwertować nie cyfr, zinterpretować jako ósemkowe przy użyciu wiodące cyfry ósemkowe maksymalnie ósemkowe 377; Interpretowanie pozostałych znaków jako literały.|  
   
  [Powrót do początku](#Top)  
   

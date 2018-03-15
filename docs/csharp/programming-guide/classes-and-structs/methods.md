@@ -2,20 +2,21 @@
 title: "Metody (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ff6e59f70a5718f6616fa9a585dd84144e1774a0
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blok kodu, który zawiera serię instrukcji. Program powoduje, że instrukcje, które ma być wykonane przez wywołanie metody i określanie żadnych argumentów wymaganej metody. W języku C# co wykonanie instrukcji jest wykonywane w kontekście metody. Metoda Main jest punkt wejścia dla każdej aplikacji C# i jest wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.  
@@ -124,13 +125,13 @@ static void Main(string[] args)
   
  Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, ani void. Zwrócony typ void jest używany głównie w celu definiowania metod obsługi zdarzeń, którym wymagany jest zwrócony typ void. Metoda asynchroniczna zwracająca typ void nie może być oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwytywać wyjątki, które metoda zgłasza.  
   
- W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, który ma typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync`ma `return` instrukcji, która zwraca liczbę całkowitą. W związku z tym metoda deklaracja `DelayAsync` musi mieć typ zwracany `Task<int>`. Ponieważ typ zwracany jest `Task<int>`, oceny `await` wyrażenie w `DoSomethingAsync` tworzy całkowitą, jak pokazano następująca instrukcja: `int result = await delayTask`.  
+ W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, który ma typ zwracany <xref:System.Threading.Tasks.Task%601>. `DelayAsync` ma `return` instrukcji, która zwraca liczbę całkowitą. W związku z tym metoda deklaracja `DelayAsync` musi mieć typ zwracany `Task<int>`. Ponieważ typ zwracany jest `Task<int>`, oceny `await` wyrażenie w `DoSomethingAsync` tworzy całkowitą, jak pokazano następująca instrukcja: `int result = await delayTask`.  
   
  `startButton_Click` Metoda jest przykładem to metoda asynchroniczna, który ma zwracany typ void. Ponieważ `DoSomethingAsync` jest to metoda asynchroniczna, zadania dla wywołania `DoSomethingAsync` musi być oczekiwane, jak przedstawiono na poniższym instrukcji: `await DoSomethingAsync();`. `startButton_Click` Metoda musi być zdefiniowana z `async` modyfikator ponieważ metoda ma `await` wyrażenia.  
   
  [!code-csharp[csAsyncMethod#2](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/methods_9.cs)]  
   
- Metoda asynchroniczna nie można zadeklarować żadnego [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out.md) parametrów, ale można wywołać metody, które mają takie parametry.  
+ Metoda asynchroniczna nie można zadeklarować żadnego [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametrów, ale można wywołać metody, które mają takie parametry.  
   
  Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md), [przepływ sterowania w aplikacjach asynchronicznych](../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async zwracać typów](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   
@@ -164,11 +165,11 @@ public Customer this[long id] => store.LookupCustomer(id);
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Klasy i struktury](index.md)  
  [Modyfikatory dostępu](access-modifiers.md)  
- [Klasy statyczne i statyczni członkowie klas](static-classes-and-static-class-members.md)  
+ [Klasy statyczne i statyczne elementy członkowskie klas](static-classes-and-static-class-members.md)  
  [Dziedziczenie](inheritance.md)  
- [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](abstract-and-sealed-classes-and-class-members.md)  
- [Parametry](../../../csharp/language-reference/keywords/params.md)  
- [Zwraca](../../../csharp/language-reference/keywords/return.md)  
- [limit](../../../csharp/language-reference/keywords/out.md)  
- [REF](../../../csharp/language-reference/keywords/ref.md)  
+ [Klasy abstrakcyjne i zapieczętowane oraz elementy członkowskie klas](abstract-and-sealed-classes-and-class-members.md)  
+ [params](../../../csharp/language-reference/keywords/params.md)  
+ [return](../../../csharp/language-reference/keywords/return.md)  
+ [out](../../../csharp/language-reference/keywords/out.md)  
+ [ref](../../../csharp/language-reference/keywords/ref.md)  
  [Przekazywanie parametrów](passing-parameters.md)

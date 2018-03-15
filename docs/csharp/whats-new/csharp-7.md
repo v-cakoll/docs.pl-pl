@@ -10,30 +10,30 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 3f3598fce5abeb67b772f51ed6f93e6ada4c92d0
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="whats-new-in-c-7"></a>Nowości w języku C# 7
 
 C# 7 dodano wiele nowych funkcji języka C#:
-* [`out`zmienne](#out-variables)
+* [`out` zmienne](#out-variables)
     - Można zadeklarować `out` wartości wbudowanego jako argumenty do metody, gdzie są używane.
 * [Krotki](#tuples)
     - Można utworzyć niewielka, bez nazwy typów, które zawierają wiele pola publiczne. Kompilatory i narzędzia IDE zrozumieć semantykę tych typów.
-* [Odrzuca](#discards)
+* [Odrzucenia](#discards)
     - Odrzucenia są tymczasowe, tylko do zapisu zmiennych przypisania podczas nie interesujących przypisanej wartości. Są one szczególnie przydatne, gdy deconstructing spójne kolekcje i typy danych zdefiniowane przez użytkownika, a także podczas wywoływania metody z `out` parametrów.
-* [Dopasowanie wzorca](#pattern-matching)
+* [Dopasowanie do wzorca](#pattern-matching)
     - Można tworzyć logikę rozgałęziania na podstawie dowolnego typu i wartości elementów członkowskich tych typów.
-* [`ref`Zmienne lokalne i zwraca](#ref-locals-and-returns)
+* [`ref` Zmienne lokalne i zwraca](#ref-locals-and-returns)
     - Argumenty metody i zmienne lokalne mogą być odwołania do innych magazynów.
 * [Funkcje lokalne](#local-functions)
     - Można zagnieżdżać funkcji wewnątrz innych funkcji, aby ograniczyć ich zakres i widoczność.
 * [Zabudowanych wyrażenia elementów członkowskich](#more-expression-bodied-members)
     - Lista elementów członkowskich, które można tworzyć za pomocą wyrażeń został rozszerzony.
-* [`throw`Wyrażenia](#throw-expressions)
+* [`throw` Wyrażenia](#throw-expressions)
     - Zgłaszają wyjątki, w konstrukcji kodu, które wcześniej były niedozwolone, ponieważ `throw` został instrukcję. 
 * [Uogólniony asynchroniczne typy zwracane](#generalized-async-return-types)
     - Metody zadeklarowane jako z `async` modyfikator może zwrócić inne typy oprócz `Task` i `Task<T>`.
@@ -42,7 +42,7 @@ C# 7 dodano wiele nowych funkcji języka C#:
 
 W pozostałej części w tym temacie omówiono każda z tych funkcji. Dowiesz się jej uzasadnienie, dla każdej funkcji. Dowiesz się składni. Zobaczysz kilka przykładowych scenariuszy, w którym przy użyciu nowej funkcji zwiększyć produktywność deweloperów. 
 
-## <a name="out-variables"></a>`out`zmienne
+## <a name="out-variables"></a>`out` zmienne
 
 Istniejące składnię, która obsługuje `out` udoskonalono parametry w tej wersji.  
 
@@ -157,7 +157,7 @@ Odrzucenia są obsługiwane w następujących scenariuszach:
 
 * Gdy deconstructing spójne kolekcje lub typy danych zdefiniowane przez użytkownika.
 
-* Podczas wywoływania metody z [limit](../language-reference/keywords/out.md) parametrów.
+* Podczas wywoływania metody z [limit](../language-reference/keywords/out-parameter-modifier.md) parametrów.
 
 * We wzorcu dopasowania operację, podając [jest](../language-reference/keywords/is.md) i [przełącznika](../language-reference/keywords/switch.md) instrukcje.
 
@@ -175,7 +175,7 @@ Aby uzyskać więcej informacji, zobacz [odrzuca](../discards.md).
 
 Obsługuje dopasowywania do wzorca `is` wyrażeń i `switch` wyrażenia. Każdy umożliwia zapoznanie się obiekt i jego właściwości, aby ustalić, jeśli ten obiekt spełnia poszukiwaną wzorca. Możesz użyć `when` — słowo kluczowe, aby określić dodatkowe reguły z wzorcem.
 
-### <a name="is-expression"></a>`is`wyrażenie
+### <a name="is-expression"></a>`is` wyrażenie
 
 `is` Wzorzec wyrażenia rozszerza znanych `is` operatora, aby wysłać zapytania do obiektu poza jego typu.
 
@@ -191,7 +191,7 @@ Może szybko znaleźć konieczne Znajdź sumę przedstawia struktury, gdzie czę
 
 Jak zachować rozszerzenie tych scenariuszy, może się okazać kompilacji więcej `if` i `else if` instrukcje. Gdy jako niewygodna, prawdopodobnie należy przełączyć się do `switch` wzorzec wyrażenia.
 
-### <a name="switch-statement-updates"></a>`switch`aktualizacje — instrukcja
+### <a name="switch-statement-updates"></a>`switch` aktualizacje — instrukcja
 
 *Pasuje do wyrażenia* ma zwykłego składni, na podstawie `switch` instrukcji już częścią języka C#. Umożliwia tłumaczenie istniejącego kodu do wyrażenia dopasowania przed dodaniem nowych przypadków: 
 
@@ -280,10 +280,10 @@ Teraz, drugi `WriteLine` instrukcji w powyższym przykładzie zostanie wydrukowa
 W języku C# ma trzy innych reguł, które można chronić przed używaniem `ref` zmiennych lokalnych i zwraca:
 
 * Nie można przypisać wartości zwracanej standardowe metody do `ref` zmiennej lokalnej.
-    - Która uniemożliwia instrukcje, takie jak`ref int i = sequence.Count();`
+    - Która uniemożliwia instrukcje, takie jak `ref int i = sequence.Count();`
 * Nie można zwrócić `ref` ze zmienną, której czas życia nie wykracza poza wykonywanie metody.
     - Oznacza to, że nie można zwrócić odwołanie do zmiennej lokalnej lub zmienna o podobnych zakresu.
-* `ref`Nie można używać zmiennych lokalnych i zwraca i metod asynchronicznych.
+* `ref` Nie można używać zmiennych lokalnych i zwraca i metod asynchronicznych.
     - Kompilator nie wiadomo, jeśli przywoływany została ustawiona zmienna do swojej własnej wartości końcowej po powrocie z metody asynchronicznej.
 
 Dodawanie ref zmiennych lokalnych i ref zwraca Włącz algorytmy, które są bardziej wydajne, unikając kopiowania wartości lub operacji usuwania odwołań wiele razy. 
@@ -359,7 +359,7 @@ Wcześniej te inicjalizacji musi być w konstruktorze, instrukcji throw w treśc
 
 ## <a name="generalized-async-return-types"></a>Uogólniony asynchroniczne typy zwracane
 
-Zwracanie `Task` obiektu z metod asynchronicznych może wprowadzić wąskich gardeł wydajności w niektórych ścieżki. `Task`jest typem referencyjnym, aby za jej pomocą oznacza przydzielanie obiektu. W przypadkach, gdy metoda zadeklarowana z `async` modyfikator zwraca buforowanych wyników lub jest kończona synchronicznie, dodatkowe alokacje może stać się koszt długiego czasu w wydajności krytyczne fragmentów kodu. Może stać się bardzo kosztowna tych przydziałów występują w ścisłej pętle.
+Zwracanie `Task` obiektu z metod asynchronicznych może wprowadzić wąskich gardeł wydajności w niektórych ścieżki. `Task` jest typem referencyjnym, aby za jej pomocą oznacza przydzielanie obiektu. W przypadkach, gdy metoda zadeklarowana z `async` modyfikator zwraca buforowanych wyników lub jest kończona synchronicznie, dodatkowe alokacje może stać się koszt długiego czasu w wydajności krytyczne fragmentów kodu. Może stać się bardzo kosztowna tych przydziałów występują w ścisłej pętle.
 
 Nowa funkcja języka oznacza, że metody asynchroniczne może zwracać inne typy oprócz `Task`, `Task<T>` i `void`. Zwrócony typ nadal muszą spełniać wzorca asynchronicznego, co oznacza `GetAwaiter` metody muszą być dostępne. Jako przykład konkretnych `ValueTask` typu został dodany do programu .NET framework, aby korzystać z tej nowej funkcji języka: 
 

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: b6a0539a-8ce5-4da7-adcf-44be345a2714
-ms.openlocfilehash: 1a97d830c675c8e3980eddae78f3face279ec6dc
-ms.sourcegitcommit: bbde43da655ae7bea1977f7af7345eb87bd7fd5f
+ms.openlocfilehash: 6395d873c4a04501d25a2edbb1acc0a163dd3e5c
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions"></a>Wyrażenia lambda #
 
@@ -96,7 +96,7 @@ Aby uzyskać więcej informacji na obsługę krotek w języku C#, zobacz [typów
 
 ## <a name="lambdas-with-the-standard-query-operators"></a>Wyrażenia lambda z standardowych operatorów zapytań ##
 
-LINQ do obiektów, między innymi implementacjami ma parametr wejściowy, którego typ jest jednym z <xref:System.Func%601> rodzina delegatów. Te obiekty delegowane używać parametrów typu, aby określić liczbę i typ parametrów wejściowych i typ zwracany delegata. `Func`Obiekty delegowane są bardzo przydatne w przypadku hermetyzując wyrażenia zdefiniowane przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Rozważmy na przykład <xref:System.Func%601> delegata, którego składnia jest następująca:
+LINQ do obiektów, między innymi implementacjami ma parametr wejściowy, którego typ jest jednym z <xref:System.Func%601> rodzina delegatów. Te obiekty delegowane używać parametrów typu, aby określić liczbę i typ parametrów wejściowych i typ zwracany delegata. `Func` Obiekty delegowane są bardzo przydatne w przypadku hermetyzując wyrażenia zdefiniowane przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Rozważmy na przykład <xref:System.Func%601> delegata, którego składnia jest następująca:
 
 [!code-csharp[csSnippets.Lambdas](../../samples/snippets/csharp/concepts/lambda-expressions/query1.cs#1)]
 
@@ -150,7 +150,7 @@ Wyrażenia lambda, może się odwoływać do *zmienne zewnętrzne* (zobacz [meto
 
 - Zmienne zawarte w wyrażeniu lambda nie są widoczne w metodzie zewnętrznej.
 
-- Wyrażenia lambda nie może bezpośrednio przechwytywania `ref` lub `out` parametru z metody otaczającej.
+- Wyrażenia lambda nie może bezpośrednio przechwytywania `in`, `ref`, lub `out` parametru z metody otaczającej.
 
 - Instrukcja return w wyrażeniu lambda nie powoduje wykonania instrukcji return w otaczającej go metodzie.
 

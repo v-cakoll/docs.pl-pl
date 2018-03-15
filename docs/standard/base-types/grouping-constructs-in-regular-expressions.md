@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 107e935f3fd4fd38b4393d09e46c03c0c51c4d79
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  
@@ -301,7 +301,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
   
  Konstrukcja opcje grupy nie jest grupą przechwytywania. Oznacza to mimo że jakiejkolwiek jego części ciągu przechwycony przez *Podwyrażenie* jest uwzględniona w dopasowania, jest nie zawarte w przechwyconej grupy ani służące do wypełniania <xref:System.Text.RegularExpressions.GroupCollection> obiektu.  
   
- Na przykład, wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowany w konstrukcji grupowania Włącz dopasowywanie bez uwzględniania wielkości liter i Ignoruj odstępy wzorzec do identyfikowania wszystkie słowa, które zaczynają się od litery "d". Wyrażenie regularne jest zdefiniowany, jak pokazano w poniższej tabeli.  
+ Na przykład, wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowany w konstrukcji grupowania Włącz dopasowywanie bez uwzględniania wielkości liter i Ignoruj wzorzec biały znak w identyfikacji wszystkie słowa, które zaczynają się od litery "d". Wyrażenie regularne jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  

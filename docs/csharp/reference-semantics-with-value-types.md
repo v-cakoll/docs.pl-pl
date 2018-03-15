@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 0c6e44a3e1a1458f4211b66b6d1ef5b4b30cd7c1
-ms.sourcegitcommit: 5177d6ae2e9baf026f07ee0631556700a5a193f7
+ms.openlocfilehash: 6e40907cab2aabcf8c8321819c99298314bcfbc5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/28/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="reference-semantics-with-value-types"></a>Semantykę odwołania z typami wartości
 
@@ -46,7 +46,7 @@ Po dodaniu `in` modyfikator do przekazywania argumentu przez odwołanie, należy
 
 Argumenty są dwie struktury, że każdy zawiera trzy symulacyjnych. Wartość o podwójnej precyzji jest 8 bajtów, dzięki czemu każdy argument jest 24 bajty. Określając `in` modyfikator, należy przekazać 4-bajtowych lub 8-bajtowych odwołania do tych argumentów, w zależności od architektury komputera. Różnica w rozmiarze jest mały, ale jego można szybko dodać po aplikacji wywołuje tę metodę w pętli ścisłej przy użyciu wielu różnych wartości.
  
-`in` Uzupełnia modyfikator `out` i `ref` także inne sposoby. Nie można utworzyć przeciążenia metody, które różnią się jedynie w związku z występowaniem `in`, `out` lub `ref`. Te nowe reguły rozszerzania zawsze ma zdefiniowany dla tego samego zachowania `out` i `ref` parametrów.
+`in` Uzupełnia modyfikator `out` i `ref` także inne sposoby. Nie można utworzyć przeciążenia metody, które różnią się jedynie w związku z występowaniem `in`, `out`, lub `ref`. Te nowe reguły rozszerzania zawsze ma zdefiniowany dla tego samego zachowania `out` i `ref` parametrów.
 
 `in` Modyfikator mogą być stosowane do dowolnego członka, który przyjmuje parametry: metody, delegatów, wyrażenia lambda, funkcje lokalne, indeksatorów, operatorów.
 
@@ -61,7 +61,7 @@ Wymusza kompilator, który `in` argument jest zmienną tylko do odczytu. Możesz
 
 `in` Można również określenie parametru używane z typami odwołanie lub wbudowane wartości liczbowych. Jednak korzyści w obu przypadkach są minimalne, jeśli istnieje.
 
-## <a name="ref-readonly-returns"></a>`ref readonly`Zwraca
+## <a name="ref-readonly-returns"></a>`ref readonly` Zwraca
 
 Można również zwrócić przez odwołanie typu wartości, ale nie zezwalaj na obiekt wywołujący modyfikowanie tej wartości. Użyj `ref readonly` modyfikator Express celem tego projektu. Czy są zwracane jest odwołanie do istniejących danych, ale nie zezwala na modyfikowanie powiadomi czytników. 
 
@@ -80,7 +80,7 @@ Po przypisaniu zmiennej `ref readonly return`, można określić `ref readonly` 
 
 Pierwsze przypisanie w poprzednim kodzie tworzy kopię `Origin` stała i przypisuje, które skopiować. Drugi przypisuje odwołanie. Zwróć uwagę, że `readonly` modyfikator musi być częścią deklaracja zmiennej. Nie można zmodyfikować odwołania, do którego się odwołuje. Próbuje zrobić spowodować błąd kompilacji.
 
-## <a name="readonly-struct-type"></a>`readonly struct`Typ
+## <a name="readonly-struct-type"></a>`readonly struct` Typ
 
 Stosowanie `ref readonly` na wykorzystanie dużym natężeniu ruchu struktury mogą być wystarczające.
 Innym razem, można utworzyć niezmienialny struktury. Zawsze można następnie przekazać przez odwołanie tylko do odczytu. Czy rozwiązanie usuwa ataku kopiuje tego miejsce, gdy uzyskujesz dostęp do metody struktury używane jako `in` parametru.
@@ -93,9 +93,9 @@ Na koniec kompilator generuje kod efektywniejsze podczas wywoływania członkami
 
 [!code-csharp[ReadonlyOnlyPoint3D](../../samples/csharp/reference-semantics/Point3D.cs#ReadonlyOnlyPoint3D "Defining an immutable structure")]
 
-## <a name="ref-struct-type"></a>`ref struct`Typ
+## <a name="ref-struct-type"></a>`ref struct` Typ
 
-Inna funkcja języka powiązane jest możliwość zadeklarować typu wartości, który musi znajdować się na stosie. Innymi słowy te typy nigdy nie można utworzyć na stercie członkiem innej klasy. Główną motywacją do tej funkcji został <xref:System.Span%601> i powiązanych struktury. <xref:System.Span%601>może zawierać wskaźnika zarządzane jako jeden z jego elementów członkowskich, inne są długość zakresu. Faktycznie wdrażana jest nieco inaczej ponieważ C# nie obsługuje wskaźników do pamięci zarządzanej poza niebezpiecznym kontekście. Wszelkie zapisu, która zmienia wskaźnika oraz długość nie jest atomic. Oznacza to, że <xref:System.Span%601> będzie podlegać poza zakresem błędy lub innego typu naruszenia bezpieczeństwa zostały nie ograniczone do ramki stosu pojedynczego. Ponadto zwykle umieszczenie wskaźnika zarządzanego na stercie GC ulega awarii podczas JIT.
+Inna funkcja języka powiązane jest możliwość zadeklarować typu wartości, który musi znajdować się na stosie. Innymi słowy te typy nigdy nie można utworzyć na stercie członkiem innej klasy. Główną motywacją do tej funkcji został <xref:System.Span%601> i powiązanych struktury. <xref:System.Span%601> może zawierać wskaźnika zarządzane jako jeden z jego elementów członkowskich, inne są długość zakresu. Faktycznie wdrażana jest nieco inaczej ponieważ C# nie obsługuje wskaźników do pamięci zarządzanej poza niebezpiecznym kontekście. Wszelkie zapisu, która zmienia wskaźnika oraz długość nie jest atomic. Oznacza to, że <xref:System.Span%601> będzie podlegać poza zakresem błędy lub innego typu naruszenia bezpieczeństwa zostały nie ograniczone do ramki stosu pojedynczego. Ponadto zwykle umieszczenie wskaźnika zarządzanego na stercie GC ulega awarii podczas JIT.
 
 Może być podobne wymagania dotyczące pracy z pamięci utworzone za pomocą [ `stackalloc` ](language-reference/keywords/stackalloc.md) lub w przypadku używania pamięci z międzyoperacyjnego interfejsów API. Można definiować własnych `ref struct` typy dla tych potrzeb. W tym artykule, zobacz przykłady użycia `Span<T>` dla uproszczenia.
 

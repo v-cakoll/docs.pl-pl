@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 501a11f1bc6118e647cc414f4b83a14f6b41a37d
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -219,7 +219,7 @@ Metoda asynchroniczna może być również `void` typ zwracany. To zwracany typ 
   
 To metoda asynchroniczna, która ma `void` zwracany typ nie jest oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwycić wszelkie wyjątki, które metoda zgłasza.  
   
-Nie można zadeklarować metody asynchronicznej [ref](../../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../../csharp/language-reference/keywords/out.md) parametrów, ale metodę można wywołać metody, które mają takie parametry. Podobnie metoda asynchroniczna nie może zwracać wartość przez odwołanie, mimo że można wywołać metody z ref wartości zwracanych. 
+Nie można zadeklarować metody asynchronicznej [w](../../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametrów, ale metodę można wywołać metody, które mają takie parametry. Podobnie metoda asynchroniczna nie może zwracać wartość przez odwołanie, mimo że można wywołać metody z ref wartości zwracanych. 
   
 Aby uzyskać dodatkowe informacje i przykłady, zobacz [typy zwracać Async (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md). Aby uzyskać więcej informacji o sposobie przechwytywanie wyjątków w metodach asynchronicznych, zobacz [try-catch](../../../../csharp/language-reference/keywords/try-catch.md). 
   

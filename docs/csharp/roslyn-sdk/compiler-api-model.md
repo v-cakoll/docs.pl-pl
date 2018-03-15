@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: d230d334eba4e438635a4c70e8c1b5fc5075b065
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Zrozumienie modelu zestawu SDK platformy kompilatora .NET
 
@@ -24,7 +24,7 @@ Zestawu SDK platformy kompilatora .NET przedstawia Kompilatory języka C# i Visu
 
 ![kroki przetwarzania kodu źródłowego z kodem obiektu potoku kompilatora](media/compiler-pipeline.png)
 
-Każdej fazy tego potoku jest inny składnik. Po pierwsze faza analizy tokenizes i przeanalizowany tekst źródłowy do składni stosowanej gramatyki języka. Drugi fazy deklaracji analizuje źródła i importowane metadane do formularza symbole. Obok fazie wiązania odpowiada identyfikatorów w kodzie do symboli. Na koniec fazy emitowanie emituje zestawu wszystkie informacje, które są tworzone przez kompilator.
+Każdej fazy tego potoku jest inny składnik. Po pierwsze faza analizy tokenizes i przeanalizowany tekst źródłowy do składni stosowanej gramatyki języka. Po drugie faza deklaracji analizuje źródła i importowane metadane do formularza symbole. Następnie fazie wiązania odpowiada identyfikatorów w kodzie do symboli. Na koniec fazy emitowanie emituje zestawu wszystkie informacje, które są tworzone przez kompilator.
 
 ![potok kompilatora interfejsu api zapewnia dostęp do każdego kroku, który jest częścią pipelien kompilatora](media/compiler-pipeline-api.png)
 
@@ -48,7 +48,7 @@ Warstwa kompilatora zawiera modeli obiektów, które odpowiadają informacje udo
 
 ### <a name="diagnostic-apis"></a>Interfejsy API diagnostycznych
 
-W ramach swojej analizy kompilator może utworzyć zestaw diagnostyki obejmujące wszystkie elementy z składnię semantyczne i błędy określoną przypisania do różnych ostrzeżenia i informacyjną diagnostyki. Warstwę interfejsu API kompilatora tnie przedstawia Diagnostyka za pośrednictwem rozszerzonego interfejsu API, umożliwiający użytkownika analizatorów być podłączony do procesu kompilacji. Umożliwia on diagnostics zdefiniowane przez użytkownika, takich jak te utworzone przez narzędzia, takie jak StyleCop lub programu FxCop, do wyprodukowania obok zdefiniowane przez kompilator diagnostyki. Tworzenie diagnostyki w ten sposób ma korzyści integracji naturalny z narzędzi, takich jak program MSBuild i Visual Studio, które są zależne od diagnostyki dla środowiska, takie jak zatrzymywanie kompilacji na podstawie zasad i przedstawiający zygzaki na żywo w edytorze i sugerowanie kodu poprawki.
+W ramach swojej analizy kompilator może utworzyć zestaw diagnostyki obejmujące wszystkie elementy z składnię semantyczne i błędy określoną przypisania do różnych ostrzeżenia i informacyjną diagnostyki. Warstwę interfejsu API kompilatora przedstawia Diagnostyka za pośrednictwem rozszerzonego interfejsu API, umożliwiający użytkownika analizatorów być podłączony do procesu kompilacji. Umożliwia on diagnostics zdefiniowane przez użytkownika, takich jak te utworzone przez narzędzia, takie jak StyleCop lub programu FxCop, do wyprodukowania obok zdefiniowane przez kompilator diagnostyki. Tworzenie diagnostyki w ten sposób ma korzyści integracji naturalny z narzędzi, takich jak program MSBuild i Visual Studio, które są zależne od diagnostyki dla środowiska, takie jak zatrzymywanie kompilacji na podstawie zasad i przedstawiający zygzaki na żywo w edytorze i sugerowanie kodu poprawki.
 
 ### <a name="scripting-apis"></a>Interfejsy API obsługi skryptów
 

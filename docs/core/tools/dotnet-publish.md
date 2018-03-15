@@ -3,16 +3,17 @@ title: polecenie - .NET Core interfejsu wiersza polecenia Opublikuj DotNet
 description: Polecenie Publikuj dotnet publikuje projektu platformy .NET Core w katalogu.
 author: mairaw
 ms.author: mairaw
-ms.date: 09/01/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: e29d5269ab5e9e2c9fd08811552c09ec1c95363d
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2aa69217e949b970b632c4fad72838b63c2a8988
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-publish"></a>Publikowanie DotNet
 
@@ -20,18 +21,18 @@ ms.lasthandoff: 01/11/2018
 
 ## <a name="name"></a>Nazwa
 
-`dotnet publish`-Pakietów aplikacji i jego zależności do folderu wdrożenia z systemem hostingu.
+`dotnet publish` -Pakietów aplikacji i jego zależności do folderu wdrożenia z systemem hostingu.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies] [--no-restore] [-o|--output] [-r|--runtime] [--self-contained] [-v|--verbosity] [--version-suffix]
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
@@ -42,7 +43,7 @@ dotnet publish [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet publish`kompiluje aplikacji odczytuje za pośrednictwem jego zależności, określona w pliku projektu i publikuje Wynikowy zestaw plików w katalogu. Dane wyjściowe będą zawierać następujące informacje:
+`dotnet publish` kompiluje aplikacji odczytuje za pośrednictwem jego zależności, określona w pliku projektu i publikuje Wynikowy zestaw plików w katalogu. Dane wyjściowe będą zawierać następujące informacje:
 
 * Kod języka (IL) w zestawie z pośredniego *dll* rozszerzenia.
 * *. deps.json* pliku, który zawiera wszystkie zależności projektu.
@@ -50,6 +51,8 @@ dotnet publish [-h|--help]
 * Zależności aplikacji. Te są kopiowane z pamięci podręcznej NuGet do folderu wyjściowego.
 
 `dotnet publish` Danych wyjściowych polecenia jest gotowy do wdrożenia do obsługi systemu (na przykład serwer, PC, Mac, laptop) do wykonania i jest jedynym oficjalnie obsługiwana sposobu przygotowania aplikacji do wdrożenia. W zależności od typu wdrożenia, który określa projekt system obsługujący może lub nie może być .NET Core współużytkowany środowiska uruchomieniowego na nim zainstalowany. Aby uzyskać więcej informacji, zobacz [wdrażanie aplikacji .NET Core](../deploying/index.md). Do struktury katalogu opublikowanej aplikacji, zobacz [struktury katalogów](/aspnet/core/hosting/directory-structure).
+
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
 ## <a name="arguments"></a>Argumenty
 
@@ -59,7 +62,7 @@ Projekt do publikowania, domyślnie do bieżącego katalogu, jeśli nie zostanie
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -110,7 +113,7 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 Definiuje sufiksem wersji, aby zastąpić gwiazdka (`*`) w polu wersja pliku projektu.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -156,16 +159,20 @@ Publikuj projekt w bieżącym katalogu:
 Publikowanie aplikacji przy użyciu pliku określonego projektu:
 
 `dotnet publish ~/projects/app1/app1.csproj`
-    
+
 Opublikować projekt w bieżącym katalogu, używając `netcoreapp1.1` framework:
 
 `dotnet publish --framework netcoreapp1.1`
-    
+
 Publikowanie bieżącej aplikacji przy użyciu `netcoreapp1.1` framework i środowiska uruchomieniowego dla `OS X 10.10` (musi zawierać ten identyfikatorów RID w pliku projektu).
 
 `dotnet publish --framework netcoreapp1.1 --runtime osx.10.11-x64`
 
+Publikowanie bieżącej aplikacji, ale nie należy przywracać projektu do projektu (P2P) odwołań, po prostu główny projekt podczas operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
+
+`dotnet publish --no-dependencies`
+
 ## <a name="see-also"></a>Zobacz także
 
-* [Docelowych platform](../../standard/frameworks.md)
+* [Platformy docelowe](../../standard/frameworks.md)
 * [Wykaz identyfikatora środowiska uruchomieniowego (RID)](../rid-catalog.md)

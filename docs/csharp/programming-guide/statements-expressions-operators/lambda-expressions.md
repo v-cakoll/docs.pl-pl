@@ -15,11 +15,11 @@ ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: df59647b803bff448a801374a325f07e4903a160
-ms.sourcegitcommit: 22a48b64a0150a60b00b4fc4d8c62cde7f1670c4
+ms.openlocfilehash: 14bb60a5009f9a1ae59ed9846ebc868cfdcc05c6
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/03/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>Wyrażenia lambda (Przewodnik programowania w języku C#)
 Wyrażenie lambda jest [funkcji anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) używanej do tworzenia [delegaty](../../../csharp/programming-guide/delegates/using-delegates.md) lub [drzewo wyrażeń](http://msdn.microsoft.com/library/fb1d3ed8-d5b0-4211-a71f-dd271529294b) typów. Za pomocą wyrażenia lambda można pisać funkcje lokalne, które mogą być przekazywane jako argumenty lub zwracane jako wartość wywołania funkcji. Wyrażenia lambda są szczególnie przydatne w przypadku pisania wyrażeń zapytań w języku LINQ.  
@@ -157,13 +157,13 @@ public partial class Form1 : Form
  Aby uzyskać więcej informacji o sposobie tworzenia i używania metody asynchroniczne, zobacz [programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md).  
   
 ## <a name="lambdas-with-the-standard-query-operators"></a>Lambdy ze standardowymi operatorami zapytań  
- Wiele standardowych operatorów zapytań ma parametr wejściowy, którego typ jest jednym z <xref:System.Func%602> rodzina delegatów. Te delegaty używają parametrów typu użycia, aby zdefiniować liczbę i typy parametrów wejściowych oraz zwracany typ delegata. `Func`Obiekty delegowane są bardzo przydatne w przypadku hermetyzując wyrażenia zdefiniowane przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Na przykład rozważmy następujący typ delegata:  
+ Wiele standardowych operatorów zapytań ma parametr wejściowy, którego typ jest jednym z <xref:System.Func%602> rodzina delegatów. Te delegaty używają parametrów typu użycia, aby zdefiniować liczbę i typy parametrów wejściowych oraz zwracany typ delegata. `Func` Obiekty delegowane są bardzo przydatne w przypadku hermetyzując wyrażenia zdefiniowane przez użytkownika, które są stosowane do każdego elementu w zestawie danych źródłowych. Na przykład rozważmy następujący typ delegata:  
   
 ```csharp  
 public delegate TResult Func<TArg0, TResult>(TArg0 arg0)  
 ```  
   
- Delegat można wdrożyć jako `Func<int,bool> myFunc` gdzie `int` jest parametrem wejściowym i `bool` jest zwracana wartość. Wartość zwracana jest zawsze określona w ostatnim parametrze typu. `Func<int, string, bool>`Definiuje delegata z dwóch parametrów wejściowych, `int` i `string`i typ zwracany `bool`. Następujące `Func` delegata, gdy jest wywoływana, zwraca wartość PRAWDA lub FAŁSZ, aby wskazać, czy parametr wejściowy jest równa 5:  
+ Delegat można wdrożyć jako `Func<int,bool> myFunc` gdzie `int` jest parametrem wejściowym i `bool` jest zwracana wartość. Wartość zwracana jest zawsze określona w ostatnim parametrze typu. `Func<int, string, bool>` Definiuje delegata z dwóch parametrów wejściowych, `int` i `string`i typ zwracany `bool`. Następujące `Func` delegata, gdy jest wywoływana, zwraca wartość PRAWDA lub FAŁSZ, aby wskazać, czy parametr wejściowy jest równa 5:  
   
 ```csharp  
 Func<int, bool> myFunc = x => x == 5;  
@@ -265,7 +265,7 @@ class Test
   
 -   Zmienne zawarte w wyrażeniu lambda nie są widoczne w metodzie zewnętrznej.  
   
--   Wyrażenia lambda nie może bezpośrednio przechwytywania `ref` lub `out` parametru z metody otaczającej.  
+-   Wyrażenia lambda nie może bezpośrednio przechwytywania `in`, `ref`, lub `out` parametru z metody otaczającej.  
   
 -   Instrukcja return w wyrażeniu lambda nie powoduje wykonania instrukcji return w otaczającej go metodzie.  
   

@@ -11,11 +11,11 @@ ms.assetid: df70e1a2-3ce3-4aba-ad80-4b2f3538699f
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d5c727edbbea116d858c6acf6b600f8fd9f43ee2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 17bbfabe8a53fc51e81434d0a2bd9fb2b29c4695
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-indexers-c-programming-guide"></a>Używanie indeksatorów (Przewodnik programowania w języku C#)
 Indeksatory są składni wygody, które umożliwiają tworzenie [klasy](../../../csharp/language-reference/keywords/class.md), [struktury](../../../csharp/language-reference/keywords/struct.md), lub [interfejsu](../../../csharp/language-reference/keywords/interface.md) że aplikacje klienckie mogą uzyskać dostęp, podobnie jak tablicy. Indeksatory najczęściej są implementowane w typach, których podstawowym celem jest hermetyzować wewnętrznej kolekcji lub tablicy. Na przykład załóżmy, że istnieje klasa o nazwie TempRecord reprezentujący temperatury w Farenheit zarejestrowane w różnym czasie 10 w okresie 24 godzin. Klasa zawiera tablicę o nazwie "temps" typ float do reprezentowania temperatury, a <xref:System.DateTime> reprezentujący datę temperatury zostały zarejestrowane. Implementując indeksatora w tej klasie, klienci mogą uzyskiwać dostęp temperatur w wystąpieniu TempRecord jako `float temp = tr[4]` zamiast jako `float temp = tr.temps[4]`. Notacja indeksatora nie tylko ułatwia składnia dla aplikacji klienckich; zapewnia także klasy i jej celem bardziej intuicyjne innych deweloperom zrozumieć.  
@@ -36,7 +36,7 @@ public int this[int index]    // Indexer declaration
   
  Podpis indeksatora składa się z liczbę i typy parametrów formalnych. Nie ma typu indeksatora lub nazwy parametrów formalnych. W przypadku więcej niż jeden indeksator w tej samej klasie, muszą mieć różne sygnatury.  
   
- Wartość indeksator nie jest sklasyfikowany jako zmienną; w związku z tym nie można przekazać wartości indeksatora jako [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out.md) parametru.  
+ Wartość indeksator nie jest sklasyfikowany jako zmienną; w związku z tym nie można przekazać wartości indeksatora jako [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametru.  
   
  Aby dostarczyć indeksatora z nazwą innych języków można użyć, użyj `name` atrybutu w deklaracji. Na przykład:  
   

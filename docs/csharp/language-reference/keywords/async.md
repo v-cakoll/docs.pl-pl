@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4a89736822342a9d9a24db6d43435f9795b81b5
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 Użyj `async` modyfikator, aby określić, że w metodzie [wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), lub [metody anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) jest asynchroniczne. Jeśli używasz modyfikator metody lub wyrażenie, jest ona określana jako *metody asynchronicznej*. W poniższym przykładzie zdefiniowano metody asynchronicznej o nazwie `ExampleMethodAsync`: 
@@ -78,7 +78,7 @@ Metoda asynchroniczna może mieć następujące typy zwracane:
 - [void](../../../csharp/language-reference/keywords/void.md), które należy używać tylko w przypadku procedury obsługi zdarzeń.
 - Począwszy od C# 7, dowolnego typu, który jest dostępny `GetAwaiter` metody. `System.Threading.Tasks.ValueTask<TResult>` Typ jest takie wdrożenie. Jest dostępna przez dodanie pakietu NuGet `System.Threading.Tasks.Extensions`. 
 
-Metoda asynchroniczna nie można zadeklarować żadnego [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out.md) parametry, ani nie może on mieć <!-- [reference return value](../../programming-guide/classes-and-structs/ref-returns.md) -->wartości zwracanej odwołania, ale można wywołać metody, które mają takie parametry.  
+Metoda asynchroniczna nie można zadeklarować żadnego [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametry, ani nie może on mieć [odwołania do wartości zwracanej](../../programming-guide/classes-and-structs/ref-returns.md), ale może wywołać metody które mają takie parametry.  
   
 Należy określić `Task<TResult>` jako zwracany typ metody asynchronicznej Jeśli [zwracać](../../../csharp/language-reference/keywords/return.md) instrukcji metody określa argumentu operacji typu `TResult`. Możesz użyć `Task` Jeśli nie istotnych wartość jest zwracana po zakończeniu metody. Oznacza to, zwraca wywołanie do metody `Task`, ale jeśli `Task` zostało zakończone, wszelkie `await` wyrażenie, które oczekuje na `Task` daje w wyniku `void`.  
   
@@ -91,5 +91,5 @@ Aby uzyskać dodatkowe informacje i przykłady, zobacz [Async zwracać typów](.
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.CompilerServices.AsyncStateMachineAttribute>  
  [await](../../../csharp/language-reference/keywords/await.md)  
- [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
- [Programowanie asynchroniczne z async i await](../../../csharp/programming-guide/concepts/async/index.md)
+ [Przewodnik: uzyskiwanie dostępu do sieci za pomocą Async i Await](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)  
+ [Programowanie asynchroniczne z Async i Await](../../../csharp/programming-guide/concepts/async/index.md)

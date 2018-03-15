@@ -2,20 +2,21 @@
 title: "Typy wskaźników (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.assetid: 3319faf9-336d-4148-9af2-1da2579cdd1e
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0699793e91199cc623c0d13e42937c8b919e992a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fe7b926bdf9f662d25f2fe960b51fc8254b7aa3a
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="pointer-types-c-programming-guide"></a>Typy wskaźników (Przewodnik programowania w języku C#)
 W kontekście słowa kluczowego „unsafe” typ może być typem wskaźnika, typem wartości lub typem referencyjnym. Deklaracja typu wskaźnika ma jedną z następujących form:  
@@ -50,11 +51,11 @@ int *p1, *p2, *p3;   // Invalid in C#
   
 |Przykład|Opis|  
 |-------------|-----------------|  
-|`int* p`|`p`jest wskaźnik do wartości całkowitej.|  
-|`int** p`|`p`jest wskaźnik na wskaźnik do wartości całkowitej.|  
-|`int*[] p`|`p`jest jednowymiarowej tablicy wskaźników do liczb całkowitych.|  
-|`char* p`|`p`jest wskaźnik do znaku.|  
-|`void* p`|`p`jest wskaźnik do nieznanego typu.|  
+|`int* p`|`p` jest wskaźnik do wartości całkowitej.|  
+|`int** p`|`p` jest wskaźnik na wskaźnik do wartości całkowitej.|  
+|`int*[] p`|`p` jest jednowymiarowej tablicy wskaźników do liczb całkowitych.|  
+|`char* p`|`p` jest wskaźnik do znaku.|  
+|`void* p`|`p` jest wskaźnik do nieznanego typu.|  
   
  Operatora pośredniego wskaźnika * można użyć w celu uzyskania dostępu do zawartości znajdującej się w lokalizacji wskazywanej przez zmienną wskaźnikową. Na przykład przeanalizujmy następującą deklarację:  
   
@@ -113,7 +114,7 @@ Console.ReadLine();
   
  Wskaźnik może być `null`. Zastosowanie operatora pośredniego do wskaźnika o wartości null powoduje użycie zachowania zdefiniowanego w implementacji.  
   
- Należy pamiętać, że przekazywanie wskaźników między metodami może spowodować niezdefiniowane zachowanie. W przykładach wskaźnik do zmiennej lokalnej jest zwracany za pośrednictwem parametru Out lub Ref lub jako wynik funkcji. Jeśli wskaźnik został ustawiony w stałym bloku, wskazywana przez niego zmienna może już nie być stała.  
+ Należy pamiętać, że przekazywanie wskaźników między metodami może spowodować niezdefiniowane zachowanie. Należy wziąć pod uwagę metodę, która zwraca wskaźnik do zmiennej lokalnej za pośrednictwem `in`, `out` lub `ref` parametru lub w wyniku funkcji. Jeśli wskaźnik został ustawiony w stałym bloku, wskazywana przez niego zmienna może już nie być stała.  
   
  W poniższej tabeli wymieniono operatory i instrukcje, które mogą wykonywać operacje na wskaźnikach w kontekście słowa kluczowego „unsafe”:  
   
@@ -127,7 +128,7 @@ Console.ReadLine();
 |+ oraz -|Wykonuje operacje arytmetyczne na wskaźniku.|  
 |==,! =, \<, >, \<=, a > =|Porównuje wskaźniki.|  
 |`stackalloc`|Przydziela pamięć na stosie.|  
-|`fixed`— Instrukcja|Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.|  
+|`fixed` — Instrukcja|Tymczasowo ustala zmienną, dzięki czemu można znaleźć ten adres.|  
   
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -139,6 +140,6 @@ Console.ReadLine();
  [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
  [Typy](../../../csharp/language-reference/keywords/types.md)  
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [Fixed — instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)  
- [Opakowywanie i rozpakowywanie](../../../csharp/programming-guide/types/boxing-and-unboxing.md)
+ [Konwersja boxing i konwersja unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)

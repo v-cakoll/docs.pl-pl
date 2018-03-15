@@ -2,21 +2,22 @@
 title: "Metody anonimowe (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - anonymous methods [C#]
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4d942e0f3245f6404c896173b2c7ca6f1090a8c2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 96e78257c5aab84562cd8cdb336bb5a91ba59534
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>Metody anonimowe (Przewodnik programowania w języku C#)
 W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../../csharp/language-reference/keywords/delegate.md) było jednoczesne używanie [o nazwie metody](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md). C# 2.0 wprowadzono metody anonimowe i w języku C# 3.0 lub nowszej, wyrażenia lambda zastępują metod anonimowych jako preferowany sposób pisania kodu wbudowanego. Jednak informacje o metodach anonimowy w tym temacie dotyczą również wyrażenia lambda. Istnieje jeden przypadek, w którym metody anonimowej udostępnia funkcje nie znaleziono w wyrażeniach lambda. Metody anonimowe umożliwiają Pomiń listy parametrów. Oznacza to, że metody anonimowej można przekonwertować na delegatów o różnych podpisów. To nie jest możliwe za pomocą wyrażenia lambda. Aby uzyskać więcej informacji, w szczególności o wyrażenia lambda, zobacz [wyrażenia Lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md).  
@@ -44,7 +45,7 @@ W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../
   
  Odwołanie do zmiennej zewnętrzne `n` jest określany jako *przechwycone* utworzenia delegata. W przeciwieństwie do zmiennych lokalnych okres istnienia przechwyconej zmiennej rozszerza do momentu przyznania wyrzucanie elementów bezużytecznych delegatów, które odwołują się metody anonimowe.  
   
- Nie ma dostępu do metody anonimowej [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out.md) parametry zewnętrznym zakresie.  
+ Nie ma dostępu do metody anonimowej [w](../../../csharp/language-reference/keywords/in.md), [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametry zewnętrznym zakresie.  
   
  Nie niebezpieczny kod jest dostępny w ramach *anonimowych bloku metody*.  
   
@@ -64,8 +65,8 @@ W wersjach C# przed 2.0, jedynym sposobem, aby zadeklarować [delegować](../../
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Obiekty delegowane](../../../csharp/programming-guide/delegates/index.md)  
+ [Delegaci](../../../csharp/programming-guide/delegates/index.md)  
  [Wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Niebezpieczny kod i wskaźniki](../../../csharp/programming-guide/unsafe-code-pointers/index.md)  
  [Metody](../../../csharp/programming-guide/classes-and-structs/methods.md)  
- [Obiekty delegowane z nazwanego vs. Metody anonimowe](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)
+ [Delegaci z metodami nazwanymi lub anonimowymi](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)

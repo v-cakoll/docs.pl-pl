@@ -16,11 +16,11 @@ ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 038a25fd71098bdd2e4ec7e138178a7aac836e57
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 60833d372bc54c83c1f491f1f779b597b3ab97dc
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="c-keywords"></a>Słowa kluczowe języka C#
 Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, które mają specjalne znaczenie w kompilatorze. Nie można używać jako identyfikatorów w programie, chyba że zawierają one `@` jako prefiksu. Na przykład `@if` jest prawidłowym identyfikatorem, ale `if` jest ponieważ `if` jest słowem kluczowym.  
@@ -29,41 +29,41 @@ Słowa kluczowe są wstępnie zdefiniowane, zarezerwowane identyfikatorów, któ
   
 |||||  
 |---|---|---|---|  
-|[abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md)|[jako](../../../csharp/language-reference/keywords/as.md)|[Podstawa](../../../csharp/language-reference/keywords/base.md)|[wartość logiczna](../../../csharp/language-reference/keywords/bool.md)|  
-|[podział](../../../csharp/language-reference/keywords/break.md)|[bajtów](../../../csharp/language-reference/keywords/byte.md)|[Case](../../../csharp/language-reference/keywords/switch.md)|[CATCH](../../../csharp/language-reference/keywords/try-catch.md)|  
-|[char](../../../csharp/language-reference/keywords/char.md)|[zaznaczone](../../../csharp/language-reference/keywords/checked.md)|[klasy](../../../csharp/language-reference/keywords/class.md)|[Const](../../../csharp/language-reference/keywords/const.md)|  
-|[Kontynuuj](../../../csharp/language-reference/keywords/continue.md)|[decimal](../../../csharp/language-reference/keywords/decimal.md)|[domyślne](../../../csharp/language-reference/keywords/default.md)|[Delegowanie](../../../csharp/language-reference/keywords/delegate.md)|  
-|[czy](../../../csharp/language-reference/keywords/do.md)|[podwójne](../../../csharp/language-reference/keywords/double.md)|[else](../../../csharp/language-reference/keywords/if-else.md)|[wyliczenia](../../../csharp/language-reference/keywords/enum.md)|  
-|[zdarzenia](../../../csharp/language-reference/keywords/event.md)|[jawne](../../../csharp/language-reference/keywords/explicit.md)|[extern](../../../csharp/language-reference/keywords/extern.md)|[wartość false](../../../csharp/language-reference/keywords/false.md)|  
-|[na koniec](../../../csharp/language-reference/keywords/try-finally.md)|[stałe](../../../csharp/language-reference/keywords/fixed-statement.md)|[float](../../../csharp/language-reference/keywords/float.md)|[dla](../../../csharp/language-reference/keywords/for.md)|  
-|[Instrukcja foreach](../../../csharp/language-reference/keywords/foreach-in.md)|[Przejdź do](../../../csharp/language-reference/keywords/goto.md)|[Jeśli](../../../csharp/language-reference/keywords/if-else.md)|[niejawne](../../../csharp/language-reference/keywords/implicit.md)|  
-|[w](../../../csharp/language-reference/keywords/foreach-in.md)|[in (modyfikator ogólny)](../../../csharp/language-reference/keywords/in-generic-modifier.md)|[int](../../../csharp/language-reference/keywords/int.md)|[Interfejs](../../../csharp/language-reference/keywords/interface.md)|  
-|[wewnętrzny](../../../csharp/language-reference/keywords/internal.md)|[jest](../../../csharp/language-reference/keywords/is.md)|[blokady](../../../csharp/language-reference/keywords/lock-statement.md)|[długa](../../../csharp/language-reference/keywords/long.md)|
-|[przestrzeń nazw](../../../csharp/language-reference/keywords/namespace.md)|[Nowy](../../../csharp/language-reference/keywords/new.md)|[wartość null](../../../csharp/language-reference/keywords/null.md)|[obiekt](../../../csharp/language-reference/keywords/object.md)|
-[operator](../../../csharp/language-reference/keywords/operator.md)|[limit](../../../csharp/language-reference/keywords/out.md)|[out (modyfikator ogólny)](../../../csharp/language-reference/keywords/out-generic-modifier.md)|[zastąpienie](../../../csharp/language-reference/keywords/override.md)|
-|[Parametry](../../../csharp/language-reference/keywords/params.md)|[prywatne](../../../csharp/language-reference/keywords/private.md)|[chronione](../../../csharp/language-reference/keywords/protected.md)|[publiczny](../../../csharp/language-reference/keywords/public.md)|
-|[tylko do odczytu](../../../csharp/language-reference/keywords/readonly.md)|[REF](../../../csharp/language-reference/keywords/ref.md)|[Zwraca](../../../csharp/language-reference/keywords/return.md)|[sbyte —](../../../csharp/language-reference/keywords/sbyte.md)|
-|[zapieczętowane](../../../csharp/language-reference/keywords/sealed.md)|[krótki](../../../csharp/language-reference/keywords/short.md)|[sizeof](../../../csharp/language-reference/keywords/sizeof.md)|[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)|
-|[statyczne](../../../csharp/language-reference/keywords/static.md)|[ciąg](../../../csharp/language-reference/keywords/string.md)|[— Struktura](../../../csharp/language-reference/keywords/struct.md)|[Przełącznik](../../../csharp/language-reference/keywords/switch.md)|
-|[Ten](../../../csharp/language-reference/keywords/this.md)|[throw](../../../csharp/language-reference/keywords/throw.md)|[wartość true](../../../csharp/language-reference/keywords/true.md)|[Spróbuj](../../../csharp/language-reference/keywords/try-catch.md)|   
-|[TypeOf](../../../csharp/language-reference/keywords/typeof.md)|[uint](../../../csharp/language-reference/keywords/uint.md)|[ulong](../../../csharp/language-reference/keywords/ulong.md)|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)|
-|[unsafe](../../../csharp/language-reference/keywords/unsafe.md)|[ushort](../../../csharp/language-reference/keywords/ushort.md)|[za pomocą](../../../csharp/language-reference/keywords/using.md)|[przy użyciu statycznego](using-static.md)|
-|[wirtualny](../../../csharp/language-reference/keywords/virtual.md)|[void](../../../csharp/language-reference/keywords/void.md)|[volatile](../../../csharp/language-reference/keywords/volatile.md)|[Podczas](../../../csharp/language-reference/keywords/while.md)|
+|[abstract](../../../csharp/language-reference/keywords/abstract.md)|[as](../../../csharp/language-reference/keywords/as.md)|[base](../../../csharp/language-reference/keywords/base.md)|[bool](../../../csharp/language-reference/keywords/bool.md)|  
+|[break](../../../csharp/language-reference/keywords/break.md)|[byte](../../../csharp/language-reference/keywords/byte.md)|[Case](../../../csharp/language-reference/keywords/switch.md)|[catch](../../../csharp/language-reference/keywords/try-catch.md)|  
+|[char](../../../csharp/language-reference/keywords/char.md)|[checked](../../../csharp/language-reference/keywords/checked.md)|[class](../../../csharp/language-reference/keywords/class.md)|[const](../../../csharp/language-reference/keywords/const.md)|  
+|[continue](../../../csharp/language-reference/keywords/continue.md)|[decimal](../../../csharp/language-reference/keywords/decimal.md)|[default](../../../csharp/language-reference/keywords/default.md)|[delegate](../../../csharp/language-reference/keywords/delegate.md)|  
+|[do](../../../csharp/language-reference/keywords/do.md)|[double](../../../csharp/language-reference/keywords/double.md)|[else](../../../csharp/language-reference/keywords/if-else.md)|[enum](../../../csharp/language-reference/keywords/enum.md)|  
+|[event](../../../csharp/language-reference/keywords/event.md)|[explicit](../../../csharp/language-reference/keywords/explicit.md)|[extern](../../../csharp/language-reference/keywords/extern.md)|[false](../../../csharp/language-reference/keywords/false.md)|  
+|[finally](../../../csharp/language-reference/keywords/try-finally.md)|[Stałe](../../../csharp/language-reference/keywords/fixed-statement.md)|[float](../../../csharp/language-reference/keywords/float.md)|[for](../../../csharp/language-reference/keywords/for.md)|  
+|[Instrukcja foreach](../../../csharp/language-reference/keywords/foreach-in.md)|[goto](../../../csharp/language-reference/keywords/goto.md)|[if](../../../csharp/language-reference/keywords/if-else.md)|[implicit](../../../csharp/language-reference/keywords/implicit.md)|  
+|[in](../../../csharp/language-reference/keywords/in.md)|[int](../../../csharp/language-reference/keywords/int.md)|[interface](../../../csharp/language-reference/keywords/interface.md)|[internal](../../../csharp/language-reference/keywords/internal.md)|
+|[is](../../../csharp/language-reference/keywords/is.md)|[lock](../../../csharp/language-reference/keywords/lock-statement.md)|[long](../../../csharp/language-reference/keywords/long.md)|[namespace](../../../csharp/language-reference/keywords/namespace.md)|
+|[new](../../../csharp/language-reference/keywords/new.md)|[null](../../../csharp/language-reference/keywords/null.md)|[object](../../../csharp/language-reference/keywords/object.md)|[operator](../../../csharp/language-reference/keywords/operator.md)|
+|[out](../../../csharp/language-reference/keywords/out.md)|[override](../../../csharp/language-reference/keywords/override.md)|[params](../../../csharp/language-reference/keywords/params.md)|[private](../../../csharp/language-reference/keywords/private.md)|
+|[protected](../../../csharp/language-reference/keywords/protected.md)|[public](../../../csharp/language-reference/keywords/public.md)|[readonly](../../../csharp/language-reference/keywords/readonly.md)|[ref](../../../csharp/language-reference/keywords/ref.md)|
+|[return](../../../csharp/language-reference/keywords/return.md)|[sbyte](../../../csharp/language-reference/keywords/sbyte.md)|[sealed](../../../csharp/language-reference/keywords/sealed.md)|[short](../../../csharp/language-reference/keywords/short.md)||
+[sizeof](../../../csharp/language-reference/keywords/sizeof.md)|[stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)|[static](../../../csharp/language-reference/keywords/static.md)|[string](../../../csharp/language-reference/keywords/string.md)|
+|[struct](../../../csharp/language-reference/keywords/struct.md)|[switch](../../../csharp/language-reference/keywords/switch.md)|[this](../../../csharp/language-reference/keywords/this.md)|[throw](../../../csharp/language-reference/keywords/throw.md)|
+|[true](../../../csharp/language-reference/keywords/true.md)|[Spróbuj](../../../csharp/language-reference/keywords/try-catch.md)|[typeof](../../../csharp/language-reference/keywords/typeof.md)|[uint](../../../csharp/language-reference/keywords/uint.md)|
+|[ulong](../../../csharp/language-reference/keywords/ulong.md)|[unchecked](../../../csharp/language-reference/keywords/unchecked.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md)|[ushort](../../../csharp/language-reference/keywords/ushort.md)|
+|[using](../../../csharp/language-reference/keywords/using.md)|[przy użyciu statycznego](using-static.md)|[virtual](../../../csharp/language-reference/keywords/virtual.md)|[void](../../../csharp/language-reference/keywords/void.md)|
+|[volatile](../../../csharp/language-reference/keywords/volatile.md)|[while](../../../csharp/language-reference/keywords/while.md)|
 
 ## <a name="contextual-keywords"></a>Kontekstowe słowa kluczowe  
  Kontekstowe słowo kluczowe służy do zapewnienia określone znaczenie w kodzie, ale nie jest ona słowem zastrzeżonym w języku C#. Niektóre kontekstowe słowa kluczowe, takie jak `partial` i `where`, mają specjalne znaczenie w kontekstach dwóch lub więcej.  
   
 ||||  
 |---|---|---|  
-|[Dodaj](../../../csharp/language-reference/keywords/add.md)|[alias](../../../csharp/language-reference/keywords/extern-alias.md)|[Rosnąca](../../../csharp/language-reference/keywords/ascending.md)|  
-|[asynchroniczne](../../../csharp/language-reference/keywords/async.md)|[await](../../../csharp/language-reference/keywords/await.md)|[Malejąco](../../../csharp/language-reference/keywords/descending.md)|  
-|[dynamiczne](../../../csharp/language-reference/keywords/dynamic.md)|[z](../../../csharp/language-reference/keywords/from-clause.md)|[Pobierz](../../../csharp/language-reference/keywords/get.md)|  
-|[globalne](../../../csharp/language-reference/keywords/global.md)|[grupy](../../../csharp/language-reference/keywords/group-clause.md)|[do](../../../csharp/language-reference/keywords/into.md)|  
-|[sprzężenia](../../../csharp/language-reference/keywords/join-clause.md)|[Let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
-|[OrderBy](../../../csharp/language-reference/keywords/orderby-clause.md)|[Partial (typ)](../../../csharp/language-reference/keywords/partial-type.md)|[Partial — metoda)](../../../csharp/language-reference/keywords/partial-method.md)|   
-|[Usuń](../../../csharp/language-reference/keywords/remove.md)|[Wybierz](../../../csharp/language-reference/keywords/select-clause.md)|[zestaw](../../../csharp/language-reference/keywords/set.md)|   
-|[wartość](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[gdy (warunek filtru)](when.md)|   
-|[gdzie (ograniczenie typu ogólnego)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[gdzie (klauzula kwerendy)](../../../csharp/language-reference/keywords/where-clause.md)|[YIELD](../../../csharp/language-reference/keywords/yield.md)|  
+|[add](../../../csharp/language-reference/keywords/add.md)|[alias](../../../csharp/language-reference/keywords/extern-alias.md)|[ascending](../../../csharp/language-reference/keywords/ascending.md)|  
+|[async](../../../csharp/language-reference/keywords/async.md)|[await](../../../csharp/language-reference/keywords/await.md)|[descending](../../../csharp/language-reference/keywords/descending.md)|  
+|[dynamic](../../../csharp/language-reference/keywords/dynamic.md)|[Z](../../../csharp/language-reference/keywords/from-clause.md)|[get](../../../csharp/language-reference/keywords/get.md)|  
+|[global](../../../csharp/language-reference/keywords/global.md)|[Grupy](../../../csharp/language-reference/keywords/group-clause.md)|[into](../../../csharp/language-reference/keywords/into.md)|  
+|[join](../../../csharp/language-reference/keywords/join-clause.md)|[let](../../../csharp/language-reference/keywords/let-clause.md)|[nameof](nameof.md)|   
+|[orderby](../../../csharp/language-reference/keywords/orderby-clause.md)|[Partial (typ)](../../../csharp/language-reference/keywords/partial-type.md)|[Partial — metoda)](../../../csharp/language-reference/keywords/partial-method.md)|   
+|[remove](../../../csharp/language-reference/keywords/remove.md)|[select](../../../csharp/language-reference/keywords/select-clause.md)|[set](../../../csharp/language-reference/keywords/set.md)|   
+|[value](../../../csharp/language-reference/keywords/value.md)|[var](../../../csharp/language-reference/keywords/var.md)|[when (warunek filtru)](when.md)|   
+|[where (ograniczenie typu ogólnego)](../../../csharp/language-reference/keywords/where-generic-type-constraint.md)|[gdzie (klauzula kwerendy)](../../../csharp/language-reference/keywords/where-clause.md)|[yield](../../../csharp/language-reference/keywords/yield.md)|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

@@ -17,21 +17,21 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-caps.latest.revision: "58"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dfcb0d0ace4bd42d89fe7b4c2dc04098858c2945
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 98aaa5c7bbd28facf9cc06fd0d0898b72ea7dbc2
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="character-classes-in-regular-expressions"></a>Klasy znaków w wyrażeniach regularnych
-<a name="Top"></a>Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się. Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:  
+<a name="Top"></a> Klasy znaku definiuje zestaw znaków, jedno z nich może wystąpić w ciągu wejściowego dopasowanie powiodło się. Język wyrażeń regularnych programu .NET obsługuje następujących klas znaków:  
   
 -   Grupy znaków pozytywnych. Znak w ciągu wejściowym musi odpowiadać jednemu ze znaków z określonego zestawu znaków. Aby uzyskać więcej informacji, zobacz [dodatnią grupy znak](#PositiveGroup).  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 01/09/2018
 |-------------|-----------------|  
 |`[aeiou]`|Dopasowuje wszystkie samogłoski.|  
 |`[\p{P}\d]`|Dopasowuje wszystkie znaki interpunkcyjne oraz znaki cyfr dziesiętnych.|  
-|`[\s\p{P}]`|Dopasowuje wszystkie odstępy oraz znaki interpunkcyjne.|  
+|`[\s\p{P}]`|Zgodna wszystkie białe oraz znaków interpunkcyjnych.|  
   
  W poniższym przykładzie zdefiniowano grupę znaków pozytywnych, która zawiera znaki „a” i „e”, tak aby ciąg wejściowy musiał zawierać słowa „grey” lub „gray”, a następnie inne słowo, aby wystąpiło dopasowanie.  
   
@@ -123,7 +123,7 @@ ms.lasthandoff: 01/09/2018
   
  Składnia służąca do określenia listy indywidualnych znaków jest następująca:  
   
- [*^ character_group*]  
+ [*^character_group*]  
   
  gdzie *character_group* znajduje się lista poszczególnych znaki, które nie mogą występować w ciągu wejściowym dopasowanie powiodło się. *character_group* może zawierać dowolną kombinację co najmniej jeden znak literału [Usuń znaki](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md), lub klas znaków.  
   
@@ -194,7 +194,7 @@ ms.lasthandoff: 01/09/2018
   
  Konstrukcja wyrażenia regularnego  
   
- `\p{`*nazwa*`}`  
+ `\p{` *Nazwa* `}`  
   
  Dopasowuje dowolny znak, który należy do kategorii Ogólne Unicode lub nazwanego bloku, gdzie *nazwa* jest skrót kategorii lub nazwa nazwanego bloku. Lista kategorii skrótów, zobacz [obsługiwane Unicode ogólne kategorie](#SupportedUnicodeGeneralCategories) później w tym temacie. Lista bloków nazwanego, zobacz [obsługiwane bloki o nazwie](#SupportedNamedBlocks) później w tym temacie.  
   
@@ -225,7 +225,7 @@ ms.lasthandoff: 01/09/2018
   
  Konstrukcja wyrażenia regularnego  
   
- `\P{`*nazwa*`}`  
+ `\P{` *Nazwa* `}`  
   
  Dopasowuje dowolny znak, który nie należy do kategorii Ogólne Unicode lub nazwanego bloku, gdzie *nazwa* jest skrót kategorii lub nazwa nazwanego bloku. Lista kategorii skrótów, zobacz [obsługiwane Unicode ogólne kategorie](#SupportedUnicodeGeneralCategories) później w tym temacie. Lista bloków nazwanego, zobacz [obsługiwane bloki o nazwie](#SupportedNamedBlocks) później w tym temacie.  
   
@@ -240,7 +240,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>Znak będący wyrazem: \w  
- `\w`Dopasowuje dowolny znak słowa. Znak słowa jest elementem członkowskim każdej z kategorii Unicode wymienionej w poniższej tabeli.  
+ `\w` Dopasowuje dowolny znak słowa. Znak słowa jest elementem członkowskim każdej z kategorii Unicode wymienionej w poniższej tabeli.  
   
 |Kategoria|Opis|  
 |--------------|-----------------|  
@@ -272,7 +272,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>Znak niebędący wyrazem: \W  
- `\W`Dopasowuje dowolny znak-word. Element języka \W jest równoważny z następującą klasą znaków:  
+ `\W` Dopasowuje dowolny znak-word. Element języka \W jest równoważny z następującą klasą znaków:  
   
 ```  
 [^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}\p{Lm}]  
@@ -313,7 +313,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="WhitespaceCharacter"></a>   
 ## <a name="white-space-character-s"></a>Znak odstępu: \s  
- `\s`Dopasowuje dowolny biały znak. Jest to równoważne z sekwencjami ucieczki oraz kategoriami Unicode wymienionymi w poniższej tabeli.  
+ `\s` Dopasowuje dowolny biały znak. Jest to równoważne z sekwencjami ucieczki oraz kategoriami Unicode wymienionymi w poniższej tabeli.  
   
 |Kategoria|Opis|  
 |--------------|-----------------|  
@@ -335,7 +335,7 @@ ms.lasthandoff: 01/09/2018
 |\w+|Dopasowuje co najmniej jeden znak słowa.|  
 |(e)?|Dopasowuje znak „e” zero lub jeden raz.|  
 |s|Dopasowuje znak „s”.|  
-|(\s &#124; $)|Dopasowuje znak odstępu lub znak końca ciągu wejściowego.|  
+|(\s&#124;$)|Zgodne biały znak lub końca ciągu wejściowego.|  
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
@@ -344,7 +344,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonWhitespaceCharacter"></a>   
 ## <a name="non-white-space-character-s"></a>Znak niebędący odstępem: \S  
- `\S`Dopasowuje dowolny z systemem innym niż biały znak. Odpowiada to `[^\f\n\r\t\v\x85\p{Z}]` wzorzec wyrażenia regularnego lub odwrotnie wzorzec wyrażenia regularnego, który jest odpowiednikiem `\s`, który pasuje białe znaki. Aby uzyskać więcej informacji, zobacz [biały znak: \s](#WhitespaceCharacter).  
+ `\S` Dopasowuje dowolny z systemem innym niż biały znak. Odpowiada to `[^\f\n\r\t\v\x85\p{Z}]` wzorzec wyrażenia regularnego lub odwrotnie wzorzec wyrażenia regularnego, który jest odpowiednikiem `\s`, który pasuje białe znaki. Aby uzyskać więcej informacji, zobacz [biały znak: \s](#WhitespaceCharacter).  
   
  Jeśli określono zachowanie języka ECMAScript zgodne, `\S` jest odpowiednikiem `[^ \f\n\r\t\v]`. Informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "ECMAScript dopasowania zachowanie" w [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -363,7 +363,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>Znak cyfry dziesiętnej: \d  
- `\d`Dopasowuje wszystkie cyfrę. Jest to równoważne `\p{Nd}` wzorzec wyrażenia regularnego, który zawiera standardowe cyfr dziesiętnych 0-9, a także cyfr dziesiętnych liczby innych zestawów znaków.  
+ `\d` Dopasowuje wszystkie cyfrę. Jest to równoważne `\p{Nd}` wzorzec wyrażenia regularnego, który zawiera standardowe cyfr dziesiętnych 0-9, a także cyfr dziesiętnych liczby innych zestawów znaków.  
   
  Jeśli określono zachowanie języka ECMAScript zgodne, `\d` jest odpowiednikiem `[0-9]`. Informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "ECMAScript dopasowania zachowanie" w [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -387,7 +387,7 @@ ms.lasthandoff: 01/09/2018
   
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>Znak nienumeryczny: \D  
- `\D`Dopasowuje dowolny znak-cyfrowy. Jest to równoważne `\P{Nd}` wzorzec wyrażenia regularnego.  
+ `\D` Dopasowuje dowolny znak-cyfrowy. Jest to równoważne `\P{Nd}` wzorzec wyrażenia regularnego.  
   
  Jeśli określono zachowanie języka ECMAScript zgodne, `\D` jest odpowiednikiem `[^0-9]`. Informacje na temat wyrażeń regularnych języka ECMAScript, zobacz sekcję "ECMAScript dopasowania zachowanie" w [opcje wyrażeń regularnych](../../../docs/standard/base-types/regular-expression-options.md).  
   
@@ -557,7 +557,7 @@ ms.lasthandoff: 01/09/2018
 |D800–DB7F|`IsHighSurrogates`|  
 |DB80–DBFF|`IsHighPrivateUseSurrogates`|  
 |DC00–DFFF|`IsLowSurrogates`|  
-|E000–F8FF|`IsPrivateUse`lub`IsPrivateUseArea`|  
+|E000–F8FF|`IsPrivateUse` lub `IsPrivateUseArea`|  
 |F900–FAFF|`IsCJKCompatibilityIdeographs`|  
 |FB00–FB4F|`IsAlphabeticPresentationForms`|  
 |FB50–FDFF|`IsArabicPresentationForms-A`|  
@@ -577,7 +577,7 @@ ms.lasthandoff: 01/09/2018
   
  Wyrażenie odejmowania klas znaków ma następującą formę:  
   
- `[`*base_group* `-[` *excluded_group*`]]`  
+ `[` *base_group* `-[` *excluded_group* `]]`  
   
  Nawiasy kwadratowe (`[]`) i myślnik (`-`) są obowiązkowe. *Base_group* jest [grupy dodatnią znak](#PositiveGroup) lub [grupy ujemna znak](#NegativeGroup). *Excluded_group* składnik jest innej grupy znak dodatnią lub ujemną lub innego wyrażenia odejmowania klasy znaku (na oznacza to, że można zagnieżdżać wyrażenia odejmowania klasy znaków).  
   

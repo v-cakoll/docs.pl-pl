@@ -9,7 +9,7 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c3e6c24fafdd79676e68fa9dd06cf399fc09d5ea
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="rules-for-inferring-simple-types"></a>Wnioskowanie typów prostych reguł
 Opisuje sposób <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ danych dla atrybutów i elementów.  
@@ -36,7 +36,7 @@ Opisuje sposób <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ 
   
 |Typ prosty|Opis|  
 |-----------------|-----------------|  
-|wartość logiczna|Wartość true, false, 0, 1.|  
+|wartość logiczna|True, false, 0, 1.|  
 |byte|Liczby całkowite z zakresu – 128 do 127.|  
 |unsignedByte|Liczby całkowite z zakresu od 0 do 255.|  
 |short|Liczby całkowite z zakresu od –32768 do 32767.|  
@@ -75,7 +75,7 @@ Opisuje sposób <xref:System.Xml.Schema.XmlSchemaInference> klasy wnioskuje typ 
   
  Gdy pierwszy `attr2` napotkano wartość typu `attr2` jest wywnioskowany jako `unsignedByte` na podstawie wartości `0`. Gdy drugi `attr2` jest napotkano typ jest podwyższany do `string` oparte na aktualnie wnioskowany typ `unsignedByte` i bieżącą wartość `true` ponieważ <xref:System.Xml.Schema.XmlSchemaInference> klasy należy wziąć pod uwagę poprzednie wartości podczas podwyższania poziomu wywnioskować typu. Jednak jeśli oba wystąpienia `attr2` napotkano w tym samym dokumencie XML, a nie w dwóch różnych dokumentów XML, jak pokazano powyżej, `attr2` czy wywnioskować jako `boolean`.  
   
-### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Zignorowano atrybutów z http://www.w3.org/2001/XMLSchema-instance Namespace  
+### <a name="ignored-attributes-from-the-httpwwww3org2001xmlschema-instance-namespace"></a>Ignorowane atrybutów z http://www.w3.org/2001/XMLSchema-instance Namespace  
  Poniżej przedstawiono definiowania schematu atrybutów, które są ignorowane podczas wnioskowania schematu.  
   
 |Atrybut|Opis|  

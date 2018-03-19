@@ -1,7 +1,7 @@
 ---
 title: Monitorowanie kondycji
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Monitorowanie kondycji"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76821e27613335609527b867a6b94dac551f6235
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="health-monitoring"></a>Monitorowanie kondycji
 
@@ -37,7 +37,7 @@ Aby użyć tej biblioteki, musisz najpierw użyć biblioteki w Twojej mikrousłu
 
 Widać, jak biblioteka HealthChecks jest używana w eShopOnContainers przykładowej aplikacji. Aby rozpocząć, musisz zdefiniować, co stanowi stan kondycji dla każdego mikrousługi. W przykładowej aplikacji mikrousług są w dobrej kondycji, jeśli mikrousługi interfejsu API jest dostępny za pośrednictwem protokołu HTTP i jeśli jego powiązanych bazy danych programu SQL Server jest również dostępna.
 
-W przyszłości można zainstalować biblioteki HealthChecks jako pakietu NuGet. Jednak opracowywania tego tekstu, musisz pobrać i Skompiluj kod jako część rozwiązania. Klonowanie kodu, które są dostępne pod adresem https://github.com/dotnet-architecture/HealthChecks i skopiuj następujące foldery do rozwiązania:
+W przyszłości można zainstalować biblioteki HealthChecks jako pakietu NuGet. Jednak opracowywania tego tekstu, musisz pobrać i Skompiluj kod jako część rozwiązania. Klonowanie kodu dostępne pod adresem https://github.com/dotnet-architecture/HealthChecks i skopiuj następujące foldery do rozwiązania:
 
   - src/wspólne
   - src/Microsoft.AspNetCore.HealthChecks
@@ -190,7 +190,7 @@ Ponadto jeśli były przechowywane wszystkich strumieni zdarzeń, służy Micros
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Program ASP.NET Core HealthChecks** (wczesnego wydawania) [ *https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
+-   **Program ASP.NET Core HealthChecks** (wczesnego wydawania) [*https://github.com/aspnet/HealthChecks/*](https://github.com/aspnet/HealthChecks/)
 
 -   **Wprowadzenie do monitorowania kondycji sieci szkieletowej usług**
     [*https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction*](https://docs.microsoft.com/azure/service-fabric/service-fabric-health-introduction)
@@ -202,4 +202,4 @@ Ponadto jeśli były przechowywane wszystkich strumieni zdarzeń, służy Micros
     [*https://www.microsoft.com/en-us/cloud-platform/operations-management-suite*](https://www.microsoft.com/en-us/cloud-platform/operations-management-suite)
 
 >[!div class="step-by-step"]
-[Poprzednie] (wdrożenie obwodu-dzielącego wyrazy pattern.md) [dalej] (.. /Secure-NET-microservices-Web-Applications/index.MD)
+[Previous] (implement-circuit-breaker-pattern.md) [Next] (../secure-net-microservices-web-applications/index.md)

@@ -106,7 +106,7 @@ To wymaganie, że klasy nie ma żadnej z powyższych funkcji lub zachowania doda
 Co najmniej aplikacji sieci web poszczególnych powinien starań, aby mieć własne ograniczonego kontekstu, za pomocą ich własnych magazynu trwałości dla swojego modelu biznesowego, a nie z innych aplikacji do udostępniania bazy danych. Komunikacja między kontekstami ograniczonego następuje za pośrednictwem interfejsów programistycznych, a nie za pomocą udostępnionej bazy danych, dzięki czemu do obsługi logiki biznesowej i zdarzenia podjęcie umieścić w odpowiedzi na zmiany, które mają miejsce. Ściśle ograniczone kontekstów mapy do mikrousług, który również w idealnym przypadku są zaimplementowane jako własne poszczególnych kontekstów ograniczone.
 
 > ### <a name="references--modern-web-applications"></a>Odwołania — nowoczesnych aplikacji sieci Web
-> - Separacji  
+> - **Separacji**  
 > <http://deviq.com/separation-of-concerns/>
 > - **Hermetyzacja** <http://deviq.com/encapsulation/>
 > - **Zasada odwracanie zależności**  
@@ -115,7 +115,7 @@ Co najmniej aplikacji sieci web poszczególnych powinien starań, aby mieć wła
 > <http://deviq.com/explicit-dependencies-principle/>
 > - **Nie powtarzaj samodzielnie**  
 > <http://deviq.com/don-t-repeat-yourself/>
-> - Nieznajomości trwałości  
+> - **Nieznajomości trwałości**  
 > <http://deviq.com/persistence-ignorance/>
 > - **Kontekst ograniczonego**  
 > <https://martinfowler.com/bliki/BoundedContext.html>

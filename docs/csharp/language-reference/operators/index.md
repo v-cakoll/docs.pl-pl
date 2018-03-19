@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f18c2332f3576847800423c5c0bf7471bf37aafc
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="c-operators"></a>Operatory C#
 C# zawiera wielu operatorów, które są symbole, które określają, jakie operacje (matematyczne, indeksowania, wywołanie funkcji itp.) w celu wykonania w wyrażeniu.  Możesz [przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) wielu operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.  
@@ -84,7 +84,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [++ x](../../../csharp/language-reference/operators/increment-operator.md) — prefiks przyrostu.  Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, które jest większe (zazwyczaj dodaje całkowitą 1).  
   
- [--x](../../../csharp/language-reference/operators/decrement-operator.md) — prefiks zmniejszenie.  Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, które jest mniej (zazwyczaj dodaje całkowitą 1).  
+ [--x](../../../csharp/language-reference/operators/decrement-operator.md) — prefiks zmniejszenie.  Zwraca wartość x po zaktualizowaniu lokalizacji magazynu o wartości x, które jest mniej (zazwyczaj odejmuje całkowitą 1).  
   
  [[T] x](../../../csharp/language-reference/operators/invocation-operator.md) — typ rzutowania.  
   

@@ -3,17 +3,17 @@ title: "Wybór między .NET Core i .NET Framework dla serwera aplikacji"
 description: "Przewodnik w życie .NET należy rozważyć podczas kompilowania aplikacji serwera, programu .NET."
 author: cartermp
 ms.author: mairaw
-ms.date: 08/15/2016
+ms.date: 03/15/2018
 ms.topic: article
 ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2108125b9c01a2686d66b0ebd4e43e7ac863e223
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c07b0b760e2a46faea574eef3575409bac773942
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>Wybór między .NET Core i .NET Framework dla serwera aplikacji
 
@@ -79,6 +79,7 @@ W większości przypadków nie trzeba przeprowadzać migracji istniejącej aplik
 ### <a name="a-need-to-use-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>Trzeba użyć bibliotek .NET innych firm lub pakietów NuGet nie jest dostępna dla platformy .NET Core
 
 Biblioteki są szybko obejmującego .NET Standard. .NET standard umożliwia udostępnianie kodu we wszystkich implementacjach .NET, w tym oprogramowanie .NET Core. .NET 2.0 standardowa to ustawienie jest łatwiejsze:
+
 - Powierzchnię interfejsu API stał się znacznie większe. 
 - Wprowadzono trybu zgodności .NET Framework. Ten tryb zgodności umożliwia .NET Standard/.NET Core projekty do odwołania do bibliotek .NET Framework. Aby dowiedzieć się więcej na temat trybu zgodności, zobacz [Announcing .NET 2.0 standardowe](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/).
 
@@ -92,7 +93,7 @@ Niektóre technologie .NET Framework nie są dostępne w .NET Core. Niektóre z 
 
 * Aplikacji stron sieci Web programu ASP.NET: stron sieci Web programu ASP.NET nie zostaną uwzględnione w ASP.NET Core. Platformy ASP.NET Core [stron Razor](/aspnet/core/mvc/razor-pages/) ma wiele podobieństw ze stronami sieci Web.
 
-* Implementacja serwera i klienta ASP.NET SignalR. Obecnie SignalR platformy ASP.NET nie jest dostępna dla platformy ASP.NET Core (nie klienta lub serwera). SignalR platformy ASP.NET Core jest zaplanowane dla platformy ASP.NET Core 2.1. Zobacz [platformy ASP.NET Core harmonogram i plan](https://github.com/aspnet/Home/wiki/Roadmap). Stan Podgląd jest dostępny w [po stronie serwera](https://github.com/aspnet/SignalR-Server) i [biblioteki klienta](https://github.com/aspnet/SignalR-Client-Net) repozytoriów GitHub.
+* Implementacja serwera i klienta ASP.NET SignalR. Obecnie [ASP.NET SignalR](https://github.com/aspnet/SignalR) jest dostępna w wersji zapoznawczej przy użyciu platformy ASP.NET Core 2.1.
 
 * Implementacja usługi WCF. Nawet wtedy, gdy istnieje [biblioteki klienta WCF](https://github.com/dotnet/wcf) do korzystania z usług WCF z platformy .NET Core, implementacją serwera WCF jest obecnie dostępna tylko w programie .NET Framework. W tym scenariuszu nie jest częścią bieżącego planu dla platformy .NET Core, ale jest rozważane w przyszłości.
 

@@ -9,7 +9,7 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 26b071f3-1261-47ef-8690-0717f5cd93c1
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8c2706782ed1242ecdb5af1fdfab7a3f24e19236
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="xml-type-support-implementation-notes"></a>XML uwagi dotyczące implementacji pomocy technicznej dla typu
 W tym temacie opisano niektóre szczegóły implementacji, które mają być znane.  

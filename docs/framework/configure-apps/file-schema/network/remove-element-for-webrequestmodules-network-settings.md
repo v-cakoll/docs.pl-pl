@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 391e5f2a7d9d8076ba9e9a3057e3d8899e2ce672
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="ltremovegt-element-for-webrequestmodules-network-settings"></a>&lt;Usuń&gt; elementu webRequestModules — (ustawienia sieciowe)
 Usuwa niestandardowego modułu żądania sieci Web z aplikacji.  
   
- \<Konfiguracja >  
-\<System.NET >  
-\<webRequestModules — >  
+ \<configuration>  
+\<system.net>  
+\<webRequestModules>  
 \<Usuń >  
   
 ## <a name="syntax"></a>Składnia  
@@ -60,12 +62,12 @@ Usuwa niestandardowego modułu żądania sieci Web z aplikacji.
   
 |**Element**|**Opis**|  
 |-----------------|---------------------|  
-|[webRequestModules —](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły służące do żądania informacji z hostów w sieci.|  
+|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|Określa moduły służące do żądania informacji z hostów w sieci.|  
   
 ## <a name="remarks"></a>Uwagi  
  `remove` Element usuwa zarejestrowanego modułu żądania sieci Web dla określonego prefiksu identyfikatora URI.  
   
- Wartość `prefix` atrybut powinien być pierwszych znaków z prawidłowym identyfikatorem URI — na przykład "http" lub "http://www.contoso.com".  
+ Wartość `prefix` atrybutu powinna być pierwszych znaków z prawidłowym identyfikatorem URI — na przykład "http" lub "http://www.contoso.com".  
   
 ## <a name="configuration-files"></a>Pliki konfiguracji  
  Ten element może być użyty w pliku konfiguracji aplikacji lub pliku konfiguracji komputera (Machine.config).  

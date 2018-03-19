@@ -1,1 +1,1 @@
-<span data-ttu-id="706cf-101">Program Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="706cf-101">Microsoft Excel</span></span>
+<span data-ttu-id="f6b1b-101">Program Microsoft Excel</span><span class="sxs-lookup"><span data-stu-id="f6b1b-101">Microsoft Excel</span></span>

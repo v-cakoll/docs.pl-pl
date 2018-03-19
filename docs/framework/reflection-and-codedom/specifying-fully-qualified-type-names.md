@@ -1,11 +1,12 @@
 ---
 title: "Określanie w pełni kwalifikowanych nazw typów"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,48 +16,108 @@ helpviewer_keywords:
 - tokens
 - BNF
 - assemblies [.NET Framework], names
-- Backus-Naur form
-- languages, BNF grammar
+- languages, grammar
 - fully qualified type names
 - type names
 - special characters
 - IDENTIFIER
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e19aebbeee7fd65e27704af49185a1b8d48b9639
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e31e6e0284de44768b2faad7bcf84d5be343e479
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="specifying-fully-qualified-type-names"></a>Określanie w pełni kwalifikowanych nazw typów
 Należy określić nazwy typów ma prawidłową wartość wejściową do różnych operacji odbicia. Nazwa FQDN typu, który składa się z specyfikacja nazwy zestawu specyfikacji przestrzeni nazw i nazwę typu. Specyfikacje nazwy typów są używane przez metody takie jak <xref:System.Type.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>, <xref:System.Reflection.Emit.ModuleBuilder.GetType%2A?displayProperty=nameWithType>, i <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>.  
   
-## <a name="backus-naur-form-grammar-for-type-names"></a>Formularz Backus-Naur formularza gramatyki dla nazw typów  
- Formularz Backus-naur (BNF) definiuje składni posiadanie języków. W poniższej tabeli wymieniono reguły leksykalne BNF, które opisują jak rozpoznać prawidłowy wejściowy. Terminali (tych elementów, które nie są dodatkowo możliwym do zredukowania) są wyświetlane w wielkie litery. Symboli nieterminalnych (tych elementów, które są dodatkowo możliwym do zredukowania) są wyświetlane w ciągach wielkie i małe litery, lub oddzielnie w cudzysłowie, ale apostrofu (') nie jest częścią sama składnia. Znaku kreski pionowej (&#124;) określa reguły, które mają reguł podrzędnych.  
-  
-|Gramatyka BNF z w pełni kwalifikowane nazwy typów|  
-|-----------------------------------------------|  
-|Element TypeSpec: = ReferenceTypeSpec<br /><br /> &#124;     SimpleTypeSpec|  
-|ReferenceTypeSpec: = SimpleTypeSpec 'i'|  
-|SimpleTypeSpec: = PointerTypeSpec<br /><br /> &#124;     ArrayTypeSpec<br /><br /> &#124;     Właściwość TypeName|  
-|PointerTypeSpec: = SimpleTypeSpec "*"|  
-|ArrayTypeSpec: = SimpleTypeSpec [ReflectionDimension]<br /><br /> &#124;     SimpleTypeSpec [ReflectionEmitDimension]|  
-|ReflectionDimension: = "*"<br /><br /> &#124;     ReflectionDimension ReflectionDimension ","<br /><br /> &#124;     NOTOKEN|  
-|ReflectionEmitDimension: = "*"<br /><br /> &#124;     Numer ".." Wartość liczbowa<br /><br /> &#124;     Numer "..."<br /><br /> &#124;     ReflectionDimension ReflectionDimension ","<br /><br /> &#124;     NOTOKEN|  
-|Liczba: = [0-9] +|  
-|Właściwość TypeName: = NamespaceTypeName<br /><br /> &#124;     NamespaceTypeName AssemblyNameSpec ","|  
-|NamespaceTypeName: = NestedTypeName<br /><br /> &#124;     NamespaceSpec "." NestedTypeName|  
-|NestedTypeName: identyfikator =<br /><br /> &#124;     NestedTypeName identyfikator "+"|  
-|NamespaceSpec: identyfikator =<br /><br /> &#124;     NamespaceSpec "." IDENTYFIKATOR|  
-|AssemblyNameSpec: identyfikator =<br /><br /> &#124;     Identyfikator AssemblyProperties ","|  
-|AssemblyProperties: = AssemblyProperty<br /><br /> &#124;     AssemblyProperties AssemblyProperty ","|  
-|AssemblyProperty: = AssemblyPropertyValue AssemblyPropertyName "="|  
-  
+## <a name="grammar-for-type-names"></a>Gramatyka dla nazw typów  
+ Gramatyka definiuje składni posiadanie języków. W poniższej tabeli wymieniono leksykalne reguły, które opisują jak rozpoznać prawidłowych danych wejściowych. Terminali (tych elementów, które nie są dodatkowo możliwym do zredukowania) są wyświetlane w wielkie litery. Symboli nieterminalnych (tych elementów, które są dodatkowo możliwym do zredukowania) są wyświetlane w ciągach wielkie i małe litery, lub oddzielnie w cudzysłowie, ale apostrofu (') nie jest częścią sama składnia. Znaku kreski pionowej (&#124;) oznacza reguły, które mają reguł podrzędnych.  
+
+```antlr
+TypeSpec
+    : ReferenceTypeSpec
+    | SimpleTypeSpec
+    ;
+
+ReferenceTypeSpec
+    : SimpleTypeSpec '&'
+    ;
+
+SimpleTypeSpec
+    : PointerTypeSpec
+    | ArrayTypeSpec
+    | TypeName
+    ;
+
+PointerTypeSpec
+    : SimpleTypeSpec '*'
+    ;
+
+ArrayTypeSpec
+    : SimpleTypeSpec '[ReflectionDimension]'
+    | SimpleTypeSpec '[ReflectionEmitDimension]'
+    ;
+
+ReflectionDimension
+    : '*'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+ReflectionEmitDimension
+    : '*'
+    | Number '..' Number
+    | Number '…'
+    | ReflectionDimension ',' ReflectionDimension
+    | NOTOKEN
+    ;
+
+Number
+    : [0-9]+
+    ;
+
+TypeName
+    : NamespaceTypeName
+    | NamespaceTypeName ',' AssemblyNameSpec
+    ;
+
+NamespaceTypeName
+    : NestedTypeName
+    | NamespaceSpec '.' NestedTypeName
+    ;
+
+NestedTypeName
+    : IDENTIFIER
+    | NestedTypeName '+' IDENTIFIER
+    ;
+
+NamespaceSpec
+    : IDENTIFIER
+    | NamespaceSpec '.' IDENTIFIER
+    ;
+
+AssemblyNameSpec
+    : IDENTIFIER
+    | IDENTIFIER ',' AssemblyProperties
+    ;
+
+AssemblyProperties
+    : AssemblyProperty
+    | AssemblyProperties ',' AssemblyProperty
+    ;
+
+AssemblyProperty
+    : AssemblyPropertyName '=' AssemblyPropertyValue
+    ;
+```
+
 ## <a name="specifying-special-characters"></a>Określanie znaki specjalne  
  W nazwie typu identyfikator jest żadnych prawidłowej nazwy określane przez reguły języka.  
   
@@ -70,7 +131,7 @@ Należy określić nazwy typów ma prawidłową wartość wejściową do różny
 |\\*|Typ wskaźnika.|  
 |\\[|Ogranicznik wymiaru tablicy.|  
 |\\]|Ogranicznik wymiaru tablicy.|  
-|\\.,|Użyj ukośniku odwrotnym przed kropką tylko wtedy, gdy okres jest używany w specyfikacji tablicy. Kropki w NamespaceSpec nie przyjmują ukośniku odwrotnym.|  
+|\\.|Użyj ukośniku odwrotnym przed kropką tylko wtedy, gdy okres jest używany w specyfikacji tablicy. Kropki w NamespaceSpec nie przyjmują ukośniku odwrotnym.|  
 |\\\|Ukośnik odwrotny, w razie potrzeby jako ciąg literału.|  
   
  Należy pamiętać, że we wszystkich składnikach elementu TypeSpec z wyjątkiem AssemblyNameSpec mają zastosowanie spacji. W AssemblyNameSpec mają zastosowanie spacji przed separatorem ',', ale spacje po separatorze "," są ignorowane.  
@@ -139,17 +200,17 @@ com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
   
  Tablice są dostępne w odbicia, określając rangą tablicy:  
   
--   `Type.GetType("MyArray[]")`pobiera tablicy jednowymiarowej z 0 dolnej granicy.  
+-   `Type.GetType("MyArray[]")` pobiera tablicy jednowymiarowej z 0 dolnej granicy.  
   
--   `Type.GetType("MyArray[*]")`pobiera tablicy jednowymiarowej z nieznanego dolnej granicy.  
+-   `Type.GetType("MyArray[*]")` pobiera tablicy jednowymiarowej z nieznanego dolnej granicy.  
   
--   `Type.GetType("MyArray[][]")`pobiera tablicy jest tablicą dwuwymiarową.  
+-   `Type.GetType("MyArray[][]")` pobiera tablicy jest tablicą dwuwymiarową.  
   
--   `Type.GetType("MyArray[*,*]")`i `Type.GetType("MyArray[,]")` pobiera prostokątny tablicą dwuwymiarową z nieznanego dolne granice tablicy.  
+-   `Type.GetType("MyArray[*,*]")` i `Type.GetType("MyArray[,]")` pobiera prostokątny tablicą dwuwymiarową z nieznanego dolne granice tablicy.  
   
  Należy pamiętać, że z punktu widzenia środowiska uruchomieniowego, `MyArray[] != MyArray[*]`, ale dla tablic wielowymiarowych są równoważne dwóch notacji. Oznacza to `Type.GetType("MyArray [,]") == Type.GetType("MyArray[*,*]")` daje w wyniku **true**.  
   
- Aby uzyskać **ModuleBuilder.GetType**, `MyArray[0..5]` wskazuje tablicy jednowymiarowej, o rozmiarze 6 niższe powiązane 0. `MyArray[4…]`Wskazuje jednowymiarowej tablicy o nieznanym rozmiarze i dolną granicę 4.  
+ Aby uzyskać **ModuleBuilder.GetType**, `MyArray[0..5]` wskazuje tablicy jednowymiarowej, o rozmiarze 6 niższe powiązane 0. `MyArray[4…]` Wskazuje jednowymiarowej tablicy o nieznanym rozmiarze i dolną granicę 4.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.AssemblyName>  

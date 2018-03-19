@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 519b910a-6efe-4394-9b81-0546aa3e7462
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: bf523ead40d0e3cc9148b48d5c7a4a84d3d5cb81
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 7830a437b46d2080efc65f43f9112503add4c305
+ms.sourcegitcommit: 3eea47bff3201ae5d3395b0c7947806c2faca255
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>Utwórz nowy szablon niestandardowy dla platformy dotnet
 
@@ -103,7 +103,7 @@ Szablon został zakończony. W tym momencie masz dwie opcje dystrybucji szablonu
    </package>
    ```
 
-1. [Utwórz pakiet](/nuget/create-packages/creating-a-package#creating-the-package) przy użyciu `nuget pack <PATH_TO_NUSPEC_FILE>` polecenia. Polecenie zakłada, że folder, który zawiera zasoby NuGet w * C:\Users\\\<użytkownika > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp\*. Ale wszędzie tam, gdzie umieścić folder w systemie, `nuget pack` polecenie akceptuje ścieżkę do *nuspec* pliku:
+1. [Utwórz pakiet](/nuget/create-packages/creating-a-package#creating-the-package) przy użyciu `nuget pack <PATH_TO_NUSPEC_FILE>` polecenia. Polecenie zakłada, że folder, który zawiera zasoby NuGet w *C:\Users\\\<użytkownika > \Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp*. Ale wszędzie tam, gdzie umieścić folder w systemie, `nuget pack` polecenie akceptuje ścieżkę do *nuspec* pliku:
 
    ```console
    nuget pack C:\Users\<USER>\Documents\NuGetTemplates\GarciaSoftware.ConsoleTemplate.CSharp\GarciaSoftware.ConsoleTemplate.CSharp.nuspec

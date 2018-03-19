@@ -1,7 +1,7 @@
 ---
-title: Pakiety, Metapackages i platform
+title: Pakiety, metapackages i platform
 description: "Dowiedz się terminologia pakietów, metapackages i platform."
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,14 +9,15 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
-ms.workload: dotnetcore
-ms.openlocfilehash: 599f46253a29db5dfd21d0d44ecf67654b6d2eb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/16/2018
 ---
-# <a name="packages-metapackages-and-frameworks"></a>Pakiety, Metapackages i platform
+# <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapackages i platform
 
 Oprogramowanie .NET core to platforma z pakietami NuGet. Niektóre produktu napotyka korzyści z szczegółowych definicji pakietów, podczas gdy inne z coarse-grained. Aby umożliwić tym duality, produkt jest dystrybuowane zgodnie szczegółową pakietów i następnie opisanego w gruboziarnisty fragmenty o typie pakietu nieformalnego o nazwie "metapackage".
 
@@ -76,7 +77,7 @@ Zalety korzystania metapackages są:
 
 Klucza metapackages .NET Core są:
 
-- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — w tym artykule opisano bibliotek, które są częścią dystrybucji .NET Core. Ustanawia [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/master/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Zależy od na mniejszy `NETStandard.Library`.
+- [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — w tym artykule opisano bibliotek, które są częścią dystrybucji .NET Core. Ustanawia [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Zależy od na mniejszy `NETStandard.Library`.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — zestaw zgodności fasad, pozwalających na podstawie mscorlib przenośnej biblioteki klas (PCLs) do uruchamiania na .NET Core.
 
 ## <a name="frameworks"></a>Struktury
@@ -139,7 +140,7 @@ Może wydawać się dziwne do docelowego `netstandard1.3` , ale 1.6.0 wersji `NE
 
 Sytuacja odwrotna nie jest prawidłowym: przeznaczonych dla `netstandard1.6` z 1.3.0 wersji `NETStandard.Library`. Wyższy framework z niższym metapackage, nie może wskazać, ponieważ niższe metapackage wersji nie powoduje to udostępnienie wszystkie zasoby dla tej struktury wyższy. Przechowywanie wersji systemu metapackages potwierdza, czy metapackages pasuje do najwyższej wersji framework, które opisano w nich. Z systemu kontroli wersji, pierwszej wersji `NETStandard.Library` jest v1.6.0, biorąc pod uwagę, że zawiera on `netstandard1.6` zasoby. V1.3.0 jest używany w powyższym przykładzie dla symetrycznego z powyższym przykładzie, ale faktycznie nie istnieje.
 
-### <a name="net-core-application"></a>Aplikacja programu .NET core
+### <a name="net-core-application"></a>Aplikacja .NET core
 
 Aplikacja .NET Core (TFM: `netcoreapp`) reprezentuje framework pakietów i skojarzone interfejsy API, które są dostarczane z dystrybucji .NET Core i model aplikacji konsoli, która zapewnia. Aplikacje .NET core muszą używać tej platformy, z powodu przeznaczonych dla modelu aplikacji konsoli, jak biblioteki, w których jest przeznaczony do uruchamiania tylko na platformy .NET Core. Przy użyciu tej platformy, ogranicza aplikacji i bibliotek uruchomiona tylko na platformy .NET Core. 
 

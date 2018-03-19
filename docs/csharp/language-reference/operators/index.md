@@ -25,11 +25,11 @@ ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0ac5c6bfb129f0367c2d62ebf139e44b8eb60379
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 68da402bde670077e0700ce1ac60e7980c6568ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="c-operators"></a>Operatory C#
 C# zawiera wielu operatorów, które są symbole, które określają, jakie operacje (matematyczne, indeksowania, wywołanie funkcji itp.) w celu wykonania w wyrażeniu.  Możesz [przeciążenia](../../../csharp/programming-guide/statements-expressions-operators/overloadable-operators.md) wielu operatorów, aby zmienić ich znaczenia w przypadku zastosowania do typu zdefiniowanego przez użytkownika.  
@@ -49,7 +49,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
  
  [f(x)](../../../csharp/language-reference/operators/invocation-operator.md) — wywołania funkcji.  
   
- [&#91; x &#93; ](../../../csharp/language-reference/operators/index-operator.md) — indeksowania obiektu agregacji.  
+ [&#91;x&#93; ](../../../csharp/language-reference/operators/index-operator.md) — indeksowania obiektu agregacji.  
    
  [x ++](../../../csharp/language-reference/operators/increment-operator.md) — przyrostka inkrementacji.  Zwraca wartość x, a następnie aktualizuje lokalizację magazynu o wartości x, które jest większe (zazwyczaj dodaje całkowitą 1).  
   
@@ -69,7 +69,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [sizeof](../../../csharp/language-reference/keywords/sizeof.md) — zwraca rozmiar w bajtach argumentu typu.  
   
- [->](../../../csharp/language-reference/operators/dereference-operator.md)— wskaźnik dereferencji połączone z dostęp do elementu członkowskiego.  
+ [->](../../../csharp/language-reference/operators/dereference-operator.md) — wskaźnik dereferencji połączone z dostęp do elementu członkowskiego.  
   
 ## <a name="unary-operators"></a>Operatory jednoargumentowe  
  Tych operatorów mają wyższy priorytet niż następnej sekcji i niższy priorytet niż poprzedniej sekcji.  Uwaga: możesz kliknąć operatorów, aby przejść na szczegółowych stronach wraz z przykładami.  
@@ -78,7 +78,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [-x](../../../csharp/language-reference/operators/subtraction-operator.md) — negacji liczbowych.  
   
- [! x](../../../csharp/language-reference/operators/logical-negation-operator.md) — logiczny negacji.  
+ [\!x](../../../csharp/language-reference/operators/logical-negation-operator.md) — logiczny negacji.  
   
  [~ x](../../../csharp/language-reference/operators/bitwise-complement-operator.md) — dopełnienia bitowego.  
   
@@ -191,7 +191,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [x & = y](../../../csharp/language-reference/operators/and-assignment-operator.md) — i przypisania.  WARTOŚĆ `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
   
- [x &#124; = y](../../../csharp/language-reference/operators/or-assignment-operator.md) — przypisanie OR.  LUB wartość `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
+ [x &#124;= y](../../../csharp/language-reference/operators/or-assignment-operator.md) — przypisanie OR.  LUB wartość `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
   
  [x ^ = y](../../../csharp/language-reference/operators/xor-assignment-operator.md) — XOR przypisania.  XOR wartość z `y` z wartością `x`, zapisać wynik w `x`i zwraca nową wartość.  
   
@@ -199,7 +199,7 @@ C# zawiera wielu operatorów, które są symbole, które określają, jakie oper
   
  [x >> = y](../../../csharp/language-reference/operators/right-shift-assignment-operator.md) — przypisania przesunięcia w prawo.  Wartość przesunięcia `x` prawo `y` miejsca przechowywania wyników w `x`i zwraca nową wartość.  
   
- [=>](../../../csharp/language-reference/operators/lambda-operator.md)— deklaracji lambda.  
+ [=>](../../../csharp/language-reference/operators/lambda-operator.md) — deklaracji lambda.  
   
 ## <a name="arithmetic-overflow"></a>Przepełnienie arytmetyczne  
  Operatory arytmetyczne ([+](../../../csharp/language-reference/operators/addition-operator.md), [ - ](../../../csharp/language-reference/operators/subtraction-operator.md), [ * ](../../../csharp/language-reference/operators/multiplication-operator.md), [ / ](../../../csharp/language-reference/operators/division-operator.md)) może dostarczyło wyników, które są poza zakresem możliwe wartości liczbowe rodzaju. Należy zapoznać się w sekcji na konkretnym operatorze, aby uzyskać więcej informacji, ale w ogólne:  

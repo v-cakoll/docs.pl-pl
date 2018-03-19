@@ -66,6 +66,7 @@
 #### [Instrukcje: dostosowywanie zasad pamięci podręcznej na podstawie czasu](how-to-customize-a-time-based-cache-policy.md)
 #### [Instrukcje: ustawianie zasad pamięci podręcznej dla żądania](how-to-set-cache-policy-for-a-request.md)
 ## [Zabezpieczenia w programowaniu sieciowym](security-in-network-programming.md)
+### [Najlepsze rozwiązania dotyczące protokołu Transport Layer Security (TLS)](tls.md)
 ### [Używanie protokołu Secure Sockets Layer](using-secure-sockets-layer.md)
 #### [Wybór i sprawdzanie poprawności certyfikatu](certificate-selection-and-validation.md)
 ### [Uwierzytelnianie internetowe](internet-authentication.md)

@@ -6,12 +6,12 @@ ms.technology:
 - devlang-csharp
 ms.topic: article
 f1_keywords:
-- null
+- "null"
 - null_CSharpKeyword
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 8ca6236b1c9731091ad540d63ce13f11a73f0725

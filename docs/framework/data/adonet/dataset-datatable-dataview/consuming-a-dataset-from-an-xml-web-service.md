@@ -1,27 +1,29 @@
 ---
-title: "Korzystanie z zestawu danych z usługi sieci Web XML"
-ms.custom: 
+title: Korzystanie z zestawu danych z usługi sieci Web XML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 316bebfec652987351e64368c3b7c0155011fe8e
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9bfcd4d8dca38c9438c072c143cf7ba0eafd6ecf
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>Korzystanie z zestawu danych z usługi sieci Web XML
 <xref:System.Data.DataSet> Została zaprojektowana z projektem bez połączenia, w części w celu ułatwienia wygodny transportu danych za pośrednictwem Internetu. **DataSet** jest "serializacji" można określić jako dane wejściowe lub dane wyjściowe z usług XML sieci Web bez dodatkowy kod wymagany do strumienia zawartości **DataSet** z usługi XML sieci Web do klienta i z powrotem. **DataSet** jest niejawnie przekonwertować na strumień XML przy użyciu formatu elementu DiffGram wysyłane za pośrednictwem sieci i następnie odtworzyć strumienia XML jako **DataSet** po stronie odbiorczej. Zapewnia to bardzo prosty i elastyczny — metoda przekazywania i zwracający dane relacyjne przy użyciu usług XML sieci Web. Aby uzyskać więcej informacji na temat formatu elementu DiffGram, zobacz [DataSets](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md).  
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/19/2018
  Poniższy przykład przedstawia sposób tworzenia usługi XML sieci Web i klienta, który używał **DataSet** do przesyłania danych relacyjnych (włącznie z danymi zmodyfikowanego) i rozwiązać wszelkie aktualizacje z powrotem do oryginalnego źródła danych.  
   
 > [!NOTE]
->  Firma Microsoft zaleca zawsze rozważ wpływ na bezpieczeństwo podczas tworzenia usługi XML sieci Web. Aby uzyskać informacje na temat zabezpieczenia usługi XML sieci Web, zobacz [zabezpieczanie XML sieci Web usług utworzone za pomocą programu ASP.NET](http://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
+>  Firma Microsoft zaleca zawsze rozważ wpływ na bezpieczeństwo podczas tworzenia usługi XML sieci Web. Aby uzyskać informacje na temat zabezpieczenia usługi XML sieci Web, zobacz [zabezpieczanie XML sieci Web usług utworzone za pomocą programu ASP.NET](https://msdn.microsoft.com/library/354b2ab1-2782-4542-b32a-dc560178b90c).  
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>Aby utworzyć usługi XML sieci Web, która zwraca i korzysta z zestawu danych  
   
@@ -176,33 +178,33 @@ ms.lasthandoff: 01/19/2018
   
      Serwer proxy można utworzyć za pomocą narzędzia języka opisu usługi sieci Web. Na przykład jeśli usługa XML sieci Web jest narażony na http://myserver/data/DataSetSample.asmx adres URL, należy wydać polecenie podobne do poniższych utworzyć proxy Visual Basic .NET z przestrzenią nazw z **WebData.DSSample** i zapisze go w pliku Sample.VB.  
   
-    ```  
-    wsdl /l:VB /out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
     ```  
   
      Aby utworzyć serwer proxy C# w pliku sample.cs, należy wydać następujące polecenie.  
   
-    ```  
-    wsdl /l:CS /out:sample.cs http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
+    ```console
+    wsdl -l:CS -out:sample.cs http://myserver/data/DataSetSample.asmx -n:WebData.DSSample  
     ```  
   
      Serwer proxy można następnie skompilowany jako biblioteki i importowane do klienta usługi XML sieci Web. Aby skompilować kod serwera proxy Visual Basic .NET, które są przechowywane w sample.vb jako sample.dll, należy wydać następujące polecenie.  
   
-    ```  
-    vbc /t:library /out:sample.dll sample.vb /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console  
+    vbc -t:library -out:sample.dll sample.vb -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
      Aby skompilować kod serwera proxy C# przechowywane w sample.cs jako sample.dll, należy wydać następujące polecenie.  
   
-    ```  
-    csc /t:library /out:sample.dll sample.cs /r:System.dll /r:System.Web.Services.dll /r:System.Data.dll /r:System.Xml.dll  
+    ```console
+    csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
 3.  Tworzenie klienta usługi XML sieci Web.  
   
      Jeśli chcesz, aby program Visual Studio Generowanie klasy serwera proxy usługi sieci Web, po prostu utworzyć projekt klienta i, w oknie Solution Explorer, kliknij prawym przyciskiem myszy projekt, kliknij przycisk **Dodaj odwołanie sieci Web**i wybierz usługę sieci Web z na liście dostępnych usług sieci Web (może to wymagać podając adres punktu końcowego usługi sieci Web, jeśli usługa sieci Web nie jest dostępny w bieżącym rozwiązaniu lub na bieżącym komputerze.) Jeśli serwer proxy usługi XML sieci Web samodzielnie utworzony (zgodnie z opisem w poprzednim kroku), można go zaimportować do kodu klienta i korzystać z metod usługi XML sieci Web. Następujący przykładowy kod importuje biblioteki serwera proxy, wywołania **GetCustomers** w celu uzyskania listy klientów, dodaje nowego klienta, a następnie zwraca **DataSet** z aktualizacjami do **UpdateCustomers** .  
   
-     Należy zauważyć, że przekazuje przykładzie **DataSet** zwrócony przez **DataSet.GetChanges** do **UpdateCustomers** ponieważ tylko zmodyfikowanych wierszy musi zostać przekazane do  **UpdateCustomers**. **UpdateCustomers** zwraca rozpoznać **zestawu danych**, które można następnie **scalania** do istniejącego **DataSet** aby rozpoznać zmiany i Błąd wiersza informacji z aktualizacji. Poniższy kod założono użycie programu Visual Studio można utworzyć odwołania sieci Web i nazwy odwołania sieci Web do DsSample w **Dodaj odwołanie sieci Web** okno dialogowe.  
+     Należy zauważyć, że przekazuje przykładzie **DataSet** zwrócony przez **DataSet.GetChanges** do **UpdateCustomers** ponieważ tylko zmodyfikowanych wierszy musi zostać przekazane do  **UpdateCustomers**. **UpdateCustomers** zwraca rozpoznać **zestawu danych**, które można następnie **scalania** do istniejącego **DataSet** uwzględnienie rozpoznać zmiany i wszystkie informacje o błędzie wiersza z aktualizacji. Poniższy kod założono użycie programu Visual Studio można utworzyć odwołania sieci Web i nazwy odwołania sieci Web do DsSample w **Dodaj odwołanie sieci Web** okno dialogowe.  
   
     ```vb  
     Imports System  
@@ -260,14 +262,14 @@ ms.lasthandoff: 01/19/2018
   
      Jeśli użytkownik zdecyduje się samodzielnie utworzyć klasy proxy, należy wykonać następujące dodatkowe czynności. Aby skompilować próbki, podaj biblioteki serwera proxy, który został utworzony (sample.dll) i powiązane bibliotek .NET. Do skompilowania programu Visual Basic .NET w wersji próbki przechowywane w client.vb pliku należy wydać następujące polecenie.  
   
-    ```  
-    vbc client.vb /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    vbc client.vb -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
      Do skompilowania wersji języka C# próbki przechowywane w client.cs pliku, należy wydać następujące polecenie.  
   
-    ```  
-    csc client.cs /r:sample.dll /r:System.dll /r:System.Data.dll /r:System.Xml.dll /r:System.Web.Services.dll  
+    ```console
+    csc client.cs -r:sample.dll -r:System.dll -r:System.Data.dll -r:System.Xml.dll -r:System.Web.Services.dll  
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
@@ -277,5 +279,5 @@ ms.lasthandoff: 01/19/2018
  [Wypełnianie zestawu danych z elementu DataAdapter](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  [Aktualizowanie źródeł danych za pomocą elementów DataAdapters](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  [Parametry elementu DataAdapter](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)  
- [Narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
+ [Narzędzia języka opisu usługi sieci Web (Wsdl.exe)](https://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88)  
  [ADO.NET zarządzanego dostawcy i zestawu danych w Centrum deweloperów](http://go.microsoft.com/fwlink/?LinkId=217917)

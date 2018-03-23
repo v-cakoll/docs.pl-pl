@@ -17,22 +17,22 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 86f1884749b5fdf93254985ab3e163dca0562648
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
  
-[.NET framework 4.7.1](#v471)    
+[.NET Framework 4.7.1](#v471)    
 [.NET framework 4.7](#v47)   
 [.NET framework 4.6.2](#v462)   
 [.NET framework 4.6.1](#v461)   
 [.NET 2015 i .NET Framework 4.6](#v46)   
-[.NET framework 4.5.2](#v452)   
-[.NET framework 4.5.1](#v451)   
+[.NET Framework 4.5.2](#v452)   
+[.NET Framework 4.5.1](#v451)   
 [Program .NET framework 4.5](#v45)   
 
 Ten artykuł zawiera szczegółowe informacje na temat każdej nowej funkcji i mogą ulec zmianie. Aby uzyskać ogólne informacje o .NET Framework, zobacz [wprowadzenie](../../../docs/framework/get-started/index.md). Dla obsługiwanych platform, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md). Łącza pobierania oraz instrukcje dotyczące instalacji, zobacz [Przewodnik instalacji](../../../docs/framework/install/guide-for-developers.md).
@@ -192,7 +192,7 @@ Począwszy od .NET Framework 4.7, ASP.NET dodaje nowy zestaw interfejsów API, k
 <a name="wcf47" />
 #### <a name="windows-communication-foundation-wcf"></a>Windows Communication Foundation (WCF)
 
-Windows Communication Foundation (WFC) dodaje następujące funkcje i zmiany:
+Windows Communication Foundation (WCF) dodaje następujące funkcje i zmiany:
 
 **Możliwość konfigurowania domyślnych ustawień zabezpieczeń wiadomości do protokołu TLS 1.1 i TLS 1.2**
 
@@ -248,7 +248,7 @@ WPF do drukowania interfejsów API w <xref:System.Printing.PrintQueue?displayPro
 
 - [Kryptografia](#Crypto462)
 
-- [Klient SQL](#SQLClient)
+- [SqlClient](#SQLClient)
 
 - [Windows Communication Foundation](#WCF)
 
@@ -398,7 +398,7 @@ End Function
 
 |ECDiffieHellman — metoda|Opis|
 |----------------------------|-----------------|
-|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu formuły<br /><br /> Wyznaczania wartości skrótu (secretPrepend &#124; &#124; *x* &#124; &#124; secretAppend)<br /><br /> SKRÓT (secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> gdzie *x* jest obliczana wynik algorytmu Diffie-Hellman WE.|
+|<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHash%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu formuły<br /><br /> SKRÓT (secretPrepend &#124; &#124; *x* &#124; &#124; secretAppend)<br /><br /> SKRÓT (secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> gdzie *x* jest obliczana wynik algorytmu Diffie-Hellman WE.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyFromHmac%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Security.Cryptography.HashAlgorithmName%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu formuły<br /><br /> Metoda HMAC (hmacKey, secretPrepend &#124; &#124; *x* &#124; &#124; secretAppend)<br /><br /> Metoda HMAC (hmacKey, secretPrepend OrElse *x* OrElse secretAppend)<br /><br /> gdzie *x* jest obliczana wynik algorytmu Diffie-Hellman WE.|
 |<xref:System.Security.Cryptography.ECDiffieHellman.DeriveKeyTls%28System.Security.Cryptography.ECDiffieHellmanPublicKey%2CSystem.Byte%5B%5D%2CSystem.Byte%5B%5D%29>|Pochodzi materiału klucza przy użyciu algorytmu wyliczającego TLS pseudolosowego — funkcja (PRF).|
 
@@ -468,19 +468,19 @@ End Function
 
  Dodawanie nowej `PoolBlockingPeriod` — słowo kluczowe umożliwia wybranie okresu blokowania najlepiej nadaje się do aplikacji. Wartości:
 
- `Auto`Puli połączeń blokuje okresu dla aplikacji, która łączy się z bazą danych SQL Azure jest wyłączona, a puli połączeń blokuje okresu dla aplikacji, która łączy do dowolnego wystąpienia programu SQL Server jest włączona. Jest to wartość domyślna. Jeśli nazwa punktu końcowego serwera kończy się na następujących, są one uznawane za baz danych SQL Azure:
+ `Auto` Puli połączeń blokuje okresu dla aplikacji, która łączy się z bazą danych SQL Azure jest wyłączona, a puli połączeń blokuje okresu dla aplikacji, która łączy do dowolnego wystąpienia programu SQL Server jest włączona. Jest to wartość domyślna. Jeśli nazwa punktu końcowego serwera kończy się na następujących, są one uznawane za baz danych SQL Azure:
 
-- . database.windows.net
+- .database.windows.net
 
-- . database.chinacloudapi.cn
+- .database.chinacloudapi.cn
 
-- . database.usgovcloudapi.net
+- .database.usgovcloudapi.net
 
-- . database.cloudapi.de
+- .database.cloudapi.de
 
- `AlwaysBlock`Połączenia czasu blokowania puli jest zawsze włączone.
+ `AlwaysBlock` Połączenia czasu blokowania puli jest zawsze włączone.
 
- `NeverBlock`Połączenia czasu blokowania puli jest zawsze wyłączona.
+ `NeverBlock` Połączenia czasu blokowania puli jest zawsze wyłączona.
 
  **Ulepszenia zawsze zaszyfrowane** SQLClient wprowadza dwa ulepszenia zawsze szyfrowane:
 
@@ -522,7 +522,7 @@ AppContext.SetSwitch(disableCngCertificates, False)
 </runtime>
 ```
 
-Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obiekt używa <xref:System.TimeZoneInfo> wpisz zamiast <xref:System.TimeZone> typu do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo>obsługuje wiele reguł korygowania, dzięki czemu możliwe do pracy z danych historycznych strefy czasowej.   <xref:System.TimeZone> nie.
+Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obiekt używa <xref:System.TimeZoneInfo> wpisz zamiast <xref:System.TimeZone> typu do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo> obsługuje wiele reguł korygowania, dzięki czemu możliwe do pracy z danych historycznych strefy czasowej.   <xref:System.TimeZone> nie.
 
 Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i zmiany strefy czasowej, zobacz [Przegląd stref czasowych](../../../docs/standard/datetime/time-zone-overview.md).
 
@@ -547,7 +547,7 @@ Wynik jest ciągiem czas serializacji "03:00:00.0000000-08:00" dla systemu osiem
 </runtime>
 ```
 
-Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obiekt używa <xref:System.TimeZoneInfo> wpisz zamiast <xref:System.TimeZone> typu do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo>obsługuje wiele reguł korygowania, dzięki czemu możliwe do pracy z danych historycznych strefy czasowej.   <xref:System.TimeZone> nie.
+Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obiekt używa <xref:System.TimeZoneInfo> wpisz zamiast <xref:System.TimeZone> typu do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo> obsługuje wiele reguł korygowania, dzięki czemu możliwe do pracy z danych historycznych strefy czasowej.   <xref:System.TimeZone> nie.
 
 Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i zmiany strefy czasowej, zobacz [Przegląd stref czasowych](../../../docs/standard/datetime/time-zone-overview.md).
 
@@ -626,7 +626,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
  **Obsługa wyrażeń C# i IntelliSense w Projektancie WF Re-hosted** począwszy [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], WF obsługuje wyrażeń C#, zarówno w projektancie programu Visual Studio i w przepływach pracy kodu. Re-hosted projektanta przepływów pracy jest kluczowym elementem WF umożliwiający projektanta przepływów pracy w aplikacji poza programem Visual Studio (na przykład na platformie WPF).  Windows Workflow Foundation udostępnia możliwość obsługi wyrażeń C# i IntelliSense w Projektancie przepływów pracy Re-hosted. Aby uzyskać więcej informacji, zobacz [blogu Windows Workflow Foundation](http://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409).
 
- `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio`W wersjach programu .NET Framework starszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], IntelliSense projektanta WF został przerwany, gdy klient odtwarza projektu przepływu pracy w programie Visual Studio. Kompilacja projektu zakończy się pomyślnie, gdy typy przepływu pracy nie zostały znalezione w Projektancie i ostrzeżeń z IntelliSense dla Brak typów przepływu pracy są wyświetlane w **listy błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i udostępnia IntelliSense.
+ `Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` W wersjach programu .NET Framework starszych niż [!INCLUDE[net_v462](../../../includes/net-v462-md.md)], IntelliSense projektanta WF został przerwany, gdy klient odtwarza projektu przepływu pracy w programie Visual Studio. Kompilacja projektu zakończy się pomyślnie, gdy typy przepływu pracy nie zostały znalezione w Projektancie i ostrzeżeń z IntelliSense dla Brak typów przepływu pracy są wyświetlane w **listy błędów** okna. [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] Rozwiązuje ten problem i udostępnia IntelliSense.
 
  **Aplikacje V1 przepływu pracy z przepływu pracy śledzenia na teraz być uruchamiane w trybie FIPS** maszyny włączono obsługę trybu zgodności ze standardem FIPS można teraz pomyślnie uruchomić przepływ pracy w wersji 1 stylu aplikacji z przepływem pracy śledzenia na. Aby włączyć ten scenariusz, musisz wprowadzić następujące zmiany do pliku app.config:
 
@@ -789,7 +789,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
      Aby uzyskać informacje, zobacz [ASP.NET 5](http://go.microsoft.com/fwlink/?LinkId=518238).
 
-- **Aktualizacje platformy ASP.NET**
+- **ASP.NET Updates**
 
     - **Opróżnianie odpowiedzi asynchronicznego opartego na zadaniach interfejsu API**
 
@@ -946,9 +946,9 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
          Jest na użytek formacie spójnej przełączników, ponieważ są one formalnego kontraktu udostępnianych przez bibliotekę. Poniżej przedstawiono dwa formaty oczywiste.
 
-        - *Przełącznik*. *przestrzeń nazw*. *switchName*
+        - *Przełącznik*.* przestrzeń nazw*.* switchName*
 
-        - *Przełącznik*. *Biblioteka*. *switchName*
+        - *Przełącznik*.* Biblioteka*.* switchName*
 
     - **Zmiany opartego na zadaniach wzorca asynchronicznego (TAP)**
 
@@ -1134,7 +1134,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - **Zmiana rozmiaru formantów formularzy systemu Windows.** Ta funkcja została rozszerzona. Ustawienie DPI systemu umożliwia teraz zmienić rozmiar składniki następujące dodatkowe kontrole (na przykład strzałkę listy rozwijanej w polu kombi):
 
-     <xref:System.Windows.Forms.ComboBox>    <xref:System.Windows.Forms.ToolStripComboBox>    <xref:System.Windows.Forms.ToolStripMenuItem>    <xref:System.Windows.Forms.Cursor>    <xref:System.Windows.Forms.DataGridView>    <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
+     <xref:System.Windows.Forms.ComboBox> <xref:System.Windows.Forms.ToolStripComboBox> <xref:System.Windows.Forms.ToolStripMenuItem> <xref:System.Windows.Forms.Cursor> <xref:System.Windows.Forms.DataGridView> <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 
      Jest to funkcji opcjonalnych. Aby go włączyć, ustaw `EnableWindowsFormsHighDpiAutoResizing` elementu `true` w pliku konfiguracyjnym (app.config) aplikacji:
 
@@ -1166,7 +1166,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - **Podwyższenie poziomu transakcji i konwertowana na trwałe rejestracji**
 
-     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType>Nowy interfejs API dodaje programu .NET Framework 4.5.2 i 4.6
+     <xref:System.Transactions.Transaction.PromoteAndEnlistDurable%2A?displayProperty=nameWithType> Nowy interfejs API dodaje programu .NET Framework 4.5.2 i 4.6
 
     ```csharp
     [System.Security.Permissions.PermissionSetAttribute(System.Security.Permissions.SecurityAction.LinkDemand, Name = "FullTrust")]
@@ -1196,7 +1196,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
      Aby uzyskać więcej informacji na temat tych zmian, zobacz [przenośnej biblioteki klas](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md).
 
-- Zawartość .NET Framework teraz ustawić obejmuje dokumentacji [!INCLUDE[net_native](../../../includes/net-native-md.md)], która jest wstępnej kompilacji technologie umożliwiające tworzenie i wdrażanie aplikacji systemu Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)]kompiluje aplikacji bezpośrednio do kodu natywnego, a nie na języku pośrednim (IL), aby zapewnić lepszą wydajność. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji za pomocą platformy .NET Native](../../../docs/framework/net-native/index.md).
+- Zawartość .NET Framework teraz ustawić obejmuje dokumentacji [!INCLUDE[net_native](../../../includes/net-native-md.md)], która jest wstępnej kompilacji technologie umożliwiające tworzenie i wdrażanie aplikacji systemu Windows. [!INCLUDE[net_native](../../../includes/net-native-md.md)] kompiluje aplikacji bezpośrednio do kodu natywnego, a nie na języku pośrednim (IL), aby zapewnić lepszą wydajność. Aby uzyskać więcej informacji, zobacz [Kompilowanie aplikacji za pomocą platformy .NET Native](../../../docs/framework/net-native/index.md).
 
 - [Źródła .NET Framework odwołanie](http://referencesource.microsoft.com/) udostępnia nowe funkcje przeglądania i ulepszone funkcje. Teraz można przeglądać w trybie online, kod źródłowy .NET Framework [Pobierz odwołanie](http://referencesource.microsoft.com/download.html) przeglądania w trybie offline i kroków źródeł (w tym poprawek i aktualizacji) podczas debugowania. Aby uzyskać więcej informacji, zobacz wpis w blogu [wygląda źródła odwołania .NET](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/).
 
@@ -1214,7 +1214,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - Zmiana rozmiaru formantów formularzy systemu Windows. Ustawienie DPI systemu można zmienić rozmiaru elementów formantów (na przykład ikony, które są widoczne w siatce właściwości) służy przez Rezygnacja się przy użyciu wpisu w pliku konfiguracji aplikacji (app.config) dla aplikacji. Ta funkcja jest obecnie obsługiwane w następujących formantów formularzy systemu Windows:
 
-     <xref:System.Windows.Forms.PropertyGrid>    <xref:System.Windows.Forms.TreeView>Niektóre aspekty <xref:System.Windows.Forms.DataGridView> (zobacz [nowe funkcje w wersji 4.5.2](#v452) dodatkowych formantów obsługiwane)
+     <xref:System.Windows.Forms.PropertyGrid> <xref:System.Windows.Forms.TreeView> Niektóre aspekty <xref:System.Windows.Forms.DataGridView> (zobacz [nowe funkcje w wersji 4.5.2](#v452) dodatkowych formantów obsługiwane)
 
      Aby włączyć tę funkcję, Dodaj nową \<appSettings > elementu do pliku konfiguracyjnego (app.config) i zestaw `EnableWindowsFormsHighDpiAutoResizing` elementu `true`:
 
@@ -1228,7 +1228,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - Wartości zwracane w debugerze programu Visual Studio. Podczas debugowania aplikacji zarządzanej przez [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], wyświetla okno zmiennych automatycznych zwracać typów i wartości dla metod. Te informacje są dostępne dla pulpitu, Sklep Windows i aplikacje Windows Phone. Aby uzyskać więcej informacji, zobacz [Sprawdź wartości zwracanych z wywołań metody](http://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx) w bibliotece MSDN.
 
-- Edytuj i Kontynuuj dla aplikacji 64-bitowych. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)]obsługuje funkcję Edytuj i Kontynuuj dla 64-bitowych zarządzane aplikacje dla pulpitu, Sklep Windows i Windows Phone. Istniejące ograniczenia pozostają w mocy zarówno 32-bitowe i 64-bitowych aplikacji (zobacz w ostatniej sekcji [obsługiwane zmiany kodu (C#)](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
+- Edytuj i Kontynuuj dla aplikacji 64-bitowych. [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)] obsługuje funkcję Edytuj i Kontynuuj dla 64-bitowych zarządzane aplikacje dla pulpitu, Sklep Windows i Windows Phone. Istniejące ograniczenia pozostają w mocy zarówno 32-bitowe i 64-bitowych aplikacji (zobacz w ostatniej sekcji [obsługiwane zmiany kodu (C#)](/visualstudio/debugger/supported-code-changes-csharp) artykułu).
 
 - Debugowanie Async-aware. Aby ułatwić debugowania w aplikacjach asynchronicznych w [!INCLUDE[vs_dev12](../../../includes/vs-dev12-md.md)], stos wywołań ukrywa dostarczony przez kompilatory do obsługi programowania asynchronicznego kod infrastruktury i również łańcuchów w ramkach logiczny obiekt nadrzędny, aby można było wykonywać logicznych program wykonywania więcej wyraźnie. Okno zadań zastępuje okno zadań równoległych i przedstawia zadania, które odnoszą się do określonego punktu przerwania i wyświetla również inne zadania, które są aktualnie aktywne lub zaplanowane w aplikacji. Informacje o tej funkcji w sekcji "debugowanie obsługujący Async" [anonsu .NET Framework 4.5.1](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/).
 
@@ -1377,7 +1377,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
 - Etykietki narzędzi edytora XML.
 
-- <xref:System.ServiceModel.ChannelFactory>Obsługa buforowania.
+- <xref:System.ServiceModel.ChannelFactory> Obsługa buforowania.
 
 - Obsługa kompresji kodera binarnego.
 

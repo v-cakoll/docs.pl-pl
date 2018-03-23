@@ -1,12 +1,13 @@
 ---
 title: Praca programistyczna z plikami .resx
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 17c2cee97c3347a98a015e8526e436815378eed0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 951bd2160baddf100a685af2d78ec49e2146077b
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="working-with-resx-files-programmatically"></a>Praca programistyczna z plikami .resx
 Ponieważ pliki zasobów (resx) XML musi składać się z dobrze zdefiniowany XML, dołączeniu nagłówka, który należy wykonać określonego schematu następuje dane w pary nazwa/wartość, może się okazać, że ręczne tworzenie tych plików jest podatne na błędy. Alternatywnie pliki .resx można utworzyć programowo, używając typy i składniki w bibliotece klas programu .NET Framework. Biblioteka klas programu .NET Framework umożliwia również pobrać zasobów, które są przechowywane w plikach resx. W tym temacie wyjaśniono, jak można użyć typów i członków <xref:System.Resources> przestrzeni nazw, aby pracować z plikami .resx.  
@@ -79,19 +81,19 @@ Ponieważ pliki zasobów (resx) XML musi składać się z dobrze zdefiniowany XM
   
  Aby przekonwertować pliku .resx w plik .resources, należy użyć [Generator pliku zasobów (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md), który ma następującą składnię podstawowe:  
   
- **ResGen.exe** *.resxFilename*  
+ **Resgen.exe** *.resxFilename*  
   
  Wynik jest plik zasobu binarnego, który ma taką samą nazwę pliku głównego pliku .resx i rozszerzenie pliku .resources. Ten plik można skompilować następnie do pliku wykonywalnego lub biblioteki, w czasie kompilacji. Jeśli używasz kompilator Visual Basic, aby osadzić pliku zasobów w plik wykonywalny aplikacji należy użyć następującej składni:  
   
- **vbc —** *filename* **/.vb Resource:** *.resourcesFilename*  
+ **vbc —** *filename* **.vb-resource:** *.resourcesFilename*  
   
  Jeśli używasz języka C#, ma następującą składnię:  
   
- **CSC** *filename* **/.cs Resource:** *.resourcesFilename*  
+ **CSC** *filename* **CS-resource:** *.resourcesFilename*  
   
  Plik .resources można również osadzać w zestawie satelickim przy użyciu [Assembly Linker (AL.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md), który ma następującą składnię podstawowe:  
   
- **Al** *resourcesFilename* **/out:** *assemblyFilename*  
+ **Al** *resourcesFilename* **-out:** *assemblyFilename*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Tworzenie plików zasobów](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)  

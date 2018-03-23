@@ -1,12 +1,13 @@
 ---
 title: 'Porady: opracowywanie prostego formantu formularzy systemu Windows'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-caps.latest.revision: "17"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da876ec74bf80d4329451a9bf125421731c7f9de
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ab7fced9237cad3de30d417770f6f1d7f7e7ed6a
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>Porady: opracowywanie prostego formantu formularzy systemu Windows
 W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu formularzy systemu Windows. Proste kontrolki opracowane w tym przewodniku umożliwia wyrównanie jego <xref:System.Windows.Forms.Control.Text%2A> właściwość zostanie zmieniony. Nie podnieść lub obsługę zdarzeń.  
@@ -50,7 +52,7 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
      [!code-csharp[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
-     Gdy właściwość zmiany wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> metodę, aby odświeżyć formantu. <xref:System.Windows.Forms.Control.Invalidate%2A>jest zdefiniowany w klasie podstawowej <xref:System.Windows.Forms.Control>.  
+     Gdy właściwość zmiany wyświetlania kontrolki, należy wywołać <xref:System.Windows.Forms.Control.Invalidate%2A> metodę, aby odświeżyć formantu. <xref:System.Windows.Forms.Control.Invalidate%2A> jest zdefiniowany w klasie podstawowej <xref:System.Windows.Forms.Control>.  
   
 3.  Zastąpienie chronionej <xref:System.Windows.Forms.Control.OnPaint%2A> odziedziczone metody <xref:System.Windows.Forms.Control> zapewnienie logikę renderowania formantu. Jeśli nie zastępują <xref:System.Windows.Forms.Control.OnPaint%2A>, formantu nie będzie mógł się rysowanie. W poniższy fragment kodu <xref:System.Windows.Forms.Control.OnPaint%2A> metoda Wyświetla <xref:System.Windows.Forms.Control.Text%2A> właściwość dziedziczona z <xref:System.Windows.Forms.Control> z wyrównanie określone przez `alignmentValue` pola.  
   
@@ -70,12 +72,12 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
   
     2.  Kompilowanie kodu źródłowego w zestawie i zapisz go w katalogu aplikacji. Aby to zrobić, uruchom następujące polecenie z katalogu, który zawiera plik źródłowy.  
   
-        ```vb  
-        vbc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.vb  
+        ```console  
+        vbc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.vb  
         ```  
   
-        ```csharp  
-        csc /t:library /out:[path to your application's directory]/CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll FirstControl.cs  
+        ```console 
+        csc -t:library -out:[path to your application's directory]/CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll FirstControl.cs  
         ```  
   
          `/t:library` — Opcja kompilatora informuje kompilator, że zestaw tworzona jest biblioteki (a nie plik wykonywalny). `/out` Opcja określa ścieżkę i nazwę zestawu. `/r` Opcja zawiera nazwę zestawy, do których odwołuje się kod. W tym przykładzie utworzysz zestaw prywatny, który można używać tylko aplikacji. W związku z tym należy zapisać go w katalogu aplikacji. Aby uzyskać więcej informacji dotyczących pakowania i wdrażania kontrolkę do dystrybucji, zobacz [wdrożenia](../../../../docs/framework/deployment/index.md).  
@@ -94,19 +96,19 @@ W tej sekcji przedstawiono podstawowe etapy tworzenia niestandardowego formantu 
   
 2.  Kompilowanie kodu źródłowego do pliku wykonywalnego zestawu, wykonując następujące polecenie z katalogu, który zawiera plik źródłowy.  
   
-    ```vb  
-    vbc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.vb  
+    ```console  
+    vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
     ```  
   
-    ```csharp  
-    csc /r:CustomWinControls.dll /r:System.dll /r:System.Windows.Forms.dll /r:System.Drawing.dll SimpleForm.cs  
+    ```console 
+    csc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.cs  
     ```  
   
      Zestaw zawierający klasę jest CustomWinControls.dll `FirstControl`. Ten zestaw musi być w tym samym katalogu co plik źródłowy dla formularza, który uzyskuje dostęp do niego (SimpleForm.cs lub SimpleForms.vb).  
   
 3.  Wykonanie SimpleForm.exe przy użyciu następującego polecenia.  
   
-    ```  
+    ```console
     SimpleForm  
     ```  
   

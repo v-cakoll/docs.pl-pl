@@ -1,6 +1,6 @@
 ---
-title: "Przepływ pracy tworzenia aplikacji Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker"
+title: Przepływ pracy tworzenia aplikacji Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 9c3df50430117936fd0b9d4390cb84e02085e48d
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia aplikacji Docker
 
@@ -351,7 +351,7 @@ Aby uzyskać [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-lin
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Krok 6. Testowanie aplikacji Docker za pomocą lokalnego hosta Docker
 
-Ten krok będą się różnić w zależności od czynności aplikacji. W prostą aplikację .NET Core w sieci Web, który jest wdrożony jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w plik Dockerfile mapuje kontenera do portu na hoście, który jest inny niż 80, obejmuje host pocztowy w adresie URL).
+Ten krok będą się różnić w zależności od czynności aplikacji. W prostą aplikację .NET Core w sieci Web, który jest wdrożony jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w plik Dockerfile mapuje kontenera do portu na hoście, który jest inny niż 80, m.in. port hosta w adresie URL).
 
 ![](./media/image18.png)
 
@@ -377,7 +377,7 @@ Jeśli tworzysz podejście Edytor/CLI trudniej jest debugowanie kontenerów i mo
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Debugowanie aplikacji w lokalnych kontenerze Docker**
+-   **Debugowanie aplikacji w kontenerze Docker lokalnego**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 -   **Steve Lasker. Tworzenie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu rozwiązania Docker.** Wideo.
@@ -395,7 +395,7 @@ Ponadto należy wykonać krok 2 (Obsługa Docker dodawanie do projektów) tylko 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Steve Lasker. .NET — rozwój docker z programu Visual Studio 2017**
+-   **Steve Lasker. .NET — rozwój docker z programu Visual Studio 2017 r.**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 -   **Jeffrey T. Fritz. Umieść aplikacji .NET Core w kontenerze o nowe narzędzia Docker dla programu Visual Studio**

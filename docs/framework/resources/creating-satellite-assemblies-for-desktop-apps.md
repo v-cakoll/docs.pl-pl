@@ -1,12 +1,13 @@
 ---
-title: "Tworzenie zestawów satelickich dla aplikacji klasycznych"
-ms.custom: 
+title: Tworzenie zestawów satelickich dla aplikacji klasycznych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -30,16 +31,17 @@ helpviewer_keywords:
 - compiling satellite assemblies
 - re-signing assemblies
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0d360dc5b95c1cdb8de54bcbd723d0056c81c9c2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f75da3332c8172a6a888e6f40c66383866799ea
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>Tworzenie zestawów satelickich dla aplikacji klasycznych
 Pliki zasobów odgrywają kluczową rolę w zlokalizowanych aplikacji. Umożliwiają one aplikacji do wyświetlenia ciągów, obrazy i innych danych przez użytkownika języka i kultury oraz w celu zapewnienia alternatywnych danych, jeśli zasoby dla języka dla użytkownika lub kultury są niedostępne. .NET Framework wykorzystuje model gwiazdy — Aby znaleźć i pobrać zlokalizowanych zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny niemożliwe do zlokalizowania i zasobów dla kultury pojedynczego, nazywanego zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; Jeśli nie są dostępne nie zlokalizowanych zasobów jest używany. Możesz użyć <xref:System.Resources.NeutralResourcesLanguageAttribute> atrybut do wyznaczenia kultura kultury domyślnej aplikacji. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla pojedynczego kultury zlokalizowany, ale nie zawiera żadnego kodu. Ponieważ zestawów satelickich nie są częścią zestawu głównego, można łatwo aktualizacji lub zastąpienia zasobów, które odpowiadają określoną kulturę bez zastępowania główny zestaw aplikacji.  
@@ -71,25 +73,25 @@ Katalogu zestawów satelickich
   
  Polecenie Al.exe tworzy zestaw satelicki dla aplikacji `Example` z strings.de.resources pliku zasobów niemieckim.  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll  
 ```  
   
  Polecenie Al.exe tworzy także zestaw satelicki dla aplikacji `Example` z strings.de.resources pliku. **Template** opcja powoduje, że zestawu satelickiego dziedziczenia wszystkich metadanych zestawu z wyjątkiem informacji o kulturze z nadrzędnego zestawu (Example.dll).  
   
-```  
-al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dll /template:Example.dll  
+```console
+al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dll -template:Example.dll  
 ```  
   
  W poniższej tabeli opisano opcje Al.exe używane w tych poleceniach bardziej szczegółowo.  
   
 |Opcja|Opis|  
 |------------|-----------------|  
-|**/ target:**lib|Określa, że Twoje zestawu satelickiego jest skompilowana do pliku biblioteki (.dll). Ponieważ zestaw satelicki nie zawiera kodu wykonywalnego, a nie główny zestaw aplikacji, musisz najpierw zapisać zestawy satelickie jako biblioteki dll.|  
-|**/ osadzić:**strings.de.resources|Określa nazwę pliku zasobu do osadzenia kiedy Al.exe kompiluje zestawu. Wiele plików .resources można osadzić w zestawie satelickim, ale jeśli wykonujesz model gwiazdy — należy skompilować jednego zestawu satelickiego dla każdego kultury. Można jednak utworzyć oddzielne .resources — pliki do ciągów i obiektów.|  
-|**/ kultury:**de|Określa kulturę zasobów do skompilowania. Środowisko uruchomieniowe języka wspólnego używa tych informacji podczas wyszukiwania zasobów dla określonej kultury. Jeśli zostanie pominięta, Al.exe nadal będzie kompilować zasobu, ale środowisko uruchomieniowe nie będzie można go, gdy użytkownik zażąda go.|  
-|**/ out:**Example.resources.dll|Określa nazwę pliku wyjściowego. Nazwa musi występować po standard nazewnictwa *nazwę bazową*.resources. *rozszerzenie*, gdzie *nazwę bazową* jest nazwą zestawu głównego i *rozszerzenia* jest prawidłowe rozszerzenie (na przykład .dll). Należy pamiętać, że środowisko wykonawcze nie jest możliwość określenia kultury zestawu satelickiego, na podstawie jego nazwy pliku wyjściowego; należy użyć **/kultury** opcję, aby określić go.|  
-|**Template:**Example.dll|Określa, z którego zestawu satelickiego będzie dziedziczyć wszystkich metadanych zestawu z wyjątkiem pola kultury zestawu. Ta opcja dotyczy zestawy satelickie tylko wtedy, gdy określ zestaw, który ma [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
+|**-docelowych:**lib|Określa, że Twoje zestawu satelickiego jest skompilowana do pliku biblioteki (.dll). Ponieważ zestaw satelicki nie zawiera kodu wykonywalnego, a nie główny zestaw aplikacji, musisz najpierw zapisać zestawy satelickie jako biblioteki dll.|  
+|**-embed:**strings.de.resources|Określa nazwę pliku zasobu do osadzenia kiedy Al.exe kompiluje zestawu. Wiele plików .resources można osadzić w zestawie satelickim, ale jeśli wykonujesz model gwiazdy — należy skompilować jednego zestawu satelickiego dla każdego kultury. Można jednak utworzyć oddzielne .resources — pliki do ciągów i obiektów.|  
+|**-kultury:**de|Określa kulturę zasobów do skompilowania. Środowisko uruchomieniowe języka wspólnego używa tych informacji podczas wyszukiwania zasobów dla określonej kultury. Jeśli zostanie pominięta, Al.exe nadal będzie kompilować zasobu, ale środowisko uruchomieniowe nie będzie można go, gdy użytkownik zażąda go.|  
+|**-out:**Example.resources.dll|Określa nazwę pliku wyjściowego. Nazwa musi występować po standard nazewnictwa *nazwę bazową*.resources. *rozszerzenie*, gdzie *nazwę bazową* jest nazwą zestawu głównego i *rozszerzenia* jest prawidłowe rozszerzenie (na przykład .dll). Należy pamiętać, że środowisko wykonawcze nie jest możliwość określenia kultury zestawu satelickiego, na podstawie jego nazwy pliku wyjściowego; należy użyć **/kultury** opcję, aby określić go.|  
+|**-szablonu:**Example.dll|Określa, z którego zestawu satelickiego będzie dziedziczyć wszystkich metadanych zestawu z wyjątkiem pola kultury zestawu. Ta opcja dotyczy zestawy satelickie tylko wtedy, gdy określ zestaw, który ma [silnej nazwy](../../../docs/framework/app-domains/strong-named-assemblies.md).|  
   
  Aby uzyskać pełną listę opcji dostępnych z Al.exe zobacz [Assembly Linker (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md).  
   
@@ -113,7 +115,7 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
 4.  Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstu lub plik zasobu XML w pliku .resources binarnego. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jako pliki resx lub txt, ale z rozszerzeniem .resources. Jeśli utworzysz przykładzie z programem Visual Studio procesu kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenia, aby skompilować pliki .resx do plików .resources:  
   
-    ```  
+    ```console
     resgen Greeting.resx  
     resgen Greeting.en-us.resx  
     resgen Greeting.fr-FR.resx  
@@ -125,29 +127,29 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
 5.  Skompiluj następujący kod źródłowy wraz z zasobów dla kultury domyślnej w zestawie głównym aplikacji:  
   
     > [!IMPORTANT]
-    >  Jeśli tworzenie w przykładzie przy użyciu wiersza polecenia, a nie programu Visual Studio, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> konstruktora klasy do następującego:`ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
+    >  Jeśli tworzenie w przykładzie przy użyciu wiersza polecenia, a nie programu Visual Studio, należy zmodyfikować wywołanie <xref:System.Resources.ResourceManager> konstruktora klasy do następującego: `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);`  
   
      [!code-csharp[Conceptual.Resources.Locating#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/program.cs#1)]
      [!code-vb[Conceptual.Resources.Locating#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/module1.vb#1)]  
   
      Jeśli aplikacja nosi nazwę przykład i kompilacja z wiersza polecenia, to polecenie dla kompilatora C#:  
   
-    ```  
-    csc Example.cs /res:Greeting.resources  
+    ```console  
+    csc Example.cs -res:Greeting.resources  
     ```  
   
      Odpowiednie polecenie kompilatora Visual Basic jest:  
   
-    ```  
-    vbc Example.vb /res:Greeting.resources  
+    ```console  
+    vbc Example.vb -res:Greeting.resources  
     ```  
   
 6.  Utworzyć podkatalogu w katalogu głównego aplikacji dla każdego zlokalizowanych kultury obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji.  
   
 7.  Osadzanie plików .resources specyficzne dla kultury poszczególnych w zestawy satelickie i zapisać je do odpowiedniego katalogu. To polecenie, aby to zrobić dla każdego pliku .resources jest:  
   
-    ```  
-    al /target:lib /embed:Greeting.culture.resources /culture:culture /out:culture\Example.resources.dll  
+    ```console
+    al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
     ```  
   
      gdzie *kultury* to nazwa kultury, którego zestawu satelickiego zawiera zasoby. Visual Studio automatycznie obsługuje ten proces.  
@@ -167,13 +169,13 @@ al /target:lib /embed:strings.de.resources /culture:de /out:Example.resources.dl
   
  Polecenie Sn.exe tworzy testu pary kluczy publiczny/prywatny. **— K** opcja określa, że Sn.exe należy utworzyć nowej pary kluczy i zapisać ją w pliku o nazwie TestKeyPair.snk.  
   
-```  
+```console
 sn –k TestKeyPair.snk   
 ```  
   
  Można wyodrębnić klucza publicznego z pliku, który zawiera pary kluczy testu. Polecenie wyodrębnia klucza publicznego z TestKeyPair.snk i zapisze go w PublicKey.snk:  
   
-```  
+```console
 sn –p TestKeyPair.snk PublicKey.snk  
 ```  
   
@@ -182,18 +184,18 @@ sn –p TestKeyPair.snk PublicKey.snk
   
  Polecenie Al.exe tworzy zestaw satelicki o silnych nazwach StringLibrary aplikacji z pliku strings.ja.resources:  
   
-```  
-al /target:lib /embed:strings.ja.resources /culture:ja /out:StringLibrary.resources.dll /delay+ /keyfile:PublicKey.snk  
+```console 
+al -target:lib -embed:strings.ja.resources -culture:ja -out:StringLibrary.resources.dll -delay+ -keyfile:PublicKey.snk  
 ```  
   
- **/Delay+** opcja określa, że konsolidator zestawów powinno opóźniać Podpisz zestaw z. **/KeyFile** opcja określa nazwę pliku klucza, który zawiera klucz publiczny opóźnienia Podpisz zestaw.  
+ **-Opóźnienie +** opcja określa, że konsolidator zestawów powinno opóźniać Podpisz zestaw z. **- Keyfile** opcja określa nazwę pliku klucza, który zawiera klucz publiczny opóźnienia Podpisz zestaw.  
   
 ### <a name="re-signing-an-assembly"></a>Ponowne podpisywanie zestawu  
  Przed wdrożeniem aplikacji należy ponownie podpisać opóźnienie podpisany zestaw satelicki z pary kluczy rzeczywistym. Można to zrobić za pomocą Sn.exe.  
   
  Polecenie Sn.exe podpisuje StringLibrary.resources.dll z pary kluczy przechowywanych w pliku RealKeyPair.snk. **– R** opcja określa, że wcześniej podpisanego lub opóźnienia podpisanych zestawów ma być ponownie podpisane.  
   
-```  
+```console
 sn –R StringLibrary.resources.dll RealKeyPair.snk   
 ```  
   
@@ -202,8 +204,8 @@ sn –R StringLibrary.resources.dll RealKeyPair.snk
   
  Polecenie Gacutil.exe instaluje StringLibrary.resources.dll w globalnej pamięci podręcznej zestawów:  
   
-```  
-gacutil /i:StringLibrary.resources.dll  
+```console
+gacutil -i:StringLibrary.resources.dll  
 ```  
   
  **/I** opcja określa, że Gacutil.exe należy zainstalować określonego zestawu w globalnej pamięci podręcznej zestawów. Po satelity zestaw jest zainstalowany w nim zasobów stają się dostępne dla wszystkich aplikacji, które są przeznaczone do użycia zestawu satelickiego w pamięci podręcznej.  
@@ -213,7 +215,7 @@ gacutil /i:StringLibrary.resources.dll
   
 1.  Jeśli nie używasz programu Visual Studio, należy użyć następującego [silnej nazwy narzędzia (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć pary kluczy publiczny/prywatny o nazwie ResKey.snk:  
   
-    ```  
+    ```console
     sn –k ResKey.snk  
     ```  
   
@@ -221,7 +223,7 @@ gacutil /i:StringLibrary.resources.dll
   
 2.  Należy użyć następującego [silnej nazwy narzędzia (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) polecenie, aby utworzyć plik klucza publicznego o nazwie PublicKey.snk:  
   
-    ```  
+    ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
@@ -242,7 +244,7 @@ gacutil /i:StringLibrary.resources.dll
   
 6.  Użyj [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) skompilować każdego tekstu lub plik zasobu XML w pliku .resources binarnego. Dane wyjściowe to zestaw plików, które mają taką samą nazwę pliku głównego jako pliki resx lub txt, ale z rozszerzeniem .resources. Jeśli utworzysz przykładzie z programem Visual Studio procesu kompilacji odbywa się automatycznie. Jeśli nie używasz programu Visual Studio, uruchom następujące polecenie, aby skompilować pliki .resx do plików .resources:  
   
-    ```  
+    ```console
     resgen filename  
     ```  
   
@@ -258,42 +260,42 @@ gacutil /i:StringLibrary.resources.dll
   
      To polecenie dla kompilatora C#:  
   
-    ```  
-    csc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.cs  
+    ```console
+    csc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.cs  
     ```  
   
      Odpowiednie polecenie kompilatora Visual Basic jest:  
   
-    ```  
-    vbc /t:library /resource:Strings.resources /delaysign+ /keyfile:publickey.snk StringLibrary.vb  
+    ```console  
+    vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
 8.  Utworzyć podkatalogu w katalogu głównego aplikacji dla każdego zlokalizowanych kultury obsługiwanych przez aplikację. Należy utworzyć en US, fr-FR i podkatalogu ru-RU. Program Visual Studio automatycznie tworzy te podkatalogi jako część procesu kompilacji. Ponieważ wszystkie zestawy satelickie mają taką samą nazwę pliku, podkatalogi są używane do przechowywania zestawy satelickie specyficzne dla kultury poszczególnych, dopóki nie są podpisane przy użyciu pary kluczy publiczny/prywatny.  
   
 9. Osadź poszczególnych plików .resources specyficzne dla kultury do podpisywany z opóźnieniem zestawy satelitarne i zapisać je do odpowiedniego katalogu. To polecenie, aby to zrobić dla każdego pliku .resources jest:  
   
-    ```  
-    al /target:lib /embed:Strings.culture.resources /culture:culture /out:culture\StringLibrary.resources.dll /delay+ /keyfile:publickey.snk  
+    ```console
+    al -target:lib -embed:Strings.culture.resources -culture:culture -out:culture\StringLibrary.resources.dll -delay+ -keyfile:publickey.snk  
     ```  
   
      gdzie *kultury* jest nazwą kultury. W tym przykładzie nazwy kultury są en US, fr-FR i ru-RU.  
   
 10. Ponowne podpisanie StringLibrary.dll przy użyciu [silnej nazwy narzędzia (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) w następujący sposób:  
   
-    ```  
+    ```console
     sn –R StringLibrary.dll RealKeyPair.snk  
     ```  
   
 11. Ponowne podpisywanie zestawów satelickich indywidualnych. Aby to zrobić, użyj [silnej nazwy narzędzia (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) w następujący sposób dla każdego zestawu satelickiego:  
   
-    ```  
+    ```console
     sn –R StringLibrary.resources.dll RealKeyPair.snk  
     ```  
   
 12. Zarejestruj StringLibrary.dll oraz wszystkich jego zestawów satelickich w globalnej pamięci podręcznej zestawów przy użyciu następującego polecenia:  
   
-    ```  
-    gacutil /i filename  
+    ```console
+    gacutil -i filename  
     ```  
   
      gdzie *filename* jest nazwa pliku do zarejestrowania.  
@@ -305,14 +307,14 @@ gacutil /i:StringLibrary.resources.dll
   
      Aby skompilować z wiersza polecenia, wpisz następujące polecenie dla kompilatora C#:  
   
-    ```  
-    csc Example.cs /r:StringLibrary.dll   
+    ```console
+    csc Example.cs -r:StringLibrary.dll   
     ```  
   
      Wiersz polecenia dla kompilatora języka Visual Basic to:  
   
-    ```  
-    vbc Example.vb /r:StringLibrary.dll   
+    ```console
+    vbc Example.vb -r:StringLibrary.dll   
     ```  
   
 14. Uruchom Example.exe.  

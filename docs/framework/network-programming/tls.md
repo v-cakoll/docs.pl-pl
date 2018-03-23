@@ -1,6 +1,6 @@
 ---
-title: "Najlepsze praktyki Transport Layer Security (TLS) w środowisku .NET Framework"
-description: "Opis najlepszych rozwiązań za pomocą zabezpieczeń TLS (Transport Layer) z programu .NET Framework"
+title: Najlepsze praktyki Transport Layer Security (TLS) w środowisku .NET Framework
+description: Opis najlepszych rozwiązań za pomocą zabezpieczeń TLS (Transport Layer) z programu .NET Framework
 ms.date: 03/15/2018
 ms.prod: .net-framework
 ms.topic: article
@@ -19,11 +19,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 64829eee5b21a44acb18cbec9b901d77d49cab90
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: b67bcaae90cf5107598818b48ac672d74dec1e07
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>Najlepsze praktyki Transport Layer Security (TLS) w środowisku .NET Framework
 
@@ -114,7 +114,7 @@ Jeśli jesteś **nie** przy użyciu niestandardowego powiązania **i** ustawiasz
 
 Przeprowadź inspekcję swój kod, aby sprawdzić, czy nie ustawiasz określonej wersji protokołu TLS lub SSL przy użyciu w następujących sekcjach:
 
-### <a name="for-net-framework-46---462-and-not-wfc"></a>Dla programu .NET Framework 4.6 - 4.6.2 i nie WFC
+### <a name="for-net-framework-46---462-and-not-wcf"></a>Dla programu .NET Framework 4.6 - 4.6.2 i nie WCF
 
 Ustaw `DontEnableSystemDefaultTlsVersions` `AppContext` przełączyć się do `false`. Zobacz [Konfigurowanie zabezpieczeń za pośrednictwem przełączników AppContext](#configuring-security-via-appcontext-switches).
 

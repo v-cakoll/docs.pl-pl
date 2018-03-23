@@ -1,27 +1,29 @@
 ---
-title: ".NET Framework — Przewodnik wdrażania dla administratorów"
-ms.custom: 
+title: .NET Framework — Przewodnik wdrażania dla administratorów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: "40"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3af5e301e57350b72ac0ea50448c7a46ca6c5387
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemu przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe instalacji [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -109,9 +111,9 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 4.  Na **pakietu** strony **Kreatora tworzenia pakietu i programu**, wprowadź następujące informacje:  
   
-    -   Nazwa:`.NET Framework 4.5`  
+    -   Nazwa: `.NET Framework 4.5`  
   
-    -   Producent:`Microsoft`  
+    -   Producent: `Microsoft`  
   
     -   Język. `English (US)`  
   
@@ -121,7 +123,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 7.  Na **Program** strony **Kreatora tworzenia pakietu i programu**, wprowadź następujące informacje:  
   
-    1.  **Nazwa:**`.NET Framework 4.5`  
+    1.  **Nazwa:** `.NET Framework 4.5`  
   
     2.  **Wiersz polecenia:** `dotNetFx45_Full_x86_x64.exe /q /norestart /ChainingPackage ADMINDEPLOYMENT` (Opcje wiersza polecenia są opisane w tabeli po wykonaniu tych kroków)  
   
@@ -136,7 +138,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/q**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|  
-|**/ norestart**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|  
+|**/norestart**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|  
 |**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje były zgłaszane z innych informacji o sesji instalacji dla tych, którzy zalogowali się [Program poprawy jakości obsługi programu Microsoft klienta (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów prostych jako ograniczników; na przykład: **/chainingpackage "Łańcucha produktu"**.|  
   
  Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W przypadku instalacji dyskretnej użytkownicy nie interakcji z procesu instalacji i CBC aplikacja ma kod powrotny przechwytywania i ponowne uruchomienie; zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](http://go.microsoft.com/fwlink/?LinkId=179606).  
@@ -197,18 +199,18 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
  Teraz pakiet zostanie wdrożony w kolekcji docelowej i rozpocznie się dyskretna instalacja programu .NET Framework 4.5. Aby uzyskać informacje na temat kody błędów instalacji programu .NET Framework 4.5, zobacz [kody powrotne](#return_codes) później w tym temacie.  
   
 <a name="resources"></a>   
-## <a name="resources"></a>Resources  
+## <a name="resources"></a>Zasoby  
  Aby uzyskać więcej informacji dotyczących infrastruktury do testowania wdrożenia [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] do dystrybucji pakietu, zobacz następujące zasoby.  
   
  **Usługi Active Directory, DNS, DHCP:**  
   
 -   [Usługi domenowe Active Directory systemu Windows Server 2008](http://technet.microsoft.com/library/dd378891.aspx)  
   
--   [Serwer DNS](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [DNS Server](http://technet.microsoft.com/library/cc732997.aspx)  
   
 -   [Serwer DHCP](http://technet.microsoft.com/library/cc896553.aspx)  
   
- **Program SQL Server 2008:**  
+ **SQL Server 2008:**  
   
 -   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](http://technet.microsoft.com/library/dd299415.aspx)  
   
@@ -230,8 +232,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 ### <a name="log-file-locations"></a>Lokalizacje plików dziennika  
  Następujące pliki dziennika są generowane podczas [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora:  
   
- %temp%\Microsoft .NET Framework 4.5*.txt  
- %Temp%\Microsoft .NET framework 4.5\*.html  
+ %Temp%\Microsoft .NET framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
   
  Można użyć [narzędzie do zbierania dzienników](http://www.microsoft.com/download/details.aspx?id=12493) służąca do gromadzenia [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] plików dziennika i utworzyć plik skompresowany plik cabinet (cab), która ogranicza rozmiar plików.  
   

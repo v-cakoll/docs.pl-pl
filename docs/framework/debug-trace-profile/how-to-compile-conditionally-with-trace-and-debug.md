@@ -1,12 +1,13 @@
 ---
-title: "Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem"
-ms.custom: 
+title: 'Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - trace compiler options
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TRACE directive
 - conditional compilation, tracing code
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ccdadc22728c28c8dea80f168a98cb985b2572a7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5e590888a56ed4c325e89eb828349f4f289815cd
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>Porady: kompilowanie warunkowe ze śledzeniem i debugowaniem
 Podczas debugowania aplikacji podczas tworzenia Twojej śledzenia i dane wyjściowe debugowania Przejdź w oknie danych wyjściowych w programie Visual Studio. Jednak aby włączyć funkcje śledzenia do wdrożonej aplikacji, należy skompilować instrumentowanej aplikacji przy użyciu **śledzenia** dyrektywy kompilatora włączone. Dzięki temu kod śledzenia ma być kompilowana w wersji aplikacji. Jeśli nie włączysz **śledzenia** dyrektywy, wszystkie kod śledzenia jest ignorowany podczas kompilacji i nie jest objęta kodu wykonywalnego, który zostanie wdrożony.  
@@ -59,9 +61,9 @@ Podczas debugowania aplikacji podczas tworzenia Twojej śledzenia i dane wyjści
   
      Na przykład następująca instrukcja kompilatora wprowadzona w wierszu polecenia obejmują kod śledzenia w skompilowanych pliku wykonywalnego:  
   
-     W języku Visual Basic: **vbc /r:System.dll /d:TRACE = TRUE /d:DEBUG = FALSE MyApplication.vb**  
+     W języku Visual Basic: **vbc-r:System.dll -d: śledzenia = TRUE -d: DEBUG = FALSE MyApplication.vb**  
   
-     Język C#: **csc /r:System.dll /d:TRACE /d:DEBUG = FALSE MyApplication.cs**  
+     Język C#: **csc-r:System.dll -d: śledzenia -d: DEBUG = FALSE MyApplication.cs**  
   
     > [!TIP]
     >  Aby skompilować więcej niż jeden plik aplikacji, pozostaw puste miejsce między nazwami plików, na przykład **MyApplication1.vb MyApplication2.vb MyApplication3.vb** lub **MyApplication1.cs MyApplication2.cs MyApplication3.cs**.  
@@ -72,8 +74,8 @@ Podczas debugowania aplikacji podczas tworzenia Twojej śledzenia i dane wyjści
     |---------------|-------------|  
     |`vbc`|kompilator Visual Basic|  
     |`csc`|Kompilator języka C#|  
-    |`/r:`|Odwołuje się do zestawu zewnętrzne (plik EXE lub DLL)|  
-    |`/d:`|Określa symbol kompilacji warunkowej|  
+    |`-r:`|Odwołuje się do zestawu zewnętrzne (plik EXE lub DLL)|  
+    |`-d:`|Określa symbol kompilacji warunkowej|  
   
     > [!NOTE]
     >  Należy pisowni śledzenia i debugowania z wielkich liter. Aby uzyskać więcej informacji na temat poleceń kompilacji warunkowej, wprowadź `vbc /?` (w języku Visual Basic) lub `csc /?` (dla C#) w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [tworzenie z wiersza polecenia](~/docs/csharp/language-reference/compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md) (C#) lub [wywoływanie kompilatora wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) (Visual Basic).  
@@ -95,14 +97,14 @@ Podczas debugowania aplikacji podczas tworzenia Twojej śledzenia i dane wyjści
   
 ### <a name="to-disable-tracing-or-debugging"></a>Aby wyłączyć śledzenia i debugowania  
   
-1.  Usuń dyrektywy kompilatora w kodzie źródłowym.  
+Usuń dyrektywy kompilatora w kodzie źródłowym.  
   
-     \-lub -  
+\- lub -  
   
-2.  Komentarz dyrektywy kompilatora.  
+Komentarz dyrektywy kompilatora.  
   
-    > [!NOTE]
-    >  Gdy wszystko będzie gotowe skompilować, można wybrać **kompilacji** z **kompilacji** menu, lub użyj metody wiersza polecenia, ale bez wpisywania **d:** do definiowania warunkowe symbole kompilacji.  
+> [!NOTE]
+>  Gdy wszystko będzie gotowe skompilować, można wybrać **kompilacji** z **kompilacji** menu, lub użyj metody wiersza polecenia, ale bez wpisywania **d:** do definiowania warunkowe symbole kompilacji.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Śledzenie i instrumentacja aplikacji](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)  

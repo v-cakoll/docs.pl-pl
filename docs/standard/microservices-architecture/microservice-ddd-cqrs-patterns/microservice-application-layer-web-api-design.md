@@ -1,7 +1,7 @@
 ---
-title: "Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c166e0286d0769e24a6361037eb6c4694fb821ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web
 
@@ -29,7 +29,7 @@ STAŁE zasady są krytyczne technik w celu można użyć w dowolnej aplikacji mo
 
 -   Zasada podstawienia Liskov
 
--   Odwracanie podział zasady
+-   Zasada podział — interfejs
 
 -   Zasada odwracanie zależności
 
@@ -43,7 +43,7 @@ Może upłynąć innego przewodnik szczegółowo stałe. W związku z tym w tym 
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **STAŁE: Obiektowo podstawowych zasad**
+-   **STAŁE: Zasady podstawowych Obiektowo**
     [*http://deviq.com/solid/*](http://deviq.com/solid/%20)
 
 -   **Inwersja kontroli kontenerów i wzorzec iniekcji zależności**
@@ -54,4 +54,4 @@ Może upłynąć innego przewodnik szczegółowo stałe. W związku z tym w tym 
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (nosql-bazy danych — trwałości infrastructure.md) [dalej] (microservice-application-layer-implementation-web-api.md)
+[Previous] (nosql-database-persistence-infrastructure.md) [Next] (microservice-application-layer-implementation-web-api.md)

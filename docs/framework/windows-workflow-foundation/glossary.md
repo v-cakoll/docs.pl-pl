@@ -1,26 +1,27 @@
 ---
-title: "Słownik programu Windows Workflow Foundation dla programu .NET Framework 4.5"
-ms.custom: 
+title: Słownik programu Windows Workflow Foundation dla programu .NET Framework 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Workflow Foundation [WF], glossary
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
-caps.latest.revision: "259"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 54a0cc6d9a0c922e57bf00b649894f26b42a64f4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>Słownik programu Windows Workflow Foundation dla programu .NET Framework 4.5
 Poniższe terminy są używane w dokumentacji systemu Windows Workflow Foundation.  
@@ -32,7 +33,7 @@ Poniższe terminy są używane w dokumentacji systemu Windows Workflow Foundatio
 |aktywność|Jednostka zachowanie programu w programie Windows Workflow Foundation. Pojedynczego działania może składać się ze sobą w bardziej złożonych działania.|  
 |Akcja działania|Struktura danych używany do udostępnienia wywołań zwrotnych do wykonania przepływu pracy i działania.|  
 |Argument|Definiuje przepływ danych do i z działania. Każdy argument ma kierunek określony: w, out lub we/wy. Reprezentuje tych danych wejściowych, wyjściowych i parametry wejścia/wyjścia aktywności.|  
-|Zakładka|Punkt, jaką można wstrzymywać i poczekaj, aby można wznowić działania.|  
+|bookmark|Punkt, jaką można wstrzymywać i poczekaj, aby można wznowić działania.|  
 |kompensacji|Grupa działania mające na celu cofnąć lub ograniczyć wpływ poprzednio ukończoną pracę.|  
 |korelacji|Mechanizm do rozesłania wiadomości do wystąpienia przepływu pracy lub usługi.|  
 |wyrażenie|Konstrukcja, która przyjmuje jeden lub więcej argumentów wykonuje operację na argumenty i zwraca pojedynczą wartość. Można użyć wyrażeń wszędzie tam, gdzie działanie może być używane.|  

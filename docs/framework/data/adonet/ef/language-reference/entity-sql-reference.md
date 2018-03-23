@@ -1,24 +1,26 @@
 ---
-title: "Odwołanie do jednostki SQL"
-ms.custom: 
+title: Odwołanie do jednostki SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac05ec8a8732da383a4e33e84c669aa29660a0da
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="entity-sql-reference"></a>Odwołanie do jednostki SQL
 Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy referencyjne. Ten temat zawiera podsumowanie i grup [!INCLUDE[esql](../../../../../../includes/esql-md.md)] operatory według kategorii.  
@@ -71,7 +73,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |--------------|-----------------|  
 |[& & (Logiczne i)](../../../../../../docs/framework/data/adonet/ef/language-reference/and-entity-sql.md)|Operatora logicznego AND.|  
 |[!, (NEGACJA)](../../../../../../docs/framework/data/adonet/ef/language-reference/not-entity-sql.md)|NEGACJA.|  
-|[&#124; &#124; (Logiczne lub)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Operatora logicznego OR.|  
+|[&#124;&#124;(Logiczne lub)](../../../../../../docs/framework/data/adonet/ef/language-reference/or-entity-sql.md)|Operatora logicznego OR.|  
 |[CASE](../../../../../../docs/framework/data/adonet/ef/language-reference/case-entity-sql.md)|Ocenia zestaw wyrażeń logicznych w celu ustalenia wyniku.|  
 |[THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)|Wynik [podczas](http://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) klauzuli gdy zwraca wartość true.|  
   
@@ -92,7 +94,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |[WHERE](../../../../../../docs/framework/data/adonet/ef/language-reference/where-entity-sql.md)|Warunkowe filtrów danych zwracanych przez zapytanie.|  
   
 ## <a name="reference-operators"></a>Odwołanie do operatorów  
- Odwołanie ma postać wskaźnika logiczne (klucz obcy) do określonej jednostki w zestawie określonej jednostki. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje następujące operatory utworzenia deconstruct i przejdź do odwołania.  
+ Odwołanie ma postać wskaźnika logiczne (klucz obcy) do określonej jednostki w zestawie określonej jednostki. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje następujące operatory utworzenia deconstruct i przejdź do odwołania.  
   
 |Operator|Zastosowanie|  
 |--------------|---------|  
@@ -103,7 +105,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |[REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)|Zwraca odwołanie do wystąpienia jednostki.|  
   
 ## <a name="set-operators"></a>Operatory zestawów  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]zapewnia różne operacje zaawansowany zestaw. Obejmuje to podobne do operatorów języka Transact-SQL, takich jak UNION, INTERSECT i EXCEPT, operatorów i EXISTS. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje również operatory wyeliminowania zduplikowanych (SET), członkostwo testowania (ruch PRZYCHODZĄCY) i sprzężeń (połączenie). W poniższej tabeli wymieniono [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ustawić operatorów.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapewnia różne operacje zaawansowany zestaw. Obejmuje to podobne do operatorów języka Transact-SQL, takich jak UNION, INTERSECT i EXCEPT, operatorów i EXISTS. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje również operatory wyeliminowania zduplikowanych (SET), członkostwo testowania (ruch PRZYCHODZĄCY) i sprzężeń (połączenie). W poniższej tabeli wymieniono [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ustawić operatorów.  
   
 |Operator|Zastosowanie|  
 |--------------|---------|  
@@ -118,7 +120,7 @@ Ta sekcja zawiera [!INCLUDE[esql](../../../../../../includes/esql-md.md)] tematy
 |[UNION](../../../../../../docs/framework/data/adonet/ef/language-reference/union-entity-sql.md)|Łączy wyniki dwóch lub więcej kwerend w jednej kolekcji.|  
   
 ## <a name="type-operators"></a>Operatory typu  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]udostępnia operacje zezwalających na typ wyrażenia (wartość) utworzone, proszeni i manipulowanie. W poniższej tabeli wymieniono operatory, które są używane do współpracy z typami.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] udostępnia operacje zezwalających na typ wyrażenia (wartość) utworzone, proszeni i manipulowanie. W poniższej tabeli wymieniono operatory, które są używane do współpracy z typami.  
   
 |Operator|Zastosowanie|  
 |--------------|---------|  

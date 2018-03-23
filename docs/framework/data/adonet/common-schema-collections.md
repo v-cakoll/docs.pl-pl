@@ -1,24 +1,26 @@
 ---
-title: "Typowe kolekcje schematów"
-ms.custom: 
+title: Typowe kolekcje schematów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 50127ced-2ac8-4d7a-9cd1-5c98c655ff03
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcji schematu, które są implementowane przez każdego z dostawców zarządzane w programie .NET Framework. Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy kolekcji schematu obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z. Te kolekcje, opis wszystkich wymaganych kolumn. Aby dodać dodatkowe kolumny, jeśli chcą mogą dostawców. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczeń.  
@@ -41,7 +43,7 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
   
 |Element columnName|Typ danych|Opis|  
 |----------------|--------------|-----------------|  
-|CompositeIdentifierSeparatorPattern|string|Wyrażenie regularne do dopasowania złożonego separatorów w identyfikatorze złożonego. Na przykład "\\." (dla programu SQL Server) lub "@&#124; \\." (dla Oracle).<br /><br /> Identyfikator złożony jest zwykle do czego służy nazwa obiektu bazy danych, na przykład: pubs.dbo.authors lub pubs@dbo.authors.<br /><br /> Dla programu SQL Server, należy użyć wyrażenia regularnego "\\.". OracleClient, użyj "@&#124; \\.".<br /><br /> Użyj Catalog_name_seperator dla ODBC.<br /><br /> OLE DB używaj DBLITERAL_CATALOG_SEPARATOR lub DBLITERAL_SCHEMA_SEPARATOR.|  
+|CompositeIdentifierSeparatorPattern|string|Wyrażenie regularne do dopasowania złożonego separatorów w identyfikatorze złożonego. Na przykład "\\." (dla programu SQL Server) lub "@&#124;\\." (dla Oracle).<br /><br /> Identyfikator złożony jest zwykle do czego służy nazwa obiektu bazy danych, na przykład: pubs.dbo.authors lub pubs@dbo.authors.<br /><br /> Dla programu SQL Server, należy użyć wyrażenia regularnego "\\.". OracleClient, użyj "@&#124;\\.".<br /><br /> Użyj Catalog_name_seperator dla ODBC.<br /><br /> OLE DB używaj DBLITERAL_CATALOG_SEPARATOR lub DBLITERAL_SCHEMA_SEPARATOR.|  
 |DataSourceProductName|string|Nazwa produktu, dostęp do dostawcy, takie jak "Oracle" lub "SQLServer".|  
 |DataSourceProductVersion|string|Wskazuje wersję produktu, dostęp do dostawcy, w formacie native źródeł danych, a nie w formacie Microsoft.<br /><br /> W niektórych przypadkach DataSourceProductVersion i DataSourceProductVersionNormalized będzie mieć taką samą wartość. W przypadku OLE DB i ODBC są jest zawsze taki sam są mapowane na to samo wywołanie funkcji w podstawowym natywnego interfejsu API.|  
 |DataSourceProductVersionNormalized|string|Znormalizowane wersji danych źródła, w taki sposób, że mogą zostać porównane z `String.Compare()`. Ten format jest zgodny dla wszystkich wersji dostawcy, aby zapobiec sortowania między 1 a wersją 2 w wersji 10.<br /><br /> Na przykład dostawca programu Oracle używa formatu "nn.nn.nn.nn.nn" dla wersji znormalizowane, co powoduje, że źródła danych Oracle 8i do zwrócenia "08.01.07.04.01". Program SQL Server używa typowy format "nn.nn.nnnn" firmy Microsoft.<br /><br /> W niektórych przypadkach DataSourceProductVersion i DataSourceProductVersionNormalized będzie mieć taką samą wartość. W przypadku OLE DB i ODBC są jest zawsze taki sam są mapowane na to samo wywołanie funkcji w podstawowym natywnego interfejsu API.|  
@@ -53,10 +55,10 @@ Typowe kolekcje schematów są kolekcji schematu, które są implementowane prze
 |ParameterMarkerPattern|string|Wyrażenie regularne dopasowuje znacznika parametru. Jeśli będzie mieć wartość dopasowania nazwę parametru.<br /><br /> Na przykład, jeśli nazwane parametry są obsługiwane przez "@" wiodącego znak, który zostanie uwzględniony w nazwie parametru to: "(@[A-Za-z0-9_ ##] *)".<br /><br /> Jednak jeśli nazwane parametry są obsługiwane przez ":" jak wiodącego znaków i nie jest częścią nazwy parametru, to: ": ([A-Za-z0-9_$ #]\*)".<br /><br /> Oczywiście jeśli źródło danych nie obsługuje parametrów nazwanych, po prostu to "?".|  
 |ParameterNameMaxLength|int|Maksymalna długość nazwy parametru w znakach. Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, wartość minimalna długość jest 30 znaków.<br /><br /> Jeśli źródło danych nie obsługuje parametrów nazwanych, ta właściwość zwraca zero.|  
 |ParameterNamePattern|string|Wyrażenie regularne pasuje do nazw poprawny parametr. Różnych źródeł danych mają różne zasady dotyczące znaków, które mogą być używane dla nazw parametrów.<br /><br /> Visual Studio oczekuje, że jeśli nazwy parametrów są obsługiwane, znaki "\p{Lu}\p{Ll}\p{Lt}\p{Lm}\p{Lo}\p{Nl}\p{Nd}" są obsługiwane minimalnego zestawu znaków, które są prawidłowe dla nazw parametrów.|  
-|QuotedIdentifierPattern|string|Wyrażenie regularne dopasowuje identyfikatora ujętego w cudzysłów, który ma wartość dopasowania identyfikatora bez cudzysłowów. Na przykład, jeśli źródło danych używane podwójnych cudzysłowów do identyfikowania identyfikatory w cudzysłowach, to: "(([^\\"] &#124;\\" \\")*)".|  
+|QuotedIdentifierPattern|string|Wyrażenie regularne dopasowuje identyfikatora ujętego w cudzysłów, który ma wartość dopasowania identyfikatora bez cudzysłowów. Na przykład, jeśli źródło danych używane podwójnych cudzysłowów do identyfikowania identyfikatory w cudzysłowach, to: "(([^\\"]&#124;\\"\\") *) ".|  
 |QuotedIdentifierCase|<xref:System.Data.Common.IdentifierCase>|Wskazuje, czy identyfikatory w cudzysłowach są traktowane jako wielkość liter, czy nie.|  
 |StatementSeparatorPattern|string|Wyrażenie regularne dopasowuje separatora instrukcji.|  
-|StringLiteralPattern|string|Wyrażenie regularne odpowiada literału ciągu, który ma wartość literal, sam dopasowania. Na przykład, jeśli źródło danych umożliwia identyfikowanie ciągi przez pojedynczego cudzysłowu, to: "(" ([^'] &#124; ") *')"'|  
+|StringLiteralPattern|string|Wyrażenie regularne odpowiada literału ciągu, który ma wartość literal, sam dopasowania. Na przykład, jeśli źródło danych umożliwia identyfikowanie ciągi przez pojedynczego cudzysłowu, to: "('([^']&#124;'') *") ""|  
 |SupportedJoinOperators|<xref:System.Data.Common.SupportedJoinOperators>|Określa, jakie typy instrukcji SQL sprzężenia są obsługiwane przez źródło danych.|  
   
 ## <a name="datatypes"></a>Typy danych  

@@ -1,26 +1,26 @@
 ---
 title: JSONP
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="jsonp"></a>JSONP
 W tym przykładzie przedstawiono sposób obsługi formatu JSON z dopełnienie (JSONP) w usługach WCF REST. Format JSONP jest Konwencji, używany do innej domeny skrypty wywołania przez generowanie tagi skryptu w bieżącym dokumencie. Wynik zostanie zwrócony w funkcji określonej wywołania zwrotnego. JSONP opiera się na założeniu, że tagi, takie jak \<skryptu src = "http:/ /..." > można ocenić skryptów z dowolnej domeny i pobierane przez tagi skryptu jest obliczane w zakresie, w którym mogą już zdefiniowany innych funkcji.  

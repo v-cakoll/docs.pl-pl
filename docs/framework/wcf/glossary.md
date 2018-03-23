@@ -1,27 +1,29 @@
 ---
-title: "Słownik programu Windows Communication Foundation dla platformy .NET Framework 4.5"
-ms.custom: 
+title: Słownik programu Windows Communication Foundation dla platformy .NET Framework 4.5
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], glossary
 - WCF [WCF], glossary
 ms.assetid: 39cd36f4-8a28-4d0b-a830-98d55c9d30ae
-caps.latest.revision: "243"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 76cc8f456701d65b675ce7b89436da5213ea9430
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="windows-communication-foundation-glossary-for-net-framework-45"></a>Słownik programu Windows Communication Foundation dla platformy .NET Framework 4.5
 Poniższe terminy są definiowane dla dokumentacji Windows Communication Foundation.  
@@ -34,7 +36,7 @@ Poniższe terminy są definiowane dla dokumentacji Windows Communication Foundat
 |punkt końcowy aplikacji|Punkt końcowy udostępniany przez aplikację i że odpowiada kontrakt usługi zaimplementowana przez aplikację.|  
 |zachowanie|Zachowanie jest składnikiem, który określa różne aspekty środowiska wykonawczego usługi, punkt końcowy, określonej operacji lub klienta. Zachowania są pogrupowane według zakresu: zachowań wspólnych globalnie wpływają na wszystkie punkty końcowe, zachowania usługi wpływania na aspekty tylko związane z usługą tylko właściwości powiązanych z punktu końcowego wpłynąć na zachowania punktu końcowego i zachowania poziomu operacji wpływają na konkretnym operacje.|  
 |powiązanie|Określa, które protokoły komunikacji są używane do komunikowania się z usługi WCF. Jest zbudowane zestawu składników o nazwie elementy wiązania, które jeden nad drugim do utworzenia infrastruktury komunikacji na stosie.  Zobacz punkt końcowy.|  
-|Kanał|Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfigurację i kanał jest skojarzony z tym konfiguracji wdrożenia. W związku z tym jest skojarzone z każdym elementem powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stosu kanału.|  
+|channel|Konkretną implementację elementu powiązania. Powiązanie reprezentuje konfigurację i kanał jest skojarzony z tym konfiguracji wdrożenia. W związku z tym jest skojarzone z każdym elementem powiązania kanału. Kanały stosu na siebie, aby utworzyć konkretną implementację powiązania: stosu kanału.|  
 |zabezpieczenia oparte na oświadczeniach|Umożliwia autoryzowany dostęp do chronionych zasobów na podstawie oświadczeń.|  
 |Aplikacja kliencka|Aplikacja kliencka to program, który wymienia wiadomości z jedną lub więcej punktów końcowych. Aplikacja kliencka rozpoczyna się od tworzenia wystąpienia klienta WCF i wywołanie metody klienta platformy WCF. Należy do pojedynczej aplikacji może zawierać zarówno klient, jak i usługi.|  
 |kodowanie|Umożliwia deweloperowi zachować ścisłą kontrolę nad wszystkimi składnikami usługi lub klienta i wszelkich ustawień za pomocą konfiguracji mogą być kontrolowane i w razie potrzeby zastąpione przez kod. Formant aplikacji można przeprowadzić albo za pomocą kodowania, za pośrednictwem konfiguracji, lub obie te grupy.|  

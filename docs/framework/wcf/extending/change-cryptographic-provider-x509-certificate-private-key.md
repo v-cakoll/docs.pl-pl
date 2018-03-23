@@ -1,12 +1,13 @@
 ---
-title: "Porady: zmienianie dostawcy usług kryptograficznych dla certyfikatu X.509 &#39; s klucza prywatnego"
-ms.custom: 
+title: 'Porady: zmienianie dostawcy kryptograficznego dla certyfikatu X.509&#39;s klucza prywatnego'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,18 +16,19 @@ helpviewer_keywords:
 - cryptographic provider [WCF], changing
 - cryptographic provider [WCF]
 ms.assetid: b4254406-272e-4774-bd61-27e39bbb6c12
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e7dea9834b654be0b86155e18524053efa4b778b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/23/2018
 ---
-# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Porady: zmienianie dostawcy usług kryptograficznych dla certyfikatu X.509 &#39; s klucza prywatnego
+# <a name="how-to-change-the-cryptographic-provider-for-an-x509-certificate39s-private-key"></a>Porady: zmienianie dostawcy kryptograficznego dla certyfikatu X.509&#39;s klucza prywatnego
 W tym temacie pokazano, jak zmienić umożliwiające uzyskanie klucza prywatnego certyfikatu X.509 dostawcy usług kryptograficznych i sposobu integracji dostawcy do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] strukturę zabezpieczeń. Aby uzyskać więcej informacji o korzystaniu z certyfikatów, zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md).  
   
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Strukturę zabezpieczeń umożliwia wprowadzenie nowych typów tokenu zabezpieczeń, zgodnie z opisem w [porady: Tworzenie tokenu niestandardowego](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md). Użytkownik może również używać niestandardowy token, aby zastąpić istniejące typy tokenów dostarczane przez system.  

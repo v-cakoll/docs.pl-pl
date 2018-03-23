@@ -1,14 +1,14 @@
 ---
-title: "&lt;AppContextSwitchOverrides&gt; — Element"
-ms.custom: 
+title: '&lt;AppContextSwitchOverrides&gt; — Element'
+ms.custom: ''
 ms.date: 01/08/2018
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - AppContextSwitchOverrides
@@ -16,23 +16,24 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext> klasy, aby zapewnić mechanizm rezygnacji z nowych funkcji.  
   
- \<Konfiguracja >  
- \<Runtime >  
-\<AppContextSwitchOverrides >  
+ \<configuration>  
+ \<runtime>  
+\<AppContextSwitchOverrides>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -75,7 +76,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |Nazwa przełącznika|Opis|Wprowadzono|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Określa, czy program Windows Presentation Foundation używa starszego algorytmu układ formantu. Aby uzyskać więcej informacji, zobacz [ograniczenie: układ platformy WPF](~/docs/framework/migration-guide/mitigation-wpf-layout.md).|.NET Framework 4.6|  
-|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Określa, czy domyślny algorytm używany do podpisywania części pakietu przez PackageDigitalSignatureManager jest SHA1 lub SHA256.|.NET framework 4.7.1|
+|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|Określa, czy domyślny algorytm używany do podpisywania części pakietu przez PackageDigitalSignatureManager jest SHA1 lub SHA256.|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|Jeśli wartość `false`, pozwala na debugowanie projektów opartych na języku XAML przepływu pracy z programem Visual Studio, gdy FIPS jest włączone. Bez tego <xref:System.NullReferenceException> jest zgłaszany w wywołaniach metody w zestawie elementu System.Activities.|.NET framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|Określa, czy sumy kontrolnej dla wystąpienia przepływu pracy w debugerze używa MD5 lub SHA1. | .NET framework 4.7|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|Formanty czy <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> metoda zgłosi wyjątek podczas <xref:System.Drawing.Icon> obiekt ma ramki PNG. Aby uzyskać więcej informacji, zobacz [środki zaradcze: PNG ramki w obiektach ikona](~/docs/framework/migration-guide/mitigation-png-frames-in-icon-objects.md).|.NET Framework 4.6|  
@@ -84,7 +85,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Formanty czy <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> metoda próbuje dopasować typ oświadczenia tylko w przypadku ostatni wpis DNS. Aby uzyskać więcej informacji, zobacz [środki zaradcze: metoda X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.BlockLongPaths`|Formanty czy ścieżki przekracza `MAX_PATH` throw (260 znaków) <xref:System.IO.PathTooLongException>. Aby uzyskać więcej informacji, zobacz [długa ścieżka pomocy technicznej](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Używa kreska ułamkowa odwrócona ("\\") zamiast ukośnika ("/") jako separatora ścieżki w <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> właściwości. Aby uzyskać więcej informacji, zobacz [środki zaradcze: separatora ścieżki ZipArchiveEntry.FullName](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
-|`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Określa, czy działania systemu wyjątki, które są generowane na wątki w tle utworzonych za pomocą <xref:System.IO.Ports.SerialPort> strumieni zakończenie procesu.|.NET framework 4.7.1| 
+|`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Określa, czy działania systemu wyjątki, które są generowane na wątki w tle utworzonych za pomocą <xref:System.IO.Ports.SerialPort> strumieni zakończenie procesu.|.NET Framework 4.7.1| 
 |`Switch.System.IO.`<br/>`UseLegacyPathHandling`|Określa, czy normalizacji starszych ścieżka jest używana i ścieżki identyfikatora URI są obsługiwane przez <xref:System.IO.Path.GetDirectoryName%2A?displayProperty=nameWithType> i <xref:System.IO.Path.GetPathRoot%2A?displayProperty=nameWithType> metody. Aby uzyskać więcej informacji, zobacz [środki zaradcze: ścieżka normalizacji](~/docs/framework/migration-guide/mitigation-path-normalization.md) i [środki zaradcze: sprawdza dwukropek ścieżki](~/docs/framework/migration-guide/mitigation-path-colon-checks.md).|.NET Framework 4.6.2|  
 |`Switch.System.`<br/>`MemberDescriptorEqualsReturnsFalseIfEquivalent`|Określa, czy test porównuje równość <xref:System.ComponentModel.MemberDescriptor.Category%2A?displayProperty=nameWithType> właściwości jeden obiekt z <xref:System.ComponentModel.MemberDescriptor.Description%2A?displayProperty=nameWithType> drugiego obiektu. Aby uzyskać więcej informacji, zobacz [niepoprawna implementacja MemberDescriptor.Equals](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#incorrect-implementation-of-memberdescriptorequals).|.NET Framework 4.6.2|  
  `Switch.System.Net.`<br/>`DontCheckCertificateEKUs`|Wyłącza certyfikatu weryfikacji identyfikator (OID) obiektu ulepszonego użycia klucza (EKU). Rozszerzenie rozszerzone użycie klucza (EKU) jest zbiorem identyfikatorów obiektów (OID), które wskazują aplikacje, które używają klucza.|.NET Framework 4.6|
@@ -96,22 +97,22 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Formanty czy <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Konstruktor Ustawia nowy obiekt <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> właściwości z istniejącej odwołania do obiektu. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Konstruktor ClaimsIdentity](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Formanty czy próba ponownego użycia <xref:System.Security.Cryptography.AesCryptoServiceProvider> zgłasza odszyfrowujący <xref:System.Security.Cryptography.CryptographicException>. Aby uzyskać więcej informacji zobacz odszyfrowujący AesCryptoServiceProvider zapewnia transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform) wielokrotnego użytku.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Formanty czy wartość [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) właściwość jest [IntPtr](xref:System.IntPtr) czy reprezentuje lokalizacji pamięci okna obsługi, lub czy jest uchwyt okna (HWND). Aby uzyskać więcej informacji, zobacz [środki zaradcze: CspParameters.ParentWindowHandle oczekuje HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedCMS jest SHA1 lub SHA256. |.NET framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedXML jest SHA1 lub SHA256. |.NET framework 4.7.1|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedCMS jest SHA1 lub SHA256. |.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|Określa, czy wartość domyślna dla niektórych operacji SignedXML jest SHA1 lub SHA256. |.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Określa, czy `TransportWithMessageCredential` tryb zabezpieczeń umożliwia wiadomości z niepodpisany "nagłówek do". Jest to przełącznik opcjonalnych. Aby uzyskać więcej informacji, zobacz [zmiany środowiska uruchomieniowego w programie .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
-|`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Formanty czy <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> zgłasza konstruktora <xref:System.ArgumentException> po spełnieniu jednego z elementów `null`.|.NET framework 4.7.1| 
+|`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Formanty czy <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> zgłasza konstruktora <xref:System.ArgumentException> po spełnieniu jednego z elementów `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Określa, czy certyfikaty próbę użycia X509 z dostawcy magazynu kluczy CSG zgłasza wyjątek. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu WCF obsługuje certyfikaty przechowywane przy użyciu CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Obsługuje zakleszczenie wynikających z ograniczenia wystąpień usługi współużytkowane do pojedynczego wątku wykonania naraz.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Wraz z programem `Switch.System.Net.DontEnableSchUseStrongCrypto`, określa, czy zabezpieczenia wiadomości WCF używa protokołu TLS 1.1 i TLS 1.2.|.NET framework 4.7 |    
-|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Określa, czy komunikat domyślny algorytm wiadomości usługi MSMQ w programie WCF podpisywania jest algorytm SHA1 lub SHA256.|.NET framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Określa, czy WCF używa SHA1 lub skrót SHA256 w celu generowania losowego nazw dla nazwanych potoków.|.NET framework 4.7.1|
-|`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Określa, czy wyjątki zgłaszane podczas uruchamiania usługi są propagowane do wywołującego <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> metody.|.NET framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Określa, czy komunikat domyślny algorytm wiadomości usługi MSMQ w programie WCF podpisywania jest algorytm SHA1 lub SHA256.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Określa, czy WCF używa SHA1 lub skrót SHA256 w celu generowania losowego nazw dla nazwanych potoków.|.NET Framework 4.7.1|
+|`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Określa, czy wyjątki zgłaszane podczas uruchamiania usługi są propagowane do wywołującego <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> metody.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Określa, czy Windows Presentation Foundation stosuje algorytm stary (`true`) lub nowego algorytmu (`false`) w przydzielania miejsca, aby \*-kolumn. Aby uzyskać więcej informacji, zobacz [środki zaradcze: przydzielenie miejsca na formancie siatki kolumnom gwiazdkę](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET framework 4.7 |
-|`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Formanty czy selektora lub kartę formant zawsze aktualizuje wartość jego właściwości wybranej wartości przed zgłoszeniem zaznaczenie zdarzenia zmiany.|.NET framework 4.7.1|
+|`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Formanty czy selektora lub kartę formant zawsze aktualizuje wartość jego właściwości wybranej wartości przed zgłoszeniem zaznaczenie zdarzenia zmiany.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Wyłącza funkcję kod, który umożliwia niestandardowego <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementacji, aby bezpiecznie filtrować wiadomości bez generowania wyjątku podczas <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> metoda jest wywoływana. Aby uzyskać więcej informacji, zobacz [środki zaradcze: implementacje IMessageFilter.PreFilterMessage niestandardowy](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Określa, czy jest to opcjonalny `WM_POINTER`— na podstawie touch/pióro stosu jest włączona w aplikacji WPF. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Touch oparte na wskaźnik i pomocy technicznej pióra](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Określa, czy starsze [NullReferenceException](xref:System.NullReferenceException) jest generowany, zamiast wyjątek, który wskazuje, w szczególności przyczyną wyjątku (takich jak [directorynotfoundexception —](xref:System.IO.DirectoryNotFoundException) lub [ FileNotFoundException](xref:System.IO.FileNotFoundException). Jest on przeznaczony do użytku przez kod, który jest zależny od obsługi [NullReferenceException](xref:System.NullReferenceException). | .NET framework 4.7 |
-|`Switch.UseLegacyAccessibilityFeatures`|Formanty czy dostępnych w programie .NET Framework 4.7.1 funkcje ułatwień dostępu są włączone lub wyłączone. | .NET framework 4.7.1 |
+|`Switch.UseLegacyAccessibilityFeatures`|Formanty czy dostępnych w programie .NET Framework 4.7.1 funkcje ułatwień dostępu są włączone lub wyłączone. | .NET Framework 4.7.1 |
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|Określa, czy puste sekwencje klucza w klucze złożone są ignorowane przez Weryfikacja schematu XSD. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Sprawdzanie poprawności schematu XML](~/docs/framework/migration-guide/mitigation-xml-schema-validation.md).|.NET Framework 4.6|  
   
 > [!NOTE]

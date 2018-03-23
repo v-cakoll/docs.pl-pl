@@ -1,22 +1,19 @@
 ---
 title: polecenie Nowy DotNet - .NET Core interfejsu wiersza polecenia
-description: "Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie określonego szablonu."
-keywords: DotNet nowe interfejsu wiersza polecenia, interfejsu wiersza polecenia polecenie .NET Core
+description: Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie określonego szablonu.
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/21/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.devlang: dotnet
-ms.assetid: fcc3ed2e-9265-4d50-b59e-dc2e5c190b34
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: ea94c875ae6fe82d0e5d35ba8ca3fd47971fbbe6
-ms.sourcegitcommit: e2bf8e6bc365bd9a0e86fe81eeae7d14f85f48c1
+ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/13/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 
@@ -28,7 +25,7 @@ ms.lasthandoff: 02/13/2018
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 ```
 dotnet new <TEMPLATE> [--force] [-i|--install] [-lang|--language] [-n|--name] [-o|--output] [-u|--uninstall] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
@@ -55,7 +52,7 @@ Wywołania polecenia [aparatu szablonu](https://github.com/dotnet/templating) do
 
 Szablon można utworzyć wystąpienia po wywołaniu polecenia. Każdy szablon może mieć określone opcje, które można przekazać. Aby uzyskać więcej informacji, zobacz [opcje szablonu](#template-options).
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -l` Aby uzyskać listę dostępnych szablonów. W poniższej tabeli przedstawiono szablonów, które są zainstalowane przy użyciu zestawu SDK programu .NET Core 2.0. Język domyślny dla szablonu jest wyświetlany w nawiasie.
 
@@ -101,7 +98,7 @@ Polecenie zawiera domyślną listę szablonów. Użyj `dotnet new -all` Aby uzys
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 `--force`
 
@@ -113,7 +110,9 @@ Drukuje pomocy dla polecenia. Może być wywoływany dla `dotnet new` polecenia 
 
 `-i|--install <PATH|NUGET_ID>`
 
-Instaluje pakiet źródła lub szablonu z `PATH` lub `NUGET_ID` podane. Aby uzyskać informacje dotyczące tworzenia szablonów niestandardowych, zobacz [dotnet nowych szablonów niestandardowych](custom-templates.md).
+Instaluje pakiet źródła lub szablonu z `PATH` lub `NUGET_ID` podane. Jeśli chcesz zainstalować wersji wstępnej programu pakietem szablonów, należy określić wersję w formacie `<package-name>::<package-version>`. Domyślnie `dotnet new` przekazuje \* dla używanej wersji, który reprezentuje ostatniej wersji stabilnej pakietu. Na przykład [przykłady](#examples) sekcji.
+
+Aby uzyskać informacje dotyczące tworzenia szablonów niestandardowych, zobacz [dotnet nowych szablonów niestandardowych](custom-templates.md).
 
 `-l|--list`
 
@@ -175,11 +174,11 @@ Lokalizacji do umieszczenia wygenerowanych danych wyjściowych. Ustawieniem domy
 
 Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są następujące opcje dodatkowe:
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-20tabnetcore2x"></a>[.NET Core 2.0](#tab/netcore2x)
 
 **Konsola kątowego, reagować, reactredux**
 
-`--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
+  `--no-restore` -Nie wykonać przywracanie niejawne podczas tworzenia projektu.
 
 **classlib**
 
@@ -322,6 +321,10 @@ Utwórz nową aplikację xUnit przeznaczonych dla platformy .NET Core 2.0:
 Lista wszystkich dostępnych szablonów dla platformy MVC:
 
 `dotnet new mvc -l`
+
+Zainstaluj w wersji 2.0 szablony jednej strony aplikacji dla platformy ASP.NET Core (opcji polecenia dostępne dla platformy .NET Core SDK 1.1 i tylko nowsze wersje):
+
+`dotnet new -i Microsoft.DotNet.Web.Spa.ProjectTemplates::2.0.0`
 
 ## <a name="see-also"></a>Zobacz także
 

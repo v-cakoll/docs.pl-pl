@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a1619343874396e22c3606f8a0aeadd81cd7a
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 4c78246a1e9fe14b0ba64ac447293d02e8416079
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Opcje kompilatora Visual Basic w porządku alfabetycznym
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora wiersza polecenia podano zamiast kompilowanie programów z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej przedstawiono listę [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] opcje wiersza polecenia kompilatora sortowana alfabetycznie.  
+Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista sortowana alfabetycznie opcje wiersza polecenia kompilatora Visual Basic.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 |Opcja|Cel|  
 |------------|-------------|  
@@ -36,9 +38,9 @@ ms.lasthandoff: 03/22/2018
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|Definiuje symbole kompilacji warunkowej.|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|Określa, czy zestaw zostanie podpisany całkowicie czy częściowo.|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Przetwarza komentarzy do dokumentacji do pliku XML.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora Zgłoś wewnętrzne błędy kompilatora.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa, jak kompilator Visual Basic powinien zgłosić wewnętrzne błędy kompilatora.|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|Określa lokalizację były wyrównane w sekcjach pliku wyjściowego.|  
-|[-help](../../../visual-basic-reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest taki sam jak określenie `-?` opcji. Kompilacja nie występuje.|  
+|[-help](../../../visual-basic/reference/command-line-compiler/help.md)|Wyświetla opcje kompilatora. To polecenie jest taki sam jak określenie `-?` opcji. Kompilacja nie występuje.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Wskazuje, czy określonego pliku wykonywalnego obsługuje wysokiej entropii losowe generowanie układu przestrzeni adresów (ASLR).|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|Importuje przestrzeni nazw z określonego zestawu.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|Określa nazwę kontenera kluczy parę kluczy zapewnić silnej nazwy zestawu.|  
@@ -67,6 +69,8 @@ ms.lasthandoff: 03/22/2018
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|Uniemożliwia wyświetlanie kodu dotyczące składni błędów i ostrzeżeń kompilatora.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|Podkatalogi wyszukiwania dla plików źródłowych do skompilowania.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|Importuje metadane z zestawu.|  
+|[-refonly](refonly-compiler-option.md)|Generuje zestaw odwołania.|
+|[-refout](refout-compiler-option.md)|Ścieżka danych wyjściowych zestaw odwołania.|
 |[-removeintchecks](../../../visual-basic/reference/command-line-compiler/removeintchecks.md)|Wyłącza sprawdzanie przepełnienia liczby całkowitej.|  
 |[-resource](../../../visual-basic/reference/command-line-compiler/resource.md)|Osadza zarządzanego zasobu w zestawie.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|Określa przestrzeń nazw dla wszystkich deklaracji typów.|  

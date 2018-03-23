@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93c08633af1b4bb46afe9e382066f523c9923a9b
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -946,9 +946,9 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
          Jest na użytek formacie spójnej przełączników, ponieważ są one formalnego kontraktu udostępnianych przez bibliotekę. Poniżej przedstawiono dwa formaty oczywiste.
 
-        - *Przełącznik*.* przestrzeń nazw*.* switchName*
+        - *Przełącznik*. *przestrzeń nazw*. *switchName*
 
-        - *Przełącznik*.* Biblioteka*.* switchName*
+        - *Przełącznik*. *Biblioteka*. *switchName*
 
     - **Zmiany opartego na zadaniach wzorca asynchronicznego (TAP)**
 
@@ -1033,7 +1033,7 @@ Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i 
 
         - **Przy użyciu prefiksu nazwy grupy połączenia**
 
-             Użytkownicy mogą określić ciąg, który WCF będzie używać jako osiągnięcia prefiksu nazwy grupy połączeń. Dwa komunikaty z różnymi prefiksami są wysyłane przy użyciu różnych podstawowej połączeń HTTP. Ustaw prefiks, dodając pary klucza/wartości do komunikatu <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> właściwości. Klucz jest "HttpTransportConnectionGroupNamePrefix"; wartość jest żądany prefiks.
+             Użytkownicy mogą określić ciąg, który WCF będzie używać jako prefiksu nazwy grupy połączeń. Dwa komunikaty z różnymi prefiksami są wysyłane przy użyciu różnych podstawowej połączeń HTTP. Ustaw prefiks, dodając pary klucza/wartości do komunikatu <xref:System.ServiceModel.Channels.Message.Properties%2A?displayProperty=nameWithType> właściwości. Klucz jest "HttpTransportConnectionGroupNamePrefix"; wartość jest żądany prefiks.
 
         - **Za pomocą fabryk kanałów różnych**
 

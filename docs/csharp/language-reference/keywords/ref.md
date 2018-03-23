@@ -1,5 +1,5 @@
 ---
-title: "ref (odwołanie w C#)"
+title: ref (odwołanie w C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ref keyword [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 427045317e9d7d0fe3435a486b9f761908ab5e78
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 63f984f4004cfce9694e7e7405ec2477bc370731
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-c-reference"></a>ref (odwołanie w C#)
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/15/2018
 
 - W podpisie metody, aby zwrócić wartość do obiektu wywołującego przez odwołanie. Zobacz [odwołanie zwracane wartości](#reference-return-values) Aby uzyskać więcej informacji.
 
-- W treści elementu członkowskiego, aby wskazać, że odwołanie do wartości zwracanej jest przechowywany lokalnie jako odwołanie do wywołującego zamierza zmodyfikować. Zobacz [zmiennych lokalnych Ref](#ref-locals) Aby uzyskać więcej informacji.
+- W treści elementu członkowskiego aby wskazać, że odwołanie do wartości zwracanej są przechowywane lokalnie, jako odwołanie do wywołującego zamierza zmienić lub ogólnie rzecz biorąc, zmienna lokalna uzyskuje dostęp do innej wartości przez odwołanie. Zobacz [zmiennych lokalnych Ref](#ref-locals) Aby uzyskać więcej informacji.
 
 ## <a name="passing-an-argument-by-reference"></a>Przekazywanie argumentów poprzez odwołanie
 
@@ -109,7 +109,13 @@ Na przykład następująca instrukcja definiuje ref wartości lokalnej, który j
 ref decimal estValue = ref Building.GetEstimatedValue();
 ```
 
-Należy pamiętać, że `ref` — słowo kluczowe może być używane w obu miejscach lub kompilator generuje błąd CS8172 "Nie można zainicjować zmiennej dostępnej przez odwołanie o wartości". 
+Dostępne wartości przez odwołanie w taki sam sposób. W niektórych przypadkach dostępu do wartość przez odwołanie zwiększa wydajność, unikając operacji kopiowania potencjalnie kosztowne. Na przykład następująca instrukcja pokazuje, jak jedną można zdefiniować wartości lokalnej ref, służący do odwołać się do wartości.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Należy pamiętać, że w obu przykładach `ref` — słowo kluczowe może być używane w obu miejscach lub kompilator generuje błąd CS8172 "Nie można zainicjować zmiennej dostępnej przez odwołanie o wartości". 
  
 ## <a name="a-ref-returns-and-ref-locals-example"></a>A przykład zmiennych lokalnych ref i zwraca ref
 

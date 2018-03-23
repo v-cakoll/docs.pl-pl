@@ -1,7 +1,7 @@
 ---
 title: .NET core samouczki
-description: "Wykonaj samouczki dotyczące uczenia .NET Core do tworzenia aplikacji i bibliotek na Mac, Linux i Windows."
-keywords: .NET, .NET core
+description: Wykonaj samouczki dotyczące uczenia .NET Core do tworzenia aplikacji i bibliotek na Mac, Linux i Windows.
+keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
 ms.date: 03/16/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: f6f654b1-1d2c-4105-8376-7c1959e23803
-ms.workload: dotnetcore
-ms.openlocfilehash: 8b1e80023139a4ebc3c961c47c06b9afd0370014
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 267cac338263f964006b424bb855d1022990498c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="net-core-tutorials"></a>.NET core samouczki
 
@@ -30,7 +31,7 @@ Następujące samouczki są dostępne szkoleniowe dotyczące .NET Core.
 - [Testowanie biblioteki klas](testing-library-with-visual-studio.md)
 - [Korzystanie z biblioteki klas](consuming-library-with-visual-studio.md)
 - [Tworzenie kompletnego rozwiązania C# .NET Core w systemie Windows](using-on-windows-full-solution.md)
-- [Samouczek NoSQL: Tworzenie usługi DocumentDB C# aplikacji konsoli .NET Core](/azure/documentdb/documentdb-dotnetcore-get-started)
+- [Azure rozwiązania Cosmos bazy danych: Wprowadzenie do korzystania z interfejsu API SQL i .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>Tworzenie aplikacji z kodem Visual Studio
 

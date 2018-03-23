@@ -12,14 +12,16 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc14d090951f12fd322b90fababa064d1f5b4e80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opcje kompilatora Visual Basic według kategorii
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora wiersza polecenia podano zamiast kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej przedstawiono listę [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] opcje wiersza polecenia kompilatora posortowane według kategorii funkcjonalności.  
+Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista opcje wiersza polecenia kompilatora Visual Basic, posortowane według kategorii funkcjonalności.  
+
+[!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
 ## <a name="compiler-output"></a>Dane wyjściowe kompilatora  
   
@@ -45,6 +47,8 @@ ms.lasthandoff: 03/22/2018
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Komentarze dokumentacji procesów do pliku XML.|  
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora do docelowego [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Określa plik wyjściowy.|  
+|[-refonly](refonly-compiler-option.md)|Generuje zestaw odwołania.|
+|[-refout](refout-compiler-option.md)|Ścieżka danych wyjściowych zestaw odwołania.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|Określa format danych wyjściowych.|  
   
 ## <a name="net-assemblies"></a>Zestawów platformy .NET  
@@ -113,7 +117,7 @@ ms.lasthandoff: 03/22/2018
 |[@ (określenie pliku odpowiedzi)](../../../visual-basic/reference/command-line-compiler/specify-response-file.md)|Określa plik odpowiedzi.|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|Określa adres podstawowy biblioteki dll.|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|Określa stronę kodową do używania wszystkich plików kodu źródłowego w kompilacji.|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora Zgłoś wewnętrzne błędy kompilatora.|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Określa, jak kompilator Visual Basic powinien zgłosić wewnętrzne błędy kompilatora.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|Określa, że jądra systemu Windows czy określonego pliku wykonywalnego obsługuje wysokiej entropii losowe generowanie układu przestrzeni adresów (ASLR).|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|Określa klasę, która zawiera `Sub Main` procedurę do użycia podczas uruchamiania.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Kompiluje z Vbc.rsp|  
@@ -130,6 +134,6 @@ ms.lasthandoff: 03/22/2018
   
 ## <a name="see-also"></a>Zobacz też  
  [Opcje kompilatora Visual Basic w porządku alfabetycznym](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [Wprowadzenie do projektanta projektu](http://msdn.microsoft.com/library/898dd854-c98d-430c-ba1b-a913ce3c73d7)  
+ [Wprowadzenie do projektanta projektu](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
  [Opcje kompilatora C# w porządku alfabetycznym](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
  [Opcje kompilatora C# w rozbiciu na kategorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)

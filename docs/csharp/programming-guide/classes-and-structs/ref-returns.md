@@ -1,6 +1,6 @@
 ---
-title: "Wartości zwracane ref i ref zmienne lokalne (Przewodnik C#)"
-description: "Dowiedz się, jak zdefiniować i użyć zwracane ref i wartości lokalnej ref"
+title: Wartości zwracane ref i ref zmienne lokalne (Przewodnik C#)
+description: Dowiedz się, jak zdefiniować i użyć zwracane ref i wartości lokalnej ref
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/23/2017
@@ -8,11 +8,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: a74563c0d24b6cd2a2fa8534787f078f3cc92674
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: c37c6dd61ae02813bcc467982f3b175da9136e4a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Zwraca ref i zmienne lokalne ref
 
@@ -85,7 +85,15 @@ ref Person p = ref contacts.GetContactInformation("Brandie", "Best");
 
 Użycie kolejnych `p` jest taka sama jak przy użyciu zmiennej zwrócony przez `GetContactInformation` ponieważ `p` jest aliasu dla tej zmiennej. Zmienia się na `p` również zmienić zmiennej zwrócony z `GetContactInformation`.
 
-Należy pamiętać, że `ref` słowo kluczowe jest używane zarówno przed deklaracji zmiennej lokalnej *i* przed wywołaniem metody. Błąd zawiera zarówno `ref` słów kluczowych w deklaracji zmiennej i przypisania powoduje błąd kompilatora CS8172, "nie można zainicjować zmiennej dostępnej przez odwołanie o wartości." 
+Należy pamiętać, że `ref` słowo kluczowe jest używane zarówno przed deklaracji zmiennej lokalnej *i* przed wywołaniem metody. 
+
+Dostępne wartości przez odwołanie w taki sam sposób. W niektórych przypadkach dostępu do wartość przez odwołanie zwiększa wydajność, unikając operacji kopiowania potencjalnie kosztowne. Na przykład następująca instrukcja pokazuje, jak jedną można zdefiniować wartości lokalnej ref, służący do odwołać się do wartości.
+
+```csharp
+ref VeryLargeStruct reflocal = ref veryLargeStruct;
+```
+
+Należy pamiętać, że `ref` słowo kluczowe jest używane zarówno przed deklaracji zmiennej lokalnej *i* przed wartością w drugim przykładzie. Błąd zawiera zarówno `ref` słów kluczowych w deklaracji zmiennej i przydziałów w obu przykłady powoduje błąd kompilatora CS8172, "nie można zainicjować zmiennej dostępnej przez odwołanie o wartości." 
  
 ## <a name="ref-returns-and-ref-locals-an-example"></a>Zwraca ref i zmienne lokalne ref: przykład
 
@@ -101,4 +109,5 @@ Takie działanie bez obsługi zwracanych wartości odwołania, zwykle odbywa si�
  
 ## <a name="see-also"></a>Zobacz także
 
-[ref keyword](../../language-reference/keywords/ref.md)
+[ref keyword](../../language-reference/keywords/ref.md)  
+[Semantykę odwołania z typami wartości](../../../csharp/reference-semantics-with-value-types.md)

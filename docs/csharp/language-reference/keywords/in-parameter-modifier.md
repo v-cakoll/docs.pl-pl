@@ -1,5 +1,5 @@
 ---
-title: "w modyfikator parametrów (odwołanie w C#)"
+title: w modyfikator parametrów (odwołanie w C#)
 ms.date: 03/06/2018
 ms.prod: .net
 ms.technology:
@@ -10,11 +10,11 @@ helpviewer_keywords:
 - in parameters [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 035aac3e6b902f607e533b709713eb1d07c9774a
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 9b8b21e2bdc95829c831ee71f24b47986321b7d0
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="in-parameter-modifier-c-reference"></a>w modyfikator parametrów (odwołanie w C#)
 
@@ -60,7 +60,10 @@ Nie można użyć `in`, `ref`, i `out` słowa kluczowe dla następujących rodza
   
 - Metody iteracyjne, które obejmują [yield return](../../../csharp/language-reference/keywords/yield.md) lub `yield break` instrukcji.  
 
-Zwykle zadeklarować `in` argumentów, aby uniknąć wymaganych przez przekazywanie argumentów poprzez wartość operacje kopiowania. Jest to najbardziej przydatne w przypadku argumentów struktury lub tablice struktur.
+Zwykle zadeklarować `in` argumentów, aby uniknąć wymaganych przez przekazywanie argumentów poprzez wartość operacje kopiowania. Jest to najbardziej przydatny w przypadku argumenty typów wartości, takich jak struktury gdzie operacje kopiowania są droższe niż przekazywanie poprzez odwołanie.
+
+> [!WARNING]
+>  `in` Parametry mogą być bardziej kosztowne niewłaściwego użycia. Kompilator może nie wiedzieć, jeśli element członkowski metod modyfikowania stanu struktury. Zawsze, gdy kompilator nie powiodło się, że obiekt nie jest modyfikowany, pamiętać o tworzy kopię i wywołuje element członkowski odwołań za pomocą tej kopii. Wszystkie możliwe modyfikacje zostaną obrony ją. Są dwa sposoby, aby uniknąć tych kopii do przekazania `in` parametrów jako `in` argumentów lub definiowania struktury jako `readonly struct`.
 
 ## <a name="c-language-specification"></a>Specyfikacja języka C#  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
@@ -69,4 +72,5 @@ Zwykle zadeklarować `in` argumentów, aby uniknąć wymaganych przez przekazywa
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [Parametry metody](../../../csharp/language-reference/keywords/method-parameters.md)
+ [Parametry metody](../../../csharp/language-reference/keywords/method-parameters.md)  
+ [Semantykę odwołania z typami wartości](../../../csharp/reference-semantics-with-value-types.md)

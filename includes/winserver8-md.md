@@ -1,1 +1,1 @@
-<span data-ttu-id="f51c6-101">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="f51c6-101">Windows Server 2012</span></span>
+<span data-ttu-id="cd371-101">Windows Server 2012</span><span class="sxs-lookup"><span data-stu-id="cd371-101">Windows Server 2012</span></span>

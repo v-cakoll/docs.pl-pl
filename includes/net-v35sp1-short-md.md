@@ -1,1 +1,1 @@
-<span data-ttu-id="b076b-101">.NET Framework 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="b076b-101">.NET Framework 3.5 SP1</span></span>
+<span data-ttu-id="1c63e-101">.NET Framework 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="1c63e-101">.NET Framework 3.5 SP1</span></span>

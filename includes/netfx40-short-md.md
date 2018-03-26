@@ -1,1 +1,1 @@
-<span data-ttu-id="44d22-101">Program .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="44d22-101">.NET Framework 4</span></span>
+<span data-ttu-id="a314e-101">Program .NET Framework 4</span><span class="sxs-lookup"><span data-stu-id="a314e-101">.NET Framework 4</span></span>

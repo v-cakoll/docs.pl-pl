@@ -1,12 +1,13 @@
 ---
-title: "Rozszerz szklaną klatkę na aplikację WPF"
-ms.custom: 
+title: Rozszerz szklaną klatkę na aplikację WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,31 +18,32 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: aad070bca408fc608eb000948c1b942d08f02018
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="08946-102">Rozszerz szklaną klatkę na aplikację WPF</span><span class="sxs-lookup"><span data-stu-id="08946-102">Extend Glass Frame Into a WPF Application</span></span>
-<span data-ttu-id="08946-103">W tym temacie przedstawiono sposób rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] szkła ramki do obszaru klienckiego [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="08946-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.</span></span>  
+# <a name="extend-glass-frame-into-a-wpf-application"></a><span data-ttu-id="cd667-102">Rozszerz szklaną klatkę na aplikację WPF</span><span class="sxs-lookup"><span data-stu-id="cd667-102">Extend Glass Frame Into a WPF Application</span></span>
+<span data-ttu-id="cd667-103">W tym temacie przedstawiono sposób rozszerzyć [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] szkła ramki do obszaru klienckiego [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="cd667-103">This topic demonstrates how to extend the [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] glass frame into the client area of a [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] application.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="08946-104">W tym przykładzie będzie działać tylko na [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] maszyny z systemem Menedżera okien pulpitu (DWM) z szkła włączone.</span><span class="sxs-lookup"><span data-stu-id="08946-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]<span data-ttu-id="08946-105">Home edition podstawowa nie obsługuje efekt szkła przezroczysty.</span><span class="sxs-lookup"><span data-stu-id="08946-105"> Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="08946-106">Obszary, które zwykle pozbawia efekt szkła przezroczysty na inne wersje [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] są renderowane przezroczystości.</span><span class="sxs-lookup"><span data-stu-id="08946-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>  
+>  <span data-ttu-id="cd667-104">W tym przykładzie będzie działać tylko na [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] maszyny z systemem Menedżera okien pulpitu (DWM) z szkła włączone.</span><span class="sxs-lookup"><span data-stu-id="cd667-104">This example will only work on a [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] machine running the Desktop Window Manager (DWM) with glass enabled.</span></span> [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)]<span data-ttu-id="cd667-105"> Home edition podstawowa nie obsługuje efekt szkła przezroczysty.</span><span class="sxs-lookup"><span data-stu-id="cd667-105"> Home Basic edition does not support the transparent glass effect.</span></span> <span data-ttu-id="cd667-106">Obszary, które zwykle pozbawia efekt szkła przezroczysty na inne wersje [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] są renderowane przezroczystości.</span><span class="sxs-lookup"><span data-stu-id="cd667-106">Areas that would typically render with the transparent glass effect on other editions of [!INCLUDE[TLA2#tla_winvista](../../../../includes/tla2sharptla-winvista-md.md)] are rendered opaque.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="08946-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="08946-107">Example</span></span>  
- <span data-ttu-id="08946-108">Na poniższym obrazie przedstawiono szkła ramki rozszerzony do adresu pasek programu Internet Explorer 7.</span><span class="sxs-lookup"><span data-stu-id="08946-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7.</span></span>  
+## <a name="example"></a><span data-ttu-id="cd667-107">Przykład</span><span class="sxs-lookup"><span data-stu-id="cd667-107">Example</span></span>  
+ <span data-ttu-id="cd667-108">Na poniższym obrazie przedstawiono szkła ramki rozszerzony do adresu pasek programu Internet Explorer 7.</span><span class="sxs-lookup"><span data-stu-id="cd667-108">The following image illustrates the glass frame extended into the address bar of Internet Explorer 7.</span></span>  
   
- <span data-ttu-id="08946-109">**Program Internet Explorer z rozszerzonego szkła ramki za paska adresu.**</span><span class="sxs-lookup"><span data-stu-id="08946-109">**Internet Explorer with extended glass frame behind address bar.**</span></span>  
+ <span data-ttu-id="cd667-109">**Program Internet Explorer z rozszerzonego szkła ramki za paska adresu.**</span><span class="sxs-lookup"><span data-stu-id="cd667-109">**Internet Explorer with extended glass frame behind address bar.**</span></span>  
   
- <span data-ttu-id="08946-110">![IE7 szkła ramki rozszerzony poza pasek adresu. ] (../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span><span class="sxs-lookup"><span data-stu-id="08946-110">![IE7 with glass frame extended behind address bar.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span></span>  
+ <span data-ttu-id="cd667-110">![IE7 szkła ramki rozszerzony poza pasek adresu. ] (../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span><span class="sxs-lookup"><span data-stu-id="cd667-110">![IE7 with glass frame extended behind address bar.](../../../../docs/framework/wpf/graphics-multimedia/media/ie7glasstopbar.PNG "IE7glasstopbar")</span></span>  
   
- <span data-ttu-id="08946-111">Aby rozszerzyć szkła ramki na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana.</span><span class="sxs-lookup"><span data-stu-id="08946-111">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] is needed.</span></span> <span data-ttu-id="08946-112">Poniższy przykładowy kod jest wywołanie platformy (pinvoke) dla dwóch [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] spełnić w celu rozszerzenia ramki do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="08946-112">The following code example does a Platform Invoke (pinvoke) for the two [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] needed to extend the frame into the client area.</span></span> <span data-ttu-id="08946-113">Każdy z tych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] został zadeklarowany w klasie o nazwie **NonClientRegionAPI**.</span><span class="sxs-lookup"><span data-stu-id="08946-113">Each of these [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] are declared in a class called **NonClientRegionAPI**.</span></span>  
+ <span data-ttu-id="cd667-111">Aby rozszerzyć szkła ramki na [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji, dostęp do niezarządzanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] jest wymagana.</span><span class="sxs-lookup"><span data-stu-id="cd667-111">To extend the glass frame on a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application, access to unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] is needed.</span></span> <span data-ttu-id="cd667-112">Poniższy przykładowy kod jest wywołanie platformy (pinvoke) dla dwóch [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] spełnić w celu rozszerzenia ramki do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="cd667-112">The following code example does a Platform Invoke (pinvoke) for the two [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] needed to extend the frame into the client area.</span></span> <span data-ttu-id="cd667-113">Każdy z tych [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] został zadeklarowany w klasie o nazwie **NonClientRegionAPI**.</span><span class="sxs-lookup"><span data-stu-id="cd667-113">Each of these [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] are declared in a class called **NonClientRegionAPI**.</span></span>  
   
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
@@ -73,10 +75,10 @@ public static extern int DwmExtendFrameIntoClientArea(
         End Function  
 ```  
   
- <span data-ttu-id="08946-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) jest funkcja Menedżera okien pulpitu, rozszerzający ramki do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="08946-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="08946-115">Trwa dwóch parametrów; uchwyt okna i [MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) struktury.</span><span class="sxs-lookup"><span data-stu-id="08946-115">It takes two parameters; a window handle and a [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) structure.</span></span> <span data-ttu-id="08946-116">[MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) informuje Menedżera okien pulpitu, ile bardzo ramki powinien zostać rozszerzony do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="08946-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>  
+ <span data-ttu-id="cd667-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) jest funkcja Menedżera okien pulpitu, rozszerzający ramki do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="cd667-114">[DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) is the DWM function that extends the frame into the client area.</span></span> <span data-ttu-id="cd667-115">Trwa dwóch parametrów; uchwyt okna i [MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) struktury.</span><span class="sxs-lookup"><span data-stu-id="cd667-115">It takes two parameters; a window handle and a [MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) structure.</span></span> <span data-ttu-id="cd667-116">[MARGINESY](https://msdn.microsoft.com/library/bb773244.aspx) informuje Menedżera okien pulpitu, ile bardzo ramki powinien zostać rozszerzony do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="cd667-116">[MARGINS](https://msdn.microsoft.com/library/bb773244.aspx) is used to tell the DWM how much extra the frame should be extended into the client area.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="08946-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="08946-117">Example</span></span>  
- <span data-ttu-id="08946-118">Aby użyć [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) funkcji, należy uzyskać uchwytu okna.</span><span class="sxs-lookup"><span data-stu-id="08946-118">To use the [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) function, a window handle must be obtained.</span></span> <span data-ttu-id="08946-119">W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], można uzyskać uchwytu okna <xref:System.Windows.Interop.HwndSource.Handle%2A> właściwość <xref:System.Windows.Interop.HwndSource>.</span><span class="sxs-lookup"><span data-stu-id="08946-119">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="08946-120">W poniższym przykładzie ramki jest rozszerzony do obszaru klienckiego na <xref:System.Windows.FrameworkElement.Loaded> zdarzenia okna.</span><span class="sxs-lookup"><span data-stu-id="08946-120">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>  
+## <a name="example"></a><span data-ttu-id="cd667-117">Przykład</span><span class="sxs-lookup"><span data-stu-id="cd667-117">Example</span></span>  
+ <span data-ttu-id="cd667-118">Aby użyć [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) funkcji, należy uzyskać uchwytu okna.</span><span class="sxs-lookup"><span data-stu-id="cd667-118">To use the [DwmExtendFrameIntoClientArea](https://msdn.microsoft.com/library/aa969512.aspx) function, a window handle must be obtained.</span></span> <span data-ttu-id="cd667-119">W [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], można uzyskać uchwytu okna <xref:System.Windows.Interop.HwndSource.Handle%2A> właściwość <xref:System.Windows.Interop.HwndSource>.</span><span class="sxs-lookup"><span data-stu-id="cd667-119">In [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], the window handle can be obtained from the <xref:System.Windows.Interop.HwndSource.Handle%2A> property of an <xref:System.Windows.Interop.HwndSource>.</span></span> <span data-ttu-id="cd667-120">W poniższym przykładzie ramki jest rozszerzony do obszaru klienckiego na <xref:System.Windows.FrameworkElement.Loaded> zdarzenia okna.</span><span class="sxs-lookup"><span data-stu-id="cd667-120">In the following example, the frame is extended into the client area on the <xref:System.Windows.FrameworkElement.Loaded> event of the window.</span></span>  
   
 ```csharp  
 void OnLoaded(object sender, RoutedEventArgs e)  
@@ -119,8 +121,8 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }  
 ```  
   
-## <a name="example"></a><span data-ttu-id="08946-121">Przykład</span><span class="sxs-lookup"><span data-stu-id="08946-121">Example</span></span>  
- <span data-ttu-id="08946-122">W poniższym przykładzie przedstawiono prosty okna, w którym ramki jest rozszerzony do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="08946-122">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="08946-123">Ramki jest rozszerzona za górnej krawędzi, która zawiera dwa <xref:System.Windows.Controls.TextBox> obiektów.</span><span class="sxs-lookup"><span data-stu-id="08946-123">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>  
+## <a name="example"></a><span data-ttu-id="cd667-121">Przykład</span><span class="sxs-lookup"><span data-stu-id="cd667-121">Example</span></span>  
+ <span data-ttu-id="cd667-122">W poniższym przykładzie przedstawiono prosty okna, w którym ramki jest rozszerzony do obszaru klienckiego.</span><span class="sxs-lookup"><span data-stu-id="cd667-122">The following example shows a simple window in which the frame is extended into the client area.</span></span> <span data-ttu-id="cd667-123">Ramki jest rozszerzona za górnej krawędzi, która zawiera dwa <xref:System.Windows.Controls.TextBox> obiektów.</span><span class="sxs-lookup"><span data-stu-id="cd667-123">The frame is extended behind the top border that contains the two <xref:System.Windows.Controls.TextBox> objects.</span></span>  
   
 ```xaml  
 <Window x:Class="SDKSample.Window1"  
@@ -154,13 +156,13 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>  
 ```  
   
- <span data-ttu-id="08946-124">Na poniższym obrazie przedstawiono szkła ramki rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="08946-124">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application.</span></span>  
+ <span data-ttu-id="cd667-124">Na poniższym obrazie przedstawiono szkła ramki rozszerzone do postaci [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji.</span><span class="sxs-lookup"><span data-stu-id="cd667-124">The following image illustrates the glass frame extended into a [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] application.</span></span>  
   
- <span data-ttu-id="08946-125">**Szkła ramki rozszerzone do postaci**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplikacji.** </span><span class="sxs-lookup"><span data-stu-id="08946-125">**Glass Frame Extended into a**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **Application.**</span></span>  
+ <span data-ttu-id="cd667-125">**Szkła ramki rozszerzone do postaci**[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]**aplikacji.** </span><span class="sxs-lookup"><span data-stu-id="cd667-125">**Glass Frame Extended into a**  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]  **Application.**</span></span>  
   
- <span data-ttu-id="08946-126">![Szkła ramki rozszerzonych w aplikacji WPF. ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span><span class="sxs-lookup"><span data-stu-id="08946-126">![Glass Frame Extended into a WPF application.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span></span>  
+ <span data-ttu-id="cd667-126">![Szkła ramki rozszerzonych w aplikacji WPF. ] (../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span><span class="sxs-lookup"><span data-stu-id="cd667-126">![Glass Frame Extended into a WPF application.](../../../../docs/framework/wpf/graphics-multimedia/media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="08946-127">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="08946-127">See Also</span></span>  
- [<span data-ttu-id="08946-128">Omówienie Menedżera okien pulpitu</span><span class="sxs-lookup"><span data-stu-id="08946-128">Desktop Window Manager Overview</span></span>](https://msdn.microsoft.com/library/aa969540.aspx)  
- [<span data-ttu-id="08946-129">Omówienie rozmycia Menedżera okien pulpitu</span><span class="sxs-lookup"><span data-stu-id="08946-129">Desktop Window Manager Blur Overview</span></span>](https://msdn.microsoft.com/library/aa969537.aspx)  
- [<span data-ttu-id="08946-130">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="08946-130">DwmExtendFrameIntoClientArea</span></span>](https://msdn.microsoft.com/library/aa969512.aspx)
+## <a name="see-also"></a><span data-ttu-id="cd667-127">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="cd667-127">See Also</span></span>  
+ [<span data-ttu-id="cd667-128">Omówienie Menedżera okien pulpitu</span><span class="sxs-lookup"><span data-stu-id="cd667-128">Desktop Window Manager Overview</span></span>](https://msdn.microsoft.com/library/aa969540.aspx)  
+ [<span data-ttu-id="cd667-129">Omówienie rozmycia Menedżera okien pulpitu</span><span class="sxs-lookup"><span data-stu-id="cd667-129">Desktop Window Manager Blur Overview</span></span>](https://msdn.microsoft.com/library/aa969537.aspx)  
+ [<span data-ttu-id="cd667-130">DwmExtendFrameIntoClientArea</span><span class="sxs-lookup"><span data-stu-id="cd667-130">DwmExtendFrameIntoClientArea</span></span>](https://msdn.microsoft.com/library/aa969512.aspx)

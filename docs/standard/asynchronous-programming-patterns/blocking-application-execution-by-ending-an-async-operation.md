@@ -1,12 +1,12 @@
 ---
-title: "Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej"
-ms.custom: 
+title: Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - blocks, asynchronous operations
@@ -14,7 +14,7 @@ helpviewer_keywords:
 - asynchronous programming, blocking applications
 - blocking application execution
 ms.assetid: cc5e2834-a65b-4df8-b750-7bdb79997fee
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -25,26 +25,26 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 3ec7bfe6fe2cef20a6d74030802113a47e8679e1
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
-# <a name="blocking-application-execution-by-ending-an-async-operation"></a><span data-ttu-id="760ff-102">Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej</span><span class="sxs-lookup"><span data-stu-id="760ff-102">Blocking Application Execution by Ending an Async Operation</span></span>
-<span data-ttu-id="760ff-103">Aplikacje, których nie można nadal wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej zablokować przed zakończeniem operacji.</span><span class="sxs-lookup"><span data-stu-id="760ff-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="760ff-104">Mają być blokowane podczas oczekiwania na zakończenie operacji asynchronicznych wątku głównego aplikacji, użyj jednej z następujących opcji:</span><span class="sxs-lookup"><span data-stu-id="760ff-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  
+# <a name="blocking-application-execution-by-ending-an-async-operation"></a><span data-ttu-id="2929e-102">Blokowanie wykonywania aplikacji poprzez zakończenie operacji asynchronicznej</span><span class="sxs-lookup"><span data-stu-id="2929e-102">Blocking Application Execution by Ending an Async Operation</span></span>
+<span data-ttu-id="2929e-103">Aplikacje, których nie można nadal wykonywać inne zadania podczas oczekiwania na wyniki operacji asynchronicznej zablokować przed zakończeniem operacji.</span><span class="sxs-lookup"><span data-stu-id="2929e-103">Applications that cannot continue to do other work while waiting for the results of an asynchronous operation must block until the operation completes.</span></span> <span data-ttu-id="2929e-104">Mają być blokowane podczas oczekiwania na zakończenie operacji asynchronicznych wątku głównego aplikacji, użyj jednej z następujących opcji:</span><span class="sxs-lookup"><span data-stu-id="2929e-104">Use one of the following options to block your application's main thread while waiting for an asynchronous operation to complete:</span></span>  
   
--   <span data-ttu-id="760ff-105">Operacje asynchroniczne wywołanie **zakończenia *** OperationName* metody.</span><span class="sxs-lookup"><span data-stu-id="760ff-105">Call the asynchronous operations **End***OperationName* method.</span></span> <span data-ttu-id="760ff-106">Takie podejście jest przedstawiona w tym temacie.</span><span class="sxs-lookup"><span data-stu-id="760ff-106">This approach is demonstrated in this topic.</span></span>  
+-   <span data-ttu-id="2929e-105">Operacje asynchroniczne wywołanie **zakończenia *** OperationName* metody.</span><span class="sxs-lookup"><span data-stu-id="2929e-105">Call the asynchronous operations **End***OperationName* method.</span></span> <span data-ttu-id="2929e-106">Takie podejście jest przedstawiona w tym temacie.</span><span class="sxs-lookup"><span data-stu-id="2929e-106">This approach is demonstrated in this topic.</span></span>  
   
--   <span data-ttu-id="760ff-107">Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć *** OperationName* metody.</span><span class="sxs-lookup"><span data-stu-id="760ff-107">Use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> returned by the asynchronous operation's **Begin***OperationName* method.</span></span> <span data-ttu-id="760ff-108">Na przykład, który pokazuje tej metody, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span><span class="sxs-lookup"><span data-stu-id="760ff-108">For an example that demonstrates this approach, see [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span></span>  
+-   <span data-ttu-id="2929e-107">Użyj <xref:System.IAsyncResult.AsyncWaitHandle%2A> właściwość <xref:System.IAsyncResult> zwrócony przez operację asynchroniczną **rozpocząć *** OperationName* metody.</span><span class="sxs-lookup"><span data-stu-id="2929e-107">Use the <xref:System.IAsyncResult.AsyncWaitHandle%2A> property of the <xref:System.IAsyncResult> returned by the asynchronous operation's **Begin***OperationName* method.</span></span> <span data-ttu-id="2929e-108">Na przykład, który pokazuje tej metody, zobacz [blokowania aplikacji wykonywania za pomocą właściwości AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span><span class="sxs-lookup"><span data-stu-id="2929e-108">For an example that demonstrates this approach, see [Blocking Application Execution Using an AsyncWaitHandle](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md).</span></span>  
   
- <span data-ttu-id="760ff-109">Aplikacje używające **zakończenia *** OperationName* zwykle wywoła metodę, aby zablokować aż do zakończenia operacji asynchronicznej **rozpocząć *** OperationName* metody, wykonać pracę, którą można wykonać bez wyniki operacji, a następnie wywołania **zakończenia *** OperationName*.</span><span class="sxs-lookup"><span data-stu-id="760ff-109">Applications that use the **End***OperationName* method to block until an asynchronous operation is complete will typically call the **Begin***OperationName* method, perform any work that can be done without the results of the operation, and then call **End***OperationName*.</span></span>  
+ <span data-ttu-id="2929e-109">Aplikacje używające **zakończenia *** OperationName* zwykle wywoła metodę, aby zablokować aż do zakończenia operacji asynchronicznej **rozpocząć *** OperationName* metody, wykonać pracę, którą można wykonać bez wyniki operacji, a następnie wywołania **zakończenia *** OperationName*.</span><span class="sxs-lookup"><span data-stu-id="2929e-109">Applications that use the **End***OperationName* method to block until an asynchronous operation is complete will typically call the **Begin***OperationName* method, perform any work that can be done without the results of the operation, and then call **End***OperationName*.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="760ff-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="760ff-110">Example</span></span>  
- <span data-ttu-id="760ff-111">Poniższy przykład kodu pokazuje używanie metod asynchronicznych w <xref:System.Net.Dns> klasy można pobrać informacji o systemie nazw domen dla komputera określone przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="760ff-111">The following code example demonstrates using asynchronous methods in the <xref:System.Net.Dns> class to retrieve Domain Name System information for a user-specified computer.</span></span> <span data-ttu-id="760ff-112">Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametry ponieważ tych argumentów nie są wymagane w przypadku korzystania z tej metody.</span><span class="sxs-lookup"><span data-stu-id="760ff-112">Note that `null` (`Nothing` in Visual Basic) is passed for the <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` and `stateObject` parameters because these arguments are not required when using this approach.</span></span>  
+## <a name="example"></a><span data-ttu-id="2929e-110">Przykład</span><span class="sxs-lookup"><span data-stu-id="2929e-110">Example</span></span>  
+ <span data-ttu-id="2929e-111">Poniższy przykład kodu pokazuje używanie metod asynchronicznych w <xref:System.Net.Dns> klasy można pobrać informacji o systemie nazw domen dla komputera określone przez użytkownika.</span><span class="sxs-lookup"><span data-stu-id="2929e-111">The following code example demonstrates using asynchronous methods in the <xref:System.Net.Dns> class to retrieve Domain Name System information for a user-specified computer.</span></span> <span data-ttu-id="2929e-112">Należy pamiętać, że `null` (`Nothing` w języku Visual Basic) jest przekazywana <xref:System.Net.Dns.BeginGetHostByName%2A> `requestCallback` i `stateObject` parametry ponieważ tych argumentów nie są wymagane w przypadku korzystania z tej metody.</span><span class="sxs-lookup"><span data-stu-id="2929e-112">Note that `null` (`Nothing` in Visual Basic) is passed for the <xref:System.Net.Dns.BeginGetHostByName%2A>`requestCallback` and `stateObject` parameters because these arguments are not required when using this approach.</span></span>  
   
  [!code-csharp[AsyncDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDesignPattern/CS/Async_EndBlock.cs#1)]
  [!code-vb[AsyncDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AsyncDesignPattern/VB/Async_EndBlock.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="760ff-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="760ff-113">See Also</span></span>  
- [<span data-ttu-id="760ff-114">Asynchroniczny wzorzec oparty na zdarzeniach (EAP)</span><span class="sxs-lookup"><span data-stu-id="760ff-114">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
- [<span data-ttu-id="760ff-115">Asynchroniczny wzorzec oparty na zdarzeniach — omówienie</span><span class="sxs-lookup"><span data-stu-id="760ff-115">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+## <a name="see-also"></a><span data-ttu-id="2929e-113">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="2929e-113">See Also</span></span>  
+ [<span data-ttu-id="2929e-114">Asynchroniczny wzorzec oparty na zdarzeniach (EAP)</span><span class="sxs-lookup"><span data-stu-id="2929e-114">Event-based Asynchronous Pattern (EAP)</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)  
+ [<span data-ttu-id="2929e-115">Asynchroniczny wzorzec oparty na zdarzeniach — omówienie</span><span class="sxs-lookup"><span data-stu-id="2929e-115">Event-based Asynchronous Pattern Overview</span></span>](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

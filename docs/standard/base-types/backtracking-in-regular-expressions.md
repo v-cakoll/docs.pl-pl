@@ -1,12 +1,12 @@
 ---
-title: "Śledzenie wsteczne w wyrażeniach regularnych"
-ms.custom: 
+title: Śledzenie wsteczne w wyrażeniach regularnych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,7 +22,7 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -30,13 +30,13 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: b3d7b5c42f43795f811af66d42ed364d482c8ced
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="backtracking-in-regular-expressions"></a>Śledzenie wsteczne w wyrażeniach regularnych
-<a name="top"></a>Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i przywraca poprzedni zapisany stan, aby kontynuować aparat wyrażeń regularnych Wyszukiwanie w celu dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
+<a name="top"></a> Śledzenie wsteczne występuje, gdy wzorzec wyrażenia regularnego zawiera opcjonalne [Kwantyfikatory](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md) lub [konstrukcje alternacyjne](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md), i zwraca aparat wyrażeń regularnych do poprzedniego stanu zapisanego kontynuować jego wyszukiwane dopasowania. Wycofywanie stanowi podstawę dużych możliwości wyrażeń regularnych, ponieważ dzięki niemu wyrażenia oferują duże możliwości i są elastyczne, a także umożliwiają dopasowywanie bardzo złożonych wzorców. Jednocześnie te możliwości są obciążone kosztami. Wycofywanie często jest najważniejszym czynnikiem wpływającym na wydajność aparatu wyrażeń regularnych. Na szczęście deweloper ma kontrolę nad zachowaniem aparatu wyrażeń regularnych i sposobem użycia wycofywania. W tym temacie opisano zasadę działania wycofywania i możliwości sterowania nim.  
   
 > [!NOTE]
 >  Ogólnie rzecz biorąc aparat niedeterministyczne skończoną Automaton DS, jak aparat wyrażenie regularne .NET umieszcza odpowiedzialność za obsługuje tworzenie wydajnych, szybkie regularne wyrażeń dewelopera.  
@@ -128,7 +128,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Zwraca do poprzednio zapisanych dopasowania 3. Ustala, że istnieją dwa dodatkowe znaki „a”, które można przypisać do dodatkowej przechwyconej grupy. Jednak test końca ciągu kończy się niepowodzeniem. Następnie aparat wraca do dopasowania 3 i próbuje dopasować dwa dodatkowe znaki „a” w dwóch dodatkowych przechwyconych grupach. Test końca ciągu nadal kończy się niepowodzeniem. Te nieudane dopasowania wymagały wykonania 12 porównań. Do tej pory łącznie 25 porównania mogły zostać wykonane.  
   
- Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Z powodu kwantyfikatorami zagnieżdżonymi, to porównanie jest O (2<sup>n</sup>) lub wykładniczej operacji, gdy  *n*  jest liczba znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego.  
+ Porównywanie ciągu wejściowego z wyrażeniem regularnym w ten sposób będzie kontynuowane, dopóki aparat wyrażeń regularnych nie wypróbuje wszystkich możliwych kombinacji dopasowań, a następnie uzna, że nie istnieje dopasowanie. Z powodu kwantyfikatorami zagnieżdżonymi, to porównanie jest O (2<sup>n</sup>) lub wykładniczej operacji, gdy *n* jest liczba znaków w ciągu wejściowym. Oznacza to, że w najgorszym przypadku ciąg wejściowy o długości 30 znaków będzie wymagał wykonania ok. 1 073 741 824 porównań, a ciąg wejściowy o długości 40 znaków będzie wymagał wykonania ok. 1 099 511 627 776 porównań. Gdy są używane ciągi o takiej lub większej długości, wykonanie metod opartych na wyrażeniach regularnych może trwać niezwykle długo, jeśli w przetwarzanych ciągach nie będą znajdować się dopasowania do wzorca wyrażenia regularnego.  
   
  [Powrót do początku](#top)  
   
@@ -163,7 +163,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="lookbehind-assertions"></a>Asercje wsteczne  
  .NET zawiera dwa elementy języka, `(?<=` *Podwyrażenie* `)` i `(?<!` *Podwyrażenie*`)`, spełniających poprzedni znak lub znaków w parametrach wejściowych. Oba elementy języka są asercje o zerowej szerokości; oznacza to, określają, czy znak lub znaków, które bezpośrednio poprzedzać bieżący znak można dopasować przez *Podwyrażenie*, bez przesuwania lub śledzenie wsteczne.  
   
- `(?<=`*Podwyrażenie* `)` jest dodatnie wybieganie wstecz asercja; oznacza to znak lub znaki, przed bieżącą pozycję musi być zgodna *Podwyrażenie*. `(?<!`*Podwyrażenie* `)` jest ujemne wybieganie wstecz asercja; oznacza to znak lub znaki przed bieżącą pozycję nie musi odpowiadać *Podwyrażenie*. Zarówno potwierdzenia dodatnie i ujemne wybieganie wstecz są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem poprzedniego wyrażenia podrzędnego.  
+ `(?<=` *Podwyrażenie* `)` jest dodatnie wybieganie wstecz asercja; oznacza to znak lub znaki, przed bieżącą pozycję musi być zgodna *Podwyrażenie*. `(?<!`*Podwyrażenie* `)` jest ujemne wybieganie wstecz asercja; oznacza to znak lub znaki przed bieżącą pozycję nie musi odpowiadać *Podwyrażenie*. Zarówno potwierdzenia dodatnie i ujemne wybieganie wstecz są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem poprzedniego wyrażenia podrzędnego.  
   
  W poniższym przykładzie użyto dwóch wzorce równoważne wyrażenia regularnego sprawdzania poprawności nazwy użytkownika w adresie e-mail. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wsteczną. Dane wyjściowe z przykładu przedstawia czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 02/01/2018
 ### <a name="lookahead-assertions"></a>Asercje wyprzedzające  
  .NET zawiera dwa elementy języka, `(?=` *Podwyrażenie* `)` i `(?!` *Podwyrażenie*`)`, spełniających następnej znak lub znaków Ciąg wejściowy. Oba elementy języka są asercje o zerowej szerokości; oznacza to, określają, czy znak lub znaków, które bezpośrednio po bieżący znak można dopasować przez *Podwyrażenie*, bez przesuwania lub śledzenie wsteczne.  
   
- `(?=`*Podwyrażenie* `)` jest potwierdzenie dodatnią wyprzedzenia; oznacza to znak lub znaki po bieżącej pozycji musi być zgodna *Podwyrażenie*. `(?!`*Podwyrażenie* `)` jest potwierdzenie ujemna wyprzedzenia; oznacza to znak lub znaki po bieżącej pozycji nie może być dopasowana *Podwyrażenie*. Zarówno potwierdzenia wyprzedzenia dodatnie i ujemne są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem Podwyrażenie dalej.  
+ `(?=` *Podwyrażenie* `)` jest potwierdzenie dodatnią wyprzedzenia; oznacza to znak lub znaki po bieżącej pozycji musi być zgodna *Podwyrażenie*. `(?!`*Podwyrażenie* `)` jest potwierdzenie ujemna wyprzedzenia; oznacza to znak lub znaki po bieżącej pozycji nie może być dopasowana *Podwyrażenie*. Zarówno potwierdzenia wyprzedzenia dodatnie i ujemne są najbardziej przydatne, gdy *Podwyrażenie* jest podzbiorem Podwyrażenie dalej.  
   
  W poniższym przykładzie są używane dwa równoważne wzorce wyrażenia regularnego sprawdzające w pełni kwalifikowaną nazwę typu. Pierwszy wzorzec działa z niską wydajnością z powodu nadmiernego wycofywania. Drugi wzorzec modyfikuje pierwsze wyrażenie regularne, zastępując zagnieżdżony kwantyfikator pozytywną asercją wyprzedzającą. Dane wyjściowe z przykładu przedstawia czas wykonywania <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> metody.  
   

@@ -1,26 +1,27 @@
 ---
-title: "Wskazówki dotyczące migracji"
-ms.custom: 
+title: Wskazówki dotyczące migracji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e04c63754960dca44558d888b8ce357220562ea7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migration-guidance"></a>Wskazówki dotyczące migracji
-W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)]została wydana w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywane WF3) i rozszerzony w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieją obok nowej technologii przepływu pracy (typy węzła System.Activities.\* przestrzeni nazw; określone jako WF4). Podczas określania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że kontrolować czas.  
+W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Microsoft udostępnia drugą wersją główną [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[wf1](../../../includes/wf1-md.md)] została wydana w [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (to uwzględnione typy w przestrzeniach nazw System.Workflow.*; teraz nazywane WF3) i rozszerzony w [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]. WF3 jest również częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], ale istnieją obok nowej technologii przepływu pracy (typy węzła System.Activities.\* przestrzeni nazw; określone jako WF4). Podczas określania, kiedy należy przyjąć WF4, należy najpierw rozpoznaje, że kontrolować czas.  
   
 -   WF3 jest w pełni obsługiwane częścią [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].  
   
@@ -45,7 +46,7 @@ W [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)], firma Micros
  [Wskazówki dotyczące WF: Automatu stanów](http://go.microsoft.com/fwlink/?LinkId=153855)  
  W tym artykule omówiono przepływ sterowania WF4 modelowania w przypadku braku aktywności komputera stanu.  
   
- Należy pamiętać, że w tych wskazówkach dotyczy tylko projektów przepływu pracy, które odnoszą się do programu .NET Framework 4. Stan pracy maszyny zostały dodane w programie .NET 4.0.1 wraz z wydaniem Platform Update 1 i zostały zawarte w ramach programu .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Stan maszyny z przepływów pracy w programie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji dla programu Microsoft .NET Framework 4 funkcji 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) i [przepływy pracy maszyny stanu](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
+ Należy pamiętać, że w tych wskazówkach dotyczy tylko projektów przepływu pracy, które odnoszą się do programu .NET Framework 4. Stan pracy maszyny zostały dodane w programie .NET 4.0.1 wraz z wydaniem Platform Update 1 i zostały zawarte w ramach programu .NET Framework 4.5. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Stan maszyny z przepływów pracy w programie .NET 4.0.1 — 4.0.3 i .NET Framework 4.5, zobacz [aktualizacji dla programu Microsoft .NET Framework 4 funkcji 4.0.1](http://msdn.microsoft.com/library/de3297bd-c3e1-4126-95be-2ed7fe2a98fc) i [przepływy pracy maszyny stanu](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md).  
   
  [WF Cookbook migracji: Niestandardowe działania](http://go.microsoft.com/fwlink/?LinkId=153856)  
  Zawiera instrukcje dotyczące zmiany projektu WF3 niestandardowych działań na WF4 i przykłady.  

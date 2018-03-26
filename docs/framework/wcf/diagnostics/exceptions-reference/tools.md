@@ -1,24 +1,26 @@
 ---
-title: "Narzędzia"
-ms.custom: 
+title: Narzędzia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
-caps.latest.revision: "5"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5badbb9142261fc1dc6c2b2d5af3c89c7af776b6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tools"></a>Narzędzia
 W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] narzędzia.  
@@ -27,8 +29,8 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
   
 |Kod zasobu|Ciąg zasobu|  
 |-------------------|---------------------|  
-|ParametersTarget|\<wyliczenia >|  
-|ParametersToolConfig|\<configFile >|  
+|ParametersTarget|\<enum>|  
+|ParametersToolConfig|\<configFile>|  
 |ErrInvalidPath|Określony jest nieprawidłową ścieżkę. Sprawdź właściwość określonego argumentu.|  
 |ParametersReference|\<Ścieżka pliku >|  
 |WrnCannotLoadConfigFileForValidation|Wystąpił błąd podczas przetwarzania pliku konfiguracji z określonej lokalizacji. Nie można sprawdzić poprawności usług, które są zdefiniowane w tym pliku konfiguracji.|  
@@ -45,7 +47,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |WrnCannotResolveServiceForValidation|Nie można załadować usługi za pomocą określonego configName. Aby sprawdzić poprawność usługi, podaj zarówno zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
 |ErrUnexpectedValue|Określona opcja nie obsługuje żadnych wartości.|  
 |#InvalidArg|Określony zawiera nieprawidłowy argument.|  
-|ParametersExcludeType|\<Typ >|  
+|ParametersExcludeType|\<type>|  
 |HelpXmlSerializer|Generowanie typów danych, które używają XmlSerializer do serializacji i deserializacji.|  
 |#|---------------------------------------------------------------------------------------------------------------------=|  
 |ErrUnexpectedError|Wystąpił błąd w narzędziu.|  
@@ -62,7 +64,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrCannotCreateDirectory|Nie można utworzyć określonego katalogu.|  
 |ErrCouldNotLoadTypesFromAssemblyAt|Nie można załadować żadnych typów w określonym zestawie.|  
 |ErrUnknownSwitch|Określony przełącznik jest nierozpoznaną opcję.|  
-|logo|Logo narzędzia jest "Microsoft® narzędzia modelu usług metadanych" z wersją.|  
+|Logo|Logo narzędzia jest "Microsoft® narzędzia modelu usług metadanych" z wersją.|  
 |NoCodeWasGenerated|Nie wygenerowano kodu.<br /><br /> Jeśli chcesz wygenerować klient, może to być spowodowane dokumentów metadanych nie zawiera żadnych prawidłowych umów lub usług<br /><br /> lub ponieważ wszystkie kontrakty/usługi zostały odnalezione w zestawy referencyjne występują. Sprawdź wszystkich dokumentów metadanych został przekazany do narzędzia.|  
 |WrnUnableToLoadContractForSGen|Wystąpił błąd podczas ładowania typu kontraktu. Nie można wygenerować typu XmlSerializer dla tego kontraktu. Określony typ i szczegóły.|  
 |WrnOptionConflictsWithInput|Nie można użyć określonej opcji z wielu zestawów wejściowych. Określona opcja została zignorowana.|  
@@ -79,7 +81,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |HelpCodeGenerationCategory|-= GENEROWANIE KODU =-|  
 |RetreivingMetadataWithMexAndDisco|Próba pobrania metadanych z określonego za pomocą usługi WS-Metadata Exchange lub DISCO.|  
 |ErrGeneralSchemaValidation|Wystąpił błąd podczas weryfikacji schematów XML, które zostały wygenerowane podczas eksportowania.|  
-|ParametersDirectory|\<katalogu >|  
+|ParametersDirectory|\<directory>|  
 |ErrCannotLoadSpecifiedType|Typ nie może być załadowany dla określonej wartości, który został przekazany do określonej opcji. Upewnij się, że tego typu należy do zestawu został określony przy użyciu określonej opcji.|  
 |ErrOptionModeConflict|Określona opcja nie można używać z określona opcja, ponieważ ich oznacza dane wyjściowe różnych typów.|  
 |ErrIsNotAnAssembly|Nie można załadować określonego zestawu. Sprawdź, czy ten plik jest zestawem .NET.|  
@@ -98,7 +100,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrDirectoryNotFound|Nie można odnaleźć określonego katalogu. Sprawdź, czy katalog istnieje i czy masz odpowiednie uprawnienia do jego odczytu.|  
 |ErrUnableToLoadFile|Nie można odczytać określonego pliku.|  
 |ErrNoFilesFound|Określona ścieżka wejściowa nie można znaleźć wszystkie istniejące pliki.|  
-|ParametersConfig|\<configFile >|  
+|ParametersConfig|\<configFile>|  
 |ErrDirectoryInsteadOfFile|Określona ścieżka wejściowa wydaje się być katalogiem. Dane wejściowe muszą być adresy URL lub ścieżki pliku.|  
 |HelpConfig|Powoduje, że narzędzia do generowania pliku konfiguracji o podanej nazwie. Domyślne: output.config.|  
 |ErrSingleUseSwitch|Nie można określić opcji określony wiele razy.|  
@@ -123,7 +125,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrInvalidTarget|Określony element docelowy jest nieprawidłowy, gdy określona za pomocą określonej opcji. Obsługiwane elementy docelowe zostały określone.|  
 |ErrPathTooLong|Wynikowe ścieżka jest za długa. Przejrzyj określonych argumentów.|  
 |HelpCommonOptionsCategory|-= TYPOWE OPCJE =-|  
-|ParametersServiceName|\<serviceConfigName >|  
+|ParametersServiceName|\<serviceConfigName>|  
 |ErrNoValidInputFilesSpecified|Nie prawidłowy określono plików wejściowych. Określ dokumentów metadanych lub zestawu plików.|  
 |ParametersLanguage|\<język >|  
 |ErrUnableToLoadMetadataDocument|Wystąpił błąd podczas odczytywania metadanych z jednego z załadować dokumentów. Identyfikator dokumentu jest określona.|  
@@ -148,7 +150,7 @@ W tym temacie wymieniono wszystkie wyjątki generowane przez [!INCLUDE[indigo1](
 |ErrAssemblyLoadFailed|Nie można załadować określonego pliku zestawu. Aby uzyskać więcej informacji, sprawdź FusionLogs.|  
 |NoMetadataWasGenerated|Nie wygenerowano żadnych plików metadanych. Żaden kontrakt usługi zostały wyeksportowane.<br /><br /> Aby wyeksportować usługi, należy użyć określonej opcji. Aby wyeksportować kontraktów danych, należy określić opcję.|  
 |WrnCannotResolveServiceForExport|Nie można załadować usługi za pomocą określonego configName. Aby wyeksportować usługi, należy podać zestaw zawierający typ usługi, jak i plik wykonywalny z konfiguracją dla tej usługi.|  
-|ParametersCollectionType|\<Typ >|  
+|ParametersCollectionType|\<type>|  
 |ErrOptionConflictsWithTarget|Użyj określonej opcji nie jest obsługiwana z opcją określonego równa określonej wartości.|  
 |ErrCodegenError|Wystąpił błąd podczas generowania kodu w określonym języku.<br /><br /> Język nie obsługuje wszystkie elementy kodu generowany. Należy użyć innego języka.|  
 |ErrInputWsdlParseError|Podczas odczytywania określonego wystąpił podczas WSDL błąd analizy. Sprawdź, czy plik XML jest poprawnie sformułowany i prawidłowe.|  

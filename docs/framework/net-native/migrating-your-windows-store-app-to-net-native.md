@@ -1,27 +1,29 @@
 ---
 title: Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ce23d66f79f94af74250cff137499f6c8b1582ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Migrowanie aplikacji ze Sklepu Windows do architektury .NET Native
-[!INCLUDE[net_native](../../../includes/net-native-md.md)]zawiera statyczny kompilacji aplikacji w Sklepie Windows lub na komputerze dewelopera. Ta różni się od kompilacji dynamicznej wykonywane dla aplikacji ze Sklepu Windows za pomocą kompilatora just-in-time (JIT) lub [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic [!INCLUDE[net_native](../../../includes/net-native-md.md)] próbuje zachować zgodność z [.NET dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). W większości przypadków rzeczy, które działają w aplikacjach .NET dla Sklepu Windows również współpracować z [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Jednak w niektórych przypadkach może się pojawić zmiany zachowania. W tym dokumencie omówiono następujące różnice między standardowych aplikacji .NET dla Sklepu Windows i [!INCLUDE[net_native](../../../includes/net-native-md.md)] w następujących obszarach:  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera statyczny kompilacji aplikacji w Sklepie Windows lub na komputerze dewelopera. Ta różni się od kompilacji dynamicznej wykonywane dla aplikacji ze Sklepu Windows za pomocą kompilatora just-in-time (JIT) lub [Generator obrazu natywnego (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) na urządzeniu. Pomimo różnic [!INCLUDE[net_native](../../../includes/net-native-md.md)] próbuje zachować zgodność z [.NET dla Sklepu Windows apps](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). W większości przypadków rzeczy, które działają w aplikacjach .NET dla Sklepu Windows również współpracować z [!INCLUDE[net_native](../../../includes/net-native-md.md)].  Jednak w niektórych przypadkach może się pojawić zmiany zachowania. W tym dokumencie omówiono następujące różnice między standardowych aplikacji .NET dla Sklepu Windows i [!INCLUDE[net_native](../../../includes/net-native-md.md)] w następujących obszarach:  
   
 -   [Różnice ogólne w czasie wykonywania](#Runtime)  
   
@@ -54,9 +56,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>Dynamiczne różnice programowania  
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]statycznie łączy w kodzie z programu .NET Framework, aby kod lokalnej dla aplikacji o maksymalnej wydajności. Rozmiary binarne jednak pozostają mały, całą .NET Framework nie można przełączyć. [!INCLUDE[net_native](../../../includes/net-native-md.md)] Kompilatora usuwa to ograniczenie przy użyciu reduktor zależności, która usuwa odwołania do nieużywanych kodu. Jednak [!INCLUDE[net_native](../../../includes/net-native-md.md)] nie może zachować lub generowania niektóre informacje o typie i kod tych informacji nie można wywnioskować statycznie w czasie kompilacji, ale zamiast tego jest pobierany dynamicznie w czasie wykonywania.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] statycznie łączy w kodzie z programu .NET Framework, aby kod lokalnej dla aplikacji o maksymalnej wydajności. Rozmiary binarne jednak pozostają mały, całą .NET Framework nie można przełączyć. [!INCLUDE[net_native](../../../includes/net-native-md.md)] Kompilatora usuwa to ograniczenie przy użyciu reduktor zależności, która usuwa odwołania do nieużywanych kodu. Jednak [!INCLUDE[net_native](../../../includes/net-native-md.md)] nie może zachować lub generowania niektóre informacje o typie i kod tych informacji nie można wywnioskować statycznie w czasie kompilacji, ale zamiast tego jest pobierany dynamicznie w czasie wykonywania.  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]Włącz dynamiczne programowanie i odbicia. Jednak nie wszystkie typy mogą być oznaczane w celu odbicia, ponieważ może to być rozmiarowi wygenerowanego kodu za duży (szczególnie, ponieważ jest obsługiwana w czasie wykonywania odbicia w publicznych interfejsach API w programie .NET Framework). [!INCLUDE[net_native](../../../includes/net-native-md.md)] Kompilatora sprawia, że inteligentne wybory dotyczące typów powinna obsługiwać odbicia, a zachowuje metadane i generuje kod tylko w przypadku tych typów.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] Włącz dynamiczne programowanie i odbicia. Jednak nie wszystkie typy mogą być oznaczane w celu odbicia, ponieważ może to być rozmiarowi wygenerowanego kodu za duży (szczególnie, ponieważ jest obsługiwana w czasie wykonywania odbicia w publicznych interfejsach API w programie .NET Framework). [!INCLUDE[net_native](../../../includes/net-native-md.md)] Kompilatora sprawia, że inteligentne wybory dotyczące typów powinna obsługiwać odbicia, a zachowuje metadane i generuje kod tylko w przypadku tych typów.  
   
  Powiązanie danych wymaga na przykład aplikacja może mieć możliwość mapowania nazw właściwości do funkcji. Środowisko uruchomieniowe języka wspólnego .NET dla aplikacji ze Sklepu Windows, jest automatycznie używa odbicia mieli tej możliwości typy zarządzane i publicznie dostępnych typów natywnych. W [!INCLUDE[net_native](../../../includes/net-native-md.md)], kompilator automatycznie uwzględnia metadanych dla typów, do których powiązania danych.  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Dyrektyw środowiska uruchomieniowego są definiowane w dyrektyw środowiska uruchomieniowego (. rd.xml) pliku. Aby uzyskać ogólne informacje o korzystaniu z tego pliku, zobacz [wprowadzenie](../../../docs/framework/net-native/getting-started-with-net-native.md). Aby uzyskać informacje na temat dyrektyw środowiska uruchomieniowego, zobacz [dyrektyw środowiska uruchomieniowego (rd.xml) odwołanie do pliku konfiguracji](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md).  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)]zawiera również narzędzia, które pomagają ustalić, jakie typy poza domyślny zestaw powinien obsługiwać odbicia dewelopera profilowania.  
+ [!INCLUDE[net_native](../../../includes/net-native-md.md)] zawiera również narzędzia, które pomagają ustalić, jakie typy poza domyślny zestaw powinien obsługiwać odbicia dewelopera profilowania.  
   
 <a name="Reflection"></a>   
 ## <a name="other-reflection-related-differences"></a>Inne różnice związane z odbiciem  
@@ -88,9 +90,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Publiczne elementy członkowskie na <xref:System.RuntimeFieldHandle> i <xref:System.RuntimeMethodHandle> struktur nie są obsługiwane. Te typy są obsługiwane tylko w przypadku LINQ, drzew wyrażeń i Inicjowanie statyczne tablicy.  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType>i <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> obejmują ukrytych elementów członkowskich w klasach podstawowych i w związku z tym mogą być zastępowane bez jawnego przesłonięcia. Dotyczy to również innych [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) metody.  
+-   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> i <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> obejmują ukrytych elementów członkowskich w klasach podstawowych i w związku z tym mogą być zastępowane bez jawnego przesłonięcia. Dotyczy to również innych [RuntimeReflectionExtensions.GetRuntime*](http://msdn.microsoft.com/library/system.reflection.runtimereflectionextensions_methods.aspx) metody.  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>i <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> nie zakończyć się niepowodzeniem podczas próby utworzenia niektórych kombinacji (na przykład tablicę ByRef).  
+-   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> i <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> nie zakończyć się niepowodzeniem podczas próby utworzenia niektórych kombinacji (na przykład tablicę ByRef).  
   
 -   Odbicie nie można użyć do wywołania elementów członkowskich, które mają parametry wskaźnika.  
   
@@ -108,7 +110,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [HttpClient](#HttpClient)  
   
--   [Współdziałanie](#Interop)  
+-   [Interop](#Interop)  
   
 -   [Nieobsługiwany interfejsów API](#APIs)  
   
@@ -154,7 +156,7 @@ ms.lasthandoff: 12/22/2017
   
  **Delegaci**  
   
- `Delegate.BeginInvoke`i `Delegate.EndInvoke` nie są obsługiwane.  
+ `Delegate.BeginInvoke` i `Delegate.EndInvoke` nie są obsługiwane.  
   
  **Async**  
   
@@ -166,7 +168,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> Metody poprawnie analizuje ciągi zawierające krótkiej daty w [!INCLUDE[net_native](../../../includes/net-native-md.md)]. Jednak nie go zachować zgodność z zmiany daty i czasu przetwarzania opisane w artykułach bazy wiedzy Microsoft Knowledge Base [KB2803771](http://support.microsoft.com/kb/2803771) i [KB2803755](http://support.microsoft.com/kb/2803755).  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType>`("E")` poprawnie jest zaokrąglana w [!INCLUDE[net_native](../../../includes/net-native-md.md)]. W niektórych wersjach środowiska CLR zostały obcięte ciąg wyniku zamiast zaokrąglona.  
+-   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` poprawnie jest zaokrąglana w [!INCLUDE[net_native](../../../includes/net-native-md.md)]. W niektórych wersjach środowiska CLR zostały obcięte ciąg wyniku zamiast zaokrąglona.  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>Różnice HttpClient  
@@ -178,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
  Niektóre dodatkowe różnicach są przedstawione w poniższych podsekcjach.  
   
- **Serwer proxy**  
+ **Proxy**  
   
  [HttpBaseProtocolFilter](http://msdn.microsoft.com/library/windows/apps/windows.web.http.filters.httpbaseprotocolfilter.aspx) klasa nie obsługuje konfigurowania lub zastępowania serwera proxy na podstawie danego żądania.  Oznacza to, że wszystkie żądania na [!INCLUDE[net_native](../../../includes/net-native-md.md)] za pomocą serwera proxy skonfigurowanego systemu lub żadnego serwera proxy, w zależności od wartości <xref:System.Net.Http.HttpClientHandler.UseProxy%2A?displayProperty=nameWithType> właściwości.  .NET dla aplikacji ze Sklepu Windows, serwer proxy jest zdefiniowany przez <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> właściwości.  Na [!INCLUDE[net_native](../../../includes/net-native-md.md)], ustawienie <xref:System.Net.Http.HttpClientHandler.Proxy%2A?displayProperty=nameWithType> wartość inną niż `null` zgłasza <xref:System.PlatformNotSupportedException> wyjątku.  <xref:System.Net.Http.HttpClientHandler.SupportsProxy%2A?displayProperty=nameWithType> Zwraca `false` na [!INCLUDE[net_native](../../../includes/net-native-md.md)], podczas gdy zwraca `true` standardowe .NET Framework dla aplikacji ze Sklepu Windows.  
   
@@ -188,13 +190,13 @@ ms.lasthandoff: 12/22/2017
   
  **Automatycznej dekompresji**  
   
- .NET dla Sklepu Windows apps umożliwia ustawienie <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> właściwości <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, oba <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)]obsługuje tylko <xref:System.Net.DecompressionMethods.Deflate> razem z <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  Ustawiany <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> właściwości albo <xref:System.Net.DecompressionMethods.Deflate> lub <xref:System.Net.DecompressionMethods.GZip> samodzielnie dyskretnie ustawia ją na obu <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>.  
+ .NET dla Sklepu Windows apps umożliwia ustawienie <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A?displayProperty=nameWithType> właściwości <xref:System.Net.DecompressionMethods.Deflate>, <xref:System.Net.DecompressionMethods.GZip>, oba <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  [!INCLUDE[net_native](../../../includes/net-native-md.md)] obsługuje tylko <xref:System.Net.DecompressionMethods.Deflate> razem z <xref:System.Net.DecompressionMethods.GZip>, lub <xref:System.Net.DecompressionMethods.None>.  Ustawiany <xref:System.Net.Http.HttpClientHandler.AutomaticDecompression%2A> właściwości albo <xref:System.Net.DecompressionMethods.Deflate> lub <xref:System.Net.DecompressionMethods.GZip> samodzielnie dyskretnie ustawia ją na obu <xref:System.Net.DecompressionMethods.Deflate> i <xref:System.Net.DecompressionMethods.GZip>.  
   
  **Plik cookie**  
   
  Obsługa plików cookie jest wykonywane jednocześnie przez <xref:System.Net.Http.HttpClient> i WinINet.  Pliki cookie z <xref:System.Net.CookieContainer> są łączone z plików cookie w pamięci podręcznej plików cookie WinINet.  Usuwanie pliku cookie z <xref:System.Net.CookieContainer> uniemożliwia <xref:System.Net.Http.HttpClient> wysyłania plików cookie, ale jeśli plik cookie został już odebrany przez WinINet i pliki cookie nie zostały usunięte przez użytkownika, WinINet wysyła go.  Nie można programistycznie usunąć plik cookie z WinINet przy użyciu <xref:System.Net.Http.HttpClient>, <xref:System.Net.Http.HttpClientHandler>, lub <xref:System.Net.CookieContainer> interfejsu API.  Ustawienie <xref:System.Net.Http.HttpClientHandler.UseCookies%2A?displayProperty=nameWithType> właściwości `false` powoduje, że tylko <xref:System.Net.Http.HttpClient> Aby zatrzymać wysyłanie plików cookie. WinINet nadal mogą obejmować jego plików cookie w żądaniu.  
   
- **Poświadczenia**  
+ **poświadczenia**  
   
  .NET dla aplikacji ze Sklepu Windows <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A?displayProperty=nameWithType> i <xref:System.Net.Http.HttpClientHandler.Credentials%2A?displayProperty=nameWithType> właściwości działają niezależnie.  Ponadto <xref:System.Net.Http.HttpClientHandler.Credentials%2A> właściwość akceptuje dowolny obiekt, który implementuje <xref:System.Net.ICredentials> interfejsu.  W [!INCLUDE[net_native](../../../includes/net-native-md.md)], ustawienie <xref:System.Net.Http.HttpClientHandler.UseDefaultCredentials%2A> właściwości `true` powoduje, że <xref:System.Net.Http.HttpClientHandler.Credentials%2A> właściwość, aby stać się `null`.  Ponadto <xref:System.Net.Http.HttpClientHandler.Credentials%2A> właściwość można ustawić tylko z `null`, <xref:System.Net.CredentialCache.DefaultCredentials%2A>, lub obiekt typu <xref:System.Net.NetworkCredential>.  Przypisywanie innych <xref:System.Net.ICredentials> obiektu, jest najbardziej popularnym którego <xref:System.Net.CredentialCache>, do <xref:System.Net.Http.HttpClientHandler.Credentials%2A> zgłasza właściwości <xref:System.PlatformNotSupportedException>.  
   
@@ -230,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>|  
 |<xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>|  
   
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>jest obsługiwana, ale zgłasza wyjątek w niektórych scenariuszach, na przykład gdy jest używana z [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) lub byref VARIANT.  
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> jest obsługiwana, ale zgłasza wyjątek w niektórych scenariuszach, na przykład gdy jest używana z [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) lub byref VARIANT.  
   
  Przestarzałe interfejsy API dla [IDispatch](http://msdn.microsoft.com/library/windows/apps/ms221608.aspx) obsługuje:  
   
@@ -605,15 +607,15 @@ ms.lasthandoff: 12/22/2017
   
      Typ `InnerType` nie jest znana do serializatora, ponieważ elementy członkowskie klasy podstawowej nie przechodzić podczas serializacji.  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer>i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nie można serializować klasy lub struktury, która implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład następujące typy nie do serializacji lub deserializacji:  
+-   <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> nie można serializować klasy lub struktury, która implementuje <xref:System.Collections.Generic.IEnumerable%601> interfejsu. Na przykład następujące typy nie do serializacji lub deserializacji:  
   
   
   
--   <xref:System.Xml.Serialization.XmlSerializer>nie powiedzie się do serializacji następującą wartość obiektu, ponieważ nie wie, dokładne typ obiektu do serializacji:  
+-   <xref:System.Xml.Serialization.XmlSerializer> nie powiedzie się do serializacji następującą wartość obiektu, ponieważ nie wie, dokładne typ obiektu do serializacji:  
   
   
   
--   <xref:System.Xml.Serialization.XmlSerializer>nie powiedzie się do serializacji lub deserializacji w przypadku typu serializacji obiektu <xref:System.Xml.XmlQualifiedName>.  
+-   <xref:System.Xml.Serialization.XmlSerializer> nie powiedzie się do serializacji lub deserializacji w przypadku typu serializacji obiektu <xref:System.Xml.XmlQualifiedName>.  
   
 -   Wszystkie serializatorów (<xref:System.Runtime.Serialization.DataContractSerializer>, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>, i <xref:System.Xml.Serialization.XmlSerializer>) nie można wygenerować kodu serializacji dla typu <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> lub typu, który zawiera <xref:System.Xml.Linq.XElement>. Zamiast niej wyświetlane błędy w czasie kompilacji.  
   
@@ -641,7 +643,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer>Nie można wygenerować kodu dla typu, który ma metodę z dowolnej z następujących atrybutów:  
+-   <xref:System.Xml.Serialization.XmlSerializer> Nie można wygenerować kodu dla typu, który ma metodę z dowolnej z następujących atrybutów:  
   
     -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
@@ -651,7 +653,7 @@ ms.lasthandoff: 12/22/2017
   
     -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer>nie przestrzegać <xref:System.Xml.Serialization.IXmlSerializable> interfejsu niestandardowej serializacji. Jeśli masz klasy, który implementuje ten interfejs <xref:System.Xml.Serialization.XmlSerializer> uwzględnia typ zwykły stary typ obiektu (POCO) CLR i serializuje tylko właściwości publiczne.  
+-   <xref:System.Xml.Serialization.XmlSerializer> nie przestrzegać <xref:System.Xml.Serialization.IXmlSerializable> interfejsu niestandardowej serializacji. Jeśli masz klasy, który implementuje ten interfejs <xref:System.Xml.Serialization.XmlSerializer> uwzględnia typ zwykły stary typ obiektu (POCO) CLR i serializuje tylko właściwości publiczne.  
   
 -   Serializacja zwykły <xref:System.Exception> obiektu, na przykład następujące polecenie, nie działają prawidłowo w przypadku <xref:System.Runtime.Serialization.DataContractSerializer> i <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>:  
   

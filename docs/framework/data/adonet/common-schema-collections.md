@@ -20,7 +20,7 @@ ms.openlocfilehash: 893093900b3fc4276f9bd7143b1f235a5ba98f90
 ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="common-schema-collections"></a>Typowe kolekcje schematów
 Typowe kolekcje schematów są kolekcji schematu, które są implementowane przez każdego z dostawców zarządzane w programie .NET Framework. Można zbadać zarządzanego dostawcy .NET Framework, można ustalić listy kolekcji schematu obsługiwanych przez wywołanie metody **GetSchema** metody bez argumentów lub nazwą kolekcji schematów "MetaDataCollections". Spowoduje to zwrócenie <xref:System.Data.DataTable> z listą kolekcji obsługiwanych schematu, liczba ograniczeń obsługiwanych przez każdy z nich i części identyfikatora, które korzystają z. Te kolekcje, opis wszystkich wymaganych kolumn. Aby dodać dodatkowe kolumny, jeśli chcą mogą dostawców. Na przykład `SqlClient` i `OracleClient` ParameterName można dodać do kolekcji ograniczeń.  

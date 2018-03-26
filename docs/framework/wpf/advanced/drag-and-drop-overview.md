@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Przeciąganie i upuszczanie"
-ms.custom: 
+title: Przegląd Przeciąganie i upuszczanie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odwołuje się do metody transferu danych, która obejmuje za pomocą myszy (lub innego urządzenia wskazującego) wybierz co najmniej jeden obiekt, przeciągając obiekty te przez niektóre odpowiednie miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i ich usunięcie.  
@@ -66,7 +68,7 @@ Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TL
  Źródło i cel operacji przeciągnij i upuść są elementy interfejsu użytkownika; Jednak dane, które są rzeczywiście przesyłane zwykle nie ma wizualną reprezentację. Można napisać kod, aby zapewnić wizualną reprezentację danych, która zostanie przeciągnięty, takich jak występuje, gdy przeciąganie plików w Eksploratorze Windows. Domyślnie opinie są udostępniane użytkownikowi przez kursor do reprezentowania wpływu tego operacji przeciągania i upuszczania na dane, takie jak zmiana czy zostanie przeniesiona lub skopiować dane.  
   
 ### <a name="drag-and-drop-effects"></a>Efekty przeciągnij i upuść  
- Operacje przeciągania i upuszczania mogą mieć inny wpływ na przeniesionych danych. Na przykład można skopiować danych lub przenieść dane. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]definiuje <xref:System.Windows.DragDropEffects> wyliczenia, którego można użyć, aby określić wpływ operacji przeciągania i upuszczania. Ze źródła przeciągania, można określić efekty, które umożliwi źródła w <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. W celu upuszczania, można określić wpływ, jaki element docelowy zamierza w <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragEventArgs> klasy. Jeśli element docelowy upuszczania określa zamierzonego skutku w <xref:System.Windows.DragDrop.DragOver> zdarzenia, które informacje są przekazywane z powrotem do źródła przeciągania w <xref:System.Windows.DragDrop.GiveFeedback> zdarzeń. Źródła przeciągania używa tych informacji, aby poinformować użytkownika wpływ, jaki ma element docelowy upuszczania zamierza na danych. Po upuszczeniu danych, element docelowy upuszczania określa jego rzeczywistego efekt <xref:System.Windows.DragDrop.Drop> zdarzeń. Czy informacje są przekazywane z powrotem do źródła przeciągania jako wartość zwracaną <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. Jeśli element docelowy upuszczania zwraca efekt, który nie jest na liście źródeł przeciągania `allowedEffects`, anulowanie operacji przeciągania i upuszczania bez przekazywania danych wystąpienia.  
+ Operacje przeciągania i upuszczania mogą mieć inny wpływ na przeniesionych danych. Na przykład można skopiować danych lub przenieść dane. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] definiuje <xref:System.Windows.DragDropEffects> wyliczenia, którego można użyć, aby określić wpływ operacji przeciągania i upuszczania. Ze źródła przeciągania, można określić efekty, które umożliwi źródła w <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. W celu upuszczania, można określić wpływ, jaki element docelowy zamierza w <xref:System.Windows.DragEventArgs.Effects%2A> właściwość <xref:System.Windows.DragEventArgs> klasy. Jeśli element docelowy upuszczania określa zamierzonego skutku w <xref:System.Windows.DragDrop.DragOver> zdarzenia, które informacje są przekazywane z powrotem do źródła przeciągania w <xref:System.Windows.DragDrop.GiveFeedback> zdarzeń. Źródła przeciągania używa tych informacji, aby poinformować użytkownika wpływ, jaki ma element docelowy upuszczania zamierza na danych. Po upuszczeniu danych, element docelowy upuszczania określa jego rzeczywistego efekt <xref:System.Windows.DragDrop.Drop> zdarzeń. Czy informacje są przekazywane z powrotem do źródła przeciągania jako wartość zwracaną <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. Jeśli element docelowy upuszczania zwraca efekt, który nie jest na liście źródeł przeciągania `allowedEffects`, anulowanie operacji przeciągania i upuszczania bez przekazywania danych wystąpienia.  
   
  Należy pamiętać, że w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.DragDropEffects> wartości są używane tylko w celu zapewnienia komunikacji między serwerem źródłowym przeciągania, a element docelowy upuszczania dotyczące wpływu operacji przeciągania i upuszczania. Rzeczywisty wynik operacji przeciągania i upuszczania jest zależna od napisać odpowiedni kod w aplikacji.  
   
@@ -158,11 +160,11 @@ Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TL
   
  Wewnątrz <xref:System.Windows.UIElement.MouseMove> obsługi zdarzeń, wywołaj <xref:System.Windows.DragDrop.DoDragDrop%2A> metodę, aby zainicjować operację przeciągania i upuszczania. <xref:System.Windows.DragDrop.DoDragDrop%2A> Metoda przyjmuje trzy parametry:  
   
--   `dragSource`— Odwołanie do obiektu zależności, który jest źródłem danych przekazanych; Zazwyczaj jest to źródło <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
+-   `dragSource` — Odwołanie do obiektu zależności, który jest źródłem danych przekazanych; Zazwyczaj jest to źródło <xref:System.Windows.UIElement.MouseMove> zdarzeń.  
   
--   `data`-Obiekt, który zawiera przeniesione dane w <xref:System.Windows.DataObject>.  
+-   `data` -Obiekt, który zawiera przeniesione dane w <xref:System.Windows.DataObject>.  
   
--   `allowedEffects`-Jedno z <xref:System.Windows.DragDropEffects> wartości wyliczenia, które określa dozwolone efekty operacji przeciągania i upuszczania.  
+-   `allowedEffects` -Jedno z <xref:System.Windows.DragDropEffects> wartości wyliczenia, które określa dozwolone efekty operacji przeciągania i upuszczania.  
   
  Przekazano dowolnego obiektu podlegającego serializacji `data` parametru. Jeśli dane nie jest już opakowana w <xref:System.Windows.DataObject>, zostanie on automatycznie zawijany w nowym <xref:System.Windows.DataObject>. Aby przekazać wielu elementów danych, należy utworzyć <xref:System.Windows.DataObject> samodzielnie i przekaż go do <xref:System.Windows.DragDrop.DoDragDrop%2A> metody. Aby uzyskać więcej informacji, zobacz [danych i obiektów danych](../../../../docs/framework/wpf/advanced/data-and-data-objects.md).  
   
@@ -197,7 +199,7 @@ Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TL
   
 2.  <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave>lub<xref:System.Windows.DragDrop.Drop>  
+3.  <xref:System.Windows.DragDrop.DragLeave> lub <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> Zdarzenie przeciągnięte danych do granicy miejsca docelowego. To zdarzenie do podglądu skutków operacji przeciągania i upuszczania jest zwykle obsługi, jeśli jest to odpowiedni dla twojej aplikacji. Nie ustawiaj <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> właściwości w <xref:System.Windows.DragDrop.DragEnter> zdarzeń, które zostaną zastąpione w <xref:System.Windows.DragDrop.DragOver> zdarzeń.  
   

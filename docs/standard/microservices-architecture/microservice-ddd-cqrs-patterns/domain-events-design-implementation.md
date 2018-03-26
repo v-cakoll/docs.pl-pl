@@ -1,6 +1,6 @@
 ---
-title: "Zdarzenia domeny. Projektowanie i wdrażanie"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zdarzenia domeny, projektowanie i wdrażanie"
+title: Zdarzenia domeny. Projektowanie i wdrażanie
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zdarzenia domeny, projektowanie i wdrażanie
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 5840c2f7692d81f193c7d659aea6eb42a431369e
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -76,7 +76,7 @@ Jak pokazano w rysunek 9-15, począwszy od tego samego zdarzenia domeny można o
 
 **Rysunek 9 – 15**. Obsługa wielu akcji dla domeny
 
-Programy obsługi zdarzeń są zwykle w warstwie aplikacji, ponieważ korzystasz z obiektów infrastruktury, takich jak repozytoria lub aplikacji interfejsu API dla zachowania mikrousługi. W tym sensie procedury obsługi zdarzeń są podobne do programy obsługi poleceń, więc obie należą do warstwy aplikacji. Istotną różnicą jest to, że polecenie powinny być przetwarzane tylko raz. Zdarzenie domeny mogą być przetwarzane zero lub  *n*  razy, ponieważ jeśli może zostać odebrany przez wiele odbiorników lub programów obsługi zdarzeń z różnych cel każdy program obsługi.
+Programy obsługi zdarzeń są zwykle w warstwie aplikacji, ponieważ korzystasz z obiektów infrastruktury, takich jak repozytoria lub aplikacji interfejsu API dla zachowania mikrousługi. W tym sensie procedury obsługi zdarzeń są podobne do programy obsługi poleceń, więc obie należą do warstwy aplikacji. Istotną różnicą jest to, że polecenie powinny być przetwarzane tylko raz. Zdarzenie domeny mogą być przetwarzane zero lub *n* razy, ponieważ jeśli może zostać odebrany przez wiele odbiorników lub programów obsługi zdarzeń z różnych cel każdy program obsługi.
 
 Możliwość Otwórz liczby programów obsługi na zdarzenie domeny umożliwia dodanie dużo więcej reguł domeny bez wpływu na bieżącego kodu. Na przykład Implementowanie następujące reguły biznesowej, który ma mieć miejsce prawo po zdarzeniu może być tak proste, jak dodać kilka programów obsługi zdarzeń (lub nawet co najmniej jeden):
 
@@ -337,8 +337,8 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Małych Gregowi. Co to jest zdarzenie domeny? ** 
-     [ *http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+-   **Małych Gregowi. Co to jest zdarzenie domeny?**
+    [*http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/*](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
 
 -   **Jan Stenberg. Zdarzenia domeny i spójność ostateczna**
     [*https://www.infoq.com/news/2015/09/domain-events-consistency*](https://www.infoq.com/news/2015/09/domain-events-consistency)
@@ -347,12 +347,12 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
     [*https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/*](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
 
 -   **Vaughn Vernon. Łączny skuteczne projektowania część II: Tworzenie agreguje pracy ze sobą**
-    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_artykuły/Vernon\_2011\_ 2. pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
+    [*http://dddcommunity.org/wp-content/uploads/files/pdf\_artykuły/Vernon\_2011\_2. pdf*](http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 -   **Jimmy Bogard. Wzmocnienie domenę: zdarzenia domeny**
-    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>*
+    *<https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/> *
 
--   **Tony Truong. Zdarzenia domeny wzorca przykład**
+-   **Tony Truong. Przykład wzorca zdarzenia domeny**
     [*http://www.tonytruong.net/domain-events-pattern-example/*](http://www.tonytruong.net/domain-events-pattern-example/)
 
 -   **Udi Dahan. Jak utworzyć pełni hermetyzowany modeli domeny**
@@ -364,10 +364,10 @@ Jak już wspomniano, należy użyć domeny zdarzeń w celu jawne Implementowanie
 -   **Udi Dahan. Zdarzenia domeny — Salvation**
     [*http://udidahan.com/2009/06/14/domain-events-salvation/*](http://udidahan.com/2009/06/14/domain-events-salvation/)
 
--   **Jan Kronquist. Nie Publikuj zdarzenia domeny, zwraca je! ** 
-     [ *https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+-   **Jan Kronquist. Nie Publikuj zdarzenia domeny, zwraca je!**
+    [*https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/*](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
 
--   **Torre de la Cesarowi. Vs zdarzenia domeny. Integracja zdarzeń w architektury DDD i mikrousług**
+-   **Torre de la Cesarowi. Vs zdarzenia domeny. Integracja zdarzeń w DDD i mikrousług architektury**
     [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
 
 

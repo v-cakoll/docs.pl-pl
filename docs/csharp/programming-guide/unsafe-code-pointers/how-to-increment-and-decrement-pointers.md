@@ -1,21 +1,22 @@
 ---
-title: "Porady: inkrementacja i dekrementacja wskaźników (Przewodnik programowania w języku C#)"
+title: 'Porady: inkrementacja i dekrementacja wskaźników (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - pointers [C#], increment and decrement
 - pointer expressions [C#], increment and decrement
 ms.assetid: 1b8b9281-44ee-485a-9045-3db38a4b4b89
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 2c8efc6d0844d867ad6eebccf3bb22c03e6d5020
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-increment-and-decrement-pointers-c-programming-guide"></a>Porady: inkrementacja i dekrementacja wskaźników (Przewodnik programowania w języku C#)
 Użyj inkrementacji i dekrementacji, `++` i `--`, aby zmienić lokalizację wskaźnika przez [sizeof](../../../csharp/language-reference/keywords/sizeof.md) (`pointer-type`) dla wskaźnika typu wskaźnika — typ *. Inkrementacja i dekrementacja wyrażeń mieć następującą formę:  
@@ -50,10 +51,10 @@ p--;
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Wyrażenia wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-expressions.md)  
- [Operatory C#](../../../csharp/language-reference/operators/index.md)  
+ [Operatory języka C#](../../../csharp/language-reference/operators/index.md)  
  [Manipulowanie wskaźnikami](../../../csharp/programming-guide/unsafe-code-pointers/manipulating-pointers.md)  
- [Typy wskaźnika](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
+ [Typy wskaźników](../../../csharp/programming-guide/unsafe-code-pointers/pointer-types.md)  
  [Typy](../../../csharp/language-reference/keywords/types.md)  
  [unsafe](../../../csharp/language-reference/keywords/unsafe.md)  
- [Fixed — instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
+ [fixed, instrukcja](../../../csharp/language-reference/keywords/fixed-statement.md)  
  [stackalloc](../../../csharp/language-reference/keywords/stackalloc.md)

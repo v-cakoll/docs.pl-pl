@@ -1,32 +1,34 @@
 ---
-title: "Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF"
-ms.custom: 
+title: Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
-caps.latest.revision: "11"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 723f485ab45cbe127bfd337c2d428d38d5f27232
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>Obsługa buforowania dla opartych na protokole HTTP usług sieci Web programu WCF
-[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]Umożliwia korzystanie z deklaratywne mechanizm buforowania już dostępne w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można do pamięci podręcznej odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła do usługi, który jest skonfigurowany dla buforowania GET protokołu HTTP, ASP.NET odsyła odpowiedź buforowana i nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, przy następnym użytkownik wysyła HTTP GET, jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]ASP.NET buforowanie, zobacz [omówienie pamięci podręcznej programu ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
+[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] Umożliwia korzystanie z deklaratywne mechanizm buforowania już dostępne w programie ASP.NET w usługach WCF Web HTTP. Dzięki temu można do pamięci podręcznej odpowiedzi z operacji usługi WCF Web HTTP. Gdy użytkownik wysyła do usługi, który jest skonfigurowany dla buforowania GET protokołu HTTP, ASP.NET odsyła odpowiedź buforowana i nie wywołano metody usługi. Po wygaśnięciu pamięci podręcznej, przy następnym użytkownik wysyła HTTP GET, jest wywoływana przez metodę usługi i ponownie buforowaną odpowiedź. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] ASP.NET buforowanie, zobacz [omówienie pamięci podręcznej programu ASP.NET](http://go.microsoft.com/fwlink/?LinkId=152534)  
   
 ## <a name="basic-web-http-service-caching"></a>Usługa HTTP sieci Web podstawowe buforowanie  
  Aby włączyć protokół HTTP sieci WEB usługi buforowania, należy najpierw włączyć zgodności z platformą ASP.NET, stosując <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do ustawienia usługi <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute.RequirementsMode%2A> do <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Allowed> lub <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsMode.Required>.  
   
- [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]wprowadzono nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> który pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi w celu włączenia zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej do użycia.  
+ [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] wprowadzono nowy atrybut o nazwie <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> który pozwala określić nazwę profilu pamięci podręcznej. Ten atrybut jest stosowany do operacji usługi. Następujący przykład dotyczy <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute> do usługi w celu włączenia zgodności z platformą ASP.NET i konfiguruje `GetCustomer` operacji do buforowania. <!--zz<xref:System.ServiceModel.Activation.AspNetCacheProfileAttribute>--> `System.ServiceModel.Activation.AspNetCacheProfileAttribute` Atrybut określa profil pamięci podręcznej, który zawiera ustawienia pamięci podręcznej do użycia.  
   
 ```csharp
 [ServiceContract] 
@@ -69,7 +71,7 @@ public class Service
 </system.web>  
 ```  
   
- Jest to tego samego elementu konfiguracji, która jest dostępna dla aplikacji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Profile pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP sieci Web, są najważniejsze atrybuty w profilu pamięci podręcznej: `cacheDuration` i `varyByParam`. Oba te atrybuty są wymagane. `cacheDuration`Ustawia czas, które mają być buforowane odpowiedzi w sekundach. `varyByParam`można określić parametr ciągu zapytania używanego do odpowiedzi z pamięci podręcznej. Wszystkie żądania z wartościami parametrów ciągu zapytania różnych są buforowane oddzielnie. Na przykład po wysłaniu żądania początkowego do http://MyServer/MyHttpService/MyOperation?param=10 wszystkie kolejne żądania o tym samym identyfikatorze URI może być zwracany buforowanej odpowiedzi (o ile nie upłynął czas buforowania). Odpowiedzi na żądania podobne jest taki sam, ale ma inną wartość dla parametru ciągu zapytania parametru są buforowane oddzielnie. Jeśli nie chcesz, aby to zachowanie buforowania w oddzielnych, ustaw `varyByParam` "none".  
+ Jest to tego samego elementu konfiguracji, która jest dostępna dla aplikacji ASP.NET. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Profile pamięci podręcznej programu ASP.NET, zobacz <xref:System.Web.Configuration.OutputCacheProfile>. Dla usług HTTP sieci Web, są najważniejsze atrybuty w profilu pamięci podręcznej: `cacheDuration` i `varyByParam`. Oba te atrybuty są wymagane. `cacheDuration` Ustawia czas, które mają być buforowane odpowiedzi w sekundach. `varyByParam` można określić parametr ciągu zapytania używanego do odpowiedzi z pamięci podręcznej. Wszystkie żądania z wartościami parametrów ciągu zapytania różnych są buforowane oddzielnie. Na przykład po wysłaniu żądania początkowego do http://MyServer/MyHttpService/MyOperation?param=10 wszystkie kolejne żądania o tym samym identyfikatorze URI może być zwracany buforowanej odpowiedzi (o ile nie upłynął czas buforowania). Odpowiedzi na żądania podobne jest taki sam, ale ma inną wartość dla parametru ciągu zapytania parametru są buforowane oddzielnie. Jeśli nie chcesz, aby to zachowanie buforowania w oddzielnych, ustaw `varyByParam` "none".  
   
 ## <a name="sql-cache-dependency"></a>Zależności bufora SQL  
  Odpowiedzi usługi HTTP sieci Web można buforować w taki sposób, w zależności buforu SQL. Jeśli usługi WCF Web HTTP zależy od danych przechowywanych w bazie danych SQL, można buforować odpowiedzi usługi akcji i unieważnić buforowanej odpowiedzi podczas zmiany tabeli bazy danych SQL danych. To zachowanie jest całkowicie skonfigurowany w pliku Web.config. Należy określić parametry połączenia w <`connectionStrings`> elementu.  
@@ -133,7 +135,7 @@ public class Service
  W tym miejscu czas buforowania ma ustawioną wartość 60 sekund, `varyByParam` ma wartość none i `sqlDependency` ma ustawioną wartość listy rozdzielanych średnikami oddzielone dwukropkiem pary nazwa/tabeli bazy danych. Gdy dane w `MyTable` zostanie zmieniona buforowanej odpowiedzi dla operacji usługi zostanie usunięty i po wywołaniu operacji nową odpowiedź jest generowany (przez wywołanie operacji usługi), w pamięci podręcznej i zwracany do klienta.  
   
 > [!IMPORTANT]
->  Dla platformy ASP.NET dostępu do bazy danych SQL, należy użyć [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). Ponadto musisz zezwolić na odpowiedniego użytkownika konta dostępu do bazy danych i tabeli. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Podczas uzyskiwania dostępu do programu SQL Server z aplikacji sieci Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
+>  Dla platformy ASP.NET dostępu do bazy danych SQL, należy użyć [ASP.NET SQL Server Registration Tool](http://go.microsoft.com/fwlink/?LinkId=152536). Ponadto musisz zezwolić na odpowiedniego użytkownika konta dostępu do bazy danych i tabeli. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Uzyskiwanie dostępu do programu SQL Server z aplikacji sieci Web](http://go.microsoft.com/fwlink/?LinkId=178988).  
   
 ## <a name="conditional-http-get-based-caching"></a>Warunkowe HTTP GET na podstawie buforowanie  
  W scenariuszach protokołu HTTP sieci Web warunkowego HTTP GET jest często używane przez usługi do zaimplementowania inteligentne buforowanie HTTP zgodnie z opisem w [specyfikacji HTTP](http://go.microsoft.com/fwlink/?LinkId=165800). W tym celu usługi należy ustawić wartość nagłówka ETag w odpowiedzi HTTP. On również sprawdzić nagłówka If-None-Match w żądaniu HTTP, czy dowolne ETag określony odpowiada bieżącej ETag.  

@@ -1,6 +1,6 @@
 ---
-title: "Użyj zestawu SDK platformy kompilatora .NET modelu składni"
-description: "Ten przegląd zawiera opis typów, używaną do zrozumienia i manipulowania składni węzłów."
+title: Użyj zestawu SDK platformy kompilatora .NET modelu składni
+description: Ten przegląd zawiera opis typów, używaną do zrozumienia i manipulowania składni węzłów.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -9,10 +9,10 @@ ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
 ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="work-with-syntax"></a>Praca z składni
 
@@ -69,7 +69,7 @@ W przeciwieństwie do węzłów składni i tokeny składni elementy towarzysząc
 
 Wszystkie węzły, token i elementy towarzyszące składni wie jej położenie w obrębie tekst źródłowy i liczbę znaków, który składa się z. Położenie tekstu jest reprezentowany jako liczba całkowita 32-bitowy, który jest liczony od zera `char` indeksu. A <xref:Microsoft.CodeAnalysis.Text.TextSpan> obiekt jest położenie początku i liczbę znaków, zarówno prezentowane w postaci liczb całkowitych. Jeśli <xref:Microsoft.CodeAnalysis.Text.TextSpan> ma zerową długość, odnosi się do lokalizacji między znakami.
 
-Każdy węzeł ma dwa <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: < xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> i < xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Każdy węzeł ma dwa <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> i <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> Właściwość jest zakres tekstu od początku pierwszym tokenie w poddrzewie węzła na końcu ostatniego tokena. Ten zakres nie obejmuje żadnych wiodących lub końcowych elementy towarzyszące składni.
 
@@ -89,7 +89,7 @@ Węzeł instrukcji wewnątrz bloku ma należy do zakresu wskazanej przez pojedyn
 
 ## <a name="kinds"></a>Typy
 
-Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=nameWithType>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do < xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*? displayProperty = nameWithType > lub < xref: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*? displayProperty = nameWithType > metody rozszerzenia.
+Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=nameWithType>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> metody rozszerzenia.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Właściwości umożliwia łatwe ujednoznacznienia składni węzeł typów, które korzystać z tej samej klasy węzła. Tokeny i elementy towarzyszące składni ta właściwość jest jedynym sposobem, aby odróżnić jeden typ elementu z innej. 
 

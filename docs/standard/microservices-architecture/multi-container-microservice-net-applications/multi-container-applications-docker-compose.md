@@ -1,7 +1,7 @@
 ---
-title: "Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/30/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: c4fed5c7ba5c2048d103f22bd2b463c143013280
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>Definiowanie aplikacji usługi kontenera przy użyciu rozwiązania docker-compose.yml 
 
@@ -550,8 +550,8 @@ Tutaj ogólną takeway jest zdolny do skompilowania aplikacji, w taki sam sposó
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Tworzenie usługi bits z kontenera: konfigurowanie rozwiązania eShopOnContainers w środowisku interfejsu wiersza polecenia systemu Windows (dotnet interfejsu wiersza polecenia, interfejsu wiersza polecenia Docker i kodzie VS)**
-    [*https://github.com/dotnet/eShopOnContainers/wiki/ 03.-Setting-the-eShopOnContainers-Solution-up-in-a-Windows-CLI-Environment-(DotNet-CLI,-Docker-CLI-and-VS-Code)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
+    [*https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI, — Docker - CLI- i -VS — kodu)*](https://github.com/dotnet/eShopOnContainers/wiki/03.-Setting-the-eShopOnContainers-solution-up-in-a-Windows-CLI-environment-(dotnet-CLI,-Docker-CLI-and-VS-Code))
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (data-driven — crud — microservice.md) [dalej] (bazy danych server-container.md)
+[Previous] (data-driven-crud-microservice.md) [Next] (database-server-container.md)

@@ -1,6 +1,6 @@
 ---
-title: "Uruchom złożony i mikrousług aplikacji w środowisku produkcyjnym"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
+title: Uruchom złożony i mikrousług aplikacji w środowisku produkcyjnym
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -9,10 +9,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 0d7611d07c9995984269e3f7b071154d9b861367
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>Uruchom złożony i mikrousług aplikacji w środowisku produkcyjnym
 
@@ -24,11 +24,11 @@ Wcześniej w tym Książka elektroniczna wprowadzono *klastrów* i *planiści* j
 
 Aplikacje są skalowalne w poziomie w wielu systemach hosta, możliwość zarządzania każdym systemie hosta i abstrakcyjnej optymalizacji złożoność podstawowej platformy staje się atrakcyjne. To dokładnie czego zawiera orchestrators i transfery danych. Spójrzmy krótki ich tutaj:
 
--   **Planiści*** *"Planowania" odwołuje się do możliwości, aby administrator mógł załadować pliku usługi w systemie hosta, który określa sposób uruchamiania określonego kontenera. Uruchamianie kontenerów w klastrze Docker zwykle nazywane planowania. Chociaż planowanie odwołuje się do określonego zestawu act ładowania definicji usługi, w tym sensie bardziej ogólne transfery danych jest odpowiedzialny za przechwytywanie systemu init hosta do zarządzania usługami, niezależnie od pojemności potrzebne.
+-   **Planiści *** *"Planowania" odwołuje się do możliwości, aby administrator mógł załadować pliku usługi w systemie hosta, który określa sposób uruchamiania określonego kontenera. Uruchamianie kontenerów w klastrze Docker zwykle nazywane planowania. Chociaż planowanie odwołuje się do określonego zestawu act ładowania definicji usługi, w tym sensie bardziej ogólne transfery danych jest odpowiedzialny za przechwytywanie systemu init hosta do zarządzania usługami, niezależnie od pojemności potrzebne.
 
 Harmonogram klastra ma wiele celów: efektywne korzystanie z zasobów klastra, Praca z ograniczeń umieszczania dostarczone przez użytkownika, planowania aplikacjom szybko nie pozostaw je w stanie oczekiwania, o stopniu "sprawiedliwe przydzielanie zasobów," są niezawodne błędy, i zawsze być dostępna.
 
--   **Orchestration*** *platform rozszerzyć funkcje zarządzania cyklem życia w przypadku złożonych, multicontainer obciążeń wdrożonych w klastrze hostów. Przez abstrakcyjność infrastruktury hosta, narzędzi orchestration nadaj sposób traktować jako cel wdrożenia pojedynczego całego klastra.
+-   **Orchestration *** *platform rozszerzyć funkcje zarządzania cyklem życia w przypadku złożonych, multicontainer obciążeń wdrożonych w klastrze hostów. Przez abstrakcyjność infrastruktury hosta, narzędzi orchestration nadaj sposób traktować jako cel wdrożenia pojedynczego całego klastra.
 
 Proces aranżacji obejmuje narzędzi i platformy, który można zautomatyzować wszystkie aspekty zarządzania aplikacjami z początkowej umieszczania lub wdrażania na kontenera; Przeniesienie kontenerów na różnych hostach w zależności od jej hosta kondycji i wydajności; przechowywanie wersji i stopniowego aktualizacje i funkcje, które obsługują skalowanie i trybu failover; monitorowania kondycji i wiele innych.
 

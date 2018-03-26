@@ -1,28 +1,28 @@
 ---
 title: '&lt;wsDualHttpBinding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - wsDualHttpBinding Element
 ms.assetid: fd8ac4e2-5641-473b-9115-73f14ab1c065
-caps.latest.revision: 
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: a49b534ba22f4ac422eb26885388e24594b49afd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltwsdualhttpbindinggt"></a>&lt;wsDualHttpBinding&gt;
 Definiuje bezpieczne, niezawodne i interoperacyjne powiązanie, które jest odpowiednie dla kontraktów usługi duplex lub komunikacji za pośrednictwem pośredników SOAP.  
@@ -100,7 +100,7 @@ textEncoding="Unicode/BigEndianUnicode/UTF8"
 |[\<powiązania >](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|Ten element przetrzymuje kolekcję powiązań standardowych i niestandardowych.|  
   
 ## <a name="remarks"></a>Uwagi  
- `WSDualHttpBinding` Udostępnia możliwość obsługi tego samego protokoły usług sieci Web jako `WSHttpBinding`, ale do użycia z kontraktów dupleksowych. `WSDualHttpBinding`obsługuje zabezpieczenia protokołu SOAP i tylko wymaga niezawodnej obsługi komunikatów. To powiązanie wymaga, że klient ma publiczny identyfikator URI, który zawiera punkt końcowy wywołania zwrotnego dla usługi. Jest to obsługiwane przez `clientBaseAddress` atrybutu. Dwa powiązania udostępnia adres IP klienta do usługi. Klienta należy użyć zabezpieczeń, aby upewnić się, że go tylko łączy się z usługami go relacji zaufania.  
+ `WSDualHttpBinding` Udostępnia możliwość obsługi tego samego protokoły usług sieci Web jako `WSHttpBinding`, ale do użycia z kontraktów dupleksowych. `WSDualHttpBinding` obsługuje zabezpieczenia protokołu SOAP i tylko wymaga niezawodnej obsługi komunikatów. To powiązanie wymaga, że klient ma publiczny identyfikator URI, który zawiera punkt końcowy wywołania zwrotnego dla usługi. Jest to obsługiwane przez `clientBaseAddress` atrybutu. Dwa powiązania udostępnia adres IP klienta do usługi. Klienta należy użyć zabezpieczeń, aby upewnić się, że go tylko łączy się z usługami go relacji zaufania.  
   
  To powiązanie może służyć do niezawodnego komunikacji za pośrednictwem pośredników SOAP co najmniej jeden.  
   

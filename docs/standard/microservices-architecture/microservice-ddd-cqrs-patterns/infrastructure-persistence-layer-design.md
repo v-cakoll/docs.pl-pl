@@ -1,6 +1,6 @@
 ---
-title: "Projektowanie infrastruktury warstwę trwałości"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie infrastruktury warstwę trwałości"
+title: Projektowanie infrastruktury warstwę trwałości
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie infrastruktury warstwę trwałości
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projektowanie infrastruktury warstwę trwałości
 
@@ -138,8 +138,8 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
 
 ### <a name="the-repository-pattern"></a>Wzorzec repozytorium
 
--   **Edward Hieatt i Tomasz mnie. Wzorzec repozytorium. ** 
-     [ *http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+-   **Edward Hieatt i Tomasz mnie. Wzorzec repozytorium.**
+    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Wzorzec repozytorium**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
@@ -147,26 +147,26 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
 -   **Wzorzec repozytorium: Danych abstrakcję funkcji trwałości**
     [*http://deviq.com/repository-pattern/*](http://deviq.com/repository-pattern/)
 
--   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie wzorca repozytorium) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie wzorca repozytorium) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>Jednostka pracy wzorca
 
--   **Pole Fowler. Jednostka pracy wzorca. ** 
-     [ *http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+-   **Pole Fowler. Jednostka pracy wzorca.**
+    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 
 -   **Implementowanie repozytorium i jednostki pracy w aplikacji platformy ASP.NET MVC**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 ### <a name="the-specification-pattern"></a>Wzorzec specyfikacji
 
--   **Wzorzec specyfikacji. ** 
-     [ *http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+-   **Wzorzec specyfikacji.**
+    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
 
 -   **Evans, marek (2004). Domena zmiennych projektu. Addison-Wesley. str. 224.**
 
--   **Wymagania. Martin Fowler**
+-   **Wymagania. Pole Fowler**
     [*https://www.martinfowler.com/apsupp/spec.pdf/*](https://www.martinfowler.com/apsupp/spec.pdf)
 
 >[!div class="step-by-step"]

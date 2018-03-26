@@ -1,28 +1,30 @@
 ---
-title: "Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5"
-ms.custom: 
+title: 'Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring apps to support .NET Framework 4
 - .NET Framework 4, configuring apps
 - .NET Framework 4.5, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4ba3d248dbdd81cf2e2e4445d1e1eb160605542c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-45"></a>Porady: Konfiguracja aplikacji do obsługi w programie .NET Framework 4 lub 4.5
 Wszystkie aplikacje, które obsługują środowisko uruchomieniowe języka wspólnego (CLR) należy uruchomić, lub *aktywować*, CLR, aby można było uruchamiać kodu zarządzanego. Zazwyczaj aplikacja programu .NET Framework działa w wersji środowiska CLR, w którym została skompilowana, ale można zmienić to zachowanie dla aplikacji komputerowych, używając pliku konfiguracji aplikacji (czasami określanego jako plik app.config). Przy użyciu pliku konfiguracji aplikacji nie można jednak zmienić domyślnego zachowania aktywacji dla aplikacji do Sklepu Windows lub dla systemu Windows Phone. W tym artykule wyjaśniono, jak umożliwić uruchomienie aplikacji komputerowej w innej wersji programu .NET Framework i przedstawiono przykład określania jako platformy docelowej wersji 4 lub 4.5.  
@@ -88,7 +90,7 @@ Wszystkie aplikacje, które obsługują środowisko uruchomieniowe języka wspó
 |`<supportedRuntime version="v4.0"/>` <br /> `<supportedRuntime version="v2.0.50727"/>`|Działa w wersji 3.5|Działa w wersji 4 lub 4.5|Działa w wersji 4 lub 4.5|  
 |`<supportedRuntime version="v4.0"/>`|Wyświetla komunikat o błędzie, który monituje użytkownika o zainstalowanie poprawnej wersji *|Działa w wersji 4 lub 4.5|Działa w wersji 4 lub 4.5|  
   
- \*Aby uzyskać więcej informacji na temat tego komunikatu o błędzie i sposobów, aby uniknąć tego problemu, zobacz [błędy inicjowania programu .NET Framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
+ \* Aby uzyskać więcej informacji na temat tego komunikatu o błędzie i sposobów, aby uniknąć tego problemu, zobacz [błędy inicjowania programu .NET Framework: Zarządzanie wrażeniami użytkownika](../../../docs/framework/deployment/initialization-errors-managing-the-user-experience.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Migracja z programu .NET Framework 1.1](../../../docs/framework/migration-guide/migrating-from-the-net-framework-1-1.md)  

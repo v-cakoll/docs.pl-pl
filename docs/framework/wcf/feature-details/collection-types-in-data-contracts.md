@@ -1,12 +1,13 @@
 ---
 title: Typy kolekcji w kontraktach danych
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-caps.latest.revision: "19"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e74bd7d90d5653890fd5cf48e76c81d0227c6172
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="collection-types-in-data-contracts"></a>Typy kolekcji w kontraktach danych
 A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], tych list można przedstawić przy użyciu tablic lub innych typów (listy ogólnej, ogólny <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>, lub <xref:System.Collections.ArrayList>). Na przykład kolekcja może utrzymywać listę adresów dla danego klienta. Kolekcje te są nazywane *listy kolekcji*, niezależnie od ich rzeczywistego typu.  
@@ -38,9 +40,9 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
   
  Dodatkowe wymagania dla typów kolekcji, takie jak o metodę o nazwie `Add` i konstruktora domyślnego opisano szczegółowo w poniższych sekcjach. Dzięki temu, że typy kolekcji można zarówno serializacji i deserializacji. Oznacza to, że niektóre kolekcje nie są bezpośrednio obsługiwane, takie jak ogólnego <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> (ponieważ go nie ma konstruktora domyślnego). Jednak uzyskać informacji o tych ograniczeń obejścia, zobacz sekcję "Przy użyciu kolekcji interfejsu typów i tylko do odczytu kolekcji" w dalszej części tego tematu.  
   
- Typy zawarte w kolekcji musi być typy kontraktu danych, lub w inny sposób możliwy do serializacji. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
+ Typy zawarte w kolekcji musi być typy kontraktu danych, lub w inny sposób możliwy do serializacji. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Typy obsługiwane przez serializator kontraktu danych](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Co to jest i co to jest uznawane za prawidłowe kolekcji, jak również informacje jak kolekcje są serializowane, zapoznaj się z informacjami o serializowanie kolekcji w sekcji "Zaawansowane zasady kolekcji" tego tematu.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Co to jest i co to jest uznawane za prawidłowe kolekcji, jak również informacje jak kolekcje są serializowane, zapoznaj się z informacjami o serializowanie kolekcji w sekcji "Zaawansowane zasady kolekcji" tego tematu.  
   
 ## <a name="interchangeable-collections"></a>Wymienne kolekcje  
  Wszystkie kolekcje listy tego samego typu, jest uznawany za tych samych danych kontraktu (chyba że są one dostosowane przy użyciu <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atrybutu, zgodnie z opisem w dalszej części tego tematu). W związku z tym na przykład następujące kontraktów danych są równoważne.  
@@ -89,7 +91,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 ## <a name="customizing-collection-types"></a>Dostosowywanie typów kolekcji  
  Typy kolekcji można dostosować, używając <xref:System.Runtime.Serialization.CollectionDataContractAttribute> atrybut, który ma kilka zastosowań.  
   
- Należy zwrócić uwagę tego Dostosowywanie kolekcji typów dokonywania kolekcji wymiennego stosowania, dlatego zazwyczaj zalecane jest aby uniknąć stosowania tego atrybutu, jeśli to możliwe. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Ten problem, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ Należy zwrócić uwagę tego Dostosowywanie kolekcji typów dokonywania kolekcji wymiennego stosowania, dlatego zazwyczaj zalecane jest aby uniknąć stosowania tego atrybutu, jeśli to możliwe. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Ten problem, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ### <a name="collection-data-contract-naming"></a>Kontraktu danych kolekcji nazewnictwa  
  Reguły nazewnictwa typy kolekcji są podobne do reguł nazewnictwa typy kontraktu danych regularne, zgodnie z opisem w [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md), mimo że istnieje kilka istotnych różnic:  
@@ -150,7 +152,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 </cust_list>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] w sekcji "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ### <a name="customizing-the-repeating-element-name-in-list-collections"></a>Dostosowywanie identycznych nazwa elementu w kolekcji listy  
  Lista kolekcje zawierają identycznych wpisów. Zazwyczaj każdy wpis identycznych jest reprezentowany jako element o nazwie zgodnie z nazwą kontraktu danych typu zawartego w kolekcji.  
@@ -201,7 +203,7 @@ A *kolekcji* znajduje się lista elementów określonego typu. W [!INCLUDE[dnprd
 </CountriesOrRegionsWithCapitals>  
 ```  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Słownik kolekcji, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Słownik kolekcji, zobacz sekcję "Zaawansowane zasady kolekcji" w dalszej części tego tematu.  
   
 ## <a name="collections-and-known-types"></a>Kolekcje i znanych typów  
  Dodawanie typów kolekcji znanych typów stosowania polymorphically zamiast inne kolekcje lub interfejsy kolekcji nie jest konieczne. Na przykład w przypadku elementu członkowskiego danych typu <xref:System.Collections.IEnumerable> i umożliwia wysyłanie wystąpienia <xref:System.Collections.ArrayList>, nie trzeba dodać <xref:System.Collections.ArrayList> do znanych typów.  
@@ -282,8 +284,8 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Typu występującego w odwołaniu|Typ odwołania do interfejsu implementowanego przez|Przykład|Typ traktowane jako:|  
 |---------------------|----------------------------------------------|-------------|----------------------|  
-|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów)|Inne niż ogólne|`MyType : IList`<br /><br /> lub<br /><br /> `MyType<T> : IList`<br /><br /> gdzie T =`int`|Zamknięte ogólnego z `Object` (na przykład `IList<object>`)|  
-|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów, które nie muszą odpowiadać typ kolekcji)|Zamknięte ogólny|`MyType : IList<string>`<br /><br /> lub<br /><br /> `MyType<T> : IList<string>`gdzie T =`int`|Ogólny zamkniętego (na przykład `IList<string>`)|  
+|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów)|Inne niż ogólne|`MyType : IList`<br /><br /> lub<br /><br /> `MyType<T> : IList`<br /><br /> gdzie T = `int`|Zamknięte ogólnego z `Object` (na przykład `IList<object>`)|  
+|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów, które nie muszą odpowiadać typ kolekcji)|Zamknięte ogólny|`MyType : IList<string>`<br /><br /> lub<br /><br /> `MyType<T> : IList<string>` gdzie T =`int`|Ogólny zamkniętego (na przykład `IList<string>`)|  
 |Zamknięte z dowolnej liczby parametrów ogólnych|Otwarte ogólne przy użyciu jednego z parametrów typu|`MyType<T,U,V> : IList<U>`<br /><br /> gdzie T =`int`, U =`string`, V =`bool`|Ogólny zamkniętego (na przykład `IList<string>`)|  
 |Otwarte ogólne z jednym parametrem|Ogólny Otwórz za pomocą parametru typu|`MyType<T> : IList<T>`, T jest otwarty|Otwarte ogólne (na przykład `IList<T>`)|  
   
@@ -297,10 +299,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Typu występującego w odwołaniu|Typ odwołania do interfejsu implementowanego przez|Przykład|Typ traktowane jako|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
-|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> lub<br /><br /> `MyType<T> : IDictionary`gdzie T =`int`|Zamknięte ogólny`IDictionary<object,object>`|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|<xref:System.Collections.Generic.IDictionary%602>, zamknięty|`MyType<T> : IDictionary<string, bool>`gdzie T =`int`|Ogólny zamkniętego (na przykład `IDIctionary<string,bool>`)|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, klucz lub wartość jest zamknięty, drugi jest otwarty i korzysta z jednego z parametrów typu|`MyType<T,U,V> : IDictionary<string,V>`gdzie T =`int`, U =`float`, V =`bool`<br /><br /> lub<br /><br /> `MyType<Z> : IDictionary<Z,bool>`gdy Z =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
-|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, zarówno klucz i wartość są otwarte i każda używa jednego z parametrów typu|`MyType<T,U,V> : IDictionary<V,U>`gdzie T =`int`, U =`bool`, V =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
+|Inne niż ogólne lub zamkniętych ogólny (dowolną liczbę parametrów)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> lub<br /><br /> `MyType<T> : IDictionary` gdzie T =`int`|Zamknięte ogólny `IDictionary<object,object>`|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|<xref:System.Collections.Generic.IDictionary%602>, zamknięty|`MyType<T> : IDictionary<string, bool>` gdzie T =`int`|Ogólny zamkniętego (na przykład `IDIctionary<string,bool>`)|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, klucz lub wartość jest zamknięty, drugi jest otwarty i korzysta z jednego z parametrów typu|`MyType<T,U,V> : IDictionary<string,V>` gdzie T =`int`, U =`float`, V =`bool`<br /><br /> lub<br /><br /> `MyType<Z> : IDictionary<Z,bool>` gdy Z =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
+|Ogólny zamkniętego (dowolną liczbę parametrów)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, zarówno klucz i wartość są otwarte i każda używa jednego z parametrów typu|`MyType<T,U,V> : IDictionary<V,U>` gdzie T =`int`, U =`bool`, V =`string`|Ogólny zamkniętego (na przykład `IDictionary<string,bool>`)|  
 |Otwarte ogólne (dwa parametry)|Ogólny <xref:System.Collections.Generic.IDictionary%602>, Otwórz, używa zarówno ogólnych parametrów typu w kolejności ich występowania|`MyType<K,V> : IDictionary<K,V>`, K i V zarówno Otwórz|Otwarte ogólne (na przykład `IDictionary<K,V>`)|  
   
  Jeśli typ implementuje zarówno <xref:System.Collections.IDictionary> i rodzajowy <xref:System.Collections.Generic.IDictionary%602>tylko ogólny <xref:System.Collections.Generic.IDictionary%602> jest uznawany za.  
@@ -316,7 +318,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 -   Łączenie typów kolekcji (o kolekcji kolekcje) jest dozwolone. Tablice nieregularne są traktowane jako kolekcje z kolekcji. Tablice wielowymiarowe nie są obsługiwane.  
   
--   Tablice typu byte i tablice <xref:System.Xml.XmlNode> to typy tablicy specjalne, które są traktowane jako typów podstawowych, nie kolekcji. Serializacja tablicę bajtów wyników w pojedynczy element XML zawierający fragmentów danych algorytmem Base64, zamiast elementu osobne dla każdego bajtu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]w jaki sposób tablicę <xref:System.Xml.XmlNode> jest traktowane, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Oczywiście te typy specjalne mogą się uczestniczyć w kolekcji: tablica tablicy bajtów skutkuje wiele elementów XML, z zawierających fragmentów danych algorytmem Base64.  
+-   Tablice typu byte i tablice <xref:System.Xml.XmlNode> to typy tablicy specjalne, które są traktowane jako typów podstawowych, nie kolekcji. Serializacja tablicę bajtów wyników w pojedynczy element XML zawierający fragmentów danych algorytmem Base64, zamiast elementu osobne dla każdego bajtu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] w jaki sposób tablicę <xref:System.Xml.XmlNode> jest traktowane, zobacz [typy XML i ADO.NET w kontraktach danych](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md). Oczywiście te typy specjalne mogą się uczestniczyć w kolekcji: tablica tablicy bajtów skutkuje wiele elementów XML, z zawierających fragmentów danych algorytmem Base64.  
   
 -   Jeśli <xref:System.Runtime.Serialization.DataContractAttribute> atrybut jest stosowany do typu kolekcji, typ jest traktowany jako typ kontraktu regularnych danych, nie jako kolekcja.  
   
@@ -332,13 +334,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |Implementuje typ kolekcji|Metody wywołano serializacji|Metody o nazwie przy deserializacji|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|Ogólny<xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Dodaj ogólny|  
+|Ogólny <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|Dodaj ogólny|  
 |<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
-|Ogólny<xref:System.Collections.Generic.IList%601>|Ogólny <xref:System.Collections.Generic.IList%601> indeksatora|Dodaj ogólny|  
-|Ogólny<xref:System.Collections.Generic.ICollection%601>|Moduł wyliczający|Dodaj ogólny|  
-|<xref:System.Collections.IList>|<xref:System.Collections.IList>Indeksator|`Add`|  
-|Ogólny<xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Wywołana metoda niestatyczna `Add` który przyjmuje jeden parametr odpowiedniego typu (typ parametru ogólnego) lub jeden z jego typów podstawowych. Taka metoda musi istnieć dla serializatora traktowanie typ kolekcji jako kolekcji zarówno podczas serializacji i deserializacji.|  
-|<xref:System.Collections.IEnumerable>(a zatem <xref:System.Collections.ICollection>, co wynika z niego)|`GetEnumerator`|Wywołana metoda niestatyczna `Add` który przyjmuje jeden parametr typu `Object`. Taka metoda musi istnieć dla serializatora traktowanie typ kolekcji jako kolekcji zarówno podczas serializacji i deserializacji.|  
+|Ogólny <xref:System.Collections.Generic.IList%601>|Ogólny <xref:System.Collections.Generic.IList%601> indeksatora|Dodaj ogólny|  
+|Ogólny <xref:System.Collections.Generic.ICollection%601>|Moduł wyliczający|Dodaj ogólny|  
+|<xref:System.Collections.IList>|<xref:System.Collections.IList> indeksator|`Add`|  
+|Ogólny <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|Wywołana metoda niestatyczna `Add` który przyjmuje jeden parametr odpowiedniego typu (typ parametru ogólnego) lub jeden z jego typów podstawowych. Taka metoda musi istnieć dla serializatora traktowanie typ kolekcji jako kolekcji zarówno podczas serializacji i deserializacji.|  
+|<xref:System.Collections.IEnumerable> (a zatem <xref:System.Collections.ICollection>, co wynika z niego)|`GetEnumerator`|Wywołana metoda niestatyczna `Add` który przyjmuje jeden parametr typu `Object`. Taka metoda musi istnieć dla serializatora traktowanie typ kolekcji jako kolekcji zarówno podczas serializacji i deserializacji.|  
   
  W poprzedniej tabeli wymieniono interfejsy kolekcji w kolejności malejącej. Oznacza to, na przykład, że jeśli typ implementuje zarówno <xref:System.Collections.IList> i rodzajowy <xref:System.Collections.Generic.IEnumerable%601>, Kolekcja jest serializacji i deserializacji zgodnie z <xref:System.Collections.IList> reguł:  
   
@@ -353,13 +355,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="collection-naming"></a>Kolekcja nazw  
  Oto lista kolekcji reguł nazewnictwa:  
   
--   Domyślny obszar nazw dla wszystkich umów danych kolekcji słownika, a także listy kontraktów danych kolekcji, które zawierają typy pierwotne, jest http://schemas.microsoft.com/2003/10/Serialization/Arrays, chyba że przesłonić przy użyciu Namespace. Typy, które mapują na wbudowane typy XSD, jak również `char`, `Timespan`, i `Guid` typów, są traktowane jako podstawowych, w tym celu.  
+-   Domyślny obszar nazw dla wszystkich umów danych kolekcji słownika, a także listy kontraktów danych kolekcji, które zawierają typy pierwotne, jest http://schemas.microsoft.com/2003/10/Serialization/Arrays , chyba że przesłonić przy użyciu Namespace. Typy, które mapują na wbudowane typy XSD, jak również `char`, `Timespan`, i `Guid` typów, są traktowane jako podstawowych, w tym celu.  
   
 -   Domyślny obszar nazw dla typów kolekcji, które zawierają typy innego niż pierwotny, chyba że jest on przesłaniany przy użyciu Namespace, jest taka sama jak przestrzeń nazw kontraktu danych typu zawartego w kolekcji.  
   
 -   Domyślna nazwa listy kontraktów danych kolekcji, chyba że zastąpione przy użyciu nazwy, jest ciąg "ArrayOf" łączyć o nazwie kontraktu danych typu zawartego w kolekcji. Na przykład nazwa kontraktu danych ogólnych listy liczb całkowitych jest "ArrayOfint". Należy pamiętać, że nazwa kontraktu danych `Object` jest "anyType", takie jak nazwa kontraktu danych list nieogólnego <xref:System.Collections.ArrayList> jest "ArrayOfanyType".  
   
- Domyślna nazwa dla słownika danych kolekcji umów, chyba że przesłonić przy użyciu `Name`, to ciąg "ArrayOfKeyValueOf" połączone z nazwą kontraktu danych typu klucza następuje nazwa kontraktu danych typu wartości. Na przykład dane nazwy kontraktu dla ogólnego słownika ciągiem, a liczba całkowita jest "ArrayOfKeyValueOfstringint". Ponadto jeśli klucz lub typów wartości nie są typy pierwotne, skrót przestrzeni nazw z przestrzeni nazw kontraktu danych typów kluczy i wartości jest dołączany do nazwy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]skróty przestrzeni nazw, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
+ Domyślna nazwa dla słownika danych kolekcji umów, chyba że przesłonić przy użyciu `Name`, to ciąg "ArrayOfKeyValueOf" połączone z nazwą kontraktu danych typu klucza następuje nazwa kontraktu danych typu wartości. Na przykład dane nazwy kontraktu dla ogólnego słownika ciągiem, a liczba całkowita jest "ArrayOfKeyValueOfstringint". Ponadto jeśli klucz lub typów wartości nie są typy pierwotne, skrót przestrzeni nazw z przestrzeni nazw kontraktu danych typów kluczy i wartości jest dołączany do nazwy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] skróty przestrzeni nazw, zobacz [nazwy kontraktów danych](../../../../docs/framework/wcf/feature-details/data-contract-names.md).  
   
  Każdy kontraktu danych kolekcji słownik ma pomocnika kontraktu danych, który reprezentuje jeden wpis w słowniku. Jego nazwa jest taka sama jak w przypadku słownika kontraktu danych, z wyjątkiem prefiksu "ArrayOf" i jego przestrzeni nazw są takie same jak kontraktu danych słownika. Na przykład dla kontraktu danych słownika "ArrayOfKeyValueOfstringint", "KeyValueofstringint" kontraktu danych reprezentuje jeden wpis w słowniku. Nazwa tego kontraktu danych można dostosować, używając `ItemName` właściwości, zgodnie z opisem w następnej sekcji.  
   

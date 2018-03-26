@@ -1,24 +1,26 @@
 ---
 title: Migrowanie z programu .NET Remoting do programu WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b387e100ff881c5394b6a77716a733b3928eae9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>Migrowanie z programu .NET Remoting do programu WCF
 W tym artykule opisano sposób migracji aplikacji, która używa .NET Remoting do używania usług Windows Communication Foundation (WCF). Porównuje podobne pojęcia między tymi produktami, a następnie opisano, jak wykonać kilka typowych scenariuszy komunikacji zdalnej programu WCF.  
@@ -34,7 +36,7 @@ W tym artykule opisano sposób migracji aplikacji, która używa .NET Remoting d
 |Operacje usługi|Metody publiczne na typ serwera|Oznacz z atrybutem [OperationContract]|  
 |Serializacja|ISerializable lub [Serializable]|DataContractSerializer, lub XmlSerializer|  
 |Obiekty przekazany|Przez wartości lub według odwołania|Przez wartość tylko|  
-|Błędy/wyjątków|Można serializować wyjątku|Obiekcie FaultContract\<TDetail >|  
+|Błędy/wyjątków|Można serializować wyjątku|FaultContract\<TDetail>|  
 |Obiekty serwera proxy klienta|Jednoznacznie przezroczysty serwery proxy są tworzone automatycznie na podstawie elementów MarshalByRefObjects|Jednoznacznie serwery proxy są generowane na żądanie przy użyciu elementu ChannelFactory\<TChannel >|  
 |Platforma wymagane|Klienta i serwera, należy użyć programu Microsoft OS i .NET|Obsługujący wiele platform|  
 |Format komunikatu|Private|Standardy branżowe (SOAP, WS-* itp.)|  

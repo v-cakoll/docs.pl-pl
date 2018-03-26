@@ -1,7 +1,7 @@
 ---
-title: "Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 273aa0a8ceb7f683999f1074faae0a6aa303f9be
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="client-side-validation-validation-in-the-presentation-layers"></a>Weryfikacja po stronie klienta (Sprawdzanie poprawności w warstwy prezentacji)
 
@@ -48,14 +48,14 @@ Implementacja weryfikacji po stronie klienta zależy od tego, jakiego rodzaju ap
 
 ### <a name="validation-in-spa-web-apps-angular-2-typescript-javascript"></a>Sprawdzanie poprawności w SPA Web apps (kątowego 2 TypeScript, JavaScript)
 
--   **ADO Kukic. 2 kątowego tworzą weryfikacji** **
-     ** [ *https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
+-   **Ado Kukic. Dyrektywy angular weryfikacji formularza 2** **
+    **[*https://scotch.io/tutorials/angular-2-form-validation*](https://scotch.io/tutorials/angular-2-form-validation)
 
--   **Formularz weryfikacji**
+-   **Sprawdzanie poprawności formularza**
     [*https://angular.io/docs/ts/latest/cookbook/form-validation.html*](https://angular.io/docs/ts/latest/cookbook/form-validation.html)
 
 -   **Sprawdzanie poprawności.** Błyskawicznie dokumentacji.
-    [*http://BREEZE.github.IO/doc-js/Validation.HTML*](http://breeze.github.io/doc-js/validation.html)
+    [*http://breeze.github.io/doc-js/validation.html*](http://breeze.github.io/doc-js/validation.html)
 
 Podsumowując są najważniejsze pojęcia w odniesieniu do sprawdzania poprawności:
 

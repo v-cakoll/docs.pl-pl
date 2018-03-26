@@ -1,7 +1,7 @@
 ---
 title: Migrowanie z DNX do platformy .NET Core interfejsu wiersza polecenia
-description: "Migracja z przy użyciu środowiska DNX narzędzi do narzędzi interfejsu wiersza polecenia platformy .NET Core."
-keywords: .NET, .NET core
+description: Migracja z przy użyciu środowiska DNX narzędzi do narzędzi interfejsu wiersza polecenia platformy .NET Core.
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c0d70120-78c8-4d26-bb3c-801f42fc2366
-ms.workload: dotnetcore
+ms.workload:
+- dotnetcore
 ms.openlocfilehash: dba38de28dc15147e5bcc5bf4cede9f4dd5fca62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>Migrowanie z DNX do platformy .NET Core interfejsu wiersza polecenia (project.json)
 
@@ -123,10 +124,10 @@ Po zakończeniu tych czynności, musisz zdecydować, jakiego typu przenośność
 
 Po wprowadzeniu wywołanie w rodzaju przenośność ma musisz zmienić Twojego framework(s) docelowych. Podczas pisania aplikacji dla platformy .NET Core, najprawdopodobniej używania `dnxcore50` jako z docelową platformą. Z poziomu interfejsu wiersza polecenia i zmiany który nowy [.NET Standard](../../standard/net-standard.md) dostosowane, platformę musi być jedną z następujących czynności:
 
-1. `netcoreapp1.0`-podczas pisania aplikacji na .NET Core (w tym aplikacje platformy ASP.NET Core)
-2. `netstandard1.6`— Jeśli piszesz biblioteki klas dla platformy .NET Core
+1. `netcoreapp1.0` -podczas pisania aplikacji na .NET Core (w tym aplikacje platformy ASP.NET Core)
+2. `netstandard1.6` — Jeśli piszesz biblioteki klas dla platformy .NET Core
 
-Jeśli używane są inne `dnx` elementów docelowych, takie jak `dnx451` należy również zmienić te. `dnx451`należy zmienić `net451`. Zapoznaj się z [.NET Standard](../../standard/net-standard.md) tematu, aby uzyskać więcej informacji. 
+Jeśli używane są inne `dnx` elementów docelowych, takie jak `dnx451` należy również zmienić te. `dnx451` należy zmienić `net451`. Zapoznaj się z [.NET Standard](../../standard/net-standard.md) tematu, aby uzyskać więcej informacji. 
 
 Twoje `project.json` przede wszystkim jest gotowy. Należy przeprowadzić liście zależności i zaktualizuj zależności do ich nowszych wersji, zwłaszcza, jeśli używasz platformy ASP.NET Core zależności. Jeśli były używane osobne pakiety dla interfejsów API BCL, można użyć pakietu środowiska uruchomieniowego, zgodnie z objaśnieniem w [typu przenośność aplikacji](../deploying/index.md) dokumentu. 
 

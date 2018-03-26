@@ -1,12 +1,13 @@
 ---
 title: Rozszerzenia znacznikowania i WPF XAML
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - brace character [WPF]
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: "26"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącznie z ich składni reguł, cel i model obiektów klasy źródłowej je. Rozszerzenia znaczników są funkcją ogólne języka XAML i stosowania usługi XAML .NET. W tym temacie szczegółowo w szczególności rozszerzenia znaczników do użycia w WPF XAML.  
@@ -53,13 +55,13 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
 ## <a name="xaml-defined-markup-extensions"></a>Rozszerzenia znaczników zdefiniowane XAML  
  Istnieje kilka rozszerzeń znaczników, które nie są specyficzne dla wdrożenia WPF XAML, ale zamiast tego są implementacje funkcje wewnętrzne lub funkcje XAML jako język. Te rozszerzenia znaczników są implementowane w zestawie System.Xaml jako część ogólne usługi .NET Framework XAML i znajdują się w przestrzeni nazw XAML języka XAML. Pod względem wspólnego użycia znaczników, są zazwyczaj do zidentyfikowania przez te rozszerzenia znaczników `x:` prefiks w użycia. <xref:System.Windows.Markup.MarkupExtension> Klasy podstawowej (też definiowany w System.Xaml) zawiera wzorzec, który ma być używany przez wszystkie rozszerzenia znaczników aby być obsługiwana w przypadku czytników XAML i moduły zapisujące XAML, w tym w WPF XAML.  
   
--   `x:Type`dostarcza <xref:System.Type> obiektu dla typu nazwanego. Tej funkcji jest najczęściej używane style i szablony. Aby uzyskać więcej informacji, zobacz [x: Type — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
+-   `x:Type` dostarcza <xref:System.Type> obiektu dla typu nazwanego. Tej funkcji jest najczęściej używane style i szablony. Aby uzyskać więcej informacji, zobacz [x: Type — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-type-markup-extension.md).  
   
--   `x:Static`Tworzy wartości statyczne. Wartości pochodzą z jednostek kodu typ wartości, które nie są bezpośrednio typ wartości właściwości docelowych, ale może przyjąć typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-static-markup-extension.md).  
+-   `x:Static` Tworzy wartości statyczne. Wartości pochodzą z jednostek kodu typ wartości, które nie są bezpośrednio typ wartości właściwości docelowych, ale może przyjąć typu. Aby uzyskać więcej informacji, zobacz [x: Static — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-static-markup-extension.md).  
   
--   `x:Null`Określa `null` jako wartość właściwości i mogą być używane dla atrybutów lub wartości elementów właściwości. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
+-   `x:Null` Określa `null` jako wartość właściwości i mogą być używane dla atrybutów lub wartości elementów właściwości. Aby uzyskać więcej informacji, zobacz [x: Null — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-null-markup-extension.md).  
   
--   `x:Array`zapewnia obsługę tworzenia ogólne tablic w składni języka XAML w przypadkach, gdy obsługa kolekcji zapewniana przez WPF podstawowych elementów i modele kontroli celowo nie jest używana. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
+-   `x:Array` zapewnia obsługę tworzenia ogólne tablic w składni języka XAML w przypadkach, gdy obsługa kolekcji zapewniana przez WPF podstawowych elementów i modele kontroli celowo nie jest używana. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
 >  `x:` Prefiks jest używany do typowych mapowania przestrzeni nazw XAML funkcji XAML language wewnętrznych, na w elemencie głównym pliku XAML lub produkcji. Na przykład [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] szablonów dla aplikacji WPF zainicjować pliku XAML, za pomocą tej `x:` mapowania. Można wybrać inny token w własne mapowania przestrzeni nazw XAML, ale w tej dokumentacji przyjmie wartość domyślna `x:` mapowania jako sposób identyfikacji tych jednostek, które należą do określonych przestrzeni nazw XAML dla języka XAML, a nie WPF domyślnej przestrzeni nazw lub innych przestrzeniach nazw XAML nie dotyczą określonej platformy.  
@@ -68,19 +70,19 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
 ## <a name="wpf-specific-markup-extensions"></a>Rozszerzenia znaczników specyficzne dla WPF  
  Najczęstsze rozszerzenia znacznika używany w programowaniu WPF to takie, które obsługują odwołania do zasobów (`StaticResource` i `DynamicResource`) oraz te, które obsługuje powiązanie danych (`Binding`).  
   
--   `StaticResource`dostarcza wartość dla właściwości, zastępując wartości zasobu już zdefiniowane. A `StaticResource` oceny staje się ostatecznie w czasie ładowania XAML i nie ma dostępu do obiektu wykresu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [StaticResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
+-   `StaticResource` dostarcza wartość dla właściwości, zastępując wartości zasobu już zdefiniowane. A `StaticResource` oceny staje się ostatecznie w czasie ładowania XAML i nie ma dostępu do obiektu wykresu w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [StaticResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md).  
   
--   `DynamicResource`udostępnia wartość właściwości przez odkładanie tej wartości jako odwołanie do zasobu czasu wykonywania. Odwołanie do zasobu dynamicznego wymusza nowego wyszukiwania zawsze czy taki zasób jest dostępny i ma dostęp do obiektu wykresu w czasie wykonywania. Aby uzyskać dostęp, `DynamicResource` koncepcja jest obsługiwana przez właściwości zależności w systemie właściwości WPF i oceniane wyrażenia. W związku z tym można używać tylko `DynamicResource` dla docelowej właściwości zależności. Aby uzyskać więcej informacji, zobacz [DynamicResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
+-   `DynamicResource` udostępnia wartość właściwości przez odkładanie tej wartości jako odwołanie do zasobu czasu wykonywania. Odwołanie do zasobu dynamicznego wymusza nowego wyszukiwania zawsze czy taki zasób jest dostępny i ma dostęp do obiektu wykresu w czasie wykonywania. Aby uzyskać dostęp, `DynamicResource` koncepcja jest obsługiwana przez właściwości zależności w systemie właściwości WPF i oceniane wyrażenia. W związku z tym można używać tylko `DynamicResource` dla docelowej właściwości zależności. Aby uzyskać więcej informacji, zobacz [DynamicResource — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md).  
   
--   `Binding`zawiera wartość właściwości, za pomocą kontekstu danych, która ma zastosowanie do obiektu nadrzędnego w czasie wykonywania powiązany z danymi. Tego rozszerzenia znacznika jest dość złożone, ponieważ dzięki składnię znacznej wbudowanego Określanie powiązania danych. Aby uzyskać więcej informacji, zobacz [powiązanie — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
+-   `Binding` zawiera wartość właściwości, za pomocą kontekstu danych, która ma zastosowanie do obiektu nadrzędnego w czasie wykonywania powiązany z danymi. Tego rozszerzenia znacznika jest dość złożone, ponieważ dzięki składnię znacznej wbudowanego Określanie powiązania danych. Aby uzyskać więcej informacji, zobacz [powiązanie — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/binding-markup-extension.md).  
   
--   `RelativeSource`zawiera informacje o źródle <xref:System.Windows.Data.Binding> który Przejdź kilka możliwych relacji drzewa obiektów czasu wykonywania. Zapewnia to specjalne sourcing dla powiązań, które są w szablonach wielokrotnego użytku lub tworzony kodu bez pełnej znajomości otaczającego drzewa obiektów. Aby uzyskać więcej informacji, zobacz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
+-   `RelativeSource` zawiera informacje o źródle <xref:System.Windows.Data.Binding> który Przejdź kilka możliwych relacji drzewa obiektów czasu wykonywania. Zapewnia to specjalne sourcing dla powiązań, które są w szablonach wielokrotnego użytku lub tworzony kodu bez pełnej znajomości otaczającego drzewa obiektów. Aby uzyskać więcej informacji, zobacz [RelativeSource MarkupExtension](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md).  
   
--   `TemplateBinding`Umożliwia szablon formantu użyć wartości dla właściwości opartego na szablonie, które pochodzą z właściwości zdefiniowane przez model obiektu klasy, który będzie używany przez szablon. Innymi słowy właściwości w definicji szablonu mogą uzyskiwać dostęp do kontekstu, który istnieje tylko po zastosowaniu tego szablonu. Aby uzyskać więcej informacji, zobacz [rozszerzenie znacznika TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Aby uzyskać więcej informacji na praktyczne wykorzystanie `TemplateBinding`, zobacz [style próbki ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
+-   `TemplateBinding` Umożliwia szablon formantu użyć wartości dla właściwości opartego na szablonie, które pochodzą z właściwości zdefiniowane przez model obiektu klasy, który będzie używany przez szablon. Innymi słowy właściwości w definicji szablonu mogą uzyskiwać dostęp do kontekstu, który istnieje tylko po zastosowaniu tego szablonu. Aby uzyskać więcej informacji, zobacz [rozszerzenie znacznika TemplateBinding](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md). Aby uzyskać więcej informacji na praktyczne wykorzystanie `TemplateBinding`, zobacz [style próbki ControlTemplates](http://go.microsoft.com/fwlink/?LinkID=160041).  
   
--   `ColorConvertedBitmap`obsługuje stosunkowo zaawansowanym scenariuszu przetwarzania obrazów. Aby uzyskać więcej informacji, zobacz [ColorConvertedBitmap — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
+-   `ColorConvertedBitmap` obsługuje stosunkowo zaawansowanym scenariuszu przetwarzania obrazów. Aby uzyskać więcej informacji, zobacz [ColorConvertedBitmap — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md).  
   
--   `ComponentResourceKey`i `ThemeDictionary` obsługują aspekty wyszukiwania zasobów, szczególnie w przypadku zasobów i motywów, które są dostarczane z Kontrolki niestandardowe. Aby uzyskać więcej informacji, zobacz [ComponentResourceKey — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md), [ThemeDictionary — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md), lub [informacje o formancie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
+-   `ComponentResourceKey` i `ThemeDictionary` obsługują aspekty wyszukiwania zasobów, szczególnie w przypadku zasobów i motywów, które są dostarczane z Kontrolki niestandardowe. Aby uzyskać więcej informacji, zobacz [ComponentResourceKey — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md), [ThemeDictionary — rozszerzenie znaczników](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md), lub [informacje o formancie tworzenia](../../../../docs/framework/wpf/controls/control-authoring-overview.md).  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>* Rozszerzenie klasy  

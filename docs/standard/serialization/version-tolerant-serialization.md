@@ -1,5 +1,5 @@
 ---
-title: "Serializacji z tolerancją dla wersji"
+title: Serializacji z tolerancją dla wersji
 ms.date: 08/08/2017
 ms.prod: .net
 ms.topic: article
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - BinaryFormatter class, samples
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -23,10 +23,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 46a6ccde7c978fe18737c6ae8733dd2e1e1ec858
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="version-tolerant-serialization"></a>Serializacji z tolerancją dla wersji
 W wersji 1.0, 1.1 programu .NET Framework Tworzenie typów możliwych do serializacji, które będą wielokrotnego użytku z jednej wersji aplikacji do następnego był kłopotliwy. Jeśli typ został zmodyfikowany przez dodanie pola dodatkowe, wystąpi następujących problemów:  
@@ -134,7 +134,7 @@ End Class
 |<xref:System.Runtime.Serialization.OnSerializingAttribute>|Przed serializacji.|Przygotowanie do serializacji. Na przykład utworzyć struktury danych opcjonalne.|  
 |<xref:System.Runtime.Serialization.OnSerializedAttribute>|Po serializacji.|Rejestrowanie zdarzeń serializacji.|  
   
- \*To wywołanie zwrotne jest wywoływane przed konstruktorze deserializacji, jeśli jest dostępny.  
+ \* To wywołanie zwrotne jest wywoływane przed konstruktorze deserializacji, jeśli jest dostępny.  
   
 ### <a name="using-callbacks"></a>Za pomocą wywołania zwrotne  
  Aby korzystać z wywołań zwrotnych, zastosuj odpowiedni atrybut do metody, która akceptuje <xref:System.Runtime.Serialization.StreamingContext> parametru. Może być oznaczony tylko jednej metody na klasy z każdym z tych atrybutów. Na przykład:  
@@ -265,7 +265,7 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder>Klasa abstrakcyjna służy do kontroli rzeczywiste typy używane podczas serializacji i deserializacji.  Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
+ Niektórzy użytkownicy może być konieczne do kontrolowania której klasy do serializacji i deserializacji, ponieważ wymagana jest nieco innej klasy w serwera i klienta. <xref:System.Runtime.Serialization.SerializationBinder>Klasa abstrakcyjna służy do kontroli rzeczywiste typy używane podczas serializacji i deserializacji.  Aby użyć tej klasy, należy wyprowadzić klasę z <xref:System.Runtime.Serialization.SerializationBinder> i zastąpić <xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> i <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> metody. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Kontrolowanie serializacji i deserializacji za pomocą elementu SerializationBinder](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md).  
   
 ## <a name="best-practices"></a>Najlepsze praktyki  
  W celu zapewnienia zachowania właściwej wersji, modyfikując typu od wersji należy wykonać następujące czynności:  

@@ -1,27 +1,29 @@
 ---
 title: Klasy UriTemplate i UriTemplateTable
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: ac77fe2c83828d2cc9473417d2b29b2d2e540923
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>Klasy UriTemplate i UriTemplateTable
-Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate>i <xref:System.UriTemplateTable> stanowią podstawę aparat wysyłki na podstawie identyfikatora URI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Te klasy można również na ich własnych, dzięki czemu deweloperzy mógł korzystać z szablonów i mechanizmu mapowanie identyfikatora URI bez stosowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
+Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfikatory URI, które odpowiadają swoich usług. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] dodano dwa nowe klasy umożliwiają deweloperom kontrolę nad ich identyfikatorów URI. <xref:System.UriTemplate> i <xref:System.UriTemplateTable> stanowią podstawę aparat wysyłki na podstawie identyfikatora URI w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Te klasy można również na ich własnych, dzięki czemu deweloperzy mógł korzystać z szablonów i mechanizmu mapowanie identyfikatora URI bez stosowania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi.  
   
 ## <a name="templates"></a>Szablony  
  Szablon jest umożliwia opisywanie zestaw względne identyfikatory URI. Zestaw szablonów identyfikatora URI w poniższej tabeli pokazano, jak można zdefiniować systemu, które pobierają różne rodzaje informacji o pogodzie.  
@@ -31,37 +33,37 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
 |Prognozy National|pogody/national|  
 |Prognozy stanu|pogody / {stanu}|  
 |Prognozy miasta|pogody / {stanu} / {Miasto}|  
-|Prognozy działania|pogody / {stanu} / {Miasto} / {działania}|  
+|Prognozy działania|weather/{state}/{city}/{activity}|  
   
  Poniższa tabela zawiera opis zestawu strukturę podobną identyfikatorów URI. Każdy wpis jest szablon identyfikatora URI. Segmenty w nawiasach klamrowych opisano zmienne. Segmenty nie w nawiasach klamrowych opisano ciągi literału. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Szablonu klasy umożliwiają dewelopera zająć przychodzący identyfikator URI, na przykład "/ pogody/wa/seattle/cyklicznie", i porównuje ją do szablonu, który opisuje, "/weather/ {stanu} / {Miasto} / {działania}".  
   
 ## <a name="uritemplate"></a>UriTemplate  
- <xref:System.UriTemplate>jest klasa, która hermetyzuje szablon identyfikatora URI. Konstruktor ma parametr typu string, który definiuje szablonu. Ten ciąg zawiera szablon w formacie opisany w następnej sekcji. <xref:System.UriTemplate> Klasa udostępnia metody, które należy spełnić odpowiada przychodzący identyfikator URI do szablonu, wygenerować identyfikator URI na podstawie szablonu, pobierania kolekcję nazwy zmiennych używane w szablonie, określić, czy dwa szablony są równoważne i zwracać szablon ciąg.  
+ <xref:System.UriTemplate> jest klasa, która hermetyzuje szablon identyfikatora URI. Konstruktor ma parametr typu string, który definiuje szablonu. Ten ciąg zawiera szablon w formacie opisany w następnej sekcji. <xref:System.UriTemplate> Klasa udostępnia metody, które należy spełnić odpowiada przychodzący identyfikator URI do szablonu, wygenerować identyfikator URI na podstawie szablonu, pobierania kolekcję nazwy zmiennych używane w szablonie, określić, czy dwa szablony są równoważne i zwracać szablon ciąg.  
   
- <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29>pobiera adres podstawowy i kandydatem identyfikatora URI i próbuje dopasować identyfikatora URI do szablonu. Gdy dopasowanie jest pomyślne, <xref:System.UriTemplateMatch> zwrócone wystąpienie. <xref:System.UriTemplateMatch> Podstawowy identyfikator URI candidate identyfikatora URI kolekcji nazw i wartości parametrów zapytania, Tablica segmentów ścieżki względnej, kolekcji nazw i wartości zmiennych, które zostały spełnione, zawiera obiekt <xref:System.UriTemplate> wystąpienie używane w celu wykonania dopasowania , ciąg, który zawiera niedopasowane części candidate identyfikatora URI (stosowane, gdy szablon ma symboli wieloznacznych), a obiekt, który jest skojarzony z szablonem.  
+ <xref:System.UriTemplate.Match%28System.Uri%2CSystem.Uri%29> pobiera adres podstawowy i kandydatem identyfikatora URI i próbuje dopasować identyfikatora URI do szablonu. Gdy dopasowanie jest pomyślne, <xref:System.UriTemplateMatch> zwrócone wystąpienie. <xref:System.UriTemplateMatch> Podstawowy identyfikator URI candidate identyfikatora URI kolekcji nazw i wartości parametrów zapytania, Tablica segmentów ścieżki względnej, kolekcji nazw i wartości zmiennych, które zostały spełnione, zawiera obiekt <xref:System.UriTemplate> wystąpienie używane w celu wykonania dopasowania , ciąg, który zawiera niedopasowane części candidate identyfikatora URI (stosowane, gdy szablon ma symboli wieloznacznych), a obiekt, który jest skojarzony z szablonem.  
   
 > [!NOTE]
 >  <xref:System.UriTemplate> Klasy ignoruje schemat i numer portu podczas dopasowywania identyfikatora URI kandydatem do szablonu.  
   
- Istnieją dwie metody, dzięki którym można wygenerować identyfikatora URI na podstawie szablonu, <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> i <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29>pobiera adres podstawowy i kolekcję nazw i wartości parametrów. Te parametry są zastępowane dla zmiennych, gdy szablon jest powiązana. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>pobiera pary nazwa/wartość i zastępuje je od lewej do prawej.  
+ Istnieją dwie metody, dzięki którym można wygenerować identyfikatora URI na podstawie szablonu, <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> i <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29>. <xref:System.UriTemplate.BindByName%28System.Uri%2CSystem.Collections.Specialized.NameValueCollection%29> pobiera adres podstawowy i kolekcję nazw i wartości parametrów. Te parametry są zastępowane dla zmiennych, gdy szablon jest powiązana. <xref:System.UriTemplate.BindByPosition%28System.Uri%2CSystem.String%5B%5D%29> pobiera pary nazwa/wartość i zastępuje je od lewej do prawej.  
   
- <xref:System.UriTemplate.ToString>Zwraca ciąg szablonu.  
+ <xref:System.UriTemplate.ToString> Zwraca ciąg szablonu.  
   
  <xref:System.UriTemplate.PathSegmentVariableNames%2A> Właściwość zawiera kolekcję nazw zmiennych w segmentach ścieżki w ciągu szablonu.  
   
- <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29>Trwa <xref:System.UriTemplate> jako parametr i zwraca wartość logiczną, która określa, czy dwa szablony są równoważne. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)]w sekcji równoważność szablonu w dalszej części tego tematu.  
+ <xref:System.UriTemplate.IsEquivalentTo%28System.UriTemplate%29> Trwa <xref:System.UriTemplate> jako parametr i zwraca wartość logiczną, która określa, czy dwa szablony są równoważne. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] w sekcji równoważność szablonu w dalszej części tego tematu.  
   
- <xref:System.UriTemplate>jest przeznaczona do pracy z dowolnego schemat URI, który odpowiada gramatyki identyfikator URI protokołu HTTP. Poniżej przedstawiono przykłady obsługiwane schematy identyfikatorów URI.  
+ <xref:System.UriTemplate> jest przeznaczona do pracy z dowolnego schemat URI, który odpowiada gramatyki identyfikator URI protokołu HTTP. Poniżej przedstawiono przykłady obsługiwane schematy identyfikatorów URI.  
   
 -   http://  
   
 -   https://  
   
--   NET.TCP://  
+-   net.tcp://  
   
 -   NET.pipe://  
   
--   SB: / /  
+-   sb://  
   
  Systemy, takie jak file:// i urn: / / nie odpowiadać gramatyce identyfikator URI protokołu HTTP i spowodować nieprzewidywalne skutki, gdy jest używany z szablonów identyfikatora URI.  
   
@@ -102,7 +104,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
   
 -   "uniesienia / {łodzi}? x = {bielizny}"  
   
--   "uniesienia / {łodzi}? x = {bielizny} & y = poza pasmem"  
+-   "shoe/{boat}?x={bed}&y=band"  
   
 -   "? x = {buta}"  
   
@@ -125,13 +127,13 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
 ### <a name="compound-path-segments"></a>Segmenty ścieżki złożone  
  Segmenty ścieżki złożonej Zezwalaj pojedynczy segment ścieżki identyfikatora URI zawiera wiele zmiennych, a także zmienne w połączeniu z literały. Poniżej przedstawiono przykłady segmentów prawidłową ścieżkę złożonego.  
   
--   argumentu/FILENAME. {ext} /  
+-   /filename.{ext}/  
   
 -   /{filename}.jpg/  
   
--   / {filename}. {ext} /  
+-   /{filename}.{ext}/  
   
--   / {}. {b}someLiteral{c}({d}) /  
+-   /{a}.{b}someLiteral{c}({d})/  
   
  Poniżej przedstawiono przykłady segmentów nieprawidłową ścieżkę.  
   
@@ -140,7 +142,7 @@ Deweloperzy sieci Web wymagają możliwości opis kształtu i układu identyfika
 -   / {łodzi} - {uniesienia} zmiennych muszą być oddzielone literału.  
   
 ### <a name="matching-and-compound-path-segments"></a>Segmenty ścieżki dopasowywania i złożone  
- Segmenty ścieżki złożonej zezwala na określanie obiektu UriTemplate, która ma wiele zmiennych w segmencie pojedynczą ścieżkę. Na przykład w poniższym ciągu szablonu: "adresy / {stanu}. {Miasto} "dwie zmienne (stanu i miasta) są zdefiniowane w ten sam segment. Ten szablon będzie zgodne adresu URL, takie jak "http://example.com/Washington.Redmond", ale również będzie odpowiadała adresu URL, takie jak "http://example.com/Washington.Redmond.Microsoft". W drugim przypadku zmiennej stanu będzie zawierać "W stanie Waszyngton" i zmiennej Miasto będzie zawierać "Redmond.Microsoft". W takim przypadku tekstem (z wyjątkiem "/") będzie odpowiadała zmiennej {miasto}. Szablon, który nie będzie odpowiadała "dodatkowy" tekst, umieść zmiennej w segmencie oddzielnego szablonu, na przykład: "adresy / {stanu} / {miasto}.  
+ Segmenty ścieżki złożonej zezwala na określanie obiektu UriTemplate, która ma wiele zmiennych w segmencie pojedynczą ścieżkę. Na przykład w poniższym ciągu szablonu: "adresy / {stanu}. {Miasto} "dwie zmienne (stanu i miasta) są zdefiniowane w ten sam segment. Ten szablon spowoduje dopasowanie takie jak adres URL "http://example.com/Washington.Redmond", ale adres URL, jak również będzie odpowiadała"http://example.com/Washington.Redmond.Microsoft". W drugim przypadku zmiennej stanu będzie zawierać "W stanie Waszyngton" i zmiennej Miasto będzie zawierać "Redmond.Microsoft". W takim przypadku tekstem (z wyjątkiem "/") będzie odpowiadała zmiennej {miasto}. Szablon, który nie będzie odpowiadała "dodatkowy" tekst, umieść zmiennej w segmencie oddzielnego szablonu, na przykład: "adresy / {stanu} / {miasto}.  
   
 ### <a name="named-wildcard-segments"></a>Segmenty nazwanego symboli wieloznacznych  
  Segment o nazwie symboli wieloznacznych jest żadnych segment zmiennej ścieżki których nazwa zmiennej rozpoczyna się od znaku wieloznacznego "*". Następujący ciąg szablonu zawiera segment wieloznaczny nazwane o nazwie "buta".  
@@ -259,9 +261,9 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   b /b /a/ {var1} / {var2}? x = 1 & y = 2  
   
--   a/{x}/b%20b/{var1}?y=2 & x = 1  
+-   a/{x}/b%20b/{var1}?y=2&x=1  
   
--   a/{y}/B%20b/{z}/?y=2 & x = 1  
+-   a/{y}/B%20B/{z}/?y=2&x=1  
   
  Zwróć uwagę kilka istotnych:  
   
@@ -288,19 +290,19 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
  Następujące zestawy ciągi zapytań są jednoznaczne między sobą:  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? x = 2  
+-   ?x=2  
   
--   ? x = 3  
+-   ?x=3  
   
 -   ? x = 1 & y = {var}  
   
--   ? x = 2 & z = {var}  
+-   ?x=2&z={var}  
   
--   ? x = 3  
+-   ?x=3  
   
--   ? x = 1  
+-   ?x=1  
   
 -   ?  
   
@@ -308,37 +310,37 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 -   ?  
   
--   ? m = get & c = rss  
+-   ?m=get&c=rss  
   
--   ? m = put & c = rss  
+-   ?m=put&c=rss  
   
--   ? m = get & c = atom  
+-   ?m=get&c=atom  
   
--   ? m = put & c = atom  
+-   ?m=put&c=atom  
   
  Następujące zestawy szablonów ciąg zapytania są niejednoznaczne między sobą:  
   
--   ? x = 1  
+-   ?x=1  
   
 -   ? x = {var}  
   
  "x = 1" — jest zgodny zarówno szablonów.  
   
--   ? x = 1  
+-   ?x=1  
   
--   ? y = 2  
+-   ?y=2  
   
  "x = 1 & y = 2" jest zgodny zarówno szablonów. Jest to spowodowane ciąg zapytania mogą zawierać więcej zmiennych ciągu zapytania, a następnie szablon zgodny.  
   
--   ? x = 1  
+-   ?x=1  
   
 -   ? x = 1 & y = {var}  
   
  "x = 1 & y = 3" jest zgodny zarówno szablonów.  
   
--   ? x = 3 & y = 4  
+-   ?x=3&y=4  
   
--   ? x = 3 & z = 5  
+-   ?x=3&z=5  
   
 > [!NOTE]
 >  Α znaków i Α są traktowane jako różne znaki gdy są one wyświetlane jako część ścieżka identyfikatora URI lub <xref:System.UriTemplate> literał segmentu ścieżki (ale a znaków i A są traktowane jako taki sam). Α znaków i Α są traktowane jako znaków gdy są one wyświetlane jako część a <xref:System.UriTemplate> {variableName} lub ciąg kwerendy (i a i A są także traktowane jako znaków).  

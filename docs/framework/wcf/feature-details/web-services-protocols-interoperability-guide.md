@@ -1,42 +1,44 @@
 ---
-title: "Przewodnik dotyczący współpracy protokołów usług sieci Web"
-ms.custom: 
+title: Przewodnik dotyczący współpracy protokołów usług sieci Web
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 6b962452b6127d259733418969f1fb7b5036b1e5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Przewodnik dotyczący współpracy protokołów usług sieci Web
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawiera szereg opcji i punkty rozszerzalności w gestii implementujący. W tym temacie przedstawiono protokoły usług sieci Web wykaz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu obsługiwane.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] implementuje wiele protokołów usług sieci Web. Wiele z tych protokołów zawiera szereg opcji i punkty rozszerzalności w gestii implementujący. W tym temacie przedstawiono protokoły usług sieci Web wykaz [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje. Inne tematy w tej sekcji Podaj szczegóły implementacji dla każdego protokołu obsługiwane.  
   
 ## <a name="web-services-protocols-implemented-by-wcf"></a>Usługi sieci Web protokołów implementowanych przez usługi WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]zapewnia obsługę protokołów infrastruktury (WS) usługi sieci Web za pośrednictwem kanałów i protokołów aplikacji usługi sieci Web za pomocą funkcji umów. Współdziałanie protokołu aplikacji odbywa się za pośrednictwem języka opisu schematu XML 1.0 (XSD) i sieci Web Services Description Language (WSDL) 1.1.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zapewnia obsługę protokołów infrastruktury (WS) usługi sieci Web za pośrednictwem kanałów i protokołów aplikacji usługi sieci Web za pomocą funkcji umów. Współdziałanie protokołu aplikacji odbywa się za pośrednictwem języka opisu schematu XML 1.0 (XSD) i sieci Web Services Description Language (WSDL) 1.1.  
   
- Infrastruktury współdziałania protokoły są udostępniane przez usługi WS-* specyfikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Kanały zapewniają obsługę wielu WS -\* protokołów infrastruktury. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]kanały są skonfigurowane za pomocą elementów powiązania. Poniższe tabele zawierają pełną listę WS -\* infrastruktury protokołów implementowanych przez różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementów wiązania.  
+ Infrastruktury współdziałania protokoły są udostępniane przez usługi WS-* specyfikacji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Kanały zapewniają obsługę wielu WS -\* protokołów infrastruktury. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] kanały są skonfigurowane za pomocą elementów powiązania. Poniższe tabele zawierają pełną listę WS -\* infrastruktury protokołów implementowanych przez różnych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementów wiązania.  
   
- <xref:System.ServiceModel.Channels.HttpTransportBindingElement>obsługuje specyfikacje w poniższej tabeli.  
+ <xref:System.ServiceModel.Channels.HttpTransportBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|PROTOKOŁU HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)|  
+|HTTP 1.1|[RFC 2616](http://go.microsoft.com/fwlink/?LinkId=90372)|  
 |SOAP 1.1 powiązanie HTTP|[Simple Object Access Protocol (SOAP) 1.1](http://go.microsoft.com/fwlink/?LinkId=90520), sekcji 7|  
 |SOAP 1.2 powiązanie HTTP|[Wersja protokołu SOAP 1.2 część 2: Adjuncts (wydanie drugie)](http://go.microsoft.com/fwlink/?LinkId=95329), sekcji 7|  
   
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje specyfikacje w poniższej tabeli.  
+ <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
@@ -51,16 +53,16 @@ ms.lasthandoff: 12/22/2017
 |Powiązanie WSDL SOAP1.1|[Web Services Description Language (WSDL) 1.1](http://go.microsoft.com/fwlink/?LinkId=96160)|  
 |Powiązanie WSDL SOAP1.2|[Rozszerzenie 1.1 powiązania WSDL SOAP 1.2](http://go.microsoft.com/fwlink/?LinkId=96691)|  
   
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>obsługuje specyfikacje w poniższej tabeli.  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|ELEMENT XOP|[Dane binarne XML zoptymalizowanych pod kątem tworzenia pakietów](http://go.microsoft.com/fwlink/?LinkId=96714)|  
+|XOP|[Dane binarne XML zoptymalizowanych pod kątem tworzenia pakietów](http://go.microsoft.com/fwlink/?LinkId=96714)|  
 |MTOM + SOAP1.2 powiązania|[Mechanizmu optymalizacji transmisji wiadomości SOAP](http://go.microsoft.com/fwlink/?LinkId=96713)|  
 |MTOM SOAP 1.1 powiązania|[SOAP 1.1 powiązania dla MTOM 1.0](http://go.microsoft.com/fwlink/?LinkId=96712)|  
 |MTOM WS-PolicyAssertions|Do opublikowania.|  
   
- <xref:System.ServiceModel.Channels.SecurityBindingElement>obsługuje specyfikacje w poniższej tabeli.  
+ <xref:System.ServiceModel.Channels.SecurityBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
@@ -78,11 +80,11 @@ ms.lasthandoff: 12/22/2017
 |WS-SecurityPolicy 2005/07|[Język bezpiecznej konwersacji usług sieci Web](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Zmienionej erracie przesłane do Komitetu Technicznego WS-SX OASIS.<br /><br /> [wiadomości ws-sx](http://go.microsoft.com/fwlink/?LinkId=96700)|  
 |WS-ReliableMessaging 1.1|[Reliable Messaging Protocol w wersji 1.1](../../../../docs/framework/wcf/feature-details/reliable-messaging-protocol-version-1-1.md)|  
   
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>obsługuje specyfikacje w poniższej tabeli.  
+ <xref:System.ServiceModel.Channels.TransactionFlowBindingElement> obsługuje specyfikacje w poniższej tabeli.  
   
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
-|Koordynacji WS|[Koordynację usług sieci Web](http://go.microsoft.com/fwlink/?LinkId=95324)|  
+|WS-Coordination|[Koordynację usług sieci Web](http://go.microsoft.com/fwlink/?LinkId=95324)|  
 |WS-AtomicTransaction|[Niepodzielne transakcji usług sieci Web](http://go.microsoft.com/fwlink/?LinkId=95323)|  
   
  <xref:System.ServiceModel.Description.MetadataExporter>, <xref:System.ServiceModel.Description.MetadataImporter>, <!--zz <xref:System.ServiceModel.Description.WSDLExporter>, <xref:System.ServiceModel.Description.WSDLImporter>, --> `System.ServiceModel.Description.MetadataImporter`, `System.ServiceModel.Description.WSDLImporter`, I <xref:System.ServiceModel.Description.MetadataResolver> klasy zapewniają obsługę następujących specyfikacji metadanych:  

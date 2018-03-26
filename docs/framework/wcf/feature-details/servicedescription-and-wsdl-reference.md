@@ -1,24 +1,26 @@
 ---
-title: "Odwołania do elementu ServiceDescription i kodu WSDL"
-ms.custom: 
+title: Odwołania do elementu ServiceDescription i kodu WSDL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-caps.latest.revision: "15"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 7eadfaaae920071092f569fe2b8882875ed9497f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>Odwołania do elementu ServiceDescription i kodu WSDL
 W tym temacie opisano sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] mapy dokumentów sieci Web Services Description Language (WSDL) do i z <xref:System.ServiceModel.Description.ServiceDescription> wystąpień.  
@@ -39,7 +41,7 @@ W tym temacie opisano sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md
 |`Namespace`|Przestrzeń nazw targetNamespace dla `wsdl:service` definicji usługi.|  
 |`Endpoints`|`wsdl:port` Definicji usługi.|  
   
-### <a name="serviceendpoint"></a>Punktu końcowego usługi  
+### <a name="serviceendpoint"></a>ServiceEndpoint  
  A <xref:System.ServiceModel.Description.ServiceEndpoint> mapuje wystąpienia `wsdl:port` elementu. A <xref:System.ServiceModel.Description.ServiceEndpoint> wystąpienie zawiera adres, powiązania i kontrakt.  
   
  Zachowania punktu końcowego, które implementują <xref:System.ServiceModel.Description.IWsdlExportExtension> interfejsu można modyfikować `wsdl:port` elementu są one dołączone do punktu końcowego.  
@@ -70,10 +72,10 @@ W tym temacie opisano sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md
  <xref:System.ServiceModel.Channels.TransportBindingElement> Dla powiązania określa transportu identyfikatora URI (Uniform Resource) dla powiązania SOAP.  
   
 #### <a name="addressingversion"></a>Wersja adresowania mogła być  
- `AddressingVersion` Dla powiązania mapy do wersji adresowania używane w `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje SOAP 1.1 i SOAP 1.2 adresy i WS-Addressing 08/2004 i odwołania do punktu końcowego usługi WS-Addressing 1.0.  
+ `AddressingVersion` Dla powiązania mapy do wersji adresowania używane w `wsd:port`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje SOAP 1.1 i SOAP 1.2 adresy i WS-Addressing 08/2004 i odwołania do punktu końcowego usługi WS-Addressing 1.0.  
   
 #### <a name="envelopeversion"></a>EnvelopeVersion  
- `EnvelopeVersion` Na powiązanie mapy do wersji SOAP używane w `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje powiązania SOAP 1.1 i SOAP 1.2.  
+ `EnvelopeVersion` Na powiązanie mapy do wersji SOAP używane w `wsdl:binding`. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje powiązania SOAP 1.1 i SOAP 1.2.  
   
 ### <a name="contracts"></a>Kontrakty  
  <xref:System.ServiceModel.Description.ContractDescription> Wystąpienie `ServiceEndpoint` mapuje wystąpienia `wsdl:portType`. A `ContractDescription` wystąpienia opisano wszystkie operacje dla danego kontraktu.  
@@ -120,7 +122,7 @@ W tym temacie opisano sposób [!INCLUDE[indigo1](../../../../includes/indigo1-md
 |Właściwości|Mapowanie WSDL|  
 |----------------|------------------|  
 |`Action`|Akcja SOAP lub WS-Addressing dla wiadomości.<br /><br /> Uwaga tej operacji, które użyć akcji ciągu "*" nie są reprezentowane w języku WSDL.|  
-|`Direction`|`MessageDirection.Input`mapuje `wsdl:input`.<br /><br /> `MessageDirection.Output`mapuje `wsdl:output`.|  
+|`Direction`|`MessageDirection.Input` mapuje `wsdl:input`.<br /><br /> `MessageDirection.Output` mapuje `wsdl:output`.|  
 |`ProtectionLevel`|Ochrona potwierdzenia w zasadach zabezpieczeń dołączonych do `wsdl:message` definicji dla tej wiadomości.|  
 |`Body`|Treść wiadomości.|  
 |`Headers`|Nagłówki dla wiadomości.|  

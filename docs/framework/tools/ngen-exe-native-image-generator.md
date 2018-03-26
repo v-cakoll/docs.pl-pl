@@ -1,12 +1,13 @@
 ---
 title: Ngen.exe (Generator obrazu natywnego)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - BypassNGenAttribute
 - System.Runtime.BypassNGenAttribute
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
-caps.latest.revision: "57"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 20c120323356171d78da35a490488f4654baece6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (Generator obrazu natywnego)
 Generator obrazów natywnych (Ngen.exe) jest narzędziem, które poprawia wydajność zarządzanych aplikacji. Program Ngen.exe tworzy obrazy natywne, które są plikami zawierającymi skompilowany kod maszynowy specyficzny dla procesora, i instaluje je w pamięci podręcznej obrazów natywnych na komputerze lokalnym. Środowisko uruchomieniowe może używać obrazów natywnych z tej pamięci podręcznej, zamiast używać kompilatora JIT (Just-In-Time) w celu skompilowania oryginalnego zestawu.  
@@ -287,7 +289,7 @@ ngen /? | /help
   
 <a name="DependencyHint"></a>   
 ### <a name="specifying-a-binding-hint-for-a-dependency"></a>Określanie wskazówki powiązanie zależność  
- Zastosuj <xref:System.Runtime.CompilerServices.DependencyAttribute> do zestawu, które wskazują prawdopodobieństwo określona zależność zostanie załadowany. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType>Wskazuje, że powiązanie twardym jest odpowiednie, <xref:System.Runtime.CompilerServices.LoadHint.Default> wskazuje, że powinny być używane domyślne dla zależności, i <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> wskazuje twardych powiązania nie jest odpowiedni.  
+ Zastosuj <xref:System.Runtime.CompilerServices.DependencyAttribute> do zestawu, które wskazują prawdopodobieństwo określona zależność zostanie załadowany. <xref:System.Runtime.CompilerServices.LoadHint.Always?displayProperty=nameWithType> Wskazuje, że powiązanie twardym jest odpowiednie, <xref:System.Runtime.CompilerServices.LoadHint.Default> wskazuje, że powinny być używane domyślne dla zależności, i <xref:System.Runtime.CompilerServices.LoadHint.Sometimes> wskazuje twardych powiązania nie jest odpowiedni.  
   
  Poniższy kod pokazuje atrybuty dla zestawu mającego dwie zależności. Pierwsza zależność (Assembly1) jest odpowiednim kandydatem dla trwałego powiązania, ale druga zależność (Assembly2) nie jest.  
   
@@ -501,7 +503,7 @@ ngen uninstall ClientApp /debug
 ```  
   
 > [!NOTE]
->  Odinstalowywanie `/debug` scenariuszy nie powoduje odinstalowania scenariusz obejmuje `/profile` i`/debug.`  
+>  Odinstalowywanie `/debug` scenariuszy nie powoduje odinstalowania scenariusz obejmuje `/profile` i `/debug.`  
   
  Polecenie Odinstalowuje wszystkie scenariusze dla określonej wersji `ClientApp.exe`:  
   
@@ -571,7 +573,7 @@ ngen update /queue
   
  `update` Akcji ponowne wygenerowanie wszystkich obrazów macierzystych, które zostały unieważnione, nie tylko te, które używają `MyComponent`.  
   
- Jeśli aplikacja zawiera wiele elementów głównych, można kontrolować priorytet odroczonego akcje. Następujące polecenia w kolejce instalacji trzech głównych. `Assembly1`jest najpierw zainstalowany bez oczekiwania na czas bezczynności. `Assembly2`jest również instalowany bez oczekiwania przez czas bezczynności, ale po zakończeniu wszystkich akcji o priorytecie 1. `Assembly3`jest zainstalowany, gdy usługa wykryje, że komputer jest w stanie bezczynności.  
+ Jeśli aplikacja zawiera wiele elementów głównych, można kontrolować priorytet odroczonego akcje. Następujące polecenia w kolejce instalacji trzech głównych. `Assembly1` jest najpierw zainstalowany bez oczekiwania na czas bezczynności. `Assembly2` jest również instalowany bez oczekiwania przez czas bezczynności, ale po zakończeniu wszystkich akcji o priorytecie 1. `Assembly3` jest zainstalowany, gdy usługa wykryje, że komputer jest w stanie bezczynności.  
   
 ```  
 ngen install Assembly1 /queue:1  

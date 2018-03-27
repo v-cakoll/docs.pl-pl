@@ -1,6 +1,6 @@
 ---
-title: "Subskrybowanie zdarzeń"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Subskrybowanie zdarzeń"
+title: Subskrybowanie zdarzeń
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Subskrybowanie zdarzeń
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -116,7 +116,7 @@ Jak wspomniano wcześniej, w sekcji architektury, może mieć kilka metod dotycz
 
 -   Przy użyciu [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). Jest to transakcyjne tabelę do przechowywania zdarzeń integracji (Rozszerzanie transakcji lokalnej).
 
-W tym scenariuszu przy użyciu pełnego wzorca Sourcing zdarzenia (ES) jest jednym z najlepszych metod, jeśli nie *najlepsze*. Jednak w wielu scenariuszach aplikacji, nie można przeprowadzić pełną wersją systemu ES. ES oznacza przechowywanie tylko zdarzenia domeny transakcyjne bazy danych, zamiast zapisywania danych stanu bieżącego. Przechowywanie tylko zdarzenia domeny mogą mieć dużą korzyści, takich jak o historii dostępne systemu oraz możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełną wersją systemu ES wymaga rearchitect większość systemu i wprowadzono wiele skomplikowane i wymagań. Na przykład, czy chcesz użyć bazy danych celowo dla źródeł zdarzeń, takich jak [magazynu zdarzeń](https://geteventstore.com/), lub z bazą zorientowane na dokument, takie jak bazy danych Azure rozwiązania Cosmos, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest doskonałe rozwiązanie ten problem, ale nie najlepszym rozwiązaniem, jeśli nie znasz już źródłem zdarzeń.
+W tym scenariuszu przy użyciu pełnego wzorca Sourcing zdarzenia (ES) jest jednym z najlepszych metod, jeśli *nie* najlepsze. Jednak w wielu scenariuszach aplikacji, nie można przeprowadzić pełną wersją systemu ES. ES oznacza przechowywanie tylko zdarzenia domeny transakcyjne bazy danych, zamiast zapisywania danych stanu bieżącego. Przechowywanie tylko zdarzenia domeny mogą mieć dużą korzyści, takich jak o historii dostępne systemu oraz możliwość określenia stanu systemu w dowolnym momencie w przeszłości. Jednak implementacja pełną wersją systemu ES wymaga rearchitect większość systemu i wprowadzono wiele skomplikowane i wymagań. Na przykład, czy chcesz użyć bazy danych celowo dla źródeł zdarzeń, takich jak [magazynu zdarzeń](https://geteventstore.com/), lub z bazą zorientowane na dokument, takie jak bazy danych Azure rozwiązania Cosmos, bazy danych MongoDB, Cassandra, CouchDB lub RavenDB. ES jest doskonałe rozwiązanie ten problem, ale nie najlepszym rozwiązaniem, jeśli nie znasz już źródłem zdarzeń.
 
 Możliwość użycia dziennika transakcji wyszukiwania początkowo wygląda bardzo przezroczysty. Jednak aby użyć tej metody, mikrousługi ma zostać dołączone do RDBMS dziennika transakcji, takie jak dziennik transakcji programu SQL Server. Prawdopodobnie nie jest to pożądane. Inny wadą jest to, że na tym samym poziomie jako zdarzeń integracji wysokiego poziomu nie mogą być aktualizacje niskiego poziomu, rejestrowane w dzienniku transakcji. Jeśli tak, proces odtwarzania te operacje tworzenia dzienników transakcji może być trudne.
 
@@ -302,7 +302,7 @@ Przetwarza komunikat jest z założenia idempotentności. Na przykład jeśli sy
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Ramach komunikat idempotency** (Podnagłówek na tej stronie) [ *https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
+-   **Ramach idempotency komunikat** (Podnagłówek na tej stronie) [*https://msdn.microsoft.com/library/jj591565.aspx*](https://msdn.microsoft.com/library/jj591565.aspx)
 
 ## <a name="deduplicating-integration-event-messages"></a>Ani deduplikacja komunikaty o zdarzeniach integracji
 
@@ -322,25 +322,25 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Rozwidlone eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
+-   **Rozwidlonych eShopOnContainers przy użyciu NServiceBus (konkretnego oprogramowania)**
     [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
 
--   **Event Driven Messaging**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Zdarzenia zmiennych wiadomości**
+    [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **Publish-Subscribe channel**
+-   **Kanał publikowania / subskrypcji**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Communicating Between Bounded Contexts**
+-   **Komunikacja między kontekstami ograniczonego**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual Consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Spójność ostateczna**
+    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Brązowy Philip. Strategie integrowanie ograniczone kontekstów**
+-   **Brązowy Philip. Konteksty ograniczone strategii integracji**
     [*http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](http://culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
 -   **Krzysztof Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowanych, źródłem zdarzeń i CQRS — część 2**
@@ -349,22 +349,22 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Krzysztof Richardson. Wzorzec wysyłanie zawartości zdarzeń**
     [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
 
--   **Introducing Event Sourcing**
+-   **Wprowadzenie źródłem zdarzenia**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)
 
 -   **Bazy danych zdarzeń magazynu**. Oficjalna witryna.
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen. Zarządzanie danymi dla Mikrousług sterowane zdarzeniami**
-    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1>*
+-   **Patrick Nommensen. Zarządzanie danymi zdarzeń dla Mikrousług**
+    *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **The CAP Theorem**
-    [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+-   **Newtona zakończenia**
+    [*https://en.wikipedia.org/wiki/CAP\_Newtona*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **Co to jest zakończenie Newtona? ** 
-     [ *https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
+-   **Co to jest zakończenie Newtona?**
+    [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **Data Consistency Primer**
+-   **Elementarz spójność danych**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Rick Saling. Newtona zakończenia: Dlaczego "Wszystko, co jest różne" z chmury i Internet**
@@ -373,12 +373,12 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
 -   **Marek Brewera. Zakończenie później dwunastu lat: jak "Zasady" zostały zmienione**
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [ *https://msdn.microsoft.com/library/ms978430.aspx\#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
+-   **Udział w transakcje zewnętrzne (DTC)** (MSMQ) [  *https://msdn.microsoft.com/library/ms978430.aspx \#bdadotnetasync2\_topic3c*](https://msdn.microsoft.com/library/ms978430.aspx%23bdadotnetasync2_topic3c)
 
--   **Azure Service Bus. Brokered Messaging: Duplicate Detection**
+-   **Azure Service Bus. Komunikatów obsługiwanych przez brokera: Wykrywanie zduplikowanych**
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **Reliability Guide** (RabbitMQ documentation) [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
+-   **Przewodnik niezawodności** (dokumentacja RabbitMQ) [  *https://www.rabbitmq.com/reliability.html \#konsumenta*](https://www.rabbitmq.com/reliability.html%23consumer)
 
 
 

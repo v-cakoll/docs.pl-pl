@@ -1,12 +1,12 @@
 ---
-title: "Znaki specjalne w wyrażeniach regularnych"
-ms.custom: 
+title: Znaki specjalne w wyrażeniach regularnych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,7 +20,7 @@ helpviewer_keywords:
 - .NET Framework regular expressions, character escapes
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
-caps.latest.revision: "31"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
@@ -28,10 +28,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 8a4ec10bfa332c8caafce57385791d8069a7231a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="character-escapes-in-regular-expressions"></a>Znaki specjalne w wyrażeniach regularnych
 Kreska ułamkowa odwrócona (\\) w wyrażeniu regularnym wskazuje jedną z następujących czynności:  
@@ -57,10 +57,10 @@ Kreska ułamkowa odwrócona (\\) w wyrażeniu regularnym wskazuje jedną z nast�
 |`\f`|Dopasowuje wysuw, `\u000C`.|  
 |`\n`|Nowy wiersz, jest zgodna `\u000A`.|  
 |`\e`|Dopasowuje ucieczki `\u001B`.|  
-|`\` *nnn*|Pasuje do znaku ASCII, gdzie  *nnn*  składa się z dwóch lub trzech cyfr reprezentujących ósemkowe znakowy kod. Na przykład `\040` reprezentuje znak odstępu. Ta konstrukcja jest interpretowana jako dopasowań, jeśli ma ona tylko jedną cyfrę (na przykład `\2`) lub jeśli odpowiadający mu numer przechwytywania grupy. (Zobacz [Konstrukty](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
-|`\x` *nn*|Pasuje do znaku ASCII, gdzie  *nn*  kodu dwucyfrowe znaków szesnastkowych.|  
-|`\c`*X*|Dopasowuje znak kontrolny ASCII, gdzie X jest literą znaku kontrolnego. Na przykład `\cC` jest CTRL-C.|  
-|`\u` *nnnn*|Dopasowuje jednostki kodu UTF-16, którego wartość jest  *nnnn*  szesnastkową. **Uwaga:** ucieczki znak Perl 5, który służy do określania Unicode nie jest obsługiwany przez platformę .NET. Ucieczki znaku Perl 5 ma postać `\x{`  *####*  `…}`, gdzie  *####*  `…` jest seria cyfr szesnastkowych. Zamiast tego należy użyć `\u`  *nnnn* .|  
+|`\` *nnn*|Pasuje do znaku ASCII, gdzie *nnn* składa się z dwóch lub trzech cyfr reprezentujących ósemkowe znakowy kod. Na przykład `\040` reprezentuje znak odstępu. Ta konstrukcja jest interpretowana jako dopasowań, jeśli ma ona tylko jedną cyfrę (na przykład `\2`) lub jeśli odpowiadający mu numer przechwytywania grupy. (Zobacz [Konstrukty](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md).)|  
+|`\x` *nn*|Pasuje do znaku ASCII, gdzie *nn* kodu dwucyfrowe znaków szesnastkowych.|  
+|`\c` *X*|Dopasowuje znak kontrolny ASCII, gdzie X jest literą znaku kontrolnego. Na przykład `\cC` jest CTRL-C.|  
+|`\u` *nnnn*|Dopasowuje jednostki kodu UTF-16, którego wartość jest *nnnn* szesnastkową. **Uwaga:** ucieczki znak Perl 5, który służy do określania Unicode nie jest obsługiwany przez platformę .NET. Ucieczki znaku Perl 5 ma postać `\x{` *####* `…}`, gdzie *####* `…` jest seria cyfr szesnastkowych. Zamiast tego należy użyć `\u` *nnnn*.|  
 |`\`|Gdy następuje znak, który nie został rozpoznany jako oczekiwanego znaku, pasuje do tego znaku. Na przykład `\*` odpowiada znak gwiazdki (*) i jest taki sam jak `\x2A`.|  
   
 ## <a name="an-example"></a>Przykład  
@@ -75,7 +75,7 @@ Kreska ułamkowa odwrócona (\\) w wyrażeniu regularnym wskazuje jedną z nast�
 |-------------|-----------------|  
 |`\G`|Rozpocznij dopasowania, gdzie zakończenia ostatniego dopasowania.|  
 |`(.+)`|Dopasowuje dowolny znak jeden lub więcej razy. Jest to pierwsza grupa przechwytywania.|  
-|`[\t\u007c]`|Zgodne karty (`\t`) lub pionowy pasek (&#124;).|  
+|`[\t\u007c]`|Zgodne karty (`\t`) lub pionowej kreski (&#124;).|  
 |`(.+)`|Dopasowuje dowolny znak jeden lub więcej razy. Jest to druga grupa przechwytywania.|  
 |`\r?\n`|Zgodne wystąpienie zero lub jeden znak powrotu karetki znak nowego wiersza.|  
   

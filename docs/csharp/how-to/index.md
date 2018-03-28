@@ -1,17 +1,17 @@
 ---
-title: "Jak artykuły (Przewodnik C#)"
-description: "Kolekcja krótkie wskazówki i przykłady kodu krótkie, ukierunkowanych"
+title: Jak artykuły (Przewodnik C#)
+description: Kolekcja krótkie wskazówki i przykłady kodu krótkie, ukierunkowanych
 author: billwagner
 ms.author: wiwagn
 ms.date: 12/20/2017
 ms.topic: article
 ms.prod: .net
 ms.devlang: devlang-csharp
-ms.openlocfilehash: 591996c02c55c1f54af94280940e41720684251a
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: dfb90870233acbe3898e8863f060cd15dd22c3c7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-c"></a>Jak (C#)
 
@@ -54,7 +54,7 @@ Te artykuły ułatwiają pracę z kolekcji danych.
 
 Ciągi to podstawowy typ danych używany do wyświetlania lub modyfikowania tekstu. Te artykuły pokazują typowe rozwiązania z ciągami.
 
-- [Porównywanie ciągów](../programming-guide/strings/how-to-compare-strings.md).
+- [Porównywanie ciągów](compare-strings.md).
 - [Modyfikowanie zawartości ciągu](modify-string-contents.md).
 - [Określanie, czy ciąg reprezentuje liczbę](../programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md).
 - [Użyj `String.Split` do rozdzielania ciągów](parse-strings-using-split.md).

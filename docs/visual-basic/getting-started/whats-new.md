@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c0452a5dde3a266f5d50f69016eac8144bab9ba6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
@@ -154,7 +154,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania zwracać wartości](../progr
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Niekwalifikowane ciąg nazwę typu lub elementu członkowskiego do użycia w komunikacie o błędzie można uzyskać, bez twardych kodowanie ciągu.  Dzięki temu swój kod, aby pozostać poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku podłączenia łącza MVC model-view-controller i wyzwalania zdarzenia zmiany właściwości.  
   
-[Interpolacja ciągów](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Wyrażenia parametrów interpolacji służy do tworzenia ciągów.  Wyrażenie ciągu interpolowanym wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciągu interpolowanym łatwiej zrozumieć względem argumentów niż [złożone formatowanie](../../standard/base-types/composite-format.md).  
   
 [Dostęp do elementu członkowskiego warunkowe null i indeksowania](../../csharp/language-reference/operators/null-conditional-operators.md)  

@@ -1,7 +1,7 @@
 ---
 title: Wprowadzenie do platformy .NET Core na macOS
-description: "Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie .NET Core za pomocą programu Visual Studio Code."
-keywords: .NET, .NET core, Mac, macOS, Visual Studio Code
+description: Ten dokument zawiera kroki i przepływ pracy, aby utworzyć rozwiązanie .NET Core za pomocą programu Visual Studio Code.
+keywords: .NET, .NET Core, Mac, macOS, Visual Studio Code
 author: bleroy
 ms.author: mairaw
 ms.date: 03/23/2017
@@ -9,12 +9,13 @@ ms.topic: get-started-article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
-ms.workload: dotnetcore
-ms.openlocfilehash: 5a8f1fca7623763d43b977d0cc44396de249c62e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Wprowadzenie do platformy .NET Core na macOS
 
@@ -102,7 +103,7 @@ namespace Library
 }
 ```
 
-`Thing` Klasa zawiera jedną metodę publiczne, `Get`, która zwraca sumę dwóch numery, ale wykonuje konwertowanie Suma na ciąg, a następnie podczas deserializacji do liczby całkowitej. To sprawia, że użycie wiele nowoczesnych C# funkcji, takich jak [ `using static` dyrektywy](../../csharp/language-reference/keywords/using-static.md), [zabudowanych wyrażenia elementów członkowskich](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), i [ciągi interpolowane](../../csharp/language-reference/keywords/interpolated-strings.md).
+`Thing` Klasa zawiera jedną metodę publiczne, `Get`, która zwraca sumę dwóch numery, ale wykonuje konwertowanie Suma na ciąg, a następnie podczas deserializacji do liczby całkowitej. To sprawia, że użycie wiele nowoczesnych C# funkcji, takich jak [ `using static` dyrektywy](../../csharp/language-reference/keywords/using-static.md), [zabudowanych wyrażenia elementów członkowskich](../../csharp/whats-new/csharp-7.md#more-expression-bodied-members), i [ciągu interpolacji](../../csharp/language-reference/tokens/interpolated.md).
 
 Tworzenie biblioteki z [ `dotnet build` ](../tools/dotnet-build.md) polecenia. Spowoduje to utworzenie *library.dll* plików w obszarze *golden/library/bin/Debug/netstandard1.4*:
 
@@ -220,7 +221,7 @@ Ustaw punkt przerwania w `WriteLine` instrukcji w `Main` metody. W tym celu albo
 
 Otwórz kartę debugera, wybierając ikonę debugowania na pasku narzędzi Visual Studio Code, wybierając **Widok > debugowania** z paska menu lub za pomocą skrótu klawiaturowego <kbd>CTRL</kbd> + <kbd> SHIFT</kbd>+<kbd>D</kbd>:
 
-![Debuger kodu programu Visual Studio](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code Debugger](./media/using-on-macos/vscodedebugger.png)
 
 Naciśnij przycisk Odtwórz, aby uruchomić aplikację w debugerze. Rozpoczyna wykonanie i uruchamia punkt przerwania, gdzie zatrzymuje aplikacji. Wkrocz `Get` — metoda i upewnij się, że ma przekazano poprawne argumenty. Upewnij się, że odpowiedź jest 42.
 

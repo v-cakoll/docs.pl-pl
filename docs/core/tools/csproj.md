@@ -1,7 +1,7 @@
 ---
 title: Dodatki do formatu csproj dla platformy .NET Core
-description: "Więcej informacji na temat różnic między istniejących i pliki csproj .NET Core"
-keywords: "odwołanie, csproj, .NET Core"
+description: Więcej informacji na temat różnic między istniejących i pliki csproj .NET Core
+keywords: odwołanie, csproj, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -9,19 +9,20 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: bdc29497-64f2-4d11-a21b-4097e0bdf5c9
-ms.workload: dotnetcore
-ms.openlocfilehash: d2a318f099eaa67912c2cecd1c67ceebaee8629e
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: fdf91bdb24819c2d92b708e5937980ac2fb0d5fc
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>Dodatki do formatu csproj dla platformy .NET Core
 
 W tym dokumencie przedstawiono zmiany, które zostały dodane do plików projektu jako część przejście od *project.json* do *csproj* i [MSBuild](https://github.com/Microsoft/MSBuild). Aby uzyskać więcej informacji o składni pliku ogólnego projektu i odwołania, zobacz [pliku projektu MSBuild](/visualstudio/msbuild/msbuild-project-file-schema-reference) dokumentacji.  
 
 ## <a name="implicit-package-references"></a>Odwołania do pakietu niejawne
-Metapackages są niejawne odwołania w oparciu framework(s) docelowych określonych w `<TargetFramework>` lub `<TargetFrameworks>` właściwości pliku projektu. `<TargetFrameworks>`jest ignorowana, jeśli `<TargetFramework>` jest określony, niezależnie od kolejności.
+Metapackages są niejawne odwołania w oparciu framework(s) docelowych określonych w `<TargetFramework>` lub `<TargetFrameworks>` właściwości pliku projektu. `<TargetFrameworks>` jest ignorowana, jeśli `<TargetFramework>` jest określony, niezależnie od kolejności.
 
 ```xml
  <PropertyGroup>
@@ -72,7 +73,7 @@ Ustawienie tej właściwości na `false` spowoduje zastąpienie niejawnego doł�
 
 Ta zmiana nie modyfikuje głównym obejmuje mechanika innych. Jednak jeśli chcesz określić, na przykład niektóre pliki do opublikowany z aplikacji, nadal można znane mechanizmów w *csproj* tego (na przykład `<Content>` elementu).
 
-`<EnableDefaultCompileItems>`powoduje wyłączenie `Compile` globs, ale nie ma wpływu na inne globs, takich jak niejawne `None` glob, które mają zastosowanie również do \*.cs elementów. Z tego powodu **Eksploratora rozwiązań** będzie Pokaż \*elementów .cs w ramach projektu, zawarty jako `None` elementów. W podobny sposób można użyć `<EnableDefaultNoneItems>` wyłączyć niejawne `None` glob.
+`<EnableDefaultCompileItems>` powoduje wyłączenie `Compile` globs, ale nie ma wpływu na inne globs, takich jak niejawne `None` glob, które mają zastosowanie również do \*.cs elementów. Z tego powodu **Eksploratora rozwiązań** będzie Pokaż \*elementów .cs w ramach projektu, zawarty jako `None` elementów. W podobny sposób można użyć `<EnableDefaultNoneItems>` wyłączyć niejawne `None` glob.
 
 Aby wyłączyć **wszystkie niejawne globs**, można ustawić `<EnableDefaultItems>` właściwości `false` jak w poniższym przykładzie:
 ```xml
@@ -97,10 +98,10 @@ Jeśli projekt zawiera wiele platform docelowych, wyniki polecenia powinna zosta
 ## <a name="additions"></a>Dodatki
 
 ### <a name="sdk-attribute"></a>Atrybut zestawu SDK 
-`<Project>` Elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk`Określa, która zestawu SDK będą używane przez projekt. Zestaw SDK, jako [dokumentu Tworzenie warstw](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) który kompilacji kodu .NET Core. Możemy wysłać dwóch głównych zestawów SDK przy użyciu narzędzi platformy .NET Core:
+`<Project>` Elementu *.csproj* plik ma nowy atrybut o nazwie `Sdk`. `Sdk` Określa, która zestawu SDK będą używane przez projekt. Zestaw SDK, jako [dokumentu Tworzenie warstw](cli-msbuild-architecture.md) opisuje, to zbiór MSBuild [zadania](/visualstudio/msbuild/msbuild-tasks) i [cele](/visualstudio/msbuild/msbuild-targets) który kompilacji kodu .NET Core. Możemy wysłać dwóch głównych zestawów SDK przy użyciu narzędzi platformy .NET Core:
 
-1. .NET Core SDK o identyfikatorze`Microsoft.NET.Sdk`
-2. Zestaw SDK o identyfikatorze sieci web .NET Core`Microsoft.NET.Sdk.Web`
+1. .NET Core SDK o identyfikatorze `Microsoft.NET.Sdk`
+2. Zestaw SDK o identyfikatorze sieci web .NET Core `Microsoft.NET.Sdk.Web`
 
 Musisz mieć `Sdk` atrybutu zestawu do jednego z tych identyfikatorów `<Project>` element, aby można było używać narzędzi platformy .NET Core i kompilacji kodu. 
 
@@ -112,41 +113,41 @@ Element, który określa zależności NuGet w projekcie. `Include` Atrybut okre�
 ```
 
 #### <a name="version"></a>Wersja
-`Version`Określa wersję pakietu do przywrócenia. Atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dopasowanie dokładnej wersji. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
+`Version` Określa wersję pakietu do przywrócenia. Atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dopasowanie dokładnej wersji. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets, ExcludeAssets i PrivateAssets
-`IncludeAssets`atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane. 
+`IncludeAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane. 
 
-`ExcludeAssets`atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` nie powinny być używane.
+`ExcludeAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` nie powinny być używane.
 
-`PrivateAssets`atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane, ale ten powinien przechodzi do następnego projektu. 
+`PrivateAssets` atrybut określa zasoby należące do pakietu określony przez `<PackageReference>` powinny być używane, ale ten powinien przechodzi do następnego projektu. 
 
 > [!NOTE]
-> `PrivateAssets`jest odpowiednikiem *project.json*/*xproj* `SuppressParent` elementu.
+> `PrivateAssets` jest odpowiednikiem *project.json*/*xproj* `SuppressParent` elementu.
 
 Te atrybuty może zawierać jeden lub więcej z następujących elementów:
 
-* `Compile`— zawartość folderu lib są dostępne do skompilowania przed.
-* `Runtime`— są dystrybuowane zawartość folderu środowiska wykonawczego.
-* `ContentFiles`— zawartość *pliki* folderu są używane.
-* `Build`— właściwości/cele w folderze kompilacji są używane.
-* `Native`— zawartość z zasobów natywnych są kopiowane do folderu wyjściowego w czasie wykonywania.
-* `Analyzers`— analizatorów są używane.
+* `Compile` — zawartość folderu lib są dostępne do skompilowania przed.
+* `Runtime` — są dystrybuowane zawartość folderu środowiska wykonawczego.
+* `ContentFiles` — zawartość *pliki* folderu są używane.
+* `Build` — właściwości/cele w folderze kompilacji są używane.
+* `Native` — zawartość z zasobów natywnych są kopiowane do folderu wyjściowego w czasie wykonywania.
+* `Analyzers` — analizatorów są używane.
 
 Alternatywnie może zawierać atrybutu:
 
-* `None`— nie zasoby zostały użyte.
-* `All`— wszystkie zasoby są używane.
+* `None` — nie zasoby zostały użyte.
+* `All` — wszystkie zasoby są używane.
 
 ### <a name="dotnetclitoolreference"></a>DotNetCliToolReference
-`<DotNetCliToolReference>`element elementu określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Nie zastępuje `tools` w węźle *project.json*. 
+`<DotNetCliToolReference>` element elementu określa narzędzie interfejsu wiersza polecenia, które użytkownik chce przywrócić w kontekście projektu. Nie zastępuje `tools` w węźle *project.json*. 
 
 ```xml
 <DotNetCliToolReference Include="<package-id>" Version="" />
 ```
 
 #### <a name="version"></a>Wersja
-`Version`Określa wersję pakietu do przywrócenia. Atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dopasowanie dokładnej wersji. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
+`Version` Określa wersję pakietu do przywrócenia. Atrybut przestrzega zasad [wersji NuGet](/nuget/create-packages/dependency-versions#version-ranges) schematu. Domyślnym zachowaniem jest dopasowanie dokładnej wersji. Na przykład określenie `Version="1.2.3"` jest odpowiednikiem notacji NuGet `[1.2.3]` dla 1.2.3 dokładną wersję pakietu.
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
 `<RuntimeIdentifiers>` Element umożliwia określenie Rozdzielana średnikami lista [identyfikatorów środowiska uruchomieniowego (RID)](../rid-catalog.md) dla projektu. Włącz RID publikowania niezależne wdrożeń. 

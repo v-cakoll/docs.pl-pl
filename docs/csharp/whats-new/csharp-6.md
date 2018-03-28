@@ -1,7 +1,7 @@
 ---
-title: "Nowości w języku C# 6 - przewodnik C#"
-description: "Dowiedz się nowych funkcji w języku C# w wersji 6"
-keywords: .NET, .NET core
+title: Nowości w języku C# 6 - przewodnik C#
+description: Dowiedz się nowych funkcji w języku C# w wersji 6
+keywords: .NET, .NET Core
 author: BillWagner
 ms.date: 09/22/2016
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 4d879f69-f889-4d3f-a781-75194e143400
-ms.openlocfilehash: f3e7a515b1dde52461ab6abf8a9adbe84d27b7c1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ea54e9a05120134eea8e1bc9d82302a7513b43e7
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-in-c-6"></a>Nowości w języku C# 6
 
@@ -209,17 +209,17 @@ Zapewnienie, że po lewej stronie jest oceniane tylko raz umożliwia również u
 
 ## <a name="string-interpolation"></a>Ciąg interpolacji
 
-C# 6 zawiera nowej składni do tworzenia ciągów z ciągu formatu i wyrażeń, które może przyjąć do tworzenia innych wartości ciągu.
+C# 6 zawiera nowej składni do tworzenia ciągów z ciągu formatu i wyrażeń, które są obliczane, aby utworzyć inne wartości ciągu.
 
 Zazwyczaj potrzebne do użycia parametrów pozycyjnych w metodzie, takie jak `string.Format`:
 
 [!code-csharp[stringFormat](../../../samples/snippets/csharp/new-in-6/oldcode.cs#stringFormat)]
 
-Nowa funkcja interpolacji ciągu z języka C# 6, umożliwia osadzanie wyrażeń w ciągu formatu. Prosty ciąg z jest poprzedzony `$`:
+C# 6 nowe [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcja umożliwia osadzanie wyrażeń w ciągu formatu. Po prostu poprzedzony ciąg z `$`:
 
 [!code-csharp[stringInterpolation](../../../samples/snippets/csharp/new-in-6/newcode.cs#FullNameExpressionMember)]
 
-W tym przykładzie początkowej użyć zmiennej wyrażenia podstawione wyrażeń. Można rozwinąć w tej składni, aby użyć dowolnego wyrażenia. Na przykład można obliczyć Średnia ocen studenta jako część interpolacji:
+W tym przykładzie początkowej użyto wyrażenia właściwości podstawione wyrażeń. Można rozwinąć w tej składni, aby użyć dowolnego wyrażenia. Na przykład można obliczyć Średnia ocen studenta jako część interpolacji:
 
 [!code-csharp[stringInterpolationExpression](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationExpression)]
 
@@ -227,7 +227,7 @@ Uruchomione w poprzednim przykładzie, czy stwierdzisz, że w danych wyjściowyc
 
 [!code-csharp[stringInterpolationFormat](../../../samples/snippets/csharp/new-in-6/newcode.cs#stringInterpolationFormat)]
 
-Poprzedni wiersz kodu sformatuje wartość `Grades.Average()` jako liczba zmiennoprzecinkowa z dwóch miejsc po przecinku.
+Poprzedni wiersz kodu formatuje wartość `Grades.Average()` jako liczba zmiennoprzecinkowa z dwóch miejsc po przecinku.
 
 `:` Zawsze jest interpretowany jako separator wyrażeniu formatowania ciągu formatu. Może to powodować problemy, gdy używa wyrażenia `:` w inny sposób, na przykład operator warunkowy:
 
@@ -249,22 +249,17 @@ Zamiast jest opisowy szerokości funkcji. Dowolne wyrażenie C# można umieści�
 
 ### <a name="string-interpolation-and-specific-cultures"></a>Ciąg interpolacji i określone kultury
 
-Wszystkie przykłady w poprzedniej sekcji sformatuje ciągi, przy użyciu bieżącej kultury i języka na komputerze gdzie kod jest wykonywany. Często konieczne może być ciąg utworzony, używając określonej kultury formatu.
-Obiekt z interpolacji ciągu jest typem, który ma niejawnej konwersji albo <xref:System.String> lub <xref:System.FormattableString>.
+Wszystkie przykłady w poprzedniej sekcji formatu ciągi, przy użyciu bieżącej kultury i języka na komputerze gdzie kod jest wykonywany. Często konieczne może być ciąg utworzony, używając określonej kultury formatu.
+Robić, które używają fakt, że obiekt utworzony przez interpolacji ciągu można niejawnie przekonwertować <xref:System.FormattableString>.
 
-<xref:System.FormattableString> Typ zawiera ciąg formatu i wyniki oceny argumenty przed ich konwertowanie na ciągi. Można użyć metod publicznych klasy <xref:System.FormattableString> do określenia kultury podczas formatowania ciągu. Na przykład następujące utworzy ciągu przy użyciu niemiecki jako języka i kultury. (Separator dziesiętny, zostanie użyty znaku ',' i '.' znak jako separator.)
+<xref:System.FormattableString> Wystąpienie zawiera ciąg formatu oraz wynikiem obliczenia wyrażenia przed ich konwertowanie na ciągi. Można użyć metod publicznych klasy <xref:System.FormattableString> do określenia kultury podczas formatowania ciągu. Na przykład poniższy przykład tworzy ciąg przy użyciu kultury niemieckim. (Separator dziesiętny używa znaku ',' i '.' znak jako separatora.)
 
 ```csharp
 FormattableString str = $"Average grade is {s.Grades.Average()}";
-var gradeStr = string.Format(null, 
-    System.Globalization.CultureInfo.CreateSpecificCulture("de-de"),
-    str.GetFormat(), str.GetArguments());
+var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-> [!NOTE]
-> Powyższy przykład nie jest obsługiwana w wersji platformy .NET Core 1.0.1. Jest obsługiwana tylko w programie .NET Framework.
-
-Ogólnie rzecz biorąc wyrażenia interpolacji parametrów tworzą ciągi jako ich dane wyjściowe. Jednak podczas ma większą kontrolę nad kultury używany do formatowania ciągu można określić określonych danych wyjściowych.  Jeśli jest to możliwości, które często konieczne, można utworzyć podręczne metody jako metody rozszerzenia, aby umożliwić łatwe formatowanie określone kultury.
+Aby uzyskać więcej informacji, zobacz [ciągu interpolacji](../language-reference/tokens/interpolated.md) tematu.
 
 ## <a name="exception-filters"></a>Filtry wyjątków
 
@@ -314,7 +309,7 @@ W kodzie należy dodać filtra wyjątku, aby każdy kod odzyskiwania wykonuje ty
 Po dodaniu to w kodzie, należy ustawić debuger można przerwać w przypadku wszystkich nieobsługiwanych wyjątków. Uruchom program w debugerze i debuger dzieli się po każdej zmianie `PerformFailingOperation()` zgłasza `RecoverableException`.
 Debuger dzieli programu, ponieważ w klauzuli catch nie będzie można wykonać z powodu filtru wyjątków zwracającego wartość false.
 
-## <a name="nameof-expressions"></a>`nameof`Wyrażenia
+## <a name="nameof-expressions"></a>`nameof` Wyrażenia
 
 `nameof` Wyrażenie ma nazwę symbolu. Jest to dobry sposób na Pobierz narzędzia Praca zawsze, gdy potrzebna jest nazwa zmienną, właściwością lub polem członka.
 

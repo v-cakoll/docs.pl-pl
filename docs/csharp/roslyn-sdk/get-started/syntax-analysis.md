@@ -1,6 +1,6 @@
 ---
-title: "Wprowadzenie do analizy składni (Roslyn API)"
-description: "Wprowadzenie do przechodzenie, zapytań i przejście drzewa składni."
+title: Wprowadzenie do analizy składni (Roslyn API)
+description: Wprowadzenie do przechodzenie, zapytań i przejście drzewa składni.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/05/2018
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 52f66782086af651517d54105fea6f5533ea05a2
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Wprowadzenie do analizy składni
 
@@ -43,6 +43,10 @@ Interfejs API składni tworzy struktury drzewa z elementem głównym reprezentuj
 
 Ten krótki opis zawiera omówienie tego rodzaju informacje dostępne przy użyciu interfejsu API składni. Interfejs API składni jest nic więcej niż posiadanie interfejs API, który opisuje znanego kodu tworzy należy znać w języku C#. Pełne możliwości zawierają informacje o sposób formatowania kodu m.in. podziały wierszy, odstępy i wcięcia. Korzystając z tych informacji, możesz pełni reprezentują kod napisany i odczytu przez programistów człowieka lub kompilatora. Przy użyciu tej struktury pozwala na współdziałanie z kodem źródłowym na poziomie głęboko łatwy do rozpoznania. Nie jest już ciągów tekstowych, ale dane, które reprezentują struktura programu w języku C#.
 
+Aby rozpocząć pracę, musisz zainstalować **zestawu SDK platformy kompilatora .NET**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
+
 ## <a name="understanding-syntax-trees"></a>Opis drzewa składni
 
 Używasz składni interfejsu API dla dowolnego analizy struktury kodu C#. **API składni** przedstawia analizatory składni, drzewa składni i narzędzia do analizowania i tworzenia drzewa składni. Jest sposób wyszukiwania kod elementy składni lub odczytać kodu programu.
@@ -67,9 +71,6 @@ Możesz niczego znaleźć w pliku kodu za pomocą interfejsów API składni, wi�
 ## <a name="traversing-trees"></a>Przechodzenie drzew
 
 Można sprawdzić węzłów w drzewie składni na dwa sposoby. Można przechodzenia drzewa do sprawdzenia każdego węzła lub może wyszukiwać określone elementy lub być węzłami.
-
-> [!IMPORTANT]
-> Poniższe przykłady wymagają **zestawu SDK platformy kompilatora .NET** instalowany jako część programu Visual Studio 2017 r. Można znaleźć zestawu .NET SDK kompilatora jako ostatni opcjonalny składnik kategorii **tworzenia rozszerzenia programu Visual Studio** obciążenia. Szablony nie są zainstalowane bez tego składnika.
 
 ### <a name="manual-traversal"></a>Przechodzenie ręczne
 

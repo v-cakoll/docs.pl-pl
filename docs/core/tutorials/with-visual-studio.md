@@ -1,6 +1,6 @@
 ---
 title: Tworzenie aplikacji Hello World z platformy .NET Core i C# w programie Visual Studio 2017 r.
-description: "Sposób tworzenia prostej aplikacji konsoli .NET Core za pomocą C# za pomocą programu Visual Studio 2017 r."
+description: Sposób tworzenia prostej aplikacji konsoli .NET Core za pomocą C# za pomocą programu Visual Studio 2017 r.
 keywords: Oprogramowanie .NET core aplikacji konsoli .NET Core, programu Visual Studio 2017 r.
 author: BillWagner
 ms.author: wiwagn
@@ -12,11 +12,11 @@ ms.devlang: csharp
 ms.assetid: 97aa50bf-bdf8-416d-a56c-ac77504c14ea
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 21b36bfa355bbea1b078c4bd29afdf5afeb61453
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 7042a7356fa1b65f7a152208dbfaa9ba27081a8d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="build-a-c-hello-world-application-with-net-core-in-visual-studio-2017"></a>Tworzenie aplikacji C# Hello World z platformą .NET Core w Visual Studio 2017 r.
 
@@ -70,7 +70,7 @@ Ulepszanie aplikacji monit o podanie nazwy i wyświetlić je wraz z datą i godz
 
    ![Visual Studio Program c sharp pliku z zaktualizowana metoda Main](./media/with-visual-studio/codewindow.png)
 
-   Ten kod wyświetla "Co to jest nazwa?" w oknie konsoli i czeka, dopóki użytkownik wprowadza ciąg, a następnie klawisz Enter. Ten ciąg jest przechowywana w zmiennej o nazwie `name`. Również pobiera wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwość, która zawiera bieżącym czasem lokalnym i przypisuje go do zmiennej o nazwie `date`. Na koniec używa [interpolowane ciąg](../../csharp/language-reference/keywords/interpolated-strings.md) do wyświetlania tych wartości w oknie konsoli.
+   Ten kod wyświetla "Co to jest nazwa?" w oknie konsoli i czeka, dopóki użytkownik wprowadza ciąg, a następnie klawisz Enter. Ten ciąg jest przechowywana w zmiennej o nazwie `name`. Również pobiera wartość <xref:System.DateTime.Now?displayProperty=nameWithType> właściwość, która zawiera bieżącym czasem lokalnym i przypisuje go do zmiennej o nazwie `date`. Na koniec używa [interpolowane ciąg](../../csharp/language-reference/tokens/interpolated.md) do wyświetlania tych wartości w oknie konsoli.
 
 1. Kompiluj program, wybierając **kompilacji** > **Kompiluj rozwiązanie**.
 

@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: "Kolekcje w języku C#"
+title: Kolekcje w języku C#
 metadata:
-  title: "Kolekcje interaktywnego samouczka — Przewodniki Szybki Start C#"
-  description: "W tym samouczku użyjesz przeglądarki do Naucz się C# interaktywnie. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu bezpośrednio w przeglądarce."
+  title: Kolekcje interaktywnego samouczka — Przewodniki Szybki Start C#
+  description: W tym samouczku użyjesz przeglądarki do Naucz się C# interaktywnie. Pisanie kodu C# i wyświetlić wyniki kompilowania i uruchamiania kodu bezpośrednio w przeglądarce.
   audience: Developer
   ms.topic: get-started-article
   ms.custom: mvc
@@ -11,30 +11,196 @@ metadata:
   interactive: csharp
   ms.prod: .net
   ms.technology: devlang-csharp
-  ms.openlocfilehash: 483b403b35eef4405b1c7debc52678aef19cb9b6
-  ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+  ms.openlocfilehash: 08060fc95d94db91a429439e502a8f6dc2978c4d
+  ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
   ms.translationtype: MT
   ms.contentlocale: pl-PL
-  ms.lasthandoff: 02/01/2018
+  ms.lasthandoff: 03/28/2018
 items:
 - durationInMinutes: 1
-  content: "Ta opcja szybkiego startu nauczy C# interaktywnego, za pomocą przeglądarki do pisania kodu C# i wyświetlić wyniki kompilowanie i uruchamianie kodu. Zawiera szereg lekcje, które tworzenia, modyfikacji i Eksploruj kolekcji i tablic.\n"
+  content: >
+    Ta opcja szybkiego startu nauczy C# interaktywnego, za pomocą przeglądarki do pisania kodu C# i wyświetlić wyniki kompilowanie i uruchamianie kodu. Zawiera szereg lekcje, które tworzenia, modyfikacji i Eksploruj kolekcji i tablic.
 - title: Tworzenie list
   durationInMinutes: 2
-  content: "Uruchom poniższy kod w oknie interaktywnym. Aby to zrobić, wpisz następujący blok kodu w oknie interaktywnym (Zastąp \"<name>\" nazwą) i kliknij przycisk **Uruchom** przycisk:\n\n```csharp\nvar names = new List<string> { \"<name>\", \"Ana\", \"Felipe\" };\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nUtworzeniu tylko listę ciągów, dodać trzy nazwy do tej listy i wydrukowane nazwy WERSALIKÓW. Używasz pojęcia uzyskanych w starszych poradniki Szybki Start pętli na liście.\n\nKod, aby wyświetlić nazwy sprawia, że użycie **ciągi interpolowane**.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.\n\nTa funkcja pozwala zachować eksploracji.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- title: "Modyfikowanie listy zawartości"
+  content: >
+    Uruchom poniższy kod w oknie interaktywnym. Aby to zrobić, wpisz następujący blok kodu w oknie interaktywnym (Zastąp "<name>" nazwą) i kliknij przycisk **Uruchom** przycisk:
+
+
+    ```csharp
+
+    var names = new List<string> { "<name>", "Ana", "Felipe" };
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Utworzeniu tylko listę ciągów, dodać trzy nazwy do tej listy i wydrukowane nazwy WERSALIKÓW. Używasz pojęcia uzyskanych w starszych poradniki Szybki Start pętli na liście.
+
+
+    Kod, aby wyświetlić nazwy sprawia, że użycie [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcji. Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.
+
+
+    Ta funkcja pozwala zachować eksploracji.
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
+- title: Modyfikowanie listy zawartości
   durationInMinutes: 3
-  content: "Kolekcja utworzona używa <xref:System.Collections.Generic.List%601> typu. Tego typu przechowuje sekwencji elementów. Należy określić typ elementów między nawiasami.\n\nJeden ważnym aspektem tej <xref:System.Collections.Generic.List%601> typ jest czy można zwiększać i zmniejszać, dzięki któremu można dodać lub usunąć elementy. Dodaj następujący kod poniżej kod, który został już zapisany:\n\n```csharp\nConsole.WriteLine();\nnames.Add(\"Maria\");\nnames.Add(\"Bill\");\nnames.Remove(\"Ana\");\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\nDodano dwa więcej nazw na końcu listy. Możesz również usunięto jedną również.\n\n<xref:System.Collections.Generic.List%601> Umożliwia odwoływać się do poszczególnych elementów przez **indeksu** również. Możesz uzyskać dostępu do elementów za pomocą `[` i `]` tokenów. Dodaj następujący kod poniżej co już i spróbować:\n\n```csharp\nConsole.WriteLine($\"My name is {names[0]}.\");\nConsole.WriteLine($\"I've added {names[2]} and {names[3]} to the list.\");\n```\n\nMożesz nie można uzyskać dostęp poza koniec listy. Możesz sprawdzić, jak długo używa listy <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod, aby spróbować:\n\n```csharp\nConsole.WriteLine($\"The list has {names.Count} people in it\");\n```\n\nKliknij przycisk **Uruchom** ponownie, aby wyświetlić wyniki. W języku C#, indeksów, które rozpoczynają się od 0, dlatego największy prawidłowy indeks jest jednym mniejszy niż liczba elementów na liście.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
+  content: >
+    Kolekcja utworzona używa <xref:System.Collections.Generic.List%601> typu. Tego typu przechowuje sekwencji elementów. Należy określić typ elementów między nawiasami.
+
+
+    Jeden ważnym aspektem tej <xref:System.Collections.Generic.List%601> typ jest czy można zwiększać i zmniejszać, dzięki któremu można dodać lub usunąć elementy. Dodaj następujący kod poniżej kod, który został już zapisany:
+
+
+    ```csharp
+
+    Console.WriteLine();
+
+    names.Add("Maria");
+
+    names.Add("Bill");
+
+    names.Remove("Ana");
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    Dodano dwa więcej nazw na końcu listy. Możesz również usunięto jedną również.
+
+
+    <xref:System.Collections.Generic.List%601> Umożliwia odwoływać się do poszczególnych elementów przez **indeksu** również. Możesz uzyskać dostępu do elementów za pomocą `[` i `]` tokenów. Dodaj następujący kod poniżej co już i spróbować:
+
+
+    ```csharp
+
+    Console.WriteLine($"My name is {names[0]}.");
+
+    Console.WriteLine($"I've added {names[2]} and {names[3]} to the list.");
+
+    ```
+
+
+    Możesz nie można uzyskać dostęp poza koniec listy. Możesz sprawdzić, jak długo używa listy <xref:System.Collections.Generic.List%601.Count%2A> właściwości. Dodaj następujący kod, aby spróbować:
+
+
+    ```csharp
+
+    Console.WriteLine($"The list has {names.Count} people in it");
+
+    ```
+
+
+    Kliknij przycisk **Uruchom** ponownie, aby wyświetlić wyniki. W języku C#, indeksów, które rozpoczynają się od 0, dlatego największy prawidłowy indeks jest jednym mniejszy niż liczba elementów na liście.
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
 - title: Wyszukiwanie i sortowanie listy
   durationInMinutes: 5
-  content: "Nasze przykłady za pomocą list stosunkowo mały, ale aplikacje często może tworzyć listy o wiele więcej elementów, czasami numerowanie tysięcy. Aby znaleźć elementy w tych kolekcjach większy, musisz Wyszukaj liście różne elementy. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda szuka elementu i zwraca indeks elementu. Spróbuj, aby zobaczyć, jak to działa.  Dodaj następujący kod poniżej co napisanych wykonanej do tej pory:\n\n```csharp\nvar index = names.IndexOf(\"Felipe\");\nif (index != -1)\n  Console.WriteLine($\"The name {names[index]} is at index {index}\");\n\nvar notFound = names.IndexOf(\"Not Found\");\n  Console.WriteLine($\"When an item is not found, IndexOf returns {notFound}\");\n```\n\nMoże nie wiedzieć, jeśli element znajduje się na liście, należy zawsze sprawdzić zwrócony przez indeks <xref:System.Collections.Generic.List%601.IndexOf%2A>. Jeśli wartość -1, element nie został znaleziony.\n\nElementy na liście mogą być również sortowane. <xref:System.Collections.Generic.List%601.Sort%2A> Metody sortuje wszystkie elementy na liście w ich normalnym kolejność (alfabetycznie w przypadku ciągi). Dodaj ten kod i uruchom ponownie:\n\n```csharp\nnames.Sort();\nforeach (var name in names)\n{\n  Console.WriteLine($\"Hello {name.ToUpper()}!\");\n}\n```\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- title: "Listę innych typów"
+  content: >
+    Nasze przykłady za pomocą list stosunkowo mały, ale aplikacje często może tworzyć listy o wiele więcej elementów, czasami numerowanie tysięcy. Aby znaleźć elementy w tych kolekcjach większy, musisz Wyszukaj liście różne elementy. <xref:System.Collections.Generic.List%601.IndexOf%2A> Metoda szuka elementu i zwraca indeks elementu. Spróbuj, aby zobaczyć, jak to działa.  Dodaj następujący kod poniżej co napisanych wykonanej do tej pory:
+
+
+    ```csharp
+
+    var index = names.IndexOf("Felipe");
+
+    if (index != -1)
+      Console.WriteLine($"The name {names[index]} is at index {index}");
+
+    var notFound = names.IndexOf("Not Found");
+      Console.WriteLine($"When an item is not found, IndexOf returns {notFound}");
+    ```
+
+
+    Może nie wiedzieć, jeśli element znajduje się na liście, należy zawsze sprawdzić zwrócony przez indeks <xref:System.Collections.Generic.List%601.IndexOf%2A>. Jeśli wartość -1, element nie został znaleziony.
+
+
+    Elementy na liście mogą być również sortowane. <xref:System.Collections.Generic.List%601.Sort%2A> Metody sortuje wszystkie elementy na liście w ich normalnym kolejność (alfabetycznie w przypadku ciągi). Dodaj ten kod i uruchom ponownie:
+
+
+    ```csharp
+
+    names.Sort();
+
+    foreach (var name in names)
+
+    {
+      Console.WriteLine($"Hello {name.ToUpper()}!");
+    }
+
+    ```
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
+- title: Listę innych typów
   durationInMinutes: 5
-  content: "Obecnie używasz `string` typu na listach wykonanej do tej pory. Upewnijmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utworzymy zbioru liczb. Usuń kod do tej pory napisanym i zastąp go to:\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n```\n\nKtóra tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. Są to pierwsze dwie wartości *sekwencji Fibonacci*, sekwencji liczb. Znaleziono każdej kolejny numer Fibonacci wykonując Suma poprzednich dwóch liczb. Dodaj ten kod:\n\n```csharp\nvar previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\nvar previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\nfibonacciNumbers.Add(previous + previous2);\n\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nNaciśnij klawisz **Uruchom** Aby wyświetlić wyniki.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- title: "żądanie"
+  content: >
+    Obecnie używasz `string` typu na listach wykonanej do tej pory. Upewnijmy <xref:System.Collections.Generic.List%601> przy użyciu innego typu. Utworzymy zbioru liczb. Usuń kod do tej pory napisanym i zastąp go to:
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+    ```
+
+
+    Która tworzy listę liczb całkowitych i ustawia pierwszych dwóch liczb całkowitych na wartości 1. Są to pierwsze dwie wartości *sekwencji Fibonacci*, sekwencji liczb. Znaleziono każdej kolejny numer Fibonacci wykonując Suma poprzednich dwóch liczb. Dodaj ten kod:
+
+
+    ```csharp
+
+    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+
+    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+
+    fibonacciNumbers.Add(previous + previous2);
+
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    Naciśnij klawisz **Uruchom** Aby wyświetlić wyniki.
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
+- title: żądanie
   durationInMinutes: 10
-  content: "Zobacz, czy można utworzyć niektóre z pojęć związanych z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj i napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji. (Jako wskazówki, 20 numer Fibonacci jest 6765).\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- title: "Żądanie ukończone"
+  content: >
+    Zobacz, czy można utworzyć niektóre z pojęć związanych z tej i starszych wersji — lekcje. Rozwiń węzeł, na co powstanie wykonanej do tej pory numerami Fibonacci. Spróbuj i napisać kod, aby wygenerować najpierw 20 cyfr w sekwencji. (Jako wskazówki, 20 numer Fibonacci jest 6765).
+
+
+    > [!NOTE]
+
+    > Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).
+- title: Żądanie ukończone
   durationInMinutes: 3
   content: "Czy można korzystać z przypominać?\n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n    \n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nPrzy każdej iteracji pętli tworzenia ostatnich dwóch liczb całkowitych na liście sumowanie je, a następnie dodanie tej wartości na liście. Pętla jest powtarzany aż 20 elementy dodane do listy.\n\n> [!NOTE]\n> Jest to środowisko programowania online w wersji zapoznawczej. Jeśli wystąpią problemy, zgłoś je [w repozytorium dotnet/spróbuj](https://github.com/dotnet/try/issues).\n"
-- content: "Zakończono szybkiego startu listy. Ta opcja szybkiego startu jest końcowego interakcyjne Szybki Start. Te przewodniki Szybki Start można kontynuować na środowiska deweloperskiego. Poznaj podstawy z [lokalne działania projektowe](local-environment.md) , a następnie wybierz Szybki Start. Możesz spróbować tego samego ćwiczenia, bezpośrednie przejście do następnej procedury szybkiego startu lub rozpoczynać ponownie w [numery w języku C#](numbers-in-csharp-local.md) Szybki Start.\n\nDowiedz się więcej o pracy z `List` wpisz [.NET przewodnik](../../standard/index.md) temat [kolekcje](../../standard/collections/index.md). Dowiesz się o innych typów kolekcji.\0"
+- content: >-
+    Zakończono szybkiego startu listy. Ta opcja szybkiego startu jest końcowego interakcyjne Szybki Start. Te przewodniki Szybki Start można kontynuować na środowiska deweloperskiego. Poznaj podstawy z [lokalne działania projektowe](local-environment.md) , a następnie wybierz Szybki Start. Możesz spróbować tego samego ćwiczenia, bezpośrednie przejście do następnej procedury szybkiego startu lub rozpoczynać ponownie w [numery w języku C#](numbers-in-csharp-local.md) Szybki Start.
+
+
+    Dowiedz się więcej o pracy z `List` wpisz [.NET przewodnik](../../standard/index.md) temat [kolekcje](../../standard/collections/index.md). Dowiesz się o innych typów kolekcji.

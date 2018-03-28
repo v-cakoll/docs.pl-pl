@@ -1,6 +1,6 @@
 ---
 title: Wymagania systemowe programu .NET framework
-description: "Dowiedz się, jakie są wymagania sprzętowe, systemu operacyjnego i oprogramowania do zainstalowania programu .NET Framework 4.5 lub nowszy."
+description: Dowiedz się, jakie są wymagania sprzętowe, systemu operacyjnego i oprogramowania do zainstalowania programu .NET Framework 4.5 lub nowszy.
 ms.custom: updateeachrelease
 ms.date: 02/02/2018
 ms.prod: .net-framework
@@ -19,11 +19,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
-ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
+ms.openlocfilehash: e0b6faf42f0fa47f6104454440033a6272efb224
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="net-framework-system-requirements"></a>Wymagania systemowe programu .NET framework
 
@@ -35,13 +35,7 @@ Tabele w tym temacie zawierają sprzętu, systemu operacyjnego i wymagań dotycz
 
 Środowisk deweloperskich, które umożliwiają tworzenie aplikacji dla programu .NET Framework ma osobny zestaw wymagań.
 
-> [!IMPORTANT]
-> Wszystkie wersje programu .NET Framework ponieważ .NET Framework 4 są aktualizacje w miejscu tylko jednego 4.x wersji mogą być obecne w systemie.
-> Ponadto określonej wersji programu .NET Framework są zainstalowane wstępnie w niektórych wersjach systemu operacyjnego Windows. Oznacza to, że:
->
-> * Jeśli istnieje nowsza wersja już zainstalowana na komputerze, nie można zainstalować poprzednią wersję 4.x.
-> * Jeśli system operacyjny jest wstępnie zainstalowane z określoną wersją .NET, poprzednia wersja 4.x nie można zainstalować na tym samym komputerze.
-> * Jeśli użytkownik zainstaluje późniejszą wersję, nie trzeba najpierw odinstalować poprzednią wersję.
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
 Pobieranie informacji oraz linki, zobacz [Zainstaluj program .NET Framework dla deweloperów](../../../docs/framework/install/guide-for-developers.md).
 

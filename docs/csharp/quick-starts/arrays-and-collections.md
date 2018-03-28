@@ -1,6 +1,6 @@
 ---
 title: Samouczek kolekcje - C# lokalnego poradniki Szybki Start
-description: "Naucz się C# eksplorując kolekcji listy, w tym samouczku."
+description: Naucz się C# eksplorując kolekcji listy, w tym samouczku.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 88471c5fc60178c058f121ba5e5703999ad61030
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="c-quickstart-collections"></a>C# — Szybki Start: kolekcje
 
@@ -54,7 +54,7 @@ Zastąp `<name>` nazwą użytkownika. Zapisz **Program.cs**. Typ `dotnet run` w 
 
 Utworzeniu tylko listę ciągów, dodać trzy nazwy do tej listy i wydrukowane nazwy WERSALIKÓW. Używasz pojęcia uzyskanych w starszych poradniki Szybki Start pętli na liście.
 
-Kod, aby wyświetlić nazwy sprawia, że użycie **ciągi interpolowane**.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.
+Kod, aby wyświetlić nazwy sprawia, że użycie [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcji.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.
 
 Ta funkcja pozwala zachować eksploracji.
 

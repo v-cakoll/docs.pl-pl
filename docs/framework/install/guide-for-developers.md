@@ -1,9 +1,10 @@
 ---
-title: "Zainstaluj program .NET Framework dla deweloperów"
+title: Zainstaluj program .NET Framework dla deweloperów
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 03/23/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: get-started-article
 helpviewer_keywords:
 - .NET Framework redistributable package, downloading
@@ -14,25 +15,26 @@ ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4be70c047566416b40da3fd34d1e8b8f479af7c5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b5cfa21306ccad78825d5f46c78c00a24ff67436
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="install-the-net-framework-for-developers"></a>Zainstaluj program .NET Framework dla deweloperów
 
 .NET jest integralną częścią wiele aplikacji działających w systemie Windows i zawiera często używane funkcje uruchomić te aplikacje. Dla deweloperów .NET Framework zapewnia kompleksowe i spójny model programowania do tworzenia aplikacji, które wizualnie ogłuszania wrażenia użytkowników oraz bezproblemową i bezpieczną komunikację.  
 
+> [!NOTE]
+> Ten temat jest przeznaczony dla **deweloperzy** potrzebują albo zainstalować program .NET Framework na ich własnych systemu lub który chcesz zainstalować go z aplikacji. Dla **użytkowników** zainteresowani Instalowanie programu .NET Framework, zobacz tematy, które omówiono w nim Instalowanie programu .NET Framework w określonych systemach operacyjnych, takich jak [Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016](on-windows-10.md).  
+
 Ten artykuł zawiera łącza do instalowania wszystkie wersje programu .NET Framework z .NET Framework 4.5 do [!INCLUDE[net_current](../../../includes/net-current-version.md)] na tym komputerze. Jeśli jesteś deweloperem umożliwia także linki do pobrania i wykonać ponowną dystrybucję programu .NET Framework z aplikacjami. Informacje na temat wdrażania wersji .NET Framework za pomocą aplikacji, zobacz [.NET Framework — przewodnik wdrażania dla deweloperów](../deployment/deployment-guide-for-developers.md).
 
-> [!NOTE]
-> Ten temat jest przeznaczony dla deweloperów chcących albo zainstalować program .NET Framework w systemie własnych lub który chcesz zainstalować go z aplikacji. Aby użytkownicy zainteresowani Instalowanie programu .NET Framework, zobacz tematy, które omówiono w nim Instalowanie programu .NET Framework w określonych systemach operacyjnych, takich jak [Zainstaluj program .NET Framework w systemie Windows 10 i Windows Server 2016](on-windows-10.md).  
+[!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
   
-Należy pamiętać, że zainstalowanie nowej wersji programu .NET Framework nie zawsze zastępuje poprzednią wersję. Aby uzyskać więcej informacji na temat wersji programu .NET Framework oraz sposobu określania, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md) i [porady: ustalić, które .NET Framework są wersje Zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md). Wszystkie wersje programu .NET Framework wymienionych w poniższej tabeli są aktualizacje w miejscu programu .NET Framework 4. Innymi słowy Jeśli zainstalowana nowsza wersja, takich jak .NET Framework 4.6 nie najpierw masz zainstalować poprzednich wersjach, takich jak .NET Framework 4.5.2, 4.5 i 4.5.1. Podobnie jeśli zainstalować nowszą wersję, takich jak .NET Framework 4.6 nie najpierw masz odinstalowania poprzednich wersji, takich jak .NET Framework 4.5.2, 4.5 i 4.5.1. 
-
-Fakt, że nowszy .NET Framework 4.x są na miejscu aktualizacjami wcześniejszych wersji oznacza *nie* instalacja starszej wersji wymienionych w tabeli, jeśli jest już zainstalowana nowsza wersja. Na przykład: nie można zainstalować programu .NET Framework 4.6 w systemie Windows 10 listopada aktualizacji, ponieważ .NET Framework 4.6.1 jest preinstalowany na nim.    
+Aby uzyskać więcej informacji na temat wersji programu .NET Framework oraz sposobu określania, które wersje są zainstalowane na komputerze, zobacz [wersje i zależności](~/docs/framework/migration-guide/versions-and-dependencies.md) i [porady: ustalić, które .NET Framework są wersje Zainstalowane](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md).  
 
 > [!NOTE]
 > Aby uzyskać informacje na .NET Framework 3.5, zobacz [zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8](~/docs/framework/install/dotnet-35-windows-10.md).  
@@ -41,16 +43,16 @@ Szybkie linki lub odczytu dalsze szczegółowe informacje, skorzystaj z poniższ
   
 |Wersja programu .NET Framework|Instalacja Developer|Instalacja pakietu redystrybucyjnego|Obsługa platform|  
 |----------------------------|----------------------------|----------------------------------|----------------------|  
-|**4.7.1**|[NET Framework 4.7.1 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=852105)|[Pobierz strony 4.7.1 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona dla 4.7.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=852107)|Obejmuje: <br/>Aktualizacja spadek twórców systemu Windows 10<br/>W systemie Windows Server w wersji 1709<br /><br /> Można zainstalować na:<br/> Aktualizacja twórców systemu Windows 10 <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
-|**4.7**|[NET Framework 4.7 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=825319)|[Strony pobierania Instalatora 4,7 sieci web](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strony pobierania 4,7 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=825303)|Obejmuje: <br/>Aktualizacja twórców systemu Windows 10<br /><br /> Można zainstalować na:<br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
-|**4.6.2**|[NET Framework 4.6.2 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=780617)|[Pobierz strony 4.6.2 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Strona dla 4.6.2 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=780601)|Obejmuje: <br /> Rocznicowa aktualizacja systemu Windows 10<br /><br /> Można zainstalować na:<br /> Usługa Windows Update 10 listopada <br/> Windows 10 <br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|
-|**4.6.1**|[NET Framework 4.6.1 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=690706)|[Pobierz strony 4.6.1 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Strona dla 4.6.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=671744)|Można zainstalować na:<br /> Windows 10 <br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|
+|**4.7.1**|[NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)|[Pobierz strony 4.7.1 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=852095)<br /><br /> [Strona dla 4.7.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=852107)|Obejmuje: <br/>Aktualizacja spadek twórców systemu Windows 10<br/>W systemie Windows Server w wersji 1709<br /><br /> Można zainstalować na:<br/> Aktualizacja twórców systemu Windows 10 <br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
+|**4.7**|[NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)|[Strony pobierania Instalatora 4,7 sieci web](http://go.microsoft.com/fwlink/?LinkId=825299)<br /><br /> [Strony pobierania 4,7 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=825303)|Obejmuje: <br/>Aktualizacja twórców systemu Windows 10<br /><br /> Można zainstalować na:<br /> Rocznicowa aktualizacja systemu Windows 10<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))||
+|**4.6.2**|[NET Framework 4.6.2 z dodatkiem Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)|[Pobierz strony 4.6.2 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=780597)<br /><br /> [Strona dla 4.6.2 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=780601)|Obejmuje: <br /> Rocznicowa aktualizacja systemu Windows 10<br /><br /> Można zainstalować na:<br /> Usługa Windows Update 10 listopada <br/> Windows 10 <br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|
+|**4.6.1**|[NET Framework 4.6.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=690706)|[Pobierz strony 4.6.1 Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=671729)<br /><br /> [Strona dla 4.6.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=671744)|Można zainstalować na:<br /> Windows 10 <br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|
 |**4.6**|Uwzględnione w [!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]. Aby uzyskać więcej informacji, zobacz [programu Visual Studio 2015 — Zapraszamy](http://msdn.microsoft.com/library/dd831853\(v=vs.140\).aspx).<br /><br /> [Microsoft .NET Framework 4.6 docelowego pakietu](http://go.microsoft.com/fwlink/?LinkId=528261)|[Strony pobierania Instalatora 4.6 sieci web](http://go.microsoft.com/fwlink/?LinkId=528259)<br /><br /> [Strony pobierania 4.6 Instalatora w trybie offline](http://go.microsoft.com/fwlink/?LinkId=528233)|Obejmuje: <br /> Windows 10 <br />[!INCLUDE[vs_dev14](../../../includes/vs-dev14-md.md)]<br /><br /> Można także zainstalować na:<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|  
 |**4.5.2**|[Microsoft .NET Framework 4.5.2 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=397702)<br /><br /> Do użytku z [programu Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=325532), programu Visual Studio 2012 lub innych IDEs|[Pobierz strony 4.5.2 Instalator sieci web](http://go.microsoft.com/fwlink/p/?LinkId=397703)<br /><br /> [Strona dla 4.5.2 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=397706)|Można zainstalować na:<br /> Windows 8.1 i starsze wersje<br /> Windows Server 2012 R2 i starszych wersji<br /> (Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|  
-|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Dla programu Visual Studio 2012 lub innych IDEs|[Pobierz strony 4.5.1 Instalator sieci web](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Strona dla 4.5.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=310159)|Obejmuje:<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 z dodatkiem R2<br /> [Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=325532)<br /><br /> Można także zainstalować na:<br /> [!INCLUDE[win8](../../../includes/win8-md.md)]i starsze wersje<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]i starsze wersje<br />(Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|  
+|**4.5.1**|[Microsoft .NET Framework 4.5.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=324213)<br /><br /> Dla programu Visual Studio 2012 lub innych IDEs|[Pobierz strony 4.5.1 Instalator sieci web](http://go.microsoft.com/fwlink/p/?LinkId=310158)<br /><br /> [Strona dla 4.5.1 pobierania Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=310159)|Obejmuje:<br /> [!INCLUDE[win81](../../../includes/win81-md.md)]<br /> Windows Server 2012 z dodatkiem R2<br /> [Visual Studio 2013](http://go.microsoft.com/fwlink/?LinkID=325532)<br /><br /> Można także zainstalować na:<br /> [!INCLUDE[win8](../../../includes/win8-md.md)] i starsze wersje<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] i starsze wersje<br />(Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|  
 |**4.5**|Uwzględnione w programie Visual Studio 2012<br /><br /> Również dostępny jako część [Windows 8 SDK](http://msdn.microsoft.com/windows/hardware/hh852363)|[Strony pobierania Instalatora 4.5 sieci web](http://go.microsoft.com/fwlink/p/?LinkId=245484)|Obejmuje: <br /> [!INCLUDE[win8](../../../includes/win8-md.md)]<br /> [!INCLUDE[winserver8](../../../includes/winserver8-md.md)]<br /> Visual Studio 2012<br /><br /> Można także zainstalować na:<br /> Windows 7 i wcześniejszych<br /> Windows Server 2008 z dodatkiem SP2 i starszych wersji<br />(Aby uzyskać pełną listę, zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md))|  
 
-Można zainstalować **deweloperów pakietu** dla określonej wersji programu .NET Framework, jeśli jest dostępny na wszystkich obsługiwanych platformach.  
+Można zainstalować **Developer Pack** dla określonej wersji programu .NET Framework, jeśli jest dostępny na wszystkich obsługiwanych platformach.  
   
 Można zainstalować **Instalator sieci Web lub Offline** na:  
   
@@ -67,17 +69,19 @@ Aby uzyskać ogólne wprowadzenie do programu .NET Framework dla użytkowników 
 
 Zainstaluj dewelopera targeting pack w celu opracowywania przed najnowszej wersji programu .NET Framework w Visual Studio lub inne środowisko rozwoju lub pobrać pakietu redystrybucyjnego dla dystrybucji aplikacji lub formant programu .NET Framework.  
   
-## <a name="to-install-the-net-framework-developer-or-targeting-pack"></a>Aby zainstalować developer .NET Framework lub targeting pack
+### <a name="to-install-the-net-framework-developer-pack-or-targeting-pack"></a>Aby zainstalować program .NET Framework Developer Pack lub Targeting Pack
 
-Pakiet deweloperów pakietu .NET Framework 4.5.1 lub 4.5.2 wartości docelowej dla [!INCLUDE[net_v46](../../../includes/net-v46-md.md)]oraz developer pack dla [!INCLUDE[net_v461](../../../includes/net-v461-md.md)], 4.6.2, 4.7 lub 4.7.1 udostępnia programu .NET Framework 4.5.1 lub 4.5.2 lub [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], 4.6.1 lub 4.6.2 lub platformy .NET Zestawy referencyjne Framework 4.7 lub 4.7.1, pakietów językowych i plików IntelliSense do użycia w zintegrowane środowisko programistyczne takiego jak Visual Studio.  Jeśli używasz programu Visual Studio developer pack lub targeting pack dodaje również zainstalowana wersja programu .NET Framework do wyboru docelowego podczas tworzenia nowego projektu.  Wybierz jedną z tych pakietów dewelopera lub docelowego pakietu:  
+A *targeting pack* umożliwia aplikacji docelowych określonej wersji programu .NET Framework podczas opracowywania w programie Visual Studio i innych środowisk deweloperskich. A *developer pack* obejmuje określonej wersji programu .NET Framework i jego towarzyszący SDK wraz z jego odpowiedni pakiet określania wartości docelowej.
 
-- [Program Microsoft .NET Framework 4.7.1 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=852105)
+Pakiet dewelopera programu .NET Framework 4.5.1 lub 4.5.2, określania wartości docelowej pakiet dla programu .NET Framework 4.6 i pakiet deweloperów platformy .NET Framework 4.6.1, 4.6.2, 4.7 lub 4.7.1 zawiera wersję dla określonej platformy .NET zestawów referencyjnych języka pakiety, plików i IntelliSense dla programu zintegrowane środowisko programistyczne takiego jak Visual Studio.  Jeśli używasz programu Visual Studio developer pack lub targeting pack dodaje również zainstalowana wersja programu .NET Framework do wyboru docelowego podczas tworzenia nowego projektu.  Wybierz jedną z następujących opcji:  
 
-- [Program Microsoft .NET Framework 4.7 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=825319)
+- [Microsoft .NET Framework 4.7.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=852105)
+
+- [Microsoft .NET Framework 4.7 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=825319)
   
-- [Program Microsoft .NET Framework 4.6.2 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=780617)  
+- [Microsoft .NET Framework 4.6.2 z dodatkiem Developer Pack](http://go.microsoft.com/fwlink/?LinkId=780617)  
   
-- [Program Microsoft .NET Framework 4.6.1 deweloperów pakietu](http://go.microsoft.com/fwlink/?LinkId=690706)  
+- [Microsoft .NET Framework 4.6.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=690706)  
   
 - [Microsoft .NET Framework 4.6 Targeting Pack](http://go.microsoft.com/fwlink/?LinkId=528261)  
   
@@ -85,40 +89,46 @@ Pakiet deweloperów pakietu .NET Framework 4.5.1 lub 4.5.2 wartości docelowej d
   
 - [.NET framework 4.5.1 Developer Pack](http://go.microsoft.com/fwlink/?LinkId=324213) do zainstalowania programu Visual Studio 2012 lub innych IDEs wersji 4.5.1.  
   
-Na stronie pobierania developer pack wybierz **Pobierz**. Następnie wybierz **Uruchom** lub **zapisać**i postępuj zgodnie z instrukcjami, po wyświetleniu monitu.  
-  
-## <a name="to-install-or-download-the-net-framework-redistributable"></a>Aby zainstalować lub Pobierz pakiet redystrybucyjny programu .NET Framework
+Na stronie pobierania developer pack wybierz **Pobierz**. Następnie wybierz **Uruchom** lub **zapisać**i postępuj zgodnie z instrukcjami, po wyświetleniu monitu. Można także zainstalować pakiet dewelopera lub przeznaczonych dla pakietu dla określonej wersji programu .NET Framework, wybierając ją z opcjonalne składniki **tworzenia klasycznych aplikacji .NET** obciążenia w Instalatorze programu Visual Studio, jako Po rysunku przedstawiono.
 
-Te pliki instalacyjne Pobierz składników .NET Framework dla aplikacji lub formant, który jest przeznaczony dla wersji programu .NET Framework. Te składniki muszą być zainstalowane na każdym komputerze, na którym jest uruchomiona aplikacja lub formantu. Oba pliki instalacyjne są do dystrybucji, więc obejmują program instalacyjny dla aplikacji.  
+   ![Instalator programu Visual Studio z obciążeniem, tworzenia klasycznych aplikacji .NET](./media/visual-studio-installer.jpg) 
+
+Jeśli zostanie rozpoczęta dla określonej wersji programu .NET Framework, zbudowany aplikacji przy użyciu zestawów odwołań, które są dołączone do tej wersji developer pack. W czasie wykonywania zestawy zostaną rozpoznane w globalnej pamięci podręcznej zestawów i zestawów odwołań nie są używane.
+
+Podczas tworzenia aplikacji z programu Visual Studio lub za pomocą programu MSBuild w wierszu polecenia, błędu MSB3644, "Zestawów referencyjnych dla struktury" mogą być wyświetlane MSBuild*framework w wersji*"nie zostały odnalezione." Aby rozwiązać ten błąd, Pobierz pakiet developer lub pakiet docelowy dla danej wersji programu .NET Framework.   
+
+### <a name="to-install-or-download-the-net-framework-redistributable"></a>Aby zainstalować lub Pobierz pakiet redystrybucyjny programu .NET Framework
+
+Instalatorzy Pobierz składników .NET Framework dla aplikacji lub formant, który jest przeznaczony dla wersji programu .NET Framework. Te składniki muszą być zainstalowane na każdym komputerze, na którym jest uruchomiona aplikacja lub formantu. Te pliki instalacyjne są do dystrybucji, więc obejmują program instalacyjny dla aplikacji.  
   
 Strona pobierania znajduje się w różnych językach, ale większość pliki do pobrania są udostępniane tylko w języku angielskim. Do obsługi dodatkowych języków należy zainstalować pakiet językowy.  
   
-Dostępne są dwa typy instalacji pakietu redystrybucyjnego:  
+Dostępne są dwa typy pakietu redystrybucyjnego instalatorów:  
   
-- **Instalator sieci Web** (sieci web programu inicjującego) pliki do pobrania wymaganych składników oraz pakiet języka zgodny system operacyjny komputera instalacji z sieci web. Ten pakiet jest znacznie mniejszy niż Instalatora w trybie offline, ale wymaga spójne połączenia internetowego. Możesz pobrać [pakiety językowe autonomicznej](#standalone_language_packs) Aby zainstalować dodatkowy język pomocy technicznej.  
+- **Instalator sieci Web** (sieci web programu inicjującego) pliki do pobrania wymaganych składników oraz pakiet języka zgodny system operacyjny komputera instalacji z sieci web. Ten pakiet jest znacznie mniejszy niż Instalatora w trybie offline, ale wymaga spójne połączenia internetowego. Możesz pobrać [pakiety językowe autonomiczny](#standalone_language_packs) Aby zainstalować dodatkowy język pomocy technicznej.  
   
-- **Instalatora w trybie offline** (autonomiczny pakiet redystrybucyjny) zawiera wszystkie wymagane składniki do zainstalowania programu .NET Framework, ale nie zawiera pakiety językowe. Ten plik do pobrania jest większy niż Instalator sieci web. Instalatora w trybie offline nie wymaga połączenia internetowego. Po uruchomieniu Instalatora w trybie offline, można pobrać [pakiety językowe autonomicznej](#standalone_language_packs) zainstalować obsługę języka. Użyj Instalatora w trybie offline, jeśli użytkownik nie korzysta z muszą być zgodne z połączenia z Internetem.  
+- **Instalatora w trybie offline** (pakiet redystrybucyjny autonomiczna) zawiera wszystkie wymagane składniki do zainstalowania programu .NET Framework, ale nie zawiera pakiety językowe. Ten plik do pobrania jest większy niż Instalator sieci web. Instalatora w trybie offline nie wymaga połączenia internetowego. Po uruchomieniu Instalatora w trybie offline, można pobrać [pakiety językowe autonomiczny](#standalone_language_packs) zainstalować obsługę języka. Użyj Instalatora w trybie offline, jeśli użytkownik nie korzysta z muszą być zgodne z połączenia z Internetem.  
   
 Sieci web, jak i w trybie offline pliki instalacyjne są przeznaczone dla komputerów x86 i x64 (zobacz [wymagania systemowe](~/docs/framework/get-started/system-requirements.md)), ale nie obsługuje komputerów opartych na procesorze Itanium.  
   
 1.  Otwórz stronę pobierania dla wersji .NET Framework, które chcesz zainstalować.  
 
-   - .NET framework 4.7.1 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=852095) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=852107))
+    - .NET framework 4.7.1 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=852095) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=852107))
 
-   - .NET framework 4.7 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=825299) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=825303))
+    - .NET framework 4.7 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=825299) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=825303))
 
     - .NET framework 4.6.2 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=780597) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=780601))  
     
     - .NET framework 4.6.1 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=671729) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=671744))  
   
-    - .NET framework 4.6 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=528259) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=528233))  
-  
+    - .NET framework 4.6 ([Instalator sieci web](http://go.microsoft.com/fwlink/?LinkId=528259) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=528233))    
+   
     - .NET framework 4.5.2 ([Instalator sieci web](http://go.microsoft.com/fwlink/p/?LinkId=397703) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=397706))  
   
     - .NET framework 4.5.1 ([Instalator sieci web](http://go.microsoft.com/fwlink/p/?LinkId=310158) lub [Instalatora w trybie offline](http://go.microsoft.com/fwlink/p/?LinkId=310159))  
   
-    - [Program .NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)  
-  
+    - [Program .NET framework 4.5](http://go.microsoft.com/fwlink/p/?LinkId=245484)
+
 1. Wybierz język dla strony pobierania. Ta opcja nie pobiera zlokalizowanych zasobów .NET Framework; wpływa tylko na tekst wyświetlany na stronie pobierania.  
   
 1. Wybierz **Pobierz**.  

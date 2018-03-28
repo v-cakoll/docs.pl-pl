@@ -1,5 +1,5 @@
 ---
-title: "Ciągi (Przewodnik programowania w języku C#)"
+title: Ciągi (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-caps.latest.revision: 
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 24b3db01047a9f9a47182e0e1ac105f69562c316
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 9478900be008588597c1dd9e75f704c751ebe344
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="strings-c-programming-guide"></a>Ciągi (Przewodnik programowania w języku C#)
 Ciąg jest obiektem typu <xref:System.String> którego wartość jest tekstem. Wewnętrznie, tekst jest przechowywana jako sekwencyjnych kolekcji tylko do odczytu z <xref:System.Char> obiektów. Brak nie przerywa null znak na końcu C# ciąg. w związku z tym ciągu języka C# może zawierać dowolną liczbę osadzonych znaki null ('\0'). <xref:System.String.Length%2A> Właściwości ciągu reprezentuje liczbę `Char` obiekty nie zawiera, nie liczbę znaków Unicode. Aby uzyskać dostęp do poszczególnych punktów kodowych Unicode w ciągu, użyj <xref:System.Globalization.StringInfo> obiektu.  
@@ -124,8 +124,7 @@ string s = String.Empty;
 |Temat|Opis|  
 |-----------|-----------------|  
 |[Instrukcje: modyfikowanie zawartości ciągu](../../how-to/modify-string-contents.md)|Ilustracja technik Przekształcanie ciągów i zmodyfikowania zawartości ciągów.|  
-|[Instrukcje: łączenie wielu ciągów](../../../csharp/programming-guide/strings/how-to-concatenate-multiple-strings.md)|Ilustracja technik łączenie wielu ciągów w jednym ciągu w czasie kompilacji i czasu wykonywania.|  
-|[Instrukcje: porównywanie ciągów](../../../csharp/programming-guide/strings/how-to-compare-strings.md)|Pokazuje, jak przeprowadzić porządkowej porównania ciągów.|  
+|[Instrukcje: porównywanie ciągów](../../how-to/compare-strings.md)|Pokazuje, jak wykonać porządkowej i kultury porównań określonych ciągów.|  
 |[Porady: analizowanie ciągów za pomocą String.Split ](../../how-to/parse-strings-using-split.md)|Zawiera przykładowy kod, który ilustruje sposób używania `String.Split` metodę, aby przeanalizować parametry.|  
 |[Porady: wyszukiwanie ciągów](../../how-to/search-strings.md)|Wyjaśniono, jak użyć funkcji wyszukiwania dla określonego tekstu lub wzorce w ciągach.|  
 |[Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|Pokazuje, jak można bezpiecznie przeanalizować ciągu czy ma prawidłową wartość liczbową.|  

@@ -1,7 +1,7 @@
 ---
-title: "Właściwości"
-description: "Dowiedz się więcej o języku C# właściwości, które obejmują funkcje sprawdzania poprawności, obliczana wartości, obliczanie leniwe i zmienić właściwości powiadomienia."
-keywords: .NET, .NET core
+title: Właściwości
+description: Dowiedz się więcej o języku C# właściwości, które obejmują funkcje sprawdzania poprawności, obliczana wartości, obliczanie leniwe i zmienić właściwości powiadomienia.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 1ffacd52df89a955ebfa72dc58836211c7a58640
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="properties"></a>Właściwości
 
@@ -76,7 +76,7 @@ public class Person
 }
 ```
 
-Jeśli implementacja właściwości jest jedno wyrażenie, możesz użyć *wyrażenie zabudowanych członków* metody pobierającej lub ustawiającej:
+Jeśli implementacja właściwości jest jedno wyrażenie, możesz użyć *zabudowanych wyrażenia elementów członkowskich* metody pobierającej lub ustawiającej:
 
 ```csharp
 public class Person
@@ -193,7 +193,7 @@ public class Person
 }
 ```
 
-Przykład powyżej używa *interpolacji ciąg* tworzenia sformatowany ciąg dla pełnej nazwy.
+Przykład powyżej używa [ciągu interpolacji](../csharp/language-reference/tokens/interpolated.md) funkcję, aby utworzyć ciąg sformatowany dla pełnej nazwy.
 
 Można również użyć *zabudowanych wyrażenia elementów członkowskich*, który zapewnia bardziej zwięzły sposób utworzyć obliczone `FullName` właściwości:
 
@@ -208,7 +208,7 @@ public class Person
 }
 ```
  
-*Elementy członkowskie zabudowanych wyrażenie* użyj *wyrażenia lambda* składni w celu zdefiniowania metody, która zawiera jedno wyrażenie. W tym miejscu tego wyrażenia zwraca pełną nazwę dla obiekt osoby.
+*Członkowie zabudowanych wyrażenie* użyj *wyrażenia lambda* składni w celu zdefiniowania metody, która zawiera jedno wyrażenie. W tym miejscu tego wyrażenia zwraca pełną nazwę dla obiekt osoby.
 
 ### <a name="lazy-evaluated-properties"></a>Właściwości obliczane opóźnione
 
@@ -277,7 +277,7 @@ public class Person
 Wynikiem tej wersji ostatecznej `FullName` właściwość tylko w razie potrzeby.
 Jeśli poprzednio obliczonej wersji jest prawidłowy, jest używany. Jeśli inna zmiana stanu unieważnia poprzednio obliczonej wersji, zostaną obliczone go ponownie. Deweloperzy korzystający z tej klasy nie trzeba znać szczegóły implementacji. Żadna z tych zmian wewnętrzny wpływa na użycie obiektu osoby. To klucza Przyczyna przy użyciu właściwości do udostępnienia danych elementów członkowskich obiektu.
  
-### <a name="inotifypropertychanged"></a>Interfejs INotifyPropertyChanged
+### <a name="inotifypropertychanged"></a>INotifyPropertyChanged
 
 Końcowe scenariusz, w których należy napisać kod w metodzie dostępu właściwości służy do obsługi `INotifyPropertyChanged` interfejs używany do powiadamiania klientów powiązania danych, które wartość została zmieniona. Po zmianie wartości właściwości obiektu zgłasza `PropertyChanged` zdarzeń, aby wskazać zmianę. Powiązanie bibliotek, danych z kolei aktualizacji wyświetlanych elementów oparte na tej zmiany. Poniższy kod przedstawia sposób czy implementuje `INotifyPropertyChanged` dla `FirstName` właściwości tej klasy osoby.
 

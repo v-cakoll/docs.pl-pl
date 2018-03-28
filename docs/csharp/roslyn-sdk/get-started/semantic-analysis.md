@@ -1,6 +1,6 @@
 ---
 title: Wprowadzenie do analizy semantycznego
-description: "Ten samouczek zawiera omówienie pracy z semantyczny analizy przy użyciu zestawu SDK kompilatora .NET."
+description: Ten samouczek zawiera omówienie pracy z semantyczny analizy przy użyciu zestawu SDK kompilatora .NET.
 author: billwagner
 ms.author: wiwagn
 ms.date: 02/06/2018
@@ -8,17 +8,21 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 94a28d21cfec1894c3ee3b631335043e1d0ec817
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Wprowadzenie do analizy semantycznego
 
 W tym samouczku założono, że znasz API składni. [Wprowadzenie do analizy składni](syntax-analysis.md) artykuł zawiera wprowadzenie wystarczające.
 
 W tym samouczku Eksploruj **Symbol** i **powiązanie interfejsów API**. Te interfejsy API Podaj informacje o _znaczenie semantyczne_ programu. Umożliwiają one pytania i odpowiedzi na pytania dotyczące typów reprezentowany przez dowolny symbol w programie.
+
+Musisz zainstalować **zestawu SDK platformy kompilatora .NET**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 ## <a name="understanding-compilations-and-symbols"></a>Opis kompilacje i symboli
 
@@ -31,9 +35,6 @@ Podobnie jak <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithTyp
 ## <a name="querying-symbols"></a>Wykonywanie zapytania symboli
 
 W ramach tego samouczka przyjrzymy się "Hello World" program ponownie. Teraz, zapytania symboli w programie, aby zrozumieć, jakie typy reprezentują te symbole. Zapytanie dla typów w przestrzeni nazw i Dowiedz się znaleźć dostępne metody w typie.
-
-> [!IMPORTANT]
-> Poniższe przykłady wymagają **SDK kompilatora .NET** instalowany jako część programu Visual Studio 2017 r. Można znaleźć zestawu .NET SDK kompilatora jako ostatni opcjonalny składnik kategorii **tworzenia rozszerzenia programu Visual Studio** obciążenia. Szablony nie są zainstalowane bez tego składnika.
 
 Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
 

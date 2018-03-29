@@ -23,7 +23,6 @@
 #### [interface](interface.md)
 #### [object](object.md)
 #### [string](string.md)
-#### [Ciągi interpolowane](interpolated-strings.md)
 ### [void](void.md)
 ### [var](var.md)
 ### [Tabele odwołań dla typów](reference-tables-for-types.md)

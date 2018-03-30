@@ -3,8 +3,8 @@
 ## [Korzystanie ze składni](work-with-syntax.md)
 ## [Korzystanie z semantyki](work-with-semantics.md)
 ## [Korzystanie z obszaru roboczego](work-with-workspace.md)
-
-## Przewodniki Szybki start
+## [Eksplorowanie kodu za pomocą wizualizatora składni](syntax-visualizer.md)
+## Szybki start
 ### [Analiza składni](get-started/syntax-analysis.md)
 ### [Analiza semantyki](get-started/semantic-analysis.md)
 

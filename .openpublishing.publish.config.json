@@ -20,6 +20,18 @@
     "master": [
       "Publish",
       "Pdf"
+    ],
+    "serverless-ebook": [
+      "Publish",
+      "Pdf"
+    ],    
+    "ai-ebook": [
+      "Publish",
+      "Pdf"
+    ], 
+    "CITest": [
+      "Publish",
+      "Pdf"
     ]
   },
   "Targets": {
@@ -124,6 +136,14 @@
       "branch": "live",
       "branch_mapping": {
         "master": "master",
+        "live": "live"
+      }
+    },
+    {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
         "live": "live"
       }
     },

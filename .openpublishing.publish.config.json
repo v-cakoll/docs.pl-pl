@@ -2,7 +2,7 @@
   "need_generate_intellisense": false,
   "need_preview_pull_request": true,
   "need_pr_comments": false,
-  "need_generate_pdf_url_template": true, 
+  "need_generate_pdf_url_template": false,
   "git_repository_branch_open_to_public_contributors": "live",
  "git_repository_url_open_to_public_contributors": "https://github.com/dotnet/docs.pl-pl",
  "continue_with_document_error": true,
@@ -14,10 +14,22 @@
       "Publish",
       "Pdf"
     ],
-    "live-sxs": [
+     "live-sxs": [
       "Publish"
     ],
     "master": [
+      "Publish",
+      "Pdf"
+    ],
+    "serverless-ebook": [
+      "Publish",
+      "Pdf"
+    ],    
+    "ai-ebook": [
+      "Publish",
+      "Pdf"
+    ], 
+    "CITest": [
       "Publish",
       "Pdf"
     ]
@@ -128,8 +140,16 @@
       }
     },
     {
+      "path_to_root": "samples",
+      "url": "https://github.com/dotnet/samples",
+      "branch": "master",
+      "branch_mapping": {
+        "live": "live"
+      }
+    },
+    {
       "path_to_root": "dotnet-xref",
-      "url": "https://github.com/MicrosoftDocs/dotnet-xref",
+      "url": "https://github.com/MicrosoftDocs/dotnet-xref", 
       "branch": "live",
       "branch_mapping": {
         "master": "master",

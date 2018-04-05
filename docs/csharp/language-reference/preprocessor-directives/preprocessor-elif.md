@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="elif-c-reference"></a>#elif (odwołanie w C#)
-`#elif`Umożliwia tworzenie złożonego dyrektywy warunkowej. `#elif` Jeśli nie zostanie obliczone wyrażenie poprzedniego [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) lub any poprzedzających, opcjonalnie, `#elif` wynikiem obliczania wyrażenia dyrektywy `true`. Jeśli `#elif` wyrażenie daje w wyniku `true`, kompilator ocenia cały kod między `#elif` i dalej dyrektywy warunkowej. Na przykład:  
+  `#elif`Umożliwia tworzenie złożonych dyrektyw warunkowych. Dyrektywa `#elif` wykonuje się, jeśli nie zostanie wykonane żadne z poprzednich wyrażeń [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ,lub (opcjonalnie) żadne z poprzedzających wyrażeń `#elif` nie zwróci wyniku `true`. Jeżeli wyrażenie `#elif` zwraca w wyniku `true`, kompilator wykonuje cały kod między `#elif`, a następną dyrektywą warunkową. Na przykład:  
   
 ```csharp
 #define VC7  
@@ -32,17 +32,17 @@ ms.lasthandoff: 11/21/2017
 #endif  
 ```  
   
- Można używać operatorów `==` (równości) `!=` (nierówność), `&&` (a) i `||` (lub), aby ocenić wiele symboli. Można także grupować symbole i operatory w nawiasach.  
+ Można używać operatorów `==` (równości) `!=` (nierówność), `&&` (a) i `||` (lub), aby ocenić wiele symboli. Można także grupować symbole i operatory za pomocą nawiasów.  
   
 ## <a name="remarks"></a>Uwagi  
- `#elif`odpowiada za pomocą:  
+ Użycie `#elif` jest równoważne z użyciem:  
   
 ```csharp
 #else  
 #if  
 ```  
   
- Przy użyciu `#elif` jest łatwiejsze, ponieważ każdy `#if` wymaga [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), podczas gdy `#elif` może być używany bez odpowiadającego mu `#endif`.  
+ Użycie `#elif` jest łatwiejsze, ponieważ każdy `#if` wymaga [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), podczas gdy `#elif` może być używany bez odpowiadającego mu `#endif`.  
   
  Zobacz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) przykład sposobu użycia `#elif`.  
   

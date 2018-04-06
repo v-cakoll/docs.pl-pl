@@ -20,9 +20,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="undef-c-reference"></a>#undef (odwołanie w C#)
-`#undef`Umożliwia usuń symbol, taki sposób, że przy użyciu symbolu jako wyrażenie w [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) dyrektywy, wyrażenie, które będą oceniać do `false`.  
+`#undef`Umożliwia cofnięcie definicji symbolu, w taki sposób, że przy użyciu symbolu jako wyrażenie w dyrektywie [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ,zostanie zwrócona wartość `false`.  
   
- Symbol może być zdefiniowany za pomocą [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) dyrektywy lub [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) — opcja kompilatora. `#undef` Dyrektywa musi występować w pliku, aby korzystać z żadnych instrukcji, które nie są również dyrektywy.  
+ Symbol może być zdefiniowany za pomocą dyrektywy [#define](../../../csharp/language-reference/preprocessor-directives/preprocessor-define.md) ,lub poprzez użycie opcji kompilatora [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Dyrektywa `#undef` musi pojawić się w pliku przed użyciem jakichkolwiek instrukcji, które nie są również dyrektywami.  
   
 ## <a name="example"></a>Przykład  
   

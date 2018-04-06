@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="define-c-reference"></a>#define (odwołanie w C#)
-Możesz użyć `#define` do definiowania symbolu. Jeśli używasz symbol jako wyrażenie, które są przekazywane do [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) dyrektywy, wyrażenie, które będą oceniać do `true`, jak pokazano na poniższym przykładzie:  
+Możesz użyć `#define` do definiowania symbolu. Jeżeli używasz symbolu jako wyrażenie, które jest przekazywane do dyrektywy [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md), wyrażenie zostanie ocenione jako `true`, jak pokazano na poniższym przykładzie:  
  
  ```csharp
  #define DEBUG
@@ -29,19 +29,19 @@ Możesz użyć `#define` do definiowania symbolu. Jeśli używasz symbol jako wy
 ## <a name="remarks"></a>Uwagi  
   
 > [!NOTE]
->  `#define` Dyrektywy nie można użyć do zadeklarowania stałe wartości, co jest zazwyczaj wykonywane w C i C++. Stałe języka C# najlepiej są definiowane jako statyczne elementy członkowskie klasy lub struktury. Jeśli masz kilka takich stałe, należy rozważyć utworzenie oddzielnych klasę "Stałe", aby je przechowywać.  
+>  `#define` Dyrektywy nie można użyć do zadeklarowania stałej wartości, co jest zazwyczaj wykonywane w C i C++. Stałe języka C# najlepiej są definiowane jako statyczne elementy członkowskie klasy lub struktury. Jeśli masz kilka takich stałych, należy rozważyć utworzenie oddzielnej klasy, aby je przechowywać.  
   
- Symbole może służyć do określenia warunków dla kompilacji. Możesz przetestować dla symbolu przy użyciu jednej [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) lub [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Można również użyć `conditional` atrybutu przeprowadzić kompilacji warunkowej.  
+ Symbole mogą służyć do określenia warunków dla kompilacji. Możesz przetestować symbol przy użyciu [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) lub [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md). Można również użyć atrybut `conditional`, aby przeprowadzić kompilację warunkową.  
   
- Można zdefiniować symbol, ale nie można przypisać wartości do symbolu. `#define` Dyrektywa musi występować w pliku, aby korzystać z żadnych instrukcji, które nie są również dyrektywy preprocesora.  
+ Symbol mozna zdefiniować, ale nie można do niego przypisać wartości. Dyrektywa  `#define` musi występować w pliku zanim skkorzystasz z innych instrukcji, które nie są również dyrektywami preprocesora.  
   
- Możesz również definiować symbol [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md) — opcja kompilatora. Można nie zdefiniowany symbol [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Możesz również definiować symbol przy pomocy opcji kompilatora [/ define](../../../csharp/language-reference/compiler-options/define-compiler-option.md). Można cofnąć definicję symbolu przy pomocy [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
- Symbol, który definiuje z `/define` lub `#define` nie powoduje konfliktu z zmienna o takiej samej nazwie. To, że nazwa zmiennej nie powinien zostać przekazany do dyrektywy preprocesora i symbol będzie możliwe tylko w dyrektywie preprocesora.  
+ Symbol, zdefiniowany przez `/define` lub `#define` nie powoduje konfliktu ze zmienną o takiej samej nazwie. To znaczy, że nazwa zmiennej nie powinien zostać przekazana do dyrektywy preprocesora i symbol będzie możliwy do obliczenia tylko w dyrektywie preprocesora.  
   
- Zakres symbol, który został utworzony przy użyciu `#define` jest plikiem, w którym symbol został zdefiniowany.  
+ Zakresem symbolu, który został utworzony przy użyciu `#define` jest plik, w którym został zdefiniowany.  
   
- Jak pokazano na poniższym przykładzie, możesz umieścić `#define` dyrektywy w górnej części pliku.  
+ Jak pokazano na poniższym przykładzie, musisz umieścić dyrektywy `#define` w górnej części pliku.  
   
 ```csharp  
 #define DEBUG  
@@ -67,7 +67,7 @@ public class TestDefine
 // Debugging is enabled.  
 ```  
   
- Na przykład sposobu usuń symbol zobacz [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
+ Jeżeli chcesz zapoznać się z przykładem cofania definicji symbolu, zobacz [#undef](../../../csharp/language-reference/preprocessor-directives/preprocessor-undef.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

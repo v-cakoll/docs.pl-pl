@@ -1,6 +1,6 @@
 ---
-title: "Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI"
-description: "Podsumowuje programu .NET Framework niezarządzanych API usługi WMI i wydajności informacji licznika."
+title: Liczniki wydajności (niezarządzany wykaz interfejsów API) i usługi WMI
+description: Podsumowuje programu .NET Framework niezarządzanych API usługi WMI i wydajności informacji licznika.
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett

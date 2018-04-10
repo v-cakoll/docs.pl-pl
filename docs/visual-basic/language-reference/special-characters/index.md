@@ -1,8 +1,9 @@
 ---
-title: "Znaki specjalne (odwołanie w Visual Basic)"
+title: Znaki specjalne (odwołanie w Visual Basic)
 ms.date: 10/31/2017
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 author: rpetrusha
 ms.author: ronpet

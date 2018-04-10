@@ -1,7 +1,7 @@
 ---
-title: "Wdrażanie jeden kontener na podstawie aplikacji sieci Web .NET Core hosty z systemem Linux lub Windows Nano Server"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wdrażanie jeden kontener na podstawie aplikacji sieci Web .NET Core hosty z systemem Linux lub Windows Nano Server"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Wdrażanie jeden kontener na podstawie aplikacji sieci Web .NET Core hosty z systemem Linux lub Windows Nano Server
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wdrażanie jeden kontener na podstawie aplikacji sieci Web .NET Core hosty z systemem Linux lub Windows Nano Server
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

@@ -1,5 +1,5 @@
 ---
-title: "Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Core i Azure"
+title: Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Core i Azure
 description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure | wprowadzenie
 author: ardalis
 ms.author: wiwagn

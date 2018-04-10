@@ -1,6 +1,6 @@
 ---
-title: "W samouczku języka C# — przewodnik C#"
-description: "Jesteś nowym użytkownikiem C#? Poznaj podstawy języka."
+title: W samouczku języka C# — przewodnik C#
+description: Jesteś nowym użytkownikiem C#? Poznaj podstawy języka.
 keywords: .NET, .NET core, C#, C# Elementarz, przewodnik C#
 author: BillWagner
 ms.author: wiwagn

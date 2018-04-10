@@ -1,7 +1,7 @@
 ---
-title: "Wprowadzenie do kontenerów i Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wprowadzenie do kontenerów i Docker"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Wprowadzenie do kontenerów i Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wprowadzenie do kontenerów i Docker
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

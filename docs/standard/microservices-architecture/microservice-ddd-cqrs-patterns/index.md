@@ -1,7 +1,7 @@
 ---
-title: "Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

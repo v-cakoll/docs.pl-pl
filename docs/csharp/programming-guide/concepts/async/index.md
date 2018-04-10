@@ -6,7 +6,7 @@ ms.technology:
 - devlang-csharp
 ms.topic: article
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-caps.latest.revision: 
+caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf

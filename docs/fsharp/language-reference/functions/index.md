@@ -1,7 +1,7 @@
 ---
 title: Funkcje (F#)
-description: "Poznaj funkcje F # oraz jak F # obsługuje typowych narzędzi programistycznych funkcjonalności."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Poznaj funkcje F # oraz jak F # obsługuje typowych narzędzi programistycznych funkcjonalności.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

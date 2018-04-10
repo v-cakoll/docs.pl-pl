@@ -1,6 +1,6 @@
 ---
 title: Przechowywanie wersji platformy .NET core
-description: "Dowiedz się, jak działa przechowywanie wersji platformy .NET Core."
+description: Dowiedz się, jak działa przechowywanie wersji platformy .NET Core.
 author: bleroy
 ms.author: mairaw
 ms.date: 02/13/2018

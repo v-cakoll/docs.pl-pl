@@ -1,6 +1,6 @@
 ---
 title: takeaways klucza
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy Microsoft a _v1.1 narzędzia (Książka elektroniczna)"
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy Microsoft a _v1.1 narzędzia (Książka elektroniczna)
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

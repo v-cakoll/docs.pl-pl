@@ -1,6 +1,6 @@
 ---
-title: "Przepływ pracy devops aplikacji docker z narzędzi firmy Microsoft"
-description: "Konteneryzowanych cyklem życia aplikacji Docker z platformy Microsoft a Toolsdevops przepływu pracy przy użyciu narzędzi firmy Microsoft"
+title: Przepływ pracy devops aplikacji docker z narzędzi firmy Microsoft
+description: Konteneryzowanych cyklem życia aplikacji Docker z platformy Microsoft a Toolsdevops przepływu pracy przy użyciu narzędzi firmy Microsoft
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

@@ -2,6 +2,7 @@
 ## [[], operator](index-operator.md)
 ## [(), operator](invocation-operator.md)
 ## [., operator](member-access-operator.md)
+## [Operatory ?. i ?[]](null-conditional-operators.md)
 ## [::, operator](namespace-alias-qualifer.md)
 ## [+, operator](addition-operator.md)
 ## [-, operator](subtraction-operator.md)
@@ -40,4 +41,3 @@
 ## [->, operator](dereference-operator.md)
 ## [??, operator](null-conditional-operator.md)
 ## [=>, operator](lambda-operator.md)
-## [Operatory warunkowe null](null-conditional-operators.md)

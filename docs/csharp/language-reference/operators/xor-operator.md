@@ -1,5 +1,5 @@
 ---
-title: "^ — Operator (odwołanie w C#)"
+title: ^ — Operator (odwołanie w C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise exclusive OR operator [C#]
 ms.assetid: b09bc815-570f-4db6-a637-5b4ed99d014a
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 4ccd32ea8abd8ca3252380083eafecad2b572ed7

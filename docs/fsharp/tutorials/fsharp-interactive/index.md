@@ -1,7 +1,7 @@
 ---
-title: "Odwołanie interakcyjne F# (fsi.exe)"
-description: "Dowiedz się, jak F # Interactive (fsi.exe) jest używany do interakcyjnego uruchamiania kodzie języka F # za pomocą konsoli lub wykonywanie skryptów F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Odwołanie interakcyjne F# (fsi.exe)
+description: 'Dowiedz się, jak F # Interactive (fsi.exe) jest używany do interakcyjnego uruchamiania kodzie języka F # za pomocą konsoli lub wykonywanie skryptów F #.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

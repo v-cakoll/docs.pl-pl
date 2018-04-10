@@ -1,5 +1,5 @@
 ---
-title: "=&gt;Operator (odwołanie w C#)"
+title: =&gt;Operator (odwołanie w C#)
 ms.date: 10/02/2017
 ms.prod: .net
 ms.technology:

@@ -1,7 +1,7 @@
 ---
-title: "Materiały referencyjne dotyczące języka F#"
-description: "Informacje o F # języka funkcji z odwołania tokeny języka, pojęcia typów, wyrażenia i tematy konstrukcja obsługiwane przez kompilator."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Materiały referencyjne dotyczące języka F#
+description: 'Informacje o F # języka funkcji z odwołania tokeny języka, pojęcia typów, wyrażenia i tematy konstrukcja obsługiwane przez kompilator.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

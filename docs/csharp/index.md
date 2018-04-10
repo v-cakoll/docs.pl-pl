@@ -1,6 +1,6 @@
 ---
-title: "Przewodnik dla języka C#"
-description: "Dowiedz się, jak przewodnik C# można uzyskać doskonałej znajomości w języku C#, czy jesteś deweloperem nowe lub ekspertów ekspert."
+title: Przewodnik dla języka C#
+description: Dowiedz się, jak przewodnik C# można uzyskać doskonałej znajomości w języku C#, czy jesteś deweloperem nowe lub ekspertów ekspert.
 author: BillWagner
 ms.date: 01/30/2018
 ms.topic: article

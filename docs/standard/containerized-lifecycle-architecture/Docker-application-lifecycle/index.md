@@ -1,6 +1,6 @@
 ---
-title: "Wprowadzenie do platformy Docker cyklu życia aplikacji"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
+title: Wprowadzenie do platformy Docker cyklu życia aplikacji
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

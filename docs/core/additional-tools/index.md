@@ -1,6 +1,6 @@
 ---
-title: "Dodatkowe narzędzia .NET core"
-description: "Przegląd dodatkowe narzędzia, które obsługują i rozszerzenia funkcji .NET Core."
+title: Dodatkowe narzędzia .NET core
+description: Przegląd dodatkowe narzędzia, które obsługują i rozszerzenia funkcji .NET Core.
 author: mlacouture
 manager: wpickett
 ms.author: johalex

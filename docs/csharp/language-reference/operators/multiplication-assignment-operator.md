@@ -1,5 +1,5 @@
 ---
-title: "Operator *= (odwołanie w C#)"
+title: Operator *= (odwołanie w C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 - '*= operator [C#]'
 - binary multiplication assignment operator (*=) [C#]
 ms.assetid: 2e472155-59db-4dbf-bb94-bcccfa1a794d
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: dc2201f78e1e05bd0ccdea04522896c00294bdd6

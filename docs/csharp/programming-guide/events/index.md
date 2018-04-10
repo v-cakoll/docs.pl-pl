@@ -1,5 +1,5 @@
 ---
-title: "Zdarzenia (Przewodnik programowania w języku C#)"
+title: Zdarzenia (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,7 +10,7 @@ helpviewer_keywords:
 - C# language, events
 - events [C#]
 ms.assetid: a8e51b22-d294-44fb-9539-0072f06c4cb3
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 72563b9e37c26257a2bf5939f63ece050ec003ab

@@ -1,7 +1,7 @@
 ---
-title: "Członkowie (F#)"
-description: "Informacje o elementach członkowskich obiektu w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Członkowie (F#)
+description: 'Informacje o elementach członkowskich obiektu w języku programowania w języku F #.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

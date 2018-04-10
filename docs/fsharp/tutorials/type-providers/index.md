@@ -1,7 +1,7 @@
 ---
-title: "Dostawcy typów"
-description: "Dowiedz się, jak dostawcy typów F # jest składnikiem, który zawiera typy, właściwości i metod do użycia w programach."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Dostawcy typów
+description: 'Dowiedz się, jak dostawcy typów F # jest składnikiem, który zawiera typy, właściwości i metod do użycia w programach.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

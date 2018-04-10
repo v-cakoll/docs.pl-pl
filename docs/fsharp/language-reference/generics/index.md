@@ -1,7 +1,7 @@
 ---
-title: "Typy ogólne (F#)"
-description: "Dowiedz się, jak używać funkcje ogólne F # i typy, które umożliwiają pisania kodu, który współpracuje z różnymi typami bez powtarzania kodu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Typy ogólne (F#)
+description: 'Dowiedz się, jak używać funkcje ogólne F # i typy, które umożliwiają pisania kodu, który współpracuje z różnymi typami bez powtarzania kodu.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

@@ -1,7 +1,7 @@
 ---
-title: "Implementowanie odporność aplikacji"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie odporność aplikacji"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Implementowanie odporność aplikacji
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie odporność aplikacji
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

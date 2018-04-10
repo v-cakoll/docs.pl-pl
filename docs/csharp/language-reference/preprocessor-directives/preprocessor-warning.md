@@ -20,14 +20,14 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="warning-c-reference"></a>#warning (odwołanie w C#)
-`#warning`Umożliwia wygenerowanie ostrzeżenia poziomu jednego z określonych lokalizacji w kodzie. Na przykład:  
+`#warning`Umożliwia wygenerowanie ostrzeżenia poziomu pierwszego w określonej lokalizacji w kodzie. Na przykład:  
   
 ```csharp
 #warning Deprecated code in this method.  
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Typowym zastosowaniem `#warning` w dyrektywie warunkowej. Istnieje również możliwość do generowania błędem zdefiniowane przez użytkownika z [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).  
+ Type jest zastosowanie `#warning` w dyrektywie warunkowej. Istnieje również możliwość wygenerowania błędu zdefiniowanego przez użytkownika z [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).  
   
 ## <a name="example"></a>Przykład  
   

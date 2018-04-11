@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: b9921bc3621d6abfc37b1bf1fc4f481620ccc407
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 8703670f650a16d1b6642eaaf4f82f0a73ab4c69
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="get-started-with-semantic-analysis"></a>Wprowadzenie do analizy semantycznego
 
@@ -36,7 +36,7 @@ Podobnie jak <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithTyp
 
 W ramach tego samouczka przyjrzymy się "Hello World" program ponownie. Teraz, zapytania symboli w programie, aby zrozumieć, jakie typy reprezentują te symbole. Zapytanie dla typów w przestrzeni nazw i Dowiedz się znaleźć dostępne metody w typie.
 
-Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SemanticQuickStart).
+Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart).
 
 > [!NOTE]
 > Typy drzewa składni umożliwia dziedziczenia opisano elementy składni różnych są prawidłowe w różnych miejscach w programie. Za pomocą tych interfejsów API często oznacza, że właściwości rzutowanie lub członków kolekcji do określonych typów pochodnych. W poniższych przykładach rzutowania i przydziału są osobnych instrukcji, korzystając ze zmiennych jawnie typu. Możesz przeczytać kod w celu wyświetlenia zwracane typy interfejsu API i typu środowiska uruchomieniowego zwracanych obiektów. W praktyce jest niejawnie wpisane zmienne i zależą od nazwy interfejsu API do opisu typu obiektów badane częściej.

@@ -1,6 +1,6 @@
 ---
-title: "C# interaktywnych samouczków — Przewodniki Szybki Start C#"
-description: "Naucz się C# w przeglądarce i rozpocząć pracę ze środowiskiem programistycznym"
+title: C# interaktywnych samouczków — Przewodniki Szybki Start C#
+description: Naucz się C# w przeglądarce i rozpocząć pracę ze środowiskiem programistycznym
 keywords: C#, wprowadzenie, lekcje, interakcyjne
 author: billwagner
 ms.author: wiwagn

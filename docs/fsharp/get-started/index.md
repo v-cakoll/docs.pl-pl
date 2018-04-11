@@ -1,7 +1,7 @@
 ---
-title: "Wprowadzenie do języka F #"
-description: "Dowiedz się, jak rozpocząć pracę z języka .NET programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania .NET, .NET Core"
+title: 'Wprowadzenie do języka F #'
+description: 'Dowiedz się, jak rozpocząć pracę z języka .NET programowania w języku F #.'
+keywords: 'Visual f #, f #, funkcjonalności programowania .NET, .NET Core'
 author: cartermp
 ms.author: phcart
 ms.date: 09/06/2016

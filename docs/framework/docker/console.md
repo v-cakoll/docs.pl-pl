@@ -1,6 +1,6 @@
 ---
 title: Uruchamianie aplikacji konsoli w Docker
-description: "Dowiedz się, jak wykonać istniejącej aplikacji konsoli .NET Framework i uruchom go w kontenerze Docker systemu Windows."
+description: Dowiedz się, jak wykonać istniejącej aplikacji konsoli .NET Framework i uruchom go w kontenerze Docker systemu Windows.
 author: spboyer
 keywords: Aplikacje kontenera, konsoli .NET
 ms.date: 09/28/2016
@@ -9,11 +9,11 @@ ms.prod: .net-framework
 ms.technology: vs-ide-deployment
 ms.devlang: dotnet
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 037d94452dd62c06fe6d8ac7aea1143f52b96d32
-ms.sourcegitcommit: 685143b62385500f59bc36274b8adb191f573a16
+ms.openlocfilehash: 7990ed03028ea9361a8b1760b237b8ed2f9d204d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/09/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Uruchamianie aplikacji konsoli w kontenerach systemu Windows
 
@@ -25,7 +25,7 @@ Przykładowa aplikacja konsolowa jest prosty przykład, w tym przypadku przyjmuj
 
 Oprócz odpowiedzi `Environment.MachineName` został dodany do odpowiedzi wskazują różnice między uruchomieniem aplikacji lokalnie i w kontenerze systemu Windows. Podczas uruchamiania aplikacji lokalnie, nazwę komputera lokalnego ma zostać zwrócony, a podczas uruchamiania w kontenerze systemu Windows; Identyfikator sesji kontenera jest zwracana.
 
-[Pełny przykład](https://github.com/dotnet/docs/tree/master/samples/framework/docker/ConsoleRandomAnswerGenerator) jest dostępny w repozytorium dotnet/docs w witrynie GitHub. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+[Pełny przykład](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator) jest dostępny w repozytorium dotnet/próbek w witrynie GitHub. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Należy zapoznać się z niektórych Docker warunki przed rozpoczęciem pracy na przenoszenie aplikacji do kontenera.
 
@@ -54,7 +54,7 @@ Kontenery systemu Windows są obsługiwane w [systemu Windows 10 Anniversary akt
 
 Musisz mieć Docker dla systemu Windows, wersja 1.12 26 lub nowszej wersji Beta do obsługi systemu Windows kontenerów. Domyślnie Docker umożliwia kontenery opartymi na systemie Linux; Przełącz się do kontenerów systemu Windows przez kliknięcie prawym przyciskiem myszy ikonę Docker na pasku zadań i wybierz **przełączyć się do systemu Windows kontenery**. Docker uruchomi proces zmiany i może być wymagane ponowne uruchomienie.
 
-![Kontenery systemu Windows](./media/console/SwitchContainer.png)
+![Windows-Containers](./media/console/SwitchContainer.png)
 
 ## <a name="building-the-application"></a>Tworzenie aplikacji
 Zwykle aplikacje konsoli są dystrybuowane za pomocą Instalatora, FTP lub udziału plików wdrożenia. W przypadku wdrażania w danym kontenerze, zasoby muszą być skompilowane i przygotowane do lokalizacji, która może być używana podczas tworzenia obrazu Docker.

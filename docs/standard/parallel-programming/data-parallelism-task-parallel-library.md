@@ -1,12 +1,12 @@
 ---
-title: "Równoległość danych (Biblioteka zadań równoległych)"
-ms.custom: 
+title: Równoległość danych (Biblioteka zadań równoległych)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-caps.latest.revision: 
+caps.latest.revision: 25
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0644e2d9e7a52dd5747c9442a4771aa7400cdcb0
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 68c04f02c4e173676d2b64d4180b1204f5466f35
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="data-parallelism-task-parallel-library"></a>Równoległość danych (Biblioteka zadań równoległych)
 *Równoległość danych* odwołuje się do scenariuszy, w których tej samej operacji jest wykonywane jednocześnie (równolegle w) w przypadku elementów w źródłowej kolekcji lub tablicy. W operacji równoległych danych kolekcji źródłowej jest partycjonowany, dzięki czemu wiele wątków może działać jednocześnie w różnych segmentach.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 01/19/2018
   
  Zarówno <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> metody ma kilka przeciążeń umożliwiające można zatrzymać lub Przerwij wykonywanie pętli, monitorować stan pętli na inne wątki, zarządzania stanem lokalnej wątku, finalize obiektów wątków lokalnych, sterowania stopniem współbieżności, i tak dalej. Typy pomocnika, które włączyć tę funkcję zawierają <xref:System.Threading.Tasks.ParallelLoopState>, <xref:System.Threading.Tasks.ParallelOptions>, <xref:System.Threading.Tasks.ParallelLoopResult>, <xref:System.Threading.CancellationToken>, i <xref:System.Threading.CancellationTokenSource>.  
   
- Aby uzyskać więcej informacji, zobacz [wzorce z równoległych programowania](http://go.microsoft.com/fwlink/p/?LinkId=265491).  
+ Aby uzyskać więcej informacji, zobacz [wzorce dla programowania równoległego: opis i stosowanie wzorów równoległych z programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222).  
   
  Równoległość danych ze składnią deklaratywne lub typu kwerendy jest obsługiwana przez PLINQ. Aby uzyskać więcej informacji, zobacz [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/19/2018
 |[Porady: zatrzymywanie lub przerwa w równoległej pętli for](http://msdn.microsoft.com/library/de52e4f1-9346-4ad5-b582-1a4d54dc7f7e)|Opisuje sposób zatrzymania lub przerwać pętlę równoległą poinformowania wszystkie wątki akcji.|  
 |[Instrukcje: zapisywanie pętli Parallel.For ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.For%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
 |[Instrukcje: zapisywanie pętli Parallel.ForEach ze zmiennymi lokalnymi wątku](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-thread-local-variables.md)|Opisuje sposób zapisania <xref:System.Threading.Tasks.Parallel.ForEach%2A> pętli, w którym każdy wątek przechowuje prywatnej zmiennej, która nie jest widoczny dla innych wątków i synchronizowanie wyniki ze wszystkich wątków po zakończeniu pętli.|  
-|[Instrukcje: anulowanie pętli Parallel.For lub ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opisuje sposób anulowanie równoległej pętli przy użyciu<xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
+|[Instrukcje: anulowanie pętli Parallel.For lub ForEach](../../../docs/standard/parallel-programming/how-to-cancel-a-parallel-for-or-foreach-loop.md)|Opisuje sposób anulowanie równoległej pętli przy użyciu <xref:System.Threading.CancellationToken?displayProperty=nameWithType>|  
 |[Instrukcje: przyspieszanie małych jednostek pętli](../../../docs/standard/parallel-programming/how-to-speed-up-small-loop-bodies.md)|W tym artykule opisano jeden ze sposobów przyspieszenia wykonywania, gdy wnętrze pętli jest bardzo mała.|  
 |[Biblioteka zadań równoległych (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|Zawiera omówienie Biblioteka zadań równoległych.|  
 |[Programowanie równoległe](../../../docs/standard/parallel-programming/index.md)|Wprowadza Programowanie równoległe w .NET Framework.|  

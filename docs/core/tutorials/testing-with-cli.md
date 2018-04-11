@@ -1,6 +1,6 @@
 ---
-title: "Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core"
-description: "W tym samouczku opisano sposób organizowania i testowanie projektów .NET Core w wierszu polecenia."
+title: Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
+description: W tym samouczku opisano sposób organizowania i testowanie projektów .NET Core w wierszu polecenia.
 keywords: Testowanie .NET Core CLI, xUnit jednostki .NET i .NET core
 author: cartermp
 ms.author: mairaw
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 52ff1be3-d92e-4477-9c84-8c1771e87ab5
-ms.workload: dotnetcore
-ms.openlocfilehash: 4b8728a175d67cc532866d4de41d412e459f0291
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c68b7cb7dac069093e2e849543c5b5c21b4ffe3a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>Organizowanie i testowanie projektów przy użyciu wiersza polecenia platformy .NET Core
 
@@ -52,7 +53,7 @@ Projekty, które logicznie grupy plików w folderach łatwych do nawigowania i o
 
 ### <a name="building-the-sample"></a>Tworzenie przykładowej
 
-Dla następujących kroków, można to wykonać przy użyciu [NewTypes zwierząt domowych próbki](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/NewTypesMsBuild) lub tworzyć własne pliki i foldery. Typy są logicznie pogrupowane w struktury folderów, która pozwala na dodanie większej liczby typów później, a testy również logicznie są umieszczane w folderach umożliwiający dodanie większej liczby testów później.
+Dla następujących kroków, można to wykonać przy użyciu [NewTypes zwierząt domowych próbki](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) lub tworzyć własne pliki i foldery. Typy są logicznie pogrupowane w struktury folderów, która pozwala na dodanie większej liczby typów później, a testy również logicznie są umieszczane w folderach umożliwiający dodanie większej liczby testów później.
 
 Próbka zawiera dwa typy `Dog` i `Cat`i ich implementacji wspólny interfejs ma `IPet`. Dla `NewTypes` projektu, jest organizowania typów związanych z pet do *zwierząt domowych* folderu. Jeśli później dodać inny zestaw typów *WildAnimals* na przykład jest umieszczany w *NewTypes* folderu obok *zwierząt domowych* folderu. *WildAnimals* folder może zawierać typy zwierząt, które nie są zwierząt domowych, takich jak `Squirrel` i `Rabbit` typów. W ten sposób jako typy są dodawane, projekt pozostaje również zorganizowany. 
 
@@ -82,7 +83,7 @@ Utwórz następującą strukturę folderów z zawartością pliku wskazanego:
 
 [!code-csharp[Cat class](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Pets/Cat.cs)]
 
-*Plik program.cs*:
+*Program.cs*:
 
 [!code-csharp[Main](../../../samples/core/console-apps/NewTypesMsBuild/src/NewTypes/Program.cs)]
 
@@ -103,7 +104,7 @@ Woof!
 Meow!
 ```
 
-Ćwiczenie opcjonalne: można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Wprowadź ptaka `TalkToOwner` podać metodę `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać`Tweet!`
+Ćwiczenie opcjonalne: można dodać nowy typ domowych, takich jak `Bird`, rozszerzając tego projektu. Wprowadź ptaka `TalkToOwner` podać metodę `Tweet!` do właściciela. Ponownie uruchom aplikację. Dane wyjściowe będą zawierać `Tweet!`
 
 ### <a name="testing-the-sample"></a>Testowanie próbki
 

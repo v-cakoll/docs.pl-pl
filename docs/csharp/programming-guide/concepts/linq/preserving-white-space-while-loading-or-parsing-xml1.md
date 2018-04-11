@@ -1,30 +1,31 @@
 ---
-title: "Zachowanie podczas ładowania lub analizowania XML1 biały znak"
-ms.custom: 
+title: Zachowanie podczas ładowania lub analizowania XML1 biały znak
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: bc4923ef5ea526de3c988636cd766c3b012c902e
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 74576fbc6707607ff9b2557b0825110e32c0b897
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>Zachowywanie biały znak podczas ładowania lub analiza kodu XML
-W tym temacie opisano sposób kontrolowania zachowania biały znak [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
+W tym temacie opisano, jak można kontrolować zachowanie spacji [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  Typowy scenariusz jest Odczytaj dane XML z wcięciami, utwórz drzewo XML w pamięci bez żadnych białe węzły tekstowe (to znaczy nie zachowania biały znak), operacji na pliku XML, a następnie zapisz plik XML z wcięcia. Podczas formatowania kodu XML, tylko znaczący biały znak w drzewie XML są zachowywane. Jest to domyślne zachowanie dla [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)].  
   
  Inny typowy scenariusz polega może odczytywać i modyfikować XML, który już został celowo wcięcia. Nie można zmienić tej wcięcia w dowolny sposób. Aby to zrobić w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], można zachować biały znak w przypadku obciążenia lub analizy kodu XML i wyłączyć formatowania podczas serializacji XML.  
   
- W tym temacie opisano zachowanie biały znak metod, które wypełnić drzew XML. Informacje dotyczące sterowania biały znak, podczas serializacji XML drzewa, zobacz [zachowania biały znak podczas serializowania](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
+ W tym temacie opisano zachowanie spacji metod, które wypełnić drzew XML. Informacje dotyczące sterowania biały znak, podczas serializacji XML drzewa, zobacz [zachowania biały znak podczas serializowania](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md).  
   
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>Zachowanie metody, które wypełnić drzew XML  
  Następujące metody w <xref:System.Xml.Linq.XElement> i <xref:System.Xml.Linq.XDocument> klasy wypełnić drzewo XML. Drzewo składni XML z pliku, można go wypełnić <xref:System.IO.TextReader>, <xref:System.Xml.XmlReader>, lub ciągiem:  

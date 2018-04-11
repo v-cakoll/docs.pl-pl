@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: c5720d5391eec327aa2f885fd65579aeb6260488
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-linq"></a>Praca z LINQ
 
@@ -32,7 +32,7 @@ Magicians użyć tej metody, ponieważ wszystkie karty w znanej lokalizacji po k
 
 W celach naszych jest światła hearted przyjrzeć się manipulowanie sekwencji danych. Aplikację, która będzie kompilacji zostanie skonstruować talii kart, a następnie wykonaj sekwencję przesuwa zapisywania sekwencji zawsze wtedy. Będzie także porównać zaktualizowane kolejności do oryginalnego zamówienia.
 
-Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również sprawdzić [ukończone próbki](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) w repozytorium GitHub dotnet/docs. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również sprawdzić [ukończone próbki](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium GitHub dotnet/próbek. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 

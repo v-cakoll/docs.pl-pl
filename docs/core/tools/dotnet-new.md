@@ -3,17 +3,17 @@ title: polecenie Nowy DotNet - .NET Core interfejsu wiersza polecenia
 description: Nowe polecenie dotnet tworzy nowe projekty .NET Core na podstawie określonego szablonu.
 author: mairaw
 ms.author: mairaw
-ms.date: 03/21/2018
+ms.date: 03/26/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 2cbd42195d0ec713d2ccb4af823075ece950ceff
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 4432587c0015c353a34816eee4206dc53cdefba9
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-new"></a>nowe DotNet
 
@@ -42,7 +42,7 @@ dotnet new [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet new` Polecenia oferują wygodny sposób zainicjować prawidłowy projekt .NET Core. 
+`dotnet new` Polecenia oferują wygodny sposób zainicjować prawidłowy projekt .NET Core.
 
 Wywołania polecenia [aparatu szablonu](https://github.com/dotnet/templating) do tworzenia artefaktów na dysku, na podstawie określonego szablonu i opcje.
 
@@ -122,6 +122,9 @@ Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołane 
 
 Język szablonu do utworzenia. Język zaakceptowane, jest zależna od szablonu (zobacz ustawień domyślnych w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla pewnych szablonów.
 
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
+
 `-n|--name <OUTPUT_NAME>`
 
 Nazwa utworzone dane wyjściowe. Jeśli nazwa nie zostanie określona, jest używana nazwa bieżącego katalogu.
@@ -159,6 +162,9 @@ Wyświetla listę szablonów zawierających określonej nazwy. Jeśli wywołane 
 `-lang|--language {C#|F#}`
 
 Język szablonu do utworzenia. Język zaakceptowane, jest zależna od szablonu (zobacz ustawień domyślnych w [argumenty](#arguments) sekcji). Nie jest prawidłowy dla pewnych szablonów.
+
+    > [!NOTE]
+    > Some shells interpret `#` as a special character. In those cases, you need to enclose the language parameter value, such as `dotnet new console -lang "F#"`.
 
 `-n|--name <OUTPUT_NAME>`
 
@@ -304,7 +310,7 @@ Każdy szablon projektu może być dostępne dodatkowe opcje. Szablony core są 
 
 Utworzyć projekt aplikacji konsoli F # w bieżącym katalogu:
 
-`dotnet new console -lang f#`
+`dotnet new console -lang F#`
 
 Utwórz .NET Standard projektu biblioteki klas w określonym katalogu (dostępne tylko z zestawu SDK programu .NET Core 2.0 lub nowsze wersje):
 

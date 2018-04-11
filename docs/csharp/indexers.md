@@ -1,7 +1,7 @@
 ---
 title: Indeksatory
-description: "Dowiedz się więcej o języku C# indeksatory i sposobu wdrażania indeksowane właściwości, które są właściwościami odwoływać się przy użyciu co najmniej jeden argument."
-keywords: .NET, .NET core
+description: Dowiedz się więcej o języku C# indeksatory i sposobu wdrażania indeksowane właściwości, które są właściwościami odwoływać się przy użyciu co najmniej jeden argument.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 32e090524f414ef93b8481a8ad356b313191d8b9
-ms.sourcegitcommit: 5fb6646b5ee3769ffb214e672041833ea4ceeb26
+ms.openlocfilehash: f0731061c518a61ce5b81e8282915b1245239864
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/08/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="indexers"></a>Indeksatory
 
@@ -51,7 +51,7 @@ Obecność argumentów, aby odwołać się do elementu w zestawie elementów odr
 Należy zdefiniować *indeksatory* w danego typu, gdy jej interfejsu API modele pewnej kolekcji miejscu należy określić argumenty do tej kolekcji. Twoje indeksatory mogą lub nie mogą być mapowane bezpośrednio do typów kolekcji, które są częścią programu .NET framework core. Danego typu może mieć inne obowiązki oprócz modelowania kolekcji.
 Indeksatory umożliwiają stosowanie odpowiadającego danego typu abstrakcji bez narażania wewnętrzny szczegóły jak przechowywane lub obliczanej wartości dla tego abstrakcji interfejsu API.
 
-Przejdźmy niektóre typowe scenariusze dotyczące korzystania z *indeksatory*. Dostęp można uzyskać [przykładowy folder dla indeksatorów](https://github.com/dotnet/docs/tree/master/samples/csharp/indexers). Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Przejdźmy niektóre typowe scenariusze dotyczące korzystania z *indeksatory*. Dostęp można uzyskać [przykładowy folder dla indeksatorów](https://github.com/dotnet/samples/tree/master/csharp/indexers). Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="arrays-and-vectors"></a>Tablice i wektorów
 

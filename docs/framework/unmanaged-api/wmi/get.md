@@ -1,6 +1,6 @@
 ---
-title: "Get — funkcja (niezarządzany wykaz interfejsów API)"
-description: "Funkcja Get pobiera wartość określonej właściwości."
+title: Get — funkcja (niezarządzany wykaz interfejsów API)
+description: Funkcja Get pobiera wartość określonej właściwości.
 ms.date: 11/06/2017
 ms.prod: .net-framework
 ms.technology:

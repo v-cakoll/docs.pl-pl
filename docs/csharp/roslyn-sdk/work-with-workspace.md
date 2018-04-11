@@ -1,6 +1,6 @@
 ---
 title: Praca z zestawu SDK platformy kompilatora .NET modelu obszaru roboczego
-description: "Ten przegląd zawiera opis używanego do wykonywania zapytań i modyfikowania obszaru roboczego i projekty dla kodu typu."
+description: Ten przegląd zawiera opis używanego do wykonywania zapytań i modyfikowania obszaru roboczego i projekty dla kodu typu.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: d0d4e9c012b025b9393ac34f0833795fca9841d5
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: c42795346c505f925c0b4cb232325085fa065201
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="work-with-a-workspace"></a>Praca z obszaru roboczego
 
@@ -40,7 +40,7 @@ Dokument jest również częścią modelu ogólne niezmienne rozwiązania. Dokum
 
 Poniższy diagram to reprezentacja powiązań obszaru roboczego do hosta środowiska, narzędzia i jak zostały wprowadzone zmiany.
 
-![relacje między różnych elementów obszaru roboczego zawierające projekty i plików źródłowych](media/workspace-obj-relations.png)
+![relacje między różnych elementów obszaru roboczego zawierające projekty i plików źródłowych](media/work-with-workspace/workspace-obj-relations.png)
 
 ## <a name="summary"></a>Podsumowanie
 

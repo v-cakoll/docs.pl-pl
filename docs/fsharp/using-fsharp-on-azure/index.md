@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 0849bc77139b4f4383e2c772f5bae62741ee2b8b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Przy użyciu języka F # na platformie Azure
 
@@ -121,7 +121,7 @@ Maszyny wirtualne platformy Azure mogą być programowane wdrożone i zarządzan
 
 Podobnie innych zasobów platformy Azure mogą również być wdrożone i zarządzane przez skrypty F # za pomocą tego samego składników. Na przykład możesz można utworzyć konta magazynu, wdrażania usługi w chmurze Azure, tworzenia wystąpień bazy danych Azure rozwiązania Cosmos i programowe zarządzanie koncentratory powiadomienia Azure ze skryptów F #.
 
-Przy użyciu języka F # skryptów do wdrażania i zarządzania zasobami nie jest zazwyczaj konieczne. Na przykład zasobów platformy Azure można także wdrożonej międzypaństwowymi, bezpośrednio z opisy szablonu JSON, które mogą być sparametryzowana. Zobacz [szablony Menedżera zasobów Azure](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablonów Szybki Start Azure](https://azure.microsoft.com/documentation/templates/).
+Przy użyciu języka F # skryptów do wdrażania i zarządzania zasobami nie jest zazwyczaj konieczne. Na przykład zasobów platformy Azure można także wdrożonej międzypaństwowymi, bezpośrednio z opisy szablonu JSON, które mogą być sparametryzowana. Zobacz [szablony Menedżera zasobów Azure](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablonów Szybki Start Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Inne zasoby
 

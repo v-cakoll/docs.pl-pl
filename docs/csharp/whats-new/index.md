@@ -1,7 +1,7 @@
 ---
-title: "Nowości w języku C# — przewodnik C#"
-description: "Jak ewoluuje w języku C#"
-keywords: "C#, najnowsze funkcje nowości, Roslyn"
+title: Nowości w języku C# — przewodnik C#
+description: Jak ewoluuje w języku C#
+keywords: C#, najnowsze funkcje nowości, Roslyn
 author: BillWagner
 ms.author: wiwagn
 ms.date: 11/13/2017

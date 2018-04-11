@@ -1,7 +1,7 @@
 ---
-title: "Obsługa wyjątków (F#)"
-description: "Poznaj podstawy obsługi wyjątków w F # i łącza do obsługi wyrażeń i funkcji wyjątków."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Obsługa wyjątków (F#)
+description: 'Poznaj podstawy obsługi wyjątków w F # i łącza do obsługi wyrażeń i funkcji wyjątków.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

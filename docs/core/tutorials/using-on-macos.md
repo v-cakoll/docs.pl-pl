@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8ad82148-dac8-4b31-9128-b0e9610f4d9b
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 8c045e5625cee53acc4daa3c9fca524bc953b5a1
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: d130ef34961d19c450dd7142c8a5996c83465646
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-macos"></a>Wprowadzenie do platformy .NET Core na macOS
 
@@ -34,7 +34,7 @@ Zainstaluj rozszerzenie programu Visual Studio kodu C# otwierania Visual Studio 
 
 ## <a name="getting-started"></a>Wprowadzenie
 
-W tym samouczku, Utwórz trzy projekty: projektu biblioteki testów dla tego projektu biblioteki, a aplikacja konsolowa, która wykorzystuje biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/docs/tree/master/samples/core/getting-started/golden) dla tego tematu w repozytorium dotnet/docs w witrynie GitHub. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tym samouczku, Utwórz trzy projekty: projektu biblioteki testów dla tego projektu biblioteki, a aplikacja konsolowa, która wykorzystuje biblioteki. Możesz [wyświetlić lub pobrać źródło](https://github.com/dotnet/samples/tree/master/core/getting-started/golden) dla tego tematu w repozytorium dotnet/próbek w witrynie GitHub. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Uruchom kod programu Visual Studio. Naciśnij klawisz <kbd>Ctrl</kbd> + <kbd> \` </kbd> (znak znakami odwróconego lub backtick) lub wybierz **Widok > zintegrowane Terminal** z menu, aby otworzyć osadzonych Terminal w programie Visual Studio Code. Nadal można otworzyć zewnętrznego powłoki Eksploratora **Otwórz w wierszu polecenia** polecenia (**Otwórz w terminalu** na Mac lub Linux), jeśli wolisz pracować poza Visual Studio Code.
 

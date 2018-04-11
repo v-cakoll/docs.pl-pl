@@ -1,21 +1,22 @@
 ---
-title: "Przetwarzanie pliku XML (Przewodnik programowania w języku C#)"
+title: Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e8b4c078ffcf7ba7690b7f3dd61bfab4162dd2cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 1e6e983d4fc07aaadc294bc67e146ac600f4c5bc
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>Przetwarzanie pliku XML (Przewodnik programowania w języku C#)
 Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zostanie oznaczony do generowania dokumentacji. (Informacje o sposobie tagów w kodzie, zobacz [tagi zalecane dla komentarzy do dokumentacji](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md).) Ciąg Identyfikatora unikatowo identyfikuje konstrukcja. Programy, które przetwarzają plik XML można umożliwia zidentyfikowanie odpowiadający mu element .NET Framework metadane/odbicia dotyczy dokumentacji ciąg Identyfikatora.  
@@ -24,7 +25,7 @@ Kompilator generuje ciąg Identyfikatora dla każdego konstrukcji w kodzie zosta
   
  Kompilator stosuje następujące reguły podczas generowania ciągi identyfikatorów:  
   
--   Jest bez białych znaków w ciągu.  
+-   Nie biały znak jest ciąg.  
   
 -   Pierwsza część ciąg Identyfikatora określa rodzaj elementu członkowskiego identyfikowalne i jednego znaku z dwukropkiem. Używane są następujące typy elementu członkowskiego:  
   

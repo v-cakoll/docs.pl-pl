@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 90d6542122dd8c579c63f5f003441ce63a7ca5e9
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 9e42253e520b89fd8a864dead8c17d53bdb8a439
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="get-started-with-syntax-analysis"></a>Wprowadzenie do analizy składni
 
@@ -41,7 +41,7 @@ Spójrz na tekst poprzedniego programu. Rozpoznajesz elementy. Plik źródłowy 
 
 Interfejs API składni tworzy struktury drzewa z elementem głównym reprezentujący jednostki kompilacji. Reprezentuje węzłów w drzewie przy użyciu dyrektyw, deklaracji przestrzeni nazw i inne elementy programu. Struktura drzewa będzie kontynuowane do najniższego poziomów: ciąg "Hello World!" jest **token literału ciągu** będący elementem podrzędnym **argument**. Interfejs API składni zapewnia dostęp do struktury programu. Można wyszukać określonego kodu rozwiązania, przeprowadź całego drzewa, że kod i tworzenia nowego drzew przez zmodyfikowanie istniejącego drzewa.
 
-Ten krótki opis zawiera omówienie tego rodzaju informacje dostępne przy użyciu interfejsu API składni. Interfejs API składni jest nic więcej niż posiadanie interfejs API, który opisuje znanego kodu tworzy należy znać w języku C#. Pełne możliwości zawierają informacje o sposób formatowania kodu m.in. podziały wierszy, odstępy i wcięcia. Korzystając z tych informacji, możesz pełni reprezentują kod napisany i odczytu przez programistów człowieka lub kompilatora. Przy użyciu tej struktury pozwala na współdziałanie z kodem źródłowym na poziomie głęboko łatwy do rozpoznania. Nie jest już ciągów tekstowych, ale dane, które reprezentują struktura programu w języku C#.
+Ten krótki opis zawiera omówienie tego rodzaju informacje dostępne przy użyciu interfejsu API składni. Interfejs API składni jest nic więcej niż posiadanie interfejs API, który opisuje znanego kodu tworzy należy znać w języku C#. Pełne możliwości zawierają informacje o sposób formatowania kodu oraz podziałów wierszy, biały znak, wcięcia. Korzystając z tych informacji, możesz pełni reprezentują kod napisany i odczytu przez programistów człowieka lub kompilatora. Przy użyciu tej struktury pozwala na współdziałanie z kodem źródłowym na poziomie głęboko łatwy do rozpoznania. Nie jest już ciągów tekstowych, ale dane, które reprezentują struktura programu w języku C#.
 
 Aby rozpocząć pracę, musisz zainstalować **zestawu SDK platformy kompilatora .NET**:
 
@@ -58,13 +58,13 @@ Są cztery podstawowe bloki drzewa składni:
 * <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> Klasy drzewo analizy całego reprezentuje wystąpienie. <xref:Microsoft.CodeAnalysis.SyntaxTree> jest klasą abstrakcyjną, zawierający pochodne specyficzny dla języka. Użyj metody parse <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) klasy można przeanalizować tekstu w językach C# i VB.
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> Klasy wystąpień, które reprezentują konstrukcje składni takich jak deklaracje, instrukcje klauzule i wyrażenia.
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> Struktury, która reprezentuje pojedyncze słowo kluczowe, identyfikator, operator lub znaki interpunkcyjne.
-* I na końcu <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> struktury, która reprezentuje składniowo nieznaczne bity informacje, takie jak odstępów między tokeny, dyrektywy preprocesora i komentarze.
+* I na końcu <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> struktury, która reprezentuje składniowo nieznaczne bity informacje, takie jak biały znak między tokeny, dyrektywy preprocesora i komentarze.
 
 Elementy towarzyszące składni, tokeny i węzły składają się hierarchicznie Aby utworzyć drzewo reprezentujący całkowicie wszystko w fragment kodu języka Visual Basic lub C#. Widać, za pomocą tej struktury **wizualizatora składni** okna. W programie Visual Studio, wybierz **widoku** > **inne okna** > **wizualizatora składni**. Na przykład poprzedniego pliku źródłowego C# zbadać za pomocą **wizualizatora składni** wygląda podobnie do poniższej ilustracji:
 
 **SyntaxNode**: niebieski | **SyntaxToken**: zielony | **SyntaxTrivia**: czerwony ![plik kodu C#](media/walkthrough-csharp-syntax-figure1.png)
 
-Przechodząc ta struktura drzewa, można znaleźć w pliku kodu instrukcji, wyrażenie, token lub bitowego odstępu.
+Przechodząc ta struktura drzewa, można znaleźć instrukcji, wyrażenie, token lub bitowego biały znak w pliku kodu.
 
 Możesz niczego znaleźć w pliku kodu za pomocą interfejsów API składni, większości scenariuszy związana badanie małych fragmentów kodu lub wyszukiwanie określonego instrukcji lub fragmenty. Dwa przykłady, które należy wykonać typowe Pokaż używa do przeglądania struktury kodu lub wyszukiwania dla jednej instrukcji.
 
@@ -74,7 +74,7 @@ Można sprawdzić węzłów w drzewie składni na dwa sposoby. Można przechodze
 
 ### <a name="manual-traversal"></a>Przechodzenie ręczne
 
-Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart).
+Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart).
 
 > [!NOTE]
 > Typy drzewa składni umożliwia dziedziczenia opisano elementy składni różnych są prawidłowe w różnych miejscach w programie. Za pomocą tych interfejsów API często oznacza, że właściwości rzutowanie lub członków kolekcji do określonych typów pochodnych. W poniższych przykładach rzutowania i przydziału są osobnych instrukcji, korzystając ze zmiennych jawnie typu. Możesz przeczytać kod w celu wyświetlenia zwracane typy interfejsu API i typu środowiska uruchomieniowego zwracanych obiektów. W praktyce jest niejawnie wpisane zmienne i zależą od nazwy interfejsu API do opisu typu obiektów badane częściej.
@@ -164,7 +164,7 @@ W tym przykładzie implementuje <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntax
 
 Tworzenie nowych C# **autonomiczne narzędzie do analizy kodu** projektu; nadaj mu nazwę "**SyntaxWalker**."
 
-Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/roslyn-sdk/SyntaxQuickStart). Przykładem w witrynie GitHub zawiera oba projekty opisane w tym samouczku.
+Można wyświetlić kod zakończenia dla tego przykładu w [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SyntaxQuickStart). Przykładem w witrynie GitHub zawiera oba projekty opisane w tym samouczku.
 
 Jak poprzedni przykład można zdefiniować stałą typu string do przechowywania tekstu programu, który będzie analizować:
 

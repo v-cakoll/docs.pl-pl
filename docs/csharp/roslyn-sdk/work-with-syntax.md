@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>Praca z składni
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/26/2018
 
 Drzewa składni są podstawowej struktury używany dla kompilacji, analizy kodu, powiązanie, refaktoryzacji funkcje IDE i generowania kodu. Żadna część kod źródłowy jest rozpoznawany bez najpierw są zidentyfikowane i przydzielone do jednego z wielu elementów dobrze znanego strukturalnych języka. 
 
-Drzewa składni ma trzy atrybuty klucza. Pierwszy atrybut jest, że drzewa składni przechowywać wszystkie informacje o źródle w pełnej rozdzielczości. Oznacza to, że drzewa składni zawiera każdą informacji zamieszczonych w tekst źródłowy, co gramatyczne konstrukcja co leksykalne token i wszystkie inne w między, w tym spacji, komentarze i dyrektywy preprocesora. Na przykład każdy literał wymienionych w źródle jest reprezentowany dokładnie tak, jak została zapisana. Gdy program jest niekompletna lub nieprawidłowo sformułowany przez reprezentujący pominięto lub brak tokenów w drzewie składni drzewa składni także reprezentować błędów w kodzie źródłowym.  
+Drzewa składni ma trzy atrybuty klucza. Pierwszy atrybut jest, że drzewa składni przechowywać wszystkie informacje o źródle w pełnej rozdzielczości. Oznacza to, że drzewa składni zawiera każdą informacji zamieszczonych w tekst źródłowy, co gramatyczne konstrukcja co leksykalne token i wszystkie inne w między, w tym biały znak, komentarze i dyrektywy preprocesora. Na przykład każdy literał wymienionych w źródle jest reprezentowany dokładnie tak, jak została zapisana. Gdy program jest niekompletna lub nieprawidłowo sformułowany przez reprezentujący pominięto lub brak tokenów w drzewie składni drzewa składni także reprezentować błędów w kodzie źródłowym.  
 
 Dzięki temu drugi atrybut drzewa składni. Drzewo składni uzyskane z analizatora może wygenerować dokładne tekst, który został zanalizowany z. Z poziomu każdego węzła składni jest możliwość uzyskania Reprezentacja tekstowa typu poddrzewa początek w tym węźle. Oznacza to, że drzewa składni mogą być używane jako sposobu konstruowania i edytować tekst źródłowy. Tworząc drzewa posiadanego co za tym idzie utworzone równoważne tekstu i edytując drzewo składni, co nowego drzew zmiany poza do istniejącego drzewa, należy skutecznie edytować tekst. 
 
@@ -57,7 +57,7 @@ Na przykład token literału liczby całkowitej reprezentuje wartość numeryczn
 
 ## <a name="syntax-trivia"></a>Elementy towarzyszące składni składni
 
-Elementy towarzyszące składni składni reprezentują części tekstu źródłowego, które przede wszystkim nieważny do normalnej wiedzę na temat kodu, na przykład spacji, komentarze i dyrektywy preprocesora. Podobnie jak tokeny składni elementy towarzyszące składni są typów wartości. Pojedynczy <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> typ jest używany do opisania wszystkich rodzajów elementy towarzyszące składni.
+Elementy towarzyszące składni składni reprezentują części tekstu źródłowego, które przede wszystkim nieważny do normalnej wiedzę na temat kodu, na przykład biały znak, komentarze i dyrektywy preprocesora. Podobnie jak tokeny składni elementy towarzyszące składni są typów wartości. Pojedynczy <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> typ jest używany do opisania wszystkich rodzajów elementy towarzyszące składni.
 
 Ponieważ elementy towarzyszące składni nie są częścią składni języka normalne i może występować w dowolnym miejscu między dwoma tokenów, ich nie znajdują się w drzewie składni jako element podrzędny węzła. Jeszcze ponieważ są one ważne podczas wykonywania funkcji, takich jak refaktoryzacji i obsługa pełnej rozdzielczości na tekst źródłowy, są dostępne jako część drzewa składni.
 

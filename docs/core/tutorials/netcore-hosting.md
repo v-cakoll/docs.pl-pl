@@ -1,6 +1,6 @@
 ---
 title: Hosting .NET Core
-description: "Hostowanie środowiska uruchomieniowego .NET Core z kodu natywnego"
+description: Hostowanie środowiska uruchomieniowego .NET Core z kodu natywnego
 keywords: .NET, .NET Core, Hosting, Hosting .NET Core
 author: mjrousos
 ms.author: mikerou
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 13edec8b-614d-47ed-9e95-ed6d3b94ec0c
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 3c358ab9173032b1f76d30b756ee6290233b2702
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 5ff2e8e4da12b2a9822b595abbb2bdb0f583cf02
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="hosting-net-core"></a>Hosting .NET Core
 
@@ -35,7 +35,7 @@ W tym samouczku i jego skojarzony przykładowa kompilacji hosta systemu Windows;
 
 ## <a name="creating-the-host"></a>Tworzenie hosta
 
-A [hosta próbki](https://github.com/dotnet/docs/tree/master/samples/core/hosting) Demonstrowanie procedury opisane w tym artykule jest dostępny w repozytorium GitHub dotnet/docs. Komentarze w przykładowym *host.cpp* pliku wyraźnie Skojarz ponumerowane kroki z tego samouczka, z którym jest przeprowadzana w próbce. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+A [hosta próbki](https://github.com/dotnet/samples/tree/master/core/hosting) Demonstrowanie procedury opisane w tym artykule jest dostępny w repozytorium GitHub dotnet/próbek. Komentarze w przykładowym *host.cpp* pliku wyraźnie Skojarz ponumerowane kroki z tego samouczka, z którym jest przeprowadzana w próbce. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Należy pamiętać, że host próbki jest przeznaczona do zastosowania w przypadku uczenia celów, więc jest lekki na sprawdzanie błędów ani zaprojektowano w celu wyróżnienia czytelności za pośrednictwem wydajności. Więcej przykładów w rzeczywistych hosta są dostępne w [dotnet/środowisko coreclr](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts) repozytorium. [Hosta CoreRun](https://github.com/dotnet/coreclr/tree/master/src/coreclr/hosts/corerun), w szczególności jest dobrym hosta ogólnego przeznaczenia badanie po odczytaniu za pośrednictwem próbki prostsze.
 
@@ -90,7 +90,7 @@ Wspólne właściwości domeny aplikacji obejmują:
 *  `PLATFORM_RESOURCE_ROOTS` Ta lista zawiera ścieżki do sondowania w zestawów satelickich zasobów (w podfolderach specyficzne dla kultury).
 *  `AppDomainCompatSwitch` Ten ciąg Określa, które Osobliwości zgodności ma być używany dla zestawów bez jawnego Moniker platformy docelowej (atrybut poziomu zestawu wskazującą Framework, które zestawu jest przeznaczona do uruchomienia). Zazwyczaj powinien to być ustawiony na `"UseLatestBehaviorWhenTFMNotSpecified"` , ale niektóre hosty mogą wolą starsze Silverlight lub Windows Phone zgodności Osobliwości, zamiast tego.
 
-W naszym [hosta prosty przykład](https://github.com/dotnet/docs/tree/master/samples/core/hosting), te właściwości są skonfigurowane w następujący sposób:
+W naszym [hosta prosty przykład](https://github.com/dotnet/samples/tree/master/core/hosting), te właściwości są skonfigurowane w następujący sposób:
 
 [!code-cpp[NetCoreHost#6](../../../samples/core/hosting/host.cpp#6)]
 

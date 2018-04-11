@@ -1,6 +1,6 @@
 ---
-title: "Samouczek gałęzie i pętli - C# lokalnego poradniki Szybki Start"
-description: "W tym Szybki Start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie."
+title: Samouczek gałęzie i pętli - C# lokalnego poradniki Szybki Start
+description: W tym Szybki Start dotyczące gałęzi i pętle pisania kodu C#, aby eksplorować składni języka, obsługującego warunkowych gałęzi i pętli do wykonywania instrukcji wielokrotnie.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7d69b2b9bb02e2999bcd785da653bd4a13ed947c
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 9a52bafd1536783c59e9e1b92f3ad16b5000ca3b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="branches-and-loops"></a>Gałęzie i pętli
 
@@ -68,7 +68,7 @@ Poniższa instrukcja `else` — słowo kluczowe jest wykonywana tylko wtedy, gdy
 
 > [!IMPORTANT]
 > Wcięcie w obszarze `if` i `else` jest instrukcje dla człowieka czytników.
-> W języku C# nie Traktuj wcięcia lub była białym znakiem za istotne. Poniższa instrukcja `if` lub `else` — słowo kluczowe zostanie wykonana na podstawie warunku. Wszystkie przykłady w tym szybkiego startu wykonaj popularną praktyką tworzenia wcięć oparte na przepływie sterowania instrukcji.
+> W języku C# nie Traktuj wcięcia lub biały znak za istotne. Poniższa instrukcja `if` lub `else` — słowo kluczowe zostanie wykonana na podstawie warunku. Wszystkie przykłady w tym szybkiego startu wykonaj popularną praktyką tworzenia wcięć oparte na przepływie sterowania instrukcji.
 
 Ponieważ wcięcia nie ma znaczenia, należy użyć `{` i `}` wskazująca, kiedy ma więcej niż jedną instrukcję jako część bloku, która wykonuje warunkowo. C# programistów zazwyczaj używają tych nawiasów klamrowych na wszystkich `if` i `else` klauzul. Poniższy przykład jest taki sam jak ten, który został utworzony. Modyfikowanie kodu powyżej, aby dopasować następujący kod:
 
@@ -249,7 +249,7 @@ Teraz, w tym samouczku `if` instrukcji i konstrukcji pętli w języku C#, zobacz
 - `if` Instrukcja zawiera warunek, aby zobaczyć, jeśli liczba powinna być częścią suma.
 - `for` Pętli mogą pomóc w serie kroków należy powtórzyć dla wszystkich liczb od 1 do 20.
 
-Wypróbuj ją samodzielnie. Następnie sprawdź, jak Ty. Należy pobrać 63 dla odpowiedzi. Zobaczysz jednego możliwe odpowiedzi przez [wyświetlanie kompletny kod w serwisie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
+Wypróbuj ją samodzielnie. Następnie sprawdź, jak Ty. Należy pobrać 63 dla odpowiedzi. Zobaczysz jednego możliwe odpowiedzi przez [wyświetlanie kompletny kod w serwisie GitHub](https://github.com/dotnet/samples/tree/master/csharp/branches-quickstart/Program.cs#L46-L54).
 
 Zakończono Szybki Start "gałęzie i pętle".
 

@@ -1,24 +1,26 @@
 ---
-title: "Składnia ciągu połączenia"
-ms.custom: 
+title: Składnia ciągu połączenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9c7edc59ecb71c4b201b77c993fc839f5700abe3
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 76d8765be1dc24f4b8c457644595796680c2f2c3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="connection-string-syntax"></a>Składnia ciągu połączenia
 Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedziczący z <xref:System.Data.Common.DbConnection> oraz specyficznych dla dostawcy <xref:System.Data.Common.DbConnection.ConnectionString%2A> właściwości. Składnia ciągu połączenia specyficzne dla każdego dostawcy jest udokumentowany w jego `ConnectionString` właściwości. W poniższej tabeli wymieniono dostawców cztery danych, które znajdują się w programie .NET Framework.  
@@ -42,7 +44,7 @@ Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedzicz�
 -   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  Konstruktorzy ciągów połączenia pozwalają utworzyć parametry połączenia nieprawidłową składnię w czasie wykonywania, dzięki czemu nie trzeba ręcznie połączyć wartości ciągu połączenia w kodzie. Aby uzyskać więcej informacji, zobacz [Konstruktorzy ciągów połączenia](../../../../docs/framework/data/adonet/connection-string-builders.md).  
-  
+
 ## <a name="windows-authentication"></a>Uwierzytelnianie systemu Windows  
  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows (czasami określane jako *zabezpieczenia zintegrowane*) nawiązywania połączenia ze źródłami danych, które ją obsługują. Składnia zatrudnionych w parametrach połączenia jest zależna od dostawcy. W poniższej tabeli przedstawiono składnię uwierzytelniania systemu Windows używana z dostawcy danych .NET Framework.  
   
@@ -54,12 +56,16 @@ Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedzicz�
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true`zgłasza wyjątek w przypadku użycia z `OleDb` dostawcy.  
+>  `Integrated Security=true` zgłasza wyjątek w przypadku użycia z `OleDb` dostawcy.  
   
 ## <a name="sqlclient-connection-strings"></a>Parametry połączenia SqlClient  
- Składnia <xref:System.Data.SqlClient.SqlConnection> opisano parametry połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> właściwości. Można użyć <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> właściwości do pobierania lub ustawiania ciągu połączenia dla bazy danych programu SQL Server. Jeśli musisz nawiązać połączenia z wcześniejszej wersji programu SQL Server, należy użyć dostawcy danych programu .NET Framework dla OleDb (<xref:System.Data.OleDb>). Słowa kluczowe parametrów połączenia większości również mapować do właściwości w <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
-  
- Każdy z następujących rodzajów składni użyje uwierzytelniania systemu Windows do nawiązania połączenia **AdventureWorks** bazy danych na serwerze lokalnym.  
+Składnia <xref:System.Data.SqlClient.SqlConnection> opisano parametry połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> właściwości. Można użyć <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> właściwości do pobierania lub ustawiania ciągu połączenia dla bazy danych programu SQL Server. Jeśli musisz nawiązać połączenia z wcześniejszej wersji programu SQL Server, należy użyć dostawcy danych programu .NET Framework dla OleDb (<xref:System.Data.OleDb>). Słowa kluczowe parametrów połączenia większości również mapować do właściwości w <xref:System.Data.SqlClient.SqlConnectionStringBuilder>.  
+
+> [!IMPORTANT]
+>  Ustawieniem domyślnym dla `Persist Security Info` — słowo kluczowe jest `false`. Ustawieniem dla niego `true` lub `yes` umożliwia informacji istotnych dla zabezpieczeń, w tym identyfikator użytkownika i hasło, które mają zostać uzyskane z połączenia po otwarciu połączenia. Zachowaj `Persist Security Info` ustawioną `false` aby upewnić się, że niezaufanego źródła nie ma dostępu do poufnych ciągu połączenia.  
+
+### <a name="windows-authentication-with-sqlclient"></a>Uwierzytelnianie systemu Windows z SqlClient 
+ Każdy z następujących rodzajów składni używa uwierzytelniania systemu Windows do nawiązania połączenia **AdventureWorks** bazy danych na serwerze lokalnym.  
   
 ```  
 "Persist Security Info=False;Integrated Security=true;  
@@ -70,26 +76,26 @@ Każdy dostawca danych programu .NET Framework ma `Connection` obiekt dziedzicz�
     database=AdventureWorks;server=(local)"  
 ```  
   
-### <a name="sql-server-logins"></a>Logowania do programu SQL Server  
+### <a name="sql-server-authentication-with-sqlclient"></a>Uwierzytelnianie programu SQL Server z SqlClient   
  Uwierzytelnianie systemu Windows jest preferowana przez łączenie z serwerem SQL. Jednak jeśli wymagane jest uwierzytelnienie serwera SQL, należy użyć następującej składni, aby określić nazwę użytkownika i hasło. W tym przykładzie gwiazdki są używane do reprezentowania prawidłowej nazwy użytkownika i hasła.  
   
 ```  
 "Persist Security Info=False;User ID=*****;Password=*****;Initial Catalog=AdventureWorks;Server=MySqlServer"  
 ```  
-  
-> [!IMPORTANT]
->  Ustawieniem domyślnym dla `Persist Security Info` — słowo kluczowe jest `false`. Ustawieniem dla niego `true` lub `yes` umożliwia informacji istotnych dla zabezpieczeń, w tym identyfikator użytkownika i hasło, które mają zostać uzyskane z połączenia po otwarciu połączenia. Zachowaj `Persist Security Info` ustawioną `false` aby upewnić się, że niezaufanego źródła nie ma dostępu do poufnych ciągu połączenia.  
-  
- Aby połączyć się z nazwanym wystąpieniem programu SQL Server, użyj *nazwa serwera azwa wystąpienia* składni.  
+
+Podczas łączenia z bazą danych SQL Azure lub usługi Azure SQL Data Warehouse i podaj identyfikator logowania w formacie `user@servername`, upewnij się, że `servername` wartość nazwy logowania jest zgodna z wartością przewidzianych `Server=`.
+
+> [!NOTE]
+>  Uwierzytelnianie systemu Windows mają pierwszeństwo przed logowania do programu SQL Server. Określenia obu Integrated Security = true również jako nazwy użytkownika i hasła, nazwę użytkownika i hasło zostaną zignorowane i będzie używane uwierzytelnianie systemu Windows.  
+
+### <a name="connect-to-a-named-instance-of-sql-server"></a>Połącz się z nazwanym wystąpieniem programu SQL Server
+Aby połączyć się z nazwanym wystąpieniem programu SQL Server, użyj *nazwa serwera azwa wystąpienia* składni.  
   
 ```  
 Data Source=MySqlServer\MSSQL1;"  
 ```  
-  
- Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> właściwość `SqlConnectionStringBuilder` do nazwy obiektu podczas kompilowania parametrów połączenia. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Właściwość <xref:System.Data.SqlClient.SqlConnection> obiekt jest tylko do odczytu.  
-  
-> [!NOTE]
->  Uwierzytelnianie systemu Windows mają pierwszeństwo przed logowania do programu SQL Server. Określenia obu Integrated Security = true również jako nazwy użytkownika i hasła, nazwę użytkownika i hasło zostaną zignorowane i będzie używane uwierzytelnianie systemu Windows.  
+ 
+Można również ustawić <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A> właściwość `SqlConnectionStringBuilder` do nazwy obiektu podczas kompilowania parametrów połączenia. <xref:System.Data.SqlClient.SqlConnection.DataSource%2A> Właściwość <xref:System.Data.SqlClient.SqlConnection> obiekt jest tylko do odczytu.  
   
 ### <a name="type-system-version-changes"></a>Zmiana wersji systemu typu  
  `Type System Version` — Słowo kluczowe w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> określa po stronie klienta reprezentację [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] typów. Zobacz <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> uzyskać więcej informacji o `Type System Version` — słowo kluczowe.  
@@ -148,7 +154,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  Można podać informacje o połączeniu **oledbconnection —** w plik Universal Data Link (UDL); jednak należy unikać w ten sposób. Pliki UDL nie są szyfrowane i ujawniać informacje o parametrach połączenia w postaci zwykłego tekstu. Ponieważ plik UDL zewnętrzny zasób opartych na plikach do aplikacji, nie może być chronione przy użyciu programu .NET Framework. Pliki UDL nie są obsługiwane dla **SqlClient**.  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>Aby nawiązać połączenie dostępu/Jet przy użyciu DataDirectory  
- `DataDirectory`nie jest zarezerwowana `SqlClient`. Można go również używać razem <xref:System.Data.OleDb> i <xref:System.Data.Odbc> dostawcy danych .NET. Poniższy przykład <xref:System.Data.OleDb.OleDbConnection> ciąg przedstawia składnię wymagane do nawiązania Northwind.mdb znajduje się w folderze app_data aplikacji. Systemowej bazy danych (grupach) również są przechowywane w tej lokalizacji.  
+ `DataDirectory` nie jest zarezerwowana `SqlClient`. Można go również używać razem <xref:System.Data.OleDb> i <xref:System.Data.Odbc> dostawcy danych .NET. Poniższy przykład <xref:System.Data.OleDb.OleDbConnection> ciąg przedstawia składnię wymagane do nawiązania Northwind.mdb znajduje się w folderze app_data aplikacji. Systemowej bazy danych (grupach) również są przechowywane w tej lokalizacji.  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  

@@ -1,6 +1,6 @@
 ---
-title: "Język zapytania zintegrowanym (LINQ)"
-description: "Wprowadza języka zintegrowane zapytania (LINQ) w języku C#"
+title: Język zapytania zintegrowanym (LINQ)
+description: Wprowadza języka zintegrowane zapytania (LINQ) w języku C#
 keywords: .NET, .NET core, LINQ, C#
 author: BillWagner
 ms.author: wiwagn

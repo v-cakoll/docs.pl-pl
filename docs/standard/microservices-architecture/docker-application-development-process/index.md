@@ -1,7 +1,7 @@
 ---
 title: Aplikacje oparte na proces Docker
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Aplikacje oparte na proces Docker"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Aplikacje oparte na proces Docker
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017

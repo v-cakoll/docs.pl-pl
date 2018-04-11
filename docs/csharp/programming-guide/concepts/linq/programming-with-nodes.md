@@ -1,24 +1,25 @@
 ---
-title: "Programowanie z węzłami (C#)"
-ms.custom: 
+title: Programowanie z węzłami (C#)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 629e530caeabf3231655881199c0c1d83ae9f464
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 92ec8445123a8b685bd6ea134aca0b792cab6d2d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="programming-with-nodes-c"></a>Programowanie z węzłami (C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Deweloperzy, którzy musisz zapisywać programów, takich jak edytor XML, system transformacji lub zapisywania raportu często konieczne pisania programów, które działają na poziomie szczegółowości większą niż elementów i atrybutów. Często muszą pracować na poziomie węzła manipulowanie węzły tekstowe, przetwarzanie instrukcji i komentarze. Ten temat zawiera niektóre szczegóły na temat programowania na poziomie węzła.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Deweloperzy, którzy musisz zapisywać programów, takich jak edytor XML, system transformacji lub zapisywania raportu często konieczne pisania programów, które działają na poziomie szczegółowości większą niż elementów i atrybutów. Często muszą pracować na poziomie węzła manipulowanie węzły tekstowe, przetwarzanie instrukcji i komentarze. Ten temat zawiera niektóre szczegóły na temat programowania na poziomie węzła.  
   
 ## <a name="node-details"></a>Szczegóły dotyczące węzła  
  Istnieje szereg szczegóły programowania w języku, który wiedzieć programisty, praca na poziomie węzła.  
@@ -42,7 +43,7 @@ True
 ```  
   
 ### <a name="adjacent-text-nodes-are-possible"></a>Możliwe są sąsiadujących węzły tekstowe  
- Na różne modele programowania XML zawsze są scalane węzłów sąsiadującym tekstem. Jest to czasem nazywane normalizacji węzły tekstowe. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nie normalizacji węzły tekstowe. Jeśli dodasz dwa węzły tekstowe do tego samego elementu spowoduje węzłów sąsiadującym tekstem. Jednak jeśli dodasz zawartość określona jako ciąg znaków, a nie jako <xref:System.Xml.Linq.XText> węzła, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] może scalić parametrów z węzłem sąsiadującym tekstem.  
+ Na różne modele programowania XML zawsze są scalane węzłów sąsiadującym tekstem. Jest to czasem nazywane normalizacji węzły tekstowe. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie normalizacji węzły tekstowe. Jeśli dodasz dwa węzły tekstowe do tego samego elementu spowoduje węzłów sąsiadującym tekstem. Jednak jeśli dodasz zawartość określona jako ciąg znaków, a nie jako <xref:System.Xml.Linq.XText> węzła, [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] może scalić parametrów z węzłem sąsiadującym tekstem.  
   
  W poniższym przykładzie pokazano to:  
   
@@ -131,10 +132,10 @@ AnAttribute="abc"  IsNamespaceDeclaration:False
 ```  
   
 ### <a name="xpath-axis-methods-do-not-return-child-white-space-of-xdocument"></a>Metody osi XPath zwraca podrzędny biały znak z klasy XDocument  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Umożliwia tekst węzły podrzędne <xref:System.Xml.Linq.XDocument>, ile węzły tekstowe zawiera tylko biały znak. Jednak model obiektów XPath nie zawiera biały znak jako węzły podrzędne dokumentu, dlatego podczas iteracji elementów podrzędnych <xref:System.Xml.Linq.XDocument> przy użyciu <xref:System.Xml.Linq.XContainer.Nodes%2A> osi, białe węzły tekstowe zostaną zwrócone. Jednak gdy iterację elementów podrzędnych <xref:System.Xml.Linq.XDocument> przy użyciu metod osi XPath, białe węzły tekstowe nie zostaną zwrócone.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] Umożliwia tekst węzły podrzędne <xref:System.Xml.Linq.XDocument>, ile węzły tekstowe zawiera tylko biały znak. Jednak model obiektów XPath nie zawiera biały znak jako węzły podrzędne dokumentu, dlatego jeśli iterację elementów podrzędnych <xref:System.Xml.Linq.XDocument> przy użyciu <xref:System.Xml.Linq.XContainer.Nodes%2A> osi, węzły tekstowe biały znak zostanie zwrócony. Jednak gdy iterację elementów podrzędnych <xref:System.Xml.Linq.XDocument> przy użyciu metod osi XPath, węzły tekstowe biały znak nie zostaną zwrócone.  
   
 ```csharp  
-// Create a document with some white space child nodes of the document.  
+// Create a document with some white-space child nodes of the document.  
 XDocument root = XDocument.Parse(  
 @"<?xml version='1.0' encoding='utf-8' standalone='yes'?>  
   
@@ -143,10 +144,10 @@ XDocument root = XDocument.Parse(
 <!--a comment-->  
 ", LoadOptions.PreserveWhitespace);  
   
-// count the white space child nodes using LINQ to XML  
+// count the white-space child nodes using LINQ to XML  
 Console.WriteLine(root.Nodes().OfType<XText>().Count());  
   
-// count the white space child nodes using XPathEvaluate  
+// count the white-space child nodes using XPathEvaluate  
 Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Count());   
 ```  
   

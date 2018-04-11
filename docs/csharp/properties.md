@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 6950d25a-bba1-4744-b7c7-a3cc90438c55
-ms.openlocfilehash: 2a25919048f94211b1696ac8c8471a14ce6e15c5
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 05e51d527dc3c05301fc85d7717c751dc46bf9fa
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="properties"></a>Właściwości
 
@@ -103,7 +103,7 @@ Powyższych przykładach pokazano, co najprostszym przypadków definicji właśc
 
 ### <a name="validation"></a>Walidacja
 
-Możesz pisać kod `set` dostępu, aby upewnić się, czy wartości reprezentowane przez właściwość zawsze są prawidłowe. Na przykład, załóżmy, że jedną regułę `Person` klasy jest, że nazwa nie może być puste lub była białym znakiem. Czy zapisz ją w następujący sposób:
+Możesz pisać kod `set` dostępu, aby upewnić się, czy wartości reprezentowane przez właściwość zawsze są prawidłowe. Na przykład, załóżmy, że jedną regułę `Person` klasy jest, że nazwa nie może być puste lub biały znak. Czy zapisz ją w następujący sposób:
 
 ```csharp
 public class Person
@@ -123,7 +123,7 @@ public class Person
 }
 ```
 
-W powyższym przykładzie wymusza reguły imię nie może być puste lub była białym znakiem. Jeśli zapisuje dewelopera
+W powyższym przykładzie wymusza zasadę czy imię nie może być puste lub biały znak. Jeśli zapisuje dewelopera
 
 ```csharp
 hero.FirstName = "";

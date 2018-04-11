@@ -1,6 +1,6 @@
 ---
-title: "Przy użyciu bazy danych NoSQL jako infrastruktury trwałości"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przy użyciu bazy danych NoSQL jako infrastruktury trwałości"
+title: Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: a6f3a991529aea6560eb12f1400ba2750795ebff
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="using-nosql-databases-as-a-persistence-infrastructure"></a>Przy użyciu bazy danych NoSQL jako infrastruktury trwałości
 
@@ -156,7 +156,7 @@ Wyczyść zaletą korzystania z bazy danych MongoDB interfejsu API jest, że roz
 Aby uzyskać dalsze porównania po prostu przy użyciu bazy danych MongoDB i DB rozwiązania Cosmos w chmurze, zobacz [zalety używania bazy danych Azure rozwiązania Cosmos na tej stronie](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction). 
 
 
-### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie swoje podejście przez aplikacje produkcyjne: vs API bazy danych MongoDB. Interfejs API rozwiązania cosmos bazy danych
+### <a name="analyze-your-approach-for-production-applications-mongodb-api-vs-cosmos-db-api"></a>Analizowanie swoje podejście przez aplikacje produkcyjne: vs API bazy danych MongoDB. Cosmos DB API
 
 W eShopOnContainers firma Microsoft korzysta z interfejsu API bazy danych MongoDB powodu naszych priorytet zasadniczo do środowiska i testowania spójne korzystanie z bazy danych NoSQL, który może również współpracować z bazy danych Azure rozwiązania Cosmos.
 
@@ -307,17 +307,17 @@ Jeśli `ESHOP_AZURE_COSMOSDB` — zmienna globalna jest pusta, co oznacza, że j
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Modelowanie dokumentów danych dla bazy danych NoSQL**
+-   **Modelowanie danych dokumentów NoSQL baz danych**
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data*](https://docs.microsoft.com/en-us/azure/cosmos-db/modeling-data)
 
--   **Vaughn Vernon. Nadaje się doskonale oparte na domenie projektu agregacji sklepu? ** 
-     [ *https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
+-   **Vaughn Vernon. Nadaje się doskonale oparte na domenie projektu agregacji sklepu?**
+    [*https://vaughnvernon.co/?p=942*](https://vaughnvernon.co/?p=942)
 
 -   **Wprowadzenie do platformy Azure rozwiązania Cosmos DB: interfejs API dla bazy danych MongoDB** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction*](https://docs.microsoft.com/en-us/azure/cosmos-db/mongodb-introduction)
 
 -   **Azure rozwiązania Cosmos bazy danych: Tworzenie aplikacji sieci web interfejsu API bazy danych MongoDB z usług .NET i portalu Azure** 
-    [* https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
+    [*https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet *](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet )
 
 -   **Użyj emulatora usługi Azure rozwiązania Cosmos bazy danych dla lokalnych projektowania i testowania** 
     [*https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator*](https://docs.microsoft.com/en-us/azure/cosmos-db/local-emulator)
@@ -328,7 +328,7 @@ Jeśli `ESHOP_AZURE_COSMOSDB` — zmienna globalna jest pusta, co oznacza, że j
 -   **Obraz Docker emulatora DB rozwiązania Cosmos (kontenera systemu Windows)** 
     [*https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/*](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator/)
 
--   **Obraz Docker bazy danych MongoDB (Linux i Windows kontenera)** 
+-   **Obraz Docker bazy danych MongoDB (Linux i kontenera systemu Windows)** 
     [*https://hub.docker.com/r/_/mongo/*](https://hub.docker.com/r/_/mongo/)
 
 -   **Użyj MongoChef (3T w Studio) z bazy danych Azure rozwiązania Cosmos: interfejsu API dla konta bazy danych MongoDB** 

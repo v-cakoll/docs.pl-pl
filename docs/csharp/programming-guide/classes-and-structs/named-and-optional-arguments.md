@@ -1,8 +1,9 @@
 ---
-title: "Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)"
+title: Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - namedParameter_CSharpKeyword
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - parameters [C#], optional
 - named and optional arguments [C#]
 ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: c3c2c2ec0c982582032c1ae586d23226028ad899
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Argumenty nazwane i opcjonalne (Przewodnik programowania w języku C#)
-[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)]wprowadza argumenty nazwane i opcjonalne. *Argumenty nazwane o* można określić argumentu dla parametru określonego przez skojarzenie argument o nazwie parametru, a nie parametru pozycji na liście parametrów. *Argumenty opcjonalne* można pominąć argumenty dla niektórych parametrów. Obie techniki można używać z metod, indeksatorów konstruktory i delegatów.  
+[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] wprowadza argumenty nazwane i opcjonalne. *Argumenty nazwane o* można określić argumentu dla parametru określonego przez skojarzenie argument o nazwie parametru, a nie parametru pozycji na liście parametrów. *Argumenty opcjonalne* można pominąć argumenty dla niektórych parametrów. Obie techniki można używać z metod, indeksatorów konstruktory i delegatów.  
   
  Użycie argumentów nazwanych i opcjonalnych argumentach są oceniane w kolejności, w którym są wyświetlane na liście argumentów nie listy parametrów.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 01/19/2018
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Argumenty nazwane również poprawić czytelność kodu, określając reprezentuje każdy argument. W metodzie przykładzie poniżej `sellerName` nie może mieć wartości null ani być odstępem. Jednocześnie jako `sellerName` i `productName` są typu ciąg, zamiast wysyłać argumentów według pozycji, warto użyć nazwane argumenty do odróżniania dwóch i uniknąć pomyłek dla każdego odczytywania kod.
+ Argumenty nazwane również poprawić czytelność kodu, określając reprezentuje każdy argument. W metodzie przykładzie poniżej `sellerName` nie może mieć wartości null ani biały znak. Jednocześnie jako `sellerName` i `productName` są typu ciąg, zamiast wysyłać argumentów według pozycji, warto użyć nazwane argumenty do odróżniania dwóch i uniknąć pomyłek dla każdego odczytywania kod.
   
  Nazwane argumenty, gdy jest używany z argumenty pozycyjne, są prawidłowe tak długo, jak 
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 01/19/2018
 Parametry opcjonalne w ExampleMethod  
   
 > [!NOTE]
->  Parametry opcjonalne może deklarować także przy użyciu programu .NET <xref:System.Runtime.InteropServices.OptionalAttribute> klasy. `OptionalAttribute`Parametry nie wymagają wartości domyślnej.  
+>  Parametry opcjonalne może deklarować także przy użyciu programu .NET <xref:System.Runtime.InteropServices.OptionalAttribute> klasy. `OptionalAttribute` Parametry nie wymagają wartości domyślnej.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie, Konstruktor `ExampleClass` ma jeden parametr, który jest opcjonalne. Metoda wystąpienia `ExampleMethod` ma jeden wymagany parametr `required`i dwa parametry opcjonalne, `optionalstr` i `optionalint`. Kod w `Main` przedstawiono różne sposoby, w którym można wywołać konstruktora i metody.  

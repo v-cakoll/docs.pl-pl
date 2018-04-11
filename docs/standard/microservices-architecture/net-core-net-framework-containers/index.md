@@ -1,7 +1,7 @@
 ---
-title: "Wybór między .NET Core i .NET Framework dla kontenerów Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wybór między .NET Core i .NET Framework dla kontenerów Docker"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Wybór między .NET Core i .NET Framework dla kontenerów Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wybór między .NET Core i .NET Framework dla kontenerów Docker
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

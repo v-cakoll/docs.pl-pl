@@ -1,6 +1,6 @@
 ---
-title: "&amp;Operator (odwołanie w C#)"
-ms.date: 07/20/2015
+title: '&amp; Operator (odwołanie w C#)'
+ms.date: 04/04/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -13,24 +13,24 @@ helpviewer_keywords:
 - '& operator [C#]'
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
-caps.latest.revision: 
+caps.latest.revision: 19
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: eceee8e01ba46f65c6b182a40d14e62aaba5dd53
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f26305bfa1e8c9ba45493ad2ab4937d554590911
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
-# <a name="amp-operator-c-reference"></a>&amp;Operator (odwołanie w C#)
-& — Operator może działać jako jednoargumentowy lub operator binarny.  
+# <a name="amp-operator-c-reference"></a>&amp; Operator (odwołanie w C#)
+`&` Operator może działać jako jednoargumentowy lub operator binarny.  
   
 ## <a name="remarks"></a>Uwagi  
- Operator & jednoargumentowy zwraca adres jej argument operacji (wymaga [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) kontekstu).  
+ Jednoargumentowego `&` adres jej argument zwraca (wymaga [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) kontekstu).  
   
- Dane binarne & operatory są wstępnie zdefiniowane dla typów całkowitych i `bool`. Dla typu całkowitego typy & oblicza logiczne i bitowe dla argumentów. Dla `bool` operandy & oblicza logiczny i z argumentów; wynik jest `true` tylko wtedy, gdy są obie argumentów `true`.  
+ Binarny `&` operatory są wstępnie zdefiniowane dla typów całkowitych i `bool`. Dla typu całkowitego typy & oblicza logiczne i bitowe dla argumentów. Dla `bool` operandy & oblicza logiczny i z argumentów; wynik jest `true` tylko wtedy, gdy są obie argumentów `true`.  
   
- `&` Operator ocenia oba operatory niezależnie od pierwszego elementu wartości. Na przykład:  
+ Plik binarny `&` operator ocenia oba operatory niezależnie od pierwszego obiektu, w przeciwieństwie do wartości [operator warunkowy i](../../../csharp/language-reference/operators/conditional-and-operator.md) `&&`. Na przykład:  
   
  [!code-csharp[csRefOperators#37](../../../csharp/language-reference/operators/codesnippet/CSharp/and-operator_1.cs)]  
   
@@ -42,4 +42,4 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
- [Operatory C#](../../../csharp/language-reference/operators/index.md)
+ [Operatory języka C#](../../../csharp/language-reference/operators/index.md)

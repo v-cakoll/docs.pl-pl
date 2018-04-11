@@ -1,6 +1,6 @@
 ---
 title: Przewodnik instalacji platformy .NET framework
-description: "Dowiedz się, jak zainstalować program .NET Framework w systemie Windows."
+description: Dowiedz się, jak zainstalować program .NET Framework w systemie Windows.
 author: rlander
 ms.author: mairaw
 keywords: .NET framework, instalacja
@@ -8,7 +8,8 @@ ms.date: 08/03/2017
 ms.topic: article
 ms.prod: .net-framework
 ms.devlang: dotnet
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 722d34e7084fc46a5b3b3a97c73e2e14b1cc9d24
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

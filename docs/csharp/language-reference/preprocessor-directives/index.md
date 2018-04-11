@@ -40,9 +40,9 @@ Ta sekcja zawiera informacje o następujących dyrektywy preprocesora C#:
 
 Zobacz tematy, aby uzyskać dodatkowe informacje i przykłady.
 
-Mimo że kompilator nie ma oddzielne preprocesora, dyrektywy opisane w tej sekcji są przetwarzane, jak w przypadku jednego. Są one używane do pomocy w kompilacji warunkowej. W przeciwieństwie do dyrektywy C i C++ nie można użyć tych dyrektywy do tworzenia makr.
+Mimo że kompilator nie ma oddzielnego preprocesora, dyrektywy opisane w tej sekcji są przetwarzane przy założeniu, że taki preprocesor istnieje. Dyrektywy te są pomocne przy kompilacji warunkowej. W przeciwieństwie do dyrektyw w językach C i C++ nie można ich używać do tworzenia makr.
 
-Dyrektywy preprocesora musi być tylko instrukcją w wierszu.
+Dyrektywa preprocesora musi być jedyną instrukcją w wierszu.
 
 ## <a name="see-also"></a>Zobacz także
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

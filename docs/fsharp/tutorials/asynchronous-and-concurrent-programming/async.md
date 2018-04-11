@@ -1,6 +1,6 @@
 ---
-title: "Programowanie asynchroniczne w języku F #"
-description: "Dowiedz się, jak F # — programowanie asynchroniczne odbywa się za pomocą modelu programowania poziom języka, który jest łatwy w użyciu i fizyczne dla języka."
+title: 'Programowanie asynchroniczne w języku F #'
+description: 'Dowiedz się, jak F # — programowanie asynchroniczne odbywa się za pomocą modelu programowania poziom języka, który jest łatwy w użyciu i fizyczne dla języka.'
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: phcart

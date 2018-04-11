@@ -1,7 +1,7 @@
 ---
 title: Atrybuty (F#)
-description: "Dowiedz się, jak włączyć metadanych ma być stosowany do konstrukcji programującej przez atrybuty F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Dowiedz się, jak włączyć metadanych ma być stosowany do konstrukcji programującej przez atrybuty F #.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

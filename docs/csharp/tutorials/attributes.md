@@ -1,7 +1,7 @@
 ---
 title: Atrybuty - C#
-description: "Dowiedz się, jak działają atrybutów w języku C#."
-keywords: ".NET i .NET core C#, atrybutów"
+description: Dowiedz się, jak działają atrybutów w języku C#.
+keywords: .NET i .NET core C#, atrybutów
 author: mgroves
 ms.author: wiwagn
 ms.date: 03/06/2017

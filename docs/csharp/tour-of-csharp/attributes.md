@@ -1,7 +1,7 @@
 ---
-title: "C# atrybutów — samouczek języka C#"
-description: "Dowiedz się więcej o deklaratywne programowania w języku C# przy użyciu atrybutów"
-keywords: ".NET, języka csharp"
+title: C# atrybutów — samouczek języka C#
+description: Dowiedz się więcej o deklaratywne programowania w języku C# przy użyciu atrybutów
+keywords: .NET, języka csharp
 author: BillWagner
 ms.author: wiwagn
 ms.date: 08/10/2016

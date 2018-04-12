@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="line-c-reference"></a>#line (odwołanie w C#)
-`#line`Umożliwia modyfikowanie kompilatora numer wiersza i (opcjonalnie) Nazwa plik wyjściowy błędów i ostrzeżeń. W tym przykładzie przedstawiono sposób raportu dwóch ostrzeżenia skojarzony z numerów wierszy. `#line 200` Dyrektywy wymusza numer wiersza jako 200 (mimo że wartość domyślna to #7), a do czasu następnego dyrektywy #line, nazwa pliku będą raportowane jako "Special". #Line — dyrektywa domyślne zwraca numerowanie do jego numerowanie domyślne wierszy, które zlicza wiersze, które zostały oznaczenie w poprzedniej dyrektywie.  
+Dyrektywa `#line` umożliwia modyfikowanie numerów wierszy kompilatora i (opcjonalnie) danych wyjściowych nazw plików pod kątem błędów i ostrzeżeń. W tym przykładzie przedstawiono sposób zgłaszania dwóch ostrzeżeń skojarzonych z numerami wierszy. Dyrektywa `#line 200` wymusza numer wiersza o wartości 200 (mimo że wartość domyślna to #7), przez co do momentu aktywowania następnej dyrektywy #line zgłaszaną nazwą pliku będzie „Special”. Dyrektywa #line domyślnie zwraca numerowanie wierszy w wersji domyślnej, czyli zlicza wiersze, które zostały ponumerowane przez poprzednią dyrektywę. 
   
 ```csharp
 class MainClass  
@@ -41,18 +41,18 @@ class MainClass
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- `#line` Dyrektywy mogą być używane w automatycznych, pośredniego kroku w procesie kompilacji. Na przykład, jeśli wiersze zostały usunięte z oryginalnego pliku kodu źródłowego, ale nadal potrzebujesz kompilatorowi Generowanie danych wyjściowych na podstawie wiersza oryginalnej numerowanie w pliku, możesz można usunąć wiersze i następnie symulować oryginalnego numerowania wierszy z `#line`.  
+ Dyrektywa `#line` może być używana w automatycznym, pośrednim etapie procesu kompilacji. Na przykład jeśli z oryginalnego pliku kodu źródłowego zostały usunięte wiersze, ale kompilator nadal ma generować dane wyjściowe na podstawie oryginalnego numerowania wierszy w pliku, możesz usunąć wiersze i zasymulować oryginalne numerowanie za pomocą dyrektywy `#line`.
   
- `#line hidden` Dyrektywy ukrywa z kolejnych wierszy debugera, w taki sposób, że deweloper przechodzi przez kod, po dowolnej linii między `#line hidden` Następna `#line` — dyrektywa (przy założeniu, że nie jest on inny `#line hidden` dyrektywy) oparta na. Tej opcji można również umożliwić ASP.NET w celu rozróżnienia kod użytkownika i wygenerowane maszynowo. Mimo że program ASP.NET konsumenta podstawowej tej funkcji, najprawdopodobniej z niego korzystać więcej źródło, które wprowadzi generatory.  
+Dyrektywa `#line hidden` ukrywa kolejne wiersze przed debugerem, w taki sposób, że podczas wykonywania kodu przez dewelopera wszystkie wiersze między dyrektywą `#line hidden` a następną dyrektywą `#line` (przy założeniu, że nie będzie to kolejna dyrektywa `#line hidden`) zostaną pominięte. Ta opcja pozwala także platformie ASP.NET odróżnić kod zdefiniowany przez użytkownika od kodu wygenerowanego maszynowo. Mimo że funkcja ta jest używana głównie w ASP.NET , to prawdopodobne jest, że będzie z niej korzystać więcej generatorów kodu źródłowego.
   
- A `#line hidden` dyrektywy nie wpływa na nazwy plików lub numerów linii w raportowaniu błędów. Oznacza to w przypadku napotkania błędu w bloku ukryte, kompilator będzie zgłaszać bieżącego pliku nazwa i wiersz numer błędu.  
+ Dyrektywa `#line hidden` nie wpływa na nazwy plików ani numery wierszy w raportowaniu błędów. Oznacza to, że w przypadku napotkania błędu w ukrytym bloku kompilator zgłosi obecną nazwę pliku oraz numer wiersza, w którym wystąpił błąd. 
   
- `#line filename` Dyrektywa określa nazwę pliku, która ma być wyświetlana w danych wyjściowych kompilatora. Domyślnie używany jest rzeczywistą nazwą pliku kodu źródłowego. Nazwa pliku musi być w podwójny cudzysłów ("") i musi być poprzedzona numer wiersza.  
+Dyrektywa `#line filename` określa nazwę pliku, która ma być wyświetlana w danych wyjściowych kompilatora. Domyślnie używana jest rzeczywista nazwa pliku kodu źródłowego. Nazwa pliku musi być ujęta w podwójny cudzysłów ("") oraz musi być poprzedzona numerem wiersza.  
   
- Pliku kodu źródłowego może mieć dowolną liczbę `#line` dyrektywy.  
+ Plik kodu źródłowego może mieć dowolną liczbę wystąpeń dyrektywy `#line`.  
   
 ## <a name="example-1"></a>Przykład 1  
- W poniższym przykładzie pokazano, jak debuger ignoruje ukryte wiersze w kodzie. Po uruchomieniu przykładzie wyświetli trzy wiersze tekstu. Jednak gdy ustawić punkt przerwania, jak pokazano w przykładzie i trafień F10, aby wykonywać krokowo kodu, można zauważyć, że debuger ignoruje ukryte wiersza. Należy zauważyć, że nawet w przypadku ustawienia punktu przerwania w wierszu ukryte, debuger nadal zignoruje.  
+ W poniższym przykładzie pokazano, jak debuger ignoruje ukryte wiersze w kodzie. Po uruchomieniu przykładu zostaną wyświetlone trzy wiersze tekstu. Jednak gdy ustawisz punkt przerwania (jak pokazano w przykładzie) i naciśniesz klawisz F10, aby wykonywać kod krokowo, zobaczysz, że debuger zignoruje ukryty wiersz. Nawet jeśli ustawisz punkt przerwania w ukrytym wierszu, debuger go zignoruje. 
   
 ```csharp
 // preprocessor_linehidden.cs  

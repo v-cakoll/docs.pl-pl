@@ -1,4 +1,3 @@
----
 title: '#Błąd (odwołanie w C#)'
 ms.date: 07/20/2015
 ms.prod: .net
@@ -27,9 +26,9 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Typowym zastosowaniem `#error` w dyrektywie warunkowej.  
+ Typowe jest zastosowanie `#error` w dyrektywie warunkowej.  
   
- Istnieje również możliwość do generowania ostrzeżenie zdefiniowane przez użytkownika z [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).  
+ Istnieje również możliwość wygenerowania ostrzeżenia zdefiniowanego przez użytkownika przy użyciu [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).  
   
 ## <a name="example"></a>Przykład  
   

@@ -1,4 +1,4 @@
-﻿---
+---
 title: '#else (odwołanie w C#)'
 ms.date: 07/20/2015
 ms.prod: .net
@@ -20,10 +20,10 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="else-c-reference"></a>#else (odwołanie w C#)
-`#else` umożliwia utworzenie złożonej dyrektywy warunkowej polegającej na tym, że jeśli żadne z wyrażeń we wcześniejszych dyrektywach [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) i (opcjonalnie) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) nie zwróci wartości `true`, kompilator wykona kod między dyrektywą`#else` a następującą po niej dyrektywą`#endif`.
+`#else`umożliwia utworzenie złożonej dyrektywy warunkowej polegającej na tym, że jeśli żadne z wyrażeń we wcześniejszych dyrektywach [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) i (opcjonalnie) [#elif](../../../csharp/language-reference/preprocessor-directives/preprocessor-elif.md) nie zwróci wartości `true`, kompilator wykona kod między dyrektywą`#else` a następującą po niej dyrektywą`#endif`.  
   
 ## <a name="remarks"></a>Uwagi  
- Następną dyrektywą preprocesora po `#else` musi być [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md). Aby zapoznać się z przykładem użycia dyrektywy `#else`, zobacz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). 
+ Następną dyrektywą preprocesora po [ musi być ](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md)#endif`#else`. Aby zapoznać się z przykładem użycia dyrektywy [, zobacz ](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md)#if`#else`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

@@ -28,7 +28,7 @@ W poniższej tabeli przedstawiono opcje kompilatora w porządku alfabetycznym. N
 
 |— Opcja kompilatora|Opis|
 |---------------|-----------|
-|**-a****&lt;output-filename&gt;**|Generuje biblioteki i określa jego nazwę. Ta opcja jest krótka forma **--docelowych: Biblioteka ***&lt;filename&gt;**.|
+|**-a****&lt;output-filename&gt;**|Generuje biblioteki i określa jego nazwę. Ta opcja jest krótka forma **--docelowych:Biblioteka****&lt;filename&gt;**.|
 |**--baseaddress:&lt;string&gt;**|Określa adres podstawowy biblioteki, który ma zostać utworzony.<br /><br />Ta opcja kompilatora jest odpowiednikiem opcji kompilatora C# o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;baseaddress &#40;C&#35; — opcje kompilatora&#41;](https://msdn.microsoft.com/library/2fdbz5xd.aspx).|
 |**-codepage:&lt;int&gt;**|Określa stronę kodową używaną do odczytu plików źródłowych.<br /><br />Ta opcja kompilatora jest odpowiednikiem opcji kompilatora C# o takiej samej nazwie. Aby uzyskać więcej informacji, zobacz [ &#47;codepage &#40;C&#35; — opcje kompilatora&#41;](https://msdn.microsoft.com/library/w0kyekyh.aspx).|
 |**--consolecolors**|Określa, że błędy i ostrzeżenia używać tekstu kolorowania na konsoli.|

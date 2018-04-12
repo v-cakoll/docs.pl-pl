@@ -1,6 +1,6 @@
 ---
-title: "Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac"
-description: "W tym temacie przedstawiono tworzenie rozwiązania .NET Core biblioteki do ponownego wykorzystania i testowania jednostek."
+title: Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac
+description: W tym temacie przedstawiono tworzenie rozwiązania .NET Core biblioteki do ponownego wykorzystania i testowania jednostek.
 keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
@@ -11,17 +11,17 @@ ms.devlang: dotnet
 ms.assetid: 6945bedf-5bf3-4955-8588-83fb87511b79
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 0db67593340ea3bae00a45b845a0effe0c1fcab1
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: 6d8f89af14167e57b7f1b3b1d6ddce5cae8f6446
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Kompilowanie kompletnego rozwiązania .NET Core na macOS przy użyciu programu Visual Studio dla komputerów Mac
 
 Visual Studio for Mac zawiera kompletne programowanie środowiska IDE (Integrated) do tworzenia aplikacji platformy .NET Core. W tym temacie przedstawiono tworzenie rozwiązania .NET Core biblioteki do ponownego wykorzystania i testowania jednostek.
 
-Ten samouczek pokazuje, jak utworzyć aplikację, która akceptuje word wyszukiwania i ciąg tekstu od użytkownika, liczy razy wyszukiwanego pojawia się w ciągu za pomocą innej metody w bibliotece klas i zwraca wynik dla użytkownika. Rozwiązanie zawiera również testu jednostkowego dla biblioteki klas jako wprowadzenie do koncepcji projektowanie oparte na (testach TDD). Jeśli wolisz przejdź przez samouczek z kompletnego przykładu, Pobierz [przykładowe rozwiązanie](https://github.com/dotnet/docs/blob/master/samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek pokazuje, jak utworzyć aplikację, która akceptuje word wyszukiwania i ciąg tekstu od użytkownika, liczy razy wyszukiwanego pojawia się w ciągu za pomocą innej metody w bibliotece klas i zwraca wynik dla użytkownika. Rozwiązanie zawiera również testu jednostkowego dla biblioteki klas jako wprowadzenie do koncepcji projektowanie oparte na (testach TDD). Jeśli wolisz przejdź przez samouczek z kompletnego przykładu, Pobierz [przykładowe rozwiązanie](https://github.com/dotnet/samples/blob/master/core/tutorials/using-on-mac-vs-full-solution/WordCounter). Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 > [!NOTE]
 > Twoja opinia jest bardzo ważnych. Istnieją dwa sposoby można przekazywania informacji pozwalających na zespół deweloperów w programie Visual Studio dla komputerów Mac:
@@ -50,7 +50,7 @@ Aby uzyskać więcej informacji dotyczących wymagań wstępnych, zobacz [wymaga
 
    [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
 
-1. Zapisz plik przy użyciu dowolnej z trzech różnych metod: Użyj skrótu klawiaturowego <kbd>&#8984;</kbd> + <kbd>s</kbd>, wybierz pozycję **pliku** > **zapisać** z menu lub kliknij prawym przyciskiem myszy na karcie i wybierz plik **zapisać**z menu kontekstowego. Na poniższej ilustracji przedstawiono okno środowiska IDE:
+1. Zapisz plik przy użyciu dowolnej z trzech różnych metod: Użyj skrótu klawiaturowego <kbd> &#8984; </kbd> + <kbd>s</kbd>, wybierz pozycję **pliku**  >  **Zapisać** z menu lub kliknij prawym przyciskiem myszy na karcie i wybierz plik **zapisać** z menu kontekstowego. Na poniższej ilustracji przedstawiono okno środowiska IDE:
 
    ![Okno środowiska IDE TextUtils klasy biblioteki, plik klasy WordCount klasy statycznej WordCount i GetWordCount — metoda](./media/using-on-mac-vs-full-solution/vsmacfull03.png)
 
@@ -128,7 +128,7 @@ Testy jednostkowe Podaj oprogramowania zautomatyzowanych testów podczas program
 
    ![Niepowodzenia testu](./media/using-on-mac-vs-full-solution/vsmacfull09.png)
 
-1. Modyfikowanie `IgnoreCasing` metoda testowa, zmieniając `Assert.NotEqual` do `Assert.Equal`. Zapisz plik przy użyciu skrótu klawiaturowego <kbd>&#8984;</kbd> + <kbd>s</kbd>, **pliku** > **zapisać** z menu lub kartę plik prawym przyciskiem myszy i wybierając **zapisać**z menu kontekstowego.
+1. Modyfikowanie `IgnoreCasing` metoda testowa, zmieniając `Assert.NotEqual` do `Assert.Equal`. Zapisz plik przy użyciu skrótu klawiaturowego <kbd> &#8984; </kbd> + <kbd>s</kbd>, **pliku** > **zapisać** z menu lub kartę plik prawym przyciskiem myszy i wybierając **zapisać** z menu kontekstowego.
 
    Oczekuje, że `searchWord` "Gniazda" zwraca dwa wystąpienia z `inputString` "Gniazda gniazda" przekazany do `GetWordCount`. Uruchom test ponownie, klikając **Uruchom testy** przycisk **testów jednostkowych** panelu lub **ponownie uruchom testy** przycisk **wyników testu** panelu w dolnej części ekranu. Test zakończył się pomyślnie. Istnieją dwa wystąpienia "Gniazda" w ciągu "Gniazda gniazda" (bez uwzględnienia wielkości liter) i jest potwierdzenie testu `true`.
 

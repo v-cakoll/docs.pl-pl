@@ -1,21 +1,22 @@
 ---
-title: "Typy ogólne i odbicie (Przewodnik programowania w języku C#)"
+title: Typy ogólne i odbicie (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], reflection
 - reflection [C#], generic types
 ms.assetid: 162fd9b4-dd5b-4abb-8c9b-e44e21e2f451
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cc2363eea7d5c601fc73f5f9eb14b4b07ad14cb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3048cb6a9b333107f6ea37edf31ead96f9fe2057
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="generics-and-reflection-c-programming-guide"></a>Typy ogólne i odbicie (Przewodnik programowania w języku C#)
 Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do informacji typu ogólnego w czasie wykonywania, można użyć odbicia uzyskanie informacji na temat typów ogólnych w taki sam sposób jak w przypadku typów nierodzajową. Aby uzyskać więcej informacji, zobacz [typy ogólne w czasie wykonywania](../../../csharp/programming-guide/generics/generics-in-the-run-time.md).  
@@ -38,15 +39,15 @@ Ponieważ środowisko uruchomieniowe języka wspólnego (CLR) ma dostęp do info
 |<xref:System.Type.DeclaringMethod%2A>|Zwraca metody ogólnej zdefiniowanego bieżący ogólny parametr typu, lub wartość null, jeśli parametr typu nie został zdefiniowany przez metody rodzajowej.|  
 |<xref:System.Type.MakeGenericType%2A>|Zastępuje elementy tablicą typów parametrów typu bieżącej definicji typu ogólnego i zwraca <xref:System.Type> obiekt reprezentujący powstałe w ten sposób skonstruować typu.|  
   
- Ponadto nowe elementy członkowskie są dodawane do <xref:System.Reflection.MethodInfo> klasę, aby włączyć informacje czasu wykonywania dla metod generycznych. Zobacz <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> uwagi właściwości listę niezmiennej warunki terminów używanych w celu odzwierciedlenia na metody ogólne.  
+ Ponadto członkowie <xref:System.Reflection.MethodInfo> klasy Włącz informacje czasu wykonywania dla metod generycznych. Zobacz <xref:System.Reflection.MethodBase.IsGenericMethod%2A> uwagi właściwości listę niezmiennej warunki terminów używanych w celu odzwierciedlenia na metody ogólne.  
   
-|Nazwa elementu członkowskiego System.Reflection.MemberInfo|Opis|  
+|System.Reflection.MemberInfo Member Name|Opis|  
 |----------------------------------------------|-----------------|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethod%2A>|Zwraca wartość PRAWDA, jeśli metody jest rodzajowy.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethod%2A>|Zwraca wartość PRAWDA, jeśli metody jest rodzajowy.|  
 |<xref:System.Reflection.MethodInfo.GetGenericArguments%2A>|Zwraca tablicę obiektów typu, które reprezentują argumentów typu skonstruowane metody ogólnej lub parametrów typu definicję metody rodzajowej.|  
 |<xref:System.Reflection.MethodInfo.GetGenericMethodDefinition%2A>|Zwraca podstawowej ogólną definicją metody dla bieżącej metody skonstruowane.|  
-|<xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A>|Zwraca wartość PRAWDA, jeśli metoda lub jej otaczającego typy zawierać żadnych parametrów typu, dla których nie podano określonych typów.|  
-|<xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A>|Zwraca wartość true, jeśli bieżący <xref:System.Reflection.MethodInfo> reprezentuje definicję metody rodzajowej.|  
+|<xref:System.Reflection.MethodBase.ContainsGenericParameters%2A>|Zwraca wartość PRAWDA, jeśli metoda lub jej otaczającego typy zawierać żadnych parametrów typu, dla których nie podano określonych typów.|  
+|<xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A>|Zwraca wartość true, jeśli bieżący <xref:System.Reflection.MethodInfo> reprezentuje definicję metody rodzajowej.|  
 |<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A>|Zastępuje elementy tablicą typów parametrów typu bieżącej definicji metody rodzajowej i zwraca <xref:System.Reflection.MethodInfo> obiekt reprezentujący powstałe w ten sposób skonstruowany — metoda.|  
   
 ## <a name="see-also"></a>Zobacz też  

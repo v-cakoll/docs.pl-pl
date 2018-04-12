@@ -1,10 +1,8 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; — Element'
 ms.custom: ''
-ms.date: 01/08/2018
+ms.date: 03/28/2018
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-bcl
 - dotnet-clr
@@ -16,17 +14,16 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71888febdc42f0ee65bdcd55a761700eda065bc1
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext> klasy, aby zapewnić mechanizm rezygnacji z nowych funkcji.  
@@ -94,6 +91,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Wyłącza wersji protokołu TLS SystemDefault powrót do domyślnego Tls12, Tls11, Tls.|.NET framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|Powoduje wyłączenie protokołu TLS SslStream alerty po stronie serwera.|.NET framework 4.7|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |Formanty czy [klasa DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) serializuje niektóre znaki kontrolne oparte na standardach wersja języka ECMAScript 6 i V8. Aby uzyskać więcej informacji, zobacz [środki zaradcze: serializacja znaki kontrolne z elementu DataContractJsonSerializer](Mitigation:%20Serialization%20of%20Control%20Characters%20with%20the%20DataContractJsonSerializer.md)| .NET framework 4.7 |
+|`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|Formanty czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obsługuje wiele dostosowań lub tylko korekty pojedynczego dla strefy czasowej. Jeśli `true`, używa <xref:System.TimeZoneInfo> typ do serializacji i deserializacji danych daty i godziny; w przeciwnym razie używa <xref:System.TimeZone> typu, który nie obsługuje wielu reguł korygowania.|.NET Framework 4.6.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|Formanty czy <xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType> Konstruktor Ustawia nowy obiekt <xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType> właściwości z istniejącej odwołania do obiektu. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Konstruktor ClaimsIdentity](~/docs/framework/migration-guide/mitigation-claimsidentity-constructor.md).|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|Formanty czy próba ponownego użycia <xref:System.Security.Cryptography.AesCryptoServiceProvider> zgłasza odszyfrowujący <xref:System.Security.Cryptography.CryptographicException>. Aby uzyskać więcej informacji zobacz odszyfrowujący AesCryptoServiceProvider zapewnia transform](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform) wielokrotnego użytku.|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|Formanty czy wartość [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle) właściwość jest [IntPtr](xref:System.IntPtr) czy reprezentuje lokalizacji pamięci okna obsługi, lub czy jest uchwyt okna (HWND). Aby uzyskać więcej informacji, zobacz [środki zaradcze: CspParameters.ParentWindowHandle oczekuje HWND](Mitigation:%20CspParameters.ParentWindowHandle%20Expects%20an%20HWND.md). |.NET framework 4.7|   
@@ -109,6 +107,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Określa, czy wyjątki zgłaszane podczas uruchamiania usługi są propagowane do wywołującego <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> metody.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Określa, czy Windows Presentation Foundation stosuje algorytm stary (`true`) lub nowego algorytmu (`false`) w przydzielania miejsca, aby \*-kolumn. Aby uzyskać więcej informacji, zobacz [środki zaradcze: przydzielenie miejsca na formancie siatki kolumnom gwiazdkę](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Formanty czy selektora lub kartę formant zawsze aktualizuje wartość jego właściwości wybranej wartości przed zgłoszeniem zaznaczenie zdarzenia zmiany.|.NET Framework 4.7.1|
+|`Switch.System.Windows.DoNotScaleForDpiChanges`|Określa, czy wartość DPI zmian w na systemie (wartość `false`) lub -monitor (wartość `true`).|.NET Framework 4.6.2|
 |`Switch.System.Windows.Forms.`<br />`DontSupportReentrantFilterMessage`|Wyłącza funkcję kod, który umożliwia niestandardowego <xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A?displayProperty=nameWithType> implementacji, aby bezpiecznie filtrować wiadomości bez generowania wyjątku podczas <xref:System.Windows.Forms.Application.FilterMessage%2A?displayProperty=nameWithType> metoda jest wywoływana. Aby uzyskać więcej informacji, zobacz [środki zaradcze: implementacje IMessageFilter.PreFilterMessage niestandardowy](~/docs/framework/migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md).|.NET Framework 4.6.1|  
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|Określa, czy jest to opcjonalny `WM_POINTER`— na podstawie touch/pióro stosu jest włączona w aplikacji WPF. Aby uzyskać więcej informacji, zobacz [środki zaradcze: Touch oparte na wskaźnik i pomocy technicznej pióra](Mitigation:%20Pointer-based%20Touch%20and%20Stylus%20Support.md) | 
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|Określa, czy starsze [NullReferenceException](xref:System.NullReferenceException) jest generowany, zamiast wyjątek, który wskazuje, w szczególności przyczyną wyjątku (takich jak [directorynotfoundexception —](xref:System.IO.DirectoryNotFoundException) lub [ FileNotFoundException](xref:System.IO.FileNotFoundException). Jest on przeznaczony do użytku przez kod, który jest zależny od obsługi [NullReferenceException](xref:System.NullReferenceException). | .NET framework 4.7 |

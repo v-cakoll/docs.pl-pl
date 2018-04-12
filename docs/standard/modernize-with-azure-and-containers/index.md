@@ -1,6 +1,6 @@
 ---
-title: "Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows"
-description: "Dowiedz się do podnoszenia i istniejących aplikacji do chmury Azure i kontenerów Książka elektroniczna przesunięcia."
+title: Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows
+description: Dowiedz się do podnoszenia i istniejących aplikacji do chmury Azure i kontenerów Książka elektroniczna przesunięcia.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

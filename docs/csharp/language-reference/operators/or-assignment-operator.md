@@ -1,5 +1,5 @@
 ---
-title: "|= — Operator (odwołanie w C#)"
+title: '|= — Operator (odwołanie w C#)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,7 +11,7 @@ helpviewer_keywords:
 - OR assignment operator (|=) [C#]
 - '|= operator (OR assignment) [C#]'
 ms.assetid: 8315b8cf-dd15-402f-92f0-c7db931696ca
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: aac4fd6016b65daa15da4bd3a414f385edce7c22

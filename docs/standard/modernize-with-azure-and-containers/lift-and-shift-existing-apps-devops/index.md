@@ -1,6 +1,6 @@
 ---
-title: "Podnieś i przesunięcie istniejące aplikacje opracowywania oprogramowania"
-description: "Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows."
+title: Podnieś i przesunięcie istniejące aplikacje opracowywania oprogramowania
+description: Modernizacji istniejących aplikacji .NET z kontenerami chmury Azure i systemu Windows.
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017

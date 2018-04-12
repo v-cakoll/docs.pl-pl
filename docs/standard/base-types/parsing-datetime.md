@@ -1,6 +1,6 @@
 ---
-title: "Porady: Konwertowanie ciągów na DateTime"
-description: "Dowiedz się technik w celu analizy ciągów reprezentujących daty i godziny, aby utworzyć wartości daty i godziny na podstawie ciągu daty i godziny."
+title: 'Porady: Konwertowanie ciągów na DateTime'
+description: Dowiedz się technik w celu analizy ciągów reprezentujących daty i godziny, aby utworzyć wartości daty i godziny na podstawie ciągu daty i godziny.
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -22,11 +22,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a94300a879ac18d21d35dfe58ac0d9805f240a92
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 6912109c11039c311067f330c3af71b15cbadc7a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>Analizowanie ciągów daty i godziny w .NET
 
@@ -64,7 +64,7 @@ Poniższy przykład przedstawia użycie <xref:System.DateTime.Parse%2A?displayPr
 > Uruchom wszystkie C# przykłady w tym artykule w przeglądarce. Naciśnij klawisz **Uruchom** przycisk, aby wyświetlić dane wyjściowe. Można również edytować je, aby wypróbować samodzielnie.
 
 > [!NOTE]
-> Te przykłady są dostępne w repozytorium GitHub dokumentów dla obu [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions) i [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions). Można również pobrać projekt jako ścieżki dla [C#](https://github.com/dotnet/docs/samples/tree/master/snippets/csharp/how-to/conversions.zip) lub [VB](https://github.com/dotnet/docs/samples/tree/master/snippets/visualbasic/how-to/conversions.zip).
+> Te przykłady są dostępne w repozytorium GitHub dokumentów dla obu [C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/conversions) i [VB](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/how-to/conversions). Można również pobrać projekt jako ścieżki dla [C#](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/conversions.zip) lub [VB](https://github.com/dotnet/samples/raw/master/snippets/visualbasic/how-to/conversions.zip).
 
 [!code-csharp-interactive[Parsing.DateAndTime#1](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#1)]
 [!code-vb[Parsing.DateAndTime#1](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#1)]

@@ -1,5 +1,5 @@
 ---
-title: "Słowa kluczowe języka C#"
+title: Słowa kluczowe języka C#
 ms.date: 03/07/2017
 ms.prod: .net
 ms.technology:
@@ -13,7 +13,7 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-caps.latest.revision: 
+caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 60833d372bc54c83c1f491f1f779b597b3ab97dc

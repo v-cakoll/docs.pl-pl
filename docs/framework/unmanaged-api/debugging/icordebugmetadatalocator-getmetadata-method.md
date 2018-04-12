@@ -1,13 +1,13 @@
 ---
-title: "ICorDebugMetaDataLocator::GetMetaData — Metoda"
-ms.custom: 
+title: ICorDebugMetaDataLocator::GetMetaData — Metoda
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebugMetaDataLocator.GetMetaData
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: f9b0ff22-54db-45eb-9cc3-508000a3141d
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 4883ee56c7dd027f053dd072d7c8613f606ff2be
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData — Metoda
 Pyta debugera do zwrócenia pełną ścieżkę do modułu, którego metadanych wymaganego do ukończenia operacji żądanej przez debuger.  
@@ -80,7 +80,7 @@ HRESULT GetMetaData(
   
 |HRESULT|Opis|  
 |-------------|-----------------|  
-|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer`zawiera pełną ścieżkę do pliku i jest zerem.|  
+|S_OK|Metoda została ukończona pomyślnie. `wszPathBuffer` zawiera pełną ścieżkę do pliku i jest zerem.|  
 |E_NOT_SUFFICIENT_BUFFER|Bieżący rozmiar `wszPathBuffer` nie jest wystarczająca do przechowywania pełną ścieżkę. W takim przypadku `pcchPathBuffer` zawiera wymagana liczba `WCHAR`s, w tym znak końcowy null i `GetMetaData` jest wywoływana po raz drugi z rozmiarem buforu żądanej.|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -93,7 +93,7 @@ HRESULT GetMetaData(
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorDebugThread4, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  

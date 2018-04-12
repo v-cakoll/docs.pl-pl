@@ -1,6 +1,6 @@
 ---
-title: "Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)"
-description: "Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI)."
+title: Narzędzia programu .NET core interfejsu wiersza polecenia (CLI)
+description: Przegląd funkcji i narzędzi .NET Core interfejsu wiersza polecenia (CLI).
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017

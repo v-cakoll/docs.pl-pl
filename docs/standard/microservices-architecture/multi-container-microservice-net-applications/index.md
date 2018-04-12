@@ -1,7 +1,7 @@
 ---
-title: "Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie i tworzenie wielu kontenera i Mikrousługi na podstawie aplikacji .NET
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

@@ -17,11 +17,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04696ff346ffab438ce8bef2974fdd1a19d940af
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: e8107fb22fcc8afee8723c77868b0c1e5a404e3f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="whats-new-in-the-net-framework"></a>Co to jest nowe w programie .NET Framework
 <a name="introduction"></a>Ten artykuł zawiera podsumowanie klucza nowe funkcje i ulepszenia w następujących wersjach programu .NET Framework:  
@@ -514,7 +514,8 @@ Const DisableCngCertificates As String = "Switch.System.ServiceModel.DisableCngC
 AppContext.SetSwitch(disableCngCertificates, False)
 ```
 
- **Lepszą obsługę wielu reguł korygowania czasu letniego przez klasę klasa DataContractJsonSerializer** klienci mogą użyć ustawienia konfiguracji aplikacji, aby określić, czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasa obsługuje wiele korekty reguł dla jednej strefie czasowej. Jest to funkcji opcjonalnych. Aby go włączyć, Dodaj następujące ustawienie do pliku app.config:
+ **Klasa klasa DataContractJsonSerializer lepszą obsługę wielu reguł korygowania czasu letniego**   
+ Klienci mogą użyć ustawienia konfiguracji aplikacji, aby określić, czy <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> klasa obsługuje wiele reguł dopasowania dla jednej strefie czasowej. Jest to funkcji opcjonalnych. Aby go włączyć, Dodaj następujące ustawienie do pliku app.config:
 
 ```xml
 <runtime>
@@ -526,32 +527,8 @@ Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataCont
 
 Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i zmiany strefy czasowej, zobacz [Przegląd stref czasowych](../../../docs/standard/datetime/time-zone-overview.md).
 
-**Obsługa zachowania UTC godzinę serializację i deserializację przy użyciu klasy XMLSerializer** zazwyczaj, gdy <xref:System.Xml.Serialization.XmlSerializer> klasy jest używany do serializacji UTC <xref:System.DateTime> wartość, tworzy ciąg serializacji czas, który zachowuje daty i czasu, ale przyjmuje wartość czasu jest lokalny.  Na przykład, jeśli wystąpienia Data i Godzina UTC wywołując następujący kod:
-
-```csharp
-DateTime utc = new DateTime(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc);
-```
-
-```vb
-Dim utc As New Date(2016, 11, 07, 3, 0, 0, DateTimeKind.Utc)
-```
-
-Wynik jest ciągiem czas serializacji "03:00:00.0000000-08:00" dla systemu osiem godzin za UTC.  I serializacji wartości są zawsze zdeserializować jako wartości lokalnej daty i godziny.
-
- Ustawienie konfiguracji aplikacji służy do określenia czy <xref:System.Xml.Serialization.XmlSerializer> zachowuje informacje o strefie czasowej UTC podczas serializacji i deserializacji <xref:System.DateTime> wartości:
-
-```xml 
-<runtime>
-     <AppContextSwitchOverrides 
-          value="Switch.System.Runtime.Serialization.DisableSerializeUTCDateTimeToTimeAndDeserializeUTCTimeToUTCDateTime=false" />
-</runtime>
-```
-
-Gdy ta funkcja jest włączona, <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> obiekt używa <xref:System.TimeZoneInfo> wpisz zamiast <xref:System.TimeZone> typu do deserializacji danych daty i godziny. <xref:System.TimeZoneInfo> obsługuje wiele reguł korygowania, dzięki czemu możliwe do pracy z danych historycznych strefy czasowej.   <xref:System.TimeZone> nie.
-
-Aby uzyskać więcej informacji na temat <xref:System.TimeZoneInfo> struktury i zmiany strefy czasowej, zobacz [Przegląd stref czasowych](../../../docs/standard/datetime/time-zone-overview.md).
-
- **Najlepiej dopasowana NetNamedPipeBinding** WCF jest nowe ustawienie aplikacji, które można ustawić dla aplikacji klienckich, aby upewnić się, zawsze łączą się z usługi nasłuchiwania URI, który najlepiej pasuje do jednej, ich żądanie. To ustawienie aplikacji ustawioną `false` (ustawienie domyślne), jest możliwe w przypadku klientów z <xref:System.ServiceModel.NetNamedPipeBinding> próbuje połączyć się z usługą nasłuchiwanie na identyfikatorze URI, który jest podciągiem żądanego identyfikatora URI.
+ **NetNamedPipeBinding najlepszego dopasowania**   
+ Usługi WCF jest nowe ustawienie aplikacji, które można ustawić dla aplikacji klienckich, aby upewnić się, że zawsze działają z usługą nasłuchiwania URI, który najlepiej pasuje do jednej, ich żądanie. To ustawienie aplikacji ustawioną `false` (ustawienie domyślne), jest możliwe w przypadku klientów z <xref:System.ServiceModel.NetNamedPipeBinding> próbuje połączyć się z usługą nasłuchiwanie na identyfikatorze URI, który jest podciągiem żądanego identyfikatora URI.
 
  Na przykład klient próbuje nawiązać nasłuchuje usługa w `net.pipe://localhost/Service1`, ale inną usługę na tym komputerze, na którym działa z uprawnieniami administratora prowadzi nasłuchiwanie na `net.pipe://localhost`. To ustawienie aplikacji ustawioną `false`, klient będzie podjął próbę nawiązania niewłaściwej usługi. Po ustawieniu ustawienia aplikacji na `true`, klient będzie zawsze łączyć się najlepiej dopasowaną usługi.
 

@@ -1,7 +1,7 @@
 ---
-title: "Mikrousług hostowanych w Docker - C#"
-description: "Dowiedz się, jak utworzyć asp.net podstawowe usługi, które są uruchamiane w kontenerach Docker"
-keywords: ".NET, .NET core, Docker, C#, ASP.NET, Mikrousługi"
+title: Mikrousług hostowanych w Docker - C#
+description: Dowiedz się, jak utworzyć asp.net podstawowe usługi, które są uruchamiane w kontenerach Docker
+keywords: .NET, .NET Core, Docker, C#, ASP.NET, Microservice
 author: BillWagner
 ms.author: wiwagn
 ms.date: 02/03/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: dotnet-docker
 ms.devlang: csharp
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: d399cdce81350356b71e21d879a4f5b5079f98d8
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 253b622618ef62c28ac13a287c34b9d9049dd066
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="microservices-hosted-in-docker"></a>Mikrousług hostowanych w Docker
 
@@ -32,7 +32,7 @@ Na bieżąco zostanie wyświetlony również pewne funkcje języka C#:
 * Jak do przetwarzania przychodzących żądań HTTP oraz do generowania odpowiedzi HTTP
 * Jak pracować z typów wartości null
 
-Możesz [wyświetlić lub pobrać przykładową aplikację](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/WeatherMicroservice) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Możesz [wyświetlić lub pobrać przykładową aplikację](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ### <a name="why-docker"></a>Dlaczego Docker?
 
@@ -73,9 +73,9 @@ Szablon tworzy osiem plików:
 * Plik Program.cs. Zawiera punkt wejścia aplikacji.
 * Plik WeatherMicroservice.csproj. To jest plik kompilacji dla aplikacji.
 * Plik Dockerfile. Ten skrypt tworzy obraz Docker dla aplikacji.
-* README.md. Zawiera linki do innych zasobów platformy ASP.NET Core.
+* A README.md. Zawiera linki do innych zasobów platformy ASP.NET Core.
 * Plik web.config. Zawiera podstawowe informacje o konfiguracji.
-* Plik runtimeconfig.template.json. Zawiera ustawienia debugowania używane przez IDEs.
+* A runtimeconfig.template.json file. Zawiera ustawienia debugowania używane przez IDEs.
 
 Teraz możesz uruchomić aplikacji szablonu wygenerowany. Który ma odbywa się za pomocą szereg narzędzi wiersza polecenia. `dotnet` Polecenia są uruchamiane narzędzia niezbędne do tworzenia aplikacji .NET. Inne polecenie wykonuje każdego zlecenia
 
@@ -98,7 +98,7 @@ I po utworzeniu aplikacji, należy uruchomić z wiersza polecenia:
 dotnet run
 ```
 
-Domyślna konfiguracja nasłuchuje http://localhost: 5000. Można otworzyć przeglądarkę i przejdź do strony i "Witaj świecie!" w temacie Komunikat.
+Domyślna konfiguracja nasłuchuje `http://localhost:5000`. Można otworzyć przeglądarkę i przejdź do strony i "Witaj świecie!" w temacie Komunikat.
 
 ### <a name="anatomy-of-an-aspnet-core-application"></a>Anatomia aplikacji platformy ASP.NET Core
 

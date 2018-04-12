@@ -1,7 +1,7 @@
 ---
-title: "Dopasowanie wzorca — przewodnik C#"
-description: "Dowiedz się więcej o wzorzec dopasowany wyrażenia w języku C#"
-keywords: .NET, .NET core, C#
+title: Dopasowanie wzorca — przewodnik C#
+description: Dowiedz się więcej o wzorzec dopasowany wyrażenia w języku C#
+keywords: .NET, .NET Core, C#
 ms.date: 01/24/2017
 ms.author: wiwagn
 ms.topic: article
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c77c3c3da9983d20cdd86db18f60f83b86b07ea
-ms.sourcegitcommit: 281070dee88db86ec3bb4634d5f558d1a4e159dd
+ms.openlocfilehash: c3fbc617f742e8dd5db4b2ac46b38958cdc30007
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="pattern-matching"></a>Dopasowanie wzorca #
 
@@ -87,7 +87,7 @@ Gdy ograniczone do wartości stałej ma więcej niż jeden `case` etykiety może
 Teraz z więcej uogólniony `switch` wyrażenia, kolejność każdej sekcji ma znaczenie. `switch` Wyrażenia są przetwarzane w kolejności tekstową. Wykonanie przenoszone jest do pierwszej `switch` etykiety, który odpowiada `switch` wyrażenia.  
 Należy pamiętać, że `default` przypadku będą wykonywane tylko, jeśli innych przypadków etykiety nie są zgodne. `default` Przypadek jest obliczane, niezależnie od ich kolejność tekstową. W przypadku nie `default` sprawy i brak innych `case` instrukcje są zgodne, wykonanie jest kontynuowane od następujących instrukcji `switch` instrukcji. Żadna z `case` wykonywany jest kod etykiety.
 
-## <a name="when-clauses-in-case-expressions"></a>`when`klauzule `case` wyrażenia
+## <a name="when-clauses-in-case-expressions"></a>`when` klauzule `case` wyrażenia
 
 Możesz wprowadzić specjalne przypadki tych kształty, których obszaru 0 za pomocą `when` klauzuli na `case` etykiety. Kwadrat o długości boku 0 lub koło z protokołem radius 0 ma obszar 0. Można ją określić za pomocą tego warunku `when` klauzuli na `case` etykiety:  
 
@@ -112,7 +112,7 @@ Na koniec można dodać `null` wielkości liter, aby zapewnić argument nie jest
 
 Specjalnego zachowania w przypadku `null` wzorzec jest ciekawe ponieważ stała `null` we wzorcu nie ma typu, ale mogą być konwertowane do dowolnego typu odwołanie lub typ dopuszczający wartość null. Zamiast przekonwertować `null` do dowolnego typu język definiuje, które `null` wartość będzie zgodny z żadnym wzorcem typu, niezależnie od typu zmienną kompilacji. To zachowanie sprawia, że nowe `switch` na podstawie typu wzorzec zgodne z `is` instrukcji: `is` instrukcje zawsze zwracają `false` gdy wartość sprawdzany jest `null`. Jest również prostsze: po sprawdzeniu typ nie jest potrzebny dodatkowy sprawdzania wartości null. Widać, że z faktu, że nie istnieją żadne null sprawdza w żadnym przypadku bloków powyższe przykłady: nie są niezbędne, ponieważ pasujących do wzorca typu gwarantuje wartość inną niż null.
 
-## <a name="var-declarations-in-case-expressions"></a>`var`deklaracje w `case` wyrażenia
+## <a name="var-declarations-in-case-expressions"></a>`var` deklaracje w `case` wyrażenia
 
 Wprowadzenie `var` jako jednego z wyrażeń dopasowania wprowadzono nowe reguły do dopasowania wzorca.
 
@@ -130,7 +130,7 @@ Trzeci regułę wprowadzono używa gdzie `var` przypadku mogą być użyteczne. 
 
 [!code-csharp[VarCaseExpression](../../samples/csharp/PatternMatching/Program.cs#VarCaseExpression "use a var case expression to filter white space")]
 
-`var` Przypadek dopasowań `null`, ciągiem pustym lub dowolny ciąg, który zawiera tylko białe znaki. Należy zauważyć, że w poprzednim kodzie użyto `?.` operatora, aby upewnić się, że jej nie przypadkowo zgłasza <xref:System.NullReferenceException>. `default` Przypadku obsługuje innych wartości ciągu, które nie jest rozpoznawany przez parser tego polecenia.
+`var` Przypadek dopasowań `null`, ciągiem pustym lub dowolny ciąg, który zawiera tylko biały znak. Należy zauważyć, że w poprzednim kodzie użyto `?.` operatora, aby upewnić się, że jej nie przypadkowo zgłasza <xref:System.NullReferenceException>. `default` Przypadku obsługuje innych wartości ciągu, które nie jest rozpoznawany przez parser tego polecenia.
 
 To jest przykład których warto wziąć pod uwagę `var` przypadek wyrażenie, które różni się od `default` wyrażenia.
 

@@ -1,5 +1,5 @@
 ---
-title: "przy użyciu statycznych — dyrektywa (odwołanie w C#)"
+title: przy użyciu statycznych — dyrektywa (odwołanie w C#)
 ms.date: 03/10/2017
 ms.prod: .net
 ms.technology:

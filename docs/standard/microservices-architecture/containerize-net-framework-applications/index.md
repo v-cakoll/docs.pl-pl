@@ -1,7 +1,7 @@
 ---
-title: "Migrowanie aplikacji starszych wbudowanymi .NET Framework do kontenerów systemu Windows"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Migrowanie aplikacji starszych wbudowanymi .NET Framework do kontenerów systemu Windows"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Migrowanie aplikacji starszych wbudowanymi .NET Framework do kontenerów systemu Windows
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Migrowanie aplikacji starszych wbudowanymi .NET Framework do kontenerów systemu Windows
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017

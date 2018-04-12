@@ -1,12 +1,13 @@
 ---
-title: "&lt;legacyimpersonationpolicy —&gt; — Element"
-ms.custom: 
+title: '&lt;legacyimpersonationpolicy —&gt; — Element'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#legacyImpersonationPolicy
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - <legacyImpersonationPolicy> element
 - legacyImpersonationPolicy element
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: caeede11d8128af00beb5b1b3426e8c4a5406520
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a50ad06026b6ef2f819abefc22016aee29f8ab5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="ltlegacyimpersonationpolicygt-element"></a>&lt;legacyimpersonationpolicy —&gt; — Element
 Określa, że tożsamość systemu Windows nie przepływ między punktami asynchroniczne, niezależnie od ustawień przepływu kontekstu wykonywania w bieżącym wątku.  
   
- \<Konfiguracja >  
-\<Runtime >  
-\<legacyimpersonationpolicy — >  
+ \<configuration>  
+\<runtime>  
+\<legacyImpersonationPolicy>  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -53,8 +55,8 @@ Określa, że tożsamość systemu Windows nie przepływ między punktami asynch
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity>przepływy między punktami asynchronicznych w zależności od <xref:System.Threading.ExecutionContext> przepływu ustawienia bieżącego wątku. Domyślnie włączone.|  
-|`true`|<xref:System.Security.Principal.WindowsIdentity>nie przepływ między punktami asynchroniczne, niezależnie od tego <xref:System.Threading.ExecutionContext> przepływu ustawień w bieżącym wątku.|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity> przepływy między punktami asynchronicznych w zależności od <xref:System.Threading.ExecutionContext> przepływu ustawienia bieżącego wątku. Domyślnie włączone.|  
+|`true`|<xref:System.Security.Principal.WindowsIdentity> nie przepływ między punktami asynchroniczne, niezależnie od tego <xref:System.Threading.ExecutionContext> przepływu ustawień w bieżącym wątku.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -93,8 +95,8 @@ Określa, że tożsamość systemu Windows nie przepływ między punktami asynch
   
  ASP.NET domyślnie wyłącza przepływu personifikacji w pliku konfigurację aspnet.config przy użyciu następujących ustawień konfiguracji:  
   
-```  
-configuration>  
+``` xml
+<configuration>  
    <runtime>  
       <legacyImpersonationPolicy enabled="true"/>  
       <alwaysFlowImpersonationPolicy enabled="false"/>  

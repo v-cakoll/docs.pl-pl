@@ -1,17 +1,18 @@
 ---
-title: "Katalogu .NET core środowiska uruchomieniowego identyfikator (RID)"
-description: "Więcej informacji na temat identyfikatora środowiska uruchomieniowego (RID) i używania identyfikatorów RID w .NET Core."
+title: Katalogu .NET core środowiska uruchomieniowego identyfikator (RID)
+description: Więcej informacji na temat identyfikatora środowiska uruchomieniowego (RID) i używania identyfikatorów RID w .NET Core.
 author: mairaw
 ms.author: mairaw
 ms.date: 09/07/2017
 ms.topic: article
 ms.prod: .net-core
-ms.workload: dotnetcore
-ms.openlocfilehash: 180aac7635746f9ede146c3e561deb9bba9a61ab
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 9343d475319084ddfe3450b4c1d2bbcbd394ad1f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="net-core-rid-catalog"></a>.NET core RID katalogu
 
@@ -19,7 +20,7 @@ Identyfikatorów RID jest skrót *identyfikator środowiska uruchomieniowego*. W
 Są one używane przez pakiety .NET do reprezentowania zasoby specyficzne dla platformy w pakietach NuGet. Przykłady identyfikatorów RID są następujące wartości: `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, lub `osx.10.12-x64`.
 Pakietów z zależnościami natywnego RID wyznacza platformy, na których można przywrócić pakietu.
 
-Można ustawić identyfikatorów RID w `<RuntimeIdentifier>` element pliku projektu. Są również używane za pośrednictwem `--runtime` opcji z następującymi [polecenia interfejsu wiersza polecenia platformy .NET Core](./tools/index.md):
+Pojedynczy RID można ustawić w `<RuntimeIdentifier>` element pliku projektu. Wiele identyfikatorów RID może być zdefiniowana jako listę rozdzielaną średnikami w pliku projektu `<RuntimeIdentifiers>` elementu. Są również używane za pośrednictwem `--runtime` opcji z następującymi [polecenia interfejsu wiersza polecenia platformy .NET Core](./tools/index.md):
 
 - [dotnet build](./tools/dotnet-build.md)
 - [dotnet clean](./tools/dotnet-clean.md)
@@ -31,15 +32,15 @@ Można ustawić identyfikatorów RID w `<RuntimeIdentifier>` element pliku proje
 
 Identyfikatorów RID, reprezentują konkretnych systemów operacyjnych zwykle skorzystaj z tego wzorca: `[os].[version]-[architecture]-[additional qualifiers]` gdzie:
 
-- `[os]`jest krótkiej nazwy systemu operacyjnego platformy. Na przykład `ubuntu`.
+- `[os]` jest krótkiej nazwy systemu operacyjnego platformy. Na przykład `ubuntu`.
 
-- `[version]`jest to wersja systemu operacyjnego w formie oddzielona kropkami (`.`) numer wersji. Na przykład `15.10`.
+- `[version]` jest to wersja systemu operacyjnego w formie oddzielona kropkami (`.`) numer wersji. Na przykład `15.10`.
 
   - Wersja **nie powinny** marketingowe w wersji, ponieważ stanowią one często wielu odrębny wersji systemu operacyjnego ze zróżnicowanymi powierzchni interfejsu API platformy.
 
-- `[architecture]`to architektura procesora. Na przykład: `x86`, `x64`, `arm`, lub `arm64`.
+- `[architecture]` to architektura procesora. Na przykład: `x86`, `x64`, `arm`, lub `arm64`.
 
-- `[additional qualifiers]`rozróżniania różnych platform. Na przykład: `aot` lub `corert`.
+- `[additional qualifiers]` rozróżniania różnych platform. Na przykład: `aot` lub `corert`.
 
 ## <a name="rid-graph"></a>Wykres identyfikatorów RID
 
@@ -114,7 +115,7 @@ Poniższa lista przedstawia najbardziej typowe identyfikatorów RID używane dla
 
 Zobacz [wymagania wstępne dotyczące .NET Core w systemie Windows](windows-prerequisites.md) Aby uzyskać więcej informacji.
 
-## <a name="linux-rids"></a>Linux identyfikatorów RID
+## <a name="linux-rids"></a>Linux RIDs
 
 - Przenośna
   - `linux-x64`
@@ -127,8 +128,8 @@ Zobacz [wymagania wstępne dotyczące .NET Core w systemie Windows](windows-prer
 - Fedora
   - `fedora-x64`
   - `fedora.24-x64`
-  - `fedora.25-x64`(.NET core w wersji 2.0 lub nowszy)
-  - `fedora.26-x64`(.NET core w wersji 2.0 lub nowszy)
+  - `fedora.25-x64` (.NET core w wersji 2.0 lub nowszy)
+  - `fedora.26-x64` (.NET core w wersji 2.0 lub nowszy)
 - Gentoo (.NET Core w wersji 2.0 lub nowszy)
   - `gentoo-x64`
 - openSUSE
@@ -142,12 +143,12 @@ Zobacz [wymagania wstępne dotyczące .NET Core w systemie Windows](windows-prer
   - `ol.7.2-x64`
 - Red Hat Enterprise Linux
   - `rhel-x64`
-  - `rhel.6-x64`(.NET core w wersji 2.0 lub nowszy)
+  - `rhel.6-x64` (.NET core w wersji 2.0 lub nowszy)
   - `rhel.7-x64`
   - `rhel.7.1-x64`
   - `rhel.7.2-x64`
-  - `rhel.7.3-x64`(.NET core w wersji 2.0 lub nowszy)
-  - `rhel.7.4-x64`(.NET core w wersji 2.0 lub nowszy)
+  - `rhel.7.3-x64` (.NET core w wersji 2.0 lub nowszy)
+  - `rhel.7.4-x64` (.NET core w wersji 2.0 lub nowszy)
 - Tizen (.NET Core w wersji 2.0 lub nowszy)
   - `tizen`
 - Ubuntu
@@ -164,7 +165,7 @@ Zobacz [wymagania wstępne dotyczące .NET Core w systemie Windows](windows-prer
   - `linuxmint.17.2-x64`
   - `linuxmint.17.3-x64`
   - `linuxmint.18-x64`
-  - `linuxmint.18.1-x64`(.NET core w wersji 2.0 lub nowszy)
+  - `linuxmint.18.1-x64` (.NET core w wersji 2.0 lub nowszy)
 
 Zobacz [wymagania wstępne dotyczące .NET Core w systemie Linux](linux-prerequisites.md) Aby uzyskać więcej informacji.
 
@@ -172,10 +173,10 @@ Zobacz [wymagania wstępne dotyczące .NET Core w systemie Linux](linux-prerequi
 
 System macOS RID za pomocą starszej znakowania "OS x".
 
-- `osx-x64`(.NET core w wersji 2.0 lub nowszy, minimalna wersja to `osx.10.12-x64`)
+- `osx-x64` (.NET core w wersji 2.0 lub nowszy, minimalna wersja to `osx.10.12-x64`)
 - `osx.10.10-x64`
 - `osx.10.11-x64`
-- `osx.10.12-x64`(.NET core 1.1 lub nowszy)
+- `osx.10.12-x64` (.NET core 1.1 lub nowszy)
 - `osx.10.13-x64`
 
 Zobacz [wymagania wstępne dotyczące .NET Core na macOS](macos-prerequisites.md) Aby uzyskać więcej informacji.

@@ -1,6 +1,6 @@
 ---
-title: "Tworzenie klienta REST przy użyciu platformy .NET Core"
-description: "Ten samouczek zawiera szereg funkcji .NET Core i języka C#."
+title: Tworzenie klienta REST przy użyciu platformy .NET Core
+description: Ten samouczek zawiera szereg funkcji .NET Core i języka C#.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 22391c4db3027c0fad2115c767b5e2808fee28a0
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 8cca71b9b8e09fd26f80d53618a3f1e278e28390
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="rest-client"></a>Klient REST
 
@@ -31,7 +31,7 @@ Będzie utworzyć aplikację, która wystawia żądania HTTP dla usługi REST w 
 
 Istnieje wiele funkcji, w tym samouczku. Utworzymy je jeden po drugim.
 
-Jeśli wolisz wykonaj, wraz z [próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient) dla tego tematu możesz pobrać go. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Jeśli wolisz wykonaj, wraz z [próbki](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) dla tego tematu możesz pobrać go. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 Należy skonfigurować komputer z usługami .NET core. Instrukcje instalacji można znaleźć na [.NET Core](https://www.microsoft.com/net/core) strony. Można uruchomić tej aplikacji, w systemie Windows, Linux, macOS lub w kontenerze Docker. Należy zainstalować w edytorze kodu dotyczącego elementów ulubionych. Opisy poniżej użyj [Visual Studio Code](https://code.visualstudio.com/), która jest typu open source cross platform edytora. Można jednak użyć dowolnego narzędzia potrafisz.
@@ -63,7 +63,7 @@ Większość edytory kodu zapewni uzupełnianie różne wersje tych bibliotek. Z
 Po wprowadzeniu tych zmian, należy uruchomić `dotnet restore` ([patrz Uwaga](#dotnet-restore-note)) ponownie, aby pakiet jest zainstalowany w tym systemie.
 
 ## <a name="making-web-requests"></a>Tworzenie żądania sieci Web
-Teraz możesz rozpocząć pobieranie danych z sieci web. Ta aplikacja będzie odczytu informacji z [GitHub API](https://developer.github.com/v3/). Załóżmy uzyskania informacji na temat projektów w ramach [.NET Foundation](http://www.dotnetfoundation.org/) parasola. Można będzie uruchomić w żądaniu skierowanym do interfejsu API usługi GitHub można pobrać informacji dotyczących projektów. Punkt końcowy będzie potrzebny jest: [https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos). Chcesz pobrać wszystkie informacje dotyczące tych projektów, więc użyjesz żądanie HTTP GET.
+Teraz możesz rozpocząć pobieranie danych z sieci web. Ta aplikacja będzie odczytu informacji z [GitHub API](https://developer.github.com/v3/). Załóżmy uzyskania informacji na temat projektów w ramach [.NET Foundation](http://www.dotnetfoundation.org/) parasola. Można będzie uruchomić w żądaniu skierowanym do interfejsu API usługi GitHub można pobrać informacji dotyczących projektów. Punkt końcowy będzie potrzebny jest: [ https://api.github.com/orgs/dotnet/repos ](https://api.github.com/orgs/dotnet/repos). Chcesz pobrać wszystkie informacje dotyczące tych projektów, więc użyjesz żądanie HTTP GET.
 Przeglądarka używa również żądania HTTP GET, więc możesz wkleić, że adres URL do przeglądarki, aby zobaczyć, jakie informacje należy będziesz otrzymywać i przetwarzania.
 
 Możesz użyć <xref:System.Net.Http.HttpClient> klasy żądań sieci web. Wszystkie nowoczesne interfejsów API architektury .NET, takich jak <xref:System.Net.Http.HttpClient> obsługuje tylko asynchroniczne metody interfejsów API jego długotrwałe.
@@ -380,7 +380,7 @@ Na koniec należy dodać więcej jeden wyjściowy instrukcji w konsoli i wszystk
 Console.WriteLine(repo.LastPush);
 ```
 
-Używana wersja teraz powinna być zgodna. [gotowej próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-webapiclient).
+Używana wersja teraz powinna być zgodna. [gotowej próbki](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient).
  
 ## <a name="conclusion"></a>Wniosek
 

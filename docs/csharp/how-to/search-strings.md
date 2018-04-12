@@ -1,5 +1,5 @@
 ---
-title: "Porady: wyszukiwanie ciągów (Przewodnik C#)"
+title: 'Porady: wyszukiwanie ciągów (Przewodnik C#)'
 ms.date: 02/21/2018
 ms.prod: .net
 ms.technology:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.author: wiwagn
-ms.openlocfilehash: 60d31a3d6d694c04d0c93b96816928e2ccbd3fba
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: cb381ee811846ae8ff0589d918be4f43b3e9ddc3
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-search-strings"></a>Porady: wyszukiwanie ciągów
 
@@ -51,7 +51,7 @@ Wzorzec wyszukiwania opisuje tekst wyszukiwania. W poniższej tabeli opisano ka�
 | -------- |-------------|
 | programu      | zgodny z tekstem "" |
 | (eir)?   | dopasowania 0 lub 1 wystąpieniem "eir" |
-| \s       | Dopasowuje biały znak    |
+| \s       | Dopasowuje znak odstępu    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
@@ -77,7 +77,7 @@ Poniższy kod używa wyrażeń regularnych do walidacji format każdego ciągu w
 
 Ten wzorzec wyszukiwania pojedynczego odpowiada wielu prawidłowe ciągi. Wyrażenia regularne są lepiej wyszukiwania lub sprawdzania poprawności wzorca zamiast jeden ciąg tekstowy.
 
-Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Zobacz też  
 

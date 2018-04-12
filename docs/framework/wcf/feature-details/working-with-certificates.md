@@ -1,13 +1,13 @@
 ---
 title: Praca z certyfikatami
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,29 +15,29 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-caps.latest.revision: 
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 80bc22599a2c7b3478912453b3f90a563aec9c57
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ba49d990c9f067ae2c10ae2a60cbad24b30f43eb
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-certificates"></a>Praca z certyfikatami
 Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpieczeń, X.509 certyfikaty cyfrowe są często używane do uwierzytelniania klientów i serwerów, szyfrowania i cyfrowego podpisywania wiadomości. Ten temat zawiera krótkie opisy X.509 certyfikatu cyfrowego funkcji i sposobie korzystania z nich w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]oraz linki do tematów, które opisano te pojęcia dalsze lub które pokazują, jak wykonywać typowe zadania za pomocą [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i certyfikatów.  
   
- Krótko mówiąc, certyfikat jest częścią *infrastruktury kluczy publicznych* (PKI), która jest system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, sprawdź, które uwierzytelniają każdej Strony biorącej udział w operacji elektronicznej za pomocą kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty i każdy certyfikat ma zestaw pól, które zawierają dane, takie jak *podmiotu* (do której certyfikat został wystawiony jednostek), dat ważności (gdy certyfikat jest nieprawidłowy), wystawcy ( jednostki, który wystawił certyfikat), a klucz publiczny. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], każdej z tych właściwości jest przetwarzany jako <xref:System.IdentityModel.Claims.Claim>, a każde oświadczenie podzielić na dwa typy: tożsamość i w prawo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Certyfikaty X.509 zobacz [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oświadczeniami i autoryzacją w programie WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Wdrażanie infrastruktury kluczy publicznych, zobacz [systemu Windows Server 2008 R2 — usługi certyfikatów](http://go.microsoft.com/fwlink/?LinkId=209949).  
+ Krótko mówiąc, certyfikat jest częścią *infrastruktury kluczy publicznych* (PKI), która jest system certyfikaty cyfrowe, urzędy certyfikacji i innych urzędów rejestracji, sprawdź, które uwierzytelniają każdej Strony biorącej udział w operacji elektronicznej za pomocą kryptografii klucza publicznego. Urząd certyfikacji wystawia certyfikaty i każdy certyfikat ma zestaw pól, które zawierają dane, takie jak *podmiotu* (do której certyfikat został wystawiony jednostek), dat ważności (gdy certyfikat jest nieprawidłowy), wystawcy ( jednostki, który wystawił certyfikat), a klucz publiczny. W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], każdej z tych właściwości jest przetwarzany jako <xref:System.IdentityModel.Claims.Claim>, a każde oświadczenie podzielić na dwa typy: tożsamość i w prawo. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Certyfikaty X.509 zobacz [certyfikatów kluczy publicznych X.509](http://go.microsoft.com/fwlink/?LinkId=209952) [!INCLUDE[crabout](../../../../includes/crabout-md.md)] oświadczeniami i autoryzacją w programie WCF, zobacz [Zarządzanie oświadczeniami i autoryzacją za pomocą modelu tożsamości](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Wdrażanie infrastruktury kluczy publicznych, zobacz [systemu Windows Server 2008 R2 — usługi certyfikatów](http://go.microsoft.com/fwlink/?LinkId=209949).  
   
  Podstawową funkcją certyfikat jest uwierzytelnianie tożsamość właściciela certyfikatu do innych użytkowników. Certyfikat zawiera *klucz publiczny* właściciela, gdy właściciel zachowuje klucza prywatnego. Klucz publiczny może służyć do szyfrowania wiadomości wysyłane do właściciela certyfikatu. Tylko właściciel ma dostęp do klucza prywatnego tak tylko właściciel może odszyfrować te wiadomości.  
   
  Certyfikaty muszą być wystawiane przez urząd certyfikacji, który jest często wystawcy certyfikatów innych firm. W domenie systemu Windows jest dołączony urząd certyfikacji który może służyć do wystawiania certyfikatów dla komputerów w domenie.  
   
 ## <a name="viewing-certificates"></a>Wyświetlanie certyfikatów  
- Aby pracować z certyfikatów, często jest niezbędne do ich wyświetlania i sprawdź, czy ich właściwości. Łatwo to zrobić za pomocą narzędzia przystawki programu Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
+ Aby pracować z certyfikatów, często jest niezbędne do ich wyświetlania i sprawdź, czy ich właściwości. Łatwo to zrobić za pomocą narzędzia przystawki programu Microsoft Management Console (MMC). [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Porady: wyświetlanie certyfikatów w przystawce programu MMC](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md).  
   
 ## <a name="certificate-stores"></a>Magazyny certyfikatów  
  Znaleziono w magazynach certyfikatów. Istnieją dwóch lokalizacji magazynu głównych, które są podzielone na magazyny podrzędne. Jeśli jesteś administratorem na komputerze, za pomocą przystawki programu MMC narzędzia można wyświetlić zarówno magazynów głównych. Użytkownicy inni niż administratorzy mogą wyświetlać tylko bieżący magazyn użytkownika.  
@@ -55,7 +55,7 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
   
 -   **Osobiste**. Ten magazyn jest używany dla certyfikatów skojarzonych z użytkownikiem komputera. Ten magazyn jest zazwyczaj używana w przypadku certyfikatów wystawianych przez jeden z certyfikatów urzędów certyfikacji w magazynie zaufanych głównych urzędów certyfikacji. Można również znaleźć tutaj certyfikatu mogą być własnym wystawiony i zaufany przez aplikację.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]magazyny certyfikatów, zobacz [magazynów certyfikatów](http://go.microsoft.com/fwlink/?LinkId=88912).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] magazyny certyfikatów, zobacz [magazynów certyfikatów](http://go.microsoft.com/fwlink/?LinkId=88912).  
   
 ### <a name="selecting-a-store"></a>Wybieranie magazynu  
  Wybieranie miejsce przechowywania certyfikatu zależy od sposobu i czasu uruchamia usługi lub klienta. Mają zastosowanie następujące reguły ogólne:  
@@ -65,7 +65,7 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
 -   Jeśli usługi lub klienta aplikację, która działa na koncie użytkownika, należy zastosować **bieżącego użytkownika** przechowywania.  
   
 ### <a name="accessing-stores"></a>Uzyskiwanie dostępu do magazynów  
- Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak folderów na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS), [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces jest uruchamiany w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konta. Konto musi mieć dostęp do magazynu, który zawiera certyfikaty używane przez usługę. Każdy magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale można zmodyfikować listy. Jeśli tworzysz oddzielne roli dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak można zmodyfikować listy dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [porady: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przy użyciu certyfikatów klienta z usług IIS, zobacz [sposób wywoływania usługi sieci Web za pomocą certyfikatu klienta do uwierzytelniania w aplikacji sieci Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
+ Magazyny są chronione przez listy kontroli dostępu (ACL), podobnie jak folderów na komputerze. Podczas tworzenia usługi hostowanej przez Internetowe usługi informacyjne (IIS), [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] proces jest uruchamiany w [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] konta. Konto musi mieć dostęp do magazynu, który zawiera certyfikaty używane przez usługę. Każdy magazynów głównych jest chroniony za pomocą domyślnej listy dostępu, ale można zmodyfikować listy. Jeśli tworzysz oddzielne roli dostępu do magazynu, należy przyznać uprawnienia dostępu do tej roli. Aby dowiedzieć się, jak można zmodyfikować listy dostępu za pomocą narzędzia WinHttpCertConfig.exe, zobacz [porady: Tworzenie certyfikatów tymczasowych do użycia podczas tworzenia](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przy użyciu certyfikatów klienta z usług IIS, zobacz [sposób wywoływania usługi sieci Web za pomocą certyfikatu klienta do uwierzytelniania w aplikacji sieci Web ASP.NET](http://go.microsoft.com/fwlink/?LinkId=88914).  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>Łańcuch zaufania i urzędów certyfikacji  
  Certyfikaty są tworzone w hierarchii, w którym każdy certyfikat jest połączony z urzędu certyfikacji, który wystawił certyfikat. Jest to łącze do certyfikatu urzędu certyfikacji. Urząd certyfikacji certyfikatu, a następnie łączy do urzędu certyfikacji, który wystawił certyfikat oryginalnego urzędu certyfikacji. Ten proces jest powtarzany, dopóki certyfikat głównego urzędu certyfikacji zostanie osiągnięty. Certyfikat głównego urzędu certyfikacji jest dodatkowo z natury zaufanych.  
@@ -89,14 +89,14 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
   
 -   [\<Uwierzytelnianie >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+-   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+-   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>Niestandardowe uwierzytelnianie  
  `CertificateValidationMode` Właściwości umożliwia również dostosować sposób uwierzytelniania certyfikatów. Domyślnie po ustawieniu poziomu `ChainTrust`. Aby użyć <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> wartości, należy także ustawić `CustomCertificateValidatorType` atrybutu zestawu i typ używany do weryfikacji certyfikatu. Aby utworzyć niestandardowego modułu weryfikacji, musi dziedziczyć z klasy abstrakcyjnej <xref:System.IdentityModel.Selectors.X509CertificateValidator> klasy.  
   
- Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, najważniejsze metody do przesłonięcia jest <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Niestandardowe poświadczenia i weryfikacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
+ Podczas tworzenia niestandardowego wystawcy uwierzytelnienia, najważniejsze metody do przesłonięcia jest <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> metody. Na przykład niestandardowe uwierzytelnianie Zobacz [moduł weryfikacji certyfikatów X.509](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md) próbki. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Niestandardowe poświadczenia i weryfikacja poświadczeń](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md).  
   
 ## <a name="using-makecertexe-to-build-a-certificate-chain"></a>Przy użyciu Makecert.exe można utworzyć łańcucha certyfikatu  
  Narzędzie tworzenia certyfikatów (Makecert.exe) tworzy certyfikaty X.509 i prywatnego klucza publicznego i pary kluczy. Można zapisać klucza prywatnego na dysku, a następnie użyć go do wystawiania i zarejestrować nowe certyfikaty, w związku z tym symulując hierarchii certyfikatów łańcuchowych. To narzędzie jest przeznaczone do użytku wyłącznie jako pomoc podczas opracowywania usługi i nie mogą być używane w celu utworzenia certyfikatów do rzeczywistego wdrożenia. Podczas tworzenia [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi, wykonaj następujące kroki, aby utworzyć łańcuch zaufania z Makecert.exe.  
@@ -153,15 +153,15 @@ Aby program [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] zabezpiecze�
  [!code-vb[c_WorkingWithCertificates#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_workingwithcertificates/vb/source.vb#1)]  
   
 ### <a name="multiple-certificates-with-the-same-value"></a>Wiele certyfikatów z tą samą wartością  
- Magazyn może zawierać wiele certyfikatów z taką samą nazwę podmiotu. Oznacza to, że jeśli użytkownik określi, że `x509FindType` jest <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> lub <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>i więcej niż jeden certyfikat ma taką samą wartość, jest zwracany wyjątek, becausethereisno sposób wyróżniania certyfikat, który jest wymagany. Można zaradzić przez ustawienie `x509FindType` do <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. W polu odcisku palca zawiera unikatową wartość, która może służyć do znaleźć określonego certyfikatu w magazynie. Jednak to ma własną wadą: Jeśli certyfikat jest odwołany lub odnowiony, `SetCertificate` metody zakończy się niepowodzeniem, ponieważ odcisk palca również został usunięty. Lub, jeśli certyfikat nie jest już prawidłowe, uwierzytelnianie nie powiedzie się. Aby temu zaradzić, należy ustawić `x590FindType` parametr <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> i określ nazwę wystawcy. Jeśli wymagana jest nie określonego wystawcę, można również ustawić jednego z innych <xref:System.Security.Cryptography.X509Certificates.X509FindType> wyliczenia wartości, takich jak <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
+ Magazyn może zawierać wiele certyfikatów z taką samą nazwę podmiotu. Oznacza to, że jeśli użytkownik określi, że `x509FindType` jest <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectName> lub <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindBySubjectDistinguishedName>i więcej niż jeden certyfikat ma taką samą wartość, jest zwracany wyjątek, ponieważ nie istnieje sposób rozróżnienie, który certyfikat jest wymagany. Można zaradzić przez ustawienie `x509FindType` do <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint>. W polu odcisku palca zawiera unikatową wartość, która może służyć do znaleźć określonego certyfikatu w magazynie. Jednak to ma własną wadą: Jeśli certyfikat jest odwołany lub odnowiony, `SetCertificate` metody zakończy się niepowodzeniem, ponieważ odcisk palca również został usunięty. Lub, jeśli certyfikat nie jest już prawidłowe, uwierzytelnianie nie powiedzie się. Aby temu zaradzić, należy ustawić `x590FindType` parametr <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByIssuerName> i określ nazwę wystawcy. Jeśli wymagana jest nie określonego wystawcę, można również ustawić jednego z innych <xref:System.Security.Cryptography.X509Certificates.X509FindType> wyliczenia wartości, takich jak <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByTimeValid>.  
   
 ## <a name="certificates-in-configuration"></a>Certyfikaty w konfiguracji  
  Certyfikaty można również ustawić za pomocą konfiguracji. W przypadku tworzenia usługi poświadczeń, takich jak certyfikaty, są określone w obszarze [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md). Klient są programowania, certyfikaty są określone w obszarze [ \<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md).  
   
 ## <a name="mapping-a-certificate-to-a-user-account"></a>Mapowanie certyfikatu do konta użytkownika  
- Funkcja usług IIS i usługi Active Directory jest możliwość mapowania certyfikatu na konto użytkownika systemu Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]funkcji, zobacz [mapowania certyfikatów do kont użytkowników](http://go.microsoft.com/fwlink/?LinkId=88917).  
+ Funkcja usług IIS i usługi Active Directory jest możliwość mapowania certyfikatu na konto użytkownika systemu Windows. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] funkcji, zobacz [mapowania certyfikatów do kont użytkowników](http://go.microsoft.com/fwlink/?LinkId=88917).  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą mapowania usługi Active Directory, zobacz [mapowania certyfikatów klientów przy użyciu mapowanie usługi katalogowej](http://go.microsoft.com/fwlink/?LinkId=88918).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą mapowania usługi Active Directory, zobacz [mapowania certyfikatów klientów przy użyciu mapowanie usługi katalogowej](http://go.microsoft.com/fwlink/?LinkId=88918).  
   
  Dzięki tej możliwości włączone, można ustawić <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> właściwość <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> klasy do `true`. W konfiguracji, można ustawić `mapClientCertificateToWindowsAccount` atrybutu [ \<uwierzytelniania >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) elementu `true`, jak pokazano w poniższym kodzie.  
   

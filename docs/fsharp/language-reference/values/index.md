@@ -1,7 +1,7 @@
 ---
-title: "Wartości (F#)"
-description: "Dowiedz się, jak wartości w języku F # to ilości, które mają określonego typu."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Wartości (F#)
+description: 'Dowiedz się, jak wartości w języku F # to ilości, które mają określonego typu.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016

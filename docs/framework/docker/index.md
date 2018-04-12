@@ -1,6 +1,6 @@
 ---
 title: Docker na .NET Framework
-description: "Więcej informacji na temat wdrażania aplikacji .NET Framework z Docker przy użyciu kontenery systemu Windows."
+description: Więcej informacji na temat wdrażania aplikacji .NET Framework z Docker przy użyciu kontenery systemu Windows.
 keywords: .NET, serwer .NET, Docker, kontenery systemu Windows
 author: BillWagner
 ms.author: wiwagn
@@ -10,7 +10,8 @@ ms.prod: .net-framework
 ms.technology: dotnet-docker
 ms.devlang: dotnet
 ms.assetid: a27b2ae4-154e-4b2b-b221-0c4c05185274
-ms.workload: wiwagn
+ms.workload:
+- wiwagn
 ms.openlocfilehash: a87b1b90b4ca896b7c1e43ff80ae2f9301101c88
 ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
 ms.translationtype: MT

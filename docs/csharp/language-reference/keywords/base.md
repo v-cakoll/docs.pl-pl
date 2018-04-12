@@ -1,6 +1,6 @@
 ---
-title: "base (odwołanie w C#)"
-description: "Więcej informacji na temat base — słowo kluczowe, która umożliwia dostęp do elementów członkowskich klasy podstawowej z w klasie pochodnej w języku C#."
+title: base (odwołanie w C#)
+description: Więcej informacji na temat base — słowo kluczowe, która umożliwia dostęp do elementów członkowskich klasy podstawowej z w klasie pochodnej w języku C#.
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,7 +13,7 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1bbaa0cc05b35f822113bc3a8c3cde966b1484ef

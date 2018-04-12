@@ -1,23 +1,24 @@
 ---
-title: "Serializacja przepływów pracy i działań do i z XAML"
-ms.custom: 
+title: Serializacja przepływów pracy i działań do i z XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 37685b32-24e3-4d72-88d8-45d5fcc49ec2
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6c1954f02aef13599f7bd24f8e2d136f0f876256
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4ca32eb9543498279448617e33169ddd22882702
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="serializing-workflows-and-activities-to-and-from-xaml"></a>Serializacja przepływów pracy i działań do i z XAML
 Oprócz kompilowany do typów, które znajdują się w zestawach definicji przepływu pracy może być Zserializowany w języku XAML. Te definicje serializacji można wykorzystać do edycji lub inspekcję, przekazany do system kompilacji dla kompilacji, i załadować wywołany. Ten temat zawiera omówienie serializacji definicji przepływu pracy oraz pracy z definicji przepływu pracy XAML.  
@@ -27,9 +28,9 @@ Oprócz kompilowany do typów, które znajdują się w zestawach definicji przep
   
  [!code-csharp[CFX_WorkflowApplicationExample#41](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#41)]  
   
- Każdy z <xref:System.Activities.DynamicActivityProperty> wystąpień reprezentuje jeden z argumentów wejściowych w przepływie pracy oraz <xref:System.Activities.ActivityBuilder.Implementation%2A> zawiera działania, które tworzą logika przepływu pracy. Należy pamiętać, że wyrażenia r-wartości w tym przykładzie są wyrażeń języka Visual Basic. Wyrażenia lambda nie są do serializacji w języku XAML chyba że <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> jest używany. Jeśli serializacji przepływy pracy mają można otworzyć lub edytować w Projektancie przepływów pracy, a następnie wyrażeń języka Visual Basic powinien być używany. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Tworzenia przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywnych](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
+ Każdy z <xref:System.Activities.DynamicActivityProperty> wystąpień reprezentuje jeden z argumentów wejściowych w przepływie pracy oraz <xref:System.Activities.ActivityBuilder.Implementation%2A> zawiera działania, które tworzą logika przepływu pracy. Należy pamiętać, że wyrażenia r-wartości w tym przykładzie są wyrażeń języka Visual Basic. Wyrażenia lambda nie są do serializacji w języku XAML chyba że <xref:System.Activities.Expressions.ExpressionServices.Convert%2A> jest używany. Jeśli serializacji przepływy pracy mają można otworzyć lub edytować w Projektancie przepływów pracy, a następnie wyrażeń języka Visual Basic powinien być używany. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Tworzenie przepływów pracy, działań i wyrażenia przy użyciu kodu Imperatywnych](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md).  
   
- Do serializacji definicji przepływu pracy reprezentowany przez <xref:System.Activities.ActivityBuilder> wystąpienia w języku XAML, użyj <xref:System.Activities.XamlIntegration.ActivityXamlServices> utworzyć <xref:System.Xaml.XamlWriter>, a następnie użyj <xref:System.Xaml.XamlServices> do serializacji definicji przepływu pracy przy użyciu <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices>metody mapowania <xref:System.Activities.ActivityBuilder> wystąpień do i z XAML i załadować przepływów pracy XAML i zwracać <xref:System.Activities.DynamicActivity> może być wywołany. W poniższym przykładzie <xref:System.Activities.ActivityBuilder> wystąpienia z poprzedniego przykładu uszeregować w ciągu, a także zapisane w pliku.  
+ Do serializacji definicji przepływu pracy reprezentowany przez <xref:System.Activities.ActivityBuilder> wystąpienia w języku XAML, użyj <xref:System.Activities.XamlIntegration.ActivityXamlServices> utworzyć <xref:System.Xaml.XamlWriter>, a następnie użyj <xref:System.Xaml.XamlServices> do serializacji definicji przepływu pracy przy użyciu <xref:System.Xaml.XamlWriter>. <xref:System.Activities.XamlIntegration.ActivityXamlServices> metody mapowania <xref:System.Activities.ActivityBuilder> wystąpień do i z XAML i załadować przepływów pracy XAML i zwracać <xref:System.Activities.DynamicActivity> może być wywołany. W poniższym przykładzie <xref:System.Activities.ActivityBuilder> wystąpienia z poprzedniego przykładu uszeregować w ciągu, a także zapisane w pliku.  
   
 ```csharp  
 // Serialize the workflow to XAML and store it in a string.  
@@ -74,7 +75,7 @@ sw.Close();
 </Activity>  
 ```  
   
- Do załadowania serializacji przepływu pracy, <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> metoda jest używana. To przyjmuje definicja Zserializowany przepływu pracy i zwraca <xref:System.Activities.DynamicActivity> reprezentujący definicji przepływu pracy. Należy pamiętać, że XAML nie jest zdeserializować do <xref:System.Activities.Activity.CacheMetadata%2A> jest wywoływana w treści <xref:System.Activities.DynamicActivity> w procesie weryfikacji. Jeśli weryfikacja nie została jawnie wywołana. jest on również wykonywane po wywołaniu przepływ pracy. Jeśli XAML definicji przepływu pracy jest nieprawidłowy, a następnie <xref:System.Argument> wyjątku. Wszelkie wyjątki zgłaszane z <xref:System.Activities.Activity.CacheMetadata%2A> ucieczki z wywołania <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> i muszą być obsługiwane przez obiekt wywołujący. W poniższym przykładzie serializacji przepływu pracy z poprzedniego przykładu jest załadowany i wywoływane przy użyciu <xref:System.Activities.WorkflowInvoker>.  
+ Do załadowania serializacji przepływu pracy, <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> metoda jest używana. To przyjmuje definicja Zserializowany przepływu pracy i zwraca <xref:System.Activities.DynamicActivity> reprezentujący definicji przepływu pracy. Należy pamiętać, że XAML nie jest zdeserializować do <xref:System.Activities.Activity.CacheMetadata%2A> jest wywoływana w treści <xref:System.Activities.DynamicActivity> w procesie weryfikacji. Jeśli weryfikacja nie została jawnie wywołana. jest on również wykonywane po wywołaniu przepływ pracy. Jeśli XAML definicji przepływu pracy jest nieprawidłowy, a następnie <xref:System.ArgumentException> wyjątku. Wszelkie wyjątki zgłaszane z <xref:System.Activities.Activity.CacheMetadata%2A> ucieczki z wywołania <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> i muszą być obsługiwane przez obiekt wywołujący. W poniższym przykładzie serializacji przepływu pracy z poprzedniego przykładu jest załadowany i wywoływane przy użyciu <xref:System.Activities.WorkflowInvoker>.  
   
  [!code-csharp[CFX_WorkflowApplicationExample#43](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#43)]  
   
@@ -83,7 +84,7 @@ sw.Close();
  **25 + 15**  
 **40**    
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]wywoływanie przepływy pracy argumentów wejściowych i wyjściowych, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) i <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] wywoływanie przepływy pracy argumentów wejściowych i wyjściowych, zobacz [przy użyciu WorkflowInvoker i działanie obiektu WorkflowApplication](../../../docs/framework/windows-workflow-foundation/using-workflowinvoker-and-workflowapplication.md) i <xref:System.Activities.WorkflowInvoker.Invoke%2A>.  
   
  Jeśli serializacji przepływ pracy zawiera wyrażenia języka C#, a następnie <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings> wystąpienia z jego <xref:System.Activities.XamlIntegration.ActivityXamlServicesSettings.CompileExpressions%2A> ustawioną właściwość `true` muszą być przekazywane jako parametr <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A?displayProperty=nameWithType>, w przeciwnym razie <xref:System.NotSupportedException> zostanie zgłoszony z komunikatu podobnego do następujące: `Expression Activity type 'CSharpValue`1" wymaga kompilacji, aby można było uruchomić.  Upewnij się, że przepływ pracy został skompilowany. "  
   
@@ -96,7 +97,7 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;  
 ```  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Wyrażeń C#](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [C# wyrażenia](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md).  
   
  Definicja Zserializowany przepływu pracy mogą także zostać załadowane do <xref:System.Activities.ActivityBuilder> wystąpienia przy użyciu <xref:System.Activities.XamlIntegration.ActivityXamlServices> <xref:System.Activities.XamlIntegration.ActivityXamlServices.CreateBuilderReader%2A> metody. Po załadowaniu serializacji przepływu pracy do <xref:System.Activities.ActivityBuilder> wystąpienia można sprawdzić i modyfikować. Jest to użyteczne dla autorów projektanta niestandardowego przepływu pracy i udostępnia mechanizm dla zapisywanie i ponowne załadowanie definicji przepływu pracy podczas tworzenia projektu. W poniższym przykładzie jest ładowany definicja Zserializowany przepływu pracy z poprzedniego przykładu, a jego właściwości są kontrolowane.  
   

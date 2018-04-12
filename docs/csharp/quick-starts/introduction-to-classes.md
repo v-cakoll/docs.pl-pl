@@ -1,6 +1,6 @@
 ---
 title: Wprowadzenie do samouczka klasy - C# lokalnego poradniki Szybki Start
-description: "Utwórz pierwszy program C# i eksplorowanie obiektowej pojęcia"
+description: Utwórz pierwszy program C# i eksplorowanie obiektowej pojęcia
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 97c1de562c86ea04153ec09bb0e813565523a3ba
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: dd3fff6f74c92a45545e8e36f28eab351b39b37e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="introduction-to-classes"></a>Wprowadzenie do klas
 
@@ -78,7 +78,7 @@ namespace classes
 
 Przed przejściem, Spójrzmy na został skompilowany.  `namespace` Deklaracji umożliwia organizację kodu. Ta opcja szybkiego startu jest stosunkowo mały, więc będzie umieścić cały kod w jednym obszarze nazw. 
 
-`public class BankAccount`definiuje klasę lub typ tworzony. Wszystkie elementy wewnątrz `{` i `}` następujący klasy deklaracji definiuje zachowanie klasy. Istnieje pięć ***członków*** z `BankAccount` klasy. Pierwsze trzy są ***właściwości***. Właściwości elementów danych i może mieć kod, który wymusza sprawdzania poprawności lub inne zasady. Ostatnie dwa są ***metody***. Metody są bloki kodu tego administracją jednej funkcji. Odczytywanie nazwy wszystkich członków powinien podać informacji wystarczających lub innego projektanta zrozumieć, co oznacza klasy.
+`public class BankAccount` definiuje klasę lub typ tworzony. Wszystkie elementy wewnątrz `{` i `}` następujący klasy deklaracji definiuje zachowanie klasy. Istnieje pięć ***członków*** z `BankAccount` klasy. Pierwsze trzy są ***właściwości***. Właściwości elementów danych i może mieć kod, który wymusza sprawdzania poprawności lub inne zasady. Ostatnie dwa są ***metody***. Metody są bloki kodu tego administracją jednej funkcji. Odczytywanie nazwy wszystkich członków powinien podać informacji wystarczających lub innego projektanta zrozumieć, co oznacza klasy.
 
 ## <a name="open-a-new-account"></a>Otwórz nowe konto
 
@@ -156,7 +156,7 @@ Konstruktora należy uzyskać jednej zmiany, dzięki czemu dodaje transakcję po
 
 [!code-csharp[Constructor](../../../samples/csharp/classes-quickstart/BankAccount.cs#Constructor "The final version of the constructor")]
 
-<xref:System.DateTime.Now?displayProperty=nameWithType>jest właściwością, która zwraca bieżącą datę i godzinę. Testowania tej funkcji, dodając kilka wpłat i wycofywania w Twojej `Main` metody:
+<xref:System.DateTime.Now?displayProperty=nameWithType> jest właściwością, która zwraca bieżącą datę i godzinę. Testowania tej funkcji, dodając kilka wpłat i wycofywania w Twojej `Main` metody:
 
 ```csharp
 account.MakeWithdrawal(500, DateTime.Now, "Rent payment");
@@ -215,6 +215,6 @@ Typ `dotnet run` wyników.
 
 ## <a name="next-steps"></a>Następne kroki
 
-Jeśli użytkownik został zablokowany, można wyświetlić źródła dla tego przewodnika Szybki Start [w naszym repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/)
+Jeśli użytkownik został zablokowany, można wyświetlić źródła dla tego przewodnika Szybki Start [w naszym repozytorium GitHub](https://github.com/dotnet/samples/tree/master/csharp/classes-quickstart/)
 
 Gratulacje, po zakończeniu wszystkich naszych Przewodniki Szybki Start. Jeśli chcesz dowiedzieć się więcej, spróbuj naszych [samouczki](../tutorials/index.md)

@@ -27,7 +27,7 @@ ms.lasthandoff: 11/21/2017
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Type jest zastosowanie `#warning` w dyrektywie warunkowej. Istnieje również możliwość wygenerowania błędu zdefiniowanego przez użytkownika z [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).  
+Typowym zastosowaniem `#warning` jest dyrektywa warunkowa. Istnieje również możliwość wygenerowania błędu zdefiniowanego przez użytkownika przy użyciu dyrektywy [#error](../../../csharp/language-reference/preprocessor-directives/preprocessor-error.md).
   
 ## <a name="example"></a>Przykład  
   

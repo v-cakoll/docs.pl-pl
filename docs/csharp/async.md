@@ -1,6 +1,6 @@
 ---
 title: Programowanie asynchroniczne
-description: "Więcej informacji na temat języka C# poziom języka asynchroniczne modelu programowania udostępniane przez oprogramowanie .NET Core."
+description: Więcej informacji na temat języka C# poziom języka asynchroniczne modelu programowania udostępniane przez oprogramowanie .NET Core.
 keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn

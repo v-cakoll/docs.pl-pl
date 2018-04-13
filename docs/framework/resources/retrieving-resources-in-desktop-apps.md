@@ -1,12 +1,13 @@
 ---
-title: "Pobieranie zasobów w aplikacjach klasycznych"
-ms.custom: 
+title: Pobieranie zasobów w aplikacjach klasycznych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-caps.latest.revision: "22"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b1227aa30d854d736bb24413b37d4722e729b2ff
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a02d9efcadcc4c7066dba4e55268ab898b6790e8
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>Pobieranie zasobów w aplikacjach klasycznych
 Podczas pracy z zlokalizowanych zasobów w aplikacjach klasycznych .NET Framework, należy w idealnym przypadku pakiet zasobów dla domyślnej lub kultury neutralnej o zestawie głównym i utworzyć zestaw satelicki osobne dla każdego języka i kultury, która obsługuje aplikację. Następnie można użyć <xref:System.Resources.ResourceManager> klasy zgodnie z opisem w następnej sekcji, aby uzyskać dostęp do zasobów o nazwie. Jeśli wybierzesz nie osadzić zasobów w zestawie głównym i zestawy satelickie, można również przejść, pliki binarne .resources bezpośrednio, zgodnie z opisem w sekcji [podczas pobierania zasobów z plików .resources](#from_file) dalszej części tego artykuł.  Można pobrać zasobów w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [tworzenie i pobieranie zasobów w aplikacjach w Sklepie Windows](http://go.microsoft.com/fwlink/p/?LinkID=241674) w Centrum deweloperów systemu Windows.  
@@ -77,15 +79,15 @@ TimeHeader=Текущее время —
   
 ```  
 resgen strings.txt  
-csc GetString.cs /resource:strings.resources  
+csc GetString.cs -resource:strings.resources  
   
 resgen strings.fr-FR.txt  
 md fr-FR  
-al /embed:strings.fr-FR.resources /culture:fr-FR /out:fr-FR\GetString.resources.dll  
+al -embed:strings.fr-FR.resources -culture:fr-FR -out:fr-FR\GetString.resources.dll  
   
 resgen strings.ru-RU.txt  
 md ru-RU  
-al /embed:strings.ru-RU.resources /culture:ru-RU /out:ru-RU\GetString.resources.dll  
+al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.dll  
 ```  
   
  Bieżąca kultura interfejsu użytkownika po hiszpański (Hiszpania), należy pamiętać, w przykładzie przedstawiono zasoby dla języka angielskiego, ponieważ język hiszpański zasoby są niedostępne, a kulturę domyślną na przykład jest angielski.  
@@ -111,7 +113,7 @@ CreateResources
   
 resgen AppResources.resx  
   
-csc GetStream.cs /resource:AppResources.resources  
+csc GetStream.cs -resource:AppResources.resources  
 ```  
   
  W poniższym przykładzie użyto <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> metodę deserializacji niestandardowych obiektów. Przykład zawiera kod źródłowy plik o nazwie UIElements.cs (UIElements.vb w języku Visual Basic), który definiuje następującą strukturę o nazwie `PersonTable`. Ta struktura jest przeznaczona do użycia przez Tabela ogólna procedura wyświetlania Wyświetla zlokalizowanych nazw kolumn tabeli. Należy pamiętać, że `PersonTable` struktura jest oznaczona atrybutem <xref:System.SerializableAttribute> atrybutu.  
@@ -132,12 +134,12 @@ csc GetStream.cs /resource:AppResources.resources
  Możesz skompilować pliku niezbędnych zasobów i zestawów i uruchom aplikację, wykonując następujący plik wsadowy. Należy użyć `/r` opcję, aby podać Resgen.exe z odwołaniem do UIElements.dll, dzięki czemu będzie miał dostęp do informacji o `PersonTable` struktury. Jeśli używasz programu C#, Zastąp `vbc` nazwę kompilatora `csc`i Zastąp `.vb` rozszerzenie o `.cs`.  
   
 ```  
-vbc /t:library UIElements.vb  
-vbc CreateResources.vb /r:UIElements.dll  
+vbc -t:library UIElements.vb  
+vbc CreateResources.vb -r:UIElements.dll  
 CreateResources  
   
-resgen UIResources.resx  /r:UIElements.dll  
-vbc GetObject.vb /r:UIElements.dll /resource:UIResources.resources  
+resgen UIResources.resx  -r:UIElements.dll  
+vbc GetObject.vb -r:UIElements.dll -resource:UIResources.resources  
   
 GetObject.exe  
 ```  

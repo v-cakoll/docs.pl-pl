@@ -1,5 +1,5 @@
 ---
-title: "Wprowadzenie do języka Visual Basic"
+title: Wprowadzenie do języka Visual Basic
 ms.date: 08/10/2017
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
-caps.latest.revision: 
+caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 291065ae4c42cea741c4631923506076fcbc2f2e
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 Ta sekcja dokumentacji ułatwia szybkie wprowadzenie do programowania aplikacji Visual Basic.  
@@ -46,9 +46,9 @@ Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znale
 
 ## <a name="see-also"></a>Zobacz także
  [Program Visual Basic](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)  
- Łącza pobierania wersji programu Visual Studio, które umożliwiają obsługę języka Visual basic, w tym bezpłatnej wersji.  
+ Łącza pobierania wersji programu Visual Studio, które umożliwiają obsługę języka Visual Basic, w tym bezpłatnej wersji.  
 
- [Podstawy języka Visual Basic dla początkujących bezwzględne](https://mva.microsoft.com/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
+ [Podstawy języka Visual Basic dla początkujących bezwzględne](https://mva.microsoft.com/en-US/training-courses/visual-basic-fundamentals-for-absolute-beginners-16507)  
  Microsoft Virtual Academy kursu, który zawiera podstawowe informacje na temat programowania w języku Visual Basic.
 
  [Programowanie zorientowane obiektowo](../programming-guide/concepts/object-oriented-programming.md)  

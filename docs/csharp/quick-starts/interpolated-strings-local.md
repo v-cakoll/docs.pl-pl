@@ -1,6 +1,6 @@
 ---
-title: "Ciągi interpolowane samouczek - C# lokalnego poradniki Szybki Start"
-description: "W tym Szybki Start o ciągi interpolowane pisania kodu C# do obejmują wynik wyrażenia w większych ciągu."
+title: Ciągi interpolowane samouczek - C# lokalnego poradniki Szybki Start
+description: W tym Szybki Start o ciągi interpolowane pisania kodu C# do obejmują wynik wyrażenia w większych ciągu.
 author: rpetrusha
 ms.author: ronpet
 ms.date: 01/11/2018
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: b6089b69eb350fce29f86f19f5abeb44acb4b6b4
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 1edd2b9f59d1933547c4152343f226a86ad90216
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="interpolated-strings"></a>Ciągi interpolowane
 
@@ -166,5 +166,4 @@ Zakończono ciągi interpolowane — Szybki Start.
     
 Można kontynuować [kolekcji i tablic](arrays-and-collections.md) szybkiego startu w środowisku projektowania.
 
-Dowiedz się więcej o pracy z ciągi interpolowane w [ciągi interpolowane](../language-reference/keywords/interpolated-strings.md) tematu w odwołanie w C#.
-
+Dowiedz się więcej o ciągi interpolowane w [ciągu interpolacji](../language-reference/tokens/interpolated.md) tematu w odwołanie w C#.

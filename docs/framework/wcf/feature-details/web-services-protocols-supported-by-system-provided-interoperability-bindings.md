@@ -1,31 +1,33 @@
 ---
-title: "Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system"
-ms.custom: 
+title: Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS-protocols
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-caps.latest.revision: "39"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4bfc4342435580796423056889b1c3bd22153740
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>Protokoły usług sieci Web obsługiwane przez wiązania współdziałania udostępnione przez system
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]jest oparty na potrzeby współdziałania z usługami sieci Web, które obsługuje zestaw specyfikacji znany jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi współdziałanie najważniejsze wskazówki dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawiono trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Współdziałanie z organizacji standardów przejścia z Structured Information Standards (OASIS) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera jeden interoperacyjne powiązanie dostarczane przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Dla publikacji metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera dwa interoperacyjne powiązania dostarczane przez system: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje obsługujących powiązania interoperacyjne dostarczane przez system.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] jest oparty na potrzeby współdziałania z usługami sieci Web, które obsługuje zestaw specyfikacji znany jako specyfikacje usług sieci Web. Aby uprościć konfigurację usługi współdziałanie najważniejsze wskazówki dotyczące [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przedstawiono trzy interoperacyjne powiązania dostarczane przez system: <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>, <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>, i <xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>. Współdziałanie z organizacji standardów przejścia z Structured Information Standards (OASIS) [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera jeden interoperacyjne powiązanie dostarczane przez system: <xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>. Dla publikacji metadanych [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] zawiera dwa interoperacyjne powiązania dostarczane przez system: [ \<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) i [ \<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md). W tym temacie wymieniono specyfikacje obsługujących powiązania interoperacyjne dostarczane przez system.  
   
 ## <a name="web-services-protocols-supported-by-basichttpbinding-wshttpbinding-ws2007httpbinding-and-wsdualhttpbinding-bindings"></a>Web Services protokoły obsługiwane przez wiązania klasy basicHttpBinding lub wsHttpBinding, ws2007HttpBinding, a wsDualHttpBinding  
   
@@ -37,13 +39,13 @@ ms.lasthandoff: 12/22/2017
   
 |Kategoria|Protokół|Specyfikacja i użycia|  
 |--------------|--------------|-----------------------------|  
-|Transportu|PROTOKOŁU HTTP 1.1|[PROTOKOŁU HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding`, i `WS2007HttpBinding` użyj transportu HTTP i HTTPS.|  
+|Transportu|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> `BasicHttpBinding`, `WSHttpBinding`, i `WS2007HttpBinding` użyj transportu HTTP i HTTPS.|  
 |Obsługa wiadomości|MTOM|[MTOM](http://go.microsoft.com/fwlink/?LinkId=95326)<br /><br /> `basicHttpBinding`, `wsHttpBinding`, i `ws2007HttpBinding` obsługuje mechanizmu optymalizacji transmisji wiadomości (MTOM). Nie jest używany domyślnie. Aby używać mechanizmu MTOM, ustaw `messageEncoding` atrybutu `"Mtom"`.<br /><br /> Przykład:<br /><br /> `<wsHttpBinding> <binding messageEncoding="Mtom"/> </wsHttpBinding>`|  
-|Metadane|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa usługi sieci Web Services Description Language (WSDL) do opisu usługi.|  
-|Metadane|WS-Policy.|[WS-Policy.](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznego dla domeny do opisu usługi wymagań i możliwości.|  
-|Metadane|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznego dla domeny do opisu usługi wymagań i możliwości.|  
-|Metadane|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementuje usługi WS-PolicyAttachment do podłączenia zasad wyrażenia w różnych zakresów w sieci Web Services Description Language (WSDL).|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
+|Metadane|WSDL 1.1|[WSDL 1.1](http://go.microsoft.com/fwlink/?LinkId=94859)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa usługi sieci Web Services Description Language (WSDL) do opisu usługi.|  
+|Metadane|WS-Policy|[WS-Policy](http://go.microsoft.com/fwlink/?LinkId=94864)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznego dla domeny do opisu usługi wymagań i możliwości.|  
+|Metadane|WS-Policy 1.5|[WS-Policy 1.5](http://go.microsoft.com/fwlink/?LinkId=95327)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa specyfikacji WS-Policy wraz z potwierdzeniami specyficznego dla domeny do opisu usługi wymagań i możliwości.|  
+|Metadane|WS-PolicyAttachment|[WS-PolicyAttachment](http://go.microsoft.com/fwlink/?LinkId=95328)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje usługi WS-PolicyAttachment do podłączenia zasad wyrażenia w różnych zakresów w sieci Web Services Description Language (WSDL).|  
+|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
   
 ### <a name="basichttpbinding"></a>basicHttpBinding  
   
@@ -67,14 +69,14 @@ ms.lasthandoff: 12/22/2017
 |Zabezpieczenia|Profil Token protokołu Kerberos zabezpieczeń wiadomości programu WSS SOAP 1.1|[Profil Token protokołu Kerberos zabezpieczeń wiadomości programu WSS SOAP 1.1](http://go.microsoft.com/fwlink/?LinkId=95333)<br /><br /> Używany do uwierzytelniania i komunikat ochrony po `wsSecurity` elementu `authenticationMode` atrybut ma wartość "Windows".<br /><br /> `<wsHttpBinding>   <binding name="MyBinding">     <security mode="Message>       <message           clientCredentialType="Windows"        negotiateServiceCredential="false"        establishSecurityContext="false"/>     </security>   </binding> </wsHttpBinding>`|  
 |Zabezpieczenia|WS-SecureConversation|[WS-SecureConversation](http://go.microsoft.com/fwlink/?LinkId=95317)<br /><br /> Służy do zapewnienia bezpiecznej sesji podczas `security/@mode` atrybut jest ustawiony na "Komunikat" i `message/@establishSecurityContext` atrybut ma ustawioną wartość "prawda" (ustawienie domyślne).|  
 |Zabezpieczenia|WS-Trust|[WS-Trust](http://go.microsoft.com/fwlink/?LinkId=95318)<br /><br /> Używane przez usługi WS-SecureConversation (zobacz powyżej).|  
-|Niezawodna obsługa komunikatów|WS-ReliableMessaging.|[WS-ReliableMessaging.](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Użyj, jeśli powiązanie jest skonfigurowane do używania `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
-|Transakcje|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Używany do komunikacji między menedżerami transakcji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Klienci i usługi zawsze używać menedżerowie transakcji lokalnej.|  
-|Transakcje|Koordynacji WS|[Koordynacji WS](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Użyj przepływ kontekstu transakcji po `flowTransactions` atrybut jest ustawiony na "Dozwolone" lub "Wymagane".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
+|Niezawodna obsługa komunikatów|WS-ReliableMessaging|[WS-ReliableMessaging](http://go.microsoft.com/fwlink/?LinkId=95322)<br /><br /> Użyj, jeśli powiązanie jest skonfigurowane do używania `reliableSession`.<br /><br /> `<wsHttpBinding>  <binding name="myBinding">    <reliableSession/>   </binding> </wsHttpBinding>`|  
+|Transakcje|WS-AtomicTransaction|[WS-AtomicTransaction](http://go.microsoft.com/fwlink/?LinkId=95323)<br /><br /> Używany do komunikacji między menedżerami transakcji. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Klienci i usługi zawsze używać menedżerowie transakcji lokalnej.|  
+|Transakcje|WS-Coordination|[WS-Coordination](http://go.microsoft.com/fwlink/?LinkId=95324)<br /><br /> Użyj przepływ kontekstu transakcji po `flowTransactions` atrybut jest ustawiony na "Dozwolone" lub "Wymagane".<br /><br /> `<wsHttpBinding>   <binding transactionFlow="true"/> </wsHttpBinding>`|  
   
 ## <a name="wsfederationhttpbinding-and-ws2007federationhttpbinding"></a>wsFederationHttpBinding i ws2007FederationHttpBinding  
  [ \<WsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md) i [ \<ws2007FederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/ws2007federationhttpbinding.md) elementy są wprowadzane zapewnia obsługę scenariuszach obejmujących Federację, gdzie innej Strona wystawia token używany do uwierzytelniania klienta. Oprócz protokołach używanych przez `wsHttpBinding`, `wsFederationHttpBinding` wykorzystuje:  
   
--   `WS-Trust`do wydawania tokenów.  
+-   `WS-Trust` do wydawania tokenów.  
   
 -   WSS zabezpieczeń potwierdzenia Markup Language (SAML) profilu Token 1.0 i 1.1 dla większości wystawiony często format tokenu.  
   
@@ -94,35 +96,35 @@ ms.lasthandoff: 12/22/2017
 </wsFederationHttpBinding>  
 ```  
   
- [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Federacyjnego](../../../../docs/framework/wcf/feature-details/federation.md) .  
+ [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Federacyjna](../../../../docs/framework/wcf/feature-details/federation.md) .  
   
 ## <a name="system-provided-metadata-bindings"></a>Powiązania dostarczane przez system metadanych  
  W poniższych tabelach opisano protokoły obsługiwane przez wiązania dostarczane przez system interoperacyjne metadanych udostępnianych przez <xref:System.ServiceModel.Description.MetadataExchangeBindings?displayProperty=nameWithType> klasy.  
   
 ### <a name="mexhttpbinding"></a>mexHttpBinding  
- [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) powiązanie obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [ \<MexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md) powiązanie obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategoria|Protokół|Specyfikacja i użycia|  
 |--------------|--------------|-----------------------------|  
-|Transportu|PROTOKOŁU HTTP 1.1|[PROTOKOŁU HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
+|Transportu|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)|  
 |Obsługa wiadomości|SOAP 1.2|[Elementarz](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Narzędzia obsługi wiadomości](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (w tym powiązanie HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Obsługa wiadomości|Protokół WS-Addressing 2005/08|[Usługi sieci Web adresowanie 1.0 — podstawowe](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Usługi sieci Web adresowanie 1.0 - SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
+|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
   
 ### <a name="mexhttpsbinding"></a>mexHttpsBinding  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
+ [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md) obsługuje następujące protokoły. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] za pomocą tego powiązania, zobacz [Publikowanie metadanych](../../../../docs/framework/wcf/feature-details/publishing-metadata.md).  
   
 |Kategoria|Protokół|Specyfikacja i użycia|  
 |--------------|--------------|-----------------------------|  
-|Transportu|PROTOKOŁU HTTP 1.1|[PROTOKOŁU HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Zabezpieczenia transportu jest włączone.|  
+|Transportu|HTTP 1.1|[HTTP 1.1](http://go.microsoft.com/fwlink/?LinkId=84048)<br /><br /> Zabezpieczenia transportu jest włączone.|  
 |Obsługa wiadomości|SOAP 1.2|[Elementarz](http://go.microsoft.com/fwlink/?LinkId=48282)<br /><br /> [Narzędzia obsługi wiadomości](http://go.microsoft.com/fwlink/?LinkId=94664)<br /><br /> [Adjuncts (w tym powiązanie HTTP)](http://go.microsoft.com/fwlink/?LinkId=95329)|  
 |Obsługa wiadomości|Protokół WS-Addressing 2005/08|[Usługi sieci Web adresowanie 1.0 — podstawowe](http://go.microsoft.com/fwlink/?LinkId=90574)<br /><br /> [Usługi sieci Web adresowanie 1.0 - SOAP](http://go.microsoft.com/fwlink/?LinkId=95330)|  
-|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
+|Metadane|WS-MetadataExchange|[WS-MetadataExchange](http://go.microsoft.com/fwlink/?LinkId=94868)<br /><br /> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje usługi WS-MetadataExchange, można pobrać schematu XML, WSDL i WS-Policy.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Powiązania dostarczane przez system](../../../../docs/framework/wcf/system-provided-bindings.md)  
- [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
- [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
- [\<wsDualHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
- [\<mexHttpsBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
- [\<mexHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)
+ [\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)  
+ [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)  
+ [\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)  
+ [\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)  
+ [\<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)

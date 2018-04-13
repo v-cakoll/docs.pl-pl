@@ -1,6 +1,6 @@
 ---
-title: "Projektowanie modelu domeny mikrousługi"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie modelu domeny mikrousługi"
+title: Projektowanie modelu domeny mikrousługi
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie modelu domeny mikrousługi
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 752c4cceada2bf0649facbfd46c36c26dc666d29
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-domain-model"></a>Projektowanie modelu domeny mikrousługi
 
@@ -96,7 +96,7 @@ Obiekty wartości są trudne do zarządzania relacyjnymi bazami danych i ORMs, t
 -   **Wartości obiektów w rozwoju Test-Driven**
     [*https://leanpub.com/tdd-ebook/read\#leanpub-auto wartość — obiekty*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
--   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie obiekty wartości) [ *https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+-   **Evans marek. Projektowanie oparte na domenie: Czoła złożoności serca oprogramowania.** (Książki; zawiera omówienie obiekty wartości) [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>Wzorzec agregacji
 
@@ -140,13 +140,13 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Vaughn Vernon. Efektywnym projektowaniu agregacji — część I: modelowania pojedynczego agregacji**
-    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_SPOŁECZNOŚCI\_OPISOWYCH\_ AGREGUJE\_części\_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
+    [*https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD\_SPOŁECZNOŚCI\_OPISOWYCH\_AGREGUJE\_części \_pdf 1.*](https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_1.pdf)
 
 -   **Vaughn Vernon. Skuteczne agregacji projektu — część II: Tworzenie wartości zagregowanych współpracują**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf>*
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_2.pdf> *
 
 -   **Vaughn Vernon. Skuteczne agregacji projektu — część III: Uzyskanie wglądu za pomocą odnajdywania**
-    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf>*
+    *<https://vaughnvernon.co/wordpress/wp-content/uploads/2014/10/DDD_COMMUNITY_ESSAY_AGGREGATES_PART_3.pdf> *
 
 -   **Sergey Grybniak. Wzorce projektowe taktyczne DDD**
     [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
@@ -154,7 +154,7 @@ Identyfikowanie i Praca z wartości zagregowanych wymaga badań i obsługi. Aby 
 -   **Krzysztof Richardson. Tworzenie Mikrousług transakcyjne przy użyciu wartości zagregowanych**
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
--   **DevIQ. Łączny wzorzec**
+-   **DevIQ. Wzorzec agregacji**
     [*http://deviq.com/aggregate-pattern/*](http://deviq.com/aggregate-pattern/)
 
 

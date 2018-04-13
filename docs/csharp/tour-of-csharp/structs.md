@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 88a74571-f741-4a31-a2b5-1ccf165535b8
-ms.openlocfilehash: 9d435fd87a6103d505c14219499eeea9aee045fb
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: fa840d80bba98889f75863db2612f196d78bd3c5
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="structs"></a>Struktury
 
@@ -38,7 +38,7 @@ W przypadku klas jest możliwe dwie zmienne odwołać się do tego samego obiekt
 
 Jeśli `Point` jest klasą, dane wyjściowe wynosi 20, ponieważ i b odwołuje się do tego samego obiektu. Jeśli punkt jest strukturą, dane wyjściowe to 10, ponieważ przypisanie `a` do `b` tworzy kopię wartości, i nie mają wpływu kolejne przypisanie do tej kopii `a.x`.
 
-Poprzedni przykład przedstawia dwa ograniczenia struktury. Po pierwsze skopiowanie całej struktury jest zazwyczaj są mniej wydajne niż kopiowanie odwołania do obiektu, więc przekazywanie przypisania i wartość parametru może być droższe z struktury niż z typów referencyjnych. Drugi, z wyjątkiem `ref` i `out` parametrów nie jest możliwe do tworzenia odwołań do struktury, która wyklucza ich użycia w różnych sytuacjach.
+Poprzedni przykład przedstawia dwa ograniczenia struktury. Po pierwsze skopiowanie całej struktury jest zazwyczaj są mniej wydajne niż kopiowanie odwołania do obiektu, więc przekazywanie przypisania i wartość parametru może być droższe z struktury niż z typów referencyjnych. Drugi, z wyjątkiem `in`, `ref`, i `out` parametrów nie jest możliwe do tworzenia odwołań do struktury, która wyklucza ich użycia w różnych sytuacjach.
 
 >[!div class="step-by-step"]
 [Poprzednie](classes-and-objects.md)

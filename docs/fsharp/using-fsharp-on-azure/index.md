@@ -1,6 +1,6 @@
 ---
-title: "Przy użyciu języka F # na platformie Azure"
-description: "Przewodnik po użyciu usług Azure F #"
+title: 'Przy użyciu języka F # na platformie Azure'
+description: 'Przewodnik po użyciu usług Azure F #'
 keywords: Azure, cloud, visual f#, f#, functional programming, .NET, .NET Core
 author: sylvanc
 ms.author: phcart
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: FAD4D11E-703A-42D4-9F72-893D9E0F569B
-ms.openlocfilehash: 8f1d5abe0412ecf72e38c7d76ef44fdc5fd4a0f7
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: fdb2378a731a13894cf71356a2713c62a5c2064e
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="using-f-on-azure"></a>Przy użyciu języka F # na platformie Azure
 
@@ -69,14 +69,14 @@ Można także magazynu Azure w połączeniu z usługi Azure Functions za pośred
 * [Wdrażanie aplikacji Spark w F # za pomocą Mobius](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
 * [Przykład F # Spark aplikacji przy użyciu Mobius](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
-## <a name="using-azure-documentdb-with-f"></a>Za pomocą usługi Azure DocumentDB w języku F # #
+## <a name="using-azure-cosmos-db-with-f"></a>Przy użyciu rozwiązania Cosmos Azure DB w języku F # #
 
-[Usługa Azure DocumentDB](https://azure.microsoft.com/services/documentdb/) jest usługą NoSQL dla aplikacji o wysokiej dostępności, globalnie rozproszone.
+[Azure DB rozwiązania Cosmos](https://azure.microsoft.com/services/cosmos-db) jest usługą NoSQL dla aplikacji o wysokiej dostępności, globalnie rozproszone.
 
-Usługa Azure DocumentDB mogą być używane w języku F # na dwa sposoby:
+Azure DB rozwiązania Cosmos mogą być używane w języku F # na dwa sposoby:
 
-1. Poprzez utworzenie usługi Azure Functions F # które reagują na lub powodują zmiany w kolekcjach usługi DocumentDB. Zobacz [wyzwala funkcji platformy Azure dla usługi DocumentDB](/azure/azure-functions/functions-bindings-documentdb), lub
-2. Za pomocą [zestawu .NET SDK dla platformy Azure](/azure/documentdb/documentdb-get-started-quickstart). Należy zauważyć, że te przykłady w języku C#.
+1. Poprzez utworzenie usługi Azure Functions F # które reagują na lub powodują zmiany w kolekcjach bazy danych Azure rozwiązania Cosmos. Zobacz [bazy danych Azure rozwiązania Cosmos powiązania dla usługi Azure Functions](/azure/azure-functions/functions-bindings-cosmosdb), lub
+2. Za pomocą [Azure rozwiązania Cosmos DB .NET SDK dla interfejsu API SQL](/azure/cosmos-db/sql-api-sdk-dotnet). Powiązane przykłady są w języku C#.
 
 ## <a name="using-azure-event-hubs-with-f"></a>Za pomocą usługi Azure Event Hubs w języku F # #
 
@@ -119,9 +119,9 @@ Czasomierze może być zaimplementowany w języku F # i hostowanej na platformie
 
 Maszyny wirtualne platformy Azure mogą być programowane wdrożone i zarządzane przez skrypty F # za pomocą pakietów Microsoft.Azure.Management i interfejsów API. Na przykład, zobacz [Rozpoczynanie pracy z bibliotekami zarządzania dla platformy .NET](https://msdn.microsoft.com/library/dn722415.aspx) i [przy użyciu usługi Azure Resource Manager](/azure/azure-resource-manager/resource-manager-deployment-model).
 
-Podobnie innych zasobów platformy Azure mogą również być wdrożone i zarządzane przez skrypty F # za pomocą tego samego składników. Na przykład możesz można utworzyć konta magazynu, wdrażania usługi w chmurze Azure, utworzenia wystąpienia usługi Azure DocumentDB i programowe zarządzanie koncentratory powiadomienia Azure ze skryptów F #.
+Podobnie innych zasobów platformy Azure mogą również być wdrożone i zarządzane przez skrypty F # za pomocą tego samego składników. Na przykład możesz można utworzyć konta magazynu, wdrażania usługi w chmurze Azure, tworzenia wystąpień bazy danych Azure rozwiązania Cosmos i programowe zarządzanie koncentratory powiadomienia Azure ze skryptów F #.
 
-Przy użyciu języka F # skryptów do wdrażania i zarządzania zasobami nie jest zazwyczaj konieczne. Na przykład zasobów platformy Azure można także wdrożonej międzypaństwowymi, bezpośrednio z opisy szablonu JSON, które mogą być sparametryzowana. Zobacz [szablony Menedżera zasobów Azure](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablonów Szybki Start Azure](https://azure.microsoft.com/documentation/templates/).
+Przy użyciu języka F # skryptów do wdrażania i zarządzania zasobami nie jest zazwyczaj konieczne. Na przykład zasobów platformy Azure można także wdrożonej międzypaństwowymi, bezpośrednio z opisy szablonu JSON, które mogą być sparametryzowana. Zobacz [szablony Menedżera zasobów Azure](/azure/azure-resource-manager/resource-manager-template-best-practices) wraz z przykładami takich jak [szablonów Szybki Start Azure](https://azure.microsoft.com/resources/templates/).
 
 ## <a name="other-resources"></a>Inne zasoby
 

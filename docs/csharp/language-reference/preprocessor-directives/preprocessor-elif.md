@@ -1,5 +1,5 @@
 ---
-title: "#elif (odwołanie w C#)"
+title: '#elif (odwołanie w C#)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -10,7 +10,7 @@ f1_keywords:
 helpviewer_keywords:
 - '#elif directive [C#]'
 ms.assetid: 731d78df-08e0-4d51-b8c8-f193c27de13f
-caps.latest.revision: 
+caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 1512bbbc46ce15570507c8b51540eef607d55dc8
@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="elif-c-reference"></a>#elif (odwołanie w C#)
-`#elif`Umożliwia tworzenie złożonego dyrektywy warunkowej. `#elif` Jeśli nie zostanie obliczone wyrażenie poprzedniego [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) lub any poprzedzających, opcjonalnie, `#elif` wynikiem obliczania wyrażenia dyrektywy `true`. Jeśli `#elif` wyrażenie daje w wyniku `true`, kompilator ocenia cały kod między `#elif` i dalej dyrektywy warunkowej. Na przykład:  
+Dyrektywa `#elif` umożliwia tworzenie złożonych dyrektyw warunkowych. Wyrażenie dyrektywy `#elif` zostanie oszacowane, jeśli żadne z wcześniejszych wyrażeń [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) ani (opcjonalnie) żadne z wcześniejszych wyrażeń `#elif` nie zwróci wyniku `true`. Jeżeli wyrażenie `#elif` zwraca w wyniku `true`, kompilator wykonuje cały kod między dyrektywą `#elif` a następną dyrektywą warunkową. Na przykład:  
   
 ```csharp
 #define VC7  
@@ -32,17 +32,17 @@ ms.lasthandoff: 11/21/2017
 #endif  
 ```  
   
- Można używać operatorów `==` (równości) `!=` (nierówność), `&&` (a) i `||` (lub), aby ocenić wiele symboli. Można także grupować symbole i operatory w nawiasach.  
+ Można używać operatorów `==` (równość), `!=` (nierówność), `&&` (oraz) `||` (lub), aby szacować wiele symboli. Można także grupować symbole i operatory za pomocą nawiasów. Można także grupować symbole i operatory w nawiasach.  
   
 ## <a name="remarks"></a>Uwagi  
- `#elif`odpowiada za pomocą:  
+ Użycie `#elif` jest równoważne z użyciem:  
   
 ```csharp
 #else  
 #if  
 ```  
   
- Przy użyciu `#elif` jest łatwiejsze, ponieważ każdy `#if` wymaga [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), podczas gdy `#elif` może być używany bez odpowiadającego mu `#endif`.  
+ Użycie dyrektywy `#elif` jest łatwiejsze, ponieważ każda dyrektywa `#if` wymaga dyrektywy [#endif](../../../csharp/language-reference/preprocessor-directives/preprocessor-endif.md), podczas gdy dyrektywa `#elif` może być używana bez odpowiadającej jej dyrektywy `#endif`.  
   
  Zobacz [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) przykład sposobu użycia `#elif`.  
   

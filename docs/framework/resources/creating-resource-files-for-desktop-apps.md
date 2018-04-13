@@ -1,12 +1,13 @@
 ---
-title: "Tworzenie plików zasobów dla aplikacji klasycznych"
-ms.custom: 
+title: Tworzenie plików zasobów dla aplikacji klasycznych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - application resources, creating files
 - resource files, creating
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
-caps.latest.revision: "25"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 555ef705dc485462dc209b090e5cdbee98983681
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b73520dfc3d5123aedce77254f738a61a27ccd95
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="creating-resource-files-for-desktop-apps"></a>Tworzenie plików zasobów dla aplikacji klasycznych
 Zasoby, takie jak ciągi, obrazy lub obiektu danych, można uwzględnić w plikach zasobów, aby były łatwo dostępne dla aplikacji. .NET Framework zapewnia pięć sposoby tworzenia plików zasobów:  
@@ -130,11 +132,15 @@ greeting=Hello, {0}!
   
  Jeśli używasz programu Visual Basic i pliku kodu źródłowego nosi nazwę Greeting.vb, poniższe polecenie tworzy plik wykonywalny, który zawiera plik embedded .resources:  
   
- **vbc — greeting.vb /resource:GreetingResources.resources**  
+```console 
+vbc greeting.vb -resource:GreetingResources.resources
+```
   
  Jeśli używasz języka C# i pliku kodu źródłowego nosi nazwę Greeting.cs, poniższe polecenie tworzy plik wykonywalny, który zawiera plik embedded .resources:  
   
- **CSC greeting.cs /resource:GreetingResources.resources**  
+ ```console
+csc greeting.cs -resource:GreetingResources.resources
+```
   
 <a name="ResxFiles"></a>   
 ## <a name="resources-in-resx-files"></a>Zasoby w pliki .resx  

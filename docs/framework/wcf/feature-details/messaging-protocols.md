@@ -17,10 +17,10 @@ manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="messaging-protocols"></a>Protokoły obsługi komunikatów
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Stosu kanału wykorzystuje kanały transportu i kodowanie do transformacji reprezentacji wewnętrznej komunikatu do jego format danych przesyłanych w sieci i wysłać go przy użyciu danego transportu. Transport najczęściej używane na współdziałanie usług sieci Web, jest protokół HTTP i są najczęściej używane kodowanie, używane przez usługi sieci Web opartych na języku XML SOAP 1.1 i SOAP 1.2, mechanizmu optymalizacji transmisji wiadomości (MTOM).  
@@ -30,8 +30,8 @@ ms.lasthandoff: 02/01/2018
 |Specyfikacja/dokumentu|Łącze|  
 |-----------------------------|----------|  
 |HTTP 1.1|http://www.ietf.org/rfc/rfc2616.txt|  
-|SOAP 1.1 powiązanie HTTP|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Section 7|  
-|SOAP 1.2 powiązanie HTTP|http://www.w3.org/TR/soap12-part2/, Section 7|  
+|SOAP 1.1 powiązanie HTTP|http://www.w3.org/TR/2000/NOTE-SOAP-20000508/, Sekcji 7|  
+|SOAP 1.2 powiązanie HTTP|http://www.w3.org/TR/soap12-part2/, Sekcji 7|  
   
  W tym temacie omówiono [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szczegóły implementacji dla następujące protokoły <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> i <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> fragmentów.  
   
@@ -90,7 +90,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
      `mustUnderstand` Wartość nagłówka różni się między SOAP 1.1 i SOAP 1.2. Basic Profile 1.1 wymaga, aby `mustUnderstand` wartość wynosić 0 lub 1 dla wiadomości SOAP 1.1. SOAP 1.2 umożliwia 0, 1, `false`, i `true` jako wartości, ale zaleca emitowanie canonical reprezentację `xs:boolean` wartości (`false`, `true`).  
   
--   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emituje `mustUnderstand` wartości 0 i 1 dla wersji zarówno SOAP 1.1 i SOAP 1.2 koperty protokołu SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]akceptuje miejsce całą wartość `xs:boolean` dla `mustUnderstand` nagłówka (0, 1, `false`, `true`)  
+-   B1112: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] emituje `mustUnderstand` wartości 0 i 1 dla wersji zarówno SOAP 1.1 i SOAP 1.2 koperty protokołu SOAP. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] akceptuje miejsce całą wartość `xs:boolean` dla `mustUnderstand` nagłówka (0, 1, `false`, `true`)  
   
 #### <a name="soap-faults"></a>Błędach SOAP  
  Poniżej przedstawiono listę [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]-określonej implementacji błędu protokołu SOAP.  
@@ -132,7 +132,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  Wszystkie wersje usługi WS-Addressing który [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje używać odwołań do punktu końcowego do opisywania punktów końcowych.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Odwołania do punktu końcowego i wersji WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje wiele protokołów infrastruktury, które używają protokołu WS-Addressing, w szczególności `EndpointReference` elementu i `W3C.WsAddressing.EndpointReferenceType` klasy (na przykład WS-ReliableMessaging, WS-SecureConversation i WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje korzystanie z danej wersji WS-Addressing z innymi protokołami infrastruktury. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]punkty końcowe obsługuje jedną wersję WS-Addressing na punkt końcowy.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implementuje wiele protokołów infrastruktury, które używają protokołu WS-Addressing, w szczególności `EndpointReference` elementu i `W3C.WsAddressing.EndpointReferenceType` klasy (na przykład WS-ReliableMessaging, WS-SecureConversation i WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje korzystanie z danej wersji WS-Addressing z innymi protokołami infrastruktury. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punkty końcowe obsługuje jedną wersję WS-Addressing na punkt końcowy.  
   
  Dla R3111, w obszarze nazw `EndpointReference` elementu lub typ używany w wiadomościach z [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktu końcowego musi odpowiadać wersji WS-Addressing implementowanych przez ten punkt końcowy.  
   
@@ -183,7 +183,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3221: Gdy skonfigurowany do używania protokołu WS-Addressing 2004/08 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych nie odróżnienie przetwarzania właściwości odwołania i parametrów odwołania.  
   
 ### <a name="message-exchange-patterns"></a>Wzorce wymiany komunikatów  
- Sekwencja komunikatów związane z wywołania operacji usługi sieci Web nazywa się *wymiany komunikatów*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje jednokierunkowe, żądanie odpowiedź i dupleksu wiadomości wymiany wzorce. W tej sekcji wyjaśnia WS-Addressing wymagania dotyczące przetwarzania w zależności od wymiany komunikatów używany komunikatów.  
+ Sekwencja komunikatów związane z wywołania operacji usługi sieci Web nazywa się *wymiany komunikatów*. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje jednokierunkowe, żądanie odpowiedź i dupleksu wiadomości wymiany wzorce. W tej sekcji wyjaśnia WS-Addressing wymagania dotyczące przetwarzania w zależności od wymiany komunikatów używany komunikatów.  
   
  W tej sekcji żądający wysyła pierwszy komunikat i obiekt odpowiadający odbiera pierwszego komunikatu.  
   
@@ -207,7 +207,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
 -   R3322: W przypadku protokołu WS-Addressing 2004/08 `ReplyTo` muszą także być ujęte w żądaniu.  
   
--   R3323: Gdy jest używany protokół WS-Addressing 1.0 i `ReplyTo` jest domyślnym odwołaniem punktu końcowego z właściwością [address] równa "http://www.w3.org/2005/08/addressing/anonymous" nie znajduje się w żądaniu, jest używany.  
+-   R3323: Gdy jest używany protokół WS-Addressing 1.0 i `ReplyTo` nie jest obecne w żądaniu odwołanie do punktu końcowego domyślnej z właściwością [address] równa "http://www.w3.org/2005/08/addressing/anonymous" jest używany.  
   
 -   R3324: Żądający musi zawierać `wsa:To`, `wsa:Action`, i `wsa:RelatesTo` nagłówków komunikatu odpowiedzi, a także nagłówki dla wszystkich parametrów odwołania odwołania (i właściwości) określone przez `ReplyTo` w odwołaniu do punktu końcowego żądanie.  
   
@@ -304,11 +304,11 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Poprzednia prowadzi do następujących wymagań dotyczących `wsa:ReplyTo` nagłówek dla wiadomości żądania:  
   
--   R3514: Żądanie wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwość nie ma wartości "http://www.w3.org/2005/08/addressing/anonymous" Jeśli punkt końcowy nie używa powiązania WSDL 1.1 SOAP 1.x HTTP i nie ma stanowi alternatywę zasad z `wsap10:UsingAddressing` lub `wsap:UsingAddressing` potwierdzenia połączone z `cdp:CompositeDuplex` dołączony.  
+-   R3514: Żądanie wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwość nie jest równa "http://www.w3.org/2005/08/addressing/anonymous" Jeśli punkt końcowy używa 1.x HTTP powiązania WSDL 1.1 SOAP i ma stanowi alternatywę zasad z `wsap10:UsingAddressing` lub `wsap:UsingAddressing` Potwierdzenie połączone z `cdp:CompositeDuplex` dołączony.  
   
--   R3515: Żądanie wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwości równa się "http://www.w3.org/2005/08/addressing/anonymous" lub nie ma `ReplyTo` 1.x HTTP SOAP nagłówka gwarancja, jeśli korzysta z punktu końcowego WSDL 1.1 powiązanie i jest to alternatywa zasad z `wsap10:UsingAddressing` potwierdzenia i nie `cdp:CompositeDuplex` potwierdzenia dołączony.  
+-   R3515: Żądanie wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwości jest równa "http://www.w3.org/2005/08/addressing/anonymous", lub nie ma `ReplyTo` nagłówka gwarancja, jeśli punkt końcowy używa 1.x HTTP powiązania WSDL 1.1 SOAP i ma alternatywna zasad z `wsap10:UsingAddressing` potwierdzenia i nie `cdp:CompositeDuplex` potwierdzenia dołączony.  
   
--   R3516: Żądanie wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwości jest równa "http://www.w3.org/2005/08/addressing/anonymous" Jeśli punkt końcowy używa 1.x HTTP powiązania WSDL 1.1 SOAP i ma stanowi alternatywę zasad z `wsap:UsingAddressing` potwierdzenia i nie `cdp:CompositeDuplex` potwierdzenia dołączony.  
+-   R3516: Żądania wiadomości wysłane do punktu końcowego musi mieć `ReplyTo` nagłówek o `[address]` właściwości jest równa "http://www.w3.org/2005/08/addressing/anonymous" Jeśli punkt końcowy używa 1.x HTTP powiązania WSDL 1.1 SOAP i ma stanowi alternatywę zasad z `wsap:UsingAddressing` Potwierdzanie i nie `cdp:CompositeDuplex`potwierdzenia dołączony.  
   
  Specyfikacja WS-addressing WSDL próbuje opisano podobnymi powiązaniami protokołu, wprowadzając element `<wsaw:Anonymous/>` z trzech wartości tekstowej (wymagane, opcjonalne i zabronionych) wskazująca wymagania na `wsa:ReplyTo` nagłówka (sekcji 3.2). Niestety taka definicja elementu nie jest szczególnie użyteczne jako potwierdzenia w ramach usługi WS-Policy, ponieważ wymaga rozszerzenia specyficznego dla domeny do obsługi przecięcie alternatyw za pomocą takiego elementu jako potwierdzenia. Wartość wskazuje także takie definicji elementu `ReplyTo` nagłówka, w przeciwieństwie do zachowania punktu końcowego przesyłania, dzięki czemu określonego transportu HTTP.  
   
@@ -324,7 +324,7 @@ dp|http://schemas.microsoft.com/net/2006/06/duplex|
  B3521: [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] używa `wsaw10:Action` atrybutu `wsdl:portType/wsdl:operation/[wsdl:input | wsdl:output | wsdl:fault]` elementy zgodnie z definicją w WS ADDR10 WSDL ustalenie `Action` identyfikator URI dla odpowiednich komunikatów niezależnie od wersji WS-Addressing używany przez punkt końcowy.  
   
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>Punkt końcowy odwołanie wewnątrz WSDL portów  
- Rozszerza WS ADDR10 WSDL sekcji 4.1 `wsdl:port` element, aby uwzględnić `<wsa10:EndpointReference…/>` elementu podrzędnego do opisywania punktu końcowego usługi WS-Addressing warunków. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]rozwija tego narzędzia na WS-Addressing 2004/08, umożliwiając `<wsa:EndpointReference…/>` były wyświetlane jako elementu podrzędnego `wsdl:port`.  
+ Rozszerza WS ADDR10 WSDL sekcji 4.1 `wsdl:port` element, aby uwzględnić `<wsa10:EndpointReference…/>` elementu podrzędnego do opisywania punktu końcowego usługi WS-Addressing warunków. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] rozwija tego narzędzia na WS-Addressing 2004/08, umożliwiając `<wsa:EndpointReference…/>` były wyświetlane jako elementu podrzędnego `wsdl:port`.  
   
 -   R3531: Jeśli punkt końcowy ma zamiast dołączonych zasad z `<wsaw10:UsingAddressing/>` potwierdzenia zasad, odpowiadającego `wsdl:port` element może zawierać elementu podrzędnego `<wsa10:EndpointReference …/>`.  
   

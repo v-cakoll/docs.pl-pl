@@ -1,24 +1,26 @@
 ---
-title: "Obsługa komunikatów zanieczyszczonych"
-ms.custom: 
+title: Obsługa komunikatów zanieczyszczonych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-caps.latest.revision: "29"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8202c9f715944c6d556c0023444475838cfd5eab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="poison-message-handling"></a>Obsługa komunikatów zanieczyszczonych
 A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę prób dostarczenia do aplikacji. Taka sytuacja może wystąpić, gdy aplikacja kolejki nie może przetworzyć komunikatu z powodu błędów. Aby spełnić wymagania niezawodności, aplikację zakolejkowaną odbiera komunikaty w ramach transakcji. Przerywanie transakcji, w którym została odebrana wiadomość w kolejce pozostawia wiadomości w kolejce, tak, aby komunikat zostanie ponowiony w nowej transakcji. Jeśli ten problem, który spowodował przerwanie transakcji nie zostanie rozwiązany, aplikacja odbierająca może zostać zablokowane w pętli otrzymywanie i przerywanie tę samą wiadomość do czasu przekroczyła maksymalną liczbę prób dostarczenia i wyniki Trująca wiadomość.  
@@ -30,15 +32,15 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
 ## <a name="handling-poison-messages"></a>Obsługa wiadomości  
  W [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], skażone komunikat — Obsługa udostępnia mechanizm aplikacja odbierająca na wypadek wiadomości, które nie mogą być wysyłane do aplikacji lub wiadomości, które są wysyłane do aplikacji, ale które nie można przetworzyć z powodu przyczyny specyficzne dla aplikacji. Obsługi uszkodzonych komunikatów jest konfigurowana za pomocą następujących właściwości w każdym z dostępnych powiązań umieszczonych w kolejce:  
   
--   `ReceiveRetryCount`., Wartość całkowitą, która wskazuje maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. To jest odpowiednia w przypadku, gdy natychmiastowego ponawiania rozwiązuje problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
+-   `ReceiveRetryCount`. Wartość całkowitą, która wskazuje maksymalną liczbę ponownych prób dostarczenia komunikatu z kolejki aplikacji do aplikacji. Wartość domyślna to 5. To jest odpowiednia w przypadku, gdy natychmiastowego ponawiania rozwiązuje problem, takich jak z tymczasowego zakleszczenie w bazie danych.  
   
--   `MaxRetryCycles`., Wartość całkowitą, która wskazuje maksymalną liczbę cykli ponownych prób. Cykl składa się z przesyłania wiadomości z kolejki aplikacji do ponawiania i opóźnieniem można skonfigurować z ponawiania do kolejki aplikacji do dostarczania Ponów. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles`jest ignorowany w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
+-   `MaxRetryCycles`. Wartość całkowitą, która wskazuje maksymalną liczbę cykli ponownych prób. Cykl składa się z przesyłania wiadomości z kolejki aplikacji do ponawiania i opóźnieniem można skonfigurować z ponawiania do kolejki aplikacji do dostarczania Ponów. Wartość domyślna to 2. Na [!INCLUDE[wv](../../../../includes/wv-md.md)], komunikat zostanie podjęta próba maksymalnie (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) razy. `MaxRetryCycles` jest ignorowany w [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   `RetryCycleDelay`., Czas opóźnienia między liczbę cykli ponownych prób. Wartość domyślna to 30 minut. `MaxRetryCycles`i `RetryCycleDelay` razem udostępniają mechanizm rozwiązać problem, gdzie ponowna próba opóźnieniem okresowe rozwiązuje problem. Na przykład obsługuje wierszem zablokowanym ustawiony w programie SQL Server oczekiwania zatwierdzania transakcji.  
+-   `RetryCycleDelay`. Czas opóźnienia między liczbę cykli ponownych prób. Wartość domyślna to 30 minut. `MaxRetryCycles` i `RetryCycleDelay` razem udostępniają mechanizm rozwiązać problem, gdzie ponowna próba opóźnieniem okresowe rozwiązuje problem. Na przykład obsługuje wierszem zablokowanym ustawiony w programie SQL Server oczekiwania zatwierdzania transakcji.  
   
--   `ReceiveErrorHandling`., Wyliczenie wskazujący akcję do wykonania dla komunikatu, której nie dostarczania po prób wykonania maksymalnej liczby ponownych prób. Wartości można być Odrzuć usterka, Drop i przenieść. Opcja domyślna jest błędem.  
+-   `ReceiveErrorHandling`. Wyliczenie wskazujący akcję do wykonania dla komunikatu, której nie dostarczania po prób wykonania maksymalnej liczby ponownych prób. Wartości można być Odrzuć usterka, Drop i przenieść. Opcja domyślna jest błędem.  
   
--   Błąd. Ta opcja wysyła odbiornika, który spowodował błąd `ServiceHost` do błędów. Komunikat należy usunąć z kolejki aplikacji przez inny mechanizm zewnętrzny przed kontynuowaniem aplikacji do przetwarzania komunikatów z kolejki.  
+-   Fault. Ta opcja wysyła odbiornika, który spowodował błąd `ServiceHost` do błędów. Komunikat należy usunąć z kolejki aplikacji przez inny mechanizm zewnętrzny przed kontynuowaniem aplikacji do przetwarzania komunikatów z kolejki.  
   
 -   Upuść. Ta opcja powoduje Trująca wiadomość i komunikat nigdy nie jest dostarczany do aplikacji. Jeśli komunikat `TimeToLive` właściwości wygasła w tym momencie, a następnie może zostać wyświetlony komunikat w kolejce wiadomości utraconych nadawcy. Jeśli nie, wiadomość nie jest wyświetlana z dowolnego miejsca. Ta opcja oznacza, że użytkownik nie określił co zrobić, jeśli komunikat zostanie utracony.  
   
@@ -61,11 +63,11 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
   
  [!code-csharp[S_UE_MSMQ_Poison#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/service.cs#1)]  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]udostępnia dwa standardowe powiązania w kolejce:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] udostępnia dwa standardowe powiązania w kolejce:  
   
--   <xref:System.ServiceModel.NetMsmqBinding>., A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi kolejki wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
+-   <xref:System.ServiceModel.NetMsmqBinding>. A [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] powiązanie odpowiednie dla komunikacji z innymi kolejki wykonywania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] punktów końcowych.  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>., Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. Powiązanie odpowiednie dla komunikacji z istniejącymi aplikacjami usługi kolejkowania komunikatów.  
   
 > [!NOTE]
 >  Można zmienić właściwości w tych powiązań, w oparciu o wymagania Twojej [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi. Cały Trująca wiadomość mechanizmu obsługi jest lokalny do aplikacji odbierającej. Proces jest niewidoczne aplikacja wysyłająca, chyba że aplikacja odbierająca ostatecznie zatrzymuje i wysyła potwierdzenie negatywne do nadawcy. W takim przypadku wiadomość zostanie przeniesiona do kolejki utraconych wiadomości nadawcy.  
@@ -73,7 +75,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
 ## <a name="best-practice-handling-msmqpoisonmessageexception"></a>Najlepsze rozwiązanie: Msmqpoisonmessageexception — Obsługa  
  Gdy usługa określa, że wiadomość jest skażone, transport z kolejką zgłasza <xref:System.ServiceModel.MsmqPoisonMessageException> zawierający `LookupId` skażone wiadomości.  
   
- Aplikację można wdrożyć <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejs do obsługi błędów wymagane przez tę aplikację. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
+ Aplikację można wdrożyć <xref:System.ServiceModel.Dispatcher.IErrorHandler> interfejs do obsługi błędów wymagane przez tę aplikację. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Rozszerzanie kontroli obsługi i raportowania błędów](../../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md).  
   
  Aplikacja może wymagać określonego rodzaju automatycznych Obsługa skażone wiadomości, który przenosi skażone wiadomości do kolejki Trująca wiadomość, dzięki czemu usługa dostęp pozostałej części wiadomości w kolejce. Jest to tylko scenariusz przy użyciu mechanizmu obsługi błędów do nasłuchiwania wyjątki poison wiadomości, gdy <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> mają ustawioną wartość <xref:System.ServiceModel.ReceiveErrorHandling.Fault>. Przykładowy komunikat poison dla wersji 3.0 pokazano to zachowanie. Poniżej opisano czynności wymagane do obsługi skażone komunikaty, w tym najlepsze rozwiązania:  
   
@@ -102,10 +104,10 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
  Sesja ulega poison komunikat — Obsługa procedur i ponów próbę wykonania tego samego jako pojedynczym komunikacie. Właściwości wymienionego powyżej skażone komunikaty dotyczą całej sesji. Oznacza to, że całej sesji próba zostanie ponowiona i przechodzi do końcowego kolejki komunikatów poison lub kolejki utraconych wiadomości nadawcy, jeśli komunikat zostanie odrzucony.  
   
 ## <a name="batching-and-poison-messages"></a>Przetwarzanie wsadowe i skażone komunikaty  
- Jeśli wiadomość staje się Trująca wiadomość i jest częścią partii, całą partię zostanie wycofana i zwraca kanału do odczytywania jeden komunikat w czasie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Przetwarzanie wsadowe, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
+ Jeśli wiadomość staje się Trująca wiadomość i jest częścią partii, całą partię zostanie wycofana i zwraca kanału do odczytywania jeden komunikat w czasie. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Przetwarzanie wsadowe, zobacz [tworzenie partii komunikatów w ramach transakcji](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>Obsługa komunikatów w kolejce skażone poison komunikatów  
- Obsługa komunikatów poison nie zakończy się wiadomość jest umieszczana w kolejce wiadomości poison. Wiadomości w kolejce wiadomości poison nadal musi być do odczytu i obsługi. Podzbiór ustawienia poison komunikat — Obsługa można użyć podczas odczytywania wiadomości z ostatnim trującej. Są stosowane ustawienia `ReceiveRetryCount` i `ReceiveErrorHandling`. Można ustawić `ReceiveErrorHandling` porzucić Odrzuć lub Fault. `MaxRetryCycles`jest ignorowany i jest zwracany wyjątek, jeśli `ReceiveErrorHandling` ma wartość Move.  
+ Obsługa komunikatów poison nie zakończy się wiadomość jest umieszczana w kolejce wiadomości poison. Wiadomości w kolejce wiadomości poison nadal musi być do odczytu i obsługi. Podzbiór ustawienia poison komunikat — Obsługa można użyć podczas odczytywania wiadomości z ostatnim trującej. Są stosowane ustawienia `ReceiveRetryCount` i `ReceiveErrorHandling`. Można ustawić `ReceiveErrorHandling` porzucić Odrzuć lub Fault. `MaxRetryCycles` jest ignorowany i jest zwracany wyjątek, jeśli `ReceiveErrorHandling` ma wartość Move.  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista, Windows Server 2003 i Windows XP różnic  
  Jak wspomniano wcześniej, nie wszystkie ustawienia poison komunikat — Obsługa dotyczą [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. Poniższy klucz różnice między usługi kolejkowania komunikatów na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)], [!INCLUDE[wxp](../../../../includes/wxp-md.md)], i [!INCLUDE[wv](../../../../includes/wv-md.md)] mają zastosowanie do obsługi komunikatów poison:  
@@ -114,7 +116,7 @@ A *Trująca wiadomość* jest komunikat, który przekracza maksymalną liczbę p
   
 -   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje negatywną potwierdzenie, podczas gdy [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)] nie. Potwierdzenie negatywne z odbierającego menedżera kolejek powoduje wysyłanie menedżera kolejek można umieścić odrzucone wiadomości w kolejce wiadomości utraconych. W efekcie `ReceiveErrorHandling.Reject` jest niedozwolone w przypadku [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)].  
   
--   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje nastąpiła właściwości wiadomości, które zlicza liczbę dostarczanie komunikatów. Ta właściwość count przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]przechowuje liczby przerwania w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładne wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jeden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługę w farmie.  
+-   Komunikatów usługi kolejkowania wiadomości w [!INCLUDE[wv](../../../../includes/wv-md.md)] obsługuje nastąpiła właściwości wiadomości, które zlicza liczbę dostarczanie komunikatów. Ta właściwość count przerwania nie jest dostępny na [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] i [!INCLUDE[wxp](../../../../includes/wxp-md.md)]. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] przechowuje liczby przerwania w pamięci, dlatego jest możliwe, że ta właściwość nie może zawierać dokładne wartości, gdy ten sam komunikat jest odczytywany przez więcej niż jeden [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługę w farmie.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Omówienie kolejek](../../../../docs/framework/wcf/feature-details/queues-overview.md)  

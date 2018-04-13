@@ -1,39 +1,35 @@
 ---
 title: "Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1554e8594a611aa75876d14ee7ad0689932372e8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 194a84ef7c2af3bfce6af3625eabf07d4d0b06fb
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>Instrukcje: Uwierzytelnianie za pomocą nazwy użytkownika i hasła
+
 W tym temacie przedstawiono sposób włączania [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi do uwierzytelniania klienta z nazwę i hasło użytkownika domeny systemu Windows. Zakłada się, że masz pracy, usługa hostowania samoobsługowego WCF. Na przykład tworzenia podstawowych hostowania samoobsługowego WCF usługi, zobacz [Wprowadzenie — samouczek](../../../../docs/framework/wcf/getting-started-tutorial.md). W tym temacie założono, że usługa jest skonfigurowana w kodzie. Jeśli chcesz zobaczyć Zobacz przykład konfigurowania podobne usługi przy użyciu pliku konfiguracji [nazwa użytkownika zabezpieczeń komunikatów](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
- Aby skonfigurować usługę do uwierzytelniania klientów przy użyciu nazwy użytkownika i hasła domeny systemu Windows, użyj <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`> i ustaw jej `Security.Mode` właściwości `Message`. Ponadto należy określić X509 certyfikat używany do szyfrowania nazwy użytkownika i hasła są wysyłane z klienta do usługi.  
+ Aby skonfigurować usługę do uwierzytelniania klientów przy użyciu nazwy użytkownika i hasła domeny systemu Windows, użyj <xref:System.ServiceModel.WSHttpBinding> i ustawić jej `Security.Mode` właściwości `Message`. Ponadto należy określić X509 certyfikat używany do szyfrowania nazwy użytkownika i hasła są wysyłane z klienta do usługi.  
   
  Na komputerze klienckim możesz monit o podanie nazwy użytkownika i hasła i określić poświadczenia użytkownika na serwerze proxy klienta WCF.  
   
-### <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługi WCF w celu uwierzytelnienia przy użyciu nazwy użytkownika domeny systemu Windows i hasło.  
+## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>Aby skonfigurować usługi WCF w celu uwierzytelnienia przy użyciu nazwy użytkownika domeny systemu Windows i hasło
   
-1.  Utwórz wystąpienie <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>, ustawianie trybu zabezpieczeń powiązania `SecurityMode.Message`ustaw `ClientCredentialType` powiązania `MessageCredentialType.UserName`i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania do hosta usługi, jak pokazano w poniższym kodzie:  
+1.  Utwórz wystąpienie <xref:System.ServiceModel.WSHttpBinding>, ustawianie trybu zabezpieczeń powiązania `SecurityMode.Message`ustaw `ClientCredentialType` powiązania `MessageCredentialType.UserName`i Dodaj punkt końcowy usługi przy użyciu skonfigurowanego powiązania do hosta usługi, jak pokazano w poniższym kodzie:  
   
     ```  
     // ...  
@@ -54,7 +50,7 @@ W tym temacie przedstawiono sposób włączania [!INCLUDE[indigo1](../../../../i
   
      Można użyć własnego certyfikatu, po prostu zmodyfikuj kod do odwoływania się do certyfikatu. Aby uzyskać więcej informacji na temat tworzenia i używania certyfikatów Zobacz [Praca z certyfikatami](../../../../docs/framework/wcf/feature-details/working-with-certificates.md). Upewnij się, że certyfikat znajduje się w magazynie certyfikatów zaufanych osób na komputerze lokalnym. Aby to zrobić, mmc.exe uruchomienie i wybranie **pliku**, **Dodaj/Usuń przystawkę...**  elementu menu. W **Dodawanie lub usuwanie przystawek** okno dialogowe, wybierz opcję **certyfikatów przystawki** i kliknij przycisk **Dodaj**. W oknie dialogowym przystawki Certyfikaty wybierz **konto komputera**. Domyślnie certyfikat generowane na podstawie próbki nazwa użytkownika zabezpieczeń komunikatów będą się znajdować w folderze osobiste/certyfikaty.  Będzie on wyświetlany jako "localhost" w obszarze wystawiony dla kolumny w oknie konsoli MMC. Przeciągnij i upuść certyfikatu do **zaufane osoby** folderu. Pozwoli to WCF zaliczenie certyfikatu zaufanego certyfikatu podczas uwierzytelniania.  
   
-### <a name="to-call-the-service-passing-username-and-password"></a>Do wywołania tej usługi przekazywania nazwy użytkownika i hasła  
+## <a name="to-call-the-service-passing-username-and-password"></a>Do wywołania tej usługi przekazywania nazwy użytkownika i hasła  
   
 1.  Aplikacja kliencka musi Monituj użytkownika o nazwę użytkownika i hasło. Poniższy kod monituje użytkownika o nazwę użytkownika i hasło.  
   
@@ -95,7 +91,7 @@ W tym temacie przedstawiono sposób włączania [!INCLUDE[indigo1](../../../../i
     ```  
   
 ## <a name="see-also"></a>Zobacz też  
- <<!--zz xref:System.ServiceModel.WsHttpBinding --> `xref:System.ServiceModel.WsHttpBinding`>  
+ <xref:System.ServiceModel.WSHttpBinding>  
  <xref:System.ServiceModel.WSHttpSecurity>  
  <xref:System.ServiceModel.SecurityMode>  
  <xref:System.ServiceModel.Security.UserNamePasswordClientCredential.UserName%2A>  
@@ -105,4 +101,4 @@ W tym temacie przedstawiono sposób włączania [!INCLUDE[indigo1](../../../../i
  <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>  
  [Zabezpieczenia transportu z uwierzytelnianiem podstawowym](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  [Rozproszone zabezpieczenia aplikacji](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)  
- [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)
+ [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

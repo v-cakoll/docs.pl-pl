@@ -1,7 +1,7 @@
 ---
-title: "Tworzenie prostego mikrousługi CRUD opartych na danych"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tworzenie prostego mikrousługi CRUD opartych na danych"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Tworzenie prostego mikrousługi CRUD opartych na danych
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tworzenie prostego mikrousługi CRUD opartych na danych
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD opartych na danych
 
@@ -293,10 +293,10 @@ Ten mechanizm versioning jest prosta i zależy od serwera routingu żądania do 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Scott Hanselman. Przechowywanie wersji interfejsu API sieci Web RESTful Core ASP.NET łatwe**
+-   **Scott Hanselman. Przechowywanie wersji interfejsu API RESTful sieci Web platformy ASP.NET Core prosty**
     [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
--   **Przechowywanie wersji interfejs API sieci web RESTful**
+-   **Przechowywanie wersji interfejs API RESTful sieci web**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Fielding Royowi. Przechowywanie wersji, hipermedialnych i REST**
@@ -320,7 +320,7 @@ Poniżej są główne powody generować metadane programu Swagger dla interfejs�
 
 -   [AutoRest](https://github.com/Azure/AutoRest). Można automatycznie generować klasy klienta .NET wywoływania struktury Swagger. To narzędzie może być używane z poziomu interfejsu wiersza polecenia i integruje się również z programu Visual Studio dla łatwe za pośrednictwem graficznego interfejsu użytkownika.
 
--   [Przepływ Microsoft](https://flow.microsoft.com/en-us/). Można automatycznie [użycia i integracja z interfejsem API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) do wysokiego poziomu przepływu pracy Microsoft Flow bez umiejętności programowania wymagane.
+-   [Microsoft Flow](https://flow.microsoft.com/en-us/). Można automatycznie [użycia i integracja z interfejsem API](https://flow.microsoft.com/en-us/blog/integrating-custom-api/) do wysokiego poziomu przepływu pracy Microsoft Flow bez umiejętności programowania wymagane.
 
 -   [Rozwiązanie Microsoft PowerApps](https://powerapps.microsoft.com/en-us/). Można automatycznie korzystać z interfejsu API [aplikacji mobilnych w rozwiązaniu PowerApps](https://powerapps.microsoft.com/en-us/blog/register-and-use-custom-apis-in-powerapps/) skompilowanej za pomocą [Studio rozwiązania PowerApps](https://powerapps.microsoft.com/en-us/guided-learning/learning-powerapps-parts/), nie umiejętności programowania wymagane.
 
@@ -420,4 +420,4 @@ Jest to proste. A ponieważ jest ona generowana automatycznie, metadane programu
 
 
 >[!div class="step-by-step"]
-[Poprzednie] (mikrousługi aplikacji design.md) [dalej] (kilku-container — aplikacje — docker-compose.md)
+[Previous] (microservice-application-design.md) [Next] (multi-container-applications-docker-compose.md)

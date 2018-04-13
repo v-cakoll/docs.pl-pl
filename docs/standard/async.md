@@ -1,6 +1,6 @@
 ---
-title: "Async — omówienie"
-description: "Dowiedz się, jak programowania asynchronicznego to technika klucza, która umożliwia proste do obsługi jednoczesnych operacji na wiele rdzeni i blokowania We/Wy."
+title: Async — omówienie
+description: Dowiedz się, jak programowania asynchronicznego to technika klucza, która umożliwia proste do obsługi jednoczesnych operacji na wiele rdzeni i blokowania We/Wy.
 keywords: .NET, .NET core
 author: cartermp
 ms.author: wiwagn

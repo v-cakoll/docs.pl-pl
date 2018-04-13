@@ -1,6 +1,6 @@
 ---
 title: Samouczki C#
-description: "Poznaj te samouczki C# informacje na temat tworzenia programów C# i Dowiedz się więcej funkcji języka C#."
+description: Poznaj te samouczki C# informacje na temat tworzenia programów C# i Dowiedz się więcej funkcji języka C#.
 keywords: .NET, .NET core
 author: BillWagner
 ms.author: wiwagn

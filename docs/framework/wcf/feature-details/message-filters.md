@@ -1,28 +1,28 @@
 ---
-title: "Filtry komunikatów"
-ms.custom: 
+title: Filtry komunikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: bd5019668e865d2fea835b450d992d45b5273ed7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="message-filters"></a>Filtry komunikatów
 Do wdrożenia na podstawie zawartości routingu, usługa routingu używa <xref:System.ServiceModel.Dispatcher.MessageFilter> implementacje sprawdzić określonych sekcji wiadomości, takie jak adres, nazwa punktu końcowego lub określonych instrukcji XPath. Jeśli żaden komunikat filtrów nie podany z [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] spełnia Twoich potrzeb, można utworzyć niestandardowy filtr przez utworzenie nowego wdrożenia podstawy <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy.  
@@ -38,14 +38,14 @@ Do wdrożenia na podstawie zawartości routingu, usługa routingu używa <xref:S
   
 |Typ filtru|Opis|Znaczenie danych filtru|Przykład filtru|  
 |------------------|-----------------|-------------------------|--------------------|  
-|Akcja|Używa <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> klasę wiadomości zawierające określonej akcji.|Akcja filtrowania na.|\<Nazwa filtru = "action1" filterType = danych filtru "Akcja" = "http://namespace/contract/operation" / >|  
-|EndpointAddress|Używa <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> klasy, z <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` odpowiadające wiadomości zawierające określonego adresu.|Adres do filtrowania po (w nagłówku do).|\<Nazwa filtru = "address1" filterType = danych filtru "EndpointAddress" = "http://host/vdir/s.svc/b" / >|  
-|EndpointAddressPrefix|Używa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> klasy, z <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` odpowiadające wiadomości zawierające prefiksu określonego adresu.|Adres do filtrowania przy użyciu najdłuższe dopasowanie prefiksów.|\<Nazwa filtru = "prefix1" filterType = danych filtru "EndpointAddressPrefix" = "http://host/" / >|  
-|I|Używa <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> klasy, która zawsze ocenia oba warunki przed zwróceniem.|danych filtru nie jest używany; Zamiast tego Filtr1 i filtr2 mają nazwy odpowiedniego komunikatu filtrów (również w tabeli), które powinny być **i**ed razem.|\<Nazwa filtru = filterType "and1" = "I" Filtr1 = filtr2 "address1" = "action1" / >|  
-|Niestandardowe|Zdefiniowane przez użytkownika typu, rozszerzający <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy i ma konstruktor przyjmujący ciąg.|Customtype — atrybut jest typu w pełni kwalifikowaną nazwę klasy w celu utworzenia; danych filtru jest parametry do przekazania do konstruktora podczas tworzenia filtru.|\<Nazwa filtru = filterType "custom1" = "Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" danych filtru = "Dane niestandardowe" / >|  
-|EndpointName|Używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> klasę wiadomości na podstawie nazwy przybyły na punktu końcowego usługi.|Nazwa punktu końcowego usługi, na przykład: "serviceEndpoint1".  Powinno to być jeden z punktów końcowych, narażone na usługi routingu.|\<Nazwa filtru = "stock1" filterType = danych filtru "Punktu końcowego" = "SvcEndpoint" / >|  
-|MatchAll|Używa <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> klasy. Ten filtr dopasowuje wszystkie komunikaty o nadchodzących.|danych filtru nie jest używany. Ten filtr będzie zawsze zgodna wszystkie komunikaty.|\<Nazwa filtru = filterType "matchAll1" = "MatchAll" / >|  
-|XPath|Używa <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> klasy do dopasowania określonej kwerendy XPath w komunikacie.|Zapytanie XPath do użycia podczas dopasowywania komunikatów.|\<Nazwa filtru = "XPath1" filterType = danych filtru "XPath" = "//ns:element" / >|  
+|Akcja|Używa <xref:System.ServiceModel.Dispatcher.ActionMessageFilter> klasę wiadomości zawierające określonej akcji.|Akcja filtrowania na.|\<filter name="action1" filterType="Action" filterData="http://namespace/contract/operation" />|  
+|EndpointAddress|Używa <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> klasy, z <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` odpowiadające wiadomości zawierające określonego adresu.|Adres do filtrowania po (w nagłówku do).|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
+|EndpointAddressPrefix|Używa <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> klasy, z <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true` odpowiadające wiadomości zawierające prefiksu określonego adresu.|Adres do filtrowania przy użyciu najdłuższe dopasowanie prefiksów.|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
+|I|Używa <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> klasy, która zawsze ocenia oba warunki przed zwróceniem.|danych filtru nie jest używany; Zamiast tego Filtr1 i filtr2 mają nazwy odpowiedniego komunikatu filtrów (również w tabeli), które powinny być **i**ed razem.|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|Niestandardowe|Zdefiniowane przez użytkownika typu, rozszerzający <xref:System.ServiceModel.Dispatcher.MessageFilter> klasy i ma konstruktor przyjmujący ciąg.|Customtype — atrybut jest typu w pełni kwalifikowaną nazwę klasy w celu utworzenia; danych filtru jest parametry do przekazania do konstruktora podczas tworzenia filtru.|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
+|EndpointName|Używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> klasę wiadomości na podstawie nazwy przybyły na punktu końcowego usługi.|Nazwa punktu końcowego usługi, na przykład: "serviceEndpoint1".  Powinno to być jeden z punktów końcowych, narażone na usługi routingu.|\<filter name="stock1" filterType="Endpoint" filterData="SvcEndpoint" />|  
+|MatchAll|Używa <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> klasy. Ten filtr dopasowuje wszystkie komunikaty o nadchodzących.|danych filtru nie jest używany. Ten filtr będzie zawsze zgodna wszystkie komunikaty.|\<filter name="matchAll1" filterType="MatchAll" />|  
+|XPath|Używa <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> klasy do dopasowania określonej kwerendy XPath w komunikacie.|Zapytanie XPath do użycia podczas dopasowywania komunikatów.|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  W poniższym przykładzie zdefiniowano filtru wpisów, które należy używać filtrów wiadomości XPath, EndpointName i PrefixEndpointAddress. W przykładzie pokazano także przy użyciu niestandardowego filtru dla wpisów RoundRobinFilter1 i RoundRobinFilter2.  
   
@@ -76,15 +76,15 @@ Do wdrożenia na podstawie zawartości routingu, usługa routingu używa <xref:S
   
 |Prefiks|Przestrzeń nazw|  
 |------------|---------------|  
-|S11|http://schemas.xmlsoap.org/SOAP/Envelope|  
-|S12|http://www.w3.org/2003/05/SOAP-Envelope|  
-|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/Addressing|  
-|wsa10|http://www.w3.org/2005/08/Addressing|  
-|SM|http://schemas.microsoft.com/ServiceModel/2004/05/xpathfunctions|  
+|s11|http://schemas.xmlsoap.org/soap/envelope|  
+|s12|http://www.w3.org/2003/05/soap-envelope|  
+|wsaAugust2004|http://schemas.xmlsoap.org/ws/2004/08/addressing|  
+|wsa10|http://www.w3.org/2005/08/addressing|  
+|sm|http://schemas.microsoft.com/serviceModel/2004/05/xpathfunctions|  
 |tempuri|http://tempuri.org|  
-|ser|http://schemas.microsoft.com/2003/10/serialization|  
+|ser|http://schemas.microsoft.com/2003/10/Serialization|  
   
- Gdy wiesz, że będziesz używać określonego obszaru nazw zapytania XPath, można dodać go do tabeli przestrzeni nazw, wraz z prefiksem unikatową przestrzeń nazw i Użyj prefiksu w każde zapytanie XPath zamiast pełnej przestrzeni nazw. W poniższym przykładzie zdefiniowano prefiksu "niestandardowe" w przestrzeni nazw "http://my.custom.namespace", który jest następnie używany w zapytaniu XPath zawarte w danych filtru.  
+ Gdy wiesz, że będziesz używać określonego obszaru nazw zapytania XPath, można dodać go do tabeli przestrzeni nazw, wraz z prefiksem unikatową przestrzeń nazw i Użyj prefiksu w każde zapytanie XPath zamiast pełnej przestrzeni nazw. W poniższym przykładzie zdefiniowano prefiksu "custom" dla przestrzeni nazw "http://my.custom.namespace", który następnie jest używany w zapytaniu XPath zawarte w danych filtru.  
   
 ```xml  
 <namespaceTable>  

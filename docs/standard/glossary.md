@@ -1,6 +1,6 @@
 ---
-title: ".NET — słownik"
-description: "Dowiedz się znaczenie wybranych terminów używanych w dokumentacji programu .NET."
+title: .NET — słownik
+description: Dowiedz się znaczenie wybranych terminów używanych w dokumentacji programu .NET.
 keywords: .NET glossary, .NET dictionary, .NET terminology, .NET platform, .NET framework, .NET runtime
 author: tdykstra
 ms.author: tdykstra
@@ -13,10 +13,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="net-glossary"></a>.NET — słownik
 

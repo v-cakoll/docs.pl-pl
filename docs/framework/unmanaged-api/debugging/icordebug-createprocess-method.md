@@ -1,13 +1,13 @@
 ---
-title: "ICorDebug::CreateProcess — Metoda"
-ms.custom: 
+title: ICorDebug::CreateProcess — Metoda
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 api_name:
 - ICorDebug.CreateProcess
@@ -23,17 +23,17 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-caps.latest.revision: 
+caps.latest.revision: 21
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 ms.openlocfilehash: 16e45f3bad92914ce8c7fb0044534789a7a28b2e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess — Metoda
 Uruchamia proces i jego podstawowym wątku pod kontrolą debugera.  
@@ -97,7 +97,7 @@ HRESULT CreateProcess (
 ## <a name="remarks"></a>Uwagi  
  Parametry tej metody są takie same jak Win32 `CreateProcess` metody.  
   
- Aby włączyć debugowanie w trybie mieszanym niezarządzane, ustaw `dwCreationFlags` DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Jeśli chcesz używać, tylko debugowanie zarządzane nie należy ustawiać te flagi.  
+ Aby włączyć debugowanie w trybie mieszanym niezarządzane, ustaw `dwCreationFlags` do DEBUG_PROCESS &#124; DEBUG_ONLY_THIS_PROCESS. Jeśli chcesz używać, tylko debugowanie zarządzane nie należy ustawiać te flagi.  
   
  Jeśli debugera i procesu, aby było debugowania (dołączony proces) udostępnianie jednej konsoli, a jeśli używany jest debugowania międzyoperacyjnego, istnieje możliwość dołączony proces do przechowywania blokad konsoli i zatrzymać w zdarzeniu debugowania. Debuger następnie blokuje wszelkie próby korzystania z konsoli. Aby uniknąć tego problemu, należy ustawić flagę CREATE_NEW_CONSOLE `dwCreationFlags` parametru.  
   
@@ -110,7 +110,7 @@ HRESULT CreateProcess (
   
  **Biblioteka:** CorGuids.lib  
   
- **Wersje programu .NET framework:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **Wersje programu .NET framework:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>Zobacz też  
  [ICorDebug, interfejs](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

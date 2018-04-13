@@ -1,18 +1,19 @@
 ---
 title: polecenie test DotNet - .NET Core interfejsu wiersza polecenia
-description: "Polecenie test dotnet służy do wykonywania testów jednostkowych w danym projekcie."
+description: Polecenie test dotnet służy do wykonywania testów jednostkowych w danym projekcie.
 author: mairaw
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: fac5e3cb602f6dc5c06b1b29e9924ce4be7ae273
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 6102281c4daf149f31e65ef8360831fe9e0ef4f6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="dotnet-test"></a>DotNet test
 
@@ -20,11 +21,11 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet test`— .NET testowanie sterowników używane do wykonywania testów jednostkowych.
+`dotnet test` — .NET testowanie sterowników używane do wykonywania testów jednostkowych.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 
 ```
@@ -32,7 +33,7 @@ dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect
 dotnet test [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
@@ -42,9 +43,9 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>Opis
 
-`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. Testy jednostkowe są projektów aplikacji konsoli, które mają zależności w jednostce testowania framework (na przykład MSTest, NUnit lub xUnit) i uruchamiający dotnet framework testowania jednostki. Te są dostarczane w pakietach NuGet i zostaną przywrócone jako zwykłej zależności projektu.
+`dotnet test` Polecenie służy do wykonywania testów jednostkowych w danym projekcie. `dotnet test` Polecenie uruchamia aplikację konsoli test runner określony dla projektu. Moduł uruchamiający wykonuje testy zdefiniowane dla struktury testów jednostkowych (na przykład MSTest, NUnit lub xUnit) i raporty powodzenie lub niepowodzenie każdego z testów. Moduł uruchamiający Biblioteka testów jednostkowych są dostarczane w pakietach NuGet i zostaną przywrócone jako zwykłej zależności projektu.
 
-Projekty testowe należy również określić uruchamiający. To jest określany przy użyciu zwykłego `<PackageReference>` element, taki jak pokazano w poniższym przykładowym pliku projektu:
+Projekty testowe Określ uruchamiający przy użyciu zwykłego `<PackageReference>` element, taki jak pokazano w poniższym przykładowym pliku projektu:
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
@@ -56,7 +57,7 @@ Określa ścieżkę do projektu testowego. W przypadku jego pominięcia domyśln
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -118,7 +119,7 @@ Lista wszystkich odnalezionych testów w bieżącym projekcie.
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-a|--test-adapter-path <PATH_TO_ADAPTER>`
 
@@ -184,14 +185,14 @@ Uruchom testy `test1` projektu:
 
 `--filter <EXPRESSION>`
 
-`<Expression>`ma format `<property><operator><value>[|&<Expression>]`.
+`<Expression>` ma format `<property><operator><value>[|&<Expression>]`.
 
-`<property>`atrybut `Test Case`. Właściwości obsługiwanych przez platform testów jednostkowych popularnych są następujące:
+`<property>` atrybut `Test Case`. Właściwości obsługiwanych przez platform testów jednostkowych popularnych są następujące:
 
 | Struktury testowej | Obsługiwanych właściwości                                                                                      |
 | :------------: | --------------------------------------------------------------------------------------------------------- |
-| MSTest         | <ul><li>Element FullyQualifiedName</li><li>Nazwa</li><li>className</li><li>Priorytet</li><li>TestCategory</li></ul> |
-| Xunit          | <ul><li>Element FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cechy</li></ul>                                   |
+| MSTest         | <ul><li>FullyQualifiedName</li><li>Nazwa</li><li>className</li><li>Priorytet</li><li>TestCategory</li></ul> |
+| Xunit          | <ul><li>FullyQualifiedName</li><li>Nazwa wyświetlana</li><li>Cechy</li></ul>                                   |
 
 `<operator>` Opisuje relację między właściwości i wartość:
 
@@ -201,7 +202,7 @@ Uruchom testy `test1` projektu:
 | `!=`     | Nie dokładnego dopasowania |
 | `~`      | Zawiera        |
 
-`<value>`jest to ciąg. Wszystkie wyszukiwania są bez uwzględniania wielkości liter.
+`<value>` jest to ciąg. Wszystkie wyszukiwania są bez uwzględniania wielkości liter.
 
 Wyrażenia bez `<operator>` jest automatycznie traktowane jako `contains` na `FullyQualifiedName` właściwości (na przykład `dotnet test --filter xyz` jest taka sama jak `dotnet test --filter FullyQualifiedName~xyz`).
 

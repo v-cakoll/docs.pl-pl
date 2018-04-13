@@ -1,8 +1,9 @@
 ---
-title: "Porady: wpisywanie do pliku tekstowego (Przewodnik programowania w języku C#)"
+title: 'Porady: wpisywanie do pliku tekstowego (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - TextWriter.WriteLine
@@ -11,24 +12,22 @@ helpviewer_keywords:
 - files [C#], text files
 - text, writing to files [C#]
 ms.assetid: 2e99f184-d88b-4719-a7f1-d9ec482aa809
-caps.latest.revision: "23"
+caps.latest.revision: ''
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c576536947cdb4984d6e5ce67c8377fe23b354c7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fa6de76e3981e0f05b5b192045043422a8a912aa
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-to-write-to-a-text-file-c-programming-guide"></a>Porady: wpisywanie do pliku tekstowego (Przewodnik programowania w języku C#)
-W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku.  Pierwsze dwa przykłady użycia metod statycznych wygody na <xref:System.IO.File?displayProperty=nameWithType> klasa umożliwiająca zapisanie każdy element żadnych IEnumerable\<ciągu > i ciąg do pliku tekstowego.  Przykład 3 przedstawiono sposób dodawania tekstu do pliku, jeśli masz Przetwarzaj każdego wiersza indywidualnie zapis do pliku.  Przykłady 1 – 3 zastąpić istniejącą zawartość pliku, ale przykład 4 przedstawiono sposób dołączać tekstu do istniejącego pliku.  
+W poniższych przykładach pokazano różne sposoby zapisywania tekstu w pliku. Pierwsze dwa przykłady użycia metod statycznych wygody na <xref:System.IO.File?displayProperty=nameWithType> klasa umożliwiająca zapisanie każdy element dowolnego `IEnumerable<string>` i ciąg do pliku tekstowego. Przykład 3 przedstawiono sposób dodawania tekstu do pliku, jeśli masz Przetwarzaj każdego wiersza indywidualnie zapis do pliku. Przykłady 1 – 3 zastąpić istniejącą zawartość pliku, ale przykład 4 przedstawiono sposób dołączać tekstu do istniejącego pliku.  
   
- Te przykłady dają zapis literałów ciągów w plikach, ale najprawdopodobniej można użyć <xref:System.String.Format%2A> metodę, która ma wiele formantów do pisania różnych typów wartości wyrównane do lewej lub w prawo w polu z lub bez uzupełniania i tak dalej.  Można również użyć języka C# [ciągu interpolacji](../../../csharp/language-reference/keywords/interpolated-strings.md) funkcji.  
+ Te przykłady dają zapis literałów ciągów w plikach. Jeśli chcesz sformatować zapisywane w pliku tekstowym, użyj <xref:System.String.Format%2A> metody lub C# [ciągu interpolacji](../../../csharp/language-reference/tokens/interpolated.md) funkcji.  
   
 ## <a name="example"></a>Przykład  
  [!code-csharp[csFilesandFolders#3](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-write-to-a-text-file_1.cs)]  
-  
- Te przykłady dają zapis literałów ciągów w plikach, ale najprawdopodobniej można użyć <xref:System.String.Format%2A> metodę, która ma wiele formantów do pisania różnych typów wartości wyrównane do lewej lub w prawo w polu z lub bez uzupełniania i tak dalej.  Można również użyć języka C# [ciągu interpolacji](../../../csharp/language-reference/keywords/interpolated-strings.md) funkcji.  
   
 ## <a name="robust-programming"></a>Niezawodne programowanie  
  Następujące warunki mogą spowodować wyjątek:  

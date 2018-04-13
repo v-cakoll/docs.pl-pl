@@ -4,17 +4,17 @@ description: "Sprawdź, czy niektóre główne funkcje programowania ten samoucz
 keywords: "Visual f #, f #, funkcjonalności programowania .NET, samouczek"
 author: cartermp
 ms.author: phcart
-ms.date: 01/24/2017
+ms.date: 02/28/2018
 ms.topic: article
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 49775139-082e-442f-b5a2-dd402399b5d2
-ms.openlocfilehash: c027e6b71f35fc3b58750eb164124de145244825
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7327573a25aa62af28570b4a8662235f3e41a972
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="tour-of-f"></a>Samouczek języka F # #
 
@@ -22,20 +22,13 @@ Najlepszym sposobem, aby dowiedzieć się więcej o języku F # jest do odczytu 
 
 Istnieją dwa podstawowe pojęcia języka F #: funkcji i typów.  Ten samouczek zostanie wyróżnianie funkcji języka, które należą do tych dwóch pojęć.
 
-## <a name="how-to-run-the-code-samples"></a>Jak uruchomić przykłady kodu
-
->[!NOTE]
-Są dwie opcje uruchamiania przykładów kodu [spróbuj F #](http://www.tryfsharp.org/Create) (wymaga programu Silverlight) i [F # dla platformy Azure, komputery przenośne](https://notebooks.azure.com/Microsoft/libraries/fsharp/html/FSharp%20for%20Azure%20Notebooks.ipynb) w systemie Microsoft Azure.
-
-Najszybszym sposobem, aby uruchomić te przykłady kodu jest użycie [F # Interactive](tutorials/fsharp-interactive/index.md).  Po prostu kopiowania/wklejania przykłady kodu i uruchamianie ich brak.  Można również skonfigurować projektu, aby skompilować i uruchomić kod jako aplikacji konsoli.  Zobacz [wprowadzenie](./get-started/index.md) sekcji, aby dowiedzieć się więcej.
-
 ## <a name="functions-and-modules"></a>Funkcje i modułów
 
 Większość podstawowych części programu F # ***funkcje*** podzielone na ***modułów***.  [Funkcje](language-reference/functions/index.md) wykonywania pracy na dane wejściowe, aby tworzyć dane wyjściowe i są zorganizowane w obszarze [moduły](language-reference/modules.md), które są podstawowy sposób grupowania elementów w F #.  Są definiowane przy użyciu [ `let` powiązania](language-reference/functions/let-bindings.md), którego nazwę funkcji i określić argumenty.
 
 [!code-fsharp[BasicFunctions](../../samples/snippets/fsharp/tour.fs#L101-L133)]
 
-`let`powiązania są również, jak można powiązać wartości nazwy, podobne do zmiennych w innych językach.  `let`powiązania są ***niezmienne*** domyślnie, co oznacza, że po wartości lub funkcji jest powiązany z nazwą, nie można zmienić w miejscu.  Jest to w przeciwieństwie do zmiennych w innych językach, które są ***modyfikowalną***, co oznacza ich wartości można zmienić w dowolnym momencie w czasie.  Jeśli potrzebujesz modyfikowalną powiązanie, możesz użyć `let mutable ...` składni.
+`let` powiązania są również, jak można powiązać wartości nazwy, podobne do zmiennych w innych językach.  `let` powiązania są ***niezmienne*** domyślnie, co oznacza, że po wartości lub funkcji jest powiązany z nazwą, nie można zmienić w miejscu.  Jest to w przeciwieństwie do zmiennych w innych językach, które są ***modyfikowalną***, co oznacza ich wartości można zmienić w dowolnym momencie w czasie.  Jeśli potrzebujesz modyfikowalną powiązanie, możesz użyć `let mutable ...` składni.
 
 [!code-fsharp[Immutability](../../samples/snippets/fsharp/tour.fs#L75-L94)]
 

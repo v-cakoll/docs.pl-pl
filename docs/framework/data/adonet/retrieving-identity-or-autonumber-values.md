@@ -1,27 +1,29 @@
 ---
-title: "Pobieranie tożsamości lub wartości automatyczny numer"
-ms.custom: 
+title: Pobieranie tożsamości lub wartości automatyczny numer
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: "7"
+caps.latest.revision: ''
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatyczny numer
 Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, które zawsze zawiera unikatowe wartości. Wiedzy o wartości klucza podstawowego można zlokalizować wiersza, który go zawiera. Relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet obsługuje tworzenie automatycznie zwiększany kolumn, które mogą być oznaczone jako klucze podstawowe. Wartości te są generowane przez serwer jako wiersze są dodawane do tabeli. W programie SQL Server ustaw właściwość identity kolumny w oprogramowaniu Oracle tworzenia sekwencji i programu Microsoft Access tworzenia automatycznie numerowane kolumny.  
@@ -33,7 +35,7 @@ Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, kt
  Niektórych baz danych, takich jak aparat bazy danych programu Microsoft Jet dostępu nie obsługuje parametrów wyjściowych i nie może przetwarzać wiele instrukcji w jednym zadaniu wsadowym. Podczas pracy z aparatu bazy danych Jet, można pobrać wartość Automatyczny numer wygenerowany dla wstawionego wiersza, wykonując osobne polecenie SELECT w obsłudze zdarzeń dla `RowUpdated` zdarzenie `DataAdapter`.  
   
 > [!NOTE]
->  Jest to alternatywa dla użycia automatyczne zwiększanie wartości do użycia <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu do generowania identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako dodaje się każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia w dużym prawdopodobieństwem zostaną zduplikowane wartości. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumny, której program SQL Server może automatycznie generować przy użyciu języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjnych identyfikator GUID nie jest gwarantowana globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
+>  Jest to alternatywa dla użycia automatyczne zwiększanie wartości do użycia <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu do generowania identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako dodaje się każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia w dużym prawdopodobieństwem zostaną zduplikowane wartości. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumny, której program SQL Server może automatycznie generować przy użyciu języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjnych identyfikator GUID nie jest gwarantowana globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Pobieranie wartości kolumny tożsamości serwera SQL  
  Podczas pracy z programem Microsoft SQL Server, można utworzyć procedury składowanej z parametrem wyjściowym, aby zwrócić wartości tożsamości dla wstawionego wiersza. W poniższej tabeli opisano trzy funkcje języka Transact-SQL w programie SQL Server, który może służyć do pobierania wartości w kolumnach tożsamości.  
@@ -79,10 +81,10 @@ SET @Identity = SCOPE_IDENTITY()
   
 |Nazwa elementu członkowskiego|Opis|  
 |-----------------|-----------------|  
-|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges`nazywa się i obie wartości parametrów w danych wyjściowych i/lub wartości w pierwszym wierszu każdy zestaw wyników zwrócony są umieszczane w `DataRow` aktualizowana. Jeśli nie znajdują się wartości do zastosowania, `RowState` będzie <xref:System.Data.DataRowState.Unchanged>.|  
+|<xref:System.Data.UpdateRowSource.Both>|`AcceptChanges` nazywa się i obie wartości parametrów w danych wyjściowych i/lub wartości w pierwszym wierszu każdy zestaw wyników zwrócony są umieszczane w `DataRow` aktualizowana. Jeśli nie znajdują się wartości do zastosowania, `RowState` będzie <xref:System.Data.DataRowState.Unchanged>.|  
 |<xref:System.Data.UpdateRowSource.FirstReturnedRecord>|Jeśli wiersz został zwrócony, `AcceptChanges` nosi nazwę i wiersz jest zamapowana na wiersz zmienione w `DataTable`, ustawienie `RowState` do `Modified`. Jeśli nie wiersza jest zwracany, następnie `AcceptChanges` nie jest wywoływany i `RowState` pozostaje `Added`.|  
 |<xref:System.Data.UpdateRowSource.None>|Parametry zwracane ani wierszy są ignorowane. Brak Brak wywołania `AcceptChanges` i `RowState` pozostaje `Added`.|  
-|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges`jest nazywana i wszelkie parametry wyjściowe są mapowane na zmienionych wierszy w `DataTable`, ustawienie `RowState` do `Modified`. Jeśli nie ma żadnych parametrów wyjściowych `RowState` będzie `Unchanged`.|  
+|<xref:System.Data.UpdateRowSource.OutputParameters>|`AcceptChanges` jest nazywana i wszelkie parametry wyjściowe są mapowane na zmienionych wierszy w `DataTable`, ustawienie `RowState` do `Modified`. Jeśli nie ma żadnych parametrów wyjściowych `RowState` będzie `Unchanged`.|  
   
 ### <a name="example"></a>Przykład  
  W tym przykładzie pokazano wyodrębniania zmienionych wierszy z `DataTable` i przy użyciu <xref:System.Data.SqlClient.SqlDataAdapter> do aktualizowania źródła danych i pobierania nowych wartości kolumny tożsamości. <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> Wykonuje dwie instrukcji języka Transact-SQL; pierwsza z nich jest instrukcji INSERT, a drugi jest instrukcji SELECT, która wykorzystuje funkcję SCOPE_IDENTITY można pobrać wartości tożsamości.  

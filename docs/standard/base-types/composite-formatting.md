@@ -1,12 +1,12 @@
 ---
-title: "Złożone formatowanie"
-ms.custom: 
+title: Złożone formatowanie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -19,21 +19,21 @@ helpviewer_keywords:
 - composite formatting
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
-caps.latest.revision: "36"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: dae73a7ace3aac4e7d89ccba186fceacfe9898ae
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 156ef0f063219f5e78084dd664b64699d33e6593
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="composite-formatting"></a>Złożone formatowanie
-Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wejściowe listę obiektów i ciąg formatu złożonego. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
+Funkcja formatowania złożonego .NET przyjmuje listę obiektów i ciąg formatu złożonego jako dane wejściowe. Ciąg formatu złożonego składa się ze stałego tekstu zmieszanego z indeksowanymi symbolami zastępczymi (nazywanymi też elementami formatu), które odpowiadają obiektom na liście. Operacja formatowania zwraca ciąg wynikowy, który składa się z oryginalnego stałego tekstu zmieszanego z ciągiem reprezentującym obiekty na liście.  
   
  Funkcja formatowania złożonego jest obsługiwana przez metody, takie jak:  
   
@@ -64,7 +64,7 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
 ## <a name="format-item-syntax"></a>Formatuj element składni  
  Każdy element formatu ma następującą postać i składa się z następujących składników:  
   
- `{`*indeksu*[`,`*wyrównanie*] [`:`*formatString*]`}`  
+ `{` *Indeks*[`,`*wyrównanie*] [`:`*formatString*]`}`  
   
  Dopasowujące nawiasy klamrowe („{” i „}”) są wymagane.  
   
@@ -151,7 +151,7 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
   
  Przy założeniu, że w bieżącym dniu jest czwartek w maju, wartości obu parametrów w poprzednim przykładzie jest `Thursday May` w Stanach Zjednoczonych Kultura angielskiej wersji językowej.  
   
- <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>Opisuje te same funkcje co <xref:System.String.Format%2A?displayProperty=nameWithType>. Jedyną różnicą między obiema metodami jest to, że <xref:System.String.Format%2A?displayProperty=nameWithType> zwraca wynik jako ciąg znaków, podczas <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> zapisu do strumienia wyjściowego wynik skojarzony z <xref:System.Console> obiektu. W poniższym przykładzie użyto <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody do formatowania wartości `MyInt` na wartość waluty.  
+ <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> Opisuje te same funkcje co <xref:System.String.Format%2A?displayProperty=nameWithType>. Jedyną różnicą między obiema metodami jest to, że <xref:System.String.Format%2A?displayProperty=nameWithType> zwraca wynik jako ciąg znaków, podczas <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> zapisu do strumienia wyjściowego wynik skojarzony z <xref:System.Console> obiektu. W poniższym przykładzie użyto <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> metody do formatowania wartości `MyInt` na wartość waluty.  
   
  [!code-csharp[Formatting.Composite#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#4)]
  [!code-vb[Formatting.Composite#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#4)]  
@@ -161,7 +161,7 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
  [!code-csharp[Formatting.Composite#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#5)]
  [!code-vb[Formatting.Composite#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#5)]  
   
- W poniższym przykładzie pokazano użycie wyrównania w formatowaniu. Argumenty, które są sformatowane umieszcza się pomiędzy znaków pionowy pasek (&#124;) aby wyróżnić wynikowy wyrównania.  
+ W poniższym przykładzie pokazano użycie wyrównania w formatowaniu. Argumenty, które są sformatowane umieszcza się pomiędzy pionowy pasek znaków (&#124;) aby wyróżnić wynikowy wyrównania.  
   
  [!code-csharp[Formatting.Composite#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Composite/cs/Composite1.cs#6)]
  [!code-vb[Formatting.Composite#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Composite/vb/Composite1.vb#6)]  
@@ -169,6 +169,8 @@ Funkcja formatowania złożonego programu .NET Framework przyjmuje jako dane wej
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Console.WriteLine%2A>  
  <xref:System.String.Format%2A?displayProperty=nameWithType>  
+ [Ciąg interpolacji (C#)](../../csharp/language-reference/tokens/interpolated.md)  
+ [Ciąg interpolacji (Visual Basic)](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Standardowe ciągi formatujące liczby](../../../docs/standard/base-types/standard-numeric-format-strings.md)  
  [Niestandardowe ciągi formatujące liczby](../../../docs/standard/base-types/custom-numeric-format-strings.md)  

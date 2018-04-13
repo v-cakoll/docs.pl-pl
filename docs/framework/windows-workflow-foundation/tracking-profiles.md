@@ -1,23 +1,24 @@
 ---
-title: "Profile śledzenia"
-ms.custom: 
+title: Profile śledzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-caps.latest.revision: "21"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a3b1e96451eb89544d0902a1f3498263dec981a3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="tracking-profiles"></a>Profile śledzenia
 Śledzenie profile zawierają zapytania dotyczące śledzenia, które umożliwiają śledzenie uczestnika do subskrybowanie zdarzeń przepływu pracy, które są emitowane po zmianie stanu wystąpienia przepływu pracy w czasie wykonywania.  
@@ -117,7 +118,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 ### <a name="tracking-profile-query-types"></a>Typy zapytań profilu śledzenia  
  Profile śledzenia mają strukturę jako deklaratywne subskrypcji dla śledzenia rekordy, które umożliwiają zapytania dla rekordów śledzenie wersję wykonawczą przepływu pracy. Istnieje kilka typów zapytania umożliwiające subskrybować różnych klas <xref:System.Activities.Tracking.TrackingRecord> obiektów. Śledzenie profile można określić w konfiguracji lub za pomocą kodu. W tym miejscu są najczęściej używane typy zapytań:  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceQuery>-Służy do śledzenia zmiany cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — zostało to pokazane `Started` i `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:  
+-   <xref:System.Activities.Tracking.WorkflowInstanceQuery> -Służy do śledzenia zmiany cyklu życia wystąpienia przepływu pracy, takich jak wcześniej — zostało to pokazane `Started` i `Completed`. <xref:System.Activities.Tracking.WorkflowInstanceQuery> Jest używana do subskrybowania następujących <xref:System.Activities.Tracking.TrackingRecord> obiektów:  
   
     -   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
@@ -157,7 +158,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.ActivityStateQuery>-Służy do śledzenia zmian cyklu życia działań, które tworzą wystąpienia przepływu pracy. Na przykład może być do śledzenia każdorazowo po ukończeniu działania "Wyślij wiadomość E-Mail" w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityStateRecord> obiektów. Dostępne stany do subskrybowania są określone w <xref:System.Activities.Tracking.ActivityStates>.  
+-   <xref:System.Activities.Tracking.ActivityStateQuery> -Służy do śledzenia zmian cyklu życia działań, które tworzą wystąpienia przepływu pracy. Na przykład może być do śledzenia każdorazowo po ukończeniu działania "Wyślij wiadomość E-Mail" w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityStateRecord> obiektów. Dostępne stany do subskrybowania są określone w <xref:System.Activities.Tracking.ActivityStates>.  
   
      Konfiguracja i kod używany do subskrybowania rekordów śledzenia stanu działania, korzystających z <xref:System.Activities.Tracking.ActivityStateQuery> dla `SendEmailActivity` działania przedstawiono w poniższym przykładzie.  
   
@@ -189,7 +190,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     > [!NOTE]
     >  Jeśli wiele elementów activityStateQuery mają taką samą nazwę, tylko Stany w ostatnim elemencie są używane w profilu śledzenia.  
   
--   <xref:System.Activities.Tracking.ActivityScheduledQuery>— To zapytanie umożliwia śledzenie działania zaplanowane do uruchomienia przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityScheduledRecord> obiektów.  
+-   <xref:System.Activities.Tracking.ActivityScheduledQuery> — To zapytanie umożliwia śledzenie działania zaplanowane do uruchomienia przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.ActivityScheduledRecord> obiektów.  
   
      Konfiguracja i kod używany do subskrybowania rekordy związane z `SendEmailActivity` działanie podrzędne planowany przy użyciu <xref:System.Activities.Tracking.ActivityScheduledQuery> przedstawiono w poniższym przykładzie.  
   
@@ -214,7 +215,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.FaultPropagationQuery>-Służy do śledzenia Obsługa błędów występujących w ramach działania. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.FaultPropagationRecord> obiektów.  
+-   <xref:System.Activities.Tracking.FaultPropagationQuery> -Służy do śledzenia Obsługa błędów występujących w ramach działania. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.FaultPropagationRecord> obiektów.  
   
      Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem propagacji błędów <xref:System.Activities.Tracking.FaultPropagationQuery> przedstawiono w poniższym przykładzie.  
   
@@ -239,7 +240,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CancelRequestedQuery>— Umożliwia śledzenie żądań, aby anulować działanie podrzędne przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CancelRequestedRecord> obiektów.  
+-   <xref:System.Activities.Tracking.CancelRequestedQuery> — Umożliwia śledzenie żądań, aby anulować działanie podrzędne przez działania nadrzędnego. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CancelRequestedRecord> obiektów.  
   
      Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem anulowania działania <xref:System.Activities.Tracking.CancelRequestedQuery> przedstawiono w poniższym przykładzie.  
   
@@ -264,7 +265,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.CustomTrackingQuery>-Służy do śledzenia zdarzeń zdefiniowanych w działaniach kodu. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów.  
+-   <xref:System.Activities.Tracking.CustomTrackingQuery> -Służy do śledzenia zdarzeń zdefiniowanych w działaniach kodu. Zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.CustomTrackingRecord> obiektów.  
   
      Konfiguracja i kod używany do subskrybowania rekordy związane z śledzenia niestandardowych rekordów przy użyciu <xref:System.Activities.Tracking.CustomTrackingQuery> przedstawiono w poniższym przykładzie.  
   
@@ -289,7 +290,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
     };  
     ```  
   
--   <xref:System.Activities.Tracking.BookmarkResumptionQuery>-Służy do śledzenia wznowienie zakładki w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.BookmarkResumptionRecord> obiektów.  
+-   <xref:System.Activities.Tracking.BookmarkResumptionQuery> -Służy do śledzenia wznowienie zakładki w ramach wystąpienia przepływu pracy. To zapytanie jest niezbędne do <xref:System.Activities.Tracking.TrackingParticipant> do subskrybowania <xref:System.Activities.Tracking.BookmarkResumptionRecord> obiektów.  
   
      Konfiguracja i kod używany do subskrybowania rekordy powiązane z użyciem wznowienie zakładki <xref:System.Activities.Tracking.BookmarkResumptionQuery> przedstawiono w poniższym przykładzie.  
   

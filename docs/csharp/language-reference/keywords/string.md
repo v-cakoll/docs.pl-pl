@@ -2,7 +2,8 @@
 title: "string (odwołanie w C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - string
@@ -13,17 +14,17 @@ helpviewer_keywords:
 - string literals [C#]
 - string keyword [C#]
 ms.assetid: 3037e558-fb22-494d-bca1-a15ade11b11a
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 87df2b158b173072aad5257594e1b1482ae61067
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8899eb75b1b7c556a1e92f173a4d0ca4135014c8
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="string-c-reference"></a>string (odwołanie w C#)
-`string` Typu reprezentuje sekwencję zero lub więcej znaków Unicode. `string`alias jest <xref:System.String> w programie .NET Framework.  
+`string` Typu reprezentuje sekwencję zero lub więcej znaków Unicode. `string` alias jest <xref:System.String> w .NET.  
   
  Mimo że `string` jest typem referencyjnym Operatory równości (`==` i `!=`) są zdefiniowane w celu porównania wartości `string` obiektów, nie odwołuje się do. Upraszcza to testowanie równości ciąg bardziej intuicyjne. Na przykład:  
   
@@ -76,7 +77,7 @@ Console.WriteLine(a);
 > [!NOTE]
 >  Kod wyjścia `\udddd` (gdzie `dddd` jest liczbą czterocyfrowe) reprezentuje znak Unicode U +`dddd`. Kody ucieczki Unicode 8 cyfrowy również są rozpoznawane: `\Udddddddd`.  
   
- Literały ciągu dosłownego wyrażenia rozpoczynać i również są ujęte w cudzysłów. Na przykład:  
+ Literały ciągu dosłownego wyrażenia rozpoczynać `@` i również są ujęte w cudzysłów. Na przykład:  
   
 ```csharp  
 @"good morning"  // a string literal  
@@ -94,7 +95,7 @@ Console.WriteLine(a);
 @"""Ahoy!"" cried the captain." // "Ahoy!" cried the captain.  
 ```  
   
- Użycie innego znaku @ odwołuje się do użycia do ([/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md)) identyfikatorów, które są słowa kluczowe języka C#.  
+ Do innych celów z `@` znak specjalny, zobacz [@ — identyfikator dosłownego wyrażenia](../tokens/verbatim.md).  
   
  Aby uzyskać więcej informacji na temat ciągów w języku C#, zobacz [ciągów](../../../csharp/programming-guide/strings/index.md).  
   

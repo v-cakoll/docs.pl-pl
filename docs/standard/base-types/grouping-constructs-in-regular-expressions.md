@@ -26,11 +26,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9b9e54d8bbc9ca7cc9172fd83bd15968b3cef8e1
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 766f20f92cd4ac2d987137f86616a69df9f53600
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>Konstrukcje grupujące w wyrażeniach regularnych
 Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywania podciągów ciągu wejściowego. Można użyć konstrukcji grupowania wykonywać następujące czynności:  
@@ -301,7 +301,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
   
  Konstrukcja opcje grupy nie jest grupą przechwytywania. Oznacza to mimo że jakiejkolwiek jego części ciągu przechwycony przez *Podwyrażenie* jest uwzględniona w dopasowania, jest nie zawarte w przechwyconej grupy ani służące do wypełniania <xref:System.Text.RegularExpressions.GroupCollection> obiektu.  
   
- Na przykład, wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowany w konstrukcji grupowania Włącz dopasowywanie bez uwzględniania wielkości liter i Ignoruj odstępy wzorzec do identyfikowania wszystkie słowa, które zaczynają się od litery "d". Wyrażenie regularne jest zdefiniowany, jak pokazano w poniższej tabeli.  
+ Na przykład, wyrażenie regularne `\b(?ix: d \w+)\s` w poniższym przykładzie używa opcji wbudowany w konstrukcji grupowania Włącz dopasowywanie bez uwzględniania wielkości liter i Ignoruj wzorzec biały znak w identyfikacji wszystkie słowa, które zaczynają się od litery "d". Wyrażenie regularne jest zdefiniowany, jak pokazano w poniższej tabeli.  
   
 |Wzorzec|Opis|  
 |-------------|-----------------|  
@@ -393,7 +393,7 @@ Konstrukcje grupujące odróżniać użyto wyrażenia regularnego i przechwytywa
 |Wzorzec|Opis|  
 |-------------|-----------------|  
 |`\d{2}`|Zgodne dwóch cyfr dziesiętnych.|  
-|`{?<=\b20)`|Nadal dopasowania, jeśli dwa cyfr dziesiętnych są poprzedzone cyfr dziesiętnych "20" na granicy programu word.|  
+|`(?<=\b20)`|Nadal dopasowania, jeśli dwa cyfr dziesiętnych są poprzedzone cyfr dziesiętnych "20" na granicy programu word.|  
 |`\b`|Kończy dopasowanie na granicy wyrazu.|  
   
  Asercje o zerowej szerokości dodatnie wybieganie wstecz są również używane do ograniczania śledzenie wsteczne podczas ostatni znak lub znaki w przechwyconej grupy muszą być podzbiorem znaków, który jest zgodny z wzorcem wyrażenia regularnego tej grupy. Na przykład jeśli grupa przechwytuje wszystkie znaki kolejnych word, umożliwia potwierdzenie dodatnie wybieganie wstecz zerowej szerokości wymagają alfabetycznej ostatnim znakiem.  

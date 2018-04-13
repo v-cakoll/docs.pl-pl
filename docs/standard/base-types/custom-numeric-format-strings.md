@@ -1,12 +1,12 @@
 ---
-title: "Niestandardowe ciągi formatujące liczby"
-ms.custom: 
+title: Niestandardowe ciągi formatujące liczby
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,38 +22,38 @@ helpviewer_keywords:
 - formatting numbers [.NET Framework]
 - format specifiers, custom numeric format strings
 ms.assetid: 6f74fd32-6c6b-48ed-8241-3c2b86dea5f4
-caps.latest.revision: "54"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ec33a093e4f7f8ccda1992f26563bcd63853e634
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b33acfef1cabd3aa53fbe8947bd7adbe52d3b7a4
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="custom-numeric-format-strings"></a>Niestandardowe ciągi formatujące liczby
 Można utworzyć ciąg niestandardowego formatu liczb, który składa się z jednego lub większej liczby niestandardowych specyfikatorów liczbowych, aby zdefiniować sposób formatowania danych liczbowych. Ciąg niestandardowego formatu liczbowego jest dowolny ciąg formatu, który nie jest [ciągu standardowego formatu liczbowego](../../../docs/standard/base-types/standard-numeric-format-strings.md).  
   
- Niestandardowe ciągi formatujące liczby obsługiwanych przez niektóre przeciążeń `ToString` metody wszystkie typy liczbowe. Na przykład można podać ciąg formatu liczbowego <xref:System.Int32.ToString%28System.String%29> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> metody <xref:System.Int32> typu. Niestandardowe ciągi formatujące liczby są również obsługiwane przez .NET [złożonych funkcji formatowania](../../../docs/standard/base-types/composite-formatting.md), który jest używany przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klasy <xref:System.String.Format%2A?displayProperty=nameWithType>metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody.  
+ Niestandardowe ciągi formatujące liczby obsługiwanych przez niektóre przeciążeń `ToString` metody wszystkie typy liczbowe. Na przykład można podać ciąg formatu liczbowego <xref:System.Int32.ToString%28System.String%29> i <xref:System.Int32.ToString%28System.String%2CSystem.IFormatProvider%29> metody <xref:System.Int32> typu. Niestandardowe ciągi formatujące liczby są również obsługiwane przez .NET [złożonych funkcji formatowania](../../../docs/standard/base-types/composite-formatting.md), który jest używany przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klasy <xref:System.String.Format%2A?displayProperty=nameWithType>metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> metody. [Ciąg interpolacji](../../csharp/language-reference/tokens/interpolated.md) funkcji obsługuje również niestandardowe ciągi formatujące liczby.  
   
 > [!TIP]
 >  Możesz pobrać [formatowania narzędzie](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)ciągi aplikacji, która umożliwia zastosowanie formatu liczbowego lub daty i czasu wartości i wyświetla ciąg wyniku.  
   
-<a name="table"></a>Poniższa tabela opisuje specyfikatory niestandardowego formatu liczbowego i wyświetla przykładowe dane wyjściowe generowane przez każdego specyfikator formatu. Zobacz [uwagi](#NotesCustomFormatting) sekcji, aby uzyskać dodatkowe informacje o używaniu niestandardowe ciągi formatujące liczby i [przykład](#example) sekcji ilustracyjną kompleksowe ich użycia.  
+<a name="table"></a> Poniższa tabela opisuje specyfikatory niestandardowego formatu liczbowego i wyświetla przykładowe dane wyjściowe generowane przez każdego specyfikator formatu. Zobacz [uwagi](#NotesCustomFormatting) sekcji, aby uzyskać dodatkowe informacje o używaniu niestandardowe ciągi formatujące liczby i [przykład](#example) sekcji ilustracyjną kompleksowe ich użycia.  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|„0”|Symbol zastępczy zero|Zamienia zero na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku zero występuje w ciągu wynikowym.<br /><br /> Więcej informacji: ["0" specyfikator niestandardowe](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.46 -> 0.45678 ("0,00" en US)<br /><br /> 0,46 -> 0.45678 ("0,00", fr-FR)|  
-|"#"|Symbol zastępczy cyfry|Zamienia symbol „#” na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku żadna cyfra nie występuje w ciągu wynikowym.<br /><br /> Należy zauważyć, że nie cyfrę pojawia się w ciągu wynik Jeśli odpowiedni cyfr w ciągu wejściowym jest 0 znaczące. Na przykład 0003 ("###") -> 3.<br /><br /> Więcej informacji: ["#" specyfikator niestandardowe](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#. ##", en US) ->.46<br /><br /> 0.45678 ("#. ##", fr-FR) -> 46|  
-|"."|Punkt dziesiętny|Określa lokalizację separatora dziesiętnego w ciągu wynikowym.<br /><br /> Więcej informacji: ["." Specyfikator niestandardowych](#SpecifierPt).|0.46 -> 0.45678 ("0,00" en US)<br /><br /> 0,46 -> 0.45678 ("0,00", fr-FR)|  
-|","|Separator grup i skalowania liczby|Jest używany zarówno jako separator grup, jak i specyfikator skalowania liczby. Jako separator grup wstawia zlokalizowany znak separatora grup między grupami. Jako specyfikator skalowania liczb dzieli liczbę przez 1000 dla każdej liczby z określonym przecinkiem.<br /><br /> Więcej informacji: ["," specyfikator niestandardowe](#SpecifierTh).|Specyfikator separatora grup:<br /><br /> 2147483647 ("##, #", en US) -> 2 147 483 647<br /><br /> 2147483647 ("##, #", es-ES) -> 2.147.483.647<br /><br /> Specyfikator skalowania:<br /><br /> 2147483647 ("#, #,", en US) -> 2 147<br /><br /> 2.147 -> 2147483647 ("#, #,", es-ES)|  
+|„0”|Symbol zastępczy zero|Zamienia zero na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku zero występuje w ciągu wynikowym.<br /><br /> Więcej informacji: ["0" specyfikator niestandardowe](#Specifier0).|1234.5678 ("00000") -> 01235<br /><br /> 0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 -> 0.45678 ("0,00", fr-FR)|  
+|"#"|Symbol zastępczy cyfry|Zamienia symbol „#” na odpowiednią cyfrę, jeżeli jest ona obecna. W przeciwnym wypadku żadna cyfra nie występuje w ciągu wynikowym.<br /><br /> Należy zauważyć, że nie cyfrę pojawia się w ciągu wynik Jeśli odpowiedni cyfr w ciągu wejściowym jest 0 znaczące. Na przykład 0003 ("###") -> 3.<br /><br /> Więcej informacji: ["#" specyfikator niestandardowe](#SpecifierD).|1234.5678 ("#####") -> 1235<br /><br /> 0.45678 ("#.##", en-US) -> .46<br /><br /> 0.45678 ("#. ##", fr-FR) -> 46|  
+|"."|Punkt dziesiętny|Określa lokalizację separatora dziesiętnego w ciągu wynikowym.<br /><br /> Więcej informacji: ["." Specyfikator niestandardowych](#SpecifierPt).|0.45678 ("0.00", en-US) -> 0.46<br /><br /> 0,46 -> 0.45678 ("0,00", fr-FR)|  
+|","|Separator grup i skalowania liczby|Jest używany zarówno jako separator grup, jak i specyfikator skalowania liczby. Jako separator grup wstawia zlokalizowany znak separatora grup między grupami. Jako specyfikator skalowania liczb dzieli liczbę przez 1000 dla każdej liczby z określonym przecinkiem.<br /><br /> Więcej informacji: ["," specyfikator niestandardowe](#SpecifierTh).|Specyfikator separatora grup:<br /><br /> 2147483647 ("##, #", en US) -> 2 147 483 647<br /><br /> 2147483647 ("##,#", es-ES) -> 2.147.483.647<br /><br /> Specyfikator skalowania:<br /><br /> 2147483647 ("#, #,", en US) -> 2 147<br /><br /> 2.147 -> 2147483647 ("#, #,", es-ES)|  
 |"%"|Symbol zastępczy procentu|Mnoży liczbę przez 100 i wstawia zlokalizowany symbol procentu do ciągu wynikowego.<br /><br /> Więcej informacji: ["%" specyfikator niestandardowe](#SpecifierPct).|0.3697 ("% #0.00" en US) -> % 36.97<br /><br /> 0.3697 ("% #0.00" el-GR) -> % 36,97<br /><br /> 0.3697 ("% ##.0," pl pl) -> 37.0%<br /><br /> 0.3697 ("% ##.0", el GR) -> 37,0%|  
 |"‰"|Symbol zastępczy promil|Mnoży liczbę przez 1000 i wstawia zlokalizowany symbol promila do ciągu wynikowego.<br /><br /> Więcej informacji: ["‰" specyfikator niestandardowe](#SpecifierPerMille).|0.03697 ("#0.00‰," pl pl) -> 36.97‰<br /><br /> 0.03697 ("#0.00‰", ru-RU) -> 36 97‰|  
-|„E0”<br /><br /> „E+0”<br /><br /> „E-0”<br /><br /> „e0”<br /><br /> „e+0”<br /><br /> „e-0”|Notacja wykładnicza|Jeżeli występuje po nim przynajmniej jedno 0 (zero), formatuje wynik za pomocą notacji wykładniczej. Wielkość litery „E” lub „e” wskazuje wielkość symbolu wykładnika w ciągu wynikowym. Liczba zer po znaku „E” lub „e” określa minimalną liczbę cyfr wykładnika. Znak plus (+) wskazuje, że znak zawsze poprzedza wykładnik potęgi. Znak minus (-) wskazuje, że znak poprzedza tylko ujemny wykładnik potęgi.<br /><br /> Więcej informacji: ["E" i "e" specyfikatory niestandardowe](#SpecifierExponent).|98.8e4 -> 987654 ("#0.0e0")<br /><br /> 1503.92311 ("0.&#0;#e + 00") -> 1.504e + 03<br /><br /> 1.8901385E-16 ("0.0e + 00") -> 1.9e-16|  
+|„E0”<br /><br /> „E+0”<br /><br /> „E-0”<br /><br /> „e0”<br /><br /> „e+0”<br /><br /> „e-0”|Notacja wykładnicza|Jeżeli występuje po nim przynajmniej jedno 0 (zero), formatuje wynik za pomocą notacji wykładniczej. Wielkość litery „E” lub „e” wskazuje wielkość symbolu wykładnika w ciągu wynikowym. Liczba zer po znaku „E” lub „e” określa minimalną liczbę cyfr wykładnika. Znak plus (+) wskazuje, że znak zawsze poprzedza wykładnik potęgi. Znak minus (-) wskazuje, że znak poprzedza tylko ujemny wykładnik potęgi.<br /><br /> Więcej informacji: ["E" i "e" specyfikatory niestandardowe](#SpecifierExponent).|987654 ("#0.0e0") -> 98.8e4<br /><br /> 1503.92311 ("0.0##e+00") -> 1.504e+03<br /><br /> 1.8901385E-16 ("0.0e+00") -> 1.9e-16|  
 |"\\"|Znak ucieczki|Powoduje, że następny znak należy interpretować jako literał, a nie jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji: ["\\" znak zmiany znaczenia](#SpecifierEscape).|987654 ("\\###00\\#") -> #987654#|  
 |"*ciąg*"<br /><br /> "*ciąg*"|Ogranicznik ciągu literału|Wskazuje, że znaki w cudzysłowie powinny zostać skopiowane do ciągu wynikowego bez zmian.|68 ("#" stopni"") -> 68 stopni<br /><br /> 68 ("#" stopni ") -> 68 stopni|  
 |;|Separator sekcji|Definiuje sekcje z oddzielnymi ciągami formatu dla liczb dodatnich, ujemnych i dla zera.<br /><br /> Więcej informacji: [";" Separator sekcji](#SectionSeparator).|12.345 ("#0.0#;(#0.0#);-\0-") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#);-\0-") -> -0-<br /><br /> -12.345 ("#0.0#;(#0.0#);-\0-") -> (12.35)<br /><br /> 12.345 ("#0.0#;(#0.0#)") -> 12.35<br /><br /> 0 ("#0.0#;(#0.0#)") -> 0.0<br /><br /> -12.345 ("#0.0#;(#0.0#)") -> (12.35)|  

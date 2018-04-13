@@ -1,1 +1,1 @@
-**Ten temat dotyczy: ✓** .NET Core SDK 2.x
+**Ten temat dotyczy: ✓** .NET Core SDK 2.0

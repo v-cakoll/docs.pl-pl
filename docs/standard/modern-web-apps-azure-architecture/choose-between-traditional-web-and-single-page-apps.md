@@ -91,7 +91,7 @@ W poniższej tabeli decyzji przedstawiono niektóre podstawowe czynniki, które 
   | **Współczynnik** | **Aplikacja sieci Web tradycyjny** | **Aplikacja jednostronicowa** |
   |---|---|---|
   | Wymagane zespołu znajomość JavaScript/TypeScript | **Minimalny** | **Wymagane** |
-  | Obsługa przeglądarki bez obsługi skryptów | Obsługiwane | Nieobsługiwane |
+  | Obsługa przeglądarki bez obsługi skryptów | **Obsługiwane** | **Nieobsługiwane** |
   | Zachowanie minimalnego aplikacji po stronie klienta | **Well-Suited** | **Zbyt obszerne** |
   | Wymagania interfejsu użytkownika zaawansowane, złożone | **Limited** | **Well-Suited** |
 

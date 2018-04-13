@@ -1,6 +1,6 @@
 ---
 title: Platforma kompilatora .NET SDK (Roslyn API)
-description: "Dowiedz się na potrzeby .NET SDK platformy kompilatora (nazywanych również interfejsy API Roslyn) zrozumieć kodu platformy .NET, wykrywać błędy i Rozwiąż te błędy."
+description: Dowiedz się na potrzeby .NET SDK platformy kompilatora (nazywanych również interfejsy API Roslyn) zrozumieć kodu platformy .NET, wykrywać błędy i Rozwiąż te błędy.
 keywords: roslyn, analizator, poprawki kodu
 author: billwagner
 ms.author: wiwagn
@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 260efa9810e6587224bddb196b4a746d15f785e2
-ms.sourcegitcommit: 3fd4e718d1bac9769fe0c1dd08ca1b2323ae272b
+ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/11/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 
@@ -67,10 +67,15 @@ Zestawu SDK platformy kompilatora .NET zawiera najnowsze modele obiektów język
 
 Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy .NET kompilatora w tych tematach cztery:
 
+ - [Eksploruj kodu z wizualizatora składni](syntax-visualizer.md)
  - [Omówienie modelu interfejsu API kompilatora](compiler-api-model.md)
  - [Korzystanie ze składni](work-with-syntax.md)
  - [Korzystanie z semantyki](work-with-semantics.md)
  - [Korzystanie z obszaru roboczego](work-with-workspace.md)
+ 
+Aby rozpocząć pracę, musisz zainstalować **zestawu SDK platformy kompilatora .NET**:
+
+[!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
 <!--
 

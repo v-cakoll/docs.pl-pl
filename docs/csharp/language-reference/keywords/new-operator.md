@@ -1,6 +1,6 @@
 ---
 title: "new — Operator (odwołanie w C#)"
-ms.date: 07/20/2015
+ms.date: 03/15/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,35 +11,35 @@ ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
 caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3c2b484b9872a54ce42520de77a723b9edb441a9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ab582cd14bc649ca8d1678a583a8f95e78c6bf7e
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="new-operator-c-reference"></a>new — Operator (odwołanie w C#)
 Używany do tworzenia obiektów i wywołania konstruktorów. Na przykład:  
   
-```  
+```csharp
 Class1 obj  = new Class1();  
 ```  
   
  Służy również do tworzenia wystąpień typów anonimowych:  
   
-```  
+```csharp
 var query = from cust in customers  
-            select new {Name = cust.Name, Address = cust.PrimaryAddress};  
+            select new { Name = cust.Name, Address = cust.PrimaryAddress };  
 ```  
   
  `new` Operator również służy do wywoływania domyślnego konstruktora dla typów wartości. Na przykład:  
   
-```  
+```csharp
 int i = new int();  
 ```  
   
  W powyższych instrukcji `i` jest ustawiana na `0`, która jest wartością domyślną dla typu `int`. Instrukcja ma ten sam efekt w następujący sposób:  
   
-```  
+```csharp
 int i = 0;  
 ```  
   
@@ -47,7 +47,7 @@ int i = 0;
   
  Należy jednak pamiętać błędu, aby zadeklarować konstruktora domyślnego dla [struktury](../../../csharp/language-reference/keywords/struct.md) ponieważ każdy typ wartości niejawnie ma publicznego konstruktora domyślnego. Można zadeklarować konstruktory sparametryzowane w typie struktury można ustawić wartości początkowej, ale tylko jest to konieczne, jeśli są wymagane wartości innej niż domyślna.  
   
- Typ wartości obiektów, takich jak struktury są tworzone na stosie, gdy typ referencyjny obiektów, takich jak klasy są tworzone na stosie. Obu typów obiektów zostaną zniszczone automatycznie, ale obiekty na podstawie typów wartości zostaną zniszczone, gdy przejdą poza zakresem, obiektów w oparciu o typy referencyjne zostaną zniszczone na czas nieokreślony, po usunięciu ostatniego odwołania do nich. Typy odwołań używające stałej zasoby, takie jak duże ilości pamięci, dojścia do plików lub połączeń sieciowych czasami jest pożądane fragmentów finalizacja deterministyczna, aby upewnić się, że obiekt zostanie zniszczony tak szybko, jak to możliwe. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md).  
+ Zarówno typ wartości obiektów, takich jak struktury, jak i typ referencyjny obiektów, takich jak klasy zostaną zniszczone automatycznie, ale typ wartości obiektów zostaną zniszczone podczas ich zawierającego kontekście zostanie zniszczony, podczas gdy typ referencyjny obiekty zostaną zniszczone w pamięci Moduł zbierający na czas nieokreślony, po usunięciu ostatniego odwołania do nich. Dla typów, które zawierają zasoby, takie jak dojścia do plików lub połączeń sieciowych pożądane jest fragmentów oczyszczania deterministyczna, aby upewnić się, że zasoby, które zawierają są wydawane tak szybko, jak to możliwe. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](../../../csharp/language-reference/keywords/using-statement.md).  
   
  `new` Operator nie może być przeciążony.  
   
@@ -56,7 +56,7 @@ int i = 0;
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie `struct` utworzenia i zainicjowana przy użyciu obiektu i obiekt klasy `new` operatora, a następnie przypisać wartości. Wartość domyślna i przypisane wartości są wyświetlane.  
   
- [!code-csharp[csrefKeywordsOperator#7](../../../csharp/language-reference/keywords/codesnippet/CSharp/new-operator_1.cs)]  
+ [!code-csharp[csrefKeywordsOperator#7](codesnippet/CSharp/new-operator_1.cs)]  
   
  W przykładzie, który jest domyślna wartość ciągu `null`. W związku z tym nie jest wyświetlany.  
   
@@ -68,5 +68,5 @@ int i = 0;
  [Przewodnik programowania w języku C#](../../../csharp/programming-guide/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)  
- [Nowy](../../../csharp/language-reference/keywords/new.md)  
+ [new](../../../csharp/language-reference/keywords/new.md)  
  [Typy anonimowe](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)

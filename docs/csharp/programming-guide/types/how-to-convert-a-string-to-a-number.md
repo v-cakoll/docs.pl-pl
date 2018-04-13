@@ -1,8 +1,9 @@
 ---
-title: "Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)"
+title: 'Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - conversions [C#]
@@ -10,14 +11,14 @@ helpviewer_keywords:
 - converting strings to int [C#]
 - strings [C#], converting to int
 ms.assetid: 467b9979-86ee-4afd-b734-30299cda91e3
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 3dc67bc2f25bba14df0e3ce6859bb8bc9094871c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c5cecfdf822352d22713985d84cdd7025d0665c8
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-convert-a-string-to-a-number-c-programming-guide"></a>Porady: konwertowanie ciągu na liczbę (Przewodnik programowania w języku C#)
 Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/string.md) na liczbę za pomocą metod w <xref:System.Convert> klasy lub przy użyciu `TryParse` znaleziono metody na różne typy liczbowe (int, long, float, itp.).  
@@ -27,7 +28,7 @@ Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/str
  Można użyć `Parse` lub `TryParse` metody na typ liczbowy oczekiwany ciąg zawiera, takich jak <xref:System.Int32?displayProperty=nameWithType> typu.  <xref:System.Convert.ToUInt32%2A?displayProperty=nameWithType> Używa metody <xref:System.Int32.Parse%2A> wewnętrznie.  Jeśli ciąg nie jest prawidłowym formatem `Parse` zgłasza wyjątek `TryParse` zwraca [false](../../../csharp/language-reference/keywords/false.md).  
   
 ## <a name="example"></a>Przykład  
- `Parse` i `TryParse` metody Ignoruj odstępy na początku i na końcu ciągu, ale wszystkie inne znaki muszą być znaki, które tworzą odpowiedni typ liczbowy (int, long, ulong, float, decimal, itp.).  Żadnych spacji w ciągu znaków, które tworzą numer spowodować wystąpienie błędu.  Na przykład można użyć `decimal.TryParse` można przeanalizować "10", "10.3", "10", ale nie można użyć tej metody można przeanalizować 10 "10 X", "1 0" (Uwaga miejsca), "10. 3" (Uwaga miejsca), "10e1" (`float.TryParse` działa w tym miejscu) i tak dalej.  
+ `Parse` i `TryParse` metody Ignoruj biały znak na początku i na końcu ciągu, ale wszystkie inne znaki muszą być znaki, które tworzą odpowiedni typ liczbowy (int, long, ulong, float, decimal, itp.).  Wszelkie biały znak w ciągu znaków, które tworzą numer spowodować wystąpienie błędu.  Na przykład można użyć `decimal.TryParse` można przeanalizować "10", "10.3", "10", ale nie można użyć tej metody można przeanalizować 10 "10 X", "1 0" (Uwaga miejsca), "10. 3" (Uwaga miejsca), "10e1" (`float.TryParse` działa w tym miejscu) i tak dalej.  
   
  Poniższe przykłady pokazują zarówno zakończone powodzeniem i niepowodzeniem wywołania `Parse` i `TryParse`.  
   
@@ -60,5 +61,5 @@ Możesz przekonwertować [ciąg](../../../csharp/language-reference/keywords/str
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy](../../../csharp/programming-guide/types/index.md)  
- [Porady: Określanie, czy ciąg reprezentuje wartość numeryczną](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
+ [Instrukcje: określanie, czy ciąg reprezentuje wartość liczbową](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)  
  [Narzędzie formatowania programu .NET framework 4](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

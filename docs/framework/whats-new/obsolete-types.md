@@ -1,31 +1,33 @@
 ---
-title: "Przestarzałe typy w programie .NET Framework"
-ms.custom: 
+title: Przestarzałe typy w programie .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework 4.5, obsolete types
 - types, obsolete in .NET Framework 4.5
 - obsolete types [.NET Framework]
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
-caps.latest.revision: "41"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: f30b9e245ad38b0e861590e9b2ca3658a2b5e967
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>Przestarzałe typy w programie .NET Framework
-<a name="introduction"></a>W tabelach w tym artykule przedstawiono typy, które są nieaktualne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], uporządkowany według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałe typy i zalecanych rozwiązań alternatywnych w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementy Członkowskie również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).  
+<a name="introduction"></a> W tabelach w tym artykule przedstawiono typy, które są nieaktualne w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i [!INCLUDE[net_v46](../../../includes/net-v46-md.md)], uporządkowany według zestawu. Użyj następujących łączy, aby wyświetlić listę przestarzałe typy i zalecanych rozwiązań alternatywnych w każdym zestawie. Ponieważ te typy są nieaktualne, ich elementy Członkowskie również są nieaktualne. Aby uzyskać listę dodatkowych przestarzali członkowie w bibliotece klas programu .NET Framework, zobacz [Przestarzali członkowie](../../../docs/framework/whats-new/obsolete-members.md).  
   
 -   [Przestarzałe typy w zestawach systemu](#obsolete_types_in_system_assemblies)  
   
@@ -140,8 +142,8 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>.|  
 |<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|Zamiast nich należy używać słów kluczowych <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>.|  
-|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope>jest używana tylko dla zgodności przezroczystość .NET 2.0.|  
-|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute>jest używana tylko dla zgodności przezroczystość .NET 2.0. Użyj <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> zamiast tego.|  
+|<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> jest używana tylko dla zgodności przezroczystość .NET 2.0.|  
+|<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> jest używana tylko dla zgodności przezroczystość .NET 2.0. Użyj <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType> zamiast tego.|  
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|Ten typ jest przestarzałe i zostanie usunięta w przyszłej wersji programu .NET Framework.|  
 |<xref:System.Security.Policy.PermissionRequestEvidence?displayProperty=nameWithType>|Zabezpieczenia deklaracyjne poziomu zestawu jest przestarzały i nie jest wymuszana przez środowisko CLR domyślnie.|  
 |<xref:System.Security.Policy.UnionCodeGroup?displayProperty=nameWithType>|Ten typ jest przestarzałe i zostanie usunięta w przyszłej wersji programu .NET Framework.|  
@@ -149,7 +151,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="Core"></a>   
-### <a name="assembly-systemcoredll"></a>Zestaw: System.Core.dll  
+### <a name="assembly-systemcoredll"></a>Assembly: System.Core.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -158,35 +160,35 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="data"></a>   
-### <a name="assembly-systemdatadll"></a>Zestaw: System.Data.dll  
+### <a name="assembly-systemdatadll"></a>Assembly: System.Data.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute>jest przestarzała.|  
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes>jest przestarzała.|  
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> jest przestarzała.|  
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> jest przestarzała.|  
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator> Klasa zostanie usunięta w przyszłej wersji. Użyj <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType> w System.Design.dll.|  
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument> Klasa zostanie usunięta w przyszłej wersji.|  
   
  [Powrót do początku](#introduction)  
   
 <a name="oracleclient"></a>   
-### <a name="assembly-systemdataoracleclientdll"></a>Zestaw: System.Data.OracleClient.dll  
+### <a name="assembly-systemdataoracleclientdll"></a>Assembly: System.Data.OracleClient.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission>jest przestarzała.|  
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> jest przestarzała.|  
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> jest przestarzała.|  
   
  [Powrót do początku](#introduction)  
   
 <a name="design"></a>   
-### <a name="assembly-systemdesigndll"></a>Zestaw: System.Design.dll  
+### <a name="assembly-systemdesigndll"></a>Assembly: System.Design.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -223,7 +225,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="enterpriseservices"></a>   
-### <a name="assembly-systementerpriseservicesdll"></a>Zestaw: System.EnterpriseServices.dll  
+### <a name="assembly-systementerpriseservicesdll"></a>Assembly: System.EnterpriseServices.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -232,7 +234,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="net"></a>   
-### <a name="assembly-systemnetdll"></a>Zestaw: System.Net.dll  
+### <a name="assembly-systemnetdll"></a>Assembly: System.Net.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -249,7 +251,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="servicemodel"></a>   
-### <a name="assembly-systemservicemodeldll"></a>Zestaw: System.ServiceModel.dll  
+### <a name="assembly-systemservicemodeldll"></a>Assembly: System.ServiceModel.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -265,7 +267,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="web"></a>   
-### <a name="assembly-systemwebdll"></a>Zestaw: System.Web.dll  
+### <a name="assembly-systemwebdll"></a>Assembly: System.Web.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -286,7 +288,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="mobile"></a>   
-### <a name="assembly-systemwebmobiledll"></a>Zestaw: System.Web.Mobile.dll  
+### <a name="assembly-systemwebmobiledll"></a>Assembly: System.Web.Mobile.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -486,7 +488,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="workflow_activities"></a>   
-### <a name="assembly-systemworkflowactivitiesdll"></a>Zestaw: System.Workflow.Activities.dll  
+### <a name="assembly-systemworkflowactivitiesdll"></a>Assembly: System.Workflow.Activities.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -499,13 +501,13 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="workflow_componentmodel"></a>   
-### <a name="assembly-systemworkflowcomponentmodeldll"></a>Zestaw: System.Workflow.ComponentModel.dll  
+### <a name="assembly-systemworkflowcomponentmodeldll"></a>Assembly: System.Workflow.ComponentModel.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
-|Wszystkie typy w <xref:System.Workflow.ComponentModel> przestrzeni nazw poza <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> i<xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
-|Wszystkie typy w <xref:System.Workflow.ComponentModel.Compiler> przestrzeni nazw poza <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> i<xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
-|Wszystkie typy w <xref:System.Workflow.ComponentModel.Design> przestrzeni nazw z wyjątkiem<xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
+|Wszystkie typy w <xref:System.Workflow.ComponentModel> przestrzeni nazw poza <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> i <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
+|Wszystkie typy w <xref:System.Workflow.ComponentModel.Compiler> przestrzeni nazw poza <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> i <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
+|Wszystkie typy w <xref:System.Workflow.ComponentModel.Design> przestrzeni nazw z wyjątkiem <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
@@ -517,7 +519,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="workflow_runtime"></a>   
-### <a name="assembly-systemworkflowruntimedll"></a>Zestaw: System.Workflow.Runtime.dll  
+### <a name="assembly-systemworkflowruntimedll"></a>Assembly: System.Workflow.Runtime.dll  
   
 |Typ|Komunikat|  
 |----------|-------------| 
@@ -525,14 +527,14 @@ ms.lasthandoff: 12/22/2017
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br />Typy Workflow Foundation 3.0 są przestarzałe. Zamiast tego należy użyć typów Workflow 4.0 z <xref:System.Activities>.\*.|   
 |Wszystkie typy w <xref:System.Workflow.Runtime> przestrzeni nazw|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
 |Wszystkie typy w <xref:System.Workflow.Runtime.Configuration> przestrzeni nazw|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
-|Wszystkie typy w <xref:System.Workflow.Runtime.DebugEngine> przestrzeni nazw z wyjątkiem<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
-|Wszystkie typy w <xref:System.Workflow.Runtime.Hosting> przestrzeni nazw z wyjątkiem<xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
+|Wszystkie typy w <xref:System.Workflow.Runtime.DebugEngine> przestrzeni nazw z wyjątkiem <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
+|Wszystkie typy w <xref:System.Workflow.Runtime.Hosting> przestrzeni nazw z wyjątkiem <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
 |Wszystkie typy w <xref:System.Workflow.Runtime.Tracking> przestrzeni nazw|Najpierw jest przestarzała w programie .NET Framework 4.5.<br /><br /> System.Workflow. \* typy są przestarzałe. Zamiast tego użyj nowych typów z <xref:System.Activities>.\*.|  
   
  [Powrót do początku](#introduction)  
   
 <a name="workflowservices"></a>   
-### <a name="assembly-systemworkflowservicesdll"></a>Zestaw: System.WorkflowServices.dll  
+### <a name="assembly-systemworkflowservicesdll"></a>Assembly: System.WorkflowServices.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -561,7 +563,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="xaml"></a>   
-### <a name="assembly-systemxamldll"></a>Zestaw: System.Xaml.dll  
+### <a name="assembly-systemxamldll"></a>Assembly: System.Xaml.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -570,7 +572,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="xml"></a>   
-### <a name="assembly-systemxmldll"></a>Zestaw: System.Xml.dll  
+### <a name="assembly-systemxmldll"></a>Assembly: System.Xml.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -587,7 +589,7 @@ ms.lasthandoff: 12/22/2017
   
 |Typ|Komunikat|  
 |----------|-------------|  
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>jest przestarzała. Ten interfejs nie jest już używana.|  
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> jest przestarzała. Ten interfejs nie jest już używana.|  
   
  [Powrót do początku](#introduction)  
   
@@ -602,7 +604,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="Engine"></a>   
-### <a name="assembly-microsoftbuildenginedll"></a>Zestaw: Microsoft.Build.Engine.dll  
+### <a name="assembly-microsoftbuildenginedll"></a>Assembly: Microsoft.Build.Engine.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -612,7 +614,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="jscript"></a>   
-### <a name="assembly-microsoftjscriptdll"></a>Zestaw: Microsoft.JScript.dll  
+### <a name="assembly-microsoftjscriptdll"></a>Assembly: Microsoft.JScript.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -638,7 +640,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="VBCompat"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.dll  
+### <a name="assembly-microsoftvisualbasiccompatibilitydll"></a>Assembly: Microsoft.VisualBasic.Compatibility.dll  
   Aby uzyskać informacje na temat migracji z programu Visual Basic 6, zobacz [Visual Basic 6.0 Resource Center](https://msdn.microsoft.com/library/windows/desktop/ms788229).
 |Typ|Komunikat|  
 |----------|-------------|  
@@ -713,7 +715,7 @@ ms.lasthandoff: 12/22/2017
  [Powrót do początku](#introduction)  
   
 <a name="VBCompatData"></a>   
-### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Zestaw: Microsoft.VisualBasic.Compatibility.Data.dll  
+### <a name="assembly-microsoftvisualbasiccompatibilitydatadll"></a>Assembly: Microsoft.VisualBasic.Compatibility.Data.dll  
   
 |Typ|Komunikat|  
 |----------|-------------|  

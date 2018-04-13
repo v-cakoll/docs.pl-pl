@@ -5,36 +5,38 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: ba517369-a034-4f8e-a2c4-66517716062b
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: e36019cd6d010e25292fa50ed3bf795dfca15f73
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 25355acfd7bc82ccff33f68a690f3f02d1235438
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="ltservicesecurityauditgt"></a>&lt;serviceSecurityAudit&gt;
 Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podczas operacji usługi.  
   
- \<System. ServiceModel >  
+ \<system.ServiceModel>  
 \<zachowania >  
-\<serviceBehaviors >  
-\<zachowanie >  
-\<serviceSecurityAudit >  
+\<serviceBehaviors>  
+\<behavior>  
+\<serviceSecurityAudit>  
   
 ## <a name="syntax"></a>Składnia  
   
 ```xml  
 <serviceSecurityAudit   
    auditLogLocation="Default/Application/Security"  
-   messageAuthenticationAuditLevel= None/Success/Failure/SuccessAndFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessAndFailure"  
+   messageAuthenticationAuditLevel= None/Success/Failure/SuccessOrFailure"   serviceAuthorizationAuditLevel="None/Success/Failure/SuccessOrFailure"  
    suppressAuditFailure="Boolean"  
 />  
 ```  
@@ -48,8 +50,8 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podcz
 |---------------|-----------------|  
 |AuditLogLocation|Określa lokalizację dziennika inspekcji. Prawidłowe wartości są następujące:<br /><br /> — Wartość domyślna: Zdarzenia zabezpieczeń są zapisywane w dzienniku aplikacji w systemie Windows XP, a w dzienniku zdarzeń systemu Windows Server 2003 i Windows Vista.<br />-Aplikacji: Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń aplikacji.<br />-Zabezpieczeń: Zdarzenia inspekcji są zapisywane w dzienniku zdarzeń zabezpieczeń.<br /><br /> Wartością domyślną jest domyślna. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLogLocation>.|  
 |SuppressAuditFailure|Wartość logiczna określająca zachowanie w sytuacji wystąpienia błędów zapisu do dziennika inspekcji.<br /><br /> Aplikacje powinny być powiadamiany o błędów zapisu do dziennika inspekcji. Jeśli aplikacja nie jest przeznaczony do obsługi błędów inspekcji, należy użyć tego atrybutu do pomijania błędów zapisu do dziennika inspekcji.<br /><br /> Jeśli ten atrybut jest `true`, wyjątki inne niż OutOfMemoryException, stackoverflowexception — ThreadAbortException i ArgumentException, które są wynikiem próby zapisania zdarzeń inspekcji są obsługiwane przez system i nie są propagowane do aplikacja. Jeśli ten atrybut jest `false`, wszystkie wyjątki, które są wynikiem próby zapisania zdarzeń inspekcji są przekazywane do aplikacji.<br /><br /> Wartość domyślna to `true`.|  
-|ServiceAuthorizationAuditLevel|Określa typy zdarzeń autoryzacji, które są rejestrowane w dzienniku inspekcji. Prawidłowe wartości są następujące:<br /><br /> -Brak: Inspekcja nie zdarzeń autoryzacji usługi jest przeprowadzana.<br />-SUKCES: Tylko usługi pomyślnej autoryzacji zdarzenia są poddawane inspekcji.<br />-Nie powiodła się: Tylko awarii usługi autoryzacji zdarzenia są poddawane inspekcji.<br />-SuccessAndFailure: Zarówno są poddawane inspekcji zdarzeń autoryzacji usługi sukces i niepowodzenie.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
-|MessageAuthenticationAuditLevel|Określa typ zarejestrowanych zdarzeń inspekcji uwierzytelniania wiadomości. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak zdarzeń inspekcji są generowane.<br />— Powodzenie: Rejestrowane są tylko zdarzenia (pełne sprawdzanie poprawności w tym Walidacja podpisu wiadomości, szyfrowania i weryfikacji tokenu) zabezpieczeń.<br />-Nie powiodła się: Tylko zdarzenia błędów są rejestrowane.<br />-SuccessAndFailure: Zarówno sukces i niepowodzenie zdarzenia są rejestrowane.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
+|serviceAuthorizationAuditLevel|Określa typy zdarzeń autoryzacji, które są rejestrowane w dzienniku inspekcji. Prawidłowe wartości są następujące:<br /><br /> -Brak: Inspekcja nie zdarzeń autoryzacji usługi jest przeprowadzana.<br />-SUKCES: Tylko usługi pomyślnej autoryzacji zdarzenia są poddawane inspekcji.<br />-Nie powiodła się: Tylko awarii usługi autoryzacji zdarzenia są poddawane inspekcji.<br />-SuccessOrFailure: Zarówno są poddawane inspekcji zdarzeń autoryzacji usługi sukces i niepowodzenie.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
+|messageAuthenticationAuditLevel|Określa typ zarejestrowanych zdarzeń inspekcji uwierzytelniania wiadomości. Prawidłowe wartości są następujące:<br /><br /> -Brak: Brak zdarzeń inspekcji są generowane.<br />— Powodzenie: Rejestrowane są tylko zdarzenia (pełne sprawdzanie poprawności w tym Walidacja podpisu wiadomości, szyfrowania i weryfikacji tokenu) zabezpieczeń.<br />-Nie powiodła się: Tylko zdarzenia błędów są rejestrowane.<br />-SuccessOrFailure: Zarówno sukces i niepowodzenie zdarzenia są rejestrowane.<br /><br /> Wartość domyślna to Brak. Aby uzyskać więcej informacji, zobacz <xref:System.ServiceModel.AuditLevel>.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
  Brak.  
@@ -58,7 +60,7 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podcz
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<zachowanie >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
+|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|Określa zachowanie elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
  Ten element Wyświetl służy do inspekcji [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] zdarzeń uwierzytelniania. Po włączeniu inspekcji można przeprowadzać inspekcję pomyślnym lub niepomyślnym uwierzytelniania prób (albo obu). Zdarzenia są zapisywane do jednej z trzech dzienniki zdarzeń: aplikacji, zabezpieczeń lub domyślnego dziennika dla wersji systemu operacyjnego. Dzienniki zdarzeń wszystkich można wyświetlić za pomocą Podglądu zdarzeń systemu Windows.  
@@ -71,7 +73,7 @@ Określa ustawienia, które włączają inspekcję zdarzeń zabezpieczenia podcz
   
  Zdarzeń inspekcji uwierzytelniania wiadomości obejmuje czy komunikat został zmodyfikowany, czy wiadomość utracił ważność i określa, czy klient może uwierzytelnienia w usłudze. Zawierają one informacje o czy uwierzytelnianie zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta i punktu końcowego wiadomość została wysłana do wraz z akcję skojarzoną z komunikatem.  
   
- Zdarzenia inspekcji autoryzacji usługi obejmują decyzję dotyczącą autoryzacji przez Menedżera autoryzacji usługi. Zapewniają informacji na temat tego, czy autoryzacji powiodło się z nie powiodło się wraz z tożsamością klienta do akcję skojarzoną z komunikatem identyfikator kontekst autoryzacji, który został wygenerowany na podstawie wysłano wiadomość punktu końcowego Komunikat przychodzący i typ zgłaszającego decyzji dostępu Menedżera autoryzacji.  
+ Zdarzenia inspekcji autoryzacji usługi obejmują decyzję dotyczącą autoryzacji przez Menedżera autoryzacji usługi. Zawierają informacje o czy autoryzacji zakończyło się pomyślnie lub nie powiodło się wraz z tożsamością klienta, punkt końcowy wiadomość została wysłana do, akcję skojarzoną z komunikatem identyfikator kontekst autoryzacji, który został wygenerowany na podstawie Komunikat przychodzący i typ zgłaszającego decyzji dostępu Menedżera autoryzacji.  
   
 ## <a name="example"></a>Przykład  
   

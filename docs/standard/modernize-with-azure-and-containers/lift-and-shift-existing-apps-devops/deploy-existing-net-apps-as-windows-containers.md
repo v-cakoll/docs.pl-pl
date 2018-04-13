@@ -4,20 +4,21 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f9a30605313c06542fabf9689f700ed726445f57
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: bab6e275c93d2cedddf010ab20f98cb8392fa9fa
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Wdrażanie istniejących aplikacji .NET jako kontenery systemu Windows
 
 Wdrożenia, które są oparte na kontenery systemu Windows mają zastosowanie do aplikacji zoptymalizowanych pod kątem chmury, chmury native oraz aplikacje gotowe do chmury DevOps.
 
-W tym przewodniku, a w poniższych sekcjach, możemy skupić się na używanie kontenerów systemu Windows dla *gotowe DevOps chmury* aplikacji, gdy Podnieś i przesunięcia istniejących aplikacji .NET.
+W tym przewodniku, jak i w poniższych sekcjach koncentruje się na używanie kontenerów systemu Windows dla *gotowe DevOps chmury* aplikacji, gdy Podnieś i przesunięcia istniejących aplikacji .NET.
 
 ## <a name="what-are-containers-linux-or-windows"></a>Co to są kontenerami? (Linux lub Windows)
 
@@ -41,7 +42,7 @@ W kontenerach Windows pełni jest zautomatyzowany proces tworzenia pakietów apl
 
 Wiele organizacji są containerizing istniejące aplikacje wbudowanymi z następujących powodów:
 
--   **Zwolnij elastyczność za pośrednictwem ulepszone wdrażanie**. Kontenery oferują kontrakt między i spójne wdrażanie. Korzystając z kontenerów, nie będzie słyszysz deweloperzy powiedzieć, "Działa na komputerze, dlaczego nie w środowisku produkcyjnym?" Można po prostu mówią, "Jest uruchamiana jako kontener, więc będą uruchamiane w środowisku produkcyjnym." Opakowanej aplikacji ze wszystkimi zależnościami, można wykonać w dowolnym środowisku obsługiwanych na podstawie kontenera. Zostanie on uruchomiony sposób zamierzano uruchamiane w wszystkich celów wdrożenia (deweloperów, pytań i odpowiedzi, przemieszczania i produkcji). Kontenery wyeliminować większość frictions łączącymi się z jednego etapu do drugiego, co znacznie zwiększa wdrożenia, i można wysłać szybciej.
+-   **Zwolnij elastyczność za pośrednictwem ulepszone wdrażanie**. Kontenery oferują kontrakt między i spójne wdrażanie. Korzystając z kontenerów, nie będzie słyszysz deweloperzy powiedzieć, "Działa na komputerze, dlaczego nie w środowisku produkcyjnym?" Można po prostu mówią, "Jest uruchamiana jako kontener, więc zostanie uruchomiony w środowisku produkcyjnym." Opakowanej aplikacji ze wszystkimi zależnościami, można wykonać w dowolnym środowisku obsługiwanych na podstawie kontenera. Zostanie on uruchomiony sposób zamierzano uruchamiane w wszystkich celów wdrożenia (deweloperów, pytań i odpowiedzi, przemieszczania i produkcji). Kontenery wyeliminować większość frictions łączącymi się z jednego etapu do drugiego, co znacznie zwiększa wdrożenia, i można wysłać szybciej.
 
 -   **Obniżenie kosztów**. Kontenery prowadzić do obniżenia kosztów, albo poprzez konsolidacji i usunięcia istniejącego sprzętu lub uruchomienie aplikacji w zwiększeniu na jednostkę sprzętu.
 
@@ -95,14 +96,14 @@ W scenariuszach migracji istniejące lub starsze aplikacje, które są oparte na
 
 Po dodaniu nazwy obrazu do pliku plik Dockerfile wersja systemu operacyjnego i można wybrać przy użyciu tagu, na przykład w przypadku obrazów kontenera systemu Windows opartych na programie .NET Framework:
 
-> | Tag | **Wersja systemu i** |
+> | **Tag** | **Wersja systemu i** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x w systemie Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x z dodatkowe dostosowanie ASP.NET, w systemie Windows Server Core |
 
 Dla platformy .NET Core (i platform dla systemu Linux i Windows) znaczniki będzie wyglądać następująco:
 
-> | Tag | **Wersja systemu i**
+> | **Tag** | **Wersja systemu i**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET Core 2.0 runtime-only on Linux |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 tylko do środowiska uruchomieniowego w systemie Windows Nano Server |

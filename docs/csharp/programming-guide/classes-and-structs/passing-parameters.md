@@ -2,7 +2,8 @@
 title: "Przekazywanie parametrów (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - parameters [C#], passing
@@ -11,17 +12,17 @@ helpviewer_keywords:
 - methods [C#], passing parameters
 - C# language, method parameters
 ms.assetid: a5c3003f-7441-4710-b8b1-c79de77e0b77
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d9e0e06d67f9da39c6b55f91e35d4a75b43353f3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 34746c83f54ecc2f6e8125bcff1464a89f853e09
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="passing-parameters-c-programming-guide"></a>Przekazywanie parametrów (Przewodnik programowania w języku C#)
-W języku C# argumenty mogą być przekazywane do parametrów według wartości lub według odwołania. Przekazywanie poprzez odwołanie umożliwia członkom funkcji, metody, właściwości, indeksatorów, operatory, a konstruktorów może zmienić wartości parametrów, a zmiana pozostają w środowisku wywołującego. Aby przekazać parametr przez odwołanie, użyj `ref` lub `out` — słowo kluczowe. Dla uproszczenia tylko `ref` — słowo kluczowe jest używany w przykładach w niniejszym temacie. Aby uzyskać więcej informacji na temat różnic między `ref` i `out`, zobacz [ref](../../../csharp/language-reference/keywords/ref.md), [limit](../../../csharp/language-reference/keywords/out.md), i [przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
+W języku C# argumenty mogą być przekazywane do parametrów według wartości lub według odwołania. Przekazywanie poprzez odwołanie umożliwia członkom funkcji, metody, właściwości, indeksatorów, operatory, a konstruktorów może zmienić wartości parametrów, a zmiana pozostają w środowisku wywołującego. Aby przekazać parametr przez odwołanie z zamiarem zmiany wartości, należy użyć `ref`, lub `out` — słowo kluczowe. Aby przekazać przez odwołanie z zamiarem unikając kopiowania, ale nie zmienia się wartość, użyj `in` modyfikator. Dla uproszczenia tylko `ref` — słowo kluczowe jest używany w przykładach w niniejszym temacie. Aby uzyskać więcej informacji na temat różnic między `in`, `ref`, i `out`, zobacz [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md), [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md), i [ Przekazywanie tablic za pomocą ref i out](../../../csharp/programming-guide/arrays/passing-arrays-using-ref-and-out.md).  
   
  Poniższy przykład przedstawia różnicę między odwołanie i wartości parametrów.  
   

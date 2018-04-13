@@ -2,17 +2,18 @@
 title: Iteratory (C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 6d4994ea57d9fd0df8dfca7ffa40c280499caee6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 48b09368ed0a84dc84793091b819ba7b4b6183f1
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="iterators-c"></a>Iteratory (C#)
 *Iterator* może służyć do kroków opisanych w kolekcji, takie jak listy i stałych.  
@@ -65,7 +66,7 @@ public static System.Collections.IEnumerable SomeNumbers()
 > [!NOTE]
 >  Wszystkie przykłady w tym temacie, z wyjątkiem przykład prostego iteratora, obejmują [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy `System.Collections` i `System.Collections.Generic` przestrzeni nazw.  
   
-##  <a name="BKMK_SimpleIterator"></a>Prostego iteratora  
+##  <a name="BKMK_SimpleIterator"></a> Prostego iteratora  
  W poniższym przykładzie przedstawiono jeden `yield return` instrukcji, która znajduje się wewnątrz [dla](../../../csharp/language-reference/keywords/for.md) pętli. W `Main`, każdej iteracji `foreach` treść instrukcji tworzy wywołanie funkcji iteracyjnej, który przechodzi do następnego `yield return` instrukcji.  
   
 ```csharp  
@@ -93,7 +94,7 @@ public static System.Collections.Generic.IEnumerable<int>
 }  
 ```  
   
-##  <a name="BKMK_CollectionClass"></a>Tworzenie klasy kolekcji  
+##  <a name="BKMK_CollectionClass"></a> Tworzenie klasy kolekcji  
  W poniższym przykładzie `DaysOfTheWeek` klasa implementuje <xref:System.Collections.IEnumerable> interfejs, który wymaga <xref:System.Collections.IEnumerable.GetEnumerator%2A> metody. Kompilator niejawnie wywołuje `GetEnumerator` metody, która zwraca <xref:System.Collections.IEnumerator>.  
   
  `GetEnumerator` Metoda zwraca każdego jednego ciągu w czasie przy użyciu `yield return` instrukcji.  
@@ -222,7 +223,7 @@ public class Zoo : IEnumerable
 }  
 ```  
   
-##  <a name="BKMK_GenericList"></a>Przy użyciu Iteratory z listą ogólnych  
+##  <a name="BKMK_GenericList"></a> Przy użyciu Iteratory z listą ogólnych  
  W poniższym przykładzie `Stack(Of T)` implementuje klasy ogólnej <xref:System.Collections.Generic.IEnumerable%601> interfejs generyczny. `Push` Metody przypisuje wartości do tablicy typu `T`. <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> Metoda zwraca wartości w tablicy przy użyciu `yield return` instrukcji.  
   
  Oprócz ogólnego <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> metoda, inny niż ogólny <xref:System.Collections.IEnumerable.GetEnumerator%2A> metoda musi zostać wdrożona. Jest to spowodowane <xref:System.Collections.Generic.IEnumerable%601> dziedziczy <xref:System.Collections.IEnumerable>. Implementację nieogólnego różni się do ogólnego implementacji.  
@@ -339,16 +340,16 @@ public class Stack<T> : IEnumerable<T>
 }  
 ```  
   
-##  <a name="BKMK_SyntaxInformation"></a>Informacje o składni  
+##  <a name="BKMK_SyntaxInformation"></a> Informacje o składni  
  Iteratora może wystąpić jako metody lub `get` dostępu. Iterator nie może wystąpić w zdarzeń, konstruktora wystąpienia, Konstruktor statyczny lub finalizatora statycznych.  
   
  Niejawna konwersja musi istnieć od typ wyrażenia w `yield return` instrukcji, aby zwracany typ iteratora.  
   
- W języku C#, metody iteracyjne nie mogą zawierać `ref` lub `out` parametrów.  
+ W języku C#, metody iteracyjne nie mogą zawierać `in`, `ref`, lub `out` parametrów.  
   
  W języku C# "yield" nie jest słowem zastrzeżonym i ma specjalne znaczenie tylko wtedy, gdy jest używana przed `return` lub `break` — słowo kluczowe.  
   
-##  <a name="BKMK_Technical"></a>Implementacja techniczna  
+##  <a name="BKMK_Technical"></a> Implementacja techniczna  
  Mimo że pisania iteratora jako metoda kompilator tłumaczy go na zagnieżdżona klasa oznacza to, w efekcie automatu stanów. Ta klasa przechowuje informacje o pozycja iteratora, jak długo `foreach` nadal pętli w kodzie klienta.  
   
  Aby zobaczyć, co oznacza kompilatora, narzędzie Ildasm.exe służy do wyświetlania kod języka pośredniego firmy Microsoft, który jest generowany dla metody iterator.  
@@ -361,7 +362,7 @@ public class Stack<T> : IEnumerable<T>
   
  Aby uzyskać dodatkowe informacje, zobacz [specyfikacji języka C#](../../../csharp/language-reference/language-specification/index.md).  
   
-##  <a name="BKMK_UseOfIterators"></a>Użyj Iteratory  
+##  <a name="BKMK_UseOfIterators"></a> Użyj Iteratory  
  Iteratory umożliwiają zachować prostotę `foreach` pętli, gdy musisz użyć złożonego kodu do wypełniania kolejność listy. Może to być przydatne, jeśli chcesz wykonać następujące czynności:  
   
 -   Zmodyfikuj kolejność listy po pierwszym `foreach` iteracji pętli.  
@@ -373,7 +374,7 @@ public class Stack<T> : IEnumerable<T>
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Collections.Generic>  
  <xref:System.Collections.Generic.IEnumerable%601>  
- [Instrukcja foreach w](../../../csharp/language-reference/keywords/foreach-in.md)  
- [YIELD](../../../csharp/language-reference/keywords/yield.md)  
+ [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)  
+ [yield](../../../csharp/language-reference/keywords/yield.md)  
  [Używanie instrukcji foreach z tablicami](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
  [Typy ogólne](../../../csharp/programming-guide/generics/index.md)

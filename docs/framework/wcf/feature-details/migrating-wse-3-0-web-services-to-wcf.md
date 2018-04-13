@@ -1,24 +1,26 @@
 ---
-title: "Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF"
-ms.custom: 
+title: Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-caps.latest.revision: "16"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a7e7187eb6ed444ba2c28aa301ce4b3b16129030
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>Migrowanie usług sieci Web programu WSE 3.0 do usługi WCF
 Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obejmują lepszą wydajność i obsługę dodatkowych modułów transportu, scenariusze dodatkowe zabezpieczenia i WS-* specyfikacji. Usługi sieci Web, która jest migrowana z programu WSE 3.0 do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] może wystąpić do poprawy wydajności 200 – 400%. Aby uzyskać więcej informacji o transportu obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [Wybieranie transportu](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md). Aby uzyskać listę scenariuszy obsługiwanych przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [typowe scenariusze zabezpieczeń](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md). Lista specyfikacji, które są obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], zobacz [przewodnik dotyczący współpracy protokołów usług sieci Web](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md).  
@@ -36,7 +38,7 @@ Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../
 ## <a name="security"></a>Zabezpieczenia  
   
 ### <a name="wse-30-web-services-that-are-secured-using-a-policy-file"></a>Usługi sieci Web programu WSE 3.0, które są chronione przy użyciu pliku zasad  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]usługi można użyć pliku konfiguracji do zabezpieczania usługi i mechanizmu jest podobny do pliku zasad programu WSE 3.0. W WSE 3.0 zabezpieczania usługi sieci Web przy użyciu pliku zasad Użyj potwierdzenia zabezpieczeń gotowe lub potwierdzenia zasad niestandardowych. Potwierdzenia zabezpieczeń gotowe ściśle mapowania na tryb uwierzytelniania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementu powiązania zabezpieczeń. Są nie tylko [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryby uwierzytelniania i zapewnienia bezpieczeństwa gotowe WSE 3.0 taką samą nazwę lub podobnie ich zabezpieczonych wiadomości przy użyciu takich samych typach poświadczeń. Na przykład `usernameForCertificate` mapuje potwierdzenia zabezpieczeń gotowe WSE 3.0 `UsernameForCertificate` tryb uwierzytelniania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W poniższych przykładach kodu pokazano sposób minimalnego zasad, które korzystają `usernameForCertificate` mapuje potwierdzenia zabezpieczeń gotowe WSE 3.0 `UsernameForCertificate` tryb uwierzytelniania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do niestandardowego powiązania.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi można użyć pliku konfiguracji do zabezpieczania usługi i mechanizmu jest podobny do pliku zasad programu WSE 3.0. W WSE 3.0 zabezpieczania usługi sieci Web przy użyciu pliku zasad Użyj potwierdzenia zabezpieczeń gotowe lub potwierdzenia zasad niestandardowych. Potwierdzenia zabezpieczeń gotowe ściśle mapowania na tryb uwierzytelniania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] elementu powiązania zabezpieczeń. Są nie tylko [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryby uwierzytelniania i zapewnienia bezpieczeństwa gotowe WSE 3.0 taką samą nazwę lub podobnie ich zabezpieczonych wiadomości przy użyciu takich samych typach poświadczeń. Na przykład `usernameForCertificate` mapuje potwierdzenia zabezpieczeń gotowe WSE 3.0 `UsernameForCertificate` tryb uwierzytelniania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. W poniższych przykładach kodu pokazano sposób minimalnego zasad, które korzystają `usernameForCertificate` mapuje potwierdzenia zabezpieczeń gotowe WSE 3.0 `UsernameForCertificate` tryb uwierzytelniania w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] do niestandardowego powiązania.  
   
  **WSE 3.0**  
   
@@ -49,7 +51,7 @@ Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../
 </policies>  
 ```  
   
- **USŁUGI WCF**  
+ **WCF**  
   
 ```xml  
 <customBinding>  
@@ -69,9 +71,9 @@ Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../
 |----------------------------------------|--------------------------------------|  
 |\<usernameOverTransportSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UserNameOverTransport" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate10Security / >|`<customBinding>   <binding name="MyBinding">     <security messageSecurityVersion="WSSecurity10WSTrustFebruary2005WSSecureConversationFebruary2005WSSecurityPolicy11BasicSecurityProfile10" authenticationMode="MutualCertificate" />     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<usernameForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<anonymousForCertificateSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
-|\<kerberosSecurity / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<usernameForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="UsernameForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<anonymousForCertificateSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="AnonymousForCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
+|\<kerberosSecurity />|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="Kerberos"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
 |\<mutualCertificate11Security / >|`<customBinding>   <binding name="MyBinding">     <security authenticationMode="MutualCertificate"/>     <textMessageEncoding messageVersion="Soap12WSAddressingAugust2004" />   </binding> </customBinding>`|  
   
  Aby uzyskać więcej informacji o tworzeniu powiązań niestandardowych w programie WCF, zobacz [niestandardowego powiązania](../../../../docs/framework/wcf/extending/custom-bindings.md).  
@@ -82,7 +84,7 @@ Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../
 ### <a name="wse-30-custom-policy-assertion"></a>WSE 3.0 zasad niestandardowych asercji  
  W WSE 3.0 istnieją dwa typy potwierdzeń niestandardowych zasad: te, które zabezpieczenia wiadomości protokołu SOAP i tych, które nie zabezpieczyć komunikatu protokołu SOAP. Potwierdzeń zasad, które Zabezpieczanie komunikatów SOAP pochodzi od WSE 3.0 `SecurityPolicyAssertion` klasy i pojęciach odpowiednik w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest <xref:System.ServiceModel.Channels.SecurityBindingElement> klasy.  
   
- Istotne należy pamiętać, jest to podzbiór potwierdzeń zabezpieczeń gotowe WSE 3.0 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryby uwierzytelniania. Jeśli utworzono potwierdzenia zasad niestandardowych w WSE 3.0, może być równoważny [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryb uwierzytelniania. Na przykład programu WSE 3.0 nie zapewnia CertificateOverTransport potwierdzenia zabezpieczeń, który jest odpowiednikiem `UsernameOverTransport` potwierdzenia zabezpieczeń gotowe, ale używa certyfikatu X.509 na potrzeby uwierzytelniania klienta. Jeśli zdefiniowano własne potwierdzenia zasad niestandardowych, w tym scenariuszu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawia, że migracja jest proste. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Definiuje tryb uwierzytelniania dla tego scenariusza, dzięki czemu można korzystać statycznych uwierzytelniania trybu metody pomocnicze, aby skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
+ Istotne należy pamiętać, jest to podzbiór potwierdzeń zabezpieczeń gotowe WSE 3.0 [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryby uwierzytelniania. Jeśli utworzono potwierdzenia zasad niestandardowych w WSE 3.0, może być równoważny [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryb uwierzytelniania. Na przykład programu WSE 3.0 nie zapewnia CertificateOverTransport potwierdzenia zabezpieczeń, który jest odpowiednikiem `UsernameOverTransport` potwierdzenia zabezpieczeń gotowe, ale używa certyfikatu X.509 na potrzeby uwierzytelniania klienta. Jeśli zdefiniowano własne potwierdzenia zasad niestandardowych, w tym scenariuszu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sprawia, że migracja jest proste. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Definiuje tryb uwierzytelniania dla tego scenariusza, dzięki czemu można korzystać statycznych uwierzytelniania trybu metody pomocnicze, aby skonfigurować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] <xref:System.ServiceModel.Channels.SecurityBindingElement>.  
   
  Gdy nie ma [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] tryb uwierzytelniania, który jest odpowiednikiem potwierdzenia zasad niestandardowych, które zabezpiecza wiadomości SOAP wyprowadzenia klasy z <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>, <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> lub <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] klasy i określ równoważne powiązania element. Aby uzyskać więcej informacji, zobacz [porady: Tworzenie niestandardowego powiązania przy użyciu elementu SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md).  
   
@@ -108,7 +110,7 @@ Zalety Migrowanie usług sieci Web programu WSE 3.0 do [!INCLUDE[indigo1](../../
 </messaging>  
 ```  
   
- **USŁUGI WCF**  
+ **WCF**  
   
 ```xml  
 <customBinding>  

@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interop marshaling, blittable types
 - blittable types, interop marshaling
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 10e9f4be3d02ac24c70c4a370ed96ff0dada130a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c61fe689a2a708b10fdf21e3638b1fc6ff117d25
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="blittable-and-non-blittable-types"></a>Typy kopiowalne i niekopiowalne
 Większość typów danych ma reprezentacji w postaci typowych w pamięci zarządzane i niezarządzane i nie wymagają specjalnej obsługi przez organizatora międzyoperacyjnego. Te typy są nazywane *typy kopiowalne* ponieważ one nie wymagają konwersji, gdy są one przekazywane między zarządzanych i niezarządzanych kodu.  
@@ -58,7 +60,7 @@ Większość typów danych ma reprezentacji w postaci typowych w pamięci zarzą
   
 -   Tablice jednowymiarowe typy danych kopiowalnych, takich jak tablica liczb całkowitych. Typ zawierający tablicę zmiennych typów danych kopiowalnych nie jest jednak sam danych kopiowalnych.  
   
--   Sformatowana wartość typy, które zawierają typy kopiowalne tylko (i klasy, jeśli są one organizowane jako typy sformatowany). Aby uzyskać więcej informacji na temat typów sformatowana wartość zobacz [domyślny Marshaling dla typów wartości](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a).  
+-   Sformatowana wartość typy, które zawierają typy kopiowalne tylko (i klasy, jeśli są one organizowane jako typy sformatowany). Aby uzyskać więcej informacji na temat typów sformatowana wartość zobacz [domyślny Marshaling dla typów wartości](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100)).  
   
  Odwołania do obiektów nie są danych kopiowalnych. W tym tablicę odwołania do obiektów, które są kopiowalne samodzielnie. Na przykład można zdefiniować struktury, która jest możliwość kopiowania, ale nie można zdefiniować typu danych kopiowalnych, który zawiera tablicę odwołania do tych konstrukcji.  
   
@@ -66,18 +68,18 @@ Większość typów danych ma reprezentacji w postaci typowych w pamięci zarzą
   
  Niektóre typy zarządzanych danych wymagają różnych reprezentacji w środowisku niezarządzane. Te typy danych niekopiowalnych należy przekonwertować do formularza, które mogą być przekazywane. Na przykład ciągi zarządzane są niekopiowalne, ponieważ muszą zostać przekonwertowane na obiektów string, zanim one mogą być przekazywane.  
   
- W poniższej tabeli wymieniono niekopiowalne z <xref:System> przestrzeni nazw. [Obiekty delegowane](http://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2), struktury danych, które odwołują się do metody statycznej lub do wystąpienia klasy, które są również są niekopiowalne.  
+ W poniższej tabeli wymieniono niekopiowalne z <xref:System> przestrzeni nazw. [Obiekty delegowane](https://msdn.microsoft.com/library/d176ee76-f982-494b-b03d-92e4118896e2(v=vs.100)), struktury danych, które odwołują się do metody statycznej lub do wystąpienia klasy, które są również są niekopiowalne.  
   
 |Typ danych kopiowalnych inne niż|Opis|  
 |-------------------------|-----------------|  
 |[System.Array](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Konwertuje tablicę stylu języka C lub `SAFEARRAY`.|  
-|[System.Boolean](http://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9)|Konwertuje wartość 1, 2 lub 4-bajtowych wartości z `true` jako 1 lub -1.|  
-|[System.Char](http://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb)|Konwertuje znak Unicode lub ANSI.|  
-|[System.Class](http://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6)|Konwertuje interfejsu klasy.|  
+|[System.Boolean](https://msdn.microsoft.com/library/d4c00537-70f7-4ca6-8197-bfc1ec037ff9(v=vs.100))|Konwertuje wartość 1, 2 lub 4-bajtowych wartości z `true` jako 1 lub -1.|  
+|[System.Char](https://msdn.microsoft.com/library/cecc87c1-075e-4cde-aa56-33d189f66feb(v=vs.100))|Konwertuje znak Unicode lub ANSI.|  
+|[System.Class](https://msdn.microsoft.com/library/fe334af5-0123-43d8-be84-26f6f023ddb6(v=vs.100))|Konwertuje interfejsu klasy.|  
 |[System.Object](../../../docs/framework/interop/default-marshaling-for-objects.md)|Konwertuje wariant lub interfejs.|  
 |[System.Mdarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Konwertuje tablicę stylu języka C lub `SAFEARRAY`.|  
 |[System.String](../../../docs/framework/interop/default-marshaling-for-strings.md)|Konwertuje ciąg przerywanie w odwołanie o wartości null lub BSTR.|  
-|[System.Valuetype](http://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a)|Konwertuje struktury z układem stałym pamięci.|  
+|[System.Valuetype](https://msdn.microsoft.com/library/4d9a876c-e05a-40ba-bd85-bd22877f984a(v=vs.100))|Konwertuje struktury z układem stałym pamięci.|  
 |[System.Szarray](../../../docs/framework/interop/default-marshaling-for-arrays.md)|Konwertuje tablicę stylu języka C lub `SAFEARRAY`.|  
   
  Typy klas i obiektów są obsługiwane tylko przez COM interop. Dla odpowiednich typów w [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)], C# i C++, zobacz [Przegląd biblioteki klas](../../../docs/standard/class-library-overview.md).  

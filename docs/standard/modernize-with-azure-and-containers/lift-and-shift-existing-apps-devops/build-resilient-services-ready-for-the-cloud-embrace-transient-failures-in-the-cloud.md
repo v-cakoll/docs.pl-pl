@@ -4,16 +4,17 @@ description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eef0197edb3aba555da63f1ea0b75726a826bd32
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Budowanie odpornej usługi gotowe do chmury: dążenie przejściowych błędów w chmurze 
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Budowanie odpornej usługi gotowe do chmury: dążenie przejściowych błędów w chmurze
 
 Odporność jest możliwość skutków błędów i kontynuować działanie. Odporność nie jest o unikanie błędów, ale akceptowania fakt, że wystąpią błędy i następnie odpowiada na żądania je w taki sposób, który pozwala uniknąć przestoju lub utraty danych. Celem odporności jest do zwrócenia aplikacji w pełni funkcjonalnej stan po awarii.
 

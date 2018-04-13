@@ -1,6 +1,6 @@
 ---
-title: "Przepływ pracy tworzenia aplikacji Docker"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker"
+title: Przepływ pracy tworzenia aplikacji Docker
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Przepływ pracy tworzenia aplikacji Docker
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8537b1db27f512ec0bfc2f23589efe8199ca3287
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 73d4ad82ef8c48f57aa4cceceedba862a2c9ffa4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="development-workflow-for-docker-apps"></a>Przepływ pracy tworzenia aplikacji Docker
 
@@ -107,7 +107,7 @@ Użycie oficjalnego repozytorium obrazów .NET z Centrum Docker z numerem wersji
 
 W poniższym przykładzie przedstawiono przykładowy plik Dockerfile kontenera platformy ASP.NET Core.
 
-```
+```Dockerfile
 FROM microsoft/aspnetcore:2.0
   
 ARG source
@@ -296,7 +296,7 @@ Jeśli aplikacja ma tylko jeden kontener, można uruchomić go przez wdrożenie 
 
 Kontener Docker przy użyciu rozwiązania docker, uruchom polecenie, tak jak rysunek 5 – 9, można uruchomić:
 
-```
+```console
   docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
@@ -351,7 +351,7 @@ Aby uzyskać [DC/OS](https://mesosphere.com/blog/2015/09/02/dcos-cli-command-lin
 
 ## <a name="step-6-test-your-docker-application-using-your-local-docker-host"></a>Krok 6. Testowanie aplikacji Docker za pomocą lokalnego hosta Docker
 
-Ten krok będą się różnić w zależności od czynności aplikacji. W prostą aplikację .NET Core w sieci Web, który jest wdrożony jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w plik Dockerfile mapuje kontenera do portu na hoście, który jest inny niż 80, obejmuje host pocztowy w adresie URL).
+Ten krok będą się różnić w zależności od czynności aplikacji. W prostą aplikację .NET Core w sieci Web, który jest wdrożony jako jeden kontener lub usługi uzyskać dostęp do usługi przez otwarcie przeglądarki na hoście Docker i przechodząc do tej lokacji, jak pokazano w rysunek 5-13. (Jeśli konfiguracji w plik Dockerfile mapuje kontenera do portu na hoście, który jest inny niż 80, m.in. port hosta w adresie URL).
 
 ![](./media/image18.png)
 
@@ -377,7 +377,7 @@ Jeśli tworzysz podejście Edytor/CLI trudniej jest debugowanie kontenerów i mo
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Debugowanie aplikacji w lokalnych kontenerze Docker**
+-   **Debugowanie aplikacji w kontenerze Docker lokalnego**
     [*https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh*](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
 -   **Steve Lasker. Tworzenie, debugowanie, wdrażanie aplikacji platformy ASP.NET Core przy użyciu rozwiązania Docker.** Wideo.
@@ -395,7 +395,7 @@ Ponadto należy wykonać krok 2 (Obsługa Docker dodawanie do projektów) tylko 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Steve Lasker. .NET — rozwój docker z programu Visual Studio 2017**
+-   **Steve Lasker. .NET — rozwój docker z programu Visual Studio 2017 r.**
     [*https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111*](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
 
 -   **Jeffrey T. Fritz. Umieść aplikacji .NET Core w kontenerze o nowe narzędzia Docker dla programu Visual Studio**
@@ -405,7 +405,7 @@ Ponadto należy wykonać krok 2 (Obsługa Docker dodawanie do projektów) tylko 
 
 [Kontenery systemu Windows](https://msdn.microsoft.com/en-us/virtualization/windowscontainers/about/about_overview) umożliwiają konwertowanie istniejących aplikacji systemu Windows na obrazy usługi Docker i wdrażać je z tego samego narzędzia jako rest ekosystemu Docker. Aby użyć kontenery systemu Windows, należy uruchomić polecenia programu PowerShell w plik Dockerfile, jak pokazano w poniższym przykładzie:
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
   
 LABEL Description="IIS" Vendor="Microsoft" Version="10"
@@ -417,7 +417,7 @@ CMD [ "ping", "localhost", "-t" ]
 
 W takim przypadku wiemy przy użyciu podstawowy obraz systemu Windows Server Core (ustawienie FROM) i instalacji usług IIS za pomocą polecenia programu PowerShell (ustawienie URUCHAMIANIA). W podobny sposób poleceń programu PowerShell można użyć również do skonfigurowania dodatkowych składników, takich jak ASP.NET 4.x, .NET 4.6 lub innego oprogramowania systemu Windows. Na przykład następujące polecenie w plik Dockerfile konfiguruje ASP.NET 4.5:
 
-```
+```Dockerfile
 RUN powershell add-windowsfeature web-asp-net45
 ```
 

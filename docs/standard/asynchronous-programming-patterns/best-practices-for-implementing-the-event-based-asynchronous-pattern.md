@@ -1,12 +1,12 @@
 ---
-title: "Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach"
-ms.custom: 
+title: Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,7 +18,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-caps.latest.revision: "8"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -26,10 +26,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 910edb8c79518f63e8b881b8eaecd69060fb6711
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>Najlepsze rozwiązania w zakresie implementacji wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach udostępnia efektywny sposób ujawniać asynchroniczne zachowanie w klasach ze zdarzeniem znanych i delegowanie semantyki. Do implementacji klienta wzorca asynchronicznego opartego na zdarzeniach, należy wykonać niektóre określone wymagania funkcjonalne. W poniższych sekcjach opisano wymagania i wskazówki, które należy rozważyć podczas implementowania klasę, która wykonuje asynchroniczny wzorzec oparty na zdarzeniach.  
@@ -132,9 +132,9 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 ### <a name="threading-and-contexts"></a>Wątki i konteksty  
  Do poprawnego działania klasy jest krytyczny, że obsługi zdarzeń klienta są wywoływane na właściwy wątku lub kontekst dla modelu danej aplikacji, w tym [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] i aplikacji formularzy systemu Windows. Aby zapewnić poprawne działanie asynchroniczne klasy w dowolnej aplikacji modelu znajdują się dwie klasy pomocy ważne: <xref:System.ComponentModel.AsyncOperation> i <xref:System.ComponentModel.AsyncOperationManager>.  
   
- <xref:System.ComponentModel.AsyncOperationManager>zawiera jedną metodę <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, która zwraca wartość <xref:System.ComponentModel.AsyncOperation>. Twoje *MethodName *** Async** wywołania metody <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> i klasy używa zwróconego <xref:System.ComponentModel.AsyncOperation> śledzić okres istnienia zadanie asynchroniczne.  
+ <xref:System.ComponentModel.AsyncOperationManager> zawiera jedną metodę <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A>, która zwraca wartość <xref:System.ComponentModel.AsyncOperation>. Twoje *MethodName *** Async** wywołania metody <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> i klasy używa zwróconego <xref:System.ComponentModel.AsyncOperation> śledzić okres istnienia zadanie asynchroniczne.  
   
- Aby zgłosić postęp, wyniki przyrostowych i uzupełniania do klienta, należy wywołać <xref:System.ComponentModel.AsyncOperation.Post%2A> i <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> metody <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation>jest odpowiedzialny za organizowanie wywołań obsługi zdarzeń klienckich do właściwego thread lub context.  
+ Aby zgłosić postęp, wyniki przyrostowych i uzupełniania do klienta, należy wywołać <xref:System.ComponentModel.AsyncOperation.Post%2A> i <xref:System.ComponentModel.AsyncOperation.OperationCompleted%2A> metody <xref:System.ComponentModel.AsyncOperation>. <xref:System.ComponentModel.AsyncOperation> jest odpowiedzialny za organizowanie wywołań obsługi zdarzeń klienckich do właściwego thread lub context.  
   
 > [!NOTE]
 >  Te reguły można ominąć, jeśli chcesz jawnie go przed zasady modelu aplikacji, ale nadal korzystać z innych zalety korzystania z wzorca asynchronicznego opartego na zdarzeniach. Można na przykład hiperwątkowe klasy działających w formularzach systemu Windows jako wolne. Tak długo, jak deweloperzy poznać domniemanych ograniczenia, można utworzyć klasę wolnych wątków. Aplikacje konsoli nie Synchronizuj wykonywanie <xref:System.ComponentModel.AsyncOperation.Post%2A> wywołania. Może to spowodować `ProgressChanged` zdarzenia, które mają zostać wywołane poza kolejnością. Jeśli chcesz mieć serializacji wykonywanie <xref:System.ComponentModel.AsyncOperation.Post%2A> wywołań, wdrożenia i zainstalować <xref:System.Threading.SynchronizationContext?displayProperty=nameWithType> klasy.  

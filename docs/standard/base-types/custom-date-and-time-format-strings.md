@@ -1,12 +1,8 @@
 ---
-title: "Niestandardowe ciągi formatujące datę i godzinę"
-ms.custom: 
+title: Niestandardowe ciągi formatujące datę i godzinę
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: "79"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 503f9d593235cc81c6e2ecf43b93abb2105e0adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
+ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość będącą wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [standardowa Data i godzina ciąg formatu](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) jest interpretowana jako niestandardowa data i godzina ciąg formatu.  
@@ -41,7 +37,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 > [!TIP]
 >  Możesz pobrać [formatowania narzędzie](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikacji, która umożliwia zastosowanie formatu ciągi do daty i godziny lub wartości liczbowe i wyświetla ciąg wyniku.  
   
-<a name="table"></a>W operacji formatowania, niestandardowe ciągi daty i godziny format może być używany z `ToString` metody wystąpienia datę i godzinę lub za pomocą metody, która obsługuje złożone formatowanie. W poniższym przykładzie pokazano oba te zastosowania.  
+<a name="table"></a> W operacji formatowania, niestandardowe ciągi daty i godziny format może być używany z `ToString` metody wystąpienia datę i godzinę lub za pomocą metody, która obsługuje złożone formatowanie. W poniższym przykładzie pokazano oba te zastosowania.  
   
  [!code-csharp[Formatting.DateAndTime.Custom#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandformatting1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Custom#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandformatting1.vb#17)]  
@@ -55,50 +51,50 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
   
 |Specyfikator formatu|Opis|Przykłady|  
 |----------------------|-----------------|--------------|  
-|„d”|Dzień miesiąca z zakresu od 1 do 31.<br /><br /> Więcej informacji: ["D" specyfikatora formatu niestandardowego](#dSpecifier).|2009-06-1 -> 01T13:45:30<br /><br /> 2009-06-15T13:45:30 -> 15|  
-|„dd”|Dzień miesiąca z zakresu od 01 do 31.<br /><br /> Więcej informacji: ["Dd" specyfikatora formatu niestandardowego](#ddSpecifier).|2009-06-01 -> 01T13:45:30<br /><br /> 2009-06-15T13:45:30 -> 15|  
+|„d”|Dzień miesiąca z zakresu od 1 do 31.<br /><br /> Więcej informacji: ["D" specyfikatora formatu niestandardowego](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -&GT; 15|  
+|„dd”|Dzień miesiąca z zakresu od 01 do 31.<br /><br /> Więcej informacji: ["Dd" specyfikatora formatu niestandardowego](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -&GT; 15|  
 |„ddd”|Skrócona nazwa dnia tygodnia.<br /><br /> Więcej informacji: ["Ddd" specyfikatora formatu niestandardowego](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> jednostki lun. (fr-FR)|  
 |„dddd”|Pełna nazwa dnia tygodnia.<br /><br /> Więcej informacji: ["Dddd" specyfikatora formatu niestandardowego](#ddddSpecifier).|2009-06-15T13:45:30 -> poniedziałek (en US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|  
-|„f”|Liczba dziesiątych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["F" specyfikatora formatu niestandardowego](#fSpecifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-0 -> 15T13:45:30.05|  
-|„ff”|Liczba setnych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ff" specyfikatora formatu niestandardowego](#ffSpecifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> 00|  
+|„f”|Liczba dziesiątych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["F" specyfikatora formatu niestandardowego](#fSpecifier).|2009-06-15T13:45:30.6170000 -&GT; 6<br /><br /> 2009-06-0 -&GT; 15T13:45:30.05|  
+|„ff”|Liczba setnych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ff" specyfikatora formatu niestandardowego](#ffSpecifier).|2009-06-15T13:45:30.6170000 -&GT; 61<br /><br /> 2009-06-15T13:45:30.0050000 -&GT; 00|  
 |„fff”|Liczba milisekund w wartości daty i godziny.<br /><br /> Więcej informacji: ["Fff" specyfikatora formatu niestandardowego](#fffSpecifier).|6/15/2009 13:45:30.617 -> 617<br /><br /> 6/15/2009 13:45:30.0005 -> 000|  
-|„ffff”|Liczba dziesięciotysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ffff" specyfikatora formatu niestandardowego](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -> 6175<br /><br /> 2009-06-0000 -> 15T13:45:30.0000500|  
-|„fffff”|Liczba stutysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Fffff" specyfikatora formatu niestandardowego](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|  
-|„ffffff”|Liczba milionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ffffff" specyfikatora formatu niestandardowego](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> 000000|  
-|„fffffff”|Liczba dziesięciomilionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Fffffff" specyfikatora formatu niestandardowego](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 0001150|  
-|„F”|Jeśli wartość jest różna od zera, liczba dziesiątych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu "F" Custom](#F_Specifier).|2009-06-15T13:45:30.6170000 -> 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (żadne dane wyjściowe)|  
-|„FF”|Jeśli wartość jest różna od zera, liczba setnych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#FF_Specifier).|2009-06-15T13:45:30.6170000 -> 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (żadne dane wyjściowe)|  
-|„FFF”|Jeśli wartość jest różna od zera, liczba milisekund w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFF"](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -> 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (żadne dane wyjściowe)|  
-|„FFFF”|Jeśli wartość jest różna od zera, liczba dziesięciotysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -> 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (żadne dane wyjściowe)|  
-|„FFFFF”|Jeśli wartość jest różna od zera, liczba stutysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFF"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -> 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (żadne dane wyjściowe)|  
-|„FFFFFF”|Jeśli wartość jest różna od zera, liczba milionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -> 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (żadne dane wyjściowe)|  
-|„FFFFFFF”|Jeśli wartość jest różna od zera, liczba dziesięciomilionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -> 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -> 000115|  
-|„g”, „gg”|Okres lub era.<br /><br /> Więcej informacji: ["g" lub "gg" specyfikatora formatu niestandardowego](#gSpecifier).|2009-06-15T13:45:30.6170000 -> R.|  
-|„h”|Godzina; używany jest zegar 12-godzinny (wartości od 1 do 12).<br /><br /> Więcej informacji: ["H" specyfikatora formatu niestandardowego](#hSpecifier).|2009-06-1 -> 15T01:45:30<br /><br /> 2009-06-1 -> 15T13:45:30|  
-|„hh”|Godzina; używany jest zegar 12-godzinny (wartości od 01 do 12).<br /><br /> Więcej informacji: ["Hh" specyfikatora formatu niestandardowego](#hhSpecifier).|2009-06-01 -> 15T01:45:30<br /><br /> 2009-06-01 -> 15T13:45:30|  
-|„H”|Godzina, 24-godzinnym z zakresu od 0 do 23.<br /><br /> Więcej informacji: [specyfikator formatu "H" Custom](#H_Specifier).|2009-06-1 -> 15T01:45:30<br /><br /> 2009-06-15T13:45:30 -> 13|  
-|„HH”|Godzina; używany jest zegar 24-godzinny (wartości od 00 do 23).<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "HH"](#HH_Specifier).|2009-06-01 -> 15T01:45:30<br /><br /> 2009-06-15T13:45:30 -> 13|  
-|„K”|Informacje o strefie czasowej.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "K"](#KSpecifier).|Z <xref:System.DateTime> wartości:<br /><br /> 2009-06-15T13:45:30, rodzaj nieokreślonych -><br /><br /> 2009-06-15T13:45:30, rodzaju Utc -> Z<br /><br /> 2009-06-15T13:45:30 rodzaj lokalne ->-07: 00 (zależy od ustawień komputera lokalnego)<br /><br /> Z <xref:System.DateTimeOffset> wartości:<br /><br /> 2009-06-15T01:45:30--07--> 07:00:00<br /><br /> 2009-06-15T08:45:30 + 00:00--> + 00:00|  
-|„m”|Minuta; wartości z zakresu od 0 do 59.<br /><br /> Więcej informacji: ["M" specyfikatora formatu niestandardowego](#mSpecifier).|2009-06-15T01:09:30 -> 9<br /><br /> 2009-06-29 -> 15T13:29:30|  
-|„mm”|Minuta; wartości z zakresu od 00 do 59.<br /><br /> Więcej informacji: ["Mm" specyfikatora formatu niestandardowego](#mmSpecifier).|2009-06-09 -> 15T01:09:30<br /><br /> 2009-06-45 -> 15T01:45:30|  
-|„M”|Miesiąc; wartości z zakresu od 1 do 12.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "M"](#M_Specifier).|2009-06-15T13:45:30 -> 6|  
-|„MM”|Miesiąc; wartości z zakresu od 01 do 12.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "MM"](#MM_Specifier).|2009-06-06 -> 15T13:45:30|  
+|„ffff”|Liczba dziesięciotysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ffff" specyfikatora formatu niestandardowego](#ffffSpecifier).|2009-06-15T13:45:30.6175000 -&GT; 6175<br /><br /> 2009-06-0000 -&GT; 15T13:45:30.0000500|  
+|„fffff”|Liczba stutysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Fffff" specyfikatora formatu niestandardowego](#fffffSpecifier).|2009-06-15T13:45:30.6175400 -&GT; 61754<br /><br /> 6/15/2009 13:45:30.000005 -> 00000|  
+|„ffffff”|Liczba milionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Ffffff" specyfikatora formatu niestandardowego](#ffffffSpecifier).|2009-06-15T13:45:30.6175420 -&GT; 617542<br /><br /> 2009-06-15T13:45:30.0000005 -&GT; 000000|  
+|„fffffff”|Liczba dziesięciomilionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["Fffffff" specyfikatora formatu niestandardowego](#fffffffSpecifier).|2009-06-15T13:45:30.6175425 -&GT; 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -&GT; 0001150|  
+|„F”|Jeśli wartość jest różna od zera, liczba dziesiątych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu "F" Custom](#F_Specifier).|2009-06-15T13:45:30.6170000 -&GT; 6<br /><br /> 2009-06-15T13:45:30.0500000 -> (żadne dane wyjściowe)|  
+|„FF”|Jeśli wartość jest różna od zera, liczba setnych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FF"](#FF_Specifier).|2009-06-15T13:45:30.6170000 -&GT; 61<br /><br /> 2009-06-15T13:45:30.0050000 -> (żadne dane wyjściowe)|  
+|„FFF”|Jeśli wartość jest różna od zera, liczba milisekund w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFF"](#FFF_Specifier).|2009-06-15T13:45:30.6170000 -&GT; 617<br /><br /> 2009-06-15T13:45:30.0005000 -> (żadne dane wyjściowe)|  
+|„FFFF”|Jeśli wartość jest różna od zera, liczba dziesięciotysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFF"](#FFFF_Specifier).|2009-06-15T13:45:30.5275000 -&GT; 5275<br /><br /> 2009-06-15T13:45:30.0000500 -> (żadne dane wyjściowe)|  
+|„FFFFF”|Jeśli wartość jest różna od zera, liczba stutysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFF"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -&GT; 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (żadne dane wyjściowe)|  
+|„FFFFFF”|Jeśli wartość jest różna od zera, liczba milionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -&GT; 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (żadne dane wyjściowe)|  
+|„FFFFFFF”|Jeśli wartość jest różna od zera, liczba dziesięciomilionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -&GT; 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -&GT; 000115|  
+|„g”, „gg”|Okres lub era.<br /><br /> Więcej informacji: ["g" lub "gg" specyfikatora formatu niestandardowego](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|  
+|„h”|Godzina; używany jest zegar 12-godzinny (wartości od 1 do 12).<br /><br /> Więcej informacji: ["H" specyfikatora formatu niestandardowego](#hSpecifier).|2009-06-1 -&GT; 15T01:45:30<br /><br /> 2009-06-1 -&GT; 15T13:45:30|  
+|„hh”|Godzina; używany jest zegar 12-godzinny (wartości od 01 do 12).<br /><br /> Więcej informacji: ["Hh" specyfikatora formatu niestandardowego](#hhSpecifier).|2009-06-01 -&GT; 15T01:45:30<br /><br /> 2009-06-01 -&GT; 15T13:45:30|  
+|„H”|Godzina, 24-godzinnym z zakresu od 0 do 23.<br /><br /> Więcej informacji: [specyfikator formatu "H" Custom](#H_Specifier).|2009-06-1 -&GT; 15T01:45:30<br /><br /> 2009-06-15T13:45:30 -&GT; 13|  
+|„HH”|Godzina; używany jest zegar 24-godzinny (wartości od 00 do 23).<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "HH"](#HH_Specifier).|2009-06-01 -&GT; 15T01:45:30<br /><br /> 2009-06-15T13:45:30 -&GT; 13|  
+|„K”|Informacje o strefie czasowej.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "K"](#KSpecifier).|Z <xref:System.DateTime> wartości:<br /><br /> 2009-06-15T13:45:30, rodzaj nieokreślonych -><br /><br /> 2009-06-15T13:45:30, rodzaju Utc -> Z<br /><br /> 2009-06-15T13:45:30 rodzaj lokalne ->-07: 00 (zależy od ustawień komputera lokalnego)<br /><br /> Z <xref:System.DateTimeOffset> wartości:<br /><br /> 2009-06-15T01:45:30--07--&GT; 07:00:00<br /><br /> 2009-06-15T08:45:30 + 00:00--&GT; + 00:00|  
+|„m”|Minuta; wartości z zakresu od 0 do 59.<br /><br /> Więcej informacji: ["M" specyfikatora formatu niestandardowego](#mSpecifier).|2009-06-15T01:09:30 -&GT; 9<br /><br /> 2009-06-29 -&GT; 15T13:29:30|  
+|„mm”|Minuta; wartości z zakresu od 00 do 59.<br /><br /> Więcej informacji: ["Mm" specyfikatora formatu niestandardowego](#mmSpecifier).|2009-06-09 -&GT; 15T01:09:30<br /><br /> 2009-06-45 -&GT; 15T01:45:30|  
+|„M”|Miesiąc; wartości z zakresu od 1 do 12.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "M"](#M_Specifier).|2009-06-15T13:45:30 -&GT; 6|  
+|„MM”|Miesiąc; wartości z zakresu od 01 do 12.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "MM"](#MM_Specifier).|2009-06-06 -&GT; 15T13:45:30|  
 |„MMM”|Skrócona nazwa miesiąca.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "MMM"](#MMM_Specifier).|2009-06-15T13:45:30 -> cze (en US)<br /><br /> 2009-06-15T13:45:30 -> juin (fr-FR)<br /><br /> 2009-06-cze (zu ZA) -> 15T13:45:30|  
-|„MMMM”|Pełna nazwa miesiąca.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "MMMM"](#MMMM_Specifier).|2009-06-15T13:45:30 -> czerwca (en US)<br /><br /> 2009-06-15T13:45:30 -> juni (da k)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu ZA)|  
-|„s”|Sekunda; wartości z zakresu od 0 do 59.<br /><br /> Więcej informacji: ["S" specyfikator formatu niestandardowego](#sSpecifier).|2009-06-15T13:45:09 -> 9|  
-|„ss”|Sekunda; wartości z zakresu od 00 do 59.<br /><br /> Więcej informacji: ["Ss" specyfikatora formatu niestandardowego](#ssSpecifier).|2009-06-09 -> 15T13:45:09|  
+|„MMMM”|Pełna nazwa miesiąca.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "MMMM"](#MMMM_Specifier).|2009-06-15T13:45:30 -> czerwca (en US)<br /><br /> 2009-06-15T13:45:30 -> juni (da-DK)<br /><br /> 2009-06-15T13:45:30 -> uJuni (zu-ZA)|  
+|„s”|Sekunda; wartości z zakresu od 0 do 59.<br /><br /> Więcej informacji: ["S" specyfikator formatu niestandardowego](#sSpecifier).|2009-06-15T13:45:09 -&GT; 9|  
+|„ss”|Sekunda; wartości z zakresu od 00 do 59.<br /><br /> Więcej informacji: ["Ss" specyfikatora formatu niestandardowego](#ssSpecifier).|2009-06-09 -&GT; 15T13:45:09|  
 |„t”|Pierwszy znak oznaczenia AM/PM.<br /><br /> Więcej informacji: ["T" specyfikatora formatu niestandardowego](#tSpecifier).|2009-06-15T13:45:30 -> P (en US)<br /><br /> 2009-06-15T13:45:30 -> 午 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|  
 |„tt”|Oznaczenie AM/PM.<br /><br /> Więcej informacji: ["Tt" specyfikatora formatu niestandardowego](#ttSpecifier).|2009-06-15T13:45:30 -> PM (en US)<br /><br /> 2009-06-15T13:45:30 -> 午後 (ja-JP)<br /><br /> 2009-06-15T13:45:30 -> (fr-FR)|  
-|„y”|Rok; wartości z zakresu od 0 do 99.<br /><br /> Więcej informacji: ["Y" specyfikatora formatu niestandardowego](#ySpecifier).|0001-01-1 -> 01T00:00:00<br /><br /> 0900-01-0 -> 01T00:00:00<br /><br /> 1900-01-0 -> 01T00:00:00<br /><br /> 2009-06-15T13:45:30 -> 9<br /><br /> 2019-06-19 -> 15T13:45:30|  
-|„yy”|Rok; wartości z zakresu od 00 do 99.<br /><br /> Więcej informacji: ["Yy" specyfikatora formatu niestandardowego](#yySpecifier).|0001-01-01 -> 01T00:00:00<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-19 -> 15T13:45:30|  
-|„yyy”|Rok; co najmniej trzy cyfry.<br /><br /> Więcej informacji: ["Yyy" specyfikatora formatu niestandardowego](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|  
-|„yyyy”|Rok jako liczba czterocyfrowa.<br /><br /> Więcej informacji: ["Yyyy" specyfikatora formatu niestandardowego](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -> 2009|  
-|„yyyyy”|Rok jako liczba pięciocyfrowa.<br /><br /> Więcej informacji: ["Yyyyy" specyfikatora formatu niestandardowego](#yyyyySpecifier).|0001-01-01T00:00:00 -> 00001<br /><br /> 2009-06-15T13:45:30 -> 02009|  
-|„z”|Przesunięcie godzinowe względem czasu UTC, bez zer wiodących.<br /><br /> Więcej informacji: ["Z" specyfikatora formatu niestandardowego](#zSpecifier).|2009-06-15T13:45:30-07:00 -> -7|  
-|„zz”|Przesunięcie godzinowe względem czasu UTC, z zerem wiodącym dla wartości jednocyfrowych.<br /><br /> Więcej informacji: ["Zz" specyfikatora formatu niestandardowego](#zzSpecifier).|2009-06-15T13:45:30-07:00 ->-07|  
-|„zzz”|Godzinowe i minutowe przesunięcie względem czasu UTC.<br /><br /> Więcej informacji: ["Zzz" specyfikatora formatu niestandardowego](#zzzSpecifier).|2009-06-15T13:45:30--07 -> 07:00:00|  
-|":"|Separator godziny.<br /><br /> Więcej informacji: [":" specyfikatora formatu niestandardowego](#timeSeparator).|2009-06-15T13:45:30 ->: (en US)<br /><br /> 2009-06-15T13:45:30 ->. (it-IT)<br /><br /> 2009-06-15T13:45:30 ->: (ja-JP)|  
-|"/"|Separator daty.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 ->. (tr-TR)|  
+|„y”|Rok; wartości z zakresu od 0 do 99.<br /><br /> Więcej informacji: ["Y" specyfikatora formatu niestandardowego](#ySpecifier).|0001-01-01T00:00:00 -> 1<br /><br /> 0900-01-01T00:00:00 -> 0<br /><br /> 1900-01-01T00:00:00 -> 0<br /><br /> 2009-06-15T13:45:30 -&GT; 9<br /><br /> 2019-06-19 -&GT; 15T13:45:30|  
+|„yy”|Rok; wartości z zakresu od 00 do 99.<br /><br /> Więcej informacji: ["Yy" specyfikatora formatu niestandardowego](#yySpecifier).|0001-01-01T00:00:00 -> 01<br /><br /> 0900-01-01T00:00:00 -> 00<br /><br /> 1900-01-01T00:00:00 -> 00<br /><br /> 2019-06-19 -&GT; 15T13:45:30|  
+|„yyy”|Rok; co najmniej trzy cyfry.<br /><br /> Więcej informacji: ["Yyy" specyfikatora formatu niestandardowego](#yyySpecifier).|0001-01-01T00:00:00 -> 001<br /><br /> 0900-01-01T00:00:00 -> 900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -&GT; 2009|  
+|„yyyy”|Rok jako liczba czterocyfrowa.<br /><br /> Więcej informacji: ["Yyyy" specyfikatora formatu niestandardowego](#yyyySpecifier).|0001-01-01T00:00:00 -> 0001<br /><br /> 0900-01-01T00:00:00 -> 0900<br /><br /> 1900-01-01T00:00:00 -> 1900<br /><br /> 2009-06-15T13:45:30 -&GT; 2009|  
+|„yyyyy”|Rok jako liczba pięciocyfrowa.<br /><br /> Więcej informacji: ["Yyyyy" specyfikatora formatu niestandardowego](#yyyyySpecifier).|0001-01-01T00:00:00 -> 00001<br /><br /> 2009-06-15T13:45:30 -&GT; 02009|  
+|„z”|Przesunięcie godzinowe względem czasu UTC, bez zer wiodących.<br /><br /> Więcej informacji: ["Z" specyfikatora formatu niestandardowego](#zSpecifier).|2009-06-15T13:45:30-07:00 -&GT; -7|  
+|„zz”|Przesunięcie godzinowe względem czasu UTC, z zerem wiodącym dla wartości jednocyfrowych.<br /><br /> Więcej informacji: ["Zz" specyfikatora formatu niestandardowego](#zzSpecifier).|2009-06-15T13:45:30-07:00 -&GT;-07|  
+|„zzz”|Godzinowe i minutowe przesunięcie względem czasu UTC.<br /><br /> Więcej informacji: ["Zzz" specyfikatora formatu niestandardowego](#zzzSpecifier).|2009-06-15T13:45:30--07 -&GT; 07:00:00|  
+|":"|Separator godziny.<br /><br /> Więcej informacji: [":" specyfikatora formatu niestandardowego](#timeSeparator).|2009-06-15T13:45:30 ->: (en US)<br /><br /> 2009-06-15T13:45:30 -&GT;. (it-IT)<br /><br /> 2009-06-15T13:45:30 ->: (ja-JP)|  
+|"/"|Separator daty.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "/"](#dateSeparator).|2009-06-15T13:45:30 -> / (en US)<br /><br /> 2009-06-15T13:45:30 -> - (ar-DZ)<br /><br /> 2009-06-15T13:45:30 -&GT;. (tr-TR)|  
 |"*ciąg*"<br /><br /> "*ciąg*"|Ogranicznik ciągu literału.<br /><br /> Więcej informacji: [znak literały](#Literals).|2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P<br /><br /> 2009-06-15T13:45:30 ("arr:" h:m t) -> arr: 1:45 P|  
 |%|Definiuje następujący znak jako specyfikator formatu niestandardowego.<br /><br /> Więcej informacji:[przy użyciu pojedynczego specyfikatory formatu niestandardowego](#UsingSingleSpecifiers).|2009-06-1 -> 15T13:45:30 (%h)|  
 |\|Znak ucieczki.<br /><br /> Więcej informacji: [znak literały](#Literals) i [przy użyciu znaku ucieczki](#escape).|2009-06-1 h -> 15T13:45:30 (h \h)|  
@@ -614,7 +610,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
  Specyfikator formatu niestandardowego „:” przedstawia separator godzin, który jest używany do odróżnienia godzin, minut i sekund. Separator odpowiedni czas zlokalizowane są pobierane z <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> właściwości bieżącego lub określonej kultury.  
   
 > [!NOTE]
->  Aby zmienić separator godziny dla określonej daty i czasu ciągu, określ znak separatora w ogranicznik literału ciągu. Na przykład ciąg formatu niestandardowego `hh'_'dd'_'ss` generuje ciąg wyniku, w którym "_" (podkreślenie) zawsze jest używany jako separator czasu. Aby zmienić czas separatora dla wszystkich dat dla kultury, zmień wartość <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> właściwości bieżącego kultury lub utworzenia wystąpienia <xref:System.Globalization.DateTimeFormatInfo> obiekt, należy przypisać znak jego <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> właściwości i wywoływać przeciążenia Formatowanie metodę, która obejmuje <xref:System.IFormatProvider> parametru.  
+>  Aby zmienić separator godziny dla określonej daty i czasu ciągu, określ znak separatora w ogranicznik literału ciągu. Na przykład ciąg formatu niestandardowego `hh'_'dd'_'ss` generuje ciąg wyniku, w którym "\_" (podkreślenie) zawsze jest używany jako separator czasu. Aby zmienić czas separatora dla wszystkich dat dla kultury, zmień wartość <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A?displayProperty=nameWithType> właściwości bieżącego kultury lub utworzenia wystąpienia <xref:System.Globalization.DateTimeFormatInfo> obiekt, należy przypisać znak jego <xref:System.Globalization.DateTimeFormatInfo.TimeSeparator%2A> właściwości i wywoływać przeciążenia Formatowanie metodę, która obejmuje <xref:System.IFormatProvider> parametru.  
   
  Jeśli ":" specyfikator formatu jest używana bez inne specyfikatory formatu niestandardowego, jest interpretowany jako standardowa Data i godzina specyfikator formatu i zgłasza <xref:System.FormatException>. Aby uzyskać więcej informacji o używaniu specyfikator formatu pojedynczego, zobacz [przy użyciu pojedynczego specyfikatory formatu niestandardowego](#UsingSingleSpecifiers) dalszej części tego tematu.  
   
@@ -638,8 +634,8 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 ||||||  
 |-|-|-|-|-|  
 |F|H|K|M|d|  
-|F|K|h|m|s|  
-|t|t|Z|%|:|  
+|f|g|h|m|s|  
+|t|t|z|%|:|  
 |/|"|'|\||  
   
  Wszystkie inne znaki są zawsze interpretowane jako literały znaków, a w ramach operacji formatowania, znajdują się w ciągu wyniku bez zmian.  W ramach operacji analizy muszą one odpowiadać znaków w ciągu wejściowym dokładnie; porównanie jest rozróżniana wielkość liter.  

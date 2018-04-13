@@ -1,12 +1,13 @@
 ---
-title: "Sposoby lokalizowania zestawów przez środowisko uruchomieniowe"
-ms.custom: 
+title: Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - app.config files, assembly locations
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - locating assemblies
 - assemblies [.NET Framework], location
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 97a56a095c1b0c080cd3df329fce0085dd01af23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6e154e0658534018ccd1086631cad6d350528b5d
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>Sposoby lokalizowania zestawów przez środowisko uruchomieniowe
 Aby pomyślnie wdrożyć aplikacji .NET Framework, trzeba zrozumieć, jak środowisko uruchomieniowe języka wspólnego lokalizuje i wiąże zestawy, które składają się na aplikację. Domyślnie środowisko uruchomieniowe próbuje powiązać dokładnej wersji zestawu, który został skompilowany aplikacji. To zachowanie domyślne można przesłonić ustawienia pliku konfiguracji.  
@@ -129,7 +131,7 @@ Aby pomyślnie wdrożyć aplikacji .NET Framework, trzeba zrozumieć, jak środo
 Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v:3.0.0.0  
 ```  
   
- `compatkey.dat`jest to plik klucza silnej nazwy. To polecenie tworzy zestawu o silnej nazwie, w którym można umieścić w globalnej pamięci podręcznej zestawów.  
+ `compatkey.dat` jest to plik klucza silnej nazwy. To polecenie tworzy zestawu o silnej nazwie, w którym można umieścić w globalnej pamięci podręcznej zestawów.  
   
 > [!NOTE]
 >  Zasady wydawcy ma wpływ na wszystkie aplikacje, które używają udostępnionego składnika.  
@@ -139,7 +141,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  Plik zasad wydawcy jest używana, gdy jest aktualizowana składnika współużytkowanego i nowa wersja składnika współużytkowanego powinny zostać pobrana przez wszystkie aplikacje używające tego składnika. W pliku zasad wydawcy zastępują ustawienia w pliku konfiguracyjnym aplikacji, chyba że tryb awaryjny wymusza pliku konfiguracji aplikacji.  
   
 #### <a name="safe-mode"></a>Tryb awaryjny  
- Pliki zasad wydawcy zazwyczaj jawnie są instalowane w ramach usługi aktualizacji pakietu lub programu. Jeśli występuje problem z uaktualniony składnik udostępnionego, możesz zignorować zastąpień w trybie awaryjnym pliku zasad wydawcy. Tryb awaryjny jest określany przez  **\<zastosować publisherPolicy = "tak**&#124; **nie "/ >** element znajduje się tylko w pliku konfiguracyjnym aplikacji. Określa, czy informacje o konfiguracji zasad wydawcy powinna zostać usunięta z proces wiązania.  
+ Pliki zasad wydawcy zazwyczaj jawnie są instalowane w ramach usługi aktualizacji pakietu lub programu. Jeśli występuje problem z uaktualniony składnik udostępnionego, możesz zignorować zastąpień w trybie awaryjnym pliku zasad wydawcy. Tryb awaryjny jest określany przez  **\<zastosować publisherPolicy = "tak**&#124;**nie" / >** element znajduje się tylko w pliku konfiguracyjnym aplikacji. Określa, czy informacje o konfiguracji zasad wydawcy powinna zostać usunięta z proces wiązania.  
   
  Tryb awaryjny można ustawić dla całej aplikacji lub dla wybranych zestawów. Oznacza to możesz wyłączyć zasady dla wszystkich zestawów, które tworzą aplikacji lub ją włączyć na niektórych zestawy, a innych nie. Aby wybiórczo zastosować zasad wydawcy zestawy, które tworzą aplikacji, ustaw  **\<zastosować publisherPolicy\=nie / >** i określ zestawy, które mają zostać zmienione, przy użyciu \< **dependentAssembly**> elementu. Aby zastosować zasady wydawcy wszystkie zestawy, które tworzą aplikacji, ustaw  **\<zastosować publisherPolicy\=nie / >** z żadnych elementów zestawu zależnego. Aby uzyskać więcej informacji o konfiguracji, zobacz [Konfigurowanie aplikacji za pomocą plików konfiguracji](../../../docs/framework/configure-apps/index.md).  
   
@@ -187,7 +189,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   Nazwa, która jest nazwą zestawu, do którego istnieje odwołanie.  
   
--   `privatePath` Atrybutu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element, który jest zdefiniowany przez użytkownika lista podkatalogi znajdujące się w lokalizacji głównej. Tej lokalizacji można określić w pliku konfiguracyjnym aplikacji i za pomocą kodu zarządzanego <xref:System.AppDomain.AppendPrivatePath%2A> właściwości dla domeny aplikacji. Jeśli określona w kodzie zarządzanym kodu zarządzanego `privatePath` jest najpierw sondowany, następuje ścieżka określona w pliku konfiguracyjnym aplikacji.  
+-   `privatePath` Atrybutu [ \<sondowanie >](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) element, który jest zdefiniowany przez użytkownika lista podkatalogi znajdujące się w lokalizacji głównej. Tej lokalizacji można określić w pliku konfiguracyjnym aplikacji i za pomocą kodu zarządzanego <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> właściwości dla domeny aplikacji. Jeśli określona w kodzie zarządzanym kodu zarządzanego `privatePath` jest najpierw sondowany, następuje ścieżka określona w pliku konfiguracyjnym aplikacji.  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>Sondowanie baza aplikacji i kultury katalogów  
  Środowisko uruchomieniowe zawsze rozpoczyna sondowanie w podstawowej aplikacji, który może być adresem URL lub katalog główny aplikacji na komputerze. Jeśli podano nie informacji o kulturze przywoływanego zestawu nie znajduje się w bazie danych aplikacji, środowisko uruchomieniowe wyszukuje podkatalogów z nazwą zestawu. Katalogi sondowany obejmują:  
@@ -254,7 +256,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>Inne lokalizacje sondowany  
  Lokalizacji zestawu można również określić, używając bieżącego kontekstu powiązania. Najczęstszą przyczyną tego błędu podczas <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> metoda jest używana w scenariuszach międzyoperacyjnego COM. Jeśli zestaw używa <xref:System.Reflection.Assembly.LoadFrom%2A> metody odwołać się do innego zestawu lokalizacji wywołującego zestawu jest traktowany jako wskazówka o tym, gdzie można znaleźć przywoływanego zestawu. Jeśli zostanie znaleziony dopasowanie, że zestaw jest ładowany. Jeśli nie znaleziono, środowisko uruchomieniowe kontynuuje jego semantyki wyszukiwania, a następnie sprawdza Instalatora Windows w celu zapewnienia zestawu. Jeśli zestawu nie została podana, które odpowiadają żądania powiązanie, jest zwracany wyjątek. Ten wyjątek jest <xref:System.TypeLoadException> w kodzie zarządzanym, jeśli istnieje odwołanie do typu, lub <xref:System.IO.FileNotFoundException> Jeśli zestaw ładowany nie został znaleziony.  
   
- Na przykład zestaw1 został pobrany z http://www.code.microsoft.com/utils zestaw1 odwołuje się do Assembly2, tej lokalizacji jest uważany za wskazówkę o tym, gdzie można znaleźć Assembly2.dll. Środowisko uruchomieniowe następnie badania zestawu w http://www.code.microsoft.com/utils/Assembly2.dll i http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Jeśli Assembly2 nie zostanie znaleziony w jednej z tych lokalizacji, środowisko uruchomieniowe wysyła zapytanie do Instalatora Windows.  
+ Na przykład, jeśli zestaw1 odwołuje się Assembly2 i zestaw1 został pobrany z http://www.code.microsoft.com/utils, czy lokalizacja jest traktowany jako wskazówka o tym, gdzie można znaleźć Assembly2.dll. Środowisko uruchomieniowe, a następnie sondy dla zestawu w http://www.code.microsoft.com/utils/Assembly2.dll i http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll. Jeśli Assembly2 nie zostanie znaleziony w jednej z tych lokalizacji, środowisko uruchomieniowe wysyła zapytanie do Instalatora Windows.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Najlepsze praktyki dotyczące ładowania zestawu](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  

@@ -1,24 +1,26 @@
 ---
-title: "Interfejsy API, które działają na podstawie odbicia"
-ms.custom: 
+title: Interfejsy API, które działają na podstawie odbicia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-caps.latest.revision: "9"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 49ac12bcae3fd85744961a6e3b81129178c2c323
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="apis-that-rely-on-reflection"></a>Interfejsy API, które działają na podstawie odbicia
 W niektórych przypadkach użycia odbicie w kodzie nie jest widoczne, a więc [!INCLUDE[net_native](../../../includes/net-native-md.md)] łańcucha narzędzi nie przechowują metadane, który jest wymagany w czasie wykonywania. W tym temacie omówiono niektóre typowe interfejsów API lub typowe wzorce programowania, które nie są traktowane jako część odbicia interfejsu API, ale które działają na podstawie odbicia się pomyślnie. Jeśli używasz je w kodzie źródłowym, można dodać informacje dotyczące ich do dyrektyw środowiska uruchomieniowego (. rd.xml) plików w celu wywołania tych interfejsów API nie zgłaszają [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) wyjątku lub innych wyjątek w czasie wykonywania.  
@@ -60,9 +62,9 @@ App1.AppClass`1<System.Int32>.
   
  Aby pomyślnie uruchomić, ten kod wymaga kilku elementów metadanych:  
   
--   `Browse`metadane dla typu metody, których chcesz się połączyć.  
+-   `Browse` metadane dla typu metody, których chcesz się połączyć.  
   
--   `Browse`metadane dla metodę, którą chcesz się połączyć.  Jeśli jest to metoda publiczne, dodawanie publicznego `Browse` metadanych dla typu zawierającego obejmuje metodę za.  
+-   `Browse` metadane dla metodę, którą chcesz się połączyć.  Jeśli jest to metoda publiczne, dodawanie publicznego `Browse` metadanych dla typu zawierającego obejmuje metodę za.  
   
 -   Dynamiczne metadanych dla metody chcesz się połączyć, tak aby delegat wywołania odbicia nie został usunięty przez [!INCLUDE[net_native](../../../includes/net-native-md.md)] narzędzia łańcucha. Jeśli metadane dynamiczne brakuje metody, następującego wyjątku podczas <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> metoda jest wywoływana:  
   
@@ -95,7 +97,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse`metadane dla typu tablicy jest wymagana do dynamicznie utworzyć wystąpienia.  Następujące dyrektyw środowiska uruchomieniowego umożliwia dynamiczne tworzenie wystąpienia `Class1[]`.  
+ `Browse` metadane dla typu tablicy jest wymagana do dynamicznie utworzyć wystąpienia.  Następujące dyrektyw środowiska uruchomieniowego umożliwia dynamiczne tworzenie wystąpienia `Class1[]`.  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  

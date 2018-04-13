@@ -1,8 +1,9 @@
 ---
-title: "Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation"
+title: 'Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,12 +15,13 @@ ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 To trzeci sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
@@ -157,10 +159,10 @@ To trzeci sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../in
   
     2.  Krok 2 — tworzy wystąpienie <xref:System.ServiceModel.ServiceHost> klasy do obsługi usługi. Konstruktor przyjmuje dwa parametry typu klasy, która implementuje kontraktu usługi, a adres podstawowy usługi.  
   
-    3.  Krok 3 — tworzy <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` wystąpienia. Punkt końcowy usługi składa się z adresu, powiązania i kontrakt usługi. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Konstruktor ma w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Kontrakt usługi jest `ICalculator`, co zdefiniowany i implementować typ usługi. Powiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które jest używane do łączenia z punktów końcowych, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md). Ten adres jest dołączany do adres podstawowy do identyfikowania punktu końcowego. Adres podany w ten kod jest "CalculatorService", dlatego pełny adres punktu końcowego jest `"http://localhost:8000/GettingStarted/CalculatorService"` Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4.0 lub nowszy. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+    3.  Krok 3 — tworzy <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` wystąpienia. Punkt końcowy usługi składa się z adresu, powiązania i kontrakt usługi. <!--zz <xref:System.ServiceModel.ServiceEndpoint>--> ` System.ServiceModel.ServiceEndpoint` Konstruktor ma w związku z tym typem interfejsu kontraktu usługi, powiązanie i adres. Kontrakt usługi jest `ICalculator`, co zdefiniowany i implementować typ usługi. Powiązanie używane w tym przykładzie jest <xref:System.ServiceModel.WSHttpBinding> czyli wbudowane powiązania, które jest używane do łączenia z punktów końcowych, które odpowiadają WS-* specyfikacji. Aby uzyskać więcej informacji na temat wiązania WCF, zobacz [omówienie powiązań WCF](../../../docs/framework/wcf/bindings-overview.md). Ten adres jest dołączany do adres podstawowy do identyfikowania punktu końcowego. Adres podany w ten kod jest "CalculatorService", dlatego pełny adres punktu końcowego jest `"http://localhost:8000/GettingStarted/CalculatorService"` Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4.0 lub nowszy. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
         > [!IMPORTANT]
-        >  Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+        >  Dodawanie punktu końcowego usługi jest opcjonalne, korzystając z programu .NET Framework 4 lub nowszej. W tych wersjach Jeśli punkty końcowe nie są dodawane w konfiguracji, lub kod WCF dodaje jeden domyślny punkt końcowy dla każdej kombinacji adresu podstawowego i kontraktu zaimplementowanych przez usługę. Aby uzyskać więcej informacji na temat domyślne punkty końcowe zobacz [Określanie adresu punktu końcowego](../../../docs/framework/wcf/specifying-an-endpoint-address.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
     4.  Krok 4 — Włączanie wymiany metadanych. Klienci będą używać wymiany metadanych do generowania serwerów proxy, które będą używane do wywołania operacji usługi. Umożliwia tworzenie wymiany metadanych <xref:System.ServiceModel.Description.ServiceMetadataBehavior> wystąpienia, ustaw go w <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> właściwości `true`i Dodaj zachowanie w <!--zz <xref:System.ServiceModel.ServiceHost.Behaviors%2A>  --> `System.ServiceModel.ServiceHost.Behaviors%2A` Kolekcja <xref:System.ServiceModel.ServiceHost> wystąpienia.  
   
@@ -422,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Usługi, takie jak ta wymaga uprawnienia do rejestrowania adresów HTTP na komputerze w celu nasłuchiwania. To uprawnienie mają kont administratorów, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)]jak skonfigurować rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe musi być uruchamiane z uprawnieniami administratora.  
+>  Usługi, takie jak ta wymaga uprawnienia do rejestrowania adresów HTTP na komputerze w celu nasłuchiwania. To uprawnienie mają kont administratorów, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] jak skonfigurować rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe musi być uruchamiane z uprawnieniami administratora.  
   
  Obecnie usługa jest uruchomiona. Przejdź do [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z Samouczek wprowadzający](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

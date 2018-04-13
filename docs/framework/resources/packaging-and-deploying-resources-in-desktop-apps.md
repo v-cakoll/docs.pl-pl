@@ -1,13 +1,13 @@
 ---
-title: "Opakowanie i wdrażanie zasobów w aplikacjach klasycznych"
-ms.custom: 
+title: Opakowanie i wdrażanie zasobów w aplikacjach klasycznych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -34,17 +34,17 @@ helpviewer_keywords:
 - localizing resources
 - neutral cultures
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3ab23b263d572a5573de5fc21f15b56e784a9a94
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 479ab530ddf02fa3701a7f6f3699258d0eab727e
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="packaging-and-deploying-resources-in-desktop-apps"></a>Opakowanie i wdrażanie zasobów w aplikacjach klasycznych
 Aplikacje polegają na .NET Framework Menedżera zasobów, reprezentowany przez <xref:System.Resources.ResourceManager> klasy można pobrać zlokalizowanych zasobów. Menedżer zasobów przyjęto, że model gwiazdy jest używany pakiet i wdrażanie zasobów. Koncentrator jest główny zestaw zawierający kod wykonywalny nonlocalizable i zasoby dla pojedynczego kultury, nazywany zero lub domyślną kulturę. Domyślną kulturę jest kultury rezerwowej dla aplikacji; jest kultura, którego zasoby są używane, jeśli nie można odnaleźć zlokalizowanych zasobów. Każdy gwiazdy łączy zestawu satelickiego, który zawiera zasoby dla kultury pojedynczego, ale nie zawiera żadnego kodu.  
@@ -177,11 +177,15 @@ Greeting=Добрый день
   
  Następnie można skompilować kodu źródłowego C# z wiersza polecenia w następujący sposób:  
   
- **CSC Example1.cs**  
+```console 
+csc Example1.cs
+```
   
  To polecenie dla kompilatora języka Visual Basic jest bardzo podobne:  
   
- **vbc — Example1.vb**  
+```console
+vbc Example1.vb
+```  
   
  Ponieważ nie ma żadnych zasobów, osadzony w zestawie głównym, nie masz skompilować przy użyciu `/resource` przełącznika.  
   

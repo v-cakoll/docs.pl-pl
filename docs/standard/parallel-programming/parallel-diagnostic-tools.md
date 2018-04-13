@@ -18,14 +18,14 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4ed0b3991b08eceb950aa1a3aa1704529700feb3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127737877ac64ac9278bc039650caf72936571bf
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="parallel-diagnostic-tools"></a>Równoległe narzędzia diagnostyczne
-[!INCLUDE[vs_dev10_ext](../../../includes/vs-dev10-ext-md.md)]obsługuje szeroką gamę debugowanie i profilowania aplikacji wielowątkowych.  
+Visual Studio zapewnia kompleksową obsługę debugowania i profilowania aplikacji wielowątkowych.  
   
 ## <a name="debugging"></a>Debugowanie  
  Debuger programu Visual Studio dodaje nowy w oknie Debugowanie aplikacji równoległych. Więcej informacji znajduje się w następujących tematach:  

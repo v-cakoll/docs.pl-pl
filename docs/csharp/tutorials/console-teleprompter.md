@@ -1,7 +1,7 @@
 ---
 title: Aplikacja konsoli
-description: "Ten samouczek zawiera szereg funkcji .NET Core i języka C#."
-keywords: .NET, .NET core
+description: Ten samouczek zawiera szereg funkcji .NET Core i języka C#.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 03/06/2017
@@ -10,11 +10,11 @@ ms.prod: .net-core
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 08dab8e7b210ab5159645563cd381d50145d764b
-ms.sourcegitcommit: be7862cac09066bc505586cbf071d0e2c8fb1508
+ms.openlocfilehash: cc8645f9eef070d800627ea1c47cf7de1e877783
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="console-application"></a>Aplikacja konsoli
 
@@ -52,7 +52,7 @@ namespace TeleprompterConsole
 ```
 
 ## <a name="reading-and-echoing-the-file"></a>Odczytywanie i wyświetlania pliku
-Pierwszy funkcję tak, aby dodać jest możliwość odczytywanie pliku tekstowego i Wyświetl ten tekst do konsoli. Po pierwsze możemy dodać plik tekstowy. Kopiuj [sampleQuotes.txt](https://raw.githubusercontent.com/dotnet/docs/master/samples/csharp/getting-started/console-teleprompter/sampleQuotes.txt) plik z repozytorium GitHub dla tego [próbki](https://github.com/dotnet/docs/tree/master/samples/csharp/getting-started/console-teleprompter) w katalogu projektu. To będzie służyć jako skryptów dla aplikacji. Jeśli chcesz uzyskać informacje na temat Pobierz przykładową aplikację na ten temat, zapoznaj się z instrukcjami w [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) tematu.
+Pierwszy funkcję tak, aby dodać jest możliwość odczytywanie pliku tekstowego i Wyświetl ten tekst do konsoli. Po pierwsze możemy dodać plik tekstowy. Kopiuj [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) plik z repozytorium GitHub dla tego [próbki](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) w katalogu projektu. To będzie służyć jako skryptów dla aplikacji. Jeśli chcesz uzyskać informacje na temat Pobierz przykładową aplikację na ten temat, zapoznaj się z instrukcjami w [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) tematu.
 
 Następnie dodaj następującą metodę w klasie programu (bezpośrednio pod `Main` metody):
 
@@ -83,7 +83,7 @@ Ta metoda jest specjalnym rodzajem metody C# o nazwie *— metoda wyliczania*. M
 
 Istnieją dwa inne C# składni elementy, które mogą być nowe dla Ciebie. `using` Instrukcji w tej metodzie zarządza oczyszczania zasobu. Zmienna, która została zainicjowana w `using` instrukcji (`reader`, w tym przykładzie) musi implementować `IDisposable` interfejsu. <xref:System.IDisposable> Interfejs definiuje jedną metodę `Dispose`, która powinna być wywoływana, gdy zasobu powinny zostać zwolnione. Kompilator generuje tego wywołania, gdy wykonanie osiągnie zamykającym `using` instrukcji. Kod wygenerowany przez kompilator zapewnia zwolnienie zasobu, nawet w przypadku zgłoszenia wyjątku z kodu w bloku zdefiniowany przy użyciu instrukcji.
 
-`reader` Zmiennej jest definiowana za pomocą `var` — słowo kluczowe. `var`definiuje *niejawnie wpisane zmiennej lokalnej*. Oznacza to, że typ zmiennej jest określana przez typ czas kompilacji obiektu przypisaną do zmiennej. Tutaj, która jest wartością zwracaną przez <xref:System.IO.File.OpenText(System.String)> metodę, która jest <xref:System.IO.StreamReader> obiektu.
+`reader` Zmiennej jest definiowana za pomocą `var` — słowo kluczowe. `var` definiuje *niejawnie wpisane zmiennej lokalnej*. Oznacza to, że typ zmiennej jest określana przez typ czas kompilacji obiektu przypisaną do zmiennej. Tutaj, która jest wartością zwracaną przez <xref:System.IO.File.OpenText(System.String)> metodę, która jest <xref:System.IO.StreamReader> obiektu.
  
 Teraz załóżmy wprowadź kod, aby odczytać plik w `Main` metody: 
 

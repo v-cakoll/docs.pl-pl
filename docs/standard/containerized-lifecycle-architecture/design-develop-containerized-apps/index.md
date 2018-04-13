@@ -1,6 +1,6 @@
 ---
-title: "Projektowanie i opracowanie konteneryzowanych aplikacji przy użyciu rozwiązania Docker i Microsoft Azure"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
+title: Projektowanie i opracowanie konteneryzowanych aplikacji przy użyciu rozwiązania Docker i Microsoft Azure
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

@@ -1,31 +1,33 @@
 ---
 title: '&lt;binaryMessageEncoding&gt;'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e4ae3cd4-6b67-4ce1-af4b-9400e0a38dba
-caps.latest.revision: "14"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 503c0edf3a21b3fb0f57b5199aa2a1a17df4222d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltbinarymessageencodinggt"></a>&lt;binaryMessageEncoding&gt;
 Definiuje binarnego kodera wiadomości, który koduje wiadomości Windows Communication Foundation (WCF) w dane binarne w połączeniu.  
   
- \<system.serviceModel >  
+ \<system.serviceModel>  
 \<powiązania >  
-\<customBinding >  
+\<customBinding>  
 \<Powiązanie >  
 \<binaryMessageEncoding >  
   
@@ -45,16 +47,16 @@ Definiuje binarnego kodera wiadomości, który koduje wiadomości Windows Commun
   
 |Atrybut|Opis|  
 |---------------|-----------------|  
-|MaxReadPoolSize|Liczba całkowita definiująca, ile komunikatów można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 64.|  
-|MaxSessionSize|Dodatnia liczba całkowita, która ustawia rozmiar w bajtach buforu używany do kodowania. Większy bufor zwiększa kodowania szybkość kosztem rozmiar zestawu roboczego. Wartość domyślna to 2048.|  
-|MaxWritePoolSize|Liczba całkowita definiująca, ile komunikatów można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 16.|  
+|maxReadPoolSize|Liczba całkowita definiująca, ile komunikatów można jednocześnie odczytać bez przydziału nowych czytników. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 64.|  
+|maxSessionSize|Dodatnia liczba całkowita, która ustawia rozmiar w bajtach buforu używany do kodowania. Większy bufor zwiększa kodowania szybkość kosztem rozmiar zestawu roboczego. Wartość domyślna to 2048.|  
+|maxWritePoolSize|Liczba całkowita definiująca, ile komunikatów można jednocześnie wysłać bez przydziału nowych modułów zapisujących. Większe rozmiary puli powoduje, że system bardziej odporne na działanie nagłego kosztem większy zestaw roboczy. Wartość domyślna to 16.|  
 |Element MessageVersion|Określa komunikatu protokołu SOAP i wersji WS-Addressing, które są używane lub oczekiwano.|  
   
 ### <a name="child-elements"></a>Elementy podrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<readerQuotas >](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
+|[\<readerQuotas>](http://msdn.microsoft.com/library/3e5e42ff-cef8-478f-bf14-034449239bfd)|Definiuje ograniczenia złożoności wiadomości SOAP, które mogą być przetwarzane przez punkty końcowe skonfigurowane dla tego wiązania. Ten element jest typu <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
@@ -85,4 +87,4 @@ Definiuje binarnego kodera wiadomości, który koduje wiadomości Windows Commun
  [Powiązania](../../../../../docs/framework/wcf/bindings.md)  
  [Rozszerzanie powiązań](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
  [Powiązania niestandardowe](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+ [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

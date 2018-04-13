@@ -1,10 +1,10 @@
 ---
-title: /define (Visual Basic)
-ms.date: 07/20/2015
+title: -Definiowanie (Visual Basic)
+ms.date: 03/10/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -14,24 +14,23 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-caps.latest.revision: "15"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: 62669ec40803170cb623382b09472b82121d26bb
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 136339c84ce80bff790c6683eef76065fb6d71ef
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="define-visual-basic"></a>/define (Visual Basic)
+# <a name="-define-visual-basic"></a>-Definiowanie (Visual Basic)
 Definiuje warunkowe stałe kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-/define:["]symbol[=value][,symbol[=value]]["]  
+-define:["]symbol[=value][,symbol[=value]]["]  
 ' -or-  
-/d:["]symbol[=value][,symbol[=value]]["]  
+-d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -42,13 +41,13 @@ Definiuje warunkowe stałe kompilatora.
 |`value`|Opcjonalny. Wartość do przypisania `symbol`. Jeśli `value` jest ciągiem, muszą być ujęte przez sekwencje ukośnik odwrotny cudzysłowu (\\") zamiast znaków cudzysłowu. Jeśli nie określono wartości, a następnie jest traktowana jako True.|  
   
 ## <a name="remarks"></a>Uwagi  
- `/define` Opcji jest efekt jest podobny do sposobu używania `#Const` dyrektywy preprocesora w pliku źródłowym, z wyjątkiem tego stałe zdefiniowane z `/define` są publiczne i dotyczą wszystkich plików w projekcie.  
+ `-define` Opcji jest efekt jest podobny do sposobu używania `#Const` dyrektywy preprocesora w pliku źródłowym, z wyjątkiem tego stałe zdefiniowane z `-define` są publiczne i dotyczą wszystkich plików w projekcie.  
   
  Można użyć symboli utworzone przez tę opcję z `#If`... `Then`... `#Else` dyrektywy warunkowo skompilować plików źródłowych.  
   
- `/d`jest krótka forma `/define`.  
+ `-d` jest krótka forma `-define`.  
   
- Można zdefiniować wiele symboli z `/define` za pomocą przecinka do oddzielania definicji symbolu.  
+ Można zdefiniować wiele symboli z `-define` za pomocą przecinka do oddzielania definicji symbolu.  
   
 |Aby ustawić / define w programie Visual Studio zintegrowane środowisko deweloperskie|  
 |---|  

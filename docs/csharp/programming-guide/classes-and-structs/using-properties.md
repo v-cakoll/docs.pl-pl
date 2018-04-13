@@ -2,26 +2,27 @@
 title: "Używanie właściwości (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - set accessor [C#]
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: aae36195f4a6eb2ab49ec27e1e07debff7289b37
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36345748e514f0e0a4c945d8ead149c7d8ca9a19
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="using-properties-c-programming-guide"></a>Używanie właściwości (Przewodnik programowania w języku C#)
 Właściwości łączyć aspekty pól i metod. Użytkownikowi obiektu właściwości wydaje się być polem, uzyskiwanie dostępu do właściwości wymaga takiej samej składni. Realizator klasę, właściwości jest jeden lub dwa bloki kodu, reprezentujący [uzyskać](../../../csharp/language-reference/keywords/get.md) metody dostępu i/lub [ustawić](../../../csharp/language-reference/keywords/set.md) metody dostępu. Blok kodu dla `get` metody dostępu jest wykonywany podczas odczytywania właściwości; zablokować kod `set` metody dostępu jest wykonywane, gdy właściwość jest przypisywana nowa wartość. Właściwość bez `set` metody dostępu jest traktowane jako tylko do odczytu. Właściwość bez `get` metody dostępu jest traktowane jako tylko do zapisu. Właściwość, która ma obu metod dostępu jest do odczytu / zapisu.  
   
- W przeciwieństwie do pola właściwości nie są sklasyfikowane jako zmienne. W związku z tym nie można przekazać właściwości jako [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out.md) parametru.  
+ W przeciwieństwie do pola właściwości nie są sklasyfikowane jako zmienne. W związku z tym nie można przekazać właściwości jako [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametru.  
   
  Właściwości mają wiele zastosowań: one sprawdzanie poprawności danych przed zezwoleniem na zmianę; przezroczysty mogą uwidaczniać danych dla klasy, których dane faktycznie jest pobierana z innego źródła, na przykład w bazie danych; Po zmianie danych, takich jak wywoływanie zdarzeń lub zmiana wartości innych pól potencjalnie akcji.  
   

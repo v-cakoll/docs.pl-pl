@@ -1,24 +1,26 @@
 ---
 title: Kontekst niezawodnej instancji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-caps.latest.revision: "12"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e4f1f3f9e840ba422e327792ec2b0554fad45902
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/23/2018
 ---
 # <a name="durable-instance-context"></a>Kontekst niezawodnej instancji
 W tym przykładzie pokazano, jak dostosować [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] środowiska wykonawczego, aby włączyć kontekst niezawodnej instancji. SQL Server 2005 używa jako magazynu zapasowego, jego (SQL Server 2005 Express w tym przypadku). Jednak umożliwia także sposób uzyskać dostępu do magazynu niestandardowych mechanizmów.  
@@ -242,7 +244,7 @@ else
   
  W pierwszym kroku procesu mamy do zapisania Identyfikatora kontekstu, która pochodzi za pośrednictwem warstwy kanału do bieżącego obiektu InstanceContext. Obiekt InstanceContext jest składnika środowiska uruchomieniowego, który pełni rolę łącza między [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] dyspozytora i wystąpienie usługi. Może służyć do dodatkowych stanie i zachowanie do wystąpienia usługi. Jest to konieczne, ponieważ w komunikacie sesyjnych identyfikator kontekstu jest wysyłane tylko z pierwszego komunikatu.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]umożliwia rozszerzanie jej składnika środowiska wykonawczego InstanceContext przez dodanie nowego stanu i zachowanie przy użyciu jego wzorca rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu rozszerzonego obiektu - interfejs IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] umożliwia rozszerzanie jej składnika środowiska wykonawczego InstanceContext przez dodanie nowego stanu i zachowanie przy użyciu jego wzorca rozszerzonego obiektu. Wzorzec extensible obiekt jest używany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wydłużyć istniejące klasy środowiska uruchomieniowego z nowych funkcji lub dodawania nowych funkcji stanu do obiektu. Istnieją trzy interfejsy we wzorcu rozszerzonego obiektu - interfejs IExtensibleObject\<T >, IExtension\<T >, a IExtensionCollection\<T >:  
   
 -   Interfejs IExtensibleObject\<T > Interfejs jest implementowany przez obiekty, które umożliwia rozszerzenia umożliwiające dostosowanie ich funkcje.  
   
@@ -290,7 +292,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
   
  Zgodnie z wcześniejszym opisem identyfikator kontekstu zostanie odczytany z `Properties` Kolekcja `Message` klasy i przekazany do konstruktora klasy extension. Oznacza to, jak informacje może być wymieniane między warstwami w sposób ciągły.  
   
- Następnym krokiem ważne zastępuje procesu tworzenia wystąpienia usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]Umożliwia Implementowanie niestandardowego wystąpienia zachowania i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowe `InstanceProvider` zaimplementowana jest klasa, aby wykonać to zadanie. W Konstruktorze jest akceptowany oczekiwano od dostawcy wystąpienia typu usługi. Później służy to tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji wyszukiwanie trwałego wystąpienia. Jeśli zmienna zwraca `null` utworzone nowe wystąpienie typu usługi i zwracany do obiektu wywołującego.  
+ Następnym krokiem ważne zastępuje procesu tworzenia wystąpienia usługi. [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] Umożliwia Implementowanie niestandardowego wystąpienia zachowania i przechwytywanie je do środowiska uruchomieniowego przy użyciu interfejsu IInstanceProvider. Nowe `InstanceProvider` zaimplementowana jest klasa, aby wykonać to zadanie. W Konstruktorze jest akceptowany oczekiwano od dostawcy wystąpienia typu usługi. Później służy to tworzenia nowych wystąpień. W `GetInstance` tworzone jest wystąpienie Menedżera magazynu implementacji wyszukiwanie trwałego wystąpienia. Jeśli zmienna zwraca `null` utworzone nowe wystąpienie typu usługi i zwracany do obiektu wywołującego.  
   
 ```  
 public object GetInstance(InstanceContext instanceContext, Message message)  

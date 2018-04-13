@@ -1,6 +1,6 @@
 ---
-title: "Porady: analizowanie ciągów za pomocą String.Split (Przewodnik C#)"
-description: "String.Split zwraca tablicę ciągów podzielić z zestawu ograniczników. Jest łatwy sposób analizowanie ciągów."
+title: 'Porady: analizowanie ciągów za pomocą String.Split (Przewodnik C#)'
+description: String.Split zwraca tablicę ciągów podzielić z zestawu ograniczników. Jest łatwy sposób analizowanie ciągów.
 ms.date: 01/03/2018
 ms.prod: .net
 ms.technology:
@@ -15,11 +15,11 @@ ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 author: BillWagner
 ms.author: wiwagn
 ms.custom: mvc
-ms.openlocfilehash: afaff6f81a1a4240214f738d0fc9f3bafdaf868c
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: c6ccbe8e1287101d3b79d0ec84e530e0e525ff57
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>Porady: analizowanie ciągów za pomocą String.Split (Przewodnik C#)
 
@@ -51,7 +51,7 @@ Kolejne wystąpienia dowolnego separatora utworzyć pusty ciąg na tablicę dany
   
 [!code-csharp-interactive[split strings using strings as separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#5)]
 
-Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings.zip).
+Możesz spróbować te przykłady, sprawdzając kod w naszym [repozytorium GitHub](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings). Można również pobrać próbki [jako plik zip](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip).
 
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku C#](../programming-guide/index.md)  

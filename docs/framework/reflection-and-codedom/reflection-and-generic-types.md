@@ -1,12 +1,13 @@
 ---
-title: "Odbicie i typy ogólne"
-ms.custom: 
+title: Odbicie i typy ogólne
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,19 +23,20 @@ helpviewer_keywords:
 - types, generic
 - type parameters
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2c6ace8f34999a6d98fc6784dd21ce88baf2af42
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54ce839c6a569bed784a03acd5e2b92f4f1f5aca
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="reflection-and-generic-types"></a>Odbicie i typy ogólne
-<a name="top"></a>Z punktu widzenia odbicia, że typu ogólnego jest skojarzony z nim zestaw parametrów typu (jeśli jest definicją typu ogólnego) jest różnica między typem ogólnym i typu zwykłego lub argumentów typu (jeśli jest skonstruowanego typu). Metoda ogólna różni się od zwykłej metody w taki sam sposób.  
+<a name="top"></a> Z punktu widzenia odbicia, że typu ogólnego jest skojarzony z nim zestaw parametrów typu (jeśli jest definicją typu ogólnego) jest różnica między typem ogólnym i typu zwykłego lub argumentów typu (jeśli jest skonstruowanego typu). Metoda ogólna różni się od zwykłej metody w taki sam sposób.  
   
  Dostępne są dwa klucze do zrozumienia, jak odbicia obsługuje typy ogólne i metody:  
   
@@ -65,15 +67,15 @@ ms.lasthandoff: 12/22/2017
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>To jest typu ogólnego lub metody?  
- Jeśli używasz odbicia do sprawdzenia nieznany typ reprezentowany przez wystąpienie <xref:System.Type>, użyj <xref:System.Type.IsGenericType%2A> właściwości w celu określenia, czy nieznany typ jest rodzajowy. Zwraca `true` Jeśli typ jest rodzajowy. Podobnie podczas badania Nieznana metoda reprezentowany przez wystąpienie <xref:System.Reflection.MethodInfo> klasy, należy użyć <xref:System.Reflection.MethodInfo.IsGenericMethod%2A> właściwości w celu określenia, czy metoda jest rodzajowy.  
+ Jeśli używasz odbicia do sprawdzenia nieznany typ reprezentowany przez wystąpienie <xref:System.Type>, użyj <xref:System.Type.IsGenericType%2A> właściwości w celu określenia, czy nieznany typ jest rodzajowy. Zwraca `true` Jeśli typ jest rodzajowy. Podobnie podczas badania Nieznana metoda reprezentowany przez wystąpienie <xref:System.Reflection.MethodInfo> klasy, należy użyć <xref:System.Reflection.MethodBase.IsGenericMethod%2A> właściwości w celu określenia, czy metoda jest rodzajowy.  
   
 ### <a name="is-this-a-generic-type-or-method-definition"></a>To jest ogólnym typie lub metoda definicji?  
- Użyj <xref:System.Type.IsGenericTypeDefinition%2A> umożliwia określenie, czy <xref:System.Type> obiekt reprezentuje definicji typu ogólnego i użyj <xref:System.Reflection.MethodInfo.IsGenericMethodDefinition%2A> metodę, aby określić, czy <xref:System.Reflection.MethodInfo> reprezentuje definicję metody rodzajowej.  
+ Użyj <xref:System.Type.IsGenericTypeDefinition%2A> umożliwia określenie, czy <xref:System.Type> obiekt reprezentuje definicji typu ogólnego i użyj <xref:System.Reflection.MethodBase.IsGenericMethodDefinition%2A> metodę, aby określić, czy <xref:System.Reflection.MethodInfo> reprezentuje definicję metody rodzajowej.  
   
  Ogólny definicje typu i metody są szablony, z których tworzone jako wystąpienia typów są tworzone. Ogólne typy w bibliotece klas programu .NET Framework, takich jak <xref:System.Collections.Generic.Dictionary%602>, definicji typu ogólnego.  
   
 ### <a name="is-the-type-or-method-open-or-closed"></a>Typ lub metoda Open lub Closed?  
- Jeśli dla wszystkich jego parametrów typu, w tym wszystkie parametry typu wszystkich typów otaczającego zostać podstawione tworzone jako wystąpienia typów, typie ogólnym lub metodzie jest zamknięty. Można tylko utworzyć wystąpienia typu ogólnego, jeśli jest ono zamknięte. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> Zwraca `true` Jeśli typ jest otwarty. W przypadku metod <xref:System.Reflection.MethodInfo.ContainsGenericParameters%2A?displayProperty=nameWithType> taką samą funkcję wykonuje metodę.  
+ Jeśli dla wszystkich jego parametrów typu, w tym wszystkie parametry typu wszystkich typów otaczającego zostać podstawione tworzone jako wystąpienia typów, typie ogólnym lub metodzie jest zamknięty. Można tylko utworzyć wystąpienia typu ogólnego, jeśli jest ono zamknięte. <xref:System.Type.ContainsGenericParameters%2A?displayProperty=nameWithType> Zwraca `true` Jeśli typ jest otwarty. W przypadku metod <xref:System.Reflection.MethodBase.ContainsGenericParameters%2A?displayProperty=nameWithType> taką samą funkcję wykonuje metodę.  
   
  [Powrót do początku](#top)  
   
@@ -149,7 +151,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 <a name="invariants"></a>   
 ## <a name="invariants"></a>Invariants  
- Dla tabeli niezmiennej warunków typowe terminy w odbicia dla typów ogólnych, zobacz <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Aby uzyskać dodatkowe postanowienia dotyczące metody ogólne, zobacz <xref:System.Reflection.MethodInfo.IsGenericMethod%2A?displayProperty=nameWithType>.  
+ Dla tabeli niezmiennej warunków typowe terminy w odbicia dla typów ogólnych, zobacz <xref:System.Type.IsGenericType%2A?displayProperty=nameWithType>. Aby uzyskać dodatkowe postanowienia dotyczące metody ogólne, zobacz <xref:System.Reflection.MethodBase.IsGenericMethod%2A?displayProperty=nameWithType>.  
   
  [Powrót do początku](#top)  
   

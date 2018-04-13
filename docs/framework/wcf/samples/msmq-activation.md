@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji procesów systemu Windows (WAS), które są odczytywane z kolejki komunikatów. W przykładzie użyto `netMsmqBinding` i opierają się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji sieci Web hostowanych klienta i jest samodzielnie hostowana konsoli obserwować stan zakupów przesłane dane wyjściowe.  
@@ -29,13 +31,13 @@ W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji pro
 > [!NOTE]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   
->  \<InstallDrive >: \WF_WCF_Samples  
+>  \<InstallDrive>:\WF_WCF_Samples  
 >   
 >  Jeśli ten katalog nie istnieje, przejdź do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i [!INCLUDE[wf](../../../../includes/wf-md.md)] przykłady dla [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pobrać wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
->  \<InstallDrive >: \Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
+>  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
- Windows Process Activation Service (WAS), nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne usług IIS, które były wcześniej dostępne tylko do aplikacji HTTP dla aplikacji, które używają protokołów innych niż HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]używa interfejsu Adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], takie jak protokół TCP, potoków nazwanych i usługi MSMQ. Funkcja odbierania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzanych usług systemu Windows działa w SMSvcHost.exe.  
+ Windows Process Activation Service (WAS), nowy proces aktywacji mechanizm [!INCLUDE[lserver](../../../../includes/lserver-md.md)], zapewnia funkcje podobne usług IIS, które były wcześniej dostępne tylko do aplikacji HTTP dla aplikacji, które używają protokołów innych niż HTTP. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] używa interfejsu Adapter odbiornika do komunikowania się żądania aktywacji, które są otrzymywane za pośrednictwem protokołów innych niż HTTP obsługiwane przez [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], takie jak protokół TCP, potoków nazwanych i usługi MSMQ. Funkcja odbierania żądań za pośrednictwem protokołów innych niż HTTP jest hostowana przez zarządzanych usług systemu Windows działa w SMSvcHost.exe.  
   
  Adapter odbiornika Net.Msmq usługi (NetMsmqActivator) aktywuje umieszczonych w kolejce aplikacje oparte na wiadomości w kolejce.  
   

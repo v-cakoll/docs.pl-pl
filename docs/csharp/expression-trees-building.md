@@ -1,7 +1,7 @@
 ---
-title: "Kompilowanie drzew wyrażeń"
-description: "Więcej informacji o technikach tworzenia drzewa wyrażeń."
-keywords: .NET, .NET core
+title: Kompilowanie drzew wyrażeń
+description: Więcej informacji o technikach tworzenia drzewa wyrażeń.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 542754a9-7f40-4293-b299-b9f80241902c
-ms.openlocfilehash: c0d7bcf6e07f4a49e15e6f6f4e028eebfe82d8bf
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 7e45f566f66c129111c65a1166a6c71ff518dfc7
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="building-expression-trees"></a>Kompilowanie drzew wyrażeń
 
@@ -169,7 +169,7 @@ BlockExpression body = Expression.Block(
 
 Kod służący do tworzenia drzewa wyrażenia funkcji silni jest dość nieco dłużej, bardziej skomplikowane i jest on riddled z etykiety i instrukcje break i innymi elementami, które chcielibyśmy uniknąć w naszym codziennie kodowania zadań. 
 
-W tej sekcji również po aktualizacji kodu odwiedzający odwiedź każdy węzeł w drzewie tego wyrażenia i zapisywanie informacji o węzłach, które są tworzone w tym przykładzie. Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/docs/tree/master/samples/csharp/expression-trees) w repozytorium GitHub dotnet/docs. Eksperymentu dla siebie przez tworzenia i uruchamiania przykładów. Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+W tej sekcji również po aktualizacji kodu odwiedzający odwiedź każdy węzeł w drzewie tego wyrażenia i zapisywanie informacji o węzłach, które są tworzone w tym przykładzie. Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/csharp/expression-trees) w repozytorium GitHub dotnet/docs. Eksperymentu dla siebie przez tworzenia i uruchamiania przykładów. Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="examining-the-apis"></a>Badanie interfejsy API
 

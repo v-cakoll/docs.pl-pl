@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 93aef07a-6747-4ce4-a10f-a05168978af6
-ms.openlocfilehash: b4305d24163f9b23631d5efb6e838f55127cd9f5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: c7ec056f407f3af34528205a5abb1cdef7d43fef
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="compiler-directives"></a>Dyrektywy kompilatora
 
@@ -29,11 +29,11 @@ W poniższej tabeli wymieniono dyrektywy preprocesora, które są dostępne w j�
 
 |Dyrektywy|Opis|
 |---------|-----------|
-|`#if`*symbol*|Obsługuje kompilacji warunkowej. Kod w sekcji po `#if` jest uwzględniona, jeśli *symbol* jest zdefiniowany.|
+|`#if` *Symbol*|Obsługuje kompilacji warunkowej. Kod w sekcji po `#if` jest uwzględniona, jeśli *symbol* jest zdefiniowany.|
 |`#else`|Obsługuje kompilacji warunkowej. Oznacza sekcji kodu do uwzględnienia, jeśli symbol jest używany z poprzedniej `#if` nie jest zdefiniowany.|
 |`#endif`|Obsługuje kompilacji warunkowej. Oznacza koniec warunkowego sekcji kodu.|
 |`#`[wiersz] *int*,<br/>`#`[wiersz] *int* *ciąg*,<br/>`#`[wiersz] *int* *ciągu dosłownego wyrażenia*|Wskazuje oryginalnego źródła kodu wiersza i nazwa pliku, do debugowania. Ta funkcja jest dostępna dla narzędzia, które generowanie kodu źródłowego języka F #.|
-|`#nowarn`*warningcode*|Wyłącza ostrzeżenia kompilatora lub ostrzeżeń. Aby wyłączyć ostrzeżenia, Znajdź jego numer z danych wyjściowych kompilatora i uwzględnić go w cudzysłowy. Pomiń prefiksu "FS". Aby wyłączyć wiele numerów ostrzeżeń, które w tym samym wierszu, obejmują każdej liczby w znaki cudzysłowu i oddziel każdy ciąg spacją. Na przykład:
+|`#nowarn` *warningcode*|Wyłącza ostrzeżenia kompilatora lub ostrzeżeń. Aby wyłączyć ostrzeżenia, Znajdź jego numer z danych wyjściowych kompilatora i uwzględnić go w cudzysłowy. Pomiń prefiksu "FS". Aby wyłączyć wiele numerów ostrzeżeń, które w tym samym wierszu, obejmują każdej liczby w znaki cudzysłowu i oddziel każdy ciąg spacją. Na przykład:
 
 `#nowarn "9" "40"`
 
@@ -75,12 +75,12 @@ W poniższej tabeli wymieniono dyrektywy kompilatora, która jest dostępna w j�
 
 |Dyrektywy|Opis|
 |---------|-----------|
-|`#light`["on"|"off"]|Włącza lub wyłącza lightweight — składnia, zgodność z innymi wersjami uczenia Maszynowego. Lightweight — składnia jest domyślnie włączone. Pełna składnia jest zawsze włączone. W związku z tym można użyć zarówno lightweight — składnia i Pełna składnia. Dyrektywa `#light` samodzielnie jest odpowiednikiem `#light "on"`. Jeśli określisz `#light "off"`, należy użyć składni pełne dla wszystkich konstrukcji języka. Przy założeniu, że używasz lightweight — składnia zobaczy składni w dokumentacji dotyczącej F #. Aby uzyskać więcej informacji, zobacz [Pełna składnia](verbose-syntax.md).|
+|`#light` ["na"&#124;"off"]|Włącza lub wyłącza lightweight — składnia, zgodność z innymi wersjami uczenia Maszynowego. Lightweight — składnia jest domyślnie włączone. Pełna składnia jest zawsze włączone. W związku z tym można użyć zarówno lightweight — składnia i Pełna składnia. Dyrektywa `#light` samodzielnie jest odpowiednikiem `#light "on"`. Jeśli określisz `#light "off"`, należy użyć składni pełne dla wszystkich konstrukcji języka. Przy założeniu, że używasz lightweight — składnia zobaczy składni w dokumentacji dotyczącej F #. Aby uzyskać więcej informacji, zobacz [Pełna składnia](verbose-syntax.md).|
 Dla dyrektywy interpreter (fsi.exe), zobacz [interakcyjne programowania w języku F #](../tutorials/fsharp-interactive/index.md).
 
 
 ## <a name="see-also"></a>Zobacz też
-[Dokumentacja języka F #](index.md)
+[Dokumentacja języka F#](index.md)
 
 [Opcje kompilatora](compiler-options.md)
 

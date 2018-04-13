@@ -2,21 +2,22 @@
 title: "Klasy częściowe i metody (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - partial methods [C#]
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 662b3308c3baa429ed29adca750cbb9b143b79dc
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 396914e487bee0924c36bb1d7a0f28976f4ad354
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>Klasy częściowe i metody (Przewodnik programowania w języku C#)
 Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywords/class.md) lub [struktury](../../../csharp/language-reference/keywords/struct.md), [interfejsu](../../../csharp/language-reference/keywords/interface.md) lub metody za pośrednictwem dwóch lub więcej plików źródłowych. Każdy plik źródłowy zawiera sekcja definicji typu lub metody, a wszystkie elementy są łączone podczas kompilowania aplikacji.  
@@ -92,17 +93,17 @@ Umożliwia dzielenie definicji [klasy](../../../csharp/language-reference/keywor
   
 -   Poniższe słowa kluczowe w definicji typu częściowego są opcjonalne, ale jeśli jest obecny w jednej definicji typu częściowego, nie powodują konflikt z słów kluczowych określonych w innej definicji częściowej dla tego samego typu:  
   
-    -   [publiczny](../../../csharp/language-reference/keywords/public.md)  
+    -   [public](../../../csharp/language-reference/keywords/public.md)  
   
-    -   [prywatne](../../../csharp/language-reference/keywords/private.md)  
+    -   [private](../../../csharp/language-reference/keywords/private.md)  
   
-    -   [chronione](../../../csharp/language-reference/keywords/protected.md)  
+    -   [protected](../../../csharp/language-reference/keywords/protected.md)  
   
-    -   [wewnętrzny](../../../csharp/language-reference/keywords/internal.md)  
+    -   [internal](../../../csharp/language-reference/keywords/internal.md)  
   
-    -   [abstrakcyjny](../../../csharp/language-reference/keywords/abstract.md)  
+    -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-    -   [zapieczętowane](../../../csharp/language-reference/keywords/sealed.md)  
+    -   [sealed](../../../csharp/language-reference/keywords/sealed.md)  
   
     -   klasa bazowa  
   
@@ -150,7 +151,7 @@ partial void onNameChanged()
   
 -   Deklaracje metody częściowej musi rozpoczynać się od kontekstowe słowo kluczowe [częściowe](../../../csharp/language-reference/keywords/partial-type.md) i metoda musi zwracać [void](../../../csharp/language-reference/keywords/void.md).  
   
--   Metody częściowe mogą mieć [ref](../../../csharp/language-reference/keywords/ref.md) , ale nie [limit](../../../csharp/language-reference/keywords/out.md) parametrów.  
+-   Metody częściowe mogą mieć [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md) lub [ref](../../../csharp/language-reference/keywords/ref.md) , ale nie [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametrów.  
   
 -   Metody częściowe są niejawnie [prywatnej](../../../csharp/language-reference/keywords/private.md), i dlatego nie może być [wirtualnego](../../../csharp/language-reference/keywords/virtual.md).  
   
@@ -170,4 +171,4 @@ partial void onNameChanged()
  [Klasy](../../../csharp/programming-guide/classes-and-structs/classes.md)  
  [Struktury](../../../csharp/programming-guide/classes-and-structs/structs.md)  
  [Interfejsy](../../../csharp/programming-guide/interfaces/index.md)  
- [Partial (typ)](../../../csharp/language-reference/keywords/partial-type.md)
+ [partial (typ)](../../../csharp/language-reference/keywords/partial-type.md)

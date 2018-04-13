@@ -1,22 +1,22 @@
 ---
-title: "PrintForm — Składnik (Visual Basic)"
+title: PrintForm — Składnik (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - PrintForm component [Visual Basic]
 ms.assetid: 03de98b8-b54c-4764-91d7-83c64e974750
-caps.latest.revision: 
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 890d5a3a3f9c3a737a59e17fef0d4ac0407e9924
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="printform-component-visual-basic"></a>PrintForm — Składnik (Visual Basic)
 <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> Składnik [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umożliwia drukowanie obraz formularza systemu Windows w czasie wykonywania. Jego zachowanie zastępuje te `PrintForm` metody we wcześniejszych wersjach programu Visual Basic.  
@@ -37,9 +37,9 @@ ms.lasthandoff: 11/21/2017
 ### <a name="key-methods-properties-and-events"></a>Klucz metod, właściwości i zdarzeń  
  Metoda klucza <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnik jest <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> metodę, która wyświetla obraz formularza drukarki, okno podglądu wydruku lub pliku. Istnieją dwie wersje <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> metody:  
   
--   Wersja podstawowa bez parametrów:`Print()`  
+-   Wersja podstawowa bez parametrów: `Print()`  
   
--   Przeciążone wersji z parametrami, które określają zachowanie drukowania:`Print(printForm As Form, printFormOption As PrintOption)`  
+-   Przeciążone wersji z parametrami, które określają zachowanie drukowania: `Print(printForm As Form, printFormOption As PrintOption)`  
   
      `PrintOption` Parametr przeciążonej metody określa implementacja używane do drukowania formularza, czy pasek tytułu formularza, pasków przewijania i obramowania są drukowane i czy są drukowane przewijanego części formularza.  
   
@@ -51,11 +51,11 @@ ms.lasthandoff: 11/21/2017
   
  Klucz zdarzenia <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm> składnika są następujące:  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint>zdarzenie. Występuje, gdy <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> metoda jest wywoływana przed na pierwszej stronie drukuje dokument.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.BeginPrint> zdarzenie. Występuje, gdy <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> metoda jest wywoływana przed na pierwszej stronie drukuje dokument.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint>zdarzenie. Występuje po wydrukowaniu ostatniej strony.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.EndPrint> zdarzenie. Występuje po wydrukowaniu ostatniej strony.  
   
--   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings>zdarzenie. Występuje tuż przed wydrukowaniem każdej strony.  
+-   <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.QueryPageSettings> zdarzenie. Występuje tuż przed wydrukowaniem każdej strony.  
   
 ### <a name="remarks"></a>Uwagi  
  Jeśli formularz zawiera tekst lub grafiki narysowanymi przez <xref:System.Drawing.Graphics> metod, Użyj podstawowego <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> (`Print()`) metodę, aby go wydrukować. Grafika może nie być wyświetlana w niektórych systemach operacyjnych gdy przeciążona <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A> metoda jest używana.  
@@ -76,7 +76,7 @@ pf.Print()
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.Print%2A>  
  <xref:Microsoft.VisualBasic.PowerPacks.Printing.PrintForm.PrintAction%2A>  
- [Porady: Drukowanie formularza za pomocą składnika PrintForm](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
- [Porady: drukowanie obszarów klienckich formularza](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
- [Porady: drukowanie obszarów klienckich formularza i](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
- [Porady: Drukowanie formularza przewijanego](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)
+ [Instrukcje: drukowanie formularza za pomocą składnika PrintForm](../../../visual-basic/developing-apps/printing/how-to-print-a-form-by-using-the-printform-component.md)  
+ [Instrukcje: drukowanie obszarów klienckich formularza](../../../visual-basic/developing-apps/printing/how-to-print-the-client-area-of-a-form.md)  
+ [Instrukcje: drukowanie obszarów klienckich i nieklienckich formularza](../../../visual-basic/developing-apps/printing/how-to-print-client-and-non-client-areas-of-a-form.md)  
+ [Instrukcje: drukowanie formularza przewijanego](../../../visual-basic/developing-apps/printing/how-to-print-a-scrollable-form.md)

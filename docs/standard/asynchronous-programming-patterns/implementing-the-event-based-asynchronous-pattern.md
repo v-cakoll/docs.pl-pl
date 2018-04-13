@@ -1,12 +1,12 @@
 ---
 title: Implementacja wzorca asynchronicznego opartego na zdarzeniach
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,7 +23,7 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-caps.latest.revision: "20"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
@@ -31,10 +31,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 4c503b89c63d976fe6304291aa1157765fa5c6f7
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>Implementacja wzorca asynchronicznego opartego na zdarzeniach
 Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą zauważalnego opóźnienia, należy wziąć pod uwagę nadanie mu funkcji asynchroniczności zaimplementowanie [oparty na zdarzeniach asynchroniczny wzorzec — Przegląd](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md).  
@@ -172,7 +172,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
 -   Nazwa tego zdarzenia w następujący sposób:  
   
-    -   `ProgressChanged`Jeśli klasa ma wiele operacji asynchronicznych (lub jest oczekiwana Powiększ, aby dołączyć wielu operacji asynchronicznych w przyszłych wersjach);  
+    -   `ProgressChanged` Jeśli klasa ma wiele operacji asynchronicznych (lub jest oczekiwana Powiększ, aby dołączyć wielu operacji asynchronicznych w przyszłych wersjach);  
   
     -   *MethodName *** ProgressChanged** Jeśli klasa ma jednej operacji asynchronicznej.  
   
@@ -217,9 +217,9 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
   
  Podana metoda synchroniczna *MethodName*:  
   
--   `out`Parametry *MethodName* nie powinna być częścią *MethodName ***Async**. Zamiast tego powinna być częścią *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
+-   `out` Parametry *MethodName* nie powinna być częścią *MethodName ***Async**. Zamiast tego powinna być częścią *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
   
--   `ref`Parametry *MethodName* powinny się wyświetlać jako część *MethodName ***Async**i w ramach *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
+-   `ref` Parametry *MethodName* powinny się wyświetlać jako część *MethodName ***Async**i w ramach *MethodName *** CompletedEventArgs**  o takiej samej nazwie jak jej parametr odpowiadającej *MethodName* (chyba że jest bardziej odpowiednia nazwa).  
   
  Przykładowo podana:  
   

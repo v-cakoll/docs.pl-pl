@@ -1,24 +1,26 @@
 ---
 title: Element &lt;Assembly&gt; (architektura .NET Native)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
-caps.latest.revision: "24"
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: a34e49e4d11f442f15db2f06b330b8b84a165a08
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="ltassemblygt-element-net-native"></a>Element &lt;Assembly&gt; (architektura .NET Native)
 Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonym zestawie.  
@@ -62,7 +64,7 @@ Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonym zestaw
   
 |Wartość|Opis|  
 |-----------|-----------------|  
-|*nazwa_zestawu*|Prosta nazwa zestawu, bez jego rozszerzenie pliku. Ten atrybut odpowiada <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości. Na przykład nazwa zestawu o nazwie Extensions.dll jest "Rozszerzenia".<br /><br /> Można również określić literał `*Application*` zastosować zasady do wszystkich zestawów do pakietu aplikacji, czy te zestawy są załadowane, czy nie. `*Application*`nigdy nie stosuje zasady do zestawów platformy .NET Framework.|  
+|*assembly_name*|Prosta nazwa zestawu, bez jego rozszerzenie pliku. Ten atrybut odpowiada <xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> właściwości. Na przykład nazwa zestawu o nazwie Extensions.dll jest "Rozszerzenia".<br /><br /> Można również określić literał `*Application*` zastosować zasady do wszystkich zestawów do pakietu aplikacji, czy te zestawy są załadowane, czy nie. `*Application*` nigdy nie stosuje zasady do zestawów platformy .NET Framework.|  
   
 ## <a name="all-other-attributes"></a>Inne atrybuty  
   
@@ -74,16 +76,16 @@ Zastosowanie zasad wykonywania odbicia do wszystkich typów w określonym zestaw
   
 |Element|Opis|  
 |-------------|-----------------|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw podrzędnych.|  
-|[\<Typ >](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu.|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|Stosuje zasady odbicia do wszystkich typów w przestrzeni nazw podrzędnych.|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|Stosuje odbicia zasady do typu.|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|Stosuje zasady odbicia do skonstruowanego typu ogólnego.|  
   
 ### <a name="parent-elements"></a>Elementy nadrzędne  
   
 |Element|Opis|  
 |-------------|-----------------|  
 |[\<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md)|Służy jako kontener dla całej aplikacji typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Aplikacji >](../../../docs/framework/net-native/application-element-net-native.md) element może mieć wartość zero, co najmniej jeden `<Assembly>` elementów.|  
-|[\<Biblioteka >](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć wartość zero lub jeden `<Assembly>` elementu.|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|Definiuje zestaw zawierający typy i elementy członkowskie typu, w których metadane są dostępne w celu odbicia w czasie wykonywania. [ \<Biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element może mieć wartość zero lub jeden `<Assembly>` elementu.|  
   
 ## <a name="remarks"></a>Uwagi  
  `<Assembly>` Element definiuje zasad wykonywania dla wszystkich typów w zestawie. Różni się od [ \<biblioteki >](../../../docs/framework/net-native/library-element-net-native.md) element, który określa bibliotekę, ale zależy od jego elementów podrzędnych do definiowania zasad wykonywania odbicia. `<Assembly>` Element ma zastosowanie do wszystkich typów w zestawie, chyba że zostaną one zastąpione przez element podrzędny.  

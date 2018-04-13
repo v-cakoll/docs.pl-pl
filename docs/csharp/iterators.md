@@ -1,7 +1,7 @@
 ---
 title: Iteratory
-description: "Dowiedz się, jak za pomocą wbudowanych Iteratory C# oraz tworzenie własnych metody iteracyjne niestandardowych."
-keywords: .NET, .NET core
+description: Dowiedz się, jak za pomocą wbudowanych Iteratory C# oraz tworzenie własnych metody iteracyjne niestandardowych.
+keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 0a78fe3aa4d88cd5ea1c98f372e4d6672cff5236
-ms.sourcegitcommit: d095094e942eedf09530ea5636fbaf9029853027
+ms.openlocfilehash: 403a286e9b1168b9e913b3cb2764e7fe262017d4
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/19/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="iterators"></a>Iteratory
 
@@ -29,7 +29,7 @@ Utworzysz także metody iteracyjne, które metod, które tworzy iteratora dla el
 
 W języku C# udostępnia funkcje dla obu tych scenariuszy. Ten artykuł zawiera omówienie tych funkcji.
 
-Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również [wyświetlić lub pobrać przykład wypełnionego](https://github.com/dotnet/docs/blob/master/samples/csharp/iterators) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również [wyświetlić lub pobrać przykład wypełnionego](https://github.com/dotnet/samples/blob/master/csharp/iterators) dla tego tematu. Instrukcje pobrania, zobacz [przykłady i samouczki](../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="iterating-with-foreach"></a>Iterowanie za pomocą instrukcji foreach
 
@@ -169,7 +169,7 @@ private IEnumerable<int> IteratorMethod()
  
 Przyjrzyj się powyżej metod. Pierwszy korzysta ze standardu `return` instrukcji, aby zwrócić pustą kolekcję lub iteratora tworzone przez metodę drugiego. W drugiej metodzie `yield return` instrukcji można utworzyć żądanego sekwencji.
 
-## <a name="deeper-dive-into-foreach"></a>Bardziej zgłębić temat do`foreach`
+## <a name="deeper-dive-into-foreach"></a>Bardziej zgłębić temat do `foreach`
 
 `foreach` Instrukcji rozwija na standardowe idiom, która używa `IEnumerable<T>` i `IEnumerator<T>` interfejsów w celu iteracji przez wszystkie elementy kolekcji. Zmniejsza on również błędów, które deweloperzy tworzą przez nie zostało prawidłowo zarządzania zasobami. 
 

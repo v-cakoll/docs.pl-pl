@@ -1,5 +1,5 @@
 ---
-title: "Standardowe ciągi formatujące liczby"
+title: Standardowe ciągi formatujące liczby
 ms.date: 09/10/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -24,18 +24,18 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9416bff21607d8e37f9e7dbc270477539043fe8b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f042d72c76ddbf3b5eaf8923fc747325b701c9a6
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="standard-numeric-format-strings"></a>Standardowe ciągi formatujące liczby
 Ciągi standardowych formatów liczb służą do formatowania popularnych typów liczbowych. Ciąg formatu liczbowego standardowe mają postać `Axx`, gdzie:  
   
--   `A`jest nazywana pojedynczy znak alfabetu *specyfikatorze formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [niestandardowe ciągi formatów liczbowych](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
+-   `A` jest nazywana pojedynczy znak alfabetu *specyfikatorze formatu*. Dowolny ciąg formatu liczb, który zawiera więcej niż jeden znak alfabetyczny, w tym znak odstępu, jest interpretowany jako ciąg niestandardowego formatu liczb. Aby uzyskać więcej informacji, zobacz [niestandardowe ciągi formatów liczbowych](../../../docs/standard/base-types/custom-numeric-format-strings.md).  
   
--   `xx`jest nazywana całkowitą opcjonalne *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w reprezentacji ciągu z liczbą. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglania, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
+-   `xx` jest nazywana całkowitą opcjonalne *Specyfikator dokładności*. Specyfikator dokładności ma zakres od 0 do 99 i wpływa na liczbę cyfr w wyniku. Należy pamiętać, że Specyfikator dokładności określa liczbę cyfr w reprezentacji ciągu z liczbą. Nie zaokrągla samej liczby. Aby wykonać operację zaokrąglania, użyj <xref:System.Math.Ceiling%2A?displayProperty=nameWithType>, <xref:System.Math.Floor%2A?displayProperty=nameWithType>, lub <xref:System.Math.Round%2A?displayProperty=nameWithType> metody.  
   
      Gdy *Specyfikator dokładności* określa liczbę cyfr ułamkowych w ciągu wynik, ciągów wynikowych odzwierciedlają numery, które są zaokrąglane w kierunku od zera (oznacza to, za pomocą <xref:System.MidpointRounding.AwayFromZero?displayProperty=nameWithType>).  
   
@@ -48,24 +48,24 @@ Standardowe ciągi formatujące liczby obsługiwanych przez:
  
 - Programu .NET [złożonych funkcji formatowania](../../../docs/standard/base-types/composite-formatting.md), który jest używany przez niektóre `Write` i `WriteLine` metody <xref:System.Console> i <xref:System.IO.StreamWriter> klas, <xref:System.String.Format%2A?displayProperty=nameWithType> metody i <xref:System.Text.StringBuilder.AppendFormat%2A?displayProperty=nameWithType> — metoda. Funkcja format złożonego umożliwia obejmują jako jeden ciąg znaków, aby określić szerokość pola i dopasowanie liczb w polu reprezentacja ciągu wielu elementów danych. Aby uzyskać więcej informacji, zobacz [złożone formatowanie](../../../docs/standard/base-types/composite-formatting.md).  
 
-- [Ciągi interpolowane](../../csharp/language-reference/keywords/interpolated-strings.md) w języku C# i Visual Basic, które zapewniają uproszczoną składnię w porównaniu do ciągi formatujące złożonego.
+- [Ciągi interpolowane](../../csharp/language-reference/tokens/interpolated.md) w języku C# i Visual Basic, które zapewniają uproszczoną składnię w porównaniu do ciągi formatujące złożonego.
  
 > [!TIP]
 >  Możesz pobrać [formatowania narzędzie](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)ciągi aplikacji, która umożliwia zastosowanie formatu liczbowego lub daty i czasu wartości i wyświetla ciąg wyniku.  
   
-<a name="table"></a>Poniższej tabeli opisano specyfikatorów formatu liczbowego standardowe i zawiera przykładowe dane wyjściowe generowane przez każdego specyfikator formatu. Zobacz [uwagi](#NotesStandardFormatting) sekcji, aby uzyskać dodatkowe informacje o używaniu standardowe ciągi formatujące liczby i [przykład](#example) sekcji ilustracyjną kompleksowe ich użycia.  
+<a name="table"></a> Poniższej tabeli opisano specyfikatorów formatu liczbowego standardowe i zawiera przykładowe dane wyjściowe generowane przez każdego specyfikator formatu. Zobacz [uwagi](#NotesStandardFormatting) sekcji, aby uzyskać dodatkowe informacje o używaniu standardowe ciągi formatujące liczby i [przykład](#example) sekcji ilustracyjną kompleksowe ich użycia.  
   
 |Specyfikator formatu|Nazwa|Opis|Przykłady|  
 |----------------------|----------|-----------------|--------------|  
-|„C” lub „c”|Waluta|Wynik: wartość waluty.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [waluty specyfikator formatu ("C")](#CFormatString).|123.456 ("C" en US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥ 123<br /><br /> -123.456 ("C3", en US) -> ($123.456)<br /><br /> €-123,456 ->-123.456 ("C3", fr-FR)<br /><br /> -123.456 ("C3", ja-JP) ->-¥ 123.456|  
-|„D” lub „d”|Wartość dziesiętna|Wynik: liczby całkowite z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: minimalna liczba cyfr.<br /><br /> Domyślny specyfikator dokładności: minimalna liczba wymaganych cyfr.<br /><br /> Więcej informacji: [specyfikator formatu Decimal("D")](#DFormatString).|1234 -> 1234 ("D")<br /><br /> -001234 ->-1234 ("D6")|  
-|„E” lub „e”|Wartość wykładnicza (naukowa)|Wynik: zapis wykładniczy.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: 6.<br /><br /> Więcej informacji: [wykładniczej ("E") specyfikator formatu](#EFormatString).|1052.0329112756 ("E" en US) -> 1.052033E + 003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en US) -> - 1.05e + 003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
+|„C” lub „c”|Waluta|Wynik: wartość waluty.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.CurrencyDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [waluty specyfikator formatu ("C")](#CFormatString).|123.456 ("C", en-US) -> $123.46<br /><br /> 123.456 ("C", fr-FR) -> 123,46 €<br /><br /> 123.456 ("C", ja-JP) -> ¥123<br /><br /> -123.456 ("C3", en US) -> ($123.456)<br /><br /> €-123,456 ->-123.456 ("C3", fr-FR)<br /><br /> -123.456 ("C3", ja-JP) -> -¥123.456|  
+|„D” lub „d”|Wartość dziesiętna|Wynik: liczby całkowite z opcjonalnym znakiem minus.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: minimalna liczba cyfr.<br /><br /> Domyślny specyfikator dokładności: minimalna liczba wymaganych cyfr.<br /><br /> Więcej informacji: [specyfikator formatu Decimal("D")](#DFormatString).|1234 ("D") -> 1234<br /><br /> -1234 ("D6") -> -001234|  
+|„E” lub „e”|Wartość wykładnicza (naukowa)|Wynik: zapis wykładniczy.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślny specyfikator dokładności: 6.<br /><br /> Więcej informacji: [wykładniczej ("E") specyfikator formatu](#EFormatString).|1052.0329112756 ("E", en-US) -> 1.052033E+003<br /><br /> 1052.0329112756 ("e", fr-FR) -> 1, 052033e + 003<br /><br /> -1052.0329112756 ("e2", en-US) -> -1.05e+003<br /><br /> -1052.0329112756 ("E2", fr_FR) -> -1, 05E + 003|  
 |„F” lub „f”|Wartość stałoprzecinkowa|Wynik: cyfry całkowite i dziesiętne z opcjonalnym znakiem minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [stałoprzecinkowe specyfikator ("F") w formacie](#FFormatString).|1234.567 ("F" en US) -> 1234,57<br /><br /> 1234.567 ("F", de-DE) -> 1234,57<br /><br /> 1234 ("F1" en US) -> 1234.0<br /><br /> 1234 ("F1", de-DE) -> 1234,0<br /><br /> -1234.5600 ->-1234.56 ("F4", en US)<br /><br /> -1234.56 ("F4", de-DE) -> - 1234,5600|  
-|„G” lub „g”|Ogólne|Wynik: Więcej compact stałoprzecinkowej lub naukowych notacji.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr znaczących.<br /><br /> Domyślny specyfikator dokładności: zależy od typu liczbowego.<br /><br /> Więcej informacji: [ogólny ("G") specyfikator formatu](#GFormatString).|-123.456 ->-123.456 ("G", en US)<br /><br /> -123.456 ("G", sv-SE) ->-123,456<br /><br /> 123.4546 ("G4" en US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en US) -> - 1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1, 23456789E-25|  
+|„G” lub „g”|Ogólne|Wynik: Więcej compact stałoprzecinkowej lub naukowych notacji.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: liczba cyfr znaczących.<br /><br /> Domyślny specyfikator dokładności: zależy od typu liczbowego.<br /><br /> Więcej informacji: [ogólny ("G") specyfikator formatu](#GFormatString).|-123.456 ("G", en-US) -> -123.456<br /><br /> -123.456 ("G", sv-SE) -> -123,456<br /><br /> 123.4546 ("G4", en-US) -> 123.5<br /><br /> 123.4546 ("G4", sv-SE) -> 123,5<br /><br /> -1.234567890e-25 ("G", en-US) -> -1.23456789E-25<br /><br /> -1.234567890e-25 ("G", sv-SE) -> -1,23456789E-25|  
 |„N” lub „n”|Wartość liczbowa|Wynik: cyfry całkowite i dziesiętne, separatory grup i separator dziesiętny z opcjonalnym znaku minus.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.NumberDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [specyfikator formatu liczbowego ("N")](#NFormatString).|1234.567 ("N" en US) -> 1234,57<br /><br /> 1234.567 ("N", ru-RU) -> 1 234,57<br /><br /> 1234 ("N1" en US) -> 1,234.0<br /><br /> 1234 ("N1", ru-RU) -> 1 234,0<br /><br /> -1,234.560 ->-1234.56 ("N3", en US)<br /><br /> 234,560-1 ->-1234.56 ("N3", ru-RU)|  
-|„P” lub „p”|Wartość procentowa|Wynik: liczba pomnożona przez 100 i wyświetlana z symbolem procentu.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Percent ("P"), specyfikator formatu](#PFormatString).|1 ("P" en US) -> % 100,00<br /><br /> 1 ("P", fr-FR) -> 100,00%<br /><br /> -0.39678 ("P1" en US) ->-39.7%<br /><br /> -0.39678 ("1", fr-FR) -> - 39,7%|  
-|„R” lub „r”|Wartość dwustronna|Wynik: ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; dla <xref:System.Single> typów, użyj "G9". </br> Specyfikator dokładności: ignorowany.<br /><br /> Więcej informacji: [wyrównana specyfikator formatu ("R")](#RFormatString).|123456789.12345678 -> 123456789.12345678 ("R")<br /><br /> -1234567890.1234567 ->-1234567890.12345678 ("R")|  
-|„X” lub „x”|Wartość szesnastkowa|Wynik: ciąg szesnastkowy.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: liczba cyfr w ciągu wynikowym.<br /><br /> Więcej informacji: [szesnastkowym ("X") specyfikator formatu](#XFormatString).|ONE -> 255 ("X")<br /><br /> one -> -1 ("x")<br /><br /> 00ff -> 255 ("x4")<br /><br /> 00FF -> -1 ("X4")|  
+|„P” lub „p”|Wartość procentowa|Wynik: liczba pomnożona przez 100 i wyświetlana z symbolem procentu.<br /><br /> Obsługiwany przez: wszystkie typy liczbowe.<br /><br /> Specyfikator dokładności: wymagana liczba miejsc dziesiętnych.<br /><br /> Domyślna Specyfikator dokładności: zdefiniowane przez <xref:System.Globalization.NumberFormatInfo.PercentDecimalDigits%2A?displayProperty=nameWithType>.<br /><br /> Więcej informacji: [Percent ("P"), specyfikator formatu](#PFormatString).|1 ("P" en US) -> % 100,00<br /><br /> 1 ("P", fr-FR) -> 100,00%<br /><br /> -0.39678 ("P1" en US) ->-39.7%<br /><br /> -0.39678 ("P1", fr-FR) -> -39,7 %|  
+|„R” lub „r”|Wartość dwustronna|Wynik: ciąg, który można dwustronnie konwertować na identyczny numer.<br /><br /> Obsługiwane przez: <xref:System.Single>, <xref:System.Double>, i <xref:System.Numerics.BigInteger>.<br /><br /> Uwaga: Zalecane w przypadku <xref:System.Numerics.BigInteger> tylko typu. Aby uzyskać <xref:System.Double> typów, użyj "G17"; dla <xref:System.Single> typów, użyj "G9". </br> Specyfikator dokładności: ignorowany.<br /><br /> Więcej informacji: [wyrównana specyfikator formatu ("R")](#RFormatString).|123456789.12345678 ("R") -> 123456789.12345678<br /><br /> -1234567890.12345678 ("R") -> -1234567890.1234567|  
+|„X” lub „x”|Wartość szesnastkowa|Wynik: ciąg szesnastkowy.<br /><br /> Obsługiwane przez: tylko typy całkowite.<br /><br /> Specyfikator dokładności: liczba cyfr w ciągu wynikowym.<br /><br /> Więcej informacji: [szesnastkowym ("X") specyfikator formatu](#XFormatString).|255 ("X") -> FF<br /><br /> -1 ("x") -> ff<br /><br /> 255 ("x4") -> 00ff<br /><br /> -1 ("X4") -> 00FF|  
 |Jakikolwiek inny pojedynczy znak|Nieznany specyfikator|Wynik: Zwraca <xref:System.FormatException> w czasie wykonywania.||  
   
 <a name="Using"></a>   
@@ -89,6 +89,8 @@ Standardowe ciągi formatujące liczby obsługiwanych przez:
      [!code-cpp[Formatting.Numeric.Standard#12](../../../samples/snippets/cpp/VS_Snippets_CLR/Formatting.Numeric.Standard/cpp/standardusage1.cpp#12)]
      [!code-csharp[Formatting.Numeric.Standard#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.Numeric.Standard/cs/standardusage1.cs#12)]
      [!code-vb[Formatting.Numeric.Standard#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Numeric.Standard/vb/standardusage1.vb#12)]  
+  
+-   Można podać jako `formatString` argumentów w elemencie interpolowanego wyrażenia w ciągu interpolowanym. Aby uzyskać więcej informacji, zobacz [ciągu interpolacji](../../csharp/language-reference/tokens/interpolated.md) tematu w odwołanie w C# lub [ciągi interpolowane](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) tematu w odwołanie w Visual Basic.  
   
  Poniższe sekcje zawierają szczegółowe informacje o poszczególnych ciągach standardowego formatu liczb.  
   
@@ -191,9 +193,9 @@ Standardowe ciągi formatujące liczby obsługiwanych przez:
   
 |Typ liczbowy|Dokładność domyślna|  
 |------------------|-----------------------|  
-|<xref:System.Byte>lub<xref:System.SByte>|3 cyfry|  
-|<xref:System.Int16>lub<xref:System.UInt16>|5 cyfr|  
-|<xref:System.Int32>lub<xref:System.UInt32>|10 cyfr|  
+|<xref:System.Byte> lub <xref:System.SByte>|3 cyfry|  
+|<xref:System.Int16> lub <xref:System.UInt16>|5 cyfr|  
+|<xref:System.Int32> lub <xref:System.UInt32>|10 cyfr|  
 |<xref:System.Int64>|19 cyfr|  
 |<xref:System.UInt64>|20 cyfr|  
 |<xref:System.Numerics.BigInteger>|Nieograniczone (taki sam jak ["R"](#RFormatString))|  

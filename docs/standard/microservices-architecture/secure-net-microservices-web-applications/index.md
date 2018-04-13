@@ -1,7 +1,7 @@
 ---
-title: "Zabezpieczanie Mikrousług .NET i aplikacji sieci Web"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zabezpieczanie Mikrousług .NET i aplikacji sieci Web"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
+keywords: Docker, Mikrousług, ASP.NET, kontenera
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017

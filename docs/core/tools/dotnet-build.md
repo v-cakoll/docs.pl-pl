@@ -3,35 +3,38 @@ title: DotNet kompilacji command - .NET Core interfejsu wiersza polecenia
 description: "Dotnet kompilacji polecenie kompilacji projektu i wszystkie jego zależności."
 author: mairaw
 ms.author: mairaw
-ms.date: 08/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 403dc2262e2aba29fc432581a4b325092cdfb25e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: e7181f502e2a25b17077366da9d9f071e7e94d33
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="dotnet-build"></a>Kompilacja DotNet
+# <a name="dotnet-build"></a>dotnet-build
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
 ## <a name="name"></a>Nazwa
 
-`dotnet build`-Tworzy projekt i wszystkie jego zależności.
+`dotnet build` -Tworzy projekt i wszystkie jego zależności.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental] [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--no-dependencies] [--no-incremental]
+    [--no-restore] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
-dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
+dotnet build [<PROJECT>] [-c|--configuration] [-f|--framework] [--no-dependencies] [--no-incremental] [-o|--output]
+    [-r|--runtime] [-v|--verbosity] [--version-suffix]
 dotnet build [-h|--help]
 ```
 ---
@@ -44,9 +47,9 @@ Jeśli projekt zawiera zależności innych firm, takich jak biblioteki z pakietu
 
 Kompilowanie wymaga *project.assets.json* pliku, który zawiera listę zależności aplikacji. Podczas tworzenia pliku [ `dotnet restore` ](dotnet-restore.md) jest wykonywana. Bez miejscowej pliku zasobów narzędzia nie można rozpoznać zestawy referencyjne zakończyło się z błędami. Z platformą .NET Core uruchom 1.x zestawu SDK, trzeba było explicitily `dotnet restore` przed uruchomieniem `dotnet build`. Począwszy od platformy .NET Core SDK 2.0, `dotnet restore` uruchamia implicitily po uruchomieniu `dotnet build`. Jeśli chcesz wyłączyć niejawne przywracania podczas wykonywania poleceń kompilacji, można przekazać `--no-restore` opcji.
 
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
-`dotnet build`korzysta z programu MSBuild w celu skompilowania projektu; w związku z tym obsługuje ona zarówno równoległe, jak i przyrostowe kompilacji. Zapoznaj się [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds) Aby uzyskać więcej informacji.
+`dotnet build` korzysta z programu MSBuild w celu skompilowania projektu; w związku z tym obsługuje ona zarówno równoległe, jak i przyrostowe kompilacji. Zapoznaj się [kompilacje przyrostowe](/visualstudio/msbuild/incremental-builds) Aby uzyskać więcej informacji.
 
 Oprócz jego opcje `dotnet build` polecenie akceptuje opcje MSBuild `/p` do ustawiania właściwości lub `/l` do definiowania rejestrator. Dowiedz się więcej o tych opcjach w [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). 
 
@@ -68,7 +71,7 @@ Plik projektu do kompilacji. Jeśli nie określono pliku projektu, MSBuild wyszu
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -114,7 +117,7 @@ Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m
 
 Określa sufiks wersji gwiazdkę (`*`) w polu wersja pliku projektu. Format jest zgodny wytyczne wersja narzędzia NuGet.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -167,3 +170,7 @@ Tworzenie projektu i jego zależności za pomocą wersji konfiguracji:
 Tworzenie projektu i jego zależności dla określonego środowiska uruchomieniowego (w tym przykładzie Ubuntu 16.04):
 
 `dotnet build --runtime ubuntu.16.04-x64`
+
+Skompiluj projekt i użyj określone źródło pakietu NuGet podczas operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
+
+`dotnet build --source c:\packages\mypackages`

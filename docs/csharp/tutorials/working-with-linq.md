@@ -1,6 +1,6 @@
 ---
 title: Praca z LINQ
-description: "W tym samouczku jest przedstawienie sposobu generowania sekwencji za pomocą LINQ, zapisać metod do użycia w zapytaniach LINQ i rozróżnienia oceny wczesny i opóźnieniem."
+description: W tym samouczku jest przedstawienie sposobu generowania sekwencji za pomocą LINQ, zapisać metod do użycia w zapytaniach LINQ i rozróżnienia oceny wczesny i opóźnieniem.
 keywords: .NET, .NET Core
 author: BillWagner
 ms.author: wiwagn
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 3f0fcfebf37d9e6dad52c69111cc5e374ae27183
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: ce6ed278c4e5a9583a827e8c3ff941c2f25bf182
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="working-with-linq"></a>Praca z LINQ
 
@@ -32,7 +32,7 @@ Magicians użyć tej metody, ponieważ wszystkie karty w znanej lokalizacji po k
 
 W celach naszych jest światła hearted przyjrzeć się manipulowanie sekwencji danych. Aplikację, która będzie kompilacji zostanie skonstruować talii kart, a następnie wykonaj sekwencję przesuwa zapisywania sekwencji zawsze wtedy. Będzie także porównać zaktualizowane kolejności do oryginalnego zamówienia.
 
-Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również sprawdzić [ukończone próbki](https://github.com/dotnet/docs/blob/master/samples/csharp/getting-started/console-linq) w repozytorium GitHub dotnet/docs. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Ten samouczek ma wiele kroków. Po każdym kroku możesz uruchomić aplikację i wyświetlany jest postęp. Możesz również sprawdzić [ukończone próbki](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq) w repozytorium GitHub dotnet/próbek. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 ## <a name="prerequisites"></a>Wymagania wstępne
 
@@ -313,7 +313,7 @@ Jako jeden końcowego oczyszczania można wprowadzić typu do reprezentowania ka
 
 [!CODE-csharp[PlayingCard](../../../samples/csharp/getting-started/console-linq/playingcard.cs?name=snippet1)]
 
-Ten typ używa *automatycznie implementowane właściwości tylko do odczytu* które są ustawiane w konstruktorze, a następnie nie może być modyfikowany. On również sprawia, że użycie nowego *ciągu interpolacji* funkcja, która ułatwia format ciąg w danych wyjściowych.
+Ten typ używa *automatycznie implementowane właściwości tylko do odczytu* które są ustawiane w konstruktorze, a następnie nie może być modyfikowany. On również sprawia, że użycie [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcja, która ułatwia format ciąg w danych wyjściowych.
 
 Zaktualizuj zapytanie, które generuje początkowy talii do użycia nowego typu:
 

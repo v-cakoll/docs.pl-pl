@@ -1,20 +1,20 @@
 ---
-title: "Odwołanie do symbolu i operatora (F#)"
-description: "Więcej informacji na temat symbole i operatory, które są używane w języku programowania w języku F #."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: Odwołanie do symbolu i operatora (F#)
+description: 'Więcej informacji na temat symbole i operatory, które są używane w języku programowania w języku F #.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/04/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: ab453800-d4d0-4a11-9d55-2b358d56af27
-ms.openlocfilehash: cb21ef7385cb679f9d445f8ee419db3d727fa057
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: 2fa4504c7059b4559b364d4000fe4ec6131430e5
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="symbol-and-operator-reference"></a>Odwołanie do symbolu i operatora
 
@@ -36,7 +36,7 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |`$`|Brak dostępnych informacji więcej.|<ul><li>Używana wewnętrznie do niektórych generowane przez kompilator zmienna nazwy i funkcji.<br /></li><ul/>|
 |`%`|[Operatory arytmetyczne](arithmetic-operators.md)<br /><br />[Cytaty kodu](../code-quotations.md)|<ul><li>Oblicza resztę liczby całkowitej.<br /></li><li>Używane do łączenia wyrażenia w cytaty kodu typu.<br /></li><ul/>|
 |`%%`|[Cytaty kodu](../code-quotations.md)|<ul><li>Używane do łączenia wyrażenia w cytaty kodu bez typu.<br /></li><ul/>|
-|`%?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza resztę z dzielenia liczby całkowitej po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
+|`%?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza resztę liczby całkowitej po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |`&`|[Wyrażenia dopasowania](../match-expressions.md)|<ul><li>Oblicza adres modyfikowalne wartości do użycia podczas współpracy z innych języków.<br /></li><li>Używane we wzorcach i.<br /></li><ul/>|
 |`&&`|[Operatory logiczne](boolean-operators.md)|<ul><li>Oblicza operacji logicznych i.<br /></li><ul/>|
 |`&&&`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza operacji i.<br /></li><ul/>|
@@ -81,8 +81,8 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |`<=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest mniejsza niż lub równa po prawej stronie; w przeciwnym razie zwraca `false`.<br /></li><ul/>|
 |`<=?`|[Operatory dopuszczające wartość null](nullable-operators.md)|<ul><li>Oblicza operacji "mniejsze niż lub równe" po prawej stronie jest typem zerowalnym.<br /></li><ul/>|
 |<code>&lt;&#124;</code>|[Funkcje](../functions/index.md)|<ul><li>Przekazuje jego wynik wyrażenie po prawej stronie funkcji po lewej stronie (operator potoku wstecz).<br /></li><ul/>|
-|<code>&lt;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#41; &#60; " T1, "T2" U &#62; Funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej dwa argumenty po prawej stronie do funkcji po lewej stronie.<br /></li><ul/>|
-|<code>&lt;&#124;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#124; &#41; &#60; " T1, "T2,"T3,"U &#62; Funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej trzech argumentów po prawej stronie do funkcji po lewej stronie.<br /></li><ul/>|
+|<code>&lt;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#41; &#60;"U"T2", T1&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhh-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej dwa argumenty po prawej stronie do funkcji po lewej stronie.<br /></li><ul/>|
+|<code>&lt;&#124;&#124;&#124;</code>|[Operatory. &#40; &#60; &#124; &#124; &#124; &#41; &#60;U "T1,"T2", T3,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-%5bhhh-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej trzech argumentów po prawej stronie do funkcji po lewej stronie.<br /></li><ul/>|
 |`<@...@>`|[Cytaty kodu](../code-quotations.md)|<ul><li>Rozgranicza kod maszynowy oferty.<br /></li><ul/>|
 |`<@@...@@>`|[Cytaty kodu](../code-quotations.md)|<ul><li>Rozgranicza kodu bez typu oferty.<br /></li><ul/>|
 |`=`|[Operatory arytmetyczne](arithmetic-operators.md)|<ul><li>Zwraca `true` Jeśli po lewej stronie jest taki sam, z prawej strony; w przeciwnym razie zwraca `false`.<br /></li><ul/>|
@@ -113,8 +113,8 @@ Poniższa tabela opisuje symbole używane w języku F #, zawiera łącza do tema
 |<code>&#124;&#124;</code>|[Operatory logiczne](boolean-operators.md)|<ul><li>Oblicza Boolean lub operacji.<br /></li><ul/>|
 |<code>&#124;&#124;&#124;</code>|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza lub operacji.<br /></li><ul/>|
 |<code>&#124;></code>|[Funkcje](../functions/index.md)|<ul><li>Przekazuje jego wynik po lewej stronie do funkcji po prawej stronie (operator potoku do przodu).<br /></li><ul/>|
-|<code>&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#62; &#41; &#60; " T1, "T2" U &#62; Funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej dwa argumenty po lewej stronie do funkcji po prawej stronie.<br /></li><ul/>|
-|<code>&#124;&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#124; &#62; &#41; &#60; " T1, "T2,"T3,"U &#62; Funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej trzech argumentów po lewej stronie do funkcji po prawej stronie.<br /></li><ul/>|
+|<code>&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#62; &#41; &#60;"U"T2", T1&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hh%5d-%5d%5b%27t1%2c%27t2%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej dwa argumenty po lewej stronie do funkcji po prawej stronie.<br /></li><ul/>|
+|<code>&#124;&#124;&#124;></code>|[Operatory. &#40; &#124; &#124; &#124; &#62; &#41; &#60;U "T1,"T2", T3,"&#62; — funkcja](https://msdn.microsoft.com/visualfsharpdocs/conceptual/operators.%5b-hhh%5d-%5d%5b%27t1%2c%27t2%2c%27t3%2c%27u%5d-function-%5bfsharp%5d)|<ul><li>Przekazuje krotki liczącej trzech argumentów po lewej stronie do funkcji po prawej stronie.<br /></li><ul/>|
 |`~~`|[Przeładowanie operatora](../operator-overloading.md)|<ul><li>Używane do deklarowania przeciążenia dla Jednoargumentowy operator negacji.<br /></li><ul/>|
 |`~~~`|[Operatory bitowe](bitwise-operators.md)|<ul><li>Oblicza bitowe nie operacji.<br /></li><ul/>|
 |`~-`|[Przeładowanie operatora](../operator-overloading.md)|<ul><li>Używane do deklarowania przeciążenia jednoargumentowy minus operator.<br /></li><ul/>|
@@ -127,7 +127,7 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 |--------|-------------|
 |`as`|Prawe|
 |`when`|Prawe|
-|<code>&#124;</code>(potoku)|Lewe|
+|<code>&#124;</code> (potoku)|Lewe|
 |`;`|Prawe|
 |`let`|Nonassociative|
 |`function`, `fun`, `match`, `try`|Nonassociative|
@@ -138,19 +138,19 @@ W poniższej tabeli przedstawiono kolejność pierwszeństwa operatorów i innyc
 |`or`, <code>&#124;&#124;</code>|Lewe|
 |`&`, `&&`|Lewe|
 |`:>`, `:?>`|Prawe|
-|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&`  *Op*,`&`<br /><br />(łącznie z `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Lewe|
+|`!=`*Op*, `<` *op*, `>` *op*, `=`, <code>&#124;</code> *op*, `&` *op* , `&`<br /><br />(łącznie z `<<<`, `>>>`, <code>&#124;&#124;&#124;</code>, `&&&`)|Lewe|
 |`^`*OP*<br /><br />(łącznie z `^^^`)|Prawe|
 |`::`|Prawe|
 |`:?`|Nie asocjacyjnej|
 |`-`*Op*, `+` *op*|Dotyczy element infiksu używa tych symboli|
 |`*`*Op*, `/` *op*, `%` *op*|Lewe|
 |`**`*OP*|Prawe|
-|`f x`(funkcja aplikacji)|Lewe|
-|<code>&#124;</code>(dopasowania wzorca)|Prawe|
+|`f x` (funkcja aplikacji)|Lewe|
+|<code>&#124;</code> (dopasowania wzorca)|Prawe|
 |Prefiks operatory (`+`*op*, `-` *op*, `%`, `%%`, `&`, `&&`, `!` *op*, `~` *op*)|Lewe|
 |`.`|Lewe|
 |`f(x)`|Lewe|
-|`f<`*typy*`>`|Lewe|
+|`f<`*Typy*`>`|Lewe|
 Język F # obsługuje niestandardowe przeładowania operatora. Oznacza to, zdefiniować własny operatorów. W poprzedniej tabeli *op* może być dowolną prawidłową sekwencją (prawdopodobnie pusta) znaków operator wbudowanych i zdefiniowanych przez użytkownika. W związku z tym można użyć tej tabeli można ustalić, jakie sekwencji znaków do użycia dla operatora niestandardowego do osiągnięcia żądany poziom priorytetu. Początkowe `.` znaki są ignorowane, gdy kompilator określa priorytet.
 
 ## <a name="see-also"></a>Zobacz też

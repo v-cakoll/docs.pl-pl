@@ -1,6 +1,6 @@
 ---
-title: "Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wstępne"
+title: Mikrousług .NET. Architektura aplikacji .NET konteneryzowanych
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Wstępne
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn

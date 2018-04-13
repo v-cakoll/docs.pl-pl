@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 82bec076-19d4-470c-979f-6c3a14b7c70a
-ms.openlocfilehash: a2db07c4f5688aece212681af40d69c377f6fa4a
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: 30d1c20d66fd0a193c05c97ee726a886f98356ad
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="tutorial-creating-a-type-provider"></a>Samouczek: Tworzenie dostawcy typów
 
@@ -22,11 +22,11 @@ Mechanizm dostawcy typów F # jest znaczną część jego obsługę programowani
 
 Ekosystem F # zawiera szereg dostawców typów dla często używanych usług danych Internet i enterprise. Na przykład:
 
-- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) zawiera dostawców typów JSON, XML, CSV i HTML dokumentów formatów
+- [FSharp.Data](https://fsharp.github.io/FSharp.Data/) zawiera dostawców typów JSON, XML, CSV i HTML dokumentów formatów.
 
 - [SQLProvider](https://fsprojects.github.io/SQLProvider/) udostępnia silnie typizowane dostęp do bazy danych SQL za pomocą mapowania obiektu i F # LINQ zapytań dotyczących tych źródeł danych.
 
-- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) ma ustawiony typ dostawców dla modelu com, czas stosu zaznaczone osadzania T-SQL w języku F #
+- [FSharp.Data.SqlClient](https://fsprojects.github.io/FSharp.Data.SqlClient/) zestaw dostawców typów dla kompilacji sprawdził osadzania T-SQL w języku F #.
 
 - [FSharp.Data.TypeProviders](https://fsprojects.github.io/FSharp.Data.TypeProviders/) jest starsza zbiór typ dostawcy do użycia tylko w przypadku programowania .NET Framework do uzyskiwania dostępu do usług danych SQL, Entity Framework, OData i WSDL.
 
@@ -62,7 +62,7 @@ Typ dostawcy są najlepiej sprawdza się w sytuacjach, gdy schemat jest stabilna
 
 ## <a name="a-simple-type-provider"></a>Dostawca typu prostego
 
-Ten przykład jest podobne do próbek w Samples.HelloWorldTypeProvider `examples` katalog [SDK dostawcy typów F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Dostawca udostępnia "przestrzeń typu", która zawiera 100 typy wymazywania, jak przedstawiono na poniższym kodem przy użyciu składni podpisu F #, a pomijając szczegóły dla wszystkich oprócz `Type1`. Aby uzyskać więcej informacji dotyczących skasowany typów, zobacz [szczegółowe informacje o wymazane podane typy](#details-about-erased-provided-types) dalszej części tego tematu.
+Ten przykład jest Samples.HelloWorldTypeProvider, podobnie jak próbek w `examples` katalog [SDK dostawcy typów F #](https://github.com/fsprojects/FSharp.TypeProviders.SDK/). Dostawca udostępnia "przestrzeń typu", która zawiera 100 typy wymazywania, jak przedstawiono na poniższym kodem przy użyciu składni podpisu F #, a pomijając szczegóły dla wszystkich oprócz `Type1`. Aby uzyskać więcej informacji dotyczących skasowany typów, zobacz [szczegółowe informacje o wymazane podane typy](#details-about-erased-provided-types) dalszej części tego tematu.
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -135,11 +135,11 @@ type SampleTypeProvider(config: TypeProviderConfig) as this =
   // And add them to the namespace
   do this.AddNamespace(namespaceName, types)
 
-  [<assembly:TypeProviderAssembly>] 
-  do()
+[<assembly:TypeProviderAssembly>] 
+do()
 ```
 
-Aby użyć tego dostawcy, otwórz osobnego wystąpienia programu Visual Studio 2012, utworzyć skrypt F #, a następnie dodaj odwołanie do dostawcy ze skryptu za pomocą #r, jak przedstawiono na poniższym kodem:
+Aby użyć tego dostawcy, otwórz osobnego wystąpienia programu Visual Studio, utworzyć skrypt F #, a następnie dodaj odwołanie do dostawcy ze skryptu za pomocą #r, jak przedstawiono na poniższym kodem:
 
 ```fsharp
 #r @".\bin\Debug\Samples.HelloWorldTypeProvider.dll"
@@ -451,13 +451,13 @@ Możliwość parametryzacja dostawców typu na statycznych danych umożliwia wie
 
 ### <a name="type-checked-regex-provider"></a>Typ zaznaczone dostawcy wyrażeń regularnych
 
-Wyobraź sobie chcesz implementowania dostawcy typu dla wyrażeń regularnych, który opakowuje .NET `System.Text.RegularExpressions.Regex` bibliotek interfejs, który udostępnia następujące gwarancje kompilacji:
+Wyobraź sobie chcesz implementowania dostawcy typu dla wyrażeń regularnych, który opakowuje .NET <xref:System.Text.RegularExpressions.Regex> bibliotek interfejs, który udostępnia następujące gwarancje kompilacji:
 
 - Sprawdzanie, czy wyrażenie regularne jest nieprawidłowy.
 
 - Udostępnia właściwości o nazwie na dopasowań, które są oparte na wszystkie nazwy grup w wyrażeniu regularnym.
 
-W tej sekcji przedstawiono sposób umożliwia tworzenie dostawcy typów `RegExProviderType` wpisz, że wzorzec wyrażenia regularnego parameterizes umożliwia uzyskiwanie tych korzyści. Kompilator będzie zgłaszać błąd, jeśli dostarczonym wzorcem nie jest prawidłowa, a dostawca typów można wyodrębnić grup z wzorzec, dzięki czemu będą dostępne za pomocą o nazwie właściwości dopasowań. Podczas projektowania dostawcy typów, należy rozważyć wygląd jego narażonych interfejsu API do użytkowników końcowych i jak przekształci ten projekt w kodu platformy .NET. Poniższy przykład przedstawia sposób użycia interfejsu API na pobranie składników numer kierunkowy:
+W tej sekcji przedstawiono sposób umożliwia tworzenie dostawcy typów `RegexTyped` wpisz, że wzorzec wyrażenia regularnego parameterizes umożliwia uzyskiwanie tych korzyści. Kompilator będzie zgłaszać błąd, jeśli dostarczonym wzorcem nie jest prawidłowa, a dostawca typów można wyodrębnić grup z wzorzec, dzięki czemu będą dostępne za pomocą o nazwie właściwości dopasowań. Podczas projektowania dostawcy typów, należy rozważyć wygląd jego narażonych interfejsu API do użytkowników końcowych i jak przekształci ten projekt w kodu platformy .NET. Poniższy przykład przedstawia sposób użycia interfejsu API na pobranie składników numer kierunkowy:
 
 ```fsharp
 type T = RegexTyped< @"(?<AreaCode>^\d{3})-(?<PhoneNumber>\d{3}-\d{4}$)">
@@ -480,7 +480,7 @@ Należy uwzględnić następujące kwestie:
 
 - `RegexTyped` Konstruktor powoduje wywołanie konstruktora wyrażeń regularnych, przekazując argument typu statycznego dla wzorca.
 
-- Wyniki `Match` metody są reprezentowane przez standardowe `System.Text.RegularExpressions.Match` typu.
+- Wyniki `Match` metody są reprezentowane przez standardowe <xref:System.Text.RegularExpressions.Match> typu.
 
 - Każda grupa o nazwie powoduje podane właściwości i uzyskiwania dostępu do właściwości powoduje użycie indeksatora w przypadku dopasowania `Groups` kolekcji.
 
@@ -552,7 +552,7 @@ Należy uwzględnić następujące kwestie:
 
 - Możesz użyć `obj` jako typ bazowy metody, ale będzie użyj `Regex` obiektu jako środowiska uruchomieniowego reprezentacja tego typu, jak w następnym przykładzie.
 
-- Wywołanie `Regex` zgłasza konstruktora `System.ArgumentException` po wyrażenie regularne jest nieprawidłowy. Kompilator przechwytuje tego wyjątku i raporty komunikat o błędzie do użytkownika w czasie kompilacji lub w edytorze programu Visual Studio. Ten wyjątek umożliwia wyrażeń regularnych do sprawdzenia poprawności bez uruchamiania aplikacji.
+- Wywołanie `Regex` zgłasza konstruktora <xref:System.ArgumentException> po wyrażenie regularne jest nieprawidłowy. Kompilator przechwytuje tego wyjątku i raporty komunikat o błędzie do użytkownika w czasie kompilacji lub w edytorze programu Visual Studio. Ten wyjątek umożliwia wyrażeń regularnych do sprawdzenia poprawności bez uruchamiania aplikacji.
 
 Typ zdefiniowany powyżej jest bezużyteczne jeszcze ponieważ nie zawiera ona właściwości lub metody łatwy do rozpoznania. Najpierw dodaj statycznego `IsMatch` metody:
 
@@ -583,7 +583,7 @@ let matchTy =
 ty.AddMember matchTy
 ```
 
-Można następnie dodać jedną właściwość na typ dopasowania dla każdej grupy. W czasie wykonywania, dopasowanie jest reprezentowany jako `System.Text.RegularExpressions.Match` wartości, należy użyć cudzysłowów, który definiuje właściwość `System.Text.RegularExpressions.Match.Groups` indeksowane właściwości, aby uzyskać odpowiednie grupy.
+Można następnie dodać jedną właściwość na typ dopasowania dla każdej grupy. W czasie wykonywania, dopasowanie jest reprezentowany jako <xref:System.Text.RegularExpressions.Match> wartości, należy użyć cudzysłowów, który definiuje właściwość <xref:System.Text.RegularExpressions.Match.Groups> indeksowane właściwości, aby uzyskać odpowiednie grupy.
 
 ```fsharp
 for group in r.GetGroupNames() do
@@ -756,13 +756,11 @@ Często może być typ dostawcy do prezentowania interfejsów API oparte na nie 
 Jako przykład prostego należy wziąć pod uwagę typ dostawcy do uzyskiwania dostępu do danych naukowych w formacie wartości rozdzielanych przecinkami (CSV). W tej sekcji założono, że pliki CSV zawiera wiersz nagłówka następuje ruchomy punkt danych, jak pokazano w poniższej tabeli:
 
 
-```
-|Distance (meter)|Time (second)|
+|Odległość (licznik)|Czas (sekundy)|
 |----------------|-------------|
 |50.0|3.7|
 |100.0|5.2|
 |150.0|6.4|
-```
 
 W tej sekcji przedstawiono sposób zapewniają typu, który można pobrać wiersze z `Distance` właściwości typu `float<meter>` i `Time` właściwości typu `float<second>`. Dla uproszczenia zostały wprowadzone następujące założenia:
 
@@ -788,7 +786,7 @@ printfn "%f" (float time)
 W takim przypadku kompilator powinien konwertować te wywołania coś jak w następującym przykładzie:
 
 ```fsharp
-let info = new MiniCsvFile("info.csv")
+let info = new CsvFile("info.csv")
 for row in info.Data do
 let (time:float) = row.[1]
 printfn "%f" (float time)
@@ -1045,9 +1043,10 @@ Te wersje są używane do tworzenia spacje na żądanie typów.
 
 ### <a name="providing-array-types-and-generic-type-instantiations"></a>Typy tablic i rodzajowy wystąpień typu
 
-Tworzenie podanych elementów członkowskich (których podpisów obejmują typy tablic, typów byref i wystąpień typów ogólnych) przy użyciu normalnych `MakeArrayType`, `MakePointerType`, i `MakeGenericType` na dowolne wystąpienie System.Type, łącznie z `ProvidedTypeDefinitions`.
+Tworzenie podanych elementów członkowskich (których podpisów obejmują typy tablic, typów byref i wystąpień typów ogólnych) przy użyciu normalnych `MakeArrayType`, `MakePointerType`, i `MakeGenericType` na dowolne wystąpienie <xref:System.Type>, takie jak `ProvidedTypeDefinitions`.
 
-Uwaga: W niektórych przypadkach może być konieczne przy użyciu pomocnika w `ProvidedTypeBuilder.MakeGenericType`.  W dokumentacji zestawu SDK dostawcy typu więcej szczegółów.
+> [!NOTE]
+> W niektórych przypadkach może być konieczne przy użyciu pomocnika w `ProvidedTypeBuilder.MakeGenericType`.  Zobacz [dokumentacji zestawu SDK dostawcy typu](https://github.com/fsprojects/FSharp.TypeProviders.SDK/blob/master/README.md#explicit-construction-of-code-makegenerictype-makegenericmethod-and-uncheckedquotations) więcej szczegółów.
 
 ### <a name="providing-unit-of-measure-annotations"></a>Zapewnianie jednostki miary adnotacji
 
@@ -1096,12 +1095,12 @@ Wszystkie używa wszystkich elementów członkowskich z udostępnionych typów m
 
 #### <a name="providing-generated-types"></a>Zapewnianie wygenerowane typy
 
-Do tej pory ten dokument ma wyjaśniono sposób Określ typy wymazany. Umożliwia także mechanizm dostawcy typu w języku F # zapewnienie wygenerowane typy, które są dodawane jako rzeczywiste definicje typów .NET do użytkowników programu. Użytkownik musi odwoływać się do wygenerowanego podane typy przy użyciu definicji typu.
+Do tej pory ten dokument ma wyjaśniono, jak zapewnić wymazanej typów. Umożliwia także mechanizm dostawcy typu w języku F # zapewnienie wygenerowane typy, które są dodawane jako rzeczywiste definicje typów .NET do użytkowników programu. Użytkownik musi odwoływać się do wygenerowanego podane typy przy użyciu definicji typu.
 
 ```fsharp
 open Microsoft.FSharp.TypeProviders 
 
-type Service = ODataService<" https://services.odata.org/Northwind/Northwind.svc/">
+type Service = ODataService<"http://services.odata.org/Northwind/Northwind.svc/">
 ```
 
 Kod pomocnika 0,2 ProvidedTypes, który wchodzi w skład wersji języka F # 3.0 ma tylko ograniczoną obsługę dostarczanie wygenerowane typy. Poniższe instrukcje musi mieć wartość true dla definicji wygenerowanego typu:

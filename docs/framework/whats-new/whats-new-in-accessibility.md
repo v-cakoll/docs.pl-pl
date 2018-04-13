@@ -16,11 +16,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6a6759ae285f2dd101bddf71ea8e5ca792e87df
-ms.sourcegitcommit: 957c696f25e39f923a827fc3ad5e8ab72768838c
+ms.openlocfilehash: 5f17550bc0cc4919f00dc93c8e92d258b38c4f76
+ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/16/2018
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>What's new in ułatwień dostępu w programie .NET Framework
 
@@ -112,7 +112,7 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 Począwszy od programu .NET Framework 4.7.1 ulepszenia duży kontrast zostały wprowadzone do różnych formantów WPF. Teraz są one widoczne podczas <xref:System.Windows.SystemParameters.HighContrast%2A> ustawiono motywu. Należą do nich następujące elementy:
 
-- <xref:System.Windows.Controls.Expander>Formant
+- <xref:System.Windows.Controls.Expander> Formant
 
     Fokus visual dla <xref:System.Windows.Controls.Expander> kontroli jest teraz widoczne. Elementy wizualne klawiatury dla <xref:System.Windows.Controls.ComboBox>,<xref:System.Windows.Controls.ListBox>, i <xref:System.Windows.Controls.RadioButton> formanty są również widoczne. Na przykład:
 
@@ -124,7 +124,7 @@ Począwszy od programu .NET Framework 4.7.1 ulepszenia duży kontrast zostały w
 
     ![Kontrolkę Expander z fokusem po ulepszenia ułatwień dostępu](media/expander-after.png)
 
-- <xref:System.Windows.Controls.CheckBox>i <xref:System.Windows.Controls.RadioButton> formantów
+- <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> formantów
  
     Tekst w <xref:System.Windows.Controls.CheckBox> i <xref:System.Windows.Controls.RadioButton> formantów jest teraz lepiej widoczne po wybraniu w kompozycji dużego kontrastu. Na przykład:
 
@@ -136,7 +136,7 @@ Począwszy od programu .NET Framework 4.7.1 ulepszenia duży kontrast zostały w
 
     ![Przycisk radiowy duży kontrast z fokusem po ulepszenia ułatwień dostępu](media/radio-button-after.png)
 
-- <xref:System.Windows.Controls.ComboBox>Formant
+- <xref:System.Windows.Controls.ComboBox> Formant
  
     Począwszy od programu .NET Framework 4.7.1, obramowania wyłączone <xref:System.Windows.Controls.ComboBox> formant jest kolor wyłączonego tekstu. Na przykład:
     
@@ -168,7 +168,7 @@ Począwszy od programu .NET Framework 4.7.1 ulepszenia duży kontrast zostały w
 
     ![Toolbar.ComboBoxStyleKey po ulepszenia ułatwień dostępu](media/comboboxstylekey-after.png) 
 
-- <xref:System.Windows.Controls.DataGrid>Formant
+- <xref:System.Windows.Controls.DataGrid> Formant
 
     Począwszy od programu .NET Framework 4.7.1, Strzałka wskaźnika sortowania w <xref:System.Windows.Controls.DataGrid> steruje teraz używa Popraw kolorów motywu. Na przykład:
 
@@ -201,7 +201,7 @@ W programie .NET Framework 4.7.1 formularze systemu Windows (WinForms) zawiera z
 Począwszy od programu .NET Framework 4.7.1 różnych formantów WinForms oferują ulepszoną renderowania w trybach HighContrast dostępne w systemie operacyjnym. Windows 10 zmienił wartości dla niektórych kolorów systemu duży kontrast, i formularze systemu Windows jest oparta na platformę Windows 10 Win32. Aby uzyskać najlepsze wyniki należy uruchomić na najnowszej wersji systemu Windows i korzystania z najnowszych zmian systemu operacyjnego przez dodawanie pliku app.manifest aplikacja testowa i un komentarz systemu Windows 10 obsługiwane wiersza systemu operacyjnego, aby wyglądały one następujące:
 
 ```xml
-<!– Windows 10 –>
+<!-- Windows 10 -->
 <supportedOS Id=”{8e0f7a12-bfb3-4fe8-b9a5-48fd50a15a9a}” />
 ```
 Niektóre zmiany duży kontrast należą:

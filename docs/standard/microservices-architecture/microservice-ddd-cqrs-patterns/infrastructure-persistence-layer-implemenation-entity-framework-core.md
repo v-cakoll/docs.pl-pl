@@ -1,7 +1,7 @@
 ---
 title: "Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core"
 description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 67f89b4ee42d896497f462b80d41afff6b347e05
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core
 
@@ -34,13 +34,13 @@ Wprowadzenie do podstawowych EF jest już dostępne w dokumentacji firmy Microso
 -   **Program Entity Framework Core**
     [*https://docs.microsoft.com/ef/core/*](https://docs.microsoft.com/ef/core/)
 
--   **Wprowadzenie do programu Entity Framework Core za pomocą programu Visual Studio i ASP.NET Core**
+-   **Wprowadzenie do platformy ASP.NET Core oraz Entity Framework Core za pomocą programu Visual Studio**
     [*https://docs.microsoft.com/aspnet/core/data/ef-mvc/*](https://docs.microsoft.com/aspnet/core/data/ef-mvc/)
 
 -   **Klasa DbContext**
     [*https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext*](https://docs.microsoft.com/ef/core/api/microsoft.entityframeworkcore.dbcontext)
 
--   **Porównanie EF Core & EF6.x**
+-   **Porównaj EF Core & EF6.x**
     [*https://docs.microsoft.com/ef/efcore-and-ef6/index*](https://docs.microsoft.com/ef/efcore-and-ef6/index)
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>Infrastruktura w Entity Framework Core z punktu widzenia DDD
@@ -241,13 +241,13 @@ Należy pamiętać, że przy użyciu okresu istnienia singleton dla repozytorium
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Implementowanie repozytorium i jednostki pracy w aplikacji platformy ASP.NET MVC**
-    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/ Implementing-the-Repository-and-Unit-of-Work-patterns-in-an-ASP-NET-MVC-Application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+    [*https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://www.asp.net/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
--   **Jonathanowi Allen. Strategie implementacji dla repozytorium wzorca z programu Entity Framework, Dapper i łańcucha**
+-   **Jonathanowi Allen. Strategie implementacji wzorca repozytorium Entity Framework, Dapper i łańcuch**
     [*https://www.infoq.com/articles/repository-implementation-strategies*](https://www.infoq.com/articles/repository-implementation-strategies)
 
 -   **Torre de la Cesarowi. Porównywanie okresy istnienia usługi kontenera platformy ASP.NET Core IoC z zakresami wystąpienia kontenera Autofac IoC**
-    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/ comparing-ASP-NET-Core-IOC-Service-LIFE-Times-and-autofac-IOC-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+    [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
 
 ## <a name="table-mapping"></a>Mapowania tabeli
 
@@ -330,7 +330,7 @@ Kod w tym przykładzie przedstawiono kilka jawne deklaracje i mapowania. Konwenc
 
 ### <a name="the-hilo-algorithm-in-ef-core"></a>Algorytm Hi/Lo EF główną
 
-Interesujących aspektów kodu w poprzednim przykładzie jest, że używa [algorytm Hi/Lo](https://vladmihalcea.com/2014/06/23/the-hilo-algorithm/) jako strategii generowania kluczy.
+Interesujących aspektów kodu w poprzednim przykładzie jest, że używa [algorytm Hi/Lo](https://vladmihalcea.com/the-hilo-algorithm/) jako strategii generowania kluczy.
 
 Algorytm Hi/Lo jest przydatne, gdy potrzebne są klucze unikatowe. Jako podsumowanie algorytm Hi-Lo przypisuje unikatowe identyfikatory wierszy tabeli a nie w zależności od natychmiast przechowywania wiersza w bazie danych. Dzięki temu można Rozpocznij od razu, za pomocą identyfikatorów, jak się dzieje z bazą danych sekwencyjnych regularne identyfikatorów.
 
@@ -457,13 +457,13 @@ Mimo że firma Microsoft nie jest zalecane, aby zwracać IQueryable z repozytori
 
 #### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Tabela mapowania**
+-   **Mapowania tabeli**
     [*https://docs.microsoft.com/ef/core/modeling/relational/tables*](https://docs.microsoft.com/ef/core/modeling/relational/tables)
 
 -   **Generuj klucze z programu Entity Framework Core za pomocą HiLo**
     [*http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/*](http://www.talkingdotnet.com/use-hilo-to-generate-keys-with-entity-framework-core/)
 
--   **Tworzenie kopii pola**
+-   **Pola zapasowego**
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Hermetyzowany kolekcje w programie Entity Framework Core**
@@ -477,4 +477,4 @@ Mimo że firma Microsoft nie jest zalecane, aby zwracać IQueryable z repozytori
     
 
 >[!div class="step-by-step"]
-[Poprzednie] (infrastruktury trwałości warstwy design.md) [dalej] (nosql — bazy danych — trwałości infrastructure.md)
+[Previous] (infrastructure-persistence-layer-design.md) [Next] (nosql-database-persistence-infrastructure.md)

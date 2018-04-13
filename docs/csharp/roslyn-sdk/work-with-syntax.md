@@ -1,6 +1,6 @@
 ---
-title: "Użyj zestawu SDK platformy kompilatora .NET modelu składni"
-description: "Ten przegląd zawiera opis typów, używaną do zrozumienia i manipulowania składni węzłów."
+title: Użyj zestawu SDK platformy kompilatora .NET modelu składni
+description: Ten przegląd zawiera opis typów, używaną do zrozumienia i manipulowania składni węzłów.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/15/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: 09d07e6257ad7d32d75328a8c1850888b4d0b937
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 0230777c59185a6b50d5dac5066efc3afa347f44
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="work-with-syntax"></a>Praca z składni
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/05/2018
 
 Drzewa składni są podstawowej struktury używany dla kompilacji, analizy kodu, powiązanie, refaktoryzacji funkcje IDE i generowania kodu. Żadna część kod źródłowy jest rozpoznawany bez najpierw są zidentyfikowane i przydzielone do jednego z wielu elementów dobrze znanego strukturalnych języka. 
 
-Drzewa składni ma trzy atrybuty klucza. Pierwszy atrybut jest, że drzewa składni przechowywać wszystkie informacje o źródle w pełnej rozdzielczości. Oznacza to, że drzewa składni zawiera każdą informacji zamieszczonych w tekst źródłowy, co gramatyczne konstrukcja co leksykalne token i wszystkie inne w między, w tym spacji, komentarze i dyrektywy preprocesora. Na przykład każdy literał wymienionych w źródle jest reprezentowany dokładnie tak, jak została zapisana. Gdy program jest niekompletna lub nieprawidłowo sformułowany przez reprezentujący pominięto lub brak tokenów w drzewie składni drzewa składni także reprezentować błędów w kodzie źródłowym.  
+Drzewa składni ma trzy atrybuty klucza. Pierwszy atrybut jest, że drzewa składni przechowywać wszystkie informacje o źródle w pełnej rozdzielczości. Oznacza to, że drzewa składni zawiera każdą informacji zamieszczonych w tekst źródłowy, co gramatyczne konstrukcja co leksykalne token i wszystkie inne w między, w tym biały znak, komentarze i dyrektywy preprocesora. Na przykład każdy literał wymienionych w źródle jest reprezentowany dokładnie tak, jak została zapisana. Gdy program jest niekompletna lub nieprawidłowo sformułowany przez reprezentujący pominięto lub brak tokenów w drzewie składni drzewa składni także reprezentować błędów w kodzie źródłowym.  
 
 Dzięki temu drugi atrybut drzewa składni. Drzewo składni uzyskane z analizatora może wygenerować dokładne tekst, który został zanalizowany z. Z poziomu każdego węzła składni jest możliwość uzyskania Reprezentacja tekstowa typu poddrzewa początek w tym węźle. Oznacza to, że drzewa składni mogą być używane jako sposobu konstruowania i edytować tekst źródłowy. Tworząc drzewa posiadanego co za tym idzie utworzone równoważne tekstu i edytując drzewo składni, co nowego drzew zmiany poza do istniejącego drzewa, należy skutecznie edytować tekst. 
 
@@ -57,7 +57,7 @@ Na przykład token literału liczby całkowitej reprezentuje wartość numeryczn
 
 ## <a name="syntax-trivia"></a>Elementy towarzyszące składni składni
 
-Elementy towarzyszące składni składni reprezentują części tekstu źródłowego, które przede wszystkim nieważny do normalnej wiedzę na temat kodu, na przykład spacji, komentarze i dyrektywy preprocesora. Podobnie jak tokeny składni elementy towarzyszące składni są typów wartości. Pojedynczy <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> typ jest używany do opisania wszystkich rodzajów elementy towarzyszące składni.
+Elementy towarzyszące składni składni reprezentują części tekstu źródłowego, które przede wszystkim nieważny do normalnej wiedzę na temat kodu, na przykład biały znak, komentarze i dyrektywy preprocesora. Podobnie jak tokeny składni elementy towarzyszące składni są typów wartości. Pojedynczy <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> typ jest używany do opisania wszystkich rodzajów elementy towarzyszące składni.
 
 Ponieważ elementy towarzyszące składni nie są częścią składni języka normalne i może występować w dowolnym miejscu między dwoma tokenów, ich nie znajdują się w drzewie składni jako element podrzędny węzła. Jeszcze ponieważ są one ważne podczas wykonywania funkcji, takich jak refaktoryzacji i obsługa pełnej rozdzielczości na tekst źródłowy, są dostępne jako część drzewa składni.
 
@@ -69,7 +69,7 @@ W przeciwieństwie do węzłów składni i tokeny składni elementy towarzysząc
 
 Wszystkie węzły, token i elementy towarzyszące składni wie jej położenie w obrębie tekst źródłowy i liczbę znaków, który składa się z. Położenie tekstu jest reprezentowany jako liczba całkowita 32-bitowy, który jest liczony od zera `char` indeksu. A <xref:Microsoft.CodeAnalysis.Text.TextSpan> obiekt jest położenie początku i liczbę znaków, zarówno prezentowane w postaci liczb całkowitych. Jeśli <xref:Microsoft.CodeAnalysis.Text.TextSpan> ma zerową długość, odnosi się do lokalizacji między znakami.
 
-Każdy węzeł ma dwa <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: < xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> i < xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
+Każdy węzeł ma dwa <xref:Microsoft.CodeAnalysis.Text.TextSpan> właściwości: <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> i <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan*>. 
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span*> Właściwość jest zakres tekstu od początku pierwszym tokenie w poddrzewie węzła na końcu ostatniego tokena. Ten zakres nie obejmuje żadnych wiodących lub końcowych elementy towarzyszące składni.
 
@@ -89,7 +89,7 @@ Węzeł instrukcji wewnątrz bloku ma należy do zakresu wskazanej przez pojedyn
 
 ## <a name="kinds"></a>Typy
 
-Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=nameWithType>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do < xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*? displayProperty = nameWithType > lub < xref: Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*? displayProperty = nameWithType > metody rozszerzenia.
+Każdy węzeł, token lub elementy towarzyszące składni ma <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> właściwość typu <xref:System.Int32?displayProperty=nameWithType>, który identyfikuje element dokładna składnia reprezentowany. Ta wartość mogą być rzutowane na wyliczenie specyficzny dla języka; każdego języka C# i VB, ma jeden `SyntaxKind` — wyliczenie (<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> i <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>odpowiednio) która wyświetla listę wszystkich możliwych węzłów, tokeny i elementy towarzyszące składni elementów, w gramatyce. Ta konwersja może odbywać się automatycznie po zalogowaniu się do <xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind*?displayProperty=nameWithType> lub <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind*?displayProperty=nameWithType> metody rozszerzenia.
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> Właściwości umożliwia łatwe ujednoznacznienia składni węzeł typów, które korzystać z tej samej klasy węzła. Tokeny i elementy towarzyszące składni ta właściwość jest jedynym sposobem, aby odróżnić jeden typ elementu z innej. 
 

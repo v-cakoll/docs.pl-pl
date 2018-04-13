@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: e0fe14f096ae0914235ea1d23b874f0aea906d9d
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="routing-introduction"></a>Wprowadzenie do routingu
 Usługa routingu zawiera ogólne podłączany SOAP pośredniczące umożliwiającej przesyłania wiadomości, na podstawie zawartości wiadomości. Usługa routingu umożliwia tworzenie złożonej logiki routingu, która umożliwia Implementowanie scenariuszy, takich jak usługi agregacji, przechowywanie wersji usługi routingu priorytet i routing multiemisji. Usługa routingu znajdują się również błąd obsługi, który pozwala zdefiniować listę kopii zapasowych punktów końcowych, do której komunikaty są wysyłane, jeśli wystąpi błąd podczas wysyłania do głównej docelowego punktu końcowego.  
@@ -163,7 +165,7 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
 > [!NOTE]
 >  Domyślnie usługa routingu oblicza tylko nagłówki komunikatu. Aby umożliwić filtry, aby uzyskać dostęp do treści komunikatu, należy ustawić <xref:System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly%2A> do `false`.  
   
- **Multiemisji**  
+ **Multicast**  
   
  Gdy wielu konfiguracji usługa routingu, użyj logiki wyłączny filtr, który kieruje komunikaty do tylko jednej określonego punktu końcowego, konieczne może być kierować danej wiadomości do wielu punktów końcowych docelowego. Do obsługi multiemisji wiadomości do wielu miejsc docelowych muszą być spełnione następujące warunki:  
   

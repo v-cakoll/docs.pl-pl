@@ -1,7 +1,7 @@
 ---
 title: .NET standard
 description: "Informacje o .NET Standard, jego wersje i implementacje .NET, które ją obsługują."
-keywords: .NET standard PCL, .NET
+keywords: .NET Standard, PCL, .NET
 author: mairaw
 ms.author: mairaw
 ms.date: 08/13/2017
@@ -13,11 +13,11 @@ ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9c0d375f160b886b104daeb68b88c25264e3e78f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: f22405f4547edcc5034ed221fa144512a237b050
+ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/20/2018
 ---
 # <a name="net-standard"></a>.NET standard
 
@@ -128,21 +128,21 @@ Przechowywanie wersji platformy .NET standard jest ważne w przypadku użycia. P
 
 Profil na podstawie zgodności PCL są dostarczane przez [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) pakietu NuGet. Ta zależność jest wymagana podczas odwoływania się do pakietów NuGet, które zawierają PCLs oparte na profilu.
 
-Oparte na profilu PCLs dostarczana w `netstandard` łatwiej wykorzystać niż zwykle spakowanych PCLs oparte na profilu. `netstandard`opakowanie jest zgodny z istniejących użytkowników.
+Oparte na profilu PCLs dostarczana w `netstandard` łatwiej wykorzystać niż zwykle spakowanych PCLs oparte na profilu. `netstandard` opakowanie jest zgodny z istniejących użytkowników.
 
 Można wyświetlić zbioru profilów PCL, które są zgodne z .NET Standard: 
 
 | Profil PCL | .NET standard | PCL platformy
 |:-----------:|:-------------:|------------------------------------------------------------------------------
-| Profile7    | 1.1           | Program .NET framework 4.5, Windows 8
+| Profile7    | 1.1           | .NET Framework 4.5, Windows 8
 | Profile31   | 1.0           | Windows 8.1, Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1, Windows Phone 8.1
-| Profile44   | 1.2           | .NET framework 4.5.1, Windows 8.1
+| Profile44   | 1.2           | .NET Framework 4.5.1, Windows 8.1
 | Profile49   | 1.0           | Program .NET framework 4.5, Windows Phone Silverlight 8
 | Profile78   | 1.0           | Program .NET framework 4.5, Windows 8, Windows Phone Silverlight 8
 | Profile84   | 1.0           | Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile111  | 1.1           | Program .NET framework 4.5, Windows 8, Windows Phone 8.1
-| Profile151  | 1.2           | .NET framework 4.5.1, Windows 8.1, Windows Phone 8.1
+| Profile151  | 1.2           | .NET Framework 4.5.1, Windows 8.1, Windows Phone 8.1
 | Profile157  | 1.0           | Windows 8.1, Windows Phone 8.1, Windows Phone Silverlight 8.1
 | Profile259  | 1.0           | Program .NET framework 4.5, Windows 8, Windows Phone 8.1, Windows Phone Silverlight 8
 

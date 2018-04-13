@@ -1,15 +1,15 @@
 ---
-title: "Kopiowanie istniejących węzłów z jednego dokumentu do innego"
-ms.custom: 
+title: Kopiowanie istniejących węzłów z jednego dokumentu do innego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3caa78c1-3448-4b7b-b83c-228ee857635e
-caps.latest.revision: "4"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 958dccfc184857b0edd12cd1d9afe7b3b468b1e6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="copying-existing-nodes-from-one-document-to-another"></a>Kopiowanie istniejących węzłów z jednego dokumentu do innego
 **ImportNode** metody to mechanizm, za pomocą którego węzeł lub całego węzła poddrzewo zostaną skopiowane z jednego **XmlDocument** na inny. Węzeł zwracana z wywołania jest kopią węzła w dokumencie źródłowym, w tym wartości atrybutów, nazwa węzła typu węzła i wszystkie atrybuty związane z przestrzeni nazw, takie jak prefiks, nazwę lokalną i przestrzeń nazw identyfikatora URI (Uniform Resource). Dokument źródłowy nie zostanie zmieniona. Po zaimportowaniu tego węzła, musisz dodać je do drzewa przy użyciu jednej z metod służy do wstawiania węzłów.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 12/23/2017
   
 |Typ węzła|*głębokie* parametr ma wartość true|*głębokie* parametr ma wartość false|  
 |---------------|------------------------------|-------------------------------|  
-|Element XmlAttribute|<xref:System.Xml.XmlAttribute.Specified%2A> Ustawiono **true** na XmlAttribute. Elementy podrzędne źródła **XmlAttribute** rekursywnie zaimportowane i wynikowy węzły są odbierane do utworzenia odpowiedniego poddrzewa.|*Głębokie* parametru nie ma zastosowania do **XmlAttribute** węzłów, ponieważ zawierają one ich węzłów podrzędnych z nimi po zaimportowaniu.|  
+|XmlAttribute|<xref:System.Xml.XmlAttribute.Specified%2A> Ustawiono **true** na XmlAttribute. Elementy podrzędne źródła **XmlAttribute** rekursywnie zaimportowane i wynikowy węzły są odbierane do utworzenia odpowiedniego poddrzewa.|*Głębokie* parametru nie ma zastosowania do **XmlAttribute** węzłów, ponieważ zawierają one ich węzłów podrzędnych z nimi po zaimportowaniu.|  
 |XmlCDataSection|Kopiuje węzła, w tym jego dane.|Kopiuje węzła, w tym jego dane.|  
 |XmlComment|Kopiuje węzła, w tym jego dane.|Kopiuje węzła, w tym jego dane.|  
 |XmlDocumentFragment|Elementów podrzędnych węzła źródłowego są rekursywnie zaimportowane i wynikowy węzłów odbierane do utworzenia odpowiedniego poddrzewa.|Pusta **XmlDocumentFragment** jest tworzony.|  

@@ -1,6 +1,6 @@
 ---
-title: "Zestaw SDK platformy kompilatora .NET pojęcia i model obiektów"
-description: "Ten przegląd zawiera tło, musisz działał efektywnie przez kompilator .NET SDK. Dowiesz się warstwy interfejsu API, główne typy i ogólny model obiektów."
+title: Zestaw SDK platformy kompilatora .NET pojęcia i model obiektów
+description: Ten przegląd zawiera tło, musisz działał efektywnie przez kompilator .NET SDK. Dowiesz się warstwy interfejsu API, główne typy i ogólny model obiektów.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/10/2017
@@ -8,11 +8,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: fd599118165dcb087f046a307a3f7aeef0cf7078
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 17a7884518f71d7df1f4a9fe8c91da87d7335e0d
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>Zrozumienie modelu zestawu SDK platformy kompilatora .NET
 
@@ -22,15 +22,15 @@ Kompilatory przetworzyć tworzonego następujące reguły strukturalnych, które
 
 Zestawu SDK platformy kompilatora .NET przedstawia Kompilatory języka C# i Visual Basic analizy kodu dla Ciebie klientów przez zapewnienie warstwę interfejsu API, która odzwierciedla potoku tradycyjnych kompilatora.
 
-![kroki przetwarzania kodu źródłowego z kodem obiektu potoku kompilatora](media/compiler-pipeline.png)
+![kroki przetwarzania kodu źródłowego z kodem obiektu potoku kompilatora](media/compiler-api-model/compiler-pipeline.png)
 
-Każdej fazy tego potoku jest inny składnik. Po pierwsze faza analizy tokenizes i przeanalizowany tekst źródłowy do składni stosowanej gramatyki języka. Drugi fazy deklaracji analizuje źródła i importowane metadane do formularza symbole. Obok fazie wiązania odpowiada identyfikatorów w kodzie do symboli. Na koniec fazy emitowanie emituje zestawu wszystkie informacje, które są tworzone przez kompilator.
+Każdej fazy tego potoku jest inny składnik. Po pierwsze faza analizy tokenizes i przeanalizowany tekst źródłowy do składni stosowanej gramatyki języka. Po drugie faza deklaracji analizuje źródła i importowane metadane do formularza symbole. Następnie fazie wiązania odpowiada identyfikatorów w kodzie do symboli. Na koniec fazy emitowanie emituje zestawu wszystkie informacje, które są tworzone przez kompilator.
 
-![potok kompilatora interfejsu api zapewnia dostęp do każdego kroku, który jest częścią pipelien kompilatora](media/compiler-pipeline-api.png)
+![potok kompilatora interfejsu api zapewnia dostęp do każdego kroku, który jest częścią pipelien kompilatora](media/compiler-api-model/compiler-pipeline-api.png)
 
 Odpowiadający każdej z tych faz, zestawu SDK platformy kompilatora .NET przedstawia model obiektów, która zezwala na dostęp do informacji w tej fazie. Faza analizy przedstawia drzewa składni, faza deklaracji przedstawia tabelę hierarchiczną symbol fazie wiązania przedstawia wynik analizy semantycznego kompilatora i faza emitowanie to interfejs API, który spowoduje utworzenie kodów bajtów IL.
 
-![dostępne z kompilatora języka usługi interfejsu api w każdym kroku procesu kompilatora](media/compiler-pipeline-lang-svc.png)
+![dostępne z kompilatora języka usługi interfejsu api w każdym kroku procesu kompilatora](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
 Każdy kompilatora łączy te składniki ze sobą jednej całości end-to-end.
 
@@ -40,7 +40,7 @@ Te interfejsy API są takie same jak używane przez program Visual Studio. Dla w
 
 Kompilator .NET SDK składa się z dwóch warstw głównego interfejsów API: kompilatora interfejsów API i interfejsów API obszarów roboczych.
 
-![warstwy interfejsu api reprezentowany przez kompilator interfejsów API potoku](media/api-layers.png)
+![warstwy interfejsu api reprezentowany przez kompilator interfejsów API potoku](media/compiler-api-model/api-layers.png)
 
 ### <a name="compiler-apis"></a>Interfejsy API kompilatora
 
@@ -48,7 +48,7 @@ Warstwa kompilatora zawiera modeli obiektów, które odpowiadają informacje udo
 
 ### <a name="diagnostic-apis"></a>Interfejsy API diagnostycznych
 
-W ramach swojej analizy kompilator może utworzyć zestaw diagnostyki obejmujące wszystkie elementy z składnię semantyczne i błędy określoną przypisania do różnych ostrzeżenia i informacyjną diagnostyki. Warstwę interfejsu API kompilatora tnie przedstawia Diagnostyka za pośrednictwem rozszerzonego interfejsu API, umożliwiający użytkownika analizatorów być podłączony do procesu kompilacji. Umożliwia on diagnostics zdefiniowane przez użytkownika, takich jak te utworzone przez narzędzia, takie jak StyleCop lub programu FxCop, do wyprodukowania obok zdefiniowane przez kompilator diagnostyki. Tworzenie diagnostyki w ten sposób ma korzyści integracji naturalny z narzędzi, takich jak program MSBuild i Visual Studio, które są zależne od diagnostyki dla środowiska, takie jak zatrzymywanie kompilacji na podstawie zasad i przedstawiający zygzaki na żywo w edytorze i sugerowanie kodu poprawki.
+W ramach swojej analizy kompilator może utworzyć zestaw diagnostyki obejmujące wszystkie elementy z składnię semantyczne i błędy określoną przypisania do różnych ostrzeżenia i informacyjną diagnostyki. Warstwę interfejsu API kompilatora przedstawia Diagnostyka za pośrednictwem rozszerzonego interfejsu API, umożliwiający użytkownika analizatorów być podłączony do procesu kompilacji. Umożliwia on diagnostics zdefiniowane przez użytkownika, takich jak te utworzone przez narzędzia, takie jak StyleCop lub programu FxCop, do wyprodukowania obok zdefiniowane przez kompilator diagnostyki. Tworzenie diagnostyki w ten sposób ma korzyści integracji naturalny z narzędzi, takich jak program MSBuild i Visual Studio, które są zależne od diagnostyki dla środowiska, takie jak zatrzymywanie kompilacji na podstawie zasad i przedstawiający zygzaki na żywo w edytorze i sugerowanie kodu poprawki.
 
 ### <a name="scripting-apis"></a>Interfejsy API obsługi skryptów
 

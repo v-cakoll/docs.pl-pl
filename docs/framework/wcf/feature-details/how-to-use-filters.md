@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 94d45537ca3edd5f31f1ed31898857f002312a0b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-use-filters"></a>Porady: Używanie filtrów
 W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfiguracji routingu, która używa wielu filtrów. W tym przykładzie wiadomości są kierowane do dwóch implementacji usługi Kalkulator, regularCalc i roundingCalc. Zarówno implementacje obsługują te same operacje; Jednak jedna usługa zaokrągla wszystkich obliczeń do najbliższej liczby całkowitej wartości przed zwróceniem. Aplikacja kliencka musi mieć możliwość wskazuje, czy należy użyć wersji zaokrąglania usługi; Jeśli wyrażono ma preferencji usługi wiadomość jest równoważone między dwie usługi. Operacje udostępnianych przez obie te usługi są:  
@@ -124,7 +126,7 @@ W tym temacie przedstawiono podstawowe czynności wymagane do utworzenia konfigu
      To **MessageFilter** szuka RoundingCalculator nagłówka wiadomości, która zawiera wartość "zaokrąglania". Ten nagłówek jest ustawionego przez klienta, aby wskazać, że komunikat powinny być kierowane do usługi roundingCalc.  
   
     > [!NOTE]
-    >  Prefiks przestrzeni nazw s12 jest zdefiniowany w tabeli nazw domyślnie i reprezentuje przestrzeni nazw "http://www.w3.org/2003/05/soap-envelope".  
+    >  Prefiks przestrzeni nazw s12 jest zdefiniowana w tabeli nazw i reprezentuje przestrzeni nazw "http://www.w3.org/2003/05/soap-envelope".  
   
 2.  Należy również zdefiniować filtry mające poszukaj komunikatów odebranych na dwa punkty końcowe wirtualnego. Pierwszy wirtualnego punkt końcowy jest punktem końcowym "regular/kalkulatora". Klient może wysyłać żądania do tego punktu końcowego, aby wskazać, że komunikat powinny być kierowane do usługi regularCalc. Następująca konfiguracja definiuje filtr, który używa <xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> ustalenie, czy odebrania wiadomości za pośrednictwem punktu końcowego o podanej nazwie w danych filtru.  
   

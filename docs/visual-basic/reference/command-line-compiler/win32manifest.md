@@ -1,32 +1,31 @@
 ---
-title: /win32manifest (Visual Basic)
-ms.date: 07/20/2015
+title: -win32manifest (Visual Basic)
+ms.date: 03/13/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - /win32manifest compiler option [Visual Basic]
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: a46641181c3ff66882468f8372bb97c3a49a8462
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: rpetrusha
+ms.author: ronpet
+ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 03/22/2018
 ---
-# <a name="win32manifest-visual-basic"></a>/win32manifest (Visual Basic)
+# <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.  
   
 ## <a name="syntax"></a>Składnia  
   
 ```  
-/win32manifest: fileName  
+-win32manifest: fileName  
 ```  
   
 ## <a name="arguments"></a>Argumenty  
@@ -39,19 +38,19 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku prze
  Domyślnie kompilator Visual Basic osadza manifest aplikacji, która określa poziom wykonywania żądany asInvoker. W tym samym folderze, w którym plik wykonywalny jest wbudowana, zwykle folderu bin\Debug lub bin\Release, gdy używasz programu Visual Studio tworzy plik manifestu. Jeśli chcesz podać niestandardowy manifest, na przykład określić wymagany poziom wykonywania highestAvailable lub requireAdministrator, ta opcja umożliwia Określ nazwę pliku.  
   
 > [!NOTE]
->  Ta opcja i [/win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) opcji wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji, w tym samym wierszu polecenia, wystąpi błąd kompilacji.  
+>  Ta opcja i [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) opcji wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji, w tym samym wierszu polecenia, wystąpi błąd kompilacji.  
   
  Aplikacja, która nie ma aplikacji manifestu, który określa wymagany poziom wykonywania podlegają wirtualizacji plików/rejestru w funkcji Kontrola konta użytkownika w systemie Windows Vista. Aby uzyskać więcej informacji o wirtualizacji, zobacz [wdrażania ClickOnce w systemie Windows Vista](/visualstudio/deployment/clickonce-deployment-on-windows-vista).  
   
  Aplikacji będą podlegać wirtualizacji, jeśli jest spełniony jeden z następujących warunków:  
   
-1.  Możesz użyć `/nowin32manifest` opcja i nie udostępniają manifestu w kolejnym kroku kompilacji lub jako część pliku zasobów systemu Windows (.res) przy użyciu `/win32resource` opcji.  
+1.  Możesz użyć `-nowin32manifest` opcja i nie udostępniają manifestu w kolejnym kroku kompilacji lub jako część pliku zasobów systemu Windows (.res) przy użyciu `-win32resource` opcji.  
   
 2.  Musisz podać niestandardowy manifest, która nie określa wymagany poziom wykonywania.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Umożliwia wyświetlenie i edytowanie pliku app.manifest domyślny, klikając **ustawienia kontroli konta użytkownika widoku** na **aplikacji** kartę w Projektancie projektu. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Umożliwia wyświetlenie i edytowanie pliku app.manifest domyślny, klikając **ustawienia kontroli konta użytkownika widoku** na **aplikacji** kartę w Projektancie projektu. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
- Możesz podać manifest aplikacji jako niestandardowy krok kompilacji po lub w ramach plik zasobów Win32 przy użyciu `/nowin32manifest` opcji. Tej samej opcji należy użyć, jeśli aplikacja ma być może ulec plików lub rejestrze wirtualizacji w systemie Windows Vista. Uniemożliwi to kompilatora tworzenie i osadzanie manifestu domyślnej w pliku PE.  
+ Możesz podać manifest aplikacji jako niestandardowy krok kompilacji po lub w ramach plik zasobów Win32 przy użyciu `-nowin32manifest` opcji. Tej samej opcji należy użyć, jeśli aplikacja ma być może ulec plików lub rejestrze wirtualizacji w systemie Windows Vista. Uniemożliwi to kompilatora tworzenie i osadzanie manifestu domyślnej w pliku PE.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie przedstawiono manifest domyślny, że kompilator Visual Basic wstawia do PE.  
@@ -75,4 +74,4 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku prze
   
 ## <a name="see-also"></a>Zobacz też  
  [Kompilator w wierszu polecenia programu Visual Basic](../../../visual-basic/reference/command-line-compiler/index.md)  
- [/ nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)
+ [-nowin32manifest (Visual Basic)](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)

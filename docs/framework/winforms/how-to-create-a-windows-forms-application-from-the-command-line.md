@@ -1,8 +1,9 @@
 ---
 title: 'Porady: tworzenie aplikacji formularzy systemu Windows z wiersza polecenia'
-ms.date: 03/30/2017
+ms.date: 03/14/2018
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,16 +13,15 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - Windows Forms, creating basic form
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
-caps.latest.revision: "10"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22acab6ea3912488ae1382ffb42ca5383a7311af
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+author: rpetrusha
+ms.author: ronpet
+ms.workload:
+- dotnet
+ms.openlocfilehash: 79fda0f5f455cbac50c0c1b51f0cd3bef4c5bfbc
+ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>Porady: tworzenie aplikacji formularzy systemu Windows z wiersza polecenia
 W poniższych procedurach opisano podstawowe kroki, które należy wykonać w celu tworzenia i uruchamiania aplikacji Windows Forms z wiersza polecenia. Brak kompleksową obsługę tych procedur w programie Visual Studio.  Zobacz też [wskazówki: Tworzenie prostego formularza systemu Windows](http://msdn.microsoft.com/library/z9w2f38k\(v=vs.100\)).  
@@ -49,9 +49,9 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać w ce
   
 4.  Dodaj `Main` metodę do klasy.  
   
-    1.  Zastosuj <xref:System.STAThreadAttribute> do `Main` metodę, aby określić aplikacji formularzy systemu Windows jest pojedynczy komórek wielowątkowych.  
+    1.  Zastosuj <xref:System.STAThreadAttribute> do języka C# `Main` metodę, aby określić aplikacji formularzy systemu Windows jest jednowątkowego apartamentu. (Nie jest potrzebny atrybut w języku Visual Basic, ponieważ w aplikacjach formularzy systemu Windows opracowana z użyciem języka Visual Basic modelu jednowątkowego apartamentu domyślnie.)  
   
-    2.  Wywołanie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> umożliwiają wygląd systemu Windows XP, do aplikacji.  
+    2.  Wywołanie <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> zastosować style systemu operacyjnego do aplikacji.  
   
     3.  Utwórz wystąpienie formularza i uruchom go.  
   
@@ -64,13 +64,13 @@ W poniższych procedurach opisano podstawowe kroki, które należy wykonać w ce
   
 2.  Kompiluj formularza.  
   
-    -   Jeśli używasz języka C#, wpisz:`csc form1.cs`  
+    -   Jeśli używasz języka C#, wpisz: `csc form1.cs`  
   
          `-or-`  
   
-    -   Jeśli używasz programu Visual Basic, wpisz:`vbc form1.vb /r:system.dll,system.drawing.dll,system.windows.forms.dll`  
+    -   Jeśli używasz programu Visual Basic, wpisz: `vbc form1.vb`  
   
-3.  W wierszu polecenia wpisz:`Form1.exe`  
+3.  W wierszu polecenia wpisz: `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>Dodawanie formantu i obsługi zdarzeń  
  Poprzednie kroki procedury przedstawionej tylko tworzenie podstawowych formularza systemu Windows, który kompiluje i uruchamia. Następnej procedury opisano, jak utworzyć i dodać kontrolkę w formularzu i obsługi zdarzeń dla formantu. Aby uzyskać więcej informacji dotyczących formantów, można dodać do formularzy systemu Windows, zobacz [formantów formularzy systemu Windows](../../../docs/framework/winforms/controls/index.md).  

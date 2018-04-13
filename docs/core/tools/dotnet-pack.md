@@ -3,16 +3,17 @@ title: polecenie Pakiet DotNet - .NET Core interfejsu wiersza polecenia
 description: "Polecenie Pakiet dotnet tworzy pakietów NuGet dla projektu platformy .NET Core."
 author: mairaw
 ms.author: mairaw
-ms.date: 12/13/2017
+ms.date: 03/10/2018
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 28cd05db0643097a7271fd0488354846598ba493
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 401a4491c27ea10d0fdf1877417f1e2d5da6839f
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dotnet-pack"></a>Pakiet DotNet
 
@@ -20,18 +21,19 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet pack`-Pakietów kodu do pakietu NuGet.
+`dotnet pack` -Pakietów kodu do pakietu NuGet.
 
 ## <a name="synopsis"></a>Streszczenie
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 ```
-dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies] [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
+dotnet pack [<PROJECT>] [-c|--configuration] [--force] [--include-source] [--include-symbols] [--no-build] [--no-dependencies]
+    [--no-restore] [-o|--output] [--runtime] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 ```
 dotnet pack [<PROJECT>] [-c|--configuration] [--include-source] [--include-symbols] [--no-build] [-o|--output] [-s|--serviceable] [-v|--verbosity] [--version-suffix]
 dotnet pack [-h|--help]
@@ -48,6 +50,8 @@ Domyślnie `dotnet pack` najpierw tworzy projekt. Jeśli chcesz uniknąć tego z
 
 Możesz podać właściwości programu MSBuild do `dotnet pack` polecenia procesu pakowania. Aby uzyskać więcej informacji, zobacz [właściwości metadanych NuGet](csproj.md#nuget-metadata-properties) i [dotyczące wiersza polecenia programu MSBuild](/visualstudio/msbuild/msbuild-command-line-reference). [Przykłady](#examples) sekcji przedstawia sposób użycia przełącznika MSBuild z kilku różnych scenariuszy.
 
+[!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
+
 ## <a name="arguments"></a>Argumenty
 
 `PROJECT`
@@ -56,13 +60,13 @@ Projekt do pakietu. Jest ścieżką do [plik csproj](csproj.md) lub w katalogu. 
 
 ## <a name="options"></a>Opcje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 `-c|--configuration {Debug|Release}`
 
 Definiuje konfigurację kompilacji. Wartość domyślna to `Debug`.
 
-`--force`Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Jest to równoważne usuwanie *project.assets.json* pliku.
+`--force` Wymusza wszystkie zależności, które można rozwiązać, nawet jeśli ostatniego przywracanie zakończyło się pomyślnie. Jest to równoważne usuwanie *project.assets.json* pliku.
 
 `-h|--help`
 
@@ -108,7 +112,7 @@ Definiuje wartość dla `$(VersionSuffix)` właściwości programu MSBuild w pro
 
 Ustawia poziom szczegółowości polecenia. Dozwolone wartości to `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, i `diag[nostic]`.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -157,7 +161,7 @@ Pakiet projektu w bieżącym katalogu:
 Pakiet `app1` projektu:
 
 `dotnet pack ~/projects/app1/project.csproj`
-    
+
 Pakiet projektu w bieżącym katalogu i umieszczenie wynikowy pakietów do `nupkgs` folderu:
 
 `dotnet pack --output nupkgs`
@@ -177,3 +181,7 @@ Ustaw wersję pakietu do `2.1.0` z `PackageVersion` właściwości programu MSBu
 Projekt dla określonego pakietu [platformy docelowej](../../standard/frameworks.md):
 
 `dotnet pack /p:TargetFrameworks=net45`
+
+Pakiet projektu i użyć określonego środowiska wykonawczego (systemu Windows Windows 10) dla operacji przywracania (.NET Core SDK 2.0 i nowsze wersje):
+
+`dotnet pack --runtime win10-x64`

@@ -1,18 +1,19 @@
 ---
 title: polecenie magazynu DotNet
-description: "Polecenie \"dotnet magazynu\" przechowuje określonych zestawów w magazynie pakietów środowiska wykonawczego."
+description: Polecenie "dotnet magazynu" przechowuje określonych zestawów w magazynie pakietów środowiska wykonawczego.
 author: bleroy
 ms.author: mairaw
 ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: c8e09141eebef2cbddf6742cceeff05e11c25adf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 80ea40dfbedba3dca0e767b66e14f5de22374d4f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="dotnet-store"></a>Magazyn DotNet
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet store`-Przechowuje określonych zestawów w [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md).
+`dotnet store` -Przechowuje określonych zestawów w [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md).
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="description"></a>Opis
 
-`dotnet store`przechowuje określonych zestawów w [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md). Domyślnie zestawy są zoptymalizowane pod kątem docelowego środowiska uruchomieniowego i framework. Aby uzyskać więcej informacji, zobacz [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md) tematu.
+`dotnet store` przechowuje określonych zestawów w [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md). Domyślnie zestawy są zoptymalizowane pod kątem docelowego środowiska uruchomieniowego i framework. Aby uzyskać więcej informacji, zobacz [Magazyn pakietu środowiska uruchomieniowego](../deploying/runtime-store.md) tematu.
 
 ## <a name="required-options"></a>Wymagane opcje
 
@@ -42,7 +43,7 @@ Określa [platformy docelowej](../../standard/frameworks.md).
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-Identyfikator środowiska uruchomieniowego do obiektu docelowego.
+[Identyfikator środowiska uruchomieniowego](../rid-catalog.md) do obiektu docelowego.
 
 ## <a name="optional-options"></a>Dodatkowe opcje
 

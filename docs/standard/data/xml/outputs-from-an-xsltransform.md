@@ -1,15 +1,15 @@
 ---
-title: "Dane wyjściowe z XslTransform"
-ms.custom: 
+title: Dane wyjściowe z XslTransform
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8e149d32-4b2f-493f-9e4b-d0d93475acde
-caps.latest.revision: "3"
+caps.latest.revision: ''
 author: mairaw
 ms.author: mairaw
 manager: wpickett
@@ -17,10 +17,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 647f3829f4b26791c063d5646669b2fcb7ab6684
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="outputs-from-an-xsltransform"></a>Dane wyjściowe z XslTransform
 Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjściowych `<xsl:output>` instrukcji z `method` atrybutu w poniższej tabeli opisano jest format danych wyjściowych, gdy <xref:System.Xml.Xsl.XslTransform.Transform%2A> metoda służy do zapisywania danych wyjściowych i format wyjściowy to zadeklarowany jako <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>.  
@@ -32,16 +32,16 @@ Ponieważ arkusze stylów można określić przy użyciu formatu danych wyjścio
   
 |\<Metoda XSL: output = > atrybutu|Format wyników|  
 |-----------------------------------------|-------------------|  
-|Metoda = "xml"|XML|  
-|Metoda = "kod html"|HTML|  
-|Metoda = "text"|Tekst|  
+|method="xml"|XML|  
+|method="html"|HTML|  
+|method="text"|Tekst|  
   
 > [!NOTE]
 >  Uwaga: `<xsl:output>` instrukcji jest ignorowany podczas dane wyjściowe <xref:System.Xml.Xsl.XslTransform.Transform%2A> jest metoda <xref:System.Xml.XmlReader> lub <xref:System.Xml.XmlWriter>.  
   
  Następujące atrybuty są obsługiwane podczas <xref:System.Xml.Xsl.XslTransform.Transform%2A> danych wyjściowych metody <xref:System.IO.Stream> lub <xref:System.IO.TextWriter>:  
   
--   kodowanie *  
+-   encoding*  
   
 -   Pomiń xml deklaracji  
   

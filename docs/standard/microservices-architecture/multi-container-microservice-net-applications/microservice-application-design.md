@@ -1,6 +1,6 @@
 ---
-title: "Projektowanie aplikacji korzystających z mikrousługi"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie aplikacji korzystających z mikrousługi"
+title: Projektowanie aplikacji korzystających z mikrousługi
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie aplikacji korzystających z mikrousługi
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -12,10 +12,10 @@ ms.workload:
 - dotnet
 - dotnetcore
 ms.openlocfilehash: 116ddb44655f0a9708a6496cbe7fb4fbc608300b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="designing-a-microservice-oriented-application"></a>Projektowanie aplikacji korzystających z mikrousługi
 
@@ -104,7 +104,7 @@ W związku z tym jednostki wdrożenia mikrousług (a nawet w przypadku baz danyc
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **eShopOnContainers GitHub repo. Źródłowy kod aplikacji odwołanie**
+-   **eShopOnContainers GitHub repo. Kod źródłowy aplikacji odwołania**
     *https://aka.ms/eShopOnContainers/*
 
 ## <a name="benefits-of-a-microservice-based-solution"></a>Korzyści wynikające z rozwiązaniem opartym na mikrousługi

@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 52aac5ff1862397616287a77eac063582703d509
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: a0f872ae930d17638e018cdd204cc08a773a3df5
+ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="dotnet-nuget-push"></a>wypychania nuget DotNet
 
@@ -20,7 +21,7 @@ ms.lasthandoff: 12/23/2017
 
 ## <a name="name"></a>Nazwa
 
-`dotnet nuget push`-Wypychanie pakietu do serwera i publikuje ją.
+`dotnet nuget push` -Wypychanie pakietu do serwera i publikuje ją.
 
 ## <a name="synopsis"></a>Streszczenie
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 12/23/2017
 
 `ROOT`
 
-Określ ścieżkę do pakietu i klucz interfejsu API do dystrybuowania pakietu do serwera.
+Określa ścieżkę pliku do pakietu, który ma zostać przeniesiony.
 
 ## <a name="options"></a>Opcje
 

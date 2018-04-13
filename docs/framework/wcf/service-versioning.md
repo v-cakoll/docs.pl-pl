@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 37575ead-d820-4a67-8059-da11a2ab48e2
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 791e201907f72f9d590f6d835fd6ec1bfc25633f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="service-versioning"></a>Przechowywanie wersji usługi
 Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia usług (i punktów końcowych, które udostępniają) może być konieczne zostanie zmieniony z różnych powodów, takich jak zmieniające się potrzeby biznesowe, wymagania dotyczące technologii informacji, lub do innych adresów problemy. Każda zmiana wprowadziła nową wersję usługi. W tym temacie wyjaśniono, jak należy wziąć pod uwagę przechowywania wersji [!INCLUDE[indigo1](../../../includes/indigo1-md.md)].  
@@ -110,7 +112,7 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
  Podobnie jak przechowywanie wersji kontraktów danych, przechowywanie wersji kontraktów usługi obejmuje również dodawanie, zmienianie i usuwanie operacji.  
   
 ### <a name="specifying-name-namespace-and-action"></a>Określanie nazwy i Namespace, akcja  
- Domyślnie nazwa kontraktu usługi jest nazwą interfejsu. Jego domyślnej przestrzeni nazw jest "http://tempuri.org" i "http://tempuri.org/contractname/methodname" jest akcja każdej operacji. Zaleca się, że użytkownik jawnie określić nazwę i przestrzeń nazw kontraktu usługi i akcji dla każdej operacji należy unikać "http://tempuri.org" i nazwy interfejsu i metoda zapobiec przypadkowym w kontrakcie usługi.  
+ Domyślnie nazwa kontraktu usługi jest nazwą interfejsu. Jest jego domyślnej przestrzeni nazw "http://tempuri.org", i działania każdej operacji "http://tempuri.org/contractname/methodname". Zaleca się, że użytkownik jawnie określić nazwę i przestrzeń nazw kontraktu usługi i akcji dla każdej operacji uniknąć używania "http://tempuri.org" i uniemożliwić nazwy interfejsu i metoda ujawniany w kontrakcie usługi.  
   
 ### <a name="adding-parameters-and-operations"></a>Dodawanie parametrów i operacje  
  Dodawanie operacji usługi udostępniane przez usługi jest nierozdzielający zmiany, ponieważ istniejący klienci nie muszą być zajmującym się tych nowych operacji.  
@@ -130,13 +132,13 @@ Po początkowym wdrożeniu i potencjalnie kilka razy w okresie ich istnienia us�
  Lista błędów, które opisano w kontrakcie usługi nie jest uważana za wyczerpujący. W dowolnym momencie operacja może zwrócić błędów, które nie zostały opisane w jego kontraktu. W związku z tym zmiana zestawu błędów opisanego w kontrakcie nie jest uznawane za krytyczne. Na przykład dodać do umowy przy użyciu nowych usterek <xref:System.ServiceModel.FaultContractAttribute> lub usunięcie istniejącej usterki z umowy.  
   
 ### <a name="service-contract-libraries"></a>Biblioteki kontraktu usługi  
- Organizacje mogą stosować bibliotek kontraktów, gdy kontrakt jest publikowana w centralnym repozytorium i implementacji usługi Implementowanie kontraktów z tego repozytorium. W takim przypadku podczas publikowania kontraktu usługi do repozytorium można nie kontrolują stwarza usług, które implementuje go. W związku z tym nie można modyfikować po opublikowaniu kontrakt usługi renderowaniem go skutecznie niezmienialny. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]obsługuje kontraktu dziedziczenia, która może służyć do tworzenia nowego kontraktu, rozszerzający istniejących umów. Aby użyć tej funkcji, zdefiniuj nowy interfejs kontraktu usługi, która dziedziczy po interfejsie starego kontraktu usługi, a następnie dodaj metody nowego interfejsu. Następnie zmienić usługa, która implementuje starego kontraktu do wdrożenia nowego kontraktu i zmień definicję punktu końcowego "versionOld", aby użyć nowego kontraktu. Do klientów "versionOld" punktu końcowego będą nadal wyświetlane jako uwidaczniającą kontraktu "versionOld"; do klientów "versionNew" punktu końcowego pojawi się do udostępnienia kontraktu "versionNew".  
+ Organizacje mogą stosować bibliotek kontraktów, gdy kontrakt jest publikowana w centralnym repozytorium i implementacji usługi Implementowanie kontraktów z tego repozytorium. W takim przypadku podczas publikowania kontraktu usługi do repozytorium można nie kontrolują stwarza usług, które implementuje go. W związku z tym nie można modyfikować po opublikowaniu kontrakt usługi renderowaniem go skutecznie niezmienialny. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] obsługuje kontraktu dziedziczenia, która może służyć do tworzenia nowego kontraktu, rozszerzający istniejących umów. Aby użyć tej funkcji, zdefiniuj nowy interfejs kontraktu usługi, która dziedziczy po interfejsie starego kontraktu usługi, a następnie dodaj metody nowego interfejsu. Następnie zmienić usługa, która implementuje starego kontraktu do wdrożenia nowego kontraktu i zmień definicję punktu końcowego "versionOld", aby użyć nowego kontraktu. Do klientów "versionOld" punktu końcowego będą nadal wyświetlane jako uwidaczniającą kontraktu "versionOld"; do klientów "versionNew" punktu końcowego pojawi się do udostępnienia kontraktu "versionNew".  
   
 ## <a name="address-and-binding-versioning"></a>Adres i powiązanie kontroli wersji  
  Zmiany adres punktu końcowego i powiązania są fundamentalne zmiany, chyba że klienci są w stanie powiązania lub dynamicznie odnajdywania nowy adres punktu końcowego. Jeden mechanizm stosowania tej funkcji jest za pomocą rejestru Universal Description odnajdywania i usług UDDI i wzorzec wywołania UDDI, gdzie klient próbuje nawiązać połączenia z punktem końcowym i, w przypadku awarii zapytanie UDDI dobrze znane rejestr dla bieżących metadanych punktu końcowego. Klient używa następnie adres i powiązanie z tym metadanych do komunikowania się z punktem końcowym. Jeśli ta komunikacja zakończy się powodzeniem, klient buforuje informacje adres i powiązanie do użytku w przyszłości.  
   
 ## <a name="routing-service-and-versioning"></a>Usługa routingu i kontroli wersji  
- Jeśli zmiany wprowadzone do usługi są fundamentalne zmiany, a muszą mieć co najmniej dwa różne wersje usługi uruchomionej jednocześnie służy usługa routingu WCF do przesyłania wiadomości do wystąpienia odpowiedniej usługi. Usługa routingu WCF używa routingu opartego na zawartość, innymi słowy, używa informacji w komunikacie do określenia miejsca kierowania komunikatu. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Zobacz Usługa routingu WCF [usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład sposobu użycia usługi routingu WCF do wersji usługi zobacz [jak: przechowywanie wersji usługi](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
+ Jeśli zmiany wprowadzone do usługi są fundamentalne zmiany, a muszą mieć co najmniej dwa różne wersje usługi uruchomionej jednocześnie służy usługa routingu WCF do przesyłania wiadomości do wystąpienia odpowiedniej usługi. Usługa routingu WCF używa routingu opartego na zawartość, innymi słowy, używa informacji w komunikacie do określenia miejsca kierowania komunikatu. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Zobacz Usługa routingu WCF [usługa routingu](../../../docs/framework/wcf/feature-details/routing-service.md). Przykład sposobu użycia usługi routingu WCF do wersji usługi zobacz [jak: przechowywanie wersji usługi](../../../docs/framework/wcf/feature-details/how-to-service-versioning.md).  
   
 ## <a name="appendix"></a>Dodatek  
  Wskazówki przechowywanie wersji kontraktu ogólne dane gdy wymagany jest strict versioning jest traktować jako niezmienialny kontraktów danych i utworzyć nowe, jeśli są wymagane zmiany. Nową klasę musi zostać utworzona dla każdego nowego kontraktu danych, więc mechanizm jest potrzebny, aby uniknąć konieczności podjęcia istniejący kod, który został zapisany w postaci liczby stare dane kontraktu klasy i ponowne zapisywanie adresów pod względem nowej klasy kontraktu danych.  

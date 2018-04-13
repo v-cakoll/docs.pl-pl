@@ -1,6 +1,6 @@
 ---
 title: Samouczek kolekcje - C# lokalnego poradniki Szybki Start
-description: "Naucz się C# eksplorując kolekcji listy, w tym samouczku."
+description: Naucz się C# eksplorując kolekcji listy, w tym samouczku.
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
@@ -9,11 +9,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 76b3baf0525c81e5b3058aa2ab6fd4ccd97d1916
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ace19ea8b8a1986466cdc851a1e8bb1c55f9709f
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="c-quickstart-collections"></a>C# — Szybki Start: kolekcje
 
@@ -54,7 +54,7 @@ Zastąp `<name>` nazwą użytkownika. Zapisz **Program.cs**. Typ `dotnet run` w 
 
 Utworzeniu tylko listę ciągów, dodać trzy nazwy do tej listy i wydrukowane nazwy WERSALIKÓW. Używasz pojęcia uzyskanych w starszych poradniki Szybki Start pętli na liście.
 
-Kod, aby wyświetlić nazwy sprawia, że użycie **ciągi interpolowane**.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.
+Kod, aby wyświetlić nazwy sprawia, że użycie [ciągu interpolacji](../language-reference/tokens/interpolated.md) funkcji.  Gdy poprzedzać `string` z `$` kodu C# można osadzić w deklaracji ciąg znaków. Wartość, która generuje rzeczywisty ciąg zastępuje kodu C#. W tym przykładzie zastępuje `{name.ToUpper()}` z każdej nazwy przekonwertowany na wielkie litery, ponieważ wywołana <xref:System.String.ToUpper%2A> metody.
 
 Ta funkcja pozwala zachować eksploracji.
 
@@ -215,7 +215,7 @@ Zobacz, czy można utworzyć niektóre z pojęć związanych z tej i starszych w
 
 ## <a name="complete-challenge"></a>Żądanie ukończone
 
-Widać przykład rozwiązania przez [patrzeć Zakończono przykładowy kod w witrynie GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/list-quickstart/Program.cs#L13-L23)
+Widać przykład rozwiązania przez [patrzeć Zakończono przykładowy kod w witrynie GitHub](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)
 
 Przy każdej iteracji pętli tworzenia ostatnich dwóch liczb całkowitych na liście sumowanie je, a następnie dodanie tej wartości na liście. Pętla jest powtarzany aż 20 elementy dodane do listy.
 

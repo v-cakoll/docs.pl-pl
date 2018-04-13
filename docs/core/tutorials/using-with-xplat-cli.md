@@ -1,7 +1,7 @@
 ---
-title: "Rozpoczynanie pracy z platformą .NET Core za pomocą interfejsu wiersza polecenia"
-description: "Samouczek krok po kroku, pokazujący sposób rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core."
-keywords: Oprogramowanie .NET core, interfejsu wiersza polecenia
+title: Rozpoczynanie pracy z platformą .NET Core za pomocą interfejsu wiersza polecenia
+description: Samouczek krok po kroku, pokazujący sposób rozpocząć pracę z platformą .NET Core w systemie Windows, Linux lub macOS przy użyciu interfejsu wiersza polecenia (CLI) platformy .NET Core.
+keywords: .NET Core, CLI
 author: cartermp
 ms.author: mairaw
 ms.date: 03/08/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: 41632e63-d5c6-4427-a09e-51dc1116d45f
-ms.workload: dotnetcore
-ms.openlocfilehash: 544274783e8a77f55c8ec7e1da0069bf8bdf7b0b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: c5082806c907a6c6d4f51bf77e54deee08de3d8b
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Rozpoczynanie pracy z platformą .NET Core w systemie Windows/Linux/macOS przy użyciu wiersza polecenia
 
@@ -30,7 +31,7 @@ Jeśli znasz zestaw narzędzi interfejsu wiersza polecenia platformy .NET Core o
 
 ## <a name="hello-console-app"></a>Witaj, aplikacji konsoli!
 
-Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/docs/tree/master/samples/core/console-apps/HelloMsBuild) z dotnet/docs repozytorium GitHub. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
+Możesz [wyświetlić lub pobrać przykładowy kod](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild) z repozytorium GitHub dotnet/próbek. Instrukcje pobrania, zobacz [przykłady i samouczki](../../samples-and-tutorials/index.md#viewing-and-downloading-samples).
 
 Otwórz wiersz polecenia i Utwórz folder o nazwie *Hello*. Przejdź do folderu, który został utworzony i wpisz następujące polecenie:
 
@@ -44,7 +45,7 @@ Poznajmy Szybkie wskazówki:
 
 1. `$ dotnet new console`
 
-   [`dotnet new`](../tools/dotnet-new.md)Tworzy aktualne `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsoli.  Tworzy również `Program.cs`, podstawowe plik zawierający punkt wejścia dla aplikacji.
+   [`dotnet new`](../tools/dotnet-new.md) Tworzy aktualne `Hello.csproj` pliku projektu z zależnościami, które są niezbędne do tworzenia aplikacji konsoli.  Tworzy również `Program.cs`, podstawowe plik zawierający punkt wejścia dla aplikacji.
    
    `Hello.csproj`:
 
@@ -53,7 +54,7 @@ Poznajmy Szybkie wskazówki:
    Plik projektu określa wszystko, co jest potrzebne do przywrócenia zależności i kompilacji programu.
 
    * `OutputType` Określa tag tworzymy plik wykonywalny, innymi słowy aplikacji konsoli.
-   * `TargetFramework` Tag Określa, jakie implementacji .NET możemy docelowych. W scenariuszu zaawansowanym, można określić wiele platform docelowych i kompilacji do wszystkich tych w ramach jednej operacji. W tym samouczku firma Microsoft będzie osadzania kompilowanie tylko dla platformy .NET Core 1.0.
+   * `TargetFramework` Tag Określa, jakie implementacji .NET możemy docelowych. Realizując bardziej zaawansowany scenariusz, można określić wiele platform docelowych i kompilacji do wszystkich tych w ramach jednej operacji. W tym samouczku firma Microsoft będzie osadzania kompilowanie tylko dla platformy .NET Core 1.0.
 
    `Program.cs`:
 
@@ -67,13 +68,13 @@ Poznajmy Szybkie wskazówki:
 
 2. `$ dotnet restore`
 
-   [`dotnet restore`](../tools/dotnet-restore.md)Wywołano [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewie zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności określone w pliku (lub grabs je z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku.  *Project.assets.json* plik jest niezbędny można było skompilować i uruchomić.
+   [`dotnet restore`](../tools/dotnet-restore.md) Wywołano [NuGet](https://www.nuget.org/) (.NET package manager) w celu przywrócenia drzewie zależności. Analizuje NuGet *Hello.csproj* plików, pliki do pobrania zależności określone w pliku (lub grabs je z pamięci podręcznej na komputerze) i zapisuje *obj/project.assets.json* pliku.  *Project.assets.json* plik jest niezbędny można było skompilować i uruchomić.
    
    *Project.assets.json* plik jest utrwalona i pełny zestaw wykres zależności NuGet i inne informacje opisujące aplikację.  Ten plik jest odczytywany przez innych narzędzi, takich jak [ `dotnet build` ](../tools/dotnet-build.md) i [ `dotnet run` ](../tools/dotnet-run.md), umożliwiając im procesu kodu źródłowego z poprawny zestaw zależności NuGet i powiązanie rozwiązania.
    
 3. `$ dotnet run`
 
-   [`dotnet run`](../tools/dotnet-run.md)wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji są wbudowane elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji docelowej.
+   [`dotnet run`](../tools/dotnet-run.md) wywołania [ `dotnet build` ](../tools/dotnet-build.md) do upewnij się, że kompilacji są wbudowane elementy docelowe, a następnie wywołania `dotnet <assembly.dll>` do uruchomienia aplikacji docelowej.
    
     ```
     $ dotnet run

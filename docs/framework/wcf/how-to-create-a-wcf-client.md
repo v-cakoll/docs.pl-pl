@@ -1,27 +1,29 @@
 ---
 title: 'Instrukcje: Tworzenie klienta WCF (Windows Communication Foundation)'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-caps.latest.revision: "64"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 2591cad6354ec40f1fb6ead265c84a67adf3eec8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="how-to-create-a-windows-communication-foundation-client"></a>Instrukcje: Tworzenie klienta WCF (Windows Communication Foundation)
 To czwarty sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
@@ -46,7 +48,7 @@ To czwarty sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../i
   
 3.  Dodaj odwołanie do System.ServiceModel do projektu GettingStartedClient, klikając prawym przyciskiem myszy **odwołania** GettingStartedClient projekt w Eksploratorze rozwiązań i wybierz folder **Dodaj** Odwołanie. W **Dodaj odwołanie** oknie dialogowym wybierz pozycję **Framework** po lewej stronie okna dialogowego. W polu tekstowym wyszukiwania zestawów, wpisz w `System.ServiceModel`. W górnej części okna dialogowego wybierz **System.ServiceModel**, kliknij przycisk **Dodaj** przycisk **Zamknij** przycisku. Zapisz rozwiązanie, klikając **Zapisz wszystko** znajdujący się pod menu głównego.  
   
-4.  Dalej można wlll dodać odwołania do usługi z usługą Kalkulator. Zanim można to zrobić, należy uruchomić GettingStartedHost aplikacji konsoli. Po uruchomieniu hosta można kliknij prawym przyciskiem myszy folder odwołań w projekcie GettingStartedClient w Eksploratorze rozwiązań i wybierz opcję Dodaj odwołanie do usługi i wpisz następujący adres URL w polu adres okna dialogowego Dodaj odwołanie do usługi: HYPERLINK "http:/ / localhost:8000/ServiceModelSamples/Service "http://localhost: 8000/ServiceModelSamples/usługi i kliknij przycisk **Przejdź** przycisku. CalculatorService następnie powinna być wyświetlana w polu listy usług, kliknij dwukrotnie CalculatorService i zostanie rozwinąć i wyświetlić kontraktów usług zaimplementowanych przez usługę. Pozostaw domyślny obszar nazw i kliknij przycisk **OK** przycisku.  
+4.  Dalej można wlll dodać odwołania do usługi z usługą Kalkulator. Zanim można to zrobić, należy uruchomić GettingStartedHost aplikacji konsoli. Po uruchomieniu hosta można kliknij prawym przyciskiem myszy folder odwołań w projekcie GettingStartedClient w Eksploratorze rozwiązań i wybierz opcję Dodaj odwołanie do usługi i wpisz następujący adres URL w polu adres okna dialogowego Dodaj odwołanie do usługi: HYPERLINK "http://localhost:8000/ServiceModelSamples/Service" http://localhost:8000/ServiceModelSamples/usługi i kliknij przycisk **Przejdź** przycisku. CalculatorService następnie powinna być wyświetlana w polu listy usług, kliknij dwukrotnie CalculatorService i zostanie rozwinąć i wyświetlić kontraktów usług zaimplementowanych przez usługę. Pozostaw domyślny obszar nazw i kliknij przycisk **OK** przycisku.  
   
      Po dodaniu się, że odwołanie do usługi przy użyciu programu Visual Studio nowy element pojawi się w Eksploratorze rozwiązań w folderze usługi odwołań w projekcie GettingStartedClient.  Jeśli używasz [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) narzędzia można wygenerować pliku kodu źródłowego i pliku app.config.  
   

@@ -72,12 +72,12 @@ Na przykład załóżmy, że jeśli pole tekstowe wartość przekracza 10, eleme
 
 | **Współczynnik** | **jQuery** | **Angular**|
 |--------------------------|------------|-------------|
-| Abstracts modelu DOM | Tak | Tak |
-| Obsługa technologii AJAX | Tak | Tak |
-| Powiązanie danych deklaratywne | Brak | Tak |
-| MVC-style Routing | Brak | Tak |
-| Tworzenia szablonów | Brak | Tak |
-| Głębokie łącze routingu | Brak | Tak |
+| Abstracts modelu DOM | **Tak** | **Tak** |
+| Obsługa technologii AJAX | **Tak** | **Tak** |
+| Powiązanie danych deklaratywne | **Brak** | **Tak** |
+| MVC-style Routing | **Brak** | **Tak** |
+| Tworzenia szablonów | **Brak** | **Tak** |
+| Głębokie łącze routingu | **Brak** | **Tak** |
 
 Większość funkcji, które jQuery nie ma bardzo można dodać z uwzględnieniem innych bibliotek. Framework SPA, takich jak kątową zapewnia jednak te funkcje w sposób integracji, ponieważ jest on przeznaczony wszystkich z nich na uwadze od początku. Ponadto jQuery jest bardzo ważnych biblioteki, co oznacza konieczność wywoływać funkcje jQuery, aby można było wykonywać żadnych czynności z jQuery. Większość pracy i funkcje, które zapewniają struktur SPA można deklaratywnie, wymagających bez rzeczywistego kodu do zapisania.
 
@@ -161,7 +161,7 @@ Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zag
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
 > - **Angular**  
 > <https://angular.io/>
-> - Reakcji  
+> - **Reakcji**  
 > <https://facebook.github.io/react/>
 > - **Zareagować Slingshot**  
 > <https://github.com/coryhouse/react-slingshot>

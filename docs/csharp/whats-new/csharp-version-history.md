@@ -1,7 +1,7 @@
 ---
-title: "Historia języka C# — przewodnik C#"
-description: "Języka jak wygląda w jego wersje i sposobu jego powstał od?"
-keywords: "C# .NET, .NET Core, nowości, Historia C#"
+title: Historia języka C# — przewodnik C#
+description: Języka jak wygląda w jego wersje i sposobu jego powstał od?
+keywords: C# .NET, .NET Core, nowości, Historia C#
 author: erikdietrich
 ms.author: wiwagn
 ms.date: 09/20/2017
@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 207c97c5dd7e04f815da61bff7f44393aea86222
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -53,7 +53,7 @@ C# w wersji 3.0 dostarczone w późne 2007 oraz programu Visual Studio 2008, cho
 - [Właściwości zaimplementowane automatycznie](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)
 - [Wyrażenia zapytań](../linq/query-expression-basics.md)
-- [Wyrażenia lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
+- [wyrażenia lambda](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
 - [Drzewa wyrażeń](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
 - [Metody rozszerzenia](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
 
@@ -102,7 +102,7 @@ W wersjach 3.0 i 5.0 C# było dodać niektóre funkcje ogromnych możliwości w 
 - [Inicjatory właściwości](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
 - [Wyrażenie zabudowanych elementy członkowskie](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
 - [Propagator wartości null](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [Ciąg interpolacji](../language-reference/keywords/interpolated-strings.md)
+- [Interpolacja ciągów](../language-reference/tokens/interpolated.md)
 - [operatorze nameof](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
 - [Inicjatora słownika](../programming-guide/classes-and-structs/how-to-initialize-a-dictionary-with-a-collection-initializer.md)
 

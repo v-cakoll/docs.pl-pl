@@ -1,24 +1,26 @@
 ---
-title: "Wysyłanie według elementu treści"
-ms.custom: 
+title: Wysyłanie według elementu treści
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f64a3c04-62b4-47b2-91d9-747a3af1659f
-caps.latest.revision: "13"
+caps.latest.revision: ''
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 4ab8ddccafa8dbf1ecde8afbb07f0a61faa62be5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/26/2018
 ---
 # <a name="dispatch-by-body-element"></a>Wysyłanie według elementu treści
 W tym przykładzie pokazano, jak wdrożyć alternatywny algorytm przypisywanie komunikatów przychodzących do operacji.  
@@ -44,7 +46,7 @@ class DispatchByBodyElementOperationSelector : IDispatchOperationSelector
     }  
 ```  
   
- <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector>implementacje są bardzo proste do kompilacji, ponieważ istnieje tylko jedna metoda w interfejsie: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Zadania tej metody jest do zbadania wiadomości przychodzącej i zwraca ciąg, który jest równe Nazwa metody na kontrakt usługi dla bieżącego punktu końcowego.  
+ <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> implementacje są bardzo proste do kompilacji, ponieważ istnieje tylko jedna metoda w interfejsie: <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector.SelectOperation%2A>. Zadania tej metody jest do zbadania wiadomości przychodzącej i zwraca ciąg, który jest równe Nazwa metody na kontrakt usługi dla bieżącego punktu końcowego.  
   
  W tym przykładzie uzyskuje selektor operacji <xref:System.Xml.XmlDictionaryReader> komunikatu przychodzącego elementu body przy użyciu <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A>. Ta metoda już umieszcza czytnik na pierwszy element podrzędny elementu treści wiadomości, aby jest wystarczająca do bieżącego elementu nazwa i identyfikator URI przestrzeni nazw i połączyć je w `XmlQualifiedName` następnie używany do wyszukiwania odpowiadająca mu operacja z Słownik posiadanych przez selektor operacji.  
   

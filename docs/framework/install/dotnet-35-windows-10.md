@@ -1,18 +1,18 @@
 ---
 title: Zainstaluj program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8
-description: "Dowiedz się, jak zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8."
+description: Dowiedz się, jak zainstalować program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8.
 author: rlander
 ms.author: mairaw
-ms.date: 11/27/2017
+ms.date: 03/30/2018
 ms.topic: article
 ms.prod: .net-framework
 ms.workload:
 - dotnet
-ms.openlocfilehash: e81008eca3019860789db548d40998a7a7565d31
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 09c4f81da76bb6608c3e579c442cf686ffab1688
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/09/2018
 ---
 # <a name="install-the-net-framework-35-on-windows-10-windows-81-and-windows-8"></a>Zainstaluj program .NET Framework 3.5 w systemie Windows 10, Windows 8.1 i Windows 8
 
@@ -23,6 +23,10 @@ Uruchamianie aplikacji w systemie Windows 10, Windows 8.1 i Windows 8 w programi
 Następujące okna dialogowego konfiguracji może być wyświetlana, jeśli zostanie podjęta próba uruchomienia aplikacji, która wymaga programu .NET Framework 3.5. Wybierz **Zainstaluj tę funkcję** Aby włączyć program .NET Framework 3.5. Ta opcja wymaga połączenia internetowego.
 
 ![Okno instalacji programu .NET framework](./media/dotnet-framework-installation-dialog.jpg)
+
+### <a name="why-am-i-getting-this-pop-up"></a>Dlaczego otrzymuję to wyskakujące?
+
+.NET Framework jest tworzony przez firmę Microsoft i udostępnia środowisko uruchamiania aplikacji. Dostępne są różne wersje. Wiele firm opracowywanie aplikacji przy użyciu programu .NET Framework, a te aplikacje docelowe określonej wersji. Jeśli to okno jest wyświetlane, próbuje uruchomić aplikację, która wymaga programu .NET Framework w wersji 3.5, ale ta wersja nie jest zainstalowany w systemie.
 
 ## <a name="enable-the-net-framework-35-in-control-panel"></a>Włączanie programu .NET Framework 3.5 w Panelu sterowania
 
@@ -40,4 +44,4 @@ Można włączyć program .NET Framework 3.5 za pomocą Panelu sterowania system
 
 Podczas instalacji, może wystąpić błąd 0x800f0906, 0x800f0907, 0x800f081f lub 0x800F0922, w którym to przypadku odwoływać się do [błąd instalacji programu .NET Framework 3.5: 0x800f0906, 0x800f0907 lub 0x800f081f](https://support.microsoft.com/help/2734782/net-framework-3-5-installation-error-0x800f0906--0x800f081f--0x800f09) na temat sposobu rozwiązania tych problemy.
 
-Jeśli nie wszystkie metody omówione w poprzednim artykule, lub jeśli nie masz połączenia internetowego jest niezbędne do korzystania z nośnika instalacyjnego systemu Windows. Aby uzyskać więcej informacji, zobacz [wdrożyć program .NET Framework 3.5 przy użyciu Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Jeśli nie masz nośnika instalacyjnego, zobacz [Utwórz nośnik instalacyjny dla systemu Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).
+Jeśli nadal nie możesz rozwiązać problemu z instalacją lub nie masz dostępu do Internetu, możesz spróbować zainstalować go za pomocą nośnika instalacyjnego systemu Windows. Aby uzyskać więcej informacji, zobacz [wdrożyć program .NET Framework 3.5 przy użyciu Deployment Image Servicing and Management (DISM)](/windows-hardware/manufacture/desktop/deploy-net-framework-35-by-using-deployment-image-servicing-and-management--dism). Jeśli nie masz nośnika instalacyjnego, zobacz [Utwórz nośnik instalacyjny dla systemu Windows](https://support.microsoft.com/help/15088/windows-create-installation-media).

@@ -1,5 +1,5 @@
 ---
-title: "Nowości w języku Visual Basic"
+title: Nowości w języku Visual Basic
 ms.date: 02/15/2018
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: 
+caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4df9a34e078de9daeff85c894afbbf4d60501f6b
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
+ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
@@ -34,6 +34,9 @@ W przypadku nowych funkcji, zobacz [15,5 cala Visual Basic](#visual-basic-155)
 
 Visual Basic 15 ustęp 3   
 W przypadku nowych funkcji, zobacz [15 ustęp 3 Visual Basic](#visual-basic-153)
+
+2017 Visual Basic   
+W przypadku nowych funkcji, zobacz [2017 Visual Basic](#visual-basic-2017)
 
 Visual Basic / Visual Studio .NET 2015   
 W przypadku nowych funkcji, zobacz [14 Visual Basic](#visual-basic-14)
@@ -78,7 +81,7 @@ Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separator cyfr
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Aby użyć w wyniku znak jako separator początkowych, należy dodać następujący element do pliku projektu (*.vbproj) Visual Basic:
+Aby użyć znaku podkreślenia jako separator początkowych, należy dodać następujący element do projektu Visual Basic (\*.vbproj) plików:
 
 ```xml
 <PropertyGroup>
@@ -88,15 +91,19 @@ Aby użyć w wyniku znak jako separator początkowych, należy dodać następuj�
 
 ## <a name="visual-basic-153"></a>Visual Basic 15 ustęp 3
 
-[Wnioskowanie spójnej kolekcji o nazwie](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
+[**Wnioskowanie spójnej kolekcji o nazwie**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 
 Jeśli wartość krotki elementy z zmienne, Visual Basic wnioskuje nazwy elementów krotki z odpowiedniej nazwy zmiennych; nie trzeba jawnie nazwa element spójnej kolekcji. W poniższym przykładzie użyto wnioskowania do utworzenia spójnych kolekcji z trzy elementy o nazwie, `state`, `stateName`, i `capital`.
 
 [!code-vb[Inferred tuple names](../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
+**Dodatkowe przełączniki kompilatora**  
+
+Obsługuje teraz wiersza polecenia kompilatora Visual Basic [ **- refout** ](../reference/command-line-compiler/refout-compiler-option.md) i [ **- refonly** ](../reference/command-line-compiler/refonly-compiler-option.md) opcje kontroli dane wyjściowe kompilatora zestawy odwołań. **-refout** definiuje katalogu wyjściowego zestawu odwołania i **- refonly** Określa, że zestaw odwołania ma być danymi wyjściowymi kompilacji.
+
 ## <a name="visual-basic-2017"></a>2017 Visual Basic
 
-[Krotki](../programming-guide/language-features/data-types/tuples.md)
+[**Krotki**](../programming-guide/language-features/data-types/tuples.md)
 
 Spójne kolekcje są lekkie danych struktury, która najczęściej służy do zwracania wiele wartości z wywołania pojedynczej metody. Zwykle zwracać wiele wartości z metody, należy wykonać jedną z następujących czynności:
 
@@ -147,7 +154,7 @@ Aby uzyskać więcej informacji, zobacz [odwołania zwracać wartości](../progr
 [Nameof](../../csharp/language-reference/keywords/nameof.md)  
  Niekwalifikowane ciąg nazwę typu lub elementu członkowskiego do użycia w komunikacie o błędzie można uzyskać, bez twardych kodowanie ciągu.  Dzięki temu swój kod, aby pozostać poprawne podczas refaktoryzacji.  Ta funkcja jest również przydatne w przypadku podłączenia łącza MVC model-view-controller i wyzwalania zdarzenia zmiany właściwości.  
   
-[Interpolacja ciągów](../../csharp/language-reference/keywords/interpolated-strings.md)  
+[Interpolacja ciągów](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)  
  Wyrażenia parametrów interpolacji służy do tworzenia ciągów.  Wyrażenie ciągu interpolowanym wygląda jak ciąg szablonu, który zawiera wyrażenia.  Ciągu interpolowanym łatwiej zrozumieć względem argumentów niż [złożone formatowanie](../../standard/base-types/composite-format.md).  
   
 [Dostęp do elementu członkowskiego warunkowe null i indeksowania](../../csharp/language-reference/operators/null-conditional-operators.md)  

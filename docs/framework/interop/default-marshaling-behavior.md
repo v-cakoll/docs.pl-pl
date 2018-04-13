@@ -1,12 +1,13 @@
 ---
-title: "Domyślne zachowanie marshalingu"
-ms.custom: 
+title: Domyślne zachowanie marshalingu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0e66caf800fd49b4822ee22326b8a5cf712d99bb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
+ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  
@@ -33,7 +35,7 @@ Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania da
  W tej sekcji wymieniono domyślnych parametrów behawioralnej interop organizowanie usługi. Stanowi szczegółowe informacje na temat przekazywanie tablic, typów logicznych typu char, delegatów, klas, obiektów, ciągi i struktury.  
   
 > [!NOTE]
->  Organizowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [współpracy przy użyciu typów ogólnych](http://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58).  
+>  Organizowanie typów ogólnych nie jest obsługiwane. Aby uzyskać więcej informacji, zobacz [współpracy przy użyciu typów ogólnych](https://msdn.microsoft.com/library/26b88e03-085b-4b53-94ba-a5a9c709ce58(v=vs.100)).  
   
 ## <a name="memory-management-with-the-interop-marshaler"></a>Zarządzanie pamięcią z organizatora międzyoperacyjne  
  Organizator międzyoperacyjnego zawsze próbuje zwolnić pamięci przydzielonej przez kod niezarządzany. To zachowanie jest zgodne z zasadami zarządzania pamięci COM, ale różni się od zasad rządzących natywnych języka C++.  
@@ -388,7 +390,7 @@ interface _Graphics {
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**DATA**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**IDENTYFIKATOR GUID**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Poniższy kod przedstawia definicję typu niezarządzanego **data**, **GUID**, **DZIESIĘTNĄ**, i **OLE_COLOR** w typie Stdole2 Biblioteka.  

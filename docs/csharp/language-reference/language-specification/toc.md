@@ -1,4 +1,5 @@
 # [Specyfikacja języka C# 6.0 (wersja robocza)](index.md)
+## [Wprowadzenie](../../../../_csharplang/spec/introduction.md)
 ## [Struktura leksykalna](../../../../_csharplang/spec/lexical-structure.md)
 ## [Podstawowe pojęcia](../../../../_csharplang/spec/basic-concepts.md)
 ## [Typy](../../../../_csharplang/spec/types.md)

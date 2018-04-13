@@ -4,36 +4,37 @@ description: "Modernizacji istniejących aplikacji .NET z chmury Azure i kontene
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
+ms.prod: .net
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bced3bed84d138dbda4f322322213b47c0159016
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 6a2abda3949c1fffc4d731b01e35e58e7c56dac0
+ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>Wskazówki i technical uzyskać uruchomiono — omówienie 
+# <a name="walkthroughs-and-technical-get-started-overview"></a>Wskazówki i technical uzyskać uruchomiono — omówienie
 
-Aby ograniczyć rozmiar Książka elektroniczna, wprowadziliśmy dodatkową dokumentację techniczną i pełne wskazówki dostępne w repozytorium GitHub. Serie online wskazówki, które jest opisane w tym rozdziale opisano krok po kroku instalacji wielu środowiskach, które są oparte na kontenery systemu Windows i wdrażanie na platformie Azure.
+Aby ograniczyć rozmiar Książka elektroniczna, dodatkową dokumentację techniczną i pełne wskazówki zostały udostępnione w repozytorium GitHub. Serie online wskazówki, które jest opisane w tym rozdziale opisano krok po kroku instalacji wielu środowiskach, które są oparte na kontenery systemu Windows i wdrażanie na platformie Azure.
 
-W poniższych sekcjach opisano każdy wskazówki nowości dotyczących jej cele, jego wysokiego poziomu wizji- i zapewnia diagram zadań, które są związane z. Możesz uzyskać wskazówki, same w *eShopModernizing* wiki repozytorium GitHub aplikacje na [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
+W poniższych sekcjach opisano, co każdy wskazówki jest o jego cele i wizji wysokiego poziomu i zapewnia diagram zadań, które są związane z. Możesz uzyskać wskazówki, same w *eShopModernizing* wiki repozytorium GitHub aplikacje na [https://github.com/dotnet-architecture/eShopModernizing/wiki](https://github.com/dotnet-architecture/eShopModernizing/wiki).
 
-# <a name="technical-walkthrough-list"></a>Lista wskazówki techniczne
+## <a name="technical-walkthrough-list"></a>Lista wskazówki techniczne
 
 Poniższe wskazówki get-started zapewnić spójne i wyczerpujące wskazówki techniczne przykładowych aplikacji, które można przyrostu i przesunięte za pomocą kontenerów, a następnie przesuń za pomocą wielu opcji wdrażania na platformie Azure.
 
 Każda z następujących wskazówki używa nowe próbki eShopLegacy i eShopModernizing aplikacji, które są dostępne w witrynie GitHub pod [https://github.com/dotnet-architecture/eShopModernizing](https://github.com/dotnet-architecture/eShopModernizing).
 
--   **Samouczek eShop starszej wersji aplikacji**
+- **Samouczek eShop starszej wersji aplikacji**
 
--   **Containerize istniejących aplikacji .NET z kontenerami systemu Windows**
+- **Containerize istniejących aplikacji .NET z kontenerami systemu Windows**
 
--   **Wdrażanie aplikacji opartych na kontenery systemu Windows na maszynach wirtualnych platformy Azure**
+- **Wdrażanie aplikacji opartych na kontenery systemu Windows na maszynach wirtualnych platformy Azure**
 
--   **Wdrażanie aplikacji opartych na kontenery systemu Windows na Kubernetes w usłudze kontenera platformy Azure**
+- **Wdrażanie aplikacji opartych na kontenery systemu Windows na Kubernetes w usłudze kontenera platformy Azure**
 
--   **Wdrażanie aplikacji Windows kontenery sieci szkieletowej usług Azure**
+- **Wdrażanie aplikacji Windows kontenery sieci szkieletowej usług Azure**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>Wskazówki 1: Samouczek eShop starszej wersji aplikacji
 
@@ -97,13 +98,13 @@ Używanie kontenerów Windows zwiększające wdrożenia istniejących aplikacji 
 
 Celem tego przewodnika jest pokazanie kilka opcji containerizing istniejącej aplikacji .NET Framework. Można:
 
--   Containerize aplikacji przy użyciu [2017 Visual Studio Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 lub nowszy).
+- Containerize aplikacji przy użyciu [2017 Visual Studio Tools for Docker](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker) (Visual Studio 2017 lub nowszy).
 
--   Containerize aplikacji przez ręczne dodanie [plik Dockerfile](https://docs.docker.com/engine/reference/builder/), a następnie użyć [interfejsu wiersza polecenia Docker](https://docs.docker.com/engine/reference/commandline/cli/).
+- Containerize aplikacji przez ręczne dodanie [plik Dockerfile](https://docs.docker.com/engine/reference/builder/), a następnie użyć [interfejsu wiersza polecenia Docker](https://docs.docker.com/engine/reference/commandline/cli/).
 
--   Containerize aplikacji przy użyciu [Img2Docker](https://github.com/docker/communitytools-image2docker-win) narzędzia (narzędzie open source z Docker).
+- Containerize aplikacji przy użyciu [Img2Docker](https://github.com/docker/communitytools-image2docker-win) narzędzia (narzędzie open source z Docker).
 
-Ten przewodnik koncentruje się na Visual Studio Tools 2017 Docker podejścia, ale dwa podejścia są dość podobne w odniesieniu do przy użyciu Dockerfiles.
+Ten przewodnik koncentruje się na Visual Studio Tools 2017 Docker podejścia, ale inne podejścia są dość podobne pod względem przy użyciu Dockerfiles.
 
 ### <a name="scenario"></a>Scenariusz
 
@@ -137,7 +138,7 @@ Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium
 
 ### <a name="overview"></a>Omówienie
 
-Wdrażanie hosta Docker na maszynie Wirtualnej 2016 serwera systemu Windows na platformie Azure pozwala szybko skonfigurować środowiska przejściowe dev/testu. Również udostępnia typowe miejsce dla testerów i użytkowników biznesowych zatwierdzania aplikacji. Maszyny wirtualne można również prawidłowe środowisk produkcyjnych IaaS.
+Wdrożeniu na hoście Docker na systemu Windows Server 2016 maszyn wirtualnych (VM) na platformie Azure pozwala szybko skonfigurować środowiska przejściowe development/testu. Również udostępnia typowe miejsce dla testerów i użytkowników biznesowych zatwierdzania aplikacji. Maszyny wirtualne również może być nieprawidłowa że jako środowisk produkcyjnych usługę (IaaS).
 
 ### <a name="goals"></a>Cele
 
@@ -167,13 +168,13 @@ W tym przewodniku opisano kilka scenariuszy.
 
 ### <a name="azure-vms-for-windows-containers"></a>Maszyny wirtualne platformy Azure dla systemu Windows kontenerów
 
-Azure maszyn wirtualnych systemu Windows dla kontenerów są po prostu maszyn wirtualnych, które są oparte na systemie Windows Server 2016, Windows 10 lub nowszy, zarówno z aparatem platformy Docker ustawienie. W większości przypadków użyjesz systemu Windows Server 2016 w maszynach wirtualnych platformy Azure.
+Azure maszyn wirtualnych systemu Windows dla kontenerów maszyn wirtualnych na podstawie systemu Windows Server 2016, Windows 10 lub nowszy, konfigurowanie zarówno z aparatem platformy Docker. W większości przypadków systemu Windows Server 2016 jest używany w maszynach wirtualnych platformy Azure.
 
 Platforma Azure obecnie udostępnia maszyny Wirtualnej o nazwie **systemu Windows Server 2016 z kontenerami**. Próby nowa funkcja systemu Windows Server kontenera systemu Windows Server Core lub serwerze Nano systemu Windows, można użyć tej maszyny Wirtualnej. Kontener obrazów systemu operacyjnego są zainstalowane, a następnie maszyna wirtualna jest gotowa do użycia z Docker.
 
 ### <a name="benefits"></a>Zalety
 
-Mimo że kontenery systemu Windows można wdrożyć do lokalnego systemu Windows Server 2016 maszyn wirtualnych, gdy wdrażanie na platformie Azure, możesz uzyskać łatwiejszy sposób, aby rozpocząć pracę z maszynami wirtualnymi o kontenera gotowe do użycia systemu Windows Server. Możesz również uzyskać wspólnej lokalizacji online, który jest dostępny dla testerów i automatyczne skalowalności za pomocą zestawów skali maszyny Wirtualnej platformy Azure.
+Mimo że kontenery systemu Windows można wdrożyć do lokalnego systemu Windows Server 2016 maszyn wirtualnych, gdy wdrażanie na platformie Azure, możesz uzyskać łatwiejszy sposób, aby rozpocząć pracę z maszynami wirtualnymi o kontenera gotowe do użycia systemu Windows Server. Możesz również uzyskać wspólnej lokalizacji online, który jest dostępny dla testerów i automatyczne skalowalności za pomocą zestawów skali maszyny wirtualnej platformy Azure.
 
 ### <a name="next-steps"></a>Następne kroki
 
@@ -217,25 +218,25 @@ Celem tego przewodnika jest Dowiedz się, jak wdrożyć aplikację na podstawie 
 
 ### <a name="benefits"></a>Zalety
 
-Istnieje wiele korzyści z wdrażaniem do klastra w Kubernetes. Największych korzyści jest uzyskanie środowisku gotowe do produkcji, w którym użytkownik może skalowalnego w poziomie aplikacji na podstawie liczby wystąpień kontenera, aby użyć (wewnętrzny skalowalności w istniejących węzłów), a na podstawie liczby węzłów lub maszyn wirtualnych w klastrze ( globalne skalowanie klastra).
+Istnieje wiele korzyści z wdrażaniem do klastra w Kubernetes. Największych korzyści jest uzyskanie środowisku gotowe do produkcji, w którym można skalować w poziomie na podstawie liczby wystąpień kontenera, aby użyć (wewnętrzny skalowalności w istniejących węzłów), a na podstawie liczby węzłów lub maszyn wirtualnych w klastrze (aplikacji globalne skalowanie klastra).
 
 Usługa kontenera platformy Azure optymalizuje popularnych open source narzędzia i technologie specjalnie dla platformy Azure. Możesz uzyskać Otwórz rozwiązanie, które oferuje przenośność, zarówno w przypadku kontenerów, jak i konfigurację aplikacji. Wybierz rozmiar, liczby hostów, a narzędzia orchestrator-kontenera usługi obsługuje wszystkie inne.
 
 Z Kubernetes deweloperzy mogą postępu od planowania fizycznych i maszyn wirtualnych do planowania skoncentrowane kontenera infrastruktury, która ułatwia obsługę następujących funkcji, między innymi:
 
--   Aplikacje oparte na wielu kontenerów
+- Aplikacje oparte na wielu kontenerów
 
--   Replikowanie wystąpień kontenera i skalowanie automatyczne pozioma
+- Replikowanie wystąpień kontenera i skalowanie automatyczne pozioma
 
--   Nazewnictwo i odkrywania (na przykład wewnętrzny serwer DNS)
+- Nazewnictwo i odkrywania (na przykład wewnętrzny serwer DNS)
 
--   Równoważenie obciążenia
+- Równoważenie obciążenia
 
--   Wprowadzanie aktualizacji
+- Wprowadzanie aktualizacji
 
--   Dystrybuowanie kluczy tajnych
+- Dystrybuowanie kluczy tajnych
 
--   Sprawdzanie kondycji aplikacji
+- Sprawdzanie kondycji aplikacji
 
 ## <a name="next-steps"></a>Następne kroki
 
@@ -251,7 +252,7 @@ Pełny techniczny przewodnik jest dostępna w wiki eShopModernizing repozytorium
 
 ### <a name="overview"></a>Omówienie
 
-Aplikacja, która jest oparta na kontenery Windows szybko będą musieli używać platformy optymalizacji jeszcze bardziej przenoszenie z maszyn wirtualnych IaaS. To pozwala łatwo osiągnąć wysoką skalowalność na potrzeby lepiej automatycznego skalowalność i uzyskać znaczne ulepszenia w automatycznego wdrożenia i przechowywanie wersji. Można osiągnięcie tych celów, za pomocą usługi orchestrator sieci szkieletowej usług Azure, która jest dostępna w chmurze Azure, ale również dostępne do użycia lokalnego, a nawet w innej chmurze publicznej.
+Aplikacji opartej na kontenery Windows szybko powinna być używana platform optymalizacji jeszcze bardziej przenoszenie z maszyn wirtualnych IaaS. To pozwala łatwo osiągnąć wysoką skalowalność na potrzeby lepiej automatycznego skalowalność i uzyskać znaczne ulepszenia w automatycznego wdrożenia i przechowywanie wersji. Można osiągnięcie tych celów, za pomocą usługi orchestrator sieci szkieletowej usług Azure, która jest dostępna w chmurze Azure, ale również dostępne do użycia lokalnego, a nawet w innej chmurze publicznej.
 
 ### <a name="goals"></a>Cele
 
@@ -277,37 +278,37 @@ Celem tego przewodnika jest informacje na temat wdrażania aplikacji na podstawi
 
 ## <a name="benefits"></a>Zalety
 
-Korzyści z wdrożenia do klastra w sieci szkieletowej usług są podobne do korzyści wynikające ze stosowania Kubernetes. Jedną różnicą, jednak jest to sieci szkieletowej usług środowiska produkcyjnego bardzo dojrzałe dla aplikacji systemu Windows w porównaniu do Kubernetes, objęte był w wersji zapoznawczej kontenerów systemu Windows do wcześniej z 2017 r. (Kubernetes jest bardziej dojrzałe środowisko dla systemu Linux). 
+Korzyści z wdrożenia do klastra w sieci szkieletowej usług są podobne do korzyści wynikające ze stosowania Kubernetes. Jedną różnicą, jednak jest sieci szkieletowej usług dla aplikacji systemu Windows w porównaniu do Kubernetes, który jest w fazie beta kontenerów systemu Windows w wersji 1.9 Kubernetes więcej dojrzałe środowiska produkcyjnego (2017 grudnia). Kubernetes jest bardziej dojrzałe środowisko dla systemu Linux.
 
-Główne zaletą używania sieci szkieletowej usług Azure jest uzyskanie środowisku gotowe do produkcji, w którym użytkownik może skalowalnego w poziomie aplikacji na podstawie liczby wystąpień kontenera, aby użyć (wewnętrzny skalowalności w istniejących węzłów), a na podstawie liczby węzły lub maszyny wirtualne w klastrze (globalne skalowanie klastra).
+Główne zaletą używania sieci szkieletowej usług Azure jest uzyskanie środowisku gotowe do produkcji, w którym można skalować w poziomie na podstawie liczby wystąpień kontenera, aby użyć (wewnętrzny skalowalności w istniejących węzłów), a na podstawie liczby aplikacji węzły lub maszyny wirtualne w klastrze (globalne skalowanie klastra).
 
 Sieć szkieletowa usług Azure oferuje przenośność zarówno w przypadku kontenerów, jak i konfigurację aplikacji. Masz usługi sieć szkieletowa klastra na platformie Azure, lub jego zainstalowanie lokalnego we własnym centrum danych. Można nawet zainstalować klaster sieci szkieletowej usług w innej chmurze tak samo, jak [Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/).
 
 Z sieci szkieletowej usług deweloperzy mogą postępu od planowania fizycznych i maszyn wirtualnych do planowania skoncentrowane kontenera infrastruktury, która ułatwia obsługę następujących funkcji, między innymi:
 
--   Aplikacje oparte na wiele kontenerów.
+- Aplikacje oparte na wiele kontenerów.
 
--   Replikowanie wystąpień kontenera i poziomy Skalowanie automatyczne.
+- Replikowanie wystąpień kontenera i poziomy Skalowanie automatyczne.
 
--   Nazewnictwo i odkrywania (na przykład wewnętrzny serwer DNS).
+- Nazewnictwo i odkrywania (na przykład wewnętrzny serwer DNS).
 
--   Równoważenie obciążenia.
+- Równoważenie obciążenia.
 
--   Wprowadzanie aktualizacji.
+- Wprowadzanie aktualizacji.
 
--   Dystrybuowanie kluczy tajnych.
+- Dystrybuowanie kluczy tajnych.
 
--   Umożliwia sprawdzenie kondycji aplikacji.
+- Umożliwia sprawdzenie kondycji aplikacji.
 
 Następujące funkcje są wyłączne w sieci szkieletowej usług (w porównaniu do innych orchestrators):
 
--   Możliwości usługi stanowej, za pomocą niezawodnych usług modelu aplikacji.
+- Możliwości usługi stanowej, za pomocą niezawodnych usług modelu aplikacji.
 
--   Wzorzec złośliwych użytkowników za pomocą modelu aplikacji Reliable Actors.
+- Wzorzec złośliwych użytkowników za pomocą modelu aplikacji Reliable Actors.
 
--   Wdróż procesów kości bez systemu operacyjnego, oprócz kontenery systemu Windows lub Linux.
+- Wdróż procesów kości bez systemu operacyjnego, oprócz kontenery systemu Windows lub Linux.
 
--   Zaawansowane aktualizacji stopniowych i kontroli kondycji.
+- Zaawansowane aktualizacji stopniowych i kontroli kondycji.
 
 ### <a name="next-steps"></a>Następne kroki
 

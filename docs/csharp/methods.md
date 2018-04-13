@@ -1,7 +1,7 @@
 ---
 title: "Metody — przewodnik C#"
 description: "Przegląd metod, parametrów metod i wartości zwracane — metoda"
-keywords: .NET, .NET core, C#
+keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/26/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 38e9d8955c99c7fb3ee6347af70037d3da08ff39
-ms.sourcegitcommit: a19548e5167cbe7e9e58df4ffd8c3b23f17d5c7a
+ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
+ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="methods"></a>Metody #
 
@@ -36,7 +36,7 @@ Ten temat zawiera następujące sekcje:
 - [Wartości zwracane](#return)
 - [Metody rozszerzenia](#extension)
 - [Metody asynchroniczne](#async)
-- [Zabudowanych wyrażenia elementów członkowskich](#expr)
+- [Elementy członkowskie z wyrażeniem w treści](#expr)
 - [Iteratory](#iterators)
 
 <a name="signatures"></a>
@@ -118,7 +118,7 @@ W poniższym przykładzie zdefiniowano klasę (który jest typem referencyjnym) 
 <a name="byref"></a>
 ### <a name="passing-parameters-by-reference"></a>Przekazywanie parametrów przez odwołanie ###
 
-Należy przekazać parametr przez odwołanie, jeśli chcesz zmienić wartości argumentu w metodzie i chcesz refect zmiana, gdy formant powróci do wywoływania metody. Aby przekazać parametr przez odwołanie, należy użyć `ref` lub `out` — słowo kluczowe.
+Należy przekazać parametr przez odwołanie, jeśli chcesz zmienić wartości argumentu w metodzie i chcesz refect zmiana, gdy formant powróci do wywoływania metody. Aby przekazać parametr przez odwołanie, należy użyć [ `ref` ](language-reference/keywords/ref.md) lub [ `out` ](language-reference/keywords/out-parameter-modifier.md) — słowo kluczowe. Można również przekazać wartość przez odwołanie, aby unikać kopiowania, ale nadal uniemożliwiają zmiany przy użyciu [ `in` ](language-reference/keywords/in-parameter-modifier.md) — słowo kluczowe.
 
 Poniższy przykład jest taki sam jak poprzedni, z wyjątkiem wartość jest przekazywana przez odwołanie do `ModifyValue` metody. Wartość parametru jest modyfikacji w `ModifyValue` metody, zmianę wartości jest odzwierciedlone zwrócona sterowania do obiektu wywołującego.
 
@@ -162,7 +162,7 @@ W poniższym przykładzie zdefiniowano metody `ExampleMethod`, która ma wymagan
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-Jeśli w wywołaniu metody z wielu argumentów opcjonalnych argumentów pozycyjnych, wywołujący podać argument wszystkie parametry opcjonalne od pierwszego do ostatnią, dla którego podano argumentu. W przypadku programu `ExampleMethod` metody, na przykład, jeśli element wywołujący dostarcza argument `description` parametru, jego należy również podać po jednej dla `optionalInt` parametru. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`to wywołanie prawidłowej metody; `opt.ExampleMethod(2, , "Addition of 2 and 0);` generuje "Brak argumentu" błąd kompilatora.
+Jeśli w wywołaniu metody z wielu argumentów opcjonalnych argumentów pozycyjnych, wywołujący podać argument wszystkie parametry opcjonalne od pierwszego do ostatnią, dla którego podano argumentu. W przypadku programu `ExampleMethod` metody, na przykład, jeśli element wywołujący dostarcza argument `description` parametru, jego należy również podać po jednej dla `optionalInt` parametru. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");` to wywołanie prawidłowej metody; `opt.ExampleMethod(2, , "Addition of 2 and 0);` generuje "Brak argumentu" błąd kompilatora.
 
 Jeśli metoda jest wywoływana przy użyciu argumentów nazwanych lub kombinacja argumentów pozycyjnych i nazwane, wywołujący można pominąć argumenty, które należy wykonać ostatni argument pozycyjny w wywołaniu metody.
 
@@ -269,7 +269,7 @@ W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, która zaw
 
 [!code-csharp[csSnippets.Methods#102](../../samples/snippets/csharp/concepts/methods/async1.cs#102)]
 
-Metoda asynchroniczna nie można zadeklarować żadnego [ref](language-reference/keywords/ref.md) lub [limit](language-reference/keywords/out.md) parametrów, ale można wywołać metody, które mają takie parametry.
+Metoda asynchroniczna nie można zadeklarować żadnego [w](language-reference/keywords/in-parameter-modifier.md), [ref](language-reference/keywords/ref.md), lub [limit](language-reference/keywords/out-parameter-modifier.md) parametrów, ale można wywołać metody, które mają takie parametry.
 
  Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [programowanie asynchroniczne z Async i Await](async.md), [przepływ sterowania w aplikacjach asynchronicznych](programming-guide/concepts/async/control-flow-in-async-programs.md), i [Async zwracać typów](programming-guide/concepts/async/async-return-types.md).
 
@@ -305,6 +305,7 @@ Aby uzyskać więcej informacji, zobacz [Iteratory](programming-guide/concepts/i
 [Dziedziczenie](programming-guide/classes-and-structs/inheritance.md)   
 [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [Parametry](language-reference/keywords/params.md)   
-[limit](language-reference/keywords/out.md)   
+[out](language-reference/keywords/out-parameter-modifier.md)   
 [REF](language-reference/keywords/ref.md)   
+[in](language-reference/keywords/in-parameter-modifier.md)   
 [Przekazywanie parametrów](programming-guide/classes-and-structs/passing-parameters.md)

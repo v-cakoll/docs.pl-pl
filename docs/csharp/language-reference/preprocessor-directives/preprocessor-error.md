@@ -19,19 +19,19 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="error-c-reference"></a><span data-ttu-id="0122f-102">#error (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="0122f-102">#error (C# Reference)</span></span>
-<span data-ttu-id="0122f-103">`#error`Umożliwia generowanie błędu z określonej lokalizacji w kodzie.</span><span class="sxs-lookup"><span data-stu-id="0122f-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="0122f-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="0122f-104">For example:</span></span>  
+# <a name="error-c-reference"></a><span data-ttu-id="308f7-102">#error (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="308f7-102">#error (C# Reference)</span></span>
+<span data-ttu-id="308f7-103">`#error`Umożliwia generowanie błędu z określonej lokalizacji w kodzie.</span><span class="sxs-lookup"><span data-stu-id="308f7-103">`#error` lets you generate an error from a specific location in your code.</span></span> <span data-ttu-id="308f7-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="308f7-104">For example:</span></span>  
   
 ```csharp
 #error Deprecated code in this method.  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="0122f-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="0122f-105">Remarks</span></span>  
- <span data-ttu-id="0122f-106">Typowym zastosowaniem `#error` w dyrektywie warunkowej.</span><span class="sxs-lookup"><span data-stu-id="0122f-106">A common use of `#error` is in a conditional directive.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="308f7-105">Uwagi</span><span class="sxs-lookup"><span data-stu-id="308f7-105">Remarks</span></span>  
+ <span data-ttu-id="308f7-106">Typowym zastosowaniem `#error` jest dyrektywa warunkowa.</span><span class="sxs-lookup"><span data-stu-id="308f7-106">A common use of `#error` is in a conditional directive.</span></span>  
   
- <span data-ttu-id="0122f-107">Istnieje również możliwość do generowania ostrzeżenie zdefiniowane przez użytkownika z [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span><span class="sxs-lookup"><span data-stu-id="0122f-107">It is also possible to generate a user-defined warning with [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span></span>  
+ <span data-ttu-id="308f7-107">Istnieje również możliwość wygenerowania ostrzeżenia zdefiniowanego przez użytkownika przy użyciu dyrektywy [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span><span class="sxs-lookup"><span data-stu-id="308f7-107">It is also possible to generate a user-defined warning with [#warning](../../../csharp/language-reference/preprocessor-directives/preprocessor-warning.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="0122f-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="0122f-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="308f7-108">Przykład</span><span class="sxs-lookup"><span data-stu-id="308f7-108">Example</span></span>  
   
 ```csharp
 // preprocessor_error.cs  
@@ -48,7 +48,7 @@ class MainClass
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="0122f-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="0122f-109">See Also</span></span>  
- [<span data-ttu-id="0122f-110">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="0122f-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="0122f-111">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="0122f-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="0122f-112">Dyrektywy preprocesora C#</span><span class="sxs-lookup"><span data-stu-id="0122f-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="308f7-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="308f7-109">See Also</span></span>  
+ [<span data-ttu-id="308f7-110">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="308f7-110">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="308f7-111">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="308f7-111">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="308f7-112">Dyrektywy preprocesora C#</span><span class="sxs-lookup"><span data-stu-id="308f7-112">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

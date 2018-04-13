@@ -1,5 +1,5 @@
 ---
-title: Obiekt&#39;t obsługuje tej właściwości lub metody (Visual Basic)
+title: Object doesn't support this property or method (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -17,13 +17,13 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/10/2018
 ---
-# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a><span data-ttu-id="43b7a-102">Obiekt&#39;t obsługuje tej właściwości lub metody (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="43b7a-102">Object doesn&#39;t support this property or method (Visual Basic)</span></span>
-<span data-ttu-id="43b7a-103">Określona metoda lub właściwość nie istnieje dla tego obiektu automatyzacji.</span><span class="sxs-lookup"><span data-stu-id="43b7a-103">You specified a method or property that does not exist for this automation object.</span></span>  
+# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a><span data-ttu-id="fbe1d-102">Object doesn't support this property or method (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fbe1d-102">Object doesn&#39;t support this property or method (Visual Basic)</span></span>
+<span data-ttu-id="fbe1d-103">Określona metoda lub właściwość nie istnieje dla tego obiektu automatyzacji.</span><span class="sxs-lookup"><span data-stu-id="fbe1d-103">You specified a method or property that does not exist for this automation object.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="43b7a-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="43b7a-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="fbe1d-104">Aby poprawić ten błąd</span><span class="sxs-lookup"><span data-stu-id="fbe1d-104">To correct this error</span></span>  
   
--   <span data-ttu-id="43b7a-105">Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na temat obiektu i sprawdzanie pisowni właściwości i metod.</span><span class="sxs-lookup"><span data-stu-id="43b7a-105">Read the object's documentation for more information on the object and check the spellings of properties and methods.</span></span>  
+-   <span data-ttu-id="fbe1d-105">Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na temat obiektu, a także sprawdź pisownię właściwości i metod.</span><span class="sxs-lookup"><span data-stu-id="fbe1d-105">Read the object's documentation for more information on the object and check the spellings of properties and methods.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="43b7a-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="43b7a-106">See Also</span></span>  
- [<span data-ttu-id="43b7a-107">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="43b7a-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
+## <a name="see-also"></a><span data-ttu-id="fbe1d-106">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="fbe1d-106">See Also</span></span>  
+ [<span data-ttu-id="fbe1d-107">Typy błędów</span><span class="sxs-lookup"><span data-stu-id="fbe1d-107">Error Types</span></span>](../../visual-basic/programming-guide/language-features/error-types.md)  
 

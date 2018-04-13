@@ -1,5 +1,5 @@
 ---
-title: Obiekt&#39;t obsługuje tej właściwości lub metody (Visual Basic)
+title: Object doesn't support this property or method (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -17,12 +17,12 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 04/10/2018
 ---
-# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>Obiekt&#39;t obsługuje tej właściwości lub metody (Visual Basic)
+# <a name="object-doesn39t-support-this-property-or-method-visual-basic"></a>Object doesn't support this property or method (Visual Basic)
 Określona metoda lub właściwość nie istnieje dla tego obiektu automatyzacji.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
--   Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na temat obiektu i sprawdzanie pisowni właściwości i metod.  
+-   Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na temat obiektu, a także sprawdź pisownię właściwości i metod.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy błędów](../../visual-basic/programming-guide/language-features/error-types.md)  

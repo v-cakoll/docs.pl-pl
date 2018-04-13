@@ -1,5 +1,5 @@
 ---
-title: "Opcja &lt;— słowo kluczowe&gt; — instrukcja"
+title: "Option &lt;— słowo kluczowe&gt; — instrukcja"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
@@ -21,13 +21,15 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/22/2017
 ---
-# <a name="option-ltkeywordgt-statement"></a>Opcja &lt;— słowo kluczowe&gt; — instrukcja
-Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie do całego pliku źródłowego.  
-  
-## <a name="remarks"></a>Uwagi  
- Opcje kompilatora można kontrolować, czy musi być jawnie zadeklarować wszystkie, czy zawężanie konwersji typu musi być jawnym lub czy należy porównywać ciągi jako tekst lub binarny ilości.  
-  
- `Option` — Słowo kluczowe może być używana w tych sytuacjach:  
+# <a name="option-ltkeywordgt-statement"></a>Option &lt;słowo kluczowe&gt; — instrukcja
+
+Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie do całego pliku źródłowego.
+
+## <a name="remarks"></a>Uwagi
+
+ Opcje kompilatora można kontrolować, czy musi być jawnie zadeklarować wszystkie, czy zawężanie konwersji typu musi być jawnym lub czy należy porównywać ciągi jako tekst lub binarny ilości.
+
+ `Option` — Słowo kluczowe może być używane w tych sytuacjach:
   
  [Option Compare — instrukcja](../../../visual-basic/language-reference/statements/option-compare-statement.md)  
   
@@ -37,5 +39,6 @@ Wprowadza instrukcję określającą opcję kompilatora, która ma zastosowanie 
   
  [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
+
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)

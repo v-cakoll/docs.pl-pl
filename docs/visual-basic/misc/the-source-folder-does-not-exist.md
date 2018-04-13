@@ -14,14 +14,16 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="the-source-folder-does-not-exist"></a>Folder źródłowy nie istnieje.
-Próbowano operację, która odwołuje się do folderu źródłowego, który nie istnieje. Może to być skutek podawania Niepoprawna ścieżka.  
-  
-## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
-  
--   Sprawdź, że używasz poprawnej ścieżki, zwłaszcza w przypadku, gdy używasz ścieżek względnych.  
-  
-## <a name="see-also"></a>Zobacz też  
- [Porady: analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)  
- [Odczyt z plików](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
+# <a name="the-source-folder-does-not-exist"></a>Folder źródłowy nie istnieje
+
+Próbowano wykonać operację, która odwołuje się do folderu źródłowego, który nie istnieje. Może być to skutek podania niepoprawnej ścieżki.
+
+## <a name="to-correct-this-error"></a>Aby poprawić ten błąd
+
+- Sprawdź, czy używasz poprawnej ścieżki, zwłaszcza w przypadku, gdy używasz ścieżek względnych.
+
+## <a name="see-also"></a>Zobacz też
+
+ [Porady: analizowanie ścieżek pliku](../../visual-basic/developing-apps/programming/drives-directories-files/how-to-parse-file-paths.md)
+ [Odczyt z plików](../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
  [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

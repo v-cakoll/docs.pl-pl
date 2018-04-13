@@ -70,7 +70,7 @@ Podczas pisania klasy z niektórych operacji, które może pociągnąć za sobą
 -   Tworzenie klasy o nazwie `PrimeNumberCalculator` dziedziczący po <xref:System.ComponentModel.Component>.  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>Definiowanie zdarzenia asynchroniczne publiczne i Delegaty  
- Składnik komunikuje się klientów przy użyciu zdarzenia. *MethodName *** Ukończono** alerty zdarzeń informujące o klientów do wykonania zadanie asynchroniczne i *MethodName *** ProgressChanged** zdarzeń poinformuje klientów postęp zadania asynchronicznego.  
+ Składnik komunikuje się klientów przy użyciu zdarzenia. *MethodName***Ukończono** alerty zdarzeń informujące o klientów do wykonania zadanie asynchroniczne i *MethodName***ProgressChanged** zdarzeń poinformuje klientów postęp zadania asynchronicznego.  
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>Aby zdefiniować zdarzenia asynchroniczne dla klientów składnika:  
   

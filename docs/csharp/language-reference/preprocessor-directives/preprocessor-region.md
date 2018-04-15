@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="region-c-reference"></a>#region (odwołanie w C#)
-`#region`Pozwala określić blok kodu, który można rozwinąć lub zwinąć przy użyciu [zwijania](/visualstudio/ide/outlining) funkcji edytora kodu programu Visual Studio. W plikach kodu dłużej jest wygodne można zwinąć lub ukrywanie jednego lub więcej regionów, dzięki czemu można skupić się w tej części pliku, który pracuje obecnie. Poniższy przykład przedstawia sposób definiowania regionu:  
+`#region`pozwala określić blok kodu, który można rozwinąć lub zwinąć przy użyciu funkcji [zwijania](/visualstudio/ide/outlining) w edytorze kodu programu Visual Studio. W dłuższych plikach z kodem wygodniejsze jest zwinięcie jednego lub kilku regionów, żeby móc skupić się nad częścią pliku nad którą się obecnie pracuje. Poniższy przykład przedstawia sposób definiowania regionu:  
   
 ```csharp
 #region MyClass definition  
@@ -34,9 +34,9 @@ public class MyClass
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- A `#region` muszą kończyć bloku [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md) dyrektywy.  
+ Blok `#region` musi kończyć się dyrektywą [#endregion](../../../csharp/language-reference/preprocessor-directives/preprocessor-endregion.md).  
   
- A `#region` bloku nie mogą nakładać się na [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md) bloku. Jednak `#region` bloku może być zagnieżdżona w `#if` bloku, a `#if` bloku może być zagnieżdżona w `#region` bloku.  
+Blok `#region` nie może nakładać się na blok [#if](../../../csharp/language-reference/preprocessor-directives/preprocessor-if.md). Jednak blok `#region` może być zagnieżdżony w bloku `#if`, oraz blok `#if` może być zagnieżdżona w tym, wyznaczonym dyrektywą `#region`.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

@@ -1,5 +1,5 @@
 ---
-title: "Argument &#39; Życia &#39; nie może być zerem"
+title: Argument &#39;Life&#39; cannot be zero
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: article
 f1_keywords:
 - vbrFinancial_LifeNEZero
 ms.assetid: c402da97-a2b2-4219-a83a-0cebbfdffef2
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 63130405550684a6e5d8c9c7bfcd1aa971045f2b
@@ -17,8 +17,8 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 12/21/2017
 ---
-# <a name="argument-39life39-cannot-be-zero"></a>Argument &#39; Życia &#39; nie może być zerem
-Argument `Life`, które muszą być `Double` który określa długość eksploatacji środka trwałego, jest nieprawidłowy.  
+# <a name="argument-39life39-cannot-be-zero"></a>Argument &#39;Life&#39; cannot be zero
+Wartość argumentu `Life` jest nieprawidłowa. Musi to być wartość `Double`, która określa długość okresu eksploatacji środka trwałego.  
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   

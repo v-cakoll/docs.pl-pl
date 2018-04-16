@@ -23,7 +23,7 @@ Ta sekcja dokumentacji ułatwia szybkie wprowadzenie do programowania aplikacji 
   
 ## <a name="get-started-with-visual-basic-and-net-core"></a>Wprowadzenie do języka Visual Basic i .NET Core
 
-[Tworzenie aplikacji Visual Basic Hello World z platformą .NET Core w Visual Studio 2017 r.](../../core/tutorials/vb-with-visual-studio.md)
+[worzenie aplikacji Hello World w języku Visual Basic na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/vb-with-visual-studio.md)
 
 [Tworzenie biblioteki klas w języku Visual Basic i na platformie .NET Core w programie Visual Studio 2017](../../core/tutorials/vb-library-with-visual-studio.md)  
 
@@ -32,10 +32,10 @@ Ta sekcja dokumentacji ułatwia szybkie wprowadzenie do programowania aplikacji 
 [Nowości w języku Visual Basic](whats-new.md)   
 Wyświetla listę nowych funkcji w każdej wersji programu Visual Basic .NET.
 
-[Visual Basic — przełomowe zmiany w Visual Studio](breaking-changes-in-visual-studio.md)  
-Informuje o zmianach wprowadzonych w tej wersji, które mogłyby uniemożliwić Kompilowanie aplikacji lub zmienić jego zachowania w czasie wykonywania.  
+[Visual Basic — fundamentalne zmiany w Visual Studio](breaking-changes-in-visual-studio.md)  
+Informuje o zmianach wprowadzonych w tej wersji, które mogą uniemożliwić kompilowanie aplikacji lub zmienić jej działanie.  
   
-[Dodatkowe dla programistów Visual Basic](additional-resources.md)  
+[Dodatkowe zasoby dla programistów Visual Basic](additional-resources.md)  
 Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znalezieniu odpowiedzi na typowe problemy.  
 
 ## <a name="develop-net-core-applications-with-visual-basic"></a>Tworzenie aplikacji platformy .NET Core za pomocą Visual Basic

@@ -12,7 +12,7 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-caps.latest.revision: ''
+caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
@@ -23,29 +23,29 @@ ms.lasthandoff: 03/28/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
-Ten temat zawiera listę nazw funkcji klucza dla każdej wersji programu Visual Basic z szczegółowe opisy nowych i ulepszonych funkcji w najnowsza wersja języka.
+Ten temat zawiera listę nazw kluczowych funkcji wszystkich wersji języka Visual Basic, a także szczegółowe opisy nowych i ulepszonych funkcji w najnowszej wersji tego języka.
   
 ## <a name="current-version"></a>Bieżąca wersja
 
-Visual Basic 15,5 cala   
-W przypadku nowych funkcji, zobacz [15,5 cala Visual Basic](#visual-basic-155)
+Visual Basic 15.5   
+Aby przejrzeć nowe funcje, zobacz [Visual Basic 15.5](#visual-basic-155)
 
 ## <a name="previous-versions"></a>Poprzednie wersje
 
-Visual Basic 15 ustęp 3   
-W przypadku nowych funkcji, zobacz [15 ustęp 3 Visual Basic](#visual-basic-153)
+Visual Basic 15.3   
+Aby przejrzeć nowe funkcje, zobacz [Visual Basic 15.3](#visual-basic-153)
 
 2017 Visual Basic   
-W przypadku nowych funkcji, zobacz [2017 Visual Basic](#visual-basic-2017)
+Aby przejrzeć nowe funkcje, zobacz [Visual Basic 2017](#visual-basic-2017)
 
 Visual Basic / Visual Studio .NET 2015   
-W przypadku nowych funkcji, zobacz [14 Visual Basic](#visual-basic-14)
+Aby przejrzeć nowe funkcje, zobacz [Visual Basic 14](#visual-basic-14)
 
 Visual Basic / Visual Studio .NET 2013  
 Podglądy technologii platformy kompilatora .NET ("Roslyn")
 
 Visual Basic / Visual Studio .NET 2012   
-`Async` i `await` słów kluczowych, Iteratory, caller — atrybuty informacji
+Słowa kluczowe `Async` i `await`, iteratory, atrybuty informacji obiektów wywołujących
 
 Visual Basic, Visual Studio .NET 2010   
 Właściwości zaimplementowane automatycznie, inicjatory kolekcji, kontynuacji wiersza niejawne, odchylenie dynamicznych, ogólny co/ma przeciwwskazań, dostępu globalnej przestrzeni nazw
@@ -62,11 +62,12 @@ Operatory przesunięcia bitowego, deklaracja zmiennej pętli
 Visual Basic / Visual Studio .NET 2002   
 Pierwszej wersji programu Visual Basic .NET
 
-## <a name="visual-basic-155"></a>Visual Basic 15,5 cala
+## <a name="visual-basic-155"></a>Visual Basic 15.5
 
 [Non końcowe nazwane argumenty](../programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md#mixing-arguments-by-position-and-by-name)
 
-W Visual Basic 15 ustęp 3 i starszych wersjach gdy wywołanie metody uwzględnione argumentów zarówno według pozycji i według nazwy, argumenty pozycyjne musiał poprzedzać nazwane argumenty. Argumenty nazwane i pozycyjnych począwszy od 15,5 cala Visual Basic, może wystąpić w dowolnej kolejności, tak długo, jak wszystkie argumenty do ostatni argument pozycyjny są w poprawnej pozycji. Jest to szczególnie przydatne, gdy nazwane argumenty są używane, aby zwiększyć czytelność kodu.
+W wersji Visual Basic 15.3 i starszych wersjach gdy wywołanie metody uwzględniało argumenty zarówno według pozycji, jak i według nazwy, argumenty pozycyjne musiały poprzedzać argumenty nazwane. W wersji Visual Basic 15.5 i nowszych argumenty pozycyjne i argumenty nazwane mogą występować w dowolnej kolejności, pod warunkiem że wszystkie argumenty (do ostatniego argumentu pozycyjnego) znajdują się we właściwych pozycjach. Jest to szczególnie przydatne, gdy argumenty nazwane są stosowane w celu poprawy czytelności kodu.
+
 
 Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między nazwany argument. Nazwany argument ułatwia wyczyść reprezentowany przez wartość 19 wieku.
 
@@ -74,14 +75,14 @@ Na przykład następujące wywołanie metody ma dwa argumenty pozycyjne między 
 StudentInfo.Display("Mary", age:=19, #9/21/1998#)
 ```
 
-**Wiodący znak separatora hex/binary/ósemkowe**
+**Wiodący znak separatora szesnastkowy/binarny/ósemkowy**
 
-Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separator cyfr. Począwszy od 15,5 cala Visual Basic, można użyć znaku podkreślenia jako separator wiodące między prefiks i cyfr szesnastkowych, binarne lub ósemkowo. W poniższym przykładzie użyto wiodące separator cyfr, aby zdefiniować 3,271,948,384 jako liczbę szesnastkową:
+W wersji +Visual Basic 2017 dodano obsługę znaku podkreślenia (`_`) jako separatora cyfr. Począwszy od wersji Visual Basic 15.5, można używać znaku podkreślenia jako separatora wiodącego między prefiksem a cyframi szesnastkowymi, binarnymi lub ósemkowymi. W poniższym przykładzie użyto separatora wiodącego cyfr, aby zdefiniować liczbę 3 271 948 384 w postaci szesnastkowej:
 
 ```vb
 Dim number As Integer = &H_C305_F860
 ``` 
-Aby użyć znaku podkreślenia jako separator początkowych, należy dodać następujący element do projektu Visual Basic (\*.vbproj) plików:
+Aby użyć znaku podkreślenia jako separatora wiodącego, należy dodać następujący element do pliku projektu Visual Basic (\*.vbproj):
 
 ```xml
 <PropertyGroup>
@@ -89,7 +90,7 @@ Aby użyć znaku podkreślenia jako separator początkowych, należy dodać nast
 </PropertyGroup>
 ```
 
-## <a name="visual-basic-153"></a>Visual Basic 15 ustęp 3
+## <a name="visual-basic-153"></a>Visual Basic 15.3
 
 [**Wnioskowanie spójnej kolekcji o nazwie**](../programming-guide/language-features/data-types/tuples.md#inferred-tuple-element-names)
 

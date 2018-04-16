@@ -1,9 +1,10 @@
 ---
-title: "Niestety, mamy ADAM &#39; t są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic"
+title: Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vbc30234
@@ -3048,7 +3049,7 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 132bb3f93ae5084df73aed56b6d1483830984928
@@ -3057,23 +3058,23 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, mamy ADAM &#39; t są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic
-Przepraszamy, ale nie mamy żadnych określone informacje o tym błędzie. Możesz wyszukać tekst numer i komunikat błędu można znaleźć informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
+Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
   
  [Język Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Udostępnia forum odpowiedzi na pytania o i ogólnych dyskusjach [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] składni języka i kompilatora.  
+ Forum do zadawania pytań oraz prowadzenia ogólnych dyskusji na temat kompilatora i składni języka [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
- [Współdziałanie języka Visual Basic i uaktualniania](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Zapewnia forum pytania o i problemy związane z uaktualnieniem do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] i Praca z funkcji współdziałania.  
+ [Visual Basic Interop and Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
+ Forum do zadawania pytań i omawiania problemów związanych z uaktualnianiem do programu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] oraz korzystaniem z funkcji współdziałania.  
   
  [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Udostępnia forum odpowiedzi na pytania dotyczące pracy [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] środowiska.  
+ Forum do zadawania pytań dotyczących pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
- [Ogólne w Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Zapewnia forum pytania o i problemy związane z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nie opisano w innych forach.  
+ [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973)  
+ Forum do zadawania pytań i omawiania problemów związanych z programem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], które nie zostały opisane w innych forach.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Zapewnia forum pytania o i problemy związane z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Forum do zadawania pytań i omawiania problemów związanych z programem[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
   
  Zobacz też:  
  [Zasoby dodatkowe dla programistów Visual Basic](../../visual-basic/getting-started/additional-resources.md)  

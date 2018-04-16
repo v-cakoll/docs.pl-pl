@@ -22,7 +22,7 @@ Odwołujesz się do metody lub właściwości, która nie jest obsługiwana prze
   
 ## <a name="to-correct-this-error"></a>Aby poprawić ten błąd  
   
-1.  Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na temat obiektu.  
+1.  Przeczytaj dokumentację obiektu, aby uzyskać więcej informacji na jego temat.  
   
 2.  Upewnij się, że nazwy właściwości i metod są poprawne.  
   

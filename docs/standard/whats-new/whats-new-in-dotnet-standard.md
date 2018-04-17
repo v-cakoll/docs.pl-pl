@@ -1,7 +1,8 @@
 ---
 title: Co to jest nowa w programie .NET Standard
+description: W tym artykule przedstawiono nowe funkcje i ulepszenia znajdujące się w każdej nowej wersji programu .NET Standard.
 ms.custom: updateeachrelease
-ms.date: 11/08/2017
+ms.date: 04/12/2018
 ms.prod: .net
 ms.topic: article
 ms.technology: dotnet-standard
@@ -11,11 +12,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3a5833bdfcf1e3433ea82403908e9a06a88cde27
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 13efc4a927d744662ba8d2e1210d5f8fc166a472
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-the-net-standard"></a>Co to jest nowa w programie .NET Standard
 
@@ -27,21 +28,21 @@ Najnowszą wersję programu .NET Standard jest wersja 2.0. Jest dostępna przy u
 
 .NET 2.0 standardowe jest obsługiwany przez następujące implementacje .NET:
 
-- Oprogramowanie .NET core 2.0
-- .NET Framework 4.6.1
-- 5.4 mono
-- Xamarin.iOS 10.14
-- Xamarin.Mac 3.8
-- Xamarin.Android 8.0
-- Platforma uniwersalna systemu Windows 10.0.16299
+- Oprogramowanie .NET core 2.0 lub nowszy
+- .NET framework 4.6.1 lub nowszej
+- Mono 5.4 lub nowszy
+- Xamarin.iOS 10.14 lub nowszy
+- Xamarin.Mac 3.8 lub nowszej
+- Xamarin.Android 8.0 lub nowszej
+- Platforma uniwersalna systemu Windows 10.0.16299 lub nowszy
 
 ## <a name="whats-new-in-the-net-standard-20"></a>Co to jest nowa w programie .NET 2.0 standardowe
- 
+
 Standardowa .NET 2.0 obejmuje następujące nowe funkcje:
 
-**Znacząco rozwinięte zestaw interfejsów API**
+### <a name="a-vastly-expanded-set-of-apis"></a>Znacząco rozwinięte zestaw interfejsów API
 
-Za pomocą wersji 1.6 .NET Standard uwzględnione stosunkowo mały podzbiór interfejsów API. Między tymi wyłączone zostały wiele interfejsów API, które często używane w programie .NET Framework lub Xamarin. Komplikuje rozwoju, ponieważ wymaga ona, że deweloperzy znaleźć odpowiednie elementy zastępcze znanych interfejsów API podczas opracowywania aplikacji i bibliotek przeznaczonych do wiele implementacji .NET. .NET 2.0 standardowe usuwa to ograniczenie, dodając ponad 20 000 API więcej niż były dostępne w .NET Standard 1.6 poprzedniej wersji standard. Listę interfejsów API, które zostały dodane do programu .NET 2.0 standardowego, zobacz [.NET 2.0 standardowe vs 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md). 
+Za pomocą wersji 1.6 .NET Standard uwzględnione stosunkowo mały podzbiór interfejsów API. Między tymi wyłączone zostały wiele interfejsów API, które często używane w programie .NET Framework lub Xamarin. Komplikuje rozwoju, ponieważ wymaga ona, że deweloperzy znaleźć odpowiednie elementy zastępcze znanych interfejsów API podczas opracowywania aplikacji i bibliotek przeznaczonych do wiele implementacji .NET. .NET 2.0 standardowe usuwa to ograniczenie, dodając ponad 20 000 API więcej niż były dostępne w .NET Standard 1.6 poprzedniej wersji standard. Listę interfejsów API, które zostały dodane do programu .NET 2.0 standardowego, zobacz [.NET 2.0 standardowe vs 1.6](https://raw.githubusercontent.com/dotnet/standard/master/docs/versions/netstandard2.0_diff.md).
 
 Niektóre dodatki do <xref:System> przestrzeni nazw w .NET Standard 2.0 obejmują:
 
@@ -57,37 +58,45 @@ Niektóre dodatki do <xref:System> przestrzeni nazw w .NET Standard 2.0 obejmuj�
 - Znacznie rozszerzoną funkcjonalność w <xref:System.Type> klasy.
 - Lepszą obsługę deserializacji obiektów wyjątku przez dodanie wyjątku konstruktora z <xref:System.Runtime.Serialization.SerializationInfo> i <xref:System.Runtime.Serialization.StreamingContext> parametrów.
 
-**Obsługa bibliotek .NET Framework**
+### <a name="support-for-net-framework-libraries"></a>Obsługa bibliotek .NET Framework
 
 Przeważająca większość bibliotek docelowy .NET Framework, a nie .NET Standard. Do interfejsów API, które znajdują się w .NET 2.0 standardowe są jednak większość wywołań w tych bibliotek. Począwszy od programu .NET 2.0 standardowe dostępnych bibliotek .NET Framework z biblioteki .NET Standard za pomocą [podkładki zgodności](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#assembly-unification). Ta warstwa zgodności jest niewidoczny dla deweloperów; nie trzeba wykonywać żadnych czynności, aby móc korzystać z biblioteki .NET Framework.
 
 Pojedynczy wymagane jest, że interfejsy API o nazwie w bibliotece klas programu .NET Framework muszą być zawarte w standardowe .NET 2.0.
 
-**Obsługa języka Visual Basic**
+### <a name="support-for-visual-basic"></a>Obsługa języka Visual Basic
 
-Można teraz tworzyć .NET standardowych bibliotek języka Visual Basic. Dla deweloperów języka Visual Basic, za pomocą programu Visual Studio 2017 wersji 15 ustęp 3 lub nowszym z obciążenia .NET Core zainstalowane Visual Studio teraz obejmuje szablonu standardowa biblioteka klas programu .NET. Dla deweloperów języka Visual Basic, korzystających z innych narzędzi do tworzenia i środowisk, można użyć [dotnet nowe](../../core/tools/dotnet-new.md) polecenie, aby utworzyć projekt biblioteki standardowej .NET. Aby uzyskać więcej informacji, zobacz [Obsługa narzędzi dla platformy .NET standardowych bibliotek](#tooling).
+Można teraz tworzyć .NET standardowych bibliotek języka Visual Basic. Dla deweloperów języka Visual Basic, za pomocą programu Visual Studio 2017 wersji 15 ustęp 3 lub nowszym z obciążenia .NET Core zainstalowane Visual Studio teraz obejmuje szablonu standardowa biblioteka klas programu .NET. Dla deweloperów języka Visual Basic, korzystających z innych narzędzi do tworzenia i środowisk, można użyć [dotnet nowe](../../core/tools/dotnet-new.md) polecenie, aby utworzyć projekt biblioteki standardowej .NET. Aby uzyskać więcej informacji, zobacz [Obsługa narzędzi dla platformy .NET standardowych bibliotek](#tooling-support-for-net-standard-libraries).
 
-<a name="tooling" />**Obsługa narzędzi dla platformy .NET standardowych bibliotek**
+### <a name="tooling-support-for-net-standard-libraries"></a>Obsługa narzędzi dla platformy .NET standardowych bibliotek
 
-Wraz z wydaniem programu .NET Core 2.0 i .NET 2.0 standardowe, zarówno programu Visual Studio 2017 i [.NET Core interfejsu wiersza polecenia (CLI)](../../core/tools/index.md) obejmują narzędzia pomocy technicznej do tworzenia bibliotek .NET Standard. 
+Wraz z wydaniem programu .NET Core 2.0 i .NET 2.0 standardowe, zarówno programu Visual Studio 2017 i [.NET Core interfejsu wiersza polecenia (CLI)](../../core/tools/index.md) obejmują narzędzia pomocy technicznej do tworzenia bibliotek .NET Standard.
 
-Jeśli zainstalujesz program Visual Studio z **aplikacji dla wielu platform .NET Core** obciążenie, można utworzyć projektu biblioteki .NET 2.0 standardowe za pomocą szablonu projektu, jak przedstawiono na poniższym rysunku. 
+Jeśli zainstalujesz program Visual Studio z **aplikacji dla wielu platform .NET Core** obciążenie, można utworzyć projektu biblioteki .NET 2.0 standardowe za pomocą szablonu projektu, jak przedstawiono na poniższym rysunku:
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
+
 ![Dodaj nowy .NET Standard projektu biblioteki](./media/std-project-cs.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
-<a name="add-new-net-standard-library-projectmediastd-project-vbpng"></a>![Dodaj nowy .NET Standard projektu biblioteki](./media/std-project-vb.png)
----
 
-Jeśli używasz .NET Core CLI, następujące [dotnet nowe](../../core/tools/dotnet-new.md) polecenie tworzy projektu biblioteki klas, przeznaczonego dla programu .NET 2.0 standardowa.
+W przypadku korzystania z platformy .NET Core interfejsu wiersza polecenia, następujące [dotnet nowe](../../core/tools/dotnet-new.md) polecenie tworzy projektu biblioteki klas, przeznaczonego dla programu .NET 2.0 standardowe:
 
-```csharp
+```
 dotnet new classlib
 ```
-```vb
+
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+
+![Dodaj nowy .NET Standard projektu biblioteki](./media/std-project-vb.png)
+
+W przypadku korzystania z platformy .NET Core interfejsu wiersza polecenia, następujące [dotnet nowe](../../core/tools/dotnet-new.md) polecenie tworzy projektu biblioteki klas, przeznaczonego dla programu .NET 2.0 standardowe:
+
+```
 dotnet new classlib -lang vb
 ```
-  
-## <a name="see-also"></a>Zobacz też
-[.NET standard](../net-standard.md)
-[wprowadzenie do platformy .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+
+---
+
+## <a name="see-also"></a>Zobacz także
+
+[.NET Standard](../net-standard.md)  
+[Wprowadzenie do platformy .NET Standard](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)

@@ -1,12 +1,9 @@
 ---
-title: "Wywoływana otoka środowiska uruchomieniowego"
-ms.custom: 
+title: Wywoływana otoka środowiska uruchomieniowego
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, COM wrappers
@@ -15,23 +12,23 @@ helpviewer_keywords:
 - runtime callable wrappers
 - interoperation with unmanaged code, COM wrappers
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
-caps.latest.revision: "9"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8fed5ff57a4674f9b7723b1b850e972316fa94fb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc92f169851680465f33170290d865be8426a53d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="runtime-callable-wrapper"></a>Wywoływana otoka środowiska uruchomieniowego
 Środowisko uruchomieniowe języka wspólnego przedstawia obiekty COM za pośrednictwem serwera proxy, nazywany wywoływana otoka środowiska uruchomieniowego (otoki RCW). Mimo że otoki RCW wydaje się być obiekt zwykłej do klientów platformy .NET, jego podstawową funkcją jest do organizowania wywołań między klientem .NET obiektu COM.  
   
  Środowisko uruchomieniowe tworzy dokładnie jeden otoki RCW dla każdego obiektu modelu COM, niezależnie od liczby odwołań, które istnieją w tym obiekcie. Środowisko uruchomieniowe obsługuje pojedynczy otoki RCW na proces dla każdego obiektu.  Jeśli tworzenie otoki RCW w jednej domenie aplikacji lub typu apartment, a następnie przekazać odwołanie do innej domeny aplikacji lub typu apartment, będzie używany serwer proxy, aby pierwszy obiekt.  Jak pokazano na poniższej ilustracji, dowolną liczbę zarządzanych klientów może zawierać odwołania do obiektów COM, które udostępniają INew i INewer interfejsów.  
   
- ![RCW](../../../docs/framework/interop/media/rcw.gif "rcw")  
+ ![RCW](./media/rcw.gif "rcw")  
 Uzyskiwanie dostępu do obiektów COM za pomocą wywoływana otoka środowiska uruchomieniowego  
   
  Przy użyciu metadanych pochodzące z biblioteki typów, środowisko uruchomieniowe tworzy obiekt COM, wywoływana i otoki dla tego obiektu. Każdy otoki RCW obsługuje pamięć podręczną wskaźniki interfejsu w obiekcie COM zawijany i zwalnia jego odwołania do obiektu COM otoki RCW jest już potrzebne. Środowisko uruchomieniowe przeprowadzają otoki RCW wyrzucanie elementów bezużytecznych.  
@@ -41,9 +38,9 @@ Uzyskiwanie dostępu do obiektów COM za pomocą wywoływana otoka środowiska u
  Standardowa otoki wymusza wbudowane reguły kierowania. Na przykład gdy klienta .NET przekazuje typu ciąg jako część argumentu do niezarządzanego obiektu, otoka konwertuje ciąg na typ BSTR. Obiekt wywołujący obiektu COM należy przywrócić BSTR zarządzanych wywołującego, otrzymuje ciąg. Zarówno klient, jak i serwer wysyłania i odbierania danych, które są znane do nich. Inne typy wymagają brak konwersji. Na przykład standardowe otoki zawsze przekazuje 4-bajtowych liczb całkowitych między zarządzanymi i niezarządzanymi kodu bez konwersji typu.  
   
 ## <a name="marshaling-selected-interfaces"></a>Przekazywanie wybranego interfejsów  
- Podstawowym celem [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md) (otoki RCW) jest ukrycie różnice między zarządzanymi i niezarządzanymi modele programowania. Aby utworzyć płynne przejście, otoki RCW zużywa wybrane interfejsy COM bez narażania ich do klienta .NET, jak pokazano na poniższej ilustracji.  
+ Podstawowym celem [wywoływana otoka środowiska uruchomieniowego](runtime-callable-wrapper.md) (otoki RCW) jest ukrycie różnice między zarządzanymi i niezarządzanymi modele programowania. Aby utworzyć płynne przejście, otoki RCW zużywa wybrane interfejsy COM bez narażania ich do klienta .NET, jak pokazano na poniższej ilustracji.  
   
- ![Otoka RCW z interfejsów](../../../docs/framework/interop/media/rcwwithinterfaces.gif "rcwwithinterfaces")  
+ ![Otoka RCW z interfejsów](./media/rcwwithinterfaces.gif "rcwwithinterfaces")  
 Interfejsy modelu COM i wywoływana otoka środowiska uruchomieniowego  
   
  Po utworzeniu jako obiekt z wczesnym wiązaniem otoki RCW jest określonego typu. Implementuje interfejsy implementuje i udostępnia metody, właściwości i zdarzeń z interfejsów obiektu obiektu COM. Na ilustracji uwidacznia interfejs INew otoki RCW, ale zużywa **IUnknown** i **IDispatch** interfejsów. Ponadto otoki RCW przedstawia wszystkie elementy członkowskie interfejsu INew do klienta programu .NET.  
@@ -63,11 +60,11 @@ Interfejsy modelu COM i wywoływana otoka środowiska uruchomieniowego
 |---------------|-----------------|  
 |**IConnectionPoint** i **IConnectionPointContainer**|Obiektów konwertuje otoki RCW, które udostępniają styl zdarzenie punktu połączenia na podstawie delegata zdarzenia.|  
 |**IDispatchEx**|Jeśli klasa implementuje **IDispatchEx**, implementuje otoki RCW **IExpando**. **IDispatchEx** interfejsu jest rozszerzeniem **IDispatch** interfejsu, w odróżnieniu od **IDispatch**, umożliwia wyliczania, dodawania, usuwania i z uwzględnieniem wielkości liter wywoływanie elementów członkowskich.|  
-|**IEnumVARIANT**|Umożliwia typów COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
+|**Interfejsu IEnumVARIANT**|Umożliwia typów COM, które obsługują wyliczenia powinien być traktowany jako kolekcji.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Otoki COM](../../../docs/framework/interop/com-wrappers.md)  
- [Przekazywanie wybranego interfejsów](http://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840)  
- [Wywoływana otoka COM](../../../docs/framework/interop/com-callable-wrapper.md)  
- [Biblioteki typów na zestaw konwersja — podsumowanie](http://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958)  
- [Importowanie biblioteki typów jako zestawu](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)
+ [Otoki COM](com-wrappers.md)  
+ [Przekazywanie wybranego interfejsów](https://msdn.microsoft.com/library/fdb97fd0-f694-4832-bf15-a4e7cf413840(v=vs.100))  
+ [Wywoływana otoka COM](com-callable-wrapper.md)  
+ [Biblioteki typów na zestaw konwersja — podsumowanie](https://msdn.microsoft.com/library/bf3f90c5-4770-4ab8-895c-3ba1055cc958(v=vs.100))  
+ [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)

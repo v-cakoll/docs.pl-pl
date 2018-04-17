@@ -9,11 +9,11 @@ ms.technology: dotnet-docker
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c10bf66dd37f0d99c038db7f95999d84986152fa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 230deb3869887fbcdd07e748d30601f19ec2be2a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie aplikacji MVC ASP.NET Core
 
@@ -74,10 +74,10 @@ Dla interfejsów API sieci web platformy ASP.NET MVC Core obsługuje [ *negocjow
 > ### <a name="references--mapping-requests-to-responses"></a>Odwołania — mapowania żądania do odpowiedzi
 > - **Routing do akcji kontrolera**
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/routing>
-> - **Model powiązania** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
-> - **Sprawdzanie poprawności modelu**
+> - **Wiązanie modelu** https://docs.microsoft.com/aspnet/core/mvc/models/model-binding
+> - **Weryfikacja modelu**
 > <https://docs.microsoft.com/aspnet/core/mvc/models/validation>
-> - **Filtry** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
+> - **filtry** https://docs.microsoft.com/aspnet/core/mvc/controllers/filters
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
@@ -207,7 +207,7 @@ services.AddMvc(o => o.Conventions.Add(new FeatureConvention()));
 
 Platformy ASP.NET Core MVC również używa konwencji zlokalizować widoki. Można zastąpić go z Konwencją niestandardowe, aby widoki będą znajdować się w folderach funkcji (przy użyciu nazwy funkcji podanego przez FeatureConvention powyżej). Można dowiedzieć się więcej na temat tej metody i pobrać przykładowy pracy z artykuł w witrynie MSDN [wycinków funkcji dla platformy ASP.NET Core MVC](https://msdn.microsoft.com/magazine/mt763233.aspx).
 
-### <a name="cross-cutting-concerns"></a>Cross-Cutting Concerns
+### <a name="cross-cutting-concerns"></a>Dotyczy kompleksowymi
 
 Wzrostem aplikacji staje się coraz bardziej ważne składników wychodzących kompleksowymi problemy, aby wyeliminować dublowania i zachowanie spójności. Przykłady kompleksowymi problemy w aplikacji platformy ASP.NET Core to uwierzytelnianie, reguł sprawdzania poprawności modelu, buforowanie danych wyjściowych i obsługi błędu, jeśli istnieje wiele innych. Platformy ASP.NET Core MVC [filtry](https://docs.microsoft.com/aspnet/core/mvc/controllers/filters) zezwalają na uruchamianie kodu przed lub po pewne czynności w potoku przetwarzania żądań. Na przykład filtr można uruchomić przed i po wiązania modelu, przed i po akcji lub przed i po wyniku akcji. Umożliwia także filtr autoryzacji do kontrolowania dostępu do pozostałego potoku. Pokazuje rysunki 7-2 jak żądanie wykonania przepływów filtry, skonfigurowanie.
 
@@ -283,7 +283,7 @@ Więcej o implementacji filtry i pobrać przykładowy pracy z artykuł w witryni
 > ### <a name="references--structuring-applications"></a>Odwołania — struktury aplikacji
 > - **Obszary**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN — funkcja wycinki dla platformy ASP.NET Core MVC**
+> - **MSDN — wycinków funkcji podstawowych programu ASP.NET MVC**
 >  <https://msdn.microsoft.com/magazine/mt763233.aspx>
 > - **Filtry**  
 > <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
@@ -400,7 +400,7 @@ Większość interfejsów API sieci web należy zaimplementować uwierzytelniani
 
 ## <a name="client-communication"></a>Komunikacja klienta
 
-Oprócz obsługująca stron i odpowiada na żądania danych za pośrednictwem interfejsów API sieci web, aplikacje platformy ASP.NET Core może komunikować się bezpośrednio z połączonych klientów. Tej komunikacji wychodzącej można użyć różnych technologii transportu jest najbardziej typowych Websocket. SignalR platformy ASP.NET Core to biblioteki, która upraszcza rodzaj funkcji komunikacji serwera do klienta w czasie rzeczywistym dla poszczególnych aplikacji. SignalR obsługuje wiele technologii transportu, w tym Websocket i abstracts wielu zadań szczegóły implementacji od dewelopera.
+Oprócz obsługująca stron i odpowiada na żądania danych za pośrednictwem interfejsów API sieci web, aplikacje platformy ASP.NET Core może komunikować się bezpośrednio z połączonych klientów. Tej komunikacji wychodzącej można użyć różnych technologii transportu jest najbardziej typowych Websocket. SignalR platformy ASP.NET Core to biblioteki, która ułatwia dodawanie w czasie rzeczywistym komunikacji klient serwera funkcji do aplikacji. SignalR obsługuje wiele technologii transportu, w tym Websocket i abstracts wielu zadań szczegóły implementacji od dewelopera.
 
 SignalR platformy ASP.NET Core jest obecnie opracowywane i będą dostępne w następnej wersji platformy ASP.NET Core. Jednak inne [otworzyć źródła Websocket biblioteki](https://github.com/radu-matei/websocket-manager) są obecnie dostępne.
 
@@ -456,7 +456,7 @@ Należy rozważyć wystąpić sposoby, w których aplikacji komunikują się bez
 > ### <a name="references--client-communication"></a>Odwołania — komunikacji z klientem
 > - **SignalR platformy ASP.NET Core**  
 > <https://github.com/aspnet/SignalR>
-> - **WebSocket Manager**  
+> - **Menedżer protokołu WebSocket**  
 > https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>Domeny oparte na projektowanie — powinien zastosowaniu?

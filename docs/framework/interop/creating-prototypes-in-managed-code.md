@@ -1,12 +1,9 @@
 ---
-title: "Tworzenie prototypów w kodzie zarządzanym"
-ms.custom: 
+title: Tworzenie prototypów w kodzie zarządzanym
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -24,19 +21,20 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d1006f59f9841a10066c83a8f0800d3a7c17500a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c59a05c5f6abfa30a71ccf7608f8a84738f99c3a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-prototypes-in-managed-code"></a>Tworzenie prototypów w kodzie zarządzanym
-Ten temat zawiera opis sposobu dostępu z funkcjami niezarządzanymi i wprowadzono kilka pól atrybutów, które adnotacji definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, które pokazują, jak utworzyć. Deklaracje opartych na potrzeby używania z platformy invoke, zobacz [organizowanie danych za pomocą wywołania platformy](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).  
+Ten temat zawiera opis sposobu dostępu z funkcjami niezarządzanymi i wprowadzono kilka pól atrybutów, które adnotacji definicji metody w kodzie zarządzanym. Aby uzyskać przykłady pokazujące, które pokazują, jak utworzyć. Deklaracje opartych na potrzeby używania z platformy invoke, zobacz [organizowanie danych za pomocą wywołania platformy](marshaling-data-with-platform-invoke.md).  
   
  Przed uzyskaniem dostępu niezarządzanych funkcji DLL z kodu zarządzanego, musisz znać nazwę funkcji i nazwy biblioteki DLL, który eksportuje je. Dzięki tym informacjom można rozpocząć zapisu zarządzanej definicji niezarządzanej funkcji, która jest zaimplementowana w bibliotece DLL. Ponadto można dostosować sposób wywołania tej platformy tworzy funkcję i marshals danych do i z funkcji.  
   
@@ -44,7 +42,7 @@ Ten temat zawiera opis sposobu dostępu z funkcjami niezarządzanymi i wprowadzo
 >  Funkcje interfejsu API Win32, które przydzielić ciągu umożliwiają wolne ciąg przy użyciu metody, takie jak `LocalFree`. Wywołanie platformy obsługuje tych parametrów w inny sposób. Dla platformy wywołania wywołania, określ parametr `IntPtr` wpisz zamiast `String` typu. Użyj metody, które są udostępniane przez <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> klasę, aby przekonwertować na ciąg typu ręcznie i zwolnij go ręcznie.  
   
 ## <a name="declaration-basics"></a>Podstawy deklaracji  
- Definicje zarządzanych do niezarządzanych funkcji są zależne od języka, jak to pokazano w poniższych przykładach. Aby uzyskać bardziej szczegółowy przykłady kodu, zobacz [przykłady wywołania platformy](../../../docs/framework/interop/platform-invoke-examples.md).  
+ Definicje zarządzanych do niezarządzanych funkcji są zależne od języka, jak to pokazano w poniższych przykładach. Aby uzyskać bardziej szczegółowy przykłady kodu, zobacz [przykłady wywołania platformy](platform-invoke-examples.md).  
   
 ```vb  
 Imports System.Runtime.InteropServices  
@@ -131,7 +129,7 @@ using namespace System::Runtime::InteropServices;
     private static extern bool CallRegistryPermissionDeny();  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>Modyfikatory działają prawidłowo, jeśli zostały one umieszczone na klasę, która zawiera (zawija) platformy wywołaniem.  
+ <xref:System.Security.Permissions.SecurityAction> Modyfikatory działają prawidłowo, jeśli zostały one umieszczone na klasę, która zawiera (zawija) platformy wywołaniem.  
   
 ```cpp  
       [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
@@ -152,7 +150,7 @@ class PInvokeWrapper
 }  
 ```  
   
- <xref:System.Security.Permissions.SecurityAction>Modyfikatory również działać prawidłowo w zagnieżdżonych scenariusz, w którym są umieszczane na obiekt wywołujący platformy wywołania wywołania:  
+ <xref:System.Security.Permissions.SecurityAction> Modyfikatory również działać prawidłowo w zagnieżdżonych scenariusz, w którym są umieszczane na obiekt wywołujący platformy wywołania wywołania:  
   
 ```cpp  
       {  
@@ -231,11 +229,11 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wykorzystywanie niezarządzanych funkcji DLL](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)  
- [Określanie punktu wejścia](../../../docs/framework/interop/specifying-an-entry-point.md)  
- [Określanie zestawu znaków](../../../docs/framework/interop/specifying-a-character-set.md)  
- [Przykłady wywołań platformy](../../../docs/framework/interop/platform-invoke-examples.md)  
- [Zagadnienia dotyczące zabezpieczeń wywołanie platformy](http://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb)  
- [Identyfikowanie funkcji w bibliotekach DLL](../../../docs/framework/interop/identifying-functions-in-dlls.md)  
- [Tworzenie klasy utrzymującej funkcje DLL](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)  
- [Wywołanie funkcji DLL](../../../docs/framework/interop/calling-a-dll-function.md)
+ [Wykorzystywanie niezarządzanych funkcji DLL](consuming-unmanaged-dll-functions.md)  
+ [Określanie punktu wejścia](specifying-an-entry-point.md)  
+ [Określanie zestawu znaków](specifying-a-character-set.md)  
+ [Przykłady wywołań platformy](platform-invoke-examples.md)  
+ [Zagadnienia dotyczące zabezpieczeń wywołanie platformy](https://msdn.microsoft.com/library/bbcc67f7-50b5-4917-88ed-cb15470409fb(v=vs.100))  
+ [Identyfikowanie funkcji w bibliotekach DLL](identifying-functions-in-dlls.md)  
+ [Tworzenie klasy utrzymującej funkcje DLL](creating-a-class-to-hold-dll-functions.md)  
+ [Wywołanie funkcji DLL](calling-a-dll-function.md)

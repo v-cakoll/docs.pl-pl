@@ -1,5 +1,5 @@
 ---
-title: "Wskazówki: Programowanie Office (C# i Visual Basic)"
+title: 'Wskazówki: Programowanie Office (C# i Visual Basic)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,19 +13,18 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 684fe023d46d3522aecd3cbd4d89e7f9ee92140f
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: 7108ef10333b2ec7aded1b8f768c2953283ac625
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>Wskazówki: Programowanie Office (C# i Visual Basic)
 Visual Studio oferuje funkcje w języku C# i Visual Basic, zwiększających programowania w języku Microsoft Office. Przydatne funkcje C# obejmują nazwane i opcjonalne argumenty i zwracać wartości typu `dynamic`. W programowaniu modelu COM, można pominąć `ref` — słowo kluczowe i uzyskanie dostępu do właściwości indeksowane. W języku Visual Basic cechy automatycznie implementowane właściwości instrukcje, wyrażenia lambda i inicjatorów kolekcji.
 
-Zarówno języków umożliwiają osadzanie informacji o typie, dzięki czemu wdrożenie zestawy współpracujące ze składnikami modelu COM. bez wdrażania podstawowe zestawy międzyoperacyjne (PIAs) na komputerze użytkownika. Aby uzyskać więcej informacji, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
+Zarówno języków umożliwiają osadzanie informacji o typie, dzięki czemu wdrożenie zestawy współpracujące ze składnikami modelu COM. bez wdrażania podstawowe zestawy międzyoperacyjne (PIAs) na komputerze użytkownika. Aby uzyskać więcej informacji, zobacz [wskazówki: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21).  
   
 W tym przewodniku przedstawiono te funkcje w kontekście programowania pakietu Office, ale wiele z tych funkcji również są przydatne, ogólnie programowania. W tym przewodnikiem umożliwia aplikacji dodatku Excel utworzyć skoroszyt programu Excel. Następnie należy utworzyć dokument programu Word, zawierającą łącze do skoroszytu. Na koniec zobaczysz sposobu włączania i wyłączania zależności PIA.  
   
@@ -169,7 +168,7 @@ Musi mieć program Microsoft Office Excel i Microsoft Office Word zainstalowanej
   
      Aby uzyskać więcej informacji, zobacz [porady: wyświetlanie zawartości zestawu](../../../framework/app-domains/how-to-view-assembly-contents.md).  
   
-5.  Kliknij dwukrotnie **MANIFESTU** ikony. Zostanie wyświetlone okno, który zawiera listę zestawów, zawierające elementy odwołuje się projekt. `Microsoft.Office.Interop.Excel`i `Microsoft.Office.Interop.Word` nie znajdują się na liście. Ponieważ typów, które wymaga projektu zostały zaimportowane do używanego zestawu, odwołania do PIA nie są wymagane. Ułatwia to wdrożenie. PIAs nie muszą znajdować się na komputerze użytkownika, a ponieważ aplikacja nie wymaga wdrożenia określonej wersji PIA, aplikacje mogą służyć do pracy z wielu wersji pakietu Office, pod warunkiem, że niezbędne interfejsów API istnieje we wszystkich wersjach .  
+5.  Kliknij dwukrotnie **MANIFESTU** ikony. Zostanie wyświetlone okno, który zawiera listę zestawów, zawierające elementy odwołuje się projekt. `Microsoft.Office.Interop.Excel` i `Microsoft.Office.Interop.Word` nie znajdują się na liście. Ponieważ typów, które wymaga projektu zostały zaimportowane do używanego zestawu, odwołania do PIA nie są wymagane. Ułatwia to wdrożenie. PIAs nie muszą znajdować się na komputerze użytkownika, a ponieważ aplikacja nie wymaga wdrożenia określonej wersji PIA, aplikacje mogą służyć do pracy z wielu wersji pakietu Office, pod warunkiem, że niezbędne interfejsów API istnieje we wszystkich wersjach .  
   
      Ponieważ wdrożenia PIAs nie jest już konieczne, można utworzyć aplikację w zaawansowanych scenariuszach, które współpracuje z wielu wersji pakietu Office, w tym wcześniejsze wersje. Jednak to działa tylko wtedy, gdy kodu nie używa żadnych interfejsów API, które nie są dostępne w wersji korzystasz z pakietu Office. Nie jest zawsze jasne, czy określony interfejs API była dostępna w starszej wersji, a dla Przyczyna Praca z wcześniejszych wersji pakietu Office nie jest zalecane.  
   
@@ -210,8 +209,8 @@ Musi mieć program Microsoft Office Excel i Microsoft Office Word zainstalowanej
  [Wyrażenia lambda (Visual Basic)](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
  [Lambda Expressions (C#)](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)  
  [Instrukcje: użycie właściwości indeksowanych w programowaniu usługi międzyoperacyjnej modelu COM](../../../csharp/programming-guide/interop/how-to-use-indexed-properties-in-com-interop-rogramming.md)  
- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Przewodnik: osadzanie typów z zarządzanych zestawów](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](http://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
+ [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [Przewodnik: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [Przewodnik: Tworzenie pierwszego dodatku VSTO dla programu Excel](https://msdn.microsoft.com/library/a855e2be-3ecf-4112-a7f5-ec0f7fad3b5f)  
  [Usługa międzyoperacyjna modelu COM](../../../visual-basic/programming-guide/com-interop/index.md)  
  [Współdziałanie](../../../csharp/programming-guide/interop/index.md)

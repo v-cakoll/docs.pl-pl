@@ -1,18 +1,18 @@
 ---
-title: "Zarządzanie środowisk produkcyjnych Docker"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Zarządzanie środowisk produkcyjnych Docker
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c962543004c88b0a6413cc22d8bdddf954af66f8
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 72ae92c89ed9b51815016205e20b09fc4dced1e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-production-docker-environments"></a>Zarządzanie środowisk produkcyjnych Docker
 
@@ -49,4 +49,4 @@ Narzędzia do zarządzania sieci szkieletowej usług są następujące:
 
 
 >[!div class="step-by-step"]
-[Previous] (run-microservices-based-applications-in-production.md) [Next] (monitor-containerized-application-services.md)
+[Poprzednie] (run-microservices-based-applications-in-production.md) [dalej] (monitor konteneryzowanych aplikacji services.md)

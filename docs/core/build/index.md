@@ -1,7 +1,7 @@
 ---
 title: Kompilacji platformy .NET Core ze źródła
 description: Informacje o sposobie tworzenia .NET Core i .NET Core interfejsu wiersza polecenia z kodu źródłowego.
-keywords: Źródło .NET i .NET core, kompilacji
+keywords: .NET, .NET Core, source, build
 author: bleroy
 ms.author: mairaw
 ms.date: 06/28/2017
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 8b49079c-6ede-429a-92d7-ecd2fda1ab0e
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 6aa5abd071355b1c1a367b35e9521e6b1af9c945
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a14e8dbf3f9be9910a2c50cfbcb3f52f4e7385e1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-net-core-from-source"></a>Kompilacji platformy .NET Core ze źródła
 
@@ -24,7 +24,7 @@ Ten artykuł zawiera wskazówki dla deweloperów chcących do tworzenia i rozpow
 
 ## <a name="build-the-clr-from-source"></a>Tworzenie środowiska CLR ze źródła
 
-Kod źródłowy środowisko CoreCLR .NET można znaleźć w [ `dotnet/coreclr` repozytorium w usłudze GitHub](https://github.com/dotnet/coreclr/).
+Kod źródłowy środowisko CoreCLR .NET można znaleźć w [dotnet/środowisko coreclr](https://github.com/dotnet/coreclr/) repozytorium w witrynie GitHub.
 
 Kompilacja zależy obecnie następujące wymagania wstępne:
 * [Git](https://git-scm.com/)
@@ -32,13 +32,13 @@ Kompilacja zależy obecnie następujące wymagania wstępne:
 * [Python](https://www.python.org/)
 * kompilator języka C++.
 
-Po zainstalowaniu wymagań wstępnych są zainstalowane, CLR można tworzyć za pomocą skryptu kompilacji (`build.cmd` w systemie Windows, lub `build.sh` w systemie Linux i macOS) u dołu [repozytorium środowisko CoreCLR](https://github.com/dotnet/coreclr/).
+Po zainstalowaniu wymagań wstępnych są zainstalowane, CLR można tworzyć za pomocą skryptu kompilacji (`build.cmd` w systemie Windows, lub `build.sh` w systemie Linux i macOS) u dołu [dotnet/środowisko coreclr](https://github.com/dotnet/coreclr/) repozytorium.
 
 Instalowanie składników różnią się w zależności od systemu operacyjnego (systemu operacyjnego). Zapoznaj się z instrukcjami kompilacji dla określonej system operacyjny:
 
  * [Windows](https://github.com/dotnet/coreclr/blob/master/Documentation/building/windows-instructions.md)
  * [Linux](https://github.com/dotnet/coreclr/blob/master/Documentation/building/linux-instructions.md)
- * [System macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
+ * [macOS](https://github.com/dotnet/coreclr/blob/master/Documentation/building/osx-instructions.md)
  * [FreeBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/freebsd-instructions.md) 
  * [NetBSD](https://github.com/dotnet/coreclr/blob/master/Documentation/building/netbsd-instructions.md)
 
@@ -82,12 +82,12 @@ Istnieją dwie podstawowe metody przy użyciu Twoje nowe środowisko uruchomieni
  2. **Użyj corerun.exe, aby uruchomić aplikację przy użyciu bibliotek DLL rozpakowanych**.
     To repozytorium definiuje również proste hosta o nazwie corerun.exe, który nie przyjmuje żadnych zależności NuGet.
     Należy określić hosta do uzyskania wymaganych bibliotek DLL rzeczywiście używane i musisz ręcznie zebrać je razem.
-    Ta technika jest używany przez wszystkie testy w [repozytorium środowisko CoreCLR](https://github.com/dotnet/coreclr)i ułatwia szybkie lokalnego "Edycja kompilacji debugowania" pętli takich jak wstępnego testowania jednostek.
+    Ta technika jest używany przez wszystkie testy w [dotnet/środowisko coreclr](https://github.com/dotnet/coreclr) repozytorium i ułatwia szybkie lokalnego "Edycja kompilacji debugowania" pętli takich jak wstępnego testowania jednostek.
     Zobacz [wykonywania aplikacji programu .NET Core z CoreRun.exe](https://github.com/dotnet/coreclr/blob/master/Documentation/workflow/UsingCoreRun.md) szczegółowe informacje na temat używania tej metody.
 
 ## <a name="build-the-cli-from-source"></a>Tworzenie interfejsu wiersza polecenia ze źródła
 
-Kod źródłowy dla platformy .NET Core interfejsu wiersza polecenia można znaleźć w [ `dotnet/cli` repozytorium w usłudze GitHub](https://github.com/dotnet/cli/).
+Kod źródłowy dla platformy .NET Core interfejsu wiersza polecenia można znaleźć w [dotnet/cli](https://github.com/dotnet/cli/) repozytorium w witrynie GitHub.
 
 Aby można było skompilować .NET Core interfejsu wiersza polecenia, należy spełnić następujące zainstalowane na tym komputerze.
 

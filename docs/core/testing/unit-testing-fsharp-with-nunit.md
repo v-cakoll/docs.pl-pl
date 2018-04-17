@@ -7,11 +7,11 @@ ms.topic: article
 dev_langs:
 - fsharp
 ms.prod: .net-core
-ms.openlocfilehash: 4a9ea7ce4361761f35b52737c63c5e1ce8ab7b5f
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: c38be75ff39fae3afd371a5a3a9332ee5ac96022
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-nunit"></a>Testowanie biblioteki F # w .NET Core za pomocą testu dotnet i NUnit jednostki
 
@@ -33,7 +33,7 @@ Wprowadź *MathService* bieżącego katalogu i uruchom [ `dotnet new classlib -l
 
 ```fsharp
 module MyMath =
-    let sumOfSquares xs = raise (System.NotImplementedException("You haven't written a test yet!"))
+    let squaresOfOdds xs = raise (System.NotImplementedException("You haven't written a test yet!"))
 ```
 
 Zmień katalog z powrotem do *jednostki — testowanie z — języka fsharp* katalogu. Uruchom [ `dotnet sln add .\MathService\MathService.fsproj` ](../tools/dotnet-sln.md) można dodać projektu biblioteki klas do rozwiązania.
@@ -116,15 +116,15 @@ type TestClass () =
 
 `[<TestFixture>]` Atrybut określa klasę, która zawiera testy. `[<Test>]` Atrybut oznacza metodę test jest uruchamiany przez moduł uruchamiający. Z *jednostki — testowanie z — języka fsharp* katalogu, wykonaj [ `dotnet test` ](../tools/dotnet-test.md) do tworzenia testów i biblioteki klas, a następnie uruchom testy. Moduł uruchamiający NUnit zawiera punkt wejścia programu do uruchomienia testów. `dotnet test` Uruchamia uruchamiający przy użyciu jednostkowy projekt testowy, który został utworzony.
 
-Tych dwóch testów Pokaż najbardziej podstawową, przekazywanie i w przypadku braku testy. `My test` przekazuje, i `Fail every time` nie powiedzie się. Teraz, Utwórz test `sumOfSquares` metody. `sumOfSquares` Metoda zwraca sumę kwadratów wszystkie wartości nieparzystą liczbą całkowitą, które są częścią sekwencji wejściowych. Zamiast w trakcie zapisanie wszystkich tych funkcji na raz, można utworzyć wielokrotnie powtarzane testy sprawdzania poprawności funkcji. Wprowadzenie każdego z testów przekazać oznacza, że tworzenie funkcji niezbędne dla metody.
+Tych dwóch testów Pokaż najbardziej podstawową, przekazywanie i w przypadku braku testy. `My test` przekazuje, i `Fail every time` nie powiedzie się. Teraz, Utwórz test `squaresOfOdds` metody. `squaresOfOdds` Metoda zwraca sekwencję kwadratów wszystkie wartości nieparzystą liczbą całkowitą, które są częścią sekwencji wejściowych. Zamiast w trakcie zapisanie wszystkich tych funkcji na raz, można utworzyć wielokrotnie powtarzane testy sprawdzania poprawności funkcji. Wprowadzenie każdego z testów przekazać oznacza, że tworzenie funkcji niezbędne dla metody.
 
-Jest najprostsza testu, firma Microsoft może zapisywać do wywołania `sumOfSquares` z wszystkie liczby parzyste, w którym wynik powinien być pustą sekwencją liczb całkowitych.  Oto tego testu:
+Jest najprostsza testu, firma Microsoft może zapisywać do wywołania `squaresOfOdds` z wszystkie liczby parzyste, w którym wynik powinien być pustą sekwencją liczb całkowitych.  Oto tego testu:
 
 ```fsharp
 [<Test>]
 member this.TestEvenSequence() =
-    let expected = Seq.empty<int> |> Seq.toList
-    let actual = MyMath.sumOfSquares [2; 4; 6; 8; 10]
+    let expected = Seq.empty<int>
+    let actual = MyMath.squaresOfOdds [2; 4; 6; 8; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
@@ -133,8 +133,8 @@ Zwróć uwagę, że `expected` sekwencji została przekonwertowana na listę. NU
 Po uruchomieniu testu, zobacz, czy test zakończy się niepowodzeniem. Nie utworzono jeszcze implementacji. Należy ten test przez pisania kodu najprostsza w `Mathservice` klasy, która działa:
 
 ```csharp
-let sumOfSquares xs =
-    Seq.empty<int> |> Seq.toList
+let squaresOfOdds xs =
+    Seq.empty<int>
 ```
 
 W *jednostki — testowanie z — języka fsharp* katalogu, uruchom `dotnet test` ponownie. `dotnet test` Polecenia uruchamiane kompilacji dla `MathService` projektu i następnie `MathService.Tests` projektu. Po utworzeniu oba projekty, jest uruchamiana ta pojedynczy test. Przekazuje ono.
@@ -145,21 +145,20 @@ Teraz, kiedy dokonano jeden test przekazać nadszedł czas na zapis więcej. Nas
 
 ```fsharp
 [<Test>]
-member public this.SumOnesAndEvens() =
+member public this.TestOnesAndEvens() =
     let expected = [1; 1; 1; 1]
-    let actual = MyMath.sumOfSquares [2; 1; 4; 1; 6; 1; 8; 1; 10]
+    let actual = MyMath.squaresOfOdds [2; 1; 4; 1; 6; 1; 8; 1; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-Wykonywanie `dotnet test` nie powiedzie się nowego testu. Należy zaktualizować `sumOfSquares` można obsłużyć tego nowego testu. Należy filtrować wszystkie liczby parzyste poza kolejnością, aby ten test przekazywania. Możesz to zrobić pisanie funkcji małych filtru i używając `Seq.filter`:
+Wykonywanie `dotnet test` nie powiedzie się nowego testu. Należy zaktualizować `squaresOfOdds` można obsłużyć tego nowego testu. Należy filtrować wszystkie liczby parzyste poza kolejnością, aby ten test przekazywania. Możesz to zrobić pisanie funkcji małych filtru i używając `Seq.filter`:
 
 ```fsharp
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
-    |> Seq.toList
 ```
 
 Zwróć uwagę, wywołanie `Seq.toList`. Która tworzy listę, która implementuje <xref:System.Collections.ICollection> interfejsu.
@@ -170,7 +169,7 @@ Istnieje jeden krok Przejdź: kwadratowe każdego nieparzyste numery. Rozpocznij
 [<Test>]
 member public this.TestSquaresOfOdds() =
     let expected = [1; 9; 25; 49; 81]
-    let actual = MyMath.sumOfSquares [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
+    let actual = MyMath.squaresOfOdds [1; 2; 3; 4; 5; 6; 7; 8; 9; 10]
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
@@ -180,11 +179,10 @@ Test można rozwiązać przez przekazanie w potoku filtrowane sekwencji za pomoc
 let private square x = x * x
 let private isOdd x = x % 2 <> 0
 
-let sumOfSquares xs =
+let squaresOfOdds xs =
     xs
     |> Seq.filter isOdd
     |> Seq.map square
-    |> Seq.toList
 ```
 
 Został utworzony małych biblioteki i zestaw testów jednostkowych dla tej biblioteki. Zostały strukturę rozwiązania, aby dodać nowe pakiety i testów jest częścią Normalny przepływ pracy. Już skoncentrowany większość czasu i uwagi na temat rozwiązywania problemów celów aplikacji.

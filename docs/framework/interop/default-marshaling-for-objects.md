@@ -1,13 +1,9 @@
 ---
 title: Organizowanie domyślne dotyczące obiektów
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - objects, interop marshaling
 - interop marshaling, objects
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
-caps.latest.revision: ''
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b49575bb7f16b942a56a48e9ad3f5a44edfb373a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 6980db381322d354cace38709586e50681ae0a7e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-objects"></a>Domyślny marshaling dla obiektów
 Parametry i pola typu <xref:System.Object?displayProperty=nameWithType> można wyświetlać do kodu niezarządzanego jako jeden z następujących typów:  
@@ -304,7 +299,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 ## <a name="marshaling-byref-variants"></a>Organizowanie ByRef Variant  
  Mimo że wariantów same mogą być przekazywane przez wartości lub według odwołania, **VT_BYREF** flagi można również w przypadku każdego typu variant wskazują, że zawartość wariantu są przekazywany przez odwołanie, a nie przez wartość. Różnica między przekazywanie wariantów przez odwołanie i organizowanie wariant z **VT_BYREF** ustawiona flaga może być mylące. Poniższa ilustracja wyjaśnia różnice.  
   
- ![Wariant przekazany na stosie](../../../docs/framework/interop/media/interopvariant.gif "interopvariant")  
+ ![Wariant przekazany na stosie](./media/interopvariant.gif "interopvariant")  
 Wariantów przekazywane według wartości i według odwołania  
   
  **Domyślne zachowanie dla organizowanie obiektów i wariantów przez wartość**  
@@ -334,15 +329,15 @@ Wariantów przekazywane według wartości i według odwołania
   
 |Z|Do|Zmiany propagowane Wstecz|  
 |----------|--------|-----------------------------|  
-|**Variant***v* |**Obiekt***o* |Nigdy nie|  
-|**Obiekt***o* |**Variant***v* |Nigdy nie|  
-|**Variant*****\*****pv* |**Odwołanie***o* |Zawsze|  
-|**Odwołanie***o* |**Variant*****\*****pv* |Zawsze|  
-|**Variant***v* **(VT_BYREF** *&#124;* **VT_\*)** |**Obiekt***o* |Nigdy nie|  
-|**Variant***v* **(VT_BYREF** *&#124;* **VT_)** |**Odwołanie***o* |Tylko wtedy, gdy typ nie został zmieniony.|  
+|**Variant***v*|**Obiekt***o*|Nigdy nie|  
+|**Obiekt***o*|**Variant***v*|Nigdy nie|  
+|**Variant*****\*****pv*|**Odwołanie***o*|Zawsze|  
+|**Odwołanie***o*|**Variant*****\*****pv*|Zawsze|  
+|**Variant***v* **(VT_BYREF** *&#124;* **VT_\*)**|**Obiekt***o*|Nigdy nie|  
+|**Variant***v* **(VT_BYREF** *&#124;* **VT_)**|**Odwołanie***o*|Tylko wtedy, gdy typ nie został zmieniony.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atrybuty kierunkową](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)
+ [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)  
+ [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)  
+ [Atrybuty kierunkową](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopiowanie i przypinanie](copying-and-pinning.md)

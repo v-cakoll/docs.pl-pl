@@ -1,18 +1,18 @@
 ---
 title: Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych
 description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
-keywords: Docker, Microservices, ASP.NET, Container
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/21/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a24f57216130a42eb11ef44abe462d4955601fdb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2e9bc95ed7bfdb4351f8fa2de280c96288905515
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-the-microsoft-platform-and-tools-for-containerized-apps"></a>Wprowadzenie do platformy firmy Microsoft i narzędzia dla aplikacji konteneryzowanych
 
@@ -29,7 +29,7 @@ Tabela 3-1 pokazuje, że zamiar DevOps Microsoft konteneryzowanych aplikacji Doc
 
 Tabela 3-1: Otwórz DevOps przepływu pracy innych technologii
 
-| Host | Microsoft technologies | Innych firm — podłączany Azure |
+| Host | Technologii firmy Microsoft | Innych firm — podłączany Azure |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Platformy Docker aplikacji   | • Programu Microsoft Visual Studio i kodu programu Visual Studio<br /> • .NET<br /> Usługa kontenera platformy Microsoft Azure •<br /> • Usługi azure Service Fabric<br /> • Rejestru kontenera platformy azure<br /> | • Dowolnego edytora kodu (na przykład Sublime)<br /> • Dowolnego języka (Node.js, Java, przejdź itp.)<br /> • Wszelkie orchestrator i harmonogramu<br /> • Dowolnego rejestru Docker<br /> |
 | Opracowywania oprogramowania dla aplikacji Docker     | • Visual Studio Team Services<br /> • Microsoft Team Foundation Server<br /> • Usługi kontenera platformy azure<br /> • Usługi azure Service Fabric<br /> | • GitHub, Git, Subversion, etc.<br /> • Jenkins, Chef, Puppet, Velocity, CircleCI, TravisCI, etc.<br /> • Lokalnego centrum danych Docker, Docker Swarm, Mesos DC/OS, Kubernetes, itp.<br /> |
@@ -62,4 +62,4 @@ Z programu VSTS, deweloperzy mogą tworzyć ukierunkowane kontenera DevOps dla p
 W związku z tym firma Microsoft oferuje pełną podstawę dla end-to-end konteneryzowanych Docker cyklu życia aplikacji. Jest jednak *kolekcji produktów i technologii, które umożliwiają opcjonalnie wybierz i zintegrować z istniejącym narzędzi i przetwarza*. Elastyczność w szerokie podejście wraz z siły szczegółowo funkcji umieszczania firmy Microsoft w położeniu silne konteneryzowanych tworzenie aplikacji platformy Docker.
 
 >[!div class="step-by-step"]
-[Previous] (../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [Next] (../design-develop-containerized-apps/index.md)
+[Poprzednie] (.. / Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md) [dalej] (.. /Design-develop-containerized-Apps/index.MD)

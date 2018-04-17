@@ -1,13 +1,9 @@
 ---
-title: "Porady: mapowanie wyników HRESULT i wyjątków"
-ms.custom: 
+title: 'Porady: mapowanie wyników HRESULT i wyjątków'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
 - cpp
@@ -19,17 +15,17 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-caps.latest.revision: 
+caps.latest.revision: 8
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 736e86e3013f34997be7ecf73ff4436675d4c05f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: a79cae30237fb631728bf036d9bf8d7679179d3f
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>Porady: mapowanie wyników HRESULT i wyjątków
 Metody modelu COM raportów o błędach przez zwrócenie wyników HRESULT; metod .NET Raportuj je przez zgłaszanie wyjątków. Środowisko uruchomieniowe obsługi przejścia między nimi. Każda klasa wyjątków w programie .NET Framework mapuje HRESULT.  
@@ -88,7 +84,7 @@ CMyClass::MethodThatThrows
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
 |**COR_E_EXCEPTION**|**Wyjątek**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
-|**COR_E_FIELDACCESS**|**FieldAccessException**|  
+|**COR_E_FIELDACCESS**|**Fieldaccessexception —**|  
 |**COR_E_FILENOTFOUND lub ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
 |**COR_E_FORMAT**|**FormatException**|  
 |**COR_E_INDEXOUTOFRANGE**|**IndexOutOfRangeException**|  
@@ -104,13 +100,13 @@ CMyClass::MethodThatThrows
 |**COR_E_MISSINGMANIFESTRESOURCE**|**MissingManifestResourceException**|  
 |**COR_E_MISSINGMEMBER**|**Missingmemberexception —**|  
 |**COR_E_MISSINGMETHOD**|**Missingmethodexception —**|  
-|**COR_E_MULTICASTNOTSUPPORTED**|**MulticastNotSupportedException**|  
-|**COR_E_NOTFINITENUMBER**|**NotFiniteNumberException**|  
+|**COR_E_MULTICASTNOTSUPPORTED**|**Multicastnotsupportedexception —**|  
+|**COR_E_NOTFINITENUMBER**|**Notfinitenumberexception —**|  
 |**E_NOTIMPL**|**Notimplementedexception —**|  
 |**COR_E_NOTSUPPORTED**|**Notsupportedexception —**|  
 |**COR_E_NULLREFERENCE orE_POINTER**|**NullReferenceException**|  
 |**COR_E_OUTOFMEMORY lub**<br /><br /> **E_OUTOFMEMORY**|**OutOfMemoryException**|  
-|**COR_E_OVERFLOW**|**OverflowException**|  
+|**COR_E_OVERFLOW**|**Overflowexception —**|  
 |**COR_E_PATHTOOLONG lub ERROR_FILENAME_EXCED_RANGE**|**PathTooLongException**|  
 |**COR_E_RANK**|**RankException**|  
 |**COR_E_REFLECTIONTYPELOAD**|**ReflectionTypeLoadException**|  
@@ -129,7 +125,7 @@ CMyClass::MethodThatThrows
 |**COR_E_THREADSTATE**|**Threadstateexception —**|  
 |**COR_E_THREADSTOP**|**ThreadStopException**|  
 |**COR_E_TYPELOAD**|**TypeLoadException**|  
-|**COR_E_TYPEINITIALIZATION**|**TypeInitializationException**|  
+|**COR_E_TYPEINITIALIZATION**|**Typeinitializationexception —**|  
 |**COR_E_VERIFICATION**|**Verificationexception —**|  
 |**COR_E_WEAKREFERENCE**|**WeakReferenceException**|  
 |**COR_E_VTABLECALLSNOTSUPPORTED**|**VTableCallsNotSupportedException**|  
@@ -145,14 +141,14 @@ CMyClass::MethodThatThrows
 |---------------------|------------------------------------|  
 |**Kod błędu**|Zwrócony wynik HRESULT z wywołania.|  
 |**HelpLink**|Jeśli **IErrorInfo -> HelpContext** jest różna od zera, ten ciąg jest tworzony przez łączenie **IErrorInfo -> GetHelpFile** i "#" i **IErrorInfo -> GetHelpContext**. W przeciwnym razie zostanie zwrócony ciąg z **IErrorInfo -> GetHelpFile**.|  
-|**InnerException**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
+|**We właściwości InnerException**|Zawsze odwołanie o wartości null (**nic** w języku Visual Basic).|  
 |**Komunikat**|Ciąg zwrócony przez **IErrorInfo -> GetDescription**.|  
 |**Źródło**|Ciąg zwrócony przez **IErrorInfo -> GetSource**.|  
-|**StackTrace**|Ślad stosu.|  
+|**Ślad stosu**|Ślad stosu.|  
 |**TargetSite**|Nazwa metody, która zwrócił niepowodzenie HRESULT.|  
   
  Wyjątek pól, takich jak **komunikat**, **źródła**, i **ślad stosu** nie są dostępne dla **stackoverflowexception —**.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Współdziałanie COM zaawansowane](http://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb)  
- [Wyjątki](../../../docs/standard/exceptions/index.md)
+ [Współdziałanie COM zaawansowane](https://msdn.microsoft.com/library/3ada36e5-2390-4d70-b490-6ad8de92f2fb(v=vs.100))  
+ [Wyjątki](../../standard/exceptions/index.md)

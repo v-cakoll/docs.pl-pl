@@ -1,18 +1,18 @@
 ---
-title: "Kontenery docker, obrazy i rejestrów"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Kontenery docker, obrazy i rejestrów
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0cccead8833c63f19b359f830f555e7ff31daa1a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 9de37f9ee3a8fe7ce4a337fc548030b2aeadba55
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="docker-containers-images-and-registries"></a>Kontenery docker, obrazy i rejestrów
 

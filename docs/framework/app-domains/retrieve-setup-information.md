@@ -1,12 +1,13 @@
 ---
 title: Pobieranie informacji o instalacji z domeny aplikacji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: eeb0921eefc7ac157b94f3b6de43460cdfd42ba8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b5a7585b68c36fe5e435e563729d9a0f3540a42a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>Pobieranie informacji o instalacji z domeny aplikacji
 Każde wystąpienie domeny aplikacji składa się z obu właściwości i <xref:System.AppDomainSetup> informacji. Można pobrać informacji konfiguracyjnych z domeny aplikacji przy użyciu <xref:System.AppDomain?displayProperty=nameWithType> klasy. Ta klasa udostępnia kilka elementów członkowskich, które służą do pobierania informacji konfiguracyjnych dotyczących domeny aplikacji.  
@@ -46,5 +48,5 @@ Każde wystąpienie domeny aplikacji składa się z obu właściwości i <xref:S
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie za pomocą domeny aplikacji](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Programowanie za pomocą domeny aplikacji](application-domains.md#programming-with-application-domains)  
  [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

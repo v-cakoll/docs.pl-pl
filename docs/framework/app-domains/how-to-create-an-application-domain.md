@@ -1,13 +1,13 @@
 ---
 title: 'Porady: tworzenie domeny aplikacji'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-bcl
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ dev_langs:
 helpviewer_keywords:
 - application domains, creating
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
-caps.latest.revision: 
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: cdbab5e43d2af7608c4d8322eb071baf591e18d5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 366dbea0f9559cdeccd2e126e4a3e913fb5ba23d
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-an-application-domain"></a>Porady: tworzenie domeny aplikacji
 Typowe host czasu wykonywania języka automatycznie tworzy domeny aplikacji, gdy są potrzebne. Można jednak tworzenie domeny aplikacji i załadować do nich te zestawy, które mają być zarządzane osobiście. Można też utworzyć, z których wykonanie kodu domeny aplikacji.  
@@ -41,5 +41,5 @@ Typowe host czasu wykonywania języka automatycznie tworzy domeny aplikacji, gdy
  [!code-vb[ADCreateDomain#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADCreateDomain/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Programowanie za pomocą domeny aplikacji](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Programowanie za pomocą domeny aplikacji](application-domains.md#programming-with-application-domains)  
  [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)

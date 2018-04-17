@@ -1,10 +1,10 @@
 ---
-title: "Spójne kolekcje w języku Visual Basic"
-ms.custom: 
+title: Spójne kolekcje w języku Visual Basic
+ms.custom: ''
 ms.date: 04/23/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf26b7ce58c1e20fbbe5043cbd2acfd5712837fa
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 68c82e75ce4a438381bc9c60ce8c992565eb31cb
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tuples-visual-basic"></a>Krotki (Visual Basic)
 
@@ -80,7 +80,7 @@ Podczas wnioskowania Nazwa pola nie powiedzie się, nie generuje błąd kompilat
 
 Krotka Visual Basic jest typem wartości, który jest wystąpieniem jednej z **System.ValueTuple** typów ogólnych. Na przykład `holiday` krotki zdefiniowane w poprzednim przykładzie jest wystąpieniem <xref:System.ValueTuple%603> struktury. Zaprojektowano go jako lekkie kontener dla danych. Ponieważ spójnej kolekcji ma na celu ułatwić tworzenie obiektu z wieloma elementami danych, brakuje niektórych funkcji, które mogą mieć strukturze niestandardowej. Należą do nich następujące elementy:
 
-- Elementy członkowskie klienta. Nie można definiować własnych właściwości, metody lub zdarzenia dla spójnych kolekcji.
+- Niestandardowe elementy członkowskie. Nie można definiować własnych właściwości, metody lub zdarzenia dla spójnych kolekcji.
 
 - Sprawdzanie poprawności. Nie można sprawdzić poprawności danych przypisany do pola.
 

@@ -1,12 +1,13 @@
 ---
-title: "Porady: ładowanie zestawów do domeny aplikacji"
-ms.custom: 
+title: 'Porady: ładowanie zestawów do domeny aplikacji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - application domains, loading assemblies
 - loading assemblies
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55c166b4d996eb96b284ea8c78fd2df98431187f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 69867e71f363d8b0ad4513a9cffe8e49dac801e3
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>Porady: ładowanie zestawów do domeny aplikacji
 Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną metodą jest użycie `static` (`Shared` w języku Visual Basic) <xref:System.Reflection.Assembly.Load%2A> metody <xref:System.Reflection.Assembly?displayProperty=nameWithType> klasy. Inne metody, które zestawy można załadować to:  
@@ -57,7 +59,7 @@ Istnieje kilka sposobów, aby załadować zestawu do domeny aplikacji. Zalecaną
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [Programowanie za pomocą domeny aplikacji](http://msdn.microsoft.com/library/bd36055b-56bd-43eb-b4d8-820c37172131)  
+ [Programowanie za pomocą domeny aplikacji](application-domains.md#programming-with-application-domains)  
  [Odbicie](../../../docs/framework/reflection-and-codedom/reflection.md)  
  [Używanie domen aplikacji](../../../docs/framework/app-domains/use.md)  
  [Instrukcje: ładowanie zestawów do kontekstu Reflection-Only](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  

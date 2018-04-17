@@ -1,13 +1,9 @@
 ---
 title: Domyślne zachowanie marshalingu
-ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,17 +13,16 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-caps.latest.revision: 15
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f0a8fcba31ddfa09ca60f8ba6cf08d20b270c3da
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 7d653e6bd82a897d1fe8591f263a12f4c3a67abf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-behavior"></a>Domyślne zachowanie marshalingu
 Przekazywanie międzyoperacyjne działa w regułach tego dyktować zachowania danych skojarzonych z parametrami metody przesyłanych między zarządzanymi i niezarządzanymi pamięci. Te wbudowane reguły kontrolowania takich kierowania działań jako przekształcenia typu danych, czy wywoływany można zmienić przekazywania danych i zwracany do obiektu wywołującego te zmiany i w której okolicznościach organizatora zapewnia optymalizacji wydajności.  
@@ -52,10 +47,10 @@ BSTR MethodOne (BSTR b) {
   
  Jednak w przypadku definiowania metodę jako prototyp wywołanie platformy, Zastąp każdego **BSTR** to typ <xref:System.String> wpisz i Wywołaj `MethodOne`, środowisko uruchomieniowe języka wspólnego próbuje zwolnić `b` dwa razy. Zachowanie marshalingu można zmienić za pomocą <xref:System.IntPtr> typy zamiast **ciąg** typów.  
   
- Środowisko uruchomieniowe zawsze używa **CoTaskMemFree** metodę, aby zwolnić pamięć. Jeśli pracujesz z pamięci nie została przydzielona z **CoTaskMemAlloc** metody, należy użyć **IntPtr** i zwolnić pamięć, ręcznie przy użyciu odpowiedniej metody. Podobnie można uniknąć automatycznego pamięci zwalnianie w sytuacjach, gdy pamięć nigdy nie powinien zwolniona, takie jak w przypadku **GetCommandLine** funkcji Kernel32.dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać więcej informacji o zwalnianiu ręcznie pamięci, zobacz [próbki buforów](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5).  
+ Środowisko uruchomieniowe zawsze używa **CoTaskMemFree** metodę, aby zwolnić pamięć. Jeśli pracujesz z pamięci nie została przydzielona z **CoTaskMemAlloc** metody, należy użyć **IntPtr** i zwolnić pamięć, ręcznie przy użyciu odpowiedniej metody. Podobnie można uniknąć automatycznego pamięci zwalnianie w sytuacjach, gdy pamięć nigdy nie powinien zwolniona, takie jak w przypadku **GetCommandLine** funkcji Kernel32.dll, która zwraca wskaźnik do pamięci jądra. Aby uzyskać więcej informacji o zwalnianiu ręcznie pamięci, zobacz [próbki buforów](http://msdn.microsoft.com/library/e30d36e8-d7c4-4936-916a-8fdbe4d9ffd5(v=vs.100)).  
   
 ## <a name="default-marshaling-for-classes"></a>Organizowanie domyślne dotyczące klas  
- Klasy mogą być organizowany tylko przy użyciu współdziałanie z COM i zawsze są przekazywane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy nosi nazwę interfejsu klasy. Aby dowiedzieć się, jak zastępowanie interfejsu klasy przy użyciu interfejsu wybranych przez użytkownika, zobacz [wprowadzenie interfejsu klasy](http://msdn.microsoft.com/library/733c0dd2-12e5-46e6-8de1-39d5b25df024).  
+ Klasy mogą być organizowany tylko przy użyciu współdziałanie z COM i zawsze są przekazywane jako interfejsy. W niektórych przypadkach interfejs używany do organizowania klasy nosi nazwę interfejsu klasy. Aby dowiedzieć się, jak zastępowanie interfejsu klasy przy użyciu interfejsu wybranych przez użytkownika, zobacz [wprowadzenie interfejsu klasy](com-callable-wrapper.md#introducing-the-class-interface).  
   
 ### <a name="passing-classes-to-com"></a>Przekazywanie klas modelowi COM  
  Po klasie zarządzanej jest przekazywana do modelu COM, międzyoperacyjnego organizatora automatycznie zawijany klasy z serwera proxy modelu COM i przekazuje interfejsu klasy utworzonej przez serwer proxy do wywołania metody COM. Serwer proxy następnie deleguje wszystkie wywołania interfejsu klasy do obiektu zarządzanego. Serwer proxy udostępnia również inne interfejsy, które nie są jawnie implementowana przez klasę. Serwer proxy takich jak automatycznie implementuje interfejsy **IUnknown** i **IDispatch** imieniu klasy.  
@@ -171,7 +166,7 @@ internal class DelegateTest {
 ```  
   
 ## <a name="default-marshaling-for-value-types"></a>Domyślny marshaling dla typów wartości  
- Większość typów wartości, takich jak liczby całkowite i liczby zmiennoprzecinkowe są [kopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md) i nie wymagają przekazywanie. Inne [niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md) typy niepodobnych reprezentacje w pamięci zarządzane i niezarządzane, wymagane jest przekazywanie. Nadal innych typów wymaga jawnego formatowania granicy współdziałanie.  
+ Większość typów wartości, takich jak liczby całkowite i liczby zmiennoprzecinkowe są [kopiowalne](blittable-and-non-blittable-types.md) i nie wymagają przekazywanie. Inne [niekopiowalne](blittable-and-non-blittable-types.md) typy niepodobnych reprezentacje w pamięci zarządzane i niezarządzane, wymagane jest przekazywanie. Nadal innych typów wymaga jawnego formatowania granicy współdziałanie.  
   
  Ten temat zawiera informacje wykonaj w typach wartości sformatowane:  
   
@@ -390,7 +385,7 @@ interface _Graphics {
 |-----------------------|--------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|**DATA**|  
 |<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**IDENTYFIKATOR GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  Poniższy kod przedstawia definicję typu niezarządzanego **data**, **GUID**, **DZIESIĘTNĄ**, i **OLE_COLOR** w typie Stdole2 Biblioteka.  
@@ -450,8 +445,8 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)  
- [Domyślny marshaling dla tablic](../../../docs/framework/interop/default-marshaling-for-arrays.md)  
- [Domyślny marshaling dla obiektów](../../../docs/framework/interop/default-marshaling-for-objects.md)  
- [Domyślny marshaling dla ciągów](../../../docs/framework/interop/default-marshaling-for-strings.md)
+ [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)  
+ [Kopiowanie i przypinanie](copying-and-pinning.md)  
+ [Domyślny marshaling dla tablic](default-marshaling-for-arrays.md)  
+ [Domyślny marshaling dla obiektów](default-marshaling-for-objects.md)  
+ [Domyślny marshaling dla ciągów](default-marshaling-for-strings.md)

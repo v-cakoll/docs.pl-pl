@@ -1,12 +1,9 @@
 ---
 title: Kopiowanie i przypinanie
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - pinning, interop marshaling
@@ -14,38 +11,38 @@ helpviewer_keywords:
 - interop marshaling, copying
 - interop marshaling, pinning
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
-caps.latest.revision: "8"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 11739d35d3a6d845feb1f6d9544f6ea347a9942d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: c785c7bc9160cb252aad61fea00cce0d9a7eacdf
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="copying-and-pinning"></a>Kopiowanie i przypinanie
 Podczas organizowania danych, międzyoperacyjnego organizatora można skopiować lub przypiąć dane są przekazywane. Kopiowanie danych umieszcza kopię danych z jednej lokalizacji pamięci w innej lokalizacji pamięci. Na poniższej ilustracji przedstawiono różnice między kopiowanie typu wartości i kopiowanie typ przekazany przez odwołanie z zarządzanych do niezarządzanych pamięci.  
   
- ![Wartość typów przekazywane według wartości i według odwołania](../../../docs/framework/interop/media/interopmarshalcopy.gif "interopmarshalcopy")  
+ ![Wartość typów przekazywane według wartości i według odwołania](./media/interopmarshalcopy.gif "interopmarshalcopy")  
 Typy wartości przekazywane według wartości i według odwołania  
   
  Argumenty metody przekazany przez wartość są przekazywane do kodu niezarządzanego jako wartości na stosie. Proces kopiowania jest bezpośrednie. Argumenty przekazywane przez odwołanie są przekazywane jako wskaźników na stosie. Typy odwołań również są przekazywane według wartości i według odwołania. Jak pokazano na poniższej ilustracji, typu odwołania przekazany przez wartość są kopiowane lub przypięty.  
   
- ![Współdziałanie z COM](../../../docs/framework/interop/media/interopmarshalpin.gif "interopmarshalpin")  
+ ![Współdziałanie z COM](./media/interopmarshalpin.gif "interopmarshalpin")  
 Typy odwołań przekazywane według wartości i według odwołania  
   
  Przypinanie tymczasowo blokuje danych w jego bieżącej lokalizacji pamięci, w związku z tym zachowaniu z przeniesieniu przez moduł Garbage Collector środowiska CLR firmy. Organizator PIN danych pozwala zmniejszyć liczbę czynności kopiowania i zwiększyć wydajność. Typ danych określa, czy jest kopiowany lub przypięty podczas organizowania procesu.  Przypinanie jest wykonywana automatycznie podczas marshaling dla obiektów, takich jak <xref:System.String>, ale można też ręcznie przypiąć przy użyciu pamięci <xref:System.Runtime.InteropServices.GCHandle> klasy.  
   
 ## <a name="formatted-blittable-classes"></a>Klasy sformatowany Kopiowalne  
- Sformatowany [kopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md) klasy wyeliminowaniu układu (sformatowany) i wspólne reprezentację danych zarówno w zarządzanych i niezarządzanych pamięci. Te typy potrzebują przekazywanie, wskaźnik do obiektu w stercie są przekazywane do wywoływany bezpośrednio. Wywoływany, można zmienić zawartość przywoływane przez wskaźnik lokalizacji w pamięci.  
+ Sformatowany [kopiowalne](blittable-and-non-blittable-types.md) klasy wyeliminowaniu układu (sformatowany) i wspólne reprezentację danych zarówno w zarządzanych i niezarządzanych pamięci. Te typy potrzebują przekazywanie, wskaźnik do obiektu w stercie są przekazywane do wywoływany bezpośrednio. Wywoływany, można zmienić zawartość przywoływane przez wskaźnik lokalizacji w pamięci.  
   
 > [!NOTE]
 >  Wywoływany, można zmienić zawartości pamięci, jeśli parametr jest oznaczony jako Out lub we/wy. Z kolei wywoływany należy unikać zmiany zawartości, gdy parametr ma wartość do organizowania jako w jest to wartość domyślna dla typy kopiowalne sformatowany. Modyfikowanie obiektu w generuje problemy podczas eksportowania tej samej klasy do biblioteki typów i używane do nawiązywania połączeń między apartamentu.  
   
 ## <a name="formatted-non-blittable-classes"></a>Klasy sformatowany niekopiowalne  
- Sformatowany [niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md) klasy wyeliminowaniu układu (sformatowany), ale reprezentację danych różni się w pamięci zarządzane i niezarządzane. Dane można wymagać transformacji w następujących warunkach:  
+ Sformatowany [niekopiowalne](blittable-and-non-blittable-types.md) klasy wyeliminowaniu układu (sformatowany), ale reprezentację danych różni się w pamięci zarządzane i niezarządzane. Dane można wymagać transformacji w następujących warunkach:  
   
 -   Jeśli klasa niekopiowalne jest przekazywane przez wartość, wywoływany otrzymuje wskaźnik kopię struktury danych.  
   
@@ -87,7 +84,7 @@ Typy odwołań przekazywane według wartości i według odwołania
  Gdy <xref:System.Text.StringBuilder?displayProperty=nameWithType> jest przekazywany przez wartość i przekazuje organizatora odwołaniem do wewnętrznego buforu elementu **StringBuilder** bezpośrednio do obiektu wywołującego. Obiekt wywołujący i wywoływany należy uzgodnić rozmiar buforu. Element wywołujący jest odpowiedzialny za tworzenie **StringBuilder** odpowiedniej długości. Wywoływany musi podjąć niezbędne środki ostrożności, aby upewnić się, że nie jest przepełnienie buforu. **StringBuilder** jest wyjątek do reguły odwołujące się do typów przekazywane przez wartość są przekazywane tak jak parametry domyślnie. Jest on zawsze przekazany jako we/wy.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Zarządzanie pamięcią z organizatora międzyoperacyjne](http://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee)  
- [Atrybuty kierunkową](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Marshaling międzyoperacyjny](../../../docs/framework/interop/interop-marshaling.md)
+ [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)  
+ [Zarządzanie pamięcią z organizatora międzyoperacyjne](https://msdn.microsoft.com/library/417206ce-ee3e-4619-9529-0c0b686c7bee(v=vs.100))  
+ [Atrybuty kierunkową](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Marshaling międzyoperacyjny](interop-marshaling.md)

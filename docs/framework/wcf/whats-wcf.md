@@ -1,30 +1,30 @@
 ---
 title: Co to jest program Windows Communication Foundation
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Communication Foundation [WCF], technology overview
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-caps.latest.revision: 
+caps.latest.revision: 51
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7aecddc617afcaf197aa212e8eea7e1342c029fa
-ms.sourcegitcommit: 08684dd61444c2f072b89b926370f750e456fca1
+ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
@@ -72,7 +72,7 @@ ms.lasthandoff: 02/14/2018
   
 -   **Wiele transport i kodowanie**  
   
-     Na dowolnym kilka wbudowanych protokołów i kodowania można wysłać wiadomości. Najbardziej typowe protokołu i kodowanie jest wysłanie wiadomości SOAP tekst zakodowany przy użyciu jest protokół HTTP (HyperText Transfer) do użytku w sieci World Wide Web. Alternatywnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub za pomocą zoptymalizowanego formatu binarnego.  Dane binarne mogą być wysyłane efektywne wykorzystanie standardowego mechanizmu MTOM. Brak podanego transportu lub kodowania własnych potrzeb można utworzyć własny transportu lub kodowania. [!INCLUDE[crabout](../../../includes/crabout-md.md)] transport i kodowanie obsługiwane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
+     Na dowolnym kilka wbudowanych protokołów i kodowania można wysłać wiadomości. Najbardziej typowe protokołu i kodowanie jest wysłanie wiadomości SOAP przy użyciu protokołu HTTP (HyperText Transfer) do użytku w sieci World Wide Web kodowany tekst. Alternatywnie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umożliwia wysyłanie komunikatów za pośrednictwem protokołu TCP, nazwanych potoków lub usługi MSMQ. Te komunikaty mogą być kodowane jako tekst lub za pomocą zoptymalizowanego formatu binarnego.  Dane binarne mogą być wysyłane efektywne wykorzystanie standardowego mechanizmu MTOM. Brak podanego transportu lub kodowania własnych potrzeb można utworzyć własny transportu lub kodowania. [!INCLUDE[crabout](../../../includes/crabout-md.md)] transport i kodowanie obsługiwane przez [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zobacz [transportów](../../../docs/framework/wcf/feature-details/transports.md).  
   
 -   **Niezawodne i umieszczonych w kolejce wiadomości**  
   

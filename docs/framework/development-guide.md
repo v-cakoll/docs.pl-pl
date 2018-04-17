@@ -1,28 +1,28 @@
 ---
-title: ".NET Framework — podręcznik programowania"
-ms.custom: 
+title: .NET Framework — podręcznik programowania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - .NET Framework, development guide
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
-caps.latest.revision: 
+caps.latest.revision: 13
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d7950ae39ada3e1e0e070967f8d578fc3371126
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3432ac629a6c754cf7f863b6444dc81b6f9919ef
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework — podręcznik programowania
 W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczenia i wdrażanie aplikacji .NET Framework. Sekcja ta zawiera też informacji na temat obszarów technologii, takich jak dynamiczne programowania, współdziałanie rozszerzalności, zarządzanie pamięcią i wątków.  
@@ -49,7 +49,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  [Aplikacje usług systemu Windows](../../docs/framework/windows-services/index.md)  
  W tym artykule wyjaśniono, jak utworzyć aplikację, która jest zainstalowana jako usługę i uruchamiania, Zatrzymaj, a w przeciwnym razie kontrolowanie swojego zachowania można użyć programu Visual Studio i .NET Framework.  
   
- [Przetwarzanie równoległe i współbieżność](../../docs/standard/parallel-processing-and-concurrency.md)  
+ [Równoległe przetwarzanie współbieżności i programowania asynchronicznego w .NET](../../docs/standard/parallel-processing-and-concurrency.md)  
  Zawiera informacje o zarządzanych wątków Programowanie równoległe i asynchroniczne wzorce projektowe programowania.  
   
  [Programowanie dla sieci w programie .NET Framework](../../docs/framework/network-programming/index.md)  
@@ -59,7 +59,7 @@ W tej sekcji opisano sposób tworzenia, konfigurowanie debugowania, zabezpieczen
  W tym artykule wyjaśniono, jak pliki konfiguracji można użyć do zmiany ustawień bez konieczności ponownego kompilowania aplikacji .NET Framework.  
   
  [Kompilowanie aplikacji z architekturą .NET Native](../../docs/framework/net-native/index.md)  
- Wyjaśniono, jak używasz [!INCLUDE[net_native](../../includes/net-native-md.md)] technologii wstępnej kompilacji do tworzenia i wdrażania aplikacji ze Sklepu Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)]kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i które dla środowiska .NET Framework do kodu natywnego.  
+ Wyjaśniono, jak używasz [!INCLUDE[net_native](../../includes/net-native-md.md)] technologii wstępnej kompilacji do tworzenia i wdrażania aplikacji ze Sklepu Windows. [!INCLUDE[net_native](../../includes/net-native-md.md)] kompiluje aplikacje, które są zapisywane w kodzie zarządzanym (C#) i które dla środowiska .NET Framework do kodu natywnego.  
   
  [Zabezpieczenia](../../docs/standard/security/index.md)  
  Informacje na temat klas i usług w programie .NET Framework, które ułatwiają tworzenie aplikacji bezpiecznego.  

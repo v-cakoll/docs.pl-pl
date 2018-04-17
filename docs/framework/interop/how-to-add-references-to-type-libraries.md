@@ -1,12 +1,9 @@
 ---
-title: "Porady: dodawanie odwołań do bibliotek typów"
-ms.custom: 
+title: 'Porady: dodawanie odwołań do bibliotek typów'
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - importing type library
@@ -14,16 +11,16 @@ helpviewer_keywords:
 - type libraries
 - COM interop, importing type library
 ms.assetid: f5cfa6ba-cc25-4017-82cd-ba7391859113
-caps.latest.revision: "12"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4e80c4bf5142a9bbbd2b7f75d67553db73f0ff22
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 561e05c82c1882ad5e495ddb3dc1a17356522514
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-references-to-type-libraries"></a>Porady: dodawanie odwołań do bibliotek typów
 Program Visual Studio generuje zestawu międzyoperacyjnego zawierający metadane, podczas dodawania odwołania do biblioteki typów. Jeśli podstawowy zestaw międzyoperacyjny jest dostępny, Visual Studio korzysta z istniejącego zestawu przed wygenerowaniem nowego zestawu międzyoperacyjnego.  
@@ -49,14 +46,14 @@ Program Visual Studio generuje zestawu międzyoperacyjnego zawierający metadane
   
 ### <a name="to-add-a-reference-to-a-type-library-for-command-line-compilation"></a>Aby dodać odwołanie do biblioteki typów dla kompilacji wiersza polecenia  
   
-1.  Generowanie zestawu międzyoperacyjnego, zgodnie z opisem w [porady: generowanie zestawy międzyoperacyjne z bibliotek typów](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md).  
+1.  Generowanie zestawu międzyoperacyjnego, zgodnie z opisem w [porady: generowanie zestawy międzyoperacyjne z bibliotek typów](how-to-generate-interop-assemblies-from-type-libraries.md).  
   
-2.  Użyj [/Link (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md) lub [/Link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md) typy — opcja kompilatora o nazwie zestawu międzyoperacyjnego osadzanie informacji o typie dla modelu COM w Twoje pliki wykonywalne.  
+2.  Użyj [/Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md) lub [/Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md) typy — opcja kompilatora o nazwie zestawu międzyoperacyjnego osadzanie informacji o typie dla modelu COM w Twoje pliki wykonywalne.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Importowanie biblioteki typów jako zestawu](../../../docs/framework/interop/importing-a-type-library-as-an-assembly.md)  
- [Udostępnianie składników COM programowi .NET Framework](../../../docs/framework/interop/exposing-com-components.md)  
- [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](http://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3)  
- [Przewodnik: osadzanie typów z zarządzanych zestawów](http://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
- [/ Link (opcje kompilatora C#)](~/docs/csharp/language-reference/compiler-options/link-compiler-option.md)  
- [/ Link (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/link.md)
+ [Importowanie biblioteki typów jako zestawu](importing-a-type-library-as-an-assembly.md)  
+ [Udostępnianie składników COM programowi .NET Framework](exposing-com-components.md)  
+ [Przewodnik: osadzanie informacji o typie z zestawów Microsoft Office](https://msdn.microsoft.com/library/85b55e05-bc5e-4665-b6ae-e1ada9299fd3(v=vs.100))  
+ [Przewodnik: osadzanie typów z zarządzanych zestawów](https://msdn.microsoft.com/library/b28ec92c-1867-4847-95c0-61adfe095e21)  
+ [/ Link (opcje kompilatora C#)](../../csharp/language-reference/compiler-options/link-compiler-option.md)  
+ [/ Link (Visual Basic)](../../visual-basic/reference/command-line-compiler/link.md)

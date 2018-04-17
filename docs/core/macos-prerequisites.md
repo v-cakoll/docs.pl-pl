@@ -1,7 +1,7 @@
 ---
-title: "Wymagania wstępne dotyczące platformy .NET Core dla komputerów Mac"
-description: "Obsługiwane wersje macOS i zależności platformy .NET Core na tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach macOS."
-keywords: "System macOS .NET i .NET core, komputerów Mac"
+title: Wymagania wstępne dotyczące platformy .NET Core dla komputerów Mac
+description: Obsługiwane wersje macOS i zależności platformy .NET Core na tworzenie, wdrażanie i uruchamianie aplikacji .NET Core na maszynach macOS.
+keywords: .NET, .NET Core, macOS, Mac
 author: guardrex
 ms.author: mairaw
 ms.date: 09/27/2017
@@ -9,12 +9,13 @@ ms.topic: article
 ms.prod: .net-core
 ms.devlang: dotnet
 ms.assetid: c33b1241-ab66-4583-9eba-52cf51146f5a
-ms.workload: dotnetcore
-ms.openlocfilehash: 5aac7566f532312c890bad07c901929ae826ece3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 4bad51e7d0d705ea730382edf80850bca15c5e7a
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="prerequisites-for-net-core-on-macos"></a>Wymagania wstępne dotyczące .NET Core na macOS
 
@@ -22,7 +23,7 @@ W tym artykule przedstawiono macOS obsługiwane wersje i zależności platformy 
 
 ## <a name="supported-macos-versions"></a>System macOS obsługiwane wersje
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Oprogramowanie .NET core 2.x jest obsługiwana w następujących wersjach macOS:
 
@@ -30,7 +31,7 @@ Oprogramowanie .NET core 2.x jest obsługiwana w następujących wersjach macOS:
 
 Zobacz [2.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md) Pełna lista .NET Core 2.x obsługiwanych systemów operacyjnych, poza wersje obsługi systemu operacyjnego i łącza do zasad cyklu życia.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Oprogramowanie .NET core 1.x jest obsługiwana w następujących wersjach macOS:
 
@@ -43,13 +44,13 @@ Zobacz [1.x .NET Core obsługiwanych wersjach systemu operacyjnego](https://gith
 
 ## <a name="net-core-dependencies"></a>Zależności .NET core
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Pobierz i zainstaluj .NET Core SDK z [pobiera .NET](https://www.microsoft.com/net/download/core). Jeśli masz problemy z instalacją na macOS, należy skontaktować się [znane problemy](https://github.com/dotnet/core/tree/master/release-notes/2.0) tematu zainstalowaną wersję.
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-**.NET core 1.x**
+**.NET Core 1.x**
 
 Oprogramowanie .NET core 1.x wymaga biblioteki OpenSSL, podczas uruchamiania na macOS. Jest łatwy sposób uzyskać biblioteki OpenSSL przy użyciu [Homebrew ("brew")](https://brew.sh/) Menedżer pakietów dla macOS. Po zainstalowaniu *brew*, zainstaluj biblioteki OpenSSL, wykonując następujące polecenia w wierszu terminali (polecenie):
 
@@ -65,9 +66,9 @@ Pobierz i zainstaluj .NET Core SDK z [pobiera .NET](https://www.microsoft.com/ne
 
 ---
 
-## <a name="increase-the-maximum-open-file-limit"></a>Zwiększ limit maksymalnego Otwieranie pliku
+## <a name="increase-the-maximum-open-file-limit-net-core-versions-before-net-core-sdk-202"></a>Zwiększ limit maksymalnego Otwórz plik (wersje .NET Core przed .NET Core SDK pkt 2.0.2) 
 
-Otwórz plik domyślny limit macOS nie może być wystarczające dla niektórych obciążeń .NET Core, takich jak przywracanie projektów lub przeprowadzanie testów jednostkowych.
+W starszych wersjach platformy .NET Core (przed .NET Core SDK pkt 2.0.2) domyślny limit Otwórz plik na macOS nie może być wystarczające dla niektórych obciążeń .NET Core, takich jak przywracanie projektów lub przeprowadzanie testów jednostkowych.
 
 Aby zwiększyć ten limit, należy wykonać następujące czynności:
 
@@ -114,4 +115,4 @@ Tworzenie aplikacji platformy .NET core na macOS z programem Visual Studio for M
 * Obsługiwana wersja systemu operacyjnego macOS
 * Biblioteki OpenSSL (.NET Core 1.x tylko; dostępna natywnie w macOS usług zabezpieczeń używa 2.x .NET Core)
 * Oprogramowanie .NET core SDK dla komputerów Mac
-* [Visual Studio dla komputerów Mac](https://www.visualstudio.com/vs/visual-studio-mac/)
+* [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)

@@ -1,5 +1,5 @@
 ---
-title: "yield (odwołanie w C#)"
+title: yield (odwołanie w C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-caps.latest.revision: 
+caps.latest.revision: 46
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 11fe3734df61333916e7a07010393bddc96e525c
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 98453fb218dca1feb36c64331403d6761d231a0e
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="yield-c-reference"></a>yield (odwołanie w C#)
 Jeśli używasz `yield` — słowo kluczowe w instrukcji, możesz wskazują, że metoda, operator lub `get` dostępu, w których występuje jest iteratora. Przy użyciu `yield` do definiowania iteratora eliminuje to potrzebę jawnego dodatkowe klasy (klasy, która przechowuje stan wyliczania, zobacz <xref:System.Collections.Generic.IEnumerator%601> przykład) podczas implementacji <xref:System.Collections.IEnumerable> i <xref:System.Collections.IEnumerator> wzorzec do kolekcji niestandardowej Typ.  
@@ -79,7 +79,7 @@ foreach (string element in elements)
  W każdej iteracji kolejnych `foreach` pętli, wykonanie treści iteratora kontynuuje działanie od miejsca przerwał, ponownie zatrzymywanie po osiągnięciu `yield return` instrukcji. `foreach` Pętli działanie jest kończone po na końcu metody iterator lub `yield break` osiągnięciu instrukcji.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie przedstawiono `yield return` instrukcji, która znajduje się wewnątrz `for` pętli. Każdej iteracji `foreach` treść instrukcji w `Process` tworzy wywołanie `Power` funkcji iteracyjnej. Każde wywołanie funkcji iteracyjnej przechodzi do następnego wykonywanie `yield return` instrukcja, która występuje w ciągu następnej iteracji `for` pętli.  
+ W poniższym przykładzie przedstawiono `yield return` instrukcji, która znajduje się wewnątrz `for` pętli. Każdej iteracji `foreach` treść instrukcji w `Main` metoda tworzy wywołanie `Power` funkcji iteracyjnej. Każde wywołanie funkcji iteracyjnej przechodzi do następnego wykonywanie `yield return` instrukcja, która występuje w ciągu następnej iteracji `for` pętli.  
   
  Zwracany typ metody iteracyjnej jest <xref:System.Collections.IEnumerable>, który jest typem interfejsu iteratora. Kiedy metoda iteratora jest wywoływana, zwraca obiekt wyliczeniowy, który zawiera potęgi liczb.  
   

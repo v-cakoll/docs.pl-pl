@@ -1,7 +1,7 @@
 ---
-title: "Modelu rozszerzalności .NET core interfejsu wiersza polecenia"
-description: "Dowiedz się, jak można rozszerzyć narzędzi interfejsu wiersza polecenia (CLI)."
-keywords: "Interfejs wiersza polecenia, rozszerzalności, polecenia niestandardowych, .NET Core"
+title: Modelu rozszerzalności .NET core interfejsu wiersza polecenia
+description: Dowiedz się, jak można rozszerzyć narzędzi interfejsu wiersza polecenia (CLI).
+keywords: Interfejs wiersza polecenia, rozszerzalności, polecenia niestandardowych, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 04/12/2017
@@ -10,12 +10,13 @@ ms.prod: .net-core
 ms.technology: dotnet-cli
 ms.devlang: dotnet
 ms.assetid: fffc3400-aeb9-4c07-9fea-83bc8dbdcbf3
-ms.workload: dotnetcore
-ms.openlocfilehash: 0d273510903c888f3212a57f4c28b118b73cab5c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 53329c302066891c240a234156c2572acc66e7ab
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-core-cli-tools-extensibility-model"></a>Modelu rozszerzalności narzędzi interfejsu wiersza polecenia platformy .NET core
 
@@ -82,8 +83,8 @@ Ponieważ narzędzia przenośnych aplikacji, użytkowników korzystających z na
 
 Tego rodzaju narzędzia ma wykres zależności, który jest całkowicie niezależna od na wykresie zależności projektu, który używa tych. Proces przywracania najpierw przywraca zależności projektu i następnie przywrócenie wszystkich narzędzi oraz ich zależności.
 
-Można znaleźć przykłady bardziej zaawansowane funkcje i to w różnych kombinacji [repozytorium interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestProjects).
-Możesz również sprawdzić [implementacji narzędzia używane](https://github.com/dotnet/cli/tree/rel/1.0.1/TestAssets/TestPackages) w tym samym repozytorium.
+Można znaleźć przykłady bardziej zaawansowane funkcje i to w różnych kombinacji [repozytorium interfejsu wiersza polecenia platformy .NET Core](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestProjects).
+Możesz również sprawdzić [implementacji narzędzia używane](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages) w tym samym repozytorium.
 
 ### <a name="custom-targets"></a>Niestandardowe elementy docelowe
 NuGet ma możliwość [pakiet niestandardowy MSBuild cele i pliki właściwości](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package). Wraz z przejściem z narzędzi .NET Core interfejsu wiersza polecenia, użyj programu MSBuild sam mechanizm rozszerzalności teraz ma zastosowanie do projektów platformy .NET Core. Czy używać tego typu rozszerzeń, gdy chcesz rozszerzyć procesu kompilacji lub chcesz uzyskać dostępu do żadnego artefaktów w procesie kompilacji, takich jak pliki generowane lub chcesz sprawdzić konfigurację, pod którą jest wywoływany kompilacji , itp.

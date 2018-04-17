@@ -1,7 +1,7 @@
 ---
 title: Async — omówienie
 description: Dowiedz się, jak programowania asynchronicznego to technika klucza, która umożliwia proste do obsługi jednoczesnych operacji na wiele rdzeni i blokowania We/Wy.
-keywords: .NET, .NET core
+keywords: .NET, .NET Core
 author: cartermp
 ms.author: wiwagn
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: 1e38e9d9-8284-46ee-a15f-199adc4f26f4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f2dddc21dfb124fe97c397a156743981a67e4037
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85e30292fdc0e0e529eacdd328d4515bba5ee3e8
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="async-overview"></a>Async — omówienie
 
@@ -41,4 +41,14 @@ Kod Async ma następującą charakterystykę:
 
 ## <a name="whats-next"></a>Co to jest dalej?
 
-Nowości w asynchronicznej pojęcia i programowania w języku, dla [Async szczegółowo](async-in-depth.md) i [programowania asynchronicznego opartego na zadaniach](~/docs/standard/parallel-programming/task-based-asynchronous-programming.md).
+Aby uzyskać więcej informacji, zobacz [Async szczegółowo](async-in-depth.md) tematu.
+
+[Wzorce programowania asynchronicznego](/asynchronous-programming-patterns/index.md) temat zawiera omówienie trzy wzorce programowania asynchronicznego obsługiwane w środowisku .NET:  
+  
+-   [Asynchroniczne programowania modelu (APM)](asynchronous-programming-patterns/asynchronous-programming-model-apm.md) (starsze)  
+  
+-   [Oparty na zdarzeniach asynchroniczny wzorzec (EAP)](asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) (starsze)  
+  
+-   [Oparty na zadaniach asynchronicznej wzorca (TAP)](asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) (zalecane w przypadku nowych wdrożeń)  
+
+Aby uzyskać więcej informacji na temat zalecanych model programowania opartego na zadaniach, zobacz [programowania asynchronicznego opartego na zadaniach](parallel-programming/task-based-asynchronous-programming.md) tematu.

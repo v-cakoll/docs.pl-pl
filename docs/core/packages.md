@@ -1,6 +1,6 @@
 ---
 title: Pakiety, metapackages i platform
-description: "Dowiedz się terminologia pakietów, metapackages i platform."
+description: Dowiedz się terminologia pakietów, metapackages i platform.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -11,11 +11,11 @@ ms.devlang: dotnet
 ms.assetid: 609b0845-49e7-4864-957b-21ffe1b93bf2
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 85f20594844025655bbfb590364324631bd8e695
-ms.sourcegitcommit: 1c0b0f082b3f300e54b4d069b317ac724c88ddc3
+ms.openlocfilehash: f9b98fb38390e91c7a144ff5585c0a26824303dc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/16/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packages-metapackages-and-frameworks"></a>Pakiety, metapackages i platform
 
@@ -78,6 +78,7 @@ Zalety korzystania metapackages są:
 Klucza metapackages .NET Core są:
 
 - [Microsoft.NETCore.App](https://www.nuget.org/packages/Microsoft.NETCore.App) — w tym artykule opisano bibliotek, które są częścią dystrybucji .NET Core. Ustanawia [ `.NETCoreApp` framework](https://github.com/dotnet/core-setup/blob/release/1.1.0/pkg/projects/Microsoft.NETCore.App/Microsoft.NETCore.App.pkgproj). Zależy od na mniejszy `NETStandard.Library`.
+- [Microsoft.AspNetCore.All](https://www.nuget.org/packages/Microsoft.AspNetCore.All) — obejmuje wszystkie obsługiwane pakiety z zależności wewnętrznych i innych firm, używany przez Entity Framework Core i ASP.NET Core, Entity Framework Core i ASP.NET Core. Zobacz [metapackage Microsoft.AspNetCore.All dla platformy ASP.NET Core 2.x](/aspnet/core/fundamentals/metapackage) Aby uzyskać więcej informacji.
 - [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) — zestaw zgodności fasad, pozwalających na podstawie mscorlib przenośnej biblioteki klas (PCLs) do uruchamiania na .NET Core.
 
 ## <a name="frameworks"></a>Struktury

@@ -1,12 +1,9 @@
 ---
-title: "Organizowanie domyślne dotyczące ciągów"
-ms.custom: 
+title: Organizowanie domyślne dotyczące ciągów
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +12,16 @@ helpviewer_keywords:
 - strings, interop marshaling
 - interop marshaling, strings
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
-caps.latest.revision: "18"
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d219ad68d125e2b90197fc7703ccfc0a1c857d2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10f2c0e0e61190f571ae5bd4998f54d128448296
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-marshaling-for-strings"></a>Domyślny marshaling dla ciągów
 Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.StringBuilder?displayProperty=nameWithType> klasy zachowują się podobnie kierowania.  
@@ -41,13 +38,14 @@ Zarówno <xref:System.String?displayProperty=nameWithType> i <xref:System.Text.S
   
 -   [Bufory o stałej długości ciągu](#cpcondefaultmarshalingforstringsanchor3)  
   
-<a name="cpcondefaultmarshalingforstringsanchor1"></a>   
+<a name="cpcondefaultmarshalingforstringsanchor1"></a>
+
 ## <a name="strings-used-in-interfaces"></a>Parametry używane w interfejsach  
  W poniższej tabeli przedstawiono opcje organizowania dla typu danych string podczas organizowane jako argument metody do kodu niezarządzanego. <xref:System.Runtime.InteropServices.MarshalAsAttribute> Atrybutu udostępnia wiele <xref:System.Runtime.InteropServices.UnmanagedType> kierowanie ciągów do interfejsów modelu COM wartości wyliczenia.  
   
 |Typ wyliczenia|Opis formatu niezarządzane|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr`(ustawienie domyślne)|Styl modelu COM `BSTR` z prefiksem długość i znaków Unicode.|  
+|`UnmanagedType.BStr` (ustawienie domyślne)|Styl modelu COM `BSTR` z prefiksem długość i znaków Unicode.|  
 |`UnmanagedType.LPStr`|Wskaźnik do tablicy znaków ANSI zerem.|  
 |`UnmanagedType.LPWStr`|Wskaźnik do tablicy znaków Unicode zakończonym znakiem null.|  
   
@@ -65,12 +63,12 @@ void PassStringRef1(ref String s);
 void PassStringRef2([MarshalAs(UnmanagedType.BStr)]ref String s);  
 void PassStringRef3([MarshalAs(UnmanagedType.LPStr)]ref String s);  
 void PassStringRef4([MarshalAs(UnmanagedType.LPWStr)]ref String s);  
-);  
-```  
-  
- W poniższym przykładzie przedstawiono odpowiedniego interfejsu opisanego w bibliotece typów.  
-  
-```  
+);
+```
+
+W poniższym przykładzie przedstawiono odpowiedniego interfejsu opisanego w bibliotece typów.
+
+```
 […]  
 interface IStringWorker : IDispatch {  
 HRESULT PassString1([in] BSTR s);  
@@ -81,10 +79,11 @@ HRESULT PassStringRef1([in, out] BSTR *s);
 HRESULT PassStringRef2([in, out] BSTR *s);  
 HRESULT PassStringRef3([in, out] LPStr *s);  
 HRESULT PassStringRef4([in, out] LPWStr *s);  
-);  
-```  
-  
-<a name="cpcondefaultmarshalingforstringsanchor5"></a>   
+);
+```
+
+<a name="cpcondefaultmarshalingforstringsanchor5"></a>
+
 ## <a name="strings-used-in-platform-invoke"></a>Wywołanie ciągów używanych na platformie  
  Wywołanie platformy argumenty typu string kopie, konwersji z formatu .NET Framework (Unicode) do formatu niezarządzane platformy. Ciągi są niezmienne i nie są kopiowane z niezarządzanej pamięci do pamięci zarządzanej po powrocie z wywołania.  
   
@@ -119,9 +118,9 @@ Public Declare Auto Sub PassAnsiBStr Lib "StringLib.Dll" _
 Public Declare Auto Sub PassTBStr Lib "StringLib.Dll" _  
 (<MarshalAs(UnmanagedType.TBStr)> s As String)  
 End Class  
-```  
-  
-```csharp  
+```
+
+```csharp
 class StringLibAPI {  
 [DllImport("StringLib.Dll")]  
 public static extern void PassLPStr([MarshalAs(UnmanagedType.LPStr)]  
@@ -162,7 +161,7 @@ String s);
   
 ### <a name="type-library-representation"></a>Reprezentacja typu biblioteki  
   
-```  
+```
 struct StringInfoA {  
    char *    f1;  
    char      f2[256];  
@@ -227,7 +226,7 @@ struct StringInfoT {
   
  Rozwiązanie jest przekazanie <xref:System.Text.StringBuilder> buforu jako argument zamiast ciągu. A `StringBuilder` wyłuskiwany i zmodyfikowane przez wywoływany, pod warunkiem nie przekracza pojemność `StringBuilder`. Ponadto może zostać zainicjowane do stałej długości. Na przykład, jeśli należy zainicjować `StringBuilder` bufor do pojemności `N`, organizator udostępnia bufor o rozmiarze (`N`+ 1) znaków. Konta + 1 dla fakt, że ciąg niezarządzane zawiera terminatorem null podczas `StringBuilder` nie.  
   
- Na przykład Microsoft Win32 API `GetWindowText` funkcji (zdefiniowanej w Windows.h) jest znak o stałej długości buforu, który muszą być przekazywane do kodu niezarządzanego można manipulować. `LpString`Wskazuje bufor przydzielony wywołującego rozmiaru `nMaxCount`. Obiekt wywołujący powinien alokacji buforu i ustaw `nMaxCount` argument rozmiarowi przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
+ Na przykład Microsoft Win32 API `GetWindowText` funkcji (zdefiniowanej w Windows.h) jest znak o stałej długości buforu, który muszą być przekazywane do kodu niezarządzanego można manipulować. `LpString` Wskazuje bufor przydzielony wywołującego rozmiaru `nMaxCount`. Obiekt wywołujący powinien alokacji buforu i ustaw `nMaxCount` argument rozmiarowi przydzielonego buforu. Poniższy kod przedstawia `GetWindowText` deklaracji funkcji, zgodnie z definicją w Windows.h.  
   
 ```  
 int GetWindowText(  
@@ -271,7 +270,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [Domyślne zachowanie marshalingu](../../../docs/framework/interop/default-marshaling-behavior.md)  
- [Typy kopiowalne i niekopiowalne](../../../docs/framework/interop/blittable-and-non-blittable-types.md)  
- [Atrybuty kierunkową](http://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2)  
- [Kopiowanie i przypinanie](../../../docs/framework/interop/copying-and-pinning.md)
+ [Domyślne zachowanie marshalingu](default-marshaling-behavior.md)  
+ [Typy kopiowalne i niekopiowalne](blittable-and-non-blittable-types.md)  
+ [Atrybuty kierunkową](https://msdn.microsoft.com/library/241ac5b5-928e-4969-8f58-1dbc048f9ea2(v=vs.100))  
+ [Kopiowanie i przypinanie](copying-and-pinning.md)

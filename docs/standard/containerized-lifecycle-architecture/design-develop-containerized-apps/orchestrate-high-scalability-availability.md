@@ -1,18 +1,18 @@
 ---
-title: "Organizowanie mikrousług oraz multicontainer aplikacji o wysokiej skalowalności i dostępności"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Organizowanie mikrousług oraz multicontainer aplikacji o wysokiej skalowalności i dostępności
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/19/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4345fe8f36ecc32a7dd8e72fce5338bff308ffdf
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 92bfd4516866fe82408dd3dd341a13db0ee216c0
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="orchestrating-microservices-and-multicontainer-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług oraz multicontainer aplikacji o wysokiej skalowalności i dostępności
 

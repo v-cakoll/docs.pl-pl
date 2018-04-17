@@ -1,18 +1,18 @@
 ---
-title: "Środowisko projektowe dla aplikacji Docker"
-description: "Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia"
-keywords: Docker, Microservices, ASP.NET, Container
+title: Środowisko projektowe dla aplikacji Docker
+description: Cykl życia aplikacji konteneryzowanych Docker z platformy firmy Microsoft i narzędzia
+ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ad1a6e4cb0974ebb067cf1a7be987d696e8bc82a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c164b94572a8fde58124acaa14d47da574a19383
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-environment-for-docker-apps"></a>Środowisko projektowe dla aplikacji Docker
 
@@ -56,4 +56,4 @@ Zasadniczo można użyć dowolnego nowoczesnych języków obsługiwanych przez D
 
 
 >[!div class="step-by-step"]
-[Previous] (orchestrate-high-scalability-availability.md) [Next] (docker-apps-inner-loop-workflow.md)
+[Poprzednie] (organizowania wysoki skalowalność availability.md) [dalej] (docker aplikacje — wewnętrzny pętli workflow.md)

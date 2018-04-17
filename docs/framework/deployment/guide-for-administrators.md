@@ -1,7 +1,7 @@
 ---
 title: .NET Framework — Przewodnik wdrażania dla administratorów
 ms.custom: ''
-ms.date: 03/30/2017
+ms.date: 04/10/2018
 ms.prod: .net-framework
 ms.reviewer: ''
 ms.suite: ''
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - administrator's guide, deploying .NET Framework
 - deployment [.NET Framework], administrator's guide
 ms.assetid: bee14036-0436-44e8-89f5-4bc61317977a
-caps.latest.revision: ''
+caps.latest.revision: 40
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: f57b5db5c03030d8cb930355586d0253cae13319
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 67efb04fc0d86a20fdf10c0e84bb00ae57383bb1
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-framework-deployment-guide-for-administrators"></a>.NET Framework — Przewodnik wdrażania dla administratorów
 W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] i jego zależności systemu przez sieć przy użyciu programu Microsoft System Center Configuration Manager. W tym artykule przyjęto założenie, że wszystkie docelowe komputery klienckie spełniają minimalne wymagania programu .NET Framework. Aby uzyskać listę wymagania sprzętowe i programowe instalacji [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], zobacz [wymagania systemowe](../../../docs/framework/get-started/system-requirements.md).  
@@ -138,7 +138,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 |Opcja|Opis|  
 |------------|-----------------|  
 |**/q**|Ustawia tryb cichy. Nie jest wymagane wprowadzanie danych przez użytkownika i nie są wyświetlane dane wyjściowe.|  
-|**/norestart**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|  
+|**/ norestart**|Uniemożliwia Instalatorowi automatyczne wykonywanie ponownego rozruchu. Użycie tej opcji spowoduje, że program Configuration Manager będzie musiał obsługiwać ponowne uruchamianie komputera.|  
 |**/chainingpackage** *PackageName*|Określa nazwę pakietu, który tworzy łańcuch. Te informacje były zgłaszane z innych informacji o sesji instalacji dla tych, którzy zalogowali się [Program poprawy jakości obsługi programu Microsoft klienta (CEIP)](http://go.microsoft.com/fwlink/p/?LinkId=248244). Jeśli nazwa pakietu zawiera spacje, użyj podwójnych cudzysłowów prostych jako ograniczników; na przykład: **/chainingpackage "Łańcucha produktu"**.|  
   
  Wykonanie tych kroków spowoduje utworzenie pakietu o nazwie .NET Framework 4.5. Program wdraża instalację dyskretną programu .NET Framework 4.5. W przypadku instalacji dyskretnej użytkownicy nie interakcji z procesu instalacji i CBC aplikacja ma kod powrotny przechwytywania i ponowne uruchomienie; zobacz [uzyskiwanie informacji o postępie z pakietu instalacyjnego](http://go.microsoft.com/fwlink/?LinkId=179606).  
@@ -165,7 +165,7 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 8.  Ukończ pracę kreatora.  
   
- Packagenow zawiera wszystkie informacje, które należy wdrożyć w trybie dyskretnym .NET Framework 4.5. Przed przystąpieniem do wdrażania pakietów i programów, sprawdź, czy został zainstalowany w punkcie dystrybucji; zobacz sekcję "Monitor zawartość" [operacje i Obsługa zarządzania zawartością w programie Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) w bibliotece dokumentacji programu Configuration Manager.  
+ Pakiet zawiera teraz wszystkie informacje niezbędne do dyskretnego wdrożenia programu .NET Framework 4.5. Przed przystąpieniem do wdrażania pakietów i programów, sprawdź, czy został zainstalowany w punkcie dystrybucji; zobacz sekcję "Monitor zawartość" [operacje i Obsługa zarządzania zawartością w programie Configuration Manager](http://technet.microsoft.com/library/gg712694.aspx#BKMK_MonitorContent) w bibliotece dokumentacji programu Configuration Manager.  
   
 <a name="deploying_package"></a>   
 ### <a name="deploy-the-package"></a>Wdrażanie pakietu  
@@ -206,11 +206,11 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
   
 -   [Usługi domenowe Active Directory systemu Windows Server 2008](http://technet.microsoft.com/library/dd378891.aspx)  
   
--   [DNS Server](http://technet.microsoft.com/library/cc732997.aspx)  
+-   [Serwer DNS](http://technet.microsoft.com/library/cc732997.aspx)  
   
 -   [Serwer DHCP](http://technet.microsoft.com/library/cc896553.aspx)  
   
- **SQL Server 2008:**  
+ **Program SQL Server 2008:**  
   
 -   [Instalowanie programu SQL Server 2008 (SQL Server wideo)](http://technet.microsoft.com/library/dd299415.aspx)  
   
@@ -230,11 +230,16 @@ W tym artykule opisano, jak administrator systemu może wdrożyć [!INCLUDE[net_
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
   
 ### <a name="log-file-locations"></a>Lokalizacje plików dziennika  
- Następujące pliki dziennika są generowane podczas [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] Instalatora:  
+ Następujące pliki dziennika są generowane podczas instalacji platformy .NET Framework:  
   
- %Temp%\Microsoft .NET framework 4.5*.txt %temp%\Microsoft .NET Framework 4.5*.html  
+ .NET framework %Temp%\Microsoft *wersji*\*txt  
+ .NET framework %Temp%\Microsoft *wersji*\*.html  
   
- Można użyć [narzędzie do zbierania dzienników](http://www.microsoft.com/download/details.aspx?id=12493) służąca do gromadzenia [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] plików dziennika i utworzyć plik skompresowany plik cabinet (cab), która ogranicza rozmiar plików.  
+ gdzie *wersji* jest to wersja platformy .NET, który użytkownik instaluje, takich jak 4.5 lub 4.7.2.  
+ 
+ Można również określić katalog do dziennika, które pliki zostały napisane przy użyciu `/log` opcji wiersza polecenia do polecenia instalacji platformy .NET Framework. Aby uzyskać więcej informacji, zobacz [.NET Framework — przewodnik wdrażania dla deweloperów](deployment-guide-for-developers.md#command-line-options). 
+ 
+ Można użyć [narzędzie do zbierania dzienników](https://www.microsoft.com/download/details.aspx?id=12493) Aby zbierać pliki dziennika .NET Framework i utworzyć plik skompresowany plik cabinet (cab), które zmniejsza rozmiar plików.  
   
 <a name="return_codes"></a>   
 ### <a name="return-codes"></a>Kody powrotne  

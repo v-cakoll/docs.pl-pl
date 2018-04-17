@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: af6a6b73c790577cebf301075f2ff7e90960ea62
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: c770ae0286842241288c39c003456c52879c8706
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="domain-events-design-and-implementation"></a>Zdarzenia domeny: projektowanie i wdrażanie
 
@@ -76,7 +76,7 @@ Jak pokazano w rysunek 9-15, począwszy od tego samego zdarzenia domeny można o
 
 **Rysunek 9 – 15**. Obsługa wielu akcji dla domeny
 
-Programy obsługi zdarzeń są zwykle w warstwie aplikacji, ponieważ korzystasz z obiektów infrastruktury, takich jak repozytoria lub aplikacji interfejsu API dla zachowania mikrousługi. W tym sensie procedury obsługi zdarzeń są podobne do programy obsługi poleceń, więc obie należą do warstwy aplikacji. Istotną różnicą jest to, że polecenie powinny być przetwarzane tylko raz. Zdarzenie domeny mogą być przetwarzane zero lub *n* razy, ponieważ jeśli może zostać odebrany przez wiele odbiorników lub programów obsługi zdarzeń z różnych cel każdy program obsługi.
+Programy obsługi zdarzeń są zwykle w warstwie aplikacji, ponieważ korzystasz z obiektów infrastruktury, takich jak repozytoria lub aplikacji interfejsu API dla zachowania mikrousługi. W tym sensie procedury obsługi zdarzeń są podobne do programy obsługi poleceń, więc obie należą do warstwy aplikacji. Istotną różnicą jest to, że polecenie powinny być przetwarzane tylko raz. Zdarzenie domeny mogą być przetwarzane zero lub *n* razy, ponieważ może zostać odebrany przez wiele odbiorników lub programów obsługi zdarzeń z różnych cel każdy program obsługi.
 
 Możliwość Otwórz liczby programów obsługi na zdarzenie domeny umożliwia dodanie dużo więcej reguł domeny bez wpływu na bieżącego kodu. Na przykład Implementowanie następujące reguły biznesowej, który ma mieć miejsce prawo po zdarzeniu może być tak proste, jak dodać kilka programów obsługi zdarzeń (lub nawet co najmniej jeden):
 
@@ -329,7 +329,7 @@ Poprzedni kod obsługi zdarzenia domeny jest uznawany za kod warstwy aplikacji, 
 
 #### <a name="domain-events-can-generate-integration-events-to-be-published-outside-of-the-microservice-boundaries"></a>Zdarzenia domeny może wygenerować zdarzeń integracji publikowane poza granice mikrousługi
 
-Na koniec ważne jest, aby wymienić, że czasami warto zdarzenia są propagowane na wiele mikrousług. Która jest traktowana jako zdarzenie integracji i mogą być publikowane za pośrednictwem magistrali zdarzeń z obsługi zdarzeń dowolnej określonej domeny.
+Na koniec należy podać, że czasami warto zdarzenia są propagowane na wiele mikrousług. Która jest traktowana jako zdarzenie integracji i mogą być publikowane za pośrednictwem magistrali zdarzeń z obsługi zdarzeń dowolnej określonej domeny.
 
 ## <a name="conclusions-on-domain-events"></a>Wnioski dotyczące zdarzeń domeny
 

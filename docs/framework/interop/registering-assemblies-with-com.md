@@ -1,12 +1,9 @@
 ---
-title: "Rejestrowanie zestawów do użycia z modelem COM"
-ms.custom: 
+title: Rejestrowanie zestawów do użycia z modelem COM
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - COM interop, registering assemblies
@@ -14,19 +11,20 @@ helpviewer_keywords:
 - interoperation with unmanaged code, registering assemblies
 - registering assemblies
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39466115e3835361c76361d3cfc04f76161e7dd5
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3beaffdc0660055dd047f449388216ccfdd312cc
+ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-assemblies-with-com"></a>Rejestrowanie zestawów do użycia z modelem COM
-Można uruchomić narzędzie wiersza polecenia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania lub wyrejestrowania zestawu do użytku z modelu COM. Regasm.exe dodaje informacje o klasie w rejestrze systemu, więc klientów modelu COM można użyć klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa udostępnia podobne funkcje.  
+Można uruchomić narzędzie wiersza polecenia o nazwie [narzędzie rejestracji zestawów (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) do zarejestrowania lub wyrejestrowania zestawu do użytku z modelu COM. Regasm.exe dodaje informacje o klasie w rejestrze systemu, więc klientów modelu COM można użyć klasy .NET Framework w sposób niewidoczny dla użytkownika. <xref:System.Runtime.InteropServices.RegistrationServices> Klasa udostępnia podobne funkcje.  
   
  Zanim można aktywować z klient modelu COM, w rejestrze systemu Windows należy zarejestrować zarządzanego składnika. W poniższej tabeli przedstawiono kluczy, które Regasm.exe zazwyczaj dodaje do rejestru systemu Windows. (000000 wskazuje rzeczywistą wartość identyfikatora GUID).  
   
@@ -53,7 +51,7 @@ Można uruchomić narzędzie wiersza polecenia o nazwie [narzędzie rejestracji 
  Aby uzyskać `InprocServer32` podklucza, zamiast tradycyjnych Biblioteka typów COM, aby wskazać, że środowisko uruchomieniowe języka wspólnego tworzy obiekt zarządzany pojawi się odwołanie do biblioteki Mscoree.dll.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Udostępnianie składników .NET Framework modelowi COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)  
- [Instrukcje: Odwołania do typów .NET z modelu COM](../../../docs/framework/interop/how-to-reference-net-types-from-com.md)  
- [Wywołanie obiektu .NET.](http://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33)  
- [Wdrażanie aplikacji na potrzeby dostępu modelu COM](http://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce)
+ [Udostępnianie składników .NET Framework modelowi COM](exposing-dotnet-components-to-com.md)  
+ [Instrukcje: Odwołania do typów .NET z modelu COM](how-to-reference-net-types-from-com.md)  
+ [Wywołanie obiektu .NET.](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
+ [Wdrażanie aplikacji na potrzeby dostępu modelu COM](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))

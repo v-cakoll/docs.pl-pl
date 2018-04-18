@@ -1,4 +1,4 @@
----
+﻿---
 title: "Ograniczenia dotyczące parametrów typu (Przewodnik programowania w języku C#)"
 ms.date: 07/20/2015
 ms.prod: .net

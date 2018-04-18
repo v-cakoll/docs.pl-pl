@@ -26,11 +26,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="property-statement"></a>Property — Instrukcja
-Deklaruje nazwę właściwości i procedury właściwości używane do przechowywania i pobierania wartości właściwości.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
+Deklaruje nazwę właściwości i procedury właściwości używane do przechowywania i pobierania wartości właściwości.
+
+## <a name="syntax"></a>Składnia
+
+```vb
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  

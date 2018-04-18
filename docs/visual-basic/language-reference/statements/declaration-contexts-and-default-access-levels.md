@@ -24,7 +24,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)
-W tym temacie opisano typy danych Visual Basic mogą być deklarowane w ramach których innych typów, a co ich poziomy dostępu domyślnie Jeśli nie zostanie określony.  
+
+W tym temacie opisano typy danych Visual Basic, które mogą być deklarowane w ramach innych typów, a co ich poziomy dostępu domyślnie Jeśli nie zostanie określony.
   
 ## <a name="declaration-context-levels"></a>Poziomy kontekście deklaracji  
  *Kontekście deklaracji* elementu programowania to region kodu, w którym jest zadeklarowany. Jest to często innego elementu programistycznego, która jest następnie wywoływana *zawierającego element*.  

@@ -19,16 +19,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="collection-object-summary-visual-basic"></a>Obiekt stanowiący część kolekcji — Podsumowanie (Visual Basic)
+
 Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
   
 |Akcja|Element języka|  
 |------------|----------------------|  
-|Utwórz `Collection` obiektu.|<xref:Microsoft.VisualBasic.Collection>|  
-|Dodaj element do kolekcji.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
-|Usuń obiekt z kolekcji.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
+|Tworzy obiekt `Collection`.|<xref:Microsoft.VisualBasic.Collection>|  
+|Dodaje element do kolekcji.|<xref:Microsoft.VisualBasic.Collection.Add*>|  
+|Usuwa obiekt z kolekcji.|<xref:Microsoft.VisualBasic.Collection.Remove*>|  
 |Odwołuje się do elementu w kolekcji.|<xref:Microsoft.VisualBasic.Collection.Item*>|  
-|Zwraca odwołanie do <xref:System.Collections.IEnumerator> interfejsu.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
+|Zwraca odwołanie do interfejsu <xref:System.Collections.IEnumerator>.|<xref:Microsoft.VisualBasic.Collection.System%23Collections%23IEnumerable%23GetEnumerator%2A>|  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
+
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
  [Elementy członkowskie biblioteki wykonawczej języka Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)

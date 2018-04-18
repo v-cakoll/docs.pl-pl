@@ -17,17 +17,18 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="a-e-statements"></a>A-E — Instrukcje
-Poniższa tabela zawiera listę [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcji języka.  
-  
+Poniższa tabela zawiera listę instrukcji języka [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+
 |||||  
 |---|---|---|---|  
-|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Wywołania](../../../visual-basic/language-reference/statements/call-statement.md)|[Klasy](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
-|[Kontynuuj](../../../visual-basic/language-reference/statements/continue-statement.md)|[Deklarowanie](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegat](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
+|[AddHandler](../../../visual-basic/language-reference/statements/addhandler-statement.md)|[Wywołania](../../../visual-basic/language-reference/statements/call-statement.md)|[Class](../../../visual-basic/language-reference/statements/class-statement.md)|[Const](../../../visual-basic/language-reference/statements/const-statement.md)|  
+|[Continue](../../../visual-basic/language-reference/statements/continue-statement.md)|[Deklarowanie](../../../visual-basic/language-reference/statements/declare-statement.md)|[Delegat](../../../visual-basic/language-reference/statements/delegate-statement.md)|[Dim](../../../visual-basic/language-reference/statements/dim-statement.md)|  
 |[Czy... Pętli](../../../visual-basic/language-reference/statements/do-loop-statement.md)|[Else](../../../visual-basic/language-reference/statements/else-statement.md)|[Koniec](../../../visual-basic/language-reference/statements/end-statement.md)|[Końcowy \<— słowo kluczowe >](../../../visual-basic/language-reference/statements/end-keyword-statement.md)|  
 |[Wyliczenia](../../../visual-basic/language-reference/statements/enum-statement.md)|[Wymazywanie](../../../visual-basic/language-reference/statements/erase-statement.md)|[Błąd](../../../visual-basic/language-reference/statements/error-statement.md)|[Zdarzenia](../../../visual-basic/language-reference/statements/event-statement.md)|  
 |[Zakończ](../../../visual-basic/language-reference/statements/exit-statement.md)||||  
   
-## <a name="see-also"></a>Zobacz też  
+## <a name="see-also"></a>Zobacz też
+
  [F-P — instrukcje](../../../visual-basic/language-reference/statements/f-p-statements.md)  
  [Q-Z — instrukcje](../../../visual-basic/language-reference/statements/q-z-statements.md)  
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)

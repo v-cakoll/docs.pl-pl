@@ -28,48 +28,53 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="namespace-statement"></a>Namespace — Instrukcja
-Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się deklaracji jest kompilowany w obrębie tej przestrzeni nazw.  
-  
-## <a name="syntax"></a>Składnia  
-  
-```  
-Namespace [Global.] { name | name.name }  
-    [ componenttypes ]  
-End Namespace  
-```  
-  
-## <a name="parts"></a>Części  
- Globalne  
- Opcjonalny. Można zdefiniować przestrzeni nazw poza głównej przestrzeni nazw projektu. Zobacz [przestrzeni nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  
-  
- `name`  
- Wymagany. Unikatowa nazwa, która identyfikuje przestrzeni nazw. Musi być prawidłowym identyfikatorem języka Visual Basic. Aby uzyskać więcej informacji, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
-  
- `componenttypes`  
- Opcjonalny. Elementy wchodzące w skład przestrzeni nazw. Te obejmują, ale nie są ograniczone do wyliczenia, struktury, interfejsy, klasy, modułów, delegatów i innych przestrzeniach nazw.  
-  
- `End Namespace`  
- Kończy `Namespace` bloku.  
-  
-## <a name="remarks"></a>Uwagi  
- Przestrzenie nazw są używane jako system organizacji. Umożliwiają one klasyfikowania i prezentowanie elementów programowania, które są widoczne dla innych programów i aplikacji. Należy pamiętać, że przestrzeń nazw nie jest *typu* w tym sensie, że klasy lub struktury — nie można zadeklarować elementu programistycznego typu danych w przestrzeni nazw.  
-  
- Wszystkie elementy programowania zadeklarowanych po `Namespace` instrukcji należą do tej przestrzeni nazw. Visual Basic w dalszym ciągu skompilować elementy do ostatniego zadeklarowane przestrzeni nazw, aż do napotkania albo `End Namespace` instrukcji lub innym `Namespace` instrukcji.  
-  
- Jeśli przestrzeń nazw już jest zdefiniowany, nawet poza projektem, programistyczny można dodać do niego. Aby to zrobić, należy użyć `Namespace` instrukcji, aby nakazać programowi Visual Basic, aby skompilować elementy do tej przestrzeni nazw.  
-  
- Można użyć `Namespace` instrukcji tylko na poziomie pliku lub przestrzeni nazw. Oznacza to, że *kontekście deklaracji* dla przestrzeni nazw musi być plikiem źródłowym lub innej przestrzeni nazw i nie może być klasy, struktury, modułu, interfejsem lub procedury. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
-  
- Można zadeklarować jednej przestrzeni nazw w innym. Nie ma żadnych strict limitu poziomów zagnieżdżenia zadeklarować, ale należy pamiętać, że gdy inny kod uzyskuje dostęp do elementów zadeklarowany w najbardziej przestrzeni nazw, należy użyć kwalifikacji ciąg, który zawiera wszystkie nazwy przestrzeni nazw w hierarchii zagnieżdżenia.  
-  
-## <a name="access-level"></a>Poziom dostępu  
- Przestrzenie nazw są traktowane jako mają `Public` poziom dostępu. Przestrzeń nazw są dostępne z kodu w dowolnym miejscu tego samego projektu z innych projektów, które odwołują się do projektu i z wszelkich zestawu utworzonego na podstawie projektu.  
-  
- Elementy programowania zadeklarowane na poziomie przestrzeni nazw, co oznacza w przestrzeni nazw, ale nie znajduje się w innych elementów, może mieć `Public` lub `Friend` dostępu. Jeśli nie zostanie podany, poziom dostępu do takiego elementu używa `Friend` domyślnie. Elementy, które można zadeklarować na poziomie przestrzeni nazw obejmują klasy, struktury modułów, interfejsy, wyliczenia i delegaty. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
-  
-## <a name="root-namespace"></a>Namespace głównego  
- Wszystkie nazwy przestrzeni nazw w projekcie są oparte na *głównej przestrzeni nazw*. Visual Studio przypisuje nazwę projektu jako domyślną przestrzeń nazw głównego dla całego kodu w projekcie. Na przykład, jeśli nosi nazwę projektu `Payroll`, jego element programistyczny należy do przestrzeni nazw `Payroll`. W przypadku `Namespace funding`, pełną nazwą tego obszaru nazw jest `Payroll.funding`.  
-  
+
+Deklaruje nazwę przestrzeni nazw i powoduje, że kod źródłowy znajdujący się w deklaracji jest kompilowany w obrębie tej przestrzeni nazw.
+
+## <a name="syntax"></a>Składnia
+
+```vb
+Namespace [Global.] { nazwa | nazwa.nazwa }
+    [ typy_składowe ]
+End Namespace
+```
+
+## <a name="parts"></a>Części
+
+ `Global`
+ Opcjonalny. Można zdefiniować przestrzeń nazw poza główną przestrzenią nazw projektu. Zobacz [przestrzenie nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).
+
+ `nazwa`
+ Wymagana. Unikatowa nazwa, która identyfikuje przestrzeń nazw. Musi być prawidłowym identyfikatorem języka Visual Basic. Aby uzyskać więcej informacji, zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).
+
+ `typy_składowe`
+ Opcjonalny. Elementy wchodzące w skład przestrzeni nazw. Obejmują one, ale nie są do nich ograniczone: wyliczenia, struktury, interfejsy, klasy, moduły, delegaty i inne przestrzenie nazw.
+
+ `End Namespace`
+ Kończy blok `Namespace`.
+
+## <a name="remarks"></a>Uwagi
+
+ Przestrzenie nazw są używane jako system organizacji. Umożliwiają one klasyfikowanie i prezentowanie elementów programowania, które są widoczne dla innych programów i aplikacji. Należy pamiętać, że przestrzeń nazw nie ma *typu* w takim sensie, jak klasy lub struktury — nie można zadeklarować elementu programistycznego posiadającego typ danych przestrzeni nazw.
+
+ Wszystkie elementy programowania zadeklarowane po instrukcji `Namespace` należą do tej przestrzeni nazw. Visual Basic kontynuuje kompilację elementów do ostatniej zadeklarowanej przestrzeni nazw, aż do napotkania instrukcji `End Namespace` lub kolejnej instrukcji `Namespace`.
+
+ Jeśli przestrzeń nazw już jest zdefiniowana, nawet poza projektem, można dodać do niej elementy programowania. Aby to zrobić, należy użyć instrukcję `Namespace`, aby nakazać programowi Visual Basic, aby skompilował elementy do tej przestrzeni nazw.
+
+ Można użyć instrukcję `Namespace` tylko na poziomie pliku lub przestrzeni nazw. Oznacza to, że *kontekstem deklaracji* dla przestrzeni nazw musi być plik źródłowy lub inna przestrzeń nazw i nie może być to klasa, struktura, moduł, interfejs lub procedura. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+
+ Można zadeklarować jedną przestrzeń nazw w innej. Nie ma żadnych ścisłych limitów poziomów zagnieżdżenia deklaracji, ale należy pamiętać, że gdy inny kod uzyskuje dostęp do elementów zadeklarowanych w najbardziej zagnieżdżonej przestrzeni nazw, należy użyć ciąg kwalifikacji, który zawiera nazwy wszystkich przestrzeni nazw w hierarchii zagnieżdżenia.
+
+## <a name="access-level"></a>Poziomy dostępu
+
+ Przestrzenie nazw są traktowane tak, jakby miały publiczny (`Public`) poziom dostępu. Przestrzenie nazw są dostępne z kodu w dowolnym miejscu tego samego projektu, z innych projektów, które odwołują się do projektu i z wszelkich zestawów utworzonych na podstawie projektu.
+
+ Elementy programowania zadeklarowane na poziomie przestrzeni nazw — to znaczy w przestrzeni nazw, ale nie znajdujące się wewnątrz innych elementów — mogą mieć poziom dostępu `Public` lub `Friend`. Jeśli nie zostanie podany, poziom dostępu do takiego elementu domyślnie używa `Friend`. Elementy, które można zadeklarować na poziomie przestrzeni nazw obejmują klasy, struktury, moduły, interfejsy, wyliczenia i delegaty. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).
+
+## <a name="root-namespace"></a>Główna przestrzeń nazw
+
+ Wszystkie nazwy przestrzeni nazw w projekcie są oparte na *głównej przestrzeni nazw*. Visual Studio przypisuje nazwę projektu jako domyślną główną przestrzeń nazw dla całego kodu w projekcie. Na przykład, jeśli projekt nosi nazwę `Payroll`, jego elementy programistyczne należą do przestrzeni nazw `Payroll`. Jeśli zadeklarujesz `Namespace funding`, pełną nazwą tego obszaru nazw jest `Payroll.funding`.
+
  Jeśli chcesz określić istniejącą przestrzenią nazw w `Namespace` instrukcji, takie jak w przykładzie klasa listy ogólnej, można ustawić przestrzeni nazw głównych ma wartość null. Aby to zrobić, kliknij przycisk **właściwości projektu** z **projektu** menu, a następnie wyczyść zaznaczenie **głównej przestrzeni nazw** wpis tak, że pole jest puste. Jeśli użytkownik nie zostało to wykonane w tym przykładzie klasa listy ogólnej, kompilator Visual Basic zajmie `System.Collections.Generic` jako nowej przestrzeni nazw w projekcie `Payroll`, pełną nazwą `Payroll.System.Collections.Generic`.  
   
  Alternatywnie można użyć `Global` — słowo kluczowe do odwoływania się do elementów przestrzenie nazw zdefiniowane poza projektem. Umożliwia to zachowują swoją nazwę projektu jako głównej przestrzeni nazw. Zmniejsza ryzyko przypadkowo scalenia programowania elementów wraz z istniejących przestrzeni nazw. Aby uzyskać więcej informacji, zobacz sekcję "— słowo kluczowe w pełni kwalifikowanej nazwy globalne" w [przestrzeni nazw w Visual Basic](../../../visual-basic/programming-guide/program-structure/namespaces.md).  

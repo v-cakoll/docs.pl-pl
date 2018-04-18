@@ -54,16 +54,17 @@ IntelliSense po włączeniu Option Infer
  Na poniższej ilustracji `Option Infer` jest wyłączona. W deklaracji zmiennej `Dim someVar = 2` jest zadeklarowany jako `Object` przez wnioskowanie o typie. W tym przykładzie **Option Strict** mają ustawioną wartość **poza** na [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic).  
   
  ![Widok IntelliSense deklaracji. ] (../../../visual-basic/language-reference/statements/media/optioninferasobject.png "optionInferAsObject")  
-IntelliSense po Option Infer jest wyłączone  
-  
+IntelliSense po Option Infer jest wyłączone
+
 > [!NOTE]
->  Jeśli zmienna jest zadeklarowana jako `Object`, typu run-time można zmienić, gdy program jest uruchomiony. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wykonuje operacje o nazwie *boxing* i *rozpakowującej* konwersję między `Object` a typem wartości, dzięki czemu wykonanie wolniej. Aby uzyskać informacje o konwersji boxing i konwersja unboxing, zobacz [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).
+> Jeśli zmienna jest zadeklarowana jako `Object`, typu run-time można zmienić, gdy program jest uruchomiony. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wykonuje operacje o nazwie *boxing* i *rozpakowującej* konwersję między `Object` a typem wartości, dzięki czemu wykonanie wolniej. Aby uzyskać informacje o konwersji boxing i konwersja unboxing, zobacz [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).
   
  Wnioskowanie o typie stosuje na poziomie procedury i nie ma zastosowania poza procedury w klasy, struktury, modułu lub interfejs.  
   
  Aby uzyskać dodatkowe informacje, zobacz [wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md).  
-  
-## <a name="when-an-option-infer-statement-is-not-present"></a>Gdy Option Infer — instrukcja nie jest obecny  
+
+## <a name="when-an-option-infer-statement-is-not-present"></a>Gdy Option Infer — instrukcja nie jest obecny
+
  Jeśli kod źródłowy nie zawiera `Option Infer` instrukcji, **Option Infer** ustawienie [strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) jest używany. Jeśli używana jest kompilatora wiersza polecenia, [/optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md) — opcja kompilatora jest używany.  
   
 #### <a name="to-set-option-infer-in-the-ide"></a>Aby ustawić Option Infer w środowisku IDE  

@@ -1,5 +1,5 @@
 ---
-title: "Końcowy &lt;— słowo kluczowe&gt; — instrukcja (Visual Basic)"
+title: "End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
 ms.reviewer: 
@@ -21,7 +21,7 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/22/2017
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>Końcowy &lt;— słowo kluczowe&gt; — instrukcja (Visual Basic)
+# <a name="end-ltkeywordgt-statement-visual-basic"></a>End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
 Gdy następuje dodatkowe słowo kluczowe, kończy definicję bloku instrukcji wynikające z tego słowa kluczowego.  
   
 ## <a name="syntax"></a>Składnia  

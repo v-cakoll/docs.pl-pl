@@ -18,8 +18,9 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="modules-visual-basic"></a>Moduły (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywania działań matematycznych, uzyskiwanie informacji o systemie, wykonywania działań plików i katalogów i tak dalej. Poniższa tabela zawiera listę modułów podał [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
-  
+
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywanie działań matematycznych, uzyskiwanie informacji o systemie, wykonywanie działań na plikach i katalogach i tak dalej. Poniższa tabela zawiera listę modułów podałdostarczanych przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+
 |||  
 |---|---|  
 |<xref:Microsoft.VisualBasic.Constants>|Zawiera różne stałe. Te stałych można używać w dowolnym miejscu w kodzie.|  

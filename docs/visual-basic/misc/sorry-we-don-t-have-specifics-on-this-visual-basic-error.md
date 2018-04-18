@@ -1,4 +1,4 @@
----
+﻿---
 title: Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
@@ -3058,27 +3058,29 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie ma żadnych szczegółów dotyczących tego błędu języka Visual Basic
-Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Możesz także zapytać innych deweloperów, korzystając z następujących forów:  
-  
- [Język Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)  
- Forum do zadawania pytań oraz prowadzenia ogólnych dyskusji na temat kompilatora i składni języka [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
-  
- [Visual Basic Interop and Upgrade](http://go.microsoft.com/fwlink/?LinkId=145966)  
- Forum do zadawania pytań i omawiania problemów związanych z uaktualnianiem do programu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] oraz korzystaniem z funkcji współdziałania.  
-  
- [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)  
- Forum do zadawania pytań dotyczących pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
-  
- [Visual Basic General](http://go.microsoft.com/fwlink/?LinkId=145973)  
- Forum do zadawania pytań i omawiania problemów związanych z programem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], które nie zostały opisane w innych forach.  
-  
- [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)  
- Forum do zadawania pytań i omawiania problemów związanych z programem[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
-  
- Zobacz też:  
- [Zasoby dodatkowe dla programistów Visual Basic](../../visual-basic/getting-started/additional-resources.md)  
-  
-## <a name="see-also"></a>Zobacz też  
- [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)  
+# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>Niestety, nie są dostępne szczegółowe informacje na temat tego błędu języka Visual Basic
+
+Przepraszamy, ale nie mamy żadnych określonych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikat, aby znaleźć informacje w sieci web. Możesz także poproić innych deweloperów używając jednego z tych forów:
+
+ [Język Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145963)
+ Udostępnia odpowiedzi na pytania i ogólne dyskusje na temat składni języka i kompilatora [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+
+ [Współdziałanie i uaktualniania języka Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145966)
+ Zapewnia odpowiedzi na pytania i problemy związane z uaktualnieniem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] i pracą z współdziałającymi funkcjami.
+
+ [Visual Basic IDE](http://go.microsoft.com/fwlink/?LinkId=145971)
+ Udostępnia odpowiedzi na pytania dotyczące pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].
+
+ [Ogólne o Visual Basic](http://go.microsoft.com/fwlink/?LinkId=145973)
+ Zapewnia odpowiedzi na  pytania i problemy związane z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] nie opisane w innych forach.
+
+ [StackOverflow](http://stackoverflow.com/questions/tagged/vb.net)
+ Zapewnia pytania i odpowiedzi o problemach związanych z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
+
+ Zobacz też:
+ [Zasoby dodatkowe dla programistów Visual Basic](../../visual-basic/getting-started/additional-resources.md)
+
+## <a name="see-also"></a>Zobacz też
+
+ [Przewodnik programowania w języku Visual Basic](../../visual-basic/programming-guide/index.md)
  [Odwołanie w Visual Basic](../../visual-basic/reference/index.md)

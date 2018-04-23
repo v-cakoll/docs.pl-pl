@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="endregion-c-reference"></a>#endregion (odwołanie w C#)
-Dyrektywa `#endregion`oznacza koniec bloku [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md). Na przykład:   
+Dyrektywa `#endregion`oznacza koniec bloku [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md). Na przykład:  
   
 ```csharp
 #region MyClass definition  

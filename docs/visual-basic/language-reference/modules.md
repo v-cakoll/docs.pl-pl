@@ -1,5 +1,5 @@
 ---
-title: "Moduły (Visual Basic)"
+title: Moduły (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,7 +8,7 @@ ms.topic: article
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-caps.latest.revision: 
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: 62fba60aa6a9f95057010997d5f427f2c66ec178
@@ -18,9 +18,8 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="modules-visual-basic"></a>Moduły (Visual Basic)
-
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywanie działań matematycznych, uzyskiwanie informacji o systemie, wykonywanie działań na plikach i katalogach i tak dalej. Poniższa tabela zawiera listę modułów podałdostarczanych przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].
-
+[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]zawiera kilka modułów, które pozwalają uprościć typowe zadania w kodzie, w tym manipulowanie ciągami, wykonywanie działań matematycznych, uzyskiwanie informacji o systemie, wykonywanie działań na plikach oraz katalogach i tak dalej. Poniższa tabela zawiera listę modułów dostarczanych przez  [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+  
 |||  
 |---|---|  
 |<xref:Microsoft.VisualBasic.Constants>|Zawiera różne stałe. Te stałych można używać w dowolnym miejscu w kodzie.|  

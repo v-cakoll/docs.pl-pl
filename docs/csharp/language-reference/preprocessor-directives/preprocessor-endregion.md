@@ -19,8 +19,8 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
-# <a name="endregion-c-reference"></a><span data-ttu-id="eb0f5-102">#endregion (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="eb0f5-102">#endregion (C# Reference)</span></span>
-<span data-ttu-id="eb0f5-103">`#endregion`oznacza koniec [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) bloku.</span><span class="sxs-lookup"><span data-stu-id="eb0f5-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="eb0f5-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="eb0f5-104">For example:</span></span>  
+# <a name="endregion-c-reference"></a><span data-ttu-id="b9ef6-102">#endregion (odwołanie w C#)</span><span class="sxs-lookup"><span data-stu-id="b9ef6-102">#endregion (C# Reference)</span></span>
+<span data-ttu-id="b9ef6-103">Dyrektywa `#endregion`oznacza koniec bloku [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md).</span><span class="sxs-lookup"><span data-stu-id="b9ef6-103">`#endregion` marks the end of a [#region](../../../csharp/language-reference/preprocessor-directives/preprocessor-region.md) block.</span></span> <span data-ttu-id="b9ef6-104">Na przykład:</span><span class="sxs-lookup"><span data-stu-id="b9ef6-104">For example:</span></span>  
   
 ```csharp
 #region MyClass definition  
@@ -33,7 +33,7 @@ class MyClass
 #endregion  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="eb0f5-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="eb0f5-105">See Also</span></span>  
- [<span data-ttu-id="eb0f5-106">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="eb0f5-106">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
- [<span data-ttu-id="eb0f5-107">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="eb0f5-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
- [<span data-ttu-id="eb0f5-108">Dyrektywy preprocesora C#</span><span class="sxs-lookup"><span data-stu-id="eb0f5-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)
+## <a name="see-also"></a><span data-ttu-id="b9ef6-105">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="b9ef6-105">See Also</span></span>  
+ [<span data-ttu-id="b9ef6-106">Odwołanie w C#</span><span class="sxs-lookup"><span data-stu-id="b9ef6-106">C# Reference</span></span>](../../../csharp/language-reference/index.md)  
+ [<span data-ttu-id="b9ef6-107">Przewodnik programowania w języku C#</span><span class="sxs-lookup"><span data-stu-id="b9ef6-107">C# Programming Guide</span></span>](../../../csharp/programming-guide/index.md)  
+ [<span data-ttu-id="b9ef6-108">Dyrektywy preprocesora C#</span><span class="sxs-lookup"><span data-stu-id="b9ef6-108">C# Preprocessor Directives</span></span>](../../../csharp/language-reference/preprocessor-directives/index.md)

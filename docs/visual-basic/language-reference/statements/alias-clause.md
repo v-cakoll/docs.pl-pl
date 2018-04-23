@@ -21,17 +21,17 @@ ms.translationtype: MT
 ms.contentlocale: pl-PL
 ms.lasthandoff: 10/22/2017
 ---
-# <a name="alias-clause-visual-basic"></a><span data-ttu-id="6c9dc-102">Alias — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="6c9dc-102">Alias Clause (Visual Basic)</span></span>
-<span data-ttu-id="6c9dc-103">Wskazuje, że procedura zewnętrzna ma inną nazwę w bibliotece DLL.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-103">Indicates that an external procedure has another name in its DLL.</span></span>  
+# <a name="alias-clause-visual-basic"></a><span data-ttu-id="d9328-102">Alias — Klauzula (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d9328-102">Alias Clause (Visual Basic)</span></span>
+<span data-ttu-id="d9328-103">Wskazuje, że procedura zewnętrzna ma inną nazwę w bibliotece DLL.</span><span class="sxs-lookup"><span data-stu-id="d9328-103">Indicates that an external procedure has another name in its DLL.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6c9dc-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="6c9dc-104">Remarks</span></span>  
- <span data-ttu-id="6c9dc-105">`Alias` Można użyć słowa kluczowego, w tym kontekście:</span><span class="sxs-lookup"><span data-stu-id="6c9dc-105">The `Alias` keyword can be used in this context:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d9328-104">Uwagi</span><span class="sxs-lookup"><span data-stu-id="d9328-104">Remarks</span></span>  
+ <span data-ttu-id="d9328-105">Słowa kluczowego `Alias` można użyć w tym kontekście:</span><span class="sxs-lookup"><span data-stu-id="d9328-105">The `Alias` keyword can be used in this context:</span></span>  
   
- [<span data-ttu-id="6c9dc-106">DECLARE — instrukcja</span><span class="sxs-lookup"><span data-stu-id="6c9dc-106">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [<span data-ttu-id="d9328-106">DECLARE — instrukcja</span><span class="sxs-lookup"><span data-stu-id="d9328-106">Declare Statement</span></span>](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- <span data-ttu-id="6c9dc-107">W poniższym przykładzie `Alias` słowo kluczowe jest używane do określenia nazwy funkcji w advapi32.dll, `GetUserNameA`, że `getUserName` jest używany zamiast w tym przykładzie.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-107">In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example.</span></span> <span data-ttu-id="6c9dc-108">Funkcja `getUserName` jest wywoływana w sub `getUser`, która zawiera nazwę bieżącego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="6c9dc-108">Function `getUserName` is called in sub `getUser`, which displays the name of the current user.</span></span>  
+ <span data-ttu-id="d9328-107">W poniższym przykładzie słowo kluczowe `Alias` jest używane do przekazania nazwy funkcji w pliku advapi32.dll, `GetUserNameA`, zamiast której w tym przykładzie występuje funkcja `getUserName`.</span><span class="sxs-lookup"><span data-stu-id="d9328-107">In the following example, the `Alias` keyword is used to provide the name of the function in advapi32.dll, `GetUserNameA`, that `getUserName` is used in place of in this example.</span></span> <span data-ttu-id="d9328-108">Funkcja `getUserName` jest wywoływana w poleceniu Sub `getUser`, powodując wyświetlenie nazwy bieżącego użytkownika.</span><span class="sxs-lookup"><span data-stu-id="d9328-108">Function `getUserName` is called in sub `getUser`, which displays the name of the current user.</span></span>  
   
  [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
   
-## <a name="see-also"></a><span data-ttu-id="6c9dc-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="6c9dc-109">See Also</span></span>  
- [<span data-ttu-id="6c9dc-110">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="6c9dc-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a><span data-ttu-id="d9328-109">Zobacz też</span><span class="sxs-lookup"><span data-stu-id="d9328-109">See Also</span></span>  
+ [<span data-ttu-id="d9328-110">Słowa kluczowe</span><span class="sxs-lookup"><span data-stu-id="d9328-110">Keywords</span></span>](../../../visual-basic/language-reference/keywords/index.md)

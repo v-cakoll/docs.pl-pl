@@ -1,0 +1,1 @@
+Tekst sformatowany (RTF)

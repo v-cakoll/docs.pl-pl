@@ -1,0 +1,1 @@
+mapa bitowa niezależna od urządzenia (DIB)

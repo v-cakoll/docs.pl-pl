@@ -1,0 +1,1 @@
+niezależny dostawca oprogramowania (ISV)

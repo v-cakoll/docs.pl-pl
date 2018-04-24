@@ -1,0 +1,1 @@
+Definicja schematu XML (XSD)

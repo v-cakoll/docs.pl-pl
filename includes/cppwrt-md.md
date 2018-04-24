@@ -1,0 +1,1 @@
+Rozszerzenia składników dla programu Visual C++

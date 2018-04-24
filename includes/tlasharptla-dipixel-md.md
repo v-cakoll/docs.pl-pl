@@ -1,0 +1,1 @@
+jednostka miary niezależna od urządzenia (1/96 cala)

@@ -1,0 +1,1 @@
+Ten element członkowski obsługuje infrastrukturę programu .NET Framework i nie jest przeznaczony do użycia bezpośrednio w kodzie.

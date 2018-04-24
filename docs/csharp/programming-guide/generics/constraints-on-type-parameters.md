@@ -1,8 +1,9 @@
 ---
-title: "Ograniczenia dotyczące parametrów typu (Przewodnik programowania w języku C#)"
+title: Ograniczenia dotyczące parametrów typu (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - generics [C#], type constraints
@@ -10,7 +11,7 @@ helpviewer_keywords:
 - type parameters [C#], constraints
 - unbound type parameter [C#]
 ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104

@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (odwołanie w C#)
-`#pragma warning`można włączyć lub wyłączyć pewne ostrzeżenia.  
+Dyrektywa `#pragma warning` służy do włączania i wyłączania określonych ostrzeżeń. 
   
 ## <a name="syntax"></a>Składnia  
   
@@ -31,12 +31,12 @@ ms.lasthandoff: 11/21/2017
   
 #### <a name="parameters"></a>Parametry  
  `warning-list`  
- Rozdzielana przecinkami lista numerów ostrzeżeń. Prefiks "CS" jest opcjonalne.  
+Rozdzielana przecinkami lista numerów ostrzeżeń. Prefiks „CS” jest opcjonalny.
   
- Jeśli numerów ostrzeżeń, które nie są określone, `disable` wyłącza wszystkie ostrzeżenia i `restore` włącza wszystkie ostrzeżenia.  
+  Jeżeli numery ostrzeżeń nie są wymienione, `disable` wyłącza wszystkie ostrzeżenia, a `restore` włącza wszystkie ostrzeżenia. 
   
 > [!NOTE]
->  Aby znaleźć numery ostrzeżeń w Visual Studio, skompilować projekt, a następnie znajdź numery ostrzeżeń w **dane wyjściowe** okna.  
+>  Aby znaleźć numery ostrzeżeń w programie Visual Studio, należy skompilować projekt, a następnie znaleźć numery ostrzeżeń w oknie **Dane wyjściowe**. 
   
 ## <a name="example"></a>Przykład  
   

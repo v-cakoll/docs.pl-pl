@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
-Generuje sumy kontrolne dla plików źródłowych pomóc w debugowaniu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] stron.  
+Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]. 
   
 ## <a name="syntax"></a>Składnia  
   
@@ -30,22 +30,22 @@ Generuje sumy kontrolne dla plików źródłowych pomóc w debugowaniu [!INCLUDE
   
 #### <a name="parameters"></a>Parametry  
  `"filename"`  
- Nazwa pliku, który wymaga monitorowania na zmiany lub aktualizacji.  
+ Nazwa pliku, który wymaga monitorowania zmian lub aktualizacji.  
   
  `"{guid}"`  
  Globalnie unikatowy identyfikator (GUID) dla pliku.  
   
  `"checksum_bytes"`  
- Ciąg reprezentujący liczbę bajtów sumy kontrolnej cyfr szesnastkowych. Musi być parzysta liczba cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje ostrzeżenie kompilacji i dyrektywy są ignorowane.  
+Ciąg cyfr szesnastkowych reprezentujący liczbę bajtów sumy kontrolnej. Musi być parzystą liczbą cyfr szesnastkowych. Nieparzysta liczba cyfr powoduje wygenerowanie ostrzeżenia podczas kompilacji i zignorowanie dyrektywy. 
   
 ## <a name="remarks"></a>Uwagi  
- Debuger programu Visual Studio korzysta z sumy kontrolnej, upewnij się, że zawsze znajdzie prawo źródła. Kompilator oblicza sumę kontrolną pliku źródłowego, a następnie emituje dane wyjściowe do pliku programu (PDB) bazy danych. Debuger używa pliku PDB Aby porównać sumę kontrolną, która oblicza dla pliku źródłowego.  
+ Debuger programu Visual Studio używa sumy kontrolnej do sprawdzania, czy użyte zostało prawidłowe źródło. Kompilator oblicza sumę kontrolną pliku źródłowego, a następnie przesyła dane wyjściowe do pliku bazy danych programu (PDB). Następnie debuger używa pliku PDB do porównania sumy kontrolnej obliczanej dla pliku źródłowego.
   
- To rozwiązanie nie działa w przypadku [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projektów, ponieważ jest obliczana sumy kontrolnej wygenerowanym pliku źródłowym, a nie plik .aspx. Aby rozwiązać ten problem, `#pragma checksum` zapewnia obsługę sumy kontrolnej [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] stron.  
+ To rozwiązanie nie działa w przypadku projektów [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], ponieważ obliczana suma kontrolna jest przeznaczona dla wygenerowanego pliku źródłowego, a nie pliku aspx. Aby rozwiązać ten problem, dyrektywa `#pragma checksum` zapewnia obsługę sumy kontrolnej dla stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].
   
- Po utworzeniu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] projektu w [!INCLUDE[csprcs](~/includes/csprcs-md.md)], wygenerowanym pliku źródłowym zawiera sumę kontrolną dla plików .aspx, z którego jest generowany źródła. Kompilator następnie zapisuje te informacje w pliku PDB.  
+ Po utworzeniu projektu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] w języku [!INCLUDE[csprcs](~/includes/csprcs-md.md)], wygenerowany plik źródłowy zawiera sumę kontrolną dla pliku aspx, z którego jest generowany. Następnie kompilator zapisuje te informacje w pliku PDB. 
   
- Jeśli nie wystąpi kompilator `#pragma checksum` dyrektywy w pliku, jego oblicza sumę kontrolną i zapisuje wartość w pliku PDB.  
+ Jeśli kompilator nie napotka w pliku dyrektywy `#pragma checksum`, oblicza jego sumę kontrolną i zapisuje jej wartość w pliku PDB.
   
 ## <a name="example"></a>Przykład  
   

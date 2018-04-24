@@ -20,7 +20,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="pragma-c-reference"></a>#pragma (odwołanie w C#)
-Dyrektywa `#pragma`zapewnia specjalne instrukcje dla kompilatora dotyczące kompilowania pliku, w którym występuje. Instrukcje muszą być obsługiwane przez kompilator. Innymi słowy, nie można użyć dyrektywy `#pragma` do tworzenia niestandardowych instrukcji przetwarzania wstępnego. Kompilator Microsoft C# obsługuje dwie instrukcje `#pragma`:  
+Dyrektywa `#pragma` zapewnia specjalne instrukcje dla kompilatora dotyczące kompilowania pliku, w którym występuje. Instrukcje muszą być obsługiwane przez kompilator. Innymi słowy, nie można użyć dyrektywy `#pragma` do tworzenia niestandardowych instrukcji przetwarzania wstępnego. Kompilator Microsoft C# obsługuje dwie instrukcje `#pragma`: 
   
  [Ostrzeżenie #pragma](../../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md)  
   
@@ -34,10 +34,10 @@ Dyrektywa `#pragma`zapewnia specjalne instrukcje dla kompilatora dotyczące komp
   
 #### <a name="parameters"></a>Parametry  
  `pragma-name`  
- Rozpoznana nazwa 'pragma'.  
+Nazwa rozpoznanej dyrektywy pragma.
   
  `pragma-arguments`  
- Argumenty określone przez 'pragma'.  
+Argumenty określone dla dyrektywy pragma. 
   
 ## <a name="see-also"></a>Zobacz też  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  

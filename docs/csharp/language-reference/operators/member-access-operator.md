@@ -22,7 +22,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>. Operator (odwołanie w C#)
-Operator kropki (`.`) służy do dostępu do elementu członkowskiego. Operator kropki określa członka typu lub przestrzeń nazw. Na przykład operator kropki umożliwia dostęp do określonych metod w ramach biblioteki klas .NET Framework:  
+Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego. Określa on element członkowski typu lub przestrzeni nazw. Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
@@ -36,15 +36,15 @@ Operator kropki (`.`) służy do dostępu do elementu członkowskiego. Operator 
   
  [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- Kropka (.) jest również używana do formułowania nazw kwalifikowanych, które są nazwami określającymi przestrzeń nazw lub interfejs, do którego na przykład należą.  
+Kropka (.) jest również używana do formułowania nazw kwalifikowanych określających na przykład przestrzeń nazw lub interfejs, do których należą te nazwy.
   
  [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
- Użycie dyrektywy using sprawia, że stosowanie rozszerzonej nazwy (z określeniem przestrzeni nazw) jest opcjonalne:  
+Dyrektywa using sprawia, że część kwalifikacji nazwy jest opcjonalna:
   
  [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- Jednak gdy identyfikator jest niejednoznaczny, wymagane jest określenie przestrzeni nazw:  
+Jednak gdy identyfikator jest niejednoznaczny, kwalifikacja nazwy jest wymagana:
   
  [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   

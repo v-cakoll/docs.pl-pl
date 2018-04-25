@@ -1,9 +1,9 @@
 ---
-title: "End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)"
+title: End &lt;słowo kluczowe&gt; — instrukcja (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -12,7 +12,7 @@ f1_keywords:
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-caps.latest.revision: 
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: cf0ac1221f8a85a8a43599d9c5ec210884205e5e

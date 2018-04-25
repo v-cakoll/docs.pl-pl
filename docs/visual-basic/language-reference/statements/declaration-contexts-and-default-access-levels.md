@@ -1,10 +1,11 @@
 ---
-title: "Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)"
+title: Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - module level, defined
@@ -14,7 +15,7 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.openlocfilehash: b89b74a6c0393f6a52a0b5c1ddf6f66c505564ba
@@ -24,8 +25,7 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>Kontekst deklaracji i domyślne poziomy dostępu (Visual Basic)
-
-W tym temacie opisano typy danych Visual Basic, które mogą być deklarowane w ramach innych typów, a co ich poziomy dostępu domyślnie Jeśli nie zostanie określony.
+W tym temacie opisano, które typy danych Visual Basic mogą być deklarowane w ramach których innych typów, a także jakie są ich domyślne poziomy dostępu, jeśli nie zostały określone.  
   
 ## <a name="declaration-context-levels"></a>Poziomy kontekście deklaracji  
  *Kontekście deklaracji* elementu programowania to region kodu, w którym jest zadeklarowany. Jest to często innego elementu programistycznego, która jest następnie wywoływana *zawierającego element*.  

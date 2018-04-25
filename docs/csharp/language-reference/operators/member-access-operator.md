@@ -22,11 +22,11 @@ ms.contentlocale: pl-PL
 ms.lasthandoff: 11/21/2017
 ---
 # <a name="-operator-c-reference"></a>. Operator (odwołanie w C#)
-Operator kropki (`.`) służy do dostępu do elementu członkowskiego. Operator kropki określa członkiem typu lub przestrzeni nazw. Na przykład operator kropki umożliwia dostęp do określonych metod w ramach biblioteki klas .NET Framework:  
+Operator kropki (`.`) służy do uzyskiwania dostępu do elementu członkowskiego. Określa on element członkowski typu lub przestrzeni nazw. Operator kropki umożliwia na przykład dostęp do określonych metod w ramach biblioteki klas .NET Framework:
   
  [!code-csharp[csRefOperators#16](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_1.cs)]  
   
- Rozważmy na przykład następującej klasy:  
+ Rozważmy przykład następującej klasy:  
   
  [!code-csharp[csRefOperators#17](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_2.cs)]  
   
@@ -36,15 +36,15 @@ Operator kropki (`.`) służy do dostępu do elementu członkowskiego. Operator 
   
  [!code-csharp[csRefOperators#19](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_4.cs)]  
   
- Kropki (.) jest również używane do utworzenia nazwy kwalifikowanej, które są nazwy określające przestrzeni nazw lub interfejsu, na przykład, do którego należą.  
+Kropka (.) jest również używana do formułowania nazw kwalifikowanych określających na przykład przestrzeń nazw lub interfejs, do których należą te nazwy.
   
  [!code-csharp[csRefOperators#20](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_5.cs)]  
   
- Użycie dyrektywy sprawia, że niektóre kwantyfikacja nazwy są opcjonalne:  
+Dyrektywa using sprawia, że część kwalifikacji nazwy jest opcjonalna:
   
  [!code-csharp[csRefOperators#21](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_6.cs)]  
   
- Jednak gdy identyfikator jest niejednoznaczny, musi być kwalifikowana:  
+Jednak gdy identyfikator jest niejednoznaczny, kwalifikacja nazwy jest wymagana:
   
  [!code-csharp[csRefOperators#22](../../../csharp/language-reference/operators/codesnippet/CSharp/member-access-operator_7.cs)]  
   

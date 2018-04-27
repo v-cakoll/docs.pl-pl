@@ -1,12 +1,13 @@
 ---
-title: "Porady: tworzenie formularzy podrzędnych MDI"
-ms.custom: 
+title: 'Porady: tworzenie formularzy podrzędnych MDI'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: d0ee60e9b25ed4238ccdd738cd59a69876f6b55d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d28a7390ea3cfbd922f029d963ad3249db399177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-mdi-child-forms"></a>Porady: tworzenie formularzy podrzędnych MDI
 Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu dokumentów (MDI)](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md), jak te są Centrum interakcji z użytkownikiem.  
@@ -47,7 +49,7 @@ Formularze podrzędne MDI jest podstawowym elementem [aplikacje interfejsu wielu
   
 4.  W **Eksploratora rozwiązań**, kliknij projekt prawym przyciskiem myszy, wskaż polecenie **Dodaj**, a następnie wybierz **Dodaj nowy element**.  
   
-5.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza systemu Windows** (w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) lub **aplikacji formularzy systemu Windows (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z **szablony** okienka. W **nazwa** pozycję Nazwa formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularza do projektu.  
+5.  W **Dodaj nowy element** okno dialogowe, wybierz opcję **formularza systemu Windows** (w języku Visual Basic lub języka Visual C#) lub **aplikacji formularzy systemu Windows (.NET)** (w [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) z  **Szablony** okienka. W **nazwa** pozycję Nazwa formularza **formularz2**. Kliknij przycisk **Otwórz** przycisk, aby dodać formularza do projektu.  
   
     > [!NOTE]
     >  Formularz podrzędny MDI utworzone w tym kroku jest standardowe formularza systemu Windows. W efekcie ma <xref:System.Windows.Forms.Form.Opacity%2A> właściwość, która umożliwia kontrolowanie przezroczystości formularza. Jednak <xref:System.Windows.Forms.Form.Opacity%2A> właściwość została zaprojektowana dla systemu windows najwyższego poziomu. Nie należy używać go z formularzy podrzędnych MDI, jak mogą wystąpić problemy rysowania.  

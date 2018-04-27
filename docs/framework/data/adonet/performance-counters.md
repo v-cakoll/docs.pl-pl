@@ -1,27 +1,29 @@
 ---
-title: "Liczniki wydajności w ADO.NET"
-ms.custom: 
+title: Liczniki wydajności w ADO.NET
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0b121b71-78f8-4ae2-9aa1-0b2e15778e57
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 9843d5c5edfc5ea590e4e6d0e5474a7d817e0ba6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: a36e552392f887cd4e0f6dfac822c87f08a90af7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="performance-counters-in-adonet"></a>Liczniki wydajności w ADO.NET
 Rozszerzona obsługa liczników wydajności, który zawiera obsługę zarówno wprowadzone ADO.NET 2.0 <xref:System.Data.SqlClient> i <xref:System.Data.OracleClient>. <xref:System.Data.SqlClient> Dostępne w poprzednich wersjach programu ADO.NET liczniki wydajności zostały przestarzałe i zastępowane nowe liczniki wydajności omówione w tym temacie. Liczniki wydajności ADO.NET służy do monitorowania stanu aplikacji i zasobów połączenia, których używa. Liczniki wydajności można monitorować za pomocą Monitora wydajności systemu Windows lub mogą uzyskiwać programowo przy użyciu <xref:System.Diagnostics.PerformanceCounter> klasy w <xref:System.Diagnostics> przestrzeni nazw.  
@@ -66,7 +68,7 @@ Rozszerzona obsługa liczników wydajności, który zawiera obsługę zarówno w
  Następującej aplikacji konsoli Pokazuje, jak można pobrać wartości licznika wydajności w aplikacji. Połączenia muszą być otwarte i aktywne informacje mają być zwracane dla wszystkich liczników wydajności ADO.NET.  
   
 > [!NOTE]
->  W tym przykładzie użyto przykładowej **AdventureWorks** baza danych dołączona [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Parametry połączenia w przykładowym kodzie założono, że baza danych jest zainstalowany i dostępny na komputerze lokalnym za pomocą nazwy wystąpienia programu SqlExpress i utworzono logowania do programu SQL Server, które są zgodne z tymi dostarczone w parametrach połączenia. Może być konieczne włączenie logowania do programu SQL Server, jeśli serwer jest skonfigurowany przy użyciu domyślnych ustawień zabezpieczeń, które umożliwiają tylko uwierzytelnianie systemu Windows. Zmodyfikuj parametry połączenia, odpowiednio do potrzeb środowiska.  
+>  W tym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. Parametry połączenia w przykładowym kodzie założono, że baza danych jest zainstalowany i dostępny na komputerze lokalnym za pomocą nazwy wystąpienia programu SqlExpress i utworzono logowania do programu SQL Server, które są zgodne z tymi dostarczone w parametrach połączenia. Może być konieczne włączenie logowania do programu SQL Server, jeśli serwer jest skonfigurowany przy użyciu domyślnych ustawień zabezpieczeń, które umożliwiają tylko uwierzytelnianie systemu Windows. Zmodyfikuj parametry połączenia, odpowiednio do potrzeb środowiska.  
   
 ### <a name="example"></a>Przykład  
   

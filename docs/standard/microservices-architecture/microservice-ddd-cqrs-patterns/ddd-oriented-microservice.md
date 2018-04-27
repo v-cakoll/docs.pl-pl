@@ -1,7 +1,7 @@
 ---
-title: "Projektowanie zorientowane na DDD mikrousługi"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie zorientowane na DDD mikrousługi"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Projektowanie zorientowane na DDD mikrousługi
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Projektowanie zorientowane na DDD mikrousługi
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/06/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 38b65bc6752dd8b6ed4083c0bc5a5eccabcffbcc
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d2d07abe55f30e0b12a7f0cba937abd1b7e32629
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-a-ddd-oriented-microservice"></a>Projektowanie zorientowane na DDD mikrousługi
 
@@ -57,7 +57,7 @@ Chcesz zaprojektować system tak, aby każda warstwa komunikuje się tylko z nie
 
 ### <a name="the-domain-model-layer"></a>Warstwa modelu domeny
 
-Marek Evans znakomity książki [konstrukcyjnych domeny](http://domainlanguage.com/ddd/) mówi następujące o warstwy modelu domeny i warstwy aplikacji.
+Marek Evans znakomity książki [konstrukcyjnych domeny](https://domainlanguage.com/ddd/) mówi następujące o warstwy modelu domeny i warstwy aplikacji.
 
 **Warstwa modelu domeny**: odpowiedzialny za reprezentujący założeń biznesowych, informacje dotyczące sytuacji i reguł biznesowych. Stanu, które odzwierciedla sytuacji jest kontrolowany i używane w tym miejscu, mimo że szczegóły techniczne jego przechowywania mają delegowane do infrastruktury. Ta warstwa jest centralnym oprogramowanie firm.
 
@@ -75,7 +75,7 @@ Ponadto oznacza to, możesz pobrać model przeznaczony do relacyjnej bazy danych
 
 ### <a name="the-application-layer"></a>Warstwa aplikacji
 
-Przechodzi do warstwy aplikacji, możemy ponownie cytowanych książki marek Evans [konstrukcyjnych domeny](http://domainlanguage.com/ddd/):
+Przechodzi do warstwy aplikacji, możemy ponownie cytowanych książki marek Evans [konstrukcyjnych domeny](https://domainlanguage.com/ddd/):
 
 **Warstwa aplikacji:** definiuje zadań oprogramowania powinien wykonać i kieruje obiektów domeny obszerne opracowywanie problemów. Zadania, które ta warstwa jest odpowiedzialny za są przydatne w firmie lub niezbędne do interakcji z warstwy aplikacji innych systemów. Ta warstwa jest przechowywana elastycznej. Nie zawiera reguły biznesowe lub wiedzy, ale tylko współrzędne zadań i delegatów pracy definicje współpracy obiektów domeny w warstwie dalej w dół. Nie ma stanu w czasie wykonywania odbicia sytuacji, ale może mieć stanu, które odzwierciedla postęp zadania użytkownika lub programu.
 
@@ -104,10 +104,10 @@ W tym projekcie warstwy powinny być niezależne dla każdego mikrousługi. Jak 
 -   **DevIQ. Zasada nieznajomości trwałości**
     [*http://deviq.com/persistence-ignorance/*](http://deviq.com/persistence-ignorance/)
 
--   **Oren Eini. Infrastruktura nieznajomości**
+-   **Oren Eini. Nieznajomości infrastruktury**
     [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
 
--   **Angel Lopez. Architektura w projekcie oparte na domenie z warstwami**
+-   **Angel Lopez. Architektura warstwowych w projekcie oparte na domenie**
     [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 

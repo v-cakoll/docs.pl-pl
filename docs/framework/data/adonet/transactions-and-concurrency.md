@@ -1,24 +1,26 @@
 ---
-title: "Transakcje i współbieżność"
-ms.custom: 
+title: Transakcje i współbieżność
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f46570de-9e50-4fe6-8710-a8c31fa8569b
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6e6dfa946313bb9d43077bad68b761e8f03c175c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 80db92f94f8cb523c3b8f9d0d08bbcb6b33c2fbe
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transactions-and-concurrency"></a>Transakcje i współbieżność
 Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykonywane w pakiecie. Transakcje pozwalają połączyć wiele operacji w pojedynczą jednostkę pracy. Jeśli wystąpi błąd w jednym punkcie w transakcji, wszystkie aktualizacje można go z powrotem obniżyć do stanu przed transakcji.  
@@ -30,7 +32,7 @@ Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykon
   
  Jeśli transakcja obejmuje wiele tabel w tej samej bazy danych lub serwerze, następnie jawnych transakcji w procedurach składowanych często działać lepiej. Można utworzyć transakcji w procedurach składowanych serwera SQL przy użyciu języka Transact-SQL `BEGIN TRANSACTION`, `COMMIT TRANSACTION`, i `ROLLBACK TRANSACTION` instrukcje. Aby uzyskać więcej informacji zobacz dokumentację SQL Server — książki Online.  
   
- Transakcje dotyczące menedżerów różnych zasobów, takich jak transakcji między [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] i Oracle, wymagają transakcji rozproszonej.  
+ Transakcje dotyczące menedżerów różnych zasobów, takich jak transakcji między programu SQL Server i Oracle, wymagają transakcji rozproszonej.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Transakcje lokalne](../../../../docs/framework/data/adonet/local-transactions.md)  
@@ -40,7 +42,7 @@ Transakcja składa się z jednego polecenia lub grupy poleceń, które są wykon
  Opisuje sposób wykonywania transakcji rozproszonych w ADO.NET.  
   
  [Integracja System.Transactions z programem SQL Server](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)  
- W tym artykule opisano <xref:System.Transactions> integracji z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do pracy z transakcji rozproszonych.  
+ W tym artykule opisano <xref:System.Transactions> integracji z programem SQL Server do pracy z transakcje rozproszone.  
   
  [Optymistyczna współbieżność](../../../../docs/framework/data/adonet/optimistic-concurrency.md)  
  Opisuje optymistycznej i pesymistyczne współbieżności i jak można sprawdzić naruszenia współbieżności.  

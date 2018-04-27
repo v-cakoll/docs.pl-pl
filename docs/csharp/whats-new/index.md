@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 719fbe826b0b115b19067dbaf0d04f14e6534890
-ms.sourcegitcommit: a53799f81351ad9afb3007cd68846ce6aeeb10cb
+ms.openlocfilehash: d66f835d57f43d2016d3b20e2205e0052d064acb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-in-c"></a>Nowości w języku C# #
 
@@ -30,8 +30,8 @@ Ta strona zawiera plan nowych funkcji każdego wydania programu w języku C#. Po
 * [C# 7.1](csharp-7-1.md):
     - Ta strona zawiera opis funkcji w języku C# 7.1. Te funkcje zostały dodane w [programu Visual Studio 2017 wersji 15 ustęp 3](https://www.visualstudio.com/vs/whatsnew/), a następnie w [.NET Core 2.0 SDK](../../core/whats-new/index.md).
 
-* [C# 7](csharp-7.md):
-    - Ta strona opisano funkcje dodane w języku C# 7. Te funkcje zostały dodane w [programu Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) i [.NET Core 1.0](../../core/whats-new/index.md) i nowsze
+* [C# 7.0](csharp-7.md):
+    - Ta strona opisano funkcje dodane w języku C# w wersji 7.0. Te funkcje zostały dodane w [programu Visual Studio 2017](https://www.visualstudio.com/vs/whatsnew/) i [.NET Core 1.0](../../core/whats-new/index.md) i nowsze
      
 * [C# 6](csharp-6.md):
     - Ta strona zawiera opis funkcji, które zostały dodane w języku C# 6. Te funkcje są dostępne w programie Visual Studio 2015 dla deweloperów systemu Windows, a następnie na .NET Core 1.0 dla deweloperów eksploracji C# w macOS i Linux.
@@ -66,7 +66,7 @@ Poniższe listy kluczy funkcje, które zostały wprowadzone w poprzednich wersja
      - Metody anonimowe, ogólne, typy dopuszczające wartości zerowe, Iteratory/yield `static` klasy i Kowariancja i ma przeciwwskazań wariancji dla delegatów.
 
  * C# 1.1, Visual Studio .NET 2003: 
-     - `#line`komentarze w dokumencie pragma i xml.
+     - `#line` komentarze w dokumencie pragma i xml.
 
  * C# 1, Visual Studio .NET 2002: 
      - Pierwszą wersję [C#](../csharp.md).   

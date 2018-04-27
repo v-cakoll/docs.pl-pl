@@ -1,27 +1,29 @@
 ---
 title: Lokalne transakcje
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3d7865675871bafb527bb9ee85de1f96e9847402
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: d56e2a978c3b9b58eadb946ee053721435c9f2d9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="local-transactions"></a>Lokalne transakcje
 Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używane, kiedy chcesz powiązać wielu zadań jednocześnie, dzięki czemu są one wykonywane jako pojedynczą jednostkę pracy. Na przykład załóżmy, że aplikacja wykonuje dwa zadania. Najpierw aktualizuje tabelę z informacjami o kolejności. Po drugie aktualizuje tabeli, która zawiera informacje o spisie, obciążenie elementy uporządkowane. Zadanie nie powiedzie się, zarówno aktualizacje są przywracane.  
@@ -40,7 +42,7 @@ Transakcje w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] są używ
 > [!NOTE]
 >  `EnlistDistributedTransaction` — Metoda nie powinna być używana dla transakcji lokalnej.  
   
- Zakres transakcji jest ograniczony do połączenia. Poniższy przykład wykonuje składający się z dwóch oddzielnych poleceń w transakcji jawnej `try` bloku. Polecenie zostanie wykonane instrukcji INSERT w tabeli Production.ScrapReason w AdventureWorks [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] przykładowej bazy danych, które są zatwierdzone, jeśli żadne wyjątki są zgłaszane. Kod w `catch` bloku wycofuje transakcji jest zgłaszany wyjątek. Jeśli transakcja jest przerywana lub połączenie jest zamknięte przed transakcja została ukończona, jego została automatycznie wycofana.  
+ Zakres transakcji jest ograniczony do połączenia. Poniższy przykład wykonuje składający się z dwóch oddzielnych poleceń w transakcji jawnej `try` bloku. Polecenie zostanie wykonane instrukcji INSERT w tabeli Production.ScrapReason w bazie danych AdventureWorks programu SQL Server, które są zatwierdzone, jeśli żadne wyjątki są zgłaszane. Kod w `catch` bloku wycofuje transakcji jest zgłaszany wyjątek. Jeśli transakcja jest przerywana lub połączenie jest zamknięte przed transakcja została ukończona, jego została automatycznie wycofana.  
   
 ## <a name="example"></a>Przykład  
  Wykonaj poniższe kroki do wykonania transakcji.  

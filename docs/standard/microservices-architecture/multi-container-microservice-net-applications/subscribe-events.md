@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7538c760d396349fe9b1e93a21839e3e59d7f046
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 279dd4ea2ffb36e13a22f366ece145174918b759
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="subscribing-to-events"></a>Subskrybowanie zdarzeń
 
@@ -112,7 +112,7 @@ Jak wspomniano wcześniej, w sekcji architektury, może mieć kilka metod dotycz
 
 -   Przy użyciu pełnego [źródłem zdarzeń wzorzec](https://msdn.microsoft.com/library/dn589792.aspx).
 
--   Przy użyciu [wyszukiwania dziennik transakcji](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Przy użyciu [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Przy użyciu [wzorzec Skrzynka nadawcza](http://gistlabs.com/2014/05/the-outbox/). Jest to transakcyjne tabelę do przechowywania zdarzeń integracji (Rozszerzanie transakcji lokalnej).
 
@@ -347,7 +347,7 @@ Jeśli jest ustawiona flaga "redelivered", odbiorca musi uwzględniać który, p
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
 -   **Krzysztof Richardson. Wzorzec wysyłanie zawartości zdarzeń**
-    [*http://microservices.io/patterns/data/event-sourcing.html*](http://microservices.io/patterns/data/event-sourcing.html)
+    [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
 -   **Wprowadzenie źródłem zdarzenia**
     [*https://msdn.microsoft.com/library/jj591559.aspx*](https://msdn.microsoft.com/library/jj591559.aspx)

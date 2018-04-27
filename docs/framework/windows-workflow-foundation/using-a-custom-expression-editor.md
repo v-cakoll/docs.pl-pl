@@ -1,30 +1,31 @@
 ---
-title: "Za pomocą edytora wyrażeń niestandardowych"
-ms.custom: 
+title: Za pomocą edytora wyrażeń niestandardowych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 5ae60b8267e60d880ccdc156566b489163d2e686
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Za pomocą edytora wyrażeń niestandardowych
 Edytor wyrażenia niestandardowego można zaimplementować zapewnienie wyrażenia bardziej zaawansowane funkcje lub prostsze środowisko edytowania. Istnieje kilka scenariuszy, w których można użyć wyrażenia niestandardowego edytora:  
   
 -   Aby zapewnić obsługę funkcji IntelliSense i innych zaawansowanej edycji funkcji w Projektancie rehosted przepływu pracy. Należy podać tę funkcję, ponieważ domyślny [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] edytora wyrażeń, nie można używać w rehosted aplikacji.  
   
--   Aby uprościć wyrażenie środowisko dla użytkowników analityka biznesowych, edytowania, aby nie, na przykład są wymagane, aby dowiedzieć się [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] lub postępowania w przypadku [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] wyrażenia.  
+-   Aby uprościć wyrażenie środowisko dla użytkowników analityka biznesowych, edytowania, aby nie, na przykład są wymagane do Naucz się Visual Basic lub postępowania w przypadku wyrażeń języka Visual Basic.  
   
  Trzy podstawowe kroki są niezbędne do zaimplementowania Edytor wyrażenia niestandardowego:  
   

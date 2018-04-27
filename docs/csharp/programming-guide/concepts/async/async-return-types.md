@@ -1,21 +1,22 @@
 ---
 title: Asynchroniczne typy zwracane (C#)
-ms.custom: 
+ms.custom: ''
 ms.date: 05/29/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7aee1ebdf24a2ac564268e1f36d3aac707dea463
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 4927d6324b6bda5a897ce81928fc13cae303a99a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-return-types-c"></a>Asynchroniczne typy zwracane (C#)
 Metody asynchroniczne może mieć następujące typy zwracane:
@@ -26,13 +27,13 @@ Metody asynchroniczne może mieć następujące typy zwracane:
 
 - `void`, dla programu obsługi zdarzeń. 
 
-- Począwszy od C# 7, dowolnego typu, który jest dostępny `GetAwaiter` metody. Obiekt zwrócony przez `GetAwaiter` musi implementować metodę <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> interfejsu.
+- Począwszy od C# 7.0, dowolnego typu, który jest dostępny `GetAwaiter` metody. Obiekt zwrócony przez `GetAwaiter` musi implementować metodę <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> interfejsu.
   
 Aby uzyskać więcej informacji na temat metod asynchronicznych, zobacz [programowanie asynchroniczne z async i await (C#)](../../../../csharp/programming-guide/concepts/async/index.md).  
   
 Każdy typ zwracany jest sprawdzany w jednej z następujących sekcji, a znajduje się pełny przykład, który używa wszystkich trzech typów na końcu tego tematu.  
   
-##  <a name="BKMK_TaskTReturnType"></a>Zwracany typ Task(T)  
+##  <a name="BKMK_TaskTReturnType"></a> Zwracany typ Task(T)  
 <xref:System.Threading.Tasks.Task%601> Zwracany typ jest używany dla metody asynchronicznej, który zawiera [zwracać](../../../../csharp/language-reference/keywords/return.md) instrukcji (C#), w którym argument operacji ma typ `TResult`.  
   
 W poniższym przykładzie `GetLeisureHours` zawiera metody asynchronicznej `return` instrukcji, która zwraca liczbę całkowitą. W związku z tym deklaracji metody należy określić typ zwracany `Task<int>`.  <xref:System.Threading.Tasks.Task.FromResult%2A> Metody asynchronicznej jest symbolem zastępczym dla danej operacji, która zwraca wartość typu ciąg.
@@ -48,14 +49,14 @@ Lepiej zrozumieć, jak dzieje się tak, dzieląc wywołanie `GetLeisureHours` ze
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a>Zwracany typ zadania  
+##  <a name="BKMK_TaskReturnType"></a> Zwracany typ zadania  
 Metody asynchroniczne, które nie zawierają `return` instrukcji lub które zawiera `return` instrukcji, która nie zwraca zwykle argumentu operacji ma typ zwracany <xref:System.Threading.Tasks.Task>. Takie metody zwracają `void` jeśli są uruchamiane synchronicznie. Jeśli używasz <xref:System.Threading.Tasks.Task> typ zwracany dla metody asynchronicznej metody wywołującej można użyć `await` operatora, aby wstrzymać ukończenia wywołującego przed zakończeniem metody asynchronicznej o nazwie.  
   
 W poniższym przykładzie `WaitAndApologize` metoda asynchroniczna nie zawiera `return` instrukcji, dlatego metoda zwraca <xref:System.Threading.Tasks.Task> obiektu. Dzięki temu `WaitAndApologize` do można zdefiniować dla niego oczekiwania. Należy pamiętać, że <xref:System.Threading.Tasks.Task> nie zawiera typu `Result` właściwości ponieważ go nie ma zwracanych wartości.  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
   
-`WaitAndApologize`jest oczekiwane przy użyciu instrukcji await zamiast wyrażenie await, podobna do instrukcji wywołania synchronicznego metody zwracające typ void. W tym przypadku zastosowanie operatora await nie tworzy wartości.  
+`WaitAndApologize` jest oczekiwane przy użyciu instrukcji await zamiast wyrażenie await, podobna do instrukcji wywołania synchronicznego metody zwracające typ void. W tym przypadku zastosowanie operatora await nie tworzy wartości.  
   
 Jak w poprzedniej <xref:System.Threading.Tasks.Task%601> przykładzie można oddzielić wywołanie `Task_MethodAsync` z zastosowania operatora await jako poniższy kod przedstawia. Należy jednak pamiętać, że `Task` nie ma `Result` właściwości i że żadna wartość jest generowany po zastosowaniu operatora await do `Task`.  
   
@@ -63,7 +64,7 @@ Poniższy kod oddziela wywołania `WaitAndApologize` metody z oczekiwanie na zad
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a>Zwrócony typ void  
+##  <a name="BKMK_VoidReturnType"></a> Zwrócony typ void  
 Możesz użyć `void` typ zwracany w obsłudze zdarzenia asynchroniczne, które wymagają `void` typ zwracany. Dla metod innych niż zdarzeń obsługi nie zwraca wartości, jak Zwróć <xref:System.Threading.Tasks.Task> , ponieważ metoda asynchroniczna zwracająca `void` nie może być oczekiwane. Wszelkie wywołującego taka metoda musi mieć możliwość nadal ukończenia bez oczekiwania na metody asynchronicznej wywołany zakończyć, a obiekt wywołujący musi być niezależne od dowolnej wartości lub wyjątki, które generuje metody asynchronicznej.  
   
 Obiekt wywołujący metody asynchronicznej zwracające typ void nie może przechwycić wyjątki, które są generowane przez metodę i takich nieobsługiwanych wyjątków są może spowodować awarię aplikacji. Jeśli wystąpi wyjątek w to metoda asynchroniczna, która zwraca <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601>, wyjątek jest przechowywany w zwrócony zadań i jest zgłoszony, gdy zadanie jest oczekiwane. W związku z tym, upewnij się, że wszystkie metoda asynchroniczna, która może spowodować wyjątek ma typ zwracany <xref:System.Threading.Tasks.Task> lub <xref:System.Threading.Tasks.Task%601> i że wywołania metody są oczekiwane.  
@@ -76,7 +77,7 @@ Następujące eample definiuje asynchronicznej obsługi zdarzeń.
  
 ## <a name="generalized-async-return-types-and-valuetaskt"></a>Uogólniony asynchroniczne typy zwracane i ValueTask<T>
 
-Począwszy od C# 7, to metoda asynchroniczna może zwracać dowolnego typu, który jest dostępny `GetAwaiter` metody.
+Począwszy od wersji 7.0 C#, to metoda asynchroniczna może zwracać dowolnego typu, który jest dostępny `GetAwaiter` metody.
  
 Ponieważ <xref:System.Threading.Tasks.Task> i <xref:System.Threading.Tasks.Task%601> są typów referencyjnych, alokacji pamięci ścieżek krytycznych wydajności, szczególnie w przypadku, gdy występują alokacji w pętli ścisłej może niekorzystnie wpłynąć na wydajność. Obsługa oznacza uogólniony zwracane typy czy może zwracać typu lightweight wartości zamiast typem referencyjnym, aby uniknąć dodatkowej pamięci alokacji. 
 
@@ -88,5 +89,5 @@ Udostępnia .NET <xref:System.Threading.Tasks.ValueTask%601?displayProperty=name
 <xref:System.Threading.Tasks.Task.FromResult%2A>   
 [Wskazówki: Uzyskiwanie dostępu do sieci Web za pomocą async i await (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)   
 [Przepływ sterowania w aplikacjach asynchronicznych (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)   
-[asynchroniczne](../../../../csharp/language-reference/keywords/async.md)   
+[Asynchroniczne](../../../../csharp/language-reference/keywords/async.md)   
 [await](../../../../csharp/language-reference/keywords/await.md)

@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: be8644e45be8db88c99332476e74c5c968764c74
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ca4bfd31b505754b508555ff2771a6380ae023b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>Tworzenie prostego mikrousługi CRUD opartych na danych
 
@@ -35,7 +35,7 @@ Przykładem tego rodzaju usługi simple dysk danych jest mikrousługi katalogu z
 
 **Rysunek 8-5**. Proste mikrousługi data-driven/CRUD projektu
 
-Podczas tworzenia tego rodzaju usługi, wystarczy [platformy ASP.NET Core](https://docs.microsoft.com/aspnet/core/) i ORM lub dostępu do danych interfejsu API, takich jak [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Można także wygenerować [Swagger](http://swagger.io/) metadanych automatycznie za pomocą [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) aby opisać co oferty usługi, zgodnie z objaśnieniem w następnej sekcji.
+Podczas tworzenia tego rodzaju usługi, wystarczy [platformy ASP.NET Core](https://docs.microsoft.com/aspnet/core/) i ORM lub dostępu do danych interfejsu API, takich jak [Entity Framework Core](https://docs.microsoft.com/ef/core/index). Można także wygenerować [Swagger](https://swagger.io/) metadanych automatycznie za pomocą [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) aby opisać co oferty usługi, zgodnie z objaśnieniem w następnej sekcji.
 
 Należy pamiętać, że uruchomiona bez konieczności obsługi administracyjnej bazy danych w chmurze lub lokalnie z serwera bazy danych, takich jak SQL Server w kontenerze Docker jest doskonały dla środowisk deweloperskich, ponieważ wszystkie zależności może zawierać maksymalnie i. Jest to bardzo wygodne, gdy uruchamianie integracji testów. Jednak dla środowisk produkcyjnych uruchomione w kontenerze serwer bazy danych nie jest zalecane, ponieważ zwykle nie uzyskasz wysokiej dostępności z tego podejścia. W środowisku produkcyjnym na platformie Azure zaleca się korzystanie z bazy danych SQL Azure lub innych technologii bazy danych, która może zapewnić wysoką dostępność i wysoką skalowalność. Na przykład podejścia NoSQL, możesz wybrać usługi DocumentDB.
 
@@ -294,7 +294,7 @@ Ten mechanizm versioning jest prosta i zależy od serwera routingu żądania do 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Scott Hanselman. Przechowywanie wersji interfejsu API RESTful sieci Web platformy ASP.NET Core prosty**
-    [*http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+    [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 -   **Przechowywanie wersji interfejs API RESTful sieci web**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
@@ -304,19 +304,19 @@ Ten mechanizm versioning jest prosta i zależy od serwera routingu żądania do 
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>Generowanie metadanych struktury Swagger opis interfejsu API platformy ASP.NET Core sieci Web 
 
-[Swagger](http://swagger.io/) jest framework często używane typu open source zabezpieczona przy dużych ekosystemu narzędzia ułatwiające projektu, kompilacji, dokumentów i korzystanie z API RESTful. Staje się coraz standardowego dla interfejsów API opis metadanych domeny. Powinny zawierać metadane programu Swagger z dowolnego rodzaju mikrousługi, opartych na danych mikrousług lub bardziej zaawansowane mikrousług oparte na domenie (zgodnie z objaśnieniem w następnej sekcji).
+[Swagger](https://swagger.io/) jest framework często używane typu open source zabezpieczona przy dużych ekosystemu narzędzia ułatwiające projektu, kompilacji, dokumentów i korzystanie z API RESTful. Staje się coraz standardowego dla interfejsów API opis metadanych domeny. Powinny zawierać metadane programu Swagger z dowolnego rodzaju mikrousługi, opartych na danych mikrousług lub bardziej zaawansowane mikrousług oparte na domenie (zgodnie z objaśnieniem w następnej sekcji).
 
 Struktury Swagger to specyfikację struktury Swagger jest metadanych opis interfejsu API w pliku JSON lub yaml programu. Specyfikacja tworzy RESTful kontrakt interfejsu API, określające wszystkich jej zasobów i operacji w obu readable człowieka i machine formacie ułatwiający projektowanie, odnajdywania i integracji.
 
 Specyfikacja stanowi podstawę specyfikacji OpenAPI (amerykańskich) i został napisany w otwarte, przejrzyste i współpracy społeczności normalizacji sposób zdefiniowanych interfejsów RESTful.
 
-Specyfikacja definiuje strukturę jak usługi mogą być wykrywane i jak zrozumienie możliwości. Aby uzyskać więcej informacji, w tym edytorze sieci web i przykłady specyfikacji Swagger firm, takich jak serwis Spotify, pełny zapas czasu i firmy Microsoft, zobacz witrynę programu Swagger (<http://swagger.io>).
+Specyfikacja definiuje strukturę jak usługi mogą być wykrywane i jak zrozumienie możliwości. Aby uzyskać więcej informacji, w tym edytorze sieci web i przykłady specyfikacji Swagger firm, takich jak serwis Spotify, pełny zapas czasu i firmy Microsoft, zobacz witrynę programu Swagger (<https://swagger.io/>).
 
 ### <a name="why-use-swagger"></a>Dlaczego warto używać struktury Swagger?
 
 Poniżej są główne powody generować metadane programu Swagger dla interfejsów API.
 
-**Możliwość dla innych produktów automatycznie używać i integrować swoje interfejsy API**. Dziesiątki produktów i [narzędzia komercyjnego](http://swagger.io/commercial-tools/) i wiele [bibliotek i platform](http://swagger.io/open-source-integrations/) obsługuje struktury Swagger. Firma Microsoft ma wysokiego poziomu produktów i narzędzi, które mogą automatycznie używać API podstawie struktury Swagger, takie jak następujące:
+**Możliwość dla innych produktów automatycznie używać i integrować swoje interfejsy API**. Dziesiątki produktów i [narzędzia komercyjnego](https://swagger.io/commercial-tools/) i wiele [bibliotek i platform](https://swagger.io/open-source-integrations/) obsługuje struktury Swagger. Firma Microsoft ma wysokiego poziomu produktów i narzędzi, które mogą automatycznie używać API podstawie struktury Swagger, takie jak następujące:
 
 -   [AutoRest](https://github.com/Azure/AutoRest). Można automatycznie generować klasy klienta .NET wywoływania struktury Swagger. To narzędzie może być używane z poziomu interfejsu wiersza polecenia i integruje się również z programu Visual Studio dla łatwe za pośrednictwem graficznego interfejsu użytkownika.
 

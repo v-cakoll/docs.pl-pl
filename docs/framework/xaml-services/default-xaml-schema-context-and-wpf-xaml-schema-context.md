@@ -1,24 +1,26 @@
 ---
-title: "Domyślny kontekst schematu XAML i kontekst schematu WPF XAML"
-ms.custom: 
+title: Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9ee7c83868934f1a524bb0068ea5e749e6cbfab4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: ec5e29ae9022470f8b583dc1b673a0b93040c862
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>Domyślny kontekst schematu XAML i kontekst schematu WPF XAML
 Kontekst schematu XAML jest koncepcyjny jednostki, która kwalifikuje się jak produkcji XAML, który korzysta z określonego słownika XAML współdziała z obiektu zapisywania zachowanie, w tym sposób mapowania typu rozwiązuje, jak zestawy są załadowane, jak w przypadku niektórych składników zapisywania i odczytywania ustawienia są interpretowane. W tym temacie opisano funkcje usług .NET Framework XAML i kontekst schematu XAML skojarzoną domyślną, który jest oparta na systemie typów CLR. W tym temacie opisano kontekst schematu XAML, służący do WPF.  
@@ -35,7 +37,7 @@ Kontekst schematu XAML jest koncepcyjny jednostki, która kwalifikuje się jak p
 ## <a name="wpf-xaml-schema-context"></a>Kontekst schematu WPF XAML  
  Kontekst schematu WPF XAML jest opisany w tym temacie, ponieważ implementacja WPF udostępnia ilustrację interesujące rodzaje funkcje, które mogą zostać wprowadzone zaimplementowanie z systemem innym niż domyślny kontekst schematu XAML. Ponadto koncepcji kontekst schematu XAML nie omówiono znacznie w dokumentacji programu WPF, którego dotyczy WPF XAML; kontekst schematu XAML umożliwia zachowanie tylko może być całkowicie zrozumiały zintegrowany z omówieniem działania domyślny kontekst schematu XAML. Kontekst schematu WPF XAML wykonuje następujące działania.  
   
- **Zastępuje wyszukiwania:** WPF ma kilka modeli zawartości określonych dla XAML w przypadku, gdy nie ma właściwości zawartości XAML, które funkcji bez konieczności <xref:System.Windows.Markup.ContentPropertyAttribute> przypisane. <xref:System.Xaml.XamlType.LookupContentProperty%2A>zastąpienia WPF implementuje tego zachowania.  
+ **Zastępuje wyszukiwania:** WPF ma kilka modeli zawartości określonych dla XAML w przypadku, gdy nie ma właściwości zawartości XAML, które funkcji bez konieczności <xref:System.Windows.Markup.ContentPropertyAttribute> przypisane. <xref:System.Xaml.XamlType.LookupContentProperty%2A> zastąpienia WPF implementuje tego zachowania.  
   
  **Odroczenie wyrażeń WPF:** WPF funkcji kilka klas wyrażenie, które mają być odroczone wartość, dopóki nie będzie dostępne kontekstu środowiska uruchomieniowego. Rozszerzenia szablonu jest również zachowania w czasie wykonywania, która zależy od opóźnienia technik.  
   
@@ -68,7 +70,7 @@ Kontekst schematu XAML jest koncepcyjny jednostki, która kwalifikuje się jak p
     -   Jeśli nazwa jest niekwalifikowane w mapowaniu, wywołanie <xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>.  
   
 #### <a name="xamlbuildtask"></a>XamlBuildTask  
- `XamlBuildTask`Służy do [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] i [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)].  
+ `XamlBuildTask` Służy do [!INCLUDE[vsindigo](../../../includes/vsindigo-md.md)] i Windows Workflow Foundation.  
   
  Należy pamiętać, że za pomocą odwołań do zestawów `XamlBuildTask` są zawsze w pełni kwalifikowana.  
   

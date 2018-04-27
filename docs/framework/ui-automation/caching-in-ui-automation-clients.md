@@ -1,27 +1,29 @@
 ---
-title: "Buforowanie w klientach automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Buforowanie w klientach automatyzacji interfejsu użytkownika
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: cce1890357f5781f1772b6a0aa583e493e2cfa8b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5bbd54d4e1e8a6a1eae52f50696aecddd1f8bd8a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="caching-in-ui-automation-clients"></a>Buforowanie w klientach automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -67,7 +69,7 @@ ms.lasthandoff: 01/19/2018
 ## <a name="activating-the-cacherequest"></a>Aktywowanie obiektu CacheRequest  
  Buforowanie jest wykonywane tylko wtedy, gdy <xref:System.Windows.Automation.AutomationElement> obiekty są pobierane podczas <xref:System.Windows.Automation.CacheRequest> jest aktywny dla bieżącego wątku. Istnieją dwa sposoby aktywacji <xref:System.Windows.Automation.CacheRequest>.  
   
- Zwykle jest wywołanie <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Ta metoda zwraca obiekt, który implementuje <xref:System.IDisposable>. Żądanie pozostaje aktywne tak długo, jak <xref:System.IDisposable> obiekt istnieje. Najprostszym sposobem zarządzają okresem istnienia obiektu jest należy ująć w wywołaniu `using` ([!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)]) lub `Using` ([!INCLUDE[TLA2#tla_visualb](../../../includes/tla2sharptla-visualb-md.md)]) bloku. Daje to pewność, że żądanie będzie zostać zdjęte ze stosu ze stosu, nawet jeśli zgłoszony wyjątek.  
+ Zwykle jest wywołanie <xref:System.Windows.Automation.CacheRequest.Activate%2A>. Ta metoda zwraca obiekt, który implementuje <xref:System.IDisposable>. Żądanie pozostaje aktywne tak długo, jak <xref:System.IDisposable> obiekt istnieje. Najprostszym sposobem zarządzają okresem istnienia obiektu jest należy ująć w wywołaniu `using` (C#) lub `Using` bloku (Visual Basic). Daje to pewność, że żądanie będzie zostać zdjęte ze stosu ze stosu, nawet jeśli zgłoszony wyjątek.  
   
  Inny sposób, co jest przydatne, gdy chcesz zagnieździć żądań pamięci podręcznej, jest wywołanie <xref:System.Windows.Automation.CacheRequest.Push%2A>. Umieszcza żądania na stosie i aktywuje go. Żądanie pozostaje aktywne, dopóki zostanie usunięta ze stosu przez <xref:System.Windows.Automation.CacheRequest.Pop%2A>. Żądanie staje się tymczasowo nieaktywny, jeśli inne żądanie spoczywa na stosie; żądanie top w stosie jest aktywna.  
   

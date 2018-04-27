@@ -1,29 +1,29 @@
 ---
-title: "Dostosowywanie projektu przepływu pracy"
-ms.custom: 
+title: Dostosowywanie projektu przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5ca6e23febf14b2db28bad950d2cd012fdce30fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 0ee64ae3db9dbf98f2a62397075406c118a867bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-the-workflow-design-experience"></a>Dostosowywanie projektu przepływu pracy
-Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] znacznie zostały uproszczone w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Opracowywania i wdrażania są teraz zarówno łatwiejsze i bardziej elastyczne. Zmiany infrastrukturalne klucza jest, że nowy model programowania projektanta działania jest oparty na [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Daje to możliwość deklaratywnego definiowania projektantów działań oraz rehost [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w innych aplikacjach z porównawczych łatwe. Gdy rehosting, Edytor wyrażenia niestandardowego mogą być opracowane obsługę funkcji IntelliSense lub domeny uproszczony wyrażenia. Integracja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] stał się aby usprawnić przy użyciu usługi przepływu pracy. W celu zwiększenia projektowy czasu wykonywania w projektantach rehosted przepływu pracy można projektantów działań niestandardowych i drzewa elementu modelu.  
+Scenariusze dotyczące projektowania niestandardowych działań i rehosting [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] znacznie zostały uproszczone w [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]. Opracowywania i wdrażania są teraz zarówno łatwiejsze i bardziej elastyczne. Zmiany infrastrukturalne klucza jest, że nowy model programowania projektanta działania jest oparty na systemie Windows Presentation Foundation (WPF). Daje to możliwość deklaratywnego definiowania projektantów działań oraz rehost [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] w innych aplikacjach z porównawczych łatwe. Gdy rehosting, Edytor wyrażenia niestandardowego mogą być opracowane obsługę funkcji IntelliSense lub domeny uproszczony wyrażenia. Integracja z [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] stał się aby usprawnić przy użyciu usługi przepływu pracy. W celu zwiększenia projektowy czasu wykonywania w projektantach rehosted przepływu pracy można projektantów działań niestandardowych i drzewa elementu modelu.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Używanie niestandardowych szablonów i projektantów działań](../../../docs/framework/windows-workflow-foundation/using-custom-activity-designers-and-templates.md)  

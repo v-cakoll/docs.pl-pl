@@ -1,6 +1,6 @@
 ---
-title: "Komunikacja w ramach architektury mikrousługi"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Komunikacja w architektury architektury mikrousługi"
+title: Komunikacja w ramach architektury mikrousługi
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Komunikacja w architektury architektury mikrousługi
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3c80ce8e3c4ccdc7e53634f54dd998581758ab07
-ms.sourcegitcommit: cec0525b2121c36198379525e69aa5388266db5b
+ms.openlocfilehash: 6bf4de57d3431577e6c770a5a83b911f41e5a4fe
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="communication-in-a-microservice-architecture"></a>Komunikacja w ramach architektury mikrousługi
 
@@ -25,7 +25,7 @@ Brak nie jedno rozwiązanie, ale niektóre. Jedno rozwiązanie obejmuje izolowan
 
 Aplikacja mikrousług jest rozproszonej systemami na wiele procesów lub usług, zwykle nawet między wieloma serwerami lub hostów. Każde wystąpienie usługi jest zwykle procesu. W związku z tym usługi musi współdziałać przy użyciu protokołu komunikacji między procesami, takich jak HTTP, protokołu AMQP lub binarne protokołu podobnie jak protokół TCP, w zależności od charakteru każdej usługi.
 
-Społeczność mikrousługi wspiera założeń "[inteligentne punkty końcowe i potoków bez](http://simplicable.com/new/smart-endpoints-and-dumb-pipes)." To hasło reklamowe zachęca projekt, który się całkowicie niezależna, jak to możliwe, między mikrousług i jak spójne w obrębie jednego mikrousługi. Zgodnie z opisem, własnych danych i jego własnej logiki domeny jest właścicielem poszczególnych mikrousługi. Ale mikrousług tworzenie aplikacji na trasie są zwykle po prostu choreographed przy użyciu komunikacji REST zamiast złożonych protokołów, takich jak usługi WS -\* i elastyczne komunikacji sterowane zdarzeniami zamiast scentralizowane orchestrators-Business procesu.
+Społeczność mikrousługi wspiera założeń "[inteligentne punkty końcowe i potoków bez](https://simplicable.com/new/smart-endpoints-and-dumb-pipes)." To hasło reklamowe zachęca projekt, który się całkowicie niezależna, jak to możliwe, między mikrousług i jak spójne w obrębie jednego mikrousługi. Zgodnie z opisem, własnych danych i jego własnej logiki domeny jest właścicielem poszczególnych mikrousługi. Ale mikrousług tworzenie aplikacji na trasie są zwykle po prostu choreographed przy użyciu komunikacji REST zamiast złożonych protokołów, takich jak usługi WS -\* i elastyczne komunikacji sterowane zdarzeniami zamiast scentralizowane orchestrators-Business procesu.
 
 Dwa najczęściej używane protokoły są żądania/odpowiedzi HTTP z zasobu interfejsów API (podczas wykonywania zapytania większość wszystkich) i aktualizuje lekkie asynchroniczną obsługę wiadomości podczas komunikacji między wieloma mikrousług. Te są co omówiono bardziej szczegółowo w poniższych sekcjach.
 
@@ -43,7 +43,7 @@ Jeśli komunikacja ma jeden odbiornik lub wieloma odbiornikami, jest zdefiniowan
 
 -   Jeden odbiornik. Każde żądanie muszą zostać przetworzone przez dokładnie jednego odbiornika lub usługi. Przykładem tej komunikacji jest [wzorzec polecenia](https://en.wikipedia.org/wiki/Command_pattern).
 
--   Wiele odbiorników. Każdego żądania mogą być przetwarzane przez zero, aby wiele odbiorników. Ten typ komunikacji musi być asynchroniczne. Na przykład [publikowania/subskrypcji](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) mechanizmu używane we wzorcach, takich jak [sterowane zdarzeniami architektura](http://microservices.io/patterns/data/event-driven-architecture.html). To jest oparta na brokera magistrali zdarzenia interfejsu lub komunikat podczas propagowania aktualizacje danych między wieloma mikrousług za pomocą zdarzeń; Zazwyczaj jest implementowane za pośrednictwem usługi service bus lub podobne artefaktów, takich jak [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) za pomocą [tematy i subskrypcje](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
+-   Wiele odbiorników. Każdego żądania mogą być przetwarzane przez zero, aby wiele odbiorników. Ten typ komunikacji musi być asynchroniczne. Na przykład [publikowania/subskrypcji](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern) mechanizmu używane we wzorcach, takich jak [sterowane zdarzeniami architektura](https://microservices.io/patterns/data/event-driven-architecture.html). To jest oparta na brokera magistrali zdarzenia interfejsu lub komunikat podczas propagowania aktualizacje danych między wieloma mikrousług za pomocą zdarzeń; Zazwyczaj jest implementowane za pośrednictwem usługi service bus lub podobne artefaktów, takich jak [Azure Service Bus](https://azure.microsoft.com/services/service-bus/) za pomocą [tematy i subskrypcje](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-how-to-use-topics-subscriptions).
 
 Aplikacja mikrousługi często używają kombinacji tych stylów komunikacji. Najczęściej spotykanym typem jest jeden odbiornik komunikacji przy użyciu protokołu synchroniczne, takich jak HTTP/HTTPS podczas wywoływania regularnej HTTP interfejsu API sieci Web. Mikrousług zwykle także używać protokoły komunikacji asynchronicznej między mikrousług.
 
@@ -91,15 +91,15 @@ Gdy klient korzysta z komunikacji żądanie/odpowiedź, zakłada się, że odpow
 
 Popularne styl architektury komunikacji żądanie i odpowiedź jest [REST](https://en.wikipedia.org/wiki/Representational_state_transfer). Takie podejście jest oparta na i ściśle połączony, [HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) protokołu, obejmującego zleceń HTTP, takich jak GET, POST i PUT. REST jest najczęściej używane podejście architektury komunikacji podczas tworzenia usługi. Podczas opracowywania usługi interfejsu API platformy ASP.NET Core sieci Web, które można zaimplementować usługi REST.
 
-Brak dodatkowych wartości podczas korzystania z usług REST protokołu HTTP jako języka definicji interfejsu. Na przykład jeśli używasz [Swagger metadanych](http://swagger.io/) do opisu interfejsu API usługi, można użyć narzędzia, które Generowanie klas zastępczych klienta, które można bezpośrednio odkrycie i używanie usługi.
+Brak dodatkowych wartości podczas korzystania z usług REST protokołu HTTP jako języka definicji interfejsu. Na przykład jeśli używasz [Swagger metadanych](https://swagger.io/) do opisu interfejsu API usługi, można użyć narzędzia, które Generowanie klas zastępczych klienta, które można bezpośrednio odkrycie i używanie usługi.
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Pole Fowler. Lesiak dojrzałości modelu.** Opis modelu REST.
-    [*http://martinfowler.com/articles/richardsonMaturityModel.html*](http://martinfowler.com/articles/richardsonMaturityModel.html)
+    [*https://martinfowler.com/articles/richardsonMaturityModel.html*](https://martinfowler.com/articles/richardsonMaturityModel.html)
 
 -   **Swagger.** Oficjalna witryna.
-    [*http://swagger.io/*](http://swagger.io/)
+    [*https://swagger.io/*](https://swagger.io/)
 
 ### <a name="push-and-real-time-communication-based-on-http"></a>Wypychania i w czasie rzeczywistym komunikacji HTTP w oparciu
 

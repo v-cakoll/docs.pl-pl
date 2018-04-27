@@ -1,32 +1,34 @@
 ---
-title: "Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (usługi danych WCF)"
-ms.custom: 
+title: 'Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (usługi danych WCF)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e90b11800685707460171e5e2d250ef757979c44
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5993837546b28742756ed4a5ec323e6f1a5ef782
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>Porady: Tworzenie usługi danych przy użyciu źródła danych programu ADO.NET Entity Framework (usługi danych WCF)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]udostępnia dane jednostki jako usługa danych. Dane te jednostki są udostępniane przez [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] sieci Web aplikacji, która jest oparta na istniejącej bazy danych i umożliwia utworzenie nowej usługi danych tego modelu danych.  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] udostępnia dane jednostki jako usługa danych. Dane te jednostki są udostępniane przez [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] po relacyjnej bazy danych w źródle danych. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]— na podstawie modelu danych w aplikacji programu Visual Studio Web, która jest oparta na istniejącej bazy danych i umożliwia utworzenie nowej usługi danych tego modelu danych.  
   
- [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Udostępnia narzędzie wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu poza [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] projektu. Aby uzyskać więcej informacji, zobacz [porady: EdmGen.exe używany do generowania modelu i mapowania plików](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
+ [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] Udostępnia narzędzie wiersza polecenia, które mogą generować [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] modelu spoza projektu programu Visual Studio. Aby uzyskać więcej informacji, zobacz [porady: EdmGen.exe używany do generowania modelu i mapowania plików](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md).  
   
 ### <a name="to-add-an-entity-framework-model-that-is-based-on-an-existing-database-to-an-existing-web-application"></a>Aby dodać model narzędzia Entity Framework, która jest oparta na istniejącej bazy danych do istniejącej aplikacji sieci Web  
   
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
   
 ### <a name="to-create-the-data-service-by-using-the-new-data-model"></a>Aby utworzyć usługę danych przy użyciu nowego modelu danych  
   
-1.  W [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)], otwórz plik edmx, który reprezentuje modelu danych.  
+1.  W programie Visual Studio Otwórz plik edmx, który reprezentuje modelu danych.  
   
 2.  W **przeglądarki modelu**, kliknij prawym przyciskiem myszy model, kliknij przycisk **właściwości**, a następnie zanotuj nazwę kontenera jednostek.  
   
@@ -69,7 +71,7 @@ ms.lasthandoff: 01/19/2018
   
 5.  Podaj nazwę usługi, a następnie kliknij przycisk **OK**.  
   
-     [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]tworzy pliki znaczników i kodu XML dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu.  
+     Program Visual Studio tworzy pliki znaczników i kodu XML dla nowej usługi. Domyślnie zostanie otwarte okno edytora kodu.  
   
 6.  W kodzie dla usługi data, Zastąp komentarz `/* TODO: put your data source class name here */` w definicji klasy, która definiuje usługę danych z typem, który dziedziczy z <xref:System.Data.Objects.ObjectContext> klasy i który jest kontenera jednostek w modelu danych, który został zapisany w kroku 2.  
   

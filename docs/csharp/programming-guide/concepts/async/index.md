@@ -9,11 +9,11 @@ ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
 caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c9f2699646db17c9358f84f4c5407e7aab8b60cf
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 70dd5606ba81619658eda24f8c4bfd4970d29308
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming-with-async-and-await-c"></a>Programowanie asynchroniczne z async i await (C#)
 Możesz uniknąć problemów z wydajnością i poprawić ogólny czas odpowiedzi aplikacji, stosując programowanie asynchroniczne. Jednak tradycyjne techniki pisania aplikacji asynchronicznych mogą być skomplikowane, przez co trudne do pisania, debugowania i konserwacji.  
@@ -98,7 +98,7 @@ Poniższy opis podsumowuje, co sprawia, że poprzedni przykład jest metodą asy
   
     -   `void` Jeśli piszesz asynchronicznej obsługi zdarzeń.  
 
-    -   Innego typu, który ma `GetAwaiter` — metoda (począwszy od C# 7).
+    -   Innego typu, który ma `GetAwaiter` — metoda (począwszy od wersji 7.0 C#).
   
      Aby uzyskać więcej informacji, zobacz [parametry i typy zwracać](#BKMK_ReturnTypesandParameters) sekcji.  
   
@@ -179,7 +179,7 @@ Należy określić <xref:System.Threading.Tasks.Task%601> jako typ zwracany, je�
   
 Możesz użyć <xref:System.Threading.Tasks.Task> jako typ zwracany, jeśli metoda ma nie instrukcji return lub zawiera instrukcję return, która nie zwraca argumentu operacji.  
 
-Począwszy od C# 7, można również określić innego typu zwracanego, pod warunkiem, że ten typ zawiera `GetAwaiter` metody. <xref:System.Threading.Tasks.ValueTask%601> jest to przykład takiego typu. Jest on dostępny w [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pakietu NuGet.
+Począwszy od wersji 7.0 C#, można również określić innego typu zwracanego, pod warunkiem, że ten typ zawiera `GetAwaiter` metody. <xref:System.Threading.Tasks.ValueTask%601> jest to przykład takiego typu. Jest on dostępny w [System.Threading.Tasks.Extension](https://www.nuget.org/packages/System.Threading.Tasks.Extensions/) pakietu NuGet.
   
  W poniższym przykładzie pokazano, jak deklarowanie i wywoływanie metody, która zwraca <xref:System.Threading.Tasks.Task%601> lub <xref:System.Threading.Tasks.Task>.  
   

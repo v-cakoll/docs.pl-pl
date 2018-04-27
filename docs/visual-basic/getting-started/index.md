@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e53ba3e1134b09edcc87a0421b7699bcf3bb1d39
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 Ta sekcja dokumentacji ułatwia szybkie wprowadzenie do programowania aplikacji Visual Basic.  
@@ -55,10 +55,10 @@ Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znale
  Oferuje łącza do stron, które wprowadzają programowanie zorientowane obiektowo i opisują sposób tworzenia własnych obiektów, a także sposób wykorzystania obiektów w celu uproszczenia kodowania.  
   
  [Przykłady](../../visual-basic/sample-applications.md)  
- Zawiera łącza do przykładowy kod [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Zawiera łącza do przykładowy kod w języku Visual Basic.  
   
  [Przewodniki](../../visual-basic/walkthroughs.md)  
- Zawiera listę strony pomocy, które przedstawiają aspektów [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] języka.  
+ Zawiera listę strony pomocy, które przedstawiają aspektów języka Visual Basic.  
   
  [Porozmawiaj z nami](/visualstudio/ide/talk-to-us)  
  Opisuje sposoby uzyskania pomocy technicznej i przekazywania opinii zwrotnej.  
@@ -66,7 +66,7 @@ Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znale
  [Visual Studio](/visualstudio/)  
  Zawiera łącza do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dokumentacji.  
   
- [C#](../../csharp/index.md) zawiera linki do dokumentacji na projektowanie aplikacji z [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ [C#](../../csharp/index.md) zawiera linki do dokumentacji na projektowanie aplikacji z Visual C#.  
   
  [Visual C++](/cpp/)  
  Oferuje łącza do dokumentacji języka Visual C++.  

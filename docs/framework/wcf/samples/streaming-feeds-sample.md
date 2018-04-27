@@ -1,24 +1,26 @@
 ---
-title: "Przykład strumieniowych kanałów informacyjnych"
-ms.custom: 
+title: Przykład strumieniowych kanałów informacyjnych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1f1228c0-daaa-45f0-b93e-c4a158113744
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e3d2de4dd5510b212e030ea537cea0be3dce24f0
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 24dfd6c7eb2c1df6605d03bfb99cc82c0a489377
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-feeds-sample"></a>Przykład strumieniowych kanałów informacyjnych
 W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, które zawierają dużą liczbę elementów. Na serwerze, przykładzie pokazano, jak opóźnienie tworzenia poszczególnych <xref:System.ServiceModel.Syndication.SyndicationItem> obiektów w ramach źródła danych do bezpośrednio przed elementu są zapisywane do strumienia sieci.  
@@ -27,7 +29,7 @@ W tym przykładzie pokazano, jak zarządzać zespolonego źródła danych, któr
   
  Aby zademonstrować najlepiej przesyłania strumieniowego możliwości zespolonego interfejsu API, w tym przykładzie użyto nieco prawdopodobne scenariusz, w którym serwer udostępnia źródło z nieograniczoną liczbę elementów. W takim przypadku serwer kontynuuje generowania nowych elementów w źródle danych, dopóki nie określa, że klient ma odczytu określoną liczbę elementów ze źródła strumieniowego (domyślnie 10). Dla uproszczenia zarówno klient, jak i serwera są zaimplementowane w tym samym procesie i używać udostępnionej `ItemCounter` obiekt, aby śledzić liczbę elementów klienta został utworzony. `ItemCounter` Typu istnieje tylko w celu umożliwienia przykładowy scenariusz zakończenie prawidłowo i nie jest elementem core wzorca jest uruchomiona.  
   
- Pokazu sprawia, że użycie [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] Iteratory (przy użyciu `yield``return` konstrukcja — słowo kluczowe). [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Iteratory, zobacz temat "Przy użyciu Iteratory" w witrynie MSDN.  
+ Pokazu korzysta z programu Visual C# Iteratory (przy użyciu `yield``return` konstrukcja — słowo kluczowe). [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Iteratory, zobacz temat "Przy użyciu Iteratory" w witrynie MSDN.  
   
 ## <a name="service"></a>Usługa  
  Usługa implementuje podstawowego <xref:System.ServiceModel.Web.WebGetAttribute> kontraktu, który składa się z jednej operacji, jak pokazano w poniższym kodzie.  

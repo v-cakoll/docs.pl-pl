@@ -1,27 +1,29 @@
 ---
-title: "Element DataAdapter parametrów"
-ms.custom: 
+title: Element DataAdapter parametrów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 4b5cc66e1d2240450743afa8ca8aaa6efe94398d
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600dd949ffbed5c1066f9e3c3d9cc09eb174a22e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dataadapter-parameters"></a>Element DataAdapter parametrów
 <xref:System.Data.Common.DbDataAdapter> Ma cztery właściwości, które są używane do pobierania danych z danych i aktualizowanie źródła danych: <xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> właściwość zwraca dane ze źródła danych; i <xref:System.Data.Common.DbDataAdapter.InsertCommand%2A> , <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>, i <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> właściwości są używane do zarządzania zmiany w źródle danych. `SelectCommand` Należy ustawić właściwość przed wywołaniem `Fill` metody `DataAdapter`. `InsertCommand`, `UpdateCommand`, Lub `DeleteCommand` właściwości musi być ustawiona przed `Update` metody `DataAdapter` jest wywoływana w zależności od tego, jakie zmiany wprowadzono w danych w <xref:System.Data.DataTable>. Na przykład, jeśli wiersze zostały dodane `InsertCommand` musi być ustawiona przed wywołaniem `Update`. Gdy `Update` przetwarza wierszy wstawionych, zaktualizowanych lub usuniętych `DataAdapter` używa odpowiednio `Command` właściwości do przetworzenia akcji. Bieżące informacje o zmodyfikowanych wierszy jest przekazywana do `Command` obiektu za pomocą `Parameters` kolekcji.  
@@ -36,7 +38,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 >  Składnia parametru symbole zastępcze zależy od źródła danych. Ten przykład przedstawia symbole zastępcze dla źródła danych programu SQL Server. Użyj symbole zastępcze znak zapytania (?) <xref:System.Data.OleDb> i <xref:System.Data.Odbc> parametrów.  
   
- W tym [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] przykład `CompanyName` jest aktualizowana wartość `@CompanyName` parametr wiersza gdzie `CustomerID` jest równa wartości `@CustomerID` parametru. Parametry pobrania informacji z przy użyciu zmodyfikowanych wierszy <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> właściwość <xref:System.Data.SqlClient.SqlParameter> obiektu. Poniżej przedstawiono parametry poprzedniej próbki instrukcji UPDATE. Kod, przy założeniu, że zmienna `adapter` reprezentuje prawidłową <xref:System.Data.SqlClient.SqlDataAdapter> obiektu.  
+ W tym przykładzie Visual Basic `CompanyName` jest aktualizowana wartość `@CompanyName` parametr wiersza gdzie `CustomerID` jest równa wartości `@CustomerID` parametru. Parametry pobrania informacji z przy użyciu zmodyfikowanych wierszy <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> właściwość <xref:System.Data.SqlClient.SqlParameter> obiektu. Poniżej przedstawiono parametry poprzedniej próbki instrukcji UPDATE. Kod, przy założeniu, że zmienna `adapter` reprezentuje prawidłową <xref:System.Data.SqlClient.SqlDataAdapter> obiektu.  
   
 ```  
 adapter.Parameters.Add( _  
@@ -64,7 +66,7 @@ parameter.SourceVersion = DataRowVersion.Original
 |`Original`|Parametr używa oryginalnej wartości kolumny.|  
 |`Proposed`|Parametr używa proponowanej wartości.|  
   
- `SqlClient` Przykładowy kod w następnej sekcji definiuje parametru <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> w którym `CustomerID` kolumna jest używana jako `SourceColumn` dwa parametry: `@CustomerID` (`SET CustomerID = @CustomerID`), i `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). `@CustomerID` Parametr jest używany do zaktualizowania **CustomerID** kolumny do bieżącej wartości `DataRow`. W związku z tym `CustomerID` `SourceColumn` z `SourceVersion` z `Current` jest używany.  *@OldCustomerID*  Parametr jest używany do identyfikowania bieżący wiersz w źródle danych. Ponieważ odnaleziono pasującej wartości kolumny w `Original` wersji wiersza, w taki sam `SourceColumn` (`CustomerID`) z `SourceVersion` z `Original` jest używany.  
+ `SqlClient` Przykładowy kod w następnej sekcji definiuje parametru <xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> w którym `CustomerID` kolumna jest używana jako `SourceColumn` dwa parametry: `@CustomerID` (`SET CustomerID = @CustomerID`), i `@OldCustomerID` (`WHERE CustomerID = @OldCustomerID`). `@CustomerID` Parametr jest używany do zaktualizowania **CustomerID** kolumny do bieżącej wartości `DataRow`. W związku z tym `CustomerID` `SourceColumn` z `SourceVersion` z `Current` jest używany. *@OldCustomerID* Parametr jest używany do identyfikowania bieżący wiersz w źródle danych. Ponieważ odnaleziono pasującej wartości kolumny w `Original` wersji wiersza, w taki sam `SourceColumn` (`CustomerID`) z `SourceVersion` z `Original` jest używany.  
   
 ## <a name="working-with-sqlclient-parameters"></a>Praca z parametrami SqlClient  
  Poniższy przykład przedstawia sposób tworzenia <xref:System.Data.SqlClient.SqlDataAdapter> i ustaw <xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> do <xref:System.Data.MissingSchemaAction.AddWithKey> w celu pobrania dodatkowe informacje o schemacie z bazy danych. <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A>, <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A>, I <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> zestaw właściwości i odpowiadające <xref:System.Data.SqlClient.SqlParameter> obiekty dodane do <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> kolekcji. Metoda zwraca `SqlDataAdapter` obiektu.  

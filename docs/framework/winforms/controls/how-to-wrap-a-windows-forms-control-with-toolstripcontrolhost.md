@@ -1,12 +1,13 @@
 ---
-title: "Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost"
-ms.custom: 
+title: 'Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 77e0e5b162be875a7d37d32e4b5a08b19315b9ac
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f6fba694be83c9de309a086600cdf7e4620587aa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>Porady: zawijanie formantu formularzy systemu Windows za pomocą elementu ToolStripControlHost
-<xref:System.Windows.Forms.ToolStripControlHost>Umożliwia obsługę dowolnego formanty formularzy systemu Windows przy użyciu <xref:System.Windows.Forms.ToolStripControlHost> konstruktora lub przez rozszerzenie <xref:System.Windows.Forms.ToolStripControlHost> samej siebie. Ułatwia zawijanie formantu rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementowanie właściwości i metody, które udostępniają często używane właściwości i metod formantu. Można również ujawniać zdarzenia dla formantu w <xref:System.Windows.Forms.ToolStripControlHost> poziom.  
+<xref:System.Windows.Forms.ToolStripControlHost> Umożliwia obsługę dowolnego formanty formularzy systemu Windows przy użyciu <xref:System.Windows.Forms.ToolStripControlHost> konstruktora lub przez rozszerzenie <xref:System.Windows.Forms.ToolStripControlHost> samej siebie. Ułatwia zawijanie formantu rozszerzając <xref:System.Windows.Forms.ToolStripControlHost> i implementowanie właściwości i metody, które udostępniają często używane właściwości i metod formantu. Można również ujawniać zdarzenia dla formantu w <xref:System.Windows.Forms.ToolStripControlHost> poziom.  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>Na hoście formantu w ToolStripControlHost przez tworzenie wartości pochodnych  
   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Odwołania do zestawów systemu i System.Windows.Forms.  
   
- Informacji dotyczących tworzenia tego przykładu z wiersza polecenia dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Windows.Forms.ToolStripControlHost>  

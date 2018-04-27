@@ -1,19 +1,20 @@
 ---
-title: "Wybierz między aplikacjami sieci web tradycyjnych i aplikacje jednej strony"
-description: "Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Core i Microsoft Azure"
+title: Wybierz między aplikacjami sieci web tradycyjnych i aplikacje jednej strony
+description: Architektów nowoczesnych aplikacji sieci web platformy ASP.NET Core i Microsoft Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: eb830ede1b644700a80f0e9fac2f3608deb88276
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b1472f8107d57eff8faca1b4c7de7ba43f4271c0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>Wybierz między aplikacjami sieci Web tradycyjnych i aplikacje jednej strony (źródła)
 
@@ -93,7 +94,7 @@ W poniższej tabeli decyzji przedstawiono niektóre podstawowe czynniki, które 
   | Wymagane zespołu znajomość JavaScript/TypeScript | **Minimalny** | **Wymagane** |
   | Obsługa przeglądarki bez obsługi skryptów | **Obsługiwane** | **Nieobsługiwane** |
   | Zachowanie minimalnego aplikacji po stronie klienta | **Well-Suited** | **Zbyt obszerne** |
-  | Wymagania interfejsu użytkownika zaawansowane, złożone | **Limited** | **Well-Suited** |
+  | Wymagania interfejsu użytkownika zaawansowane, złożone | **Ograniczone** | **Well-Suited** |
 
 >[!div class="step-by-step"]
 [Poprzednie] (modern-web aplikacje characteristics.md) [dalej](architectural-principles.md)

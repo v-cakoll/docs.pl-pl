@@ -2,23 +2,25 @@
 title: Programowanie asynchroniczne
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 20e40a6705ad77dc42a70739e75abdbb058465e6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7dbc106b96e4e695108b6178951e3d43078467bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="asynchronous-programming"></a>Programowanie asynchroniczne
 
-W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych dla [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] (SqlClient) ulepszenia są wprowadzane do obsługi funkcji asynchronicznych programowania, który został wprowadzony w tym [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (SqlClient) w tym ulepszenia są wprowadzane do obsługi funkcji asynchronicznych programowania, który został wprowadzony w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="legacy-asynchronous-programming"></a>Programowanie asynchroniczne starszej wersji  
  Przed [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], programowanie asynchroniczne z SqlClient została wykonana z następujących metod i `Asynchronous Processing=true` właściwości połączenia:  
@@ -33,7 +35,7 @@ W tym temacie omówiono obsługę programowania asynchronicznego w [!INCLUDE[dnp
   
  Począwszy od [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], tych metod nie wymagają już `Asynchronous Processing=true` w parametrach połączenia.  
   
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Dodane w funkcje programowanie asynchroniczne[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
+## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>Dodane w funkcje programowanie asynchroniczne [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]  
  Nowa funkcja programowania asynchronicznego udostępnia proste techniki dokonanie asynchroniczne kodu.  
   
  Aby uzyskać więcej informacji na temat funkcji programowania asynchronicznego, która została wprowadzona w systemie [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], zobacz:  
@@ -637,7 +639,7 @@ namespace SqlBulkCopyAsyncCodeSample {
  Przykład otwiera pojedynczego połączenia **AdventureWorks** bazy danych. Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu, <xref:System.Data.SqlClient.SqlDataReader> jest tworzony. Jak czytnik jest używany, a drugie <xref:System.Data.SqlClient.SqlDataReader> jest otwarty przy użyciu danych z pierwszego <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** baza danych dołączona [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
   
 ```csharp
 using System;  
@@ -709,7 +711,7 @@ class Class1 {
  Następującej aplikacji konsoli Pokazuje, jak korzystać z dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, których zdolności kredytowej wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> załadować drugi <xref:System.Data.SqlClient.SqlDataReader> z wszystkich produktów dla określonego dostawcy. Każdy rekord produktu odwiedzenia przez drugą <xref:System.Data.SqlClient.SqlDataReader>. Obliczeń do określenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiektu command jest następnie używany do aktualizacji **ProductVendor** tabeli przy użyciu nowej wartości. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** baza danych dołączona [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
   
 ```csharp
 using System;  

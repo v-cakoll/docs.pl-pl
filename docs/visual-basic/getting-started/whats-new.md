@@ -15,11 +15,11 @@ ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
 caps.latest.revision: 145
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4641041657e99fa64bf1b7eb5317a43660ac7e2b
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 34c7e7147ce7ae43926de1796bee433667f08331
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="whats-new-for-visual-basic"></a>Nowości w języku Visual Basic
 
@@ -130,7 +130,7 @@ Aby uzyskać więcej informacji, zobacz sekcję "Przypisania literału" [bajtów
 
 **Obsługa języka C# odwołanie zwracanych wartości**
 
-Począwszy od C# 7, C# obsługuje odwołania może zwracać wartości. Oznacza to gdy wywołanie metody odbiera wartość zwracana przez odwołanie, można zmienić wartości odwołania. Visual Basic nie zezwala na utworzenia metod z odwołaniem zwracają wartości, ale pozwala ona do wykorzystania i zmodyfikować zwracanych wartości odwołania.
+Począwszy od wersji 7.0 C#, C# obsługuje odwołania może zwracać wartości. Oznacza to gdy wywołanie metody odbiera wartość zwracana przez odwołanie, można zmienić wartości odwołania. Visual Basic nie zezwala na utworzenia metod z odwołaniem zwracają wartości, ale pozwala ona do wykorzystania i zmodyfikować zwracanych wartości odwołania.
 
 Na przykład następująca `Sentence` klasa napisane w języku C# zawiera `FindNext` metodę, która znajduje następny wyraz w zdaniu zaczyna się od wskazany podciąg. Jako wartość zwracana przez odwołanie i zostanie zwrócony ciąg `Boolean` zmiennej przekazywana przez odwołanie do metody wskazuje, czy wyszukiwanie zakończyła się powodzeniem. Oznacza to, że obiekt wywołujący nie może tylko odczytać zwrócona wartość; on również ją zmodyfikować, a tej zmiany jest widoczny w `Sentence` klasy.
 

@@ -1,24 +1,26 @@
 ---
 title: Z (jednostka SQL)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 115fb8dfef46c74837d774012babdef9db915341
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 64d41359ba8a4131acb38b128238065ee2545f80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="from-entity-sql"></a>Z (jednostka SQL)
 Określa kolekcję używane w [wybierz](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md) instrukcje.  
@@ -39,7 +41,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>W klauzuli elementów  
- Każdy `FROM` element klauzuli odwołuje się do kolekcji źródła w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje następujące rodzaje `FROM` elementów klauzuli: prosty `FROM` elementów klauzuli `JOIN FROM` elementów klauzuli i `APPLY FROM` klauzuli elementów. Każdy z tych `FROM` elementy klauzuli jest opisane bardziej szczegółowo w poniższych sekcjach.  
+ Każdy `FROM` element klauzuli odwołuje się do kolekcji źródła w [!INCLUDE[esql](../../../../../../includes/esql-md.md)] zapytania. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje następujące rodzaje `FROM` elementów klauzuli: prosty `FROM` elementów klauzuli `JOIN FROM` elementów klauzuli i `APPLY FROM` klauzuli elementów. Każdy z tych `FROM` elementy klauzuli jest opisane bardziej szczegółowo w poniższych sekcjach.  
   
 ### <a name="simple-from-clause-item"></a>Prosty z klauzuli elementu  
  Najprostszą `FROM` element klauzuli jest jedno wyrażenie identyfikujące kolekcji i alias. Wyrażenie, które można po prostu zestaw jednostek lub podzapytaniu lub innego wyrażenia, który jest typem kolekcji. Oto przykład:  
@@ -57,7 +59,7 @@ LOB.Customers
  Jeśli jest określony żaden alias [!INCLUDE[esql](../../../../../../includes/esql-md.md)] prób wygenerowania alias oparte na wyrażeniu kolekcji.  
   
 ### <a name="join-from-clause-item"></a>Dołączanie z klauzuli elementu  
- A `JOIN FROM` element klauzuli reprezentuje sprzężenia między dwiema `FROM` klauzuli elementów. [!INCLUDE[esql](../../../../../../includes/esql-md.md)]Obsługa wielu sprzężeń, sprzężenia wewnętrzne po lewej stronie i prawe sprzężenia zewnętrzne i pełne sprzężenia zewnętrzne. Wszystkie te sprzężeń są obsługiwane w podobny sposób, że są one obsługiwane w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], dwa `FROM` klauzuli elementy objęte `JOIN` musi być niezależna. Oznacza to, że nie zostanie skorelowana. A `CROSS APPLY` lub `OUTER APPLY` może służyć do tych przypadkach.  
+ A `JOIN FROM` element klauzuli reprezentuje sprzężenia między dwiema `FROM` klauzuli elementów. [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Obsługa wielu sprzężeń, sprzężenia wewnętrzne po lewej stronie i prawe sprzężenia zewnętrzne i pełne sprzężenia zewnętrzne. Wszystkie te sprzężeń są obsługiwane w podobny sposób, że są one obsługiwane w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]. Podobnie jak w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], dwa `FROM` klauzuli elementy objęte `JOIN` musi być niezależna. Oznacza to, że nie zostanie skorelowana. A `CROSS APPLY` lub `OUTER APPLY` może służyć do tych przypadkach.  
   
 #### <a name="cross-joins"></a>Sprzężenia krzyżowe  
  A `CROSS JOIN` zapytania wyrażenie zwraca iloczyn kartezjański dwie kolekcje, jak pokazano w poniższym przykładzie:  
@@ -91,7 +93,7 @@ LOB.Customers
 >  W celu zachowania zgodności z SQL 92, w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] zewnętrzne — słowo kluczowe jest opcjonalna. W związku z tym `LEFT JOIN`, `RIGHT JOIN`, i `FULL JOIN` są synonimy `LEFT OUTER JOIN`, `RIGHT OUTER JOIN`, i `FULL OUTER JOIN`.  
   
 ### <a name="apply-clause-item"></a>Zastosuj element klauzuli  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]obsługuje dwa rodzaje z `APPLY`: `CROSS APPLY` i `OUTER APPLY`.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] obsługuje dwa rodzaje z `APPLY`: `CROSS APPLY` i `OUTER APPLY`.  
   
  A `CROSS APPLY` tworzy unikatowy parowanie każdego elementu w kolekcji po lewej stronie z elementem kolekcji utworzonej przez obliczenie wyrażenia po prawej stronie. Z `CROSS APPLY`, wyrażenie po prawej stronie jest funkcjonalnie zależny od elementu po lewej stronie, jak pokazano w poniższym przykładzie skojarzonej kolekcji:  
   
@@ -107,7 +109,7 @@ LOB.Customers
 >  W odróżnieniu od w [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], nie istnieje potrzeba jawnego unnest kroku w [!INCLUDE[esql](../../../../../../includes/esql-md.md)].  
   
 > [!NOTE]
->  `CROSS`i `OUTER APPLY` operatory zostały wprowadzone w systemie [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytanie może wygenerować języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje [!INCLUDE[ssNoVersion](../../../../../../includes/ssnoversion-md.md)] wcześniejszy niż [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], nie obsługują tych operatorów, przetwarzanie takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
+>  `CROSS` i `OUTER APPLY` operatory zostały wprowadzone w systemie [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytanie może wygenerować języka Transact-SQL, który zawiera `CROSS APPLY` i/lub `OUTER APPLY` operatorów. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje programu SQL Server starszych niż [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)], nie obsługują tych operatorów, przetwarzanie takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
 >   
 >  Niektóre typowe scenariusze, które mogą prowadzić do obecności `CROSS APPLY` i/lub `OUTER APPLY` operatory w zapytaniu dane wyjściowe są następujące: podzapytania skorelowane z stronicowania; AnyElement w podzapytaniu skorelowane lub za pośrednictwem kolekcji utworzonej przez nawigacji; Używające grupowanie metod, które akceptują selektorem elementu; zapytań LINQ zapytanie, w którym `CROSS APPLY` lub `OUTER APPLY` zostały jawnie określone; kwerendę, która ma `DEREF` skonstruować za pośrednictwem `REF` utworzenia.  
   
@@ -142,7 +144,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  `FROM` Klauzuli logicznie tworzy zestaw wielokrotny, który wiersze typu wiersza (c, d, e) gdzie pól c, d i e są rozpatrywane typu elementu `C`, `D`, i `c.Names`.  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)]wprowadzono alias dla każdego prosty `FROM` element klauzuli w zakresie. Na przykład poniższa z klauzuli fragment nazwy wprowadzane do zakresu są c, d i e.  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] wprowadzono alias dla każdego prosty `FROM` element klauzuli w zakresie. Na przykład poniższa z klauzuli fragment nazwy wprowadzane do zakresu są c, d i e.  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

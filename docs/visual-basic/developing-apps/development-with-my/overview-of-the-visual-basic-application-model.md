@@ -1,30 +1,31 @@
 ---
-title: "Omówienie modelu aplikacji Visual Basic"
+title: Omówienie modelu aplikacji Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 33b0e01317a6dab18ea03047c146def32b5675ad
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 74a8fcfe3f49ab042b3bb4775f9f6e84374db0ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Omówienie modelu aplikacji Visual Basic
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia model dobrze zdefiniowany sterujące zachowaniem aplikacji formularzy systemu Windows: [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelu aplikacji. Ten model zawiera zdarzenia do obsługi aplikacji uruchomienia i zamknięcia, a także zdarzenia połowowe nieobsługiwanych wyjątków. Zapewnia również obsługę do opracowywania aplikacji w jednym wystąpieniu. Model aplikacji jest otwarty, więc deweloperów, które muszą mieć większą kontrolę, można dostosować jego nadpisywalnych metod.  
+Visual Basic udostępnia model dobrze zdefiniowany sterujące zachowaniem aplikacji formularzy systemu Windows: model aplikacji Visual Basic. Ten model zawiera zdarzenia do obsługi aplikacji uruchomienia i zamknięcia, a także zdarzenia połowowe nieobsługiwanych wyjątków. Zapewnia również obsługę do opracowywania aplikacji w jednym wystąpieniu. Model aplikacji jest otwarty, więc deweloperów, które muszą mieć większą kontrolę, można dostosować jego nadpisywalnych metod.  
   
 ## <a name="uses-for-the-application-model"></a>Używa modelu aplikacji  
  Typowa aplikacja musi wykonać zadania uruchamiania i wyłączania. Na przykład podczas uruchamiania, aplikacji można wyświetlić ekranu powitalnego, nawiązywać połączenia bazy danych, załaduj zapisany stan itd. Po zamknięciu aplikacji go zamknąć połączenia bazy danych, zapisanie bieżącego stanu i tak dalej. Ponadto aplikacji może uruchomić kod z określonych aplikacji przebiega w dół nieoczekiwanie, takie jak podczas nieobsługiwany wyjątek.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Model aplikacji ułatwia tworzenie *jednego wystąpienia* aplikacji. Pojedyncze wystąpienie aplikacji różni się od normalnego aplikacji w tym tylko jedno wystąpienie aplikacji może być uruchomiony w czasie. Próby uruchomienia inne wystąpienie aplikacji jednego wystąpienia powoduje w oryginalnym wystąpieniu zgłoszonego — za pomocą klasy `StartupNextInstance` zdarzeń — wprowadzone kolejna próba uruchomienia. Powiadomienie zawiera wystąpienie kolejne argumenty wiersza polecenia. Kolejne wystąpienie aplikacji są zamykane, zanim nastąpi inicjowanie.  
+ Model aplikacji Visual Basic ułatwia tworzenie *jednego wystąpienia* aplikacji. Pojedyncze wystąpienie aplikacji różni się od normalnego aplikacji w tym tylko jedno wystąpienie aplikacji może być uruchomiony w czasie. Próby uruchomienia inne wystąpienie aplikacji jednego wystąpienia powoduje w oryginalnym wystąpieniu zgłoszonego — za pomocą klasy `StartupNextInstance` zdarzeń — wprowadzone kolejna próba uruchomienia. Powiadomienie zawiera wystąpienie kolejne argumenty wiersza polecenia. Kolejne wystąpienie aplikacji są zamykane, zanim nastąpi inicjowanie.  
   
  Pojedyncze wystąpienie aplikacji uruchamia i sprawdza, czy jest początkowo lub kolejne wystąpienie aplikacji:  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 11/21/2017
 -   **Zamknij aplikację**. Aplikacja udostępnia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown> zdarzenia sygnalizują, gdy ma zamknięta. W takim przypadku program obsługi, można upewnić się, że operacje aplikacji powinien przeprowadzać — zamykania i zapisywania, na przykład — zostały zakończone. Możesz skonfigurować aplikację po zamknięciu formularza głównego lub zamknąć zamykać tylko wtedy, gdy wszystkich formularzy.  
   
 ## <a name="availability"></a>Dostępność  
- Domyślnie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] model aplikacji jest dostępna dla projektów formularzy systemu Windows. Jeśli Konfigurowanie aplikacji w celu użycia obiektu uruchomienia różnych, lub uruchomić kod aplikacji niestandardowej `Sub Main`, następnie obiekt lub klasa może być konieczne podanie implementacja <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy do korzystania z modelu aplikacji. Informacje o zmianie obiektu uruchamiania, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Domyślnie model aplikacji Visual Basic jest dostępne dla projektów formularzy systemu Windows. Jeśli Konfigurowanie aplikacji w celu użycia obiektu uruchomienia różnych, lub uruchomić kod aplikacji niestandardowej `Sub Main`, następnie obiekt lub klasa może być konieczne podanie implementacja <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy do korzystania z modelu aplikacji. Informacje o zmianie obiektu uruchamiania, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>  

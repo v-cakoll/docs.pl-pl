@@ -1,34 +1,34 @@
 ---
-title: "Wskazówki: Tworzenie przycisku przy użyciu XAML"
-ms.custom: 
+title: 'Wskazówki: Tworzenie przycisku przy użyciu XAML'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5c5efa9f8787e65d59e1b544632e806bf3fbbc81
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 94ec5e56862190026b43331488cbc699fe7dfda4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>Wskazówki: Tworzenie przycisku przy użyciu XAML
 Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do użycia w [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacji. W tym przewodniku zastosowano style i szablon, aby utworzyć zasób dostosowany przycisk umożliwiający ponowne użycie kodu i oddzielenie logiki przycisk z deklaracji przycisku. W tym przewodniku są zapisywane w całości w [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].  
   
 > [!IMPORTANT]
->  W tym przewodniku prowadzi użytkownika przez kroki tworzenia aplikacji, wpisując lub kopiowanie i wklejanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] Microsoft [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Jeśli chcesz dowiedzieć się, jak używać narzędzia projektowe (Microsoft Expression Blend) do tworzenia tej samej aplikacji, zobacz [utworzyć przycisk przy użyciu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
+>  W tym przewodniku prowadzi użytkownika przez kroki tworzenia aplikacji, wpisując lub kopiowanie i wklejanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] do programu Microsoft Visual Studio. Jeśli chcesz dowiedzieć się, jak używać narzędzia projektowe (Microsoft Expression Blend) do tworzenia tej samej aplikacji, zobacz [utworzyć przycisk przy użyciu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md).  
   
  Na poniższej ilustracji przedstawiono Zakończono przycisków.  
   
@@ -39,7 +39,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do u�
   
 #### <a name="to-create-a-new-wpf-project-and-add-buttons-to-the-window"></a>Aby utworzyć nowy projekt WPF i dodawanie przycisków do okna  
   
-1.  Uruchom[!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+1.  Uruchom program Visual Studio.  
   
 2.  **Utwórz nowy projekt WPF:** na **pliku** menu wskaż **nowy**, a następnie kliknij przycisk **projektu**. Znajdź **aplikacji systemu Windows (WPF)** szablonu i nazwy projektu "AnimatedButton". Spowoduje to utworzenie szkielet dla aplikacji.  
   
@@ -332,7 +332,7 @@ Celem tego przewodnika jest Dowiedz się, jak utworzyć animowany przycisk do u�
   
      Naciśnij klawisz F5, aby uruchomić aplikację i kliknij jeden z przycisków. Zwróć uwagę, czy przycisk pozostaje wyróżnione po kliknięciu, ponieważ nadal ma fokus. Jeśli klikniesz przycisk inny przycisk Nowy zyskuje fokus podczas ostatnią utraci go.  
   
-4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** obok dodamy niektórych animacji wyzwalacze. Dodaj następujący kod w dowolnym miejscu wewnątrz elementu `ControlTemplate.Triggers` bloku.  
+4.  **Dodawanie animacji do** <xref:System.Windows.UIElement.MouseEnter> **i** <xref:System.Windows.UIElement.MouseLeave> **:** obok dodamy niektórych animacji wyzwalacze.   Dodaj następujący kod w dowolnym miejscu wewnątrz elementu `ControlTemplate.Triggers` bloku.  
   
     ```  
     <!-- Animations that start when mouse enters and leaves button. -->  

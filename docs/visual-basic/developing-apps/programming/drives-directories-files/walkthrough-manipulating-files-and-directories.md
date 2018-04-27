@@ -1,11 +1,12 @@
 ---
 title: Manipulowanie plikami i katalogami w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic], reading text
@@ -21,19 +22,19 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-caps.latest.revision: "49"
+caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bd1e61503394741e7943d30d383f2e7c5ea35f68
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Wskazówki: manipulowanie plikami i katalogami w Visual Basic
-Ten przewodnik zawiera wprowadzenie do podstawowych operacji We/Wy pliku w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Przedstawiono sposób tworzenie małych aplikacji, która zawiera listę i sprawdza, czy pliki tekstowe w katalogu. Dla każdego pliku zaznaczonego tekstu aplikacja udostępnia Atrybuty pliku i pierwszego wiersza zawartości. Ma opcji, aby zapisać informacje o pliku dziennika.  
+Ten przewodnik zawiera wprowadzenie do podstawy we/wy pliku w Visual Basic. Przedstawiono sposób tworzenie małych aplikacji, która zawiera listę i sprawdza, czy pliki tekstowe w katalogu. Dla każdego pliku zaznaczonego tekstu aplikacja udostępnia Atrybuty pliku i pierwszego wiersza zawartości. Ma opcji, aby zapisać informacje o pliku dziennika.  
   
- W tym przewodniku zastosowano członkami `My.Computer.FileSystem Object`, które są dostępne w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Na końcu tego przewodnika, odpowiednik przykład została podana używającą klas z <xref:System.IO> przestrzeni nazw.  
+ W tym przewodniku zastosowano członkami `My.Computer.FileSystem Object`, które są dostępne w języku Visual Basic. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>. Na końcu tego przewodnika, odpowiednik przykład została podana używającą klas z <xref:System.IO> przestrzeni nazw.  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -47,16 +48,16 @@ Ten przewodnik zawiera wprowadzenie do podstawowych operacji We/Wy pliku w [!INC
   
 3.  W **nazwa** wpisz `FileExplorer` Ustaw nazwę projektu, a następnie kliknij przycisk **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]dodaje projekt do **Eksploratora rozwiązań**, i otwiera Projektant formularzy systemu Windows.  
+     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dodaje projekt do **Eksploratora rozwiązań**, i otwiera Projektant formularzy systemu Windows.  
   
 4.  Dodaj formanty w poniższej tabeli do formularza i ustaw wartości odpowiednich dla ich właściwości.  
   
     |Formant|Właściwość|Wartość|  
     |-------------|--------------|-----------|  
-    |**Pola listy**|**Nazwa**|`filesListBox`|  
+    |**ListBox**|**Nazwa**|`filesListBox`|  
     |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`browseButton`<br /><br /> **Przeglądaj**|  
     |**Przycisk**|**Nazwa**<br /><br /> **Tekst**|`examineButton`<br /><br /> **Sprawdź**|  
-    |**Pole wyboru**|**Nazwa**<br /><br /> **Tekst**|`saveCheckBox`<br /><br /> **Zapisz wyniki**|  
+    |**CheckBox**|**Nazwa**<br /><br /> **Tekst**|`saveCheckBox`<br /><br /> **Zapisz wyniki**|  
     |**FolderBrowserDialog —**|**Nazwa**|`FolderBrowserDialog1`|  
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>Wybierz folder, oraz wyświetlanie listy plików w folderze  
@@ -171,4 +172,4 @@ Ten przewodnik zawiera wprowadzenie do podstawowych operacji We/Wy pliku w [!INC
  <xref:System.IO>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem.CurrentDirectory%2A>  
- [Wskazówki: Manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)
+ [Przewodnik: manipulowanie plikami za pomocą metod .NET Framework](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)

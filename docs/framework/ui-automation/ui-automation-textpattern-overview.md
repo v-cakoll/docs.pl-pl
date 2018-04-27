@@ -1,36 +1,38 @@
 ---
-title: "Przegląd automatyzacji interfejsu użytkownika — TextPattern"
-ms.custom: 
+title: Przegląd automatyzacji interfejsu użytkownika — TextPattern
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - UI Automation, TextPattern class
 - TextPattern class
 - classes, TextPattern
 ms.assetid: 41787927-df1f-4f4a-aba3-641662854fc4
-caps.latest.revision: "38"
+caps.latest.revision: 38
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: dbf3e125d911a407be3b07d0ce93d5c17bd8a0b7
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1b9504dceea6987945cfb3960f756148db9ebb8f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ui-automation-textpattern-overview"></a>Przegląd automatyzacji interfejsu użytkownika — TextPattern
 > [!NOTE]
 >  Ta dokumentacja jest przeznaczony dla deweloperów .NET Framework, które chcą korzystać zarządzanej [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] klas zdefiniowanych w <xref:System.Windows.Automation> przestrzeni nazw. Aby uzyskać najnowsze informacje o [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], zobacz [interfejsu API systemu Windows automatyzacji: automatyzacji interfejsu użytkownika](http://go.microsoft.com/fwlink/?LinkID=156746).  
   
- Ten przegląd zawiera opis sposobu używania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] na udostępnianie zawartości tekstowej, łącznie z atrybutami styl i format, kontrolek tekstu w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-obsługiwanych platform. Formanty te obejmują, ale nie są ograniczone do, [!INCLUDE[TLA#tla_winfx](../../../includes/tlasharptla-winfx-md.md)] <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox> , a także ich [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] odpowiedniki.  
+ Ten przegląd zawiera opis sposobu używania [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] na udostępnianie zawartości tekstowej, łącznie z atrybutami styl i format, kontrolek tekstu w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]-obsługiwanych platform. Formanty te obejmują, ale nie są ograniczone do programu Microsoft .NET Framework <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox> , a także ich [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] odpowiedniki.  
   
- Udostępnianie zawartości tekstowej formantu odbywa się za pośrednictwem <xref:System.Windows.Automation.TextPattern> wzorcu kontroli reprezentuje zawartość kontenera tekstu jako tekstu strumienia. Z kolei <xref:System.Windows.Automation.TextPattern> wymaga obsługi z <xref:System.Windows.Automation.Text.TextPatternRange> klasy do udostępnienia styl i formatu atrybutów. <xref:System.Windows.Automation.Text.TextPatternRange>obsługuje <xref:System.Windows.Automation.TextPattern> przez reprezentujący ciągły lub wielu rozłączne obejmuje tekst w kontenerze tekstu z kolekcją <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> i <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktów końcowych. <xref:System.Windows.Automation.Text.TextPatternRange>obsługuje funkcje takie jak zaznaczenia, porównanie, pobieranie i przechodzenia.  
+ Udostępnianie zawartości tekstowej formantu odbywa się za pośrednictwem <xref:System.Windows.Automation.TextPattern> wzorcu kontroli reprezentuje zawartość kontenera tekstu jako tekstu strumienia. Z kolei <xref:System.Windows.Automation.TextPattern> wymaga obsługi z <xref:System.Windows.Automation.Text.TextPatternRange> klasy do udostępnienia styl i formatu atrybutów. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje <xref:System.Windows.Automation.TextPattern> przez reprezentujący ciągły lub wielu rozłączne obejmuje tekst w kontenerze tekstu z kolekcją <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> i <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktów końcowych. <xref:System.Windows.Automation.Text.TextPatternRange> obsługuje funkcje takie jak zaznaczenia, porównanie, pobieranie i przechodzenia.  
   
 > [!NOTE]
 >  <xref:System.Windows.Automation.TextPattern> Klasy nie udostępniają sposób wstawiania lub zmodyfikować tekst. Jednak w zależności od tego formantu, to może być dokonane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] <xref:System.Windows.Automation.ValuePattern> lub za pośrednictwem bezpośredniego klawiatury. Zobacz [TextPattern wstawić tekst przykładowy](http://msdn.microsoft.com/library/67353f93-7ee2-42f2-ab76-5c078cf6ca16) przykład.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/19/2018
   
 <a name="UI_Automation_TextPattern_vs__Cicero"></a>   
 ## <a name="ui-automation-textpattern-vs-text-services-framework"></a>TextPattern automatyzacji interfejsu użytkownika programu vs. Tekst usługi Framework  
- [!INCLUDE[TLA#tla_tsf](../../../includes/tlasharptla-tsf-md.md)]to platforma systemu proste i skalowalne, która włącza usługi języka naturalnego i zaawansowane tekst na pulpicie i w aplikacjach. Oprócz zapewnienia interfejsów dla aplikacji do udostępnienia ich magazynu tekstu obsługuje ona również metadanych dla tego magazynu tekstu.  
+ [!INCLUDE[TLA#tla_tsf](../../../includes/tlasharptla-tsf-md.md)] to platforma systemu proste i skalowalne, która włącza usługi języka naturalnego i zaawansowane tekst na pulpicie i w aplikacjach. Oprócz zapewnienia interfejsów dla aplikacji do udostępnienia ich magazynu tekstu obsługuje ona również metadanych dla tego magazynu tekstu.  
   
  Jednak [!INCLUDE[TLA2#tla_tsf](../../../includes/tla2sharptla-tsf-md.md)] zostało zaprojektowane na potrzeby aplikacji, które muszą iniekcję danych wejściowych do scenariuszy obsługujący kontekst, podczas gdy <xref:System.Windows.Automation.TextPattern> jest tylko do odczytu rozwiązania (z ograniczoną obejście powyższą) ma zapewnić zoptymalizowane dostępu do magazynu tekstu dla czytników ekranu i Braille'a urządzenia.  
   
@@ -97,11 +99,11 @@ ms.lasthandoff: 01/19/2018
 ## <a name="security"></a>Zabezpieczenia  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Architektura została zaprojektowana z myślą o bezpieczeństwie (zobacz [Przegląd zabezpieczeń automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-security-overview.md)). Opisane w tym omówieniu klasy TextPattern wymaga jednak pewne zagadnienia dotyczące zabezpieczeń.  
   
--   [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]tekst dostawców podać interfejsów tylko do odczytu i nie zapewniają możliwość zmiany istniejącego tekstu w formancie.  
+-   [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] tekst dostawców podać interfejsów tylko do odczytu i nie zapewniają możliwość zmiany istniejącego tekstu w formancie.  
   
 -   Klienci automatyzacji interfejsu użytkownika można używać tylko [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] jeśli są one w pełni "zaufany". Przykładem tego może być chroniony pulpitu logowania, gdy tylko znane i zaufane aplikacje mogą działać.  
   
--   Deweloperzy dostawców automatyzacji interfejsu użytkownika należy zwrócić uwagę, że wszystkie informacje są widoczne ujawnia w formantach ich za pośrednictwem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] jest zasadniczo publiczna i pełni dostępny przez inny kod. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]sprawia, że próbuje określić wiarygodności dowolnego klienta automatyzacji interfejsu użytkownika i dlatego dostawcy automatyzacji interfejsu użytkownika nie powinny ujawniać chronionych informacji tekstowych zawartości lub poufnych (np. pola hasła).  
+-   Deweloperzy dostawców automatyzacji interfejsu użytkownika należy zwrócić uwagę, że wszystkie informacje są widoczne ujawnia w formantach ich za pośrednictwem [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] jest zasadniczo publiczna i pełni dostępny przez inny kod. [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] sprawia, że próbuje określić wiarygodności dowolnego klienta automatyzacji interfejsu użytkownika i dlatego dostawcy automatyzacji interfejsu użytkownika nie powinny ujawniać chronionych informacji tekstowych zawartości lub poufnych (np. pola hasła).  
   
 -   Jedną z najbardziej znaczących zmian w zabezpieczenia dla [!INCLUDE[TLA#tla_winvista](../../../includes/tlasharptla-winvista-md.md)] szeroko jest określana jako "Bezpieczny dane wejściowe" obejmującym technologii, takich jak najmniej uprzywilejowane (lub ograniczone) konta użytkownika (LUA) i interfejsu użytkownika uprawnień poziom izolacji (UIPI).  
   
@@ -121,7 +123,7 @@ ms.lasthandoff: 01/19/2018
  Formatowanie cech zakres tekstu (na przykład <xref:System.Windows.Automation.TextPattern.IsItalicAttribute> lub <xref:System.Windows.Automation.TextPattern.FontNameAttribute>).  
   
  **Wymiar degeneracji zakresu**  
- Degeneracji zakres jest zakres tekstu pusty lub znak zero. Na potrzeby TextPattern — wzorzec formantu punkt wstawiania (lub karetkę system) jest uznawany za degeneracji zakresu. Jeśli nie zaznaczono żadnych tekstu, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> zwróci degeneracji zakresu punkt wstawiania tekstu i <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> zwróci degeneracji zakresu jako jego początkowy punkt końcowy. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A>i <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> może zwrócić degeneracji zakresów, gdy dostawca tekstu nie może znaleźć żadnych zakresów tekstu, spełniających podane kryteria. Ten zakres degeneracji może służyć jako początkowy punkt końcowy w ramach dostawcy tekstu. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A>i <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> zwraca odwołanie o wartości null (`Nothing` w [!INCLUDE[TLA2#tla_visualbnet](../../../includes/tla2sharptla-visualbnet-md.md)]) aby uniknąć pomylenia z odnalezionych zakresu i degeneracji zakresu.  
+ Degeneracji zakres jest zakres tekstu pusty lub znak zero. Na potrzeby TextPattern — wzorzec formantu punkt wstawiania (lub karetkę system) jest uznawany za degeneracji zakresu. Jeśli nie zaznaczono żadnych tekstu, <xref:System.Windows.Automation.TextPattern.GetSelection%2A> zwróci degeneracji zakresu punkt wstawiania tekstu i <xref:System.Windows.Automation.TextPattern.RangeFromPoint%2A> zwróci degeneracji zakresu jako jego początkowy punkt końcowy. <xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> i <xref:System.Windows.Automation.TextPattern.GetVisibleRanges%2A> może zwrócić degeneracji zakresów, gdy dostawca tekstu nie może znaleźć żadnych zakresów tekstu, spełniających podane kryteria. Ten zakres degeneracji może służyć jako początkowy punkt końcowy w ramach dostawcy tekstu. <xref:System.Windows.Automation.Text.TextPatternRange.FindText%2A> i <xref:System.Windows.Automation.Text.TextPatternRange.FindAttribute%2A> zwraca odwołanie o wartości null (`Nothing` w programie Microsoft Visual Basic .NET) aby uniknąć pomylenia z odnalezionych zakresu i degeneracji zakresu.  
   
  **Osadzonego obiektu**  
  Istnieją dwa typy obiekty osadzone w [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] modelu tekstu. Składają się one tekstowych elementów zawartości, takich jak hiperłącza lub tabele i kontroli elementów, takich jak obrazy i przycisków. Aby uzyskać szczegółowe informacje, zobacz [dostępu do osadzonych obiektów przy użyciu automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md).  
@@ -129,7 +131,7 @@ ms.lasthandoff: 01/19/2018
  **Punkt końcowy**  
  Bezwzględna <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> lub <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> punktu zakresu tekstu w kontenerze tekstu.  
   
- ![Wartości TextPatternRangeEndpoints &#40; rozpoczęcia i zakończenia &#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
+ ![Wartości TextPatternRangeEndpoints &#40;rozpoczęcia i zakończenia&#41;. ] (../../../docs/framework/ui-automation/media/uia-textpattern-endpoints.PNG "UIA_TextPattern_Endpoints")  
 Poniżej przedstawiono zestaw początkowy i końcowy.  
   
  **TextRange**  

@@ -1,7 +1,7 @@
 ---
-title: "Bezpośrednia komunikacja klient mikrousługi i wzorzec bramy interfejsu API"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Bezpośrednia komunikacja klient mikrousługi i wzorzec bramy interfejsu API"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera, bramy interfejsu API"
+title: Bezpośrednia komunikacja klient mikrousługi i wzorzec bramy interfejsu API
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Bezpośrednia komunikacja klient mikrousługi i wzorzec bramy interfejsu API
+keywords: Docker, Mikrousług, ASP.NET, kontenera, bramy interfejsu API
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96a02958ef5750aec7a92ff0dd145edc15a5953a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fa3f4bb97cf942ee7698b1efa1dcd09b3f2ca571
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="direct-client-to-microservice-communication-versus-the-api-gateway-pattern"></a>Bezpośrednia komunikacja klient mikrousługi i wzorzec bramy interfejsu API
 
@@ -31,7 +31,7 @@ Jest możliwe podejście do użycia z architektury bezpośrednia komunikacja kli
 
 W tej metody. Każdy mikrousługi ma publiczny punkt końcowy, niekiedy z różnych portów TCP dla każdego mikrousługi. Przykładowy adres URL dla określonej usługi może być następujący adres URL na platformie Azure:
 
-<http://eshoponcontainers.westus.cloudapp.Azure.com:88 />
+<http://eshoponcontainers.westus.cloudapp.azure.com:88/>
 
 W środowisku produkcyjnym, oparty na klastrze, mapującej adres URL do modułu równoważenia obciążenia używanych w klastrze, który z kolei rozdzielaj żądania między mikrousług. W środowiskach produkcyjnych, może mieć aplikacji dostarczania kontrolera (ADC) jak [brama aplikacji w usłudze Azure](https://docs.microsoft.com/azure/application-gateway/application-gateway-introduction) Twojego mikrousług od Internetu. To dodatkowe przezroczyste warstwy, która nie przeprowadza równoważenia obciążenia tylko zabezpiecza oferując kończenia żądań SSL z usługami. Zwiększa to obciążenia hosty dzięki przeniesieniu kończenia żądań SSL użycie Procesora CPU i inne routingu obowiązków na bramie aplikacji Azure. W każdym przypadku modułu równoważenia obciążenia i ADC są niewidoczne z aplikacji logicznych architektura punktu widzenia.
 
@@ -57,7 +57,7 @@ Interfejs API z wielu mikrousług może nie dobrze zaprojektowanej na potrzeby a
 
 ## <a name="using-an-api-gateway"></a>Przy użyciu bramy interfejsu API
 
-Podczas projektowania i tworzenie dużych lub złożonych mikrousługi aplikacji z wielu klientów aplikacji może być dobrym sposobem należy wziąć pod uwagę [bramy interfejsu API](http://microservices.io/patterns/apigateway.html). Jest to usługa, która zapewnia jeden punkt wejścia dla niektórych grup mikrousług. Jest on podobny do [wzorzec fasady](https://en.wikipedia.org/wiki/Facade_pattern) od object‑oriented projektu, ale w takim przypadku jest częścią systemu rozproszonego. Wzorzec bramy interfejsu API jest również nazywany "wewnętrzna frontonu" [(BFF)](http://samnewman.io/patterns/architectural/bff/) ponieważ skompiluj go podczas planowania na potrzeby aplikacji klienckiej.
+Podczas projektowania i tworzenie dużych lub złożonych mikrousługi aplikacji z wielu klientów aplikacji może być dobrym sposobem należy wziąć pod uwagę [bramy interfejsu API](https://microservices.io/patterns/apigateway.html). Jest to usługa, która zapewnia jeden punkt wejścia dla niektórych grup mikrousług. Jest on podobny do [wzorzec fasady](https://en.wikipedia.org/wiki/Facade_pattern) od object‑oriented projektu, ale w takim przypadku jest częścią systemu rozproszonego. Wzorzec bramy interfejsu API jest również nazywany "wewnętrzna frontonu" [(BFF)](https://samnewman.io/patterns/architectural/bff/) ponieważ skompiluj go podczas planowania na potrzeby aplikacji klienckiej.
 
 Rysunek 4-13 przedstawiono, jak brama niestandardowego interfejsu API można umieścić w architektura mikrousługi.
 Ważne jest, aby wyróżnić który na tym diagramie, jak można przy użyciu jednej usługi interfejsu API bramy niestandardowych skierowane w wielu i aplikacjach innego klienta. Fakt można poważne zagrożenie, ponieważ usługi bramy interfejsu API zostanie powiększania i zmieniających się na podstawie wielu różne wymagania z aplikacji klienta. Po pewnym czasie będzie przeglądarek z powodu tych różnych potrzeb i efektywnie może być bardzo podobna do wbudowanymi aplikacji lub usługi wbudowanymi. To jest znacznie zalecane jest podzielenie bramy interfejsu API w wielu usługach lub wielu mniejszych interfejsu API bram, po jednym dla każdego typu obudowie dla wystąpienia.
@@ -111,15 +111,15 @@ W tym przewodniku i odwołanie przykładowej aplikacji (eShopOnContainers) aby s
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Lesiak Charlesa. Wzorzec: Interfejs API bramy / wewnętrznej bazy danych dla frontonu**
-    [*http://microservices.io/patterns/apigateway.html*](http://microservices.io/patterns/apigateway.html)
+    [*https://microservices.io/patterns/apigateway.html*](https://microservices.io/patterns/apigateway.html)
 
--   **Usługi Azure API Management**
+-   **Zarządzanie interfejsami API Azure**
     [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 
 -   **Udi Dahan. Kompozycja zorientowane na usługę**\
-    [*http://udidahan.com/2014/07/30/Service-Oriented-Composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+    [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
--   **Clemens Vasters. Wiadomości i Mikrousług na GOTO 2016** (klip wideo) [ *https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
+-   **Clemens Vasters. Wiadomości i Mikrousług na GOTO 2016** (klip wideo) [*https://www.youtube.com/watch?v=rXi5CLjIQ9k*](https://www.youtube.com/watch?v=rXi5CLjIQ9k)
 
 
 >[!div class="step-by-step"]

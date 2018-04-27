@@ -1,12 +1,12 @@
 ---
 title: Projekt wyliczenia
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - type design guidelines, enumerations
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], enumerations
 - flags enumerations
 ms.assetid: dd53c952-9d9a-4736-86ff-9540e815d545
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ee73e8677ca3fd48f4bb3c94bd4e15c49a564c7
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c3e89567761367ddcd67078b138c15b982a0d666
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="enum-design"></a>Projekt wyliczenia
 Wyliczenia to specjalny rodzaj typu wartości. Istnieją dwa rodzaje wyliczenia: proste Typy wyliczeniowe i flagi wyliczenia.  
@@ -77,7 +77,7 @@ Wyliczenia to specjalny rodzaj typu wartości. Istnieją dwa rodzaje wyliczenia:
   
  **X nie** rozszerzyć <xref:System.Enum?displayProperty=nameWithType> bezpośrednio.  
   
- <xref:System.Enum?displayProperty=nameWithType>specjalny typ służy przez środowisko CLR do tworzenia wyliczenia zdefiniowanych przez użytkownika. Większość języków programowania udostępnia elementu programistycznego, która umożliwia dostęp do tej funkcji. Na przykład w języku C# `enum` — słowo kluczowe jest używane do definiowania wyliczenia.  
+ <xref:System.Enum?displayProperty=nameWithType> specjalny typ służy przez środowisko CLR do tworzenia wyliczenia zdefiniowanych przez użytkownika. Większość języków programowania udostępnia elementu programistycznego, która umożliwia dostęp do tej funkcji. Na przykład w języku C# `enum` — słowo kluczowe jest używane do definiowania wyliczenia.  
   
 <a name="design"></a>   
 ### <a name="designing-flag-enums"></a>Projektowanie wyliczenia flagi  
@@ -87,7 +87,7 @@ Wyliczenia to specjalny rodzaj typu wartości. Istnieją dwa rodzaje wyliczenia:
   
  **ROZWAŻ ✓** dostarczanie wartości wyliczenia specjalne powszechnie używane kombinacji flag.  
   
- Operacje bitowe są zaawansowane koncepcji i nie może być wymagane dla prostych zadań. <xref:System.IO.FileAccess.ReadWrite>jest to przykład specjalna wartość.  
+ Operacje bitowe są zaawansowane koncepcji i nie może być wymagane dla prostych zadań. <xref:System.IO.FileAccess.ReadWrite> jest to przykład specjalna wartość.  
   
  **X należy UNIKAĆ** tworzenia wyliczenia flag gdzie niektórych kombinacji wartości są nieprawidłowe.  
   
@@ -103,9 +103,9 @@ Wyliczenia to specjalny rodzaj typu wartości. Istnieją dwa rodzaje wyliczenia:
   
  Jeśli masz prawdziwe dane dotyczące problemów ze zgodnością aplikacji spowodowane przez dodatki do wyliczenia, należy dodać nowy interfejs API, który zwraca wartości nowym i starym i zastąpić starego interfejsu API, który powinno być kontynuowane zwracanie starych wartości. Daje to pewność, że istniejące aplikacje są zgodne.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/type.md)  

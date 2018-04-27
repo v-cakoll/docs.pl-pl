@@ -1,11 +1,11 @@
 ---
-title: "Serializacja XML z usługami sieci Web XML"
-ms.custom: 
+title: Serializacja XML z usługami sieci Web XML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -23,24 +23,24 @@ helpviewer_keywords:
 - literal XML serialization
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 12ab7f98036f61b0d9100f99ba3fad2388f62210
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: b07d86bbcc646141e067342d5e4340bdc4b39757
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>Serializacja XML z usługami sieci Web XML
-Serializacji XML jest źródłowego transportu mechanizm używany w architekturze usług sieci Web XML przez <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby kontrolować XML wygenerowanych przez usługi XML sieci Web, możesz zastosować atrybuty wymienione w obu [atrybuty że formant serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) i [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) do klasy, zwracanych wartości parametrów i pól plik używany do tworzenia usługi XML sieci Web (.asmx). Aby uzyskać więcej informacji na temat tworzenia usługi XML sieci Web, zobacz [ASP.NET przy użyciu usługi sieci Web XML budynku](http://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
+Serializacji XML jest źródłowego transportu mechanizm używany w architekturze usług sieci Web XML przez <xref:System.Xml.Serialization.XmlSerializer> klasy. Aby kontrolować XML wygenerowanych przez usługi XML sieci Web, możesz zastosować atrybuty wymienione w obu [atrybuty że formant serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) i [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) do klasy, zwracanych wartości parametrów i pól plik używany do tworzenia usługi XML sieci Web (.asmx). Aby uzyskać więcej informacji na temat tworzenia usługi XML sieci Web, zobacz [ASP.NET przy użyciu usługi sieci Web XML budynku](https://msdn.microsoft.com/library/01dfc27c-c68e-4910-a0aa-5e4c2a766b0c).  
   
 ## <a name="literal-and-encoded-styles"></a>Literał i zakodowany stylów  
- XML wygenerowanych przez usługi XML sieci Web mogą być sformatowanych w jeden z dwóch sposobów albo literał lub zakodowane, zgodnie z objaśnieniem w [Dostosowywanie wiadomości SOAP](http://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Dlatego są dwóch zestawów atrybutów, które kontrolują serializacji XML. Atrybuty wymienione w [atrybuty że formant serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) są przeznaczone do sterowania styl literału XML. Atrybuty wymienione w [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) sterujące zakodowanego stylem. Stosując selektywnie tych atrybutów, można dostosować aplikację do zwrócenia jedną lub obie te style. Ponadto te atrybuty mogą dotyczyć (odpowiednio) zwracać wartości i parametry.  
+ XML wygenerowanych przez usługi XML sieci Web mogą być sformatowanych w jeden z dwóch sposobów albo literał lub zakodowane, zgodnie z objaśnieniem w [Dostosowywanie wiadomości SOAP](https://msdn.microsoft.com/library/1d777288-c0d9-4e6a-b638-f010da031952). Dlatego są dwóch zestawów atrybutów, które kontrolują serializacji XML. Atrybuty wymienione w [atrybuty że formant serializacji XML](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md) są przeznaczone do sterowania styl literału XML. Atrybuty wymienione w [atrybuty że formant zakodowane SOAP serializacji](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md) sterujące zakodowanego stylem. Stosując selektywnie tych atrybutów, można dostosować aplikację do zwrócenia jedną lub obie te style. Ponadto te atrybuty mogą dotyczyć (odpowiednio) zwracać wartości i parametry.  
   
 ### <a name="example-of-using-both-styles"></a>Przykład użycia obu style  
  Podczas tworzenia usługi sieci Web XML, można użyć obu zestawów atrybutów na metody. W poniższym przykładzie kodu klasy o nazwie `MyService` zawiera dwie metody usług XML sieci Web, `MyLiteralMethod` i `MyEncodedMethod`. Obie metody wykonywania tej samej funkcji: zwrócenia wystąpienia `Order` klasy. W `Order` klasy <xref:System.Xml.Serialization.XmlTypeAttribute> i <xref:System.Xml.Serialization.SoapTypeAttribute> atrybuty zostaną zastosowane do `OrderID` pola i oba atrybuty ich `ElementName` właściwość o różnych wartościach.  

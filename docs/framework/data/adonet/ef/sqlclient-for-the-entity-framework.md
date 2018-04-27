@@ -1,37 +1,39 @@
 ---
 title: SqlClient Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a5d6d39-d955-43a5-a5c2-931c239398f1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 08f662d41f1a147970ae7611f4fe061dd86bac1f
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient Entity Framework
 W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient), dzięki czemu Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.  
   
 ## <a name="provider-schema-attribute"></a>Atrybut schematu dostawcy  
- `Provider`atrybut `Schema` elementu w języku definicji schematu magazynu (SSDL).  
+ `Provider` atrybut `Schema` elementu w języku definicji schematu magazynu (SSDL).  
   
  Użyj SqlClient, należy przypisać do ciągu "System.Data.SqlClient" `Provider` atrybutu `Schema` elementu.  
   
 ## <a name="providermanifesttoken-schema-attribute"></a>Atrybut schematu ProviderManifestToken  
- `ProviderManifestToken`Wymagany atrybut `Schema` elementu w pliku SSDL. Token ten jest używany załadować manifestu dostawcy dla scenariuszy w trybie offline. Aby uzyskać więcej informacji na temat `ProviderManifestToken` atrybutów, zobacz [elementu schematu (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
+ `ProviderManifestToken` Wymagany atrybut `Schema` elementu w pliku SSDL. Token ten jest używany załadować manifestu dostawcy dla scenariuszy w trybie offline. Aby uzyskać więcej informacji na temat `ProviderManifestToken` atrybutów, zobacz [elementu schematu (SSDL)](http://msdn.microsoft.com/library/fec75ae4-7f16-4421-9265-9dac61509222).  
   
- Klient SQL może służyć jako dostawca danych dla różnych wersji [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Te wersje są dostępne różne możliwości. Na przykład [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] nie obsługuje `varchar(max)` i `nvarchar(max)` typy, które zostały wprowadzone w programie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
+ Klient SQL może służyć jako dostawca danych dla różnych wersji programu SQL Server. Te wersje są dostępne różne możliwości. Na przykład [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)] nie obsługuje `varchar(max)` i `nvarchar(max)` typy, które zostały wprowadzone w programie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)].  
   
  SqlClient tworzy i przyjmuje następujące dostawcy tokenów manifestu dla różnych wersji programu SQL Server.  
   

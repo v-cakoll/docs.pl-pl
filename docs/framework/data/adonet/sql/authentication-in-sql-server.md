@@ -1,36 +1,38 @@
 ---
 title: Uwierzytelnianie programu SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: fa9a23f00e7ce3b52c2ff64c8b22e1b4b8727b97
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1c918df5de4a66c00f6fd9b9dd1719ac05041ce1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="authentication-in-sql-server"></a>Uwierzytelnianie programu SQL Server
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i w trybie mieszanym.  
+SQL Server obsługuje dwa tryby uwierzytelniania, tryb uwierzytelniania systemu Windows i w trybie mieszanym.  
   
--   Uwierzytelnianie systemu Windows jest ustawieniem domyślnym i jest często określany jako zintegrowane zabezpieczenia ponieważ to [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] model zabezpieczeń jest ściśle zintegrowany z systemem Windows. Określonych kont użytkowników i grup systemu Windows są zaufane logować się do programu SQL Server. Nie masz użytkowników systemu Windows, którzy już zostali uwierzytelnieni do prezentowania dodatkowych poświadczeń.  
+-   Uwierzytelnianie systemu Windows jest ustawieniem domyślnym i jest często określany jako zintegrowanych zabezpieczeń, ponieważ ten model zabezpieczeń programu SQL Server jest ściśle zintegrowany z systemem Windows. Określonych kont użytkowników i grup systemu Windows są zaufane logować się do programu SQL Server. Nie masz użytkowników systemu Windows, którzy już zostali uwierzytelnieni do prezentowania dodatkowych poświadczeń.  
   
--   Tryb mieszany obsługuje uwierzytelniania zarówno przez system Windows i przez [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Pary nazwy i hasła użytkowników są obsługiwane w ramach [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+-   Tryb mieszany obsługuje uwierzytelnianie zarówno przez system Windows i program SQL Server. Pary nazwy i hasła użytkowników są obsługiwane w programie SQL Server.  
   
 > [!IMPORTANT]
->  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows, gdy jest to możliwe. Uwierzytelnianie systemu Windows używa szereg zaszyfrowane wiadomości do uwierzytelniania użytkowników w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Gdy [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania są używane, [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] nazwy logowania i hasła są przekazywane w sieci, dzięki czemu ich mniej bezpieczne.  
+>  Firma Microsoft zaleca używanie uwierzytelniania systemu Windows, gdy jest to możliwe. Uwierzytelnianie systemu Windows używa szereg zaszyfrowane wiadomości do uwierzytelniania użytkowników w programie SQL Server. Podczas logowania do programu SQL Server są używane, nazwy logowania programu SQL Server i hasła są przekazywane w sieci, dzięki czemu ich mniej bezpieczne.  
   
- Z uwierzytelnianiem systemu Windows użytkownicy są już zalogowany do systemu Windows i nie trzeba zalogować się oddzielnie do [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie systemu Windows bez konieczności wprowadzania nazwy użytkownika ani hasła.  
+ Z uwierzytelnianiem systemu Windows użytkownicy są już zalogowany do systemu Windows i nie trzeba oddzielnie logowania do programu SQL Server. Następujące `SqlConnection.ConnectionString` Określa uwierzytelnianie systemu Windows bez konieczności wprowadzania nazwy użytkownika ani hasła.  
   
 ```  
 "Server=MSSQL1;Database=AdventureWorks;Integrated Security=true;  
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/17/2018
   
 -   Aplikacji i bazy danych znajdują się na tym samym komputerze.  
   
--   W przypadku korzystania z wystąpienia [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] Express lub LocalDB.  
+-   Używasz wystąpienia programu SQL Server Express lub LocalDB.  
   
  Logowania do programu SQL Server są często używane w następujących sytuacjach:  
   
@@ -57,27 +59,27 @@ ms.lasthandoff: 01/17/2018
 -   Aplikacje internetowe, takich jak [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)].  
   
 > [!NOTE]
->  Określanie uwierzytelniania systemu Windows nie wyłączać [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, aby wyłączyć uprawnieniach [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania.  
+>  Określanie uwierzytelniania systemu Windows nie wyłączać logowania do programu SQL Server. Użyj polecenia ALTER LOGIN Wyłącz [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] instrukcji, aby wyłączyć uprawnieniach logowania programu SQL Server.  
   
 ## <a name="login-types"></a>Typy logowania  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]obsługuje trzy typy logowania:  
+ SQL Server obsługuje trzy typy logowania:  
   
--   Lokalne konto użytkownika systemu Windows lub konto domeny zaufanej. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]zależy od systemu Windows do uwierzytelniania kont użytkowników systemu Windows.  
+-   Lokalne konto użytkownika systemu Windows lub konto domeny zaufanej. Program SQL Server korzysta z systemu Windows do uwierzytelniania kont użytkowników systemu Windows.  
   
 -   Grupy systemu Windows. Udzielanie dostępu do grupy systemu Windows daje dostęp do wszystkich logowania użytkownika do systemu Windows, które są elementami członkowskimi grupy.  
   
--   [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]dane logowania. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]przechowuje nazwę użytkownika i wyznaczania wartości skrótu hasła w bazie danych master, przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
+-   Logowanie do serwera SQL. Program SQL Server przechowuje zarówno nazwa użytkownika oraz skrót hasła w bazie danych master, przy użyciu metody uwierzytelniania wewnętrznego, aby sprawdzić prób logowania.  
   
 > [!NOTE]
->  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]udostępnia logowania utworzone na podstawie certyfikaty lub klucze asymetryczne, które są używane tylko w przypadku podpisywania kodu. Nie można nawiązać połączenia [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+>  Program SQL Server stanowi logowania utworzone na podstawie certyfikaty lub klucze asymetryczne, które są używane tylko w przypadku podpisywania kodu. Ich nie można nawiązać połączenia z programem SQL Server.  
   
 ## <a name="mixed-mode-authentication"></a>Uwierzytelnianie w trybie mieszanym  
- Jeśli należy użyć uwierzytelniania w trybie mieszanym, należy utworzyć [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania, które są przechowywane w programie SQL Server. Następnie trzeba podawać [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] nazwę użytkownika i hasło w czasie wykonywania.  
+ Jeśli należy użyć uwierzytelniania w trybie mieszanym, należy utworzyć logowania do programu SQL Server, które są przechowywane w programie SQL Server. Następnie należy podać nazwę użytkownika serwera SQL i hasło w czasie wykonywania.  
   
 > [!IMPORTANT]
->  [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]Instaluje z [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania o nazwie `sa` (skrót od "administrator systemu"). Przypisz silne hasło, aby `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` Logowania mapowany na `sysadmin` stałej roli serwera, mającej nieodwołalną poświadczeń administracyjnych na całego serwera. Nie ma żadnych limitów w celu potencjalne szkody, jeśli osoba atakująca uzyska dostęp administrator systemu. Wszystkie elementy członkowskie systemu Windows `BUILTIN\Administrators` grupy (grupy administratorów lokalnych) są elementami członkowskimi `sysadmin` roli domyślnie, ale można ją usunąć z tej roli.  
+>  Instaluje program SQL Server z danych logowania SQL Server o nazwie `sa` (skrót od "administrator systemu"). Przypisz silne hasło, aby `sa` logowania i nie używaj `sa` logowania w aplikacji. `sa` Logowania mapowany na `sysadmin` stałej roli serwera, mającej nieodwołalną poświadczeń administracyjnych na całego serwera. Nie ma żadnych limitów w celu potencjalne szkody, jeśli osoba atakująca uzyska dostęp administrator systemu. Wszystkie elementy członkowskie systemu Windows `BUILTIN\Administrators` grupy (grupy administratorów lokalnych) są elementami członkowskimi `sysadmin` roli domyślnie, ale można ją usunąć z tej roli.  
   
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]zawiera mechanizmy zasad haseł systemu Windows [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] logowania, gdy jest uruchomiony na [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszy. Zasady złożoności haseł są przeznaczone do ograniczanie ataków siłowych przez odpowiednie zwiększenie liczby możliwych haseł. [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]można stosować te same zasady złożoności i wygaśnięcia używane w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] do hasła używane wewnątrz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].  
+ Program SQL Server stanowi mechanizmów zasad haseł systemu Windows dla logowania do programu SQL Server uruchomionej [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] lub nowszy. Zasady złożoności haseł są przeznaczone do ograniczanie ataków siłowych przez odpowiednie zwiększenie liczby możliwych haseł. SQL Server można zastosować te same zasady złożoności i wygaśnięcia używane w [!INCLUDE[winxpsvr](../../../../../includes/winxpsvr-md.md)] do hasła używane w programie SQL Server.  
   
 > [!IMPORTANT]
 >  Łączenie ciągów połączenia z danych wejściowych użytkownika może sprawić, że użytkownik narażony na atak iniekcji ciągu połączenia. Użyj <xref:System.Data.SqlClient.SqlConnectionStringBuilder> Aby utworzyć parametry połączenia nieprawidłową składnię w czasie wykonywania. Aby uzyskać więcej informacji, zobacz [Konstruktorzy ciągów połączenia](../../../../../docs/framework/data/adonet/connection-string-builders.md).  
@@ -87,7 +89,7 @@ ms.lasthandoff: 01/17/2018
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Podmioty zabezpieczeń](http://msdn.microsoft.com/library/bb543165.aspx) w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] książki Online|W tym artykule opisano logowania i innych podmiotów zabezpieczeń w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
+|[Podmioty zabezpieczeń](http://msdn.microsoft.com/library/bb543165.aspx) w dokumentacji SQL Server Books Online|Opisuje logowania i innych podmiotów zabezpieczeń w programie SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

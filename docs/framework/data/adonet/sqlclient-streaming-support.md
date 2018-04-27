@@ -1,29 +1,31 @@
 ---
-title: "Obsługa przesyłania strumieniowego SqlClient"
-ms.custom: 
+title: Obsługa przesyłania strumieniowego SqlClient
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: f870bab357db7a425378afcfb0bedd19b0359ce1
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cfa672908248afa951ab3a429e437e0e2c0607c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-streaming-support"></a>Obsługa przesyłania strumieniowego SqlClient
-Obsługa między przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] i aplikacji (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje danych bez struktury przechowywanych na serwerze (pliki dokumentów, obrazy i nośnika). A [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bazy danych można przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.  
+Obsługa między programu SQL Server i aplikacją przesyłania strumieniowego (Nowość w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) obsługuje danych bez struktury przechowywanych na serwerze (pliki dokumentów, obrazy i nośnika). Bazy danych programu SQL Server może przechowywać duże obiekty binarne (BLOB), ale pobieranie obiektów blob może używać dużej ilości pamięci.  
   
- Obsługa przesyłania strumieniowego do i z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] ułatwia pisanie aplikacji, które strumienia danych, bez konieczności pełni ładowania danych do pamięci, co powoduje mniej wyjątki przepełnienie pamięci.  
+ Obsługa do serwera SQL i przesyłania strumieniowego upraszcza pisania aplikacji strumień danych, bez konieczności pełni ładowania danych do pamięci, co powoduje mniej wyjątki przepełnienie pamięci.  
   
  Obsługa przesyłania strumieniowego spowoduje włączenie aplikacji warstwy środkowej skalowania lepsze, szczególnie w sytuacjach, w których obiektów biznesowych nawiązuje połączenie SQL Azure, aby można było wysłać, pobierania i manipulowania dużych obiektów blob.  
   
@@ -32,10 +34,10 @@ Obsługa między przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../
 >   
 >  Elementy członkowskie dodane w celu obsługi przesyłania strumieniowego są używane do pobierania danych z zapytania i do przekazania parametrów do zapytania i procedur składowanych. Funkcja przesyłania strumieniowego adresów podstawowe scenariusze migracji danych i OLTP i ma zastosowanie do w siedzibie firmy i poza migrations.environments danych lokalnych.  
   
-## <a name="streaming-support-from-includessnoversionincludesssnoversion-mdmd"></a>Obsługa przesyłania strumieniowego z[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Obsługa z przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] wprowadzono nowe funkcje w <xref:System.Data.Common.DbDataReader> i <xref:System.Data.SqlClient.SqlDataReader> klas, aby uzyskać <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, i <xref:System.IO.TextReader> obiekty i szybkiego reagowania na.  Te klasy są używane do pobierania danych z zapytania. W związku z tym obsługa z przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] adresów OLTP scenariuszy i ma zastosowanie do lokalnego i środowiska lokalnego.  
+## <a name="streaming-support-from-sql-server"></a>Obsługa przesyłania strumieniowego z programu SQL Server  
+ Obsługa z programu SQL Server przesyłania strumieniowego wprowadzono nową funkcję <xref:System.Data.Common.DbDataReader> i <xref:System.Data.SqlClient.SqlDataReader> klas, aby uzyskać <xref:System.IO.Stream>, <xref:System.Xml.XmlReader>, i <xref:System.IO.TextReader> obiekty i szybkiego reagowania na.  Te klasy są używane do pobierania danych z zapytania. W związku z tym obsługi przesyłania strumieniowego z programu SQL Server adresów OLTP scenariuszy i ma zastosowanie do lokalnego i środowiska lokalnego.  
   
- Następujące składniki zostały dodane do <xref:System.Data.SqlClient.SqlDataReader> Aby włączyć obsługę przesyłania strumieniowego z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Następujące składniki zostały dodane do <xref:System.Data.SqlClient.SqlDataReader> Aby włączyć obsługę przesyłania strumieniowego z programu SQL Server:  
   
 1.  <xref:System.Data.SqlClient.SqlDataReader.IsDBNullAsync%2A>  
   
@@ -49,7 +51,7 @@ Obsługa między przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../
   
 6.  <xref:System.Data.SqlClient.SqlDataReader.GetXmlReader%2A>  
   
- Następujące składniki zostały dodane do <xref:System.Data.Common.DbDataReader> Aby włączyć obsługę przesyłania strumieniowego z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]:  
+ Następujące składniki zostały dodane do <xref:System.Data.Common.DbDataReader> Aby włączyć obsługę przesyłania strumieniowego z programu SQL Server:  
   
 1.  <xref:System.Data.Common.DbDataReader.GetFieldValue%2A>  
   
@@ -57,20 +59,20 @@ Obsługa między przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../
   
 3.  <xref:System.Data.Common.DbDataReader.GetTextReader%2A>  
   
-## <a name="streaming-support-to-includessnoversionincludesssnoversion-mdmd"></a>Obsługa przesyłania strumieniowego do[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- Obsługa do przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] wprowadzono nowe funkcje w <xref:System.Data.SqlClient.SqlParameter> klasy można zaakceptować i reagowania na <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, i <xref:System.IO.TextReader> obiektów. <xref:System.Data.SqlClient.SqlParameter>Służy do przekazania parametrów do zapytania i procedur składowanych.  
+## <a name="streaming-support-to-sql-server"></a>Obsługa przesyłania strumieniowego z programem SQL Server  
+ Obsługa do programu SQL Server przesyłania strumieniowego wprowadza nowe funkcje w <xref:System.Data.SqlClient.SqlParameter> klasy można zaakceptować i reagowania na <xref:System.Xml.XmlReader>, <xref:System.IO.Stream>, i <xref:System.IO.TextReader> obiektów. <xref:System.Data.SqlClient.SqlParameter> Służy do przekazania parametrów do zapytania i procedur składowanych.  
   
  Usuwanie <xref:System.Data.SqlClient.SqlCommand> obiektu lub wywołania <xref:System.Data.SqlClient.SqlCommand.Cancel%2A> musi Anuluj operację przesyłania strumieniowego. Jeśli aplikacja wyśle <xref:System.Threading.CancellationToken>, anulowania nie jest gwarantowana.  
   
  Następujące <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> będzie akceptować typy <xref:System.Data.SqlClient.SqlParameter.Value%2A> z <xref:System.IO.Stream>:  
   
--   **Binarne**  
+-   **Binary**  
   
 -   **VarBinary**  
   
  Następujące <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> będzie akceptować typy <xref:System.Data.SqlClient.SqlParameter.Value%2A> z <xref:System.IO.TextReader>:  
   
--   **Char**  
+-   **char**  
   
 -   **NChar**  
   
@@ -80,11 +82,11 @@ Obsługa między przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../
   
  **Xml** <xref:System.Data.SqlClient.SqlParameter.SqlDbType%2A> typu będzie akceptować <xref:System.Data.SqlClient.SqlParameter.Value%2A> z <xref:System.Xml.XmlReader>.  
   
- <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A>można zaakceptować wartości typu <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, i <xref:System.IO.Stream>.  
+ <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> można zaakceptować wartości typu <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, i <xref:System.IO.Stream>.  
   
  <xref:System.Xml.XmlReader>, <xref:System.IO.TextReader>, I <xref:System.IO.Stream> obiektu będą przekazywane do wartości zdefiniowane przez <xref:System.Data.SqlClient.SqlParameter.Size%2A>.  
   
-## <a name="sample----streaming-from-includessnoversionincludesssnoversion-mdmd"></a>Przykładowe — Przesyłanych strumieniowo z[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-from-sql-server"></a>Przykładowe — Przesyłania strumieniowego z programu SQL Server  
  Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenia przykładowej bazy danych:  
   
 ```  
@@ -108,13 +110,13 @@ GO
   
 -   Należy unikać blokowania wątku interfejsu użytkownika zapewniając asynchroniczne można odzyskać dużych plików.  
   
--   Transfer dużych tekstu pliku z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transfer plików duży z programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transfer dużych plików XML z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transfer dużych plików XML z programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Pobierz dane z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+-   Pobieranie danych z programu SQL Server.  
   
--   Transferu dużych plików (BLOB) z jedną [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bazy danych na inny bez uruchamiania za mało pamięci.  
+-   Transferu dużych plików (BLOB) z bazy danych programu SQL Server na inny bez uruchamiania za mało pamięci.  
   
 ```  
 using System;  
@@ -305,7 +307,7 @@ namespace StreamingFromServer {
 }  
 ```  
   
-## <a name="sample----streaming-to-includessnoversionincludesssnoversion-mdmd"></a>Przykładowe — Przesyłania strumieniowego[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
+## <a name="sample----streaming-to-sql-server"></a>Przykładowe — Przesyłania strumieniowego z programem SQL Server  
  Należy użyć następującego [!INCLUDE[tsql](../../../../includes/tsql-md.md)] do tworzenia przykładowej bazy danych:  
   
 ```  
@@ -329,9 +331,9 @@ GO
   
  Przykładzie pokazano, jak wykonać następujące czynności:  
   
--   Transfer dużych obiektów BLOB do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transfer dużych obiektów BLOB z programem SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
--   Transferowanie pliku tekstowego duży do [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
+-   Transferowanie pliku tekstowego dużych do programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 -   Do transferowania dużych obiektów BLOB przy użyciu nowej funkcji asynchronicznej.  
   
@@ -339,7 +341,7 @@ GO
   
 -   Anulowanie transfer dużych obiektów BLOB.  
   
--   Przesyłanie strumieniowe z jednego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do drugiego za pomocą nowej funkcji asynchronicznej.  
+-   Przy użyciu nowej funkcji asynchronicznego przesyłania strumieniowego z jednego serwera SQL.  
   
 ```  
 using System;  
@@ -461,8 +463,8 @@ namespace StreamingToServer {
 }  
 ```  
   
-## <a name="sample----streaming-from-one-includessnoversionincludesssnoversion-mdmd-to-another-includessnoversionincludesssnoversion-mdmd"></a>Przykładowe — Strumienia z jednej [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do innego[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]  
- W tym przykładzie pokazano, jak asynchronicznie strumienia dużych obiektów BLOB z jednego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do innego, z obsługą anulowania.  
+## <a name="sample----streaming-from-one-sql-server-to-another-sql-server"></a>Przykładowe — Przesyłania strumieniowego z jednego serwera SQL do innego serwera SQL  
+ W tym przykładzie pokazano, jak asynchronicznie strumienia dużych obiektów BLOB z jednego serwera SQL na inny, obsługa anulowania.  
   
 ```  
 using System;  

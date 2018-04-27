@@ -1,7 +1,7 @@
 ---
 title: Krotki (F#)
-description: "Więcej informacji na temat F # krotki, grupowanie bez nazwy, ale uporządkowanej wartości, prawdopodobnie różnych typów."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+description: 'Więcej informacji na temat F # krotki, grupowanie bez nazwy, ale uporządkowanej wartości, prawdopodobnie różnych typów.'
+keywords: 'Visual f #, f #, funkcjonalności programowania'
 author: cartermp
 ms.author: phcart
 ms.date: 05/16/2016
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 35069073-9a82-410f-8dea-912e2a152e6d
-ms.openlocfilehash: 996566f2baaea8ab01e5c80e53caea82e9684714
-ms.sourcegitcommit: d95a91d685565f4d95c8773b558752864a6a3d7e
+ms.openlocfilehash: e0a5e5eb08e13bd5cbe9f88a47d4cf4bba19ea22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tuples"></a>Krotki
 
@@ -89,7 +89,7 @@ int * float * string
 
 ## <a name="interoperation-with-c-tuples"></a>Współdziałanie z krotek C#
 
-Do języka C# 7 wprowadza spójnych kolekcji.  Spójne kolekcje w języku C# są struktury i odpowiadające krotek struktury w języku F #.  Współdziałanie z C#, należy użyć krotek struktury.
+C# 7.0 wprowadzono spójnych kolekcji dla języka.  Spójne kolekcje w języku C# są struktury i odpowiadające krotek struktury w języku F #.  Współdziałanie z C#, należy użyć krotek struktury.
 
 Jest to łatwo zrobić.  Załóżmy, że trzeba przekazać krotka do klasy C# i korzystać z jej wynik, który jest także spójnych kolekcji:
 
@@ -130,7 +130,7 @@ Spójne kolekcje są kompilowane w obiektach jednego z kilku typów ogólnych, w
 
 ### <a name="compiled-form-of-struct-tuples"></a>Skompilowanej postaci krotek — struktura
 
-Struktura krotek (na przykład `struct (x, y)`), są różni się od krotek odwołania.  Są one kompilowane do <xref:System.ValueTuple> typu przeciążony przez argumentów lub liczba parametrów typu.  Są równoważne [C# 7 krotek](../../csharp/tuples.md) i [krotek 2017 Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)oraz współpraca dwukierunkowo.
+Struktura krotek (na przykład `struct (x, y)`), są różni się od krotek odwołania.  Są one kompilowane do <xref:System.ValueTuple> typu przeciążony przez argumentów lub liczba parametrów typu.  Są równoważne [krotek 7.0 C#](../../csharp/tuples.md) i [krotek 2017 Visual Basic](../../visual-basic/programming-guide/language-features/data-types/tuples.md)oraz współpraca dwukierunkowo.
 
 ## <a name="see-also"></a>Zobacz też
 [Dokumentacja języka F#](index.md)

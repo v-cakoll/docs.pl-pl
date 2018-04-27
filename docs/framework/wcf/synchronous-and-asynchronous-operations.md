@@ -1,12 +1,13 @@
 ---
 title: Operacje synchroniczne i asynchroniczne
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3d108c8c84af2563e48a9f339df2a96f8218c742
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 123186dd5f0d63693c04c0857709292ce122f918
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>Operacje synchroniczne i asynchroniczne
 W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchronicznego.  
   
- Wiele aplikacji asynchroniczne wywoływanie metody, ponieważ umożliwia to aplikacji kontynuować pracy przydatne podczas wywołania metody. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]usługi i klienci mogą uczestniczyć w wywołania operacji asynchronicznej na dwóch różnych poziomach aplikacji, które zawierają [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji nawet większą elastyczność i możliwość zmaksymalizować przepustowość zrównoważone interakcji.  
+ Wiele aplikacji asynchroniczne wywoływanie metody, ponieważ umożliwia to aplikacji kontynuować pracy przydatne podczas wywołania metody. [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi i klienci mogą uczestniczyć w wywołania operacji asynchronicznej na dwóch różnych poziomach aplikacji, które zawierają [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji nawet większą elastyczność i możliwość zmaksymalizować przepustowość zrównoważone interakcji.  
   
 ## <a name="types-of-asynchronous-operations"></a>Typy operacji asynchronicznych  
- Wszystkie usługi umów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bez względu na typy parametrów i wartości zwracane, użyj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] atrybutów, aby określić konkretnego wymiany komunikatów między klientem a usługą. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]automatycznie kieruje komunikaty przychodzące i wychodzące z operacją odpowiednią usługę lub wykonywanie kodu klienta.  
+ Wszystkie usługi umów [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], bez względu na typy parametrów i wartości zwracane, użyj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] atrybutów, aby określić konkretnego wymiany komunikatów między klientem a usługą. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatycznie kieruje komunikaty przychodzące i wychodzące z operacją odpowiednią usługę lub wykonywanie kodu klienta.  
   
  Klient ma tylko kontraktu usługi, która określa wymiany komunikatów dla określonej operacji. Klienci zaoferować dewelopera dowolnego modelu programowania, które decydują, tak długo, jak zaobserwowano podstawowej wymiany komunikatów. Tak zbyt, usługi zaimplementować operacji w jakikolwiek sposób tak długo, jak zaobserwowano wzorzec określonego komunikatu.  
   
@@ -53,7 +55,7 @@ W tym temacie omówiono Implementowanie i wywoływanie operacji usługi asynchro
   
 -   Jeśli są wywoływania operacji strony ASP.NET, użyj stron asynchronicznego.  
   
--   Jeśli są wywoływania operacji z dowolnej aplikacji, która jest pojedynczym wątków, takie jak formularze systemu Windows lub [!INCLUDE[avalon1](../../../includes/avalon1-md.md)]. Korzystając z oparty na zdarzeniach asynchroniczne wywołanie modelu, zdarzenie wynik jest wywoływane w wątku interfejsu użytkownika, dodawanie czas odpowiedzi aplikacji bez konieczności się obsługiwać wiele wątków.  
+-   Jeśli są wywoływanie operacji z poziomu dowolnej aplikacji, która jest pojedynczym wątku, takie jak formularze systemu Windows lub Windows Presentation Foundation (WPF). Korzystając z oparty na zdarzeniach asynchroniczne wywołanie modelu, zdarzenie wynik jest wywoływane w wątku interfejsu użytkownika, dodawanie czas odpowiedzi aplikacji bez konieczności się obsługiwać wiele wątków.  
   
 -   Ogólnie rzecz biorąc Jeśli masz wybór między wywołania synchroniczne i asynchroniczne, wybierz wywołania asynchronicznego.  
   

@@ -1,5 +1,5 @@
 ---
-title: "short (odwołanie w C#)"
+title: short (odwołanie w C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - short keyword [C#]
 ms.assetid: 04c10688-e51a-4a87-bfec-83f7fb42ff11
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8ca3c5444c4fa7a49b7169be3e2a5b15d1a72207
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f73189891ecb52b81cfc1861a19194113ab2c32
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="short-c-reference"></a>short (odwołanie w C#)
 
-`short`Określa typ całkowite danych, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
+`short` Określa typ całkowite danych, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
 |Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
 |----------|-----------|----------|-------------------------|  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literały  
 
-Można zadeklarować i zainicjuj `short` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od C# 7) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `short` (to znaczy, jeśli jest mniejszy niż <xref:System.Int16.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int16.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
+Można zadeklarować i zainicjuj `short` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `short` (to znaczy, jeśli jest mniejszy niż <xref:System.Int16.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.Int16.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
 
 W poniższym przykładzie liczb całkowitych równa 1,034, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są niejawnie konwertowane z [int](../../../csharp/language-reference/keywords/int.md) do `short` wartości.  
   
@@ -39,7 +39,7 @@ W poniższym przykładzie liczb całkowitych równa 1,034, które są reprezento
 > [!NOTE] 
 > Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu.
 
-Począwszy od C# 7, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
  - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
 

@@ -1,24 +1,26 @@
 ---
 title: Trwa pobieranie i modyfikowanie danych ADO.NET
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ff937e619d449fbfbedb234749292b6acc4bdf50
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 05760e7295606f700f72e5a3af14e395bcc5d820
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>Trwa pobieranie i modyfikowanie danych ADO.NET
 Podstawową funkcją dowolnej aplikacji bazy danych jest połączenie ze źródłem danych i pobierania danych, które zawiera. Dostawcy danych .NET Framework ADO.NET służyć jako mostka między aplikacją a źródłem danych, co umożliwia wykonanie polecenia oraz do pobierania danych przy użyciu **DataReader** lub **element DataAdapter** . Funkcji klucza dowolnej aplikacji bazy danych jest możliwość aktualizacji są przechowywane w bazie danych. W ADO.NET, aktualizowanie danych polega na użyciu **element DataAdapter** i <xref:System.Data.DataSet>, i **polecenia** obiektów; i może również obejmować przy użyciu transakcji.  
@@ -43,7 +45,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest połączenie ze źród�
  Zawiera tematy opisujące jak wykonywać transakcje lokalne transakcje rozproszone i pracować z optymistycznej współbieżności.  
   
  [Pobieranie tożsamości lub wartości automatycznych numerów](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
- Przykład mapowania wartości wygenerowany dla **tożsamości** kolumny w [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] tabeli lub **automatycznie numerowane** pola w tabeli programu Microsoft Access z kolumną zawierającą wstawionego wiersza w tabeli. W tym artykule omówiono scalania wartości tożsamości w `DataTable`.  
+ Przykład mapowania wartości wygenerowany dla **tożsamości** kolumny w tabeli programu SQL Server lub do **automatycznie numerowane** pola w tabeli programu Microsoft Access z kolumną zawierającą wstawionego wiersza w tabeli. W tym artykule omówiono scalania wartości tożsamości w `DataTable`.  
   
  [Pobieranie danych binarnych](../../../../docs/framework/data/adonet/retrieving-binary-data.md)  
  Opisuje sposób pobrać dane binarne lub struktury dużej ilości danych przy użyciu `CommandBehavior`.`SequentialAccess` Aby zmodyfikować domyślne zachowanie `DataReader`.  
@@ -67,7 +69,7 @@ Podstawową funkcją dowolnej aplikacji bazy danych jest połączenie ze źród�
  W tym artykule opisano [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] obsługę programowania asynchronicznego.  
   
  [Obsługa przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md)  
- W tym artykule omówiono sposób pisania aplikacji, które strumienia danych z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bez konieczności jej pełni załadowanych do pamięci.  
+ W tym artykule omówiono sposób do pisania aplikacji strumienia danych z programu SQL Server bez konieczności jego w pełni załadowanych do pamięci.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Mapowanie typu danych w ADO.NET](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  

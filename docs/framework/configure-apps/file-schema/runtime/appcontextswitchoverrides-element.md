@@ -1,7 +1,7 @@
 ---
 title: '&lt;AppContextSwitchOverrides&gt; — Element'
 ms.custom: ''
-ms.date: 03/28/2018
+ms.date: 04/19/2018
 ms.prod: .net-framework
 ms.technology:
 - dotnet-bcl
@@ -19,16 +19,16 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a17d67a1c6143897802bb15b983a9a909fd5949c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 146416a9872a8444316c2e4a754067b82030a81d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ltappcontextswitchoverridesgt-element"></a>&lt;AppContextSwitchOverrides&gt; — Element
 Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext> klasy, aby zapewnić mechanizm rezygnacji z nowych funkcji.  
   
- \<configuration>  
+ \<Konfiguracja >  
  \<runtime>  
 \<AppContextSwitchOverrides>  
   
@@ -80,6 +80,7 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.Drawing.Printing.`</br>`OptimizePrintPreview`|Formanty czy wydajność <xref:System.Windows.Forms.PrintPreviewDialog> jest zoptymalizowana pod kątem drukarek sieciowych. Aby uzyskać więcej informacji, zobacz [printpreviewdialog — informacje o formancie](../../../winforms/controls/printpreviewdialog-control-overview-windows-forms.md).|.NET Framework 4.6|
 |`Switch.System.Globalization.NoAsyncCurrentCulture`|Określa, czy operacje asynchroniczne nie przepływać z kontekstu wywołania wątku. Aby uzyskać więcej informacji, zobacz [CurrentCulture i CurrentUICulture przepływ między zadania](~/docs/framework/migration-guide/retargeting/4.5.2-4.6.md#currentculture-and-currentuiculture-flow-across-tasks).|.NET Framework 4.6|  
 |`Switch.System.IdentityModel.`<br/>`DisableMultipleDNSEntriesInSANCertificate`|Formanty czy <xref:System.IdentityModel.Claims.X509CertificateClaimSet.FindClaims%2A?displayProperty=nameWithType> metoda próbuje dopasować typ oświadczenia tylko w przypadku ostatni wpis DNS. Aby uzyskać więcej informacji, zobacz [środki zaradcze: metoda X509CertificateClaimSet.FindClaims](~/docs/framework/migration-guide/mitigation-x509certificateclaimset-findclaims-method.md).|.NET Framework 4.6.1|  
+|`Switch.System.IdentityModel.`<br/>`EnableCachedEmptyDefaultAuthorizationContext`|Określa, czy zezwalać AuthorizationContext.Empty do zwrócenia obiektu modyfikowalnego.|.NET Framework 4.6|  
 |`Switch.System.IO.BlockLongPaths`|Formanty czy ścieżki przekracza `MAX_PATH` throw (260 znaków) <xref:System.IO.PathTooLongException>. Aby uzyskać więcej informacji, zobacz [długa ścieżka pomocy technicznej](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#long-path-support).|.NET Framework 4.6.2|  
 |`Switch.System.IO.Compression.ZipFile.`<br/>`UseBackslash`|Używa kreska ułamkowa odwrócona ("\\") zamiast ukośnika ("/") jako separatora ścieżki w <xref:System.IO.Compression.ZipArchiveEntry.FullName%2A?displayProperty=nameWithType> właściwości. Aby uzyskać więcej informacji, zobacz [środki zaradcze: separatora ścieżki ZipArchiveEntry.FullName](~/docs/framework/migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md).|.NET Framework 4.6.1|  
 |`Switch.System.IO.Ports.`<br/>`DoNotCatchSerialStreamThreadExceptions`|Określa, czy działania systemu wyjątki, które są generowane na wątki w tle utworzonych za pomocą <xref:System.IO.Ports.SerialPort> strumieni zakończenie procesu.|.NET Framework 4.7.1| 
@@ -100,10 +101,13 @@ Definiuje co najmniej jeden przełącznik używany przez <xref:System.AppContext
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|Określa, czy `TransportWithMessageCredential` tryb zabezpieczeń umożliwia wiadomości z niepodpisany "nagłówek do". Jest to przełącznik opcjonalnych. Aby uzyskać więcej informacji, zobacz [zmiany środowiska uruchomieniowego w programie .NET Framework 4.6.1](https://msdn.microsoft.com/library/mt592686.aspx#WCF).|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|Formanty czy <xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})> zgłasza konstruktora <xref:System.ArgumentException> po spełnieniu jednego z elementów `null`.|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|Określa, czy certyfikaty próbę użycia X509 z dostawcy magazynu kluczy CSG zgłasza wyjątek. Aby uzyskać więcej informacji, zobacz [zabezpieczeń transportu WCF obsługuje certyfikaty przechowywane przy użyciu CNG](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng).|.NET Framework 4.6.1|
+|`Switch.System.ServiceModel.`<br/>`DisableExplicitConnectionCloseHeader`|Jeśli używasz transportu HTTP z własnym hostowana usługa, ustawienie wartości `true` powoduje, że usługi WCF do ignorowania Dodawanie aplikacji `Connection: close` nagłówka do nagłówków odpowiedzi na żądanie. Ustawienie tej wartości na `false` umożliwia dodawanie `Connection: close` nagłówka do nagłówków odpowiedzi, co powoduje zamknięcie żądania gniazda po wysłaniu odpowiedzi.|.NET Framework 4.6|
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|Obsługuje zakleszczenie wynikających z ograniczenia wystąpień usługi współużytkowane do pojedynczego wątku wykonania naraz.|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|Wraz z programem `Switch.System.Net.DontEnableSchUseStrongCrypto`, określa, czy zabezpieczenia wiadomości WCF używa protokołu TLS 1.1 i TLS 1.2.|.NET framework 4.7 |    
+|`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|Wartość `false` ustawia domyślną konfigurację, aby system operacyjny wybrać protokół. Wartość `true` ustawia domyślne protokołu najwyższy dostępny. (Ta funkcja jest dostępna również na obsługi gałęzi poprzednich wersji framework)|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|Określa, czy komunikat domyślny algorytm wiadomości usługi MSMQ w programie WCF podpisywania jest algorytm SHA1 lub SHA256.|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|Określa, czy WCF używa SHA1 lub skrót SHA256 w celu generowania losowego nazw dla nazwanych potoków.|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|Określa, czy ma zostać zgłoszony [NullReferenceException](xref:System.NullReferenceException) gdy komunikat o wyjątku ma wartość null.|.NET framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|Określa, czy wyjątki zgłaszane podczas uruchamiania usługi są propagowane do wywołującego <xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType> metody.|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Określa, czy Windows Presentation Foundation stosuje algorytm stary (`true`) lub nowego algorytmu (`false`) w przydzielania miejsca, aby \*-kolumn. Aby uzyskać więcej informacji, zobacz [środki zaradcze: przydzielenie miejsca na formancie siatki kolumnom gwiazdkę](Mitigation:%20Grid%20Control's%20Space%20Allocation%20to%20Star-columns.md). |.NET framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|Formanty czy selektora lub kartę formant zawsze aktualizuje wartość jego właściwości wybranej wartości przed zgłoszeniem zaznaczenie zdarzenia zmiany.|.NET Framework 4.7.1|

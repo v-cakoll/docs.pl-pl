@@ -1,6 +1,6 @@
 ---
 title: Docelowych platform
-description: "Więcej informacji na temat platformy docelowej dla aplikacji .NET Core i bibliotek."
+description: Więcej informacji na temat platformy docelowej dla aplikacji .NET Core i bibliotek.
 author: richlander
 ms.author: mairaw
 ms.date: 09/22/2017
@@ -11,11 +11,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 838f4f6d78b4544a538e9c4bd6c487bcc731270b
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e9f47647a1d4dc82b2df2ea8905f8d0a1e705b96
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="target-frameworks"></a>Docelowych platform
 
@@ -47,7 +47,7 @@ Platforma docelowa jest zwykle przywoływany przez TFM. W poniższej tabeli prze
 | -------------------------- | --- |
 | .NET standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
 | .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0 |
-| .NET Framework             | net11<br>net20<br>Net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471 |
 | Sklep Windows              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -124,7 +124,7 @@ Następujące struktury docelowej są przestarzałe. Pakietów przeznaczonych dl
 
 | Przestarzałe TFM                                                                             | Zastąpienie |
 | ------------------------------------------------------------------------------------------ | ----------- |
-| aspnet50<br>aspnetcore50<br>dnxcore50<br>DNX<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
+| aspnet50<br>aspnetcore50<br>dnxcore50<br>dnx<br>dnx45<br>dnx451<br>dnx452                  | netcoreapp  |
 | DotNet<br>dotnet50<br>dotnet51<br>dotnet52<br>dotnet53<br>dotnet54<br>dotnet55<br>dotnet56 | krótkich nazw netstandard |
 | netcore50                                                                                  | uap10.0     |
 | win                                                                                        | netcore45   |
@@ -141,4 +141,4 @@ Następujące struktury docelowej są przestarzałe. Pakietów przeznaczonych dl
 [Przechowywanie wersji programu .NET core](~/docs/core/versions/index.md)  
 [repozytorium GitHub DotNet/standard](https://github.com/dotnet/standard)  
 [Repozytorium GitHub narzędzia NuGet](https://github.com/joelverhagen/NuGetTools)  
-[Profile Framework w .NET](http://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)
+[Profile Framework w .NET](https://blog.stephencleary.com/2012/05/framework-profiles-in-net.html)

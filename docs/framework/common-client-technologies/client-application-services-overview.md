@@ -1,30 +1,32 @@
 ---
-title: "Przegląd usług aplikacji klienta"
-ms.custom: 
+title: Przegląd usług aplikacji klienta
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, classes
 - client application services, about client application services
 ms.assetid: f0a2da13-e282-4fd7-88a1-f9102c9aeab1
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55b4ab154f9f3a9b17274697c30ca826218322ab
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="client-application-services-overview"></a>Przegląd usług aplikacji klienta
-Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług profilu w aplikacjach formularzy systemu Windows i Windows Presentation Foundation (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)]usługi aplikacji znajdują się w Microsoft ASP.NET 2.0 AJAX rozszerzeń, które jest dołączana do [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] i [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows.  
+Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług profilu w aplikacjach formularzy systemu Windows i Windows Presentation Foundation (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji znajdują się w Microsoft ASP.NET 2.0 AJAX rozszerzeń, które jest dołączana do [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] i [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows.  
   
  Usługi aplikacji klienta obejmują dostawców usług klienta, które Podłącz do modelu rozszerzalności usług sieci Web, aby umożliwić następujące funkcje dla aplikacji systemu Windows:  
   
@@ -59,7 +61,7 @@ Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_shor
  Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi ról, zobacz [przy użyciu ról informacji o Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Ustawienia  
- Usługi aplikacji klienta można użyć do pobierania ustawień aplikacji użytkownika z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Usługi aplikacji klienta funkcja ustawień sieci Web integruje się z funkcją ustawień aplikacji dostępnych w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Aby pobrać ustawienia sieci Web, należy najpierw Generowanie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) projektu za pomocą **ustawienia** na karcie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta projektu. Na **ustawienia** kartę, można użyć **ustawień sieci Web obciążenia** przycisk, aby pobrać ustawienia sieci Web i dodaj je do wygenerowanej `Settings` klasy. Można użyć ustawień sieci Web skonfigurowana do użycia przez wszystkich użytkowników uwierzytelnionych lub wszyscy użytkownicy anonimowi.  
+ Usługi aplikacji klienta można użyć do pobierania ustawień aplikacji użytkownika z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Usługi aplikacji klienta funkcja ustawień sieci Web integruje się z funkcją ustawień aplikacji dostępnych w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Aby pobrać ustawienia sieci Web, należy najpierw Generowanie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) projektu za pomocą **ustawienia** na karcie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta projektu. Na **ustawienia** kartę, można użyć **ustawień sieci Web obciążenia** przycisk, aby pobrać ustawienia sieci Web i dodaj je do wygenerowanej `Settings` klasy. Można użyć ustawień sieci Web skonfigurowana do użycia przez wszystkich użytkowników uwierzytelnionych lub wszyscy użytkownicy anonimowi.  
   
  Aby uzyskać więcej informacji na temat ustawień aplikacji, zobacz [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informacje na temat implementowania własne ustawienia klasy zamiast generowania w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], zobacz [porady: Tworzenie ustawień aplikacji](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi, zobacz [przy użyciu informacji o profilu z Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   

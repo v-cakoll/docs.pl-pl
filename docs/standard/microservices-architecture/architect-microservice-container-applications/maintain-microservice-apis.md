@@ -1,7 +1,7 @@
 ---
-title: "Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3aaa7eaa8bc535874369cf08414f2211cae1bed9
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 7a80405f0a206cfaa0462392eddfc95878353cd7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>Tworzenie, rozwijającymi i przechowywanie wersji mikrousługi interfejsów API i kontrakty
 
@@ -33,10 +33,10 @@ Na koniec, w przypadku korzystania z architektury REST [hipermedialnych](https:/
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Scott Hanselman. Przechowywanie wersji interfejsu API sieci Web RESTful Core ASP.NET łatwe**
-    <http://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
+-   **Scott Hanselman. Przechowywanie wersji interfejsu API RESTful sieci Web platformy ASP.NET Core prosty**
+    <https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx>
 
--   **Przechowywanie wersji interfejs API sieci web RESTful**
+-   **Przechowywanie wersji interfejs API RESTful sieci web**
     [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 -   **Fielding Royowi. Przechowywanie wersji, hipermedialnych i REST**

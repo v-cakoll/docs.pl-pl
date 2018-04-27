@@ -1,21 +1,21 @@
 ---
-title: "Pojęcia dotyczące serializacji"
+title: Pojęcia dotyczące serializacji
 ms.date: 08/07/2017
 ms.prod: .net
 ms.topic: article
 ms.assetid: e1ff4740-20a1-4c76-a8ad-d857db307054
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 84bb6b4d80d59a09a1daa808cbfed60c2464ec19
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 038e150e167da62c7e67d59eb1f460237851ed87
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="serialization-concepts"></a>Pojęcia dotyczące serializacji
 Dlaczego czy chcesz użyć serializacji? Dwie najważniejsze przyczyny są, aby zachować stan obiektu na nośniku, dokładna kopia może zostać ponownie utworzone na późniejszym etapie, a aby wysłać obiekt przez wartość z domeny w jednej aplikacji na inny. Na przykład serializacji służy do zapisywania stanu sesji w programie ASP.NET i skopiować obiekty do Schowka w formularzach systemu Windows. On również używany łącząc do przekazywania obiektów przez wartość z domeny jedną aplikację do innego.
@@ -38,7 +38,7 @@ Gdy obiekt jest pochodną `MarshalByRefObject`, odwołanie do obiektu jest przek
  [Serializacja binarna](../../../docs/standard/serialization/binary-serialization.md)  
  Opisuje mechanizm serializacji binarnej, który jest dołączony do aparatu PLików wykonywalnych języka wspólnego.  
   
- [Obiekty zdalnego](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
+ [Obiekty zdalnego](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)  
  Opis różnych metod komunikacji dostępnych w programie .NET Framework do komunikacji zdalnej.  
   
  [Serializacja XML i SOAP](../../../docs/standard/serialization/xml-and-soap-serialization.md)  

@@ -1,11 +1,12 @@
 ---
-title: "Zadeklarowane nazwy elementów (Visual Basic)"
-ms.custom: 
+title: Zadeklarowane nazwy elementów (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - declared elements [Visual Basic], case sensitivity
@@ -29,20 +30,20 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 22595eff2509d3954b3ce9d5038b19a681fbfbbe
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: ad883dd8e1de419c74b5bcdb8762994e762b4cf7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="declared-element-names-visual-basic"></a>Zadeklarowane nazwy elementów (Visual Basic)
 Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyli w kodzie użyto odwoływanie się do niego.  
   
 ## <a name="rules"></a>Reguły  
- Nazwa elementu w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] musi być zgodna z poniższymi regułami:  
+ Nazwa elementu w języku Visual Basic musi być zgodna z poniższymi regułami:  
   
 -   Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
   
@@ -79,18 +80,18 @@ Każdy element zadeklarowane ma nazwę, nazywany również *identyfikator*, czyl
  Z drugiej strony nie należy tak krótki, że nie można ją było właściwie opisano reprezentuje element i jak kod używający nazwę. Jest to ważne w przypadku czytelność kodu. Jeśli ktoś próbuje go zrozumieć lub samodzielnie poszukujesz go przez długi czas, po jego zapisano, nazwy odpowiednich elementów można zapisać znaczną ilość czasu.  
   
 ## <a name="escaped-names"></a>Nazwy wyjścia  
- Ogólnie rzecz biorąc, nazwa elementu musi pasuje do żadnego słowa zastrzeżone przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], takich jak `Case` lub `Friend`. Można jednak zdefiniować *zmieniona nazwa*, która jest ujęta w nawiasy klamrowe (`[ ]`). Nazwa zmienionym może pasować dowolny [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] — słowo kluczowe, ponieważ nawiasy usunąć niejednoznaczność. Można również użyć nawiasów, w przypadku odwoływania się do nazwy w dalszej części kodu.  
+ Ogólnie rzecz biorąc, nazwa elementu nie może być dopasowana dowolnego słowa zastrzeżone w języku Visual Basic, takie jak `Case` lub `Friend`. Można jednak zdefiniować *zmieniona nazwa*, która jest ujęta w nawiasy klamrowe (`[ ]`). Nazwa zmienionym może dopasować słowa kluczowego języka Visual Basic, ponieważ nawiasy usunąć niejednoznaczność. Można również użyć nawiasów, w przypadku odwoływania się do nazwy w dalszej części kodu.  
   
  Ogólnie rzecz biorąc, należy użyć nazwy wyjścia tylko wtedy, gdy:  
   
--   Kod został zmigrowany z poprzedniej wersji [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] słowa kluczowego jako nazwy; nie rezerwa lub  
+-   Kod został zmigrowany z poprzedniej wersji programu Visual Basic, który nie zarezerwować słowa kluczowego jako nazwy; lub  
   
 -   Pracujesz kod napisany w innym języku, w którym dane słowo kluczowe nie jest zarezerwowana.  
   
  W przeciwnym razie należy rozważyć, jeśli jego nazwa powoduje konflikt ze słowem kluczowym, zmiana nazwy elementu. Zintegrowane środowisko programistyczne (IDE) zapewnia prosty sposób w tym celu. Aby uzyskać więcej informacji, zobacz [Refactoring](/visualstudio/vb-ide/refactoring-vb).  
   
 ## <a name="case-sensitivity-in-names"></a>Uwzględniana wielkość liter w nazwach  
- Nazwy elementu w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest rozróżniana wielkość liter. Oznacza to, że gdy kompilator porównuje dwie nazwy, które różnią się od litery alfabetu tylko wielkością liter, jego interpretuje je jako takiej samej nazwie. Na przykład traktuje `ABC` i `abc` do odwoływania się do tego samego elementu zadeklarowane.  
+ Nazwy elementów w języku Visual Basic jest rozróżniana wielkość liter. Oznacza to, że gdy kompilator porównuje dwie nazwy, które różnią się od litery alfabetu tylko wielkością liter, jego interpretuje je jako takiej samej nazwie. Na przykład traktuje `ABC` i `abc` do odwoływania się do tego samego elementu zadeklarowane.  
   
  Środowisko uruchomieniowe języka wspólnego (CLR) nie korzysta jednak powiązania z uwzględnieniem wielkości liter. W związku z tym podczas tworzenia zestawu lub biblioteki DLL i był dostępny do innych zestawów nazwy nie są już bez uwzględniania wielkości liter. Na przykład można zdefiniować klasę z element o nazwie `ABC`, i innych zestawów użyć klasy przez środowisko uruchomieniowe języka wspólnego, ich musi odwoływać się do elementu jako `ABC`. Jeśli są później ponownie skompilowana, klasy i Zmień nazwę elementu, aby `abc`, innych zestawów przy użyciu klasy nie może uzyskać dostępu do tego elementu. W związku z tym po zwolnieniu zaktualizowanej wersji zestawu, nie należy zmieniać w przypadku alfabetyczne żadnych publicznych elementów.  
   

@@ -1,29 +1,30 @@
 ---
-title: "Różne typy danych (Visual Basic)"
-ms.custom: 
+title: Różne typy danych (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b6bb86bb6d203aa4e6bdded27a4cb78a8155ddec
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: f80aacccab4c215b3e3917cc73097080aa6b9941
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>Różne typy danych (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia kilka typów danych, które nie są zorientowanych w kierunku cyfry lub znaki. Zamiast tego mają do czynienia specjalne dane takie jak tak/nie wartości, wartości daty/godziny i adresy obiektu.  
+Visual Basic dostarcza kilku typów danych, które nie są zorientowanych w kierunku cyfr lub znaków. Zamiast tego mają do czynienia specjalne dane takie jak tak/nie wartości, wartości daty/godziny i adresy obiektu.  
   
- Dla Tabela zawierająca porównanie side-by-side [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] , zobacz [typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
+ Aby uzyskać tabelę przedstawiającą porównanie side-by-side typy danych Visual Basic, zobacz [typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md).  
   
 ## <a name="boolean-type"></a>Typ Boolean  
  [— Typ danych logicznych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md) jest wartość bez znaku, który jest interpretowany jako `True` lub `False`. Szerokość danych zależy od platformy implementującej. Jeśli zmienna może zawierać tylko dwa wartości, takie jak PRAWDA/FAŁSZ tak/nie lub Włącz/Wyłącz, Zadeklaruj ją jako `Boolean`.  
@@ -40,8 +41,8 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Znaki typu](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)  
- [Podstawowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Numeryczne typy danych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
+ [Typy danych podstawowych](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
+ [Typy danych liczbowych](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)  
  [Znakowe typy danych](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
  [Wczesne i późne powiązania](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)

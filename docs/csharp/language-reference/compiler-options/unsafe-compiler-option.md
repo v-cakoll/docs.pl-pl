@@ -1,6 +1,6 @@
 ---
 title: -unsafe (opcje kompilatora C#)
-ms.date: 07/20/2015
+ms.date: 04/25/2018
 ms.prod: .net
 ms.technology:
 - devlang-csharp
@@ -11,15 +11,13 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.assetid: fdb77ed9-da03-45bd-bb7f-250704da1bcc
-caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b253a9ddafead823480f9893e809f17b6c22a179
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 35868923ed2f34587c66f04395324489e8b36538
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (opcje kompilatora C#)
 **-Unsafe** — opcja kompilatora umożliwia kodu korzystającego z [niebezpieczne](../../../csharp/language-reference/keywords/unsafe.md) — słowo kluczowe do skompilowania.  
@@ -41,6 +39,16 @@ ms.lasthandoff: 01/19/2018
   
 3.  Wybierz **Zezwalaj niebezpieczny kod** pole wyboru.  
   
+### <a name="to-add-this-option-in-a-csproj-file"></a>Aby dodać tę opcję w plik csproj
+
+Otwórz pliku .csproj dla projektu i dodaj następujące elementy:
+
+```xml
+  <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+```
+
  Aby dowiedzieć się, jak ustawić tę opcję kompilatora programowo, zobacz <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>.  
   
 ## <a name="example"></a>Przykład  

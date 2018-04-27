@@ -15,18 +15,18 @@ ms.assetid: b0b21730-298c-47e6-9a2f-cc81f628067b
 caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7074206baa51259592cca3fdc224d99438791f9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 620453d140e3d4ba2ee468e5bf087df6deb9aad4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-language-features"></a>Funkcje języka Visual Basic
-Poniższe tematy przedstawienie i omówienie podstawowych składników [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], zorientowany obiektowo język programowania. Po utworzeniu aplikacji przy użyciu formularzy i kontrolek interfejsu użytkownika, należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku nowoczesny język programowania, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje szereg typowych narzędzi programistycznych i elementy języka.  
+Poniższe tematy przedstawienie i omówienie niezbędne składniki Visual Basic, zorientowany obiektowo język programowania. Po utworzeniu aplikacji przy użyciu formularzy i kontrolek interfejsu użytkownika, należy napisać kod, który definiuje zachowanie aplikacji. Podobnie jak w przypadku dowolnego nowoczesny język programowania Visual Basic obsługuje wielu typowych narzędzi programistycznych i elementy języka.  
   
- Jeśli użytkownik ma zaprogramowane w innych językach, znacznie materiału opisanych w tej sekcji mogą wydawać się zapoznać. Podczas gdy większość składników są podobne do tych w innych językach charakter sterowane zdarzeniami [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wprowadza pewne niewielkie różnice.  
+ Jeśli użytkownik ma zaprogramowane w innych językach, znacznie materiału opisanych w tej sekcji mogą wydawać się zapoznać. Większość składników są podobne do tych w innych językach, rodzaj sterowane zdarzeniami Visual Basic wprowadza pewne niewielkie różnice.  
   
- Jeśli dopiero zaczynasz do programowania, materiałów w tej sekcji służy jako wprowadzenie do podstawowych bloków konstrukcyjnych dla pisania kodu. Po zrozumieniu podstaw można tworzyć zaawansowane aplikacje przy użyciu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Jeśli dopiero zaczynasz do programowania, materiałów w tej sekcji służy jako wprowadzenie do podstawowych bloków konstrukcyjnych dla pisania kodu. Po zrozumieniu podstaw możesz utworzyć zaawansowane aplikacje przy użyciu języka Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
@@ -47,13 +47,13 @@ Poniższe tematy przedstawienie i omówienie podstawowych składników [!INCLUDE
  [Zadeklarowane elementy](../../../visual-basic/programming-guide/language-features/declared-elements/index.md)  
  Obejmuje programowania można zadeklarować elementów, ich nazwy i właściwości, oraz jak kompilator usuwa odwołania do nich.  
   
- [Obiekty delegowane](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
+ [Delegaci](../../../visual-basic/programming-guide/language-features/delegates/index.md)  
  Wprowadzenie do obiektów delegowanych i sposób ich użycia w języku Visual Basic.  
   
  [Wczesne i późne powiązania](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  Opis powiązania, które jest wykonywane przez kompilator, gdy obiekt jest przypisany do zmiennej obiektu i różnice między obiektami z wczesnym wiązaniem i późnym wiązaniem.  
   
- [Error — typy](../../../visual-basic/programming-guide/language-features/error-types.md)  
+ [Typy błędów](../../../visual-basic/programming-guide/language-features/error-types.md)  
  Zawiera omówienie błędy składni, błędy środowiska wykonawczego i błędy logiczne.  
   
  [Zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md)  
@@ -91,4 +91,4 @@ Poniższe tematy przedstawienie i omówienie podstawowych składników [!INCLUDE
  Opisano niektóre typy kolekcji, które znajdują się w programie .NET Framework. Pokazuje, jak używać prostych kolekcji i kolekcji par klucz/wartość.  
   
  [Dokumentacja języka Visual Basic](../../../visual-basic/language-reference/index.md)  
- Zawiera informacje dotyczące różnych aspektów [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programowania.
+ Zawiera informacje dotyczące różnych aspektów programowania w języku Visual Basic.

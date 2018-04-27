@@ -1,27 +1,29 @@
 ---
-title: "Połączenie z serwerem SQL buforowanie (ADO.NET)"
-ms.custom: 
+title: Połączenie z serwerem SQL buforowanie (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 497ebbd573ea05568010485f04f08cdeddbf6041
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c0be63e767255508ac93555a503980f3798e70c0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>Połączenie z serwerem SQL buforowanie (ADO.NET)
 Łączenie z serwerem bazy danych zazwyczaj składa się z kilku kroków czasochłonna. Kanału fizycznego, takie jak gniazda lub nazwanego potoku należy ustalić, musi nastąpić początkowego uzgadniania z serwerem, musi zostać przeanalizowany informacje o parametrach połączenia, połączenie musi zostać uwierzytelniony przez serwer, kontroli musi zostać uruchomione dla rejestrowanie w Bieżąca transakcja i tak dalej.  
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/17/2018
   
  Pula połączeń zmniejsza liczbę razy, które muszą być otwarte nowe połączenia. *Pulę* zachowuje własność fizycznego połączenia. Zarządza połączeń przy zachowaniu aktywności zestaw aktywnych połączeń dla każdej konfiguracji danego połączenia. Zawsze, gdy użytkownik wywołuje `Open` połączenia i pulę szuka dostępnych połączeń w puli. Jeśli w puli połączeń jest dostępny, zwraca go do obiektu wywołującego, zamiast Otwieranie nowego połączenia. Gdy aplikacja wywołuje `Close` połączenia i pulę zwraca go do puli zestawów aktywnych połączeń zamiast jego zamknięciem. Gdy połączenie jest zwracany do puli, po wykonaniu tych czynności można użyć ponownie przy następnym `Open` wywołania.  
   
- Tylko połączenia z taką samą konfigurację można puli. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]zapewnia wiele pul w tym samym czasie, po jednej dla każdej konfiguracji. Połączenia są podzielone na pule przez ciąg połączenia i tożsamości systemu Windows, gdy jest używane zintegrowane zabezpieczenia. Połączenia są również puli według tego, czy są zarejestrowane w transakcji. Korzystając z <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> wystąpienie ma wpływ na puli połączeń. Różnych wystąpień <xref:System.Data.SqlClient.SqlCredential> użyje pule innego połączenia, nawet jeśli identyfikator użytkownika i hasło są takie same.  
+ Tylko połączenia z taką samą konfigurację można puli. [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] zapewnia wiele pul w tym samym czasie, po jednej dla każdej konfiguracji. Połączenia są podzielone na pule przez ciąg połączenia i tożsamości systemu Windows, gdy jest używane zintegrowane zabezpieczenia. Połączenia są również puli według tego, czy są zarejestrowane w transakcji. Korzystając z <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A>, <xref:System.Data.SqlClient.SqlCredential> wystąpienie ma wpływ na puli połączeń. Różnych wystąpień <xref:System.Data.SqlClient.SqlCredential> użyje pule innego połączenia, nawet jeśli identyfikator użytkownika i hasło są takie same.  
   
  Tworzenie puli połączeń może znacznie zwiększyć wydajność i skalowalność aplikacji. Domyślnie buforowanie połączeń jest włączone w [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]. Chyba że jawnie wyłączyć ją, pulę optymalizuje połączenia otwarte i zamknięte w aplikacji. Może też podawać wiele modyfikatorów ciąg połączenia kontrolowanie zachowania buforowania połączeń. Aby uzyskać więcej informacji zobacz "Kontrolowanie połączenia buforowanie ze słowami kluczowymi parametrów połączenia" w dalszej części tego tematu.  
   
@@ -78,13 +80,13 @@ using (SqlConnection connection = new SqlConnection(
  Pulę połączeń spełnia żądań połączeń przez ponowne przydzielanie połączeń po ich wydaniu do puli. Jeśli został osiągnięty maksymalny rozmiar puli i nie można używać połączenie nie jest dostępne, żądanie jest przechowywane w kolejce. Pulę próbuje odzyskać wszystkie połączenia, aż do osiągnięcia limitu czasu (wartość domyślna wynosi 15 sekund). Jeśli pulę nie może spełnić żądania, zanim upłynie limit czasu połączenia, jest zwracany wyjątek.  
   
 > [!CAUTION]
->  Zdecydowanie zaleca się zawsze zamknąć połączenie po zakończeniu używa go, tak aby połączenie zostanie zwrócony do puli. Można to zrobić za pomocą `Close` lub `Dispose` metody `Connection` obiektu lub przez otwarcie wszystkich połączeń wewnątrz `using` instrukcji w języku C# lub `Using` instrukcji w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]. Połączenia, które nie są jawnie zamknięty, nie może dodać lub zwrócony do puli. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](~/docs/csharp/language-reference/keywords/using-statement.md) lub [porady: usuwanie zasobu systemu](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) dla [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)].  
+>  Zdecydowanie zaleca się zawsze zamknąć połączenie po zakończeniu używa go, tak aby połączenie zostanie zwrócony do puli. Można to zrobić za pomocą `Close` lub `Dispose` metody `Connection` obiektu lub przez otwarcie wszystkich połączeń wewnątrz `using` instrukcji w języku C# lub `Using` instrukcji w języku Visual Basic. Połączenia, które nie są jawnie zamknięty, nie może dodać lub zwrócony do puli. Aby uzyskać więcej informacji, zobacz [za pomocą instrukcji](~/docs/csharp/language-reference/keywords/using-statement.md) lub [porady: usuwanie zasobu systemu](~/docs/visual-basic/programming-guide/language-features/control-flow/how-to-dispose-of-a-system-resource.md) dla języka Visual Basic.  
   
 > [!NOTE]
 >  Nie wywołuj `Close` lub `Dispose` na `Connection`, `DataReader`, lub innego obiektu zarządzanego w `Finalize` metody klasy. W finalizator zwolnić tylko niezarządzane zasoby, które bezpośrednio należą do klasy. Jeśli klasa nie ma żadnych niezarządzanych zasobów, nie dołączaj `Finalize` metody w definicji klasy. Aby uzyskać więcej informacji, zobacz [wyrzucanie elementów bezużytecznych](../../../../docs/standard/garbage-collection/index.md).  
   
 > [!NOTE]
->  Zdarzenia logowania i wylogowywania nie zostanie wygenerowany na serwerze, gdy połączenie jest pobranych z lub zwrócony do puli połączeń. Jest tak, ponieważ połączenie nie jest w rzeczywistości zamknięte zwracanie do puli połączeń. Aby uzyskać więcej informacji, zobacz [klasa zdarzeń inspekcji logowania](http://msdn2.microsoft.com/library/ms190260.aspx) i [klasa zdarzeń inspekcji wylogowania](http://msdn2.microsoft.com/library/ms175827.aspx) w [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] — książki Online.  
+>  Zdarzenia logowania i wylogowywania nie zostanie wygenerowany na serwerze, gdy połączenie jest pobranych z lub zwrócony do puli połączeń. Jest tak, ponieważ połączenie nie jest w rzeczywistości zamknięte zwracanie do puli połączeń. Aby uzyskać więcej informacji, zobacz [klasa zdarzeń inspekcji logowania](http://msdn2.microsoft.com/library/ms190260.aspx) i [klasa zdarzeń inspekcji wylogowania](http://msdn2.microsoft.com/library/ms175827.aspx) w dokumentacji SQL Server — książki Online.  
   
 ## <a name="removing-connections"></a>Usuwanie połączenia  
  Pulę połączeń usuwa połączenie z puli, po był bezczynny około 4-8 minut lub jeśli pulę wykryje, że zostały Przerwano połączenie z serwerem. Należy pamiętać, że ODCIĘTA połączenia można wykryć tylko po próbie do komunikowania się z serwerem. Jeśli połączenie zostanie znaleziony, który nie jest już połączony z serwerem, jest oznaczony jako nieprawidłowy. Nieprawidłowy połączenia zostaną usunięte z puli połączeń, tylko wtedy, gdy są one zamknięte lub odzyskać.  
@@ -92,7 +94,7 @@ using (SqlConnection connection = new SqlConnection(
  Jeśli istnieje połączenie z serwerem nie zniknie, to połączenie można nakreślić z puli, nawet jeśli pulę połączeń nie wykryto połączenia ODCIĘTA i nie ona oznaczona jako niepoprawna. Jest to możliwe, ponieważ korzyści pulę powodując innego obiegu do serwera występuje wyeliminować koszty sprawdzanie, czy połączenie jest nadal ważny. W takiej sytuacji pierwsza próba połączenia z wykryje połączenia zostały oddzielone, czy jest zgłaszany wyjątek.  
   
 ## <a name="clearing-the-pool"></a>Wyczyszczenie puli  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0 wprowadzono dwie nowe metody Wyczyść puli: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> i <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools`Czyści pul połączeń dla danego dostawcy i `ClearPool` czyści puli połączeń, który jest skojarzony z określonego połączenia. W przypadku połączeń używana w momencie wywołania one są odpowiednio oznaczone. Po zamknięciu, są ignorowane zamiast zwracanych do puli.  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 wprowadzono dwie nowe metody Wyczyść puli: <xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> i <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>. `ClearAllPools` Czyści pul połączeń dla danego dostawcy i `ClearPool` czyści puli połączeń, który jest skojarzony z określonego połączenia. W przypadku połączeń używana w momencie wywołania one są odpowiednio oznaczone. Po zamknięciu, są ignorowane zamiast zwracanych do puli.  
   
 ## <a name="transaction-support"></a>Obsługa transakcji  
  Połączenia są pobierane z puli i przypisane transakcji na podstawie kontekstu. O ile `Enlist=false` określono w parametrach połączenia puli połączeń upewnia się, że połączenie jest zarejestrowane w <xref:System.Transactions.Transaction.Current%2A> kontekstu. Gdy połączenie jest zamknięte i zwrócony do puli z zarejestrowane `System.Transactions` transakcji, jest ustawiona Odłóż w taki sposób, że następne żądania dla tej puli połączeń z tym samym `System.Transactions` transakcji zwróci tego samego połączenia, jeśli jest dostępna. Jeśli takie żądania, a nie ma dostępnych żadnych puli połączeń, połączenie jest od nietransakcyjnej częścią puli i zarejestrowany. Jeśli żadne połączenia są dostępne w każdym obszarze puli, nowe połączenie jest tworzony i zarejestrowany.  
@@ -111,7 +113,7 @@ using (SqlConnection connection = new SqlConnection(
 ### <a name="pool-fragmentation-due-to-many-databases"></a>Fragmentacja puli z powodu wielu baz danych  
  Usługodawcy internetowi obsługiwać kilka witryn sieci Web na jednym serwerze. Aby potwierdzić logowania uwierzytelniania formularzy, a następnie otworzyć połączenia z określoną bazą danych dla tego użytkownika lub grupy użytkowników mogą używać pojedynczej bazy danych. Połączenie z bazą danych uwierzytelniania jest buforowany i korzystanie z niej. Istnieje jednak oddzielne puli połączeń dla każdej bazy danych, które zwiększyć liczbę połączeń z serwerem.  
   
- Dotyczy to również efekt uboczny projektowania aplikacji. Istnieje stosunkowo proste sposób, aby uniknąć tego efektu ubocznego bez naruszania zabezpieczeń, gdy połączysz się [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Zamiast połączenie z oddzielnej bazy danych dla każdego użytkownika lub grupy, nawiązać połączenia z tej samej bazy danych na serwerze, a następnie wykonaj [!INCLUDE[tsql](../../../../includes/tsql-md.md)] użycie instrukcji, aby zmienić żądanej bazy danych. Poniższy fragment kodu pokazano tworzenie początkowego połączenia `master` bazy danych, a następnie przechodząc do żądanej bazy danych określonej w `databaseName` zmiennej ciągu.  
+ Dotyczy to również efekt uboczny projektowania aplikacji. Istnieje stosunkowo proste sposób, aby uniknąć tego efektu ubocznego bez naruszania zabezpieczeń podczas łączenia z programem SQL Server. Zamiast połączenie z oddzielnej bazy danych dla każdego użytkownika lub grupy, nawiązać połączenia z tej samej bazy danych na serwerze, a następnie wykonaj [!INCLUDE[tsql](../../../../includes/tsql-md.md)] użycie instrukcji, aby zmienić żądanej bazy danych. Poniższy fragment kodu pokazano tworzenie początkowego połączenia `master` bazy danych, a następnie przechodząc do żądanej bazy danych określonej w `databaseName` zmiennej ciągu.  
   
 ```vb  
 ' Assumes that command is a valid SqlCommand object and that  
@@ -136,7 +138,7 @@ using (SqlConnection connection = new SqlConnection(
 ```  
   
 ## <a name="application-roles-and-connection-pooling"></a>Role aplikacji i użycia puli połączeń  
- Po [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] roli aplikacji został aktywowany przez wywołanie metody `sp_setapprole` procedury składowanej systemu, nie można zresetować to połączenie w kontekście zabezpieczeń. Jednak jeśli buforowanie jest włączone, połączenie jest zwracana do puli, a błąd występuje, gdy zostanie ponownie użyty puli połączeń. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy, "[błędów roli aplikacji SQL z puli zasobów OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
+ Po programu SQL Server roli aplikacji został aktywowany przez wywołanie metody `sp_setapprole` procedury składowanej systemu, nie można zresetować to połączenie w kontekście zabezpieczeń. Jednak jeśli buforowanie jest włączone, połączenie jest zwracana do puli, a błąd występuje, gdy zostanie ponownie użyty puli połączeń. Aby uzyskać więcej informacji, zobacz artykuł bazy wiedzy, "[błędów roli aplikacji SQL z puli zasobów OLE DB](http://support.microsoft.com/default.aspx?scid=KB;EN-US;Q229564)."  
   
 ### <a name="application-role-alternatives"></a>Alternatywy roli aplikacji  
  Zaleca się, że możesz korzystać z mechanizmów zabezpieczeń korzystających zamiast ról aplikacji. Aby uzyskać więcej informacji, zobacz [tworzenia ról aplikacji w programie SQL Server](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md).  

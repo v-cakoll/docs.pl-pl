@@ -1,7 +1,7 @@
 ---
-title: "Nowości w języku C# 7 — przewodnik C#"
-description: "Omówienie nowe funkcje dostępne w kolejnych wersji języka C# 7."
-keywords: "C# .NET, .NET Core, najnowsze funkcje nowości"
+title: Nowości w języku C# 7.0 — przewodnik C#
+description: Omówienie nowe funkcje dostępne w kolejnych wersji języka C# 7.
+keywords: C# .NET, .NET Core, najnowsze funkcje nowości
 author: BillWagner
 ms.author: wiwagn
 ms.date: 12/21/2016
@@ -10,15 +10,15 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 374ac9917464a7e83566440abab10eda8a9c8683
-ms.sourcegitcommit: 32172ca05d5dcce7ef3d327b9c8639c736e0fe2b
+ms.openlocfilehash: 1951c60ee11d0d5c4856f5f92eee8ba690b11f8d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="whats-new-in-c-7"></a>Nowości w języku C# 7
+# <a name="whats-new-in-c-70"></a>Nowości w języku C# w wersji 7.0
 
-C# 7 dodano wiele nowych funkcji języka C#:
+C# 7.0 dodano wiele nowych funkcji języka C#:
 * [`out` zmienne](#out-variables)
     - Można zadeklarować `out` wartości wbudowanego jako argumenty do metody, gdzie są używane.
 * [Krotki](#tuples)
@@ -88,8 +88,8 @@ C# udostępnia bogate składni dla klas i struktur, służący do wyjaśnienia z
 Pola nie zostaną sprawdzone, a nie można definiować własnych metod
 
 > [!NOTE]
-> Krotki były dostępne przed C# 7, ale zostały nieefektywne i miał Brak obsługi language.
-> Oznacza to, że spójnej kolekcji elementów może być przywoływany tylko jako `Item1`, `Item2` i tak dalej. C# 7 wprowadzono obsługę języka krotek, dzięki czemu semantycznego nazwy pól krotka przy użyciu typów nowe, bardziej wydajne spójnej kolekcji.
+> Krotki były dostępne przed 7.0 C#, ale zostały nieefektywne i miał Brak obsługi language.
+> Oznacza to, że spójnej kolekcji elementów może być przywoływany tylko jako `Item1`, `Item2` i tak dalej. C# w wersji 7.0 wprowadzono obsługę języka krotek, dzięki czemu semantycznego nazwy pól krotka przy użyciu typów nowe, bardziej wydajne spójnej kolekcji.
 
 Krotka można utworzyć przez przypisanie każdego elementu członkowskiego do wartości:
 
@@ -131,9 +131,6 @@ Deklaracja metody zawiera nazwy pól spójnej kolekcji, która jest zwracana. Po
 Może to być razy, aby rozpakować elementów członkowskich spójnej kolekcji, które zostały zwrócone z metody.  Możesz to zrobić przez deklarowania zmiennych osobne dla każdej wartości w spójnej kolekcji. Ta metoda jest wywoływana *deconstructing* spójnej kolekcji:
 
 [!code-csharp[CallingWithDeconstructor](../../../samples/snippets/csharp/new-in-7/program.cs#10_CallingWithDeconstructor "Deconstructing a tuple")]
-
-<!-- Add wildcards here, if they are in C# 7
--->
 
 Można też podać podobne deconstruction dla każdego typu w .NET. Jest to realizowane przez zapisywanie `Deconstruct` metodę jako element członkowski klasy. Czy `Deconstruct` metoda zapewnia zbiór `out` argumenty dla każdej właściwości, które mają zostać wyodrębnione. Należy wziąć pod uwagę to `Point` klasy, która zapewnia metodę deconstructor wyodrębnia `X` i `Y` współrzędne:
 
@@ -327,7 +324,7 @@ Można zastosować tę samą metodę z `async` metod, aby upewnić się, że wyn
 
 ## <a name="more-expression-bodied-members"></a>Zabudowanych wyrażenia elementów członkowskich
 
-C# 6 wprowadzone [zabudowanych wyrażenia elementów członkowskich](csharp-6.md#expression-bodied-function-members) dla funkcji Członkowskich i właściwości tylko do odczytu. C# 7 rozszerza dozwolonych elementów członkowskich, które można zaimplementować jako wyrażenia. W języku C# 7, można zaimplementować *konstruktorów*, *finalizatory*, i `get` i `set` metody dostępu na *właściwości* i *indeksatorów* . Poniższy kod przedstawia przykłady każdego z nich:
+C# 6 wprowadzone [zabudowanych wyrażenia elementów członkowskich](csharp-6.md#expression-bodied-function-members) dla funkcji Członkowskich i właściwości tylko do odczytu. C# 7.0 rozszerza dozwolonych elementów członkowskich, które można zaimplementować jako wyrażenia. W języku C# w wersji 7.0, można zaimplementować *konstruktorów*, *finalizatory*, i `get` i `set` metody dostępu na *właściwości* i *indeksatorów* . Poniższy kod przedstawia przykłady każdego z nich:
 
 [!code-csharp[ExpressionBodiedMembers](../../../samples/snippets/csharp/new-in-7/expressionmembers.cs#36_ExpressionBodiedEverything "new expression-bodied members")]
 
@@ -338,7 +335,7 @@ Nowe lokalizacje dla członków zabudowanych wyrażenie reprezentuje ważne punk
 
 ## <a name="throw-expressions"></a>Wyrażenia throw
 
-W języku C# `throw` zawsze było instrukcję. Ponieważ `throw` jest instrukcję nie wyrażenia, zostały C# konstrukcje, których nie można go. Uwzględniane są wyrażenia warunkowe null wyrażenia łączącego i niektóre wyrażenia lambda. Dodawanie członków zabudowanych wyrażenie dodaje więcej lokalizacji gdzie `throw` byłoby wyrażenia. Aby mogły zapisywać żadnego z tych konstrukcji, C# 7 wprowadzono *wyrażenia throw*.
+W języku C# `throw` zawsze było instrukcję. Ponieważ `throw` jest instrukcję nie wyrażenia, zostały C# konstrukcje, których nie można go. Uwzględniane są wyrażenia warunkowe null wyrażenia łączącego i niektóre wyrażenia lambda. Dodawanie członków zabudowanych wyrażenie dodaje więcej lokalizacji gdzie `throw` byłoby wyrażenia. Aby mogły zapisywać żadnego z tych konstrukcji, C# w wersji 7.0 wprowadzono *wyrażenia throw*.
 
 Składnia jest taki sam, jak zawsze była używana dla `throw` instrukcje. Jedyną różnicą jest to, że teraz można umieścić je w nowej lokalizacji, takich jak w wyrażeniu warunkowym:
 
@@ -376,7 +373,7 @@ Zgodnie z wszystkie zalecenia wydajności, należy pytanie obie wersje przed wpr
 
 ## <a name="numeric-literal-syntax-improvements"></a>Ulepszenia składni literału liczbowego
 
-Stałe numeryczne misreading może utrudnić zrozumienie kodu podczas odczytywania go po raz pierwszy. To często występuje, gdy te liczby są używane jako maski bitowej lub innych symboliczne zamiast wartości liczbowych. C# 7 zawiera dwa nowe funkcje ułatwiające zapisu liczb w najbardziej czytelne sposób z przeznaczeniem: *binarne literały*, i *separatory cyfr*.
+Stałe numeryczne misreading może utrudnić zrozumienie kodu podczas odczytywania go po raz pierwszy. To często występuje, gdy te liczby są używane jako maski bitowej lub innych symboliczne zamiast wartości liczbowych. C# 7.0 zawiera dwie nowe funkcje ułatwiające zapisu liczb w najbardziej czytelne sposób z przeznaczeniem: *binarne literały*, i *separatory cyfr*.
 
 Podczas tworzenia maski bitowej lub zawsze, gdy to binarna reprezentacja liczby czasów powoduje kodu najbardziej do odczytu, zapisu tego numeru w binarnym:
 

@@ -1,24 +1,26 @@
 ---
-title: "Serwer i ról bazy danych w programie SQL Server"
-ms.custom: 
+title: Serwer i ról bazy danych w programie SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 5482dfdb-e498-4614-8652-b174829eed13
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1a9d8de6b3302684bd8769b7b1baaebedefb649c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b650c61a8d3d0b457bc9d5232c613d47f36ccbfc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="server-and-database-roles-in-sql-server"></a>Serwer i ról bazy danych w programie SQL Server
 Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzięki czemu można przypisać uprawnienia do roli lub grupy użytkowników, a nie dla poszczególnych użytkowników. Stały server i bazy danych mają ustalony zbiór przypisane im uprawnienia.  
@@ -27,9 +29,9 @@ Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzi
  Role serwera stałej ma ustalony zbiór uprawnień i zakres całego serwera. Są one przeznaczone do użytku podczas administrowania programu SQL Server i nie można zmienić uprawnienia przypisane do nich. Logowania można przypisać do ról serwera bez konieczności konto użytkownika w bazie danych.  
   
 > [!IMPORTANT]
->  `sysadmin` Stałej roli serwera obejmuje wszystkie inne role i ma nieograniczonego zakresu. Nie należy dodawać podmiotów zabezpieczeń do tej roli, chyba że są wysoce zaufanych. `sysadmin`Członkowie roli mają nieodwołalną uprawnienia administracyjne na wszystkich baz danych serwera i zasobów.  
+>  `sysadmin` Stałej roli serwera obejmuje wszystkie inne role i ma nieograniczonego zakresu. Nie należy dodawać podmiotów zabezpieczeń do tej roli, chyba że są wysoce zaufanych. `sysadmin` Członkowie roli mają nieodwołalną uprawnienia administracyjne na wszystkich baz danych serwera i zasobów.  
   
- Dodawanie użytkowników do ról serwera, zachować ostrożność. Na przykład `bulkadmin` roli umożliwia użytkownikom Wstaw zawartość z dowolnego pliku lokalnego do tabeli, które mogłyby zagrozić integralności danych. Zobacz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] — książki Online, aby uzyskać pełną listę ról serwera i uprawnienia.  
+ Dodawanie użytkowników do ról serwera, zachować ostrożność. Na przykład `bulkadmin` roli umożliwia użytkownikom Wstaw zawartość z dowolnego pliku lokalnego do tabeli, które mogłyby zagrozić integralności danych. Zobacz SQL Server — książki Online, aby uzyskać pełną listę ról serwera i uprawnienia.  
   
 ## <a name="fixed-database-roles"></a>Stałe role bazy danych  
  Stałe role bazy danych zostały wstępnie zdefiniowany zestaw uprawnień, które są zaprojektowane, aby umożliwić łatwe zarządzanie grupy uprawnień. Elementy członkowskie `db_owner` rola może wykonać wszystkie czynności dotyczące konfiguracji i konserwacji na bazie danych.  
@@ -38,8 +40,8 @@ Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzi
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Role na poziomie serwera](http://msdn.microsoft.com/library/ms188659.aspx) i [uprawnienia ról serwera](http://msdn.microsoft.com/library/ms175892.aspx) w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] książki Online|W tym artykule opisano role serwera i uprawnienia skojarzone z nimi w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
-|[Role bazy danych na poziomie](http://msdn.microsoft.com/library/ms189121.aspx) i [uprawnienia bazy danych](http://msdn.microsoft.com/library/ms189612.aspx) w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] książki Online|Opisuje bazy danych i skojarzone z nimi uprawnienia|  
+|[Role na poziomie serwera](http://msdn.microsoft.com/library/ms188659.aspx) i [uprawnienia ról serwera](http://msdn.microsoft.com/library/ms175892.aspx) w dokumentacji SQL Server Books Online|W tym artykule opisano role serwera i uprawnienia skojarzone z nimi w programie SQL Server.|  
+|[Role bazy danych na poziomie](http://msdn.microsoft.com/library/ms189121.aspx) i [uprawnienia bazy danych](http://msdn.microsoft.com/library/ms189612.aspx) w dokumentacji SQL Server Books Online|Opisuje bazy danych i skojarzone z nimi uprawnienia|  
   
 ## <a name="database-roles-and-users"></a>Role bazy danych i użytkowników  
  Nazwy logowania muszą być zamapowane do kont użytkowników bazy danych do pracy z obiektami bazy danych. Bazy danych można następnie można dodać użytkowników do ról bazy danych dziedziczy wszystkie zestawy uprawnień skojarzonych z tymi rolami. Mogą być przyznawane wszystkie uprawnienia.  
@@ -53,7 +55,7 @@ Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzi
  `dbo`, Lub bazy danych właściciela, to konto użytkownika, który ma niejawnego uprawnienia do wykonywania wszystkich działań w bazie danych. Elementy członkowskie `sysadmin` stałej roli serwera są automatycznie mapowane na `dbo`.  
   
 > [!NOTE]
->  `dbo`jest także nazwa schematu, zgodnie z opisem w [własności i oddzielenie użytkowników schematu w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
+>  `dbo` jest także nazwa schematu, zgodnie z opisem w [własności i oddzielenie użytkowników schematu w programie SQL Server](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md).  
   
  `dbo` Konto użytkownika jest często pomylić z `db_owner` stałej roli bazy danych. Zakres `db_owner` jest bazą danych; zakres `sysadmin` jest całego serwera. Członkostwo w grupie `db_owner` rola przyznaje `dbo` uprawnienia użytkownika.  
   
@@ -70,7 +72,7 @@ Wszystkie wersje programu SQL Server, użyj opartej na rolach zabezpieczeń, dzi
 |Zasób|Opis|  
 |--------------|-----------------|  
 |[Tożsamości i kontroli dostępu](http://msdn.microsoft.com/library/bb510418.aspx) w dokumentacji SQL Server Books Online|Zawiera linki do tematów opisujących podmiotów zabezpieczeń, ról, poświadczenia, zabezpieczanych obiektów i uprawnienia.|  
-|[Podmioty zabezpieczeń](http://msdn.microsoft.com/library/ms181127.aspx) w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] książki Online|Zawiera opis głównych i zawiera linki do tematów opisujących ról serwera i bazy danych.|  
+|[Podmioty zabezpieczeń](http://msdn.microsoft.com/library/ms181127.aspx) w dokumentacji SQL Server Books Online|Zawiera opis głównych i zawiera linki do tematów opisujących ról serwera i bazy danych.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

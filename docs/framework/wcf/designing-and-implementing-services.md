@@ -1,28 +1,28 @@
 ---
-title: "Projektowanie i implementowanie usług"
-ms.custom: 
+title: Projektowanie i implementowanie usług
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-caps.latest.revision: 
+caps.latest.revision: 37
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b6d5a2dfb4db1d57f60e4c7f8cf3300b766402e1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 9b954a8ac4f8507b095eb97d0724095cecc7b75b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="designing-and-implementing-services"></a>Projektowanie i implementowanie usług
 W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umów. Kontrakt usługi określa punkt końcowy komunikuje się publicznie. Na poziomie bardziej konkretną jest oświadczenie o zestaw określonych komunikatów podzielone na wzorce wymiany wiadomości podstawowe (MEPs), takich jak żądanie/odpowiedź, jednokierunkowe i dupleksowych. Jeśli kontrakt usługi to zestaw logicznie powiązanych wymiany komunikatów, operacji usługi jest exchange pojedynczym komunikacie. Na przykład `Hello` operacji oczywiście zaakceptować jeden komunikat (aby wywołujący może poinformować o powitanie) i może lub nie może zwracać komunikat (w zależności od uprzejmości operacji).  
@@ -68,7 +68,7 @@ W tej sekcji przedstawiono sposób definiowania i wdrożenie [!INCLUDE[indigo2](
  Aby uzyskać więcej informacji na temat opracowywania umów, zobacz [projektowanie kontraktów usług](../../../docs/framework/wcf/designing-service-contracts.md). Aby uzyskać więcej informacji na temat Implementowanie kontraktów, zobacz [Implementowanie kontraktów usług](../../../docs/framework/wcf/implementing-service-contracts.md).  
   
 ### <a name="messages-up-front-and-center"></a>Komunikaty w górę Centrum  
- Przy użyciu zarządzane interfejsy, klasy i metody do operacji usługi modelu jest proste, gdy są używane do zdalnego wywołania procedury (RPC) — styl podpisy metod, w których przekazywanie parametrów do metody i odbieranie wartości zwracane jest normalne formę żądania funkcji z obiektem lub innego typu kodu. Na przykład Programiści używający zarządzane językach takich jak [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] i C++ COM może stosuje się swoją wiedzą podejście stylu wywołania RPC (czy przy użyciu interfejsów lub obiektów) do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umowy o świadczenie usług bez występujących problemów Obiekt systemów rozproszonych w stylu wywołania RPC. Orientacji usługi zapewnia korzyści luźno powiązanych, zorientowany programowania przy zachowaniu łatwość i znajomości RPC, środowisko programowania.  
+ Przy użyciu zarządzane interfejsy, klasy i metody do operacji usługi modelu jest proste, gdy są używane do zdalnego wywołania procedury (RPC) — styl podpisy metod, w których przekazywanie parametrów do metody i odbieranie wartości zwracane jest normalne formę żądania funkcji z obiektem lub innego typu kodu. Na przykład Programiści używający języki zarządzane, takie jak Visual Basic i C++ COM można zastosować swoją wiedzą stylu wywołania RPC podejścia (czy przy użyciu interfejsów lub obiektów) do utworzenia [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] umowy o świadczenie usług bez występujących problemów Obiekt systemów rozproszonych w stylu wywołania RPC. Orientacji usługi zapewnia korzyści luźno powiązanych, zorientowany programowania przy zachowaniu łatwość i znajomości RPC, środowisko programowania.  
   
  Wielu programistów jest wygodniejsze z interfejsów, takich jak kolejki komunikatów, takie jak Microsoft MSMQ programowania aplikacji zorientowany <xref:System.Messaging> przestrzeni nazw w .NET Framework lub wysyłania XML bez struktury w żądaniach HTTP kilka. Aby uzyskać więcej informacji na temat programowania na poziomie komunikatu, zobacz [za pomocą kontraktów komunikatu](../../../docs/framework/wcf/feature-details/using-message-contracts.md), [programowania na poziomie kanału usługi](../../../docs/framework/wcf/extending/service-channel-level-programming.md), i [współdziałanie z aplikacjami POX](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   

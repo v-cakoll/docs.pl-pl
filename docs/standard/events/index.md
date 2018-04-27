@@ -23,16 +23,16 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 49355c4271efc37a40c025c0f8275ec42e13723e
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: ca56291e31526a6295c4a44f930e294d71b72488
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="handling-and-raising-events"></a>Obsługa i wywoływanie zdarzeń
 Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. Model obiektu delegowanego następuje wzorzec projektowy obserwatora, który umożliwia subskrybenta do rejestrowania i odbierania powiadomień od dostawcy. Nadawca zdarzeń wypycha powiadomienie, które miało miejsce zdarzenie, a odbiorca zdarzenia otrzymuje powiadomienia i definiuje odpowiedzi na to. W tym artykule opisano głównych składników modelu delegata, jak korzystanie ze zdarzeń w aplikacjach i implementowania zdarzenia w kodzie.  
   
- Aby uzyskać informacje na temat obsługi zdarzeń w [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji, zobacz [zdarzenia i przegląd kierowane zdarzenia (aplikacje ze Sklepu Windows)](http://go.microsoft.com/fwlink/p/?LinkId=261485).  
+ Aby uzyskać informacje na temat obsługi zdarzeń w aplikacji ze Sklepu Windows 8.x, zobacz [omówienie kierowane zdarzenia i zdarzenia](/previous-versions/windows/apps/hh758286(v=win.10)).  
   
 ## <a name="events"></a>Zdarzenia  
  Zdarzenia jest wiadomość wysłana przez obiekt sygnalizują wystąpienia akcji. Akcja może być spowodowana przez użytkownika, takich jak kliknij przycisk lub może być wywoływane przez inne logikę programów, takich jak zmiana wartości właściwości. Obiekt, który wywołuje zdarzenie jest nazywany *zdarzenia*. Zdarzenia nie może ustalić, które obiekt lub metoda otrzymają (dojście) uruchamia zdarzenia. Zdarzenie jest zwykle członkiem nadawcy zdarzeń; na przykład <xref:System.Web.UI.WebControls.Button.Click> zdarzeń jest elementem członkowskim <xref:System.Web.UI.WebControls.Button> klasy i <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> zdarzeń jest elementem członkowskim klasy, która implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu.  
@@ -63,7 +63,7 @@ Zdarzenia w programie .NET Framework są oparte na modelu obiektu delegowanego. 
 ## <a name="event-data"></a>Dane opisujące zdarzenie  
  Dane skojarzone ze zdarzeniem mogą być dostarczane za pośrednictwem klasą danych zdarzenia. .NET Framework zapewnia wiele zdarzeń klas danych używanych w aplikacjach. Na przykład <xref:System.IO.Ports.SerialDataReceivedEventArgs> klasa jest klasą danych zdarzeń dla <xref:System.IO.Ports.SerialPort.DataReceived?displayProperty=nameWithType> zdarzeń. .NET Framework następuje wzorzec nazewnictwa kończenia wszystkich klas dane zdarzeń z `EventArgs`. Należy określić, która klasa danych zdarzenia jest skojarzony ze zdarzeniem analizując delegowanie dla zdarzenia. Na przykład <xref:System.IO.Ports.SerialDataReceivedEventHandler> zawiera delegata <xref:System.IO.Ports.SerialDataReceivedEventArgs> klasy jako jeden z jego parametrów.  
   
- <xref:System.EventArgs> Klasy jest typem podstawowym dla wszystkich klas danych zdarzenia. <xref:System.EventArgs>jest również używanych podczas zdarzenie nie ma wszelkie dane skojarzone z nią klasy. Podczas tworzenia zdarzeń jest przeznaczone tylko do powiadamiania innych klas, które coś się stało i nie trzeba przekazać wszystkie dane, obejmują <xref:System.EventArgs> klasy jako drugiego parametru w obiekt delegowany. Można przekazać <xref:System.EventArgs.Empty?displayProperty=nameWithType> wartość, gdy jest dostępne żadne dane. <xref:System.EventHandler> Zawiera delegata <xref:System.EventArgs> klasy jako parametr.  
+ <xref:System.EventArgs> Klasy jest typem podstawowym dla wszystkich klas danych zdarzenia. <xref:System.EventArgs> jest również używanych podczas zdarzenie nie ma wszelkie dane skojarzone z nią klasy. Podczas tworzenia zdarzeń jest przeznaczone tylko do powiadamiania innych klas, które coś się stało i nie trzeba przekazać wszystkie dane, obejmują <xref:System.EventArgs> klasy jako drugiego parametru w obiekt delegowany. Można przekazać <xref:System.EventArgs.Empty?displayProperty=nameWithType> wartość, gdy jest dostępne żadne dane. <xref:System.EventHandler> Zawiera delegata <xref:System.EventArgs> klasy jako parametr.  
   
  Jeśli chcesz utworzyć klasę danych niestandardowych zdarzeń, Utwórz klasę, która pochodzi z <xref:System.EventArgs>, a następnie podaj żadnych elementów członkowskich potrzebne do przekazywania danych, który jest powiązany ze zdarzeniem. Zwykle należy używać tego samego wzorca nazewnictwa jako programu .NET Framework i kończyć na nazwę klasy dane zdarzeń z `EventArgs`.  
   

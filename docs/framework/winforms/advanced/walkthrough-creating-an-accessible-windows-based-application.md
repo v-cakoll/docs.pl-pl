@@ -1,28 +1,30 @@
 ---
-title: "Wskazówki: tworzenie dostępnej aplikacji bazującej na systemie Windows"
-ms.custom: 
+title: 'Wskazówki: tworzenie dostępnej aplikacji bazującej na systemie Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8f0a35b569b38e0d7ca79129f720034420ecd23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 600a0d3aaf7da1cd7513ba6dd1dadcb58031fbef
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>Wskazówki: tworzenie dostępnej aplikacji bazującej na systemie Windows
 Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy dotyczące ułatwień dostępu dla zakupów oprogramowania. Logo Certified for Windows zawiera wymagania dotyczące ułatwień dostępu. Szacowany mieszkańców 30 milionów intruzowi US, ile z nich potencjalnych klientów, mają wpływu na dostępność oprogramowania.  
@@ -52,7 +54,7 @@ Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy doty
   
 #### <a name="to-begin-making-the-application"></a>Aby rozpocząć tworzenie aplikacji  
   
--   Utwórz nową aplikację systemu Windows w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] lub [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]. Nazwij projekt **PizzaOrder**. (Aby uzyskać więcej informacji, zobacz [tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).)  
+-   Utwórz nową aplikację systemu Windows w języku Visual Basic lub Visual C#. Nazwij projekt **PizzaOrder**. (Aby uzyskać więcej informacji, zobacz [tworzenie nowych rozwiązań i projektów](/visualstudio/ide/creating-solutions-and-projects).)  
   
 ## <a name="adding-the-controls-to-the-form"></a>Dodawanie formantów do formularza  
  Gdy dodawanie formantów do formularza, należy pamiętać, aby aplikacja dostępne poniższe wskazówki:  
@@ -99,7 +101,7 @@ Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy doty
     ||TabIndex|2|  
     ||AccessibleDescription|Etykieta nazwy klienta|  
     ||AccessibleName|Etykieta nazwy klienta|  
-    ||UseMnemonic|Wartość true|  
+    ||UseMnemonic|True|  
     |TextBox|Nazwa|CustomerName|  
     ||Tekst|(Brak)|  
     ||TabIndex|3|  
@@ -112,7 +114,7 @@ Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy doty
     ||TabIndex|4|  
     |RadioButton|Nazwa|smallPizza|  
     ||Tekst|& małe $6,00|  
-    ||Zaznaczone|Wartość true|  
+    ||Zaznaczone|True|  
     ||TabIndex|0|  
     ||AccessibleDescription|Mała pizza|  
     ||AccessibleName|Mała pizza|  
@@ -126,7 +128,7 @@ Tworzenie aplikacji dostępny implikacje ważnymi. Wiele rządy ma przepisy doty
     ||TabIndex|5|  
     ||AccessibleDescription|Etykieta toppings|  
     ||AccessibleName|Etykieta toppings|  
-    ||UseMnemonic|Wartość true|  
+    ||UseMnemonic|True|  
     |CheckedListBox —|Nazwa|toppings|  
     ||TabIndex|6|  
     ||AccessibleDescription|Dostępne toppings|  

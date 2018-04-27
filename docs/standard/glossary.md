@@ -12,17 +12,17 @@ ms.devlang: dotnet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 33123732514a53574036f6f8e948b2cf9acb9229
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 7e9732fb6eaef240d08449635697ba6b8ad9c510
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-glossary"></a>.NET — słownik
 
 Podstawowym celem tego słownika jest wyjaśnienie znaczenia wybranego terminów i skrótów, które często pojawiają się w dokumentacji programu .NET, bez definicji.
 
-## <a name="aot"></a>AOT
+## <a name="aot"></a>DRZEWA OBIEKTÓW APLIKACJI
 
 Kompilator z wyprzedzeniem o czasie.
 
@@ -68,13 +68,13 @@ Przestrzenie nazw bibliotek, które obejmują System.* (oraz w ograniczonym zakr
 
 ## <a name="corert"></a>CoreRT
 
-.NET Core runtime.
+Środowisko uruchomieniowe .NET core.
 
 W przeciwieństwie do środowiska CLR/na środowisko CoreCLR CoreRT nie jest maszyny wirtualnej, co oznacza, że nie ma wśród nich urządzeń do Generowanie i uruchamianie kodu na bieżąco, ponieważ nie ma wśród nich [JIT](#jit). Jednak zawierać [GC](#gc) z możliwością identyfikacji typu środowiska uruchomieniowego (RTTI) i odbicia. Jednak system jego typ zaprojektowano tak, aby metadanych w celu odbicia nie jest wymagane. Dzięki temu o [drzewa obiektów aplikacji](#aot) narzędzia łańcucha, który umożliwia łączenie zadań zbędny metadanych (ważniejsze) identyfikację kodu, który nie korzysta z aplikacji. CoreRT trwa opracowywanie.
 
 Zobacz [wprowadzenie do architektury .NET Native i CoreRT](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)
 
-## <a name="ecosystem"></a>ecosystem
+## <a name="ecosystem"></a>ekosystemu
 
 Wszystkie środowiska uruchomieniowego oprogramowania, narzędzia do programowania i zasoby społecznościowe, które są używane do tworzenia i uruchamiania aplikacji dla danej technologii.
 
@@ -150,7 +150,7 @@ W przeszłości Mono zaimplementowana większych interfejsu API programu .NET Fr
 
 Mono jest zwykle używana z kompilatora just in time, ale także kompilatora pełnej statyczne (kompilacja z wyprzedzeniem o czasie) używaną na platformach, np. z systemem iOS.
 
-Aby dowiedzieć się więcej na temat Mono, zobacz [Mono dokumentacji](http://www.mono-project.com/docs/).
+Aby dowiedzieć się więcej na temat Mono, zobacz [Mono dokumentacji](https://www.mono-project.com/docs/).
 
 ## <a name="net"></a>.NET
 

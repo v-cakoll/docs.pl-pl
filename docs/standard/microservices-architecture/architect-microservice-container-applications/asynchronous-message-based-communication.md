@@ -1,6 +1,6 @@
 ---
 title: Oparta na komunikatach komunikacji asynchronicznej
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Oparta na komunikatach komunikacji asynchronicznej"
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Oparta na komunikatach komunikacji asynchronicznej
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7469c41afa16bf96bc81a36c571e3e005c50d904
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 7c216dba3b763c310fe17e6294ae5f2b091f71f9
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="asynchronous-message-based-communication"></a>Oparta na komunikatach komunikacji asynchronicznej
 
@@ -59,7 +59,7 @@ Jeśli system używa spójność ostateczna regulowane przez zdarzeń integracji
 
 Jak wspomniano wcześniej w [problemy i rozwiązania rozproszone Zarządzanie danych](#challenges-and-solutions-for-distributed-data-management) sekcji zdarzeń integracji można użyć do wykonania zadań biznesowych, które obejmują wiele mikrousług. W związku z tym konieczne będzie spójność ostateczna między tymi usługami. Po pewnym czasie spójne transakcji składa się z kolekcji rozproszonej akcji. W każdej akcji powiązanych mikrousługi aktualizuje jednostką domeny i publikuje inne zdarzenie integracji, który wywołuje akcję dalej w ramach tego samego zadania biznesowe na trasie.
 
-Punkt ważne jest, czy może chcesz komunikują się z wielu mikrousług, który subskrybują tego samego zdarzenia. Aby to zrobić, można użyć publikowania/subskrypcji wiadomości na podstawie sterowane zdarzeniami komunikacji, jak pokazano w rysunek 4-19. Ten mechanizm publikowania/subskrypcji nie jest zarezerwowana architektury mikrousługi. Jest on podobny do sposobu [ograniczone kontekstów](http://martinfowler.com/bliki/BoundedContext.html) w skontaktować się DDD lub sposób propagacji aktualizacji z bazy danych zapisu do bazy danych do odczytu w [poleceń i zapytań podział odpowiedzialności (CQRS)](http://martinfowler.com/bliki/CQRS.html)wzorzec architektury. Celem jest spójność ostateczna między wiele źródeł danych w rozproszonym systemie.
+Punkt ważne jest, czy może chcesz komunikują się z wielu mikrousług, który subskrybują tego samego zdarzenia. Aby to zrobić, można użyć publikowania/subskrypcji wiadomości na podstawie sterowane zdarzeniami komunikacji, jak pokazano w rysunek 4-19. Ten mechanizm publikowania/subskrypcji nie jest zarezerwowana architektury mikrousługi. Jest on podobny do sposobu [ograniczone kontekstów](https://martinfowler.com/bliki/BoundedContext.html) w skontaktować się DDD lub sposób propagacji aktualizacji z bazy danych zapisu do bazy danych do odczytu w [poleceń i zapytań podział odpowiedzialności (CQRS)](https://martinfowler.com/bliki/CQRS.html)wzorzec architektury. Celem jest spójność ostateczna między wiele źródeł danych w rozproszonym systemie.
 
 ![](./media/image19.png)
 
@@ -81,7 +81,7 @@ Niemniej jednak w przypadku krytycznym i systemów produkcyjnych, które wymagaj
 
 -   Przy użyciu transakcyjne kolejki (w oparciu o usługi DTC) takie jak usługi MSMQ. (Jednak jest podejście starszej wersji).
 
--   Przy użyciu [wyszukiwania dziennik transakcji](http://www.scoop.it/t/sql-server-transaction-log-mining).
+-   Przy użyciu [wyszukiwania dziennik transakcji](https://www.scoop.it/t/sql-server-transaction-log-mining).
 
 -   Przy użyciu pełnego [źródłem zdarzeń](https://msdn.microsoft.com/library/dn589792.aspx) wzorca.
 
@@ -91,23 +91,23 @@ Tematy dodatkowe, które należy wziąć pod uwagę podczas komunikacji asynchro
 
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
--   **Event Driven Messaging**
-    [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+-   **Zdarzenia zmiennych wiadomości**
+    [*http://soapatterns.org/design\_wzorce lub zdarzenia\_zmiennych\_obsługi wiadomości*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Publish/Subscribe Channel**
+-   **Kanał publikowania/subskrypcji**
     [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **Udi Dahan. Zawiera wyjaśnienie CQRS**
+-   **Udi Dahan. Sklarowanego CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
--   **Poleceń i zapytań podział odpowiedzialności (CQRS)**
+-   **Polecenie i podział odpowiedzialności kwerendy (CQRS)**
     [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
--   **Communicating Between Bounded Contexts**
+-   **Komunikacja między kontekstami ograniczonego**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)
 
--   **Eventual consistency**
-    [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+-   **Spójność ostateczna**
+    [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 -   **Jimmy Bogard. Refaktoryzacja kierunku odporności: Ocena sprzężenia**
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)

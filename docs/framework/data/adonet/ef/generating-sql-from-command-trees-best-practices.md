@@ -1,24 +1,26 @@
 ---
-title: "Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki"
-ms.custom: 
+title: Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: d68194ab83a6606337a33668470411ed8b1c6957
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 037d1eaa8d781d012cde7a1bd3b08aa7003edd77
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>Generowanie SQL na podstawie drzew poleceń — najlepsze praktyki
 Drzew poleceń w danych wyjściowych zapytania modelu ściśle zapytania można wyrazić w języku SQL. Istnieją pewne wyzwania autorzy dostawcy podczas generowania SQL z poziomu drzewa poleceń danych wyjściowych. W tym temacie omówiono te problemy. W następnym temacie dostawcy przykładowych pokazano, jak rozwiązać te problemy.  
@@ -147,7 +149,7 @@ ON b.y = d.z
  Wyrażenia może nastąpić w drzewie poleceń zapytania przekazany przez [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]. Nie należy zakładać, każde wyrażenie jest wyświetlany w drzewie poleceń zapytania tylko raz.  
   
 ## <a name="mapping-primitive-types"></a>Typy pierwotne mapowania  
- Podczas mapowania koncepcyjnej typów (EDM) do dostawcy typów tak, aby dopasować wszystkich możliwych wartości powinny mapy typowi najszerszych (Int32). Ponadto uniknąć mapowania typów, których nie można używać w wielu operacjach, takich jak typy obiektów BLOB (na przykład `ntext` w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]).  
+ Podczas mapowania koncepcyjnej typów (EDM) do dostawcy typów tak, aby dopasować wszystkich możliwych wartości powinny mapy typowi najszerszych (Int32). Ponadto uniknąć mapowania typów, których nie można używać w wielu operacjach, takich jak typy obiektów BLOB (na przykład `ntext` w programie SQL Server).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Generowanie kodu SQL](../../../../../docs/framework/data/adonet/ef/sql-generation.md)

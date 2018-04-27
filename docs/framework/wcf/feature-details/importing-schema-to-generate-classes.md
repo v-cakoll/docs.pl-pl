@@ -1,12 +1,13 @@
 ---
 title: Importowanie schematu w celu generowania klas
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a872fbd5be56fed3d01481d1740c70932fd60c06
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importowanie schematu w celu generowania klas
 Aby wygenerować klasy na podstawie schematów, której można używać z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], użyj <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
@@ -40,9 +42,9 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
 1.  Utwórz wystąpienie <xref:System.Runtime.Serialization.XsdDataContractImporter>.  
   
-2.  Opcjonalny. Przekaż `CodeCompileUnit` w konstruktorze. Typy generowane podczas importowania schematu są dodawane do tego `CodeCompileUnit` wystąpienia zamiast począwszy od pustego `CodeCompileUnit`.  
+2.  Opcjonalna. Przekaż `CodeCompileUnit` w konstruktorze. Typy generowane podczas importowania schematu są dodawane do tego `CodeCompileUnit` wystąpienia zamiast począwszy od pustego `CodeCompileUnit`.  
   
-3.  Opcjonalny. Wywoływanie jednego z <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> metody. Metoda określa, czy dany schemat jest schematu kontraktu prawidłowe dane i mogą być importowane. `CanImport` Metoda ma tego samego przeciążeń jako `Import` (następny krok).  
+3.  Opcjonalna. Wywoływanie jednego z <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> metody. Metoda określa, czy dany schemat jest schematu kontraktu prawidłowe dane i mogą być importowane. `CanImport` Metoda ma tego samego przeciążeń jako `Import` (następny krok).  
   
 4.  Wywoływanie jednego z przeciążone `Import` metod, na przykład <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> metody.  
   
@@ -63,7 +65,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
  Zwykle typy publiczne zostaną wygenerowane na podstawie schematu z pól prywatnych i zgodnych właściwości elementu członkowskiego danych publicznych. Aby zamiast niego generowania typów wewnętrznych, ustaw <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> właściwości `true`.  
   
- W poniższym przykładzie przedstawiono schematu przekształceniu wewnętrznego klasę gdy <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> ma ustawioną wartość właściwości`true.`  
+ W poniższym przykładzie przedstawiono schematu przekształceniu wewnętrznego klasę gdy <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> ma ustawioną wartość właściwości `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -77,7 +79,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
  [!code-xml[c_SchemaImportExport#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#10)]  
   
- W poniższym przykładzie użyto `Namespaces` właściwości do mapowania przestrzeni nazw "http://schemas.contoso.com/carSchema" do "Contoso.Cars".  
+ W poniższym przykładzie użyto `Namespaces` mapowania dla właściwości "http://schemas.contoso.com/carSchema" przestrzeni nazw "Contoso.Cars".  
   
  [!code-csharp[c_SchemaImportExport#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#8)]
  [!code-vb[c_SchemaImportExport#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#8)]  
@@ -95,7 +97,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
 #### <a name="adding-data-binding-support-enabledatabinding-or-the-enabledatabinding-switch"></a>Dodawanie obsługi powiązania danych (EnableDataBinding lub przełącznika /enableDataBinding)  
  Odpowiada to **/enableDataBinding** przełączania z narzędzia Svcutil.exe.  
   
- Czasami można powiązać typy generowane na podstawie schematu do składników interfejsu graficznego użytkownika, aby zaktualizowanie wystąpień tych typów są automatycznie aktualizowane interfejsu użytkownika. `XsdDataContractImporter` Można wygenerować typów, które implementują <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu w taki sposób, że zmiany właściwości wyzwala zdarzenie. Generowania typów do użycia z środowisku programowania interfejsu użytkownika klienta, który obsługuje ten interfejs (takich jak [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)]) ustaw <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> właściwości `true` Aby włączyć tę funkcję.  
+ Czasami można powiązać typy generowane na podstawie schematu do składników interfejsu graficznego użytkownika, aby zaktualizowanie wystąpień tych typów są automatycznie aktualizowane interfejsu użytkownika. `XsdDataContractImporter` Można wygenerować typów, które implementują <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu w taki sposób, że zmiany właściwości wyzwala zdarzenie. Generowania typów do użycia z środowisku programowania interfejsu użytkownika klienta, który obsługuje ten interfejs (takie jak Windows Presentation Foundation (WPF)), należy ustawić <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> właściwości `true` Aby włączyć tę funkcję.  
   
  W poniższym przykładzie przedstawiono `Vehicle` wygenerować za pomocą klasy <xref:System.Runtime.Serialization.ImportOptions.EnableDataBinding%2A> ustawioną `true`.  
   
@@ -112,7 +114,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
  [!code-xml[C_SchemaImportExport#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/common/source.config#12)]  
   
 > [!NOTE]
->  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
+>  Skojarzeń można również uwzględnić listy. Na przykład można wyświetlić poprzedniego skojarzenie jako listę złożone `city` obiektów, które mają dwa pola (polem ciągu i pole Liczba całkowita). Oba wzorce ma reprezentacji w postaci w schematu XSD. Nie istnieje sposób w celu rozróżnienia listy i skojarzenia, więc tych wzorców zawsze są traktowane jako list, chyba że adnotację specjalne specyficzne dla [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w schemacie. Adnotacja wskazuje, że danego wzorca reprezentuje skojarzenia. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Odwołanie do schematu kontraktu danych](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md).  
   
  Zwykle listy jest importowany jako kontraktu danych kolekcji, która pochodzi z listy ogólnej lub jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] tablicy, w zależności od tego, czy schemat następuje standardowy wzorzec nazewnictwa dla kolekcji. To jest opisany bardziej szczegółowo w [typy kolekcji w kontraktach danych](../../../../docs/framework/wcf/feature-details/collection-types-in-data-contracts.md). Skojarzenia są zwykle zaimportowany jako <xref:System.Collections.Generic.Dictionary%602> lub kontraktu danych kolekcji, która pochodzi z obiektu słownika. Na przykład należy wziąć pod uwagę następujące schematu.  
   
@@ -159,7 +161,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
   
 ##### <a name="design-considerations"></a>Zagadnienia dotyczące projektowania  
   
--   Może być trudne do pracy bezpośrednio z lekko maszynowy reprezentacji XML. Należy wziąć pod uwagę przy użyciu aparatu serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodne z danymi kontraktów w jednoznaczny sposób. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
+-   Może być trudne do pracy bezpośrednio z lekko maszynowy reprezentacji XML. Należy wziąć pod uwagę przy użyciu aparatu serializacji alternatywnych, takich jak <xref:System.Xml.Serialization.XmlSerializer>, aby pracować ze schematem nie jest zgodne z danymi kontraktów w jednoznaczny sposób. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Przy użyciu klasy XmlSerializer](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md).  
   
 -   Niektóre konstrukcje schematu nie mogą być importowane przez <xref:System.Runtime.Serialization.XsdDataContractImporter> nawet wtedy, gdy <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwość jest ustawiona na `true`. Ponownie, należy rozważyć użycie <xref:System.Xml.Serialization.XmlSerializer> w takich przypadkach.  
   
@@ -186,9 +188,9 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
 #### <a name="import-options-advanced-options"></a>Opcje importowania: Opcje zaawansowane  
  Poniżej są zaawansowane opcje importowania:  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A>Właściwość. Określ <xref:System.CodeDom.Compiler.CodeDomProvider> używany do generowania kodu dla wygenerowanego klas. Funkcje prób mechanizmu importu, aby uniknąć <xref:System.CodeDom.Compiler.CodeDomProvider> nie obsługuje. Jeśli <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nie jest ustawiona, pełny zestaw [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] funkcji jest używana bez ograniczeń.  
+-   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> Właściwość. Określ <xref:System.CodeDom.Compiler.CodeDomProvider> używany do generowania kodu dla wygenerowanego klas. Funkcje prób mechanizmu importu, aby uniknąć <xref:System.CodeDom.Compiler.CodeDomProvider> nie obsługuje. Jeśli <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> nie jest ustawiona, pełny zestaw [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] funkcji jest używana bez ograniczeń.  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A>Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)][Surogatów kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
+-   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> Właściwość. <xref:System.Runtime.Serialization.IDataContractSurrogate> Za pomocą tej właściwości można określić implementacji. <xref:System.Runtime.Serialization.IDataContractSurrogate> Dostosowuje proces importowania. [!INCLUDE[crdefault](../../../../includes/crdefault-md.md)] [Części znaku dwuskładnikowego kontraktu danych](../../../../docs/framework/wcf/extending/data-contract-surrogates.md). Domyślnie surogat nie jest używany.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Runtime.Serialization.DataContractSerializer>  

@@ -1,28 +1,30 @@
 ---
 title: Klasy XAML i niestandardowe dla WPF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: da599afc94fba617d4df17c57679d8ee4bb05c61
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a7aa7ffe38f1fbd7de71dbc95ae12b8faca6e356
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>Klasy XAML i niestandardowe dla WPF
 XAML zgodnie z implementacją w [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] struktury obsługuje możliwość definiowania niestandardowych klasy lub struktury w żadnym [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] język, a następnie dostępu które przy użyciu znaczników XAML. Można użyć kombinację [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-zdefiniowanych typów i z typów niestandardowych w ramach tego samego pliku znaczników, zazwyczaj przez mapowanie typów niestandardowych do prefiksu przestrzeni nazw XAML. W tym temacie omówiono wymagania, które muszą spełniać klasy niestandardowej, może być używany jako XAML element.  
@@ -70,7 +72,7 @@ XAML zgodnie z implementacją w [!INCLUDE[TLA#tla_clr](../../../../includes/tlas
  Przykłady właściwości, gdy atrybut składnia jest dozwolona, ale składni elementu właściwości, który zawiera element obiektu jest niedozwolone przy użyciu języka XAML są różne właściwości, które przyjmują <xref:System.Windows.Input.Cursor> typu. <xref:System.Windows.Input.Cursor> Klasa ma konwertera typów dedykowanych <xref:System.Windows.Input.CursorConverter>, ale nie ujawnia konstruktora domyślnego więc <xref:System.Windows.FrameworkElement.Cursor%2A> właściwości można ustawić tylko za pomocą składni atrybutu mimo że rzeczywiste <xref:System.Windows.Input.Cursor> typ jest typem referencyjnym.  
   
 ### <a name="per-property-type-converters"></a>Konwertery typu dla właściwości  
- Alternatywnie samej właściwości mogą zadeklarować konwertera typów, na poziomie właściwości. Dzięki temu "mini język", który tworzy obiekty typu wbudowanej właściwości przez przetwarzanie przychodzących wartości ciągu atrybutu jako dane wejściowe dla <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> operacji na podstawie odpowiedniego typu. Zazwyczaj wykonywane na zapewnienie dostępu wygody, a nie w umożliwiające ustawienie właściwości w języku XAML. Jednak istnieje również możliwość użycia konwertery typu dla atrybutów, w której chcesz użyć istniejącego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] typy, które nie zostanie podana domyślnego konstruktora lub konwertera typu atrybutami. Przykłady z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu API są niektóre właściwości, które przyjmują <xref:System.Globalization.CultureInfo> typu. W takim przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyć istniejącego [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] <xref:System.Globalization.CultureInfo> typu w celu lepszego rozwiązania zgodność i migracja scenariusze, które były używane w starszych wersjach struktur, ale <xref:System.Globalization.CultureInfo> typ nie obsługuje niezbędnych konstruktorów Typ poziomie lub konwersja typu może być używany jako wartość właściwości XAML bezpośrednio.  
+ Alternatywnie samej właściwości mogą zadeklarować konwertera typów, na poziomie właściwości. Dzięki temu "mini język", który tworzy obiekty typu wbudowanej właściwości przez przetwarzanie przychodzących wartości ciągu atrybutu jako dane wejściowe dla <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> operacji na podstawie odpowiedniego typu. Zazwyczaj wykonywane na zapewnienie dostępu wygody, a nie w umożliwiające ustawienie właściwości w języku XAML. Jednak istnieje również możliwość użycia konwertery typu dla atrybutów, w której chcesz użyć istniejącego [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] typy, które nie zostanie podana domyślnego konstruktora lub konwertera typu atrybutami. Przykłady z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu API są niektóre właściwości, które przyjmują <xref:System.Globalization.CultureInfo> typu. W takim przypadku [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] użyć istniejącego Microsoft .NET Framework <xref:System.Globalization.CultureInfo> typu w celu lepszego rozwiązania zgodność i migracja scenariusze, które były używane w starszych wersjach struktur, ale <xref:System.Globalization.CultureInfo> typ nie obsługuje niezbędnych Konstruktory lub konwersja typu poziomu typu może być używany jako wartość właściwości XAML bezpośrednio.  
   
  Zawsze, gdy ujawnić właściwości, która ma użycie XAML, zwłaszcza w przypadku, gdy autor kontroli, zdecydowanie warto kopii tej właściwości z właściwością zależności. Jest to szczególnie istotne, jeśli używasz istniejącej [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] implementacji procesora XAML, ponieważ może poprawić wydajność przy użyciu <xref:System.Windows.DependencyProperty> kopii. Powoduje to udostępnienie właściwości funkcji systemu z właściwości, które użytkownicy będą oczekiwać na dostępne właściwości XAML właściwości zależności. W tym funkcje, takie jak animacji, powiązania danych i Obsługa stylów. Aby uzyskać więcej informacji, zobacz [właściwości zależności niestandardowe](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md) i [ładowanie XAML i właściwości zależności](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md).  
   

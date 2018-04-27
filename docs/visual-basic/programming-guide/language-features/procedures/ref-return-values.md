@@ -1,12 +1,13 @@
 ---
-title: "REF zwracanych wartości (Visual Basic)"
-ms.custom: 
+title: REF zwracanych wartości (Visual Basic)
+ms.custom: ''
 ms.date: 04/28/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic]
@@ -15,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 560607f7aa304b25314daabeef3952e6bbef7426
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 6055028ac92016cbc4b6f7bffa7f483e5ea76608
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>Obsługa odwołanie zwracane wartości (Visual Basic)
 
-Począwszy od C# 7 języka C# obsługuje *odwołanie zwracane wartości*. Jednym ze sposobów zrozumieć zwracanych wartości odwołania jest są przeciwieństwem argumenty, które są przekazywane przez odwołanie do metody. Po zmodyfikowaniu argument przekazany przez odwołanie, zmiany zostaną odzwierciedlone w wartości zmiennej na wywołującego. Metoda zapewnia wartości zwracanej odwołania do wywołującego, modyfikacje odwołanie wartość zwracaną przez obiekt wywołujący są odzwierciedlane w danych wywołaną metodę.
+Począwszy od wersji 7.0 C#, obsługuje języka C# *odwołanie zwracane wartości*. Jednym ze sposobów zrozumieć zwracanych wartości odwołania jest są przeciwieństwem argumenty, które są przekazywane przez odwołanie do metody. Po zmodyfikowaniu argument przekazany przez odwołanie, zmiany zostaną odzwierciedlone w wartości zmiennej na wywołującego. Metoda zapewnia wartości zwracanej odwołania do wywołującego, modyfikacje odwołanie wartość zwracaną przez obiekt wywołujący są odzwierciedlane w danych wywołaną metodę.
 
 Visual Basic nie zezwala na wartości do metod autora z odwołaniem zwracane, ale pozwala korzystać zwracanych wartości odwołania. Innymi słowy można wywołać metodę z wartością zwracaną odwołania i modyfikować tej wartości zwracanej, a zmiany zwracana wartość odwołania są odzwierciedlane w danych wywołaną metodę.
 

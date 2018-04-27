@@ -1,30 +1,30 @@
 ---
 title: Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - asynchronous calls
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a83d638255d27317ba5d566ab46b83526659365
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: fecd71355d53f1e3937d3724569b10fa0c8e50da
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>Asynchroniczny wzorzec oparty na zdarzeniach (EAP)
 Istnieje wiele sposobów, aby udostępnić funkcje asynchroniczne do kodu klienta. Asynchroniczny wzorzec oparty na zdarzeniach Określa jedną z metod dla klas do prezentowania zachowanie asynchronicznego.  
@@ -68,11 +68,11 @@ Istnieje wiele sposobów, aby udostępnić funkcje asynchroniczne do kodu klient
  [Wątkowość](../../../docs/standard/threading/index.md)  
  Zawiera opis funkcji wielowątkowości w programie .NET Framework.  
   
- [Wątkowość](http://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
+ [Wątkowość](https://msdn.microsoft.com/library/552f6c68-dbdb-4327-ae36-32cf9063d88c)  
  Zawiera opis funkcji wielowątkowości w języku C# i Visual Basic.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zarządzana wątkowość — najlepsze rozwiązania](../../../docs/standard/threading/managed-threading-best-practices.md)  
  [Zdarzenia](../../../docs/standard/events/index.md)  
- [Wielowątkowość składników](http://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
+ [Wielowątkowość składników](https://msdn.microsoft.com/library/2fc31e68-fb71-4544-b654-0ce720478779)  
  [Asynchroniczne wzorce projektowe programowania](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

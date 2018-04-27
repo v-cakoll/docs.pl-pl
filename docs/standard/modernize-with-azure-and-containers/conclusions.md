@@ -1,18 +1,19 @@
 ---
 title: Wnioski
-description: "Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows | wnioski"
+description: Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows | wnioski
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9ab627793ac45510aba6ce76fdb87834b02e55f8
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 5048e6abee83267c42389381e1e7f83b43ab94ac
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="conclusions"></a>Wnioski
 

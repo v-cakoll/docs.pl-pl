@@ -1,29 +1,29 @@
 ---
-title: "Klasy podstawowe stosowania obiektów abstrakcyjnych"
-ms.custom: 
+title: Klasy podstawowe stosowania obiektów abstrakcyjnych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 96264456ac6afc569c46caf5faed6c37ea22bc8e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 70d107d96576b8cafe9e76135c00bd2c635f2d7e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>Klasy podstawowe stosowania obiektów abstrakcyjnych
 Mówiąc ściślej klasa staje się klasę podstawową, gdy inna klasa pochodzi od niego. Na potrzeby tej sekcji jednak klasa podstawowa jest przeznaczone głównie do zapewnienia wspólnej abstrakcji lub innych klas do ponownego użycia niektórych Domyślna implementacja jednak dziedziczenia klasy. Klasy podstawowe zwykle sit trakcie hierarchii dziedziczenia między abstrakcję elementu głównego hierarchii i kilka implementacji niestandardowych u dołu.  
@@ -40,9 +40,9 @@ Mówiąc ściślej klasa staje się klasę podstawową, gdy inna klasa pochodzi 
   
  **X należy UNIKAĆ** nazw klas podstawowych z sufiksem "Podstawowy", jeśli klasa jest przeznaczona do użycia w publicznych interfejsach API.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  

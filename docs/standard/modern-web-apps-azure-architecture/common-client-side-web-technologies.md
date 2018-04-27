@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e8e156552fd4aa733594c01845fb7ed1643b4aef
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c77b6fecdea3620a4f807dfa9b3501f78bb247d2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="common-client-side-web-technologies"></a>Typowe technologie sieci Web po stronie klienta
 
@@ -70,12 +71,12 @@ Na przykład załóżmy, że jeśli pole tekstowe wartość przekracza 10, eleme
 
 ### <a name="jquery-vs-a-spa-framework"></a>vs jQuery SPA Framework
 
-| **Współczynnik** | **jQuery** | **Angular**|
+| **Współczynnik** | **jQuery** | **dyrektywy angular**|
 |--------------------------|------------|-------------|
 | Abstracts modelu DOM | **Tak** | **Tak** |
 | Obsługa technologii AJAX | **Tak** | **Tak** |
 | Powiązanie danych deklaratywne | **Brak** | **Tak** |
-| MVC-style Routing | **Brak** | **Tak** |
+| Styl MVC routingu | **Brak** | **Tak** |
 | Tworzenia szablonów | **Brak** | **Tak** |
 | Głębokie łącze routingu | **Brak** | **Tak** |
 
@@ -159,7 +160,7 @@ Struktury JavaScript nadal podlegać ewolucji o prędkości breakneck. Użyj zag
 > <https://jquery.com/>
 > - **jQuery vs AngularJS**  
 > <https://www.airpair.com/angularjs/posts/jquery-angularjs-comparison-migration-walkthrough>
-> - **Angular**  
+> - **dyrektywy angular**  
 > <https://angular.io/>
 > - **Reakcji**  
 > <https://facebook.github.io/react/>

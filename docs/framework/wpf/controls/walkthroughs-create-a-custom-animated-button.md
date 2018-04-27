@@ -1,42 +1,44 @@
 ---
-title: "Wskazówki: utwórz niestandardowy przycisk animowany"
-ms.custom: 
+title: 'Wskazówki: utwórz niestandardowy przycisk animowany'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - custom animated buttons [WPF]
 - buttons [WPF]
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 3ece907b23772504990ef334f446d7b6072f5d44
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 349a9627c20de24a17c533bb9b2fd5f6d1735c70
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthroughs-create-a-custom-animated-button"></a>Wskazówki: utwórz niestandardowy przycisk animowany
 Zgodnie z sugestią, jego nazwa, [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] stanowi doskonałe rozwiązanie do tworzenia środowiska sformatowanego prezentacji dla klientów. Te wskazówki pokazują, jak dostosować wygląd i zachowanie przycisku (w tym animacji). Takie dostosowanie odbywa się przy użyciu stylu i szablonu, dzięki czemu można zastosować tego przycisku niestandardowego łatwe do dowolnego przycisków w aplikacji. Na poniższej ilustracji przedstawiono dostosowany przycisk zostanie utworzenie.  
   
  ![Dostosowany przycisk, który spowoduje utworzenie](../../../../docs/framework/wpf/controls/media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  
   
- Grafika wektorowa, które tworzą wygląd przycisku są tworzone za pomocą [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]z wyjątkiem jest bardziej zaawansowany i rozszerzalny jest podobny do formatu HTML. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]można wpisać w ręcznie przy użyciu programu Microsoft Visual Studio lub Notatnik, lub można użyć narzędzia projektowe visual takich jak Microsoft Expression Blend. Expression Blend polega na tworzeniu podstawowych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod, więc obie metody tworzenia tej samej grafiki.  
+ Grafika wektorowa, które tworzą wygląd przycisku są tworzone za pomocą [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] z wyjątkiem jest bardziej zaawansowany i rozszerzalny jest podobny do formatu HTML. [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] można wpisać w ręcznie przy użyciu programu Microsoft Visual Studio lub Notatnik, lub można użyć narzędzia projektowe visual takich jak Microsoft Expression Blend. Expression Blend polega na tworzeniu podstawowych [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] kod, więc obie metody tworzenia tej samej grafiki.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Tworzenie przycisku przy użyciu programu Microsoft Expression Blend](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)  
  Przedstawia sposób tworzenia przycisków z zachowaniem niestandardowych za pomocą projektanta funkcji Expression Blend.  
   
  [Tworzenie przycisku przy użyciu XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)  
- Przedstawia sposób tworzenia przycisków z zachowaniem niestandardowych za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Przedstawia sposób tworzenia przycisków z zachowaniem niestandardowych za pomocą [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i Visual Studio.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Tworzenie szablonów i stylów](../../../../docs/framework/wpf/controls/styling-and-templating.md)  

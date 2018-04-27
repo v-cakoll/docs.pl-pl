@@ -1,12 +1,12 @@
 ---
-title: "Często używane typy kolekcji"
-ms.custom: 
+title: Często używane typy kolekcji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - collections [.NET Framework], generic
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - Collections classes
 - generic collections
 ms.assetid: f5d4c6a4-0d7b-4944-a9fb-3b12d9ebfd55
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cdc4e0660c5eae0a9550cf73d273d394ed71b823
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 127813e52b6e72f896ebe4f5017651467f748a04
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="commonly-used-collection-types"></a>Często używane typy kolekcji
 Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele hash, kolejki, stosy, torebki, słowniki i listy.  
@@ -40,7 +40,7 @@ Typy kolekcji są typowe przykłady kolekcji danych, takich jak tabele hash, kol
   
  Kolekcje mogą się różnić w zależności od sposobu przechowywania elementy, jak są one sortowane realizację wyszukiwania i jak porównań. <xref:System.Collections.Queue> Klasy i <xref:System.Collections.Generic.Queue%601> klasy ogólnej stanowią pierwszy w pierwszym poza listę, gdy <xref:System.Collections.Stack> klasy i <xref:System.Collections.Generic.Stack%601> klasy ogólnej stanowią listę ostatnich w pierwszym poza. <xref:System.Collections.SortedList> Klasy i <xref:System.Collections.Generic.SortedList%602> klasy ogólnej zawiera posortowane wersji <xref:System.Collections.Hashtable> klasy i <xref:System.Collections.Generic.Dictionary%602> klasy ogólnej. Elementy <xref:System.Collections.Hashtable> lub <xref:System.Collections.Generic.Dictionary%602> są dostępne tylko za pomocą klucza elementu, ale elementy <xref:System.Collections.SortedList> lub <xref:System.Collections.ObjectModel.KeyedCollection%602> są dostępne przez klucz lub indeks elementu. Indeksy we wszystkich zbiorach jest liczony od zera, z wyjątkiem <xref:System.Array>, dzięki czemu tablic, które nie są liczony od zera.  
   
- LINQ do obiektów funkcji pozwala na potrzeby dostępu do obiektów w pamięci, tak długo, jak typ obiektu implementuje zapytań LINQ <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych; zazwyczaj są to zwięzły i bardziej czytelny niż standardowe `foreach` pętli; oraz udostępnia filtrowania, kolejność i grupowanie możliwości. Zapytania LINQ także może zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) i [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
+ LINQ do obiektów funkcji pozwala na potrzeby dostępu do obiektów w pamięci, tak długo, jak typ obiektu implementuje zapytań LINQ <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych; zazwyczaj są to zwięzły i bardziej czytelny niż standardowe `foreach` pętli; oraz udostępnia filtrowania, kolejność i grupowanie możliwości. Zapytania LINQ także może zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9) i [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   
 ## <a name="related-topics"></a>Tematy pokrewne  
   

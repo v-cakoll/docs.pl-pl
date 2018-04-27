@@ -1,6 +1,6 @@
 ---
 title: Biblioteki klas .NET
-description: "Dowiedz się, jak bibliotek klas .NET umożliwia przydatne funkcje grupy do modułów, które mogą być używane przez wiele aplikacji."
+description: Dowiedz się, jak bibliotek klas .NET umożliwia przydatne funkcje grupy do modułów, które mogą być używane przez wiele aplikacji.
 keywords: .NET, .NET Core
 author: richlander
 ms.author: mairaw
@@ -13,15 +13,15 @@ ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8f7c421d2490678f7122e78bc0b83ebf3a1aa9ea
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 44d5745daed8539c5dd48b08f9f73edce4da939f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-class-libraries"></a>Biblioteki klas .NET
 
-Biblioteki klas są [biblioteki udostępnionej](http://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pojęcia dla platformy .NET. Umożliwiają one componentize przydatne funkcje do modułów, które mogą być używane przez wiele aplikacji. One mogą służyć jako środek ładowania funkcji nie jest wymagane lub nieznany podczas uruchamiania aplikacji. Biblioteki klas są opisane przy użyciu [format pliku zestawu .NET](assembly-format.md).
+Biblioteki klas są [biblioteki udostępnionej](https://en.wikipedia.org/wiki/Library_%28computing%29#Shared_libraries) pojęcia dla platformy .NET. Umożliwiają one componentize przydatne funkcje do modułów, które mogą być używane przez wiele aplikacji. One mogą służyć jako środek ładowania funkcji nie jest wymagane lub nieznany podczas uruchamiania aplikacji. Biblioteki klas są opisane przy użyciu [format pliku zestawu .NET](assembly-format.md).
 
 Istnieją trzy typy bibliotek klas, które są dostępne:
 
@@ -43,7 +43,7 @@ Przenośnej biblioteki są obsługiwane na wiele implementacji .NET. Nadal może
 
 Konfiguracja platformy można wybrać podczas tworzenia biblioteki przenośnej. Są to zbiór platformy, które są potrzebne do obsługi (na przykład, .NET Framework 4.5 +, Windows Phone 8.0 i nowsze). Więcej platformy, z którymi zdecydować się na pomocy technicznej, mniej interfejsów API i mniej założenia platform istnieje możliwość, liczby całkowite. Tej właściwości może być początkowo mylące, od użytkowników często reakcji "więcej lepiej jest", ale Znajdź więcej obsługiwane platformy wyniki w mniejszą liczbę dostępnych interfejsach API.
 
-Wielu deweloperów biblioteki przełączono z produkujących wiele bibliotek specyficzne dla platformy z jednego źródła (przy użyciu dyrektywy warunkowej kompilacji) do bibliotek przenośnych. Istnieją [kilka metod](http://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) do uzyskiwania dostępu do funkcji specyficzne dla platformy w przenośnych bibliotekach z [przynęta przełącznika](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/) najbardziej akceptowanego technika w tym momencie.
+Wielu deweloperów biblioteki przełączono z produkujących wiele bibliotek specyficzne dla platformy z jednego źródła (przy użyciu dyrektywy warunkowej kompilacji) do bibliotek przenośnych. Istnieją [kilka metod](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html) do uzyskiwania dostępu do funkcji specyficzne dla platformy w przenośnych bibliotekach z [przynęta przełącznika](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) najbardziej akceptowanego technika w tym momencie.
 
 ### <a name="net-standard-class-libraries"></a>Biblioteki standardowe klas .NET
 

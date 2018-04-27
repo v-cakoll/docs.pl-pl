@@ -1,9 +1,10 @@
 ---
-title: "Jak lokalizować aplikację"
+title: Jak lokalizować aplikację
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,12 +17,13 @@ ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 83ed8ee8b8bfd9c3d6dadfedad8889af10a86466
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3c5621de2a2d10e67f45fa2d6980cb84c388630f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-localize-an-application"></a>Jak lokalizować aplikację
 Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą narzędzia LocBaml.  
@@ -88,7 +90,7 @@ Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą na
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>Narzędzie LocBaml kompilacji  
   
-1.  Wszystkie pliki niezbędne do utworzenia LocBaml znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] próbek. Pobierz [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)] plików ze [przykładowe narzędzie LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
+1.  Wszystkie pliki niezbędne do utworzenia LocBaml znajdują się w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] próbek. Pobierz pliki C# z [przykładowe narzędzie LocBaml](http://go.microsoft.com/fwlink/?LinkID=160016).  
   
 2.  W wierszu polecenia Uruchom pliku projektu (locbaml.csproj) w celu utworzenia narzędzie:  
   
@@ -134,7 +136,7 @@ Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą na
 
    | |
    |-|
-   |HelloApp.g.en US.resources:window1.baml, Stack1:System.Windows.Controls.StackPanel. $Content, zignorować, FALSE, FALSE, # Tekst1; tekst&#2;|
+   |HelloApp.g.en US.resources:window1.baml, Stack1:System.Windows.Controls.StackPanel. $Content, zignorować, FALSE, FALSE, # Tekst1; tekst2 #;|
    |HelloApp.g.en US.resources:window1.baml, Text1:System.Windows.Controls.TextBlock. $Content, None, wartość TRUE, TRUE,, Witaj świecie|
    |HelloApp.g.en US.resources:window1.baml, Text2:System.Windows.Controls.TextBlock. $Content, None, wartość TRUE, TRUE,, World praktyczny brak jakichkolwiek|
 
@@ -158,7 +160,7 @@ Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą na
   
    |Nazwa BAML|Klucz zasobu|Kategoria|Czytelności|Modifiability|Komentarze|Wartość|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en US.resources:window1.baml|Stack1:system.Windows.Controls.StackPanel.$Content|Ignoruj|FAŁSZ|FAŁSZ||# Tekst1; tekst&#2;|
+   |HelloApp.g.en US.resources:window1.baml|Stack1:system.Windows.Controls.StackPanel.$Content|Ignoruj|FAŁSZ|FAŁSZ||# Tekst1; tekst2 #|
    |HelloApp.g.en US.resources:window1.baml|Text1:system.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Witaj Świecie|
    |HelloApp.g.en US.resources:window1.baml|Text2:system.Windows.Controls.TextBlock.$Content|Brak|WARTOŚĆ TRUE|WARTOŚĆ TRUE||Praktyczny brak jakichkolwiek świata|
   
@@ -195,7 +197,7 @@ Ten samouczek wyjaśnia sposób tworzenia zlokalizowanej aplikacji za pomocą na
   
 7.  Aby przetestować nowego zestawu satelickiego, musisz zmienić kultury uruchamiania aplikacji. Można to zrobić na jeden z dwóch sposobów:  
   
-    -   Zmień ustawienia regionalne systemu operacyjnego (**Start** &#124; **Panel sterowania** &#124; **Opcje regionalne i językowe**).  
+    -   Zmień ustawienia regionalne systemu operacyjnego (**Start** &#124; **Panelu sterowania** &#124; **Opcje regionalne i językowe**).  
   
     -   W aplikacji Dodaj następujący kod do pliku App.xaml.cs:  
   

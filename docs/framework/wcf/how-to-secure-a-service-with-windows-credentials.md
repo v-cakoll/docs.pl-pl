@@ -1,13 +1,13 @@
 ---
-title: "Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows"
-ms.custom: 
+title: 'Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-caps.latest.revision: 
+caps.latest.revision: 26
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6a5225f25ca921407d64f579bbc7c204917ff260
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: cbe29ed57a7eee3a74166dabd2b8931e73cd2860
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>Instrukcje: Zabezpieczanie usługi za pomocą poświadczeń systemu Windows
-W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Ten scenariusz, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
+W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi znajduje się w domenie systemu Windows, który jest wywoływany przez klientów w tej samej domenie. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Ten scenariusz, zobacz [zabezpieczenia transportu z uwierzytelnianiem systemu Windows](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md). Przykładową aplikację, zobacz [WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md) próbki.  
   
  W tym temacie założono masz istniejący interfejs kontrakt i implementacja już zdefiniowany i dodaje się, że. Można również zmodyfikować istniejącą usługę i klienta.  
   
@@ -57,17 +57,17 @@ W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!IN
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
   
 ### <a name="using-the-binding-in-a-service"></a>Za pomocą tego powiązania w usłudze  
- Jest to druga procedura przedstawia sposób użycia powiązania w samodzielnie hostowana usługa. [!INCLUDE[crabout](../../../includes/crabout-md.md)]hosting usług zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
+ Jest to druga procedura przedstawia sposób użycia powiązania w samodzielnie hostowana usługa. [!INCLUDE[crabout](../../../includes/crabout-md.md)] hosting usług zobacz [Hosting usług](../../../docs/framework/wcf/hosting-services.md).  
   
 ##### <a name="to-use-a-binding-in-a-service"></a>Aby użyć powiązania w usłudze  
   
 1.  Wstawianie kodu tej procedury po kodzie z poprzedniej procedury.  
   
-2.  Utwórz <xref:System.Type> zmiennej o nazwie `contractType` i przypisz mu typ interfejsu (`ICalculator`). Korzystając z [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], użyj `GetType` operatora; przy użyciu języka C#, użyj `typeof` — słowo kluczowe.  
+2.  Utwórz <xref:System.Type> zmiennej o nazwie `contractType` i przypisz mu typ interfejsu (`ICalculator`). Korzystając z języka Visual Basic, użyj `GetType` operatora; przy użyciu języka C#, użyj `typeof` — słowo kluczowe.  
   
 3.  Tworzenie drugiej `Type` zmiennej o nazwie `serviceType` i przypisz mu typ zaimplementowanego kontraktu (`Calculator`).  
   
-4.  Utwórz wystąpienie <xref:System.Uri> klasy o nazwie `baseAddress` z adres podstawowy usługi. Adres podstawowy musi mieć schemat, który odpowiada transportu. W takim przypadku schemat transportu jest protokół HTTP i specjalną obejmuje adres "Localhost" identyfikator URI (Uniform Resource) i portu numer (8036) oraz adres podstawowy punkt końcowy ("serviceModelSamples /): http://localhost:8036/serviceModelSamples /.  
+4.  Utwórz wystąpienie <xref:System.Uri> klasy o nazwie `baseAddress` z adres podstawowy usługi. Adres podstawowy musi mieć schemat, który odpowiada transportu. W takim przypadku schemat transportu jest protokół HTTP i specjalną obejmuje adres "Localhost" identyfikator URI (Uniform Resource) i portu numer (8036) oraz adres podstawowy punkt końcowy ("serviceModelSamples /): http://localhost:8036/serviceModelSamples/.  
   
 5.  Utwórz wystąpienie <xref:System.ServiceModel.ServiceHost> klasy z `serviceType` i `baseAddress` zmiennych.  
   
@@ -87,7 +87,7 @@ W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!IN
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>Aby użyć powiązania w kliencie z kodem  
   
-1.  Użyj narzędzia SvcUtil.exe do generowania kodu serwera proxy z metadanych usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Kod wygenerowany serwer proxy dziedziczy <xref:System.ServiceModel.ClientBase%601> klasy, która zapewnia, że każdy klient ma niezbędne konstruktorów, metod i właściwości, aby komunikować się z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. W tym przykładzie wygenerowany kod obejmuje `CalculatorClient` klasy, która implementuje `ICalculator` interfejsu włączenie zgodności z kodem usługi.  
+1.  Użyj narzędzia SvcUtil.exe do generowania kodu serwera proxy z metadanych usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Kod wygenerowany serwer proxy dziedziczy <xref:System.ServiceModel.ClientBase%601> klasy, która zapewnia, że każdy klient ma niezbędne konstruktorów, metod i właściwości, aby komunikować się z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. W tym przykładzie wygenerowany kod obejmuje `CalculatorClient` klasy, która implementuje `ICalculator` interfejsu włączenie zgodności z kodem usługi.  
   
 2.  Kod tej procedury jest wstawiany na początku `Main` metody programu klienta.  
   
@@ -140,7 +140,7 @@ W tym temacie przedstawiono sposób włączania zabezpieczeń transportu na [!IN
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>Aby użyć powiązania w kliencie z konfiguracją  
   
-1.  Użyj narzędzia SvcUtil.exe, aby wygenerować plik kodu i konfiguracji serwera proxy na podstawie metadanych usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
+1.  Użyj narzędzia SvcUtil.exe, aby wygenerować plik kodu i konfiguracji serwera proxy na podstawie metadanych usługi. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md).  
   
 2.  Zastąp [ \<powiązania >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md) sekcji pliku konfiguracji wygenerowany kod konfiguracji z poprzedniej sekcji.  
   

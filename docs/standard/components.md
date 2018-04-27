@@ -1,6 +1,6 @@
 ---
-title: "Składniki architektury .NET"
-description: "W tym artykule opisano składniki architektury .NET, takie jak .NET Standard, .NET implementacji środowiska uruchomieniowe .NET i narzędzi."
+title: Składniki architektury .NET
+description: W tym artykule opisano składniki architektury .NET, takie jak .NET Standard, .NET implementacji środowiska uruchomieniowe .NET i narzędzi.
 author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
@@ -10,11 +10,11 @@ ms.technology: dotnet-standard
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8a17d4c36d9c1942166b9ad889103a7942f1813d
-ms.sourcegitcommit: 96cc82cac4650adfb65ba351506d8a8fbcd17b5c
+ms.openlocfilehash: 51e6779d63cdaccc5633c9e81f97471d71099653
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-architectural-components"></a>Składniki architektury .NET
 
@@ -61,7 +61,7 @@ W przeszłości Mono zaimplementowana większych interfejsu API programu .NET Fr
 
 Mono jest zwykle używana z kompilatora just in time, ale także kompilatora pełnej statyczne (kompilacja z wyprzedzeniem o czasie) używaną na platformach, np. z systemem iOS.
 
-Aby dowiedzieć się więcej na temat Mono, zobacz [Mono dokumentacji](http://www.mono-project.com/docs/).
+Aby dowiedzieć się więcej na temat Mono, zobacz [Mono dokumentacji](https://www.mono-project.com/docs/).
 
 ### <a name="universal-windows-platform-uwp"></a>Platforma uniwersalna systemu Windows (UWP)
 
@@ -86,7 +86,7 @@ Masz dostęp do rozbudowany zestaw narzędzi i składników infrastruktury, któ
 - System projektu platformy .NET (na podstawie *.csproj*, *vbproj*, i *.fsproj* plików)
 - [MSBuild](/visualstudio/msbuild/msbuild), aparatu kompilacji używany do tworzenia projektów
 - [NuGet](/nuget/), Menedżer pakietów firmy Microsoft dla programu .NET
-- Orchestration kompilacji open source narzędzi, takich jak [CIASTO](http://cakebuild.net/) i [FAŁSZYWE](https://fake.build/)
+- Orchestration kompilacji open source narzędzi, takich jak [CIASTO](https://cakebuild.net/) i [FAŁSZYWE](https://fake.build/)
 
 ## <a name="see-also"></a>Zobacz także
 [Wybór między .NET Core i .NET Framework dla serwera aplikacji](choosing-core-framework-server.md)   

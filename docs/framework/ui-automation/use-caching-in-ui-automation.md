@@ -1,12 +1,13 @@
 ---
-title: "Używanie buforowania w automatyzacji interfejsu użytkownika"
-ms.custom: 
+title: Używanie buforowania w automatyzacji interfejsu użytkownika
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 808ba16cbacfad2cc255ae40e2cbad3178350afc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f559153190e4acb3b67acf75954260b31906c0d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-caching-in-ui-automation"></a>Używanie buforowania w automatyzacji interfejsu użytkownika
 > [!NOTE]
@@ -44,9 +46,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  Ustaw <xref:System.Windows.Automation.CacheRequest.AutomationElementMode%2A> właściwości <xref:System.Windows.Automation.AutomationElementMode.None> Jeśli chcesz zwiększyć wydajność nie przywracając pełną odwołania do obiektów. (Będzie go można pobrać bieżących wartości z tych obiektów.)  
   
-6.  Aktywuj żądania przy użyciu <xref:System.Windows.Automation.CacheRequest.Activate%2A> w `using` bloku (`Using` w [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+6.  Aktywuj żądania przy użyciu <xref:System.Windows.Automation.CacheRequest.Activate%2A> w `using` bloku (`Using` w programie Microsoft Visual Basic .NET).  
   
- Po uzyskaniu <xref:System.Windows.Automation.AutomationElement> obiektów lub subskrybowanie zdarzeń, Dezaktywuj żądania przy użyciu <xref:System.Windows.Automation.CacheRequest.Pop%2A> (Jeśli <xref:System.Windows.Automation.CacheRequest.Push%2A> użyto) lub usuwanie obiektu utworzonego przez <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Użyj <xref:System.Windows.Automation.CacheRequest.Activate%2A> w `using` bloku (`Using` w [!INCLUDE[TLA#tla_visualbnet](../../../includes/tlasharptla-visualbnet-md.md)]).  
+ Po uzyskaniu <xref:System.Windows.Automation.AutomationElement> obiektów lub subskrybowanie zdarzeń, Dezaktywuj żądania przy użyciu <xref:System.Windows.Automation.CacheRequest.Pop%2A> (Jeśli <xref:System.Windows.Automation.CacheRequest.Push%2A> użyto) lub usuwanie obiektu utworzonego przez <xref:System.Windows.Automation.CacheRequest.Activate%2A>. (Użyj <xref:System.Windows.Automation.CacheRequest.Activate%2A> w `using` bloku (`Using` w programie Microsoft Visual Basic .NET).  
   
 ### <a name="cache-automationelement-properties"></a>Właściwości Obiekt AutomationElement pamięci podręcznej  
   

@@ -1,9 +1,9 @@
 ---
-title: "Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;"
+title: 'Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,14 +13,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d142a8c741a9f0e25b8ac3c0002d04f437bf0ca9
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: a183f81a73c3c8034d9ba7366be8b36d425263da
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="unable-to-write-to-output-file-39ltfilenamegt39-lterrorgt"></a>Nie można zapisać do pliku wyjściowego &#39; &lt;filename&gt;&#39;: &lt;błąd&gt;
 Wystąpił problem podczas tworzenia pliku.  
@@ -45,7 +45,7 @@ Wystąpił problem podczas tworzenia pliku.
   
 3.  Jeśli błąd będzie nadal występował, uruchom ponownie komputer.  
   
-4.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+4.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   
 5.  Jeśli błąd będzie nadal występować po ponownej instalacji, powiadamia pomocy technicznej firmy Microsoft.  
   

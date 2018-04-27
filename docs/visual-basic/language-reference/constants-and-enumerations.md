@@ -1,43 +1,44 @@
 ---
-title: "Stałe i wyliczenia (Visual Basic)"
+title: Stałe i wyliczenia (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - enumerations [Visual Basic]
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9fd298cc504f9e4faf5205e53ebbf2ee355a21b3
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: da42d58190e8069154cd8383cf0a87e0b19f5ae4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>Stałe i wyliczenia (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia szereg wstępnie zdefiniowanych stałe i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia oferują wygodny do pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych.  
+Visual Basic dostarcza szereg wstępnie zdefiniowanych stałe i wyliczenia dla deweloperów. Stałe przechowywać wartości, które pozostają stałe w trakcie wykonywania aplikacji. Wyliczenia oferują wygodny do pracy z zestawów powiązanych stałych i do skojarzenia z nazwami wartości stałych.  
   
 ## <a name="constants"></a>Stałe  
   
 ### <a name="conditional-compilation-constants"></a>Stałe kompilacja warunkowa  
  W poniższej tabeli wymieniono dostępne dla kompilacji warunkowej na stałe wstępnie zdefiniowane.  
   
-|**Stałe**|**Opis**|  
+|**Stała**|**Opis**|  
 |---|---|  
 |`CONFIG`|Ciąg, który odpowiada bieżącej ustawienia **aktywną konfigurację rozwiązania** polu **programu Configuration Manager**.|  
 |`DEBUG`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie definiuje z konfiguracji debugowania dla projektu `DEBUG`. Gdy `DEBUG` jest zdefiniowany, <xref:System.Diagnostics.Debug> metod klasy Generowanie danych wyjściowych do **dane wyjściowe** okna. Jeśli nie jest zdefiniowana, <xref:System.Diagnostics.Debug> metod klasy nie są kompilowane i są generowane nie dane wyjściowe debugowania.|  
 |`TARGET`|Ciąg reprezentujący typ danych wyjściowych dla projektu lub ustawienia wiersza polecenia **/target** opcji. Możliwe wartości `TARGET` są:<br /><br /> -"winexe" dla aplikacji systemu Windows.<br />-"exe" dla aplikacji konsoli.<br />-"library" potrzeby biblioteki klas.<br />-"module" dla modułu.<br />- **/Target** opcja może być ustawiona w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko deweloperskie. Aby uzyskać więcej informacji, zobacz [/TARGET (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md).|  
 |`TRACE`|A `Boolean` wartość, która może być ustawiona w **właściwości projektu** okno dialogowe. Domyślnie wszystkie konfiguracje dla projektu Zdefiniuj `TRACE`. Gdy `TRACE` jest zdefiniowany, <xref:System.Diagnostics.Trace> metod klasy Generowanie danych wyjściowych do **dane wyjściowe** okna. Jeśli nie jest zdefiniowana, <xref:System.Diagnostics.Trace> klasy metody nie jest skompilowany i nie `Trace` generowane dane wyjściowe.|  
-|`VBC_VER`|Liczbę reprezentującą [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wersji w *głównych*. *drobne* format. Numer wersji [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] jest 8.0.|  
+|`VBC_VER`|Liczba reprezentująca wersji Visual Basic w *głównych*. *drobne* format. Numer wersji [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] jest 8.0.|  
   
 ### <a name="print-and-display-constants"></a>Drukowanie i stałe wyświetlania  
  Podczas wywołania wydruku i funkcji wyświetlania, można użyć następujących stałych w kodzie zamiast wartości rzeczywistych.  
   
-|**Stałe**|**Opis**|  
+|**Stała**|**Opis**|  
 |---|---|  
 |`vbCrLf`|Kombinacja znak powrotu/wysuw wiersza karetki.|  
 |`vbCr`|Znak powrotu karetki.|  
@@ -52,7 +53,7 @@ ms.lasthandoff: 11/21/2017
 |`vbVerticalTab`|Nie jest przydatne w systemie Microsoft Windows.|  
   
 ## <a name="enumerations"></a>Wyliczenia  
- Poniższej tabeli wymieniono i opisano wyliczenia podał [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Poniższej tabeli wymieniono i opisano wyliczenia pochodzącymi z języka Visual Basic.  
   
 |Wyliczenie|Opis|  
 |---|---|  
@@ -85,5 +86,5 @@ ms.lasthandoff: 11/21/2017
 ## <a name="see-also"></a>Zobacz też  
  [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
  [Visual Basic](../../visual-basic/index.md)  
- [Stałe — Przegląd](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
- [Enumerations — Przegląd](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+ [Stałe — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)  
+ [Wyliczenia — przegląd](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)

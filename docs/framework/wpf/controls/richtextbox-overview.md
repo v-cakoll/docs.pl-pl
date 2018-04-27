@@ -1,12 +1,13 @@
 ---
-title: "RichTextBox — Przegląd"
-ms.custom: 
+title: RichTextBox — Przegląd
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,26 +16,27 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e88afe5f9c35448b3234498af413500bee163abc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 3ac25413aaf15a18f70eff6114db81fbb6cc5411
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="richtextbox-overview"></a>RichTextBox — Przegląd
-<xref:System.Windows.Controls.RichTextBox> Kontroli umożliwia wyświetlanie lub edytowanie tym akapitów, obrazy, tabele i zawartości przepływu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i [!INCLUDE[TLA#tla_lhcshrp](../../../../includes/tlasharptla-lhcshrp-md.md)].  
+<xref:System.Windows.Controls.RichTextBox> Kontroli umożliwia wyświetlanie lub edytowanie tym akapitów, obrazy, tabele i zawartości przepływu. W tym temacie przedstawiono <xref:System.Windows.Controls.TextBox> klasy i przykłady dotyczące używania go w obu [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] i C#.  
   
   
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox lub RichTextBox?  
  Zarówno <xref:System.Windows.Controls.RichTextBox> i <xref:System.Windows.Controls.TextBox> Zezwalaj użytkownikom na edytowanie tekstu, jednak dwóch formantów są używane w różnych scenariuszach. A <xref:System.Windows.Controls.RichTextBox> jest lepszym rozwiązaniem, gdy jest to niezbędne dla użytkownika edytować tekst sformatowany, obrazów, tabel lub innych bogatej zawartości. Na przykład edytowanie dokumentu, artykuł lub blog, która wymaga formatowania, obrazy, itp. najlepiej odbywa się przy użyciu <xref:System.Windows.Controls.RichTextBox>. A <xref:System.Windows.Controls.TextBox> wymaga mniej zasobów systemowych, a następnie <xref:System.Windows.Controls.RichTextBox> i jest idealnym rozwiązaniem, gdy tylko zwykły tekst musi być edytowany (tj. użycie w formularzach). Zobacz [omówienie pole tekstowe](../../../../docs/framework/wpf/controls/textbox-overview.md) Aby uzyskać więcej informacji na temat <xref:System.Windows.Controls.TextBox>. Poniższa tabela zawiera podsumowanie najważniejszych funkcji usługi <xref:System.Windows.Controls.TextBox> i <xref:System.Windows.Controls.RichTextBox>.  
   
-|Formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (ewidencyjne + B)|<xref:System.Windows.Documents.FlowDocument>zawartość, takich jak obrazy, akapitów, tabelach itp.|  
+|Formant|Sprawdzanie pisowni w czasie rzeczywistym|Menu kontekstowe|Formatowanie poleceń, takich jak <xref:System.Windows.Documents.EditingCommands.ToggleBold%2A> (ewidencyjne + B)|<xref:System.Windows.Documents.FlowDocument> zawartość, takich jak obrazy, akapitów, tabelach itp.|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|Tak|Tak|Nie|Nie.|  
 |<xref:System.Windows.Controls.RichTextBox>|Tak|Tak|Tak|Tak|  
@@ -68,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="real-time-spell-checking"></a>Sprawdzanie pisowni w czasie rzeczywistym  
  Można włączyć sprawdzania czasie rzeczywistym pisowni <xref:System.Windows.Controls.TextBox> lub <xref:System.Windows.Controls.RichTextBox>. Gdy sprawdzanie pisowni jest włączone, czerwoną linią pojawi się poniżej żadnych pisowni (patrz rysunek poniżej).  
   
- ![Pole tekstowe z pisowni &#45; sprawdzanie](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
+ ![Pole tekstowe z pisowni&#45;sprawdzanie](../../../../docs/framework/wpf/controls/media/editing-textbox-with-spellchecking.png "Editing_TextBox_with_Spellchecking")  
   
  Zobacz [włączyć sprawdzanie pisowni w formancie edycji tekstu](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md) Aby dowiedzieć się, jak włączyć sprawdzanie pisowni.  
   

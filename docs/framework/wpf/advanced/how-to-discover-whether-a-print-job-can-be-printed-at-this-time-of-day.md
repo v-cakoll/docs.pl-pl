@@ -1,12 +1,13 @@
 ---
-title: "Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia"
-ms.custom: 
+title: Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,23 +18,24 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ef9da205792823b7069024c5e4a3e9ac80d60a24
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: eef74cfa290614e530fa22a34533c7924d4af1b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>Jak wykryć czy zadanie drukowania może zostać zrealizowane o tej porze dnia
 Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one właściwości czasu rozpoczęcia i zakończenia, które można ustawić, aby były niedostępne w pewnych porach dnia. Ta funkcja może być używana na przykład zarezerwować drukarek do wyłącznego użytku niektórych działu po 17: 00. Działu musi innej kolejki drukarki niż aplikacje innych działów obsługi użycia. Czy można ustawić kolejki dla innych działów będzie dostępny od 17: 00, gdy kolejka działu favored można ustawić jako dostępne przez cały czas.  
   
  Ponadto można ustawić zadania drukowania, same do druku tylko w ramach określonego zakresu czasu.  
   
- <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> klasy widoczne w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] z [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] umożliwiają zdalne sprawdzania, czy danego zadania drukowania można drukować na danej kolejki w danym momencie.  
+ <xref:System.Printing.PrintQueue> i <xref:System.Printing.PrintSystemJobInfo> klasy widoczne w [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] programu Microsoft .NET Framework umożliwiają zdalne sprawdzania, czy danego zadania drukowania można drukować na danej kolejki w danym momencie.  
   
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie jest to przykład przedstawiający diagnozować problemy z zadaniem drukowania.  
@@ -79,7 +81,7 @@ Kolejki wydruku nie zawsze są dostępne przez 24 godziny na dobę. Mają one w�
  [!code-csharp[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#printqueuestartuntil)]
  [!code-vb[DiagnoseProblematicPrintJob#PrintQueueStartUntil](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#printqueuestartuntil)]  
   
- **TimeConverter.ConvertToLocalHumanReadableTime** — metoda (przedstawione w poniższym przykładzie kodu) nie używa żadnych metod wprowadzone w systemie [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], więc dyskusji jest krótki. Metoda ma zadań podwójna konwersja: musi podjąć całkowitą wyrażanie minut po północy i przekonwertować go na czas zrozumiałą dla użytkownika i należy przekonwertować to na czas lokalny. Jest to osiągane przez utworzenie <xref:System.DateTime> obiekt, który ma ustawioną wartość północy czasu UTC, a następnie go używa <xref:System.DateTime.AddMinutes%2A> metody w celu dodania minut, które zostały przekazane do metody. To polecenie zwróci nowy <xref:System.DateTime> wyrażanie oryginalnego czas, który został przekazany do metody. <xref:System.DateTime.ToLocalTime%2A> Metoda następnie konwertuje to na czas lokalny.  
+ **TimeConverter.ConvertToLocalHumanReadableTime** — metoda (przedstawione w poniższym przykładzie kodu) nie używa żadnych metod wprowadzone w systemie Microsoft .NET Framework, więc dyskusji jest krótki. Metoda ma zadań podwójna konwersja: musi podjąć całkowitą wyrażanie minut po północy i przekonwertować go na czas zrozumiałą dla użytkownika i należy przekonwertować to na czas lokalny. Jest to osiągane przez utworzenie <xref:System.DateTime> obiekt, który ma ustawioną wartość północy czasu UTC, a następnie go używa <xref:System.DateTime.AddMinutes%2A> metody w celu dodania minut, które zostały przekazane do metody. To polecenie zwróci nowy <xref:System.DateTime> wyrażanie oryginalnego czas, który został przekazany do metody. <xref:System.DateTime.ToLocalTime%2A> Metoda następnie konwertuje to na czas lokalny.  
   
  [!code-cpp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/cpp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CPP/Program.cpp#timeconverter)]
  [!code-csharp[DiagnoseProblematicPrintJob#TimeConverter](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#timeconverter)]

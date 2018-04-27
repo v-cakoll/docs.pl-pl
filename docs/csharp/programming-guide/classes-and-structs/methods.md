@@ -1,5 +1,5 @@
 ---
-title: "Metody (Przewodnik programowania w języku C#)"
+title: Metody (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-caps.latest.revision: 
+caps.latest.revision: 41
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5390ee08ddd0f4725bb42bbdf7240bb99bd25301
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: dad1be88e39b708d34f454875e2cfb3ec100c430
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods-c-programming-guide"></a>Metody (Przewodnik programowania w języku C#)
 Metoda jest blok kodu, który zawiera serię instrukcji. Program powoduje, że instrukcje, które ma być wykonane przez wywołanie metody i określanie żadnych argumentów wymaganej metody. W języku C# co wykonanie instrukcji jest wykonywane w kontekście metody. Metoda Main jest punkt wejścia dla każdej aplikacji C# i jest wywoływane przez środowisko uruchomieniowe języka wspólnego (CLR), gdy program jest uruchomiony.  
@@ -64,7 +64,7 @@ Metoda jest blok kodu, który zawiera serię instrukcji. Program powoduje, że i
 ## <a name="return-values"></a>Wartości zwrócone  
 Metody może zwracać wartości do obiektu wywołującego. Jeśli zwracany typ, typ wyświetlanych przed nazwę metody nie jest `void`, metoda może zwracać wartości przy użyciu `return` — słowo kluczowe. Instrukcja zawierająca `return` — słowo kluczowe, a następnie wartość, która jest zgodny z typem zwracanym zwraca tę wartość do wywołującego metody. 
 
-Wartość może być zwracany do obiektu wywołującego przez wartość lub, począwszy od C# 7, [przez odwołanie](ref-returns.md). Wartości są zwracane do obiektu wywołującego przez odwołanie, jeśli `ref` — słowo kluczowe jest używane w podpisie metody i wynika z każdym `return` — słowo kluczowe. Na przykład następująca instrukcja podpisu i przywracać — metoda wskazywać, że ta metoda zwraca nazwy zmiennych `estDistance` przez odwołanie do obiektu wywołującego.
+Wartość może być zwracany do obiektu wywołującego przez wartość lub, począwszy od C# 7.0, [przez odwołanie](ref-returns.md). Wartości są zwracane do obiektu wywołującego przez odwołanie, jeśli `ref` — słowo kluczowe jest używane w podpisie metody i wynika z każdym `return` — słowo kluczowe. Na przykład następująca instrukcja podpisu i przywracać — metoda wskazywać, że ta metoda zwraca nazwy zmiennych `estDistance` przez odwołanie do obiektu wywołującego.
 
 ```csharp
 public ref double GetEstimatedDistance()

@@ -1,28 +1,28 @@
 ---
-title: "Porady: konfigurowanie usług aplikacji klienta"
-ms.custom: 
+title: 'Porady: konfigurowanie usług aplikacji klienta'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-caps.latest.revision: 
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
 W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -100,7 +100,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
   
      Wartość domyślna `Data Source = |SQL/CE|` do pola tekstowego.  
   
-3.  Aby wygenerować i korzystania z bazy danych programu SQL Server Compact, zachowaj domyślną wartość ciągu połączenia. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]zostanie wygenerowany plik bazy danych i umieść ją w katalogu wskazywanego przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> właściwości.  
+3.  Aby wygenerować i korzystania z bazy danych programu SQL Server Compact, zachowaj domyślną wartość ciągu połączenia. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zostanie wygenerowany plik bazy danych i umieść ją w katalogu wskazywanego przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> właściwości.  
   
 4.  Generowanie i używanie zaszyfrowanych [!INCLUDE[ssEW](../../../includes/ssew-md.md)] bazy danych, należy dodać `password` i `encrypt database` wartości w parametrach połączenia, jak pokazano w poniższym przykładzie.  
   
@@ -111,7 +111,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
     Data Source = |SQL/CE|;password=<password>;encrypt database=true  
     ```  
   
-5.  Aby skorzystać z własnego [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bazy danych, określ ciąg połączenia. Informacje o formaty ciągu prawidłowe połączenie, zobacz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dokumentacji. Ta baza danych nie jest generowany automatycznie. Parametry połączenia muszą odwoływać się do istniejącej bazy danych, które można tworzyć przy użyciu następujących instrukcji SQL.  
+5.  Aby korzystać z własnych baz danych programu SQL Server, określ ciąg połączenia. Informacje o formaty ciągu prawidłowe połączenie znajduje się w dokumentacji programu SQL Server. Ta baza danych nie jest generowany automatycznie. Parametry połączenia muszą odwoływać się do istniejącej bazy danych, które można tworzyć przy użyciu następujących instrukcji SQL.  
   
     ```  
     CREATE TABLE ApplicationProperties (PropertyName nvarchar(256),  
@@ -127,7 +127,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
 ## <a name="using-custom-providers"></a>Przy użyciu niestandardowych dostawców  
  Domyślnie funkcja usług aplikacji klienta korzysta z dostawców w <xref:System.Web.ClientServices.Providers?displayProperty=nameWithType> przestrzeni nazw. Po skonfigurowaniu aplikacji przy użyciu **usług** strony **projektanta projektu**, odwołania do tych dostawców są dodawane do pliku App.config. Ci dostawcy domyślnego dostępu do odpowiedniego dostawcy na serwerze. Aby uzyskać dostęp do danych użytkownika za pośrednictwem dostawców takich jak często skonfigurowano usługi sieci Web <xref:System.Web.Security.SqlMembershipProvider> i <xref:System.Web.Security.SqlRoleProvider>.  
   
- Jeśli chcesz użyć niestandardowego usługodawcy, zwykle ulegnie zmianie dostawcy po stronie serwera, aby wpływają na wszystkie aplikacje klienckie, które uzyskują dostęp do serwera. Jednak masz możliwość przy użyciu dostawców innych niż domyślne po stronie klienta. Można określić niestandardowych dostawców uwierzytelniania lub ról w pliku App.config projektu, jak pokazano w poniższej procedurze. Aby uzyskać informacje o sposobie tworzenia niestandardowych uwierzytelniania i dostawców ról, zobacz [implementowanie dostawcy członkostwa](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) i [implementowanie dostawcy roli](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Umożliwia także dostawcy ustawienia niestandardowe, modyfikując projektu `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]). Aby uzyskać więcej informacji, zobacz [Architektura ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
+ Jeśli chcesz użyć niestandardowego usługodawcy, zwykle ulegnie zmianie dostawcy po stronie serwera, aby wpływają na wszystkie aplikacje klienckie, które uzyskują dostęp do serwera. Jednak masz możliwość przy użyciu dostawców innych niż domyślne po stronie klienta. Można określić niestandardowych dostawców uwierzytelniania lub ról w pliku App.config projektu, jak pokazano w poniższej procedurze. Aby uzyskać informacje o sposobie tworzenia niestandardowych uwierzytelniania i dostawców ról, zobacz [implementowanie dostawcy członkostwa](http://msdn.microsoft.com/library/d8658b8e-c962-4f64-95e1-4acce35e4582) i [implementowanie dostawcy roli](http://msdn.microsoft.com/library/851671ce-bf9b-43f2-aba4-bc9d28b11c7d). Umożliwia także dostawcy ustawienia niestandardowe, modyfikując projektu `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic). Aby uzyskać więcej informacji, zobacz [Architektura ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-architecture.md).  
   
 #### <a name="to-configure-client-application-services-to-use-non-default-providers"></a>Aby skonfigurować usługi aplikacji klienta do używania dostawców innych niż domyślne  
   

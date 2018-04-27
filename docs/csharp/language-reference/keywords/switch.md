@@ -1,8 +1,9 @@
 ---
-title: "Switch — słowo kluczowe (odwołanie w C#)"
+title: Switch — słowo kluczowe (odwołanie w C#)
 ms.date: 03/07/2017
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - switch_CSharpKeyword
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-caps.latest.revision: "47"
+caps.latest.revision: 47
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1c345d0c6c935271600a386752e18c19a25cc389
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6506278edb782f61b83cecfccba3126282c0ecf8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="switch-c-reference"></a>switch (odwołanie w C#)
-`switch`jest instrukcja wyboru, która wybiera jeden *przełącznika sekcji* do wykonania z listy kandydatów na podstawie dopasowania wzorca z *pasuje do wyrażenia*. 
+`switch` jest instrukcja wyboru, która wybiera jeden *przełącznika sekcji* do wykonania z listy kandydatów na podstawie dopasowania wzorca z *pasuje do wyrażenia*. 
   
  [!code-csharp[switch#1](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch1.cs#1)]  
 
@@ -53,7 +54,7 @@ W języku C# 6 wyrażenie dopasowania musi być wyrażenie zwracające wartości
 - wartość typem całkowitym, takich jak [int](int.md) lub [długi](long.md).
 - [wyliczenia](enum.md) wartość.
 
-Wyrażenie dopasowania, począwszy od C# 7, może być dowolne wyrażenie inne niż null.
+Począwszy od wersji 7.0 C#, wyrażenie dopasowania może być dowolne wyrażenie inne niż null.
  
 ## <a name="the-switch-section"></a>W sekcji przełącznika
  
@@ -91,7 +92,7 @@ To wymaganie można spełnić zwykle przez jawnie Kończenie sekcji przełączni
 
  C# 6 obsługuje tylko stałe wzorzec i nie zezwala na powtarzanie stałe wartości, dlatego etykiety case zdefiniować wartości wykluczają się wzajemnie, a tylko jeden wzorzec może dopasować wyrażenie dopasowania. W rezultacie, w kolejności `case` instrukcje wyświetlane jest bez znaczenia.
 
- W języku C# 7 jednak ponieważ inne wzorce są obsługiwane, etykiety case nie należy definiować wartości wykluczają się wzajemnie i wielu wzorców może dopasować wyrażenie dopasowania. Ponieważ są wykonywane tylko instrukcji w sekcji przełącznika, który zawiera pierwszy pasujący wzorzec, w kolejności `case` instrukcje pojawiają się teraz jest ważne. Jeśli C# wykryje sekcji przełącznika, których instrukcji case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadek switch już został obsłużony w przypadku poprzednich." 
+ W języku C# w wersji 7.0 jednak ponieważ inne wzorce są obsługiwane, etykiety case nie należy definiować wartości wykluczają się wzajemnie, a wielu wzorców może dopasować wyrażenie dopasowania. Ponieważ są wykonywane tylko instrukcji w sekcji przełącznika, który zawiera pierwszy pasujący wzorzec, w kolejności `case` instrukcje pojawiają się teraz jest ważne. Jeśli C# wykryje sekcji przełącznika, których instrukcji case lub instrukcje są równoważne lub są podzbiorami poprzednich instrukcji, generuje błąd kompilatora, CS8120, "przypadek switch już został obsłużony w przypadku poprzednich." 
 
  Poniższy przykład przedstawia `switch` instrukcji, która korzysta z różnych wzorców nie wykluczają się wzajemnie. Jeśli przeniesiesz `case 0:` przełącznika sekcji, dzięki czemu nie jest już w pierwszej sekcji `switch` instrukcji, C# generuje błąd kompilatora, ponieważ całkowitą, którego wartość wynosi zero jest podzbiorem wszystkich liczb całkowitych, czyli wzorcowi określonemu przez `case int val` instrukcji.
 
@@ -109,9 +110,9 @@ Można rozwiązać ten problem i wyeliminować ostrzeżenia kompilatora w jeden 
 
 `default` Przypadku mogą być wyświetlane w dowolnej kolejności w `switch` instrukcji. Niezależnie od ich kolejność w kodzie źródłowym jest zawsze Szacowana ostatnio, po wszystkich `case` zostały ocenione etykiety.
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" />Dopasowywanie do wzorca za `switch` — instrukcja
+## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a><a name="pattern" /> Dopasowywanie do wzorca za `switch` — instrukcja
   
-Każdy `case` instrukcji definiuje wzorzec powodujący, jeśli jest on zgodny wyrażenie dopasowania zawierającego sekcji przełącznika do wykonania. Wszystkie wersje języka C# obsługuje stałe wzorzec. Pozostałe wzorce są obsługiwane począwszy od C# 7. 
+Każdy `case` instrukcji definiuje wzorzec powodujący, jeśli jest on zgodny wyrażenie dopasowania zawierającego sekcji przełącznika do wykonania. Wszystkie wersje języka C# obsługuje stałe wzorzec. Pozostałe wzorce są obsługiwane począwszy od wersji 7.0 C#. 
   
 ### <a name="constant-pattern"></a>Stałe wzorzec 
 
@@ -159,7 +160,7 @@ gdzie *typu* jest nazwa typu, do którego wynik *wyrażenie* należy skonwertowa
 
 - *wyrażenie* jest wystąpieniem typu pochodzącego od *typu*. Innymi słowy, wynik *wyrażenie* może być upcast na wystąpienie *typu*.
 
-- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu* . *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji typu. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
+- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu*. *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji typu. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
@@ -181,7 +182,7 @@ Bez wzorca dopasowania, ten kod może być zapisana w następujący sposób. Uż
 
 ## <a name="the-case-statement-and-the-when-clause"></a>`case` Instrukcji i `when` — klauzula
 
-C# 7, począwszy od ponieważ instrukcji case nie muszą być wykluczają się wzajemnie, można użyć dodać `when` klauzuli, aby określić dodatkowe warunku muszą być spełnione dla instrukcji case wyliczona jako true. `when` Klauzula może być dowolne wyrażenie zwracające wartość logiczną. Jedną z najczęściej zastosowania `when` jest używana do sekcji przełącznika uniemożliwić wykonywanie, gdy wartość wyrażenia dopasowanie jest `null`. 
+Uruchamianie z C# w wersji 7.0, ponieważ instrukcji case nie muszą być wykluczają się wzajemnie, można użyć dodać `when` klauzuli, aby określić dodatkowe warunku muszą być spełnione dla instrukcji case wyliczona jako true. `when` Klauzula może być dowolne wyrażenie zwracające wartość logiczną. Jedną z najczęściej zastosowania `when` jest używana do sekcji przełącznika uniemożliwić wykonywanie, gdy wartość wyrażenia dopasowanie jest `null`. 
 
  W poniższym przykładzie zdefiniowano podstawowej `Shape` klasy, `Rectangle` klasą pochodzącą z `Shape`, a `Square` klasą pochodzącą z `Rectangle`. Używa `when` klauzuli, aby upewnić się, że `ShowShapeInfo` traktuje `Rectangle` obiekt, który został przypisany równy długości i szerokości jako `Square` nawet jeśli nie zostało utworzone jako `Square` obiektu. Metoda nie jest podejmowana próba wyświetlenia informacji o obiekt, który jest `null` lub kształt, w których obszar wynosi zero. 
 
@@ -198,7 +199,7 @@ Należy pamiętać, że `when` klauzuli w przykładzie podejmowanych w celu prze
  [Przewodnik programowania w języku C#](../../programming-guide/index.md)  
  [Słowa kluczowe języka C#](index.md)  
  [if-else](if-else.md)  
- [Dopasowanie wzorca](../../pattern-matching.md)  
+ [Dopasowanie do wzorca](../../pattern-matching.md)  
  
 
  

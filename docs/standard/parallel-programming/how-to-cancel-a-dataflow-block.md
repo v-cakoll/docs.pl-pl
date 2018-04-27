@@ -1,5 +1,5 @@
 ---
-title: "Porady: Anulowanie bloku przepływu danych"
+title: 'Porady: Anulowanie bloku przepływu danych'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 3ef7fa62513072e1ee0dc7a8fecf3e600f9c26f2
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: eece4992deecbf30299d6e9e96fa8c2faf16d3ab
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-cancel-a-dataflow-block"></a>Porady: Anulowanie bloku przepływu danych
 Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie użyto formularzy systemu Windows do wyświetlenia, gdy elementy robocze są aktywne w potoku przepływu danych, a także skutków anulowania.  
@@ -33,7 +33,7 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
   
 1.  Tworzenie C# lub Visual Basic **aplikacji Windows Forms** projektu. W poniższych krokach projektu o nazwie `CancellationWinForms`.  
   
-2.  W formularzu projektanta dla tego formularza, pliku Form1.cs (Form1.vb dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), Dodaj <xref:System.Windows.Forms.ToolStrip> formantu.  
+2.  Projektant formularzy dla tego formularza, pliku Form1.cs (Form1.vb w języku Visual Basic), Dodaj <xref:System.Windows.Forms.ToolStrip> formantu.  
   
 3.  Dodaj <xref:System.Windows.Forms.ToolStripButton> formant <xref:System.Windows.Forms.ToolStrip> formantu. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości **dodać elementy robocze**.  
   
@@ -48,7 +48,7 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
   
 1.  W projekcie Dodaj odwołanie do System.Threading.Tasks.Dataflow.dll.  
   
-2.  Upewnij się, że pliku Form1.cs (Form1.vb dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) zawiera następujące `using` instrukcje (`Imports` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+2.  Upewnij się, że pliku Form1.cs (Form1.vb w języku Visual Basic) zawiera następujące `using` instrukcje (`Imports` w języku Visual Basic).  
   
      [!code-csharp[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#1)]
      [!code-vb[TPLDataflow_CancellationWinForms#1](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#1)]  
@@ -92,7 +92,7 @@ Ten dokument pokazano, jak włączyć anulowania w aplikacji. W tym przykładzie
      [!code-vb[TPLDataflow_CancellationWinForms#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#6)]  
   
 ## <a name="example"></a>Przykład  
- Poniższy przykład przedstawia kompletny kod dla pliku Form1.cs (Form1.vb dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+ Poniższy przykład przedstawia kompletny kod dla pliku Form1.cs (Form1.vb w języku Visual Basic).  
   
  [!code-csharp[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_cancellationwinforms/cs/cancellationwinforms/form1.cs#100)]
  [!code-vb[TPLDataflow_CancellationWinForms#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_cancellationwinforms/vb/cancellationwinforms/form1.vb#100)]  

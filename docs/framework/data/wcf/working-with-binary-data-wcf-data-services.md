@@ -1,12 +1,13 @@
 ---
-title: "Praca z danych binarnych (usługi danych WCF)"
-ms.custom: 
+title: Praca z danych binarnych (usługi danych WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e02a98a327947e32acd42ccf79d922f5dff6fb6c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 99143200b8135d5737454de325a95399c62fd506
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>Praca z danych binarnych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta umożliwia pobieranie i aktualizowanie danych binarnych z [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] źródła danych w jednym z następujących sposobów:  
@@ -33,10 +35,10 @@ ms.lasthandoff: 12/22/2017
   
 -   Jako strumień oddzielne zasobu binarnego. Jest to zalecana metoda uzyskiwania dostępu do oraz zmienianie danych dużego obiektu binarnego (BLOB), może reprezentować fotografii, wideo lub innego typu danych binarnych zakodowany.  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, zgodnie z definicją w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. W ten mechanizm danych binarnych jest traktowane jako zasób nośnika, który różni się od, ale związane z jednostki, która jest wywoływana wpisu media link entry. Aby uzyskać więcej informacji, zobacz [przesyłania strumieniowego dostawcy](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] implementuje przesyłanie strumieniowe danych binarnych przy użyciu protokołu HTTP, zgodnie z definicją w [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]. W ten mechanizm danych binarnych jest traktowane jako zasób nośnika, który różni się od, ale związane z jednostki, która jest wywoływana wpisu media link entry. Aby uzyskać więcej informacji, zobacz [przesyłania strumieniowego dostawcy](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md).  
   
 > [!TIP]
->  Krok po kroku przykład sposobu tworzenia [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] aplikacji klienckiej, która pobiera pliki binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi, która przechowuje zdjęć, zobacz wpis [danych usługi przesyłania strumieniowego dostawcy serii część 2: uzyskiwanie dostępu do nośnika Strumień zasobu z klienta](http://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod umieszczony w blogu usługi danych strumienia zdjęć, zobacz [przesyłanie strumieniowe zdjęć danych usługi próbki](http://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Krok po kroku przykład sposobu tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi, która przechowuje zdjęć, zobacz wpis [danych usługi przesyłania strumieniowego dostawcy serii części 2: uzyskiwanie dostępu do zasobu multimediów strumieniowych z klienta](http://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod umieszczony w blogu usługi danych strumienia zdjęć, zobacz [przesyłanie strumieniowe zdjęć danych usługi próbki](http://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
   
 ## <a name="entity-metadata"></a>Metadane jednostki  
  Określonej jednostki, która ma powiązanych multimediów strumieniowych zasobów w metadanych usługi danych przez `HasStream` atrybut zastosowany do typu jednostki, który jest wpisu łącza nośnika. W poniższym przykładzie `PhotoInfo` jednostka jest wpisem media link entry z zasobem multimediów powiązane, wskazane przez `HasStream` atrybutu.  
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta dostarcza metod dostępu do zasobów binarnych strumieni z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]— na podstawie danych usługi. Podczas pobierania zasobów nośnika, możesz użyć identyfikatora URI zasobu multimediów lub można uzyskać strumienia binarnego zawiera samych danych zasobu multimediów. Możesz również przekazywać dane zasobów nośnika jako strumienia binarnego.  
   
 > [!TIP]
->  Krok po kroku przykład sposobu tworzenia [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] aplikacji klienckiej, która pobiera pliki binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi, która przechowuje zdjęć, zobacz wpis [danych usługi przesyłania strumieniowego dostawcy serii część 2: uzyskiwanie dostępu do nośnika Strumień zasobu z klienta](http://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod umieszczony w blogu usługi danych strumienia zdjęć, zobacz [przesyłanie strumieniowe zdjęć danych usługi próbki](http://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
+>  Krok po kroku przykład sposobu tworzenia aplikacji klienckiej Windows Presentation Foundation (WPF), która pobiera pliki binarny z [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] usługi, która przechowuje zdjęć, zobacz wpis [danych usługi przesyłania strumieniowego dostawcy serii części 2: uzyskiwanie dostępu do zasobu multimediów strumieniowych z klienta](http://go.microsoft.com/fwlink/?LinkId=201637). Aby pobrać przykładowy kod umieszczony w blogu usługi danych strumienia zdjęć, zobacz [przesyłanie strumieniowe zdjęć danych usługi próbki](http://go.microsoft.com/fwlink/?LinkId=198988) w galerii kodu MSDN.  
   
 ### <a name="getting-the-uri-of-the-binary-stream"></a>Pobieranie identyfikatora URI strumienia danych binarnych  
  Podczas pobierania niektórych typów zasobów nośników, takich jak obrazy i inne pliki multimedialne często jest łatwiejsze do użycia w aplikacji niż Obsługa sam strumień danych binarnych identyfikator URI zasobu multimediów. Aby uzyskać identyfikator URI skojarzony z wpisu łącza nośnika zapewnia strumienia zasobów, należy wywołać <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metoda <xref:System.Data.Services.Client.DataServiceContext> wystąpienia, który służy do śledzenia jednostki. Poniższy przykład przedstawia sposób wywołania <xref:System.Data.Services.Client.DataServiceContext.GetReadStreamUri%2A> metody, aby uzyskać identyfikator URI strumień zasobów nośnika, który służy do tworzenia nowego obrazu na komputerze klienckim:  

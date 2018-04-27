@@ -1,29 +1,30 @@
 ---
-title: "Integracja programu WF w języku XAML i WPF"
-ms.custom: 
+title: Integracja programu WF w języku XAML i WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 327efb0b829e2628328d2e324c0736f8cb423b75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integracja programu WF w języku XAML i WPF
-Ten przykład przedstawia sposób tworzenia aplikacji, która używa [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] i [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji w jednym dokumencie XAML. W tym przykładzie użyto [!INCLUDE[wf](../../../../includes/wf-md.md)] i rozszerzalność języka XAML.  
+Ten przykład przedstawia sposób tworzenia aplikacji, która używa Windows Presentation Foundation (WPF) i [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji w jednym dokumencie XAML. W tym przykładzie użyto [!INCLUDE[wf](../../../../includes/wf-md.md)] i rozszerzalność języka XAML.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
- Deserializuje pliku ShowWindow.xaml do <xref:System.Activities.Statements.Sequence> działania dwóch zmiennych ciągu, które są manipulować przez działania sekwencji: `ShowWindow` i `WriteLine`. <xref:System.Activities.Statements.WriteLine> Działania danych wyjściowych do okna konsoli wyrażenia, który przypisuje do <xref:System.Activities.Statements.WriteLine.Text%2A> właściwości. `ShowWindow` Wyświetla działanie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] okno jako część jej logiki wykonywania. <xref:System.Activities.ActivityContext.DataContext%2A> Okna zawiera zmienne zadeklarowane w sekwencji. Formanty okna zadeklarowany w `ShowWindow` działania zaznaczać tych zmiennych za pomocą wiązania z danymi. Na koniec okna zawiera kontrolkę przycisku. `Click` Zdarzenie dla przycisku jest obsługiwane przez <xref:System.Activities.ActivityDelegate> o nazwie `MarkupExtension` zawierający `CloseWindow` działania. `MarkUpExtension`wywołuje zawarte działanie, która udostępnia kontekst, wszystkie obiekty określone przez `x:Name`, a także <xref:System.Activities.ActivityContext.DataContext%2A> okna nadrzędnego. W związku z tym `CloseWindow.InArgument<Window>` powiązany za pomocą wyrażenia, który odwołuje się do nazwy okna.  
+ Deserializuje pliku ShowWindow.xaml do <xref:System.Activities.Statements.Sequence> działania dwóch zmiennych ciągu, które są manipulować przez działania sekwencji: `ShowWindow` i `WriteLine`. <xref:System.Activities.Statements.WriteLine> Działania danych wyjściowych do okna konsoli wyrażenia, który przypisuje do <xref:System.Activities.Statements.WriteLine.Text%2A> właściwości. `ShowWindow` Wyświetla działanie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] okno jako część jej logiki wykonywania. <xref:System.Activities.ActivityContext.DataContext%2A> Okna zawiera zmienne zadeklarowane w sekwencji. Formanty okna zadeklarowany w `ShowWindow` działania zaznaczać tych zmiennych za pomocą wiązania z danymi. Na koniec okna zawiera kontrolkę przycisku. `Click` Zdarzenie dla przycisku jest obsługiwane przez <xref:System.Activities.ActivityDelegate> o nazwie `MarkupExtension` zawierający `CloseWindow` działania. `MarkUpExtension` wywołuje zawarte działanie, która udostępnia kontekst, wszystkie obiekty określone przez `x:Name`, a także <xref:System.Activities.ActivityContext.DataContext%2A> okna nadrzędnego. W związku z tym `CloseWindow.InArgument<Window>` powiązany za pomocą wyrażenia, który odwołuje się do nazwy okna.  
   
  `ShowWindow` Działania jest pochodną <xref:System.Activities.AsyncCodeActivity%601> klasy do wyświetlenia [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] okna i działanie jest kończone po zamknięciu okna. `Window` Właściwość jest typu `Func<Window>` umożliwiająca okno, aby być tworzone na żądanie dla każdego wykonania działania. `Window` Używa właściwości <xref:System.Xaml.XamlDeferringLoader> do modelu oceny odroczonej. `FuncFactoryDeferringLoader` Umożliwia `XamlReader` przechwycone podczas serializacji i następnie odczytywane podczas wykonywania działania.  
   

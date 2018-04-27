@@ -11,14 +11,14 @@ ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 411208ff134f53f0d3c9b842c9282a1545119066
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: e2450f34992af4b6b100b9e4d21a46b7d54b335c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attributes-visual-basic"></a>Atrybuty (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia kilka atrybutów, które zezwalają obiektów współdziałanie z kodem niezarządzanym i jeden atrybut, który umożliwia członkom modułu można uzyskać dostęp bez nazwy modułu. Poniższa tabela zawiera listę atrybutów używanych przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Visual Basic udostępnia kilka atrybutów, które zezwalają obiektów współdziałanie z kodem niezarządzanym i jeden atrybut, który umożliwia członkom modułu można uzyskać dostęp bez nazwy modułu. W poniższej tabeli przedstawiono atrybuty używane przez program Visual Basic.  
   
 |||  
 |---|---|  

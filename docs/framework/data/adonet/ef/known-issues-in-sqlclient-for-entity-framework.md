@@ -1,38 +1,40 @@
 ---
 title: Znane problemy w SqlClient Entity Framework
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3fb62e266ee6f0ca7957667d7c41fbd90dd34d32
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d5363ede9735ea805284638f795af67f2415ad0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Znane problemy w SqlClient Entity Framework
 W tej sekcji opisano znane problemy związane z dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient).  
   
 ## <a name="trailing-spaces-in-string-functions"></a>Spacje końcowe w funkcje ciągów  
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]ignoruje spacje końcowe w wartości ciągu. W związku z tym przekazywanie spacje końcowe w ciągu może spowodować nieprzewidywalne skutki, nawet błędów.  
+ SQL Server ignoruje spacje końcowe w wartości ciągu. W związku z tym przekazywanie spacje końcowe w ciągu może spowodować nieprzewidywalne skutki, nawet błędów.  
   
- Jeśli musisz mieć końcowe spacje w ciągu, należy rozważyć dodanie biały znak na końcu, tak aby [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] nie trim ciąg. Jeśli spacje końcowe nie są wymagane, powinien zostać przycięty przed są one przekazywane w dół potoku zapytania.  
+ Jeśli musisz mieć spacje końcowe w ciągu, należy rozważyć dołączenie biały znak na końcu, tak, aby program SQL Server nie trim ciąg. Jeśli spacje końcowe nie są wymagane, powinien zostać przycięty przed są one przekazywane w dół potoku zapytania.  
   
 ## <a name="right-function"></a>RIGHT — funkcja  
  Jeśli niż`null` wartość jest przekazywana jako pierwszy argument i 0 jest przekazywany jako drugi argument `RIGHT(nvarchar(max)`, 0`)` lub `RIGHT(varchar(max)`, 0`)`, `NULL` wartość zwracana zamiast `empty` ciągu.  
   
 ## <a name="cross-and-outer-apply-operators"></a>Operatory Zastosuj między i zewnętrzne  
- MIĘDZY i operatora OUTER APPLY operatory zostały wprowadzone w systemie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytania może powodować generowanie instrukcji języka Transact-SQL, która zawiera operatory CROSS zastosowania i/lub operatora OUTER APPLY. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wcześniejszy niż [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], nie obsługują tych operatorów, przetwarzanie takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
+ MIĘDZY i operatora OUTER APPLY operatory zostały wprowadzone w systemie [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]. W niektórych przypadkach potoku zapytania może powodować generowanie instrukcji języka Transact-SQL, która zawiera operatory CROSS zastosowania i/lub operatora OUTER APPLY. Ponieważ niektórzy dostawcy wewnętrznej bazy danych, w tym wersje programu SQL Server starszych niż [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)], nie obsługują tych operatorów, przetwarzanie takich zapytań nie można wykonać na tych dostawców wewnętrznej bazy danych.  
   
  Poniżej przedstawiono niektóre typowe scenariusze, które mogą prowadzić do obecności CROSS zastosowania i/lub operatora OUTER APPLY operatorów w zapytaniu danych wyjściowych:  
   
@@ -68,7 +70,7 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
 ```  
   
 ## <a name="server-generated-guid-identity-values"></a>Identyfikator GUID wartości tożsamości wygenerowana przez serwer  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serwer wartości generowanych przez identyfikator GUID typu tożsamości, ale dostawca musi obsługiwać zwracanie wartości generowanych przez serwer tożsamości po został wstawiony wiersz. Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2005, można zwrócić typu GUID generowany przez serwer w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] bazy danych za pośrednictwem [klauzuli OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Obsługuje serwer wartości generowanych przez identyfikator GUID typu tożsamości, ale dostawca musi obsługiwać zwracanie wartości generowanych przez serwer tożsamości po został wstawiony wiersz. Począwszy od programu SQL Server 2005, można zwrócić typu GUID generowany przez serwer w bazie danych programu SQL Server za pośrednictwem [klauzuli OUTPUT](http://go.microsoft.com/fwlink/?LinkId=169400) .  
   
 ## <a name="see-also"></a>Zobacz też  
  [Element SqlClient programu Entity Framework](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  

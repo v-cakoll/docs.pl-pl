@@ -1,34 +1,34 @@
 ---
-title: "Typy ogólne w XAML"
-ms.custom: 
+title: Typy ogólne w XAML
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-caps.latest.revision: 
+caps.latest.revision: 8
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c0e5bfb4f327028f09e8c898cf07e5fec9a5f789
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e64224edcb49d5040332b7cef9649c98cf26798b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generics-in-xaml"></a>Typy ogólne w XAML
 .NET Framework XAML usług zgodnie z implementacją w System.Xaml zapewnia obsługę przy użyciu ogólnych typów CLR. Ta obsługa obejmuje określenie ograniczenia ogólne jako argumentu typu i wymuszanie ograniczenia wywołując odpowiednie `Add` metody w przypadku kolekcji ogólnej. W tym temacie opisano aspekty przy użyciu i odwołuje się do typów ogólnych w języku XAML.  
   
 ## <a name="xtypearguments"></a>x: typearguments —  
- `x:TypeArguments`dyrektywa jest zdefiniowany w języku XAML. Gdy jest używany jako element członkowski typu XAML, który nie jest obsługiwana przez typu ogólnego, `x:TypeArguments` przekazuje ograniczający wpisz argumentów ogólnych do konstruktora zapasowego. Odwołanie składni, które odnoszą się do usług .NET Framework XAML użycie `x:TypeArguments`, który zawiera przykłady składni, zobacz [x: typearguments — dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+ `x:TypeArguments` dyrektywa jest zdefiniowany w języku XAML. Gdy jest używany jako element członkowski typu XAML, który nie jest obsługiwana przez typu ogólnego, `x:TypeArguments` przekazuje ograniczający wpisz argumentów ogólnych do konstruktora zapasowego. Odwołanie składni, które odnoszą się do usług .NET Framework XAML użycie `x:TypeArguments`, który zawiera przykłady składni, zobacz [x: typearguments — dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
  Ponieważ `x:TypeArguments` ciąg znaków, a ma zapasowy konwertera typów, zazwyczaj jest zadeklarowany w XAML użycia jako atrybut.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
  WPF i przeznaczonych dla [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)], można użyć XAML 2009 — funkcje razem z `x:TypeArguments`, ale tylko w przypadku utracić XAML (XAML, który nie jest kompilowany do znaczników). Skompilowany kod znaczników XAML w WPF i BAML formę XAML aktualnie nie obsługują słowa kluczowe języka XAML 2009 i funkcje.  
   
- Niestandardowe przepływy pracy w [!INCLUDE[TLA#tla_workflow](../../../includes/tlasharptla-workflow-md.md)] dla [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] nie obsługują ogólnego użycia języka XAML.  
+ Niestandardowe przepływy pracy w programie Windows Workflow Foundation dla [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] nie obsługują ogólnego użycia języka XAML.  
   
 ## <a name="see-also"></a>Zobacz też  
  [x:TypeArguments, dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md)  

@@ -1,12 +1,12 @@
 ---
-title: "Język wyrażeń regularnych — podręczny wykaz"
-ms.custom: 
+title: Język wyrażeń regularnych — podręczny wykaz
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.RegularExpressionBuilder
@@ -20,21 +20,21 @@ helpviewer_keywords:
 - cheat sheet
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
-caps.latest.revision: 
+caps.latest.revision: 56
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: a0fed14784327c6fe16f083a22471b56032b6b5d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b8e43264619158ed9325875d9843e322e08872a4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="regular-expression-language---quick-reference"></a>Język wyrażeń regularnych — podręczny wykaz
-<a name="top"></a>Wyrażenie regularne jest wzorzec, który aparat wyrażeń regularnych próbuje dopasować w wejściowego tekstu. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie, zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
+<a name="top"></a> Wyrażenie regularne jest wzorzec, który aparat wyrażeń regularnych próbuje dopasować w wejściowego tekstu. Wzorzec składa się z co najmniej jednego literału znakowego, operatora lub konstrukcji.  Aby uzyskać krótkie wprowadzenie, zobacz [wyrażeń regularnych programu .NET](../../../docs/standard/base-types/regular-expressions.md).  
   
  Każda sekcja w tym krótkim opisie przedstawia pewną kategorię znaków, operatorów i konstrukcji, które służą do definiowania wyrażeń regularnych:  
   
@@ -51,8 +51,8 @@ ms.lasthandoff: 12/23/2017
   
  Łatwe odwołania przygotowaliśmy także te informacje w dwóch formatów, które można pobrać i wydrukować:  
   
- [Pobierz w formacie programu Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Pobierz w formacie PDF (PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Pobierz w formacie programu Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Pobierz w formacie PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 <a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>Znaki unikowe  
@@ -68,10 +68,10 @@ ms.lasthandoff: 12/23/2017
 |`\f`|Dopasowuje znak wysuwu strony, \u000C.|`[\f]{2,}`|„\f\f\f” w ciągu „\f\f\f”|  
 |`\n`|Dopasowuje znak nowego wiersza, \u000A.|`\r\n(\w+)`|„\r\nThese” w ciągu „\r\nThese are\ntwo lines.”|  
 |`\e`|Dopasowuje znak escape, \u001B.|`\e`|„\x001B” w ciągu „\x001B”|  
-|`\` *nnn*|Używa ósemkową reprezentację, aby określić znak ( *nnn*  składa się z dwóch lub trzech cyfr).|`\w\040\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
-|`\x` *nn*|Używa szesnastkową reprezentację, aby określić znak ( *nn*  składa się z dokładnie dwie cyfry).|`\w\x20\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
-|`\c`*X*<br /><br /> `\c`*x*|Odpowiada określonym przez znak kontrolny ASCII *X* lub *x*, gdzie *X* lub *x* to litera znak kontrolny.|`\cC`|„\x0003” w ciągu „\x0003” (Ctrl-C)|  
-|`\u` *nnnn*|Pasuje do znaku Unicode za pomocą szesnastkową reprezentację (dokładnie cztery cyfry, reprezentowany przez  *nnnn* ).|`\w\u0020\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
+|`\` *nnn*|Używa ósemkową reprezentację, aby określić znak (*nnn* składa się z dwóch lub trzech cyfr).|`\w\040\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
+|`\x` *nn*|Używa szesnastkową reprezentację, aby określić znak (*nn* składa się z dokładnie dwie cyfry).|`\w\x20\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
+|`\c` *X*<br /><br /> `\c` *X*|Odpowiada określonym przez znak kontrolny ASCII *X* lub *x*, gdzie *X* lub *x* to litera znak kontrolny.|`\cC`|„\x0003” w ciągu „\x0003” (Ctrl-C)|  
+|`\u` *nnnn*|Pasuje do znaku Unicode za pomocą szesnastkową reprezentację (dokładnie cztery cyfry, reprezentowany przez *nnnn*).|`\w\u0020\w`|„a b”, „c d” w ciągu<br /><br /> „a bc d”|  
 |`\`|Kiedy następuje po nim znak, który nie jest rozpoznawany jako znak ucieczki w tej lub innej tabeli zawartej w tym temacie, dopasowuje ten znak. Na przykład `\*` jest taka sama jak `\x2A`, i `\.` jest taka sama jak `\x2E`. Dzięki temu aparat wyrażeń regularnych do odróżniania elementów języka (takich jak \* lub?) i literały znaków (reprezentowane przez `\*` lub `\?`).|`\d+[\+-x\*]\d+`|"2 + 2" i "3\*9" w "(2+2) \* 3\*9"|  
   
  [Powrót do początku](#top)  
@@ -82,12 +82,12 @@ ms.lasthandoff: 12/23/2017
   
 |Klasa znaków|Opis|Wzorzec|Dopasowania|  
 |---------------------|-----------------|-------------|-------------|  
-|`[`*character_group*`]`|Dopasowuje dowolny pojedynczy znak w *character_group*. Domyślnie w dopasowaniu jest uwzględniana wielkość liter.|`[ae]`|„a” w ciągu „gray”<br /><br /> „a”, „e” w ciągu „lane”|  
-|`[^`*character_group*`]`|Negacji: Dopasowuje dowolny pojedynczy znak, który nie znajduje się w *character_group*. Domyślnie znaków *character_group* jest rozróżniana wielkość liter.|`[^aei]`|„r”, „g”, „n” w „reign”|  
-|`[`*pierwszy* `-` *ostatniego*`]`|Zakres znaków: dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
+|`[` *character_group* `]`|Dopasowuje dowolny pojedynczy znak w *character_group*. Domyślnie w dopasowaniu jest uwzględniana wielkość liter.|`[ae]`|„a” w ciągu „gray”<br /><br /> „a”, „e” w ciągu „lane”|  
+|`[^` *character_group* `]`|Negacji: Dopasowuje dowolny pojedynczy znak, który nie znajduje się w *character_group*. Domyślnie znaków *character_group* jest rozróżniana wielkość liter.|`[^aei]`|„r”, „g”, „n” w „reign”|  
+|`[` *pierwszy* `-` *ostatni* `]`|Zakres znaków: dopasowuje dowolny pojedynczy znak z zakresu od *pierwszy* do *ostatniego*.|`[A-Z]`|„A”, „B” w ciągu „AB123”|  
 |`.`|Symbol wieloznaczny: Dopasowuje każdy pojedynczy znak, oprócz znaku \n.<br /><br /> Aby dopasować literału znaku kropki (. lub `\u002E`), należy poprzedzić znakiem ucieczki (`\.`).|`a.e`|„ave” w ciągu „nave”<br /><br /> „ate” w ciągu „water”|  
-|`\p{`*nazwa*`}`|Dopasowuje dowolny pojedynczy znak w kategorii Ogólne Unicode lub bloku o nazwie określonej przez *nazwa*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|„C”, „L” w ciągu „City Lights”<br /><br /> „Д”, „Ж” w ciągu „ДЖem”|  
-|`\P{`*nazwa*`}`|Dopasowuje dowolny pojedynczy znak, który nie znajduje się w kategorii Ogólne Unicode lub bloku o nazwie określonej przez *nazwa*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|„i”, „t”, „y” w ciągu „City”<br /><br /> „e”, „m” w ciągu „ДЖem”|  
+|`\p{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak w kategorii Ogólne Unicode lub bloku o nazwie określonej przez *nazwa*.|`\p{Lu}`<br /><br /> `\p{IsCyrillic}`|„C”, „L” w ciągu „City Lights”<br /><br /> „Д”, „Ж” w ciągu „ДЖem”|  
+|`\P{` *Nazwa* `}`|Dopasowuje dowolny pojedynczy znak, który nie znajduje się w kategorii Ogólne Unicode lub bloku o nazwie określonej przez *nazwa*.|`\P{Lu}`<br /><br /> `\P{IsCyrillic}`|„i”, „t”, „y” w ciągu „City”<br /><br /> „e”, „m” w ciągu „ДЖem”|  
 |`\w`|Dopasowuje dowolny znak słowa.|`\w`|„I”, „D”, „A”, „1”, „3” w ciągu „ID A1.3”|  
 |`\W`|Dopasowuje dowolny znak niebędący znakiem słowa.|`\W`|„ ”, „.” w ciągu „ID A1.3”|  
 |`\s`|Dopasowuje dowolny znak odstępu.|`\w\s`|„D ” w ciągu „ID A1.3”|  
@@ -120,16 +120,16 @@ ms.lasthandoff: 12/23/2017
   
 |Konstrukcja grupująca|Opis|Wzorzec|Dopasowania|  
 |------------------------|-----------------|-------------|-------------|  
-|`(`*Podwyrażenie*`)`|Przechwytuje dopasowane podwyrażenia i przypisuje mu liczbę porządkową (liczone od zera).|`(\w)\1`|„ee” w ciągu „deep”|  
-|`(?<`*nazwa* `>` *Podwyrażenie*`)`|Przechwytuje dopasowane podwyrażenie do nazwanej grupy.|`(?<double>\w)\k<double>`|„ee” w ciągu „deep”|  
-|`(?<`*Nazwa1* `-` *Nazwa2* `>` *Podwyrażenie*`)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Równoważenia definicja grupy" w [konstrukcji grupowania](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
-|`(?:`*Podwyrażenie*`)`|Definiuje nieprzechwytywaną grupę.|`Write(?:Line)?`|„WriteLine” w ciągu „Console.WriteLine()”<br /><br /> „Write” w ciągu „Console.Write(value)”|  
-|`(?imnsx-imnsx:`*Podwyrażenie*`)`|Stosuje lub wyłączenie określonych opcji w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [opcje wyrażeń regularnych](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|„A12xl”, „A12XL” w ciągu „A12xl A12XL a12xl”|  
-|`(?=`*Podwyrażenie*`)`|Pozytywna asercja wyprzedzająca o zerowej szerokości.|`\w+(?=\.)`|„is”, „ran” i „out” w ciągu „He is. The dog ran. The sun is out.”|  
-|`(?!`*Podwyrażenie*`)`|Negatywna asercja wyprzedzająca o zerowej szerokości.|`\b(?!un)\w+\b`|„sure”, „used” w ciągu „unsure sure unity used”|  
-|`(?<=`*Podwyrażenie*`)`|Pozytywna asercja wsteczna o zerowej szerokości.|`(?<=19)\d{2}\b`|„99”, „50”, „05” w ciągu „1851 1999 1950 1905 2003”|  
-|`(?<!`*Podwyrażenie*`)`|Negatywna asercja wsteczna o zerowej szerokości.|`(?<!19)\d{2}\b`|„51”, „03” w ciągu „1851 1999 1950 1905 2003”|  
-|`(?>`*Podwyrażenie*`)`|Podwyrażenia bez wycofywania („zachłanne”)|`[13579](?>A+B+)`|„1ABB”, „3ABB” i „5AB” w ciągu „1ABB 3ABBC 5AB 5AC”|  
+|`(` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenia i przypisuje mu liczbę porządkową (liczone od zera).|`(\w)\1`|„ee” w ciągu „deep”|  
+|`(?<` *Nazwa* `>` *Podwyrażenie* `)`|Przechwytuje dopasowane podwyrażenie do nazwanej grupy.|`(?<double>\w)\k<double>`|„ee” w ciągu „deep”|  
+|`(?<` *Nazwa1* `-` *Nazwa2* `>` *Podwyrażenie* `)`|Określa definicję grupy równoważącej. Aby uzyskać więcej informacji, zobacz sekcję "Równoważenia definicja grupy" w [konstrukcji grupowania](grouping-constructs-in-regular-expressions.md).|`(((?'Open'\()[^\(\)]*)+((?'Close-Open'\))[^\(\)]*)+)*(?(Open)(?!))$`|"((1-3)\*(3-1))" w "3+2^((1-3)\*(3-1))"|  
+|`(?:` *Podwyrażenie* `)`|Definiuje nieprzechwytywaną grupę.|`Write(?:Line)?`|„WriteLine” w ciągu „Console.WriteLine()”<br /><br /> „Write” w ciągu „Console.Write(value)”|  
+|`(?imnsx-imnsx:` *Podwyrażenie* `)`|Stosuje lub wyłączenie określonych opcji w *Podwyrażenie*. Aby uzyskać więcej informacji, zobacz [opcje wyrażeń regularnych](regular-expression-options.md).|`A\d{2}(?i:\w+)\b`|„A12xl”, „A12XL” w ciągu „A12xl A12XL a12xl”|  
+|`(?=` *Podwyrażenie* `)`|Pozytywna asercja wyprzedzająca o zerowej szerokości.|`\w+(?=\.)`|„is”, „ran” i „out” w ciągu „He is. The dog ran. The sun is out.”|  
+|`(?!` *Podwyrażenie* `)`|Negatywna asercja wyprzedzająca o zerowej szerokości.|`\b(?!un)\w+\b`|„sure”, „used” w ciągu „unsure sure unity used”|  
+|`(?<=` *Podwyrażenie* `)`|Pozytywna asercja wsteczna o zerowej szerokości.|`(?<=19)\d{2}\b`|„99”, „50”, „05” w ciągu „1851 1999 1950 1905 2003”|  
+|`(?<!` *Podwyrażenie* `)`|Negatywna asercja wsteczna o zerowej szerokości.|`(?<!19)\d{2}\b`|„51”, „03” w ciągu „1851 1999 1950 1905 2003”|  
+|`(?>` *Podwyrażenie* `)`|Podwyrażenia bez wycofywania („zachłanne”)|`[13579](?>A+B+)`|„1ABB”, „3ABB” i „5AB” w ciągu „1ABB 3ABBC 5AB 5AC”|  
   
  [Powrót do początku](#top)  
   
@@ -142,15 +142,15 @@ ms.lasthandoff: 12/23/2017
 |`*`|Dopasowuje poprzedni element zero lub większą liczbę razy.|`\d*\.\d`|„.0”, „19,9”, „219,9”|  
 |`+`|Dopasowuje poprzedni element co najmniej raz.|`"be+"`|„bee” w ciągu „been”, „be” w ciągu „bent”|  
 |`?`|Dopasowuje poprzedni element zero lub jeden raz.|`"rai?n"`|„ran”, „rain”|  
-|`{` *n* `}`|Dokładnie zgodny z poprzednim elementem  *n*  razy.|`",\d{3}"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
-|`{` *n* `,}`|Pasuje do poprzedniego elementu co najmniej  *n*  razy.|`"\d{2,}"`|„166”, „29”, „1930”|  
-|`{` *n*  `,` *m*`}`|Pasuje do poprzedniego elementu co najmniej  *n*  razy, ale nie więcej niż *m* razy.|`"\d{3,5}"`|„166”, „17668”<br /><br /> „19302” w ciągu „193024”|  
+|`{` *N* `}`|Dokładnie zgodny z poprzednim elementem *n* razy.|`",\d{3}"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
+|`{` *N* `,}`|Pasuje do poprzedniego elementu co najmniej *n* razy.|`"\d{2,}"`|„166”, „29”, „1930”|  
+|`{` *n* `,` *m* `}`|Pasuje do poprzedniego elementu co najmniej *n* razy, ale nie więcej niż *m* razy.|`"\d{3,5}"`|„166”, „17668”<br /><br /> „19302” w ciągu „193024”|  
 |`*?`|Dopasowuje poprzedni element zero lub większą liczbę razy (przy czym ta liczba jest jak najmniejsza).|`\d*?\.\d`|„.0”, „19,9”, „219,9”|  
 |`+?`|Dopasowuje poprzedni element raz lub większą liczbę razy (przy czym ta liczba jest jak najmniejsza).|`"be+?"`|„be” w ciągu „been”, „be” w ciągu „bent”|  
 |`??`|Dopasowuje poprzedni element zero lub jeden raz (przy czym liczba dopasowań jest jak najmniejsza).|`"rai??n"`|„ran”, „rain”|  
-|`{` *n* `}?`|Dokładnie zgodny z poprzednim elementem  *n*  razy.|`",\d{3}?"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
-|`{` *n* `,}?`|Pasuje do poprzedniego elementu co najmniej  *n*  razy, ale kilka razy, ile to możliwe.|`"\d{2,}?"`|„166”, „29”, „1930”|  
-|`{` *n*  `,` *m*`}?`|Zgodny z poprzednim elementem między  *n*  i *m* razy, ale kilka razy, ile to możliwe.|`"\d{3,5}?"`|„166”, „17668”<br /><br /> „193”, „024” w ciągu „193024”|  
+|`{` *N* `}?`|Dokładnie zgodny z poprzednim elementem *n* razy.|`",\d{3}?"`|„,043” w ciągu „1,043.6”,„876”, „,543” i „,210” w ciągu „9,876,543,210"|  
+|`{` *N* `,}?`|Pasuje do poprzedniego elementu co najmniej *n* razy, ale kilka razy, ile to możliwe.|`"\d{2,}?"`|„166”, „29”, „1930”|  
+|`{` *n* `,` *m* `}?`|Zgodny z poprzednim elementem między *n* i *m* razy, ale kilka razy, ile to możliwe.|`"\d{3,5}?"`|„166”, „17668”<br /><br /> „193”, „024” w ciągu „193024”|  
   
  [Powrót do początku](#top)  
   
@@ -160,8 +160,8 @@ ms.lasthandoff: 12/23/2017
   
 |Konstrukcja dopasowywania wstecznego|Opis|Wzorzec|Dopasowania|  
 |-----------------------------|-----------------|-------------|-------------|  
-|`\`*numer*|Dopasowanie wsteczne. Dopasowuje wartość numerowanego podwyrażenia.|`(\w)\1`|„ee” w ciągu „seek”|  
-|`\k<`*nazwa*`>`|Nazwane dopasowanie wsteczne. Dopasowuje wartość nazwanego wyrażenia.|`(?<char>\w)\k<char>`|„ee” w ciągu „seek”|  
+|`\` *Numer*|Dopasowanie wsteczne. Dopasowuje wartość numerowanego podwyrażenia.|`(\w)\1`|„ee” w ciągu „seek”|  
+|`\k<` *Nazwa* `>`|Nazwane dopasowanie wsteczne. Dopasowuje wartość nazwanego wyrażenia.|`(?<char>\w)\k<char>`|„ee” w ciągu „seek”|  
   
  [Powrót do początku](#top)  
   
@@ -172,8 +172,8 @@ ms.lasthandoff: 12/23/2017
 |Konstrukcje zmiany|Opis|Wzorzec|Dopasowania|  
 |---------------------------|-----------------|-------------|-------------|  
 |<code>&#124;</code>|Dopasowuje wszystkie jeden element oddzielone pionowy pasek (&#124;) znaków.|<code>th(e&#124;is&#124;at)</code>|„the”, „this” w ciągu „this is the day. "|  
-|`(?(`*wyrażenie* `)` *tak* <code>&#124;</code> *nie*`)`|Dopasowuje *tak* Jeśli wzorzec wyrażenia regularnego wskazywany przez *wyrażenie* pasuje; w przeciwnym razie wartość odpowiada opcjonalny *nie* części. *wyrażenie* jest interpretowana jako potwierdzenie zerowej szerokości.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|„A10”, „910” w ciągu „A10 C103 910”|  
-|`(?(`*nazwa* `)` *tak* <code>&#124;</code> *nie*`)`|Odpowiada *tak* Jeśli *nazwa*, nazwany ani numerowanych Przechwytywanie grupy, jest zgodny; w przeciwnym razie wartość odpowiada opcjonalny *nie*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, „Yiska playing.jpg” w ciągu „Dogs.jpg "Yiska playing.jpg"”|  
+|`(?(` *wyrażenie* `)` *tak* <code>&#124;</code> *nie* `)`|Dopasowuje *tak* Jeśli wzorzec wyrażenia regularnego wskazywany przez *wyrażenie* pasuje; w przeciwnym razie wartość odpowiada opcjonalny *nie* części. *wyrażenie* jest interpretowana jako potwierdzenie zerowej szerokości.|<code>(?(A)A\d{2}\b&#124;\b\d{3}\b)</code>|„A10”, „910” w ciągu „A10 C103 910”|  
+|`(?(` *Nazwa* `)` *tak* <code>&#124;</code> *nie* `)`|Odpowiada *tak* Jeśli *nazwa*, nazwany ani numerowanych Przechwytywanie grupy, jest zgodny; w przeciwnym razie wartość odpowiada opcjonalny *nie*.|<code>(?&lt;quoted&gt;&quot;)?(?(quoted).+?&quot;&#124;\S+\s)</code>|Dogs.jpg, „Yiska playing.jpg” w ciągu „Dogs.jpg "Yiska playing.jpg"”|  
   
  [Powrót do początku](#top)  
   
@@ -183,8 +183,8 @@ ms.lasthandoff: 12/23/2017
   
 |Znak|Opis|Wzorzec|Wzorzec zamieniania|Ciąg wejściowy|Ciąg wynikowy|  
 |---------------|-----------------|-------------|-------------------------|------------------|-------------------|  
-|`$`*numer*|Zastępuje podciąg pasujący do grupy *numer*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|„one two”|„two one”|  
-|`${`*nazwa*`}`|Zastępuje podciąg pasujący do grupy o nazwie *nazwa*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|„one two”|„two one”|  
+|`$` *Numer*|Zastępuje podciąg pasujący do grupy *numer*.|`\b(\w+)(\s)(\w+)\b`|`$3$2$1`|„one two”|„two one”|  
+|`${` *Nazwa* `}`|Zastępuje podciąg pasujący do grupy o nazwie *nazwa*.|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|„one two”|„two one”|  
 |`$$`|Podstawia literał „$”.|`\b(\d+)\s?USD`|`$$$1`|„103 USD”|„$103”|  
 |`$&`|Podstawia kopię całego dopasowania.|`\$?\d*\.?\d+`|`**$&**`|"$1.30"|"\*\*$1.30\*\*"|  
 |<code>$`</code>|Podstawia cały tekst ciągu wejściowego przed dopasowaniem.|`B+`|<code>$`</code>|„AABBCC”|„AAAACC”|  
@@ -209,7 +209,7 @@ ms.lasthandoff: 12/23/2017
 |Opcja|Opis|Wzorzec|Dopasowania|  
 |------------|-----------------|-------------|-------------|  
 |`i`|Używa dopasowywania bez uwzględniania wielkości liter.|`\b(?i)a(?-i)a\w+\b`|„aardvark”, „aaaAuto” w ciągu „aardvark AAAuto aaaAuto Adam breakfast”|  
-|`m`|Używa trybu wielowierszowego. `^`i `$` pasują do początku i końca wiersza, zamiast początku i końca ciągu.|Na przykład, zobacz sekcję "Wielowierszowy tryb" w [opcje wyrażeń regularnych](regular-expression-options.md).||  
+|`m`|Używa trybu wielowierszowego. `^` i `$` pasują do początku i końca wiersza, zamiast początku i końca ciągu.|Na przykład, zobacz sekcję "Wielowierszowy tryb" w [opcje wyrażeń regularnych](regular-expression-options.md).||  
 |`n`|Nie przechwytuje nienazwanych grup.|Na przykład, zobacz sekcję "Jawne przechwytuje tylko" w [opcje wyrażeń regularnych](regular-expression-options.md).||  
 |`s`|Używa trybu jednowierszowego.|Na przykład, zobacz sekcję "jednowierszowy tryb" w [opcje wyrażeń regularnych](regular-expression-options.md).||  
 |`x`|Ignoruje niepoprzedzony znakiem ucieczki znak odstępu we wzorcu wyrażenia regularnego.|`\b(?x) \d+ \s \w+`|„1 aardvark”, „2 cats” w ciągu „1 aardvark 2 cats IV centurions”|  
@@ -222,9 +222,9 @@ ms.lasthandoff: 12/23/2017
   
 |Konstrukcja|Definicja|Przykład|  
 |---------------|----------------|-------------|  
-|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak liter środku wzorca. Aby uzyskać więcej informacji, zobacz [opcje wyrażeń regularnych](regular-expression-options.md).|`\bA(?i)b\w+\b`Dopasowuje "ABA", "Możliwość" w "ABA stanie Act"|  
-|`(?#`*komentarz*`)`|Komentarz w tekście. Komentarz kończy się przy pierwszym nawiasie zamykającym.|`\bA(?#Matches words starting with A)\w+\b`|  
-|`#`[do końca wiersza]|Komentarz trybu X. Komentarz, który rozpoczyna się od niezmienionym znaczeniu `#` i kontynuuje do końca wiersza.|`(?x)\bA\w+\b#Matches words starting with A`|  
+|`(?imnsx-imnsx)`|Ustawia lub wyłącza opcje, takie jak liter środku wzorca. Aby uzyskać więcej informacji, zobacz [opcje wyrażeń regularnych](regular-expression-options.md).|`\bA(?i)b\w+\b` Dopasowuje "ABA", "Możliwość" w "ABA stanie Act"|  
+|`(?#` *Komentarz* `)`|Komentarz w tekście. Komentarz kończy się przy pierwszym nawiasie zamykającym.|`\bA(?#Matches words starting with A)\w+\b`|  
+|`#` [do końca wiersza]|Komentarz trybu X. Komentarz, który rozpoczyna się od niezmienionym znaczeniu `#` i kontynuuje do końca wiersza.|`(?x)\bA\w+\b#Matches words starting with A`|  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
@@ -232,5 +232,5 @@ ms.lasthandoff: 12/23/2017
  [Wyrażenia regularne](regular-expressions.md)  
  [Klasy wyrażeń regularnych](the-regular-expression-object-model.md)  
  [Przykłady wyrażeń regularnych](regular-expression-examples.md)  
- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

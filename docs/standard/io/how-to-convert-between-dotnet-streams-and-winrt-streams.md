@@ -1,29 +1,29 @@
 ---
-title: "Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows"
-ms.custom: 
+title: 'Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d9e4c1c0b432ff44af0410b1efdc3940cd0ff19c
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 25df0b363e5c9b44ae51d14ef0c2286cbb80ced8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-convert-between-net-framework-streams-and-windows-runtime-streams"></a>Porady: konwersja strumieni platformy .NET Framework i strumieni środowiska wykonawczego systemu Windows
 Program .NET Framework dla aplikacji do Sklepu Windows to podzestaw funkcji pełnego programu .NET Framework. Ze względu na zabezpieczenia i inne wymagania aplikacji do Sklepu Windows nie można używać pełnego zestawu interfejsów API programu .NET Framework w celu otwierania i odczytywania plików. Aby uzyskać więcej informacji, zobacz [Omówienie aplikacji .NET dla Sklepu Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx). Jednak może być wymagane użycie interfejsów API programu .NET Framework w celu wykonywania innych operacji na strumieniach. Do manipulowania tych strumieni, może być konieczne konwersji między typem strumienia .NET Framework takie jak <xref:System.IO.MemoryStream> lub <xref:System.IO.FileStream>, a strumień środowiska wykonawczego systemu Windows, takich jak [IInputStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.iinputstream.aspx), [IOutputStream ](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.ioutputstream.aspx), lub [IRandomAccessStream](http://msdn.microsoft.com/library/windows/apps/windows.storage.streams.irandomaccessstream.aspx).  
@@ -90,6 +90,6 @@ Program .NET Framework dla aplikacji do Sklepu Windows to podzestaw funkcji peł
     [!code-vb[System.IO.WindowsRuntimeStreamExtensionsEx#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestreamextensionsex/vb/mainpage.xaml.vb#2)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Szybki Start: Odczytywanie i zapisywanie pliku (system Windows)](http://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
+ [Szybki Start: Odczytywanie i zapisywanie pliku (system Windows)](https://msdn.microsoft.com/library/windows/apps/hh464978.aspx)  
  [Omówienie aplikacji .NET dla Sklepu Windows](http://msdn.microsoft.com/library/windows/apps/br230302.aspx)  
- [.NET dla Sklepu Windows apps — obsługiwanych interfejsów API](http://msdn.microsoft.com/library/windows/apps/br230232.aspx)
+ [.NET dla Sklepu Windows apps — obsługiwanych interfejsów API](https://msdn.microsoft.com/library/windows/apps/br230232.aspx)

@@ -1,5 +1,5 @@
 ---
-title: "long (odwołanie w C#)"
+title: long (odwołanie w C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,18 +11,18 @@ f1_keywords:
 helpviewer_keywords:
 - long keyword [C#]
 ms.assetid: f9b24319-1f39-48be-a42b-d528ee28a7fd
-caps.latest.revision: 
+caps.latest.revision: 17
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7f18bed80550b293195961fd9d42491dd571cbaf
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4f11c904aadc5cd27482072e9f6f97236c0cdce2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="long-c-reference"></a>long (odwołanie w C#)
 
-`long`Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
+`long` Określa typ całkowity, który przechowuje wartości w zależności od rozmiaru i zakres pokazano w poniższej tabeli.  
   
 |Typ|Zakres|Rozmiar|Typ programu .NET Framework|  
 |----------|-----------|----------|-------------------------|  
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literały 
 
-Można zadeklarować i zainicjuj `long` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od C# 7) literału do niego dane binarne. 
+Można zadeklarować i zainicjuj `long` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne. 
 
 W poniższym przykładzie liczb całkowitych równa 4 294 967 296, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są przypisane do `long` wartości.  
   
@@ -39,7 +39,7 @@ W poniższym przykładzie liczb całkowitych równa 4 294 967 296, które są re
 > [!NOTE] 
 > Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu. 
 
-Począwszy od C# 7, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
  - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
 

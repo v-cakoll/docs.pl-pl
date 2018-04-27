@@ -1,12 +1,12 @@
 ---
 title: 'Porady: wpisywanie tekstu do pliku'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,28 +17,31 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0ff0d79762ba47214217a261a325aad9f5eaf6
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 926dfe1ea254fdb6460c835f58721f54609ddc90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-text-to-a-file"></a>Porady: wpisywanie tekstu do pliku
 Ten temat przedstawia różne sposoby tekst może zapisywać do pliku dla aplikacji .NET Framework lub [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Następujące klasy i metody są zwykle używane do zapisywanie tekstu do pliku:  
   
--   <xref:System.IO.StreamWriter>-zawiera metody do zapisu w pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> lub <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
+-   <xref:System.IO.StreamWriter> -zawiera metody do zapisu w pliku synchronicznie (<xref:System.IO.StreamWriter.Write%2A> lub <xref:System.IO.TextWriter.WriteLine%2A>) lub asynchronicznie (<xref:System.IO.StreamWriter.WriteAsync%2A> i <xref:System.IO.StreamWriter.WriteLineAsync%2A>).  
   
--   <xref:System.IO.File>— do użycia z aplikacji .NET Framework. Zapewnia metody statyczne do zapisywanie tekstu do pliku, takich jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub Dołącz tekstu do pliku (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> lub <xref:System.IO.File.AppendText%2A>).  
+-   <xref:System.IO.File> — do użycia z aplikacji .NET Framework. Zapewnia metody statyczne do zapisywanie tekstu do pliku, takich jak <xref:System.IO.File.WriteAllLines%2A> i <xref:System.IO.File.WriteAllText%2A>, lub Dołącz tekstu do pliku (<xref:System.IO.File.AppendAllLines%2A>, <xref:System.IO.File.AppendAllText%2A> lub <xref:System.IO.File.AppendText%2A>).  
   
 -   [FileIO](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.aspx) — do użycia z [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] aplikacji. Zawiera on metod asynchronicznych próbę zapisania tekstu do pliku ([WriteLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writelinesasync.aspx) lub [WriteTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.writetextasync.aspx)) lub Dołącz tekstu do pliku ([AppendLinesAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendlinesasync.aspx) lub [ AppendTextAsync](https://msdn.microsoft.com/library/windows/apps/windows.storage.fileio.appendtextasync.aspx)).  
-  
+
+- <xref:System.IO.Path> -ma być używany dla ciągów, które zawierają informacje o ścieżce pliku lub katalogu. Zawiera on <xref:System.IO.Path.Combine%2A> metodę, która umożliwia łączenie ciągów zbudować ścieżki pliku lub katalogu.
+
+
  Przykłady te zostały uproszczone aby skupić się na zadanie wykonywane. Z tego powodu próbki wykonać sprawdzanie błędów minimalnego i obsługa wyjątków, jeśli wszystkie. Rzeczywistych aplikacji zwykle zapewnia bardziej niezawodne sprawdzanie błędów i wyjątków.  
   
 ## <a name="example"></a>Przykład  
@@ -95,6 +98,7 @@ Ten temat przedstawia różne sposoby tekst może zapisywać do pliku dla aplika
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.StreamWriter>  
+ <xref:System.IO.Path>  
  <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>  
  [Instrukcje: wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
  [Instrukcje: odczyt i zapis we właśnie utworzonym pliku danych](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  

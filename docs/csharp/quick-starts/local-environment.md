@@ -1,6 +1,6 @@
 ---
-title: "Samouczek środowiska lokalnego — C# lokalnego poradniki Szybki Start"
-description: "Ta opcja szybkiego startu zawiera podstawowe informacje dotyczące uruchamiania lokalnie poradniki Szybki Start"
+title: Samouczek środowiska lokalnego — C# lokalnego poradniki Szybki Start
+description: Ta opcja szybkiego startu zawiera podstawowe informacje dotyczące uruchamiania lokalnie poradniki Szybki Start
 author: billwagner
 ms.topic: article
 ms.date: 12/07/2017
@@ -8,11 +8,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 9957f524e04f8ff64d4f640cf085b16cf9a2c0c6
-ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
+ms.openlocfilehash: ec70b6bca55d370d90e912793cfec82a45141c51
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="local-environment"></a>Środowisko lokalne
 
@@ -35,19 +35,25 @@ Można uruchomić z dowolnej z następujących poradniki Szybki Start:
 
 W [numery w języku C#](numbers-in-csharp-local.md) Szybki Start, dowiesz się, jak komputery przechowywać cyfry oraz sposób wykonywania obliczeń na typy liczbowe. Poznasz podstawy zaokrąglania i jak wykonać obliczenia przy użyciu języka C#. 
 
-Tego przewodnika Szybki Start założono, że zakończono [Hello world](hello-world.yml) samouczka.
+Tego przewodnika Szybki Start założono, że zakończono [Hello world](hello-world.yml) lekcji.
 
 ## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[Gałęzie i pętle](branches-and-loops-local.md)
 
 [Gałęzie i pętli](branches-and-loops-local.md) szybkiego startu zawiera podstawowe informacje dotyczące wybierania różne ścieżki wykonanie kodu na podstawie wartości przechowywane w zmiennych. Poznasz podstawy przepływu sterowania, który stanowi podstawę jak programy podejmując decyzje i wybrać różne akcje. 
 
-Tej lekcji początku przyjęto założenie, że zakończono [Hello World](hello-world.yml) i [numery w języku C#](numbers-in-csharp-local.md) — lekcje.
+Tego przewodnika Szybki Start założono, że zakończono [Hello world](hello-world.yml) i [numery w języku C#](numbers-in-csharp-local.md) — lekcje.
+
+## <a name="string-interpolationinterpolated-strings-localmd"></a>[Interpolacja ciągów](interpolated-strings-local.md)
+
+[Ciągu interpolacji](interpolated-strings-local.md) szybkiego startu pokazuje, jak wstawić wartości na ciąg. Dowiesz się, jak utworzyć ciągu interpolowanym z wyrażenia osadzone C# i jak sterować wyglądem tekst wyrażenia spowoduje ciąg wyniku.
+
+Tego przewodnika Szybki Start założono, że zakończono [Hello world](hello-world.yml), [numery w języku C#](numbers-in-csharp-local.md), i [gałęzie i pętli](branches-and-loops-local.md) — lekcje.
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[Kolekcja list](arrays-and-collections.md)
 
 [Listy kolekcji](arrays-and-collections.md) lekcji daje samouczek typu kolekcji listy, który przechowuje sekwencji danych. Dowiesz się, jak dodać i usunąć elementy wyszukiwania elementów i sortować listy. Będzie Poznaj różne rodzaje list. 
 
-Tego początku przewodnika Szybki Start założono, Zakończono poradniki Szybki Start wymienionych powyżej.
+Tego przewodnika Szybki Start założono Zakończono wnioski wymienionych powyżej.
 
 ## <a name="introduction-to-classesintroduction-to-classesmd"></a>[Wprowadzenie do klas](introduction-to-classes.md)
 

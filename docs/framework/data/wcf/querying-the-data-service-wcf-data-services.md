@@ -1,12 +1,13 @@
 ---
-title: "Zapytanie usługi danych (usługi danych WCF)"
-ms.custom: 
+title: Zapytanie usługi danych (usługi danych WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 976f1e4d8a149f8104325fd5d006d245afee04a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 35370b5d4757d16c766499c1f3ea8254c2d90116
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>Zapytanie usługi danych (usługi danych WCF)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Biblioteki klienta umożliwia wykonywanie zapytań względem usługi danych przy użyciu znanych [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] programowania wzorce, jak również za pomocą języka zapytań zintegrowanym (LINQ). Biblioteka klienta tłumaczy kwerendę, która jest zdefiniowana na kliencie jako wystąpienie <xref:System.Data.Services.Client.DataServiceQuery%601> klasy na komunikat żądania HTTP GET. Biblioteki odbiera komunikat odpowiedzi i przekształca ją w wystąpień klas usług danych klienta. Te klasy są śledzone przez <xref:System.Data.Services.Client.DataServiceContext> do którego <xref:System.Data.Services.Client.DataServiceQuery%601> należy.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Gdy wyniki są wyliczane niejawnie, takich jak:  
   
-    -   Gdy właściwość <xref:System.Data.Services.Client.DataServiceContext> reprezentujący i zestawu jednostek jest wyliczyć, takich jak podczas `foreach` (C#) lub `For Each` ([!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) pętli.  
+    -   Gdy właściwość <xref:System.Data.Services.Client.DataServiceContext> reprezentujący i zestawu jednostek jest wyliczyć, takich jak podczas `foreach` (C#) lub `For Each` pętli (Visual Basic).  
   
     -   Jeśli zapytanie jest przypisany do `List` kolekcji.  
   
@@ -74,7 +76,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  Aby uzyskać więcej informacji, zobacz [zagadnienia dotyczące LINQ](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md).  
   
 ## <a name="adding-query-options"></a>Dodawanie opcje zapytania  
- Obsługa zapytań usługi danych wszystkie zapytania opcji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zapewnia s. Należy wywołać <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę, aby dołączyć opcje zapytania do <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A>Zwraca nowy <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia, który jest odpowiednikiem oryginalne zapytanie ale bez nowe zapytanie opcji set. Zwraca następujące zapytanie po wykonaniu `Orders` który są filtrowane według `Freight` wartości i uporządkowanych według `OrderID`, uporządkowanej malejąco:  
+ Obsługa zapytań usługi danych wszystkie zapytania opcji [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]zapewnia s. Należy wywołać <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> metodę, aby dołączyć opcje zapytania do <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia. <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> Zwraca nowy <xref:System.Data.Services.Client.DataServiceQuery%601> wystąpienia, który jest odpowiednikiem oryginalne zapytanie ale bez nowe zapytanie opcji set. Zwraca następujące zapytanie po wykonaniu `Orders` który są filtrowane według `Freight` wartości i uporządkowanych według `OrderID`, uporządkowanej malejąco:  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -110,17 +112,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601> Ma również następujące elementy członkowskie, które umożliwiają dostęp do dodatkowych informacji dotyczących wyniku zapytania:  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A>-pobiera błąd zgłoszony przez operację, jeśli dowolne wystąpił.  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -pobiera błąd zgłoszony przez operację, jeśli dowolne wystąpił.  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A>-zawiera kolekcję nagłówków odpowiedzi HTTP skojarzone z odpowiedzią zapytania.  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -zawiera kolekcję nagłówków odpowiedzi HTTP skojarzone z odpowiedzią zapytania.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A>-pobiera oryginalny <xref:System.Data.Services.Client.DataServiceQuery%601> generowany <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -pobiera oryginalny <xref:System.Data.Services.Client.DataServiceQuery%601> generowany <xref:System.Data.Services.Client.QueryOperationResponse%601>.  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A>-pobiera kod odpowiedzi HTTP. odpowiedzi na kwerendę.  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -pobiera kod odpowiedzi HTTP. odpowiedzi na kwerendę.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A>-pobiera całkowitą liczbę jednostek w jednostce ustawiane podczas <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> wywołano metodę na <xref:System.Data.Services.Client.DataServiceQuery%601>.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -pobiera całkowitą liczbę jednostek w jednostce ustawiane podczas <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> wywołano metodę na <xref:System.Data.Services.Client.DataServiceQuery%601>.  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A>-Zwraca <xref:System.Data.Services.Client.DataServiceQueryContinuation> obiekt, który zawiera identyfikator URI następnej strony wyników.  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -Zwraca <xref:System.Data.Services.Client.DataServiceQueryContinuation> obiekt, który zawiera identyfikator URI następnej strony wyników.  
   
  Domyślnie [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] zwraca tylko dane, które jest w sposób jawny wybrany przez identyfikator URI zapytania. Zapewnia opcję, aby w sposób jawny załadować dodatkowe dane z usługi danych, gdy jest to potrzebne. Żądanie jest wysyłane do usługi danych zawsze jawnie ładować dane z usługi danych. Dane, które mogą być ładowane jawnie obejmuje powiązanych jednostek, dane odpowiedzi stronicowana i strumieni danych binarnych.  
   

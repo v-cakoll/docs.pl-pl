@@ -1,26 +1,27 @@
 ---
-title: "Obsługa nowej funkcji Foundation 4.5 przepływu pracy w Projektancie Rehosted przepływów pracy"
-ms.custom: 
+title: Obsługa nowej funkcji Foundation 4.5 przepływu pracy w Projektancie Rehosted przepływów pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ee8467eaeaef490f4c7a8bfbcb204506d71f5500
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowej funkcji Foundation 4.5 przepływu pracy w Projektancie Rehosted przepływów pracy
-[!INCLUDE[wf](../../../includes/wf-md.md)]w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń obsługi projektanta przepływów pracy. W tym temacie szczegółowe informacje, które te funkcje są obsługiwane w Projektancie rehosted i te, które nie są obecnie obsługiwane.  
+[!INCLUDE[wf](../../../includes/wf-md.md)] w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń obsługi projektanta przepływów pracy. W tym temacie szczegółowe informacje, które te funkcje są obsługiwane w Projektancie rehosted i te, które nie są obecnie obsługiwane.  
   
 > [!NOTE]
 >  Aby uzyskać listę wszystkich nowej [!INCLUDE[wf](../../../includes/wf-md.md)] funkcje dodane w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], w tym te, które są związane z projektanta rehosting, zobacz [What's New in Windows Workflow Foundation w programie .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
@@ -54,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  Poniższy zrzut ekranu przedstawia `WriteLine` działania w `Body` z `NoPersistScope`.  
   
- ![Auto &#45; przestrzennego porzucić lokalizacji](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
+ ![Automatycznie&#45;przestrzenny lokalizacji docelowej](../../../docs/framework/windows-workflow-foundation/media/autosurround1.png "AutoSurround1")  
   
  Poniższy zrzut ekranu przedstawia tworzonych automatycznie `Sequence` działania w `Body` po drugiej `WriteLine` jest spadła poniżej pierwszy.  
   
@@ -75,7 +76,7 @@ ms.lasthandoff: 12/22/2017
  Wielokrotny działania może także przeciąganie i upuszczanie w Projektancie i może również przetwarzanie za pomocą menu kontekstowego.  
   
 ### <a name="outline-view-of-workflow-items"></a>Wyświetlanie konspektu elementów przepływu pracy  
- Aby ułatwić Przejdź hierarchiczny przepływów pracy, składniki przepływu pracy są wyświetlane w widoku konspektu style drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok w [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], wybierz z górnego menu **widoku**, **inne okna**, **konspekt dokumentu**, lub naciśnij klawisz Ctrl W U. Klikając węzeł w widoku konspektu przejdzie do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie. Ta funkcja jest obsługiwana w Projektancie rehosted.  
+ Aby ułatwić Przejdź hierarchiczny przepływów pracy, składniki przepływu pracy są wyświetlane w widoku konspektu style drzewa. Wyświetlanie konspektu jest wyświetlany w **konspekt dokumentu** widoku. Aby otworzyć ten widok w programie Visual Studio z górnego menu, wybierz **widoku**, **inne okna**, **konspekt dokumentu**, lub naciśnij klawisz Ctrl W U. Klikając węzeł w widoku konspektu przejdzie do odpowiadającego im działania w Projektancie przepływów pracy i widoku konspektu zostaną zaktualizowane w celu wyświetlenia działań, które są wybrane w projektancie. Ta funkcja jest obsługiwana w Projektancie rehosted.  
   
  Poniższy zrzut ekranu ukończone przepływu pracy z [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) przedstawia widok konspektu z sekwencyjnego przepływu pracy.  
   
@@ -93,7 +94,7 @@ ms.lasthandoff: 12/22/2017
   
  Działania można również być przeciągnięto połączeń między węzłami schemat blokowy a Państwa auto wstawienie węzła między dwóch pozostałych węzłach. Poniższy zrzut ekranu pokazuje linie łączące wyróżnione gdzie działania mogą być przeciągnięte z przybornika i porzucony.  
   
- ![Auto &#45; Wstaw obsługi dla upuszczanie działań](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "automatycznego wstawiania")  
+ ![Automatycznie&#45;Wstaw obsługę upuszczanie działań](../../../docs/framework/windows-workflow-foundation/media/autoinsert.png "automatycznego wstawiania")  
   
  Automatycznie połączyć i automatyczne wstawianie są obsługiwane w Projektancie rehosted.  
   
@@ -140,7 +141,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  Projektanta obsługę tworzenia przejścia wyzwalaczem udostępnionym  
   
-4.  Używany do tworzenia przepływów pracy automatu stanów, łącznie z czynności: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i<xref:System.Activities.Statements.Transition>  
+4.  Używany do tworzenia przepływów pracy automatu stanów, łącznie z czynności: <xref:System.Activities.Statements.StateMachine>, <xref:System.Activities.Statements.State>, i <xref:System.Activities.Statements.Transition>  
   
  Poniższy zrzut ekranu przedstawia przepływ pracy automatu stanu ukończenia od [Wprowadzenie — samouczek](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md) krok [jak: utworzyć przepływ pracy automatu stanów](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md).  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 12/22/2017
  Aby uzyskać więcej informacji o tworzeniu przepływów pracy maszyny stanu, zobacz [przepływy pracy maszyny stanu](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md). Przepływy pracy automatu stanów są obsługiwane w Projektancie rehosted.  
   
 ### <a name="contract-first-workflow-development"></a>Programowanie pierwszy kontraktu przepływu pracy  
- Narzędzie do projektowania przepływu pracy pierwszy kontraktu umożliwia deweloperowi projektowania kontraktu w kodzie, następnie za pomocą kilku kliknięć w [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], automatycznie wygenerować szablon czynności w przyborniku reprezentujący każdej operacji. Te działania są następnie używane do tworzenia przepływu pracy, który implementuje operacji zdefiniowanych przez umowy. Projektant przepływu pracy zostanie przeprowadzona Weryfikacja usługi przepływu pracy, aby upewnić się, czy te operacje są wykonywane i podpis przepływ pracy odpowiada podpisu kontraktu. Deweloper można również skojarzyć usługi przepływu pracy z kolekcją zaimplementowanych kontraktów. Aby uzyskać więcej informacji na projektowanie usługi kontraktu pierwszy przepływu pracy, zobacz [porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+ Narzędzie do projektowania przepływu pracy pierwszy kontraktu umożliwia deweloperowi najpierw Projektuj kontraktu w kodzie, a następnie za pomocą kilku kliknięć w programie Visual Studio automatycznie wygenerować szablon czynności w przyborniku reprezentujący każdej operacji. Te działania są następnie używane do tworzenia przepływu pracy, który implementuje operacji zdefiniowanych przez umowy. Projektant przepływu pracy zostanie przeprowadzona Weryfikacja usługi przepływu pracy, aby upewnić się, czy te operacje są wykonywane i podpis przepływ pracy odpowiada podpisu kontraktu. Deweloper można również skojarzyć usługi przepływu pracy z kolekcją zaimplementowanych kontraktów. Aby uzyskać więcej informacji na projektowanie usługi kontraktu pierwszy przepływu pracy, zobacz [porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 > [!WARNING]
 >  Programowanie pierwszy kontraktu przepływu pracy nie jest obsługiwana w Projektancie przepływów pracy.

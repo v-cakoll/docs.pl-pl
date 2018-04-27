@@ -1,11 +1,12 @@
 ---
-title: "Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)"
-ms.custom: 
+title: Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - file access, file I/O in Visual Basic
@@ -15,14 +16,14 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: d6cfdb939bd4bf84fafbffceefccd5cd522018c2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 02eaa98b8a52a2b9efa2b273b2a58158a5848b86
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>Podstawowe informacje o .NET Framework File I/O i systemie plików (Visual Basic)
 Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plików i katalogów.  
@@ -30,7 +31,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
  <xref:System.IO> Przestrzeń nazw zawiera <xref:System.IO.File> i <xref:System.IO.Directory> klasy, które zawierają [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] funkcje, które obsługuje plików i katalogów. Ponieważ metody te obiekty są statyczne lub udostępniane elementy członkowskie, można ich używać bezpośrednio bez utworzenia wystąpienia klasy najpierw. Skojarzone z tych klas są <xref:System.IO.FileInfo> i <xref:System.IO.DirectoryInfo> klasy, które będzie znany z `My` funkcji. Aby korzystać z tych klas, musisz pełni zakwalifikować nazwy lub zaimportować odpowiednie przestrzenie nazw przy tym `Imports` instrukcji na początku kodu. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (.NET Namespace i Type)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).  
   
 > [!NOTE]
->  Inne tematy w tej sekcji Użyj `My.Computer.FileSystem` obiekt zamiast `System.IO` klasy do pracy z dysków, plików i katalogów. `My.Computer.FileSystem` Obiekt jest przeznaczony głównie do użytku w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programy. `System.IO`klasy są przeznaczone do użytku przez dowolnego języka, który obsługuje [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+>  Inne tematy w tej sekcji Użyj `My.Computer.FileSystem` obiekt zamiast `System.IO` klasy do pracy z dysków, plików i katalogów. `My.Computer.FileSystem` Obiekt jest przeznaczony głównie do użytku w programach Visual Basic. `System.IO` klasy są przeznaczone do użytku przez dowolnego języka, który obsługuje [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], łącznie z języka Visual Basic.  
   
 ## <a name="definition-of-a-stream"></a>Definicja strumienia  
  [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Używa strumienie do obsługi odczytywanie z oraz zapisywanie do plików. Strumień można traktować jako zbiór jednowymiarowa ciągłe danych, który ma początek i koniec i gdy kursor wskazuje bieżącą pozycję w strumieniu.  
@@ -59,7 +60,7 @@ Klasy w <xref:System.IO> przestrzeni nazw są używane do pracy z dysków, plik�
   
 -   <xref:System.IO.MemoryStream>  
   
--   <xref:System.Net.Sockets.NetworkStream>.,  
+-   <xref:System.Net.Sockets.NetworkStream>.  
   
  W poniższej tabeli wymieniono zadania zazwyczaj są realizowane przy użyciu strumienia:  
   

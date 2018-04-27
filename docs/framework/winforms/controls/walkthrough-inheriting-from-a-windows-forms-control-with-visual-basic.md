@@ -1,13 +1,13 @@
 ---
-title: "Wskazówki: dziedziczenie z formantu formularzy systemu Windows z Visual Basic"
-ms.custom: 
+title: 'Wskazówki: dziedziczenie z formantu formularzy systemu Windows z Visual Basic'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - vb
@@ -18,20 +18,20 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b165de0d18cede275dfe8405b0266c1a909ac570
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 342ab60d4c3481d2154293fab9fb1254f937a934
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>Wskazówki: dziedziczenie z formantu formularzy systemu Windows z Visual Basic
-Z [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], możesz utworzyć zaawansowane formantów niestandardowych za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwość tworzenia formantów, które zachowują wszystkie funkcje związane z standardowe formanty formularzy systemu Windows, ale także dołączyć do nich funkcji niestandardowych. W tym przewodniku spowoduje utworzenie prostego formantu dziedziczone o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcje z formularzy systemu Windows <xref:System.Windows.Forms.Button> kontroli i uwidoczni właściwość niestandardowa o nazwie `ButtonValue`.  
+Visual Basic umożliwia tworzenie zaawansowanych formantów niestandardowych za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwość tworzenia formantów, które zachowują wszystkie funkcje związane z standardowe formanty formularzy systemu Windows, ale także dołączyć do nich funkcji niestandardowych. W tym przewodniku spowoduje utworzenie prostego formantu dziedziczone o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcje z formularzy systemu Windows <xref:System.Windows.Forms.Button> kontroli i uwidoczni właściwość niestandardowa o nazwie `ButtonValue`.  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
@@ -43,7 +43,7 @@ Z [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], możesz utworzyć zaawa
   
 1.  Na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.  
   
-2.  Wybierz **Biblioteka formantów formularzy systemu Windows** szablonu projektu z listy [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] projektów i typ `ValueButtonLib` w **nazwa** pole.  
+2.  Wybierz **Biblioteka formantów formularzy systemu Windows** szablonu projektu z listy projektów Visual Basic i typ `ValueButtonLib` w **nazwa** pole.  
   
      Nazwa projektu `ValueButtonLib`, jest również przypisany do głównej przestrzeni nazw domyślnie. Główna przestrzeń nazw są używane do kwalifikowania nazwy elementów w zestawie. Na przykład, jeśli dwa zestawy zawiera składniki o nazwie `ValueButton`, można określić użytkownika `ValueButton` przy użyciu składnika `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzeni nazw w Visual Basic](~/docs/visual-basic/programming-guide/program-structure/namespaces.md).  
   
@@ -107,7 +107,7 @@ Z [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], możesz utworzyć zaawa
   
 1.  Na **pliku** menu wskaż **Dodaj** , a następnie kliknij przycisk **nowy projekt** otworzyć **Dodawanie nowego projektu** okno dialogowe.  
   
-2.  Wybierz [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] projektów węzeł, a następnie kliknij przycisk **aplikacji Windows Forms**.  
+2.  Wybierz węzeł projekty Visual Basic, a następnie kliknij przycisk **aplikacji Windows Forms**.  
   
 3.  W **nazwa** wpisz `Test`.  
   
@@ -153,7 +153,7 @@ Z [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], możesz utworzyć zaawa
   
 11. Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie**.  
   
-     `Form1`zostanie wyświetlone.  
+     `Form1` zostanie wyświetlone.  
   
 12. Kliknij przycisk `Valuebutton1`.  
   

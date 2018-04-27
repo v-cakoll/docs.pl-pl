@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/08/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 21826e2c90d234d873cc06bfae3bd22ce89a62d2
-ms.sourcegitcommit: 655fd4f78741967f80c409cef98347fdcf77857d
+ms.openlocfilehash: ea5e699046d603ebb765265be403fd4561aa742e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="development-process-for-azure"></a>Proces programowania dla platformy Azure
 
@@ -102,7 +103,7 @@ Po każdej nowe zatwierdzenia w repozytorium kodu aplikacji udostępnionych, now
 
 Po kompilacji, ponieważ zakończyło się pomyślnie, proces dysku CD przejmą wyprodukowanych artefaktów kompilacji. Będzie to obejmowało sieci web wdrażania pakietu. Serwer kompilacji zostanie wdrażania tego pakietu w usłudze Azure App Service, zastępując istniejące usługi z elementem nowo utworzony. Zazwyczaj ten krok dotyczy środowisko przejściowe, ale niektóre aplikacje wdrożyć bezpośrednio do środowiska produkcyjnego w procesie dysku CD.
 
-#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa aplikacji Azure. Web App.
+#### <a name="step-5-azure-app-service-web-app"></a>Krok 5. Usługa aplikacji Azure. Aplikacja sieci Web.
 
 Po wdrożeniu aplikacji platformy ASP.NET Core działa w kontekście aplikacji sieci Web platformy Azure App Service. Ta aplikacja sieci Web mogą być monitorowane i jeszcze skonfigurowane przy użyciu portalu Azure.
 

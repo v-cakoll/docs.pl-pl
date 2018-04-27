@@ -1,25 +1,26 @@
 ---
-title: "Podstawy dotyczące aplikacji Windows Forms (Visual Basic)"
+title: Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7872d3c7b19ec9cd7059cccf41e5fab50d85123b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
-Ważnym elementem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest możliwość tworzenia aplikacji formularzy systemu Windows, które są uruchamiane lokalnie na komputerach użytkowników. Visual Studio służy do tworzenia aplikacji i interfejs, za pomocą formularzy systemu Windows. Aplikacji formularzy systemu Windows jest oparty na klas z <xref:System.Windows.Forms> przestrzeni nazw.  
+Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji formularzy systemu Windows, które są uruchamiane lokalnie na komputerach użytkowników. Visual Studio służy do tworzenia aplikacji i interfejs, za pomocą formularzy systemu Windows. Aplikacji formularzy systemu Windows jest oparty na klas z <xref:System.Windows.Forms> przestrzeni nazw.  
   
 ## <a name="designing-windows-forms-applications"></a>Aplikacje projektowania Windows Forms  
  Można utworzyć formularzy systemu Windows i aplikacji usług systemu Windows z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Więcej informacji znajduje się w następujących tematach:  
@@ -52,9 +53,9 @@ Ważnym elementem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest możliwość 
   
 |Do|Zobacz|  
 |--------|---------|  
-|Tworzenie nowej aplikacji Windows Forms z[!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Wskazówki: Tworzenie formularza prostego systemu Windows](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Tworzenie nowej aplikacji Windows Forms z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Wskazówki: Tworzenie formularza prostego systemu Windows](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Używanie formantów na formularzach|[Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
-|Tworzenie grafiki<xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Tworzenie grafiki <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Tworzenie niestandardowych formantów|[Instrukcje: dziedziczenie z klasy UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ## <a name="displaying-and-manipulating-data"></a>Wyświetlanie danych i operowanie nimi  
@@ -77,19 +78,19 @@ Ważnym elementem [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest możliwość 
 |Korzystanie z okna źródeł danych|[Wskazówki: Wyświetlanie danych w formularzu systemu Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich  
- Po napisano aplikację, konieczne jest wysłanie go do użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Przy użyciu [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z wewnątrz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dzięki za pomocą kilku kliknięć i udostępnić użytkownikowi adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]zarządza wszystkie elementy i zależności aplikacji i zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
+ Po napisano aplikację, konieczne jest wysłanie go do użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Przy użyciu [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z wewnątrz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dzięki za pomocą kilku kliknięć i udostępnić użytkownikowi adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] zarządza wszystkie elementy i zależności aplikacji i zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchom oba projekty w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dodaje łącze do aplikacji w użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
+ [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchom oba projekty w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dodaje łącze do aplikacji w użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
   
- Podczas aktualizacji aplikacji opublikowaniu nowego manifest wdrażania i nową kopię aplikacji do serwera sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]wykrywa, że nie jest dostępna aktualizacja i uaktualnia użytkownika instalacji; żadne Programowanie niestandardowych jest wymagana w celu zaktualizowania starego zestawy.  
+ Podczas aktualizacji aplikacji opublikowaniu nowego manifest wdrażania i nową kopię aplikacji do serwera sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] wykrywa, że nie jest dostępna aktualizacja i uaktualnia użytkownika instalacji; żadne Programowanie niestandardowych jest wymagana w celu zaktualizowania starego zestawy.  
   
  Aby uzyskać pełne wprowadzenie do [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)], zobacz [zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowe informacje dotyczące korzystania z tych funkcji zobacz następujące tematy pomocy:  
   
 |Do|Zobacz|  
 |--------|---------|  
-|Wdróż aplikację z[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Wdróż aplikację z [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Aktualizacja [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] wdrożenia|[Instrukcje: zarządzanie aktualizacji dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Zarządzanie zabezpieczeniami z[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: włączenie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Zarządzanie zabezpieczeniami z [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[Instrukcje: włączenie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>Inne formanty i funkcje  
  Istnieje wiele innych funkcji w formularzach systemu Windows, która implementującej typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodawanie pomocy i dokumentacja i lokalizacja aplikacji na wiele języków. Ponadto formularzy systemu Windows opiera się na skuteczną ochronę systemu [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], dzięki któremu można zwolnić większe bezpieczeństwo aplikacji dla klientów.  

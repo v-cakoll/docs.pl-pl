@@ -1,28 +1,28 @@
 ---
-title: "Konfigurowanie śledzenia"
-ms.custom: 
+title: Konfigurowanie śledzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-caps.latest.revision: 
+caps.latest.revision: 53
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3beeaec1ed9982fc49f6bf81e2717db862e7882f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: b7b9590096789af609e83d1a5ed736cf18e27700
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-tracing"></a>Konfigurowanie śledzenia
 W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródła śledzenia na emitowanie danych śledzenia i poziomy śledzenia zestawu, śledzenie działania zestawu i propagacji do obsługi korelacji śledzenia end-to-end i ustaw obiektów nasłuchujących śledzenia do śledzenia.  
@@ -33,13 +33,13 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 >  W systemie Windows 8 należy uruchomić aplikację podniesionych uprawnień (Uruchom jako Administrator) w kolejności dla aplikacji do wygenerowania dzienniki śledzenia.  
   
 ## <a name="enabling-tracing"></a>Włączenie debugowania  
- [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]Wyświetla następujące dane śledzenia diagnostycznego:  
+ [!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] Wyświetla następujące dane śledzenia diagnostycznego:  
   
 -   Ślady punktów kontrolnych procesu dotyczące wszystkich składników aplikacji, takie jak wywołania operacji kodu wyjątki, ostrzeżenia i inne istotne przetwarzanie zdarzeń.  
   
 -   Zdarzenia błędu systemu Windows działa funkcja śledzenia. Zobacz [rejestrowanie zdarzeń](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md).  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]śledzenie jest oparty na <xref:System.Diagnostics>. Aby użyć śledzenia, należy zdefiniować źródła śledzenia w pliku konfiguracji lub w kodzie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Określa źródło śladu dla każdego [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zestawu. `System.ServiceModel` Źródła śledzenia jest najbardziej ogólnym [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła śledzenia i rejestruje przetwarzania punkty kontrolne w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu komunikacji z wprowadzania pozostawienie transportu do wprowadzania/pozostawienia kodu użytkownika. `System.ServiceModel.MessageLogging` Źródło śladu rejestruje wszystkie komunikaty, które przepływać przez system.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] śledzenie jest oparty na <xref:System.Diagnostics>. Aby użyć śledzenia, należy zdefiniować źródła śledzenia w pliku konfiguracji lub w kodzie. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Określa źródło śladu dla każdego [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zestawu. `System.ServiceModel` Źródła śledzenia jest najbardziej ogólnym [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła śledzenia i rejestruje przetwarzania punkty kontrolne w [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] stosu komunikacji z wprowadzania pozostawienie transportu do wprowadzania/pozostawienia kodu użytkownika. `System.ServiceModel.MessageLogging` Źródło śladu rejestruje wszystkie komunikaty, które przepływać przez system.  
   
  Śledzenie nie jest włączone domyślnie. Aby uaktywnić śledzenie, należy utworzyć odbiornik śledzenia i ustawić poziom śledzenia innych niż "Off" dla źródła śledzenia wybranych w konfiguracji. w przeciwnym razie [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] nie generuje żadnych śladów. Jeśli nie określisz odbiornik, śledzenie jest automatycznie wyłączana. Jeśli jest określony odbiornik, ale poziom nie jest określony, "Wyłączone" po ustawieniu poziomu domyślnie, co oznacza emitowanego śladów.  
   
@@ -66,10 +66,10 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 ```  
   
 > [!NOTE]
->  Na edycję pliku konfiguracyjnego z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] projekt usługi w [!INCLUDE[vs_current_short](../../../../../includes/vs-current-short-md.md)], kliknij prawym przyciskiem myszy plik konfiguracji aplikacji — albo plik Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config własnym hostowanej aplikacji w  **Eksplorator rozwiązań**. Następnie wybierz pozycję **Edycja konfiguracji WCF** elementu menu kontekstowego. Spowoduje to uruchomienie [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), co umożliwia modyfikowanie ustawień konfiguracyjnych [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika.  
+>  Aby edytować plik konfiguracji programu [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usługi projektu programu Visual Studio, kliknij prawym przyciskiem myszy plik konfiguracji aplikacji — którejkolwiek Web.config dla aplikacji hostowanych w sieci Web lub Appname.exe.config własnym hostowanej aplikacji w  **Eksplorator rozwiązań**. Następnie wybierz pozycję **Edycja konfiguracji WCF** elementu menu kontekstowego. Spowoduje to uruchomienie [narzędzie edytora konfiguracji (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md), co umożliwia modyfikowanie ustawień konfiguracyjnych [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika.  
   
 ## <a name="configuring-trace-sources-to-emit-traces"></a>Konfigurowanie źródeł śledzenia na emitowanie danych śledzenia  
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]Określa źródło śladu dla każdego zestawu. Wygenerowane w zestawie danych śledzenia są dostępne dla odbiorników zdefiniowane dla tego źródła. Następujące źródła śledzenia są zdefiniowane:  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] Określa źródło śladu dla każdego zestawu. Wygenerowane w zestawie danych śledzenia są dostępne dla odbiorników zdefiniowane dla tego źródła. Następujące źródła śledzenia są zdefiniowane:  
   
 -   System.ServiceModel: Dzienników wszystkich etapach [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] przetwarzania, gdy odczytać konfiguracji, komunikat jest przetwarzany w transporcie, zabezpieczeń, przetwarzanie wiadomości jest wysyłane w kodzie użytkownika i tak dalej.  
   
@@ -146,16 +146,16 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
 </system.diagnostics>  
 ```  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]Tworzenie użytkownika śledzenia źródeł, zobacz [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] Tworzenie użytkownika śledzenia źródeł, zobacz [rozszerzanie śledzenia](../../../../../docs/framework/wcf/samples/extending-tracing.md).  
   
 ## <a name="configuring-trace-listeners-to-consume-traces"></a>Konfigurowanie obiektów nasłuchujących śledzenia zużyje śledzenia  
- W czasie wykonywania [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła danych do odbiorników, które przetwarzają dane śledzenia. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]zawiera kilka wstępnie zdefiniowanych odbiorników dla <xref:System.Diagnostics>, które różnią się w formacie ich użycia dla danych wyjściowych. Można również dodać niestandardowe odbiornika typów.  
+ W czasie wykonywania [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] źródła danych do odbiorników, które przetwarzają dane śledzenia. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] zawiera kilka wstępnie zdefiniowanych odbiorników dla <xref:System.Diagnostics>, które różnią się w formacie ich użycia dla danych wyjściowych. Można również dodać niestandardowe odbiornika typów.  
   
  Można użyć `add` określić nazwę i typ odbiornik śledzenia ma być używany. W naszym przykładzie konfiguracji, firma Microsoft o nazwie odbiornika `traceListener` i dodać standardowe nasłuchującego śledzenia .NET Framework (`System.Diagnostics.XmlWriterTraceListener`) jako typ chcemy użyć. Możesz dodać dowolną liczbę obiektów nasłuchujących śledzenia dla każdego źródła. Jeśli odbiornik śledzenia emituje śledzenia w pliku, należy określić dane wyjściowe lokalizację i nazwę pliku w pliku konfiguracji. Odbywa się przez ustawienie `initializeData` nazwę pliku dla tego odbiornika. Jeśli nie określisz nazwy pliku, nazwy pliku losowe jest generowany na podstawie typu odbiornika używane. Jeśli <xref:System.Diagnostics.XmlWriterTraceListener> jest używana, jest generowany nazwę pliku bez rozszerzenia. W przypadku zastosowania niestandardowych odbiornika, można również użyć tego atrybutu, aby odebrało danych inicjujących inne niż nazwa pliku. Na przykład można określić identyfikatora bazy danych dla tego atrybutu.  
   
  Można skonfigurować odbiornik śledzenia niestandardowych do wysyłania danych śledzenia w sieci, na przykład ze zdalną bazą danych. Jako wdrażania aplikacji należy wymusić kontrolę dostępu do dzienników śledzenia na maszynie zdalnej.  
   
- Można również skonfigurować odbiornik śledzenia programowo. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](http://go.microsoft.com/fwlink/?LinkId=94648) i [Tworzenie niestandardowego elementu TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
+ Można również skonfigurować odbiornik śledzenia programowo. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Porady: tworzenie i Inicjowanie obiektów nasłuchujących śledzenia](http://go.microsoft.com/fwlink/?LinkId=94648) i [Tworzenie niestandardowego elementu TraceListener](http://go.microsoft.com/fwlink/?LinkId=96239).  
   
 > [!CAUTION]
 >  Ponieważ `System.Diagnostics.XmlWriterTraceListener` jest nie wątkowo, źródło śladu może zablokować zasobów wyłącznie podczas wyprowadzania danych śledzenia. Wiele wątków dane wyjściowe śledzenia źródła skonfigurowane do używania tego odbiornika rywalizacji może wystąpić, które powoduje problem znaczących wydajności. Aby rozwiązać ten problem, należy zaimplementować wątkowo niestandardowe odbiornik.  
@@ -187,7 +187,7 @@ W tym temacie opisano, jak można włączyć śledzenie, skonfigurować źródł
   
  `propagateActivity` Atrybut wskazuje, czy działanie powinno propagowane do pozostałych punktów końcowych, które uczestniczą w wymianie wiadomości. Ustawiając tę wartość na `true`, możesz pobrać pliki śledzenia wygenerowane przez dwoma punktami końcowymi i obserwować, jak zestaw ślady na jeden punkt końcowy skierowana do zestawu danych śledzenia w innym punktem końcowym.  
   
- [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]śledzenie działania i propagacji, zobacz [propagacji](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
+ [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] śledzenie działania i propagacji, zobacz [propagacji](../../../../../docs/framework/wcf/diagnostics/tracing/propagation.md).  
   
  Zarówno `propagateActivity` i `ActivityTracing` wartościami logicznymi dotyczą System.ServiceModel TraceSource. `ActivityTracing` Wartości mają zastosowanie również do dowolnego źródła śledzenia, łącznie z [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] lub zdefiniowanej przez użytkownika.  
   

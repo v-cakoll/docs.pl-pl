@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/06/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb215d64253fb7d22ae2c5648030336850006b5
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: f4f52bd3438ef9b2e0b74ee91831947a4dd6869d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="architectural-principles"></a>Zasady architektury
 
@@ -108,7 +109,7 @@ Co najmniej aplikacji sieci web poszczególnych powinien starań, aby mieć wła
 > ### <a name="references--modern-web-applications"></a>Odwołania — nowoczesnych aplikacji sieci Web
 > - **Separacji**  
 > <http://deviq.com/separation-of-concerns/>
-> - **Hermetyzacja** <http://deviq.com/encapsulation/>
+> - **Hermetyzacja protokołu** <http://deviq.com/encapsulation/>
 > - **Zasada odwracanie zależności**  
 > <http://deviq.com/dependency-inversion-principle/>
 > - **Zasada jawne zależności**  

@@ -1,6 +1,6 @@
 ---
-title: "Metody — przewodnik C#"
-description: "Przegląd metod, parametrów metod i wartości zwracane — metoda"
+title: Metody — przewodnik C#
+description: Przegląd metod, parametrów metod i wartości zwracane — metoda
 keywords: .NET, .NET Core, C#
 author: rpetrusha
 ms.author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 48127d5168ace7733f29f78dc3f72d9c0d051e4e
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 526cd6d269c7c089f6547fcf243b43e411037d13
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="methods"></a>Metody #
 
@@ -263,7 +263,7 @@ Po zaznaczeniu metodę o [async](language-reference/keywords/async.md) modyfikat
 > [!NOTE]
 > Metoda asynchroniczna zwraca do obiektu wywołującego po napotkaniu pierwszego oczekiwano obiekt, który nie został jeszcze ukończony lub pobiera na końcu metody asynchronicznej cokolwiek nastąpi najpierw.
 
-Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. `void` Zwracany typ jest używany głównie w celu definiowania metod obsługi zdarzeń, gdy `void` zwracany typ jest wymagany. Metoda asynchroniczna zwracająca `void` nie jest oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwytywać wyjątki, które metoda zgłasza. C# 7, po wydaniu, ułatwi to ograniczenie, aby umożliwić metody asynchronicznej [do zwrócenia dowolnego typu zadania przypominającej](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
+Metoda asynchroniczna może mieć typ zwracany <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.Task>, lub `void`. `void` Zwracany typ jest używany głównie w celu definiowania metod obsługi zdarzeń, gdy `void` zwracany typ jest wymagany. Metoda asynchroniczna zwracająca `void` nie jest oczekiwane, a obiekt wywołujący metody zwracające typ void nie może przechwytywać wyjątki, które metoda zgłasza. C# 7.0, po wydaniu, ułatwi to ograniczenie, aby umożliwić metody asynchronicznej [do zwrócenia dowolnego typu zadania przypominającej](https://github.com/ljw1004/roslyn/blob/features/async-return/docs/specs/feature%20-%20arbitrary%20async%20returns.md).
 
 W poniższym przykładzie `DelayAsync` jest to metoda asynchroniczna, która zawiera instrukcję return, która zwraca liczbę całkowitą. Ponieważ jest to metoda asynchroniczna, jego deklaracji metody musi mieć typ zwracany `Task<int>`. Ponieważ typ zwracany jest `Task<int>`, oceny `await` wyrażenie w `DoSomethingAsync` tworzy całkowitą w następujący sposób `int result = await delayTask` pokazuje instrukcji.
 
@@ -305,7 +305,7 @@ Aby uzyskać więcej informacji, zobacz [Iteratory](programming-guide/concepts/i
 [Dziedziczenie](programming-guide/classes-and-structs/inheritance.md)   
 [Klasy abstrakcyjne i zapieczętowane oraz członkowie klas](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
 [Parametry](language-reference/keywords/params.md)   
-[out](language-reference/keywords/out-parameter-modifier.md)   
+[limit](language-reference/keywords/out-parameter-modifier.md)   
 [REF](language-reference/keywords/ref.md)   
 [in](language-reference/keywords/in-parameter-modifier.md)   
 [Przekazywanie parametrów](programming-guide/classes-and-structs/passing-parameters.md)

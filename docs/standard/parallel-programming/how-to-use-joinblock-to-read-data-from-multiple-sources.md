@@ -1,5 +1,5 @@
 ---
-title: "Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł"
+title: 'Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f7d4e552404f99580bceafe7f900db4607201c3d
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: ba353a34306b06e0f1df4696af5545799e7a5b37
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-joinblock-to-read-data-from-multiple-sources"></a>Porady: Korzystanie z klasy JoinBlock do odczytywania danych z wielu źródeł
 W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> klasę, aby wykonać operację, gdy dane są dostępne z wielu źródeł. On również pokazano, jak w trybie niezachłanne włączyć wiele bloków sprzężenia wydajniej udostępnianie źródła danych.
@@ -38,13 +38,13 @@ W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.J
  Umożliwia efektywne korzystanie z obszaru udostępnionej puli `MemoryResource` obiekty, w tym przykładzie określa <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions> obiektu, który ma <xref:System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions.Greedy%2A> ustawioną właściwość `False` utworzyć <xref:System.Threading.Tasks.Dataflow.JoinBlock%602> obiektów, które działają w trybie niezachłanne. Blok niezachłanne złączenia odłoży wszystkie wiadomości przychodzących, dopóki nie jest dostępny z każdego źródła. Jeśli dowolny z komunikatów przełożonych zostały zaakceptowane przez innego bloku, blok sprzężenia powoduje ponowne uruchomienie procesu. Zachłanne innym niż tryb umożliwia bloki sprzężenia, które mają co najmniej jeden bloki źródła aby postęp czekać innych bloków danych. W tym przykładzie Jeśli `MemoryResource` obiekt jest dodawany do `memoryResources` puli sprzężenia pierwszy blok do odbierania drugiego źródła danych można wprowadzić postęp. Gdyby w tym przykładzie do używania trybu intensywnie, co jest ustawieniem domyślnym jeden blok sprzężenia może potrwać `MemoryResource` obiektów i poczekaj, aż drugi zasób stanie się dostępne. Jednak jeśli bloku sprzężenia drugiego źródła danych dostępne, nie powiedzie się postęp ponieważ `MemoryResource` obiektu jest zajęta przez bloku sprzężenia.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
+ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `DataflowNonGreedyJoin.cs` (`DataflowNonGreedyJoin.vb` w języku Visual Basic), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **CSC.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll DataflowNonGreedyJoin.vb**  
   

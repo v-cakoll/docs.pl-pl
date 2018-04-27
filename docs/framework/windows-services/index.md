@@ -24,11 +24,11 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 325e43f4b1734bc6ab8753285e5069f36b0fda51
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="developing-windows-service-applications"></a>Tworzenie aplikacji usług systemu Windows
 Za pomocą programu Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawu SDK, można łatwo utworzyć usług przez utworzenie aplikacji, która jest zainstalowany jako usługa. Ten typ aplikacji nosi nazwę usługi systemu Windows. Z funkcjami framework można tworzenie usług, je zainstalować i uruchomić, zatrzymać i inny sposób kontroluje ich zachowanie.  
@@ -41,7 +41,7 @@ Za pomocą programu Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]
  Zawiera omówienie aplikacji usług systemu Windows, okres istnienia usługi i jak aplikacje usług różnią się od innych typowych projektu.  
   
  [Przewodnik: tworzenie aplikacji usługowej systemu Windows w Projektancie składników](../../../docs/framework/windows-services/walkthrough-creating-a-windows-service-application-in-the-component-designer.md)  
- Stanowi przykład tworzenia usługi w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] i Visual C#.  
+ Przykład tworzenie usługi w języku Visual Basic i Visual C#.  
   
  [Architektura programowania aplikacji usług](../../../docs/framework/windows-services/service-application-programming-architecture.md)  
  Opisano elementy języka używany w programowaniu usługi.  

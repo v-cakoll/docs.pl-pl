@@ -1,27 +1,29 @@
 ---
 title: Manipulowania danymi
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 65042cecc5a6841ffb9b74e471cb9f237d15373f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e899ef34964c8bb7ae9b827f329efe60a7f83a0c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="manipulating-data"></a>Manipulowania danymi
 Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy było użycie wielu połączeń lub kursory po stronie serwera do rozwiązania niektórych scenariuszy. Gdy wiele połączeń były używane w sytuacji transakcyjnych, powiązany połączeń (z **sp_getbindtoken** i **procedury sp_bindsession**) były wymagane. W następujących scenariuszach przedstawiono sposób użycia połączenia z włączoną obsługą MARS zamiast wielu połączeń.  
@@ -33,7 +35,7 @@ Przed wprowadzeniem z wielu aktywnych zestawów wyników (MARS) deweloperzy był
  Przykład otwiera pojedynczego połączenia **AdventureWorks** bazy danych. Przy użyciu <xref:System.Data.SqlClient.SqlCommand> obiektu, <xref:System.Data.SqlClient.SqlDataReader> jest tworzony. Jak czytnik jest używany, a drugie <xref:System.Data.SqlClient.SqlDataReader> jest otwarty przy użyciu danych z pierwszego <xref:System.Data.SqlClient.SqlDataReader> jako dane wejściowe do klauzuli WHERE dla drugiego czytnika.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** baza danych dołączona [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
   
 ```vb  
 Option Strict On  
@@ -181,7 +183,7 @@ static void Main()
  Następującej aplikacji konsoli Pokazuje, jak korzystać z dwóch <xref:System.Data.SqlClient.SqlDataReader> obiektów, z których trzy <xref:System.Data.SqlClient.SqlCommand> obiektów i jeden <xref:System.Data.SqlClient.SqlConnection> obiektu z włączoną MARS. Pierwszy obiekt polecenie pobiera listę dostawców, których zdolności kredytowej wynosi 5. Drugi obiekt polecenia używa dostawcy podany identyfikator z <xref:System.Data.SqlClient.SqlDataReader> załadować drugi <xref:System.Data.SqlClient.SqlDataReader> z wszystkich produktów dla określonego dostawcy. Każdy rekord produktu odwiedzenia przez drugą <xref:System.Data.SqlClient.SqlDataReader>. Obliczeń do określenia, jakie nowe **OnOrderQty** powinien być. Trzeci obiektu command jest następnie używany do aktualizacji **ProductVendor** tabeli przy użyciu nowej wartości. Całego procesu odbywa się w ramach jednej transakcji jest przywracana na końcu.  
   
 > [!NOTE]
->  W poniższym przykładzie użyto przykładowej **AdventureWorks** baza danych dołączona [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
+>  W poniższym przykładzie użyto przykładowej **AdventureWorks** bazy danych programu SQL Server. W przykładowym kodzie w podanym ciągu połączenia przyjęto założenie, że baza danych jest zainstalowany i dostępny na komputerze lokalnym. Zmodyfikuj parametry połączenia w razie potrzeby dla danego środowiska.  
   
 ```vb  
 Option Strict On  

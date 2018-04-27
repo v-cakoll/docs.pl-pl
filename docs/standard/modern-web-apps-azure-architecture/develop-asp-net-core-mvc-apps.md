@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 230deb3869887fbcdd07e748d30601f19ec2be2a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 1a97bd393a4df080d9e2f9fc049165e4efbff852
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>Tworzenie aplikacji MVC ASP.NET Core
 
@@ -81,7 +82,7 @@ Dla interfejsów API sieci web platformy ASP.NET MVC Core obsługuje [ *negocjow
 
 ## <a name="working-with-dependencies"></a>Praca z zależnościami
 
-Platformy ASP.NET Core ma wbudowaną obsługę i wewnętrznie sprawia, że użycie techniką [iniekcji zależności](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). Iniekcji zależności to technika, który umożliwia luźne powiązanie między poszczególnymi częściami aplikacji. Im sprzężenia jest pożądane, ponieważ ułatwi do izolowania poszczególnych części aplikacji, co do testowania lub wymiany. Również powoduje mniej prawdopodobne, że zmiany w jednej części aplikacji będą miały wpływ nieoczekiwany gdzieś w aplikacji. Iniekcji zależności opiera się na zasadzie odwracanie zależności i często ma kluczowe znaczenie dla osiągnięcia zasady otwarty/zamknięty. Podczas obliczania działanie aplikacji z zależnościami, należy wziąć pod [statycznych przylepna](http://deviq.com/static-cling/) kodu zapachu i zapamiętać aphorism "[nowe jest sklejki](http://ardalis.com/new-is-glue)."
+Platformy ASP.NET Core ma wbudowaną obsługę i wewnętrznie sprawia, że użycie techniką [iniekcji zależności](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection). Iniekcji zależności to technika, który umożliwia luźne powiązanie między poszczególnymi częściami aplikacji. Im sprzężenia jest pożądane, ponieważ ułatwi do izolowania poszczególnych części aplikacji, co do testowania lub wymiany. Również powoduje mniej prawdopodobne, że zmiany w jednej części aplikacji będą miały wpływ nieoczekiwany gdzieś w aplikacji. Iniekcji zależności opiera się na zasadzie odwracanie zależności i często ma kluczowe znaczenie dla osiągnięcia zasady otwarty/zamknięty. Podczas obliczania działanie aplikacji z zależnościami, należy wziąć pod [statycznych przylepna](http://deviq.com/static-cling/) kodu zapachu i zapamiętać aphorism "[nowe jest sklejki](https://ardalis.com/new-is-glue)."
 
 Statyczne przylepna występuje podczas wykonywania wywołań do metod statycznych klas lub dostępu do właściwości statycznych, które ma efekty uboczne ani zależności w infrastrukturze. Na przykład jeśli masz metodę, która wywołuje metody statycznej, który z kolei zapisuje do bazy danych, metodę jest ściśle powiązane z bazą danych. Wszystko, co dzieli tego wywołania bazy danych spowoduje przerwanie metodę. Testowanie tych metod jest bardzo trudne, ponieważ testy te wymagają komercyjnych mocking bibliotek mock statyczne wywołania, lub należy badać tylko z bazy danych testu w miejscu. Statyczne wywołania, które nie ma żadnych zależności od infrastruktury, zwłaszcza tych, które są całkowicie bezstanowych jest poprawna wywołań i nie mają wpływu na sprzężenia lub pola (poza sprzężenia kodu statyczne wywołania, sam).
 
@@ -134,7 +135,7 @@ Model obiektów i interfejsów aplikacji powinna zostać umieszczona w projekcie
 
 Szczegóły implementacji, takie jak realizację trwałości lub jak powiadomienia zostaną wysłane do użytkownika, są przechowywane w projekcie infrastruktury. Ten projekt będzie odwoływać się do konkretnej implementacji pakiety, takie jak Entity Framework Core, ale nie powinny ujawniać szczegółowe informacje o tych implementacji poza projektem. Usługi infrastruktury oraz repozytoria powinien implementować interfejsów, które są zdefiniowane w projekcie ApplicationCore i ich implementacji trwałości są odpowiedzialne za odczytywanie i zapisywanie jednostek zdefiniowanych w ApplicationCore.
 
-Projektu platformy ASP.NET Core jest odpowiedzialny za wszelkie problemy dotyczące do poziomu interfejsu użytkownika, ale nie może zawierać szczegóły infrastruktury i logiki biznesowej. W rzeczywistości w idealnym przypadku nie powinny nawet ona zależności w projekcie infrastruktury, co pomoże upewnij się, że przypadkowo wprowadzono nie zależności między dwa projekty. Można to osiągnąć przy użyciu kontenera Podpisane innych firm, takich jak StructureMap, dzięki czemu można zdefiniować reguły Podpisane w klasach rejestru w każdym projekcie.
+Projekt interfejsu użytkownika programu ASP.NET Core jest odpowiedzialny za wszelkie problemy dotyczące do poziomu interfejsu użytkownika, ale nie może zawierać szczegóły infrastruktury i logiki biznesowej. W rzeczywistości w idealnym przypadku nie powinny nawet ona zależności w projekcie infrastruktury, co pomoże upewnij się, że przypadkowo wprowadzono nie zależności między dwa projekty. Można to osiągnąć przy użyciu kontenera Podpisane innych firm, takich jak StructureMap, dzięki czemu można zdefiniować reguły Podpisane w klasach rejestru w każdym projekcie.
 
 Innym sposobem oddzielenia aplikacji od szczegóły implementacji jest mikrousług wywołania aplikacji, możliwe, że wdrożone w poszczególnych kontenerach Docker. Rozdzielenie lepsze problemy i oddzielenie niż wykorzystaniu Podpisane między dwa projekty, ale ma stopnia złożoności.
 

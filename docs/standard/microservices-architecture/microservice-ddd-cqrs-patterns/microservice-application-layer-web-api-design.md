@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87b48624fde8c7cdab097289f1cf56ab56e1173f
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: d623a3bc542e0f044d73f405aa639bef0f6d1ec8
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-microservice-application-layer-and-web-api"></a>Projektowanie mikrousługi warstwy aplikacji i interfejsu API sieci Web
 
@@ -50,7 +50,7 @@ Może upłynąć innego przewodnik szczegółowo stałe. W związku z tym w tym 
     [*https://martinfowler.com/articles/injection.html*](https://martinfowler.com/articles/injection.html)
 
 -   **Steve Smith. Nowe jest sklejki**
-    [*http://ardalis.com/new-is-glue*](http://ardalis.com/new-is-glue)
+    [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
 
 >[!div class="step-by-step"]

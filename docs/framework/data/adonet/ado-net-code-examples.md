@@ -1,23 +1,25 @@
 ---
-title: "Przykłady kodu dla ADO.NET"
+title: Przykłady kodu dla ADO.NET
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: ea26b4297f587a449b8484947257081e0d11906c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8fec055db7069a213b31b9f4443b2f0e7467dd7b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="adonet-code-examples"></a>Przykłady kodu dla ADO.NET
 Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danych przy użyciu następujących technologii ADO.NET:
@@ -46,7 +48,7 @@ Zamieszczone w tym temacie przedstawiają sposób pobierania danych z bazy danyc
 Następujące listy kodu przedstawiają sposób pobierać dane z bazy danych przy użyciu dostawcy danych ADO.NET. Dane są zwracane w `DataReader`. Aby uzyskać więcej informacji, zobacz [pobierania danych przy użyciu elementu DataReader](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md).
 
 ### <a name="sqlclient"></a>SqlClient
-Kod w tym przykładzie przyjęto założenie, że można nawiązać `Northwind` przykładowej bazy danych w systemie Microsoft [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Kod tworzy <xref:System.Data.SqlClient.SqlCommand> do wybrania wierszy z tabeli Produkty Dodawanie <xref:System.Data.SqlClient.SqlParameter> Aby ograniczyć wyniki do wiersze z UnitPrice większa niż podana wartość parametru, w tym przypadku 5. <xref:System.Data.SqlClient.SqlConnection> Jest otwarty w `using` bloku, który zapewnia, że zasoby są zamknięty i usunięty, gdy kod jest kończona. Kod wykonywany polecenia przy użyciu <xref:System.Data.SqlClient.SqlDataReader>i wyświetla wyniki w oknie konsoli.
+Kod w tym przykładzie przyjęto założenie, że można nawiązać `Northwind` przykładowej bazy danych w programie Microsoft SQL Server. Kod tworzy <xref:System.Data.SqlClient.SqlCommand> do wybrania wierszy z tabeli Produkty Dodawanie <xref:System.Data.SqlClient.SqlParameter> Aby ograniczyć wyniki do wiersze z UnitPrice większa niż podana wartość parametru, w tym przypadku 5. <xref:System.Data.SqlClient.SqlConnection> Jest otwarty w `using` bloku, który zapewnia, że zasoby są zamknięty i usunięty, gdy kod jest kończona. Kod wykonywany polecenia przy użyciu <xref:System.Data.SqlClient.SqlDataReader>i wyświetla wyniki w oknie konsoli.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]

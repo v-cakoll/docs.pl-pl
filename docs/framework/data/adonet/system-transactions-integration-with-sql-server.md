@@ -1,36 +1,38 @@
 ---
 title: System.Transactions integracji z programem SQL Server
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 21924441c091c53a79d4b7bf8a683f8a7c74bd07
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 06f1555c8dbbdf10e8a1d0de867ddb227cb148b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>System.Transactions integracji z programem SQL Server
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] w wersji 2.0 wprowadzono framework transakcji, które mogą być udostępniane za pośrednictwem <xref:System.Transactions> przestrzeni nazw. Ta struktura przedstawia transakcji w taki sposób, który jest w pełni zintegrowana z [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)], takie jak [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].  
   
  Oprócz rozszerzenia programowania <xref:System.Transactions> i [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] mogą współdziałać ze sobą do koordynowania optymalizacje podczas pracy z transakcji. Awansowanie transakcji to lekkie transakcja (local), która może być automatycznie podwyższony do transakcji rozproszonej pełni na zgodnie z potrzebami.  
   
- Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje awansowanie transakcji podczas pracy z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]. Awansowanie transakcji nie jest wywoływany dodany narzutów transakcji rozproszonej, chyba że dodany jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
+ Począwszy od [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0, <xref:System.Data.SqlClient> obsługuje awansowanie transakcji podczas pracy z programem SQL Server. Awansowanie transakcji nie jest wywoływany dodany narzutów transakcji rozproszonej, chyba że dodany jest wymagana. Awansowanie transakcje są automatyczne i wymagają interwencji od dewelopera.  
   
- Awansowanie transakcje są dostępne tylko, gdy używasz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (`SqlClient`) z [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)].  
+ Awansowanie transakcje są dostępne tylko, gdy używasz [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server (`SqlClient`) z programem SQL Server.  
   
 ## <a name="creating-promotable-transactions"></a>Tworzenie awansowanie transakcji  
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server zapewnia obsługę awansowanie transakcji, które są obsługiwane za pośrednictwem klas w [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> przestrzeni nazw. Transakcje awansowanie zoptymalizować transakcje rozproszone odkładanie Tworzenie transakcji rozproszonej, dopóki nie jest wymagana. Jeśli tylko jeden Menedżera zasobów jest wymagana, występuje nie transakcji rozproszonej.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 01/17/2018
 >  W scenariuszu z częściowo zaufanego <xref:System.Transactions.DistributedTransactionPermission> jest wymagany, gdy transakcja jest podwyższany do transakcji rozproszonej.  
   
 ## <a name="promotable-transaction-scenarios"></a>Scenariusze awansowanie transakcji  
- Transakcje rozproszone zwykle użycie zasobów systemu znaczące, zarządzana przez program Microsoft Distributed Transaction Coordinator (MS DTC), która integruje się menedżerowie zasobów dostępne w ramach transakcji. Awansowanie transakcji jest specjalny rodzaj <xref:System.Transactions> transakcji, które skutecznie deleguje pracy prostą [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] transakcji. <xref:System.Transactions>, <xref:System.Data.SqlClient>, i [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] koordynować pracę niezbędną do obsługi transakcji, promowania go do pełnego transakcji rozproszonej, zgodnie z potrzebami.  
+ Transakcje rozproszone zwykle użycie zasobów systemu znaczące, zarządzana przez program Microsoft Distributed Transaction Coordinator (MS DTC), która integruje się menedżerowie zasobów dostępne w ramach transakcji. Awansowanie transakcji jest specjalny rodzaj <xref:System.Transactions> transakcji, które skutecznie deleguje pracy proste transakcji programu SQL Server. <xref:System.Transactions>, <xref:System.Data.SqlClient>, oraz programu SQL Server koordynować pracę niezbędną do obsługi transakcji, promowania go do pełnego transakcji rozproszonej, zgodnie z potrzebami.  
   
  Zaletą używania awansowanie transakcji jest fakt, że połączenie jest otwarte przy użyciu aktywnego <xref:System.Transactions.TransactionScope> transakcji, a żadne inne połączenia są otwarte, zatwierdzenia transakcji jako lekkich transakcji, zamiast ponoszenia dodatkowych koszty pełne transakcji rozproszonej.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/17/2018
   
  W poniższej tabeli opisano możliwe wartości.  
   
-|Keyword|Opis|  
+|Słowo kluczowe|Opis|  
 |-------------|-----------------|  
 |Niejawne usunięcia powiązania|Domyślnie. Połączenie odłącza transakcji po jej zakończeniu przełączania do trybu autozatwierdzania.|  
 |Jawne usuwanie powiązania|Połączenie pozostaje przyłączona do transakcji do czasu zamknięcia transakcji. Połączenia zakończy się niepowodzeniem, jeśli skojarzonej transakcji jest nieaktywny lub nie odpowiada <xref:System.Transactions.Transaction.Current%2A>.|  

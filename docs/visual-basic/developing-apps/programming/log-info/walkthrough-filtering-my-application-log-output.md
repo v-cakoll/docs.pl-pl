@@ -1,25 +1,26 @@
 ---
-title: "Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)"
-ms.custom: 
+title: Filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - My.Log object, filtering output
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 90fd445227e0c8290ad63fccf807d6d7bdf43ccd
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6c048578b320fedd2153aee7b466b1494551abe0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>Wskazówki: filtrowanie danych wyjściowych My.Application.Log (Visual Basic)
 W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania `My.Application.Log` obiekt, aby kontrolować, jakie informacje są przekazywane z `Log` obiektu odbiorniki i jakie informacje są zapisywane przez odbiorniki. Zachowanie rejestrowania można zmienić nawet po tworzenia aplikacji, ponieważ informacje o konfiguracji są przechowywane w pliku konfiguracji aplikacji.  
@@ -29,7 +30,7 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
   
 #### <a name="to-build-the-sample-application"></a>Do tworzenia przykładowej aplikacji  
   
-1.  Otwórz nowe [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] projekt aplikacji systemu Windows.  
+1.  Otwórz nowy projekt aplikacji systemu Windows w języku Visual Basic.  
   
 2.  Dodawanie przycisku o nazwie Button1 do Form1.  
   
@@ -64,11 +65,11 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
 |Wartość DefaultSwitch|Ważność komunikatu wymagane dla danych wyjściowych|  
 |---|---| 
 |`Critical`|`Critical`|  
-|`Error`|`Critical`lub`Error`|  
-|`Warning`|`Critical`, `Error`, lub`Warning`|  
-|`Information`|`Critical`, `Error`, `Warning`, lub`Information`|  
-|`Verbose`|`Critical`, `Error`, `Warning`, `Information`, lub`Verbose`|  
-|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, lub`Transfer`|  
+|`Error`|`Critical` lub `Error`|  
+|`Warning`|`Critical`, `Error`, lub `Warning`|  
+|`Information`|`Critical`, `Error`, `Warning`, lub `Information`|  
+|`Verbose`|`Critical`, `Error`, `Warning`, `Information`, lub `Verbose`|  
+|`ActivityTracing`|`Start`, `Stop`, `Suspend`, `Resume`, lub `Transfer`|  
 |`All`|Wszystkie komunikaty są dozwolone.|  
 |`Off`|Wszystkie komunikaty są zablokowane.|  
   
@@ -256,9 +257,9 @@ W tym przewodniku przedstawiono sposób zmiany domyślnego dziennika filtrowania
  Aby uzyskać więcej informacji na temat zmiany ustawień dziennika po wdrożeniu, zobacz [Praca z dziennikami aplikacji](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
- [Wskazówki: Zmienianie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
- [Wskazówki: Tworzenie odbiorników logu niestandardowego](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
- [Porady: zapisywanie wiadomości rejestru](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
+ [Przewodnik: ustalanie, gdzie My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)  
+ [Przewodnik: zmienianie lokalizacji, w której My.Application.Log zapisuje informacje](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)  
+ [Przewodnik: tworzenie odbiorców dzienników niestandardowych](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)  
+ [Instrukcje: zapisywanie komunikatów dziennika](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)  
  [Przełączniki śledzenia](../../../../framework/debug-trace-profile/trace-switches.md)  
  [Rejestrowanie informacji z aplikacji](../../../../visual-basic/developing-apps/programming/log-info/logging-information-from-the-application.md)

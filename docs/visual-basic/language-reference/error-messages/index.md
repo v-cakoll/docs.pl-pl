@@ -16,11 +16,11 @@ ms.assetid: f2dda05b-baef-41f5-8bb1-598bd7cf239f
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f7f5138d430e6737a4a8a47d4a800905dedff660
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: de52d95cfbc8135db1dc9434860f02b8992db0b4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="error-messages-visual-basic"></a>Komunikaty o błędach (Visual Basic)
 Podczas zapisu, kompilacji lub uruchamianie aplikacji Visual Basic, mogą wystąpić następujące błędy:  
@@ -34,7 +34,7 @@ Podczas zapisu, kompilacji lub uruchamianie aplikacji Visual Basic, mogą wystą
  Aby uzyskać informacje o rozwiązywaniu problemów z określonego błędu, zobacz [zasoby dodatkowe dla programistów Visual Basic](../../../visual-basic/getting-started/additional-resources.md).  
   
 ## <a name="run-time-errors"></a>Błędy wykonania  
- Jeśli aplikacji Visual Basic próbuje wykonać akcję systemu nie można wykonać, wystąpi błąd w czasie wykonywania, a [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zgłasza `Exception` obiektu. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]mogą generować błędy niestandardowe wszelkich danych typu, łącznie z `Exception` obiektów przy użyciu `Throw` instrukcji. Aplikację można zidentyfikować błędu wyświetlając numer błędu i komunikat zgłoszony wyjątek. Jeśli nie jest zgłoszony błąd, kończy się aplikacja.  
+ Jeśli aplikacji Visual Basic próbuje wykonać akcję systemu nie można wykonać, wystąpi błąd czasu wykonywania i Visual Basic generuje `Exception` obiektu. Visual Basic mogą generować błędy niestandardowe wszelkich danych typu, łącznie z `Exception` obiektów przy użyciu `Throw` instrukcji. Aplikację można zidentyfikować błędu wyświetlając numer błędu i komunikat zgłoszony wyjątek. Jeśli nie jest zgłoszony błąd, kończy się aplikacja.  
   
  Kod można przechwytują i sprawdzić błędy środowiska wykonawczego. Jeśli umieść kod, który powoduje błąd w `Try` bloku, można przechwycić zgłoszenia błędu w odpowiadającego mu `Catch` bloku. Aby uzyskać informacje na temat reagowania na je w kodzie i przechwytywać błędy w czasie wykonywania, zobacz [spróbuj... CATCH... Instrukcji finally](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md).  
   

@@ -1,18 +1,18 @@
 ---
-title: "Narzędzia dostawcy odwołanie z usługą sieci Web Microsoft WCF"
-description: "Przegląd Microsoft WCF sieci Web usługi odwołanie dostawca narzędzia, która dodaje funkcjonalność platformy .NET Core i ASP.NET Core projektów, podobnie jak Dodaj odwołanie do usługi .NET Framework projektów."
+title: Narzędzia dostawcy odwołanie z usługą sieci Web Microsoft WCF
+description: Przegląd Microsoft WCF sieci Web usługi odwołanie dostawca narzędzia, która dodaje funkcjonalność platformy .NET Core i ASP.NET Core projektów, podobnie jak Dodaj odwołanie do usługi .NET Framework projektów.
 author: mlacouture
 manager: wpickett
 ms.author: johalex
-ms.date: 01/19/2018
+ms.date: 04/19/2018
 ms.topic: article
 ms.prod: .net-core
 ms.custom: mvc
-ms.openlocfilehash: e445361f9f4a858f4b34ca1008670fadc62b8b3c
-ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
+ms.openlocfilehash: acf9e97c05dabc46da26ed2ea580e7d341b0f2dc
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="microsoft-wcf-web-service-reference-provider-tool"></a>Narzędzia dostawcy odwołanie z usługą sieci Web Microsoft WCF
 
@@ -20,6 +20,10 @@ W ciągu lat wielu deweloperów programu Visual Studio korzystali produktywnoś�
 
 > [!IMPORTANT]
 > Użytkownik powinien odwoływać się tylko usługi z zaufanego źródła. Dodawanie odwołań z niezaufanego źródła może naruszyć bezpieczeństwo. 
+
+## <a name="prerequisites"></a>Wymagania wstępne
+
+* [Visual Studio 2017 w 15,5 cala](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) lub nowszy
 
 ## <a name="how-to-use-the-extension"></a>Jak używać rozszerzenia
 
@@ -81,5 +85,5 @@ Po ukończeniu tych procesów, można utworzyć wystąpienia typu wygenerowanego
 ### <a name="feedback--questions"></a>Opinie i pytania
 Jeśli masz pytania lub opinie, [Otwórz problemu w serwisie GitHub](https://github.com/dotnet/wcf/issues/new). Można także przejrzeć wszystkie istniejące pytania lub problemy [w repozytorium usługi WCF w usłudze GitHub](https://github.com/dotnet/wcf/issues?utf8=%E2%9C%93&q=is:issue%20label:tooling).
 
-### <a name="release-notes"></a>Informacje o wersji
+### <a name="release-notes"></a>Uwagi do wersji
 * Zapoznaj się [informacje o wersji](https://github.com/dotnet/wcf/blob/master/release-notes/WCF-Web-Service-Reference-notes.md) uzyskać informacje o zaktualizowanej wersji, w tym znanych problemów. 

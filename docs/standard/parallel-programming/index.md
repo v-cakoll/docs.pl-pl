@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c0ea65b0a61719c85ab1da53bcc99f5d43a3210b
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 1e649bcb37b711d01199bd4e4823a9bb0cac60b4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parallel-programming-in-net"></a>Programowanie równoległe w .NET
 Wiele komputerów osobistych i stacji roboczych ma dwa lub cztery rdzenie (czyli procesorów), które umożliwiają jednoczesne wykonywane wielu wątków. Komputery w najbliższej przyszłości powinny mieć znacznie więcej rdzeni. Aby skorzystać z możliwości dzisiejszego i jutrzejszego sprzętu, można zrównoleglić kod w celu rozłożenia pracy na wiele procesorów. W przeszłości przetwarzanie równoległe wymagało operowania wątkami i blokadami na niskim poziomie. [!INCLUDE[vs_dev10_long](../../../includes/vs-dev10-long-md.md)] i [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] rozszerzają obsługę programowania równoległego, podając nowe środowisko uruchomieniowe, nowe typy biblioteki klas i nowe narzędzia diagnostyczne. Te funkcje upraszczają równoległe programowanie, dzięki czemu można tworzyć wydajny, precyzyjny i skalowalny kod przetwarzania równoległego w języku naturalnym bez konieczności bezpośredniej pracy z wątkami lub pulą wątków. Następująca ilustracja przedstawia ogólne omówienie architektury programowania równoległego w [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)].  
@@ -44,4 +44,4 @@ Wiele komputerów osobistych i stacji roboczych ma dwa lub cztery rdzenie (czyli
   
 ## <a name="see-also"></a>Zobacz też  
  [Wzorce programowania równoległego: opis i stosowanie równoległe wzorce za pomocą programu .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)  
- [Programowanie równoległe w środowisku .NET Framework — przykłady](http://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)
+ [Programowanie równoległe w środowisku .NET Framework — przykłady](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

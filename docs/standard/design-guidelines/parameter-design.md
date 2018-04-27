@@ -1,12 +1,12 @@
 ---
 title: Parametr projektu
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - member design guidelines [.NET Framework], parameters
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - parameters, design guidelines
 - reserved parameters
 ms.assetid: 3f33bf46-4a7b-43b3-bb78-1ffebe0dcfa6
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f95301bab57e8bdb6b22c54140a4c02ed208b8d3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0d89ed81c06558a6bc101864a7fef3173f019fd0
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="parameter-design"></a>Parametr projektu
 Ta sekcja zawiera ogólnych wytycznych w projekcie parametru, w tym sekcje z wytycznymi dotyczącymi sprawdzanie argumentów. Ponadto należy zapoznać się z wytycznymi opisanego w [nazw parametrów](../../../docs/standard/design-guidelines/naming-parameters.md).  
@@ -82,9 +82,9 @@ Ta sekcja zawiera ogólnych wytycznych w projekcie parametru, w tym sekcje z wyt
   
  Gdy argument jest przekazywany za pomocą parametru-wartość, element członkowski wysyłana kopia rzeczywisty argument przekazany. Jeśli argument ma typ wartości, kopię argumentu jest umieszczany na stosie. Jeśli argument ma typ referencyjny, kopię odwołanie jest umieszczany na stosie. Najbardziej popularnych języków CLR, takich jak C#, VB.NET i C++, domyślnie przekazywanie parametrów przez wartość.  
   
- Gdy argument jest przekazywany za pośrednictwem `ref` parametru odbiera element członkowski odwołania do rzeczywistego przekazany argument. Jeśli argument ma typ wartości, odwołanie do argumentu jest umieszczany na stosie. Jeśli argument ma typ referencyjny, odwołanie do odwołania jest umieszczany na stosie. `Ref`Aby umożliwić elementu członkowskiego do argumenty przekazany przez wywołującego można użyć parametrów.  
+ Gdy argument jest przekazywany za pośrednictwem `ref` parametru odbiera element członkowski odwołania do rzeczywistego przekazany argument. Jeśli argument ma typ wartości, odwołanie do argumentu jest umieszczany na stosie. Jeśli argument ma typ referencyjny, odwołanie do odwołania jest umieszczany na stosie. `Ref` Aby umożliwić elementu członkowskiego do argumenty przekazany przez wywołującego można użyć parametrów.  
   
- `Out`Parametry są podobne do `ref` parametrów, z niektórych niewielkie różnice. Parametr uważa się początkowo nieprzypisane i nie można odczytać treści elementu członkowskiego, przed przypisaniem niektóre wartości. Ponadto parametr musi zostać przypisany niektóre wartości, zanim zwraca element członkowski.  
+ `Out` Parametry są podobne do `ref` parametrów, z niektórych niewielkie różnice. Parametr uważa się początkowo nieprzypisane i nie można odczytać treści elementu członkowskiego, przed przypisaniem niektóre wartości. Ponadto parametr musi zostać przypisany niektóre wartości, zanim zwraca element członkowski.  
   
  **X należy UNIKAĆ** przy użyciu `out` lub `ref` parametrów.  
   
@@ -162,9 +162,9 @@ public class String {
   
  Ponieważ arytmetyka wskaźnika prostego mogą zostać użyte do wykonania takiego samego wyniku istnieje na przykład, nie trzeba przekazać indeks początkowy.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Element członkowski — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/member.md)  

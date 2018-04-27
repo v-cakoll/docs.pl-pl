@@ -1,12 +1,13 @@
 ---
-title: "Porady: umieszczanie cudzysłowu w ciągu (Formularze systemu Windows)"
-ms.custom: 
+title: 'Porady: umieszczanie cudzysłowu w ciągu (Formularze systemu Windows)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], displaying quotation marks
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 267a69b9470040dfc60f3c0b280b71e3f52dbc88
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd7c6a460f24b1406ad914e20b9113920814737c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>Porady: umieszczanie cudzysłowu w ciągu (Formularze systemu Windows)
 Czasami może chcesz umieścić znaki cudzysłowu ("") w ciągu tekstowego. Na przykład:  
@@ -37,7 +39,7 @@ Czasami może chcesz umieścić znaki cudzysłowu ("") w ciągu tekstowego. Na p
   
 ### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a>Aby umieścić znaki cudzysłowu w ciągu w kodzie  
   
-1.  W [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], Wstaw dwa znaki cudzysłowu w wierszu jako osadzony znaku cudzysłowu. W [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], Wstaw sekwencji unikowej \\"jako osadzony znaku cudzysłowu. Na przykład aby utworzyć parametry poprzedniego, należy użyć poniższego kodu.  
+1.  W języku Visual Basic Wstaw dwa znaki cudzysłowu w wierszu jako osadzony znaku cudzysłowu. W środowisku Visual C# i [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], Wstaw sekwencji unikowej \\"jako osadzony znaku cudzysłowu. Na przykład aby utworzyć parametry poprzedniego, należy użyć poniższego kodu.  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -61,7 +63,7 @@ Czasami może chcesz umieścić znaki cudzysłowu ("") w ciągu tekstowego. Na p
   
      —lub—  
   
-2.  Wstaw znak ASCII lub Unicode dla znaku cudzysłowu. W [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)], użyj znaków ASCII (34). W [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)], użyj znaku Unicode (\u0022).  
+2.  Wstaw znak ASCII lub Unicode dla znaku cudzysłowu. W języku Visual Basic użyj znaków ASCII (34). W środowisku Visual C#, użyj znaków Unicode (\u0022).  
   
     ```vb  
     Private Sub InsertAscii()  

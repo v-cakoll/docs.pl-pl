@@ -1,27 +1,29 @@
 ---
-title: "Porady: wyświetlanie wygenerowany SQL"
-ms.custom: 
+title: 'Porady: wyświetlanie wygenerowany SQL'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5c75ac8734a92fc76613643c3831d0b767e92feb
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: c58e691bdf39e71a756c8b26451c22c769f05c0a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-display-generated-sql"></a>Porady: wyświetlanie wygenerowany SQL
 Możesz wyświetlić kod SQL wygenerowana dla zapytań i zmień przetwarzanie przy użyciu <xref:System.Data.Linq.DataContext.Log%2A> właściwości. Ta metoda może być przydatna do zrozumienia [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] funkcjonalność i debugowanie określonych problemów.  
@@ -29,7 +31,7 @@ Możesz wyświetlić kod SQL wygenerowana dla zapytań i zmień przetwarzanie pr
 ## <a name="example"></a>Przykład  
  W poniższym przykładzie użyto <xref:System.Data.Linq.DataContext.Log%2A> właściwość, aby wyświetlić kod SQL w oknie konsoli, przed wykonaniem kodu.  Możesz używać tej właściwości zapytania, insert, update i usunąć poleceń.  
   
- Wiersze z okna konsoli są, zobacz podczas wykonywania [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] lub kodu C#, który jest zgodny.  
+ Wiersze z okna konsoli są, zobacz podczas wykonywania kodu języka Visual Basic lub C#, znajdujący się.  
   
 ```  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

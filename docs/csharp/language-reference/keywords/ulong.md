@@ -1,5 +1,5 @@
 ---
-title: "ulong (odwołanie w C#)"
+title: ulong (odwołanie w C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - ulong keyword [C#]
 ms.assetid: f2ece624-837a-40cf-92c5-343e7f33397c
-caps.latest.revision: 
+caps.latest.revision: 16
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2058d9f6a228b13938fe08d7e2fb11e3b9f4600a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 049d1cc4b30e16535f20cee8e0ad80e5c80b4a49
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ulong-c-reference"></a>ulong (odwołanie w C#)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literały  
 
-Można zadeklarować i zainicjuj `ulong` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od C# 7) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `ulong` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt64.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
+Można zadeklarować i zainicjuj `ulong` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne.  Jeśli liczba całkowita literału jest poza zakresem `ulong` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt64.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt64.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji. 
 
 W poniższym przykładzie liczb całkowitych równa 7,934,076,125, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są przypisane do `ulong` wartości.  
   
@@ -39,7 +39,7 @@ W poniższym przykładzie liczb całkowitych równa 7,934,076,125, które są re
 > [!NOTE] 
 > Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu. 
 
-Począwszy od C# 7, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
  - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
 
@@ -55,7 +55,7 @@ Jeśli literał całkowity nie sufiks, jego typ jest pierwszy następujących ty
 
 1. [int](int.md)
 2. [uint](../../../csharp/language-reference/keywords/uint.md)
-3. [długa](long.md)
+3. [long](long.md)
 4. `ulong`
 
 ## <a name="compiler-overload-resolution"></a>Rozpoznanie przeciążenia kompilatora

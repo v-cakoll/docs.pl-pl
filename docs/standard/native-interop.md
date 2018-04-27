@@ -1,7 +1,7 @@
 ---
-title: "Współdziałanie natywnego"
-description: "Dowiedz się, jak interfejs ze składnikami natywnego programu .NET."
-keywords: .NET, .NET core
+title: Współdziałanie natywnego
+description: Dowiedz się, jak interfejs ze składnikami natywnego programu .NET.
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: ronpet
 ms.date: 06/20/2016
@@ -13,11 +13,11 @@ ms.assetid: 3c357112-35fb-44ba-a07b-6a1c140370ac
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 11a93f4014734130f7c4e33cf215c6d49d2554c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: d9b0fa5ebe37e51c45a8a5d8a42ce9b9688cc7c1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="native-interoperability"></a>Współdziałanie natywnego
 
@@ -26,7 +26,7 @@ W tym dokumencie, firma Microsoft będzie Poznaj nieco bardziej wszystkie trzy s
 Istnieje kilka przyczyn, dlaczego warto wywoływać kodu natywnego:
 
 *   Systemy operacyjne są dostarczane z dużą ilością interfejsów API, które nie są dostępne w bibliotekach klas zarządzanych. Podstawowym przykład dla tego będzie dostęp do sprzętu lub systemu operacyjnego funkcje zarządzania.
-*   Podczas komunikacji z innymi składnikami, które lub można utworzyć ABIs stylu języka C (native ABIs). Obejmuje, na przykład kodu języka Java, który jest dostępny za pośrednictwem [Java natywnego interfejsu (JNI)](http://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnego zarządzanego języka, który może utworzyć składnik macierzysty.
+*   Podczas komunikacji z innymi składnikami, które lub można utworzyć ABIs stylu języka C (native ABIs). Obejmuje, na przykład kodu języka Java, który jest dostępny za pośrednictwem [Java natywnego interfejsu (JNI)](https://docs.oracle.com/javase/8/docs/technotes/guides/jni/) lub dowolnego zarządzanego języka, który może utworzyć składnik macierzysty.
 *   W systemie Windows większość oprogramowania, które są instalowane, takich jak pakiet Microsoft Office, rejestruje składników COM, które reprezentują programów i umożliwiają deweloperom zautomatyzować je lub używać ich. Wymaga to współdziałanie macierzystego.
 
 Oczywiście powyższej listy nie obejmuje wszystkich potencjalnych sytuacji i scenariusze, w których deweloper może chcesz/podobne/potrzebę interfejs ze składnikami natywnego. Biblioteka klas programu .NET, na przykład używa Obsługa natywnego współdziałanie do implementacji odpowiedniego liczba interfejsów API, takie jak obsługa konsoli i manipulowania, dostępu do systemu plików i innych użytkowników. Jednak ważne jest, należy pamiętać, że ma opcji, należy należy go.
@@ -145,9 +145,9 @@ namespace ConsoleApplication1 {
 }
 ```
 
-Zanim firma Microsoft przeprowadzenie naszym przykładzie jest gotowe za pośrednictwem podpisów niezarządzanych funkcji potrzebnych do pracy z. Funkcję, którą chcesz wywołać wyliczyć wszystkie okna ma następującą sygnaturą:`BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
+Zanim firma Microsoft przeprowadzenie naszym przykładzie jest gotowe za pośrednictwem podpisów niezarządzanych funkcji potrzebnych do pracy z. Funkcję, którą chcesz wywołać wyliczyć wszystkie okna ma następującą sygnaturą: `BOOL EnumWindows (WNDENUMPROC lpEnumFunc, LPARAM lParam);`
 
-Pierwszym parametrem jest wywołaniem zwrotnym. Wspomniane wywołania zwrotnego ma następującą sygnaturą:`BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
+Pierwszym parametrem jest wywołaniem zwrotnym. Wspomniane wywołania zwrotnego ma następującą sygnaturą: `BOOL CALLBACK EnumWindowsProc (HWND hwnd, LPARAM lParam);`
 
 Pamiętając o tym Przejdźmy przykładzie:
 
@@ -340,6 +340,6 @@ public class StatClass {
 
 ## <a name="more-resources"></a>Więcej zasobów
 
-*   [Witryna typu wiki PInvoke.net](http://www.pinvoke.net) znakomity Wiki z informacji o typowych API Win32 i połączeń telefonicznych z nimi.
+*   [Witryna typu wiki PInvoke.net](https://www.pinvoke.net/) znakomity Wiki z informacji o typowych API Win32 i połączeń telefonicznych z nimi.
 *   [P/Invoke w witrynie MSDN](https://msdn.microsoft.com/library/zbz07712.aspx)
-*   [Dokumentacja mono P/Invoke](http://www.mono-project.com/docs/advanced/pinvoke/)
+*   [Dokumentacja mono P/Invoke](https://www.mono-project.com/docs/advanced/pinvoke/)

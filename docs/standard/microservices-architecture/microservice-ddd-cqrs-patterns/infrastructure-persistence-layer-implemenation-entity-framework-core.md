@@ -1,6 +1,6 @@
 ---
-title: "Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core"
+title: Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4acdbde6405af7eb78a8c605562fdb1795fedf4d
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 49bd528db50397ea896b7251ea60d18b90fea30c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Implementowanie warstwę trwałości infrastruktury z programu Entity Framework Core
 
@@ -342,7 +342,7 @@ Algorytm Hi/Lo opisuje mechanizm służący do generowania identyfikatorów bezp
 
 -   Generuje on człowieka identyfikator do odczytu, w odróżnieniu od techniki, które używają identyfikatorów GUID.
 
-Jądro EF obsługuje [HiLo](http://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) przy użyciu metody ForSqlServerUseSequenceHiLo, jak pokazano w poprzednim przykładzie.
+Jądro EF obsługuje [HiLo](https://stackoverflow.com/questions/282099/whats-the-hi-lo-algorithm) przy użyciu metody ForSqlServerUseSequenceHiLo, jak pokazano w poprzednim przykładzie.
 
 ### <a name="mapping-fields-instead-of-properties"></a>Mapowanie pól zamiast właściwości
 
@@ -467,7 +467,7 @@ Mimo że firma Microsoft nie jest zalecane, aby zwracać IQueryable z repozytori
     [*https://docs.microsoft.com/ef/core/modeling/backing-field*](https://docs.microsoft.com/ef/core/modeling/backing-field)
 
 -   **Steve Smith. Hermetyzowany kolekcje w programie Entity Framework Core**
-    [*http://ardalis.com/encapsulated-collections-in-entity-framework-core*](http://ardalis.com/encapsulated-collections-in-entity-framework-core)
+    [*https://ardalis.com/encapsulated-collections-in-entity-framework-core*](https://ardalis.com/encapsulated-collections-in-entity-framework-core)
 
 -   **Właściwości w tle**
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)

@@ -1,21 +1,22 @@
 ---
-title: "Wątku puli (C#)"
-ms.custom: 
+title: Wątku puli (C#)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 98ae68c1-ace8-44b9-9317-8920ac9ef2b6
-caps.latest.revision: "5"
+caps.latest.revision: 5
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 09dd597e8ac7a6b336f71891ccc89984ea659614
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 56fba1197fe81e60e27f300ec43879569d0a9d48
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="thread-pooling-c"></a>Wątku puli (C#)
 A *puli wątków* jest kolekcją wątków, które można wykonać kilka zadań w tle. (Zobacz [wątki (C#)](../../../../csharp/programming-guide/concepts/threading/index.md) informacje uzupełniające.) Spowoduje to pozostawienie podstawowy wątek wolnego asynchronicznie wykonywanie innych zadań.  
@@ -60,7 +61,7 @@ private void AnotherLongTask(Object state)
 ## <a name="thread-pool-parameters-and-return-values"></a>Wątek puli parametrów i zwracanych wartości  
  Zwracanie wartości z wątku puli wątków nie jest proste. Standardowy sposób zwracania wartości z wywołania funkcji jest niedozwolona, ponieważ `Sub` procedury są jedynym typem procedury, które mogą być umieszczone w kolejce do puli wątków. Jednym ze sposobów można podać parametry i zwracać wartości jest zawijania parametrów zwracanych wartości i metody w otoce klasy zgodnie z opisem w [parametry i zwracać wartości dla procedur wielowątkowości (C#)](../../../../csharp/programming-guide/concepts/threading/parameters-and-return-values-for-multithreaded-procedures.md).  
   
- Sposób easer Podaj parametry i wartości zwracane jest przy użyciu opcjonalnego `ByVal` zmiennej obiektu stanu z <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> metody. Jeśli używasz tej zmiennej do przekazania odwołania do wystąpienia klasy elementów członkowskich wystąpienia można modyfikować w wątku puli wątków i używane jako wartości zwracanych.  
+ Łatwiejszy sposób, aby podać parametry i wartości zwracane jest przy użyciu opcjonalnego `ByVal` zmiennej obiektu stanu <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A> metody. Jeśli używasz tej zmiennej do przekazania odwołania do wystąpienia klasy elementów członkowskich wystąpienia można modyfikować w wątku puli wątków i używane jako wartości zwracanych.  
   
  Na początku może nie być oczywista, modyfikowania obiektu odwołuje się do zmiennej, która jest przekazywany przez wartość. Można to zrobić, ponieważ tylko odwołanie do obiektu jest przekazywany przez wartość. Po wprowadzeniu zmian do elementów członkowskich obiektu odwołuje się odwołanie do obiektu zmiany dotyczą wystąpienie klasy rzeczywistych.  
   

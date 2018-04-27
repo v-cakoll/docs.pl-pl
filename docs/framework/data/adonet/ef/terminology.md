@@ -1,24 +1,26 @@
 ---
 title: Entity Framework terminologia
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a2d55319b5463b2c9624fe22e7a16235c3d57614
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cd85760e219e810c089ebe88c8295d79ebaf0944
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework terminologia
 W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] dokumentacji. Zostały podane linki do powiązanych tematów, w którym dostępne są dodatkowe informacje.  
@@ -55,7 +57,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |skojarzenia niezależne|Skojarzenia między jednostkami reprezentowane i śledzone przez obiekt niezależne.|  
 |klawisz|Atrybut typu jednostki, która określa, które właściwości lub zestaw właściwości używany do identyfikowania unikatowy wystąpień typu jednostki. Reprezentowane w warstwie obiektów przez <xref:System.Data.EntityKey> klasy.<br /><br /> Aby uzyskać więcej informacji, zobacz [klucz elementu (CSDL)](http://msdn.microsoft.com/library/0cdb1402-dbc7-4a04-a11e-5729cdf7431b) i [klucz jednostki](../../../../../docs/framework/data/adonet/entity-key.md).|  
 |powolne ładowanie|Jeśli obiekty są zwracane przez zapytanie, powiązane obiekty nie są ładowane w tym samym czasie. Zamiast tego są one ładowane automatycznie podczas uzyskiwania dostępu do właściwości nawigacji.|  
-|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Składnia zapytania, który definiuje zestaw operatorów zapytań, umożliwiające przechodzenie, filtrować i projekcji operacji wyrażane w sposób bezpośredni, deklaratywne w [!INCLUDE[csprcs](../../../../../includes/csprcs-md.md)] i [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)].<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
+|[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]|Składnia zapytania, który definiuje zestaw operatorów zapytań, umożliwiające przechodzenie, filtrować i projekcji operacji wyrażane w sposób bezpośredni, deklaratywne Visual C# i Visual Basic.<br /><br /> Aby uzyskać więcej informacji, zobacz [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md).|  
 |mapowanie|Specyfikacja korelacji między elementami w modelu koncepcyjnego i elementów w modelu magazynu.<br /><br /> Aby uzyskać więcej informacji, zobacz [specyfikacji MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
 |pliku MSL|Plik XML, który zawiera mapowania między modelu koncepcyjnego i modelu magazynu, wyrażone w pliku MSL.|  
 |mapping specification language (MSL)|Język opartych na języku XML, które jest używane do mapowania elementów zdefiniowanych w modelu koncepcyjnym do elementów w modelu magazynu.<br /><br /> Aby uzyskać więcej informacji, zobacz [specyfikacji MSL](../../../../../docs/framework/data/adonet/ef/language-reference/msl-specification.md).|  
@@ -64,7 +66,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |wiele zestawów jednostek na typ|Ustaw możliwości dla typu jednostki, należy zdefiniować w więcej niż jednej jednostki.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu obiektu EntitySet (CSDL)](http://msdn.microsoft.com/library/ec56db77-718d-4c0e-adc9-f1d33c896287) i [porady: Definiowanie Model zawierający wiele zestawów jednostek na typ](http://msdn.microsoft.com/library/61aa4fca-5ac0-4f47-9bc8-46e8c2965ef7).|  
 |Właściwość nawigacji|Właściwość typu jednostki, który reprezentuje relację do innego typu jednostki, zgodnie z definicją skojarzenia. Właściwości nawigacji są używane do zwrócenia powiązanych obiektów jako <xref:System.Data.Objects.DataClasses.EntityCollection%601> lub <xref:System.Data.Objects.DataClasses.EntityReference%601>w oparciu o liczebności na drugim końcu skojarzenia.<br /><br /> Aby uzyskać więcej informacji, zobacz [elementu NavigationProperty (CSDL)](http://msdn.microsoft.com/library/5829a238-a50e-4c81-901d-7b54fc00f27e) i [właściwość nawigacji](../../../../../docs/framework/data/adonet/navigation-property.md).|  
 |Ścieżka zapytania|Reprezentacja ciągu ścieżki Określa, które powiązanych obiektów zwracanych w przypadku obiektu zapytanie jest wykonywane. Ścieżka zapytania jest zdefiniowany przez wywołanie metody <xref:System.Data.Objects.ObjectQuery%601.Include%2A> metoda <xref:System.Data.Objects.ObjectQuery%601>.<br /><br /> Aby uzyskać więcej informacji, zobacz [ładowanie powiązanych obiektów](http://msdn.microsoft.com/library/452347d2-7b3b-44cd-9001-231299a28cb1).|  
-|Obiekt kontekstu|Reprezentuje kontenera jednostek zdefiniowanych w modelu koncepcyjnym. Zawiera połączenia źródła danych i udostępnia usługi, takie jak śledzenie zmian i rozpoznawania tożsamości. Roz Pobi obiektu jest reprezentowany przez wystąpienie <xref:System.Data.Objects.ObjectContext> lub `DbContext` klasy.<br /><br /> `DbContext`wchodzi w skład [Entity Framework w wersji 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework w wersji 5.0 nie jest częścią programu .NET Framework, ale jest oparty na programie .NET Framework 4.5. Entity Framework w wersji 5.0 jest dostępna jako ["Programu Entity Framework"](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pakietu. Aby uzyskać więcej informacji, zobacz [Entity Framework wersjach and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).|  
+|Obiekt kontekstu|Reprezentuje kontenera jednostek zdefiniowanych w modelu koncepcyjnym. Zawiera połączenia źródła danych i udostępnia usługi, takie jak śledzenie zmian i rozpoznawania tożsamości. Roz Pobi obiektu jest reprezentowany przez wystąpienie <xref:System.Data.Objects.ObjectContext> lub `DbContext` klasy.<br /><br /> `DbContext` wchodzi w skład [Entity Framework w wersji 5.0](http://go.microsoft.com/fwlink/?LinkId=234900). Entity Framework w wersji 5.0 nie jest częścią programu .NET Framework, ale jest oparty na programie .NET Framework 4.5. Entity Framework w wersji 5.0 jest dostępna jako ["Programu Entity Framework"](http://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](http://go.microsoft.com/fwlink/?LinkId=232488) pakietu. Aby uzyskać więcej informacji, zobacz [Entity Framework wersjach and Versioning](http://go.microsoft.com/fwlink/?LinkId=234899).|  
 |Warstwa obiektów|Typy jednostek i definicji kontekstu obiektów, które są używane przez program Entity Framework.|  
 |Zapytanie obiektu|Zapytanie wykonywane w kontekście obiektu względem modelu koncepcyjnego, która zwraca dane jako obiekty.<br /><br /> Aby uzyskać więcej informacji, zobacz [zapytań obiektu](http://msdn.microsoft.com/library/0768033c-876f-471d-85d5-264884349276).|  
 |mapowania obiektów relacyjnych|Technika przekształcać dane z relacyjnej bazy danych do typów danych, które mogą być używane w aplikacje zorientowane obiektowo.<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] Udostępnia usługi mapowania relacyjnego obiektu przez mapowanie danych relacyjnych, zgodnie z definicją w modelu magazynu do typów danych, zgodnie z definicją w modelu koncepcyjnym.<br /><br /> Aby uzyskać więcej informacji, zobacz [modelowania i mapowanie](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md).|  
@@ -84,7 +86,7 @@ W tym temacie opisano często określany w warunkach [!INCLUDE[adonet_ef](../../
 |Plik ssdl|Plik XML, który zawiera modelu magazynu, wyrażone w pliku SSDL.|  
 |store schema definition language (SSDL)|Ustawia języka opartych na języku XML, który służy do definiowania typów jednostek, skojarzenia, kontenerów jednostek, zestawów jednostek i skojarzenia modelu magazynu, umożliwiająca często schematu bazy danych.<br /><br /> Aby uzyskać więcej informacji, zobacz [specyfikacji pliku SSDL](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md).|  
 |Tabela na hierarchii|Metoda modelowania hierarchii typu w bazie danych, która zawiera atrybuty wszystkie typy w hierarchii w jednej tabeli.|  
-|table-per-type|Metoda modelowania hierarchii typów, w bazie danych, których używa wielu tabel o relacje jeden do jednego modelu różnych typów.|  
+|Typ na tabeli|Metoda modelowania hierarchii typów, w bazie danych, których używa wielu tabel o relacje jeden do jednego modelu różnych typów.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Program Entity Framework na platformie ADO.NET](../../../../../docs/framework/data/adonet/ef/index.md)  

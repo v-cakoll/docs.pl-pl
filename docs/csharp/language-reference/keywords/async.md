@@ -15,11 +15,11 @@ ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
 caps.latest.revision: 52
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 2ddbd0f7268dd5dae4095d661cf800b5b481cbbd
-ms.sourcegitcommit: 83dd5ec003e788ccb3e33f3412a7af39ae347646
+ms.openlocfilehash: 50b22ea94e8079e29c1e2ba2a595544ce23bd216
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="async-c-reference"></a>async (odwołanie w C#)
 Użyj `async` modyfikator, aby określić, że w metodzie [wyrażenia lambda](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md), lub [metody anonimowej](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md) jest asynchroniczne. Jeśli używasz modyfikator metody lub wyrażenie, jest ona określana jako *metody asynchronicznej*. W poniższym przykładzie zdefiniowano metody asynchronicznej o nazwie `ExampleMethodAsync`: 
@@ -76,7 +76,7 @@ Metoda asynchroniczna może mieć następujące typy zwracane:
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
 - [void](../../../csharp/language-reference/keywords/void.md), które należy używać tylko w przypadku procedury obsługi zdarzeń.
-- Począwszy od C# 7, dowolnego typu, który jest dostępny `GetAwaiter` metody. `System.Threading.Tasks.ValueTask<TResult>` Typ jest takie wdrożenie. Jest dostępna przez dodanie pakietu NuGet `System.Threading.Tasks.Extensions`. 
+- Począwszy od C# 7.0, dowolnego typu, który jest dostępny `GetAwaiter` metody. `System.Threading.Tasks.ValueTask<TResult>` Typ jest takie wdrożenie. Jest dostępna przez dodanie pakietu NuGet `System.Threading.Tasks.Extensions`. 
 
 Metoda asynchroniczna nie można zadeklarować żadnego [w](../../../csharp/language-reference/keywords/in-parameter-modifier.md), [ref](../../../csharp/language-reference/keywords/ref.md) lub [limit](../../../csharp/language-reference/keywords/out-parameter-modifier.md) parametry, ani nie może on mieć [odwołania do wartości zwracanej](../../programming-guide/classes-and-structs/ref-returns.md), ale może wywołać metody które mają takie parametry.  
   
@@ -84,7 +84,7 @@ Należy określić `Task<TResult>` jako zwracany typ metody asynchronicznej Jeś
   
 Możesz użyć `void` zwracany typ głównie w celu definiowania metod obsługi zdarzeń, wymagających, który typ zwracany. Element wywołujący `void`-zwracanie metoda asynchroniczna nie można zdefiniować oczekiwania go i nie można przechwytywać wyjątki, które metoda zgłasza.  
 
-Począwszy od C# 7, zwróć inny typ, zwykle typu wartości, która ma `GetAwaiter` metodę alokacji pamięci miminize w wydajności krytyczne fragmentów kodu. 
+Począwszy od wersji 7.0 C#, zwróć inny typ, zwykle typu wartości, która ma `GetAwaiter` metodę alokacji pamięci miminize w wydajności krytyczne fragmentów kodu. 
 
 Aby uzyskać dodatkowe informacje i przykłady, zobacz [Async zwracać typów](../../../csharp/programming-guide/concepts/async/async-return-types.md).  
   

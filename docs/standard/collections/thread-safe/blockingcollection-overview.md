@@ -1,12 +1,12 @@
 ---
-title: "BlockingCollection — Przegląd"
-ms.custom: 
+title: BlockingCollection — Przegląd
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,21 +14,21 @@ dev_langs:
 helpviewer_keywords:
 - BlockingCollection, overview
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
-caps.latest.revision: 
+caps.latest.revision: 12
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e2235c1a5bbe4a39cf029059290268faa5be154
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 74303f07134401193d07d3b5d584c9498f023d90
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection — Przegląd
-<xref:System.Collections.Concurrent.BlockingCollection%601>to klasa wątkowo kolekcji, która zapewnia następujące funkcje:  
+<xref:System.Collections.Concurrent.BlockingCollection%601> to klasa wątkowo kolekcji, która zapewnia następujące funkcje:  
   
 -   Implementacja wzorca producent — konsument.  
   
@@ -40,7 +40,7 @@ ms.lasthandoff: 12/23/2017
   
 -   Wstawianie i usuwanie "try" operacje nie należy blokować lub który zablokować maksymalnie w określonym przedziale czasu.  
   
--   Hermetyzuje wszystkie typ kolekcji implementujący<xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
+-   Hermetyzuje wszystkie typ kolekcji implementujący <xref:System.Collections.Concurrent.IProducerConsumerCollection%601>  
   
 -   Anulowanie z tokenami anulowania.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 12/23/2017
     2.  Wyliczenie, które powoduje usunięcie elementów, ponieważ są one wyliczone.  
   
 ## <a name="bounding-and-blocking-support"></a>Obsługa blokujących i ograniczających  
- <xref:System.Collections.Concurrent.BlockingCollection%601>obsługuje blokujących i ograniczających. Ograniczenia oznacza, że można ustawić maksymalną pojemność kolekcji. Ograniczenia jest ważne w niektórych scenariuszach, ponieważ pozwala kontrolować maksymalny rozmiar kolekcji w pamięci, i uniemożliwia tworzenie wątków przenoszenie zbyt daleko wcześniejsze odbierającą wątków.  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> obsługuje blokujących i ograniczających. Ograniczenia oznacza, że można ustawić maksymalną pojemność kolekcji. Ograniczenia jest ważne w niektórych scenariuszach, ponieważ pozwala kontrolować maksymalny rozmiar kolekcji w pamięci, i uniemożliwia tworzenie wątków przenoszenie zbyt daleko wcześniejsze odbierającą wątków.  
   
  Wiele wątków lub zadań można dodać elementy do kolekcji jednocześnie, a jeśli kolekcji osiągnie określony maksymalną pojemność, Tworzenie wątków zablokuje do momentu usunięcia elementu. Wielu klientów może jednocześnie usunąć elementy, a jeśli kolekcja jest pusta, odbierającą wątków zablokuje dopóki producent dodaje element. Tworzenie wątków można wywołać <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A> aby wskazać, że ma więcej elementów zostaną dodane. Monitor konsumentów <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> właściwość, aby dowiedzieć się, gdy kolekcja jest pusta i ma więcej elementów zostanie dodany. W poniższym przykładzie przedstawiono prosty kolekcji BlockingCollection o ograniczonej pojemności 100. Zadanie producent dodaje elementów do kolekcji, tak długo, jak niektóre zewnętrznych warunek jest spełniony, a następnie wywołuje <xref:System.Collections.Concurrent.BlockingCollection%601.CompleteAdding%2A>. Zadanie konsumenta trwa elementów do <xref:System.Collections.Concurrent.BlockingCollection%601.IsCompleted%2A> właściwość ma wartość true.  
   
@@ -85,7 +85,7 @@ BlockingCollection<string> bc = new BlockingCollection<string>(new ConcurrentBag
  Aby uzyskać więcej informacji, zobacz [porady: Dodawanie ograniczenia i funkcji blokowania w kolekcji](../../../../docs/standard/collections/thread-safe/how-to-add-bounding-and-blocking.md).  
   
 ## <a name="ienumerable-support"></a>Obsługa interfejsu IEnumerable  
- <xref:System.Collections.Concurrent.BlockingCollection%601>udostępnia <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> metodę, która umożliwia klientom korzystać `foreach` (`For Each` w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]) na usuwanie elementów do czasu ukończenia kolekcji, co oznacza, że jest pusty i ma więcej elementów zostanie dodany. Aby uzyskać więcej informacji, zobacz [porady: użycie ForEach do usuwanie elementów blockingcollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
+ <xref:System.Collections.Concurrent.BlockingCollection%601> udostępnia <xref:System.Collections.Concurrent.BlockingCollection%601.GetConsumingEnumerable%2A> metodę, która umożliwia klientom korzystać `foreach` (`For Each` w języku Visual Basic) na usuwanie elementów do czasu ukończenia kolekcji, co oznacza, że jest pusty i ma więcej elementów zostanie dodany. Aby uzyskać więcej informacji, zobacz [porady: użycie ForEach do usuwanie elementów blockingcollection](../../../../docs/standard/collections/thread-safe/how-to-use-foreach-to-remove.md).  
   
 ## <a name="using-many-blockingcollections-as-one"></a>Przy użyciu wielu BlockingCollections wśród  
  W scenariuszach, w których klient musi jednocześnie pobieranie elementów z wielu kolekcji, można utworzyć tablic <xref:System.Collections.Concurrent.BlockingCollection%601> i użyj metody statyczne, takiego jak <xref:System.Collections.Concurrent.BlockingCollection%601.TakeFromAny%2A> i <xref:System.Collections.Concurrent.BlockingCollection%601.AddToAny%2A> którego dodawanie do lub wykonać z dowolnego z kolekcji w programie Tablica. Jeśli blokuje jednej kolekcji, metoda natychmiast próbuje innego dopóki nie zostanie znaleziony taki, który można wykonać operacji. Aby uzyskać więcej informacji, zobacz [porady: Użycie tablic blokowanie kolekcji w potoku](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md).  

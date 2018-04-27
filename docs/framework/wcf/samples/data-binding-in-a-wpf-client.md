@@ -1,27 +1,29 @@
 ---
-title: "Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)"
-ms.custom: 
+title: Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55e60aaba0ebba57668f91d692ce774bd0ef0115
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d10591866e11bd9e5ae707a0c17c3e293d7f4f71
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Powiązywanie danych w kliencie WPF (Windows Presentation Foundation)
-W tym przykładzie przedstawiono używanie powiązania danych w kliencie systemu Windows Presentation Foundation (WPF). W przykładzie użyto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi losowo generuje tablicę albumów do zwrócenia do klienta. Każdego albumu ma nazwę, ceny i listy ścieżek albumu. Śledzi albumu ma nazwę i czas trwania. Informacje, które są zwracane przez usługę automatycznie jest powiązany z dostarczonych przez interfejs użytkownika (UI) [!INCLUDE[avalon1](../../../../includes/avalon1-md.md)] klienta.  
+W tym przykładzie przedstawiono używanie powiązania danych w kliencie systemu Windows Presentation Foundation (WPF). W przykładzie użyto [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi losowo generuje tablicę albumów do zwrócenia do klienta. Każdego albumu ma nazwę, ceny i listy ścieżek albumu. Śledzi albumu ma nazwę i czas trwania. Informacje, które są zwracane przez usługę automatycznie jest powiązana z dostarczonym przez klienta Windows Presentation Foundation (WPF) interfejsu użytkownika (UI).  
   
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  

@@ -1,22 +1,23 @@
 ---
-title: "Porady: subskrybowanie i anulowanie subskrypcji zdarzeń (Przewodnik programowania w języku C#)"
+title: 'Porady: subskrybowanie i anulowanie subskrypcji zdarzeń (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - event handlers [C#], creating
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5555cc8913bff953601c54aa7430143dc22173c0
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.openlocfilehash: ecb65a2156f83d9da722329ff6159bb08e464eaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>Porady: subskrybowanie i anulowanie subskrypcji zdarzeń (Przewodnik programowania w języku C#)
 Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia pisanie kodu niestandardowego, który jest wywoływany, gdy zdarzenie jest wywoływane. Na przykład może subskrybować przycisk `click` zdarzeń, aby zwiększyć bezpieczeństwo aplikacji Zrób coś, które są przydatne, gdy użytkownik kliknie przycisk.  
@@ -29,7 +30,7 @@ Subskrybować zdarzenia, które są publikowane przez inną klasę, umożliwia p
   
 3.  Kliknij dwukrotnie zdarzenie, które chcesz utworzyć, na przykład `Load` zdarzeń.  
   
-     [!INCLUDE[csprcs](~/includes/csprcs-md.md)]Tworzy metoda obsługi zdarzeń pusty i dodaje go do kodu. Alternatywnie można dodać ręcznie w kodzie **kod** widoku. Na przykład następujące wiersze kodu zadeklarować metoda obsługi zdarzeń, która zostanie wywołana podczas `Form` klasy zgłasza `Load` zdarzeń.  
+     Visual C# tworzy metoda obsługi zdarzeń pusty i dodaje go do kodu. Alternatywnie można dodać ręcznie w kodzie **kod** widoku. Na przykład następujące wiersze kodu zadeklarować metoda obsługi zdarzeń, która zostanie wywołana podczas `Form` klasy zgłasza `Load` zdarzeń.  
   
      [!code-csharp[csProgGuideEvents#11](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-subscribe-to-and-unsubscribe-from-events_1.cs)]  
   

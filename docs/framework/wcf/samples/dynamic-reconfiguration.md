@@ -1,24 +1,26 @@
 ---
 title: Dynamiczna ponowna konfiguracja
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b20786ae-cce6-4f91-b6cb-9cae116faf8b
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: cbf286891211da0e35274ff59f3bee69ebf3c9bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 36b548ee47ed9165743bbfb1eaab5cf3bbe82bd2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dynamic-reconfiguration"></a>Dynamiczna ponowna konfiguracja
 W przykładzie pokazano [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi routingu. Usługa routingu jest [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] składnik, który ułatwia obejmują routerem na podstawie zawartości w aplikacji. W tym przykładzie dostosowuje standardowego [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] próbki Kalkulator do komunikowania się przy użyciu usługi routingu. W tym przykładzie pokazano, jak usługa routingu można dynamicznie tak skonfigurować, w czasie wykonywania.  
@@ -43,7 +45,7 @@ W przykładzie pokazano [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] 
   
 2.  Aby otworzyć **Eksploratora rozwiązań**, wybierz pozycję **Eksploratora rozwiązań** z **widoku** menu.  
   
-3.  Naciśnij klawisz **F5** lub **CTRL + SHIFT + B** w [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+3.  Naciśnij klawisz **F5** lub **CTRL + SHIFT + B** w programie Visual Studio.  
   
     1.  Jeśli chcesz automatyczne uruchamianie niezbędne projektów po naciśnięciu **F5**, kliknij prawym przyciskiem myszy rozwiązanie i wybierz **właściwości**. Wybierz **projekt startowy** węźle **wspólne właściwości** w okienku po lewej stronie. Wybierz **wiele projektów startowych** przycisk radiowy i ustaw wszystkie projekty, które mają **Start** akcji.  
   

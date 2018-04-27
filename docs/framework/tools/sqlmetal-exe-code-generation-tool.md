@@ -1,12 +1,13 @@
 ---
-title: "SqlMetal.exe (Narzędzie generowania kodu)"
-ms.custom: 
+title: SqlMetal.exe (Narzędzie generowania kodu)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SQLMetal [LINQ to SQL]
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-caps.latest.revision: "43"
+caps.latest.revision: 43
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c14c01c670eccbc7f13210d3c0bb7df7bec07679
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5c21c08cf76143959d11498594fbc94fb1dac55c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (Narzędzie generowania kodu)
 Narzędzie wiersza polecenia SqlMetal generuje kod i mapowania dla [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] składnika [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Stosując opisane w dalszej części tego tematu opcje, można za pomocą programu SqlMetal wykonać kilka różnych akcji, takich jak:  
@@ -103,13 +105,13 @@ sqlmetal [options] [<input file>]
   
 -   Wygenerowanie pliku wyjściowego z kodem.  
   
-     Za pomocą odpowiednich opcji wiersza polecenia, można utworzyć [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] lub kodu źródłowego C#, lub można utworzyć mapowania pliku XML.  
+     Za pomocą odpowiednich opcji wiersza polecenia, można utworzyć kodu źródłowego języka Visual Basic lub C#, lub można utworzyć mapowania pliku XML.  
   
  Aby wyodrębnić metadane z pliku mdf, należy określić nazwę pliku mdf po wszystkich innych opcjach.  
   
  Jeśli nie **/Server** jest określony, **localhost/sqlexpress** zakłada, że.  
   
- [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)]zgłasza wyjątek, jeśli spełnione są co najmniej jeden z następujących warunków:  
+ [!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] zgłasza wyjątek, jeśli spełnione są co najmniej jeden z następujących warunków:  
   
 -   Program SqlMetal próbuje wyodrębnić procedurę składowaną, którą sam wywołuje.  
   

@@ -16,18 +16,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-caps.latest.revision: ''
+caps.latest.revision: 79
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c54a5ec9cdbfd73bccd8f70befcfcff7cf8aac2d
-ms.sourcegitcommit: 6f967c86dde55472440f0c8669b0e910ee3c53ba
+ms.openlocfilehash: 51c16e8c1cd031e4f2b8a207c8d288b7691e7a84
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="custom-date-and-time-format-strings"></a>Niestandardowe ciągi formatujące datę i godzinę
 Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość będącą wynikiem operacji formatowania. Może także definiować reprezentację wartości daty i godziny, która jest wymagana w operacji analizowania składni w celu pomyślnego przekonwertowania ciągu na datę i godzinę. Ciąg formatu niestandardowego składa się z co najmniej jednego specyfikatora niestandardowego formatu daty i godziny. Dowolny ciąg, który nie jest [standardowa Data i godzina ciąg formatu](../../../docs/standard/base-types/standard-date-and-time-format-strings.md) jest interpretowana jako niestandardowa data i godzina ciąg formatu.  
@@ -35,7 +35,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
  Niestandardowa data i ciągi formatu czasu może być używany z obu <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.  
   
 > [!TIP]
->  Możesz pobrać [formatowania narzędzie](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikacji, która umożliwia zastosowanie formatu ciągi do daty i godziny lub wartości liczbowe i wyświetla ciąg wyniku.  
+>  Możesz pobrać [formatowania narzędzie](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d), aplikacji, która umożliwia zastosowanie formatu ciągi do daty i godziny lub wartości liczbowe i wyświetla ciąg wyniku.  
   
 <a name="table"></a> W operacji formatowania, niestandardowe ciągi daty i godziny format może być używany z `ToString` metody wystąpienia datę i godzinę lub za pomocą metody, która obsługuje złożone formatowanie. W poniższym przykładzie pokazano oba te zastosowania.  
   
@@ -52,7 +52,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 |Specyfikator formatu|Opis|Przykłady|  
 |----------------------|-----------------|--------------|  
 |„d”|Dzień miesiąca z zakresu od 1 do 31.<br /><br /> Więcej informacji: ["D" specyfikatora formatu niestandardowego](#dSpecifier).|2009-06-01T13:45:30 -> 1<br /><br /> 2009-06-15T13:45:30 -&GT; 15|  
-|„dd”|Dzień miesiąca z zakresu od 01 do 31.<br /><br /> Więcej informacji: ["Dd" specyfikatora formatu niestandardowego](#ddSpecifier).|2009-06-01T13:45:30 -> 01<br /><br /> 2009-06-15T13:45:30 -&GT; 15|  
+|„dd”|Dzień miesiąca z zakresu od 01 do 31.<br /><br /> Więcej informacji: ["Dd" specyfikatora formatu niestandardowego](#ddSpecifier).|2009-06-01 -&GT; 01T13:45:30<br /><br /> 2009-06-15T13:45:30 -&GT; 15|  
 |„ddd”|Skrócona nazwa dnia tygodnia.<br /><br /> Więcej informacji: ["Ddd" specyfikatora formatu niestandardowego](#dddSpecifier).|2009-06-15T13:45:30 -> Mon (en US)<br /><br /> 2009-06-15T13:45:30 -> Пн (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> jednostki lun. (fr-FR)|  
 |„dddd”|Pełna nazwa dnia tygodnia.<br /><br /> Więcej informacji: ["Dddd" specyfikatora formatu niestandardowego](#ddddSpecifier).|2009-06-15T13:45:30 -> poniedziałek (en US)<br /><br /> 2009-06-15T13:45:30 -> понедельник (ru-RU)<br /><br /> 2009-06-15T13:45:30 -> lundi (fr-FR)|  
 |„f”|Liczba dziesiątych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: ["F" specyfikatora formatu niestandardowego](#fSpecifier).|2009-06-15T13:45:30.6170000 -&GT; 6<br /><br /> 2009-06-0 -&GT; 15T13:45:30.05|  
@@ -69,7 +69,7 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
 |„FFFFF”|Jeśli wartość jest różna od zera, liczba stutysięcznych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFF"](#FFFFF_Specifier).|2009-06-15T13:45:30.6175400 -&GT; 61754<br /><br /> 2009-06-15T13:45:30.0000050 -> (żadne dane wyjściowe)|  
 |„FFFFFF”|Jeśli wartość jest różna od zera, liczba milionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFF"](#FFFFFF_Specifier).|2009-06-15T13:45:30.6175420 -&GT; 617542<br /><br /> 2009-06-15T13:45:30.0000005 -> (żadne dane wyjściowe)|  
 |„FFFFFFF”|Jeśli wartość jest różna od zera, liczba dziesięciomilionowych części sekundy w wartości daty i godziny.<br /><br /> Więcej informacji: [specyfikator formatu niestandardowego "FFFFFFF"](#FFFFFFF_Specifier).|2009-06-15T13:45:30.6175425 -&GT; 6175425<br /><br /> 2009-06-15T13:45:30.0001150 -&GT; 000115|  
-|„g”, „gg”|Okres lub era.<br /><br /> Więcej informacji: ["g" lub "gg" specyfikatora formatu niestandardowego](#gSpecifier).|2009-06-15T13:45:30.6170000 -> A.D.|  
+|„g”, „gg”|Okres lub era.<br /><br /> Więcej informacji: ["g" lub "gg" specyfikatora formatu niestandardowego](#gSpecifier).|2009-06-15T13:45:30.6170000 -&GT; R.|  
 |„h”|Godzina; używany jest zegar 12-godzinny (wartości od 1 do 12).<br /><br /> Więcej informacji: ["H" specyfikatora formatu niestandardowego](#hSpecifier).|2009-06-1 -&GT; 15T01:45:30<br /><br /> 2009-06-1 -&GT; 15T13:45:30|  
 |„hh”|Godzina; używany jest zegar 12-godzinny (wartości od 01 do 12).<br /><br /> Więcej informacji: ["Hh" specyfikatora formatu niestandardowego](#hhSpecifier).|2009-06-01 -&GT; 15T01:45:30<br /><br /> 2009-06-01 -&GT; 15T13:45:30|  
 |„H”|Godzina, 24-godzinnym z zakresu od 0 do 23.<br /><br /> Więcej informacji: [specyfikator formatu "H" Custom](#H_Specifier).|2009-06-1 -&GT; 15T01:45:30<br /><br /> 2009-06-15T13:45:30 -&GT; 13|  
@@ -702,4 +702,4 @@ Ciąg formatu daty i godziny definiuje Reprezentacja tekstowa typu <xref:System.
  <xref:System.IFormatProvider?displayProperty=nameWithType>  
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Standardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)  
- [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Przykład: .NET Framework 4 formatowania narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

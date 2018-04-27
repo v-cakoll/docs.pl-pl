@@ -1,7 +1,7 @@
 ---
-title: "Niezależność od języka i elementy niezależne od języka"
-description: "Dowiedz się, jak można tworzyć w jednym z wielu języków w programie .NET, takich jak C#, C + +/ CLI, F # IronPython, VB, Visual COBOL i programu PowerShell."
-keywords: .NET, .NET core
+title: Niezależność od języka i elementy niezależne od języka
+description: 'Dowiedz się, jak można tworzyć w jednym z wielu języków w programie .NET, takich jak C#, C + +/ CLI, F # IronPython, VB, Visual COBOL i programu PowerShell.'
+keywords: .NET, .NET Core
 author: dotnet-bot
 ms.author: dotnetcontent
 ms.date: 07/22/2016
@@ -16,11 +16,11 @@ ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0a7a37b1c8eed81866035dc6fb55db89391f25aa
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 2745bc67c926f50c28f5fdfb122ee94a85f020ec
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="language-independence-and-language-independent-components"></a>Niezależność od języka i elementy niezależne od języka
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 12/23/2017
 > [!NOTE]
 > To pierwsza część w tym artykule omówiono tworzenie niezależny od języka składników — czyli składników, które mogą być używane przez aplikacje, które są zapisywane w dowolnym języku. Można również utworzyć pojedynczy składnik lub aplikacji z kodu źródłowego w wielu językach; zobacz [współdziałanie między językami](#cross-language-interoperability) w drugiej części tego artykułu. 
 
-Pełni interakcję z innymi obiektami w dowolnym języku, obiektów musi ujawniać dotyczące obiektów wywołujących te funkcje, które są wspólne dla wszystkich języków. Ten zestaw typowych funkcji jest zdefiniowany przez wspólnej specyfikacji języka (CLS), który jest zestaw reguł stosowanych do zestawów wygenerowanych. Specyfikacja języka wspólnego jest zdefiniowany w partycji I klauzule 7 do 11 [ECMA-335 standardowe: wspólną infrastrukturę języka](http://www.ecma-international.org/publications/standards/Ecma-335.htm). 
+Pełni interakcję z innymi obiektami w dowolnym języku, obiektów musi ujawniać dotyczące obiektów wywołujących te funkcje, które są wspólne dla wszystkich języków. Ten zestaw typowych funkcji jest zdefiniowany przez wspólnej specyfikacji języka (CLS), który jest zestaw reguł stosowanych do zestawów wygenerowanych. Specyfikacja języka wspólnego jest zdefiniowany w partycji I klauzule 7 do 11 [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm). 
 
 Jeśli składnik spełnia specyfikacja języka wspólnego, może być zgodne ze specyfikacją CLS i są dostępne z kodu w zestawach napisane w języku programowania, który obsługuje ze specyfikacją CLS. Można określić, czy składnik jest zgodny ze specyfikacja języka wspólnego w czasie kompilacji, stosując [CLSCompliantAttribute](xref:System.CLSCompliantAttribute) atrybutu do kodu źródłowego. Aby uzyskać więcej informacji, zobacz [atrybut CLSCompliantAttribute](#the-clscompliantattribute-attribute).
 
@@ -73,7 +73,7 @@ W tym artykule:
 
 ## <a name="cls-compliance-rules"></a>Zasady zgodności ze specyfikacją CLS
 
-W tej sekcji omówiono reguł do tworzenia składnika zgodne ze specyfikacją CLS. Pełną listę zasad, zobacz partycji I 11 klauzuli [ECMA-335 standardowe: wspólną infrastrukturę języka](http://www.ecma-international.org/publications/standards/Ecma-335.htm).
+W tej sekcji omówiono reguł do tworzenia składnika zgodne ze specyfikacją CLS. Pełną listę zasad, zobacz partycji I 11 klauzuli [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm).
 
 > [!NOTE]
 > Specyfikacja języka wspólnego omówiono każdej reguły zgodności ze specyfikacją CLS, zastosowanie w przypadku użytkowników (deweloperów, którzy są uzyskiwania dostępu do składnika, który jest zgodny ze specyfikacją CLS), platformy (deweloperów, którzy korzystają z kompilatora języka Aby utworzyć CLS-compliant biblioteki) i rozszerzeń (deweloperów, którzy tworzą narzędzia, takiego jak kompilatora języka lub analizator kodu tworzącego składniki zgodne ze specyfikacją CLS). Ten artykuł dotyczy reguł odnoszących się do struktur. Należy pamiętać, że niektóre reguły, które dotyczą Extender mogą również dotyczyć zestawy, które są tworzone przy użyciu [Reflection.Emit](xref:System.Reflection.Emit). 
@@ -158,7 +158,7 @@ Interfejs publiczny biblioteki składa się z następujących czynności:
 
 * Parametry i zwracane typy metod publicznych klas publicznych i parametrów i zwracanych typów metod dostępne dla klas pochodnych. 
 
-W poniższej tabeli wymieniono zasady zgodności ze specyfikacją CLS. Tekst reguły jest zajęta dosłownego wyrażenia z [ECMA-335 standardowe: wspólną infrastrukturę języka](http://www.ecma-international.org/publications/standards/Ecma-335.htm), czyli Copyright 2012 międzynarodowej Ecma. W poniższych sekcjach znajduje się bardziej szczegółowe informacje o tych reguł. 
+W poniższej tabeli wymieniono zasady zgodności ze specyfikacją CLS. Tekst reguły jest zajęta dosłownego wyrażenia z [ECMA-335 standardowe: wspólną infrastrukturę języka](https://www.ecma-international.org/publications/standards/Ecma-335.htm), czyli Copyright 2012 międzynarodowej Ecma. W poniższych sekcjach znajduje się bardziej szczegółowe informacje o tych reguł. 
 
 Kategoria | Zobacz | Reguła | Numer reguły
 -------- | --- | ---- | -----------
@@ -326,14 +326,14 @@ Wszystkie typy, które pojawiają się w podpisach elementu członkowskiego, w t
 
 Typie zgodnym ze specyfikacją CLS | Opis
 ------------------ | -----------
-[Bajtów](xref:System.Byte) | 8-bitową liczbę całkowitą bez znaku 
+[Byte](xref:System.Byte) | 8-bitową liczbę całkowitą bez znaku 
 [Int16](xref:System.Int16) | 16-bitową liczbę całkowitą ze znakiem 
 [Int32](xref:System.Int32) | 32-bitowej liczby całkowitej ze znakiem 
 [Int64](xref:System.Int64) | 64-bitowej liczby całkowitej ze znakiem
 [Pojedynczy](xref:System.Single) | Wartość zmiennoprzecinkową o pojedynczej dokładności
-[O podwójnej precyzji](xref:System.Double) | Wartość zmiennoprzecinkową podwójnej precyzji
-[Wartość logiczna](xref:System.Boolean) | Typ wartości PRAWDA lub FAŁSZ 
-[Char](xref:System.Char) | Jednostka zakodowanego kodu UTF-16
+[Double](xref:System.Double) | Wartość zmiennoprzecinkową podwójnej precyzji
+[Boolean](xref:System.Boolean) | Typ wartości PRAWDA lub FAŁSZ 
+[char](xref:System.Char) | Jednostka zakodowanego kodu UTF-16
 [Decimal](xref:System.Decimal) | Liczba dziesiętna non--zmiennoprzecinkowych
 [IntPtr](xref:System.IntPtr) | Wskaźnika lub dojścia o rozmiarze określone platformy
 [Ciąg](xref:System.String) | Kolekcja zero, co najmniej jeden obiekt Char 
@@ -343,7 +343,7 @@ Typy wewnętrzne wymienione w poniższej tabeli nie są zgodne ze specyfikacją 
 
 Niezgodny typ | Opis | Alternatywnym, zgodnym ze specyfikacją CLS
 ------------------ | ----------- | -------------------------
-[Sbyte —](xref:System.SByte) | Typ danych 8-bitową liczbę całkowitą ze znakiem | [Int16](xref:System.Int16)
+[SByte](xref:System.SByte) | Typ danych 8-bitową liczbę całkowitą ze znakiem | [Int16](xref:System.Int16)
 [UInt16](xref:System.UInt16) | 16-bitową liczbę całkowitą bez znaku | [Int32](xref:System.Int32)
 [UInt32](xref:System.UInt32) | 32-bitowa liczba całkowita bez znaku | [Int64](xref:System.Int64)
 [UInt64 —](xref:System.UInt64) | 64-bitowej liczby całkowitej bez znaku | [Int64](xref:System.Int64) (może przepełnienie), [BigInteger](xref:System.Numerics.BigInteger), lub [podwójne](xref:System.Double)
@@ -617,7 +617,7 @@ public class person
 //    Naming1.cs(6,14): (Location of symbol related to previous warning)
 ```
 
-Programowanie identyfikatorów języka, takich jak nazwy przestrzeni nazw, typów i członków, musi być zgodna z [Unicode Standard 3.0, techniczne 15 raportu, załącznik 7](http://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:
+Programowanie identyfikatorów języka, takich jak nazwy przestrzeni nazw, typów i członków, musi być zgodna z [Unicode Standard 3.0, techniczne 15 raportu, załącznik 7](https://www.unicode.org/reports/tr15/tr15-18.html). Oznacza to, że:
 
 * Pierwszy znak identyfikatora mogą być dowolnej Unicode wielkie litery, małe litery, tytuł wielkość list, litera modyfikatora, innego litery lub list numer. Aby uzyskać informacje na kategorie znaków Unicode, zobacz [System.Globalization.UnicodeCategory](xref:System.Globalization.UnicodeCategory) wyliczenia. 
 
@@ -1630,7 +1630,7 @@ End Module
 '       Outer`1+Inner1B`1[System.String,System.Int32]
 ```
 
-Nazwy typów ogólnych są zakodowane w postaci *nazwa*"*n*, gdzie *nazwa* jest nazwą typu  *`*  jest literał znaku i  *n*  jest liczba parametrów zadeklarowana w typie lub dla zagnieżdżone ogólnych typów, liczba parametrów typu nowo wprowadzonych. To kodowanie nazwy typu ogólnego jest głównie deweloperom, którzy zgodne ze specyfikacją CLS typy ogólne w bibliotece dostęp do za pomocą odbicia. 
+Nazwy typu ogólnego są zakodowane w postaci *nazwa*"*n*, gdzie *nazwa* jest nazwą typu *`* jest literałem, znak i *n* jest liczba parametrów zadeklarowana w typie lub dla zagnieżdżone ogólnych typów, liczba parametrów typu nowo wprowadzonych. To kodowanie nazwy typu ogólnego jest głównie deweloperom, którzy zgodne ze specyfikacją CLS typy ogólne w bibliotece dostęp do za pomocą odbicia. 
 
 Jeśli ograniczenia są stosowane do ogólnego typu żadnych typów, używany jako ograniczenia również musi być zgodne ze specyfikacją CLS. W poniższym przykładzie zdefiniowano klasę o nazwie `BaseClass` czyli nie zgodne ze specyfikacją CLS i rodzajowy klasę o nazwie `BaseCollection` których parametru typu muszą pochodzić od `BaseClass`. Jednak ponieważ `BaseClass` nie jest zgodny z CLS, kompilator emituje ostrzeżenie. 
 
@@ -1862,7 +1862,7 @@ End Class
 
 Specyfikacja języka wspólnego nakłada model wystąpienia zachowawcze zagnieżdżone typy i chronione elementy członkowskie. Otwórz typy ogólne nie może ujawnić pól lub elementy członkowskie o podpisy zawierające konkretnego wystąpienia typu ogólnego zagnieżdżone, chronionych. Inne niż ogólne typy, które rozszerzają konkretnego wystąpienia metody rodzajowe klasy podstawowej lub interfejsu nie może ujawnić pól lub elementy członkowskie o podpisy zawierające inną podczas tworzenia wystąpienia typu ogólnego zagnieżdżone, chronionych.
 
-W poniższym przykładzie zdefiniowano typu ogólnego, `C1<T>`i Klasa chroniona, `C1<T>.N`. `C1<T>`ma dwie metody `M1` i `M2`. Jednak `M1` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` obiekt z `C1<T>`. W drugiej klasy `C2`, jest określana na podstawie `C1<long>`. Składa się z dwóch metod `M3` i `M4`. `M3`nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` obiektu z podklasą `C1<long>`. Należy pamiętać, że Kompilatory języka można jeszcze bardziej restrykcyjne. W tym przykładzie Visual Basic jest wyświetlany błąd przy próbie skompilować `M4`. 
+W poniższym przykładzie zdefiniowano typu ogólnego, `C1<T>`i Klasa chroniona, `C1<T>.N`. `C1<T>` ma dwie metody `M1` i `M2`. Jednak `M1` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` obiekt z `C1<T>`. W drugiej klasy `C2`, jest określana na podstawie `C1<long>`. Składa się z dwóch metod `M3` i `M4`. `M3` nie jest zgodne ze specyfikacją CLS, ponieważ próbuje przywrócić `C1<int>.N` obiektu z podklasą `C1<long>`. Należy pamiętać, że Kompilatory języka można jeszcze bardziej restrykcyjne. W tym przykładzie Visual Basic jest wyświetlany błąd przy próbie skompilować `M4`. 
 
 ```csharp
 using System;
@@ -2578,13 +2578,13 @@ End Structure
 
 Konstruktor lub właściwości atrybutu zgodne ze specyfikacją CLS mogą uwidaczniać tylko następujących typów:
 
-* [Wartość logiczna](xref:System.Boolean)
+* [Boolean](xref:System.Boolean)
 
-* [Bajtów](xref:System.Byte)
+* [Byte](xref:System.Byte)
 
-* [Char](xref:System.Char)
+* [char](xref:System.Char)
 
-* [O podwójnej precyzji](xref:System.Double)
+* [Double](xref:System.Double)
 
 * [Int16](xref:System.Int16)
 

@@ -1,24 +1,26 @@
 ---
-title: "Rozwiązywanie problemów"
-ms.custom: 
+title: Rozwiązywanie problemów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 56d06fa7adf2690a2cb9194342071c7814a4ec4a
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5544540c6a27975a885bf4cd8b2e0a26183e192b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting"></a>Rozwiązywanie problemów
 Poniższe informacje ujawnia niektóre problemy, które mogą wystąpić w Twojej [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji i zawiera propozycje, aby uniknąć lub w przeciwnym razie ograniczenia wpływu tych problemów.  
@@ -26,7 +28,7 @@ Poniższe informacje ujawnia niektóre problemy, które mogą wystąpić w Twoje
  Dodatkowe problemy zostały rozwiązane w [— często zadawane pytania](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md).  
   
 ## <a name="unsupported-standard-query-operators"></a>Nieobsługiwany standardowych operatorów zapytań  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje wszystkich metod operator standardowego zapytania (na przykład <xref:System.Linq.Enumerable.ElementAt%2A>). W związku z tym projekty kompilowane nadal może spowodować błędy środowiska wykonawczego. Aby uzyskać więcej informacji, zobacz [standardowe Translacja Operator zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje wszystkich metod operator standardowego zapytania (na przykład <xref:System.Linq.Enumerable.ElementAt%2A>). W związku z tym projekty kompilowane nadal może spowodować błędy środowiska wykonawczego. Aby uzyskać więcej informacji, zobacz [standardowe Translacja Operator zapytania](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md).  
   
 ## <a name="memory-issues"></a>Problemy z pamięcią  
  Jeśli zapytanie obejmuje kolekcji w pamięci i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>, może być można wykonać zapytania w pamięci, w zależności od kolejności, w którym określono dwie kolekcje. Jeśli zapytanie musi zostać wykonana w pamięci, następnie danych z tabeli bazy danych należy do pobrania.  
@@ -37,10 +39,10 @@ Poniższe informacje ujawnia niektóre problemy, które mogą wystąpić w Twoje
  Aby określić nazwę pliku wejściowego, należy dodać ją do wiersza polecenia jako plik wejściowy. Łącznie z nazwą pliku w ciągu połączenia (przy użyciu **/conn** opcji) nie jest obsługiwana. Aby uzyskać więcej informacji, zobacz [SqlMetal.exe (narzędzie generowania kodu)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md).  
   
 ## <a name="class-library-projects"></a>Projektów biblioteki klas  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Tworzy ciąg połączenia w `app.config` pliku projektu. W projektach biblioteki klas `app.config` plik nie jest używany. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]używany w plikach czasu projektowania w podanym ciągu połączenia. Zmiana wartości w `app.config` nie powoduje zmiany bazy danych, do której aplikacja nawiązuje połączenie.  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Tworzy ciąg połączenia w `app.config` pliku projektu. W projektach biblioteki klas `app.config` plik nie jest używany. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używany w plikach czasu projektowania w podanym ciągu połączenia. Zmiana wartości w `app.config` nie powoduje zmiany bazy danych, do której aplikacja nawiązuje połączenie.  
   
 ## <a name="cascade-delete"></a>Usuwanie kaskadowe  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje ani nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersza w tabeli, która ma ograniczenia na nim, należy wykonać jedną z następujących czynności:  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje ani nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersza w tabeli, która ma ograniczenia na nim, należy wykonać jedną z następujących czynności:  
   
 -   Ustaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych.  
   
@@ -57,7 +59,7 @@ Poniższe informacje ujawnia niektóre problemy, które mogą wystąpić w Twoje
   
 -   Zawierają odwołanie do `System.Core.dll` i `System.Data.Linq.dll`.  
   
--   Masz `Imports` ([!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) lub `using` — dyrektywa (C#) dla <xref:System.Linq> i <xref:System.Data.Linq>.  
+-   Masz `Imports` (Visual Basic) lub `using` — dyrektywa (C#) dla <xref:System.Linq> i <xref:System.Data.Linq>.  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  W trakcie debugowania [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu, może przejść przez relacjami jednostek. To powoduje przeniesienie tych elementów do pamięci podręcznej, i [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] uzyska informacje o ich obecności. Jeśli użytkownik spróbuje wykonać <xref:System.Data.Linq.Table%601.Attach%2A> lub <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> lub podobnej metody tworzącego wiele wierszy, które mają ten sam klucz <xref:System.Data.Linq.DuplicateKeyException> jest generowany.  

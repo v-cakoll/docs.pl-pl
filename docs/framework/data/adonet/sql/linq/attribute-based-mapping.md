@@ -1,31 +1,33 @@
 ---
 title: Mapowanie opartych na atrybutach
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a7a66b165e5bcfc605842b96295ae1721e7b3af5
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 49969af962db9fb533ad316622af42104438be7d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="attribute-based-mapping"></a>Mapowanie opartych na atrybutach
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapuje bazy danych programu SQL Server do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektu albo stosowanie atrybutów lub przy użyciu pliku mapowania zewnętrznych. W tym temacie przedstawiono podejście opartych na atrybutach.  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje bazy danych programu SQL Server do [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] modelu obiektu albo stosowanie atrybutów lub przy użyciu pliku mapowania zewnętrznych. W tym temacie przedstawiono podejście opartych na atrybutach.  
   
  W postaci najbardziej podstawowym [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapy bazę danych do <xref:System.Data.Linq.DataContext>, tabeli, klasy i kolumn oraz relacji z właściwości dla tych klas. Umożliwia także atrybuty do mapowania hierarchii dziedziczenia w modelu obiektu. Aby uzyskać więcej informacji, zobacz [porady: Generowanie modelu obiektów w Visual Basic lub C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
- Deweloperzy przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] na ogół wykonać mapowania na podstawie atrybutów przy użyciu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Można także użyć narzędzia wiersza polecenia SQLMetal, lub możesz ręcznie kod atrybuty samodzielnie. Aby uzyskać więcej informacji, zobacz [porady: Generowanie modelu obiektów w Visual Basic lub C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
+ Deweloperzy zazwyczaj za pomocą programu Visual Studio wykonywać na podstawie atrybutów mapowania za pomocą [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]. Można także użyć narzędzia wiersza polecenia SQLMetal, lub możesz ręcznie kod atrybuty samodzielnie. Aby uzyskać więcej informacji, zobacz [porady: Generowanie modelu obiektów w Visual Basic lub C#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md).  
   
 > [!NOTE]
 >  Można również mapować przy użyciu zewnętrznego pliku XML. Aby uzyskać więcej informacji, zobacz [zewnętrznych mapowania](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md).  
@@ -37,12 +39,12 @@ ms.lasthandoff: 01/17/2018
   
 |Właściwość|Typ|Domyślny|Opis|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|Zobacz<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Używane z jego <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość, określa nazwę bazy danych.|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|Zobacz <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|Używane z jego <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> właściwość, określa nazwę bazy danych.|  
   
  Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.DatabaseAttribute>.  
   
 ## <a name="tableattribute-attribute"></a>Atrybut TableAttribute  
- Ten atrybut umożliwia wyznacza klasę klasy jednostki, która jest skojarzona z tabeli bazy danych lub widoku. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]traktuje klasy, które mają atrybut jako trwałe klasy. W poniższej tabeli opisano <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> właściwości.  
+ Ten atrybut umożliwia wyznacza klasę klasy jednostki, która jest skojarzona z tabeli bazy danych lub widoku. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] traktuje klasy, które mają atrybut jako trwałe klasy. W poniższej tabeli opisano <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> właściwości.  
   
 |Właściwość|Typ|Domyślny|Opis|  
 |--------------|----------|-------------|-----------------|  
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/17/2018
  Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.ColumnAttribute>.  
   
 > [!NOTE]
->  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym Visual Basic. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="associationattribute-attribute"></a>Atrybut AssociationAttribute  
  Można określić właściwości do reprezentowania skojarzenia w bazie danych, takich jak klucza obcego do relacji klucza podstawowego, należy użyć tego atrybutu. Aby uzyskać więcej informacji na temat relacji, zobacz [porady: relacje bazy danych mapy](../../../../../../docs/framework/data/adonet/sql/linq/how-to-map-database-relationships.md).  
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/17/2018
  Aby uzyskać więcej informacji, zobacz <xref:System.Data.Linq.Mapping.AssociationAttribute>.  
   
 > [!NOTE]
->  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym Visual Basic. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
 ## <a name="inheritancemappingattribute-attribute"></a>Atrybut InheritanceMappingAttribute  
  Ten atrybut umożliwia mapowania hierarchii dziedziczenia.  

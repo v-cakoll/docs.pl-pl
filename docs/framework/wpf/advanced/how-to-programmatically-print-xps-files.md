@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 55a9a50527df0605cb9699622a165147597a500a
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 9e461a847e36277cb7d70534249a926693584b1f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>Jak za pomocą programowania drukować pliki XPS
 Można użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A> metody do drukowania [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] pliki bez otwierania <xref:System.Windows.Controls.PrintDialog> lub zasadniczo żadnych [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] w ogóle.  
@@ -56,9 +56,9 @@ Można użyć jednego przeciążenia <xref:System.Printing.PrintQueue.AddJob%2A>
   
  Jeśli używasz XPSDrv drukarki, a następnie można ustawić ostatni parametr `true`. W takim przypadku od [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest języka opisu strony drukarki, metoda wyśle plik do drukarki bez jej skuteczność lub konwertowana na inny język opisu strony. Aby dowiedzieć się w czasie projektowania, czy będzie używana aplikacja XPSDrv drukarki, można zmodyfikować aplikacji, aby go przeczytać <xref:System.Printing.PrintQueue.IsXpsDevice%2A> właściwości i gałęzi zgodnie z ich znalezienia.  
   
- Ponieważ początkowo będzie kilka drukarek XPSDrv dostępna natychmiast po wydaniu [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] i [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], konieczne może być ukryć drukarki z systemem innym niż XPSDrv jako XPSDrv drukarki. Aby to zrobić, należy dodać do listy plików w następującym kluczu rejestru komputera z uruchomionym aplikacji Pipelineconfig.xml:  
+ Ponieważ początkowo będzie kilka drukarek XPSDrv dostępna natychmiast po wydaniu [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] i Microsoft .NET Framework może być konieczne ukryć drukarki z systemem innym niż XPSDrv jako XPSDrv drukarki. Aby to zrobić, należy dodać do listy plików w następującym kluczu rejestru komputera z uruchomionym aplikacji Pipelineconfig.xml:  
   
- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter >*\DependentFiles  
+ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Print\Environments\Windows NT x86\Drivers\Version-3\\*\<PseudoXPSPrinter >* \DependentFiles  
   
  gdzie  *\<PseudoXPSPrinter >* jest wszystkie kolejki wydruku. Następnie należy ponownie uruchomić komputer.  
   

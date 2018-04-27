@@ -15,15 +15,15 @@ ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
 caps.latest.revision: 20
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 9f0242439caa21268a6c314409f41587890c4126
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 44c15eb9d65adf10904f8777847b0653ff1dbc99
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="is-c-reference"></a>is (odwołanie w C#) #
 
-Sprawdza, czy obiekt jest zgodny z danego typu, lub (począwszy od C# 7) testów wyrażenia do wzorca.
+Sprawdza, czy obiekt jest zgodny z danego typu, lub (począwszy od wersji 7.0 C#) testów wyrażenia do wzorca.
 
 ## <a name="testing-for-type-compatibility"></a>Testowanie zgodności typu ##
 
@@ -45,7 +45,7 @@ Na przykład następujący kod określa, czy `obj` mogą być rzutowane na wyst�
 
 - *wyrażenie* jest wystąpieniem typu pochodzącego od *typu*. Innymi słowy, wynik *wyrażenie* może być upcast na wystąpienie *typu*.
 
-- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu* . *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
+- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu*. *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
@@ -57,14 +57,14 @@ W poniższym przykładzie pokazano, że `is` wyrażenie ma `true` dla każdego z
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr`może być dowolnym wyrażenie zwracające wartość, z wyjątkiem metody anonimowe i wyrażenia lambda. W poniższym przykładzie użyto `is` do oceny, zwracana wartość wywołania metody.   
+`expr` może być dowolnym wyrażenie zwracające wartość, z wyjątkiem metody anonimowe i wyrażenia lambda. W poniższym przykładzie użyto `is` do oceny, zwracana wartość wywołania metody.   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
-Począwszy od C# 7, można użyć dopasowywanie do wzorca za [wzorzec typu](#type) do pisania kodu bardziej zwięzły, który używa `is` instrukcji.
+Począwszy od wersji 7.0 C#, można użyć dopasowywanie do wzorca za [wzorzec typu](#type) do pisania kodu bardziej zwięzły, który używa `is` instrukcji.
 
-## <a name="pattern-matching-with-is"></a>Dopasowywanie do wzorca z`is` ##
+## <a name="pattern-matching-with-is"></a>Dopasowywanie do wzorca z `is` ##
 
-Począwszy od C# 7, `is` i [przełącznika](../../../csharp/language-reference/keywords/switch.md) instrukcje obsługuje dopasowywania do wzorca. `is` — Słowo kluczowe obsługuje następujące wzorce:
+Począwszy od C# 7.0, `is` i [przełącznika](../../../csharp/language-reference/keywords/switch.md) instrukcje obsługuje dopasowywania do wzorca. `is` — Słowo kluczowe obsługuje następujące wzorce:
 
 - [Wzorzec typu](#type), która sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli można ją, rzutuje zmiennej tego typu.
 
@@ -72,7 +72,7 @@ Począwszy od C# 7, `is` i [przełącznika](../../../csharp/language-reference/k
 
 - [var — wzorzec](#var), dopasowanie, która zawsze kończy się powodzeniem i wiąże wartość wyrażenia do zmiennej lokalnej. 
 
-### <a name="type" />Wzorzec typu</a>
+### <a name="type" /> Wzorzec typu </a>
 
 Korzystając ze wzorcem typu do realizacji dopasowania do wzorca, `is` sprawdza, czy wyrażenie można przekonwertować na określony typ i, jeśli można ją, rzutuje zmiennej tego typu. Jest prosta rozszerzenie `is` instrukcji, która umożliwia ocenę zwięzła, typ i konwersji. Ogólny kształt `is` typu wzorzec jest:
 
@@ -88,7 +88,7 @@ gdzie *wyrażenie* wyrażenie obliczane do wystąpienia typu niektórych *typu* 
 
 - *wyrażenie* jest wystąpieniem typu pochodzącego od *typu*. Innymi słowy, wynik *wyrażenie* może być upcast na wystąpienie *typu*.
 
-- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu* . *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
+- *wyrażenie* zawiera typ kompilacji jest klasą podstawową *typu*, i *wyrażenie* ma typ obsługi, który jest *typu* lub pochodzi z *typu*. *Typu kompilacji* zmiennej jest typu zmienną, zgodnie z definicją w jego deklaracji. *Typ środowiska uruchomieniowego* zmiennej jest typem wystąpienia, który jest przypisany do tej zmiennej.
 
 - *wyrażenie* jest wystąpieniem typu, który implementuje *typu* interfejsu.
 
@@ -110,9 +110,9 @@ Odpowiednik kodu bez dopasowywania do wzorca wymaga oddzielnych przypisania, kt�
 
 [!code-csharp[is#10](../../../../samples/snippets/csharp/language-reference/keywords/is/is-type-pattern10.cs#10)]
 
-### <a name="a-nameconstant--constant-pattern"></a><a name="constant" />Stałe wzorzec ###
+### <a name="a-nameconstant--constant-pattern"></a><a name="constant" /> Stałe wzorzec ###
 
-Podczas wykonywania dopasowywanie do wzorca z wzorcem stałej `is` sprawdza, czy wyrażenie jest równe określonej stałej. W języku C# 6 i wcześniejszych wersjach stałe wzorzec jest obsługiwany przez [przełącznika](switch.md) instrukcji. Począwszy od C# 7, nie jest obsługiwany przez `is` również instrukcji. Składnia to:
+Podczas wykonywania dopasowywanie do wzorca z wzorcem stałej `is` sprawdza, czy wyrażenie jest równe określonej stałej. W języku C# 6 i wcześniejszych wersjach stałe wzorzec jest obsługiwany przez [przełącznika](switch.md) instrukcji. Począwszy od wersji 7.0 C#, nie jest obsługiwany przez `is` również instrukcji. Składnia to:
 
 ```csharp
    expr is constant
@@ -136,7 +136,7 @@ Poniższy przykład łączy wzorce typu i stała, aby sprawdzić, czy obiekt jes
 
 [!code-csharp[is#7](../../../../samples/snippets/csharp/language-reference/keywords/is/is-const-pattern7.cs#7)]
  
-### <a name="var" />var — wzorzec</a>
+### <a name="var" /> var — wzorzec </a>
 
 Wzorzec dopasowania wzorca var zawsze kończy się powodzeniem. Składnia może się
 
@@ -157,6 +157,6 @@ Należy pamiętać, że jeśli *wyrażenie* jest `null`, `is` wyrażenie nadal m
 ## <a name="see-also"></a>Zobacz także  
  [Odwołanie w C#](../../../csharp/language-reference/index.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
- [TypeOf](../../../csharp/language-reference/keywords/typeof.md)  
- [jako](../../../csharp/language-reference/keywords/as.md)  
+ [typeof](../../../csharp/language-reference/keywords/typeof.md)  
+ [as](../../../csharp/language-reference/keywords/as.md)  
  [Słowa kluczowe operatora](../../../csharp/language-reference/keywords/operator-keywords.md)

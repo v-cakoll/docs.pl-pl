@@ -1,5 +1,5 @@
 ---
-title: "Niestety, mamy ADAM &#39; są dostępne szczegółowe informacje na temat tego błędu języka C# t"
+title: Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -886,29 +886,29 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5f6224f661aff817b4314d832fcc2ff3938644c0
-ms.sourcegitcommit: 973a12d1e6962cd9a9c263fbfaad040ec8267fe9
+ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/22/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, mamy ADAM &#39; są dostępne szczegółowe informacje na temat tego błędu języka C# t
-Przepraszamy, ale nie mamy żadnych określone informacje o tym błędzie. Możesz wyszukać tekst numer i komunikat błędu można znaleźć informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
+# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
+Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
   
  [Visual C# — język](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- Udostępnia forum odpowiedzi na pytania o i ogólnych dyskusjach [!INCLUDE[csprcs](~/includes/csprcs-md.md)] składni języka i kompilatora.  
+ Zapewnia forum pytania dotyczące i ogólnych dyskusjach składni języka Visual C# i kompilatora.  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Udostępnia forum odpowiedzi na pytania dotyczące pracy [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] środowiska.  
+ [Środowiska IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ Forum do zadawania pytań dotyczących pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
  [Visual C# ogólne](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- Zapewnia forum pytania o i problemy związane z [!INCLUDE[csprcs](~/includes/csprcs-md.md)] nie opisano w innych forach.  
+ Udostępnia forum odpowiedzi na pytania dotyczące i problemy z Visual C#, które nie zostały omówione w innych forach.  
   
  [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- Zapewnia forum pytania o i problemy związane z [!INCLUDE[csprcs](~/includes/csprcs-md.md)].  
+ Udostępnia forum odpowiedzi na pytania dotyczące i problemy z Visual C#.  
   
  Zobacz też:  
  [Zasoby dodatkowe dla programistów Visual C#](../../csharp/getting-started/additional-resources.md)  

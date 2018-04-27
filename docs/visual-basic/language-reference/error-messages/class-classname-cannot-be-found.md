@@ -1,9 +1,9 @@
 ---
-title: "Klasa &#39; &lt;classname&gt;&#39; nie można odnaleźć"
+title: Klasa &#39; &lt;classname&gt; &#39; nie można odnaleźć
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aed0bc5643d0714e5994abce09b04b1910f2becc
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasa &#39; &lt;classname&gt;&#39; nie można odnaleźć
+# <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasa &#39; &lt;classname&gt; &#39; nie można odnaleźć
 Klasy\<classname >' nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".  
   
  Nie można odnaleźć zdefiniowanego elementu członkowskiego.  
@@ -35,7 +35,7 @@ Klasy\<classname >' nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem n
   
 2.  Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i ponownie uruchom [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
   
-3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   
 4.  Jeśli błąd będzie nadal występować po ponownej instalacji, powiadamia pomocy technicznej firmy Microsoft.  
   

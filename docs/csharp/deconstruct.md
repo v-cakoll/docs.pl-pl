@@ -1,6 +1,6 @@
 ---
-title: "Deconstructing krotek i innych typów"
-description: "Dowiedz się, jak deconstruct krotek i innych typów."
+title: Deconstructing krotek i innych typów
+description: Dowiedz się, jak deconstruct krotek i innych typów.
 keywords: .NET, .NET core, C#
 author: rpetrusha
 ms-author: ronpet
@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: e626eeb1f3de2716e1ffe4fcbec1c16558e5bf0e
-ms.sourcegitcommit: a3ba258f7a8cab5c6d19a3743dd95e904ecebc44
+ms.openlocfilehash: 5a119f935b1cc80fe5cf738f03057c68c7eb5ba5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/27/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>Deconstructing krotek i innych typów #
 
@@ -24,7 +24,7 @@ Krotka zawiera lekki sposób pobierania wiele wartości z wywołania metody. Jed
 
 Pobieranie wielu pól i wartości właściwości z obiektu może być skomplikowane jednakowo: należy przypisać wartość pola lub właściwości do zmiennej na podstawie elementu członkowskiego elementu członkowskiego. 
 
-Począwszy od C# 7, możesz pobrać wiele elementów z spójnej kolekcji lub pobrać wiele pola, właściwości i obliczonych wartości z obiektu w jednym *deconstruct* operacji. Gdy deconstruct spójnej kolekcji, jego elementy są przypisywane do poszczególnych zmiennych. Gdy deconstruct obiektu, można przypisać wybranych wartości poszczególnych zmiennych. 
+Począwszy od wersji 7.0 C#, możesz pobrać wiele elementów z spójnej kolekcji lub pobrać wiele pola, właściwości i obliczonych wartości z obiektu w jednym *deconstruct* operacji. Gdy deconstruct spójnej kolekcji, jego elementy są przypisywane do poszczególnych zmiennych. Gdy deconstruct obiektu, można przypisać wybranych wartości poszczególnych zmiennych. 
 
 ## <a name="deconstructing-a-tuple"></a>Deconstructing spójnych kolekcji
 
@@ -62,7 +62,7 @@ Należy pamiętać, że nie można mieszać deklaracje i przypisania do istniej�
 
 ## <a name="deconstructing-tuple-elements-with-discards"></a>Odrzuca deconstructing spójnej kolekcji elementów z
 
-Często zdarza się deconstructing krotka, interesują Cię wartości tylko niektórych elementów. Począwszy od C# 7, możesz korzystać C# dla obsługi *odrzuca*, które są zmienne tylko do zapisu wartości, którego wybrano opcję Ignoruj. Odrzucenia jest wskazywany przez się od znaku podkreślenia ("\_") w ramach przypisania. Można odrzucić dowolną liczbę wartości jak; wszystkie są reprezentowane przez jeden odrzucenia, `_`.
+Często zdarza się deconstructing krotka, interesują Cię wartości tylko niektórych elementów. Począwszy od wersji 7.0 C#, możesz korzystać C# dla obsługi *odrzuca*, które są zmienne tylko do zapisu wartości, którego wybrano opcję Ignoruj. Odrzucenia jest wskazywany przez się od znaku podkreślenia ("\_") w ramach przypisania. Można odrzucić dowolną liczbę wartości jak; wszystkie są reprezentowane przez jeden odrzucenia, `_`.
 
 Poniższy przykład przedstawia użycie spójnych kolekcji zawierający odrzucenia. `QueryCityDataForYears` Metoda zwraca krotka 6 nazwą miasta, jego obszar, roku, miasta wypełniania tego roku, drugiego roku i wypełniania Miasto drugiego roku. W przykładzie zmiany w populacji między te dwa lata. Danych dostępne w spójnej kolekcji, jesteśmy unconcerned z obszarem mieście i wiemy, nazwę miejscowości i dwiema datami w czasie projektowania. W związku z tym możemy tylko w przypadku zainteresowani dwa wypełniania wartościami przechowywanymi w spójnej kolekcji, a może obsłużyć pozostałych wartości jako odrzucenia.  
 

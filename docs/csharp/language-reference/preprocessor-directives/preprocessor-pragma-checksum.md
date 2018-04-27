@@ -13,11 +13,11 @@ ms.assetid: 3673e4ca-6098-4ec1-890f-8fceb2a794a2
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0604a559be25c300fcdc6041975306b465fc595f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9b196bbbce110acb596602fa4de2507515cdbb68
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pragma-checksum-c-reference"></a>#pragma checksum (odwołanie w C#)
 Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
@@ -43,7 +43,7 @@ Generuje sumy kontrolne dla plików źródłowych, aby pomóc w debugowaniu stro
   
  To rozwiązanie nie działa w przypadku projektów [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)], ponieważ obliczana suma kontrolna jest przeznaczona dla wygenerowanego pliku źródłowego, a nie pliku aspx.  Aby rozwiązać ten problem, dyrektywa `#pragma checksum` zapewnia obsługę sumy kontrolnej dla stron [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)].  
   
- Po utworzeniu projektu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] w języku [!INCLUDE[csprcs](~/includes/csprcs-md.md)], wygenerowany plik źródłowy zawiera sumę kontrolną dla pliku aspx, z którego jest generowany. Następnie kompilator zapisuje te informacje w pliku PDB.  
+ Po utworzeniu [!INCLUDE[vstecasp](~/includes/vstecasp-md.md)] sumy kontrolnej dla plików .aspx, z której źródłem jest generowany zawiera projekt języka Visual C#, wygenerowanym pliku źródłowym. Następnie kompilator zapisuje te informacje w pliku PDB.  
   
  Jeśli kompilator nie napotka w pliku dyrektywy `#pragma checksum`, oblicza jego sumę kontrolną i zapisuje jej wartość w pliku PDB.  
   

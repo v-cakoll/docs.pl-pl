@@ -1,5 +1,5 @@
 ---
-title: "Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych"
+title: 'Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 54882ce5f646e9e790703e0951459a9fceac3bb6
-ms.sourcegitcommit: 6a9030eb5bd0f00e1d144f81958adb195cfb1f6f
+ms.openlocfilehash: fdb6bde99ac5e15fb07010f3a73aba7c09bd4834
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>Wskazówki: Tworzenie niestandardowego typu bloku przepływu danych
 Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, które umożliwiają wykonywanie różnych funkcji, jednak można również utworzyć niestandardowe bloku typów. Ten dokument zawiera opis sposobu tworzenia typu bloku przepływu danych, który implementuje zachowanie niestandardowych.  
@@ -58,13 +58,13 @@ Biblioteka przepływu danych tpl zapewnia kilka typów bloku przepływu danych, 
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
+ Skopiuj przykładowy kod i wklej go w projekcie programu Visual Studio lub wklej go w pliku o nazwie `SlidingWindowBlock.cs` (`SlidingWindowBlock.vb` w języku Visual Basic), a następnie uruchom następujące polecenie w oknie Wiersz polecenia programu Visual Studio.  
   
- [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
+ Visual C#  
   
  **CSC.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
   
- [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]  
+ Visual Basic  
   
  **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
 

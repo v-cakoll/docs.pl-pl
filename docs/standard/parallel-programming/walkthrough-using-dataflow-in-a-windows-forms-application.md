@@ -1,5 +1,5 @@
 ---
-title: "Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms"
+title: 'Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 8c0d44ca7933626c95603ccc81102889ba4c23cb
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  
@@ -48,9 +48,9 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
   
 #### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
   
-1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], Utwórz [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] lub Visual Basic **aplikacji Windows Forms** projektu. W tym dokumencie projektu o nazwie `CompositeImages`.  
+1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utworzyć Visual C# lub Visual Basic **aplikacji Windows Forms** projektu. W tym dokumencie projektu o nazwie `CompositeImages`.  
   
-2.  W formularzu projektanta dla tego formularza, pliku Form1.cs (Form1.vb dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), Dodaj <xref:System.Windows.Forms.ToolStrip> formantu.  
+2.  Projektant formularzy dla tego formularza, pliku Form1.cs (Form1.vb w języku Visual Basic), Dodaj <xref:System.Windows.Forms.ToolStrip> formantu.  
   
 3.  Dodaj <xref:System.Windows.Forms.ToolStripButton> formant <xref:System.Windows.Forms.ToolStrip> formantu. Ustaw <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> właściwości <xref:System.Windows.Forms.ToolStripItemDisplayStyle.Text> i <xref:System.Windows.Forms.ToolStripItem.Text%2A> właściwości **wybierz Folder**.  
   
@@ -66,7 +66,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
   
 1.  Dodaj odwołanie do System.Threading.Tasks.Dataflow.dll do projektu.  
   
-2.  Upewnij się, że pliku Form1.cs (Form1.vb dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) zawiera następujące `using` (`Using` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) instrukcji:  
+2.  Upewnij się, że pliku Form1.cs (Form1.vb w języku Visual Basic) zawiera następujące `using` (`Using` w języku Visual Basic) instrukcji:  
   
      [!code-csharp[TPLDataflow_CompositeImages#1](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#1)]  
   
@@ -87,7 +87,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
      [!code-csharp[TPLDataflow_CompositeImages#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_compositeimages/cs/compositeimages/form1.cs#5)]  
   
     > [!NOTE]
-    >  C# wersja `CreateCompositeBitmap` — metoda używa wskaźników, aby umożliwić przetwarzanie wydajne <xref:System.Drawing.Bitmap?displayProperty=nameWithType> obiektów. W związku z tym należy włączyć **niebezpiecznego kodu** opcji w projekcie, aby można było używać [niebezpieczne](~/docs/csharp/language-reference/keywords/unsafe.md) — słowo kluczowe. Aby uzyskać więcej informacji o sposobie włączania niebezpieczny kod w [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] projektu, zobacz [strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
+    >  C# wersja `CreateCompositeBitmap` — metoda używa wskaźników, aby umożliwić przetwarzanie wydajne <xref:System.Drawing.Bitmap?displayProperty=nameWithType> obiektów. W związku z tym należy włączyć **niebezpiecznego kodu** opcji w projekcie, aby można było używać [niebezpieczne](~/docs/csharp/language-reference/keywords/unsafe.md) — słowo kluczowe. Aby uzyskać więcej informacji o sposobie włączania niebezpiecznego kodu w projektach Visual C#, zobacz [strona kompilacji, Projektant projektu (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).  
   
  W poniższej tabeli opisano elementy członkowskie w sieci.  
   
@@ -98,7 +98,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
 |`displayCompositeBitmap`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla złożonego mapy bitowej w formularzu.|  
 |`operationCancelled`|<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>|Wyświetla obraz, który będzie wskazywać, że operacja została anulowana i umożliwia użytkownikowi wybranie innego folderu.|  
   
- Aby połączyć bloków przepływu danych w celu utworzenia sieci, w tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metody. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Metoda zawiera zastąpionej wersji, która przyjmuje <xref:System.Predicate%601> obiekt, który określa, czy blok docelowy akceptuje lub odrzuca komunikat. Ten mechanizm filtrowania umożliwia bloki komunikatów do odbierania tylko niektóre wartości. W tym przykładzie sieci można gałęzi w jeden z dwóch sposobów. Gałęzi głównej ładuje obrazów z dysku, tworzy obraz złożone i wyświetla ten obraz w formularzu. Alternatywne gałęzi anuluje bieżącą operację. <xref:System.Predicate%601> Obiektów Włącz bloków przepływu danych wzdłuż gałęzi głównej, aby przełączyć się do gałęzi alternatywnych odrzucając komunikatów. Na przykład, jeśli użytkownik anuluje operację bloku przepływu danych `createCompositeBitmap` tworzy `null` (`Nothing` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) jako dane wyjściowe. W bloku przepływu danych `displayCompositeBitmap` odrzuca `null` wartości wejściowe i w związku z tym komunikacie jest oferowana `operationCancelled`. W bloku przepływu danych `operationCancelled` akceptuje wszystkie komunikaty i w związku z tym Wyświetla obraz, aby wskazać, że operacja została anulowana.  
+ Aby połączyć bloków przepływu danych w celu utworzenia sieci, w tym przykładzie użyto <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> metody. <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601.LinkTo%2A> Metoda zawiera zastąpionej wersji, która przyjmuje <xref:System.Predicate%601> obiekt, który określa, czy blok docelowy akceptuje lub odrzuca komunikat. Ten mechanizm filtrowania umożliwia bloki komunikatów do odbierania tylko niektóre wartości. W tym przykładzie sieci można gałęzi w jeden z dwóch sposobów. Gałęzi głównej ładuje obrazów z dysku, tworzy obraz złożone i wyświetla ten obraz w formularzu. Alternatywne gałęzi anuluje bieżącą operację. <xref:System.Predicate%601> Obiektów Włącz bloków przepływu danych wzdłuż gałęzi głównej, aby przełączyć się do gałęzi alternatywnych odrzucając komunikatów. Na przykład, jeśli użytkownik anuluje operację bloku przepływu danych `createCompositeBitmap` tworzy `null` (`Nothing` w języku Visual Basic) jako dane wyjściowe. W bloku przepływu danych `displayCompositeBitmap` odrzuca `null` wartości wejściowe i w związku z tym komunikacie jest oferowana `operationCancelled`. W bloku przepływu danych `operationCancelled` akceptuje wszystkie komunikaty i w związku z tym Wyświetla obraz, aby wskazać, że operacja została anulowana.  
   
  Na poniższej ilustracji przedstawiono sieci przetwarzania obrazów.  
   

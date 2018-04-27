@@ -1,5 +1,5 @@
 ---
-title: "uint (odwołanie w C#)"
+title: uint (odwołanie w C#)
 ms.date: 03/14/2017
 ms.prod: .net
 ms.technology:
@@ -11,14 +11,14 @@ f1_keywords:
 helpviewer_keywords:
 - uint keyword [C#]
 ms.assetid: e93e42c6-ec72-4b0b-89df-2fd8d36f7a7b
-caps.latest.revision: 
+caps.latest.revision: 18
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d32f7146d1f9e13d8cf0f275f4fd78b693b09d31
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 4a4f3439888ad3744be1633bb39e1c241343343a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="uint-c-reference"></a>uint (odwołanie w C#)
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="literals"></a>Literały  
 
-Można zadeklarować i zainicjuj `uint` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od C# 7) literału do niego dane binarne. Jeśli liczba całkowita literału jest poza zakresem `uint` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt32.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji.
+Można zadeklarować i zainicjuj `uint` zmiennej przypisując literał dziesiętny literałem szesnastkową lub (począwszy od 7.0 C#) literału do niego dane binarne. Jeśli liczba całkowita literału jest poza zakresem `uint` (to znaczy, jeśli jest mniejszy niż <xref:System.UInt32.MinValue?displayProperty=nameWithType> lub większa niż <xref:System.UInt32.MaxValue?displayProperty=nameWithType>), występuje błąd kompilacji.
 
 W poniższym przykładzie liczb całkowitych równa 3,000,000,000, które są reprezentowane jako dziesiętne szesnastkowych, i literały binarne są przypisane do `uint` wartości.  
   
@@ -41,7 +41,7 @@ W poniższym przykładzie liczb całkowitych równa 3,000,000,000, które są re
 > [!NOTE] 
 > Użyj prefiksu `0x` lub `0X` do oznaczania szesnastkowe literału i prefiks `0b` lub `0B` do oznaczania literał binarny. Literałów dziesiętnych mają nie ma prefiksu. 
 
-Począwszy od C# 7, dodano kilka funkcji w celu zwiększenia czytelności. 
+Uruchamianie z C# w wersji 7.0, dodano kilka funkcji w celu zwiększenia czytelności. 
  - C# 7.0 umożliwia użycie znaku podkreślenia `_`, jako separator cyfr.
  - C# 7.2 umożliwia `_` ma być używany jako separator cyfr dla literału binary lub szesnastkowe po prefiksie. Literał dziesiętny nie mogą mieć wiodące podkreślenia.
 
@@ -57,7 +57,7 @@ Jeśli literał całkowity nie sufiks, jego typ jest pierwszy następujących ty
 
 1. [int](int.md)
 2. `uint`
-3. [długa](../../../csharp/language-reference/keywords/long.md)
+3. [long](../../../csharp/language-reference/keywords/long.md)
 4. [ulong](../../../csharp/language-reference/keywords/ulong.md) 
   
 ## <a name="conversions"></a>Konwersje  

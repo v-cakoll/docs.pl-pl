@@ -1,12 +1,12 @@
 ---
 title: Wprowadzenie do PLINQ
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -14,22 +14,22 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, introduction to
 ms.assetid: eaa720d8-8999-4eb7-8df5-3c19ca61cad0
-caps.latest.revision: 
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6ee718737885618322c3623a80b0b091bbfc729d
-ms.sourcegitcommit: 3a96c706e4dbb4667bf3bf37edac9e1666646f93
+ms.openlocfilehash: 24541b681844a2023df8d4d05f13b53d55375b80
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="introduction-to-plinq"></a>Wprowadzenie do PLINQ
 ## <a name="what-is-a-parallel-query"></a>Co to jest równoległe zapytania?  
- Zapytanie języku zintegrowanym (LINQ) została wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Zawiera funkcje ujednoliconego modelu do wykonywania zapytań w dowolnej <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródła danych w sposób bezpieczny. LINQ do obiektów jest nazwą zapytań LINQ, które są uruchamiane przed kolekcje w pamięci, takich jak <xref:System.Collections.Generic.List%601> i tablic. W tym artykule przyjęto założenie, że masz podstawową wiedzę na temat programu LINQ. Aby uzyskać więcej informacji, zobacz [LINQ (zapytania język Language-Integrated)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
+ Zapytanie języku zintegrowanym (LINQ) została wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)].  Zawiera funkcje ujednoliconego modelu do wykonywania zapytań w dowolnej <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> źródła danych w sposób bezpieczny. LINQ do obiektów jest nazwą zapytań LINQ, które są uruchamiane przed kolekcje w pamięci, takich jak <xref:System.Collections.Generic.List%601> i tablic. W tym artykule przyjęto założenie, że masz podstawową wiedzę na temat programu LINQ. Aby uzyskać więcej informacji, zobacz [LINQ (zapytania język Language-Integrated)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).  
   
  Równoległe LINQ (PLINQ) jest równoległe implementacji wzorca LINQ. Zapytania PLINQ pod wieloma względami podobny nie są równoległe zapytania składnika LINQ to obiekty. Zapytania dotyczące technologii PLINQ, podobnie jak sekwencyjnych [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] zapytań, działać na dowolnym w pamięci <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601> danych źródła i mają odłożone wykonywania, co oznacza nie rozpocząć wykonywania, dopóki wyliczeniu zapytania. Podstawowa różnica polega na tym, że PLINQ próbuje wykorzystać wszystkie procesory w systemie. Robi to partycjonowania źródła danych na segmenty, a następnie wykonywania zapytania w każdym segmencie na oddzielnych wątków równolegle na wiele procesorów. W wielu przypadkach wykonywanie równoległe oznacza, że wykonywania kwerendy znacznie szybciej.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/27/2018
 ## <a name="the-parallelenumerable-class"></a>Klasa ParallelEnumerable  
  <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> Klasa przedstawia prawie wszystkie funkcje w PLINQ.  Go i pozostałe <xref:System.Linq?displayProperty=nameWithType> przestrzeni nazw typów są kompilowane do zestawu System.Core.dll. Domyślne projektów C# i Visual Basic w programie Visual Studio odwoływać się do zestawu i zaimportować przestrzeni nazw.  
   
- <xref:System.Linq.ParallelEnumerable> obejmuje implementacje wszystkich standardowych operatorów zapytań LINQ do obiektów obsługiwanych przez program, chociaż nie próbuje parallelize każdej z nich. Jeśli nie masz doświadczenia z [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], zobacz [wprowadzenie do LINQ](http://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
+ <xref:System.Linq.ParallelEnumerable> obejmuje implementacje wszystkich standardowych operatorów zapytań LINQ do obiektów obsługiwanych przez program, chociaż nie próbuje parallelize każdej z nich. Jeśli nie masz doświadczenia z [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)], zobacz [wprowadzenie do LINQ](https://msdn.microsoft.com/library/24dddf19-12a0-4707-a4bc-eba4fa7f219e).  
   
  Oprócz standardowych operatorów zapytań <xref:System.Linq.ParallelEnumerable> klasa zawiera zestaw metod umożliwiających zachowania specyficzne dla przetwarzania równoległego. Te metody specyficzne dla PLINQ są wymienione w poniższej tabeli.  
   
@@ -93,10 +93,10 @@ ms.lasthandoff: 02/27/2018
  Niektóre operacje wymagają, że źródło danych mają być dostarczane sekwencyjnie. <xref:System.Linq.ParallelEnumerable> Zapytania operatory powraca do trybu sekwencyjnych automatycznie, kiedy to wymagane. Operatory zdefiniowane przez użytkownika zapytań i obiektów delegowanych użytkownika, które wymagają wykonania kolejnych zapewnia PLINQ <xref:System.Linq.ParallelEnumerable.AsSequential%2A> metody. Jeśli używasz <xref:System.Linq.ParallelEnumerable.AsSequential%2A>, wszystkie kolejne operatory w zapytaniu są wykonywane sekwencyjnie do <xref:System.Linq.ParallelEnumerable.AsParallel%2A> nie zostanie ponownie wywołany. Aby uzyskać więcej informacji, zobacz [porady: łączenie równoległych i sekwencyjnych zapytań LINQ](../../../docs/standard/parallel-programming/how-to-combine-parallel-and-sequential-linq-queries.md).  
   
 ## <a name="options-for-merging-query-results"></a>Opcje scalania wyników zapytania  
- Podczas zapytania PLINQ równolegle, jego wyniki każdego wątku roboczego muszą zostać połączone powrotem do wątku głównego wykorzystania przez `foreach` pętli (`For Each` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]), lub wstawienia go do listy lub tablicy. W niektórych przypadkach może być przydatne do określenia określonego rodzaju operację scalania, na przykład, aby rozpocząć szybsze tworzenie wyników. W tym celu obsługuje PLINQ <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> metody i <xref:System.Linq.ParallelMergeOptions> wyliczenia. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
+ Podczas zapytania PLINQ równolegle, jego wyniki każdego wątku roboczego muszą zostać połączone powrotem do wątku głównego wykorzystania przez `foreach` pętli (`For Each` w języku Visual Basic), lub wstawienia go do listy lub tablicy. W niektórych przypadkach może być przydatne do określenia określonego rodzaju operację scalania, na przykład, aby rozpocząć szybsze tworzenie wyników. W tym celu obsługuje PLINQ <xref:System.Linq.ParallelEnumerable.WithMergeOptions%2A> metody i <xref:System.Linq.ParallelMergeOptions> wyliczenia. Aby uzyskać więcej informacji, zobacz [opcje scalania w PLINQ](../../../docs/standard/parallel-programming/merge-options-in-plinq.md).  
   
 ## <a name="the-forall-operator"></a>ForAll — Operator  
- W kolejnych [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] zapytań, wykonywania została odroczona dopóki wyliczeniu zapytania w `foreach` (`For Each` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) w pętli lub poprzez wywoływanie metody takie jak <xref:System.Linq.ParallelEnumerable.ToList%2A> , <xref:System.Linq.ParallelEnumerable.ToArray%2A> , lub <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. W PLINQ, można również użyć `foreach` do wykonania zapytania i iterację w wynikach. Jednak `foreach` się nie uruchomić równolegle i w związku z tym wymaga ona, czy dane wyjściowe z wszystkich zadań równoległych być scalone wątku, na którym działa pętli. W PLINQ, można użyć `foreach` po muszą zachować ostateczna kolejność wyników zapytania, a także po każdej zmianie przetwarzanego wyniki w sposób szeregowych, na przykład podczas wywoływania `Console.WriteLine` dla każdego elementu. Szybsze wykonywanie zapytania, gdy porządku nie jest wymagany i podczas przetwarzania wyników może sam być zarządzana z przetwarzaniem, używać <xref:System.Linq.ParallelEnumerable.ForAll%2A> metodę wykonywanie zapytań PLINQ. <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie wykonuje tego kroku końcowego scalania. Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Linq.ParallelEnumerable.ForAll%2A> metody. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> jest używany w tym miejscu, ponieważ jest zoptymalizowany do wiele wątków jednocześnie dodając próby usunięcia żadnych elementów.  
+ W kolejnych [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] zapytań, wykonywania została odroczona dopóki wyliczeniu zapytania w `foreach` (`For Each` w języku Visual Basic) w pętli lub poprzez wywoływanie metody takie jak <xref:System.Linq.ParallelEnumerable.ToList%2A> , <xref:System.Linq.ParallelEnumerable.ToArray%2A> , lub <xref:System.Linq.ParallelEnumerable.ToDictionary%2A>. W PLINQ, można również użyć `foreach` do wykonania zapytania i iterację w wynikach. Jednak `foreach` się nie uruchomić równolegle i w związku z tym wymaga ona, czy dane wyjściowe z wszystkich zadań równoległych być scalone wątku, na którym działa pętli. W PLINQ, można użyć `foreach` po muszą zachować ostateczna kolejność wyników zapytania, a także po każdej zmianie przetwarzanego wyniki w sposób szeregowych, na przykład podczas wywoływania `Console.WriteLine` dla każdego elementu. Szybsze wykonywanie zapytania, gdy porządku nie jest wymagany i podczas przetwarzania wyników może sam być zarządzana z przetwarzaniem, używać <xref:System.Linq.ParallelEnumerable.ForAll%2A> metodę wykonywanie zapytań PLINQ. <xref:System.Linq.ParallelEnumerable.ForAll%2A> nie wykonuje tego kroku końcowego scalania. Poniższy przykładowy kod przedstawia sposób użycia <xref:System.Linq.ParallelEnumerable.ForAll%2A> metody. <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> jest używany w tym miejscu, ponieważ jest zoptymalizowany do wiele wątków jednocześnie dodając próby usunięcia żadnych elementów.  
   
  [!code-csharp[PLINQ#4](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinq2_cs.cs#4)]
  [!code-vb[PLINQ#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#4)]  

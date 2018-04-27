@@ -1,30 +1,32 @@
 ---
-title: "Niezgodność typu SQL CLR"
-ms.custom: 
+title: Niezgodność typu SQL CLR
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 6a027bd898409708dd6800908a6736f5853058df
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6006bb8fd1f6b49382c89acc2b55efcb035ffbf5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-clr-type-mismatches"></a>Niezgodność typu SQL CLR
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]automatyzuje wiele tłumaczenie między model obiektów i SQL Server. Niemniej jednak niektórych sytuacjach uniemożliwiają dokładny tłumaczenia. Te klucza niedopasowania popularne typy środowiska uruchomieniowego (języka wspólnego CLR) języka i typów bazy danych programu SQL Server podsumowano w poniższych sekcjach. Można znaleźć więcej informacji dotyczących mapowania określonego typu i funkcja translacji na [mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) i [typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] automatyzuje wiele tłumaczenie między model obiektów i SQL Server. Niemniej jednak niektórych sytuacjach uniemożliwiają dokładny tłumaczenia. Te klucza niedopasowania popularne typy środowiska uruchomieniowego (języka wspólnego CLR) języka i typów bazy danych programu SQL Server podsumowano w poniższych sekcjach. Można znaleźć więcej informacji dotyczących mapowania określonego typu i funkcja translacji na [mapowanie typu środowiska CLR SQL](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md) i [typy danych i funkcje](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md).  
   
 ## <a name="data-types"></a>Typy danych  
  Translacja między CLR i SQL Server występuje, gdy zapytanie jest wysyłane do bazy danych, a wyniki są odsyłane do modelu obiektu. Na przykład następujące zapytanie języka Transact-SQL wymaga dwóch konwersji wartości:  
@@ -44,7 +46,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Wartość logiczna**. Mogą być mapowane te typy bitowych lub większą liczbą lub ciągiem. Literał mogą być mapowane na wyrażenie obliczane do tej samej wartości (na przykład `1=1` w języku SQL dla `True` w ze specyfikacją CLS).  
   
-    -   **TimeSpan**. Ten typ przedstawia różnicę między dwiema `DateTime` wartości i nie odpowiada `timestamp` programu SQL Server. Środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> może również mapować do programu SQL Server `TIME` typu w niektórych przypadkach. SQL Server `TIME` typu była przeznaczona tylko do reprezentowania wartości dodatnie mniej niż 24 godziny. Środowisko CLR <xref:System.TimeSpan> ma o wiele większa zakres.  
+    -   **Wartość TimeSpan**. Ten typ przedstawia różnicę między dwiema `DateTime` wartości i nie odpowiada `timestamp` programu SQL Server. Środowisko CLR <xref:System.TimeSpan?displayProperty=nameWithType> może również mapować do programu SQL Server `TIME` typu w niektórych przypadkach. SQL Server `TIME` typu była przeznaczona tylko do reprezentowania wartości dodatnie mniej niż 24 godziny. Środowisko CLR <xref:System.TimeSpan> ma o wiele większa zakres.  
   
     > [!NOTE]
     >  Specyficzne dla programu SQL Server [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] typy w <xref:System.Data.SqlTypes> nie są uwzględnione w tym porównania.  
@@ -53,7 +55,7 @@ Select DateOfBirth From Customer Where CustomerId = @id
   
     -   **Stałej długości typów znaków**. Transact-SQL rozróżnia kategorii Unicode i z systemem innym niż Unicode i ma trzy różne typy w każdej kategorii: stałej długości `nchar` / `char`, o zmiennej długości `nvarchar` / `varchar`, i o większym rozmiarze `ntext` / `text`. O stałej długości typów znaków mogą zostać zamapowane do środowiska CLR <xref:System.Char?displayProperty=nameWithType> znaków typu pobierania, ale ich nie naprawdę odpowiadają tego samego typu konwersje i zachowania.  
   
-    -   **Bit**. Mimo że `bit` domena ma taką samą liczbę wartości jako `Nullable<Boolean>`, są różnych typów. `Bit`pobiera wartości `1` i `0` zamiast `true` / `false`i nie można użyć jako równoważne wyrażeń logicznych.  
+    -   **Bit**. Mimo że `bit` domena ma taką samą liczbę wartości jako `Nullable<Boolean>`, są różnych typów. `Bit` pobiera wartości `1` i `0` zamiast `true` / `false`i nie można użyć jako równoważne wyrażeń logicznych.  
   
     -   **Sygnatura czasowa**. W przeciwieństwie do środowiska CLR <xref:System.TimeSpan?displayProperty=nameWithType> typ, programu SQL Server `TIMESTAMP` typu reprezentuje 8-bajtowa liczba wygenerowanych przez bazę danych, która jest unikatowa dla każdej aktualizacji i nie jest oparty na różnicy między <xref:System.DateTime> wartości.  
   
@@ -118,7 +120,7 @@ or col1 != col2
   
  W przypadku poprzednich można uzyskać równoważne zachowanie podczas generowania SQL, ale translację dokładnie nie uwzględnia masz zamiar.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie nakłada C# `null` lub [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] `nothing` semantykę porównania SQL. Operatory porównania składniowo są przekształcane na ich odpowiedniki SQL. Semantyka odzwierciedlają semantyki SQL, zgodnie z ustawieniami serwera lub połączenia. Dwie wartości null są traktowane jako nierówne w domyślnych ustawień programu SQL Server (mimo że można zmienić ustawienia, aby zmienić semantykę). Niezależnie od tego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie należy wziąć pod uwagę ustawień serwera w Translacja zapytania.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie nakłada C# `null` lub Visual Basic `nothing` semantykę porównania SQL. Operatory porównania składniowo są przekształcane na ich odpowiedniki SQL. Semantyka odzwierciedlają semantyki SQL, zgodnie z ustawieniami serwera lub połączenia. Dwie wartości null są traktowane jako nierówne w domyślnych ustawień programu SQL Server (mimo że można zmienić ustawienia, aby zmienić semantykę). Niezależnie od tego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie należy wziąć pod uwagę ustawień serwera w Translacja zapytania.  
   
  Porównanie z literałem `null` (`nothing`) jest translacja do odpowiedniej wersji programu SQL (`is null` lub `is not null`).  
   
@@ -127,9 +129,9 @@ or col1 != col2
 ### <a name="type-conversion-and-promotion"></a>Konwersja typów i podwyższenie poziomu  
  SQL obsługuje bogaty zestaw niejawne konwersje w wyrażeniach. Podobne wyrażenia w języku C# wymaga jawnego rzutowania. Na przykład:  
   
--   `Nvarchar`i `DateTime` typy mogą być porównywane w języku SQL bez żadnych jawnego rzutowania; C# wymaga jawnej konwersji.  
+-   `Nvarchar` i `DateTime` typy mogą być porównywane w języku SQL bez żadnych jawnego rzutowania; C# wymaga jawnej konwersji.  
   
--   `Decimal`jest niejawnie przekonwertowana na `DateTime` w języku SQL. C# nie pozwala na niejawną konwersję.  
+-   `Decimal` jest niejawnie przekonwertowana na `DateTime` w języku SQL. C# nie pozwala na niejawną konwersję.  
   
  Podobnie typu pierwszeństwo w języku Transact-SQL różni się od typu pierwszeństwo w języku C#, ponieważ różni się podstawowy zestaw typów. W rzeczywistości istnieje żadna relacja wyczyść podzestawu/nadzbiorem między listami pierwszeństwo. Na przykład porównanie `nvarchar` z `varchar` powoduje, że niejawnej konwersji wartości `varchar` wyrażenie `nvarchar`. Środowisko CLR udostępnia nie równoważne podwyższania poziomu.  
   
@@ -157,7 +159,7 @@ Where Col1 = Col2
   
  W efekcie tworzy podklauzuli sortowania *ograniczone typu* nie jest to podstawienia.  
   
- Podobnie kolejność sortowania może być znacznie różni się we wszystkich systemach typu. Ta różnica dotyczy sortowania wyników. <xref:System.Guid>jest sortowany na wszystkich 16 bajtów według kolejności lexicographic (`IComparable()`), podczas gdy T-SQL porównuje identyfikatorów GUID w następującej kolejności: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Ta kolejność została wykonana w programie SQL 7.0, gdy generowane NT identyfikatorów GUID ma kolejności octet. Podejście zapewnić, że identyfikatorów GUID generowane podczas tego samego węzła klastra pochodzi ze sobą w kolejności sekwencyjnej, zgodnie z sygnatury czasowej. Podejście było również przydatne w przypadku tworzenia indeksów (wstawia stają się dołącza zamiast losowych operacji We-Wy). Kolejność zostało zaszyfrowane później w systemie Windows z powodu prywatności, ale SQL musi zapewnić zgodność. Obejście tego problemu jest użycie <xref:System.Data.SqlTypes.SqlGuid> zamiast <xref:System.Guid>.  
+ Podobnie kolejność sortowania może być znacznie różni się we wszystkich systemach typu. Ta różnica dotyczy sortowania wyników. <xref:System.Guid> jest sortowany na wszystkich 16 bajtów według kolejności lexicographic (`IComparable()`), podczas gdy T-SQL porównuje identyfikatorów GUID w następującej kolejności: node(10-15), clock-seq(8-9), time-high(6-7), time-mid(4-5), time-low(0-3). Ta kolejność została wykonana w programie SQL 7.0, gdy generowane NT identyfikatorów GUID ma kolejności octet. Podejście zapewnić, że identyfikatorów GUID generowane podczas tego samego węzła klastra pochodzi ze sobą w kolejności sekwencyjnej, zgodnie z sygnatury czasowej. Podejście było również przydatne w przypadku tworzenia indeksów (wstawia stają się dołącza zamiast losowych operacji We-Wy). Kolejność zostało zaszyfrowane później w systemie Windows z powodu prywatności, ale SQL musi zapewnić zgodność. Obejście tego problemu jest użycie <xref:System.Data.SqlTypes.SqlGuid> zamiast <xref:System.Guid>.  
   
 ### <a name="operator-and-function-differences"></a>Operator i różnice funkcji  
  Operatory i funkcje, które są zasadniczo porównywalne ma semantykę różną pisowni. Na przykład:  
@@ -168,7 +170,7 @@ Where Col1 = Col2
   
     -   Luźne tłumaczenia na język `AND` / `OR` operatory może spowodować nieoczekiwane błędy, jeśli wyrażenie C# zależy oceny drugiego operandu na wynikiem obliczania pierwszego argumentu operacji.  
   
--   `Round()`funkcja ma semantykę różną w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] w T-SQL.  
+-   `Round()` funkcja ma semantykę różną w [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] w T-SQL.  
   
 -   Indeks początkowy dla ciągów jest 0 w środowisku CLR, lecz 1 w języku SQL. W związku z tym każda funkcja, która ma indeks musi tłumaczenia indeksu.  
   
@@ -179,7 +181,7 @@ Where Col1 = Col2
     > [!NOTE]
     >  To `Like` operator zachowanie dotyczy C# Visual Basic `Like` — słowo kluczowe jest bez zmian.  
   
--   Przepełnienie zawsze ewidencjonowane SQL, ale musi być jawnie określona w języku C# (nie w [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) w celu uniknięcia wraparound. Podane kolumny całkowitą C1, C2 i C3, jeśli C1 + C2 jest przechowywany w C3 (C3 ustawić T aktualizacji = C1 + C2).  
+-   Przepełnienie zawsze ewidencjonowane SQL, ale musi być jawnie określona w języku C# (nie w języku Visual Basic) w celu uniknięcia wraparound. Podane kolumny całkowitą C1, C2 i C3, jeśli C1 + C2 jest przechowywany w C3 (C3 ustawić T aktualizacji = C1 + C2).  
   
     ```  
     create table T3 (  
@@ -197,7 +199,7 @@ Where Col1 = Col2
   
 -   SQL wykonuje arytmetyczne symetrycznego zaokrąglania podczas [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] banker używa obiektu zaokrąglania. Zobacz artykuł bazy wiedzy 196652, aby uzyskać więcej informacji.  
   
--   Domyślnie dla typowych ustawień regionalnych bez uwzględniania wielkości liter w programie SQL są porównania ciągu znaków. W języku Visual Basic i C# są one z uwzględnieniem wielkości liter. Na przykład `s == "Food"` (`s = "Food"` w [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)]) i `s == "Food"` może spowodować uzyskanie innych wyników, jeśli `s` jest `food`.  
+-   Domyślnie dla typowych ustawień regionalnych bez uwzględniania wielkości liter w programie SQL są porównania ciągu znaków. W języku Visual Basic i C# są one z uwzględnieniem wielkości liter. Na przykład `s == "Food"` (`s = "Food"` w języku Visual Basic) i `s == "Food"` może spowodować uzyskanie innych wyników, jeśli `s` jest `food`.  
   
     ```  
     -- Assume default US-English locale (case insensitive).  

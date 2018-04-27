@@ -1,8 +1,9 @@
 ---
-title: "throw (odwołanie w C#)"
+title: throw (odwołanie w C#)
 ms.date: 03/02/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 f1_keywords:
 - throw
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - throw expression [C#]
 - throw keyword [C#]
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e56bd8f8b6bfcc7c8f1eb2df6ac157e28adac331
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 088a8e70c5aaaae6f833f12cad1052c30fbb6bfa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="throw-c-reference"></a>throw (odwołanie w C#)
 Sygnalizuje wystąpienie Wystąpił wyjątek podczas wykonywania programu.  
@@ -41,7 +42,7 @@ Następnie użyj wywołań metody `try-catch` lub `try-catch-finally` bloku do o
 
 ## <a name="re-throwing-an-exception"></a>Ponownego generowania wyjątku
 
-`throw`można również w `catch` bloku do ponownego zgłoszenia wyjątku jest obsługiwany w `catch` bloku.  W takim przypadku `throw` nie przyjmuje argumentu wyjątku. Jest najbardziej przydatne w przypadku metody przekazuje argumentu z obiekt wywołujący do innej metody w bibliotece, a metoda biblioteki zgłasza wyjątek, który musi być przekazywane do obiektu wywołującego. Na przykład poniższy przykład ponownie zgłasza <xref:System.NullReferenceException> zgłoszono podczas próby pobrania pierwszego znaku ciągu niezainicjowany. 
+`throw` można również w `catch` bloku do ponownego zgłoszenia wyjątku jest obsługiwany w `catch` bloku.  W takim przypadku `throw` nie przyjmuje argumentu wyjątku. Jest najbardziej przydatne w przypadku metody przekazuje argumentu z obiekt wywołujący do innej metody w bibliotece, a metoda biblioteki zgłasza wyjątek, który musi być przekazywane do obiektu wywołującego. Na przykład poniższy przykład ponownie zgłasza <xref:System.NullReferenceException> zgłoszono podczas próby pobrania pierwszego znaku ciągu niezainicjowany. 
 
 [!code-csharp[csrefKeyword#3](../../../../samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]  
 
@@ -50,9 +51,9 @@ Następnie użyj wywołań metody `try-catch` lub `try-catch-finally` bloku do o
  
 ## <a name="the-throw-expression"></a>`throw` Wyrażenia
 
-Począwszy od C# 7, `throw` mogą być używane jako wyrażenie, a także instrukcję. Dzięki temu wyjątków w kontekstach, które były wcześniej obsługiwane. Należą do nich następujące elementy:
+Począwszy od C# 7.0, `throw` mogą być używane jako wyrażenie, a także instrukcję. Dzięki temu wyjątków w kontekstach, które były wcześniej obsługiwane. Należą do nich następujące elementy:
 
-- [operator warunkowy](../operators/conditional-operator.md). W poniższym przykładzie użyto `throw` wyrażenie throw <xref:System.ArgumentException> Jeśli metoda jest przekazywana tablicy pusty ciąg. Przed C# 7, musi występować w tej logiki `if` / `else` instrukcji.
+- [operator warunkowy](../operators/conditional-operator.md). W poniższym przykładzie użyto `throw` wyrażenie throw <xref:System.ArgumentException> Jeśli metoda jest przekazywana tablicy pusty ciąg. Przed C# 7.0, tę logikę musi występować w `if` / `else` instrukcji.
 
    [!code-csharp[csrefKeyword#4](../../../../samples/snippets/csharp/language-reference/keywords/throw/conditional.cs#1)]  
   
@@ -75,4 +76,4 @@ Począwszy od C# 7, `throw` mogą być używane jako wyrażenie, a także instru
  [Try, catch, a w języku C++ throw — instrukcje](../../../csharp/language-reference/keywords/try-catch.md)  
  [Słowa kluczowe języka C#](../../../csharp/language-reference/keywords/index.md)  
  [Instrukcje obsługi wyjątków](../../../csharp/language-reference/keywords/exception-handling-statements.md)  
- [Porady: jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)
+ [Instrukcje: Jawne zgłaszanie wyjątków](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

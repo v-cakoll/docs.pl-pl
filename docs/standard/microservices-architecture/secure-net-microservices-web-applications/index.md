@@ -1,7 +1,7 @@
 ---
 title: Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
-keywords: Docker, Mikrousług, ASP.NET, kontenera
+keywords: Docker, Microservices, ASP.NET, Container
 author: mjrousos
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 6281442f42b511170f83eaeb1c940a35a566e519
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 0ca69ada16fbb5a6757da96a7ea64d2113c15b6f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="securing-net-microservices-and-web-applications"></a>Zabezpieczanie Mikrousług .NET i aplikacji sieci Web
 
@@ -124,7 +124,7 @@ else
 
 Jeśli wybierzesz **indywidualne konto użytkownika** opcję uwierzytelniania podczas tworzenia projektu aplikacji sieci web ASP.NET kodu w programie Visual Studio, należy zalogować się przy użyciu zewnętrznego dostawcy kodu znajduje się już w projekcie, jak pokazano na rysunku 11-3.
 
-![https://msdnshared.blob.Core.Windows.NET/Media/2016/10/New-Web-App.PNG](./media/image3.png)
+![https://msdnshared.blob.core.windows.net/media/2016/10/new-web-app.png](./media/image3.png)
 
 **Rysunek 11-3**. Wybranie opcji korzystania z funkcji uwierzytelniania zewnętrznego, podczas tworzenia projektu aplikacji sieci web
 
@@ -136,7 +136,7 @@ Istnieje również możliwość, aby utworzyć własne oprogramowanie pośrednic
 
 Uwierzytelniania w produkcie ASP.NET Identity Core (lub tożsamości i zewnętrzni dostawcy uwierzytelniania) działa dobrze w przypadku wielu scenariuszy aplikacji sieci web, w których jest przechowywania informacji o użytkowniku w pliku cookie. W innych sytuacjach, pliki cookie nie są fizyczną oznacza przechowywanie i przesyłania danych.
 
-Na przykład w interfejsie API sieci Web platformy ASP.NET Core RESTful punktów końcowych, które mogą być używane przez aplikacje jednostronicowe (źródła), która udostępnia w klientach natywnych, lub nawet przez innych interfejsów API sieci Web, zazwyczaj chcesz zamiast tego użyj tokenu uwierzytelniania elementu nośnego. Aplikacje tego typu nie pracować z plików cookie, ale można łatwo pobrania tokenu elementu nośnego i uwzględnić go w kolejnych żądań w nagłówku autoryzacji. Aby włączyć uwierzytelnianie tokenu, platformy ASP.NET Core obsługuje kilka opcji przy użyciu [OAuth 2.0](https://oauth.net/2/) i [OpenID Connect](http://openid.net/connect/).
+Na przykład w interfejsie API sieci Web platformy ASP.NET Core RESTful punktów końcowych, które mogą być używane przez aplikacje jednostronicowe (źródła), która udostępnia w klientach natywnych, lub nawet przez innych interfejsów API sieci Web, zazwyczaj chcesz zamiast tego użyj tokenu uwierzytelniania elementu nośnego. Aplikacje tego typu nie pracować z plików cookie, ale można łatwo pobrania tokenu elementu nośnego i uwzględnić go w kolejnych żądań w nagłówku autoryzacji. Aby włączyć uwierzytelnianie tokenu, platformy ASP.NET Core obsługuje kilka opcji przy użyciu [OAuth 2.0](https://oauth.net/2/) i [OpenID Connect](https://openid.net/connect/).
 
 ## <a name="authenticating-with-an-openid-connect-or-oauth-20-identity-provider"></a>Uwierzytelnianie przy użyciu dostawcy OpenID Connect lub tożsamość OAuth 2.0
 
@@ -231,7 +231,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
 ## <a name="additional-resources"></a>Dodatkowe zasoby
 
 -   **Udostępnianie plików cookie między aplikacjami**
-    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\# Udostępnianie — uwierzytelnianie — pliki cookie między — aplikacje*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
+    [*https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing\#udostępnianie — uwierzytelnianie — pliki cookie między — aplikacje*](https://docs.microsoft.com/aspnet/core/security/data-protection/compatibility/cookie-sharing#sharing-authentication-cookies-between-applications)
 
 -   **Wprowadzenie do tożsamości**
     [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](https://docs.microsoft.com/aspnet/core/security/authentication/identity)
@@ -246,7 +246,7 @@ Oprogramowanie pośredniczące uwierzytelniania elementu nośnego JWT może rów
     [*https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2*](https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2)
 
 -   **AspNet.Security.OAuth.Providers** (repozytorium GitHub dla dostawców uwierzytelniania OAuth ASP.NET.
-    [*https://github.com/ASPNET-contrib/AspNet.Security.OAuth.Providers/Tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
+    [*https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src*](https://github.com/aspnet-contrib/AspNet.Security.OAuth.Providers/tree/dev/src)
 
 -   **Danny Strockis. Integrowanie usługi Azure AD aplikacji sieci web platformy ASP.NET Core**
     [*https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/*](https://azure.microsoft.com/resources/samples/active-directory-dotnet-webapp-openidconnect-aspnetcore/)

@@ -14,11 +14,11 @@ ms.assetid: 30d7e4e5-cc2e-4635-a597-14a724879619
 caps.latest.revision: 14
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: b810280724dcf608859bfa455947a75ce64b7abe
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8b095520326c439601caa8fefa458dda75ba603e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-c-reference"></a>set (odwołanie w C#)
 `set` Definiuje — słowo kluczowe *akcesor* metody we właściwości lub indeksatora, która przypisuje wartość do właściwości lub indeksatora elementu. Aby uzyskać dodatkowe informacje i przykłady, zobacz [właściwości](../../../csharp/programming-guide/classes-and-structs/properties.md), [właściwości Auto-Implemented](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md), i [indeksatory](../../../csharp/programming-guide/indexers/index.md).  
@@ -27,7 +27,7 @@ W poniższym przykładzie zdefiniowano zarówno `get` i `set` dostępu dla wła�
  
  [!code-csharp[set#1](../../../../samples/snippets/csharp/language-reference/keywords/get/get-1.cs)]  
 
-Często `set` dostępu składa się z jednej instrukcji, która nie zwraca wartości, tak jak w poprzednim przykładzie. Począwszy od C# 7, można zaimplementować `set` akcesor jako element członkowski zabudowanych wyrażenia. Poniższy przykład implementuje zarówno `get` i `set` metody dostępu jako członków zabudowanych wyrażenia.
+Często `set` dostępu składa się z jednej instrukcji, która nie zwraca wartości, tak jak w poprzednim przykładzie. Począwszy od wersji 7.0 C#, można zaimplementować `set` akcesor jako element członkowski zabudowanych wyrażenia. Poniższy przykład implementuje zarówno `get` i `set` metody dostępu jako członków zabudowanych wyrażenia.
 
  [!code-csharp[set#3](../../../../samples/snippets/csharp/language-reference/keywords/get/get-3.cs)]   
     

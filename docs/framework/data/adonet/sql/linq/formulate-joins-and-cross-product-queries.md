@@ -1,56 +1,58 @@
 ---
-title: "Sformułować sprzężenia i iloczyn wektorowy zapytania"
-ms.custom: 
+title: Sformułować sprzężenia i iloczyn wektorowy zapytania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: d8072ede-0521-4670-9bec-1778ceeb875b
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 5f652f25d04480afb3df1f623347eee23d3ed258
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468ee54b0936afcbb548249bc714ea4b04abd3de
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="formulate-joins-and-cross-product-queries"></a>Sformułować sprzężenia i iloczyn wektorowy zapytania
 Poniższe przykłady przedstawiają sposób łączenia wyniki z wielu tabel.  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto obcego klucza nawigacji w `From` w klauzuli [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from` klauzuli w języku C#) aby zaznaczyć wszystkich zleceń dla klientów w Londynie.  
+ W poniższym przykładzie użyto obcego klucza nawigacji w `From` klauzuli w języku Visual Basic (`from` klauzuli w języku C#) aby zaznaczyć wszystkich zleceń dla klientów w Londynie.  
   
  [!code-csharp[DLinqQueryExamples#47](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#47)]
  [!code-vb[DLinqQueryExamples#47](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#47)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto obcego klucza nawigacji w `Where` w klauzuli [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`where` klauzuli w języku C#) do filtrowania wyjście z akcji `Products` którego `Supplier` znajduje się w Stanach Zjednoczonych.  
+ W poniższym przykładzie użyto obcego klucza nawigacji w `Where` klauzuli w języku Visual Basic (`where` klauzuli w języku C#) do filtrowania wyjście z akcji `Products` którego `Supplier` znajduje się w Stanach Zjednoczonych.  
   
  [!code-csharp[DLinqQueryExamples#48](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#48)]
  [!code-vb[DLinqQueryExamples#48](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#48)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto obcego klucza nawigacji w `From` w klauzuli [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`from` klauzuli w języku C#) do filtrowania dla pracowników w Seattle, a z listy ich terytorium.  
+ W poniższym przykładzie użyto obcego klucza nawigacji w `From` klauzuli w języku Visual Basic (`from` klauzuli w języku C#) do filtrowania dla pracowników w Seattle, a z listy ich terytorium.  
   
  [!code-csharp[DLinqQueryExamples#49](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#49)]  
   
 ## <a name="example"></a>Przykład  
- W poniższym przykładzie użyto obcego klucza nawigacji w `Select` w klauzuli [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] (`select` klauzuli w języku C#) do filtrowania dla par pracownikom, gdy pracownik raporty do innych i gdzie jest taka sama zarówno pracowników `City`.  
+ W poniższym przykładzie użyto obcego klucza nawigacji w `Select` klauzuli w języku Visual Basic (`select` klauzuli w języku C#) do filtrowania dla par pracownikom, gdy pracownik raporty do innych i gdzie jest taka sama zarówno pracowników `City`.  
   
  [!code-csharp[DLinqQueryExamples#50](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#50)]
  [!code-vb[DLinqQueryExamples#50](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50)]  
   
 ## <a name="example"></a>Przykład  
- Następujące [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] przykład wygląda dla wszystkich klientów i zamówień upewnia się, że zamówienia są dopasowane do klientów, a gwarantuje, że dla każdego klienta na tej liście podano nazwę kontaktu.  
+ W poniższym przykładzie w języku Visual Basic wygląda dla wszystkich klientów i zamówień upewnia się, że zamówienia są dopasowane do klientów i gwarantuje, że dla każdego klienta na tej liście podano nazwę kontaktu.  
   
  [!code-vb[DLinqQueryExamples#50v](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#50v)]  
   

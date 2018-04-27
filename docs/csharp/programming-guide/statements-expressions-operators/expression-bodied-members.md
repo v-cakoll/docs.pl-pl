@@ -1,19 +1,20 @@
 ---
-title: "Elementy członkowskie zabudowanych wyrażenia (C# przewodnik programowania w języku)"
+title: Elementy członkowskie zabudowanych wyrażenia (C# przewodnik programowania w języku)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 helpviewer_keywords:
 - expression-bodied members[C#]
 - C# language, expresion-bodied members
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ead1e474fe87bd9fbd0f972bc0f2fc4fefc12ecf
-ms.sourcegitcommit: 7e99f66ef09d2903e22c789c67ff5a10aa953b2f
+ms.openlocfilehash: 5690a2ddb9127bb0c9b06d3607e3d105fca9a2e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="expression-bodied-members-c-programming-guide"></a>Elementy członkowskie zabudowanych wyrażenia (C# Podręcznik programowania)
 Wyrażenie treści definicji umożliwiają implementacji członka w postaci bardzo krótkie, który może zostać odczytany. Możesz użyć definicji treści wyrażenia zawsze, gdy logiki żadnego z obsługiwanych elementów, takich jak metody lub właściwości, składa się z jednego wyrażenia. Definicja treść wyrażenia ma następującą składnię ogólne:
@@ -24,16 +25,16 @@ member => expression;
 
 gdzie *wyrażenie* jest prawidłowym wyrażeniem. 
 
-Wprowadzono obsługę wyrażenie treści definicji dla metod i właściwości uzyskać metod dostępu w języku C# 6 i została rozszerzona w języku C# 7. Definicje treść wyrażenia mogą być używane z elementami członkowskimi typu wymienione w poniższej tabeli: 
+Wprowadzono obsługę wyrażenie treści definicji dla metod i właściwości uzyskać metod dostępu w języku C# 6 i została rozszerzona w języku C# w wersji 7.0. Definicje treść wyrażenia mogą być używane z elementami członkowskimi typu wymienione w poniższej tabeli: 
 
 |Element członkowski  |Obsługiwane począwszy od... |
 |---------|---------|
 |[— Metoda](#methods)  |C# 6 |
-|[Konstruktor](#constructors)   |C# 7 |
-|[Finalizator](#finalizers)     |C# 7 |
+|[Konstruktor](#constructors)   |C# 7.0 |
+|[Finalizator](#finalizers)     |C# 7.0 |
 |[Get właściwości](#property-get-statements)  |C# 6 |
-|[Zestaw właściwości](#property-set-statements)  |C# 7 |
-|[Indeksator](#indexers)       |C# 7 |
+|[Zestaw właściwości](#property-set-statements)  |C# 7.0 |
+|[indeksator](#indexers)       |C# 7.0 |
 
 ## <a name="methods"></a>Metody
 

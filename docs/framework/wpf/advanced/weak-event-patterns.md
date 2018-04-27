@@ -1,34 +1,36 @@
 ---
-title: "Słabe wzorce zdarzeń"
-ms.custom: 
+title: Słabe wzorce zdarzeń
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - weak event pattern implementation [WPF]
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 21a36797f945f37a641e7002bbb9937a664650fd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f96327f8eaad36f3faebf48db083125816589821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="weak-event-patterns"></a>Słabe wzorce zdarzeń
-W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  
+W aplikacjach istnieje możliwość, że programy obsługi, które są dołączone do źródła zdarzeń nie zostaną usunięte w połączeniu z obiektu odbiornika, który dołączyć program obsługi do źródła. Taka sytuacja może prowadzić do przecieki pamięci. [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] wprowadza wzorzec projektowania, który może służyć do rozwiązania tego problemu, zapewniając klasy Menedżera dedykowane dla konkretnego zdarzenia i implementowanie interfejsu na odbiorników dla tego zdarzenia. Ten wzorzec projektowy nosi nazwę *wzorzec słabe zdarzeń*.  
   
 ## <a name="why-implement-the-weak-event-pattern"></a>Dlaczego implementują wzorzec słabe zdarzenia?  
- Nasłuchiwanie zdarzeń może prowadzić do przecieki pamięci. Typowe techniki do nasłuchiwania zdarzeń jest należy użyć składni specyficzny dla języka, łączący program obsługi zdarzeń w źródle. Na przykład w [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)], że składnia jest: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
+ Nasłuchiwanie zdarzeń może prowadzić do przecieki pamięci. Typowe techniki do nasłuchiwania zdarzeń jest należy użyć składni specyficzny dla języka, łączący program obsługi zdarzeń w źródle. Na przykład w języku C#, że składnia jest: `source.SomeEvent += new SomeEventHandler(MyEventHandler)`.  
   
  Ta metoda tworzy silne odwołanie ze źródła zdarzeń dla odbiornika zdarzeń. Zwykle dołączanie program obsługi zdarzeń dla odbiornika powoduje, że odbiornika mają okres istnienia obiektu, który ma wpływ okres istnienia obiektu źródłowego (chyba że obsługi zdarzeń jest jawnie usunięte). Jednak w pewnych okolicznościach może być okres istnienia obiektu nasłuchującego kontrolowany przez inne czynniki, takie jak obecnie przynależność do drzewa wizualnego aplikacji, a nie przez okres istnienia źródła. Zawsze, gdy okres istnienia obiektu źródłowego wykracza poza okres istnienia obiektu odbiornika, ze wzorcem normalnego zdarzeń prowadzi do przeciek pamięci: odbiornika jest utrzymywane dłużej niż zamierzony.  
   

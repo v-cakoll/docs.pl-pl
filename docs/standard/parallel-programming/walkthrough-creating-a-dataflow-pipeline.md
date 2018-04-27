@@ -1,5 +1,5 @@
 ---
-title: "Wskazówki: Tworzenie potoku przepływu danych"
+title: 'Wskazówki: Tworzenie potoku przepływu danych'
 ms.date: 03/30/2017
 ms.prod: .net
 ms.technology: dotnet-standard
@@ -18,11 +18,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2d0c886a443263897330dbd46a7f6f194bb20857
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: e6471de1a6231f114f6967bb6f777a8dc4d39b82
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>Wskazówki: Tworzenie potoku przepływu danych
 Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Receive%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Dataflow.DataflowBlock.ReceiveAsync%2A?displayProperty=nameWithType>, i <xref:System.Threading.Tasks.Dataflow.DataflowBlock.TryReceive%2A?displayProperty=nameWithType> metod do odbierania wiadomości z źródło bloków, możesz również nawiązać bloki komunikatów formularza *potoku przepływu danych*. Potoku przepływu danych jest szeregu składników, lub *bloków przepływu danych*, z których każdy wykonuje określone zadanie, która wspiera większy cel. Każdy blok przepływu danych w potoku przepływu danych wykonuje pracę po otrzymaniu komunikatu od innego bloku przepływu danych. Odpowiednio do tego zestawu dla jest wiersz samochodów produkcyjnym. Każdy vehicle przechodzi przez wiersz zestawu, jednej stacji składana ramki, kolejny instaluje aparat i tak dalej. Ponieważ wiersza zestawu umożliwia wielu pojazdów odbywać się w tym samym czasie, zapewnia lepszą przepustowość niż zebrania pojazdów kompletnych jednym naraz.
@@ -45,7 +45,7 @@ Chociaż można używać <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Rec
  Odczyt [przepływu danych](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md) przed skorzystaniem z tego przewodnika.  
   
 ## <a name="creating-a-console-application"></a>Tworzenie aplikacji konsoli  
- W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], Utwórz [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] lub [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] projekt aplikacji konsoli. Zainstaluj pakiet System.Threading.Tasks.Dataflow NuGet.
+ W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utworzyć projekt Visual C# lub Visual Basic aplikacji konsoli. Zainstaluj pakiet System.Threading.Tasks.Dataflow NuGet.
 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
 

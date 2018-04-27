@@ -10,37 +10,37 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-caps.latest.revision: ''
+caps.latest.revision: 25
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: fb23f329906e21f3d8558139075c5f575f2f13bd
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a636734958cd73a2f158d3f25cbbe448ff703612
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-adonet"></a>Co&#39;s Nowość w ADO.NET
 Następujące funkcje są nowością w programie [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)].  
   
 ## <a name="sqlclient-data-provider"></a>Dostawca danych SqlClient  
- Następujące funkcje są nowością w programie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych dla [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
+ Następujące funkcje są nowością w programie [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] dostawcy danych programu SQL Server w [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:  
   
 -   ConnectRetryCount i ConnectRetryInterval słowa kluczowe parametrów połączenia (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) pozwalają na kontrolowanie funkcji odporności bezczynnego połączenia.  
   
--   Obsługa z przesyłania strumieniowego [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] do aplikacji obsługuje scenariusze, w którym dane na serwerze nie ma określonej struktury.  Zobacz [obsługę przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) Aby uzyskać więcej informacji.  
+-   Obsługa z programu SQL Server do aplikacji przesyłania strumieniowego obsługuje zastosowaniach danych na serwerze bez struktury.  Zobacz [obsługę przesyłania strumieniowego SqlClient](../../../../docs/framework/data/adonet/sqlclient-streaming-support.md) Aby uzyskać więcej informacji.  
   
 -   Dodano obsługę programowania asynchronicznego.  Zobacz [programowania asynchronicznego](../../../../docs/framework/data/adonet/asynchronous-programming.md) Aby uzyskać więcej informacji.  
   
 -   Liczba błędów połączenia będą teraz rejestrowane w dzienniku zdarzeń rozszerzonych. Aby uzyskać więcej informacji, zobacz [danych śledzenia w ADO.NET](../../../../docs/framework/data/adonet/data-tracing.md).  
   
--   Klient SQL ma teraz obsługę [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)]w wysokiej dostępności, funkcji odzyskiwania po awarii (AlwaysOn). Aby uzyskać więcej informacji, zobacz [SqlClient obsługę wysokiej dostępności, odzyskiwania po awarii](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
+-   Klient SQL ma teraz obsługę programu SQL Server wysokiej dostępności, funkcji odzyskiwania po awarii (AlwaysOn). Aby uzyskać więcej informacji, zobacz [SqlClient obsługę wysokiej dostępności, odzyskiwania po awarii](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-high-availability-disaster-recovery.md).  
   
--   Hasła mogą być przekazywane jako <xref:System.Security.SecureString> przy użyciu [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] uwierzytelniania. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlCredential>.  
+-   Hasła mogą być przekazywane jako <xref:System.Security.SecureString> przy użyciu uwierzytelniania programu SQL Server. Aby uzyskać więcej informacji, zobacz <xref:System.Data.SqlClient.SqlCredential>.  
   
--   Gdy `TrustServerCertificate` ma wartość false i `Encrypt` jest wartość PRAWDA, nazwę serwera (lub adres IP) w [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] certyfikat SSL musi dokładnie odpowiadać serwera nazwę (lub adres IP) określona w parametrach połączenia. W przeciwnym razie próba połączenia zakończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz opis `Encrypt` opcji połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
+-   Gdy `TrustServerCertificate` ma wartość false i `Encrypt` ma wartość true, nazwy serwera (lub adres IP) certyfikat SSL serwera SQL musi dokładnie odpowiadać serwera nazwę (lub adres IP) określona w parametrach połączenia. W przeciwnym razie próba połączenia zakończy się niepowodzeniem. Aby uzyskać więcej informacji, zobacz opis `Encrypt` opcji połączenia w <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>.  
   
      Jeśli ta zmiana spowoduje istniejącej aplikacji do już połączyć, można naprawić aplikacji przy użyciu jednej z następujących czynności:  
   

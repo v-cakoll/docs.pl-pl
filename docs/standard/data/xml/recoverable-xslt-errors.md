@@ -1,26 +1,26 @@
 ---
-title: "Błędy możliwe do odzyskania XSLT"
-ms.custom: 
+title: Błędy możliwe do odzyskania XSLT
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4564530cd173793519471c78105d0394595f6d5c
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 70491e86697356766b64a98201b2969883ab7ee4
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="recoverable-xslt-errors"></a>Błędy możliwe do odzyskania XSLT
 Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których implementacji dostawcy może decyzję dotyczącą sposobu obsługi sytuacji. Te obszary są uważane za DACL zachowanie. Na przykład w sekcji 7.3 Tworzenie przetwarzania instrukcje, zalecenie XSLT 1.0 stwierdza, czy jest błąd, jeśli Tworzenie wystąpień zawartość `xsl:processing-instruction` tworzy węzły inne niż węzły tekstowe. W przypadku niektórych problemów 1.0 XSLT zalecenie wskazuje co decyzja należy Jeśli procesor decyduje o tym odzyskać sprawność po błędzie. Tego problemu podane w sekcji 7.3 W3C mówi, że implementacja można odzyskać tego błędu ignorowanie węzły i jego zawartość.  
@@ -32,7 +32,7 @@ Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których
   
 -   Błąd wskazuje, czy wyjątek jest zgłaszany tego warunku.  
   
--   Można znaleźć w sekcji odwołań [W3C transformacji XSL (XSLT) w wersji 1.0 zalecenie](http://www.w3.org/TR/xslt) i [W3C transformacji XSL (XSLT) w wersji 1.0 specyfikacji erracie](http://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
+-   Można znaleźć w sekcji odwołań [W3C transformacji XSL (XSLT) w wersji 1.0 zalecenie](http://www.w3.org/TR/xslt) i [W3C transformacji XSL (XSLT) w wersji 1.0 specyfikacji erracie](https://www.w3.org/1999/11/REC-xslt-19991116-errata/).  
   
 |Warunek XSLT|Sekcja|Zachowanie XslCompiledTransform|  
 |--------------------|-------------|-----------------------------------|  
@@ -62,7 +62,7 @@ Zalecenia w wersji 1.0 W3C transformacji XSL (XSLT) obejmuje obszary, w których
 |`value` Atrybutu `xsl:number` jest wartością typu NAN, nieskończone lub mniejsza niż 0,5|erracie 24|Odzyskiwanie|  
 |Drugi argument zestaw węzłów funkcji dokument jest pusty i odwołanie do identyfikatora URI jest względny.|erracie 14|Odzyskiwanie|  
   
- <sup>*</sup>To zachowanie różni się od elementu <xref:System.Xml.Xsl.XslTransform> klasy. Aby uzyskać więcej informacji, zobacz [implementacji zachowania DACL w klasie XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
+ <sup>*</sup> To zachowanie różni się od elementu <xref:System.Xml.Xsl.XslTransform> klasy. Aby uzyskać więcej informacji, zobacz [implementacji zachowania DACL w klasie XslTransform](../../../../docs/standard/data/xml/implementation-of-discretionary-behaviors-in-the-xsltransform-class.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przekształcenia XSLT](../../../../docs/standard/data/xml/xslt-transformations.md)

@@ -1,5 +1,5 @@
 ---
-title: "Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)"
+title: 'Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)'
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-caps.latest.revision: 
+caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: a277412c69d26f20721381d9cfa839c7f082f2f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e73ccee84c35678a4923347ab04619bb6017aca5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>Porady: implementowanie i wywołanie niestandardowej metody rozszerzenia (Przewodnik programowania w języku C#)
 W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla dowolnego typu .NET. Kod klienta można użyć metody rozszerzenia Dodawanie odwołania do pliku DLL zawierającego je i dodawanie [przy użyciu](../../../csharp/language-reference/keywords/using-directive.md) dyrektywy, który określa przestrzeń nazw, w którym zdefiniowano metody rozszerzenia.  
@@ -42,7 +42,7 @@ W tym temacie pokazano, jak wdrożyć własne metody rozszerzenia dla dowolnego 
  [!code-csharp[csProgGuideExtensionMethods#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-implement-and-call-a-custom-extension-method_1.cs)]  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Aby uruchomić ten kod, skopiuj i wklej go do języka Visual C# console aplikacji projekt, który został utworzony w [!INCLUDE[vs_current_short](~/includes/vs-current-short-md.md)]. Domyślnie ten projekt jest przeznaczony dla wersji 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], i zawiera odwołania do System.Core.dll i `using` dyrektywy dla System.Linq. Jeśli co najmniej jeden z tych wymagań brakuje z projektu, należy je dodać ręcznie.  
+ Aby uruchomić ten kod, skopiuj i wklej go do języka Visual C# projektu aplikacji konsolowej utworzony w programie Visual Studio. Domyślnie ten projekt jest przeznaczony dla wersji 3.5 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], i zawiera odwołania do System.Core.dll i `using` dyrektywy dla System.Linq. Jeśli co najmniej jeden z tych wymagań brakuje z projektu, należy je dodać ręcznie.  
   
 ## <a name="net-framework-security"></a>Zabezpieczenia.NET Framework  
  Metody rozszerzenia udostępniają nie luk. One nigdy nie można personifikować istniejących metod typu, ponieważ wszystkie konflikty nazw są rozpoznawane na rzecz wystąpienia lub statycznej metody zdefiniowane przez samego typu. Metody rozszerzenia nie dostęp do danych prywatnych rozszerzoną klasy.  

@@ -5,14 +5,15 @@ ms.prod: .net
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/22/2017
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 13f279b371bc5212a4ce9a171d37316c5e6efb77
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: bde96fd6348cf651dcca988eb546549fedf4df85
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Przepływ pracy DevOps aplikacji docker z narzędzi firmy Microsoft
 
@@ -32,7 +33,7 @@ Złożoność projektowanie aplikacji konteneryzowanych stopniowo zwiększa się
 
 -   Uruchamianie testów automatycznych jako część planowaną kompilacji w programie Visual Studio Team Services.
 
--   Visual Studio Team Services można zwiększyć DevOps cyklu życia z dostarczaniem w wielu środowiskach, nie tylko dla środowisk produkcyjnych, ale także do testowania, takie jak A / B eksperymenty, [mozgi wersjach](http://martinfowler.com/bliki/CanaryRelease.html)i tak dalej.
+-   Visual Studio Team Services można zwiększyć DevOps cyklu życia z dostarczaniem w wielu środowiskach, nie tylko dla środowisk produkcyjnych, ale także do testowania, takie jak A / B eksperymenty, [mozgi wersjach](https://martinfowler.com/bliki/CanaryRelease.html)i tak dalej.
 
 -   Organizacje łatwo można udostępnić kontenery Docker z prywatnej obrazy przechowywane w rejestrze kontenera Azure oraz wszelkie zależności na składnikach platformy Azure (danych, PaaS itp.) z narzędziami, które już znajdują się przy użyciu szablonów usługi Azure Resource Manager doświadczenia pracy.
 

@@ -1,23 +1,24 @@
 ---
 title: Buforowane odbierania
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9d46d9b9-96c9-4531-9695-ab526b4d704a
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a7a486d3fbfb520ffe3b32c392566e5147c5dfcc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9cd4dfcbfc9d417766615c624905f8bce2c10e54
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="buffered-receive"></a>Buforowane odbierania
 W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcję odbierania buforowane w [!INCLUDE[wf](../../../../includes/wf-md.md)]. Buforowane odbierania umożliwia autorowi przepływu pracy utworzyć przepływ pracy bez konieczności martwić o kolejność, w którym są odbierane wiadomości. Funkcja odbierania buforowanego buforuje wiadomości lokalnie i dostarcza je, gdy przepływ pracy jest gotowa do ich odebrania.  
@@ -47,7 +48,7 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcję odbieran
   
  Usługa udostępnia również metadanych dla usługi przy użyciu <xref:System.ServiceModel.Description.ServiceMetadataBehavior>.  
   
- Podobnie, klient punkt końcowy skonfigurowany przy użyciu <xref:System.ServiceModel.NetMsmqBinding>. Kod klienta i konfiguracji jest generowany przy użyciu **Dodaj odwołanie do usługi** funkcji [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)]. Poniższy przykład jest punkt końcowy wygenerowanego klienta w pliku App.config.  
+ Podobnie, klient punkt końcowy skonfigurowany przy użyciu <xref:System.ServiceModel.NetMsmqBinding>. Kod klienta i konfiguracji jest generowany przy użyciu **Dodaj odwołanie do usługi** funkcji programu Visual Studio. Poniższy przykład jest punkt końcowy wygenerowanego klienta w pliku App.config.  
   
 ```xml  
 <endpoint address="net.msmq://localhost/private/LoanService/Service1.xamlx"  
@@ -59,7 +60,7 @@ W tym przykładzie pokazano, jak instalowanie i konfigurowanie funkcję odbieran
   
 1.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]  
   
-2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)]Zgodność z narzędziami zarządzania metabazy i zgodności konfiguracji  
+2.  [!INCLUDE[iis60](../../../../includes/iis60-md.md)] Zgodność z narzędziami zarządzania metabazy i zgodności konfiguracji  
   
 3.  Usługi sieci World Wide Web, funkcje tworzenia aplikacji i programu ASP.NET  
   

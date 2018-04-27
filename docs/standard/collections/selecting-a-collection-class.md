@@ -1,12 +1,12 @@
 ---
 title: Wybieranie klasy kolekcji
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - last-in-first-out collections
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 05339b829262a6b9b3a0265e4fbd444c6d586ea3
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: cede57d398930684a68ad15f3e6426939bba2e08
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="selecting-a-collection-class"></a>Wybieranie klasy kolekcji
 Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu można ograniczyć korzystanie z kolekcji. Ogólnie rzecz biorąc, należy unikać typów w <xref:System.Collections> przestrzeni nazw o ile nie są specjalnie przeznaczonych dla platformy .NET Framework w wersji 1.1. Rodzajowa i współbieżnych wersje kolekcje są się ze względu na ich większe bezpieczeństwo typu i inne usprawnienia.  
@@ -72,20 +72,20 @@ Należy wybrać uważnie klasie kolekcji. Przy użyciu nieprawidłowego typu mo�
   
     -   <xref:System.Collections.SortedList> Klasy i <xref:System.Collections.Generic.SortedDictionary%602> i <xref:System.Collections.Generic.SortedList%602> klas rodzajowych sortowania ich elementów za pomocą klucza oparte na implementacje <xref:System.Collections.IComparer> interfejsu i <xref:System.Collections.Generic.IComparer%601> interfejs generyczny.  
   
-    -   <xref:System.Collections.ArrayList>udostępnia <xref:System.Collections.ArrayList.Sort%2A> metody pobierającej <xref:System.Collections.IComparer> implementacji jako parametr. Jego ogólny odpowiednik <xref:System.Collections.Generic.List%601> udostępnia ogólne klasy <xref:System.Collections.Generic.List%601.Sort%2A> metody pobierającej implementacja <xref:System.Collections.Generic.IComparer%601> interfejs ogólny jako parametr.  
+    -   <xref:System.Collections.ArrayList> udostępnia <xref:System.Collections.ArrayList.Sort%2A> metody pobierającej <xref:System.Collections.IComparer> implementacji jako parametr. Jego ogólny odpowiednik <xref:System.Collections.Generic.List%601> udostępnia ogólne klasy <xref:System.Collections.Generic.List%601.Sort%2A> metody pobierającej implementacja <xref:System.Collections.Generic.IComparer%601> interfejs ogólny jako parametr.  
   
 -   Czy potrzebna jest szybkie wyszukiwanie i pobieranie informacji?  
   
-    -   <xref:System.Collections.Specialized.ListDictionary>jest szybsze niż <xref:System.Collections.Hashtable> dla małych kolekcji (10 elementów lub mniej). <xref:System.Collections.Generic.Dictionary%602> Klasy ogólnej zapewnia szybsze wyszukiwanie niż <xref:System.Collections.Generic.SortedDictionary%602> klasy ogólnej. Implementacja wielowątkowych jest <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601>zapewnia szybkie wstawiania wielowątkowych nieuporządkowaną danych. Aby uzyskać więcej informacji na temat obu typów wielowątkowych, zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
+    -   <xref:System.Collections.Specialized.ListDictionary> jest szybsze niż <xref:System.Collections.Hashtable> dla małych kolekcji (10 elementów lub mniej). <xref:System.Collections.Generic.Dictionary%602> Klasy ogólnej zapewnia szybsze wyszukiwanie niż <xref:System.Collections.Generic.SortedDictionary%602> klasy ogólnej. Implementacja wielowątkowych jest <xref:System.Collections.Concurrent.ConcurrentDictionary%602>. <xref:System.Collections.Concurrent.ConcurrentBag%601> zapewnia szybkie wstawiania wielowątkowych nieuporządkowaną danych. Aby uzyskać więcej informacji na temat obu typów wielowątkowych, zobacz [kiedy należy używać kolekcji bezpiecznych wątkowo](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md).  
   
 -   Potrzebujesz kolekcje, które są akceptowane tylko ciągi?  
   
-    -   <xref:System.Collections.Specialized.StringCollection>(na podstawie <xref:System.Collections.IList>) i <xref:System.Collections.Specialized.StringDictionary> (na podstawie <xref:System.Collections.IDictionary>) znajdują się w <xref:System.Collections.Specialized> przestrzeni nazw.  
+    -   <xref:System.Collections.Specialized.StringCollection> (na podstawie <xref:System.Collections.IList>) i <xref:System.Collections.Specialized.StringDictionary> (na podstawie <xref:System.Collections.IDictionary>) znajdują się w <xref:System.Collections.Specialized> przestrzeni nazw.  
   
     -   Ponadto można użyć dowolnej klasy rodzajowej kolekcji w <xref:System.Collections.Generic> przestrzeń nazw jako silnie typizowane kolekcji ciągów, określając <xref:System.String> klasy dla ich argumentów typu ogólnego.  
   
 ## <a name="linq-to-objects-and-plinq"></a>LINQ do obiektów i PLINQ  
- LINQ do obiektów umożliwia deweloperom umożliwia uzyskiwanie dostępu do obiektów w pamięci, tak długo, jak typ obiektu implementuje zapytań LINQ <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelna niż standardowe `foreach` pętli i zapewnić filtrowania, kolejność i grupowanie możliwości. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
+ LINQ do obiektów umożliwia deweloperom umożliwia uzyskiwanie dostępu do obiektów w pamięci, tak długo, jak typ obiektu implementuje zapytań LINQ <xref:System.Collections.IEnumerable> lub <xref:System.Collections.Generic.IEnumerable%601>. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych, zazwyczaj są bardziej zwięzłe i czytelna niż standardowe `foreach` pętli i zapewnić filtrowania, kolejność i grupowanie możliwości. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9).  
   
  PLINQ udostępnia implementację równoległe LINQ do obiektów, które może zaoferować szybsze wykonywanie zapytania w wielu scenariuszach za pośrednictwem efektywniejsze wykorzystanie komputerach z procesorami wielordzeniowymi. Aby uzyskać więcej informacji, zobacz [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md).  
   

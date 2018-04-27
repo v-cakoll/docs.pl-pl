@@ -1,35 +1,37 @@
 ---
-title: "Wstawiania, aktualizowania i usuwania działań"
-ms.custom: 
+title: Wstawiania, aktualizowania i usuwania działań
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 51af1dad545f6ac948b17d1bdbd39bfc688c7f11
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcfb858dbc4bed1109c31c24b29731e74afd6ce1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="insert-update-and-delete-operations"></a>Wstawiania, aktualizowania i usuwania działań
 Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] przez dodawanie, zmienianie i usuwanie obiektów w modelu obiektu. Domyślnie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] tłumaczy akcje użytkownika do bazy danych SQL i przesyła zmiany do bazy danych.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]zapewnia elastyczność maksymalną manipulowanie i przechowywanie zmiany wprowadzone do obiektów. Jak jednostki dostępnych obiektów (niezależnie, pobierając je za pomocą kwerendy lub tworząc je ponownie), można je zmienić w typowych obiektów w aplikacji. Oznacza to można zmienić ich wartości, należy dodać je do kolekcji i można go usunąć z kolekcji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Śledzi zmiany i jest gotowy do przesyłania ich do bazy danych podczas wywoływania <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia elastyczność maksymalną manipulowanie i przechowywanie zmiany wprowadzone do obiektów. Jak jednostki dostępnych obiektów (niezależnie, pobierając je za pomocą kwerendy lub tworząc je ponownie), można je zmienić w typowych obiektów w aplikacji. Oznacza to można zmienić ich wartości, należy dodać je do kolekcji i można go usunąć z kolekcji. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Śledzi zmiany i jest gotowy do przesyłania ich do bazy danych podczas wywoływania <xref:System.Data.Linq.DataContext.SubmitChanges%2A>.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]nie obsługuje ani nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersza w tabeli, która ma ograniczenia na nim, należy albo zestaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych lub użyj własny kod, aby najpierw usunąć obiekty podrzędne, które zapobiec usunięciu obiektu nadrzędnego. W przeciwnym razie jest zgłaszany wyjątek. Aby uzyskać więcej informacji, zobacz [porady: usuwanie wierszy z bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] nie obsługuje ani nie rozpoznaje operacjami usuwania kaskadowego. Jeśli chcesz usunąć wiersza w tabeli, która ma ograniczenia na nim, należy albo zestaw `ON DELETE CASCADE` reguły w ograniczenie klucza obcego w bazie danych lub użyj własny kod, aby najpierw usunąć obiekty podrzędne, które zapobiec usunięciu obiektu nadrzędnego. W przeciwnym razie jest zgłaszany wyjątek. Aby uzyskać więcej informacji, zobacz [porady: usuwanie wierszy z bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md).  
   
  Następujące fragmentów użyj `Customer` i `Order` klasy z przykładowej bazy danych Northwind. Definicje klas nie są wyświetlane do skrócenia.  
   
@@ -41,7 +43,7 @@ Należy wykonać `Insert`, `Update`, i `Delete` operacje w [!INCLUDE[vbtecdlinq]
 > [!NOTE]
 >  Aby zmienić to zachowanie, należy za pomocą własnych niestandardowej logiki, zwykle na procedurę przechowywaną. Aby uzyskać więcej informacji, zobacz [obowiązki deweloperów w zastępowanie domyślne zachowanie](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md).  
 >   
->  Deweloperzy przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] można użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] aby opracować procedury składowane w tym celu.  
+>  Za pomocą programu Visual Studio deweloperzy mogą używać [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] aby opracować procedury składowane w tym celu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Pobieranie przykładowych baz danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)  

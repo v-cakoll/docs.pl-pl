@@ -1,7 +1,7 @@
 ---
-title: "Architektura Mikrousług"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Architektura Mikrousług"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Architektura Mikrousług
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Architektura Mikrousług
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 453f8a22157eee9601f2586d49d872d90634bb61
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 78d3903e7ed4abf27e78812de87ccbcb9f733663
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="microservices-architecture"></a>Architektura Mikrousług
 
@@ -55,15 +55,15 @@ Z nich tylko pierwsze trzy są objęte lub wprowadzone w tym przewodniku. Ostatn
     [*https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/*](https://azure.microsoft.com/blog/microservices-an-application-revolution-powered-by-the-cloud/)
 
 -   **Pole Fowler. Mikrousług**
-    [*http://www.martinfowler.com/articles/microservices.html*](http://www.martinfowler.com/articles/microservices.html)
+    [*https://www.martinfowler.com/articles/microservices.html*](https://www.martinfowler.com/articles/microservices.html)
 
 -   **Pole Fowler. Wymagania wstępne Mikrousługi**
-    [*http://martinfowler.com/bliki/MicroservicePrerequisites.html*](http://martinfowler.com/bliki/MicroservicePrerequisites.html)
+    [*https://martinfowler.com/bliki/MicroservicePrerequisites.html*](https://martinfowler.com/bliki/MicroservicePrerequisites.html)
 
 -   **Jimmy Nilsson. Bryłkach chmury obliczeniowej**
     [*https://www.infoq.com/articles/CCC-Jimmy-Nilsson*](https://www.infoq.com/articles/CCC-Jimmy-Nilsson)
 
--   **Torre de la Cesarowi. Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna) [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+-   **Torre de la Cesarowi. Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna) [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
 
 

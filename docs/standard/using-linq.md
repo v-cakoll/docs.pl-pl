@@ -13,11 +13,11 @@ ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 4d85104d016f5f19f6908670125df91f20536d72
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 5ce6819abee90ceccc52a79f8bda794f2fd345fb
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (zapytania zintegrowane Language)
 
@@ -83,7 +83,7 @@ public static IEnumerable<XElement> FindAllElementsWithAttribute(XElement docume
 
 Pisanie kodu ręcznie przechodzenia dokument XML, aby wykonać to zadanie będzie znacznie trudniejsze.
 
-Interakcja z XML nie jest jedyną operacją, której można zrobić za pomocą dostawcy LINQ. [LINQ do SQL](../../docs/framework/data/adonet/sql/linq/index.md) jest dość bez systemu operacyjnego kości obiektów relacyjnych mapowania (ORM) dla bazy danych MSSQL. [JSON.NET](http://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) Biblioteka zapewnia wydajne przechodzenie dokumentu JSON za pomocą LINQ. Ponadto, jeśli nie ma bibliotekę, która obsługuje, co jest potrzebne, można również [zapisać własnego dostawcę LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
+Interakcja z XML nie jest jedyną operacją, której można zrobić za pomocą dostawcy LINQ. [LINQ do SQL](../../docs/framework/data/adonet/sql/linq/index.md) jest dość bez systemu operacyjnego kości obiektów relacyjnych mapowania (ORM) dla bazy danych MSSQL. [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) Biblioteka zapewnia wydajne przechodzenie dokumentu JSON za pomocą LINQ. Ponadto, jeśli nie ma bibliotekę, która obsługuje, co jest potrzebne, można również [zapisać własnego dostawcę LINQ](https://msdn.microsoft.com/library/Bb546158.aspx)!
 
 ## <a name="why-use-the-query-syntax"></a>Dlaczego warto używać składni zapytania?
 
@@ -263,4 +263,4 @@ Działania równoległego zadania procesora, które można łatwo wyrazić za po
 
 *   [101 przykłady interfejsów LINQ](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
 *   [Linqpad](https://www.linqpad.net/), Plac zabaw dla środowiska i zapytań bazy danych aparatu dla C# / f # / VB.
-*   [EduLinq](http://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), książkę elektroniczną do uczenia implementowania LINQ do obiektów
+*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/), książkę elektroniczną do uczenia implementowania LINQ do obiektów

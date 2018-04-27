@@ -1,12 +1,12 @@
 ---
-title: "Wpisywanie atrybutów niestandardowych"
-ms.custom: 
+title: Wpisywanie atrybutów niestandardowych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,18 +22,18 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d3fb814d6b458de90d684a3ac92e22a62e290a9a
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: b38aa643453d9ad853d0d17af0f1ddf2ba69d4a1
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="writing-custom-attributes"></a>Wpisywanie atrybutów niestandardowych
 Projektowanie własnych niestandardowych atrybutów, nie trzeba wzorca wiele nowych pojęć. Jeśli znasz programowanie zorientowane obiektowo i dowiedzieć się, jak zaprojektować klasy, masz już większość wiedzy potrzebne. Atrybuty niestandardowe są zasadniczo tradycyjnych klas pochodzących od bezpośrednio lub pośrednio <xref:System.Attribute?displayProperty=nameWithType>. Podobnie jak tradycyjnych klasy atrybutów niestandardowych, które zawierają metod, które przechowują i pobierają dane.  
@@ -134,7 +134,7 @@ Projektowanie własnych niestandardowych atrybutów, nie trzeba wzorca wiele now
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- Można przeciążać konstruktora, aby zmieścił się w różnych kombinacji wartości. Jeśli również definiować [właściwości](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) dla klasy atrybutów niestandardowych, można użyć kombinacji parametrów nazwanych i pozycyjnych podczas inicjowania atrybutu. Zazwyczaj określa się wszystkie wymagane parametry jako parametry pozycyjne i wszystkie opcjonalne jako o nazwie. W takim przypadku atrybutu nie można zainicjować bez wymaganego parametru. Wszystkie inne parametry są opcjonalne. Należy pamiętać, że w języku Visual Basic konstruktory klasę atrybutów nie powinien używać ParamArray argument.  
+ Można przeciążać konstruktora, aby zmieścił się w różnych kombinacji wartości. Jeśli również definiować [właściwości](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52) dla klasy atrybutów niestandardowych, można użyć kombinacji parametrów nazwanych i pozycyjnych podczas inicjowania atrybutu. Zazwyczaj określa się wszystkie wymagane parametry jako parametry pozycyjne i wszystkie opcjonalne jako o nazwie. W takim przypadku atrybutu nie można zainicjować bez wymaganego parametru. Wszystkie inne parametry są opcjonalne. Należy pamiętać, że w języku Visual Basic konstruktory klasę atrybutów nie powinien używać ParamArray argument.  
   
  Poniższy przykładowy kod przedstawia jak atrybut, który używa poprzedniej Konstruktor może odnosić się przy użyciu parametrów opcjonalne i wymagane. Przyjęto założenie, że ten atrybut ma jedną wartość logiczną wymagane, a właściwość jeden opcjonalny ciąg.  
   
@@ -144,7 +144,7 @@ Projektowanie własnych niestandardowych atrybutów, nie trzeba wzorca wiele now
   
 <a name="cpcondeclaringproperties"></a>   
 ## <a name="declaring-properties"></a>Deklarowanie właściwości  
- Jeśli chcesz zdefiniować nazwany parametr lub umożliwiają łatwe do zwrócenia wartości przechowywanych przez atrybut, Zadeklaruj [właściwości](http://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Właściwości atrybutów powinien być zadeklarowany jako publiczny jednostki z opisu typu danych, które zostaną zwrócone. Definiowanie zmiennej, która będzie przechowywać wartości z właściwości i skojarz ją z **uzyskać** i **ustawić** metody. Poniższy przykład kodu pokazuje, jak do zaimplementowania właściwości prostej w atrybut.  
+ Jeśli chcesz zdefiniować nazwany parametr lub umożliwiają łatwe do zwrócenia wartości przechowywanych przez atrybut, Zadeklaruj [właściwości](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52). Właściwości atrybutów powinien być zadeklarowany jako publiczny jednostki z opisu typu danych, które zostaną zwrócone. Definiowanie zmiennej, która będzie przechowywać wartości z właściwości i skojarz ją z **uzyskać** i **ustawić** metody. Poniższy przykład kodu pokazuje, jak do zaimplementowania właściwości prostej w atrybut.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]

@@ -1,30 +1,30 @@
 ---
-title: "Stałe — Przegląd (Visual Basic)"
-ms.custom: 
+title: Stałe — Przegląd (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-caps.latest.revision: 
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e6526f7270602b3e1a4e8d953732c393ff252b2c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40330e8c2c60c866200e009a8280c7ec9c855435
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="constants-overview-visual-basic"></a>Stałe — Przegląd (Visual Basic)
 Stała jest znaczącą nazwę, która ma miejsce, liczby lub ciąg, który nie ulega zmianie. Stałe przechowywać wartości, które jak wskazuje nazwę, pozostają takie same w całej wykonywania aplikacji. Można znacznie poprawić czytelność kodu i ułatwić Obsługa za pomocą stałych. Korzystanie z nich kod, który zawiera wartości, które się ponownie lub to zależy od niektórych liczb, które są trudne do zapamiętania lub mieć znaczenia oczywiste.  
   
 ## <a name="how-to-create-and-use-constants"></a>Tworzenie i używanie stałych  
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]zawiera szereg wstępnie zdefiniowanych stałe, głównie przy użyciu drukowania i wyświetlania. Można również tworzyć własne stałe z `Const` instrukcji, korzystając z tego samego wskazówek, jak do tworzenia nazwy zmiennej. Jeśli `Option Strict` jest `On`, musisz jawnie zadeklarować typu stałej.  
+ Visual Basic zawiera szereg wstępnie zdefiniowanych stałe głównie przy użyciu drukowania i wyświetlania. Można również tworzyć własne stałe z `Const` instrukcji, korzystając z tego samego wskazówek, jak do tworzenia nazwy zmiennej. Jeśli `Option Strict` jest `On`, musisz jawnie zadeklarować typu stałej.  
   
  Stała zakresu, który jest zestaw wszystkich kod, który może odwoływać się do niego bez kwalifikujących się jego nazwa, jest taka sama jak zmiennej zadeklarowanej w tej samej lokalizacji. Aby utworzyć stałą, który istnieje w zakresie określona procedura, należy zadeklarować wewnątrz tej procedury. Aby utworzyć stałą, które są dostępne w całej aplikacji, Zadeklaruj ją przy użyciu `Public` — słowo kluczowe w sekcji deklaracji klasy.  
   
@@ -40,19 +40,19 @@ Stała jest znaczącą nazwę, która ma miejsce, liczby lub ciąg, który nie u
   
 |Definicja|Termin|  
 |---|---|  
-|[Porady: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Wyjaśniono, jak używać `Const` instrukcji deklarowanie stałej i ustaw jej wartość; przez deklarowanie stałej, Przypisz nazwę opisową wartości.|  
+|[Instrukcje: deklarowanie stałej](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|Wyjaśniono, jak używać `Const` instrukcji deklarowanie stałej i ustaw jej wartość; przez deklarowanie stałej, Przypisz nazwę opisową wartości.|  
 |[Stałe zdefiniowane przez użytkownika](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|Opisuje, jak utworzyć własne stałe, w tym informacji na temat określania zakresu oraz uniknąć odwołań cyklicznych.|  
-|[Stała i typy literałów](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Zawiera informacje dotyczące sposobu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora inicjuje stałe podczas `Option Explicit` jest wyłączona.|  
-|[Porady: Grupowanie związanych wartości stałych razem](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Pokazuje sposób grupowania stałe wartości, które są powiązane.|  
+|[Typy danych Stała i Literał](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|Zawiera informacje na temat sposobu kompilator Visual Basic inicjuje stałe podczas `Option Explicit` jest wyłączona.|  
+|[Instrukcje: grupowanie powiązanych wartości stałych](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|Pokazuje sposób grupowania stałe wartości, które są powiązane.|  
   
 ## <a name="reference"></a>Tematy pomocy  
   
 |Definicja|Termin|  
 |---|---|  
-|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Wyświetla listę stałych wstępnie zdefiniowane przez [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].|  
-|[Const — instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)|W tym artykule opisano `Const` instrukcji i jego użycia.|  
-|[Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|W tym artykule opisano `Option Strict` instrukcji i jego użycia.|  
+|[Stałe i wyliczenia](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Wyświetla listę stałych wstępnie zdefiniowane przez program Visual Basic.|  
+|[Const, instrukcja](../../../../visual-basic/language-reference/statements/const-statement.md)|W tym artykule opisano `Const` instrukcji i jego użycia.|  
+|[Option Strict, instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|W tym artykule opisano `Option Strict` instrukcji i jego użycia.|  
   
 ## <a name="see-also"></a>Zobacz też  
- [Enumerations — Przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
+ [Wyliczenia — przegląd](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)  
  [Porady: inicjowanie zmiennej tablicy w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

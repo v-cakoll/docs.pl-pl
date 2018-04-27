@@ -1,12 +1,13 @@
 ---
-title: "Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows"
-ms.custom: 
+title: Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 335e9487468522abb3a18f51f9a089d25519e71c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.  
@@ -144,7 +146,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  W [!INCLUDE[csprcs](../../../includes/csprcs-md.md)], upewnij się, że należy dodać kodu w celu włączenia obsługi zdarzeń. Przy użyciu kodu z poprzedniego przykładu, poniższy kod przedstawia sposób włączania obsługi zdarzeń.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
+>  W środowisku Visual C#, upewnij się, że należy dodać kodu w celu włączenia obsługi zdarzeń. Przy użyciu kodu z poprzedniego przykładu, poniższy kod przedstawia sposób włączania obsługi zdarzeń.`this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);`  
   
 ### <a name="other-files"></a>Inne pliki  
  Czasami należy do odczytu lub zapisu do plików, że użytkownik nie określi, np. gdy muszą zostać zachowane ustawienia aplikacji. W strefach Internet i Lokalny intranet aplikacji nie ma uprawnień do przechowywania danych w pliku lokalnym. Jednak aplikacja będzie do przechowywania danych w magazynie izolowanym. Izolowany magazyn jest przedział danych abstrakcyjny (nie lokalizację przechowywania określonych), zawierający pliki izolowanych magazynów, nazywany magazynów, zawierające lokalizacje katalogowych, których są przechowywane dane. Uprawnienia dostępu, takich jak plików <xref:System.Security.Permissions.FileIOPermission> nie są wymagane; zamiast tego <xref:System.Security.Permissions.IsolatedStoragePermission> klasa steruje uprawnienia dla izolowanego magazynu. Domyślnie aplikacje, które są uruchomione w strefach Internet i Lokalny intranet mogą przechowywać dane przy użyciu izolowanego magazynu; jednak można wybrać różne ustawienia, takie jak przydział dysku. Aby uzyskać więcej informacji na temat izolowane magazynu, zobacz [izolowanych magazynów](../../../docs/standard/io/isolated-storage.md).  
@@ -365,7 +367,7 @@ public void Write()
  Jeśli nie można bezpośrednio dostęp do bazy danych, ponieważ ma aplikację do uruchamiania w częściowej relacji zaufania, można użyć usługi sieci Web jako alternatywę oznacza dostępu do danych. Usługi sieci Web jest to oprogramowanie, które mogą uzyskiwać programowo za pośrednictwem sieci. Z usługami sieci Web aplikacje mogą udostępniać dane w różnych strefach grupy kodu. Domyślnie aplikacje w strefach Internet i Lokalny intranet mają prawo dostępu do swoich witryn pochodzenia, co umożliwia ich do wywoływania usługi sieci Web hostowanych na tym samym serwerze. Aby uzyskać więcej informacji, zobacz [usług sieci Web w technologii ASP.NET AJAX](http://msdn.microsoft.com/library/8290e543-7eff-47a4-aace-681f3c07229b) lub [Windows Communication Foundation](http://msdn.microsoft.com/library/ms735119.aspx).  
   
 ## <a name="registry-access"></a>Dostęp do rejestru  
- <xref:System.Security.Permissions.RegistryPermission> Klasy kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko uruchomione lokalnie aplikacje mogą uzyskać dostępu do rejestru.  <xref:System.Security.Permissions.RegistryPermission>tylko daje aplikacji prawo próby dostępu do rejestru; go nie gwarantuje, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczeń do rejestru.  
+ <xref:System.Security.Permissions.RegistryPermission> Klasy kontroluje dostęp do rejestru systemu operacyjnego. Domyślnie tylko uruchomione lokalnie aplikacje mogą uzyskać dostępu do rejestru.  <xref:System.Security.Permissions.RegistryPermission> tylko daje aplikacji prawo próby dostępu do rejestru; go nie gwarantuje, że dostęp powiedzie się, ponieważ system operacyjny nadal wymusza zabezpieczeń do rejestru.  
   
  Ponieważ nie można uzyskać dostępu do rejestru w częściowej relacji zaufania, konieczne może być znaleźć inne metody przechowywania danych. Po zapisaniu ustawień aplikacji należy używać izolowanego magazynu, zamiast rejestru. Izolowany magazyn mogą służyć do przechowywania plików innych aplikacji. Można również przechowywać informacje o aplikacji globalnego dotyczące serwera lub witryny pochodzenia, ponieważ domyślnie aplikacja jest uprawnień dostępu do witryny ze swoją witryną źródłową.  
   

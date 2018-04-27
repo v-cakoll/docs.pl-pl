@@ -1,26 +1,26 @@
 ---
 title: Mapowanie typu danych serwera SQL
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-ado
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-caps.latest.revision: 
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 812b953935d17320d83e3752d8c7fd600af15533
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: e1af00ba0a1f631868711f191c028a04c5e0441a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sql-server-data-type-mappings"></a>Mapowanie typu danych serwera SQL
 SQL Server i programu .NET Framework są oparte na systemach innego typu. Na przykład, .NET Framework <xref:System.Decimal> struktury ma maksymalną skalę 28, natomiast typy danych numerycznych i dziesiętnych programu SQL Server ma maksymalną skalę wynosząca 38. Zachowanie spójności danych podczas odczytywania i zapisywania danych, <xref:System.Data.SqlClient.SqlDataReader> ujawnia specyficzne dla programu SQL Server typu metody dostępu, które zwracają obiekty <xref:System.Data.SqlTypes> oraz metod dostępu, które zwracają .NET Framework typów. Zarówno program SQL Server typy i .NET Framework, również są przedstawiane przez wyliczeń w <xref:System.Data.DbType> i <xref:System.Data.SqlDbType> klasy, które można używać podczas określania <xref:System.Data.SqlClient.SqlParameter> typów danych.  
@@ -54,7 +54,7 @@ SQL Server i programu .NET Framework są oparte na systemach innego typu. Na prz
 |smallmoney|Wartość dziesiętna|<xref:System.Data.SqlDbType.SmallMoney>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlMoney%2A>|<xref:System.Data.DbType.Decimal>|<xref:System.Data.SqlClient.SqlDataReader.GetDecimal%2A>|  
 |sql_variant|Obiekt <sup>2</sup>|<xref:System.Data.SqlDbType.Variant>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A> <sup>2</sup>|<xref:System.Data.DbType.Object>|<xref:System.Data.SqlClient.SqlDataReader.GetValue%2A> <sup>2</sup>|  
 |tekst|String<br /><br /> CHAR]|<xref:System.Data.SqlDbType.Text>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlString%2A>|<xref:System.Data.DbType.String>|<xref:System.Data.SqlClient.SqlDataReader.GetString%2A><br /><br /> <xref:System.Data.SqlClient.SqlDataReader.GetChars%2A>|  
-|czas<br /><br /> (SQL Server 2008 i nowsze)|TimeSpan|<xref:System.Data.SqlDbType.Time>|brak|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
+|czas<br /><br /> (SQL Server 2008 i nowsze)|Zakres czasu|<xref:System.Data.SqlDbType.Time>|brak|<xref:System.Data.DbType.Time>|<xref:System.Data.SqlClient.SqlDataReader.GetDateTime%2A>|  
 |znacznik czasu|Byte[]|<xref:System.Data.SqlDbType.Timestamp>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlBinary%2A>|<xref:System.Data.DbType.Binary>|<xref:System.Data.SqlClient.SqlDataReader.GetBytes%2A>|  
 |tinyint|Byte|<xref:System.Data.SqlDbType.TinyInt>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlByte%2A>|<xref:System.Data.DbType.Byte>|<xref:System.Data.SqlClient.SqlDataReader.GetByte%2A>|  
 |uniqueidentifier|Identyfikator GUID|<xref:System.Data.SqlDbType.UniqueIdentifier>|<xref:System.Data.SqlClient.SqlDataReader.GetSqlGuid%2A>|<xref:System.Data.DbType.Guid>|<xref:System.Data.SqlClient.SqlDataReader.GetGuid%2A>|  
@@ -65,8 +65,8 @@ SQL Server i programu .NET Framework są oparte na systemach innego typu. Na prz
 <sup>1</sup> nie można ustawić `DbType` właściwość `SqlParameter` do `SqlDbType.Date`.  
 <sup>2</sup> użyć określonego typu metody dostępu, jeśli znasz z typem podstawowym typu `sql_variant`.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-books-online-reference"></a>[!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] Odwołanie do dokumentacji książki Online  
- Aby uzyskać więcej informacji na temat [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] , zobacz [typy danych (aparat bazy danych)](http://go.microsoft.com/fwlink/?LinkID=107468).  
+## <a name="sql-server-books-online-reference"></a>Dokumentacji SQL Server Books Online odwołania  
+ Aby uzyskać więcej informacji na temat typów danych programu SQL Server, zobacz [typy danych (aparat bazy danych)](http://go.microsoft.com/fwlink/?LinkID=107468).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Typy danych programu SQL Server i ADO.NET](../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)  

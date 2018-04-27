@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Zdarzenia trasowane"
-ms.custom: 
+title: Przegląd Zdarzenia trasowane
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-caps.latest.revision: "29"
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22ce2611afa2a3b2b06b7d378479e5ffd2f744f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 896f3b852c00b9c7cd031710dbdaa00974428344
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="routed-events-overview"></a>Przegląd Zdarzenia trasowane
 W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Temat definiuje terminologii kierowane zdarzenia, w tym artykule opisano sposób kierowane zdarzenia są wysyłane za pośrednictwem drzewa elementów, zawiera podsumowanie sposobu obsługi kierowane zdarzenia oraz przedstawiono sposób tworzenia własnego niestandardowego kierowane zdarzenia.
@@ -127,12 +129,12 @@ W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient
   
  [!code-xaml[EventOvwSupport#SimplestSyntax](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#simplestsyntax)]  
   
- `b1SetColor`Nazwa wdrożony program obsługi, który zawiera kod, który obsługuje <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. `b1SetColor`musi mieć taką samą sygnaturę jak <xref:System.Windows.RoutedEventHandler> delegata, która jest delegata obsługi zdarzeń dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. Pierwszy parametr wszystkich delegatów obsługi kierowanego zdarzenia określa element, do którego jest dodawany program obsługi zdarzeń, a drugi parametr określa dane dla zdarzenia.  
+ `b1SetColor` Nazwa wdrożony program obsługi, który zawiera kod, który obsługuje <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. `b1SetColor` musi mieć taką samą sygnaturę jak <xref:System.Windows.RoutedEventHandler> delegata, która jest delegata obsługi zdarzeń dla <xref:System.Windows.Controls.Primitives.ButtonBase.Click> zdarzeń. Pierwszy parametr wszystkich delegatów obsługi kierowanego zdarzenia określa element, do którego jest dodawany program obsługi zdarzeń, a drugi parametr określa dane dla zdarzenia.  
   
 [!code-csharp[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#simplehandlera)]
 [!code-vb[EventOvwSupport#SimpleHandlerA](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#simplehandlera)]  
   
- <xref:System.Windows.RoutedEventHandler>jest delegata obsługi podstawowych kierowanego zdarzenia. Dla kierowanego zdarzenia specjalnych niektórych formantów lub scenariuszy, delegatów do użycia na potrzeby obsługi zdarzeń routingiem również może stają się coraz bardziej wyspecjalizowane, tak, aby ich może przesyłać dane zdarzeń specjalnych. Na przykład w typowym scenariuszem wejściowych, może obsługiwać <xref:System.Windows.UIElement.DragEnter> kierowanego zdarzenia. Twoje obsługi powinien implementować <xref:System.Windows.DragEventHandler> delegowanie. Za pomocą specyficzny delegata, można przetwarzać <xref:System.Windows.DragEventArgs> obsługi i odczytu <xref:System.Windows.DragEventArgs.Data%2A> właściwości, która zawiera ładunek Schowka operacji przeciągania.  
+ <xref:System.Windows.RoutedEventHandler> jest delegata obsługi podstawowych kierowanego zdarzenia. Dla kierowanego zdarzenia specjalnych niektórych formantów lub scenariuszy, delegatów do użycia na potrzeby obsługi zdarzeń routingiem również może stają się coraz bardziej wyspecjalizowane, tak, aby ich może przesyłać dane zdarzeń specjalnych. Na przykład w typowym scenariuszem wejściowych, może obsługiwać <xref:System.Windows.UIElement.DragEnter> kierowanego zdarzenia. Twoje obsługi powinien implementować <xref:System.Windows.DragEventHandler> delegowanie. Za pomocą specyficzny delegata, można przetwarzać <xref:System.Windows.DragEventArgs> obsługi i odczytu <xref:System.Windows.DragEventArgs.Data%2A> właściwości, która zawiera ładunek Schowka operacji przeciągania.  
   
  Aby uzyskać kompletny przykład sposobu dodawania obsługi zdarzeń do elementu przy użyciu [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], zobacz [obsługi zdarzenia rozsyłane](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md).  
   
@@ -141,18 +143,18 @@ W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient
  [!code-csharp[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlercode)]
  [!code-vb[EventOvwSupport#AddHandlerCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlercode)]  
   
- W następnym przykładzie pokazano [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] składni operatora ([!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] ma składnię operatora nieco inny ze względu na jego obsługa usunięcia odwołania):  
+ Następny przykład pokazuje C# — operator składnia (Visual Basic ma składnię operatora nieco inny ze względu na jego obsługa usunięcia odwołania):  
   
  [!code-csharp[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#addhandlerplusequals)]
  [!code-vb[EventOvwSupport#AddHandlerPlusEquals](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#addhandlerplusequals)]  
   
  Na przykład sposobu obsługi zdarzeń w kodzie zobacz [Dodaj kod przy użyciu programu obsługi zdarzeń](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md).  
   
- Jeśli używasz [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)], można również użyć `Handles` — słowo kluczowe, aby dodać deklaracje obsługi w ramach obsługi. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługi zdarzeń WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
+ Jeśli używasz programu Visual Basic, można również użyć `Handles` — słowo kluczowe, aby dodać deklaracje obsługi w ramach obsługi. Aby uzyskać więcej informacji, zobacz [Visual Basic i obsługi zdarzeń WPF](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md).  
   
 <a name="concept_handled"></a>   
 ### <a name="the-concept-of-handled"></a>Obsługiwane pojęcia  
- Wszystkie zdarzenia routingiem udostępnianie typowych zdarzeń danych klasy podstawowej, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs>definiuje <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwość, która przyjmuje wartość logiczną. Celem <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości jest włączenie obsługi zdarzeń, wszelkie wzdłuż trasy, aby oznaczyć kierowanego zdarzenia jako *obsługiwane*, ustawiając wartość <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true`. Po przetworzeniu przez program obsługi w jeden element marszruty dane zdarzenia udostępnionych ponownie został zgłoszony dla każdego odbiornika wzdłuż trasy.  
+ Wszystkie zdarzenia routingiem udostępnianie typowych zdarzeń danych klasy podstawowej, <xref:System.Windows.RoutedEventArgs>. <xref:System.Windows.RoutedEventArgs> definiuje <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwość, która przyjmuje wartość logiczną. Celem <xref:System.Windows.RoutedEventArgs.Handled%2A> właściwości jest włączenie obsługi zdarzeń, wszelkie wzdłuż trasy, aby oznaczyć kierowanego zdarzenia jako *obsługiwane*, ustawiając wartość <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true`. Po przetworzeniu przez program obsługi w jeden element marszruty dane zdarzenia udostępnionych ponownie został zgłoszony dla każdego odbiornika wzdłuż trasy.  
   
  Wartość <xref:System.Windows.RoutedEventArgs.Handled%2A> wpływa na sposób kierowanego zdarzenia jest zgłosił lub przetworzone podczas przekazywania dalej w tym samym trasy. Jeśli <xref:System.Windows.RoutedEventArgs.Handled%2A> jest `true` zdarzeń dane dotyczące kierowanego zdarzenia, a następnie obsługi, które nasłuchują tego kierowanego zdarzenia na inne elementy zazwyczaj są wywoływane już dla danego wystąpienia określonego zdarzenia. Dotyczy to zarówno dla programów obsługi dołączona w [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] i programów obsługi dodane przez składni załącznika obsługi zdarzenia specyficzne dla języka, takich jak `+=` lub `Handles`. W przypadku najbardziej typowych scenariuszy obsługi oznaczenie zdarzenia jako obsługiwany dzięki ustawieniu <xref:System.Windows.RoutedEventArgs.Handled%2A> do `true` "przestanie" routingu dla trasy tunelowania lub propagacji trasy, a także dla dowolnego zdarzenia, który jest obsługiwany w danym punkcie trasy przez program obsługi klasy.  
   
@@ -200,13 +202,13 @@ W tym temacie opisano pojęcia kierowane zdarzenia w [!INCLUDE[TLA#tla_winclient
   
  [!code-xaml[EventOvwSupport#GroupButton](../../../../samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml#groupbutton)]  
   
- W tym miejscu odbiornika elementu nadrzędnego, gdzie jest dodawany program obsługi jest <xref:System.Windows.Controls.StackPanel>. Jednak jest dodanie obsługi kierowanego zdarzenia, została zadeklarowana, który zostanie wygenerowany przez <xref:System.Windows.Controls.Button> klasy (<xref:System.Windows.Controls.Primitives.ButtonBase> rzeczywiście, ale można <xref:System.Windows.Controls.Button> poprzez dziedziczenie). <xref:System.Windows.Controls.Button>"właścicielem" zdarzenia, ale kierowanego zdarzenia system zezwala programy obsługi dowolnej kierowanego zdarzenia jest dołączony do żadnej <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> odbiornika wystąpienia, które w przeciwnym razie można dołączyć odbiorników dla [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Domyślnej przestrzeni nazw xmlns te nazwy atrybutu kwalifikowaną zdarzeń jest zazwyczaj domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw xmlns, ale można również określić prefiksem przestrzeni nazw dla niestandardowego kierowane zdarzenia. Aby uzyskać więcej informacji na temat xmlns, zobacz [przestrzeń nazw XAML i Namespace mapowanie WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
+ W tym miejscu odbiornika elementu nadrzędnego, gdzie jest dodawany program obsługi jest <xref:System.Windows.Controls.StackPanel>. Jednak jest dodanie obsługi kierowanego zdarzenia, została zadeklarowana, który zostanie wygenerowany przez <xref:System.Windows.Controls.Button> klasy (<xref:System.Windows.Controls.Primitives.ButtonBase> rzeczywiście, ale można <xref:System.Windows.Controls.Button> poprzez dziedziczenie). <xref:System.Windows.Controls.Button> "właścicielem" zdarzenia, ale kierowanego zdarzenia system zezwala programy obsługi dowolnej kierowanego zdarzenia jest dołączony do żadnej <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> odbiornika wystąpienia, które w przeciwnym razie można dołączyć odbiorników dla [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] zdarzeń. Domyślnej przestrzeni nazw xmlns te nazwy atrybutu kwalifikowaną zdarzeń jest zazwyczaj domyślnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] przestrzeni nazw xmlns, ale można również określić prefiksem przestrzeni nazw dla niestandardowego kierowane zdarzenia. Aby uzyskać więcej informacji na temat xmlns, zobacz [przestrzeń nazw XAML i Namespace mapowanie WPF XAML](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md).  
   
 <a name="how_event_processing_works"></a>   
 ## <a name="wpf-input-events"></a>Zdarzenia wejściowe WPF  
  Jeden częstego stosowania kierowane zdarzenia w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] platforma to dla zdarzenia wejściowe. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], tunelowania kierowane zdarzenia nazwy są poprzedzone wyrazem "W wersji zapoznawczej" Konwencji. Zdarzenia wejściowe często mają parami, jeden propagacji zdarzeń, a druga jest tunelowania zdarzeń. Na przykład <xref:System.Windows.ContentElement.KeyDown> zdarzeń i <xref:System.Windows.ContentElement.PreviewKeyDown> zdarzeń ma taką samą sygnaturę z nią trwa propagacji zdarzenie wejściowe i ostatni trwa tunelowania wejściowego zdarzeń. Czasami zdarzenia wejściowe ma tylko propagacji wersji lub prawdopodobnie tylko bezpośrednie routingiem wersji. W dokumentacji tematy dotyczące kierowanego zdarzenia wstawienia odsyłacza kierowanego zdarzenia podobne z alternatywnych strategii routingu Jeśli istnieją takie kierowane zdarzenia i sekcje na stronach zarządzane odniesienia wyjaśnienia strategii routingu każdego kierowanego zdarzenia.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wejściowy zdarzenia, które są dostępne w pary są implementowane tak, aby jednego działania użytkownika z danych wejściowych, takich jak naciśnięcie przycisku myszy zostanie podniesiony zarówno kierowane zdarzenia pary w sekwencji. Najpierw tunelowania zdarzenie jest wywoływane i podróżuje trasę. Następnie propagacji zdarzenie jest wywoływane i podróżuje trasę. Dwa zdarzenia dosłownie współużytkują to samo wystąpienie danych zdarzeń, ponieważ <xref:System.Windows.UIElement.RaiseEvent%2A> wywołanie metody implementującej klasy, który wywołuje zdarzenie propagacji nasłuchuje dane zdarzeń z tunelowania zdarzeń i ponownie go w nowym zdarzeniem zgłoszono. Odbiorniki z obsługą tunelowania zdarzenia mają pierwsza okazja, aby oznaczyć kierowanego zdarzenia obsługiwane (obsługę klas, następnie wystąpienie obsługi). Jeśli element wzdłuż trasy tunelowania oznaczył kierowanego zdarzenia obsługiwane, dane już obsługi zdarzeń jest wysyłany na propagacji zdarzenia i typowych programów obsługi dołączonych do jego odpowiednik propagacji zdarzenia wejściowe nie zostaną wywołane. Aby na zewnątrz wygląd będzie, tak, jakby obsłużone zdarzeń propagacji nie ma jeszcze wywoływane. To zachowanie obsługa przydaje się do składania kontroli, których może zajść wszystkich testów trafień na podstawie wejściowy lub zdarzenia na podstawie fokusu wprowadzania przekazywanych przez końcowego formantu zamiast jego części złożonego. Element końcowej kontroli zbliżonej do katalogu głównego w składania i w związku z tym ma możliwość klasy obsługi zdarzeń tunelowania najpierw i być może do "replace" tego kierowanego zdarzenia ze zdarzeniem bardziej specyficzne dla formantu, jako części kodu, aby utworzyć kopię zapasową formantu Klasa.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wejściowy zdarzenia, które są dostępne w pary są implementowane tak, aby jednego działania użytkownika z danych wejściowych, takich jak naciśnięcie przycisku myszy zostanie podniesiony zarówno kierowane zdarzenia pary w sekwencji. Najpierw tunelowania zdarzenie jest wywoływane i podróżuje trasę. Następnie propagacji zdarzenie jest wywoływane i podróżuje trasę. Dwa zdarzenia dosłownie współużytkują to samo wystąpienie danych zdarzeń, ponieważ <xref:System.Windows.UIElement.RaiseEvent%2A> wywołanie metody implementującej klasy, który wywołuje zdarzenie propagacji nasłuchuje dane zdarzeń z tunelowania zdarzeń i ponownie go w nowym zdarzeniem zgłoszono. Odbiorniki z obsługą tunelowania zdarzenia mają pierwsza okazja, aby oznaczyć kierowanego zdarzenia obsługiwane (obsługę klas, następnie wystąpienie obsługi). Jeśli element wzdłuż trasy tunelowania oznaczył kierowanego zdarzenia obsługiwane, dane już obsługi zdarzeń jest wysyłany na propagacji zdarzenia i typowych programów obsługi dołączonych do jego odpowiednik propagacji zdarzenia wejściowe nie zostaną wywołane. Aby na zewnątrz wygląd będzie, tak, jakby obsłużone zdarzeń propagacji nie ma jeszcze wywoływane. To zachowanie obsługa przydaje się do składania kontroli, których może zajść wszystkich testów trafień na podstawie wejściowy lub zdarzenia na podstawie fokusu wprowadzania przekazywanych przez końcowego formantu zamiast jego części złożonego. Element końcowej kontroli zbliżonej do katalogu głównego w składania i w związku z tym ma możliwość klasy obsługi zdarzeń tunelowania najpierw i być może do "replace" tego kierowanego zdarzenia ze zdarzeniem bardziej specyficzne dla formantu, jako części kodu, aby utworzyć kopię zapasową formantu Klasa.  
   
  Ilustracją przetwarzania działa jak wejściowych zdarzeń należy wziąć pod uwagę w poniższym przykładzie zdarzenie wejściowe. Na poniższej ilustracji drzewa `leaf element #2` jest elementem źródłowym `PreviewMouseDown` , a następnie `MouseDown` zdarzeń.  
   
@@ -215,17 +217,17 @@ Zdarzenie wejściowe propagacji i tunelowania
   
  Kolejność przetwarzania zdarzeń wygląda następująco:  
   
-1.  `PreviewMouseDown`(tunelowania) dla elementu głównego.  
+1.  `PreviewMouseDown` (tunelowania) dla elementu głównego.  
   
-2.  `PreviewMouseDown`(tunelowania) w elemencie pośredniego #1.  
+2.  `PreviewMouseDown` (tunelowania) w elemencie pośredniego #1.  
   
-3.  `PreviewMouseDown`(tunelowania) w źródłowym elemencie #2.  
+3.  `PreviewMouseDown` (tunelowania) w źródłowym elemencie #2.  
   
-4.  `MouseDown`(bąbelkowy) w źródłowym elemencie #2.  
+4.  `MouseDown` (bąbelkowy) w źródłowym elemencie #2.  
   
-5.  `MouseDown`(bąbelkowy) w elemencie pośredniego #1.  
+5.  `MouseDown` (bąbelkowy) w elemencie pośredniego #1.  
   
-6.  `MouseDown`(bąbelkowy) dla elementu głównego.  
+6.  `MouseDown` (bąbelkowy) dla elementu głównego.  
   
  Delegata obsługi kierowanego zdarzenia zawiera odwołania do dwóch obiektów: obiekt, który wywołał zdarzenie i obiektu, gdy została wywołana przez program obsługi. Obiekt przywołane program obsługi jest obiekt zgłoszone przez `sender` parametru. Obiektu, w którym zdarzenie został wywołany po raz pierwszy został zgłoszony przez <xref:System.Windows.RoutedEventArgs.Source%2A> właściwości w danych zdarzenia. Można nadal kierowanego zdarzenia wywoływane i obsługiwane przez ten sam obiekt, w którym to przypadku `sender` i <xref:System.Windows.RoutedEventArgs.Source%2A> (jest to w przypadku kroki 3 i 4 w przypadku przetwarzania przykładową listę) są identyczne.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Typowe kroki dotyczące korzystania z LINQ do SQL"
-ms.custom: 
+title: Typowe kroki dotyczące korzystania z LINQ do SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3aedef610d8ad3f743b346a46059b15d917cf7ca
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 31daf8ee10334327070cb5bfc4068bc80e1d7ea4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>Typowe kroki dotyczące korzystania z LINQ do SQL
 Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] aplikacji, wykonaj kroki opisane w dalszej części tego tematu. Należy pamiętać, że wiele czynności są opcjonalne. Jest bardzo możliwe, że można użyć modelu obiektów w stanie domyślnym.  
@@ -31,9 +33,9 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
 ### <a name="1-select-a-tool-to-create-the-model"></a>1. Wybierz narzędzia do tworzenia modelu.  
  Trzy narzędzia są dostępne do tworzenia modelu.  
   
--   Programu[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   programu [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
-     Ten Projektant udostępnia interfejs użytkownika sformatowanego do tworzenia modelu obiektów z istniejącej bazy danych. To narzędzie jest częścią [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] IDE, a najlepiej nadaje się do małych i średnich baz danych.  
+     Ten Projektant udostępnia interfejs użytkownika sformatowanego do tworzenia modelu obiektów z istniejącej bazy danych. To narzędzie jest częścią środowiska IDE programu Visual Studio i najlepiej nadaje się do małych i średnich baz danych.  
   
 -   Narzędzie generowania kodu SQLMetal  
   
@@ -41,13 +43,13 @@ Aby zaimplementować [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq
   
 -   Edytor kodu  
   
-     Można napisać własny kod przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] edytora kodu lub innego edytora. Nie zaleca się takie podejście, które mogą być podatne na błędy, po istniejącej bazy danych i można użyć dowolnego [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] lub narzędzie SQLMetal. Jednak edytora kodu może być przydatny do aktualizowania lub modyfikowania kodu, które zostały już wygenerowane za pomocą innych narzędzi. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
+     Można napisać własny kod za pomocą edytora kodu programu Visual Studio lub innego edytora. Nie zaleca się takie podejście, które mogą być podatne na błędy, po istniejącej bazy danych i można użyć dowolnego [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] lub narzędzie SQLMetal. Jednak edytora kodu może być przydatny do aktualizowania lub modyfikowania kodu, które zostały już wygenerowane za pomocą innych narzędzi. Aby uzyskać więcej informacji, zobacz [porady: dostosowywanie klas jednostek za pomocą edytora kodu](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md).  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2. Wybierz typ kodu, który ma zostać wygenerowany.  
   
--   C# lub [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] pliku kodu źródłowego dla opartych na atrybutach mapowania.  
+-   C# lub Visual Basic pliku kodu źródłowego dla opartych na atrybutach mapowania.  
   
-     Następnie dołącz ten plik kodu w Twojej [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] projektu. Aby uzyskać więcej informacji, zobacz [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+     Następnie ten plik kodu są uwzględnione w projekcie programu Visual Studio. Aby uzyskać więcej informacji, zobacz [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 -   Plik XML dla zewnętrznych mapowania.  
   

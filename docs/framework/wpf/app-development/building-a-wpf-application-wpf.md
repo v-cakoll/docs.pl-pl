@@ -1,13 +1,13 @@
 ---
 title: Kompilowanie aplikacji WPF (WPF)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-caps.latest.revision: 
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 87fc77aaa95e2d2de4b0c6eb75484ab9b4006c31
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 054f6cd6ae71428aca6b99eb510b2ac34fc6c4b6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="building-a-wpf-application-wpf"></a>Kompilowanie aplikacji WPF (WPF)
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]aplikacje mogą być wbudowane jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), bibliotekach (dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki procesu kompilacji.  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] aplikacje mogą być wbudowane jako [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] pliki wykonywalne (.exe), bibliotekach (dll) lub kombinację obu typów zestawów. W tym temacie przedstawiono sposób tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] aplikacji i opisano kluczowe kroki procesu kompilacji.  
   
   
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/19/2018
   
 -   Microsoft Build Engine (MSBuild). Oprócz kodu i plików XAML aplikacja musi zawierać plik projektu programu MSBuild. Aby uzyskać więcej informacji zobacz "MSBuild".  
   
--   Visual Studio. Program Visual Studio jest zintegrowane środowisko programistyczne kompiluje aplikacji WPF przy użyciu programu MSBuild, który zawiera wizualnego projektanta do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [programowanie aplikacji w programie Visual Studio](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) i [projektanta WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
+-   Program Visual Studio. Program Visual Studio jest zintegrowane środowisko programistyczne kompiluje aplikacji WPF przy użyciu programu MSBuild, który zawiera wizualnego projektanta do tworzenia interfejsu użytkownika. Aby uzyskać więcej informacji, zobacz [programowanie aplikacji w programie Visual Studio](http://msdn.microsoft.com/library/97490c1b-a247-41fb-8f2c-bc4c201eff68) i [projektanta WPF](http://msdn.microsoft.com/library/c6c65214-8411-4e16-b254-163ed4099c26).  
   
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>   
 ## <a name="wpf-build-pipeline"></a>Potok kompilacji WPF  
@@ -77,7 +77,7 @@ ms.lasthandoff: 01/19/2018
   
 3.  Reprezentacja CodeDOM klasę częściową jest utworzony i skopiowany do folderu obj\Release.  
   
- Ponadto plik specyficzny dla języka kodu zostanie wygenerowany dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Na przykład dla strony Page1.xaml [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)] projektu, jest generowany Page1.g.vb; dla Page1.xaml strony [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] projektu, Page1.g.cs jest generowany. Wskazuje ".g" w nazwie pliku, plik jest generowany kod, który ma deklarację klasy częściowej dla elementu najwyższego poziomu w pliku znaczników (takich jak `Page` lub `Window`). Klasa jest zadeklarowany za pomocą `partial` modyfikator w [!INCLUDE[TLA2#tla_cshrp](../../../../includes/tla2sharptla-cshrp-md.md)] (`Extends` w [!INCLUDE[TLA2#tla_visualb](../../../../includes/tla2sharptla-visualb-md.md)]) wskaż, istnieje inny deklaracji klasy w innym miejscu, zazwyczaj w kodu powiązanego pliku Page1.xaml.cs.  
+ Ponadto plik specyficzny dla języka kodu zostanie wygenerowany dla każdego [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku. Na przykład dla strony Page1.xaml w projektach Visual Basic, generowane jest Page1.g.vb; na stronie Page1.xaml w projekcie C# Page1.g.cs jest generowany. Wskazuje ".g" w nazwie pliku, plik jest generowany kod, który ma deklarację klasy częściowej dla elementu najwyższego poziomu w pliku znaczników (takich jak `Page` lub `Window`). Klasa jest zadeklarowany za pomocą `partial` modyfikator w języku C# (`Extends` w języku Visual Basic) aby wskazać, istnieje inny deklaracji klasy w innym miejscu, zazwyczaj w kodu powiązanego pliku Page1.xaml.cs.  
   
  Klasy częściowe rozciąga się od odpowiedniej klasy podstawowej (takich jak <xref:System.Windows.Controls.Page> strony) i implementuje <xref:System.Windows.Markup.IComponentConnector?displayProperty=nameWithType> interfejsu. <xref:System.Windows.Markup.IComponentConnector> Interfejs ma metodę, aby zainicjować składnika i połącz nazwy i zdarzeń w przypadku elementów w jego zawartości. W rezultacie plik wygenerowany kod ma implementacji metody, takie jak następujące:  
   
@@ -115,7 +115,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>Kompilację znaczników — przebieg 2  
- Nie wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są kompilowane w przebiegu 1 kompilację znaczników. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]pliki, które zostały zdefiniowane lokalnie typu odwołania (odwołania do typów zdefiniowanych w kodzie w tym samym projekcie) są wyłączone z kompilacji w tej chwili. Jest to spowodowane te typy zdefiniowane lokalnie istnieje tylko w lokalizacji źródłowej i nie został skompilowany. Aby to ustalić, analizator korzysta z algorytmów heurystycznych, które są związane z elementów takich jak `x:Name` w pliku znaczników. Takie wystąpienie zostanie wykryte, że kompilacji pliku znaczników zostanie odłożona do momentu zostały skompilowane pliki kodu, po którym, drugi kompilację znaczników przekazać procesów tych plików.  
+ Nie wszystkie [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] strony są kompilowane w przebiegu 1 kompilację znaczników. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliki, które zostały zdefiniowane lokalnie typu odwołania (odwołania do typów zdefiniowanych w kodzie w tym samym projekcie) są wyłączone z kompilacji w tej chwili. Jest to spowodowane te typy zdefiniowane lokalnie istnieje tylko w lokalizacji źródłowej i nie został skompilowany. Aby to ustalić, analizator korzysta z algorytmów heurystycznych, które są związane z elementów takich jak `x:Name` w pliku znaczników. Takie wystąpienie zostanie wykryte, że kompilacji pliku znaczników zostanie odłożona do momentu zostały skompilowane pliki kodu, po którym, drugi kompilację znaczników przekazać procesów tych plików.  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>Klasyfikacji plików  
@@ -137,7 +137,7 @@ End Sub
   
  Te pliki manifestu zawsze są tworzone dla [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]. Dla zainstalowanych aplikacji, są nie tworzone chyba że `GenerateManifests` właściwość jest określona w pliku projektu o wartości `true`.  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]dwa dodatkowe uprawnienia tylko te uprawnienia przypisane do typowych aplikacji stref internetowych: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] System kompilacji deklaruje tych uprawnień w manifeście aplikacji.  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] dwa dodatkowe uprawnienia tylko te uprawnienia przypisane do typowych aplikacji stref internetowych: <xref:System.Security.Permissions.WebBrowserPermission> i <xref:System.Security.Permissions.MediaPermission>. [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] System kompilacji deklaruje tych uprawnień w manifeście aplikacji.  
   
 <a name="Incremental_Build_Support"></a>   
 ## <a name="incremental-build-support"></a>Obsługa wzrostowe  

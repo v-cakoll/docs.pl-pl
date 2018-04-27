@@ -1,7 +1,7 @@
 ---
-title: "Za pomocą usługi Azure Service Fabric"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Za pomocą usługi Azure Service Fabric"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Za pomocą usługi Azure Service Fabric
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Za pomocą usługi Azure Service Fabric
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 9480a3f67e9d0a61d0669bf34be4b66208f5e9ce
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 85c9c336b0a215dc22a9308c5726f03789f31d5a
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-azure-service-fabric"></a>Za pomocą usługi Azure Service Fabric
 
@@ -90,7 +90,7 @@ Uzupełniają usług bezstanowych i stanowych. Na przykład widać 4 rysunek-30,
 
 Usługi stanowej mają wady. Jakie nakłada poziom złożoności, który pozwala na skalowanie w poziomie. Funkcje, które zazwyczaj są realizowane przez systemy zewnętrzne bazy danych należy rozwiązać kwestie dotyczące zadań, takich jak replikacja danych między mikrousług stanowe i partycjonowanie danych. Jednak to jedno z obszarów, w którym orchestrator, takich jak [sieć szkieletowa usług Azure](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-platform-architecture) z jego [niezawodne usługi stanowej](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis) może pomóc w najbardziej — dzięki uproszczeniu opracowywania i cyklem życia stateful przy użyciu mikrousług [niezawodnej usługi interfejsu API](https://docs.microsoft.com/azure/service-fabric/service-fabric-work-with-reliable-collections) i [Reliable Actors](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-actors-introduction).
 
-Inne platformy mikrousługi, które umożliwiają stanowych usług, który obsługuje wzorca aktora i poprawiających odporność na uszkodzenia i opóźnienia między logikę biznesową i danych są Microsoft [Orleans](https://github.com/dotnet/orleans), Microsoft Research i [ Akka.NET](http://getakka.net/). Obu platform obecnie umożliwiają zwiększenie ich obsługę Docker.
+Inne platformy mikrousługi, które umożliwiają stanowych usług, który obsługuje wzorca aktora i poprawiających odporność na uszkodzenia i opóźnienia między logikę biznesową i danych są Microsoft [Orleans](https://github.com/dotnet/orleans), Microsoft Research i [ Akka.NET](https://getakka.net/). Obu platform obecnie umożliwiają zwiększenie ich obsługę Docker.
 
 Należy zauważyć, że kontenery Docker bezstanowego same. Jeśli chcesz wdrożyć usługi stanowej, konieczne dodatkowe porady i wyższego poziomu struktur wspomniano wcześniej. 
 

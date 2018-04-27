@@ -1,5 +1,5 @@
 ---
-title: "Przegląd współdziałania (Przewodnik programowania w języku C#)"
+title: Przegląd współdziałania (Przewodnik programowania w języku C#)
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-caps.latest.revision: 
+caps.latest.revision: 43
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ebdd2d58f2fe502dbeb14148c303487774f531b
-ms.sourcegitcommit: 099aa20d9b6450d1b7452d782a55771a6ad8ff35
+ms.openlocfilehash: 58538b690958e11b1590c13e6709cac4109ef49d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>Przegląd współdziałania (Przewodnik programowania w języku C#)
 W temacie opisano metody, aby umożliwić współpracę między kodem C# zarządzanego i kodu niezarządzanego.  
@@ -42,7 +42,7 @@ W temacie opisano metody, aby umożliwić współpracę między kodem C# zarząd
   
 2.  Dodaj do projektu odwołanie do biblioteki COM składnika lub typu.  
   
-     Podczas dodawania odwołania, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] używa [Tlbimp.exe (Importer biblioteki typów)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), który przyjmuje jako dane wejściowe do wyjściowego zestawu międzyoperacyjnego .NET Framework biblioteki typów. Zestaw o nazwie wywoływana otoka środowiska uruchomieniowego (otoki RCW), zawiera zarządzanej klasy i interfejsy, które otaczają klasy COM i interfejsów, które znajdują się w bibliotece typów. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]dodaje do projektu odwołanie do wygenerowanego zestawu.  
+     Podczas dodawania odwołania, [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] używa [Tlbimp.exe (Importer biblioteki typów)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md), który przyjmuje jako dane wejściowe do wyjściowego zestawu międzyoperacyjnego .NET Framework biblioteki typów. Zestaw o nazwie wywoływana otoka środowiska uruchomieniowego (otoki RCW), zawiera zarządzanej klasy i interfejsy, które otaczają klasy COM i interfejsów, które znajdują się w bibliotece typów. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dodaje do projektu odwołanie do wygenerowanego zestawu.  
   
 3.  Tworzenie wystąpienia klasy, która jest zdefiniowana w otoki RCW. To z kolei tworzy wystąpienie obiektu COM.  
   
@@ -55,11 +55,11 @@ W temacie opisano metody, aby umożliwić współpracę między kodem C# zarząd
   
 1.  Dodaj atrybutów międzyoperacyjności w projekcie C#.  
   
-     Możesz wprowadzić zestawu COM widoczne, modyfikując [!INCLUDE[csprcs](~/includes/csprcs-md.md)] właściwości projektu. Aby uzyskać więcej informacji, zobacz [informacji o zestawie — okno dialogowe](/visualstudio/ide/reference/assembly-information-dialog-box).  
+     Zestawu COM można wyświetlić, zmieniając właściwości projektu Visual C#. Aby uzyskać więcej informacji, zobacz [informacji o zestawie — okno dialogowe](/visualstudio/ide/reference/assembly-information-dialog-box).  
   
 2.  Generowanie Biblioteka typów COM i zarejestruj go do użytku COM.  
   
-     Można zmodyfikować [!INCLUDE[csprcs](~/includes/csprcs-md.md)] właściwości do automatycznego rejestrowania zestawu języka C# dla międzyoperacyjności z modelem COM projektu. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]używa [Regasm.exe (narzędzie rejestracji zestawów)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)za pomocą `/tlb` przełącznik wiersza polecenia, który przyjmuje zarządzanego zestawu jako dane wejściowe, aby wygenerować biblioteki typów. Zawiera opis tego typu biblioteki `public` typów w zestawie i dodaje wpisy rejestru, aby tworzyć klientów modelu COM klasy zarządzanej.  
+     Można zmodyfikować właściwości projektu Visual C# do automatycznego rejestrowania zestawu języka C# dla modelu COM interop. [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] używa [Regasm.exe (narzędzie rejestracji zestawów)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)za pomocą `/tlb` przełącznik wiersza polecenia, który przyjmuje zarządzanego zestawu jako dane wejściowe, aby wygenerować biblioteki typów. Zawiera opis tego typu biblioteki `public` typów w zestawie i dodaje wpisy rejestru, aby tworzyć klientów modelu COM klasy zarządzanej.  
   
  Aby uzyskać więcej informacji, zobacz [udostępnianie składników .NET Framework modelowi COM](../../../../docs/framework/interop/exposing-dotnet-components-to-com.md) i [klasa COM — przykład](../../../csharp/programming-guide/interop/example-com-class.md).  
   

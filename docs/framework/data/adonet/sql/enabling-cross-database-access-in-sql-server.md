@@ -1,24 +1,26 @@
 ---
-title: "Włączanie dostępu między bazami danych w programie SQL Server"
-ms.custom: 
+title: Włączanie dostępu między bazami danych w programie SQL Server
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 10663fb6-434c-4c81-8178-ec894b9cf895
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 2a31bddfec44ad4b33f1b595c2746d1a0e841b82
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0f27f5bd63acbf532d3dca2a8c6fea0b1a59d659
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enabling-cross-database-access-in-sql-server"></a>Włączanie dostępu między bazami danych w programie SQL Server
 Łańcucha między bazami danych własność występuje, gdy procedura w jednej bazie danych jest zależna od obiektów w innej bazie danych. Łańcuch własności między bazami danych działa w taki sam sposób jak własność łańcucha w ramach pojedynczej bazy danych, z tą różnicą, że łańcucha własności nieprzerwany wymaga, aby wszystkich właścicieli obiektów są mapowane do tego samego konta logowania. Jeśli obiekt źródłowy w źródłowej bazy danych i obiektów docelowych w z docelowymi bazami danych są własnością tego samego konta logowania, programu SQL Server nie sprawdza uprawnienia do obiektów docelowych.  
@@ -52,14 +54,14 @@ ALTER DATABASE Database2 SET DB_CHAINING ON;
 ```  
   
 ### <a name="dynamic-sql"></a>Dynamiczne SQL  
- Tworzenie łańcucha własności między bazami danych nie działa w przypadku, gdy utworzony dynamicznie instrukcji SQL są wykonywane, chyba że ten sam użytkownik istnieje w obu bazach danych. Można obejść to w [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] , tworząc procedury przechowywanej, która uzyskuje dostęp do danych w innej bazie danych i podpisywania procedury przy użyciu certyfikatu, który istnieje w obu bazach danych. To umożliwia użytkownikom dostęp do zasobów bazy danych używane przez procedurę bez przyznawania im dostępu do bazy danych lub uprawnieniami.  
+ Tworzenie łańcucha własności między bazami danych nie działa w przypadku, gdy utworzony dynamicznie instrukcji SQL są wykonywane, chyba że ten sam użytkownik istnieje w obu bazach danych. Można obejść to w programie SQL Server, tworząc procedury przechowywanej, która uzyskuje dostęp do danych w innej bazie danych i podpisywania procedury przy użyciu certyfikatu, który istnieje w obu bazach danych. To umożliwia użytkownikom dostęp do zasobów bazy danych używane przez procedurę bez przyznawania im dostępu do bazy danych lub uprawnieniami.  
   
 ## <a name="external-resources"></a>Zasoby zewnętrzne  
  Aby uzyskać więcej informacji zobacz następujące zasoby.  
   
 |Zasób|Opis|  
 |--------------|-----------------|  
-|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [Cross własność DB łańcucha opcja](http://msdn.microsoft.com/library/ms188694.aspx) [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] książki Online.|Tematach opisano, jak skonfigurować tworzenie łańcucha między bazami danych własność wystąpienia [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)].|  
+|[Rozszerzanie personifikacji bazy danych przy użyciu EXECUTE AS](http://msdn.microsoft.com/library/ms188304\(SQL.105\).aspx) i [Cross własność DB łańcucha opcja](http://msdn.microsoft.com/library/ms188694.aspx)podręcznikach programu SQL Server w trybie Online.|Tematach opisano sposób konfigurowania bazy danych między własność łańcucha dla wystąpienia programu SQL Server.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Zabezpieczanie aplikacji ADO.NET](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  

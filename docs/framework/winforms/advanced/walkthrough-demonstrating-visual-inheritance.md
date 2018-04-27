@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: demonstrowanie dziedziczenia Visual"
-ms.custom: 
+title: 'Wskazówki: demonstrowanie dziedziczenia Visual'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7c5ef33be9841b5c74b6ae2448daf56079489b61
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: e76ddcb33980db1a6d1b6e602c1b71da60b53381
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>Wskazówki: demonstrowanie dziedziczenia Visual
 Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i dodać nowe kontrolki. W tym przewodniku utworzysz formularza podstawowego i skompiluj go do biblioteki klas. Zostanie zaimportować tę bibliotekę klas do innego projektu i Utwórz nowy formularz, który dziedziczy z formularza podstawowego. W tym przewodniku przedstawiono sposób:  
@@ -157,7 +159,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
   
 7.  Wybierz prywatna **Goodbye powiedzieć** przycisk i zwróć uwagę, że nie ma uchwytów zmiany rozmiaru. Ponadto w **właściwości** okna właściwości tego przycisku jest wyszarzony wskaż, nie może być modyfikowany.  
   
-8.  Jeśli używasz [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]:  
+8.  Jeśli używasz programu Visual C#:  
   
     1.  W **Eksploratora rozwiązań**, kliknij prawym przyciskiem myszy **Form1** w **InheritanceTest** projektu, a następnie wybierz pozycję **usunąć**. W wyświetlonym oknie komunikatu kliknij **OK** aby potwierdzić usunięcie.  
   
@@ -172,7 +174,7 @@ Dziedziczenie Visual umożliwia sprawdzenie kontrolek w formularzu podstawowej i
 12. Naciśnij klawisz F5, aby uruchomić aplikację i przyjrzeć się zachowaniu dziedziczone formularza.  
   
 ## <a name="next-steps"></a>Następne kroki  
- W przypadku kontrolek użytkownika dziedziczenia w podobny sposób. Otwórz nowy projektu biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompilować projekt. Otwórz innego nowego projektu biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać formant dziedziczony (za pośrednictwem **Dodawanie nowych elementów** okno dialogowe) do projektu i przy użyciu **selektora dziedziczenia**. Dodaj kontrolkę użytkownika, a następnie zmień `Inherits` (`:` w [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)]) instrukcji. Aby uzyskać więcej informacji, zobacz [porady: dziedziczenie formularzy systemu Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
+ W przypadku kontrolek użytkownika dziedziczenia w podobny sposób. Otwórz nowy projektu biblioteki klas i Dodaj kontrolkę użytkownika. Umieść formanty składników na nim i skompilować projekt. Otwórz innego nowego projektu biblioteki klas i Dodaj odwołanie do biblioteki klas skompilowany. Ponadto spróbuj dodać formant dziedziczony (za pośrednictwem **Dodawanie nowych elementów** okno dialogowe) do projektu i przy użyciu **selektora dziedziczenia**. Dodaj kontrolkę użytkownika, a następnie zmień `Inherits` (`:` języka Visual C#) instrukcji. Aby uzyskać więcej informacji, zobacz [porady: dziedziczenie formularzy systemu Windows](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: dziedziczenie formularzy Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)  

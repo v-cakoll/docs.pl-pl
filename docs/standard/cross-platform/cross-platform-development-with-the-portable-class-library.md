@@ -1,30 +1,30 @@
 ---
-title: "Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas"
-ms.custom: 
+title: Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Portable Class Library [.NET Framework]
 - targeting multiple platforms
 - multiple platforms, targeting
 ms.assetid: c31e1663-c164-4e65-b66d-d3aa8750a154
-caps.latest.revision: "95"
+caps.latest.revision: 95
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ea0a111727093cb65a98e48255b06b3c4516d258
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e6b853c3548f27bbb4056f7d59d51a6964e0d91
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="cross-platform-development-with-the-portable-class-library"></a>Tworzenie aplikacji dla wielu platform przy użyciu przenośnej biblioteki klas
 Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Studio pomaga w utworzeniu wieloplatformowych aplikacji i bibliotek dla platform firmy Microsoft, szybkie i łatwe.  
@@ -38,7 +38,7 @@ Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Stud
  Program Visual Studio udostępnia szablony ułatwiające opracowanie z przenośnej biblioteki klas. W zależności od tego, czy używasz wersji programu Visual Studio dostępnych szablonów i menu może być inna niż opisane w tym artykule.  
   
 > [!WARNING]
->  [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658) obejmuje aktualizacje szablony przenośnej biblioteki klas. Jeśli masz starszą wersję programu Visual Studio i Visual Studio 2013 zainstalowany na tym samym komputerze, a następnie zainstaluj Update 2, aby zmiany **platformy docelowej** opcji zostaną zastosowane do obie wersje programu Visual Studio.  
+>  Visual Studio 2013 Update 2 zawiera aktualizacje do szablonów przenośnej biblioteki klas. Jeśli masz starszą wersję programu Visual Studio i Visual Studio 2013 zainstalowany na tym samym komputerze, a następnie zainstaluj Update 2, aby zmiany **platformy docelowej** opcji zostaną zastosowane do obie wersje programu Visual Studio.  
   
  W tym temacie:  
   
@@ -59,10 +59,10 @@ Typ projektu biblioteki klas przenośnych .NET Framework w programie Visual Stud
 |-----------------------|---------------------------------------------------|  
 |Program Visual Studio 2010, Professional, Premium lub Ultimate|Tak, po zainstalowaniu [przenośne narzędzia biblioteki](https://marketplace.visualstudio.com/items?itemName=BCLTeam.PortableLibraryTools2).|  
 |Wersje usługi Visual Studio Express 2010.|Nie.|  
-|Program Visual Studio 2012 Professional, Premium lub Ultimate|Tak. Telefonów pomocy technicznej, należy zainstalować [Windows Phone SDK 8.0](http://go.microsoft.com/fwlink/?LinkId=265772).|  
+|Program Visual Studio 2012 Professional, Premium lub Ultimate|Tak. W przypadku obsługi systemu Windows Phone 8.0, zainstaluj [Windows Phone SDK 8.0](https://www.microsoft.com/download/details.aspx?id=35471).|  
 |Visual Studio Express 2012 wersji|Nie.|  
-|Program Visual Studio 2013 Professional, Premium lub Ultimate|Tak. Obsługa systemu Windows Phone 8.1, można zainstalować [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
-|Visual Studio Express 2013 for Windows|Tak, po zainstalowaniu [najnowszej wersji programu Visual Studio Express](http://go.microsoft.com/fwlink/p/?LinkId=394629), która obejmuje Update 2 lub dodać [Visual Studio 2013 Update 2](http://go.microsoft.com/fwlink/p/?LinkId=393658).|  
+|Program Visual Studio 2013 Professional, Premium lub Ultimate|Tak. Obsługa systemu Windows Phone 8.1, można zainstalować [najnowszej wersji programu Visual Studio 2013](https://www.visualstudio.com/vs/older-downloads/).|  
+|Visual Studio Community 2013 dla systemu Windows|Tak, po zainstalowaniu [najnowszej wersji programu Visual Studio Community 2013](https://www.visualstudio.com/vs/older-downloads/), która obejmuje Update 2.|  
   
 <a name="create_pcl"></a>   
 ## <a name="creating-a-portable-class-library-project"></a>Tworzenie projektu biblioteki klas przenośnych  
@@ -101,7 +101,7 @@ Dodaj — okno dialogowe przenośnej biblioteki klas dla programu Visual Studio 
 |-|-|-|-|  
 |.NET Framework|-.NET framework 4 i nowsze<br /><br /> -.NET framework 4.0.3 i nowsze<br /><br /> -.NET framework 4.5|-.NET framework 4 i nowsze<br /><br /> -.NET framework 4.0.3 i nowsze<br /><br /> -.NET framework 4.5 lub nowszy<br /><br /> -.NET framework 4.5.1|-.NET framework 4<br /><br /> — Framework .NET 4.0.3<br /><br /> -.NET framework 4.5<br /><br /> -.NET framework 4.5.1|  
 |Windows Phone|— Windows Phone 7 i nowsze<br /><br /> — Windows Phone 7.5 i nowsze<br /><br /> — Windows Phone 8|— Windows Phone 8|— Windows Phone Silverlight 8<br /><br /> — Windows Phone Silverlight 8.1<br /><br /> Obsługa środowiska uruchomieniowego systemu Windows i języka XAML wybierz:<br /><br /> — Windows Phone 8.1|  
-|Sklep Windows|-.NET dla aplikacji ze Sklepu Windows|-Aplikacje ze Sklepu Windows (z systemem Windows 8) lub nowszy<br /><br /> — Aplikacje ze Sklepu Windows (Windows 8.1)|— Windows 8<br /><br /> — Windows 8.1|  
+|Sklep Windows|-.NET dla aplikacji ze Sklepu Windows|-Aplikacje ze Sklepu Windows (z systemem Windows 8) lub nowszy<br /><br /> — Aplikacje ze Sklepu Windows (Windows 8.1)|- Windows 8<br /><br /> - Windows 8.1|  
 |-Silverlight|-Program Silverlight 4 i nowsze<br /><br /> -Silverlight 5|-Silverlight 5|-Silverlight 5|  
 |Xbox|-Konsoli Xbox 360|Brak|Brak|  
   
@@ -152,10 +152,10 @@ Okno dialogowe zmiany elementów docelowych w programie Visual Studio 2012
   
  Wymaga ➊ [Microsoft Async](https://www.nuget.org/packages/Microsoft.Bcl.Async/) pakietu  
  Wymaga ➋ [Compression Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) pakietu  
- Wymaga ➌ [bibliotek klienta HTTP Microsoft](http://www.nuget.org/packages/Microsoft.Net.Http) pakietu  
+ Wymaga ➌ [bibliotek klienta HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) pakietu  
   
 > [!WARNING]
->  Mogą wystąpić błędy podczas tworzenia odwołania [Compression Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) i [bibliotek klienta HTTP Microsoft](http://www.nuget.org/packages/Microsoft.Net.Http) pakietów z przenośnej biblioteki używany przez aplikację systemu Windows Phone Silverlight 8.1. Aby uzyskać więcej informacji, zobacz [zgodności platformy i fundamentalne zmiany dla aplikacji Windows Phone Silverlight 8.1](http://go.microsoft.com/fwlink/p/?LinkId=394744).  
+>  Mogą wystąpić błędy podczas tworzenia odwołania [Compression Microsoft](https://www.nuget.org/packages/Microsoft.Bcl.Compression) i [bibliotek klienta HTTP Microsoft](https://www.nuget.org/packages/Microsoft.Net.Http) pakietów z przenośnej biblioteki używany przez aplikację systemu Windows Phone Silverlight 8.1. Aby uzyskać więcej informacji, zobacz [zgodności platformy i fundamentalne zmiany dla aplikacji Windows Phone Silverlight 8.1](/previous-versions/windows/apps/dn642084(v=vs.105)).  
   
 <a name="members"></a>   
 ## <a name="supported-types-and-members"></a>Obsługiwane typy i elementy członkowskie  
@@ -197,7 +197,7 @@ Przykład — informacje o wersji
  Podczas tworzenia Sklepu Windows lub aplikacji Windows Phone odwołuje się zestaw przenośnej biblioteki klas, wszystkie elementy potrzebne do wdrożenia aplikacji jest uwzględniona w pakiet aplikacji i nie są wymagane żadne dodatkowe czynności.  
   
 ### <a name="deploying-a-net-framework-app"></a>Wdrażanie .NET Framework aplikacji  
- Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu przenośnej biblioteki klas, należy określić zależności na poprawną wersję programu .NET Framework. Określenie tej zależności gwarantuje, że wymagana wersja będzie instalowana wraz z aplikacją. Jeśli są przeznaczone dla platformy .NET Framework 4 lub nowszy, komputer musi mieć programu .NET Framework 4 z [aktualizacji](http://go.microsoft.com/fwlink/?LinkId=210824), aktualizacja 4.0.3 dla programu .NET Framework 4 lub .NET Framework 4.5 zainstalowane.  
+ Podczas wdrażania aplikacji .NET Framework, która odwołuje się do zestawu przenośnej biblioteki klas, należy określić zależności na poprawną wersję programu .NET Framework. Określenie tej zależności gwarantuje, że wymagana wersja będzie instalowana wraz z aplikacją. Jeśli są przeznaczone dla platformy .NET Framework 4 lub nowszy, komputer musi mieć programu .NET Framework 4 z [aktualizacji](https://www.microsoft.com/download/details.aspx?id=3556), aktualizacja 4.0.3 dla programu .NET Framework 4 lub .NET Framework 4.5 zainstalowane.  
   
 -   Aby utworzyć zależność z wdrażania ClickOnce: W **Eksploratora rozwiązań**, wybierz węzeł projektu dla projektu, którą chcesz opublikować. (Jest to projekt, który odwołuje się do projektu biblioteki klas przenośnych). Na pasku menu wybierz **projektu**, **właściwości**, a następnie wybierz pozycję **publikowania** kartę. Na **publikowania** wybierz pozycję **wymagania wstępne**. Jako wymaganie wstępne wybierz wymaganą wersję programu .NET Framework (lub aktualizację programu .NET Framework 4).  
   
@@ -217,9 +217,9 @@ Przykład — informacje o wersji
     <param name="background" value="white" />  
     <param name="minRuntimeVersion" value="4.0.60129.0" />  
     <param name="autoUpgrade" value="true" />  
-    <a href="http://go.microsoft.com/fwlink/?LinkID=149156&v=4.0.50826.0"   
+    <a href="https://www.microsoft.com/getsilverlight/get-started/install/"   
              style="text-decoration:none">  
-      <img src=http://go.microsoft.com/fwlink/?LinkId=161376  
+      <img src=http://download.microsoft.com/download/5/1/6/5165823D-1D79-4871-8AC2-42DDDB94A5C2/PNGs/SLMedallion_ENU.png  
              alt="Get Microsoft Silverlight" style="border-style:none"/>  
     </a>  
   </object>  

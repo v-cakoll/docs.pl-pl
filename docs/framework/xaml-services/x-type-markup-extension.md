@@ -1,12 +1,13 @@
 ---
-title: "x:Type — Rozszerzenie znaczników"
-ms.custom: 
+title: x:Type — Rozszerzenie znaczników
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - x:TypeExtension
@@ -21,16 +22,17 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: wadepickett
 ms.author: wpickett
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a4d645d5c953c0ff33435a5648024ace099455e2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db56c2bcdca14b87de320dfe19a6c364c76ecef7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xtype-markup-extension"></a>x:Type — Rozszerzenie znaczników
 Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla określonego typu XAML.  
@@ -51,11 +53,11 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
   
 |||  
 |-|-|  
-|`prefix`|Opcjonalny. Prefiks, który mapuje przestrzeń nazw XAML innych niż domyślne. Określenie prefiksu często nie jest konieczne. Zobacz uwagi.|  
-|`typeNameValue`|Wymagany. Nazwa typu rozpoznać bieżącej domyślnej XAML przestrzeni nazw; lub określony zamapować prefiksu Jeśli `prefix` podano.|  
+|`prefix`|Opcjonalna. Prefiks, który mapuje przestrzeń nazw XAML innych niż domyślne. Określenie prefiksu często nie jest konieczne. Zobacz uwagi.|  
+|`typeNameValue`|Wymagana. Nazwa typu rozpoznać bieżącej domyślnej XAML przestrzeni nazw; lub określony zamapować prefiksu Jeśli `prefix` podano.|  
   
 ## <a name="remarks"></a>Uwagi  
- `x:Type` — Rozszerzenie znaczników ma podobną funkcję do `typeof()` operatora w [!INCLUDE[TLA#tla_cshrp](../../../includes/tlasharptla-cshrp-md.md)] lub `GetType` operatora w [!INCLUDE[TLA#tla_visualb](../../../includes/tlasharptla-visualb-md.md)].  
+ `x:Type` — Rozszerzenie znaczników ma podobną funkcję do `typeof()` operatora w języku C# lub `GetType` operatora programu Microsoft Visual Basic.  
   
  `x:Type` — Rozszerzenie znaczników dostarcza zachowanie konwersję z ciągu dla właściwości, które przyjmują typ <xref:System.Type>. Dane wejściowe są typu XAML. Relacja między XAML typ danych wejściowych i wyjściowych CLR <xref:System.Type> jest to, że dane wyjściowe <xref:System.Type> jest <xref:System.Xaml.XamlType.UnderlyingType%2A> danych wejściowych <xref:System.Xaml.XamlType>, po wyszukiwania niezbędnych <xref:System.Xaml.XamlType> na podstawie kontekst schematu XAML i <xref:System.Windows.Markup.IXamlTypeResolver>usługi udostępnia kontekst.  
   
@@ -67,7 +69,7 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
   
  `x:Type` — Rozszerzenie znaczników mogą być używane w składni elementu obiekt. W takim przypadku określającą wartość <xref:System.Windows.Markup.TypeExtension.TypeName%2A> jest wymagana właściwość, aby poprawnie zainicjować rozszerzenia.  
   
- `x:Type` — Rozszerzenie znaczników mogą służyć jako atrybut pełne; mimo to nie jest typowe: `<``object``property``="{x:Type TypeName=``typeNameValue``}" .../>`  
+ `x:Type` — Rozszerzenie znaczników mogą służyć jako atrybut pełne; mimo to nie jest typowe: `<``object` `property``="{x:Type TypeName=``typeNameValue``}" .../>`  
   
 ## <a name="wpf-usage-notes"></a>Uwagi dotyczące użycia WPF  
   
@@ -82,7 +84,7 @@ Dostarcza CLR <xref:System.Type> obiekt, który jest typem podstawowym dla okre�
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 zapewnia obsługę dodatkowych rodzajowa typów i modyfikuje zachowanie funkcji `x:TypeArguments` i `x:Type` aby zapewnić obsługę tego.  
   
--   `x:TypeArguments`i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być na elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
+-   `x:TypeArguments` i elementu skojarzonego obiektu dla wystąpienia obiektu ogólny może być na elementów innych niż katalog główny. Aby uzyskać więcej informacji, zobacz sekcję "XAML 2009" [x: typearguments — dyrektywa](../../../docs/framework/xaml-services/x-typearguments-directive.md).  
   
 -   XAML 2009 obsługuje składnię służący do określania ograniczenie typu ogólnego w znaczniku. Może być używany przez `x:TypeArguments`, przez `x:Type`, lub obu tych funkcji w połączeniu.  
   

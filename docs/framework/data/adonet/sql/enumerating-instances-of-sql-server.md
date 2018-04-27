@@ -1,36 +1,38 @@
 ---
-title: "Wyliczanie wystąpień programu SQL Server (ADO.NET)"
-ms.custom: 
+title: Wyliczanie wystąpień programu SQL Server (ADO.NET)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: ddf1c83c-9d40-45e6-b04d-9828c6cbbfdc
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 7b0a81fd9b92e626b52c5a74c65798ddedbd94a9
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7a47a3e342887a1dce3912a06ab49a88b7b9b615
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="enumerating-instances-of-sql-server-adonet"></a>Wyliczanie wystąpień programu SQL Server (ADO.NET)
-[!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]zezwala aplikacji można znaleźć [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wystąpień w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasy udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierających informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwracana tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą pod warunkiem, gdy użytkownik próbuje utworzyć nowe połączenie i rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są kompletne.  
+SQL Server umożliwia aplikacji można znaleźć wystąpień programu SQL Server w ramach bieżącej sieci. <xref:System.Data.Sql.SqlDataSourceEnumerator> Klasy udostępnia te informacje do deweloperów aplikacji, zapewniając <xref:System.Data.DataTable> zawierających informacje dotyczące wszystkich serwerów widoczne. Ta wartość zwracana tabela zawiera listę wystąpień serwera dostępne w sieci, z którą jest zgodne z listą pod warunkiem, gdy użytkownik próbuje utworzyć nowe połączenie i rozwija listy rozwijanej zawierające wszystkie dostępne serwery na **połączenia Właściwości** okno dialogowe. Wyniki wyświetlane nie zawsze są kompletne.  
   
 > [!NOTE]
->  Jako większości usługami wdrażania systemu Windows, najlepiej do uruchamiania usługi SQL Browser z najniższe możliwe uprawnienia. Zobacz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] — książki Online, aby uzyskać więcej informacji na temat usługa SQL Browser i jak zarządzać jego zachowania.  
+>  Jako większości usługami wdrażania systemu Windows, najlepiej do uruchamiania usługi SQL Browser z najniższe możliwe uprawnienia. Aby uzyskać więcej informacji o usługa SQL Browser i zarządzać jego zachowanie Zobacz SQL Server — książki Online.  
   
 ## <a name="retrieving-an-enumerator-instance"></a>Pobieranie wystąpienia modułu wyliczającego  
- Aby można było pobrać tabeli zawierającej informacje o dostępnych [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wystąpienia, należy najpierw pobrać moduł wyliczający, przy użyciu udostępnionych/statycznych <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> właściwości:  
+ W celu pobrania tabeli zawierającej informacje o dostępnych wystąpień programu SQL Server, należy najpierw pobrać moduł wyliczający, przy użyciu udostępnionych/statycznych <xref:System.Data.Sql.SqlDataSourceEnumerator.Instance%2A> właściwości:  
   
 ```vb  
 Dim instance As System.Data.Sql.SqlDataSourceEnumerator = _  
@@ -59,20 +61,20 @@ System.Data.DataTable dataTable = instance.GetDataSources();
 |**ServerName**|Nazwa serwera.|  
 |**InstanceName**|Nazwa wystąpienia serwera. Puste, jeśli serwer działa jako domyślnego wystąpienia.|  
 |**IsClustered**|Wskazuje, czy serwer jest częścią klastra.|  
-|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx ([!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012)|  
+|**Wersja**|Wersja serwera. Na przykład:<br /><br /> -9.00.x ([!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)])<br />-10.0.xx ([!INCLUDE[ssKatmai](../../../../../includes/sskatmai-md.md)])<br />-10.50.x ([!INCLUDE[ssKilimanjaro](../../../../../includes/sskilimanjaro-md.md)])<br />-11.0.xx (SQL Server 2012)|  
   
 ## <a name="enumeration-limitations"></a>Ograniczenia — wyliczenie  
  Wszystkie dostępne serwery mogą lub nie mogą być wyświetlane. Lista może się różnić w zależności od czynników, takie jak ruch w sieci i limitów czasu. Może to spowodować listy maja być inne dla dwóch kolejnych wywołań. Zostaną wyświetlone tylko dla serwerów w tej samej sieci. Pakietów emisji zazwyczaj nie przechodzą przez routery, dlatego serwer, na liście mogą nie być widoczne, ale będzie ona stabilna między wywołania.  
   
- Wymienione serwery mogą lub nie ma dodatkowych informacji takich jak `IsClustered` i wersji. Jest to zależne od tego, jak uzyskano listy. Serwery wymienione za pośrednictwem [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] usługa przeglądarki będzie mieć więcej szczegółów niż występujące za pośrednictwem infrastruktury systemu Windows, w którym wyświetlana jest tylko nazwa.  
+ Wymienione serwery mogą lub nie ma dodatkowych informacji takich jak `IsClustered` i wersji. Jest to zależne od tego, jak uzyskano listy. Serwery wymienione za pośrednictwem usługi SQL Server browser będą mieć więcej szczegółów niż występujące za pośrednictwem infrastruktury systemu Windows, w którym wyświetlana jest tylko nazwa.  
   
 > [!NOTE]
 >  Wyliczenie serwera jest dostępna tylko podczas uruchamiania w trybie pełnego zaufania. W środowisku częściowo zaufane zestawy nie będzie mógł jej użyć, nawet jeśli ma <xref:System.Data.SqlClient.SqlClientPermission> uprawnienia zabezpieczeń dostępu kodu (CAS).  
   
- [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]zawiera informacje dotyczące <xref:System.Data.Sql.SqlDataSourceEnumerator> za pomocą zewnętrznej usługi systemu Windows o nazwie SQL Browser. Ta usługa jest domyślnie włączona, ale administratorzy mogą ją wyłączyć lub wyłączyć tę funkcję ukrywanie wystąpienie serwera do tej klasy.  
+ SQL Server zawiera informacje dotyczące <xref:System.Data.Sql.SqlDataSourceEnumerator> za pomocą zewnętrznej usługi systemu Windows o nazwie SQL Browser. Ta usługa jest domyślnie włączona, ale administratorzy mogą ją wyłączyć lub wyłączyć tę funkcję ukrywanie wystąpienie serwera do tej klasy.  
   
 ## <a name="example"></a>Przykład  
- Następującej aplikacji konsoli pobiera informacje o wszystkich widoczne [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] wystąpień i wyświetla informacje w oknie konsoli.  
+ Następującej aplikacji konsoli pobiera informacje o wszystkich wystąpień programu SQL Server widoczne i wyświetla informacje w oknie konsoli.  
   
 ```vb  
 Imports System.Data.Sql  

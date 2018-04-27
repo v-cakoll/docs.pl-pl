@@ -1,5 +1,5 @@
 ---
-title: "Elementy członkowskie biblioteki wykonawczej programu Visual Basic"
+title: Elementy członkowskie biblioteki wykonawczej programu Visual Basic
 ms.date: 07/20/2015
 ms.prod: .net
 ms.technology:
@@ -13,17 +13,17 @@ helpviewer_keywords:
 - Microsoft.VisualBasic namespace
 - members [Visual Basic], Visual Basic run-time library
 ms.assetid: f5e82c6e-3500-452b-bdb8-78f0d5477604
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f928a01424853dc7e3637f49cc3af4108c5afb5b
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 47c7af031b2169d1a259a8f96f5485bcb354aa25
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-runtime-library-members"></a>Elementy członkowskie biblioteki wykonawczej programu Visual Basic
-`Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, modułów, stałe i wyliczenia, które stanowią [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteki środowiska uruchomieniowego. Elementy te biblioteki zapewniają procedur, właściwości i wartości stałych używanych w kodzie. Każdy moduł i klasa reprezentuje określonej kategorii funkcji.  
+`Microsoft.VisualBasic` Przestrzeń nazw zawiera klasy, modułów, stałe i wyliczenia wchodzących w skład biblioteka wykonawcza języka Visual Basic. Elementy te biblioteki zapewniają procedur, właściwości i wartości stałych używanych w kodzie. Każdy moduł i klasa reprezentuje określonej kategorii funkcji.  
   
 ## <a name="microsoftvisualbasiccollection-class"></a>Klasa Microsoft.VisualBasic.Collection  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 11/21/2017
 |<xref:Microsoft.VisualBasic.VBMath.Randomize%2A>|<xref:Microsoft.VisualBasic.VBMath.Rnd%2A>|||  
   
 ## <a name="microsoftvisualbasic-constants-and-enumerations"></a>Microsoft.VisualBasic stałe i wyliczenia  
- `Microsoft.VisualBasic` Przestrzeń nazw zawiera stałe i wyliczenia jako część [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteki czasu wykonywania. Te wartości stałych można użyć w kodzie. Każde wyliczenie reprezentuje określonej kategorii funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
+ `Microsoft.VisualBasic` Przestrzeń nazw zawiera stałe i wyliczenia w ramach biblioteki wykonawczej języka Visual Basic. Te wartości stałych można użyć w kodzie. Każde wyliczenie reprezentuje określonej kategorii funkcji. Aby uzyskać więcej informacji, zobacz [stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Stałe i wyliczenia](../../visual-basic/language-reference/constants-and-enumerations.md)  

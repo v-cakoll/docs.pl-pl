@@ -13,17 +13,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6b7f9cb-81be-44e1-bb94-56137954876d
-caps.latest.revision: ''
+caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 15c435d46d3695f78db27801f54ec9de475b2989
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: ef070c737f6a108aa9c9285d2cc8e0a1144479bd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="retrieving-identity-or-autonumber-values"></a>Pobieranie tożsamości lub wartości automatyczny numer
 Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, które zawsze zawiera unikatowe wartości. Wiedzy o wartości klucza podstawowego można zlokalizować wiersza, który go zawiera. Relacyjnych baz danych, takich jak SQL Server, Oracle i Microsoft Access/Jet obsługuje tworzenie automatycznie zwiększany kolumn, które mogą być oznaczone jako klucze podstawowe. Wartości te są generowane przez serwer jako wiersze są dodawane do tabeli. W programie SQL Server ustaw właściwość identity kolumny w oprogramowaniu Oracle tworzenia sekwencji i programu Microsoft Access tworzenia automatycznie numerowane kolumny.  
@@ -35,7 +35,7 @@ Klucz podstawowy relacyjnej bazy danych jest kolumna lub połączenie kolumn, kt
  Niektórych baz danych, takich jak aparat bazy danych programu Microsoft Jet dostępu nie obsługuje parametrów wyjściowych i nie może przetwarzać wiele instrukcji w jednym zadaniu wsadowym. Podczas pracy z aparatu bazy danych Jet, można pobrać wartość Automatyczny numer wygenerowany dla wstawionego wiersza, wykonując osobne polecenie SELECT w obsłudze zdarzeń dla `RowUpdated` zdarzenie `DataAdapter`.  
   
 > [!NOTE]
->  Jest to alternatywa dla użycia automatyczne zwiększanie wartości do użycia <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu do generowania identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako dodaje się każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia w dużym prawdopodobieństwem zostaną zduplikowane wartości. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumny, której program SQL Server może automatycznie generować przy użyciu języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjnych identyfikator GUID nie jest gwarantowana globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
+>  Jest to alternatywa dla użycia automatyczne zwiększanie wartości do użycia <xref:System.Guid.NewGuid%2A> metody <xref:System.Guid> obiektu do generowania identyfikatora GUID lub Unikatowy identyfikator globalny, na komputerze klienckim, który można skopiować do serwera jako dodaje się każdego nowego wiersza. `NewGuid` Metoda generuje 16-bajtową wartość binarna, która jest tworzona przy użyciu algorytmu, który zapewnia w dużym prawdopodobieństwem zostaną zduplikowane wartości. W bazie danych programu SQL Server, identyfikator GUID jest przechowywany w `uniqueidentifier` kolumny, której program SQL Server może automatycznie generować przy użyciu języka Transact-SQL `NEWID()` funkcji. Przy użyciu identyfikatora GUID jako klucz podstawowy może niekorzystnie wpłynąć na wydajność. SQL Server zapewnia obsługę `NEWSEQUENTIALID()` funkcji, która generuje sekwencyjnych identyfikator GUID nie jest gwarantowana globalnie unikatowa, ale które mogą być indeksowane wydajniej.  
   
 ## <a name="retrieving-sql-server-identity-column-values"></a>Pobieranie wartości kolumny tożsamości serwera SQL  
  Podczas pracy z programem Microsoft SQL Server, można utworzyć procedury składowanej z parametrem wyjściowym, aby zwrócić wartości tożsamości dla wstawionego wiersza. W poniższej tabeli opisano trzy funkcje języka Transact-SQL w programie SQL Server, który może służyć do pobierania wartości w kolumnach tożsamości.  

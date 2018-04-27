@@ -5,14 +5,15 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ba48579735379bfc857993cd1546f5f7125101f4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac4cd9f14f046a970b6ec41c1b176e9980a960cf
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-v10"></a>Modernizacji istniejących aplikacji .NET z chmury Azure i kontenery systemu Windows (1.0)
 
@@ -28,7 +29,7 @@ Copyright © 2017 by Microsoft Corporation
 
 Wszelkie prawa zastrzeżone. Nie części zawartości tej książki może odtworzyć w jakimkolwiek formularzu, lub w jakikolwiek sposób bez pisemnej zgody wydawcy.
 
-Ten podręcznik jest dostępny bezpłatnie w formie elektronicznej książki (Książka elektroniczna) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft, takich jak http://dot.net/architecture.
+Ten podręcznik jest dostępny bezpłatnie w formie elektronicznej książki (Książka elektroniczna) dostępnych za pośrednictwem wielu kanałów w firmie Microsoft takich jak http://dot.net/architecture.
 
 Jeśli masz pytania dotyczące tej książki, poczty e-mail w [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)
 
@@ -36,7 +37,7 @@ Ten podręcznik podano "jako — jest" i odzwierciedla widoków i opinie autora.
 
 Niektóre przedstawione przykłady są udostępniane tylko do celów ilustracyjnych i są fikcyjne. Żadne rzeczywiste skojarzenia ani połączenia jest przeznaczony lub powinny być zakładane.
 
-Microsoft i znakami, znajduje się na http://www.microsoft.com na stronie sieci Web "Znaki towarowe" są znakami towarowymi grupy firm Microsoft. Wszystkie inne znaki są własnością ich prawnych właścicieli.
+Firma Microsoft i znakami, znajduje się na http://www.microsoft.com na stronie sieci Web "Znaki towarowe" są znakami towarowymi grupy firm Microsoft. Wszystkie inne znaki są własnością ich prawnych właścicieli.
 
 Autor:
 > **Cesarowi de la Torre**, Sr. PM, .NET Product Team, Microsoft Corp.
@@ -44,7 +45,7 @@ Autor:
 Uczestnicy i osoby dokonujące przeglądu:
 > **Scott myśliwego**, PM Dyrektor partnera, .NET zespół firmy Microsoft  
 > **Yuknewicz Pawła**, główny menedżer PM, Microsoft Visual Studio Tools zespołu  
-> **Ewa Guthrie**, Sr. PM, Visual Studio Tools team, Microsoft  
+> **Ewa Guthrie**, Sr. Microsoft Visual Studio Tools zespół PM  
 > **Ankit Asthana**, główny menedżer PM, .NET zespół firmy Microsoft  
 > **Unai Zorrilla**, realizacji Developer, zwykły pojęcia  
 > **Javier Valero**, dyrektora operacyjnego urzędnika na rozwiązanie Grupo  
@@ -95,7 +96,7 @@ Trzeci poziom dojrzałości jest ostatecznym celem w chmurze, ale jest opcjonaln
 
 Tabela 1-1 opisano podstawowe zalety i wybór każde podejście migracji lub modernizacji.
 
-| **Cloud Infrastructure-Ready** <br /> *Podnieś i przesunięcia* | **Gotowe do chmury opracowywania oprogramowania** <br /> *Podnieś i przesunięcia* | **Zoptymalizowane pod kątem chmury** *Modernize/zrefaktoryzuj/ponownego napisania* |
+| **Gotowe do infrastruktury w chmurze** <br /> *Podnieś i przesunięcia* | **Gotowe do chmury opracowywania oprogramowania** <br /> *Podnieś i przesunięcia* | **Zoptymalizowane pod kątem chmury** *Modernize/zrefaktoryzuj/ponownego napisania* |
 |---|---|---|
 | **Docelowy obliczeń aplikacji** |
 | Aplikacje wdrożone na maszynach wirtualnych na platformie Azure | Konteneryzowanych wbudowanymi lub N-warstwowych aplikacji wdrożonych na maszynach wirtualnych, sieci szkieletowej usług Azure lub usługi kontenera platformy Azure (czyli Kubernetes) | Konteneryzowanych mikrousług lub regularnych aplikacje oparte na PaaS w usłudze kontenera platformy Azure w usłudze Azure App Service, sieć szkieletowa usług Azure (czyli Kubernetes) |
@@ -172,11 +173,11 @@ Ten przewodnik nie pokazuje, jak pracować z chmury natywnych aplikacji, takich 
 
 ### <a name="additional-resources"></a>Dodatkowe zasoby
 
-- **Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna): [ *https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+- **Konteneryzowanych cyklem życia aplikacji Docker z platformy firmy Microsoft i narzędziami** (do pobrania Książka elektroniczna): [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
 
-- **.NET Mikrousług: Architektura konteneryzowanych aplikacji .NET** (do pobrania Książka elektroniczna): [ *https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
+- **.NET Mikrousług: Architektura konteneryzowanych aplikacji .NET** (do pobrania Książka elektroniczna): [*https://aka.ms/microservicesebook*](https://aka.ms/microservicesebook)
 
-- **Zaprojektowanie nowoczesnych aplikacji sieci web platformy ASP.NET Core i Azure** (do pobrania Książka elektroniczna): [ *https://aka.ms/webappebook*](https://aka.ms/webappebook)
+- **Zaprojektowanie nowoczesnych aplikacji sieci web platformy ASP.NET Core i Azure** (do pobrania Książka elektroniczna): [*https://aka.ms/webappebook*](https://aka.ms/webappebook)
 
 ## <a name="who-should-use-this-guide"></a>Kto powinien używać ten przewodnik
 

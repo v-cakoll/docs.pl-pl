@@ -1,7 +1,7 @@
 ---
 title: Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
 description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
-keywords: Docker, Mikrousług, ASP.NET, kontenera
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 45f29a8d19e49685f864b7ca83e466ceb1f73a62
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8098c62ac18593d8044d52cb24c4cd8859972e68
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="tackling-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a>Poruszając złożoności firm Mikrousługi DDD i wzorce CQRS
 
@@ -38,10 +38,10 @@ DDD jest duża tematu z bogaty zestaw zasoby szkoleniowe. Można uruchomić z ks
 ##### <a name="ddd-domain-driven-design"></a>DDD (oparte na domenie projekt)
 
 -   **Evans marek. Język domeny**
-    [*http://domainlanguage.com/*](http://domainlanguage.com/)
+    [*https://domainlanguage.com/*](https://domainlanguage.com/)
 
--   **Pole Fowler. Domeny oparte na projekt**
-    [*http://martinfowler.com/tags/domain%20driven%20design.html*](http://martinfowler.com/tags/domain%20driven%20design.html)
+-   **Pole Fowler. Projektowanie oparte na domenie**
+    [*https://martinfowler.com/tags/domain%20driven%20design.html*](https://martinfowler.com/tags/domain%20driven%20design.html)
 
 -   **Jimmy Bogard. Wzmocnienie domenę: Elementarz**
     [*https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/*](https://lostechies.com/jimmybogard/2010/02/04/strengthening-your-domain-a-primer/)
@@ -57,7 +57,7 @@ DDD jest duża tematu z bogaty zestaw zasoby szkoleniowe. Można uruchomić z ks
 -   **Vaughn Vernon. Implementowanie projektu oparte na domenie**
     [*https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/*](https://www.amazon.com/Implementing-Domain-Driven-Design-Vaughn-Vernon/dp/0321834577/)
 
--   **Vaughn Vernon. Domeny oparte na projekt destylowanej**
+-   **Vaughn Vernon. Projektowanie oparte na domenie destylowany**
     [*https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/*](https://www.amazon.com/Domain-Driven-Design-Distilled-Vaughn-Vernon/dp/0134434420/)
 
 -   **Jimmy Nilsson. Projektowanie oparte na domenie i wzorce**
@@ -71,7 +71,7 @@ DDD jest duża tematu z bogaty zestaw zasoby szkoleniowe. Można uruchomić z ks
 
 Szkolenie DDD
 
--   **Julie Lerman i Steve Smith. Podstawowe informacje na temat projektowania sterowanych domeny**
+-   **Julie Lerman i Steve Smith. Podstawowe informacje na temat projektowania oparte na domenie**
     [*http://bit.ly/PS-DDD*](http://bit.ly/PS-DDD)
 
 

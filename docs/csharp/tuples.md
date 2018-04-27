@@ -1,7 +1,7 @@
 ---
-title: "Krotki — przewodnik C#"
-description: "Dowiedz się więcej o typy nazwane i nienazwane spójnej kolekcji w języku C#"
-keywords: .NET, .NET core, C#
+title: Krotki — przewodnik C#
+description: Dowiedz się więcej o typy nazwane i nienazwane spójnej kolekcji w języku C#
+keywords: .NET, .NET Core, C#
 author: BillWagner
 ms-author: wiwagn
 ms.date: 11/23/2016
@@ -10,17 +10,17 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 58f76332a8f3717fe10788382552598d6693e7e3
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 1d1fc450503dc905e6b260a2b984e3ce2315fd45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="c-tuple-types"></a>Typy krotki C# #
 
-C# krotek są typy zdefiniowane przez użytkownika przy użyciu składni lightweight. Zalety obejmują składni prostszy, reguły konwersji na podstawie numeru (nazywane Kardynalność) i typy elementów i spójne zasady kopii i przypisania. Jako zależnościami spójne kolekcje nie obsługują niektórych idioms obiektowej skojarzono dziedziczenie. Przegląd w sekcji można uzyskać [krotek, co jest nowego w języku C# 7](whats-new/csharp-7.md#tuples) tematu.
+C# krotek są typy zdefiniowane przez użytkownika przy użyciu składni lightweight. Zalety obejmują składni prostszy, reguły konwersji na podstawie numeru (nazywane Kardynalność) i typy elementów i spójne zasady kopii i przypisania. Jako zależnościami spójne kolekcje nie obsługują niektórych idioms obiektowej skojarzono dziedziczenie. Przegląd w sekcji można uzyskać [krotek, co jest nowego w języku C# w wersji 7.0](whats-new/csharp-7.md#tuples) tematu.
 
-W tym temacie dowiesz się języka zasady krotek w języku C# 7 różne sposoby stosowania ich i początkowej wskazówki na temat pracy z spójnych kolekcji.
+W tym temacie dowiesz się języka zasady spójne kolekcje w C# w wersji 7.0 i nowszych, ciekawe sposoby do używania ich i początkowej wskazówki na temat pracy z spójnych kolekcji.
 
 > [!NOTE]
 > Nowe funkcje krotek wymagają <xref:System.ValueTuple> typów.

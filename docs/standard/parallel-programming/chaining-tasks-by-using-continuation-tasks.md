@@ -14,18 +14,18 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-caps.latest.revision: ''
+caps.latest.revision: 30
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b8e21c338648d5925c8576f76dae3aae43a9ca0d
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowanie asynchroniczne jest często stosowane w jednej operacji asynchronicznej, po zakończeniu, aby wywołać operację drugi i przekazywania danych do niej. Tradycyjnie to przeprowadzono przy użyciu metody wywołania zwrotnego. W bibliotece równoległych zadań podał funkcji *zadań kontynuacji*. Zadania kontynuacji (nazywanego także po prostu utrzymania) jest zadanie asynchroniczne, które jest wywoływane przez inne zadanie, znany jako *antecedent*, po zakończeniu antecedent.  
@@ -155,7 +155,7 @@ W programowanie asynchroniczne jest często stosowane w jednej operacji asynchro
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](http://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
+     Aby uzyskać więcej informacji, zobacz [obsługi wyjątków](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md) i [NIB: porady: obsługa wyjątków zgłaszanych przez zadania](https://msdn.microsoft.com/library/d6c47ec8-9de9-4880-beb3-ff19ae51565d).  
   
 -   Jeśli kontynuacji jest zadania podrzędnego dołączone, który został utworzony przy użyciu <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> opcji jego wyjątki będą przekazywane przez nadrzędny powrót do wywoływania wątku, jak w przypadku innych podrzędnych dołączonych. Aby uzyskać więcej informacji, zobacz [dołączonego i odłączone zadania podrzędne](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md).  
   

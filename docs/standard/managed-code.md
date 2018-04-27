@@ -1,7 +1,7 @@
 ---
-title: "Co to jest zarządzany kod?"
-description: "Dowiedz się, jak zarządzanego kodu jest kodem, których wykonanie jest zarządzany przez moduł wykonawczy środowiska uruchomieniowego języka wspólnego (CLR)."
-keywords: .NET, .NET core
+title: Co to jest zarządzany kod?
+description: Dowiedz się, jak zarządzanego kodu jest kodem, których wykonanie jest zarządzany przez moduł wykonawczy środowiska uruchomieniowego języka wspólnego (CLR).
+keywords: .NET, .NET Core
 author: blackdwarf
 ms.author: mairaw
 ms.date: 06/20/2016
@@ -13,17 +13,17 @@ ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ca2ae076229a1726d3a25a84e358f9cfb623a297
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 46bbe30f216ba9b0a3bc7f88267c428ec56de614
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-is-managed-code"></a>Co to jest "kodu zarządzanego"?
 
 Podczas pracy z .NET Framework, można napotkać często termin "kod zarządzany". Ten dokument zostanie Wyjaśnij, określenie to oznacza i dodatkowe informacje wokół niego.
 
-Aby umieścić bardzo prosty, kod zarządzany jest właśnie tę: kodu, których wykonanie jest zarządzane przez środowisko wykonawcze. W takim przypadku nosi nazwę środowiska uruchomieniowego w **środowisko uruchomieniowe języka wspólnego** lub CLR, niezależnie od implementacji ([Mono](http://www.mono-project.com/) lub .NET Framework lub .NET Core). CLR jest odpowiedzialny za pobierania kodu zarządzanego, kompilowanie go do kod maszynowy i jej wykonanie. U góry, runtime zawiera kilka ważnych usług, takich jak automatyczne zarządzanie pamięcią, granic zabezpieczeń typu bezpieczeństwa itp.
+Aby umieścić bardzo prosty, kod zarządzany jest właśnie tę: kodu, których wykonanie jest zarządzane przez środowisko wykonawcze. W takim przypadku nosi nazwę środowiska uruchomieniowego w **środowisko uruchomieniowe języka wspólnego** lub CLR, niezależnie od implementacji ([Mono](https://www.mono-project.com/) lub .NET Framework lub .NET Core). CLR jest odpowiedzialny za pobierania kodu zarządzanego, kompilowanie go do kod maszynowy i jej wykonanie. U góry, runtime zawiera kilka ważnych usług, takich jak automatyczne zarządzanie pamięcią, granic zabezpieczeń typu bezpieczeństwa itp.
 
 Natomiast to sposób którą należy uruchomić program C/C++, nazywane również "kodu niezarządzanego". W świecie niezarządzane programistę jest odpowiedzialny za niemal wszystkie elementy. Rzeczywiste program jest zasadniczo binary, który system operacyjny (OS) ładuje do pamięci i uruchamia. Wszystkie inne z zarządzania pamięci do zagadnienia dotyczące zabezpieczeń są obciążenia programisty.
 

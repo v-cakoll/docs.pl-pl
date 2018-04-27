@@ -1,32 +1,34 @@
 ---
-title: "Przegląd Dwukierunkowe funkcje WPF"
-ms.custom: 
+title: Przegląd Dwukierunkowe funkcje WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b50d98d5f02a59a013d7577f0e312e6ffde35690
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fa2349bca86676f4dc3e1703216a2b0dc50ccd59
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>Przegląd Dwukierunkowe funkcje WPF
 W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma wiele funkcji, które obsługują szybkie opracowywanie zawartości dwukierunkowego, na przykład mieszanych od lewej do prawej i kliknij prawym przyciskiem myszy, aby pozostawić danych w tym samym dokumencie. W tym samym czasie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] tworzy doskonałe środowisko dla użytkowników wymagających dwukierunkowego funkcje, takie jak arabski i hebrajski mówiąc użytkownikami.  
   
- W poniższych sekcjach opisano wiele funkcji dwukierunkowego wraz z przykładami pokazujący sposób uzyskania najlepszych wyświetlanie zawartości dwukierunkowego. Większość przykładów użycia [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ale można łatwo zastosować pojęć [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] lub [!INCLUDE[TLA#tla_visualb](../../../../includes/tlasharptla-visualb-md.md)] kodu.  
+ W poniższych sekcjach opisano wiele funkcji dwukierunkowego wraz z przykładami pokazujący sposób uzyskania najlepszych wyświetlanie zawartości dwukierunkowego. Większość przykładów użycia [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)], ale można łatwo zastosować pojęcia do kodu języka C# lub Microsoft Visual Basic.  
   
 
   
@@ -70,7 +72,7 @@ W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_wincl
   
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Documents.FlowDocument> jest uniwersalny [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] element, który może obsługiwać kombinację tekstu, tabel, obrazy i inne elementy. Ten element służy próbek w poniższych sekcjach.  
   
- Dodawanie tekstu do <xref:System.Windows.Documents.FlowDocument> może odbywać się bardziej temu jeden. To prosty sposób, aby to zrobić za pomocą <xref:System.Windows.Documents.Paragraph> czyli element na poziomie bloku, używany do zawartości grupy, taki jak tekst. Dodawanie tekstu do elementów wbudowanych przykłady użycia <xref:System.Windows.Documents.Span> i <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span>jest elementem zawartości przepływ śródwierszowy używane do grupowania innych elementów śródwierszowych podczas <xref:System.Windows.Documents.Run> jest przepływ śródwierszowy zawartości elementu mają zawierać Uruchom niesformatowanego tekstu. A <xref:System.Windows.Documents.Span> może zawierać wiele <xref:System.Windows.Documents.Run> elementów.  
+ Dodawanie tekstu do <xref:System.Windows.Documents.FlowDocument> może odbywać się bardziej temu jeden. To prosty sposób, aby to zrobić za pomocą <xref:System.Windows.Documents.Paragraph> czyli element na poziomie bloku, używany do zawartości grupy, taki jak tekst. Dodawanie tekstu do elementów wbudowanych przykłady użycia <xref:System.Windows.Documents.Span> i <xref:System.Windows.Documents.Run>. <xref:System.Windows.Documents.Span> jest elementem zawartości przepływ śródwierszowy używane do grupowania innych elementów śródwierszowych podczas <xref:System.Windows.Documents.Run> jest przepływ śródwierszowy zawartości elementu mają zawierać Uruchom niesformatowanego tekstu. A <xref:System.Windows.Documents.Span> może zawierać wiele <xref:System.Windows.Documents.Run> elementów.  
   
  W pierwszym przykładzie dokument zawiera dokument, który ma liczbę sieci udostępnianie nazw; na przykład `\\server1\folder\file.ext`. Określa, czy ma to łącze sieci w dokumentach arabskiego lub angielski, należy zawsze będzie wyświetlana w taki sam sposób. Na poniższym rysunku przedstawiono łącze w arabski <xref:System.Windows.FlowDirection.RightToLeft> dokumentu.  
   
@@ -131,7 +133,7 @@ W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_wincl
   
 <a name="FlowDirectionNontext"></a>   
 ## <a name="flowdirection-with-non-text-elements"></a>Wartość FlowDirection nietekstowych elementów  
- <xref:System.Windows.FlowDirection>Definiuje, nie tylko sposób przepływu tekstu w elemencie tekstową, ale również kierunek przepływu prawie wszystkich innych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementu. Poniżej przedstawiono graficzne <xref:System.Windows.Controls.ToolBar> używającą poziomym <xref:System.Windows.Media.LinearGradientBrush> do rysowania tła.  
+ <xref:System.Windows.FlowDirection> Definiuje, nie tylko sposób przepływu tekstu w elemencie tekstową, ale również kierunek przepływu prawie wszystkich innych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementu. Poniżej przedstawiono graficzne <xref:System.Windows.Controls.ToolBar> używającą poziomym <xref:System.Windows.Media.LinearGradientBrush> do rysowania tła.  
   
  **Graficzne, który zawiera narzędzi z lewej do prawej gradientu**  
   
@@ -193,7 +195,7 @@ W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_wincl
   
  Jest to dozwolone aplikacje do przetworzenia wartości liczbowe, bez konieczności przekonwertować je z jednego języka do innego, na przykład użytkownik może otworzyć [!INCLUDE[TLA#tla_xl](../../../../includes/tlasharptla-xl-md.md)] arkusza kalkulacyjnego w zlokalizowanych arabski [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i wyświetlić numery kształt arabski, ale otworzyć go w Wersja co Europejskich [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] i zobacz Europejskiego reprezentację tej samej liczby. To jest również dla innych symboli, takie jak separatory i procent symboli, ponieważ są zwykle dołączone numery w tym samym dokumencie.  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Trwa tradycji tego samego i dalsze dodaje obsługę to funkcja, która umożliwia większa kontrola użytkownika nad kiedy i jak podstawienia jest używany. Gdy ta funkcja jest przeznaczona dla dowolnego języka, jego jest szczególnie przydatna w dwukierunkowego zawartości w przypadku, gdy kształtowania cyfr dla określonego języka jest zwykle wyzwanie dla deweloperów aplikacji z powodu różnych kultur, który aplikacja może działać na.  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Trwa tradycji tego samego i dalsze dodaje obsługę to funkcja, która umożliwia większa kontrola użytkownika nad kiedy i jak podstawienia jest używany. Gdy ta funkcja jest przeznaczona dla dowolnego języka, jego jest szczególnie przydatna w dwukierunkowego zawartości w przypadku, gdy kształtowania cyfr dla określonego języka jest zwykle wyzwanie dla deweloperów aplikacji z powodu różnych kultur, który aplikacja może działać na.  
   
  Właściwości podstawowe kontrolowanie sposobu wielu podstawieniach działa w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] jest <xref:System.Windows.Media.NumberSubstitution.Substitution%2A> właściwości zależności. <xref:System.Windows.Media.NumberSubstitution> Klasa określa, jak mają być wyświetlane liczby w tekście. Ma trzy właściwości publiczne, które określają zachowanie. Poniżej znajduje się podsumowanie właściwości.  
   
@@ -251,7 +253,7 @@ W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_wincl
 |-|  
 |`<TextBlock`<br /><br /> `Name="text1" NumberSubstitution.CultureSource="Text">`<br /><br /> `1234+5679=6913`<br /><br /> `</TextBlock>`|  
   
- W polu [!INCLUDE[TLA2#tla_lhcshrp](../../../../includes/tla2sharptla-lhcshrp-md.md)] kodu, ustaw `Language` właściwości na przykład, aby `"ar-SA"`.  
+ W odpowiednich kod C#, ustaw `Language` właściwości na przykład, aby `"ar-SA"`.  
   
 ||  
 |-|  
@@ -263,13 +265,13 @@ W przeciwieństwie do innych platformy programistycznej [!INCLUDE[TLA2#tla_wincl
 |-|  
 |`text1.Language =`<br /><br /> `System.Windows.Markup.XmlLanguage.GetLanguage(`<br /><br /> `System.Globalization.CultureInfo.CurrentUICulture.IetfLanguageTag);`|  
   
- <xref:System.Globalization.CultureInfo.CurrentCulture%2A>reprezentuje bieżącą kulturę używaną przez bieżący wątek w czasie wykonywania.  
+ <xref:System.Globalization.CultureInfo.CurrentCulture%2A> reprezentuje bieżącą kulturę używaną przez bieżący wątek w czasie wykonywania.  
   
  Twoje final [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] przykład powinien być podobny do poniższego przykładu.  
   
  [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
- Twoje final [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] powinien być podobny do następującego.  
+ Twoje końcowy przykład C# powinny być podobne do następującego.  
   
  [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   

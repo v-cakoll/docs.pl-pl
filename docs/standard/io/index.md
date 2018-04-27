@@ -23,11 +23,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e9ebd1a11684afaa143d1f016f31e0a29a3478db
-ms.sourcegitcommit: ba765893e3efcece67d99fd6d5ce0074b050d1d9
+ms.openlocfilehash: b420859380d7c3c39a7d85f94df1708d9f26bebc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="file-and-stream-io"></a>We/Wy plików i strumieni
 Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu danych do lub z nośnika magazynowania. W programie .NET Framework `System.IO` przestrzenie nazw zawierają typy umożliwiające odczytywanie i zapisywanie synchronicznego i asynchronicznego, strumienie danych i plików. Te przestrzenie nazw zawierają również typy, które wykonują kompresję i dekompresję plików, oraz typy, które umożliwiają komunikację za pośrednictwem potoków i portów szeregowych.  
@@ -51,7 +51,7 @@ Termin „We/Wy (wejście/wyjście) plików i strumieni” dotyczy transferu dan
   
  Oprócz używania tych klas, Visual Basic użytkownicy mogą używać metody i właściwości udostępniane przez <xref:Microsoft.VisualBasic.FileIO.FileSystem?displayProperty=nameWithType> klasy dla we/wy pliku.  
   
- Zobacz [jak: kopiowania katalogów](../../../docs/standard/io/how-to-copy-directories.md), [porady: Tworzenie listy katalogów](http://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), i [jak: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
+ Zobacz [jak: kopiowania katalogów](../../../docs/standard/io/how-to-copy-directories.md), [porady: Tworzenie listy katalogów](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69), i [jak: Wyliczanie katalogów i plików](../../../docs/standard/io/how-to-enumerate-directories-and-files.md).  
   
 ## <a name="streams"></a>Strumienie  
  Abstrakcyjna klasa podstawowa <xref:System.IO.Stream> obsługuje odczytuje i zapisuje bajty. Wszystkie klasy, które reprezentują strumieni dziedziczyć <xref:System.IO.Stream> klasy. <xref:System.IO.Stream> Klasy pochodne zapewniają dostęp do źródła danych i repozytoriów i izolowanie programisty z szczegóły urządzeń podstawowych i systemu operacyjnego.  

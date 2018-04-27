@@ -1,20 +1,18 @@
 ---
-title: "Wyrażenia dopasowania (F#)"
-description: "Dowiedz się, jak wyrażenie dopasowania F # udostępnia rozgałęziania formant, który jest oparte na porównaniu wyrażenia z zestawem wzorców."
-keywords: "Visual f #, f #, funkcjonalności programowania"
+title: 'Wyrażenia dopasowania (F #)'
+description: 'Dowiedz się, jak wyrażenie dopasowania F # udostępnia rozgałęziania formant, który jest oparte na porównaniu wyrażenia z zestawem wzorców.'
 author: cartermp
 ms.author: phcart
-ms.date: 05/16/2016
+ms.date: 04/19/2018
 ms.topic: language-reference
 ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
-ms.assetid: 8854b713-255a-408d-942a-e80ab52fd2a4
-ms.openlocfilehash: c8b9be744cfa7bc76f0d663b12abd66f8757fc56
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f843e6fde98eae8a10235dd5cae38ffc10a4fb9f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="match-expressions"></a>Wyrażenia dopasowania
 
@@ -48,7 +46,7 @@ fun arg ->
     | pattern1 [ when condition ] -> result-expression1
     | pattern2 [ when condition ] -> result-expression2
     | ...
-```    
+```
 
 Aby uzyskać więcej informacji na temat wyrażeń lambda, zobacz [wyrażenia Lambda: `fun` — słowo kluczowe](functions/lambda-expressions-the-fun-keyword.md).
 
@@ -66,14 +64,29 @@ Poniższy przykład przedstawia użycie osłony do określenia zakresu numeryczn
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4602.fs)]
 
-Należy pamiętać, że ponieważ nie można używać wartości innych niż literały we wzorcu, muszą używać `when` klauzuli, jeśli zajdzie potrzeba porównania część danych wejściowych z określoną wartością. Przedstawiono to w poniższym kodzie.
+Należy pamiętać, że ponieważ nie można używać wartości innych niż literały we wzorcu, muszą używać `when` klauzuli, jeśli zajdzie potrzeba porównania część danych wejściowych z określoną wartością. Przedstawiono to w poniższym kodzie:
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4603.fs)]
 
-## <a name="see-also"></a>Zobacz też
+Należy pamiętać, że wzorzec jest objęta strażnik, osłony zastosowanie do **wszystkie** wzorców, nie tylko ostatnią. Na przykład, dla danego następujący kod, osłony `when a > 12` dotyczy zarówno `A a` i `B a`:
 
-[Dokumentacja języka F #](index.md)
+```fsharp
+type Union =
+    | A of int
+    | B of int
 
-[Wzorce aktywne](active-patterns.md)
+let foo() =
+    let test = A 42
+    match test with
+    | A a
+    | B a when a > 41 -> a // the guard applies to both patterns
+    | _ -> 1
 
-[Dopasowanie wzorca](pattern-matching.md)
+foo() // returns 42
+```
+
+## <a name="see-also"></a>Zobacz także
+
+[Dokumentacja języka F#](index.md)  
+[Wzorce aktywne](active-patterns.md)  
+[Dopasowanie do wzorca](pattern-matching.md)  

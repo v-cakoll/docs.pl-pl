@@ -1,26 +1,26 @@
 ---
 title: Dostawca WMI
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-caps.latest.revision: 
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: c1b1f923b6673ead42c7c702bd50d253ea06c765
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: c1b90a5231505f7d72d10c0ab9f9f80037d48bd7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="wmi-provider"></a>Dostawca WMI
 W tym przykładzie pokazano, jak zbierać dane z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usług w czasie wykonywania za pomocą dostawcy Instrumentacji zarządzania Windows (WMI), który jest wbudowany w [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]. Ponadto w przykładzie pokazano sposób dodawania obiektu WMI zdefiniowane przez użytkownika do usługi. Przykład aktywuje dostawcy WMI o [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) i pokazuje, jak zbierać dane z `ICalculator` usługi w czasie wykonywania.  
@@ -45,7 +45,7 @@ W tym przykładzie pokazano, jak zbierać dane z [!INCLUDE[indigo1](../../../../
  Dodawanie obiektów WMI z usługą umożliwia ujawnić informacje zdefiniowane przez użytkownika wraz z wbudowanych informacji o dostawcy WMI. Jest to osiągane przez publikowanie schemat usługi WMI za pomocą aplikacji Installutil.exe. Instrukcje w tym celu, wraz z bardziej szczegółowe informacje można znaleźć w instrukcjach instalacji na końcu tego tematu.  
   
 ## <a name="accessing-wmi-information"></a>Uzyskiwanie dostępu do informacji usługi WMI  
- Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)] aplikacji, aplikacji C++ i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
+ Dane usługi WMI są dostępne wiele różnych sposobów. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów aplikacji Visual Basic, aplikacji C++ i [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] (http://msdn.microsoft.com/library/default.asp?url=/library/wmisdk/wmi/using_wmi.asp).  
   
  W przykładzie użyto dwóch skryptów Java: jeden wyliczyć usługi uruchomione na komputerze wraz z niektórych właściwości i drugiego do wyświetlania danych usługi WMI zdefiniowane przez użytkownika. Skrypt otwiera połączenie z dostawcą WMI, analizuje dane i wyświetla zbieranych danych.  
   

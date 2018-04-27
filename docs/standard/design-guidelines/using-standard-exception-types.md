@@ -1,12 +1,12 @@
 ---
-title: "Używanie typów wyjątków standardowe"
-ms.custom: 
+title: Używanie typów wyjątków standardowe
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - throwing exceptions, standard types
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5098db5131c2e47c0b73efaac51477ef3b107761
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 54e8b750048a00f7ac2591b464ac4c74cb7591b7
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-standard-exception-types"></a>Używanie typów wyjątków standardowe
 W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczegóły ich użycia. Lista w żadnym wypadku nie jest kompletną. Skontaktuj się z dokumentacją odwołanie .NET Framework użycia innych typów wyjątków Framework.  
@@ -57,7 +57,7 @@ W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczeg�
   
  Wykonaj sprawdzanie, aby uniknąć generowania wyjątków tych argumentów. Wyrzucanie wyjątków te przedstawia szczegóły implementacji metody, która może ulec zmianie.  
   
-## <a name="stackoverflowexception"></a>Stackoverflowexception —  
+## <a name="stackoverflowexception"></a>StackOverflowException  
  **X nie** jawne zgłaszanie <xref:System.StackOverflowException>. Wyjątek powinien jawnie zgłoszony tylko przez środowisko CLR.  
   
  **X nie** catch `StackOverflowException`.  
@@ -70,9 +70,9 @@ W tej sekcji opisano wyjątki standardowe dostarczane przez platformę i szczeg�
 ## <a name="comexception-sehexception-and-executionengineexception"></a>ComException, sehexception — i ExecutionEngineException  
  **X nie** jawne zgłaszanie <xref:System.Runtime.InteropServices.COMException>, <xref:System.ExecutionEngineException>, i <xref:System.Runtime.InteropServices.SEHException>. Te wyjątki powinny być zgłoszony tylko przez infrastrukturę CLR.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  

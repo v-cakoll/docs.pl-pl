@@ -9,11 +9,11 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: d24d190eab5896121231543e6696b6a4861b5bb8
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: 0a24e8cf22bb8350777879a3adfd2757b89cd305
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-history-of-c"></a>Historia języka C# #
 
@@ -48,7 +48,7 @@ I jeszcze, C# nadal odtwarzany z bitowego wyrównywania z językiem Java. Java m
 
 ## <a name="c-version-30"></a>C# w wersji 3.0
 
-C# w wersji 3.0 dostarczone w późne 2007 oraz programu Visual Studio 2008, chociaż w języku C# w wersji 3.5 faktycznie przybyły pełne łodzi funkcji języka. Ta wersja jest oznaczona jako istotne zmiany w rozwój języka C#. Stwierdzone C# jako naprawdę potężnych język programowania. Spójrzmy na niektóre główne funkcje w tej wersji:
+C# w wersji 3.0 pochodzi w późne 2007 oraz programu Visual Studio 2008, ale faktycznie przybyły pełne łodzi funkcji języka platformy .NET Framework w wersji 3.5. Ta wersja jest oznaczona jako istotne zmiany w rozwój języka C#. Stwierdzone C# jako naprawdę potężnych język programowania. Spójrzmy na niektóre główne funkcje w tej wersji:
 
 - [Właściwości zaimplementowane automatycznie](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [Typy anonimowe](../programming-guide/classes-and-structs/anonymous-types.md)

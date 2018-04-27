@@ -1,11 +1,12 @@
 ---
-title: "Obsługa zdarzeń (Visual Basic)"
-ms.custom: 
+title: Obsługa zdarzeń (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - event handling [Visual Basic], walkthroughs
@@ -15,19 +16,19 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: e4e31937d67d2140865a9626f79fbddc16796709
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: c1743e5f5d9dcdf83ab646407cd1fcdc77ff71cd
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>Wskazówki: obsługa zdarzeń (Visual Basic)
 Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pierwszym temacie [wskazówki: deklarujący i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md), pokazuje, jak deklarowanie i wywoływanie zdarzeń. Ta sekcja używa formularza i klasy z tego przewodnika pokazanie sposobu obsługi zdarzenia, gdy ich została wykonana.  
   
- `Widget` Klasy przykładzie użyto tradycyjnych instrukcje obsługi zdarzeń. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Praca ze zdarzeniami zapewnia innych technik. Jako wykonywania można modyfikować w tym przykładzie, aby użyć `AddHandler` i `Handles` instrukcje.  
+ `Widget` Klasy przykładzie użyto tradycyjnych instrukcje obsługi zdarzeń. Visual Basic zapewnia innych technik do pracy ze zdarzeniami. Jako wykonywania można modyfikować w tym przykładzie, aby użyć `AddHandler` i `Handles` instrukcje.  
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>Obsługa zdarzenia PercentDone klasy widżetu  
   
@@ -66,7 +67,7 @@ Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pi
  Gdy użytkownik kliknie **anulować** przycisk podczas `LongTask` jest uruchomiona, `Button2_Click` zdarzeń jest wykonywane tak szybko, jak `DoEvents` instrukcji umożliwia przetwarzanie zdarzenia występują. Zmienna poziomie klasy `mblnCancel` ustawiono `True`i `mWidget_PercentDone` zdarzeń następnie sprawdza ją i ustawia `ByRef Cancel` argument `True`.  
   
 ## <a name="connecting-a-withevents-variable-to-an-object"></a>Łączenie do obiektu zmiennej WithEvents  
- `Form1`jest teraz skonfigurowane do obsługi `Widget` zdarzenia obiektu. Wszystkie opcje, które pozostaje jest znalezienie `Widget` innym.  
+ `Form1` jest teraz skonfigurowane do obsługi `Widget` zdarzenia obiektu. Wszystkie opcje, które pozostaje jest znalezienie `Widget` innym.  
   
  Gdy zadeklarować zmiennej `WithEvents` w czasie projektowania, żaden obiekt jest skojarzony z nim. A `WithEvents` zmienna jest podobnie jak inne zmienna obiektu. Należy utworzyć obiekt i przypisać odwołanie do niej z `WithEvents` zmiennej.  
   
@@ -80,7 +81,7 @@ Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pi
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-handling-events_4.vb)]  
   
- Podczas tego kodu, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] tworzy `Widget` obiektu i jego zdarzeń nawiązanie połączenia procedur zdarzeń związanych z `mWidget`. Od tego punktu, gdy `Widget` zgłasza jego `PercentDone` zdarzenia `mWidget_PercentDone` zdarzeń procedura jest wykonywana.  
+ Podczas tego kodu, Visual Basic tworzy `Widget` obiektu i jego zdarzeń nawiązanie połączenia procedur zdarzeń związanych z `mWidget`. Od tego punktu, gdy `Widget` zgłasza jego `PercentDone` zdarzenia `mWidget_PercentDone` zdarzeń procedura jest wykonywana.  
   
 #### <a name="to-call-the-longtask-method"></a>Aby wywołać metodę LongTask  
   
@@ -90,7 +91,7 @@ Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pi
   
  Przed `LongTask` metoda jest wywoływana etykiety wyświetla procentu ukończenia musi zostać zainicjowany i poziomie klasy `Boolean` Flaga anulowanie metoda musi mieć ustawioną `False`.  
   
- `LongTask`jest wywoływana z czas trwania zadania 12.2 sekund. `PercentDone` Zdarzenie jest wywoływane po każdym jedna trzecia sekundy. Zawsze zdarzenie jest zgłaszane, `mWidget_PercentDone` zdarzeń procedura jest wykonywana.  
+ `LongTask` jest wywoływana z czas trwania zadania 12.2 sekund. `PercentDone` Zdarzenie jest wywoływane po każdym jedna trzecia sekundy. Zawsze zdarzenie jest zgłaszane, `mWidget_PercentDone` zdarzeń procedura jest wykonywana.  
   
  Podczas `LongTask` jest wykonywana, `mblnCancel` jest testowany, aby sprawdzić, czy `LongTask` zakończone normalnie, lub jeśli zatrzymana, ponieważ `mblnCancel` ustawiono `True`. Procent wykonania jest aktualizowany tylko w pierwszym przypadku.  
   
@@ -125,5 +126,5 @@ Jest to drugi dwa tematy, które przedstawiają sposób pracy ze zdarzeniami. Pi
 >  Można zadeklarować tyle `WithEvents` muszą zmienne jako użytkownik, ale tablice `WithEvents` zmienne nie są obsługiwane.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wskazówki: Deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
+ [Przewodnik: deklarowanie i wywoływanie zdarzeń](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)  
  [Zdarzenia](../../../../visual-basic/programming-guide/language-features/events/index.md)

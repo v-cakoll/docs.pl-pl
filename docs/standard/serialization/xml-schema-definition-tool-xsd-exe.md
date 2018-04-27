@@ -1,25 +1,25 @@
 ---
-title: "Narzędzie definicji schematu XML (Xsd.exe)"
-ms.custom: 
+title: Narzędzie definicji schematu XML (Xsd.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 0e6407fc8da8695da47165ae0ea2c2c6d863ec23
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: 08e612ccc55cf85929d0b16217259d73510bc15e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>Narzędzie definicji schematu XML (Xsd.exe)
 Narzędzie definicji schematu XML (Xsd.exe) generuje schemat XML lub wspólnej klasy środowiska wykonawczego języka z PLików XDR, XML i XSD lub klasy w zestawie czasu wykonywania.  
@@ -65,14 +65,14 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|  
 |**/e**[**lementu**] **: *** — element*|Określa schemat do generowania kodu dla elementu. Domyślnie wszystkie elementy są wpisane. Tego argumentu można określić więcej niż raz.|  
 |**/enableDataBinding**|Implementuje <xref:System.ComponentModel.INotifyPropertyChanged> interfejsu na wszystkich typach wygenerowanego do włączenia możliwości wiązania danych. Krótka forma jest `/edb`.|  
-|**/enableLinqDataSet**|(Skrócona forma: `/eld`.) Określa, że wygenerowanego zestawu danych mogą być wyszukiwane względem przy użyciu LINQ do zestawu danych. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ do DataSet omówienie](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [zapytań wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [LINQ (zapytania język Language-Integrated)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
+|**/enableLinqDataSet**|(Skrócona forma: `/eld`.) Określa, że wygenerowanego zestawu danych mogą być wyszukiwane względem przy użyciu LINQ do zestawu danych. Ta opcja jest stosowana, gdy określona jest również opcja /dataset. Aby uzyskać więcej informacji, zobacz [LINQ do DataSet omówienie](../../../docs/framework/data/adonet/linq-to-dataset-overview.md) i [zapytań wpisanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md). Aby uzyskać ogólne informacje dotyczące korzystania z LINQ, zobacz [LINQ (zapytania język Language-Integrated)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d).|  
 |**/f**[**ields**]|Generuje pola, a nie właściwości. Domyślnie są generowane, właściwości.|  
 |**/l**[**ęzyk**] **: *** języka*|Określa język programowania. Wybierz z `CS` (C#, który jest domyślnie), `VB` (Visual Basic), `JS` (JScript) lub `VJS` (Visual J#). Można również określić pełną nazwę Implementacja klasy <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>|  
 |**/n**[**amespace**] **: *** przestrzeni nazw*|Określa przestrzeń nazw czasu wykonywania wygenerowany typów. Domyślny obszar nazw jest `Schemas`.|  
 |**/nologo**|Pomija transparentu.|  
-|**/order**|Generuje jawne kolejności identyfikatorów dla wszystkich członków cząstek.|  
+|**/ ORDER**|Generuje jawne kolejności identyfikatorów dla wszystkich członków cząstek.|  
 |**/o [ut]:** *directoryName*|Określa katalog wyjściowy, który można umieścić pliki w. Ustawieniem domyślnym jest bieżący katalog.|  
-|**/u**[**ri**]**:***uri*|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli jest dostępna ma zastosowanie do wszystkich elementów określony za pomocą `/element` opcji.|  
+|**/u**[**ri**] **: *** identyfikatora uri*|Określa identyfikator URI dla elementów w schemacie do generowania kodu. Ten identyfikator URI, jeśli jest dostępna ma zastosowanie do wszystkich elementów określony za pomocą `/element` opcji.|  
   
 ## <a name="dll-and-exe-file-options"></a>Biblioteka DLL i opcje PLiku EXE  
   
@@ -136,7 +136,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |Element|Opis|  
 |-------------|-----------------|  
 |\<zestaw >|Określa generowanie schematu z zestawu.|  
-|\<type>|Określa typ odnaleźć w zestawie do generowania schemat.|  
+|\<Typ >|Określa typ odnaleźć w zestawie do generowania schemat.|  
 |\<xml>|Określa PLik XML do generowania schemat.|  
 |\<xdr>|Określa PLik XDR do generowania schemat.|  
   
@@ -240,4 +240,4 @@ xsd myAssembly.dll
  [Wiersze polecenia](../../../docs/framework/tools/developer-command-prompt-for-vs.md)  
  [Omówienie LINQ to DataSet](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)  
  [Wykonywanie zapytania do typizowanych zestawów danych](../../../docs/framework/data/adonet/querying-typed-datasets.md)  
- [LINQ (zapytania o języku zintegrowanym)](http://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+ [LINQ (zapytania o języku zintegrowanym)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)

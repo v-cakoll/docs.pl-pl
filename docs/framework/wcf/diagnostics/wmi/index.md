@@ -16,19 +16,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0862f747cb969a6aa2e63d86e842097260e95b56
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 3df15e80a550857adbfbf30ebf8b6ef902426a1a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>Używanie Instrumentacji zarządzania Windows na potrzeby diagnostyki
-[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)]udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI).  
+[!INCLUDE[indigo1](../../../../../includes/indigo1-md.md)] udostępnia dane inspekcji usługi w czasie wykonywania za pośrednictwem [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] dostawcy Instrumentacji zarządzania Windows (WMI).  
   
 ## <a name="enabling-wmi"></a>Włączanie usługi WMI  
- Usługa WMI stanowi implementację firmy Microsoft w sieci Web-Based Enterprise Management (WBEM) standardowa. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)]zestaw SDK usługi WMI, zobacz [Instrumentacji zarządzania Windows](https://msdn.microsoft.com/library/aa394582.aspx). Technologia WBEM jest branżowy standard jak aplikacje ujawnia Instrumentacji zarządzania do narzędzia do zarządzania zewnętrznego.  
+ Usługa WMI stanowi implementację firmy Microsoft w sieci Web-Based Enterprise Management (WBEM) standardowa. [!INCLUDE[crabout](../../../../../includes/crabout-md.md)] zestaw SDK usługi WMI, zobacz [Instrumentacji zarządzania Windows](https://msdn.microsoft.com/library/aa394582.aspx). Technologia WBEM jest branżowy standard jak aplikacje ujawnia Instrumentacji zarządzania do narzędzia do zarządzania zewnętrznego.  
   
- Dostawca WMI jest składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Zawiera zestaw obiektów WMI, które mają pary atrybut/wartość. Pary może mieć wiele typów prostych. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]udostępnia Atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
+ Dostawca WMI jest składnik, który ujawnia Instrumentacji w czasie wykonywania za pośrednictwem interfejsu zgodnego WBEM. Zawiera zestaw obiektów WMI, które mają pary atrybut/wartość. Pary może mieć wiele typów prostych. Narzędzia do zarządzania mogą łączyć się usługi za pomocą interfejsu w czasie wykonywania. [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] udostępnia Atrybuty usług, takich jak adresy, powiązania zachowania i odbiorników.  
   
  W pliku konfiguracyjnym aplikacji można aktywować wbudowanego dostawcy WMI. Jest to zrobić za pomocą `wmiProviderEnabled` atrybutu [ \<diagnostyki >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md) w [ \<system.serviceModel >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) sekcji, jak pokazano w następującym przykładowym Konfiguracja.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
  Ten wpis konfiguracji uwidacznia interfejs WMI. Aplikacje do zarządzania można teraz łączenie się za pośrednictwem tego interfejsu i uzyskać dostęp z Instrumentacją zarządzania aplikacji.  
   
 ## <a name="accessing-wmi-data"></a>Uzyskiwanie dostępu do danych usługi WMI  
- Wiele różnych sposobów można uzyskać dostępu do danych usługi WMI. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów, [!INCLUDE[vbprvb](../../../../../includes/vbprvb-md.md)] aplikacji, aplikacji C++ i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Aby uzyskać więcej informacji, zobacz [za pomocą usługi WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
+ Wiele różnych sposobów można uzyskać dostępu do danych usługi WMI. Firma Microsoft udostępnia interfejsy API usługi WMI dla skryptów aplikacji Visual Basic, aplikacji C++ i [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]. Aby uzyskać więcej informacji, zobacz [za pomocą usługi WMI](http://go.microsoft.com/fwlink/?LinkId=95183).  
   
 > [!CAUTION]
 >  Jeśli używasz metody podane w programie .NET Framework do uzyskania programowego dostępu do danych usługi WMI, należy zwrócić uwagę, takich metod może zgłaszać wyjątki po nawiązaniu połączenia. Połączenie nie zostanie nawiązane podczas budowy <xref:System.Management.ManagementObject> wystąpienia, ale pierwszego żądania obejmujące rzeczywiste dane programu exchange. W związku z tym należy używać `try..catch` bloku catch możliwych wyjątków.  
@@ -52,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
  Należy zwrócić uwagę że jeśli nie rejestrowanie komunikatów śledzenia odbiorników dla rejestrowanie komunikatów lub nie `System.ServiceModel` obiektów nasłuchujących śledzenia śledzenia są określone w pliku konfiguracji, żadne zmiany są brane pod efekt, mimo że zmiany są akceptowane przez usługę WMI. Aby uzyskać więcej informacji na temat prawidłowo konfigurowania odpowiednich odbiorników, zobacz [Konfigurowanie rejestrowania komunikatów](../../../../../docs/framework/wcf/diagnostics/configuring-message-logging.md) i [Konfigurowanie śledzenia](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md). Poziom śledzenia wszystkich innych źródeł śledzenia określony w konfiguracji jest skuteczne, podczas uruchamiania aplikacji i nie można zmienić.  
   
- [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)]przedstawia `GetOperationCounterInstanceName` metod dla skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności w przypadku udostępnienia operacji o nazwie. Dane wejściowe nie są jednak zweryfikować. W związku z tym Jeśli podasz nazwę operacji niepoprawne, zwracana jest nazwa niepoprawny licznik.  
+ [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] przedstawia `GetOperationCounterInstanceName` metod dla skryptów. Ta metoda zwraca nazwę wystąpienia licznika wydajności w przypadku udostępnienia operacji o nazwie. Dane wejściowe nie są jednak zweryfikować. W związku z tym Jeśli podasz nazwę operacji niepoprawne, zwracana jest nazwa niepoprawny licznik.  
   
  `OutgoingChannel` Właściwość `Service` wystąpienia nie będą uwzględniane kanały otwarte przez usługę, aby połączyć się z inną usługą, w przypadku [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] klienta usługi docelowej nie jest tworzony w `Service` metody.  
   
@@ -160,7 +160,7 @@ ms.lasthandoff: 12/22/2017
 Whoami /user  
 ```  
   
- Zapewnia to identyfikator SID bieżącego użytkownika, ale nie można użyć tej metody można pobrać identyfikatora SID dla dowolnego użytkownika. Innej metody, aby uzyskać identyfikator SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [narzędzi systemu Windows 2000 Resource Kit dla zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID do wiersza polecenia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)][Dobrze znane identyfikatory SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
+ Zapewnia to identyfikator SID bieżącego użytkownika, ale nie można użyć tej metody można pobrać identyfikatora SID dla dowolnego użytkownika. Innej metody, aby uzyskać identyfikator SID jest użycie [getsid.exe](http://go.microsoft.com/fwlink/?LinkId=186467) narzędzia z [narzędzi systemu Windows 2000 Resource Kit dla zadań administracyjnych](http://go.microsoft.com/fwlink/?LinkId=178660). To narzędzie porównuje SID dwóch użytkowników (lokalnego lub domeny), a po stronie efekt drukuje dwa identyfikatory SID do wiersza polecenia. [!INCLUDE[crdefault](../../../../../includes/crdefault-md.md)] [Dobrze znane identyfikatory SID](http://go.microsoft.com/fwlink/?LinkId=186468).  
   
 ## <a name="accessing-remote-wmi-object-instances"></a>Uzyskiwanie dostępu do wystąpienia obiektu zdalną usługę WMI  
  Jeśli chcesz uzyskać dostęp do [!INCLUDE[indigo2](../../../../../includes/indigo2-md.md)] wystąpienia usługi WMI na komputerze zdalnym, należy włączyć prywatność pakietów narzędzia używane dla dostępu. W poniższej sekcji opisano jak to osiągnąć przy użyciu usługi WMI CIM Studio, Tester oprzyrządowania Instrumentacji zarządzania Windows, jak również .NET SDK 2.0.  

@@ -1,6 +1,6 @@
 ---
-title: "Odrzucenia — przewodnik C#"
-description: "Opisuje C# w obsługę odrzucenia, które są nieprzypisane, zmienne discardable i sposoby, w którym można odrzucenia."
+title: Odrzucenia — przewodnik C#
+description: Opisuje C# w obsługę odrzucenia, które są nieprzypisane, zmienne discardable i sposoby, w którym można odrzucenia.
 keywords: .NET, .NET core
 author: rpetrusha
 ms.author: ronpet
@@ -9,15 +9,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 800a27d2d186c738dceb6838aa669377a0c07b01
-ms.sourcegitcommit: 882e02b086d7cb9c75f748494cf7a8d3377c5874
+ms.openlocfilehash: 94badd78485ee4d3928b170d81a80743bf84102f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="discards---c-guide"></a>Odrzucenia — przewodnik C#
 
-Począwszy od C# 7, C# obsługuje odrzuca, które są tymczasowe, fikcyjny zmienne, które są celowo nieużywane w kodzie aplikacji. Odrzucenia są równoważne nieprzypisane zmiennych; nie mają one wartość. Ponieważ jest zmienną pojedynczego odrzucenia, a tej zmiennej nie może jeszcze być alokowana magazynu, odrzucenia można zmniejszyć alokacji pamięci. Ponieważ one być celem wyczyść kodu, zwiększyć jego czytelności i łatwości konserwacji.
+Począwszy od wersji 7.0 C#, C# obsługuje odrzuca, które są tymczasowe, fikcyjny zmienne, które są celowo nieużywane w kodzie aplikacji. Odrzucenia są równoważne nieprzypisane zmiennych; nie mają one wartość. Ponieważ jest zmienną pojedynczego odrzucenia, a tej zmiennej nie może jeszcze być alokowana magazynu, odrzucenia można zmniejszyć alokacji pamięci. Ponieważ one być celem wyczyść kodu, zwiększyć jego czytelności i łatwości konserwacji.
 
 Można wskazać, że zmienna jest odrzucenia przypisując podkreślenie (`_`) jako jego nazwę. Na przykład następujące wywołanie metody zwraca 3 podwójnego, w którym pierwszej i drugiej wartości są odrzucenia i *obszaru* poprzednio zadeklarowana zmienna ustawioną odpowiadającego składnika trzeciej zwrócony przez  *GetCityInformation*:
 
@@ -25,7 +25,7 @@ Można wskazać, że zmienna jest odrzucenia przypisując podkreślenie (`_`) ja
 (_, _, area) = city.GetCityInformation(cityName);
 ```
 
-W języku C# 7 odrzucenia są obsługiwane w przypisaniach w następujących sytuacjach:
+W języku C# w wersji 7.0 odrzucenia są obsługiwane w przypisaniach w następujących sytuacjach:
 
 - Spójnej kolekcji i obiektów [deconstruction](deconstruct.md).
 - Dopasowywanie do wzorca za [jest](language-reference/keywords/is.md) i [przełącznika](language-reference/keywords/switch.md).
@@ -48,7 +48,7 @@ Aby uzyskać więcej informacji na deconstructing spójnych kolekcji zawierając
 
 Aby uzyskać więcej informacji na deconstructing typy danych zdefiniowane przez użytkownika z odrzucenia, zobacz [Deconstructing krotek i innych typów](deconstruct.md#deconstructing-a-user-defined-type-with-discards).
 
-## <a name="pattern-matching-with-switch-and-is"></a>Dopasowywanie do wzorca za `switch` i`is`
+## <a name="pattern-matching-with-switch-and-is"></a>Dopasowywanie do wzorca za `switch` i `is`
 
 *Odrzucić wzorzec* mogą być używane w dopasowywanie do wzorca za [jest](language-reference/keywords/is.md) i [przełącznika](language-reference/keywords/switch.md) słów kluczowych. Każdy wyrażenie zawsze odpowiada wzorcowi odrzucenia.
 
@@ -86,5 +86,5 @@ Należy pamiętać, że `_` również jest prawidłowym identyfikatorem. Użycie
 
 ## <a name="see-also"></a>Zobacz także
 [Deconstructing krotek i innych typów](deconstruct.md)   
-[`is`słowo kluczowe](language-reference/keywords/is.md)   
-[`switch`słowo kluczowe](language-reference/keywords/switch.md)   
+[`is` Słowo kluczowe](language-reference/keywords/is.md)   
+[`switch` Słowo kluczowe](language-reference/keywords/switch.md)   

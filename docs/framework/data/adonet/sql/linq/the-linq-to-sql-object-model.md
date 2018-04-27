@@ -1,27 +1,29 @@
 ---
-title: "LINQ do SQL modelu obiektów"
-ms.custom: 
+title: LINQ do SQL modelu obiektów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 0bfaf7b08b3725f1c1cc2f0985c7612aa47a6cb4
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cc05166cffdd7254c657f0c490afaaac4cf08fcb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ do SQL modelu obiektów
 W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obiektowy wyrażone w języku programowania dewelopera jest zamapowana do modelu danych relacyjnej bazy danych. Operacje na danych następnie są przeprowadzane zgodnie z modelem obiektu.  
@@ -76,14 +78,14 @@ W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], model obi
  Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>Procedury składowane LINQ do SQL metod i bazy danych  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]obsługuje procedury składowane i funkcje zdefiniowane przez użytkownika. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], mapować te obiekty abstrakcyjne zdefiniowane bazy danych do obiektów klienta, dzięki czemu będą dostępne w sposób jednoznaczny z kodu klienta. Podpisy metod przypominać możliwie podpisów procedur i funkcji definiowanych w bazie danych. IntelliSense służy do odnajdywania tych metod.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] obsługuje procedury składowane i funkcje zdefiniowane przez użytkownika. W [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)], mapować te obiekty abstrakcyjne zdefiniowane bazy danych do obiektów klienta, dzięki czemu będą dostępne w sposób jednoznaczny z kodu klienta. Podpisy metod przypominać możliwie podpisów procedur i funkcji definiowanych w bazie danych. IntelliSense służy do odnajdywania tych metod.  
   
  Oznacza to zestaw wyników zwrócony przez wywołanie do mapowanej procedury jest silnie typizowaną kolekcją.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]mapuje procedury składowane i funkcje do metod za pomocą <xref:System.Data.Linq.Mapping.FunctionAttribute> i <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutów. Metody reprezentujący procedur składowanych różnią się od tych, które stanowią funkcje zdefiniowane przez użytkownika, przez <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> właściwości. Jeśli ta właściwość jest ustawiona na `false` (domyślnie), metoda reprezentuje procedury składowanej. Jeśli wartość jest ustawiona na `true`, metoda reprezentuje funkcji bazy danych.  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapuje procedury składowane i funkcje do metod za pomocą <xref:System.Data.Linq.Mapping.FunctionAttribute> i <xref:System.Data.Linq.Mapping.ParameterAttribute> atrybutów. Metody reprezentujący procedur składowanych różnią się od tych, które stanowią funkcje zdefiniowane przez użytkownika, przez <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> właściwości. Jeśli ta właściwość jest ustawiona na `false` (domyślnie), metoda reprezentuje procedury składowanej. Jeśli wartość jest ustawiona na `true`, metoda reprezentuje funkcji bazy danych.  
   
 > [!NOTE]
->  Jeśli używasz [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], można użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] można utworzyć metody mapowane na procedury składowane i funkcje zdefiniowane przez użytkownika.  
+>  Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] można utworzyć metody mapowane na procedury składowane i funkcje zdefiniowane przez użytkownika.  
   
 ### <a name="example"></a>Przykład  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

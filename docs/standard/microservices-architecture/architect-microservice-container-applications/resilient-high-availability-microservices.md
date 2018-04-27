@@ -1,6 +1,6 @@
 ---
-title: "Odporność i wysokiej dostępności w mikrousług"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Odporność i wysokiej dostępności w mikrousług"
+title: Odporność i wysokiej dostępności w mikrousług
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Odporność i wysokiej dostępności w mikrousług
 keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: cb78e98a01e413f31e6476dac77acdc4e5d4f78d
-ms.sourcegitcommit: c3957fdb990060559d73cca44ab3e2c7b4d049c0
+ms.openlocfilehash: 3ad3fc88a3e857f49283ff596e0385d0daad64b6
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>Odporność i wysokiej dostępności w mikrousług
 
@@ -43,7 +43,7 @@ Dzienniki zawierają informacje dotyczące sposobu aplikacja lub usługa jest ur
 
 W przypadku aplikacji serwerowych wbudowanymi można po prostu zapisywanie dzienników do pliku na dysku (pliku dziennika), a następnie analizować przy użyciu dowolnego narzędzia. Ponieważ wykonanie aplikacji jest ograniczony do środka serwera lub maszyny Wirtualnej, zwykle nie jest zbyt złożone, aby przeanalizować przepływu zdarzeń. Jednak w aplikacji rozproszonej, gdzie są wykonywane wiele usług w wielu węzłach w klastrze programu orchestrator, możliwość skorelować zdarzenia rozproszonej jest żądanie.
 
-Aplikacja mikrousługi należy próbuje zapisać w strumieniu wyjściowym zdarzenia lub logfiles samodzielnie, a nawet spróbuj Zarządzanie routingiem zdarzenia, które centralne miejsce. Powinno być przezroczysty, co oznacza, że każdy proces właśnie należy zapisać jego strumienia zdarzeń do wyjścia standardowego, który poniżej zostaną zebrane przez infrastruktura środowiska uruchamiania którym jest uruchomiona. Na przykład z tych routerów strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje ją do wyjściowego systemów. Obejmują one proste standardowego wyjścia dla środowiska programowania lub systemy chmur, takich jak [usługi Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (dla aplikacji lokalnych) i [diagnostyki Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Istnieją również dobrym dziennika innych firm analizy platform i narzędzi, które można wyszukiwać alertu, raport, i dzienników monitorowania, nawet w czasie rzeczywistym, takich jak [Splunk](http://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
+Aplikacja mikrousługi należy próbuje zapisać w strumieniu wyjściowym zdarzenia lub logfiles samodzielnie, a nawet spróbuj Zarządzanie routingiem zdarzenia, które centralne miejsce. Powinno być przezroczysty, co oznacza, że każdy proces właśnie należy zapisać jego strumienia zdarzeń do wyjścia standardowego, który poniżej zostaną zebrane przez infrastruktura środowiska uruchamiania którym jest uruchomiona. Na przykład z tych routerów strumienia zdarzeń [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow), który służy do zbierania strumieni zdarzeń z wielu źródeł i publikuje ją do wyjściowego systemów. Obejmują one proste standardowego wyjścia dla środowiska programowania lub systemy chmur, takich jak [usługi Application Insights](https://azure.microsoft.com/services/application-insights/), [OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (dla aplikacji lokalnych) i [diagnostyki Azure](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics). Istnieją również dobrym dziennika innych firm analizy platform i narzędzi, które można wyszukiwać alertu, raport, i dzienników monitorowania, nawet w czasie rzeczywistym, takich jak [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA).
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>Zarządzanie informacjami o Kondycja i Diagnostyka orchestrators
 
@@ -72,13 +72,13 @@ Różne orchestrators może dźwiękowej podobne, ale diagnostyki i kontroli kon
 -   **Łączenie komputerów z systemem Windows z usługą analizy dzienników na platformie Azure**
     [*https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents*](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
 
--   **Rejestrowanie wykonywanych średniej: Za pomocą bloku aplikacji semantycznego rejestrowania**
-    [*https://msdn.microsoft.com/library/dn440729 (v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
+-   **Rejestrowanie wykonywanych średniej: Za pomocą bloku semantycznego rejestrowania aplikacji**
+    [*https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx*](https://msdn.microsoft.com/library/dn440729(v=pandp.60).aspx)
 
 -   **Splunk.** Oficjalna witryna.
-    [*http://www.splunk.com*](http://www.splunk.com)
+    [*https://www.splunk.com/*](https://www.splunk.com/)
 
--   **EventSource — klasa**. Interfejs API dla zdarzenia śledzenia zdarzeń systemu Windows (ETW) [ *https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
+-   **EventSource — klasa**. Interfejs API dla zdarzenia śledzenia zdarzeń systemu Windows (ETW) [*https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource*](xref:System.Diagnostics.Tracing.EventSource)
 
 
 

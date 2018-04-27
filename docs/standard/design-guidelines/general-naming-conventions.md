@@ -1,12 +1,12 @@
 ---
-title: "Ogólne konwencje nazewnictwa"
-ms.custom: 
+title: Ogólne konwencje nazewnictwa
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - names [.NET Framework], conflicts
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - names [.NET Framework], type names
 - names [.NET Framework], acronyms
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 5e5c09c4db8e65d836c7afc7cb78c1f9e32bab65
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 87f866210667905566d75bfed22ba7b9a521abdc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="general-naming-conventions"></a>Ogólne konwencje nazewnictwa
 W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word wskazówki na temat używania skrótów i akronimów i zalecenia dotyczące należy unikać nazw specyficzny dla języka.  
@@ -71,18 +71,18 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
 |C#|Visual Basic|C++|CLR|  
 |---------|------------------|-----------|---------|  
-|**sbyte**|**Sbyte —**|**char**|**Sbyte —**|  
-|**byte**|**Bajtów**|**char bez znaku**|**Bajtów**|  
-|**short**|**Krótki**|**short**|**Int16**|  
+|**sbyte**|**SByte**|**char**|**SByte**|  
+|**byte**|**Byte**|**char bez znaku**|**Byte**|  
+|**short**|**krótki**|**short**|**Int16**|  
 |**ushort**|**UInt16**|**short bez znaku**|**UInt16**|  
 |**int**|**Liczba całkowita**|**int**|**Int32**|  
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|  
-|**long**|**Długa**|**__int64**|**Int64**|  
+|**long**|**długa**|**__int64**|**Int64**|  
 |**ulong**|**UInt64 —**|**__int64 bez znaku**|**UInt64 —**|  
 |**float**|**Pojedynczy**|**float**|**Pojedynczy**|  
-|**double**|**O podwójnej precyzji**|**double**|**O podwójnej precyzji**|  
-|**bool**|**Wartość logiczna**|**bool**|**Wartość logiczna**|  
-|**char**|**Char**|**wchar_t**|**Char**|  
+|**double**|**Double**|**double**|**Double**|  
+|**bool**|**Boolean**|**bool**|**Boolean**|  
+|**char**|**char**|**wchar_t**|**char**|  
 |**string**|**Ciąg**|**Ciąg**|**Ciąg**|  
 |**object**|**Obiekt**|**Obiekt**|**Obiekt**|  
   
@@ -105,9 +105,9 @@ W tej sekcji opisano ogólne konwencji nazewnictwa odnoszą się do wyboru word 
   
  **CZY ✓** Użyj sufiksu "64", wprowadzając wersje interfejsów API, które działają na 64-bitowa liczba całkowita (długich liczb całkowitych) zamiast 32-bitową liczbę całkowitą. Należy o zastosowaniu takiego podejścia, gdy istnieje istniejących API 32-bitowy; nie robi to całkowicie nowe interfejsy API w wersji 64-bitowych.  
   
- *Fragmenty © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
+ *Portions © 2005, 2009 Microsoft Corporation. Wszelkie prawa zastrzeżone.*  
   
- *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](http://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
+ *Drukowane uprawnieniami wariancji x edukacji, Inc. z [Framework zaleceń dotyczących projektowania: konwencje, Idioms i wzorce dla bibliotek .NET wielokrotnego użytku, wydanie 2](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina i Abrams Brada opublikowane 22 Oct 2008 przez Professional Addison-Wesley jako część serii rozwoju systemu Windows firmy Microsoft.*  
   
 ## <a name="see-also"></a>Zobacz też  
  [Struktura — zalecenia dotyczące projektowania](../../../docs/standard/design-guidelines/index.md)  

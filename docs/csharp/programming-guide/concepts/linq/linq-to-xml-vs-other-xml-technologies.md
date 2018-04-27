@@ -1,21 +1,22 @@
 ---
 title: LINQ do XML programu vs. Inne Technologies3 XML
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-csharp
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-csharp
 ms.topic: article
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4a159c906799a61372c1a40e7464d885339b9256
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: f13e2d64db9265f03aec3fa5da9f171fcb366f72
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ do XML programu vs. Inne technologie XML
 W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] następujące technologie XML: <xref:System.Xml.XmlReader>, XSLT, MSXML i XmlLite. Te informacje mogą pomóc w określeniu technologii.  
@@ -23,9 +24,9 @@ W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
  Porównanie [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] do modelu DOM (Document Object), zobacz [LINQ do XML programu vs. MODELU DOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md).  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ do XML programu vs. Element XmlReader  
- <xref:System.Xml.XmlReader>jest szybkie, tylko do przodu, buforowanie analizatora składni.  
+ <xref:System.Xml.XmlReader> jest szybkie, tylko do przodu, buforowanie analizatora składni.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]zaimplementowano nad <xref:System.Xml.XmlReader>, i są ściśle powiązane. Jednak umożliwia także <xref:System.Xml.XmlReader> przez samego siebie.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] zaimplementowano nad <xref:System.Xml.XmlReader>, i są ściśle powiązane. Jednak umożliwia także <xref:System.Xml.XmlReader> przez samego siebie.  
   
  Na przykład załóżmy, że są tworzenia usługi sieci Web analizy setki dokumentów XML na sekundę i dokumenty ma taką samą strukturę, co oznacza, że masz zapisu jedna implementacja kodu do analizy kodu XML. W takim przypadku będzie prawdopodobnie chcesz użyć <xref:System.Xml.XmlReader> przez samego siebie.  
   
@@ -40,7 +41,7 @@ W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
   
  Po opanowaniu [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] wyrażenia, zapytań [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] przekształceń są zaawansowanych technologii, która jest łatwy w użyciu. Zasadniczo formowania dokument XML przy użyciu konstrukcji funkcjonalności ściąganie danych z różnych źródeł, konstruowania <xref:System.Xml.Linq.XElement> dynamicznie obiekty i zebrania całego w nowym drzewie XML. Transformacja mogą generować całkowicie nowy dokument. Konstruowanie przekształcenia w [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] jest względnie proste i intuicyjne, a wynikowy kod jest możliwy do odczytu. Pozwala to ograniczyć koszty rozwoju i konserwacji.  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]nie ma zastąpić XSLT. XSLT jest nadal narzędzie ulubionym skomplikowane i zorientowany transformacji XML, zwłaszcza, jeśli nie zdefiniowano także strukturę dokumentu.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] nie ma zastąpić XSLT. XSLT jest nadal narzędzie ulubionym skomplikowane i zorientowany transformacji XML, zwłaszcza, jeśli nie zdefiniowano także strukturę dokumentu.  
   
  Zaletą jest konsorcjum World Wide Web (W3C) standardowy jest XSLT. Jeśli masz wymagane użycie tylko technologii, które są standardy, może być bardziej odpowiednie XSLT.  
   
@@ -49,7 +50,7 @@ W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ do XML programu vs. PROGRAM MSXML  
  Program MSXML jest technologią oparte na modelu COM dla przetwarzania kodu XML, która jest zawarta w systemie Microsoft Windows. Program MSXML zapewnia implementacji native modelu DOM z obsługą języka XPath i XSLT. Zawiera ona także SAX2 analizator-buforowania, oparty na zdarzeniach.  
   
- MSXML wykonuje również jest domyślnie w większości przypadków bezpieczne i dostępne w programie Internet Explorer do wykonania XML po stronie klienta przetwarzanie w aplikacje w stylu AJAX. MSXML można wykorzystać od języka programowania, obsługujący COM, C++, JavaScript, w tym i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0.  
+ MSXML wykonuje również jest domyślnie w większości przypadków bezpieczne i dostępne w programie Internet Explorer do wykonania XML po stronie klienta przetwarzanie w aplikacje w stylu AJAX. Program MSXML może służyć od języka programowania, obsługujący COM, w tym C++, JavaScript i Visual Basic 6.0.  
   
  Program MSXML nie jest zalecane używanie w kodzie zarządzanym, w oparciu o środowisko uruchomieniowe języka wspólnego (CLR).  
   
@@ -61,4 +62,4 @@ W tym temacie porównuje [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] n
  XmlLite nie jest zintegrowany z [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]. Nie przekazuje on programistę udoskonalenia wydajności, które są motywujące życie za [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)].  
   
 ## <a name="see-also"></a>Zobacz też  
- [Wprowadzenie (LINQ do XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+ [Wprowadzenie (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

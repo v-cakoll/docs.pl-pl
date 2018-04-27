@@ -1,18 +1,19 @@
 ---
-title: "Budowanie odpornej usługi gotowe do chmury. Dążenie przejściowych błędów w chmurze"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Budowanie odpornej usługi gotowe do chmury. Dążenie przejściowych błędów w chmurze"
+title: Budowanie odpornej usługi gotowe do chmury. Dążenie przejściowych błędów w chmurze
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Budowanie odpornej usługi gotowe do chmury. Dążenie przejściowych błędów w chmurze
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df452c9fbf1c16603efcec40844b55810bd5d2d4
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 0ac1d67a5b5b9a19f47c1d20eeb446977466510f
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>Budowanie odpornej usługi gotowe do chmury: dążenie przejściowych błędów w chmurze
 

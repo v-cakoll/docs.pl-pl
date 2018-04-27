@@ -1,23 +1,24 @@
 ---
-title: "Używanie delegatów działania"
-ms.custom: 
+title: Używanie delegatów działania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e33cf876-8979-440b-9b23-4a12d1139960
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 82aafd49528e7ce36f9cf09b7402e65d0844f797
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: efec9885ae804263f7ae4c6d1d5c3bc4f39831c9
+ms.sourcegitcommit: 68b60d38043e50104ccc90c76f8599b1ffe18346
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-activity-delegates"></a>Używanie delegatów działania
 Działanie delegatów Włącz autorów działania do udostępnienia wywołań zwrotnych z określonych podpisów, dla których użytkownik działania można podać oparte na działaniu programów obsługi. Dostępne są dwa typy delegatów działania: <xref:System.Activities.ActivityAction%601> służy do definiowania obiektów delegowanych działania, które nie mają zwracanych wartości, i <xref:System.Activities.ActivityFunc%601> służy do definiowania delegatów działania, które mają wartość zwracaną.  
@@ -37,7 +38,7 @@ Przykłady w tym temacie należy użyć składni inicjalizacji obiektu. Składni
   
  [!code-csharp[CFX_ActivityExample#7](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#7)]  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Inicjatory obiektów, zobacz [porady: Inicjowanie obiektów bez wywoływania konstruktora (C# przewodnik programowania w języku)](http://go.microsoft.com/fwlink/?LinkId=161015) i [porady: deklarowanie obiektu za pomocą inicjatora obiektów](http://go.microsoft.com/fwlink/?LinkId=161016).  
   
  W poniższym przykładzie <xref:System.Activities.Statements.TryCatch> działanie jest używane w przepływie pracy. <xref:System.ApplicationException> Jest generowany przez przepływ pracy i jest obsługiwany przez <xref:System.Activities.Statements.Catch%601> działania. Program obsługi dla <xref:System.Activities.Statements.Catch%601> Akcja działania działania jest <xref:System.Activities.Statements.WriteLine> działania i szczegóły wyjątku jest umieszczane za pośrednictwem do niej przy użyciu `ex` <xref:System.Activities.DelegateInArgument%601>.  
   
@@ -54,7 +55,7 @@ Przykłady w tym temacie należy użyć składni inicjalizacji obiektu. Składni
  Istnieje wiele wersji ogólnego <xref:System.Activities.Statements.InvokeAction%601> i <xref:System.Activities.ActivityAction%601> przewidzianych przekazywanie jednego lub więcej argumentów.  
   
 ## <a name="using-activityfunc"></a>Przy użyciu ActivityFunc  
- <xref:System.Activities.ActivityAction%601>jest przydatne, gdy nie ma żadnej wartości wyników z działania, a <xref:System.Activities.ActivityFunc%601> jest używany, gdy zostanie zwrócona wartość wyniku. Podczas tworzenia działań niestandardowych, który definiuje <xref:System.Activities.ActivityFunc%601>, użyj <xref:System.Activities.Expressions.InvokeFunc%601> do wywołania w tym modelu <xref:System.Activities.ActivityFunc%601>. W poniższym przykładzie `WriteFillerText` zdefiniowano działania. Przydzielenie tekst wypełniacza <xref:System.Activities.Expressions.InvokeFunc%601> jest określony, które przyjmuje argument liczby całkowitej i ma wynik ciągu. Po pobraniu wypełniacza tekstu jest wyświetlana na konsoli za pomocą <xref:System.Activities.Statements.WriteLine> działania.  
+ <xref:System.Activities.ActivityAction%601> jest przydatne, gdy nie ma żadnej wartości wyników z działania, a <xref:System.Activities.ActivityFunc%601> jest używany, gdy zostanie zwrócona wartość wyniku. Podczas tworzenia działań niestandardowych, który definiuje <xref:System.Activities.ActivityFunc%601>, użyj <xref:System.Activities.Expressions.InvokeFunc%601> do wywołania w tym modelu <xref:System.Activities.ActivityFunc%601>. W poniższym przykładzie `WriteFillerText` zdefiniowano działania. Przydzielenie tekst wypełniacza <xref:System.Activities.Expressions.InvokeFunc%601> jest określony, które przyjmuje argument liczby całkowitej i ma wynik ciągu. Po pobraniu wypełniacza tekstu jest wyświetlana na konsoli za pomocą <xref:System.Activities.Statements.WriteLine> działania.  
   
  [!code-csharp[CFX_ActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#3)]  
   
@@ -62,7 +63,7 @@ Przykłady w tym temacie należy użyć składni inicjalizacji obiektu. Składni
   
  [!code-csharp[CFX_ActivityExample#4](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#4)]  
   
- Aby użyć `TextGenerator` działania o `WriteRandomText` działania, określ go jako <xref:System.Activities.ActivityDelegate.Handler%2A>.  
+ Aby użyć `TextGenerator` działania o `WriteFillerText` działania, określ go jako <xref:System.Activities.ActivityDelegate.Handler%2A>.  
   
  [!code-csharp[CFX_ActivityExample#5](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#5)]  
   

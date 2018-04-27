@@ -1,19 +1,20 @@
 ---
-title: "Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu Azure"
-description: "Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure | Zalecenia dotyczące aplikacji sieci web ASP.NET hostingu Azure"
+title: Zalecenia dotyczące aplikacji sieci web platformy ASP.NET Core hostingu Azure
+description: Projektowania nowoczesnych aplikacji sieci Web platformy ASP.NET Core i Azure | Zalecenia dotyczące aplikacji sieci web ASP.NET hostingu Azure
 author: ardalis
 ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 868f1b7ce452be9e29b921888f90d128e074ba13
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eccb57e5ccf9162a6e6ce11434e644682881debc
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="azure-hosting-recommendations-for-aspnet-core-web-apps"></a>Zalecenia dotyczące aplikacji sieci Web platformy ASP.NET Core hostingu Azure
 
@@ -76,7 +77,7 @@ Jeśli masz istniejącą aplikację wymagające istotne zmiany do uruchamiania w
 
 #### <a name="feature-comparison"></a>Porównanie funkcji
 
-| Usługi aplikacji — funkcja | Service Fabric | Maszyny wirtualne |
+| Usługi aplikacji — funkcja | Sieci szkieletowej usług | Maszyny wirtualne |
 |---------|----------|----------|
 | Niemal natychmiastowe wdrożenia | X | X | |
 | Skalowanie w górę do większych maszyn bez ponownego wdrażania | X | X | |

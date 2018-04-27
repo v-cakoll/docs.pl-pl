@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 7760f30e8053b55c2f846c08ccb6a3d026089afb
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: e36d23c6dfd89b54c86d0b6062813aeccb649579
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="collections-and-data-structures"></a>Kolekcje i struktury danych
 Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipulować jako kolekcja. Można użyć <xref:System.Array?displayProperty=nameWithType> klasy lub klas w <xref:System.Collections>, <xref:System.Collections.Generic>, <xref:System.Collections.Concurrent>, System.Collections.Immutable przestrzeni nazw, aby dodać, usuwanie i modyfikowanie poszczególne elementy lub zakres elementów w kolekcji.  
@@ -39,7 +39,7 @@ Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipul
   
 -   **Umożliwia wyliczenie kolekcji**  
   
-     Kolekcje .NET framework albo implementować <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> można włączyć kolekcji należy powtórzyć za pośrednictwem. Moduł wyliczający można traktować jako ruchome wskaźnik do dowolnego elementu w kolekcji. [Foreach w](~/docs/csharp/language-reference/keywords/foreach-in.md) instrukcji i [For Each... Następna instrukcja](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) Użyj udostępnianych przez moduł wyliczający <xref:System.Collections.IEnumerable.GetEnumerator%2A> — metoda i Ukryj złożoność manipulowanie modułu wyliczającego. Ponadto żadnej kolekcji implementującej <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uznawany za *kolejność typu* i można zbadać za pomocą LINQ. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych. Są one zazwyczaj zwięzły i bardziej czytelny niż standardowe `foreach` pętli, a następnie podaj filtrowania, kolejność i grupowanie możliwości. Zapytania LINQ także może zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](http://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) i [wprowadzenie do kwerend LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
+     Kolekcje .NET framework albo implementować <xref:System.Collections.IEnumerable?displayProperty=nameWithType> lub <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> można włączyć kolekcji należy powtórzyć za pośrednictwem. Moduł wyliczający można traktować jako ruchome wskaźnik do dowolnego elementu w kolekcji. [Foreach w](~/docs/csharp/language-reference/keywords/foreach-in.md) instrukcji i [For Each... Następna instrukcja](~/docs/visual-basic/language-reference/statements/for-each-next-statement.md) Użyj udostępnianych przez moduł wyliczający <xref:System.Collections.IEnumerable.GetEnumerator%2A> — metoda i Ukryj złożoność manipulowanie modułu wyliczającego. Ponadto żadnej kolekcji implementującej <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> jest uznawany za *kolejność typu* i można zbadać za pomocą LINQ. Zapytania LINQ Podaj wspólnego wzorca do uzyskiwania dostępu do danych. Są one zazwyczaj zwięzły i bardziej czytelny niż standardowe `foreach` pętli, a następnie podaj filtrowania, kolejność i grupowanie możliwości. Zapytania LINQ także może zwiększyć wydajność. Aby uzyskać więcej informacji, zobacz [LINQ do obiektów](https://msdn.microsoft.com/library/73cafe73-37cf-46e7-bfa7-97c7eea7ced9), [równoległe LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md) i [wprowadzenie do kwerend LINQ (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md).  
   
 -   **Możliwość kopiowania zawartości kolekcji do tablicy**  
   
@@ -57,7 +57,7 @@ Podobne dane często są obsługiwane wydajniej podczas przechowywania i manipul
   
 -   **Spójne dolna granica**  
   
-     Dolna granica kolekcji jest indeks pierwszego elementu. Indeksowane wszystkie kolekcje w programie <xref:System.Collections> przestrzeni nazw ma dolna granica zero, co oznacza są indeksowane 0. <xref:System.Array>ma dolna granica zero domyślnie, ale podczas tworzenia wystąpienia można zdefiniować dolną granicą inną **tablicy** przy użyciu <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
+     Dolna granica kolekcji jest indeks pierwszego elementu. Indeksowane wszystkie kolekcje w programie <xref:System.Collections> przestrzeni nazw ma dolna granica zero, co oznacza są indeksowane 0. <xref:System.Array> ma dolna granica zero domyślnie, ale podczas tworzenia wystąpienia można zdefiniować dolną granicą inną **tablicy** przy użyciu <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType>.  
   
 -   **Synchronizacja dla dostęp wiele wątków** (<xref:System.Collections> tylko klasy).  
   

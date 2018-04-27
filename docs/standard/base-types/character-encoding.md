@@ -1,12 +1,12 @@
 ---
 title: Znak kodowania w .NET
-ms.custom: 
+ms.custom: ''
 ms.date: 12/22/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,18 +16,18 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-caps.latest.revision: 
+caps.latest.revision: 33
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac24e3a685c20445c473f0f5222ddba72b6b098c
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 1d296920d75af2194323791c4ea571c10f1e3c7d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="character-encoding-in-net"></a>Znak kodowania w .NET
 Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposobów. Kodowanie znaków to system, który pary każdego znaku w obsługiwanych zestaw z niektórych wartość, która reprezentuje ten znak znaków. Na przykład Morse'a jest kodowania każdego znaku alfabetu łacińskiego z wzorcem kropek tej pary znaków i łączniki, które są odpowiednie do przesyłania za pośrednictwem telegraficznego wierszy. Kodowanie znaków dla pary komputerów dla każdego znaku zestaw z wartością numeryczną, która reprezentuje ten znak obsługiwanych znaków. Kodowanie znaków ma dwa różne składniki:  
@@ -70,7 +70,7 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
 > [!NOTE]
 >  Unicode Standard przypisuje punkt kodu (number) i nazwę każdego znaku w każdej obsługiwanej skryptu. Na przykład znak "A" jest reprezentowana przez punkt kodu U + 0041 i nazwie "ŁACIŃSKIEGO litera, A". Kodowanie Format transformacji Unicode (UTF) zdefiniuj sposoby kodowania tego punktu kodu do sekwencji bajtów co najmniej jeden. Schemat kodowania Unicode upraszcza projektowanie aplikacji gotowe, ponieważ zezwala ona na znaki z dowolnego zestawu być reprezentowane w jednym kodowania znaków. Deweloperzy aplikacji już nie mieć do śledzenia schemat kodowania, który został użyty do utworzenia znaków dla określonego języka lub zapisywanie systemu i danych mogą być współużytkowane przez systemy międzynarodowe nie są uszkodzone.  
 >   
->  .NET obsługuje trzy rodzaje kodowania zdefiniowane w standardzie Unicode: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, patrz Unicode Standard na [strony głównej Unicode](http://www.unicode.org/).  
+>  .NET obsługuje trzy rodzaje kodowania zdefiniowane w standardzie Unicode: UTF-8, UTF-16 i UTF-32. Aby uzyskać więcej informacji, patrz Unicode Standard na [strony głównej Unicode](https://www.unicode.org/).  
   
  Można pobrać informacji o kodowania dostępnych w programie .NET, wywołując <xref:System.Text.Encoding.GetEncodings%2A?displayProperty=nameWithType> metody. .NET obsługuje zestaw znaków kodowania systemów wymienionych w poniższej tabeli.  
   
@@ -86,7 +86,7 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
   
  Kodowanie te umożliwiają pracę z znaków Unicode, a także kodowania, które są najczęściej używane w przypadku starszych aplikacji. Ponadto można utworzyć niestandardowego kodowania, definiując klasę, która jest pochodną <xref:System.Text.Encoding> i przesłanianie jej elementów członkowskich.  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Uwagi dotyczące platformy:[!INCLUDE[net_core](../../../includes/net-core-md.md)]  
+### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>Uwagi dotyczące platformy: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
  Domyślnie [!INCLUDE[net_core](../../../includes/net-core-md.md)] nie udostępnia żadnych kodowania strony kodu innych niż strona kodowa 28591 i kodowania Unicode, takie jak UTF-8 i UTF-16. Można jednak dodać kodowania strony kodu znaleziono w standardowej aplikacji systemu Windows .NET kierowanych do aplikacji. Aby uzyskać pełne informacje, zobacz <xref:System.Text.CodePagesEncodingProvider> tematu.  
   
 <a name="Selecting"></a>   
@@ -157,7 +157,7 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
  Strategie najlepszego dopasowania różnią się inny kod stron. Na przykład Latin pełnej szerokości dla niektórych stron kodowych znaków mapy w celu częściej połówkowej szerokości znaki alfabetu łacińskiego. To mapowanie nie zostało utworzone dla innych stron kodowych. Nawet w przypadku aktywnego strategii najlepszego dopasowania nie ma żadnych imaginable nadające się do niektórych znaków w niektórych kodowania. Na przykład chiński ideogramów nie ma uzasadnione mapowania strona kodowa 1252. W takim przypadku służy ciąg zastępczy. Domyślnie ten ciąg jest tylko jeden znak zapytania (U + 003F).  
   
 > [!NOTE]
->  Strategie najlepszego dopasowania nie opisano szczegółowo. Jednak kilka stron kodowych są udokumentowane w [konsorcjum Unicode](http://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) witryny sieci Web. Zapoznaj się z tematem **readme.txt** plików w tym folderze opis sposobu interpretowania pliki mapowania.
+>  Strategie najlepszego dopasowania nie opisano szczegółowo. Jednak kilka stron kodowych są udokumentowane w [konsorcjum Unicode](https://www.unicode.org/Public/MAPPINGS/VENDORS/MICSFT/WindowsBestFit/) witryny sieci Web. Zapoznaj się z tematem **readme.txt** plików w tym folderze opis sposobu interpretowania pliki mapowania.
   
  W poniższym przykładzie użyto strona kodowa 1252 (Windows strony kodowej dla języków zachodnich Europejskiego) w celu zilustrowania mapowanie najlepszego dopasowania i jego wady. <xref:System.Text.Encoding.GetEncoding%28System.Int32%29?displayProperty=nameWithType> Metoda służy do pobierania kodowania obiekt strona kodowa 1252. Domyślnie używa mapowanie najlepszego dopasowania dla znaków Unicode, które nie obsługują. Przykład tworzy ciąg, który zawiera trzy z systemem innym niż znaki ASCII - KÓŁKU S litera ŁACIŃSKA (U + 24C 8), indeks GÓRNY PIĘĆ (U + 2075), a NIESKOŃCZONOŚCIĄ (U + 221E) - rozdzielone spacjami. Jak pokazano na dane wyjściowe z przykładu, gdy jest zakodowany ciąg, trzy znaki z systemem innym niż miejsce oryginalnego są zastępowane przez znak zapytania (U + 003F), PIĘCIU CYFR (U + 0035) i osiem CYFRĘ (U + 0038). 8 CYFR nie zastępuje szczególnie niską nieobsługiwany znak NIESKOŃCZONOŚCI, a znak zapytania oznacza, że mapowania dla nie była dostępna oryginalnego znaku.  
   
@@ -243,7 +243,7 @@ Znaki to abstrakcyjna jednostek, które mogą być reprezentowane na wiele sposo
   
  Po utworzeniu niestandardowego rozwiązania rezerwowy koder i dekoder, musi implementować następujące elementy:  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> metody. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType>jest wywoływana przez koder dostarczenie informacji o znak, który go nie można zakodować w buforze rezerwowym. Znak, który ma zostać zakodowany może być para zastępcza, tej metody jest przeciążona. Przeciążeniami jest przekazywany znak, który ma zostać zakodowany i jej indeks w ciągu. Drugi przeciążenia jest przekazywany surogatu wysoki i niski, wraz z jej indeks w ciągu. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Metoda jest wywoływana przez dekodera dostarczenie informacji o liczbę bajtów, które nie można go zdekodować buforze rezerwowym. Ta metoda jest przekazywana tablicę bajtów, które nie można go zdekodować, wraz z indeks pierwszego bajtu. Metoda rezerwowy powinna zwrócić `true` Jeśli buforze rezerwowym można podać najlepszego dopasowania lub znak zastępczy lub znaków; w przeciwnym razie powinien on zwrócić `false`. Wyjątek rezerwowy metodą rezerwową powinien zgłosić wyjątek.  
+-   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> metody. <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> jest wywoływana przez koder dostarczenie informacji o znak, który go nie można zakodować w buforze rezerwowym. Znak, który ma zostać zakodowany może być para zastępcza, tej metody jest przeciążona. Przeciążeniami jest przekazywany znak, który ma zostać zakodowany i jej indeks w ciągu. Drugi przeciążenia jest przekazywany surogatu wysoki i niski, wraz z jej indeks w ciągu. <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> Metoda jest wywoływana przez dekodera dostarczenie informacji o liczbę bajtów, które nie można go zdekodować buforze rezerwowym. Ta metoda jest przekazywana tablicę bajtów, które nie można go zdekodować, wraz z indeks pierwszego bajtu. Metoda rezerwowy powinna zwrócić `true` Jeśli buforze rezerwowym można podać najlepszego dopasowania lub znak zastępczy lub znaków; w przeciwnym razie powinien on zwrócić `false`. Wyjątek rezerwowy metodą rezerwową powinien zgłosić wyjątek.  
   
 -   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> Lub <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> metodę, która jest wywoływana wielokrotnie przez koder lub dekodera do pobrania następnej znak w buforze rezerwowym. Gdy wszystkie znaki powrotu zostały zwrócone, metoda powinna zwrócić 0000 U +.  
   

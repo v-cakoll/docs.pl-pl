@@ -1,24 +1,26 @@
 ---
-title: "Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia"
-ms.custom: 
+title: Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 69a21511-0871-4c41-9a53-93110e84d7fd
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 55288074b35bcb00d6c6b453f1320ad40d26a5f7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d8bc077b1ef24ecfcb4d37a9ddb8389dc705f68e
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-the-getting-started-tutorial"></a>Rozwiązywanie problemów z samouczkiem dotyczącym wprowadzenia
 W tym temacie wymieniono najczęściej występujących problemów podczas pracy za pośrednictwem Samouczek wprowadzający i sposobu ich rozwiązania.  
@@ -35,11 +37,11 @@ W tym temacie wymieniono najczęściej występujących problemów podczas pracy 
   
 6.  [Kompilowanie aplikacji klienta: "CalculatorClient" nie można odnaleźć nazwy typu lub przestrzeni nazw (czy nie brakuje using dyrektywa lub odwołania do zestawu?)](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q6)  
   
-7.  [Uruchamianie klienta: nieobsługiwany wyjątek: System.ServiceModel.EndpointNotFoundException: nie można nawiązać połączenia z http://localhost: 8000/ServiceModelSamples/Service/CalculatorService. Kod błędu TCP 10061: połączenie nie może ustanowione, ponieważ aktywnie odrzucił w komputerze docelowym.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
+7.  [Uruchamianie klienta: nieobsługiwany wyjątek: System.ServiceModel.EndpointNotFoundException: nie można połączyć z http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Kod błędu TCP 10061: połączenie nie może ustanowione, ponieważ aktywnie odrzucił w komputerze docelowym.](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md#BKMK_q7)  
   
 <a name="BKMK_q1"></a>   
 ## <a name="i-am-unable-to-find-the-project-files-on-my-hard-drive"></a>Nie można odnaleźć plików projektu na dysku twardego.  
- [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)]zapisuje pliki w c:\users projektu\\< name\Documents użytkownika\\< wersji programu Visual Studio\>\Projects w [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]i c:\Documents and Settings\\< nazwa użytkownika\>\My dokumenty\\< wersji programu Visual Studio\>\Projects we wcześniejszych wersjach systemu Windows.  
+ Visual Studio zapisuje pliki projektu w c:\users\\< name\Documents użytkownika\\< wersji programu Visual Studio\>\Projects w [!INCLUDE[wv](../../../includes/wv-md.md)] i [!INCLUDE[win7_client_secondref](../../../includes/win7-client-secondref-md.md)]i c:\Documents and Settings\\< nazwa użytkownika \>\My dokumenty\\< wersji programu Visual Studio\>\Projects we wcześniejszych wersjach systemu Windows.  
   
 <a name="BKMK_q2"></a>   
 ## <a name="attempting-to-run-the-service-application-http-could-not-register-url-http8000servicemodelsamplesservice-your-process-does-not-have-access-rights-to-this-namespace"></a>Próba uruchomienia aplikacji usługi: HTTP nie może zarejestrować adresu URL http://+:8000/ServiceModelSamples/Service/. Proces nie ma praw dostępu do tej przestrzeni nazw.  
@@ -62,11 +64,11 @@ W tym temacie wymieniono najczęściej występujących problemów podczas pracy 
  Ten błąd wystąpi, jeśli nie dodasz Proxy.cs lub Proxy.vb plik do projektu klienta.  
   
 <a name="BKMK_q7"></a>   
-## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Uruchamianie klienta: nieobsługiwany wyjątek: System.ServiceModel.EndpointNotFoundException: nie można nawiązać połączenia z http://localhost: 8000/ServiceModelSamples/Service/CalculatorService. Kod błędu TCP 10061: połączenie nie może ustanowione, ponieważ aktywnie odrzucił w komputerze docelowym.  
+## <a name="running-the-client-unhandled-exception-systemservicemodelendpointnotfoundexception-could-not-connect-to-httplocalhost8000servicemodelsamplesservicecalculatorservice-tcp-error-code-10061-no-connection-could-be-made-because-the-target-machine-actively-refused-it"></a>Uruchamianie klienta: nieobsługiwany wyjątek: System.ServiceModel.EndpointNotFoundException: nie można połączyć z http://localhost:8000/ServiceModelSamples/Service/CalculatorService. Kod błędu TCP 10061: połączenie nie może ustanowione, ponieważ aktywnie odrzucił w komputerze docelowym.  
  Ten błąd występuje podczas uruchamiania aplikacji klienckiej bez konieczności uruchamiania usługi.  
   
 <a name="BKMK_q8"></a>   
-## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Nieobsługiwany wyjątek: System.ServiceModel.Security.SecurityNegotiationException: wynegocjować zabezpieczeń SOAP z "http://localhost: 8000/ServiceModelSamples/Service/CalculatorService' dla obiektu docelowego"http://localhost: 8000/ServiceModelSamples/Service/CalculatorService"nie powiodło się  
+## <a name="unhandled-exception-systemservicemodelsecuritysecuritynegotiationexception-soap-security-negotiation-with-httplocalhost8000servicemodelsamplesservicecalculatorservice-for-target-httplocalhost8000servicemodelsamplesservicecalculatorservice-failed"></a>Nieobsługiwany wyjątek: System.ServiceModel.Security.SecurityNegotiationException: wynegocjować zabezpieczeń SOAP z "http://localhost:8000/ServiceModelSamples/Service/CalculatorService'dla obiektu docelowego"http://localhost:8000/ServiceModelSamples/Service/CalculatorService"nie powiodło się  
  Ten błąd występuje na komputerze przyłączonym do domeny, który nie ma łączności sieciowej. Połączenia komputera z siecią albo wyłącz zabezpieczeń zarówno klient, jak i usługi. Dla usługi należy zmodyfikować kod, który tworzy WSHttpBinding do następującego.  
   
 ```  

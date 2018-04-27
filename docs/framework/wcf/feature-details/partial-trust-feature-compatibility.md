@@ -1,30 +1,32 @@
 ---
-title: "Zgodność funkcji zaufania częściowego"
-ms.custom: 
+title: Zgodność funkcji zaufania częściowego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
-caps.latest.revision: "75"
+caps.latest.revision: 75
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 1950a0c4015658affb0b9fa0d7c87a062865144b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
-[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)]obsługuje ograniczonym podzbiorem funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
+[!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje ograniczonym podzbiorem funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
   
 ## <a name="minimum-permission-requirements"></a>Wymagania dotyczące minimalnych uprawnień  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]obsługuje podzbiór funkcji aplikacji uruchomionych w jednej z następujących zestawów standardowe uprawnienie o nazwie:  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] obsługuje podzbiór funkcji aplikacji uruchomionych w jednej z następujących zestawów standardowe uprawnienie o nazwie:  
   
 -   Średnia uprawnień zaufania  
   
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Korzystając z `[ServiceKnownType]` atrybut, musi być określona metoda `public`.  
   
--   `[MessageContract]`klasy i ich elementy Członkowskie mogą być `public`. Jeśli `[MessageContract]` klasa jest zdefiniowana w zestawie aplikacji może być `internal` i mieć `internal` elementów członkowskich.  
+-   `[MessageContract]` klasy i ich elementy Członkowskie mogą być `public`. Jeśli `[MessageContract]` klasa jest zdefiniowana w zestawie aplikacji może być `internal` i mieć `internal` elementów członkowskich.  
   
 ## <a name="system-provided-bindings"></a>Powiązania dostarczane przez system  
  <xref:System.ServiceModel.BasicHttpBinding> i <xref:System.ServiceModel.WebHttpBinding> są w pełni obsługiwane w środowisku częściowej relacji zaufania. <xref:System.ServiceModel.WSHttpBinding> Jest obsługiwana w przypadku tylko tryb zabezpieczeń Transport.  
@@ -103,7 +105,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Upewnij się, że jeśli aplikacja jest wdrażana jako aplikacja całkowicie zaufane, że użytkownicy nie mogą modyfikować ustawienia zabezpieczeń dostępu kodu do uruchomienia aplikacji w środowisku częściowej relacji zaufania. Mogą one to robić, zachowanie nie jest uruchamiane, a nie wyjątek. Aby to zapewnić, zobacz **levelfinal** opcję przy użyciu [Caspol.exe (narzędzie zasad zabezpieczenia dostępu kodu)](../../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md).  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]wspólnego zachowania, zobacz [porady: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
+ Na przykład wspólnego zachowania, zobacz [porady: blokowanie dół punktów końcowych w przedsiębiorstwie](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md).  
   
 ## <a name="configuration"></a>Konfiguracja  
  Z jednym wyjątkiem częściowo zaufanego kodu można ładować tylko [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sekcji konfiguracyjnych w lokalnym `app.config` pliku. Aby załadować [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] konfiguracji sekcje tego odwołania [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] ConfigurationPermission(Unrestricted) wymaga sekcji w pliku machine.config lub głównym pliku web.config. Bez tego uprawnienia odwołuje się do [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] sekcji konfiguracyjnych (zachowania, powiązania) poza wyniki do pliku lokalnej konfiguracji wystąpił wyjątek podczas ładowania konfiguracji.  
@@ -152,10 +154,10 @@ ms.lasthandoff: 12/22/2017
 >  Aby uniknąć przepełnienia pliki śledzenia z błędami zduplikowane [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
   
 ## <a name="wcf-service-host"></a>Host usługi WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]host usługi nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w częściowej relacji zaufania, nie używaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia usługi. Zamiast tego utwórz nową witrynę sieci Web w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] , wybierając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablonu witryny sieci Web usługi, który może obsługiwać usługi na serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwane w częściowej relacji zaufania.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host usługi nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w częściowej relacji zaufania, nie używaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia usługi. Zamiast tego utwórz nową witrynę sieci Web w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] , wybierając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablonu witryny sieci Web usługi, który może obsługiwać usługi na serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwane w częściowej relacji zaufania.  
   
 ## <a name="other-limitations"></a>Inne ograniczenia  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)]jest zazwyczaj ograniczone do zagadnienia dotyczące zabezpieczeń nakłada na nią hostingu aplikacji. Na przykład jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w języku XAML przeglądarki aplikacji (XBAP), jego podlega XBAP ograniczenia, zgodnie z opisem w [zabezpieczenia systemu Windows Presentation Foundation częściowego zaufania](http://go.microsoft.com/fwlink/?LinkId=89138).  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest zazwyczaj ograniczone do zagadnienia dotyczące zabezpieczeń nakłada na nią hostingu aplikacji. Na przykład jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w języku XAML przeglądarki aplikacji (XBAP), jego podlega XBAP ograniczenia, zgodnie z opisem w [zabezpieczenia systemu Windows Presentation Foundation częściowego zaufania](http://go.microsoft.com/fwlink/?LinkId=89138).  
   
  Podczas uruchamiania indigo2 w środowisku częściowej relacji zaufania, nie są włączone następujące dodatkowe funkcje:  
   

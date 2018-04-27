@@ -1,12 +1,12 @@
 ---
-title: "Standardowe ciągi formatujące datę i godzinę"
-ms.custom: 
+title: Standardowe ciągi formatujące datę i godzinę
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,18 +20,18 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-caps.latest.revision: "92"
+caps.latest.revision: 92
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 55f8f6b544a3ade0ad9423e8253cc44e0fb5fec1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 5de7da12867e11fcde00089e13c98396ed279a5e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="standard-date-and-time-format-strings"></a>Standardowe ciągi formatujące datę i godzinę
 W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu jest używany do definiowania tekstowej reprezentacji wartości daty i godziny. Wszystkie daty i godziny ciąg formatu, który zawiera więcej niż jeden znak, łącznie ze spacjami, jest interpretowany jako niestandardowa data i godzina ciąg formatu; Aby uzyskać więcej informacji, zobacz [niestandardowe ciągi daty i godziny Format](../../../docs/standard/base-types/custom-date-and-time-format-strings.md). Ciągu formatu standardowego lub niestandardowego można używać na dwa sposoby:  
@@ -43,9 +43,9 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
  Standardowy format daty i ciągi formatu czasu może być używany z obu <xref:System.DateTime> i <xref:System.DateTimeOffset> wartości.  
   
 > [!TIP]
->  Możesz pobrać [formatowania narzędzie](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)ciągi aplikacji, która umożliwia zastosowanie formatu liczbowego lub daty i czasu wartości i wyświetla ciąg wyniku.  
+>  Możesz pobrać [formatowania narzędzie](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)ciągi aplikacji, która umożliwia zastosowanie formatu liczbowego lub daty i czasu wartości i wyświetla ciąg wyniku.  
   
-<a name="table"></a>W poniższej tabeli opisano standardowa Data i godzina specyfikatory formatu. Jeśli nie podano inaczej, określonego standardowa Data i godzina formatu specyfikator tworzy reprezentacji ciągu taki sam, niezależnie od tego, czy jest używany z <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość. Zobacz [uwagi](#Notes) sekcji, aby uzyskać dodatkowe informacje o używaniu standardowe ciągi daty i godziny format.  
+<a name="table"></a> W poniższej tabeli opisano standardowa Data i godzina specyfikatory formatu. Jeśli nie podano inaczej, określonego standardowa Data i godzina formatu specyfikator tworzy reprezentacji ciągu taki sam, niezależnie od tego, czy jest używany z <xref:System.DateTime> lub <xref:System.DateTimeOffset> wartość. Zobacz [uwagi](#Notes) sekcji, aby uzyskać dodatkowe informacje o używaniu standardowe ciągi daty i godziny format.  
   
 |Specyfikator formatu|Opis|Przykłady|  
 |----------------------|-----------------|--------------|  
@@ -55,8 +55,8 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
 |„F”|Wzorzec pełnej daty/godziny (godzina długa).<br /><br /> Więcej informacji: [pełna data długo ("F"), specyfikator formatu](#FullDateLongTime).|2009-06-15T13:45:30 -> poniedziałek, 15 czerwca 2009 1:45:30 będzie (en US)<br /><br /> 2009-06-WAR 15 juni 2009 -> 15T13:45:30 13:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 1:45:30 μμ (el-GR)|  
 |„g”|Wzorzec ogólnej daty/godziny (godzina krótka).<br /><br /> Więcej informacji: [ogólne daty krótkiej godziny ("g") specyfikator formatu](#GeneralDateShortTime).|2009-06-2009-6-15-> 15T13:45:30 1:45 PM (en US)<br /><br /> 2009-06-2009-15-06-> 15T13:45:30 13:45 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 13 2009/6/15:45 (zh-CN)|  
 |„G”|Wzorzec ogólnej daty/godziny (godzina długa).<br /><br /> Więcej informacji: [ogólne Data długo ("G"), specyfikator formatu](#GeneralDateLongTime).|2009-06-2009-6-15-> 15T13:45:30 1:45:30 będzie (en US)<br /><br /> 2009-06-2009-15-06-> 15T13:45:30 13:45:30 (es-ES)<br /><br /> 2009-06-15T13:45:30 -> 2009/6/15 13:45:30 (zh-CN)|  
-|„M”, „m”|Wzorzec miesiąc/dzień.<br /><br /> Więcej informacji: [miesiąc ("M", "m"), specyfikator formatu](#MonthDay).|2009-06-15T13:45:30 -> 15 czerwca (en US)<br /><br /> 2009-06-15T13:45:30 -> 15. juni (da k)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (identyfikator ID)|  
-|„O”, „o”|Wzorzec dwustronnej konwersji data/godzina.<br /><br /> Więcej informacji: [przesyłania danych ("O", "o"), specyfikator formatu](#Roundtrip).|<xref:System.DateTime>wartości:<br /><br /> 2009-06-15T13:45:30 (wartość DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc)--> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset>wartości:<br /><br /> 2009-06-15T13:45:30-07:00--> 2009-06-15T13:45:30.0000000-07:00|  
+|„M”, „m”|Wzorzec miesiąc/dzień.<br /><br /> Więcej informacji: [miesiąc ("M", "m"), specyfikator formatu](#MonthDay).|2009-06-15T13:45:30 -> 15 czerwca (en US)<br /><br /> 2009-06-15T13:45:30 -&GT; 15. juni (da k)<br /><br /> 2009-06-15T13:45:30 -> 15 Juni (identyfikator ID)|  
+|„O”, „o”|Wzorzec dwustronnej konwersji data/godzina.<br /><br /> Więcej informacji: [przesyłania danych ("O", "o"), specyfikator formatu](#Roundtrip).|<xref:System.DateTime> Wartości:<br /><br /> 2009-06-15T13:45:30 (wartość DateTimeKind.Local)--> 2009-06-15T13:45:30.0000000-07:00<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc)--> 2009-06-15T13:45:30.0000000Z<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Unspecified)--> 2009-06-15T13:45:30.0000000<br /><br /> <xref:System.DateTimeOffset> Wartości:<br /><br /> 2009-06-15T13:45:30-07:00--&GT; 2009-06-15T13:45:30.0000000-07:00|  
 |„R”, „r”|Wzorzec RFC1123.<br /><br /> Więcej informacji: [RFC1123 ("R", "r") specyfikator formatu](#RFC1123).|2009-06-15T13:45:30 -> pon, 15 cze 2009 20:45:30 GMT|  
 |„s”|Wzorzec sortowalnej daty/godziny.<br /><br /> Więcej informacji: [sortowanie ("s") specyfikator formatu](#Sortable).|2009-06-15T13:45:30 (wartość DateTimeKind.Local) -> 2009-06-15T13:45:30<br /><br /> 2009-06-15T13:45:30 (DateTimeKind.Utc) -> 2009-06-15T13:45:30|  
 |„t”|Wzorzec godziny krótkiej.<br /><br /> Więcej informacji: [krótkim czasie ("t") specyfikator formatu](#ShortTime).|2009-06-15T13:45:30 -> 1:45 PM (en US)<br /><br /> 2009-06-15T13:45:30 -> 13:45 (hr h)<br /><br /> 2009-06-01:45 -> 15T13:45:30 م (ar np)|  
@@ -261,7 +261,7 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
   
 -   Składnik strefy czasowej <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> korzysta z wartości daty i godziny "Z" (która zawiera zero przesunięcie) do reprezentowania UTC.  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>wartości daty i godziny nie ma żadnych informacji o strefie czasowej.  
+-   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> wartości daty i godziny nie ma żadnych informacji o strefie czasowej.  
   
  Ponieważ O "lub"o"specyfikatora formatu standardowych odpowiada międzynarodowy standard, formatowanie lub analizowania operacja, która używa specyfikator zawsze używa Niezmienna kultura i kalendarz gregoriański.  
   
@@ -426,4 +426,4 @@ W ciągu standardowego formatu daty i godziny pojedynczy specyfikator formatu je
  <xref:System.DateTimeOffset?displayProperty=nameWithType>  
  [Formatowanie typów](../../../docs/standard/base-types/formatting-types.md)  
  [Niestandardowe ciągi formatujące datę i godzinę](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)  
- [Przykład: .NET Framework 4 formatowania narzędzia](http://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)
+ [Przykład: .NET Framework 4 formatowania narzędzia](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

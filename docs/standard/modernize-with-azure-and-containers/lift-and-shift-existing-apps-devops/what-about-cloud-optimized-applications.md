@@ -1,18 +1,19 @@
 ---
-title: "Jakie aplikacje zoptymalizowanych pod kątem chmury?"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Jakie aplikacje zoptymalizowanych pod kątem chmury?"
+title: Jakie aplikacje zoptymalizowanych pod kątem chmury?
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Jakie aplikacje zoptymalizowanych pod kątem chmury?
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.prod: .net
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 249da9ecbac90514647f4fdc926928ac7ad4648e
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: 63eb80dc43e174f4c803f772f09f6e72d8c8e7c2
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="what-about-cloud-optimized-applications"></a>Jakie aplikacje zoptymalizowanych pod kątem chmury?
 
@@ -72,7 +73,7 @@ Ale nawet w scenariuszach, w których mikrousług oferują zaawansowane możliwo
 
 Ze względu na złożoność architektury mikrousług tylko konkretnych scenariuszy i niektórych typów aplikacji są odpowiednie dla aplikacji opartych na mikrousługi. Obejmują one dużych i złożonych aplikacji, które mają wiele rozwijającymi podsystemy. W takich przypadkach warto pomyśleć bardziej złożonych architektura oprogramowania, zwiększyć elastyczność długoterminowej i bardziej efektywną obsługę aplikacji. Ale dla mniej złożonymi scenariuszami, mogą być lepiej kontynuować podejście wbudowanymi aplikacji lub zbliża się do N-warstwowa prostsze.
 
-Jako ostatecznego Uwaga, nawet ryzyko jest powtarzających się o to pojęcie nie powinien wyglądać za pomocą mikrousług w aplikacji jako "kwoty ujęte lub nic we wszystkich*.*" Można rozszerzać i rozwijać istniejące aplikacje wbudowanymi, dodając nowe, małe scenariusze oparte na mikrousług. Nie trzeba zacząć od początku, aby rozpocząć pracę z podejścia architektura mikrousług. W rzeczywistości zaleca się, że rozwijać z używania istniejącej aplikacji wbudowanymi lub N-warstwowa przez dodanie nowych scenariuszy. Po pewnym czasie można podzielić aplikacji w autonomicznej części lub mikrousług. Możesz przystąpić do zmieniających się wbudowanymi aplikacji w kierunku mikrousług krok po kroku.
+Jako ostatecznego Uwaga, nawet ryzyko jest powtarzających się o to pojęcie nie powinien wyglądać za pomocą mikrousług w aplikacji jako "kwoty ujęte lub nic we wszystkich *.*" Można rozszerzać i rozwijać istniejące aplikacje wbudowanymi, dodając nowe, małe scenariusze oparte na mikrousług. Nie trzeba zacząć od początku, aby rozpocząć pracę z podejścia architektura mikrousług. W rzeczywistości zaleca się, że rozwijać z używania istniejącej aplikacji wbudowanymi lub N-warstwowa przez dodanie nowych scenariuszy. Po pewnym czasie można podzielić aplikacji w autonomicznej części lub mikrousług. Możesz przystąpić do zmieniających się wbudowanymi aplikacji w kierunku mikrousług krok po kroku.
 
 ## <a name="when-to-use-azure-app-service-for-modernizing-existing-net-apps"></a>Kiedy należy używać usługi Azure App Service modernizacji istniejących aplikacji .NET
 

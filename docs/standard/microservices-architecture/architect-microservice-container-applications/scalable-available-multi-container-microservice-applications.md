@@ -1,7 +1,7 @@
 ---
-title: "Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/18/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ff524c6d61c6ce51a1a3e831cd666a3b61ac849e
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: c484372c0b5626fc20c8991a432e62353baa7a4c
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>Organizowanie mikrousług i kontener wielu aplikacji o wysokiej skalowalności i dostępności
 
@@ -45,7 +45,7 @@ Pojęcia związane z klastra i harmonogramu są ściśle powiązane, dlatego pro
 
 Kubernetes
 
-![https://PBS.twimg.com/Media/BT\_pEfqCAAAiVyz.png](./media/image24.png)
+![https://pbs.twimg.com/media/Bt\_pEfqCAAAiVyz.png](./media/image24.png)
 
 > Kubernetes jest to produkt typu open source, który zawiera funkcję, która infrastruktura klastra i kontener planowania organizowanie możliwości w zakresie od. Umożliwia automatyzację wdrożenia, skalowanie i operacje kontenery aplikacji w klastrach hostów.
 >
@@ -55,7 +55,7 @@ Kubernetes
 
 Rozwiązanie docker Swarm
 
-![http://rancher.com/WP-Content/Themes/rancher-2016/Assets/images/swarm.PNG?v=2016-07-10-AM](./media/image25.png)
+![http://rancher.com/wp-content/themes/rancher-2016/assets/images/swarm.png?v=2016-07-10-am](./media/image25.png)
 
 > Rozwiązanie docker Swarm umożliwia klastra i Zaplanuj kontenery Docker. Przy użyciu Swarm, można przekształcić w puli hostów Docker pojedynczego, wirtualnego host Docker. Klientów można wprowadzać interfejsu API żądania wysyłane na Swarm tak samo jak na hostach, co oznacza, że Swarm ułatwia aplikacji można skalować na wielu hostach.
 >
@@ -65,7 +65,7 @@ Rozwiązanie docker Swarm
 
 Mesosphere DC/OS
 
-![https://mesosphere.com/WP-Content/Uploads/2016/04/logo-Horizontal-styled.PNG](./media/image26.png)
+![https://mesosphere.com/wp-content/uploads/2016/04/logo-horizontal-styled.png](./media/image26.png)
 
 > Mesosphere Enterprise DC/OS (oparte na Apache Mesos) to platforma gotowe do produkcji dla działających kontenerów i aplikacji rozproszonych.
 >
@@ -73,9 +73,9 @@ Mesosphere DC/OS
 >
 > DC/OS jest dojrzałe w systemie Linux mniej dojrzałe w systemie Windows.
 
-Sieć szkieletowa usług Azure
+Azure Service Fabric
 
-![https://Azure.microsoft.com/svghandler/Service-Fabric?Width=600&Height=315](./media/image27.png)
+![https://azure.microsoft.com/svghandler/service-fabric?width=600&height=315](./media/image27.png)
 
 > [Sieć szkieletowa usług](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview) to platforma mikrousług firmy Microsoft do tworzenia aplikacji. Jest [orchestrator](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-resource-manager-introduction) z usług i tworzy klastry maszyn. Sieć szkieletowa usług można wdrożyć usługi jako kontenery lub zwykłych procesów. Można nawet różnych usług w procesach z usługami w kontenerach w tej samej aplikacji i klastra.
 >
@@ -137,7 +137,7 @@ Usługi ACS jest obecnie dostępny dla serii Standard A, D DS, G i GS maszyn wir
     [*https://docs.mesosphere.com/1.7/overview/*](https://docs.mesosphere.com/1.7/overview/)
 
 -   **Kubernetes.** Oficjalna witryna. \
-    [*http://kubernetes.IO/*](http://kubernetes.io/)
+    [*https://kubernetes.io/*](https://kubernetes.io/)
 
 
 >[!div class="step-by-step"]

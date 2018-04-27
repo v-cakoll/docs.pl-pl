@@ -1,12 +1,12 @@
 ---
-title: "Wartości numeryczne w programie .NET Framework"
-ms.custom: 
+title: Wartości numeryczne w programie .NET Framework
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - SIMD
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bd55b127f73fe1cefce9724f3a74400b5fe7488f
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 074ed60a3cbc1949eea4a8d866cdb3bba7c0f196
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="numerics-in-the-net-framework"></a>Wartości numeryczne w programie .NET Framework
 .NET Framework obsługuje standardowe liczbowych podstawowych całkowitych i zmiennoprzecinkowych oraz <xref:System.Numerics.BigInteger>, typem całkowitym bez teoretycznej górnej i dolnej granicy <xref:System.Numerics.Complex>, typ, który reprezentuje liczby złożone oraz zestaw włączone SIMD typy wektorów <xref:System.Numerics> przestrzeni nazw.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 12/23/2017
  <xref:System.Double> i <xref:System.Single> typy są przeznaczone do użycia w przypadku wartości według rodzaju nieprecyzyjne (na przykład odległość między dwóch gwiazdek w Słonecznemu) i dla aplikacji, w których wysoki stopień precision i pomniejszonego zaokrąglania błąd nie jest Wymagane. Należy używać <xref:System.Decimal?displayProperty=nameWithType> typu przypadki, w którym większą dokładność jest wymagany i zaokrąglania błędu jest niepożądane,  
   
 ## <a name="biginteger"></a>BigInteger  
- <xref:System.Numerics.BigInteger?displayProperty=nameWithType>jest niezmiennego typu, który reprezentuje dowolnie dużą liczbą całkowitą, którego wartość teoretycznie nie ma żadnych granic górnej i dolnej. Metody <xref:System.Numerics.BigInteger> typu ściśle równoległe tych innych typów całkowitych.  
+ <xref:System.Numerics.BigInteger?displayProperty=nameWithType> jest niezmiennego typu, który reprezentuje dowolnie dużą liczbą całkowitą, którego wartość teoretycznie nie ma żadnych granic górnej i dolnej. Metody <xref:System.Numerics.BigInteger> typu ściśle równoległe tych innych typów całkowitych.  
   
 ## <a name="complex"></a>Complex  
  <xref:System.Numerics.Complex> Typu reprezentuje liczbą, czyli liczby z części liczbą rzeczywistą i zespoloną numer. Obsługuje ona standardowy zestaw arytmetyczne, porównania, równości, jawnej konwersji i operatory niejawnej konwersji, a także metod matematycznych, algebraicznych i trygonometryczne.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 12/23/2017
   
  Typy wektorów SimD, włączone są implementowane IL, co pozwala na włączone SimD sprzętu i kompilatory JIT. Aby skorzystać z instrukcji SIMD, aplikacje 64-bitowe muszą być skompilowane przez nowe 64-bitowym przy użyciu kompilatora JIT dla zarządzanego kodu, który jest dołączony do platformy .NET Framework 4.6; zostaje włączona obsługa SIMD, gdy x64 procesorów.  
   
- Można również pobrać SIMD jako [pakietu NuGet](http://www.nuget.org/packages/System.Numerics.Vectors).  Pakiet NuGET zawiera również ogólnego <xref:System.Numerics.Vector%601> strukturę, która umożliwia tworzenie wektor żadnych pierwotny typ liczbowy. (Pierwotne typy liczbowe obejmują wszystkie typy liczbowe w <xref:System> przestrzeni nazw z wyjątkiem <xref:System.Decimal>.) Ponadto <xref:System.Numerics.Vector%601> struktury dostarcza bibliotekę podręczne metody, które można wywołać podczas pracy z kierunków.  
+ Można również pobrać SIMD jako [pakietu NuGet](https://www.nuget.org/packages/System.Numerics.Vectors).  Pakiet NuGET zawiera również ogólnego <xref:System.Numerics.Vector%601> strukturę, która umożliwia tworzenie wektor żadnych pierwotny typ liczbowy. (Pierwotne typy liczbowe obejmują wszystkie typy liczbowe w <xref:System> przestrzeni nazw z wyjątkiem <xref:System.Decimal>.) Ponadto <xref:System.Numerics.Vector%601> struktury dostarcza bibliotekę podręczne metody, które można wywołać podczas pracy z kierunków.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Podstawy aplikacji](../../docs/standard/application-essentials.md)

@@ -11,17 +11,17 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-caps.latest.revision: ''
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e6f39d40284e6212715d85fece545e653ff2e60a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy zwrócić uwagę podczas zapisywania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalnego. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.  
@@ -76,7 +76,7 @@ W poniższym przykładzie przedstawiono odwołanie znaków szesnastkowych. Nale�
   
 <a name="intl_text"></a>   
 ### <a name="international-text"></a>Międzynarodowe tekstu  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wbudowane przetwarzania dla wszystkich [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] obsługiwanych systemach zapisu.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera wbudowane przetwarzania dla systemów wszystkich pisania program Microsoft .NET Framework obsługiwane.  
   
  Obecnie obsługiwane są następujące skrypty:  
   
@@ -84,7 +84,7 @@ W poniższym przykładzie przedstawiono odwołanie znaków szesnastkowych. Nale�
   
 -   Bengali  
   
--   Devanagari  
+-   Dewanagari  
   
 -   Cyrylica  
   
@@ -158,7 +158,7 @@ W poniższym przykładzie przedstawiono odwołanie znaków szesnastkowych. Nale�
   
 <a name="localizable_ui"></a>   
 ### <a name="localizable-user-interface"></a>Interfejs użytkownika Lokalizowalny  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje używają [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do definiowania ich [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Umożliwia deweloperom określić hierarchię obiektów z zestawem właściwości i logika. Podstawowym zastosowaniem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest rozwój [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, ale można określić hierarchię dowolnego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów. Użyj większość deweloperów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] określić ich stosowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i użyj języka programowania, takiego jak [!INCLUDE[TLA#tla_cshrp](../../../../includes/tlasharptla-cshrp-md.md)] reagowanie na interakcji z użytkownikiem.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacje używają [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] do definiowania ich [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] Umożliwia deweloperom określić hierarchię obiektów z zestawem właściwości i logika. Podstawowym zastosowaniem [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] jest rozwój [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, ale można określić hierarchię dowolnego [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] obiektów. Użyj większość deweloperów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] określić ich stosowania [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] i reagowania na interakcji z użytkownikiem przy użyciu języka programowania, takich jak C#.  
   
  Z punktu widzenia zasobów [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku przeznaczony do opisywania zależne od języka [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] jest elementem zasobów i jego format końcowej dystrybucji musi mieć zatem Lokalizowalny do obsługi językach. Ponieważ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] nie może obsłużyć zdarzenia wiele [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] aplikacje zawierają bloki kodu, w tym celu. Aby uzyskać więcej informacji, zobacz [omówienie XAML (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md). Kod jest wycięte i kompilowane do plików binarnych różnych podczas [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] pliku stokenizowanego jest w formie BAML XAML. Formularz BAML plików XAML, obrazy i inne typy zasobów zarządzanych obiektów wbudowanych w zestawu satelickiego zasobów, które można lokalizować na inne języki, lub główny zestaw gdy lokalizacja nie jest wymagana.  
   

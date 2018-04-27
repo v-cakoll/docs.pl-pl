@@ -1,35 +1,37 @@
 ---
 title: 'Porady: Mapowanie relacji w bazie danych'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: b1637fd322468f743c29605b31c3c6849bd78aa6
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: b283c2235ce0b6b407acfb52f81b15a26a3c00a0
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-map-database-relationships"></a>Porady: Mapowanie relacji w bazie danych
 Może zakodować jako właściwość odwołuje się w klasie jednostki relacji między danymi, które będą zawsze taki sam. W bazie danych Northwind na przykład, ponieważ klienci zwykle składanie zamówień, istnieje zawsze relacja modelu między klientów i zamówienia.  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]definiuje <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu ułatwiające reprezentują takich relacji. Ten atrybut jest używany razem z <xref:System.Data.Linq.EntitySet%601> i <xref:System.Data.Linq.EntityRef%601> typy do reprezentowania, jakie byłyby relacji klucza obcego w bazie danych. Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] definiuje <xref:System.Data.Linq.Mapping.AssociationAttribute> atrybutu ułatwiające reprezentują takich relacji. Ten atrybut jest używany razem z <xref:System.Data.Linq.EntitySet%601> i <xref:System.Data.Linq.EntityRef%601> typy do reprezentowania, jakie byłyby relacji klucza obcego w bazie danych. Aby uzyskać więcej informacji, zobacz sekcję atrybut skojarzenia [mapowania na podstawie atrybutów](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md).  
   
 > [!NOTE]
->  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym [!INCLUDE[vb_current_short](../../../../../../includes/vb-current-short-md.md)]. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
+>  Wartości właściwości AssociationAttribute i klasy ColumnAttribute magazynu jest uwzględniana wielkość liter. Na przykład upewnij się, czy wartości używanych w atrybucie dla właściwości AssociationAttribute.Storage zgodne w przypadku odpowiadających im nazw właściwości używane w innym miejscu w kodzie. Dotyczy to wszystkich .NET języków programowania, nawet te, które nie są zwykle z uwzględnieniem wielkości liter, w tym Visual Basic. Aby uzyskać więcej informacji na temat właściwości magazynu, zobacz <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A?displayProperty=nameWithType>.  
   
  Większość relacje są jeden do wielu, jak pokazano w przykładzie w dalszej części tego tematu. Relacje jeden do jednego oraz wiele do wielu może także reprezentować w następujący sposób:  
   
@@ -39,7 +41,7 @@ Może zakodować jako właściwość odwołuje się w klasie jednostki relacji m
   
 -   Wiele do wielu: W relacji wiele do wielu, klucz podstawowy tabeli Powiązanie (o nazwie *Rozgałęzienie* tabeli) często jest tworzony przez złożone kluczy obcych z dwóch tabel.  
   
-     Rozważmy na przykład `Employee` - `Project` relacji wiele do wielu utworzone za pomocą łącza tabeli `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wymaga, aby takiej relacji należy modelować przy użyciu trzech klas: `Employee`, `Project`, i `EmployeeProject`. W takim przypadku zmiana relacji między `Employee` i `Project` mogą być wyświetlane, aby wymagać aktualizacji klucza podstawowego `EmployeeProject`. Jednak taka sytuacja jest najlepiej formę usunięcie istniejącego `EmployeeProject` i tworzenia nowego `EmployeeProject`.  
+     Rozważmy na przykład `Employee` - `Project` relacji wiele do wielu utworzone za pomocą łącza tabeli `EmployeeProject`. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wymaga, aby takiej relacji należy modelować przy użyciu trzech klas: `Employee`, `Project`, i `EmployeeProject`. W takim przypadku zmiana relacji między `Employee` i `Project` mogą być wyświetlane, aby wymagać aktualizacji klucza podstawowego `EmployeeProject`. Jednak taka sytuacja jest najlepiej formę usunięcie istniejącego `EmployeeProject` i tworzenia nowego `EmployeeProject`.  
   
     > [!NOTE]
     >  Relacje w relacyjnych baz danych są zazwyczaj modelowane jako wartości kluczy obcych, które odwołują się do kluczy podstawowych w innych tabelach. Do przechodzenia między nimi należy jawnie powiązać dwóch tabel za pomocą relacyjne *sprzężenia* operacji.  
@@ -50,7 +52,7 @@ Może zakodować jako właściwość odwołuje się w klasie jednostki relacji m
  W poniższym przykładzie jeden do wielu `Customer` klasa ma właściwość, która deklaruje relacji między klientów i zamówienia.  `Orders` Właściwość jest typu <xref:System.Data.Linq.EntitySet%601>. Ten typ oznacza, że ta relacja jest jeden do wielu (jednego klienta na wiele zamówienia). <xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A> Właściwość jest używana do opisu, jak to skojarzenie odbywa się, a mianowicie, określając nazwę właściwości w klasie powiązanych ma zostać porównane z tego. W tym przykładzie `CustomerID` porównywana właściwość, podobnie jak bazy danych *sprzężenia* może porównać wartości tej kolumny.  
   
 > [!NOTE]
->  Jeśli używasz [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)], można użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia skojarzenia między klasami.  
+>  Jeśli używasz programu Visual Studio, możesz użyć [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] do tworzenia skojarzenia między klasami.  
   
  [!code-csharp[DlinqCustomize#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCustomize/cs/Program.cs#3)]
  [!code-vb[DlinqCustomize#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCustomize/vb/Module1.vb#3)]  

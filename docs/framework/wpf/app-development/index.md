@@ -19,19 +19,19 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1d2a79a05f18fecf4e008aa6a95d359c719e854b
-ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
+ms.openlocfilehash: 00161608997abc14202775c06ecfb283d8d67013
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="application-development"></a>Projektowanie aplikacji
 <a name="introduction"></a>
-[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)]to platforma prezentacji, która umożliwia tworzenie następujących typów aplikacji:  
+[!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] to platforma prezentacji, która umożliwia tworzenie następujących typów aplikacji:  
   
 -   Aplikacje autonomiczne (styl tradycyjnych [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] aplikacje utworzone jako pliku wykonywalnego zestawy, które są zainstalowane na i uruchamiane na komputerze klienta).  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)](aplikacji składający się z nawigacji strony, które są tworzone w postaci pliku wykonywalnego zestawów i hostowany przez przeglądarki sieci Web, takiej jak [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Mozilla Firefox).  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (aplikacji składający się z nawigacji strony, które są tworzone w postaci pliku wykonywalnego zestawów i hostowany przez przeglądarki sieci Web, takiej jak [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Mozilla Firefox).  
   
 -   Biblioteki formantów niestandardowych (z systemem innym niż plik wykonywalny zestawów zawierających formantów wielokrotnych).  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="WPF_Application_Resource__Content__and_Data_Files"></a>   
 ## <a name="wpf-application-resource-content-and-data-files"></a>Zasoby aplikacji WPF, zawartość, pliki danych  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]oferuje rozszerzone wsparcie podstawowe w [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] dla zasobów osadzonych o obsługę trzy rodzaje pliki danych z systemem innym niż plik wykonywalny: zasobów, zawartość i danych. Aby uzyskać więcej informacji, zobacz [zasób w aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] oferuje rozszerzone wsparcie podstawowe programu Microsoft .NET Framework dla zasobów osadzonych o obsługę trzy rodzaje pliki danych z systemem innym niż plik wykonywalny: zasobów, zawartość i danych. Aby uzyskać więcej informacji, zobacz [zasób w aplikacji WPF, zawartość i pliki danych](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md).  
   
  Najważniejszym aspektem obsługę plików danych inne niż wykonywalne WPF jest możliwość identyfikowania i załadować je za pomocą unikatowego [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]. Aby uzyskać więcej informacji, zobacz [identyfikatorów URI pakietu na platformie WPF](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md).  
   
@@ -88,9 +88,9 @@ ms.lasthandoff: 01/29/2018
   
  Aby uzyskać więcej informacji, zobacz [WPF systemu Windows — omówienie](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md).  
   
- <xref:System.Windows.Window>obsługuje możliwość tworzenia specjalny typ oknem znanym jako okno dialogowe. Można tworzyć typy zarówno modalne i Niemodalne okna dialogowe.  
+ <xref:System.Windows.Window> obsługuje możliwość tworzenia specjalny typ oknem znanym jako okno dialogowe. Można tworzyć typy zarówno modalne i Niemodalne okna dialogowe.  
   
- Dla wygody i zalet możliwość ponownego wykorzystania i spójny interfejs użytkownika w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia trzy typowe [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] okien dialogowych: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, i <xref:System.Windows.Controls.PrintDialog>.  
+ Dla wygody i zalet możliwość ponownego wykorzystania i spójny interfejs użytkownika w aplikacjach [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] udostępnia trzy wspólne okna dialogowe systemu Windows: <xref:Microsoft.Win32.OpenFileDialog>, <xref:Microsoft.Win32.SaveFileDialog>, i <xref:System.Windows.Controls.PrintDialog>.  
   
  Okno komunikatu jest specjalnym rodzajem okno dialogowe pokazujące ważnych informacji tekstowych dla użytkowników i do zadawania pytań Yes/No/OK/Anuluj. Możesz użyć <xref:System.Windows.MessageBox> klasa do tworzenia i wyświetlanie pola komunikatu.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/29/2018
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>Nawigacji  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje nawigacji stylu sieci Web za pomocą stron (<xref:System.Windows.Controls.Page>) i hiperłącza (<xref:System.Windows.Documents.Hyperlink>). Nawigacji może być wdrożonych w różnych sposobów są następujące:  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje nawigacji stylu sieci Web za pomocą stron (<xref:System.Windows.Controls.Page>) i hiperłącza (<xref:System.Windows.Documents.Hyperlink>). Nawigacji może być wdrożonych w różnych sposobów są następujące:  
   
 -   Autonomiczny stron, które są obsługiwane w przeglądarce sieci Web.  
   
@@ -120,11 +120,11 @@ ms.lasthandoff: 01/29/2018
   
  Aby uzyskać informacje, zobacz [omówienie nawigacji](../../../../docs/framework/wpf/app-development/navigation-overview.md).  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]obsługuje również specjalny typ nawigacji znany jako strukturze nawigacji. Strukturalne nawigacji może służyć do wywołania jedną lub więcej stron, które zwracają dane w sposób strukturalnych i przewidywalne, który jest zgodny z wywołaniem funkcji. Ta funkcja jest zależna od <xref:System.Windows.Navigation.PageFunction%601> klasy, która jest opisane dalej w [strukturalnych omówienie nawigacji](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601>Służy również do uproszczenia procesu tworzenia topologii złożonych nawigacji, które zostały opisane w [— omówienie topologii nawigacji](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] obsługuje również specjalny typ nawigacji znany jako strukturze nawigacji. Strukturalne nawigacji może służyć do wywołania jedną lub więcej stron, które zwracają dane w sposób strukturalnych i przewidywalne, który jest zgodny z wywołaniem funkcji. Ta funkcja jest zależna od <xref:System.Windows.Navigation.PageFunction%601> klasy, która jest opisane dalej w [strukturalnych omówienie nawigacji](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md). <xref:System.Windows.Navigation.PageFunction%601> Służy również do uproszczenia procesu tworzenia topologii złożonych nawigacji, które zostały opisane w [— omówienie topologii nawigacji](../../../../docs/framework/wpf/app-development/navigation-topologies-overview.md).  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>Hosting  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]może być hostowana w [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnień i ograniczenia, które zostały omówione w [hostingu](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md).  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] może być hostowana w [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] lub Firefox. Każdy model hostingu ma swój własny zestaw zagadnień i ograniczenia, które zostały omówione w [hostingu](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md).  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>Wdróż i konfiguruj  

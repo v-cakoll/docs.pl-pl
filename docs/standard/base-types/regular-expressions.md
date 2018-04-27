@@ -1,12 +1,12 @@
 ---
-title: ".NET Framework — Wyrażenia regularne"
-ms.custom: 
+title: .NET Framework — Wyrażenia regularne
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -26,18 +26,18 @@ helpviewer_keywords:
 - .NET Framework regular expressions
 - strings [.NET Framework], regular expressions
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
-caps.latest.revision: 
+caps.latest.revision: 24
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 145e0c9a722afd9f49216058604936189c003f17
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 5d0ec5572776368fa9943a87fa72280a4ebeb03d
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="net-regular-expressions"></a>Wyrażeń regularnych programu .NET
 Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie tekstu. Rozbudowana notacji dopasowywanie do wzorca wyrażeń regularnych umożliwia szybkie analizy dużych ilości tekst do znalezienia wzorce określonego znaku; Aby sprawdzić poprawność tekstu, aby upewnić się, że jest zgodna z wzorcem wstępnie zdefiniowane (takie jak adres e-mail); do wyodrębnienia, Edycja, Zamień lub usuń tekst podciągów; i dodać wyodrębnione ciągi do kolekcji w celu wygenerowania raportu. Dla wielu aplikacji, które zajmują się ciągów lub który analizy dużych bloków tekstu i wyrażenia regularne są niezbędne narzędzia.  
@@ -63,8 +63,8 @@ Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie t
   
  Aby uzyskać więcej informacji na temat języka wyrażeń regularnych, zobacz [język wyrażeń regularnych — podręczny wykaz](../../../docs/standard/base-types/regular-expression-language-quick-reference.md) lub pobrać i wydrukować jeden z tych broszury:  
   
- [Krótki przewodnik w formacie programu Word (.docx)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Krótki przewodnik w formacie PDF (PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
+ [Krótki przewodnik w formacie programu Word (.docx)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Krótki przewodnik w formacie PDF (PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
 ## <a name="regular-expression-examples"></a>Przykłady wyrażeń regularnych  
  <xref:System.String> Klasa zawiera wiele metod wyszukiwania i zamiany ciągów, których można użyć, aby zlokalizować ciągi literału ciągu większy. Wyrażenia regularne są najbardziej przydatne, aby zlokalizować jednego z kilku podciągów w ciągu większy lub gdy chcesz zidentyfikować wzorce w ciągu, jak poniższe przykłady przedstawiają.  
@@ -131,5 +131,5 @@ Wyrażenia regularne umożliwiają wydajne, elastyczne i wydajne przetwarzanie t
 ## <a name="reference"></a>Tematy pomocy  
  <xref:System.Text.RegularExpressions?displayProperty=nameWithType>  
  <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>  
- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
- [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie PDF)](http://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)
+ [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie programu Word)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
+ [Wyrażeń regularnych — podręczny wykaz (do pobrania w formacie PDF)](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)

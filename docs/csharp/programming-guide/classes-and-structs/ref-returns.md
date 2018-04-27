@@ -8,15 +8,15 @@ ms.topic: article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
-ms.openlocfilehash: 57fa8f52320b30a1cb228b41e3f5e6655c235561
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 98c58d083cb806a92e28c1c9d27effa1124fd153
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ref-returns-and-ref-locals"></a>Zwraca ref i zmienne lokalne ref
 
-Począwszy od C# 7, C# obsługuje zwracanych wartości odwołanie (ref zwraca). Odwołanie zwracać wartość umożliwia metodę przywrócić odwołania do zmiennej, a nie wartość, obiekt wywołujący. Obiekt wywołujący możliwość traktować zwrócony zmiennej tak, jakby zwrócono według wartości lub według odwołania. Obiekt wywołujący może utworzyć nową zmienną, która jest elementem odwołania do zwrócona wartość ref o nazwie lokalnej.
+Począwszy od wersji 7.0 C#, C# obsługuje zwracanych wartości odwołanie (ref zwraca). Odwołanie zwracać wartość umożliwia metodę przywrócić odwołania do zmiennej, a nie wartość, obiekt wywołujący. Obiekt wywołujący możliwość traktować zwrócony zmiennej tak, jakby zwrócono według wartości lub według odwołania. Obiekt wywołujący może utworzyć nową zmienną, która jest elementem odwołania do zwrócona wartość ref o nazwie lokalnej.
 
 ## <a name="what-is-a-reference-return-value"></a>Co to jest wartością zwracaną odwołania?
 

@@ -1,24 +1,26 @@
 ---
-title: "Learning przez — wskazówki"
-ms.custom: 
+title: Learning przez — wskazówki
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c49ecfec032a20090e8eca1c94efe9e1f35cce7d
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 98373ccee7f9fde178f26c62cd77acb17676c6cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="learning-by-walkthroughs"></a>Learning przez — wskazówki
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Dokumentacja zawiera wskazówki dotyczące kilku. W tym temacie rozwiązuje problemy ogólne wskazówki (w tym Rozwiązywanie problemów) oraz linki do kilku klasy podstawowej wskazówki szkoleniowe dotyczące [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].  
@@ -41,20 +43,20 @@ ms.lasthandoff: 01/19/2018
 ## <a name="general"></a>Ogólne  
  Poniższe informacje dotyczą te wskazówki ogólnie:  
   
--   Środowisko: Każdego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] używa wskazówki [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] jako jego zintegrowane środowisko programistyczne (IDE).  
+-   Środowisko: Każdego [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki używa programu Visual Studio, jako jego zintegrowane środowisko programistyczne (IDE).  
   
 -   Aparaty SQL: wskazówki te są zapisywane w można implementować przy użyciu programu SQL Server Express. Jeśli nie masz programu SQL Server Express, można pobrać bezpłatnie. Aby uzyskać więcej informacji, zobacz [pobieranie przykładowe bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
     > [!NOTE]
-    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wskazówki dotyczące Użyj nazwy pliku jako ciąg połączenia. Po prostu określenie nazwy pliku jest udogodnienie który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia użytkownikom programu SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
+    >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące Użyj nazwy pliku jako ciąg połączenia. Po prostu określenie nazwy pliku jest udogodnienie który [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapewnia użytkownikom programu SQL Server Express. Zawsze należy zwrócić uwagę na problemy z zabezpieczeniami. Aby uzyskać więcej informacji, zobacz [zabezpieczeń w składniku LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md).  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]wskazówki dotyczące zwykle wymagają przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [pobieranie przykładowe bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] wskazówki dotyczące zwykle wymagają przykładowej bazy danych Northwind. Aby uzyskać więcej informacji, zobacz [pobieranie przykładowe bazy danych](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md).  
   
--   Okna dialogowe i poleceń menu zostanie wyświetlony w wskazówki mogą różnić się od opisanych w pomocy, w zależności od ustawienia active lub [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] edition. Aby zmienić ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+-   Okna dialogowe i poleceń menu, które są widoczne w wskazówki mogą różnić się od opisanych w pomocy, w zależności od ustawień active lub wersji Visual Studio. Aby zmienić ustawienia, kliknij przycisk **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
 -   Aby uzyskać wskazówki dotyczące adresów wielowarstwowych scenariuszy serwer musi znajdować się na komputerze, który różni się od na komputerze deweloperskim, a musi mieć odpowiednie uprawnienia dostępu do serwera.  
   
--   Nazwa klasy, która zazwyczaj reprezentuje tabeli zamówienia w bazie danych Northwind jest `[Order]`. Anulowanie jest wymagana, ponieważ `Order` jest słowo kluczowe w [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)].  
+-   Nazwa klasy, która zazwyczaj reprezentuje tabeli zamówienia w bazie danych Northwind jest `[Order]`. Anulowanie jest wymagana, ponieważ `Order` jest słowem kluczowym języka Visual Basic.  
   
 ## <a name="troubleshooting"></a>Rozwiązywanie problemów  
  Mogą wystąpić błędy czasu wykonywania, ponieważ nie masz wystarczających uprawnień dostępu do baz danych, używany w te wskazówki. Zobacz poniższe kroki, aby rozwiązać najbardziej typowe tych problemów.  

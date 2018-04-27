@@ -1,7 +1,7 @@
 ---
-title: "Identyfikowanie granice modelu domeny dla każdego mikrousługi"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Identyfikowanie granice modelu domeny dla każdego mikrousługi"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Identyfikowanie granice modelu domeny dla każdego mikrousługi
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Identyfikowanie granice modelu domeny dla każdego mikrousługi
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,17 +11,17 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 830dd48a420a462842de57e436323a5a930c195d
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 23b5ebafc5ea037568f168426d76b3ec9839040e
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="identify-domain-model-boundaries-for-each-microservice"></a>Zidentyfikuj granice modelu domeny dla każdego mikrousługi
 
 Celem podczas identyfikowania granice modelu i rozmiaru dla każdego mikrousługi jest nie uzyskać dostęp do najbardziej szczegółowego separacji to możliwe, chociaż należy zwykle kierunku małych mikrousług Jeśli to możliwe. Zamiast tego celem powinno być na uzyskanie dostępu do najbardziej znaczący separacji, kierując się swoją wiedzą domeny. Nacisk nie znajduje się na rozmiar, ale zamiast tego na możliwości biznesowe. Ponadto w przypadku zwykłego spójności wymagane dla niektórych części aplikacji oparte na dużą liczbę zależności, wskazujący potrzebę pojedynczego mikrousługi, zbyt. Spójności jest do identyfikowania sposobu Rozdziel lub mikrousług razem z grupy. Ostatecznie podczas gdy możesz uzyskać więcej informacji na temat domeny, powinno się zaadaptować rozmiar Twojej mikrousługi wielokrotnie powtarzane. Znajdowanie właściwego rozmiaru nie jest procesem jednorazowej.
 
-[Sam Newman](http://samnewman.io/), rozpoznawanym promotor mikrousług oraz autora książki [Mikrousług budynku](http://samnewman.io/books/building_microservices/), wyróżnia się, że należy projektować Twojej mikrousług wzorca kontekstu ograniczone (BC) (część z oparte na domenie projekt), jak wprowadzone wcześniej. Czasami BC może składać się z kilku usług fizycznej, ale nie odwrotnie.
+[Sam Newman](https://samnewman.io/), rozpoznawanym promotor mikrousług oraz autora książki [Mikrousług budynku](https://samnewman.io/books/building_microservices/), wyróżnia się, że należy projektować Twojej mikrousług wzorca kontekstu ograniczone (BC) (część z oparte na domenie projekt), jak wprowadzone wcześniej. Czasami BC może składać się z kilku usług fizycznej, ale nie odwrotnie.
 
 Model domeny z określonej domeny jednostek ma zastosowanie w konkretnych BC lub mikrousługi. BC rozgranicza stosowania modelu domeny i deweloperów zapewnia przejrzyste i udostępnionych zrozumienia co musi być spójna i jakie mogą być opracowane niezależnie członków zespołu. Są to te same cele dla mikrousług.
 

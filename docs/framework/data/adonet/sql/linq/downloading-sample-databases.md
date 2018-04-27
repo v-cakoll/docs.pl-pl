@@ -1,24 +1,26 @@
 ---
-title: "Pobieranie przykładowych baz danych"
-ms.custom: 
+title: Pobieranie przykładowych baz danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 3b0dccd831591946684fb0087f33563b87ee6ba7
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd0b29e97d36d67781c92ee24c56aed43c703261
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="downloading-sample-databases"></a>Pobieranie przykładowych baz danych
 Liczba wskazówki i przykłady w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji Użyj bazy danych Northwind i SQL Server Express Edition. Te produkty bezpłatne można pobrać z witryny pobierania firmy Microsoft.  
@@ -57,7 +59,7 @@ Liczba wskazówki i przykłady w [!INCLUDE[vbtecdlinq](../../../../../../include
 6.  Postępuj zgodnie z instrukcjami instalacji w witrynie sieci Web.  
   
 ## <a name="downloading-management-studio-express"></a>Pobieranie Management Studio Express  
- Jeśli chcesz zmodyfikować bazy danych, które zostały pobrane, możesz uzyskać dostęp z bazy danych z **Eksploratora serwera** w [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] zintegrowane środowisko programistyczne (IDE) lub użyj programu Microsoft SQL Server Management Studio Express () SSMSE).  
+ Jeśli chcesz zmodyfikować bazy danych, które zostały pobrane, możesz uzyskać dostęp z bazy danych z **Eksploratora serwera** w programie Visual Studio zintegrowane środowisko programistyczne (IDE) lub za pomocą programu Microsoft SQL Server Management Studio Express (SSMSE) .  
   
 #### <a name="to-download-management-studio-express"></a>Aby pobrać Management Studio Express  
   

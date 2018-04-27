@@ -1,12 +1,13 @@
 ---
 title: Deklaracja zmiennej w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - local variables [Visual Basic], declarations
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7f7b924aed1da7db816aa5c11239e301428770b7
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8edd0b65b08efd437cc35e8f58ed7ed423736920
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Deklaracja zmiennej w Visual Basic
 Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcja deklaracji zmiennych jest [instrukcji Dim](../../../../visual-basic/language-reference/statements/dim-statement.md). Jej lokalizacja i zawartość należy określić charakterystyki zmiennej.  
@@ -41,7 +42,7 @@ Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcja 
 ## <a name="declaration-levels"></a>Poziomy deklaracji  
   
 ### <a name="local-and-member-variables"></a>Lokalne i zmienne Członkowskie  
- A *zmiennej lokalnej* to taki, który jest zadeklarowana w obrębie procedury. A *zmiennej członkowskiej* jest elementem członkowskim [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wpisz; jest zadeklarowany na poziomie modułu, wewnątrz klasy, struktury lub moduł, ale nie w dowolnej procedury wewnętrzne dla tej klasy, struktury lub modułu.  
+ A *zmiennej lokalnej* to taki, który jest zadeklarowana w obrębie procedury. A *zmiennej członkowskiej* jest elementem członkowskim typu Visual Basic; jest zadeklarowany na poziomie modułu, wewnątrz klasy, struktury lub moduł, ale nie w dowolnej procedury wewnętrzne dla tej klasy, struktury lub modułu.  
   
 ### <a name="shared-and-instance-variables"></a>Udostępnione i wystąpienie zmiennych  
  W klasie lub strukturze kategorii zmiennej członkowskiej zależy od tego, czy są one udostępniane. Jeśli jest ona zadeklarowana z [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) — słowo kluczowe, jest *współdzielonej zmiennej*, i istnieje on w pojedynczej kopii współdzielona przez wszystkie wystąpienia klasy lub struktury.  
@@ -51,15 +52,15 @@ Można zadeklarować zmiennej do określenia nazwy i właściwości. Instrukcja 
 ## <a name="declaring-data-type"></a>Deklarowanie typu danych  
  [Jako](../../../../visual-basic/language-reference/statements/as-clause.md) klauzuli w instrukcji deklaracji można zdefiniować typu danych lub typ obiektu są deklarowanie zmiennej. Można określić jedną z następujących typów dla zmiennej:  
   
--   Typ danych podstawowych, takich jak `Boolean`, `Long`, lub`Decimal`  
+-   Typ danych podstawowych, takich jak `Boolean`, `Long`, lub `Decimal`  
   
 -   Złożonego typu danych, takich jak tablica lub struktury  
   
 -   Typ obiektu lub klasa zdefiniowana w aplikacji lub w innej aplikacji  
   
--   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy, takie jak <xref:System.Windows.Forms.Label> lub<xref:System.Windows.Forms.TextBox>  
+-   A [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] klasy, takie jak <xref:System.Windows.Forms.Label> lub <xref:System.Windows.Forms.TextBox>  
   
--   Typ interfejsu, takich jak <xref:System.IComparable> lub<xref:System.IDisposable>  
+-   Typ interfejsu, takich jak <xref:System.IComparable> lub <xref:System.IDisposable>  
   
  Kilku zmiennych w jednej instrukcji można zadeklarować bez konieczności powtarzania typu danych. W poniższych instrukcjach, zmienne `i`, `j`, i `k` został zadeklarowany jako typ `Integer`, `l` i `m` jako `Long`, i `x` i `y` jako `Single`:  
   
@@ -84,15 +85,15 @@ Dim l, m As Long, x, y As Single
   
  *Zakres* zmiennej to zbiór wszystkich kod, który może odwoływać się do niego bez kwalifikujących się jego nazwę. Zakres zmiennej jest określana przez którym jest zadeklarowany. Kod znajdujący się w danym regionie można używać zmiennych zdefiniowanych w tym regionie bez konieczności kwalifikują się ich nazw. Aby uzyskać więcej informacji, zobacz [zakres w Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md).  
   
- Zmienna *poziom dostępu* jest zakres kodu, który ma uprawnienia dostępu do niego. Jest to określane przez modyfikator dostępu (takich jak [publicznego](../../../../visual-basic/language-reference/modifiers/public.md) lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md)) używanego w `Dim` instrukcji. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Zmienna *poziom dostępu* jest zakres kodu, który ma uprawnienia dostępu do niego. Jest to określane przez modyfikator dostępu (takich jak [publicznego](../../../../visual-basic/language-reference/modifiers/public.md) lub [prywatnej](../../../../visual-basic/language-reference/modifiers/private.md)) używanego w `Dim` instrukcji. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 ## <a name="see-also"></a>Zobacz też  
- [Porady: Tworzenie nowej zmiennej](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
- [Porady: przenoszenie danych do i z zmiennej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
+ [Instrukcje: tworzenie nowej zmiennej](../../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)  
+ [Instrukcje: przenoszenie danych do zmiennej i z niej](../../../../visual-basic/programming-guide/language-features/variables/how-to-move-data-into-and-out-of-a-variable.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
- [Chronione](../../../../visual-basic/language-reference/modifiers/protected.md)  
+ [Protected](../../../../visual-basic/language-reference/modifiers/protected.md)  
  [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)  
- [Statyczne](../../../../visual-basic/language-reference/modifiers/static.md)  
- [Zadeklarowana Charakterystyka elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
+ [Static](../../../../visual-basic/language-reference/modifiers/static.md)  
+ [Charakterystyka zadeklarowanych elementów](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
  [Wnioskowanie o typie lokalnym](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)  
- [Option Infer — instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
+ [Option Infer, instrukcja](../../../../visual-basic/language-reference/statements/option-infer-statement.md)

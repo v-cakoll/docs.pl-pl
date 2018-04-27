@@ -1,13 +1,13 @@
 ---
-title: "Wskazówki: używanie usług aplikacji klienta"
-ms.custom: 
+title: 'Wskazówki: używanie usług aplikacji klienta'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - application services host [client application services]
 - client application services, walkthroughs
 ms.assetid: bb7c8950-4517-4dae-b705-b74a14059b26
-caps.latest.revision: 
+caps.latest.revision: 47
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 71eac85d07ac54cf15edcfcc3a86de58afef5004
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzysta z usługi aplikacji klienta do uwierzytelniania użytkowników i ról użytkownika i ustawienia.  
@@ -57,7 +57,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Aby utworzyć aplikację kliencką i włączyć usługi aplikacji klienta  
   
-1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **plik &#124; Nowy &#124; Projekt** opcji menu.  
+1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **pliku &#124; nowy &#124; projektu** opcji menu.  
   
 2.  W **nowy projekt** okna dialogowego, **typy projektów** okienku rozwiń **Visual Basic** lub **Visual C#** węzeł i wybierz **Windows** typu projektu.  
   
@@ -75,7 +75,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 7.  Upewnij się, że **uwierzytelnianie formularzy użyj** jest zaznaczone, a następnie ustaw **lokalizacji usługi uwierzytelniania**, **ról usługi lokalizacji**, i **ustawienia w sieci Web usługi lokalizacji** do `http://localhost:55555/AppServices`.  
   
-8.  Aby uzyskać [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]na **aplikacji** ustaw **tryb uwierzytelniania** do **zdefiniowanym przez aplikację**.  
+8.  W języku Visual Basic na **aplikacji** ustaw **tryb uwierzytelniania** do **zdefiniowanym przez aplikację**.  
   
  Projektant określonego ustawienia są przechowywane w pliku app.config aplikacji.  
   
@@ -88,7 +88,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-create-and-configure-the-application-services-host"></a>Aby utworzyć i skonfigurować hosta usługi aplikacji  
   
-1.  W **Eksploratora rozwiązań**, wybierz rozwiązanie ClientAppServicesDemo, a następnie na **pliku** menu, wybierz opcję **Dodaj &#124; Nowy projekt**.  
+1.  W **Eksploratora rozwiązań**, wybierz rozwiązanie ClientAppServicesDemo, a następnie na **pliku** menu, wybierz opcję **Dodaj &#124; nowy projekt**.  
   
 2.  W **Dodawanie nowego projektu** okna dialogowego, **typy projektów** okienku rozwiń **Visual Basic** lub **Visual C#** węzeł i wybierz  **Web** typu projektu.  
   
@@ -250,7 +250,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo Dodaj odwołanie do zestawu System.Web.  
   
-2.  Wybierz plik Form1, a następnie wybierz **widoku &#124; Kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+2.  Wybierz plik Form1, a następnie wybierz **widoku &#124; kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
   
 3.  W edytorze kodu Dodaj następujące instrukcje na początku pliku Form1.  
   
@@ -315,7 +315,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
 ### <a name="creating-a-login-form"></a>Tworzenie formularza logowania  
  Dostawca poświadczeń jest klasa implementująca <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider> interfejsu. Ten interfejs zawiera tylko jedną metodę o nazwie <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> zwracającą <xref:System.Web.ClientServices.Providers.ClientFormsAuthenticationCredentials> obiektu. W poniższych procedurach opisano sposób tworzenia okno dialogowe logowania, który implementuje <xref:System.Web.ClientServices.Providers.IClientFormsAuthenticationCredentialsProvider.GetCredentials%2A> do wyświetlania samego i zwracać poświadczeń określonych przez użytkownika.  
   
- Oddzielne procedury są udostępniane dla [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] i C# ponieważ [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] zapewnia **formularz logowania** szablonu. Spowoduje to zapisanie pewien czas i kodowania wysiłku.  
+ Oddzielne procedury są dostarczane dla języka Visual Basic i C#, ponieważ zawiera Visual Basic **formularz logowania** szablonu. Spowoduje to zapisanie pewien czas i kodowania wysiłku.  
   
 ##### <a name="to-create-a-login-dialog-box-as-a-credentials-provider-in-visual-basic"></a>Aby utworzyć okno dialogowe logowania jako dostawca poświadczeń w języku Visual Basic  
   
@@ -331,7 +331,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 5.  W **właściwości** okna, określ **(nazwa)** wartość `rememberMeCheckBox` i **tekst** wartość `&Remember me`.  
   
-6.  Wybierz **widoku &#124; Kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+6.  Wybierz **widoku &#124; kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
   
 7.  W edytorze kodu Dodaj następujący kod na początku pliku.  
   
@@ -371,7 +371,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Aby zmienić interfejsu użytkownika na podstawie roli użytkownika  
   
-1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; Projektant** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
   
 2.  W projektancie, Dodaj <xref:System.Windows.Forms.Button> sterowania do formularza z **przybornika**.  
   
@@ -407,7 +407,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
  Można teraz uruchomić aplikację i zaloguj się jako pracowników, czy przycisk nie są wyświetlane, a następnie zaloguj się jako manager, aby wyświetlić przycisk.  
   
 ## <a name="accessing-web-settings"></a>Uzyskiwanie dostępu do ustawień sieci Web  
- W poniższej procedurze Dodaj pole tekstowe do formularza i powiązać go z ustawienia sieci Web. Jak poprzedni kod, który korzysta z uwierzytelniania i ról ustawień kodu nie Dostawca ustawień bezpośredni dostęp. Zamiast tego używa jednoznacznie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]) wygenerowana dla projektu przez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ W poniższej procedurze Dodaj pole tekstowe do formularza i powiązać go z ustawienia sieci Web. Jak poprzedni kod, który korzysta z uwierzytelniania i ról ustawień kodu nie Dostawca ustawień bezpośredni dostęp. Zamiast tego używa jednoznacznie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) wygenerowana dla projektu przez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Aby użyć ustawień sieci Web w interfejsie użytkownika  
   
@@ -425,7 +425,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
      `WebSettingsTestText` Ustawienie jest wyświetlane w Projektancie z wartością domyślną `DefaultText`. Ponadto `Settings` klasę, która zawiera `WebSettingsTestText` właściwości jest generowany dla projektu.  
   
-5.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; Projektant** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+5.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
   
 6.  W projektancie, Dodaj <xref:System.Windows.Forms.TextBox> sterowania do formularza.  
   
@@ -510,7 +510,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Aby włączyć tryb offline w aplikacji  
   
-1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; Projektant** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
   
 2.  W projektancie, Dodaj <xref:System.Windows.Forms.CheckBox> sterowania do formularza.  
   
@@ -527,7 +527,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
     > [!NOTE]
     >  <xref:System.Web.ClientServices.ClientFormsIdentity.RevalidateUser%2A> Metoda jest jedynie jako udogodnienie. Ponieważ nie ma wartości zwracanej, nie może wskazać, czy ponowna Walidacja nie powiodła się. Ponowna Walidacja może zakończyć się niepowodzeniem, na przykład, jeśli poświadczenia użytkownika zostały zmienione na serwerze. W takim przypadku można dołączać kod jawnie weryfikującą użytkowników po wywołaniu usługi nie powiedzie się. Aby uzyskać więcej informacji zobacz sekcję ustawień dostępu do sieci Web we wcześniejszej części tego przewodnika.  
   
-     Po ponownego sprawdzania poprawności, ten kod zapisuje zmiany w ustawieniach lokalnych sieci Web przez wywołanie metody `SaveSettings` metody dodanego wcześniej. Następnie pobiera wszystkie nowe wartości na serwerze przez wywołanie metody <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> metody projektu `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]).  
+     Po ponownego sprawdzania poprawności, ten kod zapisuje zmiany w ustawieniach lokalnych sieci Web przez wywołanie metody `SaveSettings` metody dodanego wcześniej. Następnie pobiera wszystkie nowe wartości na serwerze przez wywołanie metody <xref:System.Configuration.ApplicationSettingsBase.Reload%2A> metody projektu `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic).  
   
      [!code-csharp[ClientApplicationServices#080](../../../samples/snippets/csharp/VS_Snippets_Winforms/ClientApplicationServices/CS/Form1.cs#080)]
      [!code-vb[ClientApplicationServices#080](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ClientApplicationServices/VB/Form1.vb#080)]  

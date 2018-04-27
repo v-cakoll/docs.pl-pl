@@ -1,12 +1,13 @@
 ---
-title: "Dostawca przesyłania strumieniowego (usługi danych WCF)"
-ms.custom: 
+title: Dostawca przesyłania strumieniowego (usługi danych WCF)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework-oob
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f965bc46c62742c0e2ffb0a7f8ae2e09eca5dc1c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: bc66d4154f60e46e53de8ca72596e133dc84eb97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="streaming-provider-wcf-data-services"></a>Dostawca przesyłania strumieniowego (usługi danych WCF)
 Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane binarne może reprezentować strumienie audio i wideo, obrazów, plików dokumentów lub binarne nośników innych typów. Kiedy jednostki w modelu danych obejmuje co najmniej jednej właściwości binarnych, Usługa danych zwraca to dane binarne zakodowane jako base-64 wewnątrz wpis w odpowiedzi źródła danych. Ponieważ ładowanie i serializacji dużych danych binarnych w ten sposób może wpłynąć na wydajność, [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] definiuje mechanizm służący do pobierania danych binarnych, niezależnie od podmiotu, do którego należy. Jest to osiągane przez rozdzielić danych binarnych z jednostki jeden lub więcej strumieni danych.  
@@ -61,7 +63,7 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
   
  Musisz również dodać przestrzeń nazw `xmlns:m=http://schemas.microsoft.com/ado/2007/08/dataservices/metadata` do jednostki lub w katalogu głównym pliku edmx lub .csdl, który definiuje modelu danych.  
   
- [!INCLUDE[crexample](../../../../includes/crexample-md.md)]usługi danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy i udostępnia zasobu multimedialnego, zobacz wpis [przesyłania strumieniowego serii dostawcy danych usług: Implementowanie dostawcy przesyłania strumieniowego (część 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
+ Na przykład usługa danych, który używa [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] dostawcy i udostępnia zasobu multimedialnego, zobacz wpis [przesyłania strumieniowego serii dostawcy danych usług: Implementowanie dostawcy przesyłania strumieniowego (część 1)](http://go.microsoft.com/fwlink/?LinkID=198989).  
   
  **Dostawca odbicia**  
  Aby wskazać, że jednostka jest wpisem łącza nośnika, należy dodać <xref:System.Data.Services.Common.HasStreamAttribute> do klasy, który definiuje typ jednostki w dostawcy odbicia.  
@@ -122,7 +124,7 @@ Usługi danych mogą uwidaczniać dużego obiektu binarnego danych. Te dane bina
   
     -   Właściwość binarną, która jest zasobem multimediów nie powinny znajdować się w modelu danych. Wszystkie właściwości w modelu danych są zwracane w wpis w odpowiedzi na źródła danych.  
   
-    -   Aby zwiększyć wydajność za duża strumienia binarnego, zaleca się utworzenie klasy niestandardowej strumienia do przechowywania danych binarnych w bazie danych. Ta klasa jest zwracany przez użytkownika <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> implementacji i wysyła dane binarne do bazy danych w fragmentów. Aby uzyskać [!INCLUDE[ssNoVersion](../../../../includes/ssnoversion-md.md)] bazy danych, zaleca się użycie FILESTREAM do transmisji danych do bazy danych podczas danych binarnych jest większy niż 1 MB.  
+    -   Aby zwiększyć wydajność za duża strumienia binarnego, zaleca się utworzenie klasy niestandardowej strumienia do przechowywania danych binarnych w bazie danych. Ta klasa jest zwracany przez użytkownika <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> implementacji i wysyła dane binarne do bazy danych w fragmentów. Dla bazy danych programu SQL Server firma Microsoft zaleca, aby używać FILESTREAM do transmisji danych do bazy danych binarnych jest większy niż 1MB.  
   
     -   Upewnij się, że baza danych jest przeznaczony do przechowywania dużych strumienie binarne, które mają być odbierany przez usługi danych.  
   

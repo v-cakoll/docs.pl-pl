@@ -1,34 +1,36 @@
 ---
-title: "Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend"
-ms.custom: 
+title: 'Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - buttons [WPF]
 - converting [WPF], shape to button
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 76025da208cc0929a20c379f76106d7e101c3358
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e029537466e836cfc103bad64d4102652162c465
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>Wskazówki: utwórz przycisk przy użyciu Microsoft Expression Blend
 Ten przewodnik zawiera kroki procesu tworzenia [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] dostosowany przycisk przy użyciu Microsoft Expression Blend.  
   
 > [!IMPORTANT]
->  Microsoft Expression Blend działa przez generowanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] następnie kompilowania dokonanie program wykonywalny. Zamiast czy podczas pracy z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bezpośrednio, istnieje inny wskazówki, tworzącą tej samej aplikacji, jak to użycie jednego [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] z [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] zamiast mieszania. Zobacz [utworzyć przycisk przy użyciu języka XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) Aby uzyskać więcej informacji.  
+>  Microsoft Expression Blend działa przez generowanie [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] następnie kompilowania dokonanie program wykonywalny. Zamiast czy podczas pracy z [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] bezpośrednio, istnieje inny wskazówki, tworzącą tej samej aplikacji, jak to użycie jednego [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] z programu Visual Studio, a nie mieszania. Zobacz [utworzyć przycisk przy użyciu języka XAML](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md) Aby uzyskać więcej informacji.  
   
  Na poniższej ilustracji przedstawiono dostosowany przycisk zostanie utworzenie.  
   

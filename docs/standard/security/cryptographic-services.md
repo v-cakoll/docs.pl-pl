@@ -1,12 +1,12 @@
 ---
-title: "Usługi kryptograficzne"
-ms.custom: 
+title: Usługi kryptograficzne
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - cryptography [.NET Framework]
@@ -30,21 +30,21 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-caps.latest.revision: 
+caps.latest.revision: 34
 author: mairaw
 ms.author: mairaw
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 941dd9d130a31c997b634bce8059afef04c178d3
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 02d399d85c53cd296fc5f49ca0ec4b51b14ad677
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cryptographic-services"></a>Usługi kryptograficzne
-<a name="top"></a>Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
+<a name="top"></a> Sieci publicznych, takich jak Internet nie udostępniają sposób zapewnienia bezpiecznej komunikacji między jednostkami. Komunikacja za pośrednictwem tych sieci jest podatny na odczytu lub nawet zmodyfikowane przez osoby nieupoważnione innych. Kryptografia ułatwia ochronę danych przed wyświetlaniem, udostępnia metody wykrywania, czy dane zostały zmodyfikowane, a także umożliwia bezpiecznych metod komunikacji za pośrednictwem kanałów w przeciwnym razie niezabezpieczone. Na przykład danych można być szyfrowane przy użyciu algorytmu kryptograficznego, przekazywane w stanu zaszyfrowanego i później odszyfrowywany przez stronę przeznaczone. Jeśli innych firm przechwytuje zaszyfrowane dane, będzie trudne do odszyfrowania.  
   
  W programie .NET Framework, klas w <xref:System.Security.Cryptography?displayProperty=nameWithType> przestrzeni nazw zarządzać wieloma szczegółami kryptografii. Niektóre są otoki dla niezarządzanych API szyfrowania firmy Microsoft (CryptoAPI), a inne implementacje czysto zarządzanych. Nie trzeba przeprowadzać ekspertem w kryptografii używać tych klas. Podczas tworzenia nowego wystąpienia jednego z szyfrowania algorytmu klasy klucze są automatycznie wygenerowana dla łatwość użycia i domyślne właściwości to jako bezpieczne i bezpieczny, jak to możliwe.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 02/01/2018
   
  Szyfrowania klucz tajny jest również nazywany szyfrowania symetrycznego, ponieważ ten sam klucz służy do szyfrowania i odszyfrowywania. Algorytmy szyfrowania klucz tajny są bardzo szybko (w porównaniu z algorytmy kluczy publicznych) i dobrze nadają się do operacji kryptograficznych przekształcenia na dużych strumieni danych. Szyfrowanie asymetryczne algorytmy, takich jak RSA są ograniczone ze sobą matematycznie w ilości danych może zaszyfrować. Algorytmy szyfrowania symetrycznego nie mają zwykle tych problemów.  
   
- Typ o nazwie szyfry blokowe algorytmu klucz tajny jest używany do szyfrowania jeden blok danych w czasie. Blok, takich jak standardowe DES (Data Encryption), TripleDES, szyfrowania i Advanced Encryption (Standard AES) kryptograficznie Przekształcanie wejściowego bloku  *n*  bajtów do bloku bajtów zaszyfrowanych danych wyjściowych. Jeśli chcesz zaszyfrować lub odszyfrować sekwencję bajtów, należy to robić blok po bloku. Ponieważ  *n*  jest mały (8 bajtów dla DES i TripleDES; 16 bajtów [domyślnie], bajtów 24 lub 32 bajtów AES), wartości danych, które są większe niż  *n*  mają być szyfrowane jeden blok w czasie. Wartości danych, które są mniejsze niż  *n*  trzeba będzie dostosować do  *n*  aby mógł zostać przetworzony.  
+ Typ o nazwie szyfry blokowe algorytmu klucz tajny jest używany do szyfrowania jeden blok danych w czasie. Blok, takich jak standardowe DES (Data Encryption), TripleDES, szyfrowania i Advanced Encryption (Standard AES) kryptograficznie Przekształcanie wejściowego bloku *n* bajtów do bloku bajtów zaszyfrowanych danych wyjściowych. Jeśli chcesz zaszyfrować lub odszyfrować sekwencję bajtów, należy to robić blok po bloku. Ponieważ *n* jest mały (8 bajtów dla DES i TripleDES; 16 bajtów [domyślnie], bajtów 24 lub 32 bajtów AES), wartości danych, które są większe niż *n* muszą być szyfrowane jeden blok w czasie. Wartości danych, które są mniejsze niż *n* trzeba będzie dostosować do *n* aby mógł zostać przetworzony.  
   
  Jedna forma proste szyfry blokowe nosi nazwę trybu elektronicznych codebook (ECB). Tryb ECB jest uważana za niebezpieczną, ponieważ nie jest używane wektor inicjowania zainicjować pierwszego bloku w postaci zwykłego tekstu. Dla danego klucza tajnego *k*, szyfrowania Prosty blok, który nie używa wektor inicjowania są szyfrowane tego samego bloku wejściowych w postaci zwykłego tekstu w tym samym bloku danych wyjściowych tekstu szyfrowanego. W związku z tym jeśli masz zduplikowanych bloków w strumienia wejściowego w postaci zwykłego tekstu, konieczne będzie zduplikowanych bloków w danych wyjściowych strumienia tekstu szyfrowanego. Te bloki zduplikowany wyjściowy alertu nieautoryzowanym użytkownikom słabe szyfrowanie używane algorytmy, które mogą zastosować i trybów ataku. Trybu szyfrowania ECB występuje w związku z tym dość analizy, a ostatecznie klucza odnajdywania.  
   
@@ -119,11 +119,11 @@ ms.lasthandoff: 02/01/2018
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zawiera następujące klasy, które implementują algorytmów szyfrowania klucz tajny:  
   
--   <xref:System.Security.Cryptography.AesManaged>(wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
+-   <xref:System.Security.Cryptography.AesManaged> (wprowadzona w systemie [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]).  
   
 -   <xref:System.Security.Cryptography.DESCryptoServiceProvider>.  
   
--   <xref:System.Security.Cryptography.HMACSHA1>(Jest to technicznie algorytm klucza tajnego ponieważ reprezentuje ona kod uwierzytelniania wiadomości, która jest obliczana przy użyciu funkcji skrótu kryptograficznego, w połączeniu z kluczem tajnym. Zobacz [wartości skrótu](#hash_values)w dalszej części tego tematu.)  
+-   <xref:System.Security.Cryptography.HMACSHA1> (Jest to technicznie algorytm klucza tajnego ponieważ reprezentuje ona kod uwierzytelniania wiadomości, która jest obliczana przy użyciu funkcji skrótu kryptograficznego, w połączeniu z kluczem tajnym. Zobacz [wartości skrótu](#hash_values)w dalszej części tego tematu.)  
   
 -   <xref:System.Security.Cryptography.RC2CryptoServiceProvider>.  
   
@@ -163,13 +163,13 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellman>(klasa podstawowa)  
+-   <xref:System.Security.Cryptography.ECDiffieHellman> (klasa podstawowa)  
   
 -   <xref:System.Security.Cryptography.ECDiffieHellmanCng>  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey>(klasa podstawowa)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanCngPublicKey> (klasa podstawowa)  
   
--   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction>(klasa podstawowa)  
+-   <xref:System.Security.Cryptography.ECDiffieHellmanKeyDerivationFunction> (klasa podstawowa)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 02/01/2018
   
 -   <xref:System.Security.Cryptography.RSACryptoServiceProvider>  
   
--   <xref:System.Security.Cryptography.ECDsa>(klasa podstawowa)  
+-   <xref:System.Security.Cryptography.ECDsa> (klasa podstawowa)  
   
 -   <xref:System.Security.Cryptography.ECDsaCng>  
   
@@ -206,7 +206,7 @@ ms.lasthandoff: 02/01/2018
   
 -   Alicja wysyła komunikat w postaci zwykłego tekstu i skrótu wiadomości (podpisu cyfrowego) do niego. Robert otrzymuje i tworzy skrót wiadomości i porównuje jego wartość skrótu, aby wartość skrótu, które on odebrane z Alicja. Jeśli wartości skrótu są identyczne, wiadomość nie została zmieniona. Jeśli wartości nie są identyczne, wiadomości została zmieniona po Alicja zapisano go.  
   
-     Niestety ta metoda nie ustanawia autentyczności nadawcy. Każda osoba, która personifikacji Alicja i wysyła komunikat do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisywania wiadomości i jest wszystkich Roberta, który można określić, czy komunikat odpowiada jego sygnatura. Jest to jedna forma ataku typu man-in--middle. Zobacz [NIB: przykład komunikacji Secure kryptografii nowej generacji (CNG)](http://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) Aby uzyskać więcej informacji.  
+     Niestety ta metoda nie ustanawia autentyczności nadawcy. Każda osoba, która personifikacji Alicja i wysyła komunikat do niego. Używają tego samego algorytmu wyznaczania wartości skrótu do podpisywania wiadomości i jest wszystkich Roberta, który można określić, czy komunikat odpowiada jego sygnatura. Jest to jedna forma ataku typu man-in--middle. Zobacz [NIB: przykład komunikacji Secure kryptografii nowej generacji (CNG)](https://msdn.microsoft.com/library/8048e94e-054a-417b-87c6-4f5e26710e6e) Aby uzyskać więcej informacji.  
   
 -   Alicja wysyła wiadomości w postaci zwykłego tekstu do niego za pośrednictwem niezabezpieczonych kanału publicznego. Skrótu wiadomości użytkownik wysyła do niego za pośrednictwem bezpiecznego kanału prywatnych. Robert odbiera wiadomości w postaci zwykłego tekstu, jego skróty i porównuje skrót do prywatnie wymieniane wyznaczania wartości skrótu. Jeśli skróty są zgodne, Roberta, który zna dwie czynności:  
   
@@ -271,13 +271,13 @@ ms.lasthandoff: 02/01/2018
   
  Ponadto następujące klasy zawierają informacje określonej sygnatury:  
   
--   <xref:System.Security.Cryptography.StrongNameSignatureInformation>przechowuje informacje podpisu silnej nazwy dla manifest.  
+-   <xref:System.Security.Cryptography.StrongNameSignatureInformation> Przechowuje informacje podpisu silnej nazwy dla manifest.  
   
--   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation>reprezentuje informacje o podpisie Authenticode dla manifest.  
+-   <xref:System.Security.Cryptography.X509Certificates.AuthenticodeSignatureInformation> reprezentuje informacje o podpisie Authenticode dla manifest.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation>zawiera informacje o sygnaturę czasową na podpis Authenticode.  
+-   <xref:System.Security.Cryptography.X509Certificates.TimestampInformation> zawiera informacje o sygnaturę czasową na podpis Authenticode.  
   
--   <xref:System.Security.Cryptography.X509Certificates.TrustStatus>zapewnia prosty sposób sprawdzić, czy podpis Authenticode jest zaufany.  
+-   <xref:System.Security.Cryptography.X509Certificates.TrustStatus> zapewnia prosty sposób sprawdzić, czy podpis Authenticode jest zaufany.  
   
  [Powrót do początku](#top)  
   
@@ -307,11 +307,11 @@ ms.lasthandoff: 02/01/2018
   
  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] Różnych klas CNG, takich jak obsługa obejmuje również:  
   
--   <xref:System.Security.Cryptography.CngProvider>przechowuje dostawcy magazynu kluczy.  
+-   <xref:System.Security.Cryptography.CngProvider> przechowuje dostawcy magazynu kluczy.  
   
--   <xref:System.Security.Cryptography.CngAlgorithm>obsługuje algorytm CNG.  
+-   <xref:System.Security.Cryptography.CngAlgorithm> obsługuje algorytm CNG.  
   
--   <xref:System.Security.Cryptography.CngProperty>utrzymuje często używanych właściwości klucza.  
+-   <xref:System.Security.Cryptography.CngProperty> utrzymuje często używanych właściwości klucza.  
   
  [Powrót do początku](#top)  
   

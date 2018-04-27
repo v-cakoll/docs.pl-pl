@@ -11,15 +11,15 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 76db5388c75d4eb3b5cc23c1e57cc391a15f2934
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cab12426308be258134e0385c5a6eb6cdb5d544b
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="designing-the-infrastructure-persistence-layer"></a>Projektowanie infrastruktury warstwę trwałości
 
-Składniki trwałości danych zapewniają dostęp do danych hostowanej w granicach mikrousługi (to znaczy, że baza danych mikrousługi). Zawierają one rzeczywistego wykonania składniki, takie jak repozytoria i [jednostki pracy](http://martinfowler.com/eaaCatalog/unitOfWork.html) klas, takich jak niestandardowe DBContexts EF.
+Składniki trwałości danych zapewniają dostęp do danych hostowanej w granicach mikrousługi (to znaczy, że baza danych mikrousługi). Zawierają one rzeczywistego wykonania składniki, takie jak repozytoria i [jednostki pracy](https://martinfowler.com/eaaCatalog/unitOfWork.html) klas, takich jak niestandardowe DBContexts EF.
 
 ## <a name="the-repository-pattern"></a>Wzorzec repozytorium
 
@@ -90,7 +90,7 @@ Obiekt dostępu do danych bezpośrednio wykonuje operacje dostępu i trwałości
 
 Jednostka pracy jest określana jako jedna transakcja, która obejmuje wiele wstawiania, aktualizowania lub usuwania operacji. Proste warunków oznacza to, że działania określonego użytkownika (na przykład, rejestracja w witrynie sieci Web), insert, update i delete transakcji są obsługiwane w ramach jednej transakcji. Jest to bardziej efektywne niż Obsługa wielu transakcji bazy danych w sposób chattier.
 
-Te wiele operacji trwałości są wykonywane później w ramach jednej akcji, gdy polecenia kodu z warstwy aplikacji. Decyzja o wprowadzanie zmian w pamięci do magazynu rzeczywistej bazy danych jest zwykle oparta na [wzorzec jednostki pracy](http://martinfowler.com/eaaCatalog/unitOfWork.html). W EF wzorzec jednostki pracy jest implementowany jako DBContext.
+Te wiele operacji trwałości są wykonywane później w ramach jednej akcji, gdy polecenia kodu z warstwy aplikacji. Decyzja o wprowadzanie zmian w pamięci do magazynu rzeczywistej bazy danych jest zwykle oparta na [wzorzec jednostki pracy](https://martinfowler.com/eaaCatalog/unitOfWork.html). W EF wzorzec jednostki pracy jest implementowany jako DBContext.
 
 W wielu przypadkach ten wzorzec lub sposób stosowania operacje magazynu mogą zwiększyć wydajność aplikacji i zmniejszyć ryzyko wystąpienia niespójności. Ponadto zmniejsza transakcji blokowania w tabelach bazy danych, ponieważ wszystkie operacje przeznaczone są zatwierdzone w ramach jednej transakcji. Jest to bardziej skuteczne, w odróżnieniu od wykonywania wielu izolowanego operacji w bazie danych. W związku z tym wybranego ORM jest w stanie zoptymalizować wykonywania w bazie danych przez grupowanie kilka akcji aktualizacji w ramach tej samej transakcji, w przeciwieństwie do wielu wykonaniami małych i oddzielne transakcji.
 
@@ -139,7 +139,7 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
 ### <a name="the-repository-pattern"></a>Wzorzec repozytorium
 
 -   **Edward Hieatt i Tomasz mnie. Wzorzec repozytorium.**
-    [*http://martinfowler.com/eaaCatalog/repository.html*](http://martinfowler.com/eaaCatalog/repository.html)
+    [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
 
 -   **Wzorzec repozytorium**
     [*https://msdn.microsoft.com/library/ff649690.aspx*](https://msdn.microsoft.com/library/ff649690.aspx)
@@ -152,7 +152,7 @@ W kolejnych sekcjach jest wyjaśniono sposób implementacji wzorca specyfikacji 
 ### <a name="unit-of-work-pattern"></a>Jednostka pracy wzorca
 
 -   **Pole Fowler. Jednostka pracy wzorca.**
-    [*http://martinfowler.com/eaaCatalog/unitOfWork.html*](http://martinfowler.com/eaaCatalog/unitOfWork.html)
+    [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 <!-- -->
 

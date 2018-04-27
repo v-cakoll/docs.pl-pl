@@ -8,14 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 15e6ea1a8b2df0b8ed1b84abceee9e6be2c556f9
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5ffd882c2a1d04c29483d380e972d6ce70bdb5c4
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Rozszerzanie modelu aplikacji Visual Basic
 Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` członkami <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> klasy. Ta technika pozwala dostosować zachowanie aplikacji modelu, a następnie dodaj wywołania metod własnych aplikacji uruchamiania i wyłączania.  
@@ -25,11 +25,11 @@ Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` czło
   
  Na poniższym rysunku przedstawiono sekwencję wywołań modelu aplikacji w normalnym aplikacji formularzy systemu Windows w języku Visual Basic. Sekwencja uruchamiania, kiedy `Sub Main` wywołań procedur <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Run%2A> metody.  
   
- ![Model aplikacji Visual Basic 45; &#45; Uruchom](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
+ ![Model aplikacji Visual Basic &#45; &#45; Uruchom](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelrun.gif "VB_ModelRun")  
   
  Udostępnia Model aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance> i <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> zdarzenia. Poniższej grafice zawierają mechanizm wywoływanie tych zdarzeń.  
   
- ![Model aplikacji Visual Basic 45; &#45; Następne wystąpienie](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
+ ![Model aplikacji Visual Basic &#45; &#45; następne wystąpienie](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_modelnext.gif "VB_ModelNext")  
   
  ![Model aplikacji Visual Basic nieobsłużony wyjątek](../../../visual-basic/developing-apps/customizing-extending-my/media/vb_unhandex.gif "VB_UnhandEx")  
   
@@ -50,7 +50,7 @@ Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` czło
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A>. Umożliwia projektanta na emitowanie kodu, który inicjuje ekranu powitalnego.  
   
-         Domyślnie ta metoda nie działa. Wybranie ekranu powitalnego aplikacji w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwości nowe wystąpienie ekranu powitalnego formularz.  
+         Domyślnie ta metoda nie działa. Wybranie ekranu powitalnego aplikacji w języku Visual Basic **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateSplashScreen%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A> właściwości do nowego wystąpienia formularz ekranu powitalnego .  
   
 2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartup%2A>. Udostępnia punkt rozszerzalności dla wywoływanie `Startup` zdarzeń. Zatrzymuje sekwencja uruchamiania aplikacji, jeśli ta funkcja zwraca `False`.  
   
@@ -62,7 +62,7 @@ Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` czło
   
     1.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>. Umożliwia projektanta na emitowanie kodu, który inicjuje formularz główny.  
   
-         Domyślnie ta metoda nie działa. Jednak po wybraniu formularz główny aplikacji w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> właściwości nowe wystąpienie klasy głównym formularza .  
+         Domyślnie ta metoda nie działa. Jednak po wybraniu formularz główny aplikacji w języku Visual Basic **projektanta projektu**, zastępuje projektanta <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A> metodę za pomocą metody, która ustawia <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A> właściwości nowe wystąpienie klasy głównym formularza.  
   
     2.  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.HideSplashScreen%2A>. Jeśli aplikacja ma ekran powitalny zdefiniowany i jest otwarty, ta metoda powoduje zamknięcie ekranu powitalnego.  
   
@@ -85,7 +85,7 @@ Można dodać funkcje do modelu aplikacji przez zastąpienie `Overridable` czło
  <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)> Wywołania konstruktora <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości w celu określenia aparat renderowania tekstu stosowanie w formularzach aplikacji. Domyślnie <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> zwraca `False`, wskazującą, czy można używać aparatu renderowania tekstu GDI, co jest ustawieniem domyślnym w [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]. Można zastąpić <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A> właściwości do zwrócenia `True`, która wskazuje, że używane aparat renderowania tekstu GDI +, co jest ustawieniem domyślnym w Visual Basic .NET 2002 i Visual Basic .NET 2003.  
   
 ## <a name="configuring-the-application"></a>Konfigurowanie aplikacji  
- W ramach [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] model aplikacji <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> klasa udostępnia właściwości chronionego, służące do konfiguracji aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
+ W ramach modelu aplikacji Visual Basic <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering> klasa udostępnia właściwości chronionego, służące do konfiguracji aplikacji. Te właściwości należy ustawić w konstruktorze klasy implementującej.  
   
  W projekcie domyślny program Windows Forms **projektanta projektu** tworzy kod, aby ustawić właściwości przy użyciu projektanta ustawień. Te właściwości są używane tylko wtedy, gdy aplikacja jest uruchamiana; Po uruchomieniu aplikacji ich ustawienie nie ma znaczenia.  
   

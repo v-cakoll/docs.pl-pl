@@ -9,11 +9,11 @@ ms.topic: conceptual
 ms.prod: .net
 ms.devlang: devlang-csharp
 ms.custom: mvc
-ms.openlocfilehash: c627903743f8867e05bac9ce835659fc7270b94e
-ms.sourcegitcommit: 935d5267c44f9bce801468ef95f44572f1417e8c
+ms.openlocfilehash: aad6b06748b02e2ea3003ca339d8a5a0b15583f8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="the-net-compiler-platform-sdk"></a>Zestaw SDK platformy kompilatora .NET
 
@@ -40,9 +40,9 @@ Istnieją trzy główne scenariusze zapisywania analizatory i poprawki kodu:
 
 ## <a name="enforce-team-coding-standards"></a>Wymuszanie zespołu standardy kodowania
 
-Wiele zespoły mają, kodowania standardy, które są wymuszane za pośrednictwem przeglądy kodu z innych członków zespołu. Analizatory i poprawki kodu ułatwia ten proces znacznie większą wydajność. Przeglądy kodu się zdarzyć, gdy dewelopera udziały pracy z innymi osobami w zespole. Będzie on zainwestowały wszystkich czasu wymaganego do ukończenia nową funkcję przed pobraniem wszelkie komentarze. Tygodni może przechodzą on wzmacnia zwyczaje, które nie są zgodne rozwiązania zespołu.
+Wiele zespoły mają, kodowania standardy, które są wymuszane za pośrednictwem przeglądy kodu z innych członków zespołu. Analizatory i poprawki kodu ułatwia ten proces znacznie większą wydajność. Przeglądy kodu się zdarzyć, gdy dewelopera udziały pracy z innymi osobami w zespole. Deweloper będzie zainwestowały wszystkich czasu wymaganego do ukończenia nową funkcję przed pobraniem wszelkie komentarze. Tygodni może przechodzą dewelopera wzmacnia zwyczaje, które nie są zgodne rozwiązania zespołu.
 
-Analizatory Uruchom jako deweloper zajmują się pisaniem kodu. Pobiera on natychmiast uzyskuje opinie, które wspiera następujące wskazówki natychmiast. Tworzy on zwyczaje do pisania kodu zgodne, jak on rozpoczyna tworzenie prototypów. Gdy funkcja jest gotowy dla ludzi sprawdzić, standardowe wskazówki została wymuszona.
+Analizatory Uruchom jako deweloper zajmują się pisaniem kodu. Deweloper pobiera natychmiast uzyskuje opinie, które wspiera następujące wskazówki natychmiast. Deweloper tworzy zwyczaje do pisania kodu zgodne, jak ich rozpocząć tworzenie prototypów. Gdy funkcja jest gotowy dla ludzi sprawdzić, standardowe wskazówki została wymuszona.
 
 Zespoły mogą tworzyć analizatory i Kod poprawki tego Wyszukaj najbardziej typowe rozwiązania, naruszających zespołu praktyk kodowania. Mogą być instalowane na komputerze Każdy deweloper wymusić standardy.
 
@@ -67,7 +67,7 @@ Zestawu SDK platformy kompilatora .NET zawiera najnowsze modele obiektów język
 
 Możesz dowiedzieć się więcej o koncepcjach w zestawie SDK platformy .NET kompilatora w tych tematach cztery:
 
- - [Eksploruj kodu z wizualizatora składni](syntax-visualizer.md)
+ - [Eksplorowanie kodu za pomocą wizualizatora składni](syntax-visualizer.md)
  - [Omówienie modelu interfejsu API kompilatora](compiler-api-model.md)
  - [Korzystanie ze składni](work-with-syntax.md)
  - [Korzystanie z semantyki](work-with-semantics.md)

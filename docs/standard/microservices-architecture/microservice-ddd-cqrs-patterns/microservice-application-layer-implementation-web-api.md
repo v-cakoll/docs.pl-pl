@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: bdb080369c26a3d7ffab97f93ba3419d6bd84754
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: b960636863ae1dcb0c955d96875d499b54b04105
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implementing-the-microservice-application-layer-using-the-web-api"></a>Implementowanie mikrousługi warstwy aplikacji przy użyciu interfejsu API sieci Web
 
@@ -158,7 +158,7 @@ public class ApplicationModule : Autofac.Module
 }
 ```
 
-Proces rejestracji i pojęcia są bardzo podobne do sposób z wbudowanych kontenerem platformy ASP.NET Core dla systemu iOS można zarejestrować typy, ale składni, korzystając z Autofac różni się nieco.
+Proces rejestracji i pojęcia są bardzo podobnie możesz zarejestrować typy z wbudowanych kontenera ASP.NET Core IoC, ale składni, korzystając z Autofac różni się nieco.
 
 W przykładowym kodzie abstrakcji IOrderRepository został zarejestrowany oraz klasa implementacji OrderRepository. Oznacza to, że zawsze, gdy Konstruktor jest deklarowanie zależności za pomocą abstrakcji IOrderRepository lub interfejsu, kontenera IoC będzie wstrzyknąć wystąpienia klasy OrderRepository.
 

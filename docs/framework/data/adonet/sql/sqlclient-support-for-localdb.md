@@ -1,30 +1,32 @@
 ---
-title: "Obsługa SqlClient LocalDB"
-ms.custom: 
+title: Obsługa SqlClient LocalDB
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3d643ac386aebf51673f937b3f47e73c749b78f
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: e2564e49a90a1c8fd9fe2cc000ebf648cf90b4e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sqlclient-support-for-localdb"></a>Obsługa SqlClient LocalDB
-Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] o nazwie kodowej Denali, to Uproszczona wersja [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)], nazywany LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączenia z bazą danych LocalDB.  
+Począwszy od programu SQL Server o nazwie kodowej Denali to Uproszczona wersja programu SQL Server o nazwie LocalDB, będą dostępne. W tym temacie omówiono sposób nawiązywania połączenia z bazą danych LocalDB.  
   
 ## <a name="remarks"></a>Uwagi  
- Aby uzyskać więcej informacji na temat LocalDB, łącznie ze sposobem LocalDB zainstalować i skonfigurować wystąpienie bazy danych LocalDB, zobacz [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] — książki Online.  
+ Aby uzyskać więcej informacji na temat LocalDB, łącznie ze sposobem LocalDB zainstalować i skonfigurować wystąpienie bazy danych LocalDB zobacz dokumentację SQL Server — książki Online.  
   
  Podsumowując, co można zrobić LocalDB:  
   
@@ -40,9 +42,9 @@ Począwszy od [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)]
     server=(localdb)\\myInstance  
     ```  
   
- `User Instance=True`nie jest dozwolona podczas nawiązywania połączenia z bazą danych LocalDB.  
+ `User Instance=True` nie jest dozwolona podczas nawiązywania połączenia z bazą danych LocalDB.  
   
- Możesz pobrać LocalDB z [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Jeśli użyjesz sqlcmd.exe, aby modyfikować danych w wystąpieniu bazy danych LocalDB, konieczne będzie sqlcmd z [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 r., możesz również pobrać ze strony [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] 2012 Feature Pack.  
+ Możesz pobrać LocalDB z [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/download/en/details.aspx?id=29065). Jeśli użyjesz sqlcmd.exe, aby modyfikować danych w wystąpieniu bazy danych LocalDB, konieczne będzie sqlcmd z programu SQL Server 2012, który możesz również pobrać ze strony programu SQL Server 2012 Feature Pack.  
   
 ## <a name="programmatically-create-a-named-instance"></a>Programowe tworzenie wystąpienia nazwanego  
  Aplikację można utworzyć wystąpienia nazwanego i Określ bazę danych, w następujący sposób:  

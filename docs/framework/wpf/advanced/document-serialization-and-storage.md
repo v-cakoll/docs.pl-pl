@@ -1,31 +1,33 @@
 ---
 title: Serializacja dokumentu i przechowywanie
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - 'serialization of documents [WPF], , '
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a232e1e2557bf1ecc6bb5f27f941e03a204aec6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e65a20323e3797d6d56ac7941e4ac9aeeb0ed473
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="document-serialization-and-storage"></a>Serializacja dokumentu i przechowywanie
-[!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)]udostępnia zaawansowane środowisko do tworzenia i wyświetlania dokumentów wysokiej jakości.  Udoskonalone funkcje, które obsługują dokumenty stałej i dokumenty przepływu, zaawansowane wyświetlania formantów, połączeniu z zaawansowanych 2W i podejmij możliwości grafiki 3D [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] aplikacji do nowego poziomu jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], i możliwość efektywnego zapisywanie i ładowanie dokumentów z magazynu danych potrzeby prawie każdej aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
+Program Microsoft .NET Framework udostępnia zaawansowane środowisko umożliwiające tworzenie i wyświetlanie dokumentów wysokiej jakości.  Udoskonalone funkcje, które obsługują dokumenty stałej i dokumenty przepływu, zaawansowane wyświetlania formantów, połączeniu z zaawansowanych 2W i podejmij możliwości grafiki 3D [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] aplikacji do nowego poziomu jakości i środowisko użytkownika.  Możliwość elastycznego zarządzania reprezentacji w pamięci dokumentu jest kluczowym elementem [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)], i możliwość efektywnego zapisywanie i ładowanie dokumentów z magazynu danych potrzeby prawie każdej aplikacji.  Proces konwersji dokumentu z reprezentacji w pamięci wewnętrznej do magazynu danych zewnętrznych jest określane jako serializacji.  Procesu odczytu z magazynu danych i ponowne utworzenie oryginalnego wystąpienia w pamięci jest określane jako deserializacji.  
   
  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
     -   Obsługa interfejsu użytkownika dla ustawień niestandardowych środowiska wykonawczego i opcje.  
   
 ### <a name="xps-print-path"></a>Ścieżki wydruku XPS  
- [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)] [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] Ścieżki wydruku również zapewnia mechanizm extensible zapisywanie dokumentów za pomocą drukowania.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]pełni rolę zarówno format pliku dokumentu i format macierzysty buforu wydruku dla [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]dokumenty mogą być wysyłane bezpośrednio do [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek bez konieczności konwersji do formatu pośrednich.  Zobacz [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md) dodatkowe informacje na temat opcji wyjściowych ścieżki wydruku i możliwości.  
+ Microsoft .NET Framework [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku również zapewnia mechanizm extensible zapisywanie dokumentów za pomocą drukowania.  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] pełni rolę zarówno format pliku dokumentu i format macierzysty buforu wydruku dla [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)].  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] dokumenty mogą być wysyłane bezpośrednio do [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-zgodnych drukarek bez konieczności konwersji do formatu pośrednich.  Zobacz [Omówienie drukowania](../../../../docs/framework/wpf/advanced/printing-overview.md) dodatkowe informacje na temat opcji wyjściowych ścieżki wydruku i możliwości.  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>Wtyczka serializatorów  
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
  Wtyczki serializatorów pomocy deweloperzy aplikacji, zapewniając rozszerzeń formaty plików i nowe projekty magazynu bez konieczności kodu bezpośrednio dla każdego potencjalnych format w czasie kompilacji.  Wtyczka serializatorów również korzystać inne firmy przez zapewnienie standardowej metody wdrażania, instalacji i aktualizacji systemu dostępne dodatki plug-in formatów plików niestandardowych lub zastrzeżonych.  
   
 ### <a name="using-a-plug-in-serializer"></a>Przy użyciu serializatora wtyczki  
- Wtyczka serializatorów są proste w użyciu.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Wylicza klasy <xref:System.Windows.Documents.Serialization.SerializerDescriptor> obiekt dla każdego wtyczki zainstalowane w systemie.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Właściwość filtruje zainstalowanych wtyczek na podstawie bieżącej konfiguracji i sprawdza, czy serializator może załadować i używane przez aplikację.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Dostępne są także inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, które aplikacji można używać w celu monitowania użytkownika o wyborze serializator dla formatu dostępnych danych wyjściowych.  Domyślna wtyczka serializatora dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest dostarczana z [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] i jest zawsze wyliczyć.  Po wybraniu przez użytkownika format danych wyjściowych <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metoda służy do tworzenia <xref:System.Windows.Documents.Serialization.SerializerWriter> dla określonego formatu.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> Następnie można wywołać metody do wyjściowego strumienia dokumentów w magazynie danych.  
+ Wtyczka serializatorów są proste w użyciu.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Wylicza klasy <xref:System.Windows.Documents.Serialization.SerializerDescriptor> obiekt dla każdego wtyczki zainstalowane w systemie.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A> Właściwość filtruje zainstalowanych wtyczek na podstawie bieżącej konfiguracji i sprawdza, czy serializator może załadować i używane przez aplikację.  <xref:System.Windows.Documents.Serialization.SerializerDescriptor> Dostępne są także inne właściwości, takie jak <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A> i <xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>, które aplikacji można używać w celu monitowania użytkownika o wyborze serializator dla formatu dostępnych danych wyjściowych.  Domyślna wtyczka serializatora dla [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] jest dostarczana z [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] i jest zawsze wyliczyć.  Po wybraniu przez użytkownika format danych wyjściowych <xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A> metoda służy do tworzenia <xref:System.Windows.Documents.Serialization.SerializerWriter> dla określonego formatu.  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> następnie można wywołać metody do wyjściowego strumienia dokumentów w magazynie danych.  
   
  Poniżej przedstawiono przykładową aplikację, która używa <xref:System.Windows.Documents.Serialization.SerializerProvider> metody we właściwości "PlugInFileFilter".  PlugInFileFilter wylicza zainstalowane dodatki plug-in i tworzy ciąg filtru z opcjami dostępności pliku <xref:Microsoft.Win32.SaveFileDialog>.  
   
@@ -73,7 +75,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="InstallingPluginSerializers"></a>   
 ### <a name="installing-plug-in-serializers"></a>Instalowanie wtyczki serializatorów  
- <xref:System.Windows.Documents.Serialization.SerializerProvider> Klasa zapewnia interfejs wyższego poziomu dla odnajdywania szeregującego wtyczki i dostępu.  <xref:System.Windows.Documents.Serialization.SerializerProvider>Lokalizuje i lista aplikacji serializatorów, które są zainstalowane i jest dostępny w systemie.  Szczegółowe informacje na temat zainstalowanych serializatorów są definiowane za pomocą ustawień rejestru.  Wtyczka serializatorów można dodać do rejestru za pomocą <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> metody; lub, jeśli [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nie jest jeszcze zainstalowany, może skryptu instalacja dodatku bezpośrednio zestaw rejestru wartości samej siebie.  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> Metody można użyć do usunięcia wcześniej zainstalowane wtyczki lub ustawienia rejestru można zresetować podobnie przez skrypt dezinstalacji skryptu.  
+ <xref:System.Windows.Documents.Serialization.SerializerProvider> Klasa zapewnia interfejs wyższego poziomu dla odnajdywania szeregującego wtyczki i dostępu.  <xref:System.Windows.Documents.Serialization.SerializerProvider> Lokalizuje i lista aplikacji serializatorów, które są zainstalowane i jest dostępny w systemie.  Szczegółowe informacje na temat zainstalowanych serializatorów są definiowane za pomocą ustawień rejestru.  Wtyczka serializatorów można dodać do rejestru za pomocą <xref:System.Windows.Documents.Serialization.SerializerProvider.RegisterSerializer%2A> metody; lub, jeśli [!INCLUDE[TLA2#tla_winfx](../../../../includes/tla2sharptla-winfx-md.md)] nie jest jeszcze zainstalowany, może skryptu instalacja dodatku bezpośrednio zestaw rejestru wartości samej siebie.  <xref:System.Windows.Documents.Serialization.SerializerProvider.UnregisterSerializer%2A> Metody można użyć do usunięcia wcześniej zainstalowane wtyczki lub ustawienia rejestru można zresetować podobnie przez skrypt dezinstalacji skryptu.  
   
 ### <a name="creating-a-plug-in-serializer"></a>Tworzenie szeregującego wtyczki  
  Zarówno wtyczki serializatorów połączonego serializatorów korzystanie z tych samych metod publicznych narażonych i zdarzeń i podobnie można zaprojektować działanie synchronicznie lub asynchronicznie.  Istnieją trzy podstawowe kroki, które zwykle zachowana w celu utworzenia szeregującego wtyczki:  

@@ -1,24 +1,26 @@
 ---
-title: "Odwołania do obiektów"
-ms.custom: 
+title: Odwołania do obiektów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 7a93d260-91c3-4448-8f7a-a66fb562fc23
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a86b442ffeeeb77a0c124b9b3e3441ba24d68e4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: fcb34efeb7eed28f85774dc5489b3e56aeac4e6c
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-references"></a>Odwołania do obiektów
 W tym przykładzie pokazano, jak obiekty jest przekazywany za pomocą odwołania między serwerem a klientem. Używa próbki symulowane *sieci społecznościowych*. Sieci społecznościowych składa się z `Person` klasę, która zawiera listę znajomych, w których każdy friend jest wystąpieniem `Person` klasy, z listy znajomych. Spowoduje to utworzenie wykresu obiektów. Usługa udostępnia operacje w tych sieciach społecznościowych.  
@@ -103,7 +105,7 @@ public List<Person> GetCommonFriends(List<Person> people)
 ```  
   
 ## <a name="client"></a>Klient  
- Serwer proxy klienta jest tworzony przy użyciu **Dodaj odwołanie do usługi** funkcji [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)].  
+ Serwer proxy klienta jest tworzony przy użyciu **Dodaj odwołanie do usługi** funkcji programu Visual Studio.  
   
  Sieci społecznościowych, która składa się z pięciu `Person` obiekty są tworzone. Klient wywołuje każdą z trzech metod w usłudze.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Zagadnienia dotyczące zabezpieczeń (Entity Framework)"
-ms.custom: 
+title: Zagadnienia dotyczące zabezpieczeń (Entity Framework)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 68b077ec6c7edd30882c9c84a10aa14060a589e8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: d70b1a6aff3e93122b5d0fb21affdfcd13d817e6
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="security-considerations-entity-framework"></a>Zagadnienia dotyczące zabezpieczeń (Entity Framework)
 W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficzne dla tworzenie, wdrażanie i uruchamianie [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji. Należy również stosować zaleceń dotyczących tworzenia bezpiecznego [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] aplikacji. Aby uzyskać więcej informacji, zobacz [Omówienie zabezpieczeń](../../../../../docs/framework/data/adonet/security-overview.md).  
@@ -84,7 +86,7 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
   
 -   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> do serializacji wyjątków przy użyciu <xref:System.Runtime.Serialization.ISerializable> interfejsu.  
   
--   Uprawnienie do otwierania połączenia z bazą danych i wykonywać polecenia w bazie danych, takich jak <xref:System.Data.SqlClient.SqlClientPermission> dla [!INCLUDE[ssNoVersion](../../../../../includes/ssnoversion-md.md)] bazy danych.  
+-   Uprawnienie do otwierania połączenia z bazą danych i wykonywać polecenia w bazie danych, takich jak <xref:System.Data.SqlClient.SqlClientPermission> dla bazy danych programu SQL Server.  
   
  Aby uzyskać więcej informacji, zobacz [zabezpieczenia dostępu kodu i ADO.NET](../../../../../docs/framework/data/adonet/code-access-security.md).  
   
@@ -105,13 +107,13 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
 #### <a name="prevent-sql-injection-attacks"></a>Zapobieganie atakom iniekcji kodu SQL.  
  Aplikacje często zająć zewnętrzny (od użytkownika lub innego agenta zewnętrznych) i wykonywania akcji w oparciu o te dane wejściowe. Wszystkie dane wejściowe, który bezpośrednio lub pośrednio pochodzi od użytkownika lub zewnętrznego agenta może mieć zawartość, która używa składni języka docelowego w celu wykonania akcji nieautoryzowanego. Gdy języka docelowego jest języka SQL (Structured Query), takich jak [!INCLUDE[tsql](../../../../../includes/tsql-md.md)], manipulowanie ten nosi nazwę ataku polegającego na iniekcji SQL. Złośliwy użytkownik może wstrzyknąć polecenia bezpośrednio do zapytania i tabeli bazy danych, "odmowa usługi" lub w przeciwnym razie Zmień rodzaj wykonywanej operacji.  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)]ataki na wstrzyknięciu kodu:  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] ataki na wstrzyknięciu kodu:  
   
      Ataki mogą być wykonywane w [!INCLUDE[esql](../../../../../includes/esql-md.md)] podając złośliwego dane wejściowe do wartości, które są używane w predykacie zapytania i w nazwach parametrów. Aby uniknąć zagrożenia iniekcja kodu SQL, nigdy nie należy łączyć danych wejściowych użytkownika z [!INCLUDE[esql](../../../../../includes/esql-md.md)] tekst polecenia.  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)]zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Zapytania sparametryzowane należy używać zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć za pomocą metody konstruktora zapytań do skonstruowania bezpiecznie [SQL jednostki](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytania akceptuje wszędzie parametrów, że literały są akceptowane. Zapytania sparametryzowane należy używać zamiast iniekcję literały z zewnętrznego agenta bezpośrednio do zapytania. Należy również rozważyć za pomocą metody konstruktora zapytań do skonstruowania bezpiecznie [SQL jednostki](http://msdn.microsoft.com/library/05685434-05e6-41c2-8d5e-8933b88a40b0).  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]ataki na wstrzyknięciu kodu:  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] ataki na wstrzyknięciu kodu:  
   
      Mimo że zapytanie jest możliwe w [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)], odbywa się za pośrednictwem interfejsu API modelu obiektu. W odróżnieniu od [!INCLUDE[esql](../../../../../includes/esql-md.md)] zapytań, [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] zapytania nie składają się przy użyciu manipulowanie ciągami lub łączenia i nie jest narażony na ataki tradycyjnych.  
   
@@ -161,13 +163,13 @@ W tym temacie opisano zagadnienia dotyczące zabezpieczeń, które są specyficz
  Mimo że wartości, do którego operator głównego (`~`) i `DataDirectory` podczas wykonywania aplikacji, Usuń ciąg podstawienia powinna pozostać stała [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] nie ogranicza hosta z zmodyfikowanie tych wartości.  
   
 #### <a name="verify-the-path-length-before-deployment"></a>Sprawdź długość ścieżki przed przystąpieniem do wdrożenia.  
- Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, należy upewnić się, że wartości operatora głównego (~) i `DataDirectory` ciąg podstawienia nie przekraczają limitów długość ścieżki w systemie operacyjnym. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]dostawcy danych nie upewnij się, że długość ścieżki jest prawidłowy maksymalnej.  
+ Przed wdrożeniem [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] aplikacji, należy upewnić się, że wartości operatora głównego (~) i `DataDirectory` ciąg podstawienia nie przekraczają limitów długość ścieżki w systemie operacyjnym. [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] dostawcy danych nie upewnij się, że długość ścieżki jest prawidłowy maksymalnej.  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>Zagadnienia dotyczące zabezpieczeń dla metadanych programu ADO.NET  
  Podczas generowania i Praca z modelu i mapowania plików, mają zastosowanie następujące zagadnienia dotyczące zabezpieczeń.  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>Nie ujawniaj informacji poufnych za pośrednictwem rejestrowania.  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]składniki usługi metadanych nie Rejestruj informacje prywatne. Brak wyników, które nie mogą zostać zwrócone ze względu na ograniczenia dostępu, systemy zarządzania bazami danych i systemy plików powinien zwrócić wyników zamiast wywoływanie wyjątek, który może zawierać informacje poufne.  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] składniki usługi metadanych nie Rejestruj informacje prywatne. Brak wyników, które nie mogą zostać zwrócone ze względu na ograniczenia dostępu, systemy zarządzania bazami danych i systemy plików powinien zwrócić wyników zamiast wywoływanie wyjątek, który może zawierać informacje poufne.  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>Nie akceptuj obiekty w obiekcie MetadataWorkspace ze źródeł niezaufanych.  
  Aplikacje nie powinien akceptować wystąpienia <xref:System.Data.Metadata.Edm.MetadataWorkspace> klasy ze źródeł niezaufanych. Zamiast tego należy jawnie konstruowania i wypełnienia obszaru roboczego z takich źródła.  

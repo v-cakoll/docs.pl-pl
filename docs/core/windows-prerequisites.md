@@ -1,18 +1,18 @@
 ---
-title: "Wymagania wstępne dotyczące platformy .NET Core w systemie Windows"
-description: "Dowiedz się, w zależności, należy na okien komputera do opracowywania i uruchamiania aplikacji .NET Core."
+title: Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
+description: Dowiedz się, w zależności, należy na okien komputera do opracowywania i uruchamiania aplikacji .NET Core.
 author: JRAlexander
 ms.author: johalex
-ms.date: 03/02/2018
+ms.date: 04/24/2018
 ms.topic: article
 ms.prod: .net-core
 ms.workload:
 - dotnetcore
-ms.openlocfilehash: 48102f3fb7fa6e93238eefff0e7f1ecbed4d8409
-ms.sourcegitcommit: d3cfda0943364aaf6ccd574f55f584576c8a4fee
+ms.openlocfilehash: ac898ea87c0247581154eb7de65e8cbe6ea6ba15
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Wymagania wstępne dotyczące platformy .NET Core w systemie Windows
 
@@ -50,7 +50,7 @@ Podczas pracy z wersjami systemu Windows starszych niż Windows 10 i Windows Ser
 * Instalowanie platformy .NET Core za pomocą *.zip* pliku. Może to obejmować serwery kompilacji/CI/CD.
 
 > [!NOTE]
-> *Windows 7 i Windows Server 2008 tylko dla maszyn:* upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia poprawkę [KB2533623](https://support.microsoft.com/help/2533623) zainstalowane za pomocą usługi Windows Update.
+> *Dla Windows 8.1 i starszych wersjach, lub Windows Server 2012 R2 i wcześniejszych wersjach:* upewnij się, że instalacji systemu Windows jest aktualny i uwzględnia [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) którego można zainstalować za pomocą usługi Windows Update. Jeśli nie zainstalowano tę aktualizację, zostanie wyświetlone wystąpił błąd podczas uruchamiania aplikacji .NET Core, podobnie do następującej: `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`.
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Wstępnie wymaganych składników w programie Visual Studio 2017 r.
 

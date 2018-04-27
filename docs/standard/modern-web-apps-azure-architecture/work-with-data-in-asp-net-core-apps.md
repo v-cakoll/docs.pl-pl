@@ -6,14 +6,15 @@ ms.author: wiwagn
 ms.date: 10/07/2017
 ms.prod: .net-core
 ms.technology: dotnet-docker
+ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: df80dfb6029932c53e028bfb753dcfa94b548ba1
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 7d160d23808832ff6456e5c95f6e5ed5f4d44fa5
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>Praca z danymi w aplikacjach platformy ASP.NET Core
 
@@ -31,7 +32,7 @@ Jeśli piszesz nowej aplikacji platformy ASP.NET Core, który wymaga do pracy z 
 
 Aby używać EF Core z bazy danych programu SQL Server, uruchom następujące polecenie dotnet w interfejsu wiersza polecenia:
 
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+Pakiet Microsoft.EntityFrameworkCore.SqlServer dodać DotNet
 
 Aby dodać obsługę InMemory źródła danych, do testowania:
 
@@ -206,7 +207,7 @@ Jest first DbContext \_catalogContext, a drugi DbContext znajduje się w \_integ
 > - **EF rdzeni: Dane dotyczące**  
 > <https://docs.microsoft.com/ef/core/querying/related-data>
 > - **Unikaj ładowania opóźnionego jednostek w aplikacjach ASPNET**  
-> <http://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
+> <https://ardalis.com/avoid-lazy-loading-entities-in-asp-net-applications>
 
 ## <a name="ef-core-or-micro-orm"></a>Podstawowych funkcji EF lub micro ORM?
 
@@ -270,7 +271,7 @@ Inny złożoności musi uwzględniać bazy danych NoSQL jest przechowywanie wers
 
 Jest to możliwe w bazach danych NoSQL, aby przechowywać wiele wersji obiektów, zwykle nie obsługują coś stałego schematu relacyjnych baz danych. Jednak w takim przypadku kod aplikacji należy konta istnienie poprzednie wersje obiektów oraz dodawanie dodatkowej złożoności.
 
-Zwykle nie Wymuszaj bazy danych NoSQL [kwasu](http://en.wikipedia.org/wiki/ACID), co oznacza, że mają one korzyści skalowalność i wydajność za pośrednictwem relacyjnych baz danych. Są one odpowiednie do bardzo dużych zestawów danych i obiektów, które nie są odpowiednie do magazynu w strukturach znormalizowane tabeli. To nie ma powodu Dlaczego pojedynczej aplikacji nie może korzystać z obu relacyjnych i bazy danych NoSQL, przy użyciu których najlepiej nadaje się.
+Zwykle nie Wymuszaj bazy danych NoSQL [kwasu](https://en.wikipedia.org/wiki/ACID), co oznacza, że mają one korzyści skalowalność i wydajność za pośrednictwem relacyjnych baz danych. Są one odpowiednie do bardzo dużych zestawów danych i obiektów, które nie są odpowiednie do magazynu w strukturach znormalizowane tabeli. To nie ma powodu Dlaczego pojedynczej aplikacji nie może korzystać z obu relacyjnych i bazy danych NoSQL, przy użyciu których najlepiej nadaje się.
 
 ## <a name="azure-documentdb"></a>Azure DocumentDB
 

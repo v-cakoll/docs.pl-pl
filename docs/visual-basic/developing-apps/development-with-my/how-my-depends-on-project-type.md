@@ -1,28 +1,28 @@
 ---
-title: "Jak My zależy od typu projektu (Visual Basic)"
+title: Jak My zależy od typu projektu (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 4a37bf43096931597278974099becb9be6ae133d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d931a2034d681c4e14cc35ecfbd9ad7accf5afaa
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>Jak My zależy od typu projektu (Visual Basic)
-`My`przedstawia tylko te obiekty, które są wymagane przez typu określonego projektu. Na przykład `My.Forms` obiekt jest dostępny w aplikacji formularzy systemu Windows, ale nie jest dostępna w aplikacji konsoli. W tym temacie opisano, które `My` obiekty są dostępne w różnych typach projektów.  
+`My` przedstawia tylko te obiekty, które są wymagane przez typu określonego projektu. Na przykład `My.Forms` obiekt jest dostępny w aplikacji formularzy systemu Windows, ale nie jest dostępna w aplikacji konsoli. W tym temacie opisano, które `My` obiekty są dostępne w różnych typach projektów.  
   
 ## <a name="my-in-windows-applications-and-web-sites"></a>Moje Windows w aplikacji i witryn sieci Web  
- `My`przedstawia tylko obiekty, które są przydatne do bieżącego typu projektu. Pomija ją obiektów, które nie mają zastosowania. Na przykład poniższy obraz przedstawia `My` model obiektów w projekcie formularzy systemu Windows.  
+ `My` przedstawia tylko obiekty, które są przydatne do bieżącego typu projektu. Pomija ją obiektów, które nie mają zastosowania. Na przykład poniższy obraz przedstawia `My` model obiektów w projekcie formularzy systemu Windows.  
   
  ![Kształt Moje w aplikacji formularzy systemu Windows](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
   
@@ -48,7 +48,7 @@ ms.lasthandoff: 11/21/2017
 |`My.User`|**Tak** <sup>6</sup>|**Tak** <sup>6</sup>|**Tak** <sup>6</sup>|**Tak** <sup>6</sup>|**Tak** <sup>7</sup>|**Tak** <sup>6</sup>|Nie|**Tak** <sup>7</sup>|  
 |`My.WebServices`|**Tak**|**Tak**|**Tak**|**Tak**|**Tak**|**Tak**|Nie|Nie|  
   
- <sup>1</sup> wersji formularzy systemu Windows `My.Application`. Wersja konsoli jest pochodną (patrz Uwaga 3); dodaje obsługę interakcji z aplikacji systemu windows i zapewnia [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] modelu aplikacji.  
+ <sup>1</sup> wersji formularzy systemu Windows `My.Application`. Wersja konsoli jest pochodną (patrz Uwaga 3); dodaje obsługę interakcji z aplikacji systemu windows oraz udostępnia model aplikacji Visual Basic.  
   
  <sup>2</sup> wersji biblioteki `My.Application`. Zapewnia podstawowe funkcje wymagane przez aplikację: zawiera elementy członkowskie zapisu w dzienniku aplikacji i uzyskiwanie dostępu do informacji o aplikacji.  
   
@@ -67,10 +67,10 @@ ms.lasthandoff: 11/21/2017
  <xref:Microsoft.VisualBasic.Devices.Computer>  
  <xref:Microsoft.VisualBasic.Logging.Log>  
  <xref:Microsoft.VisualBasic.ApplicationServices.User>  
- [Dostosowywanie, które obiekty są dostępne w mojej](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
+ [Dostosowywanie, które obiekty są dostępne w My](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
  [Kompilacja warunkowa](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)  
  [/ define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)  
- [My.Forms — obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)  
- [My.Request — obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)  
- [My.Response — obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)  
- [My.WebServices — obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)
+ [My.Forms, obiekt](../../../visual-basic/language-reference/objects/my-forms-object.md)  
+ [My.Request, obiekt](../../../visual-basic/language-reference/objects/my-request-object.md)  
+ [My.Response, obiekt](../../../visual-basic/language-reference/objects/my-response-object.md)  
+ [My.WebServices, obiekt](../../../visual-basic/language-reference/objects/my-webservices-object.md)

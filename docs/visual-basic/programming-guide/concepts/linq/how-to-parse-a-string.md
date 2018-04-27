@@ -1,30 +1,31 @@
 ---
-title: "Porady: przeanalizować składni ciągu (Visual Basic)"
-ms.custom: 
+title: 'Porady: przeanalizować składni ciągu (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 896e1b4b-f9bd-4975-8bc1-55b6badce1ac
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 10b80c72cae70437ff812c4b67b2532d708f1e69
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: d0fd7c7adcfbd7e2136d1a652017d470634016b9
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-parse-a-string-visual-basic"></a>Porady: przeanalizować składni ciągu (Visual Basic)
 W tym temacie przedstawiono sposób tworzenia drzewo XML w języku C#.  
   
 ## <a name="example"></a>Przykład  
- Może przeanalizować składni ciągu w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] przy użyciu `XElement.Parse` metody. Jednak jest bardziej wydajne, aby użyć literałów XML, jak pokazano w następującym kodem, ponieważ literałów XML nie boryka się z tym samym spadku wydajności jako analizy pliku XML z ciągu.  
+ Ciąg w Visual Basic można analizować przy użyciu `XElement.Parse` metody. Jednak jest bardziej wydajne, aby użyć literałów XML, jak pokazano w następującym kodem, ponieważ literałów XML nie boryka się z tym samym spadku wydajności jako analizy pliku XML z ciągu.  
   
- Przy użyciu literałów XML, można po prostu skopiuj i Wklej kod XML w Twojej [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program.  
+ Przy użyciu literałów XML, można po prostu skopiuj i Wklej kod XML w programie Visual Basic.  
   
 > [!NOTE]
 >  Analizowanie tekstu lub ładowania dokumentu XML z pliku tekstowego jest mniej wydajne niż konstrukcji funkcjonalności. Jeśli są inicjowanie drzewo XML z kodu, zajmuje mniej czasu procesora na korzystanie z funkcjonalności konstrukcji, niż można przeanalizować tekstu.  

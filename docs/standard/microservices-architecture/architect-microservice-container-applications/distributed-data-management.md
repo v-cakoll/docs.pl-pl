@@ -1,7 +1,7 @@
 ---
-title: "Problemy i rozwiązania do zarządzania danymi rozproszonych"
-description: "Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Problemy i rozwiązania do zarządzania danymi rozproszonych"
-keywords: "Docker, Mikrousług, ASP.NET, kontenera"
+title: Problemy i rozwiązania do zarządzania danymi rozproszonych
+description: Architektura Mikrousług .NET dla aplikacji .NET konteneryzowanych | Problemy i rozwiązania do zarządzania danymi rozproszonych
+keywords: Docker, Microservices, ASP.NET, Container
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: b0252586a508c059099885991b87c79346e0d809
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: a26f4243acee52e493a10f13ff18899823fd03ba
+ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>Problemy i rozwiązania do zarządzania danymi rozproszonych
 
@@ -95,13 +95,13 @@ Użycie komunikacji asynchronicznej jest wyjaśnione w dokumencie o dodatkowe in
 -   **Spójność ostateczna**
     [*https://en.wikipedia.org/wiki/Eventual\_spójności*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Elementarz spójności danych**
+-   **Elementarz spójność danych**
     [*https://msdn.microsoft.com/library/dn589800.aspx*](https://msdn.microsoft.com/library/dn589800.aspx)
 
 -   **Pole Fowler. CQRS (polecenia i podział odpowiedzialności zapytania)**
-    [*http://martinfowler.com/bliki/CQRS.html*](http://martinfowler.com/bliki/CQRS.html)
+    [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
 
--   **Materializować widoku**
+-   **Zmaterializowanym widoku**
     [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 -   **Charlesa wiersza. ACID vs. PODSTAWOWA: Ciąg Shifting przetwarzania transakcji bazy danych**

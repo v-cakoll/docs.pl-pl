@@ -11,17 +11,17 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], what's new
 - WF [WF], what's new
 ms.assetid: 11f96014-001e-41a0-bcc2-d0684a52fa43
-caps.latest.revision: ''
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9c5026c7c3e90afa843b819fb51d7a4a7c8249a0
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: 93915e8eeb46d91140198c2d51f88535a93a28cc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="what39s-new-in-windows-workflow-foundation"></a>Co&#39;s nowe w programie Windows Workflow Foundation
 [!INCLUDE[wf](../../../includes/wf-md.md)] w [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] zmienia kilka wzorcami programowanie z poprzednich wersji. Przepływy pracy są teraz łatwiejsze do tworzenia, zostanie wykonane, obsługi i wdrożenie hosta funkcji. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Migrowanie .NET 3.0 i .NET 3.5 przepływu pracy aplikacji do korzystania z najnowszej wersji, zobacz [wskazówki dotyczące migracji](../../../docs/framework/windows-workflow-foundation/migration-guidance.md).  
@@ -66,4 +66,4 @@ ms.lasthandoff: 03/23/2018
 -   Wznawianie działania oczekującej przepływu pracy jest teraz zarządzane za pomocą <xref:System.Activities.Bookmark> obiektu.  
   
 ## <a name="easier-ability-to-extend-wf-designer-experience"></a>Łatwiejsze możliwości rozszerzania projektanta WF środowisko  
- Nowy Designer WF jest oparty na [!INCLUDE[avalon1](../../../includes/avalon1-md.md)] i udostępnia model łatwiejsze do użycia podczas rehosting projektanta WF poza Visual Studio i udostępnia także mechanizmy łatwiejsze do tworzenia projektantów działań niestandardowych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).
+ Nowy Designer WF jest oparty na systemie Windows Presentation Foundation (WPF) i udostępnia model łatwiejsze do użycia podczas rehosting projektanta WF poza Visual Studio i udostępnia także mechanizmy łatwiejsze do tworzenia projektantów działań niestandardowych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Dostosowywanie projektu przepływu pracy](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md).

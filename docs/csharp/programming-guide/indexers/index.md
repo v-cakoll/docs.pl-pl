@@ -14,11 +14,11 @@ ms.assetid: 022cd27d-d5e0-4cfe-8b97-dc018cc3355d
 caps.latest.revision: 29
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: db49a602b83940cab3f87dea17accb92a2be825d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5397462994d5e684406c6de65c4f31d9d20eef22
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="indexers-c-programming-guide"></a>Indeksatory (Przewodnik programowania w języku C#)
 
@@ -39,7 +39,7 @@ Bardzo często indeksator get lub składać się z jednej instrukcji, która zwr
 
 Należy pamiętać, że `=>` wprowadza treść wyrażenia, a `get` — słowo kluczowe nie jest używany. 
 
-Począwszy od C# 7, zarówno get, jak i metody dostępu set może być wdrożony jako członków zabudowanych wyrażenia. W takim przypadku zarówno `get` i `set` słowa kluczowe muszą być używane. Na przykład:
+Począwszy od C# 7.0, zarówno get, jak i metody dostępu set może być wdrożony jako członków zabudowanych wyrażenia. W takim przypadku zarówno `get` i `set` słowa kluczowe muszą być używane. Na przykład:
 
 [!code-csharp[indexers#3](../../../../samples/snippets/csharp/programming-guide/indexers/indexer-3.cs)]  
   
@@ -59,7 +59,7 @@ Począwszy od C# 7, zarówno get, jak i metody dostępu set może być wdrożony
   
 -   Indeksatory może mieć więcej niż jeden parametr formalny, na przykład podczas uzyskiwania dostępu do tablicą dwuwymiarową.  
   
-##  <a name="BKMK_RelatedSections"></a>Sekcje pokrewne  
+##  <a name="BKMK_RelatedSections"></a> Sekcje pokrewne  
   
 -   [Używanie indeksatorów](../../../csharp/programming-guide/indexers/using-indexers.md)  
   

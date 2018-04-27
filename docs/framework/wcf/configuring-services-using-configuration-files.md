@@ -1,47 +1,47 @@
 ---
-title: "Konfigurowanie usług za pomocą plików konfiguracji"
-ms.custom: 
+title: Konfigurowanie usług za pomocą plików konfiguracji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuring services [WCF]
 ms.assetid: c9c8cd32-2c9d-4541-ad0d-16dff6bd2a00
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 93dc8119e76f5c9cbff5c91a7e5d0cde3b0072f2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e5ad91fa70a743b7135648cb10c7c519e3559bdb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-services-using-configuration-files"></a>Konfigurowanie usług za pomocą plików konfiguracji
 Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy użyciu pliku konfiguracji zapewnia elastyczność udostępniania punktu końcowego i Usługa danych zachowanie w punkcie wdrożenia, a nie w czasie projektowania. W tym temacie przedstawiono podstawowe metody dostępne.  
   
  A [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługa jest można skonfigurować przy użyciu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] technologia konfiguracji. Najczęściej, elementy XML są dodawane do pliku Web.config dla witryny Internet Information Services (IIS), który jest hostem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. Elementy umożliwiają zmianę szczegółowe informacje, takie jak adresy punktów końcowych (rzeczywiste adresy używane do komunikacji z usługą) na komputerze przez komputer. Ponadto [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zawiera kilka elementów dostarczane przez system, które umożliwiają szybkie wybranie najbardziej podstawowych funkcji usługi. Począwszy od [!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)], [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] jest dostarczany z nowy model konfiguracji domyślne, które upraszcza [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] wymagania dotyczące konfiguracji. Jeśli nie podano żadnego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] konfiguracji dla określonej usługi, środowisko uruchomieniowe automatycznie konfiguruje usługi z niektórymi standardowych punktów końcowych i zachowanie wiązania domyślnego. W praktyce, zapisywanie konfiguracji to główne programowania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] aplikacji.  
   
- [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). [!INCLUDE[crlist](../../../includes/crlist-md.md)]najczęściej używane elementów, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)]domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
+ [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Konfigurowanie powiązań dla usług](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md). Dla listy z najbardziej często używanych elementów, zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md). [!INCLUDE[crabout](../../../includes/crabout-md.md)] domyślne punkty końcowe, powiązania i zachowania, zobacz [uproszczony konfiguracji](../../../docs/framework/wcf/simplified-configuration.md) i [uproszczona konfiguracja usług WCF](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md).  
   
 > [!IMPORTANT]
 >  Podczas wdrażania scenariuszy dla siebie wdrożonym dwie różne wersje usługi, jest niezbędne do określenia częściowych nazw zestawów, do których odwołuje się w plikach konfiguracji. Jest tak, ponieważ plik konfiguracji jest współużytkowana przez wszystkie wersje usługi i mogą być wykonywane w różnych wersji programu .NET Framework.  
   
 ## <a name="systemconfiguration-webconfig-and-appconfig"></a>System.Configuration: Plik Web.config i App.config  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]używa systemu konfiguracji System.Configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] używa systemu konfiguracji System.Configuration [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
  Podczas konfigurowania usługi [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], użyj pliku Web.config lub pliku App.config, aby określić ustawienia. Wybór nazwy pliku konfiguracji jest określana przez środowisko macierzyste, wybranych dla usługi. Jeśli używane są usługi IIS do obsługi usługi, należy użyć pliku Web.config. Jeśli używane są inne środowiska macierzystego, należy użyć pliku App.config.  
   
  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], plik o nazwie App.config służy do tworzenia pliku konfiguracji końcowej. Nazwa końcowej faktycznie używana dla konfiguracji zależy od nazwy zestawu. Na przykład zestaw o nazwie "Cohowinery.exe" ma nazwę konfiguracji końcowej "Cohowinery.exe.config". Jednak tylko musisz zmodyfikować plik App.config. Zmiany wprowadzone w tym pliku zostaną zastosowane do pliku konfiguracji aplikacji końcowego automatycznie w czasie kompilacji.  
   
- Korzystając z pliku App.config, pliku system konfiguracji scala pliku App.config z zawartością pliku Machine.config podczas uruchamiania aplikacji i konfiguracja zostanie zastosowana. Mechanizm ten umożliwia ustawień komputera, które zostały określone w pliku Machine.config. Plik App.config może służyć do zastąpienia ustawień pliku Machine.config. można również zablokować w ustawieniach w pliku Machine.config, aby mogły uzyskać używane. W przypadku pliku Web.config system konfiguracji scala plików Web.config we wszystkich katalogach prowadzących do katalogu aplikacji do konfiguracji, który zostanie zastosowany. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfiguracja i ustawienia priorytetów, zobacz Tematy w <xref:System.Configuration> przestrzeni nazw.  
+ Korzystając z pliku App.config, pliku system konfiguracji scala pliku App.config z zawartością pliku Machine.config podczas uruchamiania aplikacji i konfiguracja zostanie zastosowana. Mechanizm ten umożliwia ustawień komputera, które zostały określone w pliku Machine.config. Plik App.config może służyć do zastąpienia ustawień pliku Machine.config. można również zablokować w ustawieniach w pliku Machine.config, aby mogły uzyskać używane. W przypadku pliku Web.config system konfiguracji scala plików Web.config we wszystkich katalogach prowadzących do katalogu aplikacji do konfiguracji, który zostanie zastosowany. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Konfiguracja i ustawienia priorytetów, zobacz Tematy w <xref:System.Configuration> przestrzeni nazw.  
   
 ## <a name="major-sections-of-the-configuration-file"></a>Główna sekcji w pliku konfiguracji  
  Głównych sekcji w pliku konfiguracji obejmują następujące elementy.  
@@ -114,7 +114,7 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ### <a name="the-binding-element"></a>\<Powiązania > — Element  
  `binding` Elementów zawartych w `bindings` element może być jedną z powiązania dostarczane przez system (zobacz [powiązania System-Provided](../../../docs/framework/wcf/system-provided-bindings.md)) lub niestandardowego powiązania (zobacz [niestandardowego powiązania](../../../docs/framework/wcf/extending/custom-bindings.md)). `binding` Element ma `name` atrybutu odpowiadająca powiązania z punktem końcowym określone w `bindingConfiguration` atrybutu `endpoint` elementu. Jeśli nazwa nie zostanie określona, a następnie tego powiązania odpowiada wartość domyślna tego typu powiązania.  
   
- [!INCLUDE[crabout](../../../includes/crabout-md.md)]Konfigurowanie usług i klientów, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
+ [!INCLUDE[crabout](../../../includes/crabout-md.md)] Konfigurowanie usług i klientów, zobacz [Konfigurowanie aplikacji systemu Windows Communication Foundation](http://msdn.microsoft.com/library/13cb368e-88d4-4c61-8eed-2af0361c6d7a).  
   
  [\<Powiązanie >](../../../docs/framework/misc/binding.md)  
   
@@ -126,10 +126,10 @@ Konfigurowanie [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] usługi przy
 ### <a name="the-behavior-element"></a>\<Zachowanie > — Element  
  Każdy `behavior` element jest identyfikowany przez `name` atrybutu i zawiera albo dostarczane przez system zachowanie, takich jak <`throttling`>, lub zachowania niestandardowego. Jeśli nazwa nie jest określony element tego zachowania odpowiada domyślnego zachowania usługi lub punktu końcowego.  
   
- [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
+ [\<zachowanie >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)  
   
 ## <a name="how-to-use-binding-and-behavior-configurations"></a>Jak używać powiązania i konfiguracje zachowanie  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]można łatwo udostępniać konfiguracje między punktami końcowymi za pomocą systemu odniesienia w konfiguracji. Zamiast bezpośrednio przypisywać wartości konfiguracji punktu końcowego, wartości konfiguracji odnoszące się do powiązania są pogrupowane w `bindingConfiguration` elementów w `<binding>` sekcji. Konfiguracja powiązania jest nazwaną grupę ustawień w powiązaniu. Następnie można odwoływać się punkty końcowe `bindingConfiguration` według nazwy.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] można łatwo udostępniać konfiguracje między punktami końcowymi za pomocą systemu odniesienia w konfiguracji. Zamiast bezpośrednio przypisywać wartości konfiguracji punktu końcowego, wartości konfiguracji odnoszące się do powiązania są pogrupowane w `bindingConfiguration` elementów w `<binding>` sekcji. Konfiguracja powiązania jest nazwaną grupę ustawień w powiązaniu. Następnie można odwoływać się punkty końcowe `bindingConfiguration` według nazwy.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

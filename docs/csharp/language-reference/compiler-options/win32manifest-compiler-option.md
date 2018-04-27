@@ -12,14 +12,14 @@ helpviewer_keywords:
 - win32manifest compiler option [C#]
 - -win32manifest compiler option [C#]
 ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
-caps.latest.revision: 
+caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 36a16f1ee037a1379399c7ee2e2c67427eb9d1b2
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: cb05f4f01dd7e19d2034de89ac47304b0731ca01
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opcje kompilatora C#)
 Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.  
@@ -35,7 +35,7 @@ Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik mani
  Nazwę i lokalizację niestandardowego pliku manifestu.  
   
 ## <a name="remarks"></a>Uwagi  
- Domyślnie [!INCLUDE[csharp_current_short](~/includes/csharp-current-short-md.md)] kompilatora osadza manifest aplikacji, która określa wymagany poziom wykonywania elementu "asInvoker". W tym samym folderze, w którym plik wykonywalny jest wbudowana, zwykle folderu bin\Debug lub bin\Release, gdy używasz programu Visual Studio tworzy plik manifestu. Jeśli chcesz podać niestandardowy manifest, na przykład określić wymagany poziom wykonywania "highestAvailable" lub "requireAdministrator", ta opcja umożliwia Określ nazwę pliku.  
+ Domyślnie kompilator Visual C# osadza manifest aplikacji, która określa wymagany poziom wykonywania elementu "asInvoker". W tym samym folderze, w którym plik wykonywalny jest wbudowana, zwykle folderu bin\Debug lub bin\Release, gdy używasz programu Visual Studio tworzy plik manifestu. Jeśli chcesz podać niestandardowy manifest, na przykład określić wymagany poziom wykonywania "highestAvailable" lub "requireAdministrator", ta opcja umożliwia Określ nazwę pliku.  
   
 > [!NOTE]
 >  Ta opcja i [-win32res (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/win32res-compiler-option.md) opcji wzajemnie się wykluczają. Jeśli spróbujesz użyć obu opcji, w tym samym wierszu polecenia wystąpi błąd kompilacji.  
@@ -48,7 +48,7 @@ Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik mani
   
 -   Musisz podać niestandardowy manifest, która nie określa wymagany poziom wykonywania.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w edytorze tekstu, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę w **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **plikumanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, zostanie wyświetlony na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w edytorze tekstu, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę w **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **plikumanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, zostanie wyświetlony na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
  Możesz podać manifest aplikacji jako niestandardowy krok kompilacji po lub w ramach plik zasobów Win32 za pomocą [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) opcji. Tej samej opcji należy użyć, jeśli aplikacja ma być może ulec plików lub rejestrze wirtualizacji w systemie Windows Vista. Uniemożliwi to kompilatora tworzenie i osadzanie manifestu domyślne w przenośny plik wykonywalny (PE).  
   

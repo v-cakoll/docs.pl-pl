@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e1c00abfec36622f5da493165259fb1786ab8d6
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a13e5a0044c51700acce6b123688868443f635ae
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-host-and-run-a-basic-windows-communication-foundation-service"></a>Instrukcje: Hostowanie i uruchamianie podstawowej usługi Windows Communication Foundation
 To trzeci sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] aplikacji. Omówienie sześciu wszystkich zadań, zobacz [Wprowadzenie — samouczek](../../../docs/framework/wcf/getting-started-tutorial.md) tematu.  
@@ -170,7 +170,7 @@ To trzeci sześciu zadania wymagane do utworzenia [!INCLUDE[indigo1](../../../in
   
 ### <a name="to-verify-the-service-is-working"></a>Aby sprawdzić, czy usługa działa  
   
-1.  Uruchom aplikację konsolową GettingStartedHost z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Podczas uruchamiania [!INCLUDE[wv](../../../includes/wv-md.md)] i nowszych systemów operacyjnych, usługi musi być uruchomiony z uprawnieniami administratora. Ponieważ [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] zostało uruchomione z uprawnieniami administratora, GettingStartedHost jest uruchamiane z uprawnieniami administratora. Można również uruchomić wiersz polecenia uruchomiony z uprawnieniami administratora i uruchom service.exe znajdujące się w nim.  
+1.  Uruchom aplikację konsolową GettingStartedHost z wewnątrz [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)]. Podczas uruchamiania [!INCLUDE[wv](../../../includes/wv-md.md)] i nowszych systemów operacyjnych, usługi musi być uruchomiony z uprawnieniami administratora. Ponieważ program Visual Studio zostało uruchomione z uprawnieniami administratora, GettingStartedHost jest również uruchamiane z uprawnieniami administratora. Można również uruchomić wiersz polecenia uruchomiony z uprawnieniami administratora i uruchom service.exe znajdujące się w nim.  
   
 2.  Otwórz program Internet Explorer i przejdź do debugowania usługi strony na `http://localhost:8000/GettingStarted/CalculatorService`.  
   
@@ -424,7 +424,7 @@ End Module
 ```  
   
 > [!NOTE]
->  Usługi, takie jak ta wymaga uprawnienia do rejestrowania adresów HTTP na komputerze w celu nasłuchiwania. To uprawnienie mają kont administratorów, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] jak skonfigurować rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)], service.exe musi być uruchamiane z uprawnieniami administratora.  
+>  Usługi, takie jak ta wymaga uprawnienia do rejestrowania adresów HTTP na komputerze w celu nasłuchiwania. To uprawnienie mają kont administratorów, ale konta bez uprawnień administratora musi mieć uprawnienie dla przestrzeni nazw protokołu HTTP. [!INCLUDE[crabout](../../../includes/crabout-md.md)] jak skonfigurować rezerwacji przestrzeni nazw, zobacz [Konfigurowanie protokołów HTTP i HTTPS](../../../docs/framework/wcf/feature-details/configuring-http-and-https.md). Podczas uruchamiania programu Visual Studio, service.exe musi zostać uruchomione z uprawnieniami administratora.  
   
  Obecnie usługa jest uruchomiona. Przejdź do [porady: Tworzenie klienta](../../../docs/framework/wcf/how-to-create-a-wcf-client.md). Aby uzyskać informacje dotyczące rozwiązywania problemów, zobacz [Rozwiązywanie problemów z Samouczek wprowadzający](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md).  
   

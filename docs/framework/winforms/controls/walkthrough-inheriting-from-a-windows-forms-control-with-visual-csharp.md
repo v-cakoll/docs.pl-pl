@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: dziedziczenie z formularzy systemu Windows formantu z Visual C#"
-ms.custom: 
+title: 'Wskazówki: dziedziczenie z formularzy systemu Windows formantu z Visual C#'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: adc8e4321dccea34b7d3132b2052ee9baa98a868
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdf472776fc293bc5dfa1db940d23c6a297767e7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>Wskazówki: dziedziczenie z formularzy systemu Windows formantu z Visual C# #
 Z [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], możesz utworzyć zaawansowane formantów niestandardowych za pomocą *dziedziczenia*. Poprzez dziedziczenie jest możliwość tworzenia formantów, które zachowują wszystkie funkcje związane z standardowe formanty formularzy systemu Windows, ale także dołączyć do nich funkcji niestandardowych. W tym przewodniku spowoduje utworzenie prostego formantu dziedziczone o nazwie `ValueButton`. Ten przycisk będzie dziedziczyć funkcje z formularzy systemu Windows <xref:System.Windows.Forms.Button> kontroli i uwidoczni właściwość niestandardowa o nazwie `ButtonValue`.  
@@ -39,7 +41,7 @@ Z [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], możesz utworzy
   
 1.  Na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu** otworzyć **nowy projekt** okno dialogowe.  
   
-2.  Wybierz **Biblioteka formantów formularzy systemu Windows** szablonu projektu z listy [!INCLUDE[csprcs](../../../../includes/csprcs-md.md)] projektów i typ `ValueButtonLib` w **nazwa** pole.  
+2.  Wybierz **Biblioteka formantów formularzy systemu Windows** szablon projektu na liście Projekty Visual C#, a typ `ValueButtonLib` w **nazwa** pole.  
   
      Nazwa projektu `ValueButtonLib`, jest również przypisany do głównej przestrzeni nazw domyślnie. Główna przestrzeń nazw są używane do kwalifikowania nazwy elementów w zestawie. Na przykład, jeśli dwa zestawy zawiera składniki o nazwie `ValueButton`, można określić użytkownika `ValueButton` przy użyciu składnika `ValueButtonLib.ValueButton`. Aby uzyskać więcej informacji, zobacz [przestrzeni nazw](../../../csharp/programming-guide/namespaces/index.md).  
   
@@ -146,7 +148,7 @@ Z [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)], możesz utworzy
   
 11. Z **debugowania** menu, wybierz opcję **Rozpocznij debugowanie**.  
   
-     `Form1`zostanie wyświetlone.  
+     `Form1` zostanie wyświetlone.  
   
 12. Kliknij przycisk `valueButton1`.  
   

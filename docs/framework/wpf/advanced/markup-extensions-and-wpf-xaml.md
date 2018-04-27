@@ -23,17 +23,17 @@ helpviewer_keywords:
 - characters [WPF], curly brace
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
-caps.latest.revision: ''
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5e6dec42d40039f9cc23ba976ecf421f6471888e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: cf1d7fda58c3bca0f9d76c3c4d3b8d22545a9912
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>Rozszerzenia znacznikowania i WPF XAML
 W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącznie z ich składni reguł, cel i model obiektów klasy źródłowej je. Rozszerzenia znaczników są funkcją ogólne języka XAML i stosowania usługi XAML .NET. W tym temacie szczegółowo w szczególności rozszerzenia znaczników do użycia w WPF XAML.  
@@ -64,7 +64,7 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
 -   `x:Array` zapewnia obsługę tworzenia ogólne tablic w składni języka XAML w przypadkach, gdy obsługa kolekcji zapewniana przez WPF podstawowych elementów i modele kontroli celowo nie jest używana. Aby uzyskać więcej informacji, zobacz [x: Array — rozszerzenie znaczników](../../../../docs/framework/xaml-services/x-array-markup-extension.md).  
   
 > [!NOTE]
->  `x:` Prefiks jest używany do typowych mapowania przestrzeni nazw XAML funkcji XAML language wewnętrznych, na w elemencie głównym pliku XAML lub produkcji. Na przykład [!INCLUDE[vs_current_short](../../../../includes/vs-current-short-md.md)] szablonów dla aplikacji WPF zainicjować pliku XAML, za pomocą tej `x:` mapowania. Można wybrać inny token w własne mapowania przestrzeni nazw XAML, ale w tej dokumentacji przyjmie wartość domyślna `x:` mapowania jako sposób identyfikacji tych jednostek, które należą do określonych przestrzeni nazw XAML dla języka XAML, a nie WPF domyślnej przestrzeni nazw lub innych przestrzeniach nazw XAML nie dotyczą określonej platformy.  
+>  `x:` Prefiks jest używany do typowych mapowania przestrzeni nazw XAML funkcji XAML language wewnętrznych, na w elemencie głównym pliku XAML lub produkcji. Na przykład szablony programu Visual Studio dla aplikacji WPF zainicjować pliku XAML, za pomocą tej `x:` mapowania. Można wybrać inny token w własne mapowania przestrzeni nazw XAML, ale w tej dokumentacji przyjmie wartość domyślna `x:` mapowania jako sposób identyfikacji tych jednostek, które należą do określonych przestrzeni nazw XAML dla języka XAML, a nie WPF domyślnej przestrzeni nazw lub innych przestrzeniach nazw XAML nie dotyczą określonej platformy.  
   
 <a name="WPF_Specific_Markup_Extensions"></a>   
 ## <a name="wpf-specific-markup-extensions"></a>Rozszerzenia znaczników specyficzne dla WPF  
@@ -112,7 +112,7 @@ W tym temacie przedstawiono koncepcję rozszerzenia znaczników dla XAML, łącz
   
 <a name="EscapeSequences"></a>   
 ## <a name="escape-sequences-and-markup-extensions"></a>Sekwencje unikowe i rozszerzeń znaczników  
- Atrybut Obsługa w XAML procesor używa nawiasów klamrowych jako wskaźników sekwencji rozszerzenia znaczników. Istnieje również możliwość utworzenia literału nawias klamrowy znak wartości atrybutu w razie potrzeby, wprowadzając — sekwencja specjalna przy użyciu pary pusty nawias klamrowy następuje literału nawias klamrowy. Zobacz [{} sekwencja unikowa — rozszerzenie znaczników](../../xaml-services/escape-sequence-markup-extension.md).  
+ Atrybut Obsługa w XAML procesor używa nawiasów klamrowych jako wskaźników sekwencji rozszerzenia znaczników. Istnieje również możliwość utworzenia literału nawias klamrowy znak wartości atrybutu w razie potrzeby, wprowadzając — sekwencja specjalna przy użyciu pary pusty nawias klamrowy następuje literału nawias klamrowy. Zobacz [ {} sekwencji — rozszerzenie znaczników specjalnej](../../xaml-services/escape-sequence-markup-extension.md).  
   
 <a name="Nesting"></a>   
 ## <a name="nesting-markup-extensions-in-xaml-usage"></a>Rozszerzenia znaczników w XAML użycia zagnieżdżania  

@@ -1,24 +1,26 @@
 ---
-title: "Wskazówki: Prosty Model obiektów i kwerendy (C#)"
-ms.custom: 
+title: 'Wskazówki: Prosty Model obiektów i kwerendy (C#)'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 444692cb035d97b0fe57c1ea9ba7802491ca2160
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8d30ef93fc6af4eaf49cfe84ebf78cf79f0f4900
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>Wskazówki: Prosty Model obiektów i kwerendy (C#)
 Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] scenariusza z minimalnym złożoności. Utworzy klasę jednostki, która modele tabeli klientów Northwind przykładowej bazy danych. Spowoduje to utworzenie prostego zapytania do listy klientów, którzy znajdują się w Londynie.  
@@ -38,7 +40,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 ## <a name="overview"></a>Omówienie  
  Ten przewodnik obejmuje sześć głównych zadań:  
   
--   Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)].  
+-   Tworzenie [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] rozwiązania w programie Visual Studio.  
   
 -   Mapowania klasy tabeli bazy danych.  
   
@@ -51,11 +53,11 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
 -   Wykonywanie zapytania i obserwowania wyniki.  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>Tworzenie składnika LINQ to SQL rozwiązania  
- W tym zadaniu pierwszym utworzeniu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] rozwiązania zawierającego niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
+ W tym zadaniu pierwszego tworzenia rozwiązania Visual Studio, który zawiera niezbędne odwołania, aby skompilować i uruchomić [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projektu.  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>Aby utworzyć składnika LINQ to SQL rozwiązania  
   
-1.  Na [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] **pliku** menu wskaż **nowy**, a następnie kliknij przycisk **projektu**.  
+1.  W programie Visual Studio **pliku** menu wskaż **nowy**, a następnie kliknij przycisk **projektu**.  
   
 2.  W **typy projektów** okienku **nowy projekt** okno dialogowe, kliknij przycisk **Visual C#**.  
   
@@ -98,7 +100,7 @@ Ten przewodnik zawiera podstawowe end-to-end [!INCLUDE[vbtecdlinq](../../../../.
   
 -   Możesz określić `CustomerID` właściwość jako kolumna klucza podstawowego w bazie danych.  
   
--   Możesz określić `_CustomerID` i `_City` pól dla prywatnych magazynu. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]można następnie przechowywać i pobierać wartości bezpośrednio, zamiast metody dostępu publicznego, które może obejmować logiki biznesowej.  
+-   Możesz określić `_CustomerID` i `_City` pól dla prywatnych magazynu. [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] można następnie przechowywać i pobierać wartości bezpośrednio, zamiast metody dostępu publicznego, które może obejmować logiki biznesowej.  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>Do reprezentowania właściwości dwie kolumny bazy danych  
   

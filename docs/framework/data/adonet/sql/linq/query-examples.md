@@ -1,27 +1,29 @@
 ---
-title: "Przykłady zapytań"
-ms.custom: 
+title: Przykłady zapytań
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 137f8677-494c-4d49-95ce-c17742f2d01f
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 1b3aabf5a47088fa408547527c5f18fa69a48e02
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5b1681f609d8715167defcb1df57cc270b61e53a
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-examples"></a>Przykłady zapytań
-Ta sekcja zawiera [!INCLUDE[vbprvb](../../../../../../includes/vbprvb-md.md)] i C# przykłady typowych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania. Deweloperzy przy użyciu [!INCLUDE[vs_current_short](../../../../../../includes/vs-current-short-md.md)] znajduje się dużo więcej przykładów w przykładowe rozwiązanie dostępne w sekcji przykładów. Aby uzyskać więcej informacji, zobacz [przykłady](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
+Ta sekcja zawiera Visual Basic i C# przykłady typowych [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] zapytania. Deweloperzy przy użyciu programu Visual Studio można znaleźć wiele więcej przykładów w przykładowe rozwiązanie dostępne w sekcji przykładów. Aby uzyskać więcej informacji, zobacz [przykłady](../../../../../../docs/framework/data/adonet/sql/linq/samples.md).  
   
 > [!IMPORTANT]
 >  *DB* jest często używana w przykładach kodu w [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] dokumentacji. *DB* zakłada, że wystąpienie *Northwind* klasy, która dziedziczy <xref:System.Data.Linq.DataContext>.  

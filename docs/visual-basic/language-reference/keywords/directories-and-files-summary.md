@@ -1,26 +1,27 @@
 ---
-title: "Katalogi i pliki — Podsumowanie (Visual Basic)"
+title: Katalogi i pliki — Podsumowanie (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - files [Visual Basic]
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: b07c2c400bd682d2340349435d03e192a1840c6e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 7df9d0de955e6d9a225373d3711948886cff4c97
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>Katalogi i pliki — Podsumowanie (Visual Basic)
-[!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]słowa kluczowe języka i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
+Słowa kluczowe języka Visual Basic i elementy członkowskie biblioteki wykonawczej są zorganizowane według celu i użycia.  
   
  Przy użyciu `My` funkcja zapewnia większą wydajność i wydajności w ramach operacji We/Wy pliku niż przy użyciu tych elementów członkowskich. Aby uzyskać więcej informacji, zobacz <xref:Microsoft.VisualBasic.FileIO.FileSystem>.  
   
@@ -41,7 +42,7 @@ ms.lasthandoff: 11/21/2017
   
 ## <a name="see-also"></a>Zobacz też  
  [Słowa kluczowe](../../../visual-basic/language-reference/keywords/index.md)  
- [Elementy członkowskie biblioteki wykonawczej języka Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ [Elementy członkowskie biblioteki środowiska uruchomieniowego Visual Basic](../../../visual-basic/language-reference/runtime-library-members.md)  
  [Odczyt z plików](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
  [Zapisywanie w plikach](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
  [Tworzenie, usuwanie i przenoszenie plików i katalogów](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  

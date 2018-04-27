@@ -1,27 +1,29 @@
 ---
-title: "Konfigurowanie parametrów i typów danych parametrów"
-ms.custom: 
+title: Konfigurowanie parametrów i typów danych parametrów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a71ba7ed12196184b7e826ed70c92a9873efdb0c
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: cdb6efb428f5c096178895f95fe1256846e9c1e5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>Konfigurowanie parametrów i typów danych parametrów
 Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub procedur składowanych, zapewniając Sprawdzanie typu i weryfikacji. W odróżnieniu od tekst polecenia parametr wejściowy jest traktowany jako wartość literału nie jako kod wykonywalny. Dzięki temu zabezpieczenia przed atakami "Iniekcja kodu SQL", w których osoba atakująca Wstawia polecenie Zabezpieczenia dokonywania na serwerze do instrukcji SQL.  
@@ -57,7 +59,7 @@ Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub pro
   
 |Typ programu .NET Framework|DbType|SqlDbType|OleDbType|OdbcType|Typu OracleType|  
 |-------------------------|------------|---------------|---------------|--------------|----------------|  
-|<xref:System.Boolean>|Boolean|Bit|Boolean|Bit|Byte|  
+|<xref:System.Boolean>|Boolean|bitowe|Boolean|bitowe|Byte|  
 |<xref:System.Byte>|Byte|TinyInt|UnsignedTinyInt|TinyInt|Byte|  
 |byte[]|plików binarnych|VarBinary`.` niejawnej konwersji zakończy się niepowodzeniem, jeśli tablica bajtów jest większy niż maksymalny rozmiar VarBinary, czyli 8000 bajtów. Tablice typu byte jest większy niż 8000 bajtów, jawnie ustaw <xref:System.Data.SqlDbType>.|VarBinary|plików binarnych|nieprzetworzone|  
 |<xref:System.Char>|``|Wnioskowanie <xref:System.Data.SqlDbType> z char nie jest obsługiwane.|Char|Char|Byte|  
@@ -84,13 +86,13 @@ Polecenie obiektów parametry do przekazania wartości do instrukcji SQL lub pro
 ||StringFixedLength|NChar|WChar|NChar|NChar|  
 ||Godzina|Czas w programie SQL Server 2008. Wnioskowanie <xref:System.Data.SqlDbType> od czasu nie jest obsługiwany w wersjach programu SQL Server starszych niż SQL Server 2008.|DBTime|Godzina|DataGodzina|  
 ||VarNumeric|Wnioskowanie <xref:System.Data.SqlDbType> z VarNumeric nie jest obsługiwane.|VarNumeric|Wnioskowanie `OdbcType` z VarNumeric nie jest obsługiwane.|Wartość liczbowa|  
-|Typ zdefiniowany przez użytkownika (obiekt z<xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Obiekt lub ciąg, w zależności od dostawcy (SqlClient zawsze zwraca obiekt, Odbc zawsze zwraca wartość typu ciąg, dostawcy danych zarządzanych OleDb zobaczyć albo|SqlDbType.Udt Jeśli <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> jest obecny, w przeciwnym razie Variant|OleDbType.VarWChar (jeśli ma wartość null) w przeciwnym razie OleDbType.Variant.|OdbcType.NVarChar|Nieobsługiwane|  
+|Typ zdefiniowany przez użytkownika (obiekt z <xref:Microsoft.SqlServer.Server.SqlUserDefinedAggregateAttribute>|Obiekt lub ciąg, w zależności od dostawcy (SqlClient zawsze zwraca obiekt, Odbc zawsze zwraca wartość typu ciąg, dostawcy danych zarządzanych OleDb zobaczyć albo|SqlDbType.Udt Jeśli <xref:Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute> jest obecny, w przeciwnym razie Variant|OleDbType.VarWChar (jeśli ma wartość null) w przeciwnym razie OleDbType.Variant.|OdbcType.NVarChar|Nieobsługiwane|  
   
 > [!NOTE]
 >  Konwersje z dziesiętną na inne typy są zawężanie konwersji, które zaokrąglona wartość dziesiętna do najbliższej wartości całkowitej w kierunku zera. Jeśli wynik konwersji nie można przedstawić w typie docelowym <xref:System.OverflowException> jest generowany.  
   
 > [!NOTE]
->  Wartość null parametru są wysyłane do serwera, należy określić <xref:System.DBNull>, a nie `null` (`Nothing` w [!INCLUDE[vbprvb](../../../../includes/vbprvb-md.md)]). Wartość null w systemie jest pusty obiekt, który nie ma wartości. <xref:System.DBNull>jest używana do reprezentowania wartości null. Aby uzyskać więcej informacji o wartości null bazy danych, zobacz [Obsługa wartości zerowych](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
+>  Wartość null parametru są wysyłane do serwera, należy określić <xref:System.DBNull>, a nie `null` (`Nothing` w języku Visual Basic). Wartość null w systemie jest pusty obiekt, który nie ma wartości. <xref:System.DBNull> jest używana do reprezentowania wartości null. Aby uzyskać więcej informacji o wartości null bazy danych, zobacz [Obsługa wartości zerowych](../../../../docs/framework/data/adonet/sql/handling-null-values.md).  
   
 ## <a name="deriving-parameter-information"></a>Wyprowadzanie informacje o parametrach  
  Parametry mogą również pochodzić z za pomocą procedury składowanej `DbCommandBuilder` klasy. Zarówno `SqlCommandBuilder` i `OleDbCommandBuilder` klasy udostępnia metody statyczne, `DeriveParameters`, która automatycznie wypełnia kolekcję parametrów dla obiekt polecenia, który używa parametru informacji z procedury składowanej. Należy pamiętać, że `DeriveParameters` zastępuje wszelkie istniejące informacje parametr dla polecenia.  

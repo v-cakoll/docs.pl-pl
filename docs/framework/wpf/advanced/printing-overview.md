@@ -1,12 +1,13 @@
 ---
-title: "Przegląd Drukowanie"
-ms.custom: 
+title: Przegląd Drukowanie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,39 +23,40 @@ helpviewer_keywords:
 - XPSDrv-based printers
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 91ccf1f98d9e1e2f5784246cf30995b689a0b94b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9a36589ca670892398b4d6bb171e79a07060d458
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="printing-overview"></a>Przegląd Drukowanie
-Z [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], deweloperzy aplikacji przy użyciu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ma bogaty zestaw nowe drukowania i wydruku system zarządzania [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Z [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych ulepszeń system drukowania są również dostępne dla deweloperów, którzy tworzą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperów przy użyciu niezarządzanych kodu. Stanowiącej podstawę tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku.  
+Z programu Microsoft .NET Framework, deweloperzy aplikacji przy użyciu [!INCLUDE[TLA#tla_wpf](../../../../includes/tlasharptla-wpf-md.md)] ma bogaty zestaw nowe drukowania i wydruku system zarządzania [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]. Z [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)], niektóre z tych ulepszeń system drukowania są również dostępne dla deweloperów, którzy tworzą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacji i deweloperów przy użyciu niezarządzanych kodu. Stanowiącej podstawę tej nowej funkcji jest nowy [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] format pliku i [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku.  
   
  Ten temat zawiera następujące sekcje.  
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>O XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]jest to format dokumentu elektronicznego, format pliku buforu i języka opisu strony. Jest format otwartego dokumentu, który używa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]i inne standardy branżowe, tworzenie dokumentów i platform. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]upraszcza proces, za pomocą którego cyfrowe dokumenty są utworzone, udostępnionych drukowane, wyświetlać i archiwizowane. Aby uzyskać dodatkowe informacje na temat [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], zobacz [witryny sieci Web XPS](http://www.microsoft.com/xps).  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] jest to format dokumentu elektronicznego, format pliku buforu i języka opisu strony. Jest format otwartego dokumentu, który używa [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)], [!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)]i inne standardy branżowe, tworzenie dokumentów i platform. [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] upraszcza proces, za pomocą którego cyfrowe dokumenty są utworzone, udostępnionych drukowane, wyświetlać i archiwizowane. Aby uzyskać dodatkowe informacje na temat [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)], zobacz [witryny sieci Web XPS](http://www.microsoft.com/xps).  
   
- Kilka technik do drukowania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] na podstawie zawartości przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przedstawiono w części [programowo plików XPS drukowania](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Mogą być przydatne do odwołania te przykłady podczas Przejrzyj elementy zawarte w tym temacie. (Deweloperom kodu niezarządzanego powinny być widoczne w dokumentacji [funkcja MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)]Deweloperzy muszą używać [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] w <xref:System.Drawing.Printing> przestrzeni nazw, który nie obsługuje pełny [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku, ale ma Obsługa ścieżki wydruku hybrydowego GDI-XPS. Zobacz **architektura ścieżki wydruku** poniżej.)  
+ Kilka technik do drukowania [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] na podstawie zawartości przy użyciu [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] przedstawiono w części [programowo plików XPS drukowania](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md). Mogą być przydatne do odwołania te przykłady podczas Przejrzyj elementy zawarte w tym temacie. (Deweloperom kodu niezarządzanego powinny być widoczne w dokumentacji [funkcja MXDC_ESCAPE](https://msdn.microsoft.com/library/windows/desktop/dd162739.aspx). [!INCLUDE[TLA2#tla_winforms#initcap](../../../../includes/tla2sharptla-winformssharpinitcap-md.md)] Deweloperzy muszą używać [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] w <xref:System.Drawing.Printing> przestrzeni nazw, który nie obsługuje pełny [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ścieżki wydruku, ale ma Obsługa ścieżki wydruku hybrydowego GDI-XPS. Zobacz **architektura ścieżki wydruku** poniżej.)  
   
 <a name="XPS_print_path_intro"></a>   
 ## <a name="xps-print-path"></a>Ścieżki wydruku XPS  
- [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Ścieżki wydruku jest nowy [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funkcja, która ponownie definiuje sposób obsługi drukowania w [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)] aplikacji. Ponieważ [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] można zastąpić język prezentacji dokumentu (na przykład RTF), bufor wydruku format (WMF) i język opisu strony (na przykład PCL lub Postscript); przechowuje nowej ścieżki wydruku [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] format z aplikacji publikacji w celu końcowego przetwarzania sterownika drukarki lub urządzenia.  
+ [!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)] Ścieżki wydruku jest nowy [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] funkcja, która ponownie definiuje sposób obsługi drukowania w aplikacjach systemu Windows. Ponieważ [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] można zastąpić język prezentacji dokumentu (na przykład RTF), bufor wydruku format (WMF) i język opisu strony (na przykład PCL lub Postscript); przechowuje nowej ścieżki wydruku [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] format z aplikacji publikacji w celu końcowego przetwarzania sterownika drukarki lub urządzenia.  
   
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Ścieżki wydruku jest oparty na [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] modelu sterownika drukarki (XPSDrv), który zapewnia kilka korzyści dla deweloperów, takie jak [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] drukowania, Ulepszona obsługa koloru i znacznie wyższą wydajność drukowania. (Aby uzyskać więcej informacji na temat XPSDrv, zobacz [Windows Driver Development Kit](https://msdn.microsoft.com/library/windows/hardware/ff557573.aspx).)  
   
- Operacja bufor wydruku dla [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów jest zasadniczo taki sam, jak w poprzednich wersjach [!INCLUDE[TLA2#tla_mswin](../../../../includes/tla2sharptla-mswin-md.md)]. Jednak została rozszerzona w celu obsługi [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku oprócz istniejące [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ścieżki wydruku. Nowa ścieżka wydruku natywnie wykorzystuje [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] pliku buforu. Podczas trybu użytkownika sterowniki drukarki dla wcześniejszych wersji programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] będą nadal działać, [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sterownika drukarki (XPSDrv) jest wymagana, aby można było używać [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku.  
+ Operacja bufor wydruku dla [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów jest zasadniczo taki sam, jak w poprzednich wersjach systemu Windows. Jednak została rozszerzona w celu obsługi [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku oprócz istniejące [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] ścieżki wydruku. Nowa ścieżka wydruku natywnie wykorzystuje [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] pliku buforu. Podczas trybu użytkownika sterowniki drukarki dla wcześniejszych wersji programu [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] będą nadal działać, [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sterownika drukarki (XPSDrv) jest wymagana, aby można było używać [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku.  
   
  Korzyści wynikające z [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku są istotne, a obejmują:  
   
--   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)]Obsługa drukowania  
+-   [!INCLUDE[TLA2#tla_wys](../../../../includes/tla2sharptla-wys-md.md)] Obsługa drukowania  
   
 -   Macierzysty mechanizm obsługi profilów zaawansowane kolorów, które obejmują 32 bitów na kanał, CMYK, kolory o nazwie, n farby i macierzystą obsługę przejrzystości i gradienty.  
   
@@ -64,7 +66,7 @@ Z [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], dewel
   
  W przypadku podstawowych scenariuszy wydruku a proste i intuicyjne [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] jest dostępna w programie jeden punkt wejścia dla użytkowników interface, konfiguracji i zadania przesyłania. Dla zaawansowanych scenariuszy, dodano obsługę dodatkowych [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] dostosowywania (lub nie [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] w ogóle), synchronicznego lub asynchronicznego drukowanie i partii możliwości drukowania. Obie te opcje zapewniają obsługę drukowania w trybie pełnej lub częściowej relacji zaufania.  
   
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]została zaprojektowana z rozszerzeń na uwadze. Za pomocą strukturę rozszerzalności, funkcje i możliwości mogą być dodawane do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] w sposób modułowych. Funkcje rozszerzalności:  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] została zaprojektowana z rozszerzeń na uwadze. Za pomocą strukturę rozszerzalności, funkcje i możliwości mogą być dodawane do [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] w sposób modułowych. Funkcje rozszerzalności:  
   
 -   Drukowanie schematu. Schemat publicznej jest regularnie aktualizowana i umożliwia szybkie rozszerzenie możliwości urządzenia. (Zobacz **PrintTicket i elementu PrintCapabilities** poniżej.)  
   
@@ -80,7 +82,7 @@ Z [!INCLUDE[TLA#tla_winfx](../../../../includes/tlasharptla-winfx-md.md)], dewel
  ![System drukowania XPS](../../../../docs/framework/wpf/advanced/media/xpsprint.PNG "XPSPrint")  
   
 ### <a name="basic-xps-printing"></a>Drukowanie podstawowe XPS  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]definiuje zarówno podstawowego i zaawansowanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Dla tych aplikacji, które nie wymagają szeroką gamę drukowanie dostosowanie lub dostęp do pełnej [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zestaw funkcji podstawowych wydruku Pomoc techniczna jest dostępna. Podstawowa pomoc techniczna wydruku jest uwidaczniany za pomocą formantu okna dialogowego drukowania, który wymaga minimalnej konfiguracji i funkcji znanych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcji dostępnych za pomocą uproszczonego modelu wydruku.  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] definiuje zarówno podstawowego i zaawansowanego [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]. Dla tych aplikacji, które nie wymagają szeroką gamę drukowanie dostosowanie lub dostęp do pełnej [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] zestaw funkcji podstawowych wydruku Pomoc techniczna jest dostępna. Podstawowa pomoc techniczna wydruku jest uwidaczniany za pomocą formantu okna dialogowego drukowania, który wymaga minimalnej konfiguracji i funkcji znanych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]. Wiele [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] funkcji dostępnych za pomocą uproszczonego modelu wydruku.  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrola zapewnia jeden punkt wejścia dla [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], konfiguracji i [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] przesyłania zadania. Aby uzyskać informacje o sposobie tworzenia wystąpienia oraz użycie kontroli, zobacz [Wywołaj okno dialogowe Drukuj](../../../../docs/framework/wpf/advanced/how-to-invoke-a-print-dialog.md).  
@@ -127,7 +129,7 @@ W przypadku aplikacji, które nie wymagają [!INCLUDE[TLA2#tla_metro](../../../.
 ## <a name="xpsdrv-driver-model"></a>Model sterownika XPSDrv  
  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] Ścieżki wydruku zwiększa wydajność bufor za pomocą [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] jako formatu macierzystego buforu wydruku podczas drukowania na [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] — włączone drukarki lub sterownika. Proces uproszczony buforowania eliminuje potrzebę Wygeneruj plik pośredni buforu, takich jak [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] pliku danych, przed umieszczonych w buforze dokumentu. Za pomocą mniejsze pliki buforu [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] ścieżki wydruku można zmniejszyć obciążenie sieci i zwiększyć wydajność drukowania.  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]jest zamknięty formatu, który reprezentuje dane wyjściowe aplikacji jako serię wywołuje [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] usług renderowania. W odróżnieniu od [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] format buforu reprezentuje rzeczywisty dokumentu bez konieczności dalszej interpretacji podczas wypełniania wyjściowego [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]— na podstawie sterownika drukarki (XPSDrv). Sterowniki można korzystać bezpośrednio z danymi w formacie. Ta funkcja eliminuje danych i kolor konwersje miejsca wymagana, gdy używasz [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] plików i [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]— na podstawie sterowniki drukarek.  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] jest zamknięty formatu, który reprezentuje dane wyjściowe aplikacji jako serię wywołuje [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] usług renderowania. W odróżnieniu od [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)], [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] format buforu reprezentuje rzeczywisty dokumentu bez konieczności dalszej interpretacji podczas wypełniania wyjściowego [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]— na podstawie sterownika drukarki (XPSDrv). Sterowniki można korzystać bezpośrednio z danymi w formacie. Ta funkcja eliminuje danych i kolor konwersje miejsca wymagana, gdy używasz [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] plików i [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]— na podstawie sterowniki drukarek.  
   
  Rozmiary plików buforu zwykle zostaje ograniczone, korzystając z [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] dokumentów kierowanych [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] sterownika drukarki (XPSDrv) w porównaniu z ich [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] odpowiedniki; istnieją wyjątki:  
   

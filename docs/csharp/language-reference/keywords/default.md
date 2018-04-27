@@ -14,23 +14,21 @@ ms.assetid: 14c48aaa-7d35-4058-a1a4-f53353050579
 caps.latest.revision: 11
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 1078dd21101a41969754de1afc8919f8ac0bda8c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 3885dbe2d82768d01cb1b3981bcaae65331d91d7
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="default-c-reference"></a>default (odwołanie w C#)
-
-`default` — Słowo kluczowe.
 
 `default` — Słowo kluczowe może być używana w `switch` instrukcja lub wyrażenie wartości domyślnej:
 
 - [Instrukcja switch](switch.md): Określa etykiety domyślnej.
 
-- [Domyślna wartość wyrażenia](../../programming-guide/statements-expressions-operators/default-value-expressions.md): tworzy wartość domyślna typu. Będzie to wartość null dla typów referencyjnych i zero dla typów wartości i wzorzec 0 bit dla struktury.
+- [Domyślna wartość wyrażenia](../../programming-guide/statements-expressions-operators/default-value-expressions.md): tworzy wartość domyślna typu.
 
-## <a name="see-also"></a>Zobacz też
+## <a name="see-also"></a>Zobacz także
 
  [Odwołanie w C#](../index.md)  
  [Przewodnik programowania w języku C#](../../programming-guide/index.md)  

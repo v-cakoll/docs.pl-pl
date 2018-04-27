@@ -1,26 +1,27 @@
 ---
 title: Transakcyjne kolejki.
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b1b011dd-5e0b-482c-9bb0-9d8727038f14
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: fa475ac31287cebe173df255380b1f34d9af2567
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 628e91589ad32a2646316401c7b2ddb31b13eace
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-queues"></a>Transakcyjne kolejki.
-W tym przykładzie pokazano, jak zintegrować kolejek oraz transakcje w [!INCLUDE[wf](../../../../includes/wf-md.md)] do tworzenia usług niezawodnych i skalowalności. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` jest używany w przepływie pracy klienta do wysyłania wiadomości do kolejki w transakcji za pomocą <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> jest używany na serwerze do odbierania wiadomości z kolejki i zaktualizowanie stanu przepływu pracy w tej samej transakcji.  
+W tym przykładzie pokazano, jak zintegrować kolejek oraz transakcje w systemie Windows Workflow Foundation (WF) do tworzenia niezawodnych i skalowalnych usług. A <!--zz <xref:System.Activities.TransactionScope>--> `System.Activities.TransactionScope` jest używany w przepływie pracy klienta do wysyłania wiadomości do kolejki w transakcji za pomocą <xref:System.ServiceModel.NetMsmqBinding>. A <xref:System.ServiceModel.Activities.TransactedReceiveScope> jest używany na serwerze do odbierania wiadomości z kolejki i zaktualizowanie stanu przepływu pracy w tej samej transakcji.  
   
 ## <a name="demonstrates"></a>Demonstracje  
  <xref:System.Activities.Statements.TransactionScope>, <xref:System.ServiceModel.Activities.TransactedReceiveScope>, <xref:System.ServiceModel.NetMsmqBinding>, <xref:System.ServiceModel.Activities.Receive>i na podstawie zawartości korelacji.  
@@ -30,7 +31,7 @@ W tym przykładzie pokazano, jak zintegrować kolejek oraz transakcje w [!INCLUD
   
  Po zakończeniu pracy klienta, skonfigurowane i usługi hostowanej. Zaraz po otwarciu, rozpoczyna przetwarzanie komunikatów, które już zostały umieszczone w kolejce. Każdy komunikat jest odbierany i przetwarzany w tej samej transakcji serwera. W tym przykładzie jest pierwszy komunikat `CreateAccount` żądania, która tworzy wystąpienie i inicjuje korelację zawartości na podstawie nazwy konta przekazanych jako część komunikatu żądania. Modelowanie rodzaj usługi może oczekiwać w świecie rzeczywistym dwa <xref:System.ServiceModel.Activities.TransactedReceiveScope> działań, które przetwarzają `AddPoints` i `UsePoints` wiadomości są umieszczane w równoległych gałęziach w `while` pętli, dzięki czemu mogą one przetworzone komunikaty wielokrotnie w dowolnej kolejności.  
   
- <xref:System.Activities.Statements.TransactionScope>i <xref:System.ServiceModel.Activities.TransactedReceiveScope> ma każdego punktu niejawne trwałości na końcu ich zakresy przy użyciu tych działań w [!INCLUDE[wf1](../../../../includes/wf1-md.md)] połączeniu z kolejek jest to niezawodny sposób przenoszenia przepływu pracy z jednego spójnego stanu do następnego, przy jednoczesnym zapewnieniu, że komunikaty są nigdy nie zostanie utracone.  
+ <xref:System.Activities.Statements.TransactionScope> i <xref:System.ServiceModel.Activities.TransactedReceiveScope> ma każdego punktu niejawne trwałości na końcu ich zakresy przy użyciu tych działań w [!INCLUDE[wf1](../../../../includes/wf1-md.md)] połączeniu z kolejek jest to niezawodny sposób przenoszenia przepływu pracy z jednego spójnego stanu do następnego, przy jednoczesnym zapewnieniu, że komunikaty są nigdy nie zostanie utracone.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  
   

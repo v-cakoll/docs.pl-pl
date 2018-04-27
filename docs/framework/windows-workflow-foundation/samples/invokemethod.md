@@ -1,23 +1,24 @@
 ---
 title: InvokeMethod
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 04988eb3-65f8-456d-b1bd-509f5d05a57c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: b90ebec929b310442cde2be8d96386e016a9bbb4
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f988f206fbd84b7b7d47fb3bd540420601ba30c9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invokemethod"></a>InvokeMethod
 W tym przykładzie przedstawiono różne sposoby używania <xref:System.Activities.Statements.InvokeMethod> działania w celu wywołania metody klasy.  
@@ -52,7 +53,7 @@ W tym przykładzie przedstawiono różne sposoby używania <xref:System.Activiti
 12. Pobierz wartość z wystąpienia obiektu.  
   
 ## <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
- W tym przykładzie znajduje się w dwóch wersjach. Pierwszą wersję w tym przykładzie przedstawiono użycie <xref:System.Activities.Statements.InvokeMethod> za pomocą języka C# w kodzie za pomocą [!INCLUDE[wf](../../../../includes/wf-md.md)] model programowania i znajduje się w folderze CodedWorkflow\CS. Druga wersja przedstawiono użycie <xref:System.Activities.Statements.InvokeMethod> przy użyciu kodu XAML i znajduje się w folderze DesignerWorkflow\CS.  
+ W tym przykładzie znajduje się w dwóch wersjach. Pierwszą wersję w tym przykładzie przedstawiono użycie <xref:System.Activities.Statements.InvokeMethod> za pomocą języka C# w kodzie za pomocą modelu programowania Windows Workflow Foundation (WF) i znajduje się w folderze CodedWorkflow\CS. Druga wersja przedstawiono użycie <xref:System.Activities.Statements.InvokeMethod> przy użyciu kodu XAML i znajduje się w folderze DesignerWorkflow\CS.  
   
 #### <a name="to-run-the-coded-workflow-sample"></a>Aby uruchomić przykład kodowane przepływu pracy  
   

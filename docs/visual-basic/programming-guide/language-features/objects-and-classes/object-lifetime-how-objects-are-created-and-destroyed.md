@@ -1,10 +1,10 @@
 ---
-title: "Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)"
-ms.custom: 
+title: 'Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: f985d6bf7b26ec22d6e533eae1f1d7ea0682e56c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d93d0c94bdbeb93e0527ef6b5c6248b3b580599f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone (Visual Basic)
 Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczowe. Inicjowanie zadania często muszą być wykonywane na nowe obiekty zanim zostaną użyte. Typowe zadania inicjowania obejmują otwieranie plików, łączenie z bazami danych i odczytywania wartości kluczy rejestru. Visual Basic steruje inicjowania nowych obiektów za pomocą procedur o nazwie *konstruktorów* (specjalne metody umożliwiające kontrolę nad inicjowania).  
@@ -44,10 +44,10 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
  Obiekt zwolnionego zakres jest wydane przez środowisko uruchomieniowe języka wspólnego (CLR). Visual Basic steruje zwolnienia zasobów systemowych przy użyciu procedury o nazwie *destruktory*. Razem konstruktory i destruktory obsługuje tworzenie bibliotek klas niezawodny i przewidywalne.  
   
 ## <a name="using-constructors-and-destructors"></a>Przy użyciu konstruktory i destruktory  
- Konstruktory i destruktory kontrolować tworzenie i likwidacja obiektów. `Sub New` i `Sub Finalize` procedury w Visual Basic, zainicjować i zniszcz obiektów; zastępują one `Class_Initialize` i `Class_Terminate` metody używane w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] 6.0 i starsze wersje.  
+ Konstruktory i destruktory kontrolować tworzenie i likwidacja obiektów. `Sub New` i `Sub Finalize` procedury w Visual Basic, zainicjować i zniszcz obiektów; zastępują one `Class_Initialize` i `Class_Terminate` metody używane w Visual Basic 6.0 i starszych wersji.  
   
 ### <a name="sub-new"></a>Nowe podrzędne  
- `Sub New` Konstruktora można uruchomić tylko raz, podczas tworzenia klasy. Nie można wywołać w jawnie w dowolnym miejscu innym niż w pierwszym wierszu kodu innego konstruktora z tej samej klasy lub z klasy pochodnej. Ponadto kod w `Sub New` metoda zawsze jest uruchamiana przed innymi kod w klasie. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]i nowszych wersjach niejawnie Utwórz `Sub New` konstruktora w czasie wykonywania, jeśli nie zostanie jawnie zdefiniowana `Sub New` procedury dla klasy.  
+ `Sub New` Konstruktora można uruchomić tylko raz, podczas tworzenia klasy. Nie można wywołać w jawnie w dowolnym miejscu innym niż w pierwszym wierszu kodu innego konstruktora z tej samej klasy lub z klasy pochodnej. Ponadto kod w `Sub New` metoda zawsze jest uruchamiana przed innymi kod w klasie. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] i nowszych wersjach niejawnie Utwórz `Sub New` konstruktora w czasie wykonywania, jeśli nie zostanie jawnie zdefiniowana `Sub New` procedury dla klasy.  
   
  Aby utworzyć konstruktor dla klasy, Utwórz procedurę o nazwie `Sub New` w dowolnym miejscu definicji klasy. Aby utworzyć sparametryzowanym konstruktorze, określ nazwy i dane typy argumentów `Sub New` tylko należy określić argumenty dla innej procedury, zgodnie z poniższym kodem:  
   
@@ -57,9 +57,9 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
   
  [!code-vb[VbVbalrOOP#116](../../../../visual-basic/misc/codesnippet/VisualBasic/object-lifetime-how-objects-are-created-and-destroyed_2.vb)]  
   
- Po zdefiniowaniu klasy pochodnej z innej klasy pierwszy wiersz konstruktora musi być wywołanie konstruktora klasy podstawowej, chyba że klasę podstawową był dostępny konstruktor, który nie przyjmuje żadnych parametrów. Byłoby wywołania do klasy podstawowej, zawierający powyżej konstruktora, na przykład `MyBase.New(s)`. W przeciwnym razie `MyBase.New` jest opcjonalny i [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] środowisko urchomieniowe wywołuje go niejawnie.  
+ Po zdefiniowaniu klasy pochodnej z innej klasy pierwszy wiersz konstruktora musi być wywołanie konstruktora klasy podstawowej, chyba że klasę podstawową był dostępny konstruktor, który nie przyjmuje żadnych parametrów. Byłoby wywołania do klasy podstawowej, zawierający powyżej konstruktora, na przykład `MyBase.New(s)`. W przeciwnym razie `MyBase.New` jest opcjonalny, i wywołuje go niejawnie środowiska uruchomieniowego języka Visual Basic.  
   
- Po napisaniu kod, aby wywołać konstruktora obiektu nadrzędnego, można dodać dowolny kod inicjujący dodatkowe do `Sub New` procedury. `Sub New`mogą akceptować argumenty wywołanego jako sparametryzowanym konstruktorze. Te parametry są przekazywane z procedury wywoływania konstruktora, na przykład `Dim AnObject As New ThisClass(X)`.  
+ Po napisaniu kod, aby wywołać konstruktora obiektu nadrzędnego, można dodać dowolny kod inicjujący dodatkowe do `Sub New` procedury. `Sub New` mogą akceptować argumenty wywołanego jako sparametryzowanym konstruktorze. Te parametry są przekazywane z procedury wywoływania konstruktora, na przykład `Dim AnObject As New ThisClass(X)`.  
   
 ### <a name="sub-finalize"></a>Sub Finalize  
  Przed wydaniem obiektów, automatycznie wywołuje CLR `Finalize` metody dla obiektów, które definiują `Sub Finalize` procedury. `Finalize` Metody może zawierać kod, który można wykonać tylko przed obiektu, takie jak kod zamykanie plików i zapisywanie informacji o stanie. Jest zmniejszenie wydajności nieznaczne wykonywania `Sub Finalize`, więc należy zdefiniować `Sub Finalize` metody tylko wtedy, gdy trzeba jawnie wersji obiektów.  
@@ -69,13 +69,13 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
   
  `Finalize` Destruktora jest metoda chroniona, który można wywołać tylko z należy do klasy lub klas pochodnych. Wywołania systemowe `Finalize` automatycznie gdy obiekt zostanie zniszczony, dlatego nie należy bezpośrednio wywoływać `Finalize` z poza klasy pochodnej `Finalize` implementacji.  
   
- W odróżnieniu od `Class_Terminate`, który wykonuje się, gdy obiekt jest ustawiony na wartość nothing, jest zwykle opóźnienia między po obiektu utraci zakresu i gdy wywołuje Visual Basic `Finalize` destruktora. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]i nowszych wersjach umożliwiają drugi rodzaj destruktor, <xref:System.IDisposable.Dispose%2A>, której można jawnie wywołać w dowolnej chwili, aby natychmiast zwolnić zasoby.  
+ W odróżnieniu od `Class_Terminate`, który wykonuje się, gdy obiekt jest ustawiony na wartość nothing, jest zwykle opóźnienia między po obiektu utraci zakresu i gdy wywołuje Visual Basic `Finalize` destruktora. [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] i nowszych wersjach umożliwiają drugi rodzaj destruktor, <xref:System.IDisposable.Dispose%2A>, której można jawnie wywołać w dowolnej chwili, aby natychmiast zwolnić zasoby.  
   
 > [!NOTE]
 >  A `Finalize` destruktor nie powinien zgłosić wyjątkami, ponieważ nie mogą być obsługiwane przez aplikację i może spowodować zamknięcie aplikacji.  
   
 ### <a name="how-new-and-finalize-methods-work-in-a-class-hierarchy"></a>Jak nowy i zakończenia pracy metod w hierarchii klas  
- Zawsze, gdy tworzone jest wystąpienie klasy, środowisko uruchomieniowe języka wspólnego (CLR) próbuje wykonać procedurę o nazwie `New`, jeśli istnieje w tym obiekcie. `New`rodzaj procedury o nazwie `constructor` używany zainicjować nowe obiekty przed wykonaniem innego kodu w obiekcie. A `New` Konstruktor może służyć do otwierania plików, połączenie z bazami danych zainicjować zmienne i zajmie się inne zadania, które trzeba wykonać te czynności przed użyciem obiektu.  
+ Zawsze, gdy tworzone jest wystąpienie klasy, środowisko uruchomieniowe języka wspólnego (CLR) próbuje wykonać procedurę o nazwie `New`, jeśli istnieje w tym obiekcie. `New` rodzaj procedury o nazwie `constructor` używany zainicjować nowe obiekty przed wykonaniem innego kodu w obiekcie. A `New` Konstruktor może służyć do otwierania plików, połączenie z bazami danych zainicjować zmienne i zajmie się inne zadania, które trzeba wykonać te czynności przed użyciem obiektu.  
   
  Gdy tworzone jest wystąpienie klasy pochodnej, `Sub New` konstruktora klasy podstawowej wykonuje najpierw następuje konstruktorów w klasach pochodnych. Zdarza się to pierwszy wiersz kodu w `Sub New` Konstruktor używa składni `MyBase.New()`można wywołać konstruktora klasy bezpośrednio nad sama w hierarchii klasy. `Sub New` Konstruktor jest następnie wywoływana dla każdej klasy w hierarchii klasy do konstruktora dla klasy podstawowej zostanie osiągnięty. W tym momencie kodu w Konstruktorze dla klasy podstawowej wykonuje, następuje kod w każdym konstruktora dla wszystkich klas pochodnych i ostatnio wykonywany jest kod w najdalszych pochodnych klas.  
   
@@ -88,7 +88,7 @@ Wystąpienie klasy, obiektu, jest tworzona przy użyciu `New` — słowo kluczow
 ## <a name="idisposable-interface"></a>Interfejs IDisposable  
  Wystąpienia klas kontrolować często zasobów nie są zarządzane przez środowisko CLR, takie jak uchwyty okien i połączenia z bazą danych. Te zasoby muszą być usuwane w `Finalize` metody klasy, dzięki czemu będzie można zwolnić, gdy obiekt zostanie zniszczony przez moduł garbage collector. Jednak moduł garbage collector niszczy obiektów tylko wtedy, gdy środowisko CLR wymaga więcej pamięci. Oznacza to, że zasoby nie można zwolnić dopiero, gdy obiekt wykracza poza zakres.  
   
- Uzupełnienie wyrzucanie elementów bezużytecznych, klas zapewniają mechanizm aktywnie zarządzać zasobami systemu, jeśli wdrażają <xref:System.IDisposable> interfejsu. <xref:System.IDisposable>zawiera jedną metodę <xref:System.IDisposable.Dispose%2A>, których klienci powinny wywoływać przy kończyły się przy użyciu obiektu. Można użyć <xref:System.IDisposable.Dispose%2A> metody natychmiast zwolnić zasoby i wykonywać zadania, takie jak zamykanie plików i połączenia z bazą danych. W odróżnieniu od `Finalize` destruktor, <xref:System.IDisposable.Dispose%2A> metoda nie jest wywoływana automatycznie. Klienci klasy musi jawnie wywołać <xref:System.IDisposable.Dispose%2A> Jeśli chcesz natychmiast zwolnić zasoby.  
+ Uzupełnienie wyrzucanie elementów bezużytecznych, klas zapewniają mechanizm aktywnie zarządzać zasobami systemu, jeśli wdrażają <xref:System.IDisposable> interfejsu. <xref:System.IDisposable> zawiera jedną metodę <xref:System.IDisposable.Dispose%2A>, których klienci powinny wywoływać przy kończyły się przy użyciu obiektu. Można użyć <xref:System.IDisposable.Dispose%2A> metody natychmiast zwolnić zasoby i wykonywać zadania, takie jak zamykanie plików i połączenia z bazą danych. W odróżnieniu od `Finalize` destruktor, <xref:System.IDisposable.Dispose%2A> metoda nie jest wywoływana automatycznie. Klienci klasy musi jawnie wywołać <xref:System.IDisposable.Dispose%2A> Jeśli chcesz natychmiast zwolnić zasoby.  
   
 ### <a name="implementing-idisposable"></a>Implementacja interfejsu IDisposable  
  Klasa, która implementuje <xref:System.IDisposable> interfejsu powinny zawierać tych fragmentów kodu:  
@@ -158,6 +158,6 @@ End Sub
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IDisposable.Dispose%2A>  
  [Inicjowanie i kończenie działania składników](http://msdn.microsoft.com/library/58444076-a9d2-4c91-b3f6-0e180dc0695d)  
- [New — Operator](../../../../visual-basic/language-reference/operators/new-operator.md)  
+ [Operator New](../../../../visual-basic/language-reference/operators/new-operator.md)  
  [Oczyszczanie zasobów niezarządzanych](../../../../standard/garbage-collection/unmanaged.md)  
  [Nothing](../../../../visual-basic/language-reference/nothing.md)

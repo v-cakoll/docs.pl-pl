@@ -889,11 +889,11 @@ ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
 caps.latest.revision: 15
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 4aeea86778b44cbe8e71ed64ee5a3a3a1618cccd
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: c6cabc4c619e6ace4c376fd125e7531f10bf9b88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>Niestety, mamy ADAM&#39;t są dostępne szczegółowe informacje na temat tego błędu języka C#
 Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. Możesz wyszukać numer błędu i treść komunikatu, aby znaleźć więcej informacji w sieci web. Lub poproś inni deweloperzy przy użyciu jednej z tych fora:  
@@ -902,7 +902,7 @@ Przepraszamy, ale nie mamy żadnych szczegółowych informacji o tym błędzie. 
  Zapewnia forum pytania dotyczące i ogólnych dyskusjach składni języka Visual C# i kompilatora.  
   
  [Środowiska IDE programu Visual C#](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Forum do zadawania pytań dotyczących pracy w środowisku [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Udostępnia forum odpowiedzi na pytania dotyczące pracy w środowisku Visual Studio.  
   
  [Visual C# ogólne](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
  Udostępnia forum odpowiedzi na pytania dotyczące i problemy z Visual C#, które nie zostały omówione w innych forach.  

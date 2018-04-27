@@ -1,12 +1,12 @@
 ---
-title: "Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego"
-ms.custom: 
+title: 'Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -21,18 +21,18 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f8f06335d96b3e71f14b3df6b40ef3691c0915f1
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: eb578b18b3d3ab7ae617873a33745f36e0e8cacb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>Porady: definiowanie i użycie niestandardowych dostawców formatu liczbowego
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia szeroką gamę kontrolę nad reprezentację ciągu wartości liczbowych. Format wartości liczbowych dostosowywania obsługuje następujące funkcje:  
@@ -49,7 +49,7 @@ ms.lasthandoff: 12/23/2017
   
 1.  Definiowanie klasy, która implementuje <xref:System.IFormatProvider> i <xref:System.ICustomFormatter> interfejsów.  
   
-2.  Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A>jest to metoda wywołania zwrotnego który formatowania — metoda (takich jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> — metoda) wywołuje można pobrać obiektu, który są odpowiedzialne za wykonywanie formatowania niestandardowego. Typowa implementacja <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
+2.  Implementowanie <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> metody. <xref:System.IFormatProvider.GetFormat%2A> jest to metoda wywołania zwrotnego który formatowania — metoda (takich jak <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> — metoda) wywołuje można pobrać obiektu, który są odpowiedzialne za wykonywanie formatowania niestandardowego. Typowa implementacja <xref:System.IFormatProvider.GetFormat%2A> wykonuje następujące czynności:  
   
     1.  Określa, czy <xref:System.Type> przekazano obiekt jako metoda reprezentuje parametr <xref:System.ICustomFormatter> interfejsu.  
   
@@ -99,7 +99,7 @@ ms.lasthandoff: 12/23/2017
  W tym przykładzie metoda, która implementuje <xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> ma służyć jako metoda wywołania zwrotnego dla <xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> metody. W związku z tym sprawdza `formatProvider` parametr, aby określić, czy zawiera on odwołanie do bieżącego `TelephoneFormatter` obiektu. Jednak metoda również można wywołać bezpośrednio z kodu. W takim przypadku można użyć `formatProvider` parametr, aby zapewnić <xref:System.Globalization.CultureInfo> lub <xref:System.Globalization.NumberFormatInfo> obiektu, który dostarcza informacje dotyczące formatowania specyficzne dla kultury.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy umieścić go w szablonie projektu aplikacji konsolowej.  
+ Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, umieść ją w szablonu projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)

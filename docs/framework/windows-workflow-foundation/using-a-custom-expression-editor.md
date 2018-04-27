@@ -14,16 +14,16 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5388ed3f55d97f3282a710ac59fe36cfb32fa49c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6e9481364a70257f6c1711692daf5c81eee9fd88
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-a-custom-expression-editor"></a>Za pomocą edytora wyrażeń niestandardowych
 Edytor wyrażenia niestandardowego można zaimplementować zapewnienie wyrażenia bardziej zaawansowane funkcje lub prostsze środowisko edytowania. Istnieje kilka scenariuszy, w których można użyć wyrażenia niestandardowego edytora:  
   
--   Aby zapewnić obsługę funkcji IntelliSense i innych zaawansowanej edycji funkcji w Projektancie rehosted przepływu pracy. Należy podać tę funkcję, ponieważ domyślny [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] edytora wyrażeń, nie można używać w rehosted aplikacji.  
+-   Aby zapewnić obsługę funkcji IntelliSense i innych zaawansowanej edycji funkcji w Projektancie rehosted przepływu pracy. Ponieważ nie można użyć domyślnego edytora wyrażeń Visual Studio w aplikacjach rehosted należy podać tę funkcję.  
   
 -   Aby uprościć wyrażenie środowisko dla użytkowników analityka biznesowych, edytowania, aby nie, na przykład są wymagane do Naucz się Visual Basic lub postępowania w przypadku wyrażeń języka Visual Basic.  
   

@@ -1,27 +1,29 @@
 ---
-title: "Porady: uruchamianie usług"
-ms.custom: 
+title: 'Porady: uruchamianie usług'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Service applications, starting
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
-caps.latest.revision: "16"
+caps.latest.revision: 16
 author: ghogen
 ms.author: ghogen
 manager: douge
-ms.workload: dotnet
-ms.openlocfilehash: 8352edaa9386adc1fbf3057c6e98f5a9cf9ce4a1
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 47e27f579c0ed7d1be0b061bc6e79bba0c060abb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-start-services"></a>Porady: uruchamianie usług
 Po zainstalowaniu usługi musi być uruchomiona. Uruchamianie wywołania <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metody w klasie usługi. Zazwyczaj <xref:System.ServiceProcess.ServiceBase.OnStart%2A> metoda definiuje przydatne pracę, wykona usługi. Po uruchomieniu usługi pozostanie aktywne do czasu jest ręcznie wstrzymana lub zatrzymana.  
@@ -29,7 +31,7 @@ Po zainstalowaniu usługi musi być uruchomiona. Uruchamianie wywołania <xref:S
  Usługi można zainstalowane do uruchamiania automatycznie lub ręcznie. Usługa, która jest uruchamiana automatycznie zostanie uruchomiony, gdy komputer, na którym jest zainstalowany jest ponowny rozruch lub włączany po raz pierwszy. Użytkownik musi uruchomić usługę, która jest uruchamiana ręcznie.  
   
 > [!NOTE]
->  Domyślnie usługi utworzone za pomocą [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] są ustawione na uruchamianie ręczne.  
+>  Domyślnie usługi utworzone za pomocą programu Visual Studio są ustawione na uruchamianie ręczne.  
   
  Istnieje kilka sposobów, można ręcznie uruchomić usługę — od **Eksploratora serwera**, z **Menedżera sterowania usługami**, lub z kodu za pomocą składnika o nazwie <xref:System.ServiceProcess.ServiceController>.  
   
@@ -70,7 +72,7 @@ Po zainstalowaniu usługi musi być uruchomiona. Uruchamianie wywołania <xref:S
   
     -   W systemach Windows XP i 2000 Professional, kliknij prawym przyciskiem myszy **Mój komputer** na pulpicie, a następnie kliknij **Zarządzaj**. W oknie dialogowym Rozwiń **usługi i aplikacje** węzła.  
   
-         \-lub -  
+         \- lub -  
   
     -   W systemie Windows Server 2003 i Windows 2000 Server kliknij **Start**, wskaż **programy**, kliknij przycisk **narzędzia administracyjne**, a następnie kliknij przycisk **usług**.  
   

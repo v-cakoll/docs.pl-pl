@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: ab80f39a15952bee8296166ea19a78498c3c1b23
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 7c33e764b9af46aec3788e7e113d01c4c5fc9905
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>Wskazówki: hosting formantu Win32 w WPF
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] kodu, może być bardziej skuteczne ponownie użyć co najmniej części kodu w Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, zamiast ponownego zapisywania całkowicie. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] udostępnia mechanizm prostego hosting [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] okna na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] strony.  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/26/2018
   
 <a name="communication"></a>   
 ## <a name="implement-communication-between-the-control-and-the-page"></a>Komunikacja między formantem a strony  
- Manipulowanie formantu przez wysłanie ich [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] wiadomości. Formant powiadamia, gdy użytkownik wchodzi w interakcję z nią poprzez wysłanie powiadomienia do okno hosta. [Hosting kontrolki ListBox Win32 w przykładowym WPF](http://go.microsoft.com/fwlink/?LinkID=159998) próbki obejmuje interfejsu użytkownika, który zawiera kilka przykładów jak to działa:  
+ Formant manipulować wysyłając komunikaty systemu Windows. Formant powiadamia, gdy użytkownik wchodzi w interakcję z nią poprzez wysłanie powiadomienia do okno hosta. [Hosting kontrolki ListBox Win32 w przykładowym WPF](http://go.microsoft.com/fwlink/?LinkID=159998) próbki obejmuje interfejsu użytkownika, który zawiera kilka przykładów jak to działa:  
   
 -   Dołącz element do listy.  
   

@@ -1,12 +1,13 @@
 ---
-title: "Porady: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -20,16 +21,17 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 62cb416b311fd3c2c29f8ffc7c513fa6a9dfd8fe
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b0b25f2ea86e58b7fe644f84412d1923fa761b82
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>Porady: uruchamianie procedur w ustalonych odstępach czasu za pomocą składnika Timer formularzy systemu Windows
 Czasami można utworzyć procedury, która działa w określonych odstępach czasu, aż do pętli zostało zakończone lub uruchamiany po upłynięciu interwału czasu zestawu. <xref:System.Windows.Forms.Timer> Składnika umożliwia takiej procedury.  
@@ -41,7 +43,7 @@ Czasami można utworzyć procedury, która działa w określonych odstępach cza
   
 ### <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>Aby uruchomić procedurę w ustalonych odstępach czasu za pomocą składnika czasomierza  
   
-1.  Dodaj <xref:System.Windows.Forms.Timer> do formularza. Zobacz następującą sekcję przykład ilustrację jak to zrobić programowo. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]ma również obsługę dodawania składników do formularza. Zobacz też [porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
+1.  Dodaj <xref:System.Windows.Forms.Timer> do formularza. Zobacz następującą sekcję przykład ilustrację jak to zrobić programowo. Visual Studio ma również obsługę dodawania składników do formularza. Zobacz też [porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows](http://msdn.microsoft.com/library/becyw7bz\(v=vs.110\)).  
   
 2.  Ustaw <xref:System.Windows.Forms.Timer.Interval%2A> właściwości (w milisekundach) dla czasomierza. Ta właściwość określa czas, jaki upłynie procedura jest uruchamiana ponownie.  
   

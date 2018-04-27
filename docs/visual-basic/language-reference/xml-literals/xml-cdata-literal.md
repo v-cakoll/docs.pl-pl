@@ -1,9 +1,9 @@
 ---
-title: "Literał CDATA XML (Visual Basic)"
+title: Literał CDATA XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-caps.latest.revision: 
+caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 906fd2494dd952c08088b9b7e38dba4505780481
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e8dfc091409e060e20970b0b6d6bc19b4fc2aeea
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>Literał CDATA XML (Visual Basic)
 Literał reprezentujący <xref:System.Xml.Linq.XCData> obiektu.  
@@ -34,13 +34,13 @@ Literał reprezentujący <xref:System.Xml.Linq.XCData> obiektu.
   
 ## <a name="parts"></a>Części  
  `<![CDATA[`  
- Wymagany. Oznacza początek sekcji XML CDATA.  
+ Wymagana. Oznacza początek sekcji XML CDATA.  
   
  `content`  
- Wymagany. Zawartość tekstowa pojawią się w sekcji XML CDATA.  
+ Wymagana. Zawartość tekstowa pojawią się w sekcji XML CDATA.  
   
  `]]>`  
- Wymagany. Oznacza koniec sekcji.  
+ Wymagana. Oznacza koniec sekcji.  
   
 ## <a name="return-value"></a>Wartość zwracana  
  <xref:System.Xml.Linq.XCData> Obiektu.  
@@ -55,9 +55,9 @@ Literał reprezentujący <xref:System.Xml.Linq.XCData> obiektu.
  Można przypisać literał CDATA XML do zmiennej lub objąć literał elementu XML.  
   
 > [!NOTE]
->  Literał XML może obejmować wiele wierszy, ale nie są używane znaki kontynuacji wiersza. Dzięki temu można kopiować zawartości z dokumentu XML i wklej go bezpośrednio do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] program.  
+>  Literał XML może obejmować wiele wierszy, ale nie są używane znaki kontynuacji wiersza. Pozwala na kopiowanie zawartości z dokumentu XML i wklej go bezpośrednio w programie Visual Basic.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora konwertuje literał CDATA XML do wywołania <xref:System.Xml.Linq.XCData.%23ctor%2A> konstruktora.  
+ Kompilator Visual Basic konwertuje literał CDATA XML do wywołania <xref:System.Xml.Linq.XCData.%23ctor%2A> konstruktora.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład tworzy sekcji CDATA, która zawiera tekst "może zawierać literału \<XML > tagi".  

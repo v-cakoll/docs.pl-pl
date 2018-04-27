@@ -1,34 +1,35 @@
 ---
-title: "Uczestników śledzenia"
-ms.custom: 
+title: Uczestników śledzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-caps.latest.revision: "24"
+caps.latest.revision: 24
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f335695c86037d792b17b98080b7a2e668ac1df5
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d67924061b5d87bdb2e3229d9bf956501036c30
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-participants"></a>Uczestników śledzenia
-Uczestników śledzenia są punktów rozszerzalności, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetworzenia. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  
+Uczestników śledzenia są punktów rozszerzalności, zezwalających na dewelopera przepływu pracy, aby uzyskać dostęp do <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> obiektów i ich przetworzenia. [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia.  
   
 ## <a name="tracking-participants"></a>Uczestników śledzenia  
  Infrastruktura śledzenia umożliwia zastosowania filtru wychodzących rekordów śledzenia tak, aby uczestnika mogą subskrybować podzestaw rekordów. Mechanizm, aby zastosować filtr jest za pośrednictwem profilu śledzenia.  
   
- [!INCLUDE[wf](../../../includes/wf-md.md)]w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zapewnia uczestnika śledzenia, który zapisuje rekordy śledzenia w sesji usługi ETW. Uczestnika jest skonfigurowany w usłudze przepływu pracy przez dodanie zachowania specyficzny dla śledzenia w PLiku konfiguracji. Włączanie funkcji ETW śledzenia uczestnika, który umożliwia śledzenia się wyświetlić podglądu zdarzeń. Przykład zestawu SDK do śledzenia na podstawie ETW jest to dobry sposób na zapoznanie się z śledzenia WF przy użyciu uczestnika na podstawie ETW śledzenia.  
+ Windows Workflow Foundation (WF) w [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] zapewnia uczestnika śledzenia, który zapisuje rekordy śledzenia w sesji usługi ETW. Uczestnika jest skonfigurowany w usłudze przepływu pracy przez dodanie zachowania specyficzny dla śledzenia w PLiku konfiguracji. Włączanie funkcji ETW śledzenia uczestnika, który umożliwia śledzenia się wyświetlić podglądu zdarzeń. Przykład zestawu SDK do śledzenia na podstawie ETW jest to dobry sposób na zapoznanie się z śledzenia WF przy użyciu uczestnika na podstawie ETW śledzenia.  
   
 ## <a name="etw-tracking-participant"></a>Uczestnik śledzenia funkcji ETW  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]obejmuje ETW śledzenia uczestnika, który zapisuje rekordy śledzenia w sesji usługi ETW. Jest to realizowane w bardzo wydajny sposób z minimalnym wpływem na wydajność aplikacji lub przepływność serwera. Zaletą używania standardowych uczestnika śledzenia zdarzeń systemu Windows jest rekordów śledzenia, który odbiera mogą być wyświetlane z innej aplikacji, a system dzienniki w Podglądzie zdarzeń systemu Windows.  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] obejmuje ETW śledzenia uczestnika, który zapisuje rekordy śledzenia w sesji usługi ETW. Jest to realizowane w bardzo wydajny sposób z minimalnym wpływem na wydajność aplikacji lub przepływność serwera. Zaletą używania standardowych uczestnika śledzenia zdarzeń systemu Windows jest rekordów śledzenia, który odbiera mogą być wyświetlane z innej aplikacji, a system dzienniki w Podglądzie zdarzeń systemu Windows.  
   
  Standardowa uczestnika śledzenia zdarzeń systemu Windows jest skonfigurowany w pliku Web.config, jak pokazano w poniższym przykładzie.  
   
@@ -102,7 +103,7 @@ Uczestników śledzenia są punktów rozszerzalności, zezwalających na dewelop
 ## <a name="custom-tracking-participant"></a>Niestandardowe śledzenia uczestnika  
  Uczestnik śledzenia interfejsu API umożliwia rozszerzenie środowiska uruchomieniowego śledzenia z uczestnika śledzenia dostarczane przez użytkownika, który może obejmować niestandardowej logiki do obsługi rekordów śledzenia emitowane przez środowisko wykonawcze przepływu pracy. Aby napisać uczestnika śledzenia niestandardowych, deweloper musi implementować `Track` metoda <xref:System.Activities.Tracking.TrackingParticipant> klasy. Ta metoda jest wywoływana, gdy rekord śledzenia są emitowane przez środowisko uruchomieniowe przepływu pracy.  
   
- Uczestników śledzenia pochodzi od <xref:System.Activities.Tracking.TrackingParticipant> klasy. Dostarczane przez system <xref:System.Activities.Tracking.EtwTrackingParticipant> emituje zdarzenie zdarzenia śledzenia zdarzeń systemu Windows (ETW) dla każdego rekordu śledzenia odebrane. Aby utworzyć niestandardowe śledzenia uczestnika, klasa zostanie utworzony pochodną <xref:System.Activities.Tracking.TrackingParticipant>. Aby umożliwić korzystanie z funkcji śledzenia podstawowego, Przesłoń <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>jest wywoływane, gdy rekord śledzenia są wysyłane przez środowisko wykonawcze i mogą być przetwarzane w żądany sposób. W poniższym przykładzie klasa uczestnika śledzenia niestandardowych zdefiniowano który emituje wszystkie rekordy śledzenia w oknie konsoli. Można też wdrożyć <xref:System.Activities.Tracking.TrackingParticipant> rejestruje obiekt, który przetwarza dane śledzenia asynchronicznie za pomocą jego `BeginTrack` i `EndTrack` metody  
+ Uczestników śledzenia pochodzi od <xref:System.Activities.Tracking.TrackingParticipant> klasy. Dostarczane przez system <xref:System.Activities.Tracking.EtwTrackingParticipant> emituje zdarzenie zdarzenia śledzenia zdarzeń systemu Windows (ETW) dla każdego rekordu śledzenia odebrane. Aby utworzyć niestandardowe śledzenia uczestnika, klasa zostanie utworzony pochodną <xref:System.Activities.Tracking.TrackingParticipant>. Aby umożliwić korzystanie z funkcji śledzenia podstawowego, Przesłoń <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>. <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> jest wywoływane, gdy rekord śledzenia są wysyłane przez środowisko wykonawcze i mogą być przetwarzane w żądany sposób. W poniższym przykładzie klasa uczestnika śledzenia niestandardowych zdefiniowano który emituje wszystkie rekordy śledzenia w oknie konsoli. Można też wdrożyć <xref:System.Activities.Tracking.TrackingParticipant> rejestruje obiekt, który przetwarza dane śledzenia asynchronicznie za pomocą jego `BeginTrack` i `EndTrack` metody  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  

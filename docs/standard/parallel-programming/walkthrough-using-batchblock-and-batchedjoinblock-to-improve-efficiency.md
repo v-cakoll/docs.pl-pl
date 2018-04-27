@@ -17,11 +17,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: c9ea53fb186551a24f678d905d35caaaa0c26494
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e9305fd2a0e61a71f6875d6061f835e9cdae5dd1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>Wskazówki: Poprawa wydajności z wykorzystaniem klas BatchBlock i BatchedJoinBlock
 Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> i <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> klasy, aby mogli otrzymywać i buforu danych z jednego lub więcej źródeł i rozpropagowane limit buforowane dane jako jedną kolekcję. Ten mechanizm przetwarzanie wsadowe jest przydatne, gdy zbieranie danych z jednego lub więcej źródeł, a następnie przetworzyć wielu elementów danych, takich jak partii. Rozważmy na przykład aplikację, która używa przepływu danych do wstawiania rekordów w bazie danych. Ta operacja może być bardziej wydajne, jeśli wiele elementów są wstawiane jednocześnie zamiast pojedynczo po kolei. W tym dokumencie opisano sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchBlock%601> liczba operacji wstawienia klasę, aby zwiększyć wydajność takiej bazy danych. Opisuje również sposób użycia <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> klasa do przechwytywania zarówno wyniki oraz wszystkie wyjątki, które wystąpić, gdy program odczytuje z bazy danych.
@@ -35,7 +35,7 @@ Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.
 2.  Upewnij się, że masz kopię bazy danych Northwind Northwind.sdf dostępnego na komputerze. Ten plik znajduje się w folderze % Program Files%\Microsoft SQL Server Compact Edition\v3.5\Samples\\.  
   
     > [!IMPORTANT]
-    >  W niektórych wersjach systemu Windows nie można nawiązać połączenia Northwind.sdf Jeśli [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] działa w trybie bez uprawnień administratora. Aby nawiązać połączenie Northwind.sdf, uruchom [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] wiersza polecenia **Uruchom jako administrator** tryb.  
+    >  W niektórych wersjach systemu Windows nie można nawiązać połączenia Northwind.sdf Jeśli Visual Studio działa w trybie bez uprawnień administratora. Aby połączyć się Northwind.sdf, uruchom Visual Studio lub w wierszu polecenia programu Visual Studio **Uruchom jako administrator** tryb.  
   
  Ten przewodnik zawiera następujące sekcje:  
   
@@ -57,7 +57,7 @@ Biblioteka przepływu danych tpl zapewnia <xref:System.Threading.Tasks.Dataflow.
 ## <a name="creating-the-console-application"></a>Tworzenie aplikacji konsoli  
   
 <a name="consoleApp"></a>   
-1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utworzyć Visual C# lub Visual Basic **aplikacji konsoli** projektu. W tym dokumencie projektu o nazwie `DataflowBatchDatabase`.  
+1.  W programie Visual Studio Utwórz Visual C# lub Visual Basic **aplikacji konsoli** projektu. W tym dokumencie projektu o nazwie `DataflowBatchDatabase`.  
   
 2.  W projekcie Dodaj odwołanie do System.Data.SqlServerCe.dll i odwołanie do System.Threading.Tasks.Dataflow.dll.  
   

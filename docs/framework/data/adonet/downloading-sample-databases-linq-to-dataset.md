@@ -1,24 +1,26 @@
 ---
-title: "Pobieranie przykładowe bazy danych (LINQ do DataSet)"
-ms.custom: 
+title: Pobieranie przykładowe bazy danych (LINQ do DataSet)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: eb42a7af-d410-4b7f-b4a8-13c72ce6fd09
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: c8c1c2dabb13393764ca8b1fd9c1a717b9e2527e
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e19e51ecf4868d0d49e26b4aafd7e8b3840992d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="downloading-sample-databases-linq-to-dataset"></a>Pobieranie przykładowe bazy danych (LINQ do DataSet)
 Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dokumentacji Użyj przykładową bazę danych AdventureWorks. Ten produkt bezpłatne można pobrać z witryny pobierania firmy Microsoft. Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] dokumentacji Użyj programu SQL Server do przechowywania danych. SQL Server Express Edition, który jest dostępny bezpłatnie, mogą służyć do przechowywania danych, zamiast programu SQL Server.  
@@ -74,7 +76,7 @@ Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-data
      Po zainstalowaniu tych plików do innego dysku lub katalogu, należy odpowiednio skorygować ścieżki, przed wykonaniem `sp_attach_db` procedury składowanej.  
   
 ## <a name="downloading-sql-server-express-edition"></a>Pobieranie programu SQL Server Express Edition.  
- Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sekcji, użyj programu SQL Server 2005 do przechowywania danych, ale można zmodyfikować, aby zamiast tego użyj programu SQL Server Express Edition. SQL Server Express Edition jest dostępny bezpłatnie i rozpowszechnić go z aplikacjami. Jeśli używasz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], SQL Server Express Edition jest dostępna w wersjach Pro lub nowszy.  
+ Przykłady i wskazówki w [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] sekcji, użyj programu SQL Server 2005 do przechowywania danych, ale można zmodyfikować, aby zamiast tego użyj programu SQL Server Express Edition. SQL Server Express Edition jest dostępny bezpłatnie i rozpowszechnić go z aplikacjami. Jeśli używasz programu Visual Studio programu SQL Server Express Edition jest dostępna w wersjach Pro lub nowszy.  
   
 #### <a name="to-download-and-install-sql-server-express-edition"></a>Aby pobrać i zainstalować program SQL Server Express Edition  
   

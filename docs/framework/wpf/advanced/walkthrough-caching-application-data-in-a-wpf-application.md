@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF"
-ms.custom: 
+title: 'Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -16,16 +17,17 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 81d808b982852d5cc6dc187a3c8389748a0dc0bf
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a8d3fe2dbfe0b4b5fb9081d71cec080dfa54add8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>Wskazówki: przechowywanie w pamięci podręcznej danych aplikacji w aplikacji WPF
 Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dostęp. Dostępie do danych ponownie, aplikacje można pobrać danych z pamięci podręcznej, zamiast tego podczas pobierania z oryginalnego źródła. Może to poprawić wydajność i skalowalność. Ponadto buforowanie sprawia, że nie są dostępne dane, gdy źródłem danych jest tymczasowo niedostępna.  
@@ -67,7 +69,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dos
   
 #### <a name="to-create-a-wpf-application"></a>Aby utworzyć aplikację programu WPF  
   
-1.  Uruchom [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)].  
+1.  Uruchom program Visual Studio.  
   
 2.  W **pliku** menu, kliknij przycisk **nowy**, a następnie kliknij przycisk **nowy projekt**.  
   
@@ -86,7 +88,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dos
   
 7.  Kliknij przycisk **OK**.  
   
-     Zostanie otwarty projektant WPF w **projekt** wyświetlanie i wyświetla plik MainWindow.xaml. [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]Tworzy **mój projekt** folder, plik Application.xaml i plik MainWindow.xaml.  
+     Zostanie otwarty projektant WPF w **projekt** wyświetlanie i wyświetla plik MainWindow.xaml. Program Visual Studio tworzy **mój projekt** folder, plik Application.xaml i plik MainWindow.xaml.  
   
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>Docelowy program .NET Framework i dodawanie odwołania do pamięci podręcznej zestawów  
  Domyślnie docelowej aplikacji WPF [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]. Aby użyć <xref:System.Runtime.Caching> przestrzeni nazw w aplikacji WPF, aplikacja musi wskazywać [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (nie [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) i musi zawierać odwołanie do przestrzeni nazw.  
@@ -307,7 +309,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dos
   
      Zawartości w pamięci podręcznej z pliku tekstowego jest wyświetlany w oknie komunikatu. Zwróć uwagę, znacznik czasu pliku.  
   
-3.  Zamknij okno komunikatu, a następnie kliknij przycisk **pobrać pamięci podręcznej** ponownie**.**  
+3.  Zamknij okno komunikatu, a następnie kliknij przycisk **pobrać pamięci podręcznej** ponownie **.**  
   
      Sygnatura czasowa nie ulega zmianie. Oznacza to, że jest wyświetlany zawartości w pamięci podręcznej.  
   
@@ -317,7 +319,7 @@ Buforowanie umożliwia przechowywanie danych w pamięci, aby uzyskać szybki dos
   
 5.  W edytorze tekstów otwórz plik tekstowy, który został utworzony. Jeszcze nie wprowadzaj żadnych zmian.  
   
-6.  Zamknij okno komunikatu, a następnie kliknij przycisk **pobrać pamięci podręcznej** ponownie**.**  
+6.  Zamknij okno komunikatu, a następnie kliknij przycisk **pobrać pamięci podręcznej** ponownie **.**  
   
      Zwróć uwagę sygnatura czasowa ponownie.  
   

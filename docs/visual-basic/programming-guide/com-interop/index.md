@@ -15,14 +15,14 @@ ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
 caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58568b541c43a35f093c45f5ad0efe978b642c91
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
-ms.translationtype: MT
+ms.openlocfilehash: f3f9d7fb51198041356cfc68d49cc703dfdf78b5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.translationtype: HT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="com-interop-visual-basic"></a>COM Interop (Visual Basic)
-Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji. Większość oprogramowania współczesnych obejmuje obiekty COM. Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Składnik modelu COM. pozwala obiektu do udostępnienia jej funkcji do innych składników i umożliwia obsługę aplikacji. Większość oprogramowania współczesnych obejmuje obiekty COM. Mimo że zestawy .NET to najlepszy wybór dla nowych aplikacji, w czasie konieczne może być zastosowana obiektów COM. W tej sekcji opisano niektóre problemy związane z tworzenie i używanie obiektów COM z Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do usługi międzyoperacyjnej modelu COM](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  

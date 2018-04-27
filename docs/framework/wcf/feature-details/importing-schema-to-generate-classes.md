@@ -22,11 +22,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7fc755ff7f1b6c583a1e9aa1bc209495563812f0
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 43eaa4ffe562cf1dde5abd7e7540125dcf383732
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="importing-schema-to-generate-classes"></a>Importowanie schematu w celu generowania klas
 Aby wygenerować klasy na podstawie schematów, której można używać z [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)], użyj <xref:System.Runtime.Serialization.XsdDataContractImporter> klasy. W tym temacie opisano proces i zmian.  
@@ -154,7 +154,7 @@ Aby wygenerować klasy na podstawie schematów, której można używać z [!INCL
  `ReferencedTypes` Właściwość odpowiada **/reference** przełącznika w niektórych tryby pracy narzędzia Svcutil.exe.  
   
 > [!NOTE]
->  Korzystając z Svcutil.exe lub (w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]) **Dodaj odwołanie do usługi** narzędzia, wszystkie typy w bibliotece MsCorLib.dll odwołują się automatycznie.  
+>  Korzystając z Svcutil.exe lub (w programie Visual Studio) **Dodaj odwołanie do usługi** narzędzia, wszystkie typy w bibliotece MsCorLib.dll odwołują się automatycznie.  
   
 #### <a name="import-options-importing-non-datacontract-schema-as-ixmlserializable-types"></a>Opcje importowania: Importowanie schematu DataContract inne niż jako typów IXmlSerializable  
  <xref:System.Runtime.Serialization.XsdDataContractImporter> Obsługuje ograniczonym podzbiorem schematu. W przypadku konstrukcji nieobsługiwany schemat (na przykład atrybutów XML) Próba zaimportowania kończy się niepowodzeniem z powodu wyjątku. Jednak ustawienie <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> właściwości `true` rozszerza zakres schematu obsługiwane. Jeśli wartość `true`, <xref:System.Runtime.Serialization.XsdDataContractImporter> generuje typów, które implementują <xref:System.Xml.Serialization.IXmlSerializable> interfejsu. Dzięki temu bezpośredni dostęp do reprezentacji XML tych typów.  

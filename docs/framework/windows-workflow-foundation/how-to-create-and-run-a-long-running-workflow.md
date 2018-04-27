@@ -1,29 +1,30 @@
 ---
-title: "Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy"
-ms.custom: 
+title: 'Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-caps.latest.revision: "40"
+caps.latest.revision: 40
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a667c303cd1a98e0b027ca2026fe9c719e6baf4f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 10ca88533297e56d48b73b6368c2e8457380f543
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>Porady: tworzenie i uruchamianie długi uruchamiania przepływu pracy
-Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest możliwość środowiska uruchomieniowego utrwalić i zwolnić bezczynne przepływy pracy z bazą danych. Kroki opisane w [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące obsługi przepływu pracy za pomocą aplikacji konsoli. Przykłady zostały przedstawione początkowy przepływy pracy, programy obsługi cyklu życia przepływu pracy i wznawianie zakładki. W celu zaprezentowania skutecznie utrwalania przepływu pracy, konieczne jest bardziej złożonych hosta przepływu pracy obsługującego uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok samouczka przedstawia sposób tworzenia hosta formularzy systemu Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, utrwalania przepływu pracy i stanowi podstawę do zaawansowanych funkcji, takich jak śledzenia i wersjonowania, które są zostało to pokazane w kolejnych krokach samouczka.  
+Jedną z centralnej funkcji Windows Workflow Foundation (WF) jest możliwość środowiska uruchomieniowego utrwalić i zwolnić bezczynne przepływy pracy z bazą danych. Kroki opisane w [porady: uruchamianie przepływu pracy](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md) przedstawiono podstawowe informacje dotyczące obsługi przepływu pracy za pomocą aplikacji konsoli. Przykłady zostały przedstawione początkowy przepływy pracy, programy obsługi cyklu życia przepływu pracy i wznawianie zakładki. W celu zaprezentowania skutecznie utrwalania przepływu pracy, konieczne jest bardziej złożonych hosta przepływu pracy obsługującego uruchamianie i wznawianie wielu wystąpień przepływu pracy. Ten krok samouczka przedstawia sposób tworzenia hosta formularzy systemu Windows, aplikacji, która obsługuje uruchamianie i wznawianie wielu wystąpień przepływu pracy, utrwalania przepływu pracy i stanowi podstawę do zaawansowanych funkcji, takich jak śledzenia i wersjonowania, które są zostało to pokazane w kolejnych krokach samouczka.  
   
 > [!NOTE]
 >  Ten samouczek kroku oraz kolejnych kroków należy używać wszystkich trzech typów przepływu pracy z [porady: tworzenie przepływów pracy](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md). Jeśli nie zostało ukończone wszystkie trzy typy możesz pobrać ukończoną wersję kroki z [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -53,14 +54,14 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
   
 -   [Aby skompilować i uruchomić aplikację](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CreatePersistenceDatabase"></a>Aby utworzyć bazę danych trwałości  
+###  <a name="BKMK_CreatePersistenceDatabase"></a> Aby utworzyć bazę danych trwałości  
   
 1.  Otwórz program SQL Server Management Studio i połączyć się z serwerem lokalnym, na przykład **. \SQLEXPRESS**. Kliknij prawym przyciskiem myszy **baz danych** węzła na serwerze lokalnym, a następnie wybierz **nową bazę danych**. Nazwa nowej bazy danych **WF45GettingStartedTutorial**Zaakceptuj wszystkie inne wartości, a wybierz **OK**.  
   
     > [!NOTE]
     >  Upewnij się, że masz **Create Database** uprawnienia na serwerze lokalnym, przed utworzeniem bazy danych.  
   
-2.  Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do folderu:`C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2.  Wybierz **Otwórz**, **pliku** z **pliku** menu. Przejdź do folderu: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
   
      Wybierz następujące dwa pliki, a następnie kliknij przycisk **Otwórz**.  
   
@@ -75,7 +76,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     > [!WARNING]
     >  Należy wykonać dwa poprzednie kroki w odpowiedniej kolejności. Jeśli zapytania są wykonywane poza kolejnością, występują błędy, a trwałości bazy danych nie jest poprawnie skonfigurowany.  
   
-###  <a name="BKMK_AddReference"></a>Można dodać odwołania do zestawów DurableInstancing  
+###  <a name="BKMK_AddReference"></a> Można dodać odwołania do zestawów DurableInstancing  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz **Dodaj odwołanie**.  
   
@@ -83,7 +84,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
   
 3.  Zaznacz pole wyboru obok **System.Activities.DurableInstancing** i **System.Runtime.DurableInstancing** z **wyniki wyszukiwania** listy, a następnie kliknij przycisk **OK**.  
   
-###  <a name="BKMK_CreateForm"></a>Aby utworzyć formularz hosta przepływu pracy  
+###  <a name="BKMK_CreateForm"></a> Aby utworzyć formularz hosta przepływu pracy  
   
 > [!NOTE]
 >  W tej procedurze opisano sposób dodać i skonfigurować ręcznie formularza. W razie potrzeby można pobrać plików rozwiązania samouczka i Dodaj wypełnionego formularza do projektu. Aby pobrać pliki samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976). Po pobraniu plików, kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** i wybierz polecenie **Dodaj odwołanie**. Dodaj odwołanie do **System.Windows.Forms** i **System.Drawing**. Te odwołania są dodawane automatycznie po dodaniu nowego formularza z **Dodaj**, **nowy element** menu, ale należy je dodać ręcznie, podczas importowania formularza. Po dodaniu odwołań, kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **istniejący element**. Przejdź do `Form` folderu plików projektu, zaznacz opcję **WorkflowHostForm.cs** (lub **WorkflowHostForm.vb**) i kliknij przycisk **Dodaj**. Jeśli chcesz zaimportować formularz, a następnie można przejść do następnej sekcji [można dodać właściwości i metody pomocnicze formularza](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods).  
@@ -131,7 +132,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
   
  ![WF45 Wprowadzenie formularz hosta przepływu pracy samouczek](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
-###  <a name="BKMK_AddHelperMethods"></a>Aby dodać właściwości i metody pomocnicze formularza  
+###  <a name="BKMK_AddHelperMethods"></a> Aby dodać właściwości i metody pomocnicze formularza  
  Kroki opisane w tej sekcji Dodaj właściwości i metody pomocnicze do klasy formularza, które skonfigurować interfejsu użytkownika w postaci do obsługi uruchomiona i wznawianie numer argumentu przepływów pracy.  
   
 1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **kod widoku**.  
@@ -351,7 +352,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-     `ListPersistedWorkflows`wysyła kwerendy w magazynie wystąpień dla wystąpień utrwalonych przepływów pracy i dodaje identyfikatorów wystąpienia `cboInstanceId` pola kombi.  
+     `ListPersistedWorkflows` wysyła kwerendy w magazynie wystąpień dla wystąpień utrwalonych przepływów pracy i dodaje identyfikatorów wystąpienia `cboInstanceId` pola kombi.  
   
 10. Dodaj następujące `UpdateStatus` metody oraz odpowiednich delegowanie do klasy formularza. Ta metoda aktualizacji okno stanu w formularzu ze stanem obecnie uruchomiony przepływ pracy.  
   
@@ -432,7 +433,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-###  <a name="BKMK_ConfigureWorkflowApplication"></a>Aby skonfigurować Magazyn wystąpienia przepływu pracy obsługi cyklu życia i rozszerzenia  
+###  <a name="BKMK_ConfigureWorkflowApplication"></a> Aby skonfigurować Magazyn wystąpienia przepływu pracy obsługi cyklu życia i rozszerzenia  
   
 1.  Dodaj `ConfigureWorkflowApplication` metodę do klasy formularza.  
   
@@ -584,7 +585,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     };  
     ```  
   
-     <xref:System.Activities.PersistableIdleAction> Wyliczenie ma trzy wartości: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, i <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist>przyczyny przepływu pracy, aby utrwalić jednak nie spowoduje zwolnienia przepływu pracy. <xref:System.Activities.PersistableIdleAction.Unload>powoduje, że przepływ pracy do utrwalenia i zostać zwolniony.  
+     <xref:System.Activities.PersistableIdleAction> Wyliczenie ma trzy wartości: <xref:System.Activities.PersistableIdleAction.None>, <xref:System.Activities.PersistableIdleAction.Persist>, i <xref:System.Activities.PersistableIdleAction.Unload>. <xref:System.Activities.PersistableIdleAction.Persist> przyczyny przepływu pracy, aby utrwalić jednak nie spowoduje zwolnienia przepływu pracy. <xref:System.Activities.PersistableIdleAction.Unload> powoduje, że przepływ pracy do utrwalenia i zostać zwolniony.  
   
      Poniższy przykład jest wypełniony `ConfigureWorkflowApplication` metody.  
   
@@ -701,8 +702,8 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-###  <a name="BKMK_WorkflowVersionMap"></a>Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy  
- Aby wznowić wystąpienia przepływu pracy, host musi dostarczyć definicji przepływu pracy. W tym samouczku są trzy typy przepływu pracy, a kolejne kroki samouczka wprowadzić wiele wersji tych typów. `WorkflowIdentity`umożliwia aplikacji hosta skojarzyć z wystąpieniem przepływu pracy utrwalonych informacje identyfikacyjne. Kroki opisane w tej sekcji przedstawiają sposób utworzyć klasę narzędzie pomagające mapowania tożsamości przepływu pracy z wystąpienia utrwalonego przepływu pracy do odpowiedniej definicji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)]`WorkflowIdentity` i wersji, zobacz [za pomocą właściwości WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
+###  <a name="BKMK_WorkflowVersionMap"></a> Aby włączyć uruchamianie i wznawianie wielu typów przepływu pracy  
+ Aby wznowić wystąpienia przepływu pracy, host musi dostarczyć definicji przepływu pracy. W tym samouczku są trzy typy przepływu pracy, a kolejne kroki samouczka wprowadzić wiele wersji tych typów. `WorkflowIdentity` umożliwia aplikacji hosta skojarzyć z wystąpieniem przepływu pracy utrwalonych informacje identyfikacyjne. Kroki opisane w tej sekcji przedstawiają sposób utworzyć klasę narzędzie pomagające mapowania tożsamości przepływu pracy z wystąpienia utrwalonego przepływu pracy do odpowiedniej definicji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] `WorkflowIdentity` i przechowywania wersji, zobacz [za pomocą właściwości WorkflowIdentity and Versioning](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md).  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `WorkflowVersionMap` do **nazwa** polu i kliknij przycisk **Dodaj**.  
   
@@ -816,9 +817,9 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-     `WorkflowVersionMap`zawiera trzy tożsamości przepływu pracy, które mapują do trzech definicji przepływu pracy z tego samouczka i jest używany w następujących sekcjach, gdy przepływy pracy są uruchomione i wznowione.  
+     `WorkflowVersionMap` zawiera trzy tożsamości przepływu pracy, które mapują do trzech definicji przepływu pracy z tego samouczka i jest używany w następujących sekcjach, gdy przepływy pracy są uruchomione i wznowione.  
   
-###  <a name="BKMK_StartWorkflow"></a>Aby uruchomić nowy przepływ pracy  
+###  <a name="BKMK_StartWorkflow"></a> Aby uruchomić nowy przepływ pracy  
   
 1.  Dodaj `Click` obsługę `NewGame`. Aby dodać program obsługi, przełącz się do **widoku Projekt** formularza i kliknij dwukrotnie `NewGame`. A `NewGame_Click` dodaniu obsługi, a widok przełączenie się do widoku kodu formularza. Gdy użytkownik kliknie ten przycisk Nowy przepływ pracy jest uruchomiony.  
   
@@ -1013,7 +1014,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-###  <a name="BKMK_ResumeWorkflow"></a>Aby wznowić przepływ pracy  
+###  <a name="BKMK_ResumeWorkflow"></a> Aby wznowić przepływ pracy  
   
 1.  Dodaj `Click` obsługę `EnterGuess`. Aby dodać program obsługi, przełącz się do **widoku Projekt** formularza i kliknij dwukrotnie `EnterGuess`. Gdy użytkownik kliknie przycisk ten przepływ pracy jest wznawiana.  
   
@@ -1229,7 +1230,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     }  
     ```  
   
-###  <a name="BKMK_TerminateWorkflow"></a>Zakończenie przepływu pracy  
+###  <a name="BKMK_TerminateWorkflow"></a> Zakończenie przepływu pracy  
   
 1.  Dodaj `Click` obsługę `QuitGame`. Aby dodać program obsługi, przełącz się do **widoku Projekt** formularza i kliknij dwukrotnie `QuitGame`. Gdy użytkownik kliknie ten przycisk aktualnie wybrany przepływ pracy zostanie zakończony.  
   
@@ -1303,7 +1304,7 @@ Jedną z centralnej funkcji [!INCLUDE[wf](../../../includes/wf-md.md)] jest moż
     wfApp.Terminate("User resigns.");  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Aby skompilować i uruchomić aplikację  
+###  <a name="BKMK_BuildAndRun"></a> Aby skompilować i uruchomić aplikację  
   
 1.  Kliknij dwukrotnie **Program.cs** (lub **Module1.vb**) w **Eksploratora rozwiązań** Aby wyświetlić kod.  
   

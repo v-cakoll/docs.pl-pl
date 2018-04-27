@@ -26,14 +26,14 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4d288d321063512f91ad94b417bb1a6bf38c9ef9
-ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
+ms.openlocfilehash: 2e31605f428f4e1dc58ee3332977f14dfd394489
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="add-ins-and-extensibility"></a>Dodatki i rozszerzalność
-<a name="top"></a>Dodatki Podaj rozszerzonych funkcji lub usług dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, w której deweloperzy mogą używać w celu opracowywania dodatków i aktywować je w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatku. Model jest zaimplementowana przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  
+<a name="top"></a> Dodatki Podaj rozszerzonych funkcji lub usług dla aplikacji hosta. [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Zapewnia model programowania, w której deweloperzy mogą używać w celu opracowywania dodatków i aktywować je w aplikacji hosta. Model osiąga to, tworząc potok komunikacji między hostem a dodatku. Model jest zaimplementowana przy użyciu typów w <xref:System.AddIn>, <xref:System.AddIn.Hosting>, <xref:System.AddIn.Pipeline>, i <xref:System.AddIn.Contract> przestrzeni nazw.  
   
  Ten przegląd zawiera następujące sekcje:  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 02/01/2018
   
  Na poniższej ilustracji przedstawiono potoku.  
   
- ![Dodaj &#45; w modelu procesu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
+ ![Dodaj&#45;w potoku modelu. ] (../../../docs/framework/add-ins/media/addin1.png "AddIn1")  
 Potok dodatku  
   
  Zestawy dla te segmenty nie są wymagane w tej samej domenie aplikacji. Można załadować dodatku do jego własnej nowej domeny aplikacji, do istniejącej domeny aplikacji lub nawet w domenie aplikacji hosta. Do tej samej domenie aplikacji, umożliwiający dodatki współużytkowanie zasobów i kontekstów zabezpieczeń można załadować wiele dodatków.  
@@ -116,7 +116,7 @@ Potok dodatku
   
 |Tytuł|Opis|  
 |-----------|-----------------|  
-|[Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)|W tym artykule opisano potok komunikacji segmentów z aplikacji hosta do dodatku. Przykłady kodu w wskazówki tematach opisano sposób tworzenia potoku i sposobu wdrażania segmentów potoku w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].|  
+|[Opracowywanie potoku](../../../docs/framework/add-ins/pipeline-development.md)|W tym artykule opisano potok komunikacji segmentów z aplikacji hosta do dodatku. Przykłady kodu w wskazówki tematach opisano sposób tworzenia potoku i sposobu wdrażania segmentów potoku w programie Visual Studio.|  
 |[Domeny aplikacji i zestawy](http://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)|Opisuje relację między domenami aplikacji, które zapewniają granica izolacji zabezpieczeń, niezawodności i przechowywanie wersji i zestawów.|  
   
  [Powrót do początku](#top)  

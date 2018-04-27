@@ -1,27 +1,29 @@
 ---
-title: "Formularze systemu Windows — Omówienie"
-ms.custom: 
+title: Formularze systemu Windows — Omówienie
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bc9ff97583566bd950486d96bd100f05ef651c7e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2620d8314a11e0a90864120c40dbc3935cce75fe
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-overview"></a>Formularze systemu Windows — Omówienie
 Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich, główne funkcje programowania formularzy systemu Windows i jak formularze systemu Windows umożliwia inteligentne klientów, którzy wymagań przedsiębiorstwa i użytkownicy końcowi bieżącej kompilacji.  
@@ -30,7 +32,7 @@ Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich
  Windows Forms opracowywania inteligentne klientów. *Inteligentne klientów* Bogato aplikacje, które ułatwiają wdrażanie i aktualizacji, można pracować, gdy są one połączone z lub odłączony od Internetu, a dostęp do zasobów na komputerze lokalnym w bardziej bezpieczny sposób niż tradycyjne Aplikacje systemu Windows.  
   
 ### <a name="building-rich-interactive-user-interfaces"></a>Tworzenie interfejsów użytkownika rozbudowanych, interakcyjnych  
- Formularze systemu Windows jest technologią klienta inteligentnego [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zbiór bibliotek zarządzanych, które upraszczają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Jeśli używasz środowiska programowania, takich jak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], można utworzyć aplikacji inteligentnych klientów formularzy systemu Windows, które zawierają informacje, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
+ Formularze systemu Windows jest technologią klienta inteligentnego [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], zbiór bibliotek zarządzanych, które upraszczają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie w systemie plików. Gdy używasz Środowisko deweloperskie, takimi jak Visual Studio, można utworzyć aplikacji inteligentnych klientów formularzy systemu Windows, które zawierają informacje, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
   
  W formularzach systemu Windows *formularza* jest visual powierzchni, na którym można wyświetlić informacje dla użytkownika. Zwykle w przypadku tworzenia aplikacji formularzy systemu Windows, dodawanie formantów do formularzy i opracowując odpowiedzi na działania użytkownika, takie jak kliknięcie myszą lub naciśnięcie klucza. A *kontroli* jest elementem interfejsu odrębny użytkownika, który wyświetla dane lub akceptuje dane wejściowe.  
   
@@ -40,7 +42,7 @@ Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich
   
  Formularze systemu Windows ma sformatowanego kontrolek interfejsu użytkownika, które emulują funkcje wysokiej jakości aplikacji, takich jak Microsoft Office. Jeśli używasz <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip> formantu, można utworzyć paski narzędzi i menu, które zawierają tekst i obrazy, wyświetlania podmenu i udostępniać inne formanty, takie jak pola tekstowe i pola kombi.  
   
- Z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] przeciągania i upuszczania Projektant formularzy systemu Windows, można łatwo utworzyć aplikacji formularzy systemu Windows. Po prostu zaznacz formantów kursor i Dodaj miejsce w formularzu. Projektant udostępnia narzędzia, takie jak linie siatki i przystawki wierszy do wykonania proste poza wyrównywanie formantów. I czy jest używany [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów w krótszym czasie.  
+ Projektant formularzy systemu Windows przeciągania i upuszczania programu Visual Studio umożliwia łatwe tworzenie aplikacji formularzy systemu Windows. Po prostu zaznacz formantów kursor i Dodaj miejsce w formularzu. Projektant udostępnia narzędzia, takie jak linie siatki i przystawki wierszy do wykonania proste poza wyrównywanie formantów. Czy za pomocą programu Visual Studio lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów w krótszym czasie.  
   
  Na koniec, jeśli musisz utworzyć własne niestandardowe elementy interfejsu użytkownika <xref:System.Drawing> przestrzeń nazw zawiera dużej liczby klas do renderowania linii, okręgi i innych kształtów bezpośrednio na formularzu.  
   
@@ -54,7 +56,7 @@ Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich
 |-----------------|----------------|  
 |Za pomocą formantów na formularzach|[Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|  
 |Przy użyciu <xref:System.Windows.Forms.ToolStrip> formantu|[Instrukcje: tworzenie podstawowych kontrolek ToolStrip z elementami standardowymi przy użyciu narzędzia Projektant](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|  
-|Tworzenie grafiki<xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
+|Tworzenie grafiki <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Tworzenie niestandardowych formantów|[Instrukcje: dziedziczenie z klasy UserControl](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
   
 ### <a name="displaying-and-manipulating-data"></a>Wyświetlanie danych i operowanie nimi  
@@ -64,7 +66,7 @@ Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich
   
  Formanty powiązane z danymi można łatwo utworzyć przy użyciu okna źródeł danych. Jest wyświetlany w oknie źródeł danych, takich jak bazy danych, usługi sieci Web i obiektów w projekcie. Formanty powiązane z danymi można utworzyć, przeciągając elementy z tego okna na formularze w projekcie. Użytkownik może również wiązania danych istniejących formantów do danych przeciągając obiekty z okna źródeł danych na istniejące kontrolki.  
   
- Jest innego typu powiązania danych w formularzach systemu Windows można zarządzać *ustawienia*. Większość inteligentnych aplikacji klienckich należy zachować pewne informacje o ich stanu czasu wykonywania, takich jak rozmiar Ostatnia znana formularzy i zachować dane preferencji użytkownika, takie jak domyślne lokalizacje zapisane pliki. Funkcja ustawienia aplikacji adresy te wymagania, zapewniając łatwy sposób przechowywania obu typów ustawień na komputerze klienckim. Po zdefiniowaniu te ustawienia przy użyciu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub edytora kodu, ustawienia są utrwalane w formacie XML i automatycznie odczytywać do pamięci w czasie wykonywania.  
+ Jest innego typu powiązania danych w formularzach systemu Windows można zarządzać *ustawienia*. Większość inteligentnych aplikacji klienckich należy zachować pewne informacje o ich stanu czasu wykonywania, takich jak rozmiar Ostatnia znana formularzy i zachować dane preferencji użytkownika, takie jak domyślne lokalizacje zapisane pliki. Funkcja ustawienia aplikacji adresy te wymagania, zapewniając łatwy sposób przechowywania obu typów ustawień na komputerze klienckim. Po zdefiniowaniu te ustawienia przy użyciu programu Visual Studio lub edytora kodu, ustawienia są utrwalone w formacie XML i automatycznie odczytywać do pamięci w czasie wykonywania.  
   
 #### <a name="help-displaying-and-manipulating-data"></a>Wyświetlanie pomocy i operowanie nimi danych  
  Aby uzyskać szczegółowe informacje na temat używania tych funkcji zobacz poniższe tematy Pomocy.  
@@ -77,20 +79,20 @@ Poniższy przegląd zawiera omówienie zalet inteligentnych aplikacji klienckich
 |Przy użyciu ustawień aplikacji|[Instrukcje: tworzenie ustawień aplikacji](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|  
   
 ### <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich  
- Po napisano aplikację, musisz wysłać aplikacji dla użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Jeśli używasz [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z wewnątrz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] dzięki za pomocą kilku kliknięć i zapewnić użytkownikom adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]zarządza wszystkie elementy i zależności w aplikacji oraz zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
+ Po napisano aplikację, musisz wysłać aplikacji dla użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Jeśli używasz [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z poziomu programu Visual Studio za pomocą kilku kliknięć i zapewnić użytkownikom adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] zarządza wszystkie elementy i zależności w aplikacji oraz zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchom oba projekty w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dodaje łącze do aplikacji w użytkownika **Start** menu. Użytkownik może następnie otwórz aplikację bez korzystania z adresu URL.  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchom oba projekty w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] dodaje łącze do aplikacji w użytkownika **Start** menu. Użytkownik może następnie otwórz aplikację bez korzystania z adresu URL.  
   
- Podczas aktualizacji aplikacji opublikowaniu nowego manifest wdrażania i nową kopię aplikacji do serwera sieci Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]wykryje, że jest dostępna aktualizacja i Uaktualnij Instalacja dla użytkownika; żadne Programowanie niestandardowych jest wymagana w celu zaktualizowania starego zestawy.  
+ Podczas aktualizacji aplikacji opublikowaniu nowego manifest wdrażania i nową kopię aplikacji do serwera sieci Web. [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wykryje, że jest dostępna aktualizacja i Uaktualnij Instalacja dla użytkownika; żadne Programowanie niestandardowych jest wymagana w celu zaktualizowania starego zestawy.  
   
 #### <a name="help-deploying-clickonce-applications"></a>Pomoc wdrażanie technologii ClickOnce  
  Aby uzyskać pełne wprowadzenie do [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)], zobacz [zabezpieczenia ClickOnce i wdrażania](/visualstudio/deployment/clickonce-security-and-deployment). Aby uzyskać szczegółowe informacje na temat używania tych funkcji zobacz następujące tematy pomocy  
   
 |Opis|Temat pomocy|  
 |-----------------|----------------|  
-|Wdrażanie aplikacji przy użyciu[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Instrukcje: publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|Wdrażanie aplikacji przy użyciu [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Instrukcje: publikowanie aplikacji ClickOnce za pomocą Kreatora publikacji](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [Przewodnik: ręczne wdrażanie aplikacji ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |Aktualizowanie [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożenia|[Instrukcje: zarządzanie aktualizacji dla aplikacji ClickOnce](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|Zarządzanie zabezpieczeniami za pomocą[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Instrukcje: włączenie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|Zarządzanie zabezpieczeniami za pomocą [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]|[Instrukcje: włączenie ustawień zabezpieczeń technologii ClickOnce](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ### <a name="other-controls-and-features"></a>Inne formanty i funkcje  
  Istnieje wiele innych funkcji w formularzach systemu Windows, która implementującej typowych zadań, szybkie i łatwe, takie jak obsługa tworzenie okien dialogowych, drukowanie, dodawanie pomocy i dokumentacja i lokalizacja aplikacji na wiele języków. Ponadto formularzy systemu Windows opiera się na skuteczną ochronę systemu [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Z tym systemem można zwolnić większe bezpieczeństwo aplikacji dla klientów.  

@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: Tworzenie formularza wzorzec szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows"
-ms.custom: 
+title: 'Wskazówki: Tworzenie formularza wzorzec szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: af6f1bcb172543b372cbca52f54b675b6baf87d2
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e5c3dfc547fe775b38ad4c2e658755268f791502
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>Wskazówki: tworzenie formularza wzorzec/szczegół za pomocą dwóch formantów DataGridView formularzy systemu Windows
 Jedną z najbardziej typowych scenariuszy stosowania <xref:System.Windows.Forms.DataGridView> formant jest *wzorzec/szczegół* formularza, w którym jest wyświetlany relacji nadrzędny/podrzędny między dwiema tabelami bazy danych. Wybierania wierszy w tabeli głównej powoduje, że tabela szczegółów aktualizowania przy użyciu odpowiednich danych podrzędnych.  
@@ -44,7 +46,7 @@ Jedną z najbardziej typowych scenariuszy stosowania <xref:System.Windows.Forms.
   
 #### <a name="to-create-a-masterdetail-form"></a>Aby utworzyć formularz główny/szczegółowy  
   
-1.  Utwórz klasę pochodną <xref:System.Windows.Forms.Form> i zawiera dwa <xref:System.Windows.Forms.DataGridView> kontrolek i dwa <xref:System.Windows.Forms.BindingSource> składników. Poniższy kod zawiera podstawowe formularza inicjowania oraz `Main` metody. Jeśli używasz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] projektanta, aby utworzyć formularz, można użyć projektanta wygenerowanego kodu zamiast tego kodu, ale należy użyć nazw wyświetlanych w deklaracjach zmiennych w tym miejscu.  
+1.  Utwórz klasę pochodną <xref:System.Windows.Forms.Form> i zawiera dwa <xref:System.Windows.Forms.DataGridView> kontrolek i dwa <xref:System.Windows.Forms.BindingSource> składników. Poniższy kod zawiera podstawowe formularza inicjowania oraz `Main` metody. Tworzenie formularza za pomocą projektanta programu Visual Studio można używać Projektanta wygenerowanego kodu zamiast tego kodu, ale należy użyć nazw wyświetlanych w deklaracjach zmiennych w tym miejscu.  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  

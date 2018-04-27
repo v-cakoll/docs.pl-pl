@@ -18,14 +18,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: e7c6d31293109a0d778136235ccfc894aeba8574
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: f8a6c6be6874c1a90c9e40b5b82d833aeaa9b63a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Porady: konfigurowanie usług aplikacji klienta
-W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
+W tym temacie opisano, jak używać programu Visual Studio **projektanta projektu** Włączanie i konfigurowanie usługi aplikacji klienta. Usługi aplikacji klienta można użyć do weryfikowania użytkowników i pobierania ról użytkownika i ustawienia z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji. Po przeprowadzeniu konfiguracji, są dostępne włączone usługi w kodzie aplikacji zgodnie z opisem w [przegląd usług aplikacji klienta](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
  Można włączyć i skonfigurować usługi aplikacji klienta na **usług** strony **projektanta projektu**. **Usług** strona aktualizuje wartości w pliku App.config projektu. Aby uzyskać dostęp do **projektanta projektu**, użyj **właściwości** na **projektu** menu. Aby uzyskać więcej informacji na temat **usług** strony, zobacz [Strona usług, Projektant projektu](https://msdn.microsoft.com/library/bb398109).  
   
@@ -100,7 +100,7 @@ W tym temacie opisano sposób użycia [!INCLUDE[vsprvs](../../../includes/vsprvs
   
      Wartość domyślna `Data Source = |SQL/CE|` do pola tekstowego.  
   
-3.  Aby wygenerować i korzystania z bazy danych programu SQL Server Compact, zachowaj domyślną wartość ciągu połączenia. [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zostanie wygenerowany plik bazy danych i umieść ją w katalogu wskazywanego przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> właściwości.  
+3.  Aby wygenerować i korzystania z bazy danych programu SQL Server Compact, zachowaj domyślną wartość ciągu połączenia. Visual Studio będzie Generuj plik bazy danych i umieść ją w katalogu wskazywanego przez <xref:System.Windows.Forms.Application.UserAppDataPath%2A?displayProperty=nameWithType> właściwości.  
   
 4.  Generowanie i używanie zaszyfrowanych [!INCLUDE[ssEW](../../../includes/ssew-md.md)] bazy danych, należy dodać `password` i `encrypt database` wartości w parametrach połączenia, jak pokazano w poniższym przykładzie.  
   

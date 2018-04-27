@@ -1,27 +1,29 @@
 ---
-title: "Obsługa zdarzeń zestawu danych"
-ms.custom: 
+title: Obsługa zdarzeń zestawu danych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-ado
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-ado
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
-caps.latest.revision: "4"
+caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: 820d93529fc12f3eeacd730cc66ec85ffd560ff9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: aea9fc2caae675b77a8aad730869adb00f593baf
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="handling-dataset-events"></a>Obsługa zdarzeń zestawu danych
 <xref:System.Data.DataSet> Obiektu zawiera trzy zdarzenia: <xref:System.ComponentModel.MarshalByValueComponent.Disposed>, <xref:System.Data.DataSet.Initialized>, i <xref:System.Data.DataSet.MergeFailed>.  
@@ -56,10 +58,10 @@ private static void DataSetMergeFailed(
 ## <a name="the-initialized-event"></a>Zainicjowane wydarzenie  
  <xref:System.Data.DataSet.Initialized> Po wystąpieniu zdarzenia `DataSet` Konstruktor inicjuje nowe wystąpienie klasy `DataSet`.  
   
- <xref:System.Data.DataSet.IsInitialized%2A> Zwraca `true` Jeśli `DataSet` ukończono inicjalizacji; w przeciwnym razie zwraca `false`. <xref:System.Data.DataSet.BeginInit%2A> — Metoda, która rozpoczyna inicjowanie `DataSet`, ustawia <xref:System.Data.DataSet.IsInitialized%2A> do `false`. <xref:System.Data.DataSet.EndInit%2A> Metodę, która kończy się inicjowanie `DataSet`, ustawia ją na `true`. Te metody są używane przez [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] środowisku projektowania zainicjować `DataSet` który jest używany przez inny składnik. Użytkownik nie będzie często używać ich w kodzie.  
+ <xref:System.Data.DataSet.IsInitialized%2A> Zwraca `true` Jeśli `DataSet` ukończono inicjalizacji; w przeciwnym razie zwraca `false`. <xref:System.Data.DataSet.BeginInit%2A> — Metoda, która rozpoczyna inicjowanie `DataSet`, ustawia <xref:System.Data.DataSet.IsInitialized%2A> do `false`. <xref:System.Data.DataSet.EndInit%2A> Metodę, która kończy się inicjowanie `DataSet`, ustawia ją na `true`. Te metody są używane w środowisku projektowania programu Visual Studio można zainicjować `DataSet` który jest używany przez inny składnik. Użytkownik nie będzie często używać ich w kodzie.  
   
 ## <a name="the-disposed-event"></a>Usunięte zdarzeń  
- `DataSet`jest pochodną <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> — metoda i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje do nasłuchiwania na zlikwidowanym zdarzenie dla składnika obsługi zdarzeń. Można użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenie `DataSet` Jeśli chcesz wykonać kodu, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
+ `DataSet` jest pochodną <xref:System.ComponentModel.MarshalByValueComponent> klasy, która ujawnia zarówno <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> — metoda i <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzeń. <xref:System.ComponentModel.MarshalByValueComponent.Disposed> Zdarzenie dodaje do nasłuchiwania na zlikwidowanym zdarzenie dla składnika obsługi zdarzeń. Można użyć <xref:System.ComponentModel.MarshalByValueComponent.Disposed> zdarzenie `DataSet` Jeśli chcesz wykonać kodu, gdy <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> metoda jest wywoływana. <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> zwalnia zasoby używane przez <xref:System.ComponentModel.MarshalByValueComponent>.  
   
 > [!NOTE]
 >  `DataSet` i `DataTable` obiekty dziedziczyć <xref:System.ComponentModel.MarshalByValueComponent> i obsługuje <xref:System.Runtime.Serialization.ISerializable> interfejs dla niego komunikację zdalną. Są to jedyne obiekty ADO.NET, które może zostać wykonana zdalnie. Aby uzyskać więcej informacji, zobacz [obiektów zdalnych](http://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58).  

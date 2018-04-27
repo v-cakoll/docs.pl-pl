@@ -1,12 +1,13 @@
 ---
 title: 'Porady: ustawianie opcji siatki dla wszystkich formularzy systemu Windows'
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snap to grid [Windows Forms], Windows Forms Designer
@@ -15,19 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - Windows Forms Designer
 ms.assetid: 36967466-1dfd-4fae-a7f1-7bf2cbc94048
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f4b77f77490ce3229cd2f05f2a8824f2c4784bcd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 67f59c76066e5ff1688d39a7bf5e349d00262bc3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-set-grid-options-for-all-windows-forms"></a>Porady: ustawianie opcji siatki dla wszystkich formularzy systemu Windows
-Co stanie pracy w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] Środowisko deweloperskie, można ustawić preferencje dotyczące wszystkich formularzy i pracować z projektami w narzędziu Projektant dla formularzy systemu Windows.  
+Stają się używane do pracy w środowisku programowania Visual Studio, można ustawić preferencje dotyczące wszystkich formularzy i projektów, którymi współpracujesz w narzędziu Projektant dla formularzy systemu Windows.  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

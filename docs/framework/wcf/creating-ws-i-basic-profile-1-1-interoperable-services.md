@@ -1,13 +1,13 @@
 ---
-title: "Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I"
-ms.custom: 
+title: Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,17 +15,17 @@ dev_langs:
 helpviewer_keywords:
 - configuration [WCF], interoperable services
 ms.assetid: 91b70a21-8f5c-4679-808c-2ed5fa6b2013
-caps.latest.revision: 
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: d6bef68c8ba433e902cfd50e59a3b343e3af08cd
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: fa561e5019bcf90e93da669f93cbce51d02e89dc
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="creating-ws-i-basic-profile-11-interoperable-services"></a>Tworzenie usług międzyoperacyjnych 1.1 profilu podstawowego WS-I
 Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu końcowego usługi do współdziałać z [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] obsługi klientów w sieci Web:  
@@ -42,7 +42,7 @@ Aby skonfigurować [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] punktu k
   
 -   Kontrolowane przez zabezpieczenia wiadomości <xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> wartość zapewnia obsługę WS-Security zgodne z WS-I Basic 1.0 profil zabezpieczeń. Pozostaw tę właściwość na wartość domyślną, która jest <xref:System.ServiceModel.SecurityMode.Transport?displayProperty=nameWithType> nieużywanie WS-Security.  
   
- Aby uzyskać metadanych [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dostępnych usług do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], użyj narzędzia generowania klienta usługi sieci Web: [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [narzędzia odnajdywania usług sieci Web ( DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)i `Add Web Reference` w narzędziu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]; należy włączyć publikowanie metadanych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Publikowania punkty końcowe metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
+ Aby uzyskać metadanych [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] dostępnych usług do [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)], użyj narzędzia generowania klienta usługi sieci Web: [narzędzia języka opisu usługi sieci Web (Wsdl.exe)](http://msdn.microsoft.com/library/b9210348-8bc2-4367-8c91-d1a04b403e88), [narzędzia odnajdywania usług sieci Web ( DISCO.exe)](http://msdn.microsoft.com/library/acd88078-c581-42bc-94ca-6633e2851979)i `Add Web Reference` funkcji w programie Visual Studio; należy włączyć publikowanie metadanych. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Publikowanie punktów końcowych metadanych](../../../docs/framework/wcf/publishing-metadata-endpoints.md).  
   
 ## <a name="example"></a>Przykład  
   

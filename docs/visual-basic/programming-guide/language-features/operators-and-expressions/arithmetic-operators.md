@@ -1,11 +1,12 @@
 ---
 title: Operatory arytmetyczne w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - type safety
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 7fec98c38eebc34a0f84e051dc7c0914f537418f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: cef1e3610d885a0f3a2bae718641f7b8ca1062dc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Operatory arytmetyczne w Visual Basic
 Operatory arytmetyczne służą do wykonywania wielu znanych operacje arytmetyczne, obejmujących obliczanie wartości liczbowych reprezentowany przez literały, zmienne, inne wyrażenia, funkcji i wywołaniach właściwości i stałe. Również są sklasyfikowane z operatorów arytmetycznych są operatory przesunięcia bitowego, które działają na poziomie poszczególnych bitów operandy i przesunięcia ich wzorców bit do lewej lub prawej.  
@@ -65,7 +66,7 @@ Operatory arytmetyczne służą do wykonywania wielu znanych operacje arytmetycz
   
 |Typ danych dzielna|Typ danych dzielnik.|Wartość dzielna|Wynik|  
 |---|---|---|---|  
-|`Double`|`Double`|0|<xref:System.Double.NaN>(nie ze sobą matematycznie zdefiniowanych numer)|  
+|`Double`|`Double`|0|<xref:System.Double.NaN> (nie ze sobą matematycznie zdefiniowanych numer)|  
 |`Double`|`Double`|> 0|<xref:System.Double.PositiveInfinity>|  
 |`Double`|`Double`|\< 0|<xref:System.Double.NegativeInfinity>|  
   
@@ -98,13 +99,13 @@ Operatory arytmetyczne służą do wykonywania wielu znanych operacje arytmetycz
 ## <a name="type-safety"></a>Zabezpieczenie typów  
  Argumenty operacji należy tego samego typu. Na przykład, jeśli przeprowadzasz dodawania przy `Integer` zmiennej, należy dodać ją do innej `Integer` zmiennej, a powinien Przypisz wynik do zmiennej typu `Integer` również.  
   
- Jednym ze sposobów zapewnienia dobrej bezpieczne kodowanie rozwiązaniem jest użycie [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Jeśli ustawisz `Option Strict On`, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatycznie wykonuje *bezpieczne* konwersji. Na przykład, jeśli próbujesz dodać `Integer` zmienną `Double` zmiennej i przypisać wartości do `Double` zmiennej, operacja działa normalnie, ponieważ `Integer` można przekonwertować wartości `Double` bez utraty danych. Konwersje typu niebezpieczny z drugiej strony, spowodować błąd kompilatora z `Option Strict On`. Na przykład, jeśli próbujesz dodać `Integer` zmienną `Double` zmiennej i przypisać wartości do `Integer` zmiennej, wystąpi błąd kompilatora wyników, ponieważ `Double` zmiennej nie można niejawnie przekonwertować na typ `Integer`.  
+ Jednym ze sposobów zapewnienia dobrej bezpieczne kodowanie rozwiązaniem jest użycie [Option Strict — instrukcja](../../../../visual-basic/language-reference/statements/option-strict-statement.md). Jeśli ustawisz `Option Strict On`, Visual Basic automatycznie wykonuje *bezpieczne* konwersji. Na przykład, jeśli próbujesz dodać `Integer` zmienną `Double` zmiennej i przypisać wartości do `Double` zmiennej, operacja działa normalnie, ponieważ `Integer` można przekonwertować wartości `Double` bez utraty danych. Konwersje typu niebezpieczny z drugiej strony, spowodować błąd kompilatora z `Option Strict On`. Na przykład, jeśli próbujesz dodać `Integer` zmienną `Double` zmiennej i przypisać wartości do `Integer` zmiennej, wystąpi błąd kompilatora wyników, ponieważ `Double` zmiennej nie można niejawnie przekonwertować na typ `Integer`.  
   
- Jeśli ustawisz `Option Strict Off`, jednak [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umożliwia niejawnej konwersji zawężającej została wykonana, chociaż może spowodować nieoczekiwane utrata danych lub dokładności. Z tego powodu zaleca się, że używasz `Option Strict On` podczas pisania kodu produkcyjnego. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Jeśli ustawisz `Option Strict Off`, jednak Visual Basic umożliwia niejawnej konwersji zawężającej została wykonana, chociaż może spowodować nieoczekiwane utrata danych lub dokładności. Z tego powodu zaleca się, że używasz `Option Strict On` podczas pisania kodu produkcyjnego. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Operatory arytmetyczne](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)  
- [Bit Shift — operatory](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
+ [Operatory Bit Shift](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)  
  [Operatory porównania w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
  [Operatory łączenia w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md)  
  [Operatory logiczne i bitowe w Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)  

@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: hosting złożonego formantu Windows Forms w WPF"
-ms.custom: 
+title: 'Wskazówki: hosting złożonego formantu Windows Forms w WPF'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f332461bd5abb5e3fca705a8a5fd363c3d33296
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: fe706e92223d868476ac438e98b16cf07bb21259
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>Wskazówki: hosting złożonego formantu Windows Forms w WPF
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia bogate środowisko do tworzenia aplikacji. Jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej skuteczne ponownie użyć co najmniej części kodu w Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji zamiast ponownego wpisywania go od początku. Najbardziej typowym scenariuszem jest w przypadku istniejących [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] kontrolki. W niektórych przypadkach nie jeszcze masz dostęp do kodu źródłowego dla tych kontrolek. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zawiera proste procedury obsługi tych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla większości sieci programowania podczas hosting sieci specjalne <xref:System.Windows.Forms.DataGridView> kontrolki.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia bogate środowisko do tworzenia aplikacji. Jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej skuteczne ponownie użyć co najmniej części kodu w Twojej [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji zamiast ponownego wpisywania go od początku. Najbardziej typowym scenariuszem jest w przypadku istniejących formantów formularzy systemu Windows. W niektórych przypadkach nie jeszcze masz dostęp do kodu źródłowego dla tych kontrolek. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zawiera proste procedury obsługi tych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Na przykład można użyć [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] dla większości sieci programowania podczas hosting sieci specjalne <xref:System.Windows.Forms.DataGridView> kontrolki.  
   
- Ten przewodnik zawiera kroki aplikacji obsługującego [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] złożonych kontrolek do wykonania wprowadzania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Formantu złożonego jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formanty. W tym przewodniku została zaprojektowana jako niemal identyczny jak w wyglądu i działania [wskazówki: hostowanie formantu złożonego WPF w formularzach systemu Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Podstawowa różnica polega na tym, czy została odwrócona scenariuszu obsługi.  
+ Ten przewodnik zawiera kroki aplikacji, która obsługuje formantu złożonego formularzy systemu Windows do wykonywania wprowadzania danych w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji. Formantu złożonego jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formanty. W tym przewodniku została zaprojektowana jako niemal identyczny jak w wyglądu i działania [wskazówki: hostowanie formantu złożonego WPF w formularzach systemu Windows](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md). Podstawowa różnica polega na tym, czy została odwrócona scenariuszu obsługi.  
   
- Instruktaż jest podzielona na dwie sekcje. Pierwsza sekcja krótko opisano wykonania [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] formantu złożonego. Druga sekcja omówiono szczegółowo do obsługi złożonych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, odbieranie zdarzeń z formantu i uzyskiwać dostęp do niektórych właściwości formantu.  
+ Instruktaż jest podzielona na dwie sekcje. Pierwsza sekcja zawiera krótki opis implementacji złożonego formantu formularzy systemu Windows. Druga sekcja omówiono szczegółowo do obsługi złożonych kontrolek w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji, odbieranie zdarzeń z formantu i uzyskiwać dostęp do niektórych właściwości formantu.  
   
  Zadania przedstawione w tym przewodniku obejmują:  
   
@@ -47,7 +49,7 @@ ms.lasthandoff: 01/19/2018
 -   [!INCLUDE[vs_dev10_long](../../../../includes/vs-dev10-long-md.md)].  
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>Implementowanie złożonego formantu formularzy systemu Windows  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Formantu złożonego używana w tym przykładzie jest proste wprowadzania danych formularza. Ten formularz przyjmuje nazwę użytkownika i adres, a następnie używa niestandardowych zdarzeń do zwracania informacji do hosta. Na poniższej ilustracji przedstawiono renderowanych formantu.  
+ Złożonych kontrolek formularzy systemu Windows używane w tym przykładzie jest formularzem wprowadzania danych w prostych. Ten formularz przyjmuje nazwę użytkownika i adres, a następnie używa niestandardowych zdarzeń do zwracania informacji do hosta. Na poniższej ilustracji przedstawiono renderowanych formantu.  
   
  ![Formant formularzy systemu Windows proste](../../../../docs/framework/wpf/advanced/media/wfcontrol.gif "WFControl")  
 Złożonego formantu formularzy systemu Windows  
@@ -167,7 +169,7 @@ Kompletna aplikacja przedstawiający formantu osadzonego w aplikacji WPF
 4.  Dodaj odwołanie do zestawu WindowsFormsIntegration, o nazwie WindowsFormsIntegration.dll.  
   
 ### <a name="implementing-the-basic-layout"></a>Podstawowe układu Implementowanie  
- [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Hosta aplikacji jest zaimplementowana w MainWindow.xaml. Ten plik zawiera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kod znaczników, który definiuje układ i obsługuje [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] formantu. Aplikacja jest podzielona na trzy obszary:  
+ [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Hosta aplikacji jest zaimplementowana w MainWindow.xaml. Ten plik zawiera [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] kod znaczników, który definiuje układ i obsługuje formantu formularzy systemu Windows. Aplikacja jest podzielona na trzy obszary:  
   
 -   **Właściwości formantu** panelu, które zawiera kolekcję przycisków opcji, które służy do modyfikowania różnych właściwości obsługiwanego formantu.  
   
@@ -193,9 +195,9 @@ Kompletna aplikacja przedstawiający formantu osadzonego w aplikacji WPF
   
  Dwa elementy w kodzie XAML obsługi hostingu:  
   
--   `WindowsFormsHost`reprezentuje <xref:System.Windows.Forms.Integration.WindowsFormsHost> element, który pozwala na hoście [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] kontroli w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
+-   `WindowsFormsHost` reprezentuje <xref:System.Windows.Forms.Integration.WindowsFormsHost> element, który umożliwia hostowanie kontrolki formularza systemu Windows, w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji.  
   
--   `mcl:MyControl1`, która reprezentuje `MyControl1`, jest dodawany do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu podrzędnej kolekcji. W związku z tym to [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] renderowania formantu jako część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a następnie może komunikować się z urządzeniem za pomocą aplikacji.  
+-   `mcl:MyControl1`, która reprezentuje `MyControl1`, jest dodawany do <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu podrzędnej kolekcji. W związku z tym renderowania tego formantu formularzy systemu Windows jako część [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] , a następnie może komunikować się z urządzeniem za pomocą aplikacji.  
   
 ### <a name="implementing-the-code-behind-file"></a>Implementacja pliku CodeBehind  
  Plik CodeBehind, MainWindow.xaml.vb lub MainWindow.xaml.cs, zawiera kod procedury, która implementuje funkcje [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] omówione w poprzedniej sekcji. Podstawowe zadania są:  
@@ -229,7 +231,7 @@ using MyControls;
 ```  
   
 #### <a name="handling-the-onbuttonclick-event"></a>Obsługa zdarzeń OnButtonClick  
- `MyControl1`zgłasza `OnButtonClick` zdarzenie, gdy użytkownik kliknie jeden z przycisków kontrolki.  
+ `MyControl1` zgłasza `OnButtonClick` zdarzenie, gdy użytkownik kliknie jeden z przycisków kontrolki.  
   
  Dodaj następujący kod do `MainWindow` klasy.  
   

@@ -1,24 +1,26 @@
 ---
-title: "Powiązanie HTTP w standardzie WS 2007 Federation"
-ms.custom: 
+title: Powiązanie HTTP w standardzie WS 2007 Federation
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 91c1b477-a96e-4bf5-9330-5e9312113371
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8b04984ad1e21da4bc86760046029d3b94b70758
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b7126e4c0c293bfbf78cecf97cc13ea91e6c0c62
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ws-2007-federation-http-binding"></a>Powiązanie HTTP w standardzie WS 2007 Federation
 W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.WS2007FederationHttpBinding>, standard, powiązanie, której można utworzyć scenariuszach obejmujących Federację wersji 1.3 Specyfikacja WS-Trust tej pomocy technicznej.  
@@ -108,17 +110,15 @@ W tym przykładzie przedstawiono użycie <xref:System.ServiceModel.WS2007Federat
  STS udostępnia jeden punkt końcowy przy użyciu standardu <xref:System.ServiceModel.WS2007HttpBinding>. Usługa odpowiada na żądania klientów dotyczące tokenów. Jeśli klient jest uwierzytelniany przy użyciu konta systemu Windows, usługa wystawia token, który zawiera nazwę użytkownika klienta jako oświadczenia. Podczas tworzenia tokenu usługi STS znaki tokenu przy użyciu klucza prywatnego skojarzonego z CN = certyfikat STS. Ponadto tworzy klucza symetrycznego i szyfruje go za pomocą klucza publicznego skojarzonego z CN = localhost certyfikat. Zwracany token do klienta, STS zwraca klucz symetryczny. Klient przedstawia wystawiony token `ICalculator` usługi i okaże się wie klucza symetrycznego, tworząc wiadomości z tego klucza.  
   
  Po uruchomieniu próbki żądania tokenu zabezpieczającego jest wyświetlany w oknie konsoli usługi STS. Operacja żądania i odpowiedzi są wyświetlane w oknach konsoli klienta i usługi. Naciśnij klawisz ENTER w żadnym z okna konsoli można zamknąć aplikacji.  
-  
- `Add(100,15.99) = 115.99`  
-  
- `Subtract(145,76.54) = 68.46`  
-  
- `Multiply(9,81.25) = 731.25`  
-  
- `Divide(22,7) = 3.14285714285714`  
-  
- `Press <ENTER> to terminate client.`  
-  
+
+```
+Add(100,15.99) = 115.99
+Subtract(145,76.54) = 68.46
+Multiply(9,81.25) = 731.25
+Divide(22,7) = 3.14285714285714
+Press <ENTER> to terminate client.
+```
+
  Plik pliku Setup.bat uwzględnionych w tym przykładzie umożliwia skonfigurowanie serwera i STS za pomocą odpowiednich certyfikatów do uruchomienia aplikacji siebie. Plik wsadowy tworzy dwa certyfikaty w magazynie LocalMachine/TrustedPeople certyfikatów. Pierwszy certyfikat ma nazwę podmiotu, CN = STS i jest używany przez usługę STS do podpisywania tokenów zabezpieczających, które wystawia klientowi. Drugi certyfikat ma nazwę podmiotu, CN = localhost i jest używany przez usługę STS do szyfrowania klucza w taki sposób, aby usługa może odszyfrować.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  

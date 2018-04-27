@@ -19,11 +19,11 @@ ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
 caps.latest.revision: 30
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 8a1e0e017a700041d13b131d32b72d7118621719
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: 75610174fdc91e4a29f17dc5563a7298c56a44e2
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/09/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() i argumenty wiersza poleceń (C# przewodnik programowania w języku)
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/09/2018
 - `Main` jest zadeklarowana w klasie lub strukturze. `Main` musi być [statycznych](../../../csharp/language-reference/keywords/static.md) i nie muszą być [publicznego](../../../csharp/language-reference/keywords/public.md). (W poprzedniego przykładu, otrzymuje dostęp do domyślnej z [prywatnej](../../../csharp/language-reference/keywords/private.md).) Otaczającej klasy lub struktury nie musi być statyczna.
 - `Main` może posiadać `void`, `int`, lub w programie C# 7.1, `Task`, lub `Task<int>` typ zwracany.
 - Tylko wtedy, gdy `Main` zwraca `Task` lub `Task<int>`, deklaracja `Main` mogą obejmować [ `async` ](../../language-reference/keywords/async.md) modyfikator. Należy pamiętać, że jest to wyraźnie wyklucza `async void Main` metody.
-- `Main` Metody mogą być deklarowane z lub bez `string[]` parametr, który zawiera argumenty wiersza polecenia. Korzystając z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] do tworzenia aplikacji systemu Windows, użytkownik może ręcznie dodaj parametr w przeciwnym razie użyj <xref:System.Environment> klasy uzyskanie argumenty wiersza polecenia. Parametry są odczytywane jako indeksie zero argumentów wiersza polecenia. W przeciwieństwie do C i C++ nazwa programu nie jest traktowana jako pierwszy argument wiersza polecenia.
+- `Main` Metody mogą być deklarowane z lub bez `string[]` parametr, który zawiera argumenty wiersza polecenia. Przy użyciu programu Visual Studio do tworzenia aplikacji systemu Windows, użytkownik może ręcznie dodaj parametr w przeciwnym razie użyj <xref:System.Environment> klasy uzyskanie argumenty wiersza polecenia. Parametry są odczytywane jako indeksie zero argumentów wiersza polecenia. W przeciwieństwie do C i C++ nazwa programu nie jest traktowana jako pierwszy argument wiersza polecenia.
 
 Dodanie `async` i `Task`, `Task<int>` zwracać typów upraszcza kodu programu, gdy konieczne uruchomienie aplikacji konsoli i `await` operacji asynchronicznych w `Main`.
 

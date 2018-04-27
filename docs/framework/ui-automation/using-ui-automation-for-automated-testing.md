@@ -1,28 +1,30 @@
 ---
-title: "Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych"
-ms.custom: 
+title: Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - automated testing
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 128af9a015d25985b7075f5b670fea36c6773267
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6539829feacf8c9a5c9c1339df299a21ac5fe64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>Korzystanie z automatyzacji interfejsu użytkownika do testów automatycznych
 > [!NOTE]
@@ -30,9 +32,9 @@ ms.lasthandoff: 12/22/2017
   
  Ten przegląd zawiera opis sposobu [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] można użyteczne jako platforma dostęp programowy w zautomatyzować testowania scenariuszy.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]zapewnia ujednolicone obiektu modelu, który włącza wszystkie [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] struktury udostępniać złożone i zaawansowane funkcje w sposób dostępny i łatwo automatycznych.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] zapewnia ujednolicone obiektu modelu, który włącza wszystkie [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] struktury udostępniać złożone i zaawansowane funkcje w sposób dostępny i łatwo automatycznych.  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]został opracowany jako następnika do [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]istniejące ramy zaprojektowano w celu stanowią rozwiązanie dla Udostępnianie formantów i aplikacji. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)]nie został zaprojektowany przy użyciu automatyzacji testów na uwadze, nawet jeśli jego ewoluował w tej roli z powodu bardzo podobne wymagania dotyczące ułatwień dostępu i automatyzacji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], oprócz rozwiązania bardziej precyzyjnych ułatwień dostępu, jest również zaprojektowane specjalnie zapewniają niezawodne funkcje testowanie automatyczne. Na przykład [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] zależy od jednego interfejsu zarówno ujawnienie informacji o Interfejsie użytkownika i zbierać informacje wymagane przez na produkty; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] oddziela dwa modele.  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] został opracowany jako następnika do [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] istniejące ramy zaprojektowano w celu stanowią rozwiązanie dla Udostępnianie formantów i aplikacji. [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] nie został zaprojektowany przy użyciu automatyzacji testów na uwadze, nawet jeśli jego ewoluował w tej roli z powodu bardzo podobne wymagania dotyczące ułatwień dostępu i automatyzacji. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], oprócz rozwiązania bardziej precyzyjnych ułatwień dostępu, jest również zaprojektowane specjalnie zapewniają niezawodne funkcje testowanie automatyczne. Na przykład [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] zależy od jednego interfejsu zarówno ujawnienie informacji o Interfejsie użytkownika i zbierać informacje wymagane przez na produkty; [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] oddziela dwa modele.  
   
  Zarówno dostawcy i klienta, które są wymagane do zaimplementowania [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] się przydatne jako narzędzie testów automatycznych. Dostawcy automatyzacji interfejsu użytkownika są aplikacje, takie jak Microsoft Word, Excel, i na podstawie innych aplikacji innych firm lub kontrolki [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] systemu operacyjnego. Klienci automatyzacji interfejsu użytkownika obejmują ułatwianiem aplikacje i skrypty testów automatycznych.  
   
@@ -50,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Implementing_UI_Automation"></a>   
 ### <a name="implementing-ui-automation"></a>Implementacja automatyzacji interfejsu użytkownika  
- Jak wspomniano wcześniej, bez ujednoliconego modelu udostępniane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowania i deweloperów są wymagane do znajomości ujawnić właściwości i zachowania formantów w ramach tej informacji określonej struktury. Ponieważ może istnieć kilka różnych platform interfejsu użytkownika występuje w dowolnym momencie pojedynczego w [!INCLUDE[TLA2#tla_win](../../../includes/tla2sharptla-win-md.md)] systemy operacyjne, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], i [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], może ona stanowić nie lada wyzwanie testowanie wielu aplikacji z formantami, które wydają się Podobnie. Na przykład poniższa tabela przedstawia nazwy właściwości określonej struktury wymagany do pobrania skojarzony z kontrolką przycisku nazwę (lub tekst) i zawiera pojedynczy równoważne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości.  
+ Jak wspomniano wcześniej, bez ujednoliconego modelu udostępniane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], narzędzia testowania i deweloperów są wymagane do znajomości ujawnić właściwości i zachowania formantów w ramach tej informacji określonej struktury. Ponieważ może istnieć kilka różnych platform interfejsu użytkownika występuje w dowolnym momencie jednego systemu operacyjnego, w tym [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)], [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)], i [!INCLUDE[TLA#tla_wpf](../../../includes/tlasharptla-wpf-md.md)], może być lada wyzwanie testowanie wielu aplikacji z formantami, które wydają się podobne . Na przykład poniższa tabela przedstawia nazwy właściwości określonej struktury wymagany do pobrania skojarzony z kontrolką przycisku nazwę (lub tekst) i zawiera pojedynczy równoważne [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] właściwości.  
   
 |Automatyzacja interfejsu użytkownika — typ formantu|Framework interfejsu użytkownika|Określoną właściwość Framework|Właściwości automatyzacji interfejsu użytkownika|  
 |--------------------------------|------------------|---------------------------------|----------------------------|  
@@ -70,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>Programowy dostęp  
- Dostęp programistyczny zapewnia możliwość naśladującej za pomocą kodu, interakcji z i środowisko udostępnianych przez tradycyjny myszy i klawiatury. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]Umożliwia dostęp programistyczny do pięciu składniki:  
+ Dostęp programistyczny zapewnia możliwość naśladującej za pomocą kodu, interakcji z i środowisko udostępnianych przez tradycyjny myszy i klawiatury. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Umożliwia dostęp programistyczny do pięciu składniki:  
   
 -   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Drzewa, ułatwia nawigację struktury [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Drzewo składa się z kolekcji hWnd firmy. Aby uzyskać więcej informacji, zobacz [Przegląd drzewa automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
   
@@ -87,16 +89,16 @@ ms.lasthandoff: 12/22/2017
  Możliwość jednoznacznie zidentyfikować, a następnie odnaleźć żadnego formantu, w ramach [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] stanowi podstawę dla testów automatycznych aplikacji do działania na tym [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]. Istnieje kilka [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] używane przez klientów i dostawców, które pomagają w tej właściwości.  
   
 #### <a name="automationid"></a>AutomationID  
- Unikatowo identyfikuje element automatyzacji z jego elementów równorzędnych. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie jest lokalizowany, w odróżnieniu od właściwości takich jak <xref:System.Windows.Automation.AutomationElement.NameProperty> która zwykle jest zlokalizowana Jeśli produkt pobiera wysłane w wielu językach. Zobacz [Użyj właściwości AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
+ Unikatowo identyfikuje element automatyzacji z jego elementów równorzędnych. <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> nie jest lokalizowany, w odróżnieniu od właściwości takich jak <xref:System.Windows.Automation.AutomationElement.NameProperty> która zwykle jest zlokalizowana Jeśli produkt pobiera wysłane w wielu językach. Zobacz [Użyj właściwości AutomationID](../../../docs/framework/ui-automation/use-the-automationid-property.md).  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>nie gwarantuje unikatową tożsamość w drzewie automatyzacji. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędnego. Te elementy menu dodatkowej mogą zostać zidentyfikowane na podstawie ogólnego schemat, takiego jak "Item1, element 2, Item3, itp.", dzięki czemu zduplikowane identyfikatory elementów podrzędnych dla elementów menu najwyższego poziomu.  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> nie gwarantuje unikatową tożsamość w drzewie automatyzacji. Na przykład aplikacja może zawierać formant menu z wieloma elementami menu najwyższego poziomu, które z kolei ma wiele elementów menu podrzędnego. Te elementy menu dodatkowej mogą zostać zidentyfikowane na podstawie ogólnego schemat, takiego jak "Item1, element 2, Item3, itp.", dzięki czemu zduplikowane identyfikatory elementów podrzędnych dla elementów menu najwyższego poziomu.  
   
 #### <a name="controltype"></a>ControlType  
  Określa typ formantu reprezentowany przez element automatyzacji. Istotne informacje można wywnioskować na podstawie wiedzy na temat typu formantu. Zobacz [omówienie typy formantów automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md).  
   
 #### <a name="nameproperty"></a>NameProperty  
- Jest to ciąg tekstowy, który identyfikuje lub objaśnienie formantu. <xref:System.Windows.Automation.AutomationElement.NameProperty>należy używać ostrożnie, ponieważ może być lokalizowany. Zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
+ Jest to ciąg tekstowy, który identyfikuje lub objaśnienie formantu. <xref:System.Windows.Automation.AutomationElement.NameProperty> należy używać ostrożnie, ponieważ może być lokalizowany. Zobacz [Przegląd właściwości automatyzacji interfejsu użytkownika](../../../docs/framework/ui-automation/ui-automation-properties-overview.md).  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>Implementacja automatyzacji interfejsu użytkownika w aplikacji testu  

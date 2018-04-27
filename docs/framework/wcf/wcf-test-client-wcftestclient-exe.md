@@ -1,27 +1,29 @@
 ---
 title: Testowy klient WCF (WcfTestClient.exe)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18866260c5d14cf27634afcd8391b159abac1dd1
-ms.sourcegitcommit: 2142a4732bb4ff519b9817db4c24a237b9810d4b
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eb32d36b1e6710f666391f918aff68c33566ab8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>Testowy klient WCF (WcfTestClient.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Klient testowy (WcfTestClient.exe) jest narzędziem graficznego interfejsu użytkownika, które umożliwia użytkownikom testu parametrów wejściowych, że dane wejściowe do usługi przesyłania i wyświetlić usługi odsyła odpowiedź. Zapewnia bezproblemowe usługi testowania czynności w połączeniu z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Klient testowy (WcfTestClient.exe) jest narzędziem graficznego interfejsu użytkownika, które umożliwia użytkownikom testu parametrów wejściowych, że dane wejściowe do usługi przesyłania i wyświetlić usługi odsyła odpowiedź. Zapewnia bezproblemowe usługi testowania czynności w połączeniu z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi.  
   
  Zwykle można znaleźć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego (WcfTestClient.exe) w następującej lokalizacji: C:\Program Files (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE — społeczność może być "Przedsiębiorstwa", "Professional" lub "Społeczności" w zależności od poziomu programu Visual Studio jest zainstalowany.
   
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/05/2018
   
  Aby użyć narzędzia, kliknij dwukrotnie nazwę pliku, aby otworzyć go z tej lokalizacji lub uruchomić go z wiersza polecenia.  
   
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Klient testowy przyjmuje dowolnego liczba identyfikatorów URI jako argumenty wiersza polecenia.  Są to identyfikator URI usług, które można zbadać.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy przyjmuje dowolnego liczba identyfikatorów URI jako argumenty wiersza polecenia.  Są to identyfikator URI usług, które można zbadać.  
   
  `wcfTestClient.exe URI1 URI2 …`  
   
@@ -172,9 +174,9 @@ ms.lasthandoff: 01/05/2018
 ## <a name="closing-wcf-test-client"></a>Zamykanie klienta testowego WCF  
  Możesz zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego w następujący sposób:  
   
--   Na **pliku** menu, kliknij przycisk **zakończenia**. Alternatywnie w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego głównego okna, kliknij przycisk **Zamknij**. Oba te akcje też zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i Zatrzymaj [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugowania procesu, jeśli [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego została uruchomiona przez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Na **pliku** menu, kliknij przycisk **zakończenia**. Alternatywnie w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego głównego okna, kliknij przycisk **Zamknij**. Oba te akcje też zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i Zatrzymaj debugowanie programu Visual Studio przetwarzać, jeśli [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego została uruchomiona przez program Visual Studio.  
   
--   Kliknij prawym przyciskiem myszy **Host usługi WCF** ikonę w obszarze powiadomień, a następnie kliknij przycisk **zakończenia.** To kończy pracę zarówno [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego i kończy działanie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugowanie procesu.  
+-   Kliknij prawym przyciskiem myszy **Host usługi WCF** ikonę w obszarze powiadomień, a następnie kliknij przycisk **zakończenia.** To kończy pracę zarówno [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi automatycznie i [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] klienta testowego i powoduje zatrzymanie debugowania programu Visual Studio procesu.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

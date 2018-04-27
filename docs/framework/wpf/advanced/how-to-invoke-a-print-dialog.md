@@ -1,12 +1,13 @@
 ---
-title: "Jak wywołać okno dialogowe drukowania"
-ms.custom: 
+title: Jak wywołać okno dialogowe drukowania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8831566daca6ca36b40fbaaedbec9ff3ca8aaa99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 65ea65e13d3217466eeacdac4c386cc02c68b29a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-invoke-a-print-dialog"></a>Jak wywołać okno dialogowe drukowania
 Aby zapewnić możliwość drukowania z aplikacji, możesz po prostu utworzyć i otworzyć <xref:System.Windows.Controls.PrintDialog> obiektu.  
@@ -38,7 +40,7 @@ Aby zapewnić możliwość drukowania z aplikacji, możesz po prostu utworzyć i
  Po otwarciu okna dialogowego, użytkownicy będą mogli wybrać z drukarek zainstalowanych na komputerze. Mają również możliwość wyboru [modułu zapisywania dokumentów XPS firmy Microsoft](http://go.microsoft.com/fwlink/?LinkId=147319) utworzyć [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] zamiast drukowania pliku.  
   
 > [!NOTE]
->  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrolę nad [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], która została szczegółowo opisana w tym temacie nie należy mylić z <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> składnika [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)].  
+>  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> Kontrolę nad [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)], która została szczegółowo opisana w tym temacie nie należy mylić z <xref:System.Windows.Forms.PrintDialog?displayProperty=nameWithType> składnika formularzy systemu Windows.  
   
  Mówiąc ściślej, można użyć <xref:System.Windows.Controls.PrintDialog.PrintDocument%2A> metody bez konieczności otwierania okna dialogowego. W tym sensie formant może służyć jako niewidocznym składnik drukowania. Jednak ze względu na wydajność, byłoby lepiej użyć <xref:System.Printing.PrintQueue.AddJob%2A> metody lub jedną z wielu <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> i <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> metody <xref:System.Windows.Xps.XpsDocumentWriter>. Aby uzyskać więcej informacji na ten temat, zobacz [programowo plików XPS drukowania](../../../../docs/framework/wpf/advanced/how-to-programmatically-print-xps-files.md) i.  
   

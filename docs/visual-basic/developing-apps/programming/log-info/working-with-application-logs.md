@@ -1,25 +1,26 @@
 ---
 title: Praca z dziennikami aplikacji w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - logs, application
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea5f3699ca5a1b6b0859ac266656deb933839d3d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 40cad53cd9283a99a93cde79616151e77489e7bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>Praca z dziennikami aplikacji w Visual Basic
 `My.Applicaton.Log` i `My.Log` obiektów ułatwiają zapisywane do dzienników rejestrowanie i informacje o śledzeniu.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 11/21/2017
 ## <a name="where-messages-are-logged"></a>Gdzie komunikaty są rejestrowane.  
  Jeśli zestaw nie ma konfiguracji pliku, `My.Application.Log` i `My.Log` obiektów zapisywania danych wyjściowych debugowania aplikacji (za pośrednictwem <xref:System.Diagnostics.DefaultTraceListener> klasy). Ponadto `My.Application.Log` obiekt zapisuje do pliku dziennika zestawu (za pośrednictwem <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener> klasy), podczas `My.Log` obiektu zapisuje dane wyjściowe strony sieci Web platformy ASP.NET (za pośrednictwem <xref:System.Web.WebPageTraceListener> klasy).  
   
- Dane wyjściowe debugowania mogą być wyświetlane w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] **dane wyjściowe** okno podczas uruchamiania aplikacji w trybie debugowania. Można otworzyć **dane wyjściowe** okna, kliknij przycisk **debugowania** element menu, wskaż **systemu Windows**, a następnie kliknij przycisk **dane wyjściowe**. W **dane wyjściowe** wybierz **debugowania** z **Pokaż dane wyjściowe z** pole.  
+ Można wyświetlić danych wyjściowych debugowania w programie Visual Studio **dane wyjściowe** okno podczas uruchamiania aplikacji w trybie debugowania. Można otworzyć **dane wyjściowe** okna, kliknij przycisk **debugowania** element menu, wskaż **systemu Windows**, a następnie kliknij przycisk **dane wyjściowe**. W **dane wyjściowe** wybierz **debugowania** z **Pokaż dane wyjściowe z** pole.  
   
  Domyślnie `My.Application.Log` zapisuje plik dziennika w ścieżce dla danych aplikacji użytkownika. Można uzyskać ścieżki z <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.FullLogFileName%2A> właściwość <xref:Microsoft.VisualBasic.Logging.Log.DefaultFileLogWriter%2A> obiektu. Format tej ścieżki jest następujący:  
   

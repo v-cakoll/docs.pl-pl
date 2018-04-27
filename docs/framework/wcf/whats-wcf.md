@@ -20,11 +20,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 1e194a0784eb27043bbd0c127cde6883b4fafb2e
-ms.sourcegitcommit: 9a4fe1a1c37b26532654b4bbe22d702237950009
+ms.openlocfilehash: 2fa6efdc61620647d5c6318746e61e09cdde7a46
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="what-is-windows-communication-foundation"></a>Co to jest program Windows Communication Foundation
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] to platforma do tworzenia aplikacji korzystających z usług. Przy użyciu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], możesz wysłać dane jako asynchroniczne komunikaty z punktu końcowego jednej usługi do innego. Punkt końcowy usługi mogą być częścią stale dostępna usługa hostowana przez usługi IIS, lub można ją z usługą hostowaną w aplikacji. Punkt końcowy może być klienta usługi, która wysyła żądanie danych z punktu końcowego usługi. Komunikaty może być tak proste, jak pojedynczy znak lub słowo wysyłane w formacie XML lub złożonym, strumień danych binarnych. Kilka przykładowych scenariuszy obejmują:  
@@ -80,7 +80,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **Trwałe wiadomości**  
   
-     Trwałe komunikatu to taki, który nigdy nie zostaną utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe zawsze są zapisywane w bazie danych. W przypadku zakłóceń bazy danych umożliwia wznowienie wymiany wiadomości po przywróceniu połączenia. Można również utworzyć trwałe komunikat przy użyciu [!INCLUDE[wf](../../../includes/wf-md.md)]. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Usługi przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
+     Trwałe komunikatu to taki, który nigdy nie zostaną utracone z powodu przerw w działaniu w komunikacie. Wiadomości we wzorcu komunikatów trwałe zawsze są zapisywane w bazie danych. W przypadku zakłóceń bazy danych umożliwia wznowienie wymiany wiadomości po przywróceniu połączenia. Można również utworzyć trwałe wiadomości przy użyciu systemu Windows Workflow Foundation (WF). [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Usługi przepływu pracy](../../../docs/framework/wcf/feature-details/workflow-services.md).  
   
 -   **Transakcje**  
   
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="wcf-integration-with-other-microsoft-technologies"></a>Integracja WCF z innych technologii firmy Microsoft  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] to elastyczna platforma. Ze względu na to wyjątkową elastyczność [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] służy również kilka innych produktów firmy Microsoft. Zrozumienie podstaw [!INCLUDE[indigo2](../../../includes/indigo2-md.md)], masz natychmiastowe korzyści, jeśli również przy użyciu jednej z tych produktów.  
   
- Pierwszy technologię tak, aby skojarzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] został Windows Workflow Foundation (WF). Przepływy pracy uprościć tworzenie aplikacji przez Hermetyzowanie kroki w przepływie pracy jako "działania". W pierwszej wersji [!INCLUDE[wf2](../../../includes/wf2-md.md)], deweloper było utworzenie hosta przepływu pracy. Na następną wersję programu [!INCLUDE[wf2](../../../includes/wf2-md.md)] została zintegrowana z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Który dozwolone każdy przepływ pracy ma być łatwo obsługiwana w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi; można to zrobić, wybierając automatycznie WCF/WF typu projektu w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
+ Pierwszy technologię tak, aby skojarzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] został Windows Workflow Foundation (WF). Przepływy pracy uprościć tworzenie aplikacji przez Hermetyzowanie kroki w przepływie pracy jako "działania". W pierwszej wersji programu Windows Workflow Foundation Deweloper było utworzenie hosta przepływu pracy. Na następną wersję programu Windows Workflow Foundation została zintegrowana z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Który dozwolone każdy przepływ pracy ma być łatwo obsługiwana w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi; można to zrobić, wybierając automatycznie WCF/WF typu projektu w [!INCLUDE[vs_current_long](../../../includes/vs-current-long-md.md)].  
   
  Microsoft BizTalk Server R2 również używa [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] technologii komunikacji. BizTalk zaprojektowano w celu odbierania i przekształcanie danych z jednego formatu standardowych. Wiadomości musi być dostarczane do jej centralnej komunikat w przypadku, gdy wiadomość można je przekształcać za pomocą strict mapowania lub za pomocą funkcji BizTalk, takie jak jego aparatu przepływu pracy. Teraz można używać BizTalk [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] karty Linia biznesowych (LOB) na dostarczenie wiadomości do okna komunikatu.  
   

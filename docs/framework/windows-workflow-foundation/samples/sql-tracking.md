@@ -1,26 +1,27 @@
 ---
-title: "Śledzenie SQL"
-ms.custom: 
+title: Śledzenie SQL
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bd8fbe1a29793778d93eeca64b185079d706f3e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2eeb5cf57e6efac77de4a76fe8131189273d5438
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sql-tracking"></a>Śledzenie SQL
-W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL, który zapisuje śledzenie rekordów bazy danych SQL. [!INCLUDE[wf](../../../../includes/wf-md.md)]udostępnia śledzenia wgląd we wykonywania wystąpienia przepływu pracy przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]przepływ pracy śledzenia, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
+W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL, który zapisuje śledzenie rekordów bazy danych SQL. Windows Workflow Foundation (WF) zapewnia śledzenia wgląd we wykonywania wystąpienia przepływu pracy przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] przepływ pracy śledzenia, zobacz [przepływu pracy śledzenia i śledzenia](../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md).  
   
 #### <a name="to-use-this-sample"></a>Aby użyć tego przykładu  
   
@@ -43,7 +44,7 @@ W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL
   
 7.  W przeglądarce pojawi się stronie StockPriceService zawiera Usługa lokalna adres WSDL. Skopiuj ten adres.  
   
-     Przykładem usługa lokalna adres WSDL jest http://localhost:65193/StockPriceService.xamlx?wsdl.  
+     Na przykład adres WSDL Usługa lokalna http://localhost:65193/StockPriceService.xamlx?wsdl.  
   
 8.  Przy użyciu [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)], uruchomić klienta testowego WCF (WcfTestClient.exe). Znajduje się w katalogu 10.0\Common7\IDE programu Microsoft Visual Studio.  
   
@@ -51,7 +52,7 @@ W tym przykładzie pokazano, jak pisać niestandardowe uczestnika śledzenia SQL
   
 10. W kliencie testowym WCF, kliknij dwukrotnie **GetStockPrice**. Spowoduje to otwarcie `GetStockPrice` operacja, która przyjmuje jeden parametr typu w wartości `Contoso` i kliknij przycisk **Invoke**.  
   
-11. Rejestruje emitowany śledzenia są zapisywane do bazy danych SQL. Aby wyświetlić rekordy śledzenia, należy otworzyć TrackingSample bazy danych w programie SQL Management Studio i przejdź do tabel. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](http://go.microsoft.com/fwlink/?LinkId=180520). Uruchamianie zapytania select w tabelach wyświetla dane przechowywane w tabelach odpowiednie rekordy śledzenia.  
+11. Rejestruje emitowany śledzenia są zapisywane do bazy danych SQL. Aby wyświetlić rekordy śledzenia, należy otworzyć TrackingSample bazy danych w programie SQL Management Studio i przejdź do tabel. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] SQL Server Management Studio, zobacz [wprowadzenie do programu SQL Server Management Studio](http://go.microsoft.com/fwlink/?LinkId=165645). SQL Server 2008 Management Studio Express można pobrać [tutaj](http://go.microsoft.com/fwlink/?LinkId=180520). Uruchamianie zapytania select w tabelach wyświetla dane przechowywane w tabelach odpowiednie rekordy śledzenia.  
   
 #### <a name="to-uninstall-the-sample"></a>Aby odinstalować próbki  
   

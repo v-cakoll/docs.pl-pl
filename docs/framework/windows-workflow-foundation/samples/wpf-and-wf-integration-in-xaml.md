@@ -14,14 +14,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0447df0e6d4f14a4171a315858f992ad23d69373
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6bc761b93ff8d5c0dc79a86d0159d50d65fb727c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>Integracja programu WF w języku XAML i WPF
-Ten przykład przedstawia sposób tworzenia aplikacji, która używa Windows Presentation Foundation (WPF) i [!INCLUDE[wf](../../../../includes/wf-md.md)] funkcji w jednym dokumencie XAML. W tym przykładzie użyto [!INCLUDE[wf](../../../../includes/wf-md.md)] i rozszerzalność języka XAML.  
+Ten przykład przedstawia sposób tworzenia aplikacji, która używa funkcji systemu Windows Presentation Foundation (WPF) i Windows Workflow Foundation (WF) w jednym dokumencie XAML. W tym celu próbki korzysta z rozszerzeń systemu Windows Workflow Foundation (WF) i języka XAML.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  Deserializuje pliku ShowWindow.xaml do <xref:System.Activities.Statements.Sequence> działania dwóch zmiennych ciągu, które są manipulować przez działania sekwencji: `ShowWindow` i `WriteLine`. <xref:System.Activities.Statements.WriteLine> Działania danych wyjściowych do okna konsoli wyrażenia, który przypisuje do <xref:System.Activities.Statements.WriteLine.Text%2A> właściwości. `ShowWindow` Wyświetla działanie [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] okno jako część jej logiki wykonywania. <xref:System.Activities.ActivityContext.DataContext%2A> Okna zawiera zmienne zadeklarowane w sekwencji. Formanty okna zadeklarowany w `ShowWindow` działania zaznaczać tych zmiennych za pomocą wiązania z danymi. Na koniec okna zawiera kontrolkę przycisku. `Click` Zdarzenie dla przycisku jest obsługiwane przez <xref:System.Activities.ActivityDelegate> o nazwie `MarkupExtension` zawierający `CloseWindow` działania. `MarkUpExtension` wywołuje zawarte działanie, która udostępnia kontekst, wszystkie obiekty określone przez `x:Name`, a także <xref:System.Activities.ActivityContext.DataContext%2A> okna nadrzędnego. W związku z tym `CloseWindow.InArgument<Window>` powiązany za pomocą wyrażenia, który odwołuje się do nazwy okna.  

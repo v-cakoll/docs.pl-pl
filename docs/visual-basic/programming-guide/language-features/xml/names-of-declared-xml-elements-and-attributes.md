@@ -1,12 +1,13 @@
 ---
-title: "Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)"
-ms.custom: 
+title: Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - declarations [XML in Visual Basic]
@@ -15,20 +16,20 @@ helpviewer_keywords:
 - attribute names [XML in Visual Basic]
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 846a028e076873d1978f751fdb70e93c7c6a81af
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 07666ead0770c8055a62f75cb481648b0c72ef8b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>Nazwy deklarowanych elementów XML oraz atrybuty (Visual Basic)
-Ten temat zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zasady nazewnictwa elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalną lub kwalifikowanej nazwy. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i nazwa lokalna. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
+Ten temat zawiera wskazówki dotyczące języka Visual Basic dla nazw elementów XML oraz atrybuty w literałach XML.  W literał XML można określić nazwę lokalną lub kwalifikowanej nazwy. Kwalifikowana nazwa składa się z prefiksu przestrzeni nazw XML, dwukropek i nazwa lokalna. Aby uzyskać więcej informacji na temat prefiksy przestrzeni nazw XML, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  
   
 ## <a name="rules"></a>Reguły  
- Lokalna nazwa elementu lub atrybutu w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] muszą być zgodne z następującymi zasadami.  
+ Lokalna nazwa elementu lub atrybutu w języku Visual Basic muszą spełniać następujące reguły.  
   
 -   Może ona rozpoczynać przestrzeni nazw. Musi zaczynać się od litery lub znaku podkreślenia (`_`).  
   
@@ -48,7 +49,7 @@ Ten temat zawiera [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zasady nazewnictwa
  Nazwa nie należy jednak tak krótki, że nie można ją było właściwie opisano element lub kodu używaniu go. Jest to ważne w przypadku czytelność kodu. Jeśli ktoś próbuje go zrozumieć, lub jeśli chcesz samodzielnie go przez długi czas, po jego zapisano, nazwy odpowiednich elementów zaoszczędzić czas.  
   
 ## <a name="case-sensitivity-in-names"></a>Uwzględniana wielkość liter w nazwach  
- Nazwy elementów XML jest uwzględniana wielkość liter. Oznacza to, że w przypadku [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora porównuje dwie nazwy, które różnią się alfabetycznej tylko wielkością liter, jego interpretuje je jako różne nazwy. Na przykład interpretuje `ABC` i `abc` jako odnoszące się do oddzielania elementów.  
+ Nazwy elementów XML jest uwzględniana wielkość liter. Oznacza to, że gdy kompilator Visual Basic porównuje dwie nazwy, które różnią się alfabetycznej tylko wielkością liter, jego interpretuje je jako różne nazwy. Na przykład interpretuje `ABC` i `abc` jako odnoszące się do oddzielania elementów.  
   
 ## <a name="xml-namespaces"></a>Przestrzenie nazw XML  
  Podczas tworzenia literał elementu XML, można określić prefiks przestrzeni nazw XML dla nazwy elementu. Aby uzyskać więcej informacji, zobacz [literał elementu XML](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md).  

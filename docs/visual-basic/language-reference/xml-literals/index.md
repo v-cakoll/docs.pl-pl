@@ -18,14 +18,14 @@ ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
 caps.latest.revision: 16
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 149959ac279f63bfd3b070461a4316941c2b7c19
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 846d9823722a3c7e93c3f45d7cc98e23832df822
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-literals-visual-basic"></a>Literały XML (Visual Basic)
-Tematy w tej części dokumentu składni literałów XML w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Składnia literału XML można dołączyć do nich bezpośrednio w kodzie XML.  
+Tematy w tej części dokumentu składni literałów XML w Visual Basic. Składnia literału XML można dołączyć do nich bezpośrednio w kodzie XML.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
   
@@ -33,9 +33,9 @@ Tematy w tej części dokumentu składni literałów XML w [!INCLUDE[vbprvb](~/i
 |-----------|-----------------|  
 |[Literał elementu XML](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XElement> obiektów.|  
 |[Literał dokumentu XML](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XDocument> obiektów.|  
-|[Literał XML CDATA](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XCData> obiektów.|  
+|[Literał CDATA XML](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XCData> obiektów.|  
 |[Literał komentarza XML](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XComment> obiektów.|  
-|[Literał instrukcji przetwarzania XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XProcessingInstruction> obiektów.|  
+|[Literał instrukcji przetwarzającej kod XML](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|W tym artykule opisano składnię literały, które reprezentują <xref:System.Xml.Linq.XProcessingInstruction> obiektów.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

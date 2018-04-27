@@ -16,11 +16,11 @@ ms.assetid: 23996dca-250f-4320-8211-1560e90172df
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3f27fcf3bd1f80b5daf501609c2cd157c209924a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5314702192dd4536f1d49c3ac8b26214d06b786b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-write-output-to-memory"></a>Nie można zapisać danych wyjściowych w pamięci
 Wystąpił problem podczas zapisywania danych wyjściowych w pamięci.  
@@ -31,7 +31,7 @@ Wystąpił problem podczas zapisywania danych wyjściowych w pamięci.
   
 1.  Skompiluj program, aby zobaczyć, jeśli błąd będzie się powtarzał, ponownie.  
   
-2.  Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i ponownie uruchom [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Jeśli błąd będzie się powtarzał, należy zapisać pracę i ponownie uruchom program Visual Studio.  
   
 3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   

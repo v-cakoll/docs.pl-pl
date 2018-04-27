@@ -1,13 +1,13 @@
 ---
-title: "Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows"
-ms.custom: 
+title: 'Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - GridSize
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - Windows Forms, grid options in designer
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
-caps.latest.revision: 
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 166ccba959bd9facb8e24d580d47577a0c8746a8
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 3f7467abe6669b88e1a55851fd745c2dcb56c150
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>Porady: aranżowanie formantów z liniami przyciągania oraz siatki w formularzach systemu Windows
-Przy użyciu funkcji układu [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], możesz dokładnie wskazać rozmieszczenie kontrolek w formularzu. Formanty dodane do formularza lub przeniesione w formularzu zostanie automatycznie wyrównany do wierszy i kolumn siatki projektanta formularzy systemu Windows lub można wyrównywanie formantów za pomocą funkcji linie przyciągania.  
+Korzystanie z funkcji układu programu Visual Studio, możesz dokładnie wskazać rozmieszczenie kontrolek w formularzu. Formanty dodane do formularza lub przeniesione w formularzu zostanie automatycznie wyrównany do wierszy i kolumn siatki projektanta formularzy systemu Windows lub można wyrównywanie formantów za pomocą funkcji linie przyciągania.  
   
 > [!NOTE]
 >  Okna dialogowe i polecenia menu mogą się różnić od tych opisanych w Pomocy, w zależności od ustawień aktywnych lub wydania. Aby zmienić ustawienia, wybierz **Import i eksport ustawień** na **narzędzia** menu. Aby uzyskać więcej informacji, zobacz [Dostosowywanie ustawień środowiska w programie Visual Studio](http://msdn.microsoft.com/library/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  

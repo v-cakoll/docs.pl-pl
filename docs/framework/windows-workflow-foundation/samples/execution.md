@@ -1,26 +1,27 @@
 ---
 title: Wykonanie
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a9dcedcc-9f4c-45c2-8222-6bcbf48f3534
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 30ae225ac5482bfd6955dd0e87cbfb4bbdae2b4a
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d13abd5095757b5f09d1166a3bf1654963d1a31b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="execution"></a>Wykonanie
-Ta sekcja zawiera przykłady ilustrujące wykonywania przepływów pracy w [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Ta sekcja zawiera przykłady ilustrujące wykonywania przepływów pracy w systemie Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Przykład punktu końcowego zarządzania przepływem pracy](../../../../docs/framework/windows-workflow-foundation/samples/workflow-management-endpoint-sample.md)  

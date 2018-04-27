@@ -1,13 +1,13 @@
 ---
-title: "DataGrid — Informacje o formancie [Formularze systemu Windows]"
-ms.custom: 
+title: DataGrid — Informacje o formancie [Formularze systemu Windows]
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - DataGrid
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-caps.latest.revision: 
+caps.latest.revision: 22
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 10220efc0bb77ddcc7f0f9fa0e3f2793a032a1bd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: fd74ed0e31fff211f0197ad27f297f9fbecf5cab
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid — Informacje o formancie [Formularze systemu Windows]
 > [!NOTE]
@@ -71,13 +71,13 @@ DataGrid powiązany z danymi z wielu tabel
   
  Źródła danych prawidłową <xref:System.Windows.Forms.DataGrid> obejmują:  
   
--   <xref:System.Data.DataTable>klasy  
+-   <xref:System.Data.DataTable> Klasy  
   
--   <xref:System.Data.DataView>klasy  
+-   <xref:System.Data.DataView> Klasy  
   
--   <xref:System.Data.DataSet>klasy  
+-   <xref:System.Data.DataSet> Klasy  
   
--   <xref:System.Data.DataViewManager>klasy  
+-   <xref:System.Data.DataViewManager> Klasy  
   
  Jeśli źródłem jest element dataset, zestawu danych może być w formie lub obiektu przekazany do formularza przez usługi XML sieci Web. Można powiązać typizowany lub nietypizowany zestaw danych.  
   
@@ -103,11 +103,11 @@ DataGrid powiązany z danymi z wielu tabel
 |Wielu powiązanych tabel.|Siatki można wyświetlić widoku drzewa wybierz tabele, lub można określić, że siatki wyświetlać tabeli nadrzędnej. Rekordy w tabeli nadrzędnej umożliwiają użytkownikom przechodzenie do wierszy podrzędnych.|  
   
 > [!NOTE]
->  Tabele w zestawie danych są powiązane za pomocą <xref:System.Data.DataRelation>.  Zobacz też [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d (v=vs.110)" relacje w zestawach danych](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) lub [relacje w zestawach danych](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
+>  Tabele w zestawie danych są powiązane za pomocą <xref:System.Data.DataRelation>.  Zobacz też [HYPERLINK "http://msdn.microsoft.com/library/dbwcse3d(v=vs.110)" relacje w zestawach danych](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.110\)) lub [relacje w zestawach danych](http://msdn.microsoft.com/library/dbwcse3d\(v=vs.120\)).  
   
  Gdy <xref:System.Windows.Forms.DataGrid> sterowania są wyświetlane w tabeli i <xref:System.Windows.Forms.DataGrid.AllowSorting%2A> właściwość jest ustawiona na `true`, dane mogą mieć zastosowanie, klikając nagłówki kolumn. Użytkownik może również dodawanie wierszy i edytować komórki.  
   
- Relacje między zestaw tabel są wyświetlane użytkownikom przy użyciu struktury nadrzędny/podrzędny nawigacji. Tabel nadrzędnych są najwyższy poziom danych i tabele podrzędne są te tabele danych, pochodzących z poszczególnych list w tabeli nadrzędnej. Ekspanderów znajdujących są wyświetlane w każdym wierszu nadrzędnego zawierający tabeli podrzędnej. Klikając przycisk rozwijania generuje listę łączy stylu sieci Web dla tabel podrzędnych. Gdy użytkownik wybierze link, zostanie wyświetlony tabelą podrzędną. Kliknięcie ikony wiersze nadrzędne Pokaż/Ukryj (![Pokaż &#47; Ukryj ikonę wiersze nadrzędne](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) będzie Ukryj informacji o tabeli nadrzędnej lub spowodować się ponownie, jeśli użytkownik wcześniej jest ukryty. Użytkownik może kliknąć przycisk Wstecz, aby powrócić do poprzednio czytanego tabeli.  
+ Relacje między zestaw tabel są wyświetlane użytkownikom przy użyciu struktury nadrzędny/podrzędny nawigacji. Tabel nadrzędnych są najwyższy poziom danych i tabele podrzędne są te tabele danych, pochodzących z poszczególnych list w tabeli nadrzędnej. Ekspanderów znajdujących są wyświetlane w każdym wierszu nadrzędnego zawierający tabeli podrzędnej. Klikając przycisk rozwijania generuje listę łączy stylu sieci Web dla tabel podrzędnych. Gdy użytkownik wybierze link, zostanie wyświetlony tabelą podrzędną. Kliknięcie ikony wiersze nadrzędne Pokaż/Ukryj (![Pokaż&#47;ukryć ikony wiersze nadrzędne](../../../../docs/framework/winforms/controls/media/vbicon.gif "vbIcon")) będzie Ukryj informacji o tabeli nadrzędnej lub spowodować się ponownie, jeśli użytkownik wcześniej jest ukryty. Użytkownik może kliknąć przycisk Wstecz, aby powrócić do poprzednio czytanego tabeli.  
   
 ## <a name="columns-and-rows"></a>Kolumn i wierszy  
  <xref:System.Windows.Forms.DataGrid> Składa się z kolekcją <xref:System.Windows.Forms.DataGridTableStyle> obiektów, które są zawarte w <xref:System.Windows.Forms.DataGrid> formantu <xref:System.Windows.Forms.DataGrid.TableStyles%2A> właściwości. Styl tabeli może zawierać Kolekcja <xref:System.Windows.Forms.DataGridColumnStyle> obiektów, które są zawarte w <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>... Można edytować <xref:System.Windows.Forms.DataGrid.TableStyles%2A> i <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwości przy użyciu edytora kolekcji dostępne za pośrednictwem **właściwości** okna.  
@@ -117,7 +117,7 @@ DataGrid powiązany z danymi z wielu tabel
  ![Liczba obiektów uwzględnionych w formancie DataGrid](../../../../docs/framework/winforms/controls/media/vbcolumns1.gif "vbColumns1")  
 Na poniższej ilustracji przedstawiono obiektów uwzględnionych w formancie DataGrid.  
   
- Style tabeli i kolumny są synchronizowane z <xref:System.Data.DataTable> obiektów i <xref:System.Data.DataColumn> obiektów przez ustawienie ich `MappingName` właściwości do odpowiedniego <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataColumn.ColumnName%2A> właściwości. Gdy <xref:System.Windows.Forms.DataGridTableStyle> który nie ma kolumny style zostanie dodany do <xref:System.Windows.Forms.DataGrid> formant powiązany z poprawnego źródła danych i <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość tego stylu tabeli jest ustawiona na prawidłowy <xref:System.Data.DataTable.TableName%2A> właściwości, Kolekcja <xref:System.Windows.Forms.DataGridColumnStyle> obiektów jest tworzony w tym Styl tabeli. Dla każdego <xref:System.Data.DataColumn> w <xref:System.Data.DataTable.Columns%2A> Kolekcja <xref:System.Data.DataTable>, odpowiadający jej <xref:System.Windows.Forms.DataGridColumnStyle> jest dodawany do <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection>jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Kolumny można dodawać lub usuwać z przy użyciu siatki <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> lub <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metoda <xref:System.Windows.Forms.GridColumnStylesCollection>. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie tabel i kolumn do formantu DataGrid formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) i [porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
+ Style tabeli i kolumny są synchronizowane z <xref:System.Data.DataTable> obiektów i <xref:System.Data.DataColumn> obiektów przez ustawienie ich `MappingName` właściwości do odpowiedniego <xref:System.Data.DataTable.TableName%2A> i <xref:System.Data.DataColumn.ColumnName%2A> właściwości. Gdy <xref:System.Windows.Forms.DataGridTableStyle> który nie ma kolumny style zostanie dodany do <xref:System.Windows.Forms.DataGrid> formant powiązany z poprawnego źródła danych i <xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A> właściwość tego stylu tabeli jest ustawiona na prawidłowy <xref:System.Data.DataTable.TableName%2A> właściwości, Kolekcja <xref:System.Windows.Forms.DataGridColumnStyle> obiektów jest tworzony w tym Styl tabeli. Dla każdego <xref:System.Data.DataColumn> w <xref:System.Data.DataTable.Columns%2A> Kolekcja <xref:System.Data.DataTable>, odpowiadający jej <xref:System.Windows.Forms.DataGridColumnStyle> jest dodawany do <xref:System.Windows.Forms.GridColumnStylesCollection>. <xref:System.Windows.Forms.GridColumnStylesCollection> jest dostępny za pośrednictwem <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> właściwość <xref:System.Windows.Forms.DataGridTableStyle>. Kolumny można dodawać lub usuwać z przy użyciu siatki <xref:System.Windows.Forms.GridColumnStylesCollection.Add%2A> lub <xref:System.Windows.Forms.GridColumnStylesCollection.Remove%2A> metoda <xref:System.Windows.Forms.GridColumnStylesCollection>. Aby uzyskać więcej informacji, zobacz [porady: Dodawanie tabel i kolumn do formantu DataGrid formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md) i [porady: usuwanie lub ukrywanie kolumn w formancie DataGrid formularzy systemu Windows](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md).  
   
  Kolekcja typów kolumn rozszerza <xref:System.Windows.Forms.DataGridColumnStyle> z zaawansowanych formatowanie i możliwości edycji. Wszystkie typy kolumn dziedziczyć <xref:System.Windows.Forms.DataGridColumnStyle> klasy podstawowej. Klasa, która jest tworzona jest zależna od <xref:System.Data.DataColumn.DataType%2A> właściwość <xref:System.Data.DataColumn> z którego <xref:System.Web.UI.WebControls.DataGridColumn> opiera się. Na przykład <xref:System.Data.DataColumn> mający jego <xref:System.Data.DataColumn.DataType%2A> ustawioną właściwość <xref:System.Boolean> zostaną skojarzone z <xref:System.Windows.Forms.DataGridBoolColumn>. W poniższej tabeli opisano każdy z tych typów kolumn.  
   
@@ -137,7 +137,7 @@ Na poniższej ilustracji przedstawiono obiektów uwzględnionych w formancie Dat
   
  Style kolumn odnoszą się do kolumn w zestawie danych tak samo, jak style tabeli odnoszą się do tabel danych. Tak samo, jak każda tabela może mieć tylko jeden styl tabeli zdefiniowane w czasie, dlatego można zbyt każdej kolumny tylko jeden styl kolumny zdefiniowane, w stylu określonej tabeli. Ta relacja jest definiowana w tej kolumnie <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> właściwości.  
   
- Jeśli utworzono styl tabeli bez Style kolumn do momentu, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] doda domyślne style kolumn podczas tworzenia formularza i siatki w czasie wykonywania. Jednak jeśli utworzono styl tabeli i dodać wszystkie style kolumn, [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] nie utworzy wszystkie style kolumn. Ponadto należy zdefiniować style kolumn i przypisać je o nazwie mapowania mieć kolumn, które mają być wyświetlane w siatce.  
+ Jeśli utworzono styl tabeli bez Style kolumn do niego dodana, Visual Studio doda domyślne style kolumn podczas tworzenia formularza i siatki w czasie wykonywania. Jednak jeśli utworzeniu styl tabeli i dodać wszystkie style kolumn, Visual Studio nie utworzy wszystkie style kolumn. Ponadto należy zdefiniować style kolumn i przypisać je o nazwie mapowania mieć kolumn, które mają być wyświetlane w siatce.  
   
  Określ, które kolumny mają zostać uwzględnione w siatce danych przypisywania do nich styl kolumny i żaden styl kolumny zostanie przypisana do kolumn, dlatego może zawierać kolumn danych w zestawie danych, które nie są wyświetlane w siatce. Jednak ponieważ kolumna danych jest uwzględniona w zestawie danych, można programowo edytować danych, które nie są wyświetlane.  
   

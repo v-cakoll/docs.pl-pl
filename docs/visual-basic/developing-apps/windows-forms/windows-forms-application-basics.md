@@ -13,17 +13,17 @@ ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
 caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: aaa7fbd679eceea53a673646173dc14dc4f209bc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 230229203029740b82e706fe2aa7ff8ee06c486a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Podstawy dotyczące aplikacji Windows Forms (Visual Basic)
 Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji formularzy systemu Windows, które są uruchamiane lokalnie na komputerach użytkowników. Visual Studio służy do tworzenia aplikacji i interfejs, za pomocą formularzy systemu Windows. Aplikacji formularzy systemu Windows jest oparty na klas z <xref:System.Windows.Forms> przestrzeni nazw.  
   
 ## <a name="designing-windows-forms-applications"></a>Aplikacje projektowania Windows Forms  
- Można utworzyć formularzy systemu Windows i aplikacji usług systemu Windows z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Więcej informacji znajduje się w następujących tematach:  
+ Możesz utworzyć formularzy systemu Windows i aplikacji usług systemu Windows z programem Visual Studio. Więcej informacji znajduje się w następujących tematach:  
   
 -   [Wprowadzenie do formularzy systemu Windows](../../../framework/winforms/getting-started-with-windows-forms.md). Zawiera informacje dotyczące sposobu tworzenia i program Windows Forms.  
    
@@ -32,7 +32,7 @@ Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji for
 -   [Aplikacje usług systemu Windows](../../../framework/windows-services/index.md). Wyświetla listę tematów, które zawierają opis tworzenia usług systemu Windows.  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>Tworzenie interfejsów użytkownika rozbudowanych, interakcyjnych  
- Formularze systemu Windows to składnik klienta inteligentnych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zestaw zarządzanych bibliotek, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie do systemu plików. Używanie środowiska projektowania, takich jak [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], można utworzyć aplikacji formularzy systemu Windows, które zawierają informacje, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
+ Formularze systemu Windows to składnik klienta inteligentnych [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)], zestaw zarządzanych bibliotek, które umożliwiają typowych zadań aplikacji, takich jak odczytywanie i zapisywanie do systemu plików. W środowisku programowania, takimi jak Visual Studio, można utworzyć aplikacji formularzy systemu Windows, które zawierają informacje, żądać danych wejściowych od użytkowników i komunikować się ze zdalnymi komputerami za pośrednictwem sieci.  
   
  W formularzach systemu Windows formularz jest visual powierzchni, na którym można wyświetlić informacje dla użytkownika. Często w przypadku tworzenia aplikacji formularzy systemu Windows, umieszczając formantów na formularzach i tworzenie odpowiedzi na działania użytkownika, takie jak kliknięcie myszą lub naciśnięcie klawiszy. A *kontroli* jest elementem interfejsu odrębny użytkownika, który wyświetla dane lub akceptuje dane wejściowe.  
   
@@ -44,7 +44,7 @@ Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji for
   
  Formularze systemu Windows ma sformatowanego kontrolek interfejsu użytkownika, które emulują funkcje wysokiej jakości aplikacji, takich jak Microsoft Office. Przy użyciu <xref:System.Windows.Forms.ToolStrip> i <xref:System.Windows.Forms.MenuStrip> formantu, można utworzyć paski narzędzi i menu, które zawierają tekst i obrazy, wyświetlania podmenu i udostępniać inne formanty, takie jak pola tekstowe i pola kombi.  
   
- Z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] Projektant formularzy przeciągania i upuszczania, można łatwo utworzyć aplikacji formularzy systemu Windows: po prostu zaznacz formantów kursor i umieść je w miejscu w formularzu. Projektant udostępnia narzędzia, takie jak linie siatki i "linie przyciągania" podjęcie proste poza wyrównywanie formantów. I czy jest używany [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów z minimalnym czasem i pracą.  
+ Za pomocą programu Visual Studio projektanta formularzy przeciągania i upuszczania, można łatwo utworzyć aplikacji formularzy systemu Windows: po prostu zaznacz formantów kursor i umieść je w miejscu w formularzu. Projektant udostępnia narzędzia, takie jak linie siatki i "linie przyciągania" podjęcie proste poza wyrównywanie formantów. Czy za pomocą programu Visual Studio lub kompilacji w wierszu polecenia, można użyć <xref:System.Windows.Forms.FlowLayoutPanel>, <xref:System.Windows.Forms.TableLayoutPanel> i <xref:System.Windows.Forms.SplitContainer> służy do tworzenia zaawansowanych tworzą układów z minimalnym czasem i pracą.  
   
 ### <a name="custom-ui-elements"></a>Elementy interfejsu użytkownika  
  Na koniec, jeśli musisz utworzyć własne niestandardowe elementy interfejsu użytkownika <xref:System.Drawing> przestrzeń nazw zawiera wszystkie klasy, należy renderować linii, okręgi i innych kształtów bezpośrednio na formularzu.  
@@ -53,7 +53,7 @@ Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji for
   
 |Do|Zobacz|  
 |--------|---------|  
-|Tworzenie nowej aplikacji Windows Forms z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]|[Wskazówki: Tworzenie formularza prostego systemu Windows](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
+|Tworzenie nowej aplikacji formularzy systemu Windows z programem Visual Studio|[Wskazówki: Tworzenie formularza prostego systemu Windows](http://msdn.microsoft.com/library/2d9daec0-0543-41d0-acb1-964f685bddbb)|  
 |Używanie formantów na formularzach|[Instrukcje: dodawanie kontrolek do formularzy Windows Forms](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
 |Tworzenie grafiki <xref:System.Drawing>|[Wprowadzenie do programowania grafiki](../../../framework/winforms/advanced/getting-started-with-graphics-programming.md)|  
 |Tworzenie niestandardowych formantów|[Instrukcje: dziedziczenie z klasy UserControl](../../../framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|  
@@ -67,7 +67,7 @@ Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji for
  Można utworzyć za pomocą okna źródeł danych, który zawiera źródeł danych, takich jak bazy danych, usługi sieci Web i obiektów w projekcie formantów powiązanych z danymi. Formanty powiązane z danymi można utworzyć, przeciągając elementy z tego okna na formularze w projekcie. Użytkownik może również wiązania danych istniejących formantów do danych przeciągając obiekty z okna źródeł danych na istniejące kontrolki.  
   
 ### <a name="settings"></a>Ustawienia  
- Innego typu powiązania danych, którymi można zarządzać w formularzach systemu Windows jest ustawienia. Większość aplikacji inteligentnych klientów należy zachować niektóre informacje na temat ich stanu czasu wykonywania, takich jak rozmiar Ostatnia znana formularzy i zachowania danych użytkownika — preferencji, takich jak domyślne lokalizacje zapisane pliki. Funkcja ustawienia aplikacji adresy te wymagania, zapewniając łatwy sposób przechowywania obu typów ustawień na komputerze klienckim. Raz zdefiniowane przy użyciu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] lub edytora kodu, te ustawienia są utrwalane w formacie XML i automatycznie odczytywać do pamięci w czasie wykonywania.  
+ Innego typu powiązania danych, którymi można zarządzać w formularzach systemu Windows jest ustawienia. Większość aplikacji inteligentnych klientów należy zachować niektóre informacje na temat ich stanu czasu wykonywania, takich jak rozmiar Ostatnia znana formularzy i zachowania danych użytkownika — preferencji, takich jak domyślne lokalizacje zapisane pliki. Funkcja ustawienia aplikacji adresy te wymagania, zapewniając łatwy sposób przechowywania obu typów ustawień na komputerze klienckim. Po zdefiniowaniu przy użyciu programu Visual Studio lub edytora kodu, te ustawienia są utrwalane w formacie XML i automatycznie odczytywać do pamięci w czasie wykonywania.  
   
  Aby uzyskać szczegółowe informacje dotyczące korzystania z tych funkcji zobacz poniższe tematy Pomocy.  
   
@@ -78,7 +78,7 @@ Ważnym elementem języka Visual Basic jest możliwość tworzenia aplikacji for
 |Korzystanie z okna źródeł danych|[Wskazówki: Wyświetlanie danych w formularzu systemu Windows](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>Wdrażanie aplikacji na komputerach klienckich  
- Po napisano aplikację, konieczne jest wysłanie go do użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Przy użyciu [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z wewnątrz [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dzięki za pomocą kilku kliknięć i udostępnić użytkownikowi adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] zarządza wszystkie elementy i zależności aplikacji i zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
+ Po napisano aplikację, konieczne jest wysłanie go do użytkowników, aby mogli zainstalować i uruchom go na komputerach klienckich. Przy użyciu [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] technologii, można wdrożyć aplikacji z poziomu programu Visual Studio za pomocą kilku kliknięć i udostępnić użytkownikowi adres URL aplikacji sieci Web. [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] zarządza wszystkie elementy i zależności aplikacji i zapewnia, że aplikacja jest poprawnie zainstalowana na komputerze klienckim.  
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] aplikacje mogą być skonfigurowane do uruchamiania tylko wtedy, gdy użytkownik jest połączony z siecią lub uruchom oba projekty w trybie online i offline. Po określeniu, czy aplikacja powinna obsługiwać operacji w trybie offline, [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] dodaje łącze do aplikacji w użytkownika **Start** menu, dzięki czemu użytkownik może go otwierać bez korzystania z adresu URL.  
   

@@ -30,11 +30,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 30929c6163a279bc0ea47d1262f54ec5ff75a87c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0c641a9894866a64bab4c7783bca009adf9f3190
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>Porady: zapewnienie pozostawania wybranego wiersza w tabeli potomnej w prawidłowym położeniu
 Często po współpracujesz powiązanie danych w formularzach systemu Windows, co jest nazywane nadrzędny/podrzędny lub głównych/szczegółów widoku będą wyświetlane dane. Odnosi się do scenariusz wiązania danych, których dane z tego samego źródła są wyświetlane w dwóch formantów. Zmiana wyboru w jeden formant powoduje danych wyświetlanych w formancie drugi do zmiany. Na przykład pierwszy formant może zawierać listę klientów, a drugi listę zleceń związane z wybranego klienta w pierwszego formantu.  
@@ -94,7 +94,7 @@ Często po współpracujesz powiązanie danych w formularzach systemu Windows, c
   
 -   Odwołania do zestawów systemu, system.dane System.Drawing, System.Windows.Forms i zestawów System.XML.  
   
- Aby uzyskać informacje o sposobie budowania w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [csc.exe budynku wiersza polecenia z](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Aby uzyskać informacje o sposobie budowania w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [csc.exe budynku wiersza polecenia z](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Instrukcje: zapewnienie synchronizacji wiązania wielu kontrolek z jednym źródłem danych](../../../docs/framework/winforms/multiple-controls-bound-to-data-source-synchronized.md)  

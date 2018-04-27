@@ -16,11 +16,11 @@ ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 63dfdf0f2fe8869577d450f21c4f12b5eec125bb
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ab3f9d2729dec1d97dc00fac3527e492d3c5880a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="class-39ltclassnamegt39-cannot-be-found"></a>Klasa &#39; &lt;classname&gt; &#39; nie można odnaleźć
 Klasy\<classname >' nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem niedopasowania biblioteki "Microsoft.VisualBasic.dll".  
@@ -33,7 +33,7 @@ Klasy\<classname >' nie można odnaleźć. Ta sytuacja jest zazwyczaj wynikiem n
   
 1.  Skompiluj program, aby zobaczyć, jeśli ten błąd wystąpi ponownie.  
   
-2.  Jeśli błąd będzie się powtarzał, Zapisz swoją pracę i ponownie uruchom [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+2.  Jeśli błąd będzie się powtarzał, należy zapisać pracę i ponownie uruchom program Visual Studio.  
   
 3.  Jeśli błąd będzie się powtarzał, zainstaluj ponownie Visual Basic.  
   

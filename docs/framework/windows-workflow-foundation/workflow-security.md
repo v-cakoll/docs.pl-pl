@@ -1,29 +1,29 @@
 ---
-title: "Zabezpieczenia przepływu pracy"
-ms.custom: 
+title: Zabezpieczenia przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-caps.latest.revision: 
+caps.latest.revision: 13
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: dbb1d1efc0758410f12f2c669cca85b9f0e38406
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 90e9d5f3a2cff454ff7892877f012f8679b9ccac
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="workflow-security"></a>Zabezpieczenia przepływu pracy
-[!INCLUDE[wf](../../../includes/wf-md.md)]jest zintegrowany z wielu różnych technologii, takich jak Microsoft SQL Server i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interakcja z tych technologii może powodować problemy z zabezpieczeniami z przepływem pracy, jeśli wykonane nieprawidłowo.  
+Windows Workflow Foundation (WF) są zintegrowane z wielu różnych technologii, takich jak Microsoft SQL Server i [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Interakcja z tych technologii może powodować problemy z zabezpieczeniami z przepływem pracy, jeśli wykonane nieprawidłowo.  
   
 ## <a name="persistence-security-concerns"></a>Problemy z zabezpieczeniami trwałości  
   
@@ -41,15 +41,15 @@ ms.lasthandoff: 12/22/2017
   
 -   Jeśli dużej liczby działań podrzędnych, lokalizacji, zakładki, rozszerzenia hosta lub zakresy są używane, lub zakładki z bardzo dużych ładunki są używane, pamięci można wyczerpane lub nadmiernej ilości miejsca w bazie danych, którą można przydzielić podczas utrwalania. Można to zminimalizować przy użyciu zabezpieczeń na poziomie bazy danych i na poziomie obiektu.  
   
--   Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, muszą być zabezpieczone w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Programu SQL Server najlepsze rozwiązania](http://go.microsoft.com/fwlink/?LinkId=164972).  
+-   Korzystając z <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>, muszą być zabezpieczone w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [SQL Server najlepsze rozwiązania](http://go.microsoft.com/fwlink/?LinkId=164972).  
   
--   Powinny być szyfrowane poufnych danych w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Szyfrowania zabezpieczeń SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
+-   Powinny być szyfrowane poufnych danych w magazynie wystąpień. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Szyfrowanie zabezpieczeń SQL](http://go.microsoft.com/fwlink/?LinkId=164976).  
   
 -   Ponieważ często zawiera parametry połączenia bazy danych w pliku konfiguracji, zabezpieczenia na poziomie systemu windows (ACL) powinien być używany do zapewnienia, że plik konfiguracyjny (zwykle w pliku Web.Config) jest bezpieczne i informacje logowania i hasła nie są uwzględnione w Parametry połączenia. Uwierzytelnianie systemu Windows należy użyć między bazy danych i serwera sieci web.  
   
 ## <a name="considerations-for-workflowservicehost"></a>Zagadnienia dotyczące obiektu WorkflowServiceHost  
   
--   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]punkty końcowe używane w przepływach pracy powinny być chronione. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Omówienie zabezpieczeń usługi WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
+-   [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] punkty końcowe używane w przepływach pracy powinny być chronione. [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Przegląd zabezpieczeń WCF](http://go.microsoft.com/fwlink/?LinkID=164975).  
   
 -   Zezwolenie na poziomie hosta można zaimplementować przy użyciu <xref:System.ServiceModel.ServiceAuthorizationManager>. Zobacz [jak: tworzenie Menedżera autoryzacji niestandardowej dla usługi](http://go.microsoft.com/fwlink/?LinkId=192228) szczegółowe informacje. Jest to również przedstawiono w poniższym przykładzie: [zabezpieczania usług przepływu pracy](../../../docs/framework/windows-workflow-foundation/samples/securing-workflow-services.md).  
   

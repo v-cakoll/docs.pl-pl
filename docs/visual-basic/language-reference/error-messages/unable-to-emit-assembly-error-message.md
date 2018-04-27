@@ -16,11 +16,11 @@ ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
 caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 61a5c6b753b8aa70905027bc1449739769cd8da5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 59288ba7b4cec34cd2266d66aa931e92598e819a
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="unable-to-emit-assembly-lterror-messagegt"></a>Nie można wyemitować zestawu: &lt;komunikat o błędzie&gt;
 Kompilator Visual Basic wywołania Assembly Linker (Al.exe, znanej także jako Alink) można wygenerować zestawu z manifestu, z konsolidatora raportowania błędów w fazie emisji tworzenia zestawu.  
@@ -61,7 +61,7 @@ Kompilator Visual Basic wywołania Assembly Linker (Al.exe, znanej także jako A
   
      Jeśli ścieżka lub plik zawiera spacje, użyj podwójny cudzysłów (").  
   
-6.  W [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], Dodaj odwołanie do zestawu .NET do nowo utworzonego pliku.  
+6.  W programie Visual Studio Dodaj odwołanie do pliku, który właśnie utworzony zestaw .NET.  
   
 ## <a name="see-also"></a>Zobacz też  
  

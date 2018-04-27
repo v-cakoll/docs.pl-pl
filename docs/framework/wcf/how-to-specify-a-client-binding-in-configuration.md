@@ -1,24 +1,26 @@
 ---
-title: "Instrukcje: Określanie powiązań klienta w konfiguracji"
-ms.custom: 
+title: 'Instrukcje: Określanie powiązań klienta w konfiguracji'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 08cbf0145a2ac3f19e51a065acf97e3cf23b7986
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2441fd7507c5bb368405685598480650114b76a9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>Instrukcje: Określanie powiązań klienta w konfiguracji
 W tym przykładzie utworzono aplikacji konsoli klienta do używania usługi Kalkulator i deklaratywnie określono powiązania dla tego klienta w konfiguracji. Klient uzyskuje dostęp do `CalculatorService`, który implementuje `ICalculator` interfejsu i usługę i klienta, użyj <xref:System.ServiceModel.BasicHttpBinding> klasy.  
@@ -51,7 +53,7 @@ W tym przykładzie utworzono aplikacji konsoli klienta do używania usługi Kalk
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe generuje również konfiguracji klienta, który używa <xref:System.ServiceModel.BasicHttpBinding> klasy. Korzystając z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], nazwij ten plik App.config. Należy pamiętać, że adres i informacje o powiązaniu nie określono dowolnym wewnątrz implementacji usługi. Ponadto kodu nie ma do zapisania do pobierania informacji z pliku konfiguracji.  
+4.  Svcutil.exe generuje również konfiguracji klienta, który używa <xref:System.ServiceModel.BasicHttpBinding> klasy. Podczas korzystania z programu Visual Studio, nazwę tego pliku App.config. Należy pamiętać, że adres i informacje o powiązaniu nie określono dowolnym wewnątrz implementacji usługi. Ponadto kodu nie ma do zapisania do pobierania informacji z pliku konfiguracji.  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             

@@ -19,24 +19,24 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9ddc1b505146e7ca31bca5acc5e9d19d258a860d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: b166dc273eed83660565d9b3bc6a70ffc85547fa
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="client-application-services-overview"></a>Przegląd usług aplikacji klienta
 Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] logowania, ról i usług profilu w aplikacjach formularzy systemu Windows i Windows Presentation Foundation (WPF). [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi aplikacji znajdują się w Microsoft ASP.NET 2.0 AJAX rozszerzeń, które jest dołączana do [!INCLUDE[vs_orcas_long](../../../includes/vs-orcas-long-md.md)] i [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]. Te usługi umożliwiają wielu sieci Web i aplikacji do udostępniania informacji o użytkowniku i funkcje z zakresu zarządzania użytkownika z jednego serwera systemu Windows.  
   
  Usługi aplikacji klienta obejmują dostawców usług klienta, które Podłącz do modelu rozszerzalności usług sieci Web, aby umożliwić następujące funkcje dla aplikacji systemu Windows:  
   
--   Konfiguracja klienta proste. Można włączyć i skonfigurować logowania, ról i usług profilu przy użyciu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektu projektanta lub określając klienta dostawcy usług w pliku App.config projektu. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie usługi aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
+-   Konfiguracja klienta proste. Można włączyć i skonfigurować logowania, ról i profilu usługi za pomocą projektanta projektu programu Visual Studio lub za pośrednictwem dostawcy usług klienta w pliku App.config projektu. Aby uzyskać więcej informacji, zobacz [porady: Konfigurowanie usługi aplikacji klienta](../../../docs/framework/common-client-technologies/how-to-configure-client-application-services.md).  
   
 -   Proste programowania. Po włączona i skonfigurowana z usługi aplikacji klienta, możesz mają dostęp do dostawcy usług pośrednio przez istniejące [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] członkostwo, role i klasy ustawienia aplikacji. Można również uzyskać dostęp do [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] klas implementujących usługi aplikacji klienta. Jednak w większości przypadków bezpośredniego dostępu jest niepotrzebna. Aby uzyskać więcej informacji na temat klas usługi aplikacji klienta Zobacz sekcję "Klasy usług aplikacji klienta" w tym temacie.  
   
 -   Obsługa w trybie offline. Aplikacje systemu Windows często mają działanie w środowiskach od czasu do czasu połączenia. Gdy aplikacja jest w trybie online, dostawców usług klienta będą buforowane wartości pobrany z serwera do użycia, gdy aplikacja jest w trybie offline.  
   
--   Integracja z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta ustawień aplikacji. Po dodaniu ustawienia projektu w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], można określić ustawienia, które mają być dostępne za pośrednictwem dostawcy usług ustawienia klienta.  
+-   Integracja z programem designer ustawienia aplikacji programu Visual Studio. Po dodaniu ustawienia do projektu programu Visual Studio, można określić ustawienia, które mają być dostępne za pośrednictwem dostawcy usług ustawienia klienta.  
   
  W poniższych sekcjach opisano te funkcje bardziej szczegółowo. Aby uzyskać więcej informacji na temat [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usług aplikacji, zobacz [przegląd usług aplikacji ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
   
@@ -61,9 +61,9 @@ Usługi aplikacji klienta udostępnienia uproszczony [!INCLUDE[ajax_current_shor
  Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] usługi ról, zobacz [przy użyciu ról informacji o Microsoft Ajax](http://msdn.microsoft.com/library/280f6ad9-ba1a-4fc9-b0cc-22e39e54a82d).  
   
 ## <a name="settings"></a>Ustawienia  
- Usługi aplikacji klienta można użyć do pobierania ustawień aplikacji użytkownika z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Usługi aplikacji klienta funkcja ustawień sieci Web integruje się z funkcją ustawień aplikacji dostępnych w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Aby pobrać ustawienia sieci Web, należy najpierw Generowanie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) projektu za pomocą **ustawienia** na karcie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta projektu. Na **ustawienia** kartę, można użyć **ustawień sieci Web obciążenia** przycisk, aby pobrać ustawienia sieci Web i dodaj je do wygenerowanej `Settings` klasy. Można użyć ustawień sieci Web skonfigurowana do użycia przez wszystkich użytkowników uwierzytelnionych lub wszyscy użytkownicy anonimowi.  
+ Usługi aplikacji klienta można użyć do pobierania ustawień aplikacji użytkownika z istniejącego [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi. Usługi aplikacji klienta funkcja ustawień sieci Web integruje się z funkcją ustawień aplikacji dostępnych w [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]. Aby pobrać ustawienia sieci Web, należy najpierw Generowanie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) dla projektu za pomocą **ustawienia** kartę w Projektancie projektu programu Visual Studio. Na **ustawienia** kartę, można użyć **ustawień sieci Web obciążenia** przycisk, aby pobrać ustawienia sieci Web i dodaj je do wygenerowanej `Settings` klasy. Można użyć ustawień sieci Web skonfigurowana do użycia przez wszystkich użytkowników uwierzytelnionych lub wszyscy użytkownicy anonimowi.  
   
- Aby uzyskać więcej informacji na temat ustawień aplikacji, zobacz [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informacje na temat implementowania własne ustawienia klasy zamiast generowania w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], zobacz [porady: Tworzenie ustawień aplikacji](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi, zobacz [przy użyciu informacji o profilu z Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
+ Aby uzyskać więcej informacji na temat ustawień aplikacji, zobacz [Przegląd ustawień aplikacji](../../../docs/framework/winforms/advanced/application-settings-overview.md). Informacje o sposobie implementacji klasy własne ustawienia zamiast generowania w Visual Studio, zobacz [porady: Tworzenie ustawień aplikacji](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md). Aby uzyskać informacje dotyczące sposobu konfigurowania [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] profilu usługi, zobacz [przy użyciu informacji o profilu z Microsoft Ajax](http://msdn.microsoft.com/library/91239ae6-d01c-4f4e-a433-eb9040dbed61).  
   
 ## <a name="client-application-services-classes"></a>Klasy usługi aplikacji klienta  
  W poniższej tabeli opisano klasy, które implementują funkcji usług aplikacji klienta.  

@@ -1,30 +1,32 @@
 ---
 title: Szablony programu Visual Studio na potrzeby programu WCF
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
-caps.latest.revision: "31"
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 2bb195af180ab9d840f91fe82f9f643119663374
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9626905dbcec6bd40570e4188e9a188fca164144
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-visual-studio-templates"></a>Szablony programu Visual Studio na potrzeby programu WCF
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] szablony są wstępnie zdefiniowanych szablonów projektów i elementów można użyć w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] można szybko utworzyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Szablony Visual Studio są wstępnie zdefiniowanych szablonów projektów i elementów w programie Visual Studio umożliwia szybkie tworzenie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi i aplikacje otaczającego.  
   
 ## <a name="using-the-wcf-templates"></a>Korzystanie z szablonów usługi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)][!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Szablony zapewniają strukturę klasa podstawowa dla rozwoju usługi. W szczególności te szablony stanowią podstawowe definicje dla kontraktu usługi, kontrakt danych implementacji usługi i konfiguracji. Te szablony umożliwia tworzenie prostych usługi za pomocą kodu minimalnej interakcji, a także bloku konstrukcyjnego dla bardziej zaawansowanych usług.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablony Visual Studio Podaj struktury klasa podstawowa dla rozwoju usługi. W szczególności te szablony stanowią podstawowe definicje dla kontraktu usługi, kontrakt danych implementacji usługi i konfiguracji. Te szablony umożliwia tworzenie prostych usługi za pomocą kodu minimalnej interakcji, a także bloku konstrukcyjnego dla bardziej zaawansowanych usług.  
   
 ### <a name="wcf-service-library-project-template"></a>Szablon projektu biblioteki usługi WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablon projektu biblioteki usługi jest dostępna w oknie dialogowym nowego projektu w obszarze **Visual C# \WCF** i **Visual Basic\WCF**.  
@@ -38,7 +40,7 @@ ms.lasthandoff: 01/19/2018
 -   Plik konfiguracji aplikacji (App.config). Plik konfiguracji zawiera podstawowe elementy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] modelu usługi z bezpiecznego powiązania protokołu HTTP. Ponadto zawiera punkt końcowy usługi i umożliwia wymiany metadanych.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]jest skonfigurowany do rozpoznawania pliku App.config jako pliku konfiguracji dla projektu po jego uruchomieniu przy użyciu [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), który jest konfiguracja domyślna. Jeśli na serwerze biblioteki usługi w pliku wykonywalnego, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, jak pliki konfiguracji dla bibliotek DLL są nieprawidłowe.  
+>  Program Visual Studio jest skonfigurowany do rozpoznać pliku App.config jako pliku konfiguracji dla projektu po jego uruchomieniu przy użyciu [Host usługi WCF (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md), który jest konfiguracja domyślna. Jeśli na serwerze biblioteki usługi w pliku wykonywalnego, należy przenieść kod konfiguracji do pliku konfiguracyjnego pliku wykonywalnego, jak pliki konfiguracji dla bibliotek DLL są nieprawidłowe.  
   
 ### <a name="wcf-service-application-template"></a>Szablon aplikacji usługi WCF  
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablon aplikacji usługi jest dostępny w oknie dialogowym Nowy projekt w obszarze **Visual C# \WCF** i **Visual Basic\WCF**.  
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/19/2018
  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablon witryny sieci Web jest dostępna w oknie dialogowym Nowy projekt w obszarze **Visual C# \Web Site\WCF usługi** i **Visual usługi Site\WCF Basic\Web**. Tworzy tych samych plików jako szablon aplikacji usługi WCF, ale organizuje je tak, jakby była witryny sieci web ASP.NET. Są tworzone foldery App_Code i App_Data.  
   
 ### <a name="wcf-service-item-template"></a>Szablon elementu Usługa WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablonu elementu Service jest szablon niestandardowy, który umożliwia szybkie, aby dodać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] services do istniejącej [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektów.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Szablonu elementu Service jest szablon niestandardowy, który umożliwia szybkie, aby dodać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi do Twoich istniejących projektów programu Visual Studio.  
   
  Aby użyć tego szablonu, przejdź do **Eksploratora rozwiązań** okienku kliknij prawym przyciskiem myszy nazwę projektu, wskaż pozycję **Dodaj**, a następnie kliknij przycisk **nowy element** można uruchomić **Dodaj nowy Element** okno dialogowe.  
   
@@ -70,15 +72,15 @@ ms.lasthandoff: 01/19/2018
  Pliku hosta usługi (plik service1.svc) również jest tworzony, jeśli istniejący projekt jest projektem sieci Web.  
   
 ### <a name="wcf-wf-service-project-and-item-template"></a>Projekt WF usługi WCF i szablon elementu.  
- Te szablony tworzą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi przepływu pracy, jaką jest przepływ pracy, który można uzyskać dostępu do usługi, takich jak usługi sieci web. Szablony oddzielne istnieje XAML i imperatywnych modelach programowania. Korzystanie z szablonów, można utworzyć przepływ pracy automatu Sekwencyjna lub stanu. Aby uzyskać więcej informacji o tych typach przepływu pracy, zobacz [Windows Workflow Foundation samouczki](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)]Tworzenie projektów przepływu pracy, zobacz [tworzenia projektów przepływu pracy starszego](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
+ Te szablony tworzą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi przepływu pracy, jaką jest przepływ pracy, który można uzyskać dostępu do usługi, takich jak usługi sieci web. Szablony oddzielne istnieje XAML i imperatywnych modelach programowania. Korzystanie z szablonów, można utworzyć przepływ pracy automatu Sekwencyjna lub stanu. Aby uzyskać więcej informacji o tych typach przepływu pracy, zobacz [Windows Workflow Foundation samouczki](http://msdn.microsoft.com/library/e9705654-bd96-4b56-8d98-f1f118112d97). [!INCLUDE[crabout](../../../includes/crabout-md.md)] Tworzenie projektów przepływu pracy, zobacz [tworzenia projektów przepływu pracy starszego](/visualstudio/workflow-designer/creating-legacy-workflow-projects).  
   
- [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]Projektant jest bardziej elastyczny, gdy typ XOML, przepływy pracy są używane zamiast tego kodu na podstawie tych. XOML przepływu pracy jest domyślny typ przepływu pracy do utworzenia.  
+ Projektanta Visual Studio jest bardziej elastyczny, gdy typ XOML, przepływy pracy są używane zamiast tego kodu na podstawie tych. XOML przepływu pracy jest domyślny typ przepływu pracy do utworzenia.  
   
 ### <a name="wcf-syndication-service-library-template"></a>Szablon biblioteki usługi syndykacji WCF  
  Ten szablon umożliwia narazić Twoje źródła danych w formacie RSS lub ATOM jako [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi. Aby uzyskać więcej informacji, zobacz [syndykacji WCF](../../../docs/framework/wcf/feature-details/wcf-syndication.md).  
   
 #### <a name="changing-the-address-of-the-feed"></a>Zmiana adresu źródła danych  
- Szablon zespolonego używa programu Internet Explorer podczas wykonywania. Po kliknięciu prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **właściwości**, a następnie wybierz pozycję **debugowania** kartę, aby sprawdzić adres domyślnej szablon. Program Internet Explorer próbuje otworzyć kanału informacyjnego pod tym adresem.  
+ Szablon zespolonego używa programu Internet Explorer podczas wykonywania. Po kliknięciu prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz pozycję **debugowania** kartę, aby sprawdzić adres domyślnej szablon. Program Internet Explorer próbuje otworzyć kanału informacyjnego pod tym adresem.  
   
  Jeśli zmienisz adres Twojego źródła danych, należy również zmienić adres w **debugowania** kartę. Jeśli nie zrobisz, Internet Explorer próby otwarcia kanału informacyjnego pod domyślnym adresem i zakończyć się niepowodzeniem.  
   

@@ -24,11 +24,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b8bd383c94afb5c8bb3574e2fee80bca8c4a9143
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 0f6f92c225e7b3c745c5cf439c9094d72fa0cde0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>Porady: rozróżnianie między kliknięciami a dwukrotnymi kliknięciami
 Zazwyczaj pojedynczy *kliknij* inicjuje akcji interfejsu użytkownika a *kliknij dwukrotnie* rozszerza akcji. Na przykład jednego kliknięcia zazwyczaj wybiera element, a następnie dwukrotne Edytuje wybrany element. Jednak zdarzenia kliknięcia formularze systemu Windows nie łatwo zmiany scenariusz, w którym przez kliknięcie i dwukrotne akcje niezgodne, ponieważ powiązane akcji <xref:System.Windows.Forms.Control.Click> lub <xref:System.Windows.Forms.Control.MouseClick> zdarzeń jest wykonywane przed akcją powiązane <xref:System.Windows.Forms.Control.DoubleClick>lub <xref:System.Windows.Forms.Control.MouseDoubleClick> zdarzeń. W tym temacie przedstawiono dwa rozwiązania tego problemu. Rozwiązanie polega na kliknij dwukrotnie zdarzenie i wycofać akcje obsługi zdarzenia kliknięcia. W rzadkich przypadkach może być konieczne symulować kliknij i dwukrotnie kliknij zachowanie obsługa <xref:System.Windows.Forms.Control.MouseDown> zdarzeń i za pomocą <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> i <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> właściwości <xref:System.Windows.Forms.SystemInformation> klasy. Pomiar czasu między kliknięciami a jeśli drugie kliknięcie występuje przed wartością <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> osiągnięciu i kliknięcie mieści się w prostokącie zdefiniowane przez <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A>, wykonania akcji kliknij dwukrotnie; w przeciwnym razie wykonaj akcję kliknij.  
@@ -53,7 +53,7 @@ Zazwyczaj pojedynczy *kliknij* inicjuje akcji interfejsu użytkownika a *kliknij
   
 -   Odwołania do zestawów systemu, System.Drawing i System.Windows.Forms.  
   
- Dla informacji o tworzeniu tych przykładów z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tych przykładach [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] wklejając kod w nowych projektach.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Dla informacji o tworzeniu tych przykładów z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Wklejając kod w nowych projektach, można także utworzyć tych przykładów w programie Visual Studio.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wprowadzanie za pomocą myszy w aplikacjach Windows Forms](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)

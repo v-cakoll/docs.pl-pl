@@ -1,11 +1,12 @@
 ---
-title: "Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)"
-ms.custom: 
+title: 'Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Windows functions [Visual Basic], calling
@@ -20,21 +21,21 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 78e6789e7def5deeb8394e3aefecfdc187ec6ef6
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: dd0738300ec846041e78f19836f29e7adff1c821
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>Porady: wywoływanie funkcji Windows wykorzystującej typy bez znaku (Visual Basic)
-Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można przejść do tych elementów członkowskich z [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Zużywają klasy, modułu lub struktury, która ma elementów członkowskich typu Liczba całkowita bez znaku, można uzyskać dostępu do tych elementów członkowskich za pomocą Visual Basic.  
   
 ### <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>Wywoływanie funkcji Windows wykorzystującej typu bez znaku  
   
-1.  Użyj [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) mówić [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] biblioteki, który zawiera funkcję, jego nazwa jest w tej bibliotece jest jego sekwencja wywoływania i sposób konwertowania ciągów podczas wywoływania metody go.  
+1.  Użyj [instrukcji Declare](../../../visual-basic/language-reference/statements/declare-statement.md) mówić Visual Basic biblioteki, który zawiera funkcję, jego nazwa jest w tej bibliotece jest jego sekwencja wywoływania i sposób konwertowania ciągów podczas wywoływania metody go.  
   
 2.  W `Declare` instrukcji, użyj `UInteger`, `ULong`, `UShort`, lub `Byte` odpowiednio dla każdego parametru z typu bez znaku.  
   

@@ -1,24 +1,26 @@
 ---
 title: Sesje i kolejki
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 0de2668eb03a658632bb8a18c711f780b333e86b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1aeaa72937d23a321eb615ad8b1eb4ec1e7b48e
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sessions-and-queues"></a>Sesje i kolejki
 W tym przykładzie przedstawiono sposób wysyłania i odbierania zestawu powiązanych wiadomości w kolejce komunikacji za pomocą transportu usługi kolejkowania komunikatów (MSMQ). W przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -42,8 +44,8 @@ W tym przykładzie przedstawiono sposób wysyłania i odbierania zestawu powiąz
  W przykładowym klient wysyła komunikaty do usługi w ramach sesji w zakresie jednej transakcji.  
   
  Kontrakt usługi jest `IOrderTaker`, który definiuje jednokierunkowe usługa, która jest odpowiednia do użycia w przypadku kolejek. <xref:System.ServiceModel.SessionMode> Używane w kontrakcie pokazano w następującym przykładowym kodzie wskazuje, czy komunikaty są częścią sesji.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples", SessionMode=SessionMode.Required)]  
 public interface IOrderTaker  
 {  
@@ -56,11 +58,11 @@ public interface IOrderTaker
     [OperationContract(IsOneWay = true)]  
     void EndPurchaseOrder();  
 }  
-```  
-  
+```
+
  Usługa definiuje operacji usługi w taki sposób, że pierwsza operacja powoduje zarejestrowanie w transakcji, ale nie automatycznie ukończyć transakcji. Kolejne operacje również zarejestrować się w tej samej transakcji, ale nie zostanie wypełnione automatycznie. Ostatniej operacji w sesji automatycznie wykonuje transakcję. W związku z tym jednej transakcji jest używany dla kilku wywołania operacji w kontrakcie usługi. Jeśli jakiekolwiek działania zgłosić wyjątek, transakcja wycofuje i sesji jest przywracane do kolejki. Po pomyślnym zakończeniu ostatniej operacji transakcja została przekazana. Używane przez usługę `PerSession` jako <xref:System.ServiceModel.InstanceContextMode> odbierać wszystkie wiadomości w sesji dla tego samego wystąpienia usługi.  
-  
-```  
+
+```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
 public class OrderTakerService : IOrderTaker  
 {  
@@ -92,11 +94,11 @@ public class OrderTakerService : IOrderTaker
        Console.WriteLine(po.ToString());  
     }  
 }  
-```  
-  
+```
+
  Usługa jest samodzielnie hostowana. Za pomocą transportu MSMQ, kolejki używane musi zostać utworzona z wyprzedzeniem. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera <xref:System.Messaging> kod, aby sprawdzić, czy kolejki i tworzy, jeśli to konieczne. Nazwa kolejki jest do odczytu z pliku konfiguracji przy użyciu <xref:System.Configuration.ConfigurationManager.AppSettings%2A> klasy.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -123,8 +125,8 @@ public static void Main()
         serviceHost.Close();   
     }  
 }  
-```  
-  
+```
+
  Nazwa kolejki usługi MSMQ jest określona w sekcji appSettings pliku konfiguracji. Punkt końcowy usługi jest zdefiniowany w sekcji system.serviceModel pliku konfiguracji i określa `netMsmqBinding` powiązania.  
   
 ```xml  
@@ -150,8 +152,8 @@ public static void Main()
 ```  
   
  Klient tworzy zakresu transakcji. Wszystkie wiadomości w sesji są wysyłane do kolejki w zakresie transakcji, co powoduje traktowane jako Atomowej jednostki, w którym wszystkie komunikaty powodzenie lub niepowodzenie. Transakcja zostaje zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A>.  
-  
-```  
+
+```csharp
 //Create a transaction scope.  
 using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Required))  
 {  
@@ -178,8 +180,8 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
     // Complete the transaction.  
     scope.Complete();  
 }  
-```  
-  
+```
+
 > [!NOTE]
 >  Można użyć tylko jednej transakcji dla wszystkich wiadomości w sesji i wszystkie wiadomości w sesji mają być wysyłane przed zatwierdzeniem transakcji. Zamykanie klienta zamknięciu sesji. Dlatego klient ma zostanie zamknięty przed zakończeniem transakcji, aby wysyłać wszystkie wiadomości w sesji do kolejki.  
   

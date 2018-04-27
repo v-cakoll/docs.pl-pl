@@ -1,12 +1,13 @@
 ---
-title: "Narzędzie edytora konfiguracji (SvcConfigEditor.exe)"
-ms.custom: 
+title: Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - configuration files, creating
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - Configuration file
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: e21dacd5f01ba956ba78456b8e325d0b7e767df7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1531c68bdbb3b28436d0701536ef274f34513b19
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>Narzędzie edytora konfiguracji (SvcConfigEditor.exe)
 [!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Usługi edytora konfiguracji (SvcConfigEditor.exe) umożliwia administratorów i deweloperów, tworzenie i modyfikowanie ustawień konfiguracji [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług przy użyciu graficznego interfejsu użytkownika. Z tego narzędzia można zarządzać ustawieniami dla [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] powiązania zachowania, usług i diagnostyki bez konieczności bezpośredniego edytowania plików XML konfiguracji.  
@@ -122,7 +124,7 @@ ms.lasthandoff: 12/22/2017
 4.  Kliknij przycisk **OK**.  
   
 > [!NOTE]
->  Nie można edytować wartość [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) wewnątrz tego narzędzia. Aby dodać lub zmodyfikować ten element, należy użyć edytora tekstu lub [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+>  Nie można edytować wartość [ \<baseAddressPrefixFilters >](../../../docs/framework/configure-apps/file-schema/wcf/baseaddressprefixfilters.md) wewnątrz tego narzędzia. Aby dodać lub zmodyfikować ten element, należy używać edytora tekstu lub programu Visual Studio.  
   
 ### <a name="client"></a>Klient  
  **Klienta** węzeł Wyświetla wszystkie punkty końcowe klienta w pliku konfiguracji. Każdy węzeł podrzędny w drzewie odnosi się do elementu podrzędnego elementu <`client`> w pliku konfiguracji.  

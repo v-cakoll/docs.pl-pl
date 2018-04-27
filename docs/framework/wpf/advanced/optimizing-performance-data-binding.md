@@ -1,30 +1,32 @@
 ---
-title: "Optymalizacja wydajności: powiązanie danych"
-ms.custom: 
+title: 'Optymalizacja wydajności: powiązanie danych'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c420748a9361655eeb2df33ce8426d9f167d3414
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4b21089ea3f3aef8a934c78187b30f2576b8d39b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-performance-data-binding"></a>Optymalizacja wydajności: powiązanie danych
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] Powiązanie danych zapewnia prosty i spójny sposób dla aplikacji przedstawić i interakcji z danymi. Elementy mogą być powiązane z danych z różnych źródeł danych w formie [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów i [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)].  
   
  Ten temat zawiera zalecenia dotyczące wydajności powiązania danych.  
   
@@ -34,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="how-data-binding-references-are-resolved"></a>Jak są rozwiązywane odwołania do powiązania danych  
  Przed omówieniem powiązanie problemy z wydajnością danych, warto zapoznać jak [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aparat wiązania danych usuwa odwołania do obiektów dla powiązania.  
   
- Źródło [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązanie danych może być dowolną [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. Można powiązać właściwości podrzędnej, właściwości lub indeksatory z [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. Odwołania do powiązania są rozpoznawane przy użyciu [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] odbicia lub <xref:System.ComponentModel.ICustomTypeDescriptor>. Poniżej przedstawiono trzy metody rozpoznawania odwołań do obiektów dla powiązania.  
+ Źródło [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] powiązanie danych może być dowolną [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. Można powiązać właściwości podrzędnej, właściwości lub indeksatory z [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu. Odwołania do powiązania są rozpoznawane przy użyciu odbicia albo programu Microsoft .NET Framework lub <xref:System.ComponentModel.ICustomTypeDescriptor>. Poniżej przedstawiono trzy metody rozpoznawania odwołań do obiektów dla powiązania.  
   
  Pierwsza metoda polega na użyciu odbicia. W takim przypadku <xref:System.Reflection.PropertyInfo> obiekt służy do odnajdywania atrybuty właściwości i udostępnia metadane właściwości. Korzystając z <xref:System.ComponentModel.ICustomTypeDescriptor> interfejsu, aparat wiązania danych korzysta z tego interfejsu dostęp do wartości właściwości. <xref:System.ComponentModel.ICustomTypeDescriptor> Interfejsu jest szczególnie przydatne w przypadku, gdy obiekt nie ma statycznej zbiór właściwości.  
   
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |**Powiązanie z właściwością Text blok tekstu**|**Czas powiązania (ms)**|**Czas renderowania — zawiera powiązanie (ms)**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |Właściwości [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu|115|314|  
-|Właściwości [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu, który implementuje<xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
+|Właściwości [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektu, który implementuje <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
 |Aby <xref:System.Windows.DependencyProperty> z <xref:System.Windows.DependencyObject>.|90|263|  
   
 <a name="Binding_to_Large_CLR_Objects"></a>   
@@ -74,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 |**Właściwość ItemsSource powiązanie danych**|**Zaktualizuj czas 1 elementu (ms)**|  
 |--------------------------------------|---------------------------------------|  
 |Aby [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] <xref:System.Collections.Generic.List%601> obiektu|1656|  
-|Aby<xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
+|Aby <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
   
 <a name="Binding_IList_to_ItemsControl_not_IEnumerable"></a>   
 ## <a name="bind-ilist-to-itemscontrol-not-ienumerable"></a>Powiązać IList ItemsControl nie interfejsu IEnumerable.  
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>Czy nie skonwertować CLR obiekty do XML tylko dla powiązania danych.  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]zezwala na dane powiązać [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości; jednak powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości jest mniejsza niż powiązania danych [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów. Nie można konwertować [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dane do pliku XML obiektu, jeśli jedynym celem jest dla powiązania danych.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zezwala na dane powiązać [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości; jednak powiązania danych [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] zawartości jest mniejsza niż powiązania danych [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] obiektów. Nie można konwertować [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] dane do pliku XML obiektu, jeśli jedynym celem jest dla powiązania danych.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

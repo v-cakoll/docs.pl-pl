@@ -1,24 +1,26 @@
 ---
-title: "Unikanie problemów z instrukcją Using"
-ms.custom: 
+title: Unikanie problemów z instrukcją Using
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 202bf02f017857a354a6f23270e49571c6240b26
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: dd3065a21c1714b0643bfb87b731193d3367352f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="avoiding-problems-with-the-using-statement"></a>Unikanie problemów z instrukcją Using
 W przykładzie pokazano, jak nie należy używać "using" — instrukcja automatycznie wyczyścić zasobów, korzystając z klienta typu C#. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md) implementującej usługi Kalkulator. W tym przykładzie klient jest aplikacji konsoli (.exe), a usługa jest obsługiwana przez Internet Information Services (IIS).  
@@ -32,7 +34,7 @@ W przykładzie pokazano, jak nie należy używać "using" — instrukcja automat
   
  Pierwszy problem, przedstawiono w `DemonstrateProblemUsingCanThrow` metoda, to czy zamykający nawias klamrowy zgłasza wyjątek i kod po nawias zamykający nie wykonuj:  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -44,7 +46,7 @@ Console.WriteLine("Hope this code wasn't important, because it might not happen.
   
  Drugi problem, przedstawiono w `DemonstrateProblemUsingCanThrowAndMask` metoda, jest inny wpływ na zamykający nawias klamrowy zgłoszeniu wyjątku:  
   
-```  
+```csharp   
 using (CalculatorClient client = new CalculatorClient())  
 {  
     ...  
@@ -57,7 +59,7 @@ using (CalculatorClient client = new CalculatorClient())
   
  Na koniec przykładzie pokazano, jak czyszczenie poprawnie, gdy wyjątki występują w `DemonstrateCleanupWithExceptions`. Używa bloku try/catch w celu przesłania raportów o błędach i wywołania `Abort`. Zobacz [oczekiwane wyjątki](../../../../docs/framework/wcf/samples/expected-exceptions.md) przykładowa, aby uzyskać więcej informacji o przechwytywanie wyjątków z wywołań klienta.  
   
-```  
+```csharp   
 try  
 {  
     ...  

@@ -12,11 +12,11 @@ ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 caps.latest.revision: 36
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 58e63d95c2f10329f85d6150b58f196294de38d1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: ebaa934ffaed985439ed65b9f5308404171a91bd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="get-started-with-visual-basic"></a>Wprowadzenie do języka Visual Basic
 Ta sekcja dokumentacji ułatwia szybkie wprowadzenie do programowania aplikacji Visual Basic.  
@@ -64,7 +64,7 @@ Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znale
  Opisuje sposoby uzyskania pomocy technicznej i przekazywania opinii zwrotnej.  
   
  [Visual Studio](/visualstudio/)  
- Zawiera łącza do [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dokumentacji.  
+ Zawiera linki do dokumentacji programu Visual Studio.  
   
  [C#](../../csharp/index.md) zawiera linki do dokumentacji na projektowanie aplikacji z Visual C#.  
   
@@ -72,4 +72,4 @@ Oferuje listę witryn sieci Web i grup dyskusyjnych, które mogą pomóc w znale
  Oferuje łącza do dokumentacji języka Visual C++.  
   
  [Pakietu Office i programu SharePoint](https://msdn.microsoft.com/library/d2tx7z6d)  
- Zawiera informacje dotyczące używania programu Microsoft Office i [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] jako część aplikacji biznesowych.
+ Zawiera informacje dotyczące używania programu Microsoft Office i programu Visual Studio w ramach aplikacji biznesowych.

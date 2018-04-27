@@ -1,24 +1,26 @@
 ---
-title: "Obsługa wsadowa w ramach transakcji"
-ms.custom: 
+title: Obsługa wsadowa w ramach transakcji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd328ed-332e-479c-a894-489609bcddd2
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 87d8e3e09618b214dcafb7afd82970dde54fc4fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 50596aaf5290146148ecb9636b78f7f9180c0b79
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-batching"></a>Obsługa wsadowa w ramach transakcji
 W tym przykładzie pokazano, jak partii odczyty transakcyjne przy użyciu usługi kolejkowania komunikatów (MSMQ). Wsadowe transakcyjne jest funkcja optymalizacji wydajności dla odczytów transakcyjnych w kolejce komunikacji.  
@@ -142,8 +144,8 @@ W tym przykładzie pokazano, jak partii odczyty transakcyjne przy użyciu usług
  Zachowanie usługi definiuje zachowanie operacji z `TransactionScopeRequired` ustawioną `true`. Dzięki temu, że tego samego zakresu transakcji, który służy do pobierania wiadomości z kolejki jest używana przez Menedżera zasobów, wszystkie dostępne metody. W tym przykładzie używamy podstawowej bazy danych do przechowywania informacji o zamówienia zakupu, które zostały zawarte w wiadomości. Zakresu transakcji gwarantuje również, że jeśli metoda zgłosi wyjątek, wiadomość jest zwracana do kolejki. Bez ustawienia zachowania tej operacji, kolejkowanym kanale tworzy transakcji, aby odczytać wiadomość z kolejki i zatwierdza ją automatycznie, zanim wywoływane jest tak, aby w przypadku niepowodzenia operacji wiadomości utraconych. Najbardziej typowym scenariuszem jest dla operacji usługi zarejestrować się w transakcji, który jest używany do odczytu komunikatu z kolejki, jak pokazano w poniższym kodzie.  
   
  Należy pamiętać, że `ReleaseServiceInstanceOnTransactionComplete` ma ustawioną wartość `false`. Jest to ważne potrzeby przetwarzania wsadowego. Właściwość `ReleaseServiceInstanceOnTransactionComplete` na `ServiceBehaviorAttribute` wskazuje, co należy zrobić po zakończeniu transakcji wystąpienia usługi. Domyślnie wystąpienie usługi jest publikowany po zakończeniu transakcji. Aspekt core do przetwarzania wsadowego jest wykorzystanie pojedynczej transakcji do odczytywania i wysyłania wielu wiadomości w kolejce. W związku z tym wydanie wystąpienia usługi kończy się wykonanie transakcji przedwcześnie Negacja bardzo stosowania przetwarzania wsadowego. Jeśli ta właściwość jest ustawiona na `true` i transakcyjnego łączenia we wsady zachowanie jest dodawany do punktu końcowego, przetwarzanie wsadowe zachowanie weryfikacji zgłasza wyjątek.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(ReleaseServiceInstanceOnTransactionComplete=false,   
@@ -160,11 +162,11 @@ public class OrderProcessorService : IOrderProcessor
     }  
     …  
 }  
-```  
-  
+```
+
  `Orders` Klasa hermetyzuje przetwarzania zamówienia. W przykładzie aktualizuje bazę danych z informacji o zamówieniu zakupu.  
-  
-```  
+
+```csharp
 // Order Processing Logic  
 public class Orders  
 {  
@@ -234,8 +236,8 @@ public class Orders
                                      {1} ", rowsAffected, po.PONumber);  
     }  
 }  
-```  
-  
+```
+
  Przetwarzanie wsadowe zachowania i jego konfiguracja są określone w konfiguracji aplikacji usługi.  
   
 ```xml  
@@ -292,8 +294,8 @@ public class Orders
 >  Wybór rozmiar partii jest zależny od aplikacji. Jeśli rozmiar partii jest za mały, nie może pobrać żądaną wydajność. Z drugiej strony, jeśli rozmiar partii jest zbyt duży, może pogarszać wydajność. Na przykład transakcji można już na żywo i przytrzymaj blokady bazy danych lub transakcji może stać się martwych zablokowana, które mogłyby powodować partii pobrać wycofana i wykonaj ponownie pracy.  
   
  Klient tworzy zakresu transakcji. Komunikacja z kolejki odbywa się w zakresie transakcji, co powoduje traktowane jako Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub brak komunikaty są wysyłane do kolejki. Transakcja zostaje zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.  
-  
-```  
+
+```csharp
 //Client implementation code.  
 class Client  
 {  
@@ -340,8 +342,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Po uruchomieniu próbki działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Można wyświetlić wiadomości receive usługi z klienta. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta. Należy zauważyć, że usługi kolejkowania wiadomości jest w użyciu, klient i usługa nie być uruchomiona w tym samym czasie. Możesz z klientem, zamknij go, a następnie uruchom usługi i nadal otrzymuje jej wiadomości. Widać stopniowego dane wyjściowe jako odczytana w partii i przetwarzania komunikatów.  
   
 ```  

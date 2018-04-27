@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02169f1f43ba93b68dc47f5bad038b78d3635a80
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 319d01e8162dbc3806b0d9ba59e90410acb1acd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-keyfile"></a>-keyfile
 Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy zestawu.  
@@ -30,7 +30,7 @@ Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy ze
   
 ## <a name="arguments"></a>Argumenty  
  `file`  
- Wymagany. Plik, który zawiera klucz. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w cudzysłów ("").  
+ Wymagana. Plik, który zawiera klucz. Jeśli nazwa pliku zawiera spację, nazwę należy ująć w cudzysłów ("").  
   
 ## <a name="remarks"></a>Uwagi  
  Kompilator wstawia klucz publiczny w manifeście zestawu i podpisuje następnie zestawie końcowym z kluczem prywatnym. Aby wygenerować plik klucza, wpisz `sn -k file` w wierszu polecenia. Aby uzyskać więcej informacji, zobacz [Sn.exe (narzędzie silnej nazwy)][Sn.exe (narzędzie silnej nazwy)](../../../framework/tools/sn-exe-strong-name-tool.md)).  
@@ -48,7 +48,7 @@ Określa plik zawierający klucz lub parę kluczy, aby zapewnić silnej nazwy ze
  Zobacz [tworzenie i zestawy Using Strong-Named](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) Aby uzyskać więcej informacji na temat podpisywania zestawu.  
   
 > [!NOTE]
->  `-keyfile` Opcja nie jest dostępne w [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] środowisko projektowe; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
+>  `-keyfile` Opcja nie jest dostępne w środowisku programowania Visual Studio; jest dostępna tylko podczas kompilowania kodu w wierszu polecenia.  
   
 ## <a name="example"></a>Przykład  
  Poniższy kod tworzy plik źródłowy `Input.vb` i określa plik klucza.  

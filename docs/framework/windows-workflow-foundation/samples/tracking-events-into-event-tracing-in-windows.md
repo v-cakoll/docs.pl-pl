@@ -1,36 +1,37 @@
 ---
-title: "Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows"
-ms.custom: 
+title: Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6798494e442b2e7633461fb821c56130a2af2508
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1a1038f848563c106ee1cac441b8a247e161e268
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>Śledzenie zdarzeń do zdarzenia śledzenia w systemie Windows
-W tym przykładzie pokazano, jak włączyć [!INCLUDE[wf](../../../../includes/wf-md.md)] śledzenie w przepływie pracy usługi i wysyłać zdarzenia śledzenia w funkcji Śledzenie zdarzeń systemu Windows (). Aby emitować śledzenia rekordów do ETW przepływu pracy, próbki używa uczestnika śledzenia zdarzeń systemu Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
+W tym przykładzie pokazano, jak włączyć śledzenie usługi przepływu pracy Windows Workflow Foundation (WF), a emisją zdarzeń śledzenia w funkcji Śledzenie zdarzeń systemu Windows (). Aby emitować śledzenia rekordów do ETW przepływu pracy, próbki używa uczestnika śledzenia zdarzeń systemu Windows (<xref:System.Activities.Tracking.EtwTrackingParticipant>).  
   
  Przepływ pracy w próbce odbiera żądanie, przypisuje odwrotność danych wejściowych do wprowadzania zmiennej i zwraca wzajemnego wstecz do klienta. Gdy dane wejściowe to 0, dzielenie przez zero wyjątek występuje nieobsługiwany który powoduje, że przepływ pracy do przerwania. Z włączonym śledzeniem, błąd Śledź rekord jest emitowany do funkcji ETW, co może pomóc rozwiązać problem później. Uczestnik śledzenia zdarzeń systemu Windows jest skonfigurowany przy użyciu profilu śledzenia, aby subskrybować śledzenie rekordów. Profil śledzenia jest zdefiniowana w pliku Web.config i podać jako parametr konfiguracji do uczestnika śledzenia zdarzeń systemu Windows. Uczestnik śledzenia zdarzeń systemu Windows jest skonfigurowany w pliku Web.config usługi przepływu pracy i zastosowano je do usługi jako zachowanie usługi. W tym przykładzie można wyświetlać zdarzenia śledzenia w dzienniku zdarzeń za pomocą Podglądu zdarzeń.  
   
 ## <a name="workflow-tracking-details"></a>Szczegóły śledzenia przepływu pracy  
- [!INCLUDE[wf2](../../../../includes/wf2-md.md)]zapewnia infrastrukturę śledzenia śledzić wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia tworzy wystąpienie przepływu pracy do wysyłania zdarzeń związanych z cyklem życia przepływu pracy, zdarzenia z działań przepływu pracy i zdarzeń niestandardowych. W poniższej tabeli przedstawiono podstawowe składniki infrastruktury śledzenia.  
+ Windows Workflow Foundation udostępnia infrastrukturę śledzenia śledzić wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia tworzy wystąpienie przepływu pracy do wysyłania zdarzeń związanych z cyklem życia przepływu pracy, zdarzenia z działań przepływu pracy i zdarzeń niestandardowych. W poniższej tabeli przedstawiono podstawowe składniki infrastruktury śledzenia.  
   
 |Składnik|Opis|  
 |---------------|-----------------|  
 |Śledzenie czasu wykonywania|Zapewnia infrastrukturę do emisji rekordów śledzenia.|  
-|Uczestników śledzenia|Uzyskuje dostęp do rekordów śledzenia. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]jest dostarczany z uczestnika śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows ().|  
+|Uczestników śledzenia|Uzyskuje dostęp do rekordów śledzenia. [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] jest dostarczany z uczestnika śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows ().|  
 |Profil śledzenia|Mechanizm filtrowania, który umożliwia śledzenie uczestnika do subskrybowania dla podzestawu rekordów śledzenia wyemitowanego z wystąpieniem przepływu pracy.|  
   
  W poniższej tabeli przedstawiono rekordy śledzenia emitowane środowiska uruchomieniowego przepływu pracy.  

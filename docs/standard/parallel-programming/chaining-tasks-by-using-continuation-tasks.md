@@ -21,11 +21,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 64a6fd2f5cbaee17ac35d7b4bd6f08326eafac64
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: ff475259d1835a048d6260cabf4f1d46d2436954
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>Tworzenie łańcuchów zadań przy użyciu zadań kontynuacji
 W programowanie asynchroniczne jest często stosowane w jednej operacji asynchronicznej, po zakończeniu, aby wywołać operację drugi i przekazywania danych do niej. Tradycyjnie to przeprowadzono przy użyciu metody wywołania zwrotnego. W bibliotece równoległych zadań podał funkcji *zadań kontynuacji*. Zadania kontynuacji (nazywanego także po prostu utrzymania) jest zadanie asynchroniczne, które jest wywoływane przez inne zadanie, znany jako *antecedent*, po zakończeniu antecedent.  
@@ -130,7 +130,7 @@ W programowanie asynchroniczne jest często stosowane w jednej operacji asynchro
   
  Stan kontynuacji jest przydatne, jeśli Konwertuj istniejący kod, który używa [asynchronicznego programowania modelu (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) do użycia TPL. Zwykle w APM, można zapewnić stan obiektu w **rozpocząć *** metody* — metoda i nowszym dostępu, który stanu przy użyciu <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> właściwości. Za pomocą <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody, można zachować ten stan podczas konwertowania kod, który używa APM do użycia TPL.  
   
- Stan kontynuacji również może być przydatna podczas pracy z <xref:System.Threading.Tasks.Task> obiekty w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugera. Na przykład w **zadań równoległych** okna, **zadań** kolumny Wyświetla reprezentację ciągu obiektu stanu dla każdego zadania. Aby uzyskać więcej informacji na temat **zadań równoległych** okna, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window).  
+ Stan kontynuacji również może być przydatna podczas pracy z <xref:System.Threading.Tasks.Task> obiektów w debugerze programu Visual Studio. Na przykład w **zadań równoległych** okna, **zadań** kolumny Wyświetla reprezentację ciągu obiektu stanu dla każdego zadania. Aby uzyskać więcej informacji na temat **zadań równoległych** okna, zobacz [korzystanie z okna zadań](/visualstudio/debugger/using-the-tasks-window).  
   
  Poniższy przykład przedstawia użycie stan kontynuacji. Tworzy łańcuch zadań kontynuacji. Każde zadanie zawiera bieżący czas <xref:System.DateTime> obiektu, dla `state` parametr <xref:System.Threading.Tasks.Task.ContinueWith%2A> metody. Każdy <xref:System.DateTime> obiekt reprezentuje czas, o której została utworzona zadania kontynuacji. Każde zadanie tworzy jako wynik drugi <xref:System.DateTime> obiekt, który reprezentuje czas, w którym kończy zadanie. Po zakończeniu wszystkich zadań, w tym przykładzie wyświetla czas tworzenia i czasu, w którym każdy kontynuacji kończy zadanie.  
   

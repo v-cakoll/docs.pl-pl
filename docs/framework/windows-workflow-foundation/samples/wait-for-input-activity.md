@@ -1,36 +1,37 @@
 ---
-title: "Poczekaj, aż działania wejściowego"
-ms.custom: 
+title: Poczekaj, aż działania wejściowego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: d58c344e-9ee8-4ce2-b199-75b3fe45237f
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ac05054d56c424ab3f4d1fdfd9c3590aac8b00bb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b9e7942ced071a795f1bf408ca4778a216cd85e4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wait-for-input-activity"></a>Poczekaj, aż działania wejściowego
-Ten przykład przedstawia sposób tworzenia zakładek o nazwie w przepływie pracy. [!INCLUDE[wf](../../../../includes/wf-md.md)]nie zapewnia działanie tworzenia deklaratywne zakładki. W związku z tym jeśli chcesz utworzyć zakładkę w przepływie pracy, należy napisać działania niestandardowego, który go utworzył. `WaitForInput` Działanie zdefiniowane w tym przykładzie zapewnia tę funkcję, dzięki czemu użytkownicy mogą tworzyć zakładki deklaratywnie w przepływie pracy.  
+Ten przykład przedstawia sposób tworzenia zakładek o nazwie w przepływie pracy. Windows Workflow Foundation (WF) nie zawiera działania dla tworzenia deklaratywne zakładki. W związku z tym jeśli chcesz utworzyć zakładkę w przepływie pracy, należy napisać działania niestandardowego, który go utworzył. `WaitForInput` Działanie zdefiniowane w tym przykładzie zapewnia tę funkcję, dzięki czemu użytkownicy mogą tworzyć zakładki deklaratywnie w przepływie pracy.  
   
 ## <a name="projects-in-this-sample"></a>Projekty w tym przykładzie  
   
 |**Nazwa projektu**|**Opis**|**Główne pliki**|  
 |-|-|-|  
-|WaitForInput|Zawiera `WaitForInput` działanie i jego projektanta|WaitForInput.cs<br /><br /> `WaitForInput`definicji działania.|  
+|WaitForInput|Zawiera `WaitForInput` działanie i jego projektanta|WaitForInput.cs<br /><br /> `WaitForInput` definicji działania.|  
 |||WaitForInputDesigner.xaml<br /><br /> Projektant niestandardowych `WaitForInput` działania.|  
 |||TypeToFirstGenericArgumentConverter.cs<br /><br /> Konwerter typów WPF używane do aktualizowania typu ogólnego działania w projektancie.|  
 |WaitForInputTestClient|Przykładowej aplikacji klienta, który konfiguruje i uruchamia przepływ pracy przy użyciu kilku działań WaitForInput za pomocą projektanta przepływów pracy.|Sequence1.XAML<br /><br /> Sekwencyjny przepływ pracy, który używa `WaitForInput` działania.|  
-|||Plik program.CS<br /><br /> Uruchomione jest wystąpienie przepływu pracy zdefiniowane w Sequence1.xaml.|  
+|||Program.cs<br /><br /> Uruchomione jest wystąpienie przepływu pracy zdefiniowane w Sequence1.xaml.|  
   
 ## <a name="waitforinput-activity"></a>Działanie WaitForInput  
  `WaitForInput` Działanie tworzy zakładki o nazwie w przepływie pracy. Zakładka oczekuje na sygnał i odbiera dane skonfigurowanego typu elementu. Po wznowieniu działania zakładki dane przekazywane do przepływu pracy są dostępne za pośrednictwem `Result` właściwości.  

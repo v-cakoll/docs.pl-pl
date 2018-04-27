@@ -20,11 +20,11 @@ ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
 caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 1c8bd94bc8dd379edfda8c4350428684a5cda0b1
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: fb6aea2b1e8faf9afd7d252d8828358130fb5374
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="option-infer-statement"></a>Option Infer — Instrukcja
 Umożliwia użycie wnioskowania o typie lokalnym przy deklaracji zmiennych.  
@@ -39,8 +39,8 @@ Option Infer { On | Off }
   
 |Termin|Definicja|  
 |---|---|  
-|`On`|Opcjonalny. Umożliwia wnioskowanie o typie lokalnym.|  
-|`Off`|Opcjonalny. Wyłącza wnioskowanie o typie lokalnym.|  
+|`On`|Opcjonalna. Umożliwia wnioskowanie o typie lokalnym.|  
+|`Off`|Opcjonalna. Wyłącza wnioskowanie o typie lokalnym.|  
   
 ## <a name="remarks"></a>Uwagi  
  Aby ustawić `Option Infer` w pliku, wpisz `Option Infer On` lub `Option Infer Off` na początku pliku przed uruchomieniem jakiegokolwiek kodu źródłowego. Jeśli ustawiona wartość `Option Infer` w pliku powoduje konflikt z wartością ustawioną w IDE lub w wierszu polecenia, wartość w pliku ma pierwszeństwo.  
@@ -58,7 +58,7 @@ IntelliSense po włączeniu Option Infer
 IntelliSense po Option Infer jest wyłączone  
   
 > [!NOTE]
->  Jeśli zmienna jest zadeklarowana jako `Object`, typu run-time można zmienić, gdy program jest uruchomiony. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]wykonuje operacje o nazwie *boxing* i *rozpakowującej* konwersję między `Object` a typem wartości, dzięki czemu wykonanie wolniej. Aby uzyskać informacje o konwersji boxing i konwersja unboxing, zobacz [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).
+>  Jeśli zmienna jest zadeklarowana jako `Object`, typu run-time można zmienić, gdy program jest uruchomiony. Visual Basic wykonuje operacje o nazwie *boxing* i *rozpakowującej* konwersję między `Object` a typem wartości, dzięki czemu wykonanie wolniej. Aby uzyskać informacje o konwersji boxing i konwersja unboxing, zobacz [specyfikacja języka Visual Basic](../../../visual-basic/reference/language-specification/index.md).
   
  Wnioskowanie o typie stosuje na poziomie procedury i nie ma zastosowania poza procedury w klasy, struktury, modułu lub interfejs.  
   

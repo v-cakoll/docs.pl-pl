@@ -19,11 +19,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 09d982105d8cf1297a53bd755003e3ef2b089293
-ms.sourcegitcommit: 2e8acae16ae802f2d6d04e3ce0a6dbf04e476513
+ms.openlocfilehash: 07b90baf64ad00509cf5cadea4b9a3008237759b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>Migrowanie z klasy XslTransform
 Architektura XSLT został przeprojektowany w [!INCLUDE[vsprvslong](../../../../includes/vsprvslong-md.md)] wersji. <xref:System.Xml.Xsl.XslTransform> Klasa została zastąpiona przez <xref:System.Xml.Xsl.XslCompiledTransform> klasy.  
@@ -73,7 +73,7 @@ writer.Close();
 ```  
   
 ### <a name="debug-option"></a>Debug — opcja  
- <xref:System.Xml.Xsl.XslCompiledTransform> Klasy mogą generować informacji o debugowaniu, dzięki czemu można debugować arkusz stylów z firmą Microsoft [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] debugera. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
+ <xref:System.Xml.Xsl.XslCompiledTransform> Klasy mogą generować informacji o debugowaniu, dzięki czemu można debugować arkusz stylów z debuger Microsoft Visual Studio. Aby uzyskać więcej informacji, zobacz <xref:System.Xml.Xsl.XslCompiledTransform.%23ctor%28System.Boolean%29>.  
   
 ## <a name="behavioral-differences"></a>Różnice funkcjonalne  
   

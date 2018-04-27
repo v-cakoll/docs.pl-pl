@@ -15,14 +15,14 @@ ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: c18c1ea645c9f144e2c2043af5460d6fb03f13a1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 6a303b0bc9a51ec5566be5cf6db40ff9b9de4c9c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="events-visual-basic"></a>Zdarzenia (Visual Basic)
-Gdy może wizualizacji [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projektu jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są zdarzeniami — oznacza przepływ wykonania zależy od zewnętrznego wystąpienia o nazwie *zdarzenia*.  
+Projektu programu Visual Studio może wizualizacji jako szereg procedur, które są wykonywane w kolejności, w rzeczywistości większość programów są zdarzeniami — czyli sposób wykonywania jest określany przez zewnętrznego wystąpienia o nazwie *zdarzenia*.  
   
  Zdarzenie jest sygnał, który informuje o aplikacji, która coś ważne wystąpił. Na przykład, gdy użytkownik kliknie kontrolkę w formularzu, formularz może wiązać się z `Click` zdarzeń i wywołaniu procedury, która obsługuje zdarzenie. Zdarzenia również umożliwić oddzielnych zadań do komunikacji. Powiedz, na przykład, że aplikacja wykonuje zadanie sortowania oddzielnie z głównej aplikacji. Jeśli użytkownik anuluje sortowanie, aplikacja może wysyłać zdarzenie Anuluj poinstruowanie zatrzymanie procesu sortowania.  
   

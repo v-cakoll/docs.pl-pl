@@ -14,17 +14,17 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 999c18f20264a71cf73bbd5afd352ad3104a03e8
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: a11a1cddbb5b65bf174cabe7774ad62791657f54
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>Obsługa nowej funkcji Foundation 4.5 przepływu pracy w Projektancie Rehosted przepływów pracy
-[!INCLUDE[wf](../../../includes/wf-md.md)] w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń obsługi projektanta przepływów pracy. W tym temacie szczegółowe informacje, które te funkcje są obsługiwane w Projektancie rehosted i te, które nie są obecnie obsługiwane.  
+Windows Workflow Foundation (WF) w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] wprowadzono wiele nowych funkcji, w tym kilka ulepszeń obsługi projektanta przepływów pracy. W tym temacie szczegółowe informacje, które te funkcje są obsługiwane w Projektancie rehosted i te, które nie są obecnie obsługiwane.  
   
 > [!NOTE]
->  Aby uzyskać listę wszystkich nowej [!INCLUDE[wf](../../../includes/wf-md.md)] funkcje dodane w [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], w tym te, które są związane z projektanta rehosting, zobacz [What's New in Windows Workflow Foundation w programie .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
+>  Aby uzyskać listę wszystkich nowych funkcji Windows Workflow Foundation (WF) wprowadzone w systemie [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], w tym te, które są związane z projektanta rehosting, zobacz [What's New in Windows Workflow Foundation w programie .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  
   
 ## <a name="activities"></a>Kategoria Activities  
  Biblioteka działań wbudowanych zawiera nowe działania i nowe funkcje istniejących działań. Wszystkie te nowe działania są obsługiwane w Projektancie rehosted. Aby uzyskać więcej informacji o tych nowych działań, zobacz [działania](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md#BKMK_NewActivities) sekcji [What's New in Windows Workflow Foundation w programie .NET 4.5](../../../docs/framework/windows-workflow-foundation/whats-new-in-wf-in-dotnet.md).  

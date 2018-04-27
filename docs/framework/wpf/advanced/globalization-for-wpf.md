@@ -17,11 +17,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8bf63c59c0948dd8414232a52fc12fafa0d13aa1
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 909461811907c1eb3f494b29294db45dbbe8b01d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="globalization-for-wpf"></a>Globalizacja dla WPF
 W tym temacie przedstawiono problemy, które należy zwrócić uwagę podczas zapisywania [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji na rynek globalnego. Globalizacja programistyczny są zdefiniowane w [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] w `System.Globalization`.  
@@ -180,7 +180,7 @@ W poniższym przykładzie przedstawiono odwołanie znaków szesnastkowych. Nale�
   
 <a name="using_clickonce"></a>   
 ## <a name="using-clickonce-with-localized-applications"></a>Za pomocą aplikacji ClickOnce z aplikacjami zlokalizowanych  
- ClickOnce jest nową technologią wdrożenia formularzy systemu Windows będzie dostarczanych z programem [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Umożliwia instalowanie aplikacji i uaktualniania aplikacji sieci Web. Gdy aplikacja, która została wdrożona za pomocą technologii ClickOnce jest zlokalizowana mogą być przeglądane tylko w zlokalizowanych kultury. Na przykład, jeśli wdrażana aplikacja jest zlokalizowana na japoński go mogą być przeglądane tylko w języku japońskim [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] nie znajduje się w języku angielskim [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)]. Stanowi to problem, ponieważ jest typowym scenariuszem dla japońskiego użytkownikom na uruchamianie angielską wersję językową [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)].  
+ ClickOnce jest nową technologią wdrożenia formularzy systemu Windows będzie dostarczanych z programem [!INCLUDE[TLA#tla_visualstu2005](../../../../includes/tlasharptla-visualstu2005-md.md)]. Umożliwia instalowanie aplikacji i uaktualniania aplikacji sieci Web. Gdy aplikacja, która została wdrożona za pomocą technologii ClickOnce jest zlokalizowana mogą być przeglądane tylko w zlokalizowanych kultury. Na przykład, jeśli wdrażana aplikacja jest zlokalizowana na japoński go mogą być przeglądane tylko w języku japońskim [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] nie w systemie Windows w języku angielskim. Stanowi to problem, ponieważ jest typowym scenariuszem dla japońskiego użytkownikom na uruchamianie angielskiej wersji systemu Windows.  
   
  Rozwiązanie tego problemu jest ustawienie atrybutu rezerwowy niezależnym od języka. Deweloper aplikacji Opcjonalnie można usunąć zasoby z głównego zestawu i określ, że zasoby można znaleźć w zestawie satelickim odpowiadający określonej kultury. Do kontrolowania użycia tego procesu <xref:System.Resources.NeutralResourcesLanguageAttribute>. Konstruktor obiektu <xref:System.Resources.NeutralResourcesLanguageAttribute> klasa ma dwa podpisów, który przyjmuje <xref:System.Resources.UltimateResourceFallbackLocation> parametr, aby określić lokalizację, gdzie <xref:System.Resources.ResourceManager> należy wyodrębnić zasoby rezerwowe: główny zestaw lub zestawu satelickiego. Poniższy przykład przedstawia użycie atrybutu. Ultimate lokalizacji rezerwowej, kod powoduje, że <xref:System.Resources.ResourceManager> ma zostać wyszukane zasoby w podkatalogu "de" katalog zawierający obecnie wykonywany zestaw.  
   

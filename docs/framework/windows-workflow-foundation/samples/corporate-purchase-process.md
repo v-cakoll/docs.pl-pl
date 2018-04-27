@@ -1,23 +1,24 @@
 ---
 title: Proces zakupu firmowych
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bbbed0209eec95ec452385b6c78b1beb2ddfcd75
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 451698d92c47c32b45e08bdef7e88e8f04b90ed3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="corporate-purchase-process"></a>Proces zakupu firmowych
 W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propozycje (RFP) na podstawie procesu zakupu z automatycznego najlepszym wyborem propozycji. Łączy <xref:System.Activities.Statements.Parallel>, <xref:System.Activities.Statements.ParallelForEach%601>, i <xref:System.Activities.Statements.ForEach%601> i działań niestandardowych do tworzenia przepływu pracy, który reprezentuje procesu.  
@@ -26,9 +27,9 @@ W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propo
   
 ## <a name="requirements"></a>Wymagania  
   
--   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].,  
+-   [!INCLUDE[vs_current_long](../../../../includes/vs-current-long-md.md)].  
   
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].,  
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].  
   
 ## <a name="demonstrates"></a>Demonstracje  
   
@@ -58,7 +59,7 @@ W tym przykładzie przedstawiono sposób tworzenia żądanie bardzo proste propo
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\PurchaseProcess`  
   
 ## <a name="description-of-the-process"></a>Opis procesu  
- Ten przykład przedstawia implementację [!INCLUDE[wf](../../../../includes/wf-md.md)] program zbieranie wnioski z dostawców dla ogólnego firmy.  
+ Ten przykład przedstawia implementację programu Windows Workflow Foundation (WF) do zbierania propozycje od dostawców dla ogólnych firmy.  
   
 1.  Pracownik X firmy tworzy żądanie propozycji (RFP).  
   

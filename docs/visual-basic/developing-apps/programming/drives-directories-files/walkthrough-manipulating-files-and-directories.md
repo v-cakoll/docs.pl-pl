@@ -25,11 +25,11 @@ ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
 caps.latest.revision: 49
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bff2e66b1a196117117370f7620f3f55576ad19b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 12461cc99ec03ed87924c894e23740f9d76385ed
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>Wskazówki: manipulowanie plikami i katalogami w Visual Basic
 Ten przewodnik zawiera wprowadzenie do podstawy we/wy pliku w Visual Basic. Przedstawiono sposób tworzenie małych aplikacji, która zawiera listę i sprawdza, czy pliki tekstowe w katalogu. Dla każdego pliku zaznaczonego tekstu aplikacja udostępnia Atrybuty pliku i pierwszego wiersza zawartości. Ma opcji, aby zapisać informacje o pliku dziennika.  
@@ -48,7 +48,7 @@ Ten przewodnik zawiera wprowadzenie do podstawy we/wy pliku w Visual Basic. Prze
   
 3.  W **nazwa** wpisz `FileExplorer` Ustaw nazwę projektu, a następnie kliknij przycisk **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] dodaje projekt do **Eksploratora rozwiązań**, i otwiera Projektant formularzy systemu Windows.  
+     Visual Studio dodaje projekt do **Eksploratora rozwiązań**, i otwiera Projektant formularzy systemu Windows.  
   
 4.  Dodaj formanty w poniższej tabeli do formularza i ustaw wartości odpowiednich dla ich właściwości.  
   

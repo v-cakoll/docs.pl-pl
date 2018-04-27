@@ -1,24 +1,26 @@
 ---
 title: Kodowanie MTOM
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 820e316f-4ee1-4eb5-ae38-b6a536e8a14f
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed65e2098a95a05f7cc5efa6d9014f67bf5ed261
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d826b5f2973ac451b3943fd78b661093906c72ad
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="mtom-encoding"></a>Kodowanie MTOM
 W przykładzie pokazano, użyj kodowania z WSHttpBinding wiadomości mechanizmu optymalizacji transmisji wiadomości (MTOM). MTOM jest mechanizm przekazywania dużych załączników binarnych z komunikatami SOAP raw bajtów, co pozwala na mniejsze wiadomości.  
@@ -41,15 +43,15 @@ W przykładzie pokazano, użyj kodowania z WSHttpBinding wiadomości mechanizmu 
 ```  
   
  Koder MTOM zoptymalizować tablice bajtów i strumieni. W tym przykładzie używa operacji `Stream` parametru i mogą być optymalizowane.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
   public interface IUpload  
   {  
       [OperationContract]  
       int Upload(Stream data);  
   }  
-```  
+```
   
  Kontrakt wybrany dla tego przykładu przesyła dane binarne do usługi i odbiera liczba bajtów przekazany jako wartości zwracane. Gdy usługa jest zainstalowana i uruchomieniu klienta, Wyświetla ilość 1000, co oznacza, że otrzymano wszystkich 1000 bajtów. W pozostałej części dane wyjściowe wyświetla listę komunikatów wersją zoptymalizowaną a niezoptymalizowaną rozmiarów różnych ładunków.  
   

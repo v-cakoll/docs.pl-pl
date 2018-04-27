@@ -1,26 +1,27 @@
 ---
-title: "Porady: tworzenie działania"
-ms.custom: 
+title: 'Porady: tworzenie działania'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4a3b9698d6a060120addff52e6600916a2de19fc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0d0d48d1e78efb3484f521958edf22d97ca8053d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-an-activity"></a>Porady: tworzenie działania
 Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../includes/wf1-md.md)]. Logiki wykonywania działania można zaimplementować w kodzie zarządzanym lub można ją wdrożyć za pomocą innych działań. W tym temacie przedstawiono sposób tworzenia dwóch działań. Pierwsze działanie jest proste działanie, które używa kod do implementacji logiki jego wykonywania. Do implementacji działania drugi jest definiowana za pomocą innych działań. Te działania są używane w następujących krokach samouczka.  
@@ -44,7 +45,7 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
 5.  W **zainstalowana** węzła, wybierz opcję **Visual C#**, **przepływu pracy** (lub **Visual Basic**, **przepływu pracy**). Upewnij się, że **.NET Framework 4.5** wybrano [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] wersja listy rozwijanej. Wybierz **Biblioteka działań** z **przepływu pracy** listy. Typ `NumberGuessWorkflowActivities` w **nazwa** a następnie kliknij przycisk **OK**.  
   
     > [!NOTE]
-    >  W zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], **Visual C#** lub **Visual Basic** węzeł może być w obszarze **inne języki**w węźle **zainstalowana** węzła.  
+    >  W zależności od tego, jaki język programowania jest skonfigurowany jako podstawowy język w programie Visual Studio, **Visual C#** lub **Visual Basic** węzeł może być w obszarze **inne języki** w węźle **zainstalowana** węzła.  
   
 6.  Kliknij prawym przyciskiem myszy **Activity1.xaml** w **Eksploratora rozwiązań** i wybierz polecenie **usunąć**. Kliknij przycisk **OK** o potwierdzenie.  
   
@@ -62,7 +63,7 @@ Działania są jednostki podstawowe zachowanie w [!INCLUDE[wf1](../../../include
      [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]  
   
     > [!NOTE]
-    >  `ReadInt` Działania jest pochodną <xref:System.Activities.NativeActivity%601> zamiast <xref:System.Activities.CodeActivity>, co jest ustawieniem domyślnym dla szablonu działania kodu. <xref:System.Activities.CodeActivity%601>można użyć, gdy działanie zawiera jeden wynik, który jest ujawniany przez <xref:System.Activities.Activity%601.Result%2A> argumentu, ale <xref:System.Activities.CodeActivity%601> nie obsługuje korzystanie z zakładek, więc <xref:System.Activities.NativeActivity%601> jest używany.  
+    >  `ReadInt` Działania jest pochodną <xref:System.Activities.NativeActivity%601> zamiast <xref:System.Activities.CodeActivity>, co jest ustawieniem domyślnym dla szablonu działania kodu. <xref:System.Activities.CodeActivity%601> można użyć, gdy działanie zawiera jeden wynik, który jest ujawniany przez <xref:System.Activities.Activity%601.Result%2A> argumentu, ale <xref:System.Activities.CodeActivity%601> nie obsługuje korzystanie z zakładek, więc <xref:System.Activities.NativeActivity%601> jest używany.  
   
 ### <a name="to-create-the-prompt-activity"></a>Aby utworzyć działanie monitu  
   

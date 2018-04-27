@@ -26,11 +26,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 00526e97c148fc4b587571993d2780d2e99f3ecc
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fbbdc57eeebef9c9f14610255ece799c1e8867e1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>Porady: powiązanie z usługą sieci Web za pomocą formantu BindingSource formularzy systemu Windows
 Jeśli chcesz powiązać kontrolki formularza systemu Windows do wyników uzyskanych z wywoływania usługi XML sieci Web, możesz użyć <xref:System.Windows.Forms.BindingSource> składnika. Ta procedura jest podobna do powiązania <xref:System.Windows.Forms.BindingSource> składnika do typu. Należy utworzyć serwer proxy po stronie klienta, który zawiera metody i typy udostępnianych przez usługę sieci Web. Generowanie jest serwer proxy po stronie klienta z usługi sieci Web (.asmx) samego, lub plik sieci Web Services Description Language (WSDL). Ponadto serwer proxy po stronie klienta musi ujawniać pól złożone typy używane przez usługę sieci Web jako właściwości publiczne. Następnie powiązać <xref:System.Windows.Forms.BindingSource> do jednego z typów udostępniany w sieci Web usługi serwera proxy.  
@@ -45,7 +45,7 @@ Jeśli chcesz powiązać kontrolki formularza systemu Windows do wyników uzyska
   
 4.  Za pomocą narzędzia WSDL, wprowadź `wsdl` adres URL pliku WSDL dla usługi sieci Web lub .asmx następuje przestrzeń nazw aplikacji i opcjonalnie język pracujesz w.  
   
-     Poniższy przykład kodu wykorzystuje usługę sieci Web w lokalizacji http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Na przykład dla typu C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, lub dla języka Visual Basic typu `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Przekazywanie ścieżkę jako argument do języka WSDL narzędzie wygeneruje serwer proxy po stronie klienta w tym samym katalogu i przestrzeń nazw jako aplikacja w wybranym języku. Jeśli używasz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], Dodaj plik do projektu.  
+     Poniższy przykład kodu wykorzystuje usługę sieci Web w lokalizacji http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx. Na przykład dla typu C# `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`, lub dla języka Visual Basic typu `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`. Przekazywanie ścieżkę jako argument do języka WSDL narzędzie wygeneruje serwer proxy po stronie klienta w tym samym katalogu i przestrzeń nazw jako aplikacja w wybranym języku. Jeśli używasz programu Visual Studio, Dodaj plik do projektu.  
   
 5.  Wybierz typ serwera proxy po stronie klienta, aby powiązać.  
   
@@ -83,7 +83,7 @@ Jeśli chcesz powiązać kontrolki formularza systemu Windows do wyników uzyska
   
 -   Odwołania do zestawów systemu, System.Drawing, System.Web.Services, System.Windows.Forms i zestawów System.Xml.  
   
- Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć tym przykładzie [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
+ Uzyskać informacje o kompilowaniu w tym przykładzie z wiersza polecenia dla programu Visual Basic lub Visual C#, zobacz [tworzenie z wiersza polecenia](~/docs/visual-basic/reference/command-line-compiler/building-from-the-command-line.md) lub [kompilowania z wiersza polecenia csc.exe](~/docs/csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md). Można także utworzyć w tym przykładzie w programie Visual Studio przez wklejenie kodu do nowego projektu.  Zobacz też [porady: kompilowanie i uruchamianie pełną Windows formularze kodu przykład za pomocą programu Visual Studio](http://msdn.microsoft.com/library/Bb129228\(v=vs.110\)).  
   
 ## <a name="see-also"></a>Zobacz też  
  [BindingSource, składnik](../../../../docs/framework/winforms/controls/bindingsource-component.md)  

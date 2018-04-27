@@ -1,11 +1,12 @@
 ---
 title: Instrukcje w Visual Basic
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - variables [Visual Basic], declaring
@@ -21,17 +22,17 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 210637105e54244ba829dabd73feab0b43ec7c6c
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: beb33b8f2c30723158e41244cbb5c9cfca108a53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="statements-in-visual-basic"></a>Instrukcje w Visual Basic
-Instrukcja w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest pełną instrukcję. Może zawierać słów kluczowych, operatory, zmienne, stałe i wyrażenia. Każda instrukcja należy do jednej z następujących kategorii:  
+Instrukcji w języku Visual Basic jest pełną instrukcję. Może zawierać słów kluczowych, operatory, zmienne, stałe i wyrażenia. Każda instrukcja należy do jednej z następujących kategorii:  
   
 -   **Instrukcje deklaracji**, której nazwę zmiennej, stałej lub procedury i można również określić typ danych.  
   
@@ -53,7 +54,7 @@ Instrukcja w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest pełną instrukcj�
  Trzeci deklaracja jest `Dim` instrukcja, która deklaruje zmienną `thisWidget`. Typ danych określonego obiektu, a mianowicie obiektu utworzone na podstawie `Widget` klasy. Można zadeklarować zmiennej, aby być dowolnego typu danych podstawowych lub dowolnego typu obiektu, która jest widoczna w aplikacji, którego używasz.  
   
 ### <a name="initial-values"></a>Wartości początkowe  
- Po uruchomieniu kodu zawierającego instrukcji deklaracji [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] rezerwuje ilość pamięci wymaganej dla elementu zadeklarowane. Jeśli element zawiera wartość, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicjuje go na wartość domyślną dla tego typu danych. Aby uzyskać więcej informacji, zobacz "Zachowanie" w [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
+ Po uruchomieniu kodu zawierającego instrukcji deklaracji Visual Basic rezerwuje ilość pamięci wymaganej dla elementu zadeklarowane. Jeśli element zawiera wartość, Visual Basic inicjuje na wartość domyślną dla tego typu danych. Aby uzyskać więcej informacji, zobacz "Zachowanie" w [instrukcji Dim](../../../visual-basic/language-reference/statements/dim-statement.md).  
   
  Wartość początkowa można przypisać do zmiennej jako części swojej deklaracji, jak pokazano w poniższym przykładzie.  
   
@@ -121,7 +122,7 @@ Instrukcja w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest pełną instrukcj�
 ### <a name="type-conversions-in-assignment-statements"></a>Konwersje typów w instrukcje przypisania  
  Wartość, którą należy przypisać do zmienną, właściwością lub element tablicy musi być typu danych, które jest odpowiednie dla elementu docelowego. Ogólnie rzecz biorąc należy spróbować generowania wartości tego samego typu danych, jak element docelowy. Jednak niektóre typy mogą być konwertowane na inne typy podczas przypisywania.  
   
- Aby uzyskać informacje o konwersji typów danych, zobacz [konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Krótko mówiąc [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] automatycznie konwertuje wartość danego typu na inny typ, którego rozszerzenie. A *rozszerzanie konwersji* jest jeden w tym zawsze zakończy się pomyślnie w czasie wykonywania, a nie utracić żadnych danych. Na przykład [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] konwertuje `Integer` do wartości `Double` Jeśli jest to możliwe, ponieważ `Integer` rozszerzenie do `Double`. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
+ Aby uzyskać informacje o konwersji typów danych, zobacz [konwersje typów w języku Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md). Krótko mówiąc Visual Basic automatycznie konwertuje wartość danego typu na inny typ, którego rozszerzenie. A *rozszerzanie konwersji* jest jeden w tym zawsze zakończy się pomyślnie w czasie wykonywania, a nie utracić żadnych danych. Na przykład konwertuje Visual Basic `Integer` do wartości `Double` Jeśli jest to możliwe, ponieważ `Integer` rozszerzenie do `Double`. Aby uzyskać więcej informacji, zobacz [rozszerzanie i zwężanie konwersji](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md).  
   
  *Zawężanie konwersji* (te, które nie są rozszerzanie) przenoszenia ryzyko awarii w czasie wykonywania, lub utraty danych. Można wykonać konwersji zawężającej jawnie przy użyciu funkcji konwersji typu lub może bezpośrednia kompilator, aby wykonać wszystkie konwersje niejawnie przez ustawienie `Option Strict Off`. Aby uzyskać więcej informacji, zobacz [Konwersje jawne i niejawne](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md).  
   
@@ -158,7 +159,7 @@ Instrukcja w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest pełną instrukcj�
 |Po `From` — słowo kluczowe w inicjatora kolekcji.|[!code-vb[VbVbalrLineContinuation#13](../../../visual-basic/programming-guide/language-features/codesnippet/VisualBasic/statements_27.vb)]<br /><br /> Aby uzyskać więcej informacji, zobacz [inicjatory kolekcji](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md).|  
   
 ## <a name="adding-comments"></a>Dodawanie komentarzy  
- Kod źródłowy nie zawsze jest oczywiste, nawet do programisty, jej autorze. Aby ułatwić ich kod dokumentów, w związku z tym większość programistów upewnij rozległych stosowania osadzonych komentarze. Komentarze w kodzie opisano procedury lub instrukcję określonym osobom odczytywania lub korzystania z niego później. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]ignoruje komentarzy podczas kompilacji, a nie wpływają na skompilowanego kodu.  
+ Kod źródłowy nie zawsze jest oczywiste, nawet do programisty, jej autorze. Aby ułatwić ich kod dokumentów, w związku z tym większość programistów upewnij rozległych stosowania osadzonych komentarze. Komentarze w kodzie opisano procedury lub instrukcję określonym osobom odczytywania lub korzystania z niego później. Visual Basic ignoruje komentarzy podczas kompilacji, a nie wpływają na skompilowanego kodu.  
   
  Wiersze komentarza zaczynać apostrof (`'`) lub `REM` spację. Będzie możliwe ich dodanie dowolne miejsce w kodzie, z wyjątkiem ciągu. Aby dołączyć komentarz do instrukcji, wstawić apostrof lub `REM` po instrukcji, a następnie komentarz. Komentarze można także przejść na ich własnych w osobnym wierszu. W poniższym przykładzie pokazano tych możliwości.  
   
@@ -173,5 +174,5 @@ Instrukcja w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest pełną instrukcj�
 |---|---|  
 |[Operatory przypisania](../../../visual-basic/language-reference/operators/assignment-operators.md)|Zawiera łącza do stron odwołania języka, takich jak obejmujące operatory przypisania `=`, `*=`, i `&=`.|  
 |[Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)|Pokazuje, jak połączyć elementy z operatorami umożliwiające uzyskanie nowych wartości.|  
-|[Porady: przerywanie i łączenie instrukcji w Code](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Pokazuje sposób Podziel jednej instrukcji na wiele wierszy i umieść użycie wielu instrukcji w tym samym wierszu.|  
-|[Porady: etykietowanie instrukcji](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Pokazuje, jak etykietę wiersz kodu.|
+|[Instrukcje: przerywanie i łączenie instrukcji w kodzie](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|Pokazuje sposób Podziel jednej instrukcji na wiele wierszy i umieść użycie wielu instrukcji w tym samym wierszu.|  
+|[Instrukcje: etykietowanie instrukcji](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|Pokazuje, jak etykietę wiersz kodu.|

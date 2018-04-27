@@ -14,11 +14,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 788cc6b25e4faa8a680f5ec23d88a5d18d0a7c87
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 866fe3ebcec295b57444f937b3b6fd6677bfe0f4
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-workflows"></a>Debugowanie przepływów pracy
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] oferuje kilka opcji debugowania uruchomionych przepływów pracy ze środowiska projektowego. Przepływy pracy może być debugowany w projektancie, języka XAML i kodem.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/26/2018
  Debugowanie przepływu pracy również obsługuje przy użyciu infrastruktury programu Visual Studio, aby dołączyć do procesu. Dzięki temu autorem przepływu pracy, aby debugować przepływ pracy w środowisku inny host, takich jak Internet informacji Services (IIS) 7.0.  
   
 ## <a name="remote-debugging"></a>Debugowanie zdalne  
- [!INCLUDE[wf](../../../includes/wf-md.md)] debugowanie zdalne działa tak samo, jak zdalnego debugowania dla innych składników programu Visual Studio. Informacje na temat używania zdalnego debugowania, zobacz [porady: Włączanie debugowania zdalnego](http://go.microsoft.com/fwlink/?LinkId=196257).  
+ Debugowanie zdalne Windows Workflow Foundation (WF) działa tak samo, jak zdalnego debugowania dla innych składników programu Visual Studio. Informacje na temat używania zdalnego debugowania, zobacz [porady: Włączanie debugowania zdalnego](http://go.microsoft.com/fwlink/?LinkId=196257).  
   
 > [!NOTE]
 >  Jeśli aplikacja przepływu pracy jest przeznaczony dla x86 architektury i znajduje się na komputerze z systemem 64-bitowym systemie operacyjnym, a następnie zdalne debugowanie nie będzie działać, chyba że Visual Studio jest zainstalowany na komputerze zdalnym lub element docelowy przepływu pracy aplikacji została zmieniona na **Dowolnego Procesora**.  

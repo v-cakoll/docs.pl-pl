@@ -1,29 +1,30 @@
 ---
-title: "Do rozwiązywania problemów z aplikacjami za pomocą śledzenia"
-ms.custom: 
+title: Do rozwiązywania problemów z aplikacjami za pomocą śledzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8851adde-c3c2-4391-9523-d8eb831490af
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bb8971c344ff24120b5f85dceb518b0944bd5feb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: adc9a159b8887b0198cf19891f73fdee2a48437b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-tracking-to-troubleshoot-applications"></a>Do rozwiązywania problemów z aplikacjami za pomocą śledzenia
-[!INCLUDE[wf](../../../includes/wf-md.md)]Umożliwia śledzenie informacji związanych z przepływu pracy, o podanie szczegółów do wykonywania [!INCLUDE[wf2](../../../includes/wf2-md.md)] aplikacji lub usługi. [!INCLUDE[wf2](../../../includes/wf2-md.md)]hosty mogą uzyskiwać do przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy. Jeśli przepływ pracy generuje błędów i wyjątków, możesz użyć [!INCLUDE[wf2](../../../includes/wf2-md.md)] Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzanie.  
+Windows Workflow Foundation (WF) umożliwia śledzenie informacji związanych z przepływu pracy, aby podać szczegóły do wykonywania programu Windows Workflow Foundation aplikacji lub usługi. Do przechwytywania zdarzeń przepływu pracy podczas wykonywania wystąpienia przepływu pracy mogą hostów Windows Workflow Foundation. Jeśli przepływ pracy generuje błędów i wyjątków, można użyć programu Windows Workflow Foundation Szczegóły śledzenia do rozwiązywania problemów z jego przetwarzanie.  
   
 ## <a name="troubleshooting-a-wf-using-wf-tracking"></a>Rozwiązywanie problemów z WF, używając WF śledzenia  
- Aby wykryć błędów w ramach przetwarzania [!INCLUDE[wf2](../../../includes/wf2-md.md)] działania, można włączyć śledzenie za pomocą profilu śledzenia, który odpytuje dla <xref:System.Activities.Tracking.ActivityStateRecord> o stanie Faulted. Odpowiednie zapytanie jest określone w poniższym kodzie.  
+ Aby wykrywać błędy w ramach przetwarzania działania Windows Workflow Foundation, można włączyć śledzenie za pomocą profilu śledzenia, który odpytuje dla <xref:System.Activities.Tracking.ActivityStateRecord> o stanie Faulted. Odpowiednie zapytanie jest określone w poniższym kodzie.  
   
 ```xml  
 <activityStateQueries>  
@@ -55,9 +56,9 @@ ms.lasthandoff: 12/22/2017
 </workflowInstanceQueries>  
 ```  
   
- W przypadku wystąpienia przepływu pracy napotkał nieobsługiwany wyjątek, <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> obiektu jest emitowany Jeśli [!INCLUDE[wf2](../../../includes/wf2-md.md)] włączył śledzenia.  
+ W przypadku wystąpienia przepływu pracy napotkał nieobsługiwany wyjątek, <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord> obiektu jest emitowany, jeśli włączono śledzenie Windows Workflow Foundation.  
   
- Ten rekord śledzenia zawiera szczegółowe informacje o błędzie w formie stosu wyjątku. Ma on szczegółowe informacje o źródle błędów (na przykład działanie), który wystąpił błąd i spowodowała nieobsługiwany wyjątek. Aby subskrybować zdarzenia błędów z [!INCLUDE[wf2](../../../includes/wf2-md.md)], Włącz śledzenie, dodając uczestnika śledzenia. Skonfiguruj tego profilu śledzenia, który odpytuje dla `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>, i `WorkflowInstanceQuery (state="UnhandledException")`.  
+ Ten rekord śledzenia zawiera szczegółowe informacje o błędzie w formie stosu wyjątku. Ma on szczegółowe informacje o źródle błędów (na przykład działanie), który wystąpił błąd i spowodowała nieobsługiwany wyjątek. Aby subskrybować zdarzenia błędów z programu Windows Workflow Foundation, należy włączyć śledzenie, dodając uczestnika śledzenia. Skonfiguruj tego profilu śledzenia, który odpytuje dla `ActivityStateQuery (state="Faulted")`, <xref:System.Activities.Tracking.FaultPropagationRecord>, i `WorkflowInstanceQuery (state="UnhandledException")`.  
   
  Jeśli śledzenie jest włączone, za pomocą uczestnika śledzenia funkcji ETW, zdarzenia błędów są emitowane w sesji usługi ETW. Zdarzenia można wyświetlić za pomocą Podglądu zdarzeń w Podglądzie zdarzeń. Znajdują się w węźle **aplikacji -> Podgląd zdarzeń i dzienników usług -> Microsoft -> Windows -> aplikacje serwera aplikacji** w kanale danych analitycznych.  
   

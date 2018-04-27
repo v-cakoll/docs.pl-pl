@@ -1,24 +1,26 @@
 ---
-title: "Korelacja komunikatów"
-ms.custom: 
+title: Korelacja komunikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 95336c55b2c3e83e2bd68bb653bbaacc446d8934
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 52dd8d66a4a28b515ebfaee88c4383889839fff0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-correlation"></a>Korelacja komunikatów
 W tym przykładzie pokazano, jak aplikacja usługi kolejkowania komunikatów (MSMQ) można wysłać wiadomości MSMQ [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] usługi i jak można skorelować wiadomości między nadawcą i odbiorcą aplikacji w przypadku żądań i odpowiedzi. W przykładzie użyto powiązania msmqIntegrationBinding. Usługa jest w tym przypadku aplikacji konsoli siebie pozwala sprawdzić, czy usługa, która odbiera wiadomości w kolejce. K  
@@ -28,8 +30,8 @@ W tym przykładzie pokazano, jak aplikacja usługi kolejkowania komunikatów (MS
  `IOrderProcessor` Operacji usługi jednokierunkowej, które jest odpowiednie do użycia z usługi kolejkowania definiuje kontrakt usługi. Wiadomości MSMQ nie ma nagłówka Action, więc nie jest możliwe do mapowania różnych wiadomości usługi MSMQ kontrakty operacji automatycznie. W związku z tym może istnieć tylko jeden kontrakt operacji w tym przypadku. Jeśli chcesz zdefiniować umów więcej operacji w usłudze, aplikacja musi udostępniać informacje określające, które nagłówka w usłudze MSMQ wiadomości (na przykład etykietę lub correlationID) może służyć do określania, który kontrakt operacji wysłania. To jest przedstawiona w [niestandardowe demultipleksowanie](../../../../docs/framework/wcf/samples/custom-demux.md).  
   
  Wiadomości MSMQ nie zawiera również informacje, które nagłówki są zamapowane na różne parametry kontrakt operacji. W związku z tym może istnieć tylko jeden parametr w kontrakt operacji. Parametr jest typu <!--zz <xref:System.ServiceModel.MSMQIntegration.MsmqMessage%601>`MsmqMessage<T>`--> , `System.ServiceModel.MSMQIntegration.MsmqMessage` zawierający podstawowe wiadomości MSMQ. Typ "T" w elemencie `MsmqMessage<T>` klasa reprezentuje dane, które jest serializowany w treści wiadomości MSMQ. W tym przykładzie `PurchaseOrder` jest serializowana w treści wiadomości MSMQ.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [ServiceKnownType(typeof(PurchaseOrder))]  
 public interface IOrderProcessor  
@@ -37,11 +39,11 @@ public interface IOrderProcessor
     [OperationContract(IsOneWay = true, Action = "*")]  
     void SubmitPurchaseOrder(MsmqMessage<PurchaseOrder> msg);  
 }  
-```  
-  
+```
+
  Operacja usługi przetwarza zamówienia zakupu i wyświetla zawartość zamówienia zakupu i jego stan w oknie konsoli usługi. <xref:System.ServiceModel.OperationBehaviorAttribute> Konfiguruje operacji można zarejestrować w transakcji z kolejki i oznaczania ukończenia transakcji po powrocie z operacji. `PurchaseOrder` Zawiera szczegóły zlecenia, które muszą zostać przetworzone przez usługę.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 public class OrderProcessorService : IOrderProcessor  
 {  
@@ -74,13 +76,13 @@ public class OrderProcessorService : IOrderProcessor
         client.Close();  
     }  
 }  
-```  
-  
+```
+
  Usługa używa niestandardowego klienta `OrderResponseClient` do wysłania tej wiadomości usługi MSMQ do kolejki. Ponieważ aplikacja, która odbiera i przetwarza komunikat jest aplikacja usługi MSMQ, a nie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji jest nie kontraktu usługi niejawne między dwiema aplikacjami. Dlatego nie można utworzyć serwer proxy, korzystając z narzędzia Svcutil.exe w tym scenariuszu.  
   
  Niestandardowego serwera proxy jest zasadniczo taki sam dla wszystkich [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] aplikacji, które używają `msmqIntegrationBinding` powiązania do wysyłania wiadomości. W przeciwieństwie do innych serwerów proxy nie obejmuje szereg operacji usługi. Jest tylko operacja komunikat przesyłania.  
-  
-```  
+
+```csharp
 [System.ServiceModel.ServiceContractAttribute(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderResponse  
 {  
@@ -108,11 +110,11 @@ public partial class OrderResponseClient : System.ServiceModel.ClientBase<IOrder
         base.Channel.SendOrderResponse(msg);  
     }  
 }  
-```  
-  
+```
+
  Usługa jest samodzielnie hostowana. Przy użyciu transport integracji usługi MSMQ, kolejki używane musi zostać utworzona z wyprzedzeniem. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera <xref:System.Messaging> kod, aby sprawdzić obecność kolejki i w razie potrzeby utwórz. Nazwa kolejki jest do odczytu z pliku konfiguracji.  
-  
-```  
+
+```csharp
 public static void Main()  
 {  
        // Get the MSMQ queue name from application settings in configuration.  
@@ -134,7 +136,7 @@ public static void Main()
             serviceHost.Close();  
       }  
 }  
-```  
+```
   
  Kolejki usługi MSMQ, do którego są wysyłane żądania kolejności jest określona w sekcji appSettings pliku konfiguracji. Punkty końcowe klienta i usługi są zdefiniowane w sekcji system.serviceModel pliku konfiguracji. Określ zarówno `msmqIntegrationbinding` powiązania.  
   
@@ -176,8 +178,8 @@ public static void Main()
 ```  
   
  Aplikacja kliencka używa <xref:System.Messaging> Aby wysłać wiadomość trwałe i transakcyjne do kolejki. Treść wiadomości zawiera zamówienia zakupu.  
-  
-```  
+
+```csharp
 static void PlaceOrder()  
 {  
     //Connect to the queue  
@@ -219,8 +221,8 @@ static void PlaceOrder()
     orderMessageID = msg.Id;  
     Console.WriteLine("Placed the order, waiting for response...");  
 }  
-```  
-  
+```
+
  Kolejki usługi MSMQ, z którego są odbierane odpowiedzi w kolejności jest określona w sekcji appSettings pliku konfiguracji, jak pokazano w poniższych Przykładowa konfiguracja.  
   
 > [!NOTE]
@@ -233,8 +235,8 @@ static void PlaceOrder()
 ```  
   
  Zapisuje aplikacji klienta `messageID` komunikatu żądania kolejności, który wysyła do usługi i czeka na odpowiedź z usługi. Po odebraniu odpowiedzi w kolejce klienta są powiązane z go z komunikatem kolejności wysyłane, przy użyciu `correlationID` właściwości wiadomości, która zawiera `messageID` zlecenia komunikat, który klient wysłany do usługi.  
-  
-```  
+
+```csharp
 static void DisplayOrderStatus()  
 {  
     MessageQueue orderResponseQueue = new   
@@ -273,8 +275,8 @@ static void DisplayOrderStatus()
     }  
   }  
 }  
-```  
-  
+```
+
  Po uruchomieniu próbki działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Można wyświetlić wiadomości receive usługi z klienta i wysyła odpowiedź z powrotem do klienta. Klient jest wyświetlany odpowiedzi otrzymał od usługi. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta.  
   
 > [!NOTE]

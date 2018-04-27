@@ -1,11 +1,12 @@
 ---
-title: "Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic"
-ms.custom: 
+title: 'Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - defaults [Visual Basic], properties
@@ -16,17 +17,17 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-caps.latest.revision: "23"
+caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 8baa03e37325a6ad7065ec1a60052b3ea6a46c6f
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9c4f471eba42e47d6bef45a4d38abc0cbd2d32bc
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>Porady: deklarowanie i wywoływanie w właściwości domyślnej w Visual Basic
-A *domyślna właściwość* jest właściwością klasy lub struktury kodu można uzyskać dostęp bez określania go. Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] rozpoznaje dostęp do tej klasy lub struktury domyślnej właściwości, jeśli taka istnieje.  
+A *domyślna właściwość* jest właściwością klasy lub struktury kodu można uzyskać dostęp bez określania go. Podczas wywoływania kodu nazwy klasy lub struktury, ale nie właściwości i kontekst zezwala na dostęp do właściwości, Visual Basic rozpoznaje dostępu do tej klasy lub struktury domyślnej właściwości, jeśli taka istnieje.  
   
  Klasy lub struktury może mieć co najwyżej jeden domyślny właściwości. Jednak można przeciążać właściwości domyślnej i więcej niż jedna wersja go.  
   
@@ -90,13 +91,13 @@ A *domyślna właściwość* jest właściwością klasy lub struktury kodu moż
  Z powodu niedogodności należy rozważyć nie definiuje właściwości domyślnych. Aby zwiększyć czytelność kodu należy również wziąć pod uwagę zawsze odwołujących się do wszystkich właściwości jawnie, nawet domyślnej właściwości.  
   
 ## <a name="see-also"></a>Zobacz też  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Property — instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
- [Domyślne](../../../../visual-basic/language-reference/modifiers/default.md)  
+ [Property, instrukcja](../../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Default](../../../../visual-basic/language-reference/modifiers/default.md)  
  [Różnice pomiędzy właściwościami i zmiennymi w Visual Basic](./differences-between-properties-and-variables.md)  
- [Porady: Tworzenie właściwości](./how-to-create-a-property.md)  
- [Porady: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
- [Porady: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
- [Porady: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
- [Porady: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)
+ [Instrukcje: tworzenie właściwości](./how-to-create-a-property.md)  
+ [Instrukcje: deklarowanie właściwości z mieszanymi poziomami dostępu](./how-to-declare-a-property-with-mixed-access-levels.md)  
+ [Instrukcje: wywoływanie procedury właściwości](./how-to-call-a-property-procedure.md)  
+ [Instrukcje: umieszczanie wartości we właściwości](./how-to-put-a-value-in-a-property.md)  
+ [Instrukcje: pobieranie wartości z właściwości](./how-to-get-a-value-from-a-property.md)

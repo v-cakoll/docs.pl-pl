@@ -27,11 +27,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 61e4893ac32d2013b090a748078ec1e3a84ea3ac
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 77c69c5c39d90dcc28aa9c6084d84ace29df6f18
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Bezpieczniejszy dostęp do plików i danych w formularzach systemu Windows
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Używa uprawnień w celu ochrony zasobów i danych. Gdy aplikacja może odczytu lub zapisu danych zależy od uprawnienia do aplikacji. Po uruchomieniu aplikacji w środowisku częściowej relacji zaufania, może nie mieć dostępu do danych mogą też zmienić sposób dostępu do danych.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/26/2018
  Gdy występują ograniczenia zabezpieczeń, dostępne są dwie opcje: assert uprawnień (przy założeniu udzielono aplikacji) lub użyj wersji funkcji zapisywane do pracy w częściowej relacji zaufania. W poniższych sekcjach omówiono sposób pracy z pliku bazy danych i dostępu do rejestru z aplikacji, które są uruchomione w środowisku częściowej relacji zaufania.  
   
 > [!NOTE]
->  Domyślnie narzędzia, które generują [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń domyślne tych wdrożeń do żądania pełnego zaufania z komputerów, na których są uruchamiane. Jeśli zdecydujesz się korzystać z zalet zwiększyć bezpieczeństwo działa w częściowej relacji zaufania, należy zmienić to ustawienie domyślne w jednym [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub jednego z [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] narzędzia (Mage.exe lub MageUI.exe). Aby uzyskać więcej informacji o zabezpieczeniach formularzy systemu Windows i na jak określić poziom zaufania odpowiednie dla aplikacji, zobacz [zabezpieczeń w formularzach systemu Windows-omówienie](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
+>  Domyślnie narzędzia, które generują [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] wdrożeń domyślne tych wdrożeń do żądania pełnego zaufania z komputerów, na których są uruchamiane. Jeśli zdecydujesz się korzystać z zalet zwiększyć bezpieczeństwo działa w częściowej relacji zaufania, należy zmienić to ustawienie domyślne w programie Visual Studio lub jednym z [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] narzędzia (Mage.exe lub MageUI.exe). Aby uzyskać więcej informacji o zabezpieczeniach formularzy systemu Windows i na jak określić poziom zaufania odpowiednie dla aplikacji, zobacz [zabezpieczeń w formularzach systemu Windows-omówienie](../../../docs/framework/winforms/security-in-windows-forms-overview.md).  
   
 ## <a name="file-access"></a>Dostęp do plików  
  <xref:System.Security.Permissions.FileIOPermission> Klasy kontroli dostępu do plików i folderów w [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Domyślnie system zabezpieczeń nie powoduje przyznania <xref:System.Security.Permissions.FileIOPermission> środowiskach częściowej relacji zaufania, takie jak strefach Internet i Lokalny intranet. Jednak aplikacja, która wymaga dostępu do plików mogą nadal działać w tych środowiskach, jeśli możesz zmodyfikować projekt aplikacji lub użyć różnych metod na dostęp do plików. Domyślnie lokalnej strefy intranetowej to prawo ma dostęp do tej samej witryny i tym samym dostęp do katalogu, do nawiązywania ponownego połączenia ze swoją witryną źródłową i do odczytu z jego katalogu instalacyjnego. Domyślnie strefy internetowej, jest tylko prawo do nawiązywania ponownego połączenia ze swoją witryną źródłową.  

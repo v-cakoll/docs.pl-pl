@@ -1,23 +1,24 @@
 ---
-title: "Właściwości działania podwyższania poziomu"
-ms.custom: 
+title: Właściwości działania podwyższania poziomu
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 802196b7-1159-4c05-b41b-d3bfdfcc88d9
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 244cea33b684a8674681c4d1974d5d857c4c402b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 12f7aa4bd10a22a3cd3ea361e32016b95e41e46b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-promotion-activity"></a>Właściwości działania podwyższania poziomu
 W tym przykładzie przedstawiono rozwiązanie end-to-end, która integruje się <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> funkcja podwyższania poziomu bezpośrednio do tworzenia przepływu pracy. Podano w kolekcji elementów konfiguracji, działań przepływu pracy i rozszerzeń przepływu pracy, które ułatwiają korzystanie z funkcji podwyższania poziomu. Ponadto próbka zawiera proste przepływu pracy, który pokazuje, jak użyć tej kolekcji.  
@@ -106,10 +107,10 @@ go
   
  Po wystąpienia przepływu pracy będzie się powtarzać, wiersza są wstawiane do `InstancePromotedProperties` wyświetlić dla każdego `PromotionSet` zdefiniowanych w konfiguracji. Ten wiersz zawiera wszystkie awansowanej właściwości `PromotionSet` (jeden poziom jest podwyższany właściwości dla kolumny). To `PromotionSet` jest klucze w postaci spójnej kolekcji: `InstanceId, PromotionName`. W tym przykładzie mamy jedną `PromotionSet` zdefiniowanych w konfiguracji, których atrybut name jest `CounterService`. Uwaga jak `PromotionName` wartość kolumny jest taki sam atrybut name elementu `PromotionSet` elementu.  
   
- Kolejność `promotedValue` elementy są powiązane z umieszczania awansowanej właściwości w `InstancePromotedProperties` widoku. `Count`jest to pierwszy `promotedValue` elementu. W związku z tym jest zamapowany na `Value1` kolumny w `InstancePromotedProperties` widoku. `LastIncrementedAt`jest to druga `promotedValue` elementu. W związku z tym jest zamapowany na `Value2` kolumny w `InstancePromotedProperties` widoku.  
+ Kolejność `promotedValue` elementy są powiązane z umieszczania awansowanej właściwości w `InstancePromotedProperties` widoku. `Count` jest to pierwszy `promotedValue` elementu. W związku z tym jest zamapowany na `Value1` kolumny w `InstancePromotedProperties` widoku. `LastIncrementedAt` jest to druga `promotedValue` elementu. W związku z tym jest zamapowany na `Value2` kolumny w `InstancePromotedProperties` widoku.  
   
 #### <a name="using-the-promotevalue-activity"></a>Za pomocą działania PromoteValue  
- Zapoznaj się z plikiem CounterService.xamlx w [!INCLUDE[wf2](../../../../includes/wf2-md.md)] projektanta. Zwróć uwagę, że istnieją dwa specjalne działania w definicji WF: `PromoteValue<DateTime>` i `PromoteValue<Int32>`.  
+ Zapoznaj się z plikiem CounterService.xamlx w Projektancie Windows Workflow Foundation. Zwróć uwagę, że istnieją dwa specjalne działania w definicji WF: `PromoteValue<DateTime>` i `PromoteValue<Int32>`.  
   
  `PromoteValue<Int32>` Działanie ma jego `Name` zdefiniowany jako element członkowski `Count`. To jest zgodny z pierwszym `promotedValue` element w konfiguracji i jego `Value` zdefiniowany jako `Counter` zmiennej przepływu pracy. Gdy przepływ pracy będzie się powtarzać, `Counter` zmiennej przepływu pracy jest utrwalony jako awansowanej właściwości do `Value1` kolumny `InstancePromotedProperties` widoku.  
   

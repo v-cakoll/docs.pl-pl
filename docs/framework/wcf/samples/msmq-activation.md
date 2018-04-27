@@ -1,26 +1,26 @@
 ---
-title: "Aktywacja usługi MSMQ"
-ms.custom: 
+title: Aktywacja usługi MSMQ
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-caps.latest.revision: 
+caps.latest.revision: 29
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: a4c3d1dc8116e9c1b26febc4d8473b15d8648c01
-ms.sourcegitcommit: 15316053918995cc1380163a7d7e7edd5c44e6d7
+ms.openlocfilehash: e0f8077e425464d5a9f33662366377d573719659
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="msmq-activation"></a>Aktywacja usługi MSMQ
 W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji procesów systemu Windows (WAS), które są odczytywane z kolejki komunikatów. W przykładzie użyto `netMsmqBinding` i opierają się na [komunikacji dwustronny](../../../../docs/framework/wcf/samples/two-way-communication.md) próbki. Usługa jest w tym przypadku aplikacji sieci Web hostowanych klienta i jest samodzielnie hostowana konsoli obserwować stan zakupów przesłane dane wyjściowe.  
@@ -33,7 +33,7 @@ W tym przykładzie pokazano, jak udostępniać aplikacje w usługi aktywacji pro
 >   
 >  \<InstallDrive>:\WF_WCF_Samples  
 >   
->  Jeśli ten katalog nie istnieje, przejdź do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i [!INCLUDE[wf](../../../../includes/wf-md.md)] przykłady dla [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pobrać wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
+>  Jeśli ten katalog nie istnieje, przejdź do [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] HYPERLINK "http://go.microsoft.com/fwlink/?LinkId=150780" \t "_blank" i przykłady Windows Workflow Foundation (WF) dotyczące [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] pobrać wszystkie [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] i [!INCLUDE[wf1](../../../../includes/wf1-md.md)] próbek. W tym przykładzie znajduje się w następującym katalogu.  
 >   
 >  \<InstallDrive>:\Samples\WCFWFCardSpace\WCF\Basic\Services\Hosting\WASHost\MsmqActivation.  
   
@@ -282,7 +282,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
         > [!NOTE]
         >  To polecenie jest pojedynczy wiersz tekstu.  
   
-         To polecenie umożliwia aplikacji /servicemodelsamples uzyskać dostęp za pomocą http://localhost/servicemodelsamples i net.msmq://localhost/servicemodelsamples.  
+         To polecenie umożliwia uzyskać dostęp za pomocą aplikacji /servicemodelsamples http://localhost/servicemodelsamples i net.msmq://localhost/servicemodelsamples.  
   
 7.  Jeśli użytkownik nie zostało zrobione wcześniej, upewnij się, czy włączono usługi MSMQ activation service. Z **Start** menu, kliknij przycisk **Uruchom**i wpisz `Services.msc`. Wyszukaj na liście usług dla **Adapter odbiornika Net.Msmq**. Kliknij prawym przyciskiem myszy i wybierz **właściwości**. Ustaw **uruchamiana** do **automatyczne**, kliknij przycisk **Zastosuj** i kliknij przycisk **Start** przycisku. Ten krok należy przeprowadzić tylko raz przed pierwsze użycie usługi Adapter odbiornika Net.Msmq.  
   

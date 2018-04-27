@@ -1,24 +1,26 @@
 ---
-title: "Zabezpieczenia powiązania niestandardowego"
-ms.custom: 
+title: Zabezpieczenia powiązania niestandardowego
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-caps.latest.revision: "30"
+caps.latest.revision: 30
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 94c43586606f42cca120ded59637a998d113d229
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4774e4ed6c5afc6e9c4af50e0663ffe8c0964b7f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="custom-binding-security"></a>Zabezpieczenia powiązania niestandardowego
 W tym przykładzie pokazano, jak skonfigurować zabezpieczenia przy użyciu niestandardowego powiązania. Widoczny jest sposób umożliwiają niestandardowego powiązania zabezpieczeń na poziomie komunikatu wraz z bezpiecznego transportu. Jest to przydatne, gdy do przesyłania wiadomości między klientem a usługą jest wymagane bezpieczne transportu i jednocześnie wiadomości musi być bezpieczny na poziomie wiadomości. Ta konfiguracja nie jest obsługiwana przez powiązania dostarczane przez system.  
@@ -56,16 +58,16 @@ W tym przykładzie pokazano, jak skonfigurować zabezpieczenia przy użyciu nies
   
 ```xml  
 <behaviors>  
-      <serviceBehaviors>  
-        <behavior name="CalculatorServiceBehavior">  
-          <serviceMetadata />  
-          <serviceDebug includeExceptionDetailInFaults="False" />  
-          <serviceCredentials>  
-            <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
-          </serviceCredentials>  
-        </behavior>  
-      </serviceBehaviors>  
-    </behaviors>  
+    <serviceBehaviors>  
+    <behavior name="CalculatorServiceBehavior">  
+        <serviceMetadata />  
+        <serviceDebug includeExceptionDetailInFaults="False" />  
+        <serviceCredentials>  
+        <serviceCertificate findValue="localhost" storeLocation="LocalMachine" storeName="My" x509FindType="FindBySubjectName"/>  
+        </serviceCredentials>  
+    </behavior>  
+    </serviceBehaviors>  
+</behaviors>  
 ```  
   
  Ponadto niestandardowego powiązania używa zabezpieczenia komunikatów z typu poświadczeń systemu Windows — jest to domyślny typ poświadczeń. Jest to osiągane przez `security` element powiązania. Zarówno klient, jak i usługa są uwierzytelniane przy użyciu zabezpieczeń na poziomie komunikatu, jeśli mechanizmu uwierzytelniania Kerberos jest dostępne. Dzieje się tak, jeśli próbka jest uruchamiany w środowisku usługi Active Directory. Jeśli mechanizm uwierzytelniania Kerberos jest niedostępna, jest używane uwierzytelnianie NTLM. NTLM uwierzytelnia klienta do usługi, ale nie uwierzytelnienia usługi dla klienta. `security` Element powiązania jest skonfigurowana do używania `SecureConversation``authenticationType`, które powoduje utworzenia sesji zabezpieczeń zarówno klient, jak i usługi. Jest to wymagane do włączenia usługi kontraktu dwukierunkowego do pracy.  
@@ -93,7 +95,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
   
      Certyfikat jest przechowywany w magazynie CurrentUser usług hostowanych w sieci Web.  
   
-    ```  
+    ```bat
     echo ************  
     echo Server cert setup starting  
     echo %SERVER_NAME%  

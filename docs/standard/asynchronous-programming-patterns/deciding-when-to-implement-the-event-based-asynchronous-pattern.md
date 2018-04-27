@@ -1,12 +1,12 @@
 ---
 title: Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Event-based Asynchronous Pattern
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: a00046aa-785d-4f7f-a8e5-d06475ea50da
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 111aaaa86877368ccbd0c9c11a26dff47b065698
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 330dc5ec76fe33a7f6165857334a367f578840ef
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="deciding-when-to-implement-the-event-based-asynchronous-pattern"></a>Decydowanie o czasie implementacji klienta wzorca asynchronicznego opartego na zdarzeniach
 Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania asynchroniczne zachowanie klasy. Wraz z wprowadzeniem strony tego wzorca [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiuje dwa wzorce asynchroniczne zachowanie publikowania: wzorzec asynchroniczny oparty na <xref:System.IAsyncResult?displayProperty=nameWithType> interfejsu i wzorzec oparty na zdarzeniach. W tym temacie opisano, gdy jest ona odpowiednia dla można zapewnić oba wzorce.  
@@ -63,18 +63,18 @@ Asynchroniczny wzorzec oparty na zdarzeniach dostarczają wzorzec publikowania a
   
     -   Udostępnianie wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorca w tej samej klasy, jeśli zaletą oddzielanie implementacje przeważa nad wynikowy złożoności modelu obiektu. Warto udostępnić oba wzorce dotyczących jednej klasy niż Aby uniknąć udostępnianie wzorzec oparty na zdarzeniach.  
   
-    -   Jeśli musi ujawniać wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorzec na jedną klasę, użyj <xref:System.ComponentModel.EditorBrowsableAttribute> ustawioną <xref:System.ComponentModel.EditorBrowsableState.Advanced> do oznaczania <xref:System.IAsyncResult> implementacji wzorca jako funkcja zaawansowana. Oznacza to środowisk projektowania, takich jak [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] IntelliSense, aby nie wyświetlać <xref:System.IAsyncResult> właściwości i metody. Te właściwości i metody są nadal pełni użyteczne, ale używająca za pomocą funkcji IntelliSense ma jaśniejszy widoku interfejsu API.  
+    -   Jeśli musi ujawniać wzorzec oparty na zdarzeniach i <xref:System.IAsyncResult> wzorzec na jedną klasę, użyj <xref:System.ComponentModel.EditorBrowsableAttribute> ustawioną <xref:System.ComponentModel.EditorBrowsableState.Advanced> do oznaczania <xref:System.IAsyncResult> implementacji wzorca jako funkcja zaawansowana. Wskazuje środowisk projektowania, takie jak Visual Studio IntelliSense, aby nie wyświetlać <xref:System.IAsyncResult> właściwości i metody. Te właściwości i metody są nadal pełni użyteczne, ale używająca za pomocą funkcji IntelliSense ma jaśniejszy widoku interfejsu API.  
   
 ## <a name="criteria-for-exposing-the-iasyncresult-pattern-in-addition-to-the-event-based-pattern"></a>Kryteria udostępnianie wzorzec IAsyncResult oprócz wzorzec oparty na zdarzeniach  
  Podczas wzorca asynchronicznego opartego na zdarzeniach ma wiele zalet w scenariuszach wcześniej wspomniano, ma kilka wad, które należy zwrócić uwagę w przypadku wydajność najważniejszych wymagań.  
   
  Istnieją trzy scenariusze, które nie dotyczą wzorzec oparty na zdarzeniach, jak również <xref:System.IAsyncResult> wzorca:  
   
--   Blokowanie oczekiwania na jednym<xref:System.IAsyncResult>  
+-   Blokowanie oczekiwania na jednym <xref:System.IAsyncResult>  
   
 -   Blokowanie oczekiwanie na wiele <xref:System.IAsyncResult> obiektów  
   
--   Sondowanie ukończenia na<xref:System.IAsyncResult>  
+-   Sondowanie ukończenia na <xref:System.IAsyncResult>  
   
  Te scenariusze można rozwiązać przy użyciu wzorca oparty na zdarzeniach, ale jest bardziej skomplikowane niż użycie <xref:System.IAsyncResult> wzorca.  
   

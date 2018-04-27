@@ -1,28 +1,28 @@
 ---
-title: "Zabezpieczenia komunikatów — Windows"
-ms.custom: 
+title: Zabezpieczenia komunikatów — Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-clr
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - WS Security
 ms.assetid: d2221d1c-c9cb-48d1-b044-a3b4445c7f05
-caps.latest.revision: 
+caps.latest.revision: 34
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
 ms.workload:
 - dotnet
-ms.openlocfilehash: c8bb8d0506dd535a312bd8df8954c8143d9543ae
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d42f266e51f6d5dd8c772d674736adc729b2ac2c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="message-security-windows"></a>Zabezpieczenia komunikatów — Windows
 W tym przykładzie pokazano, jak skonfigurować <xref:System.ServiceModel.WSHttpBinding> powiązania w celu użycia zabezpieczenia na poziomie komunikatu z uwierzytelnianiem systemu Windows. Ten przykład jest oparty na [wprowadzenie](../../../../docs/framework/wcf/samples/getting-started-sample.md). W tym przykładzie usługa jest obsługiwana w Internet Information Services (IIS) i klient jest aplikacji konsoli (.exe).  
@@ -75,15 +75,15 @@ W tym przykładzie pokazano, jak skonfigurować <xref:System.ServiceModel.WSHttp
 ```  
   
  Kod źródłowy usługi został zmodyfikowany w celu pokazują, jak <xref:System.ServiceModel.OperationContext.ServiceSecurityContext%2A> mogą być używane do dostępu tożsamości obiektu wywołującego.  
-  
-```  
+
+```csharp
 public string GetCallerIdentity()  
 {  
     // The Windows identity of the caller can be accessed on the ServiceSecurityContext.WindowsIdentity.  
     return OperationContext.Current.ServiceSecurityContext.WindowsIdentity.Name;  
 }  
-```  
-  
+```
+
  Po uruchomieniu próbki operację żądania i odpowiedzi są wyświetlane w oknie konsoli klienta. Pierwsza metoda wywoływana - `GetCallerIdentity` — zwraca nazwę tożsamości wywołującego do klienta. Naciśnij klawisz ENTER w oknie konsoli, aby zamknąć klienta.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>Aby skonfigurować, kompilacji, a następnie uruchom próbki  

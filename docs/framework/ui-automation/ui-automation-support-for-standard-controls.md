@@ -1,27 +1,29 @@
 ---
-title: "Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek"
-ms.custom: 
+title: Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-bcl
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-bcl
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - controls, UI Automation support for
 - UI Automation, support for standard controls
 ms.assetid: 3770ea8a-2655-4add-9c59-fe0610ad5084
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: Xansky
 ms.author: mhopkins
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: f7529c68e96f93ebbba9fc5e750e09331bda9699
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: af46a984f1b4c2577daee120752590ff18b9d1d8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ui-automation-support-for-standard-controls"></a>Obsługa automatyzacji interfejsu użytkownika dla standardowych kontrolek
 > [!NOTE]
@@ -62,7 +64,7 @@ ms.lasthandoff: 12/22/2017
 |SysListView32|DataGrid|  
 |SysListView32|Lista|  
 |ListBox|Lista|  
-|ListBox|Element listy|  
+|ListBox|ListItem|  
 |#32768|Menu|  
 |#32768|Element MenuItem|  
 |msctls_progress32|ProgressBar|  
@@ -105,9 +107,9 @@ ms.lasthandoff: 12/22/2017
   
 <a name="Windows_Forms_Controls"></a>   
 ## <a name="windows-forms-controls"></a>Formanty formularzy systemu Windows  
- [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)]Formanty są widoczne dla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie dodawane do użytku z aplikacjami klienckimi automatyzacji interfejsu użytkownika.  
+ Formanty formularzy systemu Windows są widoczne dla [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] za pośrednictwem dostawcy po stronie klienta w UIAutomationClientsideProviders.dll. Ten zestaw jest automatycznie dodawane do użytku z aplikacjami klienckimi automatyzacji interfejsu użytkownika.  
   
- Zazwyczaj [!INCLUDE[TLA2#tla_winforms](../../../includes/tla2sharptla-winforms-md.md)] formantów, które są zarządzane otoki [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] formanty standardowe są obsługiwane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Obsługiwane są następujące formanty.  
+ Zazwyczaj formanty formularzy systemu Windows, które są zarządzane otoki [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] formanty standardowe są obsługiwane przez [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]. Obsługiwane są następujące formanty.  
   
 |Nazwa klasy|  
 |----------------|  
@@ -159,7 +161,7 @@ ms.lasthandoff: 12/22/2017
 |ErrorProvider|  
 |FlowLayoutPanel|  
 |Formularz|  
-|Linklabel —|  
+|LinkLabel|  
 |Helpprovider —|  
 |MaskedTextBox|  
 |MenuStrip/ContextMenuStrip|  

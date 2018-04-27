@@ -1,26 +1,27 @@
 ---
 title: Migracja
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 51ca5be7-94dc-4bed-a206-f57c898cf078
-caps.latest.revision: "8"
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 39e7e8e16838c4959e67d0c9d0f5e17286e1167f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 468fbb57290e90f6e6e006f2fe4a5743ef3f220b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="migration"></a>Migracja
-Ta sekcja zawiera przykłady, które pokazują, jak przeprowadzić migrację [!INCLUDE[wf](../../../../includes/wf-md.md)] zawartości napisane przy użyciu [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] do [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
+Ta sekcja zawiera przykłady, które przedstawiają sposób migrowania zawartości Windows Workflow Foundation (WF) napisane przy użyciu [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] do [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)].  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Używanie działania programu .NET Framework 3.0 lub .NET Framework 3.5 w przepływie pracy programu .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/using-a-net-3-0-or-net-3-5-activity-in-a-net-4-5-workflow.md)  

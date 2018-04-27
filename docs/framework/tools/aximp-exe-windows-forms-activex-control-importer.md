@@ -1,12 +1,13 @@
 ---
 title: Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ActiveX controls, hosting in Windows Forms
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - Aximp.exe
 - Windows Forms ActiveX Control Importer
 ms.assetid: 482c0d83-7144-4497-b626-87d2351b78d0
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ebde5bd48b02c20f7d607ebcda2b18ed0830c569
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8098a44c9275be0a40ec8e067d33ac8a00654ec1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="aximpexe-windows-forms-activex-control-importer"></a>Aximp.exe (Importer kontrolki ActiveX formularzy systemu Windows)
 Importer formantów ActiveX konwertuje definicje typów w bibliotece typów modelu COM dla formantu ActiveX na formant programu Windows Forms.  
@@ -47,18 +49,18 @@ aximp [options]{file.dll | file.ocx}
   
 |Argument|Opis|  
 |--------------|-----------------|  
-|*plik*|Nazwa pliku źródłowego, który zawiera formant ActiveX do przekonwertowania. Argument file musi mieć rozszerzenie dll lub ocx.|  
+|*Plik*|Nazwa pliku źródłowego, który zawiera formant ActiveX do przekonwertowania. Argument file musi mieć rozszerzenie dll lub ocx.|  
   
 |Opcja|Opis|  
 |------------|-----------------|  
 |`/delaysign`|Określa, że program Aximp.exe ma podpisać wynikowy formant, używając funkcji podpisywania opóźnionego. Tę opcję należy określić przy użyciu jednej `/keycontainer:`, `/keyfile:`, lub `/publickey:` opcji. Aby uzyskać więcej informacji na opóźnione proces podpisywania, zobacz [opóźnione podpisywanie zestawu](../../../docs/framework/app-domains/delay-sign-assembly.md).|  
 |`/help`|Wyświetla składnię polecenia i opcje narzędzia.|  
-|`/keycontainer:`*containerName*|Podpisuje utworzony formant przy użyciu silnej nazwy przy użyciu pary kluczy publiczny/prywatny znaleziony w określone przez kontener kluczy *containerName*.|  
-|`/keyfile:`*filename*|Podpisuje utworzony formant przy użyciu silnej nazwy za pomocą wydawcy oficjalnego publicznego i prywatnego pary kluczy w *filename*.|  
+|`/keycontainer:` *Właściwość ContainerName*|Podpisuje utworzony formant przy użyciu silnej nazwy przy użyciu pary kluczy publiczny/prywatny znaleziony w określone przez kontener kluczy *containerName*.|  
+|`/keyfile:` *Nazwa pliku*|Podpisuje utworzony formant przy użyciu silnej nazwy za pomocą wydawcy oficjalnego publicznego i prywatnego pary kluczy w *filename*.|  
 |`/nologo`|Pomija wyświetlanie transparentu startowego firmy Microsoft.|  
-|`/out:`*filename*|Określa nazwę zestawu, który ma zostać utworzony.|  
-|`/publickey:`*filename*|Podpisuje utworzony formant przy użyciu silnej nazwy przy użyciu klucza publicznego można odnaleźć pliku określonego przez *filename*.|  
-|`/rcw:`*filename*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
+|`/out:` *Nazwa pliku*|Określa nazwę zestawu, który ma zostać utworzony.|  
+|`/publickey:` *Nazwa pliku*|Podpisuje utworzony formant przy użyciu silnej nazwy przy użyciu klucza publicznego można odnaleźć pliku określonego przez *filename*.|  
+|`/rcw:` *Nazwa pliku*|Używa określonej wywoływalnej otoki czasu wykonywania, zamiast generować nową. Można określić wiele wystąpień. Dla ścieżek względnych jest używany bieżący katalog. Aby uzyskać więcej informacji, zobacz [wywoływana otoka środowiska uruchomieniowego](../../../docs/framework/interop/runtime-callable-wrapper.md).|  
 |`/silent`|Pomija wyświetlanie komunikatów o sukcesie.|  
 |`/source`|Generuje kod źródłowy w języku C# dla otoki programu Windows Forms.|  
 |`/verbose`|Określa tryb pełny; wyświetla dodatkowe informacje o postępie.|  
@@ -79,7 +81,7 @@ aximp [options]{file.dll | file.ocx}
   
  Po uruchomieniu programu Aximp.exe dla biblioteki shdocvw.dll zawsze jest tworzony inny plik o nazwie shdocvw.dll w katalogu, z którego uruchomiono narzędzie. Jeśli ten wygenerowany plik zostanie umieszczony w katalogu Documents and Settings, będzie powodował problemy w programach Microsoft Internet Explorer i Eksplorator Windows. Gdy komputer jest uruchamiany ponownie, system Windows najpierw szuka kopii pliku shdocvw.dll w katalogu Documents and Settings, a dopiero potem w katalogu system32. Użyje kopii znalezionej w katalogu Documents and Settings i podejmie próbę załadowania zarządzanych otok. Programy Internet Explorer i Eksplorator Windows nie będą działać prawidłowo, ponieważ są zależne od aparatu renderowania znajdującego się w wersji pliku shdocvw.dll przechowywanej w katalogu system32. Jeśli wystąpi ten problem, usuń kopię pliku shdocvw.dll z katalogu Documents and Settings i uruchom ponownie komputer.  
   
- Użycie programu Aximp.exe z biblioteką shdocvw.dll w celu utworzenia formantu platformy .NET, który będzie używany podczas tworzenia aplikacji, także może powodować problemy. W tym przypadku aplikacja będzie ładować obie wersje biblioteki shdocvw.dll (systemową i wygenerowaną) i może nadać priorytet wersji systemowej. Gdy w takiej sytuacji użytkownik podejmie próbę załadowania strony sieci Web w formancie ActiveX WebBrowser, może zostać wyświetlone okno dialogowe Otwieranie/Zapisywanie. Po kliknięciu przez użytkownika **Otwórz**, strony sieci Web zostanie otwarty w programie Internet Explorer. Dzieje się tak tylko na komputerach, na których jest używany program Internet Explorer w wersji 6 lub starszy. Aby zapobiec temu problemowi, należy użyć zarządzanej <xref:System.Windows.Forms.WebBrowser> kontrolować lub użyj [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] do generowania zarządzanego shdocvw.dll zgodnie z opisem w [porady: Dodawanie odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
+ Użycie programu Aximp.exe z biblioteką shdocvw.dll w celu utworzenia formantu platformy .NET, który będzie używany podczas tworzenia aplikacji, także może powodować problemy. W tym przypadku aplikacja będzie ładować obie wersje biblioteki shdocvw.dll (systemową i wygenerowaną) i może nadać priorytet wersji systemowej. Gdy w takiej sytuacji użytkownik podejmie próbę załadowania strony sieci Web w formancie ActiveX WebBrowser, może zostać wyświetlone okno dialogowe Otwieranie/Zapisywanie. Po kliknięciu przez użytkownika **Otwórz**, strony sieci Web zostanie otwarty w programie Internet Explorer. Dzieje się tak tylko na komputerach, na których jest używany program Internet Explorer w wersji 6 lub starszy. Aby zapobiec temu problemowi, należy użyć zarządzanej <xref:System.Windows.Forms.WebBrowser> kontroli lub użyć programu Visual Studio do generowania zarządzanego shdocvw.dll zgodnie z opisem w [porady: Dodawanie odwołania do bibliotek typów](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md).  
   
 ## <a name="example"></a>Przykład  
  Polecenie generuje MediaPlayer.dll i AxMediaPlayer.dll formantu Media Player `msdxm.ocx`.  

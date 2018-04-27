@@ -15,11 +15,11 @@ manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: f28e103d6241d954dd6ac4f7e9c7fcb20a06ea0b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8100f986a98c9e4712603c45a88d48cbb93be649
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>Wskazówki: Korzystanie z przepływu danych w aplikacji Windows Forms
 Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, które wykonują przetwarzania obrazu w aplikacji formularzy systemu Windows.  
@@ -48,7 +48,7 @@ Ten dokument przedstawia sposób tworzenia sieci bloków przepływu danych, któ
   
 #### <a name="to-create-the-windows-forms-application"></a>Aby utworzyć systemu Windows w aplikacjach formularzy  
   
-1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], utworzyć Visual C# lub Visual Basic **aplikacji Windows Forms** projektu. W tym dokumencie projektu o nazwie `CompositeImages`.  
+1.  W programie Visual Studio Utwórz Visual C# lub Visual Basic **aplikacji Windows Forms** projektu. W tym dokumencie projektu o nazwie `CompositeImages`.  
   
 2.  Projektant formularzy dla tego formularza, pliku Form1.cs (Form1.vb w języku Visual Basic), Dodaj <xref:System.Windows.Forms.ToolStrip> formantu.  
   

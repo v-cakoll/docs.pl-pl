@@ -1,29 +1,30 @@
 ---
-title: "Wykorzystywanie OData źródeł danych z przepływu pracy"
-ms.custom: 
+title: Wykorzystywanie OData źródeł danych z przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9a01be08367fac1f7713f5db4953f67b0d32e073
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2057e2b1c03a1ebcd68d7d59be8839171305707f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>Wykorzystywanie OData źródeł danych z przepływu pracy
 Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , umożliwia tworzenie usług korzystających z protokołu Open Data Protocol (OData) do ujawnia i konsumowania danych za pośrednictwem sieci Web lub intranet przy użyciu semantyki representational stanu transfer (REST). OData przedstawia dane w postaci zasobów, które są adresowane przez identyfikator URI. Wszelkie aplikacje mogą współdziałać z usługi OData na podstawie danych jeśli umożliwia wysyłanie żądania HTTP i przetworzyć źródła strumieniowego OData zwracanych usługi danych. Usługi danych WCF zawiera ponadto biblioteki klienta, które zapewniają bardziej rozbudowane środowisko programowania po używać źródła danych OData z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] aplikacji. Ten temat zawiera omówienie używania OData podawania w przepływie pracy z użyciem biblioteki klienta i bez.  
   
 ## <a name="using-the-sample-northwind-odata-service"></a>Przy użyciu usługi Northwind OData próbki  
- Przykłady w tym temacie Użyj przykładu w lokalizacji usługi danych Northwind [http://services.odata.org/Northwind/Northwind.svc/](http://go.microsoft.com/fwlink/?LinkID=187426). Usługa jest dostępna w ramach [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) i umożliwia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli dostęp do zapisu, lub w razie potrzeby lokalnej usługi danych WCF można postępuj zgodnie z krokami [szybkiego startu usługi danych WCF](http://go.microsoft.com/fwlink/?LinkID=131076) utworzyć lokalną usługą OData, która zapewnia dostęp do bazy danych Northwind. Po wykonaniu procedury szybkiego startu, Zastąp lokalny identyfikator URI dla podanej w przykładowym kodzie w tym temacie.  
+ Przykłady w tym temacie Użyj przykładu w lokalizacji usługi danych Northwind [ http://services.odata.org/Northwind/Northwind.svc/ ](http://go.microsoft.com/fwlink/?LinkID=187426). Usługa jest dostępna w ramach [OData SDK](http://go.microsoft.com/fwlink/?LinkID=185248) i umożliwia dostęp tylko do odczytu do przykładowej bazy danych Northwind. Jeśli dostęp do zapisu, lub w razie potrzeby lokalnej usługi danych WCF można postępuj zgodnie z krokami [szybkiego startu usługi danych WCF](http://go.microsoft.com/fwlink/?LinkID=131076) utworzyć lokalną usługą OData, która zapewnia dostęp do bazy danych Northwind. Po wykonaniu procedury szybkiego startu, Zastąp lokalny identyfikator URI dla podanej w przykładowym kodzie w tym temacie.  
   
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>Wykorzystywanie źródła strumieniowego OData przy użyciu bibliotek klienta  
  Usługi danych WCF obejmuje bibliotek klienta, które umożliwiają łatwiej wykorzystać OData źródła danych z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] i aplikacje klienckie. Te biblioteki upraszczają wysyłanie i odbieranie wiadomości HTTP. Tłumaczenie one również ładunek komunikatu do obiektów CLR, które reprezentują danych jednostki. Dwa podstawowe klasy funkcji bibliotek klienckich <xref:System.Data.Services.Client.DataServiceContext> i <xref:System.Data.Services.Client.DataServiceQuery%601>. Te klasy umożliwiają zapytania usługi danych, a następnie pracować z danymi zwróconą jednostkę jako obiekty CLR. W tej sekcji omówiono dwa podejścia do tworzenia działań korzystających z bibliotek klienta.  
@@ -36,13 +37,13 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  Należy pamiętać, że nie ma żadnych operacji usługi udostępniane przez usługę, a następnie w **usług** listy są elementy reprezentujące jednostek udostępnianych przez usługę danych Northwind. Dodanie odwołania do usługi klasy zostanie wygenerowany dla tych obiektów i ich użyciem w kodzie klienta. Przykłady w tym temacie używać tych klas i `NorthwindEntities` klasy do wykonania zapytania.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Generowania biblioteki klienta usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Generowanie biblioteki klienta usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkID=191611).  
   
 ### <a name="using-asynchronous-methods"></a>Używanie metod asynchronicznych  
- Do rozwiązywania problemów możliwe opóźnienia, które mogą wystąpić podczas uzyskiwania dostępu do zasobów za pośrednictwem sieci Web, zaleca się asynchronicznie podczas uzyskiwania dostępu do usługi danych WCF. Biblioteki klienta usługi danych WCF obejmują zapytania, wywoływania metod asynchronicznych i [!INCLUDE[wf](../../../includes/wf-md.md)] zapewnia <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznego. <xref:System.Activities.AsyncCodeActivity>mogą być zapisywane pochodzące od działania, aby móc korzystać z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klas, metod asynchronicznych lub kod wykonany asynchronicznie mogą być wprowadzane do metody i wywoływane przy użyciu delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> pochodnej działanie; który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i korzystającą delegata.  
+ Do rozwiązywania problemów możliwe opóźnienia, które mogą wystąpić podczas uzyskiwania dostępu do zasobów za pośrednictwem sieci Web, zaleca się asynchronicznie podczas uzyskiwania dostępu do usługi danych WCF. Biblioteki klienta usługi danych WCF obejmują metod asynchronicznych do wywoływania zapytania, a także Windows Workflow Foundation (WF) <xref:System.Activities.AsyncCodeActivity> klasa do tworzenia działań asynchronicznego. <xref:System.Activities.AsyncCodeActivity> mogą być zapisywane pochodzące od działania, aby móc korzystać z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] klas, metod asynchronicznych lub kod wykonany asynchronicznie mogą być wprowadzane do metody i wywoływane przy użyciu delegata. Ta sekcja zawiera dwa przykłady <xref:System.Activities.AsyncCodeActivity> pochodnej działanie; który korzysta z biblioteki klienta usługi danych WCF metod asynchronicznych i korzystającą delegata.  
   
 > [!NOTE]
->  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)][Operacji asynchronicznych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenia działań asynchroniczne](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
+>  [!INCLUDE[crdefault](../../../includes/crdefault-md.md)] [Operacje asynchroniczne (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193396) i [tworzenia działań asynchroniczne](../../../docs/framework/windows-workflow-foundation/creating-asynchronous-activities-in-wf.md).  
   
 ### <a name="using-client-library-asynchronous-methods"></a>Używanie metod asynchronicznych biblioteki klienta  
  <xref:System.Data.Services.Client.DataServiceQuery%601> Klasa udostępnia <xref:System.Data.Services.Client.DataServiceQuery%601.BeginExecute%2A> i <xref:System.Data.Services.Client.DataServiceQuery%601.EndExecute%2A> metody asynchronicznie podczas badania usługi OData. Te metody mogą być wywoływane z <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> i <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> zastąpień o <xref:System.Activities.AsyncCodeActivity> klasy. Gdy <xref:System.Activities.AsyncCodeActivity> <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zwraca zastąpienie, przepływ pracy można go bezczynności (ale nie będą się powtarzać), a po zakończeniu pracy asynchroniczne <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> jest wywołana w czasie wykonywania.  
@@ -77,7 +78,7 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  W poniższym przykładzie `ListCustomers` zdefiniowano działania. To działanie wysyła zapytanie do usługi danych Northwind próbki i zwraca `List<Customer>` zawierający wszystkich klientów w bazie danych Northwind. Asynchroniczne zadanie jest wykonywane przez `GetCustomers` metody. Ta metoda korzysta z usługi dla wszystkich klientów, a następnie kopiuje je do `List<Customer>`. Następnie sprawdza, czy wyniki są stronicowanej. Jeśli tak, wysyła zapytanie do usługi dla następnej strony wyników, dodaje je do listy, a będzie wykonywany do momentu pobraniu wszystkich danych klienta.  
   
 > [!NOTE]
->  [!INCLUDE[crabout](../../../includes/crabout-md.md)]Stronicowanie w usługi danych WCF, zobacz. [Porady: obciążenia stronicowanej wyników (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
+>  [!INCLUDE[crabout](../../../includes/crabout-md.md)] Stronicowanie w usługi danych WCF, zobacz. [Porady: obciążenia stronicowanej wyników (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193452).  
   
  Po dodaniu wszystkich klientów, jest zwracana lista. `GetCustomers` Metody jest określony w działaniu <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> zastąpienia. Ponieważ metoda ma wartość zwracaną `Func<string, List<Customer>>` jest tworzony, aby określić metodę.  
   
@@ -110,11 +111,11 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
   
  **Nieprzetworzone dane zwrócone:**  
 **\<? wersji xml = "1.0" encoding = "utf-8" autonomiczny = "yes"? >**   
-**\<Nazwa kontaktu xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** w przepływie pracy, w tym przykładzie kodu można włączyć do <xref:System.Activities.CodeActivity.Execute%2A> zastąpienie <xref:System.Activities.CodeActivity>-niestandardowego działania opartego na, ale te same funkcje może być również wykonywane przy użyciu <xref:System.Activities.Expressions.InvokeMethod%601> działania. <xref:System.Activities.Expressions.InvokeMethod%601> Działania umożliwia autorom przepływu pracy Wywołaj statyczne i wystąpienie metody klasy, a ma również opcję, aby wywołać określonej metody asynchronicznie. W poniższym przykładzie <xref:System.Activities.Expressions.InvokeMethod%601> działanie jest skonfigurowane tak, aby wywołać <xref:System.Net.WebClient.DownloadString%2A> metody <xref:System.Net.WebClient> klasy i powrócić do listy odbiorców.  
+**\<Nazwa kontaktu xmlns = "http://schemas.microsoft.com/ado/2007/08/dataservices" > Maria Anders\</ContactName >** w przepływie pracy, w tym przykładzie kodu można włączyć do <xref:System.Activities.CodeActivity.Execute%2A> zastąpienie <xref:System.Activities.CodeActivity>— na podstawie działania niestandardowego, ale takie same funkcja może być również wykonywane przy użyciu <xref:System.Activities.Expressions.InvokeMethod%601> działania. <xref:System.Activities.Expressions.InvokeMethod%601> Działania umożliwia autorom przepływu pracy Wywołaj statyczne i wystąpienie metody klasy, a ma również opcję, aby wywołać określonej metody asynchronicznie. W poniższym przykładzie <xref:System.Activities.Expressions.InvokeMethod%601> działanie jest skonfigurowane tak, aby wywołać <xref:System.Net.WebClient.DownloadString%2A> metody <xref:System.Net.WebClient> klasy i powrócić do listy odbiorców.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#3](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#3)]  
   
- <xref:System.Activities.Expressions.InvokeMethod%601>można wywołać obu statyczna i wystąpienia metody klasy. Ponieważ <xref:System.Net.WebClient.DownloadString%2A> jest metodą wystąpienia <xref:System.Net.WebClient> klasy nowe wystąpienie klasy <xref:System.Net.WebClient> jest określona dla <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>. `DownloadString`jest określony jako <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>, identyfikator URI, który zawiera zapytanie jest określona w <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> kolekcji, a wartość zwracana jest przypisany do <xref:System.Activities.Activity%601.Result%2A> wartości. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Ma wartość `true`, co oznacza, że wywołanie metody będą wykonywane asynchronicznie w odniesieniu do przepływu pracy. W poniższym przykładzie przepływ pracy jest tworzony, który używa <xref:System.Activities.Expressions.InvokeMethod%601> działanie, aby zbadać przykładowych danych Northwind usługi listę zleceń dla określonego klienta, a następnie zwrócone dane są zapisywane do konsoli.  
+ <xref:System.Activities.Expressions.InvokeMethod%601> można wywołać obu statyczna i wystąpienia metody klasy. Ponieważ <xref:System.Net.WebClient.DownloadString%2A> jest metodą wystąpienia <xref:System.Net.WebClient> klasy nowe wystąpienie klasy <xref:System.Net.WebClient> jest określona dla <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A>. `DownloadString` jest określony jako <xref:System.Activities.Expressions.InvokeMethod%601.MethodName%2A>, identyfikator URI, który zawiera zapytanie jest określona w <xref:System.Activities.Expressions.InvokeMethod%601.Parameters%2A> kolekcji, a wartość zwracana jest przypisany do <xref:System.Activities.Activity%601.Result%2A> wartości. <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> Ma wartość `true`, co oznacza, że wywołanie metody będą wykonywane asynchronicznie w odniesieniu do przepływu pracy. W poniższym przykładzie przepływ pracy jest tworzony, który używa <xref:System.Activities.Expressions.InvokeMethod%601> działanie, aby zbadać przykładowych danych Northwind usługi listę zleceń dla określonego klienta, a następnie zwrócone dane są zapisywane do konsoli.  
   
  [!code-csharp[CFX_WCFDataServicesActivityExample#1](../../../samples/snippets/csharp/VS_Snippets_CFX/CFX_WCFDataServicesActivityExample/cs/Program.cs#1)]  
   
@@ -129,11 +130,11 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  **xmlns:m = "http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"**  
  **xmlns = "http://www.w3.org/2005/Atom" >**  
  **\<Typ title = "text" > zamówień \< /title >**  
- **\<Identyfikator > http://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/zamówień \< /identyfikator >**  
+ **\<Identyfikator >http://services.odata.org/Northwind/Northwind.svc/Customers("ALFKI") / porządkuje \< /identyfikator >**  
  **\<Zaktualizowano > 2010-05-19T19:37:07Z\</ zaktualizować >**  
  **\<Link rel = "Auto" title = "Zamówienia" href = "Zamówienia" / >**  
  **\<Wpis >**  
- **\<Identyfikator > http://services.odata.org/Northwind/Northwind.svc/Orders (10643) \< /identyfikator >**  
+ **\<Identyfikator >http://services.odata.org/Northwind/Northwind.svc/Orders(10643) \< /identyfikator >**  
  **\<Typ title = "text" > \< /title >**  
  **\<Zaktualizowano > 2010-05-19T19:37:07Z\</ zaktualizować >**  
  **\<Autor >**  
@@ -142,4 +143,4 @@ Usługi danych WCF jest składnikiem [!INCLUDE[dnprdnshort](../../../includes/dn
  **\<Link rel = "edit" title = "Order" href="Orders(10643)" / >**  
  **\<Link rel = "http://schemas.microsoft.com/ado/2007/08/dataservices/related/Customer"**  
  **Typ = "application/atom + xml; typ = entry" title = "Klient" href = "Zamówienia (10643) / klienta" / >**  
-**...**  W poniższym przykładzie przedstawiono jedną metodę, która umożliwia korzystać nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)]Uzyskiwanie dostępu przy użyciu identyfikatorów URI usługi danych WCF, zobacz [podczas uzyskiwania dostępu do zasobów usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](http://go.microsoft.com/fwlink/?LinkId=185564).
+**...**  W poniższym przykładzie przedstawiono jedną metodę, która umożliwia korzystać nieprzetworzonych danych zwróconych z usługi OData autorzy aplikacji przepływu pracy. [!INCLUDE[crabout](../../../includes/crabout-md.md)] Uzyskiwanie dostępu przy użyciu identyfikatorów URI usługi danych WCF, zobacz [podczas uzyskiwania dostępu do zasobów usługi danych (usługi danych WCF)](http://go.microsoft.com/fwlink/?LinkId=193397) i [OData: identyfikator URI konwencje](http://go.microsoft.com/fwlink/?LinkId=185564).

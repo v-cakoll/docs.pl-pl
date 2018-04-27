@@ -1,10 +1,11 @@
 ---
-title: "Property — Instrukcja"
+title: Property — Instrukcja
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.PropertySet
@@ -16,21 +17,21 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-caps.latest.revision: "41"
+caps.latest.revision: 41
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: af4666ecb059f141480be2295055644537819293
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 558b62dd8c676532355ef12134ad8cb803b70796
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="property-statement"></a>Property — Instrukcja
-Deklaruje nazwę właściwości i procedury właściwości używane do przechowywania i pobierania wartości właściwości.
-
-## <a name="syntax"></a>Składnia
-
-```vb
+Deklaruje nazwę właściwości i procedury właściwości używane do przechowywania i pobierania wartości właściwości.  
+  
+## <a name="syntax"></a>Składnia  
+  
+```vb  
 [ <attributelist> ] [ Default ] [ accessmodifier ]   
 [ propertymodifiers ] [ Shared ] [ Shadows ] [ ReadOnly | WriteOnly ] [ Iterator ]  
 Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslist ]  
@@ -51,37 +52,37 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `attributelist`  
   
-     Opcjonalny. Lista atrybutów, które mają zastosowanie do tej właściwości lub `Get` lub `Set` procedury. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Opcjonalna. Lista atrybutów, które mają zastosowanie do tej właściwości lub `Get` lub `Set` procedury. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `Default`  
   
-     Opcjonalny. Określa, że ta właściwość jest właściwością domyślną dla klasy lub struktury, na którym jest zdefiniowany. Właściwości domyślne musi akceptować parametry i można ustawić i pobrać bez określania nazwy właściwości. Jeśli można zadeklarować właściwości jako `Default`, nie można użyć `Private` na właściwość lub jedną z procedur jego właściwości.  
+     Opcjonalna. Określa, że ta właściwość jest właściwością domyślną dla klasy lub struktury, na którym jest zdefiniowany. Właściwości domyślne musi akceptować parametry i można ustawić i pobrać bez określania nazwy właściwości. Jeśli można zadeklarować właściwości jako `Default`, nie można użyć `Private` na właściwość lub jedną z procedur jego właściwości.  
   
 -   `accessmodifier`  
   
-     Opcjonalnie na `Property` instrukcji i co najwyżej jeden z `Get` i `Set` instrukcje. Może to być jedna z następujących czynności:  
+     Opcjonalnie na `Property` instrukcji i co najwyżej jeden z `Get` i `Set` instrukcje. Może to być jeden z następujących elementów:  
   
-    -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
-     Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `propertymodifiers`  
   
-     Opcjonalny. Może to być jedna z następujących czynności:  
+     Opcjonalna. Może to być jeden z następujących elementów:  
   
-    -   [Przeciążenia](../../../visual-basic/language-reference/modifiers/overloads.md)  
+    -   [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)  
   
-    -   [Zastąpienia](../../../visual-basic/language-reference/modifiers/overrides.md)  
+    -   [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)  
   
-    -   [Możliwym do zastąpienia](../../../visual-basic/language-reference/modifiers/overridable.md)  
+    -   [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)  
   
     -   [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)  
   
@@ -93,31 +94,31 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Shared`  
   
-     Opcjonalny. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Opcjonalna. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `ReadOnly`  
   
-     Opcjonalny. Zobacz [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Opcjonalna. Zobacz [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WriteOnly`  
   
-     Opcjonalny. Zobacz [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
+     Opcjonalna. Zobacz [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md).  
   
 -   `Iterator`  
   
-     Opcjonalny. Zobacz [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
+     Opcjonalna. Zobacz [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md).  
   
 -   `name`  
   
-     Wymagany. Nazwa właściwości. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
+     Wymagana. Nazwa właściwości. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).  
   
 -   `parameterlist`  
   
-     Opcjonalny. Lista nazwy zmiennych lokalnych reprezentujący parametry tej właściwości i możliwe dodatkowe parametry `Set` procedury. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).  
+     Opcjonalna. Lista nazwy zmiennych lokalnych reprezentujący parametry tej właściwości i możliwe dodatkowe parametry `Set` procedury. Zobacz [listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md).  
   
 -   `returntype`  
   
@@ -125,7 +126,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     Opcjonalny. Wskazuje, że ta właściwość implementuje jednej lub więcej właściwości, każdą z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tej właściwości. Zobacz [implementuje instrukcji](../../../visual-basic/language-reference/statements/implements-statement.md).  
+     Opcjonalna. Wskazuje, że ta właściwość implementuje jednej lub więcej właściwości, każdą z nich zdefiniowane w interfejsie zaimplementowany przez klasę lub strukturę zawierającego tej właściwości. Zobacz [implementuje instrukcji](../../../visual-basic/language-reference/statements/implements-statement.md).  
   
 -   `implementslist`  
   
@@ -139,16 +140,16 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
     |Część|Opis|  
     |---|---|  
-    |`interface`|Wymagany. Nazwa interfejsu implementowanego przez tę właściwość zawierającego klasy lub struktury.|  
-    |`definedname`|Wymagany. Nazwa, przez którą właściwość jest zdefiniowana w `interface`.|  
+    |`interface`|Wymagana. Nazwa interfejsu implementowanego przez tę właściwość zawierającego klasy lub struktury.|  
+    |`definedname`|Wymagana. Nazwa, przez którą właściwość jest zdefiniowana w `interface`.|  
   
 -   `Get`  
   
-     Opcjonalny. Wymagane, jeśli właściwość jest oznaczona jako `WriteOnly`. Uruchamia `Get` procedury właściwości, która służy do zwracania wartości właściwości.  
+     Opcjonalna. Wymagane, jeśli właściwość jest oznaczona jako `WriteOnly`. Uruchamia `Get` procedury właściwości, która służy do zwracania wartości właściwości.  
   
 -   `statements`  
   
-     Opcjonalny. Blok instrukcji do uruchomienia w ramach `Get` lub `Set` procedury.  
+     Opcjonalna. Blok instrukcji do uruchomienia w ramach `Get` lub `Set` procedury.  
   
 -   `End Get`  
   
@@ -156,7 +157,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     Opcjonalny. Wymagane, jeśli właściwość jest oznaczona jako `ReadOnly`. Uruchamia `Set` procedury właściwości, która jest używana do przechowywania wartości właściwości.  
+     Opcjonalna. Wymagane, jeśli właściwość jest oznaczona jako `ReadOnly`. Uruchamia `Set` procedury właściwości, która jest używana do przechowywania wartości właściwości.  
   
 -   `End Set`  
   
@@ -169,7 +170,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 ## <a name="remarks"></a>Uwagi  
  `Property` Instrukcji wprowadzono deklaracji właściwości. Może mieć właściwości `Get` procedury (tylko do odczytu), `Set` procedura (tylko do zapisu) lub obu (odczytu i zapisu). Można pominąć `Get` i `Set` procedury w przypadku przy użyciu automatycznie implementowanych właściwości. Aby uzyskać więcej informacji, zobacz [Auto-Implemented właściwości](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md).  
   
- Można użyć `Property` tylko na poziomie klasy. Oznacza to, że *kontekście deklaracji* właściwość musi być klasy, struktury, modułu lub interfejsu i nie może być plik źródłowy, przestrzeni nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można użyć `Property` tylko na poziomie klasy. Oznacza to, że *kontekście deklaracji* właściwość musi być klasy, struktury, modułu lub interfejsu i nie może być plik źródłowy, przestrzeni nazw, procedurę lub blok. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
  Domyślnie właściwości używają dostępu publicznego. Można dostosować poziom dostępu do właściwości z modyfikatora dostępu w `Property` instrukcji i opcjonalnie można dostosować jedną z procedur jej właściwości na bardziej restrykcyjne poziom dostępu.  
   
@@ -215,7 +216,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 ## <a name="see-also"></a>Zobacz też  
  [Właściwości zaimplementowane automatycznie](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)  
  [Obiekty i klasy](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)  
- [Get — instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
- [Set — instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
- [Listy parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
- [Domyślne](../../../visual-basic/language-reference/modifiers/default.md)
+ [Get, instrukcja](../../../visual-basic/language-reference/statements/get-statement.md)  
+ [Set, instrukcja](../../../visual-basic/language-reference/statements/set-statement.md)  
+ [Lista parametrów](../../../visual-basic/language-reference/statements/parameter-list.md)  
+ [Default](../../../visual-basic/language-reference/modifiers/default.md)

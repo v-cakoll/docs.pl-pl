@@ -1,12 +1,13 @@
 ---
-title: "Powiązanie danych i formularze systemu Windows"
-ms.custom: 
+title: Powiązanie danych i formularze systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-winforms
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-winforms
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - master-details lists
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f2a4d023600456adf1e14b801ee6c24fd0a2348c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: db0e3ad5602d7ee608299bc5b9c5c85b860cab7d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="data-binding-and-windows-forms"></a>Powiązanie danych i formularze systemu Windows
 W formularzach systemu Windows można powiązać źródła danych nie tylko tradycyjnych, ale także do niemal wszystkich struktury, która zawiera dane. Można powiązać tablicy wartości, które obliczenia w czasie wykonywania, Odczyt z pliku lub pochodzić od wartości innych kontrolek.  
@@ -48,7 +50,7 @@ W formularzach systemu Windows można powiązać źródła danych nie tylko trad
   
 |Typ powiązania danych|Opis|  
 |--------------------------|-----------------|  
-|Proste powiązanie danych|Możliwość kontrolkę można powiązać do elementu danych, takich jak wartość w kolumnie w tabeli zestawu danych. Jest to typ powiązania, które są typowe dla formantów takich jak <xref:System.Windows.Forms.TextBox> kontroli lub <xref:System.Windows.Forms.Label> Określanie formantów, które zwykle są wyświetlane tylko pojedynczą wartość. W rzeczywistości żadnej właściwości w formancie może być powiązana z polem w bazie danych. Brak kompleksową obsługę tej funkcji w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].<br /><br /> Aby uzyskać więcej informacji, zobacz:<br /><br /> -   [Interfejsy dotyczące powiązania danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Porady: nawigowanie w danych w formularzach systemu Windows](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Porady: Tworzenie prostego formantu powiązanego na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|Proste powiązanie danych|Możliwość kontrolkę można powiązać do elementu danych, takich jak wartość w kolumnie w tabeli zestawu danych. Jest to typ powiązania, które są typowe dla formantów takich jak <xref:System.Windows.Forms.TextBox> kontroli lub <xref:System.Windows.Forms.Label> Określanie formantów, które zwykle są wyświetlane tylko pojedynczą wartość. W rzeczywistości żadnej właściwości w formancie może być powiązana z polem w bazie danych. Brak kompleksową obsługę tej funkcji w programie Visual Studio.<br /><br /> Aby uzyskać więcej informacji, zobacz:<br /><br /> -   [Interfejsy dotyczące powiązania danych](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)<br />-   [Porady: nawigowanie w danych w formularzach systemu Windows](../../../docs/framework/winforms/how-to-navigate-data-in-windows-forms.md)<br />-   [Porady: Tworzenie prostego formantu powiązanego na formularzu systemu Windows](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |Złożone powiązanie danych|Możliwość formantu powiązać z więcej niż jeden element danych, zazwyczaj więcej niż jeden rekord w bazie danych. Złożone powiązanie jest również nazywany powiązanie oparte na liście. Przykłady formantów, które obsługują złożone powiązanie <xref:System.Windows.Forms.DataGridView>, <xref:System.Windows.Forms.ListBox>, i <xref:System.Windows.Forms.ComboBox> kontrolki. Na przykład złożone powiązanie danych zobacz [porady: powiązanie formantu ComboBox formularzy systemu Windows lub kontrolki ListBox z danymi](../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md).|  
   
 ## <a name="bindingsource-component"></a>BindingSource — Składnik  

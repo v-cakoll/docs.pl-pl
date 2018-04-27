@@ -1,12 +1,12 @@
 ---
-title: "Porady: wyświetlanie ilości milisekund wartości daty i godziny"
-ms.custom: 
+title: 'Porady: wyświetlanie ilości milisekund wartości daty i godziny'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -18,18 +18,18 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 552c28420e9a04483b164cfe7e13d942230ec5e0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 95bf12adc74ac91108a8383d9bbb5c9408e2fc81
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>Porady: wyświetlanie ilości milisekund wartości daty i godziny
 Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToString?displayProperty=nameWithType>, zawierają godziny, minuty i sekundy wartości czasu, ale wykluczają składnik milisekund. W tym temacie pokazano jak dołączyć datę i składnik czasu w milisekundach w sformatowanym ciągu daty i czasu.  
@@ -62,7 +62,7 @@ Domyślne metody formatowania daty i czasu, takie jak <xref:System.DateTime.ToSt
 >  Istnieje możliwość wyświetlania bardzo małych części ułamkowych sekund, takie jak tysięczne sekund lub sto tysięczne sekund. Jednak te wartości mogą być nieistotne. Dokładność wartości daty i godziny zależy od rozdzielczości zegara systemu. W systemach operacyjnych Windows NT 3.5 (i późniejszych) oraz [!INCLUDE[windowsver](../../../includes/windowsver-md.md)], rozdzielczość zegara wynosi około 10-15 milisekund.  
   
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy umieścić go w szablonie projektu aplikacji konsolowej.  
+ Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, umieść ją w szablonu projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Globalization.DateTimeFormatInfo>  

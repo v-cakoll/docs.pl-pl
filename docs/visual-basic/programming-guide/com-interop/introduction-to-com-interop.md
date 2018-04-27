@@ -1,29 +1,30 @@
 ---
 title: Wprowadzenie do COM Interop (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - interop assemblies
 - COM interop [Visual Basic], about COM interop
 ms.assetid: 8bd62e68-383d-407f-998b-29aa0ce0fd67
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 39a4245b51c1199a6aeb0c23282b1917f51164d2
-ms.sourcegitcommit: 34ec7753acf76f90a0fa845235ef06663dc9e36e
+ms.openlocfilehash: 5a13fabd729218dc2a980b9c63e153d17a140cce
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="introduction-to-com-interop-visual-basic"></a>Wprowadzenie do COM Interop (Visual Basic)
 Składnik modelu COM (Object) umożliwia obiekt ujawnia jego działanie z innymi składnikami i umożliwia obsługę aplikacji. Aplikacje przeznaczone dla środowisko uruchomieniowe języka wspólnego (CLR) oferują wiele zalet, gdy obiekty COM zostały podstawowych w systemie Windows programowania dla wielu lat.  
   
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]aplikacje zastąpi po pewnym czasie te z modelu COM. Do tego czasu, należy użyć obiektów lub tworzenia modelu COM za pomocą [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]. Współdziałanie z COM, lub *COM interop*, pozwala na użycie istniejących obiektów COM podczas przechodzenia do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] we własnym tempie.  
+ [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacje zastąpi po pewnym czasie te z modelu COM. Do tego czasu należy użyć obiektów lub tworzenia modelu COM za pomocą programu Visual Studio. Współdziałanie z COM, lub *COM interop*, pozwala na użycie istniejących obiektów COM podczas przechodzenia do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] we własnym tempie.  
   
  Za pomocą [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] do tworzenia składników modelu COM, można użyć współdziałanie z COM bez rejestrowania. Dzięki temu można kontrolować, która wersja biblioteki DLL jest włączona, gdy więcej niż jedna wersja jest zainstalowana na komputerze i umożliwia użytkownikom końcowym, użyj polecenia XCOPY lub FTP do skopiowania aplikacji do odpowiedniego katalogu na komputerze, gdzie mogą być uruchamiane. Aby uzyskać więcej informacji, zobacz [współdziałanie z COM bez rejestrowania](http://msdn.microsoft.com/library/90f308b9-82dc-414a-bce1-77e0155e56bd).  
   
@@ -49,7 +50,7 @@ Składnik modelu COM (Object) umożliwia obiekt ujawnia jego działanie z innymi
  Aby uzyskać więcej informacji na temat zestawów i manifesty, zobacz [zestawy i Global Assembly Cache](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md).  
   
 ### <a name="importing-and-exporting-type-libraries"></a>Importowanie i eksportowanie bibliotek typów  
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]zawiera narzędzia Tlbimp, umożliwiający importowanie informacji z biblioteki typów do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji. Za pomocą narzędzia Narzędziatlbexp można wygenerować biblioteki typów z zestawów.  
+ Visual Studio zawiera narzędzia Tlbimp, umożliwiający importowanie informacji z biblioteki typów do [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] aplikacji. Za pomocą narzędzia Narzędziatlbexp można wygenerować biblioteki typów z zestawów.  
   
  Informacje o Tlbimp i Narzędziatlbexp, zobacz [Tlbimp.exe (Importer biblioteki typów)](../../../framework/tools/tlbimp-exe-type-library-importer.md) i [Tlbexp.exe (Eksporter biblioteki typów)](http://msdn.microsoft.com/library/a487d61b-d166-467b-a7ca-d8b52fbff42d).  
   

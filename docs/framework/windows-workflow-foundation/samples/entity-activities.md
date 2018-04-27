@@ -1,35 +1,36 @@
 ---
-title: "Działania jednostki"
-ms.custom: 
+title: Działania jednostki
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c04f7413-7fb8-40c6-819e-dc92b145b62e
-caps.latest.revision: "9"
+caps.latest.revision: 9
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c507c3da7f4583bf6ffb7b869cecbf0bfd305077
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 81f8b1852b939d7ceb8b9afae4435ca12239b880
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="entity-activities"></a>Działania jednostki
-Ten przykład przedstawia sposób użycia programu ADO.NET Entity Framework z [!INCLUDE[wf2](../../../../includes/wf2-md.md)] uprościć dostęp do danych.  
+Ten przykład przedstawia sposób upraszczanie dostępu do danych przy użyciu programu ADO.NET Entity Framework z programu Windows Workflow Foundation.  
   
- ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami. ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Zobacz ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
+ ADO.NET Entity Framework umożliwia deweloperom pracy z danymi w postaci obiektów specyficznego dla domeny, właściwości i relacje, takich jak klienci, zamówienia, szczegółów zamówienia i relacji między tymi obiektami. ADO.NET Entity Framework robi to przez zapewnienie na poziomie abstrakcji, która umożliwia programowanie w odniesieniu do modelu koncepcyjnego aplikacji, zamiast programowanie bezpośrednio ze schematem relacyjnego magazynu. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Zobacz ADO.NET Entity Framework [ADO.NET Entity Framework](http://go.microsoft.com/fwlink/?LinkId=165549).  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
  W przykładzie użyto `Northwind` bazy danych i obejmuje skrypty umożliwiające tworzenie i usuwanie `Northwind` bazy danych (Setup.cmd i Cleanup.cmd). Projekty w tym przykładzie obejmują modelu danych jednostki na podstawie `Northwind` bazy danych. Można znaleźć modelu, otwierając `Northwind.edmx` pliku, który jest dołączony do projektu. To jest model, który określa kształt obiektów, które są dostępne przy użyciu programu ADO.NET Entity Framework.  
   
  Ten przykład obejmuje wykonywanie następujących czynności:  
   
--   `EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki. Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny. [!INCLUDE[crabout](../../../../includes/crabout-md.md)]Jednostki języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).  
+-   `EntitySQLQuery`: `EntitySQLQuery` Działania umożliwia pobieranie obiektów z bazy danych, w zależności od ciągu zapytania SQL jednostki. Jednostka SQL jest językiem niezależne magazynu jest podobny do bazy danych SQL i umożliwia określenie zapytań na podstawie modelu koncepcyjnego i jednostkami, które są częścią modelu lub domeny. [!INCLUDE[crabout](../../../../includes/crabout-md.md)] Jednostki języka SQL, zobacz [języka SQL jednostki](http://go.microsoft.com/fwlink/?LinkId=165646).  
   
 -   `EntityLinqQuery`: To działanie umożliwia pobieranie obiektów z bazy danych na podstawie zapytania LINQ lub predykatu.  
   

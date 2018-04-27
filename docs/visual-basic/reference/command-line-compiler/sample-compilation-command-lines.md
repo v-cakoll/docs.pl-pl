@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf20e2916efd2eb10065be22c319e34ddb2bda9a
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: b61ef6facf33fa043cad28a78405a19308a9864f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>Polecenie kompilacja przykładów — wiersze (Visual Basic)
-Alternatywą wobec kompilowanie programów Visual Basic z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)], będzie można kompilować z poziomu wiersza polecenia, aby utworzyć pliki pliku wykonywalnego (.exe) lub biblioteki dołączanej (dynamicznie dll).  
+Alternatywą wobec kompilowanie programów Visual Basic z poziomu programu Visual Studio można kompilować z poziomu wiersza polecenia, aby utworzyć pliki pliku wykonywalnego (.exe) lub biblioteki dołączanej (dynamicznie dll).  
   
  Kompilator wiersza polecenia programu Visual Basic obsługuje pełny zestaw opcji kontroli danych wejściowych i wyjściowych plików, zestawy i debugowania i opcje preprocesora. Każda opcja jest dostępna w dwóch formach wymienne: `-option` i `/option`. Ta dokumentacja zawiera tylko `-option` formularza.  
   

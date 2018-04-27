@@ -1,11 +1,12 @@
 ---
 title: Konwersje jawne i niejawne (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - conversions [Visual Basic], type
@@ -26,17 +27,17 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-caps.latest.revision: "25"
+caps.latest.revision: 25
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6e9dd698e1cc84464cd12d33767feec960c511ca
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 9827cecce0a15d37d2ffe3ccf691404149b156fb
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>Konwersje jawne i niejawne (Visual Basic)
-*Niejawna konwersja* nie wymaga żadnych specjalnych składni w kodzie źródłowym. W poniższym przykładzie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] niejawnie konwertuje wartość `k` do wartości zmiennoprzecinkowych pojedynczej precyzji przed przypisaniem go do `q`.  
+*Niejawna konwersja* nie wymaga żadnych specjalnych składni w kodzie źródłowym. W poniższym przykładzie, Visual Basic niejawnie konwertuje wartość `k` do wartości zmiennoprzecinkowych pojedynczej precyzji przed przypisaniem go do `q`.  
   
 ```  
 Dim k As Integer  
@@ -46,7 +47,7 @@ k = 432
 q = k  
 ```  
   
- *Jawnej konwersji* używa słowa kluczowego konwersji typu. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia kilka takich słowa kluczowe, które wymuszone wyrażenia w nawiasach na typ żądanych danych. Słowa kluczowe działać tak jak funkcji, ale kompilator generuje wbudowany kod, więc wykonanie jest nieco wyższa niż w przypadku wywołania funkcji.  
+ *Jawnej konwersji* używa słowa kluczowego konwersji typu. Visual Basic udostępnia kilka takich słowa kluczowe, które wymuszone wyrażenia w nawiasach na typ żądanych danych. Słowa kluczowe działać tak jak funkcji, ale kompilator generuje wbudowany kod, więc wykonanie jest nieco wyższa niż w przypadku wywołania funkcji.  
   
  Następujące rozszerzenia poprzednim przykładzie `CInt` — słowo kluczowe konwertuje wartość `q` wstecz do liczby całkowitej przed przypisaniem go do `k`.  
   
@@ -62,28 +63,28 @@ k = CInt(q)
   
 |Słowo kluczowe konwersji typu|Konwertuje wyrażenie na typ danych|Typy danych wyrażenia do przekonwertowania|  
 |---|---|---|  
-|`CBool`|[Boolean — typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `String`,`Object`|  
-|`CByte`|[Byte — typ danych](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Dowolnego typu liczbowego (łącznie z `SByte` i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CChar`|[CHAR — typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
-|`CDate`|[Date — typ danych](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
-|`CDbl`|[Double — typ danych](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CDec`|[Decimal — typ danych](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CInt`|[Integer — typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CLng`|[Long — typ danych](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CObj`|[Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolnego typu|  
-|`CSByte`|[SByte — typ danych](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte` i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CShort`|[Short — typ danych](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CSng`|[Single — typ danych](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CStr`|[String — typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `Char`, `Char` tablicy, `Date`,`Object`|  
+|`CBool`|[Boolean, typ danych](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `String`, `Object`|  
+|`CByte`|[Byte, typ danych](../../../../visual-basic/language-reference/data-types/byte-data-type.md)|Dowolnego typu liczbowego (łącznie z `SByte` i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CChar`|[Char, typ danych](../../../../visual-basic/language-reference/data-types/char-data-type.md)|`String`, `Object`|  
+|`CDate`|[Date, typ danych](../../../../visual-basic/language-reference/data-types/date-data-type.md)|`String`, `Object`|  
+|`CDbl`|[Double, typ danych](../../../../visual-basic/language-reference/data-types/double-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CDec`|[Decimal, typ danych](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CInt`|[Integer, typ danych](../../../../visual-basic/language-reference/data-types/integer-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CLng`|[Long, typ danych](../../../../visual-basic/language-reference/data-types/long-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CObj`|[Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)|Dowolnego typu|  
+|`CSByte`|[SByte, typ danych](../../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte` i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CShort`|[Short, typ danych](../../../../visual-basic/language-reference/data-types/short-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CSng`|[Single, typ danych](../../../../visual-basic/language-reference/data-types/single-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CStr`|[String, typ danych](../../../../visual-basic/language-reference/data-types/string-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `Char`, `Char` tablicy, `Date`, `Object`|  
 |`CType`|Określony typ po przecinku (`,`)|Podczas konwertowania na *— typ danych podstawowych* (w tym tablicy typu podstawowe), typy takie same dozwolona dla odpowiedniego — słowo kluczowe konwersji<br /><br /> Podczas konwertowania na *złożonego typu danych*, implementuje interfejsy i klasy, z których dziedziczy<br /><br /> Podczas konwertowania na klasy lub struktury, na którym ma przeciążony `CType`, tej klasy lub struktury|  
-|`CUInt`|[Uinteger — typ danych](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CULng`|[Ulong — typ danych](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
-|`CUShort`|[Ushort — typ danych](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`,`Object`|  
+|`CUInt`|[UInteger, typ danych](../../../../visual-basic/language-reference/data-types/uinteger-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CULng`|[ULong, typ danych](../../../../visual-basic/language-reference/data-types/ulong-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
+|`CUShort`|[UShort, typ danych](../../../../visual-basic/language-reference/data-types/ushort-data-type.md)|Dowolnego typu liczbowego (łącznie z `Byte`, `SByte`i wyliczyć typów), `Boolean`, `String`, `Object`|  
   
 ## <a name="the-ctype-function"></a>CType — funkcja  
  [CType — funkcja](../../../../visual-basic/language-reference/functions/ctype-function.md) działa na dwóch argumentów. Pierwsza to wyrażenie, które ma zostać przekonwertowane, a drugą jest wartość klasy docelowej danych typu lub obiektu. Należy pamiętać, że pierwszy argument musi być wyrażeniem, nie jest typem.  
   
- `CType`jest *funkcji wbudowanej*, co oznacza skompilowanego kodu sprawia, że konwersji, często bez generowania funkcję wywołania. Poprawia to wydajność.  
+ `CType` jest *funkcji wbudowanej*, co oznacza skompilowanego kodu sprawia, że konwersji, często bez generowania funkcję wywołania. Poprawia to wydajność.  
   
  Porównanie `CType` z innych typów słowa kluczowe konwersji, zobacz [operatora DirectCast](../../../../visual-basic/language-reference/operators/directcast-operator.md) i [TryCast Operator](../../../../visual-basic/language-reference/operators/trycast-operator.md).  
   
@@ -109,7 +110,7 @@ h = CType(cZ, iZone)
 ```  
   
 ### <a name="array-types"></a>Typy tablic  
- `CType`można również przeprowadzić konwersję tablicy typy danych, jak w poniższym przykładzie.  
+ `CType` można również przeprowadzić konwersję tablicy typy danych, jak w poniższym przykładzie.  
   
 ```  
 Dim v() As classV  
@@ -139,9 +140,9 @@ End If
   
 ## <a name="see-also"></a>Zobacz też  
  [Konwersje typów w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [Konwertowanie pomiędzy ciągami a innymi typami](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
+ [Konwertowanie między ciągami a innymi typami danych](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)  
  [Porady: konwertowanie obiektu do innego typu w języku Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
  [Struktury](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)  
  [Typy danych](../../../../visual-basic/language-reference/data-types/data-type-summary.md)  
  [Funkcje konwersji typu](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [Rozwiązywanie problemów z typów danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+ [Rozwiązywanie problemów związanych z typami danych](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)

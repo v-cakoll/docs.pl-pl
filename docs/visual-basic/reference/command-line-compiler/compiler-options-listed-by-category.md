@@ -1,6 +1,6 @@
 ---
 title: Opcje kompilatora Visual Basic według kategorii
-ms.date: 03/09/2018
+ms.date: 04/12/2018
 ms.prod: .net
 ms.reviewer: ''
 ms.suite: ''
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e66ec709a32b39e2e7427d6ce165f62212dac543
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: a90c54ae1bb4d89b2fbe0df62730bc55c0ceb64f
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Opcje kompilatora Visual Basic według kategorii
-Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów z poziomu [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista opcje wiersza polecenia kompilatora Visual Basic, posortowane według kategorii funkcjonalności.  
+Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie programów w programie Visual Studio zintegrowane środowisko programistyczne (IDE). Poniżej znajduje się lista opcje wiersza polecenia kompilatora Visual Basic, posortowane według kategorii funkcjonalności.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -31,7 +31,7 @@ Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie p
 |[-utf8output](../../../visual-basic/reference/command-line-compiler/utf8output.md)|Wyświetla kompilatora, dane wyjściowe przy użyciu kodowania UTF-8.|  
 |[-verbose](../../../visual-basic/reference/command-line-compiler/verbose.md)|Wyświetla dodatkowe informacje podczas kompilacji.|  
 |`-modulename:<string>`|Określ nazwę modułu źródła|  
-|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Określanie języka danych wyjściowych kompilatora.|  
+|[-preferreduilang](../../../csharp/language-reference/compiler-options/preferreduilang-compiler-option.md)|Określanie języka danych wyjściowych kompilatora.|
   
 ## <a name="optimization"></a>Optymalizacja  
   
@@ -45,6 +45,7 @@ Kompilator wiersza polecenia programu Visual Basic podano zamiast kompilowanie p
 |Opcja|Cel|  
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|Komentarze dokumentacji procesów do pliku XML.|  
+|[-deterministyczna](../../../visual-basic/reference/command-line-compiler/deterministic.md)|Powoduje, że kompilator output zestawu, którego zawartość binarna jest identyczna w kompilacji, jeśli dane wejściowe są identyczne.|
 |[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|Ustawia kompilatora do docelowego [!INCLUDE[Compact](~/includes/compact-md.md)].|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|Określa plik wyjściowy.|  
 |[-refonly](refonly-compiler-option.md)|Generuje zestaw odwołania.|

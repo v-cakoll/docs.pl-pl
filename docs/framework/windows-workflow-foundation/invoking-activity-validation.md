@@ -1,29 +1,30 @@
 ---
-title: "Wywoływanie sprawdzania poprawności działania"
-ms.custom: 
+title: Wywoływanie sprawdzania poprawności działania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f22fc7dc53f52b47be2da3313f678825d4362750
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 39c059e7d8ed2191a4e0ce42d7d5b2087db84a5c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="invoking-activity-validation"></a>Wywoływanie sprawdzania poprawności działania
-Działanie sprawdzania poprawności udostępnia metodę do identyfikowania i raportów o błędach w konfiguracji żadnego działania przed jego wykonywania. Sprawdzanie poprawności występuje, gdy przepływ pracy zostanie zmodyfikowany w Projektancie przepływów pracy i wszelkie błędy sprawdzania poprawności zostaną wyświetlone w Projektancie przepływów pracy. Sprawdzanie poprawności występuje także w czasie wykonywania po wywołaniu przepływu pracy i, jeśli wystąpią jakieś błędy sprawdzania poprawności, <xref:System.Activities.InvalidWorkflowException> jest generowany przez logikę sprawdzania poprawności domyślnej. [!INCLUDE[wf](../../../includes/wf-md.md)]udostępnia <xref:System.Activities.Validation.ActivityValidationServices> klasy, która umożliwia aplikacji przepływu pracy i deweloperów narzędzi jawnie sprawdzić poprawność działania. W tym temacie opisano sposób użycia <xref:System.Activities.Validation.ActivityValidationServices> do sprawdzania poprawności działania.  
+Działanie sprawdzania poprawności udostępnia metodę do identyfikowania i raportów o błędach w konfiguracji żadnego działania przed jego wykonywania. Sprawdzanie poprawności występuje, gdy przepływ pracy zostanie zmodyfikowany w Projektancie przepływów pracy i wszelkie błędy sprawdzania poprawności zostaną wyświetlone w Projektancie przepływów pracy. Sprawdzanie poprawności występuje także w czasie wykonywania po wywołaniu przepływu pracy i, jeśli wystąpią jakieś błędy sprawdzania poprawności, <xref:System.Activities.InvalidWorkflowException> jest generowany przez logikę sprawdzania poprawności domyślnej. Windows Workflow Foundation (WF), udostępnia <xref:System.Activities.Validation.ActivityValidationServices> klasy, która umożliwia aplikacji przepływu pracy i deweloperów narzędzi jawnie sprawdzić poprawność działania. W tym temacie opisano sposób użycia <xref:System.Activities.Validation.ActivityValidationServices> do sprawdzania poprawności działania.  
   
 ## <a name="using-activityvalidationservices"></a>Przy użyciu obiektu ActivityValidationServices  
- <xref:System.Activities.Validation.ActivityValidationServices>zawiera dwa <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> przeciążeń, które są używane do wywołania logiki sprawdzania poprawności działania. Pierwszy przeciążenia przyjmuje działanie główne do sprawdzenia poprawności i zwraca zbiór błędy sprawdzania poprawności i ostrzeżenia. W poniższym przykładzie niestandardowego `Add` działania jest używana, że dwa wymaga argumentów.  
+ <xref:System.Activities.Validation.ActivityValidationServices> zawiera dwa <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> przeciążeń, które są używane do wywołania logiki sprawdzania poprawności działania. Pierwszy przeciążenia przyjmuje działanie główne do sprawdzenia poprawności i zwraca zbiór błędy sprawdzania poprawności i ostrzeżenia. W poniższym przykładzie niestandardowego `Add` działania jest używana, że dwa wymaga argumentów.  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  
@@ -62,7 +63,7 @@ Activity wf = new Sequence
 };  
 ```  
   
- Ten przepływ pracy można zweryfikować przez wywołanie metody <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>Zwraca kolekcję wszelkie błędy lub ostrzeżenia walidacji zawarte działanie i podrzędnych, jak pokazano w poniższym przykładzie.  
+ Ten przepływ pracy można zweryfikować przez wywołanie metody <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> Zwraca kolekcję wszelkie błędy lub ostrzeżenia walidacji zawarte działanie i podrzędnych, jak pokazano w poniższym przykładzie.  
   
 ```csharp  
 ValidationResults results = ActivityValidationServices.Validate(wf);  
@@ -243,7 +244,7 @@ else
 >  Autorzy działania niestandardowego można podać logiki sprawdzania poprawności w działaniu <xref:System.Activities.CodeActivity.CacheMetadata%2A> zastąpienia. Wszelkie wyjątki, które są generowane z <xref:System.Activities.CodeActivity.CacheMetadata%2A> nie są traktowane jako błędy sprawdzania poprawności. Te wyjątki zostaną wyjścia z wywołania <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> i muszą być obsługiwane przez obiekt wywołujący.  
   
 ## <a name="using-validationsettings"></a>Przy użyciu ValidationSettings  
- Domyślnie wszystkie działania w drzewie działań są oceniane podczas sprawdzania poprawności jest wywoływany przez <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings>Umożliwia sprawdzanie poprawności można dostosować na różne sposoby, konfigurując trzy właściwości. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A>Określa, czy moduł weryfikacji powinien objaśniono działanie całego drzewa lub dotyczą tylko logikę weryfikacji dostarczonego działania. Wartość domyślna dla tej wartości to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>Określa dodatkowe ograniczenie mapowanie typu do listy ograniczeń. Dla typu podstawowego każde działanie w drzewie działań, sprawdzana jest wyszukiwanie w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Jeśli zostanie znaleziony dopasowania listy ograniczeń, wszystkie ograniczenia na liście są oceniane pod kątem działania. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>Określa, czy moduł weryfikacji należy ocenić wszystkie ograniczenia lub tylko te określone w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wartość domyślna to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>i <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> są przydatne dla autorów hosta przepływu pracy dodać dodatkowe sprawdzanie poprawności dla przepływów pracy, takich jak warunki ograniczające zasady dla narzędzi, takich jak programu FxCop. [!INCLUDE[crabout](../../../includes/crabout-md.md)]ograniczenia, zobacz [deklaratywne ograniczenia](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
+ Domyślnie wszystkie działania w drzewie działań są oceniane podczas sprawdzania poprawności jest wywoływany przez <xref:System.Activities.Validation.ActivityValidationServices>. <xref:System.Activities.Validation.ValidationSettings> Umożliwia sprawdzanie poprawności można dostosować na różne sposoby, konfigurując trzy właściwości. <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> Określa, czy moduł weryfikacji powinien objaśniono działanie całego drzewa lub dotyczą tylko logikę weryfikacji dostarczonego działania. Wartość domyślna dla tej wartości to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> Określa dodatkowe ograniczenie mapowanie typu do listy ograniczeń. Dla typu podstawowego każde działanie w drzewie działań, sprawdzana jest wyszukiwanie w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Jeśli zostanie znaleziony dopasowania listy ograniczeń, wszystkie ograniczenia na liście są oceniane pod kątem działania. <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> Określa, czy moduł weryfikacji należy ocenić wszystkie ograniczenia lub tylko te określone w <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>. Wartość domyślna to `false`. <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> i <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> są przydatne dla autorów hosta przepływu pracy dodać dodatkowe sprawdzanie poprawności dla przepływów pracy, takich jak warunki ograniczające zasady dla narzędzi, takich jak programu FxCop. [!INCLUDE[crabout](../../../includes/crabout-md.md)] ograniczenia, zobacz [deklaratywne ograniczenia](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md).  
   
  Aby użyć <xref:System.Activities.Validation.ValidationSettings>skonfiguruj odpowiednie właściwości, a następnie przekazać w wywołaniu <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>. W tym przykładzie przepływ pracy składający się z <xref:System.Activities.Statements.Sequence> z niestandardowego `Add` sprawdzania poprawności działania. `Add` Działanie ma dwa wymaganych argumentów.  
   
@@ -313,4 +314,4 @@ else
   
  Ten kod wyświetla następujące dane wyjściowe:  
   
- **Brak ostrzeżeń i błędów** mimo że `Add` działania wymaga argumentów, które nie są powiązane, Weryfikacja powiodła się, ponieważ działanie główne jest obliczane. Ten typ sprawdzania poprawności jest przydatna do sprawdzania poprawności tylko określonych elementów w drzewie działań, takich jak sprawdzanie poprawności zmiany właściwości pojedynczego działania w projektancie. Jeśli ten przepływ pracy zostanie wywołany, całkowicie zweryfikować skonfigurowany w przepływie pracy jest oceniane i <xref:System.Activities.InvalidWorkflowException> może zostać zgłoszony. <xref:System.Activities.Validation.ActivityValidationServices>i <xref:System.Activities.Validation.ValidationSettings> skonfigurować tylko weryfikacji jawnie wywoływane przez hosta i nie występuje, gdy przepływ pracy jest wywoływany weryfikacji.
+ **Brak ostrzeżeń i błędów** mimo że `Add` działania wymaga argumentów, które nie są powiązane, Weryfikacja powiodła się, ponieważ działanie główne jest obliczane. Ten typ sprawdzania poprawności jest przydatna do sprawdzania poprawności tylko określonych elementów w drzewie działań, takich jak sprawdzanie poprawności zmiany właściwości pojedynczego działania w projektancie. Jeśli ten przepływ pracy zostanie wywołany, całkowicie zweryfikować skonfigurowany w przepływie pracy jest oceniane i <xref:System.Activities.InvalidWorkflowException> może zostać zgłoszony. <xref:System.Activities.Validation.ActivityValidationServices> i <xref:System.Activities.Validation.ValidationSettings> skonfigurować tylko weryfikacji jawnie wywoływane przez hosta i nie występuje, gdy przepływ pracy jest wywoływany weryfikacji.

@@ -1,29 +1,30 @@
 ---
-title: "Wyodrębnianie danych WF przy użyciu śledzenia"
-ms.custom: 
+title: Wyodrębnianie danych WF przy użyciu śledzenia
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e30c68f5-8c6a-495a-bd20-667a4364c68e
-caps.latest.revision: "14"
+caps.latest.revision: 14
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 4d6c269dc9c8b5a0050cfc3ffcefc3160b07c897
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 44e49aa0c9b3b9b53b921fe90838875ab34b7772
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="extract-wf-data-using-tracking"></a>Wyodrębnianie danych WF przy użyciu śledzenia
 W tym przykładzie przedstawiono sposób użycia śledzenia można wyodrębnić zmienne przepływu pracy i argumenty z działań przepływu pracy. Przedstawia on także dodawanie adnotacji do śledzenia rekordów i wyodrębniania danych ładunku w rekordach śledzenia niestandardowych. W przykładzie użyto uczestnika śledzenia zdarzeń śledzenia dla systemu Windows (ETW) do wyodrębniania danych z przepływu pracy.  
   
 ## <a name="sample-details"></a>Szczegóły próbki  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]Umożliwia śledzenie wgląd we wykonywania wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Wraz z przepływu pracy śledzenia rekordy można wyodrębnić danych w wystąpieniu przepływu pracy z przepływu pracy. Poniżej przedstawiono szczegóły typów danych, który może zostać wyodrębniony z śledzenie rekordów:  
+ Windows Workflow Foundation (WF) umożliwia śledzenie wgląd we wykonywania wystąpienia przepływu pracy. Środowisko uruchomieniowe śledzenia emituje przepływu pracy śledzenia rekordów podczas wykonywania przepływu pracy. Wraz z przepływu pracy śledzenia rekordy można wyodrębnić danych w wystąpieniu przepływu pracy z przepływu pracy. Poniżej przedstawiono szczegóły typów danych, który może zostać wyodrębniony z śledzenie rekordów:  
   
 1.  Zmienne przepływu pracy w ramach działania i śledzenie rekordów podczas wykonywania działania.  
   

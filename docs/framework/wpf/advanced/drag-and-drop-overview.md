@@ -20,17 +20,17 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-caps.latest.revision: ''
+caps.latest.revision: 31
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7a69a4dcd5fc39b700bf9c3404e70d581509ebc
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: fe34933c19e7f8a50d144cad99b99decbd501965
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="drag-and-drop-overview"></a>Przegląd Przeciąganie i upuszczanie
 Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] aplikacji. Przeciągnij i upuść często odwołuje się do metody transferu danych, która obejmuje za pomocą myszy (lub innego urządzenia wskazującego) wybierz co najmniej jeden obiekt, przeciągając obiekty te przez niektóre odpowiednie miejsca docelowego w [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]i ich usunięcie.  
@@ -44,7 +44,7 @@ Ten temat zawiera omówienie Obsługa przeciągania i upuszczania w [!INCLUDE[TL
   
  Określonej akcji wykonywanych podczas operacji przeciągania i upuszczania są aplikacji określonych i często określone przez kontekst.  Na przykład przeciąganie zaznaczone pliki z jednego folderu do innego na tym samym urządzeniu magazynującym przenosi pliki domyślnie, podczas gdy przeciąganie plików z [!INCLUDE[TLA#tla_unc](../../../../includes/tlasharptla-unc-md.md)] udziału do folderu lokalnego kopiuje pliki domyślnie.  
   
- Funkcji przeciągania i upuszczania podał [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mają być bardzo elastyczne i dostosowywanych do obsługi różnych scenariuszy przeciągania i upuszczania.  Obsługa przeciągania i upuszczania manipulowanie obiektów wewnątrz aplikacji lub między różnymi aplikacjami. Przeciąganie i upuszczanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji i innych [!INCLUDE[TLA2#tla_win](../../../../includes/tla2sharptla-win-md.md)] aplikacji jest także w pełni obsługiwane.  
+ Funkcji przeciągania i upuszczania podał [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] mają być bardzo elastyczne i dostosowywanych do obsługi różnych scenariuszy przeciągania i upuszczania.  Obsługa przeciągania i upuszczania manipulowanie obiektów wewnątrz aplikacji lub między różnymi aplikacjami. Przeciąganie i upuszczanie między [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji i innych aplikacji systemu Windows jest również obsługiwane.  
   
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]oraz <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> mogą uczestniczyć w przeciągania i upuszczania. Zdarzenia i metody wymagane dla operacji przeciągania i upuszczania są zdefiniowane w <xref:System.Windows.DragDrop> klasy. <xref:System.Windows.UIElement> i <xref:System.Windows.ContentElement> klasy zawierać aliasy <xref:System.Windows.DragDrop> dołączone zdarzenia, dzięki czemu zdarzenia wyświetlane w klasie listy elementów członkowskich, gdy <xref:System.Windows.UIElement> lub <xref:System.Windows.ContentElement> jest dziedziczona jako podstawowy element. Programy obsługi zdarzeń, które są dołączone do tych zdarzeń są dołączone do odpowiadającego <xref:System.Windows.DragDrop> dołączony zdarzeń i odbierać to samo wystąpienie danych zdarzenia. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.UIElement.Drop?displayProperty=nameWithType> zdarzeń.  
   

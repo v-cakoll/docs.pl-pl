@@ -1,12 +1,13 @@
 ---
-title: "Wskazówki: powiązanie z danymi w aplikacjach hybrydowych"
-ms.custom: 
+title: 'Wskazówki: powiązanie z danymi w aplikacjach hybrydowych'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-caps.latest.revision: "39"
+caps.latest.revision: 39
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: c1348f3a57dd04d58298c9746b74a7c3a1baf30c
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b8afe4732363ec61d73db13e9b190381cbd8f29d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>Wskazówki: powiązanie z danymi w aplikacjach hybrydowych
 Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom dostęp do danych, czy używasz [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] lub [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. W tym przewodniku przedstawiono używania wiązania z danymi w aplikacjach hybrydowych, które obejmują zarówno [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontrolki.  
@@ -90,7 +92,7 @@ Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom
      [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
 ## <a name="specifying-the-form-layout"></a>Określenie układu formularza  
- Układu formularza jest zdefiniowana przez siatkę z trzy wiersze i trzy kolumny. <xref:System.Windows.Controls.Label>Formanty są dostarczane do identyfikowania każdej kolumny w tabeli Klienci.  
+ Układu formularza jest zdefiniowana przez siatkę z trzy wiersze i trzy kolumny. <xref:System.Windows.Controls.Label> Formanty są dostarczane do identyfikowania każdej kolumny w tabeli Klienci.  
   
 #### <a name="to-set-up-the-grid-layout"></a>Aby skonfigurować układ siatki  
   
@@ -127,7 +129,7 @@ Powiązanie z formantem źródła danych jest istotne dla zapewnia użytkownikom
      [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   
 ## <a name="adding-the-data-source-to-the-project"></a>Dodawanie źródła danych do projektu  
- Z [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], można łatwo dodać źródło danych do projektu. Ta procedura dodaje silnie typizowanego zestaw danych do projektu. Dodano również kilka innych klas pomocy technicznej, takie jak karty tabeli dla wszystkich wybranych tabel.  
+ Program Visual Studio można łatwo dodać źródła danych do projektu. Ta procedura dodaje silnie typizowanego zestaw danych do projektu. Dodano również kilka innych klas pomocy technicznej, takie jak karty tabeli dla wszystkich wybranych tabel.  
   
 #### <a name="to-add-the-data-source"></a>Aby dodać źródło danych  
   

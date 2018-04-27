@@ -1,24 +1,26 @@
 ---
-title: "Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0"
-ms.custom: 
+title: Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 32d7c7a93636cbe0086cfbcb5fd1e401a2f013fb
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6f2361ed862986d2490968ae422b9b1313eedea3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>Obsługa zanieczyszczonych komunikatów w usłudze MSMQ 4.0
 W tym przykładzie pokazano, jak wykonać Trująca wiadomość została obsługa w usłudze. Ten przykład jest oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W przykładzie użyto `netMsmqBinding`. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -34,7 +36,7 @@ W tym przykładzie pokazano, jak wykonać Trująca wiadomość została obsługa
 ## <a name="msmq-v40-poison-handling-sample"></a>Obsługa próbki Poison v4.0 usługi MSMQ  
  W [!INCLUDE[wv](../../../../includes/wv-md.md)], usługa MSMQ oferuje funkcje skażone kolejki podrzędne, który może służyć do przechowywania wiadomości. W tym przykładzie pokazano, najlepszym rozwiązaniem dotyczącym skażone wiadomości przy użyciu [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- Wykrywanie Trująca wiadomość w [!INCLUDE[wv](../../../../includes/wv-md.md)] jest bardzo zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywania. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Razy danej wiadomości jest ponownie odczytany z kolejki i wysłane do aplikacji do przetwarzania. Komunikat jest ponownie do odczytu z kolejki przy przekazywaniu wstecz do kolejki, ponieważ nie można wysłać wiadomości do aplikacji lub aplikacji wycofuje transakcji w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A>jest to liczba razy wiadomość zostanie przeniesiona do kolejki ponawiania. Gdy <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> jest osiągnięty, wiadomość zostanie przeniesiona do kolejki ponawiania. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest czas opóźnienia, po którym wiadomość zostanie przeniesiona z kolejki ponawiania wstecz do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Zostanie zresetowana do 0. Wiadomość zostanie podjęta próba ponownie. Jeśli wszystkie Przeczytaj komunikat prób, wiadomość jest oznaczony jako intoksykowane.  
+ Wykrywanie Trująca wiadomość w [!INCLUDE[wv](../../../../includes/wv-md.md)] jest bardzo zaawansowane. Istnieją 3 właściwości, które pomagają w wykrywania. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Razy danej wiadomości jest ponownie odczytany z kolejki i wysłane do aplikacji do przetwarzania. Komunikat jest ponownie do odczytu z kolejki przy przekazywaniu wstecz do kolejki, ponieważ nie można wysłać wiadomości do aplikacji lub aplikacji wycofuje transakcji w operacji usługi. <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> jest to liczba razy wiadomość zostanie przeniesiona do kolejki ponawiania. Gdy <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> jest osiągnięty, wiadomość zostanie przeniesiona do kolejki ponawiania. Właściwość <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> jest czas opóźnienia, po którym wiadomość zostanie przeniesiona z kolejki ponawiania wstecz do kolejki głównej. <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> Zostanie zresetowana do 0. Wiadomość zostanie podjęta próba ponownie. Jeśli wszystkie Przeczytaj komunikat prób, wiadomość jest oznaczony jako intoksykowane.  
   
  Gdy komunikat jest oznaczony jako intoksykowane, wiadomość została omówiona zgodnie z ustawieniami <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> wyliczenia. Aby przywołują możliwe wartości:  
   
@@ -46,22 +48,22 @@ W tym przykładzie pokazano, jak wykonać Trująca wiadomość została obsługa
   
 -   Odrzuć: Aby odrzucić wiadomości, wysyłanie komunikatu do nadawcy na utraconych kolejki. Ta wartość jest dostępna tylko na [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
- W przykładzie pokazano, przy użyciu `Move` dyspozycji skażone wiadomości. `Move`powoduje, że komunikat, aby przejść do skażone kolejki podrzędne.  
+ W przykładzie pokazano, przy użyciu `Move` dyspozycji skażone wiadomości. `Move` powoduje, że komunikat, aby przejść do skażone kolejki podrzędne.  
   
  Kontrakt usługi jest `IOrderProcessor`, który definiuje jednokierunkowe usługa, która jest odpowiednia do użycia w przypadku kolejek.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Operacja usługi wyświetla komunikat informujący, że kolejność przetwarzania. Aby zademonstrować funkcje Trująca wiadomość `SubmitPurchaseOrder` operacji usługi zgłasza wyjątek można wycofać transakcji na losowe wywołania usługi. Powoduje to, że wiadomości powinna być umieszczona w kolejce. Po pewnym czasie wiadomość jest oznaczona jako poison. Konfiguracja została ustawiona na przenoszenie Trująca wiadomość do kolejki podrzędne skażone.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 public class OrderProcessorService : IOrderProcessor  
@@ -127,8 +129,8 @@ public class OrderProcessorService : IOrderProcessor
   
     }  
 }  
-```  
-  
+```
+
  Konfiguracja usługi zawiera następujące właściwości Trująca wiadomość została: `receiveRetryCount`, `maxRetryCycles`, `retryCycleDelay`, i `receiveErrorHandling` jak pokazano w następującym pliku konfiguracji.  
   
 ```xml  
@@ -171,8 +173,8 @@ public class OrderProcessorService : IOrderProcessor
  Wiadomości w kolejce Trująca wiadomość są komunikaty adresowane do usługi, który przetwarza wiadomości, która może się różnić od punktu końcowego usługi Trująca wiadomość. W związku z tym, kiedy usługi Trująca wiadomość została odczytuje wiadomości z kolejki, [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] warstwy kanału znajduje niezgodność w punktów końcowych i wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale są odbierane przez usługę Trująca wiadomość. Aby przejść do komunikatu, nawet jeśli komunikat jest skierowana do innego punktu końcowego, możemy dodać `ServiceBehavior` adresy filtr przypadku kryterium dopasowywania do dopasowania wiadomość jest skierowana do dowolnego punktu końcowego usługi. Jest to wymagane do pomyślnie przetwarzania komunikatów odczytujących z kolejki Trująca wiadomość.  
   
  Trująca wiadomość implementacji usługi sam jest bardzo podobny do implementacji usługi. Ją implementuje kontrakt i przetwarza zamówienia. Przykładowy kod ma następującą składnię.  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(AddressFilterMode=AddressFilterMode.Any)]  
@@ -215,8 +217,8 @@ public class OrderProcessorService : IOrderProcessor
             serviceHost.Close();  
         }  
     }  
-```  
-  
+```
+
  W odróżnieniu od kolejność przetwarzania usługi, która odczytuje wiadomości z kolejki kolejności usługi Trująca wiadomość została odczytuje wiadomości z kolejki podrzędne skażone. Trująca kolejki jest kolejką podrzędnej kolejki głównej, nosi nazwę "poison" i jest generowana automatycznie przez usługę MSMQ. Aby do niego dostęp, należy podać nazwę kolejki głównej, a następnie ";" i podrzędne nazwę kolejki, w tym przypadku-"skażone", jak pokazano w poniższych Przykładowa konfiguracja.  
   
 > [!NOTE]
@@ -325,7 +327,7 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
     > [!NOTE]
     >  Ustawienie `security mode` do `None` jest odpowiednikiem ustawienia `MsmqAuthenticationMode`, `MsmqProtectionLevel`, i `Message` zabezpieczeń do `None`.  
   
-3.  Aby Meta wymiany danych do pracy możemy zarejestrować adresu URL wiązania http. Wymaga to, czy usługi są uruchamiane w oknie polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie otrzymasz wyjątek takich jak: nieobsługiwany wyjątek: System.ServiceModel.AddressAccessDeniedException: HTTP nie może zarejestrować adresu URL http://+:8000/ServiceModelSamples/service/. Proces nie ma praw dostępu do tej przestrzeni nazw (zobacz http://go.microsoft.com/fwlink/?LinkId=70353). ---> System.Net.HttpListenerException: odmowa dostępu.  
+3.  Aby Meta wymiany danych do pracy możemy zarejestrować adresu URL wiązania http. Wymaga to, czy usługi są uruchamiane w oknie polecenia z podwyższonym poziomem uprawnień. W przeciwnym razie otrzymasz wyjątek takich jak: nieobsługiwany wyjątek: System.ServiceModel.AddressAccessDeniedException: HTTP nie może zarejestrować adresu URL http://+:8000/ServiceModelSamples/service/. Proces nie ma praw dostępu do tej przestrzeni nazw (zobacz http://go.microsoft.com/fwlink/?LinkId=70353 szczegółowe informacje). ---> System.Net.HttpListenerException: odmowa dostępu.  
   
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  

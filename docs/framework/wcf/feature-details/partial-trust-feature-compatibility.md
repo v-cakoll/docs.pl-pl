@@ -16,11 +16,11 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 72282c62ad23ec825eab7054ab1909d07a062b45
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 20cb6c1cd7a3b06b57bce02d5c3caacc7e2e42b7
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="partial-trust-feature-compatibility"></a>Zgodność funkcji zaufania częściowego
 [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] obsługuje ograniczonym podzbiorem funkcji podczas uruchamiania w środowisku częściowo zaufany. Funkcje obsługiwane w częściowej relacji zaufania są została zaprojektowana dla określonych scenariuszy zgodnie z opisem w [obsługiwane scenariusze wdrażania](../../../../docs/framework/wcf/feature-details/supported-deployment-scenarios.md) tematu.  
@@ -154,7 +154,7 @@ ms.lasthandoff: 04/26/2018
 >  Aby uniknąć przepełnienia pliki śledzenia z błędami zduplikowane [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] wyłącza śledzenie zasobów lub akcji po pierwszym błędzie zabezpieczeń. Istnieje jeden wyjątek śledzenia dla każdego dostęp do zasobów nie powiodło się, próby dostępu do zasobu lub wykonanie akcji po raz pierwszy.  
   
 ## <a name="wcf-service-host"></a>Host usługi WCF  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host usługi nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w częściowej relacji zaufania, nie używaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia usługi. Zamiast tego utwórz nową witrynę sieci Web w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] , wybierając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablonu witryny sieci Web usługi, który może obsługiwać usługi na serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwane w częściowej relacji zaufania.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] host usługi nie obsługuje częściowej relacji zaufania. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi w częściowej relacji zaufania, nie używaj [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w programie Visual Studio do tworzenia usługi. Zamiast tego utwórz nową witrynę sieci Web w programie Visual Studio, wybierając [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] szablonu witryny sieci Web usługi, który może obsługiwać usługi na serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest obsługiwane w częściowej relacji zaufania.  
   
 ## <a name="other-limitations"></a>Inne ograniczenia  
  [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] jest zazwyczaj ograniczone do zagadnienia dotyczące zabezpieczeń nakłada na nią hostingu aplikacji. Na przykład jeśli [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] znajduje się w języku XAML przeglądarki aplikacji (XBAP), jego podlega XBAP ograniczenia, zgodnie z opisem w [zabezpieczenia systemu Windows Presentation Foundation częściowego zaufania](http://go.microsoft.com/fwlink/?LinkId=89138).  

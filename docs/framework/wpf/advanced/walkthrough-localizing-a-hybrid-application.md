@@ -1,27 +1,29 @@
 ---
-title: "Wskazówki: lokalizacja aplikacji hybrydowej"
-ms.custom: 
+title: 'Wskazówki: lokalizacja aplikacji hybrydowej'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 9f9bb7588ef1f6962a5cd55196154ac7f666d53b
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: b00553c005b714094f208fc6d4ed40e838b90b49
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>Wskazówki: lokalizacja aplikacji hybrydowej
 W tym przewodniku przedstawiono sposób localize [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]-hybrydowych aplikacji.  
@@ -123,7 +125,7 @@ W tym przewodniku przedstawiono sposób localize [!INCLUDE[TLA2#tla_winclient](.
   
 #### <a name="to-assign-resource-identifiers"></a>Aby przypisać identyfikatory zasobów  
   
-1.  Z Start Menu, otwórz [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] wiersza polecenia.  
+1.  Z Menu Start otwórz wiersz polecenia programu Visual Studio.  
   
 2.  Użyj następującego polecenia, aby przypisać identyfikatory zasobów do zlokalizowania zawartości.  
   
@@ -150,7 +152,7 @@ W tym przewodniku przedstawiono sposób localize [!INCLUDE[TLA2#tla_winclient](.
     LocBaml /parse LocalizingWpfInWf.g.en-US.resources /out:temp.csv  
     ```  
   
-3.  Otwórz plik temp.csv z [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] lub innego edytora tekstu. Zastąp ciąg `"Hello"` z jego hiszpańskim tłumaczenia `"Hola"`.  
+3.  Otwórz plik temp.csv z programu Visual Studio lub innego edytora tekstu. Zastąp ciąg `"Hello"` z jego hiszpańskim tłumaczenia `"Hola"`.  
   
 4.  Zapisz plik temp.csv.  
   

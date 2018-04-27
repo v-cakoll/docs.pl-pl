@@ -12,11 +12,11 @@ ms.assetid: 3086ab38-3be5-4b22-9385-7d0e16b04f6a
 caps.latest.revision: 23
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 306a618f193f9223443938ae2a9e0996c1b5295c
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: fb6645279a71252ff0ac81348c460b8981771797
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="accessing-data-in-visual-basic-applications"></a>Uzyskiwanie dostępu do danych w aplikacjach Visual Basic
 Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, które uzyskują dostęp do danych. Powiązane z danymi formularzy dla aplikacji systemu Windows są tworzone przez przeciąganie elementów z [Data Sources — okno](/visualstudio/data-tools/add-new-data-sources) na formularzu. Powiązanie formantów danych przez przeciąganie elementów z **Data Sources — okno** na istniejące kontrolki.  
@@ -26,7 +26,7 @@ Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, kt�
  Dostarcza łącza do stron, które mówią o dołączaniu funkcji dostępu do danych do aplikacji.
 
  [Narzędzia do obsługi danych programu Visual Studio dla platformy .NET](/visualstudio/data-tools/visual-studio-data-tools-for-dotnet)  
- Dostarcza łącza do stron dotyczących tworzenia aplikacji, które działają z danymi za pomocą [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Zawiera łącza do stron dotyczących tworzenia aplikacji, które współpracują z danych, przy użyciu programu Visual Studio.  
   
  [LINQ](../../visual-basic/programming-guide/language-features/linq/index.md)  
  Dostarcza łącza do tematów opisujących, jak używać programu LINQ z języka Visual Basic.  
@@ -41,7 +41,7 @@ Visual Basic zawiera kilka nowych funkcji, aby pomóc w tworzeniu aplikacji, kt�
  Dostarcza łącza do tematów dotyczących tworzenia wielowarstwowych danych aplikacji.  
      
  [Dodaj nowe połączenia](/visualstudio/data-tools/add-new-connections)  
- Dostarcza łącza do stron o łączeniu aplikacji z danymi za pomocą narzędzi czasu projektowania i obiektów połączeń ADO.NET, z wykorzystaniem [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+ Zawiera łącza do stron łączyć się z aplikacji do danych z narzędzia do projektowania i ADO.NET— obiekty połączenia przy użyciu programu Visual Studio.  
 
  [Narzędzia zestawu danych w programie Visual Studio](/visualstudio/data-tools/dataset-tools-in-visual-studio)  
  Dostarcza łącza do stron opisujących sposób ładowania danych do zestawów danych, a także sposób wykonania instrukcji SQL i procedur składowanych.  

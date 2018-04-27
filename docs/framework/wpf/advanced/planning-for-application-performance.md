@@ -1,27 +1,29 @@
 ---
-title: "Planowanie wydajności aplikacji"
-ms.custom: 
+title: Planowanie wydajności aplikacji
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6bdb140d90de02fa817c55a05f40e57fcd0d636c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15130ac57b0df2ab1632ad8ec31ae5e350afdfec
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="planning-for-application-performance"></a>Planowanie wydajności aplikacji
 Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracowanie strategii wydajności. Planowanie to pierwszy etap w tworzeniu każdego produktu. W tym temacie opisano kilka bardzo proste zasady opracowanie strategii dobrą wydajność.  
@@ -36,12 +38,12 @@ Powodzenie osiągnięcia cele wydajności zależy od tego, jak również opracow
  Obsługa zawsze cyklu pomiaru, badanie, uściślenie/korygowanie cyklu rozwoju aplikacji. Od początku do końca cyklu programowanie należy do pomiaru wydajności aplikacji w środowisku niezawodnych, stabilna. Należy unikać zmienności spowodowany czynnikami zewnętrznymi. Na przykład podczas testowania wydajności, należy Wyłącz oprogramowanie antywirusowe, lub żadnych aktualizacji automatycznych, takich jak SMS, wyniki testów kolejność, która nie ma wpływu na wydajność. Po ma mierzona wydajności aplikacji, należy zidentyfikować zmiany, które poprawia największych. Po zmodyfikowaniu aplikacji, należy uruchomić ponownie cyklu.  
   
 ## <a name="make-performance-tuning-an-iterative-process"></a>Wprowadź procesem iteracyjnym dostrajania wydajności  
- Należy poznać względny koszt każdej funkcji, które będą używane. Na przykład użyj odbicia w [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] jest zazwyczaj wydajności znacznym pod względem zasoby przetwarzania danych, więc czy ma być rozważnie. Oznacza to, uniknąć użycia odbicia, tylko, że należy zachować ostrożność równoważyć wymagania dotyczące wydajności aplikacji z wymaganiami dotyczącymi wydajności, funkcji, których używasz.  
+ Należy poznać względny koszt każdej funkcji, które będą używane. Na przykład użycie odbicia dla programu Microsoft .NET Framework jest zazwyczaj wydajności znacznym pod względem zasobów obliczeniowych, więc czy ma być rozważnie. Oznacza to, uniknąć użycia odbicia, tylko, że należy zachować ostrożność równoważyć wymagania dotyczące wydajności aplikacji z wymaganiami dotyczącymi wydajności, funkcji, których używasz.  
   
 ## <a name="build-towards-graphical-richness"></a>Tworzenie kierunku siłę graficznego  
  Technika klucza do tworzenia skalowalnych podejście do osiągnięcia [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wydajność aplikacji jest utworzenie kierunku siłę graficznego i złożoności. Zawsze rozpoczynać przy użyciu co najmniej wydajności zasobów znacznym celach scenariusza. Po osiągnięcie tych celów, kompilacji kierunku siłę graficzny dzięki funkcjom więcej wydajności znacznym, zawsze pamiętając o cele scenariusza. Należy pamiętać, że [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] jest bardzo zaawansowaną platformę i zapewnia bardzo zaawansowane funkcje graficzne. Przy użyciu funkcji znacznym wydajności bez planowania może niekorzystnie wpłynąć na wydajność aplikacji ogólnej.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Formanty są z założenia rozszerzony w celu umożliwienia dostosowania rozpowszechniania całej ich wyglądu, podczas nie zmieniając ich zachowanie kontroli. Dzięki wykorzystaniu style, szablony danych i szablonów kontrolki, możesz utworzyć i przyrostowo rozwijać, można dostosowywać [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] która dostosowuje się do wymagań dotyczących wydajności.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Formanty są z założenia rozszerzony w celu umożliwienia dostosowania rozpowszechniania całej ich wyglądu, podczas nie zmieniając ich zachowanie kontroli. Dzięki wykorzystaniu style, szablony danych i szablonów kontrolki, możesz utworzyć i przyrostowo rozwijać, można dostosowywać [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] która dostosowuje się do wymagań dotyczących wydajności.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Optymalizacja wydajności aplikacji WPF](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)  

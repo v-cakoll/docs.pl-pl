@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0948b9ef0675541ca595bb297e01e62c9d79a181
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: e7dc75a0600c9694c4a20f028c810c6aca54eeb6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-doc"></a>-doc
 Przetwarza komentarzy do dokumentacji do pliku XML.  
@@ -34,7 +34,7 @@ Przetwarza komentarzy do dokumentacji do pliku XML.
   
 |Termin|Definicja|  
 |---|---|  
-|`+` &#124; `-`|Opcjonalny. Określanie +, lub po prostu `-doc`, powoduje, że kompilator, aby wygenerować informacje dokumentacji i umieść go w pliku XML. Określanie `-` jest odpowiednikiem nieokreślenie `-doc`, powoduje żadne informacje dokumentacji nie ma zostać utworzony.|  
+|`+` &#124; `-`|Opcjonalna. Określanie +, lub po prostu `-doc`, powoduje, że kompilator, aby wygenerować informacje dokumentacji i umieść go w pliku XML. Określanie `-` jest odpowiednikiem nieokreślenie `-doc`, powoduje żadne informacje dokumentacji nie ma zostać utworzony.|  
 |`file`|Jeśli wymagane `-doc:` jest używany. Określa wyjściowego pliku XML, który jest wypełniana komentarze z plików kodu źródłowego kompilacji. Jeśli nazwa pliku zawiera spację, należy ująć nazwę w cudzysłowie ("").|  
   
 ## <a name="remarks"></a>Uwagi  
@@ -46,7 +46,7 @@ Przetwarza komentarzy do dokumentacji do pliku XML.
   
 -   Elementy członkowskie, takich jak pola, [zdarzeń](../../../visual-basic/language-reference/statements/event-statement.md), [właściwości](../../../visual-basic/language-reference/statements/property-statement.md), [funkcja](../../../visual-basic/language-reference/statements/function-statement.md), lub [podprocedury](../../../visual-basic/language-reference/statements/sub-statement.md).  
   
- Aby użyć wygenerowanego pliku XML z [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] [IntelliSense](/visualstudio/ide/using-intellisense) funkcji, pozostawić nazwę pliku pliku XML, jest taka sama jak zestawu mają być obsługiwane. Upewnij się, że plik XML jest w tym samym katalogu co zestaw, dzięki czemu podczas odwołuje się zestaw [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] projekt, plik XML znajduje się także. Pliki dokumentacji XML nie są wymagane przez funkcję IntelliSense dla kodu w ramach projektu lub projektów odwołuje się projekt.  
+ Aby utworzony plik XML za pomocą programu Visual Studio [IntelliSense](/visualstudio/ide/using-intellisense) funkcji, pozostawić nazwę pliku pliku XML, jest taka sama jak zestawu mają być obsługiwane. Upewnij się, że plik XML jest w tym samym katalogu co zestaw, dzięki czemu w przypadku zestawu odwołuje się projekt programu Visual Studio, pliku XML, który znajduje się także. Pliki dokumentacji XML nie są wymagane przez funkcję IntelliSense dla kodu w ramach projektu lub projektów odwołuje się projekt.  
   
  O ile kompilacji z `/target:module`, plik XML zawierający tagi `<assembly></assembly>`. Znaczniki Określ nazwę pliku zawierającego manifest zestawu dla pliku danych wyjściowych kompilacji.  
   

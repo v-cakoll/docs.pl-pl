@@ -1,24 +1,26 @@
 ---
-title: "Kolejki utraconych komunikatów"
-ms.custom: 
+title: Kolejki utraconych komunikatów
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 09a41abc8bc9fc3469ba35d7c7cfbe85d05ca174
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9892579633103f1e7a6612c09865c91c559df34c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="dead-letter-queues"></a>Kolejki utraconych komunikatów
 W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, które nie powiodły dostarczania. Jest on oparty na [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md) próbki. W przykładzie użyto `netMsmqBinding` powiązania. Usługa jest aplikacji konsoli siebie umożliwia obserwowanie usługi odbieranie wiadomości w kolejce.  
@@ -35,7 +37,7 @@ W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, 
   
  Kolejki utraconych wiadomości w `NetMsmqBinding` powiązania jest wyrażona w następujących właściwości:  
   
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A>Właściwość do wyrażenia typu kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:  
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> Właściwość do wyrażenia typu kolejki utraconych wiadomości wymagane przez klienta. To wyliczenie ma następujące wartości:  
   
 -   `None`: Brak kolejki utraconych wiadomości jest wymagana przez klienta.  
   
@@ -43,28 +45,28 @@ W tym przykładzie przedstawiono sposób obsługi i przetwarzania komunikatów, 
   
 -   `Custom`Niestandardowej kolejki utraconych wiadomości określona za pomocą <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> właściwość jest używana do przechowywania komunikatów martwy. Ta funkcja jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)]. Służy to, gdy aplikacja musi używać kolejki utraconych wiadomości zamiast Udostępnianie innych aplikacji uruchomionych na tym samym komputerze.  
   
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>Właściwość express określonej kolejki do użycia jako kolejki utraconych wiadomości. To jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].  
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> Właściwość express określonej kolejki do użycia jako kolejki utraconych wiadomości. To jest dostępna tylko w [!INCLUDE[wv](../../../../includes/wv-md.md)].  
   
  W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji i określa arbitralnie niska wartość "time-to-live" dla tych wiadomości (około 2 sekundy). Klient określa również niestandardowej kolejki utraconych wiadomości do użycia można umieścić w kolejce wiadomości, które wygasły.  
   
  Aplikacja kliencka może odczytywać wiadomości w kolejce wiadomości utraconych i albo ponownych prób wysyłania wiadomości lub Popraw błąd, który spowodował oryginalnej wiadomości, które można umieścić w kolejce wiadomości utraconych i wysłać wiadomość. W przykładzie klient jest wyświetlany komunikat o błędzie.  
   
  Kontrakt usługi jest `IOrderProcessor`, jak pokazano w poniższym kodzie próbki.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Kod usługi w próbce jest [nietransakcyjnego powiązanie MSMQ](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md).  
   
  Komunikacja z usługą odbywa się w zakresie transakcji. Usługa odczytuje wiadomości z kolejki, wykonuje operację, a następnie wyświetli wyniki operacji. Aplikacja tworzy również kolejka utraconych wiadomości utraconych.  
-  
-```  
+
+```csharp
 //The service contract is defined in generatedClient.cs, generated from the service by the svcutil tool.  
   
 //Client implementation code.  
@@ -117,8 +119,8 @@ class Client
         Console.ReadLine();  
     }  
 }  
-```  
-  
+```
+
  Konfiguracja klienta określa krótki czas trwania komunikatu w celu dotarcia do usługi. Jeśli wiadomość nie może być przesyłany w czasie trwania określone, komunikat wygasa, a zostanie przeniesiona do kolejki utraconych wiadomości.  
   
 > [!NOTE]
@@ -163,8 +165,8 @@ class Client
 >  Kolejki utraconych wiadomości jest kolejką klienta i jest lokalny do menedżera kolejki klienta.  
   
  Sprawdza implementacji usługi utraconych komunikatów z powodu dostarczania i środki naprawcze przyjmuje wiadomości nie powiodło się. Przyczynę niepowodzenia wiadomości są przechwytywane w dwóch wyliczenia <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryFailure%2A> i <xref:System.ServiceModel.Channels.MsmqMessageProperty.DeliveryStatus%2A>. Możesz pobrać <xref:System.ServiceModel.Channels.MsmqMessageProperty> z <xref:System.ServiceModel.OperationContext> jak pokazano w poniższym kodzie próbki:  
-  
-```  
+
+```csharp
 public void SubmitPurchaseOrder(PurchaseOrder po)  
 {  
     Console.WriteLine("Submitting purchase order did not succed ", po);  
@@ -176,15 +178,15 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
     Console.WriteLine("Message Delivery Failure: {0}",   
                                                mqProp.DeliveryFailure);  
     Console.WriteLine();  
-    ….  
-}  
-```  
-  
+    …  
+}
+```
+
  Wiadomości w kolejce wiadomości utraconych są komunikaty adresowane do usługi, który przetwarza wiadomości. W związku z tym, gdy usługi utraconych wiadomości odczytuje wiadomości z kolejki, [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] warstwy kanału znajduje niezgodność w punktów końcowych i wysyła wiadomość. W takim przypadku wiadomość jest skierowana do kolejność przetwarzania usługi, ale jest odbierane przez usługę utraconych wiadomości. Komunikat, która jest skierowana do innego punktu końcowego, filtr adresów, aby dopasować dowolnego adresu jest określona w `ServiceBehavior`. Jest to wymagane do pomyślnie przetwarzać komunikatów, które są odczytywane z kolejki utraconych wiadomości.  
   
  W tym przykładzie Usługa utraconych wiadomości ponownie wysyła komunikat Jeśli przyczyną błędu jest to, że komunikat został przekroczony. Z innych powodów wyświetla błąd dostarczania, jak pokazano w poniższym kodzie próbki:  
-  
-```  
+
+```csharp
 // Service class that implements the service contract.  
 // Added code to write output to the console window.  
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.Single, ConcurrencyMode=ConcurrencyMode.Single, AddressFilterMode=AddressFilterMode.Any)]  
@@ -237,8 +239,8 @@ public class PurchaseOrderDLQService : IOrderProcessor
         }  
     }  
 }   
-```  
-  
+```
+
  Poniższy przykład przedstawia konfigurację dla wiadomości utraconych:  
   
 ```xml  

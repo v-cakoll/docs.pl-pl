@@ -1,26 +1,27 @@
 ---
-title: "Kontrakt pierwszy programowanie usługi przepływu pracy"
-ms.custom: 
+title: Kontrakt pierwszy programowanie usługi przepływu pracy
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-caps.latest.revision: "2"
+caps.latest.revision: 2
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: bdafa52219dc7a275ceb64e24e8ecd91f0ec8068
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 4bc0c8fafd80651114d85d2d6b06c57dec6199b5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contract-first-workflow-service-development"></a>Kontrakt pierwszy programowanie usługi przepływu pracy
-Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf](../../../includes/wf-md.md)] funkcje lepszą integrację usług sieci web i przepływów pracy w formularzu tworzenia pierwszej kontraktu przepływu pracy. Narzędzie do projektowania przepływu pracy pierwszy kontraktu pozwala na projektowanie najpierw kontraktu w kodzie. Narzędzie następnie automatycznie generuje szablon czynności w przyborniku operacji w umowie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania atrybuty kontraktu usługi. Na przykład krok po kroku, tworzenie usługi przepływu pracy pierwszy kontraktu, zobacz [porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
+Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], funkcji Windows Workflow Foundation (WF) lepszą integrację usług sieci web i przepływów pracy w formularzu tworzenia pierwszej kontraktu przepływu pracy. Narzędzie do projektowania przepływu pracy pierwszy kontraktu pozwala na projektowanie najpierw kontraktu w kodzie. Narzędzie następnie automatycznie generuje szablon czynności w przyborniku operacji w umowie. Ten temat zawiera omówienie sposobu działania i właściwości w usłudze przepływu pracy mapowania atrybuty kontraktu usługi. Na przykład krok po kroku, tworzenie usługi przepływu pracy pierwszy kontraktu, zobacz [porady: Tworzenie usługi przepływu pracy, który wykorzystuje istniejący kontrakt usługi](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md).  
   
 ## <a name="in-this-topic"></a>W tym temacie:  
   
@@ -42,7 +43,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
   
     -   [Generowanie skonfigurowanych działania obsługi wiadomości](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-##  <a name="MappingAttributes"></a>Mapowanie przepływu atrybutów atrybuty kontraktu usługi  
+##  <a name="MappingAttributes"></a> Mapowanie przepływu atrybutów atrybuty kontraktu usługi  
  Tabele w poniższych sekcjach określ różne WCF atrybuty, właściwości i jak są mapowane do obsługi komunikatów działań i właściwości w przepływie pracy pierwszy kontraktu.  
   
 -   [Atrybuty kontraktu usługi](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
@@ -55,7 +56,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
   
 -   [Atrybuty kontrakt błędu](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
   
-###  <a name="ServiceContract"></a>Atrybuty kontraktu usługi  
+###  <a name="ServiceContract"></a> Atrybuty kontraktu usługi  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -70,7 +71,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
   
  Tutaj wstaw treść podsekcji.  
   
-###  <a name="OperationContract"></a>Operacja kontraktu atrybutów  
+###  <a name="OperationContract"></a> Operacja kontraktu atrybutów  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -85,7 +86,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
 |Parametr ReplyAction|Tak|Pobiera lub ustawia wartość akcji SOAP dla komunikatu odpowiedzi operacji.|SendReply.Action powinna być zgodna.|  
 |TypeId|Nie|Po zaimplementowaniu w klasie pochodnej pobiera unikatowy identyfikator dla tego atrybutu. (Dziedziczone z atrybutu).|(NIE DOTYCZY)|  
   
-###  <a name="MessageContract"></a>Atrybuty kontraktu komunikatu  
+###  <a name="MessageContract"></a> Atrybuty kontraktu komunikatu  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -96,7 +97,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
 |WrapperName|Tak|Pobiera lub ustawia nazwę elementu otoki treści wiadomości.|Nie sprawdzania poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |WrapperNamespace|Nie|Pobiera lub ustawia obszar nazw elementu otoki treści wiadomości.|(NIE DOTYCZY)|  
   
-###  <a name="DataContract"></a>Atrybuty kontraktu danych  
+###  <a name="DataContract"></a> Atrybuty kontraktu danych  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -105,7 +106,7 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
 |Przestrzeń nazw|Tak|Pobiera lub ustawia przestrzeń nazw kontraktu danych dla typu.|Nie sprawdzania poprawności (Receive.Content i SendReply.Content muszą być zgodne typ kontraktu komunikatu).|  
 |TypeId|Nie|Po zaimplementowaniu w klasie pochodnej pobiera unikatowy identyfikator dla tego atrybutu. (Dziedziczone z atrybutu).|(NIE DOTYCZY)|  
   
-###  <a name="FaultContract"></a>Atrybuty kontrakt błędu  
+###  <a name="FaultContract"></a> Atrybuty kontrakt błędu  
   
 |Nazwa właściwości|Obsługiwane|Opis|Sprawdzanie poprawności WF|  
 |-------------------|---------------|-----------------|-------------------|  
@@ -117,19 +118,19 @@ Począwszy od [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], [!INCLUDE[wf
 |protectionLevel|Nie|Określa poziom ochrony wymaga błędu protokołu SOAP z powiązania.|(NIE DOTYCZY)|  
 |TypeId|Nie|Po zaimplementowaniu w klasie pochodnej pobiera unikatowy identyfikator dla tego atrybutu. (Dziedziczone z atrybutu).|(NIE DOTYCZY)|  
   
-##  <a name="AdditionalSupport"></a>Dodatkowego pomocy technicznej i informacji o implementacji  
+##  <a name="AdditionalSupport"></a> Dodatkowego pomocy technicznej i informacji o implementacji  
   
 -   [Funkcji kontraktu usługi nieobsługiwane](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
 -   [Generowanie skonfigurowanych działania obsługi wiadomości](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
   
-###  <a name="UnsupportedFeatures"></a>Funkcji kontraktu usługi nieobsługiwane  
+###  <a name="UnsupportedFeatures"></a> Funkcji kontraktu usługi nieobsługiwane  
   
 -   Używanie zadań w TPL (Biblioteka zadań równoległych) w kontraktach nie jest obsługiwane.  
   
 -   Dziedziczenie w kontraktach usług nie jest obsługiwane.  
   
-###  <a name="ActivityGeneration"></a>Generowanie skonfigurowanych działania obsługi wiadomości  
+###  <a name="ActivityGeneration"></a> Generowanie skonfigurowanych działania obsługi wiadomości  
  Dwie metody statyczne publiczne są dodawane do <xref:System.ServiceModel.Activities.Receive> i <xref:System.ServiceModel.Activities.SendReply> działań do wspierania tworzenia wstępnie skonfigurowanych działania komunikat podczas korzystania z usług przepływu pracy pierwszy kontraktu.  
   
 -   <xref:System.ServiceModel.Activities.Receive.FromOperationDescription%2A?displayProperty=nameWithType>  

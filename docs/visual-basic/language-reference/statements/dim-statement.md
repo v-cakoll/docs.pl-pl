@@ -1,10 +1,11 @@
 ---
-title: "Dim — Instrukcja (Visual Basic)"
+title: Dim — Instrukcja (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 f1_keywords:
 - vb.Dim
@@ -34,14 +35,14 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-caps.latest.revision: "72"
+caps.latest.revision: 72
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: a428f8be7b62600ca8fffd3160039c1de911e34e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 36e2d416e4653bfa6fe212b75b92ae2d90775d53
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dim-statement-visual-basic"></a>Dim — Instrukcja (Visual Basic)
 Deklaruje i alokuje magazyn przechowywania dla co najmniej jedną zmienną.  
@@ -57,47 +58,47 @@ Dim [ WithEvents ] variablelist
   
 -   `attributelist`  
   
-     Opcjonalny. Zobacz [listę atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
+     Opcjonalna. Zobacz temat [Lista atrybutów](../../../visual-basic/language-reference/statements/attribute-list.md).  
   
 -   `accessmodifier`  
   
-     Opcjonalny. Może to być jedna z następujących czynności:  
+     Opcjonalna. Może to być jeden z następujących elementów:  
   
-    -   [Publiczna](../../../visual-basic/language-reference/modifiers/public.md)  
+    -   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
-    -   [Chronione](../../../visual-basic/language-reference/modifiers/protected.md)  
+    -   [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
   
     -   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
-    -   [Prywatne](../../../visual-basic/language-reference/modifiers/private.md)  
+    -   [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
     -   `Protected Friend`  
   
-     Zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+     Zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
 -   `Shared`  
   
-     Opcjonalny. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
+     Opcjonalna. Zobacz [udostępnionych](../../../visual-basic/language-reference/modifiers/shared.md).  
   
 -   `Shadows`  
   
-     Opcjonalny. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
+     Opcjonalna. Zobacz [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md).  
   
 -   `Static`  
   
-     Opcjonalny. Zobacz [statycznych](../../../visual-basic/language-reference/modifiers/static.md).  
+     Opcjonalna. Zobacz [statycznych](../../../visual-basic/language-reference/modifiers/static.md).  
   
 -   `ReadOnly`  
   
-     Opcjonalny. Zobacz [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
+     Opcjonalna. Zobacz [tylko do odczytu](../../../visual-basic/language-reference/modifiers/readonly.md).  
   
 -   `WithEvents`  
   
-     Opcjonalny. Określa, że są one zmienne obiektów, które odwołują się do wystąpienia klasy, które może wywoływać zdarzenia. Zobacz [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
+     Opcjonalna. Określa, że są one zmienne obiektów, które odwołują się do wystąpienia klasy, które może wywoływać zdarzenia. Zobacz [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md).  
   
 -   `variablelist`  
   
-     Wymagany. Lista zmiennych został zadeklarowany w tej instrukcji.  
+     Wymagana. Lista zmiennych został zadeklarowany w tej instrukcji.  
   
      `variable [ , variable ... ]`  
   
@@ -107,12 +108,12 @@ Dim [ WithEvents ] variablelist
   
     |Część|Opis|  
     |---|---|  
-    |`variablename`|Wymagany. Nazwa zmiennej. Zobacz [zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
-    |`boundslist`|Opcjonalny. Lista granic dla każdego wymiaru tablicy zmiennej.|  
-    |`New`|Opcjonalny. Tworzy nowe wystąpienie klasy po `Dim` uruchamia instrukcji.|  
-    |`datatype`|Opcjonalny. Typ danych zmiennej.|  
-    |`With`|Opcjonalny. Wprowadza na liście inicjatora obiektu.|  
-    |`propertyname`|Opcjonalny. Nazwa właściwości w klasie tworzysz wystąpienia.|  
+    |`variablename`|Wymagana. Nazwa zmiennej. Zobacz temat[Zadeklarowane nazwy elementów](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md).|  
+    |`boundslist`|Opcjonalna. Lista granic dla każdego wymiaru tablicy zmiennej.|  
+    |`New`|Opcjonalna. Tworzy nowe wystąpienie klasy po `Dim` uruchamia instrukcji.|  
+    |`datatype`|Opcjonalna. Typ danych zmiennej.|  
+    |`With`|Opcjonalna. Wprowadza na liście inicjatora obiektu.|  
+    |`propertyname`|Opcjonalna. Nazwa właściwości w klasie tworzysz wystąpienia.|  
     |`propinitializer`|Wymagany po `propertyname` =. Wyrażenie, które jest obliczane i ma przypisaną nazwę właściwości.|  
     |`initializer`|Opcjonalny w przypadku `New` nie jest określona. Wyrażenie, które jest obliczane i przypisaną do zmiennej podczas jego tworzenia.|  
   
@@ -136,11 +137,11 @@ Dim monitorBox As System.Windows.Forms.Form
 Dim bottomLabel As New System.Windows.Forms.Label  
 ```  
   
- Można zadeklarować zmiennej w procedurze, blok, klasy, struktury lub modułu. Nie można zadeklarować zmiennej w pliku źródłowym, przestrzeni nazw lub interfejs. Aby uzyskać więcej informacji, zobacz [kontekst deklaracji i domyślne poziomy dostępu](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md).  
+ Można zadeklarować zmiennej w procedurze, blok, klasy, struktury lub modułu. Nie można zadeklarować zmiennej w pliku źródłowym, przestrzeni nazw lub interfejs. Aby uzyskać więcej informacji, zobacz [Declaration Contexts and Default Access Level](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md) (Kontekst deklaracji i domyślne poziomy dostępu).  
   
  Zmienna, która jest zadeklarowana na poziomie modułu, poza każda procedura jest *zmiennej członkowskiej* lub *pola*. Zmienne Członkowskie znajdują się w zakresie w całym ich klasy, struktury lub modułu. Zmienna, która jest zadeklarowana na poziomie procedura jest *zmiennej lokalnej*. Zmienne lokalne są w zakresie tylko w ramach ich procedurę lub blok.  
   
- Następujące modyfikatory dostępu są używane do deklarowania zmiennych poza procedurą: `Public`, `Protected`, `Friend`, `Protected Friend`, i `Private`. Aby uzyskać więcej informacji, zobacz [poziomy w języku Visual Basic dostępu](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
+ Następujące modyfikatory dostępu są używane do deklarowania zmiennych poza procedurą: `Public`, `Protected`, `Friend`, `Protected Friend`, i `Private`. Aby uzyskać więcej informacji, zobacz temat [Poziomy dostępu w języku Visual Basic](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md).  
   
  `Dim` — Słowo kluczowe jest opcjonalna i zwykle pominąć, jeśli określono żadnego z następujących modyfikatorów: `Public`, `Protected`, `Friend`, `Protected Friend`, `Private`, `Shared`, `Shadows`, `Static`, `ReadOnly`, lub `WithEvents`.  
   
@@ -251,7 +252,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
   
  Aby uzyskać więcej informacji na temat Literały tablicy, zobacz [tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md).  
   
-##  <a name="default"></a>Dane domyślne typy i wartości  
+##  <a name="default"></a> Dane domyślne typy i wartości  
  W poniższej tabeli przedstawiono wyniki określający typ danych oraz inicjator w różnych kombinacji `Dim` instrukcji.  
   
 |Określony typ danych?|Inicjator określona?|Przykład|Wynik|  
@@ -261,7 +262,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Tak|Nie|`Dim qty As Integer`|Zmienna jest ustawiana na wartość domyślną dla typu danych. Zobacz tabelę w dalszej części tej sekcji.|  
 |Tak|Tak|`Dim qty  As Integer = 5`|Jeśli typ danych Inicjator nie jest możliwe do przekonwertowania na określony typ danych, występuje błąd kompilacji.|  
   
- Jeśli można określić typu danych, ale nie określono inicjatora, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inicjuje zmiennej na wartość domyślną dla tego typu danych. W poniższej tabeli przedstawiono domyślne wartości inicjowania.  
+ Jeśli można określić typu danych, ale nie należy określać inicjatora, Visual Basic inicjuje zmiennej na wartość domyślną dla tego typu danych. W poniższej tabeli przedstawiono domyślne wartości inicjowania.  
   
 |Typ danych|Wartość domyślna|  
 |---|---|  
@@ -279,15 +280,15 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 |Deklaracja procedury|Zmienna została zainicjowana|Zmienna zatrzymuje istniejących|  
 |---|---|---|  
 |W module|Procedura jest wywoływana po raz pierwszy|Gdy program zatrzymuje wykonywanie|  
-|W klasie lub strukturze jest procedury`Shared`|Po raz pierwszy procedura jest wywoływana na określonym wystąpieniu lub dla klasy lub struktury, sama|Gdy program zatrzymuje wykonywanie|  
-|W klasie lub strukturze nie jest procedurą`Shared`|Procedura jest wywoływana na określonym wystąpieniu po raz pierwszy|Po zwolnieniu wystąpienie dla wyrzucanie elementów bezużytecznych (GC)|  
+|W klasie lub strukturze jest procedury `Shared`|Po raz pierwszy procedura jest wywoływana na określonym wystąpieniu lub dla klasy lub struktury, sama|Gdy program zatrzymuje wykonywanie|  
+|W klasie lub strukturze nie jest procedurą `Shared`|Procedura jest wywoływana na określonym wystąpieniu po raz pierwszy|Po zwolnieniu wystąpienie dla wyrzucanie elementów bezużytecznych (GC)|  
   
 ## <a name="attributes-and-modifiers"></a>Atrybuty i Modyfikatory  
  Atrybuty można stosować tylko do zmiennych Członkowskich, a nie do zmiennych lokalnych. Atrybut przyczynia się informacji metadanych zestawu, która nie jest zrozumiały dla tymczasowego magazynu, takich jak zmiennych lokalnych.  
   
  Na poziomie modułu, nie można użyć `Static` modyfikator do deklarowania zmiennych Członkowskich. Na poziomie procedury nie można użyć `Shared`, `Shadows`, `ReadOnly`, `WithEvents`, lub dowolnego dostępu Modyfikatory do deklarowania zmiennych lokalnych.  
   
- Można określić, jaki kod uzyskać dostęp do zmiennej, podając `accessmodifier`. Klasy i moduł domyślny zmienne (poza dowolnej procedury) elementu członkowskiego o dostępie prywatnym i domyślnie zmienne Członkowskie struktury dostępu publicznego. Można dostosować ich poziomy dostępu z modyfikatorów dostępu. Nie można używać modyfikatorów dostępu na zmienne lokalne (wewnątrz procedury).  
+ Można określić, jaki kod uzyskać dostęp do zmiennej, podając `accessmodifier`. Klasy i moduł domyślny zmienne (poza dowolnej procedury) elementu członkowskiego o dostępie prywatnym i domyślnie zmienne Członkowskie struktury dostępu publicznego. Poziomy dostępu modułów można dostosować za pomocą modyfikatorów dostępu. Nie można używać modyfikatorów dostępu na zmienne lokalne (wewnątrz procedury).  
   
  Można określić `WithEvents` tylko dla zmiennych Członkowskich, a nie na zmiennych lokalnych wewnątrz procedury. Jeśli określisz `WithEvents`, typ danych zmiennej musi być typem określonej klasy nie `Object`. Nie można zadeklarować tablicy o `WithEvents`. Aby uzyskać więcej informacji o zdarzeniach, zobacz [zdarzenia](../../../visual-basic/programming-guide/language-features/events/index.md).  
   
@@ -319,16 +320,16 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
  [!code-vb[VbVbalrStatements#145](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/dim-statement_4.vb)]  
   
 ## <a name="see-also"></a>Zobacz też  
- [Const — instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
- [ReDim — instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)  
- [Option Explicit — instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Infer — instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
- [Option Strict — instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
+ [Const, instrukcja](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [ReDim, instrukcja](../../../visual-basic/language-reference/statements/redim-statement.md)  
+ [Option Explicit, instrukcja](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
+ [Option Infer, instrukcja](../../../visual-basic/language-reference/statements/option-infer-statement.md)  
+ [Option Strict, instrukcja](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
  [Strona kompilowania, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)  
  [Deklaracja zmiennej](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
  [Tablice](../../../visual-basic/programming-guide/language-features/arrays/index.md)  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  [Typy anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
- [Porady: deklarowanie obiektu za pomocą inicjatora obiektów](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Instrukcje: deklarowanie obiektu za pomocą inicjatora obiektów](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)  
  [Wnioskowanie o typie lokalnym](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)

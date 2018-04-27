@@ -15,21 +15,21 @@ ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
 caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: be5e0156b4cacc39e1613e06fe3c138838b02700
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 19aa20097e35a780f923a84e3e5809eb2b8bb3e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Obiekty i klasy w języku Visual Basic
 *Obiektu* jest kombinacją kod i dane, które mogą być traktowane jako jednostka. Obiekt może być częścią aplikacji, takich jak formularz lub formant. Można także obiekt całej aplikacji.
 
-Po utworzeniu aplikacji w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], stale Praca z obiektami. Można użyć dostarczonych przez obiekty [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], na przykład formantów formularzy i danych uzyskiwanie dostępu do obiektów. Umożliwia także obiekty z innych aplikacji w ramach Twojej [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] aplikacji. Można nawet utworzyć własny obiektów i określić dodatkowe właściwości i metody dla nich. Obiekty działać tak jak prefabrykowanych bloków konstrukcyjnych dla programów — pozwalają jednokrotny fragment kodu i użyć go ponownie samodzielnego.  
+Podczas tworzenia aplikacji w języku Visual Basic, stale Praca z obiektami. Można użyć obiekty dostarczane w Visual Basic, takich jak uzyskiwanie dostępu do obiektów formantów formularzy i danych. Umożliwia także obiekty z innych aplikacji w aplikacji Visual Basic. Można nawet utworzyć własny obiektów i określić dodatkowe właściwości i metody dla nich. Obiekty działać tak jak prefabrykowanych bloków konstrukcyjnych dla programów — pozwalają jednokrotny fragment kodu i użyć go ponownie samodzielnego.  
   
 W tym temacie omówiono obiektów szczegółowo.  
 
 ## <a name="objects-and-classes"></a>Obiekty i klasy
-Każdy obiekt w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] jest definiowana za pomocą *klasy*. Klasa opisuje zmiennych, właściwości, procedur i zdarzeń obiektu. Obiekty są wystąpieniami klasy; można utworzyć dowolną liczbę obiektów, których należy po zdefiniowaniu klasy.
+Każdy obiekt w języku Visual Basic jest definiowana za pomocą *klasy*. Klasa opisuje zmiennych, właściwości, procedur i zdarzeń obiektu. Obiekty są wystąpieniami klasy; można utworzyć dowolną liczbę obiektów, których należy po zdefiniowaniu klasy.
 
 Aby poznać relacja między obiektem i jego klasa, traktować zielonki pliku cookie i plików cookie. Krajarki plik cookie jest klasą. Definiuje właściwości każdego pliku cookie, na przykład wielkość i kształt. Klasa jest używana do tworzenia obiektów. Obiekty są pliki cookie.
 
@@ -173,7 +173,7 @@ Z drugiej strony elementów członkowskich zadeklarowanych w module jest publicz
 ## <a name="reusing-classes-and-objects"></a>Ponowne używanie klas i obiektów  
 Obiekty umożliwiają zadeklarować zmienne i procedury raz i ponowne ich zawsze, gdy potrzebne. Na przykład jeśli chcesz dodać do aplikacji sprawdzania pisowni można zdefiniować wszystkie zmienne i obsługuje funkcje umożliwiają korzystanie z funkcji sprawdzania pisowni. Jeśli tworzysz Twojej sprawdzania pisowni jako klasa, można użyć w innych aplikacjach przez dodanie odwołania do zestawu skompilowanego. Jeszcze lepiej można zaoszczędzić niektórych pracy przy użyciu klasy sprawdzania pisowni, że ktoś inny już został utworzony.
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Przykłady wiele składników, które są dostępne do użycia. W poniższym przykładzie użyto <xref:System.TimeZone> klasy w <xref:System> przestrzeni nazw. <xref:System.TimeZone>zapewnia to członkom, dzięki którym można pobrać informacji o strefie czasowej bieżącego systemu komputera.
+[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Przykłady wiele składników, które są dostępne do użycia. W poniższym przykładzie użyto <xref:System.TimeZone> klasy w <xref:System> przestrzeni nazw. <xref:System.TimeZone> zapewnia to członkom, dzięki którym można pobrać informacji o strefie czasowej bieżącego systemu komputera.
 
 ```vb
 Public Sub examineTimeZone()
@@ -241,10 +241,10 @@ Upewnij się, że kompilator mogą uzyskiwać dostęp do tej klasy, z którego m
 Innym sposobem obiekty mogą być powiązane jest *relacji zawierania*. Obiekty kontenera hermetyzować logicznie inne obiekty. Na przykład <xref:System.OperatingSystem> obiekt logicznie zawiera <xref:System.Version> obiektu, który zwraca za pośrednictwem jego <xref:System.OperatingSystem.Version%2A> właściwości. Należy pamiętać, że obiekt kontenera nie fizycznie zawiera inny obiekt.
 
 #### <a name="collections"></a>Kolekcje
-Jednego określonego typu obiektu zawierania jest reprezentowana przez *kolekcji*. Kolekcje są podobne obiekty, które mogą być wyliczane grup. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]obsługuje określonej składni w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) umożliwiająca iterację elementów w kolekcji. Ponadto kolekcji często umożliwiają używanie <xref:Microsoft.VisualBasic.Collection.Item%2A> można pobrać elementów według ich indeksu lub skojarzyć je z unikatowym ciągiem. Kolekcje można łatwiej używać niż tablic, ponieważ umożliwiają dodawanie lub usuwanie elementów bez użycia indeksów. Ze względu na ich łatwość użycia kolekcje są często używane do przechowywania formularzy i kontrolek.
+Jednego określonego typu obiektu zawierania jest reprezentowana przez *kolekcji*. Kolekcje są podobne obiekty, które mogą być wyliczane grup. Visual Basic obsługuje określonej składni w [For Each... Następna instrukcja](../../../../visual-basic/language-reference/statements/for-each-next-statement.md) umożliwiająca iterację elementów w kolekcji. Ponadto kolekcji często umożliwiają używanie <xref:Microsoft.VisualBasic.Collection.Item%2A> można pobrać elementów według ich indeksu lub skojarzyć je z unikatowym ciągiem. Kolekcje można łatwiej używać niż tablic, ponieważ umożliwiają dodawanie lub usuwanie elementów bez użycia indeksów. Ze względu na ich łatwość użycia kolekcje są często używane do przechowywania formularzy i kontrolek.
 
 ## <a name="related-topics"></a>Tematy pokrewne  
- [Wskazówki: Definiowanie klas](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
+ [Przewodnik: definiowanie klas](../../../../visual-basic/programming-guide/language-features/objects-and-classes/walkthrough-defining-classes.md)  
  Krok po kroku opisano sposób tworzenia klasy.  
 
  [Przeciążone właściwości i metody](../../../../visual-basic/programming-guide/language-features/objects-and-classes/overloaded-properties-and-methods.md)  
@@ -253,14 +253,14 @@ Jednego określonego typu obiektu zawierania jest reprezentowana przez *kolekcji
  [Podstawowe informacje o dziedziczeniu](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  Obejmuje Modyfikatory dziedziczenia, zastępowanie metody i właściwości, MyClass i MyBase.  
 
- [Okres istnienia obiektów: Sposób obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
+ [Okres istnienia obiektów: w jaki sposób obiekty są tworzone i niszczone](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)  
  W tym artykule omówiono tworzenie i usuwanie wystąpienia klas.  
 
  [Typy anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
  Opisuje sposób tworzenia i używania typy anonimowe, które umożliwiają tworzenie obiektów bez pisania definicji klasy dla typu danych.  
 
- [Inicjatory obiektów: Typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
+ [Inicjatory obiektów: typy nazwane i anonimowe](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)  
  W tym artykule omówiono inicjatory obiektów, które są używane do tworzenia wystąpień typów nazwane i anonimowe przy użyciu jedno wyrażenie.  
 
- [Porady: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
+ [Instrukcje: wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)  
  Wyjaśniono, jak wnioskowanie nazw właściwości i typów w deklaracjach typu anonimowego. Zawiera przykłady wnioskowania zakończone powodzeniem i niepowodzeniem.

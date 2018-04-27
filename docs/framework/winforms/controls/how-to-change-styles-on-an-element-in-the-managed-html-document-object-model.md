@@ -1,13 +1,13 @@
 ---
-title: "Porady: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML"
-ms.custom: 
+title: 'Porady: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -15,20 +15,20 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-caps.latest.revision: 
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3726ccdebf310d831fb0d7ea21fab011293f6d99
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: e833a15e33d0baf80f0078b26758137e7908a8fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>Porady: zmienianie stylu elementu w modelu DOM (Document Object Model) zarządzanych dokumentów HTML
-Aby sterować wyglądem dokumentu i jego elementów, można użyć style w formacie HTML. <xref:System.Windows.Forms.HtmlDocument>i <xref:System.Windows.Forms.HtmlElement> obsługuje <xref:System.Windows.Forms.HtmlElement.Style%2A> właściwości, które pobierają ciągi styl następujący format:  
+Aby sterować wyglądem dokumentu i jego elementów, można użyć style w formacie HTML. <xref:System.Windows.Forms.HtmlDocument> i <xref:System.Windows.Forms.HtmlElement> obsługuje <xref:System.Windows.Forms.HtmlElement.Style%2A> właściwości, które pobierają ciągi styl następujący format:  
   
  `name1:value1;...;nameN:valueN;`  
   
@@ -75,7 +75,7 @@ Aby sterować wyglądem dokumentu i jego elementów, można użyć style w forma
 6.  Dodaj następujący kod do pliku kodu projektu.  
   
     > [!IMPORTANT]
-    >  Upewnij się, że `webBrowser1_DocumentCompleted` programu obsługi zdarzeń jest skonfigurowany jako odbiornika dla <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. W [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], kliknij dwukrotnie <xref:System.Windows.Forms.WebBrowser> kontrolować; w edytorze tekstów, skonfiguruj odbiornik programowo.  
+    >  Upewnij się, że `webBrowser1_DocumentCompleted` programu obsługi zdarzeń jest skonfigurowany jako odbiornika dla <xref:System.Windows.Forms.WebBrowser.DocumentCompleted> zdarzeń. W programie Visual Studio, kliknij dwukrotnie <xref:System.Windows.Forms.WebBrowser> kontrolować; w edytorze tekstów, skonfiguruj odbiornik programowo.  
   
      [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  

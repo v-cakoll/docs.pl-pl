@@ -22,18 +22,18 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe0e446a0005ffcbf296c2728fd93056c3e38f2a
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: e67d4297ca0fe7028380b6d862f9f86c93bcaa61
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-using-client-application-services"></a>Wskazówki: używanie usług aplikacji klienta
 W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzysta z usługi aplikacji klienta do uwierzytelniania użytkowników i ról użytkownika i ustawienia.  
   
  W tym przewodniku należy wykonać następujące zadania:  
   
--   Tworzenie aplikacji formularzy systemu Windows i używanie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] projektanta projektu, aby włączyć i skonfigurować usługi aplikacji klienta.  
+-   Tworzenie aplikacji formularzy systemu Windows i włączyć i skonfigurować usługi aplikacji klienta za pomocą projektanta projektu programu Visual Studio.  
   
 -   Utwórz prostą aplikację usługi sieci Web ASP.NET do hostowania usług aplikacji i przetestować konfigurację klienta.  
   
@@ -57,7 +57,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-create-a-client-application-and-enable-client-application-services"></a>Aby utworzyć aplikację kliencką i włączyć usługi aplikacji klienta  
   
-1.  W [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **pliku &#124; nowy &#124; projektu** opcji menu.  
+1.  W programie Visual Studio, wybierz **pliku &#124; nowy &#124; projektu** opcji menu.  
   
 2.  W **nowy projekt** okna dialogowego, **typy projektów** okienku rozwiń **Visual Basic** lub **Visual C#** węzeł i wybierz **Windows** typu projektu.  
   
@@ -65,7 +65,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 4.  Zmień projekt **nazwa** do `ClientAppServicesDemo`, a następnie kliknij przycisk **OK**.  
   
-     Nowy projekt formularzy systemu Windows jest otwarty w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+     Nowy projekt formularzy systemu Windows jest otwarty w programie Visual Studio.  
   
 5.  Na **projektu** menu, wybierz opcję **ClientAppServicesDemo właściwości**.  
   
@@ -250,7 +250,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo Dodaj odwołanie do zestawu System.Web.  
   
-2.  Wybierz plik Form1, a następnie wybierz **widoku &#124; kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+2.  Wybierz plik Form1, a następnie wybierz **widoku &#124; kod** z poziomu menu głównego w Visual Studio.  
   
 3.  W edytorze kodu Dodaj następujące instrukcje na początku pliku Form1.  
   
@@ -331,7 +331,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 5.  W **właściwości** okna, określ **(nazwa)** wartość `rememberMeCheckBox` i **tekst** wartość `&Remember me`.  
   
-6.  Wybierz **widoku &#124; kod** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+6.  Wybierz **widoku &#124; kod** z poziomu menu głównego w Visual Studio.  
   
 7.  W edytorze kodu Dodaj następujący kod na początku pliku.  
   
@@ -371,7 +371,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-change-the-user-interface-based-on-user-role"></a>Aby zmienić interfejsu użytkownika na podstawie roli użytkownika  
   
-1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z poziomu menu głównego w Visual Studio.  
   
 2.  W projektancie, Dodaj <xref:System.Windows.Forms.Button> sterowania do formularza z **przybornika**.  
   
@@ -407,7 +407,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
  Można teraz uruchomić aplikację i zaloguj się jako pracowników, czy przycisk nie są wyświetlane, a następnie zaloguj się jako manager, aby wyświetlić przycisk.  
   
 ## <a name="accessing-web-settings"></a>Uzyskiwanie dostępu do ustawień sieci Web  
- W poniższej procedurze Dodaj pole tekstowe do formularza i powiązać go z ustawienia sieci Web. Jak poprzedni kod, który korzysta z uwierzytelniania i ról ustawień kodu nie Dostawca ustawień bezpośredni dostęp. Zamiast tego używa jednoznacznie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) wygenerowana dla projektu przez [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+ W poniższej procedurze Dodaj pole tekstowe do formularza i powiązać go z ustawienia sieci Web. Jak poprzedni kod, który korzysta z uwierzytelniania i ról ustawień kodu nie Dostawca ustawień bezpośredni dostęp. Zamiast tego używa jednoznacznie `Settings` klasy (dostępne jako `Properties.Settings.Default` w języku C# i `My.Settings` w języku Visual Basic) wygenerowany dla projektu przez program Visual Studio.  
   
 #### <a name="to-use-web-settings-in-your-user-interface"></a>Aby użyć ustawień sieci Web w interfejsie użytkownika  
   
@@ -425,7 +425,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
      `WebSettingsTestText` Ustawienie jest wyświetlane w Projektancie z wartością domyślną `DefaultText`. Ponadto `Settings` klasę, która zawiera `WebSettingsTestText` właściwości jest generowany dla projektu.  
   
-5.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+5.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z poziomu menu głównego w Visual Studio.  
   
 6.  W projektancie, Dodaj <xref:System.Windows.Forms.TextBox> sterowania do formularza.  
   
@@ -510,7 +510,7 @@ W tym temacie opisano sposób tworzenia aplikacji systemu Windows, który korzys
   
 #### <a name="to-enable-offline-mode-in-your-application"></a>Aby włączyć tryb offline w aplikacji  
   
-1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] menu głównego.  
+1.  W **Eksploratora rozwiązań**, w projekcie ClientAppServicesDemo wybierz Form1, a następnie wybierz **widoku &#124; projektanta** z poziomu menu głównego w Visual Studio.  
   
 2.  W projektancie, Dodaj <xref:System.Windows.Forms.CheckBox> sterowania do formularza.  
   

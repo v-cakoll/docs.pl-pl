@@ -13,11 +13,11 @@ helpviewer_keywords:
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b51117197f28cec21671eea4dd7b7f2f1cc306
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 901ea984a8e8e90329953a8936e68f2fc07f8847
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.  
@@ -48,7 +48,7 @@ Identyfikuje użytkownika aplikacji plik manifestu Win32 do osadzenia pliku prze
   
 2.  Musisz podać niestandardowy manifest, która nie określa wymagany poziom wykonywania.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Umożliwia wyświetlenie i edytowanie pliku app.manifest domyślny, klikając **ustawienia kontroli konta użytkownika widoku** na **aplikacji** kartę w Projektancie projektu. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Visual Studio tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Umożliwia wyświetlenie i edytowanie pliku app.manifest domyślny, klikając **ustawienia kontroli konta użytkownika widoku** na **aplikacji** kartę w Projektancie projektu. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
  Możesz podać manifest aplikacji jako niestandardowy krok kompilacji po lub w ramach plik zasobów Win32 przy użyciu `-nowin32manifest` opcji. Tej samej opcji należy użyć, jeśli aplikacja ma być może ulec plików lub rejestrze wirtualizacji w systemie Windows Vista. Uniemożliwi to kompilatora tworzenie i osadzanie manifestu domyślnej w pliku PE.  
   

@@ -1,11 +1,12 @@
 ---
 title: Procedury funkcji (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Function procedures
@@ -15,17 +16,17 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9520a6555e65fd801a5c40d40748028e04a10739
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ad4f55a9dd9fbd68c36dd53a01f97ddb03c2bb9b
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="function-procedures-visual-basic"></a>Procedury funkcji (Visual Basic)
-A `Function` procedura jest szereg [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wewnątrz instrukcji `Function` i `End Function` instrukcje. `Function` Procedury wykonuje zadanie, a następnie zwraca sterowania do wywołującego kodu. Zwraca kontroli, również zwraca wartość do wywołującego kodu.  
+A `Function` procedura jest serię instrukcji języka Visual Basic otoczony `Function` i `End Function` instrukcje. `Function` Procedury wykonuje zadanie, a następnie zwraca sterowania do wywołującego kodu. Zwraca kontroli, również zwraca wartość do wywołującego kodu.  
   
  Zawsze procedura jest wywoływana, jego instrukcje uruchamiania, zaczynając od pierwszej instrukcji wykonywalnej po `Function` instrukcji i kończąc pierwszy `End Function`, `Exit Function`, lub `Return` Napotkano instrukcję.  
   
@@ -91,11 +92,11 @@ End Function
   
  Składnia wywołania `Function` procedura wygląda następująco:  
   
- *l-wartością*`=`*functionname* `[(` *listaargumentów*    `)]`  
+ *l-wartością*`=`*functionname* `[(` *listaargumentów*  `)]`  
   
- `If ((`*functionname* `[(` *listaargumentów* `)] / 3) <=` *wyrażenie*  `) Then`  
+ `If ((` *FunctionName* `[(` *listaargumentów* `)] / 3) <=` *wyrażenia*  `) Then`  
   
- Podczas wywoływania `Function` procedury, nie trzeba używać jej zwracanych wartości. Jeśli nie chcesz, wykonywane są wszystkie akcje funkcji, ale wartość zwracana jest ignorowana. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>jest często nazywana w ten sposób.  
+ Podczas wywoływania `Function` procedury, nie trzeba używać jej zwracanych wartości. Jeśli nie chcesz, wykonywane są wszystkie akcje funkcji, ale wartość zwracana jest ignorowana. <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A> jest często nazywana w ten sposób.  
   
 ### <a name="illustration-of-declaration-and-call"></a>Ilustracja deklaracji i wywołanie  
  Następujące `Function` procedury oblicza najdłuższego boku lub przeciwprostokątnej trójkąta prawo podanych wartości dla obu stron.  
@@ -108,11 +109,11 @@ End Function
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Procedury operatorów](./operator-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Function — instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
- [Porady: Tworzenie procedury, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)  
- [Porady: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)  
- [Porady: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)
+ [Function, instrukcja](../../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Instrukcje: tworzenie procedury, która zwraca wartość](./how-to-create-a-procedure-that-returns-a-value.md)  
+ [Instrukcje: zwracanie wartości z procedury](./how-to-return-a-value-from-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury zwracającej wartość](./how-to-call-a-procedure-that-returns-a-value.md)

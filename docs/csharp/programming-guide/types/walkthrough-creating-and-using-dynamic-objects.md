@@ -16,11 +16,11 @@ ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
 caps.latest.revision: 22
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: d6b740e78503d0937c9a0f38a573bb7dd778075d
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 16c08ff42ce77b3901f5909571c528394d139e03
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Wskazówki: Tworzenie obiektów dynamicznych i posługiwanie się nimi (C# i Visual Basic)
 
@@ -48,7 +48,7 @@ Należy [IronPython](http://ironpython.net/) dla platformy .NET, w tym przewodni
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Aby utworzyć niestandardowe klasy dynamicznej  
   
-1.  Uruchom [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)].  
+1.  Uruchom program Visual Studio.  
   
 2.  Na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu**.  
   
@@ -143,7 +143,7 @@ Projekt dalej utworzonego w ramach tego przewodnika uzyskuje dostęp do bibliote
   
 #### <a name="to-create-a-custom-dynamic-class"></a>Aby utworzyć niestandardowe klasy dynamicznej  
   
-1.  W [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu**.  
+1.  W programie Visual Studio na **pliku** menu wskaż **nowy** , a następnie kliknij przycisk **projektu**.  
   
 2.  W **nowy projekt** okna dialogowego, **typów projektów** okienka, upewnij się, że **Windows** jest zaznaczone. Wybierz **aplikacji konsoli** w **szablony** okienka. W **nazwa** wpisz `DynamicIronPythonSample`, a następnie kliknij przycisk **OK**. Nowy projekt zostanie utworzony.  
   

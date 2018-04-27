@@ -1,22 +1,23 @@
 ---
 title: LINQ do osi XML (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ecd3bd00-28e5-4517-a59f-53bff39fd478
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 119c4808b6d436c2227331dbb3ab9c4077ff56f2
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 404ddcc89e6549d7575761e10c23413d9688a38f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="linq-to-xml-axes-visual-basic"></a>LINQ do osi XML (Visual Basic)
 Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykonać zapytanie, aby znaleźć elementy i atrybuty lub pobrać wartości.  
@@ -37,7 +38,7 @@ Po drzewo XML utworzony lub załadowany dokumentu XML na drzewo XML można wykon
 |[Porady: pobieranie jeden atrybut (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-a-single-attribute-linq-to-xml.md)|Pokazuje, jak pobrać jeden atrybut elementu jest podana nazwa atrybutu.|  
 |[Porady: pobieranie wartości atrybutu (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md)|Pokazuje, jak można pobrać wartości atrybutów.|  
 |[Porady: pobieranie skrócona wartość elementu (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-retrieve-the-shallow-value-of-an-element.md)|Pokazuje, jak pobrać pobieżną wartości elementu.|  
-|[Języku zintegrowanym osi w języku Visual Basic (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Podsumowanie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zintegrowane osi.|  
+|[Języku zintegrowanym osi w języku Visual Basic (LINQ do XML)](../../../../visual-basic/programming-guide/concepts/linq/language-integrated-axes.md)|Zawiera podsumowanie osie zintegrowane w języku Visual Basic.|  
   
 ## <a name="see-also"></a>Zobacz też  
  [Przewodnik programowania w języku (LINQ do XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

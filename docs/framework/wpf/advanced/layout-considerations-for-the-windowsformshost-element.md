@@ -1,12 +1,13 @@
 ---
-title: "Opcje układu dla elementu WindowsFormsHost"
-ms.custom: 
+title: Opcje układu dla elementu WindowsFormsHost
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
@@ -16,33 +17,34 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 895185797ebdef2145caec4c1c5ac26e3688c463
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: b915d3cdaebc862534c2ba6bd006d3b447e2a651
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>Opcje układu dla elementu WindowsFormsHost
 W tym temacie opisano sposób <xref:System.Windows.Forms.Integration.WindowsFormsHost> element współdziała z [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu systemu.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] obsługę logiki różne, ale podobne, zmiany rozmiaru i rozmieszczenia elementów w formularzu lub strony. Po utworzeniu hybrydowego interfejsu użytkownika (UI) obsługującego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> element integruje schematy dwóch układu.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] obsługę logiki różne, ale podobne, zmiany rozmiaru i rozmieszczenia elementów w formularzu lub strony. Po utworzeniu hybrydowego interfejsu użytkownika (UI) obsługującego [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów w [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], <xref:System.Windows.Forms.Integration.WindowsFormsHost> element integruje schematy dwóch układu.  
   
 ## <a name="differences-in-layout-between-wpf-and-windows-forms"></a>Różnice w układzie WPF i formularze systemu Windows  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]używa układu niezależne od rozdzielczości. Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wymiarów układu są określane za pomocą *pikselach niezależnych od urządzenia*. Piksel niezależnych od urządzenia jest jeden szóstego dziewięćdziesięciu cala rozmiary i niezależne od rozdzielczości, dzięki czemu możesz uzyskać podobne wyniki niezależnie od tego, czy są renderowania monitor 72 dpi lub drukarki 19 200 dpi.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] używa układu niezależne od rozdzielczości. Wszystkie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wymiarów układu są określane za pomocą *pikselach niezależnych od urządzenia*. Piksel niezależnych od urządzenia jest jeden szóstego dziewięćdziesięciu cala rozmiary i niezależne od rozdzielczości, dzięki czemu możesz uzyskać podobne wyniki niezależnie od tego, czy są renderowania monitor 72 dpi lub drukarki 19 200 dpi.  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]również jest oparta na *układ dynamiczny*. Oznacza to, że element interfejsu użytkownika rozmieszcza się w formularzu lub na stronie zgodnie z zawartością, jego kontener układu i rozmiar obrazu. Układ dynamiczny ułatwia lokalizacja automatycznie dostosowując rozmiar i położenie elementów interfejsu użytkownika z ciągów, które zawierają zmiany długości.  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] również jest oparta na *układ dynamiczny*. Oznacza to, że element interfejsu użytkownika rozmieszcza się w formularzu lub na stronie zgodnie z zawartością, jego kontener układu i rozmiar obrazu. Układ dynamiczny ułatwia lokalizacja automatycznie dostosowując rozmiar i położenie elementów interfejsu użytkownika z ciągów, które zawierają zmiany długości.  
   
  Układ w [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] jest zależny od urządzenia, które bardziej mogą być statyczne. Zazwyczaj [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty są pozycjonowane absolutnie na formularzu przy użyciu wymiarów w pikselach sprzętu. Jednak [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] obsługuje niektóre funkcje układ dynamiczny, zgodnie z opisem w poniższej tabeli.  
   
 |Funkcja układu|Opis|  
 |--------------------|-----------------|  
 |Automatyczna zmiana rozmiaru|Niektóre [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] zmiana rozmiaru formantów się do prawidłowego wyświetlenia ich zawartość. Aby uzyskać więcej informacji, zobacz [AutoSize — Przegląd właściwości](../../../../docs/framework/winforms/controls/autosize-property-overview.md).|  
-|Zakotwiczanie i dokowanie|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Formanty obsługuje pozycjonowanie i zmianę rozmiaru w oparciu kontenera nadrzędnego. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
+|Zakotwiczanie i dokowanie|[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługuje pozycjonowanie i zmianę rozmiaru w oparciu kontenera nadrzędnego. Aby uzyskać więcej informacji, zobacz <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> i <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>.|  
 |Skalowanie automatyczne|Kontrole kontenerów resize nimi i ich elementy podrzędne na podstawie rozdzielczości urządzenia wyjściowego lub rozmiar w pikselach czcionki kontenera domyślnego. Aby uzyskać więcej informacji, zobacz [automatyczne skalowanie w formularzach systemu Windows](../../../../docs/framework/winforms/automatic-scaling-in-windows-forms.md).|  
 |Kontenery układów|<xref:System.Windows.Forms.FlowLayoutPanel> i <xref:System.Windows.Forms.TableLayoutPanel> formanty Rozmieść ich formantów podrzędnych i rozmiar się zgodnie z ich zawartość.|  
   
@@ -51,11 +53,11 @@ W tym temacie opisano sposób <xref:System.Windows.Forms.Integration.WindowsForm
   
 -   W niektórych przypadkach [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantów nie można zmienić rozmiaru lub mogą być określane tylko do określonych wymiarów. Na przykład [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox> sterowanie obsługuje tylko pojedynczy wysokości, który jest zdefiniowany przez rozmiar czcionki formantu. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układ dynamiczny, której elementy można stretch pionie hostowany <xref:System.Windows.Forms.ComboBox> formantu nie rozciąga zgodnie z oczekiwaniami.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]formanty nie można obracać lub niesymetryczna. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wywołuje element <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzeń w przypadku zastosowania transformację zegara lub obrotu. Jeśli nie obsługują <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzenia <xref:System.InvalidOperationException> jest wywoływane.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty nie można obracać lub niesymetryczna. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Wywołuje element <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzeń w przypadku zastosowania transformację zegara lub obrotu. Jeśli nie obsługują <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> zdarzenia <xref:System.InvalidOperationException> jest wywoływane.  
   
 -   W większości przypadków [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty nie obsługują proporcjonalne skalowania. Chociaż Ogólne wymiary formant są skalowane, formantów podrzędnych oraz elementów składowych formant może nie zmienić rozmiar zgodnie z oczekiwaniami. To ograniczenie zależy od jak każdy [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sterowanie obsługuje skalowania. Ponadto nie można skalować [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty w dół o rozmiarze 0 pikseli.  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]Formanty obsługuje funkcję skalowania automatycznego, w którym formularzu będzie automatycznie zmieniać rozmiar się i jego kontroli oparte na rozmiar czcionki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika, zmienianie rozmiaru czcionki nie zmienia rozmiaru całego układu, mimo że poszczególne elementy mogą zostać dynamicznego dopasowania rozmiaru.  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] Formanty obsługuje funkcję skalowania automatycznego, w którym formularzu będzie automatycznie zmieniać rozmiar się i jego kontroli oparte na rozmiar czcionki. W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika, zmienianie rozmiaru czcionki nie zmienia rozmiaru całego układu, mimo że poszczególne elementy mogą zostać dynamicznego dopasowania rozmiaru.  
   
 ### <a name="z-order"></a>Porządek osi z  
  W [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] interfejsu użytkownika można zmienić porządek osi z elementów do formantu nakładających się zachowanie. Hostowany [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontroli jest rysowana w oddzielnych HWND, więc jest zawsze wstawiany nad [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] elementów.  
@@ -74,13 +76,13 @@ W tym temacie opisano sposób <xref:System.Windows.Forms.Integration.WindowsForm
   
  Wszystkich innych przypadkach wymagane skalowanie współrzędnych. Hostowanej nie zmieni się rozmiar kontrolki. Zamiast tego <xref:System.Windows.Forms.Integration.WindowsFormsHost> element próbuje skalowania obsługiwanego formantu i wszystkich jego formantów podrzędnych. Ponieważ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] nie obsługuje w pełni skalowania, <xref:System.Windows.Forms.Integration.WindowsFormsHost> element skaluje w stopniu, w szczególności formantów.  
   
- Zastąpienie <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> metodę w celu zapewnienia zachowania niestandardowego skalowania dla hostowanej [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] formantu.  
+ Zastąpienie <xref:System.Windows.Forms.Integration.WindowsFormsHost.ScaleChild%2A> metodę w celu zapewnienia zachowania niestandardowego skalowania dla obsługiwanego formantu formularzy systemu Windows.  
   
  Oprócz skalowania, <xref:System.Windows.Forms.Integration.WindowsFormsHost> elementu obsługuje zaokrąglania i przepełnienie przypadkach zgodnie z opisem w poniższej tabeli.  
   
 |Konwersja problem|Opis|  
 |----------------------|-----------------|  
-|Zaokrąglanie|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]wymiary w pikselach niezależnych od urządzenia są określone jako `double`, i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sprzętu wymiary są określone jako `int`. W przypadkach, gdy `double`— oparte na wymiary są konwertowane na `int`— na podstawie wymiarów, <xref:System.Windows.Forms.Integration.WindowsFormsHost> element używa standardowych zaokrąglania tak, aby ułamkowych wartości mniejszej niż 0,5 jest zaokrąglana do 0.|  
+|Zaokrąglanie|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] wymiary w pikselach niezależnych od urządzenia są określone jako `double`, i [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] sprzętu wymiary są określone jako `int`. W przypadkach, gdy `double`— oparte na wymiary są konwertowane na `int`— na podstawie wymiarów, <xref:System.Windows.Forms.Integration.WindowsFormsHost> element używa standardowych zaokrąglania tak, aby ułamkowych wartości mniejszej niż 0,5 jest zaokrąglana do 0.|  
 |Przepełnienie|Gdy <xref:System.Windows.Forms.Integration.WindowsFormsHost> konwertuje element `double` wartości do `int` wartości, możliwe jest przepełnienie. Wartości, które są większe niż <xref:System.Int32.MaxValue> są ustawione na <xref:System.Int32.MaxValue>.|  
   
 ### <a name="layout-related-properties"></a>Właściwości związane z układem  
@@ -90,7 +92,7 @@ W tym temacie opisano sposób <xref:System.Windows.Forms.Integration.WindowsForm
  Zmian układu w hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kontrola jest przekazywana do [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aby wyzwolić aktualizacje układu. <xref:System.Windows.UIElement.InvalidateMeasure%2A> Metoda <xref:System.Windows.Forms.Integration.WindowsFormsHost> zapewnia, że zmiany układu w formancie hostowanej spowodują [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aparatu układu do uruchomienia.  
   
 ### <a name="continuously-sized-windows-forms-controls"></a>Stale rozmiaru formantów formularzy systemu Windows  
- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]formanty, które obsługuje ciągłego skalowania w pełni interakcyjnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu systemu. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element używa <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metod w zwykły sposób, aby rozmiar i rozmieszczania hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu.  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formanty, które obsługuje ciągłego skalowania w pełni interakcyjnie [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] układu systemu. <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element używa <xref:System.Windows.FrameworkElement.MeasureOverride%2A> i <xref:System.Windows.FrameworkElement.ArrangeOverride%2A> metod w zwykły sposób, aby rozmiar i rozmieszczania hostowanej [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] formantu.  
   
 ### <a name="sizing-algorithm"></a>Algorytm zmiany rozmiaru  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost> Element używa następującej procedury, aby rozmiar formantu hostowanej:  

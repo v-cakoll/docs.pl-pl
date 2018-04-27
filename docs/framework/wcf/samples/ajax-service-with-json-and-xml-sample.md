@@ -1,24 +1,26 @@
 ---
-title: "Usługa AJAX z formatami JSON i XML — przykład"
-ms.custom: 
+title: Usługa AJAX z formatami JSON i XML — przykład
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-caps.latest.revision: "15"
+caps.latest.revision: 15
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7d831d4663031419977b75c6cfe183ac4bd52a86
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: f1a3f2185743be6d6331db4aa253a0767484b32d
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>Usługa AJAX z formatami JSON i XML — przykład
 W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] można utworzyć usługi asynchronicznego JavaScript i XML (AJAX), która zwraca dane JavaScript Object Notation (JSON) lub XML. Usługa AJAX mogą korzystać za pomocą kodu JavaScript w kliencie przeglądarki sieci Web. Ten przykład jest oparty na [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki.  
@@ -30,9 +32,9 @@ W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../
 > [!NOTE]
 >  Procedury i kompilacji instrukcje dotyczące instalacji dla tego przykładu znajdują się na końcu tego tematu.  
   
- Aby umożliwić korzystanie z klientów z systemem innym niż ASP.NET AJAX, użyj <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nie <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) w pliku svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory>dodaje <xref:System.ServiceModel.Description.WebHttpEndpoint> standardowy punkt końcowy do usługi. Punkt końcowy jest skonfigurowana na pusty adres względem pliku svc; oznacza to, że adres usługi ma http://localhost/ServiceModelSamples/service.svc z nie dodatkowe sufiksy na inną niż nazwa operacji.  
+ Aby umożliwić korzystanie z klientów z systemem innym niż ASP.NET AJAX, użyj <xref:System.ServiceModel.Activation.WebServiceHostFactory> (nie <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>) w pliku svc. <xref:System.ServiceModel.Activation.WebServiceHostFactory> dodaje <xref:System.ServiceModel.Description.WebHttpEndpoint> standardowy punkt końcowy do usługi. Punkt końcowy jest skonfigurowana na pusty adres względem pliku svc; oznacza to, że adres usługi http://localhost/ServiceModelSamples/service.svc, z nie dodatkowe sufiksy na inną niż nazwa operacji.  
   
-```html  
+```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
 ```  
   
@@ -52,28 +54,28 @@ W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../
  Format danych domyślnych <xref:System.ServiceModel.Description.WebHttpEndpoint> jest podczas domyślny format danych XML, <xref:System.ServiceModel.Description.WebScriptEndpoint> jest JSON. Aby uzyskać więcej informacji, zobacz [tworzenie usług AJAX WCF bez platformy ASP.NET](../../../../docs/framework/wcf/feature-details/creating-wcf-ajax-services-without-aspnet.md).  
   
  Usługi w poniższym przykładzie jest standardem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi z dwóch operacji. Zarówno operacje wymagają <xref:System.ServiceModel.Web.WebMessageBodyStyle.Wrapped> treści w stylu <xref:System.ServiceModel.Web.WebGetAttribute> lub <xref:System.ServiceModel.Web.WebInvokeAttribute> atrybuty, które dotyczą `webHttp` zachowania i nie ma żadnego wpływu na przełączniku format danych JSON/XML.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Xml, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathXml(double n1, double n2);  
-```  
-  
+```
+
  Format odpowiedzi dla operacji jest określony jako XML, co jest ustawieniem domyślnym dla [ \<webHttp >](../../../../docs/framework/configure-apps/file-schema/wcf/webhttp.md) zachowanie. Jednak dobrze jest jawnie określić format odpowiedzi.  
   
  Używa innej operacji `WebInvokeAttribute` atrybutu i jawnie określa JSON zamiast XML dla odpowiedzi.  
-  
-```  
+
+```csharp
 [OperationContract]  
 [WebInvoke(ResponseFormat = WebMessageFormat.Json, BodyStyle = WebMessageBodyStyle.Wrapped)]  
 MathResult DoMathJson(double n1, double n2);  
-```  
-  
+```
+
  Należy pamiętać, że w obu przypadkach operacje zwracać typu złożonego `MathResult`, który jest standardem [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] typu kontraktu danych.  
   
  Klient XmlAjaxClientPage.htm strony sieci Web zawiera kod JavaScript, który wywołuje jednego z poprzednich dwóch operacji, gdy użytkownik kliknie **obliczanie (zwracany JSON)** lub **obliczanie (zwracany XML)**  przyciski na stronie. Kod, aby wywołać usługę konstruuje treść kodu JSON i wysyła je przy użyciu metody POST protokołu HTTP. Żądanie jest tworzony ręcznie w języku JavaScript, w odróżnieniu od [podstawowa usługa AJAX](../../../../docs/framework/wcf/samples/basic-ajax-service.md) próbki i przykłady, za pomocą kodu ASP.NET AJAX.  
-  
-```  
+
+```csharp
 // Create HTTP request  
 var xmlHttp;  
 // Request instantiation code omitted…  
@@ -92,19 +94,19 @@ body = body + document.getElementById("num2").value + '}';
 xmlHttp.open("POST", url, true);  
 xmlHttp.setRequestHeader("Content-type", "application/json");  
 xmlHttp.send(body);  
-```  
-  
+```
+
  Gdy usługa odpowiada, odpowiedź zostanie wyświetlona bez dalszego przetwarzania w polu tekstowym na stronie. To jest zaimplementowany dla celów demonstracyjnych, co pozwala na bezpośrednio Sprawdź formaty danych XML i JSON, używane.  
-  
-```  
+
+```javascript
 // Create result handler   
 xmlHttp.onreadystatechange=function(){  
      if(xmlHttp.readyState == 4){  
           document.getElementById("result").value = xmlHttp.responseText;  
      }  
 }  
-```  
-  
+```
+
 > [!IMPORTANT]
 >  Próbki mogą być zainstalowane na tym komputerze. Przed kontynuowaniem sprawdź, czy są dostępne dla następującego katalogu (ustawienie domyślne).  
 >   

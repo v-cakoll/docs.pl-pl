@@ -15,11 +15,11 @@ ms.assetid: 9460ea1b-6c9f-44b8-8f73-301b30a01de1
 caps.latest.revision: 13
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: cb05f4f01dd7e19d2034de89ac47304b0731ca01
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 8631477f7067870ca1d8a62513489cdbbbe43f33
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="-win32manifest-c-compiler-options"></a>-win32manifest (opcje kompilatora C#)
 Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik manifestu Win32 do osadzenia pliku przenośny plik wykonywalny (PE) projektu.  
@@ -48,7 +48,7 @@ Użyj **-win32manifest** opcję, aby określić użytkownika aplikacji plik mani
   
 -   Musisz podać niestandardowy manifest, która nie określa wymagany poziom wykonywania.  
   
- [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w edytorze tekstu, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę w **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **plikumanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, zostanie wyświetlony na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
+ Visual Studio tworzy domyślny plik .manifest i zapisuje go w katalogach debug i release obok pliku wykonywalnego. Aby dodać niestandardowy manifest, tworząc go w edytorze tekstu, a następnie dodanie go do projektu. Alternatywnie możesz kliknąć prawym przyciskiem myszy **projektu** ikonę w **Eksploratora rozwiązań**, kliknij przycisk **Dodaj nowy element**, a następnie kliknij przycisk **plikumanifestuaplikacji**. Po dodaniu nowego lub istniejącego pliku manifestu, zostanie wyświetlony na **manifestu** listy rozwijanej. Aby uzyskać więcej informacji, zobacz [strona aplikacji, Projektant projektu (C#)](/visualstudio/ide/reference/application-page-project-designer-csharp).  
   
  Możesz podać manifest aplikacji jako niestandardowy krok kompilacji po lub w ramach plik zasobów Win32 za pomocą [-nowin32manifest (opcje kompilatora C#)](../../../csharp/language-reference/compiler-options/nowin32manifest-compiler-option.md) opcji. Tej samej opcji należy użyć, jeśli aplikacja ma być może ulec plików lub rejestrze wirtualizacji w systemie Windows Vista. Uniemożliwi to kompilatora tworzenie i osadzanie manifestu domyślne w przenośny plik wykonywalny (PE).  
   

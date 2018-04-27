@@ -1,13 +1,13 @@
 ---
-title: "Porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows"
-ms.custom: 
+title: 'Porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-winforms
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-caps.latest.revision: 
+caps.latest.revision: 12
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3abbf931cff9ad459e8c9221f91430ecccefa9cc
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: e900c1c34f69531a14cfa11803ef5a6afb4783c6
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>Porady: dodawanie formantów bez interfejsu użytkownika do formularzy systemu Windows
 Niewizualne kontrolki (lub składnik) zapewnia funkcje do aplikacji. W odróżnieniu od innych kontrolek składników nie udostępniają interfejsu użytkownika dla użytkownika i w związku z tym nie trzeba będzie wyświetlany na powierzchni projektanta formularzy systemu Windows. Gdy składnik zostanie dodany do formularza, Projektant formularzy systemu Windows wyświetla o zmiennym rozmiarze na pasku w dolnej części formularza, w którym są wyświetlane wszystkie składniki. Po dodaniu formantu do składnika na pasku zadań, można wybrać składnika i ustawienia swoich właściwości, jak w przypadku innych formantu w formularzu.  
@@ -48,7 +48,7 @@ Niewizualne kontrolki (lub składnik) zapewnia funkcje do aplikacji. W odróżni
   
      Składnik zostanie wyświetlona na pasku składnika.  
   
- Ponadto składniki można dodać do formularza w czasie wykonywania. Jest to typowy scenariusz, szczególnie, ponieważ składniki nie ma wyrażenia visual, w przeciwieństwie do formantów interfejsu użytkownika. W poniższym przykładzie <xref:System.Windows.Forms.Timer> dodawania składnika w czasie wykonywania. (Należy pamiętać, że [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] zawiera szereg różnych czasomierze; w takim przypadku należy użyć formularzy systemu Windows <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji na temat różnych czasomierze w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)], zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
+ Ponadto składniki można dodać do formularza w czasie wykonywania. Jest to typowy scenariusz, szczególnie, ponieważ składniki nie ma wyrażenia visual, w przeciwieństwie do formantów interfejsu użytkownika. W poniższym przykładzie <xref:System.Windows.Forms.Timer> dodawania składnika w czasie wykonywania. (Należy pamiętać, że program Visual Studio zawiera szereg różnych czasomierze; w takim przypadku należy użyć formularzy systemu Windows <xref:System.Windows.Forms.Timer> składnika. Aby uzyskać więcej informacji o różnych czasomierze w programie Visual Studio, zobacz [wprowadzenie do serwerowych czasomierze](http://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc).)  
   
 > [!CAUTION]
 >  Składniki często mają właściwości specyficzne dla kontroli, które muszą być ustawione dla składnika efektywnie działać. W przypadku liczby <xref:System.Windows.Forms.Timer> poniższego składnika, ustawić `Interval` właściwości. Pamiętaj, podczas dodawania składników do projektu, ustawienie właściwości wymagane dla tego składnika.  

@@ -1,12 +1,12 @@
 ---
-title: "Porady: wyświetlanie dat w kalendarzach innych niż gregoriański"
-ms.custom: 
+title: 'Porady: wyświetlanie dat w kalendarzach innych niż gregoriański'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: dotnet-standard
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
@@ -17,18 +17,18 @@ helpviewer_keywords:
 - calendars [.NET Framework], displaying dates
 - displaying date and time data
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1a9e45fe43e38be3c618df37a639d63a6a0a5349
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 8b0af7aad0efc63518291292b0d0b4ca4872956c
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>Porady: wyświetlanie dat w kalendarzach innych niż gregoriański
 <xref:System.DateTime> i <xref:System.DateTimeOffset> typy używany kalendarz gregoriański jako ich kalendarz domyślny. Oznacza to, że wywołanie wartość daty i godziny `ToString` metoda Wyświetla reprezentację ciągu tego daty i czasu w kalendarza gregoriańskiego, nawet jeśli ta data i godzina został utworzony przy użyciu innego. Jest to zilustrowane w poniższym przykładzie, który wykorzystuje dwa różne sposoby, można utworzyć wartości daty i godziny z kalendarzem perska, ale nadal wyświetla te wartości daty i godziny w kalendarza gregoriańskiego, gdy wywołuje <xref:System.DateTime.ToString%2A> metody. W tym przykładzie odzwierciedla dwa najczęściej używane, ale niepoprawne techniki wyświetlanie daty w szczególności kalendarza.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 12/23/2017
   
     -   <xref:System.Globalization.Calendar.GetSecond%2A>, do wyświetlenia w ciągu minuty w kalendarzu odpowiednie sekund.  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>, do wyświetlenia w ciągu sekundy w kalendarzu odpowiednie milisekund.  
+    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A> , do wyświetlenia w ciągu sekundy w kalendarzu odpowiednie milisekund.  
   
 ## <a name="example"></a>Przykład  
  W przykładzie przedstawiono datę przy użyciu dwóch różnych kalendarzy. Wyświetla datę po zdefiniowaniu kalendarza Hijri jako domyślny kalendarz dla kultury ar JO i wyświetla datę perska kalendarza, który jako opcjonalnego kalendarza kultury fa-IR nie jest obsługiwany.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 12/23/2017
 ## <a name="compiling-the-code"></a>Kompilowanie kodu  
  W tym przykładzie wymaga odwołania do System.Core.dll.  
   
- Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], należy umieścić go w szablonie projektu aplikacji konsolowej.  
+ Skompiluj kod w wierszu polecenia za pomocą csc.exe lub vb.exe. Aby skompilować kod w programie Visual Studio, umieść ją w szablonu projektu aplikacji konsoli.  
   
 ## <a name="see-also"></a>Zobacz też  
  [Wykonywanie operacji formatowania](../../../docs/standard/base-types/performing-formatting-operations.md)

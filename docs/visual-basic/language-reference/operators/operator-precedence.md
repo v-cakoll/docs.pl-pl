@@ -1,10 +1,11 @@
 ---
-title: "Kolejność wykonywania działań (Visual Basic)"
+title: Kolejność wykonywania działań (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - arithmetic operators [Visual Basic], precedence
@@ -19,14 +20,14 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 - order of precedence
 ms.assetid: cbbdb282-f572-458e-a520-008a675f8063
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 6c0fb466b404cafdd4b91d061971fd683375c715
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 2d8de9deea84c7f0c11c91b55951cdfc200b017f
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-precedence-in-visual-basic"></a>Kolejność wykonywania działań (Visual Basic)
 Gdy występują kilka operacji w wyrażeniu, każda część jest oceniane i rozpoznać w ustalonej kolejności o nazwie *kolejność*.  
@@ -95,10 +96,10 @@ Dim n3 As Integer = 96 / (8 / 4)
   
  Pierwsze wyrażenie daje w wyniku dzielenia 96 / 8 (co powoduje 12), a następnie dzielenia 12 / 4, co prowadzi do trzech. Ponieważ kompilator daje w wyniku operacji `n1` od lewej do prawej, oceny jest taki sam jawnie określić kolejności `n2`. Zarówno `n1` i `n2` dawać wynik trzech. Z kolei `n3` ma wynik 48, ponieważ nawiasy wymusić kompilator, aby ocenić 8 / 4 pierwszy.  
   
- Ze względu na to zachowanie operatory są określane jako *pozostałych asocjacyjnej* w [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Ze względu na to zachowanie operatory są określane jako *pozostałych asocjacyjnej* w języku Visual Basic.  
   
 ## <a name="overriding-precedence-and-associativity"></a>Zastępowanie priorytet i łączność  
- Aby wymusić niektórych części wyrażenia ma zostać obliczone przed pozostałymi można Użyj nawiasów. To zastąpienie jednocześnie kolejność pierwszeństwa, jak i kojarzenie po lewej stronie. [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]zawsze wykonuje operacje, które są ujęte w nawiasy przed elementami poza. Jednak w obrębie nawiasów przechowuje zwykłej priorytet i łączność, chyba że Użyj nawiasów w nawiasach. Ilustruje to poniższy przykład.  
+ Aby wymusić niektórych części wyrażenia ma zostać obliczone przed pozostałymi można Użyj nawiasów. To zastąpienie jednocześnie kolejność pierwszeństwa, jak i kojarzenie po lewej stronie. Visual Basic zawsze wykonuje operacje, które są ujęte w nawiasy przed elementami poza. Jednak w obrębie nawiasów przechowuje zwykłej priorytet i łączność, chyba że Użyj nawiasów w nawiasach. Ilustruje to poniższy przykład.  
   
 ```  
 Dim a, b, c, d, e, f, g As Double  
@@ -119,11 +120,11 @@ g = (a - (b + c)) / (d * e)
 ```  
   
 ## <a name="see-also"></a>Zobacz też  
- [= — Operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
- [Is — Operator](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot — Operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Like — Operator](../../../visual-basic/language-reference/operators/like-operator.md)  
- [TypeOf — Operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
- [Await — Operator](../../../visual-basic/language-reference/operators/await-operator.md)  
+ [=, operator](../../../visual-basic/language-reference/operators/assignment-operator.md)  
+ [Is, operator](../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot, operator](../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Like, operator](../../../visual-basic/language-reference/operators/like-operator.md)  
+ [TypeOf, operator](../../../visual-basic/language-reference/operators/typeof-operator.md)  
+ [Await, operator](../../../visual-basic/language-reference/operators/await-operator.md)  
  [Operatory według funkcji](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
  [Operatory i wyrażenia](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

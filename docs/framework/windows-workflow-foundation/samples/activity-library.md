@@ -1,30 +1,13 @@
----
-title: "Biblioteka działań"
-ms.custom: 
-ms.date: 03/30/2017
-ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-caps.latest.revision: "7"
-author: dotnet-bot
-ms.author: dotnetcontent
-manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 99d8fba848129156d94e54d1da7d08122ccfa735
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
-ms.translationtype: MT
-ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ ---
+Tytuł: ms.custom "Biblioteka działań": "" ms.date: "2017-03/30" ms.prod: ms.reviewer ".net framework": "" ms.suite: "" ms.tgt_pltfrm: "" ms.topic: "artykuł" ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d caps.latest.revision: 7 Autor: "dotnet bot "ms.author: Menedżer"dotnetcontent":"wpickett"ms.workload: 
+  - "dotnet"
 ---
 # <a name="activity-library"></a>Biblioteka działań
-Ta sekcja zawiera przykłady ilustrujące zaawansowane działań niestandardowych w [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+Ta sekcja zawiera przykłady ilustrujące zaawansowane działań niestandardowych w systemie Windows Workflow Foundation (WF).  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Działanie zasad w programie .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/policy-activity-in-net-framework-4-5.md)  
- Pokazuje, jak umożliwia działanie Policy4 [!INCLUDE[wf2](../../../../includes/wf2-md.md)] w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty mają być używane w [!INCLUDE[wf2](../../../../includes/wf2-md.md)]w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF.  
+ Przedstawia sposób działania Policy4 umożliwia Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów do użycia w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF.  
   
  [Działanie niestandardowe do przełączania na zakres wartości](../../../../docs/framework/windows-workflow-foundation/samples/custom-activity-to-switch-on-a-range-of-values.md)  
  Przedstawia sposób tworzenia działań niestandardowych, rozszerzający stosowania <xref:System.Activities.Statements.Switch%601>.  
@@ -57,7 +40,7 @@ Ta sekcja zawiera przykłady ilustrujące zaawansowane działań niestandardowyc
  Pokazuje, jak `ThrottleParallelForEach` działanie przypomina <xref:System.Activities.Statements.ParallelForEach%601> działania z jednym wyjątkiem jego umożliwia ustawienie współczynnika współbieżności do ograniczenia liczby równoczesnych gałęzi do wykonania.  
   
  [Działania jednostki](../../../../docs/framework/windows-workflow-foundation/samples/entity-activities.md)  
- Pokazuje, jak używać programu ADO.NET Entity Framework z [!INCLUDE[wf2](../../../../includes/wf2-md.md)] uprościć dostęp do danych.  
+ Demonstracja upraszczanie dostępu do danych przy użyciu programu ADO.NET Entity Framework z programu Windows Workflow Foundation.  
   
  [Działania dostępu do bazy danych](../../../../docs/framework/windows-workflow-foundation/samples/database-access-activities.md)  
  Przedstawia sposób tworzenia działań, które umożliwia uzyskiwanie dostępu do baz danych do pobrania lub zmodyfikowanie informacji i użycie [ADO.NET](http://go.microsoft.com/fwlink/?LinkId=166081) dostęp do bazy danych.  
@@ -66,7 +49,7 @@ Ta sekcja zawiera przykłady ilustrujące zaawansowane działań niestandardowyc
  Pokazuje, jak zapisać działań niestandardowych, które usuwa innych działań ze ścieżki wykonywania ich skutecznie komentarzy.  
   
  [Działanie zasad zewnętrznych w programie .NET Framework 4.5](../../../../docs/framework/windows-workflow-foundation/samples/externalized-policy-activity-in-net-framework-4-5.md)  
- Przedstawia sposób działania ExternalizedPolicy4 umożliwia wykonywanie istniejących [!INCLUDE[wf2](../../../../includes/wf2-md.md)] w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiekty w [!INCLUDE[wf2](../../../../includes/wf2-md.md)] w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą aparatu reguł, który jest dostarczany w wersji 3.5 WF.  
+ Przedstawia sposób działania ExternalizedPolicy4 umożliwia wykonywanie istniejących Windows Workflow Foundation w [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] (WF 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> obiektów w programie Windows Workflow Foundation w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) bezpośrednio za pomocą, reguły oznacza to aparat zostały wydane w wersji 3.5 WF.  
   
  [Działanie NoPersistScope](../../../../docs/framework/windows-workflow-foundation/samples/nopersistscope-activity.md)  
  Pokazuje, jak do manipulowania nie można serializować i możliwe do rozporządzania stanu w przepływie pracy.  

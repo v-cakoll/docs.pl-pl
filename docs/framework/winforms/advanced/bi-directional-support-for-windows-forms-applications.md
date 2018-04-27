@@ -1,8 +1,9 @@
 ---
-title: "Dwukierunkowa obsługa aplikacji Windows Forms"
+title: Dwukierunkowa obsługa aplikacji Windows Forms
 ms.date: 09/30/2017
 ms.prod: .net-framework
-ms.technology: dotnet-winforms
+ms.technology:
+- dotnet-winforms
 ms.topic: article
 helpviewer_keywords:
 - globalization [Windows Forms], bi-directional support in Windows
@@ -13,15 +14,16 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: a8ae0e958c842c2f3cf3fbb788cad1cde6e6cc2b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d670fedb2fe693a871de8f0147b81b97b4958853
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Dwukierunkowa obsługa aplikacji Windows Forms
-Można użyć [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia aplikacji opartych na systemie Windows, które obsługują dwukierunkowego (od prawej do lewej) języków, takich jak arabski i hebrajski. Obejmuje to standardowych formularzy, okien dialogowych, formularze MDI i wszystkie formanty można pracować w nich — to znaczy, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
+Visual Studio służy do tworzenia aplikacji opartych na systemie Windows, które obsługują dwukierunkowego (od prawej do lewej) języków, takich jak arabski i hebrajski. Obejmuje to standardowych formularzy, okien dialogowych, formularze MDI i wszystkie formanty można pracować w nich — to znaczy, że wszystkie obiekty w <xref:System.Windows.Forms.Control> przestrzeni nazw.  
   
 ## <a name="culture-support"></a>Obsługa kultury  
  Culture i ustawienia kultury interfejsu użytkownika należy ustalić, jak aplikacja działa z daty, godziny, waluty i inne informacje. Obsługa kultury i kultury interfejsu użytkownika jest taka sama dla języków dwukierunkowych, podobnie jak w przypadku innych języków.   Zobacz też [klasy specyficzne dla kultury dla globalnych formularzy systemu Windows i formularzy sieci Web](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.110\)) lub [klasy specyficzne dla kultury dla globalnych formularzy systemu Windows i formularzy sieci Web](http://msdn.microsoft.com/library/94ye9x8c\(v=vs.120\))  
@@ -33,7 +35,7 @@ Można użyć [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia
   
 |Formant/składnika|Efekt właściwość RightToLeft|Efekt właściwości RightToLeftLayout zostanie zmieniona|Wymaga dublowania?|  
 |------------------------|------------------------------------|------------------------------------------|-------------------------|  
-|<xref:System.Windows.Forms.Button>|Ustawia RTL kolejność odczytu. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, i<xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Nie działa|Nie|  
+|<xref:System.Windows.Forms.Button>|Ustawia RTL kolejność odczytu. Odwraca <xref:System.Windows.Forms.ButtonBase.TextAlign%2A>, <xref:System.Windows.Forms.ButtonBase.ImageAlign%2A>, i <xref:System.Windows.Forms.ButtonBase.TextImageRelation%2A>|Nie działa|Nie|  
 |<xref:System.Windows.Forms.CheckBox>|Pole wyboru jest wyświetlane po prawej stronie tekstu|Nie działa|Nie|  
 |<xref:System.Windows.Forms.CheckedListBox>|Wszystkie pola wyboru są wyświetlane po prawej stronie tekstu|Nie działa|Nie|  
 |<xref:System.Windows.Forms.ColorDialog>|Nie dotyczy to; zależy od języka systemu operacyjnego|Nie działa|Nie|  
@@ -49,8 +51,8 @@ Można użyć [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia
 |<xref:System.Windows.Forms.GroupBox>|Podpis jest wyświetlany w prawej. Formanty podrzędne mogą dziedziczyć tej właściwości.|Użyj <xref:System.Windows.Forms.TableLayoutPanel> w formancie dublowania od prawej do lewej obsługuje|Nie|  
 |<xref:System.Windows.Forms.HScrollBar>|Rozpoczyna się wyrównany do prawej strony pola przewijania (przenośny)|Nie działa|Nie|  
 |<xref:System.Windows.Forms.ImageList>|Niewymagane|Nie działa|Nie|  
-|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i<xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
-|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i<xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
+|<xref:System.Windows.Forms.Label>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
+|<xref:System.Windows.Forms.LinkLabel>|Wyświetlane wyrównany do prawej. Odwraca <xref:System.Windows.Forms.Label.TextAlign%2A> i <xref:System.Windows.Forms.Label.ImageAlign%2A>|Nie działa|Nie|  
 |<xref:System.Windows.Forms.ListBox>|Elementy są wyrównane do lewej|Nie działa|Nie|  
 |<xref:System.Windows.Forms.ListView>|Ustawia kolejność czytania od prawej do lewej; elementy pozostają wyrównane do lewej|Odzwierciedla formantu|Tak|  
 |<xref:System.Windows.Forms.MainMenu>|Wyświetlane wyrównany z RTL kolejność czytania w czasie wykonywania (nie w czasie projektowania)|Nie działa|Nie|  
@@ -79,7 +81,7 @@ Można użyć [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] do tworzenia
 |<xref:System.Windows.Forms.ToolTip>|Ustawia RTL kolejność czytania|Nie działa|Nie|  
 |<xref:System.Windows.Forms.TrackBar>|Przewijania lub ścieżkę rozpoczyna się od prawej; gdy <xref:System.Windows.Forms.TrackBar.Orientation%2A> jest pionowy, wystąpić znaczniki osi po prawej stronie|Nie działa|Nie|  
 |<xref:System.Windows.Forms.TreeView>|Ustawia RTL tylko kolejność czytania|Odzwierciedla formantu|Tak|  
-|<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania pojawia się po lewej stronie; poziomy pasek przewijania ma przycisku przewijania w prawo|Nie obsługuje bezpośredniego; Użyj<xref:System.Windows.Forms.TableLayoutPanel>|Nie|  
+|<xref:System.Windows.Forms.UserControl>|Pionowy pasek przewijania pojawia się po lewej stronie; poziomy pasek przewijania ma przycisku przewijania w prawo|Nie obsługuje bezpośredniego; Użyj <xref:System.Windows.Forms.TableLayoutPanel>|Nie|  
 |<xref:System.Windows.Forms.VScrollBar>|Wyświetlane po lewej stronie zamiast po prawej stronie przewijanego formantów|Nie działa|Nie|  
   
 ## <a name="encoding"></a>Kodowanie  

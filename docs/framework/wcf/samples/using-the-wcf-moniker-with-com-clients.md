@@ -1,24 +1,26 @@
 ---
-title: "Używanie monikera programu WCF z klientami COM"
-ms.custom: 
+title: Używanie monikera programu WCF z klientami COM
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 18633ab7c7d54b4feafc22f6b598acc564084f4a
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322467510d499040c07d6e5e84842542aa325737
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>Używanie monikera programu WCF z klientami COM
 W tym przykładzie przedstawiono sposób użycia [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] moniker usługi do integracji usług sieci Web w środowiskach Programowanie oparte na modelu COM, na przykład Microsoft Office Visual Basic for Applications (Office VBA) lub Visual Basic 6.0. W tym przykładzie składa się z klienta Host skryptów systemu Windows (VBS), pomocnicze biblioteki klienta (.dll) i usługi biblioteki (.dll), obsługiwane przez Internet Information Services (IIS). Usługa jest usługą Kalkulator i klient modelu COM wywołuje operacji matematycznych — Dodawanie, odjąć mnożenia i dzielenia — w usłudze. Aktywność klienta jest widoczny w systemie windows — okno komunikatu.  
@@ -199,7 +201,7 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 2.  Tworzenie wersji języka C# lub Visual Basic .NET rozwiązania, postępuj zgodnie z instrukcjami [kompilowanie przykładów programu Windows Communication Foundation](../../../../docs/framework/wcf/samples/building-the-samples.md).  
   
-3.  Z [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] wiersz polecenia, otwórz folder \client\bin, w folderze danego języka.  
+3.  W wierszu polecenia programu Visual Studio Otwórz folder \client\bin, w folderze danego języka.  
   
     > [!NOTE]
     >  Jeśli używasz [!INCLUDE[wv](../../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../../includes/lserver-md.md)], Windows 7 lub Windows Server 2008 R2, upewnij się, uruchom wiersz polecenia z uprawnieniami administratora.  

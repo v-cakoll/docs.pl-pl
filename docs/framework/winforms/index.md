@@ -20,14 +20,14 @@ ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4b38cbe1bab4c3d2bf0c6ee518dd26df4ff440dc
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 5949bebe91767539c230ba166f9389f09dc2392b
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-forms"></a>Windows Forms
-Ponieważ formularze są podstawowa jednostka aplikacji, ważne jest zapewniają rozwagą do ich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, deweloperzy zwiększenia z służy do tworzenia interfejsu użytkownika i kodu w celu obsługi danych. W tym celu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] zapewnia zintegrowane środowisko programistyczne (IDE) ułatwiających pisania kodu, a także sformatowanego formantu ustaw napisane z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Przez uzupełnienie funkcji tych kontrolek w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
+Ponieważ formularze są podstawowa jednostka aplikacji, ważne jest zapewniają rozwagą do ich funkcji i projektowania. Formularz jest ostatecznie bazie pustego czy, deweloperzy zwiększenia z służy do tworzenia interfejsu użytkownika i kodu w celu obsługi danych. W tym celu programu Visual Studio zapewnia zintegrowane środowisko programistyczne (IDE) ułatwiających pisania kodu, a także sformatowanego formantu ustaw napisane z [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Przez uzupełnienie funkcji tych kontrolek w kodzie, można łatwo i szybkie opracowywanie rozwiązań, które są potrzebne.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Wprowadzenie do formularzy Windows Forms](../../../docs/framework/winforms/getting-started-with-windows-forms.md)  

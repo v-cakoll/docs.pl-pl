@@ -1,11 +1,12 @@
 ---
-title: "Manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)"
-ms.custom: 
+title: Manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - I/O [Visual Basic], walkthroughs
@@ -21,14 +22,14 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-caps.latest.revision: "18"
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: bc42dee640271ef84d35ceeb039d98741d296c5e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ed363efeeef008927f2c34b393de66ca4ccbb0bb
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>Wskazówki: manipulowanie plikami za pomocą metod .NET Framework (Visual Basic)
 W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:System.IO.StreamReader> klasy, sprawdź, czy plik jest dostępny, wyszukaj ciąg w pliku do odczytu z wystąpieniem <xref:System.IO.StreamReader> klasy, a następnie zapisać do pliku przy użyciu <xref:System.IO.StreamWriter> klasy.  
@@ -36,7 +37,7 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
 ## <a name="creating-the-application"></a>Tworzenie aplikacji  
- Uruchom [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)] i rozpocząć przez tworzenie formularza, którego użytkownik może zapisać do wskazanego pliku projektu.  
+ Uruchom program Visual Studio i rozpocząć projektu przez tworzenie formularza, którego użytkownik może zapisać do wskazanego pliku.  
   
 #### <a name="to-create-the-project"></a>Aby utworzyć projekt  
   
@@ -46,7 +47,7 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
   
 3.  W **nazwa** wpisz `MyDiary` i kliknij przycisk **OK**.  
   
-     [!INCLUDE[vsprvs](~/includes/vsprvs-md.md)]dodaje projekt do **Eksploratora rozwiązań**i **Projektant formularzy systemu Windows** otwiera.  
+     Visual Studio dodaje projekt do **Eksploratora rozwiązań**i **Projektant formularzy systemu Windows** otwiera.  
   
 4.  Dodaj formanty w poniższej tabeli do formularza i ustaw wartości odpowiednich dla ich właściwości.  
   
@@ -57,7 +58,7 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
 |<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Wiele linii**|`Entry`<br /><br /> **Wprowadź inną.**<br /><br /> `False`|  
   
 ## <a name="writing-to-the-file"></a>Zapisywanie do pliku  
- Aby dodać możliwość zapisywania do pliku za pośrednictwem aplikacji, użyj <xref:System.IO.StreamWriter> klasy. <xref:System.IO.StreamWriter>jest przeznaczony dla danych wyjściowych znak, przy użyciu określonego kodowania, natomiast <xref:System.IO.Stream> klasy jest przeznaczona dla bajtu danych wejściowych i wyjściowych. Użyj <xref:System.IO.StreamWriter> dla liniami informacji do pliku tekstowego standardowa. Aby uzyskać więcej informacji na temat <xref:System.IO.StreamWriter> , zobacz <xref:System.IO.StreamWriter>.  
+ Aby dodać możliwość zapisywania do pliku za pośrednictwem aplikacji, użyj <xref:System.IO.StreamWriter> klasy. <xref:System.IO.StreamWriter> jest przeznaczony dla danych wyjściowych znak, przy użyciu określonego kodowania, natomiast <xref:System.IO.Stream> klasy jest przeznaczona dla bajtu danych wejściowych i wyjściowych. Użyj <xref:System.IO.StreamWriter> dla liniami informacji do pliku tekstowego standardowa. Aby uzyskać więcej informacji na temat <xref:System.IO.StreamWriter> , zobacz <xref:System.IO.StreamWriter>.  
   
 #### <a name="to-add-writing-functionality"></a>Aby dodać funkcję zapisywania  
   
@@ -102,7 +103,7 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
 |<xref:System.Windows.Forms.TextBox>|**Nazwa**<br /><br /> **Widoczne**<br /><br /> **Rozmiar**<br /><br /> **Wiele linii**|`DisplayEntry`<br /><br /> `False`<br /><br /> `120,60`<br /><br /> `True`|  
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`Display`<br /><br /> **Wyświetl**|  
 |<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**|`GetEntries`<br /><br /> **Pobierz zapisy**|  
-|<xref:System.Windows.Forms.ComboBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Włączone**|`PickEntries`<br /><br /> **Wybierz pozycję**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.ComboBox>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **włączone**|`PickEntries`<br /><br /> **Wybierz pozycję**<br /><br /> `False`|  
   
 #### <a name="to-populate-the-combo-box"></a>Aby wypełnić pola kombi  
   
@@ -127,9 +128,9 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
   
 |Formant|Właściwości|Wartości|  
 |-------------|----------------|------------|  
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Włączone**|`DeleteEntry`<br /><br /> **Usuń wpis**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Włączone**|`EditEntry`<br /><br /> **Edytuj wpis**<br /><br /> `False`|  
-|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **Włączone**|`SubmitEdit`<br /><br /> **Zatwierdź Edytuj**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **włączone**|`DeleteEntry`<br /><br /> **Usuń wpis**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **włączone**|`EditEntry`<br /><br /> **Edytuj wpis**<br /><br /> `False`|  
+|<xref:System.Windows.Forms.Button>|**Nazwa**<br /><br /> **Tekst**<br /><br /> **włączone**|`SubmitEdit`<br /><br /> **Zatwierdź Edytuj**<br /><br /> `False`|  
   
 #### <a name="to-enable-deletion-and-modification-of-entries"></a>Aby włączyć, usuwanie i modyfikowanie wpisów  
   
@@ -158,4 +159,4 @@ W tym przewodniku pokazano, jak otwieranie i Odczyt pliku przy użyciu <xref:Sys
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.IO.StreamReader>  
  <xref:System.IO.StreamWriter>  
- [Instruktaże](../../../../visual-basic/walkthroughs.md)
+ [Przewodniki](../../../../visual-basic/walkthroughs.md)

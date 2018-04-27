@@ -1,22 +1,23 @@
 ---
 title: Operacje agregacji (Visual Basic)
-ms.custom: 
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-caps.latest.revision: "3"
+caps.latest.revision: 3
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 9d4b07eeb1d09d7db0f75d96629c816f66dbb128
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e2f4234b9f56794b9bfe6c56029ccc9c00ae0642
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="aggregation-operations-visual-basic"></a>Operacje agregacji (Visual Basic)
 Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości. Przykładem operacji agregacji oblicza średnią temperaturę codzienne z miesięcznej wartości dziennych temperatury.  
@@ -42,12 +43,12 @@ Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości. Przykład
 ## <a name="query-expression-syntax-examples"></a>Przykłady składni wyrażeń zapytania  
   
 ### <a name="average"></a>Średnia  
- Poniższy przykład kodu wykorzystuje `Aggregate Into Average` w klauzuli [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] do obliczenia średniej temperatury w tablicy liczb, które reprezentują temperatury.  
+ Poniższy przykład kodu wykorzystuje `Aggregate Into Average` klauzuli w języku Visual Basic do obliczenia średniej temperatury w tablicy liczb, które reprezentują temperatury.  
   
  [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
   
 ### <a name="count"></a>Liczba  
- Poniższy przykład kodu wykorzystuje `Aggregate Into Count` w klauzuli [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] do liczbę wartości w tablicy, które są większe niż lub równe 80.  
+ Poniższy przykład kodu wykorzystuje `Aggregate Into Count` klauzuli w języku Visual Basic, aby określić liczbę wartości w tablicy, które są większe niż lub równe 80.  
   
  [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
   
@@ -74,7 +75,7 @@ Operacja agregacji oblicza pojedynczą wartość z kolekcji wartości. Przykład
 ## <a name="see-also"></a>Zobacz też  
  <xref:System.Linq>  
  [Operatory standardowe zapytań — omówienie (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [AGGREGATE — klauzula](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
+ [Aggregate, klauzula](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
  [Porady: obliczanie wartości kolumn w pliku tekstowym CSV (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
  [Porady: liczba, Sum lub uśrednianie danych](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
  [Porady: znajdowanie wartości minimalnej lub maksymalnej w wyniku zapytania](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  

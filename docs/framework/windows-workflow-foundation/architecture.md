@@ -1,29 +1,30 @@
 ---
-title: "Architektura przepływu pracy systemu Windows"
-ms.custom: 
+title: Architektura przepływu pracy systemu Windows
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: ed13d7885cb8abd760aed6bd5812cb8b7c75bc02
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a3a59369738ada0c6b770d272afa9c6c79c2ce01
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="windows-workflow-architecture"></a>Architektura przepływu pracy systemu Windows
-[!INCLUDE[wf](../../../includes/wf-md.md)]podnosi poziom abstrakcji umożliwiający projektowanie aplikacji interaktywnych długotrwałe. Jednostki pracy są hermetyzowane jako działania. Działań uruchamianych w środowisku, które zapewnia ułatwienia sterowanie przepływem, obsługa wyjątków, błędów propagacji trwałości danych o stanie, ładowanie i zwalnianie przepływów pracy w toku z pamięci, śledzenia i przepływu transakcji.  
+Windows Workflow Foundation (WF) podnosi poziom abstrakcji umożliwiający projektowanie aplikacji interaktywnych długotrwałe. Jednostki pracy są hermetyzowane jako działania. Działań uruchamianych w środowisku, które zapewnia ułatwienia sterowanie przepływem, obsługa wyjątków, błędów propagacji trwałości danych o stanie, ładowanie i zwalnianie przepływów pracy w toku z pamięci, śledzenia i przepływu transakcji.  
   
 ## <a name="activity-architecture"></a>Architektura działania  
- Działania są tworzone jako typów CLR, które pochodzą z dowolnej <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, lub <xref:System.Activities.NativeActivity>, lub ich wariantów, które zwracają wartości, <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601>, lub <xref:System.Activities.NativeActivity%601>. Tworzenie działań, które pochodzą z <xref:System.Activities.Activity> zezwala użytkownikowi na składanie istniejące działania do szybkiego tworzenia jednostek pracy, które są wykonywane w środowisku przepływu pracy. <xref:System.Activities.CodeActivity>, z drugiej strony, umożliwia wykonywanie logiki do maszyny wirtualnej można tworzyć za pomocą kodu zarządzanego <xref:System.Activities.CodeActivityContext> głównie do uzyskiwania dostępu do argumentów działania. <xref:System.Activities.AsyncCodeActivity>przypomina <xref:System.Activities.CodeActivity> z tą różnicą, że może służyć do wykonania zadania asynchronicznego. Tworzenie działań, które pochodzą z <xref:System.Activities.NativeActivity> umożliwia użytkownikom uzyskiwanie dostępu do środowiska uruchomieniowego za pośrednictwem <xref:System.Activities.NativeActivityContext> dla funkcji takich jak zaplanowaniem działań podrzędnych, tworzenia zakładek, wywołania asynchroniczne, rejestrowania transakcji i inne.  
+ Działania są tworzone jako typów CLR, które pochodzą z dowolnej <xref:System.Activities.Activity>, <xref:System.Activities.CodeActivity>, <xref:System.Activities.AsyncCodeActivity>, lub <xref:System.Activities.NativeActivity>, lub ich wariantów, które zwracają wartości, <xref:System.Activities.Activity%601>, <xref:System.Activities.CodeActivity%601>, <xref:System.Activities.AsyncCodeActivity%601>, lub <xref:System.Activities.NativeActivity%601>. Tworzenie działań, które pochodzą z <xref:System.Activities.Activity> zezwala użytkownikowi na składanie istniejące działania do szybkiego tworzenia jednostek pracy, które są wykonywane w środowisku przepływu pracy. <xref:System.Activities.CodeActivity>, z drugiej strony, umożliwia wykonywanie logiki do maszyny wirtualnej można tworzyć za pomocą kodu zarządzanego <xref:System.Activities.CodeActivityContext> głównie do uzyskiwania dostępu do argumentów działania. <xref:System.Activities.AsyncCodeActivity> przypomina <xref:System.Activities.CodeActivity> z tą różnicą, że może służyć do wykonania zadania asynchronicznego. Tworzenie działań, które pochodzą z <xref:System.Activities.NativeActivity> umożliwia użytkownikom uzyskiwanie dostępu do środowiska uruchomieniowego za pośrednictwem <xref:System.Activities.NativeActivityContext> dla funkcji takich jak zaplanowaniem działań podrzędnych, tworzenia zakładek, wywołania asynchroniczne, rejestrowania transakcji i inne.  
   
  Tworzenie działań, które pochodzą z <xref:System.Activities.Activity> jest deklaratywne i tych działań można tworzyć w języku XAML. W poniższym przykładzie działanie o nazwie `Prompt` jest tworzony przy użyciu innych działań dla treści wykonywania.  
   

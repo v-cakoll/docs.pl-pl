@@ -1,24 +1,26 @@
 ---
-title: "Transakcyjne powiązanie MSMQ"
-ms.custom: 
+title: Transakcyjne powiązanie MSMQ
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 71f5cb8d-f1df-4e1e-b8a2-98e734a75c37
-caps.latest.revision: "50"
+caps.latest.revision: 50
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 702f3ac45ade5fcd2f37d256ce1213a79f012ae3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: e0529aa940c02ee79e25034e57f89d4b476861b8
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="transacted-msmq-binding"></a>Transakcyjne powiązanie MSMQ
 W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji przy użyciu usługi kolejkowania komunikatów (MSMQ).  
@@ -33,19 +35,19 @@ W tym przykładzie pokazano, jak wykonać transakcyjnych w kolejce komunikacji p
  W tym przykładzie klient wysyła komunikaty zbiorczo do usługi z zakresu transakcji. Komunikaty wysłane do kolejki następnie są odbierane przez usługę w zakresie transakcji, określonym przez usługę.  
   
  Kontrakt usługi jest `IOrderProcessor`, jak pokazano w poniższym kodzie próbki. Interfejs definiuje jednokierunkowe usługa, która jest odpowiednia do użycia w przypadku kolejek.  
-  
-```  
+
+```csharp
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 public interface IOrderProcessor  
 {  
     [OperationContract(IsOneWay = true)]  
     void SubmitPurchaseOrder(PurchaseOrder po);  
 }  
-```  
-  
+```
+
  Zachowanie usługi definiuje zachowanie operacji z `TransactionScopeRequired` ustawioną `true`. Dzięki temu, że tego samego zakresu transakcji, który służy do pobierania wiadomości z kolejki jest używana przez Menedżera zasobów, wszystkie dostępne metody. Gwarantuje również, że jeśli metoda zgłosi wyjątek, wiadomość jest zwracana do kolejki. Bez ustawienia zachowania tej operacji, kolejkowanym kanale tworzy transakcji, aby odczytać wiadomość z kolejki i zatwierdza on automatycznie przed wysyłką taki sposób, że jeśli operacja nie powiedzie się, komunikat zostaną utracone. Najbardziej typowym scenariuszem jest dla operacji usługi zarejestrować się w transakcji, która służy do odczytywania wiadomości z kolejki, jak pokazano w poniższym kodzie.  
-  
-```  
+
+```csharp
  // This service class that implements the service contract.  
  // This added code writes output to the console window.  
  public class OrderProcessorService : IOrderProcessor  
@@ -58,11 +60,11 @@ public interface IOrderProcessor
      }  
   …  
 }  
-```  
-  
+```
+
  Usługa jest samodzielnie hostowana. Za pomocą transportu MSMQ, kolejki używane musi zostać utworzona z wyprzedzeniem. Można to zrobić ręcznie lub za pomocą kodu. W tym przykładzie Usługa zawiera kod, aby sprawdzić obecność kolejki i utworzyć kolejkę, jeśli nie istnieje. Nazwa kolejki jest do odczytu z pliku konfiguracji. Adres podstawowy jest używany przez [narzędzie narzędzia metadanych elementu ServiceModel (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) do generowania serwera proxy do usługi.  
-  
-```  
+
+```csharp
 // Host the service within this EXE console application.  
 public static void Main()  
 {  
@@ -89,8 +91,8 @@ public static void Main()
         serviceHost.Close();  
     }  
 }  
-```  
-  
+```
+
  Nazwa kolejki usługi MSMQ określono w sekcji appSettings pliku konfiguracji, jak pokazano w poniższych Przykładowa konfiguracja.  
   
 ```xml  
@@ -103,8 +105,8 @@ public static void Main()
 >  Nazwa kolejki używa pojedynczego znaku kropki (.) dla komputera lokalnego i separatorów ukośnika w jego ścieżki, podczas tworzenia kolejki, przy użyciu <xref:System.Messaging>. [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] Punktu końcowego używa adres kolejki z Schemat net.msmq, używa "localhost", określający komputera lokalnego i używa przekazywania ukośniki w swojej ścieżce.  
   
  Klient tworzy zakresu transakcji. Komunikacja z kolejki odbywa się w zakresie transakcji, co powoduje traktowane jako Atomowej jednostki, w którym wszystkie komunikaty są wysyłane do kolejki lub brak komunikaty są wysyłane do kolejki. Transakcja zostaje zatwierdzona przez wywołanie metody <xref:System.Transactions.TransactionScope.Complete%2A> w zakresie transakcji.  
-  
-```  
+
+```csharp
 // Create a client.  
 OrderProcessorClient client = new OrderProcessorClient();  
   
@@ -142,14 +144,14 @@ client.Close();
 Console.WriteLine();  
 Console.WriteLine("Press <ENTER> to terminate client.");  
 Console.ReadLine();  
-```  
-  
+```
+
  Aby sprawdzić, czy działają transakcji, zmodyfikować klienta komentowania zasięg transakcji, jak pokazano w poniższym kodzie próbki, ponownie skompiluj rozwiązanie i klientem.  
-  
-```  
+
+```csharp
 //scope.Complete();  
-```  
-  
+```
+
  Ponieważ transakcja nie jest ukończona, nie są wysyłane wiadomości do kolejki.  
   
  Po uruchomieniu próbki działania klienta i usługi są wyświetlane w oknach konsoli usługi i klienta. Można wyświetlić wiadomości receive usługi z klienta. Naciśnij klawisz ENTER w każdym okna konsoli można zamknąć usługę i klienta. Należy zauważyć, że usługi kolejkowania wiadomości jest w użyciu, klient i usługa nie być uruchomiona w tym samym czasie. Możesz z klientem, zamknij go, a następnie uruchom usługi i nadal odbiera komunikaty.  

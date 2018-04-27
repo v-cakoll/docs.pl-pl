@@ -1,29 +1,30 @@
 ---
-title: "Porady: Tworzenie niestandardowych śledzenia uczestnika"
-ms.custom: 
+title: 'Porady: Tworzenie niestandardowych śledzenia uczestnika'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 345fd696559ba52d41874ff774bd46a2d37f6e6f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d53035c2fb41800a91d3cdea134ae811a09fa3e9
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>Porady: Tworzenie niestandardowych śledzenia uczestnika
-Śledzenia przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowiska uruchomieniowego przepływu pracy emituje rekordy śledzenia, które opisują zdarzenia cyklu życia przepływu pracy, zdarzenia cyklu życia działania zakładki wznawianiu i błędów. Te rekordy śledzenia są używane przez uczestników śledzenia. [!INCLUDE[wf](../../../includes/wf-md.md)]obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. Ten samouczek krok opisuje sposób tworzenia niestandardowych śledzenia uczestnika i profilu śledzenia, który przechwytywania danych wyjściowych `WriteLine` działań, dzięki czemu mogą być wyświetlane dla użytkownika.  
+Śledzenia przepływu pracy zapewnia wgląd w stan wykonywania przepływu pracy. Środowiska uruchomieniowego przepływu pracy emituje rekordy śledzenia, które opisują zdarzenia cyklu życia przepływu pracy, zdarzenia cyklu życia działania zakładki wznawianiu i błędów. Te rekordy śledzenia są używane przez uczestników śledzenia. Windows Workflow Foundation (WF) obejmuje uczestnika standardowe śledzenia, który zapisuje rekordy śledzenia jako zdarzenia funkcji Śledzenie zdarzeń systemu Windows (). Które nie spełnia wymagań, można także napisać uczestnikiem niestandardowe śledzenia. Ten samouczek krok opisuje sposób tworzenia niestandardowych śledzenia uczestnika i profilu śledzenia, który przechwytywania danych wyjściowych `WriteLine` działań, dzięki czemu mogą być wyświetlane dla użytkownika.  
   
 > [!NOTE]
 >  Każdego tematu w samouczku wprowadzenie zależy od poprzednich tematów. Aby ukończyć w tym temacie, należy wykonać poprzednie tematy. Aby pobrać wersję zakończone lub wyświetlić Przewodnik wideo samouczka, zobacz [Windows Workflow Foundation (WF45) — Samouczek wprowadzający](http://go.microsoft.com/fwlink/?LinkID=248976).  
@@ -38,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Aby skompilować i uruchomić aplikację](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_BuildAndRun)  
   
-###  <a name="BKMK_CustomTrackingParticipant"></a>Aby utworzyć uczestnika śledzenia niestandardowych  
+###  <a name="BKMK_CustomTrackingParticipant"></a> Aby utworzyć uczestnika śledzenia niestandardowych  
   
 1.  Kliknij prawym przyciskiem myszy **NumberGuessWorkflowHost** w **Eksploratora rozwiązań** i wybierz polecenie **Dodaj**, **klasy**. Typ `StatusTrackingParticipant` do **nazwa** i kliknij **Dodaj**.  
   
@@ -114,7 +115,7 @@ ms.lasthandoff: 12/22/2017
   
      Jeśli nie określono żadnego profilu śledzenia, używany jest domyślny profilu śledzenia. Gdy używany jest domyślny profil śledzenia, śledzenie rekordów są emitowane dla wszystkich `ActivityStates`. Ponieważ musimy przechwytywania tekst raz w ramach cyklem życia `WriteLine` działania, możemy tylko Wyodrębnij tekst z `ActivityStates.Executing` stanu. W [utworzyć profilu śledzenia i zarejestrować uczestnika śledzenia](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md#BKMK_TrackingProfile), tworzony jest profil śledzenia, który określa, że tylko `WriteLine` `ActivityStates.Executing` są emitowane rekordów śledzenia.  
   
-###  <a name="BKMK_TrackingProfile"></a>Aby utworzyć profil śledzenia i zarejestrować uczestnika śledzenia  
+###  <a name="BKMK_TrackingProfile"></a> Aby utworzyć profil śledzenia i zarejestrować uczestnika śledzenia  
   
 1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **kod widoku**.  
   
@@ -235,7 +236,7 @@ ms.lasthandoff: 12/22/2017
         // Workflow lifecycle handlers...  
     ```  
   
-###  <a name="BKMK_DisplayTracking"></a>Aby wyświetlić informacje o śledzeniu  
+###  <a name="BKMK_DisplayTracking"></a> Aby wyświetlić informacje o śledzeniu  
   
 1.  Kliknij prawym przyciskiem myszy **WorkflowHostForm** w **Eksploratora rozwiązań** i wybierz polecenie **kod widoku**.  
   
@@ -330,7 +331,7 @@ ms.lasthandoff: 12/22/2017
     }  
     ```  
   
-###  <a name="BKMK_BuildAndRun"></a>Aby skompilować i uruchomić aplikację  
+###  <a name="BKMK_BuildAndRun"></a> Aby skompilować i uruchomić aplikację  
   
 1.  Naciśnij klawisze Ctrl + Shift + B do skompilowania aplikacji.  
   

@@ -1,11 +1,12 @@
 ---
-title: "Zagadnienia dotyczące przeciążania procedur (Visual Basic)"
-ms.custom: 
+title: Zagadnienia dotyczące przeciążania procedur (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - signatures [Visual Basic], ParamArray arguments
@@ -31,14 +32,14 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-caps.latest.revision: "26"
+caps.latest.revision: 26
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 3c9a9a4759d4ec2dd87778c49c4fd82a08c081a8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: ac4bc47f9e781f83c7930efffedd40d9c25c2ec2
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>Zagadnienia dotyczące przeciążania procedur (Visual Basic)
 Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji przeciążona. Zwykle oznacza to, że każda wersja należy określić inną listą parametrów. Aby uzyskać więcej informacji, zobacz "Inny podpis" w [przeciążanie procedury](./procedure-overloading.md).  
@@ -50,7 +51,7 @@ Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji pr
 ## <a name="alternatives-to-overloaded-versions"></a>Alternatywy dla wersji przeciążone  
  Czasami masz alternatywy dla przeciążonej wersje, zwłaszcza w przypadku obecności argumentów jest opcjonalny, lub ich numer zmiennej.  
   
- Należy pamiętać, że argumenty opcjonalne nie są zawsze obsługiwane przez wszystkie języki, a tablice parametrów są ograniczone do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]. Jeśli piszesz procedury, która może być wywoływana z kodu napisanego w jednym z kilku różnych języków przeciążony oferta wersji największą elastyczność.  
+ Należy pamiętać, że argumenty opcjonalne nie są zawsze obsługiwane przez wszystkie języki, a tablice parametrów są ograniczone do języka Visual Basic. Jeśli piszesz procedury, która może być wywoływana z kodu napisanego w jednym z kilku różnych języków przeciążony oferta wersji największą elastyczność.  
   
 ### <a name="overloads-and-optional-arguments"></a>Przeciążenia i argumentów opcjonalnych  
  Kod wywołujący może opcjonalnie podaj lub pominąć jeden lub więcej argumentów, można zdefiniować wiele wersji przeciążone lub opcjonalne parametry.  
@@ -104,7 +105,7 @@ Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji pr
 ## <a name="implicit-overloads-for-a-paramarray-parameter"></a>Niejawne przeładowania dla parametru ParamArray  
  Kompilator uwzględnia procedury z [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md) parametru nieograniczoną liczbę przeciążenia, różniące się od siebie co kod wywołujący przekazuje do tablicy parametrów w następujący sposób:  
   
--   Przeciążeniami dla gdy kod wywołujący nie dostarcza argument`ParamArray`  
+-   Przeciążeniami dla gdy kod wywołujący nie dostarcza argument `ParamArray`  
   
 -   Przeciążeniami dla podczas wywoływania kodu dostarcza Jednowymiarowa tablica `ParamArray` typ elementu  
   
@@ -132,10 +133,10 @@ Przeciążanie procedury, należy używać innej *podpisu* dla każdej wersji pr
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Procedury rozwiązywania problemów](./troubleshooting-procedures.md)  
- [Porady: Definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
- [Porady: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
- [Porady: przeciążanie procedury wykorzystującej parametry opcjonalne](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
- [Porady: przeciążanie procedury wykorzystującej nieokreśloną liczbę parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
+ [Rozwiązywanie problemów z procedurami](./troubleshooting-procedures.md)  
+ [Instrukcje: definiowanie wielu wersji procedury](./how-to-define-multiple-versions-of-a-procedure.md)  
+ [Instrukcje: wywoływanie procedury przeciążenia](./how-to-call-an-overloaded-procedure.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z parametrów opcjonalnych](./how-to-overload-a-procedure-that-takes-optional-parameters.md)  
+ [Instrukcje: przeciążanie procedury korzystającej z nieokreślonej liczby parametrów](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)  
  [Rozpoznanie przeciążenia](./overload-resolution.md)  
- [Przeciążenia](../../../../visual-basic/language-reference/modifiers/overloads.md)
+ [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)

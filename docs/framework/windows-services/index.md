@@ -24,14 +24,14 @@ ms.author: ghogen
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ed6a741a6f86b492929598613a0c10ae08981c5
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: cc01c836daa73b1a39ceab0b523791b6a520dc70
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="developing-windows-service-applications"></a>Tworzenie aplikacji usług systemu Windows
-Za pomocą programu Microsoft [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] lub Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawu SDK, można łatwo utworzyć usług przez utworzenie aplikacji, która jest zainstalowany jako usługa. Ten typ aplikacji nosi nazwę usługi systemu Windows. Z funkcjami framework można tworzenie usług, je zainstalować i uruchomić, zatrzymać i inny sposób kontroluje ich zachowanie.  
+Za pomocą programu Microsoft Visual Studio lub Microsoft [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zestawu SDK, można łatwo utworzyć usług przez utworzenie aplikacji, która jest zainstalowany jako usługa. Ten typ aplikacji nosi nazwę usługi systemu Windows. Z funkcjami framework można tworzenie usług, je zainstalować i uruchomić, zatrzymać i inny sposób kontroluje ich zachowanie.  
   
 > [!WARNING]
 >  Szablon usługi systemu Windows dla języka C++ nie została uwzględniona w programie Visual Studio 2010. Aby utworzyć usługi systemu Windows, możesz utworzyć usługi w kodzie zarządzanym w Visual C# lub Visual Basic, który może współpracować z istniejącego kodu C++, jeśli jest to wymagane, lub można utworzyć usługi systemu Windows w natywnym kodzie C++ za pomocą [Kreator projektu ATL](/cpp/atl/reference/atl-project-wizard).  

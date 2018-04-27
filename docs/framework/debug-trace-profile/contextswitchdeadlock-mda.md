@@ -1,12 +1,13 @@
 ---
 title: contextSwitchDeadlock MDA
-ms.custom: 
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - deadlocks [.NET Framework]
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-caps.latest.revision: "22"
+caps.latest.revision: 22
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 816afbae0cca18de24c11152541a509b54c119b8
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 2f3ee9aef3bc824ee25e577a5dbd14aeaa210be3
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 `contextSwitchDeadlock` Zarządzany Asystent debugowania (MDA) została aktywowana po wykryciu zakleszczenie podczas próby przejścia kontekstu COM.  
@@ -54,7 +56,7 @@ ms.lasthandoff: 12/22/2017
  Aby ustalić, czy MDA fałszywie aktywowana, wyłącz wszystkie punkty przerwania, ponownie uruchom aplikację i zezwolenie na uruchamianie bez zatrzymania. Jeśli nie włączono MDA, prawdopodobnie początkowej aktywacji była wartość false. W takim przypadku należy wyłączyć MDA w celu uniknięcia konfliktów z sesji debugowania.  
   
 > [!NOTE]
->  To zdarzenie MDA znajduje się w domyślnym zestawem dla [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] i nowszych wersjach. Podczas procesu hostingu jest włączone w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], nie można wyłączyć mda ustawionych w domyślnym. Proces hostingu jest włączona domyślnie, więc musi być jawnie wyłączone. Aby dowiedzieć się, jak wyłączyć mda, zobacz "Włączanie i wyłączanie mda" w [diagnozowanie problemów z Asystenci zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
+>  To zdarzenie MDA znajduje się w domyślnym zestawem dla [!INCLUDE[vsprvslong](../../../includes/vsprvslong-md.md)] i nowszych wersjach. Podczas procesu hostingu jest włączone w programie Visual Studio, nie można wyłączyć mda ustawionych w domyślnym. Proces hostingu jest włączona domyślnie, więc musi być jawnie wyłączone. Aby dowiedzieć się, jak wyłączyć mda, zobacz "Włączanie i wyłączanie mda" w [diagnozowanie problemów z Asystenci zarządzanego debugowania](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md).  
   
 ## <a name="resolution"></a>Rozwiązanie  
  Wykonaj COM zasady dotyczące przekazywanie komunikatów STA.  

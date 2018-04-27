@@ -1,23 +1,24 @@
 ---
-title: "Zarządzanie wystąpieniami wstrzymane"
-ms.custom: 
+title: Zarządzanie wystąpieniami wstrzymane
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 6e04f1e2f334993975b2c4261efdc28ba318dfa3
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5f5073e9de217637141d7e3c9d70bb6a0b7a9cd0
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="suspended-instance-management"></a>Zarządzanie wystąpieniami wstrzymane
 W tym przykładzie pokazano, jak zarządzać wystąpienia przepływu pracy, które zostało zawieszone.  Domyślnym działaniem <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> jest `AbandonAndSuspend`. Oznacza to, że domyślnie nieobsługiwane wyjątki rzucane z wystąpieniem przepływu pracy hostowanych w <xref:System.ServiceModel.WorkflowServiceHost> spowoduje wystąpienie można usunąć z pamięci (porzucone) i wersji niezawodny/utrwalony wystąpienia może być oznaczony jako zawieszone. Nie będzie można uruchamiać, dopóki zostanie Anulowano wystąpienie Wstrzymany przepływ pracy.  
@@ -25,7 +26,7 @@ W tym przykładzie pokazano, jak zarządzać wystąpienia przepływu pracy, któ
  W przykładowych pokazano, jak narzędzie wiersza polecenia można zaimplementować zapytania dla wystąpień wstrzymania i sposobu przesyłania opcję, aby wznowić, lub przerywania wystąpienia użytkownika. W tym przykładzie usługi przepływu pracy celowo zgłasza wyjątek, co powoduje stanie zawieszone. Narzędzie wiersza polecenia mogą następnie służyć do zapytania dla tego wystąpienia, a następnie Wznów lub przerywania wystąpienie.  
   
 ## <a name="demonstrates"></a>Demonstracje  
- <xref:System.ServiceModel.WorkflowServiceHost>z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> w [!INCLUDE[wf](../../../../includes/wf-md.md)].  
+ <xref:System.ServiceModel.WorkflowServiceHost> z <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> i <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> programie Windows Workflow Foundation (WF).  
   
 ## <a name="discussion"></a>Omówienie  
  Narzędzie wiersza polecenia zaimplementowana w tym przykładzie jest specyficzna dla Implementacja magazynu wystąpienia SQL, który jest dostarczany w [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]. Jeśli masz niestandardowej implementacji w magazynie wystąpień, a następnie tego narzędzia można dostosować poprzez zastąpienie `WorkflowInstanceCommand` implementacji w przykładzie z implementacji, które są specyficzne dla sklepu wystąpienia.  

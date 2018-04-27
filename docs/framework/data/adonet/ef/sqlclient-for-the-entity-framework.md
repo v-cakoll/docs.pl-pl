@@ -16,11 +16,11 @@ ms.author: douglasl
 manager: craigg
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2801ad445be073f2cd4725d04a0c731e8bfcdd1b
-ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
+ms.openlocfilehash: 5949ee1931b9ab9adf1f14b921432cae531cebd5
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="sqlclient-for-the-entity-framework"></a>SqlClient Entity Framework
 W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Server (SqlClient), dzięki czemu Entity Framework do pracy za pośrednictwem programu Microsoft SQL Server.  
@@ -42,7 +42,7 @@ W tej sekcji opisano dostawcy danych programu .NET Framework dla programu SQL Se
 |2000|2005|2008|  
   
 > [!NOTE]
->  Począwszy od [!INCLUDE[vsprvs](../../../../../includes/vsprvs-md.md)] 2010, [narzędzi modelu danych jednostki ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) nie obsługują programu SQL Server 2000.  
+>  Począwszy od programu Visual Studio 2010, [narzędzi modelu danych jednostki ADO.NET](http://msdn.microsoft.com/library/91076853-0881-421b-837a-f582f36be527) nie obsługują programu SQL Server 2000.  
   
 ## <a name="provider-namespace-name"></a>Nazwa dostawcy Namespace  
  Wszystkich dostawców musi określać przestrzeń nazw. Ta właściwość określa, że Entity Framework, które prefiks jest używany przez dostawcę dla określonych elementów składowych, takich jak typy i funkcje. Przestrzeń nazw dla manifestów dostawca SqlClient jest `SqlServer`. Aby uzyskać więcej informacji na temat obszarów nazw, zobacz [przestrzeni nazw](../../../../../docs/framework/data/adonet/ef/language-reference/namespaces-entity-sql.md).  

@@ -13,28 +13,28 @@ ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 72234f4707e891abd00744db8cebe04114865522
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 5f71267bb1bcbe5b3e3e47cea193488ac4e1596d
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-basic-programming-guide"></a>Przewodnik programowania w Visual Basic
-Podobnie jak w przypadku nowoczesny język programowania, [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] obsługuje wielu typowych narzędzi programistycznych i elementy języka. Ten przewodnik zawiera opis głównych elementów programowania w języku [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+Podobnie jak w przypadku dowolnego nowoczesny język programowania Visual Basic obsługuje wielu typowych narzędzi programistycznych i elementy języka. Ten przewodnik zawiera opis głównych elementów programowania w języku Visual Basic.  
   
 ## <a name="in-this-section"></a>W tej sekcji  
  [Struktura programu i konwencje związane z kodami](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- Zawiera dokumentacja podstawowej struktury i kod konwencje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], na przykład konwencji nazewnictwa, komentarze w kodzie i ograniczenia w obrębie [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Zawiera dokumentacja podstawowe konwencje struktury i kodu języka Visual Basic, takie jak konwencji nazewnictwa, komentarze w kodzie i ograniczenia w języku Visual Basic.  
   
  [Funkcje języka Visual Basic](../../visual-basic/programming-guide/language-features/index.md)  
- Zawiera łącza do tematów, które przedstawienie i omówienie ważne funkcje [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], łącznie z literały LINQ i XML.  
+ Zawiera linki do tematów, w których przedstawiono i omówiono ważne funkcje języka Visual Basic, w tym literały LINQ i XML.  
   
- [Współdziałanie z COM](../../visual-basic/programming-guide/com-interop/index.md)  
- Wyjaśniono problemami ze współdziałaniem skojarzone z tworzenie i używanie składnika object model (COM) obiekty o [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ [Usługa międzyoperacyjna modelu COM](../../visual-basic/programming-guide/com-interop/index.md)  
+ Wyjaśniono problemami ze współdziałaniem skojarzone z tworzenie i używanie składnika object model (COM) obiektów za pomocą Visual Basic.  
   
 ## <a name="related-sections"></a>Sekcje pokrewne  
  [Dokumentacja języka Visual Basic](../../visual-basic/language-reference/index.md)  
- Udostępnia informacje na temat różnych aspektów [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] programowania.  
+ Zawiera informacje o różnych aspektach programowania w języku Visual Basic.  
   
  [Kompilator w wierszu polecenia programu Visual Basic](../../visual-basic/reference/command-line-compiler/index.md)  
- Udostępnia informacje na temat używania [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora wiersza polecenia, opcje kompilatora i narzędzie uaktualniania słów kluczowych.
+ Udostępnia informacje na temat używania kompilatora wiersza polecenia języka Visual Basic, opcje kompilatora i narzędzie uaktualniania słów kluczowych.

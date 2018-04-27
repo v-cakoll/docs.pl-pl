@@ -1,23 +1,24 @@
 ---
-title: "Zewnętrzne Toolkit zestaw reguł"
-ms.custom: 
+title: Zewnętrzne Toolkit zestaw reguł
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-caps.latest.revision: "7"
+caps.latest.revision: 7
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 7fbac6bf8be169aca8ad61c69b8d024f44928d8b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 40e28bb2b17e511a1b8953ccc8ff9bdf4f0f7392
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="external-ruleset-toolkit"></a>Zewnętrzne Toolkit zestaw reguł
 Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częścią zestawu. W niektórych scenariuszach można zachować zestawów reguł, niezależnie od zestawu, dzięki czemu mogą być aktualizowane bez ponowne tworzenie i wdrażanie zestawu przepływu pracy. W tym przykładzie pozwala na zarządzanie i edytować zestawów reguł w bazie danych oraz uzyskać dostęp do tych zestawów reguł z przepływu pracy w czasie wykonywania. Dzięki temu uruchomionych wystąpień przepływu pracy automatycznie zastosować zmian zestaw reguł.  
@@ -27,7 +28,7 @@ Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częśc
 > [!NOTE]
 >  W tym przykładzie wymaga [programu Microsoft SQL Server](http://go.microsoft.com/fwlink/?LinkId=96181).  
   
- [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)]zawiera Edytor zestaw reguł, w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; go serializuje zdefiniowanych Obiekt RuleSet w pliku Rules skojarzonego z przepływem pracy ( `Policy` działanie jest uruchomione wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest kompilowany do zestawu jako zasób podczas kompilowania projektu przepływu pracy.  
+ [!INCLUDE[vsprvsext](../../../../includes/vsprvsext-md.md)] zawiera Edytor zestaw reguł, w ramach programu Windows Workflow Foundation (WF). Ten edytor można uruchomić przez dwukrotne kliknięcie `Policy` działania w przepływie pracy; go serializuje zdefiniowanych Obiekt RuleSet w pliku Rules skojarzonego z przepływem pracy ( `Policy` działanie jest uruchomione wystąpienie zestaw reguł dla przepływu pracy). Plik Rules jest kompilowany do zestawu jako zasób podczas kompilowania projektu przepływu pracy.  
   
  Składniki następujące przykładowe:  
   
@@ -67,9 +68,9 @@ Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częśc
   
  Rysunek 3: Zestaw reguł edytora  
   
- To jest ponownie hosting okno dialogowe Edytor, który jest częścią programu Windows Workflow Foundation [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] dodatku. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Reguły są tworzone na typ docelowy (takich jak przepływ pracy), który jest skojarzony z RuleSet w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne, **selektor typu przepływupracy/** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.  
+ To jest ponownie hosting okno dialogowe Edytor, który wchodzi w skład dodatku Windows Workflow Foundation programu Visual Studio. Zapewnia te same funkcje, w tym obsługę funkcji Intellisense. Reguły są tworzone na typ docelowy (takich jak przepływ pracy), który jest skojarzony z RuleSet w narzędziu; Po kliknięciu **Przeglądaj** w oknie dialogowym Narzędzia główne, **selektor typu przepływupracy/** zostanie wyświetlone okno dialogowe, jak pokazano na rysunku 4.  
   
- ![Przepływ pracy &#47; Typ zaznaczenia](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
+ ![Przepływ pracy &#47;wpisz wybór](../../../../docs/framework/windows-workflow-foundation/samples/media/71f08d57-e8f2-499e-8151-ece2cbdcabfd.gif "71f08d57-e8f2-499e-8151-ece2cbdcabfd")  
   
  Rysunek 4: Selektor typu/przepływu pracy  
   
@@ -83,7 +84,7 @@ Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częśc
   
  Rysunek 5: Błędy sprawdzania poprawności  
   
- Z **danych** menu Narzędzia, można importować i eksportować zestawów reguł. Po kliknięciu **importu**, pojawi się okno dialogowe selektor plików, w którym można wybrać plik rules. Może to być lub może nie być plik początkowo utworzony w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)]. Plik Rules powinien zawierać serializacji `RuleDefinitions` wystąpienia, które zawiera kolekcję warunków i kolekcję zestawów reguł. Narzędzie nie używa Kolekcja warunków, ale używa `RuleDefinitions` format Rules, aby zezwolić na interakcję z [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] środowiska.  
+ Z **danych** menu Narzędzia, można importować i eksportować zestawów reguł. Po kliknięciu **importu**, pojawi się okno dialogowe selektor plików, w którym można wybrać plik rules. To może lub nie może być plikiem początkowo utworzony w programie Visual Studio. Plik Rules powinien zawierać serializacji `RuleDefinitions` wystąpienia, które zawiera kolekcję warunków i kolekcję zestawów reguł. Narzędzie nie używa Kolekcja warunków, ale używa `RuleDefinitions` format Rules, aby zezwolić na interakcję z środowiska Visual Studio.  
   
  Po wybraniu pliku Rules **selektora RuleSet** zostanie wyświetlone okno dialogowe (patrz rysunek 6). Okno dialogowe umożliwia Wybierz zestawy reguł z pliku, który chcesz zaimportować (wartość domyślna Określa wszystkie zestawy reguł). Zestawy reguł w pliku Rules nie mają numery wersji, ponieważ ich wersji w ramach projektu WF jest taka sama jak wersja zestawu. Podczas procesu importowania narzędzie automatycznie przypisuje dalej dostępne główny numer wersji (które można zmienić po zaimportowaniu); można wyświetlić numery wersji przypisanej **selektora RuleSet** listy.  
   
@@ -141,7 +142,7 @@ Zwykle podczas stosowania reguł aplikacji przepływu pracy, reguły są częśc
   
 9. Plik konfiguracji aplikacji jest dodawane do projektu przepływu pracy, aby określić parametry połączenia dla bazy danych mają być używane przez usługę. Powinno to być te same parametry połączenia używane przez narzędzie zestaw reguł, które bazy danych, która zawiera tabelę zestaw reguł.  
   
-10. Teraz możesz uruchomić `RuleSetToolkitUsageSample` projektu, jak w przypadku innych aplikacji konsolowej przepływu pracy. Naciśnij klawisz F5 lub Ctrl + F5 w [!INCLUDE[vsprvs](../../../../includes/vsprvs-md.md)] lub uruchom plik RuleSetToolkitUsageSample.exe bezpośrednio.  
+10. Teraz możesz uruchomić `RuleSetToolkitUsageSample` projektu, jak w przypadku innych aplikacji konsolowej przepływu pracy. Naciśnij klawisz F5 lub Ctrl + F5 w programie Visual Studio lub uruchom plik RuleSetToolkitUsageSample.exe bezpośrednio.  
   
     > [!NOTE]
     >  Należy zamknąć narzędzie zestaw reguł, aby ponownie skompilować próbki użycia, ponieważ narzędzie ładuje zestaw próbki użycia.

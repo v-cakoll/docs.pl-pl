@@ -1,9 +1,9 @@
 ---
-title: "Właściwości osi elementu podrzędnego XML (Visual Basic)"
+title: Właściwości osi elementu podrzędnego XML (Visual Basic)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-caps.latest.revision: 
+caps.latest.revision: 18
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: ea4db763bbed651a01845b49395255586cb60113
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: dadb21f4985497a90cc62f98c5fb2abdd7cc2781
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>Właściwości osi elementu podrzędnego XML (Visual Basic)
 Zapewnia dostęp do jednego z następujących elementów podrzędnych: <xref:System.Xml.Linq.XElement> obiektu <xref:System.Xml.Linq.XDocument> obiektu, to zbiór <xref:System.Xml.Linq.XElement> obiektów lub kolekcji <xref:System.Xml.Linq.XDocument> obiektów.  
@@ -38,10 +38,10 @@ object.<child>
   
 |Termin|Definicja|  
 |---|---|  
-|`object`|Wymagany. <xref:System.Xml.Linq.XElement> Obiektu <xref:System.Xml.Linq.XDocument> obiektu, to zbiór <xref:System.Xml.Linq.XElement> obiektów lub zbiór <xref:System.Xml.Linq.XDocument> obiektów.|  
-|.<|Wymagany. Oznacza początek właściwości osi elementu podrzędnego.|  
-|`child`|Wymagany. Nazwa węzłów podrzędnych można uzyskać dostępu do formularza [`prefix``:`]`name`.<br /><br /> -   `Prefix`-Opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi być globalnej przestrzeni nazw XML zdefiniowany za pomocą `Imports` instrukcji.<br />-   `Name`-Wymagane. Nazwy węzła podrzędnego lokalnego. Zobacz [nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
-|>|Wymagany. Oznacza koniec właściwości osi elementu podrzędnego.|  
+|`object`|Wymagana. <xref:System.Xml.Linq.XElement> Obiektu <xref:System.Xml.Linq.XDocument> obiektu, to zbiór <xref:System.Xml.Linq.XElement> obiektów lub zbiór <xref:System.Xml.Linq.XDocument> obiektów.|  
+|.<|Wymagana. Oznacza początek właściwości osi elementu podrzędnego.|  
+|`child`|Wymagana. Nazwa węzłów podrzędnych można uzyskać dostępu do formularza [`prefix``:`]`name`.<br /><br /> -   `Prefix` -Opcjonalne. Prefiks przestrzeni nazw XML dla węzła podrzędnego. Musi być globalnej przestrzeni nazw XML zdefiniowany za pomocą `Imports` instrukcji.<br />-   `Name` -Wymagane. Nazwy węzła podrzędnego lokalnego. Zobacz [nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md).|  
+|>|Wymagana. Oznacza koniec właściwości osi elementu podrzędnego.|  
   
 ## <a name="return-value"></a>Wartość zwracana  
  Kolekcja <xref:System.Xml.Linq.XElement> obiektów.  
@@ -49,7 +49,7 @@ object.<child>
 ## <a name="remarks"></a>Uwagi  
  Umożliwia właściwości osi elementu podrzędnego XML węzłów podrzędnych dostępu według nazw z <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> obiekt, lub z kolekcji <xref:System.Xml.Linq.XElement> lub <xref:System.Xml.Linq.XDocument> obiektów. Użyj pliku XML `Value` właściwość, aby uzyskać dostęp do wartości pierwszego węzła podrzędnego w zwracanej kolekcji. Aby uzyskać więcej informacji, zobacz [właściwość wartości XML](../../../visual-basic/language-reference/xml-axis/xml-value-property.md).  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] Kompilatora konwertuje właściwości osi podrzędnej wywołań <xref:System.Xml.Linq.XContainer.Elements%2A> metody.  
+ Kompilator Visual Basic konwertuje właściwości osi podrzędnej wywołań <xref:System.Xml.Linq.XContainer.Elements%2A> metody.  
   
 ## <a name="xml-namespaces"></a>Przestrzenie nazw XML  
  Nazwa właściwości osi podrzędnej można użyć tylko takie prefiksy przestrzeni nazw XML, zadeklarowany globalnie z `Imports` instrukcji. Nie można go użyć lokalnie zadeklarowane w literałach XML elementu prefiksy przestrzeni nazw XML. Aby uzyskać więcej informacji, zobacz [Importy — instrukcja (XML Namespace)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md).  
@@ -86,4 +86,4 @@ object.<child>
  [Właściwości osi XML](../../../visual-basic/language-reference/xml-axis/xml-axis-properties.md)  
  [Literały XML](../../../visual-basic/language-reference/xml-literals/index.md)  
  [Tworzenie XML w Visual Basic](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)  
- [Nazwy deklarowanych elementów XML oraz atrybuty](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+ [Nazwy deklarowanych elementów i atrybutów XML](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

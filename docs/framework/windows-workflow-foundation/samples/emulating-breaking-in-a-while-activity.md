@@ -1,34 +1,35 @@
 ---
-title: "Emulowanie fundamentalne za pewien czas działania"
-ms.custom: 
+title: Emulowanie fundamentalne za pewien czas działania
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: ddff715d-d623-4b54-b841-60bacbc3ca21
-caps.latest.revision: "10"
+caps.latest.revision: 10
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 22a03c2e7dcc8d024ed407e7df24a4e9db4e2bf6
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 27264832dd82719d7ccb81e1398df343653515b1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="emulating-breaking-in-a-while-activity"></a>Emulowanie fundamentalne za pewien czas działania
 W przykładzie pokazano sposób podziału pętli mechanizmu z następujących działań: <xref:System.Activities.Statements.DoWhile>, <xref:System.Activities.Statements.ForEach%601>, <xref:System.Activities.Statements.While>, i <xref:System.Activities.Statements.ParallelForEach%601>.  
   
- Jest to przydatne ponieważ [!INCLUDE[wf](../../../../includes/wf-md.md)] nie zawiera żadnych działań, aby przerwać wykonywanie tych pętle.  
+ Jest to przydatne, ponieważ Windows Workflow Foundation (WF) nie zawiera żadnych działań, aby przerwać wykonywanie tych pętle.  
   
 ## <a name="scenario"></a>Scenariusz  
  Przykład znajduje pierwszy niezawodnej dostawcy z listy dostawców (wystąpienia `Vendor` klasy). Każdy dostawca ma `ID`, `Name` i określająca sposób niezawodny dostawca jest wartość liczbowa niezawodności. Przykład tworzy niestandardowe działanie o nazwie `FindReliableVendor` który odbiera dwóch parametrów wejściowych (lista dostawców i wartość minimalna niezawodność) i zwraca pierwszy dostawca listy, która spełnia podane kryteria.  
   
 ## <a name="breaking-a-loop"></a>Fundamentalne pętli  
- [!INCLUDE[wf](../../../../includes/wf-md.md)]nie ma działania, aby przerwać pętlę. Przykładowy kod, który umożliwia zrealizowanie fundamentalne pętli przy użyciu <xref:System.Activities.Statements.If> działania i kilku zmiennych. W przykładzie <xref:System.Activities.Statements.While> działanie zostało przerwane po `reliableVendor` zmiennej jest przypisywana wartość innych niż `null`.  
+ Windows Workflow Foundation (WF) nie zawiera działania, aby przerwać pętlę. Przykładowy kod, który umożliwia zrealizowanie fundamentalne pętli przy użyciu <xref:System.Activities.Statements.If> działania i kilku zmiennych. W przykładzie <xref:System.Activities.Statements.While> działanie zostało przerwane po `reliableVendor` zmiennej jest przypisywana wartość innych niż `null`.  
   
  W poniższym przykładzie kodu pokazano, jak próbki dzieli chwilę pętli.  
   

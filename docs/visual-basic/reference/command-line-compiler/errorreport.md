@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59dc833299161eac7b119e654c94534f202b1cb7
-ms.sourcegitcommit: 498799639937c89de777361aab74261efe7b79ea
+ms.openlocfilehash: 5dc321f7f927d68a9f270076640cbc6d31d2f6d5
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="-errorreport"></a>-errorreport
-Określa sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora Zgłoś wewnętrzne błędy kompilatora.  
+Określa, jak kompilator Visual Basic powinien zgłosić wewnętrzne błędy kompilatora.  
   
 ## <a name="syntax"></a>Składnia  
   
@@ -29,7 +29,7 @@ Określa sposób [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] kompilatora Zgłoś
 ```  
   
 ## <a name="remarks"></a>Uwagi  
- Ta opcja umożliwia dogodny do raportu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] wewnętrzny błąd kompilatora (ICE) do [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] zespołu w firmie Microsoft. Domyślnie kompilator wysyła żadnych informacji do firmy Microsoft. Jednak jeśli wystąpi błąd wewnętrzny kompilatora, ta opcja umożliwia raportowanie błędów firmie Microsoft. Informacje te pomogą zidentyfikować przyczynę pracownicy firmy Microsoft i może zwiększyć kolejnej wersji programu [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)].  
+ Ta opcja umożliwia dogodny zgłosić błąd wewnętrzny kompilatora Visual Basic (ICE) do zespołu Visual Basic w firmie Microsoft. Domyślnie kompilator wysyła żadnych informacji do firmy Microsoft. Jednak jeśli wystąpi błąd wewnętrzny kompilatora, ta opcja umożliwia raportowanie błędów firmie Microsoft. Te informacje pomagają zidentyfikować przyczynę pracownicy firmy Microsoft i może zwiększyć kolejnej wersji programu Visual Basic.  
   
  Możliwość wysyłania raportów użytkownika zależy od uprawnień zasad komputera i użytkownika.  
   

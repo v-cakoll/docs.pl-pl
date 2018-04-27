@@ -1,12 +1,13 @@
 ---
-title: "Optymalizacja wydajności aplikacji WPF"
-ms.custom: 
+title: Optymalizacja wydajności aplikacji WPF
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-wpf
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-wpf
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - application rendering [WPF], performance
@@ -14,19 +15,20 @@ helpviewer_keywords:
 - applications [WPF], optimizing
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
-caps.latest.revision: "45"
+caps.latest.revision: 45
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 385bcb8678b11e1cb8f84ae509b1f1b6777665d7
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: d2de2d4009cb29c5e9cbdace0d69c220f95a54e1
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="optimizing-wpf-application-performance"></a>Optymalizacja wydajności aplikacji WPF
-W tej sekcji służy jako punkt odniesienia dla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperów, którzy szukasz sposobów, aby poprawić wydajność aplikacji. Jeśli jesteś deweloperem, który jest nowym składnikiem [!INCLUDE[TLA#tla_avalonwinfx](../../../../includes/tlasharptla-avalonwinfx-md.md)] i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], należy najpierw zapoznać się z obu platform. W tej sekcji wymaga praktycznej wiedzy obu i jest przeznaczony dla programistów, którzy już wiesz, aby pobrać swoich aplikacji działa.  
+W tej sekcji służy jako punkt odniesienia dla [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] deweloperów, którzy szukasz sposobów, aby poprawić wydajność aplikacji. Jeśli jesteś deweloperem, który jest nowym składnikiem programu Microsoft .NET Framework i [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)], należy najpierw zapoznać się z obu platform. W tej sekcji wymaga praktycznej wiedzy obu i jest przeznaczony dla programistów, którzy już wiesz, aby pobrać swoich aplikacji działa.  
   
 > [!NOTE]
 >  Dane wydajności przekazane w tej sekcji są oparte na [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] aplikacji uruchomionych na 2,8 GHz PC z 512, pamięci RAM i ATI Radeon 9700 karty graficznej.  

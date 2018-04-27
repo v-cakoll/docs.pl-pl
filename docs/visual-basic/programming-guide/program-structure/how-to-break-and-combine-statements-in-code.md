@@ -1,10 +1,10 @@
 ---
-title: "Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)"
-ms.custom: 
+title: 'Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-visual-basic
 ms.topic: article
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - Visual Basic code, line continuation in
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
-caps.latest.revision: 
+caps.latest.revision: 21
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: cf6b3ce7e5f9549ca04c4980bd3c91513b343ff6
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 06702cdc9073065a418b17d198dbb43be4aefca1
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>Porady: przerywanie i łączenie instrukcji w Code (Visual Basic)
 Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wymagają przewijanie w poziomie w edytorze kodu. Mimo że to nie wpływa na sposób działania kodu, go utrudnia nikogo odczytać kodu znajdującego się na monitora. W takim przypadku należy rozważyć dzielenie jednej instrukcji długa na kilka wierszy.  
@@ -59,7 +59,7 @@ Podczas pisania kodu, można utworzyć w czasie długich instrukcji, które wyma
   
      Nie można kontynuować komentarz przy użyciu znak kontynuacji wiersza. Kompilator nie Sprawdź, czy znaki w komentarz dotyczący specjalnego znaczenia. Komentarz wielu linii, powtórz symbol komentarza (`'`) w każdym wierszu.  
   
- Mimo że umieszczenie w osobnym wierszu każda instrukcja jest to zalecana metoda [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] umożliwia również umieścić użycie wielu instrukcji w tym samym wierszu.  
+ Jednak zaleca się umieszczenie każdej instrukcji w osobnym wierszu, Visual Basic umożliwia również umieścić użycie wielu instrukcji w tym samym wierszu.  
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>Aby umieścić użycie wielu instrukcji w tym samym wierszu  
   

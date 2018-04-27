@@ -10,20 +10,20 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-caps.latest.revision: ''
+caps.latest.revision: 8
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 02332e04f729abd125f43acdbe0883851004537e
-ms.sourcegitcommit: c883637b41ee028786edceece4fa872939d2e64c
+ms.openlocfilehash: af557d41709ea1015a4454d62df93e60dd975217
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 03/23/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="jsonp"></a>JSONP
-W tym przykładzie przedstawiono sposób obsługi formatu JSON z dopełnienie (JSONP) w usługach WCF REST. Format JSONP jest Konwencji, używany do innej domeny skrypty wywołania przez generowanie tagi skryptu w bieżącym dokumencie. Wynik zostanie zwrócony w funkcji określonej wywołania zwrotnego. JSONP opiera się na założeniu, że tagi, takie jak \<skryptu src = "http:/ /..." > można ocenić skryptów z dowolnej domeny i pobierane przez tagi skryptu jest obliczane w zakresie, w którym mogą już zdefiniowany innych funkcji.  
+W tym przykładzie przedstawiono sposób obsługi formatu JSON z dopełnienie (JSONP) w usługach WCF REST. Format JSONP jest Konwencji, używany do innej domeny skrypty wywołania przez generowanie tagi skryptu w bieżącym dokumencie. Wynik zostanie zwrócony w funkcji określonej wywołania zwrotnego. JSONP opiera się na założeniu, że tagi, takie jak `<script src="http://..." >` skryptów z dowolnej domeny w stanie ocenić i pobierane przez tagi skryptu jest obliczane w zakresie, w którym mogą już zdefiniowany innych funkcji.  
   
 ## <a name="demonstrates"></a>Demonstracje  
  Między domenami skryptów JSONP.  
@@ -79,6 +79,6 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 1.  Otwórz rozwiązanie przykładowej JSONP.  
   
-2.  Naciśnij klawisz F5, aby uruchomić HYPERLINK "http://localhost:26648/JSONPClientPage.aspx" http://localhost:26648/JSONPClientPage.aspx w przeglądarce.  
+2.  Naciśnij klawisz F5, aby uruchomić `http://localhost:26648/JSONPClientPage.aspx` w przeglądarce.  
   
 3.  Należy zauważyć, że po załadowaniu strony wejść tekst "Name" i "Address" są wypełniane przy wartości.  Wartości te zostały podane po wywołaniu [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] usługi po zakończeniu przeglądarki renderowania strony.

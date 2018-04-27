@@ -1,11 +1,12 @@
 ---
-title: "Procedury operatorów (Visual Basic)"
-ms.custom: 
+title: Procedury operatorów (Visual Basic)
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -17,22 +18,22 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-caps.latest.revision: "17"
+caps.latest.revision: 17
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 865695731dd591b0c48f4416814fa97edf4ea42e
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 8fba5180da6498d280fa4192937c39d3e33168e8
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="operator-procedures-visual-basic"></a>Procedury operatorów (Visual Basic)
-Procedury operatora jest szereg [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] instrukcji, które definiują zachowanie standardowe — operator (takich jak `*`, `<>`, lub `And`) dla klasy lub struktury zdefiniowane. Jest to również *przeładowania operatora*.  
+Procedury operatora jest szereg instrukcji, które definiują zachowanie standardowe — operator (takich jak `*`, `<>`, lub `And`) dla klasy lub struktury zdefiniowane. Jest to również *przeładowania operatora*.  
   
 ## <a name="when-to-define-operator-procedures"></a>Kiedy należy zdefiniować procedury operatorów  
  Po zdefiniowaniu klasy lub struktury, należy zadeklarować zmienne, które mają być typu tej klasy lub struktury. Czasami taki zmiennej musi uczestniczyć w operacji jako część wyrażenia. Aby to zrobić, musi ona być argumentu operacji operatora.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]Definiuje operatory tylko na jego typów podstawowych danych. Można określić zachowanie operatora, jeśli jeden lub oba argumenty operacji są typu klasy lub struktury.  
+ Visual Basic definiuje operatory tylko na jego typów podstawowych danych. Można określić zachowanie operatora, jeśli jeden lub oba argumenty operacji są typu klasy lub struktury.  
   
  Aby uzyskać więcej informacji, zobacz [operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md).  
   
@@ -91,12 +92,12 @@ Procedury operatora jest szereg [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)] inst
   
 ## <a name="see-also"></a>Zobacz też  
  [Procedury](./index.md)  
- [Sub — procedury](./sub-procedures.md)  
+ [Sub, procedury](./sub-procedures.md)  
  [Procedury funkcji](./function-procedures.md)  
- [Procedury własności](./property-procedures.md)  
+ [Procedury właściwości](./property-procedures.md)  
  [Parametry i argumenty procedur](./procedure-parameters-and-arguments.md)  
- [Operator — instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)  
- [Porady: Definiowanie operatora](./how-to-define-an-operator.md)  
- [Porady: Definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)  
- [Porady: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)  
- [Porady: używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md)
+ [Operator, instrukcja](../../../../visual-basic/language-reference/statements/operator-statement.md)  
+ [Instrukcje: definiowanie operatora](./how-to-define-an-operator.md)  
+ [Instrukcje: definiowanie operatora konwersji](./how-to-define-a-conversion-operator.md)  
+ [Instrukcje: wywoływanie procedury operatora](./how-to-call-an-operator-procedure.md)  
+ [Instrukcje: używanie klasy definiującej operatory](./how-to-use-a-class-that-defines-operators.md)

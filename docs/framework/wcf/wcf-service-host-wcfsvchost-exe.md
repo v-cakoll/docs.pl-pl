@@ -1,46 +1,48 @@
 ---
-title: "Host usługi WCF (WcfSvcHost.exe)"
-ms.custom: 
+title: Host usługi WCF (WcfSvcHost.exe)
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
-ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- dotnet-clr
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 495088463a6a7463ce1452588dc55d35110f0092
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1da8d7a08e7887e8ba3fd50a8f809e2ff551a7fd
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>Host usługi WCF (WcfSvcHost.exe)
-[!INCLUDE[indigo1](../../../includes/indigo1-md.md)]Host usługi (WcfSvcHost.exe) pozwala na uruchamianie [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] debugera (F5), aby automatycznie udostępniać i testowanie usługi zostały zaimplementowane. Następnie można testować przy użyciu usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (WcfTestClient.exe) lub własnego klienta, aby znaleźć i rozwiązać wszelkie potencjalne błędy.  
+[!INCLUDE[indigo1](../../../includes/indigo1-md.md)] Host usługi (WcfSvcHost.exe) pozwala na uruchamianie debugera programu Visual Studio (F5), aby automatycznie udostępniać i testowanie usługi, które zostały zaimplementowane. Następnie można testować przy użyciu usługi [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] testowanie klienta (WcfTestClient.exe) lub własnego klienta, aby znaleźć i rozwiązać wszelkie potencjalne błędy.  
   
 ## <a name="wcf-service-host"></a>Host usługi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Host usługi wylicza usług w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu usługi ładuje konfigurację projektu i tworzy wystąpienie hosta dla każdej usługi, która znajdzie. Narzędzie jest zintegrowany z [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] za pośrednictwem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablonu usługi i jest wywoływana po rozpoczęciu debugowania projektu.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi wylicza usług w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu usługi ładuje konfigurację projektu i tworzy wystąpienie hosta dla każdej usługi, która znajdzie. Narzędzie jest zintegrowany z programu Visual Studio za pośrednictwem [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablonu usługi i jest wywoływana po rozpoczęciu debugowania projektu.  
   
  Za pomocą [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi, może obsługiwać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi (w [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] projektu biblioteki usługi) bez pisania kodu dodatkowe lub zobowiązuje się do określonego hosta podczas programowania.  
   
 > [!NOTE]
->  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Host usługi nie obsługuje zaufania częściowego. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi w przypadku zaufania częściowego, nie używaj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] do tworzenia usługi. Zamiast tego utworzyć nowe witryny sieci Web w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] , wybierając [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablonu usługi witryny sieci Web, który może obsługiwać usługę w serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] częściowego zaufania jest obsługiwana.  
+>  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi nie obsługuje zaufania częściowego. Jeśli chcesz użyć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi w przypadku zaufania częściowego, nie używaj [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablon projektu biblioteki usługi w programie Visual Studio do tworzenia usługi. Zamiast tego utworzyć nowe witryny sieci Web w programie Visual Studio, wybierając [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] szablonu usługi witryny sieci Web, który może obsługiwać usługę w serwerze sieci Web, na którym [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] częściowego zaufania jest obsługiwana.  
   
 ## <a name="project-types-hosted-by-wcf-service-host"></a>Typy projektów obsługiwane przez Host usługi WCF  
- [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Host usługi może zawierać następujące [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki typów projektów usług: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi, sekwencyjnych Biblioteka usługi przepływu pracy, Biblioteka usługi przepływu pracy maszyny stanu i biblioteki usługi zespolonego. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Host usługi może również obsługiwać tych usług, które mogą zostać dodane do usługi biblioteki projektu za pomocą **Dodaj element** funkcji. Dotyczy to również [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, usługa maszyny stanu WF, usługa Sekwencyjna WF, XAML WF stanu usługi i usługa Sekwencyjna WF XAML.  
+ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi może zawierać następujące [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki typów projektów usług: [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] biblioteki usługi, sekwencyjnych Biblioteka usługi przepływu pracy, Biblioteka usługi przepływu pracy maszyny stanu i biblioteki usługi zespolonego. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi może również obsługiwać tych usług, które mogą zostać dodane do usługi biblioteki projektu za pomocą **Dodaj element** funkcji. Dotyczy to również [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi, usługa maszyny stanu WF, usługa Sekwencyjna WF, XAML WF stanu usługi i usługa Sekwencyjna WF XAML.  
   
  Należy zauważyć, jednak, że narzędzie nie będą pomocne podczas konfigurowania hosta. Dla tego zadania należy ręcznie zmienić pliku App.config. Narzędzie nie sprawdza również pliki konfiguracji użytkownika.  
   
 > [!CAUTION]
->  Nie należy używać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi hosta usług w środowisku produkcyjnym nie została zaprojektowana w tym celu.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Host usługi nie obsługuje niezawodności, zabezpieczeń i możliwości zarządzania wymaganiami takim środowisku. Zamiast tego należy użyć usług IIS, ponieważ zapewnia lepszą niezawodność i funkcji monitorowania i to preferowane rozwiązanie dla usług hostingu. Po zakończeniu tworzenia usługi należy zmigrować usługi z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi IIS.  
+>  Nie należy używać [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi hosta usług w środowisku produkcyjnym nie została zaprojektowana w tym celu.  [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi nie obsługuje niezawodności, zabezpieczeń i możliwości zarządzania wymaganiami takim środowisku. Zamiast tego należy użyć usług IIS, ponieważ zapewnia lepszą niezawodność i funkcji monitorowania i to preferowane rozwiązanie dla usług hostingu. Po zakończeniu tworzenia usługi należy zmigrować usługi z [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi IIS.  
   
 ## <a name="scenarios-for-using-wcf-service-host-inside-visual-studio"></a>Scenariusze korzystania z hosta usługi WCF w programie Visual Studio  
- W poniższej tabeli wymieniono wszystkich parametrów w **argumenty wiersza polecenia** okno dialogowe, które można znaleźć, klikając prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierając  **Właściwości**, wybierając **debugowania** kartę i klikając **uruchomić projekt**. Te parametry są przydatne w konfigurowaniu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi.  
+ W poniższej tabeli wymieniono wszystkich parametrów w **argumenty wiersza polecenia** okno dialogowe, które można znaleźć, klikając prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierając **Właściwości**, wybierając **debugowania** kartę i klikając **uruchomić projekt**. Te parametry są przydatne w konfigurowaniu [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi.  
   
 |Parametr|Znaczenie|  
 |---------------|-------------|  
@@ -49,14 +51,14 @@ ms.lasthandoff: 12/22/2017
 |`/?`|Wyświetla tekst pomocy.|  
   
 #### <a name="using-wcf-test-client"></a>Za pomocą klienta testowego WCF  
- Po utworzeniu nowego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi projektu, a następnie naciśnij klawisz F5, aby uruchomić debugera, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi uruchamia hosting wszystkie usługi znalezione w projekcie. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]Klient testowy automatycznie otwiera i wyświetla listę punktów końcowych usługi zdefiniowane w pliku konfiguracyjnym. W oknie głównym można przetestować parametry, a wywołania usługi.  
+ Po utworzeniu nowego [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usługi projektu, a następnie naciśnij klawisz F5, aby uruchomić debugera, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi uruchamia hosting wszystkie usługi znalezione w projekcie. [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy automatycznie otwiera i wyświetla listę punktów końcowych usługi zdefiniowane w pliku konfiguracyjnym. W oknie głównym można przetestować parametry, a wywołania usługi.  
   
- Aby upewnić się, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy jest używany, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **właściwości**, a następnie wybierz pozycję **debugowania**kartę. Kliknij przycisk **uruchomić projekt** i upewnij się, że następujące pojawia się w **argumenty wiersza polecenia** okno dialogowe.  
+ Aby upewnić się, że [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy jest używany, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz pozycję **debugowania**kartę. Kliknij przycisk **uruchomić projekt** i upewnij się, że następujące pojawia się w **argumenty wiersza polecenia** okno dialogowe.  
   
  `/client:WcfTestClient.exe`  
   
 #### <a name="using-a-custom-client"></a>Przy użyciu niestandardowego klienta  
- Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **właściwości**, a następnie wybierz pozycję **debugowania** kartę. Kliknij przycisk **uruchomić projekt** i edytować `/client` parametru w **argumenty wiersza polecenia** okno dialogowe, aby wskazywał niestandardowego klienta, jak wskazano w poniższym przykładzie.  
+ Aby użyć niestandardowego klienta, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz pozycję **debugowania** kartę. Kliknij przycisk **uruchomić projekt** i edytować `/client` parametru w **argumenty wiersza polecenia** okno dialogowe, aby wskazywał niestandardowego klienta, jak wskazano w poniższym przykładzie.  
   
  `/client:"path/CustomClient.exe"`  
   
@@ -71,13 +73,13 @@ ms.lasthandoff: 12/22/2017
  `/client:iexplore.exe /clientArgs:http://localhost:8731/Design_Time_Addresses/Feed1/`  
   
 #### <a name="specifying-no-client"></a>Określanie nie klienta  
- Aby określić, że klient nie będzie używany po [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **właściwości**, następnie wybierz **Debugowania** kartę. Kliknij przycisk **uruchomić projekt** i pozostawić **argumenty wiersza polecenia** puste okno dialogowe.  
+ Aby określić, że klient nie będzie używany po [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz pozycję  **Debugowanie** kartę. Kliknij przycisk **uruchomić projekt** i pozostawić **argumenty wiersza polecenia** puste okno dialogowe.  
   
 #### <a name="using-a-custom-host"></a>Przy użyciu hosta niestandardowego  
- Aby użyć hosta niestandardowego, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)], wybierz pozycję **właściwości**, a następnie wybierz pozycję **debugowania** kartę. Kliknij przycisk **Start programu zewnętrznego** i wprowadź pełną ścieżkę do hosta niestandardowego. Można również użyć **argumenty wiersza polecenia** okno dialogowe, aby określić argumenty do przekazania do hosta.  
+ Aby użyć hosta niestandardowego, kliknij prawym przyciskiem myszy projekt w **Eksploratora rozwiązań** w programie Visual Studio, wybierz **właściwości**, a następnie wybierz pozycję **debugowania** kartę. Kliknij przycisk **Start programu zewnętrznego** i wprowadź pełną ścieżkę do hosta niestandardowego. Można również użyć **argumenty wiersza polecenia** okno dialogowe, aby określić argumenty do przekazania do hosta.  
   
 ## <a name="wcf-service-host-user-interface"></a>Interfejs użytkownika Host usługi WCF  
- Jeśli początkowo wywołania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi (naciskając klawisz F5 wewnątrz [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]), **Host usługi WCF** automatycznie zostanie otwarte okno. Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi jest uruchomiona, ikona programu jest wyświetlana w obszarze powiadomień. Kliknij dwukrotnie ikonę, aby otworzyć **Host usługi WCF** okna  
+ Jeśli początkowo wywołania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi (naciskając klawisz F5 w programie Visual Studio), **Host usługi WCF** automatycznie zostanie otwarte okno. Gdy [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Host usługi jest uruchomiona, ikona programu jest wyświetlana w obszarze powiadomień. Kliknij dwukrotnie ikonę, aby otworzyć **Host usługi WCF** okna  
   
  Jeśli wystąpią błędy podczas hostingu usług, [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] zostanie otwarte okno dialogowe hosta usługi, aby wyświetlić odpowiednie informacje.  
   
@@ -102,7 +104,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="stopping-wcf-service-host"></a>Zatrzymywanie Host usługi WCF  
  Można zamknąć [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] hosta usługi z następujących czterech metod:  
   
--   Zatrzymaj sesję debugowania w [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+-   Zatrzymaj sesję debugowania w programie Visual Studio.  
   
 -   Wybierz **zakończenia** z **pliku** w menu **Host usługi WCF** okna.  
   
@@ -111,7 +113,7 @@ ms.lasthandoff: 12/22/2017
 -   Zakończ [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] Klient testowy, jeśli jest on używany.  
   
 ## <a name="using-service-host-without-administrator-privilege"></a>Przy użyciu hosta usługi bez uprawnień administratora  
- Aby umożliwić użytkownikom bez uprawnień administratora do opracowywania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, list kontroli dostępu (listy kontroli dostępu) jest tworzona podczas instalacji dla przestrzeni nazw "http://+:8731/Design_Time_Addresses" [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. Listy ACL ustawiono (UI), która obejmuje wszystkie interaktywne użytkownicy zalogowani do komputera. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy ACL lub Otwórz dodatkowych portów. Tej listy ACL umożliwia użytkownikom używanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatycznie hosta usługi (wcfSvcHost.exe) bez przyznania im uprawnień administratora.  
+ Aby umożliwić użytkownikom bez uprawnień administratora do opracowywania [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] usług, list kontroli dostępu (listy kontroli dostępu) jest tworzony dla przestrzeni nazw "http://+:8731/Design_Time_Addresses" podczas instalacji programu Visual Studio. Listy ACL ustawiono (UI), która obejmuje wszystkie interaktywne użytkownicy zalogowani do komputera. Administratorzy mogą dodawać lub usuwać użytkowników z tej listy ACL lub Otwórz dodatkowych portów. Tej listy ACL umożliwia użytkownikom używanie [!INCLUDE[indigo2](../../../includes/indigo2-md.md)] automatycznie hosta usługi (wcfSvcHost.exe) bez przyznania im uprawnień administratora.  
   
  Można zmodyfikować dostępu za pomocą narzędzia netsh.exe w [!INCLUDE[wv](../../../includes/wv-md.md)] przy użyciu konta administratora z podniesionymi uprawnieniami. Oto przykład użycia netsh.exe.  
   

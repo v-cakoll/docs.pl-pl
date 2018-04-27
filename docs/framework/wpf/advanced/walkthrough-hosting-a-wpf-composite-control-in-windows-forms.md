@@ -1,35 +1,35 @@
 ---
-title: "Wskazówki: Hosting złożonego formantu WPF w Windows Forms"
-ms.custom: 
+title: 'Wskazówki: Hosting złożonego formantu WPF w Windows Forms'
+ms.custom: ''
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - dotnet-wpf
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-caps.latest.revision: 
+caps.latest.revision: 34
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 129d699455467679c86c803e6d3124e6a7dfa1f9
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: f5a3cef6bc2614691584828ff61e0f8ea40b9f95
+ms.sourcegitcommit: 2042de78fcdceebb6b8ac4b7a292b93e8782cbf5
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>Wskazówki: Hosting złożonego formantu WPF w Windows Forms
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]udostępnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej skuteczne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacja o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamiast ponownego wpisywania go od początku. Typowy scenariusz obejmuje Aby osadzić jedną lub większą liczbę opcji zaimplementowany przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w ramach Twojej [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] aplikacji. Aby uzyskać więcej informacji na temat dostosowywania formantów WPF, zobacz [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md).  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] udostępnia bogate środowisko do tworzenia aplikacji. Jednak jeśli masz znaczących inwestycji [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] kodu, może być bardziej skuteczne rozszerzyć istniejącą [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] aplikacja o [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] zamiast ponownego wpisywania go od początku. Typowy scenariusz obejmuje Aby osadzić jedną lub większą liczbę opcji zaimplementowany przy użyciu [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] w aplikacji formularzy systemu Windows. Aby uzyskać więcej informacji na temat dostosowywania formantów WPF, zobacz [Dostosowywanie formantu](../../../../docs/framework/wpf/controls/control-customization.md).  
   
- Ten przewodnik zawiera kroki aplikacji obsługującego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] złożonych kontrolek do wykonania wprowadzania danych w [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] aplikacji. Formantu złożonego jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formanty. W tym przewodniku została zaprojektowana jako niemal identyczny jak w wyglądu i działania [wskazówki: hostowanie formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Podstawowa różnica polega na tym, czy została odwrócona scenariuszu obsługi.  
+ Ten przewodnik zawiera kroki aplikacji obsługującego [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] złożonych kontrolek w celu wykonania wprowadzania danych w aplikacji formularzy systemu Windows. Formantu złożonego jest dostarczana w bibliotece DLL. Ta procedura ogólne można rozszerzyć do bardziej złożonych aplikacji i formanty. W tym przewodniku została zaprojektowana jako niemal identyczny jak w wyglądu i działania [wskazówki: hostowanie formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md). Podstawowa różnica polega na tym, czy została odwrócona scenariuszu obsługi.  
   
- Instruktaż jest podzielona na dwie sekcje. Pierwsza sekcja krótko opisano wykonania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantu złożonego. Druga sekcja omówiono szczegółowo do obsługi złożonych kontrolek w [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] aplikacji, odbieranie zdarzeń z formantu i uzyskiwać dostęp do niektórych właściwości formantu.  
+ Instruktaż jest podzielona na dwie sekcje. Pierwsza sekcja krótko opisano wykonania [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantu złożonego. Druga sekcja szczegółowo omówiono sposób obsługi złożonych kontrolek w aplikacji formularzy systemu Windows, odbieranie zdarzeń z formantu i uzyskiwać dostęp do niektórych właściwości formantu.  
   
  Zadania przedstawione w tym przewodniku obejmują:  
   
@@ -79,7 +79,7 @@ WPF złożonych kontrolek
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Dla formantu złożonego jest realizowana za pomocą [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]. Formantu złożonego [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] składa się z pięciu <xref:System.Windows.Controls.TextBox> elementów. Każdy <xref:System.Windows.Controls.TextBox> ma skojarzony element <xref:System.Windows.Controls.TextBlock> element, który służy jako etykieta. Istnieją dwa <xref:System.Windows.Controls.Button> elementów na dole **OK** i **anulować**. Po kliknięciu przycisku albo kontrolka wywołuje zdarzenie niestandardowe do zwracania informacji do hosta.  
   
 #### <a name="basic-layout"></a>Podstawowy układ  
- Różnych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy są zawarte w <xref:System.Windows.Controls.Grid> elementu. Można użyć <xref:System.Windows.Controls.Grid> ułożyć zawartość złożone kontroli w taki sam sposób używasz `Table` elementu w formacie HTML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ma również <xref:System.Windows.Documents.Table> elementu, ale <xref:System.Windows.Controls.Grid> jest bardziej lekkie oraz lepsze dopasowanie dla zadań układ prosty.  
+ Różnych [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] elementy są zawarte w <xref:System.Windows.Controls.Grid> elementu. Można użyć <xref:System.Windows.Controls.Grid> ułożyć zawartość złożone kontroli w taki sam sposób używasz `Table` elementu w formacie HTML. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ma również <xref:System.Windows.Documents.Table> elementu, ale <xref:System.Windows.Controls.Grid> jest bardziej lekkie oraz lepsze dopasowanie dla zadań układ prosty.  
   
  Następujące XAML przedstawiono podstawowe układu. Ta XAML definiuje ogólną strukturę formantu, określając liczbę kolumn i wierszy w <xref:System.Windows.Controls.Grid> elementu.  
   
@@ -124,7 +124,7 @@ WPF złożonych kontrolek
   
 3.  Zgłasza niestandardowego `OnButtonClick` zdarzeń, który powiadamia hosta, czy użytkownik zakończy i przekazuje dane z powrotem na hoście.  
   
- Formant również eksponuje pewną liczbę właściwości kolorów i czcionek, które umożliwiają zmienianie wyglądu. W odróżnieniu od <xref:System.Windows.Forms.Integration.WindowsFormsHost> klasy, która jest używana do hosta [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] kontroli, <xref:System.Windows.Forms.Integration.ElementHost> klasa przedstawia formantu <xref:System.Windows.Controls.Panel.Background%2A> tylko właściwości. Aby zachować podobieństwa między w tym przykładzie kodu i przykład omówione w [wskazówki: hostowanie formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), formantu przedstawia pozostałe właściwości bezpośrednio.  
+ Formant również eksponuje pewną liczbę właściwości kolorów i czcionek, które umożliwiają zmienianie wyglądu. W odróżnieniu od <xref:System.Windows.Forms.Integration.WindowsFormsHost> klasy, która jest używana do hostowania kontrolki formularza systemu Windows, <xref:System.Windows.Forms.Integration.ElementHost> klasa przedstawia formantu <xref:System.Windows.Controls.Panel.Background%2A> tylko właściwości. Aby zachować podobieństwa między w tym przykładzie kodu i przykład omówione w [wskazówki: hostowanie formantu złożonego formularzy systemu Windows na platformie WPF](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md), formantu przedstawia pozostałe właściwości bezpośrednio.  
   
 #### <a name="the-basic-structure-of-the-code-behind-file"></a>Podstawowa struktura pliku CodeBehind  
  Plik CodeBehind składa się z jednego obszaru nazw, `MyControls`, który będzie zawierać dwie klasy `MyControl1` i `MyControlEventArgs`.  
@@ -193,7 +193,7 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>   
 ## <a name="implementing-the-windows-forms-host-application"></a>Wdrażanie aplikacji hosta formularzy systemu Windows  
- [!INCLUDE[TLA2#tla_winforms](../../../../includes/tla2sharptla-winforms-md.md)] Hosta aplikacja używa <xref:System.Windows.Forms.Integration.ElementHost> obiektu hosta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantu złożonego. Uchwyty aplikacji `OnButtonClick` zdarzenia w celu odbierania danych z formantu złożonego. Aplikacja ma również zestaw przycisków opcji, który służy do modyfikowania wyglądu formantu. Na poniższej ilustracji przedstawiono aplikację.  
+ Formularze systemu Windows hosta aplikacja używa <xref:System.Windows.Forms.Integration.ElementHost> obiektu hosta [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] formantu złożonego. Uchwyty aplikacji `OnButtonClick` zdarzenia w celu odbierania danych z formantu złożonego. Aplikacja ma również zestaw przycisków opcji, który służy do modyfikowania wyglądu formantu. Na poniższej ilustracji przedstawiono aplikację.  
   
  ![Hostowanie kontrolki Avalon formularza systemu Windows](../../../../docs/framework/wpf/advanced/media/wfhost.png "WFHost")  
 WPF formantu złożonego w aplikacji formularzy systemu Windows  
@@ -308,9 +308,9 @@ WPF formantu złożonego w aplikacji formularzy systemu Windows
   
  Pozostałe dwa wiersze w `Form1_Load` metody dołączyć obsługi do dwóch zdarzeń kontrolowania:  
   
--   `OnButtonClick`To zdarzenie niestandardowe, które jest wywoływane przez złożonych kontrolek, gdy użytkownik kliknie **OK** lub **anulować** przycisku. Można obsługiwać zdarzenia, aby uzyskać odpowiedzi użytkownika i zbierać dane, które użytkownik określił.  
+-   `OnButtonClick` To zdarzenie niestandardowe, które jest wywoływane przez złożonych kontrolek, gdy użytkownik kliknie **OK** lub **anulować** przycisku. Można obsługiwać zdarzenia, aby uzyskać odpowiedzi użytkownika i zbierać dane, które użytkownik określił.  
   
--   <xref:System.Windows.FrameworkElement.Loaded>jest standardowe zdarzenie, które jest wywoływane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontroli, gdy zostanie całkowicie załadowany. Zdarzenia jest używany w tym miejscu, ponieważ przykładzie musi zainicjować kilku zmiennych globalnych, przy użyciu właściwości z formantu. W tym czasie w postaci <xref:System.Windows.Forms.Form.Load> zdarzenia formant nie jest w pełni załadowany i te wartości są nadal ustawioną `null`. Należy zaczekać, aż do formantu <xref:System.Windows.FrameworkElement.Loaded> wystąpi zdarzenie w celu uzyskania dostępu do tych właściwości.  
+-   <xref:System.Windows.FrameworkElement.Loaded> jest standardowe zdarzenie, które jest wywoływane przez [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] kontroli, gdy zostanie całkowicie załadowany. Zdarzenia jest używany w tym miejscu, ponieważ przykładzie musi zainicjować kilku zmiennych globalnych, przy użyciu właściwości z formantu. W tym czasie w postaci <xref:System.Windows.Forms.Form.Load> zdarzenia formant nie jest w pełni załadowany i te wartości są nadal ustawioną `null`. Należy zaczekać, aż do formantu <xref:System.Windows.FrameworkElement.Loaded> wystąpi zdarzenie w celu uzyskania dostępu do tych właściwości.  
   
  <xref:System.Windows.FrameworkElement.Loaded> Program obsługi zdarzeń jest wyświetlany w powyższym kodzie. `OnButtonClick` Obsługi została szczegółowo opisana w następnej sekcji.  
   

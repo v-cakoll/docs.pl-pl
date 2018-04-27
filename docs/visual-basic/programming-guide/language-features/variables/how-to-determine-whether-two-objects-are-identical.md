@@ -1,31 +1,32 @@
 ---
-title: "Porady: określanie, czy dwa obiekty są jednakowe (Visual Basic)"
-ms.custom: 
+title: 'Porady: określanie, czy dwa obiekty są jednakowe (Visual Basic)'
+ms.custom: ''
 ms.date: 07/20/2015
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-visual-basic
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - testing [Visual Basic], objects
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-caps.latest.revision: "19"
+caps.latest.revision: 19
 author: dotnet-bot
 ms.author: dotnetcontent
-ms.openlocfilehash: 02083a93e63fe799f529776f777ca877d2d138b1
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 266e878e7f5fa8deb1c8cd91795af8d63ded0177
+ms.sourcegitcommit: 86adcc06e35390f13c1e372c36d2e044f1fc31ef
 ms.translationtype: MT
 ms.contentlocale: pl-PL
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>Porady: określanie, czy dwa obiekty są jednakowe (Visual Basic)
-W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dwóch odwołań do zmiennych są traktowane jako identyczne, jeśli ich wskaźniki są takie same, to znaczy, jeśli obie zmienne wskazać to samo wystąpienie klasy w pamięci. Na przykład w aplikacji formularzy systemu Windows, można porównanie, aby określić, czy bieżące wystąpienie (`Me`) jest taka sama jak konkretnego wystąpienia, takich jak `Form2`.  
+W języku Visual Basic dwóch odwołań do zmiennych są traktowane jako identyczne, jeśli ich wskaźniki są takie same, to znaczy, jeśli obie zmienne wskazać to samo wystąpienie klasy w pamięci. Na przykład w aplikacji formularzy systemu Windows, można porównanie, aby określić, czy bieżące wystąpienie (`Me`) jest taka sama jak konkretnego wystąpienia, takich jak `Form2`.  
   
- [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)]udostępnia dwa operatory porównanie wskaźników. [Operatora Is](../../../../visual-basic/language-reference/operators/is-operator.md) zwraca `True` Jeśli obiekty są identyczne i [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) zwraca `True` Jeśli nie są one.  
+ Visual Basic zapewnia dwa operatory porównanie wskaźników. [Operatora Is](../../../../visual-basic/language-reference/operators/is-operator.md) zwraca `True` Jeśli obiekty są identyczne i [IsNot Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md) zwraca `True` Jeśli nie są one.  
   
 ## <a name="determining-if-two-objects-are-identical"></a>Określanie, czy dwa obiekty są jednakowe  
   
@@ -35,7 +36,7 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dwóch odwołań do zmiennych są
   
 2.  W wyrażeniu testowania należy używać `Is` operatora z tymi dwoma obiektami jako argumentów.  
   
-     `Is`Zwraca `True` Jeśli punkt obiekty do tego samego wystąpienia klasy.  
+     `Is` Zwraca `True` Jeśli punkt obiekty do tego samego wystąpienia klasy.  
   
 ## <a name="determining-if-two-objects-are-not-identical"></a>Określanie, czy dwa obiekty nie są identyczne  
  Czasami chcesz wykonać akcję, jeśli dwa obiekty nie są identyczne, i można go połączyć nieodpowiednich `Not` i `Is`, na przykład `If Not obj1 Is obj2`. W takim przypadku można użyć `IsNot` operatora.  
@@ -46,7 +47,7 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dwóch odwołań do zmiennych są
   
 2.  W wyrażeniu testowania należy używać `IsNot` operatora z tymi dwoma obiektami jako argumentów.  
   
-     `IsNot`Zwraca `True` Jeśli obiekty nie mogą wskazywać tego samego wystąpienia klasy.  
+     `IsNot` Zwraca `True` Jeśli obiekty nie mogą wskazywać tego samego wystąpienia klasy.  
   
 ## <a name="example"></a>Przykład  
  Poniższy przykład testów pary `Object` zmienne, aby zobaczyć, jeśli one wskazywać tego samego wystąpienia klasy.  
@@ -60,10 +61,10 @@ W [!INCLUDE[vbprvb](~/includes/vbprvb-md.md)], dwóch odwołań do zmiennych są
  `objA identical to objC? True`  
   
 ## <a name="see-also"></a>Zobacz też  
- [Object — typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
+ [Object, typ danych](../../../../visual-basic/language-reference/data-types/object-data-type.md)  
  [Zmienne obiektów](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)  
  [Wartości zmiennej obiektu](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)  
- [Is — Operator](../../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot — Operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Porady: Określanie, czy dwa obiekty są powiązane](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
+ [Is, operator](../../../../visual-basic/language-reference/operators/is-operator.md)  
+ [IsNot, operator](../../../../visual-basic/language-reference/operators/isnot-operator.md)  
+ [Instrukcje: określanie, czy dwa obiekty są powiązane](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)  
  [Me, My, MyBase i MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
